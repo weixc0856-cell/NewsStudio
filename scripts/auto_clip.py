@@ -34,6 +34,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from build_subs import clean, write_ass, write_srt  # noqa: E402
+import dub_mix  # noqa: E402
 
 SCHEMA_VERSION = 1
 SRT_TS = re.compile(
@@ -47,9 +48,9 @@ DEFAULTS: dict[str, Any] = {
     "window_ms": 660_000,
     "overlap_ms": 210_000,
     "min_clip_ms": 180_000,
-    "max_clip_ms": 480_000,
+    "max_clip_ms": 600_000,      # 3-10 min hard gate; 8-10 min only when the argument needs it
     "prefer_min_ms": 240_000,
-    "prefer_max_ms": 360_000,
+    "prefer_max_ms": 420_000,
     "dup_overlap_ratio": 0.4,
     "max_clips": 2,
     "duration_tolerance_ms": 1_500,
@@ -639,7 +640,8 @@ def probe_source(video: Path) -> dict[str, Any]:
 
 def render_clip(video: Path, clip: dict[str, Any], rows: list[tuple[int, int, str, str]],
                 cfg: dict[str, Any], work_dir: Path, index: int,
-                source_info: dict[str, Any]) -> tuple[Path, Path, list[str]]:
+                source_info: dict[str, Any],
+                dub: Path | None = None) -> tuple[Path, Path, list[str]]:
     stem = f"clip-{index:02d}"
     srt_path = work_dir / f"{stem}.srt"
     ass_path = work_dir / f"{stem}.ass"
@@ -653,17 +655,41 @@ def render_clip(video: Path, clip: dict[str, Any], rows: list[tuple[int, int, st
 
     start_s = clip["start_ms"] / 1000
     length_s = clip["duration_ms"] / 1000
-    cmd = [
-        "ffmpeg", "-hide_banner", "-y",
-        "-ss", f"{start_s:.3f}", "-i", str(video), "-t", f"{length_s:.3f}",
-        "-map", "0:v:0", "-map", "0:a:0",
-        "-map_chapters", "-1",
-        "-vf", f"ass={escape_filter_path(ass_path)}",
-        "-c:v", "h264_qsv", "-global_quality:v", str(cfg["qsv_quality"]), "-preset", "slow",
-        "-c:a", cfg["audio_codec"], "-b:a", cfg["audio_bitrate"],
-        "-sn", "-dn", "-movflags", "+faststart",
-        "-avoid_negative_ts", "make_zero",
-    ]
+    if dub is not None:
+        # Chinese intro narration over the original English audio: sidechain
+        # ducking is applied in the same QSV pass that burns the subtitles.
+        import dub_mix
+        dub_cfg = {k: cfg[k] for k in ("duck_threshold", "duck_target_db", "duck_ratio",
+                                       "dub_target_db", "attack_ms", "release_ms",
+                                       "dub_gain", "sample_rate")
+                   if k in cfg}
+        dub_cfg["dub_gain"] = dub_mix.resolve_gain(dub, dub_cfg)
+        dub_cfg["duck_threshold"] = dub_mix.resolve_threshold(dub, dub_cfg)
+        cmd = [
+            "ffmpeg", "-hide_banner", "-y",
+            "-ss", f"{start_s:.3f}", "-i", str(video), "-i", str(dub),
+            "-t", f"{length_s:.3f}",
+            "-map_chapters", "-1",
+            "-filter_complex", dub_mix.build_filter_complex(ass_path, dub_cfg),
+            "-map", "[v]", "-map", "[aout]",
+            "-c:v", "h264_qsv", "-global_quality:v", str(cfg["qsv_quality"]), "-preset", "slow",
+            "-c:a", cfg["audio_codec"], "-b:a", cfg["audio_bitrate"],
+            "-ar", str(int(dub_cfg.get("sample_rate", dub_mix.DEFAULTS["sample_rate"]))),
+            "-sn", "-dn", "-movflags", "+faststart",
+            "-avoid_negative_ts", "make_zero",
+        ]
+    else:
+        cmd = [
+            "ffmpeg", "-hide_banner", "-y",
+            "-ss", f"{start_s:.3f}", "-i", str(video), "-t", f"{length_s:.3f}",
+            "-map", "0:v:0", "-map", "0:a:0",
+            "-map_chapters", "-1",
+            "-vf", f"ass={escape_filter_path(ass_path)}",
+            "-c:v", "h264_qsv", "-global_quality:v", str(cfg["qsv_quality"]), "-preset", "slow",
+            "-c:a", cfg["audio_codec"], "-b:a", cfg["audio_bitrate"],
+            "-sn", "-dn", "-movflags", "+faststart",
+            "-avoid_negative_ts", "make_zero",
+        ]
     if cfg["cfr"] == "on" or (cfg["cfr"] == "auto" and source_info["vfr"]):
         cmd += ["-fps_mode", "cfr", "-r", source_info["fps"]]
     cmd.append(str(tmp_path))
@@ -783,6 +809,15 @@ def main() -> int:
     ap.add_argument("--qsv-quality", type=int, default=DEFAULTS["qsv_quality"])
     ap.add_argument("--audio-bitrate", default=DEFAULTS["audio_bitrate"])
     ap.add_argument("--cfr", choices=("auto", "on", "off"), default="auto")
+    ap.add_argument("--dub-dir", default=None,
+                    help="directory holding per-clip narration tracks (clip-01.wav, ...); "
+                         "when present, the dub is mixed with sidechain ducking in the same pass")
+    ap.add_argument("--duck-threshold", type=float, default=None)
+    ap.add_argument("--duck-target-db", type=float, default=None)
+    ap.add_argument("--duck-ratio", type=float, default=None)
+    ap.add_argument("--duck-attack-ms", type=int, default=None)
+    ap.add_argument("--duck-release-ms", type=int, default=None)
+    ap.add_argument("--dub-gain", type=float, default=None)
     ap.add_argument("--model-retries", type=int, default=DEFAULTS["model_retries"])
     ap.add_argument("--model-timeout", type=int, default=DEFAULTS["model_timeout_s"])
     ap.add_argument("--analyze-only", action="store_true")
@@ -791,6 +826,8 @@ def main() -> int:
     ap.add_argument("--override-start", action="append", default=[], metavar="INDEX=TIME",
                     help="manually override a selected clip's start (1-based index), "
                          "e.g. 1=00:04:49.375; snapped to the containing cue's start")
+    ap.add_argument("--fix-start", default=None, metavar="TIME",
+                    help="shorthand for --override-start 1=TIME (e.g. 04:49.375)")
     args = ap.parse_args()
 
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -813,6 +850,8 @@ def main() -> int:
 
     try:
         overrides = parse_overrides(args.override_start)
+        if args.fix_start:
+            overrides.setdefault(1, parse_time_ms(args.fix_start))
     except ValueError as exc:
         print(f"config error: {exc}", file=sys.stderr)
         return 2
@@ -849,6 +888,20 @@ def main() -> int:
         "model_retries": args.model_retries,
         "model_timeout_s": args.model_timeout,
         "cfr": args.cfr,
+        "duck_threshold": (args.duck_threshold if args.duck_threshold is not None
+                           else dub_mix.DEFAULTS["duck_threshold"]),
+        "duck_target_db": (args.duck_target_db if args.duck_target_db is not None
+                           else dub_mix.DEFAULTS["duck_target_db"]),
+        "dub_target_db": dub_mix.DEFAULTS["dub_target_db"],
+        "duck_ratio": (args.duck_ratio if args.duck_ratio is not None
+                       else dub_mix.DEFAULTS["duck_ratio"]),
+        "attack_ms": (args.duck_attack_ms if args.duck_attack_ms is not None
+                      else dub_mix.DEFAULTS["attack_ms"]),
+        "release_ms": (args.duck_release_ms if args.duck_release_ms is not None
+                       else dub_mix.DEFAULTS["release_ms"]),
+        "dub_gain": (args.dub_gain if args.dub_gain is not None
+                     else dub_mix.DEFAULTS["dub_gain"]),
+        "sample_rate": dub_mix.DEFAULTS["sample_rate"],
         "srt_path": srt_path,
         "video_path": Path(args.video).resolve() if args.video else None,
         "out_dir": out_dir,
@@ -966,9 +1019,17 @@ def main() -> int:
                 f"({duration_ms} ms, {len(rows)} cues) {cand['title']}")
         slug = slugify(cand["title"])
         name = f"{video_id}.highlight-{index:02d}" + (f".{slug}" if slug else "") + ".mp4"
+        dub_path: Path | None = None
+        if args.dub_dir:
+            candidate = Path(args.dub_dir).resolve() / f"clip-{index:02d}.wav"
+            if candidate.exists():
+                dub_path = candidate
+                clip["dub"] = rel(dub_path)
+            else:
+                RUN.log(f"clip {index:02d}: no dub track at {candidate}, rendering without narration")
         try:
             tmp_path, srt_path_clip, ffmpeg_logs = render_clip(
-                cfg["video_path"], clip, rows, cfg, work_dir, index, source_info)
+                cfg["video_path"], clip, rows, cfg, work_dir, index, source_info, dub_path)
             acceptance = verify_clip(tmp_path, clip, rows, cfg)
             clip.update(srt=rel(srt_path_clip),
                         ass=rel(work_dir / f"clip-{index:02d}.ass"),
