@@ -220,7 +220,7 @@ class PromptTests(unittest.TestCase):
         win = ac.Window(0, 0, 1_000, [1])
         prompt = ac.build_prompt(win, cues, dict(ac.DEFAULTS))
         for token in ("问题明确", "结论完整", "解释充分", "可追溯",
-                      "10 分钟", "闭环", "summary", "硬性下限", "短片段"):
+                      "10 分钟", "闭环", "summary", "优先 4–7 分钟"):
             self.assertIn(token, prompt)
         self.assertIn("start_cue_id", prompt)
 
