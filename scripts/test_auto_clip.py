@@ -100,6 +100,26 @@ class FilterTests(unittest.TestCase):
         self.assertEqual(removed[0]["stage"], "duplicate")
         self.assertEqual(removed[0]["duplicate_of"]["start_cue_id"], 1)
 
+    def test_boundary_hard_reject(self) -> None:
+        self.cues[1] = ac.Cue(1, 0, 300_000, "Yeah so like...", "")
+        self.cues[2] = ac.Cue(2, 300_000, 600_000, "and because of that,", "")
+        cand = {"source_window": 0, "start_cue_id": 1, "end_cue_id": 2,
+                "start_ms": 0, "end_ms": 600_000, "duration_ms": 600_000}
+        kept, removed = ac.filter_candidates([cand], self.windows, self.cues, self.cfg)
+        self.assertEqual(kept, [])
+        self.assertEqual(removed[0]["stage"], "boundary")
+        self.assertIn("hard_reject", removed[0]["candidate"]["boundary_notes"])
+
+    def test_boundary_low_score_is_kept(self) -> None:
+        self.cues[1] = ac.Cue(1, 0, 300_000, "Like, it's not just that.", "")
+        self.cues[2] = ac.Cue(2, 300_000, 600_000, "We need more cores.", "")
+        cand = {"source_window": 0, "start_cue_id": 1, "end_cue_id": 2,
+                "start_ms": 0, "end_ms": 600_000, "duration_ms": 600_000}
+        kept, removed = ac.filter_candidates([cand], self.windows, self.cues, self.cfg)
+        self.assertEqual(len(kept), 1)
+        self.assertEqual(kept[0]["boundary_score"], 0)
+        self.assertNotIn("hard_reject", kept[0]["boundary_notes"])
+
     def test_overlap_ratio_boundary(self) -> None:
         a = {"start_ms": 0, "end_ms": 300_000, "duration_ms": 300_000}
         b = {"start_ms": 0, "end_ms": 120_000, "duration_ms": 120_000}
@@ -137,6 +157,72 @@ class PathTests(unittest.TestCase):
     def test_absolute_path_escaping(self) -> None:
         path = Path("D:/x y/a,b[1];c.ass")
         self.assertEqual(ac.escape_filter_path(path), "D\\:/x y/a\\,b\\[1\\]\\;c.ass")
+
+
+
+class BoundaryTests(unittest.TestCase):
+    @staticmethod
+    def cue(cid: int, top: str, start: int = 0, end: int = 1_000) -> ac.Cue:
+        return ac.Cue(cid, start, end, top, "")
+
+    def test_good_boundary_scores_high(self) -> None:
+        score, notes = ac.boundary_score(
+            self.cue(1, "Why is CPU becoming the bottleneck?"),
+            self.cue(2, "That's the fundamental constraint."))
+        self.assertGreaterEqual(score, 4)
+        self.assertIn("question_boundary", notes)
+        self.assertIn("terminal_end", notes)
+
+    def test_filler_start_is_penalised_but_not_rejected(self) -> None:
+        _, notes = ac.boundary_score(
+            self.cue(1, "Like, it's not just that."),
+            self.cue(2, "We need more cores."))
+        self.assertIn("filler_start", notes)
+        self.assertNotIn("hard_reject", notes)
+
+    def test_continuation_end_is_penalised(self) -> None:
+        _, notes = ac.boundary_score(
+            self.cue(1, "The real issue is power."),
+            self.cue(2, "and that's why..."))
+        self.assertIn("continuation_end", notes)
+        self.assertNotIn("hard_reject", notes)
+
+    def test_double_negative_is_hard_reject(self) -> None:
+        score, notes = ac.boundary_score(
+            self.cue(1, "Yeah so like..."),
+            self.cue(2, "and because of that,"))
+        self.assertLessEqual(score, -1)
+        self.assertIn("hard_reject", notes)
+
+    def test_previous_question_counts(self) -> None:
+        _, notes = ac.boundary_score(
+            self.cue(2, "Because the memory bandwidth is limited."),
+            self.cue(3, "That's the bottleneck."),
+            prev=self.cue(1, "Why is this happening?"))
+        self.assertIn("question_boundary", notes)
+
+    def test_rank_prefers_higher_boundary_score(self) -> None:
+        cfg = dict(ac.DEFAULTS)
+        good = {"duration_ms": 300_000, "boundary_score": 4,
+                "start_ms": 0, "start_cue_id": 1}
+        weak = {"duration_ms": 300_000, "boundary_score": 0,
+                "start_ms": 0, "start_cue_id": 1}
+        self.assertLess(ac.rank_key(good, cfg), ac.rank_key(weak, cfg))
+
+    def test_defaults_allow_ten_minutes(self) -> None:
+        self.assertEqual(ac.DEFAULTS["max_clip_ms"], 600_000)
+        self.assertEqual(ac.DEFAULTS["prefer_max_ms"], 420_000)
+
+
+class PromptTests(unittest.TestCase):
+    def test_prompt_requires_complete_argument(self) -> None:
+        cues = [ac.Cue(1, 0, 1_000, "hello.", "")]
+        win = ac.Window(0, 0, 1_000, [1])
+        prompt = ac.build_prompt(win, cues, dict(ac.DEFAULTS))
+        for token in ("问题明确", "结论完整", "解释充分", "可追溯",
+                      "10 分钟", "闭环", "summary"):
+            self.assertIn(token, prompt)
+        self.assertIn("start_cue_id", prompt)
 
 
 if __name__ == "__main__":

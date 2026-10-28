@@ -70,6 +70,19 @@ SYSTEM_PROMPT = (
     "不输出解释、不输出 Markdown 代码块、不输出时间字段。"
 )
 
+# Boundary heuristics for complete-argument clips.  Automatic captions split
+# mid-sentence, so these only *rank* candidates; the only hard reject is the
+# double negative (filler start + non-terminal continuation end).
+FILLER_START = re.compile(
+    r"^(?:like|um+|uh+|yeah|okay|ok|right|so|and|but|well|i mean|you know)\b",
+    re.I,
+)
+CONTINUATION_END = re.compile(
+    r"(?:,|\band\b|\bbut\b|\bso\b|\bbecause\b|\bwhich\b|\bthat\b|\bif\b|\.\.\.)\s*$",
+    re.I,
+)
+TERMINAL_END = re.compile(r'(?<!\.)[.?!][\'"]?\s*$')
+
 
 # --------------------------------------------------------------------------
 # logging / helpers
@@ -314,18 +327,37 @@ def build_prompt(win: Window, cues: list[Cue], cfg: dict[str, Any]) -> str:
         f"本窗口共 {len(win_cues)} 条字幕，平均每条约 {avg_cue / 1000:.1f} 秒；"
         f"{cfg['min_clip_ms'] // 1000}–{cfg['max_clip_ms'] // 1000} 秒大约相当于 "
         f"{min_cues}–{max_cues} 条字幕。",
-        "请选出一个最适合独立成片的完整话题片段（3–8 分钟）：",
-        f"1. 片段实际时长 = 结束字幕结束时间 − 开始字幕开始时间，必须在 "
-        f"{cfg['min_clip_ms'] // 1000}–{cfg['max_clip_ms'] // 1000} 秒之间，低于 "
-        f"{cfg['min_clip_ms'] // 1000} 秒的候选一律无效；优先 "
-        f"{cfg['prefer_min_ms'] // 1000}–{cfg['prefer_max_ms'] // 1000} 秒；",
-        "2. 语义完整、主题集中，能独立看懂；优先一个完整话题或一次完整问答；",
-        "3. 不要从句子中间开始或结束：start 选在一句话/一个问题的开头，end 选在一段结论之后；",
-        "4. 不要选广告、寒暄、纯过渡段。",
+        "请选出一个能独立成片、论证闭环完整的片段。按顺序判断：",
+        "",
+        "1. 问题明确：开头能让观众立刻知道在讨论什么。start 必须是问题或话题的开头，"
+        "不要从半句、承接词或口误开始。",
+        "2. 结论完整：end 必须在论证收束之后；不要停在半句、反问、例子中间，"
+        "也不要在对方还没回答完时结束。",
+        "3. 解释充分：片段内至少包含数据、机制、案例、推理中的两类；"
+        "不要只选金句、结论或情绪化片段。",
+        "4. 可追溯：start/end 只能使用上面列出的字幕 ID，时间以字幕为准。",
+        "",
+        "时长是建议不是硬性：",
+        "- 3–8 分钟优先；4 分钟讲清楚就用 4 分钟，不要为凑时长扩段；",
+        "- 完整论证确实需要时可以到 10 分钟；",
+        f"- 低于 {cfg['min_clip_ms'] // 1000} 分钟或超过 "
+        f"{cfg['max_clip_ms'] // 1000} 分钟的候选无效；",
+        "- 代码会按窗口字幕密度复核时长，超界会被淘汰。",
+        "",
+        "边界示例（只看边界，不要照抄内容）：",
+        "- 反例 start：「…and I'm like well no because like…」（半句 + 承接词）",
+        "- 正例 start：「…so just give us a high level TLDR why is CPU now bottleneck "
+        "and what do you see?」（完整问题）",
+        "- 反例 end：「…and that's why…」（话没说完）",
+        "- 正例 end：「…so that's the constraint we run into.」（结论句）",
+        "- 不选：广告、寒暄、纯过渡、重复口误、没有结论的闲聊。",
+        "",
+        "优先级：问题—解释—结论闭环 > 刺激金句。",
         "",
         "只输出一个 JSON 对象，不要代码块、不要解释，字段固定：",
         '{"start_cue_id": <整数>, "end_cue_id": <整数>, '
-        '"title": "<不超过 20 字的简体中文标题>", "summary": "<一句话简体中文摘要>"}',
+        '"title": "<不超过 20 字的简体中文标题>", '
+        '"summary": "<一句话简体中文摘要，写清问题与结论>"}',
     ]
     return "\n".join(lines)
 
@@ -452,6 +484,8 @@ def analyze(cues: list[Cue], cfg: dict[str, Any], video_id: str,
                              error=attempts[-1].get("error") if attempts else "unknown")
             else:
                 start_cue, end_cue = by_id[candidate["start_cue_id"]], by_id[candidate["end_cue_id"]]
+                b_score, b_notes = boundary_score(
+                    start_cue, end_cue, by_id.get(start_cue.id - 1))
                 record = {
                     "source_window": win.index,
                     "start_cue_id": candidate["start_cue_id"],
@@ -461,6 +495,8 @@ def analyze(cues: list[Cue], cfg: dict[str, Any], video_id: str,
                     "start_ms": start_cue.start,
                     "end_ms": end_cue.end,
                     "duration_ms": end_cue.end - start_cue.start,
+                    "boundary_score": b_score,
+                    "boundary_notes": b_notes,
                 }
                 entry.update(status="OK", candidate=candidate)
                 candidates_raw.append(record)
@@ -520,11 +556,54 @@ def overlap_ratio(a: dict[str, Any], b: dict[str, Any]) -> float:
     return overlap / min(a["duration_ms"], b["duration_ms"])
 
 
+def boundary_score(start: Cue, end: Cue,
+                   prev: Cue | None = None) -> tuple[int, list[str]]:
+    """Score the start/end boundary of a candidate (-2..5, higher is better).
+
+    Only ``filler_start`` + ``non_terminal_end`` + ``continuation_end`` is a
+    hard reject; every other imperfection is just a ranking penalty because
+    automatic captions routinely split sentences across cues.
+    """
+    score = 0
+    notes: list[str] = []
+    start_text = start.top.strip()
+    end_text = end.top.strip()
+
+    if FILLER_START.match(start_text):
+        score -= 2
+        notes.append("filler_start")
+    else:
+        score += 2
+        notes.append("clean_start")
+
+    if "?" in start_text or (prev is not None and "?" in prev.top):
+        score += 1
+        notes.append("question_boundary")
+
+    if TERMINAL_END.search(end_text):
+        score += 2
+        notes.append("terminal_end")
+    else:
+        notes.append("non_terminal_end")
+        if CONTINUATION_END.search(end_text):
+            score -= 2
+            notes.append("continuation_end")
+
+    has_bad_start = "filler_start" in notes
+    has_bad_end = ("non_terminal_end" in notes and "continuation_end" in notes)
+    if has_bad_start and has_bad_end:
+        score = min(score, -1)
+        notes.append("hard_reject")
+
+    return max(score, -2), notes
+
+
 def rank_key(cand: dict[str, Any], cfg: dict[str, Any]) -> tuple:
     dur = cand["duration_ms"]
     in_prefer = 0 if cfg["prefer_min_ms"] <= dur <= cfg["prefer_max_ms"] else 1
     midpoint = (cfg["prefer_min_ms"] + cfg["prefer_max_ms"]) // 2
-    return (in_prefer, abs(dur - midpoint), cand["start_ms"], cand["start_cue_id"])
+    return (in_prefer, -int(cand.get("boundary_score", 0)), abs(dur - midpoint),
+            cand["start_ms"], cand["start_cue_id"])
 
 
 def filter_candidates(candidates: list[dict[str, Any]], windows: list[dict[str, Any]],
@@ -545,6 +624,17 @@ def filter_candidates(candidates: list[dict[str, Any]], windows: list[dict[str, 
         if start_cue.start != cand["start_ms"] or end_cue.end != cand["end_ms"]:
             removed.append({"candidate": cand, "stage": "ownership",
                             "reason": "candidate times do not match cue timestamps"})
+            continue
+        if "boundary_score" not in cand:
+            b_score, b_notes = boundary_score(
+                start_cue, end_cue, by_id.get(start_cue.id - 1))
+            cand["boundary_score"] = b_score
+            cand["boundary_notes"] = b_notes
+        if "hard_reject" in cand.get("boundary_notes", []):
+            removed.append({
+                "candidate": cand, "stage": "boundary",
+                "reason": "filler_start + non_terminal_end + continuation_end",
+            })
             continue
         dur = cand["duration_ms"]
         if not (cfg["min_clip_ms"] <= dur <= cfg["max_clip_ms"]):
