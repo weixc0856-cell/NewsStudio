@@ -338,9 +338,9 @@ def build_prompt(win: Window, cues: list[Cue], cfg: dict[str, Any]) -> str:
         "4. 可追溯：start/end 只能使用上面列出的字幕 ID，时间以字幕为准。",
         "",
         "时长：3–8 分钟优先，优先 4–7 分钟；4 分钟讲清楚就不要扩到 8 分钟；",
-        f"完整论证确实需要时可以到 {cfg['max_clip_ms'] // 1000} 分钟；"
-        f"低于 {cfg['min_clip_ms'] // 1000} 分钟或超过 "
-        f"{cfg['max_clip_ms'] // 1000} 分钟的候选无效。",
+        f"完整论证确实需要时可以到 {cfg['max_clip_ms'] // 60_000} 分钟；"
+        f"低于 {cfg['min_clip_ms'] // 60_000} 分钟或超过 "
+        f"{cfg['max_clip_ms'] // 60_000} 分钟的候选无效。",
         "",
         "边界示例（只看边界，不要照抄内容）：",
         "- 反例 start：「…and I'm like well no because like…」（半句 + 承接词）",
