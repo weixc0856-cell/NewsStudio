@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{TITLE_EN}}</title>
+<style>
+  :root {
+    --accent: {{ACCENT}};
+    --ink: #111111;
+    --muted: #6b6b6b;
+    --line: #e5e5e5;
+    --mono: "IBM Plex Mono", "Consolas", "SFMono-Regular", monospace;
+    --sans: "Helvetica Neue", "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; width: 1920px; height: 1080px;
+    background: #ffffff; overflow: hidden;
+  }
+  body { font-family: var(--sans); color: var(--ink); -webkit-font-smoothing: antialiased; }
+  .stage { position: relative; width: 1920px; height: 1080px; background: #ffffff; }
+  .energy { position: absolute; top: 0; left: 0; right: 0; height: 6px; background: var(--accent); }
+
+  .top {
+    position: absolute; left: 120px; right: 120px; top: 64px;
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: var(--mono); font-size: 17px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .top .kicker { color: var(--accent); font-weight: 600; }
+  .top .index { color: var(--muted); }
+
+  .main { position: absolute; left: 120px; right: 120px; top: 276px; }
+  .title-en {
+    font-size: 100px; line-height: 1.02; font-weight: 800;
+    letter-spacing: -1.8px; text-transform: uppercase;
+    max-width: 1640px; color: var(--ink);
+  }
+  .title-zh-row {
+    display: flex; align-items: stretch; gap: 22px;
+    margin-top: 50px; max-width: 1420px;
+  }
+  .vline { flex: 0 0 5px; width: 5px; background: var(--accent); }
+  .title-zh { font-size: 46px; line-height: 1.35; font-weight: 500; color: #1a1a1a; }
+
+  .meta { position: absolute; left: 120px; right: 120px; bottom: 98px; }
+  .rule { height: 1px; background: var(--line); margin-bottom: 32px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; }
+  .label {
+    font-family: var(--mono); font-size: 13px; letter-spacing: 2.6px;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
+  }
+  .value { font-size: 21px; line-height: 1.35; color: var(--ink); }
+
+  .foot {
+    position: absolute; left: 120px; right: 120px; bottom: 40px;
+    display: flex; justify-content: space-between;
+    font-family: var(--mono); font-size: 13px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="energy"></div>
+
+  <div class="top">
+    <div class="kicker">{{KICKER}}</div>
+    <div class="index">{{INDEX}}</div>
+  </div>
+
+  <div class="main">
+    <div class="title-en">{{TITLE_EN}}</div>
+    <div class="title-zh-row">
+      <div class="vline"></div>
+      <div class="title-zh">{{TITLE_ZH}}</div>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div class="rule"></div>
+    <div class="grid">
+      <div>
+        <div class="label">Speaker</div>
+        <div class="value">{{SPEAKER}}</div>
+      </div>
+      <div>
+        <div class="label">Source Event</div>
+        <div class="value">{{SOURCE_EVENT}}</div>
+      </div>
+      <div>
+        <div class="label">Organization</div>
+        <div class="value">{{ORGANIZATION}}</div>
+      </div>
+      <div>
+        <div class="label">Verification</div>
+        <div class="value">{{VERIFICATION}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>{{SERIES}}</div>
+    <div>ENGLISH AUDIO · CHINESE SUBTITLES · KEY INSIGHTS</div>
+  </div>
+</div>
+</body>
+</html>

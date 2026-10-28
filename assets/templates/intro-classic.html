@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>{{TITLE}}</title>
+<style>
+  :root {
+    --bg: #0b0e13;
+    --ink: #f2f5f8;
+    --muted: #93a0b1;
+    --faint: #5e6b7c;
+    --line: #222b37;
+    --accent: {{ACCENT}};
+    --mono: "IBM Plex Mono", "Consolas", "SFMono-Regular", "Menlo", monospace;
+    --sans: "Helvetica Neue", "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; width: 1920px; height: 1080px;
+    overflow: hidden; background: var(--bg);
+  }
+  body {
+    font-family: var(--sans); color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  .stage { position: relative; width: 1920px; height: 1080px; background: var(--bg); }
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,.030) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,.022) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .vignette {
+    position: absolute; inset: 0;
+    background: radial-gradient(1200px 720px at 50% 46%, transparent 0%, rgba(0,0,0,.38) 100%);
+  }
+  .accent-bar {
+    position: absolute; left: 0; top: 0; width: 4px; height: 1080px;
+    background: var(--accent);
+    transform-origin: top center;
+    transform: scaleY(1);
+  }
+  .stage[data-state="0"] .accent-bar { transform: scaleY(0); }
+  .stage[data-state="1"] .accent-bar { transform: scaleY(1); }
+
+  .top {
+    position: absolute; left: 120px; right: 120px; top: 82px;
+    display: flex; align-items: baseline; justify-content: space-between;
+    font-family: var(--mono); font-size: 19px; letter-spacing: 2.6px;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .top .series { display: flex; align-items: center; gap: 16px; color: var(--ink); }
+  .top .series .tag { width: 10px; height: 10px; background: var(--accent); display: inline-block; }
+  .top .index { color: var(--faint); }
+
+  .stamp {
+    position: absolute; right: 120px; top: 128px;
+    font-family: var(--mono); font-size: 18px; letter-spacing: 2.4px;
+    color: var(--faint); text-transform: uppercase;
+  }
+
+  .rule { position: absolute; left: 120px; right: 120px; height: 1px; background: var(--line); }
+  .rule.top-rule { top: 142px; }
+  .rule.bottom-rule { bottom: 134px; }
+
+  .title-block {
+    position: absolute; left: 120px; top: 286px; width: 1520px;
+    opacity: 1; transform: translateY(0);
+  }
+  .stage[data-state="0"] .title-block { opacity: 0; transform: translateY(15px); }
+  .stage[data-state="1"] .title-block { opacity: 1; transform: translateY(0); }
+
+  .eyebrow {
+    font-family: var(--mono); font-size: 20px; letter-spacing: 3.4px;
+    color: var(--accent); text-transform: uppercase; margin-bottom: 36px;
+  }
+  .eyebrow .slash { color: var(--faint); margin: 0 14px; }
+
+  .headline {
+    font-size: 104px; line-height: 1.12; font-weight: 800;
+    letter-spacing: -1.5px; color: var(--ink); max-width: 1500px;
+  }
+
+  .subrow { display: flex; align-items: stretch; gap: 22px; margin-top: 46px; }
+  .subrow .vline { width: 2px; flex: 0 0 2px; background: var(--accent); opacity: .92; }
+  .subline {
+    font-size: 33px; line-height: 1.5; color: var(--muted);
+    max-width: 1220px;
+  }
+
+  .speaker {
+    margin-top: 34px; font-family: var(--mono); font-size: 20px;
+    letter-spacing: 2.8px; color: var(--faint); text-transform: uppercase;
+  }
+
+  .foot {
+    position: absolute; left: 120px; right: 120px; bottom: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-family: var(--mono); font-size: 19px; letter-spacing: 2.2px;
+    color: var(--faint);
+  }
+  .foot .left { color: var(--muted); }
+  .foot .right { text-transform: uppercase; }
+
+  /* Deterministic reference animation. Screenshots use data-state 0/1. */
+  @keyframes bar-reveal {
+    from { transform: scaleY(0); }
+    to   { transform: scaleY(1); }
+  }
+  @keyframes block-rise {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .stage[data-play="1"] .accent-bar {
+    animation: bar-reveal 550ms cubic-bezier(.16,1,.3,1) both;
+  }
+  .stage[data-play="1"] .title-block {
+    animation: block-rise 550ms cubic-bezier(.16,1,.3,1) 150ms both;
+  }
+</style>
+</head>
+<body>
+<div class="stage" data-state="{{STATE}}">
+  <div class="grid"></div>
+  <div class="vignette"></div>
+  <div class="accent-bar"></div>
+
+  <div class="top">
+    <div class="series"><span class="tag"></span>{{SERIES}}</div>
+    <div class="index">{{INDEX}}</div>
+  </div>
+  <div class="stamp">{{STAMP}}</div>
+  <div class="rule top-rule"></div>
+
+  <div class="title-block">
+    <div class="eyebrow">{{EYEBROW}}<span class="slash">/</span>{{EYEBROW_RIGHT}}</div>
+    <div class="headline">{{TITLE}}</div>
+    <div class="subrow">
+      <div class="vline"></div>
+      <div class="subline">{{SUBTITLE}}</div>
+    </div>
+    <div class="speaker">{{SPEAKER}}</div>
+  </div>
+
+  <div class="rule bottom-rule"></div>
+  <div class="foot">
+    <div class="left">{{SOURCE}}</div>
+    <div class="right">{{STAMP_RIGHT}}</div>
+  </div>
+</div>
+</body>
+</html>

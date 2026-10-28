@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import sys
 import unittest
+from unittest import mock
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -223,6 +224,167 @@ class PromptTests(unittest.TestCase):
                       "10 分钟", "3 分钟", "闭环", "summary", "优先 4–7 分钟"):
             self.assertIn(token, prompt)
         self.assertIn("start_cue_id", prompt)
+
+
+
+class ExtendTests(unittest.TestCase):
+    def test_extend_prompt_mentions_seconds_and_range(self) -> None:
+        cues = [ac.Cue(i, (i - 1) * 60_000, i * 60_000, "text.", "")
+                for i in range(1, 6)]
+        win = ac.Window(0, 0, 300_000, [1, 2, 3, 4, 5])
+        record = {"start_cue_id": 1, "end_cue_id": 2, "duration_ms": 60_000}
+        prompt = ac.build_extend_prompt(win, cues, record, dict(ac.DEFAULTS))
+        self.assertIn("60.0 秒", prompt)
+        self.assertIn("180–420 秒", prompt)
+        self.assertIn('{"end_cue_id"', prompt)
+
+    def test_call_extend_model_parses_and_validates(self) -> None:
+        cues = [ac.Cue(i, (i - 1) * 1_000, i * 1_000, "x", "")
+                for i in range(1, 6)]
+        win = ac.Window(0, 0, 6_000, [1, 2, 3, 4, 5])
+        cfg = {**ac.DEFAULTS, "model_timeout_s": 10}
+        response = mock.Mock(status_code=200)
+        response.raise_for_status.return_value = None
+        response.json.return_value = {
+            "choices": [{"message": {"content": '{"end_cue_id": 4}'}}]}
+        with mock.patch.object(ac.requests, "post", return_value=response):
+            end_id, attempts = ac.call_extend_model(
+                "http://x", "m", "p", win, 2, cfg)
+        self.assertEqual(end_id, 4)
+        self.assertTrue(attempts[0]["ok"])
+
+    def test_call_extend_model_rejects_out_of_window(self) -> None:
+        cues = [ac.Cue(i, (i - 1) * 1_000, i * 1_000, "x", "")
+                for i in range(1, 4)]
+        win = ac.Window(0, 0, 3_000, [1, 2, 3])
+        cfg = {**ac.DEFAULTS, "model_timeout_s": 10}
+        response = mock.Mock(status_code=200)
+        response.raise_for_status.return_value = None
+        response.json.return_value = {
+            "choices": [{"message": {"content": '{"end_cue_id": 99}'}}]}
+        with mock.patch.object(ac.requests, "post", return_value=response):
+            end_id, attempts = ac.call_extend_model(
+                "http://x", "m", "p", win, 1, cfg)
+        self.assertIsNone(end_id)
+        self.assertFalse(attempts[0]["ok"])
+
+
+class AnalyzeExtendTests(unittest.TestCase):
+    def cues(self) -> list[ac.Cue]:
+        return [
+            ac.Cue(1, 0, 60_000, "Why is CPU the bottleneck?", ""),
+            ac.Cue(2, 60_000, 120_000, "Because the supply is fixed.", ""),
+            ac.Cue(3, 120_000, 240_000, "Demand keeps rising.", ""),
+            ac.Cue(4, 240_000, 300_000, "That is the constraint.", ""),
+        ]
+
+    def test_short_candidate_is_extended_once(self) -> None:
+        cfg = {**ac.DEFAULTS, "base_url": "http://x", "model": "fake",
+               "max_clips": 1, "srt_path": ac.ROOT / "subtitles/x.srt"}
+        short = {"start_cue_id": 1, "end_cue_id": 2,
+                 "title": "CPU", "summary": "supply"}
+        with mock.patch.object(ac, "call_model",
+                               return_value=(short, [{"ok": True}])),              mock.patch.object(ac, "call_extend_model",
+                               return_value=(3, [{"ok": True}])) as extend:
+            analysis = ac.analyze(self.cues(), cfg, "vid", None)
+        self.assertTrue(analysis["windows"][0]["extended"])
+        self.assertEqual(analysis["candidates_raw"][0]["end_cue_id"], 3)
+        self.assertGreaterEqual(analysis["candidates_raw"][0]["duration_ms"], 180_000)
+        self.assertEqual(extend.call_count, 1)
+
+    def test_hard_reject_candidate_is_not_extended(self) -> None:
+        cues = [ac.Cue(1, 0, 60_000, "Yeah so like...", ""),
+                ac.Cue(2, 60_000, 120_000, "and because of that,", "")]
+        cfg = {**ac.DEFAULTS, "base_url": "http://x", "model": "fake",
+               "srt_path": ac.ROOT / "subtitles/x.srt"}
+        short = {"start_cue_id": 1, "end_cue_id": 2,
+                 "title": "x", "summary": "y"}
+        with mock.patch.object(ac, "call_model",
+                               return_value=(short, [{"ok": True}])),              mock.patch.object(ac, "call_extend_model") as extend:
+            ac.analyze(cues, cfg, "vid", None)
+        extend.assert_not_called()
+
+
+
+class SoftClampTests(unittest.TestCase):
+    def cues(self) -> dict[int, ac.Cue]:
+        return {
+            1: ac.Cue(1, 0, 120_000, "Question?", ""),
+            2: ac.Cue(2, 120_000, 300_000, "Answer.", ""),
+            3: ac.Cue(3, 300_000, 450_000, "and more...", ""),
+            4: ac.Cue(4, 450_000, 547_000, "Conclusion.", ""),
+        }
+
+    def test_clamps_to_nearest_terminal_under_prefer(self) -> None:
+        end = ac.soft_clamp_end(1, 4, self.cues(), dict(ac.DEFAULTS))
+        self.assertEqual(end, 2)
+
+    def test_returns_none_without_terminal_in_range(self) -> None:
+        cues = {1: ac.Cue(1, 0, 120_000, "Question?", ""),
+                2: ac.Cue(2, 120_000, 300_000, "and more...", ""),
+                3: ac.Cue(3, 300_000, 450_000, "still going...", "")}
+        self.assertIsNone(ac.soft_clamp_end(1, 3, cues, dict(ac.DEFAULTS)))
+
+
+class OverlapTests(unittest.TestCase):
+    def test_overlap_ms(self) -> None:
+        a = {"start_ms": 0, "end_ms": 366_000}
+        b = {"start_ms": 290_000, "end_ms": 800_000}
+        self.assertEqual(ac.overlap_ms(a, b), 76_000)
+        self.assertEqual(ac.overlap_ms(a, {"start_ms": 400_000, "end_ms": 500_000}), 0)
+
+    def test_rank_penalises_overlap(self) -> None:
+        cfg = dict(ac.DEFAULTS)
+        a = {"start_ms": 0, "end_ms": 366_000, "duration_ms": 366_000,
+             "boundary_score": 4, "start_cue_id": 1}
+        b = {"start_ms": 290_000, "end_ms": 820_000, "duration_ms": 530_000,
+             "boundary_score": 4, "start_cue_id": 2}
+        self.assertEqual(ac.rank_key(a, cfg)[0], 0)
+        self.assertEqual(ac.rank_key(b, cfg, (a,))[0], 1)
+
+    def test_selection_prefers_non_overlapping_candidate(self) -> None:
+        cues = {
+            1: ac.Cue(1, 289_375, 661_744, "First topic conclusion.", ""),
+            2: ac.Cue(2, 585_240, 1_115_560, "Overlapping long answer.", ""),
+            3: ac.Cue(3, 944_175, 1_160_060, "Independent topic conclusion.", ""),
+        }
+        windows = [{"index": 0, "cue_ids": [1]},
+                   {"index": 1, "cue_ids": [2]},
+                   {"index": 2, "cue_ids": [3]}]
+        a = {"source_window": 0, "start_cue_id": 1, "end_cue_id": 1,
+             "start_ms": 289_375, "end_ms": 661_744, "duration_ms": 372_369,
+             "title": "a", "summary": "a"}
+        b = {"source_window": 1, "start_cue_id": 2, "end_cue_id": 2,
+             "start_ms": 585_240, "end_ms": 1_115_560, "duration_ms": 530_320,
+             "title": "b", "summary": "b"}
+        c = {"source_window": 2, "start_cue_id": 3, "end_cue_id": 3,
+             "start_ms": 944_175, "end_ms": 1_160_060, "duration_ms": 215_885,
+             "title": "c", "summary": "c"}
+        kept, removed = ac.filter_candidates([a, b, c], windows, cues, dict(ac.DEFAULTS))
+        self.assertEqual([cand["start_cue_id"] for cand in kept], [1, 3])
+        # the long overlapping candidate loses to the independent topic, then
+        # is removed because it overlaps that topic by more than 0.4
+        self.assertEqual(removed[0]["stage"], "duplicate")
+        self.assertEqual(removed[0]["duplicate_of"]["start_cue_id"], 3)
+
+
+class AnalyzeSoftClampTests(unittest.TestCase):
+    def test_overlong_extension_is_clamped_to_a_terminal_cue(self) -> None:
+        cues = [ac.Cue(1, 0, 120_000, "Question?", ""),
+                ac.Cue(2, 120_000, 300_000, "Answer.", ""),
+                ac.Cue(3, 300_000, 547_000, "Conclusion.", "")]
+        cfg = {**ac.DEFAULTS, "base_url": "http://x", "model": "fake",
+               "max_clips": 1, "srt_path": ac.ROOT / "subtitles/x.srt"}
+        short = {"start_cue_id": 1, "end_cue_id": 1, "title": "t", "summary": "s"}
+        with mock.patch.object(ac, "call_model",
+                               return_value=(short, [{"ok": True}])),              mock.patch.object(ac, "call_extend_model",
+                               return_value=(3, [{"ok": True}])):
+            analysis = ac.analyze(cues, cfg, "vid", None)
+        record = analysis["candidates_raw"][0]
+        self.assertEqual(record["end_cue_id"], 2)
+        self.assertEqual(record["duration_ms"], 300_000)
+        self.assertEqual(record["soft_clamped_from"]["end_cue_id"], 3)
+        self.assertTrue(analysis["windows"][0]["soft_clamped"])
 
 
 if __name__ == "__main__":

@@ -52,6 +52,7 @@ DEFAULTS: dict[str, Any] = {
     "prefer_min_ms": 240_000,
     "prefer_max_ms": 420_000,
     "dup_overlap_ratio": 0.4,
+    "overlap_penalty_ms": 30_000,   # >30 s overlap with a kept candidate = strong penalty
     "max_clips": 2,
     "duration_tolerance_ms": 1_500,
     "margin_v": 100,
@@ -307,7 +308,8 @@ def build_windows(cues: list[Cue], window_ms: int, overlap_ms: int,
 # --------------------------------------------------------------------------
 # module 3: single-window model inference
 # --------------------------------------------------------------------------
-def build_prompt(win: Window, cues: list[Cue], cfg: dict[str, Any]) -> str:
+def _window_header(win: Window, cues: list[Cue]
+                   ) -> tuple[list[str], list[Cue]]:
     by_id = {c.id: c for c in cues}
     win_cues = [by_id[i] for i in win.cue_ids]
     lines = [
@@ -318,6 +320,11 @@ def build_prompt(win: Window, cues: list[Cue], cfg: dict[str, Any]) -> str:
     ]
     for cue in win_cues:
         lines.append(f"[{cue.id}] {fmt_hmsms(cue.start)}–{fmt_hmsms(cue.end)} | {cue.top}")
+    return lines, win_cues
+
+
+def build_prompt(win: Window, cues: list[Cue], cfg: dict[str, Any]) -> str:
+    lines, win_cues = _window_header(win, cues)
     span = win.end - win.start
     avg_cue = span / len(win_cues) if win_cues else 0
     min_cues = max(1, math.ceil(cfg["min_clip_ms"] / avg_cue)) if avg_cue else 1
@@ -356,6 +363,26 @@ def build_prompt(win: Window, cues: list[Cue], cfg: dict[str, Any]) -> str:
         '{"start_cue_id": <整数>, "end_cue_id": <整数>, '
         '"title": "<不超过 20 字的简体中文标题>", '
         '"summary": "<一句话简体中文摘要，写清问题与结论>"}',
+    ]
+    return "\n".join(lines)
+
+
+def build_extend_prompt(win: Window, cues: list[Cue], record: dict[str, Any],
+                       cfg: dict[str, Any]) -> str:
+    """One correction call: ask for a later end when the model picked <3 min."""
+    lines, _ = _window_header(win, cues)
+    seconds = record["duration_ms"] / 1000
+    lines += [
+        "",
+        f"你选取的 {record['start_cue_id']} ~ {record['end_cue_id']} 实测只有 "
+        f"{seconds:.1f} 秒，讨论尚未充分展开。",
+        "请将结束边界向后延伸，直到该论点推导完毕，使总时长落在 "
+        f"{cfg['min_clip_ms'] // 1000}–{cfg['prefer_max_ms'] // 1000} 秒之间。",
+        f"start_cue_id 保持 {record['start_cue_id']} 不变；end_cue_id 必须大于 "
+        f"{record['end_cue_id']}，且只能使用上面列出的 ID。",
+        "",
+        "只输出一个 JSON 对象，不要代码块、不要解释：",
+        '{"end_cue_id": <整数>}',
     ]
     return "\n".join(lines)
 
@@ -442,6 +469,71 @@ def call_model(base: str, model: str, prompt: str, win: Window,
     return None, attempts
 
 
+def _candidate_record(*, candidate: dict[str, Any], start_id: int, end_id: int,
+                      win: Window, by_id: dict[int, Cue]) -> dict[str, Any]:
+    start_cue, end_cue = by_id[start_id], by_id[end_id]
+    b_score, b_notes = boundary_score(start_cue, end_cue, by_id.get(start_id - 1))
+    return {
+        "source_window": win.index,
+        "start_cue_id": start_id,
+        "end_cue_id": end_id,
+        "title": candidate["title"],
+        "summary": candidate["summary"],
+        "start_ms": start_cue.start,
+        "end_ms": end_cue.end,
+        "duration_ms": end_cue.end - start_cue.start,
+        "boundary_score": b_score,
+        "boundary_notes": b_notes,
+    }
+
+
+def call_extend_model(base: str, model: str, prompt: str, win: Window,
+                      start_id: int, cfg: dict[str, Any]
+                      ) -> tuple[int | None, list[dict[str, Any]]]:
+    """One correction request: return a later end cue, or None.
+
+    Only called when the first candidate is shorter than the 3-minute gate and
+    its boundary is not a hard reject.  Never loops (the caller allows one).
+    """
+    payload: dict[str, Any] = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": prompt},
+        ],
+        "temperature": cfg["temperature"],
+        "max_tokens": 80,
+        "stream": False,
+        "response_format": {"type": "json_object"},
+    }
+    record: dict[str, Any] = {"attempt": 1}
+    try:
+        resp = requests.post(f"{base}/v1/chat/completions", json=payload,
+                             timeout=(10, cfg["model_timeout_s"]))
+        if resp.status_code == 400 and "response_format" in payload:
+            payload.pop("response_format")
+            resp = requests.post(f"{base}/v1/chat/completions", json=payload,
+                                 timeout=(10, cfg["model_timeout_s"]))
+        resp.raise_for_status()
+        content = resp.json()["choices"][0]["message"]["content"]
+        record["raw"] = content
+        obj = extract_json_object(content)
+        end_id = obj.get("end_cue_id")
+        if isinstance(end_id, bool) or not isinstance(end_id, int):
+            raise ValueError(f"end_cue_id is not an integer: {end_id!r}")
+        if end_id not in set(win.cue_ids):
+            raise ValueError(f"end_cue_id out of window: {end_id}")
+        if end_id <= start_id:
+            raise ValueError(f"end_cue_id {end_id} <= start {start_id}")
+        record["ok"] = True
+        return end_id, [record]
+    except Exception as exc:
+        record["ok"] = False
+        record["error"] = str(exc)
+        RUN.log(f"window {win.index} extend failed: {exc}")
+        return None, [record]
+
+
 def analyze(cues: list[Cue], cfg: dict[str, Any], video_id: str,
             work_dir: Path | None = None) -> dict[str, Any]:
     windows = build_windows(cues, cfg["window_ms"], cfg["overlap_ms"], cfg["min_clip_ms"])
@@ -481,22 +573,59 @@ def analyze(cues: list[Cue], cfg: dict[str, Any], video_id: str,
                 entry.update(status="FAILED", candidate=None,
                              error=attempts[-1].get("error") if attempts else "unknown")
             else:
-                start_cue, end_cue = by_id[candidate["start_cue_id"]], by_id[candidate["end_cue_id"]]
-                b_score, b_notes = boundary_score(
-                    start_cue, end_cue, by_id.get(start_cue.id - 1))
-                record = {
-                    "source_window": win.index,
-                    "start_cue_id": candidate["start_cue_id"],
-                    "end_cue_id": candidate["end_cue_id"],
-                    "title": candidate["title"],
-                    "summary": candidate["summary"],
-                    "start_ms": start_cue.start,
-                    "end_ms": end_cue.end,
-                    "duration_ms": end_cue.end - start_cue.start,
-                    "boundary_score": b_score,
-                    "boundary_notes": b_notes,
-                }
-                entry.update(status="OK", candidate=candidate)
+                record = _candidate_record(
+                    candidate=candidate, start_id=candidate["start_cue_id"],
+                    end_id=candidate["end_cue_id"], win=win, by_id=by_id)
+                extended = False
+                if (record["duration_ms"] < cfg["min_clip_ms"]
+                        and "hard_reject" not in record["boundary_notes"]):
+                    ext_prompt = build_extend_prompt(win, cues, record, cfg)
+                    if work_dir is not None:
+                        (work_dir / f"window-{win.index:02d}.extend.prompt.txt").write_text(
+                            ext_prompt, encoding="utf-8")
+                    new_end, ext_attempts = call_extend_model(
+                        cfg["base_url"], model, ext_prompt, win,
+                        record["start_cue_id"], cfg)
+                    entry["extend_attempts"] = ext_attempts
+                    if work_dir is not None:
+                        (work_dir / f"window-{win.index:02d}.extend.response.json"
+                         ).write_text(json.dumps({"attempts": ext_attempts},
+                                                 ensure_ascii=False, indent=2) + "\n",
+                                      encoding="utf-8")
+                    if new_end is not None and new_end != record["end_cue_id"]:
+                        extended_record = _candidate_record(
+                            candidate=candidate, start_id=record["start_cue_id"],
+                            end_id=new_end, win=win, by_id=by_id)
+                        extended_record["extended_from"] = {
+                            "end_cue_id": record["end_cue_id"],
+                            "duration_ms": record["duration_ms"],
+                        }
+                        record = extended_record
+                        extended = True
+                        RUN.log(f"window {win.index}: extended end cue "
+                                f"{new_end} ({record['duration_ms'] / 1000:.1f}s)")
+                        if record["duration_ms"] > cfg["prefer_max_ms"]:
+                            clamped = soft_clamp_end(
+                                record["start_cue_id"], record["end_cue_id"], by_id, cfg)
+                            if clamped is not None and clamped != record["end_cue_id"]:
+                                clamped_from = {
+                                    "end_cue_id": record["end_cue_id"],
+                                    "duration_ms": record["duration_ms"],
+                                }
+                                record = _candidate_record(
+                                    candidate=candidate,
+                                    start_id=record["start_cue_id"],
+                                    end_id=clamped, win=win, by_id=by_id)
+                                record["extended_from"] = extended_record["extended_from"]
+                                record["soft_clamped_from"] = clamped_from
+                                RUN.log(f"window {win.index}: soft-clamped end cue "
+                                        f"{clamped} ({record['duration_ms'] / 1000:.1f}s)")
+                entry.update(status="OK", extended=extended,
+                             soft_clamped="soft_clamped_from" in record,
+                             candidate={"start_cue_id": record["start_cue_id"],
+                                        "end_cue_id": record["end_cue_id"],
+                                        "title": record["title"],
+                                        "summary": record["summary"]})
                 candidates_raw.append(record)
         if work_dir is not None:
             (work_dir / f"window-{win.index:02d}.response.json").write_text(
@@ -509,7 +638,7 @@ def analyze(cues: list[Cue], cfg: dict[str, Any], video_id: str,
     selected = valid[: cfg["max_clips"]]
     for cand in valid[cfg["max_clips"]:]:
         removed.append({"candidate": cand, "stage": "quota",
-                        "reason": f"outside top {cfg['max_clips']} by start time"})
+                        "reason": f"outside top {cfg['max_clips']} by selection rank"})
 
     window_failures = sum(1 for w in window_results if w["status"] != "OK")
     if not window_results:
@@ -596,12 +725,40 @@ def boundary_score(start: Cue, end: Cue,
     return max(score, -2), notes
 
 
-def rank_key(cand: dict[str, Any], cfg: dict[str, Any]) -> tuple:
+def overlap_ms(a: dict[str, Any], b: dict[str, Any]) -> int:
+    overlap = min(a["end_ms"], b["end_ms"]) - max(a["start_ms"], b["start_ms"])
+    return max(0, overlap)
+
+
+def soft_clamp_end(start_id: int, end_id: int, by_id: dict[int, Cue],
+                   cfg: dict[str, Any]) -> int | None:
+    """Walk back to the nearest terminal cue that fits <= prefer_max_ms.
+
+    Returns None when no terminal cue fits (then the original extension is
+    kept, still bounded by the 10-minute hard gate).
+    """
+    start_ms = by_id[start_id].start
+    for cue_id in range(end_id, start_id, -1):
+        cue = by_id[cue_id]
+        duration = cue.end - start_ms
+        if duration > cfg["prefer_max_ms"]:
+            continue
+        if duration < cfg["min_clip_ms"]:
+            break
+        if TERMINAL_END.search(cue.top.strip()):
+            return cue_id
+    return None
+
+
+def rank_key(cand: dict[str, Any], cfg: dict[str, Any],
+             kept: tuple[dict[str, Any], ...] = ()) -> tuple:
     dur = cand["duration_ms"]
     in_prefer = 0 if cfg["prefer_min_ms"] <= dur <= cfg["prefer_max_ms"] else 1
     midpoint = (cfg["prefer_min_ms"] + cfg["prefer_max_ms"]) // 2
-    return (in_prefer, -int(cand.get("boundary_score", 0)), abs(dur - midpoint),
-            cand["start_ms"], cand["start_cue_id"])
+    penalty = sum(1 for prev in kept
+                  if overlap_ms(cand, prev) > int(cfg.get("overlap_penalty_ms", 30_000)))
+    return (penalty, in_prefer, -int(cand.get("boundary_score", 0)),
+            abs(dur - midpoint), cand["start_ms"], cand["start_cue_id"])
 
 
 def filter_candidates(candidates: list[dict[str, Any]], windows: list[dict[str, Any]],
@@ -643,9 +800,11 @@ def filter_candidates(candidates: list[dict[str, Any]], windows: list[dict[str, 
             continue
         survivors.append(cand)
 
-    survivors.sort(key=lambda c: rank_key(c, cfg))
+    remaining = list(survivors)
     kept: list[dict[str, Any]] = []
-    for cand in survivors:
+    while remaining:
+        remaining.sort(key=lambda c: rank_key(c, cfg, tuple(kept)))
+        cand = remaining.pop(0)
         duplicate = None
         for prev in kept:
             ratio = overlap_ratio(cand, prev)
@@ -667,7 +826,6 @@ def filter_candidates(candidates: list[dict[str, Any]], windows: list[dict[str, 
         else:
             kept.append(cand)
 
-    kept.sort(key=lambda c: c["start_ms"])
     return kept, removed
 
 
