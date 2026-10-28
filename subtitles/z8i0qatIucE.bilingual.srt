@@ -1,0 +1,759 @@
+1
+00:00:01,380 --> 00:00:07,140
+My name is James Leahy, and I'm a principal research scientist at PhysicsX and a mathematician.
+
+2
+00:00:07,140 --> 00:00:14,670
+I'm here to tell you about how we're building foundation models for physics and specifically aerodynamics in this case and automotive aerodynamics.
+
+3
+00:00:14,670 --> 00:00:18,750
+And we're gonna talk, I'm gonna show you some scaling loss that we're seeing.
+
+4
+00:00:18,750 --> 00:00:20,190
+More data, better models.
+
+5
+00:00:20,190 --> 00:00:23,190
+It's kind of obvious when you see this happening in language and video.
+
+6
+00:00:23,190 --> 00:00:29,820
+But for engineering and physics, this is very far from a trivial problem and it's an ongoing effort.
+
+7
+00:00:29,820 --> 00:00:32,523
+And we'll see some early results today.
+
+8
+00:00:34,320 --> 00:00:36,240
+Here's what we're gonna cover.
+
+9
+00:00:36,240 --> 00:00:39,600
+First, I'm gonna give you a quick introduction to who PhysicsX is.
+
+10
+00:00:39,600 --> 00:00:44,433
+Then I'll explain how pre-trained models are the next frontier for physics AI.
+
+11
+00:00:45,300 --> 00:00:51,270
+I'll talk about our new pre-trained model for automotive aerodynamics, and then I'll show you some scaling laws.
+
+12
+00:00:51,270 --> 00:00:57,040
+We'll look at how AWS infrastructure is making this possible and then I'll close with where we're heading next.
+
+13
+00:00:59,130 --> 00:01:01,363
+So let's start with who PhysicsX is.
+
+14
+00:01:02,309 --> 00:01:07,530
+PhysicsX is an AI company and we're focused on industrial applications.
+
+15
+00:01:07,530 --> 00:01:12,960
+Our mission is simple, build and deploy AI to accelerate industrial innovation.
+
+16
+00:01:12,960 --> 00:01:17,400
+We've raised over $155 million in series B funding.
+
+17
+00:01:17,400 --> 00:01:24,750
+We have over 200 engineers, a mix of AI researchers, simulation engineers, and software engineers.
+
+18
+00:01:24,750 --> 00:01:29,250
+I think, crucially, it's important to understand that we're not just a research organization.
+
+19
+00:01:29,250 --> 00:01:35,730
+We work directly with our customers to build the things that are usable and used.
+
+20
+00:01:35,730 --> 00:01:40,170
+We partner with leading players across aerospace and defense,
+
+21
+00:01:40,170 --> 00:01:46,083
+semiconductors, materials, energy and renewables, industrials, and automotive.
+
+22
+00:01:49,500 --> 00:02:00,030
+So what you're seeing here is a computational fluid dynamic simulation that's approximating the Navier-Stokes equation around an immersed body, in this case, an airplane,
+
+23
+00:02:00,030 --> 00:02:04,320
+CFD was a major step change from building physical prototypes.
+
+24
+00:02:04,320 --> 00:02:10,620
+Before CFD, if you wanted to know how air flowed around a design, you had to build it, put it in a wind tunnel.
+
+25
+00:02:10,620 --> 00:02:18,900
+Wind tunnels still play a vital role today, but everyone knows that simulations have fundamentally increased the speed at which we can innovate.
+
+26
+00:02:18,900 --> 00:02:23,643
+Simulations though still are a bottleneck, and there's room to innovate faster.
+
+27
+00:02:25,650 --> 00:02:27,990
+That's where physics AI comes in.
+
+28
+00:02:27,990 --> 00:02:30,420
+A legacy simulation, like the one you just saw,
+
+29
+00:02:30,420 --> 00:02:35,610
+which was a seven-second transient simulation consisting of over a billion mesh elements,
+
+30
+00:02:35,610 --> 00:02:41,640
+takes four days to compute Using physics AI, we can do this in a six-second inference step.
+
+31
+00:02:41,640 --> 00:02:44,970
+Four days becomes six seconds in inference.
+
+32
+00:02:44,970 --> 00:02:51,903
+That's not just an incremental improvement, that's just the fundamental transformation is how manufacturers can innovate and design.
+
+33
+00:02:53,400 --> 00:02:59,520
+The models, they're called surrogates because they act as stand-ins for expensive physics simulations.
+
+34
+00:02:59,520 --> 00:03:06,290
+A well-trained surrogate can give you answers that are accurate enough to make engineering decisions at a fraction of the computational cost.
+
+35
+00:03:09,960 --> 00:03:11,913
+We don't just work on aircrafts.
+
+36
+00:03:13,020 --> 00:03:17,520
+Our technology applies across engineering domains, as I spoke about earlier.
+
+37
+00:03:17,520 --> 00:03:25,380
+Aerodynamics for vehicles, heat transfer for thermal management, chemistry for reactions, and electromagnetics for electronics.
+
+38
+00:03:25,380 --> 00:03:30,210
+The physics is different in each domain, but the fundamental approach is the same.
+
+39
+00:03:30,210 --> 00:03:36,843
+We learn from simulation and hopefully more experimental data and make fast, accurate predictions.
+
+40
+00:03:42,240 --> 00:03:45,690
+So what does it take to build an AI surrogate?
+
+41
+00:03:45,690 --> 00:03:52,080
+Well, you have to do some of those expensive simulations that I talked about earlier upfront to generate the training data.
+
+42
+00:03:52,080 --> 00:04:00,090
+You need to store that data, you need to process it, you need to clean it and convert it to formats that ML models can consume.
+
+43
+00:04:00,090 --> 00:04:03,450
+Then you need to train the models, validate them, and deploy them.
+
+44
+00:04:03,450 --> 00:04:10,590
+We're building a platform designed to completely support the AI lifecycle for engineering and physics,
+
+45
+00:04:10,590 --> 00:04:16,863
+the data management, the model training, the fine-tuning, and all deployed as an agentic workflow.
+
+46
+00:04:17,880 --> 00:04:22,110
+We have a simulation workbench which orchestrates the simulations.
+
+47
+00:04:22,110 --> 00:04:29,460
+We have the AI workbench to develop and deploy models from the AI model catalog, some of which are pre-trained, some of which are not.
+
+48
+00:04:29,460 --> 00:04:35,790
+And then we have a unified data backbone with enterprise security and multi-cloud scalability.
+
+49
+00:04:35,790 --> 00:04:40,383
+This is not just a research infrastructure, this is production-grade software.
+
+50
+00:04:42,690 --> 00:04:46,593
+So now, let me talk about our pre-trained model for automotive aerodynamics.
+
+51
+00:04:47,970 --> 00:04:54,840
+So I spoke earlier about how numerical simulation was the first major step change for engineering.
+
+52
+00:04:54,840 --> 00:04:57,360
+The simulations are complex to set up.
+
+53
+00:04:57,360 --> 00:05:00,060
+They take hours or days.
+
+54
+00:05:00,060 --> 00:05:05,220
+But you get cheaper and faster exploration than physical prototypes.
+
+55
+00:05:05,220 --> 00:05:08,100
+Then came traditional ML models and surrogates.
+
+56
+00:05:08,100 --> 00:05:16,620
+You need a training dataset, you need an ML model, a pipeline, and once you're trained, you can get vast design space exploration.
+
+57
+00:05:16,620 --> 00:05:25,530
+But for every customer we encounter, every new geometry we see, we have to collect a new dataset from scratch.
+
+58
+00:05:25,530 --> 00:05:33,453
+So what we're doing is we're going out and generating large pre-training datasets, coupling it with foundational architectures,
+
+59
+00:05:34,680 --> 00:05:43,050
+and serious infrastructure that's involved to get everything from the simulations to the data loader and to train at scale using dynamic data parallelism.
+
+60
+00:05:43,050 --> 00:05:54,033
+And what you get from these pre-trained foundation models is you get lower upfront data needs for customers and better out-of-the-box performance, zero shot and fine-tuned.
+
+61
+00:05:55,590 --> 00:06:07,890
+So when we wanted to build the automotive aerodynamics model, we faced some challenges is that there wasn't a very large, diverse corpus of data.
+
+62
+00:06:07,890 --> 00:06:15,630
+Some of the largest public datasets consists of the DrivAerNet++, which is out of the MIT DeCoDE Lab of Faez Ahmed,
+
+63
+00:06:15,630 --> 00:06:23,700
+which is a remarkable contribution to the field, make no doubt, that consists of 8,000 Reynolds-averaged Navier-Stokes simulations.
+
+64
+00:06:23,700 --> 00:06:26,520
+These are steady-state time averaged approximations.
+
+65
+00:06:26,520 --> 00:06:29,493
+They're the fastest amongst the different simulation types.
+
+66
+00:06:31,140 --> 00:06:38,160
+And if you look At though what the data's comprised of, it's eight cars that are morphed,
+
+67
+00:06:38,160 --> 00:06:41,910
+and morphing is like stretching and pulling different parts of the car.
+
+68
+00:06:41,910 --> 00:06:46,080
+You get very topologically similar cars.
+
+69
+00:06:46,080 --> 00:06:53,070
+Another dataset is a Luminary SHIFT SUV, that's 2,000 detached eddy simulations.
+
+70
+00:06:53,070 --> 00:06:56,546
+These are of higher fidelity than RANS.
+
+71
+00:06:56,546 --> 00:07:01,560
+And here there are only two baseline cars that are morphed a thousand times.
+
+72
+00:07:01,560 --> 00:07:06,420
+So that's roughly 10 cars which have a thousand morphs.
+
+73
+00:07:06,420 --> 00:07:08,100
+It's not very diverse.
+
+74
+00:07:08,100 --> 00:07:14,660
+Another challenge I'll mention is that when you have sort of this diverse data,
+
+75
+00:07:14,670 --> 00:07:18,030
+you have different fidelity simulations, different turbulence closure models,
+
+76
+00:07:18,030 --> 00:07:26,790
+and this is sort of still an open research problem as to whether you should pre-train these models on diverse sets of simulations and how exactly you should do it.
+
+77
+00:07:26,790 --> 00:07:29,703
+We'll only focus on the geometric diversity today.
+
+78
+00:07:31,224 --> 00:07:36,420
+So okay, I said that these datasets aren't diverse, but why does this matter?
+
+79
+00:07:36,420 --> 00:07:41,460
+So, we pre-trained various attention-based architectures.
+
+80
+00:07:41,460 --> 00:07:47,663
+If you're familiar, Transolver, ABUPT, point cloud attention, linear attention.
+
+81
+00:07:47,663 --> 00:07:53,040
+These meshes are very large, so you have to use variants of attention that are suitable.
+
+82
+00:07:53,040 --> 00:07:58,020
+And we trained them on Luminary and DrivAerNet, these two public datasets that I just spoke about.
+
+83
+00:07:58,020 --> 00:08:02,160
+And we looked at their out-of-distribution performance on a representative customer dataset.
+
+84
+00:08:02,160 --> 00:08:03,570
+We call it CustomerNet.
+
+85
+00:08:03,570 --> 00:08:10,020
+That's one baseline simulation with very intricate morphs that we see that our customers have.
+
+86
+00:08:10,020 --> 00:08:11,430
+And we looked at their performance.
+
+87
+00:08:11,430 --> 00:08:13,770
+What sort of performance are we looking at?
+
+88
+00:08:13,770 --> 00:08:16,020
+I'll first talk about the quantities that we're looking at.
+
+89
+00:08:16,020 --> 00:08:17,550
+There's the drag coefficient.
+
+90
+00:08:17,550 --> 00:08:20,763
+This is a measure of the aerodynamic resistance of the car.
+
+91
+00:08:22,560 --> 00:08:27,240
+A typical sedan has around a coefficient of drag between 0.25 and 0.30.
+
+92
+00:08:27,240 --> 00:08:36,840
+Understanding this number is how automotive manufacturers can optimize for fuel efficiency and EV range and other aspects.
+
+93
+00:08:36,840 --> 00:08:40,890
+The pressure coefficient, this is the pressure on the surface of the car.
+
+94
+00:08:40,890 --> 00:08:44,700
+This tells you how pressure varies across every point of the vehicle surface.
+
+95
+00:08:44,700 --> 00:08:48,420
+You have high pressure region in the front and a low pressure in the wake.
+
+96
+00:08:48,420 --> 00:08:51,660
+And these differences are what create the drag.
+
+97
+00:08:51,660 --> 00:08:57,990
+And if you can predict the pressure field accurately, you understand why the design has its drag.
+
+98
+00:08:57,990 --> 00:09:00,420
+So let's look at these graphs.
+
+99
+00:09:00,420 --> 00:09:09,060
+So if we look at the top one, this is the drag coefficient, and along the y-axis is the Spearman rank correlation coefficient.
+
+100
+00:09:09,060 --> 00:09:11,850
+It measures how accurate you're ranking the designs.
+
+101
+00:09:11,850 --> 00:09:20,580
+And you look, in the green and the orange, the green is the model that's trained on DrivAerNet, the orange is the one that's trained on Luminary.
+
+102
+00:09:20,580 --> 00:09:25,830
+And if you look at the performance within distribution, it's quite good.
+
+103
+00:09:25,830 --> 00:09:31,080
+If we look at how it performs out of distribution on the CustomerNet, it's orders of magnitude worse.
+
+104
+00:09:31,080 --> 00:09:33,240
+We see a similar story for the pressure coefficient.
+
+105
+00:09:33,240 --> 00:09:34,620
+Here, lower is better.
+
+106
+00:09:34,620 --> 00:09:40,503
+We're looking at the mean absolute error of the pressure coefficient on the surface of the car.
+
+107
+00:09:42,330 --> 00:09:47,670
+So it seems pretty obvious you need to go out and you need to generate a very diverse dataset.
+
+108
+00:09:47,670 --> 00:09:51,090
+So this dataset is growing as we speak.
+
+109
+00:09:51,090 --> 00:09:54,090
+We are still generating this data and training the model.
+
+110
+00:09:54,090 --> 00:10:00,840
+We'll talk a little bit about how we're getting more new, diverser designs through active learning.
+
+111
+00:10:00,840 --> 00:10:09,150
+So here what you see are some numbers that are trained on 18,000 simulations with over 120 baselines
+
+112
+00:10:09,150 --> 00:10:12,330
+at a fixed velocity, inlet velocity for now.
+
+113
+00:10:12,330 --> 00:10:19,740
+And we see a difference here, that our model still performs well on DrivAerNet Luminary,
+
+114
+00:10:19,740 --> 00:10:29,310
+these public datasets, but when we look at the out-of-shot zero-shot performance, we get significantly better results.
+
+115
+00:10:29,310 --> 00:10:30,600
+And this is just zero shot.
+
+116
+00:10:30,600 --> 00:10:32,100
+This isn't when you fine-tune.
+
+117
+00:10:33,540 --> 00:10:43,470
+So, now you wanna understand, as we're growing this dataset, what's happening out of distribution is your out-of-distribution performance improving.
+
+118
+00:10:43,470 --> 00:10:47,830
+And so what we're seeing here is a graph along the y-axis is the out of distribution
+
+119
+00:10:49,920 --> 00:10:51,990
+mean absolute error of the pressure coefficient.
+
+120
+00:10:51,990 --> 00:10:57,000
+And along the x-axis, you see the training set size, and you see this decreasing.
+
+121
+00:10:57,000 --> 00:11:02,580
+Now, when you look along the x-axis, you say training set size, are these just morphs or are these baselines?
+
+122
+00:11:02,580 --> 00:11:05,280
+And these are some of the questions we're trying to understand.
+
+123
+00:11:05,280 --> 00:11:07,770
+How many times should you morph a car?
+
+124
+00:11:07,770 --> 00:11:09,753
+Does that improve the performance?
+
+125
+00:11:10,590 --> 00:11:20,790
+Here, this is going along basically a hundred morphs per baseline that we're increasing along the x-axis.
+
+126
+00:11:20,790 --> 00:11:29,793
+And we'll talk about how we're now implementing active learning and that's going to increase the slope of these curves.
+
+127
+00:11:31,800 --> 00:11:37,470
+So, accuracy alone isn't enough for engineering applications.
+
+128
+00:11:37,470 --> 00:11:40,290
+Engineers need to know when to trust the model.
+
+129
+00:11:40,290 --> 00:11:44,550
+If you're predicting a drag coefficient, a difference of 0.01 matters.
+
+130
+00:11:44,550 --> 00:11:47,070
+You need to have confidence intervals.
+
+131
+00:11:47,070 --> 00:11:49,803
+And if we look on the right,
+
+132
+00:11:51,720 --> 00:11:55,980
+this is showing how drag accumulates throughout the length of the car from the front to the back.
+
+133
+00:11:55,980 --> 00:12:00,330
+You get this by integrating the pressure and the wall shear stress on surface.
+
+134
+00:12:00,330 --> 00:12:07,080
+And as you get to all the way to the right point of the graph, the final number on the upper right, that's the coefficient of drag.
+
+135
+00:12:07,080 --> 00:12:12,210
+And you can see that that blue band is the uncertainty region.
+
+136
+00:12:12,210 --> 00:12:18,903
+And at that final point on the right, that represents the confidence interval around the final drag coefficient.
+
+137
+00:12:20,490 --> 00:12:24,990
+This is the sort of uncertainty quantification we expect from our models.
+
+138
+00:12:24,990 --> 00:12:29,400
+And we'll see that this uncertainty quantification isn't just crucial for the end use.
+
+139
+00:12:29,400 --> 00:12:30,310
+You need to know
+
+140
+00:12:32,816 --> 00:12:37,140
+at which designs the models are uncertain to know which designs to go for next.
+
+141
+00:12:37,140 --> 00:12:40,923
+And that's the active learning loop that I'll speak about next.
+
+142
+00:12:42,630 --> 00:12:51,960
+So let me now talk about, we're at an AWS conference, let me talk about how we're using AWS to simulate and train these models.
+
+143
+00:12:51,960 --> 00:12:56,250
+So let me start with the diverse geometries.
+
+144
+00:12:56,250 --> 00:12:59,820
+Today, we have a diverse set of geometries.
+
+145
+00:12:59,820 --> 00:13:03,360
+These then go into our aerodynamic simulation.
+
+146
+00:13:03,360 --> 00:13:08,370
+We're using Siemens star and we're using GPU-based solvers,
+
+147
+00:13:08,370 --> 00:13:14,610
+and these are on SageMaker HyperPod, the same clusters that our models are being trained on.
+
+148
+00:13:14,610 --> 00:13:22,293
+So on the output of the aerodynamic simulations, you get the diverse resolve flows, very large set of fields, terabytes upon terabytes.
+
+149
+00:13:22,293 --> 00:13:24,333
+Those are stored in S3.
+
+150
+00:13:25,830 --> 00:13:29,013
+That's our long-term storage.
+
+151
+00:13:30,000 --> 00:13:40,080
+Then those fields are then pre-processed using AWS Batch in parallel to get them to a form that's ingested by our models.
+
+152
+00:13:40,080 --> 00:13:49,023
+Our models are then also trained on SageMaker HyperPod using data parallelism, and the storage that's used there is FSx for Lustre.
+
+153
+00:13:50,940 --> 00:13:54,990
+And then finally, I talked about that our model has uncertainty quantification.
+
+154
+00:13:54,990 --> 00:14:01,920
+So that, plus last year at AWS, we spoke about our large generative geometry model.
+
+155
+00:14:01,920 --> 00:14:04,713
+This is a model that can generate different designs.
+
+156
+00:14:05,610 --> 00:14:12,210
+The uncertainty coupled with the geometry generative mechanism are what drives this active learning loop.
+
+157
+00:14:12,210 --> 00:14:16,920
+After we had a set of baseline geometries to fine-tune the geometry model,
+
+158
+00:14:16,920 --> 00:14:20,670
+this can then tell us what parts of the design space is the model most uncertain,
+
+159
+00:14:20,670 --> 00:14:26,220
+and we can get those geometries which then feed back into the loop to go through the aerodynamic simulation.
+
+160
+00:14:26,220 --> 00:14:31,680
+Now, that aerodynamic simulation I spoke about was Siemens star.
+
+161
+00:14:31,680 --> 00:14:32,880
+That's RANS at the moment.
+
+162
+00:14:32,880 --> 00:14:35,340
+That's not a transient simulation.
+
+163
+00:14:35,340 --> 00:14:41,310
+I think there's a lot of evidence showing that training on transient data is a better use,
+
+164
+00:14:41,310 --> 00:14:45,630
+but to train on transient data, you need to have an online data loader.
+
+165
+00:14:45,630 --> 00:14:51,600
+That's where it becomes even more important that the simulator and the models are trained in the same place.
+
+166
+00:14:51,600 --> 00:14:56,703
+So building this infrastructure even for RANS is setting the stage for the next development.
+
+167
+00:14:58,230 --> 00:15:03,510
+I'll kind of go over this again in a little more detail about the AWS architecture.
+
+168
+00:15:03,510 --> 00:15:06,840
+So at the heart is the SageMaker HyperPod.
+
+169
+00:15:06,840 --> 00:15:08,880
+We have a Slurm for job management.
+
+170
+00:15:08,880 --> 00:15:15,360
+We have a controller machine that works across multiple compute nodes and the simulation node.
+
+171
+00:15:15,360 --> 00:15:20,310
+You have the FSx for Luster, which is the file system layer.
+
+172
+00:15:20,310 --> 00:15:24,273
+It's bidirectionally synced with S3.
+
+173
+00:15:25,470 --> 00:15:28,593
+The FSx is where the data loader are.
+
+174
+00:15:30,210 --> 00:15:32,877
+And then the network architecture is two subnets.
+
+175
+00:15:32,877 --> 00:15:37,590
+You have the HyperPod, the private one, which is the HyperPod cluster, and you have the public subnet,
+
+176
+00:15:37,590 --> 00:15:44,763
+which hosts the ML flow dashboard where we see the results, and all of our researchers enter in through the AWS Session Manager.
+
+177
+00:15:47,790 --> 00:15:54,213
+So let's wrap up and see what we learned and where PhysicsX is heading next.
+
+178
+00:15:55,980 --> 00:16:05,730
+So we talked about simulations and we saw how ML surrogates were a major leap forward to be able to drive down inference time.
+
+179
+00:16:05,730 --> 00:16:12,640
+Then we talked about pre-training models and how this will help us
+
+180
+00:16:14,220 --> 00:16:19,230
+accelerate our customers' workflows by requiring less data from them upfront.
+
+181
+00:16:19,230 --> 00:16:22,173
+And we're seeing that scaling laws are emerging.
+
+182
+00:16:23,460 --> 00:16:25,950
+Now, what's next for us?
+
+183
+00:16:25,950 --> 00:16:32,280
+We started with automotive aerodynamics and we'll continue to innovate here, as I mentioned, going to transient and so on.
+
+184
+00:16:32,280 --> 00:16:38,160
+But we'll also be looking at other domains, radar cross-section, aeroelastics, structural mechanics.
+
+185
+00:16:38,160 --> 00:16:41,790
+And you should ask, "Well, is this gonna be all one model or are these gonna be separate models?"
+
+186
+00:16:41,790 --> 00:16:50,520
+Both. We'll train the best model in class and we'll look at what happens when you continue to increase the scope of the model for multiphysics.
+
+187
+00:16:50,520 --> 00:16:58,710
+I think, we're working with our customers to understand what are the best models for them, and so we'll build both.
+
+188
+00:16:58,710 --> 00:17:02,760
+I encourage you to visit physicsx.ai to learn more.
+
+189
+00:17:02,760 --> 00:17:05,403
+We'll be releasing a blog post soon about the model.
+
+190
+00:17:06,630 --> 00:17:09,933
+And I just want to thank you for your time today and for listening.

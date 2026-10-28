@@ -1,0 +1,204 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Arial,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:01.38,0:00:07.14,Sub,,0,0,0,,My name is James Leahy, and I'm a principal research scientist at PhysicsX and a mathematician.
+Dialogue: 0,0:00:07.14,0:00:14.67,Sub,,0,0,0,,I'm here to tell you about how we're building foundation models for physics and specifically aerodynamics in this case and automotive aerodynamics.
+Dialogue: 0,0:00:14.67,0:00:18.75,Sub,,0,0,0,,And we're gonna talk, I'm gonna show you some scaling loss that we're seeing.
+Dialogue: 0,0:00:18.75,0:00:20.19,Sub,,0,0,0,,More data, better models.
+Dialogue: 0,0:00:20.19,0:00:23.19,Sub,,0,0,0,,It's kind of obvious when you see this happening in language and video.
+Dialogue: 0,0:00:23.19,0:00:29.82,Sub,,0,0,0,,But for engineering and physics, this is very far from a trivial problem and it's an ongoing effort.
+Dialogue: 0,0:00:29.82,0:00:32.52,Sub,,0,0,0,,And we'll see some early results today.
+Dialogue: 0,0:00:34.32,0:00:36.24,Sub,,0,0,0,,Here's what we're gonna cover.
+Dialogue: 0,0:00:36.24,0:00:39.60,Sub,,0,0,0,,First, I'm gonna give you a quick introduction to who PhysicsX is.
+Dialogue: 0,0:00:39.60,0:00:44.43,Sub,,0,0,0,,Then I'll explain how pre-trained models are the next frontier for physics AI.
+Dialogue: 0,0:00:45.30,0:00:51.27,Sub,,0,0,0,,I'll talk about our new pre-trained model for automotive aerodynamics, and then I'll show you some scaling laws.
+Dialogue: 0,0:00:51.27,0:00:57.04,Sub,,0,0,0,,We'll look at how AWS infrastructure is making this possible and then I'll close with where we're heading next.
+Dialogue: 0,0:00:59.13,0:01:01.36,Sub,,0,0,0,,So let's start with who PhysicsX is.
+Dialogue: 0,0:01:02.31,0:01:07.53,Sub,,0,0,0,,PhysicsX is an AI company and we're focused on industrial applications.
+Dialogue: 0,0:01:07.53,0:01:12.96,Sub,,0,0,0,,Our mission is simple, build and deploy AI to accelerate industrial innovation.
+Dialogue: 0,0:01:12.96,0:01:17.40,Sub,,0,0,0,,We've raised over $155 million in series B funding.
+Dialogue: 0,0:01:17.40,0:01:24.75,Sub,,0,0,0,,We have over 200 engineers, a mix of AI researchers, simulation engineers, and software engineers.
+Dialogue: 0,0:01:24.75,0:01:29.25,Sub,,0,0,0,,I think, crucially, it's important to understand that we're not just a research organization.
+Dialogue: 0,0:01:29.25,0:01:35.73,Sub,,0,0,0,,We work directly with our customers to build the things that are usable and used.
+Dialogue: 0,0:01:35.73,0:01:40.17,Sub,,0,0,0,,We partner with leading players across aerospace and defense,
+Dialogue: 0,0:01:40.17,0:01:46.08,Sub,,0,0,0,,semiconductors, materials, energy and renewables, industrials, and automotive.
+Dialogue: 0,0:01:49.50,0:02:00.03,Sub,,0,0,0,,So what you're seeing here is a computational fluid dynamic simulation that's approximating the Navier-Stokes equation around an immersed body, in this case, an airplane,
+Dialogue: 0,0:02:00.03,0:02:04.32,Sub,,0,0,0,,CFD was a major step change from building physical prototypes.
+Dialogue: 0,0:02:04.32,0:02:10.62,Sub,,0,0,0,,Before CFD, if you wanted to know how air flowed around a design, you had to build it, put it in a wind tunnel.
+Dialogue: 0,0:02:10.62,0:02:18.90,Sub,,0,0,0,,Wind tunnels still play a vital role today, but everyone knows that simulations have fundamentally increased the speed at which we can innovate.
+Dialogue: 0,0:02:18.90,0:02:23.64,Sub,,0,0,0,,Simulations though still are a bottleneck, and there's room to innovate faster.
+Dialogue: 0,0:02:25.65,0:02:27.99,Sub,,0,0,0,,That's where physics AI comes in.
+Dialogue: 0,0:02:27.99,0:02:30.42,Sub,,0,0,0,,A legacy simulation, like the one you just saw,
+Dialogue: 0,0:02:30.42,0:02:35.61,Sub,,0,0,0,,which was a seven-second transient simulation consisting of over a billion mesh elements,
+Dialogue: 0,0:02:35.61,0:02:41.64,Sub,,0,0,0,,takes four days to compute Using physics AI, we can do this in a six-second inference step.
+Dialogue: 0,0:02:41.64,0:02:44.97,Sub,,0,0,0,,Four days becomes six seconds in inference.
+Dialogue: 0,0:02:44.97,0:02:51.90,Sub,,0,0,0,,That's not just an incremental improvement, that's just the fundamental transformation is how manufacturers can innovate and design.
+Dialogue: 0,0:02:53.40,0:02:59.52,Sub,,0,0,0,,The models, they're called surrogates because they act as stand-ins for expensive physics simulations.
+Dialogue: 0,0:02:59.52,0:03:06.29,Sub,,0,0,0,,A well-trained surrogate can give you answers that are accurate enough to make engineering decisions at a fraction of the computational cost.
+Dialogue: 0,0:03:09.96,0:03:11.91,Sub,,0,0,0,,We don't just work on aircrafts.
+Dialogue: 0,0:03:13.02,0:03:17.52,Sub,,0,0,0,,Our technology applies across engineering domains, as I spoke about earlier.
+Dialogue: 0,0:03:17.52,0:03:25.38,Sub,,0,0,0,,Aerodynamics for vehicles, heat transfer for thermal management, chemistry for reactions, and electromagnetics for electronics.
+Dialogue: 0,0:03:25.38,0:03:30.21,Sub,,0,0,0,,The physics is different in each domain, but the fundamental approach is the same.
+Dialogue: 0,0:03:30.21,0:03:36.84,Sub,,0,0,0,,We learn from simulation and hopefully more experimental data and make fast, accurate predictions.
+Dialogue: 0,0:03:42.24,0:03:45.69,Sub,,0,0,0,,So what does it take to build an AI surrogate?
+Dialogue: 0,0:03:45.69,0:03:52.08,Sub,,0,0,0,,Well, you have to do some of those expensive simulations that I talked about earlier upfront to generate the training data.
+Dialogue: 0,0:03:52.08,0:04:00.09,Sub,,0,0,0,,You need to store that data, you need to process it, you need to clean it and convert it to formats that ML models can consume.
+Dialogue: 0,0:04:00.09,0:04:03.45,Sub,,0,0,0,,Then you need to train the models, validate them, and deploy them.
+Dialogue: 0,0:04:03.45,0:04:10.59,Sub,,0,0,0,,We're building a platform designed to completely support the AI lifecycle for engineering and physics,
+Dialogue: 0,0:04:10.59,0:04:16.86,Sub,,0,0,0,,the data management, the model training, the fine-tuning, and all deployed as an agentic workflow.
+Dialogue: 0,0:04:17.88,0:04:22.11,Sub,,0,0,0,,We have a simulation workbench which orchestrates the simulations.
+Dialogue: 0,0:04:22.11,0:04:29.46,Sub,,0,0,0,,We have the AI workbench to develop and deploy models from the AI model catalog, some of which are pre-trained, some of which are not.
+Dialogue: 0,0:04:29.46,0:04:35.79,Sub,,0,0,0,,And then we have a unified data backbone with enterprise security and multi-cloud scalability.
+Dialogue: 0,0:04:35.79,0:04:40.38,Sub,,0,0,0,,This is not just a research infrastructure, this is production-grade software.
+Dialogue: 0,0:04:42.69,0:04:46.59,Sub,,0,0,0,,So now, let me talk about our pre-trained model for automotive aerodynamics.
+Dialogue: 0,0:04:47.97,0:04:54.84,Sub,,0,0,0,,So I spoke earlier about how numerical simulation was the first major step change for engineering.
+Dialogue: 0,0:04:54.84,0:04:57.36,Sub,,0,0,0,,The simulations are complex to set up.
+Dialogue: 0,0:04:57.36,0:05:00.06,Sub,,0,0,0,,They take hours or days.
+Dialogue: 0,0:05:00.06,0:05:05.22,Sub,,0,0,0,,But you get cheaper and faster exploration than physical prototypes.
+Dialogue: 0,0:05:05.22,0:05:08.10,Sub,,0,0,0,,Then came traditional ML models and surrogates.
+Dialogue: 0,0:05:08.10,0:05:16.62,Sub,,0,0,0,,You need a training dataset, you need an ML model, a pipeline, and once you're trained, you can get vast design space exploration.
+Dialogue: 0,0:05:16.62,0:05:25.53,Sub,,0,0,0,,But for every customer we encounter, every new geometry we see, we have to collect a new dataset from scratch.
+Dialogue: 0,0:05:25.53,0:05:33.45,Sub,,0,0,0,,So what we're doing is we're going out and generating large pre-training datasets, coupling it with foundational architectures,
+Dialogue: 0,0:05:34.68,0:05:43.05,Sub,,0,0,0,,and serious infrastructure that's involved to get everything from the simulations to the data loader and to train at scale using dynamic data parallelism.
+Dialogue: 0,0:05:43.05,0:05:54.03,Sub,,0,0,0,,And what you get from these pre-trained foundation models is you get lower upfront data needs for customers and better out-of-the-box performance, zero shot and fine-tuned.
+Dialogue: 0,0:05:55.59,0:06:07.89,Sub,,0,0,0,,So when we wanted to build the automotive aerodynamics model, we faced some challenges is that there wasn't a very large, diverse corpus of data.
+Dialogue: 0,0:06:07.89,0:06:15.63,Sub,,0,0,0,,Some of the largest public datasets consists of the DrivAerNet++, which is out of the MIT DeCoDE Lab of Faez Ahmed,
+Dialogue: 0,0:06:15.63,0:06:23.70,Sub,,0,0,0,,which is a remarkable contribution to the field, make no doubt, that consists of 8,000 Reynolds-averaged Navier-Stokes simulations.
+Dialogue: 0,0:06:23.70,0:06:26.52,Sub,,0,0,0,,These are steady-state time averaged approximations.
+Dialogue: 0,0:06:26.52,0:06:29.49,Sub,,0,0,0,,They're the fastest amongst the different simulation types.
+Dialogue: 0,0:06:31.14,0:06:38.16,Sub,,0,0,0,,And if you look At though what the data's comprised of, it's eight cars that are morphed,
+Dialogue: 0,0:06:38.16,0:06:41.91,Sub,,0,0,0,,and morphing is like stretching and pulling different parts of the car.
+Dialogue: 0,0:06:41.91,0:06:46.08,Sub,,0,0,0,,You get very topologically similar cars.
+Dialogue: 0,0:06:46.08,0:06:53.07,Sub,,0,0,0,,Another dataset is a Luminary SHIFT SUV, that's 2,000 detached eddy simulations.
+Dialogue: 0,0:06:53.07,0:06:56.55,Sub,,0,0,0,,These are of higher fidelity than RANS.
+Dialogue: 0,0:06:56.55,0:07:01.56,Sub,,0,0,0,,And here there are only two baseline cars that are morphed a thousand times.
+Dialogue: 0,0:07:01.56,0:07:06.42,Sub,,0,0,0,,So that's roughly 10 cars which have a thousand morphs.
+Dialogue: 0,0:07:06.42,0:07:08.10,Sub,,0,0,0,,It's not very diverse.
+Dialogue: 0,0:07:08.10,0:07:14.66,Sub,,0,0,0,,Another challenge I'll mention is that when you have sort of this diverse data,
+Dialogue: 0,0:07:14.67,0:07:18.03,Sub,,0,0,0,,you have different fidelity simulations, different turbulence closure models,
+Dialogue: 0,0:07:18.03,0:07:26.79,Sub,,0,0,0,,and this is sort of still an open research problem as to whether you should pre-train these models on diverse sets of simulations and how exactly you should do it.
+Dialogue: 0,0:07:26.79,0:07:29.70,Sub,,0,0,0,,We'll only focus on the geometric diversity today.
+Dialogue: 0,0:07:31.22,0:07:36.42,Sub,,0,0,0,,So okay, I said that these datasets aren't diverse, but why does this matter?
+Dialogue: 0,0:07:36.42,0:07:41.46,Sub,,0,0,0,,So, we pre-trained various attention-based architectures.
+Dialogue: 0,0:07:41.46,0:07:47.66,Sub,,0,0,0,,If you're familiar, Transolver, ABUPT, point cloud attention, linear attention.
+Dialogue: 0,0:07:47.66,0:07:53.04,Sub,,0,0,0,,These meshes are very large, so you have to use variants of attention that are suitable.
+Dialogue: 0,0:07:53.04,0:07:58.02,Sub,,0,0,0,,And we trained them on Luminary and DrivAerNet, these two public datasets that I just spoke about.
+Dialogue: 0,0:07:58.02,0:08:02.16,Sub,,0,0,0,,And we looked at their out-of-distribution performance on a representative customer dataset.
+Dialogue: 0,0:08:02.16,0:08:03.57,Sub,,0,0,0,,We call it CustomerNet.
+Dialogue: 0,0:08:03.57,0:08:10.02,Sub,,0,0,0,,That's one baseline simulation with very intricate morphs that we see that our customers have.
+Dialogue: 0,0:08:10.02,0:08:11.43,Sub,,0,0,0,,And we looked at their performance.
+Dialogue: 0,0:08:11.43,0:08:13.77,Sub,,0,0,0,,What sort of performance are we looking at?
+Dialogue: 0,0:08:13.77,0:08:16.02,Sub,,0,0,0,,I'll first talk about the quantities that we're looking at.
+Dialogue: 0,0:08:16.02,0:08:17.55,Sub,,0,0,0,,There's the drag coefficient.
+Dialogue: 0,0:08:17.55,0:08:20.76,Sub,,0,0,0,,This is a measure of the aerodynamic resistance of the car.
+Dialogue: 0,0:08:22.56,0:08:27.24,Sub,,0,0,0,,A typical sedan has around a coefficient of drag between 0.25 and 0.30.
+Dialogue: 0,0:08:27.24,0:08:36.84,Sub,,0,0,0,,Understanding this number is how automotive manufacturers can optimize for fuel efficiency and EV range and other aspects.
+Dialogue: 0,0:08:36.84,0:08:40.89,Sub,,0,0,0,,The pressure coefficient, this is the pressure on the surface of the car.
+Dialogue: 0,0:08:40.89,0:08:44.70,Sub,,0,0,0,,This tells you how pressure varies across every point of the vehicle surface.
+Dialogue: 0,0:08:44.70,0:08:48.42,Sub,,0,0,0,,You have high pressure region in the front and a low pressure in the wake.
+Dialogue: 0,0:08:48.42,0:08:51.66,Sub,,0,0,0,,And these differences are what create the drag.
+Dialogue: 0,0:08:51.66,0:08:57.99,Sub,,0,0,0,,And if you can predict the pressure field accurately, you understand why the design has its drag.
+Dialogue: 0,0:08:57.99,0:09:00.42,Sub,,0,0,0,,So let's look at these graphs.
+Dialogue: 0,0:09:00.42,0:09:09.06,Sub,,0,0,0,,So if we look at the top one, this is the drag coefficient, and along the y-axis is the Spearman rank correlation coefficient.
+Dialogue: 0,0:09:09.06,0:09:11.85,Sub,,0,0,0,,It measures how accurate you're ranking the designs.
+Dialogue: 0,0:09:11.85,0:09:20.58,Sub,,0,0,0,,And you look, in the green and the orange, the green is the model that's trained on DrivAerNet, the orange is the one that's trained on Luminary.
+Dialogue: 0,0:09:20.58,0:09:25.83,Sub,,0,0,0,,And if you look at the performance within distribution, it's quite good.
+Dialogue: 0,0:09:25.83,0:09:31.08,Sub,,0,0,0,,If we look at how it performs out of distribution on the CustomerNet, it's orders of magnitude worse.
+Dialogue: 0,0:09:31.08,0:09:33.24,Sub,,0,0,0,,We see a similar story for the pressure coefficient.
+Dialogue: 0,0:09:33.24,0:09:34.62,Sub,,0,0,0,,Here, lower is better.
+Dialogue: 0,0:09:34.62,0:09:40.50,Sub,,0,0,0,,We're looking at the mean absolute error of the pressure coefficient on the surface of the car.
+Dialogue: 0,0:09:42.33,0:09:47.67,Sub,,0,0,0,,So it seems pretty obvious you need to go out and you need to generate a very diverse dataset.
+Dialogue: 0,0:09:47.67,0:09:51.09,Sub,,0,0,0,,So this dataset is growing as we speak.
+Dialogue: 0,0:09:51.09,0:09:54.09,Sub,,0,0,0,,We are still generating this data and training the model.
+Dialogue: 0,0:09:54.09,0:10:00.84,Sub,,0,0,0,,We'll talk a little bit about how we're getting more new, diverser designs through active learning.
+Dialogue: 0,0:10:00.84,0:10:09.15,Sub,,0,0,0,,So here what you see are some numbers that are trained on 18,000 simulations with over 120 baselines
+Dialogue: 0,0:10:09.15,0:10:12.33,Sub,,0,0,0,,at a fixed velocity, inlet velocity for now.
+Dialogue: 0,0:10:12.33,0:10:19.74,Sub,,0,0,0,,And we see a difference here, that our model still performs well on DrivAerNet Luminary,
+Dialogue: 0,0:10:19.74,0:10:29.31,Sub,,0,0,0,,these public datasets, but when we look at the out-of-shot zero-shot performance, we get significantly better results.
+Dialogue: 0,0:10:29.31,0:10:30.60,Sub,,0,0,0,,And this is just zero shot.
+Dialogue: 0,0:10:30.60,0:10:32.10,Sub,,0,0,0,,This isn't when you fine-tune.
+Dialogue: 0,0:10:33.54,0:10:43.47,Sub,,0,0,0,,So, now you wanna understand, as we're growing this dataset, what's happening out of distribution is your out-of-distribution performance improving.
+Dialogue: 0,0:10:43.47,0:10:47.83,Sub,,0,0,0,,And so what we're seeing here is a graph along the y-axis is the out of distribution
+Dialogue: 0,0:10:49.92,0:10:51.99,Sub,,0,0,0,,mean absolute error of the pressure coefficient.
+Dialogue: 0,0:10:51.99,0:10:57.00,Sub,,0,0,0,,And along the x-axis, you see the training set size, and you see this decreasing.
+Dialogue: 0,0:10:57.00,0:11:02.58,Sub,,0,0,0,,Now, when you look along the x-axis, you say training set size, are these just morphs or are these baselines?
+Dialogue: 0,0:11:02.58,0:11:05.28,Sub,,0,0,0,,And these are some of the questions we're trying to understand.
+Dialogue: 0,0:11:05.28,0:11:07.77,Sub,,0,0,0,,How many times should you morph a car?
+Dialogue: 0,0:11:07.77,0:11:09.75,Sub,,0,0,0,,Does that improve the performance?
+Dialogue: 0,0:11:10.59,0:11:20.79,Sub,,0,0,0,,Here, this is going along basically a hundred morphs per baseline that we're increasing along the x-axis.
+Dialogue: 0,0:11:20.79,0:11:29.79,Sub,,0,0,0,,And we'll talk about how we're now implementing active learning and that's going to increase the slope of these curves.
+Dialogue: 0,0:11:31.80,0:11:37.47,Sub,,0,0,0,,So, accuracy alone isn't enough for engineering applications.
+Dialogue: 0,0:11:37.47,0:11:40.29,Sub,,0,0,0,,Engineers need to know when to trust the model.
+Dialogue: 0,0:11:40.29,0:11:44.55,Sub,,0,0,0,,If you're predicting a drag coefficient, a difference of 0.01 matters.
+Dialogue: 0,0:11:44.55,0:11:47.07,Sub,,0,0,0,,You need to have confidence intervals.
+Dialogue: 0,0:11:47.07,0:11:49.80,Sub,,0,0,0,,And if we look on the right,
+Dialogue: 0,0:11:51.72,0:11:55.98,Sub,,0,0,0,,this is showing how drag accumulates throughout the length of the car from the front to the back.
+Dialogue: 0,0:11:55.98,0:12:00.33,Sub,,0,0,0,,You get this by integrating the pressure and the wall shear stress on surface.
+Dialogue: 0,0:12:00.33,0:12:07.08,Sub,,0,0,0,,And as you get to all the way to the right point of the graph, the final number on the upper right, that's the coefficient of drag.
+Dialogue: 0,0:12:07.08,0:12:12.21,Sub,,0,0,0,,And you can see that that blue band is the uncertainty region.
+Dialogue: 0,0:12:12.21,0:12:18.90,Sub,,0,0,0,,And at that final point on the right, that represents the confidence interval around the final drag coefficient.
+Dialogue: 0,0:12:20.49,0:12:24.99,Sub,,0,0,0,,This is the sort of uncertainty quantification we expect from our models.
+Dialogue: 0,0:12:24.99,0:12:29.40,Sub,,0,0,0,,And we'll see that this uncertainty quantification isn't just crucial for the end use.
+Dialogue: 0,0:12:29.40,0:12:30.31,Sub,,0,0,0,,You need to know
+Dialogue: 0,0:12:32.82,0:12:37.14,Sub,,0,0,0,,at which designs the models are uncertain to know which designs to go for next.
+Dialogue: 0,0:12:37.14,0:12:40.92,Sub,,0,0,0,,And that's the active learning loop that I'll speak about next.
+Dialogue: 0,0:12:42.63,0:12:51.96,Sub,,0,0,0,,So let me now talk about, we're at an AWS conference, let me talk about how we're using AWS to simulate and train these models.
+Dialogue: 0,0:12:51.96,0:12:56.25,Sub,,0,0,0,,So let me start with the diverse geometries.
+Dialogue: 0,0:12:56.25,0:12:59.82,Sub,,0,0,0,,Today, we have a diverse set of geometries.
+Dialogue: 0,0:12:59.82,0:13:03.36,Sub,,0,0,0,,These then go into our aerodynamic simulation.
+Dialogue: 0,0:13:03.36,0:13:08.37,Sub,,0,0,0,,We're using Siemens star and we're using GPU-based solvers,
+Dialogue: 0,0:13:08.37,0:13:14.61,Sub,,0,0,0,,and these are on SageMaker HyperPod, the same clusters that our models are being trained on.
+Dialogue: 0,0:13:14.61,0:13:22.29,Sub,,0,0,0,,So on the output of the aerodynamic simulations, you get the diverse resolve flows, very large set of fields, terabytes upon terabytes.
+Dialogue: 0,0:13:22.29,0:13:24.33,Sub,,0,0,0,,Those are stored in S3.
+Dialogue: 0,0:13:25.83,0:13:29.01,Sub,,0,0,0,,That's our long-term storage.
+Dialogue: 0,0:13:30.00,0:13:40.08,Sub,,0,0,0,,Then those fields are then pre-processed using AWS Batch in parallel to get them to a form that's ingested by our models.
+Dialogue: 0,0:13:40.08,0:13:49.02,Sub,,0,0,0,,Our models are then also trained on SageMaker HyperPod using data parallelism, and the storage that's used there is FSx for Lustre.
+Dialogue: 0,0:13:50.94,0:13:54.99,Sub,,0,0,0,,And then finally, I talked about that our model has uncertainty quantification.
+Dialogue: 0,0:13:54.99,0:14:01.92,Sub,,0,0,0,,So that, plus last year at AWS, we spoke about our large generative geometry model.
+Dialogue: 0,0:14:01.92,0:14:04.71,Sub,,0,0,0,,This is a model that can generate different designs.
+Dialogue: 0,0:14:05.61,0:14:12.21,Sub,,0,0,0,,The uncertainty coupled with the geometry generative mechanism are what drives this active learning loop.
+Dialogue: 0,0:14:12.21,0:14:16.92,Sub,,0,0,0,,After we had a set of baseline geometries to fine-tune the geometry model,
+Dialogue: 0,0:14:16.92,0:14:20.67,Sub,,0,0,0,,this can then tell us what parts of the design space is the model most uncertain,
+Dialogue: 0,0:14:20.67,0:14:26.22,Sub,,0,0,0,,and we can get those geometries which then feed back into the loop to go through the aerodynamic simulation.
+Dialogue: 0,0:14:26.22,0:14:31.68,Sub,,0,0,0,,Now, that aerodynamic simulation I spoke about was Siemens star.
+Dialogue: 0,0:14:31.68,0:14:32.88,Sub,,0,0,0,,That's RANS at the moment.
+Dialogue: 0,0:14:32.88,0:14:35.34,Sub,,0,0,0,,That's not a transient simulation.
+Dialogue: 0,0:14:35.34,0:14:41.31,Sub,,0,0,0,,I think there's a lot of evidence showing that training on transient data is a better use,
+Dialogue: 0,0:14:41.31,0:14:45.63,Sub,,0,0,0,,but to train on transient data, you need to have an online data loader.
+Dialogue: 0,0:14:45.63,0:14:51.60,Sub,,0,0,0,,That's where it becomes even more important that the simulator and the models are trained in the same place.
+Dialogue: 0,0:14:51.60,0:14:56.70,Sub,,0,0,0,,So building this infrastructure even for RANS is setting the stage for the next development.
+Dialogue: 0,0:14:58.23,0:15:03.51,Sub,,0,0,0,,I'll kind of go over this again in a little more detail about the AWS architecture.
+Dialogue: 0,0:15:03.51,0:15:06.84,Sub,,0,0,0,,So at the heart is the SageMaker HyperPod.
+Dialogue: 0,0:15:06.84,0:15:08.88,Sub,,0,0,0,,We have a Slurm for job management.
+Dialogue: 0,0:15:08.88,0:15:15.36,Sub,,0,0,0,,We have a controller machine that works across multiple compute nodes and the simulation node.
+Dialogue: 0,0:15:15.36,0:15:20.31,Sub,,0,0,0,,You have the FSx for Luster, which is the file system layer.
+Dialogue: 0,0:15:20.31,0:15:24.27,Sub,,0,0,0,,It's bidirectionally synced with S3.
+Dialogue: 0,0:15:25.47,0:15:28.59,Sub,,0,0,0,,The FSx is where the data loader are.
+Dialogue: 0,0:15:30.21,0:15:32.88,Sub,,0,0,0,,And then the network architecture is two subnets.
+Dialogue: 0,0:15:32.88,0:15:37.59,Sub,,0,0,0,,You have the HyperPod, the private one, which is the HyperPod cluster, and you have the public subnet,
+Dialogue: 0,0:15:37.59,0:15:44.76,Sub,,0,0,0,,which hosts the ML flow dashboard where we see the results, and all of our researchers enter in through the AWS Session Manager.
+Dialogue: 0,0:15:47.79,0:15:54.21,Sub,,0,0,0,,So let's wrap up and see what we learned and where PhysicsX is heading next.
+Dialogue: 0,0:15:55.98,0:16:05.73,Sub,,0,0,0,,So we talked about simulations and we saw how ML surrogates were a major leap forward to be able to drive down inference time.
+Dialogue: 0,0:16:05.73,0:16:12.64,Sub,,0,0,0,,Then we talked about pre-training models and how this will help us
+Dialogue: 0,0:16:14.22,0:16:19.23,Sub,,0,0,0,,accelerate our customers' workflows by requiring less data from them upfront.
+Dialogue: 0,0:16:19.23,0:16:22.17,Sub,,0,0,0,,And we're seeing that scaling laws are emerging.
+Dialogue: 0,0:16:23.46,0:16:25.95,Sub,,0,0,0,,Now, what's next for us?
+Dialogue: 0,0:16:25.95,0:16:32.28,Sub,,0,0,0,,We started with automotive aerodynamics and we'll continue to innovate here, as I mentioned, going to transient and so on.
+Dialogue: 0,0:16:32.28,0:16:38.16,Sub,,0,0,0,,But we'll also be looking at other domains, radar cross-section, aeroelastics, structural mechanics.
+Dialogue: 0,0:16:38.16,0:16:41.79,Sub,,0,0,0,,And you should ask, "Well, is this gonna be all one model or are these gonna be separate models?"
+Dialogue: 0,0:16:41.79,0:16:50.52,Sub,,0,0,0,,Both. We'll train the best model in class and we'll look at what happens when you continue to increase the scope of the model for multiphysics.
+Dialogue: 0,0:16:50.52,0:16:58.71,Sub,,0,0,0,,I think, we're working with our customers to understand what are the best models for them, and so we'll build both.
+Dialogue: 0,0:16:58.71,0:17:02.76,Sub,,0,0,0,,I encourage you to visit physicsx.ai to learn more.
+Dialogue: 0,0:17:02.76,0:17:05.40,Sub,,0,0,0,,We'll be releasing a blog post soon about the model.
+Dialogue: 0,0:17:06.63,0:17:09.93,Sub,,0,0,0,,And I just want to thank you for your time today and for listening.

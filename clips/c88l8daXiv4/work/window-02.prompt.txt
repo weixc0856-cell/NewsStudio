@@ -1,0 +1,142 @@
+窗口时间：00:15:00.000 – 00:24:51.920
+合法 ID 范围：190 ~ 317（只能使用下面列出的 ID）
+
+字幕：
+[190] 00:14:57.371–00:15:05.525 | But also these long running agents, if they the way it seems to be working directionally is if the agents can work longer and solve for more things,
+[191] 00:15:05.575–00:15:11.615 | you can essentially ask them to do more and they will spin up more and more of these agents which means more and more CPU boxes.
+[192] 00:15:11.665–00:15:18.396 | So do you see that like from your purview do you like I understand market dynamics and that'll probably converge at some point,
+[193] 00:15:18.446–00:15:22.388 | but I feel it's getting wider before it's shrinking the need for that.
+[194] 00:15:22.438–00:15:28.230 | Yeah, I mean it it it's that's totally the case because initially all the RL was like, let's do math proofs.
+[195] 00:15:28.280–00:15:31.297 | And I was like, okay, math proofs are really low on resources.
+[196] 00:15:31.347–00:15:33.074 | And also the model, right?
+[197] 00:15:33.124–00:15:37.820 | The generator will generate tons of output and then it'll send the correct answer or what
+[198] 00:15:37.870–00:15:41.740 | it thinks is the correct answer to the server and then the server will verify it.
+[199] 00:15:41.790–00:15:44.125 | Um but as we've moved forward, right?
+[200] 00:15:44.175–00:15:45.390 | Like it's it's not just that.
+[201] 00:15:45.440–00:15:46.221 | It's like,
+[202] 00:15:46.271–00:15:50.504 | oh actually the model is committing many times or it's like trying to
+[203] 00:15:50.554–00:15:53.935 | compile many times or it's trying to do unit tests throughout its agentic process.
+[204] 00:15:53.985–00:16:00.248 | Okay, now that's that's increasing the frequency in which the generator, i.e. the model, is sending to the verifier.
+[205] 00:16:00.298–00:16:02.891 | Um and that loop gets tighter and tighter and tighter.
+[206] 00:16:02.941–00:16:10.448 | And as we as we continue to move to more complex RL, it's like the model will actually uh be verifying its output constantly, right?
+[207] 00:16:10.498–00:16:14.933 | Like if you imagine um let's say models that are training over the next year or two is
+[208] 00:16:14.983–00:16:19.437 | is let's say a robot model that's verifying and that's that's in in a like a world model,
+[209] 00:16:19.487–00:16:20.004 | right?
+[210] 00:16:20.054–00:16:24.792 | So uh VLM is is navigating across the world trying to pick up things, put them down.
+[211] 00:16:24.842–00:16:29.626 | Every single action needs to be verified against the physics model that is sitting on some CPUs.
+[212] 00:16:29.676–00:16:38.004 | And so that's that's insanely way more CPUs than you need for say doing unit tests or running a math proof, right?
+[213] 00:16:38.054–00:16:41.024 | And when we look at like o1, that's like all it could do was math, right?
+[214] 00:16:41.074–00:16:48.811 | Um and as we look at like you know, sort of uh GPT-5.4 or Opus 4.6, like it's okay agentic software,
+[215] 00:16:48.861–00:16:52.684 | but like as we move forward to the next stage of, you know, whatever's coming,
+[216] 00:16:52.734–00:16:58.390 | it's going to be models that can understand, oh, I need to tie my shoe and like when I tie it,
+[217] 00:16:58.440–00:17:00.854 | what's the strength strength, yeah. like what's the tensile strength?
+[218] 00:17:00.904–00:17:06.210 | All these things like as to the the has to be calculated cuz the verifier is just generating, you know, what's the next step.
+[219] 00:17:06.260–00:17:13.029 | Um but every step needs to be checked way more often and the intensity of that calculation for checking the step it goes up a time.
+[220] 00:17:13.079–00:17:13.371 | Yeah.
+[221] 00:17:13.401–00:17:19.324 | But there's also another thing and you probably know better than I is like the the the level
+[222] 00:17:19.374–00:17:26.014 | of the the the strength of the GPUs can handle in parallel a certain amount of CPUs boxes.
+[223] 00:17:26.064–00:17:29.104 | And so as we get next generations of GPUs,
+[224] 00:17:29.154–00:17:38.830 | I feel that they will be able to spin up manage or work on more CPUs than they do now which is another stressor on CPUs now.
+[225] 00:17:38.880–00:17:40.735 | Yeah, I mean that's that's certainly the case, right?
+[226] 00:17:40.785–00:17:44.388 | GPU Well, GPUs are also just like getting way higher power, right?
+[227] 00:17:44.438–00:17:49.070 | So one GPU will equal many many more CPUs over time, right?
+[228] 00:17:49.120–00:17:55.166 | Um and GPUs are getting more expensive gen on gen on gen, whereas vCPUs are flat, slightly down.
+[229] 00:17:55.216–00:17:55.685 | Yeah.
+[230] 00:17:55.735–00:17:58.750 | Um and so certainly it's a different scale, right?
+[231] 00:17:58.800–00:18:02.587 | Like one Blackwell versus one Rubin, performance is up X.
+[232] 00:18:02.637–00:18:04.070 | Price is also up X.
+[233] 00:18:04.120–00:18:12.925 | Um whereas, you know, you may buy last generation CPU, new generation CPU and there's 192 vCPUs in this gen and last gen was like 96, right?
+[234] 00:18:12.975–00:18:18.707 | So now you've got way more CPUs, but the the price increase is equivalent to what you got in additional vCPUs.
+[235] 00:18:18.757–00:18:23.198 | So it's like sort of yeah, the the ratio will grow in the favor of vCPUs,
+[236] 00:18:23.248–00:18:28.803 | but the cost will be sort of also probably in the direction of CPUs, but not sure how much.
+[237] 00:18:28.853–00:18:29.160 | Yeah.
+[238] 00:18:29.190–00:18:35.560 | And and also the other stressor on that and we've seen this with with larger customers when they have
+[239] 00:18:35.610–00:18:40.353 | like they don't they have like a time allotment for GPUs and they don't want their GPUs to be idle.
+[240] 00:18:40.403–00:18:48.689 | So they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot.
+[241] 00:18:48.739–00:18:50.466 | They're essentially working, right?
+[242] 00:18:50.516–00:18:54.868 | So they'll we we I say we cuz we do mostly CPUs are certainly the cheap resource.
+[243] 00:18:54.918–00:18:57.207 | I don't know if we're cheap, but cheap resource for this.
+[244] 00:18:57.257–00:19:04.989 | And so that spends more GPUs actually just because the cost of having an idle GPU is to is way more expensive, right?
+[245] 00:19:05.039–00:19:06.923 | Yeah, it's actually like a really interesting point, right?
+[246] 00:19:06.973–00:19:10.918 | The business model is like no one does I mean sure, there's on demand GPUs,
+[247] 00:19:10.968–00:19:16.620 | but like Lambda has like 50,000 plus GPUs and only 4,000 of them are on demand, right?
+[248] 00:19:16.670–00:19:17.795 | And they're always sold out.
+[249] 00:19:17.845–00:19:20.055 | So like no one really has on demand GPUs.
+[250] 00:19:20.105–00:19:27.528 | Everyone's signing at minimum like long-term, you know, multi-month contracts, but in most cases multi-year contracts.
+[251] 00:19:27.578–00:19:32.338 | Um and so like CPUs have been used to like you can spin them up and down, right?
+[252] 00:19:32.388–00:19:34.910 | That's why everyone moved to the cloud, right?
+[253] 00:19:34.960–00:19:42.037 | Um but with these RL workloads, it's like, okay, the GPU: the generator, the model running on a GPU generated a bunch of stuff.
+[254] 00:19:42.087–00:19:44.030 | It sends it to the verifier.
+[255] 00:19:44.080–00:19:46.123 | If the verifier is not ready and waiting Then it's idle.
+[256] 00:19:46.173–00:19:46.710 | Then it's waiting.
+[257] 00:19:46.760–00:19:46.924 | Right.
+[258] 00:19:46.954–00:19:47.916 | Like the GPU is just sitting there.
+[259] 00:19:47.966–00:19:51.163 | So it's like, okay, well, I've already paid for this.
+[260] 00:19:51.213–00:19:51.670 | Yes.
+[261] 00:19:51.720–00:20:00.228 | So if you can't get your instantaneous you know you know resources spun up on the CPU side and in fact you should do it preemptively so it's not
+[262] 00:20:00.278–00:20:05.266 | like loading you know the the simulator that you or the generation the environment
+[263] 00:20:05.316–00:20:08.041 | right you you're wasting money so yeah like that that makes a lot of sense.
+[264] 00:20:08.091–00:20:11.190 | And not only that then you have that running and then as soon as those are running you're
+[265] 00:20:11.240–00:20:16.441 | spinning up another warm pool of these so that every new iteration of them are are continually growing.
+[266] 00:20:16.491–00:20:18.351 | So what does that mean generally?
+[267] 00:20:18.401–00:20:26.037 | So we skipped over RAM we didn't talk about that where it's like GPU was a bottleneck RAM was a bottleneck and now CPUs.
+[268] 00:20:26.087–00:20:32.576 | So just very closer to home for most people is that like it's very hard to buy a PC today because it's like super expensive is is that
+[269] 00:20:32.626–00:20:36.482 | happening to the CPUs because we just mentioned that they're like they're fairly inexpensive
+[270] 00:20:36.532–00:20:41.950 | and flat does the market pressure now demand sort of that these prices now increase?
+[271] 00:20:42.000–00:20:47.985 | Yeah I mean it's it's pretty much the case for all like PCs laptops building a PC
+[272] 00:20:48.035–00:20:54.910 | that it's hard to get you know Apple is pretty sold out of like Mac minis for example.
+[273] 00:20:54.960–00:20:59.036 | We we bought a bunch of Mac minis because people are switching from you know people who
+[274] 00:20:59.086–00:21:02.404 | used a bunch of Excel and like Windows are like okay I want to use Claude Code and
+[275] 00:21:02.454–00:21:08.843 | OS X is obviously a better um dev environment right so we just bought a bunch of Mac
+[276] 00:21:08.893–00:21:13.799 | minis and people are deploying them and using them and and sort of I think similar has happened
+[277] 00:21:13.849–00:21:19.127 | across the space and then data centers are way more of an inelastic buyer of resources and
+[278] 00:21:19.177–00:21:24.662 | so that's also caused prices to go up right so like GPUs always were expensive and video's margins
+[279] 00:21:24.712–00:21:29.638 | have always been you know 70% plus CPUs the margins were not that high but they're creeping up
+[280] 00:21:29.688–00:21:35.747 | because Intel and AMD are raising prices and they're tight memory has like 4x in price over the
+[281] 00:21:35.797–00:21:40.765 | last like year and it's going to continue to go up and then now storage SSD right
+[282] 00:21:40.815–00:21:45.717 | so it's like all of the resources are SSDs are also up like three four x in price
+[283] 00:21:45.767–00:21:49.548 | and going to keep going up at least another like 60% not as much as DRAM but up
+[284] 00:21:49.598–00:21:56.264 | a lot and so between these like four like these things right it's like well the CPU capacity
+[285] 00:21:56.314–00:22:03.263 | for Intel and AMD is somewhat fungible between and substrate and all these things somewhat fungible between PCs
+[286] 00:22:03.313–00:22:09.130 | and and data centers RAM and storage are very fungible and so you've ended up with this like
+[287] 00:22:09.180–00:22:15.271 | conundrum that like look screw the screw the like normally humans screw the humans yeah you have to
+[288] 00:22:15.321–00:22:21.470 | buy a Mac Mac mini now otherwise you'll never escape the permanent underclass is like the thought process.
+[289] 00:22:21.520–00:22:28.996 | And one last note before we're close to the end but one thing not financial advice like Intel was in a very bad spot like quite like recently.
+[290] 00:22:29.046–00:22:29.710 | Still are.
+[291] 00:22:29.760–00:22:32.291 | Yeah but does this pull them out?
+[292] 00:22:32.341–00:22:40.550 | Um I mean they'll do better but like it's not like it's like a long-term like you know oh the company's saved right?
+[293] 00:22:40.600–00:22:46.660 | Company's valued on like future cash flows but like and also like some potentiality they get like
+[294] 00:22:46.710–00:22:49.910 | Apple or someone else as a customer and this is actually like the funnier thing is it's
+[295] 00:22:49.960–00:22:54.021 | not because CPU demand is so high Intel have some short-term profits from that but you know
+[296] 00:22:54.071–00:22:58.170 | others will catch up AMD and Amazon and others will catch up on capacity that they have.
+[297] 00:22:58.220–00:23:05.774 | More importantly is that AI is buying all the capacity on 3 nanometer and 2 nanometer in a couple
+[298] 00:23:05.824–00:23:09.655 | years that you know people are having to turn to other directions right like one of the like you
+[299] 00:23:09.705–00:23:15.909 | know people make all these like nonsense reasons up why NVIDIA acquired Groq part of it was because they
+[300] 00:23:15.959–00:23:22.629 | want to have really fast inference but like part of it is that Groq is manufactured on Samsung right?
+[301] 00:23:22.679–00:23:27.065 | Because there's no 3 nanometer capacity for them at TSMC they need a chip somewhere else and
+[302] 00:23:27.115–00:23:30.710 | if you just if AI is as crazy as like we believe it is and demand is
+[303] 00:23:30.760–00:23:33.559 | as crazy as we believe it is it's going to be even crazier next year and so
+[304] 00:23:33.609–00:23:37.885 | like just make any decent chip and it'll sell right is like sort of the philosophy there.
+[305] 00:23:37.935–00:23:42.577 | Obviously there's a lot more they're doing there on the architecture and stuff but same applies to like Apple is
+[306] 00:23:42.627–00:23:49.830 | getting squeezed out right like TSMC told them hey like get off of 3 nanometer move to 2 nanometer faster right?
+[307] 00:23:49.880–00:23:54.136 | Because all the AI chips are on 3 nanometer and it takes time right small mobile chips are
+[308] 00:23:54.186–00:24:00.415 | easier to make than big AI chips so all the AI chips are moving to 3 nanometer now right?
+[309] 00:24:00.465–00:24:06.887 | MI350 from late last year from AMD or Trainium 3 and TPU v7 from late last year or
+[310] 00:24:06.937–00:24:15.358 | slash early this year from Amazon and Google or you know NVIDIA is launching Rubin next week right?
+[311] 00:24:15.408–00:24:21.431 | That's that's also so all these things are 3 nanometer and and they're just telling Apple to get off.
+[312] 00:24:21.481–00:24:25.910 | They're telling Qualcomm and MediaTek to get off and all three of these companies are like oh maybe we
+[313] 00:24:25.960–00:24:31.750 | should use Intel because they're not telling us to get off because they don't they can't manufacture AI chips.
+[314] 00:24:31.800–00:24:35.110 | Yeah so so it's it's pretty it's pretty tough for everyone.
+[315] 00:24:35.160–00:24:41.470 | Um I have like a bunch of questions I'd love to ask you we're like we have 20 seconds left so the next question I ask
+[316] 00:24:41.520–00:24:48.713 | you is probably going to go off so with that I'll just like keep us on time and appreciate so much for coming and talking to us.
+[317] 00:24:48.763–00:24:51.920 | Thank you so much.
+
+本窗口共 128 条字幕，平均每条约 4.6 秒；180–480 秒大约相当于 39–103 条字幕。
+请选出一个最适合独立成片的完整话题片段（3–8 分钟）：
+1. 片段实际时长 = 结束字幕结束时间 − 开始字幕开始时间，必须在 180–480 秒之间，低于 180 秒的候选一律无效；优先 240–360 秒；
+2. 语义完整、主题集中，能独立看懂；优先一个完整话题或一次完整问答；
+3. 不要从句子中间开始或结束：start 选在一句话/一个问题的开头，end 选在一段结论之后；
+4. 不要选广告、寒暄、纯过渡段。
+
+只输出一个 JSON 对象，不要代码块、不要解释，字段固定：
+{"start_cue_id": <整数>, "end_cue_id": <整数>, "title": "<不超过 20 字的简体中文标题>", "summary": "<一句话简体中文摘要>"}

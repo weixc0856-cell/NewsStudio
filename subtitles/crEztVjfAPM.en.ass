@@ -1,0 +1,1434 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Arial,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:43.19,0:00:45.79,Sub,,0,0,0,,The next wave of AI is here.
+Dialogue: 0,0:00:46.47,0:00:48.97,Sub,,0,0,0,,Evolving beyond thinking to acting.
+Dialogue: 0,0:00:49.53,0:00:51.19,Sub,,0,0,0,,And it's bigger than anyone imagined.
+Dialogue: 0,0:00:51.79,0:00:52.91,Sub,,0,0,0,,Except AMD.
+Dialogue: 0,0:00:54.13,0:01:00.07,Sub,,0,0,0,,We recognize this agentic era would require the highest performing GPUs and CPUs working together.
+Dialogue: 0,0:01:00.67,0:01:02.65,Sub,,0,0,0,,So we're the only ones who build both.
+Dialogue: 0,0:01:03.31,0:01:06.23,Sub,,0,0,0,,It's how agentic AI moves from answers to action.
+Dialogue: 0,0:01:06.55,0:01:09.19,Sub,,0,0,0,,Pushing inference compute to tremendous scale.
+Dialogue: 0,0:01:09.99,0:01:16.07,Sub,,0,0,0,,Like an agent that frees thousands of employees from smaller tasks to focus on bigger things.
+Dialogue: 0,0:01:17.21,0:01:22.05,Sub,,0,0,0,,A car that safely handles a new city like a local on its first day there.
+Dialogue: 0,0:01:24.49,0:01:30.71,Sub,,0,0,0,,And an agent that pinpoints a disease in millions of cells, then designs a cure.
+Dialogue: 0,0:01:33.13,0:01:39.29,Sub,,0,0,0,,We've built more AI computing power into a single data center than existed on Earth a decade ago.
+Dialogue: 0,0:01:40.47,0:01:43.19,Sub,,0,0,0,,And now, we're giving you the tools.
+Dialogue: 0,0:01:45.03,0:01:47.49,Sub,,0,0,0,,So together, we advance AI.
+Dialogue: 0,0:02:07.00,0:02:08.12,Sub,,0,0,0,,Good morning!
+Dialogue: 0,0:02:09.94,0:02:11.78,Sub,,0,0,0,,That's a pretty good good morning.
+Dialogue: 0,0:02:12.46,0:02:13.82,Sub,,0,0,0,,Good morning!
+Dialogue: 0,0:02:13.82,0:02:15.24,Sub,,0,0,0,,Good morning!
+Dialogue: 0,0:02:15.94,0:02:18.80,Sub,,0,0,0,,And welcome to Advancing AI 2026.
+Dialogue: 0,0:02:19.20,0:02:24.80,Sub,,0,0,0,,It's so great to be back here in San Francisco and to see so many friends and partners and customers.
+Dialogue: 0,0:02:25.34,0:02:28.74,Sub,,0,0,0,,And especially all the developers that are here with us today.
+Dialogue: 0,0:02:29.34,0:02:33.66,Sub,,0,0,0,,And I want to say a big welcome to everyone who's joining us online from around the world.
+Dialogue: 0,0:02:34.62,0:02:37.98,Sub,,0,0,0,,This is my absolute favorite event of the year.
+Dialogue: 0,0:02:38.18,0:02:43.28,Sub,,0,0,0,,It's where we bring the entire AI ecosystem together to show what we've been building.
+Dialogue: 0,0:02:43.28,0:02:44.68,Sub,,0,0,0,,And where we're going next.
+Dialogue: 0,0:02:45.24,0:02:47.54,Sub,,0,0,0,,And this year, this is our biggest show ever.
+Dialogue: 0,0:02:47.72,0:02:49.80,Sub,,0,0,0,,Because we have so much to tell you.
+Dialogue: 0,0:02:50.44,0:02:51.72,Sub,,0,0,0,,So let's go ahead and get started.
+Dialogue: 0,0:02:53.72,0:03:01.24,Sub,,0,0,0,,At AMD, our mission is to push the boundaries of high performance in AI computing to help solve the world's most important challenges.
+Dialogue: 0,0:03:02.10,0:03:07.22,Sub,,0,0,0,,And I often say, AI is the most important technology of the last 50 years.
+Dialogue: 0,0:03:08.04,0:03:12.18,Sub,,0,0,0,,And frankly, the progress that we're seeing in the industry is just incredible.
+Dialogue: 0,0:03:12.18,0:03:18.06,Sub,,0,0,0,,Like, every month, every few months, we see something new that was far beyond our imagination.
+Dialogue: 0,0:03:18.82,0:03:22.08,Sub,,0,0,0,,And you can already see the impact across every industry.
+Dialogue: 0,0:03:23.00,0:03:27.62,Sub,,0,0,0,,In healthcare, AI is helping researchers identify new drug candidates faster.
+Dialogue: 0,0:03:28.00,0:03:32.98,Sub,,0,0,0,,In science, we're solving problems that we didn't think were possible a few years ago.
+Dialogue: 0,0:03:33.52,0:03:37.78,Sub,,0,0,0,,And across every industry, AI is changing the way we get work done.
+Dialogue: 0,0:03:38.36,0:03:44.94,Sub,,0,0,0,,And the most important thing is we're still in the very, very early innings of what's possible.
+Dialogue: 0,0:03:46.30,0:03:48.30,Sub,,0,0,0,,Now, just take a look at some of these charts.
+Dialogue: 0,0:03:48.46,0:03:49.88,Sub,,0,0,0,,You know, we look at these every year.
+Dialogue: 0,0:03:50.10,0:03:53.94,Sub,,0,0,0,,And you kind of see the rate and pace of AI growth.
+Dialogue: 0,0:03:54.80,0:03:56.72,Sub,,0,0,0,,A couple of years ago, we were just starting.
+Dialogue: 0,0:03:57.06,0:03:58.96,Sub,,0,0,0,,People were experimenting with chatbots.
+Dialogue: 0,0:03:59.32,0:04:00.64,Sub,,0,0,0,,And, you know, it was really cool.
+Dialogue: 0,0:04:00.64,0:04:08.28,Sub,,0,0,0,,But if you look at today, we're really seeing more than 35 quadrillion tokens consumed every single month.
+Dialogue: 0,0:04:09.36,0:04:13.48,Sub,,0,0,0,,That's an increase of nearly 160 times in just two years.
+Dialogue: 0,0:04:14.20,0:04:17.10,Sub,,0,0,0,,And that curve is actually just getting steeper.
+Dialogue: 0,0:04:17.14,0:04:18.62,Sub,,0,0,0,,You're going to hear a lot about that today.
+Dialogue: 0,0:04:19.84,0:04:22.58,Sub,,0,0,0,,So, just looking at, you know, where is all that demand?
+Dialogue: 0,0:04:22.78,0:04:26.32,Sub,,0,0,0,,I mean, obviously, training remains incredibly important and foundational.
+Dialogue: 0,0:04:26.32,0:04:36.06,Sub,,0,0,0,,And over the last four or five years, you know, we see the compute that's used for training advanced models continuing to increase by, let's call it, roughly 5x every year.
+Dialogue: 0,0:04:36.72,0:04:38.06,Sub,,0,0,0,,And those models are getting better.
+Dialogue: 0,0:04:38.26,0:04:39.54,Sub,,0,0,0,,Like, we're all experiencing that.
+Dialogue: 0,0:04:39.62,0:04:40.54,Sub,,0,0,0,,We're seeing better reasoning.
+Dialogue: 0,0:04:40.80,0:04:42.06,Sub,,0,0,0,,We're seeing new capabilities.
+Dialogue: 0,0:04:42.54,0:04:45.66,Sub,,0,0,0,,We're now seeing a growing number of specialized models.
+Dialogue: 0,0:04:45.88,0:04:50.50,Sub,,0,0,0,,And one of the things that I really believe in is there is no one perfect model.
+Dialogue: 0,0:04:50.50,0:04:57.76,Sub,,0,0,0,,I think we're all going to use a slew of different models, depending on what task you're trying to solve and which industry you're in.
+Dialogue: 0,0:04:58.80,0:05:01.54,Sub,,0,0,0,,But the bigger shift is actually in inference.
+Dialogue: 0,0:05:02.24,0:05:03.36,Sub,,0,0,0,,And we expected this.
+Dialogue: 0,0:05:03.48,0:05:06.62,Sub,,0,0,0,,We expected that inference would grow faster than training.
+Dialogue: 0,0:05:07.04,0:05:15.20,Sub,,0,0,0,,And we can say that in 2026, for the first time, the world is using more AI compute to run models than to train them.
+Dialogue: 0,0:05:15.20,0:05:24.14,Sub,,0,0,0,,And we've seen that to a point where we think this year, roughly 60% of the global AI compute capacity will be used for inference.
+Dialogue: 0,0:05:25.00,0:05:27.74,Sub,,0,0,0,,And the reason for that is actually pretty simple.
+Dialogue: 0,0:05:29.00,0:05:35.42,Sub,,0,0,0,,As billions of people every day use AI, the workload shifts from building models to putting them to work.
+Dialogue: 0,0:05:36.02,0:05:42.38,Sub,,0,0,0,,And actually, we're going to talk a lot today about agentic AI, and that's accelerating the shift even faster.
+Dialogue: 0,0:05:42.38,0:05:49.04,Sub,,0,0,0,,So if you think about all of this, we see agents as the next big step for AI.
+Dialogue: 0,0:05:49.76,0:05:57.18,Sub,,0,0,0,,And the most interesting thing is this has really just started accelerating over the last, I would say, five or six months this year.
+Dialogue: 0,0:05:57.96,0:06:01.34,Sub,,0,0,0,,So when we started with LLMs, they were great to answer questions.
+Dialogue: 0,0:06:01.80,0:06:10.10,Sub,,0,0,0,,But we found that to really get the power of AI, you want agents to be able to really answer full questions.
+Dialogue: 0,0:06:10.10,0:06:14.42,Sub,,0,0,0,,So you give it a goal, it keeps working until it's solved the problem.
+Dialogue: 0,0:06:15.42,0:06:23.46,Sub,,0,0,0,,And what that means for us in the compute industry, it means that compute demand is growing at an incredible pace.
+Dialogue: 0,0:06:23.86,0:06:27.12,Sub,,0,0,0,,We're actually seeing a step change in compute demand.
+Dialogue: 0,0:06:27.84,0:06:33.12,Sub,,0,0,0,,Because when you ask the agent to do something, it actually has dozens of steps.
+Dialogue: 0,0:06:33.26,0:06:37.10,Sub,,0,0,0,,And it has to reason, and it has to call tools, and it has to access data.
+Dialogue: 0,0:06:37.10,0:06:40.38,Sub,,0,0,0,,And it has to keep doing it over and over until it's solved the problem.
+Dialogue: 0,0:06:40.98,0:06:43.72,Sub,,0,0,0,,And so you need lots of GPUs to do all that reasoning.
+Dialogue: 0,0:06:44.60,0:06:49.78,Sub,,0,0,0,,But importantly, you also need a lot of CPUs to orchestrate every step around it.
+Dialogue: 0,0:06:50.96,0:06:57.60,Sub,,0,0,0,,So when you look at just what that means from a market standpoint, it's really hard to put this market data up.
+Dialogue: 0,0:06:57.80,0:07:03.00,Sub,,0,0,0,,Because I feel like every few months, we're changing the perspective based on what our customers are saying.
+Dialogue: 0,0:07:03.88,0:07:11.78,Sub,,0,0,0,,But what we're seeing is that the shift to agentic AI is certainly growing the AI accelerator market very significantly.
+Dialogue: 0,0:07:13.12,0:07:20.44,Sub,,0,0,0,,It was actually last year at this event that we called the AI accelerator market at about 500 billion by 2028.
+Dialogue: 0,0:07:21.06,0:07:24.64,Sub,,0,0,0,,And at that time, it actually felt like a very big number.
+Dialogue: 0,0:07:26.44,0:07:27.46,Sub,,0,0,0,,Didn't you think it was a big number?
+Dialogue: 0,0:07:29.06,0:07:31.80,Sub,,0,0,0,,But honestly, you look at it today, and it looks conservative.
+Dialogue: 0,0:07:31.80,0:07:35.78,Sub,,0,0,0,,Because the AI demand is just continuing to accelerate.
+Dialogue: 0,0:07:36.46,0:07:37.30,Sub,,0,0,0,,And you can see it, right?
+Dialogue: 0,0:07:37.42,0:07:41.18,Sub,,0,0,0,,Better models, more usage, more usage requires more compute.
+Dialogue: 0,0:07:41.62,0:07:44.30,Sub,,0,0,0,,And more compute actually builds better models.
+Dialogue: 0,0:07:44.78,0:07:53.26,Sub,,0,0,0,,And so we're now expecting that by 2030, the AI accelerator market is going to reach about 1.4 trillion by 2030.
+Dialogue: 0,0:07:53.82,0:07:54.82,Sub,,0,0,0,,So what do you think about that?
+Dialogue: 0,0:07:54.82,0:07:55.58,Sub,,0,0,0,,Is that a big number?
+Dialogue: 0,0:08:00.38,0:08:09.54,Sub,,0,0,0,,I mean, what that means is by the end of the decade, the AI accelerator market is going to approach the size of the entire semiconductor market today.
+Dialogue: 0,0:08:10.60,0:08:17.82,Sub,,0,0,0,,And although there will be many different types of accelerators, you know, I'm a big believer in there's no one size fits all as it comes to chips.
+Dialogue: 0,0:08:18.36,0:08:27.82,Sub,,0,0,0,,We do expect that GPUs are going to make up the vast majority of that market because the algorithms are still very much in their infancy, and we're still
+Dialogue: 0,0:08:27.82,0:08:35.64,Sub,,0,0,0,,continuing to see the workloads change, and that favors programmability in the overall silicon ecosystem.
+Dialogue: 0,0:08:37.02,0:08:44.12,Sub,,0,0,0,,Now, perhaps the most interesting part of the last six months has been, you know, GPUs are only part of this story.
+Dialogue: 0,0:08:45.16,0:08:51.44,Sub,,0,0,0,,What we're actually seeing is agentic AI is creating an entirely new growth vector for server CPUs.
+Dialogue: 0,0:08:52.24,0:08:57.90,Sub,,0,0,0,,Now, I've updated this number a lot also over the last, you know, six to eight months.
+Dialogue: 0,0:08:58.38,0:09:02.36,Sub,,0,0,0,,But look, we call it like we see it, and we were early.
+Dialogue: 0,0:09:02.64,0:09:12.48,Sub,,0,0,0,,I mean, we saw from our largest hyperscale customers, and you're going to see some of them here today, who said, look, as AI inference is going up, we need more server CPUs.
+Dialogue: 0,0:09:12.72,0:09:17.58,Sub,,0,0,0,,And so we saw growth in the server CPU market, and we said, you know,
+Dialogue: 0,0:09:17.60,0:09:24.06,Sub,,0,0,0,,last year we thought it might grow, let's call it 18 to 20% CAGR, to an overall market size of 60 billion.
+Dialogue: 0,0:09:24.76,0:09:31.56,Sub,,0,0,0,,But frankly, what we're seeing is that the rate and pace of agentic AI adoption is much, much faster than any of us thought.
+Dialogue: 0,0:09:32.62,0:09:44.02,Sub,,0,0,0,,So we're talking about agents going from millions to billions, like we're able to increase all of our productivity, and that requires a tremendous amount of CPU infrastructure.
+Dialogue: 0,0:09:44.02,0:09:49.18,Sub,,0,0,0,,And every customer conversation is telling us that this build-out is just beginning.
+Dialogue: 0,0:09:50.14,0:09:59.06,Sub,,0,0,0,,So based on what we're seeing today, and we're going to talk more about how agentic AI is evolving with CPUs, we now expect the server CPU market to
+Dialogue: 0,0:09:59.06,0:10:03.92,Sub,,0,0,0,,grow by over 50% to over 200 billion by 2030.
+Dialogue: 0,0:10:04.60,0:10:10.04,Sub,,0,0,0,,So that's starting from today, a $25 billion market going to over 200 billion.
+Dialogue: 0,0:10:10.04,0:10:14.28,Sub,,0,0,0,,So there's a lot of excitement about CPUs as well.
+Dialogue: 0,0:10:16.02,0:10:25.46,Sub,,0,0,0,,Now, probably one of the things that is differentiating AMD in how we think about the market is this is not just a data center opportunity.
+Dialogue: 0,0:10:26.18,0:10:34.34,Sub,,0,0,0,,As AI becomes a larger part of our daily lives, we want the intelligence to run right where the work happens.
+Dialogue: 0,0:10:34.82,0:10:40.90,Sub,,0,0,0,,And that means cloud is super important, but the devices that we use every day are going to be extremely important.
+Dialogue: 0,0:10:41.44,0:10:48.10,Sub,,0,0,0,,And that means that we're going to do a lot more at the edge as well with autonomous machines that sense and act in real time.
+Dialogue: 0,0:10:48.88,0:10:52.36,Sub,,0,0,0,,And we really believe that you need AI to be infused everywhere.
+Dialogue: 0,0:10:52.92,0:10:55.20,Sub,,0,0,0,,And that's exactly what we're focused on at AMD.
+Dialogue: 0,0:10:56.32,0:11:04.94,Sub,,0,0,0,,So putting all of that together, we actually expect that the market for our high-performance and adaptive computing products to grow at roughly a 40% CAGR
+Dialogue: 0,0:11:04.94,0:11:09.98,Sub,,0,0,0,,over the next several years, approaching a $2 trillion market by 2030.
+Dialogue: 0,0:11:11.14,0:11:17.74,Sub,,0,0,0,,And frankly, the only way you're going to be able to service a market like that is for us to work together as an ecosystem.
+Dialogue: 0,0:11:18.32,0:11:25.30,Sub,,0,0,0,,There's no one company that can solve it all, but this is the opportunity to bring the best and brightest together.
+Dialogue: 0,0:11:25.82,0:11:29.06,Sub,,0,0,0,,And we have never been in a better position to lead.
+Dialogue: 0,0:11:29.68,0:11:31.82,Sub,,0,0,0,,We have the broadest product portfolio.
+Dialogue: 0,0:11:31.90,0:11:34.70,Sub,,0,0,0,,We have the strongest roadmaps we've ever had.
+Dialogue: 0,0:11:34.70,0:11:41.80,Sub,,0,0,0,,And the thing that I'm most proud of is we have the deepest partnerships with the companies that are building this future.
+Dialogue: 0,0:11:43.76,0:11:45.70,Sub,,0,0,0,,So a little bit about our strategy.
+Dialogue: 0,0:11:46.26,0:11:47.70,Sub,,0,0,0,,I think we've been very consistent.
+Dialogue: 0,0:11:48.40,0:11:52.72,Sub,,0,0,0,,We've talked about our multi-year strategy, and it's really built around three priorities.
+Dialogue: 0,0:11:53.56,0:11:55.44,Sub,,0,0,0,,The first is just compute leadership.
+Dialogue: 0,0:11:55.68,0:12:01.44,Sub,,0,0,0,,We're building the broadest set of compute engines in the industry so that we have the right compute for the right workload.
+Dialogue: 0,0:12:02.18,0:12:04.92,Sub,,0,0,0,,Second, it's going to be about open platforms.
+Dialogue: 0,0:12:05.30,0:12:08.64,Sub,,0,0,0,,We want everyone to come together in an open ecosystem.
+Dialogue: 0,0:12:09.08,0:12:16.82,Sub,,0,0,0,,We believe an open ecosystem is essential to the future of AI, and that's how we get the force multiplier of everyone coming together.
+Dialogue: 0,0:12:17.32,0:12:22.30,Sub,,0,0,0,,And that's open on hardware, in terms of hardware standards, as well as open on software.
+Dialogue: 0,0:12:22.94,0:12:26.14,Sub,,0,0,0,,And that's why we're investing so heavily in our ROCm software.
+Dialogue: 0,0:12:26.62,0:12:35.76,Sub,,0,0,0,,And you're going to see that AI has been a tremendous multiplier in this great pace of progress that we're making in ROCm and in software.
+Dialogue: 0,0:12:36.12,0:12:45.14,Sub,,0,0,0,,And it really means that if we put all of this together, we can have our customers deploy on AMD hardware faster than ever.
+Dialogue: 0,0:12:46.56,0:12:51.14,Sub,,0,0,0,,And the third piece is we're going to get a chance to talk to you about powering AI everywhere.
+Dialogue: 0,0:12:51.38,0:12:53.46,Sub,,0,0,0,,So that's AI in enterprise.
+Dialogue: 0,0:12:53.80,0:12:55.24,Sub,,0,0,0,,That's AI at the PC.
+Dialogue: 0,0:12:55.48,0:12:57.96,Sub,,0,0,0,,That's AI in the physical world.
+Dialogue: 0,0:12:57.96,0:13:01.10,Sub,,0,0,0,,And that's adding new capabilities across all of our products.
+Dialogue: 0,0:13:02.18,0:13:03.90,Sub,,0,0,0,,So today you're going to see all of that in action.
+Dialogue: 0,0:13:04.12,0:13:06.78,Sub,,0,0,0,,We're going to start with compute for the agentic era.
+Dialogue: 0,0:13:07.10,0:13:08.54,Sub,,0,0,0,,I'm going to show you a lot of hardware.
+Dialogue: 0,0:13:09.50,0:13:15.26,Sub,,0,0,0,,And then we're going to talk about some software and then our overall products from a platform standpoint.
+Dialogue: 0,0:13:15.62,0:13:22.20,Sub,,0,0,0,,And we're honored to have some really special guests who are going to join us to really help bring the technology to life.
+Dialogue: 0,0:13:23.00,0:13:24.66,Sub,,0,0,0,,So let's start with the data center.
+Dialogue: 0,0:13:25.30,0:13:29.60,Sub,,0,0,0,,Today, AMD EPYC runs on the most important workloads in the world.
+Dialogue: 0,0:13:30.34,0:13:32.06,Sub,,0,0,0,,We power the largest cloud providers.
+Dialogue: 0,0:13:32.48,0:13:40.62,Sub,,0,0,0,,We power the digital platforms that billions of people use every day and the most important critical systems that are used by the largest businesses,
+Dialogue: 0,0:13:40.62,0:13:45.14,Sub,,0,0,0,,including more than 60% of the Fortune 100 are using AMD EPYC.
+Dialogue: 0,0:13:45.74,0:13:47.50,Sub,,0,0,0,,And that momentum is just building.
+Dialogue: 0,0:13:48.62,0:13:59.70,Sub,,0,0,0,,Last quarter, we reached a record 46% revenue share in the server market and we're continuing to see every major customer move more workloads to EPYC.
+Dialogue: 0,0:14:01.72,0:14:05.62,Sub,,0,0,0,,And on the GPU side, our Instinct adoption has also accelerated.
+Dialogue: 0,0:14:06.08,0:14:11.24,Sub,,0,0,0,,We have a broad set of customers across the largest AI labs, cloud providers,
+Dialogue: 0,0:14:11.84,0:14:19.84,Sub,,0,0,0,,leading AI startups, as well as some of the national labs and sovereign AI opportunities are being built on AMD Instinct.
+Dialogue: 0,0:14:19.92,0:14:22.40,Sub,,0,0,0,,And we really appreciate that opportunity.
+Dialogue: 0,0:14:23.74,0:14:27.24,Sub,,0,0,0,,Now, AI computes become a lot more complicated.
+Dialogue: 0,0:14:28.06,0:14:35.12,Sub,,0,0,0,,And what we're seeing with Frontier AI is it's really raising the bar for what infrastructure needs to do.
+Dialogue: 0,0:14:36.04,0:14:39.46,Sub,,0,0,0,,It takes more than a single chip or a single server.
+Dialogue: 0,0:14:39.98,0:14:44.12,Sub,,0,0,0,,You actually have to design the entire rack as one system.
+Dialogue: 0,0:14:44.96,0:14:55.00,Sub,,0,0,0,,And that requires leading CPUs, that requires leading GPUs, that requires high-speed networking that connects everything inside the rack and across the data center.
+Dialogue: 0,0:14:55.78,0:15:00.72,Sub,,0,0,0,,And just as importantly, this is about making these systems super easy to use.
+Dialogue: 0,0:15:01.28,0:15:05.44,Sub,,0,0,0,,And so they need to be easy to deploy, easy to service, and very reliable.
+Dialogue: 0,0:15:06.22,0:15:09.62,Sub,,0,0,0,,And that is exactly what we built with Helios.
+Dialogue: 0,0:15:10.76,0:15:17.18,Sub,,0,0,0,,So today, I'm super excited to launch Helios, the industry's highest performance AI rack.
+Dialogue: 0,0:15:22.92,0:15:28.92,Sub,,0,0,0,,Now, Helios is built to train and run the most demanding Frontier models in the world at massive scale.
+Dialogue: 0,0:15:29.48,0:15:31.68,Sub,,0,0,0,,And I have a lot of show and tell for you.
+Dialogue: 0,0:15:32.32,0:15:36.60,Sub,,0,0,0,,So for those of you who know me, you know that I love holding up chips.
+Dialogue: 0,0:15:38.22,0:15:41.02,Sub,,0,0,0,,I call myself sometimes the Vanna White of chips.
+Dialogue: 0,0:15:42.32,0:15:46.54,Sub,,0,0,0,,But it turns out with Helios, there are lots and lots of components.
+Dialogue: 0,0:15:46.94,0:15:50.96,Sub,,0,0,0,,And so you can see, these are the chips inside the Helios rack.
+Dialogue: 0,0:15:51.68,0:15:53.78,Sub,,0,0,0,,These are the Instinct...
+Dialogue: 0,0:15:53.78,0:15:55.14,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:15:58.84,0:16:06.20,Sub,,0,0,0,,So this is Instinct, EPYC, and then the Pensando chips for networking that are inside each rack.
+Dialogue: 0,0:16:06.62,0:16:09.54,Sub,,0,0,0,,And every one of these chips is part of the system.
+Dialogue: 0,0:16:10.60,0:16:12.94,Sub,,0,0,0,,So MI455 is the engine.
+Dialogue: 0,0:16:13.06,0:16:15.68,Sub,,0,0,0,,It's the highest performance GPU in the industry.
+Dialogue: 0,0:16:16.48,0:16:21.04,Sub,,0,0,0,,Venice, which drives it, is the world's fastest CPU cores.
+Dialogue: 0,0:16:21.04,0:16:29.72,Sub,,0,0,0,,And Pensando DPUs and NICs actually connect them with leadership programmability and scale-out bandwidth.
+Dialogue: 0,0:16:30.62,0:16:33.26,Sub,,0,0,0,,So I have a few more props to show you.
+Dialogue: 0,0:16:34.12,0:16:37.46,Sub,,0,0,0,,Let's kind of take a look at how these things fit into the overall system.
+Dialogue: 0,0:16:38.36,0:16:48.12,Sub,,0,0,0,,So first, this is now the MI455 accelerator, which is mounted on what we call an Enhanced Accelerator Module, or EAM.
+Dialogue: 0,0:16:49.10,0:16:54.58,Sub,,0,0,0,,It's a production module that goes into Helios, and it is much more than the GPU package.
+Dialogue: 0,0:16:55.28,0:17:05.76,Sub,,0,0,0,,The EAM actually integrates the GPU, memory, power delivery, high-speed interfaces, system management, cold plates for liquid cooling,
+Dialogue: 0,0:17:05.92,0:17:09.72,Sub,,0,0,0,,all into one compact, serviceable module.
+Dialogue: 0,0:17:11.08,0:17:11.82,Sub,,0,0,0,,Pretty cool, right?
+Dialogue: 0,0:17:17.64,0:17:23.04,Sub,,0,0,0,,Now, if I just give you some of the specs, we're talking about 320 billion transistors.
+Dialogue: 0,0:17:23.48,0:17:28.86,Sub,,0,0,0,,This is built with TSMC's leading 2-nanometer and 3-nanometer process technology.
+Dialogue: 0,0:17:29.50,0:17:34.34,Sub,,0,0,0,,And most importantly, it brings together nearly a decade of AMD chiplet innovation.
+Dialogue: 0,0:17:34.34,0:17:38.00,Sub,,0,0,0,,So it allows us to combine 12 compute and I/O.
+Dialogue: 0,0:17:38.06,0:17:45.62,Sub,,0,0,0,,chiplets with 432 gigabytes of memory, all connected by leading industry 3D chip stack packaging.
+Dialogue: 0,0:17:46.26,0:17:51.38,Sub,,0,0,0,,And I can say for sure, it's the highest performance AI accelerator in the industry.
+Dialogue: 0,0:17:58.36,0:18:02.32,Sub,,0,0,0,,Okay, so this is the CPU board that's inside the Helios compute tray.
+Dialogue: 0,0:18:02.34,0:18:04.48,Sub,,0,0,0,,And I'm going to talk a lot about CPUs later.
+Dialogue: 0,0:18:04.86,0:18:11.44,Sub,,0,0,0,,But just to give you a high-level view, it's high-speed, 96-core EPYC processor,
+Dialogue: 0,0:18:11.70,0:18:17.08,Sub,,0,0,0,,DDR5 memory, all the I/O that's needed to feed the GPUs, all in a single motherboard.
+Dialogue: 0,0:18:17.66,0:18:20.98,Sub,,0,0,0,,And we also have our Salina DPU.
+Dialogue: 0,0:18:20.98,0:18:32.22,Sub,,0,0,0,,This is a critical part of the networking infrastructure, and it really allows us to deliver both front-end as well as the scale-out and scale-across bandwidth overall.
+Dialogue: 0,0:18:33.08,0:18:35.14,Sub,,0,0,0,,And this is our Vulcano AI NIC.
+Dialogue: 0,0:18:35.72,0:18:42.54,Sub,,0,0,0,,And you can see this actually allows us to really have up to six Vulcano NICs on a board.
+Dialogue: 0,0:18:42.54,0:18:45.02,Sub,,0,0,0,,And it uses the open ultra Ethernet standard.
+Dialogue: 0,0:18:45.54,0:18:55.38,Sub,,0,0,0,,So each Helios compute tray includes two of these Vulcano boards, and that allows us to have the scale-out and the scale-up networking overall.
+Dialogue: 0,0:18:56.20,0:19:04.04,Sub,,0,0,0,,So you put all that inside the rack, and we have an additional six dedicated networking trays that handle the scale-up networking.
+Dialogue: 0,0:19:04.58,0:19:11.30,Sub,,0,0,0,,And those are all connecting 75 GPUs together with UA-Link over Ethernet with silicon from our partners.
+Dialogue: 0,0:19:11.86,0:19:14.16,Sub,,0,0,0,,And that's what we mean by an open ecosystem.
+Dialogue: 0,0:19:15.00,0:19:21.82,Sub,,0,0,0,,So when you bring this all together, I want to say Helios is simply the best AI rack in the world.
+Dialogue: 0,0:19:30.11,0:19:31.49,Sub,,0,0,0,,Now, let's take a look at some numbers.
+Dialogue: 0,0:19:32.11,0:19:34.73,Sub,,0,0,0,,Clearly, it's a very competitive world out there.
+Dialogue: 0,0:19:34.89,0:19:47.63,Sub,,0,0,0,,So when you compare Helios to the competition, we're delivering 15% more compute, 50% more HBM4 memory capacity and memory bandwidth, and 50% more scale-out bandwidth.
+Dialogue: 0,0:19:48.25,0:20:00.59,Sub,,0,0,0,,And what that means is that every Helios can deliver more performance for the largest models, more capacity for longer context, and the bandwidth to scale across thousands of racks.
+Dialogue: 0,0:20:01.77,0:20:06.67,Sub,,0,0,0,,And now we can kind of come over here and take a look at another very large piece of hardware.
+Dialogue: 0,0:20:07.21,0:20:15.37,Sub,,0,0,0,,This is now the production hardware that customers are deploying, and you can see more of that as you go through the exhibit center.
+Dialogue: 0,0:20:15.85,0:20:22.57,Sub,,0,0,0,,And each one of these weighs more than 160 pounds and stands less than two inches tall.
+Dialogue: 0,0:20:23.01,0:20:28.45,Sub,,0,0,0,,That's just an extraordinary amount of technology when you look at what's in one of these trays.
+Dialogue: 0,0:20:29.07,0:20:32.21,Sub,,0,0,0,,And when you bring these things together, the numbers are just incredible.
+Dialogue: 0,0:20:33.27,0:20:41.67,Sub,,0,0,0,,More than 18,000 CDNA5 GPU compute units, over 4,600 Zen6 CPU cores, and 31
+Dialogue: 0,0:20:41.67,0:20:45.17,Sub,,0,0,0,,terabytes of HBM4 memory, all in a single rack.
+Dialogue: 0,0:20:46.31,0:20:49.75,Sub,,0,0,0,,That's what it takes to run agentic AI at scale.
+Dialogue: 0,0:20:51.59,0:20:56.39,Sub,,0,0,0,,So today I'm excited to announce that Helios is in full production.
+Dialogue: 0,0:21:04.00,0:21:11.14,Sub,,0,0,0,,We have shipments on track to start at the end of the third quarter and ramping into the fourth quarter in the second half of the year.
+Dialogue: 0,0:21:11.54,0:21:15.50,Sub,,0,0,0,,And I can tell you customer demand for Helios is extremely strong.
+Dialogue: 0,0:21:15.92,0:21:21.56,Sub,,0,0,0,,And we're extremely proud of the work that we have done across the leading AI labs to adopt Helios.
+Dialogue: 0,0:21:22.24,0:21:24.28,Sub,,0,0,0,,And so let's start with some of our guests.
+Dialogue: 0,0:21:24.60,0:21:30.54,Sub,,0,0,0,,Today I'm excited to be joined by our newest Instinct partner and one of the leaders in Frontier AI.
+Dialogue: 0,0:21:30.90,0:21:37.18,Sub,,0,0,0,,To share more about what we're doing together, please welcome Anthropic co-founder and chief compute officer Tom Brown.
+Dialogue: 0,0:21:48.05,0:21:48.95,Sub,,0,0,0,,Hello, Tom.
+Dialogue: 0,0:21:49.07,0:21:50.67,Sub,,0,0,0,,It is so great to have you here.
+Dialogue: 0,0:21:50.81,0:21:54.47,Sub,,0,0,0,,And it is really such an honor to be working with Anthropic.
+Dialogue: 0,0:21:54.61,0:21:56.17,Sub,,0,0,0,,We had a big week this week.
+Dialogue: 0,0:21:56.59,0:21:57.19,Sub,,0,0,0,,We did, yeah.
+Dialogue: 0,0:21:57.73,0:22:02.95,Sub,,0,0,0,,So look, Anthropic has just had incredible success over the last few years.
+Dialogue: 0,0:22:03.31,0:22:06.23,Sub,,0,0,0,,You know, Claude has made such a big impact on the overall industry.
+Dialogue: 0,0:22:07.07,0:22:10.25,Sub,,0,0,0,,Compute is such an important factor in the progress.
+Dialogue: 0,0:22:10.41,0:22:15.21,Sub,,0,0,0,,Can you just talk a little bit about your compute strategy and just how things have been evolving?
+Dialogue: 0,0:22:15.97,0:22:16.45,Sub,,0,0,0,,Yeah. Yeah.
+Dialogue: 0,0:22:16.45,0:22:17.63,Sub,,0,0,0,,And first, thank you so much.
+Dialogue: 0,0:22:17.85,0:22:19.07,Sub,,0,0,0,,A hard act to follow with Helios.
+Dialogue: 0,0:22:19.39,0:22:19.89,Sub,,0,0,0,,Amazing.
+Dialogue: 0,0:22:20.59,0:22:31.01,Sub,,0,0,0,,So with Anthropic, as you mentioned, the scale that we're growing just as an industry is enormous.
+Dialogue: 0,0:22:31.61,0:22:42.33,Sub,,0,0,0,,And so we have been working to make sure that we have the best, like different chips, and we can use the best chips for the best workloads.
+Dialogue: 0,0:22:42.81,0:22:46.11,Sub,,0,0,0,,Yeah. And look, I think you've been really leading in that area.
+Dialogue: 0,0:22:46.55,0:22:52.37,Sub,,0,0,0,,And, you know, I'm happy to say that I've always wanted to be as part of your infrastructure.
+Dialogue: 0,0:22:52.37,0:22:55.11,Sub,,0,0,0,,I remember the early times we talked as you were starting Anthropic.
+Dialogue: 0,0:22:55.53,0:22:57.07,Sub,,0,0,0,,But we had a big announcement this week.
+Dialogue: 0,0:22:57.27,0:23:00.67,Sub,,0,0,0,,We're honored that you will be deploying up to 2 gigawatts of Helios.
+Dialogue: 0,0:23:01.29,0:23:02.07,Sub,,0,0,0,,Why now?
+Dialogue: 0,0:23:02.39,0:23:03.97,Sub,,0,0,0,,What was the key reason?
+Dialogue: 0,0:23:04.63,0:23:10.69,Sub,,0,0,0,,Yeah. So I think that the first thing was just Helios is an amazing machine.
+Dialogue: 0,0:23:11.89,0:23:13.69,Sub,,0,0,0,,It's absolutely fantastic.
+Dialogue: 0,0:23:13.71,0:23:14.69,Sub,,0,0,0,,Do we like that?
+Dialogue: 0,0:23:14.79,0:23:15.67,Sub,,0,0,0,,Does that work for us?
+Dialogue: 0,0:23:19.11,0:23:26.69,Sub,,0,0,0,,And then I think the thing that we were thinking about originally was whenever we're bringing up a new hardware platform, it's a big effort.
+Dialogue: 0,0:23:27.03,0:23:28.29,Sub,,0,0,0,,It's like a huge thing.
+Dialogue: 0,0:23:28.45,0:23:30.67,Sub,,0,0,0,,And so as part of the...
+Dialogue: 0,0:23:31.25,0:23:36.47,Sub,,0,0,0,,as we were thinking about this, we started doing our own evaluation of MI355.
+Dialogue: 0,0:23:37.35,0:23:39.79,Sub,,0,0,0,,You guys generously got us a rack to start working.
+Dialogue: 0,0:23:40.35,0:23:43.21,Sub,,0,0,0,,And we expected this to be kind of a big process.
+Dialogue: 0,0:23:43.21,0:23:48.39,Sub,,0,0,0,,Our actual experience was we had one engineer start doing it.
+Dialogue: 0,0:23:49.01,0:23:56.23,Sub,,0,0,0,,They spun up... they connected it to Claude, asked him, hey, bring up this machine, left it going over the weekend.
+Dialogue: 0,0:23:56.37,0:24:04.49,Sub,,0,0,0,,And we ended up with a graph of the actual performance of our leading model on it just going up and up and up over the weekend.
+Dialogue: 0,0:24:05.05,0:24:05.97,Sub,,0,0,0,,And so, yeah.
+Dialogue: 0,0:24:08.71,0:24:19.67,Sub,,0,0,0,,I think that that's a testament to the open platform that you guys have made where anyone like human or AI can now build real models on your platform.
+Dialogue: 0,0:24:20.47,0:24:21.37,Sub,,0,0,0,,Tom, I kid you not.
+Dialogue: 0,0:24:21.65,0:24:28.87,Sub,,0,0,0,,When my team told me that you had an engineer working on MI355, I said, hey, are we making sure we help them?
+Dialogue: 0,0:24:29.27,0:24:31.29,Sub,,0,0,0,,And they're like, they say they don't need any help.
+Dialogue: 0,0:24:31.51,0:24:32.75,Sub,,0,0,0,,They got it all covered.
+Dialogue: 0,0:24:32.77,0:24:35.81,Sub,,0,0,0,,And I was like, hey, that's a wonderful story.
+Dialogue: 0,0:24:35.95,0:24:36.53,Sub,,0,0,0,,Thank you for that.
+Dialogue: 0,0:24:37.05,0:24:46.05,Sub,,0,0,0,,Now, we're also super excited about the work we're doing together because one of the most valuable parts of this partnership is Claude and using Claude within AMD.
+Dialogue: 0,0:24:46.31,0:24:56.11,Sub,,0,0,0,,We're big believers in the fact that AI is this force multiplier and the more we're able to have the leading foundational models really familiar with the AMD
+Dialogue: 0,0:24:56.11,0:24:59.57,Sub,,0,0,0,,architecture, the better we're going to be able to service the overall market.
+Dialogue: 0,0:24:59.75,0:25:07.53,Sub,,0,0,0,,So can you just talk a little bit about how you're seeing Claude really evolve in these types of highly engineering-specific workloads?
+Dialogue: 0,0:25:07.53,0:25:15.85,Sub,,0,0,0,,Yeah, so I think this is a great place for collaboration where the bread and butter of Claude is doing software engineering.
+Dialogue: 0,0:25:16.33,0:25:27.15,Sub,,0,0,0,,And now more and more we're seeing it help out with the type of workloads that you guys are doing also, like design, layout, which is not quite the normal software engineering, but is adjacent.
+Dialogue: 0,0:25:27.47,0:25:34.81,Sub,,0,0,0,,And I do think that that is the place where we can work together to make the next generation of chips even better.
+Dialogue: 0,0:25:34.81,0:25:43.63,Sub,,0,0,0,,Yeah, I think, and also on the software side, I think the work that we've seen with Claude and the kernel development has been just incredible.
+Dialogue: 0,0:25:44.47,0:25:51.47,Sub,,0,0,0,,So, Tom, one of the things for our audience here, we like to talk about the present, but it's actually most of us are working on the future.
+Dialogue: 0,0:25:52.09,0:25:58.93,Sub,,0,0,0,,So this is really the beginning of what we believe is a very strong multi-year partnership.
+Dialogue: 0,0:25:59.67,0:26:03.97,Sub,,0,0,0,,Can you talk a little bit about, number one, what are you most excited about in the industry?
+Dialogue: 0,0:26:03.97,0:26:13.19,Sub,,0,0,0,,And then number two, like, what can we do more together to really make sure that we're satisfying those key opportunities?
+Dialogue: 0,0:26:13.95,0:26:15.69,Sub,,0,0,0,,Yeah, that's a great question.
+Dialogue: 0,0:26:15.89,0:26:27.45,Sub,,0,0,0,,So I think the working together for the scale-up seems like it's probably the biggest thing that I'm most excited for, where it does seem like we see
+Dialogue: 0,0:26:27.45,0:26:36.77,Sub,,0,0,0,,consistently using more better compute results in better models that then add more value to all the folks using it downstream.
+Dialogue: 0,0:26:37.05,0:26:38.35,Sub,,0,0,0,,So I think that's the biggest thing.
+Dialogue: 0,0:26:38.75,0:26:42.79,Sub,,0,0,0,,And then I think one thing now that we're investing more and more with you guys,
+Dialogue: 0,0:26:43.01,0:26:53.09,Sub,,0,0,0,,too, and I think we can continue to, is security, where that's a place where now, as the machines are getting more complex, we can work together to secure
+Dialogue: 0,0:26:53.09,0:27:01.73,Sub,,0,0,0,,things at the chip layer, the server level, the rack, the whole network, and that'll help out, like, not just us, but the entire industry stay safe.
+Dialogue: 0,0:27:01.73,0:27:03.25,Sub,,0,0,0,,No, I think you're completely right.
+Dialogue: 0,0:27:03.45,0:27:14.25,Sub,,0,0,0,,We are super focused on the idea of, you know, how can we use AI to improve every aspect of our product, whether it's performance, power, software, and security, as you said.
+Dialogue: 0,0:27:14.77,0:27:21.97,Sub,,0,0,0,,So really, Tom, huge thank you for the opportunity to work very closely with you and your team.
+Dialogue: 0,0:27:21.97,0:27:26.27,Sub,,0,0,0,,Our team loves working with you guys, and we look forward to everything that we're going to do together.
+Dialogue: 0,0:27:26.65,0:27:27.25,Sub,,0,0,0,,Thank you so much.
+Dialogue: 0,0:27:27.59,0:27:29.73,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:27:35.13,0:27:46.93,Sub,,0,0,0,,Alright, so look, Tom talked about how important performance is, and we have been laser focused on ensuring that the real-world performance of MI455 and Helios
+Dialogue: 0,0:27:46.93,0:27:51.57,Sub,,0,0,0,,really comes true when we look at, you know, system results.
+Dialogue: 0,0:27:51.57,0:27:53.59,Sub,,0,0,0,,So let's take a look at some of those results.
+Dialogue: 0,0:27:55.09,0:27:56.25,Sub,,0,0,0,,So here's an example.
+Dialogue: 0,0:27:56.59,0:28:04.15,Sub,,0,0,0,,We're running DeepSeek V4 Flash, one of the latest reasoning models, and we are actually comparing MI455 to MI355.
+Dialogue: 0,0:28:04.15,0:28:10.27,Sub,,0,0,0,,And, you know, the key thing is with every generation, we want to make huge leaps in performance.
+Dialogue: 0,0:28:10.49,0:28:17.33,Sub,,0,0,0,,So we're seeing that at lower concurrency that MI455 delivers 4x the throughput of MI355.
+Dialogue: 0,0:28:18.15,0:28:23.57,Sub,,0,0,0,,But clearly what you see with, you know, large users across the board,
+Dialogue: 0,0:28:23.95,0:28:29.35,Sub,,0,0,0,,that you want to increase the number of simultaneous users, you want to increase the amount of work that you can do at the same time.
+Dialogue: 0,0:28:29.73,0:28:37.89,Sub,,0,0,0,,And so at the highest concurrency, we're seeing Helios deliver up to 34x more throughput than our prior generation.
+Dialogue: 0,0:28:38.63,0:28:45.07,Sub,,0,0,0,,And what that means is more users, much faster response, and much better efficiency at scale.
+Dialogue: 0,0:28:46.45,0:28:48.95,Sub,,0,0,0,,And performance is just one aspect of it, right?
+Dialogue: 0,0:28:48.95,0:28:57.35,Sub,,0,0,0,,The other aspect and, you know, what I should have mentioned when Tom was on stage is every one of us in the enterprise is seeing our AI budgets go up every single month.
+Dialogue: 0,0:28:57.73,0:28:58.41,Sub,,0,0,0,,Is that right?
+Dialogue: 0,0:28:58.59,0:28:59.39,Sub,,0,0,0,,Are you seeing some of that?
+Dialogue: 0,0:29:00.37,0:29:04.15,Sub,,0,0,0,,And so customers really care about cost per token.
+Dialogue: 0,0:29:04.79,0:29:08.93,Sub,,0,0,0,,And with every generation of Instinct, we're driving the cost per token down.
+Dialogue: 0,0:29:09.35,0:29:13.25,Sub,,0,0,0,,And that's with more memory, more bandwidth, and much more compute.
+Dialogue: 0,0:29:13.67,0:29:25.25,Sub,,0,0,0,,And we're taking another major step with MI455, delivering up to 18x more tokens per dollar, so customers can serve far more users with the same investment.
+Dialogue: 0,0:29:25.25,0:29:33.75,Sub,,0,0,0,,And as you think about how that comes together in a rack, many of our data centers right now are really limited by power.
+Dialogue: 0,0:29:34.05,0:29:36.31,Sub,,0,0,0,,So power is kind of the maximum limiter.
+Dialogue: 0,0:29:36.83,0:29:44.29,Sub,,0,0,0,,And so we tested Helios over a full range of workloads where you have a fixed rack power compared to the competition.
+Dialogue: 0,0:29:44.79,0:29:52.89,Sub,,0,0,0,,And what we're seeing is across the highest throughput workloads, the most interactive applications, all of these leading inference workloads, we're seeing
+Dialogue: 0,0:29:52.89,0:29:57.81,Sub,,0,0,0,,Helios an average of 10-15% more performance than the competition.
+Dialogue: 0,0:29:58.37,0:30:03.83,Sub,,0,0,0,,And that comes with all of the system work that we've done in the overall system.
+Dialogue: 0,0:30:04.27,0:30:07.81,Sub,,0,0,0,,And how that translates to a customer is cost.
+Dialogue: 0,0:30:08.23,0:30:18.33,Sub,,0,0,0,,What we expect is the Helios rack delivers more performance, and it also delivers up to 30% more tokens per dollar than the competition.
+Dialogue: 0,0:30:18.33,0:30:22.73,Sub,,0,0,0,,So I think that's a pretty good overall value proposition.
+Dialogue: 0,0:30:29.36,0:30:34.44,Sub,,0,0,0,,Now, I'm happy to say that the customer demand for Helios is extremely strong.
+Dialogue: 0,0:30:35.00,0:30:45.76,Sub,,0,0,0,,From the largest AI labs to hyperscale and NeoCloud providers, we are working across the entire ecosystem to enable Helios together with our OEM and ODM partners.
+Dialogue: 0,0:30:46.92,0:30:51.74,Sub,,0,0,0,,And one of our deepest and earliest partners deploying Helios is OpenAI.
+Dialogue: 0,0:30:51.74,0:31:00.34,Sub,,0,0,0,,To talk about where AI is headed and the work we're doing together, please welcome to the stage OpenAI's Head of Infrastructure, Sachin Katti.
+Dialogue: 0,0:31:06.92,0:31:08.82,Sub,,0,0,0,,Thank you, thank you, thank you.
+Dialogue: 0,0:31:08.82,0:31:09.66,Sub,,0,0,0,,Thank you, Sachin.
+Dialogue: 0,0:31:09.82,0:31:11.28,Sub,,0,0,0,,It's so great to have you here.
+Dialogue: 0,0:31:11.80,0:31:15.90,Sub,,0,0,0,,And most importantly, we are so thankful for the partnership with OpenAI.
+Dialogue: 0,0:31:16.16,0:31:18.88,Sub,,0,0,0,,We've been through so much on this journey together.
+Dialogue: 0,0:31:19.02,0:31:22.52,Sub,,0,0,0,,So you're really operating on the frontier of AI.
+Dialogue: 0,0:31:22.76,0:31:28.14,Sub,,0,0,0,,Can you just tell us a little bit of what you're seeing and just what compute looks like for you?
+Dialogue: 0,0:31:28.84,0:31:29.94,Sub,,0,0,0,,Thanks, great to be here.
+Dialogue: 0,0:31:30.36,0:31:34.28,Sub,,0,0,0,,I was thinking about this event over the last two years.
+Dialogue: 0,0:31:34.38,0:31:38.58,Sub,,0,0,0,,It feels like the attendance at this event is following scaling laws.
+Dialogue: 0,0:31:39.24,0:31:42.36,Sub,,0,0,0,,It's been doubling every year over the last two years.
+Dialogue: 0,0:31:42.80,0:31:53.66,Sub,,0,0,0,,But more seriously, to your question, we've always predicted that models will evolve where they will start as chatbots, then they become reasoners, then they
+Dialogue: 0,0:31:53.66,0:31:55.46,Sub,,0,0,0,,become agents, then they become interns.
+Dialogue: 0,0:31:56.36,0:31:58.64,Sub,,0,0,0,,And the trajectory has kept up with that.
+Dialogue: 0,0:31:58.98,0:32:06.20,Sub,,0,0,0,,So we are all seeing that models are becoming a lot more capable, more agentic, and able to do very long-running tasks.
+Dialogue: 0,0:32:06.68,0:32:08.54,Sub,,0,0,0,,Let them go and they just take care of it.
+Dialogue: 0,0:32:09.08,0:32:13.10,Sub,,0,0,0,,And so all that really means is we need to keep scaling compute.
+Dialogue: 0,0:32:13.76,0:32:18.72,Sub,,0,0,0,,The more compute we scale and throw at training, the more capabilities emerge,
+Dialogue: 0,0:32:19.22,0:32:26.12,Sub,,0,0,0,,the more compute we scale and provide it to distributing intelligence to the world, the more people want to do with it.
+Dialogue: 0,0:32:26.44,0:32:29.48,Sub,,0,0,0,,And this is what we see with exploding token budgets.
+Dialogue: 0,0:32:30.40,0:32:34.08,Sub,,0,0,0,,We've seen internally, for example, in OpenAI, that not just engineering,
+Dialogue: 0,0:32:34.08,0:32:39.70,Sub,,0,0,0,,but every aspect of the enterprise is beginning to use agents for every part of the work.
+Dialogue: 0,0:32:39.88,0:32:50.18,Sub,,0,0,0,,This is why we need platforms like yours that can scale with how quickly the capabilities of these models are scaling, as well as how quickly the whole world is
+Dialogue: 0,0:32:50.18,0:32:52.32,Sub,,0,0,0,,beginning to embrace what these things can do.
+Dialogue: 0,0:32:52.32,0:32:57.92,Sub,,0,0,0,,Well, Sachin, I don't think I've ever spoken to you where you haven't asked me for more compute.
+Dialogue: 0,0:32:58.34,0:33:00.36,Sub,,0,0,0,,So he's actually very, very consistent.
+Dialogue: 0,0:33:01.38,0:33:04.38,Sub,,0,0,0,,Look, our teams have been working really closely together.
+Dialogue: 0,0:33:04.60,0:33:09.42,Sub,,0,0,0,,I think it's been a true journey when we think about just all of the technology that we've been doing.
+Dialogue: 0,0:33:10.34,0:33:19.44,Sub,,0,0,0,,Last year, we announced a really landmark partnership where you're going to deploy up to six gigawatts of AMD infrastructure.
+Dialogue: 0,0:33:19.44,0:33:25.46,Sub,,0,0,0,,You're one of the first, I think you're the first to actually have MI455 racks a few months ago.
+Dialogue: 0,0:33:25.64,0:33:27.28,Sub,,0,0,0,,So can you talk a little bit about the journey?
+Dialogue: 0,0:33:28.22,0:33:30.08,Sub,,0,0,0,,No, it's been a phenomenal partnership.
+Dialogue: 0,0:33:30.82,0:33:38.34,Sub,,0,0,0,,As you mentioned, we were first to bet on AMD, and we are really thrilled with how that bet is turning out for us.
+Dialogue: 0,0:33:38.54,0:33:43.14,Sub,,0,0,0,,It got started on MI300 and expanded very quickly to 355.
+Dialogue: 0,0:33:43.86,0:33:56.84,Sub,,0,0,0,,And it's been really fun for our team to see how it was possible to optimize the software stack, the networking and everything, and deploy our models running on AMD infrastructure.
+Dialogue: 0,0:33:57.60,0:34:05.16,Sub,,0,0,0,,So, as Lisa mentioned, we just got hands on the Helios racks three months ago, and the collaboration has gone to the next level.
+Dialogue: 0,0:34:05.52,0:34:15.34,Sub,,0,0,0,,Our engineers are working side by side with AMD engineers to optimize the software stack and run GPT class workloads on Helios already.
+Dialogue: 0,0:34:15.34,0:34:22.90,Sub,,0,0,0,,Phil will probably be on stage later talking about how productive and fast that collaboration is.
+Dialogue: 0,0:34:23.14,0:34:27.78,Sub,,0,0,0,,So we are really excited about the capabilities Helios is already showing us,
+Dialogue: 0,0:34:28.08,0:34:36.00,Sub,,0,0,0,,and we expect that we'll be deploying Helios at massive scale starting towards the end of this year and then accelerating throughout 2027.
+Dialogue: 0,0:34:36.48,0:34:37.82,Sub,,0,0,0,,Like I said, I know, more faster.
+Dialogue: 0,0:34:38.98,0:34:39.70,Sub,,0,0,0,,We need it earlier.
+Dialogue: 0,0:34:42.08,0:34:48.04,Sub,,0,0,0,,So, Sachin, the other thing is, one of the most exciting parts of our collaboration is actually some of the research work.
+Dialogue: 0,0:34:48.20,0:34:59.66,Sub,,0,0,0,,So very thankful for the opportunity to spend really bringing our best engineers together with your researchers to talk about how AI should be really implemented
+Dialogue: 0,0:34:59.66,0:35:03.78,Sub,,0,0,0,,and used for future both silicon and software.
+Dialogue: 0,0:35:04.02,0:35:05.42,Sub,,0,0,0,,So can you talk a little bit about that work?
+Dialogue: 0,0:35:06.34,0:35:14.12,Sub,,0,0,0,,Yeah, I think one of our key bets, and I think for a lot of us in AI, is about recursion, right?
+Dialogue: 0,0:35:14.36,0:35:22.80,Sub,,0,0,0,,AI recursively improving the systems it needs to run on and eventually, obviously, AI doing the research itself, right?
+Dialogue: 0,0:35:23.20,0:35:28.22,Sub,,0,0,0,,Today, expert engineers spend an enormous amount of time optimizing kernels,
+Dialogue: 0,0:35:28.48,0:35:35.82,Sub,,0,0,0,,figuring out how to translate new models to run them efficiently on different hardware, dealing with all the usual things you think about, compilers,
+Dialogue: 0,0:35:36.08,0:35:38.80,Sub,,0,0,0,,communications, libraries, system configurations.
+Dialogue: 0,0:35:38.80,0:35:51.52,Sub,,0,0,0,,What we've been super excited and encouraged by the work we are doing with you is now AI showing the potential and demonstrating it in production to automate
+Dialogue: 0,0:35:51.52,0:35:55.44,Sub,,0,0,0,,a significant portion of the work when anyone programs to an AMD GPU.
+Dialogue: 0,0:35:56.08,0:36:08.96,Sub,,0,0,0,,So it dramatically has shortened the path from a new model coming up to an efficient production deployment and something that we can much more easily tune to changing workload requirements, right?
+Dialogue: 0,0:36:09.00,0:36:10.16,Sub,,0,0,0,,And that's a big deal.
+Dialogue: 0,0:36:10.76,0:36:20.62,Sub,,0,0,0,,So one of the other things that's super exciting for us is because AMD is built around an open software ecosystem, all these things that we are now inventing
+Dialogue: 0,0:36:20.62,0:36:30.88,Sub,,0,0,0,,internally for our own use, we believe can, we can also bring it to the whole world and allow the whole world to use it for all of the AI models out there, not just our models.
+Dialogue: 0,0:36:31.72,0:36:33.26,Sub,,0,0,0,,I think super excited about that.
+Dialogue: 0,0:36:33.26,0:36:37.18,Sub,,0,0,0,,I think the idea is that it's really the tide that lifts all boats, right?
+Dialogue: 0,0:36:37.30,0:36:41.02,Sub,,0,0,0,,As we work, it helps our work together, but it really helps the overall ecosystem.
+Dialogue: 0,0:36:41.76,0:36:43.76,Sub,,0,0,0,,So a little bit of your crystal ball.
+Dialogue: 0,0:36:44.38,0:36:48.20,Sub,,0,0,0,,Looking forward, I think we all know that compute is super critical.
+Dialogue: 0,0:36:48.92,0:36:51.70,Sub,,0,0,0,,What do you need from the next generation AI infrastructure?
+Dialogue: 0,0:36:51.96,0:36:58.30,Sub,,0,0,0,,And what can we do as really a key partner to help you accomplish that mission?
+Dialogue: 0,0:36:58.80,0:37:02.26,Sub,,0,0,0,,If you haven't heard already, I need more compute more quickly.
+Dialogue: 0,0:37:03.56,0:37:05.24,Sub,,0,0,0,,At least he's consistent.
+Dialogue: 0,0:37:08.52,0:37:15.38,Sub,,0,0,0,,I think the thing that the whole industry is realizing is it's a systems problem at a data center scale.
+Dialogue: 0,0:37:15.84,0:37:25.82,Sub,,0,0,0,,So I think we obviously very quickly internalized that AI was a rack level problem, but now it is very clear that it's not just a rack level problem, it's a rack in a data center.
+Dialogue: 0,0:37:25.96,0:37:27.60,Sub,,0,0,0,,So the whole data center is a system.
+Dialogue: 0,0:37:28.08,0:37:38.10,Sub,,0,0,0,,And we have to think about how we design the future based on what we know about our workloads, what's coming down the line, but co-design it with you from CPUs to
+Dialogue: 0,0:37:38.10,0:37:44.74,Sub,,0,0,0,,GPUs to memory, networking, storage, power distribution in a data center, and the cooling systems that go with it.
+Dialogue: 0,0:37:44.78,0:37:48.14,Sub,,0,0,0,,These are all intertwined and they all have to be co-designed.
+Dialogue: 0,0:37:48.80,0:38:00.82,Sub,,0,0,0,,And one of the really fun parts about what we do with you and your team is how easy and productive it is for us to work with you and give you insight into how we
+Dialogue: 0,0:38:00.82,0:38:04.42,Sub,,0,0,0,,expect the world to change in the future from what our workload needs are,
+Dialogue: 0,0:38:04.50,0:38:12.72,Sub,,0,0,0,,what our models are, and how quickly your team responds in turning those insights into better chips, better systems, better software.
+Dialogue: 0,0:38:13.10,0:38:22.64,Sub,,0,0,0,,So that's what worked really well with MI400 and left shifted a lot of the engineering work that we needed to do to bring this up online quickly.
+Dialogue: 0,0:38:22.74,0:38:27.48,Sub,,0,0,0,,And that's why we are very confident we can productionize those systems very quickly.
+Dialogue: 0,0:38:27.48,0:38:39.28,Sub,,0,0,0,,And so really looking forward to accelerating that with MI500 and beyond and increasingly using AI to actually do that work for us rather than being limited by humans.
+Dialogue: 0,0:38:39.86,0:38:41.12,Sub,,0,0,0,,That's fantastic, Sachin.
+Dialogue: 0,0:38:41.32,0:38:44.94,Sub,,0,0,0,,And look, we really do recognize that input is so, so valuable.
+Dialogue: 0,0:38:45.36,0:38:49.54,Sub,,0,0,0,,So I have to say thank you again for just the extraordinary partnership,
+Dialogue: 0,0:38:49.80,0:38:56.28,Sub,,0,0,0,,the amount of work that our joint teams are doing together, and we couldn't be more excited about the opportunities in front of us.
+Dialogue: 0,0:38:56.28,0:38:57.14,Sub,,0,0,0,,Thank you, Sachin.
+Dialogue: 0,0:38:57.22,0:38:57.90,Sub,,0,0,0,,Thank you so much.
+Dialogue: 0,0:38:58.12,0:39:04.87,Sub,,0,0,0,,Yes. Alright.
+Dialogue: 0,0:39:05.09,0:39:07.81,Sub,,0,0,0,,So now let's turn to the world of CPUs.
+Dialogue: 0,0:39:08.99,0:39:17.01,Sub,,0,0,0,,There's been a lot of talk about CPUs recently, and I can say that this has been the foundation of our AMD data center strategy for the longest time.
+Dialogue: 0,0:39:17.67,0:39:22.55,Sub,,0,0,0,,We launched EPYC in 2017, and we've been on a very, very clear mission.
+Dialogue: 0,0:39:23.23,0:39:30.97,Sub,,0,0,0,,Every generation, more performance, more efficiency, more capability for a wider range of workloads.
+Dialogue: 0,0:39:31.45,0:39:32.99,Sub,,0,0,0,,Now, Naples was our first generation.
+Dialogue: 0,0:39:33.41,0:39:38.55,Sub,,0,0,0,,It established the foundation, but Rome and Milan really changed the economics in the data center.
+Dialogue: 0,0:39:38.77,0:39:44.19,Sub,,0,0,0,,We did more than what people expected in terms of adding core count and adding throughput.
+Dialogue: 0,0:39:44.91,0:39:53.01,Sub,,0,0,0,,And then Turin set... Genoa expanded our performance, and then Turin set a new bar for density, throughput, and total cost of ownership.
+Dialogue: 0,0:39:53.63,0:39:55.55,Sub,,0,0,0,,That's really been the EPYC formula.
+Dialogue: 0,0:39:55.55,0:40:03.37,Sub,,0,0,0,,A clear roadmap and very consistent execution, and leadership that actually grows with every generation.
+Dialogue: 0,0:40:04.33,0:40:09.51,Sub,,0,0,0,,This is why, if you look today, 5th Gen EPYC Turin is the best server CPU in the world.
+Dialogue: 0,0:40:10.29,0:40:21.53,Sub,,0,0,0,,With up to 192 cores and 384 threads, Turin delivers leadership performance across a broad range of cloud, enterprise, and HPC workloads.
+Dialogue: 0,0:40:21.81,0:40:25.79,Sub,,0,0,0,,But the thing about the data center is compute never stands still.
+Dialogue: 0,0:40:26.95,0:40:34.11,Sub,,0,0,0,,With agentic AI, it's actually creating a whole new class of infrastructure, and the CPU matters now more than ever.
+Dialogue: 0,0:40:34.79,0:40:37.65,Sub,,0,0,0,,And that's exactly what we built Venice for.
+Dialogue: 0,0:40:38.63,0:40:42.93,Sub,,0,0,0,,So, there's been a lot of talk about agentic AI, but it's actually a very new field.
+Dialogue: 0,0:40:43.31,0:40:49.89,Sub,,0,0,0,,And what we see is that server computing is actually splitting across a couple of different workloads.
+Dialogue: 0,0:40:49.89,0:40:55.47,Sub,,0,0,0,,So, the first section is GPU servers, and that's fairly well known.
+Dialogue: 0,0:40:56.09,0:41:00.65,Sub,,0,0,0,,That's where the CPU's job is basically to drive the GPUs.
+Dialogue: 0,0:41:01.23,0:41:04.37,Sub,,0,0,0,,And so, the job there is all about speed.
+Dialogue: 0,0:41:05.03,0:41:10.57,Sub,,0,0,0,,We want the highest frequency cores, we want the fastest IO, and we want to keep the GPUs fully fed.
+Dialogue: 0,0:41:11.85,0:41:18.03,Sub,,0,0,0,,Now, the biggest middle part, this is the largest growth, is actually in agent servers, or what we call agent sandboxes.
+Dialogue: 0,0:41:18.79,0:41:21.57,Sub,,0,0,0,,And this is actually a whole new class of workload.
+Dialogue: 0,0:41:22.01,0:41:31.37,Sub,,0,0,0,,Here, you execute code, you actually call a bunch of tools, you actually query data that's outside the model, you have a whole bunch of things around it.
+Dialogue: 0,0:41:31.65,0:41:35.11,Sub,,0,0,0,,And in this place, the priority is actually density.
+Dialogue: 0,0:41:35.39,0:41:42.05,Sub,,0,0,0,,So, we want the highest performing cores per watt to run thousands of agents at once.
+Dialogue: 0,0:41:42.77,0:41:47.09,Sub,,0,0,0,,And then we have our traditional general purpose servers that run the enterprise.
+Dialogue: 0,0:41:47.09,0:41:50.15,Sub,,0,0,0,,And here, you're going to have a diversity of workloads.
+Dialogue: 0,0:41:50.15,0:41:55.09,Sub,,0,0,0,,It's all about efficiency, it's running the applications, it's running databases, it's running data services.
+Dialogue: 0,0:41:55.73,0:42:01.19,Sub,,0,0,0,,And all of that is what we traditionally say is general purpose server.
+Dialogue: 0,0:42:01.83,0:42:07.31,Sub,,0,0,0,,And so, with these different workloads, you actually need the right CPU for the right workload.
+Dialogue: 0,0:42:07.89,0:42:12.73,Sub,,0,0,0,,And EPYC is the only CPU portfolio that leads across all three.
+Dialogue: 0,0:42:13.69,0:42:21.23,Sub,,0,0,0,,So, Venice is our newest and most advanced server CPU family, and it's actually designed for the agentic era.
+Dialogue: 0,0:42:22.15,0:42:25.69,Sub,,0,0,0,,We're extending Turin's leadership across every single metric.
+Dialogue: 0,0:42:25.89,0:42:33.73,Sub,,0,0,0,,That is performance, that's efficiency, that's TCO for cloud, that's enterprise efficiency, that's HPC workloads.
+Dialogue: 0,0:42:34.43,0:42:37.19,Sub,,0,0,0,,And Venice starts with our all new Zen 6 core.
+Dialogue: 0,0:42:38.29,0:42:45.97,Sub,,0,0,0,,We have higher IPC, higher frequency, and that delivers up to 1.8 times more performance than Turin.
+Dialogue: 0,0:42:46.73,0:42:49.73,Sub,,0,0,0,,That is one of the largest generational gains.
+Dialogue: 0,0:42:49.85,0:42:55.89,Sub,,0,0,0,,I mean, we have been doing this for six generations, but this is one of the largest generational gains in the history of EPYC.
+Dialogue: 0,0:42:56.97,0:43:08.03,Sub,,0,0,0,,It's 203 billion transistors built on TSMC's newest two nanometer process, and it uses a next generation chiplet that supports up to 512 threads per socket.
+Dialogue: 0,0:43:08.33,0:43:10.39,Sub,,0,0,0,,And this is actually a really important point.
+Dialogue: 0,0:43:10.39,0:43:12.35,Sub,,0,0,0,,I'm going to show you why in a few minutes.
+Dialogue: 0,0:43:13.37,0:43:19.59,Sub,,0,0,0,,This gives us the highest compute density, but it also allows us to double both the memory and the IO bandwidth.
+Dialogue: 0,0:43:20.29,0:43:24.01,Sub,,0,0,0,,So I have a few more chips to show you, if that's all right.
+Dialogue: 0,0:43:25.29,0:43:29.47,Sub,,0,0,0,,And what's clear is Venice is not one chip.
+Dialogue: 0,0:43:30.43,0:43:33.33,Sub,,0,0,0,,Venice is actually an entire family of chips.
+Dialogue: 0,0:43:33.91,0:43:38.31,Sub,,0,0,0,,And this is where our chiplet architecture becomes a huge, huge advantage.
+Dialogue: 0,0:43:38.31,0:43:44.27,Sub,,0,0,0,,It lets us take the Zen 6 architecture and build a whole portfolio around it.
+Dialogue: 0,0:43:44.83,0:43:46.35,Sub,,0,0,0,,So let's start with this guy.
+Dialogue: 0,0:43:48.15,0:43:50.01,Sub,,0,0,0,,This is Venice HF.
+Dialogue: 0,0:43:51.23,0:43:56.69,Sub,,0,0,0,,This is the highest performing CPU that drives AI host nodes.
+Dialogue: 0,0:43:57.63,0:44:07.27,Sub,,0,0,0,,It has eight compute chiplets, each with 12 cores, running at up to 5 gigahertz with the IO and memory bandwidth to keep the GPUs completely fed.
+Dialogue: 0,0:44:07.27,0:44:11.07,Sub,,0,0,0,,And this is the CPU that I showed you before shipping inside Helios.
+Dialogue: 0,0:44:20.89,0:44:23.53,Sub,,0,0,0,,Now, this is its bigger brother.
+Dialogue: 0,0:44:24.21,0:44:26.31,Sub,,0,0,0,,It's Venice 256 core.
+Dialogue: 0,0:44:26.93,0:44:30.45,Sub,,0,0,0,,This is the chip that's built for agentic sandboxes.
+Dialogue: 0,0:44:30.79,0:44:35.83,Sub,,0,0,0,,And it also has eight compute chiplets, but each of the chiplets now has 32 cores.
+Dialogue: 0,0:44:35.97,0:44:39.35,Sub,,0,0,0,,So it scales all the way to 512 threads.
+Dialogue: 0,0:44:39.35,0:44:42.91,Sub,,0,0,0,,And it is the highest compute density in the industry.
+Dialogue: 0,0:44:49.06,0:44:54.12,Sub,,0,0,0,,Customers get more agent capacity per watt, per dollar, per rack, bar none.
+Dialogue: 0,0:44:58.27,0:45:00.89,Sub,,0,0,0,,Okay, and then one more member of the family.
+Dialogue: 0,0:45:01.49,0:45:04.09,Sub,,0,0,0,,This one is Venice 128 core.
+Dialogue: 0,0:45:04.65,0:45:07.99,Sub,,0,0,0,,And this guy is optimized for enterprise and general purpose servers.
+Dialogue: 0,0:45:08.51,0:45:15.87,Sub,,0,0,0,,This is the same leadership performance per core, but it's in a lower cost, lower power design for enterprise applications.
+Dialogue: 0,0:45:16.63,0:45:22.87,Sub,,0,0,0,,And this one is really tuned to give customers the best performance per dollar across a wide range of configurations.
+Dialogue: 0,0:45:23.01,0:45:27.67,Sub,,0,0,0,,So you can see really the power of the family as they come together.
+Dialogue: 0,0:45:28.37,0:45:33.93,Sub,,0,0,0,,And in addition with these guys, I can tell you that next year we're adding a few other chips to the family.
+Dialogue: 0,0:45:34.13,0:45:38.17,Sub,,0,0,0,,We're adding Verano, which is the next generation for AI host nodes.
+Dialogue: 0,0:45:38.17,0:45:46.17,Sub,,0,0,0,,And what that adds is a more power efficient, low power memory, as well as faster interconnect between the CPU and the GPU.
+Dialogue: 0,0:45:46.75,0:45:55.51,Sub,,0,0,0,,And then we're also adding for our high performance computing, our technical computing, Venice X, which is using our 3D vCache stacking technology.
+Dialogue: 0,0:45:55.51,0:46:04.33,Sub,,0,0,0,,And we're really the first to stack memory chiplets right below the compute chiplets to accelerate performance, even for those types of workloads.
+Dialogue: 0,0:46:04.33,0:46:06.43,Sub,,0,0,0,,So you can see one architecture.
+Dialogue: 0,0:46:06.43,0:46:08.79,Sub,,0,0,0,,A CPU is not a CPU.
+Dialogue: 0,0:46:09.57,0:46:11.09,Sub,,0,0,0,,There are many different types of CPUs.
+Dialogue: 0,0:46:11.95,0:46:15.63,Sub,,0,0,0,,And for us, one architecture spans dozens of different chips.
+Dialogue: 0,0:46:16.13,0:46:20.13,Sub,,0,0,0,,And that breadth is someone that no other CPU vendor can match.
+Dialogue: 0,0:46:20.45,0:46:24.95,Sub,,0,0,0,,And that's what makes 6th Gen EPYC the best CPU in the data center.
+Dialogue: 0,0:46:31.98,0:46:36.86,Sub,,0,0,0,,Now you're going to bear with me because I'm going to take you through some performance because the numbers are just incredible.
+Dialogue: 0,0:46:38.00,0:46:40.16,Sub,,0,0,0,,So looking at AI workloads, right?
+Dialogue: 0,0:46:40.16,0:46:46.28,Sub,,0,0,0,,Again, you have different use cases and different workloads, starting first with GPU servers.
+Dialogue: 0,0:46:47.02,0:46:52.28,Sub,,0,0,0,,Many of the largest frontier models require you to move data between the CPU and the GPU.
+Dialogue: 0,0:46:52.80,0:47:02.68,Sub,,0,0,0,,And in that scenario, Venice moves the data faster than the best competitive x86 processor, delivering up to 1.8 times more tokens per second.
+Dialogue: 0,0:47:03.68,0:47:12.16,Sub,,0,0,0,,And when you look at the agentic CPU servers and sandboxes, because of our density, Venice delivers more than twice the agents per watt for agent sandboxes.
+Dialogue: 0,0:47:13.28,0:47:18.32,Sub,,0,0,0,,And for general purpose applications, in this case, we're standardizing on a 100 kilowatt rack.
+Dialogue: 0,0:47:18.88,0:47:22.00,Sub,,0,0,0,,Venice delivers more than twice the performance per watt.
+Dialogue: 0,0:47:22.36,0:47:25.22,Sub,,0,0,0,,So pretty incredible results.
+Dialogue: 0,0:47:26.48,0:47:30.52,Sub,,0,0,0,,And the gap is even wider if you look at ARM processors.
+Dialogue: 0,0:47:31.24,0:47:40.06,Sub,,0,0,0,,So if you look at the leading ARM processors, when we're comparing at the chip level, Venice supports up to 2.8 times more agents per watt.
+Dialogue: 0,0:47:40.86,0:47:47.02,Sub,,0,0,0,,And when you look at the rack level, Venice is delivering up to 3.3 times more performance per watt.
+Dialogue: 0,0:47:47.80,0:47:56.00,Sub,,0,0,0,,And what that means is at the data center scale, you can just get a lot more agents in the same power envelope.
+Dialogue: 0,0:48:03.30,0:48:12.58,Sub,,0,0,0,,Now, there's been a lot of talk about what matters most for agentic AI, with some saying that per-core performance under load is the only thing that counts.
+Dialogue: 0,0:48:13.34,0:48:24.42,Sub,,0,0,0,,But that's really only part of the story, because agentic AI actually runs as a distributed platform, and that is across databases and vector stores and orchestration.
+Dialogue: 0,0:48:24.90,0:48:27.14,Sub,,0,0,0,,And all of that has to happen at once.
+Dialogue: 0,0:48:27.48,0:48:37.06,Sub,,0,0,0,,And that requires not just raw speed, but you absolutely need density, efficiency, and per-core performance all together.
+Dialogue: 0,0:48:37.06,0:48:42.42,Sub,,0,0,0,,And what I'm happy to say is that Venice leads across every one of them.
+Dialogue: 0,0:48:43.22,0:48:52.90,Sub,,0,0,0,,So when you compare Venice against the highest performing ARM CPU from our competition, EPYC delivers 20% higher per-core performance.
+Dialogue: 0,0:48:53.90,0:48:54.40,Sub,,0,0,0,,And when we...
+Dialogue: 0,0:48:59.69,0:49:01.01,Sub,,0,0,0,,I like that number.
+Dialogue: 0,0:49:01.79,0:49:02.53,Sub,,0,0,0,,I like that number.
+Dialogue: 0,0:49:03.27,0:49:09.45,Sub,,0,0,0,,And when we pair that with leadership core density, we're delivering 2.2 times more performance at the socket level.
+Dialogue: 0,0:49:09.45,0:49:17.61,Sub,,0,0,0,,And so the main point is, whether a customer needs per-core or per-socket performance, Venice is the leader.
+Dialogue: 0,0:49:18.39,0:49:21.97,Sub,,0,0,0,,And there's one more point that a benchmark doesn't really capture,
+Dialogue: 0,0:49:22.63,0:49:31.01,Sub,,0,0,0,,because when you think about what agentic AI is, it's really like you're adding thousands of employees to your enterprise, to your traditional workflow.
+Dialogue: 0,0:49:31.77,0:49:35.11,Sub,,0,0,0,,And that software, enterprises have been running on for years.
+Dialogue: 0,0:49:35.79,0:49:39.53,Sub,,0,0,0,,The truth is, that software runs on x86.
+Dialogue: 0,0:49:40.61,0:49:41.95,Sub,,0,0,0,,So Venice runs all of it.
+Dialogue: 0,0:49:42.31,0:49:44.33,Sub,,0,0,0,,And this is where x86 has an advantage.
+Dialogue: 0,0:49:44.73,0:49:46.17,Sub,,0,0,0,,You must have the best performance.
+Dialogue: 0,0:49:46.37,0:49:47.53,Sub,,0,0,0,,You must have the best density.
+Dialogue: 0,0:49:47.97,0:49:51.27,Sub,,0,0,0,,But having that software compatibility is a big, big plus.
+Dialogue: 0,0:49:51.89,0:49:55.89,Sub,,0,0,0,,So customers scale up their agents on the stack that they already have.
+Dialogue: 0,0:49:56.87,0:49:59.71,Sub,,0,0,0,,And now, let me just show you what that means at the rack level.
+Dialogue: 0,0:50:00.23,0:50:04.05,Sub,,0,0,0,,So at the rack level, what we find is density is super important.
+Dialogue: 0,0:50:04.05,0:50:06.07,Sub,,0,0,0,,Everyone's trying to optimize their data center.
+Dialogue: 0,0:50:06.31,0:50:08.17,Sub,,0,0,0,,Everyone's trying to optimize their power envelope.
+Dialogue: 0,0:50:09.07,0:50:15.47,Sub,,0,0,0,,And with Venice, every major server OEM is offering a broad spectrum of racks for agentic AI.
+Dialogue: 0,0:50:16.09,0:50:22.89,Sub,,0,0,0,,So what that means is we have the full spectrum from 25,000 cores to 50,000 cores.
+Dialogue: 0,0:50:23.19,0:50:25.13,Sub,,0,0,0,,And that's more agents per rack.
+Dialogue: 0,0:50:25.25,0:50:27.05,Sub,,0,0,0,,And that gives customers the choice.
+Dialogue: 0,0:50:27.95,0:50:29.95,Sub,,0,0,0,,The key is, every data center is different.
+Dialogue: 0,0:50:30.25,0:50:39.15,Sub,,0,0,0,,And with that, the flexibility allows you to pick the right cooling, the right space requirements for what you're trying to do in your data center.
+Dialogue: 0,0:50:39.75,0:50:40.79,Sub,,0,0,0,,So there you have it.
+Dialogue: 0,0:50:41.55,0:50:44.69,Sub,,0,0,0,,Venice, the best server CPU in the industry.
+Dialogue: 0,0:50:51.62,0:50:55.48,Sub,,0,0,0,,And I'm very happy to say also today that Venice is in full production.
+Dialogue: 0,0:50:56.20,0:50:57.86,Sub,,0,0,0,,Customer demand is incredible.
+Dialogue: 0,0:50:58.30,0:51:01.16,Sub,,0,0,0,,It's the strongest we've ever seen for a new EPYC generation.
+Dialogue: 0,0:51:06.99,0:51:18.83,Sub,,0,0,0,,We're seeing every major server OEM, every major cloud provider on track to begin rolling out in the fourth quarter as we start with making the broadest EPYC launch we've ever had.
+Dialogue: 0,0:51:19.45,0:51:26.37,Sub,,0,0,0,,So with that, I want to turn to my next guest, who runs some of the largest and most advanced compute infrastructure in the world.
+Dialogue: 0,0:51:26.81,0:51:33.57,Sub,,0,0,0,,And it's really been our privilege to partner with them as they've deployed multiple generations of both EPYC and Instinct.
+Dialogue: 0,0:51:34.07,0:51:40.63,Sub,,0,0,0,,To share more about our work together, please welcome to the stage Meta's Head of Infrastructure, Santosh Janardhan.
+Dialogue: 0,0:51:50.75,0:51:52.33,Sub,,0,0,0,,It is so great to have you here.
+Dialogue: 0,0:51:52.47,0:51:53.41,Sub,,0,0,0,,Thank you for being here.
+Dialogue: 0,0:51:54.55,0:51:56.23,Sub,,0,0,0,,Santosh is a true friend.
+Dialogue: 0,0:51:56.83,0:52:01.03,Sub,,0,0,0,,I have to say it's been a tremendous opportunity over the last few years.
+Dialogue: 0,0:52:01.47,0:52:04.75,Sub,,0,0,0,,My story about Santosh is the first time I sat in his office.
+Dialogue: 0,0:52:05.41,0:52:09.35,Sub,,0,0,0,,He said to me, Lisa, we're going to deploy a lot of CPUs.
+Dialogue: 0,0:52:10.35,0:52:11.39,Sub,,0,0,0,,Please make sure they work.
+Dialogue: 0,0:52:12.91,0:52:15.01,Sub,,0,0,0,,And I said, I will, I will.
+Dialogue: 0,0:52:15.01,0:52:16.45,Sub,,0,0,0,,And you lift it up.
+Dialogue: 0,0:52:17.07,0:52:18.91,Sub,,0,0,0,,I try. I try.
+Dialogue: 0,0:52:18.99,0:52:24.63,Sub,,0,0,0,,But look, Santosh, Meta operates, you operate some of the most advanced infrastructure in the world.
+Dialogue: 0,0:52:26.11,0:52:27.75,Sub,,0,0,0,,What's happening in the data center world?
+Dialogue: 0,0:52:27.81,0:52:28.71,Sub,,0,0,0,,What's happening in your world?
+Dialogue: 0,0:52:28.81,0:52:33.35,Sub,,0,0,0,,Tell us a little bit about the architecture and what you're working on.
+Dialogue: 0,0:52:33.81,0:52:34.77,Sub,,0,0,0,,Sure. First of all, thank you.
+Dialogue: 0,0:52:34.87,0:52:35.37,Sub,,0,0,0,,It's awesome.
+Dialogue: 0,0:52:35.59,0:52:37.75,Sub,,0,0,0,,This is like a hardware geek's paradise, right?
+Dialogue: 0,0:52:38.17,0:52:42.43,Sub,,0,0,0,,You come in, you're talking about transistors, you're talking about hardware, talking about cooling.
+Dialogue: 0,0:52:42.79,0:52:43.61,Sub,,0,0,0,,This is sort of the gem.
+Dialogue: 0,0:52:43.69,0:52:44.19,Sub,,0,0,0,,I like it.
+Dialogue: 0,0:52:45.25,0:52:47.95,Sub,,0,0,0,,And I think there's an audience that's receptive to it.
+Dialogue: 0,0:52:48.25,0:52:49.65,Sub,,0,0,0,,I usually talk to audiences.
+Dialogue: 0,0:52:50.17,0:52:54.07,Sub,,0,0,0,,They have usually either not been to a data center or not really seen a chip ever.
+Dialogue: 0,0:52:54.45,0:52:56.33,Sub,,0,0,0,,So this is refreshing, I have to say.
+Dialogue: 0,0:52:57.47,0:52:58.81,Sub,,0,0,0,,The thing I'll say about...
+Dialogue: 0,0:52:58.81,0:53:01.75,Sub,,0,0,0,,Listen, we are seeing demand go through the roof.
+Dialogue: 0,0:53:02.59,0:53:07.03,Sub,,0,0,0,,When you look at inference, training, recommendation system, that's how a newsfeed works.
+Dialogue: 0,0:53:08.01,0:53:08.79,Sub,,0,0,0,,Content creation.
+Dialogue: 0,0:53:09.39,0:53:11.87,Sub,,0,0,0,,The demand for that is just exponential right now.
+Dialogue: 0,0:53:12.65,0:53:15.87,Sub,,0,0,0,,And when I think about sort of the overall...
+Dialogue: 0,0:53:17.17,0:53:22.19,Sub,,0,0,0,,Mark has this vision of delivering personal super intelligence to billions of people.
+Dialogue: 0,0:53:22.43,0:53:33.91,Sub,,0,0,0,,So if you go to sort of Facebook or Instagram or WhatsApp or whatever surface you go to, the idea is that we'll meet you there and we'll deliver super personalized intelligence right wherever you are.
+Dialogue: 0,0:53:34.17,0:53:39.75,Sub,,0,0,0,,And that's why we established this Meta compute initiative and because it's a top level thing, Mark himself oversees.
+Dialogue: 0,0:53:39.75,0:53:46.77,Sub,,0,0,0,,Now what it means is that we are now moving away from an area where we used to take servers, optimize it.
+Dialogue: 0,0:53:47.03,0:53:53.49,Sub,,0,0,0,,This is what the conversation we were having many years ago, that, hey, I'm deploying a CPU, I really need to maximize performance out of it.
+Dialogue: 0,0:53:53.65,0:53:54.65,Sub,,0,0,0,,It's different now.
+Dialogue: 0,0:53:54.99,0:53:58.97,Sub,,0,0,0,,You talked about how we should be thinking about the whole system end to end.
+Dialogue: 0,0:53:59.27,0:54:05.33,Sub,,0,0,0,,We are at a point where we have to look about the whole data center and think about it as one integrated system.
+Dialogue: 0,0:54:05.89,0:54:10.79,Sub,,0,0,0,,Servers, hardware, networking, cooling, power, all of that is not optional.
+Dialogue: 0,0:54:10.83,0:54:12.09,Sub,,0,0,0,,All of that has to work together.
+Dialogue: 0,0:54:12.67,0:54:21.91,Sub,,0,0,0,,And this is where I think there's a huge opportunity for collaboration with partners like AMD because you have to now co-design, co-create systems, not just
+Dialogue: 0,0:54:21.91,0:54:24.29,Sub,,0,0,0,,deploy something that comes off the shelf.
+Dialogue: 0,0:54:25.13,0:54:27.07,Sub,,0,0,0,,The other thing is, by the way, flexibility.
+Dialogue: 0,0:54:27.45,0:54:33.95,Sub,,0,0,0,,The thing I really like about what you said is that this is such a big opportunity in the industry right now.
+Dialogue: 0,0:54:34.11,0:54:37.45,Sub,,0,0,0,,All of us need to lean in and work on this together.
+Dialogue: 0,0:54:37.45,0:54:39.65,Sub,,0,0,0,,So it needs to be open.
+Dialogue: 0,0:54:39.93,0:54:41.01,Sub,,0,0,0,,It needs to be heterogeneous.
+Dialogue: 0,0:54:41.95,0:54:46.93,Sub,,0,0,0,,And I think that's not one company, one partner that works for any one of us.
+Dialogue: 0,0:54:47.03,0:54:48.81,Sub,,0,0,0,,We need to sort of work on this together.
+Dialogue: 0,0:54:49.03,0:54:52.55,Sub,,0,0,0,,And that's why I think you're one of our most important strategic partners.
+Dialogue: 0,0:54:53.03,0:54:53.71,Sub,,0,0,0,,Thank you, Santosh.
+Dialogue: 0,0:54:53.77,0:54:57.03,Sub,,0,0,0,,And look, we completely agree with your philosophy.
+Dialogue: 0,0:54:57.49,0:55:07.67,Sub,,0,0,0,,Now, you are actually one of our broadest partners because if you think about our work on CPUs, GPUs, you know, we developed the Rackscale OCP systems together.
+Dialogue: 0,0:55:08.37,0:55:11.75,Sub,,0,0,0,,You've deployed lots and lots of CPUs, so millions of CPUs.
+Dialogue: 0,0:55:12.31,0:55:14.67,Sub,,0,0,0,,And you're a lead partner on Venice.
+Dialogue: 0,0:55:14.95,0:55:18.61,Sub,,0,0,0,,Can you just talk a little bit about sort of your CPU and infrastructure and some of our work together?
+Dialogue: 0,0:55:19.43,0:55:20.91,Sub,,0,0,0,,Sure. It's been many years.
+Dialogue: 0,0:55:21.39,0:55:23.93,Sub,,0,0,0,,And the story that Lisa was saying was many years ago.
+Dialogue: 0,0:55:23.97,0:55:28.49,Sub,,0,0,0,,I think we went from Milan to Bergamo to Turin, now to Venice.
+Dialogue: 0,0:55:28.87,0:55:30.95,Sub,,0,0,0,,So it's at least the fourth generation.
+Dialogue: 0,0:55:30.95,0:55:33.53,Sub,,0,0,0,,So a long-time partnership, obviously.
+Dialogue: 0,0:55:34.27,0:55:38.79,Sub,,0,0,0,,I actually think the world is changing in the sense that it used...
+Dialogue: 0,0:55:38.79,0:55:39.35,Sub,,0,0,0,,The world is changing.
+Dialogue: 0,0:55:39.35,0:55:40.71,Sub,,0,0,0,,Every year is a new world these days.
+Dialogue: 0,0:55:40.99,0:55:41.65,Sub,,0,0,0,,It's like every month.
+Dialogue: 0,0:55:42.51,0:55:43.01,Sub,,0,0,0,,Months, exactly.
+Dialogue: 0,0:55:43.37,0:55:46.87,Sub,,0,0,0,,So what ends up happening now is that it's not just a GPU game anymore.
+Dialogue: 0,0:55:46.97,0:55:48.27,Sub,,0,0,0,,It's CPUs and GPUs.
+Dialogue: 0,0:55:48.43,0:55:52.17,Sub,,0,0,0,,If anything, I think CPUs are becoming at least as important, if not more.
+Dialogue: 0,0:55:52.57,0:56:04.27,Sub,,0,0,0,,You're looking at a world where sort of the workload is changing because while you have your workhorses and GPUs, at the end of the day, there's agentic workloads.
+Dialogue: 0,0:56:04.27,0:56:05.21,Sub,,0,0,0,,You have to run your tools.
+Dialogue: 0,0:56:05.41,0:56:06.25,Sub,,0,0,0,,You have to run your systems.
+Dialogue: 0,0:56:06.55,0:56:10.59,Sub,,0,0,0,,And all the code that's been generated still needs to run somewhere, right?
+Dialogue: 0,0:56:10.81,0:56:12.85,Sub,,0,0,0,,So I'm super excited to work on Venice.
+Dialogue: 0,0:56:12.99,0:56:15.27,Sub,,0,0,0,,I think there's a lot to come there.
+Dialogue: 0,0:56:15.87,0:56:18.13,Sub,,0,0,0,,And you have to think again.
+Dialogue: 0,0:56:18.79,0:56:26.05,Sub,,0,0,0,,This is a theme that I'm assuming will go throughout the presentation that you have to start thinking about CPUs and GPUs as conjoined things.
+Dialogue: 0,0:56:26.05,0:56:27.21,Sub,,0,0,0,,You hand off workloads.
+Dialogue: 0,0:56:27.21,0:56:29.73,Sub,,0,0,0,,Depending on the workload, you employ the right hardware.
+Dialogue: 0,0:56:30.15,0:56:31.67,Sub,,0,0,0,,Yes, absolutely right.
+Dialogue: 0,0:56:31.85,0:56:34.55,Sub,,0,0,0,,And we've gotten a lot of feedback from your technical team.
+Dialogue: 0,0:56:34.59,0:56:38.99,Sub,,0,0,0,,I think that's what I really appreciate about the partnership with Meta.
+Dialogue: 0,0:56:39.49,0:56:43.43,Sub,,0,0,0,,Now, clearly, you're deploying lots of GPUs too, a lot of accelerators.
+Dialogue: 0,0:56:43.77,0:56:48.97,Sub,,0,0,0,,And you're also one of our deepest partners on the accelerator side, starting with MI300.
+Dialogue: 0,0:56:49.29,0:56:56.77,Sub,,0,0,0,,And then we had a very large strategic partnership announced around up to 6 gigawatts, starting with MI450.
+Dialogue: 0,0:56:57.59,0:56:59.43,Sub,,0,0,0,,And what we're doing is quite unique with Meta.
+Dialogue: 0,0:56:59.53,0:57:04.87,Sub,,0,0,0,,So can you talk a little bit about the evolution and the MI450 plans?
+Dialogue: 0,0:57:06.21,0:57:08.19,Sub,,0,0,0,,Again, multi-year collaboration.
+Dialogue: 0,0:57:08.39,0:57:09.87,Sub,,0,0,0,,I think we started with MI300.
+Dialogue: 0,0:57:10.57,0:57:11.07,Sub,,0,0,0,,We did a bunch.
+Dialogue: 0,0:57:11.43,0:57:12.93,Sub,,0,0,0,,It had really nice memory capacity.
+Dialogue: 0,0:57:13.03,0:57:14.47,Sub,,0,0,0,,I remember talking to you about that, right?
+Dialogue: 0,0:57:15.11,0:57:17.27,Sub,,0,0,0,,And then there's a bunch of pipelining we did.
+Dialogue: 0,0:57:17.59,0:57:23.73,Sub,,0,0,0,,It was important to just have deployed that at production scale, sort of get hands-on experience on both sides.
+Dialogue: 0,0:57:24.49,0:57:28.17,Sub,,0,0,0,,350 is the first time we deployed this on our ranking and recommendation systems.
+Dialogue: 0,0:57:28.31,0:57:32.07,Sub,,0,0,0,,So that's now getting into sort of some good numbers.
+Dialogue: 0,0:57:32.55,0:57:34.75,Sub,,0,0,0,,And 450 is, I think, I'm super excited about it.
+Dialogue: 0,0:57:34.85,0:57:36.43,Sub,,0,0,0,,We just got some of the racks.
+Dialogue: 0,0:57:36.71,0:57:43.63,Sub,,0,0,0,,And we are going to deploy it across the board because it gives us the opportunity to go and sort of really collaborate.
+Dialogue: 0,0:57:43.79,0:57:54.65,Sub,,0,0,0,,I think the big difference between the 300, 350, and 450 is that we have had engineers sitting in the same room talking to each other, co-designing, co-creating, like power cooling.
+Dialogue: 0,0:57:55.37,0:57:57.37,Sub,,0,0,0,,Like I was saying, it's not just a single thing.
+Dialogue: 0,0:57:57.79,0:58:00.25,Sub,,0,0,0,,And we are not shy in feedback.
+Dialogue: 0,0:58:00.49,0:58:01.97,Sub,,0,0,0,,They're not shy, for sure.
+Dialogue: 0,0:58:02.99,0:58:04.05,Sub,,0,0,0,,But you're very receptive.
+Dialogue: 0,0:58:04.23,0:58:05.87,Sub,,0,0,0,,So this is true partnership, right?
+Dialogue: 0,0:58:06.13,0:58:09.21,Sub,,0,0,0,,This is the point about co-designing and co-creating that, I think.
+Dialogue: 0,0:58:10.15,0:58:14.03,Sub,,0,0,0,,And like I was saying, that's a huge sort of deployment coming in.
+Dialogue: 0,0:58:14.41,0:58:18.43,Sub,,0,0,0,,The more we deploy, the earlier we co-design, the better we are.
+Dialogue: 0,0:58:18.63,0:58:19.35,Sub,,0,0,0,,Yeah, absolutely.
+Dialogue: 0,0:58:19.55,0:58:22.95,Sub,,0,0,0,,Really, really appreciate the effort together on MI450.
+Dialogue: 0,0:58:23.45,0:58:26.15,Sub,,0,0,0,,Now I want to ask you also about your crystal ball.
+Dialogue: 0,0:58:26.25,0:58:34.15,Sub,,0,0,0,,So you look out into the future and you see what the next few years really means as you push forward in the AI industry.
+Dialogue: 0,0:58:34.59,0:58:37.87,Sub,,0,0,0,,What are the biggest challenges and really opportunities for us?
+Dialogue: 0,0:58:38.01,0:58:39.83,Sub,,0,0,0,,This is the industry ecosystem here.
+Dialogue: 0,0:58:39.83,0:58:41.77,Sub,,0,0,0,,So what should we be focused on as an industry?
+Dialogue: 0,0:58:42.71,0:58:45.11,Sub,,0,0,0,,Listen, all of you know about the bottlenecks.
+Dialogue: 0,0:58:45.11,0:58:48.31,Sub,,0,0,0,,You know about the power, the data centers, the silicon.
+Dialogue: 0,0:58:48.87,0:58:52.87,Sub,,0,0,0,,All of these, I think, are choke points that I think the industry is waiting on.
+Dialogue: 0,0:58:53.49,0:58:56.95,Sub,,0,0,0,,But those are things I'm pretty confident we'll sort of work our way through.
+Dialogue: 0,0:58:57.25,0:58:59.89,Sub,,0,0,0,,At the end of the day, I think the demand is immense.
+Dialogue: 0,0:59:00.07,0:59:00.85,Sub,,0,0,0,,People are responding.
+Dialogue: 0,0:59:01.77,0:59:08.55,Sub,,0,0,0,,But the thing that I really want to make sure all of us realize is that we should not think about systems in isolation.
+Dialogue: 0,0:59:09.51,0:59:12.17,Sub,,0,0,0,,Like I was saying, CPUs and GPUs are one conjoined system.
+Dialogue: 0,0:59:12.27,0:59:13.73,Sub,,0,0,0,,We should start thinking about it that way.
+Dialogue: 0,0:59:13.73,0:59:18.09,Sub,,0,0,0,,We really need to co-design things early.
+Dialogue: 0,0:59:18.75,0:59:20.19,Sub,,0,0,0,,See, data centers take years to build.
+Dialogue: 0,0:59:21.35,0:59:26.23,Sub,,0,0,0,,One of my favorite stories is Mark comes to me and says, hey, I want a gigawatt worth of data centers.
+Dialogue: 0,0:59:26.35,0:59:27.91,Sub,,0,0,0,,Well, you should have talked to me two years ago.
+Dialogue: 0,0:59:28.51,0:59:29.45,Sub,,0,0,0,,It takes time.
+Dialogue: 0,0:59:29.83,0:59:31.27,Sub,,0,0,0,,It's the same with silicon, right?
+Dialogue: 0,0:59:31.35,0:59:32.41,Sub,,0,0,0,,It just takes time.
+Dialogue: 0,0:59:32.95,0:59:39.73,Sub,,0,0,0,,So we need to be starting and sitting down in a room co-designing today for what we need to deploy in 27 and 28.
+Dialogue: 0,0:59:40.55,0:59:44.13,Sub,,0,0,0,,That, I think, is when we truly unlock all sort of powers of the system.
+Dialogue: 0,0:59:44.55,0:59:45.45,Sub,,0,0,0,,The systems are amazing.
+Dialogue: 0,0:59:45.57,0:59:46.77,Sub,,0,0,0,,The specs are amazing, right?
+Dialogue: 0,0:59:47.13,0:59:52.81,Sub,,0,0,0,,But think about how much more you can get out of it if you sit in a room and just co-design it today.
+Dialogue: 0,0:59:52.91,0:59:56.11,Sub,,0,0,0,,And in 28, we'll be having much better graphs out there.
+Dialogue: 0,0:59:57.41,0:59:57.91,Sub,,0,0,0,,Fantastic.
+Dialogue: 0,0:59:58.09,0:59:59.45,Sub,,0,0,0,,Santosh, I completely agree with you.
+Dialogue: 0,0:59:59.85,1:00:01.51,Sub,,0,0,0,,I want to say again, thank you.
+Dialogue: 0,1:00:01.73,1:00:08.85,Sub,,0,0,0,,We are so, so happy with the amazing partnership that we have across the board and, most importantly, with your engineering teams.
+Dialogue: 0,1:00:08.87,1:00:11.31,Sub,,0,0,0,,And we truly are excited about what we're going to do in the future.
+Dialogue: 0,1:00:11.75,1:00:12.35,Sub,,0,0,0,,Thank you so much.
+Dialogue: 0,1:00:19.00,1:00:26.60,Sub,,0,0,0,,So you heard Santosh talk about just the diversity of workloads and really the massive scale that you require with AI.
+Dialogue: 0,1:00:27.42,1:00:32.50,Sub,,0,0,0,,Now I want to turn to another part of the inference market where the requirements are actually very different.
+Dialogue: 0,1:00:33.14,1:00:35.14,Sub,,0,0,0,,So lots and lots of workloads.
+Dialogue: 0,1:00:35.42,1:00:42.44,Sub,,0,0,0,,And as inference is moving into more products and services, we're actually seeing it segment into different workloads depending on what you're trying to do.
+Dialogue: 0,1:00:43.36,1:00:45.62,Sub,,0,0,0,,Some of these are, let's call it, less interactive.
+Dialogue: 0,1:00:45.62,1:00:49.88,Sub,,0,0,0,,So they're really tuned for, let's call it, maximum throughput or the lowest cost.
+Dialogue: 0,1:00:50.90,1:00:56.52,Sub,,0,0,0,,Other of these applications require more balanced throughput, so you have to balance throughput and responsiveness.
+Dialogue: 0,1:00:57.36,1:01:02.62,Sub,,0,0,0,,And then there's this new class of applications that actually want very, very fast results.
+Dialogue: 0,1:01:02.66,1:01:05.76,Sub,,0,0,0,,You have extremely smart engineers and they don't like to wait.
+Dialogue: 0,1:01:06.28,1:01:10.98,Sub,,0,0,0,,And that is where ultra-low latency or every millisecond actually matters.
+Dialogue: 0,1:01:11.72,1:01:15.64,Sub,,0,0,0,,Each one of these types of workloads requires a different type of compute.
+Dialogue: 0,1:01:16.38,1:01:21.70,Sub,,0,0,0,,And one of the best ways to reach ultra-low latency today is disaggregated inference.
+Dialogue: 0,1:01:22.22,1:01:28.46,Sub,,0,0,0,,So if you think about the different pieces, both prefill and decode are two different jobs.
+Dialogue: 0,1:01:28.72,1:01:30.88,Sub,,0,0,0,,So prefill tends to need more compute.
+Dialogue: 0,1:01:31.56,1:01:33.56,Sub,,0,0,0,,Decode tends to need more memory bandwidth.
+Dialogue: 0,1:01:34.10,1:01:40.38,Sub,,0,0,0,,And with Instinct, we have a very balanced machine so that we deliver both great compute and great memory bandwidth.
+Dialogue: 0,1:01:40.84,1:01:42.86,Sub,,0,0,0,,But you can actually take this a step further.
+Dialogue: 0,1:01:42.86,1:01:49.50,Sub,,0,0,0,,If you know what workloads you're trying to run, you can actually let customers tune each of these pieces independently.
+Dialogue: 0,1:01:49.94,1:01:54.24,Sub,,0,0,0,,And to address this market opportunity, we've been working with Cerebras.
+Dialogue: 0,1:01:54.70,1:02:01.30,Sub,,0,0,0,,So to talk more about what we're building together, please welcome to the stage Cerebras co-founder and CEO Andrew Feldman.
+Dialogue: 0,1:02:10.33,1:02:11.85,Sub,,0,0,0,,Andrew, it's great to have you here.
+Dialogue: 0,1:02:11.95,1:02:14.07,Sub,,0,0,0,,It's been an exciting few months for you.
+Dialogue: 0,1:02:14.47,1:02:18.59,Sub,,0,0,0,,I know that for those who don't know exactly what you've been working on,
+Dialogue: 0,1:02:18.59,1:02:22.49,Sub,,0,0,0,,can you talk a little bit about Cerebras and what problem you've been trying to solve?
+Dialogue: 0,1:02:23.05,1:02:27.97,Sub,,0,0,0,,Sure. Great to be here and great to be sort of among people who love hardware.
+Dialogue: 0,1:02:28.81,1:02:30.13,Sub,,0,0,0,,Yes, it's nice.
+Dialogue: 0,1:02:30.65,1:02:37.33,Sub,,0,0,0,,Look, I'm thrilled to be here with you and to announce our cool new partnership.
+Dialogue: 0,1:02:37.87,1:02:42.19,Sub,,0,0,0,,At Cerebras, we build the world's largest and fastest chip.
+Dialogue: 0,1:02:42.33,1:02:43.55,Sub,,0,0,0,,It's a full wafer.
+Dialogue: 0,1:02:43.81,1:02:52.45,Sub,,0,0,0,,And we package this into a system into racks and then racks into clusters.
+Dialogue: 0,1:02:53.51,1:02:56.97,Sub,,0,0,0,,And we deliver them both on-premise and via the cloud.
+Dialogue: 0,1:02:57.69,1:03:00.93,Sub,,0,0,0,,And you've had some of our customers up here already today.
+Dialogue: 0,1:03:01.25,1:03:13.05,Sub,,0,0,0,,On the Frontier Labs, we serve customers like OpenAI and in the hyperscalers like AWS, in the small agentic and the coding space, leaders like Cognition.
+Dialogue: 0,1:03:13.75,1:03:18.35,Sub,,0,0,0,,And they do this because we're blisteringly fast.
+Dialogue: 0,1:03:19.79,1:03:25.37,Sub,,0,0,0,,There's no question, Andrew, that you have some tremendous innovation with what you've been working on.
+Dialogue: 0,1:03:25.65,1:03:34.67,Sub,,0,0,0,,And our teams have been collaborating really closely over the last few years to really have Helios together with the wafer scale engine for ultra low latency inference.
+Dialogue: 0,1:03:35.15,1:03:37.57,Sub,,0,0,0,,Can you just kind of just educate the audience a little bit?
+Dialogue: 0,1:03:37.63,1:03:39.99,Sub,,0,0,0,,What are we trying to do and what does that mean for customers?
+Dialogue: 0,1:03:39.99,1:03:44.25,Sub,,0,0,0,,Sure, I think what's happened, and you described it previously,
+Dialogue: 0,1:03:44.53,1:03:51.13,Sub,,0,0,0,,is that sort of AI has moved from being a novelty to being useful and then in some domains a necessity.
+Dialogue: 0,1:03:52.19,1:03:57.71,Sub,,0,0,0,,And when something is a necessity, people want to use it and they want to use it quickly.
+Dialogue: 0,1:03:57.91,1:04:09.05,Sub,,0,0,0,,And to serve this market, this segment of ultra low latency, we sought a partnership that could extend our capabilities and our footprint.
+Dialogue: 0,1:04:09.05,1:04:10.97,Sub,,0,0,0,,And there was no better answer than AMD.
+Dialogue: 0,1:04:11.51,1:04:17.93,Sub,,0,0,0,,We were already an AMD customer as we use AMD CPUs to surround our systems.
+Dialogue: 0,1:04:18.11,1:04:32.65,Sub,,0,0,0,,And we were so excited at the opportunity to build a disaggregated solution that combined AMD CPUs, the cool new Helios rack and the cerebrus wafer scale engine.
+Dialogue: 0,1:04:33.19,1:04:36.27,Sub,,0,0,0,,Yeah, look, the technology is pretty cool.
+Dialogue: 0,1:04:36.27,1:04:38.67,Sub,,0,0,0,,So just talk a little bit about how it comes together.
+Dialogue: 0,1:04:38.67,1:04:49.63,Sub,,0,0,0,,Sure. So as Lisa described, what you have with Instinct and the Helios rack is that you have the leader in performance and memory capacity.
+Dialogue: 0,1:04:50.13,1:04:57.71,Sub,,0,0,0,,And you marry that with our wafer scale engine, which is the leader in sort of in SRAM and in memory bandwidth.
+Dialogue: 0,1:04:58.49,1:05:04.01,Sub,,0,0,0,,And that combination allows us to deliver a solution that is unmatched in the industry.
+Dialogue: 0,1:05:04.95,1:05:05.93,Sub,,0,0,0,,Very, very exciting.
+Dialogue: 0,1:05:06.05,1:05:08.95,Sub,,0,0,0,,I know that customers are excited about what we're going to do together as well.
+Dialogue: 0,1:05:09.33,1:05:11.39,Sub,,0,0,0,,So when are we going to have it in market?
+Dialogue: 0,1:05:12.95,1:05:13.99,Sub,,0,0,0,,Later this year.
+Dialogue: 0,1:05:14.29,1:05:23.67,Sub,,0,0,0,,It will be first in the cerebrus cloud and it will be later at a store near you.
+Dialogue: 0,1:05:25.23,1:05:32.75,Sub,,0,0,0,,I think the key thing is we're going to give customers a choice to really put together what is the solution that they want.
+Dialogue: 0,1:05:32.85,1:05:35.69,Sub,,0,0,0,,And I think we're very, very happy to be able to do this together with you.
+Dialogue: 0,1:05:35.69,1:05:40.63,Sub,,0,0,0,,So I think it's a huge step up in terms of what we can do for this ultra low latency segment.
+Dialogue: 0,1:05:40.83,1:05:41.51,Sub,,0,0,0,,I think that's right.
+Dialogue: 0,1:05:41.65,1:05:50.63,Sub,,0,0,0,,I think until recently, customers sort of, they could have sort of high throughput or they could have extraordinary speed.
+Dialogue: 0,1:05:50.65,1:05:56.47,Sub,,0,0,0,,And by bringing together the Helios rack with the cerebrus wafer scale engine,
+Dialogue: 0,1:05:56.73,1:06:03.79,Sub,,0,0,0,,we give you five times the throughput while continuing to deliver this extraordinary speed.
+Dialogue: 0,1:06:03.79,1:06:07.01,Sub,,0,0,0,,It's really something amazing.
+Dialogue: 0,1:06:07.81,1:06:08.11,Sub,,0,0,0,,Fantastic.
+Dialogue: 0,1:06:08.01,1:06:12.63,Sub,,0,0,0,,Well, look, Andrew, huge congratulations to what you and the Cerebras team have done.
+Dialogue: 0,1:06:12.63,1:06:13.67,Sub,,0,0,0,,I mean, I think it's been incredible.
+Dialogue: 0,1:06:13.85,1:06:17.15,Sub,,0,0,0,,I think you've been clear on what you're trying to accomplish.
+Dialogue: 0,1:06:17.43,1:06:25.31,Sub,,0,0,0,,And it's really nice to see not only it come together, but us come together to offer a solution that will be very, very compelling to customers.
+Dialogue: 0,1:06:25.33,1:06:27.31,Sub,,0,0,0,,So we can't wait to get this into customers' hands.
+Dialogue: 0,1:06:27.79,1:06:29.19,Sub,,0,0,0,,Soon. Thank you.
+Dialogue: 0,1:06:29.19,1:06:29.63,Sub,,0,0,0,,Good to see you.
+Dialogue: 0,1:06:29.63,1:06:30.25,Sub,,0,0,0,,Thank you so much.
+Dialogue: 0,1:06:30.47,1:06:30.99,Sub,,0,0,0,,Thank you, Andrew.
+Dialogue: 0,1:06:36.24,1:06:36.96,Sub,,0,0,0,,Alright.
+Dialogue: 0,1:06:37.18,1:06:40.12,Sub,,0,0,0,,So look, I think we've shown you a lot of hardware this morning.
+Dialogue: 0,1:06:41.30,1:06:43.64,Sub,,0,0,0,,But as we all know, hardware is only part of the story.
+Dialogue: 0,1:06:44.26,1:06:49.38,Sub,,0,0,0,,It's actually software that turns all of this into a platform that developers can really build on.
+Dialogue: 0,1:06:49.82,1:06:56.72,Sub,,0,0,0,,So to share the progress we're making with ROCm, please welcome AMD Senior Vice President of AI, Vamsi Boppana, to the stage.
+Dialogue: 0,1:07:03.87,1:07:04.71,Sub,,0,0,0,,Thank you, Lisa.
+Dialogue: 0,1:07:04.81,1:07:05.81,Sub,,0,0,0,,Good morning, everyone.
+Dialogue: 0,1:07:06.35,1:07:06.87,Sub,,0,0,0,,Good morning.
+Dialogue: 0,1:07:07.41,1:07:09.75,Sub,,0,0,0,,It's great to be back to talk about software.
+Dialogue: 0,1:07:09.75,1:07:16.69,Sub,,0,0,0,,Just a few years ago, programming AMD GPUs required deep expertise and significant engineering effort.
+Dialogue: 0,1:07:17.15,1:07:21.10,Sub,,0,0,0,,We've come a long, long way in a remarkably short period of time.
+Dialogue: 0,1:07:21.37,1:07:31.29,Sub,,0,0,0,,Through our open source community collaboration and sustained investment in ROCm, our software stack, AMD Instinct GPUs are powering some of the most
+Dialogue: 0,1:07:31.29,1:07:34.87,Sub,,0,0,0,,important and consequential workloads on the planet.
+Dialogue: 0,1:07:35.33,1:07:38.53,Sub,,0,0,0,,But the biggest change is still ahead of us.
+Dialogue: 0,1:07:38.53,1:07:46.03,Sub,,0,0,0,,AI is transforming how software is getting built, and we are bringing that transformation to ROCm.
+Dialogue: 0,1:07:46.59,1:07:48.65,Sub,,0,0,0,,And that's what I'm excited to share with you guys today.
+Dialogue: 0,1:07:49.69,1:07:53.37,Sub,,0,0,0,,Our software teams have been moving fast with relentless focus on developers.
+Dialogue: 0,1:07:54.33,1:08:00.25,Sub,,0,0,0,,We've invested at every level of the stack in build and test infrastructure so we ship faster.
+Dialogue: 0,1:08:01.27,1:08:06.01,Sub,,0,0,0,,ROCm releases now go out every six weeks, not every four months.
+Dialogue: 0,1:08:06.01,1:08:10.61,Sub,,0,0,0,,We've continued to expand the work we do with our AI ecosystem partners.
+Dialogue: 0,1:08:11.17,1:08:11.73,Sub,,0,0,0,,And the result?
+Dialogue: 0,1:08:12.65,1:08:18.15,Sub,,0,0,0,,More features, faster performance, and a significantly better out-of-the-box experience.
+Dialogue: 0,1:08:19.29,1:08:23.81,Sub,,0,0,0,,Our strategy that has gotten us here has been remarkably consistent.
+Dialogue: 0,1:08:24.35,1:08:25.99,Sub,,0,0,0,,It's built on two core principles.
+Dialogue: 0,1:08:27.37,1:08:35.05,Sub,,0,0,0,,Partner deeply with the open source ecosystem and build with the right layers of abstraction to enable developer productivity.
+Dialogue: 0,1:08:35.05,1:08:42.07,Sub,,0,0,0,,Open source gives us velocity and scale, and abstraction makes developers more productive.
+Dialogue: 0,1:08:44.21,1:08:50.43,Sub,,0,0,0,,Our deep, deep commitment to open source has resonated with the community that has truly embraced AMD.
+Dialogue: 0,1:08:51.21,1:08:55.07,Sub,,0,0,0,,From frameworks and compiler stacks to inference engines and model hubs,
+Dialogue: 0,1:08:55.07,1:09:06.95,Sub,,0,0,0,,AMD is now becoming part of default enablement for the most important AI communities, such as Hugging Face, PyTorch, JAX, vLLM, and SGLang.
+Dialogue: 0,1:09:07.51,1:09:14.59,Sub,,0,0,0,,This is why new models get Day Zero support and why the world's most important AI workloads run on AMD today.
+Dialogue: 0,1:09:14.95,1:09:16.99,Sub,,0,0,0,,That is a big shift.
+Dialogue: 0,1:09:17.93,1:09:24.61,Sub,,0,0,0,,Inspired by engineers seeking productivity, abstractions have evolved to enable work at the right level of detail.
+Dialogue: 0,1:09:24.61,1:09:31.01,Sub,,0,0,0,,Hiding complexity when they want speed, and exposing control when they need performance.
+Dialogue: 0,1:09:31.83,1:09:40.61,Sub,,0,0,0,,From low-level programming in assembly and C to block programming abstractions like Triton to Pythonic frameworks, we've invested in key abstractions.
+Dialogue: 0,1:09:41.79,1:09:49.79,Sub,,0,0,0,,Aiter, our kernel library, and Atom, our serving engine, get you peak performance without writing the kernels yourself.
+Dialogue: 0,1:09:51.23,1:09:59.31,Sub,,0,0,0,,FlyDSL is a brand new Pythonic domain-specific language that gives you low-level control with the performance of hand-tuned C++.
+Dialogue: 0,1:10:00.37,1:10:07.97,Sub,,0,0,0,,And Mori, our communications library, helps deliver leadership performance on the latest models, like Minimax.
+Dialogue: 0,1:10:09.79,1:10:12.77,Sub,,0,0,0,,But look, something very, very exciting is happening.
+Dialogue: 0,1:10:13.43,1:10:16.59,Sub,,0,0,0,,Over the past year, I've seen something remarkable inside AMD.
+Dialogue: 0,1:10:16.59,1:10:24.77,Sub,,0,0,0,,Our engineers are using AI models to generate GPU kernels, optimize code, debug issues, and improve performance.
+Dialogue: 0,1:10:25.05,1:10:29.05,Sub,,0,0,0,,And in some cases, these AI-generated kernels are shockingly good.
+Dialogue: 0,1:10:29.93,1:10:31.43,Sub,,0,0,0,,Better than what we expected.
+Dialogue: 0,1:10:31.91,1:10:35.51,Sub,,0,0,0,,Sometimes better than the most manually-tuned versions.
+Dialogue: 0,1:10:36.13,1:10:38.57,Sub,,0,0,0,,The first time you see this, you're a little bit skeptical.
+Dialogue: 0,1:10:39.43,1:10:46.33,Sub,,0,0,0,,You run more tests, you try to break it, you look for what went wrong, and then you realize this is real.
+Dialogue: 0,1:10:46.33,1:10:53.93,Sub,,0,0,0,,What has happened in general software development is coming to significantly transform GPU programming.
+Dialogue: 0,1:10:54.11,1:11:03.73,Sub,,0,0,0,,It's going to reduce the time it takes to bring up workloads, make optimization automated, and it will remove any remaining barriers to broad adoption.
+Dialogue: 0,1:11:04.63,1:11:09.85,Sub,,0,0,0,,We want to put that capability in the hands of every developer.
+Dialogue: 0,1:11:09.85,1:11:15.11,Sub,,0,0,0,,So today, I am excited to introduce ROCm.ai.
+Dialogue: 0,1:11:22.21,1:11:28.51,Sub,,0,0,0,,It's an agentic AI platform that brings the capabilities of AI-assisted GPU programming to developers.
+Dialogue: 0,1:11:29.15,1:11:37.69,Sub,,0,0,0,,It starts with the simple idea of giving developers access to the power of an AMD ecosystem through the AI coding agents they already use.
+Dialogue: 0,1:11:37.69,1:11:50.45,Sub,,0,0,0,,Whether you're using Cursor, Claude, Codex, rocm.ai helps those agents understand AMD platforms, understand ROCm, and helps you build and optimize your workloads.
+Dialogue: 0,1:11:50.85,1:11:56.85,Sub,,0,0,0,,In other words, we are making those popular coding agents into ROCm super users.
+Dialogue: 0,1:11:57.17,1:12:03.73,Sub,,0,0,0,,You should be able to describe the workload you want to run, the performance target you want to hit, and then let the agents help you get there.
+Dialogue: 0,1:12:04.91,1:12:08.49,Sub,,0,0,0,,For years, we have been building the open software foundation.
+Dialogue: 0,1:12:09.03,1:12:16.37,Sub,,0,0,0,,Now, we are adding an AI-assisted layer that helps developers use that foundation faster and more effectively.
+Dialogue: 0,1:12:16.79,1:12:19.05,Sub,,0,0,0,,So let me show you what is inside ROCm.ai.
+Dialogue: 0,1:12:20.33,1:12:30.73,Sub,,0,0,0,,It's built on the foundational capabilities of ROCm, our core software stack, runtime, libraries, compilers, tools, framework integration, all of the
+Dialogue: 0,1:12:30.73,1:12:32.45,Sub,,0,0,0,,core software that makes the stack work.
+Dialogue: 0,1:12:32.45,1:12:39.05,Sub,,0,0,0,,On top of that, we built a layer of AI-assisted optimization called Hyperloom.
+Dialogue: 0,1:12:40.13,1:12:44.83,Sub,,0,0,0,,Using Hyperloom, the system can analyze the workload, tune configurations,
+Dialogue: 0,1:12:45.33,1:12:50.55,Sub,,0,0,0,,select and tune kernels, adjust parallelism strategies, and iterate towards performance goals.
+Dialogue: 0,1:12:51.61,1:12:57.25,Sub,,0,0,0,,To give you an example of the power of Hyperloom, I was talking to the lead developer last week.
+Dialogue: 0,1:12:57.25,1:13:06.39,Sub,,0,0,0,,He told me they just pushed through a suite of 14,000 models through Hyperloom, optimizing them and creating valuable insights.
+Dialogue: 0,1:13:06.59,1:13:12.15,Sub,,0,0,0,,This would have been impossible to imagine, even with a large team of engineers before.
+Dialogue: 0,1:13:12.57,1:13:13.91,Sub,,0,0,0,,That's the power of Hyperloom.
+Dialogue: 0,1:13:14.89,1:13:23.01,Sub,,0,0,0,,And finally, we provide an AI-native interface for our developers, AI skills that allow coding agents to understand ROCm natively.
+Dialogue: 0,1:13:23.01,1:13:27.05,Sub,,0,0,0,,I'm incredibly excited by what we have built with rocm.ai.
+Dialogue: 0,1:13:27.49,1:13:31.81,Sub,,0,0,0,,It's going to profoundly transform the way developers interact with our platforms.
+Dialogue: 0,1:13:32.63,1:13:34.87,Sub,,0,0,0,,So let me make this concrete for you with an example.
+Dialogue: 0,1:13:35.89,1:13:41.75,Sub,,0,0,0,,Imagine you are a developer who wants to optimize Minimax M3 with vLLM on MI355s.
+Dialogue: 0,1:13:42.41,1:13:45.25,Sub,,0,0,0,,Today, there are many things you need to get right.
+Dialogue: 0,1:13:45.57,1:13:50.87,Sub,,0,0,0,,You need the right vLLM optimizations, the right model recipes, the right environment variables.
+Dialogue: 0,1:13:50.87,1:13:56.21,Sub,,0,0,0,,You may need to write new kernels or optimize kernels, and then you still need to tune all of this.
+Dialogue: 0,1:13:57.25,1:14:01.53,Sub,,0,0,0,,With rocm.ai, this interaction becomes much simpler.
+Dialogue: 0,1:14:02.61,1:14:03.39,Sub,,0,0,0,,So let's see it.
+Dialogue: 0,1:14:03.47,1:14:07.91,Sub,,0,0,0,,You can say, optimize Minimax M3 with Hyperloom.
+Dialogue: 0,1:14:08.39,1:14:14.89,Sub,,0,0,0,,Enter. And behind the scenes, the agent does what an expert would do.
+Dialogue: 0,1:14:15.77,1:14:18.83,Sub,,0,0,0,,Pulls a known good recipe, runs and profiles the workload.
+Dialogue: 0,1:14:18.83,1:14:24.27,Sub,,0,0,0,,It creates and tests a bunch of kernel and runtime configurations, and it keeps iterating towards target.
+Dialogue: 0,1:14:25.97,1:14:30.49,Sub,,0,0,0,,You can actually watch on screen here rocm.ai write a GPU kernel.
+Dialogue: 0,1:14:31.13,1:14:34.53,Sub,,0,0,0,,It sees an opportunity to write a more optimized MOE group gem.
+Dialogue: 0,1:14:35.89,1:14:36.75,Sub,,0,0,0,,And the result?
+Dialogue: 0,1:14:37.39,1:14:44.67,Sub,,0,0,0,,rocm.ai delivers a 38% more tokens per second improvement on this specific example.
+Dialogue: 0,1:14:45.11,1:14:47.63,Sub,,0,0,0,,This is the experience we want for developers.
+Dialogue: 0,1:14:47.63,1:14:49.37,Sub,,0,0,0,,Simple to start.
+Dialogue: 0,1:14:52.24,1:14:53.54,Sub,,0,0,0,,That's pretty cool, huh?
+Dialogue: 0,1:14:57.64,1:15:00.10,Sub,,0,0,0,,Simple, simple to start and powerful to optimize.
+Dialogue: 0,1:15:00.74,1:15:03.56,Sub,,0,0,0,,We've continued our relentless focus and performance.
+Dialogue: 0,1:15:03.92,1:15:07.34,Sub,,0,0,0,,With every release, we've delivered significant performance gains.
+Dialogue: 0,1:15:07.92,1:15:14.12,Sub,,0,0,0,,On leading models like DeepSeek, rocm.ai delivers 3.3 times speed up over ROCm 7.
+Dialogue: 0,1:15:14.94,1:15:18.26,Sub,,0,0,0,,This has been made possible by innovations at every level of the stack.
+Dialogue: 0,1:15:18.26,1:15:26.44,Sub,,0,0,0,,Techniques such as the use of block-scaled fused MOE kernels, KV cache quantization, export parallelism.
+Dialogue: 0,1:15:26.92,1:15:31.32,Sub,,0,0,0,,But look, the bigger story is how AI agents actually profiled the workload,
+Dialogue: 0,1:15:31.48,1:15:35.98,Sub,,0,0,0,,proposed new kernels, tested configurations, and actually validated all of the results.
+Dialogue: 0,1:15:37.36,1:15:41.94,Sub,,0,0,0,,That exact same focus is also on delivering performance gains for training.
+Dialogue: 0,1:15:42.70,1:15:48.24,Sub,,0,0,0,,On the same hardware, rocm.ai improves training performance by an average of 2.4 times.
+Dialogue: 0,1:15:48.24,1:15:55.76,Sub,,0,0,0,,Through optimized kernels such as fused flash attention, more efficient checkpointing, and advanced parallelism strategies.
+Dialogue: 0,1:15:57.32,1:16:03.20,Sub,,0,0,0,,Our engineers have done amazing work to unlock the capabilities of MI455 through rocm.ai.
+Dialogue: 0,1:16:04.06,1:16:07.06,Sub,,0,0,0,,So I'm delighted to share some incredible results on hardware.
+Dialogue: 0,1:16:08.04,1:16:17.66,Sub,,0,0,0,,On running real workloads, we are able to see the system deliver 20 terabytes of memory bandwidth and 20 petaflops of delivered compute.
+Dialogue: 0,1:16:17.66,1:16:26.40,Sub,,0,0,0,,These are the highest demonstrated compute plus memory capabilities of any accelerator platform in the industry today.
+Dialogue: 0,1:16:27.10,1:16:28.70,Sub,,0,0,0,,It's not theoretical, there's measured.
+Dialogue: 0,1:16:35.38,1:16:37.88,Sub,,0,0,0,,Super exciting that we were able to share this on day one.
+Dialogue: 0,1:16:38.64,1:16:46.42,Sub,,0,0,0,,I'm also thrilled to share that the leading AI ecosystem partners who have had their hands on MI455 have had a delightful experience.
+Dialogue: 0,1:16:46.42,1:16:49.10,Sub,,0,0,0,,You can see here what they've had to say.
+Dialogue: 0,1:16:49.74,1:16:57.80,Sub,,0,0,0,,From end-to-end PyTorch testing, to ensuring Hugging Face models are getting validated, to vLLM and SGLang running well on MI455.
+Dialogue: 0,1:16:58.68,1:17:04.52,Sub,,0,0,0,,We are incredibly encouraged and excited by what the community is about to unlock with MI455.
+Dialogue: 0,1:17:05.28,1:17:12.78,Sub,,0,0,0,,This matters because day zero readiness is one of the most important objectives we strive for, and that's what rocm.ai enables.
+Dialogue: 0,1:17:13.68,1:17:17.70,Sub,,0,0,0,,So now let's look at rocm.ai in action on Helios.
+Dialogue: 0,1:17:18.16,1:17:20.84,Sub,,0,0,0,,This time we are going to use a Codex front end.
+Dialogue: 0,1:17:21.30,1:17:27.84,Sub,,0,0,0,,Let's deploy DeepSeek V4 Pro, a 1.6 trillion parameter frontier model on Helios.
+Dialogue: 0,1:17:28.46,1:17:29.68,Sub,,0,0,0,,Now watch what happens.
+Dialogue: 0,1:17:31.40,1:17:42.38,Sub,,0,0,0,,rocm.ai pulls the right recipes, it configures the runtime, it implements the model graph onto hardware, and finally serves up the model.
+Dialogue: 0,1:17:43.19,1:17:44.58,Sub,,0,0,0,,There you go.
+Dialogue: 0,1:17:44.90,1:17:46.30,Sub,,0,0,0,,The model is actually up and running.
+Dialogue: 0,1:17:47.32,1:17:51.58,Sub,,0,0,0,,And let's see the model write a simple poem now about advancing AI.
+Dialogue: 0,1:17:52.78,1:17:53.46,Sub,,0,0,0,,Let's hit enter.
+Dialogue: 0,1:17:55.40,1:17:56.86,Sub,,0,0,0,,Isn't that a pretty cool poem?
+Dialogue: 0,1:18:02.07,1:18:04.51,Sub,,0,0,0,,This is the experience we want to give our users.
+Dialogue: 0,1:18:04.93,1:18:13.55,Sub,,0,0,0,,The developers should not have to manually reason through every layer of model architecture, kernel selection, COM strategy, and rack level deployment.
+Dialogue: 0,1:18:13.55,1:18:20.85,Sub,,0,0,0,,AI is transforming this experience, and that is a very, very big shift for GPU hardware and software.
+Dialogue: 0,1:18:22.33,1:18:27.01,Sub,,0,0,0,,Now, there are few organizations shaping the frontier of AI as much as OpenAI.
+Dialogue: 0,1:18:27.45,1:18:30.39,Sub,,0,0,0,,You heard Lisa and Sachin talk about our partnership.
+Dialogue: 0,1:18:30.79,1:18:37.71,Sub,,0,0,0,,It's been truly wonderful collaborating closely with the OpenAI technical team to make rapid progress with ROCm.
+Dialogue: 0,1:18:37.71,1:18:47.81,Sub,,0,0,0,,To talk about how they are advancing the frontier of software development and our collaboration, I'm delighted to welcome to stage Philippe Tillet from OpenAI.
+Dialogue: 0,1:18:56.04,1:18:57.82,Sub,,0,0,0,,Thank you for joining us here, Philippe.
+Dialogue: 0,1:18:58.76,1:19:06.02,Sub,,0,0,0,,So just so you all know, Philippe is the creator of Triton, one of the most important software innovations in modern AI infrastructure.
+Dialogue: 0,1:19:06.28,1:19:07.76,Sub,,0,0,0,,It's a huge privilege having you here.
+Dialogue: 0,1:19:08.16,1:19:08.66,Sub,,0,0,0,,Thank you.
+Dialogue: 0,1:19:12.64,1:19:15.50,Sub,,0,0,0,,OpenAI has always pushed the limits of infrastructure.
+Dialogue: 0,1:19:16.68,1:19:24.62,Sub,,0,0,0,,So can you tell the team a little bit here today as to how your team actually develops GPU software and how have technologies like Triton evolved?
+Dialogue: 0,1:19:25.08,1:19:25.52,Sub,,0,0,0,,For sure.
+Dialogue: 0,1:19:25.52,1:19:27.38,Sub,,0,0,0,,Well, first of all, thanks so much for having me.
+Dialogue: 0,1:19:27.92,1:19:29.00,Sub,,0,0,0,,I was here two years ago.
+Dialogue: 0,1:19:29.08,1:19:30.84,Sub,,0,0,0,,It's my great pleasure to be back now.
+Dialogue: 0,1:19:32.36,1:19:40.02,Sub,,0,0,0,,A way of looking at things is there's no one way to fit all applications, and we really try to meet users where they are.
+Dialogue: 0,1:19:40.02,1:19:43.20,Sub,,0,0,0,,So for that reason, we've developed multiple solutions.
+Dialogue: 0,1:19:43.92,1:19:50.00,Sub,,0,0,0,,So for workflows where speed of iterations is more important, we've developed Triton, as you mentioned.
+Dialogue: 0,1:19:50.24,1:19:52.68,Sub,,0,0,0,,So this is typically what researchers will use.
+Dialogue: 0,1:19:53.34,1:20:00.52,Sub,,0,0,0,,But more and more, we've been in a case where we've had to hyper-optimize performance, and Triton didn't give us the level of control that we wanted.
+Dialogue: 0,1:20:00.98,1:20:04.38,Sub,,0,0,0,,So we've developed Glion for that, which is a lower-level language.
+Dialogue: 0,1:20:05.56,1:20:10.78,Sub,,0,0,0,,And this way, we've been really able to optimize our kernels for AMD, among other things.
+Dialogue: 0,1:20:13.50,1:20:19.44,Sub,,0,0,0,,Our agents have become extremely good at both of them, and we've worked with AMD on both of them as well.
+Dialogue: 0,1:20:21.80,1:20:26.06,Sub,,0,0,0,,More and more, what we're seeing is agents slowly taking over.
+Dialogue: 0,1:20:27.88,1:20:31.28,Sub,,0,0,0,,They're getting just very good, as you just mentioned, at writing this kind of code.
+Dialogue: 0,1:20:31.28,1:20:32.10,Sub,,0,0,0,,Amazing.
+Dialogue: 0,1:20:32.74,1:20:39.46,Sub,,0,0,0,,So look, I think the work you have done with Triton and now Glion, it's been really, really moving the ball forward for the entire industry.
+Dialogue: 0,1:20:40.02,1:20:47.78,Sub,,0,0,0,,Now, we began our work together with 300 and extended at 350, but now we're collaborating at a different scale with 450 and Helios.
+Dialogue: 0,1:20:48.24,1:20:53.48,Sub,,0,0,0,,So I would love to hear your thoughts on how that collaboration has been going, and how has that experience been?
+Dialogue: 0,1:20:53.98,1:20:54.66,Sub,,0,0,0,,Yeah, super well.
+Dialogue: 0,1:20:54.94,1:20:56.52,Sub,,0,0,0,,It feels like ages.
+Dialogue: 0,1:20:56.80,1:21:00.36,Sub,,0,0,0,,I think we started years ago on hardware co-design.
+Dialogue: 0,1:21:00.36,1:21:10.74,Sub,,0,0,0,,You know, when MI450 was in the very early prototyping stages, I think we were able to work really well together, and it's so nice to see the outcome of that and the
+Dialogue: 0,1:21:10.74,1:21:21.46,Sub,,0,0,0,,chip. And more recently, we've been working very, very deeply on software enablement for MI450, both for our models, but also for the broader ecosystem.
+Dialogue: 0,1:21:21.74,1:21:24.10,Sub,,0,0,0,,So a lot of this development has been done open source.
+Dialogue: 0,1:21:25.42,1:21:38.26,Sub,,0,0,0,,And yeah, we're collaborating on the full stack now, down to the very low-level LLVM code generation, so that all the nice hardware advances that came with MI450 can
+Dialogue: 0,1:21:38.26,1:21:40.88,Sub,,0,0,0,,be properly leveraged in end-to-end applications.
+Dialogue: 0,1:21:42.02,1:21:46.54,Sub,,0,0,0,,Yeah, and you got your Helios racks, so tell us a little bit about that.
+Dialogue: 0,1:21:46.72,1:21:47.66,Sub,,0,0,0,,Yeah, it worked.
+Dialogue: 0,1:21:48.48,1:21:49.98,Sub,,0,0,0,,We got the chip,
+Dialogue: 0,1:21:56.65,1:22:03.05,Sub,,0,0,0,,and very quickly, a single engineer in a few days was able to confirm that everything worked.
+Dialogue: 0,1:22:03.25,1:22:05.35,Sub,,0,0,0,,Obviously, we have to optimize performance more.
+Dialogue: 0,1:22:06.29,1:22:09.37,Sub,,0,0,0,,But we're very confident we can get in a very, very good place.
+Dialogue: 0,1:22:09.93,1:22:10.37,Sub,,0,0,0,,Awesome.
+Dialogue: 0,1:22:10.37,1:22:11.25,Sub,,0,0,0,,That's awesome to hear.
+Dialogue: 0,1:22:11.79,1:22:21.91,Sub,,0,0,0,,So look, one of the more amazing things that we've done recently is our teams have collaborated even more closely in terms of using AI to program AMD GPUs.
+Dialogue: 0,1:22:22.57,1:22:25.85,Sub,,0,0,0,,So we'd love to hear your thoughts and anything you can share with the audience.
+Dialogue: 0,1:22:25.85,1:22:35.89,Sub,,0,0,0,,Yeah, no, I mean, everyone in this room knows how much agents are taking over our jobs, in a sense, as kernel engineers.
+Dialogue: 0,1:22:38.57,1:22:45.21,Sub,,0,0,0,,And it's been amazing just to see how much better they've got over just the past six months.
+Dialogue: 0,1:22:45.45,1:22:50.93,Sub,,0,0,0,,And just now, they're extremely good at generating high-quality GPU kernels in a way that were not before.
+Dialogue: 0,1:22:51.63,1:23:04.53,Sub,,0,0,0,,And it's been very great collaborating with AMD on just making sure that agents not only are capable enough, but also have all the right context they need to be able
+Dialogue: 0,1:23:04.53,1:23:06.75,Sub,,0,0,0,,to make good decisions and good optimizations.
+Dialogue: 0,1:23:07.41,1:23:08.01,Sub,,0,0,0,,It's great to hear.
+Dialogue: 0,1:23:08.33,1:23:17.03,Sub,,0,0,0,,I think the quality of code that's getting produced by AI-assisted kernel generation has been truly remarkable through our collaboration.
+Dialogue: 0,1:23:17.47,1:23:18.01,Sub,,0,0,0,,Very excited.
+Dialogue: 0,1:23:18.01,1:23:27.45,Sub,,0,0,0,,Now, as you look ahead, what crystal ball do you have for us for the future of AI software ecosystem and collaborations like ours?
+Dialogue: 0,1:23:28.17,1:23:31.05,Sub,,0,0,0,,Yeah, so there's two things that really come to mind.
+Dialogue: 0,1:23:31.37,1:23:36.25,Sub,,0,0,0,,One, as we keep talking, is just how good agents are getting.
+Dialogue: 0,1:23:36.83,1:23:46.25,Sub,,0,0,0,,And the other one is, I think, how much the open approach to software of AMD is enabling, not only for OpenAI, but I think for the industry as a whole.
+Dialogue: 0,1:23:46.25,1:23:50.75,Sub,,0,0,0,,I talked a little bit earlier how we've been collaborating on LLVM co-generation.
+Dialogue: 0,1:23:51.23,1:23:53.07,Sub,,0,0,0,,LLVM is an open source project.
+Dialogue: 0,1:23:53.51,1:23:56.47,Sub,,0,0,0,,The entire compiler stack from AMD is open source.
+Dialogue: 0,1:23:56.97,1:24:05.29,Sub,,0,0,0,,And that has allowed us to make our agents really good at very, very low-level co-generation, down to scheduling instructions in assembly.
+Dialogue: 0,1:24:05.55,1:24:15.15,Sub,,0,0,0,,And this has led to very, very significant performance gain that I don't think we'd have been able to achieve in a fully closed source stack.
+Dialogue: 0,1:24:15.15,1:24:20.87,Sub,,0,0,0,,Yeah, that's one of the real sort of big value propositions that we have to offer,
+Dialogue: 0,1:24:21.09,1:24:27.03,Sub,,0,0,0,,Because everything that we do is in the open, and the fact that AI can actually right? pick that up is a big one.
+Dialogue: 0,1:24:27.03,1:24:27.61,Sub,,0,0,0,,Thank you, Philippe.
+Dialogue: 0,1:24:27.89,1:24:31.97,Sub,,0,0,0,,We truly appreciate the partnership, and we're really excited about what we're going to build together.
+Dialogue: 0,1:24:32.27,1:24:32.79,Sub,,0,0,0,,Yeah, my pleasure.
+Dialogue: 0,1:24:32.97,1:24:33.89,Sub,,0,0,0,,Thank you so much for having me.
+Dialogue: 0,1:24:39.39,1:24:41.95,Sub,,0,0,0,,What you just heard is extremely important.
+Dialogue: 0,1:24:42.39,1:24:51.39,Sub,,0,0,0,,When we combine better abstractions with AI-assisted development and closed hardware software co-design, we can create some incredibly powerful capabilities,
+Dialogue: 0,1:24:51.81,1:24:54.41,Sub,,0,0,0,,and that's exactly aligned with our strategy.
+Dialogue: 0,1:24:55.39,1:25:04.49,Sub,,0,0,0,,Now, everything I have shown you so far has been about AI, but ROCm is also a great stack for developing high-performance and scientific computing applications.
+Dialogue: 0,1:25:04.87,1:25:08.61,Sub,,0,0,0,,From frontier models to climate simulation, we use the same ROCm,
+Dialogue: 0,1:25:09.21,1:25:15.43,Sub,,0,0,0,,the same library, same tools, same AI-assisted development, one open stack for every single workload.
+Dialogue: 0,1:25:15.43,1:25:22.01,Sub,,0,0,0,,And in fact, when you look at our roadmap, we have retained that very strong focus on HPC and scientific computing.
+Dialogue: 0,1:25:22.85,1:25:35.89,Sub,,0,0,0,,Just like MI455 leads in AI compute with FP4 and memory performance, MI430X leads HPC compute with FP64 and memory performance, two platforms purpose-built
+Dialogue: 0,1:25:35.89,1:25:37.87,Sub,,0,0,0,,for two very different classes of workload.
+Dialogue: 0,1:25:39.17,1:25:50.81,Sub,,0,0,0,,The MI430X is built by leveraging our modular chiplet architecture to deliver a purpose-built variant with native FP64 hardware, giving customers leadership
+Dialogue: 0,1:25:50.81,1:25:55.23,Sub,,0,0,0,,performance across AI and HPC in a single platform.
+Dialogue: 0,1:25:55.79,1:25:58.93,Sub,,0,0,0,,And this is hardware double precision, not emulation.
+Dialogue: 0,1:25:59.89,1:26:02.49,Sub,,0,0,0,,For the scientific community, that distinction is everything.
+Dialogue: 0,1:26:03.71,1:26:10.63,Sub,,0,0,0,,This product delivers 288 teraflops of FP64 compute, nearly nine times better than competition.
+Dialogue: 0,1:26:10.63,1:26:15.87,Sub,,0,0,0,,And the same leadership, memory capacity, and bandwidth of MI455.
+Dialogue: 0,1:26:16.91,1:26:21.59,Sub,,0,0,0,,The MI430X ships in the first half of 2027.
+Dialogue: 0,1:26:23.03,1:26:27.83,Sub,,0,0,0,,This is why leaders in sovereign AI love this product.
+Dialogue: 0,1:26:28.11,1:26:34.65,Sub,,0,0,0,,The first sovereign exascale AI factories in both US and Europe are being built on the MI430X.
+Dialogue: 0,1:26:35.03,1:26:40.63,Sub,,0,0,0,,Discovery at Oak Ridge National Labs and Alice Recoque with Cines and Genci in Europe.
+Dialogue: 0,1:26:42.07,1:26:45.81,Sub,,0,0,0,,So look, as we look ahead, let me leave you with this thought.
+Dialogue: 0,1:26:46.23,1:26:50.15,Sub,,0,0,0,,Every so often, our industry goes through inflection points.
+Dialogue: 0,1:26:50.61,1:26:58.17,Sub,,0,0,0,,We've all felt it when neural networks first started recognizing cats and dogs, when transformers changed what was possible with AI.
+Dialogue: 0,1:26:58.53,1:27:07.61,Sub,,0,0,0,,I believe we are experiencing another one right now, a real inflection in the ability of AI to program complex hardware systems.
+Dialogue: 0,1:27:08.07,1:27:19.99,Sub,,0,0,0,,Building on the surface area that's been exposed from open source software and leveraging the power of abstracted interfaces, AI is making it dramatically easier to program AI systems.
+Dialogue: 0,1:27:20.57,1:27:23.91,Sub,,0,0,0,,We cannot wait what you will build with it.
+Dialogue: 0,1:27:24.13,1:27:24.91,Sub,,0,0,0,,Thank you.
+Dialogue: 0,1:27:33.62,1:27:37.84,Sub,,0,0,0,,Now, AI is getting pervasively infused into all forms of computing.
+Dialogue: 0,1:27:37.84,1:27:41.92,Sub,,0,0,0,,Enterprises are experiencing the same shift with their own unique requirements.
+Dialogue: 0,1:27:42.52,1:27:53.00,Sub,,0,0,0,,So to tell us more about that transformation, please welcome to stage Senior Vice President and General Manager of Compute and Enterprise AI, Dan McNamara.
+Dialogue: 0,1:28:00.53,1:28:03.25,Sub,,0,0,0,,Thank you, Vamsi, and good morning, everyone.
+Dialogue: 0,1:28:04.05,1:28:11.33,Sub,,0,0,0,,It is a great pleasure for me to bring to you the third pillar of our strategy, which is powering AI everywhere.
+Dialogue: 0,1:28:11.33,1:28:16.71,Sub,,0,0,0,,And the vision behind this has remained the same for several years for us,
+Dialogue: 0,1:28:17.29,1:28:32.17,Sub,,0,0,0,,to deliver the right compute engine to the right workload, and then continuously drive optimization points across our entire portfolio, from CPUs, GPUs, networking, and FPGAs.
+Dialogue: 0,1:28:33.13,1:28:43.31,Sub,,0,0,0,,So building on what we've already shared, I'll cover how our strategy comes together across our enterprise portfolio and how the foundation we built with the CPU
+Dialogue: 0,1:28:43.31,1:28:50.33,Sub,,0,0,0,,franchise has truly positioned us for the next era of AI across multiple deployment models.
+Dialogue: 0,1:28:51.51,1:29:00.87,Sub,,0,0,0,,So Lisa talked about the frontier model and hyperscale landscape and just the rapid and massive advances we've seen over the last 6 to 12 months.
+Dialogue: 0,1:29:01.57,1:29:05.59,Sub,,0,0,0,,And those advances are driving the adoption of AI well beyond the cloud.
+Dialogue: 0,1:29:05.59,1:29:17.13,Sub,,0,0,0,,And as AI continues to grow, it will demand compute beyond the massive purpose-built data centers that we all know and love, extending into enterprise, personal, and physical AI.
+Dialogue: 0,1:29:17.35,1:29:22.07,Sub,,0,0,0,,And each of these brings a new or unique set of requirements.
+Dialogue: 0,1:29:22.85,1:29:25.43,Sub,,0,0,0,,Enterprises are usually constrained by power and cooling.
+Dialogue: 0,1:29:26.15,1:29:31.59,Sub,,0,0,0,,Personal AI usually must operate within a fairly limited compute and memory footprint.
+Dialogue: 0,1:29:31.59,1:29:37.47,Sub,,0,0,0,,And physical AI must perform reliably in real-world demanding environments.
+Dialogue: 0,1:29:38.59,1:29:45.39,Sub,,0,0,0,,And AMD is the only company delivering a complete portfolio that spans all of these development models.
+Dialogue: 0,1:29:46.67,1:29:53.71,Sub,,0,0,0,,So I just mentioned that our journey began in the data center with our CPU franchise, and I want to touch on it a bit.
+Dialogue: 0,1:29:53.77,1:29:58.23,Sub,,0,0,0,,With each generation of EPYC, our strategy has been to listen to our customers,
+Dialogue: 0,1:29:58.23,1:30:06.49,Sub,,0,0,0,,address their evolving needs, and deliver the highest performance, lowest total cost of ownership, and the fastest time to value.
+Dialogue: 0,1:30:07.65,1:30:16.49,Sub,,0,0,0,,As Lisa mentioned earlier, we've introduced many industry-firsts across our generations that our enterprise customer has actually asked for.
+Dialogue: 0,1:30:17.19,1:30:24.55,Sub,,0,0,0,,And that customer focus has brought us to where we are today, with EPYC as the leader in enterprise computing.
+Dialogue: 0,1:30:24.55,1:30:32.89,Sub,,0,0,0,,And over the last three years, there's been very, very strong adoption across the enterprise, with the world's largest companies moving more and more workloads to AMD.
+Dialogue: 0,1:30:33.79,1:30:36.07,Sub,,0,0,0,,And it's reflected in a number of places.
+Dialogue: 0,1:30:36.23,1:30:42.55,Sub,,0,0,0,,First, public cloud, where our VM consumption has grown at 76% CAGR over the last three years.
+Dialogue: 0,1:30:43.37,1:30:51.01,Sub,,0,0,0,,And on-prem deployments with our OEM and ODM partners is growing quite aggressively across key industries.
+Dialogue: 0,1:30:51.95,1:31:01.21,Sub,,0,0,0,,But just as important, this position allows us to understand truly the diversity of the workloads that our enterprise customers run every day.
+Dialogue: 0,1:31:03.11,1:31:07.91,Sub,,0,0,0,,And each workload faces new demands on the CPU.
+Dialogue: 0,1:31:08.09,1:31:16.41,Sub,,0,0,0,,Some require maximum thread count, some depend on per-core performance, while others depend on memory bandwidth, cache efficiency, or I/O.
+Dialogue: 0,1:31:16.49,1:31:16.99,Sub,,0,0,0,,performance.
+Dialogue: 0,1:31:17.81,1:31:24.91,Sub,,0,0,0,,The really important point is that there is no single SKU that solves every enterprise application.
+Dialogue: 0,1:31:25.87,1:31:33.95,Sub,,0,0,0,,And that's why our EPYC portfolio with Venice spans 8 to 256 cores, with a range of power, frequencies, and I/O.
+Dialogue: 0,1:31:33.99,1:31:43.45,Sub,,0,0,0,,capabilities, giving customers the flexibility to choose the right solution for their workload, and most importantly, at the most optimized cost.
+Dialogue: 0,1:31:45.07,1:31:50.95,Sub,,0,0,0,,So, Lisa mentioned this earlier, and now we all know, we covered Venice,
+Dialogue: 0,1:31:51.07,1:31:57.79,Sub,,0,0,0,,and she showed how we have strong leadership across AI host nodes and the agentic workflows.
+Dialogue: 0,1:31:58.65,1:32:08.97,Sub,,0,0,0,,But I wanted to show you how Venice actually leads across the general purpose workloads of the enterprise and these workloads that are running our customers' line every day.
+Dialogue: 0,1:32:08.97,1:32:19.27,Sub,,0,0,0,,As you can see, we have a minimum of 2.5x the performance across our competition, across these very, very important enterprise workloads.
+Dialogue: 0,1:32:20.23,1:32:27.33,Sub,,0,0,0,,So now, as we all know, agentic AI is really the next major transition for the enterprise.
+Dialogue: 0,1:32:27.55,1:32:33.37,Sub,,0,0,0,,And it truly is a force multiplier for enterprises, and adoption is accelerating.
+Dialogue: 0,1:32:33.65,1:32:41.29,Sub,,0,0,0,,In fact, the latest data here shows that nearly every enterprise next year will have some form of agentic deployments.
+Dialogue: 0,1:32:42.53,1:32:52.51,Sub,,0,0,0,,And as enterprises move from pilots to production deployments, we've talked to CIOs all the time, and they are looking at three major things.
+Dialogue: 0,1:32:52.71,1:32:56.71,Sub,,0,0,0,,First, predictable infrastructure cost and token cost.
+Dialogue: 0,1:32:57.67,1:33:00.55,Sub,,0,0,0,,Secondly, making sure the data is secure.
+Dialogue: 0,1:33:01.05,1:33:08.45,Sub,,0,0,0,,And then lastly, and sometimes this is overlooked, right, integrating AI into their existing infrastructure.
+Dialogue: 0,1:33:08.97,1:33:12.19,Sub,,0,0,0,,It's not all greenfield out there for the enterprise customer.
+Dialogue: 0,1:33:13.23,1:33:21.93,Sub,,0,0,0,,So to solve these problems, we truly believe that this is going to be a distributed deployment model that leverages frontier models, cloud services,
+Dialogue: 0,1:33:22.27,1:33:24.77,Sub,,0,0,0,,on-prem infrastructure, and of course, AI clients.
+Dialogue: 0,1:33:25.67,1:33:39.49,Sub,,0,0,0,,And as AI has moved from chatbots responding to prompts to agents doing real work, writing code, summarizing documents, and running complex flows, the requirements have evolved also.
+Dialogue: 0,1:33:40.47,1:33:45.11,Sub,,0,0,0,,And those are exactly the requirements we've been designing for for multiple years.
+Dialogue: 0,1:33:45.75,1:33:54.69,Sub,,0,0,0,,So while AI will be deployed across all these environments, the on-prem deployments in our enterprise customers have fairly unique constraints.
+Dialogue: 0,1:33:55.09,1:33:56.71,Sub,,0,0,0,,First and foremost, power/cooling.
+Dialogue: 0,1:33:57.73,1:33:59.63,Sub,,0,0,0,,Really big challenge in space.
+Dialogue: 0,1:33:59.63,1:34:08.97,Sub,,0,0,0,,And of course, costs remain top of the list for CIOs that are trying to drive things forward in the AI world.
+Dialogue: 0,1:34:09.05,1:34:15.03,Sub,,0,0,0,,And then lastly, the full solutions they need to be easy to deploy.
+Dialogue: 0,1:34:15.97,1:34:22.73,Sub,,0,0,0,,That's been common for many, many years for the enterprise, but that's something we're very, very focused on.
+Dialogue: 0,1:34:22.93,1:34:34.51,Sub,,0,0,0,,So to address these constraints, thank you, Laura, I'm very happy to announce the launch of the Instinct MI350P.
+Dialogue: 0,1:34:39.75,1:34:48.15,Sub,,0,0,0,,So today, every enterprise wants AI in the data center, but the challenge is how do you add those capabilities without starting over?
+Dialogue: 0,1:34:48.61,1:34:51.43,Sub,,0,0,0,,That's exactly what the 350P was designed to solve.
+Dialogue: 0,1:34:51.93,1:34:59.81,Sub,,0,0,0,,It's an air-cooled GPU designed to fit within the power and cooling of enterprise servers today without a facilities upgrade.
+Dialogue: 0,1:34:59.81,1:35:05.51,Sub,,0,0,0,,Making it easy to bring LLM scale inference into today's enterprise data center.
+Dialogue: 0,1:35:05.63,1:35:09.17,Sub,,0,0,0,,And at the same time, there's no compromise in capability.
+Dialogue: 0,1:35:09.57,1:35:19.05,Sub,,0,0,0,,A single MI350P can support up to 260 billion parameters, allowing customers to run the majority of enterprise AI workloads on a single GPU.
+Dialogue: 0,1:35:20.29,1:35:24.37,Sub,,0,0,0,,And the economics are actually even better and more compelling.
+Dialogue: 0,1:35:25.01,1:35:30.83,Sub,,0,0,0,,The 350P delivers more than four times the tokens per second per dollar than the competition.
+Dialogue: 0,1:35:32.13,1:35:33.31,Sub,,0,0,0,,It's pretty cool.
+Dialogue: 0,1:35:36.10,1:35:43.22,Sub,,0,0,0,,And it actually turns the customer's existing data center into an AI data center.
+Dialogue: 0,1:35:43.98,1:35:49.26,Sub,,0,0,0,,Now, we all know that benchmarks are one part of the equation, right?
+Dialogue: 0,1:35:49.36,1:35:56.38,Sub,,0,0,0,,The other part is really evaluating, does the advantage hold up across the actual workload you run and how your business runs?
+Dialogue: 0,1:35:56.82,1:36:02.18,Sub,,0,0,0,,So we tested a set of workloads, enterprise use cases, using production models.
+Dialogue: 0,1:36:02.88,1:36:12.98,Sub,,0,0,0,,And the 350P delivers much higher productivity than the competition, delivering up to two to five times faster tokens per second than the competition.
+Dialogue: 0,1:36:13.72,1:36:24.28,Sub,,0,0,0,,So if you think about that, that's more tokens per second, more work completed, more users supported, all at a lower cost for the business.
+Dialogue: 0,1:36:26.46,1:36:32.74,Sub,,0,0,0,,So another area that I wanted to talk about is, our earliest customer is our own AMD IT team.
+Dialogue: 0,1:36:34.16,1:36:37.76,Sub,,0,0,0,,And they're a tough group to work with, even for us.
+Dialogue: 0,1:36:38.46,1:36:41.18,Sub,,0,0,0,,But they put us through our paces.
+Dialogue: 0,1:36:41.70,1:36:48.42,Sub,,0,0,0,,And really, this has been our model from day one is, we want to put our technology into our own data center first.
+Dialogue: 0,1:36:48.88,1:36:59.18,Sub,,0,0,0,,So like many companies, many enterprises, we're looking at how to deliver AI service to our employee base, but also manage costs and protect our data, manage and control the data.
+Dialogue: 0,1:37:00.02,1:37:04.60,Sub,,0,0,0,,So we focused on two use cases that we wanted to try out.
+Dialogue: 0,1:37:04.72,1:37:07.24,Sub,,0,0,0,,And first was autonomous threat detection.
+Dialogue: 0,1:37:07.44,1:37:12.88,Sub,,0,0,0,,And that is probably one of the faster-growing agentic applications that we're seeing today.
+Dialogue: 0,1:37:12.94,1:37:16.66,Sub,,0,0,0,,And the second was a personalized AI assistant running on OpenCloth.
+Dialogue: 0,1:37:17.64,1:37:29.88,Sub,,0,0,0,,So both of these run route requests through the router, and the gateway sort of tests the complexity, the sensitivity of the information, and the service level requirements.
+Dialogue: 0,1:37:30.96,1:37:38.44,Sub,,0,0,0,,So some requests are sent to the Frontier model, while others are routed to OpenWeights models running on EPYC and an MI350P.
+Dialogue: 0,1:37:39.46,1:37:50.94,Sub,,0,0,0,,So with intelligent routing, we reduced our token costs by 43%, while delivering up to 3x faster response times for the workloads running locally.
+Dialogue: 0,1:37:50.94,1:37:55.64,Sub,,0,0,0,,So we believe this is how enterprise AI will be deployed.
+Dialogue: 0,1:37:57.84,1:38:06.66,Sub,,0,0,0,,But we also know that, from our history here with EPYC, that enabling enterprise takes a whole lot more than great silicon.
+Dialogue: 0,1:38:07.24,1:38:10.34,Sub,,0,0,0,,It requires a complete ecosystem of software and solutions.
+Dialogue: 0,1:38:10.90,1:38:16.64,Sub,,0,0,0,,And over the last several years, we've truly grown significantly and expanded our enterprise AI ecosystem.
+Dialogue: 0,1:38:17.02,1:38:27.16,Sub,,0,0,0,,Today, we support numerous AI ISVs, provide zero-day support for all of the industry's leading open models, and deliver robust frameworks that help
+Dialogue: 0,1:38:27.16,1:38:31.42,Sub,,0,0,0,,customers bring AI into production as fast as possible.
+Dialogue: 0,1:38:32.20,1:38:38.72,Sub,,0,0,0,,And it's all built on trusted platform software and OEM partnerships that enterprises rely on every single day.
+Dialogue: 0,1:38:39.92,1:38:55.28,Sub,,0,0,0,,Now, everything I just shared comes down to one goal for us, and that's helping customers deploy AI where it creates the most value for them, whether it's in the cloud, on-premise, or at the edge.
+Dialogue: 0,1:38:56.36,1:39:03.18,Sub,,0,0,0,,So to bring this to life, I'd like to welcome Jeremy Legg, Chief Technology Officer at AT&T.
+Dialogue: 0,1:39:09.56,1:39:10.96,Sub,,0,0,0,,Good to see you.
+Dialogue: 0,1:39:11.02,1:39:11.68,Sub,,0,0,0,,Thanks, Jeremy.
+Dialogue: 0,1:39:11.90,1:39:12.86,Sub,,0,0,0,,Thanks for having me.
+Dialogue: 0,1:39:13.50,1:39:14.26,Sub,,0,0,0,,Yeah, this is great.
+Dialogue: 0,1:39:14.48,1:39:15.32,Sub,,0,0,0,,It's kind of a homecoming.
+Dialogue: 0,1:39:15.54,1:39:17.94,Sub,,0,0,0,,I grew up in the East Bay, so it's good to be back.
+Dialogue: 0,1:39:18.28,1:39:18.92,Sub,,0,0,0,,Yeah, fantastic.
+Dialogue: 0,1:39:19.04,1:39:20.82,Sub,,0,0,0,,We really appreciate you joining us today.
+Dialogue: 0,1:39:20.82,1:39:26.96,Sub,,0,0,0,,So look, I think everyone knows AT&T as the largest communications company,
+Dialogue: 0,1:39:27.14,1:39:34.22,Sub,,0,0,0,,one of the largest in the world, and I'm sure half of them out there probably have AT&T network right now.
+Dialogue: 0,1:39:34.94,1:39:36.22,Sub,,0,0,0,,Hopefully more than half.
+Dialogue: 0,1:39:38.78,1:39:46.12,Sub,,0,0,0,,But AI is touching way more than the network, and you and your team are really doing a fair amount of work driving it.
+Dialogue: 0,1:39:46.28,1:39:51.86,Sub,,0,0,0,,So can you share with us sort of the opportunities you approach, you're working on, and your experience to date?
+Dialogue: 0,1:39:52.40,1:39:53.04,Sub,,0,0,0,,Sure, happy to.
+Dialogue: 0,1:39:53.58,1:40:02.74,Sub,,0,0,0,,At AT&T, we're now burning about a trillion-plus tokens per month, and that number has gone up pretty dramatically.
+Dialogue: 0,1:40:02.74,1:40:08.90,Sub,,0,0,0,,It's moving up double digits, and so this is now becoming very pervasive inside of the enterprise.
+Dialogue: 0,1:40:09.50,1:40:15.86,Sub,,0,0,0,,We've got over 100 Gen A models in production across our enterprise as well,
+Dialogue: 0,1:40:15.86,1:40:25.12,Sub,,0,0,0,,and those are stretching from things that I think a lot of folks are doing in customer care, things that we're doing in fraud, but also things that you wouldn't
+Dialogue: 0,1:40:25.12,1:40:33.80,Sub,,0,0,0,,necessarily think about, like where's the best place to place a cell tower or a RAN that is the most effective use of it inside of a network?
+Dialogue: 0,1:40:34.18,1:40:40.94,Sub,,0,0,0,,So all of these things are happening across our enterprise, but they're happening at a scale that is not necessarily normal.
+Dialogue: 0,1:40:41.44,1:40:44.30,Sub,,0,0,0,,We get over 300,000 calls a day.
+Dialogue: 0,1:40:44.52,1:40:53.70,Sub,,0,0,0,,The transcription of those calls is an enormous workload, and then driving the insights out of those calls that we then bring back to the business is another set of insights.
+Dialogue: 0,1:40:54.38,1:41:04.28,Sub,,0,0,0,,So it's really an interesting thing, and now we're beginning to actually rebuild entire workflows inside of the company beyond just the point use of a use
+Dialogue: 0,1:41:04.28,1:41:13.68,Sub,,0,0,0,,case. So as we think about HR, as we think about finance, and we think about different kinds of things that each of those organizations do, cash forecasting,
+Dialogue: 0,1:41:14.28,1:41:19.78,Sub,,0,0,0,,things that we do on onboarding employees as examples, we're now agentifying those entire workloads.
+Dialogue: 0,1:41:20.00,1:41:25.74,Sub,,0,0,0,,Yeah, so we work closely with your team, and we've had many conversations.
+Dialogue: 0,1:41:26.18,1:41:35.44,Sub,,0,0,0,,It's truly amazing the number of actual opportunities you're addressing with AI, so a super broad range of use.
+Dialogue: 0,1:41:35.92,1:41:45.80,Sub,,0,0,0,,So can you just explain sort of what are the key learnings in moving these to AI at enterprise scale, and then maybe a bit on what we've done together?
+Dialogue: 0,1:41:45.80,1:41:52.50,Sub,,0,0,0,,Sure. I mean, I'll start at a place that I don't think everybody starts from here, which is the human.
+Dialogue: 0,1:41:53.86,1:41:59.02,Sub,,0,0,0,,You need world-class teams in order to do this, and you need people that think in workflows.
+Dialogue: 0,1:41:59.54,1:42:03.78,Sub,,0,0,0,,There's an enormous amount of what I call racing from stoplight to stoplight.
+Dialogue: 0,1:42:04.40,1:42:11.76,Sub,,0,0,0,,Folks are going from 0 to 100, and then they hit the next stage of the workflow, and then there's a red light, and they haven't worked their way all the way through that.
+Dialogue: 0,1:42:12.16,1:42:20.46,Sub,,0,0,0,,So I would start with people and the quality of the people that you really have across your enterprise in order to do these things.
+Dialogue: 0,1:42:20.96,1:42:32.16,Sub,,0,0,0,,The second point is we are big believers in data sovereignty, and data sovereignty for us means not being tied to a specific chipset, not being tied to a specific
+Dialogue: 0,1:42:32.16,1:42:35.08,Sub,,0,0,0,,model or a specific set of development tools.
+Dialogue: 0,1:42:35.38,1:42:37.92,Sub,,0,0,0,,You need, as an enterprise, to manage your data.
+Dialogue: 0,1:42:38.02,1:42:43.42,Sub,,0,0,0,,Your data is your fuel in terms of how you implement AI across that broader enterprise.
+Dialogue: 0,1:42:43.42,1:42:52.44,Sub,,0,0,0,,What we've done with AMD, and AMD's been such a great partner in this, is leveraging open source models, leveraging different sets of chipsets,
+Dialogue: 0,1:42:52.86,1:42:56.02,Sub,,0,0,0,,building our own models, training other models.
+Dialogue: 0,1:42:56.04,1:43:04.28,Sub,,0,0,0,,We're one of the few companies in the world that's actually post-trained a model on AMD and then been able to drive equivalency in terms of performance and
+Dialogue: 0,1:43:04.28,1:43:07.96,Sub,,0,0,0,,accuracy with other more expensive chipsets in the marketplace.
+Dialogue: 0,1:43:08.44,1:43:17.34,Sub,,0,0,0,,So as we have done that, we've been able to drive down token costs, essentially through money-balling across all of these different models and leveraging that human
+Dialogue: 0,1:43:17.34,1:43:20.74,Sub,,0,0,0,,capital in a way that's made a big difference to our company.
+Dialogue: 0,1:43:21.22,1:43:30.32,Sub,,0,0,0,,And so increasingly, even though token consumption is going up, we're able to manage that underlying token cost at enterprise scale, which is not a small
+Dialogue: 0,1:43:30.32,1:43:33.32,Sub,,0,0,0,,thing. Yeah, it's a bunch of great work.
+Dialogue: 0,1:43:33.58,1:43:41.58,Sub,,0,0,0,,Another key area that's sort of groundbreaking, which is exciting also, is you're the first telecom company to actually train a model on AMD.
+Dialogue: 0,1:43:41.58,1:43:45.68,Sub,,0,0,0,,And also, you're driving fully open source models in telecom.
+Dialogue: 0,1:43:45.86,1:43:48.84,Sub,,0,0,0,,So tell us about that experience and why you felt like that was needed.
+Dialogue: 0,1:43:49.72,1:43:56.72,Sub,,0,0,0,,We felt like the industry was moving down a path where folks were only going to use closed source models to solve solutions.
+Dialogue: 0,1:43:57.24,1:44:05.40,Sub,,0,0,0,,And while closed source models are an important ingredient in that, we didn't want to lose sight of the fact that open source models were going to be a very significant part of the solution.
+Dialogue: 0,1:44:05.88,1:44:09.16,Sub,,0,0,0,,So we announced what we call OTEL 1.0.
+Dialogue: 0,1:44:09.16,1:44:13.70,Sub,,0,0,0,,That's the open telco AI model a bit over a year ago or so now.
+Dialogue: 0,1:44:13.90,1:44:18.60,Sub,,0,0,0,,And we had over 18 million downloads of that model since then.
+Dialogue: 0,1:44:19.26,1:44:26.78,Sub,,0,0,0,,We're excited to announce today the launch of OTEL 2.0, which is a more advanced set of models that we have trained on AMD.
+Dialogue: 0,1:44:27.02,1:44:31.76,Sub,,0,0,0,,And we're now making that available via open source across the broader industry.
+Dialogue: 0,1:44:32.12,1:44:40.10,Sub,,0,0,0,,And it, I think, is going to give folks an opportunity to see that not only do you need to think about leveraging models, but you also need to think about training
+Dialogue: 0,1:44:40.10,1:44:42.54,Sub,,0,0,0,,those models and how they work across your enterprise.
+Dialogue: 0,1:44:43.82,1:44:44.52,Sub,,0,0,0,,So it's just great.
+Dialogue: 0,1:44:44.76,1:44:46.46,Sub,,0,0,0,,We certainly appreciate the partnership.
+Dialogue: 0,1:44:46.68,1:44:49.98,Sub,,0,0,0,,And, you know, we really feel like this is germane to the conversation.
+Dialogue: 0,1:44:50.04,1:44:52.40,Sub,,0,0,0,,It's exactly what we've been talking about today.
+Dialogue: 0,1:44:52.40,1:44:55.50,Sub,,0,0,0,,And I just want to thank you again for joining us and the partnership.
+Dialogue: 0,1:44:55.70,1:44:56.22,Sub,,0,0,0,,Thank you.
+Dialogue: 0,1:44:56.36,1:44:57.34,Sub,,0,0,0,,You're a big part of it.
+Dialogue: 0,1:44:57.88,1:44:58.38,Sub,,0,0,0,,Thank you.
+Dialogue: 0,1:45:02.86,1:45:05.48,Sub,,0,0,0,,Okay, so let me close with one last point.
+Dialogue: 0,1:45:06.46,1:45:15.26,Sub,,0,0,0,,We've established ourselves as a leader in enterprise computing by listening to our customers and delivering the right solutions for their workloads.
+Dialogue: 0,1:45:15.62,1:45:21.68,Sub,,0,0,0,,Today, we're extending that leadership to help customers accelerate their AI journey.
+Dialogue: 0,1:45:22.58,1:45:25.50,Sub,,0,0,0,,This is our vision for powering AI everywhere.
+Dialogue: 0,1:45:26.66,1:45:33.76,Sub,,0,0,0,,And to expand a little bit beyond the data center into physical and client AI,
+Dialogue: 0,1:45:34.38,1:45:39.84,Sub,,0,0,0,,it's my pleasure to introduce Mr. Jack Huynh, who leads our computing and graphics group.
+Dialogue: 0,1:45:39.84,1:45:40.68,Sub,,0,0,0,,Thank you.
+Dialogue: 0,1:45:45.82,1:45:46.84,Sub,,0,0,0,,Thank you, Dan.
+Dialogue: 0,1:45:48.08,1:45:52.42,Sub,,0,0,0,,It's great to see so many friends, partners, and developers here in San Francisco.
+Dialogue: 0,1:45:53.18,1:45:59.36,Sub,,0,0,0,,Today, we have seen how AMD is building the compute foundation for AI in a data center.
+Dialogue: 0,1:45:59.68,1:46:03.06,Sub,,0,0,0,,But the full AI transformation requires two more ingredients.
+Dialogue: 0,1:46:03.78,1:46:08.90,Sub,,0,0,0,,Intelligence that becomes personal, and intelligence that can understand and act in a physical world.
+Dialogue: 0,1:46:09.44,1:46:12.60,Sub,,0,0,0,,Those are the two frontiers I want to explore with you here today.
+Dialogue: 0,1:46:12.60,1:46:14.78,Sub,,0,0,0,,Let's begin with personal AI.
+Dialogue: 0,1:46:15.70,1:46:21.78,Sub,,0,0,0,,Enterprise AI is already reshaping the data center, but agentic AI will extend far beyond it.
+Dialogue: 0,1:46:22.24,1:46:25.52,Sub,,0,0,0,,Agents are the next great productivity multiplier.
+Dialogue: 0,1:46:26.02,1:46:30.28,Sub,,0,0,0,,The jump from software that responds to software that completes work.
+Dialogue: 0,1:46:30.84,1:46:33.66,Sub,,0,0,0,,A personal agent can double what one person can do.
+Dialogue: 0,1:46:34.32,1:46:36.36,Sub,,0,0,0,,A team of agents can multiply that by 10.
+Dialogue: 0,1:46:37.04,1:46:41.42,Sub,,0,0,0,,And as agents gain more capabilities, the opportunity can grow exponentially.
+Dialogue: 0,1:46:41.42,1:46:44.08,Sub,,0,0,0,,But that promise has a compute consequence.
+Dialogue: 0,1:46:44.80,1:46:57.34,Sub,,0,0,0,,Unlike a single AI query, as agent reasons, calls tools, and coordinates to other agents, and run nonstop, agents become more capable and pervasive.
+Dialogue: 0,1:46:57.88,1:47:05.08,Sub,,0,0,0,,So will token consumption, meaning that demand will require every layer of the computing ecosystem to scale together.
+Dialogue: 0,1:47:05.92,1:47:10.70,Sub,,0,0,0,,Data centers remain the foundation for frontier AI in the most demanding workloads.
+Dialogue: 0,1:47:10.70,1:47:20.40,Sub,,0,0,0,,But edge-inclined systems can extend that capacity, putting more intelligence closer to where data is created and where the work gets done.
+Dialogue: 0,1:47:21.20,1:47:27.14,Sub,,0,0,0,,The PC is already one of the most powerful compute engines ever placed in the hands of an individual.
+Dialogue: 0,1:47:27.60,1:47:36.64,Sub,,0,0,0,,Across billions of devices, enormous computing capability is already deployed every single day, yet its potential remains largely untapped.
+Dialogue: 0,1:47:37.32,1:47:40.54,Sub,,0,0,0,,Putting that capacity to work changed the economics of computing.
+Dialogue: 0,1:47:41.34,1:47:51.28,Sub,,0,0,0,,More workloads can run on systems that are already in place, reducing overall infrastructure costs and allowing data centers to focus on the largest, most demanding task.
+Dialogue: 0,1:47:52.02,1:47:54.54,Sub,,0,0,0,,And local computing brings inherent advantages.
+Dialogue: 0,1:47:55.18,1:48:04.02,Sub,,0,0,0,,Your data stays with you, your applications remain responsive, and your system keeps working, even when your network does not.
+Dialogue: 0,1:48:04.46,1:48:11.76,Sub,,0,0,0,,And thanks to a new generation of smaller, more capable AI models, we're beginning to unlock that potential.
+Dialogue: 0,1:48:12.84,1:48:16.60,Sub,,0,0,0,,And the unlock is happening faster than anyone expected.
+Dialogue: 0,1:48:17.28,1:48:25.32,Sub,,0,0,0,,Last August, GPT OSS needed 120 billion parameters to score 80 on GPQA.
+Dialogue: 0,1:48:25.90,1:48:32.06,Sub,,0,0,0,,Just seven months later, Qwen 3.5 scored even higher, with only 9 billion.
+Dialogue: 0,1:48:32.86,1:48:36.38,Sub,,0,0,0,,Better performance, with 13 times fewer parameters.
+Dialogue: 0,1:48:36.38,1:48:39.34,Sub,,0,0,0,,This is not an incremental improvement.
+Dialogue: 0,1:48:39.94,1:48:44.90,Sub,,0,0,0,,It's a dramatic shift in the compute required to deliver advanced intelligence.
+Dialogue: 0,1:48:45.50,1:48:48.08,Sub,,0,0,0,,And this is a trend, not an outlier.
+Dialogue: 0,1:48:49.06,1:48:54.06,Sub,,0,0,0,,Smaller, open models are closing the frontier gap at extraordinary speed.
+Dialogue: 0,1:48:54.82,1:49:10.46,Sub,,0,0,0,,Qwen 3.6, 27 billion parameters now outperforms leading frontier models from the previous generation on graduate-level reasoning, at a fraction of the size and cost. That changes what is possible.
+Dialogue: 0,1:49:11.72,1:49:19.56,Sub,,0,0,0,,Workloads once reserved for the cloud can now run on powerful compute engines designed for personal AI compute.
+Dialogue: 0,1:49:20.64,1:49:25.22,Sub,,0,0,0,,Let's map these model performance breakthroughs to any platforms.
+Dialogue: 0,1:49:26.12,1:49:38.10,Sub,,0,0,0,,Ryzen AI 400 supports models up to 24 billion parameters, more than enough for Qwen 3.5, 9 billion, with substantial headroom.
+Dialogue: 0,1:49:38.92,1:49:47.78,Sub,,0,0,0,,Ryzen AI Max extends that capacity to models as large as 200 billion parameters, running natively on a personal system.
+Dialogue: 0,1:49:48.56,1:49:52.00,Sub,,0,0,0,,This has not reduced AI, compressed to fit on a PC.
+Dialogue: 0,1:49:52.60,1:49:59.16,Sub,,0,0,0,,It is a new class of personal computing built to run powerful models where the work actually happens.
+Dialogue: 0,1:49:59.94,1:50:04.58,Sub,,0,0,0,,And this is exactly what led us to build Ryzen AI Halo.
+Dialogue: 0,1:50:05.20,1:50:12.96,Sub,,0,0,0,,We wanted to give developers a platform powerful enough to run these models locally, yet simple enough to use every day.
+Dialogue: 0,1:50:13.40,1:50:27.32,Sub,,0,0,0,,With 120 gigabytes of unified memory and support for models up to 200 billion parameters, developers can build, test, and iterate locally directly on their desk.
+Dialogue: 0,1:50:28.18,1:50:37.74,Sub,,0,0,0,,Ryzen AI Halo embodies the future of personal AI for everyone, a future that shortens the distance between an idea and a working model.
+Dialogue: 0,1:50:38.22,1:50:45.66,Sub,,0,0,0,,For developers, that means a dramatically more efficient and optimized path from experimentation to deployment.
+Dialogue: 0,1:50:46.46,1:50:53.00,Sub,,0,0,0,,And as Vamsi showed earlier, rocm.ai is making hardware programming radically more accessible.
+Dialogue: 0,1:50:54.22,1:51:02.64,Sub,,0,0,0,,Developers can understand, modify, and optimize code for ROCm, even without deep ROCm expertise.
+Dialogue: 0,1:51:03.36,1:51:09.60,Sub,,0,0,0,,And better yet, the same open software foundation extends across all of AMD's hardware.
+Dialogue: 0,1:51:10.20,1:51:21.02,Sub,,0,0,0,,Developers can use the frameworks and tools they already know, start locally on Ryzen AI Halo, and scale across the full AMD compute platform without rebuilding their work.
+Dialogue: 0,1:51:22.06,1:51:23.28,Sub,,0,0,0,,And we're not stopping there.
+Dialogue: 0,1:51:23.74,1:51:32.38,Sub,,0,0,0,,Today, we're expanding our partnership with Hugging Face to bring the open AI ecosystem directly on Ryzen AI Halo.
+Dialogue: 0,1:51:33.32,1:51:44.26,Sub,,0,0,0,,Powerful compute only creates value when developers can quickly access the right models, optimize them for the platform, and turn them into real applications.
+Dialogue: 0,1:51:45.00,1:51:53.10,Sub,,0,0,0,,Together, AMD and Hugging Face will deliver Halo optimized performance for open models and agentic workflows.
+Dialogue: 0,1:51:56.18,1:51:58.06,Sub,,0,0,0,,How cool is that?
+Dialogue: 0,1:51:59.40,1:52:08.00,Sub,,0,0,0,,And along with co-engineered libraries and toolkits designed to help developers spend less time configuring infrastructure and more time building.
+Dialogue: 0,1:52:08.86,1:52:20.74,Sub,,0,0,0,,And later this year, every Ryzen AI Halo box will include a full year of Hugging Face Pro, putting the power of partnership in developers' hands from day one.
+Dialogue: 0,1:52:21.52,1:52:24.00,Sub,,0,0,0,,Freedom and more power to the user.
+Dialogue: 0,1:52:25.14,1:52:29.78,Sub,,0,0,0,,This is how we accelerate innovation in the AI era.
+Dialogue: 0,1:52:30.30,1:52:34.28,Sub,,0,0,0,,And we're already pushing that vision further with Gorgon Halo.
+Dialogue: 0,1:52:35.76,1:52:41.22,Sub,,0,0,0,,And seeing is believing, look at how small and beautiful this box is.
+Dialogue: 0,1:52:46.08,1:52:53.02,Sub,,0,0,0,,We've increased unified memory from 128 to 192 gigabytes.
+Dialogue: 0,1:52:53.54,1:52:56.44,Sub,,0,0,0,,The largest unified memory pool in this class.
+Dialogue: 0,1:52:56.92,1:53:01.50,Sub,,0,0,0,,And increased model support from 200 billion to 300 billion parameters.
+Dialogue: 0,1:53:03.20,1:53:03.92,Sub,,0,0,0,,Thank you, Laura.
+Dialogue: 0,1:53:06.87,1:53:10.65,Sub,,0,0,0,,And this is no longer limited to a single platform form factor.
+Dialogue: 0,1:53:11.05,1:53:17.77,Sub,,0,0,0,,Together, with the world's leading OEMs, AMD now powers the broadest portfolio of personal AI systems.
+Dialogue: 0,1:53:18.27,1:53:22.71,Sub,,0,0,0,,From laptops and workstations to mini PCs and developer platforms.
+Dialogue: 0,1:53:23.17,1:53:30.79,Sub,,0,0,0,,That means developers, enterprises, and creators can choose the right system for the way they want to build and work.
+Dialogue: 0,1:53:31.61,1:53:33.31,Sub,,0,0,0,,Personal AI is not a concept.
+Dialogue: 0,1:53:33.69,1:53:37.05,Sub,,0,0,0,,It is a category and is available right now on AMD.
+Dialogue: 0,1:53:38.83,1:53:40.65,Sub,,0,0,0,,We now have all the pieces.
+Dialogue: 0,1:53:41.65,1:53:43.01,Sub,,0,0,0,,Models are efficient enough.
+Dialogue: 0,1:53:43.77,1:53:45.25,Sub,,0,0,0,,Hardware is powerful enough.
+Dialogue: 0,1:53:45.97,1:53:47.75,Sub,,0,0,0,,Software stack is open and ready.
+Dialogue: 0,1:53:48.31,1:53:53.31,Sub,,0,0,0,,And open harnesses like Lemonade Server can route workloads to the right model and right compute.
+Dialogue: 0,1:53:54.05,1:53:55.37,Sub,,0,0,0,,The technology is here.
+Dialogue: 0,1:53:55.93,1:54:01.33,Sub,,0,0,0,,The next challenge is taking it from one developer's desk to thousands of users across an enterprise.
+Dialogue: 0,1:54:02.11,1:54:05.09,Sub,,0,0,0,,Cisco sees and believes in that future the same way we do.
+Dialogue: 0,1:54:05.63,1:54:09.63,Sub,,0,0,0,,To take us deeper into how we turn that vision into enterprise scale reality,
+Dialogue: 0,1:54:10.33,1:54:15.85,Sub,,0,0,0,,please join me in welcoming to the stage Jeetu Patel, President and Chief Product Officer at Cisco.
+Dialogue: 0,1:54:19.45,1:54:20.57,Sub,,0,0,0,,Jeetu, how are you doing?
+Dialogue: 0,1:54:20.87,1:54:21.35,Sub,,0,0,0,,How are you?
+Dialogue: 0,1:54:21.35,1:54:21.93,Sub,,0,0,0,,You look great.
+Dialogue: 0,1:54:21.93,1:54:23.89,Sub,,0,0,0,,Thank you for joining me here today.
+Dialogue: 0,1:54:24.27,1:54:24.77,Sub,,0,0,0,,Congratulations.
+Dialogue: 0,1:54:25.23,1:54:26.15,Sub,,0,0,0,,Thank you, thank you.
+Dialogue: 0,1:54:26.47,1:54:28.77,Sub,,0,0,0,,Now Jeetu, you and I talk how we're at an inflection point.
+Dialogue: 0,1:54:29.35,1:54:34.13,Sub,,0,0,0,,And for the past few years, industry has spent time just building intelligence.
+Dialogue: 0,1:54:34.79,1:54:38.23,Sub,,0,0,0,,The next phase is how we deploy this technology at scale enterprises.
+Dialogue: 0,1:54:38.75,1:54:42.43,Sub,,0,0,0,,You spent so much of your time talking to CIOs, technology leaders.
+Dialogue: 0,1:54:42.85,1:54:43.55,Sub,,0,0,0,,What are they telling you?
+Dialogue: 0,1:54:43.61,1:54:44.15,Sub,,0,0,0,,What's changing?
+Dialogue: 0,1:54:44.77,1:54:47.29,Sub,,0,0,0,,Well, firstly, it's a really exciting time to be alive in tech.
+Dialogue: 0,1:54:47.73,1:54:54.55,Sub,,0,0,0,,And if you just take a step back right now and see what's happening, there's actually a fundamental shift that's happening in the patterns of inferencing.
+Dialogue: 0,1:54:55.15,1:55:01.47,Sub,,0,0,0,,So if you think about the patterns of inferencing that existed during the chatbot era that was human-led, it was very, very spiky.
+Dialogue: 0,1:55:01.61,1:55:03.13,Sub,,0,0,0,,You ask a question, you get an answer.
+Dialogue: 0,1:55:03.29,1:55:06.15,Sub,,0,0,0,,What you're starting to see with agents is they're working 7x24.
+Dialogue: 0,1:55:07.89,1:55:10.73,Sub,,0,0,0,,They're very consumptive on bandwidth and on infrastructure.
+Dialogue: 0,1:55:10.73,1:55:15.75,Sub,,0,0,0,,So you're starting to see a much more persistent pattern of kind of demand signal for infrastructure.
+Dialogue: 0,1:55:16.21,1:55:20.87,Sub,,0,0,0,,You know, we usually joke around internally, humans click, but agents swarm.
+Dialogue: 0,1:55:22.19,1:55:31.67,Sub,,0,0,0,,And so as you start to see this, what you're going to have is a tremendous amount of and there's two big concerns that are also there, which is one is every
+Dialogue: 0,1:55:31.67,1:55:36.45,Sub,,0,0,0,,customer is concerned about security and every customer is concerned about cost.
+Dialogue: 0,1:55:36.99,1:55:42.95,Sub,,0,0,0,,So what you're starting to see happen is inferencing is not just going to be limited to the data center.
+Dialogue: 0,1:55:43.13,1:55:50.61,Sub,,0,0,0,,Inferencing is going to be distributed everywhere and there's a whole new class of computing that's emerging with this desk-side computing that you just
+Dialogue: 0,1:55:50.61,1:55:58.55,Sub,,0,0,0,,announced where there's going to be inferencing that you're going to have a laptop or a desktop where humans work, and they might have a desk-side computer
+Dialogue: 0,1:55:58.55,1:56:02.85,Sub,,0,0,0,,where agents are kind of going out and running their jobs on behalf of humans.
+Dialogue: 0,1:56:02.95,1:56:05.15,Sub,,0,0,0,,So that's what we're seeing, essentially.
+Dialogue: 0,1:56:05.29,1:56:08.59,Sub,,0,0,0,,We're fully aligned Jeetu and that's exactly the shift we're seeing.
+Dialogue: 0,1:56:09.01,1:56:12.87,Sub,,0,0,0,,If AI is moving closer to employees, compute has to move closer as well.
+Dialogue: 0,1:56:12.87,1:56:24.11,Sub,,0,0,0,,The PC's knowledge as a productivity device becomes an intelligence node in the enterprise but deploying intelligence everywhere creates a new trend for CIOs that you and I talk about so much.
+Dialogue: 0,1:56:24.89,1:56:31.15,Sub,,0,0,0,,How do you operate thousands of these systems with the security, governance and control enterprises require?
+Dialogue: 0,1:56:31.77,1:56:36.51,Sub,,0,0,0,,Jeetu, how is AMD and Cisco solving this and what are we building together?
+Dialogue: 0,1:56:36.83,1:56:43.13,Sub,,0,0,0,,Yeah, so this is an exciting time because what you're starting to see is there's a few things that need to really be done.
+Dialogue: 0,1:56:43.21,1:56:49.63,Sub,,0,0,0,,You can't just go out and deploy your desk-side computers and hope that everything works out in the enterprise.
+Dialogue: 0,1:56:49.73,1:56:54.39,Sub,,0,0,0,,You need to make sure that it's governed, it's managed and so there's a few things that are really important.
+Dialogue: 0,1:56:54.53,1:57:01.69,Sub,,0,0,0,,Number one, you have to have an appropriate amount of network bandwidth to satiate the needs of the agents that you are going to run locally.
+Dialogue: 0,1:57:02.01,1:57:09.87,Sub,,0,0,0,,So this notion of network infrastructure that can get modernized to keep up with the needs that you're going to go out and generate is going to be very important.
+Dialogue: 0,1:57:10.05,1:57:10.59,Sub,,0,0,0,,That's number one.
+Dialogue: 0,1:57:10.81,1:57:19.25,Sub,,0,0,0,,Number two, like I said, every customer is really worried about token costs and so we need to make sure that we can actually contain the costs of an agent's
+Dialogue: 0,1:57:19.25,1:57:21.83,Sub,,0,0,0,,consumption of tokens when it actually starts to go awry.
+Dialogue: 0,1:57:22.03,1:57:22.87,Sub,,0,0,0,,Up and down when needed.
+Dialogue: 0,1:57:23.15,1:57:23.65,Sub,,0,0,0,,Exactly.
+Dialogue: 0,1:57:24.33,1:57:35.41,Sub,,0,0,0,,Number three then is how do we monitor agent behavior for safety and security so that if it does start to do things that we don't want it to do, we can in runtime provide enforcement guardrails.
+Dialogue: 0,1:57:36.01,1:57:44.67,Sub,,0,0,0,,And then fourthly, it's just the overall safety and security that you need to have from an apparatus perspective to get this entire thing humming in the way that you want it to hum.
+Dialogue: 0,1:57:44.97,1:57:46.79,Sub,,0,0,0,,Yes, it's great how you and I think very alike.
+Dialogue: 0,1:57:47.37,1:57:51.23,Sub,,0,0,0,,So I mean the opportunity is not just bringing every device as you and I talk.
+Dialogue: 0,1:57:51.37,1:57:54.95,Sub,,0,0,0,,How do we enable enterprise to deploy, manage the skill with confidence?
+Dialogue: 0,1:57:55.51,1:57:59.95,Sub,,0,0,0,,Why don't we take a look at what we've been building the past few weeks and months. Yeah, it's exciting.
+Dialogue: 0,1:58:00.19,1:58:04.65,Sub,,0,0,0,,So basically what we've done is there's a full stack that you can start to think about.
+Dialogue: 0,1:58:04.65,1:58:10.85,Sub,,0,0,0,,So what you folks have done with Halo is you've got an isolated secure agent sandbox.
+Dialogue: 0,1:58:11.27,1:58:12.75,Sub,,0,0,0,,You've got intelligent routing.
+Dialogue: 0,1:58:12.97,1:58:18.65,Sub,,0,0,0,,You've got an MCP kind of core set of integrations.
+Dialogue: 0,1:58:18.91,1:58:24.61,Sub,,0,0,0,,And then what we've done above that is we've made sure that you have the right level of security policy enforcement.
+Dialogue: 0,1:58:24.93,1:58:31.37,Sub,,0,0,0,,We've also got the right level of observability so that it's an end-to-end resilient infrastructure stack.
+Dialogue: 0,1:58:31.49,1:58:36.65,Sub,,0,0,0,,So it's observability of how is your apparatus and the infrastructure working.
+Dialogue: 0,1:58:37.31,1:58:40.27,Sub,,0,0,0,,Is the agent behavior being done in the right way?
+Dialogue: 0,1:58:40.35,1:58:41.75,Sub,,0,0,0,,Can you observe the agent behavior?
+Dialogue: 0,1:58:41.89,1:58:46.03,Sub,,0,0,0,,And are the tokenomics within the guidelines that you want them to be?
+Dialogue: 0,1:58:46.93,1:58:58.91,Sub,,0,0,0,,And then what we have is a single unified management plane, a control plane that can look at every single dimension that you have and be managed within one environment.
+Dialogue: 0,1:58:59.41,1:59:03.43,Sub,,0,0,0,,And so that's kind of the full stack, and we are really, really excited about the partnership.
+Dialogue: 0,1:59:03.79,1:59:05.91,Sub,,0,0,0,,Us too, our teams love working with your team Jeetu.
+Dialogue: 0,1:59:06.31,1:59:07.23,Sub,,0,0,0,,How is this all managed?
+Dialogue: 0,1:59:07.39,1:59:09.31,Sub,,0,0,0,,How does the CAO deploy this at scale?
+Dialogue: 0,1:59:09.71,1:59:11.69,Sub,,0,0,0,,Yeah, so let's take a look at what this looks like, right?
+Dialogue: 0,1:59:11.79,1:59:17.77,Sub,,0,0,0,,Because what we would have is this is Cisco Cloud Control, which is the overall management plane.
+Dialogue: 0,1:59:17.85,1:59:29.95,Sub,,0,0,0,,So if you happen to have Halo devices on every desktop, which it might actually get to, what you want to make sure that you do is you are able to go out and manage your
+Dialogue: 0,1:59:29.95,1:59:37.71,Sub,,0,0,0,,entire estate of not just your Halo fleet, but also what you have running on the data centers, as well as what you have running in the cloud.
+Dialogue: 0,1:59:38.09,1:59:42.59,Sub,,0,0,0,,So you can provide full visibility for that entirety of the estate.
+Dialogue: 0,1:59:43.23,1:59:49.69,Sub,,0,0,0,,And then once you've got that, what we also have is this notion of how do we go out and monitor tokenomics?
+Dialogue: 0,1:59:50.29,1:59:58.01,Sub,,0,0,0,,And so is the agent behaving the way that it needs to behave, or is the agent actually going out and being overly consumptive?
+Dialogue: 0,1:59:58.69,2:00:05.19,Sub,,0,0,0,,At which point, you should be able to isolate any individual Halo device so that you can make sure that you can quarantine it.
+Dialogue: 0,2:00:05.29,2:00:05.79,Sub,,0,0,0,,No, I love this.
+Dialogue: 0,2:00:05.83,2:00:07.47,Sub,,0,0,0,,Then we can actually see the return on invested capital.
+Dialogue: 0,2:00:07.67,2:00:10.33,Sub,,0,0,0,,It could pay for itself in three or six months even quicker.
+Dialogue: 0,2:00:10.67,2:00:10.97,Sub,,0,0,0,,Exactly.
+Dialogue: 0,2:00:10.97,2:00:20.43,Sub,,0,0,0,,So what you see over here basically is you can tell how every single agent is performing and whether or not they're consuming way too much kind of token
+Dialogue: 0,2:00:20.43,2:00:23.99,Sub,,0,0,0,,costs. And if they are, how do you actually contain the costs as you're going through it?
+Dialogue: 0,2:00:23.99,2:00:24.89,Sub,,0,0,0,,No, I love this Jeetu.
+Dialogue: 0,2:00:25.21,2:00:28.11,Sub,,0,0,0,,Now, everyone else is wondering when can they buy this?
+Dialogue: 0,2:00:28.87,2:00:30.47,Sub,,0,0,0,,When is this open for everyone?
+Dialogue: 0,2:00:30.85,2:00:34.49,Sub,,0,0,0,,Well, the good news is you can buy the Halo already today.
+Dialogue: 0,2:00:34.83,2:00:44.57,Sub,,0,0,0,,Yes. And then what we're doing is we're making sure that we provide this entire management apparatus that's currently in early availability for a select set of customers.
+Dialogue: 0,2:00:44.87,2:00:49.75,Sub,,0,0,0,,But we'll have it in general availability in the US in early fall.
+Dialogue: 0,2:00:50.13,2:00:57.89,Sub,,0,0,0,,So we're excited to make sure that we can provide not just the compute, but all of the apparatus that's needed to go out and manage this so that you can have inference
+Dialogue: 0,2:00:57.89,2:01:04.55,Sub,,0,0,0,,running in the cloud, you can have inference running in your data center privately, or you can have inference running on your desk side.
+Dialogue: 0,2:01:05.07,2:01:07.27,Sub,,0,0,0,,Jeetu, we're so grateful to be part of you and Cisco.
+Dialogue: 0,2:01:07.49,2:01:08.13,Sub,,0,0,0,,We're so excited.
+Dialogue: 0,2:01:08.59,2:01:09.09,Sub,,0,0,0,,Thank you so much.
+Dialogue: 0,2:01:09.45,2:01:10.47,Sub,,0,0,0,,Congratulations. Take care, Jeetu.
+Dialogue: 0,2:01:10.47,2:01:10.99,Sub,,0,0,0,,Thank you.
+Dialogue: 0,2:01:15.45,2:01:22.29,Sub,,0,0,0,,What you just saw brings a vision of scaling AI seamlessly and securely for personal devices all the way to the cloud.
+Dialogue: 0,2:01:22.75,2:01:27.25,Sub,,0,0,0,,But in the age of AI, intelligence will be pervasive and it will be everywhere.
+Dialogue: 0,2:01:27.83,2:01:32.81,Sub,,0,0,0,,The next frontier is where AI leaves the screen, enters the world and acts.
+Dialogue: 0,2:01:33.83,2:01:39.11,Sub,,0,0,0,,That frontier is physical AI, the ultimate application of agentic frameworks.
+Dialogue: 0,2:01:39.63,2:01:43.67,Sub,,0,0,0,,In the digital world, an agent plans and completes a task.
+Dialogue: 0,2:01:43.79,2:01:50.85,Sub,,0,0,0,,In the physical world, it must also sense motion, navigate uncertainty, and protect people.
+Dialogue: 0,2:01:51.37,2:01:55.99,Sub,,0,0,0,,Here, intelligence does not just produce an answer, it produces an action.
+Dialogue: 0,2:01:56.69,2:02:02.07,Sub,,0,0,0,,When answers become actions, latency becomes safety and reliability becomes trust.
+Dialogue: 0,2:02:03.01,2:02:06.45,Sub,,0,0,0,,That is why the promise of physical AI is so incredibly powerful.
+Dialogue: 0,2:02:06.97,2:02:09.21,Sub,,0,0,0,,It is not about replacing human potential.
+Dialogue: 0,2:02:09.53,2:02:23.35,Sub,,0,0,0,,It is about amplifying it, giving surgeons greater precision, keeping people out of harm's way, making farms more productive, supply chains more resilient, and factories more efficient.
+Dialogue: 0,2:02:24.01,2:02:26.61,Sub,,0,0,0,,The best technology does not make people smaller.
+Dialogue: 0,2:02:26.97,2:02:28.79,Sub,,0,0,0,,It gives them much greater reach.
+Dialogue: 0,2:02:29.49,2:02:41.15,Sub,,0,0,0,,For more than 20 years, AMD has helped power the core capabilities that robotics depend on, from sensing and functional safety to deterministic control and precision motion.
+Dialogue: 0,2:02:41.83,2:02:46.23,Sub,,0,0,0,,That foundation is already trusted by millions of companies to find the future of robotics.
+Dialogue: 0,2:02:46.23,2:02:51.97,Sub,,0,0,0,,And now, that foundation is coming alive in extraordinary ways.
+Dialogue: 0,2:02:52.67,2:02:54.63,Sub,,0,0,0,,These are not machines following a script.
+Dialogue: 0,2:02:55.27,2:03:00.93,Sub,,0,0,0,,They are beginning to perceive the world, reason through uncertainty, and act with purpose.
+Dialogue: 0,2:03:01.61,2:03:04.99,Sub,,0,0,0,,The promise of physical AI, already in motion.
+Dialogue: 0,2:03:06.39,2:03:09.01,Sub,,0,0,0,,The next era of robotics is not programmed.
+Dialogue: 0,2:03:09.65,2:03:10.39,Sub,,0,0,0,,It is autonomous.
+Dialogue: 0,2:03:11.13,2:03:16.35,Sub,,0,0,0,,While traditional robots execute instructions, autonomous robots are given an objective.
+Dialogue: 0,2:03:17.25,2:03:19.41,Sub,,0,0,0,,And from there, they determine how to achieve it.
+Dialogue: 0,2:03:19.87,2:03:23.35,Sub,,0,0,0,,And they do this all at once, and all in real time.
+Dialogue: 0,2:03:23.91,2:03:30.01,Sub,,0,0,0,,The robot must orchestrate intelligence, motion, and safety continuously.
+Dialogue: 0,2:03:30.11,2:03:34.53,Sub,,0,0,0,,And every part must respond at the speed of the world around it.
+Dialogue: 0,2:03:35.29,2:03:38.97,Sub,,0,0,0,,That demands an entirely new kind of robotics brain.
+Dialogue: 0,2:03:39.53,2:03:43.69,Sub,,0,0,0,,And to solve that, we rethought its architecture from the ground up.
+Dialogue: 0,2:03:44.05,2:03:53.61,Sub,,0,0,0,,Today, I'm so excited to introduce the AMD Kria AI System On Module, powered by Ryzen AI Embedded X100.
+Dialogue: 0,2:03:58.79,2:04:08.41,Sub,,0,0,0,,It brings CPU, GPU, NPU, and unified memory together in one compact, open standard architecture.
+Dialogue: 0,2:04:08.89,2:04:17.35,Sub,,0,0,0,,This allows robots to process perception, AI reasoning, and do it all simultaneously and in real time.
+Dialogue: 0,2:04:18.31,2:04:21.97,Sub,,0,0,0,,The architecture is different, but the results are decisive.
+Dialogue: 0,2:04:22.71,2:04:37.13,Sub,,0,0,0,,In third party testing against NVIDIA Jetson Thor, Kria delivers 3.4 times better real-time results, 2.3 times more concurrent agents, and 1.6 times more CPU capacity.
+Dialogue: 0,2:04:37.31,2:04:43.99,Sub,,0,0,0,,That means faster reactions, and greater headroom for the robot to take on more complex work.
+Dialogue: 0,2:04:44.65,2:04:47.69,Sub,,0,0,0,,And all this without compromising control or safety.
+Dialogue: 0,2:04:48.83,2:04:54.07,Sub,,0,0,0,,But to find the next era of robotics takes more than a powerful brain.
+Dialogue: 0,2:04:55.39,2:05:01.21,Sub,,0,0,0,,Developers need a complete path from an idea to a machine operating in the real world.
+Dialogue: 0,2:05:02.01,2:05:08.39,Sub,,0,0,0,,Today, we are introducing AMD's Kria AI Robotics Developer Platform.
+Dialogue: 0,2:05:13.99,2:05:20.61,Sub,,0,0,0,,The industry's first turnkey open, fully integrated robotic system.
+Dialogue: 0,2:05:22.15,2:05:23.55,Sub,,0,0,0,,Thank you, Laura, so much.
+Dialogue: 0,2:05:27.88,2:05:37.16,Sub,,0,0,0,,At the center is the Kria AI System on module, paired with a robotics carrier card designed for sensing and connectivity.
+Dialogue: 0,2:05:37.84,2:05:45.56,Sub,,0,0,0,,Built on ROCm and ROS2, this platform gives developers everything they need to move from concept to prototype in days.
+Dialogue: 0,2:05:46.22,2:05:53.14,Sub,,0,0,0,,And the same module carries forward into production, with no migration or redesign needed at the finish line.
+Dialogue: 0,2:05:53.42,2:05:58.94,Sub,,0,0,0,,You can build faster and move from imagination to deployment with absolute confidence.
+Dialogue: 0,2:05:59.94,2:06:06.98,Sub,,0,0,0,,This is the breadth only AMD can bring to autonomous robotics from the first signal to the final motion.
+Dialogue: 0,2:06:07.72,2:06:15.64,Sub,,0,0,0,,AMD Kria for the brain, Versal for the spine, Zynq for the joints, and Spartan for the sensors.
+Dialogue: 0,2:06:16.18,2:06:27.32,Sub,,0,0,0,,Each layer purpose built for its role, working together in one intelligent system, connecting perception and high-level reasoning to real-time control.
+Dialogue: 0,2:06:28.70,2:06:34.34,Sub,,0,0,0,,The future will not be defined by one model, one machine, or one company.
+Dialogue: 0,2:06:34.66,2:06:43.16,Sub,,0,0,0,,It will be built in the open, across silicon, software, systems, and an ecosystem moving forward together.
+Dialogue: 0,2:06:43.94,2:06:52.28,Sub,,0,0,0,,From the cloud to the PC and now into the physical world, AMD continues to build a compute foundation for intelligence everywhere.
+Dialogue: 0,2:06:53.30,2:06:59.10,Sub,,0,0,0,,We'll laser focused on the future so our solution can augment and expand what people are capable of achieving.
+Dialogue: 0,2:06:59.82,2:07:03.30,Sub,,0,0,0,,The next era of AI will not just unfold behind the screen.
+Dialogue: 0,2:07:03.52,2:07:05.74,Sub,,0,0,0,,It will unfold in the world around us.
+Dialogue: 0,2:07:06.02,2:07:12.28,Sub,,0,0,0,,And now, to bring it all together and take us to what comes next, please welcome back Lisa to the stage.
+Dialogue: 0,2:07:17.86,2:07:18.64,Sub,,0,0,0,,Hi, Lisa.
+Dialogue: 0,2:07:20.46,2:07:21.46,Sub,,0,0,0,,Alright.
+Dialogue: 0,2:07:21.62,2:07:22.38,Sub,,0,0,0,,Thank you, Jack.
+Dialogue: 0,2:07:22.78,2:07:24.48,Sub,,0,0,0,,And it's been a big day.
+Dialogue: 0,2:07:24.66,2:07:32.50,Sub,,0,0,0,,We've covered a lot, from our data center products, to enterprise AI, to personal and physical AI, and the software that ties it all together.
+Dialogue: 0,2:07:33.22,2:07:36.22,Sub,,0,0,0,,This is the strongest product portfolio in our history.
+Dialogue: 0,2:07:36.50,2:07:39.70,Sub,,0,0,0,,And we believe it's the strongest portfolio in the industry.
+Dialogue: 0,2:07:39.70,2:07:45.30,Sub,,0,0,0,,But it's really just the beginning, because what our customers count on is not just today.
+Dialogue: 0,2:07:45.76,2:07:50.06,Sub,,0,0,0,,They really count on us looking ahead and pushing the bleeding edge of technology.
+Dialogue: 0,2:07:50.44,2:07:54.52,Sub,,0,0,0,,So I want to spend the last few minutes giving you a preview of what we're working on.
+Dialogue: 0,2:07:54.96,2:07:56.22,Sub,,0,0,0,,Starting with CPUs.
+Dialogue: 0,2:07:56.90,2:07:59.76,Sub,,0,0,0,,In 2028, we're going to introduce Florence.
+Dialogue: 0,2:08:00.56,2:08:03.50,Sub,,0,0,0,,Florence brings the next Gen Zen 7 cores.
+Dialogue: 0,2:08:04.00,2:08:05.72,Sub,,0,0,0,,It's leading-edge process technology.
+Dialogue: 0,2:08:05.86,2:08:11.96,Sub,,0,0,0,,It's a new set of AI compute extensions to really ensure that we have all of the AI capability.
+Dialogue: 0,2:08:12.18,2:08:14.44,Sub,,0,0,0,,And it supports the latest memory technologies.
+Dialogue: 0,2:08:14.86,2:08:16.06,Sub,,0,0,0,,And we're not stopping there.
+Dialogue: 0,2:08:16.30,2:08:22.18,Sub,,0,0,0,,We're already deep in development of Ravenna, our eighth-generation EPYC family built on Zen 8.
+Dialogue: 0,2:08:22.62,2:08:26.04,Sub,,0,0,0,,And that family is already well under development for 2030.
+Dialogue: 0,2:08:27.40,2:08:33.52,Sub,,0,0,0,,Now, to give you a little bit of a flavor, Florence is again going to extend our biggest advantage with EPYC.
+Dialogue: 0,2:08:33.76,2:08:41.30,Sub,,0,0,0,,It's all about product breath and having the right foundation and also the right family for each workload.
+Dialogue: 0,2:08:41.52,2:08:44.82,Sub,,0,0,0,,So you have Florence, you have Ferrara, you have Fidenza.
+Dialogue: 0,2:08:45.22,2:08:51.22,Sub,,0,0,0,,And it's really built on a full family of CPUs that is optimized for these different workloads.
+Dialogue: 0,2:08:51.22,2:08:55.16,Sub,,0,0,0,,That's giving the customers the right CPU for every workload.
+Dialogue: 0,2:08:55.56,2:08:57.40,Sub,,0,0,0,,And that is our commitment with EPYC.
+Dialogue: 0,2:08:58.54,2:08:59.88,Sub,,0,0,0,,Now, moving to Instinct.
+Dialogue: 0,2:09:00.50,2:09:06.06,Sub,,0,0,0,,We are continuing our cadence of delivering a new generation every single year.
+Dialogue: 0,2:09:06.80,2:09:09.54,Sub,,0,0,0,,MI500 brings next-generation HBM.
+Dialogue: 0,2:09:10.02,2:09:14.08,Sub,,0,0,0,,It brings a larger scale-up domain because scaling is everything.
+Dialogue: 0,2:09:14.52,2:09:18.28,Sub,,0,0,0,,And it introduces new copper and optical interconnects.
+Dialogue: 0,2:09:18.56,2:09:25.28,Sub,,0,0,0,,And with MI600, it's powered by our CDNA Next architecture, and it's already deep in development for 2028.
+Dialogue: 0,2:09:26.30,2:09:35.88,Sub,,0,0,0,,Now, to give you an idea of what we see from a performance standpoint, every generation of Instinct has delivered a major big step up in performance.
+Dialogue: 0,2:09:36.56,2:09:43.66,Sub,,0,0,0,,And with MI455, we've talked a lot about it, delivering 35 times more inference throughput compared to MI355.
+Dialogue: 0,2:09:44.54,2:09:47.28,Sub,,0,0,0,,But we're really, really excited about MI500.
+Dialogue: 0,2:09:47.72,2:09:53.98,Sub,,0,0,0,,What we see is another opportunity to take a major step up and actually bend the curve again.
+Dialogue: 0,2:09:54.58,2:10:05.60,Sub,,0,0,0,,So MI500 will deliver the largest generational leap in the industry of Instinct, putting us on track to deliver more than 2,000 times higher inference throughput in just four years.
+Dialogue: 0,2:10:12.90,2:10:17.82,Sub,,0,0,0,,Now, what I can tell you is we are working with a number of our customers already on this design point.
+Dialogue: 0,2:10:18.14,2:10:24.24,Sub,,0,0,0,,MI500 is super exciting, and the feedback we're getting from customers is just fantastic.
+Dialogue: 0,2:10:24.76,2:10:32.96,Sub,,0,0,0,,Now, put the CPU, GPU, and the networking roadmaps together, and you can now see a complete cadence of our rack scale systems.
+Dialogue: 0,2:10:33.30,2:10:45.98,Sub,,0,0,0,,So you should expect from AMD a new Helios system every year delivering more performance, more capacity so that we can run larger models, more agents at better total cost of ownership.
+Dialogue: 0,2:10:46.44,2:10:54.14,Sub,,0,0,0,,And that gives our customers the complete, predictable roadmap to plan and scale their infrastructure for years to come.
+Dialogue: 0,2:10:54.40,2:10:57.98,Sub,,0,0,0,,So lots of exciting things in store over the next few years.
+Dialogue: 0,2:10:58.60,2:11:01.38,Sub,,0,0,0,,So with that, let me wrap this up for this morning.
+Dialogue: 0,2:11:02.06,2:11:08.82,Sub,,0,0,0,,Today, I hope you saw a little bit about how we're really looking at that compute from every angle.
+Dialogue: 0,2:11:09.14,2:11:22.70,Sub,,0,0,0,,So every aspect of AI compute, whether you're talking about Helios or MI455 or Venice for the world's largest AI systems, or you're talking about MI430 and MI350 for Sovereign and Enterprise AI.
+Dialogue: 0,2:11:23.30,2:11:25.70,Sub,,0,0,0,,You saw the passion in Vamsi with ROCm AI.
+Dialogue: 0,2:11:26.30,2:11:35.96,Sub,,0,0,0,,It's so good to see how much has come through that platform in terms of making developers make it much, much easier for developers to access the AMD platform.
+Dialogue: 0,2:11:36.70,2:11:46.94,Sub,,0,0,0,,And then Jack talked about Gorgon Halo and our new Kria AI platforms really bringing together the leadership of the end-to-end AI story, including PCs and physical AI.
+Dialogue: 0,2:11:47.36,2:11:56.20,Sub,,0,0,0,,So lots of new information, but I want to say a very, very special thank you to all of our partners who joined us today because it is really through those
+Dialogue: 0,2:11:56.20,2:12:00.38,Sub,,0,0,0,,partnerships that we're able to do the most amazing things together.
+Dialogue: 0,2:12:01.40,2:12:12.78,Sub,,0,0,0,,So if I just leave you with a final thought, when I think about where AI is today, the biggest change that we see is we're no longer talking about what might be possible.
+Dialogue: 0,2:12:13.14,2:12:22.56,Sub,,0,0,0,,We're actually seeing how AI can have real and significant impact across every industry and every part of our lives, our personal lives.
+Dialogue: 0,2:12:22.56,2:12:32.00,Sub,,0,0,0,,And I have to say that I've spent my entire career in tech believing that high-performance computing can make the world an incredibly better place.
+Dialogue: 0,2:12:32.40,2:12:35.38,Sub,,0,0,0,,And I have never, ever believed that more than I do today.
+Dialogue: 0,2:12:36.40,2:12:48.08,Sub,,0,0,0,,At AMD, what we're focused on is building the technology, the roadmaps, and the partnerships, and there's never been a more exciting moment than today for our 30,000 plus engineers.
+Dialogue: 0,2:12:48.76,2:12:51.24,Sub,,0,0,0,,This is really the next phase of AI.
+Dialogue: 0,2:12:51.46,2:13:01.46,Sub,,0,0,0,,This is where we make AI, give the AI the opportunity with all the tools and all the capabilities to really bring meaningful real-world impact.
+Dialogue: 0,2:13:01.68,2:13:07.90,Sub,,0,0,0,,And I can tell you I could not be more excited to build all of that together with you, our ecosystem.
+Dialogue: 0,2:13:08.50,2:13:10.26,Sub,,0,0,0,,Thank you so much for joining us today.

@@ -1,0 +1,903 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:13:06.39,0:13:09.33,Sub,,0,0,0,,OK good afternoon, everybody.
+Dialogue: 0,0:13:09.33,0:13:12.75,Sub,,0,0,0,,Thanks for coming.
+Dialogue: 0,0:13:12.75,0:13:20.51,Sub,,0,0,0,,This is the first of the first colloquium of the colloquium of the semester.
+Dialogue: 0,0:13:20.51,0:13:21.97,Sub,,0,0,0,,And so welcome everybody.
+Dialogue: 0,0:13:21.97,0:13:31.27,Sub,,0,0,0,,We are here every Wednesday at this time, and we get quite a variety of topics and speakers.
+Dialogue: 0,0:13:31.27,0:13:35.63,Sub,,0,0,0,,Generally we get very, very prominent high quality speakers.
+Dialogue: 0,0:13:35.63,0:13:38.05,Sub,,0,0,0,,And today we start out with.
+Dialogue: 0,0:13:41.23,0:13:46.12,Sub,,0,0,0,,A very, very good first case.
+Dialogue: 0,0:13:46.12,0:13:48.86,Sub,,0,0,0,,We actually have two speakers.
+Dialogue: 0,0:13:48.86,0:13:51.18,Sub,,0,0,0,,We have Tony yen.
+Dialogue: 0,0:13:51.18,0:13:55.08,Sub,,0,0,0,,He's the vice president head of technology development at ASML.
+Dialogue: 0,0:13:55.08,0:14:03.82,Sub,,0,0,0,,I assume all of you who are here have heard of ASML and know the key role they play in the semiconductor industry.
+Dialogue: 0,0:14:03.82,0:14:18.50,Sub,,0,0,0,,And Tony is currently in addition to his continuing in his role as VP and Head of technology development at ASML, he is also serving as a visiting professor in our department.
+Dialogue: 0,0:14:18.50,0:14:23.66,Sub,,0,0,0,,He will be teaching a course in the.
+Dialogue: 0,0:14:23.66,0:14:25.54,Sub,,0,0,0,,In the fall.
+Dialogue: 0,0:14:25.54,0:14:29.28,Sub,,0,0,0,,Sorry spring semester on the topic of today's talk.
+Dialogue: 0,0:14:29.28,0:14:34.64,Sub,,0,0,0,,So if you're interested in this material, sign up for Tony's class.
+Dialogue: 0,0:14:34.64,0:14:42.50,Sub,,0,0,0,,Tony was he got his bachelor's degree from Purdue, his PhD and MBA from MIT.
+Dialogue: 0,0:14:42.50,0:14:50.40,Sub,,0,0,0,,He was. He worked at TI and at TSMC for quite a while before joining ASML.
+Dialogue: 0,0:14:50.40,0:14:55.96,Sub,,0,0,0,,He's a fellow of IEEE and won a number of important awards.
+Dialogue: 0,0:14:55.96,0:15:01.10,Sub,,0,0,0,,Tony's going to start out today, but he has a colleague here, Ron Gosens,
+Dialogue: 0,0:15:01.10,0:15:12.42,Sub,,0,0,0,,also Gosens, also from ASML, who is a senior strategy manager at ASML.
+Dialogue: 0,0:15:12.42,0:15:13.82,Sub,,0,0,0,,He's working part time.
+Dialogue: 0,0:15:13.82,0:15:16.92,Sub,,0,0,0,,He's partly retired.
+Dialogue: 0,0:15:16.92,0:15:22.08,Sub,,0,0,0,,He is also an adjunct professor at Purdue, where he teaches,
+Dialogue: 0,0:15:22.08,0:15:31.52,Sub,,0,0,0,,and he got educated in the Netherlands, at Utrecht and has been at Philips research, Stanford national, NXP
+Dialogue: 0,0:15:31.52,0:15:36.48,Sub,,0,0,0,,before joining ASML, where he leads computational lithography efforts.
+Dialogue: 0,0:15:36.48,0:15:46.69,Sub,,0,0,0,,So they're going to do a tag team and tell us about EUV lithography, which is the hot thing now in microelectronics.
+Dialogue: 0,0:15:46.69,0:15:49.89,Sub,,0,0,0,,And it'll give us the history and where we are and where we're going.
+Dialogue: 0,0:15:49.89,0:15:52.41,Sub,,0,0,0,,So I'll start with Tony.
+Dialogue: 0,0:15:55.91,0:15:58.11,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:15:58.11,0:16:00.49,Sub,,0,0,0,,Thank you, Jeff, for this very nice introduction.
+Dialogue: 0,0:16:00.49,0:16:01.87,Sub,,0,0,0,,Is the microphone on.
+Dialogue: 0,0:16:01.87,0:16:03.11,Sub,,0,0,0,,Yes thank you.
+Dialogue: 0,0:16:03.11,0:16:10.01,Sub,,0,0,0,,And Ronald and I were very happy to be here at Berkeley to give this colloquium.
+Dialogue: 0,0:16:10.01,0:16:15.27,Sub,,0,0,0,,And we without further ado, let me get started.
+Dialogue: 0,0:16:15.27,0:16:17.25,Sub,,0,0,0,,Perhaps I'll get a little excited.
+Dialogue: 0,0:16:17.25,0:16:20.24,Sub,,0,0,0,,So let me remove my jacket first, just in case.
+Dialogue: 0,0:16:20.24,0:16:22.91,Sub,,0,0,0,,Don't think you want to stand in the middle because you'll walk.
+Dialogue: 0,0:16:22.91,0:16:25.63,Sub,,0,0,0,,No, no, I will be standing here.
+Dialogue: 0,0:16:25.63,0:16:33.07,Sub,,0,0,0,,So we want to tell you about EUV lithography.
+Dialogue: 0,0:16:33.07,0:16:37.07,Sub,,0,0,0,,But I want to start with some history.
+Dialogue: 0,0:16:37.07,0:16:40.43,Sub,,0,0,0,,But I'd like to start with the history of photolithography itself.
+Dialogue: 0,0:16:40.43,0:16:42.11,Sub,,0,0,0,,Just give me five minutes.
+Dialogue: 0,0:16:42.11,0:16:53.23,Sub,,0,0,0,,Because this may be interesting to know if some of you do not know photolithography or are not familiar with this technology yet, but.
+Dialogue: 0,0:16:53.23,0:17:01.97,Sub,,0,0,0,,So let me get started, it's the first part of the talk is the photolithography until early 1980s and then EUV as a next
+Dialogue: 0,0:17:01.97,0:17:10.17,Sub,,0,0,0,,generation technology, lithography technology, and then developing EUV lithography for high volume production.
+Dialogue: 0,0:17:10.17,0:17:17.65,Sub,,0,0,0,,So photolithography itself was invented in the mid 1950s by two groups.
+Dialogue: 0,0:17:17.65,0:17:21.85,Sub,,0,0,0,,First was called Bell Labs where you folks were.
+Dialogue: 0,0:17:21.85,0:17:25.29,Sub,,0,0,0,,And the second group was a US Army's laboratory.
+Dialogue: 0,0:17:25.29,0:17:31.25,Sub,,0,0,0,,So let me focus on the second group because the story was more dramatic.
+Dialogue: 0,0:17:31.25,0:17:38.97,Sub,,0,0,0,,In the second group, the goal was to fit a proximity fuse diffuse into a mortar shell.
+Dialogue: 0,0:17:38.97,0:17:40.59,Sub,,0,0,0,,Mortar shells are not very big.
+Dialogue: 0,0:17:40.59,0:17:44.27,Sub,,0,0,0,,A proximity fuse is basically a cheap radar system.
+Dialogue: 0,0:17:44.27,0:17:52.79,Sub,,0,0,0,,OK, the goal is to have the bomb explode in the proximity of the target before hitting the target.
+Dialogue: 0,0:17:52.79,0:17:56.11,Sub,,0,0,0,,To increase the probability of impact.
+Dialogue: 0,0:17:56.11,0:18:00.01,Sub,,0,0,0,,Because if it explodes right on target, you may miss the target.
+Dialogue: 0,0:18:00.01,0:18:04.37,Sub,,0,0,0,,But if you explore the vicinity and your chances are a lot higher hitting the target.
+Dialogue: 0,0:18:04.37,0:18:09.05,Sub,,0,0,0,,So this was the goal to put the proximity fuse inside a mortar shell.
+Dialogue: 0,0:18:09.05,0:18:10.99,Sub,,0,0,0,,OK mortar shell is very small.
+Dialogue: 0,0:18:10.99,0:18:16.53,Sub,,0,0,0,,So in those days the transistors were mesa transistors.
+Dialogue: 0,0:18:16.53,0:18:18.09,Sub,,0,0,0,,Germanium OK.
+Dialogue: 0,0:18:18.09,0:18:23.73,Sub,,0,0,0,,How do you fit a mesa germanium transistor circuit inside a mortar shell.
+Dialogue: 0,0:18:23.73,0:18:25.21,Sub,,0,0,0,,Well, these two guys.
+Dialogue: 0,0:18:27.91,0:18:32.57,Sub,,0,0,0,,Jay Lathrop and James Knoll from the laboratory,
+Dialogue: 0,0:18:32.57,0:18:43.94,Sub,,0,0,0,,they thought of using, of course, they found out that Kodak had a photoresist and they thought of using a microscope, but operating in reverse.
+Dialogue: 0,0:18:43.94,0:18:46.12,Sub,,0,0,0,,So this is a microscope.
+Dialogue: 0,0:18:46.12,0:18:49.82,Sub,,0,0,0,,And this is where the transistor or a piece of germanium is.
+Dialogue: 0,0:18:49.82,0:18:54.08,Sub,,0,0,0,,And they put the photomask here where you would have the Polaroid camera.
+Dialogue: 0,0:18:54.08,0:18:57.26,Sub,,0,0,0,,And you shine white light from the top.
+Dialogue: 0,0:18:57.26,0:18:58.80,Sub,,0,0,0,,Now what is this filter.
+Dialogue: 0,0:18:58.80,0:19:07.54,Sub,,0,0,0,,Well, before the exposure, when you're aligning to the previous layer, you slide the red filter in there so that the photoresist is not exposed.
+Dialogue: 0,0:19:07.54,0:19:12.50,Sub,,0,0,0,,Once you do the alignment, you take out the red filter and then the exposure happens.
+Dialogue: 0,0:19:12.50,0:19:16.54,Sub,,0,0,0,,You expose this and then you get the transistor.
+Dialogue: 0,0:19:16.54,0:19:18.64,Sub,,0,0,0,,And the transistor looked like this.
+Dialogue: 0,0:19:18.64,0:19:23.36,Sub,,0,0,0,,The die is about 1 millimeter to 1 millimeter by 1 millimeter.
+Dialogue: 0,0:19:23.36,0:19:24.36,Sub,,0,0,0,,And this is a mesa.
+Dialogue: 0,0:19:24.36,0:19:25.96,Sub,,0,0,0,,The base size was not stated.
+Dialogue: 0,0:19:25.96,0:19:27.26,Sub,,0,0,0,,The base contact.
+Dialogue: 0,0:19:27.26,0:19:34.82,Sub,,0,0,0,,This little guy, one of these guys is a base contact is 0.1 by 0.25.
+Dialogue: 0,0:19:34.82,0:19:36.50,Sub,,0,0,0,,Nowadays it's gigantic.
+Dialogue: 0,0:19:36.50,0:19:38.56,Sub,,0,0,0,,But back in those days, it was hard to make.
+Dialogue: 0,0:19:38.56,0:19:43.66,Sub,,0,0,0,,And then they also had to make the emitter contact, which is the other rectangle right here.
+Dialogue: 0,0:19:43.66,0:19:46.08,Sub,,0,0,0,,Same Same dimension.
+Dialogue: 0,0:19:46.08,0:19:47.72,Sub,,0,0,0,,It was a success.
+Dialogue: 0,0:19:47.72,0:19:53.68,Sub,,0,0,0,,And then what happened was that Jay Lathrop joined ti in 1958.
+Dialogue: 0,0:19:53.68,0:19:56.02,Sub,,0,0,0,,And what happened in TI at 19.
+Dialogue: 0,0:19:56.02,0:20:00.78,Sub,,0,0,0,,In 1958, Jack Kilby invented the integrated circuit.
+Dialogue: 0,0:20:00.78,0:20:06.92,Sub,,0,0,0,,So Jay Lathrop worked at TI with Jack Kilby for the next 10 years.
+Dialogue: 0,0:20:06.92,0:20:10.04,Sub,,0,0,0,,And where did the other guy go.
+Dialogue: 0,0:20:10.04,0:20:12.60,Sub,,0,0,0,,Of course, he went to Fairchild.
+Dialogue: 0,0:20:12.60,0:20:21.00,Sub,,0,0,0,,1959 right where Robert Noyce and others had invented the integrated circuit there.
+Dialogue: 0,0:20:21.00,0:20:25.24,Sub,,0,0,0,,So great story, and it's a bit romantic.
+Dialogue: 0,0:20:25.24,0:20:29.08,Sub,,0,0,0,,So this was in the mid to late 1950s.
+Dialogue: 0,0:20:29.08,0:20:31.04,Sub,,0,0,0,,And what happened next.
+Dialogue: 0,0:20:31.04,0:20:36.33,Sub,,0,0,0,,What happened next is less romantic lithography.
+Dialogue: 0,0:20:36.33,0:20:44.83,Sub,,0,0,0,,In the 60s and the 70, early 70s were mainly contact and proximity printing.
+Dialogue: 0,0:20:44.83,0:20:50.25,Sub,,0,0,0,,Because those days, resolution wasn't really the top issue.
+Dialogue: 0,0:20:50.25,0:20:53.25,Sub,,0,0,0,,The top issue was how to get these layers to align.
+Dialogue: 0,0:20:53.25,0:20:57.35,Sub,,0,0,0,,So those machines were called aligners back then.
+Dialogue: 0,0:20:57.35,0:21:03.91,Sub,,0,0,0,,And this is an aligner from Casper instruments here in the US.
+Dialogue: 0,0:21:03.91,0:21:08.59,Sub,,0,0,0,,These guys were the King back in the 60s OK.
+Dialogue: 0,0:21:08.59,0:21:11.47,Sub,,0,0,0,,They were very good at doing contact printing.
+Dialogue: 0,0:21:11.47,0:21:13.69,Sub,,0,0,0,,We put the mask right on top of the wafer.
+Dialogue: 0,0:21:13.69,0:21:14.57,Sub,,0,0,0,,You're aligned.
+Dialogue: 0,0:21:14.57,0:21:16.35,Sub,,0,0,0,,And then you shine the light.
+Dialogue: 0,0:21:16.35,0:21:23.07,Sub,,0,0,0,,The problem with contact printing is that it generates particles in the space or.
+Dialogue: 0,0:21:23.07,0:21:26.51,Sub,,0,0,0,,Well, you're rubbing the wafer against the mask.
+Dialogue: 0,0:21:26.51,0:21:29.15,Sub,,0,0,0,,So what happened was that later.
+Dialogue: 0,0:21:29.15,0:21:34.15,Sub,,0,0,0,,Well, maybe we should create a gap between the mask and the wafer.
+Dialogue: 0,0:21:34.15,0:21:38.29,Sub,,0,0,0,,And then they went from contact printing to proximity printing.
+Dialogue: 0,0:21:38.29,0:21:44.01,Sub,,0,0,0,,Once proximity printing happens, canon took over as the new King.
+Dialogue: 0,0:21:44.01,0:21:46.35,Sub,,0,0,0,,This guy faded away.
+Dialogue: 0,0:21:46.35,0:21:52.29,Sub,,0,0,0,,And then canon made a much better machine for proximity printing.
+Dialogue: 0,0:21:52.29,0:21:57.37,Sub,,0,0,0,,So this is canon machine until.
+Dialogue: 0,0:21:57.37,0:22:03.13,Sub,,0,0,0,,Well, until proximity printing was superseded by projection imaging.
+Dialogue: 0,0:22:03.13,0:22:06.61,Sub,,0,0,0,,And this happened in the early 70s.
+Dialogue: 0,0:22:06.61,0:22:09.49,Sub,,0,0,0,,So let me first give an example.
+Dialogue: 0,0:22:09.49,0:22:12.45,Sub,,0,0,0,,Why did we go for projection imaging.
+Dialogue: 0,0:22:12.45,0:22:23.73,Sub,,0,0,0,,So the example is let's shine a lambda equal to 400 nanometer UV light through a mask.
+Dialogue: 0,0:22:23.73,0:22:28.51,Sub,,0,0,0,,Imaging a slit slit is 4 micron wide slit right.
+Dialogue: 0,0:22:28.51,0:22:33.75,Sub,,0,0,0,,And the gap is 1 micron 5 micron and 10 microns.
+Dialogue: 0,0:22:33.75,0:22:37.01,Sub,,0,0,0,,And this is the kind of aerial image that you get.
+Dialogue: 0,0:22:37.01,0:22:45.47,Sub,,0,0,0,,As you can see that this is almost at the limit of resolution Of proximity printing.
+Dialogue: 0,0:22:45.47,0:22:46.33,Sub,,0,0,0,,Because why.
+Dialogue: 0,0:22:46.33,0:22:48.69,Sub,,0,0,0,,Because you really cannot control the gap very well.
+Dialogue: 0,0:22:48.69,0:22:51.91,Sub,,0,0,0,,If you control the gap perfectly then it's fine.
+Dialogue: 0,0:22:51.91,0:22:57.09,Sub,,0,0,0,,But you can't because first the control itself mechanism itself wasn't very good.
+Dialogue: 0,0:22:57.09,0:23:01.99,Sub,,0,0,0,,But also the wafer has is not flat.
+Dialogue: 0,0:23:01.99,0:23:03.07,Sub,,0,0,0,,It's warped.
+Dialogue: 0,0:23:03.07,0:23:08.03,Sub,,0,0,0,,So it's much better if you do it through a lens.
+Dialogue: 0,0:23:08.03,0:23:15.89,Sub,,0,0,0,,And this is projection printing same wavelengths of light with a lens that is not very sophisticated.
+Dialogue: 0,0:23:15.89,0:23:19.39,Sub,,0,0,0,,0.2 a very low numerical aperture lens.
+Dialogue: 0,0:23:19.39,0:23:21.89,Sub,,0,0,0,,And this is what you get if you're unfocused.
+Dialogue: 0,0:23:21.89,0:23:23.41,Sub,,0,0,0,,You're looking at the red curve.
+Dialogue: 0,0:23:23.41,0:23:29.78,Sub,,0,0,0,,And if you're off by plus 5 plus minus 5 microns you're looking at the blue curve.
+Dialogue: 0,0:23:29.78,0:23:34.98,Sub,,0,0,0,,So in one case you're fighting diffraction.
+Dialogue: 0,0:23:34.98,0:23:38.42,Sub,,0,0,0,,The other case, you're taking advantage of diffraction.
+Dialogue: 0,0:23:38.42,0:23:41.30,Sub,,0,0,0,,Of course, with the addition of a lens.
+Dialogue: 0,0:23:41.30,0:23:45.82,Sub,,0,0,0,,So this is what's going on in terms of physics.
+Dialogue: 0,0:23:45.82,0:23:55.90,Sub,,0,0,0,,And then of course, early 1970s, there was this company called perkin-elmer.
+Dialogue: 0,0:23:55.90,0:24:04.30,Sub,,0,0,0,,They made the first commercially successful projection aligner, to be precise, in 1973.
+Dialogue: 0,0:24:04.30,0:24:12.08,Sub,,0,0,0,,This, this was the perkin-elmer microline 1X, meaning no magnification or magnification.
+Dialogue: 0,0:24:12.08,0:24:15.64,Sub,,0,0,0,,Reflective imaging system with an annular slit.
+Dialogue: 0,0:24:15.64,0:24:17.12,Sub,,0,0,0,,It's actually quite clever.
+Dialogue: 0,0:24:17.12,0:24:24.82,Sub,,0,0,0,,The designer of this optics was called Abe offner, a gigantic figure in lens design.
+Dialogue: 0,0:24:24.82,0:24:26.92,Sub,,0,0,0,,Sorry he passed away.
+Dialogue: 0,0:24:26.92,0:24:30.70,Sub,,0,0,0,,But this system has only two mirrors.
+Dialogue: 0,0:24:30.70,0:24:35.58,Sub,,0,0,0,,Concentric concentric, two mirrors, one concave, one convex.
+Dialogue: 0,0:24:35.58,0:24:40.70,Sub,,0,0,0,,And the imaging is done through a slit y slit.
+Dialogue: 0,0:24:40.70,0:24:52.12,Sub,,0,0,0,,Because Abe figured out that the optimal distance from the optical axis is this thing called H0 at H0 from the optical axis.
+Dialogue: 0,0:24:52.12,0:24:58.98,Sub,,0,0,0,,The aberration was minimized through a slit is fine because you can scan the whole thing,
+Dialogue: 0,0:24:58.98,0:25:06.50,Sub,,0,0,0,,because the mask and the wafer are actually ganged together through a shaft, which is not shown down here.
+Dialogue: 0,0:25:06.50,0:25:09.62,Sub,,0,0,0,,So the exposure happens after alignment.
+Dialogue: 0,0:25:09.62,0:25:11.62,Sub,,0,0,0,,You basically do this right.
+Dialogue: 0,0:25:11.62,0:25:16.04,Sub,,0,0,0,,You can never go wrong because they're together in one axis OK.
+Dialogue: 0,0:25:16.04,0:25:19.62,Sub,,0,0,0,,And this was the first of course.
+Dialogue: 0,0:25:19.62,0:25:21.88,Sub,,0,0,0,,Then it became a hit.
+Dialogue: 0,0:25:21.88,0:25:34.99,Sub,,0,0,0,,Thousands of these machines were sold and the first one went to Texas Instruments for a price of 90,000 $95,000.
+Dialogue: 0,0:25:34.99,0:25:38.63,Sub,,0,0,0,,It cannot even get a mask with this kind of money.
+Dialogue: 0,0:25:38.63,0:25:40.11,Sub,,0,0,0,,Euv mask, of course.
+Dialogue: 0,0:25:40.11,0:25:42.51,Sub,,0,0,0,,So this was sold to TI.
+Dialogue: 0,0:25:42.51,0:25:44.23,Sub,,0,0,0,,And then what happened.
+Dialogue: 0,0:25:44.23,0:25:46.31,Sub,,0,0,0,,Intel 8088.
+Dialogue: 0,0:25:46.31,0:25:47.53,Sub,,0,0,0,,OK, this was not ti.
+Dialogue: 0,0:25:47.53,0:25:49.03,Sub,,0,0,0,,This was Intel.
+Dialogue: 0,0:25:49.03,0:25:56.37,Sub,,0,0,0,,A device size was 0.2 by point is about 5 millimeters by 5 millimeter device size.
+Dialogue: 0,0:25:56.37,0:25:57.53,Sub,,0,0,0,,With contact printing.
+Dialogue: 0,0:25:57.53,0:26:07.91,Sub,,0,0,0,,The yield of these microprocessors were only 20% with micro microline 60% This is basically it.
+Dialogue: 0,0:26:07.91,0:26:11.79,Sub,,0,0,0,,I mean, Moore's law alive back then.
+Dialogue: 0,0:26:11.79,0:26:16.65,Sub,,0,0,0,,And now, of course, this wasn't the end of the story.
+Dialogue: 0,0:26:16.65,0:26:24.41,Sub,,0,0,0,,They were the King for a few years until the King is dead and long live the King.
+Dialogue: 0,0:26:24.41,0:26:26.65,Sub,,0,0,0,,The new King, of course.
+Dialogue: 0,0:26:26.65,0:26:28.65,Sub,,0,0,0,,Who's the new King.
+Dialogue: 0,0:26:28.65,0:26:36.29,Sub,,0,0,0,,Well, the problem with the one x design was that it was a simple optical system.
+Dialogue: 0,0:26:36.29,0:26:38.47,Sub,,0,0,0,,Two mirrors, all spherical.
+Dialogue: 0,0:26:38.47,0:26:40.29,Sub,,0,0,0,,Both spherical.
+Dialogue: 0,0:26:40.29,0:26:43.65,Sub,,0,0,0,,So the could not be made very high.
+Dialogue: 0,0:26:43.65,0:26:48.43,Sub,,0,0,0,,The numerical aperture of the microline was 0.167.
+Dialogue: 0,0:26:48.43,0:26:49.37,Sub,,0,0,0,,Very low.
+Dialogue: 0,0:26:49.37,0:26:54.65,Sub,,0,0,0,,In order to get better resolution, you need to increase the numerical aperture.
+Dialogue: 0,0:26:54.65,0:27:00.85,Sub,,0,0,0,,However, in order to do so on the offner system, the aberration would become very high.
+Dialogue: 0,0:27:00.85,0:27:13.55,Sub,,0,0,0,,So we had to get away from this kind of a offner design and to come back to the more traditional D magnified lens design.
+Dialogue: 0,0:27:13.55,0:27:18.45,Sub,,0,0,0,,And this is what happened in the late 70s, early 80s.
+Dialogue: 0,0:27:18.45,0:27:20.77,Sub,,0,0,0,,The first champion was GCA.
+Dialogue: 0,0:27:20.77,0:27:26.72,Sub,,0,0,0,,OK GCA made a G Line system called a 4,800 man.
+Dialogue: 0,0:27:26.72,0:27:35.38,Sub,,0,0,0,,And now I have to say a little bit about the resolution in projection lithography.
+Dialogue: 0,0:27:35.38,0:27:37.38,Sub,,0,0,0,,Only projection lithography.
+Dialogue: 0,0:27:37.38,0:27:38.50,Sub,,0,0,0,,Approximately lithography.
+Dialogue: 0,0:27:38.50,0:27:40.28,Sub,,0,0,0,,The resolution formula is different.
+Dialogue: 0,0:27:40.28,0:27:45.76,Sub,,0,0,0,,This is K1 lambda over and this is minimum half pitch.
+Dialogue: 0,0:27:45.76,0:27:49.28,Sub,,0,0,0,,We're just talking about this with Eli.
+Dialogue: 0,0:27:49.28,0:27:56.30,Sub,,0,0,0,,Minimum half pitch right is a more accurate metric in our sense.
+Dialogue: 0,0:27:56.30,0:28:02.62,Sub,,0,0,0,,Because if you want to compare all the systems, you don't want to compare with, oh, how thin a line you can print.
+Dialogue: 0,0:28:02.62,0:28:04.30,Sub,,0,0,0,,It's always minimum half pitch.
+Dialogue: 0,0:28:04.30,0:28:12.12,Sub,,0,0,0,,Because in minimum with minimum half pitch this K1 has a lower limit, which Ronald will talk about 0.25.
+Dialogue: 0,0:28:12.12,0:28:18.06,Sub,,0,0,0,,And then the minimum pitch is lambda over can decrease lambda or you can increase the numerical aperture.
+Dialogue: 0,0:28:18.06,0:28:29.08,Sub,,0,0,0,,Numerical aperture is the sign of this half angle at times n n n index of the medium surrounding this lens.
+Dialogue: 0,0:28:29.08,0:28:37.86,Sub,,0,0,0,,Of course, this end is always one until you got to immersion lithography right at 193, then n became 1.44.
+Dialogue: 0,0:28:37.86,0:28:39.96,Sub,,0,0,0,,OK, so this is what happened.
+Dialogue: 0,0:28:39.96,0:28:49.42,Sub,,0,0,0,,And then of course later k RF lithography with excimer laser reliable excimer laser became available.
+Dialogue: 0,0:28:49.42,0:28:59.80,Sub,,0,0,0,,And then, of course, after that was the ARF excimer laser at 193 and immersion 193 with water 193.
+Dialogue: 0,0:28:59.80,0:29:03.46,Sub,,0,0,0,,So the effective wavelength became 144 OK.
+Dialogue: 0,0:29:03.46,0:29:07.62,Sub,,0,0,0,,And then of course, we have EUV lithography.
+Dialogue: 0,0:29:07.62,0:29:12.50,Sub,,0,0,0,,Euv lithography took a long time to develop.
+Dialogue: 0,0:29:12.50,0:29:20.72,Sub,,0,0,0,,Why Because in the early days, we did not think we could optical lithography could go beyond this.
+Dialogue: 0,0:29:20.72,0:29:23.42,Sub,,0,0,0,,Why exactly this thing.
+Dialogue: 0,0:29:23.42,0:29:28.74,Sub,,0,0,0,,This is called a point spread function because is cut off here.
+Dialogue: 0,0:29:28.74,0:29:37.82,Sub,,0,0,0,,So if you have a point source on a mask, point object on a mask, you never get a point here.
+Dialogue: 0,0:29:37.82,0:29:46.48,Sub,,0,0,0,,You get a diffraction limited point spread function, which is this spot which is 1.2 to lambda over.
+Dialogue: 0,0:29:46.48,0:29:53.98,Sub,,0,0,0,,Now, you can say that, OK, I can increase the numerical aperture and I get a smaller spot.
+Dialogue: 0,0:29:53.98,0:29:56.86,Sub,,0,0,0,,But no, not if you have lots of aberrations.
+Dialogue: 0,0:29:56.86,0:30:01.06,Sub,,0,0,0,,If you increase the numerical aperture then the spot won't get any smaller.
+Dialogue: 0,0:30:01.06,0:30:12.04,Sub,,0,0,0,,This is the early days, exactly what we were facing, because we did not know how to make high Na optics without inducing a lot of aberration.
+Dialogue: 0,0:30:12.04,0:30:14.60,Sub,,0,0,0,,OK, when we were here.
+Dialogue: 0,0:30:14.60,0:30:23.19,Sub,,0,0,0,,And this is when people started to work on NGL, next generation lithography technologies, and EUV was one of them.
+Dialogue: 0,0:30:23.19,0:30:32.21,Sub,,0,0,0,,OK, so EUV development happened in the mid 1980s, and it went into high volume production in 2019.
+Dialogue: 0,0:30:32.21,0:30:35.15,Sub,,0,0,0,,35 years of development.
+Dialogue: 0,0:30:35.15,0:30:38.91,Sub,,0,0,0,,OK, so let me now get into EUV lithography.
+Dialogue: 0,0:30:38.91,0:30:45.07,Sub,,0,0,0,,The first paper on EUV lithography in the US happened in 1988.
+Dialogue: 0,0:30:45.07,0:30:55.19,Sub,,0,0,0,,In 1987, a guy called Andy Herrlich, working at Lawrence Livermore laboratory back then was a laboratory that belonged to the University of California here.
+Dialogue: 0,0:30:55.19,0:31:06.29,Sub,,0,0,0,,And he thought that they had perfected by then the multilayer mirrors to reflect soft X-ray light.
+Dialogue: 0,0:31:06.29,0:31:07.97,Sub,,0,0,0,,Back then, EUV wasn't the name.
+Dialogue: 0,0:31:07.97,0:31:14.75,Sub,,0,0,0,,Soft X-ray was the name for about the kind of wavelength that's today EUV.
+Dialogue: 0,0:31:14.75,0:31:24.23,Sub,,0,0,0,,And he published this paper, of course, he said he proposed to use a reflecting mask instead of a transmission mask because reflecting mass.
+Dialogue: 0,0:31:24.23,0:31:26.51,Sub,,0,0,0,,The mask substrate is also multilayered.
+Dialogue: 0,0:31:26.51,0:31:30.61,Sub,,0,0,0,,Any proposal to use laser produced plasma.
+Dialogue: 0,0:31:30.61,0:31:34.93,Sub,,0,0,0,,Both of these concepts are adopted nowadays.
+Dialogue: 0,0:31:34.93,0:31:44.17,Sub,,0,0,0,,And of course, 1989 he and Nat saglio and others actually again they went to the three beams meeting
+Dialogue: 0,0:31:44.17,0:31:50.83,Sub,,0,0,0,,and they showed a mask that they made multilayer mask with gold absorber pattern.
+Dialogue: 0,0:31:50.83,0:31:54.59,Sub,,0,0,0,,Of course, we don't use gold, but multilayers were used.
+Dialogue: 0,0:31:54.59,0:31:56.35,Sub,,0,0,0,,And here you go.
+Dialogue: 0,0:31:56.35,0:31:58.75,Sub,,0,0,0,,See the wavelength is about 13 nanometers.
+Dialogue: 0,0:31:58.75,0:32:01.37,Sub,,0,0,0,,Today we use 13.5.
+Dialogue: 0,0:32:01.37,0:32:05.77,Sub,,0,0,0,,So this was actually the first paper in 1988, in the US.
+Dialogue: 0,0:32:05.77,0:32:13.77,Sub,,0,0,0,,But in 1989, there was also a paper from a Japanese guy called hiroo Kinoshita.
+Dialogue: 0,0:32:13.77,0:32:19.94,Sub,,0,0,0,,Kinoshita published a paper look at this soft X-ray reduction in lithography using multilayer mirrors.
+Dialogue: 0,0:32:19.94,0:32:21.04,Sub,,0,0,0,,Very direct.
+Dialogue: 0,0:32:21.04,0:32:26.20,Sub,,0,0,0,,And he shows this is his setup a Schwarzschild optics with a reflecting mask.
+Dialogue: 0,0:32:26.20,0:32:35.18,Sub,,0,0,0,,And these were the results 0.5 micron lines and spaces from a micron line spaces mass.
+Dialogue: 0,0:32:35.18,0:32:38.68,Sub,,0,0,0,,So it's an 8x reduction camera.
+Dialogue: 0,0:32:38.68,0:32:41.14,Sub,,0,0,0,,The wavelength used was 12.4.
+Dialogue: 0,0:32:41.14,0:32:44.74,Sub,,0,0,0,,So he could not have used Morley's PSI multilayers.
+Dialogue: 0,0:32:44.74,0:32:52.64,Sub,,0,0,0,,It's a different multilayer because this is just below the absorption edge of silicon at 12.5.
+Dialogue: 0,0:32:52.64,0:32:55.26,Sub,,0,0,0,,But this wasn't his first paper.
+Dialogue: 0,0:32:55.26,0:32:59.94,Sub,,0,0,0,,His first paper was actually three years before, in 1986,
+Dialogue: 0,0:32:59.94,0:33:08.68,Sub,,0,0,0,,published in Japanese in Japan at the Japan applied Physics Society meeting for meeting 1986.
+Dialogue: 0,0:33:08.68,0:33:09.70,Sub,,0,0,0,,This was a.
+Dialogue: 0,0:33:09.70,0:33:14.66,Sub,,0,0,0,,A, the results were much cruder, but this was the first,
+Dialogue: 0,0:33:14.66,0:33:24.70,Sub,,0,0,0,,so we normally regard him as the inventor of EUV lithography, although in the US Andy Hurley was the first one.
+Dialogue: 0,0:33:24.70,0:33:33.10,Sub,,0,0,0,,OK, Andy actually told me that he did not know the results of Kinoshita, which I believe this was published entirely
+Dialogue: 0,0:33:33.10,0:33:40.60,Sub,,0,0,0,,in Japanese back in those days, it wasn't translated into English, but Kinoshita San was the first one.
+Dialogue: 0,0:33:40.60,0:33:50.50,Sub,,0,0,0,,But there was a third group, the Bell Labs folks, the Bell Labs folks, two people, originally Albert wood and Bill sylvest.
+Dialogue: 0,0:33:50.50,0:33:57.26,Sub,,0,0,0,,They were working on a 37.5 sodium laser.
+Dialogue: 0,0:33:57.26,0:34:04.06,Sub,,0,0,0,,They thought that, hey, we could make this to do photolithography, such a small wavelength.
+Dialogue: 0,0:34:04.06,0:34:09.18,Sub,,0,0,0,,And they actually proposed at first the offner type of optics.
+Dialogue: 0,0:34:09.18,0:34:14.84,Sub,,0,0,0,,They want to coat the offner optics with multilayers and then use that to do lithography.
+Dialogue: 0,0:34:14.84,0:34:21.92,Sub,,0,0,0,,Well, for some reason, that wasn't what the Bell Labs subsequently did.
+Dialogue: 0,0:34:21.92,0:34:31.00,Sub,,0,0,0,,Subsequently, the results came from not the after optics, but the Schwarzschild optics.
+Dialogue: 0,0:34:31.00,0:34:33.66,Sub,,0,0,0,,And Jeff Bowker right here.
+Dialogue: 0,0:34:33.66,0:34:34.50,Sub,,0,0,0,,The second name.
+Dialogue: 0,0:34:34.50,0:34:37.68,Sub,,0,0,0,,And you were heavily involved in this.
+Dialogue: 0,0:34:37.68,0:34:41.68,Sub,,0,0,0,,And this paper was published in 1990.
+Dialogue: 0,0:34:41.68,0:34:47.94,Sub,,0,0,0,,And Schwarzschild optics at a wavelength of 14, very close to today's wavelengths.
+Dialogue: 0,0:34:47.94,0:34:50.24,Sub,,0,0,0,,But they use the transmission mask.
+Dialogue: 0,0:34:50.24,0:34:54.28,Sub,,0,0,0,,This is a membrane mask, not the multilayer mask.
+Dialogue: 0,0:34:54.28,0:34:56.10,Sub,,0,0,0,,But look at the results.
+Dialogue: 0,0:34:56.10,0:34:58.08,Sub,,0,0,0,,Look at the results.
+Dialogue: 0,0:34:58.08,0:35:00.76,Sub,,0,0,0,,Pitch equal to 100 nanometer.
+Dialogue: 0,0:35:00.76,0:35:03.98,Sub,,0,0,0,,Back in those days, those were the best results.
+Dialogue: 0,0:35:03.98,0:35:05.02,Sub,,0,0,0,,I was a student.
+Dialogue: 0,0:35:05.02,0:35:08.84,Sub,,0,0,0,,I said, wow, my advisor Hank Smith tried to downplay this.
+Dialogue: 0,0:35:08.84,0:35:09.34,Sub,,0,0,0,,Oh yeah.
+Dialogue: 0,0:35:09.34,0:35:09.64,Sub,,0,0,0,,Yeah, yeah.
+Dialogue: 0,0:35:09.58,0:35:11.22,Sub,,0,0,0,,But they got a lot of aberrations.
+Dialogue: 0,0:35:11.22,0:35:12.14,Sub,,0,0,0,,But it doesn't matter.
+Dialogue: 0,0:35:12.14,0:35:12.89,Sub,,0,0,0,,It doesn't matter.
+Dialogue: 0,0:35:12.89,0:35:15.25,Sub,,0,0,0,,Because to do this, they had to open up.
+Dialogue: 0,0:35:15.25,0:35:18.71,Sub,,0,0,0,,This is normally is 0.08.
+Dialogue: 0,0:35:18.71,0:35:24.39,Sub,,0,0,0,,0.08 if you put in the formula you couldn't get this because this is on axis illumination.
+Dialogue: 0,0:35:24.39,0:35:27.29,Sub,,0,0,0,,So the smallest K1 is 0.5.
+Dialogue: 0,0:35:27.29,0:35:32.49,Sub,,0,0,0,,So in order to get this they open up this aperture to 0.16 OK.
+Dialogue: 0,0:35:32.49,0:35:37.03,Sub,,0,0,0,,In order to get that of course that introduces a lot of aberrations but that's OK.
+Dialogue: 0,0:35:37.03,0:35:39.47,Sub,,0,0,0,,They published this OK.
+Dialogue: 0,0:35:39.47,0:35:41.51,Sub,,0,0,0,,Those were the best results.
+Dialogue: 0,0:35:41.51,0:35:49.53,Sub,,0,0,0,,And then in the mid 90s, Intel led by Intel, something called the chief technology guy at Intel.
+Dialogue: 0,0:35:49.53,0:35:58.53,Sub,,0,0,0,,Those days, they formed this thing called the EUV, LLC and EUV, LLC was formed.
+Dialogue: 0,0:35:58.53,0:36:02.99,Sub,,0,0,0,,And then members joined and those members were competitors of Intel.
+Dialogue: 0,0:36:02.99,0:36:04.25,Sub,,0,0,0,,Nonetheless, they joined.
+Dialogue: 0,0:36:04.25,0:36:12.37,Sub,,0,0,0,,They bought shares of EUV, LLC at $5 million per share AMD, IBM, Infinium micro model.
+Dialogue: 0,0:36:12.37,0:36:15.55,Sub,,0,0,0,,They are joined and SEMATECH joined,
+Dialogue: 0,0:36:15.55,0:36:28.43,Sub,,0,0,0,,and then the money was pulled and farmed out to virtual National Laboratory Lawrence Livermore, Sandia and Lawrence Berkeley headed by Dave Attwood.
+Dialogue: 0,0:36:28.43,0:36:36.01,Sub,,0,0,0,,Here And this was the time when ASML joined EUV, LLC.
+Dialogue: 0,0:36:36.01,0:36:38.39,Sub,,0,0,0,,Euv, LLC was critical.
+Dialogue: 0,0:36:38.39,0:36:43.67,Sub,,0,0,0,,Before EUV, LLC, you might say, OK, we have disparate groups.
+Dialogue: 0,0:36:43.67,0:36:44.83,Sub,,0,0,0,,They were gangsters.
+Dialogue: 0,0:36:44.83,0:36:47.29,Sub,,0,0,0,,This is organized crime.
+Dialogue: 0,0:36:47.29,0:36:52.45,Sub,,0,0,0,,And a lot of IP a lot of good work.
+Dialogue: 0,0:36:52.45,0:36:58.05,Sub,,0,0,0,,But EUV LLC ramped down in 2002, 2003.
+Dialogue: 0,0:36:58.05,0:37:05.19,Sub,,0,0,0,,However, when EUV LLC ramped down, ASML ramped up in 2006,
+Dialogue: 0,0:37:05.19,0:37:09.94,Sub,,0,0,0,,we shipped first two EUV machines, these called ADT alpha.
+Dialogue: 0,0:37:09.94,0:37:13.44,Sub,,0,0,0,,Demo tools one went to Albany.
+Dialogue: 0,0:37:13.44,0:37:16.66,Sub,,0,0,0,,The other one went to our partner IMEC.
+Dialogue: 0,0:37:16.66,0:37:20.60,Sub,,0,0,0,,And this picture was taken April of 2007.
+Dialogue: 0,0:37:20.60,0:37:25.60,Sub,,0,0,0,,Two was accepted in a year later of course.
+Dialogue: 0,0:37:25.60,0:37:29.00,Sub,,0,0,0,,Took a long time to have this tool installed and debugged.
+Dialogue: 0,0:37:29.00,0:37:30.90,Sub,,0,0,0,,And it used a discharge.
+Dialogue: 0,0:37:30.90,0:37:34.92,Sub,,0,0,0,,Produced a plasma source which we no longer use nowadays.
+Dialogue: 0,0:37:34.92,0:37:37.64,Sub,,0,0,0,,So these were the first two tools.
+Dialogue: 0,0:37:37.64,0:37:39.46,Sub,,0,0,0,,The pictures are from the second tool.
+Dialogue: 0,0:37:39.46,0:37:40.72,Sub,,0,0,0,,At IMEC.
+Dialogue: 0,0:37:40.72,0:37:43.80,Sub,,0,0,0,,I don't have a picture of the Albany tool.
+Dialogue: 0,0:37:43.80,0:37:51.22,Sub,,0,0,0,,And then from that point onward we developed 6,100.
+Dialogue: 0,0:37:51.22,0:37:55.36,Sub,,0,0,0,,These are the next generation beyond the ADT.
+Dialogue: 0,0:37:55.36,0:37:59.64,Sub,,0,0,0,,Six of them were developed and went to various companies.
+Dialogue: 0,0:37:59.64,0:38:04.56,Sub,,0,0,0,,And my former company TSMC got the number 6 tool.
+Dialogue: 0,0:38:04.56,0:38:07.70,Sub,,0,0,0,,The number 6 tool came to Taiwan.
+Dialogue: 0,0:38:07.70,0:38:12.80,Sub,,0,0,0,,This picture was taken by me on the tarmac of taoyuan International Airport.
+Dialogue: 0,0:38:12.80,0:38:14.58,Sub,,0,0,0,,Summer of 1911.
+Dialogue: 0,0:38:14.58,0:38:21.86,Sub,,0,0,0,,And then four months later, this was almost installed in our fab fab 12.
+Dialogue: 0,0:38:21.86,0:38:25.62,Sub,,0,0,0,,Inside TSMC shinshu R&D fab.
+Dialogue: 0,0:38:25.62,0:38:32.30,Sub,,0,0,0,,And now how good could we do with this 0.25 micron R&D tool.
+Dialogue: 0,0:38:32.30,0:38:42.18,Sub,,0,0,0,,This was a photo of the lowest metal layer with a pitch of 46 nanometers.
+Dialogue: 0,0:38:42.18,0:38:46.18,Sub,,0,0,0,,This is after hard mask etched through right.
+Dialogue: 0,0:38:46.18,0:38:55.22,Sub,,0,0,0,,This was intended to be the design of 10 nanometer generation, but it did not happen.
+Dialogue: 0,0:38:55.22,0:38:55.76,Sub,,0,0,0,,Look at this.
+Dialogue: 0,0:38:55.76,0:38:57.44,Sub,,0,0,0,,This is a two dimensional design.
+Dialogue: 0,0:38:57.44,0:39:02.28,Sub,,0,0,0,,In the end, the 10 nanometer was a 1D design because EUV could not make it.
+Dialogue: 0,0:39:02.28,0:39:07.96,Sub,,0,0,0,,And TSMC we had to continue with immersion lithography.
+Dialogue: 0,0:39:07.96,0:39:15.60,Sub,,0,0,0,,So we changed it to a self-aligned etch process and a 1D design.
+Dialogue: 0,0:39:15.60,0:39:20.14,Sub,,0,0,0,,But had EUV been ready, we would have continued with the 2D design.
+Dialogue: 0,0:39:20.14,0:39:22.12,Sub,,0,0,0,,OK, that's another story.
+Dialogue: 0,0:39:22.12,0:39:24.66,Sub,,0,0,0,,Now I want to just give you a sneak preview.
+Dialogue: 0,0:39:24.66,0:39:31.44,Sub,,0,0,0,,11 years later, we could do this with the high-na EUV machine.
+Dialogue: 0,0:39:31.44,0:39:33.32,Sub,,0,0,0,,Again, a 2D design.
+Dialogue: 0,0:39:33.32,0:39:35.66,Sub,,0,0,0,,Now is 0.55.
+Dialogue: 0,0:39:35.66,0:39:38.40,Sub,,0,0,0,,This is from our first machine.
+Dialogue: 0,0:39:38.40,0:39:40.36,Sub,,0,0,0,,You can see the pitch.
+Dialogue: 0,0:39:40.36,0:39:41.78,Sub,,0,0,0,,The pitch was 46.
+Dialogue: 0,0:39:41.78,0:39:44.80,Sub,,0,0,0,,The pitch is now 22.
+Dialogue: 0,0:39:44.80,0:39:46.22,Sub,,0,0,0,,So that's progress.
+Dialogue: 0,0:39:46.22,0:39:49.20,Sub,,0,0,0,,Again, this is etched into a hard mask.
+Dialogue: 0,0:39:49.20,0:39:49.94,Sub,,0,0,0,,All right.
+Dialogue: 0,0:39:49.94,0:39:54.12,Sub,,0,0,0,,So the EUV development at TSMC.
+Dialogue: 0,0:39:54.12,0:39:58.36,Sub,,0,0,0,,This is a chronology of EUV development at TSMC.
+Dialogue: 0,0:39:58.36,0:40:09.15,Sub,,0,0,0,,Not only did we work with ASML very closely and tested EUV on 10 nanometer, 7 nanometer, 5 nanometer test
+Dialogue: 0,0:40:09.15,0:40:16.31,Sub,,0,0,0,,layers. But we also had to participate in infrastructure development.
+Dialogue: 0,0:40:16.31,0:40:18.59,Sub,,0,0,0,,Imec has always been a member.
+Dialogue: 0,0:40:18.59,0:40:24.83,Sub,,0,0,0,,We rejoined the SEMATECH Berkeley Lab, of course sorry, the Metz.
+Dialogue: 0,0:40:24.83,0:40:38.19,Sub,,0,0,0,,And we also joined the adac in Japan to develop the help develop the actinic blank inspector and also the co-funding of EUV development with ASML to ASML along with Intel and Samsung.
+Dialogue: 0,0:40:38.19,0:40:41.37,Sub,,0,0,0,,This was led by me of course.
+Dialogue: 0,0:40:41.37,0:40:46.43,Sub,,0,0,0,,Then in 2017 I left and joined ASML.
+Dialogue: 0,0:40:46.43,0:40:51.35,Sub,,0,0,0,,In 2019, this is when EUV went into high volume production.
+Dialogue: 0,0:40:51.35,0:41:02.95,Sub,,0,0,0,,As you can see that this was a paper published by TSMC at IDM 2019, where they announced that the 7 nanometer plus node has
+Dialogue: 0,0:41:02.95,0:41:08.71,Sub,,0,0,0,,had been developed and used layers of EUV lithography.
+Dialogue: 0,0:41:08.71,0:41:15.69,Sub,,0,0,0,,And of course, they also announced that the next year that the 5 nanometer node will have more EUV layers.
+Dialogue: 0,0:41:15.69,0:41:18.59,Sub,,0,0,0,,So this is the first part of the story.
+Dialogue: 0,0:41:18.59,0:41:24.31,Sub,,0,0,0,,OK from the beginning to high volume manufacturing in 2019.
+Dialogue: 0,0:41:24.31,0:41:26.93,Sub,,0,0,0,,So let me move on to the second part.
+Dialogue: 0,0:41:26.93,0:41:28.53,Sub,,0,0,0,,OK last slide.
+Dialogue: 0,0:41:28.53,0:41:33.61,Sub,,0,0,0,,This is what ASML did right 222 alpha demo tools in 2006.
+Dialogue: 0,0:41:33.61,0:41:38.31,Sub,,0,0,0,,And a bunch of six of them R&D tools in 2010.
+Dialogue: 0,0:41:38.31,0:41:39.63,Sub,,0,0,0,,Starting in 2010.
+Dialogue: 0,0:41:39.63,0:41:49.33,Sub,,0,0,0,,But in 2013 ASML did the third generation 3,300 B 3300b lens design is the same as the 3,100, but the Germans thought that
+Dialogue: 0,0:41:49.33,0:41:56.01,Sub,,0,0,0,,with better fabrication, they could enlarge the DNA from 0.25 to 0.33.
+Dialogue: 0,0:41:56.01,0:42:00.29,Sub,,0,0,0,,And this is the Na that we're using until now.
+Dialogue: 0,0:42:00.29,0:42:02.34,Sub,,0,0,0,,All the subsequent machines.
+Dialogue: 0,0:42:02.34,0:42:05.54,Sub,,0,0,0,,0.33 machines all use the same lens design.
+Dialogue: 0,0:42:05.54,0:42:12.00,Sub,,0,0,0,,Sorry and then in 2019, we have the 3400c the workhorse.
+Dialogue: 0,0:42:12.00,0:42:15.94,Sub,,0,0,0,,And then all these machines are being retired.
+Dialogue: 0,0:42:15.94,0:42:18.50,Sub,,0,0,0,,But 3400c still working.
+Dialogue: 0,0:42:18.50,0:42:22.60,Sub,,0,0,0,,And then to 2021 we came out with 3600d.
+Dialogue: 0,0:42:22.60,0:42:25.74,Sub,,0,0,0,,Now that was the first part.
+Dialogue: 0,0:42:25.74,0:42:28.08,Sub,,0,0,0,,Second part is the current status.
+Dialogue: 0,0:42:28.08,0:42:31.40,Sub,,0,0,0,,First the 0.33 Na, which is the workhorse.
+Dialogue: 0,0:42:31.40,0:42:35.44,Sub,,0,0,0,,And then the 0.55 the next generation high Na.
+Dialogue: 0,0:42:35.44,0:42:40.58,Sub,,0,0,0,,So this is our latest 0.33 machine.
+Dialogue: 0,0:42:40.58,0:42:42.42,Sub,,0,0,0,,The 3,800 right.
+Dialogue: 0,0:42:42.42,0:42:45.06,Sub,,0,0,0,,We've already gone through 3,000 403,600.
+Dialogue: 0,0:42:45.06,0:42:46.54,Sub,,0,0,0,,And now the 3,800.
+Dialogue: 0,0:42:46.54,0:42:50.74,Sub,,0,0,0,,The 3,800 machine is quite a nice machine.
+Dialogue: 0,0:42:50.74,0:42:57.74,Sub,,0,0,0,,And of course, the throughput has been increased to 220 wafers per hour at 30 millijoules per centimeter square.
+Dialogue: 0,0:42:57.74,0:43:04.42,Sub,,0,0,0,,You always have to specify the dose if the dose is very high, of course, the throughput comes down.
+Dialogue: 0,0:43:04.42,0:43:14.10,Sub,,0,0,0,,We have a 500 Watt EUV source now and then we have a very low aberration projection optics here.
+Dialogue: 0,0:43:14.10,0:43:18.00,Sub,,0,0,0,,This is the 3,800.
+Dialogue: 0,0:43:18.00,0:43:19.44,Sub,,0,0,0,,And how did it do.
+Dialogue: 0,0:43:19.44,0:43:23.86,Sub,,0,0,0,,Well first, let me show you some overlay number.
+Dialogue: 0,0:43:23.86,0:43:32.68,Sub,,0,0,0,,This is a dedicated chalk overlay meaning that the wafer gets on one Chuck and you expose it and it gets on the same Chuck,
+Dialogue: 0,0:43:32.68,0:43:35.52,Sub,,0,0,0,,and you expose it again, and you measure the overlay.
+Dialogue: 0,0:43:35.52,0:43:42.90,Sub,,0,0,0,,And this dedicated overlay number is extremely good, 0.50.6 nanometer.
+Dialogue: 0,0:43:42.90,0:43:45.00,Sub,,0,0,0,,I'm not talking about one point.
+Dialogue: 0,0:43:45.00,0:43:52.50,Sub,,0,0,0,,Each field has 49 points 76 fields per wafer times 12 wafers.
+Dialogue: 0,0:43:52.50,0:43:57.28,Sub,,0,0,0,,These numbers came from these many points.
+Dialogue: 0,0:43:57.28,0:43:59.13,Sub,,0,0,0,,And this is not just a 3 sigma.
+Dialogue: 0,0:43:59.13,0:44:01.27,Sub,,0,0,0,,It's mean plus minus 3 sigma.
+Dialogue: 0,0:44:01.27,0:44:03.09,Sub,,0,0,0,,This is the whole thing.
+Dialogue: 0,0:44:03.09,0:44:06.21,Sub,,0,0,0,,And match machine overlay.
+Dialogue: 0,0:44:06.21,0:44:10.43,Sub,,0,0,0,,Meaning that overlay read on two different machines.
+Dialogue: 0,0:44:10.43,0:44:12.35,Sub,,0,0,0,,This one is not working.
+Dialogue: 0,0:44:12.35,0:44:18.19,Sub,,0,0,0,,That's OK on two different machines, but of the same type of both 3,800.
+Dialogue: 0,0:44:18.19,0:44:21.19,Sub,,0,0,0,,And then we get 0.9 and 0.8.
+Dialogue: 0,0:44:21.19,0:44:22.53,Sub,,0,0,0,,Still very good.
+Dialogue: 0,0:44:22.53,0:44:24.37,Sub,,0,0,0,,OK still very good.
+Dialogue: 0,0:44:24.37,0:44:29.97,Sub,,0,0,0,,And you can see that we were below the spec OK.
+Dialogue: 0,0:44:29.97,0:44:32.23,Sub,,0,0,0,,Now what's the reliability.
+Dialogue: 0,0:44:32.23,0:44:34.11,Sub,,0,0,0,,I mean, are they all always down.
+Dialogue: 0,0:44:34.11,0:44:35.89,Sub,,0,0,0,,No, no they're mostly up.
+Dialogue: 0,0:44:35.89,0:44:41.86,Sub,,0,0,0,,The availability is 93.5% worldwide on all the machines.
+Dialogue: 0,0:44:41.86,0:44:43.23,Sub,,0,0,0,,This is the average availability.
+Dialogue: 0,0:44:43.23,0:44:44.71,Sub,,0,0,0,,So it's already very good.
+Dialogue: 0,0:44:44.71,0:44:46.31,Sub,,0,0,0,,Not as good as the deep-v machines.
+Dialogue: 0,0:44:46.31,0:44:46.99,Sub,,0,0,0,,Deep-v machines.
+Dialogue: 0,0:44:46.99,0:44:47.57,Sub,,0,0,0,,They are.
+Dialogue: 0,0:44:47.57,0:44:54.67,Sub,,0,0,0,,The availability is above 95% So yes, we continue to work on it to improve the availability.
+Dialogue: 0,0:44:54.67,0:44:58.39,Sub,,0,0,0,,And how many of these machines are there.
+Dialogue: 0,0:44:58.39,0:45:00.59,Sub,,0,0,0,,Here's the cumulative number.
+Dialogue: 0,0:45:00.59,0:45:09.23,Sub,,0,0,0,,By the end of Q4 2024, about 270 machines are in the field all running OK.
+Dialogue: 0,0:45:09.23,0:45:11.57,Sub,,0,0,0,,34 603,800.
+Dialogue: 0,0:45:11.57,0:45:22.83,Sub,,0,0,0,,These three types, the 3,300 have been retired about 270 machines by the end of last year, all working either in R&D or production.
+Dialogue: 0,0:45:22.83,0:45:26.73,Sub,,0,0,0,,Now, how many wafers can you produce a day.
+Dialogue: 0,0:45:26.73,0:45:29.55,Sub,,0,0,0,,All these questions are asked by our customers.
+Dialogue: 0,0:45:29.55,0:45:38.15,Sub,,0,0,0,,The number of wafers that we produce today on average is about 3,000 on a single system.
+Dialogue: 0,0:45:38.15,0:45:39.77,Sub,,0,0,0,,We can do a little better.
+Dialogue: 0,0:45:39.77,0:45:44.11,Sub,,0,0,0,,So it's between 3,000 and 3,500.
+Dialogue: 0,0:45:44.11,0:45:48.23,Sub,,0,0,0,,Of course, we're going to continue to improve this number.
+Dialogue: 0,0:45:48.23,0:45:49.19,Sub,,0,0,0,,All right.
+Dialogue: 0,0:45:49.19,0:45:51.65,Sub,,0,0,0,,So where are we going from here.
+Dialogue: 0,0:45:51.65,0:45:57.77,Sub,,0,0,0,,Well, of course scaling has slowed down but it has not stopped.
+Dialogue: 0,0:45:57.77,0:46:00.45,Sub,,0,0,0,,So scaling will continue.
+Dialogue: 0,0:46:00.45,0:46:07.49,Sub,,0,0,0,,And because of that, we started to OK, this is another thing.
+Dialogue: 0,0:46:07.49,0:46:12.61,Sub,,0,0,0,,We're not scaling as steeply as before.
+Dialogue: 0,0:46:12.61,0:46:20.09,Sub,,0,0,0,,This slope, this was the slope down to 3 nanometer generation.
+Dialogue: 0,0:46:20.09,0:46:22.85,Sub,,0,0,0,,And you can see an inflection point, a kink.
+Dialogue: 0,0:46:22.85,0:46:25.05,Sub,,0,0,0,,Starting from 3 nanometer.
+Dialogue: 0,0:46:25.05,0:46:27.07,Sub,,0,0,0,,It comes down more gradually.
+Dialogue: 0,0:46:27.07,0:46:30.69,Sub,,0,0,0,,We're never going to go back to this kind of slope.
+Dialogue: 0,0:46:30.69,0:46:33.83,Sub,,0,0,0,,However we have not stopped OK.
+Dialogue: 0,0:46:33.83,0:46:38.85,Sub,,0,0,0,,This was really a turning point at 3:00 nanometer generation.
+Dialogue: 0,0:46:38.85,0:46:52.69,Sub,,0,0,0,,Because of that, we 10 years ago, we started to develop a hyena system 0.55 because there is a need for scaling.
+Dialogue: 0,0:46:52.69,0:46:56.64,Sub,,0,0,0,,Good that good thing that the slope has not stopped.
+Dialogue: 0,0:46:56.64,0:47:00.52,Sub,,0,0,0,,OK, so system design for years.
+Dialogue: 0,0:47:00.52,0:47:04.28,Sub,,0,0,0,,Module manufacturing started in 2018.
+Dialogue: 0,0:47:04.28,0:47:07.44,Sub,,0,0,0,,In 2012 we integrated the modules.
+Dialogue: 0,0:47:07.44,0:47:08.34,Sub,,0,0,0,,This is the source.
+Dialogue: 0,0:47:08.34,0:47:11.38,Sub,,0,0,0,,This is if right here intermediate focus.
+Dialogue: 0,0:47:11.38,0:47:12.88,Sub,,0,0,0,,The scanner will be here.
+Dialogue: 0,0:47:12.88,0:47:14.80,Sub,,0,0,0,,This is the vessel.
+Dialogue: 0,0:47:14.80,0:47:16.12,Sub,,0,0,0,,The vessel.
+Dialogue: 0,0:47:16.12,0:47:23.64,Sub,,0,0,0,,This is the illuminator picture of the illuminator made by Zeiss.
+Dialogue: 0,0:47:23.64,0:47:27.72,Sub,,0,0,0,,That's the wafer stage we make in veldhoven, Holland.
+Dialogue: 0,0:47:27.72,0:47:30.34,Sub,,0,0,0,,The radical stage made here in the US.
+Dialogue: 0,0:47:30.34,0:47:32.28,Sub,,0,0,0,,Connecticut Wilton, Connecticut.
+Dialogue: 0,0:47:32.28,0:47:40.24,Sub,,0,0,0,,OK, so you put all these things together, and we put together the first machine in 2023, in veldhoven.
+Dialogue: 0,0:47:40.24,0:47:42.86,Sub,,0,0,0,,And then in the.
+Dialogue: 0,0:47:42.86,0:47:46.22,Sub,,0,0,0,,And then the next machine I'll show you in the next slide.
+Dialogue: 0,0:47:46.22,0:47:51.52,Sub,,0,0,0,,But then the next machine in veldhoven is the machine for the joint lab with IMEC.
+Dialogue: 0,0:47:51.52,0:47:56.86,Sub,,0,0,0,,But before this happened, we shipped a machine to our.
+Dialogue: 0,0:47:56.86,0:47:59.82,Sub,,0,0,0,,OK, first let me talk about the optics.
+Dialogue: 0,0:47:59.82,0:48:01.46,Sub,,0,0,0,,This is the biggest piece.
+Dialogue: 0,0:48:01.46,0:48:05.34,Sub,,0,0,0,,This is the largest mirror facing the wafer.
+Dialogue: 0,0:48:05.34,0:48:12.50,Sub,,0,0,0,,This mirror has a diameter of 1 meter and an aberration number of 20 picometers.
+Dialogue: 0,0:48:12.50,0:48:15.98,Sub,,0,0,0,,OK yeah, that's actually shown here.
+Dialogue: 0,0:48:15.98,0:48:25.62,Sub,,0,0,0,,The first machine actually went to Intel right before the end of 2023.
+Dialogue: 0,0:48:25.62,0:48:27.92,Sub,,0,0,0,,Of course, it takes a few.
+Dialogue: 0,0:48:27.92,0:48:30.60,Sub,,0,0,0,,747 to ship the whole machine.
+Dialogue: 0,0:48:30.60,0:48:32.38,Sub,,0,0,0,,This is just one of them.
+Dialogue: 0,0:48:32.38,0:48:38.64,Sub,,0,0,0,,And it was going into Intel's R&D fab in Portland, Oregon.
+Dialogue: 0,0:48:41.74,0:48:47.50,Sub,,0,0,0,,And wrapping cranes as you can see.
+Dialogue: 0,0:48:47.50,0:48:48.48,Sub,,0,0,0,,Quite heavy.
+Dialogue: 0,0:48:52.81,0:48:54.83,Sub,,0,0,0,,This is the frame.
+Dialogue: 0,0:48:54.83,0:48:55.83,Sub,,0,0,0,,This is the illuminator.
+Dialogue: 0,0:48:55.83,0:49:00.65,Sub,,0,0,0,,Here OK yeah.
+Dialogue: 0,0:49:00.65,0:49:04.31,Sub,,0,0,0,,Well, this video came from Intel, and this is the end of the video.
+Dialogue: 0,0:49:04.31,0:49:07.53,Sub,,0,0,0,,And you can see that the wafer stage is not in there yet.
+Dialogue: 0,0:49:07.53,0:49:10.45,Sub,,0,0,0,,I don't know why they had this plastic thing to cover it up.
+Dialogue: 0,0:49:10.45,0:49:12.15,Sub,,0,0,0,,The lens is already in there.
+Dialogue: 0,0:49:12.15,0:49:14.53,Sub,,0,0,0,,The illuminator is not in there yet.
+Dialogue: 0,0:49:14.53,0:49:17.59,Sub,,0,0,0,,And the radical stage on top is not in there yet.
+Dialogue: 0,0:49:17.59,0:49:19.81,Sub,,0,0,0,,But the source is already in there.
+Dialogue: 0,0:49:19.81,0:49:23.45,Sub,,0,0,0,,So this picture tells a lot of story.
+Dialogue: 0,0:49:23.45,0:49:29.73,Sub,,0,0,0,,This is inside Intel's R&D fab in Oregon.
+Dialogue: 0,0:49:29.73,0:49:34.03,Sub,,0,0,0,,And then, of course, the next machine we put it in veldhoven.
+Dialogue: 0,0:49:34.03,0:49:35.91,Sub,,0,0,0,,This is a joint lab with IMEC.
+Dialogue: 0,0:49:35.91,0:49:46.09,Sub,,0,0,0,,Normally a machine would go to IMEC, but for the first machine, in order to maintain it more easily, we put it in veldhoven, smack in the middle of our factory.
+Dialogue: 0,0:49:46.09,0:49:47.21,Sub,,0,0,0,,And let me see.
+Dialogue: 0,0:49:47.21,0:49:49.31,Sub,,0,0,0,,Get the animation started.
+Dialogue: 0,0:49:52.51,0:49:54.75,Sub,,0,0,0,,Yeah, this is real.
+Dialogue: 0,0:49:54.75,0:49:58.15,Sub,,0,0,0,,The machine made it to a Tor track.
+Dialogue: 0,0:49:58.15,0:50:03.97,Sub,,0,0,0,,And there's a metrology room with all the ancillary stuff is located.
+Dialogue: 0,0:50:03.97,0:50:06.79,Sub,,0,0,0,,So this is the high end lab we have at IMEC.
+Dialogue: 0,0:50:06.79,0:50:12.07,Sub,,0,0,0,,And then the next few slides, I'll show results from this lab.
+Dialogue: 0,0:50:12.07,0:50:15.89,Sub,,0,0,0,,First result is the DRAM, right.
+Dialogue: 0,0:50:15.89,0:50:25.35,Sub,,0,0,0,,Drams the most critical two layers in DRAM are the hexagonal storage node lithography.
+Dialogue: 0,0:50:25.35,0:50:28.87,Sub,,0,0,0,,Now the state of the art is right here.
+Dialogue: 0,0:50:28.87,0:50:30.07,Sub,,0,0,0,,It's 34.
+Dialogue: 0,0:50:30.07,0:50:37.39,Sub,,0,0,0,,This has just entered HVM high volume manufacturing.
+Dialogue: 0,0:50:37.39,0:50:39.01,Sub,,0,0,0,,Leading edge DRAM makers.
+Dialogue: 0,0:50:39.01,0:50:40.83,Sub,,0,0,0,,You can see with pitch 34.
+Dialogue: 0,0:50:40.83,0:50:44.17,Sub,,0,0,0,,Low-high and low can still do it.
+Dialogue: 0,0:50:44.17,0:50:45.83,Sub,,0,0,0,,In fact, it's done with low.
+Dialogue: 0,0:50:45.83,0:50:49.09,Sub,,0,0,0,,Nowadays in manufacturing OK.
+Dialogue: 0,0:50:49.09,0:50:52.61,Sub,,0,0,0,,But Hina would have done it with ease.
+Dialogue: 0,0:50:52.61,0:51:01.77,Sub,,0,0,0,,And then, of course, when you go beyond page 34 Lo, it will become much more difficult.
+Dialogue: 0,0:51:01.77,0:51:07.91,Sub,,0,0,0,,The The equivalent dose would be very high.
+Dialogue: 0,0:51:07.91,0:51:12.57,Sub,,0,0,0,,The reason is because you could not make use of the full illuminator.
+Dialogue: 0,0:51:12.57,0:51:14.69,Sub,,0,0,0,,You lose light.
+Dialogue: 0,0:51:14.69,0:51:18.47,Sub,,0,0,0,,So equivalently that means the dose is higher with high Na.
+Dialogue: 0,0:51:18.47,0:51:19.23,Sub,,0,0,0,,No problem.
+Dialogue: 0,0:51:19.23,0:51:22.21,Sub,,0,0,0,,You go on to pitch 28 and below.
+Dialogue: 0,0:51:22.21,0:51:24.37,Sub,,0,0,0,,And this is the other layer.
+Dialogue: 0,0:51:24.37,0:51:25.63,Sub,,0,0,0,,There are two layers right.
+Dialogue: 0,0:51:25.63,0:51:27.71,Sub,,0,0,0,,One storage node, which is a positive tone.
+Dialogue: 0,0:51:27.71,0:51:33.01,Sub,,0,0,0,,And a negative tone is the storage node pad that sits underneath the storage node.
+Dialogue: 0,0:51:33.01,0:51:38.75,Sub,,0,0,0,,The capacitors again using low at pitch 32 are very difficult.
+Dialogue: 0,0:51:38.75,0:51:42.11,Sub,,0,0,0,,Very difficult. With this thing is more difficult.
+Dialogue: 0,0:51:42.11,0:51:50.56,Sub,,0,0,0,,The reason is that it has the periphery circuit, the subwoofer driver and the sense amplifiers in one shot with hayana.
+Dialogue: 0,0:51:50.56,0:51:52.64,Sub,,0,0,0,,Very good. adi?
+Dialogue: 0,0:51:52.64,0:51:59.18,Sub,,0,0,0,,After this is after H and at 28 after H. It looks good.
+Dialogue: 0,0:51:59.18,0:52:01.46,Sub,,0,0,0,,So hayana has got a lot of potential.
+Dialogue: 0,0:52:01.46,0:52:06.36,Sub,,0,0,0,,It's not in HVM yet, but we hope that it will be HVM soon.
+Dialogue: 0,0:52:06.36,0:52:08.30,Sub,,0,0,0,,Now this is logic, OK.
+Dialogue: 0,0:52:08.30,0:52:09.58,Sub,,0,0,0,,Logic circuit.
+Dialogue: 0,0:52:09.58,0:52:13.24,Sub,,0,0,0,,The hardest layer to print is metal 0.
+Dialogue: 0,0:52:13.24,0:52:14.90,Sub,,0,0,0,,That's the lowest metal layer.
+Dialogue: 0,0:52:14.90,0:52:22.70,Sub,,0,0,0,,Now it's printed with the low 0.33 with two or three multiple exposures.
+Dialogue: 0,0:52:22.70,0:52:25.06,Sub,,0,0,0,,Purple is one where Brown is another one.
+Dialogue: 0,0:52:25.06,0:52:27.80,Sub,,0,0,0,,And then you have these cut layers.
+Dialogue: 0,0:52:27.80,0:52:32.54,Sub,,0,0,0,,If you were to expose it with hayana you could do this in one shot.
+Dialogue: 0,0:52:32.54,0:52:37.72,Sub,,0,0,0,,In the interest of time, I'm going to go through just to show you this result from IMEC.
+Dialogue: 0,0:52:37.72,0:52:40.90,Sub,,0,0,0,,A pitch equal to 19, which we're not there yet.
+Dialogue: 0,0:52:40.90,0:52:42.90,Sub,,0,0,0,,OK we're at pitch 23 right now.
+Dialogue: 0,0:52:42.90,0:52:47.88,Sub,,0,0,0,,At three nanometer node, pitch 19 will be future node note with a tip to tip.
+Dialogue: 0,0:52:47.88,0:52:51.66,Sub,,0,0,0,,The tip to tip is another very important metric.
+Dialogue: 0,0:52:51.66,0:52:55.74,Sub,,0,0,0,,This is single shot EUV lithography.
+Dialogue: 0,0:52:55.74,0:52:59.52,Sub,,0,0,0,,Not only can we do metal layers, but also the contact layers.
+Dialogue: 0,0:52:59.52,0:53:07.62,Sub,,0,0,0,,These are 30 nanometer contact layers from center to center, so the nominal CD is 15.
+Dialogue: 0,0:53:07.62,0:53:12.42,Sub,,0,0,0,,This is after lithography and this is after etch OK.
+Dialogue: 0,0:53:12.42,0:53:18.58,Sub,,0,0,0,,So I mean, how best can you do this.
+Dialogue: 0,0:53:18.58,0:53:20.24,Sub,,0,0,0,,What's the limit of this.
+Dialogue: 0,0:53:20.24,0:53:27.36,Sub,,0,0,0,,Well I want to show you a slide that has a very small pitch.
+Dialogue: 0,0:53:27.36,0:53:29.08,Sub,,0,0,0,,This is 8 nanometer half pitch.
+Dialogue: 0,0:53:29.08,0:53:30.68,Sub,,0,0,0,,So 16 nanometer pitch.
+Dialogue: 0,0:53:30.68,0:53:34.56,Sub,,0,0,0,,If you put it in the formula the K1 is 0.33.
+Dialogue: 0,0:53:34.56,0:53:37.68,Sub,,0,0,0,,Still we're not close to K1 equal to 0.25.
+Dialogue: 0,0:53:37.68,0:53:39.72,Sub,,0,0,0,,But you can see we could do it.
+Dialogue: 0,0:53:39.72,0:53:43.50,Sub,,0,0,0,,But of course, the image is of low contrast.
+Dialogue: 0,0:53:43.50,0:53:45.85,Sub,,0,0,0,,How do we.
+Dialogue: 0,0:53:45.85,0:53:48.17,Sub,,0,0,0,,This cannot be in the manufacturing.
+Dialogue: 0,0:53:48.17,0:53:50.49,Sub,,0,0,0,,The contrast has to be a lot higher.
+Dialogue: 0,0:53:50.49,0:53:52.39,Sub,,0,0,0,,And how do we increase the contracts.
+Dialogue: 0,0:53:52.39,0:53:54.79,Sub,,0,0,0,,And this will lead to the next part of the talk.
+Dialogue: 0,0:53:54.79,0:53:56.55,Sub,,0,0,0,,I'd like to invite my colleague Ronald.
+Dialogue: 0,0:54:00.05,0:54:00.75,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:54:04.57,0:54:07.65,Sub,,0,0,0,,Tony and.
+Dialogue: 0,0:54:07.65,0:54:12.35,Sub,,0,0,0,,Remember that Tony talked about customers asking tough questions.
+Dialogue: 0,0:54:12.35,0:54:16.75,Sub,,0,0,0,,Do you get good resolution and can you make it cheaper.
+Dialogue: 0,0:54:16.75,0:54:21.09,Sub,,0,0,0,,And that's ultimately the business that we're in better resolution.
+Dialogue: 0,0:54:21.09,0:54:27.45,Sub,,0,0,0,,Tony talked about the formula that the minimum half pitch is K1 lambda over.
+Dialogue: 0,0:54:27.45,0:54:31.45,Sub,,0,0,0,,So in general try to go to a shorter wavelength.
+Dialogue: 0,0:54:31.45,0:54:39.37,Sub,,0,0,0,,That's always very complicated to go from 193 to 13.5 what was the timeline.
+Dialogue: 0,0:54:39.37,0:54:42.27,Sub,,0,0,0,,How many years did you say 35 years.
+Dialogue: 0,0:54:42.27,0:54:47.07,Sub,,0,0,0,,So we're going to stick with 13.5 nanometers for quite a while.
+Dialogue: 0,0:54:47.07,0:54:49.59,Sub,,0,0,0,,The next thing that you can do is go to a larger.
+Dialogue: 0,0:54:49.59,0:54:51.65,Sub,,0,0,0,,But you already saw how expensive that is.
+Dialogue: 0,0:54:51.65,0:54:54.83,Sub,,0,0,0,,And then you have the third factor, the K1.
+Dialogue: 0,0:54:54.83,0:55:00.85,Sub,,0,0,0,,And I kind of feel a little bit pretentious being here,
+Dialogue: 0,0:55:00.85,0:55:09.11,Sub,,0,0,0,,because then we start talking about computational lithography and who am I daring to show up here at Berkeley, where
+Dialogue: 0,0:55:09.11,0:55:15.21,Sub,,0,0,0,,one of your professors, Andy neureuter he's really the godfather of computational lithography.
+Dialogue: 0,0:55:15.21,0:55:18.75,Sub,,0,0,0,,So I'm basically preaching to the choir.
+Dialogue: 0,0:55:18.75,0:55:23.31,Sub,,0,0,0,,But allow me anyway to share my view on some of this.
+Dialogue: 0,0:55:23.31,0:55:34.75,Sub,,0,0,0,,Obviously, we stand on the shoulders of many Giants that have helped with developing a lot of the theory all the way from Fresnel, Fourier, Maxwell, Helmholtz, Ernst
+Dialogue: 0,0:55:34.75,0:55:46.19,Sub,,0,0,0,,Abbe there, this guy here that was one of the first chief scientists of Zeiss, did a lot of work on microscopy and developed it from there.
+Dialogue: 0,0:55:49.13,0:55:49.95,Sub,,0,0,0,,What did he say.
+Dialogue: 0,0:55:49.95,0:55:52.87,Sub,,0,0,0,,He say in 1873 already.
+Dialogue: 0,0:55:52.87,0:56:02.01,Sub,,0,0,0,,Hey, the minimum pitch is 1/2 times the wavelength divided by the sine of that opening angle that we now call the.
+Dialogue: 0,0:56:02.01,0:56:04.59,Sub,,0,0,0,,And he didn't have the refractive index yet.
+Dialogue: 0,0:56:04.59,0:56:09.53,Sub,,0,0,0,,Now we say that n times the sine of that angle is the numerical aperture.
+Dialogue: 0,0:56:09.53,0:56:12.81,Sub,,0,0,0,,But isn't it remarkable.
+Dialogue: 0,0:56:12.81,0:56:25.53,Sub,,0,0,0,,Since 1873 to the day of today, a very simple formula has governed our roadmap, and the rest was simply technology.
+Dialogue: 0,0:56:25.53,0:56:28.89,Sub,,0,0,0,,Well, technology is not always simple.
+Dialogue: 0,0:56:28.89,0:56:37.69,Sub,,0,0,0,,Lin from TSMC said, hey, lambda and Na, that's physics and that's geometry of your lenses.
+Dialogue: 0,0:56:37.69,0:56:45.28,Sub,,0,0,0,,But that K1, that's all kind of illumination tricks chemistry, resist contrast, aberrations, and mask tricks.
+Dialogue: 0,0:56:45.28,0:56:49.32,Sub,,0,0,0,,And the minimum value that you can accomplish is 0.25.
+Dialogue: 0,0:56:49.32,0:56:57.20,Sub,,0,0,0,,So I'm going to talk about what can we all do to reduce that K1 if we want to do that with computation.
+Dialogue: 0,0:56:57.20,0:57:01.22,Sub,,0,0,0,,It starts with I need to have a good model for what am I actually getting.
+Dialogue: 0,0:57:01.22,0:57:12.96,Sub,,0,0,0,,So I need a forward model with which I can predict what is the quality of the imaging that I get and that good model that will involve a MAST model.
+Dialogue: 0,0:57:12.96,0:57:16.44,Sub,,0,0,0,,I need to see what is happening in my optics.
+Dialogue: 0,0:57:16.44,0:57:18.62,Sub,,0,0,0,,What is the reaction of my resist.
+Dialogue: 0,0:57:18.62,0:57:20.04,Sub,,0,0,0,,That's a lot of chemistry.
+Dialogue: 0,0:57:20.04,0:57:23.34,Sub,,0,0,0,,And ultimately, I don't care what the pattern is, am I resist.
+Dialogue: 0,0:57:23.34,0:57:25.74,Sub,,0,0,0,,I want it to have it in a device layer.
+Dialogue: 0,0:57:25.74,0:57:30.08,Sub,,0,0,0,,So I need an edge model that becomes my forward model.
+Dialogue: 0,0:57:30.08,0:57:36.84,Sub,,0,0,0,,And a lot of effort has gone into how do I make that forward model as good as I can.
+Dialogue: 0,0:57:36.84,0:57:39.22,Sub,,0,0,0,,And we continue to improve with that.
+Dialogue: 0,0:57:39.22,0:57:41.76,Sub,,0,0,0,,More and more physics, more and more chemistry.
+Dialogue: 0,0:57:41.76,0:57:45.76,Sub,,0,0,0,,And at some point in time, we said, hey, AI is starting to take off.
+Dialogue: 0,0:57:45.76,0:57:48.34,Sub,,0,0,0,,And perhaps when we have a lot of good measurements,
+Dialogue: 0,0:57:48.34,0:57:59.58,Sub,,0,0,0,,we can develop an AI model that can predict what I will get, even without fully understanding why that is what I will get and all of that is being employed.
+Dialogue: 0,0:57:59.58,0:58:04.18,Sub,,0,0,0,,But once I have such a good model, I can go and play all kinds of tricks.
+Dialogue: 0,0:58:04.18,0:58:13.88,Sub,,0,0,0,,I can make a little manufacturing check where with a little layer and a little model that I have developed, I can now say, what am I going to get on the wafer.
+Dialogue: 0,0:58:13.88,0:58:17.62,Sub,,0,0,0,,And is that what I wanted in the first place.
+Dialogue: 0,0:58:17.62,0:58:23.60,Sub,,0,0,0,,Another option is that I say, hey, I have a little layer and I have measurements on what is the wafer.
+Dialogue: 0,0:58:23.60,0:58:28.86,Sub,,0,0,0,,I can calibrate that model or I have a little model.
+Dialogue: 0,0:58:28.86,0:58:31.22,Sub,,0,0,0,,I know what I want on the wafer.
+Dialogue: 0,0:58:31.22,0:58:37.18,Sub,,0,0,0,,What do I need to put on my reticle so that I get, in the end, what I wanted in the first place.
+Dialogue: 0,0:58:37.18,0:58:40.07,Sub,,0,0,0,,And you contributed quite a bit of that.
+Dialogue: 0,0:58:40.07,0:58:43.11,Sub,,0,0,0,,That's where the field of inverse lithography and so on.
+Dialogue: 0,0:58:43.11,0:58:45.23,Sub,,0,0,0,,I'm going to talk about a different one today.
+Dialogue: 0,0:58:45.23,0:58:46.65,Sub,,0,0,0,,And that's this one here.
+Dialogue: 0,0:58:46.65,0:58:48.51,Sub,,0,0,0,,I know what I want on the wafer.
+Dialogue: 0,0:58:48.51,0:58:50.03,Sub,,0,0,0,,How can I optimize.
+Dialogue: 0,0:58:50.03,0:58:52.73,Sub,,0,0,0,,What is the pattern that I put on the little layer.
+Dialogue: 0,0:58:52.73,0:58:56.07,Sub,,0,0,0,,And how do I instruct my scanner.
+Dialogue: 0,0:58:56.07,0:59:04.85,Sub,,0,0,0,,What is the illumination that I will use on the scanner to maximize the contrast to get the best possible results.
+Dialogue: 0,0:59:04.85,0:59:11.45,Sub,,0,0,0,,Now, when we talk about illumination, let me talk for a moment about an illumination system.
+Dialogue: 0,0:59:11.45,0:59:18.53,Sub,,0,0,0,,Trick is what I would like to have is very, very uniform illumination of my mask.
+Dialogue: 0,0:59:18.53,0:59:28.33,Sub,,0,0,0,,And in order to play with interference and to play with diffraction and be able to manipulate exactly what is the interference pattern
+Dialogue: 0,0:59:28.33,0:59:35.61,Sub,,0,0,0,,that I get on the wafer, I need to make sure that this is spatially coherent light.
+Dialogue: 0,0:59:35.61,0:59:37.15,Sub,,0,0,0,,And how do we do that.
+Dialogue: 0,0:59:37.15,0:59:40.19,Sub,,0,0,0,,We create this so-called 4f system.
+Dialogue: 0,0:59:40.19,0:59:45.99,Sub,,0,0,0,,A guy Kohler invented this by having this four lens system.
+Dialogue: 0,0:59:45.99,0:59:55.23,Sub,,0,0,0,,What I can create is, for every point in the light source, there is one particular set of planar waves that hits the mask.
+Dialogue: 0,0:59:55.23,1:00:04.55,Sub,,0,0,0,,So if I imagine myself sitting on the mask and I look back at the illumination, imagine a circle
+Dialogue: 0,1:00:04.55,1:00:07.57,Sub,,0,0,0,,and I could get light from that whole circle at me.
+Dialogue: 0,1:00:07.57,1:00:09.75,Sub,,0,0,0,,That would be a cone of light.
+Dialogue: 0,1:00:09.75,1:00:13.25,Sub,,0,0,0,,I could have light just coming from the center of that point.
+Dialogue: 0,1:00:13.25,1:00:15.71,Sub,,0,0,0,,That would be one planar wave.
+Dialogue: 0,1:00:15.71,1:00:22.33,Sub,,0,0,0,,I will also show you that I can have light coming from there and from there, and then I get very particular diffraction.
+Dialogue: 0,1:00:22.33,1:00:25.25,Sub,,0,0,0,,And that's all the optimization that we're going to do.
+Dialogue: 0,1:00:28.27,1:00:35.78,Sub,,0,0,0,,So here you see that a little bit for every point in my source plane in the illumination I now get a number.
+Dialogue: 0,1:00:35.78,1:00:41.82,Sub,,0,0,0,,I got plane waves onto the mask that leads to diffraction.
+Dialogue: 0,1:00:41.82,1:00:45.04,Sub,,0,0,0,,So the diffraction orders are captured by the objective lens.
+Dialogue: 0,1:00:45.04,1:00:48.40,Sub,,0,0,0,,And the bigger this lens, the bigger these opening angles,
+Dialogue: 0,1:00:48.40,1:00:56.00,Sub,,0,0,0,,the more of these diffraction patterns I capture, and the better will be the reconstruction of the image here on the image plane.
+Dialogue: 0,1:00:56.00,1:00:58.98,Sub,,0,0,0,,That's basically Fourier optics.
+Dialogue: 0,1:00:58.98,1:01:09.42,Sub,,0,0,0,,So let's look a little bit more at diffraction for those of you that are not totally familiar with that, Mr. Huygens already said, hey, when you have light hitting an opening,
+Dialogue: 0,1:01:09.42,1:01:14.90,Sub,,0,0,0,,each point here starts to act as a source of spherical waves,
+Dialogue: 0,1:01:14.90,1:01:26.00,Sub,,0,0,0,,and it's really the path optical path length differences that then create this pattern here, where in some directions I end up getting light, and in other directions I do not get light.
+Dialogue: 0,1:01:26.00,1:01:28.90,Sub,,0,0,0,,And those are called the diffraction orders.
+Dialogue: 0,1:01:28.90,1:01:37.44,Sub,,0,0,0,,In essence, if I look at my aperture, the mask, and I think of that as a repeating pattern.
+Dialogue: 0,1:01:37.44,1:01:44.88,Sub,,0,0,0,,I can take the Fourier transform of that pattern, and every diffraction order encodes one of the Fourier components.
+Dialogue: 0,1:01:44.88,1:01:47.64,Sub,,0,0,0,,And you can think of the lens as a filter.
+Dialogue: 0,1:01:47.64,1:01:51.70,Sub,,0,0,0,,How many of the Fourier components can I capture that lead.
+Dialogue: 0,1:01:51.70,1:01:54.66,Sub,,0,0,0,,Help me reconstruct the pattern of the mask.
+Dialogue: 0,1:01:54.66,1:01:58.12,Sub,,0,0,0,,Now on the wafer.
+Dialogue: 0,1:01:58.12,1:02:04.32,Sub,,0,0,0,,So in certain directions, look at this wave from this opening.
+Dialogue: 0,1:02:04.32,1:02:09.82,Sub,,0,0,0,,This one here had just this one was one wavelength to here this one was two.
+Dialogue: 0,1:02:09.82,1:02:10.96,Sub,,0,0,0,,This one was three.
+Dialogue: 0,1:02:10.96,1:02:19.42,Sub,,0,0,0,,So in this particular direction, all of these waves are in phase and they contribute to positive interference.
+Dialogue: 0,1:02:19.42,1:02:23.36,Sub,,0,0,0,,And that is called the Bragg condition.
+Dialogue: 0,1:02:23.36,1:02:31.76,Sub,,0,0,0,,Each of these diffraction patterns I can now project here in the pupil plane for the lens as a particular spot.
+Dialogue: 0,1:02:31.76,1:02:36.96,Sub,,0,0,0,,And when these diffraction patterns start to fall outside the aperture of the lens,
+Dialogue: 0,1:02:36.96,1:02:45.84,Sub,,0,0,0,,the numerical aperture of the lens, then no longer does it contribute to the image formation at the wafer level.
+Dialogue: 0,1:02:45.84,1:02:48.34,Sub,,0,0,0,,It basically looks like something like this.
+Dialogue: 0,1:02:48.34,1:02:49.48,Sub,,0,0,0,,My zeroth order.
+Dialogue: 0,1:02:49.48,1:02:52.88,Sub,,0,0,0,,The light that straight goes through these waves.
+Dialogue: 0,1:02:52.88,1:02:55.58,Sub,,0,0,0,,They lead to no contrast here.
+Dialogue: 0,1:02:55.58,1:03:06.34,Sub,,0,0,0,,The first order is a wave with the same frequency as the pattern, the second order is triple the frequency, et cetera.
+Dialogue: 0,1:03:06.34,1:03:12.54,Sub,,0,0,0,,So that's how in the end, I reconstruct the image at the wafer plane.
+Dialogue: 0,1:03:12.54,1:03:13.96,Sub,,0,0,0,,I'm going a little bit fast.
+Dialogue: 0,1:03:13.96,1:03:26.02,Sub,,0,0,0,,So now Abe was the one that said so now my challenge is I know what I want as a wafer,
+Dialogue: 0,1:03:26.02,1:03:29.46,Sub,,0,0,0,,as a light intensity on the wafer plane.
+Dialogue: 0,1:03:29.46,1:03:37.57,Sub,,0,0,0,,My challenge is to optimize the source here so that for every source point, the waves hitting the mask
+Dialogue: 0,1:03:37.57,1:03:48.73,Sub,,0,0,0,,with how they go through the lens and all the path length differences, how that all adds up to this spatial frequency on the mask.
+Dialogue: 0,1:03:48.73,1:03:50.39,Sub,,0,0,0,,Let me show that to you.
+Dialogue: 0,1:03:50.39,1:03:51.73,Sub,,0,0,0,,Much simpler.
+Dialogue: 0,1:03:51.73,1:04:02.83,Sub,,0,0,0,,Here we have that one central point that I was talking about this large illumination disk hitting a mask, creating diffraction patterns.
+Dialogue: 0,1:04:02.83,1:04:06.93,Sub,,0,0,0,,Each of these diffraction patterns are within the pupil plane of the lens,
+Dialogue: 0,1:04:06.93,1:04:13.21,Sub,,0,0,0,,and therefore they contribute to this interference pattern on the wafer.
+Dialogue: 0,1:04:13.21,1:04:16.51,Sub,,0,0,0,,What happens now when I start to reduce the pitch.
+Dialogue: 0,1:04:19.05,1:04:23.41,Sub,,0,0,0,,You see that some of the diffraction now moves further out.
+Dialogue: 0,1:04:23.41,1:04:26.45,Sub,,0,0,0,,The contrast in my image starts to reduce.
+Dialogue: 0,1:04:26.45,1:04:31.87,Sub,,0,0,0,,And I'm now at a CD basically of 0.5 lambda over an A.
+Dialogue: 0,1:04:31.87,1:04:36.71,Sub,,0,0,0,,If I now go any further with shrinking,
+Dialogue: 0,1:04:36.71,1:04:44.31,Sub,,0,0,0,,suddenly those outer points no longer are captured by the lens, and I have 0 contrast left.
+Dialogue: 0,1:04:44.31,1:04:46.19,Sub,,0,0,0,,There's no imaging.
+Dialogue: 0,1:04:46.19,1:04:46.97,Sub,,0,0,0,,But wait a minute.
+Dialogue: 0,1:04:46.97,1:04:49.35,Sub,,0,0,0,,I can do some tricks.
+Dialogue: 0,1:04:49.35,1:04:54.73,Sub,,0,0,0,,What if instead of using that point source, if I use a whole disk.
+Dialogue: 0,1:04:57.31,1:05:05.23,Sub,,0,0,0,,Now you see that right here at the edge, there is, again, a little bit of overlap between the zeroth order and the first order.
+Dialogue: 0,1:05:05.23,1:05:14.07,Sub,,0,0,0,,So I start to see a little bit of the reconstruction of my image at the wafer plane.
+Dialogue: 0,1:05:14.07,1:05:25.07,Sub,,0,0,0,,But the contrast is very low because there is a lot of light from the center that doesn't really contribute anything to the interference.
+Dialogue: 0,1:05:25.07,1:05:27.85,Sub,,0,0,0,,So what if I could move that light.
+Dialogue: 0,1:05:27.85,1:05:30.66,Sub,,0,0,0,,That would improve my contrast.
+Dialogue: 0,1:05:30.66,1:05:34.70,Sub,,0,0,0,,So I go and use what we call annular illumination.
+Dialogue: 0,1:05:34.70,1:05:37.88,Sub,,0,0,0,,Instead of the light coming out of that whole disk, I now see it.
+Dialogue: 0,1:05:37.88,1:05:47.10,Sub,,0,0,0,,If I look from the mask back at the illumination, I would see it come from a ring and I get much better contrast.
+Dialogue: 0,1:05:47.10,1:05:50.50,Sub,,0,0,0,,Well, if I can do that, why not do even more.
+Dialogue: 0,1:05:50.50,1:05:54.66,Sub,,0,0,0,,Because that light here at the edges is also not contributing.
+Dialogue: 0,1:05:54.66,1:05:57.56,Sub,,0,0,0,,This is where the positive interference come from.
+Dialogue: 0,1:05:57.56,1:06:00.34,Sub,,0,0,0,,So let me remove that also.
+Dialogue: 0,1:06:00.34,1:06:02.82,Sub,,0,0,0,,And I get even better contrast.
+Dialogue: 0,1:06:02.82,1:06:06.78,Sub,,0,0,0,,Now I have something called dipole illumination.
+Dialogue: 0,1:06:06.78,1:06:12.74,Sub,,0,0,0,,And that is what a lot of the fancy stuff that is happening nowadays.
+Dialogue: 0,1:06:12.74,1:06:19.36,Sub,,0,0,0,,We can basically create with our illumination arbitrary shapes for the illumination.
+Dialogue: 0,1:06:19.36,1:06:25.60,Sub,,0,0,0,,And what is the best illumination that will for the set of patterns lead to the best reconstruction.
+Dialogue: 0,1:06:29.48,1:06:31.52,Sub,,0,0,0,,How does that then work out.
+Dialogue: 0,1:06:31.52,1:06:39.92,Sub,,0,0,0,,If I have a full chip design, I will pick a bunch of critical patterns, the ones that I care about most.
+Dialogue: 0,1:06:39.92,1:06:42.90,Sub,,0,0,0,,For those, I will start doing this optimization.
+Dialogue: 0,1:06:42.90,1:06:46.24,Sub,,0,0,0,,I have a forward model, I keep calculating,
+Dialogue: 0,1:06:46.24,1:06:54.28,Sub,,0,0,0,,I can use inverse lithography and try to do a more direct calculation, but in the end, I will end up with an illumination.
+Dialogue: 0,1:06:54.28,1:06:56.40,Sub,,0,0,0,,You can see that there at the top.
+Dialogue: 0,1:06:56.40,1:07:00.08,Sub,,0,0,0,,And with that illumination I can.
+Dialogue: 0,1:07:00.08,1:07:01.02,Sub,,0,0,0,,Yeah there you go.
+Dialogue: 0,1:07:01.02,1:07:04.74,Sub,,0,0,0,,We start to improve, iterate on the illumination.
+Dialogue: 0,1:07:04.74,1:07:10.04,Sub,,0,0,0,,And you can now start seeing that as I project I get a cleaner and cleaner image.
+Dialogue: 0,1:07:10.04,1:07:18.64,Sub,,0,0,0,,Once I have the very best illumination, I can say, OK, now let me use with this illumination OPC to improve the whole mask.
+Dialogue: 0,1:07:18.64,1:07:22.94,Sub,,0,0,0,,And if I did the original selection of the patterns that I optimized for.
+Dialogue: 0,1:07:22.94,1:07:29.68,Sub,,0,0,0,,Well, and those were really the most critical ones then this illumination will actually work for the whole chip.
+Dialogue: 0,1:07:33.02,1:07:36.94,Sub,,0,0,0,,So how does that optimization algorithm work.
+Dialogue: 0,1:07:36.94,1:07:45.90,Sub,,0,0,0,,Basically we tend to look at hey, I want to this is what the designer drew this square thing.
+Dialogue: 0,1:07:45.90,1:07:48.84,Sub,,0,0,0,,Now we know that we can never print something square.
+Dialogue: 0,1:07:48.84,1:07:51.34,Sub,,0,0,0,,There's always finite resolution.
+Dialogue: 0,1:07:51.34,1:07:56.30,Sub,,0,0,0,,So if I would try to optimize directly to that square shape,
+Dialogue: 0,1:07:56.30,1:08:02.60,Sub,,0,0,0,,my total cost function, which is all the errors added up, would be completely dominated by these corners.
+Dialogue: 0,1:08:02.60,1:08:03.96,Sub,,0,0,0,,And that's artificial.
+Dialogue: 0,1:08:03.96,1:08:09.74,Sub,,0,0,0,,So we say, theoretically the best that I can do is some target that I can draw here.
+Dialogue: 0,1:08:09.74,1:08:19.96,Sub,,0,0,0,,Let me now try to get the mask and the illumination so that I get as close as possible to what I think is possible, and I want to do that for a range of conditions,
+Dialogue: 0,1:08:19.96,1:08:25.29,Sub,,0,0,0,,not just for nominal, but also for a little bit more or less dose.
+Dialogue: 0,1:08:25.29,1:08:27.57,Sub,,0,0,0,,Dose is never perfectly controlled.
+Dialogue: 0,1:08:27.57,1:08:29.85,Sub,,0,0,0,,A little bit more.
+Dialogue: 0,1:08:29.85,1:08:34.11,Sub,,0,0,0,,Some focus variation and the mask making is also not perfect.
+Dialogue: 0,1:08:34.11,1:08:43.57,Sub,,0,0,0,,So I take all these variances into account and make sure that I arrive at something that is robust under these variations.
+Dialogue: 0,1:08:43.57,1:08:46.33,Sub,,0,0,0,,Here are some of the masks that I will skip.
+Dialogue: 0,1:08:46.33,1:08:51.63,Sub,,0,0,0,,Here are some of the math that I will also skip that determines how all of that works.
+Dialogue: 0,1:08:51.63,1:09:02.85,Sub,,0,0,0,,But what I wanted to point out here is there are actually two terms here that is this here that captures some of the effects from non chemically amplified resist.
+Dialogue: 0,1:09:02.85,1:09:07.97,Sub,,0,0,0,,And I want right now to focus your attention here for a moment at this term.
+Dialogue: 0,1:09:07.97,1:09:10.21,Sub,,0,0,0,,This is a mask 3D effect.
+Dialogue: 0,1:09:10.21,1:09:13.61,Sub,,0,0,0,,So what is a mask 3D effect.
+Dialogue: 0,1:09:13.61,1:09:17.45,Sub,,0,0,0,,I'll go fast I'm nearly done.
+Dialogue: 0,1:09:17.45,1:09:20.19,Sub,,0,0,0,,Here is one of those poles of the illumination.
+Dialogue: 0,1:09:20.19,1:09:22.81,Sub,,0,0,0,,The zeroth order is light that goes through.
+Dialogue: 0,1:09:22.81,1:09:24.91,Sub,,0,0,0,,It goes to my wafer.
+Dialogue: 0,1:09:24.91,1:09:28.87,Sub,,0,0,0,,Here is the first diffraction order and it goes here.
+Dialogue: 0,1:09:28.87,1:09:36.11,Sub,,0,0,0,,Well, because of electromagnetic effects here, there is an extra phase difference between these two.
+Dialogue: 0,1:09:36.11,1:09:38.25,Sub,,0,0,0,,That's called a mask 3D effect.
+Dialogue: 0,1:09:38.25,1:09:47.13,Sub,,0,0,0,,And that means that instead of a really good reconstruction of all my Fourier components, imagine that I have a Fourier transform.
+Dialogue: 0,1:09:47.13,1:09:57.23,Sub,,0,0,0,,But I'm a little bit off on the amplitude of some of these components, or I'm a little bit off on the phase of these components that would start to affect your reconstruction.
+Dialogue: 0,1:09:57.23,1:10:01.53,Sub,,0,0,0,,So our goal is to reconstruct how can I do that correctly.
+Dialogue: 0,1:10:01.53,1:10:04.91,Sub,,0,0,0,,Because my one pole remember the dipole illumination.
+Dialogue: 0,1:10:04.91,1:10:06.31,Sub,,0,0,0,,This was one pole.
+Dialogue: 0,1:10:06.31,1:10:11.37,Sub,,0,0,0,,And as a result of that phase difference you actually get a shift in your mask.
+Dialogue: 0,1:10:11.37,1:10:16.49,Sub,,0,0,0,,You see this phi minus phi be that phase difference leads to a shift in your mask.
+Dialogue: 0,1:10:16.49,1:10:23.18,Sub,,0,0,0,,Instead of the intensity being focused around the ideal position, it has shifted a little bit.
+Dialogue: 0,1:10:23.18,1:10:27.22,Sub,,0,0,0,,Now the other pole will have this shift in the other direction.
+Dialogue: 0,1:10:27.22,1:10:34.02,Sub,,0,0,0,,So my total image is now the sum of two distributions.
+Dialogue: 0,1:10:34.02,1:10:38.64,Sub,,0,0,0,,If they were perfectly aligned I would have a nice sharp image, but they are not.
+Dialogue: 0,1:10:38.64,1:10:43.30,Sub,,0,0,0,,So the image fades I get a reduction in contrast.
+Dialogue: 0,1:10:43.30,1:10:44.54,Sub,,0,0,0,,What could I do.
+Dialogue: 0,1:10:44.54,1:10:47.02,Sub,,0,0,0,,Could I do something smart.
+Dialogue: 0,1:10:47.02,1:10:56.12,Sub,,0,0,0,,What if I have the illumination and instead of the dipole here, I move this pole down a little bit.
+Dialogue: 0,1:10:56.12,1:11:03.26,Sub,,0,0,0,,I move this pole up a little bit, and in my lens I can now compensate for the mask's 3D effects.
+Dialogue: 0,1:11:03.26,1:11:12.68,Sub,,0,0,0,,Because this order here, these diffraction orders here and here are the zeroth order.
+Dialogue: 0,1:11:12.68,1:11:19.72,Sub,,0,0,0,,And now I can have the one pole shift to the left, the other one a little bit to the right.
+Dialogue: 0,1:11:19.72,1:11:22.88,Sub,,0,0,0,,And now they overlap again perfectly.
+Dialogue: 0,1:11:22.88,1:11:24.56,Sub,,0,0,0,,Now that's simple.
+Dialogue: 0,1:11:24.56,1:11:29.14,Sub,,0,0,0,,If I only have to do with a 2D pattern, what we can now do.
+Dialogue: 0,1:11:29.14,1:11:33.34,Sub,,0,0,0,,And that's why we have computers, I can actually generalize this.
+Dialogue: 0,1:11:33.34,1:11:36.72,Sub,,0,0,0,,And I can take an arbitrary mask pattern for logic.
+Dialogue: 0,1:11:36.72,1:11:48.92,Sub,,0,0,0,,And I can say, hey, what would now be the very best aberration pattern in my lens that would make that all these images from these poles overlap as well as possible.
+Dialogue: 0,1:11:48.92,1:11:50.80,Sub,,0,0,0,,And that's what you see here.
+Dialogue: 0,1:11:50.80,1:11:58.24,Sub,,0,0,0,,Here is what I just explained for a simple if all I look at is lens is lines and spaces.
+Dialogue: 0,1:11:58.24,1:12:02.72,Sub,,0,0,0,,This is for the actual mask pattern here.
+Dialogue: 0,1:12:02.72,1:12:10.08,Sub,,0,0,0,,And as a result, I get much better exposure, latitude and much better adaptive focus in my final imaging.
+Dialogue: 0,1:12:10.08,1:12:18.68,Sub,,0,0,0,,So I hope that with that, I've given you a little bit of a flavor on how we can use computation to optimize the settings on the scanner,
+Dialogue: 0,1:12:18.68,1:12:23.14,Sub,,0,0,0,,both from an illumination perspective as well as aberrations in the lens.
+Dialogue: 0,1:12:23.14,1:12:31.34,Sub,,0,0,0,,We try to minimize the aberrations, and sometimes we introduce them on purpose to correct for mass 3D effects.
+Dialogue: 0,1:12:31.34,1:12:35.06,Sub,,0,0,0,,Now, with all of that said, let me finish up the last part.
+Dialogue: 0,1:12:35.06,1:12:39.42,Sub,,0,0,0,,Just a slide on the roadmap and the outlook.
+Dialogue: 0,1:12:39.42,1:12:45.06,Sub,,0,0,0,,Remember the best possible resolution at the lowest possible price.
+Dialogue: 0,1:12:45.06,1:12:50.20,Sub,,0,0,0,,So let's look at we've looked at the best possible resolution.
+Dialogue: 0,1:12:50.20,1:12:55.54,Sub,,0,0,0,,Reduced the lambda, increase DNA decrease K1.
+Dialogue: 0,1:12:55.54,1:13:04.38,Sub,,0,0,0,,Let's now look for a moment that cost of the technology the productivity the EUV light source.
+Dialogue: 0,1:13:04.38,1:13:13.68,Sub,,0,0,0,,We now we've recently announced that our latest results in San Diego, we can get one kilowatt of power out of our dose.
+Dialogue: 0,1:13:13.68,1:13:19.97,Sub,,0,0,0,,And remember what Tony said in the beginning we struggled to get one Watt.
+Dialogue: 0,1:13:19.97,1:13:24.17,Sub,,0,0,0,,Then at some point we were really excited that we got 10 watts.
+Dialogue: 0,1:13:24.17,1:13:29.99,Sub,,0,0,0,,TSMC told us that when we hit 80w, we can go into volume production.
+Dialogue: 0,1:13:29.99,1:13:32.69,Sub,,0,0,0,,That was in 2019.
+Dialogue: 0,1:13:32.69,1:13:38.47,Sub,,0,0,0,,That was 2 watts or that was 281 was 2014 was 214.
+Dialogue: 0,1:13:38.47,1:13:39.43,Sub,,0,0,0,,OK yeah.
+Dialogue: 0,1:13:39.43,1:13:44.31,Sub,,0,0,0,,Sorry so that's when they said, OK, now we are serious about it.
+Dialogue: 0,1:13:44.31,1:13:46.09,Sub,,0,0,0,,We think that you can get there.
+Dialogue: 0,1:13:46.09,1:13:49.97,Sub,,0,0,0,,And by 2019 we were at 250.
+Dialogue: 0,1:13:49.97,1:13:57.61,Sub,,0,0,0,,We now have in our hands demonstrations that we can actually hit 1 kilowatt.
+Dialogue: 0,1:13:57.61,1:14:05.09,Sub,,0,0,0,,Another way of reducing the cost of the system is by having more commonality between EUV.
+Dialogue: 0,1:14:05.09,1:14:11.69,Sub,,0,0,0,,Sorry, between the .33 and a system and the .55 and a system.
+Dialogue: 0,1:14:11.69,1:14:22.61,Sub,,0,0,0,,So we have a roadmap on how we can create a more common platform that we will do that with also an option to in the future,
+Dialogue: 0,1:14:22.61,1:14:31.95,Sub,,0,0,0,,start looking at 0.75, for which we already have some prototype designs and where we can get at the end.
+Dialogue: 0,1:14:31.95,1:14:43.61,Sub,,0,0,0,,Or here is an example of with 13.5 nanometer EUV light from Paul scherrer Institute interferometric EUV lithography, where you do not have mass 3D effects.
+Dialogue: 0,1:14:43.61,1:14:48.03,Sub,,0,0,0,,If we could really control everything can see that.
+Dialogue: 0,1:14:48.03,1:14:57.59,Sub,,0,0,0,,Yeah, there are already some evidence that half pitches of about five or six nanometer as a absolute theoretical maximum would be possible.
+Dialogue: 0,1:14:57.59,1:15:04.67,Sub,,0,0,0,,So we still have quite a ways to go that we can scale more than where we are today.
+Dialogue: 0,1:15:04.67,1:15:10.29,Sub,,0,0,0,,And with that, I come to the end, and I hope that I fulfilled my promise that I wouldn't be too long.
+Dialogue: 0,1:15:13.47,1:15:15.72,Sub,,0,0,0,,Tony, why don't you join me for questions.
+Dialogue: 0,1:15:18.70,1:15:21.22,Sub,,0,0,0,,Hello what happened here.
+Dialogue: 0,1:15:21.22,1:15:22.22,Sub,,0,0,0,,No it's fine.
+Dialogue: 0,1:15:22.22,1:15:25.54,Sub,,0,0,0,,He was supposed to activate from that.
+Dialogue: 0,1:15:25.54,1:15:26.42,Sub,,0,0,0,,All right.
+Dialogue: 0,1:15:26.42,1:15:27.62,Sub,,0,0,0,,Oh, I think it's on now.
+Dialogue: 0,1:15:27.62,1:15:34.44,Sub,,0,0,0,,OK, so we'll take questions now for both speakers, and we're open for questions.
+Dialogue: 0,1:15:38.54,1:15:42.80,Sub,,0,0,0,,Do I understand correctly that if the end user cares about,
+Dialogue: 0,1:15:42.80,1:15:48.43,Sub,,0,0,0,,let's say, resolution just along one axis, that's an easier problem from your perspective.
+Dialogue: 0,1:15:48.43,1:15:54.84,Sub,,0,0,0,,Is that correct to say, is that something that the end users are trying to or you all collectively are trying to leverage.
+Dialogue: 0,1:15:54.84,1:15:58.18,Sub,,0,0,0,,OK, so let's define first what the end user is, right.
+Dialogue: 0,1:15:58.18,1:16:08.14,Sub,,0,0,0,,If the end user is Apple then they tell TSMC it's your problem.
+Dialogue: 0,1:16:08.14,1:16:17.92,Sub,,0,0,0,,TSMC will tell us, hey, do you we want to use dipole illumination combination, because that gives the very best contrast for one dimensional patterns.
+Dialogue: 0,1:16:17.92,1:16:25.36,Sub,,0,0,0,,Can you make a light source where all of the light only comes from these two points in that whole disk.
+Dialogue: 0,1:16:25.36,1:16:35.92,Sub,,0,0,0,,Well, we can do that pretty well, but if you make these spots too small, we can only do that by throwing some of the light away.
+Dialogue: 0,1:16:35.92,1:16:40.52,Sub,,0,0,0,,And if we throw some of the light away, then it goes at the expense of productivity.
+Dialogue: 0,1:16:40.52,1:16:48.90,Sub,,0,0,0,,And so our newer illumination designs can use a much smaller, what we call a pupil fill ratio.
+Dialogue: 0,1:16:48.90,1:16:54.70,Sub,,0,0,0,,What's the smallest fraction of that whole illumination disk that you can define.
+Dialogue: 0,1:16:54.70,1:17:00.04,Sub,,0,0,0,,That's where I want the light to come from and still use 100% of the light.
+Dialogue: 0,1:17:00.04,1:17:06.44,Sub,,0,0,0,,So it's really a shared responsibility between us and the customer.
+Dialogue: 0,1:17:06.44,1:17:13.55,Sub,,0,0,0,,But for every layer metal 0, metal one, metal 2 contact holes, vias.
+Dialogue: 0,1:17:13.55,1:17:16.59,Sub,,0,0,0,,Every layer has its own illumination.
+Dialogue: 0,1:17:16.59,1:17:20.15,Sub,,0,0,0,,And let me take your example a little bit to an extreme.
+Dialogue: 0,1:17:20.15,1:17:26.83,Sub,,0,0,0,,If I want the absolute smallest pitch in one direction,
+Dialogue: 0,1:17:26.83,1:17:33.83,Sub,,0,0,0,,I would use a dipole with only two tiny little pieces of light here.
+Dialogue: 0,1:17:33.83,1:17:41.17,Sub,,0,0,0,,I would now have great contrast in this direction and 0 contrast in the other direction.
+Dialogue: 0,1:17:41.17,1:17:45.95,Sub,,0,0,0,,So the only thing that I can now do is print lines that are infinitely long.
+Dialogue: 0,1:17:45.95,1:17:49.03,Sub,,0,0,0,,Not a single designer is interested in that.
+Dialogue: 0,1:17:49.03,1:17:55.59,Sub,,0,0,0,,So now what you could do is well, but if I have those very long lines, I will use a second exposure to cut them.
+Dialogue: 0,1:17:55.59,1:17:57.01,Sub,,0,0,0,,But that's expensive.
+Dialogue: 0,1:17:57.01,1:18:01.33,Sub,,0,0,0,,Perhaps bring in these poles a little bit, regain a little bit of that contrast.
+Dialogue: 0,1:18:01.33,1:18:06.35,Sub,,0,0,0,,And now I can also print gaps in these lines.
+Dialogue: 0,1:18:06.35,1:18:08.85,Sub,,0,0,0,,But how small I can get that gap.
+Dialogue: 0,1:18:08.85,1:18:17.29,Sub,,0,0,0,,That's the so-called tip to tip difference that depends on how you optimize the illumination and how you optimize the OPC.
+Dialogue: 0,1:18:17.29,1:18:21.85,Sub,,0,0,0,,So it's a very interactive discussion between us and our customers.
+Dialogue: 0,1:18:21.85,1:18:23.47,Sub,,0,0,0,,Hope that answers your question.
+Dialogue: 0,1:18:23.47,1:18:24.83,Sub,,0,0,0,,OK, here's another question.
+Dialogue: 0,1:18:24.83,1:18:26.35,Sub,,0,0,0,,Just a quick question.
+Dialogue: 0,1:18:26.35,1:18:40.31,Sub,,0,0,0,,So if the minimum pitch you're expecting is like 90 nanometers, that does bring up the question, what exactly does the metric in like a node name refer to.
+Dialogue: 0,1:18:40.31,1:18:44.73,Sub,,0,0,0,,Because it's clearly not the pitch of the features themselves.
+Dialogue: 0,1:18:44.73,1:18:45.87,Sub,,0,0,0,,Great question.
+Dialogue: 0,1:18:45.87,1:18:52.61,Sub,,0,0,0,,Yeah so the node names right 5 nanometer node, 4 nanometer node three nanometer node.
+Dialogue: 0,1:18:52.61,1:19:00.57,Sub,,0,0,0,,Back in the days that we had the 45 nanometer node that actually really represented the size of the lines.
+Dialogue: 0,1:19:00.57,1:19:04.77,Sub,,0,0,0,,And at some point that became very increasingly difficult.
+Dialogue: 0,1:19:04.77,1:19:16.87,Sub,,0,0,0,,But people also became very creative in terms of with design tricks and layout tricks, I can get more density out of the size that I have.
+Dialogue: 0,1:19:16.87,1:19:26.77,Sub,,0,0,0,,So think of the 5 nanometer and the 4 nanometer and 3 nanometer now more as an indication of what is the effective transistor density.
+Dialogue: 0,1:19:26.77,1:19:32.67,Sub,,0,0,0,,How many transistors can I get per squared per square millimeter or per square micron.
+Dialogue: 0,1:19:32.67,1:19:37.45,Sub,,0,0,0,,It's more an indication of that instead of really the dimension.
+Dialogue: 0,1:19:37.45,1:19:39.05,Sub,,0,0,0,,Tony, anything you would like to add.
+Dialogue: 0,1:19:39.05,1:19:46.43,Sub,,0,0,0,,Yeah well, historically Ronald was right down to maybe 90 or 65 nanometers.
+Dialogue: 0,1:19:46.43,1:19:47.89,Sub,,0,0,0,,That's the half pitch.
+Dialogue: 0,1:19:47.89,1:19:51.23,Sub,,0,0,0,,When you say 65, the half pitch is 65.
+Dialogue: 0,1:19:51.23,1:19:56.11,Sub,,0,0,0,,But nowadays, no, it's just a marketing name.
+Dialogue: 0,1:19:56.11,1:19:57.49,Sub,,0,0,0,,But this is not recorded.
+Dialogue: 0,1:19:57.49,1:20:00.35,Sub,,0,0,0,,I don't want my customers to hear this.
+Dialogue: 0,1:20:00.35,1:20:01.31,Sub,,0,0,0,,They know.
+Dialogue: 0,1:20:01.31,1:20:05.83,Sub,,0,0,0,,Yeah, it's so cut this part out of the recording, OK.
+Dialogue: 0,1:20:05.83,1:20:09.52,Sub,,0,0,0,,No, it is an improvement over the previous generation.
+Dialogue: 0,1:20:09.52,1:20:14.08,Sub,,0,0,0,,But is it 2x the transistor density.
+Dialogue: 0,1:20:14.08,1:20:16.54,Sub,,0,0,0,,No, those days are over.
+Dialogue: 0,1:20:16.54,1:20:22.22,Sub,,0,0,0,,OK, so I'd like to ask a question about the optimization methods.
+Dialogue: 0,1:20:22.22,1:20:30.86,Sub,,0,0,0,,So one of the great challenges in optimization is if you have a great many variables to optimize, it gets really quite hard.
+Dialogue: 0,1:20:30.86,1:20:36.54,Sub,,0,0,0,,Now you spoke mostly about the source optimization.
+Dialogue: 0,1:20:36.54,1:20:39.98,Sub,,0,0,0,,And there's a lot of variables in the source optimization.
+Dialogue: 0,1:20:39.98,1:20:45.50,Sub,,0,0,0,,But then you also mention the so-called OPC which is the mask optimization.
+Dialogue: 0,1:20:45.50,1:20:52.78,Sub,,0,0,0,,And that adds even more variables because in principle the geometric shapes can be represented by an infinite number of variables.
+Dialogue: 0,1:20:52.78,1:20:55.26,Sub,,0,0,0,,So you have a very huge number of variables.
+Dialogue: 0,1:20:55.26,1:21:01.88,Sub,,0,0,0,,So shouldn't you be doing the optimization of all of them together rather than saying, I'm going to do source optimization.
+Dialogue: 0,1:21:01.88,1:21:07.50,Sub,,0,0,0,,You should be saying, I'm going to do the optimization of everything the source, the mask.
+Dialogue: 0,1:21:07.50,1:21:09.50,Sub,,0,0,0,,I do it all in one big optimization.
+Dialogue: 0,1:21:09.50,1:21:12.82,Sub,,0,0,0,,Yeah so let me first answer that question.
+Dialogue: 0,1:21:12.82,1:21:13.90,Sub,,0,0,0,,You're absolutely right.
+Dialogue: 0,1:21:13.90,1:21:16.28,Sub,,0,0,0,,And perhaps I wasn't completely clear.
+Dialogue: 0,1:21:16.28,1:21:22.06,Sub,,0,0,0,,Remember that video where we picked some clips out of this huge design.
+Dialogue: 0,1:21:22.06,1:21:33.24,Sub,,0,0,0,,Those clips were supposed to be representative proxies for the incredible variety of patterns of the whole design.
+Dialogue: 0,1:21:33.24,1:21:40.28,Sub,,0,0,0,,When we optimize the illumination, we optimize that with the OPC for those clips.
+Dialogue: 0,1:21:40.28,1:21:49.48,Sub,,0,0,0,,And then we but we cannot say, let's optimize the whole design with hundreds of billions of patterns,
+Dialogue: 0,1:21:49.48,1:21:56.04,Sub,,0,0,0,,together with all these variables in the illumination and with all of the variables in the projection optics.
+Dialogue: 0,1:21:56.04,1:21:59.56,Sub,,0,0,0,,That's simply computationally is not yet feasible.
+Dialogue: 0,1:21:59.56,1:22:02.08,Sub,,0,0,0,,So what we do is we take some of these clips.
+Dialogue: 0,1:22:02.08,1:22:02.90,Sub,,0,0,0,,There we go.
+Dialogue: 0,1:22:02.90,1:22:12.13,Sub,,0,0,0,,Optimize then we say, now this illumination, probably since it is good for the most critical patterns, will be good for all of the other patterns.
+Dialogue: 0,1:22:12.13,1:22:15.45,Sub,,0,0,0,,And then we do the OPC, a divide and conquer strategy.
+Dialogue: 0,1:22:15.45,1:22:19.33,Sub,,0,0,0,,Once the OPC stage, you don't change the design anymore.
+Dialogue: 0,1:22:19.33,1:22:23.97,Sub,,0,0,0,,I'm going to have to cut us off our no, no I'm sorry.
+Dialogue: 0,1:22:23.97,1:22:29.21,Sub,,0,0,0,,Our AV support is going to leave us and we're well after time.
+Dialogue: 0,1:22:29.21,1:22:36.07,Sub,,0,0,0,,But the speakers will stick around and happy to answer questions one on one.
+Dialogue: 0,1:22:36.07,1:22:40.21,Sub,,0,0,0,,So let's thank both speakers for a fascinating talk.
+Dialogue: 0,1:22:44.27,1:22:49.37,Sub,,0,0,0,,And if you want to stick around, I think they'll be glad to answer for the questions.
+Dialogue: 0,1:22:49.37,1:22:53.19,Sub,,0,0,0,,Absolutely, absolutely.
+Dialogue: 0,1:22:53.19,1:22:54.71,Sub,,0,0,0,,How are you.
+Dialogue: 0,1:22:54.71,1:22:57.09,Sub,,0,0,0,,Oh, I haven't seen you for a long time.
+Dialogue: 0,1:22:57.09,1:22:59.41,Sub,,0,0,0,,Yeah so I'm doing fine.
+Dialogue: 0,1:22:59.41,1:23:03.25,Sub,,0,0,0,,And I understand that you are retired or not yet.
+Dialogue: 0,1:23:03.25,1:23:04.81,Sub,,0,0,0,,Yes, I am semi-retired.
+Dialogue: 0,1:23:04.81,1:23:06.06,Sub,,0,0,0,,I'm

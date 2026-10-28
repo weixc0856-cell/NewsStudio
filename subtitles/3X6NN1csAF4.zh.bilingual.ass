@@ -1,0 +1,825 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+Style: SubHigh,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,260,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:02.64,0:00:09.10,SubHigh,,0,0,0,,Welcome to Hot Chips 2026 keynote\N欢迎出席 2026 年 Hot Chips 主题演讲
+Dialogue: 0,0:00:09.15,0:00:10.43,SubHigh,,0,0,0,,compute in motion\N动态计算
+Dialogue: 0,0:00:10.48,0:00:11.47,SubHigh,,0,0,0,,challenges of\N面临的挑战
+Dialogue: 0,0:00:11.52,0:00:21.85,SubHigh,,0,0,0,,autonomous\N自主
+Dialogue: 0,0:00:21.90,0:00:30.35,SubHigh,,0,0,0,,driving.\N驾驶
+Dialogue: 0,0:00:30.40,0:00:31.20,SubHigh,,0,0,0,,Thank you.\N谢谢
+Dialogue: 0,0:00:31.25,0:00:37.97,SubHigh,,0,0,0,,And also welcome to I personally been thinking about it as Waymo day, but it's I guess the Waymo section of Hot Chips this year.\N同时也欢迎各位，我个人一直把这一天当作“Waymo 日”，\N不过它实际上是今年 Hot Chips 中的 Waymo 专题环节
+Dialogue: 0,0:00:38.02,0:00:43.55,SubHigh,,0,0,0,,This day has been a long time coming for Alphabet where I work and my friends at Waymo,\N这一天对我在 Alphabet 工作的地方以及我在 Waymo 的朋友们来说，已经期待已久
+Dialogue: 0,0:00:43.60,0:00:47.07,SubHigh,,0,0,0,,uh, two of whom you'll get to hear in the next couple of hours.\N其中两位，你们将在接下来的几个小时内听到他们的发言
+Dialogue: 0,0:00:47.12,0:00:50.03,SubHigh,,0,0,0,,So, by way of post lunch, everybody's falling asleep.\N作为午餐后的开场，大家都有些昏昏欲睡
+Dialogue: 0,0:00:50.08,0:00:53.39,SubHigh,,0,0,0,,Raise your hand if you've heard of Waymo.\N听说过 Waymo 的请举手
+Dialogue: 0,0:00:53.44,0:00:56.22,SubHigh,,0,0,0,,Keep your hand up if you've ridden in a Waymo.\N如果你曾经乘坐过 Waymo，请继续保持举手
+Dialogue: 0,0:00:56.28,0:00:56.68,SubHigh,,0,0,0,,Great.\N很棒。
+Dialogue: 0,0:00:56.71,0:00:59.35,SubHigh,,0,0,0,,Some people put their hands up and had Okay.\N有些人举起了手，然后又放下
+Dialogue: 0,0:00:59.40,0:01:04.77,SubHigh,,0,0,0,,Anyway, uh, and and keep your hand up still if you've reached stage three of the Waymo experience.\N无论如何，如果你已经达到了 Waymo 体验的第三阶段，请继续保持举手。
+Dialogue: 0,0:01:04.82,0:01:07.54,SubHigh,,0,0,0,,Stage one is, "Oh my god, there's no driver in the car."\N第一阶段是：“天啊，车里没有司机。”
+Dialogue: 0,0:01:07.59,0:01:09.71,SubHigh,,0,0,0,,Stage two is Wow, that seems to be working.\N第二阶段是：“哇，这好像真的能用。”
+Dialogue: 0,0:01:09.76,0:01:10.85,SubHigh,,0,0,0,,There's a little display there.\N那里有个小显示屏。
+Dialogue: 0,0:01:10.90,0:01:14.51,SubHigh,,0,0,0,,Stage three is I'm on my phone.\N第三阶段是：“我在用手机。”
+Dialogue: 0,0:01:14.56,0:01:15.13,SubHigh,,0,0,0,,Cool.\N太酷了。
+Dialogue: 0,0:01:15.18,0:01:21.33,SubHigh,,0,0,0,,Uh, as you'll see today, our friends at Waymo have been doing some amazing engineering.\N今天你们会看到，Waymo 的朋友们已经完成了令人惊叹的工程。
+Dialogue: 0,0:01:21.38,0:01:25.60,SubHigh,,0,0,0,,I remember first hearing about it and seeing the demos and thinking, "That is so cool.\N我记得第一次听说这件事，看到演示时心想：“这太酷了。”
+Dialogue: 0,0:01:25.66,0:01:27.66,SubHigh,,0,0,0,,My daughters will never have to learn how to drive."\N我的女儿们永远都不用学开车了。
+Dialogue: 0,0:01:27.71,0:01:30.40,SubHigh,,0,0,0,,I I was a little over optimistic about that,\N我对这一点有点过于乐观了。
+Dialogue: 0,0:01:30.45,0:01:37.17,SubHigh,,0,0,0,,but I think a key thing you'll see in the presentation today is incredible persistence about excellent\N但我想今天演示中你将看到的一个关键点是，对卓越工程的惊人坚持
+Dialogue: 0,0:01:37.22,0:01:44.19,SubHigh,,0,0,0,,engineering and understanding failure cases out to I guess one of the earlier speakers today had nine nines.\N以及对失败案例的深入理解——今天早些时候的一位演讲者提到了九个 9 的可靠性
+Dialogue: 0,0:01:44.24,0:01:50.17,SubHigh,,0,0,0,,But I think a bunch of the persistence that is emblematic of how my colleagues approach the incredible\N但我觉得，我同事在完成这项非凡安全工作时所展现出的坚持精神
+Dialogue: 0,0:01:50.22,0:01:58.47,SubHigh,,0,0,0,,safety job they do and the possibility of superhuman driving is that they have to make it work.\N正是实现超人驾驶可能性的核心所在，因为他们必须让这一切真正奏效
+Dialogue: 0,0:01:58.52,0:02:03.14,SubHigh,,0,0,0,,Uh it requires incredible discipline, focus across years.\N这需要多年如一日的惊人纪律和专注
+Dialogue: 0,0:02:03.19,0:02:08.59,SubHigh,,0,0,0,,It may have taken a little bit longer than my initial estimate that my now 20-year-old would never have to learn how to drive.\N或许比我最初的预估耗时更久，那时我还认为我那现在20岁的孩子永远不必学开车
+Dialogue: 0,0:02:08.64,0:02:13.63,SubHigh,,0,0,0,,And yet, if you've ridden in a Waymo, it's kind of in in immediately miraculous.\N但如果你曾乘坐过 Waymo 的车，你会立刻感受到它的神奇之处
+Dialogue: 0,0:02:13.68,0:02:17.47,SubHigh,,0,0,0,,And then soon after that you realize, wow, this thing is better than I am.\N紧接着你就会意识到，这东西比我强得多
+Dialogue: 0,0:02:17.52,0:02:19.16,SubHigh,,0,0,0,,Like literally better than I am.\N真的，比我还强
+Dialogue: 0,0:02:19.21,0:02:21.95,SubHigh,,0,0,0,,It helps that it sees in all directions, which I can't.\N它能全方位观察，而我做不到
+Dialogue: 0,0:02:22.00,0:02:24.59,SubHigh,,0,0,0,,But the technology is fantastic.\N但这项技术实在太棒了
+Dialogue: 0,0:02:24.64,0:02:28.75,SubHigh,,0,0,0,,It's the kind of thing where this is a good kind of superhum, right?\N这正是那种令人欣喜的超人能力，对吧？
+Dialogue: 0,0:02:28.80,0:02:30.28,SubHigh,,0,0,0,,We talk about the AI revolution.\N我们在谈论人工智能的革命。
+Dialogue: 0,0:02:30.33,0:02:36.18,SubHigh,,0,0,0,,It's certainly in the air and one of the reasons why many people came to the conference this year, but there are great things going on.\N这股浪潮确实扑面而来，也是今年许多人前来参会的原因之一，\N但更令人振奋的是，目前正有许多精彩的事情在发生。
+Dialogue: 0,0:02:36.22,0:02:42.09,SubHigh,,0,0,0,,And if we can save some fraction of the 40,000 lives a year that are lost here in America to better driving,\N如果我们能挽救每年在美国因驾驶事故而失去的四万条生命中的哪怕一小部分，
+Dialogue: 0,0:02:42.14,0:02:49.85,SubHigh,,0,0,0,,if we can reduce property damage, if cars can just be a thing that works for us, then how much better are our lives be?\N如果我们能减少财产损失，如果汽车真的能成为为我们所用的可靠工具，那么我们的生活会变得多好？
+Dialogue: 0,0:02:49.90,0:02:55.29,SubHigh,,0,0,0,,So, by way of introduction, our keynote speaker for the conference is Daniel Rosenband.\N作为开场介绍，本次大会的主题演讲嘉宾是丹尼尔·罗森班德。
+Dialogue: 0,0:02:55.34,0:02:59.11,SubHigh,,0,0,0,,He and I joined Google around the same time and have known each other for most of our\N他和我几乎在同一时间加入谷歌，多年来一直相识相知，
+Dialogue: 0,0:02:59.16,0:03:04.18,SubHigh,,0,0,0,,time at Google because back at the time there was kind of a secretive hardware community inside of Google.\N因为当时谷歌内部有一个相对保密的硬件团队。
+Dialogue: 0,0:03:04.23,0:03:08.22,SubHigh,,0,0,0,,I think when we first started working, Google wasn't out about doing hardware projects.\N我想，当我们刚开始工作时，谷歌还不太愿意公开进行硬件项目。
+Dialogue: 0,0:03:08.27,0:03:09.80,SubHigh,,0,0,0,,And so it's uh been super cool.\N所以这真的非常酷。
+Dialogue: 0,0:03:09.84,0:03:17.15,SubHigh,,0,0,0,,Daniel actually spoke at Hot Chips nine years ago uh in a similar keynote, but there's way more to talk about uh today.\N丹尼尔九年前曾在 Hot Chips 大会上做过类似的主旨演讲，但今天要讲的内容要丰富得多。
+Dialogue: 0,0:03:17.20,0:03:20.38,SubHigh,,0,0,0,,You can see his bio in the uh Slack channel.\N你可以在 Slack 频道里看到他的个人简介。
+Dialogue: 0,0:03:20.43,0:03:29.50,SubHigh,,0,0,0,,He has founded startups and designed DRAMs and spent the last 13 years at Waymo making their compute be what it needs to be.\N他创办过初创公司，设计过 DRAM，并在过去十三年里在 Waymo 工作，\N致力于让他们的计算能力达到所需水平。
+Dialogue: 0,0:03:29.55,0:03:32.64,SubHigh,,0,0,0,,Um, I was going to say something about the the depth of time.\N嗯，我想说一下时间的深度。
+Dialogue: 0,0:03:32.69,0:03:33.32,SubHigh,,0,0,0,,Oh, yes.\N噢，是的。
+Dialogue: 0,0:03:33.37,0:03:38.24,SubHigh,,0,0,0,,And from my personal perspective, Daniel is the constant person at Waymo,\N从我个人的角度来看，丹尼尔是 Waymo 里始终不变的那个人，
+Dialogue: 0,0:03:38.29,0:03:43.03,SubHigh,,0,0,0,,the person who as long as I've been here has been the person I could call up and say, "Hey, heard about this.\N自从我来到这里，他就是我随时可以打电话说“嘿，听说了这件事，
+Dialogue: 0,0:03:43.08,0:03:45.41,SubHigh,,0,0,0,,Is there some interesting thing we should talk about there,\N有没有什么有趣的内容值得我们讨论一下，
+Dialogue: 0,0:03:45.46,0:03:51.54,SubHigh,,0,0,0,,it's been super cool to have somebody with that degree of stability and persistence during the last few years.\N近几年能有这样一位稳定且坚持不懈的伙伴，真的非常棒。
+Dialogue: 0,0:03:51.59,0:03:55.69,SubHigh,,0,0,0,,So, I'm really psyched about his talk today and I hope you enjoy it as much as we do."\N所以，我非常期待他今天的演讲，希望你们也能像我们一样享受其中。"
+Dialogue: 0,0:03:55.74,0:03:57.39,SubHigh,,0,0,0,,Daniel, please take it away.\N丹尼尔，请开始吧。
+Dialogue: 0,0:03:57.44,0:04:04.03,SubHigh,,0,0,0,,Thank you, Cliff.\N谢谢，克里夫。
+Dialogue: 0,0:04:04.08,0:04:05.72,Sub,,0,0,0,,It's really good to be here.\N很高兴来到这里。
+Dialogue: 0,0:04:05.77,0:04:15.64,Sub,,0,0,0,,Um it's been a long journey at Waymo with really amazing progress and of course a lot lot is a lot of that is due to progress on the silicon side.\N嗯，在 Waymo 的这段旅程中，我们取得了非常惊人的进展，当然，\N这其中很大一部分要归功于芯片技术的进步。
+Dialogue: 0,0:04:15.69,0:04:25.64,Sub,,0,0,0,,Um now when we think about silicon these days of course it is all about AI right its power systems its interconnects its compute its\N嗯，如今我们谈到芯片，当然都围绕着 AI：电源系统、互连、计算、内存系统。
+Dialogue: 0,0:04:25.69,0:04:35.11,Sub,,0,0,0,,memory system right everything funnels into AI when you think about where does that AI live of course most of it today is in the\N内存系统——一切都汇入 AI。当你思考 AI 在哪里运行时，今天大部分都在
+Dialogue: 0,0:04:35.16,0:04:42.02,Sub,,0,0,0,,data centers right enormous buildings gigawatts of power but increasingly also right\N数据中心：巨大的建筑、千兆瓦级的电力。但越来越多地，
+Dialogue: 0,0:04:42.07,0:04:47.91,Sub,,0,0,0,,we have these cars driving around physical AI physical systems that very very\N我们也有这些在道路上行驶的汽车——物理 AI、物理系统，它们非常非常
+Dialogue: 0,0:04:47.96,0:04:57.26,Sub,,0,0,0,,much rely on AI and within these physical systems of course we also have a tremendous amount of compute and semiconductors to make that possible.\N依赖 AI。当然，在这些物理系统中，我们也有大量计算和半导体来实现这一点。
+Dialogue: 0,0:04:57.31,0:05:01.26,Sub,,0,0,0,,So hopefully today you'll see a little bit of our journey as a company\N所以希望今天你们能看到我们公司的一小段发展历程，
+Dialogue: 0,0:05:01.31,0:05:06.93,Sub,,0,0,0,,and how important the silicon aspects are to enable compute and our autonomous drives.\N以及硅基技术对实现计算和自动驾驶有多重要。
+Dialogue: 0,0:05:06.98,0:05:11.54,Sub,,0,0,0,,Um as part of that hopefully you also see a little bit of contrast between\N作为其中一部分，希望你们也能看到一些对比：
+Dialogue: 0,0:05:11.59,0:05:20.03,Sub,,0,0,0,,what happens in the digital pure digital world and physical world in terms of AI systems.\N在 AI 系统方面，纯数字世界与物理世界有什么不同。
+Dialogue: 0,0:05:20.08,0:05:28.55,Sub,,0,0,0,,Now when we when we think about kind of physical AI few things are are clearly different right one is\N当我们思考物理 AI 时，有几个方面显然不同。第一是
+Dialogue: 0,0:05:28.60,0:05:34.59,Sub,,0,0,0,,just a physical scale right we want to run the biggest models we can on the car but we only\N物理尺度：我们想在车里运行尽可能大的模型，但我们只有
+Dialogue: 0,0:05:34.64,0:05:41.86,Sub,,0,0,0,,have sort of a car's worth of compute for us that's a pizza box um we we also care very\N一辆车那么大的计算资源——对我们来说就是一个披萨盒。我们还非常
+Dialogue: 0,0:05:41.91,0:05:50.04,Sub,,0,0,0,,much about latency right we we have a real-time system when you're talking to your to your favorite chat AI Right?\N在意延迟。我们是一个实时系统；而当你和喜欢的聊天 AI 对话时，
+Dialogue: 0,0:05:50.10,0:05:55.42,Sub,,0,0,0,,Sometimes it takes seconds, sometimes it takes minutes to respond in a physical AI system.\N有时要几秒、有时要几分钟才响应。在物理 AI 系统里，
+Dialogue: 0,0:05:55.47,0:05:56.76,Sub,,0,0,0,,That's not possible.\N这不可能。
+Dialogue: 0,0:05:56.81,0:05:57.18,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:05:57.21,0:06:03.34,Sub,,0,0,0,,We have real time latency constraints usually in the millisecond range and we need to solve for those.\N我们通常面临毫秒级的实时延迟约束，必须解决这些问题。
+Dialogue: 0,0:06:03.39,0:06:09.52,Sub,,0,0,0,,And then the third aspect that's really fundamentally different is a cost of errors, right?\N然后第三个根本不同的方面是错误的成本，对吧？
+Dialogue: 0,0:06:09.57,0:06:12.19,Sub,,0,0,0,,These are big systems moving around.\N这些是四处移动的大型系统。
+Dialogue: 0,0:06:12.24,0:06:14.98,Sub,,0,0,0,,Could be robots, could be cars, right?\N可能是机器人，也可能是汽车，对吧？
+Dialogue: 0,0:06:15.03,0:06:18.50,Sub,,0,0,0,,And they need to behave well in the world.\N它们需要在现实世界中表现良好。
+Dialogue: 0,0:06:18.56,0:06:21.88,Sub,,0,0,0,,Um, and maybe just one simple anecdote, right?\N呃，或许就举一个简单的例子吧，对吧？
+Dialogue: 0,0:06:21.92,0:06:26.70,Sub,,0,0,0,,Like, uh, was recently on vacation with my daughter.\N比如，最近我和女儿去度假。
+Dialogue: 0,0:06:26.74,0:06:28.51,Sub,,0,0,0,,We were creating a horse game.\N我们在玩一个马的游戏。
+Dialogue: 0,0:06:28.56,0:06:32.73,Sub,,0,0,0,,A horse had two legs and was jumping backwards over its jump.\N那匹马有两条腿，正朝后跳过障碍物。
+Dialogue: 0,0:06:32.78,0:06:40.68,Sub,,0,0,0,,Um, and that's that's still pretty good and impressive for AI, but those types of things in a physical system, right, are not quite acceptable.\N嗯，对 AI 来说这仍然相当不错且令人印象深刻，但在物理系统中，这类情况显然无法接受。
+Dialogue: 0,0:06:40.73,0:06:42.87,Sub,,0,0,0,,And she's the biggest critique, right?\N而她正是最严厉的批评者，对吧？
+Dialogue: 0,0:06:42.92,0:06:48.87,Sub,,0,0,0,,when she's in a Waymo car, she'll she'll definitely notice when we stutter for a quarter second at an intersection,\N当她坐在 Waymo 的车里时，如果我们在路口卡顿零点二五秒，她一定会立刻察觉。
+Dialogue: 0,0:06:48.92,0:06:56.27,Sub,,0,0,0,,but that's sort of a level of of sort of what of a quality bar we need to read.\N但这也正是我们所需要达到的质量标准。
+Dialogue: 0,0:06:56.32,0:07:04.02,Sub,,0,0,0,,Now, of course, there's also the really important aspect of of what impact are we having with the the the self-driving cars,\N当然，还有一个非常重要的方面，就是我们自动驾驶汽车带来的实际影响。
+Dialogue: 0,0:07:04.07,0:07:08.36,Sub,,0,0,0,,and there one of the biggest ones, of course, is is just the safety.\N其中最重要的，当然是安全性。
+Dialogue: 0,0:07:08.41,0:07:18.51,Sub,,0,0,0,,When you when you look at cars in general across the world, about one person dies every 26 seconds, right, due to a car accident.\N当你纵观全球所有车辆，每 26 秒就有一人死于交通事故。
+Dialogue: 0,0:07:18.56,0:07:30.03,Sub,,0,0,0,,And so being engineers, being a company that's able to transform the world to help in those cases is of course a really awesome win.\N因此，作为工程师，作为一家有能力改变世界、帮助解决此类问题的公司，这无疑是一次巨大的成功。
+Dialogue: 0,0:07:30.08,0:07:32.89,Sub,,0,0,0,,So quick outline for the talk.\N那么，先快速介绍一下本次演讲的框架。
+Dialogue: 0,0:07:32.94,0:07:37.05,Sub,,0,0,0,,Um I'll give you a quick overview of where we've been within Waymo, right?\N嗯，我将简要回顾一下我们在 Waymo 的发展历程。
+Dialogue: 0,0:07:37.10,0:07:44.04,Sub,,0,0,0,,what our journey has been, give a a sense of how our sensor suite has evolved and then dive into compute,\N介绍我们的传感器系统是如何演进的，然后深入探讨计算部分，
+Dialogue: 0,0:07:44.09,0:07:51.71,Sub,,0,0,0,,finishing with what our ML models look like and what is really motivating all that compute.\N最后展示我们的机器学习模型是什么样子，以及是什么真正推动了如此庞大的计算需求。
+Dialogue: 0,0:07:51.76,0:07:59.81,Sub,,0,0,0,,So first a look back right we started Waymo in about 2009 um 10 years ago gave a talk\N首先回顾一下，我们大约在 2009 年启动了 Waymo 项目。十年前我做过一次演讲，
+Dialogue: 0,0:07:59.86,0:08:06.25,Sub,,0,0,0,,and was looking at some of those slides and you'll see there's sort of a the challenge picture to the\N翻看那些幻灯片时，你会看到左边有一张挑战性图片
+Dialogue: 0,0:08:06.30,0:08:12.22,Sub,,0,0,0,,left right at the time this was a really really difficult scene for us to to support right you can\N当时，这对我们来说是一个非常非常困难的场景，你看
+Dialogue: 0,0:08:12.27,0:08:19.95,Sub,,0,0,0,,see there's a traffic light that's clearly green there's another traffic light that's occluded by a red red object Um,\N有一个交通灯明显是绿色的，另一个交通灯却被一个红色物体遮挡了
+Dialogue: 0,0:08:20.00,0:08:27.15,Sub,,0,0,0,,and sort of having the contextual information, making that really, really longtail decision, right?\N要获取上下文信息，做出这种长尾判断，真的非常困难
+Dialogue: 0,0:08:27.20,0:08:30.62,Sub,,0,0,0,,Do you call this light red or do you call it green?\N你会把这盏灯判断为红色还是绿色？
+Dialogue: 0,0:08:30.67,0:08:32.87,Sub,,0,0,0,,Is not an easy thing, right?\N这并不是一件容易的事
+Dialogue: 0,0:08:32.92,0:08:42.19,Sub,,0,0,0,,And it's an example where it's easy to be right 90% 99% of the time, but traffic lights, you really want to be right all the time.\N这是一个很容易做到 90%、99% 正确率的例子，但对交通灯来说，你必须每次都判断正确
+Dialogue: 0,0:08:42.24,0:08:45.47,Sub,,0,0,0,,And so, at the time, this was a really hard problem.\N所以当时，这是一个非常棘手的问题
+Dialogue: 0,0:08:45.52,0:08:52.19,Sub,,0,0,0,,Um, today I I I I punched this into into Gemini, one of our flash models, right?\N而今天，我把这个场景输入到了Gemini，我们的一款快速模型中
+Dialogue: 0,0:08:52.24,0:08:59.95,Sub,,0,0,0,,Query that is is a traffic light red or green and it can immediately tell you, right, what's happening in this scene.\N询问“这个交通灯是红的还是绿的”，它能立刻告诉你这个场景中发生了什么
+Dialogue: 0,0:09:00.00,0:09:10.43,Sub,,0,0,0,,So sort of AI has definitely advanced a long way and and helps tremendously in our journey to to have a really robust system.\N所以可以说，人工智能确实已经取得了长足进步，极大地帮助了我们构建一个真正可靠的系统
+Dialogue: 0,0:09:10.48,0:09:14.11,Sub,,0,0,0,,From a compute perspective, things have changed a lot too, right?\N从计算角度来看，情况也发生了很大变化，对吧？
+Dialogue: 0,0:09:14.16,0:09:21.26,Sub,,0,0,0,,At the time we were just transitioning from surface streets to uh sorry from freeway driving to surface streets.\N当时我们正从高速公路驾驶转向普通道路驾驶。
+Dialogue: 0,0:09:21.31,0:09:25.18,Sub,,0,0,0,,We knew the amount of compute would increase dramatically with that.\N我们知道，随着这一转变，计算需求将大幅增加。
+Dialogue: 0,0:09:25.23,0:09:25.57,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:09:25.60,0:09:30.22,Sub,,0,0,0,,Like surface streets you have more agents you you more people you interact with.\N普通道路上有更多交通参与者，与你互动的人也更多。
+Dialogue: 0,0:09:30.27,0:09:33.65,Sub,,0,0,0,,The traffic rules tend to be more complicated.\N交通规则也变得更加复杂。
+Dialogue: 0,0:09:33.70,0:09:37.14,Sub,,0,0,0,,Um and so we were projecting a big bump in compute.\N所以我们预估计算需求会有显著提升。
+Dialogue: 0,0:09:37.18,0:09:39.80,Sub,,0,0,0,,Um a fair amount of that was CPU right?\N其中相当一部分来自 CPU，对吧？
+Dialogue: 0,0:09:39.85,0:09:44.03,Sub,,0,0,0,,We were doing a lot of planning decisions on CPU at the time.\N当时我们大量依赖 CPU 进行规划决策。
+Dialogue: 0,0:09:44.08,0:09:47.56,Sub,,0,0,0,,It was also our first big bump on the ML side, right?\N这也是我们在机器学习方面迎来的首次重大提升，对吧？
+Dialogue: 0,0:09:47.61,0:09:52.99,Sub,,0,0,0,,Where GPUs and other technologies started really advancing and being amazing at ML.\N从那时起，GPU 及其他技术开始真正快速发展，在机器学习领域表现卓越。
+Dialogue: 0,0:09:53.04,0:09:55.63,Sub,,0,0,0,,And so we we saw a nice uptick.\N于是我们看到了明显的增长。
+Dialogue: 0,0:09:55.68,0:09:58.89,Sub,,0,0,0,,Now you also see the picture on the left, right?\N现在你也能看到左边的图像，对吧？
+Dialogue: 0,0:09:58.94,0:10:01.36,Sub,,0,0,0,,This was our inspiration at the time, right?\N那就是我们当时获得的灵感，对吧？
+Dialogue: 0,0:10:01.41,0:10:04.09,Sub,,0,0,0,,Kind of thinking 50 TOPS, 100 TOPS.\N大致在思考50 TOPS、100 TOPS的算力。
+Dialogue: 0,0:10:04.14,0:10:05.79,Sub,,0,0,0,,Wow, that's amazing.\N哇，这太棒了。
+Dialogue: 0,0:10:05.84,0:10:08.52,Sub,,0,0,0,,Um the world has of course changed.\N嗯，世界当然已经变了。
+Dialogue: 0,0:10:08.57,0:10:12.81,Sub,,0,0,0,,Um and we we have a lot more TOPS now and we use them.\N嗯，我们现在拥有的算力更多了，也正在使用它们。
+Dialogue: 0,0:10:12.86,0:10:16.99,Sub,,0,0,0,,Uh so is is good.\N嗯，这样很好。
+Dialogue: 0,0:10:17.04,0:10:22.01,Sub,,0,0,0,,In terms of vehicles, um we are now on our sixth generation platform.\N就车辆而言，我们现在正处于第六代平台。
+Dialogue: 0,0:10:22.06,0:10:27.39,Sub,,0,0,0,,Our compute often iterates a little bit more quickly than these vehicle platforms.\N我们的计算平台通常比这些车辆平台迭代得更快一些。
+Dialogue: 0,0:10:27.44,0:10:30.37,Sub,,0,0,0,,Um but you can see a gradual transition, right?\N嗯，你可以看到一个渐进的过渡过程，对吧？
+Dialogue: 0,0:10:30.42,0:10:35.31,Sub,,0,0,0,,We started initially with basically all off-the-shelf components.\N我们最初基本上全部使用现成的组件。
+Dialogue: 0,0:10:35.36,0:10:38.77,Sub,,0,0,0,,Second generation started integrating sensors.\N第二代开始整合传感器。
+Dialogue: 0,0:10:38.82,0:10:47.91,Sub,,0,0,0,,Third generations all all Waymo hardware and so has evolved and with closer and closer relationships with the OEMs as well.\N第三代产品全部采用 Waymo 的硬件，同时也与原始设备制造商建立了越来越紧密的合作关系。
+Dialogue: 0,0:10:47.96,0:10:50.43,Sub,,0,0,0,,We're now with a sixth generation.\N我们现在已进入第六代产品。
+Dialogue: 0,0:10:50.48,0:10:52.69,Sub,,0,0,0,,We have an Ojai vehicle, right?\N我们有一辆 Ojai 车辆，对吧？
+Dialogue: 0,0:10:52.74,0:10:57.07,Sub,,0,0,0,,Very carefully designed to be a really awesome self-driving vehicle.\N经过精心设计，是一款非常出色的自动驾驶车辆。
+Dialogue: 0,0:10:57.12,0:10:58.75,Sub,,0,0,0,,Also a Hyundai Ioniq 5.\N还有一辆现代 Ioniq 5。
+Dialogue: 0,0:10:58.80,0:11:05.47,Sub,,0,0,0,,We have a close partnership to to launch that soon.\N我们正与他们紧密合作，即将推出这款车型。
+Dialogue: 0,0:11:05.52,0:11:10.89,Sub,,0,0,0,,Now, when you think about the trajectory of what were the capabilities of a Waymo driver,\N当你思考 Waymo 驾驶员能力的发展轨迹时，
+Dialogue: 0,0:11:10.94,0:11:16.75,Sub,,0,0,0,,right, this is a video from 2009 and maps that we actually drove, right?\N这是 2009 年的视频，展示的是我们实际驾驶过的地图，对吧？
+Dialogue: 0,0:11:16.80,0:11:23.20,Sub,,0,0,0,,These were kind of 10 times 100 mile challenge routes, right, that Google founders gave us.\N这些是谷歌创始人给我们设定的“十乘一百英里”挑战路线，对吧？
+Dialogue: 0,0:11:23.25,0:11:28.19,Sub,,0,0,0,,And the goal was to drive these routes with zero disengages.\N目标是全程零脱离驾驶。
+Dialogue: 0,0:11:28.24,0:11:33.69,Sub,,0,0,0,,And as you can see from the maps or the videos, these are actually pretty complicated routes, right?\N从地图或视频中可以看出，这些路线实际上相当复杂，对吧？
+Dialogue: 0,0:11:33.74,0:11:40.43,Sub,,0,0,0,,Traffic lights, lane changes, pedestrians, bicyclists, toll booths, bridges, right?\N交通灯、变道、行人、骑自行车的人、收费站、桥梁，对吧？
+Dialogue: 0,0:11:40.48,0:11:41.70,Sub,,0,0,0,,All kinds of things.\N各种各样的事情。
+Dialogue: 0,0:11:41.75,0:11:46.67,Sub,,0,0,0,,And within about 18 months, we we had this working, right?\N大约18个月后，我们就让这个系统跑起来了，对吧？
+Dialogue: 0,0:11:46.72,0:11:49.01,Sub,,0,0,0,,Which of course gave us tremendous confidence.\N这当然让我们信心倍增。
+Dialogue: 0,0:11:49.06,0:11:51.55,Sub,,0,0,0,,Hey, we can build self-driving cars.\N嘿，我们可以制造自动驾驶汽车。
+Dialogue: 0,0:11:51.60,0:11:54.42,Sub,,0,0,0,,But it's really a demo, right?\N但这其实只是一个演示，对吧？
+Dialogue: 0,0:11:54.47,0:11:56.47,Sub,,0,0,0,,A very capable demo.\N一个非常出色的演示。
+Dialogue: 0,0:11:56.52,0:12:02.44,Sub,,0,0,0,,Um but it is not fully self-driving right we still had a safety driver in the driver's seat.\N但还不是完全自动驾驶，我们仍然让安全驾驶员坐在驾驶座上。
+Dialogue: 0,0:12:02.49,0:12:08.59,Sub,,0,0,0,,Now technology-wise you can think right this is a time when we were using boosted decision trees random\N从技术角度来看，这是当时我们使用提升决策树和随机森林的时期。
+Dialogue: 0,0:12:08.64,0:12:17.38,Sub,,0,0,0,,forests right CNNs um transformers world models right these things didn't exist yet right so this is all based\N随机森林、CNN、Transformer、世界模型——这些概念当时都还不存在，所以这一切都是基于
+Dialogue: 0,0:12:17.43,0:12:29.03,Sub,,0,0,0,,on sort of pre pre new ML um technologies so where are we today right like 2009ish we we\N前深度学习时代的机器学习技术。那么我们现在处于什么阶段？比如 2009 年左右，我们……
+Dialogue: 0,0:12:29.08,0:12:37.74,Sub,,0,0,0,,completed those demos um it took us a good amount of time to get to fully driverless from there.\N完成那些演示后，从那里实现完全无人驾驶，我们花了不少时间。
+Dialogue: 0,0:12:37.79,0:12:41.45,Sub,,0,0,0,,Um, and then even more time to really deploy at scale.\N而且还有更多时间来真正实现大规模部署。
+Dialogue: 0,0:12:41.50,0:12:44.15,Sub,,0,0,0,,And you can see where we are today.\N你就能看到我们今天所处的位置。
+Dialogue: 0,0:12:44.20,0:12:48.26,Sub,,0,0,0,,We've driven over 200 million miles fully autonomously, right?\N我们已经实现了超过两亿英里的完全自动驾驶，对吧？
+Dialogue: 0,0:12:48.31,0:12:52.99,Sub,,0,0,0,,These are these are rides that users use the app and take.\N这些是用户通过 App 叫的行程。
+Dialogue: 0,0:12:53.04,0:12:56.21,Sub,,0,0,0,,Um, we we are operating in 15 cities.\N嗯，我们正在15个城市运营。
+Dialogue: 0,0:12:56.26,0:12:59.98,Sub,,0,0,0,,And just to think about the growth curve here, right?\N想想这里的增长曲线，对吧？
+Dialogue: 0,0:13:00.03,0:13:05.04,Sub,,0,0,0,,Our first 100 million miles took about 15 years.\N我们完成前1亿英里的路程大约花了15年。
+Dialogue: 0,0:13:05.09,0:13:08.83,Sub,,0,0,0,,Um our second 100 million miles took about 7 months.\N我们的第二个一亿英里用了大约 7 个月。
+Dialogue: 0,0:13:08.88,0:13:14.83,Sub,,0,0,0,,Um cities right from the time we did our first fully autonomous\N嗯，城市方面，从我们实现首个完全自动驾驶
+Dialogue: 0,0:13:14.88,0:13:22.48,Sub,,0,0,0,,driving mile um until we were in four cities took about eight years.\N里程，到进入四个城市，花了大约八年时间。
+Dialogue: 0,0:13:22.54,0:13:26.62,Sub,,0,0,0,,Just a few months ago, we launched in four cities in a single day.\N就在几个月前，我们一天之内在四个城市推出了服务。
+Dialogue: 0,0:13:26.67,0:13:27.05,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:13:27.08,0:13:32.53,Sub,,0,0,0,,So, we're at this inflection point where the technology has really matured.\N因此，我们正处在一个技术真正成熟的转折点上。
+Dialogue: 0,0:13:32.58,0:13:38.99,Sub,,0,0,0,,Um, it works as fully autonomous technology and we're able to deploy at scale.\N嗯，它作为完全自主的技术运行，我们能够实现规模化部署。
+Dialogue: 0,0:13:39.04,0:13:41.59,Sub,,0,0,0,,So, what's one of the things to think about here, right?\N那么，这里需要考虑的一件事是什么，对吧？
+Dialogue: 0,0:13:41.64,0:13:44.95,Sub,,0,0,0,,Like when you when you think about physical AI, right?\N比如当你想到物理 AI 的时候，对吧？
+Dialogue: 0,0:13:45.00,0:13:47.59,Sub,,0,0,0,,It it often is fairly easy.\N它通常相当容易。
+Dialogue: 0,0:13:47.64,0:13:53.70,Sub,,0,0,0,,um or maybe not easy, can still be hard, but you can get to a demo fairly quickly, right?\N嗯，或者可能并不容易，但仍然可能很难，不过你很快就能做出演示，对吧？
+Dialogue: 0,0:13:53.75,0:13:56.27,Sub,,0,0,0,,And these can be pretty impressive demos.\N而这些演示往往非常令人印象深刻。
+Dialogue: 0,0:13:56.32,0:14:03.05,Sub,,0,0,0,,But when you think about the product, and this whether it's robotics or self-driving cars or industrial controls, right?\N但当你考虑产品本身，无论是机器人、自动驾驶汽车还是工业控制，对吧？
+Dialogue: 0,0:14:03.10,0:14:07.75,Sub,,0,0,0,,Like very complicated systems that interact with the physical world, right?\N比如那些与物理世界交互的非常复杂的系统，对吧？
+Dialogue: 0,0:14:07.80,0:14:16.59,Sub,,0,0,0,,Making sure that all those full stack of nines are solved for is critical to have a product, right?\N确保所有全栈九个九的指标都得到解决，对打造产品至关重要，对吧？
+Dialogue: 0,0:14:16.64,0:14:18.84,Sub,,0,0,0,,And that's that's the journey we've been on here.\N这正是我们一直在走的旅程。
+Dialogue: 0,0:14:18.89,0:14:21.84,Sub,,0,0,0,,And of course there's many parts to the system.\N当然，系统包含许多部分。
+Dialogue: 0,0:14:21.89,0:14:28.59,Sub,,0,0,0,,Um compute is one area where where we've of course helped make that happen.\N嗯，计算是其中一个领域，我们当然在这方面助力实现了突破。
+Dialogue: 0,0:14:28.64,0:14:34.86,Sub,,0,0,0,,Now from a design philosophy standpoint, um we often think about these curves, right?\N从设计哲学的角度来看，我们通常会考虑这些曲线，对吧？
+Dialogue: 0,0:14:34.91,0:14:40.46,Sub,,0,0,0,,Like you you pick a technology and you know there's going to be a fairly quick ramp, right?\N比如你选择一项技术，就会知道它会迅速上升，对吧？
+Dialogue: 0,0:14:40.51,0:14:41.78,Sub,,0,0,0,,You can make progress.\N你可以取得进展。
+Dialogue: 0,0:14:41.83,0:14:47.46,Sub,,0,0,0,,you improve performance of a system whether it's reliability or scene understanding.\N你可以提升系统的性能，无论是可靠性还是场景理解能力。
+Dialogue: 0,0:14:47.51,0:14:51.42,Sub,,0,0,0,,Um and then at some point the curve flatlines.\N然后在某个时刻，曲线就会趋于平缓。
+Dialogue: 0,0:14:51.47,0:14:56.84,Sub,,0,0,0,,Um and for us we we've generally made the decision to make the the longer term\N对我们而言，我们通常会做出这样的决定：投入更长期、更艰难的赌注。
+Dialogue: 0,0:14:56.89,0:15:03.96,Sub,,0,0,0,,harder harder bets to achieve kind of the the best best possible outcome that we can envision.\N以实现我们所能设想的最好结果。
+Dialogue: 0,0:15:04.01,0:15:11.41,Sub,,0,0,0,,And often times that means right adding more things to our car, adding complexity, solving hard harder problems.\N这通常意味着要为我们的汽车增加更多功能，引入更多复杂性，解决更难的问题。
+Dialogue: 0,0:15:11.46,0:15:14.90,Sub,,0,0,0,,But our goal really is to have a superhuman driver.\N但我们的目标真正是打造一个超人驾驶员。
+Dialogue: 0,0:15:14.95,0:15:21.55,Sub,,0,0,0,,And the only way we can accomplish that is by aiming really as high as we can on these curves.\N而要实现这一点，唯一的方法就是尽可能地将这些曲线推到最高点。
+Dialogue: 0,0:15:21.60,0:15:26.60,Sub,,0,0,0,,And one classic example for that is when you think about the sensing systems, right?\N一个典型的例子就是感知系统，对吧？
+Dialogue: 0,0:15:26.65,0:15:30.27,Sub,,0,0,0,,All of you have probably seen some forms of discussion, right?\N你们可能都见过一些相关的讨论，对吧？
+Dialogue: 0,0:15:30.32,0:15:33.55,Sub,,0,0,0,,Should you have cars with camera only systems?\N你是否应该使用仅配备摄像头的系统来驾驶汽车？
+Dialogue: 0,0:15:33.60,0:15:36.22,Sub,,0,0,0,,Why are other sensors may be needed?\N为什么其他传感器可能是必要的？
+Dialogue: 0,0:15:36.27,0:15:40.27,Sub,,0,0,0,,Um, and you can reference, well, humans drive with two eyes.\N嗯，你可以参考一下，人类驾驶时是用两只眼睛的。
+Dialogue: 0,0:15:40.32,0:15:43.95,Sub,,0,0,0,,Um, why should a car not drive with two eyes?\N那么，为什么汽车不能也用两只眼睛来驾驶呢？
+Dialogue: 0,0:15:44.00,0:15:46.67,Sub,,0,0,0,,And the answer is actually pretty easy, right?\N其实答案相当简单，对吧？
+Dialogue: 0,0:15:46.72,0:15:53.31,Sub,,0,0,0,,Like we want a superhuman driver, a driver that has far fewer incidents as a human does.\N我们想要的是一位超人驾驶员，其事故率远低于人类驾驶员。
+Dialogue: 0,0:15:53.36,0:15:57.77,Sub,,0,0,0,,And so having having the additional technologies to assist there, right,\N因此，引入额外的技术来辅助驾驶，对吧，
+Dialogue: 0,0:15:57.82,0:16:03.14,Sub,,0,0,0,,definitely adds complexity to our cars but dramatically boosts the performance.\N虽然确实增加了汽车的复杂性，但能显著提升性能。
+Dialogue: 0,0:16:03.19,0:16:06.35,Sub,,0,0,0,,And so these are kind of the decisions we make, right?\N所以这些就是我们做出的一些决策，对吧？
+Dialogue: 0,0:16:06.40,0:16:11.32,Sub,,0,0,0,,Technologies change over time and we we swap, we make different decisions,\N技术会随时间变化，我们会进行替换，做出不同的选择，
+Dialogue: 0,0:16:11.37,0:16:21.63,Sub,,0,0,0,,but our goal always is to really be at the maximum performance level to deliver the best driver that we can.\N但我们的目标始终是达到最高性能水平，以提供我们能做到的最佳驾驶员。
+Dialogue: 0,0:16:21.68,0:16:24.62,Sub,,0,0,0,,So looking at the the Waymo driver a little bit.\N所以我们来稍微看一下 Waymo 的驾驶员。
+Dialogue: 0,0:16:24.67,0:16:32.12,Sub,,0,0,0,,Um it's a combination of course of a hardware suite and and a software suite.\N嗯，这是一套硬件和一套软件的结合。
+Dialogue: 0,0:16:32.17,0:16:36.14,Sub,,0,0,0,,Um here we we look at the the vehicle itself.\N嗯，这里我们看的是车辆本身。
+Dialogue: 0,0:16:36.19,0:16:38.58,Sub,,0,0,0,,We we have multimodal sensors.\N我们配备了多模态传感器。
+Dialogue: 0,0:16:38.63,0:16:43.07,Sub,,0,0,0,,We have cameras, radars, lidars and microphones.\N包括摄像头、雷达、激光雷达和麦克风。
+Dialogue: 0,0:16:43.12,0:16:45.52,Sub,,0,0,0,,Then as you'll see in the trunk is our computer.\N然后你看到的后备箱里就是我们的计算机。
+Dialogue: 0,0:16:45.57,0:16:49.23,Sub,,0,0,0,,These are all sensors that complement each other.\N这些传感器彼此互补。
+Dialogue: 0,0:16:49.28,0:16:49.79,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:16:49.84,0:16:53.40,Sub,,0,0,0,,We we have sort of our sensor fusion networks.\N我们有传感器融合网络。
+Dialogue: 0,0:16:53.45,0:16:56.44,Sub,,0,0,0,,We have encoders for each of the sensors.\N每个传感器都有对应的编码器。
+Dialogue: 0,0:16:56.50,0:16:58.68,Sub,,0,0,0,,A sensor fusion network combines them.\N传感器融合网络将它们整合在一起。
+Dialogue: 0,0:16:58.73,0:17:02.13,Sub,,0,0,0,,And so we get a holistic view of of the overall world.\N于是我们就能获得对整个世界的一个整体视图。
+Dialogue: 0,0:17:02.18,0:17:08.39,Sub,,0,0,0,,And each of the sensors, right, depending on the scene is of course contributing different amounts of data to that.\N而每个传感器，根据场景的不同，当然会贡献不同数量的数据。
+Dialogue: 0,0:17:08.44,0:17:16.66,Sub,,0,0,0,,And if you think about the sensors, right, like we have high high resolution cameras, they can see color, but it's a passive sensor, right?\N如果你考虑传感器的话，比如我们有高分辨率的摄像头，它们能识别颜色，但这是被动式传感器，对吧？
+Dialogue: 0,0:17:16.70,0:17:22.20,Sub,,0,0,0,,if it's dark, if you're looking into a really glaring sun, it may not be the optimal sensor.\N如果环境黑暗，或者你正对着强烈的阳光，这种传感器可能就不是最佳选择。
+Dialogue: 0,0:17:22.25,0:17:27.63,Sub,,0,0,0,,And so their lidar and radar can complement things really well.\N因此，它们的激光雷达和毫米波雷达可以很好地互补。
+Dialogue: 0,0:17:27.68,0:17:29.65,Sub,,0,0,0,,And just to go through an example of that.\N就用一个例子来说明一下。
+Dialogue: 0,0:17:29.70,0:17:32.53,Sub,,0,0,0,,Um, so here here we're showing an image.\N嗯，这里我们展示一张图像。
+Dialogue: 0,0:17:32.58,0:17:35.60,Sub,,0,0,0,,Um, it's in a dust storm in Phoenix, right?\N这是在凤凰城的一场沙尘暴中，对吧？
+Dialogue: 0,0:17:35.65,0:17:40.02,Sub,,0,0,0,,You can you can look at it and kind of see the car in front of you.\N你可以看这张图，大概能分辨出前面那辆车。
+Dialogue: 0,0:17:40.07,0:17:44.42,Sub,,0,0,0,,So maybe not that bad, but then you add lidar to it, right?\N所以可能还不算太糟糕，但当你加上激光雷达后，情况就不同了，对吧？
+Dialogue: 0,0:17:44.47,0:17:47.90,Sub,,0,0,0,,And you see there's a pedestrian right at the side of a road.\N你就能看到路边有一个行人。
+Dialogue: 0,0:17:47.96,0:17:52.43,Sub,,0,0,0,,And using this information, we of course know to be cautious, right?\N利用这些信息，我们当然会提高警惕，对吧？
+Dialogue: 0,0:17:52.48,0:17:55.98,Sub,,0,0,0,,Like that pedestrian may not actually be able to see our car, right?\N因为那个行人可能实际上看不到我们的车，对吧？
+Dialogue: 0,0:17:56.03,0:17:57.29,Sub,,0,0,0,,This is a dust storm.\N这是一场沙尘暴。
+Dialogue: 0,0:17:57.34,0:18:00.12,Sub,,0,0,0,,They may take a step into the road, right?\N他们可能会跨步走上马路，对吧？
+Dialogue: 0,0:18:00.17,0:18:03.42,Sub,,0,0,0,,And so having that visibility is is of course\N因此，当你想要
+Dialogue: 0,0:18:03.47,0:18:05.10,Sub,,0,0,0,,really important when you want\N最安全的
+Dialogue: 0,0:18:05.15,0:18:05.63,Sub,,0,0,0,,the safest\N驾驶员
+Dialogue: 0,0:18:05.68,0:18:11.75,Sub,,0,0,0,,driver\N时，这种视野当然
+Dialogue: 0,0:18:11.80,0:18:19.63,Sub,,0,0,0,,you can.\N至关重要。
+Dialogue: 0,0:18:19.68,0:18:21.22,Sub,,0,0,0,,Here's another example, right?\N这是另一个例子，对吧？
+Dialogue: 0,0:18:21.27,0:18:26.31,Sub,,0,0,0,,You see the car driving and you see it making sort of a bit of a zigzag, right?\N你看到那辆车在行驶，还看到它有点像在做蛇形路线，对吧？
+Dialogue: 0,0:18:26.36,0:18:29.84,Sub,,0,0,0,,You're probably wondering why, right?\N你可能在想这是为什么，对吧？
+Dialogue: 0,0:18:29.89,0:18:30.68,Sub,,0,0,0,,This is why.\N这就是原因。
+Dialogue: 0,0:18:30.73,0:18:40.95,Sub,,0,0,0,,Um, there's actually several pedestrians in the median of this freeway that are about to climb over it and go into the road using just cameras.\N其实，这条高速公路的中央隔离带里有好几位行人，正准备翻越护栏进入车道，
+Dialogue: 0,0:18:41.00,0:18:43.73,Sub,,0,0,0,,You could not see that, right?\N只靠摄像头，你根本看不到，对吧？
+Dialogue: 0,0:18:43.78,0:18:48.71,Sub,,0,0,0,,And so here you can see the kind of merge sensor view right to the car is very clear, right?\N因此，你可以看到这种融合传感器视图——那辆车非常清晰，对吧？
+Dialogue: 0,0:18:48.76,0:18:55.47,Sub,,0,0,0,,There are people climbing into the road and the car should avoid them.\N有人正在爬进车道，汽车应当避开他们。
+Dialogue: 0,0:18:55.52,0:18:59.93,Sub,,0,0,0,,Now camera of course is a very important sensor to us as well.\N当然，摄像头对我们来说也是一个非常重要的传感器。
+Dialogue: 0,0:18:59.98,0:19:05.43,Sub,,0,0,0,,Um we have pretty much the best sort of high dynamic range imagers.\N嗯，我们基本上拥有最顶尖的高动态范围成像设备。
+Dialogue: 0,0:19:05.48,0:19:11.57,Sub,,0,0,0,,We do sophisticated image processing right for example temporal d noiseise right also other\N我们能进行复杂的图像处理，比如时间域去噪，以及其他操作。
+Dialogue: 0,0:19:11.62,0:19:18.59,Sub,,0,0,0,,things to really extract the best information that we can from our camera images.\N以及其他操作，尽可能从相机图像中提取最好的信息。
+Dialogue: 0,0:19:18.64,0:19:26.02,Sub,,0,0,0,,Now given this is a chips related conference um quickly we'll mention right like a lot we will be\N既然这是个芯片相关的会议，我们简单提一下：
+Dialogue: 0,0:19:26.07,0:19:33.81,Sub,,0,0,0,,talking about kind of a bigger compute digital um chips that we build and also others in the industry.\N我们要讲的是更大规模的计算数字芯片——我们自研的，也包括行业里其他人的。
+Dialogue: 0,0:19:33.86,0:19:37.93,Sub,,0,0,0,,Um we we also occasionally build silicon for our sensors.\N嗯，我们偶尔也会为传感器定制芯片。
+Dialogue: 0,0:19:37.98,0:19:45.17,Sub,,0,0,0,,Um one nice example is a sort of a a lidar processing um chip that lives within our lidars.\N一个不错的例子是我们激光雷达内部集成的激光雷达处理芯片。
+Dialogue: 0,0:19:45.22,0:19:47.95,Sub,,0,0,0,,You can think of it as a mixed signal chip, right?\N你可以把它看作是一种混合信号芯片，对吧？
+Dialogue: 0,0:19:48.00,0:19:54.20,Sub,,0,0,0,,Essentially what it's doing is you shoot a laser, it's measuring the time until the pulse returns.\N本质上，它的工作原理是发射一束激光，然后测量脉冲返回所需的时间。
+Dialogue: 0,0:19:54.24,0:19:58.86,Sub,,0,0,0,,Um, and then based on that, you can derive derive distance.\N嗯，然后基于这个，你可以推导出距离。
+Dialogue: 0,0:19:58.91,0:20:04.25,Sub,,0,0,0,,Now, one of the interesting things here is when you think about our sensors and ML models,\N现在，这里一个有趣的地方是，当我们思考传感器和机器学习模型时，
+Dialogue: 0,0:20:04.30,0:20:10.32,Sub,,0,0,0,,we generally want to ship as much data as we can, right, from the sensors into the ML models.\N我们通常希望尽可能多地将传感器数据传输到机器学习模型中，对吧？
+Dialogue: 0,0:20:10.38,0:20:13.12,Sub,,0,0,0,,And so there's constant tension, right?\N所以一直存在这种张力，对吧？
+Dialogue: 0,0:20:13.17,0:20:16.03,Sub,,0,0,0,,like how big of an interconnect can you build in a car?\N比如说，你能在汽车里构建多大的互连？
+Dialogue: 0,0:20:16.08,0:20:18.73,Sub,,0,0,0,,How much data, right, can we cross?\N我们能传输多少数据，对吧？
+Dialogue: 0,0:20:18.78,0:20:21.72,Sub,,0,0,0,,Which data should we select in the sensor head?\N在传感器前端应该选择哪些数据？
+Dialogue: 0,0:20:21.77,0:20:25.98,Sub,,0,0,0,,Um and so here showing just a very simplistic view of that, right?\N嗯，这里只是展示了一个非常简化的视图，对吧？
+Dialogue: 0,0:20:26.03,0:20:29.43,Sub,,0,0,0,,Like you can do threshold-based um compression, right?\N比如你可以采用基于阈值的压缩，对吧？
+Dialogue: 0,0:20:29.48,0:20:33.47,Sub,,0,0,0,,Where we say only only pulses above some level we return.\N我们只返回超过某个阈值的脉冲。
+Dialogue: 0,0:20:33.52,0:20:39.32,Sub,,0,0,0,,Um but there very sophisticated algorithms and at some point perhaps even ML driven, right?\N嗯，但也有非常复杂的算法，甚至在某些情况下由机器学习驱动，对吧？
+Dialogue: 0,0:20:39.37,0:20:48.75,Sub,,0,0,0,,decision making within the sensor heads for what what is the most useful information to pass to the core compute.\N在传感器前端进行决策，判断哪些信息对核心计算最有用。
+Dialogue: 0,0:20:48.80,0:20:51.09,Sub,,0,0,0,,So let's look at our compute a little bit.\N那么我们来稍微看一下我们的计算能力。
+Dialogue: 0,0:20:51.14,0:20:57.39,Sub,,0,0,0,,Um so physical AI there actually are multiple different compute surfaces.\N事实上，物理 AI 存在多种不同的计算平台。
+Dialogue: 0,0:20:57.44,0:21:01.15,Sub,,0,0,0,,Most of the time we spend on what you see in the top left, right?\N我们大部分时间都在处理你看到的左上角的内容，对吧？
+Dialogue: 0,0:21:01.20,0:21:03.24,Sub,,0,0,0,,Our high high performance computer.\N我们的高性能计算机。
+Dialogue: 0,0:21:03.29,0:21:09.55,Sub,,0,0,0,,We call it our our BFC, our big friendly uh computer.\N我们称它为 BFC，也就是我们那个又大又友好的计算机。
+Dialogue: 0,0:21:09.60,0:21:14.65,Sub,,0,0,0,,Um and so so of course super important.\N呃，当然非常重要。
+Dialogue: 0,0:21:14.70,0:21:17.87,Sub,,0,0,0,,Um but there also are other computers that are very important.\N呃，但还有其他同样重要的计算机。
+Dialogue: 0,0:21:17.92,0:21:20.56,Sub,,0,0,0,,Um perhaps even increasingly so, right?\N呃，甚至可能越来越重要，对吧？
+Dialogue: 0,0:21:20.61,0:21:22.32,Sub,,0,0,0,,One is a control computer.\N其中一个是控制计算机。
+Dialogue: 0,0:21:22.37,0:21:26.29,Sub,,0,0,0,,You can think of this a bit of a brain stem of a car, right?\N你可以把它想象成汽车的脑干，对吧？
+Dialogue: 0,0:21:26.34,0:21:29.63,Sub,,0,0,0,,like it interfaces with the brakes, the throttle, right?\N它连接刹车和油门，对吧？
+Dialogue: 0,0:21:29.68,0:21:33.21,Sub,,0,0,0,,Really making making decisions that actuate the vehicle.\N真正做出决策，来驱动车辆运行。
+Dialogue: 0,0:21:33.26,0:21:37.15,Sub,,0,0,0,,And so safety is paramount with that type of computer.\N因此，对于这类计算机而言，安全是首要考虑的。
+Dialogue: 0,0:21:37.20,0:21:38.99,Sub,,0,0,0,,We have infotainment, right?\N我们有信息娱乐系统，对吧？
+Dialogue: 0,0:21:39.04,0:21:41.03,Sub,,0,0,0,,Today you go in our cars, right?\N现在你进入我们的汽车，对吧？
+Dialogue: 0,0:21:41.08,0:21:44.85,Sub,,0,0,0,,We have a nice user interface, a touch screen.\N我们有一个不错的用户界面，带触摸屏。
+Dialogue: 0,0:21:44.90,0:21:53.14,Sub,,0,0,0,,We've gotten feedback that kind of a visibility you get into what's happening around the car is really important, the voice prompts.\N我们收到了反馈，能够清晰看到车辆周围发生的情况，以及语音提示，这一点非常重要。
+Dialogue: 0,0:21:53.19,0:21:55.91,Sub,,0,0,0,,But you can also think about the future, right?\N但你也可以展望未来，对吧？
+Dialogue: 0,0:21:55.96,0:22:04.82,Sub,,0,0,0,,Where will cars be three, four, five years from now when they're purpose-built for sort of in in vehicle experience when you're not driving the car?\N三年、四年、五年后，当汽车专为车内体验而设计，而你不再驾驶时，它们会变成什么样？
+Dialogue: 0,0:22:04.88,0:22:07.16,Sub,,0,0,0,,And so, lots of opportunities there.\N所以，那里有大量机会。
+Dialogue: 0,0:22:07.21,0:22:12.75,Sub,,0,0,0,,Um, of course, integration with a vehicle, but also interesting AI applications.\N当然，要与车辆集成，同时还有有趣的 AI 应用。
+Dialogue: 0,0:22:12.80,0:22:16.41,Sub,,0,0,0,,And then the last compute surface I'll mention is connectivity.\N然后我提到的最后一个计算面是连接性。
+Dialogue: 0,0:22:16.46,0:22:22.14,Sub,,0,0,0,,Um, of course, the car itself makes all the decisions on how it should drive, right?\N当然，汽车本身会做出所有关于如何驾驶的决策，对吧？
+Dialogue: 0,0:22:22.19,0:22:24.69,Sub,,0,0,0,,So we we we use local compute.\N所以我们使用本地计算。
+Dialogue: 0,0:22:24.74,0:22:28.16,Sub,,0,0,0,,Um we don't don't farm that out to elsewhere.\N嗯，我们不会把这部分外包到其他地方。
+Dialogue: 0,0:22:28.21,0:22:30.91,Sub,,0,0,0,,But still connectivity can be important, right?\N但连接性仍然很重要，对吧？
+Dialogue: 0,0:22:30.96,0:22:33.86,Sub,,0,0,0,,Some of that is just for user interactions, right?\N其中一些只是用于用户交互，对吧？
+Dialogue: 0,0:22:33.91,0:22:37.41,Sub,,0,0,0,,You're we've we've announced Gemini in our car.\N我们已经在汽车中推出了 Gemini。
+Dialogue: 0,0:22:37.46,0:22:42.96,Sub,,0,0,0,,Um other things you want to watch a YouTube video, um play Spotify, right?\N嗯，还有你想看 YouTube 视频，或者播放 Spotify，对吧？
+Dialogue: 0,0:22:43.00,0:22:46.99,Sub,,0,0,0,,These are all things that require connectivity.\N这些都需要连接性。
+Dialogue: 0,0:22:47.04,0:22:48.96,Sub,,0,0,0,,Um also the car calls home, right?\N嗯，汽车也会主动与总部通信，对吧？
+Dialogue: 0,0:22:49.01,0:22:53.83,Sub,,0,0,0,,just operationally, we want to know where are the cars, are they behaving safely, right?\N从运营角度来说，我们想知道车辆在哪里，它们是否安全运行，对吧？
+Dialogue: 0,0:22:53.88,0:22:54.95,Sub,,0,0,0,,Things like that.\N像这样的事情。
+Dialogue: 0,0:22:55.00,0:22:58.73,Sub,,0,0,0,,And so connectivity is an area we're investing increasingly.\N所以连接性是我们正在加大投入的领域。
+Dialogue: 0,0:22:58.78,0:23:09.68,Sub,,0,0,0,,Um, and like challenge of course is how do you get connectivity when you hit that long tail in terms of congestion or or sort of multipath problems.\N嗯，当然面临的挑战是，当遇到拥堵或多重路径问题这类长尾情况时，如何保证连接性。
+Dialogue: 0,0:23:09.73,0:23:12.13,Sub,,0,0,0,,Many many challenges we see there.\N我们看到那里存在许多挑战。
+Dialogue: 0,0:23:12.18,0:23:15.68,Sub,,0,0,0,,And so I think hopefully this gives you a perspective, right?\N所以我认为这或许能给你一个视角，对吧？
+Dialogue: 0,0:23:15.73,0:23:22.06,Sub,,0,0,0,,Similar things apply to I think phys whether you're looking at robotics or or other physical applications right\N我觉得无论是机器人还是其他物理应用，类似的情况都适用，对吧？
+Dialogue: 0,0:23:22.11,0:23:31.06,Sub,,0,0,0,,the really high performance compute is is an anchor but there are other compute surfaces that really matter\N高性能计算确实是核心，但其他计算层面也同样重要。
+Dialogue: 0,0:23:31.11,0:23:38.09,Sub,,0,0,0,,too so let's look at the high performance compute um what does it do so first right we\N那么，我们来看看高性能计算。它能做什么？首先，
+Dialogue: 0,0:23:38.14,0:23:47.95,Sub,,0,0,0,,have a sensors cameras, lidars, radars all feed high bandwidth data they feed feed that into into our BFC,\N我们有传感器、摄像头、激光雷达和雷达，它们都提供高带宽数据，输入到我们的 BFC，
+Dialogue: 0,0:23:48.00,0:23:48.35,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:23:48.38,0:23:51.07,Sub,,0,0,0,,And that's that's where perception runs, right?\N这就是感知系统运行的地方，对吧？
+Dialogue: 0,0:23:51.12,0:23:57.85,Sub,,0,0,0,,Like it understands where we are in the world, what's happening around the vehicle and then makes the decisions, right?\N它能理解我们所处的世界位置，周围发生了什么，然后做出决策，对吧？
+Dialogue: 0,0:23:57.90,0:24:00.87,Sub,,0,0,0,,Based on what it predicts, other agents will do, right?\N基于它预测其他智能体将采取的行动，对吧？
+Dialogue: 0,0:24:00.92,0:24:04.69,Sub,,0,0,0,,It will decide what what the next action should be.\N它会决定下一步应该采取什么行动。
+Dialogue: 0,0:24:04.74,0:24:08.07,Sub,,0,0,0,,And tra us usually the output is a trajectory, right?\N通常输出是一条轨迹，对吧？
+Dialogue: 0,0:24:08.12,0:24:18.59,Sub,,0,0,0,,car should move along a certain path at a certain velocity profile and then that moves into our control computer and vehicle actuation, right?\N汽车应沿着特定路径以特定速度曲线移动，然后进入控制计算机和车辆执行系统，对吧？
+Dialogue: 0,0:24:18.64,0:24:26.51,Sub,,0,0,0,,Which actually kind of performs the physical operations of a vehicle.\N实际上执行车辆的物理操作。
+Dialogue: 0,0:24:26.56,0:24:28.77,Sub,,0,0,0,,This is what our compute looked like in 2013.\N这就是我们在2013年时的计算系统的样子。
+Dialogue: 0,0:24:28.82,0:24:34.96,Sub,,0,0,0,,Um, some of the most fun times, um, but also clearly not scalable.\N呃，有些时候非常有趣，但显然不可扩展。
+Dialogue: 0,0:24:35.01,0:24:42.86,Sub,,0,0,0,,Um, so we we often puzzle together these we call them duct tape systems um to experiment to make sure that things work.\N呃，我们经常拼凑出一些我们称之为“胶带系统”的东西，用来实验，确保一切正常工作。
+Dialogue: 0,0:24:42.91,0:24:45.80,Sub,,0,0,0,,Um, in this case we'd actually drive around with it.\N在这种情况下，我们实际上会开着它到处跑。
+Dialogue: 0,0:24:45.85,0:24:47.52,Sub,,0,0,0,,We don't do that anymore.\N我们现在不再这么做了。
+Dialogue: 0,0:24:47.57,0:24:55.55,Sub,,0,0,0,,Um, but we today we have lab setups that that look at least a little bit similar to this.\N呃，但如今我们的实验室设置至少在外观上和这个有点相似。
+Dialogue: 0,0:24:55.60,0:25:01.92,Sub,,0,0,0,,Today our compute, right, like we work with a car companies, we have an amazing mechanical engineering team, right?\N如今我们的计算系统，嗯，我们与汽车公司合作，拥有一个非常出色的机械工程团队，对吧？
+Dialogue: 0,0:25:01.97,0:25:04.76,Sub,,0,0,0,,They they think about how to integrate everything, right?\N他们思考如何整合所有部件，对吧？
+Dialogue: 0,0:25:04.81,0:25:09.35,Sub,,0,0,0,,Like we have liquid cooling, we have high power connections, tons of sensor cables.\N比如我们有液冷系统，高功率连接，还有大量传感器线缆。
+Dialogue: 0,0:25:09.40,0:25:13.20,Sub,,0,0,0,,You can see these compute modules stacked on top of each other, right?\N你可以看到这些计算模块堆叠在一起，对吧？
+Dialogue: 0,0:25:13.26,0:25:19.05,Sub,,0,0,0,,And always sort of with attention of making sure we we leave enough trunk space for golf clubs\N而且始终注意留出足够的后备箱空间放高尔夫球杆。
+Dialogue: 0,0:25:19.10,0:25:25.34,Sub,,0,0,0,,or suitcases or what the product team needs for\N或者是行李箱，或者是产品团队需要的其他东西
+Dialogue: 0,0:25:25.39,0:25:31.35,Sub,,0,0,0,,kind of constraints or challenges when we build the compute.\N在构建计算系统时，会遇到一些约束或挑战
+Dialogue: 0,0:25:31.40,0:25:39.41,Sub,,0,0,0,,Um, like we we we really care about resilience, right?\N嗯，我们非常重视系统的韧性，对吧？
+Dialogue: 0,0:25:39.46,0:25:42.17,Sub,,0,0,0,,And a lot of this is user experience, right?\N而且很多问题都关乎用户体验，对吧？
+Dialogue: 0,0:25:42.22,0:25:49.19,Sub,,0,0,0,,You don't want parts that fail, even if they fail and were safe if it leads to degraded performance, right?\N你不希望出现部件故障，即使故障是安全的，但如果导致性能下降，也不行，对吧？
+Dialogue: 0,0:25:49.24,0:25:52.06,Sub,,0,0,0,,Is often a a hit on the user experience.\N这通常会影响用户体验
+Dialogue: 0,0:25:52.11,0:25:57.39,Sub,,0,0,0,,And so we want components that that will really live through the harshest environments.\N所以我们希望使用那些能在最恶劣环境中长期稳定运行的组件
+Dialogue: 0,0:25:57.44,0:26:01.37,Sub,,0,0,0,,And this applies to cars, also applies to anything else, right?\N这不仅适用于汽车，也适用于其他任何场景，对吧？
+Dialogue: 0,0:26:01.42,0:26:03.79,Sub,,0,0,0,,You're building for the physical world, right?\N你是在为物理世界构建产品，对吧？
+Dialogue: 0,0:26:03.84,0:26:09.38,Sub,,0,0,0,,Robots will will get wet um or go into freezing temperatures.\N机器人可能会被淋湿，或者进入极低温环境
+Dialogue: 0,0:26:09.43,0:26:11.70,Sub,,0,0,0,,Um and so we do a lot of testing.\N所以我们会做大量测试
+Dialogue: 0,0:26:11.75,0:26:14.58,Sub,,0,0,0,,We we typically do the testing at the module level.\N我们通常在模块级别进行测试
+Dialogue: 0,0:26:14.63,0:26:17.25,Sub,,0,0,0,,We also do a lot of vehicle level testing, right?\N我们还进行了大量的整车级测试，对吧？
+Dialogue: 0,0:26:17.30,0:26:23.42,Sub,,0,0,0,,We'll take the cars out into the desert or kind of go racing around tracks in the snow.\N我们会把汽车开到沙漠里，或者在雪地里绕着赛道进行竞速测试。
+Dialogue: 0,0:26:23.48,0:26:26.24,Sub,,0,0,0,,Um so lot lots of different things to make we\N嗯，有很多不同的事情要做，以确保
+Dialogue: 0,0:26:26.29,0:26:36.88,Sub,,0,0,0,,make sure that the systems are robust redundancy also really important.\N系统具备鲁棒性，冗余也非常重要。
+Dialogue: 0,0:26:36.93,0:26:39.06,Sub,,0,0,0,,Um you can probably guess what's happening here.\N嗯，你大概能猜到这里发生了什么。
+Dialogue: 0,0:26:39.11,0:26:46.64,Sub,,0,0,0,,We we're cutting kind of our main power to to our core compute and you'll see the the car continues operating safely.\N我们正在切断核心计算单元的主要电源，你会看到汽车仍能安全运行。
+Dialogue: 0,0:26:46.69,0:26:56.08,Sub,,0,0,0,,And this doesn't mean we we do full redundant compute of everything, but we design the system to to have redundancy built in, right?\N这并不意味着我们对所有东西都做完全的冗余计算，但我们设计系统时会内置冗余，对吧？
+Dialogue: 0,0:26:56.13,0:26:58.86,Sub,,0,0,0,,And it may mean degraded capability, right?\N但这可能意味着性能会下降，对吧？
+Dialogue: 0,0:26:58.91,0:27:09.39,Sub,,0,0,0,,You you cut power to to one portion of a system, but you're able to carry over and and operate on a different portion of them.\N你切断了系统某一部分的电源，但仍能切换到另一部分继续运行。
+Dialogue: 0,0:27:09.44,0:27:11.15,Sub,,0,0,0,,Then there's performance, right?\N然后是性能，对吧？
+Dialogue: 0,0:27:11.20,0:27:17.11,Sub,,0,0,0,,performance is really what we we spend most of our time on within the team and sort of in the compute\N性能是我们团队在计算领域花费最多时间的地方。
+Dialogue: 0,0:27:17.16,0:27:25.81,Sub,,0,0,0,,context and here it's it is always very clear more performance allows our software teams to do better stuff um and so\N这里非常清楚，更高的性能能让我们的软件团队做出更好的成果。
+Dialogue: 0,0:27:25.86,0:27:34.03,Sub,,0,0,0,,so we work hard on that um the the three key things we plotted here right is CPU GPU and ML\N所以我们在那方面下了很大功夫，这里我们列出的三个关键点是 CPU、GPU 和 ML。
+Dialogue: 0,0:27:34.08,0:27:42.70,Sub,,0,0,0,,and ML right probably not unexpected has followed a very good trajectory um in many ways sim similar to data center capabilities,\N而 ML 的发展轨迹非常出色，从很多方面来看，与数据中心能力的发展趋势相似。
+Dialogue: 0,0:27:42.75,0:27:43.01,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:27:43.04,0:27:51.93,Sub,,0,0,0,,If you look at the biggest chips, um how they've scaled, we've been able to scale the ML capability in the car very aggressively as well.\N如果你看看最大的芯片是如何演进的，我们同样能够非常激进地提升汽车中的 ML 能力。
+Dialogue: 0,0:27:51.98,0:27:56.14,Sub,,0,0,0,,And then CPU and GPU have fluctuated a little bit.\N而 CPU 和 GPU 的性能则出现了一些波动。
+Dialogue: 0,0:27:56.19,0:28:02.97,Sub,,0,0,0,,I mentioned CPU was was kind of a really important compute element for a long time, continues to be.\N我提到过，CPU 曾经是极为重要的计算单元，至今依然如此。
+Dialogue: 0,0:28:03.02,0:28:07.31,Sub,,0,0,0,,Um but some of the CPU workload has been replaced by ML.\N不过，部分 CPU 的工作负载已经被 ML 取代。
+Dialogue: 0,0:28:07.36,0:28:09.08,Sub,,0,0,0,,Similarly with GPU, right?\NGPU 也是类似的情况，对吧？
+Dialogue: 0,0:28:09.13,0:28:16.97,Sub,,0,0,0,,We we do do GPGPU compute um for some of our workloads and that bounces up and down a little bit.\N我们在部分工作负载中使用 GPGPU 计算，这部分性能也有所起伏。
+Dialogue: 0,0:28:17.02,0:28:24.84,Sub,,0,0,0,,Um so I think overall trend right like at least what we're seeing here is kind of CPU and GPGPU fairly flat.\N所以我认为整体趋势是，至少从我们看到的情况来看，CPU 和 GPGPU 的性能基本保持平稳。
+Dialogue: 0,0:28:24.89,0:28:34.83,Sub,,0,0,0,,Um ML continues to just be an insatiable demand for for more compute in the cars.\NML 对汽车中更多计算能力的需求始终是永无止境的。
+Dialogue: 0,0:28:34.88,0:28:44.56,Sub,,0,0,0,,And when you come back to these curves, right, like how does it tie in from an effort and and really vehicle performance perspective, right?\N当你回到这些曲线时，从投入和车辆实际性能的角度来看，它们之间是如何关联的呢？
+Dialogue: 0,0:28:44.61,0:28:48.15,Sub,,0,0,0,,More compute helps in two different ways, right?\N更多的计算能力可以从两个不同方面带来帮助，对吧？
+Dialogue: 0,0:28:48.20,0:28:50.20,Sub,,0,0,0,,One is software developer velocity.\N一个是软件开发者的开发效率。
+Dialogue: 0,0:28:50.25,0:28:57.68,Sub,,0,0,0,,If we're not constantly struggling with improving performance and making things hit our latency targets, it helps, right?\N如果我们不必不断为提升性能和达成延迟目标而挣扎，这就会有帮助，对吧？
+Dialogue: 0,0:28:57.74,0:29:00.04,Sub,,0,0,0,,We're able to land our CLS faster.\N我们能更快地提交代码变更（CL）。
+Dialogue: 0,0:29:00.09,0:29:02.99,Sub,,0,0,0,,They can try more aggressive algorithms.\N他们可以尝试更激进的算法。
+Dialogue: 0,0:29:03.04,0:29:06.27,Sub,,0,0,0,,And so definitely one big win we've had.\N所以这无疑是我们取得的一大成功。
+Dialogue: 0,0:29:06.32,0:29:11.90,Sub,,0,0,0,,And of course on the ML side larger models right like we're we're able\N当然，在 ML 方面，更大的模型——我们能够
+Dialogue: 0,0:29:11.95,0:29:19.79,Sub,,0,0,0,,to train larger models and as with many industries that leads to improved driver performance.\N训练更大的模型；与许多行业一样，这会带来驾驶性能的提升。
+Dialogue: 0,0:29:19.84,0:29:27.75,Sub,,0,0,0,,Now increasingly we're also investing in sort of opposite direction right like we we we will be scaling a\N现在，我们也在越来越多地投资于相反的方向，对吧？比如我们将会在
+Dialogue: 0,0:29:27.80,0:29:33.95,Sub,,0,0,0,,lot um you can think of cars you can think of robots right kind of anything in this space has\N很多领域进行扩展，你可以想到汽车，也可以想到机器人，对这个领域里的任何事物，
+Dialogue: 0,0:29:34.00,0:29:41.23,Sub,,0,0,0,,a just enormous market potential um and with that there's of course economic pressures right how do you how do\N都有着巨大的市场潜力。随之而来的是经济压力：你如何
+Dialogue: 0,0:29:41.28,0:29:50.09,Sub,,0,0,0,,you really fit all the capability in a smaller cost footprint and so very increasingly we're investing into optimization efforts.\N才能把所有能力塞进更小的成本空间？所以，我们正越来越多地投入优化工作。
+Dialogue: 0,0:29:50.14,0:29:51.66,Sub,,0,0,0,,Some of that is silicon,\N其中一部分是芯片，
+Dialogue: 0,0:29:51.71,0:30:02.11,Sub,,0,0,0,,a lot of that is also software to make sure that we're optimizing the stack really for for for our needs.\N还有一部分则是软件，以确保我们能针对自身需求对整个技术栈进行充分优化。
+Dialogue: 0,0:30:02.16,0:30:04.42,Sub,,0,0,0,,Now, what does this practically look like, right?\N那么，这在实际中具体是什么样子的呢？
+Dialogue: 0,0:30:04.47,0:30:11.32,Sub,,0,0,0,,Like we when we look at our workloads, we don't actually have like a single number that tells us how fast we are.\N比如说，当我们查看工作负载时，并没有一个单一的数字能告诉我们运行速度。
+Dialogue: 0,0:30:11.37,0:30:20.12,Sub,,0,0,0,,Most of our things are kind of probability distributions where how long things take on the car vary quite\N我们大多数情况下的表现都类似于概率分布，车辆上任务的耗时差异相当大。
+Dialogue: 0,0:30:20.17,0:30:27.03,Sub,,0,0,0,,a bit right can be seen dependent can be how things are scheduled and batched right so could be how\N这取决于任务的调度和批处理方式，比如系统中同时运行的智能体数量。
+Dialogue: 0,0:30:27.08,0:30:32.43,Sub,,0,0,0,,many agents are in the world if you're at a busy intersection with lots of things happening there's a different\N如果你在交通繁忙的十字路口，周围有很多事情同时发生，计算负载会明显不同。
+Dialogue: 0,0:30:32.48,0:30:40.99,Sub,,0,0,0,,compute load than perhaps being on a freeway right with no traffic so so there's there's pretty high variability there.\N而在几乎没有车辆的高速公路上，计算负载则会低得多，因此这里的差异非常显著。
+Dialogue: 0,0:30:41.04,0:30:44.88,Sub,,0,0,0,,We put a lot of effort into pushing down the average.\N我们投入了大量精力来降低平均延迟。
+Dialogue: 0,0:30:44.93,0:30:48.27,Sub,,0,0,0,,Um, we also put a lot of effort into flattening it, right?\N同时，我们也投入了大量精力来使延迟分布更平坦，对吧？
+Dialogue: 0,0:30:48.32,0:30:53.95,Sub,,0,0,0,,Because a flatter system just is easy easier for us to schedule and reason about.\N因为一个更平坦的系统，对我们来说更容易调度和推理。
+Dialogue: 0,0:30:54.00,0:30:57.93,Sub,,0,0,0,,Now, things we can do there, right?\N在这方面，我们能做的事情还有很多，对吧？
+Dialogue: 0,0:30:57.98,0:31:05.31,Sub,,0,0,0,,Like obviously there's a lot on the software side we do um but also on the hardware side.\N显然，软件方面我们做了很多，但硬件方面也同样如此。
+Dialogue: 0,0:31:05.36,0:31:09.87,Sub,,0,0,0,,Now this is the high performance computer I talked about.\N现在这就是我之前提到的高性能计算机。
+Dialogue: 0,0:31:09.92,0:31:15.37,Sub,,0,0,0,,When we look inside, right, it's really partitioned in the the key areas I mentioned.\N当我们看内部结构时，它确实被划分成了我提到的关键区域。
+Dialogue: 0,0:31:15.42,0:31:17.88,Sub,,0,0,0,,We we have a power system, right?\N我们有一个电源系统，对吧？
+Dialogue: 0,0:31:17.93,0:31:24.06,Sub,,0,0,0,,Most of our power comes from the vehicle is not not the pristine power we'd always like.\N我们的大部分电力来自车辆，而不是我们理想中的纯净电源。
+Dialogue: 0,0:31:24.10,0:31:27.80,Sub,,0,0,0,,Um we have a sensor processing interface.\N我们有一个传感器处理接口。
+Dialogue: 0,0:31:27.85,0:31:33.36,Sub,,0,0,0,,Um so that's that is able to accept all the sensor data, do some early ML fusion.\N所以它能够接收所有传感器数据，并进行初步的机器学习融合。
+Dialogue: 0,0:31:33.41,0:31:41.51,Sub,,0,0,0,,we have high performance CPU subsystem and then we we have ML and GPGPU accelerators.\N我们有高性能 CPU 子系统，以及机器学习和 GPGPU 加速器。
+Dialogue: 0,0:31:41.56,0:31:47.26,Sub,,0,0,0,,Um so you can think of these roughly as as proportional sizes to the circuit boards we have.\N你可以把它们大致看作与我们电路板的尺寸成比例。
+Dialogue: 0,0:31:47.32,0:31:50.14,Sub,,0,0,0,,Um not all of this is compute, right?\N并不是所有这些都用于计算，对吧？
+Dialogue: 0,0:31:50.19,0:31:54.11,Sub,,0,0,0,,There's also a fair amount of interface logic, a lot of memory chips.\N还有相当多的接口逻辑和大量内存芯片。
+Dialogue: 0,0:31:54.16,0:31:59.39,Sub,,0,0,0,,Um but gives you a rough idea of how things are partitioned in the system.\N但这样能让你大致了解系统内部是如何划分的。
+Dialogue: 0,0:31:59.44,0:32:05.40,Sub,,0,0,0,,Now when you think of a system overall, one thing we do is we have AB sides, right?\N当你整体考虑一个系统时，我们做的一件事就是设置 A/B 两面，对吧？
+Dialogue: 0,0:32:05.45,0:32:12.84,Sub,,0,0,0,,So there's a cold plate, a liquid cooled cold plate in the center of this and we we mirror the the hardware on the other side.\N中间有一个冷板，是液冷冷板，我们在另一侧镜像了相同的硬件。
+Dialogue: 0,0:32:12.89,0:32:18.09,Sub,,0,0,0,,And most of the time we're using both of those sides to hand over the full workload, right?\N大多数情况下，我们会同时使用这两侧来分担全部工作负载，对吧？
+Dialogue: 0,0:32:18.14,0:32:22.42,Sub,,0,0,0,,But occasionally, right, like in my example where someone cut the power,\N但偶尔，就像我举的例子中有人切断了电源，
+Dialogue: 0,0:32:22.46,0:32:30.79,Sub,,0,0,0,,we're able to fail over to either a single A or a single B side to to operate in perhaps a somewhat degraded mode,\N我们可以切换到单独的A侧或B侧运行，以某种降级模式继续工作，
+Dialogue: 0,0:32:30.84,0:32:38.03,Sub,,0,0,0,,but still safe mode and either complete the mission or for example pull over to a gas station.\N但仍处于安全模式，要么完成任务，要么比如靠边停到加油站。
+Dialogue: 0,0:32:38.08,0:32:43.21,Sub,,0,0,0,,And sort of this redundancy of course is important from a compute element perspective.\N从计算单元的角度来看，这种冗余当然很重要。
+Dialogue: 0,0:32:43.26,0:32:48.78,Sub,,0,0,0,,Also really critical from a sensor connectivity perspective. um power perspective.\N同样，从传感器连接性和电源角度来看也极为关键。
+Dialogue: 0,0:32:48.83,0:32:53.60,Sub,,0,0,0,,So throughout the system, we think about do we have redundancy?\N所以在整个系统中，我们都会思考：我们有冗余吗？
+Dialogue: 0,0:32:53.65,0:32:57.36,Sub,,0,0,0,,If things fail, is there something else that covers it?\N如果出现故障，是否有其他组件可以覆盖这种情况？
+Dialogue: 0,0:32:57.42,0:33:05.13,Sub,,0,0,0,,Um right, could be a sensor, maybe a camera fails, could be another camera that has sort of a field of view overlap.\N比如某个传感器失效，可能另一个摄像头具有重叠的视野范围。
+Dialogue: 0,0:33:05.18,0:33:09.90,Sub,,0,0,0,,Could be a case where we can rely on radar, lidar for a short amount of time.\N也有可能在短时间内依赖雷达或激光雷达。
+Dialogue: 0,0:33:09.95,0:33:11.46,Sub,,0,0,0,,So throughout the system,\N因此在整个系统中，
+Dialogue: 0,0:33:11.51,0:33:13.71,Sub,,0,0,0,,we think deeply about redundancy\N我们深入思考冗余问题
+Dialogue: 0,0:33:13.76,0:33:18.86,Sub,,0,0,0,,and how we\N以及我们如何
+Dialogue: 0,0:33:18.91,0:33:26.83,Sub,,0,0,0,,cover from that.\N实现全面覆盖。
+Dialogue: 0,0:33:26.88,0:33:31.31,Sub,,0,0,0,,This gives you a picture of of kind of how our compute pipeline works.\N这能让你大致了解我们的计算流水线是如何工作的。
+Dialogue: 0,0:33:31.36,0:33:33.70,Sub,,0,0,0,,Um, sensor data comes in, right?\N传感器数据会进来，对吧？
+Dialogue: 0,0:33:33.75,0:33:36.75,Sub,,0,0,0,,Kind of ISP, DSP, accelerators, right?\N比如 ISP、DSP 和加速器，对吧？
+Dialogue: 0,0:33:36.80,0:33:41.13,Sub,,0,0,0,,Munch job that data to make it processable.\N对数据进行处理，使其可被使用。
+Dialogue: 0,0:33:41.18,0:33:44.11,Sub,,0,0,0,,Um, some of that goes through GPGPU as well.\N其中一部分数据也会通过 GPGPU。
+Dialogue: 0,0:33:44.16,0:33:51.47,Sub,,0,0,0,,And then we have a set of ML models, right, that that encode that data and and do fusion.\N然后我们有一组机器学习模型，对数据进行编码并完成融合。
+Dialogue: 0,0:33:51.52,0:33:56.14,Sub,,0,0,0,,Then we have sort of really really big ML um that does more stuff.\N接着是规模非常大的机器学习模型，执行更多任务。
+Dialogue: 0,0:33:56.19,0:33:59.91,Sub,,0,0,0,,And then we have a couple stages of optimizers and validators.\N最后我们有几阶段的优化器和验证器。
+Dialogue: 0,0:33:59.96,0:34:02.93,Sub,,0,0,0,,And these are really critical, right?\N而这些确实非常关键，对吧？
+Dialogue: 0,0:34:02.98,0:34:09.15,Sub,,0,0,0,,Optimization can can sometimes find better solutions, right, for user comfort or other items.\N优化有时可以找到更好的解决方案，比如提升用户舒适度或其他方面。
+Dialogue: 0,0:34:09.20,0:34:14.15,Sub,,0,0,0,,Validation really important for us from a safety perspective, right?\N从安全角度来看，验证对我们来说真的非常重要，对吧？
+Dialogue: 0,0:34:14.20,0:34:23.79,Sub,,0,0,0,,like we we don't take ML models directly um but double check that everything is safe around their outputs.\N我们不会直接使用机器学习模型的输出，而是会复核它们的输出是否安全。
+Dialogue: 0,0:34:23.84,0:34:29.55,Sub,,0,0,0,,Um within the hardware we we also do a lot of other checking right we have error checking we have\N在硬件内部，我们也会做大量其他检查，比如错误检测，我们有
+Dialogue: 0,0:34:29.60,0:34:40.27,Sub,,0,0,0,,software test libraries um most of our own silicon and partner silicon has sort of self-checking capabilities built into their circuits.\N软件测试库，我们大部分自研芯片和合作伙伴芯片的电路中都内置了自检功能。
+Dialogue: 0,0:34:40.32,0:34:45.23,Sub,,0,0,0,,So a lot of things right we're pushing on and in some cases also moving into data\N所以有很多方面，我们正在推进，有些情况下也已延伸到数据
+Dialogue: 0,0:34:45.28,0:34:53.95,Sub,,0,0,0,,center right that improve the safety and reliability and detectability of faults within these types of pipelines.\N中心，以提升这类流程中的安全性、可靠性以及故障可检测性。
+Dialogue: 0,0:34:54.00,0:34:57.76,Sub,,0,0,0,,I'll call out kind of a CPU component a little bit, right?\N我想特别提一下一个 CPU 组件，稍微说一下，对吧？
+Dialogue: 0,0:34:57.81,0:35:02.27,Sub,,0,0,0,,Like I mentioned, we we while CPU has gone down a little bit,\N就像我提到的，虽然 CPU 的占比略有下降，
+Dialogue: 0,0:35:02.32,0:35:08.59,Sub,,0,0,0,,um it continues to be a really important part of our compute, part of that is just orchestration and scheduling.\N但它仍然是我们计算架构中一个非常重要的部分，部分原因在于它负责协调和调度。
+Dialogue: 0,0:35:08.64,0:35:11.91,Sub,,0,0,0,,There are a lot of decisions that need to be made fairly quickly.\N有很多决策需要快速做出。
+Dialogue: 0,0:35:11.96,0:35:15.33,Sub,,0,0,0,,There's a lot of data that moves around the system, right?\N系统中有很多数据在流动，对吧？
+Dialogue: 0,0:35:15.38,0:35:22.75,Sub,,0,0,0,,And CPUs tend to be a very good substrate for us to implement some of those things.\N而 CPU 通常是我们实现这些功能的绝佳基础平台。
+Dialogue: 0,0:35:22.80,0:35:31.27,Sub,,0,0,0,,Now this box here right kind of ISP um early sensor processing and fusion um is something we've actually built a\N这个盒子——ISP、早期传感器处理和融合——我们实际上围绕它做了一颗芯片，
+Dialogue: 0,0:35:31.32,0:35:39.45,Sub,,0,0,0,,chip around and Sabareesh and Pieter are giving a talk a little bit later right we'll dive into many more of these\NSabareesh 和 Pieter 稍后会做一场演讲，我们将会深入探讨更多细节。
+Dialogue: 0,0:35:39.50,0:35:45.49,Sub,,0,0,0,,details um but to me is always super cool right you look at this type of picture and it's like wow this\N但对我来说，这始终非常酷——你看这种图时，会感叹：哇，
+Dialogue: 0,0:35:45.54,0:35:52.83,Sub,,0,0,0,,chip is actually like driving a good chunk of a car um so really proud proud of what we've gotten done there.\N这颗芯片实际上在驱动一辆车的很大一部分。所以，我真的为我们取得的成果感到自豪。
+Dialogue: 0,0:35:52.88,0:35:57.81,Sub,,0,0,0,,Um, and it's it's it's just really cool technology.\N这技术真的很酷。
+Dialogue: 0,0:35:57.86,0:36:02.42,Sub,,0,0,0,,Um, and like maybe first off, why why do we build this type of chip, right?\N也许首先，我们为什么要打造这种芯片，对吧？
+Dialogue: 0,0:36:02.47,0:36:05.95,Sub,,0,0,0,,Like one is we're we're really implementing unique capabilities.\N一方面，我们正在实现独特的功能。
+Dialogue: 0,0:36:06.00,0:36:12.61,Sub,,0,0,0,,You see, we we know a lot about our sensors, the data products they produce, and pushing on the latency is critical.\N我们非常了解自己的传感器，以及它们产生的数据产品，而降低延迟至关重要。
+Dialogue: 0,0:36:12.66,0:36:21.68,Sub,,0,0,0,,Everything we can squeeze out of that latency, right, from pixels until they hit our real ML models, right, is things we can put into the ML pipeline.\N我们能从像素到进入真实 ML 模型的整个链路上压缩掉的每一分延迟，都可以转化为 ML 流水线的收益。
+Dialogue: 0,0:36:21.73,0:36:25.40,Sub,,0,0,0,,So, optimizing that latency really important.\N因此，优化这一延迟非常关键。
+Dialogue: 0,0:36:25.45,0:36:28.85,Sub,,0,0,0,,Um, we've implemented some really innovative algorithms, right?\N嗯，我们实现了一些非常创新的算法，对吧？
+Dialogue: 0,0:36:28.90,0:36:31.24,Sub,,0,0,0,,Like I gave a camera example, right?\N就像我举的那个摄像头的例子，对吧？
+Dialogue: 0,0:36:31.29,0:36:34.67,Sub,,0,0,0,,We want the best SNR that we can from our sensors, right?\N我们希望从传感器中获得尽可能高的信噪比，对吧？
+Dialogue: 0,0:36:34.72,0:36:39.83,Sub,,0,0,0,,Extract every last bit of information to build the safest system that we can.\N提取每一点信息，以构建最安全的系统。
+Dialogue: 0,0:36:39.88,0:36:46.27,Sub,,0,0,0,,And then there is a slice of ML in these chips as well very much tailored towards low latency, right?\N这些芯片中还有一部分机器学习模块，专门针对低延迟进行了优化，对吧？
+Dialogue: 0,0:36:46.32,0:36:48.50,Sub,,0,0,0,,Like we want to get the pixels in.\N就像我们希望尽快获取像素数据。
+Dialogue: 0,0:36:48.55,0:36:58.35,Sub,,0,0,0,,We want to have objects or embeddings come out as fast as we can so that they can feed into the bigger models.\N我们希望物体或嵌入向量能尽可能快地输出，以便输入到更大的模型中。
+Dialogue: 0,0:36:58.40,0:37:03.42,Sub,,0,0,0,,One small example, right, that that maybe motivate this.\N举个小例子，对吧，也许能说明这一点。
+Dialogue: 0,0:37:03.47,0:37:11.71,Sub,,0,0,0,,Um if you think of a world, right, it's mostly free space. um our lidars produce point clouds, right?\N嗯，如果你想象一个世界，对吧，它大部分都是空旷空间。我们的激光雷达生成点云，对吧？
+Dialogue: 0,0:37:11.76,0:37:15.31,Sub,,0,0,0,,So a very very sparse representation.\N所以这是一种非常非常稀疏的表示。
+Dialogue: 0,0:37:15.36,0:37:19.24,Sub,,0,0,0,,All our ML hardware loves dense matrices, right?\N我们所有的机器学习硬件都偏爱稠密矩阵，对吧？
+Dialogue: 0,0:37:19.29,0:37:24.26,Sub,,0,0,0,,And so there's always a question, how do we transform these sparse representations, right?\N因此总有一个问题，我们如何将这些稀疏表示进行转换，对吧？
+Dialogue: 0,0:37:24.31,0:37:34.57,Sub,,0,0,0,,Whether it's 3D worlds or in some cases also 2D worlds into dense representations that run efficiently on AI hardware, right?\N无论是3D世界，还是在某些情况下2D世界，都能转化为在AI硬件上高效运行的密集表示，对吧？
+Dialogue: 0,0:37:34.62,0:37:37.25,Sub,,0,0,0,,And so there some of it is algorithmic, right?\N所以其中一部分是算法相关的，对吧？
+Dialogue: 0,0:37:37.30,0:37:38.43,Sub,,0,0,0,,How do we bin things?\N我们怎么对事物进行分类呢？
+Dialogue: 0,0:37:38.48,0:37:40.15,Sub,,0,0,0,,How do we create the data structure?\N我们该如何构建数据结构？
+Dialogue: 0,0:37:40.20,0:37:43.63,Sub,,0,0,0,,Some of it is very very simple hardware mechanisms, right?\N其中一些只是非常非常简单的硬件机制，对吧？
+Dialogue: 0,0:37:43.68,0:37:48.71,Sub,,0,0,0,,Scatter gather or derivatives of it which from a TOPS perspective of course don't\N散列-聚集（scatter-gather）或其衍生机制，从 TOPS 指标看当然不会
+Dialogue: 0,0:37:48.76,0:37:56.19,Sub,,0,0,0,,add anything to a chip but from an achieved performance perspective have a tremendous impact.\N给芯片增加任何数字，但从实际达到的性能看，影响巨大。
+Dialogue: 0,0:37:56.24,0:38:03.85,Sub,,0,0,0,,Other area of course is software and here every one of these areas makes a big difference right like we we very much\N另一个领域当然是软件，而这些领域中的每一个都至关重要，确实如此。
+Dialogue: 0,0:38:03.90,0:38:08.02,Sub,,0,0,0,,have a philosophy of co-design and so whether it's it's working\N秉持协同设计的理念，无论是在编译器工程师与模型开发者之间，
+Dialogue: 0,0:38:08.07,0:38:13.27,Sub,,0,0,0,,like compiler engineers with model developers model developers with architects right we\N就像编译器工程师与模型开发者、模型开发者与架构师之间的协作一样，对吧？
+Dialogue: 0,0:38:13.32,0:38:21.15,Sub,,0,0,0,,very much embody the co-design spirit and many opportunities there right some of that is with our own silicon a lot of it\N充分体现了协同设计的精神，这里有很多机会：有些来自我们自己的芯片，
+Dialogue: 0,0:38:21.20,0:38:31.31,Sub,,0,0,0,,also with partner silicon right so in both cases co-design can make a huge difference in terms of a performance we're able to achieve.\N很多也来自合作伙伴的芯片。无论哪种情况，协同设计都能大幅提升我们实现的性能。
+Dialogue: 0,0:38:31.36,0:38:38.66,Sub,,0,0,0,,So maybe from a compute side right just to recap right most of you probably working on the data center\N所以从计算角度来说，简单回顾一下，你们大多数人可能都在数据中心工作
+Dialogue: 0,0:38:38.71,0:38:46.52,Sub,,0,0,0,,side um so few things I'll call out right so performance you've probably heard loud and clear latency really matters\N从性能方面来说，你们可能已经听得很清楚了，延迟非常重要
+Dialogue: 0,0:38:46.57,0:38:54.28,Sub,,0,0,0,,a lot to us um latency matters in data center these days as well so what's really the difference well\N对我们来说，延迟在数据中心如今同样至关重要，那么真正区别在哪里呢？
+Dialogue: 0,0:38:54.33,0:39:01.26,Sub,,0,0,0,,the real implementations of course vary a lot right if you think about what's happening in data center these days,\N当然，实际实现方式有很大差异，如果你想想现在数据中心正在发生什么
+Dialogue: 0,0:39:01.31,0:39:01.79,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:39:01.84,0:39:08.80,Sub,,0,0,0,,Racks and racks full of enormous chips with enormous memory bandwidth with batching, right?\N一排又一排的机架，塞满了巨大的芯片，拥有巨大的内存带宽，以及批量处理
+Dialogue: 0,0:39:08.85,0:39:11.93,Sub,,0,0,0,,Running on enormous networks in our car.\N运行着巨大的网络。而在我们的车里，
+Dialogue: 0,0:39:11.98,0:39:17.27,Sub,,0,0,0,,We need to solve these same problems with one chip, maybe two chips, right?\N我们需要用一颗芯片——也许两颗——解决同样的问题，对吧？
+Dialogue: 0,0:39:17.32,0:39:25.34,Sub,,0,0,0,,So, how do you land the biggest networks in a low batch environment to run really efficiently at low latency?\N那么，如何在低批量环境下，让最大的网络高效运行并保持低延迟？
+Dialogue: 0,0:39:25.39,0:39:30.59,Sub,,0,0,0,,Um, so different types of technologies there.\N不同的技术类型存在
+Dialogue: 0,0:39:30.64,0:39:41.67,Sub,,0,0,0,,Um, so a few minutes on the actual model architectures, right, to give you sort of a glimpse of what really drives this performance, right?\N简要讲一下实际的模型架构，让你们大致了解真正驱动性能的关键因素
+Dialogue: 0,0:39:41.72,0:39:46.03,Sub,,0,0,0,,Hopefully you've gotten the sense that we have amazing compute.\N希望你们已经感受到，我们的计算能力非常强大
+Dialogue: 0,0:39:46.08,0:39:51.73,Sub,,0,0,0,,It's a pizza box in the car with just the most awesome silicon we can make or buy.\N这就是一辆车里的披萨盒，里面装着我们能制造或买到的最酷的硅芯片。
+Dialogue: 0,0:39:51.78,0:39:56.41,Sub,,0,0,0,,Um, but maybe a little bit of a question of why.\N嗯，但也许会有人问，为什么呢？
+Dialogue: 0,0:39:56.46,0:40:03.87,Sub,,0,0,0,,Um, so here's one motivating example.\N这里有一个很有说服力的例子。
+Dialogue: 0,0:40:03.92,0:40:10.27,Sub,,0,0,0,,Yeah, like these things actually happen and at least there's been press that Waymo cars have gotten parking tickets.\N是的，这类事情确实会发生，至少有媒体报道过 Waymo 的汽车被贴过停车罚单。
+Dialogue: 0,0:40:10.32,0:40:13.61,Sub,,0,0,0,,So we we'll keep working on it.\N所以我们会继续努力改进。
+Dialogue: 0,0:40:13.66,0:40:16.83,Sub,,0,0,0,,Um, but there's also many other cases, right?\N嗯，但还有许多其他情况，对吧？
+Dialogue: 0,0:40:16.88,0:40:22.65,Sub,,0,0,0,,And it's if you go back to the beginning of my presentation, it's really the long tail, right?\N而且如果你回到我演讲的开头，真正的问题就在于长尾问题，对吧？
+Dialogue: 0,0:40:22.70,0:40:27.16,Sub,,0,0,0,,things that that maybe you'd encounter once in a lifetime, right?\N那些可能一生只会遇到一次的事情，对吧？
+Dialogue: 0,0:40:27.21,0:40:29.18,Sub,,0,0,0,,We encounter them all the time.\N但我们却经常遇到。
+Dialogue: 0,0:40:29.23,0:40:37.14,Sub,,0,0,0,,And so it could be a tree falling over next to a car or a kid running into into the road right in front of you, right?\N比如一棵树倒在车旁边，或者一个孩子突然冲到你正前方的马路上，对吧？
+Dialogue: 0,0:40:37.19,0:40:39.34,Sub,,0,0,0,,Or various kinds of accidents, right?\N或者各种类型的事故，对吧？
+Dialogue: 0,0:40:39.39,0:40:43.55,Sub,,0,0,0,,We've we've seen secondary or tertiary collisions on a freeway, right?\N我们见过高速公路上的二次或三次碰撞，对吧？
+Dialogue: 0,0:40:43.60,0:40:45.36,Sub,,0,0,0,,How does a car react to those?\N汽车对这些情况会如何反应？
+Dialogue: 0,0:40:45.41,0:40:50.43,Sub,,0,0,0,,And those are really the examples where ML of deep reasoning and deep\N而这些正是深度推理和对世界深度理解非常重要的例子，
+Dialogue: 0,0:40:50.48,0:40:57.79,Sub,,0,0,0,,understanding of the world is really important and really drives the compute requirements.\N也正是这些因素真正驱动了计算需求。
+Dialogue: 0,0:40:57.84,0:41:04.06,Sub,,0,0,0,,Um to give a sense of that right like at Waymo we've we've been about ML really since the beginning.\N举个例子，就像我们在 Waymo 从一开始就专注于机器学习一样。
+Dialogue: 0,0:41:04.11,0:41:12.08,Sub,,0,0,0,,Initially it was as I mentioned right boosted decision trees random forests but we were on convolution networks right right\N最初，正如我提到的，我们使用的是提升决策树和随机森林，但当我们看到 AlexNet 发表时，
+Dialogue: 0,0:41:12.13,0:41:19.89,Sub,,0,0,0,,around when Alex net got published right like we we recognized it quickly that it was super helpful for perception\N我们立刻意识到卷积网络对感知任务非常有帮助。
+Dialogue: 0,0:41:19.94,0:41:28.67,Sub,,0,0,0,,um started using convolutional networks um as transformers became available right use them very quickly and when you think of\N随后，随着 Transformer 模型的出现，我们迅速开始使用它们，\N当你想到 Transformer 时，
+Dialogue: 0,0:41:28.72,0:41:35.95,Sub,,0,0,0,,transformers it actually maps very well to what you might think about in driving right like there's always local information,\N它实际上非常契合驾驶场景中的思维模式，比如总存在局部信息，
+Dialogue: 0,0:41:36.00,0:41:36.36,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:41:36.40,0:41:37.98,Sub,,0,0,0,,That's super helpful, right?\N这非常有帮助，对吧？
+Dialogue: 0,0:41:38.02,0:41:42.23,Sub,,0,0,0,,So, attention there, but there's also global context that's really needed.\N所以，注意力机制在这里非常关键，但同时全局上下文也同样重要。
+Dialogue: 0,0:41:42.28,0:41:45.94,Sub,,0,0,0,,And so, transformers really an enabling technology there.\N因此，Transformer 真正成为了一项关键使能技术。
+Dialogue: 0,0:41:45.99,0:41:51.30,Sub,,0,0,0,,And we've we've been using it since since the early days um since our invention at Google.\N我们从早期开始就一直在使用它，也就是我们在谷歌发明它的那个时期。
+Dialogue: 0,0:41:51.34,0:41:55.33,Sub,,0,0,0,,Today, we use some of the most advanced DLMs.\N如今，我们使用了一些最先进的深度学习模型。
+Dialogue: 0,0:41:55.38,0:41:58.90,Sub,,0,0,0,,Um we have foundation models, world models, right?\N嗯，我们有基础模型、世界模型，对吧？
+Dialogue: 0,0:41:58.95,0:42:07.01,Sub,,0,0,0,,So really pushing the envelope to have the deepest ML technology that we can on our cars and more and\N真正突破极限，将我们所能实现的最深层机器学习技术融入到汽车中，并不断推进。
+Dialogue: 0,0:42:07.06,0:42:14.00,Sub,,0,0,0,,more the this ML technology it really provides a foundation for not only what's happening on the car but also\N这种机器学习技术越深入，就越能为汽车上的各种应用提供坚实基础，同时也为其他领域的发展奠定基础。
+Dialogue: 0,0:42:14.05,0:42:19.14,Sub,,0,0,0,,what we're able to do in the data center right where simulation is really important we have a lot of\N以及我们在数据中心能做什么——在那里仿真非常重要。我们有很多
+Dialogue: 0,0:42:19.19,0:42:26.37,Sub,,0,0,0,,analytics that use ML to sort of triage and understand what the car did in simulation or the real world.\N利用机器学习做数据分析的工作，用来分类并理解汽车在仿真或现实世界中的行为。
+Dialogue: 0,0:42:26.42,0:42:37.71,Sub,,0,0,0,,So having this sort of foundation model that cover everything is of course an enormous thing to enable us to scale.\N因此，拥有这样一个涵盖一切的基础模型，无疑将极大助力我们实现规模化。
+Dialogue: 0,0:42:37.76,0:42:39.87,Sub,,0,0,0,,So let's look at the model a little bit.\N那我们来稍微看一下这个模型。
+Dialogue: 0,0:42:39.92,0:42:46.57,Sub,,0,0,0,,Um there's a sensor fusion encoder right I had referred to this previously encodes each of\N嗯，有一个传感器融合编码器——我之前提到过——它会编码每个
+Dialogue: 0,0:42:46.62,0:42:54.35,Sub,,0,0,0,,the sensors fuses the data provides a world picture and this tends to be very very fast.\N传感器，融合数据，给出世界图景，而且通常非常快。
+Dialogue: 0,0:42:54.40,0:42:56.14,Sub,,0,0,0,,Then we we have a VLM.\N然后我们有一个视觉-语言模型。
+Dialogue: 0,0:42:56.19,0:42:58.56,Sub,,0,0,0,,This tends to be much slower, right?\N这通常要慢得多，对吧？
+Dialogue: 0,0:42:58.61,0:43:04.24,Sub,,0,0,0,,Like we'd like to run it as fast as we can, but types of things it may ask about is like,\N我们当然希望它尽可能快地运行，但它可能需要回答的问题类型是这样的，
+Dialogue: 0,0:43:04.29,0:43:08.88,Sub,,0,0,0,,okay, there's a fire hydrant spewing water onto the road, right?\N好的，有一个消防栓正在向路上喷水，对吧？
+Dialogue: 0,0:43:08.93,0:43:11.15,Sub,,0,0,0,,Is it safe to proceed or not?\N这种情况下是否安全继续前行？
+Dialogue: 0,0:43:11.20,0:43:11.99,Sub,,0,0,0,,Um, right?\N嗯，对吧？
+Dialogue: 0,0:43:12.04,0:43:16.73,Sub,,0,0,0,,So these are questions that you don't have to answer in 10 or 20 milliseconds,\N所以这些问题不需要你在10或20毫秒内回答，
+Dialogue: 0,0:43:16.78,0:43:21.48,Sub,,0,0,0,,but if you take half a second or even 1 second might be acceptable, right?\N即使花半秒甚至一秒也是可以接受的，对吧？
+Dialogue: 0,0:43:21.53,0:43:27.18,Sub,,0,0,0,,So these these tend to be much larger models making a little bit slower decisions.\N所以这类模型通常更大，决策速度稍微慢一些。
+Dialogue: 0,0:43:27.24,0:43:34.91,Sub,,0,0,0,,So kind of a fast think fast think slow approach to to understanding the world.\N这是一种“快速思考，慢速思考”相结合的方式来理解世界。
+Dialogue: 0,0:43:34.96,0:43:38.24,Sub,,0,0,0,,These then feed into kind of a world decoder, right?\N这些信息随后会输入到一种“世界解码器”中，对吧？
+Dialogue: 0,0:43:38.29,0:43:46.19,Sub,,0,0,0,,Which then makes the decision decisions what what should the car actually be doing.\N它再决定车辆实际应该采取什么行动。
+Dialogue: 0,0:43:46.24,0:43:46.56,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:43:46.59,0:43:50.53,Sub,,0,0,0,,Now the model itself we start with a very very big model.\N现在我们从一个非常非常大的模型开始。
+Dialogue: 0,0:43:50.58,0:43:53.77,Sub,,0,0,0,,Um we distill it for a version that runs on the car.\N我们对模型进行蒸馏，以得到一个能在汽车上运行的版本。
+Dialogue: 0,0:43:53.82,0:43:58.87,Sub,,0,0,0,,Um of course we try to run the biggest version as that we can.\N当然，我们尝试运行尽可能大的版本。
+Dialogue: 0,0:43:58.92,0:44:04.35,Sub,,0,0,0,,Um but of course distillation making a lot of progress too.\N但蒸馏技术也在取得巨大进展。
+Dialogue: 0,0:44:04.40,0:44:06.99,Sub,,0,0,0,,Um just a glimpse on simulation.\N这里简单展示一下仿真效果。
+Dialogue: 0,0:44:07.04,0:44:14.94,Sub,,0,0,0,,Um this is something we we have a large team spending a lot of time on and it's been really transformative to what we've been able to do.\N这是我们一个大型团队投入大量时间的工作，它极大地改变了我们的能力。
+Dialogue: 0,0:44:14.99,0:44:18.49,Sub,,0,0,0,,Um and it's it's just really cool videos too.\N而且这些视频本身也非常酷。
+Dialogue: 0,0:44:18.54,0:44:19.72,Sub,,0,0,0,,So, I thought I'd share.\N所以我觉得应该分享一下。
+Dialogue: 0,0:44:19.77,0:44:21.14,Sub,,0,0,0,,Um, so this one, right?\N就是这个，对吧？
+Dialogue: 0,0:44:21.19,0:44:22.29,Sub,,0,0,0,,You're driving.\N你在开车。
+Dialogue: 0,0:44:22.34,0:44:29.05,Sub,,0,0,0,,You can see you kind of on a freeway come up to a car that stalled and you drive around it, right?\N你可以看到，你在高速公路上接近一辆抛锚的车，然后绕了过去，对吧？
+Dialogue: 0,0:44:29.10,0:44:32.35,Sub,,0,0,0,,And there's something, I don't know, you drive on 101 here.\N而且这里，我也不清楚，你是在 101 号公路上行驶。
+Dialogue: 0,0:44:32.40,0:44:35.95,Sub,,0,0,0,,May happen like once a year, something like that, right?\N可能一年才发生一次，类似这样的情况，对吧？
+Dialogue: 0,0:44:36.00,0:44:38.51,Sub,,0,0,0,,We've all seen these types of things.\N我们都见过这类东西。
+Dialogue: 0,0:44:38.56,0:44:46.53,Sub,,0,0,0,,Um, but we can also do a little bit more unusual things.\N嗯，但我们也可以做些更不寻常的事情。
+Dialogue: 0,0:44:46.58,0:44:47.95,Sub,,0,0,0,,Oops.\N糟糕。
+Dialogue: 0,0:44:48.00,0:44:48.52,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:44:48.57,0:44:53.51,Sub,,0,0,0,,So here we're driving and there's a plane landing in front of us and I think a few\N我们正开着车，突然前方有一架飞机降落，我觉得有点儿……
+Dialogue: 0,0:44:53.56,0:44:58.13,Sub,,0,0,0,,years ago I saw a plane on the side of a road but never landing in front of me.\N多年前，我曾在路边看到一架飞机，但从未亲眼见到它在我面前降落。
+Dialogue: 0,0:44:58.18,0:44:58.55,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:44:58.58,0:45:02.03,Sub,,0,0,0,,So this were this is happening fully in simulation, right?\N所以这是完全在仿真中进行的，对吧？
+Dialogue: 0,0:45:02.08,0:45:10.30,Sub,,0,0,0,,Like we we have AI agents modeling the other vehicles um modeling the the physics everything in great detail, right?\N就像我们让AI智能体来模拟其他车辆，模拟物理世界，把方方面面都建模得非常详细，对吧？
+Dialogue: 0,0:45:10.35,0:45:16.91,Sub,,0,0,0,,So we both have a sensor side and the behavioral side.\N所以我们都有感知层面和行为层面。
+Dialogue: 0,0:45:16.96,0:45:20.13,Sub,,0,0,0,,Here's another fun example, right?\N再来一个有趣的例子，对吧？
+Dialogue: 0,0:45:20.18,0:45:22.78,Sub,,0,0,0,,Like okay, elephant could escape a zoo.\N好吧，大象有可能从动物园逃出来。
+Dialogue: 0,0:45:22.82,0:45:26.29,Sub,,0,0,0,,Um so let's see what the car would do.\N那么我们来看看这辆车会怎么做。
+Dialogue: 0,0:45:26.34,0:45:33.31,Sub,,0,0,0,,Um, and then last one, I don't know if this will ever happen regardless of kind of which side of global warming you're on.\N还有最后一个，不管你是站在全球变暖的哪一边，我觉得这事儿可能永远都不会发生。
+Dialogue: 0,0:45:33.36,0:45:36.59,Sub,,0,0,0,,Like I think snow on the Golden Gate seems unlikely.\N我觉得金门大桥上出现积雪的可能性不大。
+Dialogue: 0,0:45:36.64,0:45:39.91,Sub,,0,0,0,,Um, but it's an example of something we can model, right?\N但这正是一个我们可以建模的例子，对吧？
+Dialogue: 0,0:45:39.96,0:45:42.14,Sub,,0,0,0,,And again, the physics are embedded, right?\N而且再次强调，物理规律已经嵌入其中，对吧？
+Dialogue: 0,0:45:42.19,0:45:47.42,Sub,,0,0,0,,So understanding the slipperiness of a road, um, visibility, reflectivity, right?\N所以理解路面的湿滑程度、能见度、反光性，对吧？
+Dialogue: 0,0:45:47.47,0:45:54.64,Sub,,0,0,0,,All these things\N所有这些因素
+Dialogue: 0,0:45:54.69,0:46:02.11,Sub,,0,0,0,,are in there.\N都包含在内。
+Dialogue: 0,0:46:02.16,0:46:03.94,Sub,,0,0,0,,So where does this leave us, right?\N那么这让我们处于什么位置，对吧？
+Dialogue: 0,0:46:03.99,0:46:05.54,Sub,,0,0,0,,Like we put tremendous effort.\N我们投入了巨大的努力。
+Dialogue: 0,0:46:05.59,0:46:08.11,Sub,,0,0,0,,We're on a path to scaling.\N我们正走在规模化的道路上。
+Dialogue: 0,0:46:08.16,0:46:09.34,Sub,,0,0,0,,Do we have a results?\N我们有结果了吗？
+Dialogue: 0,0:46:09.39,0:46:11.36,Sub,,0,0,0,,And the answer is yes, right?\N答案是肯定的，对吧？
+Dialogue: 0,0:46:11.42,0:46:20.43,Sub,,0,0,0,,like roughly 13x fewer accidents um in the Waymo car regardless of fault um is is really an amazing\N比如，Waymo 车辆的事故率约为人类的 1/13，无论责任归属如何，这真的非常惊人。
+Dialogue: 0,0:46:20.48,0:46:27.87,Sub,,0,0,0,,accomplishment right like at at the mileage I mentioned it means we've had meaningful impact already right and if\N按我提到的行驶里程来看，我们已经产生了实质性的积极影响，对吧？而且如果
+Dialogue: 0,0:46:27.92,0:46:33.91,Sub,,0,0,0,,you think about the scaling ahead right these things will really change people's lives to the better so is\N你考虑到未来的规模扩展，这些技术真的会极大地改善人们的生活，所以
+Dialogue: 0,0:46:33.96,0:46:41.79,Sub,,0,0,0,,it was a very cool part thing to be a part of things we're doing as a company Um,\N能参与公司正在做的事情，这确实是非常酷的一件事。
+Dialogue: 0,0:46:41.84,0:46:46.01,Sub,,0,0,0,,obviously we're we're aiming for new operating domains.\N显然，我们正致力于开拓新的运营领域。
+Dialogue: 0,0:46:46.06,0:46:47.55,Sub,,0,0,0,,Snow is a really big one.\N雪天驾驶是一个非常重要的领域。
+Dialogue: 0,0:46:47.60,0:46:54.00,Sub,,0,0,0,,Um, you've probably seen most of our cities today are are more of a southern states in the US, right?\N你可能已经注意到，我们目前的大多数城市都在美国南部，对吧？
+Dialogue: 0,0:46:54.05,0:46:58.12,Sub,,0,0,0,,With within a very soon time, we'll will be in northern cities, too.\N很快，我们也将进入北方城市。
+Dialogue: 0,0:46:58.17,0:46:59.94,Sub,,0,0,0,,International markets, right?\N国际市场，对吧？
+Dialogue: 0,0:47:00.00,0:47:02.44,Sub,,0,0,0,,We've we've announced London and Tokyo.\N我们已经宣布了伦敦和东京。
+Dialogue: 0,0:47:02.49,0:47:03.87,Sub,,0,0,0,,More to come there.\N后面还有更多内容。
+Dialogue: 0,0:47:03.92,0:47:05.92,Sub,,0,0,0,,And then also just scaling, right?\N然后还有单纯的规模扩展，对吧？
+Dialogue: 0,0:47:05.97,0:47:09.91,Sub,,0,0,0,,Today we have I don't know four or 5 thousand cars on the road which is\N目前我们路上有四千到五千辆汽车，这已经非常棒了，
+Dialogue: 0,0:47:09.96,0:47:14.59,Sub,,0,0,0,,is really awesome but it's going to be just dramatically more in the next few years.\N但未来几年里，数量将会有质的飞跃。
+Dialogue: 0,0:47:14.64,0:47:22.43,Sub,,0,0,0,,And so with that of course there's operational challenges right we'll discover more longtail events that we have to address.\N因此，随之而来的自然会有运营上的挑战，我们会发现更多需要应对的长尾事件。
+Dialogue: 0,0:47:22.48,0:47:26.14,Sub,,0,0,0,,Um hardware scaling is always hard as I'm sure many of you know.\N硬件扩展总是很困难，我相信在座很多人知道这一点。
+Dialogue: 0,0:47:26.19,0:47:31.99,Sub,,0,0,0,,So should be a really fun journey ahead of us from a silicon side.\N所以从芯片角度来看，前方将是一段非常有趣的旅程。
+Dialogue: 0,0:47:32.04,0:47:35.47,Sub,,0,0,0,,Um there's just endless stuff to continue doing, right?\N事实上，还有很多事情可以持续做下去，对吧？
+Dialogue: 0,0:47:35.52,0:47:39.71,Sub,,0,0,0,,I jotted down a few notes here, but this there's not a complete list.\N我在这里简单记了几点，但这并不是一个完整的清单。
+Dialogue: 0,0:47:39.76,0:47:47.15,Sub,,0,0,0,,And when we brainstorm within the team or or with friends, right, like many other things come up to within sensing, right?\N当我们在团队内部或与朋友头脑风暴时，像感知领域还有很多其他事情浮现出来。
+Dialogue: 0,0:47:47.20,0:47:49.30,Sub,,0,0,0,,There's always more fidelity.\N总是能进一步提升精度。
+Dialogue: 0,0:47:49.35,0:47:50.30,Sub,,0,0,0,,Compute, right?\N计算，对吧？
+Dialogue: 0,0:47:50.35,0:47:52.78,Sub,,0,0,0,,Integration is a big big thing we're aiming for.\N集成是我们正在努力实现的一个非常重要的目标。
+Dialogue: 0,0:47:52.83,0:47:54.21,Sub,,0,0,0,,Today, we have a pizza box.\N如今，我们有一个披萨盒大小的设备。
+Dialogue: 0,0:47:54.26,0:47:58.48,Sub,,0,0,0,,We'd really like that to be a laptop-sized computer in the car.\N我们非常希望它能变成一辆车里的笔记本电脑大小的计算机。
+Dialogue: 0,0:47:58.53,0:48:00.46,Sub,,0,0,0,,Um silicon reliability.\N硅片可靠性。
+Dialogue: 0,0:48:00.51,0:48:07.78,Sub,,0,0,0,,Um lot of things happening there for data center side as well right where when you have so many chips in the world doing\N数据中心方面也有很多事情在发生。当世界上有这么多芯片在做
+Dialogue: 0,0:48:07.83,0:48:17.12,Sub,,0,0,0,,really critical things you want that silicon to be more reliable memory technology just endless things to do right like and there we're in\N关键任务时，你希望硅片更可靠。内存技术也有无尽的改进空间。而且我们处于
+Dialogue: 0,0:48:17.17,0:48:24.78,Sub,,0,0,0,,a different domain than data center so different technologies may be the right thing to do but really very likely to be applicable to\N与数据中心不同的领域，所以也许该用不同的技术，但这些技术很可能适用于
+Dialogue: 0,0:48:24.83,0:48:34.88,Sub,,0,0,0,,really anything that happens in physical AI right where you have robots that need very similar smarts and will have enormous scale similar to cars.\N物理 AI 中的任何事情：机器人需要类似的智能，规模也会像汽车一样巨大。
+Dialogue: 0,0:48:34.93,0:48:41.58,Sub,,0,0,0,,Um so a few maybe provocative questions right today our model's not this big right but ideally we'd\N所以，有几个可能有点挑衅性的问题。今天我们的模型还没这么大，但理想情况下我们
+Dialogue: 0,0:48:41.63,0:48:47.87,Sub,,0,0,0,,be able to run a trillion parameter model on a car right we know right a trillion parameter model\N应该能在车里运行一个万亿参数的模型。我们知道，万亿参数模型
+Dialogue: 0,0:48:47.92,0:48:54.42,Sub,,0,0,0,,is smarter than a smaller one right memory systems how do we deal with low batch how do\N比小模型更聪明。那么内存系统怎么办？低批量怎么办？
+Dialogue: 0,0:48:54.48,0:49:03.79,Sub,,0,0,0,,we deal with in a single chip environment CPUs right like with agentic behavior with model architectures changing Right?\N在单芯片环境里，CPU 怎么办？比如代理式行为、模型架构不断变化的时候。
+Dialogue: 0,0:49:03.84,0:49:06.60,Sub,,0,0,0,,Do CPUs become much more important?\NCPU 是否变得重要得多？
+Dialogue: 0,0:49:06.65,0:49:08.23,Sub,,0,0,0,,And then maybe last one, right?\N然后也许最后一个，对吧？
+Dialogue: 0,0:49:08.28,0:49:12.51,Sub,,0,0,0,,I referred to a little bit kind of a boundary between sensors and compute, right?\N我提到了传感器与计算之间的一条边界，对吧？
+Dialogue: 0,0:49:12.56,0:49:20.43,Sub,,0,0,0,,Where do we draw that line between raw data versus pre at least somewhat pre-processed data.\N我们该如何划分原始数据与至少经过一定预处理的数据之间的界限？
+Dialogue: 0,0:49:20.48,0:49:24.67,Sub,,0,0,0,,So, we're really at the dawn of sort of physical AI changing the world, right?\N所以，我们正处在物理 AI 改变世界的黎明时刻，对吧？
+Dialogue: 0,0:49:24.72,0:49:32.45,Sub,,0,0,0,,Similar to, I think, what we've seen in the last years from from a digital side, physical AI is going to make a huge difference.\N正如我们过去几年在数字领域所看到的那样，物理 AI 将带来巨大影响。
+Dialogue: 0,0:49:32.50,0:49:39.75,Sub,,0,0,0,,And so so really appreciate everything that's happened in the industry to make this possible and also looking\N因此，非常感谢整个行业所做的一切，让这一切成为可能，同时也期待
+Dialogue: 0,0:49:39.80,0:49:50.61,Sub,,0,0,0,,forward to a lot of innovation that's ahead to to make this scale and and make it even better.\N未来将涌现的大量创新，让这项技术得以扩展并变得更好。
+Dialogue: 0,0:49:50.66,0:49:54.11,Sub,,0,0,0,,So thank you.\N所以谢谢。
+Dialogue: 0,0:49:54.16,0:49:55.71,SubHigh,,0,0,0,,Thanks for a wonderful keynote Daniel.\N谢谢你精彩的主旨演讲，丹尼尔。
+Dialogue: 0,0:49:55.76,0:49:57.43,SubHigh,,0,0,0,,That was delightful.\N那真是太棒了。
+Dialogue: 0,0:49:57.48,0:49:59.88,SubHigh,,0,0,0,,uh to get ahead of a procedural question,\N嗯，提前回应一个程序性问题，
+Dialogue: 0,0:49:59.93,0:50:05.82,SubHigh,,0,0,0,,a number of people have asked about the slides and you may have noticed there was a lot of video and animation in the slides.\N有不少人询问了幻灯片的事，你们可能已经注意到，幻灯片中包含大量视频和动画。
+Dialogue: 0,0:50:05.87,0:50:06.13,SubHigh,,0,0,0,,So,\N所以，
+Dialogue: 0,0:50:06.16,0:50:14.23,SubHigh,,0,0,0,,Waymo is a little bit less comfortable distilling that into something static and so uh all of you who attend and all of you who attend remotely\NWaymo 在将这些内容提炼为静态形式时略感吃力，因此所有现场参会者以及远程参会者
+Dialogue: 0,0:50:14.28,0:50:20.12,SubHigh,,0,0,0,,have access to the live stream and the live stream will stay up for quite a while and then eventually other forms of video will be available.\N都可以观看直播，直播将持续一段时间，之后将陆续提供其他形式的视频内容。
+Dialogue: 0,0:50:20.17,0:50:26.61,SubHigh,,0,0,0,,So, I think seeing the presentation in its intended form is available for attendees right now and the world eventually.\N我认为，以原本设计的形式观看演示，目前对参会者是可行的，全世界最终也能看到。
+Dialogue: 0,0:50:26.66,0:50:31.16,SubHigh,,0,0,0,,So, please lean into that rather than the static frozen version of the slides.\N所以，请大家尽量观看直播，而不是静态的幻灯片截图。
+Dialogue: 0,0:50:31.21,0:50:36.83,SubHigh,,0,0,0,,I think the the pointing out the human in the dust storm is less good on PDF.\N我觉得在 PDF 版本中突出显示沙尘暴中的人，效果并不好。
+Dialogue: 0,0:50:36.88,0:50:39.59,SubHigh,,0,0,0,,Uh, and please begin lining up for the for the microphones.\N呃，请大家开始排队等候话筒。
+Dialogue: 0,0:50:39.64,0:50:41.01,SubHigh,,0,0,0,,There's also a microphone on this side.\N这边也有一个话筒。
+Dialogue: 0,0:50:41.06,0:50:42.10,SubHigh,,0,0,0,,I don't think we have one upstairs.\N我认为楼上没有话筒。
+Dialogue: 0,0:50:42.15,0:50:45.33,SubHigh,,0,0,0,,So, if you're in the balcony, really want to ask a question, please come downstairs for that.\N如果你在楼座里，真想提问，请下楼来。
+Dialogue: 0,0:50:45.38,0:50:49.34,SubHigh,,0,0,0,,I'll exercise moderator privilege and say, Daniel, you said liquid cooling.\N我行使主持人特权，说一下，丹尼尔，你说到了液冷。
+Dialogue: 0,0:50:49.39,0:50:51.40,SubHigh,,0,0,0,,You have liquid cooling in your car.\N你的车里有液冷系统。
+Dialogue: 0,0:50:51.45,0:50:54.03,SubHigh,,0,0,0,,Could you elaborate a little bit, please?\N你能稍微详细说明一下吗？
+Dialogue: 0,0:50:54.08,0:50:55.01,SubHigh,,0,0,0,,Yeah, good question.\N嗯，好问题。
+Dialogue: 0,0:50:55.06,0:51:00.45,SubHigh,,0,0,0,,Like we've actually had liquid cooling since I don't know 2014 or so.\N其实我们从大约2014年左右就开始使用液冷了。
+Dialogue: 0,0:51:00.50,0:51:08.16,SubHigh,,0,0,0,,Um so some of it comes from if you look at cars they actually naturally have liquid for cooling.\N嗯，你看汽车本身其实天然就具备液冷系统。
+Dialogue: 0,0:51:08.21,0:51:15.63,SubHigh,,0,0,0,,Um especially EVs right like the battery pack needs cooling and typically has some liquid system associated with it.\N尤其是电动车，电池组需要冷却，通常都配有相应的液冷系统。
+Dialogue: 0,0:51:15.68,0:51:20.35,SubHigh,,0,0,0,,Um and so we worked with partner companies to make sure we're able to tap into that.\N所以我们与合作伙伴公司合作，确保能够利用这一系统。
+Dialogue: 0,0:51:20.40,0:51:23.83,SubHigh,,0,0,0,,It is not as nice as data center liquid, right?\N这不像数据中心的液冷那么理想，对吧？
+Dialogue: 0,0:51:23.88,0:51:26.43,SubHigh,,0,0,0,,Like our liquid, it is not chilled.\N我们的液冷系统并不是制冷的。
+Dialogue: 0,0:51:26.48,0:51:30.62,SubHigh,,0,0,0,,So, you can imagine kind of driving in Phoenix, right?\N你可以想象一下在凤凰城开车的情景，对吧？
+Dialogue: 0,0:51:30.67,0:51:32.37,SubHigh,,0,0,0,,It's, I don't know, 2:00 p.m.\N大概是下午两点。
+Dialogue: 0,0:51:32.42,0:51:34.64,SubHigh,,0,0,0,,Sun has been shining on a car all day.\N太阳一整天都在照射着这辆车。
+Dialogue: 0,0:51:34.69,0:51:36.69,SubHigh,,0,0,0,,You're static, so there's no air flow.\N你停着不动，所以没有气流。
+Dialogue: 0,0:51:36.74,0:51:40.41,SubHigh,,0,0,0,,And so, that liquid can be, I don't know, 65 C or so, right?\N那么这种液体的温度可能是，我不确定，大约65摄氏度，对吧？
+Dialogue: 0,0:51:40.46,0:51:48.03,SubHigh,,0,0,0,,So, it's it's very different from sort of data center liquid, but still better than having fans going crazy in the car.\N所以它和数据中心的液冷方式非常不同，但仍然比车里风扇疯狂运转要好。
+Dialogue: 0,0:51:48.08,0:51:49.87,SubHigh,,0,0,0,,So, let's start taking questions.\N那么，我们开始提问吧。
+Dialogue: 0,0:51:49.92,0:51:54.49,SubHigh,,0,0,0,,uh my left side first one in line please identify yourself and your company and then ask your question.\N嗯，先请排在左边第一位的提问，请先说明您的姓名和公司，然后提问。
+Dialogue: 0,0:51:54.54,0:52:00.87,SubHigh,,0,0,0,,Uh hello Sari uh Nvidia uh I'm approaching this from a curiosity standpoint and my understanding of this is that you have a lot\N嗯，你好 Sari，英伟达。我从好奇的角度提问。据我了解，你们在软件和硬件里内置了大量
+Dialogue: 0,0:52:00.92,0:52:10.02,SubHigh,,0,0,0,,of software and hardware uh safety features redundancies resiliences built in uh my question is do you understand what is the most critical link\N安全特性、冗余和容错能力。我的问题是：你们是否清楚整个系统中
+Dialogue: 0,0:52:10.07,0:52:16.31,SubHigh,,0,0,0,,of failure in this whole system because I'm just trying to draw the corary from air crash investigation is like it's never just one\N最关键的失效环节是什么？因为我总想从空难调查里找类比——从来不是单一
+Dialogue: 0,0:52:16.36,0:52:25.07,SubHigh,,0,0,0,,system failure it's always a sequence of complicated time dependent uh temporal things failing all in one order to cause the whole system to fail.\N系统失效，而是一连串复杂的、与时间相关的故障按某种顺序叠加，才导致整个系统崩溃。
+Dialogue: 0,0:52:25.12,0:52:30.20,SubHigh,,0,0,0,,In this case, do you even understand um what that point is?\N在这种情况下，你们真的知道那个临界点在哪里吗？
+Dialogue: 0,0:52:30.25,0:52:35.69,SubHigh,,0,0,0,,And then if you kind of classify that this is kind of that uh this is beyond that risk,\N如果你们判断某件事已经超出可接受的风险，
+Dialogue: 0,0:52:35.74,0:52:39.44,SubHigh,,0,0,0,,do you like advertise that hey maybe this is too risky to drive right now,\N你们会公开提示‘现在驾驶太危险’吗？
+Dialogue: 0,0:52:39.49,0:52:43.47,SubHigh,,0,0,0,,maybe we should stop or maybe sometimes stopping isn't the right answer because there may be a car behind you.\N或许我们应该停下来，但有时候停下来可能并不是正确的选择，因为后面可能有车。
+Dialogue: 0,0:52:43.52,0:52:49.18,SubHigh,,0,0,0,,So I'm trying to understand is how do you look at it from a whole subsystem not just the semiconductor\N所以我想弄清楚的是，你如何从一个完整子系统来看待问题，而不仅仅是半导体。
+Dialogue: 0,0:52:49.22,0:52:55.55,SubHigh,,0,0,0,,but also like at a at a full system at a world level of failure mode because it's so complex.\N还要考虑到整个系统乃至全球范围内的故障模式，因为它的复杂性太高了。
+Dialogue: 0,0:52:55.60,0:52:56.92,SubHigh,,0,0,0,,Yeah, really good question.\N是的，非常好的问题。
+Dialogue: 0,0:52:56.96,0:52:59.63,SubHigh,,0,0,0,,Like for us, safety is really our northstar, right?\N对我们来说，安全真的是我们的核心准则，对吧？
+Dialogue: 0,0:52:59.68,0:53:06.96,SubHigh,,0,0,0,,So whole company is sort of founded on the basis of safety and so we the approach we take there, right?\N所以整个公司都是建立在安全基础之上的，因此我们在那方面的做法是怎样的，对吧？
+Dialogue: 0,0:53:07.02,0:53:13.63,SubHigh,,0,0,0,,Like we we of course do all the analysis to estimate failure rates for various things we we can imagine.\N我们当然会对各种可能的情况进行分析，以估算故障率。
+Dialogue: 0,0:53:13.68,0:53:18.82,SubHigh,,0,0,0,,Um and a lot of it ties into hardware systems, some of it into the software systems.\N这其中很多都与硬件系统相关，也有一部分涉及软件系统。
+Dialogue: 0,0:53:18.87,0:53:26.22,SubHigh,,0,0,0,,And so our safety team does reviews right and and has estimates for what are all the various probabilities.\N因此我们的安全团队会进行评审，并对各种可能性的概率做出评估。
+Dialogue: 0,0:53:26.27,0:53:33.30,SubHigh,,0,0,0,,Um we also have an enormous amount of data right so we do we do structured testing right where we we think\N我们还有海量数据。我们会做结构化测试，把测试环境设想成
+Dialogue: 0,0:53:33.35,0:53:40.67,SubHigh,,0,0,0,,of it as a a mini city right that we build that the cars operate around and we're able to test against.\N一座我们搭建的微型城市，让车辆在其中运行并测试。
+Dialogue: 0,0:53:40.72,0:53:48.18,SubHigh,,0,0,0,,um we do an enor billions of miles of driving and simulation before we do a software release right we test that release\N在发布软件之前，我们会做数十亿英里的驾驶和仿真测试；
+Dialogue: 0,0:53:48.23,0:53:55.06,SubHigh,,0,0,0,,for many many miles and so there's some of it is very analytical right based on what we know about the system and the\N对一个版本进行大量里程的测试。所以，一部分是基于我们对系统特性和目标的分析，
+Dialogue: 0,0:53:55.11,0:54:02.67,SubHigh,,0,0,0,,properties and our goals some of it is datadriven based on what we're able to observe through for very rigorous testing at different\N另一部分则基于我们通过在不同层级或不同测试模式下进行严格测试所观察到的数据，
+Dialogue: 0,0:54:02.72,0:54:11.76,SubHigh,,0,0,0,,levels of of sort of or or different modes of testing so what's the weakest link if if I may Just one question please.\N所以最薄弱的环节是什么？如果可以的话，我只想问一个问题。
+Dialogue: 0,0:54:11.81,0:54:15.75,SubHigh,,0,0,0,,Uh and I'll do load balancing and fair queuing and say let's take another one from the left side.\N嗯，我会做负载均衡和公平排队，然后我们再从左边拿一个。
+Dialogue: 0,0:54:15.80,0:54:19.39,SubHigh,,0,0,0,,Please do try to keep the question short so we can maximize our Daniel time.\N请尽量让问题简短一些，以便我们能最大化利用丹尼尔的时间。
+Dialogue: 0,0:54:19.44,0:54:19.79,SubHigh,,0,0,0,,Yep.\N好的。
+Dialogue: 0,0:54:19.82,0:54:22.20,SubHigh,,0,0,0,,Shou Mukerji, Applied Intuition.\NShou Mukerji，Applied Intuition。
+Dialogue: 0,0:54:22.26,0:54:23.17,SubHigh,,0,0,0,,Hey thanks Daniel.\N嘿，谢谢丹尼尔。
+Dialogue: 0,0:54:23.22,0:54:26.93,SubHigh,,0,0,0,,You gave me a ride in a Waymo car a long time back before it went into production.\N你很久以前曾让我坐过一辆 Waymo 的车，那时候它还没投入生产。
+Dialogue: 0,0:54:26.98,0:54:27.55,SubHigh,,0,0,0,,So thank you.\N所以谢谢。
+Dialogue: 0,0:54:27.60,0:54:27.96,SubHigh,,0,0,0,,Question.\N问题。
+Dialogue: 0,0:54:27.99,0:54:30.16,SubHigh,,0,0,0,,What is how does the economics of this work?\N这个的经济模式是怎么运作的？
+Dialogue: 0,0:54:30.21,0:54:39.38,SubHigh,,0,0,0,,Can you please explain uh thousands of chips typically takes millions to even you know get to a point where it you can recoup the cost.\N你能解释一下吗？通常需要数千块芯片，成本可能达到数百万，甚至更高，才能收回投入。
+Dialogue: 0,0:54:39.43,0:54:41.87,SubHigh,,0,0,0,,So when do you think Waymo will break even?\N那你觉得 Waymo 什么时候能实现盈亏平衡？
+Dialogue: 0,0:54:41.92,0:54:45.87,SubHigh,,0,0,0,,Five years, 10 years?\N五年，还是十年？
+Dialogue: 0,0:54:45.92,0:54:49.39,SubHigh,,0,0,0,,Thought you were going to ask when do we IPO?\N我还以为你会问我们什么时候上市呢。
+Dialogue: 0,0:54:49.44,0:54:54.00,SubHigh,,0,0,0,,Um well, so I think there's two sides to the question, right?\N嗯，我觉得这个问题有两个层面，对吧？
+Dialogue: 0,0:54:54.05,0:54:56.90,SubHigh,,0,0,0,,One is of course way more economics overall, right?\N一个是整体上更显著的经济性，对吧？
+Dialogue: 0,0:54:56.95,0:54:59.72,SubHigh,,0,0,0,,And there I think the business case is very strong, right?\N而我认为，从商业角度看，这个案例非常有力，对吧？
+Dialogue: 0,0:54:59.77,0:55:04.62,SubHigh,,0,0,0,,You we released some things around our latest funding round there, so I won't dive into those,\N我们之前发布过一些关于最新融资轮的信息，所以我不展开讲了，
+Dialogue: 0,0:55:04.67,0:55:08.69,SubHigh,,0,0,0,,but is is a very strong kind of business case for Waymo as a company.\N但 Waymo 作为一家公司，确实拥有非常强劲的商业前景。
+Dialogue: 0,0:55:08.74,0:55:14.45,SubHigh,,0,0,0,,when we look at chips right like I think that may be the other part of your question right how do you decide\N我们来看芯片，我想这可能是你问题的另一部分，对吧？你是怎么决定
+Dialogue: 0,0:55:14.50,0:55:22.49,SubHigh,,0,0,0,,to really make a massive investments in silicon right because it's building the silicon tapeout's expensive now and as you can tell right we\N真正大规模投资硅基芯片的？因为现在制造芯片的成本很高，而且正如你所知，我们
+Dialogue: 0,0:55:22.54,0:55:27.05,SubHigh,,0,0,0,,also have a meaningful software effort around it right with compiler technologies\N在软件方面也有相当大的投入，比如编译器技术。
+Dialogue: 0,0:55:27.10,0:55:32.88,SubHigh,,0,0,0,,performance optimizations and for us that's it's really a long-term investment right\N性能优化，对我们而言，这确实是一笔长期投资。
+Dialogue: 0,0:55:32.93,0:55:40.42,SubHigh,,0,0,0,,like we know we know this is critical technology to our cars we're able to meaningfully move the needle today in terms of capabilities.\N正如我们所知，这项技术对我们的汽车至关重要，我们如今已能显著提升功能能力。
+Dialogue: 0,0:55:40.47,0:55:47.33,SubHigh,,0,0,0,,We're able to left shift for software development and we know long-term economics makes sense too, right?\N我们能够提前进行软件开发，而且从长期经济角度看，这也完全合理，对吧？
+Dialogue: 0,0:55:47.38,0:55:51.68,SubHigh,,0,0,0,,As we scale and so it's it's a very strong technical win today.\N随着规模扩大，这在今天已是一次非常强劲的技术胜利。
+Dialogue: 0,0:55:51.72,0:55:54.67,SubHigh,,0,0,0,,It's an economic win longer term.\N从长远来看，这更是一次经济上的胜利。
+Dialogue: 0,0:55:54.72,0:55:55.55,SubHigh,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,0:55:55.60,0:55:57.15,SubHigh,,0,0,0,,Let's go stage right, please.\N请右侧的观众提问。
+Dialogue: 0,0:55:57.20,0:55:57.60,SubHigh,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:55:57.65,0:56:00.36,SubHigh,,0,0,0,,Uh Kevin Krewell, independent analyst.\N你好，凯文·克鲁威尔，独立分析师。
+Dialogue: 0,0:56:00.40,0:56:02.68,SubHigh,,0,0,0,,Um Oh, yeah.\N噢，对，没错。
+Dialogue: 0,0:56:02.73,0:56:11.39,SubHigh,,0,0,0,,over here the um the sensors you have a you have radar, lidar as well as a microphone.\N这边，你们有传感器，包括雷达、激光雷达，还有麦克风。
+Dialogue: 0,0:56:11.44,0:56:18.66,SubHigh,,0,0,0,,Uh c can you explain how the microphone is using what are you using that for kind of wave hey Waymo and wave you down?\N嗯，你能解释一下麦克风的用途吗？比如你朝 Waymo 挥手叫车，它能识别并停下来？
+Dialogue: 0,0:56:18.71,0:56:26.51,SubHigh,,0,0,0,,Um or also do you are you permanently committed to both lidar and radar?\N也就是说，你是否永久地同时采用激光雷达和毫米波雷达？
+Dialogue: 0,0:56:26.56,0:56:26.96,SubHigh,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,0:56:27.00,0:56:30.74,SubHigh,,0,0,0,,So so microphone primary use is sirens, right?\N所以麦克风的主要用途是警报声，对吧？
+Dialogue: 0,0:56:30.79,0:56:39.80,SubHigh,,0,0,0,,emergency vehicles and we we are able to use them both to hear and in some cases localize um honking and other nearby\N应急车辆，我们既能用它们来听，也能在某些情况下定位鸣笛声和其他附近的声响。
+Dialogue: 0,0:56:39.85,0:56:51.79,SubHigh,,0,0,0,,behavior can also be important but for primary use cases as sort of emergency vehicles and then lidar and radar we're all in permanently.\N其他行为也可能重要，但主要用途还是应急车辆，而激光雷达和毫米波雷达，我们是永久投入的。
+Dialogue: 0,0:56:51.84,0:56:53.07,SubHigh,,0,0,0,,Okay, thanks.\N好的，谢谢。
+Dialogue: 0,0:56:53.12,0:56:53.89,SubHigh,,0,0,0,,Thanks.\N谢谢。
+Dialogue: 0,0:56:53.94,0:56:56.03,SubHigh,,0,0,0,,Let's go stage left.\N请左侧的观众提问。
+Dialogue: 0,0:56:56.08,0:56:57.39,SubHigh,,0,0,0,,Hey, thanks for the great presentation.\N嘿，感谢精彩的演示。
+Dialogue: 0,0:56:57.44,0:56:59.99,SubHigh,,0,0,0,,So my question is a little bit towards the future.\N我的问题稍微偏向未来。
+Dialogue: 0,0:57:00.04,0:57:06.27,SubHigh,,0,0,0,,Um how could you comment on trying to solve the accident problem or just driving as a coordination problem?\N你如何看待将事故问题或驾驶本身视为一个协调问题来解决？
+Dialogue: 0,0:57:06.32,0:57:12.31,SubHigh,,0,0,0,,So you have this one car which has a lot of sensing a lot of technology a lot of learning as a platform.\N所以你有一辆汽车，它具备大量传感、大量技术以及大量学习能力，作为一个平台。
+Dialogue: 0,0:57:12.36,0:57:20.57,SubHigh,,0,0,0,,Could multiple of these cars communicate or come together with an arrangement so that accidents become less likely become less ingenuous and so\N这些汽车能否相互沟通或以某种方式协同工作，从而降低事故发生的可能性，使情况变得更安全？
+Dialogue: 0,0:57:20.62,0:57:26.48,SubHigh,,0,0,0,,on and do could you have any comments on that and how would that change the platform the car as a computer for example?\N你对此有什么看法吗？这会如何改变汽车作为一台计算机的平台呢？
+Dialogue: 0,0:57:26.53,0:57:31.12,SubHigh,,0,0,0,,Yeah, really interesting question and something we we continuously look at, right?\N是的，这是一个非常有趣的问题，也是我们持续关注的议题，对吧？
+Dialogue: 0,0:57:31.17,0:57:33.77,SubHigh,,0,0,0,,Sort of falls under V2X technology, right?\N这大致属于车对万物（V2X）技术的范畴，对吧？
+Dialogue: 0,0:57:33.82,0:57:35.38,SubHigh,,0,0,0,,Can vehicles talk to vehicles?\N汽车之间能否相互通信？
+Dialogue: 0,0:57:35.43,0:57:37.65,SubHigh,,0,0,0,,Can vehicles talk to infrastructure?\N汽车能否与基础设施通信？
+Dialogue: 0,0:57:37.70,0:57:42.37,SubHigh,,0,0,0,,Even vehicles possibly to a cell phone in your in your pocket.\N甚至可能与你口袋里的手机进行通信。
+Dialogue: 0,0:57:42.42,0:57:48.27,SubHigh,,0,0,0,,Um, so we we we think some of that could be good technology, right?\N嗯，我们认为其中一些技术是有前景的，对吧？
+Dialogue: 0,0:57:48.32,0:57:52.07,SubHigh,,0,0,0,,Like it has to be deployed at scale to make a meaningful difference.\N但必须大规模部署，才能产生实质性影响。
+Dialogue: 0,0:57:52.12,0:57:55.10,SubHigh,,0,0,0,,So it's not something we rely on as a company, right?\N所以这并不是我们公司所依赖的技术，对吧？
+Dialogue: 0,0:57:55.15,0:58:00.43,SubHigh,,0,0,0,,But as adoption increases, I'm sure we'll participate in in a good way too.\N但随着普及率提高，我相信我们也会以积极的方式参与其中。
+Dialogue: 0,0:58:00.48,0:58:00.77,SubHigh,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:58:00.80,0:58:01.10,SubHigh,,0,0,0,,Right.\N对。
+Dialogue: 0,0:58:01.13,0:58:04.83,SubHigh,,0,0,0,,But today, right, like we we want self-driving technology today, right?\N但今天，我们确实需要自动驾驶技术，对吧？
+Dialogue: 0,0:58:04.88,0:58:07.31,SubHigh,,0,0,0,,V2X infrastructure doesn't exist yet.\NV2X 基础设施尚未建成。
+Dialogue: 0,0:58:07.36,0:58:10.35,SubHigh,,0,0,0,,Um, so today we operate without it.\N所以目前我们是在没有它的情况下运行的。
+Dialogue: 0,0:58:10.40,0:58:10.81,SubHigh,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,0:58:10.86,0:58:13.23,SubHigh,,0,0,0,,I'm So from Qualcomm, by the way.\N我是高通的，顺便说一下。
+Dialogue: 0,0:58:13.28,0:58:14.51,SubHigh,,0,0,0,,Oh, okay.\N哦，好的。
+Dialogue: 0,0:58:14.56,0:58:15.13,SubHigh,,0,0,0,,Thanks.\N谢谢。
+Dialogue: 0,0:58:15.18,0:58:16.67,SubHigh,,0,0,0,,Stage rate, please.\N请右侧的观众提问。
+Dialogue: 0,0:58:16.72,0:58:22.08,SubHigh,,0,0,0,,Michael Ari, NASA. Fantastic statistics compared to the average driver.\N迈克尔·阿里，NASA。与普通驾驶员相比，这些数据非常惊人。
+Dialogue: 0,0:58:22.13,0:58:29.36,SubHigh,,0,0,0,,How's it compare to the best and most adaptive human drivers both quantitatively if you have that\N它在定量上与最优秀、最适应的驾驶员相比如何？如果有的话，定性上又如何？
+Dialogue: 0,0:58:29.41,0:58:38.83,SubHigh,,0,0,0,,and qualitatively and then finally how can we adapt to real extreme environments like the lunar surface.\N最后，我们如何适应真实极端环境，比如月球表面？
+Dialogue: 0,0:58:38.88,0:58:41.70,SubHigh,,0,0,0,,Um first question I actually don't know the answer.\N嗯，第一个问题，我其实不知道答案。
+Dialogue: 0,0:58:41.75,0:58:46.62,SubHigh,,0,0,0,,Um, so I think Bear, we're we're actually very transparent in our safety reports, right?\N嗯，我认为——其实我们在安全报告里非常透明，对吧？
+Dialogue: 0,0:58:46.68,0:58:54.38,SubHigh,,0,0,0,,I I honestly don't know if if we have a stats on the safety reports, but if you're curious, like take a look and if not, reach out, right?\N我实话实说，我不确定我们是否有安全报告的数据，但如果你感兴趣，\N可以自己看看，如果没有，就联系一下，对吧？
+Dialogue: 0,0:58:54.43,0:59:00.88,SubHigh,,0,0,0,,Happy to connect with with people on the safety team on Lunar Surface.\N关于月球表面，我很乐意帮你联系安全团队的人。
+Dialogue: 0,0:59:00.92,0:59:04.06,SubHigh,,0,0,0,,Um, sounds really cool.\N嗯，听起来真的很酷。
+Dialogue: 0,0:59:04.11,0:59:05.79,SubHigh,,0,0,0,,Let's do it.\N那就这么定了。
+Dialogue: 0,0:59:05.84,0:59:06.75,SubHigh,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,0:59:06.80,0:59:10.51,SubHigh,,0,0,0,,Stage left.\N请左侧的观众提问。
+Dialogue: 0,0:59:10.56,0:59:11.75,SubHigh,,0,0,0,,Hi, Leonard Lee.\N你好，Leonard Lee。
+Dialogue: 0,0:59:11.80,0:59:12.63,SubHigh,,0,0,0,,Next curve.\NneXt Curve。
+Dialogue: 0,0:59:12.68,0:59:14.78,SubHigh,,0,0,0,,Um, a really complex question here.\N嗯，这里有个非常复杂的问题。
+Dialogue: 0,0:59:14.82,0:59:19.31,SubHigh,,0,0,0,,Uh, you mentioned GPU, but why not TPU or custom ASIC?\N嗯，你提到了 GPU，但为什么不考虑 TPU 或定制 ASIC 呢？
+Dialogue: 0,0:59:19.36,0:59:21.23,SubHigh,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,0:59:21.28,0:59:21.55,SubHigh,,0,0,0,,Yes.\N是的。
+Dialogue: 0,0:59:21.58,0:59:28.00,SubHigh,,0,0,0,,So, I think on custom ASIC, right, I think you probably got a glimmer that yes, we are building custom silicon, right?\N所以我认为在定制 ASIC 方面，你可能已经察觉到，没错，我们确实在开发定制芯片，对吧？
+Dialogue: 0,0:59:28.05,0:59:29.16,SubHigh,,0,0,0,,I gave a lidar example.\N我举了激光雷达的例子。
+Dialogue: 0,0:59:29.21,0:59:31.06,SubHigh,,0,0,0,,I gave a sensor processing chip, right?\N我举了传感器处理芯片的例子，对吧？
+Dialogue: 0,0:59:31.11,0:59:35.25,SubHigh,,0,0,0,,So those are custom chips we've designed within within the team.\N这些都是我们团队内部设计的定制芯片。
+Dialogue: 0,0:59:35.30,0:59:41.88,SubHigh,,0,0,0,,um they are on our cars and in some cases we've had several generations before that and they they tend\N它们已经用在我们的汽车上，在某些情况下我们之前已经推出了好几代产品，它们通常
+Dialogue: 0,0:59:41.93,0:59:49.95,SubHigh,,0,0,0,,to complement right kind of off a shelf or semi-custom solutions we we get from partners um TPUs right like of\N作为补充，与现成或半定制的解决方案搭配使用，比如来自合作伙伴的 TPUs，当然
+Dialogue: 0,0:59:50.00,0:59:57.55,SubHigh,,0,0,0,,course we are we are part of Alphabet we've worked very long closely with cliff for a long time from sea\N我们是 Alphabet 的一部分，我们和克里夫合作了很长时间，\N从早期的 Sea Star 时代就开始了，
+Dialogue: 0,0:59:57.60,1:00:06.11,SubHigh,,0,0,0,,star days um so there's there's there's good history and good collaboration um but especially today When you look at TPU,\N所以我们有深厚的合作历史和良好的协作关系，但尤其今天来看，当你审视 TPU 时，
+Dialogue: 0,1:00:06.16,1:00:09.02,SubHigh,,0,0,0,,right, like it's it's a data center chip, right?\N它是数据中心芯片，对吧？
+Dialogue: 0,1:00:09.07,1:00:12.40,SubHigh,,0,0,0,,You look at edge TPU, it's a cell phone chip, right?\N你再看边缘 TPU，它是一颗手机芯片，对吧？
+Dialogue: 0,1:00:12.45,1:00:16.41,SubHigh,,0,0,0,,And where we are with cars is is really in between, right?\N我们在汽车领域的进展，其实正处于一个中间状态，对吧？
+Dialogue: 0,1:00:16.46,1:00:25.35,SubHigh,,0,0,0,,It has different different ML requirements, uh has different environmental requirements and also sizing requirements that are somewhere in between.\N它有不同的机器学习需求，也有不同的环境要求和尺寸要求，这些都处于中间水平。
+Dialogue: 0,1:00:25.40,1:00:27.95,SubHigh,,0,0,0,,So definitely deep collaborations.\N因此，深度合作是必然的。
+Dialogue: 0,1:00:28.00,1:00:32.99,SubHigh,,0,0,0,,Um but as with many things, it's not a one-size-fits-all.\N但和许多事情一样，这并不是一种方案适用于所有情况。
+Dialogue: 0,1:00:33.04,1:00:34.35,SubHigh,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,1:00:34.40,1:00:36.84,SubHigh,,0,0,0,,I think maybe one or two questions which is about the line.\N我想可能有一两个问题，是关于这条线的。
+Dialogue: 0,1:00:36.90,1:00:39.23,SubHigh,,0,0,0,,So stage right please if you can go quick that'd be great.\N请右侧的观众提问，尽量快一点，谢谢。
+Dialogue: 0,1:00:39.28,1:00:42.26,SubHigh,,0,0,0,,Hi there it's Bruno Ben from Grabbc.\N大家好，我是来自 Grabbc 的布鲁诺·本。
+Dialogue: 0,1:00:42.31,1:00:47.64,SubHigh,,0,0,0,,Um Daniel you talked about the interest in running very large trillion parameter models.\N丹尼尔，你提到过对运行超大规模万亿参数模型的兴趣。
+Dialogue: 0,1:00:47.69,1:00:53.10,SubHigh,,0,0,0,,U most of the time power and latency requirements preclude that.\N但大多数情况下，功耗和延迟要求会限制这种做法。
+Dialogue: 0,1:00:53.15,1:00:58.83,SubHigh,,0,0,0,,Um but I was interested about how often would that be helpful that you can trade off in latency and compute.\N不过我很好奇，这种情况在多大程度上会有帮助，是否可以通过牺牲延迟和计算能力来换取收益。
+Dialogue: 0,1:00:58.88,1:01:00.07,SubHigh,,0,0,0,,So for example,\N比如说，
+Dialogue: 0,1:01:00.12,1:01:08.91,SubHigh,,0,0,0,,the car is slow or stationary interacting with a police officer and it might choose to switch to a very different model but still run locally.\N汽车速度缓慢或静止，正在与警察互动，它可能会切换到一个截然不同的模型，但仍保持本地运行。
+Dialogue: 0,1:01:08.96,1:01:10.27,SubHigh,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,1:01:10.32,1:01:10.60,SubHigh,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,1:01:10.63,1:01:14.15,SubHigh,,0,0,0,,And it's a balance we're working through, right, with these models, right?\N我们正在努力平衡这些模型之间的关系，对吧？
+Dialogue: 0,1:01:14.20,1:01:16.83,SubHigh,,0,0,0,,I mentioned sort of think fast, think slow, right?\N我提到了“快速思考”和“慢速思考”，对吧？
+Dialogue: 0,1:01:16.88,1:01:20.19,SubHigh,,0,0,0,,So those those are increasingly modes we operate in.\N所以这些越来越成为我们所处的运行模式。
+Dialogue: 0,1:01:20.24,1:01:27.71,SubHigh,,0,0,0,,And so exactly what is the threshold for think slow depends on the scene and the problem you're trying to solve.\N因此，“慢速思考”的触发阈值取决于具体场景以及你试图解决的问题。
+Dialogue: 0,1:01:27.76,1:01:29.84,SubHigh,,0,0,0,,Thank you. stage left.\N谢谢。请左侧的观众。
+Dialogue: 0,1:01:29.89,1:01:30.90,SubHigh,,0,0,0,,Last question.\N最后一个问题。
+Dialogue: 0,1:01:30.95,1:01:31.47,SubHigh,,0,0,0,,Thanks.\N谢谢。
+Dialogue: 0,1:01:31.52,1:01:35.38,SubHigh,,0,0,0,,Alexander Kaza, uh, undergrad at the University of Toronto.\N亚历山大·卡扎，多伦多大学本科生。
+Dialogue: 0,1:01:35.43,1:01:42.18,SubHigh,,0,0,0,,I'm wondering what challenges did you expect would be easy to solve that turned out to be far more difficult than you thought?\N我想知道，你原本以为容易解决的挑战，后来发现远比想象中困难的是哪些？
+Dialogue: 0,1:01:42.23,1:01:44.03,SubHigh,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,1:01:44.08,1:01:46.27,SubHigh,,0,0,0,,Oh, that's a hard one.\N噢，这可真难。
+Dialogue: 0,1:01:46.32,1:01:52.39,SubHigh,,0,0,0,,Um, I think one challenge is always the the hardware-software co-design, right?\N嗯，我认为一个挑战始终是软硬件协同设计，对吧？
+Dialogue: 0,1:01:52.44,1:02:00.07,SubHigh,,0,0,0,,like we we we have an advantage of being sort of very open and and sort of small teams, right?\N就像我们有优势，能够保持开放，团队规模也小，对吧？
+Dialogue: 0,1:02:00.12,1:02:02.59,SubHigh,,0,0,0,,So there there's no real friction.\N所以实际上没有太多摩擦。
+Dialogue: 0,1:02:02.64,1:02:06.11,SubHigh,,0,0,0,,At the same time, everyone is running really fast, right?\N同时，大家都在飞快地前进，对吧？
+Dialogue: 0,1:02:06.16,1:02:07.85,SubHigh,,0,0,0,,We're solving hard problems.\N我们在解决难题。
+Dialogue: 0,1:02:07.90,1:02:10.48,SubHigh,,0,0,0,,We want to advance the Waymo driver.\N我们希望推进 Waymo 驾驶系统。
+Dialogue: 0,1:02:10.54,1:02:16.59,SubHigh,,0,0,0,,And so making sure that the teams are really working to close working together closely and and doing\N因此确保团队真正紧密协作，尽可能多地进行协同设计，
+Dialogue: 0,1:02:16.64,1:02:23.84,SubHigh,,0,0,0,,as much co-design as we could um is is sometimes more challenging than maybe expected but I think overall\N有时比预期的更具挑战性，但我认为总体上
+Dialogue: 0,1:02:23.89,1:02:29.40,SubHigh,,0,0,0,,we've gotten tremendous results there and some of this is sort of self-feeding as well right based on\N我们在那里取得了巨大的成果，而且有些方面也形成了良性循环，基于
+Dialogue: 0,1:02:29.45,1:02:35.47,SubHigh,,0,0,0,,the results we've achieved in the last years right expect more and more of that in the next years.\N过去几年取得的成果，我们预计未来几年将取得更多成果。
+Dialogue: 0,1:02:35.52,1:02:37.31,SubHigh,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,1:02:37.36,1:02:43.07,SubHigh,,0,0,0,,I'll throw in one more ideally humorous question which is I think a bunch of what you're doing\N我再提一个尽量幽默的问题：我觉得你们做的很多事情
+Dialogue: 0,1:02:43.12,1:02:48.64,SubHigh,,0,0,0,,is reaching scale and the scale and miles driven and things experienced has a long tail to it.\N都在走向规模，而规模、行驶里程和经历的事情都有长尾效应。
+Dialogue: 0,1:02:48.69,1:02:53.92,SubHigh,,0,0,0,,So what was the weirdest thing a car has actually experienced that you have seen so far\N所以，你亲眼见过的、汽车实际经历过的最奇怪的事情是什么？
+Dialogue: 0,1:02:53.98,1:03:04.11,SubHigh,,0,0,0,,that you can tell us about uh uh as part of this 13-year voyage in figuring out autonomy?\N能跟我们分享一件吗——作为这 13 年探索自动驾驶之旅的一部分？
+Dialogue: 0,1:03:04.16,1:03:11.06,SubHigh,,0,0,0,,I guess the one slide I showed like I find the tree falling one pretty pretty unique, right?\N我想，我展示过的那张幻灯片里，树倒下的场景就挺独特的，对吧？
+Dialogue: 0,1:03:11.11,1:03:17.55,SubHigh,,0,0,0,,Like I don't know of all the scenarios I thought of at least I never thought of kind of a tree falling right in front of a car.\N我想不出所有场景，至少我从没想过一棵树会正好倒在车前。
+Dialogue: 0,1:03:17.60,1:03:19.07,SubHigh,,0,0,0,,Not on your bingo card.\N这不在你的 bingo 卡上。
+Dialogue: 0,1:03:19.12,1:03:19.43,SubHigh,,0,0,0,,Yeah.\N对。
+Dialogue: 0,1:03:19.46,1:03:25.40,SubHigh,,0,0,0,,And I don't know like we've seen power lines go down and other stuff like it's every time you hear these\N而且我们见过电线倒下之类的情况——每次听到这些，
+Dialogue: 0,1:03:25.45,1:03:31.45,SubHigh,,0,0,0,,it's like oh yeah that could happen but I don't know it's hard to predict and so so there of course\N你都会想，哦，这确实可能发生，但很难预测。所以当然，
+Dialogue: 0,1:03:31.50,1:03:36.52,SubHigh,,0,0,0,,like we want to know the scenarios but we also want a model that can reason right so you don't have\N我们想知道各种场景，但我们也想要一个能推理的模型，这样你就不必
+Dialogue: 0,1:03:36.58,1:03:44.00,SubHigh,,0,0,0,,to pre-program essentially or train against every scenario but you really have that world model that can reason about what's happening.\N预先编程或针对每个场景训练，而是拥有一个能推理当前情况的世界模型。
+Dialogue: 0,1:03:44.05,1:03:51.71,SubHigh,,0,0,0,,Yeah, I really look forward to my superhuman car noticing a situation and doing just the right thing in ways that I would have never guessed.\N是的，我非常期待我的超人驾驶汽车能察觉到某种情况，并以我从未预料到的方式做出正确反应。
+Dialogue: 0,1:03:51.76,1:03:53.71,SubHigh,,0,0,0,,So, please keep up the good work.\N所以，请继续努力，保持优秀的工作。
+Dialogue: 0,1:03:53.76,1:03:59.28,SubHigh,,0,0,0,,Everybody, let's thank Daniel once again for a wonderful keynote.\N各位，让我们再次感谢丹尼尔带来的精彩主题演讲。
+Dialogue: 0,1:03:59.34,1:04:01.07,SubHigh,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,1:04:01.12,1:04:04.44,SubHigh,,0,0,0,,Thanks.\N谢谢。

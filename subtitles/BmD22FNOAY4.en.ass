@@ -1,0 +1,806 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Arial,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:03.76,0:00:04.25,Sub,,0,0,0,,Hello.
+Dialogue: 0,0:00:04.30,0:00:04.78,Sub,,0,0,0,,Hello.
+Dialogue: 0,0:00:04.83,0:00:07.10,Sub,,0,0,0,,Wow, this crowd looks amazing.
+Dialogue: 0,0:00:07.15,0:00:12.88,Sub,,0,0,0,,Uh, as Madison just said, my name is Tiffany Jansen and I'm going to be your moderator today.
+Dialogue: 0,0:00:12.93,0:00:16.17,Sub,,0,0,0,,A little bit about me, I am the founder of Tiffen Tech.
+Dialogue: 0,0:00:16.22,0:00:21.92,Sub,,0,0,0,,And I don't know about you, but I have been counting down the days for this panel.
+Dialogue: 0,0:00:21.97,0:00:29.03,Sub,,0,0,0,,Humanoids have been in the the they we've seen a lot of advancements with them very recently and to
+Dialogue: 0,0:00:29.08,0:00:35.29,Sub,,0,0,0,,be able to sit down with some of the leaders in this space and hear from them is truly incredible.
+Dialogue: 0,0:00:35.34,0:00:38.62,Sub,,0,0,0,,Not only to learn where we are now but where we are headed.
+Dialogue: 0,0:00:38.67,0:00:41.22,Sub,,0,0,0,,Let's start with a round of introductions.
+Dialogue: 0,0:00:41.27,0:00:42.67,Sub,,0,0,0,,I'll start with Burnt.
+Dialogue: 0,0:00:42.72,0:00:43.03,Sub,,0,0,0,,Sure.
+Dialogue: 0,0:00:43.06,0:00:44.68,Sub,,0,0,0,,So my name is Burnt Barnick.
+Dialogue: 0,0:00:44.73,0:00:52.15,Sub,,0,0,0,,I'm the founder and CEO of 1X and we're on a mission to create an abundance of labor through these safe
+Dialogue: 0,0:00:52.20,0:01:01.71,Sub,,0,0,0,,intelligent humanoids and we really believe that to truly get to intelligence these robots they need to live and learn among us.
+Dialogue: 0,0:01:01.76,0:01:08.57,Sub,,0,0,0,,And that's why we think consumer has to happen first to really be able to ex to experience all of the
+Dialogue: 0,0:01:08.62,0:01:15.39,Sub,,0,0,0,,nuances that is kind of human life and then use that intelligence to be able to do useful labor in all other
+Dialogue: 0,0:01:15.44,0:01:26.09,Sub,,0,0,0,,verticals down the line right hospitals elderly care retail factories logistics it's exciting y hi I am Deepak Puk and I'm
+Dialogue: 0,0:01:26.14,0:01:32.07,Sub,,0,0,0,,CEO and co-founder of skilled AI at skilled what we are doing is we are building a general brain for robotics ICS.
+Dialogue: 0,0:01:32.12,0:01:39.07,Sub,,0,0,0,,Our thesis is that we can have a single shared model because robotics is a field which is anyway scarce of data.
+Dialogue: 0,0:01:39.12,0:01:43.48,Sub,,0,0,0,,We might as well use everything that we available from any platform, any task, any scenarios.
+Dialogue: 0,0:01:43.53,0:01:50.67,Sub,,0,0,0,,So think of it as like a large scale foundation model you can use for any robot, any hardware, any task, any scenarios.
+Dialogue: 0,0:01:50.72,0:01:55.36,Sub,,0,0,0,,uh Pros Feligaputo, the CTO at Agility Robotics and at Agility,
+Dialogue: 0,0:01:55.41,0:02:02.26,Sub,,0,0,0,,our humanoid digit is made for work and we're bringing it out to manufacturing and logistics use cases today.
+Dialogue: 0,0:02:02.31,0:02:10.60,Sub,,0,0,0,,We feel that the best way to get the technology out there and learn from it is to be able to get real customers and real deployments doing work.
+Dialogue: 0,0:02:10.65,0:02:16.35,Sub,,0,0,0,,And that's what we've been focused on and getting a robot out there and in the workforce.
+Dialogue: 0,0:02:16.40,0:02:21.41,Sub,,0,0,0,,Um, Aaron Saunders, CTO of Boston Emics, uh, been working on humanoids before they were cool.
+Dialogue: 0,0:02:21.46,0:02:26.62,Sub,,0,0,0,,Um, and at Boston, you know, our mission has been, uh, um, the same for a long time.
+Dialogue: 0,0:02:26.67,0:02:27.80,Sub,,0,0,0,,It's to make robots real.
+Dialogue: 0,0:02:27.85,0:02:30.21,Sub,,0,0,0,,Um, and we've shipped a couple thousand robots.
+Dialogue: 0,0:02:30.26,0:02:33.36,Sub,,0,0,0,,The humanoid is the the latest, uh, kind of announcement for us.
+Dialogue: 0,0:02:33.41,0:02:39.52,Sub,,0,0,0,,Uh, and we're really wanting to bring a product to market that, uh, can do real useful work, right?
+Dialogue: 0,0:02:39.57,0:02:44.39,Sub,,0,0,0,,So, to do work that, uh, um, uh, removes people from dirty, dull, dangerous things.
+Dialogue: 0,0:02:44.44,0:02:47.26,Sub,,0,0,0,,And that's the thing that we've been up to uh for a long time and
+Dialogue: 0,0:02:47.31,0:02:50.92,Sub,,0,0,0,,I think there's more work to do yet but we're pretty excited about where we're going.
+Dialogue: 0,0:02:50.97,0:02:52.59,Sub,,0,0,0,,Hi everyone, I'm Jim Fan.
+Dialogue: 0,0:02:52.64,0:02:57.47,Sub,,0,0,0,,Uh I'm the co-lead of Nvidia Gear Lab and also project is Groot.
+Dialogue: 0,0:02:57.52,0:03:04.19,Sub,,0,0,0,,Uh Groot is Nvidia's moonshot initiative at building u the foundation model the robot brain for
+Dialogue: 0,0:03:04.24,0:03:11.14,Sub,,0,0,0,,humanoid robots and Groot also represents our strategy for the next generation computing platform for physical AI.
+Dialogue: 0,0:03:11.19,0:03:14.49,Sub,,0,0,0,,And we're also on a mission to democratize physical AI.
+Dialogue: 0,0:03:14.54,0:03:21.11,Sub,,0,0,0,,In fact, yesterday at Jensen's uh keynote, we announced open sourcing of the Groot N1 model,
+Dialogue: 0,0:03:21.16,0:03:25.79,Sub,,0,0,0,,uh which is the world's first open humanoid robot foundation model.
+Dialogue: 0,0:03:25.84,0:03:30.67,Sub,,0,0,0,,It's only two billion parameters and um it punches above its weights.
+Dialogue: 0,0:03:30.72,0:03:37.79,Sub,,0,0,0,,You are basically holding the world's state-of-the-art autonomous humanoid intelligence in the palm of your hand.
+Dialogue: 0,0:03:37.84,0:03:46.67,Sub,,0,0,0,,Um and um I would also like to say that um just like everyone else on this panel um I started working robotics before it was sexy.
+Dialogue: 0,0:03:46.72,0:03:49.71,Sub,,0,0,0,,Um and today I see the full house here.
+Dialogue: 0,0:03:49.76,0:03:52.75,Sub,,0,0,0,,So I'm just really really glad that they become sexy today.
+Dialogue: 0,0:03:52.80,0:03:53.81,Sub,,0,0,0,,So thank you all so much.
+Dialogue: 0,0:03:53.86,0:04:00.75,Sub,,0,0,0,,All of you made my day.
+Dialogue: 0,0:04:00.80,0:04:02.01,Sub,,0,0,0,,Oh, thank you all for being here.
+Dialogue: 0,0:04:02.06,0:04:04.19,Sub,,0,0,0,,I know we're all excited.
+Dialogue: 0,0:04:04.24,0:04:12.16,Sub,,0,0,0,,We had a call before our panel obviously and in that conversation I can't recall who exactly it was but someone
+Dialogue: 0,0:04:12.21,0:04:22.17,Sub,,0,0,0,,shared on the call that robotics is the oldest application of AI and historically it's moved the slowest not the case
+Dialogue: 0,0:04:22.22,0:04:28.66,Sub,,0,0,0,,anymore I would say and what has changed I think I I raised that question in that call yeah so um
+Dialogue: 0,0:04:28.71,0:04:37.14,Sub,,0,0,0,,well I think the biggest change is Jensen now is paying attention to robotics Jensen's got a Jensen's got a Midas touch,
+Dialogue: 0,0:04:37.19,0:04:37.55,Sub,,0,0,0,,right?
+Dialogue: 0,0:04:37.58,0:04:41.41,Sub,,0,0,0,,Any field he puts his finger on is going to scale exponentially.
+Dialogue: 0,0:04:41.46,0:04:44.29,Sub,,0,0,0,,And we call Jensen scaling law, right?
+Dialogue: 0,0:04:44.34,0:04:46.08,Sub,,0,0,0,,So jokes aside,
+Dialogue: 0,0:04:46.13,0:04:56.75,Sub,,0,0,0,,I think uh robotics one of the oldest field as long as AI itself existed and the reason that robotics is so hard um is because the Moravex paradox.
+Dialogue: 0,0:04:56.80,0:05:05.07,Sub,,0,0,0,,So what this paradox says is the things that are easy for humans are actually really hard for machines and vice versa right the things
+Dialogue: 0,0:05:05.12,0:05:12.40,Sub,,0,0,0,,that we kind of u find extremely hard like creative writing may actually not be that hard for machines and that's why the LMS like the
+Dialogue: 0,0:05:12.45,0:05:21.15,Sub,,0,0,0,,NLP right computer vision is being solved much better than robotics these days so we are facing this paradox right now and now what has changed
+Dialogue: 0,0:05:21.20,0:05:31.45,Sub,,0,0,0,,I would say a couple of aspects one is uh on the model side um because of large foundation models like Loom's the Chach GPT moment.
+Dialogue: 0,0:05:31.50,0:05:37.71,Sub,,0,0,0,,Now we have models that can do reasoning and we have multimodal models that understands computer vision
+Dialogue: 0,0:05:37.76,0:05:43.79,Sub,,0,0,0,,right open vocabulary understanding of the 3D visual world much much better than what we had before
+Dialogue: 0,0:05:43.84,0:05:49.72,Sub,,0,0,0,,and these are necessary but insufficient conditions to solve robotics like you got to solve vision uh
+Dialogue: 0,0:05:49.77,0:05:54.91,Sub,,0,0,0,,to have a really good vision system before you even talk about having a general purpose robot.
+Dialogue: 0,0:05:54.96,0:06:01.96,Sub,,0,0,0,,So I think the rest of models are becoming really really good that we can start to tackle robotics uh a lot more systematically.
+Dialogue: 0,0:06:02.01,0:06:07.09,Sub,,0,0,0,,So that's number one and number two what has changed is uh on the data side.
+Dialogue: 0,0:06:07.14,0:06:15.16,Sub,,0,0,0,,So you know unlike Loom and I'm quoting Ilia Sask here he says the internet is the fossil fuel right for AI.
+Dialogue: 0,0:06:15.21,0:06:23.57,Sub,,0,0,0,,Uh well robotics doesn't even have the fossil fuel at least for LMS you can download text you can scrape text from Wikipedia.
+Dialogue: 0,0:06:23.62,0:06:26.08,Sub,,0,0,0,,Where do we scrape motor control?
+Dialogue: 0,0:06:26.13,0:06:30.26,Sub,,0,0,0,,Where do we scrape uh all of those like robot trajectories from the internet?
+Dialogue: 0,0:06:30.31,0:06:31.79,Sub,,0,0,0,,You can't find it anywhere.
+Dialogue: 0,0:06:31.84,0:06:33.40,Sub,,0,0,0,,So, we got to generate data.
+Dialogue: 0,0:06:33.45,0:06:35.37,Sub,,0,0,0,,We got to collect data at scale.
+Dialogue: 0,0:06:35.42,0:06:43.39,Sub,,0,0,0,,And I think the advent uh of simulation of GPU accelerated simulation really makes these problems more tractable because
+Dialogue: 0,0:06:43.44,0:06:50.22,Sub,,0,0,0,,now you can generate like 10 years worth of training data in maybe three hours worth of compute time.
+Dialogue: 0,0:06:50.27,0:06:54.10,Sub,,0,0,0,,So that really takes us beyond this data paradox.
+Dialogue: 0,0:06:54.15,0:07:00.92,Sub,,0,0,0,,So that's number two and number three is on hardware side and we have uh some of the most extraordinary uh founders on
+Dialogue: 0,0:07:00.97,0:07:06.97,Sub,,0,0,0,,some of the best um robot hardware we have ever seen and I think hardware has become a lot better and also a
+Dialogue: 0,0:07:07.02,0:07:14.85,Sub,,0,0,0,,lot cheaper right like like this year we have seen hardware um in range of maybe 40k that's the price of a car
+Dialogue: 0,0:07:14.90,0:07:24.04,Sub,,0,0,0,,um and back in 2001 NASA built Robonaut one of the first major humanoids and it's like $1.5 million in 2001 USD Right.
+Dialogue: 0,0:07:24.09,0:07:31.55,Sub,,0,0,0,,So, it's finally become becoming affordable that um uh it will become mainstream very quickly.
+Dialogue: 0,0:07:31.60,0:07:33.15,Sub,,0,0,0,,Erin, I'd love to hear from you on this.
+Dialogue: 0,0:07:33.20,0:07:36.75,Sub,,0,0,0,,You in your intro, you mentioned you've you were in robotics before it was cool.
+Dialogue: 0,0:07:36.80,0:07:38.46,Sub,,0,0,0,,So, what do you think has changed?
+Dialogue: 0,0:07:38.51,0:07:41.07,Sub,,0,0,0,,Yeah, I think um that was a a lot of terrain.
+Dialogue: 0,0:07:41.12,0:07:44.44,Sub,,0,0,0,,So, let me try to pick away at some some some pieces there.
+Dialogue: 0,0:07:44.49,0:07:49.40,Sub,,0,0,0,,Um I do think the the kind of closure of the sim tore gap is a big deal, right?
+Dialogue: 0,0:07:49.45,0:07:54.40,Sub,,0,0,0,,So I think for a long time uh the robotics community kind of struggled with
+Dialogue: 0,0:07:54.45,0:08:00.95,Sub,,0,0,0,,creating a uh um a simulation environment that represented physics properly and that was computationally efficient.
+Dialogue: 0,0:08:01.00,0:08:01.30,Sub,,0,0,0,,Right?
+Dialogue: 0,0:08:01.28,0:08:05.70,Sub,,0,0,0,,So we could create very complex models that did a very good job of representing
+Dialogue: 0,0:08:05.75,0:08:09.47,Sub,,0,0,0,,the physical world but we couldn't run them at real time or faster than real time.
+Dialogue: 0,0:08:09.52,0:08:13.55,Sub,,0,0,0,,So I think for me the the biggest change has probably been the ability to
+Dialogue: 0,0:08:13.60,0:08:18.12,Sub,,0,0,0,,represent the physics of the real world in greater than real time which lets you accelerate
+Dialogue: 0,0:08:18.17,0:08:22.71,Sub,,0,0,0,,how many simulations you can explore and how you can use those simulations to develop
+Dialogue: 0,0:08:22.76,0:08:27.00,Sub,,0,0,0,,new AI and then you know the the the commoditization of so many bits and pieces.
+Dialogue: 0,0:08:27.05,0:08:31.81,Sub,,0,0,0,,So I think we we probably need to give a huge amount of credit to some adjacent industries right.
+Dialogue: 0,0:08:31.86,0:08:37.17,Sub,,0,0,0,,So consumer electronics have developed batteries and cameras that that that like
+Dialogue: 0,0:08:37.22,0:08:42.07,Sub,,0,0,0,,you know the the technology for perception for seeing the world for computing.
+Dialogue: 0,0:08:42.12,0:08:51.57,Sub,,0,0,0,,uh when I look back you know even 101 15 years you know most of the robot was full of PCBAs and wires and had a very small amount
+Dialogue: 0,0:08:51.62,0:08:55.35,Sub,,0,0,0,,of battery capacity and that's completely changed right we can put a huge amount
+Dialogue: 0,0:08:55.40,0:08:59.70,Sub,,0,0,0,,of compute in we can put tiny sensors in uh they're power efficient so I
+Dialogue: 0,0:08:59.75,0:09:06.93,Sub,,0,0,0,,think the commoditization of the the components and I don't think it's so much about low cost I know that's a big focus right now but I think the
+Dialogue: 0,0:09:06.98,0:09:11.31,Sub,,0,0,0,,reason we're seeing the era of the robotic startup is because there's a global supply
+Dialogue: 0,0:09:11.36,0:09:15.13,Sub,,0,0,0,,chain full of really important pieces that you can put together as a puzzle piece.
+Dialogue: 0,0:09:15.18,0:09:21.53,Sub,,0,0,0,,And so we've elevated the robotics community from the people trying to design every cog to people who
+Dialogue: 0,0:09:21.58,0:09:26.57,Sub,,0,0,0,,can put those things together as a puzzle and you and and basically be operated at a higher level.
+Dialogue: 0,0:09:26.62,0:09:31.22,Sub,,0,0,0,,So now we have companies that are operating at the intelligence level that are developing applications
+Dialogue: 0,0:09:31.27,0:09:36.91,Sub,,0,0,0,,rather than spending all that same amount of capital and energy just making a physical machine stand.
+Dialogue: 0,0:09:36.96,0:09:37.52,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:09:37.57,0:09:37.95,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:09:37.98,0:09:46.21,Sub,,0,0,0,,I can add something to I think what Jim's point initially uh about uh I think you put it very well about all the differences that have changed.
+Dialogue: 0,0:09:46.26,0:09:49.97,Sub,,0,0,0,,Uh I want to add that AI was not just the first application.
+Dialogue: 0,0:09:50.02,0:09:53.80,Sub,,0,0,0,,Sorry, robotics was not the first application of AI, it is what AI is like.
+Dialogue: 0,0:09:53.85,0:09:58.24,Sub,,0,0,0,,If you look at the original documents of Turing when he talked about AI, it was for robotics.
+Dialogue: 0,0:09:58.29,0:10:06.03,Sub,,0,0,0,,He was like you should make something that learn instead of building like an adult make something that learns like a child and then it can grow.
+Dialogue: 0,0:10:06.08,0:10:09.64,Sub,,0,0,0,,You can put the same robot in a classroom it will grow to be adult over time.
+Dialogue: 0,0:10:09.69,0:10:18.33,Sub,,0,0,0,,It's a fascinating thought and he had this thought in 1950s right because language vision all of these things are cool but if you look
+Dialogue: 0,0:10:18.38,0:10:26.88,Sub,,0,0,0,,at the nature they come much later in timeline compared to physical action like for instance LLMs we are training on the data it's from
+Dialogue: 0,0:10:26.93,0:10:33.34,Sub,,0,0,0,,maybe last 100 years 200 years let's say thousand we are not training more than thousand years of data humans have been around for more
+Dialogue: 0,0:10:33.39,0:10:37.46,Sub,,0,0,0,,than thousand years so it's not that language led to intelligence it
+Dialogue: 0,0:10:37.51,0:10:41.87,Sub,,0,0,0,,was the infrastructure already existed Our brain actually existed which came through physical
+Dialogue: 0,0:10:41.92,0:10:49.16,Sub,,0,0,0,,reasoning which is why the impact is so big like if you you don't have to explain a person to any person what robotics is
+Dialogue: 0,0:10:49.21,0:10:57.37,Sub,,0,0,0,,you can feel it because we do physical task every other day every company gets impacted by robotics and that's the main deal so what
+Dialogue: 0,0:10:57.42,0:11:04.29,Sub,,0,0,0,,has changed apart from all the factors that Jim mentioned like these are technical details that is yes but what has changed is completely how
+Dialogue: 0,0:11:04.34,0:11:13.15,Sub,,0,0,0,,we approach robotics robotics so far has been the field of controls Controls was driving robotics until I would say even 3 4 years ago.
+Dialogue: 0,0:11:13.20,0:11:18.27,Sub,,0,0,0,,Right now for those who have been in this area for a long time, they would know controls was not designed for robotics.
+Dialogue: 0,0:11:18.32,0:11:25.34,Sub,,0,0,0,,Uh like control had its really uh limelight during World War II for like flying planes, missiles and everything.
+Dialogue: 0,0:11:25.39,0:11:29.44,Sub,,0,0,0,,And then you had the craze for robotics began because of because of touring.
+Dialogue: 0,0:11:29.49,0:11:30.95,Sub,,0,0,0,,And then people like what do we use?
+Dialogue: 0,0:11:31.00,0:11:33.65,Sub,,0,0,0,,Well, let's use controls which were bu which was built for that.
+Dialogue: 0,0:11:33.70,0:11:37.46,Sub,,0,0,0,,And that stuck around that stuck around for decades for 70 years.
+Dialogue: 0,0:11:37.51,0:11:39.46,Sub,,0,0,0,,But it's not in the same spirit.
+Dialogue: 0,0:11:39.51,0:11:40.72,Sub,,0,0,0,,It's not childlike learning.
+Dialogue: 0,0:11:40.77,0:11:47.65,Sub,,0,0,0,,In child, you are not teaching them calculus first to learn how to walk like figure out your joint movements and then learn walk.
+Dialogue: 0,0:11:47.70,0:11:49.47,Sub,,0,0,0,,You are learning by experience.
+Dialogue: 0,0:11:49.52,0:11:53.39,Sub,,0,0,0,,So learning by experience is the main change that has happened.
+Dialogue: 0,0:11:53.44,0:11:56.22,Sub,,0,0,0,,Now we are seeing all the sh all the shift happening.
+Dialogue: 0,0:11:56.27,0:11:59.61,Sub,,0,0,0,,Um and I mean BD just released a video today learning by experience.
+Dialogue: 0,0:11:59.66,0:12:02.10,Sub,,0,0,0,,So that is the I would say one major change has happened.
+Dialogue: 0,0:12:02.15,0:12:09.44,Sub,,0,0,0,,Instead of programming experience from that we have gone to learning by experience which is a major shift how we think about robotics.
+Dialogue: 0,0:12:09.49,0:12:11.89,Sub,,0,0,0,,I want to actually double click on that.
+Dialogue: 0,0:12:11.94,0:12:18.22,Sub,,0,0,0,,So I think for me right and I also been been in the field for long enough to be in the classical controls for
+Dialogue: 0,0:12:18.27,0:12:27.08,Sub,,0,0,0,,team but um a large part of what happened was the internet right if you think about it like it's it's this enormous human experiment
+Dialogue: 0,0:12:27.13,0:12:35.44,Sub,,0,0,0,,of like 30 close to 30 years of everyone around the world contributing to creating this enormous source of data so we can train an
+Dialogue: 0,0:12:35.49,0:12:41.23,Sub,,0,0,0,,AI which is completely magical and now what we're going to do is we're just going to ask all of you to do the same
+Dialogue: 0,0:12:41.28,0:12:48.83,Sub,,0,0,0,,again the next 30 years just go around and be robots and no we're not going to do that but we had that data and
+Dialogue: 0,0:12:48.88,0:12:57.27,Sub,,0,0,0,,therefore that is what actually moved AI forwards even though it started in robotics and to me now what it's all about is how do
+Dialogue: 0,0:12:57.32,0:13:06.46,Sub,,0,0,0,,we use that data that exists to bootstrap to where your robot can do something useful because at that point you can start to learn
+Dialogue: 0,0:13:06.51,0:13:13.47,Sub,,0,0,0,,in the real world where where intelligence really comes from right but you have to get to where it is to a certain extent useful.
+Dialogue: 0,0:13:13.52,0:13:18.23,Sub,,0,0,0,,So when I say go grab me a Coke in the fridge, if the robot's able to do so half the time,
+Dialogue: 0,0:13:18.28,0:13:22.28,Sub,,0,0,0,,then we have a feasible path to getting there because now we just need to say,
+Dialogue: 0,0:13:22.33,0:13:29.18,Sub,,0,0,0,,okay, that worked, that didn't work, and we need to run it enough times and it'll get really good at getting me a coke in the fridge.
+Dialogue: 0,0:13:29.23,0:13:35.87,Sub,,0,0,0,,And I think that is what we're seeing now with the advent of all of these multimodal LLMs is that you you can't
+Dialogue: 0,0:13:35.92,0:13:43.39,Sub,,0,0,0,,really solve robotics or intelligence in general I even think uh through this approach but you can get to where your system is
+Dialogue: 0,0:13:43.44,0:13:52.19,Sub,,0,0,0,,useful enough that you can create a very efficient data flywheel at scale that doesn't require you to teleoperate the robots for everything
+Dialogue: 0,0:13:52.24,0:14:02.87,Sub,,0,0,0,,it does and that is probably the path to if not AGI at least based very very useful machines and maybe also to AI.
+Dialogue: 0,0:14:02.92,0:14:04.26,Sub,,0,0,0,,We'll see down the road.
+Dialogue: 0,0:14:04.31,0:14:07.35,Sub,,0,0,0,,I feel like we got to circle back to to the last part you just said there.
+Dialogue: 0,0:14:07.40,0:14:10.10,Sub,,0,0,0,,But in the meantime, Pros, I'm curious to hear your take.
+Dialogue: 0,0:14:10.15,0:14:12.75,Sub,,0,0,0,,Yeah, I think echoing some of Aaron's comments here.
+Dialogue: 0,0:14:12.80,0:14:16.03,Sub,,0,0,0,,You know, why robotics is is kind of like coming back in.
+Dialogue: 0,0:14:16.08,0:14:21.69,Sub,,0,0,0,,You know, AI started with robotics and then kind of progressed to all these other areas and then sort of circled back.
+Dialogue: 0,0:14:21.74,0:14:23.71,Sub,,0,0,0,,Well, robotics is challenging for two reasons.
+Dialogue: 0,0:14:23.76,0:14:27.34,Sub,,0,0,0,,One, hardware is hard and the world is unstructured, right?
+Dialogue: 0,0:14:27.39,0:14:33.02,Sub,,0,0,0,,And if you look at how AI has evolved, right, and how robotics has evolved,
+Dialogue: 0,0:14:33.07,0:14:39.55,Sub,,0,0,0,,a huge portion of robotics has been dealing with the hardware is hard problem and miniaturizing sensors like MEMS,
+Dialogue: 0,0:14:39.60,0:14:43.15,Sub,,0,0,0,,building out actuator and drive technology, energy, energy storage technology.
+Dialogue: 0,0:14:43.20,0:14:44.73,Sub,,0,0,0,,All of that stuff had to be solved.
+Dialogue: 0,0:14:44.78,0:14:51.29,Sub,,0,0,0,,Even platforms like Arduino democratized people's ability to just get things to move in the real world
+Dialogue: 0,0:14:51.34,0:14:56.10,Sub,,0,0,0,,at all and and bring that to people so they weren't reinventing the wheel every single time.
+Dialogue: 0,0:14:56.14,0:15:05.85,Sub,,0,0,0,,On the AI side, we've been basically blocking our way through going from solving structured to increasingly unstructured problems.
+Dialogue: 0,0:15:05.90,0:15:16.29,Sub,,0,0,0,,Solving problems of queries and prompts to APIs to simplified world models to now unstructured world models.
+Dialogue: 0,0:15:16.34,0:15:23.89,Sub,,0,0,0,,uh where every piece of this puzzle has been sort of upleveling the AI platforms, finding new ways to ingest data,
+Dialogue: 0,0:15:23.94,0:15:31.47,Sub,,0,0,0,,taking the best practices of the previous sort of structure and how that worked and then taking it to this next step of okay,
+Dialogue: 0,0:15:31.52,0:15:37.53,Sub,,0,0,0,,what if we remove some of these training wheels and now you're just looking at video coming from
+Dialogue: 0,0:15:37.58,0:15:43.64,Sub,,0,0,0,,a self-driving car or now you're just looking at egocentric video being captured by a robot's uh cameras.
+Dialogue: 0,0:15:43.69,0:15:45.97,Sub,,0,0,0,,and what is going to happen next in this world.
+Dialogue: 0,0:15:46.02,0:15:52.27,Sub,,0,0,0,,So I think there's a bit more of this progression at Unlock that's been happening behind the scenes and we're just seeing the culmination of
+Dialogue: 0,0:15:52.32,0:16:00.97,Sub,,0,0,0,,that finally reach this tipping point where now okay we can go after this full problem of just interacting with the world in unstructured ways.
+Dialogue: 0,0:16:01.02,0:16:04.03,Sub,,0,0,0,,I think the last thing you say there is so important though and talking about
+Dialogue: 0,0:16:04.08,0:16:07.98,Sub,,0,0,0,,what has happened in hardware and maybe one of the biggest things happening the last few
+Dialogue: 0,0:16:08.03,0:16:13.16,Sub,,0,0,0,,years is the robustness of hardware and the ability to make hardware that doesn't break
+Dialogue: 0,0:16:13.21,0:16:16.92,Sub,,0,0,0,,when it interacts with the real world because all of us have worked long in robotics,
+Dialogue: 0,0:16:16.97,0:16:17.29,Sub,,0,0,0,,right?
+Dialogue: 0,0:16:17.32,0:16:21.23,Sub,,0,0,0,,Experiments take quite a long time when you need to rebuild the robot every time you run it.
+Dialogue: 0,0:16:21.28,0:16:25.53,Sub,,0,0,0,,But we're also now really at the point in hardware where we can have something learn
+Dialogue: 0,0:16:25.58,0:16:29.80,Sub,,0,0,0,,in the real world and safely interact with the world without damaging itself or the world.
+Dialogue: 0,0:16:29.85,0:16:33.22,Sub,,0,0,0,,And that's also a necessary condition really for this to progress.
+Dialogue: 0,0:16:33.27,0:16:34.27,Sub,,0,0,0,,And that took a long time.
+Dialogue: 0,0:16:34.32,0:16:37.39,Sub,,0,0,0,,That's it's a pretty hard problem.
+Dialogue: 0,0:16:37.44,0:16:44.34,Sub,,0,0,0,,You know, even listening to you all and and your your thoughts around this, it it brings up an interesting question.
+Dialogue: 0,0:16:44.39,0:16:49.68,Sub,,0,0,0,,I think you all have very exciting and unique strategies and approaches.
+Dialogue: 0,0:16:49.73,0:16:57.10,Sub,,0,0,0,,I I'm really curious to to hear your take on on your strategies and approaches for things such as the role
+Dialogue: 0,0:16:57.15,0:17:08.27,Sub,,0,0,0,,of AI uh moving from specialist to generalist models or how you think through things such as the explosion of foundation models.
+Dialogue: 0,0:17:08.32,0:17:11.84,Sub,,0,0,0,,Yeah, I I can perhaps talk a bit about group's strategy, right?
+Dialogue: 0,0:17:11.89,0:17:19.79,Sub,,0,0,0,,We're solving a really really hard problem uh to build a general purpose brain uh for for all kinds of different human robots not just one.
+Dialogue: 0,0:17:19.84,0:17:22.30,Sub,,0,0,0,,We also hope to get what we call cross embodiment.
+Dialogue: 0,0:17:22.35,0:17:24.26,Sub,,0,0,0,,So how do we tackle this problem?
+Dialogue: 0,0:17:24.31,0:17:27.22,Sub,,0,0,0,,I would say uh there are two main principles.
+Dialogue: 0,0:17:27.27,0:17:33.19,Sub,,0,0,0,,Uh principle number one is that the model itself we want it to be as simple as possible.
+Dialogue: 0,0:17:33.24,0:17:35.90,Sub,,0,0,0,,We want it to be as end to end as possible.
+Dialogue: 0,0:17:35.95,0:17:39.75,Sub,,0,0,0,,Uh to the point that it's basically photons to actions, right?
+Dialogue: 0,0:17:39.80,0:17:48.01,Sub,,0,0,0,,So you take pixels in from like a video camera and then you directly output continuous floatingoint numbers which are essentially the control values
+Dialogue: 0,0:17:48.06,0:17:55.47,Sub,,0,0,0,,on the motor and that is the model end to end there is no intermediate steps as simple as possible and why is this
+Dialogue: 0,0:17:55.52,0:18:02.98,Sub,,0,0,0,,good uh because if we look at the field of NLP and by the way NLP is a extremely perhaps the most successful field
+Dialogue: 0,0:18:03.03,0:18:11.10,Sub,,0,0,0,,so far uh that's being solved by AI and I think as roboticists we should copy homework copy homework from someone that already worked.
+Dialogue: 0,0:18:11.15,0:18:12.35,Sub,,0,0,0,,So for CHBT, right?
+Dialogue: 0,0:18:12.40,0:18:16.61,Sub,,0,0,0,,Before CHBT, uh the field of NOP is kind of a mess, right?
+Dialogue: 0,0:18:16.66,0:18:19.72,Sub,,0,0,0,,You have text summarization, machine translation,
+Dialogue: 0,0:18:19.77,0:18:28.51,Sub,,0,0,0,,code generation that's using completely different data pipeline and training protocols and model architectures, sometimes not just one model.
+Dialogue: 0,0:18:28.56,0:18:34.90,Sub,,0,0,0,,And then Chad Gibbd came and just blew everything out of the waters because it's simple, right?
+Dialogue: 0,0:18:34.95,0:18:38.59,Sub,,0,0,0,,It maps any text to any other text and that's it.
+Dialogue: 0,0:18:38.64,0:18:43.78,Sub,,0,0,0,,underneath is a transformer that maps a sequence of integers to another sequence of integers.
+Dialogue: 0,0:18:43.83,0:18:49.84,Sub,,0,0,0,,And because it's so simple, you can unify all of the data, all of the problems into one model.
+Dialogue: 0,0:18:49.89,0:18:55.56,Sub,,0,0,0,,And I think that's where robotics should copy homework from to make the model as simple as possible.
+Dialogue: 0,0:18:55.61,0:19:01.86,Sub,,0,0,0,,And the second principle is the data pipeline will actually be very complicated.
+Dialogue: 0,0:19:01.91,0:19:05.34,Sub,,0,0,0,,Like all the things that surround the model will be very complicated.
+Dialogue: 0,0:19:05.39,0:19:10.59,Sub,,0,0,0,,And that is because for robotics as I said at the beginning data is a huge problem.
+Dialogue: 0,0:19:10.64,0:19:14.92,Sub,,0,0,0,,You cannot download motor control data from YouTube from Wikipedia.
+Dialogue: 0,0:19:14.97,0:19:16.92,Sub,,0,0,0,,You can't find it anywhere.
+Dialogue: 0,0:19:16.97,0:19:21.80,Sub,,0,0,0,,So uh for Groot our data strategy can be organized into a pyramid.
+Dialogue: 0,0:19:21.85,0:19:26.63,Sub,,0,0,0,,Right now close your eyes visualize a pyramid right at the top you have
+Dialogue: 0,0:19:26.68,0:19:30.75,Sub,,0,0,0,,real robot data that's going to be highest quality because there is no domain gap.
+Dialogue: 0,0:19:30.80,0:19:31.10,Sub,,0,0,0,,Right?
+Dialogue: 0,0:19:31.08,0:19:34.10,Sub,,0,0,0,,You collect it using tally operation in the real world.
+Dialogue: 0,0:19:34.15,0:19:43.35,Sub,,0,0,0,,But that's got to be quite limited, not very scalable because we're limited by the fundamental physics limit of 24 hours per robot per day.
+Dialogue: 0,0:19:43.40,0:19:43.90,Sub,,0,0,0,,Right?
+Dialogue: 0,0:19:43.95,0:19:44.76,Sub,,0,0,0,,That's it.
+Dialogue: 0,0:19:44.81,0:19:47.31,Sub,,0,0,0,,And it's really hard to scale in the world of atoms.
+Dialogue: 0,0:19:47.36,0:19:49.85,Sub,,0,0,0,,And in the middle of the pyramid,
+Dialogue: 0,0:19:49.90,0:19:58.78,Sub,,0,0,0,,that's where simulation comes in where we rely heavily on physics engines like ISACH for example uh to to scale lots
+Dialogue: 0,0:19:58.83,0:20:05.59,Sub,,0,0,0,,and lots of data and this data can be generated based on the real world collected data or through learning from
+Dialogue: 0,0:20:05.64,0:20:12.17,Sub,,0,0,0,,experience as as deep mentioned right so that would be simulation data and and just remember before Nvidia was an AI
+Dialogue: 0,0:20:12.22,0:20:20.64,Sub,,0,0,0,,company it was a graphics company uh and what are graphics engines great for physics right rendering So that's our simulation strategy.
+Dialogue: 0,0:20:20.69,0:20:26.62,Sub,,0,0,0,,And on the bottom of the pyramid, right, we still need all of those multimodal data from the internet,
+Dialogue: 0,0:20:26.67,0:20:29.03,Sub,,0,0,0,,but this time we use it a little bit differently, right?
+Dialogue: 0,0:20:29.08,0:20:35.41,Sub,,0,0,0,,We use it to train visual language models that can become the foundation for vision language action models.
+Dialogue: 0,0:20:35.46,0:20:41.57,Sub,,0,0,0,,And the VMs are trained from lots and lots of internet, text, images, audio, you name it.
+Dialogue: 0,0:20:41.62,0:20:50.47,Sub,,0,0,0,,And then recently there's also video generation models that become so good that they can be neuro simulations of the world.
+Dialogue: 0,0:20:50.52,0:20:57.46,Sub,,0,0,0,,So the last layer of the pyramid is really the neuro simulation right that goes beyond traditional graphics engines.
+Dialogue: 0,0:20:57.51,0:21:02.87,Sub,,0,0,0,,And these neuro simulations you can prompt a video generation model and ask for
+Dialogue: 0,0:21:02.92,0:21:08.13,Sub,,0,0,0,,things like you know hallucinate a new trajectory a new robot trajectory for me.
+Dialogue: 0,0:21:08.18,0:21:13.57,Sub,,0,0,0,,And the video models learn physics so well because it's trained on hundreds of millions of videos online.
+Dialogue: 0,0:21:13.62,0:21:21.11,Sub,,0,0,0,,It it it trains it learns physics so well that it's able to give you physically accurate uh trajectories in
+Dialogue: 0,0:21:21.16,0:21:29.39,Sub,,0,0,0,,pixels and then you can run algorithms which we propose in group N1 something called latent action to extract back those
+Dialogue: 0,0:21:29.44,0:21:36.83,Sub,,0,0,0,,actions from the hallucinated what we call the dreams of the robot right like the human robots dream of electric sheep
+Dialogue: 0,0:21:36.88,0:21:43.92,Sub,,0,0,0,,right it's it's dreaming and you collect those latent actions from it and you put it back into this data pyramid.
+Dialogue: 0,0:21:43.97,0:21:49.16,Sub,,0,0,0,,And with all of these very complicated data strategies, we compress them.
+Dialogue: 0,0:21:49.21,0:21:54.60,Sub,,0,0,0,,We compress them into this one clean artifact from folds to actions, right?
+Dialogue: 0,0:21:54.65,0:21:58.20,Sub,,0,0,0,,A two billion model suffices for a wide range of tasks.
+Dialogue: 0,0:21:58.25,0:22:00.84,Sub,,0,0,0,,So that's an overview of Google strategy.
+Dialogue: 0,0:22:00.89,0:22:05.19,Sub,,0,0,0,,I I think that paints a really kind of great future picture, right?
+Dialogue: 0,0:22:05.24,0:22:07.12,Sub,,0,0,0,,So we have a simple big model.
+Dialogue: 0,0:22:07.17,0:22:08.56,Sub,,0,0,0,,Uh it's not even that big.
+Dialogue: 0,0:22:08.61,0:22:11.71,Sub,,0,0,0,,Um that kind of solves everything pixels to motion, right?
+Dialogue: 0,0:22:11.76,0:22:17.08,Sub,,0,0,0,,But I think along the way we also need to pay attention to um all the things
+Dialogue: 0,0:22:17.13,0:22:21.78,Sub,,0,0,0,,that that that we have to own delivering products out into the real world that require determinism.
+Dialogue: 0,0:22:21.83,0:22:22.13,Sub,,0,0,0,,Right?
+Dialogue: 0,0:22:22.16,0:22:29.52,Sub,,0,0,0,,So when you uh need to deliver something to a customer, uh you need to understand what it's going to do in in unexpected conditions.
+Dialogue: 0,0:22:29.57,0:22:31.01,Sub,,0,0,0,,You need to think about functional safety.
+Dialogue: 0,0:22:31.06,0:22:38.11,Sub,,0,0,0,,You need to think about um how it's going to regress if you uh add new capabilities uh um on top of existing ones.
+Dialogue: 0,0:22:38.16,0:22:43.78,Sub,,0,0,0,,So I think you pointed out a really important thing which is the complexity gets pushed into the data right and the data that you gather.
+Dialogue: 0,0:22:43.83,0:22:47.07,Sub,,0,0,0,,And I think we're at the very beginning of the journey of building that data set.
+Dialogue: 0,0:22:47.12,0:22:54.94,Sub,,0,0,0,,And so I think you know maybe I would say uh a piece of uh uh strategy that we think is important is to make sure that you don't
+Dialogue: 0,0:22:54.99,0:22:59.60,Sub,,0,0,0,,throw the whole toolbox out in pursuit of this this potentially very powerful end state
+Dialogue: 0,0:22:59.65,0:23:02.22,Sub,,0,0,0,,because we have a lot of things to do as a community along the way.
+Dialogue: 0,0:23:02.27,0:23:06.60,Sub,,0,0,0,,And one of them is to maintain the trust of the of the customers that are buying robots.
+Dialogue: 0,0:23:06.65,0:23:10.56,Sub,,0,0,0,,uh we have to be able to do that um by applying all of the tools we have.
+Dialogue: 0,0:23:10.61,0:23:16.63,Sub,,0,0,0,,So I think there's a lot of exciting uh new capabilities, things that we think will will totally change the landscape of robotics.
+Dialogue: 0,0:23:16.68,0:23:17.43,Sub,,0,0,0,,They already are.
+Dialogue: 0,0:23:17.48,0:23:24.21,Sub,,0,0,0,,But at the same time, we need to also be realistic that there's a big toolbox of robotics tools going back 70 years.
+Dialogue: 0,0:23:24.26,0:23:29.02,Sub,,0,0,0,,And some of those are also the right tool to apply to solving real world problems.
+Dialogue: 0,0:23:29.07,0:23:33.87,Sub,,0,0,0,,uh especially when you're doing things with large powerful robots that could hurt somebody or doing
+Dialogue: 0,0:23:33.92,0:23:37.86,Sub,,0,0,0,,things around a person where you want to maintain that trust because as soon as you break
+Dialogue: 0,0:23:37.91,0:23:46.25,Sub,,0,0,0,,it you never get it back right so I think maybe I I just say there is a big toolbox that we need to apply yeah and I mean uh I second you very
+Dialogue: 0,0:23:46.30,0:23:50.57,Sub,,0,0,0,,much Jim and like we and we're very much in that camp where we're making like one
+Dialogue: 0,0:23:50.62,0:23:53.71,Sub,,0,0,0,,simple model we don't know exactly how it's going to look yet so I wouldn't call it
+Dialogue: 0,0:23:53.76,0:23:58.93,Sub,,0,0,0,,so simple but uh relatively simple model and it's all about the data right And if we
+Dialogue: 0,0:23:58.98,0:24:04.22,Sub,,0,0,0,,want to take the lessons learned from early LLMs and late LLMs in that in that case,
+Dialogue: 0,0:24:04.27,0:24:10.90,Sub,,0,0,0,,I think one of the things that often gets underestimated is the importance of diversity.
+Dialogue: 0,0:24:10.95,0:24:18.89,Sub,,0,0,0,,So in the beginning of like this history of LLM, right, there's a lot of companies who tried to train, let's say, a very good model to create poems.
+Dialogue: 0,0:24:18.94,0:24:25.53,Sub,,0,0,0,,So they would train on all of the best poems in the world and it doesn't really work because unless you train on this
+Dialogue: 0,0:24:25.58,0:24:33.65,Sub,,0,0,0,,very diverse data that has nothing to do with writing poems then you're not going to get intelligence because intelligence comes from that diversity.
+Dialogue: 0,0:24:33.70,0:24:39.92,Sub,,0,0,0,,And what we're seeing now at least in our models is that this is obviously also true for robotics.
+Dialogue: 0,0:24:39.97,0:24:44.02,Sub,,0,0,0,,And even at the very small scale we are now in the beginning with these tiny data sets,
+Dialogue: 0,0:24:44.07,0:24:48.23,Sub,,0,0,0,,we're actually more limited by diversity than we are by the scale of data.
+Dialogue: 0,0:24:48.28,0:24:55.46,Sub,,0,0,0,,So it's about like how do you get as many tasks as possible in as many different environments as possible preferably
+Dialogue: 0,0:24:55.51,0:25:02.91,Sub,,0,0,0,,with some much noise and dynamic stuff going on as possible so that like you can understand what an actual task is.
+Dialogue: 0,0:25:02.96,0:25:06.11,Sub,,0,0,0,,Uh my favorite example is opening a washing machine.
+Dialogue: 0,0:25:06.16,0:25:11.52,Sub,,0,0,0,,And when we come in like and we see a washing machine, we see like okay, we're going to put the clothes into the round hole there.
+Dialogue: 0,0:25:11.57,0:25:17.80,Sub,,0,0,0,,So we're going to try to open it and we try to find a handle and if it doesn't open, maybe there's a latch somewhere.
+Dialogue: 0,0:25:17.85,0:25:20.33,Sub,,0,0,0,,If not, maybe we turn the dial back to zero.
+Dialogue: 0,0:25:20.38,0:25:25.47,Sub,,0,0,0,,But we have this great understanding of like how does the washing machine actually ex work, right?
+Dialogue: 0,0:25:25.52,0:25:27.57,Sub,,0,0,0,,So we can figure out how to use a new one.
+Dialogue: 0,0:25:27.62,0:25:29.66,Sub,,0,0,0,,And machines today don't have that at all.
+Dialogue: 0,0:25:29.71,0:25:32.80,Sub,,0,0,0,,You're kind of like learning how to repeat a motion.
+Dialogue: 0,0:25:32.85,0:25:42.48,Sub,,0,0,0,,And this is why we really think the thing is so important about getting the robots out there in volume and really getting that diverse data.
+Dialogue: 0,0:25:42.53,0:25:47.00,Sub,,0,0,0,,And I guess here's our very contrarian view which I think is very interesting
+Dialogue: 0,0:25:47.05,0:25:50.98,Sub,,0,0,0,,to discuss because um that's why we mean like this has to happen among people.
+Dialogue: 0,0:25:51.03,0:25:57.11,Sub,,0,0,0,,It has to happen in the home and safety has to be an intrinsic thing to the machine, right?
+Dialogue: 0,0:25:57.16,0:26:02.63,Sub,,0,0,0,,How you ensure that the energy in the machine is not so big that it's dangerous.
+Dialogue: 0,0:26:02.68,0:26:12.28,Sub,,0,0,0,,Um and then thinking about how can we combine this with the classical toolboxes and uh yeah I think one thing I would like to
+Dialogue: 0,0:26:12.33,0:26:23.34,Sub,,0,0,0,,add here um is unlike LLMs or or vision when you say in uh robotics what's the approach it's always two things what's the approach
+Dialogue: 0,0:26:23.39,0:26:26.85,Sub,,0,0,0,,for hardware what's the approach for software nobody asked that for language
+Dialogue: 0,0:26:26.90,0:26:30.21,Sub,,0,0,0,,what's the approach for GPUs because we have covered that covered by Jensen
+Dialogue: 0,0:26:30.26,0:26:37.52,Sub,,0,0,0,,so it is like but in There are two different things right and this is a major question like should there be only one robot
+Dialogue: 0,0:26:37.57,0:26:42.45,Sub,,0,0,0,,like should there be one x robot should there be one next robot like which robot are we deploying and then if you're deploying all
+Dialogue: 0,0:26:42.50,0:26:48.68,Sub,,0,0,0,,the robots then is the brain shared across them and this is where I think the insight there are two things here one is humans
+Dialogue: 0,0:26:48.73,0:26:56.50,Sub,,0,0,0,,like anyone can come up from the audience and you can give them a VR suit like a tracking suit or some gloves or VR
+Dialogue: 0,0:26:56.55,0:27:03.77,Sub,,0,0,0,,headset they can control any robot any robot and they don't need to know the motor details They don't need to know how the motors work.
+Dialogue: 0,0:27:03.82,0:27:08.33,Sub,,0,0,0,,It this is already an evidence that a brain can exist that can control any robot.
+Dialogue: 0,0:27:08.38,0:27:09.51,Sub,,0,0,0,,So that's the first aspect.
+Dialogue: 0,0:27:09.56,0:27:11.16,Sub,,0,0,0,,So you can use data from anywhere.
+Dialogue: 0,0:27:11.21,0:27:14.21,Sub,,0,0,0,,Now the second thing is there is no data out there.
+Dialogue: 0,0:27:14.26,0:27:15.79,Sub,,0,0,0,,Everybody knows that, right?
+Dialogue: 0,0:27:15.84,0:27:23.22,Sub,,0,0,0,,But we are missing one special robot that is out there and we have tons of that data and that those robots are humans.
+Dialogue: 0,0:27:23.27,0:27:24.98,Sub,,0,0,0,,We are not mechanical robots.
+Dialogue: 0,0:27:25.03,0:27:27.15,Sub,,0,0,0,,We are not designed by electricity.
+Dialogue: 0,0:27:27.20,0:27:28.75,Sub,,0,0,0,,We are biological robots.
+Dialogue: 0,0:27:28.80,0:27:35.03,Sub,,0,0,0,,But at the end of the day similar principles guide us like you have motor neurons like they are called motor neurons sensory neurons.
+Dialogue: 0,0:27:35.08,0:27:40.54,Sub,,0,0,0,,Sensory neurons carry signal from your sensors to your brain and motor neurons from brain to your motors.
+Dialogue: 0,0:27:40.59,0:27:45.97,Sub,,0,0,0,,So if we are agreeing that a brain can exist that controls all hardware.
+Dialogue: 0,0:27:46.02,0:27:48.50,Sub,,0,0,0,,Why should we exclude the biological hardware?
+Dialogue: 0,0:27:48.55,0:27:54.61,Sub,,0,0,0,,And if you don't exclude that you can actually use human video data of human human activity.
+Dialogue: 0,0:27:54.66,0:28:00.31,Sub,,0,0,0,,Like we may not have a 1x robot let's say doing something picking up opening a fridge but humans
+Dialogue: 0,0:28:00.36,0:28:06.23,Sub,,0,0,0,,open fridge every other like 10 times a day there are trillions of videos out there of humans doing it.
+Dialogue: 0,0:28:06.28,0:28:14.39,Sub,,0,0,0,,So this is uh at least our belief is that this is one of a very critical data for robotics like how human limbs operate how this so you can actually
+Dialogue: 0,0:28:14.44,0:28:18.34,Sub,,0,0,0,,use that knowledge to uh to go towards in addition to simulation of course it's not
+Dialogue: 0,0:28:18.39,0:28:21.89,Sub,,0,0,0,,complete without that because you cannot just watch and and and play uh so but these
+Dialogue: 0,0:28:21.94,0:28:27.54,Sub,,0,0,0,,things can combine together I think this is oh so very quickly I think this I
+Dialogue: 0,0:28:27.59,0:28:31.74,Sub,,0,0,0,,think we very much agree I mean all of that data is incredibly useful and we
+Dialogue: 0,0:28:31.79,0:28:35.76,Sub,,0,0,0,,use it too like this is these are not usually that data is needed I just
+Dialogue: 0,0:28:35.81,0:28:38.85,Sub,,0,0,0,,want try to clarify the point that this point was getting mixed in two things here.
+Dialogue: 0,0:28:38.90,0:28:39.55,Sub,,0,0,0,,No, it's good.
+Dialogue: 0,0:28:39.60,0:28:42.84,Sub,,0,0,0,,And I I can tell pro has some strong thoughts on this too.
+Dialogue: 0,0:28:42.89,0:28:51.09,Sub,,0,0,0,,Well, as someone who's teleyoperated a lot of robots, I can I can say that sure the human brain is great at telly operating a variety of platforms,
+Dialogue: 0,0:28:51.14,0:28:55.36,Sub,,0,0,0,,but I can tell you from experience, not at the same level of performance.
+Dialogue: 0,0:28:55.41,0:28:58.44,Sub,,0,0,0,,The hardware can definitely make a difference.
+Dialogue: 0,0:28:58.49,0:29:03.21,Sub,,0,0,0,,Uh and and definitely I mean I I've teley operated a 1x robot, right?
+Dialogue: 0,0:29:03.26,0:29:05.36,Sub,,0,0,0,,And it's a great experience, right?
+Dialogue: 0,0:29:05.41,0:29:10.91,Sub,,0,0,0,,have teley operated some industrial robots not a great experience um the hardware
+Dialogue: 0,0:29:10.96,0:29:14.41,Sub,,0,0,0,,can matter a lot in this and does define some of the characteristics of
+Dialogue: 0,0:29:14.46,0:29:22.42,Sub,,0,0,0,,performance and I think that's important to note that there will be differences and there is some amount of building the right hardware to make it be
+Dialogue: 0,0:29:22.47,0:29:30.32,Sub,,0,0,0,,controllable to have the right sensing to have the right inertial properties um to make it effective in the real world I mean we have Aaron here
+Dialogue: 0,0:29:30.37,0:29:36.68,Sub,,0,0,0,,who has like wowed the world with that for the last 10 years right that the dynamics of the machine matters and you can really see it.
+Dialogue: 0,0:29:36.73,0:29:44.49,Sub,,0,0,0,,it moves in a different one example is like we are missing here which is not here like Darwaini robot people use that robot for doing surgery like
+Dialogue: 0,0:29:44.54,0:29:48.90,Sub,,0,0,0,,uh that's already a hundred billion plus company and all they do is teleoperation
+Dialogue: 0,0:29:48.95,0:29:52.89,Sub,,0,0,0,,through uh through through this like this is amazing like so which means that nobody's
+Dialogue: 0,0:29:52.94,0:29:56.91,Sub,,0,0,0,,disagreeing on the fact that human brain is very powerful and hardware so these
+Dialogue: 0,0:29:56.96,0:30:01.02,Sub,,0,0,0,,questions are kind of that's why robotics is always these two things like approach
+Dialogue: 0,0:30:01.07,0:30:08.22,Sub,,0,0,0,,can be different in the end they all have to come together so it's not like one hardware or the other like it's like uh but real world data,
+Dialogue: 0,0:30:08.27,0:30:11.26,Sub,,0,0,0,,human data, simulation and scaling from all these things.
+Dialogue: 0,0:30:11.31,0:30:16.82,Sub,,0,0,0,,I think it's also a bit about like bottom up and tops down right because now we're talking very much top down on the control architecture.
+Dialogue: 0,0:30:16.87,0:30:21.85,Sub,,0,0,0,,But I think it's also very interesting with the bottom up of like how do you learn dexterity for example, right?
+Dialogue: 0,0:30:21.90,0:30:29.08,Sub,,0,0,0,,And uh at least we're experiencing that learning like inhand quick dexterity in teleop uh
+Dialogue: 0,0:30:29.13,0:30:32.43,Sub,,0,0,0,,we don't know how to do it like uh we don't know how to build
+Dialogue: 0,0:30:32.48,0:30:35.71,Sub,,0,0,0,,a teleoperation system to do so that's fast and good enough and really gives you
+Dialogue: 0,0:30:35.76,0:30:39.34,Sub,,0,0,0,,tactile feedback and all these things but the robot can actually learn it really well.
+Dialogue: 0,0:30:39.39,0:30:41.54,Sub,,0,0,0,,So if you just give it a bunch of objects to play with,
+Dialogue: 0,0:30:41.59,0:30:45.87,Sub,,0,0,0,,this is learnable and then it becomes a question of how do you kind of
+Dialogue: 0,0:30:45.92,0:30:52.04,Sub,,0,0,0,,lift the interface in a uh like add an abstraction layer basically on your teleoperation interface.
+Dialogue: 0,0:30:52.09,0:30:54.88,Sub,,0,0,0,,So you're no longer saying like hey I'm going to pinch grasp like this.
+Dialogue: 0,0:30:54.93,0:31:02.14,Sub,,0,0,0,,You're more like guiding the machine for like what tasks to be done and allowing the system to actually learn dexterity.
+Dialogue: 0,0:31:02.19,0:31:03.66,Sub,,0,0,0,,And uh yeah, yeah,
+Dialogue: 0,0:31:03.71,0:31:07.25,Sub,,0,0,0,,I think there's there's one thing that that I think we tend to skip when we
+Dialogue: 0,0:31:07.30,0:31:11.97,Sub,,0,0,0,,try to separate the the brain from the hardware and that's the task you're trying to do.
+Dialogue: 0,0:31:12.02,0:31:15.85,Sub,,0,0,0,,So if you're if you're thinking about a whole set of tasks where the objects are small,
+Dialogue: 0,0:31:15.90,0:31:21.39,Sub,,0,0,0,,they're inertially irrelevant, um yeah, you can separate a lot of the brain from the body.
+Dialogue: 0,0:31:21.44,0:31:25.10,Sub,,0,0,0,,But I think the reality is that mostly what we want to build these machines
+Dialogue: 0,0:31:25.15,0:31:29.69,Sub,,0,0,0,,for extends beyond the simple tabletop tasks that I think a lot of people start with.
+Dialogue: 0,0:31:29.74,0:31:31.44,Sub,,0,0,0,,If you want to be lifting big,
+Dialogue: 0,0:31:31.49,0:31:35.39,Sub,,0,0,0,,heavy complex objects or you want to be touching sharp sheet metal parts or you
+Dialogue: 0,0:31:35.44,0:31:39.76,Sub,,0,0,0,,want to be working with something hot because you can remove a person from a
+Dialogue: 0,0:31:39.81,0:31:44.19,Sub,,0,0,0,,manufacturing environment and take them away from the hazard and replace that with a robot
+Dialogue: 0,0:31:44.24,0:31:47.47,Sub,,0,0,0,,then I do think hardware really does matter and I think it has to co-evolve.
+Dialogue: 0,0:31:47.52,0:31:56.67,Sub,,0,0,0,,I think the idea that we can kind of have a complete disconnection between you know a good hardware platform with an API and any software brain.
+Dialogue: 0,0:31:56.72,0:32:04.50,Sub,,0,0,0,,I think sometimes you know those two things need to co-involve understanding the the kind of quality of your actuator how much
+Dialogue: 0,0:32:04.55,0:32:10.95,Sub,,0,0,0,,uh um friction it has in it uh can matter a lot for how well you can represent it in simulation for example.
+Dialogue: 0,0:32:11.00,0:32:17.44,Sub,,0,0,0,,And I think uh we're going to need to have more time before I think we fully understand how a model like Groot, for example,
+Dialogue: 0,0:32:17.49,0:32:23.12,Sub,,0,0,0,,deploys on a robot that's of type A and a robot that's of type B because I don't think we have enough data points yet
+Dialogue: 0,0:32:23.17,0:32:30.91,Sub,,0,0,0,,to say that one model will deploy across all of these different kinds of robots and there won't be significant differences in the resulting behavior.
+Dialogue: 0,0:32:30.96,0:32:34.52,Sub,,0,0,0,,And if I'm trying to pick a bag of chips and move them and drop them, I don't think it matters.
+Dialogue: 0,0:32:34.57,0:32:40.65,Sub,,0,0,0,,But if I'm trying to pick, you know, a high precision part and assemble it in another high precision hole, it might matter a lot.
+Dialogue: 0,0:32:40.70,0:32:44.60,Sub,,0,0,0,,So I think there the jury's out for me on whether you can really separate those two things.
+Dialogue: 0,0:32:44.65,0:32:48.55,Sub,,0,0,0,,And it really depends on what I think what could be other way around too.
+Dialogue: 0,0:32:48.60,0:32:50.46,Sub,,0,0,0,,Like one hardware has lots of brains.
+Dialogue: 0,0:32:50.51,0:32:50.81,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:32:50.80,0:32:54.59,Sub,,0,0,0,,Like the Nvidia one hardware lots of companies putting brains.
+Dialogue: 0,0:32:54.64,0:33:01.15,Sub,,0,0,0,,So I I think Aaron actually touched on a very interesting topic and a very difficult challenge of cross embodiment, right?
+Dialogue: 0,0:33:01.20,0:33:04.22,Sub,,0,0,0,,Like what does cross embodiment mean uh for a model?
+Dialogue: 0,0:33:04.27,0:33:07.50,Sub,,0,0,0,,So le let's maybe think a second about ourselves.
+Dialogue: 0,0:33:07.55,0:33:10.91,Sub,,0,0,0,,I think actually humans are great at cross embodiment.
+Dialogue: 0,0:33:10.96,0:33:16.53,Sub,,0,0,0,,Like anytime you open up a video game and you start playing it, you're actually doing a cross embodiment, right?
+Dialogue: 0,0:33:16.58,0:33:20.55,Sub,,0,0,0,,Like if you are uh let's say you know doing driving car in a game or
+Dialogue: 0,0:33:20.60,0:33:25.08,Sub,,0,0,0,,like playing some like weird character sometimes like non-human character and then after a while right
+Dialogue: 0,0:33:25.13,0:33:28.59,Sub,,0,0,0,,after you play with a joystick a little bit you'll get a feel of how you
+Dialogue: 0,0:33:28.64,0:33:33.70,Sub,,0,0,0,,control that body inside the virtual game and after a while you can play it super well.
+Dialogue: 0,0:33:33.75,0:33:36.89,Sub,,0,0,0,,So actually human the human brain is great at cross embodiment.
+Dialogue: 0,0:33:36.94,0:33:38.97,Sub,,0,0,0,,So it I think it's a solvable problem.
+Dialogue: 0,0:33:39.02,0:33:42.43,Sub,,0,0,0,,We just need to find that set of parameters to enable this.
+Dialogue: 0,0:33:42.48,0:33:45.52,Sub,,0,0,0,,And uh I agree with Aaron that for now it's too early.
+Dialogue: 0,0:33:45.57,0:33:49.68,Sub,,0,0,0,,It's still it's still quite early to talk about like full zero shot
+Dialogue: 0,0:33:49.73,0:33:53.95,Sub,,0,0,0,,cross embodiment meaning that you bring a robot and the model just magically works.
+Dialogue: 0,0:33:54.00,0:33:55.23,Sub,,0,0,0,,Uh I don't think so.
+Dialogue: 0,0:33:55.28,0:33:55.68,Sub,,0,0,0,,Right.
+Dialogue: 0,0:33:55.71,0:33:57.28,Sub,,0,0,0,,It's we're not there yet.
+Dialogue: 0,0:33:57.33,0:34:01.47,Sub,,0,0,0,,Um but someday we will and I think like one way to have that is to
+Dialogue: 0,0:34:01.52,0:34:08.59,Sub,,0,0,0,,have lots and lots of different robot hardware and even more different robot hardware in simulation.
+Dialogue: 0,0:34:08.64,0:34:16.69,Sub,,0,0,0,,Uh so previously our research group had a very interesting work but I would say still like a kind of toy you know exploratory work called metamorph.
+Dialogue: 0,0:34:16.74,0:34:24.75,Sub,,0,0,0,,So what we did is in simulation we procedurally generated a lot of simple robots with like you know different kind of joint connectivity.
+Dialogue: 0,0:34:24.80,0:34:28.00,Sub,,0,0,0,,It it can look like a snake, look like a spider, really weird.
+Dialogue: 0,0:34:28.05,0:34:30.77,Sub,,0,0,0,,But we generate thousands of them.
+Dialogue: 0,0:34:30.82,0:34:37.41,Sub,,0,0,0,,And then we use a robot grammar to tokenize to tokenize the body of the robot, right?
+Dialogue: 0,0:34:37.46,0:34:41.74,Sub,,0,0,0,,Essentially converting the embodiment itself to a sequence of integers.
+Dialogue: 0,0:34:41.79,0:34:45.86,Sub,,0,0,0,,And once we see a sequence of integers, right, then we see transformers.
+Dialogue: 0,0:34:45.91,0:34:47.56,Sub,,0,0,0,,Attention is all you need, right?
+Dialogue: 0,0:34:47.61,0:34:48.56,Sub,,0,0,0,,We see transformers.
+Dialogue: 0,0:34:48.61,0:34:52.74,Sub,,0,0,0,,We apply transformers to this whole set of thousands of embodiment.
+Dialogue: 0,0:34:52.79,0:34:57.39,Sub,,0,0,0,,And we find that you can actually able to generalize to the thousand first embodiment.
+Dialogue: 0,0:34:57.44,0:35:00.14,Sub,,0,0,0,,But again, it's a very toy experiment super early.
+Dialogue: 0,0:35:00.19,0:35:04.34,Sub,,0,0,0,,But I do believe that if we're able to have like a universal description language and
+Dialogue: 0,0:35:04.39,0:35:08.98,Sub,,0,0,0,,we have lots of different types of real robot and simulation robot and we can tokenize them,
+Dialogue: 0,0:35:09.03,0:35:13.93,Sub,,0,0,0,,we can generate lots of data from them, then all the embodiment become this kind of universe,
+Dialogue: 0,0:35:13.98,0:35:20.16,Sub,,0,0,0,,the space, vector space of embodiment and perhaps a new robot will be within distribution.
+Dialogue: 0,0:35:20.21,0:35:23.35,Sub,,0,0,0,,And I also want to add that this is not just an intellectual curiosity.
+Dialogue: 0,0:35:23.40,0:35:25.97,Sub,,0,0,0,,It's becoming a very real problem.
+Dialogue: 0,0:35:26.02,0:35:26.62,Sub,,0,0,0,,Right?
+Dialogue: 0,0:35:26.67,0:35:32.29,Sub,,0,0,0,,So um I I think all of the uh hardware company founders here have this issue where you have different
+Dialogue: 0,0:35:32.34,0:35:37.75,Sub,,0,0,0,,generations of a robot and the data you collected on the previous generation and the model you train on that data.
+Dialogue: 0,0:35:37.80,0:35:43.88,Sub,,0,0,0,,It doesn't generalize or it degrades significantly even to your own company's V2 and V3 robot.
+Dialogue: 0,0:35:43.93,0:35:49.84,Sub,,0,0,0,,actually uh like even forget that within the same version of the robot because
+Dialogue: 0,0:35:49.89,0:35:54.11,Sub,,0,0,0,,of manufacturing because of all the little right defects it's a physical world it's messy
+Dialogue: 0,0:35:54.16,0:35:59.36,Sub,,0,0,0,,right because of all the messiness uh different robots don't even always replicate the
+Dialogue: 0,0:35:59.41,0:36:04.73,Sub,,0,0,0,,same model perfectly right you have cross embodiment issue even within one generation of the
+Dialogue: 0,0:36:04.78,0:36:09.99,Sub,,0,0,0,,robot let alone across generations let alone across different company and designs so it's
+Dialogue: 0,0:36:10.04,0:36:13.63,Sub,,0,0,0,,becoming a real problem and I think we're just scratching the surface yeah there's not
+Dialogue: 0,0:36:13.68,0:36:16.32,Sub,,0,0,0,,a lot of diversity right now honestly and if you if you look in
+Dialogue: 0,0:36:16.37,0:36:20.83,Sub,,0,0,0,,the humanoid space it's it's we're all pretty much working with a fairly similar thing.
+Dialogue: 0,0:36:20.88,0:36:22.79,Sub,,0,0,0,,It's an it's the replication of our body.
+Dialogue: 0,0:36:22.84,0:36:27.07,Sub,,0,0,0,,Um at at Bostonamics we decided to only use three fingers for our gripper
+Dialogue: 0,0:36:27.12,0:36:31.76,Sub,,0,0,0,,and you know it was bucking the trend of having a fully anthropomorphic hand.
+Dialogue: 0,0:36:31.81,0:36:37.31,Sub,,0,0,0,,Um, and we found like, you know, humans are so good at mapping themselves even to three fingers, right?
+Dialogue: 0,0:36:37.36,0:36:43.43,Sub,,0,0,0,,So, you can have a teley operator operate a three-finger gripper and within a couple hours of training in the telly rig,
+Dialogue: 0,0:36:43.48,0:36:45.80,Sub,,0,0,0,,they're doing kind of everything you do with five fingers.
+Dialogue: 0,0:36:45.85,0:36:48.17,Sub,,0,0,0,,So, I think there's a lot of space to explore here.
+Dialogue: 0,0:36:48.22,0:36:53.93,Sub,,0,0,0,,Um, I think because everybody's trying to get a foundation built right now, we're not being very brave.
+Dialogue: 0,0:36:53.98,0:36:58.90,Sub,,0,0,0,,But I think what's going to happen uh uh as soon as you see these generalizations start to
+Dialogue: 0,0:36:58.95,0:37:02.81,Sub,,0,0,0,,show uh up in our models is you'll see you'll see people break away from these a little bit.
+Dialogue: 0,0:37:02.86,0:37:04.06,Sub,,0,0,0,,And that might be good or might be bad.
+Dialogue: 0,0:37:04.11,0:37:08.99,Sub,,0,0,0,,I think, you know, we may end up with robots that look uh just far enough away from humans that it's scary.
+Dialogue: 0,0:37:09.04,0:37:15.49,Sub,,0,0,0,,But uh I think just inside of the the manipulator alone, there's such a a rich space of opportunities there.
+Dialogue: 0,0:37:15.54,0:37:17.05,Sub,,0,0,0,,I think agility's got, you know,
+Dialogue: 0,0:37:17.10,0:37:22.65,Sub,,0,0,0,,a completely different gripper than anything you see on on these other humanoids and they're still able to do some of these same tasks.
+Dialogue: 0,0:37:22.70,0:37:25.95,Sub,,0,0,0,,So, I think that's going to be an exciting topic uh in the coming years.
+Dialogue: 0,0:37:26.00,0:37:29.47,Sub,,0,0,0,,Yeah, Aaron, you give me a thousand different Atlas, I'll solve it for you.
+Dialogue: 0,0:37:29.52,0:37:30.41,Sub,,0,0,0,,All right.
+Dialogue: 0,0:37:30.46,0:37:31.36,Sub,,0,0,0,,All right.
+Dialogue: 0,0:37:31.41,0:37:31.87,Sub,,0,0,0,,Deal.
+Dialogue: 0,0:37:31.92,0:37:36.47,Sub,,0,0,0,,Well, I feel like you already answered my my next question, which was specifically around hardware.
+Dialogue: 0,0:37:36.52,0:37:37.56,Sub,,0,0,0,,So, thank you all.
+Dialogue: 0,0:37:37.61,0:37:37.91,Sub,,0,0,0,,Um,
+Dialogue: 0,0:37:37.87,0:37:41.07,Sub,,0,0,0,,but I want to continue on that because it is a really interesting
+Dialogue: 0,0:37:41.12,0:37:48.35,Sub,,0,0,0,,challenge that you all have such really insight into and and from unique perspectives.
+Dialogue: 0,0:37:48.40,0:37:51.07,Sub,,0,0,0,,Would you say what what you were just talking about I mean even you Jim when
+Dialogue: 0,0:37:51.12,0:37:57.50,Sub,,0,0,0,,you were mentioning more so about the same robot bot that's manufactured it might perform differently.
+Dialogue: 0,0:37:57.55,0:37:58.43,Sub,,0,0,0,,It just depends.
+Dialogue: 0,0:37:58.48,0:38:02.58,Sub,,0,0,0,,Is that would you say the biggest challenge right now when it comes to hardware?
+Dialogue: 0,0:38:02.63,0:38:05.70,Sub,,0,0,0,,I I think that's definitely one of the one of the challenges.
+Dialogue: 0,0:38:05.75,0:38:12.07,Sub,,0,0,0,,Um and that also prompted us to kind of study this line of research on cross embodiment on how we can bridge some of these gaps.
+Dialogue: 0,0:38:12.12,0:38:14.80,Sub,,0,0,0,,Um but I will defer this question to all product experts here.
+Dialogue: 0,0:38:14.85,0:38:19.86,Sub,,0,0,0,,This is back to where I think you'll find that this is where the the rest of the toolbox matters, right?
+Dialogue: 0,0:38:19.91,0:38:28.05,Sub,,0,0,0,,So if you make a robot that that um has really good calibration methods, if you make a robot that you understand how to characterize,
+Dialogue: 0,0:38:28.10,0:38:31.12,Sub,,0,0,0,,if you do a lot of the good work on the joint level control, right,
+Dialogue: 0,0:38:31.17,0:38:35.54,Sub,,0,0,0,,the stuff that sits way below the AI, then I think some of these things aren't as big a deal.
+Dialogue: 0,0:38:35.59,0:38:40.95,Sub,,0,0,0,,So, I think when you have a robot that you can't characterize, that you haven't calibrated, uh,
+Dialogue: 0,0:38:41.00,0:38:45.63,Sub,,0,0,0,,that has a lot of variability from copy to copy and you just kind of throw a controller at it,
+Dialogue: 0,0:38:45.68,0:38:50.99,Sub,,0,0,0,,whether it's an AI policy or whether it's something else, I think you find a lot of variability in the output.
+Dialogue: 0,0:38:51.04,0:38:53.97,Sub,,0,0,0,,Um, but I think you can do a lot of work to minimize that gap right now.
+Dialogue: 0,0:38:54.02,0:38:56.25,Sub,,0,0,0,,And I I think you probably have some thoughts here as well.
+Dialogue: 0,0:38:56.30,0:38:58.91,Sub,,0,0,0,,Yeah, I think uh another aspect to this is just, you know,
+Dialogue: 0,0:38:58.96,0:39:04.45,Sub,,0,0,0,,getting robots out there in in the real world and and doing manufacturing and seeing what variability you have.
+Dialogue: 0,0:39:04.50,0:39:08.36,Sub,,0,0,0,,you do get a lot of learnings that do feed back into the pipeline you build.
+Dialogue: 0,0:39:08.41,0:39:13.73,Sub,,0,0,0,,Um, so a great example of this is, you know, Digit has a recovery behavior that's fully learned, right?
+Dialogue: 0,0:39:13.78,0:39:15.93,Sub,,0,0,0,,And we've been deploying it out in the real world.
+Dialogue: 0,0:39:15.98,0:39:17.84,Sub,,0,0,0,,It's it's on our production systems.
+Dialogue: 0,0:39:17.89,0:39:18.19,Sub,,0,0,0,,Uh,
+Dialogue: 0,0:39:18.10,0:39:24.73,Sub,,0,0,0,,and the domain randomization and and um diversity of data that we use to train that uh comes from it's fed back
+Dialogue: 0,0:39:24.78,0:39:31.13,Sub,,0,0,0,,from what we experienced in the real world and the variation in all of the digits that we've we've got in our fleet.
+Dialogue: 0,0:39:31.18,0:39:37.09,Sub,,0,0,0,,Um it turned out that uh we were doing so much of this domain randomization and and hardening the policy so
+Dialogue: 0,0:39:37.14,0:39:44.12,Sub,,0,0,0,,much that when we transferred the policy to our new robot which we just debuted which is like 10 kg heavier.
+Dialogue: 0,0:39:44.17,0:39:46.10,Sub,,0,0,0,,It's like a much larger frame.
+Dialogue: 0,0:39:46.15,0:39:53.42,Sub,,0,0,0,,The policy actually just one shot transferred to this totally new robot, slightly different kinematics, heavier payload, everything.
+Dialogue: 0,0:39:53.47,0:39:53.77,Sub,,0,0,0,,Um,
+Dialogue: 0,0:39:53.70,0:40:01.96,Sub,,0,0,0,,and it's because we had been spending all of this time like hardening and uh robustifying like all of the
+Dialogue: 0,0:40:02.01,0:40:08.57,Sub,,0,0,0,,sim tore transfer really understanding like all the details of things like foot contact and um all of these pieces.
+Dialogue: 0,0:40:08.62,0:40:14.38,Sub,,0,0,0,,So I do think that with experience you get better at this cross embodiment and it isn't just
+Dialogue: 0,0:40:14.43,0:40:19.15,Sub,,0,0,0,,you're always doomed to need to like look at the manufacturing serial number of the robot super carefully.
+Dialogue: 0,0:40:19.20,0:40:23.99,Sub,,0,0,0,,there's some amount of as you do it and as you get experience with the real world,
+Dialogue: 0,0:40:24.04,0:40:29.33,Sub,,0,0,0,,you understand more about what the levers are that you need to capture in the training pipeline.
+Dialogue: 0,0:40:29.38,0:40:33.55,Sub,,0,0,0,,I think you're confronted by when you get from when you go from hundreds to thousands of robots.
+Dialogue: 0,0:40:33.60,0:40:34.91,Sub,,0,0,0,,It's not a choice.
+Dialogue: 0,0:40:34.96,0:40:41.01,Sub,,0,0,0,,You can't be tuning your your software stack per robot when you have thousands or hundreds of thousands of robots.
+Dialogue: 0,0:40:41.06,0:40:43.71,Sub,,0,0,0,,So, I think it's it's just something that has to happen.
+Dialogue: 0,0:40:43.76,0:40:48.14,Sub,,0,0,0,,I kind of agree with both of you, but like I agree a lot here with like calibration matters.
+Dialogue: 0,0:40:48.19,0:40:48.99,Sub,,0,0,0,,It matters a lot.
+Dialogue: 0,0:40:49.04,0:40:49.62,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:40:49.67,0:40:54.99,Sub,,0,0,0,,Um but I think it's very interesting actually and uh maybe it's a bit too deep but
+Dialogue: 0,0:40:55.04,0:41:00.01,Sub,,0,0,0,,like when you do domain randomization what you're actually teaching your system right is to be conservative.
+Dialogue: 0,0:41:00.06,0:41:04.57,Sub,,0,0,0,,You're teaching your system to like oh if I don't know what will happen if I do this I'm safe anyway.
+Dialogue: 0,0:41:04.62,0:41:04.99,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:41:05.02,0:41:07.28,Sub,,0,0,0,,And this kind of masks your dynamics.
+Dialogue: 0,0:41:07.33,0:41:09.75,Sub,,0,0,0,,So it really depends on what you're trying to achieve.
+Dialogue: 0,0:41:09.80,0:41:13.49,Sub,,0,0,0,,Like you won't get the same performance out of the system if you domain randomize.
+Dialogue: 0,0:41:13.54,0:41:15.49,Sub,,0,0,0,,But of course you will get something that's very robust.
+Dialogue: 0,0:41:15.54,0:41:19.08,Sub,,0,0,0,,So if you do really good calibration, you can kind of like get more out of your system.
+Dialogue: 0,0:41:19.13,0:41:20.94,Sub,,0,0,0,,So it will matter in the long term.
+Dialogue: 0,0:41:20.99,0:41:29.17,Sub,,0,0,0,,And then I think there's some incredibly exciting work going on right now with adding the robot history to the context of the model.
+Dialogue: 0,0:41:29.22,0:41:32.10,Sub,,0,0,0,,So you for every single individual robot,
+Dialogue: 0,0:41:32.15,0:41:37.56,Sub,,0,0,0,,you take some of that robot's runtime and you put it into the history to the context of
+Dialogue: 0,0:41:37.61,0:41:45.44,Sub,,0,0,0,,the actual model and then it learns kind of its own dynamics in context which actually works surprisingly well.
+Dialogue: 0,0:41:45.49,0:41:53.42,Sub,,0,0,0,,Uh I mean we and this is this this is really cool and that's kind of like getting uh that's the work we it's called RMA rapid motor application.
+Dialogue: 0,0:41:53.47,0:42:00.74,Sub,,0,0,0,,So that's this idea but I want to give a slightly different flavor to this uh uh this this thing that it's a big problem that you cannot
+Dialogue: 0,0:42:00.79,0:42:08.98,Sub,,0,0,0,,change your model across versions like uh and it's very hard to expect that there will be only one robot one company all the robots in the world
+Dialogue: 0,0:42:09.03,0:42:16.94,Sub,,0,0,0,,it's nowhere there like like in cars there are so many car companies in mobile phones so many mobile phone companies right so but the thing is for
+Dialogue: 0,0:42:16.99,0:42:20.80,Sub,,0,0,0,,them and even for like uh for every other application there's so many GPUs
+Dialogue: 0,0:42:20.85,0:42:25.19,Sub,,0,0,0,,Nvidia creates but then you have CUDA layer which abstracts you away from it.
+Dialogue: 0,0:42:25.24,0:42:32.05,Sub,,0,0,0,,Uh right for this that's true for operating system what is the equivalent for robotics when it's come to solving uh robotics.
+Dialogue: 0,0:42:32.10,0:42:40.83,Sub,,0,0,0,,So here I would say the slightly different t take here for every other field since we are always abstracted away from the hardware
+Dialogue: 0,0:42:40.88,0:42:47.19,Sub,,0,0,0,,whether it's vision language like it does that like if a new company has to come in let's say AMD or any other company they
+Dialogue: 0,0:42:47.24,0:42:53.80,Sub,,0,0,0,,have to make sure that everybody else can seamlessly run their Nvidia code or their their code that runs on Nvidia GPUs on their
+Dialogue: 0,0:42:53.85,0:43:03.12,Sub,,0,0,0,,GPUs it's their burden it's not not the software burden for the analogy for AI is the brain for the robot that we are building.
+Dialogue: 0,0:43:03.17,0:43:09.87,Sub,,0,0,0,,We shouldn't be building the brain that just works on the robot but rather a brain that adapts on the robot.
+Dialogue: 0,0:43:09.92,0:43:17.41,Sub,,0,0,0,,And that's the major difference like what humans have is not uh is not is not a system which can do many things.
+Dialogue: 0,0:43:17.46,0:43:19.73,Sub,,0,0,0,,It's the system which can learn to do many things.
+Dialogue: 0,0:43:19.78,0:43:24.54,Sub,,0,0,0,,What we are carrying in our head is a learning engine like it can learn on the fly.
+Dialogue: 0,0:43:24.59,0:43:32.51,Sub,,0,0,0,,like whatever you hear you are learning on the fly and adapting on the fly and that's what will be the major break like major difference
+Dialogue: 0,0:43:32.56,0:43:36.51,Sub,,0,0,0,,between how AI has been done for everything else and for robotics like
+Dialogue: 0,0:43:36.56,0:43:41.48,Sub,,0,0,0,,for robotics what we will be deploying really are these mini learning engines uh
+Dialogue: 0,0:43:41.53,0:43:49.69,Sub,,0,0,0,,and they are because many things happen like for instance forget about other humans and other other cars etc even basic thing your own body if
+Dialogue: 0,0:43:49.74,0:43:57.10,Sub,,0,0,0,,I go to do workout one after 1 hour workout my hands are sore uh and I have to pick up a toothbrush or even a bottle,
+Dialogue: 0,0:43:57.15,0:44:05.06,Sub,,0,0,0,,I have a different body now because my body now requires lot more torque to get the same output than it did before workout.
+Dialogue: 0,0:44:05.11,0:44:11.64,Sub,,0,0,0,,So our brain is adapting on the fly to these changes happening in every microsconds to minutes to uh long hours.
+Dialogue: 0,0:44:11.69,0:44:17.71,Sub,,0,0,0,,And this is what the the main difference uh I believe should be or will be when
+Dialogue: 0,0:44:17.76,0:44:21.59,Sub,,0,0,0,,these AI models get on the robot compared to how they have been applied to anywhere else.
+Dialogue: 0,0:44:21.64,0:44:30.11,Sub,,0,0,0,,like anywhere else the study has been simple train deploy train deploy you don't have to worry about adaptation no changing because Nvidia is taking
+Dialogue: 0,0:44:30.16,0:44:36.27,Sub,,0,0,0,,care of you as the GPUs get better you are taken care of any company comes in you are taken care of but in robotics that
+Dialogue: 0,0:44:36.32,0:44:43.39,Sub,,0,0,0,,will be the difference you will be deploying learning engines which is why this is a much very different application of AI than anything that we
+Dialogue: 0,0:44:43.44,0:44:53.10,Sub,,0,0,0,,have seen so far but I think in general this distinction between like robotics AI and other digital AI I also think that will go away.
+Dialogue: 0,0:44:53.14,0:44:53.75,Sub,,0,0,0,,Right?
+Dialogue: 0,0:44:53.80,0:45:01.23,Sub,,0,0,0,,So I think we ask the question what can AI do for robotics way too much these days and we don't ask the question
+Dialogue: 0,0:45:01.28,0:45:08.12,Sub,,0,0,0,,what can AI sorry what can robotics do for AI because the data that you get when you're actually taking actions in the real
+Dialogue: 0,0:45:08.17,0:45:16.67,Sub,,0,0,0,,world and you have a hypothesis you take an action you observe the result and you're learning that's how we learn right and we
+Dialogue: 0,0:45:16.72,0:45:24.45,Sub,,0,0,0,,we see a lot of things in reasoning models lately for example being incredibly good at math being incredibly good that code because it's verifiable.
+Dialogue: 0,0:45:24.50,0:45:27.48,Sub,,0,0,0,,You can go and see like did I get it right?
+Dialogue: 0,0:45:27.53,0:45:30.65,Sub,,0,0,0,,Well, robots kind of allow you to do that for everything.
+Dialogue: 0,0:45:30.70,0:45:32.59,Sub,,0,0,0,,That's how we learn.
+Dialogue: 0,0:45:32.64,0:45:34.91,Sub,,0,0,0,,And in that sense, I think I completely agree.
+Dialogue: 0,0:45:34.96,0:45:36.59,Sub,,0,0,0,,Another example is hallucination.
+Dialogue: 0,0:45:36.64,0:45:38.99,Sub,,0,0,0,,Hallucination is a big problem in LLMs.
+Dialogue: 0,0:45:39.04,0:45:40.99,Sub,,0,0,0,,Have you ever heard robots hallucinating?
+Dialogue: 0,0:45:41.04,0:45:42.86,Sub,,0,0,0,,Like this is not a discussed topic we discuss.
+Dialogue: 0,0:45:42.91,0:45:43.21,Sub,,0,0,0,,Why?
+Dialogue: 0,0:45:43.11,0:45:44.31,Sub,,0,0,0,,Because robots cannot hallucinate.
+Dialogue: 0,0:45:44.36,0:45:47.79,Sub,,0,0,0,,Because if I have to hallucinate, what will happen if I push this bottle from here to here?
+Dialogue: 0,0:45:47.84,0:45:48.57,Sub,,0,0,0,,I can just try it.
+Dialogue: 0,0:45:48.62,0:45:49.14,Sub,,0,0,0,,It will drop.
+Dialogue: 0,0:45:49.19,0:45:49.76,Sub,,0,0,0,,I can see.
+Dialogue: 0,0:45:49.81,0:45:51.00,Sub,,0,0,0,,I don't have to.
+Dialogue: 0,0:45:51.05,0:45:52.78,Sub,,0,0,0,,I I learn by interaction.
+Dialogue: 0,0:45:52.83,0:45:58.34,Sub,,0,0,0,,So since I interact, interaction is the enemy of hallucination because as you interact, hallucination goes away.
+Dialogue: 0,0:45:58.39,0:46:02.54,Sub,,0,0,0,,While when you're learning from passive data where data is coming from Wikipedia,
+Dialogue: 0,0:46:02.59,0:46:09.14,Sub,,0,0,0,,you can't go and verify everything unless it's math or coding where hallucination is less of a problem because you can actually verify the answer.
+Dialogue: 0,0:46:09.19,0:46:09.49,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:46:09.46,0:46:11.15,Sub,,0,0,0,,So what happens is we get way more data.
+Dialogue: 0,0:46:11.20,0:46:12.51,Sub,,0,0,0,,Like you said, we flip the pyramid.
+Dialogue: 0,0:46:12.56,0:46:13.48,Sub,,0,0,0,,Isn't that what Yuki says?
+Dialogue: 0,0:46:13.53,0:46:18.59,Sub,,0,0,0,,We flipped the pyramid and now we get this um robot data being way bigger than the internet and
+Dialogue: 0,0:46:18.64,0:46:23.52,Sub,,0,0,0,,we can solve a lot of the problems we have today and all we need is a lot more GPUs.
+Dialogue: 0,0:46:23.57,0:46:26.90,Sub,,0,0,0,,I think we absolutely that's always the answer.
+Dialogue: 0,0:46:26.95,0:46:29.18,Sub,,0,0,0,,Yeah, that's why we're all here, right?
+Dialogue: 0,0:46:29.23,0:46:31.86,Sub,,0,0,0,,Um I think you absolutely can have hallucination, right?
+Dialogue: 0,0:46:31.91,0:46:37.77,Sub,,0,0,0,,It it manifests in a different way which is a deviation in the robot's expected outcome from what happens in the real world.
+Dialogue: 0,0:46:37.82,0:46:43.72,Sub,,0,0,0,,Now it's verifiable in the same way that like code generation hallucinations are verifiable when they don't compile, right?
+Dialogue: 0,0:46:43.78,0:46:45.55,Sub,,0,0,0,,But it it manifests in, you know,
+Dialogue: 0,0:46:45.60,0:46:51.54,Sub,,0,0,0,,a robot doing a trajectory that's infeasible or or generating out of what I mean is it can go away since you can interact.
+Dialogue: 0,0:46:51.59,0:46:56.71,Sub,,0,0,0,,Well, if you do not have the ability to interact, you it can never go away like uh for instance,
+Dialogue: 0,0:46:56.76,0:47:02.39,Sub,,0,0,0,,you can never know like uh like if you cannot I don't know like do you live at this location?
+Dialogue: 0,0:47:02.44,0:47:05.30,Sub,,0,0,0,,If I cannot verify, I can never correct my hallucination.
+Dialogue: 0,0:47:05.35,0:47:08.44,Sub,,0,0,0,,But in in robotics you can mostly correct because of interaction.
+Dialogue: 0,0:47:08.49,0:47:15.27,Sub,,0,0,0,,I have a very good practical example actually because we did this uh it was actually last year u where we had the problem of no
+Dialogue: 0,0:47:15.32,0:47:22.72,Sub,,0,0,0,,one putting down the toilet seat in the office and we had one of our previous robots the eve uh some wheels but it's still very mobile.
+Dialogue: 0,0:47:22.77,0:47:29.31,Sub,,0,0,0,,So we had it autonomously go in and see if the toilet seat is up or down.
+Dialogue: 0,0:47:29.36,0:47:32.91,Sub,,0,0,0,,And we ran uh GPT40 on this, right?
+Dialogue: 0,0:47:32.96,0:47:35.18,Sub,,0,0,0,,And it was 50% up or down.
+Dialogue: 0,0:47:35.23,0:47:36.12,Sub,,0,0,0,,Like it had no idea.
+Dialogue: 0,0:47:36.17,0:47:37.14,Sub,,0,0,0,,It was random, right?
+Dialogue: 0,0:47:37.19,0:47:39.66,Sub,,0,0,0,,It couldn't tell if the seat was up or down.
+Dialogue: 0,0:47:39.71,0:47:43.09,Sub,,0,0,0,,Um it's kind of an edge case because it's usually pretty good at these things.
+Dialogue: 0,0:47:43.14,0:47:45.47,Sub,,0,0,0,,But we had the robot go and close the toilet seat.
+Dialogue: 0,0:47:45.52,0:47:46.96,Sub,,0,0,0,,This is an autonomous policy.
+Dialogue: 0,0:47:47.01,0:47:51.51,Sub,,0,0,0,,So it would go around and like check the bathroom and put the toilet seat down if the toilet seat was up.
+Dialogue: 0,0:47:51.56,0:47:57.70,Sub,,0,0,0,,And that was really fun and we had a lot of fun and we laughed about it and but it's actually closing the loop in the real world, right?
+Dialogue: 0,0:47:57.75,0:48:00.70,Sub,,0,0,0,,So now the model can get the feedback of seat is down.
+Dialogue: 0,0:48:00.75,0:48:02.33,Sub,,0,0,0,,I know the seat is down.
+Dialogue: 0,0:48:02.38,0:48:03.23,Sub,,0,0,0,,I I closed it.
+Dialogue: 0,0:48:03.28,0:48:04.28,Sub,,0,0,0,,I know it's down.
+Dialogue: 0,0:48:04.33,0:48:05.88,Sub,,0,0,0,,And you told me it was up.
+Dialogue: 0,0:48:05.93,0:48:06.83,Sub,,0,0,0,,You were wrong.
+Dialogue: 0,0:48:06.88,0:48:12.51,Sub,,0,0,0,,And it's similar to closing the loop in in other places where we're using AI to interact with, for example,
+Dialogue: 0,0:48:12.56,0:48:16.99,Sub,,0,0,0,,APIs or compilers or things like that where you you have it emit some result and then
+Dialogue: 0,0:48:17.04,0:48:20.55,Sub,,0,0,0,,you put it through a verification phase that you can feed back into the context of the system.
+Dialogue: 0,0:48:20.60,0:48:24.88,Sub,,0,0,0,,It's just in this case the loop closure is a little bit slower because it's going through the Yeah,
+Dialogue: 0,0:48:24.93,0:48:29.01,Sub,,0,0,0,,the problem right now is that we don't know how to do this. uh in a general case, right?
+Dialogue: 0,0:48:29.06,0:48:34.67,Sub,,0,0,0,,We can we can architect one specific thing like the toilet seat and now the question is how do you come up
+Dialogue: 0,0:48:34.72,0:48:40.67,Sub,,0,0,0,,with some formulation of this problem where you're grounding everything in the real world and no one knows how to do that yet.
+Dialogue: 0,0:48:40.72,0:48:44.33,Sub,,0,0,0,,The rate at learning in the real world is going to be painfully slow, right?
+Dialogue: 0,0:48:44.38,0:48:49.07,Sub,,0,0,0,,So we can learn these things in the real world because there are consequences to dropping something.
+Dialogue: 0,0:48:49.12,0:48:50.09,Sub,,0,0,0,,Gravity makes it fall.
+Dialogue: 0,0:48:50.14,0:48:52.01,Sub,,0,0,0,,You can tell something bad happened, right?
+Dialogue: 0,0:48:52.06,0:48:54.86,Sub,,0,0,0,,But the rate at which we can explore with a physical robot.
+Dialogue: 0,0:48:54.91,0:48:57.78,Sub,,0,0,0,,I mean that's back to the the blend of data, right?
+Dialogue: 0,0:48:57.83,0:49:06.07,Sub,,0,0,0,,I mean you can do these really exciting small things but how many thousands or millions of those things do you need to do before you have enough data?
+Dialogue: 0,0:49:06.12,0:49:12.44,Sub,,0,0,0,,And so I think the the the question is really uh still can we afford to produce the real world data?
+Dialogue: 0,0:49:12.49,0:49:13.79,Sub,,0,0,0,,You have simulation too.
+Dialogue: 0,0:49:13.84,0:49:16.18,Sub,,0,0,0,,So simulation is also also also interactable.
+Dialogue: 0,0:49:16.23,0:49:18.96,Sub,,0,0,0,,So I think it's interaction data you can have both.
+Dialogue: 0,0:49:19.01,0:49:19.35,Sub,,0,0,0,,I agree.
+Dialogue: 0,0:49:19.38,0:49:22.75,Sub,,0,0,0,,And simulation also needs more GPUs.
+Dialogue: 0,0:49:22.80,0:49:30.92,Sub,,0,0,0,,All right, I know we're we're getting close to time and I really wanted to uh end with this question because I'm very curious about this.
+Dialogue: 0,0:49:30.97,0:49:35.02,Sub,,0,0,0,,In the next two to five years, where do you see this headed?
+Dialogue: 0,0:49:35.07,0:49:37.70,Sub,,0,0,0,,And I'm going to leave that as a vague vague question.
+Dialogue: 0,0:49:37.75,0:49:39.01,Sub,,0,0,0,,Answer it how you will.
+Dialogue: 0,0:49:39.06,0:49:40.49,Sub,,0,0,0,,I'd love for you to start, Burnt.
+Dialogue: 0,0:49:40.54,0:49:40.84,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:49:40.79,0:49:45.31,Sub,,0,0,0,,So, two to five years, that's a big pretty big range given the current velocity of the field.
+Dialogue: 0,0:49:45.36,0:49:53.63,Sub,,0,0,0,,So, but but let me like say I'm going to cheat and I'm going to say start by saying I think it's going to take 10 years before this fully pans out.
+Dialogue: 0,0:49:53.68,0:49:57.95,Sub,,0,0,0,,Um, and it's very easy to say where will this be in 10 years.
+Dialogue: 0,0:49:58.00,0:50:02.39,Sub,,0,0,0,,I think then we're going to have the same kind of change in society that we had few hundred years
+Dialogue: 0,0:50:02.44,0:50:06.35,Sub,,0,0,0,,ago with electricity where we now just take it for granted when you flip the light switch in the morning.
+Dialogue: 0,0:50:06.40,0:50:13.16,Sub,,0,0,0,,that's going to happen to labor across digital and physical and man is it an interesting thing time to be alive and I think
+Dialogue: 0,0:50:13.21,0:50:21.26,Sub,,0,0,0,,we can really get to focus on what makes us human uh in in that society we're creating five years I hope we're there
+Dialogue: 0,0:50:21.31,0:50:28.58,Sub,,0,0,0,,I think that's ambitious we're going to push for it uh I don't think anyone knows at this point uh I think it really
+Dialogue: 0,0:50:28.63,0:50:38.91,Sub,,0,0,0,,depends on how fast society adopts robots and how fast we can scale manufacture We're at kind of like the cusp where it's useful,
+Dialogue: 0,0:50:38.96,0:50:39.39,Sub,,0,0,0,,right?
+Dialogue: 0,0:50:39.44,0:50:44.52,Sub,,0,0,0,,So, I would say the product we have just as an example is currently useful in a home.
+Dialogue: 0,0:50:44.57,0:50:45.48,Sub,,0,0,0,,It's not perfect.
+Dialogue: 0,0:50:45.53,0:50:48.25,Sub,,0,0,0,,It's not like you don't need to do anything yourself,
+Dialogue: 0,0:50:48.30,0:50:55.83,Sub,,0,0,0,,but it's useful and it's fun and then you can kind of start accelerating from there and
+Dialogue: 0,0:50:55.88,0:51:02.17,Sub,,0,0,0,,uh hopefully it's not an autonomous car and uh doesn't take a decade longer than we think.
+Dialogue: 0,0:51:02.22,0:51:11.99,Sub,,0,0,0,,But I do think like uh three to five years it is pretty much out there amongst most people and even if not everyone
+Dialogue: 0,0:51:12.04,0:51:21.03,Sub,,0,0,0,,has a robot people know someone who has a robot and they're generally part of society uh across everything from consumers and homes into factories,
+Dialogue: 0,0:51:21.08,0:51:24.35,Sub,,0,0,0,,logistics, everything else.
+Dialogue: 0,0:51:24.40,0:51:25.89,Sub,,0,0,0,,Yeah, I can go next.
+Dialogue: 0,0:51:25.94,0:51:34.79,Sub,,0,0,0,,uh so there's a saying that people often uh overestimate the the progress in the short term but they often underestimate the
+Dialogue: 0,0:51:34.84,0:51:40.79,Sub,,0,0,0,,progress in the long run and I think this is probably by Bill Gates or someone u and uh so I cannot
+Dialogue: 0,0:51:40.84,0:51:50.30,Sub,,0,0,0,,again this is a disclaimer but I think the one thing unique about robotics AI that makes it different from LLMs or
+Dialogue: 0,0:51:50.35,0:52:00.09,Sub,,0,0,0,,VLMs is that LLM LLM has to really solve the problem almost to the completion to be really useful like uh whether it's
+Dialogue: 0,0:52:00.14,0:52:06.39,Sub,,0,0,0,,coding whether it's uh general uh writing or anything it has to be really really good like NLP had good systems earlier
+Dialogue: 0,0:52:06.44,0:52:13.11,Sub,,0,0,0,,but until you reach like really high in performance these are not useful but that's not quite true for robotics AI because uh
+Dialogue: 0,0:52:13.16,0:52:19.39,Sub,,0,0,0,,we don't have to solve robotics fully for robotics to be useful and this is just a just to say like even
+Dialogue: 0,0:52:19.44,0:52:26.93,Sub,,0,0,0,,today there are like hundreds of thousand to millions of robots deployed already out Many of our things are made by robots today,
+Dialogue: 0,0:52:26.98,0:52:27.36,Sub,,0,0,0,,right?
+Dialogue: 0,0:52:27.39,0:52:28.55,Sub,,0,0,0,,So they are already out there.
+Dialogue: 0,0:52:28.60,0:52:29.33,Sub,,0,0,0,,They're already there.
+Dialogue: 0,0:52:29.38,0:52:30.79,Sub,,0,0,0,,So what is the key part here?
+Dialogue: 0,0:52:30.84,0:52:35.28,Sub,,0,0,0,,The key thing in robotics is that this there is decision of tasks.
+Dialogue: 0,0:52:35.33,0:52:38.94,Sub,,0,0,0,,The robot that solves all task everywhere that may be farther.
+Dialogue: 0,0:52:38.99,0:52:40.77,Sub,,0,0,0,,So I'll not make any prediction for that.
+Dialogue: 0,0:52:40.82,0:52:46.82,Sub,,0,0,0,,But we will start seeing robots that make that maybe solve few task or one task or two task or task specialist.
+Dialogue: 0,0:52:46.87,0:52:53.63,Sub,,0,0,0,,And even they are super useful uh because there are several tasks for which it's very difficult to either find labor or hire.
+Dialogue: 0,0:52:53.68,0:52:59.73,Sub,,0,0,0,,I was talking to some uh company today that they they are unretiring people from retirement because this is a shortage of labor for for
+Dialogue: 0,0:52:59.78,0:53:08.14,Sub,,0,0,0,,their specific uses for specialized robots will much come much quicker and uh generalist one will be farther but the usefulness starts from day one in
+Dialogue: 0,0:53:08.19,0:53:16.82,Sub,,0,0,0,,robotics unlike uh unlike language that's so true and if autonomous cars weren't dangerous the problem was solved in 2015 you could get into a car
+Dialogue: 0,0:53:16.87,0:53:24.40,Sub,,0,0,0,,that drove you around in 2015 and it was doing pretty well solved from uh uh in one way as in it's not human way solved.
+Dialogue: 0,0:53:24.45,0:53:25.10,Sub,,0,0,0,,Uh yeah.
+Dialogue: 0,0:53:25.15,0:53:25.57,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:53:25.62,0:53:30.26,Sub,,0,0,0,,I think that's part of the challenge is that um adoption is is not just a technological problem.
+Dialogue: 0,0:53:30.31,0:53:37.23,Sub,,0,0,0,,It's it's also, you know, things like safety, things like um societal uh adoption also play a factor.
+Dialogue: 0,0:53:37.28,0:53:38.76,Sub,,0,0,0,,And so in in 3 to 5 years,
+Dialogue: 0,0:53:38.81,0:53:45.52,Sub,,0,0,0,,what we might see is that there's a lot more robots in certain areas and a lot fewer robots in certain areas than we expected.
+Dialogue: 0,0:53:45.57,0:53:52.79,Sub,,0,0,0,,Uh and I think the the important thing though is we are really seeing the culmination of robots really going
+Dialogue: 0,0:53:52.84,0:54:01.15,Sub,,0,0,0,,from being historically very single purpose to this notion that it's almost expected that they could be multi-purpose maybe not
+Dialogue: 0,0:54:01.20,0:54:09.33,Sub,,0,0,0,,general purpose but multi-purpose that's becoming kind of people's expectation and the the what we're able to show with these
+Dialogue: 0,0:54:09.38,0:54:15.31,Sub,,0,0,0,,new AI based platforms is that hey a a piece of hardware can can do more than one thing effectively.
+Dialogue: 0,0:54:15.36,0:54:19.21,Sub,,0,0,0,,And I think that's the piece that will hold over the next 3 to 5 years
+Dialogue: 0,0:54:19.26,0:54:24.08,Sub,,0,0,0,,is this expectation as the new waterline that people are are building towards and you know all
+Dialogue: 0,0:54:24.13,0:54:27.60,Sub,,0,0,0,,of you are now seeing this and buying into it which is great right because now
+Dialogue: 0,0:54:27.65,0:54:32.88,Sub,,0,0,0,,you're you're going to be sort of carrying that expectation socioulturally forward and and saying like you
+Dialogue: 0,0:54:32.93,0:54:37.20,Sub,,0,0,0,,know hey why can't I have a robot that does three or four things in a
+Dialogue: 0,0:54:37.25,0:54:41.97,Sub,,0,0,0,,home or in my case you know five or 10 things in a warehouse or logistics facility
+Dialogue: 0,0:54:42.02,0:54:46.48,Sub,,0,0,0,,like that should that should be how it is and I think that's what really drives it
+Dialogue: 0,0:54:46.53,0:54:53.79,Sub,,0,0,0,,is is people wanting those things really drives uh investment and focus into getting us those things.
+Dialogue: 0,0:54:53.84,0:54:54.14,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:54:54.03,0:54:59.99,Sub,,0,0,0,,When people ask this question, they're looking really concrete specific like I'm going to have a robot at this date, right?
+Dialogue: 0,0:55:00.04,0:55:01.58,Sub,,0,0,0,,And it's going to do all these things.
+Dialogue: 0,0:55:01.63,0:55:07.36,Sub,,0,0,0,,And I think the the real problem with this is there's no level setting on what expectations are for everybody, right?
+Dialogue: 0,0:55:07.41,0:55:14.31,Sub,,0,0,0,,So the the question I usually ask is, you know, when will we have a humanoid robot that's as valuable to us as our car?
+Dialogue: 0,0:55:14.36,0:55:16.11,Sub,,0,0,0,,I have no idea, right?
+Dialogue: 0,0:55:16.16,0:55:20.43,Sub,,0,0,0,,Our car works every day in the most extreme weathers.
+Dialogue: 0,0:55:20.48,0:55:24.97,Sub,,0,0,0,,It it costs hardly anything given the amount of material and effort that goes into putting into it.
+Dialogue: 0,0:55:25.02,0:55:31.81,Sub,,0,0,0,,Um, and even the car by itself isn't quite uh touching what a humanoid robot might add to the value of our lives.
+Dialogue: 0,0:55:31.86,0:55:35.14,Sub,,0,0,0,,So I think, you know, I'm I'm also in the like 10 years or longer.
+Dialogue: 0,0:55:35.19,0:55:37.58,Sub,,0,0,0,,And I think that's the typical like technologist answer.
+Dialogue: 0,0:55:37.63,0:55:39.60,Sub,,0,0,0,,If I if you ask a founder, they're going to say next year.
+Dialogue: 0,0:55:39.65,0:55:42.81,Sub,,0,0,0,,If you ask a technologist, they're going to say it's about 10 years, right?
+Dialogue: 0,0:55:42.86,0:55:47.54,Sub,,0,0,0,,And 10 years just means it's really hard for us to quantify specifically what you're going to have.
+Dialogue: 0,0:55:47.59,0:55:52.32,Sub,,0,0,0,,I think the thing we should be focusing on is the rate of progress and where the beach heads are, right?
+Dialogue: 0,0:55:52.37,0:55:57.21,Sub,,0,0,0,,Each one of the the the groups up here is establishing a meaningful beach head in a different area.
+Dialogue: 0,0:55:57.26,0:55:59.17,Sub,,0,0,0,,And over time, those things are going to grow.
+Dialogue: 0,0:55:59.22,0:56:01.88,Sub,,0,0,0,,And that space is going to go from a bunch of dots, right?
+Dialogue: 0,0:56:01.93,0:56:05.04,Sub,,0,0,0,,where, you know, agility solving problems in a warehouse.
+Dialogue: 0,0:56:05.09,0:56:07.95,Sub,,0,0,0,,We have robots in uh in people's homes.
+Dialogue: 0,0:56:08.00,0:56:10.88,Sub,,0,0,0,,Um you know, we're going to be working on automotive factories.
+Dialogue: 0,0:56:10.93,0:56:14.30,Sub,,0,0,0,,And I think you're going to see from each one of these beach heads, you're going to see a growth, right?
+Dialogue: 0,0:56:14.35,0:56:16.55,Sub,,0,0,0,,And it's not going to be an over in the night thing.
+Dialogue: 0,0:56:16.60,0:56:21.15,Sub,,0,0,0,,I don't think anybody here can predict 5 years into the future and say exactly where we're going to be,
+Dialogue: 0,0:56:21.20,0:56:22.86,Sub,,0,0,0,,but I think we're going to see this this growth.
+Dialogue: 0,0:56:22.91,0:56:27.22,Sub,,0,0,0,,And pretty soon all those things are going to start overlapping and one day we're going to have an autonomous car.
+Dialogue: 0,0:56:27.27,0:56:31.05,Sub,,0,0,0,,And when you look back at that history of that market, you know,
+Dialogue: 0,0:56:31.10,0:56:37.26,Sub,,0,0,0,,there was a lot of uh um shade thrown out on how badly they predicted, you know, when we would have an autonomous car.
+Dialogue: 0,0:56:37.31,0:56:43.24,Sub,,0,0,0,,And I think a lot of that came from statements that that some elements in the community were making on how quickly it would come.
+Dialogue: 0,0:56:43.29,0:56:47.94,Sub,,0,0,0,,But I'm pretty grateful that my car does autonomous lane assist and, you know,
+Dialogue: 0,0:56:47.99,0:56:52.28,Sub,,0,0,0,,doesn't hit the car in front of me and and and and prevents me from backing into something.
+Dialogue: 0,0:56:52.33,0:56:56.25,Sub,,0,0,0,,All that magical stuff came out of the dream of having an autonomous car.
+Dialogue: 0,0:56:56.30,0:56:58.99,Sub,,0,0,0,,And oh, by the way, you can get in an autonomous taxi right now.
+Dialogue: 0,0:56:59.04,0:57:00.86,Sub,,0,0,0,,So, yeah, it took a little longer.
+Dialogue: 0,0:57:00.91,0:57:02.63,Sub,,0,0,0,,Um, and and so will humanoid robots.
+Dialogue: 0,0:57:02.68,0:57:08.86,Sub,,0,0,0,,And I think as long as the community is is excited, leans in, and and and realizes this is a long game, right,
+Dialogue: 0,0:57:08.91,0:57:15.38,Sub,,0,0,0,,to get to specialist robots that are delivering value in a commercial setting, I think we we're going to have that in the next one or two years.
+Dialogue: 0,0:57:15.43,0:57:19.07,Sub,,0,0,0,,Um, agility is already delivering robots into into this space.
+Dialogue: 0,0:57:19.12,0:57:24.44,Sub,,0,0,0,,When we get those robots doing 10, 15, 20 tasks, that's going to be in that next 5 year terrain.
+Dialogue: 0,0:57:24.49,0:57:29.04,Sub,,0,0,0,,But when we're going to solve all of the problems we imagine across all of the industries,
+Dialogue: 0,0:57:29.09,0:57:32.83,Sub,,0,0,0,,um I think we need to keep dreaming and we keep working and and this industry is going to
+Dialogue: 0,0:57:32.88,0:57:38.31,Sub,,0,0,0,,have to keep putting energy in for many more decades I think until we've solved all those edge cases.
+Dialogue: 0,0:57:38.36,0:57:44.75,Sub,,0,0,0,,I I really like uh Deepuk saying that you know people tend to overestimate the short term and underestimate the long term.
+Dialogue: 0,0:57:44.80,0:57:47.66,Sub,,0,0,0,,So let me break it down into short-term and long term.
+Dialogue: 0,0:57:47.71,0:57:55.85,Sub,,0,0,0,,I think the next two to five years uh from a technical perspective we will be able to study fully the embodied scaling law.
+Dialogue: 0,0:57:55.90,0:58:05.01,Sub,,0,0,0,,So I think the biggest moments in large language models is uh the original chinchilla scaling law uh basically that exponential curve where you put in
+Dialogue: 0,0:58:05.06,0:58:13.55,Sub,,0,0,0,,more compute you scale the uh amount of data you scale the number of parameters and you will just see intelligence just going up right exponentially.
+Dialogue: 0,0:58:13.60,0:58:18.55,Sub,,0,0,0,,uh I don't think we have anything like that for robotics yet because the scaling
+Dialogue: 0,0:58:18.60,0:58:23.10,Sub,,0,0,0,,law is so complicated for robotics right you can scale across model you can scale across
+Dialogue: 0,0:58:23.15,0:58:27.16,Sub,,0,0,0,,the hardware fleet right the real robot data and how about the simulation data scaling
+Dialogue: 0,0:58:27.21,0:58:32.41,Sub,,0,0,0,,law how about the internet data scaling law how about the neural simulation the neuro uh
+Dialogue: 0,0:58:32.46,0:58:36.63,Sub,,0,0,0,,dreams right scaling law as you are generating lots and lots of videos so we
+Dialogue: 0,0:58:36.68,0:58:41.45,Sub,,0,0,0,,will be able to study all of these things so that perhaps you know five years
+Dialogue: 0,0:58:41.50,0:58:50.89,Sub,,0,0,0,,from now or sooner from Then we'll have that plot uh on the screen that you know exactly how many GPUs you buy and how much better your robot will be.
+Dialogue: 0,0:58:50.94,0:58:54.91,Sub,,0,0,0,,So we'll answer that question quantitatively very soon in the short run.
+Dialogue: 0,0:58:54.96,0:58:58.77,Sub,,0,0,0,,Now uh let's talk about what's going to happen in 20 years.
+Dialogue: 0,0:58:58.82,0:59:04.67,Sub,,0,0,0,,You know uh every every time I I stay up late at the lab the robots break doing something weird.
+Dialogue: 0,0:59:04.72,0:59:06.38,Sub,,0,0,0,,I'm like ah so frustrated.
+Dialogue: 0,0:59:06.43,0:59:10.22,Sub,,0,0,0,,Let me think about what's going to happen in 20 years and then I can carry on.
+Dialogue: 0,0:59:10.27,0:59:10.79,Sub,,0,0,0,,Right?
+Dialogue: 0,0:59:10.84,0:59:19.14,Sub,,0,0,0,,So 20 years from now, there are a couple of things that I'm super excited about that I think is just not that much uh far away.
+Dialogue: 0,0:59:19.19,0:59:22.78,Sub,,0,0,0,,One is uh robotics uh accelerating science, right?
+Dialogue: 0,0:59:22.83,0:59:27.95,Sub,,0,0,0,,So I have some friends in biomed and it's just so time consuming to do
+Dialogue: 0,0:59:28.00,0:59:32.96,Sub,,0,0,0,,one experiment and so laborious like all those PhD students need to be in the lab,
+Dialogue: 0,0:59:33.01,0:59:33.38,Sub,,0,0,0,,right?
+Dialogue: 0,0:59:33.41,0:59:35.72,Sub,,0,0,0,,Attending to those like mouse, right?
+Dialogue: 0,0:59:35.77,0:59:39.41,Sub,,0,0,0,,All those like like you know dishes of of of cells.
+Dialogue: 0,0:59:39.46,0:59:42.61,Sub,,0,0,0,,How about we automate all of that, right?
+Dialogue: 0,0:59:42.66,0:59:43.99,Sub,,0,0,0,,Automating science.
+Dialogue: 0,0:59:44.04,0:59:48.11,Sub,,0,0,0,,Then maybe all the medical research will not cost a billion dollars to do.
+Dialogue: 0,0:59:48.16,0:59:54.82,Sub,,0,0,0,,They will be scaled up because we get this API to accelerate the physical world, right?
+Dialogue: 0,0:59:54.87,0:59:55.95,Sub,,0,0,0,,Using intelligence.
+Dialogue: 0,0:59:56.00,0:59:59.26,Sub,,0,0,0,,Perhaps that will be Groot uh version 10 or something I hope.
+Dialogue: 0,0:59:59.31,0:59:59.61,Sub,,0,0,0,,Right?
+Dialogue: 0,0:59:59.64,1:00:01.69,Sub,,0,0,0,,So that is one thing I'm super excited about.
+Dialogue: 0,1:00:01.74,1:00:05.55,Sub,,0,0,0,,And the other thing is robotics automating robotics itself.
+Dialogue: 0,1:00:05.60,1:00:06.11,Sub,,0,0,0,,Right?
+Dialogue: 0,1:00:06.16,1:00:09.76,Sub,,0,0,0,,So why don't we have robots fixing each other right?
+Dialogue: 0,1:00:09.81,1:00:16.61,Sub,,0,0,0,,So we see all of those big factories making the robots but how about the robots themselves assembling the next generation of the robots
+Dialogue: 0,1:00:16.66,1:00:23.07,Sub,,0,0,0,,and I don't think this science fiction at all because actually in the LOM community again they are ahead of us unfortunately but in
+Dialogue: 0,1:00:23.12,1:00:31.89,Sub,,0,0,0,,the LM community people are studying autoML meaning that can we prompt these LOMs to do deep research right to find the next best
+Dialogue: 0,1:00:31.94,1:00:40.01,Sub,,0,0,0,,transformer to find the next best architecture for intelligence itself and people are actively doing this as we speak and probably OM is going to
+Dialogue: 0,1:00:40.06,1:00:47.26,Sub,,0,0,0,,solve that first and then we're going to copy homework and we'll have the physical world doing this recursive self-improvement as we go and
+Dialogue: 0,1:00:47.31,1:00:53.93,Sub,,0,0,0,,I think that's going to happen right not in a 100 years only in 20 years that's definitely going to happen so I'm going
+Dialogue: 0,1:00:53.98,1:01:01.21,Sub,,0,0,0,,to end on a on a bright note I think we as a generation all of us were born too late to explore the
+Dialogue: 0,1:01:01.26,1:01:05.37,Sub,,0,0,0,,earth were born too early to travel to other galaxies were born
+Dialogue: 0,1:01:05.42,1:01:14.52,Sub,,0,0,0,,just in time to solve robotics and everything that moves will be autonomous.
+Dialogue: 0,1:01:14.57,1:01:18.83,Sub,,0,0,0,,I love that.
+Dialogue: 0,1:01:18.88,1:01:21.93,Sub,,0,0,0,,I mean, I think that's the best note to end on.
+Dialogue: 0,1:01:21.98,1:01:29.79,Sub,,0,0,0,,Thank you all so much to to our panelists for for coming, sharing your thoughts, not only on where we are now, but where we are headed.
+Dialogue: 0,1:01:29.84,1:01:37.13,Sub,,0,0,0,,Just a note before everyone heads out, we aren't doing a traditional Q&A, but we are going to get remove our mics, come back here,
+Dialogue: 0,1:01:37.18,1:01:46.19,Sub,,0,0,0,,and for anyone who's interested, feel free to come up to the stage and you can ask your questions directly to uh the panelists for anyone interested.
+Dialogue: 0,1:01:46.24,1:01:48.39,Sub,,0,0,0,,So, we're just going to go off stage, get our mics removed.
+Dialogue: 0,1:01:48.44,1:01:50.95,Sub,,0,0,0,,We'll be back for any questions.
+Dialogue: 0,1:01:51.00,1:01:53.64,Sub,,0,0,0,,Come up to the stage.

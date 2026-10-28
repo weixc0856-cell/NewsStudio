@@ -1,0 +1,511 @@
+1
+00:00:00,040 --> 00:00:06,080
+the world needs robots the technology of building general humanoid robots which is going to be the most useful
+
+2
+00:00:06,130 --> 00:00:11,302
+of course because we buil the world around ourselves that technolog is incredibly hard to do but for the
+
+3
+00:00:11,352 --> 00:00:16,870
+very first time with Transformers and these large language models and the breakthroughs that we're seeing with Foundation models
+
+4
+00:00:16,920 --> 00:00:21,874
+we finally have the technology necessary we think to be able to uh make a real contribution in this
+
+5
+00:00:21,924 --> 00:00:29,869
+area Jensen you bled NVIDIA through gaming and so many AI breakthroughs which emerging technology do you see or
+
+6
+00:00:29,919 --> 00:00:35,029
+or think will be the most impactful for us over the next decade when you take a step back
+
+7
+00:00:35,079 --> 00:00:46,018
+and ask yourself what would happen if we could scale intelligence building robotics the things that we're working on
+
+8
+00:00:46,068 --> 00:00:51,389
+hi Jensen thanks for taking the time to chat with me today I'm happy to be here you made some
+
+9
+00:00:51,439 --> 00:01:00,009
+groundbreaking announcements at CES and in particular one area I'm very curious about is robotics what excites you the
+
+10
+00:01:00,059 --> 00:01:07,771
+most about the possibilities when it comes to robotics now with tools such as Cosmos or World foundational models
+
+11
+00:01:07,821 --> 00:01:18,310
+we're in an incredible time with robotics the critical Technologies necessary to build general humanoid robotics is just around
+
+12
+00:01:18,360 --> 00:01:26,898
+the corner and one of the critical pieces of Technology uh is uh an AI model that understands the world
+
+13
+00:01:26,948 --> 00:01:32,725
+just as we have an AI model that understands language now with chat GPT and llama and such um
+
+14
+00:01:32,775 --> 00:01:38,140
+we need a we need a world model a language model of the world the world needs robots and
+
+15
+00:01:38,190 --> 00:01:43,549
+one of the reasons for that is is uh we just don't have enough workers you know there's a
+
+16
+00:01:43,599 --> 00:01:50,002
+there's a Asian population and and uh a changing in preference of the type of work that people want to
+
+17
+00:01:50,052 --> 00:01:56,167
+do and and the birth rate is declining and the world needs more workers and so the timing is
+
+18
+00:01:56,217 --> 00:02:04,959
+really uh relatively imperative that that we have robotic systems the technology of building general humanoid robots uh which
+
+19
+00:02:05,009 --> 00:02:10,105
+is going to be the most useful of course because we build the world around ourselves um that technolog
+
+20
+00:02:10,155 --> 00:02:16,838
+is incredibly hard hard to to do um but for the very first time uh with Transformers and these large
+
+21
+00:02:16,888 --> 00:02:22,817
+language models and the breakthroughs that that we're seeing with Foundation models we finally have the technology necessary we
+
+22
+00:02:22,867 --> 00:02:27,169
+think uh to be able to uh make a real contribution in this area there's several things that we
+
+23
+00:02:27,219 --> 00:02:33,374
+have to bring together F first the robot has to understand does um and and the breakthroughs in chat
+
+24
+00:02:33,424 --> 00:02:41,009
+gbt for example uh has really made that made that possible but uh what's missing is that we now need
+
+25
+00:02:41,059 --> 00:02:46,900
+a AI that understands the physical world it has to understand the Dynamics of the physical world like gravity
+
+26
+00:02:46,950 --> 00:02:54,556
+inertia or friction and it has to understand spatial relationships and geometric relationships and you know and common common
+
+27
+00:02:54,606 --> 00:02:59,990
+sense things like per you know object permanence and things like that and so we went off to create
+
+28
+00:03:00,040 --> 00:03:07,833
+essentially uh the ChatGPT or DALL-E of uh World models and it's called World Foundation model just like got
+
+29
+00:03:07,883 --> 00:03:13,071
+just like a um language Foundation model this is a a foundation model that understands worlds and so so
+
+30
+00:03:13,121 --> 00:03:17,844
+if we could create such a thing and that's what Cosmos is and we we uh made it available
+
+31
+00:03:17,894 --> 00:03:25,178
+openly for everyone uh hopefully this will uh really ignite the um and accelerate the development of robot robotics
+
+32
+00:03:25,228 --> 00:03:32,087
+I love that when it comes to to teaching robotics I know there were announcements made around Isaac GR00T as
+
+33
+00:03:32,138 --> 00:03:38,469
+well especially around virtual reality training where do you see the future of that or the possibilities of that
+
+34
+00:03:38,519 --> 00:03:43,237
+opening up for it well the first part of training an AI is you have to give them Foundation
+
+35
+00:03:43,287 --> 00:03:48,310
+knowledge okay Common Sense knowledge the second part is you have to find tun them in skills you have
+
+36
+00:03:48,360 --> 00:03:52,274
+to teach them things and the way you teach a general robotics is kind of like the way you teach
+
+37
+00:03:52,324 --> 00:03:57,466
+a person you show it to them and so you use human demonstration and you show them this is
+
+38
+00:03:57,516 --> 00:04:02,790
+the way you pick up a glass but every time the glass is a little bit different it's position
+
+39
+00:04:02,840 --> 00:04:07,710
+a little different the heights a little different and the shape's a little different and yet uh it's basically
+
+40
+00:04:07,760 --> 00:04:14,933
+picking up a glass of water and so using GR00T using Isaac GR00T we could use we could do a
+
+41
+00:04:14,983 --> 00:04:24,551
+few human demonstrations and then using AI using Cosmos and uh Omniverse to generate a whole bunch of future
+
+42
+00:04:24,601 --> 00:04:29,350
+versions of it and so so then we generate all a whole bunch of versions of different sizes and
+
+43
+00:04:29,400 --> 00:04:36,770
+different locations and placements and uh uh we give all of that training data like imitation data to the
+
+44
+00:04:36,820 --> 00:04:41,949
+robot to learn from and so now I learned a whole bunch of generalized versions of it yes yeah because
+
+45
+00:04:41,999 --> 00:04:47,630
+there it feels like there's endless amounts of of versions and and that's what really what this is solving
+
+46
+00:04:47,680 --> 00:04:53,249
+is by giving those versions to for training the robot that's right so instead of giving it just one
+
+47
+00:04:53,299 --> 00:05:00,669
+example we're giving that robot millions of different examples exactly and you're mentioning Omniverse well and that's something
+
+48
+00:05:00,719 --> 00:05:08,565
+that I'm very very fascinated with especially when it comes to Virtual training in Industries such as manufacturing where how
+
+49
+00:05:08,615 --> 00:05:16,464
+do you see those Industries evolving with uh using the Omniverse for for training purposes well the robotics industry
+
+50
+00:05:16,514 --> 00:05:21,918
+has a hard time getting off the ground because it's hard to train a robot and you have to
+
+51
+00:05:21,968 --> 00:05:26,857
+create a whole bunch of experiences for a robot and it's also hard it's also dangerous to train a
+
+52
+00:05:26,907 --> 00:05:33,787
+robot in the physical world and so we created a virtual where a robot could you know a playground for
+
+53
+00:05:33,837 --> 00:05:41,203
+a robot essentially and so this Omniverse is a virtual playground it to the robot it feels like the
+
+54
+00:05:41,253 --> 00:05:47,754
+real thing because obeys it obeys the laws of physics and and um uh things look real and to
+
+55
+00:05:47,804 --> 00:05:53,602
+the robot can't tell the difference and so so we train the robot in this virtual world called Omniverse
+
+56
+00:05:53,652 --> 00:05:59,739
+and we create a you know a whole bunch of scenarios for the robot to learn from now when the
+
+57
+00:05:59,789 --> 00:06:04,750
+robot learned how to be an Omniverse and do job do a task in Omniverse we take that robot
+
+58
+00:06:04,800 --> 00:06:11,269
+brain and we put it into the real robot and you know if the Sim the real Gap is
+
+59
+00:06:11,319 --> 00:06:16,429
+as small as possible the robot can't tell the difference tell the difference yeah that's that's the incredible part
+
+60
+00:06:16,479 --> 00:06:22,307
+and so this virtual world this digital twin at the world is what Omniverse was created for It's amazing And
+
+61
+00:06:22,357 --> 00:06:29,344
+and it saves so many I'm sure resources and time if if the training was done otherwise but yeah
+
+62
+00:06:29,394 --> 00:06:34,422
+otherwise it's just be impossible if you were to train a robot say to to uh learn how to
+
+63
+00:06:34,472 --> 00:06:42,277
+walk in the physical world it would be learning in human time linear time yeah but in Omniverse we
+
+64
+00:06:42,327 --> 00:06:49,227
+could create so many different multiverses if you will that the robot is learning in parallel you know maybe 100,
+
+65
+00:06:49,277 --> 00:06:55,176
+different ways and so would take what would have taken 10 years to train a robot to do
+
+66
+00:06:55,226 --> 00:07:01,218
+we basically reduced it down to a few hours and so you know this is this is the imagine
+
+67
+00:07:01,268 --> 00:07:06,254
+if we had a Multiverse how smart we would be you know so all the different versions of Tiffany
+
+68
+00:07:06,304 --> 00:07:12,766
+would be learning the learning math here learning science there learning English there learning right geography there and simultaneously
+
+69
+00:07:12,816 --> 00:07:18,106
+learn all at the same time and that's essentially what Omniverse does exactly exactly I I wish that was
+
+70
+00:07:18,156 --> 00:07:25,884
+possible for D you know another area that uh was announced yesterday was around Invidia tribe Ai and really
+
+71
+00:07:25,934 --> 00:07:33,046
+um enhancing and helping the safety and security when it comes to autonomous vehicles so I know you also
+
+72
+00:07:33,096 --> 00:07:38,429
+announced your partnership with Toyota as well which is very exciting yeah that was big news you know they're
+
+73
+00:07:38,479 --> 00:07:42,437
+the largest largest car company in the world I know it's very excited where do you see that
+
+74
+00:07:42,487 --> 00:07:50,269
+headed with uh NVIDIA Drive AI mhm well we've been working on autonomous driving for some time and and
+
+75
+00:07:50,319 --> 00:07:56,147
+uh it's already a some $5 billion business for us yeah and so the way that we the way
+
+76
+00:07:56,197 --> 00:08:02,192
+that we serve the autonomous vehicle industry is through the three computer system one for training the AI one
+
+77
+00:08:02,242 --> 00:08:08,319
+for simulating the AI call Omniverse and one to put the AI in the car and the car the
+
+78
+00:08:08,369 --> 00:08:15,510
+car AI uh safety is everything and uh the way that you uh solve for safety uh first the
+
+79
+00:08:15,560 --> 00:08:21,024
+algorithm has to be safe and so it has to be smart about what to avoid and what you
+
+80
+00:08:21,074 --> 00:08:27,548
+know uh how to drive safely and such but those are algorithm things beond even underneath that the operating
+
+81
+00:08:27,598 --> 00:08:32,606
+system has to be designed to be safe the car computer has to design to be safe uh
+
+82
+00:08:32,656 --> 00:08:38,375
+in in the sense that that uh it can't fail and if it were to fail it would fail
+
+83
+00:08:38,425 --> 00:08:45,230
+safely there's a whole bunch of U uh very complex uh technology that's associated with diversity of algorithms and
+
+84
+00:08:45,280 --> 00:08:51,343
+redundancy of computing and all of this complex technology makes it possible to be safe exactly yeah it's so
+
+85
+00:08:51,393 --> 00:08:56,538
+interesting to say that because it is you know from from a consumer standpoint you think of uh you
+
+86
+00:08:56,588 --> 00:09:01,950
+think of safety more so from you know detecting objects or what not but to your point it cut
+
+87
+00:09:02,000 --> 00:09:05,860
+there's so many layers to it it goes down all the way down to the algorithm really uh is
+
+88
+00:09:05,910 --> 00:09:11,788
+where it begin that's right and and the more diversity you have and the more redundancy that you have
+
+89
+00:09:11,838 --> 00:09:18,253
+the more safe the system will be exactly Jensen you bled NVIDIA through gaming and so many AI
+
+90
+00:09:18,303 --> 00:09:26,815
+breakthroughs which emerging technology do you see or or think will be the most impactful for us over the
+
+91
+00:09:26,865 --> 00:09:35,029
+next decade well artificial intelligence is unquestionably the single most important technology of our time and and when you
+
+92
+00:09:35,079 --> 00:09:41,613
+take a step back and ask yourself what would happen if we could scale intelligence and apply it and
+
+93
+00:09:41,663 --> 00:09:48,761
+channel that capability and directed at uh health care for drug Discovery or um figuring out how to deal
+
+94
+00:09:48,811 --> 00:09:55,248
+with climate climate uh climate change or um just you know uh uh building robotics uh for example the
+
+95
+00:09:55,298 --> 00:10:00,909
+thing that the things that we're working on so that we could uh deal with the aging population declining
+
+96
+00:10:00,959 --> 00:10:07,982
+population and prevent uh and help alleviate the uh inflation that's going on Everywhere by driving productivity into every
+
+97
+00:10:08,032 --> 00:10:14,323
+single industry um there's just so many things that that um uh artificial intelligence is going to impact
+
+98
+00:10:14,373 --> 00:10:20,110
+and and so that's why as a company we're all completely into it yes now artificial intelligence affects all
+
+99
+00:10:20,160 --> 00:10:27,250
+of our other businesses you know from uh even though GeForce was really the the uh the vehicle that
+
+100
+00:10:27,300 --> 00:10:34,011
+that may artificial intelligence um possible uh AI has now gone back to gForce and made computer Graphics more
+
+101
+00:10:34,061 --> 00:10:40,547
+amazing yeah yeah and it's just it's just incredible what we're able to do now combining artificial intelligence and
+
+102
+00:10:40,597 --> 00:10:47,390
+computer graphics and and so we're we're using artificial intelligence to we're combining it with physical sciences and revolutionizing
+
+103
+00:10:47,440 --> 00:10:52,563
+the way we do uh scientific Computing uh we're combining it with uh you know the way that we
+
+104
+00:10:52,613 --> 00:10:57,486
+design chips to that we design better chips and the way we uh develop better software and so artificial
+
+105
+00:10:57,536 --> 00:11:03,470
+intelligence is affecting everything that we do yes um and it's going to impact everything that every industry
+
+106
+00:11:03,520 --> 00:11:08,681
+out there so it's it's the single most important thing undoubtly and that than me to to a question
+
+107
+00:11:08,731 --> 00:11:15,830
+I have a lot of uh followers or viewers on my channel who are either you know I in
+
+108
+00:11:15,880 --> 00:11:22,354
+computer science or you know working in technology and and a common question asked is there's so many areas
+
+109
+00:11:22,404 --> 00:11:28,150
+within Tech that you can get into or kind of grow your career into um you know it it
+
+110
+00:11:28,200 --> 00:11:35,323
+seems like artificial intelligence from both the business and Technical standpoint is definitely a great area for for them
+
+111
+00:11:35,373 --> 00:11:41,830
+to continue to to pursue yeah I think the the of course there's there's contributing to the basic signs
+
+112
+00:11:41,880 --> 00:11:50,710
+of artificial intelligence and and um and I I think that that's terrific however the next decade the application
+
+113
+00:11:50,760 --> 00:11:57,255
+of artificial intelligence the applied sciences is going to be really important yes you know how does how
+
+114
+00:11:57,305 --> 00:12:03,327
+I work with Chad GPT as a companion every day you know yeah and so so I have chat
+
+115
+00:12:03,377 --> 00:12:08,401
+gbt on all the time and I'm asking your questions and and working with the to solve problems you
+
+116
+00:12:08,451 --> 00:12:14,855
+have to you have to learn how to interact with AI and prompting as you know um has a
+
+117
+00:12:14,905 --> 00:12:21,535
+has a real art to it and um and there's Art and Science associated with prompting and so the
+
+118
+00:12:21,585 --> 00:12:25,958
+way you interact with people the way you interact with AIS you going to have to learn how to
+
+119
+00:12:26,008 --> 00:12:32,470
+do that and how do you apply AI to um uh content creation how do you apply AI uh
+
+120
+00:12:32,520 --> 00:12:37,790
+to engineering or how do you apply AI to software development or how do you apply AI to marketing
+
+121
+00:12:37,840 --> 00:12:44,046
+or Finance or um the legal profession whatever whatever field that you're interested in yeah how do you
+
+122
+00:12:44,096 --> 00:12:49,624
+apply AI to that that's an area that I think is worthy of a lot of research and a
+
+123
+00:12:49,674 --> 00:12:55,741
+lot of a lot of uh a lot of development and so I think the the whereas my generation
+
+124
+00:12:55,791 --> 00:13:04,493
+was really about how do we apply computers yeah to solve chip design and software engineering this generation how
+
+125
+00:13:04,543 --> 00:13:10,016
+do we apply AI to solve those answer all of those same basic questions how do I apply AI
+
+126
+00:13:10,066 --> 00:13:15,174
+to Forest streate how do I apply AI to oceanography how do I you know so on so forth
+
+127
+00:13:15,224 --> 00:13:20,505
+this yeah every industry every field of science Jensen thank you so much for taking the time to chat
+
+128
+00:13:20,555 --> 00:13:28,240
+with me today it's it's I'm leaving this conversation feeling so excited about the future and what's to come

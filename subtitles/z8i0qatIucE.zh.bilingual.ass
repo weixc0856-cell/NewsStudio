@@ -1,0 +1,204 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:01.38,0:00:07.14,Sub,,0,0,0,,My name is James Leahy, and I'm a principal research scientist at PhysicsX and a mathematician.\N我叫詹姆斯·莱希，是 PhysicsX 的首席研究科学家，也是一名数学家。
+Dialogue: 0,0:00:07.14,0:00:14.67,Sub,,0,0,0,,I'm here to tell you about how we're building foundation models for physics and specifically aerodynamics in this case and automotive aerodynamics.\N我今天要跟大家讲讲我们是如何构建物理领域的基础模型，特别是汽车空气动力学方面的模型。
+Dialogue: 0,0:00:14.67,0:00:18.75,Sub,,0,0,0,,And we're gonna talk, I'm gonna show you some scaling loss that we're seeing.\N我们将展示一些正在观察到的缩放损失现象。
+Dialogue: 0,0:00:18.75,0:00:20.19,Sub,,0,0,0,,More data, better models.\N数据越多，模型越好。
+Dialogue: 0,0:00:20.19,0:00:23.19,Sub,,0,0,0,,It's kind of obvious when you see this happening in language and video.\N当你在语言和视频领域看到这种情况时，这其实显而易见。
+Dialogue: 0,0:00:23.19,0:00:29.82,Sub,,0,0,0,,But for engineering and physics, this is very far from a trivial problem and it's an ongoing effort.\N但在工程和物理领域，这远非一个简单问题，而是一个持续进行的努力。
+Dialogue: 0,0:00:29.82,0:00:32.52,Sub,,0,0,0,,And we'll see some early results today.\N今天我们将看到一些初步成果。
+Dialogue: 0,0:00:34.32,0:00:36.24,Sub,,0,0,0,,Here's what we're gonna cover.\N这是我们今天要涵盖的内容。
+Dialogue: 0,0:00:36.24,0:00:39.60,Sub,,0,0,0,,First, I'm gonna give you a quick introduction to who PhysicsX is.\N首先，我将快速介绍一下 PhysicsX 是谁。
+Dialogue: 0,0:00:39.60,0:00:44.43,Sub,,0,0,0,,Then I'll explain how pre-trained models are the next frontier for physics AI.\N然后我会解释预训练模型是物理 AI 的下一个前沿。
+Dialogue: 0,0:00:45.30,0:00:51.27,Sub,,0,0,0,,I'll talk about our new pre-trained model for automotive aerodynamics, and then I'll show you some scaling laws.\N我会介绍我们最新推出的汽车空气动力学预训练模型，然后向大家展示一些缩放定律。
+Dialogue: 0,0:00:51.27,0:00:57.04,Sub,,0,0,0,,We'll look at how AWS infrastructure is making this possible and then I'll close with where we're heading next.\N我们将探讨 AWS 基础设施如何使这一切成为可能，最后我会谈谈我们接下来的发展方向。
+Dialogue: 0,0:00:59.13,0:01:01.36,Sub,,0,0,0,,So let's start with who PhysicsX is.\N那么，我们先来了解一下 PhysicsX 是谁。
+Dialogue: 0,0:01:02.31,0:01:07.53,Sub,,0,0,0,,PhysicsX is an AI company and we're focused on industrial applications.\NPhysicsX 是一家人工智能公司，我们专注于工业应用。
+Dialogue: 0,0:01:07.53,0:01:12.96,Sub,,0,0,0,,Our mission is simple, build and deploy AI to accelerate industrial innovation.\N我们的使命很简单，就是构建并部署人工智能，以加速工业创新。
+Dialogue: 0,0:01:12.96,0:01:17.40,Sub,,0,0,0,,We've raised over $155 million in series B funding.\N我们已获得超过 1.55 亿美元的 B 轮融资。
+Dialogue: 0,0:01:17.40,0:01:24.75,Sub,,0,0,0,,We have over 200 engineers, a mix of AI researchers, simulation engineers, and software engineers.\N我们拥有超过 200 名工程师，包括人工智能研究员、仿真工程师和软件工程师。
+Dialogue: 0,0:01:24.75,0:01:29.25,Sub,,0,0,0,,I think, crucially, it's important to understand that we're not just a research organization.\N我认为，至关重要的是，必须明白我们不仅仅是一个研究机构。
+Dialogue: 0,0:01:29.25,0:01:35.73,Sub,,0,0,0,,We work directly with our customers to build the things that are usable and used.\N我们直接与客户合作，打造真正可用且被使用的产品。
+Dialogue: 0,0:01:35.73,0:01:40.17,Sub,,0,0,0,,We partner with leading players across aerospace and defense,\N我们与航空航天和国防领域的领先企业合作。
+Dialogue: 0,0:01:40.17,0:01:46.08,Sub,,0,0,0,,semiconductors, materials, energy and renewables, industrials, and automotive.\N还有半导体、材料、能源与可再生能源、工业以及汽车领域。
+Dialogue: 0,0:01:49.50,0:02:00.03,Sub,,0,0,0,,So what you're seeing here is a computational fluid dynamic simulation that's approximating the Navier-Stokes equation around an immersed body, in this case, an airplane,\N你们在这里看到的是一个计算流体动力学模拟，它近似求解了浸入物体周围的纳维-斯托克斯方程，\N本例中是一架飞机。
+Dialogue: 0,0:02:00.03,0:02:04.32,Sub,,0,0,0,,CFD was a major step change from building physical prototypes.\NCFD 的出现是相对于制造物理原型的一次重大飞跃。
+Dialogue: 0,0:02:04.32,0:02:10.62,Sub,,0,0,0,,Before CFD, if you wanted to know how air flowed around a design, you had to build it, put it in a wind tunnel.\N在 CFD 出现之前，如果你想了解空气如何流过一个设计，就必须制造出来，放进风洞里测试。
+Dialogue: 0,0:02:10.62,0:02:18.90,Sub,,0,0,0,,Wind tunnels still play a vital role today, but everyone knows that simulations have fundamentally increased the speed at which we can innovate.\N风洞至今仍发挥着至关重要的作用，但大家都知道，仿真技术已从根本上提升了我们的创新速度。
+Dialogue: 0,0:02:18.90,0:02:23.64,Sub,,0,0,0,,Simulations though still are a bottleneck, and there's room to innovate faster.\N尽管如此，仿真仍是瓶颈，我们仍有更快创新的空间。
+Dialogue: 0,0:02:25.65,0:02:27.99,Sub,,0,0,0,,That's where physics AI comes in.\N这正是物理 AI 发挥作用的地方。
+Dialogue: 0,0:02:27.99,0:02:30.42,Sub,,0,0,0,,A legacy simulation, like the one you just saw,\N一种传统的仿真，就像你刚才看到的那样，
+Dialogue: 0,0:02:30.42,0:02:35.61,Sub,,0,0,0,,which was a seven-second transient simulation consisting of over a billion mesh elements,\N一次持续七秒的瞬态仿真，包含超过十亿个网格单元，
+Dialogue: 0,0:02:35.61,0:02:41.64,Sub,,0,0,0,,takes four days to compute Using physics AI, we can do this in a six-second inference step.\N使用物理 AI，我们可以在六秒的推理步骤内完成计算。
+Dialogue: 0,0:02:41.64,0:02:44.97,Sub,,0,0,0,,Four days becomes six seconds in inference.\N四天缩短为六秒的推理时间。
+Dialogue: 0,0:02:44.97,0:02:51.90,Sub,,0,0,0,,That's not just an incremental improvement, that's just the fundamental transformation is how manufacturers can innovate and design.\N这不仅仅是渐进式的改进，而是制造和设计方式的根本性变革。
+Dialogue: 0,0:02:53.40,0:02:59.52,Sub,,0,0,0,,The models, they're called surrogates because they act as stand-ins for expensive physics simulations.\N这些模型被称为代理模型，因为它们可以替代昂贵的物理仿真。
+Dialogue: 0,0:02:59.52,0:03:06.29,Sub,,0,0,0,,A well-trained surrogate can give you answers that are accurate enough to make engineering decisions at a fraction of the computational cost.\N一个训练良好的代理模型，能在计算成本仅为原方法几分之一的情况下，提供足够准确的答案，以支持工程决策。
+Dialogue: 0,0:03:09.96,0:03:11.91,Sub,,0,0,0,,We don't just work on aircrafts.\N我们并不只专注于飞机。
+Dialogue: 0,0:03:13.02,0:03:17.52,Sub,,0,0,0,,Our technology applies across engineering domains, as I spoke about earlier.\N我们的技术适用于各种工程领域，正如我之前所讲的那样。
+Dialogue: 0,0:03:17.52,0:03:25.38,Sub,,0,0,0,,Aerodynamics for vehicles, heat transfer for thermal management, chemistry for reactions, and electromagnetics for electronics.\N车辆空气动力学、热管理中的传热、化学反应中的化学，以及电子学中的电磁学。
+Dialogue: 0,0:03:25.38,0:03:30.21,Sub,,0,0,0,,The physics is different in each domain, but the fundamental approach is the same.\N每个领域的物理规律各不相同，但基本方法是一致的。
+Dialogue: 0,0:03:30.21,0:03:36.84,Sub,,0,0,0,,We learn from simulation and hopefully more experimental data and make fast, accurate predictions.\N我们通过仿真学习，并希望结合更多实验数据，实现快速而准确的预测。
+Dialogue: 0,0:03:42.24,0:03:45.69,Sub,,0,0,0,,So what does it take to build an AI surrogate?\N那么，构建一个AI代理模型需要什么条件？
+Dialogue: 0,0:03:45.69,0:03:52.08,Sub,,0,0,0,,Well, you have to do some of those expensive simulations that I talked about earlier upfront to generate the training data.\N你需要提前进行一些我之前提到过的昂贵仿真，以生成训练数据。
+Dialogue: 0,0:03:52.08,0:04:00.09,Sub,,0,0,0,,You need to store that data, you need to process it, you need to clean it and convert it to formats that ML models can consume.\N你需要存储这些数据，处理它们，清洗并转换为机器学习模型可使用的格式。
+Dialogue: 0,0:04:00.09,0:04:03.45,Sub,,0,0,0,,Then you need to train the models, validate them, and deploy them.\N然后你需要训练模型，验证它们，并进行部署。
+Dialogue: 0,0:04:03.45,0:04:10.59,Sub,,0,0,0,,We're building a platform designed to completely support the AI lifecycle for engineering and physics,\N我们正在构建一个平台，旨在全面支持工程与物理领域的AI全生命周期。
+Dialogue: 0,0:04:10.59,0:04:16.86,Sub,,0,0,0,,the data management, the model training, the fine-tuning, and all deployed as an agentic workflow.\N包括数据管理、模型训练、微调，以及全部以代理式工作流的形式部署。
+Dialogue: 0,0:04:17.88,0:04:22.11,Sub,,0,0,0,,We have a simulation workbench which orchestrates the simulations.\N我们有一个仿真工作台，用于协调各类仿真。
+Dialogue: 0,0:04:22.11,0:04:29.46,Sub,,0,0,0,,We have the AI workbench to develop and deploy models from the AI model catalog, some of which are pre-trained, some of which are not.\N我们还有一个AI工作台，用于从AI模型目录中开发和部署模型，其中一些是预训练的，一些则不是。
+Dialogue: 0,0:04:29.46,0:04:35.79,Sub,,0,0,0,,And then we have a unified data backbone with enterprise security and multi-cloud scalability.\N然后我们还拥有一个统一的数据基础架构，具备企业级安全性和多云可扩展性。
+Dialogue: 0,0:04:35.79,0:04:40.38,Sub,,0,0,0,,This is not just a research infrastructure, this is production-grade software.\N这不仅仅是一个研究基础设施，更是生产级别的软件。
+Dialogue: 0,0:04:42.69,0:04:46.59,Sub,,0,0,0,,So now, let me talk about our pre-trained model for automotive aerodynamics.\N现在，让我来谈谈我们用于汽车空气动力学的预训练模型。
+Dialogue: 0,0:04:47.97,0:04:54.84,Sub,,0,0,0,,So I spoke earlier about how numerical simulation was the first major step change for engineering.\N之前我提到过，数值模拟是工程领域第一次重大的变革。
+Dialogue: 0,0:04:54.84,0:04:57.36,Sub,,0,0,0,,The simulations are complex to set up.\N这些模拟设置起来很复杂。
+Dialogue: 0,0:04:57.36,0:05:00.06,Sub,,0,0,0,,They take hours or days.\N需要数小时甚至数天。
+Dialogue: 0,0:05:00.06,0:05:05.22,Sub,,0,0,0,,But you get cheaper and faster exploration than physical prototypes.\N但相比物理原型，你能实现更低成本、更快的探索。
+Dialogue: 0,0:05:05.22,0:05:08.10,Sub,,0,0,0,,Then came traditional ML models and surrogates.\N随后出现了传统的机器学习模型和代理模型。
+Dialogue: 0,0:05:08.10,0:05:16.62,Sub,,0,0,0,,You need a training dataset, you need an ML model, a pipeline, and once you're trained, you can get vast design space exploration.\N你需要训练数据集、机器学习模型、数据流水线，训练完成后，就能实现大规模的设计空间探索。
+Dialogue: 0,0:05:16.62,0:05:25.53,Sub,,0,0,0,,But for every customer we encounter, every new geometry we see, we have to collect a new dataset from scratch.\N但每次面对新客户或新几何结构时，我们都必须从零开始收集新的数据集。
+Dialogue: 0,0:05:25.53,0:05:33.45,Sub,,0,0,0,,So what we're doing is we're going out and generating large pre-training datasets, coupling it with foundational architectures,\N我们正在做的，是主动生成大规模的预训练数据集，并将其与基础架构相结合，
+Dialogue: 0,0:05:34.68,0:05:43.05,Sub,,0,0,0,,and serious infrastructure that's involved to get everything from the simulations to the data loader and to train at scale using dynamic data parallelism.\N以及支撑整个流程的坚实基础设施，确保从模拟到数据加载，再到利用动态数据并行实现大规模训练。
+Dialogue: 0,0:05:43.05,0:05:54.03,Sub,,0,0,0,,And what you get from these pre-trained foundation models is you get lower upfront data needs for customers and better out-of-the-box performance, zero shot and fine-tuned.\N从这些预训练的基础模型中，客户将获得更低的前期数据需求，以及更好的开箱即用性能，\N无论是零样本还是微调后表现都更优。
+Dialogue: 0,0:05:55.59,0:06:07.89,Sub,,0,0,0,,So when we wanted to build the automotive aerodynamics model, we faced some challenges is that there wasn't a very large, diverse corpus of data.\N于是当我们想构建汽车空气动力学模型时，遇到了一些挑战，那就是缺乏一个非常庞大且多样化的数据语料库。
+Dialogue: 0,0:06:07.89,0:06:15.63,Sub,,0,0,0,,Some of the largest public datasets consists of the DrivAerNet++, which is out of the MIT DeCoDE Lab of Faez Ahmed,\N其中一些最大的公开数据集是来自法兹·艾哈迈德的麻省理工学院 DeCoDE 实验室的 DrivAerN\Net++。
+Dialogue: 0,0:06:15.63,0:06:23.70,Sub,,0,0,0,,which is a remarkable contribution to the field, make no doubt, that consists of 8,000 Reynolds-averaged Navier-Stokes simulations.\N这无疑是对该领域的一项杰出贡献，包含8000次雷诺平均纳维-斯托克斯模拟。
+Dialogue: 0,0:06:23.70,0:06:26.52,Sub,,0,0,0,,These are steady-state time averaged approximations.\N这些是稳态时间平均近似值。
+Dialogue: 0,0:06:26.52,0:06:29.49,Sub,,0,0,0,,They're the fastest amongst the different simulation types.\N它们是各类模拟类型中速度最快的。
+Dialogue: 0,0:06:31.14,0:06:38.16,Sub,,0,0,0,,And if you look At though what the data's comprised of, it's eight cars that are morphed,\N如果你观察这些数据的构成，会发现是8辆经过变形的汽车。
+Dialogue: 0,0:06:38.16,0:06:41.91,Sub,,0,0,0,,and morphing is like stretching and pulling different parts of the car.\N变形就像是拉伸和拉拽汽车的不同部分。
+Dialogue: 0,0:06:41.91,0:06:46.08,Sub,,0,0,0,,You get very topologically similar cars.\N你会得到拓扑结构非常相似的汽车。
+Dialogue: 0,0:06:46.08,0:06:53.07,Sub,,0,0,0,,Another dataset is a Luminary SHIFT SUV, that's 2,000 detached eddy simulations.\N另一个数据集是 Luminary SHIFT SUV，包含2000次分离涡模拟。
+Dialogue: 0,0:06:53.07,0:06:56.55,Sub,,0,0,0,,These are of higher fidelity than RANS.\N这些模拟的保真度高于 RANS。
+Dialogue: 0,0:06:56.55,0:07:01.56,Sub,,0,0,0,,And here there are only two baseline cars that are morphed a thousand times.\N这里只有两辆基准汽车被变形了一千次。
+Dialogue: 0,0:07:01.56,0:07:06.42,Sub,,0,0,0,,So that's roughly 10 cars which have a thousand morphs.\N所以大致相当于10辆汽车，每辆有上千种变形。
+Dialogue: 0,0:07:06.42,0:07:08.10,Sub,,0,0,0,,It's not very diverse.\N它的多样性并不高。
+Dialogue: 0,0:07:08.10,0:07:14.66,Sub,,0,0,0,,Another challenge I'll mention is that when you have sort of this diverse data,\N我要提到的另一个挑战是，当你拥有这种多样化数据时，
+Dialogue: 0,0:07:14.67,0:07:18.03,Sub,,0,0,0,,you have different fidelity simulations, different turbulence closure models,\N你会遇到不同精度的仿真结果，以及不同的湍流闭合模型，
+Dialogue: 0,0:07:18.03,0:07:26.79,Sub,,0,0,0,,and this is sort of still an open research problem as to whether you should pre-train these models on diverse sets of simulations and how exactly you should do it.\N这仍然是一个开放的研究问题，即是否应该在多样化的仿真数据集上预训练这些模型，以及如何具体操作。
+Dialogue: 0,0:07:26.79,0:07:29.70,Sub,,0,0,0,,We'll only focus on the geometric diversity today.\N今天我们将仅关注几何多样性。
+Dialogue: 0,0:07:31.22,0:07:36.42,Sub,,0,0,0,,So okay, I said that these datasets aren't diverse, but why does this matter?\N所以，我说过这些数据集缺乏多样性，但这为什么重要呢？
+Dialogue: 0,0:07:36.42,0:07:41.46,Sub,,0,0,0,,So, we pre-trained various attention-based architectures.\N我们对多种基于注意力机制的架构进行了预训练。
+Dialogue: 0,0:07:41.46,0:07:47.66,Sub,,0,0,0,,If you're familiar, Transolver, ABUPT, point cloud attention, linear attention.\N如果你熟悉的话，包括 Transolver、ABUPT、点云注意力和线性注意力。
+Dialogue: 0,0:07:47.66,0:07:53.04,Sub,,0,0,0,,These meshes are very large, so you have to use variants of attention that are suitable.\N这些网格非常庞大，因此必须使用适合的注意力变体。
+Dialogue: 0,0:07:53.04,0:07:58.02,Sub,,0,0,0,,And we trained them on Luminary and DrivAerNet, these two public datasets that I just spoke about.\N我们在 Luminary 和 DrivAerNet 这两个公开数据集上训练了它们，\N我刚才提到的就是这两个数据集。
+Dialogue: 0,0:07:58.02,0:08:02.16,Sub,,0,0,0,,And we looked at their out-of-distribution performance on a representative customer dataset.\N我们考察了它们在代表性客户数据集上的分布外性能。
+Dialogue: 0,0:08:02.16,0:08:03.57,Sub,,0,0,0,,We call it CustomerNet.\N我们称它为 CustomerNet。
+Dialogue: 0,0:08:03.57,0:08:10.02,Sub,,0,0,0,,That's one baseline simulation with very intricate morphs that we see that our customers have.\N这是一次基础仿真，展示了我们客户所遇到的复杂形态。
+Dialogue: 0,0:08:10.02,0:08:11.43,Sub,,0,0,0,,And we looked at their performance.\N我们分析了它们的性能表现。
+Dialogue: 0,0:08:11.43,0:08:13.77,Sub,,0,0,0,,What sort of performance are we looking at?\N我们在关注什么样的性能指标？
+Dialogue: 0,0:08:13.77,0:08:16.02,Sub,,0,0,0,,I'll first talk about the quantities that we're looking at.\N我先来介绍我们关注的几个量。
+Dialogue: 0,0:08:16.02,0:08:17.55,Sub,,0,0,0,,There's the drag coefficient.\N阻力系数。
+Dialogue: 0,0:08:17.55,0:08:20.76,Sub,,0,0,0,,This is a measure of the aerodynamic resistance of the car.\N这是衡量汽车空气动力阻力的指标。
+Dialogue: 0,0:08:22.56,0:08:27.24,Sub,,0,0,0,,A typical sedan has around a coefficient of drag between 0.25 and 0.30.\N一辆典型的轿车阻力系数大约在 0.25 到 0.30 之间。
+Dialogue: 0,0:08:27.24,0:08:36.84,Sub,,0,0,0,,Understanding this number is how automotive manufacturers can optimize for fuel efficiency and EV range and other aspects.\N理解这个数值，有助于汽车制造商优化燃油效率、电动车续航以及其他方面。
+Dialogue: 0,0:08:36.84,0:08:40.89,Sub,,0,0,0,,The pressure coefficient, this is the pressure on the surface of the car.\N压力系数，这是指车体表面的压力。
+Dialogue: 0,0:08:40.89,0:08:44.70,Sub,,0,0,0,,This tells you how pressure varies across every point of the vehicle surface.\N它能告诉你车辆表面各点的压力如何变化。
+Dialogue: 0,0:08:44.70,0:08:48.42,Sub,,0,0,0,,You have high pressure region in the front and a low pressure in the wake.\N前部是高压区，尾部是低压区。
+Dialogue: 0,0:08:48.42,0:08:51.66,Sub,,0,0,0,,And these differences are what create the drag.\N这些压力差异正是产生阻力的原因。
+Dialogue: 0,0:08:51.66,0:08:57.99,Sub,,0,0,0,,And if you can predict the pressure field accurately, you understand why the design has its drag.\N如果你能准确预测压力场，就能理解为何该设计会产生阻力。
+Dialogue: 0,0:08:57.99,0:09:00.42,Sub,,0,0,0,,So let's look at these graphs.\N那么我们来看一下这些图表。
+Dialogue: 0,0:09:00.42,0:09:09.06,Sub,,0,0,0,,So if we look at the top one, this is the drag coefficient, and along the y-axis is the Spearman rank correlation coefficient.\N如果我们看上面那张图，这是阻力系数，纵轴是斯皮尔曼秩相关系数。
+Dialogue: 0,0:09:09.06,0:09:11.85,Sub,,0,0,0,,It measures how accurate you're ranking the designs.\N它衡量的是你对设计方案排序的准确性。
+Dialogue: 0,0:09:11.85,0:09:20.58,Sub,,0,0,0,,And you look, in the green and the orange, the green is the model that's trained on DrivAerNet, the orange is the one that's trained on Luminary.\N你看到绿色和橙色部分，绿色是基于 DrivAerNet 训练的模型，\N橙色是基于 Luminary 训练的模型。
+Dialogue: 0,0:09:20.58,0:09:25.83,Sub,,0,0,0,,And if you look at the performance within distribution, it's quite good.\N如果看模型在分布内表现，结果相当不错。
+Dialogue: 0,0:09:25.83,0:09:31.08,Sub,,0,0,0,,If we look at how it performs out of distribution on the CustomerNet, it's orders of magnitude worse.\N但若看它在 CustomerNet 上的分布外表现，性能差了几个数量级。
+Dialogue: 0,0:09:31.08,0:09:33.24,Sub,,0,0,0,,We see a similar story for the pressure coefficient.\N压力系数的情况也类似。
+Dialogue: 0,0:09:33.24,0:09:34.62,Sub,,0,0,0,,Here, lower is better.\N这里数值越低越好。
+Dialogue: 0,0:09:34.62,0:09:40.50,Sub,,0,0,0,,We're looking at the mean absolute error of the pressure coefficient on the surface of the car.\N我们关注的是汽车表面压力系数的平均绝对误差。
+Dialogue: 0,0:09:42.33,0:09:47.67,Sub,,0,0,0,,So it seems pretty obvious you need to go out and you need to generate a very diverse dataset.\N所以很明显，你需要走出去，生成一个非常多样化的数据集。
+Dialogue: 0,0:09:47.67,0:09:51.09,Sub,,0,0,0,,So this dataset is growing as we speak.\N因此这个数据集正在实时增长。
+Dialogue: 0,0:09:51.09,0:09:54.09,Sub,,0,0,0,,We are still generating this data and training the model.\N我们仍在生成数据并训练模型。
+Dialogue: 0,0:09:54.09,0:10:00.84,Sub,,0,0,0,,We'll talk a little bit about how we're getting more new, diverser designs through active learning.\N我们将简要介绍如何通过主动学习获得更多的新设计和更多样化的设计。
+Dialogue: 0,0:10:00.84,0:10:09.15,Sub,,0,0,0,,So here what you see are some numbers that are trained on 18,000 simulations with over 120 baselines\N这里展示的是在18,000次模拟和120多个基线数据上训练得到的一些数据。
+Dialogue: 0,0:10:09.15,0:10:12.33,Sub,,0,0,0,,at a fixed velocity, inlet velocity for now.\N速度固定，目前为入口速度。
+Dialogue: 0,0:10:12.33,0:10:19.74,Sub,,0,0,0,,And we see a difference here, that our model still performs well on DrivAerNet Luminary,\N我们看到，我们的模型在DrivAerNet Luminary等公开数据集上表现依然良好。
+Dialogue: 0,0:10:19.74,0:10:29.31,Sub,,0,0,0,,these public datasets, but when we look at the out-of-shot zero-shot performance, we get significantly better results.\N但当我们观察分布外的零样本性能时，结果显著更优。
+Dialogue: 0,0:10:29.31,0:10:30.60,Sub,,0,0,0,,And this is just zero shot.\N这还只是零样本的情况。
+Dialogue: 0,0:10:30.60,0:10:32.10,Sub,,0,0,0,,This isn't when you fine-tune.\N这并非经过微调之后的结果。
+Dialogue: 0,0:10:33.54,0:10:43.47,Sub,,0,0,0,,So, now you wanna understand, as we're growing this dataset, what's happening out of distribution is your out-of-distribution performance improving.\N因此，随着数据集不断增长，你想要理解的是：分布外性能是否在提升。
+Dialogue: 0,0:10:43.47,0:10:47.83,Sub,,0,0,0,,And so what we're seeing here is a graph along the y-axis is the out of distribution\N我们在这里看到的图表中，纵轴是分布外的
+Dialogue: 0,0:10:49.92,0:10:51.99,Sub,,0,0,0,,mean absolute error of the pressure coefficient.\N压力系数的平均绝对误差。
+Dialogue: 0,0:10:51.99,0:10:57.00,Sub,,0,0,0,,And along the x-axis, you see the training set size, and you see this decreasing.\N横轴显示的是训练集大小，可以看到误差在下降。
+Dialogue: 0,0:10:57.00,0:11:02.58,Sub,,0,0,0,,Now, when you look along the x-axis, you say training set size, are these just morphs or are these baselines?\N现在，当你沿着 x 轴观察时，你会看到训练集大小，这些是单纯的形态变化，还是基准数据？
+Dialogue: 0,0:11:02.58,0:11:05.28,Sub,,0,0,0,,And these are some of the questions we're trying to understand.\N这些是我们试图理解的一些问题。
+Dialogue: 0,0:11:05.28,0:11:07.77,Sub,,0,0,0,,How many times should you morph a car?\N一辆汽车应该进行多少次形态变化？
+Dialogue: 0,0:11:07.77,0:11:09.75,Sub,,0,0,0,,Does that improve the performance?\N这是否能提升性能？
+Dialogue: 0,0:11:10.59,0:11:20.79,Sub,,0,0,0,,Here, this is going along basically a hundred morphs per baseline that we're increasing along the x-axis.\N这里，我们沿着 x 轴每条基准线增加了大约一百次形态变化。
+Dialogue: 0,0:11:20.79,0:11:29.79,Sub,,0,0,0,,And we'll talk about how we're now implementing active learning and that's going to increase the slope of these curves.\N我们将讨论如何实现主动学习，这将使这些曲线的斜率进一步上升。
+Dialogue: 0,0:11:31.80,0:11:37.47,Sub,,0,0,0,,So, accuracy alone isn't enough for engineering applications.\N对于工程应用而言，仅靠准确率是不够的。
+Dialogue: 0,0:11:37.47,0:11:40.29,Sub,,0,0,0,,Engineers need to know when to trust the model.\N工程师需要知道何时可以信任模型。
+Dialogue: 0,0:11:40.29,0:11:44.55,Sub,,0,0,0,,If you're predicting a drag coefficient, a difference of 0.01 matters.\N如果你预测的是阻力系数，0.01 的差异就很重要。
+Dialogue: 0,0:11:44.55,0:11:47.07,Sub,,0,0,0,,You need to have confidence intervals.\N你需要有置信区间。
+Dialogue: 0,0:11:47.07,0:11:49.80,Sub,,0,0,0,,And if we look on the right,\N如果我们看向右侧，
+Dialogue: 0,0:11:51.72,0:11:55.98,Sub,,0,0,0,,this is showing how drag accumulates throughout the length of the car from the front to the back.\N这展示了从车头到车尾，阻力如何沿车身长度累积。
+Dialogue: 0,0:11:55.98,0:12:00.33,Sub,,0,0,0,,You get this by integrating the pressure and the wall shear stress on surface.\N这是通过对表面的压力和壁面剪切应力进行积分得到的。
+Dialogue: 0,0:12:00.33,0:12:07.08,Sub,,0,0,0,,And as you get to all the way to the right point of the graph, the final number on the upper right, that's the coefficient of drag.\N当你看到图表最右端的点时，右上角的最终数值就是阻力系数。
+Dialogue: 0,0:12:07.08,0:12:12.21,Sub,,0,0,0,,And you can see that that blue band is the uncertainty region.\N你可以看到，那个蓝色区域就是不确定性的范围。
+Dialogue: 0,0:12:12.21,0:12:18.90,Sub,,0,0,0,,And at that final point on the right, that represents the confidence interval around the final drag coefficient.\N在图表最右端的这个最终点，代表了最终阻力系数周围的置信区间。
+Dialogue: 0,0:12:20.49,0:12:24.99,Sub,,0,0,0,,This is the sort of uncertainty quantification we expect from our models.\N这就是我们期望模型提供的不确定性量化结果。
+Dialogue: 0,0:12:24.99,0:12:29.40,Sub,,0,0,0,,And we'll see that this uncertainty quantification isn't just crucial for the end use.\N我们将看到，这种不确定性量化不仅对最终应用至关重要。
+Dialogue: 0,0:12:29.40,0:12:30.31,Sub,,0,0,0,,You need to know\N你需要知道
+Dialogue: 0,0:12:32.82,0:12:37.14,Sub,,0,0,0,,at which designs the models are uncertain to know which designs to go for next.\N模型在哪些设计上存在不确定性，才能确定下一步该选择哪些设计。
+Dialogue: 0,0:12:37.14,0:12:40.92,Sub,,0,0,0,,And that's the active learning loop that I'll speak about next.\N这就是我接下来要讲的主动学习循环。
+Dialogue: 0,0:12:42.63,0:12:51.96,Sub,,0,0,0,,So let me now talk about, we're at an AWS conference, let me talk about how we're using AWS to simulate and train these models.\N现在我们身处 AWS 大会，让我谈谈我们如何利用 AWS 来模拟和训练这些模型。
+Dialogue: 0,0:12:51.96,0:12:56.25,Sub,,0,0,0,,So let me start with the diverse geometries.\N让我先从多样的几何形状开始。
+Dialogue: 0,0:12:56.25,0:12:59.82,Sub,,0,0,0,,Today, we have a diverse set of geometries.\N如今，我们拥有多样化的几何形状。
+Dialogue: 0,0:12:59.82,0:13:03.36,Sub,,0,0,0,,These then go into our aerodynamic simulation.\N这些数据随后进入我们的空气动力学仿真。
+Dialogue: 0,0:13:03.36,0:13:08.37,Sub,,0,0,0,,We're using Siemens star and we're using GPU-based solvers,\N我们使用西门子星网格，并采用基于 GPU 的求解器，
+Dialogue: 0,0:13:08.37,0:13:14.61,Sub,,0,0,0,,and these are on SageMaker HyperPod, the same clusters that our models are being trained on.\N这些运行在 SageMaker HyperPod 上，与我们模型训练所用的集群相同。
+Dialogue: 0,0:13:14.61,0:13:22.29,Sub,,0,0,0,,So on the output of the aerodynamic simulations, you get the diverse resolve flows, very large set of fields, terabytes upon terabytes.\N因此，空气动力学仿真的输出结果包含多样化的流场，数据量非常庞大，达到数 TB 之多。
+Dialogue: 0,0:13:22.29,0:13:24.33,Sub,,0,0,0,,Those are stored in S3.\N这些数据存储在 S3 中。
+Dialogue: 0,0:13:25.83,0:13:29.01,Sub,,0,0,0,,That's our long-term storage.\N这是我们长期存储的方案。
+Dialogue: 0,0:13:30.00,0:13:40.08,Sub,,0,0,0,,Then those fields are then pre-processed using AWS Batch in parallel to get them to a form that's ingested by our models.\N随后，这些流场数据通过 AWS Batch 并行预处理，转换为模型可接收的格式。
+Dialogue: 0,0:13:40.08,0:13:49.02,Sub,,0,0,0,,Our models are then also trained on SageMaker HyperPod using data parallelism, and the storage that's used there is FSx for Lustre.\N我们的模型也在 SageMaker HyperPod 上使用数据并行方式进行训练，\N该环境使用的存储为 FSx for Lustre。
+Dialogue: 0,0:13:50.94,0:13:54.99,Sub,,0,0,0,,And then finally, I talked about that our model has uncertainty quantification.\N最后，我提到我们的模型具备不确定性量化能力。
+Dialogue: 0,0:13:54.99,0:14:01.92,Sub,,0,0,0,,So that, plus last year at AWS, we spoke about our large generative geometry model.\N结合去年在 AWS 上我们介绍的大型生成式几何模型，
+Dialogue: 0,0:14:01.92,0:14:04.71,Sub,,0,0,0,,This is a model that can generate different designs.\N这是一个能够生成不同设计方案的模型。
+Dialogue: 0,0:14:05.61,0:14:12.21,Sub,,0,0,0,,The uncertainty coupled with the geometry generative mechanism are what drives this active learning loop.\N不确定性与生成式几何机制的结合，驱动了这一主动学习循环。
+Dialogue: 0,0:14:12.21,0:14:16.92,Sub,,0,0,0,,After we had a set of baseline geometries to fine-tune the geometry model,\N在我们确定了一组基线几何形状以微调几何模型后，
+Dialogue: 0,0:14:16.92,0:14:20.67,Sub,,0,0,0,,this can then tell us what parts of the design space is the model most uncertain,\N这样就能告诉我们模型最不确定的设计空间是哪些部分，
+Dialogue: 0,0:14:20.67,0:14:26.22,Sub,,0,0,0,,and we can get those geometries which then feed back into the loop to go through the aerodynamic simulation.\N我们可以获取这些几何形状，再反馈回循环中，进入空气动力学仿真流程。
+Dialogue: 0,0:14:26.22,0:14:31.68,Sub,,0,0,0,,Now, that aerodynamic simulation I spoke about was Siemens star.\N我刚才提到的空气动力学仿真，是西门子的 Star。
+Dialogue: 0,0:14:31.68,0:14:32.88,Sub,,0,0,0,,That's RANS at the moment.\N目前是 RANS 模拟。
+Dialogue: 0,0:14:32.88,0:14:35.34,Sub,,0,0,0,,That's not a transient simulation.\N这不是瞬态仿真。
+Dialogue: 0,0:14:35.34,0:14:41.31,Sub,,0,0,0,,I think there's a lot of evidence showing that training on transient data is a better use,\N我认为有大量证据表明，使用瞬态数据进行训练效果更好，
+Dialogue: 0,0:14:41.31,0:14:45.63,Sub,,0,0,0,,but to train on transient data, you need to have an online data loader.\N但要使用瞬态数据训练，就需要具备在线数据加载器。
+Dialogue: 0,0:14:45.63,0:14:51.60,Sub,,0,0,0,,That's where it becomes even more important that the simulator and the models are trained in the same place.\N正是在这一点上，仿真器和模型在同一地点训练变得更加重要。
+Dialogue: 0,0:14:51.60,0:14:56.70,Sub,,0,0,0,,So building this infrastructure even for RANS is setting the stage for the next development.\N因此，即使仅针对 RANS 构建这一基础设施，也在为下一次发展铺平道路。
+Dialogue: 0,0:14:58.23,0:15:03.51,Sub,,0,0,0,,I'll kind of go over this again in a little more detail about the AWS architecture.\N我稍后会更详细地再次介绍 AWS 的架构。
+Dialogue: 0,0:15:03.51,0:15:06.84,Sub,,0,0,0,,So at the heart is the SageMaker HyperPod.\N因此，核心是 SageMaker HyperPod。
+Dialogue: 0,0:15:06.84,0:15:08.88,Sub,,0,0,0,,We have a Slurm for job management.\N我们使用 Slurm 进行作业管理。
+Dialogue: 0,0:15:08.88,0:15:15.36,Sub,,0,0,0,,We have a controller machine that works across multiple compute nodes and the simulation node.\N我们有一台控制器机器，可跨多个计算节点和仿真节点工作。
+Dialogue: 0,0:15:15.36,0:15:20.31,Sub,,0,0,0,,You have the FSx for Luster, which is the file system layer.\N你有 FSx for Luster，这是文件系统层。
+Dialogue: 0,0:15:20.31,0:15:24.27,Sub,,0,0,0,,It's bidirectionally synced with S3.\N它与 S3 双向同步。
+Dialogue: 0,0:15:25.47,0:15:28.59,Sub,,0,0,0,,The FSx is where the data loader are.\NFSx 是数据加载器所在的位置。
+Dialogue: 0,0:15:30.21,0:15:32.88,Sub,,0,0,0,,And then the network architecture is two subnets.\N网络架构包含两个子网。
+Dialogue: 0,0:15:32.88,0:15:37.59,Sub,,0,0,0,,You have the HyperPod, the private one, which is the HyperPod cluster, and you have the public subnet,\N你有私有的 HyperPod，即 HyperPod 集群，以及公共子网。
+Dialogue: 0,0:15:37.59,0:15:44.76,Sub,,0,0,0,,which hosts the ML flow dashboard where we see the results, and all of our researchers enter in through the AWS Session Manager.\N公共子网托管了 MLflow 仪表板，我们在这里查看结果，\N所有研究人员都通过 AWS Session Manager 进入。
+Dialogue: 0,0:15:47.79,0:15:54.21,Sub,,0,0,0,,So let's wrap up and see what we learned and where PhysicsX is heading next.\N那么，让我们总结一下，看看我们学到了什么，以及 PhysicsX 接下来的发展方向。
+Dialogue: 0,0:15:55.98,0:16:05.73,Sub,,0,0,0,,So we talked about simulations and we saw how ML surrogates were a major leap forward to be able to drive down inference time.\N我们讨论了仿真，并看到了机器学习代理模型如何显著降低推理时间，实现了重大突破。
+Dialogue: 0,0:16:05.73,0:16:12.64,Sub,,0,0,0,,Then we talked about pre-training models and how this will help us\N然后我们讨论了预训练模型，以及它如何帮助我们。
+Dialogue: 0,0:16:14.22,0:16:19.23,Sub,,0,0,0,,accelerate our customers' workflows by requiring less data from them upfront.\N通过减少客户前期所需的数据量，加速他们的工作流程。
+Dialogue: 0,0:16:19.23,0:16:22.17,Sub,,0,0,0,,And we're seeing that scaling laws are emerging.\N我们正看到缩放定律正在显现。
+Dialogue: 0,0:16:23.46,0:16:25.95,Sub,,0,0,0,,Now, what's next for us?\N那么，接下来我们该做什么？
+Dialogue: 0,0:16:25.95,0:16:32.28,Sub,,0,0,0,,We started with automotive aerodynamics and we'll continue to innovate here, as I mentioned, going to transient and so on.\N我们从汽车空气动力学起步，正如我提到的，我们将继续在此领域创新，比如转向瞬态分析等。
+Dialogue: 0,0:16:32.28,0:16:38.16,Sub,,0,0,0,,But we'll also be looking at other domains, radar cross-section, aeroelastics, structural mechanics.\N同时，我们也会关注其他领域，如雷达散射截面、气动弹性、结构力学。
+Dialogue: 0,0:16:38.16,0:16:41.79,Sub,,0,0,0,,And you should ask, "Well, is this gonna be all one model or are these gonna be separate models?"\N你应该问自己：“这会是一个统一的模型，还是多个独立的模型？”
+Dialogue: 0,0:16:41.79,0:16:50.52,Sub,,0,0,0,,Both. We'll train the best model in class and we'll look at what happens when you continue to increase the scope of the model for multiphysics.\N两者都有。我们将训练该领域最优秀的模型，并研究当模型的覆盖范围扩展到多物理场时会发生什么。
+Dialogue: 0,0:16:50.52,0:16:58.71,Sub,,0,0,0,,I think, we're working with our customers to understand what are the best models for them, and so we'll build both.\N我认为，我们正与客户合作，了解他们所需的最优模型，因此我们将同时构建这两类模型。
+Dialogue: 0,0:16:58.71,0:17:02.76,Sub,,0,0,0,,I encourage you to visit physicsx.ai to learn more.\N我建议您访问 physicsx.ai 了解更多信息。
+Dialogue: 0,0:17:02.76,0:17:05.40,Sub,,0,0,0,,We'll be releasing a blog post soon about the model.\N我们很快会发布一篇关于该模型的博客文章。
+Dialogue: 0,0:17:06.63,0:17:09.93,Sub,,0,0,0,,And I just want to thank you for your time today and for listening.\N最后，我想感谢大家今天花时间聆听。

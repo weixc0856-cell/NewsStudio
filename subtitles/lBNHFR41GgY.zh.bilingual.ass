@@ -1,0 +1,248 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:10.56,0:00:11.31,Sub,,0,0,0,,Hi everyone.\N大家好。
+Dialogue: 0,0:00:11.36,0:00:13.32,Sub,,0,0,0,,Welcome to the NVIDIA GTC studio.\N欢迎收看英伟达 GTC 演播室。
+Dialogue: 0,0:00:13.37,0:00:21.26,Sub,,0,0,0,,My name's Tiffany Jansen and today I'm joined with Pankaj Sharma who's the executive VP of software and services at Schneider Electric.\N我是蒂芙尼·詹森，今天我与施耐德电气软件与服务业务的执行副总裁潘卡杰·夏尔马一同出席。
+Dialogue: 0,0:00:21.31,0:00:22.32,Sub,,0,0,0,,Pankaj, welcome.\N欢迎你，潘卡杰。
+Dialogue: 0,0:00:22.37,0:00:23.58,Sub,,0,0,0,,Thank you, Tiffany.\N谢谢你，蒂芙尼。
+Dialogue: 0,0:00:23.63,0:00:25.94,Sub,,0,0,0,,How's your your GTC been going so far?\N你的 GTC 到目前为止感觉如何？
+Dialogue: 0,0:00:25.99,0:00:26.59,Sub,,0,0,0,,Excellent.\N非常棒。
+Dialogue: 0,0:00:26.64,0:00:29.11,Sub,,0,0,0,,It's been the last two days super busy.\N过去两天非常忙碌。
+Dialogue: 0,0:00:29.16,0:00:30.99,Sub,,0,0,0,,A lot of information, but that's really good.\N信息量很大，但这非常好。
+Dialogue: 0,0:00:31.04,0:00:32.11,Sub,,0,0,0,,That's really good to hear.\N听到这个真好。
+Dialogue: 0,0:00:32.16,0:00:34.90,Sub,,0,0,0,,You know, when I saw that we'd be having a conversation today,\N你知道，当我看到我们今天要进行对话时，
+Dialogue: 0,0:00:34.95,0:00:40.67,Sub,,0,0,0,,I was really looking forward to it because I think what Schneider Electric is working on and some of the challenges that\N我就非常期待，因为我认为施耐德电气正在做的事情，以及一些面临的挑战
+Dialogue: 0,0:00:40.72,0:00:48.80,Sub,,0,0,0,,you are solving are some of the biggest challenges we are frankly facing right now when it comes to AI infrastructure and scaling.\N你们正在解决的，正是我们当前在人工智能基础设施和扩展方面所面临的一些最大挑战。
+Dialogue: 0,0:00:48.85,0:00:52.43,Sub,,0,0,0,,And on that note, we are seeing incredible momentum around AI factories.\N说到这一点，我们正看到人工智能工厂领域出现惊人的发展势头。
+Dialogue: 0,0:00:52.48,0:00:59.47,Sub,,0,0,0,,We're seeing a ton of them starting to pop up, but in order for them to be successful, they need a ton of power.\N我们看到大量人工智能工厂开始涌现，但要取得成功，它们需要大量电力。
+Dialogue: 0,0:00:59.52,0:01:04.83,Sub,,0,0,0,,Can you share with me a little bit about some of the challenges and also opportunities that brings?\N你能和我分享一下这其中带来的一些挑战和机遇吗？
+Dialogue: 0,0:01:04.88,0:01:09.27,Sub,,0,0,0,,It it brings first of all a lot of challenges uh and opportunities.\N这首先带来了许多挑战，也带来了许多机遇。
+Dialogue: 0,0:01:09.32,0:01:14.39,Sub,,0,0,0,,So, maybe just take a step back if you heard the keynote when Jensen was sharing the the five-layered cake.\N所以，也许你可以先退一步，回想一下黄仁勋在主题演讲中提到的五层蛋糕模型。
+Dialogue: 0,0:01:14.44,0:01:14.79,Sub,,0,0,0,,Yes.\N是的。
+Dialogue: 0,0:01:14.82,0:01:23.59,Sub,,0,0,0,,Uh and we we we play at many layers, obviously, but the primary role we play is at the bottom uh where the energy infrastructure has to come in.\N我们显然在多个层面都参与其中，但我们的核心角色是在最底层，也就是能源基础设施所在的位置。
+Dialogue: 0,0:01:23.64,0:01:30.43,Sub,,0,0,0,,Now, the challenge at hand is that the utilization and applications of AI are starting to increase dramatically.\N当前面临的挑战是，人工智能的利用率和应用场景正在急剧增加。
+Dialogue: 0,0:01:30.48,0:01:32.07,Sub,,0,0,0,,I mean, we see it in our own lives, right?\N我们在自己的生活中就能看到这一点，对吧？
+Dialogue: 0,0:01:32.12,0:01:38.27,Sub,,0,0,0,,As consumers or in businesses and and how it is making everything more efficient and so on.\N无论是作为消费者，还是在企业中，它正在让一切变得更加高效，等等。
+Dialogue: 0,0:01:38.32,0:01:46.13,Sub,,0,0,0,,But to build all of that, you need the AI factories for which, of course, you need physical infrastructure and also you need available energy.\N但要构建这一切，你需要人工智能工厂，而要建设人工智能工厂，自然就需要物理基础设施，\N也需要充足的能源供应。
+Dialogue: 0,0:01:46.18,0:01:46.48,Sub,,0,0,0,,Now,\N现在，
+Dialogue: 0,0:01:46.41,0:01:49.75,Sub,,0,0,0,,when we think about the overall planet and the amount of energy available and we have\N当我们考虑整个地球以及可用能源总量时，
+Dialogue: 0,0:01:49.80,0:01:52.58,Sub,,0,0,0,,to keep in mind that at the end of the day it has to be sustainable,\N我们必须牢记，最终必须是可持续的，
+Dialogue: 0,0:01:52.63,0:01:53.31,Sub,,0,0,0,,too, right?\N对吧？
+Dialogue: 0,0:01:53.36,0:01:57.80,Sub,,0,0,0,,So, available energy and green energy availability is overall a challenge.\N因此，可用能源和绿色能源的供给总体上是一个挑战。
+Dialogue: 0,0:01:57.85,0:01:59.94,Sub,,0,0,0,,And that's why the big push right now.\N这也正是当前大力推动的原因。
+Dialogue: 0,0:01:59.99,0:02:04.78,Sub,,0,0,0,,And when Jensen also shares the bottom layer, it's so important for us to be able to solve for that.\N当黄仁勋也分享底层架构时，我们能够解决这一问题就显得尤为重要。
+Dialogue: 0,0:02:04.83,0:02:07.05,Sub,,0,0,0,,So, yeah, that's a huge issue at hand.\N所以，是的，这确实是一个重大问题。
+Dialogue: 0,0:02:07.10,0:02:11.25,Sub,,0,0,0,,So, it's related to grid infrastructures, it's related to clean generation of energy,\N这与电网基础设施有关，与清洁能源的生成有关，
+Dialogue: 0,0:02:11.30,0:02:17.30,Sub,,0,0,0,,it's related to availability of physical infrastructure which is efficient, which is where companies like us come in.\N也与高效物理基础设施的可用性有关，而这正是我们这类公司可以发挥作用的地方。
+Dialogue: 0,0:02:17.35,0:02:19.26,Sub,,0,0,0,,So, so that's the overall challenge.\N所以，这就是整体面临的挑战。
+Dialogue: 0,0:02:19.31,0:02:21.57,Sub,,0,0,0,,But like you said, it's also a huge opportunity.\N但正如你所说，这也是一次巨大的机遇。
+Dialogue: 0,0:02:21.62,0:02:27.47,Sub,,0,0,0,,It's a huge opportunity because while you think about availability of energy,\N这是一个巨大的机遇，因为当你思考能源可用性时，
+Dialogue: 0,0:02:27.52,0:02:34.15,Sub,,0,0,0,,you also have to think about how utilizing AI you can make the availability of energy better.\N你也必须考虑如何通过利用人工智能来提升能源的可用性。
+Dialogue: 0,0:02:34.20,0:02:39.21,Sub,,0,0,0,,So, at Schneider, for example, what we talk about is AI for energy and energy for AI, right?\N举个例子，在施耐德电气，我们谈论的是人工智能赋能能源，以及能源支持人工智能，对吧？
+Dialogue: 0,0:02:39.26,0:02:42.81,Sub,,0,0,0,,Everybody talks about energy for AI or energy so much of energy needed.\N大家都在谈论人工智能所需的能源，或者能源消耗量巨大。
+Dialogue: 0,0:02:42.86,0:02:48.15,Sub,,0,0,0,,But AI can actually enable by simplifying through digital and so on.\N但实际上，人工智能可以通过数字化等方式简化流程，从而实现这一点。
+Dialogue: 0,0:02:48.20,0:02:50.57,Sub,,0,0,0,,Isn't that so funny how it works where it's, you know,\N这不是很有趣吗，事情的发展是这样的，
+Dialogue: 0,0:02:50.62,0:02:57.99,Sub,,0,0,0,,we need so much energy for AI and AI is going to be the enabler to solve that that challenge at the end of the day.\N我们需要大量能源来支持人工智能，而最终人工智能将成为解决这一挑战的关键。
+Dialogue: 0,0:02:58.04,0:03:04.22,Sub,,0,0,0,,What are some examples of of AI being able to do that that you have seen being able to solve some\N你能举出一些人工智能能够做到这一点的例子吗？你见过哪些案例成功解决了
+Dialogue: 0,0:03:04.27,0:03:10.55,Sub,,0,0,0,,of these grid challenges because the grid really isn't set up for this level of scaling when it comes to AI?\N这些电网挑战？因为电网实际上并未为人工智能的这种规模扩展做好准备。
+Dialogue: 0,0:03:10.60,0:03:13.11,Sub,,0,0,0,,Multiple examples I can give you.\N我可以给你举出多个例子。
+Dialogue: 0,0:03:13.16,0:03:18.87,Sub,,0,0,0,,So, one of the examples I give you is when you think about uh in a large data center, right?\N比如，当你想到大型数据中心时，情况就是如此，
+Dialogue: 0,0:03:18.92,0:03:22.67,Sub,,0,0,0,,You there's so much of heat getting generation generated because of compute.\N由于计算需求，产生了大量热量。
+Dialogue: 0,0:03:22.72,0:03:28.19,Sub,,0,0,0,,So, you need to take out the heat, which means you need cooling and you need cooling systems and HVACs and so on.\N所以，你需要把热量排出去，这意味着你需要冷却系统，需要空调系统等等。
+Dialogue: 0,0:03:28.24,0:03:36.72,Sub,,0,0,0,,Just by utilizing AI algorithms on how historically the air conditioning system HVAC systems are working,\N仅仅通过利用AI算法分析空调系统的历史运行情况，
+Dialogue: 0,0:03:36.77,0:03:39.99,Sub,,0,0,0,,we are able to save almost 10% energy being utilized, right?\N我们就能节省将近10%的能源消耗，对吧？
+Dialogue: 0,0:03:40.04,0:03:44.87,Sub,,0,0,0,,So, this is when you turn them on, turn them off, etc. So, this is where Agentic comes into play, right?\N比如说，什么时候开启、关闭系统等等。这正是代理式AI发挥作用的地方，对吧？
+Dialogue: 0,0:03:44.92,0:03:48.35,Sub,,0,0,0,,I mean, it automates the whole performance.\N我的意思是，它能自动完成整个性能优化。
+Dialogue: 0,0:03:48.40,0:03:54.29,Sub,,0,0,0,,Other examples of where AI uh can help is uh for example,\NAI能提供帮助的其他例子还有，比如，
+Dialogue: 0,0:03:54.34,0:04:00.35,Sub,,0,0,0,,overall in a in a in a large data center environment, in the on the physical layer, you have compute.\N在大型数据中心环境中，物理层上你有计算资源。
+Dialogue: 0,0:04:00.40,0:04:06.20,Sub,,0,0,0,,So, when you apply AI to think about when is compute needed and when it is not needed,\N当你应用AI来判断何时需要计算，何时不需要时，
+Dialogue: 0,0:04:06.25,0:04:12.71,Sub,,0,0,0,,let's say in a large training factory, that can then help utilization of energy and bringing the need for energy down.\N比如在大型训练工厂中，这就能提升能源利用效率，降低能源需求。
+Dialogue: 0,0:04:12.76,0:04:16.21,Sub,,0,0,0,,So, AI for energy actually is a very important tool.\N因此，AI在能源领域的应用实际上是非常重要的工具。
+Dialogue: 0,0:04:16.26,0:04:19.86,Sub,,0,0,0,,And and and I try to say that whenever somebody asks me this question because\N我总是想强调这一点，每当有人问我这个问题时，因为
+Dialogue: 0,0:04:19.91,0:04:23.92,Sub,,0,0,0,,it's very easy to just get overly and then perplexed by the fact that oh,\N很容易被这样一个事实搞得过于困惑：哦，
+Dialogue: 0,0:04:23.97,0:04:27.71,Sub,,0,0,0,,there's so much of energy needed, but unless we do AI, we can't even solve for that.\N所需的能量实在太多，但除非我们发展人工智能，否则连这个问题都解决不了。
+Dialogue: 0,0:04:27.76,0:04:32.79,Sub,,0,0,0,,Of course, we need to generate, but we can't solve for what is available and how much is getting utilized.\N当然，我们需要发电，但我们无法解决现有能源有多少以及利用率如何的问题。
+Dialogue: 0,0:04:32.84,0:04:33.40,Sub,,0,0,0,,Absolutely.\N完全正确。
+Dialogue: 0,0:04:33.45,0:04:40.23,Sub,,0,0,0,,And I think that's on a personal level, I think to be honest with you, that's where I am currently at in my my research journey, if you will,\N我认为这在个人层面上也是如此，坦白说，这正是我目前研究旅程中的状态，如果你愿意这么理解的话，
+Dialogue: 0,0:04:40.28,0:04:48.79,Sub,,0,0,0,,when it comes to AI and the energy required to to keep on scaling is I'm I'm in that stuck phase where it's,\N关于人工智能以及持续扩展所需的能源，我正处于一个卡住的阶段，
+Dialogue: 0,0:04:48.84,0:04:50.51,Sub,,0,0,0,,you know, well, how are we going to solve this?\N你知道，我们到底该如何解决这个问题？
+Dialogue: 0,0:04:50.56,0:04:51.27,Sub,,0,0,0,,Where is it going to go?\N这个问题最终会走向何方？
+Dialogue: 0,0:04:51.32,0:04:59.35,Sub,,0,0,0,,So, hearing from you of that you those use cases and examples with AI is really exciting, especially that stat 10% for cooling.\N所以听到你分享这些人工智能的应用案例和实例，真的令人兴奋，尤其是那个10%用于冷却的统计数据。
+Dialogue: 0,0:04:59.40,0:04:59.70,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:04:59.66,0:05:03.16,Sub,,0,0,0,,I mean, there there are other examples I'll give you like when you think about software.\N比如说软件，我还可以举出其他例子。
+Dialogue: 0,0:05:03.21,0:05:08.43,Sub,,0,0,0,,We have one of our businesses which is called the digital grid business, which is how do you optimize the grid?\N我们有一个业务部门叫做数字电网业务，就是如何优化电网运行。
+Dialogue: 0,0:05:08.48,0:05:17.55,Sub,,0,0,0,,Just by utilizing software on how the grid is managed, you're able to bring down the technical losses by a few percentage points.\N仅仅通过利用软件来管理电网，就能将技术损耗降低几个百分点。
+Dialogue: 0,0:05:17.60,0:05:23.57,Sub,,0,0,0,,Now, that means that much of available energy which can be utilized for all the other things we're trying to do.\N现在，这意味着可用于我们正在尝试完成的其他所有事情的可用能源将大幅减少。
+Dialogue: 0,0:05:23.62,0:05:26.52,Sub,,0,0,0,,Now, if you put that in AI, AI helps again, right?\N现在，如果你把这应用到人工智能上，人工智能又能再次发挥作用，对吧？
+Dialogue: 0,0:05:26.57,0:05:29.47,Sub,,0,0,0,,So, it's it's almost circular if you think about it.\N所以，如果你仔细想想，这几乎是环环相扣的。
+Dialogue: 0,0:05:29.52,0:05:30.11,Sub,,0,0,0,,You know,\N你知道，
+Dialogue: 0,0:05:30.16,0:05:38.40,Sub,,0,0,0,,have you at Schneider been working on this with AI for I'm curious because right now I feel like it's a topic of conversation and I'm sure you've,\N施耐德电气的你们是否已经用人工智能在研究这个问题？我很好奇，因为目前我觉得这已经成为一个热门话题，\N而且我确信你们，
+Dialogue: 0,0:05:38.45,0:05:39.09,Sub,,0,0,0,,you know,\N你知道，
+Dialogue: 0,0:05:39.14,0:05:44.54,Sub,,0,0,0,,been bombarded with so many questions around this, but have you been working on this way before,\N一定被各种关于这个问题的提问轰炸得应接不暇，但你们是不是在更早之前就已经在做这方面的工作了，
+Dialogue: 0,0:05:44.59,0:05:49.13,Sub,,0,0,0,,I'm sure, that people were even starting to really think about it, like the general public?\N我相信，当时人们甚至还没有真正开始认真思考这个问题，比如普通大众？
+Dialogue: 0,0:05:49.18,0:05:57.15,Sub,,0,0,0,,Yeah, and and and look, the the need for energy is something which has been a challenge for many years.\N是的，而且说实话，能源需求一直是一个多年来的挑战。
+Dialogue: 0,0:05:57.20,0:05:59.23,Sub,,0,0,0,,It's not something new, right?\N这并不是什么新鲜事，对吧？
+Dialogue: 0,0:05:59.28,0:06:06.97,Sub,,0,0,0,,The only thing is because now we have stronger LLMs and we have much stronger compute capability,\N唯一不同的是，现在我们有了更强的大型语言模型，以及更强大的计算能力，
+Dialogue: 0,0:06:07.02,0:06:11.85,Sub,,0,0,0,,NVIDIA, the the application of AI has become rapidly faster.\N英伟达的AI应用已经变得迅速发展。
+Dialogue: 0,0:06:11.90,0:06:19.95,Sub,,0,0,0,,So, hence the need of energy has gone up dramatically, but the need of energy for data centers has always been a challenge.\N因此，能源需求大幅上升，但数据中心的能源需求始终是个挑战。
+Dialogue: 0,0:06:20.00,0:06:23.99,Sub,,0,0,0,,For a company like us, we look at it from two points of view.\N对我们这样的公司而言，我们从两个角度来考虑这个问题。
+Dialogue: 0,0:06:24.04,0:06:30.07,Sub,,0,0,0,,First, because we create the physical infrastructure, so our goal always is to make it more and more efficient.\N首先，因为我们构建物理基础设施，所以我们的目标始终是让其越来越高效。
+Dialogue: 0,0:06:30.12,0:06:31.81,Sub,,0,0,0,,And efficiency then helps.\N效率能够带来帮助。
+Dialogue: 0,0:06:31.86,0:06:39.35,Sub,,0,0,0,,Efficiency is through design of the product, but efficiency is also through digital, which is how you manage those products.\N效率来自于产品设计，也来自于数字化，也就是你如何管理这些产品。
+Dialogue: 0,0:06:39.40,0:06:42.46,Sub,,0,0,0,,The entire the entire digital part, the software part of it.\N整个数字化部分，也就是软件部分。
+Dialogue: 0,0:06:42.51,0:06:42.81,Sub,,0,0,0,,So,\N所以，
+Dialogue: 0,0:06:42.74,0:06:48.79,Sub,,0,0,0,,we've always as a company been been working on bringing out those kind of technologies so that the\N我们公司一直致力于推出这类技术，以实现
+Dialogue: 0,0:06:48.84,0:06:53.80,Sub,,0,0,0,,input energy which is going into a data center and how much is actually getting utilized by compute,\N输入数据中心的能源与实际被计算所利用的能源之间的差距，
+Dialogue: 0,0:06:53.85,0:06:55.83,Sub,,0,0,0,,you try to reduce that gap dramatically.\N尽可能大幅缩小这一差距。
+Dialogue: 0,0:06:55.88,0:07:00.79,Sub,,0,0,0,,So, that's been an effort of Schneider Electric for a very long time.\N这正是施耐德电气长期努力的方向。
+Dialogue: 0,0:07:00.84,0:07:05.64,Sub,,0,0,0,,We've also been also focused on thinking about how you utilize that in a sustainable fashion.\N我们也一直专注于思考如何以可持续的方式利用这些能源。
+Dialogue: 0,0:07:05.69,0:07:10.90,Sub,,0,0,0,,It's just that today, with the demand going up so much, everything needs to be accelerated, right?\N今天由于需求大幅上升，一切都需要加速，对吧？
+Dialogue: 0,0:07:10.96,0:07:16.65,Sub,,0,0,0,,So, it's not just accelerated compute, it's accelerated generation of energy, it's accelerated infrastructure which is needed,\N所以，这不仅仅是加速计算，还包括加速能源生成，以及所需的加速基础设施，
+Dialogue: 0,0:07:16.70,0:07:20.93,Sub,,0,0,0,,it's accelerated uh digital, which is all softwares which are going to make it easier.\N还有加速数字化，也就是所有将使其更简单的软件。
+Dialogue: 0,0:07:20.98,0:07:22.72,Sub,,0,0,0,,So, all of that has to be accelerated.\N因此，所有这些都必须被加速。
+Dialogue: 0,0:07:22.77,0:07:24.86,Sub,,0,0,0,,It really can't be done in silos.\N真的不能各自为政。
+Dialogue: 0,0:07:24.91,0:07:27.70,Sub,,0,0,0,,It has to be a solution all together almost.\N它几乎必须是一个整体解决方案。
+Dialogue: 0,0:07:27.74,0:07:28.23,Sub,,0,0,0,,Exactly.\N完全正确。
+Dialogue: 0,0:07:28.28,0:07:36.40,Sub,,0,0,0,,I mean, that's such a good point you're making because when you also think about the entire buildout of a AI factory, the each system,\N我的意思是，你提到的这一点非常到位，因为当你考虑到整个 AI 工厂的建设时，每个系统，
+Dialogue: 0,0:07:36.45,0:07:43.43,Sub,,0,0,0,,each each component of the system is important because you get the best optimization\N系统中的每个组件都很重要，因为当它们作为一个整体协同工作时，
+Dialogue: 0,0:07:43.48,0:07:47.86,Sub,,0,0,0,,of both the physical layer and the software when it works as a system.\N你才能在物理层和软件层面实现最佳优化。
+Dialogue: 0,0:07:47.91,0:07:49.71,Sub,,0,0,0,,So, the system plays absolutely critical.\N因此，系统起着绝对关键的作用。
+Dialogue: 0,0:07:49.76,0:07:50.69,Sub,,0,0,0,,So, great point.\N所以，非常好的观点。
+Dialogue: 0,0:07:50.74,0:07:57.29,Sub,,0,0,0,,You know, I know Schneider does both, as you mentioned, the physical aspect, like the the physical side of things and then also the software.\N你知道，正如你提到的，施耐德电气既做实体方面，比如实际的硬件部分，也做软件方面。
+Dialogue: 0,0:07:57.34,0:08:01.50,Sub,,0,0,0,,Are there any scenarios where you are solving a problem,\N有没有一些场景是你在解决某个问题时，
+Dialogue: 0,0:08:01.56,0:08:09.52,Sub,,0,0,0,,working with a company who already has one or the other and even though both are so important, you have to kind of really adjust based on that?\N与一家已经拥有其中一项（实体或软件）的公司合作，尽管两者都非常重要，\N但你仍需根据具体情况做出相应调整？
+Dialogue: 0,0:08:09.57,0:08:17.00,Sub,,0,0,0,,So, maybe it's an existing AI factory or they have pretty archaic software that they're dealing with.\N比如说，可能是一个已有的 AI 工厂，或者他们正在使用非常陈旧的软件。
+Dialogue: 0,0:08:17.05,0:08:18.34,Sub,,0,0,0,,Are there any cases of that?\N有这样的情况吗？
+Dialogue: 0,0:08:18.39,0:08:23.50,Sub,,0,0,0,,So, your your question really is around, let's say, brownfield Yeah. will, right?\N所以，你的问题实际上是在讨论，比如说“既有系统”场景，对吧？
+Dialogue: 0,0:08:23.55,0:08:26.20,Sub,,0,0,0,,And uh I mean, there are not many existing AI factories.\N而且说实话，现有的 AI 工厂并不多。
+Dialogue: 0,0:08:26.25,0:08:26.98,Sub,,0,0,0,,Yeah, that's true.\N是的，这没错。
+Dialogue: 0,0:08:27.03,0:08:28.59,Sub,,0,0,0,,That's true.\N没错。
+Dialogue: 0,0:08:28.64,0:08:30.68,Sub,,0,0,0,,But we've we've been building data centers.\N但我们一直在建设数据中心。
+Dialogue: 0,0:08:30.73,0:08:34.07,Sub,,0,0,0,,Some of the world's been building data centers for many decades now, right?\N事实上，全世界已经建设数据中心几十年了，对吧？
+Dialogue: 0,0:08:34.12,0:08:41.83,Sub,,0,0,0,,The and typical utilization levels in data centers are extremely high right now, as you can imagine, because the demand is so high.\N正如你所想象的，如今数据中心的典型利用率非常高，因为需求太旺盛了。
+Dialogue: 0,0:08:41.88,0:08:52.83,Sub,,0,0,0,,But some of the builds which happened in the past have reached a limit of performance simply because they were never built for this level of compute.\N但过去的一些系统设计已达到性能极限，仅仅是因为它们从未为这种级别的计算能力而构建。
+Dialogue: 0,0:08:52.88,0:08:58.11,Sub,,0,0,0,,So, we have those kind of examples and to your point, both on the physical layer and the software which is utilized there.\N因此，我们有这类例子，正如你所指出的，在物理层和所使用的软件方面都是如此。
+Dialogue: 0,0:08:58.16,0:09:04.06,Sub,,0,0,0,,There are times when you can have a brownfield environment and you can apply software and when we say software,\N有时你面对的是一个既有系统环境，可以应用软件，当我们说软件时，
+Dialogue: 0,0:09:04.11,0:09:09.00,Sub,,0,0,0,,we talk about energy intelligence and I'll maybe take a second here to explain to you what that means.\N我们指的是能源智能，我稍作解释，说明一下它的含义。
+Dialogue: 0,0:09:09.04,0:09:15.29,Sub,,0,0,0,,Energy intelligence is where when you have performance data of data centers as one\N能源智能是指当你拥有数据中心的性能数据作为例子之一，
+Dialogue: 0,0:09:15.34,0:09:20.06,Sub,,0,0,0,,example and any other application for that matter for the longest period of time,\N以及任何其他应用长达数十年的运行数据，
+Dialogue: 0,0:09:20.11,0:09:27.03,Sub,,0,0,0,,for decades, you utilize that data and then put AI on top of the data with the help of software,\N你利用这些数据，并借助软件在数据之上部署人工智能，
+Dialogue: 0,0:09:27.08,0:09:37.01,Sub,,0,0,0,,come up with insights which you can either be AI augmented or AI native, more so AI native now when you heard that as a conversation,\N从而获得洞察，这些洞察可以是AI增强的，也可以是AI原生的，现在更多是AI原生的，\N当你听到这个概念时，
+Dialogue: 0,0:09:37.06,0:09:43.34,Sub,,0,0,0,,so that those insights can help improve the performance of the physical layer, right?\N从而使这些洞察有助于提升物理层的性能，对吧？
+Dialogue: 0,0:09:43.39,0:09:49.67,Sub,,0,0,0,,Now, in a brownfield brownfield environment, sometimes with energy intelligence this can be done.\N在既有系统环境中，有时可以通过能源智能实现这一点。
+Dialogue: 0,0:09:49.72,0:09:57.47,Sub,,0,0,0,,The challenge always is if it is a much older environment, the physical layer is not digital.\N问题始终在于，如果这是一个更老旧的环境，物理层并未实现数字化。
+Dialogue: 0,0:09:57.52,0:09:57.82,Sub,,0,0,0,,Yes.\N是的。
+Dialogue: 0,0:09:57.80,0:10:08.79,Sub,,0,0,0,,So, either you attach something like an appliance on the physical layer to make it digital or you really need to swipe it out.\N所以，要么你在物理层附加一个设备，比如电器，使其数字化，要么你真的需要把它替换掉。
+Dialogue: 0,0:10:08.84,0:10:11.63,Sub,,0,0,0,,So it's a whole process like as a company we do that for our customer.\N这是一个完整的过程，就像我们公司为客户提供这样的服务一样。
+Dialogue: 0,0:10:11.68,0:10:17.07,Sub,,0,0,0,,First of all we have ourselves been building data centers for our customers for many decades now, right?\N首先，我们自己已经为客户提供数据中心建设服务几十年了，对吧？
+Dialogue: 0,0:10:17.12,0:10:26.16,Sub,,0,0,0,,So we work with them to think about their physical layer and do a complete asset analysis etc. Try to bring in digital software etc. to simplify.\N所以我们会和他们一起思考物理层的问题，进行完整的资产分析等，尝试引入数字化软件等，以简化流程。
+Dialogue: 0,0:10:26.21,0:10:33.52,Sub,,0,0,0,,But if there are times there the physical layer is just not digital at all then all you have to do is you have to swap it out.\N但如果物理层完全无法数字化，那你就只能把它替换掉。
+Dialogue: 0,0:10:33.57,0:10:35.44,Sub,,0,0,0,,Absolutely. are those kind of scenarios.\N完全正确，就是这类情况。
+Dialogue: 0,0:10:35.49,0:10:36.92,Sub,,0,0,0,,That's really interesting.\N这真的很有趣。
+Dialogue: 0,0:10:36.97,0:10:43.67,Sub,,0,0,0,,It's it's exciting to me or interesting to me because every scenario is so different and every challenge is is\N这让我感到兴奋或有趣，因为每个场景都完全不同，每个挑战也各不相同。
+Dialogue: 0,0:10:43.72,0:10:49.26,Sub,,0,0,0,,I mean there's a lot of similarities but the way you have to think slightly about each one is different.\N我的意思是虽然有很多相似之处，但你对每个场景的思考方式都需要稍作调整。
+Dialogue: 0,0:10:49.31,0:10:52.89,Sub,,0,0,0,,Yeah, I mean it's different also because it depends on where the data center is located.\N是的，这确实也取决于数据中心的位置。
+Dialogue: 0,0:10:52.94,0:10:57.82,Sub,,0,0,0,,It depends on the the environment around availability of power.\N这取决于周围的环境以及电力供应的可用性。
+Dialogue: 0,0:10:57.87,0:11:02.42,Sub,,0,0,0,,How much more power is needed like for example if you already maxed out on power availability\N比如说，如果电力供应已经用到极限了，那还需要增加多少电力？
+Dialogue: 0,0:11:02.47,0:11:08.63,Sub,,0,0,0,,in a certain geographical location even if you can build more it there is no point of that,\N在某个特定地理位置，即使你能建更多，但那样做也没有意义，
+Dialogue: 0,0:11:08.68,0:11:08.98,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:11:08.95,0:11:10.15,Sub,,0,0,0,,Yeah, I didn't think about that.\N是啊，我之前没想到这一点。
+Dialogue: 0,0:11:10.20,0:11:11.91,Sub,,0,0,0,,That's a very good point.\N这是个非常好的观点。
+Dialogue: 0,0:11:11.96,0:11:19.60,Sub,,0,0,0,,Why is it important and we kind of spoke about this earlier but why is it important to manage all of these systems together for AI factories?\N为什么这很重要？我们之前其实也谈过，但为什么要把所有这些系统整合起来管理，\N对 AI 工厂来说如此重要？
+Dialogue: 0,0:11:19.65,0:11:21.22,Sub,,0,0,0,,Can you expand on that a bit more?\N你能再详细解释一下吗？
+Dialogue: 0,0:11:21.27,0:11:26.71,Sub,,0,0,0,,Yeah, you know when you think about an AI factory and when you think about everything that goes into the physical layer.\N是的，当你想到 AI 工厂，以及构成物理层的所有东西时。
+Dialogue: 0,0:11:26.76,0:11:32.98,Sub,,0,0,0,,So first of all you have energy coming in and even in an AI factory which by the way is some\N首先，你需要输入能源，而 AI 工厂本身——顺便说一句——是某些利用率极高的环境之一，
+Dialogue: 0,0:11:33.02,0:11:40.61,Sub,,0,0,0,,of the most let's say well utilized environments also because there's a lot of training which is happening in those AI factories,\N因为在这些 AI 工厂里正在进行大量训练，
+Dialogue: 0,0:11:40.66,0:11:40.96,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:11:40.91,0:11:44.15,Sub,,0,0,0,,So it's it's kind of similar type of loads, right?\N所以这些负载类型其实类似，对吧？
+Dialogue: 0,0:11:44.20,0:11:49.32,Sub,,0,0,0,,Even in those environments there is standard capacity of energy which means if you're getting\N即使在这些环境中，能源也有标准容量，这意味着如果你获得的能源
+Dialogue: 0,0:11:49.37,0:11:54.95,Sub,,0,0,0,,100 points of energy coming in you're utilizing only 64 as an example for compute.\N100点能量输入，你仅利用其中64点用于计算，仅以这个为例。
+Dialogue: 0,0:11:55.00,0:11:55.72,Sub,,0,0,0,,Which is the whole point.\N这正是重点所在。
+Dialogue: 0,0:11:55.77,0:11:58.37,Sub,,0,0,0,,Which means you still have 40 which is standard somewhere.\N意味着你仍剩下40点，这在某些地方属于标准水平。
+Dialogue: 0,0:11:58.42,0:11:58.79,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:11:58.82,0:12:00.31,Sub,,0,0,0,,So that's one example.\N所以这只是其中一个例子。
+Dialogue: 0,0:12:00.36,0:12:03.45,Sub,,0,0,0,,Then when So what do you do to make it better?\N那么，你该如何让它变得更好？
+Dialogue: 0,0:12:03.50,0:12:06.79,Sub,,0,0,0,,So this is where software AI energy intelligence kind of things come into play.\N这就是软件、AI、能源智能等技术发挥作用的地方。
+Dialogue: 0,0:12:06.84,0:12:13.36,Sub,,0,0,0,,The second point is when you think about the physical layer there so you have different parts of physical layer.\N第二个要点是，当你考虑物理层时，它包含多个组成部分。
+Dialogue: 0,0:12:13.41,0:12:16.13,Sub,,0,0,0,,So you have the power infrastructure, you have the cooling infrastructure,\N你有电力基础设施，有冷却基础设施，
+Dialogue: 0,0:12:16.18,0:12:20.39,Sub,,0,0,0,,you know you have cabling, you have data, you have all of those things, right?\N还有布线、数据等所有这些，对吧？
+Dialogue: 0,0:12:20.44,0:12:24.99,Sub,,0,0,0,,So each one of them individually has to be the most efficient.\N因此，每一项都必须达到最高效率。
+Dialogue: 0,0:12:25.04,0:12:29.39,Sub,,0,0,0,,But collectively is where the handovers happen.\N但真正实现协同优化的地方，正是它们之间的衔接与配合。
+Dialogue: 0,0:12:29.44,0:12:34.80,Sub,,0,0,0,,So as an example the amount of compute getting generated leads to the utilization of\N举个例子，计算量的增加会导致电力基础设施的使用，而当电力基础设施与冷却基础设施相连时，\N这种交接至关重要。
+Dialogue: 0,0:12:34.84,0:12:41.83,Sub,,0,0,0,,the power infrastructure and when that's linked to the cooling infrastructure that handover is absolutely critical.\N如果这种交接不顺畅，就会造成大量能源损失。
+Dialogue: 0,0:12:41.88,0:12:45.97,Sub,,0,0,0,,If that handover is not seamless then you're losing a lot of energy.\N你提到的标准容量，正是能源损失发生的地方。
+Dialogue: 0,0:12:46.02,0:12:49.27,Sub,,0,0,0,,You talk about the standard capacity that's where you're losing.\N这就是为什么系统协同运作至关重要，即使每个单独组件都是最高效的。
+Dialogue: 0,0:12:49.32,0:12:58.71,Sub,,0,0,0,,So that's why the play of the system is absolutely critical even if each one of those individual components are the most efficient components,\N即使每个组件本身效率最高，系统层面的协同仍然绝对关键。
+Dialogue: 0,0:12:58.76,0:13:00.35,Sub,,0,0,0,,software defined components.\N软件定义的组件。
+Dialogue: 0,0:13:00.40,0:13:02.20,Sub,,0,0,0,,But the system play is absolutely critical.\N但系统协同运作至关重要。
+Dialogue: 0,0:13:02.25,0:13:02.65,Sub,,0,0,0,,Absolutely.\N完全正确。
+Dialogue: 0,0:13:02.70,0:13:03.40,Sub,,0,0,0,,That makes sense.\N这有道理。
+Dialogue: 0,0:13:03.45,0:13:12.79,Sub,,0,0,0,,So much energy and heat is lost if it's not for example going back to liquid cooling or or properly system put in place.\N如果没有采用液冷或没有合理部署系统，就会损失大量能量和热量。
+Dialogue: 0,0:13:12.84,0:13:13.56,Sub,,0,0,0,,Exactly.\N没错。
+Dialogue: 0,0:13:13.61,0:13:20.26,Sub,,0,0,0,,So so liquid cooling now of course I mean for us is is is an integral part of what we do, right?\N所以液冷对我们来说，毫无疑问是核心组成部分，对吧？
+Dialogue: 0,0:13:20.31,0:13:24.31,Sub,,0,0,0,,When we uh what two years ago we had Motive Air come in and join our company and they're the\N两年前我们迎来了Motivair公司加入我们的团队，他们在该领域是全球排名第一的领导者。
+Dialogue: 0,0:13:24.36,0:13:31.22,Sub,,0,0,0,,number one leader in the world in that space but it's important there not just So back to the system play.\N但重要的是，这不仅仅关乎系统层面的协同。
+Dialogue: 0,0:13:31.27,0:13:37.85,Sub,,0,0,0,,It's not just important to have the best liquid cooling technology from an offer standpoint whether the cooling distribution units or the heat\N除了在产品层面提供最佳的液冷技术，无论是冷却分配单元还是热交换器等，这一点都很重要。
+Dialogue: 0,0:13:37.90,0:13:47.75,Sub,,0,0,0,,exchangers etc. It's also important how the flow of fluid is managed inside the data center and at what temperatures it's getting managed.\N同时，数据中心内部流体的流动管理方式以及温度控制水平也同样关键。
+Dialogue: 0,0:13:47.80,0:13:49.32,Sub,,0,0,0,,What's the optimum temperature?\N最佳温度是多少？
+Dialogue: 0,0:13:49.37,0:13:54.95,Sub,,0,0,0,,Because all of that eventually is leading into the amount of energy we are consuming.\N因为所有这些最终都会影响到我们所消耗的能源量。
+Dialogue: 0,0:13:55.00,0:14:00.78,Sub,,0,0,0,,And if you're wasting energy when you're consuming it then that's that's something which makes it inefficient and of\N如果你在消耗能源时造成了浪费，那就意味着效率低下。
+Dialogue: 0,0:14:00.83,0:14:04.15,Sub,,0,0,0,,and and again we are talking about the fact we need more and more and more and more energy,\N而且我们再次强调，我们需要越来越多、越来越多、越来越多的能源。
+Dialogue: 0,0:14:04.20,0:14:04.50,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:14:04.52,0:14:05.03,Sub,,0,0,0,,Absolutely.\N完全正确。
+Dialogue: 0,0:14:05.08,0:14:06.43,Sub,,0,0,0,,That's such a good point.\N这个观点太棒了。
+Dialogue: 0,0:14:06.48,0:14:10.05,Sub,,0,0,0,,I never thought of it from that perspective especially around with liquid cooling.\N我从未从这个角度考虑过，尤其是关于液冷的问题。
+Dialogue: 0,0:14:10.10,0:14:16.62,Sub,,0,0,0,,I'm like oh liquid cooling it's going to solve going to solve so many problems but there's so much more that goes into it even the way it's flowing,\N我想，液冷能解决很多问题，但其中涉及的细节远不止这些，比如冷却液的流动方式，
+Dialogue: 0,0:14:16.67,0:14:17.50,Sub,,0,0,0,,the way it's set up.\N还有它的安装方式。
+Dialogue: 0,0:14:17.55,0:14:20.79,Sub,,0,0,0,,If it's not done properly then wasting energy.\N如果安装不当，反而会浪费能源。
+Dialogue: 0,0:14:20.84,0:14:21.79,Sub,,0,0,0,,Exactly.\N完全正确。
+Dialogue: 0,0:14:21.84,0:14:27.04,Sub,,0,0,0,,There is you know throughout our conversation we've addressed that there is a bottleneck\N你知道，在我们之前的对话中，我们已经提到过，AI 扩展过程中存在一个瓶颈，
+Dialogue: 0,0:14:27.10,0:14:32.19,Sub,,0,0,0,,when it comes to AI scaling and one of that those bottlenecks is around power.\N而这个瓶颈之一就是电力供应。
+Dialogue: 0,0:14:32.24,0:14:37.03,Sub,,0,0,0,,Other than for example liquid cooling, what are some other ways to unlock this?\N除了液冷之外，还有哪些方法可以突破这一限制？
+Dialogue: 0,0:14:37.08,0:14:42.67,Sub,,0,0,0,,So So liquid cooling is a part of the physical layer, right?\N所以，液冷是物理层的一部分，对吧？
+Dialogue: 0,0:14:42.72,0:14:49.59,Sub,,0,0,0,,So everything on the physical layer whether it's power infrastructure, cooling infrastructure has to become more and more efficient, right?\N因此，物理层上的所有东西，无论是电力基础设施还是冷却基础设施，都必须变得越来越高效，对吧？
+Dialogue: 0,0:14:49.64,0:14:51.63,Sub,,0,0,0,,Which is what we spoke about already.\N这正是我们之前讨论过的内容。
+Dialogue: 0,0:14:51.68,0:14:57.65,Sub,,0,0,0,,On top of that one way to unlock it now is with the energy intelligence.\N在此基础上，现在有一种突破方式是借助能源智能。
+Dialogue: 0,0:14:57.70,0:14:58.10,Sub,,0,0,0,,Yes.\N没错。
+Dialogue: 0,0:14:58.15,0:14:58.72,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:14:58.77,0:15:05.60,Sub,,0,0,0,,So with energy intelligence the ability to capture data to be able to design\N所以通过能源智能，能够采集数据，从而更好地进行设计。
+Dialogue: 0,0:15:05.65,0:15:09.40,Sub,,0,0,0,,better you know we talk a lot about SimReady in this conference with NVIDIA.\N在本次英伟达大会上，我们经常提到 SimReady。
+Dialogue: 0,0:15:09.45,0:15:11.20,Sub,,0,0,0,,There's a reason for that, right?\N这是有原因的，对吧？
+Dialogue: 0,0:15:11.25,0:15:13.78,Sub,,0,0,0,,Because everything which you put in if it is simulation ready,\N因为你所投入的任何东西，只要具备 SimReady 特性，
+Dialogue: 0,0:15:13.83,0:15:20.80,Sub,,0,0,0,,SimReady simulation ready then it's able to do the digital twin where even before\N那么它就能实现数字孪生，甚至在建造 AI 工厂之前，
+Dialogue: 0,0:15:20.85,0:15:25.17,Sub,,0,0,0,,building the AI factory you have a design which is the most optimum design,\N你就已经拥有了最优的设计方案，
+Dialogue: 0,0:15:25.22,0:15:25.61,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:15:25.64,0:15:29.62,Sub,,0,0,0,,So that's why this entire energy intelligence layer comes into play.\N这就是整个能源智能层发挥作用的原因。
+Dialogue: 0,0:15:29.67,0:15:35.61,Sub,,0,0,0,,So now what you can do is you can build a digital twin in advance before you make the AI factory\N现在你可以在建造 AI 工厂之前，提前构建一个数字孪生体。
+Dialogue: 0,0:15:35.66,0:15:42.11,Sub,,0,0,0,,but with the intelligence of all the years of data which you have in functioning of each one of those offers,\N借助你多年来在每个物理层产品运行中积累的数据智能，
+Dialogue: 0,0:15:42.16,0:15:51.83,Sub,,0,0,0,,those physical layer offers you create AI algorithms which tells you how to now build so much better than the way you would have built in the past.\N你可以创建 AI 算法，告诉你如何建造，比过去的方式好得多。
+Dialogue: 0,0:15:51.88,0:15:58.75,Sub,,0,0,0,,So to unlock to your point the the utilization of energy it's both on the efficiency of\N所以要实现你提到的能源利用率，既取决于物理层的效率，
+Dialogue: 0,0:15:58.80,0:16:03.09,Sub,,0,0,0,,the physical layer but it's also on the energy intelligence which comes which is again AI for energy.\N也取决于能源智能，而这本质上就是AI赋能能源。
+Dialogue: 0,0:16:03.14,0:16:04.04,Sub,,0,0,0,,I love that.\N我太喜欢这个说法了。
+Dialogue: 0,0:16:04.09,0:16:05.29,Sub,,0,0,0,,Energy intelligence.\N能源智能。
+Dialogue: 0,0:16:05.34,0:16:06.67,Sub,,0,0,0,,Energy intelligence, yes.\N能源智能，没错。
+Dialogue: 0,0:16:06.72,0:16:13.15,Sub,,0,0,0,,That's why I learned a lot through this conversation but that was for me that's the take home that I I uh That's what we do.\N这就是我从这次对话中学到的最重要的东西，对我而言，这正是我们所做的。
+Dialogue: 0,0:16:13.20,0:16:13.84,Sub,,0,0,0,,That's what we do.\N这正是我们所做的。
+Dialogue: 0,0:16:13.89,0:16:17.03,Sub,,0,0,0,,I mean as a company if you think about Schneider Electric again we've been in\N作为一家公司，如果你想想施耐德电气，我们不仅涉足数据中心，
+Dialogue: 0,0:16:17.08,0:16:21.91,Sub,,0,0,0,,the not just data center many other businesses but we are an energy management company.\N还涉足许多其他业务，但我们本质上是一家能源管理公司。
+Dialogue: 0,0:16:21.96,0:16:22.53,Sub,,0,0,0,,Yeah, yeah.\N对，没错。
+Dialogue: 0,0:16:22.58,0:16:33.24,Sub,,0,0,0,,But more and more energy needed for AI cannot happen without energy intelligence because of the learning what we have collectively for\N但随着AI对能源的需求日益增长，若没有能源智能，就无法实现，\N因为我们需要运用多年来在能源性能和利用率方面积累的集体经验，
+Dialogue: 0,0:16:33.30,0:16:39.50,Sub,,0,0,0,,so many decades on how the performance of energy is and utilization is you have to apply on that and that's energy intelligence.\N并将这些经验应用到AI中，这正是能源智能的内涵。
+Dialogue: 0,0:16:39.54,0:16:44.95,Sub,,0,0,0,,And of course there are other things then you need more grids, you need better grids and there are the many other things we need to do.\N当然，你还需要更多的电网，需要更好的电网，还有许多其他我们需要做的事情。
+Dialogue: 0,0:16:45.00,0:16:46.84,Sub,,0,0,0,,Pankaj, thank you so much for your time today.\N潘卡杰，非常感谢你今天抽出时间。
+Dialogue: 0,0:16:46.89,0:16:49.18,Sub,,0,0,0,,This was a really insightful conversation.\N这是一次非常有见地的对话。
+Dialogue: 0,0:16:49.23,0:16:49.80,Sub,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,0:16:49.85,0:16:51.39,Sub,,0,0,0,,And thank you all for tuning in.\N感谢大家的收看。
+Dialogue: 0,0:16:51.44,0:16:58.59,Sub,,0,0,0,,Make sure to go check out more sessions on demand in the GTC catalog.\N别忘了去 GTC 目录中查看更多精彩回放课程。

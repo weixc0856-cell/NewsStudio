@@ -1,0 +1,5074 @@
+1
+00:00:03,040 --> 00:00:04,565
+Okay, welcome everyone.
+好的，欢迎各位。
+
+2
+00:00:04,615 --> 00:00:11,398
+So this is the keynote session uh robot learning and models and it is my great pleasure to be the chairman of this session.
+这是主题演讲环节，主题是机器人学习与模型，我很荣幸担任本环节的主席。
+
+3
+00:00:11,448 --> 00:00:15,542
+My name is Karinne Ramirez-Amaro and I'm an associate professor at Chalmers University of
+我叫卡琳娜·拉米雷斯-阿马罗，是瑞典查尔姆斯理工大学的副教授。
+
+4
+00:00:15,592 --> 00:00:20,874
+Technology in Sweden and it's my great pleasure to introduce our first speaker uh David Hsu.
+我非常荣幸地介绍我们的第一位演讲嘉宾，大卫·许。
+
+5
+00:00:20,924 --> 00:00:28,061
+David is a provost chair professor in the department of computer science at the national university of Singapore.
+大卫是新加坡国立大学计算机科学系的校长讲席教授。
+
+6
+00:00:28,111 --> 00:00:34,653
+He's also the director of NVIDIA Research Lab in Singapore and he is an IEEE Fellow and of course has
+他同时也是英伟达新加坡研究实验室的负责人，IEEE会士，当然还获得了多项奖项，
+
+7
+00:00:34,703 --> 00:00:43,374
+won multiple awards for example the test time award at RSS in 2021 and the IJCAI-JAIR Best Paper Prize in 2022.
+例如2021年RSS的时间检验奖（Test of Time Award），以及2022年IJCAI-JAIR最佳论文奖。
+
+8
+00:00:43,424 --> 00:00:50,509
+So without further notice I I will give you the award.
+那么，不耽误大家时间，我现在就将奖项颁发给您。
+
+9
+00:00:50,559 --> 00:00:53,806
+Well, right.
+好的，没错。
+
+10
+00:00:53,856 --> 00:00:56,382
+It is a really exciting time for robotics, right?
+机器人领域现在确实是一个令人兴奋的时刻，对吧？
+
+11
+00:00:56,432 --> 00:01:04,938
+And we have massive amount of compute and data and the foundation models have brought in a new age of robotics research, technology and the industry.
+我们拥有海量的算力和数据，基础模型为机器人研究、技术和产业带来了全新的时代。
+
+12
+00:01:04,988 --> 00:01:10,830
+Uh now against this exciting background, I want to ask a very basic and hopefully important question.
+在这样一个令人振奋的背景下，我想提出一个非常基础但希望重要的问题。
+
+13
+00:01:10,880 --> 00:01:15,710
+Have we solved the problem of robot decision- making in the open world?
+我们是否解决了开放世界中机器人决策的问题？
+
+14
+00:01:15,760 --> 00:01:17,433
+Uh so what's the open world?
+嗯，那开放世界到底是什么意思？
+
+15
+00:01:17,483 --> 00:01:22,045
+Well, imagine that we have we unbox a home service robot in a new home.
+想象一下，我们在一个新家里拆开了一台家用服务机器人。
+
+16
+00:01:22,095 --> 00:01:25,790
+This robot has been trained in the factory on a variety of different kind of home but it
+这台机器人在工厂里接受了各种不同类型家庭的训练，但它
+
+17
+00:01:25,840 --> 00:01:32,226
+has never met seen this home and this robot is equipped with an RGBD camera or other sensors.
+从未见过这个家，而这台机器人配备了RGBD摄像头或其他传感器。
+
+18
+00:01:32,276 --> 00:01:42,408
+It is pre-trained with some scales to pick up and place objects to open and close doors etc etc. it has access to uh foundation models,
+它已经过预训练，具备抓取和放置物体、开关门等基本能力，还能访问基础模型，
+
+19
+00:01:42,458 --> 00:01:46,510
+lms, VLMs or whatever the latest variety is.
+大语言模型、视觉语言模型，或任何最新的模型类型。
+
+20
+00:01:46,560 --> 00:01:54,310
+Uh to make this really concrete, maybe all we wanted the robot to do is to operate the variety of different home appliances at home.
+为了更具体地说明，也许我们只希望机器人能操作家里各种不同的家用电器。
+
+21
+00:01:54,360 --> 00:01:58,429
+And in my view, the challenge remains in the open world.
+在我看来，挑战依然存在于开放世界中。
+
+22
+00:01:58,479 --> 00:02:00,116
+There are two two of them.
+有两个关键问题。
+
+23
+00:02:00,166 --> 00:02:02,444
+The first one is the scalability.
+第一个是可扩展性。
+
+24
+00:02:02,494 --> 00:02:05,210
+We have many different kind of home appliances.
+我们有各种各样的家用电器。
+
+25
+00:02:05,260 --> 00:02:07,596
+Each of them can be fairly complex.
+它们每一个都可能相当复杂。
+
+26
+00:02:07,646 --> 00:02:12,818
+And second, any of those appliance may be new to our robot and it doesn't know what to do about it.
+第二，这些电器中的任何一个都可能是我们的机器人从未见过的，它不知道该如何应对。
+
+27
+00:02:12,868 --> 00:02:14,990
+So there's uncertainty.
+因此存在不确定性。
+
+28
+00:02:15,040 --> 00:02:18,875
+So what ideas do we have to address these two challenges?
+那么，我们有哪些想法可以应对这两个挑战？
+
+29
+00:02:18,925 --> 00:02:23,150
+In the abstract, we can think of our robot as a function.
+从抽象层面来看，我们可以把机器人看作一个函数。
+
+30
+00:02:23,200 --> 00:02:30,829
+It's just a box that maps a history of perceptual inputs to output and action for robot execution.
+它只是一个将感知输入历史映射为机器人执行输出和动作的黑箱。
+
+31
+00:02:30,879 --> 00:02:36,252
+Now in the classic era of uh robotics, it's primarily model-based.
+在传统的机器人时代，这主要是基于模型的方法。
+
+32
+00:02:36,302 --> 00:02:39,742
+We think of this box consisting of modules.
+我们可以将这个黑箱看作由多个模块组成。
+
+33
+00:02:39,792 --> 00:02:44,142
+Modules for perception, state estimation, planning and control.
+包括感知、状态估计、规划和控制模块。
+
+34
+00:02:44,192 --> 00:02:52,367
+Within each of module, we have models for system dynamics, for sensor observations, for task objectives.
+在每个模块中，我们都有系统动力学、传感器观测和任务目标的模型。
+
+35
+00:02:52,417 --> 00:02:58,189
+We reason over these models in order to derive the desirable robot behavior.
+我们通过推理这些模型来推导出理想的机器人行为。
+
+36
+00:02:58,239 --> 00:03:03,205
+This uh model-based approach has a distinguished and long record.
+这种基于模型的方法有着卓越且悠久的历史。
+
+37
+00:03:03,255 --> 00:03:06,189
+Most celebrated robots are built this way.
+最著名的机器人都是这样构建的。
+
+38
+00:03:06,239 --> 00:03:08,909
+Shakey, the very first robot system.
+Shakey，第一个机器人系统。
+
+39
+00:03:08,959 --> 00:03:14,128
+Stanley, the one that opened up the autonomous driving industry.
+Stanley，开启了自动驾驶行业的那个。
+
+40
+00:03:14,178 --> 00:03:22,109
+In fact, most of the engineering systems that we experience in our daily life is built this way.
+事实上，我们日常生活中所接触的大多数工程系统都是这样构建的。
+
+41
+00:03:22,159 --> 00:03:32,829
+Now, the biggest challenge to this model based um approach in practice is how do we acquire good models, right?
+现在，基于模型的方法在实践中面临的最大挑战是如何获取优质模型，对吧？
+
+42
+00:03:32,879 --> 00:03:38,420
+uh a little bit less than uh a decade ago and there came the deep learning era.
+大约十年前，深度学习时代到来了。
+
+43
+00:03:38,470 --> 00:03:40,996
+Deep learning era is datadriven.
+深度学习时代是数据驱动的。
+
+44
+00:03:41,046 --> 00:03:46,863
+We think of this box uh we put in this box uh single monolithic uh
+我们设想这样一个盒子，把单一的、整体的
+
+45
+00:03:46,913 --> 00:03:53,806
+neural network and we acquire massive amount of data to train this neural network control policy.
+神经网络放进去，然后用海量数据来训练这个神经网络控制策略。
+
+46
+00:03:53,856 --> 00:04:01,230
+And this approach although very sounds very simple has achieved enormous proc uh pro uh success on some of the
+尽管这种方法听起来非常简单，但在一些基于模型方法难以应对的
+
+47
+00:04:01,280 --> 00:04:08,907
+most challenging tasks that the model based approach have difficulty with right at the same time I think we should probably
+最具挑战性的任务上，它取得了巨大的成功。与此同时，我认为我们可能
+
+48
+00:04:08,957 --> 00:04:18,813
+um take the uh experimental evidence holistically despite the success of this datadriven approach probably I'm not aware of a
+应该全面看待实验证据，尽管数据驱动方法取得了成功，但可能我并不了解
+
+49
+00:04:18,863 --> 00:04:25,879
+uh aircraft autopilot implemented this way uh if there is one and please Now let me know which airlines flying that.
+呃，如果飞机自动驾驶系统是这样实现的，呃，如果有这样的系统，请告诉我哪家航空公司正在使用。
+
+50
+00:04:25,929 --> 00:04:30,589
+I'm not going to get get onto the airplane again with that airline.
+我不会再乘坐那家航空公司的飞机了。
+
+51
+00:04:30,639 --> 00:04:39,054
+Um more technically uh if we have trained such a neural network controller what if we
+呃，从技术上讲，如果我们已经训练出这样的神经网络控制器，那如果我们
+
+52
+00:04:39,104 --> 00:04:45,630
+change something we change the robot we change a sensor or maybe just change a sensor mounting.
+改变某些东西，比如更换机器人，或更换传感器，甚至只是改变传感器的安装方式。
+
+53
+00:04:45,680 --> 00:04:54,028
+uh what do we usually do and how do we generalize generals over different tasks, environment conditions and sometimes robot embodiment.
+呃，我们通常怎么做？如何在不同任务、环境条件，以及有时在不同机器人形态之间实现泛化？
+
+54
+00:04:54,078 --> 00:04:59,310
+So the key question over here is can we generalize?
+所以这里的关键问题是，我们能否实现泛化？
+
+55
+00:04:59,360 --> 00:05:02,270
+Here comes now the foundation model.
+现在，基础模型登场了。
+
+56
+00:05:02,320 --> 00:05:06,985
+Foundation model brings us um a lot lot more interesting choices.
+基础模型为我们带来了大量更有趣的选择。
+
+57
+00:05:07,035 --> 00:05:13,110
+We actually have to lay out our strategy over a two-dimensional space.
+我们实际上必须在二维空间中规划我们的策略。
+
+58
+00:05:13,160 --> 00:05:17,149
+The first one is how do we represent information?
+第一个问题是，我们如何表示信息？
+
+59
+00:05:17,199 --> 00:05:27,678
+We can represent uh task relevant information in an unstructured manner as sequence of raw text, images or tokenized version of that.
+我们可以以非结构化的方式表示任务相关的信息，比如原始文本序列、图像，或这些内容的词元化版本。
+
+60
+00:05:27,728 --> 00:05:34,473
+At the other end, we can have structured representation as a list of objects, scene graphs and so on so forth.
+在另一端，我们可以采用结构化表示，例如对象列表、场景图等。
+
+61
+00:05:34,523 --> 00:05:39,869
+And similarly in the other direction dimension, we have reasoning mechanisms.
+同样地，在另一个方向维度上，我们也有推理机制。
+
+62
+00:05:39,919 --> 00:05:45,160
+We have structured reasoning mechanisms which we systematically reason through
+我们具备结构化推理机制，能够系统地进行推理。
+
+63
+00:05:45,210 --> 00:05:50,774
+combinations of information by searching a tree or perform dynamic programming.
+通过搜索树或执行动态规划来组合信息。
+
+64
+00:05:50,824 --> 00:05:57,914
+We call this I call this planning or alternatively at the other end we can perform
+我们称之为规划，或者在另一端，我们可以执行
+
+65
+00:05:57,964 --> 00:06:08,193
+autoregressive uh token prediction basically token concatenation I call that plan prediction planning and plant
+我称之为计划预测。规划与计划
+
+66
+00:06:08,243 --> 00:06:15,430
+prediction sometimes can generate the similar results however they are different the underlying um mechanism for
+预测有时能生成相似结果，但其背后的机制不同。
+
+67
+00:06:15,480 --> 00:06:21,673
+generating these results are different even though that the results sometimes are very similar or the same.
+生成这些结果的方式各不相同，尽管结果有时非常相似甚至相同。
+
+68
+00:06:21,723 --> 00:06:27,606
+So all the on the lower left quadrant we basically have the classic error the model based reasoning and
+所以左下象限基本上就是经典的基于模型的推理与规划；
+
+69
+00:06:27,656 --> 00:06:34,665
+planning we have states base search first order logic MDP so on so forth right and they are um
+规划方面，我们有基于状态的搜索、一阶逻辑、马尔可夫决策过程等，依此类推，对吧？
+
+70
+00:06:34,715 --> 00:06:45,057
+compact efficient very precise but mostly close because of the model assumptions on the upper right quadrant uh we
+紧凑、高效、非常精确，但大多是封闭的，因为受模型假设限制。而在右上象限，
+
+71
+00:06:45,107 --> 00:06:53,992
+can use the LLMs/VLMs simply as a policy we feed in the input and just ask the models
+可以直接将大语言模型/视觉语言模型用作策略，输入数据后直接向模型提问即可
+
+72
+00:06:54,042 --> 00:07:01,070
+what should I do next right so it's definitely not compact it sometimes hallucinates but it's very expressive it
+接下来我该怎么做？嗯，它肯定不是紧凑的，有时候会幻觉，但表达非常生动。
+
+73
+00:07:01,120 --> 00:07:08,865
+has no difficulty with open world at the cost of course sometimes hallucination in my view what's most interesting
+在开放世界中没有困难，当然有时会出现幻觉，我认为最有趣的是
+
+74
+00:07:08,915 --> 00:07:18,030
+the other remaining quadrants on the lower right even though we represent uh information in an unstructured manner we
+右下角的其他象限，尽管我们以非结构化的方式表示信息
+
+75
+00:07:18,080 --> 00:07:24,682
+structure the inference mechanism as a linear chain chain of thought as a table as a tree or graph.
+但我们将推理机制结构化为思维链、表格、树或图
+
+76
+00:07:24,732 --> 00:07:28,718
+Now the upper left quadrant even more interesting.
+现在左上角的象限则更加有趣
+
+77
+00:07:28,768 --> 00:07:36,743
+It says that we have structured the representation and then we ask the large model to predict what is the action to perform.
+它表示我们已经对表示进行了结构化，然后我们要求大模型预测应执行的动作
+
+78
+00:07:36,793 --> 00:07:44,485
+If you come from a reasoning or planning background, this will be a very strange combination because if we had the structural representation,
+如果你来自推理或规划背景，这会是一个非常奇怪的组合，因为如果我们已经有了结构化表示
+
+79
+00:07:44,535 --> 00:07:48,886
+why don't we perform structured inference that should give us better results?
+为什么不进行结构化推理，这本应带来更好的结果？
+
+80
+00:07:48,936 --> 00:07:51,474
+That's a very interesting um question.
+这是一个非常有趣的问题
+
+81
+00:07:51,524 --> 00:07:58,829
+Now one reason could be maybe that uh the answer uh the output is actually very simple is easy to learn.
+一个可能的原因是，也许答案本身非常简单，容易学习
+
+82
+00:07:58,879 --> 00:08:02,251
+It does not require sophisticated the reasoning.
+它不需要复杂的推理
+
+83
+00:08:02,301 --> 00:08:02,701
+Okay.
+好的
+
+84
+00:08:02,744 --> 00:08:08,073
+Now let's uh now for this talk mostly I'm going to focus on the left two quadrants and
+现在，接下来的讨论中，我主要将聚焦于左两个象限
+
+85
+00:08:08,123 --> 00:08:18,429
+show that the structured information representation benefits both plan prediction and planning with the help of foundation models.
+证明结构化信息表示在基础模型的帮助下，对计划预测和规划都有益处。
+
+86
+00:08:18,479 --> 00:08:25,070
+Now let's look at uh first of all the robot operating home app appliances.
+现在让我们先看看机器人操作家用电器的情况。
+
+87
+00:08:25,120 --> 00:08:30,257
+So model home appliances can have a very complex uh control
+因此，模型化的家用电器可能具有非常复杂的控制面板，
+
+88
+00:08:30,307 --> 00:08:35,786
+panel with underlying partially observable mechanism right that's why it comes on manual
+以及底层部分可观测的机械结构，这就是为什么需要说明书。
+
+89
+00:08:35,836 --> 00:08:43,485
+so the manual contains two kinds of things one is basically uh partial policies it tells us if you want to do this here are
+说明书中包含两类信息，一类是部分策略，它告诉我们如果想做某事，这里有哪些步骤和操作。
+
+90
+00:08:43,535 --> 00:08:51,523
+the number of steps of actions the other one is system dynamics if I do this here are the consequences right now with that one
+另一类是系统动态，即如果我执行某操作，会产生什么后果。现在有了这些信息，
+
+91
+00:08:51,573 --> 00:08:59,950
+strategy is simply to condition the foundation model on the manual uh a PDF file and ask it to tell us what to do next.
+策略就是将基础模型基于说明书（PDF 文件）进行条件化，并让它告诉我们下一步该做什么。
+
+92
+00:09:00,000 --> 00:09:01,244
+Alternatively,
+另一种方式是，
+
+93
+00:09:01,294 --> 00:09:07,745
+we may want to extract structured appliance model appliance model from this manual
+我们可能希望从说明书中提取出结构化的电器模型。
+
+94
+00:09:07,795 --> 00:09:12,877
+and then condition the model on this structured information and do the plan prediction
+然后将模型基于这种结构化信息进行条件化，并执行计划预测。
+
+95
+00:09:12,927 --> 00:09:16,214
+a little bit more precisely that we're going to using the foundation model
+更精确地说，我们将使用基础模型
+
+96
+00:09:16,264 --> 00:09:21,647
+to extract an appliance model consist of a state actions and and transition dynamics.
+提取一个由状态、动作和转移动态组成的电器模型。
+
+97
+00:09:21,697 --> 00:09:22,460
+Basically,
+基本上，
+
+98
+00:09:22,510 --> 00:09:28,013
+it's a factor the finance data model and we also extract macro actions in order to
+这是金融数据模型的一个因素，我们还会提取宏观动作，以便
+
+99
+00:09:28,063 --> 00:09:37,654
+act precisely to adjust certain variables very precisely through multiple se uh multiple uh repeated actions deterministically.
+精确地执行，通过多次重复的确定性操作，精确调整某些变量。
+
+100
+00:09:37,704 --> 00:09:41,373
+For example, set the temperature to 85 degrees exactly, right?
+比如，将温度精确设置为 85 度，对吧？
+
+101
+00:09:41,423 --> 00:09:48,198
+And with that and then at a deployment time the user gives a natural language instruction and we look at
+然后在部署阶段，用户给出自然语言指令，我们查看
+
+102
+00:09:48,248 --> 00:09:56,670
+the control panel visually and then condition all this information the language model will give us uh the next action.
+控制面板的视觉信息，再结合所有这些信息，语言模型将给出下一步操作。
+
+103
+00:09:56,720 --> 00:10:00,520
+Um so let's look at the some of the robot experiments.
+嗯，让我们看看一些机器人实验。
+
+104
+00:10:00,570 --> 00:10:06,649
+So for our robots you know operate a blender induction cooker and the water dispenser right.
+我们的机器人可以操作搅拌机、电磁炉和饮水机，对吧。
+
+105
+00:10:06,699 --> 00:10:07,056
+Okay.
+好的。
+
+106
+00:10:07,086 --> 00:10:11,882
+So let's look at the induction cooker a little bit more carefully that it's going to set it to
+让我们更仔细地看一下电磁炉，它将设置为
+
+107
+00:10:11,932 --> 00:10:21,550
+the hot spot hot pot mode and set a power to exactly 1600 uh 1600 watts for boiling the water.
+热点模式，功率精确设置为 1600 瓦，用于烧水。
+
+108
+00:10:21,600 --> 00:10:30,044
+Right now looking more closely into the performance details or we primary want to compare uh the
+现在更深入地观察性能细节，我们主要想比较一下
+
+109
+00:10:30,094 --> 00:10:36,867
+benefits of the structured information in our approach versus if you just look query the foundation model directly.
+我们方法中结构化信息的优势，相较于直接查询基座模型的情况。
+
+110
+00:10:36,917 --> 00:10:43,966
+It should the performance should be the the the chart is clear that structured information representation enhances
+性能表现应如图表所示，结构化信息表示能提升性能。
+
+111
+00:10:44,016 --> 00:10:50,718
+performance for um plan production over a wider variety of home appliances that we tested in simulation.
+在模拟中测试的多种家用电器上，结构化信息表示能提升计划生成的性能。
+
+112
+00:10:50,768 --> 00:10:51,122
+Okay.
+好的。
+
+113
+00:10:51,152 --> 00:10:58,590
+Further this benefits expands if the appliance becomes more complex that the number of variables that control the appliances increases.
+当设备变得更为复杂，控制设备的变量数量增加时，这种优势将进一步扩大。
+
+114
+00:10:58,640 --> 00:11:04,650
+Right now let's uh uh go back to the more broader kitchen tasks.
+现在，让我们回到更广泛的厨房任务。
+
+115
+00:11:04,700 --> 00:11:07,229
+Now we are facing an unknown environment.
+现在我们面对的是一个未知环境。
+
+116
+00:11:07,279 --> 00:11:11,625
+uh even though we can have a a manual for the uh for the for the appliance,
+尽管我们可以获得设备的说明书，
+
+117
+00:11:11,675 --> 00:11:14,919
+it's more difficult to have a manual for the home and the robot will face
+但要为整个家庭环境提供说明书则更加困难，机器人将面临
+
+118
+00:11:14,969 --> 00:11:23,518
+arbitrary objects unexpect uh different new object attributes and also the interaction uh of the objects.
+各种任意的、意外的、全新的物体属性，以及物体之间的交互。
+
+119
+00:11:23,568 --> 00:11:27,550
+It may encounter unexpected failures as well.
+也可能遇到意料之外的故障。
+
+120
+00:11:27,600 --> 00:11:32,910
+Now uh since the environment is new to the robots uh the robot needs to make hypothesis about
+现在由于环境对机器人来说是全新的，机器人需要提出假设。
+
+121
+00:11:32,960 --> 00:11:41,432
+the world about objects about new predicates that describing the object attributes and also the action um effects.
+世界中关于物体的新谓词，描述物体属性以及动作的影响。
+
+122
+00:11:41,482 --> 00:11:46,175
+Now every time we make a hypothesis it could be true,
+每当我们提出一个假设时，它可能是正确的，
+
+123
+00:11:46,225 --> 00:11:55,973
+false or simply unknown and the robot must verify whether the hypothesis uh is true or false actively through reasoning.
+错误的，或仅仅是未知的，机器人必须通过推理主动验证该假设是否为真或为假。
+
+124
+00:11:56,023 --> 00:12:04,123
+Now uh in short uh what do we do is that internally we maintain a set of hypothesis whose whose uh veracity may be unknown.
+简而言之，我们内部维护一组假设，这些假设的真实性可能未知。
+
+125
+00:12:04,173 --> 00:12:07,203
+We have a scene graph and there is a system dynamics.
+我们有一个场景图，以及系统动态。
+
+126
+00:12:07,253 --> 00:12:12,674
+The system dynamic controls that the out outcome of actions on the on the objects in
+系统动态控制动作对世界中物体所产生的结果，
+
+127
+00:12:12,724 --> 00:12:18,670
+the in the world but also affects our belief on whether the hypothesis is true or not.
+同时也影响我们对假设是否为真的信念。
+
+128
+00:12:18,720 --> 00:12:23,811
+Then we can uh then we want to derive the plan of actions for the robots.
+然后我们可以为机器人推导出行动计划。
+
+129
+00:12:23,861 --> 00:12:25,612
+There are two approaches.
+有两种方法。
+
+130
+00:12:25,662 --> 00:12:35,349
+One is again we can ask um the foundation model to predict the plan directly or alternatively uh we can do a search
+一种是再次让基础模型直接预测计划，或者另一种方法是进行搜索，
+
+131
+00:12:35,399 --> 00:12:43,748
+in this case that we are going to encode the input into a PDDL format and do the Fast Downward.
+在这种情况下，我们将输入编码为 PDDL 格式，并执行 Fast Downward。
+
+132
+00:12:43,798 --> 00:12:51,150
+Now one challenge here is that PDDL planning is deterministic while our uh hypothesis are uncertain.
+现在的一个挑战是，PDDL 规划是确定性的，而我们的假设却是不确定的。
+
+133
+00:12:51,200 --> 00:12:56,352
+Therefore, we have to u perform a determinization trick in order to plan effectively.
+因此，我们必须进行一次确定化处理，才能有效规划。
+
+134
+00:12:56,402 --> 00:12:59,339
+Skipping some technical uh details.
+略过一些技术细节。
+
+135
+00:12:59,389 --> 00:12:59,789
+So,
+所以，
+
+136
+00:12:59,829 --> 00:13:06,364
+let's take a look at u the uh how our robot works this
+让我们来看看这次机器人的工作流程，
+
+137
+00:13:06,414 --> 00:13:12,349
+time to heat up a chicken burger and put on the coffee table.
+为加热一个鸡肉汉堡并放到茶几上。
+
+138
+00:13:12,399 --> 00:13:18,589
+So, it has to find the burger and make sure it is made of chicken.
+它必须找到这个汉堡，并确认它是鸡肉做的。
+
+139
+00:13:18,639 --> 00:13:26,190
+So it detects that maybe there is a burger on the on the on the table and have to take a look.
+它检测到桌上可能有一个汉堡，需要进一步查看。
+
+140
+00:13:26,240 --> 00:13:28,190
+Well, unfortunately it's not made of chicken.
+不幸的是，这个汉堡并不是鸡肉做的。
+
+141
+00:13:28,240 --> 00:13:32,990
+So we have to regenerate that hypothesis and replan.
+因此我们必须重新生成假设并重新规划。
+
+142
+00:13:33,040 --> 00:13:35,390
+But they have to put away this burger first.
+但它们得先把这个汉堡收起来。
+
+143
+00:13:35,440 --> 00:13:40,274
+Then this time it discovers the kitchen and reasons that
+这次它发现了厨房，并推理出
+
+144
+00:13:40,324 --> 00:13:50,750
+the the the fridge the fridge may contain the burger.
+冰箱里可能有那个汉堡。
+
+145
+00:13:50,800 --> 00:13:52,909
+Ah, this one it is a chicken burger.
+啊，这个是鸡汉堡。
+
+146
+00:13:52,959 --> 00:13:55,469
+Good.
+好的。
+
+147
+00:13:55,519 --> 00:14:01,550
+Put it into the microwave.
+放进微波炉里。
+
+148
+00:14:01,600 --> 00:14:10,075
+activate it to heat
+启动加热功能，
+
+149
+00:14:10,125 --> 00:14:17,276
+it up until finally
+直到最终
+
+150
+00:14:17,326 --> 00:14:19,966
+it wants to u serve it on the table,
+它想把食物端上桌，
+
+151
+00:14:20,016 --> 00:14:20,403
+right?
+对吧？
+
+152
+00:14:20,433 --> 00:14:22,415
+It's a very long horizon task.
+这是一个非常长的时序任务。
+
+153
+00:14:22,465 --> 00:14:27,984
+We tried on quite a variety of different kitchen and the living room and tasks.
+我们在各种不同的厨房和客厅场景中进行了尝试，涉及多种任务。
+
+154
+00:14:28,034 --> 00:14:35,077
+And the first one is kind of cute that it wants to turn off the living room light and just look at the control panel at the number of buttons on it.
+第一个任务挺有趣的，它想关掉客厅的灯，然后盯着控制面板，数上面有多少个按钮。
+
+155
+00:14:35,127 --> 00:14:37,717
+Even the human would have difficulty with that.
+就连人类也可能会遇到困难。
+
+156
+00:14:37,767 --> 00:14:41,851
+So the robot has to try out and make hypothesis which one is the right one
+所以机器人必须不断尝试，并提出假设，判断哪个是正确的操作。
+
+157
+00:14:41,901 --> 00:14:46,642
+until it turns it off and checks that in the living room that it's actually dark.
+直到它关闭灯光，并确认客厅里确实变暗了。
+
+158
+00:14:46,692 --> 00:14:50,611
+We actually tried on different robots as well on the same with the same system.
+我们实际上也在其他机器人上使用了相同的系统进行了测试。
+
+159
+00:14:50,661 --> 00:14:55,468
+And this one's operating a microwave right now and uh and uh looking
+这个机器人现在正在操作微波炉，嗯，正在寻找
+
+160
+00:14:55,518 --> 00:14:58,283
+for drinks and looking for a mug
+饮料，还在找一只马克杯，
+
+161
+00:14:58,333 --> 00:15:10,190
+with a smiley face on the fridge.
+杯子上有笑脸，放在冰箱上。
+
+162
+00:15:10,240 --> 00:15:12,029
+Okay.
+好的。
+
+163
+00:15:12,079 --> 00:15:12,505
+All right.
+好的。
+
+164
+00:15:12,555 --> 00:15:15,239
+Look at the performance a little bit more in closer details.
+我们再更详细地看一下它的表现。
+
+165
+00:15:15,289 --> 00:15:18,347
+that we systematically evaluated in two experimental setting.
+我们在两种实验设置中系统性地评估了它。
+
+166
+00:15:18,397 --> 00:15:21,827
+The first one is the blocks processing world.
+第一种是积木处理世界。
+
+167
+00:15:21,877 --> 00:15:29,469
+It's very similar to the classic blocks world but with an additional feature that we have a set of processors that can color or
+它与经典的积木世界非常相似，但多了一个额外功能：我们有一组处理器，可以给积木上色或
+
+168
+00:15:29,519 --> 00:15:38,311
+texturize the blocks and uh and but the function of each of this processor is unknown to the robot in advance and therefore that
+赋予纹理，但机器人事先并不知道每个处理器的具体功能，因此
+
+169
+00:15:38,361 --> 00:15:45,674
+the robots to find out in order to to operate properly and the the goal is simply to achieve a configuration of blocks that
+机器人需要找出如何正确操作，目标是实现一组积木的特定配置，
+
+170
+00:15:45,724 --> 00:15:54,037
+with the right kind of uh color and texture right and the other setting is the the well-known AI2 to thorough here are the results.
+具有正确的颜色和纹理，另一个设置是众所周知的 AI2 任务，这里展示了结果。
+
+171
+00:15:54,087 --> 00:15:59,251
+Uh so there are three uh variants of this with no hypothesis being made.
+嗯，这里有三种变体，且不做出任何假设。
+
+172
+00:15:59,301 --> 00:16:03,638
+Uh we make hypothesis but assume that is always correct.
+嗯，我们做出假设，但假设其始终正确。
+
+173
+00:16:03,688 --> 00:16:07,470
+Uh and finally that we assume we make a hypothesis assume is uncertain.
+嗯，最后一种情况是我们假设做出的假设是不确定的。
+
+174
+00:16:07,520 --> 00:16:10,700
+We have to actively explore the environment in order to verify it.
+我们必须主动探索环境以验证这一点。
+
+175
+00:16:10,750 --> 00:16:16,275
+And then we use we in the first version we just query the foundation model directly.
+然后在第一种版本中，我们直接查询基础模型。
+
+176
+00:16:16,325 --> 00:16:16,669
+Okay.
+好的。
+
+177
+00:16:16,699 --> 00:16:20,333
+And you can see is that first of all that structure the model
+你可以看到，首先，结构化模型表示——
+
+178
+00:16:20,383 --> 00:16:26,958
+representation by explicitly uh enumerating and tracking the hypothesis actually helps right and second
+也就是显式枚举和跟踪假设——实际上确实有帮助；其次，
+
+179
+00:16:27,008 --> 00:16:33,263
+inserting the awareness actively exploring the world further improves the performance by a
+主动意识到并探索世界进一步显著提升了性能，
+
+180
+00:16:33,313 --> 00:16:39,790
+long margin and this is true independent whether we do planning or plan prediction.
+无论我们进行规划还是计划预测，这一结论都成立。
+
+181
+00:16:39,840 --> 00:16:45,310
+And finally that if we do structured uh reasoning that gives
+最后，如果我们进行结构化推理，这将带来
+
+182
+00:16:45,360 --> 00:16:53,554
+a significant additional um performance boost and as we increasing and the
+显著的额外性能提升，随着我们不断加大投入，
+
+183
+00:16:53,604 --> 00:17:02,700
+number of blocks the task becomes more complex and uh and and the the benefits of structured reasoning increases as we would expect.
+任务中块的数量越多，任务复杂度就越高，正如我们所预期的，结构化推理的优势也随之增加。
+
+184
+00:17:02,750 --> 00:17:07,474
+Now if we increase the number of processors the function of each process is unknown.
+现在如果我们增加处理器的数量，每个进程的功能就未知了。
+
+185
+00:17:07,524 --> 00:17:09,103
+So the uncertainty increases.
+因此，不确定性增加了。
+
+186
+00:17:09,153 --> 00:17:11,309
+So the wall becomes more open.
+于是墙变得越来越开放。
+
+187
+00:17:11,359 --> 00:17:21,230
+In this case that it's more important that uh it's more important that we um maintain the hypothesis and tracking explicitly.
+在这种情况下，更重要的是我们要明确地保持假设和跟踪。
+
+188
+00:17:21,280 --> 00:17:28,384
+Structured the reasoning becomes less important because in uncertain world if the uncertainty is high then the optimal policy
+结构化推理变得不那么重要，因为在不确定性高的世界里，最优策略并不依赖于此。
+
+189
+00:17:28,434 --> 00:17:35,950
+cannot do that well and therefore thinking about very hard about it doesn't bring a whole lot of diff benefits.
+做不到很好，因此想得再深入也未必带来太多实际好处。
+
+190
+00:17:36,000 --> 00:17:38,287
+To summarize all this,
+总而言之，
+
+191
+00:17:38,337 --> 00:17:43,507
+I'll say that structured information representation benefits both planning and
+结构化信息表示对规划都有益
+
+192
+00:17:43,557 --> 00:17:48,590
+plan prediction as structured reasoning is very important particularly for long
+计划预测作为结构化推理，在长时序场景中尤为重要
+
+193
+00:17:48,640 --> 00:17:54,574
+horizon tasks and explicitly forming hypothesis and actively exploring the environment
+长期任务和明确形成假设并主动探索环境
+
+194
+00:17:54,624 --> 00:17:58,401
+to verify them enhances the performance significantly in the open world.
+验证这些假设能显著提升开放世界中的性能
+
+195
+00:17:58,451 --> 00:18:06,270
+Right now back to our uh general question that uh
+现在回到我们之前提出的那个一般性问题
+
+196
+00:18:06,320 --> 00:18:11,047
+with foundation models we are facing a lot more interesting choices.
+使用基础模型时，我们面临更多有趣的选择
+
+197
+00:18:11,097 --> 00:18:21,950
+It's tempting to think that the train has left the classical era is headed towards uh the destination of a single monolithic neural network model.
+很容易让人认为，经典时代已经过去，正驶向单一庞大神经网络模型的终点
+
+198
+00:18:22,000 --> 00:18:27,628
+In reality I think that what we will end up with is a set of parallel tracks.
+实际上我认为，我们最终会得到一系列并行的路径
+
+199
+00:18:27,678 --> 00:18:31,550
+Each track represents a trade-off between structure and data.
+每条路径代表结构与数据之间的权衡
+
+200
+00:18:31,600 --> 00:18:36,176
+If you want to root for data, we better make sure that we have enough of them.
+如果你倾向于数据，我们必须确保数据量足够充足
+
+201
+00:18:36,226 --> 00:18:41,915
+If you want to root for structure, we have to make sure they are correct for the task domain.
+如果你倾向于结构，就必须确保它们适用于任务领域
+
+202
+00:18:41,965 --> 00:18:49,581
+And this um uh the um uh the the the future of robot architecture
+而这个，呃，机器人架构的未来
+
+203
+00:18:49,631 --> 00:18:57,070
+depends critically on this trade-off and also on this foundational consideration and their interplay,
+严重依赖于这种权衡，也依赖于这一基础性考量及其相互作用
+
+204
+00:18:57,120 --> 00:18:58,190
+right?
+对吗？
+
+205
+00:18:58,240 --> 00:19:06,504
+uh let me end by thanking the wonderful people that I'm privileged uh to work with the students the postocs and the interns especially the
+让我最后感谢一下我有幸共事的优秀团队——学生们、博士后和实习生们，尤其要感谢他们
+
+206
+00:19:06,554 --> 00:19:10,389
+three who did most of the work presented over here and also
+其中三位是这里展示的大部分工作的主要完成者
+
+207
+00:19:10,439 --> 00:19:21,689
+the our robot buddies who survived all our uh abuses during the experiments.
+我们那些在实验中经受了我们各种虐待却依然存活下来的机器人伙伴。
+
+208
+00:19:21,739 --> 00:19:25,869
+Thank you.
+谢谢。
+
+209
+00:19:25,919 --> 00:19:26,427
+Excellent.
+很好。
+
+210
+00:19:26,477 --> 00:19:27,493
+Thank you very much.
+非常感谢。
+
+211
+00:19:27,543 --> 00:19:34,270
+Uh do we we have time for one or two questions?
+呃，我们还有时间问一两个问题吗？
+
+212
+00:19:34,320 --> 00:19:35,710
+Yes.
+是的。
+
+213
+00:19:35,760 --> 00:19:40,749
+Thank you very much uh for the great talk and uh just referring back to the
+非常感谢您的精彩演讲，顺便再提一下
+
+214
+00:19:40,799 --> 00:19:46,577
+sort of quadrants that you shown that can we can organize uh data as well as reasoning.
+类似于你展示的那些象限，我们也可以对数据和推理进行分类整理。
+
+215
+00:19:46,627 --> 00:19:56,120
+I'm just curious uh do you believe that there should be another axis that accounts for more abstract versus more more concrete and physically tangible
+我只是好奇，你觉得是否应该增加一个轴，用来衡量抽象程度与具体、物理可感程度的差异？
+
+216
+00:19:56,170 --> 00:20:04,278
+forms of data or even reasoning or do you think that the model that you have already proposed readily captures uh those nuances as well?
+数据形式，甚至推理方式，你认为你之前提出的模型也能轻易捕捉到这些细微差别吗？
+
+217
+00:20:04,328 --> 00:20:07,629
+Can you elaborate on what you mean by physically tangible?
+你能详细说明一下你所说的“物理可感知”是什么意思吗？
+
+218
+00:20:07,679 --> 00:20:14,090
+Uh such as um perhaps we could view the world like more abstractly maybe
+嗯，比如我们或许可以更抽象地看待世界，也许通过层级关系。
+
+219
+00:20:14,140 --> 00:20:19,672
+through like hierarchical relationships uh or we can view the world let's say more metrically.
+或者我们可以更度量地看待世界。
+
+220
+00:20:19,722 --> 00:20:25,230
+It just feels like uh there's also like that gradient of abstract versus in the data.
+只是感觉数据中也存在这种抽象与具体的梯度。
+
+221
+00:20:25,280 --> 00:20:25,574
+Yeah.
+是的。
+
+222
+00:20:25,604 --> 00:20:29,258
+So so the one theme of this chart is about the structure.
+所以这张图的一个主题是关于结构。
+
+223
+00:20:29,308 --> 00:20:36,422
+uh so uh I'm dividing structure in probably the coarsest form possible you can elaborate uh this structure
+嗯，我目前以最粗略的形式划分结构，你可以进一步阐述一下这个结构。
+
+224
+00:20:36,472 --> 00:20:46,056
+further for example through hierarchy thank you are there
+比如通过层级关系，谢谢。还有其他问题吗？
+
+225
+00:20:46,106 --> 00:20:51,699
+any other questions okay
+还有其他问题吗？好的。
+
+226
+00:20:51,749 --> 00:20:59,825
+no thank you very Okay.
+没有了，谢谢，好的。
+
+227
+00:20:59,875 --> 00:21:06,212
+So while uh Stefanie set up I will time I will have some time to introduce her.
+趁 Stefanie 准备的时候，我还有点时间介绍她。
+
+228
+00:21:06,262 --> 00:21:09,257
+So it is my great pleasure to introduce Stefanie.
+我非常荣幸地向大家介绍斯特凡妮。
+
+229
+00:21:09,307 --> 00:21:16,989
+Sorry I need to go.
+对不起，我得走了。
+
+230
+00:21:17,039 --> 00:21:24,250
+So Stefanie Tellex uh she is a professor in computer science at Brown University and her work has received of course several
+斯特凡妮·特勒克斯，她是布朗大学计算机科学系的教授，她的研究当然获得了多项奖项，
+
+231
+00:21:24,300 --> 00:21:33,157
+awards for example thei classic paper award which is one of the recognitions as the most influential paper in the 25th AAI conference.
+例如，她那篇经典论文奖，这是对过去25年AI会议上最具影响力论文的认可之一。
+
+232
+00:21:33,207 --> 00:21:36,870
+So I will not take more of your time because this is precious.
+所以我就不多占用您的时间了，因为时间非常宝贵。
+
+233
+00:21:36,920 --> 00:21:37,857
+Uh, please.
+呃，请。
+
+234
+00:21:37,907 --> 00:21:38,350
+Yeah.
+好的。
+
+235
+00:21:38,400 --> 00:21:44,910
+Thanks.
+谢谢。
+
+236
+00:21:44,960 --> 00:21:45,361
+All right.
+好的。
+
+237
+00:21:45,411 --> 00:21:49,230
+So, today we're going to talk about how to program your robot.
+今天我们要讨论如何编程你的机器人。
+
+238
+00:21:49,280 --> 00:21:52,194
+Uh, so I want to start out by quoting Rod Brooks.
+呃，我想先引用罗德·布鲁克斯的一句话。
+
+239
+00:21:52,244 --> 00:22:01,138
+So technologies for robotics need 10 plus years of steady improvement beyond lab demos on t of the target task to mature to low cost and to
+机器人技术需要在实验室演示的基础上，针对目标任务持续改进超过十年，才能成熟到低成本，
+
+240
+00:22:01,188 --> 00:22:06,135
+have their limitations characterized well enough that they can deliver 99% of the
+并且其局限性能够被充分认知，从而实现99%的可靠交付。
+
+241
+00:22:06,185 --> 00:22:12,077
+time and every 10 years gives you another nine in the in the reliability.
+每十年可靠性再增加一个 9。
+
+242
+00:22:12,127 --> 00:22:19,037
+So even with all these large models and big data sets I think that we're still going to have to program our robot.
+即便拥有这些大型模型和庞大的数据集，我认为我们仍然需要编程来控制机器人。
+
+243
+00:22:19,087 --> 00:22:23,593
+We're taking important steps towards one hardware software loadout.
+我们正在朝着统一的软硬件配置迈出重要一步。
+
+244
+00:22:23,643 --> 00:22:29,163
+We're looking at all these humanoids in the expedition center and stuff that can do many different tasks,
+我们在展览中心看到这些仿人机器人，它们能完成多种不同的任务，
+
+245
+00:22:29,213 --> 00:22:31,646
+but there's still going to be some kind of process,
+但仍然需要某种流程，
+
+246
+00:22:31,696 --> 00:22:37,033
+some kind of programming process to specify that task and to reach those very high
+某种编程流程来定义任务，并达到我们部署这些系统到现实世界所需的
+
+247
+00:22:37,083 --> 00:22:41,710
+levels of speed and robustness that we need to deploy these systems in the real world.
+极高速度和鲁棒性水平。
+
+248
+00:22:41,760 --> 00:22:47,202
+And so the research question my group's been thinking about is what is the best way to specify that task?
+因此，我团队一直在思考的研究问题是：定义任务的最佳方式是什么？
+
+249
+00:22:47,252 --> 00:22:48,934
+Um, and there's a lot of different options.
+嗯，有很多不同的选择。
+
+250
+00:22:48,984 --> 00:22:52,039
+So, Python or C++, your favorite programming language.
+比如 Python 或 C++，你最喜欢的编程语言。
+
+251
+00:22:52,089 --> 00:22:54,554
+We've thought a lot about human language.
+我们也深入思考过人类语言。
+
+252
+00:22:54,604 --> 00:23:00,528
+Um, there's also, I think, you can't you can't be in robotics today and not think about reinforcement learning.
+嗯，我认为如今做机器人研究，不可能不考虑强化学习。
+
+253
+00:23:00,578 --> 00:23:08,413
+Uh, and so using reward functions and simulation frameworks to specify your tasks and of course demonstrations if you're doing LFD frameworks.
+嗯，因此我们使用奖励函数和仿真框架来定义任务，当然如果采用LFD框架的话，还需要示范。
+
+254
+00:23:08,463 --> 00:23:11,483
+I think there's more too, but that this is what we'll focus on today.
+我认为还有更多内容，但今天我们将聚焦于此。
+
+255
+00:23:11,533 --> 00:23:16,469
+Um, so to quote Nick Roy, someone has to sit next to the robot and make it do the thing.
+嗯，正如尼克·罗伊所说，必须有人坐在机器人旁边，让它完成任务。
+
+256
+00:23:16,519 --> 00:23:19,157
+Uh so the question is what are they doing when they're doing that?
+那么问题来了，当他们这样做时，到底在做什么？
+
+257
+00:23:19,207 --> 00:23:25,577
+What does that process look like and what should that process look like to reach these very high levels of robustness?
+这个过程看起来是什么样的？为了达到如此高的鲁棒性，这个过程应该是什么样的？
+
+258
+00:23:25,627 --> 00:23:29,567
+Uh so my group started thinking about learning from demonstration.
+嗯，因此我的团队开始思考从示范中学习。
+
+259
+00:23:29,617 --> 00:23:35,208
+Um and the thing about LFD is that it's limited to the speed of the demonstration.
+嗯，LFD的局限在于它受限于示范的速度。
+
+260
+00:23:35,258 --> 00:23:37,618
+So you can't make the robot move very fast.
+所以你无法让机器人移动得很快。
+
+261
+00:23:37,668 --> 00:23:43,192
+um if you're limited to what a human is able to telly app um or or if you're or even
+如果你受限于人类能示范的速度，或者受限于人类身体本身，
+
+262
+00:23:43,242 --> 00:23:50,206
+the human body it also has a lack of closed loop reasoning for uh which means it's hard to be robust.
+它还缺乏闭环推理能力，这意味着很难做到鲁棒。
+
+263
+00:23:50,256 --> 00:23:53,550
+So then you start to think about well okay maybe RL can fix that
+于是你开始想，好吧，也许强化学习能解决这个问题，
+
+264
+00:23:53,600 --> 00:23:59,430
+because you're doing this closed loop reasoning you could potentially reach superhuman performance uh for
+因为它在做闭环推理，有可能达到超越人类的性能。
+
+265
+00:23:59,480 --> 00:24:07,245
+the robot but then there's a challenge that you need lots of onroot data and you also have to give it a reward function to learn a good policy.
+但挑战是，你需要大量在真实机器人上采集的数据，还要给出奖励函数，才能学出好策略。
+
+266
+00:24:07,295 --> 00:24:13,408
+So we've been thinking about how to combine reinforcement learning and LFD to kind of get the best of both approaches.
+因此，我们一直在思考如何结合强化学习和模仿学习，以融合两种方法的优势。
+
+267
+00:24:13,458 --> 00:24:18,003
+So we started with um building off of the existing work of residual RL.
+所以我们从现有的残差强化学习工作基础上开始。
+
+268
+00:24:18,053 --> 00:24:19,777
+So my student Laxida who's here today,
+今天在场的我的学生拉克西达，
+
+269
+00:24:19,827 --> 00:24:25,606
+she presented this morning um in the poster session work on accelerating residual
+她今天上午在海报展示环节介绍了关于加速残差的研究工作。
+
+270
+00:24:25,656 --> 00:24:31,885
+RL by only using it when the base LFD policy is is unconfident.
+仅在基础 LFD 策略不确定时才使用强化学习。
+
+271
+00:24:31,935 --> 00:24:35,888
+So if it's not confident, then we'll use RL to try to improve it.
+如果它不够自信，我们就用强化学习来尝试改进它。
+
+272
+00:24:35,938 --> 00:24:43,661
+But if the base policy thinks it knows pretty well what to do, then we don't waste our RL trials and our learning on on that.
+但如果基础策略已经相当清楚该怎么做，我们就不会在强化学习的试验和学习上浪费资源。
+
+273
+00:24:43,711 --> 00:24:54,637
+Um and then she built on this work to do a system is called Q2RL where we extract a Q function from the LFD policy.
+然后她在此基础上构建了一个名为 Q2RL 的系统，我们从中提取了 LFD 策略的 Q 函数。
+
+274
+00:24:54,687 --> 00:25:00,644
+And what that lets us do is start with the LFD policy and improve it with reinforcement learning.
+这使我们能够从LFD策略出发，通过强化学习对其进行优化。
+
+275
+00:25:00,694 --> 00:25:04,102
+So you can see the LFD policy, this is a tight fit insertion task.
+所以你可以看到LFD策略，这是一个紧密配合的插入任务。
+
+276
+00:25:04,152 --> 00:25:05,470
+It kind of gets stuck.
+它好像卡住了。
+
+277
+00:25:05,520 --> 00:25:13,497
+Whereas the reinforcement learning policy is able to learn its way through that and deliver a robust policy for doing this tight fit insertion.
+而强化学习策略能够自行摸索出解决方案，从而实现这种精密插入的稳健策略。
+
+278
+00:25:13,547 --> 00:25:17,390
+And that's going to be at RSS in 2026.
+那篇工作将在 RSS 2026 发表。
+
+279
+00:25:17,440 --> 00:25:20,638
+Um okay, let's go to the next slide.
+嗯，好的，我们来看下一页。
+
+280
+00:25:20,688 --> 00:25:21,721
+All right.
+好的。
+
+281
+00:25:21,771 --> 00:25:26,972
+Um we also like this is kind of in line with what David was talking about.
+嗯，这其实也符合大卫刚才谈到的内容。
+
+282
+00:25:27,022 --> 00:25:31,932
+We're once you start having these skills, you want to be able to chain them together.
+一旦你掌握了这些技能，就希望能够将它们串联起来。
+
+283
+00:25:31,982 --> 00:25:40,030
+And if you spend a lot of time programming your robot to get this very high level of robust performance, you'd really like to to save that work.
+如果你花了很多时间编程，让机器人达到如此高水平的鲁棒性，那你肯定希望保留这份工作成果。
+
+284
+00:25:40,080 --> 00:25:49,102
+You don't want to just throw it all in a big a big blackbox model that maybe will drop you from 99.99 back to 95 because there's so much other data.
+你不想把所有数据都扔进一个庞大的黑箱模型里，因为其他数据太多，可能导致准确率从99.99%骤降到95%。
+
+285
+00:25:49,152 --> 00:25:57,868
+Um, so another paper we have here that's going to be presented at 3 PM is about how to chain heterogeneous skills including learn skills,
+嗯，我们这里还有一篇将在下午3点发表的论文，内容是关于如何串联异构技能，包括学习技能。
+
+286
+00:25:57,918 --> 00:26:04,240
+built-in skills that you get from the robot developer and closed loop force control policies into long horizon
+机器人开发者提供的内置技能，以及闭环力控制策略，融入长期任务中
+
+287
+00:26:04,290 --> 00:26:09,736
+plans so that you can kind of leverage the work that you've done to to make these things work.
+这样安排计划，就能充分利用你已有的工作成果，让这些事情顺利运行。
+
+288
+00:26:09,786 --> 00:26:13,442
+Okay, so now I'm going to talk about programming via natural language.
+现在，我将谈谈通过自然语言进行编程。
+
+289
+00:26:13,492 --> 00:26:15,629
+And this is something I've been working on for a long time.
+这是我长期致力于的一项工作。
+
+290
+00:26:15,679 --> 00:26:22,184
+and we got this classic paper award this year from AAAI for work we did back in 2011.
+我们今年获得了 AAAI 颁发的经典论文奖，表彰我们 2011 年的工作。
+
+291
+00:26:22,234 --> 00:26:29,236
+Um so I think that there's kind of two main approaches people are using to do this today.
+我认为目前人们主要采用两种方法来实现这一点。
+
+292
+00:26:29,286 --> 00:26:31,546
+So and it's a of course it's a spectrum.
+当然，这是一条连续的谱系。
+
+293
+00:26:31,596 --> 00:26:38,717
+Uh so on one end of the spectrum people are trying to make robots understand language by going from English or whatever the human
+在谱系的一端，人们试图让机器人理解语言：从英语或其他人类语言
+
+294
+00:26:38,767 --> 00:26:46,750
+language is to some formal representation of what those words mean and then from that to motor movements that actually make the robot go.
+映射到词语含义的形式化表示，再转化为真正驱动机器人运动的指令。
+
+295
+00:26:46,800 --> 00:26:53,390
+Um and this approach the the formal representation is is sort of a first class research question.
+这种方法中的形式化表示本身就是一个核心研究问题。
+
+296
+00:26:53,440 --> 00:26:56,001
+So I would put code as policies in this category.
+我认为代码作为策略就属于这一类别。
+
+297
+00:26:56,051 --> 00:27:00,190
+the formal language is Python or really a specific Python API that you're
+这种形式化语言是Python，或者更具体地说，是你提供的特定Python API。
+
+298
+00:27:00,240 --> 00:27:05,405
+providing sean um one of the first LLM based language understanding papers where the
+这是最早一批基于大语言模型的语言理解论文之一，其中
+
+299
+00:27:05,455 --> 00:27:10,252
+formal language was a predefined space of symbolic actions or our own work linked
+形式化语言是一个预定义的符号动作空间；我们自己的工作则把语言
+
+300
+00:27:10,302 --> 00:27:15,329
+to LTL where we're using linear temporal logic as the formal representation and the
+链接到 LTL，用线性时序逻辑作为形式化表示，
+
+301
+00:27:15,379 --> 00:27:23,003
+advantage of this approach is that we're as or well it's it's an advantage and disadvantage we can be as general or not as the formal language we
+这种方法的优势在于，我们可以像形式语言那样通用，或者说，这既是优势也是劣势，因为我们能保持与形式语言一样的通用性，或不那么通用。
+
+302
+00:27:23,053 --> 00:27:26,686
+can't say things that the formal language can't today um if it's not in
+我们无法表达形式语言目前无法表达的内容，如果它不在形式语言中。
+
+303
+00:27:26,736 --> 00:27:30,567
+the formal language then the model will never be able to transcend that language.
+那么模型将永远无法超越这种语言。
+
+304
+00:27:30,617 --> 00:27:32,654
+It will never be able to understand that language.
+它将永远无法理解这种语言。
+
+305
+00:27:32,704 --> 00:27:41,469
+On the other hand, by limiting and structuring the search space uh for the for the policy, we're able to learn for much less data.
+另一方面，通过限制和结构化策略的搜索空间，我们能够用更少的数据进行学习。
+
+306
+00:27:41,519 --> 00:27:46,479
+We're also able to be crossplatform because you can retarget the formal language
+我们还能实现跨平台，因为你可以将形式语言重新定位到不同的机器人平台。
+
+307
+00:27:46,529 --> 00:27:51,348
+to a different robotic platform without collecting new data and without doing new learning.
+无需收集新数据，也无需进行新的学习。
+
+308
+00:27:51,398 --> 00:27:56,297
+And there's also an approach for safety and explanability guarantees because you have this very crispy thing
+此外，这种方法还能提供安全性和可解释性保障，因为你有一个非常清晰明确的东西。
+
+309
+00:27:56,347 --> 00:28:00,675
+that the robot's going to try to do um after you use the LLM to extract it.
+机器人将尝试去执行这个东西，而这是在使用大语言模型提取之后得到的。
+
+310
+00:28:00,725 --> 00:28:04,723
+So on the other end of the spectrum is going from English or whatever the
+在谱系的另一端，是从英语或其他人类语言
+
+311
+00:28:04,773 --> 00:28:10,099
+human language is to some highdimensional vector space and then back out to to movement.
+映射到高维向量空间，再转换回运动。
+
+312
+00:28:10,149 --> 00:28:13,331
+So so like in the old days people would say pixels to torqus.
+就像过去人们常说的“从像素到力矩”。
+
+313
+00:28:13,381 --> 00:28:21,045
+Um now it's usually um pixels and then English the observations to joint states or Cartesian end-effector poses.
+如今通常是像素加英语观测，映射到关节状态或笛卡尔末端位姿。
+
+314
+00:28:21,095 --> 00:28:26,111
+Um so π0.5, OpenVLA, Google RT-2 are all examples of this.
+比如 π0.5、OpenVLA、Google RT-2 都是这类方法的例子。
+
+315
+00:28:26,161 --> 00:28:31,765
+You can't look at ChatGPT and not be really excited about this kind of approach.
+看着 ChatGPT，你不可能不对这类方法感到兴奋。
+
+316
+00:28:31,815 --> 00:28:38,471
+The generality of being able to map between the human language and the robot isn't limited by some formal language.
+能够在人类语言和机器人之间进行映射的通用性，并不受限于某种形式语言。
+
+317
+00:28:38,521 --> 00:28:41,395
+Um but there are trade-offs to to being over here.
+但在这里也有权衡之处。
+
+318
+00:28:41,445 --> 00:28:45,855
+So, so there's it's slower to do cross-platform generalization.
+因此，跨平台泛化速度较慢。
+
+319
+00:28:45,905 --> 00:28:52,089
+Um, and there's also questions about research questions that are about how to do safety and explanability.
+此外，还存在关于如何实现安全性和可解释性的研究问题。
+
+320
+00:28:52,139 --> 00:28:52,463
+So,
+所以，
+
+321
+00:28:52,493 --> 00:28:58,108
+we we I got a team together of people from from us which were more on the formal side and people who are
+我组建了一支团队，成员来自我们这边，一部分人更偏向形式化方法，另一部分人更偏向端到端方法，
+
+322
+00:28:58,158 --> 00:29:04,670
+more on the endto-end side uh to write a review paper about all the work that's going on sort of in this space.
+以撰写一篇综述论文，涵盖这一领域当前正在进行的所有工作。
+
+323
+00:29:04,720 --> 00:29:12,762
+We published this atkai in 24 and what we saw is that there's actually a spectrum of approaches um you know from one end where you're going to really
+我们在 2024 年发表了这篇综述，发现方法其实是一条谱系：
+
+324
+00:29:12,812 --> 00:29:18,261
+high level abstract specification languages to the other end where you're really going from you're
+一端是高层抽象规范语言，另一端是直接输出低层动作空间；每个端点都有取舍。
+
+325
+00:29:18,311 --> 00:29:23,310
+outputting very low-level uh spaces and there's trade-offs there's reasons to be at each end.
+每个端点都有其存在的理由。
+
+326
+00:29:23,360 --> 00:29:28,144
+So my goal with this team to write the paper is like everything we write about the trade-offs we should all agree with.
+因此，我带领这个团队写论文的目标是，我们所讨论的每一项权衡，所有成员都应达成共识。
+
+327
+00:29:28,194 --> 00:29:35,550
+all the members all the authors should agree with even if they are more biased towards one end or the other end of the spectrum.
+所有成员、所有作者都应认同，即使他们更偏向于光谱的一端或另一端。
+
+328
+00:29:35,600 --> 00:29:37,088
+So, so now I'll go back.
+所以，我现在会回到之前的内容。
+
+329
+00:29:37,138 --> 00:29:43,789
+So, so then I want to situate some of our work um and language understanding in this in this kind of approach.
+因此，我想把我们的一些工作，特别是语言理解，放在这种方法的背景下进行定位。
+
+330
+00:29:43,839 --> 00:29:49,981
+Uh so one paper this was at RAL in 25 called grounded equavariant manipulation.
+有一篇论文发表于 2025 年的 RAL，题目是“语言接地的等变操作”。
+
+331
+00:29:50,031 --> 00:29:55,466
+So the idea is we want to give the robot language instructions and then output robot actions.
+核心思想是，我们希望给机器人下达语言指令，然后输出机器人的动作。
+
+332
+00:29:55,516 --> 00:30:03,017
+But if we use this zeroot um even with with lots and lots and lots of data, we're not going to reach the levels of robustness that we need.
+但如果我们使用这种零样本方法，即使拥有海量数据，也难以达到所需的鲁棒性水平。
+
+333
+00:30:03,067 --> 00:30:06,178
+So then we're going to do some task specific fine-tuning, right?
+因此，我们将进行一些任务特定的微调，对吧？
+
+334
+00:30:06,228 --> 00:30:10,750
+We're going to collect task specific data to try to improve performance.
+我们将收集任务特定的数据，以尝试提升性能。
+
+335
+00:30:10,800 --> 00:30:19,949
+Um so if you do this with an end-to-end model like OpenVLA or CLIPort or RT-2, you can fine-tune these models.
+如果你用端到端模型，比如 OpenVLA、CLIPort 或 RT-2，就可以对这些模型进行微调。
+
+336
+00:30:19,999 --> 00:30:26,247
+Um but for CLIPort you need between 50 and 100 demonstrations in order to get robust performance.
+但对于 CLIPort，你需要大约 50 到 100 次示范，才能获得鲁棒的性能。
+
+337
+00:30:26,297 --> 00:30:30,220
+So it's very expensive um to to do this fine-tuning process.
+所以进行这种微调过程非常昂贵。
+
+338
+00:30:30,270 --> 00:30:35,104
+So we were asking ourselves well can we improve uh this can we still leverage internet
+所以我们一直在思考，能否改进这一点，我们是否还能继续利用互联网
+
+339
+00:30:35,154 --> 00:30:41,388
+scale models but reduce the amount of data and work that it takes to do this fine-tuning.
+利用互联网规模模型，同时减少微调所需的数据量和工作量。
+
+340
+00:30:41,438 --> 00:30:51,869
+Um so we did this by assuming we're going to give our robot a formal representation of parameterized skills pick and place um and then using
+所以我们假设给机器人一个参数化技能的正式表示，比如抓取和放置，然后使用
+
+341
+00:30:51,919 --> 00:30:58,109
+this structure we can leverage internet scale models like Grounding DINO to
+我们可以利用互联网规模的模型，比如 Grounding DINO，来实现这一结构。
+
+342
+00:30:58,159 --> 00:31:04,172
+produce uh heat map representations uh to to understand things in the language.
+生成热力图表示，以理解语言中的各种情况。
+
+343
+00:31:04,222 --> 00:31:09,937
+So if you say something like pick the banana, right, if you just use straight up Grounding DINO, it is not really sure.
+所以如果你说“拿香蕉”，对吧？如果直接用 Grounding DINO，它其实不太确定。
+
+344
+00:31:09,987 --> 00:31:12,617
+It's like the whole banana is is it comes back.
+它把整根香蕉都框出来了。
+
+345
+00:31:12,667 --> 00:31:17,811
+Um but then if you fine-tune it on the on using our approach on demonstrations,
+但如果你用我们的演示方法对其进行微调，
+
+346
+00:31:17,861 --> 00:31:25,925
+it's able to learn uh in in the in the top the middle one there uh a more targeted um representation
+它能够学习，那个中间的更精准的表示方式
+
+347
+00:31:25,975 --> 00:31:32,506
+that's actually able to figure out that that tip of the banana is is where you should it wants to be grabbing.
+实际上能判断出香蕉尖端才是应该抓取的位置。
+
+348
+00:31:32,556 --> 00:31:37,398
+Um, but we can do this in a way that generalizes uh to different demonstrations.
+嗯，但我们可以通过一种能泛化到不同示范的方式做到这一点。
+
+349
+00:31:37,448 --> 00:31:41,272
+So we're able to do things like generalize across different colors where if you say
+因此我们能够实现跨不同颜色的泛化，比如当你要求
+
+350
+00:31:41,322 --> 00:31:47,119
+like place on the blue plate um without using a visual mele app it like fixates
+把东西放在蓝色盘子上时，即使不使用视觉模型应用，它也会
+
+351
+00:31:47,169 --> 00:31:52,883
+on blue and it and it will just grab it'll be like I'm not sure which one but it's blue so I'm going to I'm going to highlight all the blue things.
+专注于蓝色，然后就会说：“我不确定是哪一个，但它是蓝色的，所以我把所有蓝色的东西都标出来。”
+
+352
+00:31:52,933 --> 00:32:02,723
+If you do the fine-tuning then it's able to to to remove like find its way through some of that and focus on the right thing the blue plate.
+如果进行了微调，它就能摆脱一些干扰，专注于正确的物体——蓝色盘子。
+
+353
+00:32:02,773 --> 00:32:10,383
+Um so uh by by you leveraging equivariance we're able to generalize to poses we haven't seen at training time.
+通过利用等变性，我们能够泛化到训练时未见过的物体姿态。
+
+354
+00:32:10,433 --> 00:32:17,925
+So we can train on a few poses of the object and then test on um unseen poses and get good performance.
+因此我们只需在少量物体姿态上进行训练，然后在未见过的姿态上测试，仍能获得良好性能。
+
+355
+00:32:17,975 --> 00:32:23,087
+Um and by leveraging the internet scale model we can do fshot learning to new tasks.
+通过利用互联网规模模型，我们可以实现少样本学习新任务。
+
+356
+00:32:23,137 --> 00:32:26,976
+So you can train on open the red drawer or open the green the the yellow drawer and the
+你可以训练模型打开红色抽屉、打开绿色抽屉或打开黄色抽屉，
+
+357
+00:32:27,026 --> 00:32:32,349
+green drawer and at test time you can do open the red drawer because that's in the internet scale
+在测试时，你可以要求打开红色抽屉，因为互联网规模模型中包含了这一信息。
+
+358
+00:32:32,399 --> 00:32:36,164
+model and you can do the things like like you can tell it to to put the cup on
+你可以告诉它把杯子放在泰姬陵的图片上，
+
+359
+00:32:36,214 --> 00:32:40,697
+the picture of the Taj Mahal and stuff like that and because it's all there in the internet scale model.
+诸如此类，因为这些信息都在互联网规模模型里。
+
+360
+00:32:40,747 --> 00:32:45,784
+Um also because we're using this structured representation this abstract skill
+此外，由于我们使用了这种结构化表示的抽象技能
+
+361
+00:32:45,834 --> 00:32:50,434
+representation we can generalize this to a lot of different robotic platforms.
+我们可以将这种表示方法推广到多种不同的机器人平台。
+
+362
+00:32:50,484 --> 00:32:56,005
+So I am not going to play all the videos and stuff but we make it run on Franka on UR on Spot
+所以我不会播放所有视频和资料，但我们可以让它在 Franka、UR 和 Spot 上运行。
+
+363
+00:32:56,055 --> 00:33:05,093
+on a bunch of different tasks because we can change what the formal representation is what what platform the formal representation is pointing to.
+在各种不同任务上运行，因为我们能改变形式化表示的内容，以及该表示所指向的平台。
+
+364
+00:33:05,143 --> 00:33:15,614
+Um and then last we we can we can we sort of showing the performance as we add more and more unseen uh translations in this case to the to the set.
+然后最后，我们展示了随着我们不断加入越来越多未见过的变换（在此情况下是到集合中的变换），性能的变化情况。
+
+365
+00:33:15,664 --> 00:33:18,030
+So open VLA drops as we add these.
+随着这些变换加入，OpenVLA 的性能开始下降。
+
+366
+00:33:18,080 --> 00:33:23,763
+Um and our approach um because of the equivariance is able to maintain good performance.
+而我们的方法由于具备等变性，能够保持良好的性能。
+
+367
+00:33:23,813 --> 00:33:28,661
+Uh and we see the same pattern with rotations as well as adding novel objects.
+我们在旋转和新增物体时也观察到了同样的模式。
+
+368
+00:33:28,711 --> 00:33:34,989
+We're doing better with less data because of the structure um that we're injecting.
+由于我们注入了结构，因此在更少数据下表现得更好。
+
+369
+00:33:35,039 --> 00:33:35,612
+Okay.
+好的。
+
+370
+00:33:35,662 --> 00:33:39,880
+Um so now I want to talk about object search.
+现在我想谈谈物体搜索。
+
+371
+00:33:39,930 --> 00:33:46,902
+Uh so for lots of things that you might want to do with your robot, it involves finding objects in the environment.
+对于你希望机器人完成的许多任务，都涉及在环境中寻找物体。
+
+372
+00:33:46,952 --> 00:33:52,771
+Um that's kind of the first thing to almost anything that you want to see happen with the robot.
+这几乎是任何你希望机器人实现的目标的第一步。
+
+373
+00:33:52,821 --> 00:34:01,485
+Uh so we have been thinking about how to do this for for a bunch of years, leveraging information from language um and also from gesture.
+嗯，我们已经为此思考了好几年，利用语言和手势的信息。
+
+374
+00:34:01,535 --> 00:34:09,137
+Um and some of the work we've been doing recently has been looking at nonhuman how nonhumans interpret gestures like puppy dogs.
+嗯，我们最近的一些研究工作是探讨非人类如何理解手势，比如小狗。
+
+375
+00:34:09,187 --> 00:34:12,559
+So puppies can interpret a human pointing gesture.
+小狗可以理解人类的指向手势。
+
+376
+00:34:12,609 --> 00:34:16,510
+Um, and we can actually learn from them how they're doing it.
+嗯，我们实际上可以从它们身上学习它们是如何做到这一点的。
+
+377
+00:34:16,560 --> 00:34:24,564
+Uh, because they're they they're probably we think they're using less sophisticated cues about how to do this um than people are doing.
+嗯，我们认为它们可能使用的线索比人类更简单。
+
+378
+00:34:24,614 --> 00:34:29,224
+Uh, so we are collaborating with Daphna Buchsbaum's Lab at Brown.
+我们正在与布朗大学的 Daphna Buchsbaum 实验室合作。
+
+379
+00:34:29,274 --> 00:34:31,442
+We put eye trackers on puppies.
+我们给小狗戴上了眼动仪。
+
+380
+00:34:31,492 --> 00:34:38,017
+Um, and we have humans and their dogs that you bring your pet dog in and you do a collaborative object search task.
+嗯，让人类和他们的狗一起参与协作找物任务，你可以带你的宠物狗来参与。
+
+381
+00:34:38,067 --> 00:34:42,999
+Um, and then we're trying to learn from that how to better improve the robot performance.
+嗯，然后我们试图从中学习，以更好地提升机器人的表现。
+
+382
+00:34:43,049 --> 00:34:49,462
+So we had an HRI paper about resolving pointing gestures that was kind of inspired by dogs with a POMDP.
+我们有一篇关于解决指向手势的人机交互论文，灵感来自小狗，使用了 POMDP。
+
+383
+00:34:49,512 --> 00:34:53,051
+So you can say spot, can you get the red cup?
+你可以说“斯波特，去把红色杯子拿过来？”
+
+384
+00:34:53,101 --> 00:34:57,257
+And you point um but and then it goes off and finds it.
+然后你指向它，它就去找并找到了。
+
+385
+00:34:57,307 --> 00:35:00,821
+Uh, and this work the robot has to start out staring at the person.
+嗯，这个工作要求机器人一开始必须盯着人看。
+
+386
+00:35:00,871 --> 00:35:09,021
+When we were doing the the human dog interaction, um we found that um actually the dog is looking all over the place.
+在进行人与狗互动时，我们发现其实狗的视线到处乱转。
+
+387
+00:35:09,071 --> 00:35:11,922
+So here's a video of a dog doing the search task.
+这是一段狗完成搜索任务的视频。
+
+388
+00:35:11,972 --> 00:35:15,390
+Um this is I my student Ivy and her pet dog Minion.
+这是我的学生 Ivy，还有她的宠物狗 Minion。
+
+389
+00:35:15,440 --> 00:35:22,518
+Uh so she's going to point for the dog and he kind of glances at the right cup and then he goes to the wrong cup and he goes over to the right cup.
+嗯，她指向狗，狗看了看右边的杯子，然后却走向了错误的杯子，接着又走到正确的杯子那里。
+
+390
+00:35:22,568 --> 00:35:25,552
+Um, and so we're collecting data of human dog diads.
+嗯，所以我们正在收集人类与狗狗配对的数据。
+
+391
+00:35:25,602 --> 00:35:36,015
+And then we're trying to do LFD policies to learn from the dog data uh and and train an autonomous policy from that for the robot especially
+然后我们正尝试利用狗的数据来学习LFD策略，并据此训练出机器人的自主策略，尤其是针对这一场景。
+
+392
+00:35:36,065 --> 00:35:40,134
+to reproduce this looking behavior that dogs are really interested like they're looking
+重现狗狗真正感兴趣、仿佛在凝视的样子
+
+393
+00:35:40,184 --> 00:35:43,739
+and at you and they're looking at the environment and and all that stuff.
+然后看向你，观察着周围环境，还有所有那些东西。
+
+394
+00:35:43,789 --> 00:35:55,630
+Um, and this is a this is going to be presented tomorrow at uh the workshop on bridging the gap between robot learning and human robot interaction.
+嗯，这个将在明天关于弥合机器人学习与人机交互之间差距的研讨会上展示。
+
+395
+00:35:55,680 --> 00:35:58,089
+Okay, I'm going to skip stuff because we're out of time,
+好吧，时间不够了，我得跳过一些内容。
+
+396
+00:35:58,139 --> 00:36:05,128
+but we have a bunch of work on English to linear temporal logic which was led by my PhD student Jason.
+但我们有一项关于将英语转换为线性时序逻辑的工作，由我的博士生杰森主导。
+
+397
+00:36:05,178 --> 00:36:08,000
+Um, and I wanted to mention that he's on the job market.
+呃，我想提一下，他正在找工作。
+
+398
+00:36:08,050 --> 00:36:14,095
+So if you're interested in going from English to uh rich semantic representations
+如果你有兴趣将英文转换为丰富的语义表示
+
+399
+00:36:14,145 --> 00:36:18,500
+to understand constraints and stuff um Jason is the person to talk to.
+要了解限制条件之类的问题，可以找杰森，他是最合适的人选。
+
+400
+00:36:18,550 --> 00:36:26,510
+Um we've also leveraged this LTL representation to enforce uh safety constraints for robot agents.
+此外，我们还利用这种LTL表示法来为机器人智能体施加安全约束。
+
+401
+00:36:26,560 --> 00:36:31,327
+Um so like existing ISO safety standards require you to promise with 10 to
+所以现有的 ISO 安全标准要求你承诺 10 的负 5 次方
+
+402
+00:36:31,377 --> 00:36:35,394
+the minus 5th probability that you're not going to fail in a way that's dangerous.
+的故障概率，也就是说不会以危险的方式失效。
+
+403
+00:36:35,444 --> 00:36:41,444
+So when you hit the kill switch on your robot, there's a 10 to the minus 5th pathway that's actually going to stop the robot.
+当你按下机器人的急停开关时，实际上只有 10 的负 5 次方量级的失效路径。
+
+404
+00:36:41,494 --> 00:36:48,510
+Um, so we asked the question, how can we have this kind of certainty on these large LLM systems?
+嗯，所以我们提出了一个问题：如何在这些大型语言模型系统上获得这种确定性？
+
+405
+00:36:48,560 --> 00:36:52,947
+Um, and we can do it in a way uh by by leveraging some of the work that we're doing with LTL,
+嗯，我们可以借助我们正在开展的 LTL 相关工作，以一种方式来实现。
+
+406
+00:36:52,997 --> 00:36:56,207
+but I don't have time to talk about it, so sorry for that.
+但我没时间聊这个，抱歉了。
+
+407
+00:36:56,257 --> 00:37:04,781
+Um, and we've also been thinking a lot about where things are at with language and robotics in this sort of new age.
+嗯，我们也在深入思考，在这个新时代背景下，语言和机器人技术的发展现状。
+
+408
+00:37:04,831 --> 00:37:06,676
+So, we were inspired by Rod's old paper.
+因此，我们受到了罗德那篇旧论文的启发。
+
+409
+00:37:06,726 --> 00:37:09,507
+Rodney Brook wrote a paper called Elephants Don't Play Chess.
+罗德尼·布鲁克斯写过一篇名为《大象不会下棋》的论文。
+
+410
+00:37:09,557 --> 00:37:11,310
+Um, a long long time ago.
+呃，很久很久以前。
+
+411
+00:37:11,360 --> 00:37:16,188
+Um, and we decided to kind of recapitulate that.
+呃，我们决定重新演绎一下这个想法。
+
+412
+00:37:16,238 --> 00:37:17,788
+It was with a with an article.
+是通过一篇文章来实现的。
+
+413
+00:37:17,838 --> 00:37:20,243
+We called it Elephants Don't Write Sonnets.
+我们把它叫做《大象不会写十四行诗》。
+
+414
+00:37:20,293 --> 00:37:29,572
+Uh, so back when Turing proposed the original Turing test, one of his prompts was please write me a sonnet on the subject of the Forth Bridge.
+当图灵提出最初的图灵测试时，其中一个提示是：请以福斯桥为主题写一首十四行诗。
+
+415
+00:37:29,622 --> 00:37:32,087
+And the agent um, actually deflects.
+而这个智能体，实际上回避了这个问题。
+
+416
+00:37:32,137 --> 00:37:33,452
+It does not write a sonnet.
+它并没有写一首十四行诗。
+
+417
+00:37:33,502 --> 00:37:35,432
+But of course today this is easy.
+但当然，今天这很容易。
+
+418
+00:37:35,482 --> 00:37:36,764
+Um any LLM can do it.
+呃，任何大语言模型都能做到。
+
+419
+00:37:36,814 --> 00:37:38,762
+This was from chat GPT.
+这是来自 ChatGPT 的结果。
+
+420
+00:37:38,812 --> 00:37:43,531
+Um and so some of what Turing's telling us is we can actually do it.
+呃，所以图灵告诉我们的一些内容，其实我们现在已经可以做到了。
+
+421
+00:37:43,581 --> 00:37:46,931
+Uh so what does that mean for robotics?
+那么这对机器人技术意味着什么？
+
+422
+00:37:46,981 --> 00:37:50,771
+Uh so we wrote this article to try to to to think about this.
+嗯，所以我们写了这篇文章，试图思考这个问题。
+
+423
+00:37:50,821 --> 00:37:54,263
+So we think intelligent agents have to be embodied.
+我们认为智能体必须具有实体。
+
+424
+00:37:54,313 --> 00:38:00,793
+They have to be processing highdimensional high frame rate input like images and joint encoders.
+它们必须处理高维度、高帧率的输入，比如图像和关节编码器数据。
+
+425
+00:38:00,843 --> 00:38:09,469
+they have to be producing highdimensional high frame rate output and they have to be doing long horizon goal- directed behavior over time.
+它们必须产生高维度、高帧率的输出，并且需要在长时间跨度内执行具有目标导向的行为。
+
+426
+00:38:09,520 --> 00:38:14,010
+Um, and then paired with this, we proposed something we called the grounded Turing test.
+与此相关，我们提出了一种称为“具身图灵测试”的方法。
+
+427
+00:38:14,060 --> 00:38:19,772
+So, we don't think language is required for intelligence, but we can still use language to assess intelligence.
+我们认为语言并非智能所必需，但仍然可以利用语言来评估智能。
+
+428
+00:38:19,822 --> 00:38:23,128
+Um, and we kind of go through that from a language and robotics perspective.
+嗯，我们从语言和机器人学的角度探讨了这一点。
+
+429
+00:38:23,178 --> 00:38:27,676
+And then me and my co-author David Watkins, we started a blog, you should like and subscribe and stuff.
+然后我和我的合著者戴维·沃特金斯开始了一个博客，你们可以点赞并订阅。
+
+430
+00:38:27,726 --> 00:38:30,213
+Um, that kind of explores these issues.
+嗯，这个博客探讨了这些问题。
+
+431
+00:38:30,263 --> 00:38:33,230
+um and and lots of the other stuff I'm talking about.
+嗯，还有我刚才提到的其他很多内容。
+
+432
+00:38:33,280 --> 00:38:34,436
+So, I'll stop there.
+那我就讲到这里。
+
+433
+00:38:34,486 --> 00:38:41,630
+Um I talked about one hardware software loadout that can do many different tasks, programming these tasks via demonstrations,
+嗯，我讲了一种硬件软件配置，它能完成多种不同任务，通过示范来编程这些任务，
+
+434
+00:38:41,680 --> 00:38:48,670
+reinforcement learning, formal language, and natural language, and how to get robustness and safety in the longtail.
+强化学习、形式语言和自然语言，以及如何在长尾场景中实现鲁棒性和安全性。
+
+435
+00:38:48,720 --> 00:38:55,069
+Thank you.
+谢谢。
+
+436
+00:38:55,119 --> 00:38:56,008
+Thank you very much.
+非常感谢。
+
+437
+00:38:56,058 --> 00:38:56,590
+Fascinating.
+非常有趣。
+
+438
+00:38:56,640 --> 00:38:58,626
+Thanks.
+谢谢。
+
+439
+00:38:58,676 --> 00:39:02,190
+Um questions.
+嗯，有问题。
+
+440
+00:39:02,240 --> 00:39:08,350
+I don't I don't see I have a question.
+我没看到……我有一个问题。
+
+441
+00:39:08,400 --> 00:39:09,069
+Thanks.
+谢谢。
+
+442
+00:39:09,119 --> 00:39:09,478
+Yes.
+嗯。
+
+443
+00:39:09,508 --> 00:39:11,950
+So for the in the doc research.
+那么关于狗的研究方面。
+
+444
+00:39:12,000 --> 00:39:12,370
+Yeah.
+嗯。
+
+445
+00:39:12,400 --> 00:39:18,430
+So how are you going to do the for the modeling the transfer from the modeling of the robot the human?
+那么你打算如何建模从机器人到人类的迁移过程？
+
+446
+00:39:18,480 --> 00:39:18,761
+Yeah.
+嗯。
+
+447
+00:39:18,791 --> 00:39:18,969
+So,
+所以，
+
+448
+00:39:18,999 --> 00:39:23,280
+so we think actually we're just scratching the surface like like it's funny because like
+我们认为实际上我们才刚刚触及表面，这很有趣，因为
+
+449
+00:39:23,330 --> 00:39:27,704
+Howie Choset's been doing snake robots for years and Sangbae Kim with Cheetah and stuff.
+Howie Choset 多年来一直在研究蛇形机器人，Sangbae Kim 则专注于猎豹等机器人。
+
+450
+00:39:27,754 --> 00:39:38,241
+We have lots and lots of work of animal inspired robotics um but very little work surprisingly little work in animal inspired human robot interaction
+我们在受动物启发的机器人领域做了大量工作，但令人惊讶的是，在受动物启发的人机交互方面，相关研究却非常少。
+
+451
+00:39:38,291 --> 00:39:45,466
+despite us like using dogs to do a lot of the tasks that we want our robots to do like search and rescue and stuff.
+尽管我们经常使用狗来完成机器人需要执行的任务，比如搜救等。
+
+452
+00:39:45,516 --> 00:39:45,728
+Um,
+呃，
+
+453
+00:39:45,758 --> 00:39:48,650
+and we're also interested in I was really excited to be at the banquet last
+我也对昨晚在宴会上与马在一起感到非常兴奋，
+
+454
+00:39:48,700 --> 00:39:52,350
+night with the horses because we think there's a lot to learn from horses as well.
+因为我们认为马也提供了很多值得学习的经验。
+
+455
+00:39:52,400 --> 00:39:58,470
+Um, these are species where we already collaborate closely with these non-human species.
+呃，这些是我们已经与非人类物种密切协作的物种。
+
+456
+00:39:58,520 --> 00:40:03,390
+Um, and I think we're just scratching the surface on on what we can learn from how that goes.
+呃，我认为我们才刚刚开始理解从这种协作中能学到什么。
+
+457
+00:40:03,440 --> 00:40:06,329
+It also kind of sidesteps the uncanny valley, I think.
+它在某种程度上也避开了恐怖谷效应，我认为是这样。
+
+458
+00:40:06,379 --> 00:40:09,508
+Um, because they're not human, so we don't expect them to be human.
+嗯，因为它们不是人类，所以我们并不期待它们像人类一样。
+
+459
+00:40:09,558 --> 00:40:14,274
+So, learning from like at a high level, abstract level like design guidelines from this.
+所以，从高层次、抽象层面学习，比如从这些案例中提炼设计准则。
+
+460
+00:40:14,324 --> 00:40:23,497
+Um, but then also learning at a at a at a at a more like neural deep learning level from like the actual behaviors of dogs and horses,
+嗯，同时也能从更深层的神经网络深度学习层面，学习狗和马的实际行为。
+
+461
+00:40:23,547 --> 00:40:27,549
+I think is a really and other other species as well, but we're focusing on those two for now.
+我认为这真的很有意思，其他物种也一样，但我们现在主要关注狗和马。
+
+462
+00:40:27,599 --> 00:40:27,749
+Yeah.
+对。
+
+463
+00:40:27,764 --> 00:40:29,549
+Especially when they have different languages, right?
+尤其是当它们使用不同语言的时候，对吧？
+
+464
+00:40:29,599 --> 00:40:30,190
+Yeah.
+对。
+
+465
+00:40:30,240 --> 00:40:32,190
+Representations, different abstractions.
+表示方式，不同的抽象层次。
+
+466
+00:40:32,240 --> 00:40:32,513
+Yeah.
+对。
+
+467
+00:40:32,543 --> 00:40:32,816
+Yeah.
+对。
+
+468
+00:40:32,846 --> 00:40:37,398
+So, the work I'm showing, we're we're tracking the dog's position and then the eye gaze.
+所以我展示的这项工作，我们正在追踪狗的位置和眼神方向。
+
+469
+00:40:37,448 --> 00:40:40,473
+We have Daphna's lab made an eye tracker for dogs.
+我们有达芙娜的实验室为狗制作了一个眼动追踪装置。
+
+470
+00:40:40,523 --> 00:40:43,099
+Um, so you you train your dog to wear like a mask.
+嗯，就是训练你的狗戴上类似面具的东西。
+
+471
+00:40:43,149 --> 00:40:47,590
+Um, and then it tracks the position in the dog of where the dog is looking and stuff.
+然后它会追踪狗眼睛的位置，以及狗在看哪里。
+
+472
+00:40:47,640 --> 00:40:51,874
+Um, and then we're just translating that to the robot so the robot can move around and look around.
+然后我们把这种信息翻译给机器人，让机器人能移动并四处观察。
+
+473
+00:40:51,924 --> 00:40:53,888
+Um, and so we're outputting a policy.
+嗯，我们输出的是一个策略。
+
+474
+00:40:53,938 --> 00:40:57,321
+Um, and it's basically just memorizing the training set at the moment.
+目前它基本上只是在记忆训练数据集。
+
+475
+00:40:57,371 --> 00:41:02,910
+It's like this is just a workshop paper that that that's atra, but I think there's a lot more we can do um, in this space.
+这其实只是一篇工作坊论文，但我觉得在这个领域我们还能做更多。
+
+476
+00:41:02,960 --> 00:41:03,549
+Super cool.
+非常酷。
+
+477
+00:41:03,599 --> 00:41:04,968
+I'm so excited about it.
+我对此非常兴奋。
+
+478
+00:41:05,018 --> 00:41:06,670
+Yeah, I think I see a question here.
+是的，我觉得这里有个问题。
+
+479
+00:41:06,720 --> 00:41:08,350
+Thanks.
+谢谢。
+
+480
+00:41:08,400 --> 00:41:08,716
+Hi.
+你好。
+
+481
+00:41:08,746 --> 00:41:12,990
+Um, how do real dogs react to having all these robot dogs around?
+嗯，真正的狗看到这么多机器狗会有什么反应呢？
+
+482
+00:41:13,040 --> 00:41:14,882
+How do how do real dogs react?
+真正的狗会有什么反应呢？
+
+483
+00:41:14,932 --> 00:41:16,158
+Um, it depends.
+嗯，这要看情况。
+
+484
+00:41:16,208 --> 00:41:18,329
+It depends on the dog.
+这取决于狗本身。
+
+485
+00:41:18,379 --> 00:41:23,655
+Um, so when we take our spot for walks around campus, some dogs are just like whatever.
+嗯，当我们带狗在校园里散步时，有些狗完全无所谓。
+
+486
+00:41:23,705 --> 00:41:28,087
+And other dogs are like, holy, I don't swear, but like, oh my god, what is this?
+有些狗则会惊呼，虽然我不说脏话，但就像天啊，这到底是什么东西？
+
+487
+00:41:28,137 --> 00:41:31,930
+Like, and and they bark and and get really freaked out by it.
+就是说，它们会叫，被吓得不得了。
+
+488
+00:41:31,980 --> 00:41:37,761
+Um, and I think a lot of it depends on the dog, the personality of the dog, and how it's been socialized.
+嗯，我觉得这很大程度上取决于狗的性格，以及它被社会化的方式。
+
+489
+00:41:37,811 --> 00:41:43,929
+And we've also found like Ivy brought her dog Minion into our lab and was able to to get him used to the robot.
+我们还发现，伊芙带她的狗米尼翁来过实验室，成功让它适应了机器狗。
+
+490
+00:41:43,979 --> 00:41:50,510
+So, um, you know, with some some training and some support, he was able to be less less concerned about it.
+所以，嗯，经过一些训练和帮助，它对机器狗的担忧减少了。
+
+491
+00:41:50,560 --> 00:41:51,758
+Um, cool.
+嗯，真酷。
+
+492
+00:41:51,808 --> 00:41:52,766
+Thank you very much.
+非常感谢。
+
+493
+00:41:52,816 --> 00:41:54,490
+So, we would like to thank Stefanie.
+因此，我们想感谢斯蒂法妮。
+
+494
+00:41:54,540 --> 00:41:55,630
+Thank you very much.
+非常感谢。
+
+495
+00:41:55,680 --> 00:42:05,710
+Thanks.
+谢谢。
+
+496
+00:42:05,760 --> 00:42:09,950
+Okay, while the next speaker set up, I will have the time for introducing her.
+好的，在下一位演讲者准备期间，我来介绍一下她。
+
+497
+00:42:10,000 --> 00:42:15,827
+So, um, her name is Noémie Jaquier and she's an assistant professor at KTH,
+她名叫 Noémie Jaquier，是瑞典皇家理工学院的助理教授，
+
+498
+00:42:15,877 --> 00:42:23,069
+the Royal Royal Institute of Technology in Sweden where she is leading the geometric robot lab.
+同时也是该校几何机器人实验室的负责人。
+
+499
+00:42:23,119 --> 00:42:31,028
+uh she received of course several awards for example the best paper award finalist for Iris 23rd and 24th and and the H
+她获得过多项奖项，例如 IROS 2023 和 2024 的最佳论文奖提名，以及多项学术奖项。
+
+500
+00:42:31,078 --> 00:42:34,174
+highleber academic science so I skip some of the awards but she
+我省略了一些奖项，但她确实非常出色。
+
+501
+00:42:34,224 --> 00:42:45,857
+is very uh thank you very much okay thank you very much
+非常感谢，谢谢。
+
+502
+00:42:45,907 --> 00:42:51,162
+for the kind introduction um so I'm very happy to be here today and I would like to talk to you about traveling the
+感谢您亲切的介绍，今天我很高兴能来到这里，我想和大家谈谈机器人学习流形——
+
+503
+00:42:51,212 --> 00:43:01,230
+robot learning manifold or on how we can use the many geometries and inductive biases that naturally arise in robotics to enhance robot learning.
+也就是如何利用机器人中自然出现的多种几何结构和归纳偏置来提升机器人学习。
+
+504
+00:43:01,280 --> 00:43:04,403
+So relevant robotic variable feature a variety of geometries.
+相关的机器人变量具有各种几何特性。
+
+505
+00:43:04,453 --> 00:43:08,910
+You can think about the Euclidean space that you typically use to encode position.
+你可以将通常用来编码位置的欧几里得空间想象成一个坐标系。
+
+506
+00:43:08,960 --> 00:43:13,402
+Usually you also want to encode the orientation of your end-effector which you can do either via unit
+通常你还希望编码末端执行器的朝向，可以用单位四元数，
+
+507
+00:43:13,452 --> 00:43:19,603
+quaternion that lie on a sphere or rotation matrices that belong to the manifold of the special orthogonal group.
+它位于球面上；也可以用属于特殊正交群流形的旋转矩阵。
+
+508
+00:43:19,653 --> 00:43:23,310
+We have many more joint configuration typically lie on the torus.
+更多关节构型通常位于环面上。
+
+509
+00:43:23,360 --> 00:43:29,937
+Um control gains, inertia matrices, manipulability ellipsoids and many more are symmetric positive definite matrices.
+控制增益、惯性矩阵、可操作度椭球等都是对称正定矩阵。
+
+510
+00:43:29,987 --> 00:43:36,990
+And another one I will talk about today is the configuration manifold that describes Lagrangian and Hamiltonian dynamics.
+今天我要谈的另一个概念是描述拉格朗日和哈密顿动力学的构型流形。
+
+511
+00:43:37,040 --> 00:43:42,215
+So all the mathematical spaces that you just saw here are all smooth manifolds or differentiable manifolds.
+因此，你刚才看到的所有数学空间都是光滑流形或可微流形。
+
+512
+00:43:42,265 --> 00:43:46,376
+They are essentially curved space that locally look but globally are not.
+它们本质上是弯曲的空间，局部看起来是平的，但从整体上看并非如此。
+
+513
+00:43:46,426 --> 00:43:54,601
+And the idea here is to use all their geometries as inductive biases to guide the robot learning algorithm and achieve higher performance,
+这里的理念是利用它们的所有几何特征作为归纳偏置，引导机器人学习算法，从而实现更高性能。
+
+514
+00:43:54,651 --> 00:44:00,990
+enhance data efficiency and also to endo them with some additional guarantees.
+提升数据效率，并为它们附加一些额外的保障。
+
+515
+00:44:01,040 --> 00:44:06,627
+So let me start with a very simple example that illustrates why considering geometry is actually relevant.
+让我先举一个非常简单的例子，说明为什么考虑几何形状实际上很重要。
+
+516
+00:44:06,677 --> 00:44:11,896
+So you can think here about the sphere manifold that we use to encode orientation as a unit quaternion.
+因此，你可以将我们用来以单位四元数编码方向的球面流形考虑在内。
+
+517
+00:44:11,946 --> 00:44:15,497
+So here we simply want to compute the mean of three points on the sphere.
+所以这里我们只需要计算球面上三个点的平均值。
+
+518
+00:44:15,547 --> 00:44:17,864
+So you can do that in a classical Euclidean way.
+你可以用经典的欧几里得方法来实现。
+
+519
+00:44:17,914 --> 00:44:21,909
+You take them, you average them and you actually obtain something that is inside the sphere.
+你把它们取出来，求平均，结果实际上会落在球体内部。
+
+520
+00:44:21,959 --> 00:44:24,038
+So it doesn't give you an orientation that is valid.
+所以这种方法得不到一个有效的方向。
+
+521
+00:44:24,088 --> 00:44:27,226
+So typically what we do is some kind of post-processing step.
+通常我们会进行某种后处理步骤。
+
+522
+00:44:27,276 --> 00:44:29,789
+But this can actually lead to some issues.
+但这实际上可能引发一些问题。
+
+523
+00:44:29,839 --> 00:44:31,967
+Another way is to take spherical coordinates instead.
+另一种方法是改用球坐标。
+
+524
+00:44:32,017 --> 00:44:34,750
+So you are sure that the mean will lie on the sphere.
+这样你就能确保平均值落在球面上。
+
+525
+00:44:34,800 --> 00:44:39,277
+But in that case the mean actually is completely out of the support of the data distribution.
+但在这种情况下，平均值实际上完全超出了数据分布的支持范围。
+
+526
+00:44:39,327 --> 00:44:44,616
+So what you need to do is to actually consider the geometry of the sphere and comput a geometric mean which
+所以你需要真正考虑球面的几何结构，计算一个几何平均值，
+
+527
+00:44:44,666 --> 00:44:51,870
+will be completely independent of the coordinates that you choose and that will give you the real mean of those three data.
+它将完全独立于你选择的坐标系，从而给出这三个数据的真实平均值。
+
+528
+00:44:51,920 --> 00:44:56,559
+So I hope that you're convinced that with such a simple example we already have issues if we don't consider geometry.
+所以我希望你相信，通过这样一个简单的例子，我们已经发现，如果不考虑几何结构，就会出现问题。
+
+529
+00:44:56,609 --> 00:45:00,110
+So it's actually important for all types of robot learning algorithms.
+因此，这对所有类型的机器人学习算法都非常重要。
+
+530
+00:45:00,160 --> 00:45:06,136
+So in the remaining of the talk I will show you example of applications where we use the inductive bias that arises from geometry which
+所以在接下来的演讲中，我将向大家展示一些应用实例，我们在其中利用了由几何产生的归纳偏置，
+
+531
+00:45:06,186 --> 00:45:10,029
+is sometimes complemented with other types of inductive biases from physics or from
+有时还会结合来自物理或
+
+532
+00:45:10,079 --> 00:45:15,124
+control theory for example um to see how we can enhance robot learning.
+控制理论等其他类型的归纳偏置，例如，来观察我们如何提升机器人学习效果。
+
+533
+00:45:15,174 --> 00:45:22,350
+So let me start with an example where we learn motion policies that encode both position and orientation.
+让我先从一个例子开始，我们学习同时编码位置和方向的运动策略。
+
+534
+00:45:22,400 --> 00:45:26,478
+So here we use flow matching which I guess all of you know is a powerful generative model for
+这里我们使用流匹配，我想你们都知道，这是一种强大的生成模型，
+
+535
+00:45:26,528 --> 00:45:34,573
+imitation learning due to its ability to handle highdimensional multimodal data distribution um that are conditioned um on vision data.
+由于其能够处理高维多模态数据分布，并且可以基于视觉数据进行条件化，因此在模仿学习中非常有效。
+
+536
+00:45:34,623 --> 00:45:39,066
+So here what we do is that we take an action from a simple base distribution
+这里我们从一个简单的基础分布中获取一个动作，
+
+537
+00:45:39,116 --> 00:45:44,029
+and typically we flow it until a more complex target distribution and flow matching does that
+通常将其流动到更复杂的目标分布，而流匹配通过
+
+538
+00:45:44,079 --> 00:45:47,853
+by simply defining a vector field a desired vector field that defines the flow and by
+简单定义一个向量场，即期望的向量场来定义流，并通过
+
+539
+00:45:47,903 --> 00:45:54,350
+simply learning a neural network that would be conditioned on your observation um to predict the flow.
+简单学习一个神经网络，该网络基于你的观测来预测流。
+
+540
+00:45:54,400 --> 00:45:58,309
+Um and then when you want to do inference you simply use integration of your vector field.
+然后当你需要进行推理时，只需对向量场进行积分即可。
+
+541
+00:45:58,359 --> 00:46:02,223
+you obtain your flow and then you can have such kind of robot motion policies where
+你获得流动后，就可以拥有这类机器人运动策略
+
+542
+00:46:02,273 --> 00:46:07,069
+here we learned we did we we taught a robot to move a mug onto the plate.
+在这里我们学会了让机器人将杯子移动到盘子上
+
+543
+00:46:07,119 --> 00:46:09,374
+You can see here there's not much changes in orientation.
+你可以看到这里的朝向几乎没有变化
+
+544
+00:46:09,424 --> 00:46:14,728
+If you actually want to consider the orientation of then the vector as well we need to use remmanion flow matching.
+如果你真的想考虑朝向的向量，我们就需要使用黎曼流匹配
+
+545
+00:46:14,778 --> 00:46:18,250
+So in that case you have your data that are encoded on the sphere.
+在这种情况下，你的数据被编码在球面上
+
+546
+00:46:18,300 --> 00:46:22,694
+So your actions are belonging to the surface of the sphere and we start from a base distribution which
+你的动作属于球面的表面，我们从一个基础分布开始，该分布
+
+547
+00:46:22,744 --> 00:46:28,137
+is in that case a Gaussian that you can really imagine as a Gaussian wrapped around the sphere essentially and
+在这种情况可以想象成一个包裹在球面上的高斯分布；
+
+548
+00:46:28,187 --> 00:46:33,838
+the flow goes along a geodeic which is the shortest path possible on the manifold and this flow is
+流沿着测地线进行，这是流形上可能的最短路径，而该流
+
+549
+00:46:33,888 --> 00:46:39,478
+defined on the tangent space at every single point by a vector field and then the principle is very similar.
+在每个点的切空间上由一个向量场定义，原理非常相似
+
+550
+00:46:39,528 --> 00:46:42,420
+You define a desired vector field on every single tangent space.
+你在每个切空间上定义一个期望的向量场
+
+551
+00:46:42,470 --> 00:46:45,766
+You match a neural network that you can condition an observation.
+你训练一个神经网络，可以根据观测条件进行调整
+
+552
+00:46:45,816 --> 00:46:50,004
+And then uh to integrate you actually need to use the exponential map that
+然后为了积分，你实际上需要使用指数映射
+
+553
+00:46:50,054 --> 00:46:53,743
+will map the vector field on the tangent space onto the manifold of interest.
+将切空间上的向量场映射到感兴趣的流形上。
+
+554
+00:46:53,793 --> 00:46:57,417
+And when you do that you can actually handle big changes in orientation.
+这样做后，你实际上可以处理方向上的大幅变化。
+
+555
+00:46:57,467 --> 00:47:04,590
+So this is a remmanion flow matching policy trained again to rotate the mug and put it on the plate.
+因此这是一个黎曼流匹配策略，再次用于旋转杯子并将其放在盘子上。
+
+556
+00:47:04,640 --> 00:47:10,290
+So the flow matching policies that we just discussed handle geometric action spaces but they actually do not ensure safe behaviors.
+我们刚才讨论的流匹配策略能够处理几何动作空间，但它们实际上并不能保证安全行为。
+
+557
+00:47:10,340 --> 00:47:14,782
+So you can have these kind of issues uh where the the skill doesn't converge.
+所以你可能会遇到这类问题，即技能无法收敛。
+
+558
+00:47:14,832 --> 00:47:22,430
+So a common way to um ensure stability is to model robot motion as dynamical systems that you make stable by construction and here we
+一种常见的确保稳定性的方法是将机器人运动建模为通过构造保证稳定的动力学系统，而我们在这里
+
+559
+00:47:22,480 --> 00:47:25,736
+propose to model such dynamical systems via flow matching and to use
+建议通过流匹配来建模这类动力学系统，并利用
+
+560
+00:47:25,786 --> 00:47:31,630
+inductive bias coming from control theory to ensure stable convergence to an equilibrium.
+来自控制理论的归纳偏置，以确保稳定地收敛到平衡点。
+
+561
+00:47:31,680 --> 00:47:34,977
+So the main idea again in this case we are working on Lie groups.
+因此，这个案例的核心思想是我们在李群上工作。
+
+562
+00:47:35,027 --> 00:47:39,789
+You define an desired equilibrium on the manifolds and you define a leapono function by hand
+你在流形上定义一个期望的平衡点，并手动定义一个李雅普诺夫函数，
+
+563
+00:47:39,839 --> 00:47:45,181
+that essentially will define a set of admissible velocity at every single point in your manifold.
+它本质上会定义流形上每个点处允许的速度集合。
+
+564
+00:47:45,231 --> 00:47:50,941
+And then what we propose to do is to learn a constraint flow matching model that will give you some of those velocities and
+然后我们提出的方法是学习一个约束流匹配模型，以获得其中一些速度。
+
+565
+00:47:50,991 --> 00:48:00,190
+essentially when you then obtain uh the flow from this vector field you will um converge with guarantees to the stable point on the manifold.
+本质上，当你从这个向量场获得流动时，你将保证收敛到流形上的稳定点。
+
+566
+00:48:00,240 --> 00:48:02,929
+Um the issue here is that if we have a simple yapon of function that
+这里的问题是，如果我们有一个简单的李雅普诺夫函数，
+
+567
+00:48:02,979 --> 00:48:08,227
+allows us to have this admissible velocity set um they may only encode limited dynamic behaviors.
+虽然能实现允许的速度集合，但它们可能仅能编码有限的动态行为。
+
+568
+00:48:08,277 --> 00:48:13,069
+So we want to increase expressivity and we can do so by learning an additional deformism that
+因此我们希望提高表达能力，可以通过学习一个额外的微分同胚来实现，
+
+569
+00:48:13,119 --> 00:48:20,830
+will move us from this simple dynamical system to something more complex that can match uh complex demonstrations.
+从而将我们从这个简单的动力系统转移到更复杂的系统，以匹配复杂的示范。
+
+570
+00:48:20,880 --> 00:48:24,316
+And what is really cool is that those stable flow matching dynamical system they are then
+真正酷的是，这些稳定的流匹配动力系统能够
+
+571
+00:48:24,366 --> 00:48:30,331
+able to combine the stability and expressivity of flow matching with formal stability guarantees from control theory.
+结合流匹配的稳定性和表达能力，以及控制理论中的形式化稳定性保证。
+
+572
+00:48:30,381 --> 00:48:35,673
+So essentially when you have new demonstration you can simply learn the flow matching vector field and then
+所以本质上，当你获得新的示范时，只需学习流匹配向量场，然后
+
+573
+00:48:35,723 --> 00:48:41,165
+um whatever wherever you start in the space you will follow your demonstration and converge to a stable equilibrium.
+无论你在空间中的哪个位置开始，你都将沿着示范前进，并收敛到一个稳定平衡点。
+
+574
+00:48:41,215 --> 00:48:45,724
+So we train such policies on the Lie group SE(3) to encode position and orientation.
+我们在李群 SE(3) 上训练这类策略，以编码位置和方向。
+
+575
+00:48:45,774 --> 00:48:53,489
+You see here two different types of examples and you can see that regardless of where we start we actually converge always to the equilibrium point.
+你在这里看到两种不同类型的例子，可以看到，无论我们从何处开始，最终都会收敛到平衡点。
+
+576
+00:48:53,539 --> 00:48:57,366
+So to the goal here uh and those policies are also stable to preservation.
+所以目标是这里；这些策略对扰动也稳定。
+
+577
+00:48:57,416 --> 00:49:02,590
+We show that in the paper that you can see below.
+我们在下面这篇论文中展示了这一点。
+
+578
+00:49:02,640 --> 00:49:06,703
+So in general we would like to even more enhance the generalizability of such systems and
+因此，一般来说，我们希望进一步提升这类系统的泛化能力。
+
+579
+00:49:06,753 --> 00:49:12,288
+here we approach that through the lens of symmetries using uh on top of geometry group theory.
+在这里，我们通过几何群论的视角，利用对称性来实现这一目标。
+
+580
+00:49:12,338 --> 00:49:15,972
+So the main idea of symmetries for robot learning is to use either
+机器人学习中对称性的核心思想是使用
+
+581
+00:49:16,022 --> 00:49:20,467
+data augmentation or equivalent neural network to generalize the behavior of a policy.
+数据增强或等效神经网络，以泛化策略的行为。
+
+582
+00:49:20,517 --> 00:49:25,531
+So for example, if your robot learns how to pick a mug with a given orientation of the handle,
+例如，如果您的机器人学会了以特定手柄朝向抓取一个马克杯，
+
+583
+00:49:25,581 --> 00:49:30,269
+if you use such a network, you will be able to pick the mug with any types of orientation.
+如果使用这种网络，您就能以任何朝向抓取该马克杯。
+
+584
+00:49:30,319 --> 00:49:32,110
+So there are many other symmetries in robotics.
+机器人领域还有许多其他对称性。
+
+585
+00:49:32,160 --> 00:49:36,667
+You can think about for example scaling the mug where you want to learn to pick mugs that are smaller or bigger.
+例如，您可以考虑缩放马克杯，学习抓取更小或更大的马克杯。
+
+586
+00:49:36,717 --> 00:49:44,590
+Or you may also want to have a policy trained on one of the arms of the robot and be able to replicate it immediately with the other arm.
+或者，您可能希望在机器人的一条手臂上训练策略，然后立即在另一条手臂上复现。
+
+587
+00:49:44,640 --> 00:49:50,593
+Um so such policies are well developed in the literature but they typically handle only one single symmetry at a time.
+这类策略在文献中已有充分研究，但通常只能处理单一的对称性。
+
+588
+00:49:50,643 --> 00:49:56,651
+Although many many tasks actually will benefit from taking into account several of those symmetries at the same time.
+尽管许多任务实际上会从同时考虑多个对称性中获益。
+
+589
+00:49:56,701 --> 00:50:00,430
+So what we wanted to see here is if we can compose all those different
+所以我们想在这里看到的是，能否将所有这些不同的对称性组合起来
+
+590
+00:50:00,480 --> 00:50:05,089
+symmetries and in general this is difficult because the symmetry arise in different types of spaces.
+一般来说，这很困难，因为对称性出现在不同类型的空间中
+
+591
+00:50:05,139 --> 00:50:11,539
+So if you think here about the planer rotation and the scaling both of them arise in the task space they are concerned about the object and um if
+所以如果你考虑平面旋转和缩放，它们都出现在任务空间中，都与物体有关
+
+592
+00:50:11,589 --> 00:50:15,609
+you think then about the the morphological symmetry here that generalizes to the left
+然后如果你再考虑这里的形态对称性，它推广到左右手臂
+
+593
+00:50:15,659 --> 00:50:20,590
+and the right arm this arise in the configuration space of your system at hand.
+这种对称性出现在你当前系统的构型空间中
+
+594
+00:50:20,640 --> 00:50:26,845
+So what we propose to do is to view symmetries through the lens of vector field where we essentially define uh a vector
+我们提出的方法是通过向量场的视角来看待对称性，本质上定义一个向量场
+
+595
+00:50:26,895 --> 00:50:32,095
+field that tells you how here in this case the mug is rotating according to the symmetry and then what we can do is
+它告诉你，在这种情况下，杯子如何根据对称性旋转，然后我们可以
+
+596
+00:50:32,145 --> 00:50:40,444
+to use the geometry of the forward kinematic map to lift this vector field horizontally onto the configuration space and this essentially tells you
+利用正向运动学映射的几何结构，将这个向量场水平提升到构型空间，这实际上告诉你
+
+597
+00:50:40,494 --> 00:50:47,261
+how the configuration of the robot will change when you want to have the mock um to handle the mug rotated in different ways.
+当你想让杯子以不同方式旋转时，机器人的构型将如何变化
+
+598
+00:50:47,311 --> 00:50:50,437
+We can do the same uh in this case for the scaling.
+我们可以在这个情况下对缩放做同样的操作
+
+599
+00:50:50,487 --> 00:50:57,210
+And once we have all um the vector field in the same space, we can simply combine them by composing the different vector fields.
+一旦我们把所有向量场都放在同一个空间中，就可以简单地通过组合不同的向量场来合并它们
+
+600
+00:50:57,260 --> 00:51:02,350
+And with that, you can actually handle uh symmetries in a composition.
+通过这种方式，你实际上可以以组合的方式处理对称性
+
+601
+00:51:02,400 --> 00:51:07,450
+So we have now here an example where my PhD student is demonstrating the robot how to um draw a
+现在这里有一个例子，我的博士生正在向机器人演示如何画图。
+
+602
+00:51:07,500 --> 00:51:12,002
+C letter with the left arm of the robot and an N letter with the right arm of the robot.
+机器人左臂摆出C字母，右臂摆出N字母。
+
+603
+00:51:12,052 --> 00:51:13,902
+And we learn a policy based on this.
+我们基于此学习一种策略。
+
+604
+00:51:13,952 --> 00:51:16,665
+And what we can do then is data augmentation.
+那么我们能做的就是数据增强。
+
+605
+00:51:16,715 --> 00:51:21,573
+And essentially then the robot is able to replicate exactly the same skill but with rotation of the letters,
+本质上，机器人能够完全复制相同的技能，只是字母的朝向发生了旋转。
+
+606
+00:51:21,623 --> 00:51:26,316
+scaling of the letters and also swapping the rolls of the two arms for this task.
+调整字母的大小，并在这项任务中交换两臂的角色。
+
+607
+00:51:26,366 --> 00:51:32,430
+And here the only demonstration that recorded are the one that you see on the top right.
+此处唯一记录下来的演示，就是您在右上角看到的那一个。
+
+608
+00:51:32,480 --> 00:51:40,509
+So here composing symmetries leads to enhanced generalizability of the skills and also more data efficiency.
+因此，通过组合对称性，可以提升技能的泛化能力，同时提高数据使用效率。
+
+609
+00:51:40,559 --> 00:51:45,710
+So here I showed you example of how geometry allows us to learn robot skills involving full poses and how when we
+因此，我向你们展示了几何如何帮助我们学习涉及完整位姿的机器人技能，以及当
+
+610
+00:51:45,760 --> 00:51:53,788
+combine it with inductive biases from control and from group theory it also leads to stable generalizable and data efficient robot policies.
+结合控制论和群论的归纳偏置，还能带来稳定、可泛化且数据高效的机器人策略。
+
+611
+00:51:53,838 --> 00:51:56,829
+So for the second part of the talk I would like to turn our attentions
+接下来，我想把话题转向演讲的第二部分
+
+612
+00:51:56,879 --> 00:52:01,863
+to the objects that the robot has to manipulate and specifically focusing on deformable objects.
+针对机器人需要操作的物体，特别是可变形物体。
+
+613
+00:52:01,913 --> 00:52:07,870
+So when we want to manipulate such objects essentially what we typically do is that we build a model.
+因此当我们想要操作这类物体时，通常的做法是建立一个模型。
+
+614
+00:52:07,920 --> 00:52:12,428
+So here the idea is that given the position the velocity of your object and the force you
+这里的思路是，给定物体的位置、速度以及你施加的力，
+
+615
+00:52:12,478 --> 00:52:15,999
+are applying onto it you would like to know what is the acceleration that the object is going
+你希望知道物体将产生的加速度是多少。
+
+616
+00:52:16,049 --> 00:52:20,029
+to take and once you have such a model simply what we can do is to infer which
+一旦有了这样的模型，我们就可以推断出
+
+617
+00:52:20,079 --> 00:52:25,309
+is the force that we need to apply on the object such that it follows a desired trajectory.
+为了使物体沿预期轨迹运动，需要施加多大的力。
+
+618
+00:52:25,359 --> 00:52:30,907
+What is really difficult with deformable objects is that they have high or even infinite dimensional configuration spaces
+对于可变形物体而言，真正困难的是它们具有高维甚至无限维的构型空间，
+
+619
+00:52:30,957 --> 00:52:37,710
+which mean they have basically infinite degrees of freedom and they also have nonlinear and very complex dynamics.
+这意味着它们基本上具有无限自由度，且动力学特性非线性且非常复杂。
+
+620
+00:52:37,760 --> 00:52:44,679
+So what we propose to do here is to take inductive bias from geometry but also from physics and to account for the fact that those
+因此我们在这里提出的方法是，从几何和物理中引入归纳偏置，并考虑到这些
+
+621
+00:52:44,729 --> 00:52:49,003
+objects follow langian dynamics which can be represented on a high dimensional remmanion
+物体遵循拉格朗日动力学，这种动力学可以在一个高维黎曼流形上表示，
+
+622
+00:52:49,053 --> 00:52:53,710
+manifold that is completely described by the mass inertia matrix of your system.
+该流形完全由系统的质量惯性矩阵描述。
+
+623
+00:52:53,760 --> 00:52:56,664
+So essentially what we'd like to do is to have we have this
+因此我们本质上希望拥有这样一个
+
+624
+00:52:56,714 --> 00:53:00,522
+unknown highdimensional langent dynamics and we would like to learn the parameters of that.
+未知的高维拉格朗日动力学模型，并希望学习该模型的参数。
+
+625
+00:53:00,572 --> 00:53:06,986
+So what we propose to do here is to take the manifold hypothesis and to approximate trajectories on this highdimensional
+因此，我们在这里提出的方法是，基于流形假设，对高维空间中的轨迹进行近似。
+
+626
+00:53:07,036 --> 00:53:14,830
+manifold on which the langian dynamics are evolving by trajectories on a much lower dimensional manifold that keeps the same structure.
+流形上，拉格朗日动力学通过一个维度低得多的流形上的轨迹演化，同时保持相同的结构。
+
+627
+00:53:14,880 --> 00:53:23,230
+So essentially we want to approximate our high dimensional Lagrangian dynamics by much lower dimensional Lagrangian dynamics again.
+本质上，我们希望用更低维的拉格朗日动力学来近似高维拉格朗日动力学。
+
+628
+00:53:23,280 --> 00:53:25,630
+So we need two key elements to do that.
+所以我们需要两个关键要素来实现这一点。
+
+629
+00:53:25,680 --> 00:53:28,483
+The first one is an encoder decoder framework.
+第一个是编码器-解码器框架。
+
+630
+00:53:28,533 --> 00:53:36,029
+So here we use a geometric biorthogonal autoencoder where essentially the geometry that you have in this autoencoder allows you to
+因此我们使用一种几何双正交自编码器，本质上，这个自编码器中的几何结构使你能够
+
+631
+00:53:36,079 --> 00:53:42,140
+maintain the langion structure um that we know arise in the high dimensional space but into the latent space in that case.
+保持我们所知的高维空间中的拉格朗日结构，映射到该情况下的潜空间中。
+
+632
+00:53:42,190 --> 00:53:46,509
+Um and here the parameters of this autoenccoder are um points on the
+嗯，这里的自编码器参数是黎曼流形上的点，
+
+633
+00:53:46,559 --> 00:53:51,309
+Riemannian manifolds and then we train all of these using actually Riemannian optimization.
+然后我们实际上用黎曼优化来训练它们。
+
+634
+00:53:51,359 --> 00:53:55,240
+The second key element is what allows you to learn the dynamics in the latent space.
+第二个关键要素是让你能够学习潜在空间中动态变化的机制。
+
+635
+00:53:55,290 --> 00:53:57,146
+It is a geometric Lagrangian neural network.
+这是一个几何拉格朗日神经网络。
+
+636
+00:53:57,196 --> 00:54:01,182
+So again inductive biases from geometry and from physics and here we account for the
+因此，我们再次引入几何和物理带来的归纳偏置，而在这里我们对此进行了考量。
+
+637
+00:54:01,232 --> 00:54:05,649
+fact that the mass inertia matrix belong to the manifold of symmetric positive definite matrices.
+质量惯性矩阵属于对称正定矩阵流形的事实。
+
+638
+00:54:05,699 --> 00:54:08,084
+So again we train this via remmanion optimization.
+因此，我们再次通过黎曼优化来训练它。
+
+639
+00:54:08,134 --> 00:54:13,771
+And what is really cool here is that the physical laws of our highdimensional deformable
+真正酷的是，这里的物理定律适用于我们高维度的可变形系统。
+
+640
+00:54:13,821 --> 00:54:19,066
+objects are completely preserved here both by the geometric mappings and the latent geometric Lagrangian neural network.
+物体在这里通过几何映射和潜空间几何拉格朗日神经网络得到了完全保留。
+
+641
+00:54:19,116 --> 00:54:24,990
+So you are guaranteed that whatever your model is actually predicting follows the laws of physics.
+因此，你的模型实际预测的结果必然遵循物理定律。
+
+642
+00:54:25,040 --> 00:54:31,582
+So here we have an example and this is simply comparing the geometric Lagrangian neural network with respect to a classical neural network for a
+这里我们有一个例子，这是将几何拉格朗日神经网络与经典神经网络进行对比。
+
+643
+00:54:31,632 --> 00:54:34,733
+two degrees of freedom pendalum system and you see that after a
+二自由度摆系统，你可以看到，经过一段时间后
+
+644
+00:54:34,783 --> 00:54:39,452
+few seconds the classical neural network starts diverging while the geometric one doesn't.
+几秒钟后，经典神经网络开始发散，而几何神经网络则不会。
+
+645
+00:54:39,502 --> 00:54:42,892
+Um and we also learn here with much more data efficiency.
+而且我们在这里还能实现更高的数据效率。
+
+646
+00:54:42,942 --> 00:54:46,190
+So you can check again the referred paper for that.
+你可以再次查阅文中提到的论文。
+
+647
+00:54:46,240 --> 00:54:47,930
+We can then move to high dimensional systems.
+然后我们可以转向高维系统。
+
+648
+00:54:47,980 --> 00:54:53,048
+So here we have this 600 degrees of freedom cloth that we approximate with a 10-dimensional latent space.
+这里我们有一个600个自由度的布料，通过一个10维的潜空间来近似。
+
+649
+00:54:53,098 --> 00:54:59,309
+And you see that our model is actually very nicely able to model the dynamics of the cloth.
+你会发现，我们的模型实际上能够很好地模拟布料的动力学特性。
+
+650
+00:54:59,359 --> 00:55:04,684
+And here again this is really thanks to the geometry that we have both in the mappings and in the Lagrangian neural network.
+这里再次得益于我们在映射和拉格朗日神经网络中所采用的几何结构。
+
+651
+00:55:04,734 --> 00:55:10,350
+If we don't have the geometry I cannot even show you here what this will actually give.
+如果没有这种几何结构，我甚至无法向你展示这会实际产生什么效果。
+
+652
+00:55:10,400 --> 00:55:14,910
+What is also really nice with those models is that we can then make use of the learn latent space for control.
+这些模型还有一个优点，就是我们可以利用学习到的隐空间来进行控制。
+
+653
+00:55:14,960 --> 00:55:19,166
+First by defining a desired trajectory um that we know in the high dimensional space
+首先，定义一个我们已知的高维空间中的期望轨迹，
+
+654
+00:55:19,216 --> 00:55:22,750
+onto the latent space and then we can apply in this case a simple PD
+映射到隐空间，然后在此情况下应用一个简单的PD
+
+655
+00:55:22,800 --> 00:55:27,630
+plus controller in the latent space which is composed of a forward fit forward term
+加控制器，该控制器由前向拟合项构成，
+
+656
+00:55:27,680 --> 00:55:33,156
+um made of the learned latent dynamic and of a latent um proportional derivative term.
+前向项基于学习到的隐空间动力学，以及一个隐空间的比例微分项。
+
+657
+00:55:33,206 --> 00:55:36,624
+And then once we have the desired control comment in latent space,
+一旦我们获得了隐空间中的期望控制指令，
+
+658
+00:55:36,674 --> 00:55:41,299
+we can map it back onto the high dimension space based on the mappings that we learned.
+我们就可以根据所学习的映射关系将其映射回高维空间。
+
+659
+00:55:41,349 --> 00:55:45,719
+The big advantage of this approach is that we can derive control guarantees on it.
+这种方法的最大优势在于，我们能够为其提供控制保证。
+
+660
+00:55:45,769 --> 00:55:49,724
+So essentially here this method is locally exponential input to state stabil
+因此，本质上，该方法在局部具有指数型输入到状态稳定性。
+
+661
+00:55:49,774 --> 00:55:56,509
+stable which means that your error is decreasing exponentially and is upper bounded.
+稳定，意味着你的误差呈指数下降且有上界。
+
+662
+00:55:56,559 --> 00:56:01,389
+So you can see here in example we learned a model of a pendulum mesh system of 15 degrees of freedom.
+你看，这里我们学习了一个15自由度摆动网格系统的模型。
+
+663
+00:56:01,439 --> 00:56:02,684
+We reduced it to three.
+我们将其简化为三个自由度。
+
+664
+00:56:02,734 --> 00:56:06,905
+And here we are aiming at tracking the black circle that you see uh in the background.
+这里我们旨在跟踪你看到的背景中的黑色圆圈。
+
+665
+00:56:06,955 --> 00:56:15,150
+And you see that again our controller is much better able to track the circle compared to a model that doesn't have any idea about uh the dynamics.
+你可以看到，我们的控制器相比那些完全不了解动力学特性的模型，能更出色地跟踪该圆圈。
+
+666
+00:56:15,200 --> 00:56:17,664
+We can go also to more complex real world system.
+我们也可以扩展到更复杂的现实世界系统。
+
+667
+00:56:17,714 --> 00:56:22,173
+So here we had an underactuated plush monkey puppet manipulated by the robot.
+这里我们有一个由机器人操控的欠驱动毛绒猴子玩偶。
+
+668
+00:56:22,223 --> 00:56:22,461
+Um,
+嗯，
+
+669
+00:56:22,491 --> 00:56:29,153
+so the state of the monkey is obtained via RGBD video measurement and then we control it via the 3D angular velocity input
+猴子的状态通过RGBD视频测量获得，然后我们通过机器人的三维角速度输入来控制它。
+
+670
+00:56:29,203 --> 00:56:35,515
+of the robot and we aim at regulating the pose of the puppets um towards the blue shade that you can see here.
+我们的目标是将玩偶的姿态调节到你看到的蓝色区域。
+
+671
+00:56:35,565 --> 00:56:46,190
+And you can see that our controller is able to do that for a wide set of different initial condition and target regulation poses.
+你可以看到，我们的控制器能够针对一系列不同的初始条件和目标姿态调节成功。
+
+672
+00:56:46,240 --> 00:56:51,677
+Um based on that we actually wanted to investigate if we can truly account for the infinite dimensionality
+基于此，我们实际上想探究是否真正能够处理无限维特性。
+
+673
+00:56:51,727 --> 00:56:57,674
+of the deformable objects and we took inspiration from uh the dynamics of a continuum mechanics to do so.
+可变形物体，并且我们从连续介质力学的动力学中获得了灵感来实现这一点。
+
+674
+00:56:57,724 --> 00:57:01,630
+So essentially in that case we are going towards infinite dimensional manifolds.
+因此，在这种情况下，我们正朝着无限维流形迈进。
+
+675
+00:57:01,680 --> 00:57:07,309
+So the configuration manifold becomes an infinite dimensional so-called freshet manifold and the dynamics are
+因此，构型流形变成一个无限维的所谓流形，而动力学则
+
+676
+00:57:07,359 --> 00:57:12,124
+characterized on it by an infinite dimensional langian functional and then the idea is similar.
+通过一个无限维的拉格朗日泛函来刻画，其思想与此类似。
+
+677
+00:57:12,174 --> 00:57:15,273
+we define a finite dimensional langian latent space.
+我们定义了一个有限维的拉格朗日潜空间。
+
+678
+00:57:15,323 --> 00:57:23,550
+Um and in that case the mappings the geometric mappings allow allowing us for to go from infinite dimension to thin dimensions are made um via an a
+在这种情况下，几何映射使得我们能够从无限维到低维进行转换，这是通过一个
+
+679
+00:57:23,600 --> 00:57:28,509
+recent implicit neural field and the encoder is replaced by an auto decoding framework
+最近的隐式神经场实现的，编码器被替换为一个自解码框架。
+
+680
+00:57:28,559 --> 00:57:33,150
+and the latent space dynamics are learned very similarly as what we had before.
+潜空间的动力学学习方式与我们之前的方法非常相似。
+
+681
+00:57:33,200 --> 00:57:38,806
+What is really cool is that the lran general field that we obtain in that way are remain they remain physically consistent.
+真正酷的是，我们以这种方式获得的拉格朗日通用场仍然保持物理一致性。
+
+682
+00:57:38,856 --> 00:57:44,670
+we know that we learn um dynamics that obey the physical laws and they are also discretization agnostic.
+我们知道，我们学习到的动力学遵守物理定律，且与离散化无关。
+
+683
+00:57:44,720 --> 00:57:47,794
+So essentially it means that we can predict the dynamics at any point of
+因此，这意味着我们可以独立于训练模型所用的数据，
+
+684
+00:57:47,844 --> 00:57:53,789
+of the deformable object independently of the data that we had to train the model.
+预测可变形物体上任意点的动力学。
+
+685
+00:57:53,839 --> 00:57:59,137
+So we have here the example of learning the dynamics of a membrane or a kind of closelike object and you see that our lan
+所以这里我们展示了一个学习膜状物体或类似封闭物体动力学的例子，你可以看到我们的模型预测结果与真实情况非常接近。
+
+686
+00:57:59,187 --> 00:58:09,630
+general field predicts something that is very very close to the ground truth and you also see how the learn latent dynamics actually look like.
+普遍场预测的结果与真实值极为接近，你也能看到学习到的隐式动力学实际表现得如何。
+
+687
+00:58:09,680 --> 00:58:17,230
+So today I wanted to show you how robotics entails a plethora of geometries and inductive biases and how we can use it for many many many tasks.
+今天我想向大家展示机器人学涉及大量几何结构和归纳偏置，以及我们如何利用它们完成众多任务。
+
+688
+00:58:17,280 --> 00:58:23,176
+uh so we started with remmanion flow matching model and stable flow matching dynamical systems where we used remmanion geometry and le
+我们从黎曼流匹配模型和稳定流匹配动力系统入手，利用黎曼几何和李群理论，
+
+689
+00:58:23,226 --> 00:58:32,814
+group theory coupled with control theory to learn full pose scalable multimodel stable motion policies then to increase generalizability we saw how
+结合控制理论，学习全姿态、可扩展、多模态且稳定的运动策略；随后为了提升泛化能力，我们看到了如何
+
+690
+00:58:32,864 --> 00:58:42,398
+we can combine symmetries across spaces uh and this was using group theory coupled with symmetries and it led to generalizable efficient
+跨空间结合对称性，这通过群论与对称性结合实现，从而得到具有泛化能力且高效的
+
+691
+00:58:42,448 --> 00:58:48,982
+motion policies um and finally last but not least we had a look at how to learn the dynamics of um deformable objects.
+运动策略。最后但同样重要的是，我们探讨了如何学习可变形物体的动力学。
+
+692
+00:58:49,032 --> 00:58:54,347
+So here we showed the reduced order Lagrangian networks and Lagrangian fields and here we use Riemannian geometry
+这里我们展示了降阶的拉格朗日网络和拉格朗日场，同时使用了黎曼几何
+
+693
+00:58:54,397 --> 00:59:02,990
+coupled with physics and control theory to obtain scalable data efficient dynamic models um coupled with input to state stable controllers.
+结合物理和控制理论，获得了可扩展且数据高效的动态模型，并搭配了输入到状态稳定的控制器。
+
+694
+00:59:03,040 --> 00:59:06,300
+So I really hope that I managed to convince you a little bit today that geometry can
+我真心希望今天能让你稍微信服一点：几何可以
+
+695
+00:59:06,350 --> 00:59:13,069
+be a very powerful and expressive form of inductive bias that you can integrate in robot learning algorithms.
+成为一种强大且富有表现力的归纳偏置，可以融入机器人学习算法中。
+
+696
+00:59:13,119 --> 00:59:17,150
+And if you are actually interested in incorporating this into your research,
+如果你真的对将这一方法融入你的研究感兴趣，
+
+697
+00:59:17,200 --> 00:59:23,360
+um I'm very happy to announce that we released our book last Monday that you can find freely available online.
+嗯，我很高兴地宣布，我们的书上周一发布了，你可以在线免费获取。
+
+698
+00:59:23,410 --> 00:59:26,231
+You can download it by by having the QR code here.
+你可以通过扫描这里的二维码下载。
+
+699
+00:59:26,281 --> 00:59:34,430
+And this shows you essentially how you can apply Riemannian manifold theory to robot learning, optimization and control.
+这基本上展示了你如何将黎曼流形理论应用于机器人学习、优化和控制。
+
+700
+00:59:34,480 --> 00:59:36,881
+And with this, I would like to thank my team very much.
+借此机会，我想非常感谢我的团队。
+
+701
+00:59:36,931 --> 00:59:42,569
+They're actually all here in the front row if you want to catch up with them during the conference and talk to them about the research.
+他们实际上就坐在前排，如果你在会议期间想和他们交流，可以随时过去聊聊研究。
+
+702
+00:59:42,619 --> 00:59:45,937
+um they're really amazing people to work with and I also would like to to
+嗯，和他们共事真的非常棒，我也想特别
+
+703
+00:59:45,987 --> 00:59:54,110
+thank the funding agencies that are supporting our research and all of you for your attention.
+感谢支持我们研究的资助机构，以及各位的专注聆听。
+
+704
+00:59:54,160 --> 00:59:58,509
+Thank you.
+谢谢。
+
+705
+00:59:58,559 --> 00:59:59,656
+Thank you very much.
+非常感谢。
+
+706
+00:59:59,706 --> 01:00:00,749
+That was fantastic.
+太棒了。
+
+707
+01:00:00,799 --> 01:00:07,789
+Um are there questions?
+嗯，有提问吗？
+
+708
+01:00:07,839 --> 01:00:10,830
+Yes, I can see.
+有，我看到了。
+
+709
+01:00:10,880 --> 01:00:11,680
+Great talk.
+太棒的演讲。
+
+710
+01:00:11,730 --> 01:00:12,459
+Thank you.
+谢谢。
+
+711
+01:00:12,509 --> 01:00:16,628
+So these uh lowdimensional embeddings, they're great analytical and descriptive tools,
+所以这些低维嵌入，它们是很好的分析和描述工具，
+
+712
+01:00:16,678 --> 01:00:21,516
+but when you do control, the real system can move in the null space, right?
+但在进行控制时，实际系统会在零空间中运动，对吧？
+
+713
+01:00:21,566 --> 01:00:24,670
+And presumably you need some feedback control to keep it on your sub manifold.
+你大概需要一些反馈控制，以使其保持在子流形上。
+
+714
+01:00:24,720 --> 01:00:27,390
+So how do you do that?
+那么你该如何实现这一点？
+
+715
+01:00:27,440 --> 01:00:31,482
+So the the big advantage actually of this learning model is that the the mappings
+其实这种学习模型的最大优势在于，你所学习的映射
+
+716
+01:00:31,532 --> 01:00:36,692
+that you learn will naturally um learn the manifold where your object is moving the most.
+会自然地学习到物体运动最频繁的流形。
+
+717
+01:00:36,742 --> 01:00:41,769
+So essentially the the null space term will remain like small if your model is well well trained.
+因此，如果模型训练得当，零空间项将保持很小。
+
+718
+01:00:41,819 --> 01:00:46,146
+Um otherwise if you're you still need to compensate for that you can actually put
+否则，如果你仍需补偿这一点，实际上可以在零空间中加入
+
+719
+01:00:46,196 --> 01:00:53,309
+just some dissipative control term in the null space and that should cover for it.
+一些耗散控制项，这应该就能覆盖该问题。
+
+720
+01:00:53,359 --> 01:00:53,947
+Thank you.
+谢谢。
+
+721
+01:00:53,997 --> 01:00:59,400
+Thank you for very beautiful theory uh which I think it's very powerful.
+非常感谢您精彩的理论，我认为它非常强大。
+
+722
+01:00:59,450 --> 01:01:06,022
+Um but uh um most of the challenging robotics programs are hybrid systems
+嗯，但大多数具有挑战性的机器人问题都是混合系统，
+
+723
+01:01:06,072 --> 01:01:12,408
+or switched systems where single differential equation can't actually describe the whole things.
+或切换系统，单个微分方程无法描述整个系统。
+
+724
+01:01:12,458 --> 01:01:24,110
+How is your method applicable to those very challenging things where the robot contact and break the contact and hybrid is very significant nature.
+您的方法如何适用于这些极具挑战性的情况，即机器人接触又脱离接触，混合特性非常显著的情况？
+
+725
+01:01:24,160 --> 01:01:24,376
+Yeah.
+是的。
+
+726
+01:01:24,406 --> 01:01:27,726
+I I think some of the things you cannot necessarily represent by structure,
+我认为有些东西你无法通过结构来完全表达。
+
+727
+01:01:27,776 --> 01:01:31,690
+but you can always combine kind of a structured based model with some learning on top.
+但你总可以将一种基于结构的模型与上层的学习方法结合起来。
+
+728
+01:01:31,740 --> 01:01:34,960
+So I think if you don't have access to the full physical structure of your system,
+所以我认为，如果你无法获取系统的完整物理结构，
+
+729
+01:01:35,010 --> 01:01:41,309
+you can add like a residual that is going to take care of the part maybe you don't you cannot or you don't want to represent.
+你可以添加一个残差项，来处理那些你可能无法表示、或不想表示的部分。
+
+730
+01:01:41,359 --> 01:01:45,150
+So I think it's I will go in the direction of hybrid methods in that case.
+所以我认为在这种情况下，我会选择混合方法。
+
+731
+01:01:45,200 --> 01:01:47,789
+Thank you.
+谢谢。
+
+732
+01:01:47,839 --> 01:01:49,301
+First of all, congratulations.
+首先，恭喜你。
+
+733
+01:01:49,351 --> 01:01:50,298
+Fantastic talk.
+非常精彩的演讲。
+
+734
+01:01:50,348 --> 01:01:58,535
+uh in your decoder encoder structure um you didn't mention maybe you are using but I mean it seems to me very logical to use
+嗯，在你的解码器-编码器结构中，你没有提到，但我觉得使用它非常合理。
+
+735
+01:01:58,585 --> 01:02:03,630
+exterior calculus because then you have discrete uh you know structure preserving
+外微分，因为这样你可以获得离散的、结构保持的。
+
+736
+01:02:03,680 --> 01:02:07,549
+discretizations which actually preserve the physics up to any any level you want
+离散化方法，这些方法实际上可以保持物理规律到你想要的任何程度。
+
+737
+01:02:07,599 --> 01:02:13,689
+to have you are you using that are you planning to use that we are not using that yet but actually we will be interested
+你们在用吗？或者计划用吗？
+
+738
+01:02:13,739 --> 01:02:21,408
+in in getting a little bit into that I think we have to talk yeah thanks thanks again for the thanks Thanks again for the talk.
+我们目前还没用，但其实很感兴趣，会稍微深入了解一下。我想我们需要谈谈。再次感谢你的演讲。
+
+739
+01:02:21,458 --> 01:02:30,430
+My question is regarding if if you are working on such high dimensions how they're able to behave in front of outliers and if
+我的问题是，如果你们在处理如此高维度的情况，它们如何应对异常值，以及是否受到维度诅咒的影响。
+
+740
+01:02:30,480 --> 01:02:39,950
+you're affected from the curse of dimensionality like as more dimension you insert the higher and the more difficult is to learn the state system.
+随着维度增加，学习状态系统的难度会越来越高，越来越难。
+
+741
+01:02:40,000 --> 01:02:45,634
+Um so with with those dynamics model that you learn you're always kind of robust in a region around your training data.
+用你们学习到的动力学模型，通常在训练数据附近的区域具有一定的鲁棒性。
+
+742
+01:02:45,684 --> 01:02:50,110
+When you go too much out of distribution you don't really know what's going to happen.
+当你偏离训练数据分布太远时，就很难预测会发生什么。
+
+743
+01:02:50,160 --> 01:02:58,500
+uh in in terms of scaling with the dimension essentially the the main challenge is to know how many dimension you should give to your latent space.
+从维度扩展的角度来看，主要挑战在于确定应该给潜在空间多少维度。
+
+744
+01:02:58,550 --> 01:03:06,217
+So the more complex behaviors you need to encode in high dimension you need to add more dimensions in the latent space essentially.
+所以，你需要在高维度中编码越复杂的动作，就需要在潜在空间中增加越多的维度。
+
+745
+01:03:06,267 --> 01:03:13,950
+But if you know that your system is correlated in some dimensions then you kind of have an idea of how big your latent space should be.
+但如果你知道你的系统在某些维度上存在相关性，那么你就能大致判断出潜在空间的大小应该有多大。
+
+746
+01:03:14,000 --> 01:03:16,590
+So it becomes like a hyperparameter.
+所以它就变成一个超参数。
+
+747
+01:03:16,640 --> 01:03:19,281
+Yes. essentially.
+是的，本质上是这样。
+
+748
+01:03:19,331 --> 01:03:20,029
+Yes.
+是的。
+
+749
+01:03:20,079 --> 01:03:26,810
+Thank you
+谢谢。
+
+750
+01:03:26,860 --> 01:03:34,269
+very much.
+非常感谢。
+
+751
+01:03:34,319 --> 01:03:34,614
+Good.
+很好。
+
+752
+01:03:34,644 --> 01:03:40,553
+So then it's my pleasure to welcome uh Paolo Robuffo Giordano.
+那么，我很荣幸地欢迎保罗·罗布富·乔尔达诺。
+
+753
+01:03:40,603 --> 01:03:41,226
+Yes.
+是的。
+
+754
+01:03:41,276 --> 01:03:51,694
+So Paolo is a CNRS senior research scientist in IRISA in Rennes, France uh where he directs the Rainbow team, a joint team between IRISA and Inria and he
+保罗是位于法国雷恩的IRISA研究中心的高级研究员，他领导着IRISA与Inria联合成立的Rainbow团队，同时
+
+755
+01:03:51,744 --> 01:03:56,926
+is the recipient of the 2019 Michel Monpetit Award from the French Academy of
+他荣获了法国科学院颁发的2019年米歇尔·蒙佩蒂奖。
+
+756
+01:03:56,976 --> 01:04:03,140
+Science and a distinguished lecturer from the IEEE RAS technical committee multi-robot systems.
+并且是IEEE RAS多机器人系统技术委员会的杰出讲师。
+
+757
+01:04:03,190 --> 01:04:03,870
+Thank you.
+谢谢。
+
+758
+01:04:03,920 --> 01:04:09,407
+Thank you very much.
+非常感谢。
+
+759
+01:04:09,457 --> 01:04:10,989
+Yeah.
+嗯。
+
+760
+01:04:11,039 --> 01:04:14,812
+So, uh I'll try to not be too late for lunch.
+所以，呃，我会尽量别迟到吃午饭。
+
+761
+01:04:14,862 --> 01:04:21,083
+So, I want to start with acknowledgement because this as the title suggests has been a journey for me.
+所以，我想先致谢，因为正如标题所示，这对我而言是一段旅程。
+
+762
+01:04:21,133 --> 01:04:26,022
+So, we started on this activity a long time ago with a colleague of mine Antonio Franchi.
+我们很久以前就和我的同事 Antonio Franchi 开始了这项工作。
+
+763
+01:04:26,072 --> 01:04:33,179
+At the time we didn't think that we could achieve what what we achieved and it has been thanks to all these people.
+当时我们并不认为能取得今天这样的成果，这一切都要感谢在座的各位。
+
+764
+01:04:33,229 --> 01:04:37,633
+I think I didn't forget anyone who with the discussions their work and so forth.
+我觉得我没漏掉任何一位参与讨论、贡献工作的人。
+
+765
+01:04:37,683 --> 01:04:40,531
+So thanks to everyone and you may notice there is still a free spot.
+所以，谢谢大家，你们可能也注意到，还有一个空位。
+
+766
+01:04:40,581 --> 01:04:43,107
+I mean in case everyone is interested in working this topic.
+我的意思是，如果大家有兴趣参与这个话题。
+
+767
+01:04:43,157 --> 01:04:45,230
+So you're free to join.
+那么欢迎随时加入。
+
+768
+01:04:45,280 --> 01:04:45,610
+Okay.
+好的。
+
+769
+01:04:45,640 --> 01:04:47,390
+So uh what is the motivation?
+那么，动机是什么呢？
+
+770
+01:04:47,440 --> 01:04:56,350
+Motivation is that as we all know uh in robotics we have to deal with uncertainties and uncertainties can be in perception in modeling and so forth.
+动机在于，正如我们所知，在机器人领域，我们必须应对各种不确定性，这些不确定性可能出现在感知、建模等方面。
+
+771
+01:04:56,400 --> 01:04:59,139
+So we focus mostly on modeling uncertainties.
+因此，我们主要关注建模中的不确定性。
+
+772
+01:04:59,189 --> 01:05:01,696
+So a robot is a model of itself of the environment.
+机器人本质上是对自己和环境的建模。
+
+773
+01:05:01,746 --> 01:05:08,038
+This model is uncertain by construction then it has to do to deal with this uncertainty for taking decisions.
+这个模型从构建之初就带有不确定性，因此必须应对这种不确定性以做出决策。
+
+774
+01:05:08,088 --> 01:05:08,494
+Okay.
+好的。
+
+775
+01:05:08,544 --> 01:05:14,301
+So what are the possible approaches and in general people take or took in robotics.
+那么可能的应对方法有哪些？通常人们在机器人领域会采用或曾经采用过哪些方法？
+
+776
+01:05:14,351 --> 01:05:20,170
+So you can uh try to have a fancy controller policy that is able to deal with uncertainty.
+你可以尝试设计一个复杂的控制器或策略，使其能够应对不确定性。
+
+777
+01:05:20,220 --> 01:05:27,381
+The point here is that you can but this can be sometimes cumbersome or hard to implement and sometimes you don't want to do that.
+这里的关键是，虽然你可以这么做，但有时会很繁琐或难以实现，有时你也不希望这么做。
+
+778
+01:05:27,431 --> 01:05:27,950
+In what sense?
+什么意思？
+
+779
+01:05:28,000 --> 01:05:32,446
+the sense that sometimes you get a robot with has already a controller and that's it.
+意思是，有时你得到的机器人已经自带控制器，仅此而已。
+
+780
+01:05:32,496 --> 01:05:33,419
+You cannot change it.
+你无法更改它。
+
+781
+01:05:33,469 --> 01:05:34,821
+You have to work with what you have.
+你必须利用手头现有的东西。
+
+782
+01:05:34,871 --> 01:05:37,033
+Okay, so this is not always possible.
+好吧，这并不总是可行的。
+
+783
+01:05:37,083 --> 01:05:43,013
+Okay, then you may seek strong guarantees from the us of a specific policy or controller.
+那么你可能需要从特定策略或控制器中获得强保证。
+
+784
+01:05:43,063 --> 01:05:49,165
+And this the problem here is that many times it is possible if you simplify your model because so you're saying I want strong guarantees but then
+这里的问题是，如果你简化模型，很多时候是可行的，因为你要求强保证，但
+
+785
+01:05:49,215 --> 01:05:56,224
+I have to use a simplified model and then your guarantees are not that strong you know in practice and also you have to invent many times something.
+你必须使用简化模型，那么你的保证在实践中就不是那么强了，而且你往往还需要发明很多东西。
+
+786
+01:05:56,274 --> 01:06:03,069
+like some quantities, some function, contraction metric and this is also not always possible then you want to compute
+比如一些量、函数、收缩度量，这同样并不总是可行的，然后你想要计算
+
+787
+01:06:03,119 --> 01:06:10,889
+computational feasibility and this again can be manageable only for simplified models okay and another point that I think many people
+计算可行性，而这再次只能在简化模型下才可管理，好吧，另一个我认为很多人
+
+788
+01:06:10,939 --> 01:06:19,028
+take is to say my uncertainty is a generic perturbation like you know an additive process noise something like that this
+会认为的是，我的不确定性是一种通用扰动，比如你知道的加性过程噪声之类的东西，这
+
+789
+01:06:19,078 --> 01:06:27,052
+simplifies the math but then you don't have any structure and then your uncertainty prediction will be very very conservative Okay.
+简化了数学，但你没有结构，那么你的不确定性预测就会非常非常保守。
+
+790
+01:06:27,102 --> 01:06:33,452
+So, so what we try to do, so we try to have a method which is um which has a general applicability.
+所以，我们尝试做的是，我们试图找到一种具有通用适用性的方法。
+
+791
+01:06:33,502 --> 01:06:38,374
+So that doesn't require any unnecessary simplification of the model of the robot.
+这样就不需要对机器人模型进行任何不必要的简化。
+
+792
+01:06:38,424 --> 01:06:42,670
+Whatever it is, we can use it under some assumptions.
+无论是什么，我们都可以在某些假设下使用它。
+
+793
+01:06:42,720 --> 01:06:44,503
+An approach which is systematic.
+一种系统化的方法。
+
+794
+01:06:44,553 --> 01:06:46,374
+We don't have to invent anything at all.
+我们根本不需要发明任何东西。
+
+795
+01:06:46,424 --> 01:06:54,390
+We take the model of the robot and we can apply our approach you know also in automized way which has a computational feasibility.
+我们采用机器人的模型，就可以以自动化的方式应用我们的方法，同时具备计算可行性。
+
+796
+01:06:54,440 --> 01:06:57,950
+So we don't have to resort to a full GPU cluster to run our stuff.
+因此我们无需依赖完整的 GPU 集群来运行我们的系统。
+
+797
+01:06:58,000 --> 01:06:58,483
+Yeah.
+没错。
+
+798
+01:06:58,533 --> 01:07:02,612
+And that exploits at most the structure of uncertainty.
+它最大限度地利用了不确定性结构。
+
+799
+01:07:02,662 --> 01:07:09,413
+So we want really to avoid the use of generic additive process noise or kind of the same kind
+所以我们真正想避免的是使用通用的加性过程噪声，或类似的一般性不确定性表示方式。
+
+800
+01:07:09,463 --> 01:07:16,130
+of uncertainty representations to a very structured uncertainty that we can exploit in the in the in the planning.
+而是采用一种结构化的不确定性，我们可以在规划中加以利用。
+
+801
+01:07:16,180 --> 01:07:17,966
+So there is a price to pay of course.
+当然，这也需要付出代价。
+
+802
+01:07:18,016 --> 01:07:25,168
+I mean the price for us is that the approach that we developed is a a local approach and the guarantees are soft guarantees
+我的意思是，对我们而言，这种方法是局部的，其保证属于软性保证。
+
+803
+01:07:25,218 --> 01:07:31,769
+but in my mind this is my opinion if you think about it when you want strong guarantees but then you simplify the model you
+但在我看来，如果你思考一下，当你追求强保证时，却简化了模型，
+
+804
+01:07:31,819 --> 01:07:39,872
+are anyway soft guarantees so it's debatable I would say with this art an art guarantee where your model is highly simplified so we are
+那么本质上你得到的仍然是软性保证，所以这是否成立，我认为是值得商榷的，尤其是在模型高度简化的这种情况下。
+
+805
+01:07:39,922 --> 01:07:44,528
+basically in between of this spectrum between you know formal methods which
+基本上在这两种方法之间的某个位置，你知道的，一种是形式化方法，另一种是……
+
+806
+01:07:44,578 --> 01:07:49,277
+have a limited applicability and empirical particular methods that have a wide applicability.
+适用范围有限，而经验性方法则具有广泛的适用性。
+
+807
+01:07:49,327 --> 01:07:50,670
+So what is the math?
+那么，数学上是怎么回事？
+
+808
+01:07:50,720 --> 01:07:51,566
+So I I have some math.
+所以，我要讲点数学。
+
+809
+01:07:51,616 --> 01:07:54,627
+I mean I'll try to to explain as as clear as I can.
+我的意思是，我会尽量清楚地解释。
+
+810
+01:07:54,677 --> 01:07:59,052
+So this is something that again we started with Antonio Frankie long time ago now in 2018.
+所以这件事，我们早在很久以前就和安东尼奥·弗兰基开始了，那时是2018年。
+
+811
+01:07:59,102 --> 01:08:04,711
+So we said let's say we have a model of a robot whatever it is we just have to know it.
+所以我们说，假设我们有一个机器人的模型，不管它是什么，我们只需要了解它就行了。
+
+812
+01:08:04,761 --> 01:08:06,745
+Then we have some tracking task.
+然后我们有一个跟踪任务。
+
+813
+01:08:06,795 --> 01:08:11,011
+We want to track a trajectory and we have some controller whatever it is.
+我们想要追踪一条轨迹，同时拥有某种控制器，不管它是什么。
+
+814
+01:08:11,061 --> 01:08:11,430
+Yeah.
+嗯。
+
+815
+01:08:11,460 --> 01:08:17,149
+Now the point here is that the model of the robot has some parameters P that we don't know and the
+这里的重点是，机器人的模型中有一些参数 P，我们并不知道。
+
+816
+01:08:17,199 --> 01:08:24,346
+controller uses some nominal value of these parameters and there is a mismatch between the real parameters and the nominal ones.
+控制器使用了这些参数的标称值，而实际参数与标称值之间存在不匹配。
+
+817
+01:08:24,396 --> 01:08:26,868
+So we want to optimize the trajectory.
+因此我们希望优化轨迹。
+
+818
+01:08:26,918 --> 01:08:28,001
+This was the point.
+这正是关键所在。
+
+819
+01:08:28,051 --> 01:08:30,348
+We don't want to build a fancy controller.
+我们不想打造一个复杂的控制器。
+
+820
+01:08:30,398 --> 01:08:36,227
+We take whatever we have but we want to optimize the motion the trajectory such that the closed loop
+我们使用现有的系统，但希望优化运动和轨迹，使得闭环系统
+
+821
+01:08:36,277 --> 01:08:42,450
+so the the the the execution of this task will be insensitive to the discrepancies between P and PC.
+从而在 P 与 PC 之间存在差异时，该任务的执行仍保持不敏感。
+
+822
+01:08:42,500 --> 01:08:44,463
+So how to do this?
+那么该如何实现这一点呢？
+
+823
+01:08:44,513 --> 01:08:52,590
+We came up with this metric this sensitivity matrix which basically is the variation of the evolution of the state in closed loop.
+我们提出了这个度量标准——敏感性矩阵，它本质上是闭环状态下状态演化的变动情况。
+
+824
+01:08:52,640 --> 01:08:59,433
+So for the robots and the controller against variations on the parameters evaluated at the nominal values.
+因此，该矩阵可用于评估机器人和控制器对参数变化的鲁棒性，评估点位于标称值处。
+
+825
+01:08:59,483 --> 01:09:06,430
+So this is a matrix that you can compute easily and it can be used as a metric a metric for optimization for generating motion plans.
+这是一个可以轻松计算的矩阵，可作为优化的度量标准，用于生成运动规划。
+
+826
+01:09:06,480 --> 01:09:06,910
+Okay.
+好的。
+
+827
+01:09:06,960 --> 01:09:10,139
+So it can be used as a robustness metric.
+因此它可作为鲁棒性度量使用。
+
+828
+01:09:10,189 --> 01:09:15,822
+Now this matrix doesn't have a close form but you can come up with a very easily with an OD
+现在该矩阵没有闭式解，但你可以很容易地通过一个 ODE 来求解。
+
+829
+01:09:15,872 --> 01:09:22,840
+a standard OD that you for propagate and again this the point here is that this step is completely systematic.
+一个标准的OD，你可以用来传播，再次强调的是，这一步完全是系统性的。
+
+830
+01:09:22,890 --> 01:09:29,481
+This can always be done as long as you can compute the Jacobians of your robot dynamics and control.
+只要能计算出机器人动力学和控制的雅可比矩阵，这一点始终可以实现。
+
+831
+01:09:29,531 --> 01:09:34,190
+So the assumption now is that uh these jacobians are computable.
+因此，现在的假设是这些雅可比矩阵是可计算的。
+
+832
+01:09:34,240 --> 01:09:37,400
+So the robot is differentiable the control is differentiable.
+因此，机器人是可微的，控制也是可微的。
+
+833
+01:09:37,450 --> 01:09:41,884
+But if you can do that this can be computed you for integrated and you get your matrix.
+但如果你能做到这一点，就可以进行计算，实现集成，从而得到你的矩阵。
+
+834
+01:09:41,934 --> 01:09:44,542
+Okay there is nothing to invent at this stage.
+现阶段没什么可发明的。
+
+835
+01:09:44,592 --> 01:09:47,840
+So now once you have this matrix you can set up an optimization problem.
+现在有了这个矩阵，你就可以建立一个优化问题。
+
+836
+01:09:47,890 --> 01:09:51,664
+So for example these are you know the first ideas that we had at the time.
+比如，这些就是我们当时最初的一些想法。
+
+837
+01:09:51,714 --> 01:09:57,323
+Let's optimize the trajectory that we want to track such that you know we minimize a metric of this
+让我们优化想要跟踪的轨迹，以最小化这一指标
+
+838
+01:09:57,373 --> 01:10:03,844
+matrix at the final time or we minimize the integral of the norm or whatever you want to optimize.
+在最终时刻的矩阵，或最小化范数的积分，或你想要优化的任何目标。
+
+839
+01:10:03,894 --> 01:10:04,294
+Okay.
+好的。
+
+840
+01:10:04,338 --> 01:10:06,758
+So this is an example back in the day.
+所以这是当年的一个例子。
+
+841
+01:10:06,808 --> 01:10:10,633
+So I just show you the explain the context and show the video.
+所以我先向你们展示一下，解释一下背景，然后播放视频。
+
+842
+01:10:10,683 --> 01:10:18,950
+So in the top rows the trajectory is not optimized and the parameters are 80% and 100% the nominal values.
+在上方的行中，轨迹未经过优化，参数为额定值的80%和100%。
+
+843
+01:10:19,000 --> 01:10:21,741
+In the bottom rows, the trajectory is optimized.
+在下方的行中，轨迹经过了优化。
+
+844
+01:10:21,791 --> 01:10:23,138
+This is for a quadrotor.
+这是针对四旋翼飞行器的。
+
+845
+01:10:23,188 --> 01:10:28,046
+The parameters were the mass, thrust coefficients, and location of the central mass.
+参数包括质量、推力系数以及中心质量的位置。
+
+846
+01:10:28,096 --> 01:10:30,750
+And you may see it again.
+你们可以再看一遍。
+
+847
+01:10:30,800 --> 01:10:32,378
+I don't know if you can notice that.
+不知道你们是否注意到这一点。
+
+848
+01:10:32,428 --> 01:10:39,197
+So the quadrotor does something strange in the sense tries to track the trajectory under this perturbation.
+四旋翼在受到扰动的情况下，做了一些奇怪的事，试图跟踪轨迹。
+
+849
+01:10:39,247 --> 01:10:47,680
+But the point is that if you look at the end because that this is where we optimize in the optimized case you see the quadrotor arrives
+但重点是，如果你看结尾，因为在优化情况下我们正是在此处进行优化，可以看到四旋翼几乎完全到达目标状态。
+
+850
+01:10:47,730 --> 01:10:52,325
+almost exactly at the target state while in the nonoptimized case you get an
+而在未优化的情况下，由于参数不确定性，你得到的是一个
+
+851
+01:10:52,375 --> 01:10:57,624
+error because of the parameter uncertainty and this is done without touching the control.
+误差，而且这一切都没有调整控制。
+
+852
+01:10:57,674 --> 01:10:57,905
+Okay.
+好的。
+
+853
+01:10:57,935 --> 01:11:02,744
+So the control is the same in this case and in this case same control gain same control structure.
+因此在这种情况下和这种情况下，控制是相同的，控制增益和控制结构都一样。
+
+854
+01:11:02,794 --> 01:11:10,131
+The only difference is the motion is the trajectory that we generated which has an intrinsic robustness to uncertainties.
+唯一的区别在于运动轨迹是我们生成的，这种轨迹对不确定性具有内在的鲁棒性。
+
+855
+01:11:10,181 --> 01:11:10,598
+Okay.
+好的。
+
+856
+01:11:10,648 --> 01:11:14,132
+And yes, this is just another visualization of the same.
+是的，这只是同一内容的另一种可视化展示。
+
+857
+01:11:14,182 --> 01:11:19,629
+So in nonoptimized and optimized cases with over many repetitions in the optimized case the
+因此在非优化和优化情况下，经过多次重复实验后，在优化情况下
+
+858
+01:11:19,679 --> 01:11:23,390
+quadroer is able to reach you know better and better the final the final target.
+四旋翼能够越来越准确地达到最终目标。
+
+859
+01:11:23,440 --> 01:11:23,870
+Okay.
+好的。
+
+860
+01:11:23,920 --> 01:11:27,085
+Then you can go on and you can invent other quantities.
+然后你可以继续，创造出其他量。
+
+861
+01:11:27,135 --> 01:11:27,910
+For example,
+例如，
+
+862
+01:11:27,960 --> 01:11:32,811
+you can say I also want to consider an input sensitivity which would be the
+你可以提出，我还想考虑输入敏感性，即闭环下输入的变化
+
+863
+01:11:32,861 --> 01:11:37,262
+variation of the inputs in close loop uh against variation of the of the parameters.
+与参数变化之间的关系。
+
+864
+01:11:37,312 --> 01:11:39,412
+And this can be used as a regalization term.
+这可以作为正则化项使用。
+
+865
+01:11:39,462 --> 01:11:44,014
+Basically in your optimization you can ask I want a trajectory such that the inputs
+基本上在你的优化中，你可以要求得到一条轨迹，使得输入在模型存在扰动时几乎始终保持一致
+
+866
+01:11:44,064 --> 01:11:49,270
+will be almost always the same even when I have perturbations in the models and
+因此你对饱和情况更具鲁棒性，例如对输入约束的鲁棒性，或者你可以
+
+867
+01:11:49,320 --> 01:11:53,923
+so you are more robust against saturations for example against input constraints or you can
+设计对初始条件的敏感性，这又是另一种观测器（OD），这种敏感性
+
+868
+01:11:53,973 --> 01:11:59,357
+invent a sensitivity to initial conditions which is another OD again which can be that
+可以从雅可比矩阵中系统地计算出来，这能告诉你初始条件的不确定性
+
+869
+01:11:59,407 --> 01:12:04,590
+can be computed systematically from the jacobians and this is you know how uncertainties in
+将如何传播，这对重规划非常有用，比如你在使用模型预测控制（MPC）或规划时
+
+870
+01:12:04,640 --> 01:12:08,126
+the initial conditions will propagate and this is very useful for replanning you know when
+初始条件的影响会传播开来，这对重规划非常有用。
+
+871
+01:12:08,176 --> 01:12:12,137
+you do MPC or planning and you don't know exactly the current state from sensors
+比如做 MPC 或规划时，你无法从传感器精确知道当前状态，
+
+872
+01:12:12,187 --> 01:12:17,695
+and you want to replan by taking into account this uncertainty at the initial state.
+希望在重规划时把初始状态的不确定性考虑进去。
+
+873
+01:12:17,745 --> 01:12:18,348
+Okay.
+好。
+
+874
+01:12:18,398 --> 01:12:22,565
+Then we uh at some point worked on the tubes.
+然后我们曾在某个阶段研究过‘管道’方法。
+
+875
+01:12:22,615 --> 01:12:26,613
+So in what I said so far we didn't have any way of quantifying
+到目前为止，我讲的内容还没有办法量化
+
+876
+01:12:26,663 --> 01:12:31,694
+you know how much the spread the trajectories are spreading over time because of uncertainty.
+不确定性导致轨迹随时间发散的程度。
+
+877
+01:12:31,744 --> 01:12:36,704
+Then you can define tubes like you know many people do for for tube based MPC.
+然后你可以像很多人做基于管道的模型预测控制那样定义管道。
+
+878
+01:12:36,754 --> 01:12:44,453
+For example, in our case, the point is that these tubes are I will say more precise because they exactly exploit the structure of the model.
+例如，在我们的案例中，这些管道更精确，因为它们恰好利用了模型的结构。
+
+879
+01:12:44,503 --> 01:12:51,255
+The fact that we are assuming uncertainties in a specific set of parameters and the story is quite simple.
+我们假设不确定性存在于特定参数集合中的事实，整个故事相当简单。
+
+880
+01:12:51,305 --> 01:12:57,337
+You define space or ranges for the tubes and ellipsoid in parameter space and then you want to map this ellipoid in
+你定义参数空间中管道和椭球的范围或区间，然后你想将该椭球映射到
+
+881
+01:12:57,387 --> 01:13:03,578
+parameter space into an ellypoid in state space or input space and this is done by using the the matrix the sensity matrix.
+状态空间或输入空间中的椭球，这通过使用灵敏度矩阵来实现。
+
+882
+01:13:03,628 --> 01:13:10,446
+When you have this ellypoid then you can compute for example the radius of the tube along the particular direction.
+当你有了这个椭球后，就可以计算出沿特定方向的管道半径。
+
+883
+01:13:10,496 --> 01:13:13,990
+So a component of the state a component of the input or whatever function
+因此，状态的一个分量、输入的一个分量，或任何你感兴趣函数
+
+884
+01:13:14,040 --> 01:13:18,940
+you want and this radius of the tube can be used for robustifying constraints.
+的管道半径可用于强化约束的鲁棒性。
+
+885
+01:13:18,990 --> 01:13:24,430
+So this is what we then started doing after you know we we came up with this tube idea.
+这就是我们提出管道概念后开始做的事情。
+
+886
+01:13:24,480 --> 01:13:27,322
+So we set up an optimization problem.
+于是我们建立了一个优化问题。
+
+887
+01:13:27,372 --> 01:13:30,350
+We compute tubes on states, inputs,
+我们计算状态、输入
+
+888
+01:13:30,400 --> 01:13:36,120
+whatever quantity we are interested in and then we robustify the constraints with the with the margins from
+以及我们感兴趣的所有其他量的管道，然后用这些裕度来强化约束。
+
+889
+01:13:36,170 --> 01:13:43,214
+the tubes and we can set up a robust optimization problem and just uh as information so we in
+管道和我们可以建立一个稳健的优化问题，只需提供信息即可，我们
+
+890
+01:13:43,264 --> 01:13:49,981
+the original formulation we using ellipoids but then we also generalize to box or con so parameter in a
+在原始公式中我们使用椭球体，但随后我们也推广到了盒子或锥形，即参数在
+
+891
+01:13:50,031 --> 01:13:55,493
+box or a parameter in a super quadricing parameter space and this is presented this afternoon at 3 p.m.
+一个盒子或超二次参数空间中，这个内容将在今天下午 3 点展示，
+
+892
+01:13:55,543 --> 01:13:58,699
+at poster 16 if you're interested in the topic.
+海报 16 号，如果你对这个话题感兴趣。
+
+893
+01:13:58,749 --> 01:14:00,504
+So then some results.
+那么接下来是一些结果。
+
+894
+01:14:00,554 --> 01:14:05,070
+So we applied all these ideas to many case studies over the years in the offline
+我们多年来将这些思想应用于多个案例研究，包括离线
+
+895
+01:14:05,120 --> 01:14:10,462
+online case and also in in manipulation also in learning as I will come in a moment.
+在线情况，以及在操作和学习中的应用，我稍后会具体说明。
+
+896
+01:14:10,512 --> 01:14:18,116
+So for offline uh planning this is an example for which we got the best paper award at the conference for for drones.
+对于离线规划，这是一个例子，我们在无人机会议上获得了最佳论文奖。
+
+897
+01:14:18,166 --> 01:14:25,149
+So here basically we're planning a trajectory for a drone where we physically attached stuff on the drone.
+基本上，我们正在为一架无人机规划轨迹，这架无人机上物理挂载了物品。
+
+898
+01:14:25,199 --> 01:14:30,771
+I mean it's hard to see on this picture but every repetition has the drone with something attached here and there for changing
+这张图上很难看出来，但每次重复时，无人机都在不同位置挂载了东西，以改变
+
+899
+01:14:30,821 --> 01:14:38,004
+the the location of the central mass for example then the drone had to fly precisely through an obstacle through a window and
+重心的位置，然后无人机必须精确地穿过一个障碍物，穿过一扇窗户，
+
+900
+01:14:38,054 --> 01:14:46,159
+in the optimized case this was uh much I mean it could do it much more accurately because we were basically with the
+在优化情况下，它能够更准确地完成，因为我们基本上是通过
+
+901
+01:14:46,209 --> 01:14:54,670
+inputs on the tubes we could guarantee that the inputs were not saturating despite the uncertainties that we didn't know in the model.
+我们可以确保管状输入不会饱和，即使模型中存在未知的不确定性。
+
+902
+01:14:54,720 --> 01:15:01,230
+Then uh with other colleagues from uh University of Tuente and the University of Monia,
+然后，与意大利两所大学的同事一起，
+
+903
+01:15:01,280 --> 01:15:08,510
+we also use the same ideas on Xar by exploiting this time also that the sensitivity to initial conditions
+我们也将同样的思想应用到一个四旋翼平台上，这次还利用了对初始条件的敏感性，
+
+904
+01:15:08,560 --> 01:15:16,399
+for capturing how you know uncertainties in the initial state propagates and we did an experiment evaluation and the point
+以捕捉初始状态不确定性如何传播，并进行了实验评估，重点在于，
+
+905
+01:15:16,449 --> 01:15:21,083
+here is that I don't know if it's clear from this picture but when you compute these tubes if we
+这里我想说明的是，从这张图中可能不太清楚，但当你计算这些管状区域时，如果我们
+
+906
+01:15:21,133 --> 01:15:29,266
+don't consider the uncertainties the initial ial condition the tubes don't capture well the initial phase of the perturbed trajectories.
+不考虑初始条件的不确定性，这些管状区域就无法很好地捕捉到受扰轨迹的初始阶段。
+
+907
+01:15:29,316 --> 01:15:29,610
+Well,
+事实上，
+
+908
+01:15:29,640 --> 01:15:33,550
+if you do if you do consider the uncertainties in the initial condition that you get tubes
+如果你考虑初始条件的不确定性，所得到的管状区域
+
+909
+01:15:33,600 --> 01:15:40,669
+that are much more representative of the real envelope of perturbed trajectories because the initial condition is uncertain.
+就能更真实地反映受扰轨迹的实际包络范围，因为初始条件本身是不确定的。
+
+910
+01:15:40,719 --> 01:15:50,296
+Then uh with colleagues at last we um did some planning in the sense of RRT planning by using the sensitivity metrics and tubes for planning.
+然后，与同事们合作，我们利用敏感性度量和管状区域进行了规划，具体是 RRT 规划。
+
+911
+01:15:50,346 --> 01:15:56,062
+So for passing through a window again or in a nice experiment where the drone had a had a perch and
+比如再次穿过窗户，或在一个精彩的实验中，无人机先停靠在某个位置，
+
+912
+01:15:56,112 --> 01:16:01,950
+with this perch that to catch some rings while flying and every time it was catching a ring you know the
+然后在飞行过程中抓住一些环，每次抓住一个环时，你知道的
+
+913
+01:16:02,000 --> 01:16:07,149
+mass the central mass was changing because now there was a ring on the perch but the planner didn't know this
+中心质量发生变化，因为现在栖木上多了一个环，但规划器并不知道这一点
+
+914
+01:16:07,199 --> 01:16:14,992
+but since we planned with this robust metrics it was possible to plan ahead of time by by meeting the robustness constraints.
+但由于我们使用了这种鲁棒性度量进行规划，因此能够提前满足鲁棒性约束，实现前瞻性规划
+
+915
+01:16:15,042 --> 01:16:18,324
+Then we also applied these ideas to manipulation.
+然后我们也将这些思想应用于操作任务
+
+916
+01:16:18,374 --> 01:16:24,321
+So a manipulator robot that has to move a load with stuff in a box where we don't know exactly what is in the box.
+例如一个机械臂机器人需要移动一个箱子里的负载，但我们并不确切知道箱子里装了什么
+
+917
+01:16:24,371 --> 01:16:30,270
+So we don't know exactly the properties of the the initial properties and location of the central mass of of the box.
+我们并不确切知道箱子的初始质量中心的属性和位置
+
+918
+01:16:30,320 --> 01:16:34,814
+And then we also applied the idea these ideas to online planning to NPC.
+然后我们还将这些思想应用于在线 MPC 规划。
+
+919
+01:16:34,864 --> 01:16:38,294
+So uh this is a paper that we published last year and we just
+这是我们去年发表的一篇论文，最近
+
+920
+01:16:38,344 --> 01:16:43,913
+recently got an award from the technical committee in optimization for robotics for this work.
+刚刚获得了机器人优化技术委员会颁发的奖项，以表彰这项工作
+
+921
+01:16:43,963 --> 01:16:46,429
+So the idea on paper looks quite simple.
+论文中的想法看起来相当简单
+
+922
+01:16:46,479 --> 01:16:51,187
+to do an MPC where we use sensit these sensitivity tubes forifying constraints.
+即在模型预测控制中，利用这些敏感性管来强化约束。
+
+923
+01:16:51,237 --> 01:16:52,926
+Okay, so it looks simple on paper.
+好，论文上的方法看起来很简单
+
+924
+01:16:52,976 --> 01:16:56,720
+The math is not that simple in sense that there are many subties that you have to solve
+但实际上数学上并不简单，因为需要解决许多细微复杂的子问题
+
+925
+01:16:56,770 --> 01:17:04,319
+for doing this online on the hardware but uh we managed to do it and these are some results.
+在硬件上实时完成这项工作，嗯，我们成功做到了，这是部分结果。
+
+926
+01:17:04,369 --> 01:17:13,372
+So uh the red envelope is the MPC in a non- robust configuration while the blue envelope is the robust NPC.
+红色包络线代表非鲁棒配置下的 MPC，蓝色包络线则代表鲁棒 MPC。
+
+927
+01:17:13,422 --> 01:17:19,062
+And since the robust NPC is able to reason about uncertainties and guarantee basically it avoids
+而且由于鲁棒 MPC 能够推理不确定性，并基本保证规避风险
+
+928
+01:17:19,112 --> 01:17:23,954
+saturations of the motors because of uncertainties it is able to do a much better tracking.
+由于存在不确定性，电机饱和情况得以缓解，因此能够实现更精准的跟踪。
+
+929
+01:17:24,004 --> 01:17:31,427
+So it it deviates less from the from the plan trajectory and uh yes it's the same for for passing through window and
+因此它偏离计划轨迹的程度更小，是的，穿过窗户时也是如此。
+
+930
+01:17:31,477 --> 01:17:39,505
+we also did an anard implementation on on a robot on a real drone or full on board and a nice point is that
+我们还在一台真实无人机或完整机载系统上的机器人上实现了这一方案，一个有趣的特点是
+
+931
+01:17:39,555 --> 01:17:46,041
+you may ask one question you may have is cool but you know does it link it all this takes much longer than a
+你可能会问一个问题：这听起来不错，但你知道吗，它真的能把所有这些都连起来吗？这需要的时间可比想象中长多了。
+
+932
+01:17:46,091 --> 01:17:53,310
+standard MPC the answer is no it takes a little bit longer to compute the sensitivity tubes but this uh overhead is negligible it's
+标准MPC的答案是否定的，计算敏感性管所需时间稍长一些，但这个开销可以忽略不计。
+
+933
+01:17:53,360 --> 01:18:01,086
+a very small overhead complain to a planner to a plane MPC and this is just a nice experiment that where the plane MPC
+与普通 MPC 相比开销非常小；这只是一个有趣的实验，普通 MPC
+
+934
+01:18:01,136 --> 01:18:10,768
+completely crashed because it wasn't able to deal with you know something that we attached on the robot uh somewhere on the frame while
+完全崩溃了，因为它无法处理我们附加在机器人框架上的某个东西，
+
+935
+01:18:10,818 --> 01:18:18,083
+when we did you know the robots version the robots version didn't saturate and then you know it didn't didn't crash all right then
+当我们做机器人版本时，那个机器人版本没有饱和，然后你知道，它也没崩溃，好吧。
+
+936
+01:18:18,133 --> 01:18:27,139
+uh for the online case uh with again with colleagues at robotics as a robotic the adversary of 20 the robotics group of 10.
+嗯，对于在线情况，再次与机器人组的同事们合作。
+
+937
+01:18:27,189 --> 01:18:33,808
+We did also an MPPI version of that presented last year and we recently at this
+我们去年还展示了该方法的 MPPI 版本，最近我们在此基础上进行了进一步研究。
+
+938
+01:18:33,858 --> 01:18:40,742
+we presented a preliminary work where uh we showed the way to consider basically this continuous dynamics.
+我们展示了一项初步工作，其中我们说明了如何基本考虑这种连续动力学。
+
+939
+01:18:40,792 --> 01:18:48,152
+So for example when you have contacts so when you have a contact you can see that the dynamics becomes a switch in dynamics and then you
+例如，当你遇到接触时，动力学就会发生切换，此时你可以看到动力学变为切换动力学。
+
+940
+01:18:48,202 --> 01:18:52,189
+basically you can derive how this sensitivity can has to be reset at the
+基本上你可以推导出，这种敏感性应在切换时刻如何重置。
+
+941
+01:18:52,239 --> 01:18:57,070
+switching time and how to propagate the tubes also with the switch in dynamics.
+以及如何在动力学切换的情况下，继续传播这些管状轨迹。
+
+942
+01:18:57,120 --> 01:19:03,230
+So this is a preliminary work but the math is there and it seems promising to us.
+这是一项初步工作，但数学基础已经存在，对我们而言前景看起来很有希望。
+
+943
+01:19:03,280 --> 01:19:05,898
+Okay then let me come to to learning.
+好的，接下来我来谈谈学习。
+
+944
+01:19:05,948 --> 01:19:11,950
+So I'm not a learning uh guy but with the students we started looking at how to
+我本人并不是学习方面的专家，但我和学生们开始研究如何将这些想法用于学习。
+
+945
+01:19:12,000 --> 01:19:17,190
+use these ideas for learning because there is a big potential for us also in the learning world.
+因为在学习领域，我们也有巨大的潜力。
+
+946
+01:19:17,240 --> 01:19:25,728
+For example this is the first work that uh we got recently accepted at RA and the idea is is quite simp simple.
+例如，这是最近被 RA-L 接受的首项工作，其想法相当简单。
+
+947
+01:19:25,778 --> 01:19:30,165
+So imagine that you train many policies uh for doing some task.
+想象一下，你为完成某个任务训练了许多策略。
+
+948
+01:19:30,215 --> 01:19:38,412
+So flying with a drone then you can use for each policy you can evaluate the sensitivity where you treat the policies
+比如用无人机飞行，那么对于每个策略，你都可以评估其敏感性，将策略视为输入。
+
+949
+01:19:38,462 --> 01:19:44,969
+as a controller over a trae the tra trajectory you want to do and then every policy would have a different sensitivity cause.
+作为轨迹控制器，你想要执行的轨迹，然后每个策略都会有不同的敏感度。
+
+950
+01:19:45,019 --> 01:19:49,099
+So this can be treated as a score and then you can use this score to select
+所以这可以被视为一个评分，然后你可以用这个评分来选择
+
+951
+01:19:49,149 --> 01:19:56,098
+the policy which is less sensitive to parameter uncertainties where here parameters uncertainty is the cmtorial gap.
+对参数不确定性不那么敏感的策略，这里的参数不确定性指的是实际与仿真之间的差距。
+
+952
+01:19:56,148 --> 01:19:56,450
+Okay.
+好的。
+
+953
+01:19:56,480 --> 01:20:02,816
+So we train in simulation and then we select the policy which will be more robust when we deploy on the on the real robot.
+我们在仿真中进行训练，然后选择在真实机器人部署时更具鲁棒性的策略。
+
+954
+01:20:02,866 --> 01:20:04,610
+Yeah. by construction.
+对，这是构造上的结果。
+
+955
+01:20:04,660 --> 01:20:05,078
+Yeah.
+对。
+
+956
+01:20:05,128 --> 01:20:07,230
+And uh yeah,
+而且，对，
+
+957
+01:20:07,280 --> 01:20:17,979
+once one colleague this this next feature for for for the paper and uh it works quite well in the sense that if we select
+当一位同事为论文添加了这个新特性后，它表现得相当不错，也就是说，如果我们选择在仿真中敏感度评分最小的策略，
+
+958
+01:20:18,029 --> 01:20:27,245
+the policy which in simulation has the smallest sensitivity score then when it is deployed on the real robots the real robots flies quite well.
+那么当它部署到真实机器人上时，真实机器人飞行得相当好。
+
+959
+01:20:27,295 --> 01:20:34,776
+While if we select a policy which didn't have a small CV score then because of the immaterial gap the drone crashes.
+而如果我们选择了一个没有小CV评分的策略，由于实际与仿真之间的差距，无人机就会坠毁。
+
+960
+01:20:34,826 --> 01:20:39,331
+So it's a way of selecting basically having a signal that tells you what is
+所以这是一种基本的方法，通过一个信号来告诉你什么才是
+
+961
+01:20:39,381 --> 01:20:45,710
+an intrinsic robust policies by by construction and then you can go farther along this road.
+通过构造本身就具备内在鲁棒性的策略，然后你可以沿着这条道路走得更远。
+
+962
+01:20:45,760 --> 01:20:53,532
+So we are now uh working on how to embed this sensitivity as a reward signal for RL for enforcement learning.
+所以我们现在正在研究如何将这种敏感性作为强化学习的奖励信号。
+
+963
+01:20:53,582 --> 01:20:56,859
+And again the idea is quite uh simple on paper.
+再次强调，这个想法在纸面上相当简单。
+
+964
+01:20:56,909 --> 01:21:00,767
+So you can in the reward you can add the sensitivity cost and then
+所以你可以在奖励中加入敏感性成本，然后
+
+965
+01:21:00,817 --> 01:21:04,990
+you do your gradient derivation because now the the reward depends on the policy parameters.
+进行梯度推导，因为现在奖励依赖于策略参数。
+
+966
+01:21:05,040 --> 01:21:13,790
+So you need some additional terms in the in the gradient of the cost and you train with this signal and the idea is that you will get a policy that is
+因此你需要在成本梯度中加入一些额外项，并使用这个信号进行训练，其理念是你会得到一个策略，
+
+967
+01:21:13,840 --> 01:21:20,186
+trained such that it can solve the task and also be minimally sensitive to parameters uncertainty
+该策略经过训练后不仅能完成任务，还能对参数不确定性保持最小敏感性。
+
+968
+01:21:20,236 --> 01:21:25,548
+which again in this context means being min minimally sensitive to the sim to real gap.
+这在当前语境下意味着对仿真到现实的差距保持最小敏感性。
+
+969
+01:21:25,598 --> 01:21:29,664
+So when you deploy it should work much better on the real hardware.
+因此当你部署时，它在真实硬件上的表现会好得多。
+
+970
+01:21:29,714 --> 01:21:33,464
+We don't have hardware experiments so far just some simulations.
+目前我们还没有硬件实验，只有仿真结果。
+
+971
+01:21:33,514 --> 01:21:42,385
+So these are two cases where in this left case the policy was uh didn't have any domain randomization at all
+这是两种情况：在左侧情况下，策略根本没有进行任何领域随机化，
+
+972
+01:21:42,435 --> 01:21:50,108
+on purpose just to show that without domain randomization a plane policy of course doesn't work while with our robust version.
+故意如此，只是为了说明没有领域随机化时，普通策略当然无法工作，而我们的鲁棒版本则可以。
+
+973
+01:21:50,158 --> 01:21:54,402
+So when we train with this sensitivity signal in the reward without doing any
+所以当我们使用这种敏感性信号作为奖励进行训练，而无需进行领域随机化时，
+
+974
+01:21:54,452 --> 01:22:00,838
+domain randomization still we get that the policy is robust without domain randomization at all.
+仍然能够得到策略具备鲁棒性，甚至完全不需要领域随机化。
+
+975
+01:22:00,888 --> 01:22:07,230
+Then if you add domain randomization of course it's gets even better.
+如果你再加入领域随机化，当然效果会更好。
+
+976
+01:22:07,280 --> 01:22:07,735
+Okay.
+好的。
+
+977
+01:22:07,785 --> 01:22:12,867
+So I'm uh almost done just some thoughts and perspectives.
+所以我差不多讲完了，最后分享一些想法和视角。
+
+978
+01:22:12,917 --> 01:22:19,513
+So uh so we developed many many ideas around this um yeah the idea of using this metric sensitivity
+我们围绕这个概念发展出了许多想法，比如利用这种度量敏感性矩阵
+
+979
+01:22:19,563 --> 01:22:26,123
+matrix as a metric for planning for as a robustness metric where the advantage is that you can compute
+作为规划的度量标准，或作为鲁棒性度量，其优势在于你可以
+
+980
+01:22:26,173 --> 01:22:32,112
+this very easily basically on any robot and any policy control that you have as long as you have
+非常轻松地在任何机器人和任何策略控制上计算它，只要
+
+981
+01:22:32,162 --> 01:22:37,409
+a model as you have a model from which you can take jagobians of of your model or controller policy.
+你有一个模型，能够从中提取出模型或控制器策略的雅可比矩阵。
+
+982
+01:22:37,459 --> 01:22:37,903
+Okay.
+好的。
+
+983
+01:22:37,953 --> 01:22:45,455
+So we are currently working on uh yeah some other ideas like uh cooperative transportation with robots
+目前我们正在研究其他一些想法，比如机器人之间的协作运输，
+
+984
+01:22:45,505 --> 01:22:51,469
+um manipulation of deformable objects where you have a lot of a lot of uncertainties and so forth.
+以及对可变形物体的操作，这类任务中存在大量不确定性等复杂情况。
+
+985
+01:22:51,519 --> 01:22:57,633
+I just want to discuss briefly about some yeah some perspective on this whole idea.
+我只想简要讨论一下关于这个整体概念的一些视角。
+
+986
+01:22:57,683 --> 01:23:04,581
+So uh basically what so what we do can be interpreted in a let's say in a probabilistic way if you want
+所以基本上，我们可以从某种概率角度来理解我们的做法，如果你愿意的话。
+
+987
+01:23:04,631 --> 01:23:13,447
+in the sense that basically we propagate a mean on the nominal values of the parameters we propagate a coariance it's not
+从本质上讲，我们传播的是参数名义值的均值，同时传播协方差，但这并非标准协方差，而是参数空间中的协方差。
+
+988
+01:23:13,497 --> 01:23:19,991
+really the standard coariance it is a coariance in parameter space and then we minimize you know find a trajectory or a
+然后我们最小化这个协方差，也就是寻找一条轨迹或策略，使其最小化协方差。
+
+989
+01:23:20,041 --> 01:23:29,044
+policy that minimizes this coariance now to for doing this we need gradients and also So this is a first order linearization.
+为了实现这一点，我们需要梯度，这也是一个一阶线性化过程。
+
+990
+01:23:29,094 --> 01:23:31,470
+So the tubes that you get are symmetric.
+你得到的这些管状区域是对称的。
+
+991
+01:23:31,520 --> 01:23:33,342
+You get the symmetric distribution.
+你会得到一个对称的分布。
+
+992
+01:23:33,392 --> 01:23:38,382
+Now if you want to go forward, this is what we are investigating right now.
+现在如果你想继续推进，这正是我们目前正在研究的内容。
+
+993
+01:23:38,432 --> 01:23:47,038
+You can try to not linearize but basically to forward propagate many samples, like in MPPI you propagate
+你可以尝试不进行线性化，而是直接前向传播大量样本，就像 MPPI 那样，对动力学模型进行前向传播。
+
+994
+01:23:47,088 --> 01:23:55,070
+forward propagate many samples of your dynamics where you sample in a correct way and then you can appro approximate the
+你以正确的方式采样大量样本，然后可以通过这些样本近似地得到后验统计特性。
+
+995
+01:23:55,120 --> 01:24:03,757
+staticis of your posterior via samples and this gives a way of basically going beyond linearization to get an approximation of
+这提供了一种方法，基本上可以超越线性化，从而近似得到在参数分布给定条件下状态的真实后验。
+
+996
+01:24:03,807 --> 01:24:10,649
+the real posterior of the states given a distribution on the parameters And this is something that we are working on now.
+这正是我们目前正在研究的内容。
+
+997
+01:24:10,699 --> 01:24:13,084
+So I hope soon we will get some papers out of it.
+所以我希望很快能从中产出一些论文。
+
+998
+01:24:13,134 --> 01:24:21,790
+So thank you very much for the attention.
+非常感谢大家的关注。
+
+999
+01:24:21,840 --> 01:24:22,851
+Thank you very much.
+非常感谢。
+
+1000
+01:24:22,901 --> 01:24:30,830
+So I was told we don't have that much time but if there is a one very quick question.
+所以我被告知我们时间不多了，但如果有一个非常简短的问题。
+
+1001
+01:24:30,880 --> 01:24:33,070
+Yes.
+好的。
+
+1002
+01:24:33,120 --> 01:24:41,390
+Uh so when you start uh using sampling to um to quantify robustness, aren't you just doing domain randomization?
+嗯，当你开始使用采样来量化鲁棒性时，这不就是域随机化吗？
+
+1003
+01:24:41,440 --> 01:24:48,388
+It is not, you mean in this it is not exactly a random decision in the sense that the point here is that we sample
+不是的，我的意思是，这不完全是随机决策，重点在于我们通过采样来实现。
+
+1004
+01:24:48,438 --> 01:24:56,750
+is that we sample on um the correct samples such that so we sample on the minimal number of samples that we need for
+我们采样的是正确的样本，只用最少数量的样本，
+
+1005
+01:24:56,800 --> 01:25:05,895
+reconstructing with a good approximation the posterior but the number of samples is not random or where we sample we sample in the exact
+就能以很好的近似重构后验；但样本数量不是随机的，采样位置也是精确的。
+
+1006
+01:25:05,945 --> 01:25:12,830
+right places where we need to sample such that with this minimum number of sample we and they construct the posterior on the states.
+我们只在真正需要的位置采样，用最少的样本构建状态后验。
+
+1007
+01:25:12,880 --> 01:25:13,773
+So this is the point.
+这就是关键点。
+
+1008
+01:25:13,823 --> 01:25:14,050
+Yeah.
+对。
+
+1009
+01:25:14,080 --> 01:25:15,710
+So it is educated domain randomization.
+所以这是‘有学问的’域随机化。
+
+1010
+01:25:15,760 --> 01:25:16,450
+Yes.
+是的。
+
+1011
+01:25:16,500 --> 01:25:18,669
+Very educated.
+非常有针对性。
+
+1012
+01:25:18,719 --> 01:25:19,356
+Very nice.
+非常好。
+
+1013
+01:25:19,406 --> 01:25:20,668
+Thank you very much.
+非常感谢。
+
+1014
+01:25:20,718 --> 01:25:25,759
+So thank you very much for being in this session and I would like to thank all the speakers.
+所以非常感谢大家参加本次会议，我也想感谢所有演讲者。
+
+1015
+01:25:25,809 --> 01:25:28,600
+Thank you very much.
+非常感谢。

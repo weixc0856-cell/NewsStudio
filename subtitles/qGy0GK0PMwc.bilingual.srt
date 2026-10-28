@@ -1,0 +1,3555 @@
+1
+00:13:06,390 --> 00:13:09,330
+OK good afternoon, everybody.
+
+2
+00:13:09,330 --> 00:13:12,750
+Thanks for coming.
+
+3
+00:13:12,750 --> 00:13:20,510
+This is the first of the first colloquium of the colloquium of the semester.
+
+4
+00:13:20,510 --> 00:13:21,970
+And so welcome everybody.
+
+5
+00:13:21,970 --> 00:13:31,270
+We are here every Wednesday at this time, and we get quite a variety of topics and speakers.
+
+6
+00:13:31,270 --> 00:13:35,630
+Generally we get very, very prominent high quality speakers.
+
+7
+00:13:35,630 --> 00:13:38,050
+And today we start out with.
+
+8
+00:13:41,230 --> 00:13:46,120
+A very, very good first case.
+
+9
+00:13:46,120 --> 00:13:48,860
+We actually have two speakers.
+
+10
+00:13:48,860 --> 00:13:51,180
+We have Tony yen.
+
+11
+00:13:51,180 --> 00:13:55,080
+He's the vice president head of technology development at ASML.
+
+12
+00:13:55,080 --> 00:14:03,820
+I assume all of you who are here have heard of ASML and know the key role they play in the semiconductor industry.
+
+13
+00:14:03,820 --> 00:14:18,500
+And Tony is currently in addition to his continuing in his role as VP and Head of technology development at ASML, he is also serving as a visiting professor in our department.
+
+14
+00:14:18,500 --> 00:14:23,660
+He will be teaching a course in the.
+
+15
+00:14:23,660 --> 00:14:25,540
+In the fall.
+
+16
+00:14:25,540 --> 00:14:29,280
+Sorry spring semester on the topic of today's talk.
+
+17
+00:14:29,280 --> 00:14:34,640
+So if you're interested in this material, sign up for Tony's class.
+
+18
+00:14:34,640 --> 00:14:42,500
+Tony was he got his bachelor's degree from Purdue, his PhD and MBA from MIT.
+
+19
+00:14:42,500 --> 00:14:50,400
+He was. He worked at TI and at TSMC for quite a while before joining ASML.
+
+20
+00:14:50,400 --> 00:14:55,960
+He's a fellow of IEEE and won a number of important awards.
+
+21
+00:14:55,960 --> 00:15:01,100
+Tony's going to start out today, but he has a colleague here, Ron Gosens,
+
+22
+00:15:01,100 --> 00:15:12,420
+also Gosens, also from ASML, who is a senior strategy manager at ASML.
+
+23
+00:15:12,420 --> 00:15:13,820
+He's working part time.
+
+24
+00:15:13,820 --> 00:15:16,920
+He's partly retired.
+
+25
+00:15:16,920 --> 00:15:22,080
+He is also an adjunct professor at Purdue, where he teaches,
+
+26
+00:15:22,080 --> 00:15:31,520
+and he got educated in the Netherlands, at Utrecht and has been at Philips research, Stanford national, NXP
+
+27
+00:15:31,520 --> 00:15:36,480
+before joining ASML, where he leads computational lithography efforts.
+
+28
+00:15:36,480 --> 00:15:46,690
+So they're going to do a tag team and tell us about EUV lithography, which is the hot thing now in microelectronics.
+
+29
+00:15:46,690 --> 00:15:49,890
+And it'll give us the history and where we are and where we're going.
+
+30
+00:15:49,890 --> 00:15:52,410
+So I'll start with Tony.
+
+31
+00:15:55,910 --> 00:15:58,110
+Thank you.
+
+32
+00:15:58,110 --> 00:16:00,490
+Thank you, Jeff, for this very nice introduction.
+
+33
+00:16:00,490 --> 00:16:01,870
+Is the microphone on.
+
+34
+00:16:01,870 --> 00:16:03,110
+Yes thank you.
+
+35
+00:16:03,110 --> 00:16:10,010
+And Ronald and I were very happy to be here at Berkeley to give this colloquium.
+
+36
+00:16:10,010 --> 00:16:15,270
+And we without further ado, let me get started.
+
+37
+00:16:15,270 --> 00:16:17,250
+Perhaps I'll get a little excited.
+
+38
+00:16:17,250 --> 00:16:20,243
+So let me remove my jacket first, just in case.
+
+39
+00:16:20,243 --> 00:16:22,910
+Don't think you want to stand in the middle because you'll walk.
+
+40
+00:16:22,910 --> 00:16:25,630
+No, no, I will be standing here.
+
+41
+00:16:25,630 --> 00:16:33,070
+So we want to tell you about EUV lithography.
+
+42
+00:16:33,070 --> 00:16:37,070
+But I want to start with some history.
+
+43
+00:16:37,070 --> 00:16:40,430
+But I'd like to start with the history of photolithography itself.
+
+44
+00:16:40,430 --> 00:16:42,110
+Just give me five minutes.
+
+45
+00:16:42,110 --> 00:16:53,230
+Because this may be interesting to know if some of you do not know photolithography or are not familiar with this technology yet, but.
+
+46
+00:16:53,230 --> 00:17:01,970
+So let me get started, it's the first part of the talk is the photolithography until early 1980s and then EUV as a next
+
+47
+00:17:01,970 --> 00:17:10,170
+generation technology, lithography technology, and then developing EUV lithography for high volume production.
+
+48
+00:17:10,170 --> 00:17:17,650
+So photolithography itself was invented in the mid 1950s by two groups.
+
+49
+00:17:17,650 --> 00:17:21,849
+First was called Bell Labs where you folks were.
+
+50
+00:17:21,849 --> 00:17:25,290
+And the second group was a US Army's laboratory.
+
+51
+00:17:25,290 --> 00:17:31,250
+So let me focus on the second group because the story was more dramatic.
+
+52
+00:17:31,250 --> 00:17:38,970
+In the second group, the goal was to fit a proximity fuse diffuse into a mortar shell.
+
+53
+00:17:38,970 --> 00:17:40,590
+Mortar shells are not very big.
+
+54
+00:17:40,590 --> 00:17:44,270
+A proximity fuse is basically a cheap radar system.
+
+55
+00:17:44,270 --> 00:17:52,790
+OK, the goal is to have the bomb explode in the proximity of the target before hitting the target.
+
+56
+00:17:52,790 --> 00:17:56,110
+To increase the probability of impact.
+
+57
+00:17:56,110 --> 00:18:00,010
+Because if it explodes right on target, you may miss the target.
+
+58
+00:18:00,010 --> 00:18:04,370
+But if you explore the vicinity and your chances are a lot higher hitting the target.
+
+59
+00:18:04,370 --> 00:18:09,050
+So this was the goal to put the proximity fuse inside a mortar shell.
+
+60
+00:18:09,050 --> 00:18:10,990
+OK mortar shell is very small.
+
+61
+00:18:10,990 --> 00:18:16,530
+So in those days the transistors were mesa transistors.
+
+62
+00:18:16,530 --> 00:18:18,090
+Germanium OK.
+
+63
+00:18:18,090 --> 00:18:23,730
+How do you fit a mesa germanium transistor circuit inside a mortar shell.
+
+64
+00:18:23,730 --> 00:18:25,210
+Well, these two guys.
+
+65
+00:18:27,910 --> 00:18:32,570
+Jay Lathrop and James Knoll from the laboratory,
+
+66
+00:18:32,570 --> 00:18:43,940
+they thought of using, of course, they found out that Kodak had a photoresist and they thought of using a microscope, but operating in reverse.
+
+67
+00:18:43,940 --> 00:18:46,120
+So this is a microscope.
+
+68
+00:18:46,120 --> 00:18:49,820
+And this is where the transistor or a piece of germanium is.
+
+69
+00:18:49,820 --> 00:18:54,080
+And they put the photomask here where you would have the Polaroid camera.
+
+70
+00:18:54,080 --> 00:18:57,260
+And you shine white light from the top.
+
+71
+00:18:57,260 --> 00:18:58,800
+Now what is this filter.
+
+72
+00:18:58,800 --> 00:19:07,540
+Well, before the exposure, when you're aligning to the previous layer, you slide the red filter in there so that the photoresist is not exposed.
+
+73
+00:19:07,540 --> 00:19:12,500
+Once you do the alignment, you take out the red filter and then the exposure happens.
+
+74
+00:19:12,500 --> 00:19:16,540
+You expose this and then you get the transistor.
+
+75
+00:19:16,540 --> 00:19:18,640
+And the transistor looked like this.
+
+76
+00:19:18,640 --> 00:19:23,360
+The die is about 1 millimeter to 1 millimeter by 1 millimeter.
+
+77
+00:19:23,360 --> 00:19:24,360
+And this is a mesa.
+
+78
+00:19:24,360 --> 00:19:25,960
+The base size was not stated.
+
+79
+00:19:25,960 --> 00:19:27,260
+The base contact.
+
+80
+00:19:27,260 --> 00:19:34,820
+This little guy, one of these guys is a base contact is 0.1 by 0.25.
+
+81
+00:19:34,820 --> 00:19:36,500
+Nowadays it's gigantic.
+
+82
+00:19:36,500 --> 00:19:38,560
+But back in those days, it was hard to make.
+
+83
+00:19:38,560 --> 00:19:43,660
+And then they also had to make the emitter contact, which is the other rectangle right here.
+
+84
+00:19:43,660 --> 00:19:46,080
+Same Same dimension.
+
+85
+00:19:46,080 --> 00:19:47,720
+It was a success.
+
+86
+00:19:47,720 --> 00:19:53,680
+And then what happened was that Jay Lathrop joined ti in 1958.
+
+87
+00:19:53,680 --> 00:19:56,020
+And what happened in TI at 19.
+
+88
+00:19:56,020 --> 00:20:00,780
+In 1958, Jack Kilby invented the integrated circuit.
+
+89
+00:20:00,780 --> 00:20:06,920
+So Jay Lathrop worked at TI with Jack Kilby for the next 10 years.
+
+90
+00:20:06,920 --> 00:20:10,040
+And where did the other guy go.
+
+91
+00:20:10,040 --> 00:20:12,600
+Of course, he went to Fairchild.
+
+92
+00:20:12,600 --> 00:20:21,000
+1959 right where Robert Noyce and others had invented the integrated circuit there.
+
+93
+00:20:21,000 --> 00:20:25,240
+So great story, and it's a bit romantic.
+
+94
+00:20:25,240 --> 00:20:29,080
+So this was in the mid to late 1950s.
+
+95
+00:20:29,080 --> 00:20:31,040
+And what happened next.
+
+96
+00:20:31,040 --> 00:20:36,330
+What happened next is less romantic lithography.
+
+97
+00:20:36,330 --> 00:20:44,830
+In the 60s and the 70, early 70s were mainly contact and proximity printing.
+
+98
+00:20:44,830 --> 00:20:50,250
+Because those days, resolution wasn't really the top issue.
+
+99
+00:20:50,250 --> 00:20:53,250
+The top issue was how to get these layers to align.
+
+100
+00:20:53,250 --> 00:20:57,350
+So those machines were called aligners back then.
+
+101
+00:20:57,350 --> 00:21:03,910
+And this is an aligner from Casper instruments here in the US.
+
+102
+00:21:03,910 --> 00:21:08,590
+These guys were the King back in the 60s OK.
+
+103
+00:21:08,590 --> 00:21:11,470
+They were very good at doing contact printing.
+
+104
+00:21:11,470 --> 00:21:13,690
+We put the mask right on top of the wafer.
+
+105
+00:21:13,690 --> 00:21:14,570
+You're aligned.
+
+106
+00:21:14,570 --> 00:21:16,350
+And then you shine the light.
+
+107
+00:21:16,350 --> 00:21:23,070
+The problem with contact printing is that it generates particles in the space or.
+
+108
+00:21:23,070 --> 00:21:26,510
+Well, you're rubbing the wafer against the mask.
+
+109
+00:21:26,510 --> 00:21:29,150
+So what happened was that later.
+
+110
+00:21:29,150 --> 00:21:34,150
+Well, maybe we should create a gap between the mask and the wafer.
+
+111
+00:21:34,150 --> 00:21:38,290
+And then they went from contact printing to proximity printing.
+
+112
+00:21:38,290 --> 00:21:44,010
+Once proximity printing happens, canon took over as the new King.
+
+113
+00:21:44,010 --> 00:21:46,350
+This guy faded away.
+
+114
+00:21:46,350 --> 00:21:52,290
+And then canon made a much better machine for proximity printing.
+
+115
+00:21:52,290 --> 00:21:57,370
+So this is canon machine until.
+
+116
+00:21:57,370 --> 00:22:03,130
+Well, until proximity printing was superseded by projection imaging.
+
+117
+00:22:03,130 --> 00:22:06,610
+And this happened in the early 70s.
+
+118
+00:22:06,610 --> 00:22:09,490
+So let me first give an example.
+
+119
+00:22:09,490 --> 00:22:12,450
+Why did we go for projection imaging.
+
+120
+00:22:12,450 --> 00:22:23,730
+So the example is let's shine a lambda equal to 400 nanometer UV light through a mask.
+
+121
+00:22:23,730 --> 00:22:28,510
+Imaging a slit slit is 4 micron wide slit right.
+
+122
+00:22:28,510 --> 00:22:33,750
+And the gap is 1 micron 5 micron and 10 microns.
+
+123
+00:22:33,750 --> 00:22:37,010
+And this is the kind of aerial image that you get.
+
+124
+00:22:37,010 --> 00:22:45,470
+As you can see that this is almost at the limit of resolution Of proximity printing.
+
+125
+00:22:45,470 --> 00:22:46,330
+Because why.
+
+126
+00:22:46,330 --> 00:22:48,690
+Because you really cannot control the gap very well.
+
+127
+00:22:48,690 --> 00:22:51,910
+If you control the gap perfectly then it's fine.
+
+128
+00:22:51,910 --> 00:22:57,090
+But you can't because first the control itself mechanism itself wasn't very good.
+
+129
+00:22:57,090 --> 00:23:01,990
+But also the wafer has is not flat.
+
+130
+00:23:01,990 --> 00:23:03,070
+It's warped.
+
+131
+00:23:03,070 --> 00:23:08,030
+So it's much better if you do it through a lens.
+
+132
+00:23:08,030 --> 00:23:15,890
+And this is projection printing same wavelengths of light with a lens that is not very sophisticated.
+
+133
+00:23:15,890 --> 00:23:19,390
+0.2 a very low numerical aperture lens.
+
+134
+00:23:19,390 --> 00:23:21,890
+And this is what you get if you're unfocused.
+
+135
+00:23:21,890 --> 00:23:23,410
+You're looking at the red curve.
+
+136
+00:23:23,410 --> 00:23:29,780
+And if you're off by plus 5 plus minus 5 microns you're looking at the blue curve.
+
+137
+00:23:29,780 --> 00:23:34,980
+So in one case you're fighting diffraction.
+
+138
+00:23:34,980 --> 00:23:38,420
+The other case, you're taking advantage of diffraction.
+
+139
+00:23:38,420 --> 00:23:41,300
+Of course, with the addition of a lens.
+
+140
+00:23:41,300 --> 00:23:45,820
+So this is what's going on in terms of physics.
+
+141
+00:23:45,820 --> 00:23:55,900
+And then of course, early 1970s, there was this company called perkin-elmer.
+
+142
+00:23:55,900 --> 00:24:04,300
+They made the first commercially successful projection aligner, to be precise, in 1973.
+
+143
+00:24:04,300 --> 00:24:12,080
+This, this was the perkin-elmer microline 1X, meaning no magnification or magnification.
+
+144
+00:24:12,080 --> 00:24:15,640
+Reflective imaging system with an annular slit.
+
+145
+00:24:15,640 --> 00:24:17,120
+It's actually quite clever.
+
+146
+00:24:17,120 --> 00:24:24,820
+The designer of this optics was called Abe offner, a gigantic figure in lens design.
+
+147
+00:24:24,820 --> 00:24:26,920
+Sorry he passed away.
+
+148
+00:24:26,920 --> 00:24:30,700
+But this system has only two mirrors.
+
+149
+00:24:30,700 --> 00:24:35,580
+Concentric concentric, two mirrors, one concave, one convex.
+
+150
+00:24:35,580 --> 00:24:40,700
+And the imaging is done through a slit y slit.
+
+151
+00:24:40,700 --> 00:24:52,120
+Because Abe figured out that the optimal distance from the optical axis is this thing called H0 at H0 from the optical axis.
+
+152
+00:24:52,120 --> 00:24:58,980
+The aberration was minimized through a slit is fine because you can scan the whole thing,
+
+153
+00:24:58,980 --> 00:25:06,500
+because the mask and the wafer are actually ganged together through a shaft, which is not shown down here.
+
+154
+00:25:06,500 --> 00:25:09,620
+So the exposure happens after alignment.
+
+155
+00:25:09,620 --> 00:25:11,620
+You basically do this right.
+
+156
+00:25:11,620 --> 00:25:16,040
+You can never go wrong because they're together in one axis OK.
+
+157
+00:25:16,040 --> 00:25:19,620
+And this was the first of course.
+
+158
+00:25:19,620 --> 00:25:21,880
+Then it became a hit.
+
+159
+00:25:21,880 --> 00:25:34,990
+Thousands of these machines were sold and the first one went to Texas Instruments for a price of 90,000 $95,000.
+
+160
+00:25:34,990 --> 00:25:38,630
+It cannot even get a mask with this kind of money.
+
+161
+00:25:38,630 --> 00:25:40,110
+Euv mask, of course.
+
+162
+00:25:40,110 --> 00:25:42,510
+So this was sold to TI.
+
+163
+00:25:42,510 --> 00:25:44,230
+And then what happened.
+
+164
+00:25:44,230 --> 00:25:46,310
+Intel 8088.
+
+165
+00:25:46,310 --> 00:25:47,530
+OK, this was not ti.
+
+166
+00:25:47,530 --> 00:25:49,030
+This was Intel.
+
+167
+00:25:49,030 --> 00:25:56,370
+A device size was 0.2 by point is about 5 millimeters by 5 millimeter device size.
+
+168
+00:25:56,370 --> 00:25:57,530
+With contact printing.
+
+169
+00:25:57,530 --> 00:26:07,910
+The yield of these microprocessors were only 20% with micro microline 60% This is basically it.
+
+170
+00:26:07,910 --> 00:26:11,790
+I mean, Moore's law alive back then.
+
+171
+00:26:11,790 --> 00:26:16,650
+And now, of course, this wasn't the end of the story.
+
+172
+00:26:16,650 --> 00:26:24,410
+They were the King for a few years until the King is dead and long live the King.
+
+173
+00:26:24,410 --> 00:26:26,650
+The new King, of course.
+
+174
+00:26:26,650 --> 00:26:28,650
+Who's the new King.
+
+175
+00:26:28,650 --> 00:26:36,290
+Well, the problem with the one x design was that it was a simple optical system.
+
+176
+00:26:36,290 --> 00:26:38,470
+Two mirrors, all spherical.
+
+177
+00:26:38,470 --> 00:26:40,290
+Both spherical.
+
+178
+00:26:40,290 --> 00:26:43,650
+So the could not be made very high.
+
+179
+00:26:43,650 --> 00:26:48,430
+The numerical aperture of the microline was 0.167.
+
+180
+00:26:48,430 --> 00:26:49,370
+Very low.
+
+181
+00:26:49,370 --> 00:26:54,650
+In order to get better resolution, you need to increase the numerical aperture.
+
+182
+00:26:54,650 --> 00:27:00,850
+However, in order to do so on the offner system, the aberration would become very high.
+
+183
+00:27:00,850 --> 00:27:13,550
+So we had to get away from this kind of a offner design and to come back to the more traditional D magnified lens design.
+
+184
+00:27:13,550 --> 00:27:18,450
+And this is what happened in the late 70s, early 80s.
+
+185
+00:27:18,450 --> 00:27:20,770
+The first champion was GCA.
+
+186
+00:27:20,770 --> 00:27:26,720
+OK GCA made a G Line system called a 4,800 man.
+
+187
+00:27:26,720 --> 00:27:35,380
+And now I have to say a little bit about the resolution in projection lithography.
+
+188
+00:27:35,380 --> 00:27:37,380
+Only projection lithography.
+
+189
+00:27:37,380 --> 00:27:38,500
+Approximately lithography.
+
+190
+00:27:38,500 --> 00:27:40,280
+The resolution formula is different.
+
+191
+00:27:40,280 --> 00:27:45,760
+This is K1 lambda over and this is minimum half pitch.
+
+192
+00:27:45,760 --> 00:27:49,280
+We're just talking about this with Eli.
+
+193
+00:27:49,280 --> 00:27:56,300
+Minimum half pitch right is a more accurate metric in our sense.
+
+194
+00:27:56,300 --> 00:28:02,620
+Because if you want to compare all the systems, you don't want to compare with, oh, how thin a line you can print.
+
+195
+00:28:02,620 --> 00:28:04,300
+It's always minimum half pitch.
+
+196
+00:28:04,300 --> 00:28:12,120
+Because in minimum with minimum half pitch this K1 has a lower limit, which Ronald will talk about 0.25.
+
+197
+00:28:12,120 --> 00:28:18,060
+And then the minimum pitch is lambda over can decrease lambda or you can increase the numerical aperture.
+
+198
+00:28:18,060 --> 00:28:29,080
+Numerical aperture is the sign of this half angle at times n n n index of the medium surrounding this lens.
+
+199
+00:28:29,080 --> 00:28:37,860
+Of course, this end is always one until you got to immersion lithography right at 193, then n became 1.44.
+
+200
+00:28:37,860 --> 00:28:39,960
+OK, so this is what happened.
+
+201
+00:28:39,960 --> 00:28:49,420
+And then of course later k RF lithography with excimer laser reliable excimer laser became available.
+
+202
+00:28:49,420 --> 00:28:59,800
+And then, of course, after that was the ARF excimer laser at 193 and immersion 193 with water 193.
+
+203
+00:28:59,800 --> 00:29:03,460
+So the effective wavelength became 144 OK.
+
+204
+00:29:03,460 --> 00:29:07,620
+And then of course, we have EUV lithography.
+
+205
+00:29:07,620 --> 00:29:12,500
+Euv lithography took a long time to develop.
+
+206
+00:29:12,500 --> 00:29:20,720
+Why Because in the early days, we did not think we could optical lithography could go beyond this.
+
+207
+00:29:20,720 --> 00:29:23,420
+Why exactly this thing.
+
+208
+00:29:23,420 --> 00:29:28,740
+This is called a point spread function because is cut off here.
+
+209
+00:29:28,740 --> 00:29:37,820
+So if you have a point source on a mask, point object on a mask, you never get a point here.
+
+210
+00:29:37,820 --> 00:29:46,480
+You get a diffraction limited point spread function, which is this spot which is 1.2 to lambda over.
+
+211
+00:29:46,480 --> 00:29:53,980
+Now, you can say that, OK, I can increase the numerical aperture and I get a smaller spot.
+
+212
+00:29:53,980 --> 00:29:56,860
+But no, not if you have lots of aberrations.
+
+213
+00:29:56,860 --> 00:30:01,060
+If you increase the numerical aperture then the spot won't get any smaller.
+
+214
+00:30:01,060 --> 00:30:12,040
+This is the early days, exactly what we were facing, because we did not know how to make high Na optics without inducing a lot of aberration.
+
+215
+00:30:12,040 --> 00:30:14,600
+OK, when we were here.
+
+216
+00:30:14,600 --> 00:30:23,190
+And this is when people started to work on NGL, next generation lithography technologies, and EUV was one of them.
+
+217
+00:30:23,190 --> 00:30:32,210
+OK, so EUV development happened in the mid 1980s, and it went into high volume production in 2019.
+
+218
+00:30:32,210 --> 00:30:35,150
+35 years of development.
+
+219
+00:30:35,150 --> 00:30:38,910
+OK, so let me now get into EUV lithography.
+
+220
+00:30:38,910 --> 00:30:45,070
+The first paper on EUV lithography in the US happened in 1988.
+
+221
+00:30:45,070 --> 00:30:55,190
+In 1987, a guy called Andy Herrlich, working at Lawrence Livermore laboratory back then was a laboratory that belonged to the University of California here.
+
+222
+00:30:55,190 --> 00:31:06,290
+And he thought that they had perfected by then the multilayer mirrors to reflect soft X-ray light.
+
+223
+00:31:06,290 --> 00:31:07,970
+Back then, EUV wasn't the name.
+
+224
+00:31:07,970 --> 00:31:14,750
+Soft X-ray was the name for about the kind of wavelength that's today EUV.
+
+225
+00:31:14,750 --> 00:31:24,230
+And he published this paper, of course, he said he proposed to use a reflecting mask instead of a transmission mask because reflecting mass.
+
+226
+00:31:24,230 --> 00:31:26,510
+The mask substrate is also multilayered.
+
+227
+00:31:26,510 --> 00:31:30,610
+Any proposal to use laser produced plasma.
+
+228
+00:31:30,610 --> 00:31:34,930
+Both of these concepts are adopted nowadays.
+
+229
+00:31:34,930 --> 00:31:44,170
+And of course, 1989 he and Nat saglio and others actually again they went to the three beams meeting
+
+230
+00:31:44,170 --> 00:31:50,830
+and they showed a mask that they made multilayer mask with gold absorber pattern.
+
+231
+00:31:50,830 --> 00:31:54,590
+Of course, we don't use gold, but multilayers were used.
+
+232
+00:31:54,590 --> 00:31:56,350
+And here you go.
+
+233
+00:31:56,350 --> 00:31:58,750
+See the wavelength is about 13 nanometers.
+
+234
+00:31:58,750 --> 00:32:01,370
+Today we use 13.5.
+
+235
+00:32:01,370 --> 00:32:05,770
+So this was actually the first paper in 1988, in the US.
+
+236
+00:32:05,770 --> 00:32:13,770
+But in 1989, there was also a paper from a Japanese guy called hiroo Kinoshita.
+
+237
+00:32:13,770 --> 00:32:19,940
+Kinoshita published a paper look at this soft X-ray reduction in lithography using multilayer mirrors.
+
+238
+00:32:19,940 --> 00:32:21,040
+Very direct.
+
+239
+00:32:21,040 --> 00:32:26,200
+And he shows this is his setup a Schwarzschild optics with a reflecting mask.
+
+240
+00:32:26,200 --> 00:32:35,180
+And these were the results 0.5 micron lines and spaces from a micron line spaces mass.
+
+241
+00:32:35,180 --> 00:32:38,680
+So it's an 8x reduction camera.
+
+242
+00:32:38,680 --> 00:32:41,140
+The wavelength used was 12.4.
+
+243
+00:32:41,140 --> 00:32:44,740
+So he could not have used Morley's PSI multilayers.
+
+244
+00:32:44,740 --> 00:32:52,640
+It's a different multilayer because this is just below the absorption edge of silicon at 12.5.
+
+245
+00:32:52,640 --> 00:32:55,260
+But this wasn't his first paper.
+
+246
+00:32:55,260 --> 00:32:59,940
+His first paper was actually three years before, in 1986,
+
+247
+00:32:59,940 --> 00:33:08,680
+published in Japanese in Japan at the Japan applied Physics Society meeting for meeting 1986.
+
+248
+00:33:08,680 --> 00:33:09,700
+This was a.
+
+249
+00:33:09,700 --> 00:33:14,660
+A, the results were much cruder, but this was the first,
+
+250
+00:33:14,660 --> 00:33:24,700
+so we normally regard him as the inventor of EUV lithography, although in the US Andy Hurley was the first one.
+
+251
+00:33:24,700 --> 00:33:33,100
+OK, Andy actually told me that he did not know the results of Kinoshita, which I believe this was published entirely
+
+252
+00:33:33,100 --> 00:33:40,600
+in Japanese back in those days, it wasn't translated into English, but Kinoshita San was the first one.
+
+253
+00:33:40,600 --> 00:33:50,500
+But there was a third group, the Bell Labs folks, the Bell Labs folks, two people, originally Albert wood and Bill sylvest.
+
+254
+00:33:50,500 --> 00:33:57,260
+They were working on a 37.5 sodium laser.
+
+255
+00:33:57,260 --> 00:34:04,060
+They thought that, hey, we could make this to do photolithography, such a small wavelength.
+
+256
+00:34:04,060 --> 00:34:09,179
+And they actually proposed at first the offner type of optics.
+
+257
+00:34:09,179 --> 00:34:14,840
+They want to coat the offner optics with multilayers and then use that to do lithography.
+
+258
+00:34:14,840 --> 00:34:21,920
+Well, for some reason, that wasn't what the Bell Labs subsequently did.
+
+259
+00:34:21,920 --> 00:34:31,000
+Subsequently, the results came from not the after optics, but the Schwarzschild optics.
+
+260
+00:34:31,000 --> 00:34:33,659
+And Jeff Bowker right here.
+
+261
+00:34:33,659 --> 00:34:34,500
+The second name.
+
+262
+00:34:34,500 --> 00:34:37,679
+And you were heavily involved in this.
+
+263
+00:34:37,679 --> 00:34:41,679
+And this paper was published in 1990.
+
+264
+00:34:41,679 --> 00:34:47,940
+And Schwarzschild optics at a wavelength of 14, very close to today's wavelengths.
+
+265
+00:34:47,940 --> 00:34:50,239
+But they use the transmission mask.
+
+266
+00:34:50,239 --> 00:34:54,280
+This is a membrane mask, not the multilayer mask.
+
+267
+00:34:54,280 --> 00:34:56,100
+But look at the results.
+
+268
+00:34:56,100 --> 00:34:58,080
+Look at the results.
+
+269
+00:34:58,080 --> 00:35:00,760
+Pitch equal to 100 nanometer.
+
+270
+00:35:00,760 --> 00:35:03,980
+Back in those days, those were the best results.
+
+271
+00:35:03,980 --> 00:35:05,020
+I was a student.
+
+272
+00:35:05,020 --> 00:35:08,840
+I said, wow, my advisor Hank Smith tried to downplay this.
+
+273
+00:35:08,840 --> 00:35:09,340
+Oh yeah.
+
+274
+00:35:09,340 --> 00:35:09,640
+Yeah, yeah.
+
+275
+00:35:09,580 --> 00:35:11,220
+But they got a lot of aberrations.
+
+276
+00:35:11,220 --> 00:35:12,140
+But it doesn't matter.
+
+277
+00:35:12,140 --> 00:35:12,890
+It doesn't matter.
+
+278
+00:35:12,890 --> 00:35:15,250
+Because to do this, they had to open up.
+
+279
+00:35:15,250 --> 00:35:18,710
+This is normally is 0.08.
+
+280
+00:35:18,710 --> 00:35:24,390
+0.08 if you put in the formula you couldn't get this because this is on axis illumination.
+
+281
+00:35:24,390 --> 00:35:27,290
+So the smallest K1 is 0.5.
+
+282
+00:35:27,290 --> 00:35:32,490
+So in order to get this they open up this aperture to 0.16 OK.
+
+283
+00:35:32,490 --> 00:35:37,030
+In order to get that of course that introduces a lot of aberrations but that's OK.
+
+284
+00:35:37,030 --> 00:35:39,470
+They published this OK.
+
+285
+00:35:39,470 --> 00:35:41,510
+Those were the best results.
+
+286
+00:35:41,510 --> 00:35:49,530
+And then in the mid 90s, Intel led by Intel, something called the chief technology guy at Intel.
+
+287
+00:35:49,530 --> 00:35:58,530
+Those days, they formed this thing called the EUV, LLC and EUV, LLC was formed.
+
+288
+00:35:58,530 --> 00:36:02,990
+And then members joined and those members were competitors of Intel.
+
+289
+00:36:02,990 --> 00:36:04,250
+Nonetheless, they joined.
+
+290
+00:36:04,250 --> 00:36:12,370
+They bought shares of EUV, LLC at $5 million per share AMD, IBM, Infinium micro model.
+
+291
+00:36:12,370 --> 00:36:15,550
+They are joined and SEMATECH joined,
+
+292
+00:36:15,550 --> 00:36:28,430
+and then the money was pulled and farmed out to virtual National Laboratory Lawrence Livermore, Sandia and Lawrence Berkeley headed by Dave Attwood.
+
+293
+00:36:28,430 --> 00:36:36,010
+Here And this was the time when ASML joined EUV, LLC.
+
+294
+00:36:36,010 --> 00:36:38,390
+Euv, LLC was critical.
+
+295
+00:36:38,390 --> 00:36:43,670
+Before EUV, LLC, you might say, OK, we have disparate groups.
+
+296
+00:36:43,670 --> 00:36:44,830
+They were gangsters.
+
+297
+00:36:44,830 --> 00:36:47,290
+This is organized crime.
+
+298
+00:36:47,290 --> 00:36:52,450
+And a lot of IP a lot of good work.
+
+299
+00:36:52,450 --> 00:36:58,050
+But EUV LLC ramped down in 2002, 2003.
+
+300
+00:36:58,050 --> 00:37:05,190
+However, when EUV LLC ramped down, ASML ramped up in 2006,
+
+301
+00:37:05,190 --> 00:37:09,940
+we shipped first two EUV machines, these called ADT alpha.
+
+302
+00:37:09,940 --> 00:37:13,440
+Demo tools one went to Albany.
+
+303
+00:37:13,440 --> 00:37:16,660
+The other one went to our partner IMEC.
+
+304
+00:37:16,660 --> 00:37:20,600
+And this picture was taken April of 2007.
+
+305
+00:37:20,600 --> 00:37:25,600
+Two was accepted in a year later of course.
+
+306
+00:37:25,600 --> 00:37:29,000
+Took a long time to have this tool installed and debugged.
+
+307
+00:37:29,000 --> 00:37:30,900
+And it used a discharge.
+
+308
+00:37:30,900 --> 00:37:34,920
+Produced a plasma source which we no longer use nowadays.
+
+309
+00:37:34,920 --> 00:37:37,640
+So these were the first two tools.
+
+310
+00:37:37,640 --> 00:37:39,460
+The pictures are from the second tool.
+
+311
+00:37:39,460 --> 00:37:40,720
+At IMEC.
+
+312
+00:37:40,720 --> 00:37:43,800
+I don't have a picture of the Albany tool.
+
+313
+00:37:43,800 --> 00:37:51,220
+And then from that point onward we developed 6,100.
+
+314
+00:37:51,220 --> 00:37:55,360
+These are the next generation beyond the ADT.
+
+315
+00:37:55,360 --> 00:37:59,640
+Six of them were developed and went to various companies.
+
+316
+00:37:59,640 --> 00:38:04,560
+And my former company TSMC got the number 6 tool.
+
+317
+00:38:04,560 --> 00:38:07,700
+The number 6 tool came to Taiwan.
+
+318
+00:38:07,700 --> 00:38:12,800
+This picture was taken by me on the tarmac of taoyuan International Airport.
+
+319
+00:38:12,800 --> 00:38:14,580
+Summer of 1911.
+
+320
+00:38:14,580 --> 00:38:21,860
+And then four months later, this was almost installed in our fab fab 12.
+
+321
+00:38:21,860 --> 00:38:25,620
+Inside TSMC shinshu R&D fab.
+
+322
+00:38:25,620 --> 00:38:32,300
+And now how good could we do with this 0.25 micron R&D tool.
+
+323
+00:38:32,300 --> 00:38:42,180
+This was a photo of the lowest metal layer with a pitch of 46 nanometers.
+
+324
+00:38:42,180 --> 00:38:46,180
+This is after hard mask etched through right.
+
+325
+00:38:46,180 --> 00:38:55,218
+This was intended to be the design of 10 nanometer generation, but it did not happen.
+
+326
+00:38:55,218 --> 00:38:55,760
+Look at this.
+
+327
+00:38:55,760 --> 00:38:57,440
+This is a two dimensional design.
+
+328
+00:38:57,440 --> 00:39:02,280
+In the end, the 10 nanometer was a 1D design because EUV could not make it.
+
+329
+00:39:02,280 --> 00:39:07,960
+And TSMC we had to continue with immersion lithography.
+
+330
+00:39:07,960 --> 00:39:15,600
+So we changed it to a self-aligned etch process and a 1D design.
+
+331
+00:39:15,600 --> 00:39:20,140
+But had EUV been ready, we would have continued with the 2D design.
+
+332
+00:39:20,140 --> 00:39:22,120
+OK, that's another story.
+
+333
+00:39:22,120 --> 00:39:24,660
+Now I want to just give you a sneak preview.
+
+334
+00:39:24,660 --> 00:39:31,440
+11 years later, we could do this with the high-na EUV machine.
+
+335
+00:39:31,440 --> 00:39:33,320
+Again, a 2D design.
+
+336
+00:39:33,320 --> 00:39:35,660
+Now is 0.55.
+
+337
+00:39:35,660 --> 00:39:38,400
+This is from our first machine.
+
+338
+00:39:38,400 --> 00:39:40,360
+You can see the pitch.
+
+339
+00:39:40,360 --> 00:39:41,780
+The pitch was 46.
+
+340
+00:39:41,780 --> 00:39:44,800
+The pitch is now 22.
+
+341
+00:39:44,800 --> 00:39:46,220
+So that's progress.
+
+342
+00:39:46,220 --> 00:39:49,200
+Again, this is etched into a hard mask.
+
+343
+00:39:49,200 --> 00:39:49,940
+All right.
+
+344
+00:39:49,940 --> 00:39:54,120
+So the EUV development at TSMC.
+
+345
+00:39:54,120 --> 00:39:58,360
+This is a chronology of EUV development at TSMC.
+
+346
+00:39:58,360 --> 00:40:09,150
+Not only did we work with ASML very closely and tested EUV on 10 nanometer, 7 nanometer, 5 nanometer test
+
+347
+00:40:09,150 --> 00:40:16,310
+layers. But we also had to participate in infrastructure development.
+
+348
+00:40:16,310 --> 00:40:18,590
+Imec has always been a member.
+
+349
+00:40:18,590 --> 00:40:24,830
+We rejoined the SEMATECH Berkeley Lab, of course sorry, the Metz.
+
+350
+00:40:24,830 --> 00:40:38,190
+And we also joined the adac in Japan to develop the help develop the actinic blank inspector and also the co-funding of EUV development with ASML to ASML along with Intel and Samsung.
+
+351
+00:40:38,190 --> 00:40:41,370
+This was led by me of course.
+
+352
+00:40:41,370 --> 00:40:46,430
+Then in 2017 I left and joined ASML.
+
+353
+00:40:46,430 --> 00:40:51,350
+In 2019, this is when EUV went into high volume production.
+
+354
+00:40:51,350 --> 00:41:02,950
+As you can see that this was a paper published by TSMC at IDM 2019, where they announced that the 7 nanometer plus node has
+
+355
+00:41:02,950 --> 00:41:08,710
+had been developed and used layers of EUV lithography.
+
+356
+00:41:08,710 --> 00:41:15,690
+And of course, they also announced that the next year that the 5 nanometer node will have more EUV layers.
+
+357
+00:41:15,690 --> 00:41:18,590
+So this is the first part of the story.
+
+358
+00:41:18,590 --> 00:41:24,310
+OK from the beginning to high volume manufacturing in 2019.
+
+359
+00:41:24,310 --> 00:41:26,930
+So let me move on to the second part.
+
+360
+00:41:26,930 --> 00:41:28,530
+OK last slide.
+
+361
+00:41:28,530 --> 00:41:33,610
+This is what ASML did right 222 alpha demo tools in 2006.
+
+362
+00:41:33,610 --> 00:41:38,310
+And a bunch of six of them R&D tools in 2010.
+
+363
+00:41:38,310 --> 00:41:39,630
+Starting in 2010.
+
+364
+00:41:39,630 --> 00:41:49,330
+But in 2013 ASML did the third generation 3,300 B 3300b lens design is the same as the 3,100, but the Germans thought that
+
+365
+00:41:49,330 --> 00:41:56,010
+with better fabrication, they could enlarge the DNA from 0.25 to 0.33.
+
+366
+00:41:56,010 --> 00:42:00,290
+And this is the Na that we're using until now.
+
+367
+00:42:00,290 --> 00:42:02,340
+All the subsequent machines.
+
+368
+00:42:02,340 --> 00:42:05,540
+0.33 machines all use the same lens design.
+
+369
+00:42:05,540 --> 00:42:12,000
+Sorry and then in 2019, we have the 3400c the workhorse.
+
+370
+00:42:12,000 --> 00:42:15,940
+And then all these machines are being retired.
+
+371
+00:42:15,940 --> 00:42:18,500
+But 3400c still working.
+
+372
+00:42:18,500 --> 00:42:22,600
+And then to 2021 we came out with 3600d.
+
+373
+00:42:22,600 --> 00:42:25,740
+Now that was the first part.
+
+374
+00:42:25,740 --> 00:42:28,080
+Second part is the current status.
+
+375
+00:42:28,080 --> 00:42:31,400
+First the 0.33 Na, which is the workhorse.
+
+376
+00:42:31,400 --> 00:42:35,440
+And then the 0.55 the next generation high Na.
+
+377
+00:42:35,440 --> 00:42:40,580
+So this is our latest 0.33 machine.
+
+378
+00:42:40,580 --> 00:42:42,420
+The 3,800 right.
+
+379
+00:42:42,420 --> 00:42:45,060
+We've already gone through 3,000 403,600.
+
+380
+00:42:45,060 --> 00:42:46,540
+And now the 3,800.
+
+381
+00:42:46,540 --> 00:42:50,745
+The 3,800 machine is quite a nice machine.
+
+382
+00:42:50,745 --> 00:42:57,740
+And of course, the throughput has been increased to 220 wafers per hour at 30 millijoules per centimeter square.
+
+383
+00:42:57,740 --> 00:43:04,420
+You always have to specify the dose if the dose is very high, of course, the throughput comes down.
+
+384
+00:43:04,420 --> 00:43:14,100
+We have a 500 Watt EUV source now and then we have a very low aberration projection optics here.
+
+385
+00:43:14,100 --> 00:43:18,000
+This is the 3,800.
+
+386
+00:43:18,000 --> 00:43:19,440
+And how did it do.
+
+387
+00:43:19,440 --> 00:43:23,860
+Well first, let me show you some overlay number.
+
+388
+00:43:23,860 --> 00:43:32,680
+This is a dedicated chalk overlay meaning that the wafer gets on one Chuck and you expose it and it gets on the same Chuck,
+
+389
+00:43:32,680 --> 00:43:35,520
+and you expose it again, and you measure the overlay.
+
+390
+00:43:35,520 --> 00:43:42,900
+And this dedicated overlay number is extremely good, 0.50.6 nanometer.
+
+391
+00:43:42,900 --> 00:43:45,000
+I'm not talking about one point.
+
+392
+00:43:45,000 --> 00:43:52,500
+Each field has 49 points 76 fields per wafer times 12 wafers.
+
+393
+00:43:52,500 --> 00:43:57,280
+These numbers came from these many points.
+
+394
+00:43:57,280 --> 00:43:59,130
+And this is not just a 3 sigma.
+
+395
+00:43:59,130 --> 00:44:01,270
+It's mean plus minus 3 sigma.
+
+396
+00:44:01,270 --> 00:44:03,090
+This is the whole thing.
+
+397
+00:44:03,090 --> 00:44:06,210
+And match machine overlay.
+
+398
+00:44:06,210 --> 00:44:10,430
+Meaning that overlay read on two different machines.
+
+399
+00:44:10,430 --> 00:44:12,350
+This one is not working.
+
+400
+00:44:12,350 --> 00:44:18,190
+That's OK on two different machines, but of the same type of both 3,800.
+
+401
+00:44:18,190 --> 00:44:21,190
+And then we get 0.9 and 0.8.
+
+402
+00:44:21,190 --> 00:44:22,530
+Still very good.
+
+403
+00:44:22,530 --> 00:44:24,370
+OK still very good.
+
+404
+00:44:24,370 --> 00:44:29,970
+And you can see that we were below the spec OK.
+
+405
+00:44:29,970 --> 00:44:32,230
+Now what's the reliability.
+
+406
+00:44:32,230 --> 00:44:34,110
+I mean, are they all always down.
+
+407
+00:44:34,110 --> 00:44:35,890
+No, no they're mostly up.
+
+408
+00:44:35,890 --> 00:44:41,855
+The availability is 93.5% worldwide on all the machines.
+
+409
+00:44:41,855 --> 00:44:43,230
+This is the average availability.
+
+410
+00:44:43,230 --> 00:44:44,710
+So it's already very good.
+
+411
+00:44:44,710 --> 00:44:46,310
+Not as good as the deep-v machines.
+
+412
+00:44:46,310 --> 00:44:46,990
+Deep-v machines.
+
+413
+00:44:46,990 --> 00:44:47,570
+They are.
+
+414
+00:44:47,570 --> 00:44:54,670
+The availability is above 95% So yes, we continue to work on it to improve the availability.
+
+415
+00:44:54,670 --> 00:44:58,390
+And how many of these machines are there.
+
+416
+00:44:58,390 --> 00:45:00,590
+Here's the cumulative number.
+
+417
+00:45:00,590 --> 00:45:09,230
+By the end of Q4 2024, about 270 machines are in the field all running OK.
+
+418
+00:45:09,230 --> 00:45:11,570
+34 603,800.
+
+419
+00:45:11,570 --> 00:45:22,830
+These three types, the 3,300 have been retired about 270 machines by the end of last year, all working either in R&D or production.
+
+420
+00:45:22,830 --> 00:45:26,730
+Now, how many wafers can you produce a day.
+
+421
+00:45:26,730 --> 00:45:29,550
+All these questions are asked by our customers.
+
+422
+00:45:29,550 --> 00:45:38,150
+The number of wafers that we produce today on average is about 3,000 on a single system.
+
+423
+00:45:38,150 --> 00:45:39,770
+We can do a little better.
+
+424
+00:45:39,770 --> 00:45:44,110
+So it's between 3,000 and 3,500.
+
+425
+00:45:44,110 --> 00:45:48,230
+Of course, we're going to continue to improve this number.
+
+426
+00:45:48,230 --> 00:45:49,190
+All right.
+
+427
+00:45:49,190 --> 00:45:51,650
+So where are we going from here.
+
+428
+00:45:51,650 --> 00:45:57,770
+Well, of course scaling has slowed down but it has not stopped.
+
+429
+00:45:57,770 --> 00:46:00,450
+So scaling will continue.
+
+430
+00:46:00,450 --> 00:46:07,490
+And because of that, we started to OK, this is another thing.
+
+431
+00:46:07,490 --> 00:46:12,610
+We're not scaling as steeply as before.
+
+432
+00:46:12,610 --> 00:46:20,090
+This slope, this was the slope down to 3 nanometer generation.
+
+433
+00:46:20,090 --> 00:46:22,850
+And you can see an inflection point, a kink.
+
+434
+00:46:22,850 --> 00:46:25,050
+Starting from 3 nanometer.
+
+435
+00:46:25,050 --> 00:46:27,070
+It comes down more gradually.
+
+436
+00:46:27,070 --> 00:46:30,690
+We're never going to go back to this kind of slope.
+
+437
+00:46:30,690 --> 00:46:33,830
+However we have not stopped OK.
+
+438
+00:46:33,830 --> 00:46:38,850
+This was really a turning point at 3:00 nanometer generation.
+
+439
+00:46:38,850 --> 00:46:52,690
+Because of that, we 10 years ago, we started to develop a hyena system 0.55 because there is a need for scaling.
+
+440
+00:46:52,690 --> 00:46:56,640
+Good that good thing that the slope has not stopped.
+
+441
+00:46:56,640 --> 00:47:00,520
+OK, so system design for years.
+
+442
+00:47:00,520 --> 00:47:04,280
+Module manufacturing started in 2018.
+
+443
+00:47:04,280 --> 00:47:07,440
+In 2012 we integrated the modules.
+
+444
+00:47:07,440 --> 00:47:08,340
+This is the source.
+
+445
+00:47:08,340 --> 00:47:11,380
+This is if right here intermediate focus.
+
+446
+00:47:11,380 --> 00:47:12,880
+The scanner will be here.
+
+447
+00:47:12,880 --> 00:47:14,800
+This is the vessel.
+
+448
+00:47:14,800 --> 00:47:16,120
+The vessel.
+
+449
+00:47:16,120 --> 00:47:23,640
+This is the illuminator picture of the illuminator made by Zeiss.
+
+450
+00:47:23,640 --> 00:47:27,720
+That's the wafer stage we make in veldhoven, Holland.
+
+451
+00:47:27,720 --> 00:47:30,340
+The radical stage made here in the US.
+
+452
+00:47:30,340 --> 00:47:32,280
+Connecticut Wilton, Connecticut.
+
+453
+00:47:32,280 --> 00:47:40,240
+OK, so you put all these things together, and we put together the first machine in 2023, in veldhoven.
+
+454
+00:47:40,240 --> 00:47:42,860
+And then in the.
+
+455
+00:47:42,860 --> 00:47:46,220
+And then the next machine I'll show you in the next slide.
+
+456
+00:47:46,220 --> 00:47:51,520
+But then the next machine in veldhoven is the machine for the joint lab with IMEC.
+
+457
+00:47:51,520 --> 00:47:56,860
+But before this happened, we shipped a machine to our.
+
+458
+00:47:56,860 --> 00:47:59,820
+OK, first let me talk about the optics.
+
+459
+00:47:59,820 --> 00:48:01,460
+This is the biggest piece.
+
+460
+00:48:01,460 --> 00:48:05,340
+This is the largest mirror facing the wafer.
+
+461
+00:48:05,340 --> 00:48:12,500
+This mirror has a diameter of 1 meter and an aberration number of 20 picometers.
+
+462
+00:48:12,500 --> 00:48:15,980
+OK yeah, that's actually shown here.
+
+463
+00:48:15,980 --> 00:48:25,620
+The first machine actually went to Intel right before the end of 2023.
+
+464
+00:48:25,620 --> 00:48:27,920
+Of course, it takes a few.
+
+465
+00:48:27,920 --> 00:48:30,600
+747 to ship the whole machine.
+
+466
+00:48:30,600 --> 00:48:32,380
+This is just one of them.
+
+467
+00:48:32,380 --> 00:48:38,640
+And it was going into Intel's R&D fab in Portland, Oregon.
+
+468
+00:48:41,740 --> 00:48:47,500
+And wrapping cranes as you can see.
+
+469
+00:48:47,500 --> 00:48:48,480
+Quite heavy.
+
+470
+00:48:52,810 --> 00:48:54,830
+This is the frame.
+
+471
+00:48:54,830 --> 00:48:55,830
+This is the illuminator.
+
+472
+00:48:55,830 --> 00:49:00,650
+Here OK yeah.
+
+473
+00:49:00,650 --> 00:49:04,310
+Well, this video came from Intel, and this is the end of the video.
+
+474
+00:49:04,310 --> 00:49:07,530
+And you can see that the wafer stage is not in there yet.
+
+475
+00:49:07,530 --> 00:49:10,450
+I don't know why they had this plastic thing to cover it up.
+
+476
+00:49:10,450 --> 00:49:12,150
+The lens is already in there.
+
+477
+00:49:12,150 --> 00:49:14,530
+The illuminator is not in there yet.
+
+478
+00:49:14,530 --> 00:49:17,590
+And the radical stage on top is not in there yet.
+
+479
+00:49:17,590 --> 00:49:19,810
+But the source is already in there.
+
+480
+00:49:19,810 --> 00:49:23,450
+So this picture tells a lot of story.
+
+481
+00:49:23,450 --> 00:49:29,730
+This is inside Intel's R&D fab in Oregon.
+
+482
+00:49:29,730 --> 00:49:34,030
+And then, of course, the next machine we put it in veldhoven.
+
+483
+00:49:34,030 --> 00:49:35,910
+This is a joint lab with IMEC.
+
+484
+00:49:35,910 --> 00:49:46,090
+Normally a machine would go to IMEC, but for the first machine, in order to maintain it more easily, we put it in veldhoven, smack in the middle of our factory.
+
+485
+00:49:46,090 --> 00:49:47,210
+And let me see.
+
+486
+00:49:47,210 --> 00:49:49,310
+Get the animation started.
+
+487
+00:49:52,510 --> 00:49:54,750
+Yeah, this is real.
+
+488
+00:49:54,750 --> 00:49:58,150
+The machine made it to a Tor track.
+
+489
+00:49:58,150 --> 00:50:03,970
+And there's a metrology room with all the ancillary stuff is located.
+
+490
+00:50:03,970 --> 00:50:06,790
+So this is the high end lab we have at IMEC.
+
+491
+00:50:06,790 --> 00:50:12,070
+And then the next few slides, I'll show results from this lab.
+
+492
+00:50:12,070 --> 00:50:15,890
+First result is the DRAM, right.
+
+493
+00:50:15,890 --> 00:50:25,350
+Drams the most critical two layers in DRAM are the hexagonal storage node lithography.
+
+494
+00:50:25,350 --> 00:50:28,870
+Now the state of the art is right here.
+
+495
+00:50:28,870 --> 00:50:30,070
+It's 34.
+
+496
+00:50:30,070 --> 00:50:37,390
+This has just entered HVM high volume manufacturing.
+
+497
+00:50:37,390 --> 00:50:39,010
+Leading edge DRAM makers.
+
+498
+00:50:39,010 --> 00:50:40,830
+You can see with pitch 34.
+
+499
+00:50:40,830 --> 00:50:44,170
+Low-high and low can still do it.
+
+500
+00:50:44,170 --> 00:50:45,830
+In fact, it's done with low.
+
+501
+00:50:45,830 --> 00:50:49,090
+Nowadays in manufacturing OK.
+
+502
+00:50:49,090 --> 00:50:52,610
+But Hina would have done it with ease.
+
+503
+00:50:52,610 --> 00:51:01,770
+And then, of course, when you go beyond page 34 Lo, it will become much more difficult.
+
+504
+00:51:01,770 --> 00:51:07,910
+The The equivalent dose would be very high.
+
+505
+00:51:07,910 --> 00:51:12,570
+The reason is because you could not make use of the full illuminator.
+
+506
+00:51:12,570 --> 00:51:14,690
+You lose light.
+
+507
+00:51:14,690 --> 00:51:18,470
+So equivalently that means the dose is higher with high Na.
+
+508
+00:51:18,470 --> 00:51:19,230
+No problem.
+
+509
+00:51:19,230 --> 00:51:22,210
+You go on to pitch 28 and below.
+
+510
+00:51:22,210 --> 00:51:24,370
+And this is the other layer.
+
+511
+00:51:24,370 --> 00:51:25,630
+There are two layers right.
+
+512
+00:51:25,630 --> 00:51:27,710
+One storage node, which is a positive tone.
+
+513
+00:51:27,710 --> 00:51:33,010
+And a negative tone is the storage node pad that sits underneath the storage node.
+
+514
+00:51:33,010 --> 00:51:38,750
+The capacitors again using low at pitch 32 are very difficult.
+
+515
+00:51:38,750 --> 00:51:42,110
+Very difficult. With this thing is more difficult.
+
+516
+00:51:42,110 --> 00:51:50,560
+The reason is that it has the periphery circuit, the subwoofer driver and the sense amplifiers in one shot with hayana.
+
+517
+00:51:50,560 --> 00:51:52,640
+Very good. adi?
+
+518
+00:51:52,640 --> 00:51:59,180
+After this is after H and at 28 after H. It looks good.
+
+519
+00:51:59,180 --> 00:52:01,460
+So hayana has got a lot of potential.
+
+520
+00:52:01,460 --> 00:52:06,360
+It's not in HVM yet, but we hope that it will be HVM soon.
+
+521
+00:52:06,360 --> 00:52:08,300
+Now this is logic, OK.
+
+522
+00:52:08,300 --> 00:52:09,580
+Logic circuit.
+
+523
+00:52:09,580 --> 00:52:13,240
+The hardest layer to print is metal 0.
+
+524
+00:52:13,240 --> 00:52:14,900
+That's the lowest metal layer.
+
+525
+00:52:14,900 --> 00:52:22,700
+Now it's printed with the low 0.33 with two or three multiple exposures.
+
+526
+00:52:22,700 --> 00:52:25,060
+Purple is one where Brown is another one.
+
+527
+00:52:25,060 --> 00:52:27,800
+And then you have these cut layers.
+
+528
+00:52:27,800 --> 00:52:32,543
+If you were to expose it with hayana you could do this in one shot.
+
+529
+00:52:32,543 --> 00:52:37,720
+In the interest of time, I'm going to go through just to show you this result from IMEC.
+
+530
+00:52:37,720 --> 00:52:40,900
+A pitch equal to 19, which we're not there yet.
+
+531
+00:52:40,900 --> 00:52:42,900
+OK we're at pitch 23 right now.
+
+532
+00:52:42,900 --> 00:52:47,880
+At three nanometer node, pitch 19 will be future node note with a tip to tip.
+
+533
+00:52:47,880 --> 00:52:51,660
+The tip to tip is another very important metric.
+
+534
+00:52:51,660 --> 00:52:55,740
+This is single shot EUV lithography.
+
+535
+00:52:55,740 --> 00:52:59,520
+Not only can we do metal layers, but also the contact layers.
+
+536
+00:52:59,520 --> 00:53:07,620
+These are 30 nanometer contact layers from center to center, so the nominal CD is 15.
+
+537
+00:53:07,620 --> 00:53:12,420
+This is after lithography and this is after etch OK.
+
+538
+00:53:12,420 --> 00:53:18,580
+So I mean, how best can you do this.
+
+539
+00:53:18,580 --> 00:53:20,240
+What's the limit of this.
+
+540
+00:53:20,240 --> 00:53:27,360
+Well I want to show you a slide that has a very small pitch.
+
+541
+00:53:27,360 --> 00:53:29,080
+This is 8 nanometer half pitch.
+
+542
+00:53:29,080 --> 00:53:30,680
+So 16 nanometer pitch.
+
+543
+00:53:30,680 --> 00:53:34,560
+If you put it in the formula the K1 is 0.33.
+
+544
+00:53:34,560 --> 00:53:37,680
+Still we're not close to K1 equal to 0.25.
+
+545
+00:53:37,680 --> 00:53:39,720
+But you can see we could do it.
+
+546
+00:53:39,720 --> 00:53:43,500
+But of course, the image is of low contrast.
+
+547
+00:53:43,500 --> 00:53:45,850
+How do we.
+
+548
+00:53:45,850 --> 00:53:48,170
+This cannot be in the manufacturing.
+
+549
+00:53:48,170 --> 00:53:50,490
+The contrast has to be a lot higher.
+
+550
+00:53:50,490 --> 00:53:52,390
+And how do we increase the contracts.
+
+551
+00:53:52,390 --> 00:53:54,790
+And this will lead to the next part of the talk.
+
+552
+00:53:54,790 --> 00:53:56,550
+I'd like to invite my colleague Ronald.
+
+553
+00:54:00,050 --> 00:54:00,750
+Thank you.
+
+554
+00:54:04,570 --> 00:54:07,650
+Tony and.
+
+555
+00:54:07,650 --> 00:54:12,350
+Remember that Tony talked about customers asking tough questions.
+
+556
+00:54:12,350 --> 00:54:16,750
+Do you get good resolution and can you make it cheaper.
+
+557
+00:54:16,750 --> 00:54:21,090
+And that's ultimately the business that we're in better resolution.
+
+558
+00:54:21,090 --> 00:54:27,450
+Tony talked about the formula that the minimum half pitch is K1 lambda over.
+
+559
+00:54:27,450 --> 00:54:31,450
+So in general try to go to a shorter wavelength.
+
+560
+00:54:31,450 --> 00:54:39,370
+That's always very complicated to go from 193 to 13.5 what was the timeline.
+
+561
+00:54:39,370 --> 00:54:42,270
+How many years did you say 35 years.
+
+562
+00:54:42,270 --> 00:54:47,070
+So we're going to stick with 13.5 nanometers for quite a while.
+
+563
+00:54:47,070 --> 00:54:49,590
+The next thing that you can do is go to a larger.
+
+564
+00:54:49,590 --> 00:54:51,650
+But you already saw how expensive that is.
+
+565
+00:54:51,650 --> 00:54:54,830
+And then you have the third factor, the K1.
+
+566
+00:54:54,830 --> 00:55:00,850
+And I kind of feel a little bit pretentious being here,
+
+567
+00:55:00,850 --> 00:55:09,110
+because then we start talking about computational lithography and who am I daring to show up here at Berkeley, where
+
+568
+00:55:09,110 --> 00:55:15,210
+one of your professors, Andy neureuter he's really the godfather of computational lithography.
+
+569
+00:55:15,210 --> 00:55:18,750
+So I'm basically preaching to the choir.
+
+570
+00:55:18,750 --> 00:55:23,310
+But allow me anyway to share my view on some of this.
+
+571
+00:55:23,310 --> 00:55:34,750
+Obviously, we stand on the shoulders of many Giants that have helped with developing a lot of the theory all the way from Fresnel, Fourier, Maxwell, Helmholtz, Ernst
+
+572
+00:55:34,750 --> 00:55:46,190
+Abbe there, this guy here that was one of the first chief scientists of Zeiss, did a lot of work on microscopy and developed it from there.
+
+573
+00:55:49,130 --> 00:55:49,950
+What did he say.
+
+574
+00:55:49,950 --> 00:55:52,870
+He say in 1873 already.
+
+575
+00:55:52,870 --> 00:56:02,010
+Hey, the minimum pitch is 1/2 times the wavelength divided by the sine of that opening angle that we now call the.
+
+576
+00:56:02,010 --> 00:56:04,590
+And he didn't have the refractive index yet.
+
+577
+00:56:04,590 --> 00:56:09,530
+Now we say that n times the sine of that angle is the numerical aperture.
+
+578
+00:56:09,530 --> 00:56:12,810
+But isn't it remarkable.
+
+579
+00:56:12,810 --> 00:56:25,530
+Since 1873 to the day of today, a very simple formula has governed our roadmap, and the rest was simply technology.
+
+580
+00:56:25,530 --> 00:56:28,890
+Well, technology is not always simple.
+
+581
+00:56:28,890 --> 00:56:37,690
+Lin from TSMC said, hey, lambda and Na, that's physics and that's geometry of your lenses.
+
+582
+00:56:37,690 --> 00:56:45,280
+But that K1, that's all kind of illumination tricks chemistry, resist contrast, aberrations, and mask tricks.
+
+583
+00:56:45,280 --> 00:56:49,320
+And the minimum value that you can accomplish is 0.25.
+
+584
+00:56:49,320 --> 00:56:57,200
+So I'm going to talk about what can we all do to reduce that K1 if we want to do that with computation.
+
+585
+00:56:57,200 --> 00:57:01,220
+It starts with I need to have a good model for what am I actually getting.
+
+586
+00:57:01,220 --> 00:57:12,960
+So I need a forward model with which I can predict what is the quality of the imaging that I get and that good model that will involve a MAST model.
+
+587
+00:57:12,960 --> 00:57:16,440
+I need to see what is happening in my optics.
+
+588
+00:57:16,440 --> 00:57:18,620
+What is the reaction of my resist.
+
+589
+00:57:18,620 --> 00:57:20,040
+That's a lot of chemistry.
+
+590
+00:57:20,040 --> 00:57:23,340
+And ultimately, I don't care what the pattern is, am I resist.
+
+591
+00:57:23,340 --> 00:57:25,740
+I want it to have it in a device layer.
+
+592
+00:57:25,740 --> 00:57:30,080
+So I need an edge model that becomes my forward model.
+
+593
+00:57:30,080 --> 00:57:36,840
+And a lot of effort has gone into how do I make that forward model as good as I can.
+
+594
+00:57:36,840 --> 00:57:39,220
+And we continue to improve with that.
+
+595
+00:57:39,220 --> 00:57:41,760
+More and more physics, more and more chemistry.
+
+596
+00:57:41,760 --> 00:57:45,760
+And at some point in time, we said, hey, AI is starting to take off.
+
+597
+00:57:45,760 --> 00:57:48,340
+And perhaps when we have a lot of good measurements,
+
+598
+00:57:48,340 --> 00:57:59,580
+we can develop an AI model that can predict what I will get, even without fully understanding why that is what I will get and all of that is being employed.
+
+599
+00:57:59,580 --> 00:58:04,180
+But once I have such a good model, I can go and play all kinds of tricks.
+
+600
+00:58:04,180 --> 00:58:13,880
+I can make a little manufacturing check where with a little layer and a little model that I have developed, I can now say, what am I going to get on the wafer.
+
+601
+00:58:13,880 --> 00:58:17,620
+And is that what I wanted in the first place.
+
+602
+00:58:17,620 --> 00:58:23,600
+Another option is that I say, hey, I have a little layer and I have measurements on what is the wafer.
+
+603
+00:58:23,600 --> 00:58:28,860
+I can calibrate that model or I have a little model.
+
+604
+00:58:28,860 --> 00:58:31,220
+I know what I want on the wafer.
+
+605
+00:58:31,220 --> 00:58:37,180
+What do I need to put on my reticle so that I get, in the end, what I wanted in the first place.
+
+606
+00:58:37,180 --> 00:58:40,070
+And you contributed quite a bit of that.
+
+607
+00:58:40,070 --> 00:58:43,110
+That's where the field of inverse lithography and so on.
+
+608
+00:58:43,110 --> 00:58:45,230
+I'm going to talk about a different one today.
+
+609
+00:58:45,230 --> 00:58:46,650
+And that's this one here.
+
+610
+00:58:46,650 --> 00:58:48,510
+I know what I want on the wafer.
+
+611
+00:58:48,510 --> 00:58:50,030
+How can I optimize.
+
+612
+00:58:50,030 --> 00:58:52,730
+What is the pattern that I put on the little layer.
+
+613
+00:58:52,730 --> 00:58:56,070
+And how do I instruct my scanner.
+
+614
+00:58:56,070 --> 00:59:04,850
+What is the illumination that I will use on the scanner to maximize the contrast to get the best possible results.
+
+615
+00:59:04,850 --> 00:59:11,450
+Now, when we talk about illumination, let me talk for a moment about an illumination system.
+
+616
+00:59:11,450 --> 00:59:18,530
+Trick is what I would like to have is very, very uniform illumination of my mask.
+
+617
+00:59:18,530 --> 00:59:28,330
+And in order to play with interference and to play with diffraction and be able to manipulate exactly what is the interference pattern
+
+618
+00:59:28,330 --> 00:59:35,610
+that I get on the wafer, I need to make sure that this is spatially coherent light.
+
+619
+00:59:35,610 --> 00:59:37,150
+And how do we do that.
+
+620
+00:59:37,150 --> 00:59:40,190
+We create this so-called 4f system.
+
+621
+00:59:40,190 --> 00:59:45,990
+A guy Kohler invented this by having this four lens system.
+
+622
+00:59:45,990 --> 00:59:55,230
+What I can create is, for every point in the light source, there is one particular set of planar waves that hits the mask.
+
+623
+00:59:55,230 --> 01:00:04,550
+So if I imagine myself sitting on the mask and I look back at the illumination, imagine a circle
+
+624
+01:00:04,550 --> 01:00:07,570
+and I could get light from that whole circle at me.
+
+625
+01:00:07,570 --> 01:00:09,750
+That would be a cone of light.
+
+626
+01:00:09,750 --> 01:00:13,250
+I could have light just coming from the center of that point.
+
+627
+01:00:13,250 --> 01:00:15,710
+That would be one planar wave.
+
+628
+01:00:15,710 --> 01:00:22,330
+I will also show you that I can have light coming from there and from there, and then I get very particular diffraction.
+
+629
+01:00:22,330 --> 01:00:25,250
+And that's all the optimization that we're going to do.
+
+630
+01:00:28,270 --> 01:00:35,780
+So here you see that a little bit for every point in my source plane in the illumination I now get a number.
+
+631
+01:00:35,780 --> 01:00:41,820
+I got plane waves onto the mask that leads to diffraction.
+
+632
+01:00:41,820 --> 01:00:45,040
+So the diffraction orders are captured by the objective lens.
+
+633
+01:00:45,040 --> 01:00:48,400
+And the bigger this lens, the bigger these opening angles,
+
+634
+01:00:48,400 --> 01:00:56,000
+the more of these diffraction patterns I capture, and the better will be the reconstruction of the image here on the image plane.
+
+635
+01:00:56,000 --> 01:00:58,980
+That's basically Fourier optics.
+
+636
+01:00:58,980 --> 01:01:09,420
+So let's look a little bit more at diffraction for those of you that are not totally familiar with that, Mr. Huygens already said, hey, when you have light hitting an opening,
+
+637
+01:01:09,420 --> 01:01:14,900
+each point here starts to act as a source of spherical waves,
+
+638
+01:01:14,900 --> 01:01:26,000
+and it's really the path optical path length differences that then create this pattern here, where in some directions I end up getting light, and in other directions I do not get light.
+
+639
+01:01:26,000 --> 01:01:28,900
+And those are called the diffraction orders.
+
+640
+01:01:28,900 --> 01:01:37,440
+In essence, if I look at my aperture, the mask, and I think of that as a repeating pattern.
+
+641
+01:01:37,440 --> 01:01:44,880
+I can take the Fourier transform of that pattern, and every diffraction order encodes one of the Fourier components.
+
+642
+01:01:44,880 --> 01:01:47,640
+And you can think of the lens as a filter.
+
+643
+01:01:47,640 --> 01:01:51,700
+How many of the Fourier components can I capture that lead.
+
+644
+01:01:51,700 --> 01:01:54,660
+Help me reconstruct the pattern of the mask.
+
+645
+01:01:54,660 --> 01:01:58,120
+Now on the wafer.
+
+646
+01:01:58,120 --> 01:02:04,320
+So in certain directions, look at this wave from this opening.
+
+647
+01:02:04,320 --> 01:02:09,820
+This one here had just this one was one wavelength to here this one was two.
+
+648
+01:02:09,820 --> 01:02:10,960
+This one was three.
+
+649
+01:02:10,960 --> 01:02:19,420
+So in this particular direction, all of these waves are in phase and they contribute to positive interference.
+
+650
+01:02:19,420 --> 01:02:23,360
+And that is called the Bragg condition.
+
+651
+01:02:23,360 --> 01:02:31,760
+Each of these diffraction patterns I can now project here in the pupil plane for the lens as a particular spot.
+
+652
+01:02:31,760 --> 01:02:36,960
+And when these diffraction patterns start to fall outside the aperture of the lens,
+
+653
+01:02:36,960 --> 01:02:45,840
+the numerical aperture of the lens, then no longer does it contribute to the image formation at the wafer level.
+
+654
+01:02:45,840 --> 01:02:48,340
+It basically looks like something like this.
+
+655
+01:02:48,340 --> 01:02:49,480
+My zeroth order.
+
+656
+01:02:49,480 --> 01:02:52,880
+The light that straight goes through these waves.
+
+657
+01:02:52,880 --> 01:02:55,580
+They lead to no contrast here.
+
+658
+01:02:55,580 --> 01:03:06,340
+The first order is a wave with the same frequency as the pattern, the second order is triple the frequency, et cetera.
+
+659
+01:03:06,340 --> 01:03:12,540
+So that's how in the end, I reconstruct the image at the wafer plane.
+
+660
+01:03:12,540 --> 01:03:13,960
+I'm going a little bit fast.
+
+661
+01:03:13,960 --> 01:03:26,020
+So now Abe was the one that said so now my challenge is I know what I want as a wafer,
+
+662
+01:03:26,020 --> 01:03:29,460
+as a light intensity on the wafer plane.
+
+663
+01:03:29,460 --> 01:03:37,570
+My challenge is to optimize the source here so that for every source point, the waves hitting the mask
+
+664
+01:03:37,570 --> 01:03:48,730
+with how they go through the lens and all the path length differences, how that all adds up to this spatial frequency on the mask.
+
+665
+01:03:48,730 --> 01:03:50,390
+Let me show that to you.
+
+666
+01:03:50,390 --> 01:03:51,730
+Much simpler.
+
+667
+01:03:51,730 --> 01:04:02,830
+Here we have that one central point that I was talking about this large illumination disk hitting a mask, creating diffraction patterns.
+
+668
+01:04:02,830 --> 01:04:06,930
+Each of these diffraction patterns are within the pupil plane of the lens,
+
+669
+01:04:06,930 --> 01:04:13,210
+and therefore they contribute to this interference pattern on the wafer.
+
+670
+01:04:13,210 --> 01:04:16,510
+What happens now when I start to reduce the pitch.
+
+671
+01:04:19,050 --> 01:04:23,410
+You see that some of the diffraction now moves further out.
+
+672
+01:04:23,410 --> 01:04:26,450
+The contrast in my image starts to reduce.
+
+673
+01:04:26,450 --> 01:04:31,870
+And I'm now at a CD basically of 0.5 lambda over an A.
+
+674
+01:04:31,870 --> 01:04:36,710
+If I now go any further with shrinking,
+
+675
+01:04:36,710 --> 01:04:44,310
+suddenly those outer points no longer are captured by the lens, and I have 0 contrast left.
+
+676
+01:04:44,310 --> 01:04:46,190
+There's no imaging.
+
+677
+01:04:46,190 --> 01:04:46,970
+But wait a minute.
+
+678
+01:04:46,970 --> 01:04:49,350
+I can do some tricks.
+
+679
+01:04:49,350 --> 01:04:54,730
+What if instead of using that point source, if I use a whole disk.
+
+680
+01:04:57,310 --> 01:05:05,230
+Now you see that right here at the edge, there is, again, a little bit of overlap between the zeroth order and the first order.
+
+681
+01:05:05,230 --> 01:05:14,070
+So I start to see a little bit of the reconstruction of my image at the wafer plane.
+
+682
+01:05:14,070 --> 01:05:25,070
+But the contrast is very low because there is a lot of light from the center that doesn't really contribute anything to the interference.
+
+683
+01:05:25,070 --> 01:05:27,850
+So what if I could move that light.
+
+684
+01:05:27,850 --> 01:05:30,660
+That would improve my contrast.
+
+685
+01:05:30,660 --> 01:05:34,700
+So I go and use what we call annular illumination.
+
+686
+01:05:34,700 --> 01:05:37,880
+Instead of the light coming out of that whole disk, I now see it.
+
+687
+01:05:37,880 --> 01:05:47,100
+If I look from the mask back at the illumination, I would see it come from a ring and I get much better contrast.
+
+688
+01:05:47,100 --> 01:05:50,500
+Well, if I can do that, why not do even more.
+
+689
+01:05:50,500 --> 01:05:54,660
+Because that light here at the edges is also not contributing.
+
+690
+01:05:54,660 --> 01:05:57,560
+This is where the positive interference come from.
+
+691
+01:05:57,560 --> 01:06:00,340
+So let me remove that also.
+
+692
+01:06:00,340 --> 01:06:02,820
+And I get even better contrast.
+
+693
+01:06:02,820 --> 01:06:06,780
+Now I have something called dipole illumination.
+
+694
+01:06:06,780 --> 01:06:12,740
+And that is what a lot of the fancy stuff that is happening nowadays.
+
+695
+01:06:12,740 --> 01:06:19,360
+We can basically create with our illumination arbitrary shapes for the illumination.
+
+696
+01:06:19,360 --> 01:06:25,600
+And what is the best illumination that will for the set of patterns lead to the best reconstruction.
+
+697
+01:06:29,480 --> 01:06:31,520
+How does that then work out.
+
+698
+01:06:31,520 --> 01:06:39,920
+If I have a full chip design, I will pick a bunch of critical patterns, the ones that I care about most.
+
+699
+01:06:39,920 --> 01:06:42,900
+For those, I will start doing this optimization.
+
+700
+01:06:42,900 --> 01:06:46,240
+I have a forward model, I keep calculating,
+
+701
+01:06:46,240 --> 01:06:54,280
+I can use inverse lithography and try to do a more direct calculation, but in the end, I will end up with an illumination.
+
+702
+01:06:54,280 --> 01:06:56,400
+You can see that there at the top.
+
+703
+01:06:56,400 --> 01:07:00,080
+And with that illumination I can.
+
+704
+01:07:00,080 --> 01:07:01,020
+Yeah there you go.
+
+705
+01:07:01,020 --> 01:07:04,740
+We start to improve, iterate on the illumination.
+
+706
+01:07:04,740 --> 01:07:10,040
+And you can now start seeing that as I project I get a cleaner and cleaner image.
+
+707
+01:07:10,040 --> 01:07:18,640
+Once I have the very best illumination, I can say, OK, now let me use with this illumination OPC to improve the whole mask.
+
+708
+01:07:18,640 --> 01:07:22,940
+And if I did the original selection of the patterns that I optimized for.
+
+709
+01:07:22,940 --> 01:07:29,680
+Well, and those were really the most critical ones then this illumination will actually work for the whole chip.
+
+710
+01:07:33,020 --> 01:07:36,940
+So how does that optimization algorithm work.
+
+711
+01:07:36,940 --> 01:07:45,900
+Basically we tend to look at hey, I want to this is what the designer drew this square thing.
+
+712
+01:07:45,900 --> 01:07:48,840
+Now we know that we can never print something square.
+
+713
+01:07:48,840 --> 01:07:51,340
+There's always finite resolution.
+
+714
+01:07:51,340 --> 01:07:56,300
+So if I would try to optimize directly to that square shape,
+
+715
+01:07:56,300 --> 01:08:02,600
+my total cost function, which is all the errors added up, would be completely dominated by these corners.
+
+716
+01:08:02,600 --> 01:08:03,960
+And that's artificial.
+
+717
+01:08:03,960 --> 01:08:09,740
+So we say, theoretically the best that I can do is some target that I can draw here.
+
+718
+01:08:09,740 --> 01:08:19,960
+Let me now try to get the mask and the illumination so that I get as close as possible to what I think is possible, and I want to do that for a range of conditions,
+
+719
+01:08:19,960 --> 01:08:25,290
+not just for nominal, but also for a little bit more or less dose.
+
+720
+01:08:25,290 --> 01:08:27,569
+Dose is never perfectly controlled.
+
+721
+01:08:27,569 --> 01:08:29,850
+A little bit more.
+
+722
+01:08:29,850 --> 01:08:34,109
+Some focus variation and the mask making is also not perfect.
+
+723
+01:08:34,109 --> 01:08:43,569
+So I take all these variances into account and make sure that I arrive at something that is robust under these variations.
+
+724
+01:08:43,569 --> 01:08:46,330
+Here are some of the masks that I will skip.
+
+725
+01:08:46,330 --> 01:08:51,630
+Here are some of the math that I will also skip that determines how all of that works.
+
+726
+01:08:51,630 --> 01:09:02,850
+But what I wanted to point out here is there are actually two terms here that is this here that captures some of the effects from non chemically amplified resist.
+
+727
+01:09:02,850 --> 01:09:07,970
+And I want right now to focus your attention here for a moment at this term.
+
+728
+01:09:07,970 --> 01:09:10,210
+This is a mask 3D effect.
+
+729
+01:09:10,210 --> 01:09:13,609
+So what is a mask 3D effect.
+
+730
+01:09:13,609 --> 01:09:17,450
+I'll go fast I'm nearly done.
+
+731
+01:09:17,450 --> 01:09:20,189
+Here is one of those poles of the illumination.
+
+732
+01:09:20,189 --> 01:09:22,810
+The zeroth order is light that goes through.
+
+733
+01:09:22,810 --> 01:09:24,910
+It goes to my wafer.
+
+734
+01:09:24,910 --> 01:09:28,870
+Here is the first diffraction order and it goes here.
+
+735
+01:09:28,870 --> 01:09:36,109
+Well, because of electromagnetic effects here, there is an extra phase difference between these two.
+
+736
+01:09:36,109 --> 01:09:38,250
+That's called a mask 3D effect.
+
+737
+01:09:38,250 --> 01:09:47,130
+And that means that instead of a really good reconstruction of all my Fourier components, imagine that I have a Fourier transform.
+
+738
+01:09:47,130 --> 01:09:57,230
+But I'm a little bit off on the amplitude of some of these components, or I'm a little bit off on the phase of these components that would start to affect your reconstruction.
+
+739
+01:09:57,230 --> 01:10:01,530
+So our goal is to reconstruct how can I do that correctly.
+
+740
+01:10:01,530 --> 01:10:04,910
+Because my one pole remember the dipole illumination.
+
+741
+01:10:04,910 --> 01:10:06,310
+This was one pole.
+
+742
+01:10:06,310 --> 01:10:11,370
+And as a result of that phase difference you actually get a shift in your mask.
+
+743
+01:10:11,370 --> 01:10:16,490
+You see this phi minus phi be that phase difference leads to a shift in your mask.
+
+744
+01:10:16,490 --> 01:10:23,180
+Instead of the intensity being focused around the ideal position, it has shifted a little bit.
+
+745
+01:10:23,180 --> 01:10:27,220
+Now the other pole will have this shift in the other direction.
+
+746
+01:10:27,220 --> 01:10:34,020
+So my total image is now the sum of two distributions.
+
+747
+01:10:34,020 --> 01:10:38,640
+If they were perfectly aligned I would have a nice sharp image, but they are not.
+
+748
+01:10:38,640 --> 01:10:43,300
+So the image fades I get a reduction in contrast.
+
+749
+01:10:43,300 --> 01:10:44,540
+What could I do.
+
+750
+01:10:44,540 --> 01:10:47,020
+Could I do something smart.
+
+751
+01:10:47,020 --> 01:10:56,120
+What if I have the illumination and instead of the dipole here, I move this pole down a little bit.
+
+752
+01:10:56,120 --> 01:11:03,260
+I move this pole up a little bit, and in my lens I can now compensate for the mask's 3D effects.
+
+753
+01:11:03,260 --> 01:11:12,680
+Because this order here, these diffraction orders here and here are the zeroth order.
+
+754
+01:11:12,680 --> 01:11:19,720
+And now I can have the one pole shift to the left, the other one a little bit to the right.
+
+755
+01:11:19,720 --> 01:11:22,880
+And now they overlap again perfectly.
+
+756
+01:11:22,880 --> 01:11:24,560
+Now that's simple.
+
+757
+01:11:24,560 --> 01:11:29,140
+If I only have to do with a 2D pattern, what we can now do.
+
+758
+01:11:29,140 --> 01:11:33,340
+And that's why we have computers, I can actually generalize this.
+
+759
+01:11:33,340 --> 01:11:36,720
+And I can take an arbitrary mask pattern for logic.
+
+760
+01:11:36,720 --> 01:11:48,920
+And I can say, hey, what would now be the very best aberration pattern in my lens that would make that all these images from these poles overlap as well as possible.
+
+761
+01:11:48,920 --> 01:11:50,800
+And that's what you see here.
+
+762
+01:11:50,800 --> 01:11:58,240
+Here is what I just explained for a simple if all I look at is lens is lines and spaces.
+
+763
+01:11:58,240 --> 01:12:02,720
+This is for the actual mask pattern here.
+
+764
+01:12:02,720 --> 01:12:10,080
+And as a result, I get much better exposure, latitude and much better adaptive focus in my final imaging.
+
+765
+01:12:10,080 --> 01:12:18,680
+So I hope that with that, I've given you a little bit of a flavor on how we can use computation to optimize the settings on the scanner,
+
+766
+01:12:18,680 --> 01:12:23,140
+both from an illumination perspective as well as aberrations in the lens.
+
+767
+01:12:23,140 --> 01:12:31,340
+We try to minimize the aberrations, and sometimes we introduce them on purpose to correct for mass 3D effects.
+
+768
+01:12:31,340 --> 01:12:35,060
+Now, with all of that said, let me finish up the last part.
+
+769
+01:12:35,060 --> 01:12:39,420
+Just a slide on the roadmap and the outlook.
+
+770
+01:12:39,420 --> 01:12:45,060
+Remember the best possible resolution at the lowest possible price.
+
+771
+01:12:45,060 --> 01:12:50,200
+So let's look at we've looked at the best possible resolution.
+
+772
+01:12:50,200 --> 01:12:55,540
+Reduced the lambda, increase DNA decrease K1.
+
+773
+01:12:55,540 --> 01:13:04,380
+Let's now look for a moment that cost of the technology the productivity the EUV light source.
+
+774
+01:13:04,380 --> 01:13:13,680
+We now we've recently announced that our latest results in San Diego, we can get one kilowatt of power out of our dose.
+
+775
+01:13:13,680 --> 01:13:19,970
+And remember what Tony said in the beginning we struggled to get one Watt.
+
+776
+01:13:19,970 --> 01:13:24,170
+Then at some point we were really excited that we got 10 watts.
+
+777
+01:13:24,170 --> 01:13:29,990
+TSMC told us that when we hit 80w, we can go into volume production.
+
+778
+01:13:29,990 --> 01:13:32,690
+That was in 2019.
+
+779
+01:13:32,690 --> 01:13:38,470
+That was 2 watts or that was 281 was 2014 was 214.
+
+780
+01:13:38,470 --> 01:13:39,430
+OK yeah.
+
+781
+01:13:39,430 --> 01:13:44,310
+Sorry so that's when they said, OK, now we are serious about it.
+
+782
+01:13:44,310 --> 01:13:46,090
+We think that you can get there.
+
+783
+01:13:46,090 --> 01:13:49,970
+And by 2019 we were at 250.
+
+784
+01:13:49,970 --> 01:13:57,610
+We now have in our hands demonstrations that we can actually hit 1 kilowatt.
+
+785
+01:13:57,610 --> 01:14:05,090
+Another way of reducing the cost of the system is by having more commonality between EUV.
+
+786
+01:14:05,090 --> 01:14:11,690
+Sorry, between the .33 and a system and the .55 and a system.
+
+787
+01:14:11,690 --> 01:14:22,610
+So we have a roadmap on how we can create a more common platform that we will do that with also an option to in the future,
+
+788
+01:14:22,610 --> 01:14:31,950
+start looking at 0.75, for which we already have some prototype designs and where we can get at the end.
+
+789
+01:14:31,950 --> 01:14:43,610
+Or here is an example of with 13.5 nanometer EUV light from Paul scherrer Institute interferometric EUV lithography, where you do not have mass 3D effects.
+
+790
+01:14:43,610 --> 01:14:48,030
+If we could really control everything can see that.
+
+791
+01:14:48,030 --> 01:14:57,590
+Yeah, there are already some evidence that half pitches of about five or six nanometer as a absolute theoretical maximum would be possible.
+
+792
+01:14:57,590 --> 01:15:04,670
+So we still have quite a ways to go that we can scale more than where we are today.
+
+793
+01:15:04,670 --> 01:15:10,290
+And with that, I come to the end, and I hope that I fulfilled my promise that I wouldn't be too long.
+
+794
+01:15:13,470 --> 01:15:15,720
+Tony, why don't you join me for questions.
+
+795
+01:15:18,700 --> 01:15:21,220
+Hello what happened here.
+
+796
+01:15:21,220 --> 01:15:22,220
+No it's fine.
+
+797
+01:15:22,220 --> 01:15:25,540
+He was supposed to activate from that.
+
+798
+01:15:25,540 --> 01:15:26,420
+All right.
+
+799
+01:15:26,420 --> 01:15:27,620
+Oh, I think it's on now.
+
+800
+01:15:27,620 --> 01:15:34,440
+OK, so we'll take questions now for both speakers, and we're open for questions.
+
+801
+01:15:38,540 --> 01:15:42,800
+Do I understand correctly that if the end user cares about,
+
+802
+01:15:42,800 --> 01:15:48,432
+let's say, resolution just along one axis, that's an easier problem from your perspective.
+
+803
+01:15:48,432 --> 01:15:54,840
+Is that correct to say, is that something that the end users are trying to or you all collectively are trying to leverage.
+
+804
+01:15:54,840 --> 01:15:58,180
+OK, so let's define first what the end user is, right.
+
+805
+01:15:58,180 --> 01:16:08,140
+If the end user is Apple then they tell TSMC it's your problem.
+
+806
+01:16:08,140 --> 01:16:17,920
+TSMC will tell us, hey, do you we want to use dipole illumination combination, because that gives the very best contrast for one dimensional patterns.
+
+807
+01:16:17,920 --> 01:16:25,360
+Can you make a light source where all of the light only comes from these two points in that whole disk.
+
+808
+01:16:25,360 --> 01:16:35,920
+Well, we can do that pretty well, but if you make these spots too small, we can only do that by throwing some of the light away.
+
+809
+01:16:35,920 --> 01:16:40,520
+And if we throw some of the light away, then it goes at the expense of productivity.
+
+810
+01:16:40,520 --> 01:16:48,900
+And so our newer illumination designs can use a much smaller, what we call a pupil fill ratio.
+
+811
+01:16:48,900 --> 01:16:54,700
+What's the smallest fraction of that whole illumination disk that you can define.
+
+812
+01:16:54,700 --> 01:17:00,040
+That's where I want the light to come from and still use 100% of the light.
+
+813
+01:17:00,040 --> 01:17:06,440
+So it's really a shared responsibility between us and the customer.
+
+814
+01:17:06,440 --> 01:17:13,550
+But for every layer metal 0, metal one, metal 2 contact holes, vias.
+
+815
+01:17:13,550 --> 01:17:16,590
+Every layer has its own illumination.
+
+816
+01:17:16,590 --> 01:17:20,150
+And let me take your example a little bit to an extreme.
+
+817
+01:17:20,150 --> 01:17:26,830
+If I want the absolute smallest pitch in one direction,
+
+818
+01:17:26,830 --> 01:17:33,830
+I would use a dipole with only two tiny little pieces of light here.
+
+819
+01:17:33,830 --> 01:17:41,170
+I would now have great contrast in this direction and 0 contrast in the other direction.
+
+820
+01:17:41,170 --> 01:17:45,950
+So the only thing that I can now do is print lines that are infinitely long.
+
+821
+01:17:45,950 --> 01:17:49,030
+Not a single designer is interested in that.
+
+822
+01:17:49,030 --> 01:17:55,590
+So now what you could do is well, but if I have those very long lines, I will use a second exposure to cut them.
+
+823
+01:17:55,590 --> 01:17:57,010
+But that's expensive.
+
+824
+01:17:57,010 --> 01:18:01,330
+Perhaps bring in these poles a little bit, regain a little bit of that contrast.
+
+825
+01:18:01,330 --> 01:18:06,350
+And now I can also print gaps in these lines.
+
+826
+01:18:06,350 --> 01:18:08,850
+But how small I can get that gap.
+
+827
+01:18:08,850 --> 01:18:17,290
+That's the so-called tip to tip difference that depends on how you optimize the illumination and how you optimize the OPC.
+
+828
+01:18:17,290 --> 01:18:21,850
+So it's a very interactive discussion between us and our customers.
+
+829
+01:18:21,850 --> 01:18:23,470
+Hope that answers your question.
+
+830
+01:18:23,470 --> 01:18:24,830
+OK, here's another question.
+
+831
+01:18:24,830 --> 01:18:26,350
+Just a quick question.
+
+832
+01:18:26,350 --> 01:18:40,310
+So if the minimum pitch you're expecting is like 90 nanometers, that does bring up the question, what exactly does the metric in like a node name refer to.
+
+833
+01:18:40,310 --> 01:18:44,730
+Because it's clearly not the pitch of the features themselves.
+
+834
+01:18:44,730 --> 01:18:45,870
+Great question.
+
+835
+01:18:45,870 --> 01:18:52,610
+Yeah so the node names right 5 nanometer node, 4 nanometer node three nanometer node.
+
+836
+01:18:52,610 --> 01:19:00,570
+Back in the days that we had the 45 nanometer node that actually really represented the size of the lines.
+
+837
+01:19:00,570 --> 01:19:04,770
+And at some point that became very increasingly difficult.
+
+838
+01:19:04,770 --> 01:19:16,870
+But people also became very creative in terms of with design tricks and layout tricks, I can get more density out of the size that I have.
+
+839
+01:19:16,870 --> 01:19:26,770
+So think of the 5 nanometer and the 4 nanometer and 3 nanometer now more as an indication of what is the effective transistor density.
+
+840
+01:19:26,770 --> 01:19:32,670
+How many transistors can I get per squared per square millimeter or per square micron.
+
+841
+01:19:32,670 --> 01:19:37,450
+It's more an indication of that instead of really the dimension.
+
+842
+01:19:37,450 --> 01:19:39,050
+Tony, anything you would like to add.
+
+843
+01:19:39,050 --> 01:19:46,430
+Yeah well, historically Ronald was right down to maybe 90 or 65 nanometers.
+
+844
+01:19:46,430 --> 01:19:47,890
+That's the half pitch.
+
+845
+01:19:47,890 --> 01:19:51,230
+When you say 65, the half pitch is 65.
+
+846
+01:19:51,230 --> 01:19:56,110
+But nowadays, no, it's just a marketing name.
+
+847
+01:19:56,110 --> 01:19:57,490
+But this is not recorded.
+
+848
+01:19:57,490 --> 01:20:00,350
+I don't want my customers to hear this.
+
+849
+01:20:00,350 --> 01:20:01,310
+They know.
+
+850
+01:20:01,310 --> 01:20:05,830
+Yeah, it's so cut this part out of the recording, OK.
+
+851
+01:20:05,830 --> 01:20:09,520
+No, it is an improvement over the previous generation.
+
+852
+01:20:09,520 --> 01:20:14,080
+But is it 2x the transistor density.
+
+853
+01:20:14,080 --> 01:20:16,540
+No, those days are over.
+
+854
+01:20:16,540 --> 01:20:22,220
+OK, so I'd like to ask a question about the optimization methods.
+
+855
+01:20:22,220 --> 01:20:30,860
+So one of the great challenges in optimization is if you have a great many variables to optimize, it gets really quite hard.
+
+856
+01:20:30,860 --> 01:20:36,540
+Now you spoke mostly about the source optimization.
+
+857
+01:20:36,540 --> 01:20:39,980
+And there's a lot of variables in the source optimization.
+
+858
+01:20:39,980 --> 01:20:45,500
+But then you also mention the so-called OPC which is the mask optimization.
+
+859
+01:20:45,500 --> 01:20:52,780
+And that adds even more variables because in principle the geometric shapes can be represented by an infinite number of variables.
+
+860
+01:20:52,780 --> 01:20:55,260
+So you have a very huge number of variables.
+
+861
+01:20:55,260 --> 01:21:01,878
+So shouldn't you be doing the optimization of all of them together rather than saying, I'm going to do source optimization.
+
+862
+01:21:01,878 --> 01:21:07,500
+You should be saying, I'm going to do the optimization of everything the source, the mask.
+
+863
+01:21:07,500 --> 01:21:09,500
+I do it all in one big optimization.
+
+864
+01:21:09,500 --> 01:21:12,820
+Yeah so let me first answer that question.
+
+865
+01:21:12,820 --> 01:21:13,900
+You're absolutely right.
+
+866
+01:21:13,900 --> 01:21:16,280
+And perhaps I wasn't completely clear.
+
+867
+01:21:16,280 --> 01:21:22,060
+Remember that video where we picked some clips out of this huge design.
+
+868
+01:21:22,060 --> 01:21:33,240
+Those clips were supposed to be representative proxies for the incredible variety of patterns of the whole design.
+
+869
+01:21:33,240 --> 01:21:40,280
+When we optimize the illumination, we optimize that with the OPC for those clips.
+
+870
+01:21:40,280 --> 01:21:49,480
+And then we but we cannot say, let's optimize the whole design with hundreds of billions of patterns,
+
+871
+01:21:49,480 --> 01:21:56,040
+together with all these variables in the illumination and with all of the variables in the projection optics.
+
+872
+01:21:56,040 --> 01:21:59,560
+That's simply computationally is not yet feasible.
+
+873
+01:21:59,560 --> 01:22:02,080
+So what we do is we take some of these clips.
+
+874
+01:22:02,080 --> 01:22:02,900
+There we go.
+
+875
+01:22:02,900 --> 01:22:12,130
+Optimize then we say, now this illumination, probably since it is good for the most critical patterns, will be good for all of the other patterns.
+
+876
+01:22:12,130 --> 01:22:15,450
+And then we do the OPC, a divide and conquer strategy.
+
+877
+01:22:15,450 --> 01:22:19,330
+Once the OPC stage, you don't change the design anymore.
+
+878
+01:22:19,330 --> 01:22:23,970
+I'm going to have to cut us off our no, no I'm sorry.
+
+879
+01:22:23,970 --> 01:22:29,210
+Our AV support is going to leave us and we're well after time.
+
+880
+01:22:29,210 --> 01:22:36,070
+But the speakers will stick around and happy to answer questions one on one.
+
+881
+01:22:36,070 --> 01:22:40,210
+So let's thank both speakers for a fascinating talk.
+
+882
+01:22:44,270 --> 01:22:49,370
+And if you want to stick around, I think they'll be glad to answer for the questions.
+
+883
+01:22:49,370 --> 01:22:53,190
+Absolutely, absolutely.
+
+884
+01:22:53,190 --> 01:22:54,710
+How are you.
+
+885
+01:22:54,710 --> 01:22:57,090
+Oh, I haven't seen you for a long time.
+
+886
+01:22:57,090 --> 01:22:59,410
+Yeah so I'm doing fine.
+
+887
+01:22:59,410 --> 01:23:03,250
+And I understand that you are retired or not yet.
+
+888
+01:23:03,250 --> 01:23:04,810
+Yes, I am semi-retired.
+
+889
+01:23:04,810 --> 01:23:06,060
+I'm

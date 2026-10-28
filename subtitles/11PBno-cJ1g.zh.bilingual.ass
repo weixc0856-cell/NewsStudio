@@ -1,0 +1,978 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:02:09.58,0:02:16.56,Sub,,0,0,0,,Please welcome to the stage CEO of Google Cloud, Thomas Kurian.\N欢迎谷歌云首席执行官托马斯·库里安登台。
+Dialogue: 0,0:02:34.78,0:02:35.66,Sub,,0,0,0,,Hello.\N大家好。
+Dialogue: 0,0:02:43.90,0:02:46.90,Sub,,0,0,0,,Welcome everyone to Google Cloud Next.\N欢迎各位参加谷歌云 Next 大会。
+Dialogue: 0,0:02:46.90,0:02:53.58,Sub,,0,0,0,,Just one year ago, we stood on this same stage and promised a new future for AI.\N就在一年前，我们站在这同一舞台上，承诺了人工智能的新未来。
+Dialogue: 0,0:02:53.58,0:03:00.94,Sub,,0,0,0,,Today, that future is running in production at a scale that the world has never seen.\N如今，这一未来已以全球前所未有的规模投入生产运行。
+Dialogue: 0,0:03:00.94,0:03:05.06,Sub,,0,0,0,,Over the last year, we didn't just see adoption.\N在过去一年里，我们看到的不仅仅是采用。
+Dialogue: 0,0:03:05.06,0:03:07.66,Sub,,0,0,0,,We saw transformation.\N我们看到的是变革。
+Dialogue: 0,0:03:07.66,0:03:15.18,Sub,,0,0,0,,Nearly 75% of Google Cloud customers now leverage our AI products to power their businesses.\N现在，近 75% 的谷歌云客户正在使用我们的 AI 产品来驱动业务。
+Dialogue: 0,0:03:15.18,0:03:20.26,Sub,,0,0,0,,We have thousands of agents and services across every industry,\N我们在各个行业部署了成千上万的智能体和服务，
+Dialogue: 0,0:03:20.26,0:03:25.46,Sub,,0,0,0,,reaching billions of people through the global scale of our partner network.\N通过我们合作伙伴网络的全球规模，触达数十亿人。
+Dialogue: 0,0:03:25.46,0:03:28.86,Sub,,0,0,0,,You have moved beyond the pilot.\N你们已经超越了试点阶段。
+Dialogue: 0,0:03:28.86,0:03:31.66,Sub,,0,0,0,,The experimenting phase is behind us.\N试验阶段已成为过去。
+Dialogue: 0,0:03:31.66,0:03:34.46,Sub,,0,0,0,,And now, the real challenge begins.\N现在，真正的挑战开始了。
+Dialogue: 0,0:03:34.46,0:03:40.86,Sub,,0,0,0,,How do you move AI into production across your entire enterprise?\N如何将人工智能部署到整个企业中？
+Dialogue: 0,0:03:40.86,0:03:43.34,Sub,,0,0,0,,The answer is a unified stack.\N答案是一个统一的架构。
+Dialogue: 0,0:03:43.34,0:03:51.38,Sub,,0,0,0,,You cannot deliver AI by piecing together a puzzle piece of fragmented silicon and disconnected models.\N你无法通过拼凑零散的芯片和孤立的模型来实现人工智能。
+Dialogue: 0,0:03:51.38,0:03:58.93,Sub,,0,0,0,,To drive real value, you need an architecture where chips are designed for the models,\N要创造真正的价值，你需要一种架构，其中芯片是为模型而设计的，
+Dialogue: 0,0:03:58.93,0:04:09.13,Sub,,0,0,0,,models are grounded in your data, agents and applications are built with models and secured by the infrastructure.\N模型基于你的数据，智能体和应用程序基于模型构建，并由基础设施保障安全。
+Dialogue: 0,0:04:09.13,0:04:23.29,Sub,,0,0,0,,Google uses this exact same OpenStack to reimagine how we serve users using our AI tools across Search, YouTube, Chrome, and Android.\N谷歌正是使用这一相同的 OpenStack 架构，重新构想我们如何利用 AI 工具在搜索、\NYouTube、Chrome 和 Android 上服务用户。
+Dialogue: 0,0:04:23.29,0:04:28.29,Sub,,0,0,0,,To take you inside that journey, let's hear from Sundar Pichai.\N为了带您深入了解这一历程，让我们听听皮查伊的分享。
+Dialogue: 0,0:04:32.21,0:04:34.73,Sub,,0,0,0,,Thanks, Thomas, and hello, everyone.\N谢谢托马斯，大家好。
+Dialogue: 0,0:04:34.73,0:04:37.01,Sub,,0,0,0,,We are so glad you are here.\N我们非常高兴您能来到这里。
+Dialogue: 0,0:04:37.01,0:04:44.89,Sub,,0,0,0,,The pace of technological change has been faster than I've ever seen, and I've been around technology for a while.\N技术变革的速度比我以往所见都要快，而我早已在科技行业多年。
+Dialogue: 0,0:04:44.89,0:04:52.08,Sub,,0,0,0,,In fact, this Sunday, I'm celebrating my Googleversary-- 22 years, and I'm still feeling lucky.\N事实上，这个星期天，我要庆祝我的谷歌周年纪念——22年了，我依然感到幸运。
+Dialogue: 0,0:04:52.08,0:04:56.28,Sub,,0,0,0,,And I hope that luck extends to all of you in Vegas this week.\N我希望这份好运也能延续到本周在拉斯维加斯的你们所有人身上。
+Dialogue: 0,0:04:56.28,0:05:00.96,Sub,,0,0,0,,I was drawn to Google all those years ago because of its ambitious mission.\N当年我被谷歌吸引，正是因为它雄心勃勃的使命。
+Dialogue: 0,0:05:00.96,0:05:09.00,Sub,,0,0,0,,From the web to mobile to AI, every platform shift has given us new opportunities to advance our mission\N从网络到移动再到人工智能，每一次平台的变革都为我们带来了推进使命的新机遇。
+Dialogue: 0,0:05:09.00,0:05:13.84,Sub,,0,0,0,,and to help our customers and partners achieve yours.\N也帮助我们的客户和合作伙伴实现他们的目标。
+Dialogue: 0,0:05:13.84,0:05:18.48,Sub,,0,0,0,,As we move into the agentic era, we are taking this to the next level.\N当我们步入代理式时代，我们将把这一切提升到新高度。
+Dialogue: 0,0:05:18.48,0:05:22.56,Sub,,0,0,0,,We are making big investments now and for the future.\N我们现在正在投入大量资金，并为未来持续投资。
+Dialogue: 0,0:05:22.56,0:05:27.28,Sub,,0,0,0,,In 2022, we were investing $31 billion in CapEx.\N2022年，我们的资本支出投资为310亿美元。
+Dialogue: 0,0:05:27.28,0:05:38.36,Sub,,0,0,0,,This year, we plan to invest between $175 to $185 billion in total CapEx, a nearly 6x increase in just four years.\N今年，我们计划总投资在1750亿至1850亿美元之间，短短四年间增长近六倍。
+Dialogue: 0,0:05:38.36,0:05:47.88,Sub,,0,0,0,,And for 2026, just over half of our machine learning compute is expected to go towards the cloud business, so it will greatly benefit all of you.\N到2026年，我们机器学习算力的超过一半将用于云业务，这将极大地惠及在座各位。
+Dialogue: 0,0:05:47.88,0:05:55.51,Sub,,0,0,0,,These investments are how we continue to stay at the frontier and ensure you're at the cutting edge as well.\N这些投资让我们始终处于前沿，也确保你们能始终站在技术最尖端。
+Dialogue: 0,0:05:55.51,0:06:03.15,Sub,,0,0,0,,A big focus for us is to always be customer 0 for our own technologies, so we can be a better partner to all of you.\N我们的一个重点是始终将自己作为自身技术的首个客户，以便更好地成为你们所有人的合作伙伴。
+Dialogue: 0,0:06:03.15,0:06:08.87,Sub,,0,0,0,,Let me share a few examples of how we are rewiring our work with AI.\N让我分享几个我们如何用人工智能重新设计工作方式的例子。
+Dialogue: 0,0:06:08.87,0:06:14.83,Sub,,0,0,0,,First, coding-- we've been using AI to generate code internally at Google for a while.\N首先，编码——我们已经在谷歌内部使用AI生成代码一段时间了。
+Dialogue: 0,0:06:14.83,0:06:23.91,Sub,,0,0,0,,Today, nearly 75% of all new code at Google is AI-generated and approved by engineers, up from 50% last fall.\N如今，谷歌新代码中近75%由AI生成并经工程师审批，较去年秋天的50%显著提升。
+Dialogue: 0,0:06:23.91,0:06:27.83,Sub,,0,0,0,,We are now shifting to truly agentic workflows.\N我们现在正转向真正的代理式工作流程。
+Dialogue: 0,0:06:27.83,0:06:37.59,Sub,,0,0,0,,Our engineers are orchestrating fully autonomous digital task forces, firing off agents, and accomplishing incredible things.\N我们的工程师正在协调完全自主的数字任务组，启动智能体，完成令人惊叹的成果。
+Dialogue: 0,0:06:37.59,0:06:45.35,Sub,,0,0,0,,As one example of how we are using agents, we recently executed a particularly complex code migration.\N作为我们使用智能体的一个例子，我们最近完成了一次特别复杂的代码迁移。
+Dialogue: 0,0:06:45.35,0:06:50.02,Sub,,0,0,0,,Anyone familiar knows these migrations can take a while to get done.\N熟悉这一过程的人都知道，这类迁移通常需要很长时间才能完成。
+Dialogue: 0,0:06:50.02,0:06:58.22,Sub,,0,0,0,,We created a system of agents taking on three different types of roles-- planners, orchestrators, and coders.\N我们创建了一个智能体系统，承担三种不同角色——规划者、协调者和编码者。
+Dialogue: 0,0:06:58.22,0:07:04.98,Sub,,0,0,0,,Working together with engineers, we completed the migration 6x faster than we could have a year ago.\N在工程师的协作下，我们比一年前快了6倍完成了这次迁移。
+Dialogue: 0,0:07:04.98,0:07:13.14,Sub,,0,0,0,,And now we are applying that approach across our entire development cycle, from experimentation to testing to evals.\N现在，我们正将这一方法应用到整个开发周期中，从实验到测试再到评估。
+Dialogue: 0,0:07:13.14,0:07:17.66,Sub,,0,0,0,,It's not just developers who are infusing AI into their workflows.\N不只是开发者在将AI融入自己的工作流程。
+Dialogue: 0,0:07:17.66,0:07:23.34,Sub,,0,0,0,,Our marketing teams are fundamentally rethinking the creative process from concept to launch.\N我们的营销团队正在从根本上重新思考从概念到上线的整个创作流程。
+Dialogue: 0,0:07:23.34,0:07:28.50,Sub,,0,0,0,,Historically, adapting a campaign for every audience, channel, and country took weeks.\N以往，为每个受众、渠道和国家调整一个营销活动需要数周时间。
+Dialogue: 0,0:07:28.50,0:07:37.30,Sub,,0,0,0,,For the recent launch of Gemini and Chrome, teams used our models to rapidly generate thousands of variations of our creative assets.\N在最近推出的 Gemini 和 Chrome 项目中，\N团队利用我们的模型快速生成了数千种创意资产的变体。
+Dialogue: 0,0:07:37.30,0:07:41.18,Sub,,0,0,0,,This enabled personalization at a massive scale.\N这使得大规模个性化成为可能。
+Dialogue: 0,0:07:41.18,0:07:47.02,Sub,,0,0,0,,It also led to 70% faster turnaround and a 20% increase in conversion.\N同时，处理速度提升了 70%，转化率也提高了 20%。
+Dialogue: 0,0:07:47.02,0:07:49.42,Sub,,0,0,0,,We are not only getting to market faster.\N我们不仅上市速度更快了。
+Dialogue: 0,0:07:49.42,0:07:52.82,Sub,,0,0,0,,We are also doing it more effectively with AI.\N我们还借助 AI 更高效地完成了这一过程。
+Dialogue: 0,0:07:52.82,0:07:57.10,Sub,,0,0,0,,Our security teams are also seeing significant gains with AI.\N我们的安全部门也在 AI 的帮助下取得了显著进展。
+Dialogue: 0,0:07:57.10,0:08:07.10,Sub,,0,0,0,,Each month, our teams receive unstructured threat reports at a scale that would take thousands of hours to review-- a nearly impossible task.\N每月，我们的团队都会收到大量非结构化的威胁报告，其规模需要数千小时才能审阅——这几乎是一项不可能完成\N的任务。
+Dialogue: 0,0:08:07.10,0:08:15.94,Sub,,0,0,0,,Today, our Security Operations Center agents automatically triage tens of thousands of unstructured threat reports each month.\N如今，我们的安全运营中心智能体每月能自动处理数万份非结构化的威胁报告。
+Dialogue: 0,0:08:15.94,0:08:24.98,Sub,,0,0,0,,By accelerating the extraction of critical intelligence and filtering out the noise, it's reduced threat mitigation time by over 90%\N通过加速关键情报的提取并过滤掉噪音，威胁应对时间减少了超过 90%。
+Dialogue: 0,0:08:24.98,0:08:28.54,Sub,,0,0,0,,We are more on the front foot than ever before.\N我们比以往任何时候都更具主动性。
+Dialogue: 0,0:08:28.54,0:08:31.98,Sub,,0,0,0,,Those are just a few examples of what we are trying at Google.\N这些只是我们在谷歌尝试的一些例子。
+Dialogue: 0,0:08:31.98,0:08:35.26,Sub,,0,0,0,,We are moving in a bold and responsible way.\N我们正以大胆而负责任的方式前进。
+Dialogue: 0,0:08:35.26,0:08:37.22,Sub,,0,0,0,,There's a lot of change happening.\N正在发生许多变化。
+Dialogue: 0,0:08:37.22,0:08:40.98,Sub,,0,0,0,,And it can feel like we are in the messy part of the innovation cycle.\N这可能让人感觉我们正处于创新周期的混乱阶段。
+Dialogue: 0,0:08:40.98,0:08:48.05,Sub,,0,0,0,,But we are starting to see the foundational building blocks coming together, unlocking a new wave of innovation.\N但我们现在开始看到基础构建模块逐渐汇聚，释放出新一轮创新的潜力。
+Dialogue: 0,0:08:48.05,0:08:53.73,Sub,,0,0,0,,One thing that is super clear-- we are firmly in the agentic Gemini era.\N有一件事非常明确——我们已坚定地进入代理式 Gemini 时代。
+Dialogue: 0,0:08:53.73,0:09:00.41,Sub,,0,0,0,,Last fall, we introduced Gemini Enterprise as a front door to agentic AI in the workplace.\N去年秋天，我们推出了 Gemini 企业版，作为职场中代理式 AI 的入口。
+Dialogue: 0,0:09:00.41,0:09:08.05,Sub,,0,0,0,,What we have seen in just a few months since launch is how every employee in every organization can become a builder.\N自发布以来短短几个月，我们已看到每个组织中的每位员工都能成为构建者。
+Dialogue: 0,0:09:08.05,0:09:10.29,Sub,,0,0,0,,This is an incredible shift.\N这是一次惊人的转变。
+Dialogue: 0,0:09:10.29,0:09:15.73,Sub,,0,0,0,,We are accomplishing bigger things faster, but this comes with complexity.\N我们正在更快地完成更大规模的成就，但这也带来了复杂性。
+Dialogue: 0,0:09:15.73,0:09:22.37,Sub,,0,0,0,,The conversation has gone from can we build an agent to how do we manage thousands of them?\N对话已从“我们能否构建一个智能体”转变为“我们如何管理成千上万的智能体？”
+Dialogue: 0,0:09:22.37,0:09:28.37,Sub,,0,0,0,,Today, I'm excited to announce our new Gemini Enterprise Agent Platform.\N今天，我非常激动地宣布推出我们的全新 Gemini 企业智能体平台。
+Dialogue: 0,0:09:28.37,0:09:38.97,Sub,,0,0,0,,It provides the secure, full-stack connective tissue you need to build, scale, govern, and optimize your agents with confidence.\N它提供了安全、全栈的连接纽带，让您能够自信地构建、扩展、治理和优化您的智能体。
+Dialogue: 0,0:09:38.97,0:09:48.24,Sub,,0,0,0,,Think of it as mission control for the agentic enterprise to help move your organization into the next phase of the agentic era.\N可以将其视为代理式企业的指挥中心，帮助您的组织迈入代理式时代的下一阶段。
+Dialogue: 0,0:09:48.24,0:09:51.24,Sub,,0,0,0,,I'm going to turn it back over to Thomas to share more.\N我现在把话筒交还给托马斯，让他分享更多内容。
+Dialogue: 0,0:09:51.24,0:09:54.44,Sub,,0,0,0,,But first, thanks again for being here.\N但首先，再次感谢大家的到来。
+Dialogue: 0,0:09:54.44,0:10:01.84,Sub,,0,0,0,,Together, we are building a blueprint for true business transformation, and I'm excited to see where it takes us next.\N我们正在共同打造真正的业务转型蓝图，我非常期待看到它接下来将带我们走向何方。
+Dialogue: 0,0:10:01.84,0:10:05.21,Sub,,0,0,0,,Thomas, back to you.\N托马斯，交给你了。
+Dialogue: 0,0:10:20.28,0:10:22.00,Sub,,0,0,0,,Thank you, Sundar.\N谢谢，皮查伊。
+Dialogue: 0,0:10:22.00,0:10:29.04,Sub,,0,0,0,,Today, we're taking the next step in bringing Google AI to every employee and every workflow.\N今天，我们正在迈出下一步，将谷歌 AI 带入每一位员工和每一个工作流程。
+Dialogue: 0,0:10:29.04,0:10:38.64,Sub,,0,0,0,,Gemini Enterprise is now the end-to-end system for the agentic era, the connective tissue between your data, your people, and your goals.\NGemini 企业版现在已成为代理式时代的端到端系统，是连接您的数据、人员与目标的纽带。
+Dialogue: 0,0:10:38.64,0:10:43.55,Sub,,0,0,0,,It transforms disconnected processes into a single intelligent flow.\N它将原本孤立的流程转变为单一的智能工作流。
+Dialogue: 0,0:10:43.55,0:10:47.59,Sub,,0,0,0,,This is our blueprint for the agentic enterprise.\N这就是我们为代理式企业打造的蓝图。
+Dialogue: 0,0:10:47.59,0:10:51.47,Sub,,0,0,0,,It's also the answer to that fundamental question.\N它也是对那个根本问题的答案。
+Dialogue: 0,0:10:51.47,0:10:56.59,Sub,,0,0,0,,Intelligence plus automation must deliver value.\N智能加上自动化，必须创造价值。
+Dialogue: 0,0:10:56.59,0:11:01.35,Sub,,0,0,0,,To make this work, you need context and action.\N要实现这一点，你需要上下文和行动。
+Dialogue: 0,0:11:01.35,0:11:04.03,Sub,,0,0,0,,Intelligence comes from your data.\N智能源于你的数据。
+Dialogue: 0,0:11:04.03,0:11:06.87,Sub,,0,0,0,,Automation is driven by agents.\N自动化由智能体驱动。
+Dialogue: 0,0:11:06.87,0:11:13.03,Sub,,0,0,0,,To solve this equation at scale, you need a complete integrated system.\N要大规模解决这一方程，你需要一个完整的集成系统。
+Dialogue: 0,0:11:13.03,0:11:23.71,Sub,,0,0,0,,Today, we will show you the layers of that system and all the innovations we're introducing at every layer, starting with the AI Hypercomputer,\N今天，我们将向您展示该系统的各个层面，以及我们在每一层所引入的所有创新，从AI超算机开始，
+Dialogue: 0,0:11:23.71,0:11:29.79,Sub,,0,0,0,,the purpose-built foundation optimized for the physics of the agentic era;\N专为代理式时代物理特性打造的优化基础架构；
+Dialogue: 0,0:11:29.79,0:11:40.34,Sub,,0,0,0,,the Agentic Data Cloud, the engine that provides agents with trusted business context; Agentic Defense, the autonomous\N代理式数据云，为智能体提供可信业务上下文的引擎；代理式防御，自主的
+Dialogue: 0,0:11:40.34,0:11:45.06,Sub,,0,0,0,,protection that secures your entire AI lifecycle;\N保护您的整个AI生命周期；
+Dialogue: 0,0:11:45.06,0:11:53.34,Sub,,0,0,0,,the Agentic Platform, the system to build, deploy, and manage agents; and finally, the Agentic Task\N代理式平台，用于构建、部署和管理智能体；最后是代理式任务
+Dialogue: 0,0:11:53.34,0:12:02.10,Sub,,0,0,0,,Force, the pre-built specialized agents that we offer that are ready to transform your business.\N力，即我们提供的预构建专用智能体，可立即助力您的业务转型。
+Dialogue: 0,0:12:02.10,0:12:03.98,Sub,,0,0,0,,Let's dive in.\N我们开始吧。
+Dialogue: 0,0:12:03.98,0:12:14.18,Sub,,0,0,0,,Now, the Gemini Enterprise Agent platform is the environment where your business logic, your data, and your models converge to drive autonomous action.\N现在，Gemini 企业智能体平台是您的业务逻辑、数据和模型汇聚并驱动自主行动的环境。
+Dialogue: 0,0:12:14.18,0:12:22.18,Sub,,0,0,0,,It expands on the previous capabilities of Vertex AI and brings new capabilities to enable your teams\N它拓展了 Vertex AI 之前的各项功能，并带来了全新能力，助力您的团队
+Dialogue: 0,0:12:22.18,0:12:32.62,Sub,,0,0,0,,to build, scale, govern, and optimize agents with the same architectural rigor you apply to your most mission-critical systems.\N以与您对待最关键系统时相同的架构严谨性，构建、扩展、治理和优化智能体。
+Dialogue: 0,0:12:32.62,0:12:37.82,Sub,,0,0,0,,At its core, we build on our support for state-of-the-art models.\N核心在于，我们基于对最先进模型的支持进行构建。
+Dialogue: 0,0:12:37.82,0:12:42.98,Sub,,0,0,0,,Our most advanced reasoning model, Gemini 3.1 Pro, is available in preview.\N我们最先进的推理模型 Gemini 3.1 Pro 目前处于预览阶段。
+Dialogue: 0,0:12:42.98,0:12:46.30,Sub,,0,0,0,,It's optimized for complex workflow orchestration.\N它专为复杂工作流编排而优化。
+Dialogue: 0,0:12:46.30,0:12:54.34,Sub,,0,0,0,,It bridges the gap between strategy and autonomous execution, interacting with your APIs and systems with minimal tuning.\N它弥合了战略与自主执行之间的差距，与您的 API 和系统交互时几乎无需调优。
+Dialogue: 0,0:12:54.34,0:13:01.70,Sub,,0,0,0,,Industry leaders, including Databricks, JetBrains, and Replit, have chosen Gemini 3.1 Pro.\N包括 Databricks、JetBrains 和 Replit 在内的行业领军企业已选择 Gemi\Nni 3.1 Pro。
+Dialogue: 0,0:13:01.70,0:13:06.06,Sub,,0,0,0,,We're also announcing Gemini 3.1 Flash Image,\N我们还宣布推出 Gemini 3.1 Flash Image，
+Dialogue: 0,0:13:06.06,0:13:11.38,Sub,,0,0,0,,also known as Nano Banana 2, for high-fidelity visual assets;\N也称为 Nano Banana 2，适用于高保真视觉资产；
+Dialogue: 0,0:13:11.38,0:13:16.94,Sub,,0,0,0,,Veo 3.1 Lite, our most cost-effective video model,\NVeo 3.1 Lite，我们最经济高效的视频模型，
+Dialogue: 0,0:13:16.94,0:13:20.34,Sub,,0,0,0,,designed to build high-volume video applications;\N专为构建高吞吐量视频应用而设计；
+Dialogue: 0,0:13:20.34,0:13:30.38,Sub,,0,0,0,,and Lyria 3 Pro, a state-of-the-art model for enterprise and professional-grade audio and music.\N以及 Lyria 3 Pro，面向企业级和专业级音频与音乐的最先进模型。
+Dialogue: 0,0:13:30.38,0:13:33.74,Sub,,0,0,0,,All of these models are available in preview.\N所有这些模型目前均处于预览阶段。
+Dialogue: 0,0:13:33.74,0:13:41.57,Sub,,0,0,0,,Finally, we support all the leading models from Anthropic, including Claude Opus, Sonnet, and Haiku.\N最后，我们支持 Anthropic 的所有主流模型，包括 Claude Opus、\NSonnet 和 Haiku。
+Dialogue: 0,0:13:41.57,0:13:47.69,Sub,,0,0,0,,And today, we're adding support for Anthropic's Claude Opus 4.7.\N今天，我们新增对 Anthropic 的 Claude Opus 4.7 的支持。
+Dialogue: 0,0:13:47.69,0:13:59.09,Sub,,0,0,0,,While all of these models represent a massive leap in intelligence, their true value is realized when they're operationalized to solve mission-critical problems.\N尽管这些模型代表了智能的巨大飞跃，但它们真正的价值只有在被实际部署以解决关键任务问题时才能体现。
+Dialogue: 0,0:13:59.09,0:14:07.33,Sub,,0,0,0,,Earlier this year, we announced a monumental partnership with one of the world's most iconic brands,\N今年早些时候，我们宣布与全球最具标志性的品牌之一达成一项重大合作，
+Dialogue: 0,0:14:07.33,0:14:12.13,Sub,,0,0,0,,that will bring the power of our technology to users everywhere around the world.\N这将使我们的技术力量惠及全球各地的用户。
+Dialogue: 0,0:14:12.13,0:14:22.29,Sub,,0,0,0,,We're collaborating with Apple as their preferred cloud provider to develop the next generation of Apple foundation models based on Gemini technology.\N我们正与苹果合作，作为其首选云服务提供商，基于 Gemini 技术开发下一代苹果基础模型。
+Dialogue: 0,0:14:22.29,0:14:33.93,Sub,,0,0,0,,These models will help power future Apple Intelligence features, including a more personalized Siri coming later this year.\N这些模型将为未来的苹果智能功能提供支持，包括今年晚些时候推出的更个性化的 Siri。
+Dialogue: 0,0:14:33.93,0:14:38.68,Sub,,0,0,0,,Leading organizations aren't just using Gemini Enterprise to work faster.\N领先企业不仅使用 Gemini 企业版来提升工作效率。
+Dialogue: 0,0:14:38.68,0:14:43.08,Sub,,0,0,0,,They're using it to redefine what their businesses can do.\N他们正利用它重新定义企业所能实现的边界。
+Dialogue: 0,0:14:43.08,0:14:47.44,Sub,,0,0,0,,Citi Wealth, in partnership with Google Cloud and DeepMind,\N花旗财富与谷歌云及 DeepMind 合作，
+Dialogue: 0,0:14:47.44,0:14:56.80,Sub,,0,0,0,,today unveiled Citi Sky, an always-on AI-powered member of the Citi Wealth team that brings\N今日正式推出 Citi Sky，这是花旗财富团队中一位始终在线的 AI 成员，
+Dialogue: 0,0:14:56.80,0:15:03.08,Sub,,0,0,0,,Citi's global intelligence to clients' fingertips.\N将花旗的全球智能能力直接送到客户指尖。
+Dialogue: 0,0:15:03.08,0:15:06.24,Sub,,0,0,0,,Citi Sky will provide an exemplary experience,\N市场天空将提供卓越的体验，
+Dialogue: 0,0:15:06.24,0:15:15.68,Sub,,0,0,0,,allowing clients and colleagues to ask more of Citi Wealth whenever they need it, and in multiple languages.\N让客户和同事在需要时，无论使用何种语言，都能随时向花旗财富寻求更多支持。
+Dialogue: 0,0:15:15.68,0:15:25.76,Sub,,0,0,0,,Honeywell generates billions of insights for managing buildings by training digital twins on over a million product specifications.\N霍尼韦尔通过训练数字孪生模型，基于超过一百万项产品规格，生成数十亿条洞察，用于建筑管理。
+Dialogue: 0,0:15:25.76,0:15:36.99,Sub,,0,0,0,,Liverpool is bringing their signature in-store service online, projecting a 10 times return on investment on their new shopping assistant.\N利物浦正将线下门店的特色服务搬到线上，预计其新购物助手的投资回报率将提升十倍。
+Dialogue: 0,0:15:36.99,0:15:42.11,Sub,,0,0,0,,And for a mission that's quite literally out of this world,\N而对于一项真正意义上的星际任务，
+Dialogue: 0,0:15:42.11,0:15:45.67,Sub,,0,0,0,,we were very proud to partner with NASA--\N我们非常自豪地与美国国家航空航天局合作——
+Dialogue: 0,0:15:53.95,0:16:03.51,Sub,,0,0,0,,--to use Gemini Enterprise Agents to power flight readiness and ensure astronaut safety for Artemis II, which\N——利用 Gemini 企业智能体推动阿耳忒弥斯 II 任务的飞行准备，确保宇航员安全，
+Dialogue: 0,0:16:03.51,0:16:09.39,Sub,,0,0,0,,set the human spaceflight record for traveling the furthest distance from Earth.\N该任务创造了人类航天飞行距离地球最远的新纪录。
+Dialogue: 0,0:16:09.39,0:16:15.27,Sub,,0,0,0,,Now, we built the agent platform to manage the entire lifecycle of an agent.\N现在，我们构建了智能体平台，用于管理智能体的全生命周期。
+Dialogue: 0,0:16:15.27,0:16:22.87,Sub,,0,0,0,,The low-code Agent Studio enables every employee to build and deploy agents using natural language.\N低代码智能体工作室让每位员工都能通过自然语言构建和部署智能体。
+Dialogue: 0,0:16:22.87,0:16:33.34,Sub,,0,0,0,,It grounds LLM reasoning in your specific business rules, bringing predictable, autonomous action to every workflow at scale.\N它将大语言模型的推理能力与您特定的业务规则相结合，为每个工作流带来可预测的、自主的规模化行动。
+Dialogue: 0,0:16:33.34,0:16:39.74,Sub,,0,0,0,,To manage these assets, the agent registry provides a single point of control,\N为管理这些资产，智能体注册中心提供了单一控制点，
+Dialogue: 0,0:16:39.74,0:16:47.86,Sub,,0,0,0,,indexing every internal agent and tool across your organization to ensure they're discoverable and governed.\N对组织内所有内部智能体和工具进行索引，以确保它们可被发现并受到管控。
+Dialogue: 0,0:16:47.86,0:16:58.02,Sub,,0,0,0,,Similarly, our Skills and Tools Registry allows you to define modular, reusable packages of instructions, scripts, and resources\N同样，我们的技能与工具注册表允许您定义模块化、可重复使用的指令、脚本和资源包。
+Dialogue: 0,0:16:58.02,0:17:04.38,Sub,,0,0,0,,to teach agents to perform specialized tasks or repeatable workflows.\N用于教会智能体执行专业任务或重复性工作流。
+Dialogue: 0,0:17:04.38,0:17:14.18,Sub,,0,0,0,,We also expose skills for every GCP service and every service in Workspace in our skills registry.\N我们还将所有 GCP 服务以及 Workspace 中的每个服务的技能公开在技能注册表中。
+Dialogue: 0,0:17:14.18,0:17:18.46,Sub,,0,0,0,,All of this is also supported by our Agent Marketplace,\N所有这些功能也由我们的智能体市场支持。
+Dialogue: 0,0:17:18.46,0:17:31.92,Sub,,0,0,0,,allowing you to search and deploy specialized agents from our global partner ecosystem directly in Gemini Enterprise, including Atlassian, Box,\N您可以在 Gemini 企业版中直接搜索并部署来自全球合作伙伴生态系统的专业智能体，\N包括 Atlassian、Box、
+Dialogue: 0,0:17:31.92,0:17:38.46,Sub,,0,0,0,,Lovable, Oracle, ServiceNow, Workday, and many, many more.\NLovable、Oracle、ServiceNow、Workday 以及众多其他合作伙伴。
+Dialogue: 0,0:17:38.46,0:17:49.70,Sub,,0,0,0,,Finally, with our native integration of Model Context Protocol, or MCP, you can connect our agent platform to any MCP server.\N最后，通过我们原生集成的模型上下文协议（MCP），\N您可以将我们的智能体平台连接到任何 MCP 服务器。
+Dialogue: 0,0:17:49.70,0:18:01.22,Sub,,0,0,0,,We're also exposing all of our GCP services as MCP to allow you to interact seamlessly with GCP from any agent.\N我们还将所有 GCP 服务作为 MCP 暴露，以便您能从任何智能体无缝对接 GCP。
+Dialogue: 0,0:18:01.22,0:18:11.38,Sub,,0,0,0,,In addition to developing this agent platform, it also provides the framework to orchestrate and scale your entire agentic workforce.\N除了开发这一智能体平台外，它还提供了编排和扩展整个代理式工作团队的框架。
+Dialogue: 0,0:18:11.38,0:18:14.86,Sub,,0,0,0,,We enable agent-to-agent orchestration,\N我们支持智能体之间的编排。
+Dialogue: 0,0:18:14.86,0:18:27.81,Sub,,0,0,0,,allowing agents to seamlessly delegate tasks from one to another, including support for complex generative and deterministic orchestration patterns.\N使智能体能够无缝地将任务从一个智能体委托给另一个智能体，包括对复杂生成式和确定性编排模式的支持。
+Dialogue: 0,0:18:27.81,0:18:34.85,Sub,,0,0,0,,This helps ensure that for your critical workflows, such as those that need compliance,\N这有助于确保在您关键的工作流程中，例如需要合规性的流程，
+Dialogue: 0,0:18:34.85,0:18:44.01,Sub,,0,0,0,,your agents can follow well-specified paths every single time, guaranteeing predictable outcomes.\N您的智能体每次都能遵循明确规定的路径，从而保证结果的可预测性。
+Dialogue: 0,0:18:44.01,0:18:47.61,Sub,,0,0,0,,Orchestration flows and agents can respond to events.\N编排流程和智能体能够响应事件。
+Dialogue: 0,0:18:47.61,0:18:49.73,Sub,,0,0,0,,These events can be real-time.\N这些事件可以是实时的。
+Dialogue: 0,0:18:49.73,0:18:51.89,Sub,,0,0,0,,They can be schedule-based.\N它们可以基于计划。
+Dialogue: 0,0:18:51.89,0:18:56.69,Sub,,0,0,0,,They can be trigger-based, or they can be batch inference job.\N它们可以基于触发，也可以是批量推理任务。
+Dialogue: 0,0:18:56.69,0:19:04.49,Sub,,0,0,0,,We're bringing zero-trust verification to every agent and every orchestration step.\N我们正在为每个智能体和每个编排步骤引入零信任验证。
+Dialogue: 0,0:19:04.49,0:19:15.81,Sub,,0,0,0,,And now with Agent Identity, every agent has a unique cryptographic ID and well-defined authorization\N现在通过智能体身份，每个智能体都拥有唯一的加密身份和明确的授权策略，
+Dialogue: 0,0:19:15.81,0:19:19.29,Sub,,0,0,0,,policies that are traceable and auditable,\N这些策略可追溯且可审计，
+Dialogue: 0,0:19:19.29,0:19:27.68,Sub,,0,0,0,,ensuring you can track every action in your company and manage all your agents.\N确保您能够追踪公司内每一项操作并管理所有智能体。
+Dialogue: 0,0:19:27.68,0:19:38.36,Sub,,0,0,0,,They're also centrally managed through our Agent Gateway, which provides a single command center for policy enforcement across the organization.\N它们还通过我们的智能体网关进行集中管理，该网关为组织内的策略执行提供单一指挥中心。
+Dialogue: 0,0:19:38.36,0:19:42.24,Sub,,0,0,0,,Paired with Model Armor, you protect your models.\N配合模型防护，您可保护您的模型。
+Dialogue: 0,0:19:42.24,0:19:49.04,Sub,,0,0,0,,You protect your proprietary enterprise data from threats such as sensitive data leakage.\N你可保护专有的企业数据，免受敏感数据泄露等威胁。
+Dialogue: 0,0:19:49.04,0:19:57.84,Sub,,0,0,0,,This integrated approach, from secure sandboxes to a single management console, provides the visibility\N从安全沙箱到单一管理控制台的这种集成方法，提供了所需的可见性和隔离性。
+Dialogue: 0,0:19:57.84,0:20:06.32,Sub,,0,0,0,,and isolation you need to run your most-sensitive workloads with a high degree of confidence.\N使你能够以高度信心运行最敏感的工作负载。
+Dialogue: 0,0:20:06.32,0:20:12.40,Sub,,0,0,0,,Now, optimization and observability are also built into the fabric of the platform.\N现在，优化和可观测性也已融入平台的架构之中。
+Dialogue: 0,0:20:12.40,0:20:25.07,Sub,,0,0,0,,Agent observability delivers granular instrumentation, allowing you to visualize the full execution path of any agent using OTel-compliant telemetry.\N智能体可观测性提供细粒度的监控能力，让你能够通过符合 OTel 标准的遥测数据，\N可视化任何智能体的完整执行路径。
+Dialogue: 0,0:20:25.07,0:20:33.91,Sub,,0,0,0,,You can retrieve traces, monitor tool use, quickly diagnose reasoning loops with fine-grained logging.\N你可以检索追踪信息，监控工具使用情况，通过细粒度日志快速诊断推理循环问题。
+Dialogue: 0,0:20:33.91,0:20:37.47,Sub,,0,0,0,,All of these capabilities that we've just detailed--\N我们刚才详细介绍的所有功能——
+Dialogue: 0,0:20:37.47,0:20:46.43,Sub,,0,0,0,,the orchestration, zero-trust security, and developer tools-- form the core engine of Gemini Enterprise.\N包括编排、零信任安全和开发者工具——共同构成了 Gemini 企业版的核心引擎。
+Dialogue: 0,0:20:46.43,0:20:58.51,Sub,,0,0,0,,While the agent platform is where your technical teams build and govern agent, the Gemini Enterprise application is the primary environment where your business actually operates.\N虽然智能体平台是技术团队构建和管理智能体的地方，但 Gemini 企业版应用才是你的业务实际运行的主\N要环境。
+Dialogue: 0,0:20:58.51,0:21:10.31,Sub,,0,0,0,,It's that new front door to AI for all your employees, turning complex agentic capabilities into a simple, new way to work for every employee.\N这是所有员工通往 AI 的全新入口，将复杂的代理式能力转化为每位员工都能轻松使用的全新工作方式。
+Dialogue: 0,0:21:10.31,0:21:17.63,Sub,,0,0,0,,By unifying data across your entire stack, including Google Workspace, coding tools,\N通过统一整个技术栈中的数据，包括 Google Workspace、开发工具和企业系统，
+Dialogue: 0,0:21:17.63,0:21:24.74,Sub,,0,0,0,,and enterprise systems, we've created a single intelligent flow for the entire organization.\N我们为整个组织打造了单一的智能数据流。
+Dialogue: 0,0:21:24.74,0:21:32.22,Sub,,0,0,0,,To give your teams a permanent memory, we're introducing Gemini Enterprise projects.\N为了给您的团队提供持久的记忆，我们推出了 Gemini 企业版项目。
+Dialogue: 0,0:21:32.22,0:21:45.02,Sub,,0,0,0,,Projects give your agents a high-fidelity workspace and the ability to use deep think to solve your most complex business challenges without context pollution.\N项目为您的智能体提供高保真工作空间，并使其能够使用深度思考来解决最复杂的业务挑战，\N且不会产生上下文污染。
+Dialogue: 0,0:21:45.02,0:21:56.46,Sub,,0,0,0,,We're also adding Microsoft 365 interoperability, allowing you to export the Docs and Slides you've created within Canvas into common Microsoft Office formats.\N我们还新增了 Microsoft 365 互操作性，\N让您能够将 Canvas 中创建的文档和演示文稿导出为常见的 Microsoft Office 格式\N。
+Dialogue: 0,0:22:02.02,0:22:07.46,Sub,,0,0,0,,Leading innovators already use this platform to redefine their industries.\N领先的创新者已使用该平台重新定义其所在行业。
+Dialogue: 0,0:22:07.46,0:22:11.57,Sub,,0,0,0,,Let's hear from one of them, Virgin Voyages.\N让我们听听其中一位代表——维珍游轮——的分享。
+Dialogue: 0,0:22:15.74,0:22:17.82,Sub,,0,0,0,,Our people are a secret sauce.\N我们的团队是制胜的关键。
+Dialogue: 0,0:22:17.82,0:22:23.42,Sub,,0,0,0,,So anytime we can use data to make our people more empowered, we're all in.\N因此，只要能通过数据让我们的团队更高效，我们就会全力投入。
+Dialogue: 0,0:22:23.42,0:22:30.08,Sub,,0,0,0,,Gemini Enterprise is a front door for AI in our business, and we're using it to bring natural language intelligence to our crew.\NGemini 企业版是我们业务中接入 AI 的门户，我们正利用它为船员带来自然语言智能。
+Dialogue: 0,0:22:30.08,0:22:33.76,Sub,,0,0,0,,Gemini Enterprise is helping us bring Project 3D to life.\NGemini 企业版正帮助我们让 Project 3D 项目变为现实。
+Dialogue: 0,0:22:33.76,0:22:38.24,Sub,,0,0,0,,It's going to allow our crew to feel confident with any question they're asked.\N它将使我们的船员在面对任何问题时都能充满信心。
+Dialogue: 0,0:22:38.24,0:22:44.42,Sub,,0,0,0,,So for sailors, Rovey is a personal concierge to maximize the value they get out of their vacation,\N对于船员而言，Rovey 是一位个人管家，旨在最大化他们度假的体验价值。
+Dialogue: 0,0:22:44.42,0:22:50.38,Sub,,0,0,0,,inspired at home all the way through the last day of their voyage to make sure they have the best time on vacation with us.\N从出发前的准备到航行结束的最后一天，全程贴心陪伴，确保他们在我们这里度过最美好的假期。
+Dialogue: 0,0:22:50.38,0:22:55.86,Sub,,0,0,0,,Our crew are already world-renowned and award-winning for the exceptional service they deliver as humans.\N我们的团队早已因他们作为人类所提供的卓越服务而享誉全球并屡获殊荣。
+Dialogue: 0,0:22:55.86,0:23:00.42,Sub,,0,0,0,,We want Project 3D and Gemini Enterprise to be able to take that even further.\N我们希望 Project 3D 和 Gemini 企业版能够将这一点进一步提升。
+Dialogue: 0,0:23:00.42,0:23:05.26,Sub,,0,0,0,,So you can imagine when you're building something for a cruise ship, there are challenges that pop up.\N你可以想象，当你为一艘游轮打造系统时，会遇到各种突发挑战。
+Dialogue: 0,0:23:05.26,0:23:08.50,Sub,,0,0,0,,There's not exactly a fiber cable running out the back of the ship.\N船尾并没有光纤电缆直接延伸出去。
+Dialogue: 0,0:23:08.50,0:23:13.28,Sub,,0,0,0,,With Google Distributed Cloud Edge, we had data resiliency at the core of the project.\N通过谷歌分布式云边缘，我们把数据韧性置于项目核心。
+Dialogue: 0,0:23:13.28,0:23:17.86,Sub,,0,0,0,,And that means, even when we're offline, our intelligence is still online.\N这意味着，即使离线，我们的智能依然在线。
+Dialogue: 0,0:23:17.86,0:23:24.79,Sub,,0,0,0,,Using our AI stack in Google Cloud has helped us not only reduce our production timeline by up to 60%,\N在谷歌云中使用我们的 AI 技术栈，不仅帮助我们将生产周期缩短了高达 60%，
+Dialogue: 0,0:23:24.79,0:23:31.93,Sub,,0,0,0,,but we have contributed to a 28% increase month on month for a record sales quarter.\N还推动了销售额连续月度增长 28%，创下销售纪录。
+Dialogue: 0,0:23:31.93,0:23:41.58,Sub,,0,0,0,,We could truly see a day where you get on a Virgin Atlantic flight, stay at a Virgin hotel, and end up on a Virgin Voyage, all connected seamlessly by Project Ruby and Gemini Enterprise.\N我们真正看到了这样一天的到来：你登上维珍航空航班，入住维珍酒店，最后踏上维珍邮轮之旅，\N全程由 Project Ruby 和 Gemini 企业版无缝连接。
+Dialogue: 0,0:23:41.58,0:23:44.45,Sub,,0,0,0,,Google has been a foundational partner for us.\N谷歌一直是我们的基础合作伙伴。
+Dialogue: 0,0:23:44.45,0:23:45.51,Sub,,0,0,0,,The extension of Gemini.\NGemini 的延伸。
+Dialogue: 0,0:23:45.51,0:23:48.23,Sub,,0,0,0,,Enterprise was the natural way to bring that mission to life.\N企业版是实现这一使命的自然方式。
+Dialogue: 0,0:23:58.29,0:24:00.81,Sub,,0,0,0,,The era of the pilot is over.\N试飞时代已经结束。
+Dialogue: 0,0:24:00.81,0:24:03.17,Sub,,0,0,0,,The era of the agent is here.\N智能体时代已经到来。
+Dialogue: 0,0:24:03.17,0:24:07.61,Sub,,0,0,0,,But the true power comes from how it changes your workflow.\N但真正的力量在于它如何改变你的工作流程。
+Dialogue: 0,0:24:07.61,0:24:09.41,Sub,,0,0,0,,Let's see it in action.\N让我们看看实际操作。
+Dialogue: 0,0:24:09.41,0:24:11.89,Sub,,0,0,0,,Please welcome Erika Chuong.\N请大家欢迎伊丽卡·冲。
+Dialogue: 0,0:24:21.92,0:24:23.48,Sub,,0,0,0,,Thanks, Thomas.\N谢谢，托马斯。
+Dialogue: 0,0:24:23.48,0:24:28.60,Sub,,0,0,0,,Gemini Enterprise is a platform to build, manage, and interact with agents.\NGemini 企业版是一个用于构建、管理和与智能体交互的平台。
+Dialogue: 0,0:24:28.60,0:24:36.56,Sub,,0,0,0,,I'll demonstrate how it can orchestrate multiple agents across platforms, share context for seamless handoffs, and streamline workflows.\N我将演示它如何在不同平台间协调多个智能体，共享上下文以实现无缝交接，并优化工作流程。
+Dialogue: 0,0:24:36.56,0:24:39.72,Sub,,0,0,0,,Imagine I work for a global furniture retailer.\N想象一下，我为一家全球家具零售商工作。
+Dialogue: 0,0:24:39.72,0:24:49.12,Sub,,0,0,0,,Here's my personalized homepage where I can interact with internal business context and external sources in a single pane of glass.\N这是我的个性化主页，我可以在此与内部业务上下文和外部资源进行单一窗口交互。
+Dialogue: 0,0:24:49.12,0:24:55.74,Sub,,0,0,0,,The agent gallery hosts my approved selection of agents, including built-in ones by Google and my company's agents,\N智能体画廊展示了我批准的智能体选择，包括谷歌提供的内置智能体以及我公司开发的智能体。
+Dialogue: 0,0:24:55.74,0:25:03.64,Sub,,0,0,0,,like this one for price and margin optimization, which autonomously orchestrates across agents, tools, and sources.\N比如这个用于价格和利润率优化的智能体，能够自主地在智能体、工具和数据源之间进行协调。
+Dialogue: 0,0:25:03.64,0:25:07.48,Sub,,0,0,0,,Now, let's see Gemini Enterprise in action.\N现在，让我们看看 Gemini 企业版的实际应用。
+Dialogue: 0,0:25:07.48,0:25:14.78,Sub,,0,0,0,,To bring some less popular product lines back to life, we'll ask our agent to analyze current interior design trends,\N为了重新激活一些不太受欢迎的产品线，我们将让智能体分析当前的室内设计趋势，
+Dialogue: 0,0:25:14.78,0:25:20.23,Sub,,0,0,0,,identify dead stock in our warehouse, and orchestrate a relaunch campaign.\N识别仓库中的滞销库存，并协调一次重新上市活动。
+Dialogue: 0,0:25:20.23,0:25:26.43,Sub,,0,0,0,,With that one prompt, multiple agents complete a series of actions in minutes instead of hours.\N仅凭一个指令，多个智能体在几分钟内就完成了原本需要数小时才能完成的一系列操作。
+Dialogue: 0,0:25:26.43,0:25:36.23,Sub,,0,0,0,,My market research agent, powered by Deep Research, analyzes the latest Google Search information alongside my own sales and CSAT data.\N我的市场研究智能体，基于深度研究，分析了最新的谷歌搜索信息，同时结合我自己的销售和客户满意度数据。
+Dialogue: 0,0:25:36.23,0:25:43.23,Sub,,0,0,0,,My data insights agent is connecting to our global product catalog, regardless of location or format.\N我的数据洞察智能体正在连接我们的全球产品目录，无论位置或格式如何。
+Dialogue: 0,0:25:43.23,0:25:51.71,Sub,,0,0,0,,It knows that dead stock refers to stale inventory, and it uses our Agentic Data Cloud to identify the right data sets.\N它知道“滞销库存”指的是过时的库存，它利用我们的代理式数据云来识别正确的数据集。
+Dialogue: 0,0:25:51.71,0:25:55.43,Sub,,0,0,0,,And my product strategy agent pulls everything together.\N而我的产品策略智能体则将所有信息整合在一起。
+Dialogue: 0,0:25:55.43,0:25:57.55,Sub,,0,0,0,,I'll go ahead and approve this plan.\N我将直接批准这个计划。
+Dialogue: 0,0:25:57.55,0:26:00.67,Sub,,0,0,0,,This can take a few minutes, so we'll fast-forward.\N这可能需要几分钟时间，所以我们快进一下。
+Dialogue: 0,0:26:00.67,0:26:03.07,Sub,,0,0,0,,Here are the highlights.\N这是亮点摘要。
+Dialogue: 0,0:26:03.07,0:26:08.71,Sub,,0,0,0,,Organic Modern is a huge trend, and customers are paying top dollar.\N有机现代风格是一个巨大趋势，客户愿意支付高价。
+Dialogue: 0,0:26:08.71,0:26:17.30,Sub,,0,0,0,,Our Tuscany collection has leftover inventory that actually fits right in, but sales haven't been great.\N我们的托斯卡纳系列还有库存，实际上很适合当前的陈列，但销量一直不理想。
+Dialogue: 0,0:26:17.30,0:26:25.06,Sub,,0,0,0,,The recommendation-- rebrand and reprice it above our current discount but below competitor pricing.\N建议——重新品牌定位并重新定价，价格高于我们当前的折扣，但低于竞争对手。
+Dialogue: 0,0:26:25.06,0:26:28.50,Sub,,0,0,0,,All of that with one simple prompt.\N所有这些只需一个简单的提示即可完成。
+Dialogue: 0,0:26:28.50,0:26:33.62,Sub,,0,0,0,,I can even see the sources that it analyzed to make these recommendations.\N我甚至能看到它用来做出这些建议所分析的来源。
+Dialogue: 0,0:26:33.62,0:26:40.58,Sub,,0,0,0,,Gemini Enterprise is also suggesting a new landing page and new media to put front and center.\NGemini 企业版还建议设计一个新主页，并将新素材置于显眼位置。
+Dialogue: 0,0:26:40.58,0:26:44.28,Sub,,0,0,0,,I'll ask my product strategy agent to generate some videos.\N我会让我的产品策略智能体生成一些视频。
+Dialogue: 0,0:26:47.90,0:26:51.96,Sub,,0,0,0,,This part can also take a little bit of time, so we'll look at some pre-generated options.\N这部分可能需要一点时间，所以我们先看看预生成的选项。
+Dialogue: 0,0:26:56.94,0:26:59.10,Sub,,0,0,0,,This looks amazing.\N这看起来太棒了。
+Dialogue: 0,0:26:59.10,0:27:05.06,Sub,,0,0,0,,Veo 3.0 placed the exact pieces in a whole new organic living style space.\NVeo 3.0 将这些单品完美地融入了一个全新的有机生活空间中。
+Dialogue: 0,0:27:05.06,0:27:08.14,Sub,,0,0,0,,Now, let's get that website updated.\N现在，让我们更新一下网站。
+Dialogue: 0,0:27:08.14,0:27:13.09,Sub,,0,0,0,,I'll ask my dev agent to coordinate with our engineering team.\N我会让我的开发智能体与我们的工程团队协调。
+Dialogue: 0,0:27:13.09,0:27:20.05,Sub,,0,0,0,,It connects directly with Jira to give a developer full context for a seamless handoff.\N它可直接连接 Jira，为开发者提供完整上下文，实现无缝交接。
+Dialogue: 0,0:27:20.05,0:27:28.33,Sub,,0,0,0,,And on the developer's end, I'll automatically get a notification right here in my Google Chat with that Jira ticket.\N在开发人员这边，我将立即收到一条通知，就在我的 Google Chat 中显示那个 Jira 工单。
+Dialogue: 0,0:27:28.33,0:27:29.95,Sub,,0,0,0,,I'll get this going with CLI.\N我将通过命令行启动这个流程。
+Dialogue: 0,0:27:33.01,0:27:37.41,Sub,,0,0,0,,Here, I'll ask my dev agent to start working on that Jira ticket.\N这里，我让我的开发智能体开始处理那个 Jira 工单。
+Dialogue: 0,0:27:37.41,0:27:40.63,Sub,,0,0,0,,It's going to give me an overview of the strategy,\N它会为我提供一个策略概览，
+Dialogue: 0,0:27:40.63,0:27:52.01,Sub,,0,0,0,,the assets, and how it plans to execute on this web page using all of the context from the previous Gemini Enterprise session, the ticket, and our brand and coding guidelines.\N包括资产信息，以及如何利用之前 Gemini 企业版会话的所有上下文、工单内容，\N以及我们的品牌和编码规范来执行这个网页的开发。
+Dialogue: 0,0:27:52.01,0:27:53.73,Sub,,0,0,0,,This is really easy.\N这非常简单。
+Dialogue: 0,0:27:53.73,0:27:56.97,Sub,,0,0,0,,Let's go ahead and get this built and deployed.\N我们继续把这玩意儿搭建并部署起来吧。
+Dialogue: 0,0:27:56.97,0:28:03.77,Sub,,0,0,0,,From here, this can take a little bit of time-- I'm sure the devs in the audience know that-- so I gave it a little bit of a head start.\N从这里开始，可能需要一点时间——我相信在座的开发人员都懂——所以我提前让它先跑起来。
+Dialogue: 0,0:28:03.77,0:28:07.89,Sub,,0,0,0,,Let's check out that final product.\N我们来看看最终成果。
+Dialogue: 0,0:28:07.89,0:28:10.65,Sub,,0,0,0,,This looks perfect.\N这看起来完美极了。
+Dialogue: 0,0:28:10.65,0:28:16.21,Sub,,0,0,0,,Now let's head back over to Gemini Enterprise to prepare our stores for the launch.\N现在让我们回到 Gemini 企业版，为发布做准备。
+Dialogue: 0,0:28:16.21,0:28:22.41,Sub,,0,0,0,,Our store operations team would usually handle this piece, so I'm in a brand-new session.\N通常这部分由我们的门店运营团队负责，所以我现在开启了一个全新的会话。
+Dialogue: 0,0:28:22.41,0:28:27.45,Sub,,0,0,0,,I'll ask for a deck to get our regional distributors up to speed.\N我会准备一份演示文稿，让我们的区域经销商快速了解情况。
+Dialogue: 0,0:28:27.45,0:28:37.17,Sub,,0,0,0,,Gemini Enterprise uses my company's context to find exactly what I need to know about that launch, how I've managed these in the past, and my team's sales goals.\NGemini 企业版利用我公司的背景信息，精准找到我需要了解的关于此次发布的所有内容，\N包括我过去如何管理这类项目，以及团队的销售目标。
+Dialogue: 0,0:28:37.17,0:28:42.69,Sub,,0,0,0,,Then it works with the Google Workspace agent to create a branded deck in my personal style.\N然后它会与 Google Workspace 智能体协作，\N按照我的个人风格生成一份带有品牌标识的演示文稿。
+Dialogue: 0,0:28:42.69,0:28:47.53,Sub,,0,0,0,,Again, this can take a minute or two, so we'll look at one I generated ahead of time.\N再次说明，这个过程可能需要一两分钟，所以我们来看一下我提前生成的一份。
+Dialogue: 0,0:28:47.53,0:28:48.49,Sub,,0,0,0,,Get this.\N请看这个。
+Dialogue: 0,0:28:48.49,0:28:57.25,Sub,,0,0,0,,With our brand-new Canvas mode, I can make edits and collaborate in Google Slides without ever having to leave Gemini Enterprise.\N通过我们全新的画布模式，我可以在 Google 演示文稿中直接进行编辑和协作，\N而无需离开 Gemini 企业版。
+Dialogue: 0,0:28:57.25,0:29:05.09,Sub,,0,0,0,,Overall, I think this looks great, but I actually prefer the word "reimagined" here.\N总体来看，我觉得效果很棒，但我其实更喜欢这里用“重新构想”这个词。
+Dialogue: 0,0:29:05.09,0:29:08.10,Sub,,0,0,0,,Perfect, and I'll go ahead and share this with my team.\N完美，我这就把这份文稿分享给我的团队。
+Dialogue: 0,0:29:14.88,0:29:17.64,Sub,,0,0,0,,And it looks like some of them are already jumping in.\N看起来有些同事已经迫不及待地加入进来了。
+Dialogue: 0,0:29:17.64,0:29:18.92,Sub,,0,0,0,,Let's recap.\N我们来总结一下。
+Dialogue: 0,0:29:18.92,0:29:24.40,Sub,,0,0,0,,We saw Gemini Enterprise orchestrate multiple agents with a single prompt, share context,\N我们看到 Gemini 企业版仅用一条提示就协调了多个智能体，共享上下文，
+Dialogue: 0,0:29:24.40,0:29:35.00,Sub,,0,0,0,,and generate and collaborate content with Google Workspace, all supported by our enterprise-grade governance, which gives organizations the power to manage and secure agents\N并在 Google Workspace 中生成和协作内容，所有操作均由企业级治理支持，\N使组织能够管理和保护智能体。
+Dialogue: 0,0:29:35.00,0:29:39.88,Sub,,0,0,0,,at scale, all while maintaining control over their business data.\N在保持对业务数据控制的同时，实现规模化。
+Dialogue: 0,0:29:39.88,0:29:44.52,Sub,,0,0,0,,That's the magic of the Gemini Enterprise Agent platform.\N这就是 Gemini 企业智能体平台的魔力所在。
+Dialogue: 0,0:30:03.24,0:30:05.04,Sub,,0,0,0,,Thank you, Erica.\N谢谢你，艾丽卡。
+Dialogue: 0,0:30:05.04,0:30:12.11,Sub,,0,0,0,,Thousands of companies around the world and across industries are choosing Gemini Enterprise to transform their business.\N全球各行各业的成千上万家企业正在选择 Gemini 企业版来重塑业务。
+Dialogue: 0,0:30:12.11,0:30:13.99,Sub,,0,0,0,,We're seeing a profound shift.\N我们正见证一场深刻变革。
+Dialogue: 0,0:30:13.99,0:30:16.61,Sub,,0,0,0,,Companies aren't just redesigning workflows.\N企业不仅仅是重新设计工作流程。
+Dialogue: 0,0:30:16.61,0:30:25.15,Sub,,0,0,0,,They're turning their everyday employees into AI builders, empowering them to solve their own hardest problems.\N他们正在将日常员工转变为 AI 构建者，赋能他们解决自身最棘手的问题。
+Dialogue: 0,0:30:25.15,0:30:31.19,Sub,,0,0,0,,Signal Iduna is redefining insurance in Germany with Gemini Enterprise.\N信号伊杜纳正借助 Gemini 企业版重新定义德国保险业。
+Dialogue: 0,0:30:31.19,0:30:37.07,Sub,,0,0,0,,They hit 80% adoption within weeks, making it their front door for AI.\N他们仅用几周时间就实现了 80% 的采用率，使其成为企业通往 AI 的门户。
+Dialogue: 0,0:30:37.07,0:30:41.67,Sub,,0,0,0,,11,000 employees are now building specialized agents.\N现在已有 11,000 名员工在构建专业智能体。
+Dialogue: 0,0:30:41.67,0:30:49.35,Sub,,0,0,0,,Their health agent automatically verifies coverage against a century of complex policy data,\N他们的健康智能体可自动比对百年来复杂的政策数据以验证保障范围，
+Dialogue: 0,0:30:49.35,0:30:57.03,Sub,,0,0,0,,driving a 400% surge in weekly users and providing answers 37% faster.\N推动周活跃用户增长 400%，并将回答速度提升 37%。
+Dialogue: 0,0:30:57.03,0:31:00.87,Sub,,0,0,0,,Bosch is adopting Gemini Enterprise globally.\N博世正在全球范围内采用 Gemini 企业版。
+Dialogue: 0,0:31:00.87,0:31:09.94,Sub,,0,0,0,,From finance to engineering, employees are deploying custom agents so that they can reclaim time for complex research.\N从财务到工程，员工们正在部署定制智能体，以便他们能腾出时间专注于复杂研究。
+Dialogue: 0,0:31:09.94,0:31:17.26,Sub,,0,0,0,,KPMG reached 90% adoption with over 100 agents in just the first month.\N普华永道在第一个月内就实现了90%的采用率，部署了超过100个智能体。
+Dialogue: 0,0:31:17.26,0:31:23.50,Sub,,0,0,0,,The American Society for Clinical Oncology is now delivering cancer expertise faster.\N美国临床肿瘤学会现在能更快地提供癌症专业知识。
+Dialogue: 0,0:31:23.50,0:31:34.18,Sub,,0,0,0,,Merck is bringing Gemini Enterprise to 75,000 employees to support their purpose to save and improve lives.\N默克公司正将 Gemini 企业版推广至7.5万名员工，以支持其拯救和改善生命的使命。
+Dialogue: 0,0:31:34.18,0:31:38.42,Sub,,0,0,0,,And Walmart is rolling out Gemini Enterprise--\N而沃尔玛正在推出 Gemini 企业版——
+Dialogue: 0,0:31:41.18,0:31:47.90,Sub,,0,0,0,,Walmart is rolling out Gemini Enterprise to help their store leaders spend more time with customers.\N沃尔玛正在推出 Gemini 企业版，帮助其门店负责人将更多时间花在顾客身上。
+Dialogue: 0,0:31:47.90,0:31:48.96,Sub,,0,0,0,,Let's take a look.\N让我们来看一下。
+Dialogue: 0,0:31:52.04,0:31:56.04,Sub,,0,0,0,,At Walmart, we're known for being people-led and tech-powered.\N在沃尔玛，我们以以人为本、技术驱动而闻名。
+Dialogue: 0,0:31:56.04,0:32:02.46,Sub,,0,0,0,,It's how we deliver on our promise to help our customers save money and live better.\N这正是我们兑现承诺的方式，帮助顾客省钱并过上更好的生活。
+Dialogue: 0,0:32:02.46,0:32:10.09,Sub,,0,0,0,,But in a retail landscape that's moving faster than ever, there's one thing that's critical to our success-- trust.\N但在零售业发展速度前所未有的今天，有一件事对我们的成功至关重要——信任。
+Dialogue: 0,0:32:10.09,0:32:14.07,Sub,,0,0,0,,It's the backbone of our relationship with our associates and customers.\N它是我们与员工和顾客关系的基石。
+Dialogue: 0,0:32:14.07,0:32:20.89,Sub,,0,0,0,,And our field leaders build trust by being present on the sales floor, not in their offices at a screen.\N我们的现场领导通过亲临销售一线，而不是坐在办公室盯着屏幕，来建立信任。
+Dialogue: 0,0:32:20.89,0:32:31.01,Sub,,0,0,0,,So we're giving our associates the latest tech and tools at their fingertips so that they can spend more time on the floor with their teams, serving our customers.\N因此我们为员工提供了触手可及的最新技术和工具，让他们能有更多时间在一线与团队并肩作战，\N更好地服务客户。
+Dialogue: 0,0:32:31.01,0:32:40.45,Sub,,0,0,0,,By combining our data with advanced AI technology, Google Cloud is helping our leaders make better decisions with clearer insights.\N通过将我们的数据与先进的AI技术相结合，谷歌云正帮助我们的领导者做出更明智的决策，获得更清晰的洞察。
+Dialogue: 0,0:32:40.45,0:32:49.41,Sub,,0,0,0,,Gemini Enterprise is helping us take an important step forward, helping our leaders lead and solving problems so we can serve our customers better.\NGemini 企业版正帮助我们迈出重要一步，助力领导者高效决策并解决问题，从而更好地服务客户。
+Dialogue: 0,0:32:49.41,0:32:59.89,Sub,,0,0,0,,Our store and supply chain leaders now have a Pixel Fold connected to Walmart's enterprise data and giving them the answers they need in seconds, not hours.\N我们的门店和供应链领导者现在通过连接沃尔玛企业数据的Pixel Fold，能在几秒内获取所需答案，\N而非数小时。
+Dialogue: 0,0:32:59.89,0:33:05.41,Sub,,0,0,0,,By putting people first and taking their hands, we're building a stronger future.\N以人为本，携手同行，我们正在打造一个更强大的未来。
+Dialogue: 0,0:33:05.41,0:33:11.13,Sub,,0,0,0,,Thanks to our partnership with Google Cloud, we continue to transform retail every day.\N感谢与谷歌云的合作，我们持续每天都在重塑零售业。
+Dialogue: 0,0:33:11.13,0:33:15.73,Sub,,0,0,0,,I'm excited for what's next.\N我对接下来的发展充满期待。
+Dialogue: 0,0:33:21.49,0:33:30.69,Sub,,0,0,0,,This winter, ahead of one of the biggest moments in global sports, our world-class engineers collaborated with world-class athletes.\N这个冬天，在全球体育重大时刻来临之前，我们的顶尖工程师与顶尖运动员携手合作。
+Dialogue: 0,0:33:30.69,0:33:37.95,Sub,,0,0,0,,We're incredibly proud of how Google Cloud is helping athletes push the boundaries of their sport with AI.\N我们非常自豪，谷歌云正帮助运动员借助AI突破自身运动的极限。
+Dialogue: 0,0:33:41.83,0:33:45.83,Sub,,0,0,0,,There are sports that have a limited amount of data that's captured.\N有些体育项目所采集的数据量有限。
+Dialogue: 0,0:33:45.83,0:33:49.35,Sub,,0,0,0,,And I think that's a beautifully perfect challenge for a company like Google.\N我认为这对谷歌这样的公司来说，是一个完美而美妙的挑战。
+Dialogue: 0,0:33:49.35,0:33:50.84,Sub,,0,0,0,,Let's roll it.\N开始吧。
+Dialogue: 0,0:33:50.84,0:33:58.55,Sub,,0,0,0,,One of the really cool things that we're partnering with Team USA to do is to help them understand what's that edge that we can possibly give them?\N我们与美国队合作的一项非常酷的事情，是帮助他们理解我们能为他们提供什么样的优势。
+Dialogue: 0,0:33:58.55,0:34:01.19,Sub,,0,0,0,,They understand what's happening in the moment better than anybody.\N他们对当下发生的事情的理解，比任何人都更深入。
+Dialogue: 0,0:34:01.19,0:34:06.02,Sub,,0,0,0,,So to have their input and their say can really help us create something that's of benefit.\N因此，他们的意见和参与能真正帮助我们创造出有益的东西。
+Dialogue: 0,0:34:06.02,0:34:08.88,Sub,,0,0,0,,The side-by-side comparison thing I'm excited for.\N我很期待这个并排对比的功能。
+Dialogue: 0,0:34:08.88,0:34:11.30,Sub,,0,0,0,,Everything is running on Google Cloud.\N所有内容都在谷歌云上运行。
+Dialogue: 0,0:34:11.30,0:34:15.06,Sub,,0,0,0,,The 3D model that we're using is a collaboration with Google DeepMind.\N我们使用的3D模型是与谷歌DeepMind合作的成果。
+Dialogue: 0,0:34:15.06,0:34:18.59,Sub,,0,0,0,,We've moved so far past talking to an LLM with text.\N我们已经远远超越了仅通过文字与大语言模型对话的阶段。
+Dialogue: 0,0:34:18.59,0:34:20.38,Sub,,0,0,0,,It's so clear as day right here.\N这里一目了然。
+Dialogue: 0,0:34:20.38,0:34:20.98,Sub,,0,0,0,,It's amazing.\N太棒了。
+Dialogue: 0,0:34:20.98,0:34:22.04,Sub,,0,0,0,,Whoa. Is that me?\N哇，那是我吗？
+Dialogue: 0,0:34:22.04,0:34:23.82,Sub,,0,0,0,,That's crazy.\N太疯狂了。
+Dialogue: 0,0:34:23.82,0:34:28.70,Sub,,0,0,0,,Operating at the speed of sports is one of the greatest challenges that we could be helping solve.\N以体育的速度运行，是我们能够帮助解决的最具挑战性的问题之一。
+Dialogue: 0,0:34:28.70,0:34:36.76,Sub,,0,0,0,,If we can do that for the Winter Olympics in Milan, we can do that for any industry all over the world.\N如果我们能为米兰冬奥会做到这一点，就能为全球任何行业做到这一点。
+Dialogue: 0,0:34:36.76,0:34:44.20,Sub,,0,0,0,,Please welcome three-time Olympic gold medalist, entrepreneur, and snowboarding legend, Shaun White.\N请大家欢迎三届奥运金牌得主、企业家兼单板滑雪传奇人物肖恩·怀特。
+Dialogue: 0,0:34:49.84,0:34:51.78,Sub,,0,0,0,,What's up, Google Cloud Next?\N嗨，谷歌云Next大会！
+Dialogue: 0,0:34:55.32,0:34:56.14,Sub,,0,0,0,,Oh, wow.\N哦，哇。
+Dialogue: 0,0:34:59.31,0:35:02.33,Sub,,0,0,0,,Man, I love seeing it snow in the desert.\N哇，看到沙漠下雪真让人激动。
+Dialogue: 0,0:35:02.33,0:35:03.39,Sub,,0,0,0,,This is wild.\N这太疯狂了。
+Dialogue: 0,0:35:03.39,0:35:04.75,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:35:04.75,0:35:10.31,Sub,,0,0,0,,Look, back when I was training, our tools were camcorders and basically guesswork.\N看，我当年训练时，工具只有摄像机，基本上靠猜测。
+Dialogue: 0,0:35:10.31,0:35:16.31,Sub,,0,0,0,,You'd land a trick and watch it back, and you'd be looking at it thinking, how can I make that trick better?\N你完成一个动作后，回放观看，然后会想，我怎样才能让这个动作更完美？
+Dialogue: 0,0:35:16.31,0:35:20.13,Sub,,0,0,0,,Over time, I've seen the tricks get bigger and the walls get higher.\N随着时间推移，我看到动作越来越大，障碍墙越来越高。
+Dialogue: 0,0:35:20.13,0:35:23.59,Sub,,0,0,0,,And now, Google Cloud is bringing AI to the mountain.\N现在，谷歌云正把AI带到山里。
+Dialogue: 0,0:35:23.59,0:35:29.07,Sub,,0,0,0,,This winter, I worked with some crazy-smart Google Cloud engineers on some awesome tech.\N今年冬天，我和一些非常聪明的谷歌云工程师一起开发了一些酷炫的技术。
+Dialogue: 0,0:35:29.07,0:35:34.03,Sub,,0,0,0,,And to show you how rad this is, give it up for Jason Davenport.\N为了让大家感受一下这有多厉害，让我们为杰森·达文波特鼓掌。
+Dialogue: 0,0:35:42.19,0:35:43.78,Sub,,0,0,0,,What's up, Shaun?\N嗨，肖恩。
+Dialogue: 0,0:35:43.78,0:35:45.57,Sub,,0,0,0,,What have we got for everyone?\N我们给大家带来了什么？
+Dialogue: 0,0:35:45.57,0:35:46.99,Sub,,0,0,0,,All right, Shaun.\N好了，肖恩。
+Dialogue: 0,0:35:46.99,0:35:48.37,Sub,,0,0,0,,This is going to be super fun.\N这会非常有趣。
+Dialogue: 0,0:35:48.37,0:35:52.51,Sub,,0,0,0,,Let's unleash the power of Google Cloud AI into the half-pipe.\N让我们把谷歌云 AI 的强大能力释放到半管滑道中。
+Dialogue: 0,0:35:52.51,0:35:57.12,Sub,,0,0,0,,And to do that, we're going to pull up a trick from your 2017 Burton US Open.\N为此，我们要从你2017年伯顿美国公开赛的技巧中汲取灵感。
+Dialogue: 0,0:35:57.12,0:35:58.00,Sub,,0,0,0,,Oh, wow.\N哇哦。
+Dialogue: 0,0:35:58.00,0:35:59.24,Sub,,0,0,0,,I'm sure you remember this one.\N我敢肯定你记得这个动作。
+Dialogue: 0,0:35:59.24,0:36:00.04,Sub,,0,0,0,,It's a throwback.\N这是个怀旧经典。
+Dialogue: 0,0:36:00.04,0:36:00.92,Sub,,0,0,0,,It's a throwback.\N这是个怀旧经典。
+Dialogue: 0,0:36:00.92,0:36:03.96,Sub,,0,0,0,,It is. So let's analyze this clip for the audience.\N是的，那我们来为观众分析一下这段视频。
+Dialogue: 0,0:36:03.96,0:36:06.20,Sub,,0,0,0,,And so they can see all the cool things that AI sees.\N这样他们就能看到AI看到的所有酷炫内容。
+Dialogue: 0,0:36:06.20,0:36:06.86,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:36:06.86,0:36:08.82,Sub,,0,0,0,,All right, let's start it off.\N好，我们开始吧。
+Dialogue: 0,0:36:08.82,0:36:12.18,Sub,,0,0,0,,First, this trick is over in under three seconds.\N首先，这个技巧不到三秒就完成了。
+Dialogue: 0,0:36:12.18,0:36:14.98,Sub,,0,0,0,,You are literally-- it's a split-second blur.\N你几乎就是——一瞬间的模糊。
+Dialogue: 0,0:36:14.98,0:36:17.64,Sub,,0,0,0,,And for everyone watching, what trick is this?\N对所有观看的人，这个技巧是什么？
+Dialogue: 0,0:36:17.64,0:36:20.63,Sub,,0,0,0,,This is a switch cab double flip 1440.\N这是一个换把双翻1440度。
+Dialogue: 0,0:36:20.63,0:36:21.96,Sub,,0,0,0,,That is insane.\N太疯狂了。
+Dialogue: 0,0:36:21.96,0:36:25.62,Sub,,0,0,0,,But for everyone else, what does that actually mean?\N但对其他人来说，这到底意味着什么？
+Dialogue: 0,0:36:25.62,0:36:28.60,Sub,,0,0,0,,Basically, it's my unnatural way of riding.\N基本上，这就是我非自然的骑行方式。
+Dialogue: 0,0:36:28.60,0:36:31.54,Sub,,0,0,0,,I do four full rotations with two flips in the middle.\N我完成四次完整旋转，中间夹着两次翻转。
+Dialogue: 0,0:36:31.54,0:36:35.66,Sub,,0,0,0,,I tried stopping using the camcorder, and I couldn't do it.\N我试着停止使用摄像机，但我做不到。
+Dialogue: 0,0:36:35.66,0:36:37.52,Sub,,0,0,0,,So let's slow this down.\N那么，让我们放慢速度。
+Dialogue: 0,0:36:37.52,0:36:42.82,Sub,,0,0,0,,And to do this, we need to analyze this frame by frame and see what Google Cloud sees.\N为此，我们需要逐帧分析，看看谷歌云看到了什么。
+Dialogue: 0,0:36:42.82,0:36:46.44,Sub,,0,0,0,,And we're going to do this essentially with every single stop in this.\N我们将用这种方法处理这里的每一个停顿。
+Dialogue: 0,0:36:46.44,0:36:49.62,Sub,,0,0,0,,So first, let's start with your pose.\N那么，首先让我们从你的姿势开始。
+Dialogue: 0,0:36:49.62,0:36:51.26,Sub,,0,0,0,,So this is what's super cool.\N这才是真正酷的地方。
+Dialogue: 0,0:36:51.26,0:37:01.23,Sub,,0,0,0,,We built a model in collaboration with Google DeepMind that can track you spatially, and it creates a three-dimensional, essentially pose of you from a flat, two-dimensional video.\N我们与谷歌深度思维合作开发了一个模型，能够空间追踪你，并从平面的二维视频中生成你的三维姿态。
+Dialogue: 0,0:37:01.23,0:37:02.23,Sub,,0,0,0,,So awesome.\N太棒了。
+Dialogue: 0,0:37:02.23,0:37:03.69,Sub,,0,0,0,,I mean, I love it.\N我真的太喜欢了。
+Dialogue: 0,0:37:03.69,0:37:05.15,Sub,,0,0,0,,I can't even see you here.\N我甚至都看不见你在这里。
+Dialogue: 0,0:37:05.15,0:37:06.31,Sub,,0,0,0,,How does it do it?\N它是怎么做到的？
+Dialogue: 0,0:37:06.31,0:37:09.71,Sub,,0,0,0,,This was my tight pant, leather jacket phase.\N这是我穿紧身裤配皮夹克的阶段。
+Dialogue: 0,0:37:09.71,0:37:11.79,Sub,,0,0,0,,So you got to really punch in on it.\N所以你得真正下功夫去投入。
+Dialogue: 0,0:37:11.79,0:37:14.75,Sub,,0,0,0,,I know. I got some out back, too.\N我知道，我后头也有些。
+Dialogue: 0,0:37:14.75,0:37:15.55,Sub,,0,0,0,,It was a good look.\N这看起来很棒。
+Dialogue: 0,0:37:15.55,0:37:17.13,Sub,,0,0,0,,I know. It's still a good look.\N我知道，现在还是很好看。
+Dialogue: 0,0:37:17.13,0:37:17.87,Sub,,0,0,0,,All right.\N好吧。
+Dialogue: 0,0:37:17.87,0:37:19.67,Sub,,0,0,0,,Let's talk about the next thing.\N我们来谈谈下一件事。
+Dialogue: 0,0:37:19.67,0:37:21.89,Sub,,0,0,0,,These are stats powered by Gemini.\N这些数据由 Gemini 提供支持。
+Dialogue: 0,0:37:21.89,0:37:27.09,Sub,,0,0,0,,Here, we're tracking your flight dynamics, rotational velocity, and even your tuck compression.\N这里，我们正在追踪你的飞行动态、旋转速度，甚至你的收身压缩情况。
+Dialogue: 0,0:37:27.09,0:37:28.55,Sub,,0,0,0,,Yeah, this is amazing.\N是啊，这太棒了。
+Dialogue: 0,0:37:28.55,0:37:29.68,Sub,,0,0,0,,We didn't have this before.\N我们以前没有这个。
+Dialogue: 0,0:37:29.68,0:37:31.91,Sub,,0,0,0,,I can see how much time I've spent in the air.\N我能清楚看到自己在空中花了多少时间。
+Dialogue: 0,0:37:31.91,0:37:39.55,Sub,,0,0,0,,And now take old footage that I've done and compare it with new footage of how much time was I in the air when I landed the trick, and when I didn't land the trick.\N现在把过去的老视频和新视频对比，看看我完成动作时和没完成动作时，空中停留时间的差别。
+Dialogue: 0,0:37:39.55,0:37:40.71,Sub,,0,0,0,,And I can compare the two.\N我可以对两者进行比较。
+Dialogue: 0,0:37:40.71,0:37:42.95,Sub,,0,0,0,,And that data is really going to help me progress.\N这些数据真的会帮助我取得进展。
+Dialogue: 0,0:37:42.95,0:37:45.99,Sub,,0,0,0,,And obviously, the next generation can use these tools too.\N显然，下一代也能使用这些工具。
+Dialogue: 0,0:37:45.99,0:37:46.35,Sub,,0,0,0,,It's true.\N没错。
+Dialogue: 0,0:37:46.35,0:37:50.71,Sub,,0,0,0,,And what I love is I love seeing how quickly your rotational velocity gets up here.\N我最喜欢的是，能看到你的旋转速度迅速提升到这个水平。
+Dialogue: 0,0:37:50.71,0:37:52.30,Sub,,0,0,0,,It's all about how you exit the pipe.\N关键在于你如何从管道中退出。
+Dialogue: 0,0:37:52.30,0:37:54.47,Sub,,0,0,0,,Torque-- exactly, and coming out of it.\N扭矩——没错，就是从里面出来的时候。
+Dialogue: 0,0:37:54.47,0:37:54.83,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:37:54.83,0:37:58.03,Sub,,0,0,0,,So let's look at one more cool thing that we've done here, which is the ribbon overlay.\N那么我们再来看一个这里做的酷炫功能，就是丝带叠加效果。
+Dialogue: 0,0:37:58.03,0:37:58.95,Sub,,0,0,0,,Oh, I love this.\N哦，我太喜欢这个了。
+Dialogue: 0,0:37:58.95,0:38:01.03,Sub,,0,0,0,,So here's what I love about this.\N我最喜欢的就是这个。
+Dialogue: 0,0:38:01.03,0:38:04.03,Sub,,0,0,0,,We're actually showing your cork here with the whole visualization.\N我们实际上在这里完整展示了你的软木塞的可视化效果。
+Dialogue: 0,0:38:04.03,0:38:05.61,Sub,,0,0,0,,So what happens here?\N那么这里会发生什么？
+Dialogue: 0,0:38:05.61,0:38:08.03,Sub,,0,0,0,,We're moving from blue to green on the thing.\N我们正在把这个从蓝色变为绿色。
+Dialogue: 0,0:38:08.03,0:38:08.57,Sub,,0,0,0,,What is that?\N那是什么？
+Dialogue: 0,0:38:08.57,0:38:12.23,Sub,,0,0,0,,When I was working with the engineers, I was trying to describe this trick.\N当我与工程师合作时，我试图描述这个技巧。
+Dialogue: 0,0:38:12.23,0:38:20.85,Sub,,0,0,0,,And there's a turning point where normally I do one front flip and then come in for the second, but then you have to pause and then go backflip.\N有一个关键转折点，通常我先做一个前空翻，然后接第二个，但这时你必须暂停，再做后空翻。
+Dialogue: 0,0:38:20.85,0:38:25.07,Sub,,0,0,0,,If you miss that turning point in the trick, well, it's not good.\N如果错过了这个转折点，那就不好了。
+Dialogue: 0,0:38:25.07,0:38:26.33,Sub,,0,0,0,,It's not good.\N不太好。
+Dialogue: 0,0:38:26.33,0:38:28.47,Sub,,0,0,0,,But this really pinpoints it exactly.\N但这个确实精准地指出了那个点。
+Dialogue: 0,0:38:28.47,0:38:29.71,Sub,,0,0,0,,It is so cool to watch this.\N看这个真是太酷了。
+Dialogue: 0,0:38:29.71,0:38:33.39,Sub,,0,0,0,,And what I love is that this is making sports more accessible for fans.\N我最喜欢的是，这让粉丝们更容易接触体育运动。
+Dialogue: 0,0:38:33.39,0:38:36.99,Sub,,0,0,0,,We can see all of the craziness that you're putting into this sport.\N我们能清楚看到你为这项运动投入的所有疯狂创意。
+Dialogue: 0,0:38:36.99,0:38:37.86,Sub,,0,0,0,,Exactly.\N没错。
+Dialogue: 0,0:38:37.86,0:38:38.99,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:38:38.99,0:38:41.41,Sub,,0,0,0,,So let's bring this back and talk a little bit more tech.\N那么让我们回到正题，再多聊一点技术方面。
+Dialogue: 0,0:38:41.41,0:38:49.13,Sub,,0,0,0,,Google Cloud is helping everyone innovate here by creating new use-case specific models, even for things like spatial analysis,\N谷歌云正在通过创建针对特定应用场景的新模型，帮助每个人在这里实现创新，甚至包括空间分析等应用，
+Dialogue: 0,0:38:49.13,0:39:02.04,Sub,,0,0,0,,training these large amounts of data and even models with Google Cloud TPUs, and helping everyone to build a secure data and agent foundation with Gemini Enterprise Agent Platform.\N利用谷歌云 TPU 训练大量数据和模型，并帮助每个人通过 Gemini 企业智能体平台构建安全的数据\N与智能体基础。
+Dialogue: 0,0:39:02.04,0:39:07.70,Sub,,0,0,0,,Compute, models, and platform-- this is the power of Google Cloud AI.\N计算、模型与平台——这就是谷歌云 AI 的力量。
+Dialogue: 0,0:39:07.70,0:39:12.82,Sub,,0,0,0,,And look, from my personal experience, I can tell you, learning a trick on the mountain is one thing,\N从我个人的经验来看，我告诉你，在山上学会一个技巧是一回事，
+Dialogue: 0,0:39:12.82,0:39:16.88,Sub,,0,0,0,,but actually understanding the physics of a trick is a whole other thing.\N但真正理解一个技巧背后的物理原理则是完全不同的另一回事。
+Dialogue: 0,0:39:16.88,0:39:24.78,Sub,,0,0,0,,And this is really going to help not only the next generation of athletes learn new skills but also help the fans at home understand the sport better.\N这将不仅帮助下一代运动员学习新技能，也能帮助家中的观众更好地理解这项运动。
+Dialogue: 0,0:39:24.78,0:39:28.52,Sub,,0,0,0,,And not just for snowboarding, but I think sports globally.\N这不仅适用于单板滑雪，我认为也适用于全球范围内的体育运动。
+Dialogue: 0,0:39:28.52,0:39:30.77,Sub,,0,0,0,,Look, I'm so stoked to see what's ahead.\N看着未来的发展，我真是无比兴奋。
+Dialogue: 0,0:39:30.77,0:39:31.48,Sub,,0,0,0,,Thank you, Jason.\N谢谢你，杰森。
+Dialogue: 0,0:39:31.48,0:39:34.29,Sub,,0,0,0,,And thank you, Google Cloud Next.\N也谢谢谷歌云 Next。
+Dialogue: 0,0:39:39.72,0:39:47.48,Sub,,0,0,0,,Please welcome SVP and chief technologist, AI and infrastructure, Amin Vahdat.\N请大家欢迎高级副总裁兼首席技术官、AI与基础设施负责人阿明·瓦哈达特。
+Dialogue: 0,0:39:59.74,0:40:00.99,Sub,,0,0,0,,Thank you, Shaun.\N谢谢肖恩。
+Dialogue: 0,0:40:00.99,0:40:06.09,Sub,,0,0,0,,We're taking the exact same technology that empowers athletes and applying it to the enterprise.\N我们正将赋能运动员的同一项技术，应用于企业领域。
+Dialogue: 0,0:40:06.09,0:40:11.39,Sub,,0,0,0,,Because while athletes use data to understand the game, the enterprise needs it to change the game.\N因为运动员利用数据理解比赛，而企业需要数据改变比赛规则。
+Dialogue: 0,0:40:11.39,0:40:15.55,Sub,,0,0,0,,That kind of scale is the ultimate stress test for a unified system.\N这种规模正是对统一系统终极的压力测试。
+Dialogue: 0,0:40:15.55,0:40:26.51,Sub,,0,0,0,,When you process massive video feeds, reaching over decades of historical data, and defend every byte in near real time, you have a foundation built for anything.\N当你处理海量视频流，调用数十年的历史数据，并近乎实时地保护每一字节时，你就拥有了应对任何挑战的基础。
+Dialogue: 0,0:40:26.51,0:40:31.07,Sub,,0,0,0,,But to solve this at a global scale, we first have to solve a physics problem.\N但要在全球规模上解决这个问题，我们首先必须解决一个物理难题。
+Dialogue: 0,0:40:31.07,0:40:40.47,Sub,,0,0,0,,It is a constant struggle against the limits of software architecture, hardware architecture, power, cooling, and even the speed of light.\N这是一场持续不断的斗争，对抗软件架构、硬件架构、功耗、散热，甚至光速的极限。
+Dialogue: 0,0:40:40.47,0:40:43.95,Sub,,0,0,0,,This is the foundation of our AI Hypercomputer.\N这正是我们AI超算的核心基础。
+Dialogue: 0,0:40:43.95,0:40:54.02,Sub,,0,0,0,,We integrate clean energy, massive physical scale, and our purpose-built infrastructure into a single unified engine of efficiency and innovation.\N我们将清洁能源、巨大的物理规模以及专为效率与创新打造的基础设施，整合为一个统一的高效引擎。
+Dialogue: 0,0:40:54.02,0:40:57.82,Sub,,0,0,0,,Because in the agentic era, compute is no longer defined by chip.\N因为在代理式时代，计算不再由芯片定义。
+Dialogue: 0,0:40:57.82,0:41:02.14,Sub,,0,0,0,,Compute is the entire data center.\N计算就是整个数据中心。
+Dialogue: 0,0:41:02.14,0:41:07.00,Sub,,0,0,0,,We give you the ultimate flexibility to pick the right architecture without compromise.\N我们为您提供终极灵活性，让您无需妥协即可选择合适的架构。
+Dialogue: 0,0:41:07.00,0:41:11.86,Sub,,0,0,0,,You can see this in how different industry leaders are innovating on Google Cloud.\N你可以看到，不同行业的领军企业正在谷歌云上不断创新。
+Dialogue: 0,0:41:11.86,0:41:21.30,Sub,,0,0,0,,Axia Energia, Brazil's largest power company, helps prevent power outages for millions of customers by running advanced weather modeling on TPU clusters.\N巴西最大的电力公司Axia Energia通过在TPU集群上运行先进的天气建模，\N帮助数百万客户避免停电。
+Dialogue: 0,0:41:21.30,0:41:28.82,Sub,,0,0,0,,By forecasting severe weather conditions up to 10 days in advance, the company can proactively plan and execute preventative measures\N通过提前10天预测恶劣天气，该公司能够主动规划并实施预防措施。
+Dialogue: 0,0:41:28.82,0:41:35.30,Sub,,0,0,0,,before storms hit, significantly reducing service interruptions year over year.\N风暴来临前就大幅减少年度服务中断。
+Dialogue: 0,0:41:35.30,0:41:43.38,Sub,,0,0,0,,Thinking Machine Labs shows our NVIDIA-based infrastructure to power Tinker, an open platform for reinforcement learning and fine-tuning\N思维机器实验室展示了基于英伟达的基础设施，用于支持Tinker——一个用于强化学习和微调的开源平台。
+Dialogue: 0,0:41:43.38,0:41:47.25,Sub,,0,0,0,,of frontier models for specialized use cases.\N面向特定应用场景的前沿模型。
+Dialogue: 0,0:41:47.25,0:41:54.89,Sub,,0,0,0,,Woven by Toyota achieved 42% faster training for models that predict complex traffic events.\N丰田编织（Woven by Toyota）在预测复杂交通事件的模型训练上实现了42%的提速。
+Dialogue: 0,0:41:54.89,0:42:05.49,Sub,,0,0,0,,The US Department of Energy is powering AI coscientists across all 17 national labs to accelerate the pace of scientific discovery.\N美国能源部正在为遍布全部17个国家实验室的AI科学家提供支持，以加速科学发现的步伐。
+Dialogue: 0,0:42:05.49,0:42:16.45,Sub,,0,0,0,,And Boston Dynamics is training and safely deploying flexible vision-language models to scale robotics across diverse industrial applications.\N波士顿动力正在训练并安全部署灵活的视觉语言模型，以推动机器人技术在多样化工业应用中的规模化发展。
+Dialogue: 0,0:42:16.45,0:42:22.93,Sub,,0,0,0,,As we enter the agentic era, we see that the demands of training and serving have completely diverged.\N进入代理式时代，我们发现训练和部署的需求已完全分化。
+Dialogue: 0,0:42:22.93,0:42:31.68,Sub,,0,0,0,,To meet the performance needs of these explosive workloads, I am proud to announce our eighth-generation TPUs.\N为满足这些爆发式增长工作负载的性能需求，我自豪地宣布推出第八代TPU。
+Dialogue: 0,0:42:51.49,0:42:53.01,Sub,,0,0,0,,These are things of beauty.\N这些都是美的杰作。
+Dialogue: 0,0:42:53.01,0:43:02.05,Sub,,0,0,0,,For the very first time, we are launching two specialized platforms, each built from the ground up for the distinct demands of training and serving.\N首次，我们推出了两款专用平台，每款均从零开始构建，以满足训练和推理的不同需求。
+Dialogue: 0,0:43:02.05,0:43:06.09,Sub,,0,0,0,,TPU 8t is a powerhouse optimized for training.\NTPU 8t 是专为训练优化的强大算力平台。
+Dialogue: 0,0:43:06.09,0:43:13.37,Sub,,0,0,0,,We have redefined performance capability by moving block scale multiplication directly inside the MXUs.\N我们通过将块级乘法直接移入 MXU 内部，重新定义了性能能力。
+Dialogue: 0,0:43:13.37,0:43:22.73,Sub,,0,0,0,,This native MXU quantization eliminates VPU overhead, delivering nearly three times the compute performance per pod over previous generations.\N这种原生 MXU 量化技术消除了 VPU 的开销，使每个计算单元的算力性能相比前代提升了近三倍。
+Dialogue: 0,0:43:22.73,0:43:31.21,Sub,,0,0,0,,This allows us to push the absolute limits of model flops utilization at a massive scale and reduces the training time of frontier models.\N这使我们能够在大规模下实现模型浮点运算利用率的极限，并显著缩短前沿模型的训练时间。
+Dialogue: 0,0:43:31.21,0:43:45.20,Sub,,0,0,0,,It leverages our breakthrough inter-chip interconnect technology, which now delivers twice the bandwidth compared to Ironwood, scaling up to 9,600 TPUs connected via our 3D torus topology.\N它采用了我们突破性的芯片间互联技术，带宽相比 Ironwood 提升了一倍，可支持高达 9,\N600 个 TPU 通过我们的 3D 环面拓扑连接。
+Dialogue: 0,0:43:45.20,0:43:55.56,Sub,,0,0,0,,This is a 2.8x improvement over Ironwood to deliver 1.21 exaflops of FP4 compute per pod.\N相比 Ironwood，性能提升了 2.8 倍，每个计算单元可提供 1.\N21 exaflops 的 FP4 算力。
+Dialogue: 0,0:43:55.56,0:44:07.12,Sub,,0,0,0,,8t provides two petabytes of shared bandwidth memory in a single superpod and utilizes the new TPUDirect storage to enable high-speed data transfers from managed storage.\N8t 在单个超级计算单元中提供两 PB 的共享带宽内存，并采用新型 TPUDirect 存储技术，\N实现从托管存储的高速数据传输。
+Dialogue: 0,0:44:07.12,0:44:18.36,Sub,,0,0,0,,To put that scale in perspective, two petabytes is enough to hold the entire digital connection of the Library of Congress 100 times over.\N从规模上看，两 PB 的存储容量足以容纳美国国会图书馆全部数字资料的 100 倍。
+Dialogue: 0,0:44:18.36,0:44:23.92,Sub,,0,0,0,,TPU 8i is optimized for the thinking part of the equation-- inference and reinforcement learning.\NTPU 8i 专为方程的“思考”部分优化——即推理和强化学习。
+Dialogue: 0,0:44:23.92,0:44:31.52,Sub,,0,0,0,,At the chip level, we have integrated a specialized collectives acceleration engine, which reduces latency by an additional 5x.\N在芯片层面，我们集成了专用的集体通信加速引擎，使延迟额外降低 5 倍。
+Dialogue: 0,0:44:31.52,0:44:38.92,Sub,,0,0,0,,By hosting the memory cache entirely on silicon, we've finally broken the memory wall that slows down long-context decoding.\N通过将内存缓存完全置于硅芯片上，我们终于打破了阻碍长上下文解码速度的内存墙。
+Dialogue: 0,0:44:38.92,0:44:43.15,Sub,,0,0,0,,We then scaled this on-chip performance through our new board flight topology,\N接着，我们通过全新的板级飞行拓扑结构，实现了芯片内性能的扩展。
+Dialogue: 0,0:44:43.15,0:44:52.07,Sub,,0,0,0,,which deploys 1152 TPUs into a single pod to run millions of concurrent agents with near-zero latency.\N该架构将1152个TPU部署到单个计算单元中，可实现数百万个智能体并发运行，延迟几乎为零。
+Dialogue: 0,0:44:52.07,0:45:02.71,Sub,,0,0,0,,This delivers 11.6 FP8 exaflops for a substantial 9.8x increase in performance over the 256-chip Ironwood pod.\N这带来了11.6 FP8艾浮点每秒的算力，相比256芯片的Ironwood计算单元，性能提升了9.\N8倍。
+Dialogue: 0,0:45:05.99,0:45:12.59,Sub,,0,0,0,,We are extending our infrastructure leadership to general purpose workloads as well with Google Cloud Axion.\N我们还将基础设施领导力延伸至通用工作负载，推出了谷歌云Axion。
+Dialogue: 0,0:45:12.59,0:45:17.89,Sub,,0,0,0,,Our Google Axion N48 compute instances, powered by a custom-designed ARM CPU,\N由定制设计的ARM CPU驱动的谷歌云Axion N48计算实例，
+Dialogue: 0,0:45:17.89,0:45:25.95,Sub,,0,0,0,,deliver up to twice better price performance and 80% better performance per watt than comparable x86 instances.\N在价格性能比上最高提升一倍，单位功耗性能比同类x86实例提升80%。
+Dialogue: 0,0:45:25.95,0:45:36.71,Sub,,0,0,0,,This provides a sustained, continuous operation designed to eliminate cold starts in logic apps, ensuring your agents are always on and ready to respond.\N这提供了持续稳定的运行能力，旨在消除逻辑应用中的冷启动问题，确保您的智能体始终在线并随时响应。
+Dialogue: 0,0:45:36.71,0:45:43.18,Sub,,0,0,0,,We are the preferred cloud for NVIDIA GPUs by some of the largest scale and most innovative customers in the world.\N我们已成为全球规模最大、最具创新性的客户中一些首选的NVIDIA GPU云服务提供商。
+Dialogue: 0,0:45:43.18,0:45:51.61,Sub,,0,0,0,,Today, I am pleased to announce that Google Cloud will be among the first to offer the NVIDIA Vera Rubin NVL72.\N今天，我很高兴宣布，谷歌云将成为首批提供英伟达Vera Rubin NVL72的云平台之一。
+Dialogue: 0,0:45:57.78,0:46:06.90,Sub,,0,0,0,,Vera Rubin NVL72 on Google Cloud achieves 10 times performance efficiency, optimized for high interactivity and long-context workloads.\N在谷歌云上运行的Vera Rubin NVL72实现了10倍的性能效率，\N专为高互动性和长上下文工作负载优化。
+Dialogue: 0,0:46:06.90,0:46:09.54,Sub,,0,0,0,,Of course, silicon is only half the battle.\N当然，硅芯片只是战斗的一半。
+Dialogue: 0,0:46:09.54,0:46:14.18,Sub,,0,0,0,,To feed these chips, we've redesigned our entire storage and networking pipeline.\N为了供给这些芯片，我们重新设计了整个存储和网络管道。
+Dialogue: 0,0:46:14.18,0:46:21.50,Sub,,0,0,0,,I am pleased to announce that Managed Lustre now supports throughput up to an industry-leading 10 terabytes per second.\N我很高兴地宣布，托管式 Lustre 现在支持高达行业领先的每秒 10TB 吞吐量。
+Dialogue: 0,0:46:21.50,0:46:24.30,Sub,,0,0,0,,We tied it all together with our new Virgo Network.\N我们通过全新的 Virgo 网络将所有部分整合在一起。
+Dialogue: 0,0:46:24.30,0:46:28.82,Sub,,0,0,0,,Virgo doubles connectivity to scale training beyond the superpod.\NVirgo 将连接能力翻倍，使训练规模突破超级集群的限制。
+Dialogue: 0,0:46:28.82,0:46:40.01,Sub,,0,0,0,,It links 134,000 chips with up to 47pb per second of non-blocking bandwidth to deliver over 1.7 million exaflops of compute.\N它连接了 13.4 万颗芯片，提供最高每秒 47PB 的无阻塞带宽，\N实现超过 170 万 exaflops 的算力。
+Dialogue: 0,0:46:40.01,0:46:49.71,Sub,,0,0,0,,We can now turn months of training into weeks with the power of a million-plus TPU chips in a single cluster, all orchestrated by Pathways and JAX.\N现在，借助单个集群中百万颗以上 TPU 芯片的算力，配合 Pathways 和 JAX 的协同调度，\N我们可以将数月的训练时间缩短为数周。
+Dialogue: 0,0:46:58.83,0:47:08.61,Sub,,0,0,0,,With up to four times the bandwidth per accelerator over the previous generation, this combination delivers near-linear scaling, ensuring you get the full power of every chip you pay for.\N相比上一代，每加速器的带宽提升高达四倍，这一组合实现了接近线性的扩展，\N确保您获得所支付每颗芯片的全部算力。
+Dialogue: 0,0:47:08.61,0:47:18.01,Sub,,0,0,0,,We are also making Virgo available on NVIDIA, Vera Rubin, and NVL72, supporting up to 960,000 GPUs.\N我们还将在英伟达、维拉·鲁宾和 NVL72 上提供 Virgo，支持最多 96 万块 GPU。
+Dialogue: 0,0:47:18.01,0:47:24.29,Sub,,0,0,0,,Leading financial institutions are using this exact combination of silicon networking to gain a massive edge.\N领先的金融机构正使用这一芯片与网络的组合，获得巨大优势。
+Dialogue: 0,0:47:24.29,0:47:29.53,Sub,,0,0,0,,Let's hear from Citadel Securities on how we are innovating together.\N让我们听听 Citadel Securities 如何讲述我们如何共同创新。
+Dialogue: 0,0:47:29.53,0:47:32.57,Sub,,0,0,0,,We trade over half a trillion dollars per day.\N我们每天交易超过五万亿美元。
+Dialogue: 0,0:47:32.57,0:47:34.11,Sub,,0,0,0,,But it's not just about volumes.\N但不仅仅关乎交易量。
+Dialogue: 0,0:47:34.11,0:47:35.93,Sub,,0,0,0,,It's also about speed.\N这也关乎速度。
+Dialogue: 0,0:47:35.93,0:47:40.41,Sub,,0,0,0,,In financial markets, time is measured in nanoseconds.\N在金融市场上，时间以纳秒计算。
+Dialogue: 0,0:47:40.41,0:47:42.55,Sub,,0,0,0,,We connect markets all around the world,\N我们连接全球各地的市场，
+Dialogue: 0,0:47:42.55,0:47:49.13,Sub,,0,0,0,,whether pension funds or somebody doing their first trade as part of their retirement, meet their investment objectives.\N无论是养老基金还是首次参与投资以规划退休的人，都能实现其投资目标。
+Dialogue: 0,0:47:49.13,0:47:56.29,Sub,,0,0,0,,We've partnered with Google Cloud to build what we think is the preeminent scalable, cloud-based research environment.\N我们与谷歌云合作，打造了我们认为最出色的可扩展云研究环境。
+Dialogue: 0,0:47:56.29,0:48:06.17,Sub,,0,0,0,,For instance, we've been working in depth on TPU to ensure that we get the efficiency we need to run our business.\N例如，我们深入研究了TPU，以确保获得运行业务所需的效率。
+Dialogue: 0,0:48:06.17,0:48:12.64,Sub,,0,0,0,,Today, we're able to run workloads two to four times as fast with a 30% lower cost.\N如今，我们能够以30%更低的成本，将工作负载的运行速度提升两到四倍。
+Dialogue: 0,0:48:12.64,0:48:17.97,Sub,,0,0,0,,With TPU Ironwood, we can now run thousands of parallel chips for a single workload.\N有了TPU Ironwood，我们现在可以为单个工作负载并行运行数千个芯片。
+Dialogue: 0,0:48:17.97,0:48:27.53,Sub,,0,0,0,,And what that means for our business is workloads that used to take weeks or days, we can now execute those in hours or even minutes.\N这意味着，过去需要数周或数天的工作负载，我们现在可以在数小时甚至几分钟内完成。
+Dialogue: 0,0:48:27.53,0:48:29.47,Sub,,0,0,0,,Imagine you're a quantitative researcher.\N想象一下，你是一名量化研究员。
+Dialogue: 0,0:48:29.47,0:48:32.07,Sub,,0,0,0,,You have 100 novel ideas that you want to execute.\N你有100个新颖的想法想要实现。
+Dialogue: 0,0:48:32.07,0:48:44.04,Sub,,0,0,0,,Can we empower our researchers to be able to test all of their ideas and really be limited by not the scale of the platform or the economics of the problem, but by their own creativity?\N我们能否赋能研究人员，让他们能够测试所有想法，真正受限的不再是平台规模或问题的经济成本，\N而是他们自身的创造力？
+Dialogue: 0,0:48:44.04,0:48:46.56,Sub,,0,0,0,,As we like to say, steel sharpens steel.\N正如我们常说的，精钢磨砺精钢。
+Dialogue: 0,0:48:46.56,0:48:50.82,Sub,,0,0,0,,Google Cloud and Citadel Securities' collaboration has been exactly that.\N谷歌云与 Citadel Securities 的合作正是如此。
+Dialogue: 0,0:49:00.36,0:49:07.76,Sub,,0,0,0,,Citadel Securities is just one example of many innovators who are gaining a competitive edge on our foundational AI Hypercomputer.\NCitadel Securities 只是众多创新者中的一个例子，\N他们正借助我们的基础 AI 超级计算机获得竞争优势。
+Dialogue: 0,0:49:07.76,0:49:12.00,Sub,,0,0,0,,At this scale, you cannot have humans manually troubleshooting configurations.\N在这个规模下，你无法依靠人工手动排查配置问题。
+Dialogue: 0,0:49:12.00,0:49:15.40,Sub,,0,0,0,,You need a cloud that drives itself.\N你需要一个能够自我驱动的云平台。
+Dialogue: 0,0:49:15.40,0:49:22.88,Sub,,0,0,0,,We have used the Model Context Protocol to turn every Google Cloud service into a tool that agents can orchestrate directly.\N我们利用模型上下文协议，将每个谷歌云服务都转变为智能体可直接编排的工具。
+Dialogue: 0,0:49:22.88,0:49:29.72,Sub,,0,0,0,,By integrating Gemini reasoning into our own telemetry, the system now performs autonomous root cause analysis,\N通过将 Gemini 的推理能力集成到我们自身的遥测系统中，该系统现在能够自主进行根本原因分析，
+Dialogue: 0,0:49:29.72,0:49:35.27,Sub,,0,0,0,,identifying and fixing misconfigurations before you even realize there's a problem.\N在你甚至意识到问题存在之前就识别并修复配置错误。
+Dialogue: 0,0:49:35.27,0:49:42.23,Sub,,0,0,0,,This is the AI Hypercomputer-- purpose-built infrastructure to accelerate the entire AI lifecycle.\N这就是 AI 超级计算机——专为加速整个 AI 生命周期而打造的基础架构。
+Dialogue: 0,0:49:42.23,0:49:47.64,Sub,,0,0,0,,To show you how we feed this engine with your data, please welcome Karthik Narain.\N为了向大家展示我们如何用你的数据来喂养这台引擎，请欢迎卡蒂克·纳赖恩。
+Dialogue: 0,0:50:01.87,0:50:03.31,Sub,,0,0,0,,Thank you, Amin.\N谢谢，阿明。
+Dialogue: 0,0:50:03.31,0:50:08.03,Sub,,0,0,0,,Amin just showed you how we built the world's most--powerful reasoning engine.\N阿明刚才向你们展示了我们如何打造全球最强大的推理引擎。
+Dialogue: 0,0:50:08.03,0:50:09.67,Sub,,0,0,0,,But here's the reality.\N但现实是这样的。
+Dialogue: 0,0:50:09.67,0:50:13.27,Sub,,0,0,0,,Reasoning without context is just a guess.\N没有上下文的推理，不过是一种猜测。
+Dialogue: 0,0:50:13.27,0:50:20.79,Sub,,0,0,0,,And when you expect your AI to make decisions and your agents to take actions, you cannot afford to guess.\N当你期望你的AI做出决策，智能体采取行动时，你根本无法承受猜测。
+Dialogue: 0,0:50:20.79,0:50:26.03,Sub,,0,0,0,,Trusted context turns an intelligent guess to a decisive action.\N可信赖的上下文能将智能猜测转化为决定性行动。
+Dialogue: 0,0:50:26.03,0:50:29.90,Sub,,0,0,0,,Today, we are completely rethinking the data platform.\N如今，我们正在彻底重新思考数据平台。
+Dialogue: 0,0:50:29.90,0:50:34.42,Sub,,0,0,0,,We call it the Agenetic Data Cloud.\N我们称之为代理式数据云。
+Dialogue: 0,0:50:34.42,0:50:40.10,Sub,,0,0,0,,To make this real, I'm thrilled to share four foundational innovations.\N为了实现这一点，我很激动地分享四项基础性创新。
+Dialogue: 0,0:50:40.10,0:50:43.54,Sub,,0,0,0,,It all starts with the foundation of truth.\N一切始于真相的基石。
+Dialogue: 0,0:50:43.54,0:50:51.02,Sub,,0,0,0,,Right now, your data is trapped in PDFs, video calls, multiple data stores, and SaaS applications.\N目前，你的数据被困在PDF、视频会议、多个数据存储和SaaS应用中。
+Dialogue: 0,0:50:51.02,0:50:54.42,Sub,,0,0,0,,How do we help AI make sense of it all?\N我们如何帮助AI理解这一切？
+Dialogue: 0,0:50:54.42,0:51:01.86,Sub,,0,0,0,,Today, we are introducing the Knowledge Catalog, a universal context engine for your enterprise.\N今天，我们推出知识目录，这是企业级的通用上下文引擎。
+Dialogue: 0,0:51:01.86,0:51:12.46,Sub,,0,0,0,,Starting with your structured world, the Knowledge Catalog natively integrates with BigQuery, mapping tables and metadata into unified business logic.\N从你的结构化世界开始，知识目录原生集成BigQuery，将表格和元数据映射为统一的业务逻辑。
+Dialogue: 0,0:51:12.46,0:51:20.26,Sub,,0,0,0,,And we are going even further, extending the same capability to the unstructured world as well through Smart Storage.\N我们还将进一步拓展，通过智能存储将相同的能力延伸至非结构化世界。
+Dialogue: 0,0:51:20.26,0:51:25.74,Sub,,0,0,0,,In the past, a file landing in your storage sat passive, waiting for a pipeline.\N过去，文件存入存储后处于被动状态，等待数据管道处理。
+Dialogue: 0,0:51:25.74,0:51:30.13,Sub,,0,0,0,,Now, the second that image or PDF hits Google Cloud Storage,\N现在，图像或PDF文件一进入谷歌云存储，
+Dialogue: 0,0:51:30.13,0:51:37.73,Sub,,0,0,0,,they are instantly tagged, enriched, and made agent-ready-- zero manual data engineering.\N立即被标记、丰富并准备就绪供智能体使用——无需任何手动数据工程。
+Dialogue: 0,0:51:37.73,0:51:51.25,Sub,,0,0,0,,Powered natively by Gemini, the Knowledge Catalog goes even deeper, reading files, autonomously extracting entities, mapping relationships, and learning about your unique business semantics.\N原生由Gemini驱动的知识目录更进一步，能够读取文件，自主提取实体，映射关系，\N并学习您独特业务的语义。
+Dialogue: 0,0:51:51.25,0:51:57.41,Sub,,0,0,0,,When an agent hears net revenue or risk, it understands the exact meaning.\N当智能体听到“净收入”或“风险”时，能准确理解其含义。
+Dialogue: 0,0:51:57.41,0:51:59.41,Sub,,0,0,0,,Take Virgin Media O2.\N以维珍媒体O2为例。
+Dialogue: 0,0:51:59.41,0:52:04.37,Sub,,0,0,0,,They had over 20,000 data assets, many of which were untapped.\N他们拥有超过2万项数据资产，其中许多尚未被利用。
+Dialogue: 0,0:52:04.37,0:52:11.73,Sub,,0,0,0,,Knowledge Catalog is helping them activate this data to empower their global product teams.\N知识目录正帮助他们激活这些数据，赋能全球产品团队。
+Dialogue: 0,0:52:11.73,0:52:22.81,Sub,,0,0,0,,Now, combined with direct zero-copy access to applications, operating systems, and AI platforms like Palantir, Salesforce, SAP, ServiceNow, and Workday,\N现在，结合对应用、操作系统和AI平台（如Palantir、Salesforce、SAP、\NServiceNow和Workday）的直接零拷贝访问，
+Dialogue: 0,0:52:22.81,0:52:28.98,Sub,,0,0,0,,you now have instant context to your entire business.\N您现在可即时获得整个业务的上下文。
+Dialogue: 0,0:52:30.93,0:52:33.53,Sub,,0,0,0,,That's right.\N没错。
+Dialogue: 0,0:52:33.53,0:52:39.45,Sub,,0,0,0,,This trusted context enables agents to act with certainty.\N这种可信的上下文使智能体能够自信地行动。
+Dialogue: 0,0:52:39.45,0:52:44.77,Sub,,0,0,0,,Now imagine this power in the hands of every employee, every day.\N现在想象一下，这种能力每天都在每位员工手中。
+Dialogue: 0,0:52:44.77,0:52:50.85,Sub,,0,0,0,,We've integrated the Knowledge Catalog with Gemini Enterprise's Deep Research Agent.\N我们已将知识目录与 Gemini 企业版的深度研究智能体集成。
+Dialogue: 0,0:52:50.85,0:52:58.81,Sub,,0,0,0,,You can now enable multi-step reasoning across internal and web data for precise cited business answers.\N现在，您可以在内部数据和网络数据之间启用多步推理，以获得精准引用的业务答案。
+Dialogue: 0,0:52:58.81,0:53:05.41,Sub,,0,0,0,,What took weeks of manual effort now happens seamlessly.\N过去需要数周手动完成的工作，如今已能无缝完成。
+Dialogue: 0,0:53:05.41,0:53:08.85,Sub,,0,0,0,,This is the Knowledge Catalog.\N这是知识目录。
+Dialogue: 0,0:53:08.85,0:53:22.17,Sub,,0,0,0,,Second, we are unveiling a Gemini-powered data science authoring experience that fundamentally transforms how data practitioners work with our new Data Agent Kit.\N其次，我们推出了由 Gemini 驱动的数据科学创作体验，借助全新的数据智能体套件，\N从根本上改变了数据从业者的工作方式。
+Dialogue: 0,0:53:22.17,0:53:25.96,Sub,,0,0,0,,We didn't just want to build another platform you have to learn.\N我们不只是想打造另一个需要你重新学习的平台。
+Dialogue: 0,0:53:25.96,0:53:34.76,Sub,,0,0,0,,Instead, the Data Agent Kit integrates comprehensively with libraries of AI skills and plugins directly\N相反，数据智能体套件可全面集成AI技能和插件库
+Dialogue: 0,0:53:34.76,0:53:37.56,Sub,,0,0,0,,into your workflows that you already use.\N融入你已使用的流程中。
+Dialogue: 0,0:53:37.56,0:53:44.24,Sub,,0,0,0,,Your IDE, your notebook, your terminal, whether you are in VS Code, Cloud Code, or Gemini CLI,\N你的集成开发环境、你的笔记本、你的终端，无论你使用的是 VS Code、\NCloud Code 还是 Gemini CLI，
+Dialogue: 0,0:53:44.24,0:53:49.80,Sub,,0,0,0,,we instantly turn your everyday workspace into a native data environment.\N我们可立即将您的日常办公环境转变为原生数据环境。
+Dialogue: 0,0:53:49.80,0:53:51.76,Sub,,0,0,0,,Here's how it works.\N工作原理如下。
+Dialogue: 0,0:53:51.76,0:53:59.40,Sub,,0,0,0,,You just state your intent, predict customer churn, and your environment simply takes over.\N你只需说明意图，比如预测客户流失，环境便会自动接管。
+Dialogue: 0,0:53:59.40,0:54:06.36,Sub,,0,0,0,,It autonomously builds the pipelines and deploys the models right on Google's Agentic Data Cloud.\N它会自主构建数据管道，并将模型直接部署在谷歌的代理式数据云上。
+Dialogue: 0,0:54:06.36,0:54:15.36,Sub,,0,0,0,,It handles all the complex orchestration for you, creating a direct path from your business objective straight to the business outcome.\N它为你处理所有复杂的编排工作，从你的业务目标直达业务成果，实现无缝连接。
+Dialogue: 0,0:54:15.36,0:54:21.22,Sub,,0,0,0,,For researchers at Bayer Crop Science, this eliminates manual data management and analytics,\N对拜耳作物科学的研究人员而言，这消除了手动数据管理和分析的负担，
+Dialogue: 0,0:54:21.22,0:54:27.93,Sub,,0,0,0,,freeing them to focus on pioneering agricultural innovations for a sustainable and productive future.\N让他们能够专注于开创农业领域的创新，为可持续且高产的未来贡献力量。
+Dialogue: 0,0:54:30.55,0:54:35.43,Sub,,0,0,0,,Third, the demand on data is extreme in this agentic era.\N第三，在这个代理式时代，对数据的需求极为巨大。
+Dialogue: 0,0:54:35.43,0:54:41.83,Sub,,0,0,0,,To address the scale challenge, we're unleashing the Lightning Engine for Apache Spark.\N为应对规模挑战，我们推出了 Apache Spark 的闪电引擎。
+Dialogue: 0,0:54:41.83,0:54:45.71,Sub,,0,0,0,,It not only delivers industry-leading performance for Spark.\N它不仅为 Spark 提供业界领先性能。
+Dialogue: 0,0:54:45.71,0:54:52.19,Sub,,0,0,0,,Lightning Engine delivers up to 2x the price performance over the previous market leader.\N闪电引擎的性价比相比上一代市场领导者最高提升两倍。
+Dialogue: 0,0:54:57.23,0:55:01.83,Sub,,0,0,0,,We fundamentally rebuilt this engine for the agentic era,\N我们从根本上重新构建了这一引擎，以适应代理式时代的需求，
+Dialogue: 0,0:55:01.83,0:55:12.07,Sub,,0,0,0,,reasoning with trusted context enables autonomous agents, and with the Lightning Engine, that autonomy operates at massive scale.\N通过基于可信上下文的推理，实现智能体的自主运作，而借助闪电引擎，这种自主性得以在巨大规模下运行。
+Dialogue: 0,0:55:12.07,0:55:23.06,Sub,,0,0,0,,Industry-leading organizations like Flipkart, Lowe's, and Meesho are accelerating their Apache Spark workloads with Lightning Engine.\N像 Flipkart、Lowe's 和 Meesho 这样的行业领先企业正借助 Lightning \NEngine 加速其 Apache Spark 工作负载。
+Dialogue: 0,0:55:23.06,0:55:28.42,Sub,,0,0,0,,Finally, let's address the biggest and the longest-running debate of all.\N最后，让我们来解决所有问题中最大也最持久的争论。
+Dialogue: 0,0:55:28.42,0:55:30.70,Sub,,0,0,0,,Where should your data reside?\N你的数据应该存放在哪里？
+Dialogue: 0,0:55:30.70,0:55:38.62,Sub,,0,0,0,,The reality is it lives everywhere-- at Google, at AWS, Azure, and across your SaaS applications.\N现实情况是，数据遍布各处——在谷歌云、AWS、Azure 以及你的 SaaS 应用中。
+Dialogue: 0,0:55:38.62,0:55:45.94,Sub,,0,0,0,,Your old lakehouse expected the analytical engine and the data storage to reside in the same cloud.\N你过去的湖仓架构期望分析引擎和数据存储位于同一云平台。
+Dialogue: 0,0:55:45.94,0:55:48.42,Sub,,0,0,0,,This approach is broken.\N这种方式已经失效。
+Dialogue: 0,0:55:48.42,0:55:59.40,Sub,,0,0,0,,Today, we are introducing the Cross-Cloud Lakehouse, where your analytical engine reasons over data in any cloud.\N如今，我们推出了跨云数据湖仓，让你的分析引擎可以在任何云中对数据进行推理。
+Dialogue: 0,0:56:04.58,0:56:09.38,Sub,,0,0,0,,Built on the open Apache Iceberg standard, it is completely borderless.\N基于开放的 Apache Iceberg 标准，它完全无边界。
+Dialogue: 0,0:56:09.38,0:56:21.37,Sub,,0,0,0,,Instead of forcing you to accept complex networking hurdles or massive egress fees, we deliver low-latency direct connectivity to AWS and Azure as if the data sat natively\N我们不再强迫你面对复杂的网络挑战或高昂的出站费用，而是提供低延迟的直接连接，\N让 AWS 和 Azure 的数据仿佛原生存在于谷歌云中。
+Dialogue: 0,0:56:21.37,0:56:29.06,Sub,,0,0,0,,in Google Cloud-- no more moving data, no more vendor lock in-- just freedom.\N无需再迁移数据，也无需再被厂商锁定——只有自由。
+Dialogue: 0,0:56:33.73,0:56:44.81,Sub,,0,0,0,,No matter where your data lives, from traditional systems to SaaS applications, we provide the trusted context and connectivity your business needs to act upon.\N无论你的数据位于何处，从传统系统到 SaaS 应用，我们都能提供企业所需的可信上下文与连接性，\N以支持你的业务行动。
+Dialogue: 0,0:56:44.81,0:56:50.79,Sub,,0,0,0,,This is why customers are choosing our Agentic Data Cloud to drive their agentic transformation.\N这就是为何客户选择我们的代理式数据云来推动其代理式转型。
+Dialogue: 0,0:56:53.69,0:56:57.17,Sub,,0,0,0,,One example of this transformation is Vodafone.\N这种转型的一个例子是沃达丰。
+Dialogue: 0,0:56:57.17,0:57:04.49,Sub,,0,0,0,,Vodafone unified their data on BigQuery to build a more resilient global network for their customers.\N沃达丰将数据统一到 BigQuery 上，为客户提供更可靠的全球网络。
+Dialogue: 0,0:57:04.49,0:57:12.97,Sub,,0,0,0,,And with Gemini Enterprise, they are launching hundreds of agents to proactively resolve outages and optimize infrastructure,\N并借助 Gemini 企业版，他们推出了数百个智能体，主动解决网络中断并优化基础设施，
+Dialogue: 0,0:57:12.97,0:57:18.29,Sub,,0,0,0,,scaling network reliability and saving millions every year.\N提升了网络可靠性，每年节省数百万美元。
+Dialogue: 0,0:57:18.29,0:57:27.45,Sub,,0,0,0,,Macquarie Bank's goal was to securely scale AI across their entire operation to deliver more personalized customer experiences.\N澳新银行的目标是安全地在整个运营中扩展人工智能，以提供更个性化的客户体验。
+Dialogue: 0,0:57:27.45,0:57:32.53,Sub,,0,0,0,,They deployed Gemini Enterprise to all staff and supercharged productivity.\N他们将 Gemini 企业版部署到所有员工，并大幅提升了生产力。
+Dialogue: 0,0:57:32.53,0:57:42.41,Sub,,0,0,0,,And for their two million customers, Macquarie's 24 by 7 AI assistant queue autonomously answers banking questions.\N对于他们的两百万客户，澳新银行的 24x7 人工智能助手可自主回答银行相关问题。
+Dialogue: 0,0:57:42.41,0:57:48.69,Sub,,0,0,0,,All of this was made possible by unifying their data on BigQuery and Spanner.\N所有这些都得益于他们将数据统一到 BigQuery 和 Spanner 上。
+Dialogue: 0,0:57:48.69,0:57:55.69,Sub,,0,0,0,,With this foundation, Macquarie has already cut client losses from scams by half.\N借助这一基础，澳新银行已将客户受诈骗损失减少了一半。
+Dialogue: 0,0:57:55.69,0:58:00.57,Sub,,0,0,0,,That's secure, frictionless banking at scale.\N这就是可扩展的、安全且无摩擦的银行服务。
+Dialogue: 0,0:58:00.57,0:58:11.93,Sub,,0,0,0,,American Express is redefining trust by centralizing its core data on Google Cloud to enable faster fraud and risk analysis at global scale.\N美国运通通过将核心数据集中到谷歌云，实现了全球规模的快速欺诈与风险分析，重新定义了信任。
+Dialogue: 0,0:58:11.93,0:58:22.56,Sub,,0,0,0,,Costco leverages BigQuery to accelerate member insights, empowering associates to optimize experience and maximize value for millions of members.\N好市多利用 BigQuery 加速会员洞察，赋能员工优化体验并为数百万会员最大化价值。
+Dialogue: 0,0:58:22.56,0:58:25.08,Sub,,0,0,0,,This is the Agentic Data Cloud.\N这是代理式数据云。
+Dialogue: 0,0:58:25.08,0:58:30.80,Sub,,0,0,0,,You and your AI agents now have a platform that operates with universal context,\N你和你的AI智能体现在拥有了一个具备全域上下文的平台，
+Dialogue: 0,0:58:30.80,0:58:40.88,Sub,,0,0,0,,is defined by your defined intent, and scales autonomously across your borderless data and the applications you already use today.\N由你定义的意图所决定，并能自动扩展至你无边界的数据以及你当前使用的所有应用。
+Dialogue: 0,0:58:44.68,0:58:51.61,Sub,,0,0,0,,To show you how to bring trusted context to your business, please welcome Yasmeen Ahmad.\N为了向大家展示如何为你的业务带来可信的上下文，请欢迎亚斯米恩·阿哈迈德。
+Dialogue: 0,0:59:02.80,0:59:07.32,Sub,,0,0,0,,Karthik gave us the recipe, so now let's see how it all plates up.\N卡蒂克已经给出了配方，现在让我们看看这一切如何呈现。
+Dialogue: 0,0:59:07.32,0:59:11.88,Sub,,0,0,0,,Most companies take five weeks to turn a trend into a decision.\N大多数公司需要五周时间才能将一个趋势转化为决策。
+Dialogue: 0,0:59:11.88,0:59:14.39,Sub,,0,0,0,,We're going to do it in five minutes.\N我们将在五分钟内完成。
+Dialogue: 0,0:59:14.39,0:59:17.15,Sub,,0,0,0,,To get there, we're breaking three barriers--\N为此，我们正在打破三大障碍——
+Dialogue: 0,0:59:17.15,0:59:27.19,Sub,,0,0,0,,dark data with our Knowledge Catalog, data silos with our Cross-Cloud Lakehouse, and manual code with Google's new agentic tools and skills.\N通过知识目录解决暗数据问题，通过跨云数据湖仓解决数据孤岛问题，\N通过谷歌全新的代理式工具和技能解决手动编码问题。
+Dialogue: 0,0:59:27.19,0:59:29.39,Sub,,0,0,0,,So let's get cooking.\N那么，开始吧。
+Dialogue: 0,0:59:29.39,0:59:36.03,Sub,,0,0,0,,Our new agentic workflow triggers have detected a tasty trend-- Midnight Swirl froyo.\N我们新的代理式工作流触发器已检测到一个有趣的趋势——午夜漩涡冷冻酸奶。
+Dialogue: 0,0:59:36.03,0:59:37.43,Sub,,0,0,0,,Looks delicious.\N看起来非常美味。
+Dialogue: 0,0:59:37.43,0:59:41.23,Sub,,0,0,0,,But with any new flavor, I need to know is it safe?\N但每种新口味，我得先确认是否安全。
+Dialogue: 0,0:59:41.23,0:59:43.07,Sub,,0,0,0,,Are there any hidden allergens?\N有没有隐藏的过敏原？
+Dialogue: 0,0:59:43.07,0:59:44.41,Sub,,0,0,0,,Is there a market?\N有没有市场需求？
+Dialogue: 0,0:59:44.41,0:59:46.19,Sub,,0,0,0,,Where are my hungry customers?\N我的饥饿客户在哪里？
+Dialogue: 0,0:59:46.19,0:59:47.61,Sub,,0,0,0,,And is it worth it?\N值得投入吗？
+Dialogue: 0,0:59:47.61,0:59:49.79,Sub,,0,0,0,,What's the real ROI?\N真实的投资回报率是多少？
+Dialogue: 0,0:59:49.79,0:59:52.47,Sub,,0,0,0,,But first, safety.\N但首先，安全第一。
+Dialogue: 0,0:59:52.47,0:59:55.75,Sub,,0,0,0,,We have thousands of PDF recipes.\N我们有数千份PDF食谱。
+Dialogue: 0,0:59:55.75,0:59:57.79,Sub,,0,0,0,,I'm going to search for soy.\N我要搜索一下大豆。
+Dialogue: 0,0:59:57.79,1:00:01.15,Sub,,0,0,0,,It's a top food allergen, and safety is non-negotiable.\N大豆是主要过敏原，安全不容妥协。
+Dialogue: 0,1:00:01.15,1:00:05.35,Sub,,0,0,0,,Zero results-- looks good so far.\N没有结果——目前看起来不错。
+Dialogue: 0,1:00:05.35,1:00:10.39,Sub,,0,0,0,,But this recipe does contain an ingredient, base 204.\N但这个食谱确实含有一个成分，基础204。
+Dialogue: 0,1:00:10.39,1:00:14.62,Sub,,0,0,0,,Let's check the supplier manual for base 204.\N我们来查看一下204号基础物料的供应商手册。
+Dialogue: 0,1:00:14.62,1:00:16.80,Sub,,0,0,0,,And here it is.\N就在这里。
+Dialogue: 0,1:00:16.80,1:00:19.90,Sub,,0,0,0,,Base 204 actually contains soy.\N204号基础物料实际上含有大豆。
+Dialogue: 0,1:00:19.90,1:00:27.38,Sub,,0,0,0,,A simple GenAI search would miss this connection because the information is trapped across two separate PDFs.\N一个简单的生成式AI搜索会遗漏这个关联，因为信息分散在两个独立的PDF文件中。
+Dialogue: 0,1:00:27.38,1:00:32.62,Sub,,0,0,0,,So how do we digest all of this data to find those hidden connections?\N那么我们该如何处理这些数据，以发现那些隐藏的关联？
+Dialogue: 0,1:00:32.62,1:00:40.18,Sub,,0,0,0,,Well, I need an agent that has the skill to work with my PDF data combined with our Knowledge Catalog.\N我需要一个能够结合我的PDF数据与知识目录进行工作的智能体。
+Dialogue: 0,1:00:40.18,1:00:46.90,Sub,,0,0,0,,Watch. Our agent helps us find hidden allergens in a recipe for Midnight Swirl.\N请看。我们的智能体帮助我们找到了“午夜漩涡”食谱中的隐藏过敏原。
+Dialogue: 0,1:00:46.90,1:00:48.38,Sub,,0,0,0,,And here it is.\N就在这里。
+Dialogue: 0,1:00:48.38,1:00:55.98,Sub,,0,0,0,,Midnight Swirl contains soy, and it's giving me a data citation, a schema called product specs.\N“午夜漩涡”含有大豆，并且提供了数据引用，其模式名为产品规格。
+Dialogue: 0,1:00:55.98,1:00:59.20,Sub,,0,0,0,,Now, this schema was generated by our Knowledge Catalog,\N这个模式是由我们的知识目录生成的，
+Dialogue: 0,1:00:59.20,1:01:13.97,Sub,,0,0,0,,working with Gemini to reason over our supplier and recipe PDFs and extract entities like recipe, ingredient, and allergen and mapping those previously invisible connections between them.\N它结合Gemini对供应商和食谱PDF进行推理，提取出食谱、成分和过敏原等实体，\N并建立起这些之前不可见的关联。
+Dialogue: 0,1:01:13.97,1:01:18.85,Sub,,0,0,0,,This is trusted context built over dark data.\N这是基于暗数据构建的可信上下文。
+Dialogue: 0,1:01:18.85,1:01:27.17,Sub,,0,0,0,,Next, market size-- to launch this globally, I need a precision list of customers with zero soy allergies.\N接下来是市场规模——要将这款产品推向全球，我需要一份精确的客户名单，其中不包含任何对大豆过敏的人。
+Dialogue: 0,1:01:27.17,1:01:30.93,Sub,,0,0,0,,However, I have two data sets that have never met.\N但我的两组数据从未有过交集。
+Dialogue: 0,1:01:30.93,1:01:42.33,Sub,,0,0,0,,Our allergen schema is here in Google, while my loyalty list with millions of customers and dietary preferences is in AWS S3 Iceberg.\N我们的过敏原数据模型在谷歌，而包含数百万客户及其饮食偏好的忠诚度名单则在 AWS S3 Iceber\Ng 中。
+Dialogue: 0,1:01:42.33,1:01:47.81,Sub,,0,0,0,,Now, usually you'd call your data engineer and wait three days for a migration.\N通常情况下，你会联系数据工程师，然后等待三天才能完成数据迁移。
+Dialogue: 0,1:01:47.81,1:01:48.97,Sub,,0,0,0,,Not today.\N但今天不一样。
+Dialogue: 0,1:01:48.97,1:01:51.37,Sub,,0,0,0,,No more slow churn.\N再也不用忍受缓慢的数据流转。
+Dialogue: 0,1:01:51.37,1:01:58.25,Sub,,0,0,0,,With our cross-cloud Lakehouse, the data stays exactly where it is while we dynamically build the list.\N通过我们的跨云数据湖仓，数据原地不动，我们即可动态构建名单。
+Dialogue: 0,1:01:58.25,1:02:07.73,Sub,,0,0,0,,Before writing a single line of code, Gemini builds a plan using our data engineering tools while respecting my built-in security and permissions.\N在编写任何代码之前，Gemini 已利用我们的数据工程工具制定出计划，\N同时遵守我内置的安全策略和权限设置。
+Dialogue: 0,1:02:07.73,1:02:11.31,Sub,,0,0,0,,As the data scientist, you're the chef.\N作为数据科学家，你就是主厨。
+Dialogue: 0,1:02:11.31,1:02:13.13,Sub,,0,0,0,,You can review.\N你可以进行审查。
+Dialogue: 0,1:02:13.13,1:02:17.81,Sub,,0,0,0,,Let's accept and see what our agents serve up.\N我们接受并看看智能体为我们呈现了什么。
+Dialogue: 0,1:02:17.81,1:02:20.11,Sub,,0,0,0,,They execute on our Lightning Engine,\N它们在我们的闪电引擎上执行。
+Dialogue: 0,1:02:20.11,1:02:32.05,Sub,,0,0,0,,which is two times more price-performant than the market proprietary alternative, filtering our soy-sensitive customers in mere seconds.\N性能价格比是市场专有替代方案的两倍，可在几秒内筛选出对大豆敏感的客户。
+Dialogue: 0,1:02:32.05,1:02:36.97,Sub,,0,0,0,,AWS and BigQuery sources connected-- zero complexity.\NAWS 和 BigQuery 数据源已连接——零复杂度。
+Dialogue: 0,1:02:36.97,1:02:40.73,Sub,,0,0,0,,It's as smooth as a batch of Midnight Swirl.\N顺滑得如同一勺午夜漩涡。
+Dialogue: 0,1:02:40.73,1:02:44.93,Sub,,0,0,0,,Finally, ROI-- is this worth a global launch?\N终于到了投资回报率——这值得全球发布吗？
+Dialogue: 0,1:02:44.93,1:02:48.69,Sub,,0,0,0,,An annual forecast would help.\N年度预测会有所帮助。
+Dialogue: 0,1:02:48.69,1:02:50.53,Sub,,0,0,0,,Again, our agents don't guess.\N再次强调，我们的智能体不会猜测。
+Dialogue: 0,1:02:50.53,1:02:54.25,Sub,,0,0,0,,Gemini builds a multi-step execution plan.\NGemini 会构建多步骤执行计划。
+Dialogue: 0,1:02:54.25,1:02:55.93,Sub,,0,0,0,,Can you make changes?\N你能进行修改吗？
+Dialogue: 0,1:02:55.93,1:02:57.85,Sub,,0,0,0,,Yes, Chef.\N可以，主厨。
+Dialogue: 0,1:02:57.85,1:03:06.56,Sub,,0,0,0,,So let's take a look and change the number of simulations from 1,000 to 2,000.\N那我们来看一下，把模拟次数从 1,000 改为 2,000。
+Dialogue: 0,1:03:06.56,1:03:10.36,Sub,,0,0,0,,And we will accept.\N我们将接受。
+Dialogue: 0,1:03:10.36,1:03:21.32,Sub,,0,0,0,,Acting as the orchestrator, Gemini delegates to our specialized data science tools, choosing the right models, and again, executing on our Lightning Engine for Spark.\N作为协调者，Gemini 会将任务委派给我们的专业数据科学工具，选择合适的模型，\N并再次在我们的 Lightning Engine 上执行 Spark 任务。
+Dialogue: 0,1:03:21.32,1:03:24.00,Sub,,0,0,0,,It's built an entire notebook for me.\N它为我创建了一个完整的笔记本。
+Dialogue: 0,1:03:24.00,1:03:29.68,Sub,,0,0,0,,Now, training usually takes a bit of time, so here's one I ran earlier.\N现在，训练通常需要一点时间，所以这是之前运行的一个。
+Dialogue: 0,1:03:29.68,1:03:32.24,Sub,,0,0,0,,$15 million.\N1500万美元。
+Dialogue: 0,1:03:32.24,1:03:37.44,Sub,,0,0,0,,Even after protecting our soy-sensitive market, the demand is massive.\N即使在保护了我们的大豆敏感市场之后，需求依然巨大。
+Dialogue: 0,1:03:37.44,1:03:39.92,Sub,,0,0,0,,Can we bring back the timer?\N我们能把计时器恢复吗？
+Dialogue: 0,1:03:39.92,1:03:41.42,Sub,,0,0,0,,Look what we accomplished.\N看我们完成了什么。
+Dialogue: 0,1:03:41.42,1:03:47.64,Sub,,0,0,0,,In less than five minutes, we turned a viral trend into a $15 million decision.\N在不到五分钟的时间里，我们将一个病毒式趋势转化为了一个1500万美元的决策。
+Dialogue: 0,1:03:47.64,1:03:51.72,Sub,,0,0,0,,First, Knowledge Catalog found the hidden soy connection.\N首先，知识目录发现了隐藏的大豆关联。
+Dialogue: 0,1:03:51.72,1:03:59.32,Sub,,0,0,0,,Second, Cross-Cloud Lakehouse, powered by the Lightning Engine, connected to AWS with zero complexity.\N其次，由闪电引擎驱动的跨云数据湖仓，以零复杂度连接到了AWS。
+Dialogue: 0,1:03:59.32,1:04:05.55,Sub,,0,0,0,,And third, our agentic skills and tools built the forecast with zero manual code.\N第三，我们的代理式技能和工具以零手动编码完成了预测构建。
+Dialogue: 0,1:04:05.55,1:04:08.95,Sub,,0,0,0,,This is the Agentic Data Cloud.\N这就是代理式数据云。
+Dialogue: 0,1:04:17.51,1:04:18.79,Sub,,0,0,0,,We did it.\N我们做到了。
+Dialogue: 0,1:04:18.79,1:04:26.54,Sub,,0,0,0,,And now, here to share how we're securing your agentic enterprise, please welcome Francis deSouza\N现在，让我们欢迎弗朗西斯·德索萨，他将分享我们如何保障您的代理式企业安全
+Dialogue: 0,1:04:40.43,1:04:42.51,Sub,,0,0,0,,In an agentic enterprise,\N在代理式企业中
+Dialogue: 0,1:04:42.51,1:04:51.67,Sub,,0,0,0,,giving agents the power to act means that security must become an autonomous force, moving faster than the threats themselves.\N赋予智能体行动能力意味着安全必须成为一种自主力量，其响应速度要快于威胁本身
+Dialogue: 0,1:04:51.67,1:04:56.75,Sub,,0,0,0,,Human analysts simply can't keep up with AI-driven attacks.\N人类分析师根本无法跟上人工智能驱动的攻击步伐
+Dialogue: 0,1:04:56.75,1:05:06.14,Sub,,0,0,0,,The mean time to exploit the vulnerability has dropped to minus seven days, meaning that today exploits routinely occur before a patch is\N漏洞被利用的平均时间已降至负七天，这意味着如今攻击往往在补丁发布前就已发生
+Dialogue: 0,1:05:06.14,1:05:17.54,Sub,,0,0,0,,released, and the handoff time between initial access and handover to a secondary threat group has dropped from eight hours to 22 seconds.\N从初始入侵到移交至第二个威胁团伙的交接时间，已从八小时缩短至22秒
+Dialogue: 0,1:05:17.54,1:05:21.86,Sub,,0,0,0,,Your security must operate at machine speed.\N您的安全系统必须以机器的速度运行
+Dialogue: 0,1:05:21.86,1:05:30.26,Sub,,0,0,0,,Now, to do that, we're moving the heavy lifting to a Gemini-native agentic Security Operations Center, or SOC.\N为此，我们正在将核心工作迁移至基于 Gemini 的代理式安全运营中心（SOC）
+Dialogue: 0,1:05:30.26,1:05:32.90,Sub,,0,0,0,,And the results are already here.\N成果已经显现
+Dialogue: 0,1:05:32.90,1:05:40.38,Sub,,0,0,0,,Our triage agents are turning 30-minute investigations into 60-second resolutions.\N我们的初步评估智能体已将30分钟的调查缩短至60秒内解决
+Dialogue: 0,1:05:40.38,1:05:51.26,Sub,,0,0,0,,And our new threat hunting and detection agents proactively sweep your environments for risks at a scale and speed that no human team could match.\N我们新推出的威胁狩猎与检测智能体，能以人类团队无法比拟的规模和速度主动扫描您的环境，排查风险
+Dialogue: 0,1:05:51.26,1:05:57.82,Sub,,0,0,0,,By leveraging Google's unparalleled telemetry, including Mandiant, VirusTotal, and Chrome,\N通过利用谷歌无与伦比的遥测数据，包括 Mandiant、VirusTotal 和 Chrome
+Dialogue: 0,1:05:57.82,1:06:02.33,Sub,,0,0,0,,we are delivering a defense system based on global intelligence.\N我们正在打造一个基于全球情报的防御系统。
+Dialogue: 0,1:06:02.33,1:06:11.09,Sub,,0,0,0,,And now, with our integrated dark web intelligence, we can identify external threats with 98% accuracy.\N现在，借助我们整合的暗网情报，我们能够以98%的准确率识别外部威胁。
+Dialogue: 0,1:06:11.09,1:06:16.73,Sub,,0,0,0,,Customers are already seeing big benefits from Google Cloud's security offerings.\N客户已经从谷歌云的安全产品中看到了显著收益。
+Dialogue: 0,1:06:16.73,1:06:30.33,Sub,,0,0,0,,CME Group depends on a unified stack of Mandiant Security Command Center and Google's SecOps to protect the world's largest derivatives system against novel threats.\NCME集团依赖统一的Mandiant安全指挥中心与谷歌安全运营平台，\N保护全球最大的衍生品系统免受新型威胁。
+Dialogue: 0,1:06:30.33,1:06:37.29,Sub,,0,0,0,,In an ultra high-stakes environment, Google's security offering is matched by speed.\N在超高风险环境中，谷歌的安全解决方案以其速度见长。
+Dialogue: 0,1:06:37.29,1:06:43.85,Sub,,0,0,0,,CME Group achieves nanosecond precision with Google's ultra low-latency solution,\NCME集团借助谷歌的超低延迟解决方案，实现了纳秒级精度，
+Dialogue: 0,1:06:43.85,1:06:50.69,Sub,,0,0,0,,supporting billions of transactions daily and lowering the barrier of entry for new traders.\N支持每日数十亿笔交易，并降低了新交易者的准入门槛。
+Dialogue: 0,1:06:50.69,1:06:53.81,Sub,,0,0,0,,Now, the biggest threats today aren't just hackers.\N如今，最大的威胁已不仅仅是黑客。
+Dialogue: 0,1:06:53.81,1:07:02.89,Sub,,0,0,0,,It's also shadow AI, unauthorized models and agents that are operating in your enterprise but outside your control.\N还包括影子AI、未经授权的模型和智能体，它们在企业内部运行却脱离了你的控制。
+Dialogue: 0,1:07:02.89,1:07:11.25,Sub,,0,0,0,,And to meet this challenge, we have integrated the industry's deepest security context directly into our AI fabric.\N为应对这一挑战，我们已将业界最深入的安全上下文直接融入我们的AI架构。
+Dialogue: 0,1:07:11.25,1:07:17.57,Sub,,0,0,0,,That is why I am thrilled to officially welcome the Wiz team to Google Cloud.\N正因如此，我非常高兴地正式欢迎Wiz团队加入谷歌云。
+Dialogue: 0,1:07:24.01,1:07:29.37,Sub,,0,0,0,,Together, we are building a new security posture for the agentic enterprise.\N我们正共同构建代理式企业的全新安全态势。
+Dialogue: 0,1:07:29.37,1:07:35.87,Sub,,0,0,0,,While the New agent platform in Gemini Enterprise secures and governs your agents, with Wiz,\N在 Gemini 企业版的新智能体平台保障并管理您的智能体的同时，借助 Wiz，
+Dialogue: 0,1:07:35.87,1:07:43.77,Sub,,0,0,0,,we're now extending that protection to every asset on your premises and across all major clouds.\N我们现在已将这种保护扩展至您所有场所的资产以及所有主要云平台。
+Dialogue: 0,1:07:43.77,1:07:51.25,Sub,,0,0,0,,To explain how we're solving this, I'm excited to introduce to the stage Wiz co-founder Yinon Costica.\N为了说明我们如何解决这一问题，我非常高兴地邀请 Wiz 联合创始人尹诺·科斯蒂卡登台。
+Dialogue: 0,1:08:07.60,1:08:09.56,Sub,,0,0,0,,Thank you, Francis.\N谢谢，弗朗西斯。
+Dialogue: 0,1:08:09.56,1:08:17.32,Sub,,0,0,0,,At Wiz, our mission from day one has been to help customers protect everything they build and run.\N在 Wiz，从第一天起我们的使命就是帮助客户保护他们所构建和运行的一切。
+Dialogue: 0,1:08:17.32,1:08:23.68,Sub,,0,0,0,,Wiz began by unifying code and cloud and runtime context to move at developer speed.\NWiz 最初通过统一代码、云环境和运行时上下文，实现了与开发者速度同步。
+Dialogue: 0,1:08:23.68,1:08:28.16,Sub,,0,0,0,,But AI has fundamentally changed the environment.\N但人工智能从根本上改变了这一环境。
+Dialogue: 0,1:08:28.16,1:08:36.92,Sub,,0,0,0,,With autonomous products, hyperscale code generation, and AI-weaponized threats, the stakes have never been higher.\N随着自主产品、超大规模代码生成以及被 AI 武装的威胁出现，风险前所未有地升高。
+Dialogue: 0,1:08:36.92,1:08:42.52,Sub,,0,0,0,,To protect this new frontier, security must now move at machine speed.\N为了保护这一新前沿，安全必须现在以机器速度前进。
+Dialogue: 0,1:08:42.52,1:08:51.32,Sub,,0,0,0,,And that is exactly why we built Wiz as the first AI Application Protection Platform, or in short, AI APP.\N这正是我们打造 Wiz 的原因——作为首个 AI 应用保护平台，简称 AI APP。
+Dialogue: 0,1:08:51.32,1:08:55.95,Sub,,0,0,0,,It solves four key security challenges for the AI era--\N它解决了人工智能时代面临的四大关键安全挑战——
+Dialogue: 0,1:08:55.95,1:09:00.87,Sub,,0,0,0,,giving security unparalleled visibility into the AI stack,\N为安全提供了对 AI 架构前所未有的全面可见性，
+Dialogue: 0,1:09:00.87,1:09:09.39,Sub,,0,0,0,,finding and proactively remediating critical risks before attackers can use them, enabling our builders\N在攻击者利用这些关键风险之前，主动发现并修复它们，从而赋能我们的开发者
+Dialogue: 0,1:09:09.39,1:09:19.67,Sub,,0,0,0,,to start secure by design in their AI enabled IDEs, and lastly, arming SecOps teams to stop threats to cloud and AI environments.\N能够在AI赋能的集成开发环境中实现安全设计，最后，为安全运维团队提供防护能力，\N阻止对云和AI环境的威胁。
+Dialogue: 0,1:09:19.67,1:09:26.27,Sub,,0,0,0,,In order to outpace attackers, Wiz delivers a set of expert AI agents.\N为了超越攻击者，Wiz提供了一组专家级AI智能体。
+Dialogue: 0,1:09:26.27,1:09:28.83,Sub,,0,0,0,,It's a really cool concept.\N这是一个非常酷的概念。
+Dialogue: 0,1:09:28.83,1:09:36.47,Sub,,0,0,0,,Our red, blue, and green agents are named after the teams they help-- red, blue, and green teams.\N我们的红队、蓝队和绿队智能体，以它们所协助的团队命名——红队、蓝队和绿队。
+Dialogue: 0,1:09:36.47,1:09:40.35,Sub,,0,0,0,,They form an AI layer to autonomously identify,\N它们构成了一层AI，能够自主识别、
+Dialogue: 0,1:09:40.35,1:09:49.31,Sub,,0,0,0,,investigate, and then fix critical risks at machine speed, leveraging context from our unique security graph.\N调查并以机器速度修复关键风险，利用我们独有的安全图谱上下文。
+Dialogue: 0,1:09:49.31,1:09:52.55,Sub,,0,0,0,,Security starts with visibility, always.\N安全始于可见性，始终如此。
+Dialogue: 0,1:09:52.55,1:09:53.50,Sub,,0,0,0,,But today.\N但今天。
+Dialogue: 0,1:09:53.50,1:09:57.60,Sub,,0,0,0,,Your AI footprint is an orbit of interconnected tools.\N你的AI足迹是一个由相互连接的工具构成的生态圈。
+Dialogue: 0,1:09:57.60,1:10:01.54,Sub,,0,0,0,,It spins models like Gemini, Claude, OpenAI.\N它运行着如Gemini、Claude、OpenAI等模型。
+Dialogue: 0,1:10:01.54,1:10:12.06,Sub,,0,0,0,,Your teams are using agent studios such as Gemini Enterprise Agent Platform, Lovable, Copilot Studio, Salesforce's Agentforce.\N你的团队正在使用Gemini企业智能体平台、Lovable、Copilot Studio、\NSalesforce的Agentforce等智能体工作室。
+Dialogue: 0,1:10:12.06,1:10:21.86,Sub,,0,0,0,,And to secure all of these environments, we examine every layer-- the clouds, the data, the models, the agents.\N为了保护所有这些环境，我们会检查每一层——云、数据、模型和智能体。
+Dialogue: 0,1:10:21.86,1:10:28.46,Sub,,0,0,0,,And we continuously correlate these risks to find and fix the attack path that matter most.\N我们持续关联这些风险，以发现并修复最关键的安全攻击路径。
+Dialogue: 0,1:10:28.46,1:10:31.55,Sub,,0,0,0,,Now let's see it in action.\N现在让我们看看实际运行效果。
+Dialogue: 0,1:10:40.00,1:10:42.18,Sub,,0,0,0,,So this is Wiz.\N这就是 Wiz。
+Dialogue: 0,1:10:42.18,1:10:50.78,Sub,,0,0,0,,Wiz basically starts by automatically building a dynamic inventory from your code and cloud, completely agentlessly.\NWiz 基本上会自动从代码和云环境中构建动态资产清单，完全无需智能体。
+Dialogue: 0,1:10:50.78,1:11:02.01,Sub,,0,0,0,,This means that you can see every visibility into the environment, into everything that your teams are building using AI, without any friction.\N这意味着你可以毫无障碍地查看环境中的一切，包括你的团队使用 AI 构建的所有内容。
+Dialogue: 0,1:11:02.01,1:11:05.13,Sub,,0,0,0,,Wiz then builds the security graph.\N接着，Wiz 会构建安全图谱。
+Dialogue: 0,1:11:05.13,1:11:13.13,Sub,,0,0,0,,The security graph-- think of it as a living map that explains the architecture and the logic of any AI application it sees.\N安全图谱——可以把它想象成一张动态地图，解释它所看到的任何 AI 应用的架构和逻辑。
+Dialogue: 0,1:11:13.13,1:11:18.37,Sub,,0,0,0,,Here we see an example of an agent that is actually running on cloud.\N这里我们看到一个实际在云上运行的智能体示例。
+Dialogue: 0,1:11:18.37,1:11:22.77,Sub,,0,0,0,,It has tools to query a database and even execute code.\N它具备查询数据库甚至执行代码的工具。
+Dialogue: 0,1:11:22.77,1:11:29.29,Sub,,0,0,0,,And you can see that Wiz actually flags that this agent is internet-exposed.\N你可以看到，Wiz 实际上标记出该智能体暴露在互联网上。
+Dialogue: 0,1:11:29.29,1:11:33.41,Sub,,0,0,0,,And also, it has access to sensitive customer data.\N而且，它还拥有访问敏感客户数据的权限。
+Dialogue: 0,1:11:33.41,1:11:38.05,Sub,,0,0,0,,Now, this is security moving at the speed of AI.\N现在，安全正以AI的速度前进。
+Dialogue: 0,1:11:38.05,1:11:41.13,Sub,,0,0,0,,You don't need any reviews with your development teams.\N你无需再对开发团队进行任何审查。
+Dialogue: 0,1:11:41.13,1:11:43.65,Sub,,0,0,0,,It just works.\N它能直接运行。
+Dialogue: 0,1:11:43.65,1:11:56.81,Sub,,0,0,0,,And in the AI era, the best defense is to continuously use AI against ourselves in order to give the defenders the first-mover advantage over the attackers.\N在AI时代，最好的防御方式是持续使用AI来对抗自身，从而让防御者在攻击者之前获得先发优势。
+Dialogue: 0,1:11:56.81,1:12:00.61,Sub,,0,0,0,,And this is exactly what the Wiz Red Agent does.\N这正是Wiz红队智能体所做的事情。
+Dialogue: 0,1:12:00.61,1:12:04.85,Sub,,0,0,0,,It validates every single exposure that Wiz identified.\N它验证了Wiz所识别出的每一项暴露风险。
+Dialogue: 0,1:12:04.85,1:12:12.97,Sub,,0,0,0,,And you can think of it as a friendly hacker that continuously scans your outside like an elite red team.\N你可以把它想象成一个友好的黑客，像精英红队一样持续扫描你的外部系统。
+Dialogue: 0,1:12:12.97,1:12:20.33,Sub,,0,0,0,,And look, this is a finding that the Red Agent actually found-- an authentication bypass vulnerability.\N看，这是红队智能体实际发现的一个漏洞——身份验证绕过漏洞。
+Dialogue: 0,1:12:20.33,1:12:32.21,Sub,,0,0,0,,This means that it enables an attacker to gain access to that agent but also to that sensitive database behind it to exfiltrate sensitive information.\N这意味着攻击者不仅能访问该智能体，还能访问其背后的敏感数据库，窃取敏感信息。
+Dialogue: 0,1:12:32.21,1:12:35.45,Sub,,0,0,0,,Now, it's not a potential risk anymore.\N现在，这已不再是潜在风险。
+Dialogue: 0,1:12:35.45,1:12:37.85,Sub,,0,0,0,,This is a validated risk.\N这是一个已验证的风险。
+Dialogue: 0,1:12:37.85,1:12:44.65,Sub,,0,0,0,,And this gives our developers the prioritization and the confidence in fixing it immediately.\N这为我们开发人员提供了优先处理的依据和立即修复的信心。
+Dialogue: 0,1:12:44.65,1:12:51.56,Sub,,0,0,0,,Now, in the past, triage used to mean very, very long meetings and waiting and spreadsheets.\N过去，优先级划分意味着冗长的会议、漫长的等待和繁琐的电子表格。
+Dialogue: 0,1:12:51.56,1:12:57.30,Sub,,0,0,0,,And you don't need that anymore because we have the Wiz Green Agent.\N现在你不再需要这些，因为我们有 Wiz 绿色智能体。
+Dialogue: 0,1:12:57.30,1:13:06.64,Sub,,0,0,0,,The Wiz Green Agent automates the entire triage process from identifying the owner, suggesting the fix,\NWiz 绿色智能体可自动完成整个优先级划分流程，包括识别负责人、建议修复方案，
+Dialogue: 0,1:13:06.64,1:13:14.30,Sub,,0,0,0,,identifying the exact line of code that caused the risk in the first place-- all automated-- no phone tag, no friction.\N精确定位导致风险的代码行——全部自动化，无需电话沟通，无任何摩擦。
+Dialogue: 0,1:13:14.30,1:13:15.98,Sub,,0,0,0,,And from here, you have a choice.\N从这里开始，你有选择。
+Dialogue: 0,1:13:15.98,1:13:26.76,Sub,,0,0,0,,You can send it to the developers as a PR, or maybe better, send it to a coding agent like CodeMender to execute the final fix at the source automatically.\N你可以将其作为拉取请求发送给开发人员，或者更好的是，\N发送给像 CodeMender 这样的编码智能体，自动在源代码中执行最终修复。
+Dialogue: 0,1:13:26.76,1:13:36.28,Sub,,0,0,0,,And this is how we can move from a validated risk to a verified fix, end-to-end visibility, control, and full confidence.\N这就是我们如何实现从验证风险到确认修复的全流程可视性、控制力和完全信心。
+Dialogue: 0,1:13:36.28,1:13:48.51,Sub,,0,0,0,,So to summarize, whenever you have an AI team that ships a new product or even someone in finance that then codes a new agent, now, within minutes, security\N总结一下，每当你的 AI 团队发布新产品，甚至财务部门的人员编写了一个新智能体，现在只需几分钟，\N安全团队
+Dialogue: 0,1:13:48.51,1:13:53.27,Sub,,0,0,0,,is able to, one, identify the agent and its architecture, two,\N就能，第一，识别该智能体及其架构，第二，
+Dialogue: 0,1:13:53.27,1:14:03.87,Sub,,0,0,0,,automatically conduct a security review to find and validate the risks, and three, automatically suggest the fix, send it to the dev teams in their own native tools.\N自动开展安全审查，发现并验证风险，第三，自动提出修复建议，并通过开发团队的原生工具发送给团队。
+Dialogue: 0,1:14:03.87,1:14:11.75,Sub,,0,0,0,,Ta-da. This is how AI agents unlock secure innovation with AI at scale.\N好了。这就是 AI 智能体如何实现规模化 AI 驱动的安全创新。
+Dialogue: 0,1:14:11.75,1:14:12.65,Sub,,0,0,0,,Thank you, all.\N谢谢大家。
+Dialogue: 0,1:14:12.65,1:14:14.84,Sub,,0,0,0,,Back to you, Francis.\N交给你了，弗朗西斯。
+Dialogue: 0,1:14:23.12,1:14:35.67,Sub,,0,0,0,,The unique combination of Google's agentic SOC and Wiz's deep cloud context gives customers the confidence to build and deploy generative AI everywhere safely.\N谷歌的代理式安全运营中心与威兹的深度云上下文相结合，使客户能够安全地在任何地方构建和部署生成式AI。
+Dialogue: 0,1:14:35.67,1:14:43.27,Sub,,0,0,0,,We're helping the Los Angeles Department of Water and Power secure critical infrastructure ahead of the LA 28 games,\N我们正在帮助洛杉矶水电局在2028年奥运会之前保障关键基础设施的安全，
+Dialogue: 0,1:14:43.27,1:14:50.26,Sub,,0,0,0,,while Singapore's CSIT enables proactive defense against advanced digital threats.\N同时，新加坡的CSIT能够主动防御高级数字威胁。
+Dialogue: 0,1:14:50.26,1:14:56.54,Sub,,0,0,0,,DBS strengthens security by embedding Google Cloud's protection directly into their architecture,\NDBS通过将谷歌云的防护能力直接嵌入其架构，加强了安全性，
+Dialogue: 0,1:14:56.54,1:15:02.78,Sub,,0,0,0,,enabling real-time threat detection and response, reinforcing customer trust.\N实现了实时威胁检测与响应，进一步增强了客户信任。
+Dialogue: 0,1:15:02.78,1:15:12.70,Sub,,0,0,0,,Morgan Stanley chose Wiz as a key component of its cloud security strategy and is expanding visibility and control across its cloud environments.\N摩根士丹利选择威兹作为其云安全策略的关键组成部分，并正在扩大其在云环境中的可见性与控制力。
+Dialogue: 0,1:15:12.70,1:15:21.50,Sub,,0,0,0,,Now, as part of this strategy, the firm is deploying Google Cloud Security capabilities to support its evolving cloud platforms.\N如今，作为该策略的一部分，该公司正在部署谷歌云安全功能，以支持其不断演进的云平台。
+Dialogue: 0,1:15:21.50,1:15:34.82,Sub,,0,0,0,,And trusted global icons from Nestlé to LVMH, from BMW to Shell, rely on Wiz and Google Cloud Security to ensure their AI-driven future is secure by design.\N从雀巢到LVMH，从宝马到壳牌，众多全球知名品牌都依赖威兹和谷歌云安全，\N确保其由AI驱动的未来从设计之初就安全可靠。
+Dialogue: 0,1:15:34.82,1:15:38.98,Sub,,0,0,0,,We have closed the loop between the defender and the builder.\N我们已实现防御者与建设者之间的闭环。
+Dialogue: 0,1:15:38.98,1:15:47.69,Sub,,0,0,0,,Google and Wiz provide a unified agentic defense that is secure by design and autonomous by nature.\N谷歌与威兹提供统一的代理式防御，从设计上就安全，本质上自主。
+Dialogue: 0,1:15:47.69,1:15:56.81,Sub,,0,0,0,,Together, we are redefining cybersecurity for the AI era so security teams can protect their organizations at machine\N我们共同重新定义了AI时代下的网络安全，让安全团队能够以机器的速度保护其组织。
+Dialogue: 0,1:15:56.81,1:16:04.70,Sub,,0,0,0,,speed. To share more about how our agents are helping your customers, please welcome Carrie Tharp.\N速度。要了解更多我们的智能体如何帮助您的客户，请欢迎卡莉·萨尔普登场。
+Dialogue: 0,1:16:20.93,1:16:22.57,Sub,,0,0,0,,Thank you, Francis.\N谢谢，弗朗西斯。
+Dialogue: 0,1:16:22.57,1:16:26.69,Sub,,0,0,0,,A secure foundation gives you the confidence to innovate.\N安全的基石能让你有信心进行创新。
+Dialogue: 0,1:16:26.69,1:16:31.57,Sub,,0,0,0,,At Google, we are using that foundation to solve two of your biggest challenges--\N在谷歌，我们正利用这一基石来解决您面临的两大挑战——
+Dialogue: 0,1:16:31.57,1:16:35.89,Sub,,0,0,0,,serving your customers and helping your employees work smarter.\N服务您的客户并帮助您的员工更高效地工作。
+Dialogue: 0,1:16:35.89,1:16:47.44,Sub,,0,0,0,,We do this by deploying a coordinated agentic task force, specialized agents that don't just assist your team-- they operate alongside them.\N我们通过部署协同的代理式特遣队来实现，这些专业智能体不仅协助您的团队，更与之并肩协作。
+Dialogue: 0,1:16:47.44,1:16:52.00,Sub,,0,0,0,,In the agentic era, an agent is no longer just a tool.\N在代理式时代，智能体不再仅仅是一个工具。
+Dialogue: 0,1:16:52.00,1:17:02.56,Sub,,0,0,0,,It's a strategic extension of your business, built to expand your reach, deepen engagement, and personalized service at scale.\N它是您业务的战略延伸，旨在拓展您的覆盖范围，深化用户互动，并实现规模化个性化服务。
+Dialogue: 0,1:17:02.56,1:17:11.84,Sub,,0,0,0,,Earlier this year, we launched Gemini Enterprise for Customer Experience, a suite designed to enhance the entire customer journey\N今年早些时候，我们推出了 Gemini 企业版客户体验，这是一套旨在提升整个客户旅程的解决方案。
+Dialogue: 0,1:17:11.84,1:17:17.24,Sub,,0,0,0,,from the first moment of discovery to ongoing service interactions.\N从最初的发现时刻到持续的服务互动。
+Dialogue: 0,1:17:17.24,1:17:20.48,Sub,,0,0,0,,Central to this is agentic commerce.\N这其中的核心是代理式商业。
+Dialogue: 0,1:17:20.48,1:17:31.76,Sub,,0,0,0,,We have introduced pre-built shopping and food ordering agents that handle everything from discovery to checkout entirely through natural language.\N我们推出了预构建的购物和订餐智能体，可完全通过自然语言完成从发现到结账的全部流程。
+Dialogue: 0,1:17:31.76,1:17:36.34,Sub,,0,0,0,,By pairing these agents with our customer engagement agents,\N通过将这些智能体与我们的客户互动智能体相结合，
+Dialogue: 0,1:17:36.34,1:17:45.76,Sub,,0,0,0,,we've created a seamless journey from search to service, turning every interaction into revenue and retention opportunities.\N我们打造了从搜索到服务的无缝旅程，让每一次互动都转化为收入和用户留存的机会。
+Dialogue: 0,1:17:45.76,1:17:48.66,Sub,,0,0,0,,For example, with the food ordering agent,\N例如，使用食物订购智能体时，
+Dialogue: 0,1:17:48.66,1:17:58.72,Sub,,0,0,0,,Papa John's is building a hyper-personalized system that remembers customer preferences to get the food to your door faster.\N必胜客正在构建一个高度个性化系统，能够记住顾客的偏好，让食物更快送到您家门口。
+Dialogue: 0,1:17:58.72,1:18:08.60,Sub,,0,0,0,,During live interactions, Agent Assist coaches employees to deliver fast and more accurate answers to customer questions.\N在实时互动中，智能体助手会指导员工快速且准确地回答客户问题。
+Dialogue: 0,1:18:08.60,1:18:13.76,Sub,,0,0,0,,For example, Best Buy is guiding shoppers through those complex tech specs,\N例如，百思买正在帮助消费者理清那些复杂的科技参数，
+Dialogue: 0,1:18:13.76,1:18:19.16,Sub,,0,0,0,,issue resolution, and appointment scheduling, all autonomously.\N问题解决和预约安排，全部实现自主化。
+Dialogue: 0,1:18:19.16,1:18:26.00,Sub,,0,0,0,,And our new omnichannel gateway helps ensure your agents maintain contacts across every surface--\N我们的全新全渠道网关有助于确保您的智能体在每个界面都保持联系。
+Dialogue: 0,1:18:26.00,1:18:33.44,Sub,,0,0,0,,web, mobile, voice-- while preserving universal consumer context.\N网页、移动设备、语音——同时保持通用的消费者情境。
+Dialogue: 0,1:18:33.44,1:18:37.28,Sub,,0,0,0,,If a customer moves from a text chat to a phone call,\N如果客户从文字聊天转到电话通话，
+Dialogue: 0,1:18:37.28,1:18:41.79,Sub,,0,0,0,,the agent seamlessly remembers exactly where they left off,\N智能体能无缝记住他们之前中断的位置，
+Dialogue: 0,1:18:41.79,1:18:48.83,Sub,,0,0,0,,and this scales globally, conversing with human-like voice capabilities in multiple languages.\N并且可实现全球扩展，支持多种语言的类人语音交互。
+Dialogue: 0,1:18:48.83,1:18:58.63,Sub,,0,0,0,,Gemini Enterprise for Customer Experience is the technology powering the Home Depot's Magic Apron Assistant to reach customers across every channel.\N企业版 Gemini 为客户体验提供技术支持，使家得宝的魔法围裙助手能够通过所有渠道触达客户。
+Dialogue: 0,1:18:58.63,1:19:00.44,Sub,,0,0,0,,Let's hear from the Home Depot.\N让我们听听家得宝的说法。
+Dialogue: 0,1:19:00.44,1:19:07.61,Sub,,0,0,0,,There's a customer journey that often starts with inspiration, goes into research, and then into shopping and buying and then into doing.\N客户旅程通常始于灵感，接着进入研究阶段，然后是购物和购买，最后进入实际使用阶段。
+Dialogue: 0,1:19:07.61,1:19:11.65,Sub,,0,0,0,,And Magic Apron is really a digital agent to help through that whole journey,\N而魔法围裙实际上是一个数字智能体，帮助客户完成整个旅程。
+Dialogue: 0,1:19:11.65,1:19:23.55,Sub,,0,0,0,,and it is really there to provide that orange apron experience for help and customer service, the same way that as you come into a store, you're used to that great customer service.\N它真正的作用是提供那种橙色围裙般的帮助与客户服务体验，就像您走进一家门店时，\N习惯于享受到的优质客户服务一样。
+Dialogue: 0,1:19:23.55,1:19:31.27,Sub,,0,0,0,,So we've had a partnership with Google for quite some time, and the latest things that they're bringing to market are incredibly exciting to us.\N我们与谷歌的合作已经持续了相当长一段时间，他们最新推向市场的产品让我们感到非常振奋。
+Dialogue: 0,1:19:31.27,1:19:36.20,Sub,,0,0,0,,We're really excited about Magic Apron Shopping Assistant.\N我们对魔法围裙购物助手感到非常兴奋。
+Dialogue: 0,1:19:36.20,1:19:40.48,Sub,,0,0,0,,Our relationship with Google has really made this possible in a variety of different ways.\N我们与谷歌的关系在多个方面真正促成了这一成果的实现。
+Dialogue: 0,1:19:40.48,1:19:49.22,Sub,,0,0,0,,If you just focus for a second on Gemini Enterprise and you think about how it's the bedrock of what we are doing with Magic Apron, it gives us the power\N如果你稍微关注一下企业版 Gemini，再想想它作为我们打造魔法围裙项目的基础，\N它赋予了我们所需的力量和速度。
+Dialogue: 0,1:19:49.22,1:19:54.93,Sub,,0,0,0,,and the speed in which we need in order to power these great technologies.\N正是凭借企业版 Gemini，我们才具备了驱动这些卓越技术所需的动力和速度。
+Dialogue: 0,1:19:54.93,1:20:01.08,Sub,,0,0,0,,Now, with Gemini Enterprise, we think that we can blend those channels because we'll have an agentic back end.\N现在，借助企业版 Gemini，我们认为可以融合这些渠道，因为我们拥有一个代理式后端。
+Dialogue: 0,1:20:01.08,1:20:08.22,Sub,,0,0,0,,Maybe most importantly, we see a higher conversion rate when they leverage the tool versus when they don't.\N也许最重要的是，我们发现当客户使用该工具时，转化率明显高于未使用时。
+Dialogue: 0,1:20:08.22,1:20:12.59,Sub,,0,0,0,,When customers come into the store and they use Magic Apron, typically it's about wayfinding.\N当顾客走进商店并使用魔法围裙时，通常是为了导航指引。
+Dialogue: 0,1:20:12.59,1:20:13.80,Sub,,0,0,0,,It's about product knowledge.\N这关乎产品知识。
+Dialogue: 0,1:20:13.80,1:20:15.34,Sub,,0,0,0,,It's about compatibility.\N这关乎兼容性。
+Dialogue: 0,1:20:15.34,1:20:17.76,Sub,,0,0,0,,But they also use it at home on our website.\N他们也在家中通过我们的网站使用它。
+Dialogue: 0,1:20:17.76,1:20:26.12,Sub,,0,0,0,,Those experiences should all get better-- easier to be inspired, easier to find what I need, easier to order it and get it, easier to get support after the fact.\N这些体验都应该变得更好——更轻松地获得灵感，更轻松地找到所需商品，更轻松地下单并收货，\N更轻松地获得售后支持。
+Dialogue: 0,1:20:26.12,1:20:32.56,Sub,,0,0,0,,The partnership really keeps us at the forefront of building great experiences for our customers and our associates.\N这项合作真正让我们始终处于为顾客和员工打造卓越体验的前沿。
+Dialogue: 0,1:20:41.37,1:20:47.25,Sub,,0,0,0,,The same agentic approach is also reshaping digital-first industries.\N相同的代理式方法也在重塑以数字为先的行业。
+Dialogue: 0,1:20:47.25,1:20:49.93,Sub,,0,0,0,,One example of this is Reliance.\N一个例子就是信实集团。
+Dialogue: 0,1:20:49.93,1:20:55.21,Sub,,0,0,0,,Reliance is transforming retail for millions in India with a shopping agent.\N信实集团正通过购物智能体，为印度数百万用户重塑零售体验。
+Dialogue: 0,1:20:55.21,1:21:06.69,Sub,,0,0,0,,Customers can simply type "plan a birthday party," and the agent guides their journey across categories and assembles their cart, which drives more revenue per visit.\N顾客只需输入“策划一场生日派对”，智能体便会引导他们跨品类完成购物旅程，并自动整理购物车，\N从而提升每次访问的营收。
+Dialogue: 0,1:21:06.69,1:21:15.09,Sub,,0,0,0,,Gemini-powered catalog enrichment supports this, analyzing millions of images in minutes instead of months.\NGemini 驱动的目录增强功能支持这一过程，可在几分钟内分析数百万张图片，而非耗时数月。
+Dialogue: 0,1:21:15.09,1:21:22.85,Sub,,0,0,0,,Gemini Enterprise for Customer Experience is hard at work across many industries and enterprises.\NGemini 企业版客户体验正在多个行业和企业中全力运作。
+Dialogue: 0,1:21:22.85,1:21:30.57,Sub,,0,0,0,,Internally, teams at Google, including Google Store, Google Photos, Google One, and YouTube,\N内部团队，包括 Google Store、Google Photos、\NGoogle One 和 YouTube，
+Dialogue: 0,1:21:30.57,1:21:35.88,Sub,,0,0,0,,are partnering with us to power our own scaled customer experiences.\N正与我们合作，以打造我们自己的规模化客户体验。
+Dialogue: 0,1:21:35.88,1:21:40.52,Sub,,0,0,0,,Let's take a look at how one of our first internal customers is doing this.\N让我们来看看我们首批内部客户之一是如何做到这一点的。
+Dialogue: 0,1:21:40.52,1:21:42.36,Sub,,0,0,0,,Over to you, Patrick.\N交给你了，帕特里克。
+Dialogue: 0,1:21:51.34,1:21:52.42,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,1:21:52.42,1:21:53.48,Sub,,0,0,0,,Thanks, Carrie.\N谢谢，卡莉。
+Dialogue: 0,1:21:53.48,1:21:54.10,Sub,,0,0,0,,Hey, y'all.\N嗨，大家。
+Dialogue: 0,1:21:54.10,1:21:57.76,Sub,,0,0,0,,I'm Patrick Marlow, a senior product manager here at Google Cloud.\N我是帕特里克·马洛，谷歌云的高级产品经理。
+Dialogue: 0,1:21:57.76,1:22:05.60,Sub,,0,0,0,,YouTube TV customer support recently launched a voice agent to help users with NFL Sunday Ticket and YouTube TV plan subscriptions.\NYouTube TV 客户支持最近推出了一款语音智能体，\N帮助用户处理 NFL 周日票和 YouTube TV 订阅计划的问题。
+Dialogue: 0,1:22:05.60,1:22:09.34,Sub,,0,0,0,,It's currently live in production, serving 100% of their users.\N目前该智能体已上线生产环境，服务 100% 的用户。
+Dialogue: 0,1:22:09.34,1:22:11.38,Sub,,0,0,0,,We're going to take a look at it in action today.\N今天我们将现场演示它的运行情况。
+Dialogue: 0,1:22:11.38,1:22:13.09,Sub,,0,0,0,,I'm going to call the support number now.\N我现在就拨打支持电话。
+Dialogue: 0,1:22:18.12,1:22:22.42,Sub,,0,0,0,,Thanks for calling the YouTube TV and NFL Sunday Ticket Support Line.\N感谢您致电 YouTube TV 和 NFL 周日票支持热线。
+Dialogue: 0,1:22:22.42,1:22:24.46,Sub,,0,0,0,,So tell me, how can I help you today?\N请问今天有什么我可以帮您的吗？
+Dialogue: 0,1:22:24.46,1:22:28.27,Sub,,0,0,0,,Hey yeah, I've got a bunch of my friends coming over tomorrow night for the NFL draft.\N嗨，明天晚上我有几个朋友要来，我想看 NFL 选秀。
+Dialogue: 0,1:22:28.27,1:22:29.06,Sub,,0,0,0,,I don't have cable.\N我没有有线电视。
+Dialogue: 0,1:22:29.06,1:22:31.30,Sub,,0,0,0,,And to be honest, I really only watch sports.\N说实话，我只看体育节目。
+Dialogue: 0,1:22:31.30,1:22:33.50,Sub,,0,0,0,,Does YouTube TV have a plan that's just for that?\NYouTube TV 有没有专门针对体育的套餐？
+Dialogue: 0,1:22:37.12,1:22:38.24,Sub,,0,0,0,,Yes, we do.\N有的，我们有。
+Dialogue: 0,1:22:38.24,1:22:45.38,Sub,,0,0,0,,The YouTube TV Sports Plan has exactly what you're looking for, plus over 30 other sports channels.\NYouTube TV 体育套餐正好符合您的需求，还包含超过 30 个体育频道。
+Dialogue: 0,1:22:45.38,1:22:48.60,Sub,,0,0,0,,It's $18 less per month than the base plan.\N比基础套餐每月便宜 18 美元。
+Dialogue: 0,1:22:48.60,1:22:53.62,Sub,,0,0,0,,Would you like me to text you a link to the number you're calling from that will take you directly-- Yeah, go ahead and send me a link.\N需要我发个链接到您拨打的号码，直接带您进入页面吗？——对，发给我吧。
+Dialogue: 0,1:22:53.62,1:22:54.66,Sub,,0,0,0,,I'll take a look at it.\N我会看一下。
+Dialogue: 0,1:23:00.12,1:23:02.84,Sub,,0,0,0,,Great, I just sent the link to your mobile phone.\N好的，我已经把链接发到您的手机上了。
+Dialogue: 0,1:23:02.84,1:23:05.28,Sub,,0,0,0,,Is there anything else I can help with today?\N今天还有其他我可以帮您的吗？
+Dialogue: 0,1:23:05.28,1:23:07.74,Sub,,0,0,0,,Yeah, I'm going to take a look at this now.\N好的，我现在就看一下这个。
+Dialogue: 0,1:23:07.74,1:23:10.28,Sub,,0,0,0,,Actually, my father-in-law is hanging out with me here today.\N其实，我岳父今天也和我在一起。
+Dialogue: 0,1:23:10.28,1:23:13.46,Sub,,0,0,0,,He's been thinking about getting the sports plan for his account as well.\N他也在考虑为自己的账户办理体育套餐。
+Dialogue: 0,1:23:13.46,1:23:15.42,Sub,,0,0,0,,I just wanted to see what he thinks about this.\N我只是想看看他对此有什么看法。
+Dialogue: 0,1:23:19.00,1:23:22.58,Sub,,0,0,0,,Actually, could you just quickly summarize this plan for him in Spanish?\N其实，你能用西班牙语快速给他总结一下这个计划吗？
+Dialogue: 0,1:23:22.58,1:23:28.10,Sub,,0,0,0,,I think he just wants to know that he can get both football e football.\N我觉得他只是想知道，他能不能同时看足球和橄榄球。
+Dialogue: 0,1:23:42.70,1:23:44.41,Sub,,0,0,0,,Look, one other question.\N听着，还有一个问题。
+Dialogue: 0,1:23:44.41,1:23:49.45,Sub,,0,0,0,,I was planning on setting up multiple TVs throughout the house, like one in the living room, one over on the patio.\N我原本计划在屋子里设置多台电视，比如客厅一台，露台一台。
+Dialogue: 0,1:23:49.45,1:23:53.27,Sub,,0,0,0,,Would that be OK with this plan?\N这个套餐允许这样吗？
+Dialogue: 0,1:23:53.27,1:23:58.73,Sub,,0,0,0,,Definitely, with the Sports Plan, you can stream on up to three screens at the same time.\N当然可以，体育套餐支持同时在三块屏幕上播放。
+Dialogue: 0,1:23:58.73,1:23:59.69,Sub,,0,0,0,,Is there anything else?\N还有其他事吗？
+Dialogue: 0,1:23:59.69,1:24:00.69,Sub,,0,0,0,,Awesome.\N太棒了。
+Dialogue: 0,1:24:00.69,1:24:06.47,Sub,,0,0,0,,No, look, I'm actually in the middle of a stadium full of people right now, and I think there's millions watching me on the live stream.\N不，你看，我现在正处在一座满是人的体育场里，我觉得有数百万观众正在实时观看我。
+Dialogue: 0,1:24:06.47,1:24:07.61,Sub,,0,0,0,,So I kind of got to run.\N所以我得赶紧走了。
+Dialogue: 0,1:24:07.61,1:24:07.93,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,1:24:07.93,1:24:08.76,Sub,,0,0,0,,You've been helpful.\N你帮了大忙。
+Dialogue: 0,1:24:08.76,1:24:11.07,Sub,,0,0,0,,Later.\N待会儿见。
+Dialogue: 0,1:24:16.07,1:24:17.23,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,1:24:17.23,1:24:19.07,Sub,,0,0,0,,Now, that was pretty easy.\N现在，这事儿还挺简单的。
+Dialogue: 0,1:24:19.07,1:24:23.83,Sub,,0,0,0,,The agent was able to handle complex product logic and seamlessly pivoted languages.\N智能体能够处理复杂的产品逻辑，并且无缝切换语言。
+Dialogue: 0,1:24:23.83,1:24:26.43,Sub,,0,0,0,,But what happens if the team wants to make a change?\N但如果团队想做更改呢？
+Dialogue: 0,1:24:26.43,1:24:30.50,Sub,,0,0,0,,They don't need a bunch of software engineers updating endless lines of code.\N他们不需要一堆软件工程师不断修改无穷无尽的代码。
+Dialogue: 0,1:24:30.50,1:24:33.54,Sub,,0,0,0,,They just need CX Agent Studio.\N他们只需要 CX 智能体工作室。
+Dialogue: 0,1:24:33.54,1:24:42.60,Sub,,0,0,0,,Here, we have our Visual Builder, inside of CX Agent Studio, which is designed to give you complete transparency and control over your entire agent-building experience.\N这里是我们位于 CX 智能体工作室内的可视化构建工具，\N旨在为您提供整个智能体构建体验的完全透明度和控制权。
+Dialogue: 0,1:24:42.60,1:24:47.30,Sub,,0,0,0,,This is the behind-the-scenes look at the actual YouTube TV's agent that they put in production.\N这是 YouTube TV 实际投入生产的智能体的幕后运作情况。
+Dialogue: 0,1:24:47.30,1:24:54.26,Sub,,0,0,0,,The orchestration is managed across multiple specialized agents, which can handle even the most complex requests.\N协调工作由多个专业智能体共同管理，能够处理最复杂的请求。
+Dialogue: 0,1:24:54.26,1:24:56.72,Sub,,0,0,0,,And with our built-in test interface,\N并且通过我们内置的测试界面，
+Dialogue: 0,1:24:56.72,1:25:05.26,Sub,,0,0,0,,you can ensure that every answer is grounded, factual, and pulled directly from a knowledge base, like the Agents Price Finder tool here.\N您可以确保每个回答都有据可依、事实准确，并直接来自知识库，例如这里的智能体价格查找工具。
+Dialogue: 0,1:25:05.26,1:25:06.94,Sub,,0,0,0,,And the best part?\N最棒的是？
+Dialogue: 0,1:25:06.94,1:25:13.50,Sub,,0,0,0,,YouTube TV customer support built and deployed this entire experience in just six weeks.\NYouTube TV 客户支持团队仅用六周就完成了整个体验的构建和部署。
+Dialogue: 0,1:25:13.50,1:25:16.42,Sub,,0,0,0,,Now, let's say that the team wants to run a promotion.\N现在假设团队想要开展一项促销活动。
+Dialogue: 0,1:25:16.42,1:25:19.98,Sub,,0,0,0,,It's really simple for me to add a new subagent here.\N我在这里添加一个新子智能体非常简单。
+Dialogue: 0,1:25:19.98,1:25:21.82,Sub,,0,0,0,,Click Add a New Subagent.\N点击“添加新子智能体”。
+Dialogue: 0,1:25:21.82,1:25:26.13,Sub,,0,0,0,,And I will make this our new promotions agent.\N我将把这个设为我们的新促销智能体。
+Dialogue: 0,1:25:26.13,1:25:28.49,Sub,,0,0,0,,Say promotions.\N说“促销”。
+Dialogue: 0,1:25:28.49,1:25:29.73,Sub,,0,0,0,,I'll hit Save.\N我点击保存。
+Dialogue: 0,1:25:29.73,1:25:37.93,Sub,,0,0,0,,And then I'm going to quickly add a set of business logic via instructions in natural language to our agent.\N然后我将通过自然语言指令快速为智能体添加一组业务逻辑。
+Dialogue: 0,1:25:37.93,1:25:39.85,Sub,,0,0,0,,I'll hit Create.\N我点击创建。
+Dialogue: 0,1:25:39.85,1:25:45.29,Sub,,0,0,0,,And just like that, our multi-agent system has instantly adapted to this new specialized agent.\N就这样，我们的多智能体系统立即适应了这个新的专业智能体。
+Dialogue: 0,1:25:45.29,1:25:47.73,Sub,,0,0,0,,It's really that simple.\N真的就这么简单。
+Dialogue: 0,1:25:47.73,1:25:55.45,Sub,,0,0,0,,Finally, with conversational insights, the YouTube TV team can instantly see how these calls are performing, all within the same platform.\N最后，借助对话洞察功能，YouTube TV 团队可以立即看到这些通话的表现，\N所有操作都在同一平台内完成。
+Dialogue: 0,1:25:55.45,1:25:58.21,Sub,,0,0,0,,Here's one of my test calls from earlier this morning.\N这是我今早早些时候的一次测试通话。
+Dialogue: 0,1:25:58.21,1:26:00.17,Sub,,0,0,0,,Now, let's recap.\N现在，我们来总结一下。
+Dialogue: 0,1:26:00.17,1:26:08.21,Sub,,0,0,0,,We just turned a routine support call into a multilingual upgrade and a globally deployed promotion, all in under four minutes.\N我们刚刚在不到四分钟内，将一次常规支持通话升级为多语言支持和全球推广。
+Dialogue: 0,1:26:08.21,1:26:12.43,Sub,,0,0,0,,This is the power of Gemini Enterprise for Customer Experience.\N这就是 Gemini 企业版在客户体验中的强大之处。
+Dialogue: 0,1:26:12.43,1:26:21.29,Sub,,0,0,0,,It gives you enterprise-grade reasoning, deep tool integration, a powerful Visual Builder, and insights to iterate at the speed of your business.\N它为你提供企业级推理能力、深度工具集成、强大的可视化构建工具，以及推动业务快速迭代的洞察。
+Dialogue: 0,1:26:21.29,1:26:25.00,Sub,,0,0,0,,We can't wait to see what you will build next.\N我们迫不及待想看看你接下来会打造出什么。
+Dialogue: 0,1:26:25.00,1:26:26.24,Sub,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,1:26:30.12,1:26:36.32,Sub,,0,0,0,,Please welcome VP of product, Google Workspace, Yulie Kwon Kim.\N请大家欢迎谷歌工作区产品副总裁金有丽。
+Dialogue: 0,1:26:50.48,1:26:54.96,Sub,,0,0,0,,Google Workspace is the world's most popular productivity tool.\N谷歌工作区是全球最受欢迎的生产力工具。
+Dialogue: 0,1:26:54.96,1:27:01.76,Sub,,0,0,0,,But even with the best tools at our fingertips, work can still feel incredibly fragmented.\N但即使手头拥有最优秀的工具，工作仍可能感觉极其零散。
+Dialogue: 0,1:27:01.76,1:27:03.06,Sub,,0,0,0,,We've all been there.\N我们都经历过这种情况。
+Dialogue: 0,1:27:03.06,1:27:09.28,Sub,,0,0,0,,You're trying to answer one simple question, and 10 minutes later, you have 15 tabs open.\N你只是想回答一个简单问题，10分钟后却打开了15个标签页。
+Dialogue: 0,1:27:09.28,1:27:18.32,Sub,,0,0,0,,You're jumping from a stale email to a slide deck that's being edited as you watch and digging through a spreadsheet just to find a quick answer.\N你从一封过时的邮件跳到一个正在实时编辑的幻灯片，又在电子表格里翻找，只为找到一个快速答案。
+Dialogue: 0,1:27:18.32,1:27:25.48,Sub,,0,0,0,,We all spend half our day finding information and the other half figuring out what to do with it.\N我们每天花一半时间找信息，另一半时间思考如何处理这些信息。
+Dialogue: 0,1:27:25.48,1:27:29.44,Sub,,0,0,0,,What if you could skip both?\N如果你能跳过这两步呢？
+Dialogue: 0,1:27:29.44,1:27:33.84,Sub,,0,0,0,,Today, we're introducing Workspace Intelligence.\N今天，我们推出工作区智能。
+Dialogue: 0,1:27:37.76,1:27:42.52,Sub,,0,0,0,,With the advanced reasoning capabilities of Gemini and state-of-the-art embedding models,\N借助 Gemini 的先进推理能力和顶尖的嵌入模型，
+Dialogue: 0,1:27:42.52,1:27:48.00,Sub,,0,0,0,,we're eliminating context fragmentation across the Workspace suite.\N我们正在消除工作区套件中的上下文碎片化问题。
+Dialogue: 0,1:27:48.00,1:27:53.60,Sub,,0,0,0,,Think of it as a unified intelligence layer that lives inside every Workspace app.\N可以把它看作一个统一的智能层，存在于每个 Workspace 应用中。
+Dialogue: 0,1:27:53.60,1:27:57.72,Sub,,0,0,0,,It connects the dots and lets AI do the heavy lifting.\N它能连接各个要点，让 AI 承担繁重的工作。
+Dialogue: 0,1:27:57.72,1:28:00.13,Sub,,0,0,0,,Let's see it in action.\N我们来看一下实际演示。
+Dialogue: 0,1:28:10.44,1:28:14.48,Sub,,0,0,0,,So remember that furniture rebrand you saw earlier?\N还记得之前看到的那个家具品牌重塑吗？
+Dialogue: 0,1:28:14.48,1:28:19.08,Sub,,0,0,0,,Let's say I'm the regional distributor, and here I am in Google Chat.\N假设我是区域经销商，现在我正在 Google Chat 中。
+Dialogue: 0,1:28:19.08,1:28:24.11,Sub,,0,0,0,,This is where I collaborate with my colleagues and now my agents, all in one place.\N这里我与同事以及我的智能体协同工作，所有内容都集中在一个地方。
+Dialogue: 0,1:28:24.11,1:28:27.55,Sub,,0,0,0,,I'm here in the Regional Managers chat space.\N我现在在区域经理的聊天空间里。
+Dialogue: 0,1:28:27.55,1:28:28.99,Sub,,0,0,0,,And look at this.\N看这个。
+Dialogue: 0,1:28:28.99,1:28:38.47,Sub,,0,0,0,,The Regional Operations Agent, which we built in Gemini Enterprise, just alerted the team that our new display kits are arriving early.\N我们在 Gemini 企业版中构建的区域运营智能体刚刚提醒团队，我们的新展示套装将提前到达。
+Dialogue: 0,1:28:38.47,1:28:44.07,Sub,,0,0,0,,And as you can see, I have multiple chats blowing up.\N如你所见，我有多个聊天窗口同时弹出消息。
+Dialogue: 0,1:28:44.07,1:28:46.99,Sub,,0,0,0,,What do I need to do next?\N接下来我需要做什么？
+Dialogue: 0,1:28:46.99,1:28:53.03,Sub,,0,0,0,,With Ask Gemini, Google Chat becomes my Command Center.\N有了 Ask Gemini，Google Chat 就成了我的指挥中心。
+Dialogue: 0,1:28:53.03,1:28:54.31,Sub,,0,0,0,,Look here.\N看这里。
+Dialogue: 0,1:28:54.31,1:28:58.51,Sub,,0,0,0,,Gemini tells me exactly what matters right now.\NGemini 告诉我此刻真正重要的事情。
+Dialogue: 0,1:28:58.51,1:29:02.99,Sub,,0,0,0,,See? It surfaced an urgent task.\N看？它已经找出了一项紧急任务。
+Dialogue: 0,1:29:02.99,1:29:09.63,Sub,,0,0,0,,It linked the pitch deck that I need to localize, and it flagged my 4:00 PM deadline for the regional plan.\N它关联了我需要本地化的演示文稿，并标出了我区域计划的下午4点截止时间。
+Dialogue: 0,1:29:09.63,1:29:10.85,Sub,,0,0,0,,The gathering is done.\N收集工作已完成。
+Dialogue: 0,1:29:10.85,1:29:14.31,Sub,,0,0,0,,And I haven't opened a single extra tab.\N而我一个额外的标签页都没打开。
+Dialogue: 0,1:29:14.31,1:29:23.66,Sub,,0,0,0,,Now, to build this plan, I remember we had a great chart that showed regional sales last quarter-- somewhere.\N现在要制定这个计划，我记得我们有一张很棒的图表，展示了上个季度的区域销售情况——就在某个地方。
+Dialogue: 0,1:29:23.66,1:29:26.56,Sub,,0,0,0,,Normally, this is where the hunt begins.\N通常，这时候搜索才真正开始。
+Dialogue: 0,1:29:26.56,1:29:30.62,Sub,,0,0,0,,I jump into a folder and stare at dozens of files.\N我跳进一个文件夹，盯着几十个文件发呆。
+Dialogue: 0,1:29:30.62,1:29:34.02,Sub,,0,0,0,,Instead, I'll ask Gemini.\N而现在，我会直接问 Gemini。
+Dialogue: 0,1:29:34.02,1:29:41.54,Sub,,0,0,0,,Find the merchandising playbook from last quarter, the one with the chart showing regional sales.\N找到上个季度的营销手册，就是那张有区域销售图表的那份。
+Dialogue: 0,1:29:41.54,1:29:43.62,Sub,,0,0,0,,This isn't just keyword matching.\N这不仅仅是关键词匹配。
+Dialogue: 0,1:29:43.62,1:29:50.14,Sub,,0,0,0,,Workspace Intelligence understands the context of my meetings and the content inside my files.\N工作区智能理解我会议的上下文以及我文件中的内容。
+Dialogue: 0,1:29:50.14,1:29:51.42,Sub,,0,0,0,,Here it is.\N就在这里。
+Dialogue: 0,1:29:51.42,1:30:00.34,Sub,,0,0,0,,It pointed me directly to the dock with the exact graph I need-- a needle in a haystack, solved in seconds.\N它直接带我找到了我需要的精确图表——如同大海捞针，几秒钟就解决了。
+Dialogue: 0,1:30:00.34,1:30:05.10,Sub,,0,0,0,,Now I need to turn this scattered data into a regional plan.\N现在我需要把这些零散的数据整合成一份区域计划。
+Dialogue: 0,1:30:05.10,1:30:12.50,Sub,,0,0,0,,I have a standard format for briefing store managers, and with Ask Gemini, I basically say just do it for me.\N我有标准的店长简报格式，而使用 Ask Gemini，我基本上只需说一句“帮我搞定”。
+Dialogue: 0,1:30:12.50,1:30:15.26,Sub,,0,0,0,,Watch this.\N请看。
+Dialogue: 0,1:30:15.26,1:30:25.25,Sub,,0,0,0,,Let's see, use the regional campaign skill to-- oops,\N让我们试试，使用区域活动技能来——哎呀，
+Dialogue: 0,1:30:25.25,1:30:29.77,Sub,,0,0,0,,create a deck with a plan for organic living.\N创建一份关于有机生活的计划演示文稿。
+Dialogue: 0,1:30:29.77,1:30:34.45,Sub,,0,0,0,,By tagging that specific skill, Workspace Intelligence goes to work.\N通过标记这一特定技能，工作区智能开始工作。
+Dialogue: 0,1:30:34.45,1:30:38.09,Sub,,0,0,0,,It cross-references my emails, my chats, my other docs.\N它交叉参考我的邮件、聊天记录和其他文档。
+Dialogue: 0,1:30:38.09,1:30:40.69,Sub,,0,0,0,,It pulls live HubSpot win-loss data.\N它调取了实时的 HubSpot 赢/输数据。
+Dialogue: 0,1:30:40.69,1:30:46.89,Sub,,0,0,0,,It uses our corporate branding, all to generate a new Google slide deck.\N它运用了我们的企业品牌规范，生成了一份全新的 Google 演示文稿。
+Dialogue: 0,1:30:46.89,1:30:49.19,Sub,,0,0,0,,It's hard at work pulling that deck together.\N正在努力整理这份演示文稿。
+Dialogue: 0,1:30:49.19,1:30:51.37,Sub,,0,0,0,,And here it is.\N就在这里。
+Dialogue: 0,1:30:51.37,1:31:03.25,Sub,,0,0,0,,And in the citations up here, you can see all the sources Workspace Intelligence pulled in without me having to ask-- the emails, the chats, the other files.\N你看上面的引用，所有 Workspace Intelligence 自动收集的资料都列出来了，\N我根本不用提问——邮件、聊天记录、其他文件。
+Dialogue: 0,1:31:03.25,1:31:06.65,Sub,,0,0,0,,Should we take a look?\N我们看看吗？
+Dialogue: 0,1:31:06.65,1:31:09.29,Sub,,0,0,0,,Yeah, look at this.\N嗯，看看这个。
+Dialogue: 0,1:31:09.29,1:31:11.17,Sub,,0,0,0,,It's beautiful.\N太棒了。
+Dialogue: 0,1:31:11.17,1:31:17.92,Sub,,0,0,0,,It matches my brand, and it's consistent with how I've structured all of my regional plan decks in the past.\N完全符合我的品牌风格，也和我过去所有区域计划演示文稿的结构一致。
+Dialogue: 0,1:31:17.92,1:31:23.52,Sub,,0,0,0,,And it looks like it was designed by a creative pro, not a terminal.\N看起来像是专业创意人员设计的，而不是终端设备生成的。
+Dialogue: 0,1:31:23.52,1:31:26.52,Sub,,0,0,0,,I'm ready to brief my team.\N我已经准备好向团队汇报了。
+Dialogue: 0,1:31:26.52,1:31:30.60,Sub,,0,0,0,,Workspace Intelligence is the end of the context tax.\NWorkspace Intelligence 终结了上下文成本。
+Dialogue: 0,1:31:30.60,1:31:36.60,Sub,,0,0,0,,It transforms how you work by turning fragmented information into a clear path forward.\N它通过将零散的信息转化为清晰的前进路径，彻底改变了你的工作方式。
+Dialogue: 0,1:31:36.60,1:31:38.20,Sub,,0,0,0,,No complicated setup.\N无需复杂设置。
+Dialogue: 0,1:31:38.20,1:31:39.34,Sub,,0,0,0,,It's secure.\N安全可靠。
+Dialogue: 0,1:31:39.34,1:31:40.48,Sub,,0,0,0,,It's integrated.\N无缝集成。
+Dialogue: 0,1:31:40.48,1:31:43.24,Sub,,0,0,0,,It just works.\N即插即用。
+Dialogue: 0,1:31:43.24,1:31:53.20,Sub,,0,0,0,,By moving from simple automation to full-scale AI orchestration, industry leaders are using Workspace to fundamentally redefine global productivity.\N通过从简单自动化转向全面的AI编排，行业领袖正利用Workspace从根本上重塑全球生产力。
+Dialogue: 0,1:31:53.20,1:32:00.44,Sub,,0,0,0,,For example, customers like Colgate-Palmolive rolled out Google Workspace to 34,000 employees.\N例如，像高露洁-棕榄这样的客户已将谷歌Workspace推广至34,000名员工。
+Dialogue: 0,1:32:00.44,1:32:09.12,Sub,,0,0,0,,AI agents built on Gemini helped their teams drive innovation, turning data into new product concepts in minutes, not months.\N基于Gemini构建的智能体帮助他们的团队推动创新，将数据转化为新产品概念的时间从数月缩短至数分钟。
+Dialogue: 0,1:32:09.12,1:32:20.12,Sub,,0,0,0,,And they drive business growth by unlocking actionable insights from decades of sales history, empowering their teams to help brighten millions of smiles every morning.\N他们通过挖掘数十年销售历史中的可操作洞察，推动业务增长，赋能团队每天为数百万张笑脸带来光明。
+Dialogue: 0,1:32:20.12,1:32:28.72,Sub,,0,0,0,,At Natura, custom agents are accelerating data-driven reporting by 10x, while at Korean Air,\N在Natura，定制智能体使数据驱动的报告速度提升了10倍，而在韩亚航空，
+Dialogue: 0,1:32:28.72,1:32:36.92,Sub,,0,0,0,,over 22,000 global employees use AI agents and tools to accelerate high-impact operational and care tasks.\N超过22,000名全球员工正使用AI智能体和工具，加速高影响力的运营与关怀任务。
+Dialogue: 0,1:32:36.92,1:32:45.72,Sub,,0,0,0,,And at Compass Real Estate, Gemini is managing tasks for employees so they can focus on valuable client relationships.\N在Compass房地产，Gemini正在管理员工的任务，使他们能够专注于有价值的客户关系。
+Dialogue: 0,1:32:45.72,1:32:52.64,Sub,,0,0,0,,We know many companies want to make the shift to Workspace but worry about the complexity of migration.\N我们知道许多公司希望转向Workspace，但担心迁移的复杂性。
+Dialogue: 0,1:32:52.64,1:33:03.64,Sub,,0,0,0,,I'm thrilled to announce that migrating your entire organization, including complex and finance teams from Microsoft 365 to Google Workspace,\N我很高兴宣布，将您整个组织，包括复杂的财务团队，从Microsoft 365迁移至谷歌Workspa\Nce，
+Dialogue: 0,1:33:03.64,1:33:12.07,Sub,,0,0,0,,is now up to five times faster, thanks to our new migration and interoperability enhancements.\N由于我们推出了新的迁移和互操作性增强功能，现在速度提升了五倍。
+Dialogue: 0,1:33:12.07,1:33:19.15,Sub,,0,0,0,,Today, you've seen what it looks like to fundamentally change how your employees operate.\N今天，你们已经看到了彻底改变员工工作方式的面貌。
+Dialogue: 0,1:33:19.15,1:33:22.41,Sub,,0,0,0,,Go ahead, close those 15 tabs.\N去吧，关闭那15个标签页。
+Dialogue: 0,1:33:22.41,1:33:27.71,Sub,,0,0,0,,Workspace Intelligence is now ready to do the heavy lifting for you.\NWorkspace Intelligence 现在已准备好为你们承担繁重的工作。
+Dialogue: 0,1:33:27.71,1:33:29.55,Sub,,0,0,0,,Thomas, over to you.\N托马斯，交给你了。
+Dialogue: 0,1:33:43.91,1:33:45.59,Sub,,0,0,0,,Wasn't that amazing?\N难道不令人惊叹吗？
+Dialogue: 0,1:33:50.55,1:33:52.27,Sub,,0,0,0,,Thank you, Yulie.\N谢谢，玉丽。
+Dialogue: 0,1:33:52.27,1:33:57.63,Sub,,0,0,0,,Before we close, let's take a look at one of the most respected brands in the world.\N在结束之前，让我们来看看世界上最具声望的品牌之一。
+Dialogue: 0,1:33:57.63,1:34:01.47,Sub,,0,0,0,,Serving 3.7 billion people around the world,\N为全球37亿人提供服务，
+Dialogue: 0,1:34:01.47,1:34:06.63,Sub,,0,0,0,,Unilever chose Google Cloud to build and deploy agents at scale.\N联合利华选择谷歌云来大规模构建和部署智能体。
+Dialogue: 0,1:34:06.63,1:34:10.38,Sub,,0,0,0,,Let's hear their story.\N让我们听听他们的故事。
+Dialogue: 0,1:34:10.38,1:34:15.62,Sub,,0,0,0,,At Unilever, we serve 3.7 billion people every day with our products.\N在联合利华，我们每天用产品服务全球37亿人。
+Dialogue: 0,1:34:15.62,1:34:23.66,Sub,,0,0,0,,We need to understand these individuals at a unique level, and that's what the partnership with Google Cloud allows us to do.\N我们需要以一种独特的方式理解这些个体，而这正是与谷歌云合作所赋予我们的能力。
+Dialogue: 0,1:34:23.66,1:34:29.72,Sub,,0,0,0,,It's about personalization at scale, desire at scale, and that's very unique.\N这是规模化个性化的体现，也是规模化欲望的体现，非常独特。
+Dialogue: 0,1:34:29.72,1:34:33.30,Sub,,0,0,0,,And it's at the core of our strategy.\N它是我们战略的核心。
+Dialogue: 0,1:34:33.30,1:34:38.98,Sub,,0,0,0,,We are connecting our business end-to-end for faster AI deployment across the enterprise.\N我们正在实现业务端到端连接，以加快企业内部的AI部署速度。
+Dialogue: 0,1:34:38.98,1:34:45.36,Sub,,0,0,0,,This means using AI to supercharge demand generation, get early access to advanced AI and large language models,\N这意味着利用人工智能来大幅提升需求生成效率，提前获取先进的人工智能和大型语言模型。
+Dialogue: 0,1:34:45.36,1:34:50.84,Sub,,0,0,0,,and build even stronger partnerships with retailers, connecting data in smarter ways so we can grow together.\N并与零售商建立更紧密的合作关系，以更智能的方式连接数据，实现共同成长。
+Dialogue: 0,1:34:50.84,1:34:57.58,Sub,,0,0,0,,Underpinning all of this is a strong digital backbone powered by Google Cloud.\N这一切的背后，是一个由谷歌云提供支持的强大数字基础架构。
+Dialogue: 0,1:34:57.58,1:35:08.01,Sub,,0,0,0,,So my role is to operationalize this really exciting vision, co-creating that with Google to deliver our agentic foundations so that our agents can be architected for performance,\N因此我的职责是将这一令人振奋的愿景落地，与谷歌共同打造我们的代理式基础架构，\N确保我们的智能体能够以性能为导向进行设计。
+Dialogue: 0,1:35:08.01,1:35:12.65,Sub,,0,0,0,,scale, security, and observability right from the outset.\N从一开始就实现规模化、安全性和可观测性。
+Dialogue: 0,1:35:12.65,1:35:16.95,Sub,,0,0,0,,The competitive buying multiagentic solution, co-created with our Horizon3 Labs,\N由我们与Horizon3实验室共同开发的、具有竞争力的多智能体采购解决方案
+Dialogue: 0,1:35:16.95,1:35:25.09,Sub,,0,0,0,,is leveraging core Google Cloud technologies such as Gemini Enterprise and ADK, your Agent Development Kit, and the underlying Gemini models.\N正在利用谷歌云的核心技术，例如 Gemini 企业版和您的智能体开发工具包（ADK），\N以及底层的 Gemini 模型。
+Dialogue: 0,1:35:25.09,1:35:30.97,Sub,,0,0,0,,So this solution orchestrates a multitude of agents together through one single user interface.\N因此，该解决方案通过单一用户界面协同管理众多智能体。
+Dialogue: 0,1:35:30.97,1:35:36.41,Sub,,0,0,0,,This helps my procurement colleagues make analysis and decisions in minutes instead of days.\N这让我负责采购的同事能在几分钟内完成分析和决策，而不是几天。
+Dialogue: 0,1:35:36.41,1:35:40.19,Sub,,0,0,0,,This solution has enabled us to make smarter sourcing decisions.\N这个解决方案使我们能够做出更明智的采购决策。
+Dialogue: 0,1:35:40.19,1:35:44.07,Sub,,0,0,0,,With Google Cloud, we are turning intelligence into a growth engine.\N借助谷歌云，我们将智能转化为增长引擎。
+Dialogue: 0,1:35:53.22,1:35:56.77,Sub,,0,0,0,,There's one final difference in how we work with you.\N我们与您合作的方式还有一个最终区别。
+Dialogue: 0,1:35:56.77,1:36:00.29,Sub,,0,0,0,,We believe the future of AI must be open.\N我们相信人工智能的未来必须是开放的。
+Dialogue: 0,1:36:00.29,1:36:06.40,Sub,,0,0,0,,While others want to lock you into a wall garden that owns your models, your data, and your agents,\N当其他公司试图将您锁定在一个封闭的生态中，掌控您的模型、数据和智能体时，
+Dialogue: 0,1:36:06.40,1:36:13.68,Sub,,0,0,0,,we offer you an integrated stack, but the freedom to choose the world's best chips and models,\N我们为您提供一个集成的系统，同时赋予您选择全球最佳芯片和模型的自由，
+Dialogue: 0,1:36:13.68,1:36:21.92,Sub,,0,0,0,,the freedom to run AI wherever your data may live, the freedom to control your own destiny with deep governance features.\N赋予您在数据所在任何地方运行人工智能的自由，赋予您通过深度治理功能掌控自身命运的自由。
+Dialogue: 0,1:36:21.92,1:36:25.44,Sub,,0,0,0,,We scale this mission through our partners,\N我们通过合作伙伴来推进这一使命，
+Dialogue: 0,1:36:25.44,1:36:33.18,Sub,,0,0,0,,with whom we're building a broad and deep network of forward-deployed engineers, including Accenture, BCG,\N与包括埃森哲、波士顿咨询、德勤和麦肯锡在内的合作伙伴共同构建了一个广泛而深入的前线工程师网络，\N他们已宣布大幅扩展其谷歌 Gemini AI 业务。
+Dialogue: 0,1:36:33.18,1:36:40.88,Sub,,0,0,0,,Deloitte, and McKinsey, who've announced major expansion of their Google Gemini AI practices.\N与 Quantium、Distil 和 Tribe.AI 等以人工智能驱动的服务合作伙伴携手，\N我们正在帮助独立软件供应商
+Dialogue: 0,1:36:40.88,1:36:49.56,Sub,,0,0,0,,Along with AI-led service partners like Quantium, Distil and Tribe.AI, we're helping independent software vendors\N实现业务增长
+Dialogue: 0,1:36:49.56,1:36:55.88,Sub,,0,0,0,,and SaaS companies transform their solutions with Gemini Enterprise Agent Platform.\NSaaS 公司正借助 Gemini 企业智能体平台重塑其解决方案。
+Dialogue: 0,1:36:55.88,1:37:04.36,Sub,,0,0,0,,And we're bringing AI to small to medium-sized businesses by helping them adopt Gemini Enterprise and our AI\N我们将通过帮助中小企业采用 Gemini 企业版和我们的 AI，将 AI 带入中小型企业
+Dialogue: 0,1:37:04.36,1:37:09.12,Sub,,0,0,0,,advances in Workspace that work so seamlessly together now.\NWorkspaces 的各项进展如今已实现无缝协作。
+Dialogue: 0,1:37:09.12,1:37:11.52,Sub,,0,0,0,,We've covered a lot of ground today.\N今天我们谈了很多内容。
+Dialogue: 0,1:37:11.52,1:37:18.04,Sub,,0,0,0,,We've introduced our agentic blueprint as a foundation for agents to transform your companies--\N我们已推出代理式蓝图，作为智能体变革您企业的基础——
+Dialogue: 0,1:37:18.04,1:37:26.22,Sub,,0,0,0,,first, the AI Hypercomputer, the purpose-built foundation optimized for the physics of the agentic era; second,\N首先，是专为代理式时代物理特性优化的AI超算，其次
+Dialogue: 0,1:37:26.22,1:37:34.72,Sub,,0,0,0,,the Agentic Data Cloud, the engine that provides agents with trusted business context; Agentic Defense,\N代理式数据云，为智能体提供可信业务背景的引擎；代理式防御；
+Dialogue: 0,1:37:34.72,1:37:43.60,Sub,,0,0,0,,the autonomous protection that secures your entire AI lifecycle; fourth, the Gemini Enterprise Agent Platform,\N自动防护，保护您整个AI生命周期；第四，Gemini企业智能体平台；
+Dialogue: 0,1:37:43.60,1:37:50.30,Sub,,0,0,0,,a new agentic platform with state-of-the-art models to build, deploy, and manage agents; and finally,\N一个全新的代理式平台，配备最先进模型，用于构建、部署和管理智能体；最后，
+Dialogue: 0,1:37:50.30,1:38:05.39,Sub,,0,0,0,,the Agentic Task Force, the specialized agents that are already transforming customer experience and employee productivity and transforming workflows all served up to users to the Gemini Enterprise Application.\N代理式任务小组，这些专业智能体正正在重塑客户体验和员工生产力，并优化工作流程，\N全部通过 Gemini 企业应用呈现在用户面前。
+Dialogue: 0,1:38:05.39,1:38:14.39,Sub,,0,0,0,,To each of our customers and partners, thank you, each of you, for being on this amazing journey with us.\N感谢每一位客户和合作伙伴，感谢你们与我们共同踏上这段非凡的旅程。
+Dialogue: 0,1:38:14.39,1:38:24.95,Sub,,0,0,0,,Our teams have worked so hard this last year to prepare this amazing technology for you, and we're all so proud of the work they've done.\N我们的团队在过去一年里为准备这项令人惊叹的技术付出了巨大努力，\N我们所有人都为他们所取得的成果感到自豪。
+Dialogue: 0,1:38:24.95,1:38:27.39,Sub,,0,0,0,,This platform is ready.\N该平台已准备就绪。
+Dialogue: 0,1:38:27.39,1:38:30.39,Sub,,0,0,0,,So what will each of you build?\N那么你们每个人将构建什么？
+Dialogue: 0,1:38:30.39,1:38:38.67,Sub,,0,0,0,,We have three fantastic days planned for you, and a great set of sessions and spotlights still to come.\N我们为你们安排了三天精彩的活动，还有众多精彩环节和亮点内容即将揭晓。
+Dialogue: 0,1:38:38.67,1:38:42.17,Sub,,0,0,0,,Thank you and have an amazing Cloud Next.\N谢谢大家，祝大家在本次 Cloud Next 会议中收获非凡。

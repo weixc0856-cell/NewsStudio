@@ -1,0 +1,331 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Arial,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:10.04,0:00:12.67,Sub,,0,0,0,,everyone I'm happy to have Dylan here.
+Dialogue: 0,0:00:12.72,0:00:18.34,Sub,,0,0,0,,The first time I saw one of his videos was an interview when he talked about all the way up to
+Dialogue: 0,0:00:18.39,0:00:22.92,Sub,,0,0,0,,CPUs to talk about like neoclouds and why they have the right to exist and that was super interesting for me
+Dialogue: 0,0:00:22.97,0:00:28.60,Sub,,0,0,0,,because the theme of today is all like what are the new infrastructure primitives now that agents are here and so you
+Dialogue: 0,0:00:28.66,0:00:34.53,Sub,,0,0,0,,are tricking at that really well at that point why neoclouds are different from hyperscalers and why they should exist.
+Dialogue: 0,0:00:34.58,0:00:36.83,Sub,,0,0,0,,So can you share any of that with us?
+Dialogue: 0,0:00:36.88,0:00:37.43,Sub,,0,0,0,,Sure.
+Dialogue: 0,0:00:37.48,0:00:41.63,Sub,,0,0,0,,I mean um in the age of AI the hyperscalers were a little bit slow to move right Google
+Dialogue: 0,0:00:41.68,0:00:49.10,Sub,,0,0,0,,Amazon Microsoft bit slow to move into AI and so a whole new crop of companies popped up and there was
+Dialogue: 0,0:00:49.15,0:00:55.34,Sub,,0,0,0,,a new low bar right there's no need for a lot of the complex software that Amazon Microsoft Google had built
+Dialogue: 0,0:00:55.39,0:01:00.94,Sub,,0,0,0,,up and a lot of this in fact slowed down AI right they had custom networks that were actually not that
+Dialogue: 0,0:01:00.99,0:01:07.48,Sub,,0,0,0,,great for AI they were more focused around reliability and storage traffic rather than you know doing an AllReduce across
+Dialogue: 0,0:01:07.53,0:01:12.31,Sub,,0,0,0,,the network or something like this so so there was a lot of things that these large cloud companies these hyper
+Dialogue: 0,0:01:12.36,0:01:19.14,Sub,,0,0,0,,scalers had that neoclouds could just skip right and and then build focused optimized solutions and deliver much lower cost
+Dialogue: 0,0:01:19.19,0:01:26.87,Sub,,0,0,0,,because they have much lower overhead right there's not 20,000 Google PMs sitting in a meeting at these neoclouds right
+Dialogue: 0,0:01:26.92,0:01:34.47,Sub,,0,0,0,,although some of them have started hiring Google PMs and slowed down the the the neoclouds they they they
+Dialogue: 0,0:01:34.52,0:01:39.88,Sub,,0,0,0,,just moved fast on energy they moved fast on bringing up GPU clusters and so they were able to carve out
+Dialogue: 0,0:01:39.93,0:01:44.44,Sub,,0,0,0,,a market right and then you know those are the early ones and then since then there have been a lot
+Dialogue: 0,0:01:44.49,0:01:51.72,Sub,,0,0,0,,more copycats or followers many who haven't succeeded many who are succeeding right it really is like a a battle of
+Dialogue: 0,0:01:51.77,0:01:56.99,Sub,,0,0,0,,like who's the most competent And so are all the cuz there's like I think you said there's like an order
+Dialogue: 0,0:01:57.04,0:02:03.98,Sub,,0,0,0,,there's like a 200 of these neoclouds or give or take right and so are there differentiations between them that
+Dialogue: 0,0:02:04.03,0:02:09.86,Sub,,0,0,0,,you see like are are some of them just copying the the sort of software stack that these first ones did
+Dialogue: 0,0:02:09.91,0:02:15.54,Sub,,0,0,0,,or they doing something else like anything that you've seen that have been successful and less successful across these neoclouds?
+Dialogue: 0,0:02:15.59,0:02:20.18,Sub,,0,0,0,,Yeah so there's a variety of things that separate them right so we have something called ClusterMAX that
+Dialogue: 0,0:02:20.23,0:02:30.72,Sub,,0,0,0,,ranks all the neoclouds but we test for various things such as observability reliability networking security um orchestration all
+Dialogue: 0,0:02:30.77,0:02:36.78,Sub,,0,0,0,,these sorts of things are different right like does does someone test for their GPUs to be working properly
+Dialogue: 0,0:02:36.83,0:02:42.53,Sub,,0,0,0,,in when the GPUs are idle for a user right that's active health check or a passive health check hey
+Dialogue: 0,0:02:42.58,0:02:46.98,Sub,,0,0,0,,are the fans spinning at the right speed or are the you know is it drawing the right power
+Dialogue: 0,0:02:47.03,0:02:51.29,Sub,,0,0,0,,is there something wrong with the node is the is the network flapping or is anything problem problem with the
+Dialogue: 0,0:02:51.34,0:02:56.82,Sub,,0,0,0,,network is the performance there right like there's all these sorts of checks and tests because GPUs are unreliable um
+Dialogue: 0,0:02:56.87,0:03:02.51,Sub,,0,0,0,,there's all sorts of stuff around um the types of software you run on top of the GPU right many
+Dialogue: 0,0:03:02.56,0:03:07.96,Sub,,0,0,0,,people started off doing just bare metal right so when you go look at like hey Microsoft's first contracts
+Dialogue: 0,0:03:08.01,0:03:13.51,Sub,,0,0,0,,with CoreWeave they were all bare metal right you just SSH in and Microsoft would set up their own stuff
+Dialogue: 0,0:03:13.56,0:03:20.00,Sub,,0,0,0,,but as we've stepped forward there's a lot more people want right people wanted Slurm installed okay that's simple people
+Dialogue: 0,0:03:20.06,0:03:26.48,Sub,,0,0,0,,wanted Kubernetes installed that's a little bit more difficult but still pretty simple people wanted Slurm on Kubernetes installed cuz
+Dialogue: 0,0:03:26.53,0:03:30.42,Sub,,0,0,0,,it's easier to push out jobs and things like that right and now you're starting to see people do
+Dialogue: 0,0:03:30.47,0:03:37.39,Sub,,0,0,0,,things like managed Ray services and all these things for RL and so there is a class of neoclouds
+Dialogue: 0,0:03:37.44,0:03:40.56,Sub,,0,0,0,,that are building these things and there's a class of neoclouds that are like I don't care about that
+Dialogue: 0,0:03:40.62,0:03:45.60,Sub,,0,0,0,,I'm just going to build GPUs and rent them out at bare metal and and there is a difference in
+Dialogue: 0,0:03:45.65,0:03:51.49,Sub,,0,0,0,,cost right like the the clouds that have the good software also tend to charge more and and sort
+Dialogue: 0,0:03:51.54,0:03:59.21,Sub,,0,0,0,,of returns back to the old school model where Google Microsoft Amazon had good software and they charged right and
+Dialogue: 0,0:03:59.26,0:04:04.43,Sub,,0,0,0,,so you know and and you see a lot of these cloud companies start trying to launch inference services
+Dialogue: 0,0:04:04.48,0:04:12.09,Sub,,0,0,0,,and all these other things yeah So like that similarly in that vein I'll just get to the CPU ones
+Dialogue: 0,0:04:12.14,0:04:16.73,Sub,,0,0,0,,where historically we have customers that ask for this with like open cloud that happened so that there's a
+Dialogue: 0,0:04:16.78,0:04:21.68,Sub,,0,0,0,,bunch of people that are like oh I need my sandbox or CPU box running for a very very long
+Dialogue: 0,0:04:21.73,0:04:27.79,Sub,,0,0,0,,time can you give me like a $5 Hetzner type you know offering and I'm like well no because like
+Dialogue: 0,0:04:27.84,0:04:34.18,Sub,,0,0,0,,that is a bare metal machine that has no incurs very little cost but when you have something that's larger
+Dialogue: 0,0:04:34.23,0:04:38.18,Sub,,0,0,0,,software offering then there is more cost so it's hard to to compete with that so I would assume
+Dialogue: 0,0:04:38.23,0:04:42.20,Sub,,0,0,0,,also on the neoclouds that like the ones that are bare metal as you mentioned have a lower cost
+Dialogue: 0,0:04:42.24,0:04:49.32,Sub,,0,0,0,,of sale than the the software ones um that moving just I was just curious about that like why the
+Dialogue: 0,0:04:49.38,0:04:55.56,Sub,,0,0,0,,right to exist they had because it's sort of analogized with what we do but the real question is you
+Dialogue: 0,0:04:55.61,0:05:00.95,Sub,,0,0,0,,brought this up which is directionally what we're thinking about is that CPUs are the new bottleneck like every
+Dialogue: 0,0:05:01.00,0:05:06.41,Sub,,0,0,0,,investor partner everyone that I talked to historically was just like GPU GPU GPU and now you had this big
+Dialogue: 0,0:05:06.46,0:05:12.22,Sub,,0,0,0,,report about like CPUs and I'm like okay yes thank you and so you reported like this year will be
+Dialogue: 0,0:05:12.27,0:05:17.32,Sub,,0,0,0,,a bottleneck so just give us a high level TLDR why is CPU now bottleneck and what do you see?
+Dialogue: 0,0:05:17.37,0:05:25.50,Sub,,0,0,0,,Yeah I mean for the first few years of AI CPU was a real big lagger right sure you used it for some storage used it for some checkpointing
+Dialogue: 0,0:05:25.55,0:05:29.94,Sub,,0,0,0,,used it for pre-processing your data and pre-training but it was pretty light and then
+Dialogue: 0,0:05:30.00,0:05:33.88,Sub,,0,0,0,,inference was also like the models just weren't good enough to be agentic you couldn't
+Dialogue: 0,0:05:33.93,0:05:40.63,Sub,,0,0,0,,you know go step by step by step so there was no there was no capability for a model to go and do actions and string them together so then
+Dialogue: 0,0:05:40.68,0:05:46.74,Sub,,0,0,0,,it wasn't really it was like it was like you would send a string and it send a string back right simple inference and so there was not much need
+Dialogue: 0,0:05:46.79,0:05:56.87,Sub,,0,0,0,,for CPUs but then over the last few years or last couple years it's not even like last couple years right you know Q* and OpenAI had that and
+Dialogue: 0,0:05:56.92,0:06:05.70,Sub,,0,0,0,,they had all that drama but then finally o1 preview launched I want to say like 15 16 months ago feels like much longer ago a long time ago Yeah
+Dialogue: 0,0:06:05.75,0:06:13.86,Sub,,0,0,0,,ages yeah but o1 was the first model sort of there and and we we sort of had a entire flood of models right like before people would do simple
+Dialogue: 0,0:06:13.91,0:06:19.36,Sub,,0,0,0,,things like check the output of the model with regex or something simple just to
+Dialogue: 0,0:06:19.41,0:06:23.10,Sub,,0,0,0,,see if it was doing structured properly doing structured outputs you know for function calling
+Dialogue: 0,0:06:23.16,0:06:28.04,Sub,,0,0,0,,and things like this right but as we've stepped forward the the the checks on
+Dialogue: 0,0:06:28.09,0:06:32.75,Sub,,0,0,0,,the model are much much larger integrated fully into training right with reinforcement learning right
+Dialogue: 0,0:06:32.80,0:06:36.64,Sub,,0,0,0,,instead of just doing regex you're doing like various classifiers instead of doing classifiers you're
+Dialogue: 0,0:06:36.69,0:06:41.59,Sub,,0,0,0,,doing like code unit test and compilation instead of doing that you're running you know
+Dialogue: 0,0:06:41.64,0:06:47.44,Sub,,0,0,0,,agentic flows where it's actually calling databases and stuff or you're interfacing with some environment
+Dialogue: 0,0:06:47.49,0:06:52.45,Sub,,0,0,0,,that is heavy on CPU like a physics simulation or or biology simulation you just
+Dialogue: 0,0:06:52.50,0:06:57.80,Sub,,0,0,0,,kept stepping into more and more complicated things where the model outputs to checks it
+Dialogue: 0,0:06:57.85,0:07:01.67,Sub,,0,0,0,,right this environment reinforcement learning environment and then goes back and trains on it and
+Dialogue: 0,0:07:01.72,0:07:05.24,Sub,,0,0,0,,and this loop has gotten tighter and tighter and tighter over the last couple years
+Dialogue: 0,0:07:05.29,0:07:10.37,Sub,,0,0,0,,and then more recently over the let's call it really the last 6 months you
+Dialogue: 0,0:07:10.42,0:07:21.34,Sub,,0,0,0,,know code agent revenue has gone from a couple billion to north of 10 billion in like a very short amount of time and and these the horizon of these
+Dialogue: 0,0:07:21.39,0:07:26.39,Sub,,0,0,0,,has also increased dramatically right like GPT-5.4 Codex can work for like 6-7 hours and
+Dialogue: 0,0:07:26.44,0:07:33.28,Sub,,0,0,0,,it's like fine right and so you know it's it's in that time frame it's
+Dialogue: 0,0:07:33.33,0:07:40.43,Sub,,0,0,0,,doing all sorts of calls to databases it's doing calls to you know at least we we use a lot of cron servers but you know like whatever whatever it
+Dialogue: 0,0:07:40.48,0:07:44.37,Sub,,0,0,0,,is right there's anything and everything it can go ping check it out scrape
+Dialogue: 0,0:07:44.42,0:07:48.43,Sub,,0,0,0,,and just work agentically on its own and that's also requiring a lot of CPUs
+Dialogue: 0,0:07:48.48,0:07:52.51,Sub,,0,0,0,,so over the last 6 months that's ballooned as well in addition to the reinforcement
+Dialogue: 0,0:07:52.56,0:07:57.13,Sub,,0,0,0,,learning training loop getting tighter and tighter and so over the last 6 months we've
+Dialogue: 0,0:07:57.18,0:08:03.37,Sub,,0,0,0,,seen um the entire cloud market run out of CPUs right I don't know if
+Dialogue: 0,0:08:03.42,0:08:07.51,Sub,,0,0,0,,you folks have interacted with GitHub a lot recently but it's really unstable I think
+Dialogue: 0,0:08:07.56,0:08:11.40,Sub,,0,0,0,,you're the third person to mention that today Okay Yeah Yeah yeah so we've we've
+Dialogue: 0,0:08:11.45,0:08:15.25,Sub,,0,0,0,,been we've been like checking GitHub's like stats on like how often is it down
+Dialogue: 0,0:08:15.30,0:08:19.10,Sub,,0,0,0,,how often does it fail to commit like you know whatever right it's it's terrible
+Dialogue: 0,0:08:19.14,0:08:23.03,Sub,,0,0,0,,and that's because Microsoft sold all their CPUs that they had spare to other people
+Dialogue: 0,0:08:23.08,0:08:28.31,Sub,,0,0,0,,right either internal use for their lab but you know not really more so like
+Dialogue: 0,0:08:28.36,0:08:33.04,Sub,,0,0,0,,external labs they signed deals with Anthropic and OpenAI and so they just have like
+Dialogue: 0,0:08:33.10,0:08:42.80,Sub,,0,0,0,,no CPUs left right and we've seen you know the same at many other firms right so whereas before you'd have like you know have many GPU servers per CPU
+Dialogue: 0,0:08:42.85,0:08:50.93,Sub,,0,0,0,,server and so you'd be like you know 100 megawatts of GPUs would be served by even like 1 megawatt or less of CPUs nowadays the ratio is like getting
+Dialogue: 0,0:08:50.98,0:08:56.75,Sub,,0,0,0,,much much closer both for RL training and and for inference agentic inference so then
+Dialogue: 0,0:08:56.80,0:09:03.14,Sub,,0,0,0,,you you've just seen everyone run out of CPUs Amazon's volumes on CPUs of CPU
+Dialogue: 0,0:09:03.19,0:09:07.71,Sub,,0,0,0,,servers they're installing have 3x year on year right from this year versus last year
+Dialogue: 0,0:09:07.76,0:09:13.23,Sub,,0,0,0,,and so that there's just no capacity anywhere and that's causing a lot of instability
+Dialogue: 0,0:09:13.28,0:09:17.71,Sub,,0,0,0,,not just in GitHub but probably other places too I mean a lot of infrastructure
+Dialogue: 0,0:09:17.76,0:09:21.41,Sub,,0,0,0,,today we talked about this like every day it's normal to see that some infra
+Dialogue: 0,0:09:21.46,0:09:29.74,Sub,,0,0,0,,provider be it GitHub or being like an actual not to name like they go down like it's become quite a constant thing and so could be lack of CPUs
+Dialogue: 0,0:09:29.79,0:09:33.90,Sub,,0,0,0,,but also scale of the workloads and what not so that everyone's infra code is
+Dialogue: 0,0:09:33.95,0:09:37.47,Sub,,0,0,0,,vibe coded Yeah it could be that everyone's infra code is vibe coded yeah could
+Dialogue: 0,0:09:37.52,0:09:45.19,Sub,,0,0,0,,that be as well I don't think it's all but there could be there could be parts of that that is there and so what I see which is interesting
+Dialogue: 0,0:09:45.24,0:09:53.25,Sub,,0,0,0,,as well as the number of CPU workloads or the number of that are running on us so Daytona has basically three use cases so it's like code and command
+Dialogue: 0,0:09:53.30,0:10:02.34,Sub,,0,0,0,,execution so if you like a a Claude Code type of thing needs to run on a We have computer use cases which we see actually growing really fast.
+Dialogue: 0,0:10:02.39,0:10:06.36,Sub,,0,0,0,,We've now launched today we announced our Windows sandbox which runs on a CPU.
+Dialogue: 0,0:10:06.41,0:10:12.70,Sub,,0,0,0,,So if you need an agent to do like on legacy software which is like all finance, all support, all um that's all there.
+Dialogue: 0,0:10:12.75,0:10:18.21,Sub,,0,0,0,,But I'll also to your point like reinforcement learning, we have a bunch of people that usually use like Kubernetes.
+Dialogue: 0,0:10:18.26,0:10:19.27,Sub,,0,0,0,,Now they would use us.
+Dialogue: 0,0:10:19.32,0:10:25.05,Sub,,0,0,0,,But the interesting thing is the the size and scale of these loads are insanely large and they're growing insanely large.
+Dialogue: 0,0:10:25.10,0:10:28.75,Sub,,0,0,0,,And we're like the smallest cloud in the world.
+Dialogue: 0,0:10:28.80,0:10:36.24,Sub,,0,0,0,,So my interest to what in the question is like if we as a very very small company have this much, what does that do at the large scale, right?
+Dialogue: 0,0:10:36.29,0:10:39.86,Sub,,0,0,0,,Like so um and we've had I'm curious if you have any insight on this,
+Dialogue: 0,0:10:39.90,0:10:45.42,Sub,,0,0,0,,but just just RL let alone the long running agents which are on their own, we we see customers coming in.
+Dialogue: 0,0:10:45.47,0:10:49.35,Sub,,0,0,0,,One of them ran a million one single customer yesterday in the span of 6 hours.
+Dialogue: 0,0:10:49.40,0:10:50.97,Sub,,0,0,0,,Like 1 million of these CPU workloads.
+Dialogue: 0,0:10:51.02,0:10:52.05,Sub,,0,0,0,,So that's one customer.
+Dialogue: 0,0:10:52.10,0:10:53.66,Sub,,0,0,0,,And so like how many of these customers are doing RL?
+Dialogue: 0,0:10:53.71,0:10:54.64,Sub,,0,0,0,,They're going to need this.
+Dialogue: 0,0:10:54.69,0:10:57.51,Sub,,0,0,0,,I I don't know if you have any insights on this, but I'm just curious.
+Dialogue: 0,0:10:57.56,0:11:01.74,Sub,,0,0,0,,Um I mean I mean there there there there are some pretty uh shocking metrics.
+Dialogue: 0,0:11:01.79,0:11:04.31,Sub,,0,0,0,,Like a million vCPUs sounds insane.
+Dialogue: 0,0:11:04.36,0:11:12.03,Sub,,0,0,0,,Um but there some of the some of the scale of the workloads and contracts people are signing are are even like more ridiculous than that, right?
+Dialogue: 0,0:11:12.08,0:11:13.71,Sub,,0,0,0,,Um I'm sure that's because we're really small.
+Dialogue: 0,0:11:13.76,0:11:14.79,Sub,,0,0,0,,That's what I Yeah, yeah.
+Dialogue: 0,0:11:14.84,0:11:19.71,Sub,,0,0,0,,So so I guess I guess like when you look at like again like when you look at like the Anthropic and OpenAI of the world,
+Dialogue: 0,0:11:19.76,0:11:24.21,Sub,,0,0,0,,they have they have fully just eaten the entire capacity of multiple clouds, right?
+Dialogue: 0,0:11:24.26,0:11:29.88,Sub,,0,0,0,,A lot of the impetus for the recent Amazon and OpenAI deal was yes, OpenAI wanted money, yes,
+Dialogue: 0,0:11:29.92,0:11:34.03,Sub,,0,0,0,,they needed compute, but they also just like went to Amazon and were like give us your CPU.
+Dialogue: 0,0:11:34.08,0:11:35.33,Sub,,0,0,0,,CPUs, yeah.
+Dialogue: 0,0:11:35.38,0:11:36.08,Sub,,0,0,0,,Right?
+Dialogue: 0,0:11:36.13,0:11:43.85,Sub,,0,0,0,,Um and and before OpenAI's stack was pretty much only on x86 CPUs, but Amazon had tons of Arm CPUs and so they ported the whole thing, right?
+Dialogue: 0,0:11:43.90,0:11:47.65,Sub,,0,0,0,,It's like anywhere I'll I'll port my code base to get uh access, right?
+Dialogue: 0,0:11:47.70,0:11:48.58,Sub,,0,0,0,,To access to CPUs.
+Dialogue: 0,0:11:48.63,0:11:53.60,Sub,,0,0,0,,And so this is like the the level of like and it's not that difficult to port port from x86 to Arm, but you know,
+Dialogue: 0,0:11:53.65,0:11:56.56,Sub,,0,0,0,,like there's there's very few dependencies that aren't working now,
+Dialogue: 0,0:11:56.61,0:12:02.22,Sub,,0,0,0,,but um this is the level of like um engineering people are willing to go to, right?
+Dialogue: 0,0:12:02.27,0:12:09.11,Sub,,0,0,0,,Cuz usually devs are too lazy to do anything um and they'll just go get capacity elsewhere, but there isn't capacity anywhere else.
+Dialogue: 0,0:12:09.16,0:12:11.18,Sub,,0,0,0,,Yeah, so I mean that's interesting like we're all x86.
+Dialogue: 0,0:12:11.23,0:12:12.13,Sub,,0,0,0,,That's all we have.
+Dialogue: 0,0:12:12.18,0:12:14.03,Sub,,0,0,0,,We don't have our our ARM at the moment.
+Dialogue: 0,0:12:14.08,0:12:20.36,Sub,,0,0,0,,But then like there's those two which I know, but also like NVIDIA has their like CPU, other people building out their CPUs.
+Dialogue: 0,0:12:20.41,0:12:22.43,Sub,,0,0,0,,There's also differences between these CPUs.
+Dialogue: 0,0:12:22.48,0:12:24.23,Sub,,0,0,0,,Are there just going to be like these general purpose CPUs?
+Dialogue: 0,0:12:24.28,0:12:26.54,Sub,,0,0,0,,There's also like you probably know more about this than I do.
+Dialogue: 0,0:12:26.59,0:12:28.63,Sub,,0,0,0,,I'm just like super curious.
+Dialogue: 0,0:12:28.68,0:12:30.16,Sub,,0,0,0,,Um on the types of CPUs?
+Dialogue: 0,0:12:30.21,0:12:32.85,Sub,,0,0,0,,Like now there's so many there used to be just like x86 and ARM.
+Dialogue: 0,0:12:32.90,0:12:34.43,Sub,,0,0,0,,That was it like for the most part.
+Dialogue: 0,0:12:34.48,0:12:36.11,Sub,,0,0,0,,Now there's different types of CPUs.
+Dialogue: 0,0:12:36.16,0:12:40.59,Sub,,0,0,0,,Is it just because everyone's run out or are they like better at some things than others?
+Dialogue: 0,0:12:40.64,0:12:49.86,Sub,,0,0,0,,Are there anything I mean usually what happens like when there's a gold rush is the person with a broken pickaxe can also sell their pickaxes.
+Dialogue: 0,0:12:49.91,0:12:50.85,Sub,,0,0,0,,Yeah, yeah.
+Dialogue: 0,0:12:50.90,0:12:55.83,Sub,,0,0,0,,Um but like yeah, I mean this the CPU market is like quite dynamic, right?
+Dialogue: 0,0:12:55.88,0:12:57.19,Sub,,0,0,0,,Um you know, it it was mostly Intel AMD.
+Dialogue: 0,0:12:57.24,0:13:00.11,Sub,,0,0,0,,I assume you mostly use Intel and AMD CPUs.
+Dialogue: 0,0:13:00.16,0:13:03.64,Sub,,0,0,0,,Um Both of them have said they're like fully sold out.
+Dialogue: 0,0:13:03.68,0:13:06.70,Sub,,0,0,0,,They've sent price increase notices to their customers.
+Dialogue: 0,0:13:06.75,0:13:08.36,Sub,,0,0,0,,Um so they're not even competing with each other anymore.
+Dialogue: 0,0:13:08.41,0:13:11.16,Sub,,0,0,0,,They're just like how many can I make and sell?
+Dialogue: 0,0:13:11.21,0:13:14.44,Sub,,0,0,0,,Um and likewise like Amazon had their Graviton CPUs.
+Dialogue: 0,0:13:14.49,0:13:15.27,Sub,,0,0,0,,They've had what?
+Dialogue: 0,0:13:15.32,0:13:17.63,Sub,,0,0,0,,Five, six generations now.
+Dialogue: 0,0:13:17.68,0:13:20.24,Sub,,0,0,0,,Um And NVIDIA has their Vera CPU.
+Dialogue: 0,0:13:20.28,0:13:20.68,Sub,,0,0,0,,Right.
+Dialogue: 0,0:13:20.72,0:13:23.35,Sub,,0,0,0,,And NVIDIA has their Grace and Vera CPUs.
+Dialogue: 0,0:13:23.40,0:13:26.81,Sub,,0,0,0,,Um and no one really deployed Grace standalone CPU boxes.
+Dialogue: 0,0:13:26.86,0:13:30.88,Sub,,0,0,0,,There was like a couple small deployments that NVIDIA NVIDIA did for PR with people,
+Dialogue: 0,0:13:30.93,0:13:34.98,Sub,,0,0,0,,but in reality there's like very few like standalone CPU deployments that NVIDIA was able to do.
+Dialogue: 0,0:13:35.03,0:13:35.39,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:13:35.42,0:13:38.11,Sub,,0,0,0,,Um but now well, just they're just not as good, right?
+Dialogue: 0,0:13:38.16,0:13:38.46,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:13:38.39,0:13:41.51,Sub,,0,0,0,,Um but now as we step forward, maybe their CPU got better.
+Dialogue: 0,0:13:41.56,0:13:44.67,Sub,,0,0,0,,Um maybe they're bundling better, but also just because they have capacity.
+Dialogue: 0,0:13:44.72,0:13:45.70,Sub,,0,0,0,,Because no one else has them.
+Dialogue: 0,0:13:45.75,0:13:52.51,Sub,,0,0,0,,Yeah, they're they're they're able to get a lot more contracts on their uh Vera CPUs uh that are going to deploy sort of later this year,
+Dialogue: 0,0:13:52.56,0:13:55.35,Sub,,0,0,0,,early next year time frame um is when they start deploying.
+Dialogue: 0,0:13:55.40,0:13:57.87,Sub,,0,0,0,,So it's sort of like a very um dynamic market.
+Dialogue: 0,0:13:57.92,0:14:03.01,Sub,,0,0,0,,And then and then you've got like Microsoft and Google are starting to deploy their CPUs in volumes.
+Dialogue: 0,0:14:03.06,0:14:10.39,Sub,,0,0,0,,Um ARM is going to launch a CPU in like a few weeks uh that Meta is going to adopt and a few others are going to adopt um like Cloudflare.
+Dialogue: 0,0:14:10.44,0:14:15.50,Sub,,0,0,0,,And so there's going to be a lot more proliferation like Arm standalone rather than like Arm licensing the IP to someone.
+Dialogue: 0,0:14:15.55,0:14:22.50,Sub,,0,0,0,,So there's a lot more um diversification in the market um which which happens when there's a gold rush, right?
+Dialogue: 0,0:14:22.55,0:14:29.71,Sub,,0,0,0,,And then we'll see what actually is the best quality and is left standing as the sort of supply demand gap get closes.
+Dialogue: 0,0:14:29.76,0:14:30.16,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:30.20,0:14:36.35,Sub,,0,0,0,,But it seems that supply and demand will still grow like at least what I see like one the RL and it it seems like RL is mostly done,
+Dialogue: 0,0:14:36.40,0:14:44.81,Sub,,0,0,0,,you know, they do post trading on RL, but we have now vendors and companies that are pitching and creating services that do RL in real time.
+Dialogue: 0,0:14:44.86,0:14:50.67,Sub,,0,0,0,,And since you have like some agents you have some SaaS that's an agentic in the background and then
+Dialogue: 0,0:14:50.72,0:14:56.16,Sub,,0,0,0,,it will do RL at the end of the day basically to like learn against what it has done.
+Dialogue: 0,0:14:56.21,0:14:57.32,Sub,,0,0,0,,And so that grows.
+Dialogue: 0,0:14:57.37,0:15:05.52,Sub,,0,0,0,,But also these long running agents, if they the way it seems to be working directionally is if the agents can work longer and solve for more things,
+Dialogue: 0,0:15:05.58,0:15:11.62,Sub,,0,0,0,,you can essentially ask them to do more and they will spin up more and more of these agents which means more and more CPU boxes.
+Dialogue: 0,0:15:11.66,0:15:18.40,Sub,,0,0,0,,So do you see that like from your purview do you like I understand market dynamics and that'll probably converge at some point,
+Dialogue: 0,0:15:18.45,0:15:22.39,Sub,,0,0,0,,but I feel it's getting wider before it's shrinking the need for that.
+Dialogue: 0,0:15:22.44,0:15:28.23,Sub,,0,0,0,,Yeah, I mean it it it's that's totally the case because initially all the RL was like, let's do math proofs.
+Dialogue: 0,0:15:28.28,0:15:31.30,Sub,,0,0,0,,And I was like, okay, math proofs are really low on resources.
+Dialogue: 0,0:15:31.35,0:15:33.07,Sub,,0,0,0,,And also the model, right?
+Dialogue: 0,0:15:33.12,0:15:37.82,Sub,,0,0,0,,The generator will generate tons of output and then it'll send the correct answer or what
+Dialogue: 0,0:15:37.87,0:15:41.74,Sub,,0,0,0,,it thinks is the correct answer to the server and then the server will verify it.
+Dialogue: 0,0:15:41.79,0:15:44.12,Sub,,0,0,0,,Um but as we've moved forward, right?
+Dialogue: 0,0:15:44.18,0:15:45.39,Sub,,0,0,0,,Like it's it's not just that.
+Dialogue: 0,0:15:45.44,0:15:46.22,Sub,,0,0,0,,It's like,
+Dialogue: 0,0:15:46.27,0:15:50.50,Sub,,0,0,0,,oh actually the model is committing many times or it's like trying to
+Dialogue: 0,0:15:50.55,0:15:53.94,Sub,,0,0,0,,compile many times or it's trying to do unit tests throughout its agentic process.
+Dialogue: 0,0:15:53.98,0:16:00.25,Sub,,0,0,0,,Okay, now that's that's increasing the frequency in which the generator, i.e. the model, is sending to the verifier.
+Dialogue: 0,0:16:00.30,0:16:02.89,Sub,,0,0,0,,Um and that loop gets tighter and tighter and tighter.
+Dialogue: 0,0:16:02.94,0:16:10.45,Sub,,0,0,0,,And as we as we continue to move to more complex RL, it's like the model will actually uh be verifying its output constantly, right?
+Dialogue: 0,0:16:10.50,0:16:14.93,Sub,,0,0,0,,Like if you imagine um let's say models that are training over the next year or two is
+Dialogue: 0,0:16:14.98,0:16:19.44,Sub,,0,0,0,,is let's say a robot model that's verifying and that's that's in in a like a world model,
+Dialogue: 0,0:16:19.49,0:16:20.00,Sub,,0,0,0,,right?
+Dialogue: 0,0:16:20.05,0:16:24.79,Sub,,0,0,0,,So uh VLM is is navigating across the world trying to pick up things, put them down.
+Dialogue: 0,0:16:24.84,0:16:29.63,Sub,,0,0,0,,Every single action needs to be verified against the physics model that is sitting on some CPUs.
+Dialogue: 0,0:16:29.68,0:16:38.00,Sub,,0,0,0,,And so that's that's insanely way more CPUs than you need for say doing unit tests or running a math proof, right?
+Dialogue: 0,0:16:38.05,0:16:41.02,Sub,,0,0,0,,And when we look at like o1, that's like all it could do was math, right?
+Dialogue: 0,0:16:41.07,0:16:48.81,Sub,,0,0,0,,Um and as we look at like you know, sort of uh GPT-5.4 or Opus 4.6, like it's okay agentic software,
+Dialogue: 0,0:16:48.86,0:16:52.68,Sub,,0,0,0,,but like as we move forward to the next stage of, you know, whatever's coming,
+Dialogue: 0,0:16:52.73,0:16:58.39,Sub,,0,0,0,,it's going to be models that can understand, oh, I need to tie my shoe and like when I tie it,
+Dialogue: 0,0:16:58.44,0:17:00.85,Sub,,0,0,0,,what's the strength strength, yeah. like what's the tensile strength?
+Dialogue: 0,0:17:00.90,0:17:06.21,Sub,,0,0,0,,All these things like as to the the has to be calculated cuz the verifier is just generating, you know, what's the next step.
+Dialogue: 0,0:17:06.26,0:17:13.03,Sub,,0,0,0,,Um but every step needs to be checked way more often and the intensity of that calculation for checking the step it goes up a time.
+Dialogue: 0,0:17:13.08,0:17:13.38,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:17:13.40,0:17:19.32,Sub,,0,0,0,,But there's also another thing and you probably know better than I is like the the the level
+Dialogue: 0,0:17:19.37,0:17:26.01,Sub,,0,0,0,,of the the the strength of the GPUs can handle in parallel a certain amount of CPUs boxes.
+Dialogue: 0,0:17:26.06,0:17:29.10,Sub,,0,0,0,,And so as we get next generations of GPUs,
+Dialogue: 0,0:17:29.15,0:17:38.83,Sub,,0,0,0,,I feel that they will be able to spin up manage or work on more CPUs than they do now which is another stressor on CPUs now.
+Dialogue: 0,0:17:38.88,0:17:40.73,Sub,,0,0,0,,Yeah, I mean that's that's certainly the case, right?
+Dialogue: 0,0:17:40.79,0:17:44.39,Sub,,0,0,0,,GPU Well, GPUs are also just like getting way higher power, right?
+Dialogue: 0,0:17:44.44,0:17:49.07,Sub,,0,0,0,,So one GPU will equal many many more CPUs over time, right?
+Dialogue: 0,0:17:49.12,0:17:55.17,Sub,,0,0,0,,Um and GPUs are getting more expensive gen on gen on gen, whereas vCPUs are flat, slightly down.
+Dialogue: 0,0:17:55.22,0:17:55.68,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:17:55.73,0:17:58.75,Sub,,0,0,0,,Um and so certainly it's a different scale, right?
+Dialogue: 0,0:17:58.80,0:18:02.59,Sub,,0,0,0,,Like one Blackwell versus one Rubin, performance is up X.
+Dialogue: 0,0:18:02.64,0:18:04.07,Sub,,0,0,0,,Price is also up X.
+Dialogue: 0,0:18:04.12,0:18:12.92,Sub,,0,0,0,,Um whereas, you know, you may buy last generation CPU, new generation CPU and there's 192 vCPUs in this gen and last gen was like 96, right?
+Dialogue: 0,0:18:12.97,0:18:18.71,Sub,,0,0,0,,So now you've got way more CPUs, but the the price increase is equivalent to what you got in additional vCPUs.
+Dialogue: 0,0:18:18.76,0:18:23.20,Sub,,0,0,0,,So it's like sort of yeah, the the ratio will grow in the favor of vCPUs,
+Dialogue: 0,0:18:23.25,0:18:28.80,Sub,,0,0,0,,but the cost will be sort of also probably in the direction of CPUs, but not sure how much.
+Dialogue: 0,0:18:28.85,0:18:29.16,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:18:29.19,0:18:35.56,Sub,,0,0,0,,And and also the other stressor on that and we've seen this with with larger customers when they have
+Dialogue: 0,0:18:35.61,0:18:40.35,Sub,,0,0,0,,like they don't they have like a time allotment for GPUs and they don't want their GPUs to be idle.
+Dialogue: 0,0:18:40.40,0:18:48.69,Sub,,0,0,0,,So they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot.
+Dialogue: 0,0:18:48.74,0:18:50.47,Sub,,0,0,0,,They're essentially working, right?
+Dialogue: 0,0:18:50.52,0:18:54.87,Sub,,0,0,0,,So they'll we we I say we cuz we do mostly CPUs are certainly the cheap resource.
+Dialogue: 0,0:18:54.92,0:18:57.21,Sub,,0,0,0,,I don't know if we're cheap, but cheap resource for this.
+Dialogue: 0,0:18:57.26,0:19:04.99,Sub,,0,0,0,,And so that spends more GPUs actually just because the cost of having an idle GPU is to is way more expensive, right?
+Dialogue: 0,0:19:05.04,0:19:06.92,Sub,,0,0,0,,Yeah, it's actually like a really interesting point, right?
+Dialogue: 0,0:19:06.97,0:19:10.92,Sub,,0,0,0,,The business model is like no one does I mean sure, there's on demand GPUs,
+Dialogue: 0,0:19:10.97,0:19:16.62,Sub,,0,0,0,,but like Lambda has like 50,000 plus GPUs and only 4,000 of them are on demand, right?
+Dialogue: 0,0:19:16.67,0:19:17.80,Sub,,0,0,0,,And they're always sold out.
+Dialogue: 0,0:19:17.84,0:19:20.06,Sub,,0,0,0,,So like no one really has on demand GPUs.
+Dialogue: 0,0:19:20.10,0:19:27.53,Sub,,0,0,0,,Everyone's signing at minimum like long-term, you know, multi-month contracts, but in most cases multi-year contracts.
+Dialogue: 0,0:19:27.58,0:19:32.34,Sub,,0,0,0,,Um and so like CPUs have been used to like you can spin them up and down, right?
+Dialogue: 0,0:19:32.39,0:19:34.91,Sub,,0,0,0,,That's why everyone moved to the cloud, right?
+Dialogue: 0,0:19:34.96,0:19:42.04,Sub,,0,0,0,,Um but with these RL workloads, it's like, okay, the GPU: the generator, the model running on a GPU generated a bunch of stuff.
+Dialogue: 0,0:19:42.09,0:19:44.03,Sub,,0,0,0,,It sends it to the verifier.
+Dialogue: 0,0:19:44.08,0:19:46.12,Sub,,0,0,0,,If the verifier is not ready and waiting Then it's idle.
+Dialogue: 0,0:19:46.17,0:19:46.71,Sub,,0,0,0,,Then it's waiting.
+Dialogue: 0,0:19:46.76,0:19:47.06,Sub,,0,0,0,,Right.
+Dialogue: 0,0:19:46.95,0:19:47.92,Sub,,0,0,0,,Like the GPU is just sitting there.
+Dialogue: 0,0:19:47.97,0:19:51.16,Sub,,0,0,0,,So it's like, okay, well, I've already paid for this.
+Dialogue: 0,0:19:51.21,0:19:51.67,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:19:51.72,0:20:00.23,Sub,,0,0,0,,So if you can't get your instantaneous you know you know resources spun up on the CPU side and in fact you should do it preemptively so it's not
+Dialogue: 0,0:20:00.28,0:20:05.27,Sub,,0,0,0,,like loading you know the the simulator that you or the generation the environment
+Dialogue: 0,0:20:05.32,0:20:08.04,Sub,,0,0,0,,right you you're wasting money so yeah like that that makes a lot of sense.
+Dialogue: 0,0:20:08.09,0:20:11.19,Sub,,0,0,0,,And not only that then you have that running and then as soon as those are running you're
+Dialogue: 0,0:20:11.24,0:20:16.44,Sub,,0,0,0,,spinning up another warm pool of these so that every new iteration of them are are continually growing.
+Dialogue: 0,0:20:16.49,0:20:18.35,Sub,,0,0,0,,So what does that mean generally?
+Dialogue: 0,0:20:18.40,0:20:26.04,Sub,,0,0,0,,So we skipped over RAM we didn't talk about that where it's like GPU was a bottleneck RAM was a bottleneck and now CPUs.
+Dialogue: 0,0:20:26.09,0:20:32.58,Sub,,0,0,0,,So just very closer to home for most people is that like it's very hard to buy a PC today because it's like super expensive is is that
+Dialogue: 0,0:20:32.63,0:20:36.48,Sub,,0,0,0,,happening to the CPUs because we just mentioned that they're like they're fairly inexpensive
+Dialogue: 0,0:20:36.53,0:20:41.95,Sub,,0,0,0,,and flat does the market pressure now demand sort of that these prices now increase?
+Dialogue: 0,0:20:42.00,0:20:47.98,Sub,,0,0,0,,Yeah I mean it's it's pretty much the case for all like PCs laptops building a PC
+Dialogue: 0,0:20:48.04,0:20:54.91,Sub,,0,0,0,,that it's hard to get you know Apple is pretty sold out of like Mac minis for example.
+Dialogue: 0,0:20:54.96,0:20:59.04,Sub,,0,0,0,,We we bought a bunch of Mac minis because people are switching from you know people who
+Dialogue: 0,0:20:59.09,0:21:02.40,Sub,,0,0,0,,used a bunch of Excel and like Windows are like okay I want to use Claude Code and
+Dialogue: 0,0:21:02.45,0:21:08.84,Sub,,0,0,0,,OS X is obviously a better um dev environment right so we just bought a bunch of Mac
+Dialogue: 0,0:21:08.89,0:21:13.80,Sub,,0,0,0,,minis and people are deploying them and using them and and sort of I think similar has happened
+Dialogue: 0,0:21:13.85,0:21:19.13,Sub,,0,0,0,,across the space and then data centers are way more of an inelastic buyer of resources and
+Dialogue: 0,0:21:19.18,0:21:24.66,Sub,,0,0,0,,so that's also caused prices to go up right so like GPUs always were expensive and video's margins
+Dialogue: 0,0:21:24.71,0:21:29.64,Sub,,0,0,0,,have always been you know 70% plus CPUs the margins were not that high but they're creeping up
+Dialogue: 0,0:21:29.69,0:21:35.75,Sub,,0,0,0,,because Intel and AMD are raising prices and they're tight memory has like 4x in price over the
+Dialogue: 0,0:21:35.80,0:21:40.77,Sub,,0,0,0,,last like year and it's going to continue to go up and then now storage SSD right
+Dialogue: 0,0:21:40.82,0:21:45.72,Sub,,0,0,0,,so it's like all of the resources are SSDs are also up like three four x in price
+Dialogue: 0,0:21:45.77,0:21:49.55,Sub,,0,0,0,,and going to keep going up at least another like 60% not as much as DRAM but up
+Dialogue: 0,0:21:49.60,0:21:56.26,Sub,,0,0,0,,a lot and so between these like four like these things right it's like well the CPU capacity
+Dialogue: 0,0:21:56.31,0:22:03.26,Sub,,0,0,0,,for Intel and AMD is somewhat fungible between and substrate and all these things somewhat fungible between PCs
+Dialogue: 0,0:22:03.31,0:22:09.13,Sub,,0,0,0,,and and data centers RAM and storage are very fungible and so you've ended up with this like
+Dialogue: 0,0:22:09.18,0:22:15.27,Sub,,0,0,0,,conundrum that like look screw the screw the like normally humans screw the humans yeah you have to
+Dialogue: 0,0:22:15.32,0:22:21.47,Sub,,0,0,0,,buy a Mac Mac mini now otherwise you'll never escape the permanent underclass is like the thought process.
+Dialogue: 0,0:22:21.52,0:22:29.00,Sub,,0,0,0,,And one last note before we're close to the end but one thing not financial advice like Intel was in a very bad spot like quite like recently.
+Dialogue: 0,0:22:29.05,0:22:29.71,Sub,,0,0,0,,Still are.
+Dialogue: 0,0:22:29.76,0:22:32.29,Sub,,0,0,0,,Yeah but does this pull them out?
+Dialogue: 0,0:22:32.34,0:22:40.55,Sub,,0,0,0,,Um I mean they'll do better but like it's not like it's like a long-term like you know oh the company's saved right?
+Dialogue: 0,0:22:40.60,0:22:46.66,Sub,,0,0,0,,Company's valued on like future cash flows but like and also like some potentiality they get like
+Dialogue: 0,0:22:46.71,0:22:49.91,Sub,,0,0,0,,Apple or someone else as a customer and this is actually like the funnier thing is it's
+Dialogue: 0,0:22:49.96,0:22:54.02,Sub,,0,0,0,,not because CPU demand is so high Intel have some short-term profits from that but you know
+Dialogue: 0,0:22:54.07,0:22:58.17,Sub,,0,0,0,,others will catch up AMD and Amazon and others will catch up on capacity that they have.
+Dialogue: 0,0:22:58.22,0:23:05.77,Sub,,0,0,0,,More importantly is that AI is buying all the capacity on 3 nanometer and 2 nanometer in a couple
+Dialogue: 0,0:23:05.82,0:23:09.66,Sub,,0,0,0,,years that you know people are having to turn to other directions right like one of the like you
+Dialogue: 0,0:23:09.70,0:23:15.91,Sub,,0,0,0,,know people make all these like nonsense reasons up why NVIDIA acquired Groq part of it was because they
+Dialogue: 0,0:23:15.96,0:23:22.63,Sub,,0,0,0,,want to have really fast inference but like part of it is that Groq is manufactured on Samsung right?
+Dialogue: 0,0:23:22.68,0:23:27.06,Sub,,0,0,0,,Because there's no 3 nanometer capacity for them at TSMC they need a chip somewhere else and
+Dialogue: 0,0:23:27.12,0:23:30.71,Sub,,0,0,0,,if you just if AI is as crazy as like we believe it is and demand is
+Dialogue: 0,0:23:30.76,0:23:33.56,Sub,,0,0,0,,as crazy as we believe it is it's going to be even crazier next year and so
+Dialogue: 0,0:23:33.61,0:23:37.88,Sub,,0,0,0,,like just make any decent chip and it'll sell right is like sort of the philosophy there.
+Dialogue: 0,0:23:37.94,0:23:42.58,Sub,,0,0,0,,Obviously there's a lot more they're doing there on the architecture and stuff but same applies to like Apple is
+Dialogue: 0,0:23:42.63,0:23:49.83,Sub,,0,0,0,,getting squeezed out right like TSMC told them hey like get off of 3 nanometer move to 2 nanometer faster right?
+Dialogue: 0,0:23:49.88,0:23:54.14,Sub,,0,0,0,,Because all the AI chips are on 3 nanometer and it takes time right small mobile chips are
+Dialogue: 0,0:23:54.19,0:24:00.42,Sub,,0,0,0,,easier to make than big AI chips so all the AI chips are moving to 3 nanometer now right?
+Dialogue: 0,0:24:00.46,0:24:06.89,Sub,,0,0,0,,MI350 from late last year from AMD or Trainium 3 and TPU v7 from late last year or
+Dialogue: 0,0:24:06.94,0:24:15.36,Sub,,0,0,0,,slash early this year from Amazon and Google or you know NVIDIA is launching Rubin next week right?
+Dialogue: 0,0:24:15.41,0:24:21.43,Sub,,0,0,0,,That's that's also so all these things are 3 nanometer and and they're just telling Apple to get off.
+Dialogue: 0,0:24:21.48,0:24:25.91,Sub,,0,0,0,,They're telling Qualcomm and MediaTek to get off and all three of these companies are like oh maybe we
+Dialogue: 0,0:24:25.96,0:24:31.75,Sub,,0,0,0,,should use Intel because they're not telling us to get off because they don't they can't manufacture AI chips.
+Dialogue: 0,0:24:31.80,0:24:35.11,Sub,,0,0,0,,Yeah so so it's it's pretty it's pretty tough for everyone.
+Dialogue: 0,0:24:35.16,0:24:41.47,Sub,,0,0,0,,Um I have like a bunch of questions I'd love to ask you we're like we have 20 seconds left so the next question I ask
+Dialogue: 0,0:24:41.52,0:24:48.71,Sub,,0,0,0,,you is probably going to go off so with that I'll just like keep us on time and appreciate so much for coming and talking to us.
+Dialogue: 0,0:24:48.76,0:24:51.92,Sub,,0,0,0,,Thank you so much. you.

@@ -1,0 +1,248 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Arial,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:10.56,0:00:11.31,Sub,,0,0,0,,Hi everyone.
+Dialogue: 0,0:00:11.36,0:00:13.32,Sub,,0,0,0,,Welcome to the NVIDIA GTC studio.
+Dialogue: 0,0:00:13.37,0:00:21.26,Sub,,0,0,0,,My name's Tiffany Jansen and today I'm joined with Pankaj Sharma who's the executive VP of software and services at Schneider Electric.
+Dialogue: 0,0:00:21.31,0:00:22.32,Sub,,0,0,0,,Pankaj, welcome.
+Dialogue: 0,0:00:22.37,0:00:23.58,Sub,,0,0,0,,Thank you, Tiffany.
+Dialogue: 0,0:00:23.63,0:00:25.94,Sub,,0,0,0,,How's your your GTC been going so far?
+Dialogue: 0,0:00:25.99,0:00:26.59,Sub,,0,0,0,,Excellent.
+Dialogue: 0,0:00:26.64,0:00:29.11,Sub,,0,0,0,,It's been the last two days super busy.
+Dialogue: 0,0:00:29.16,0:00:30.99,Sub,,0,0,0,,A lot of information, but that's really good.
+Dialogue: 0,0:00:31.04,0:00:32.11,Sub,,0,0,0,,That's really good to hear.
+Dialogue: 0,0:00:32.16,0:00:34.90,Sub,,0,0,0,,You know, when I saw that we'd be having a conversation today,
+Dialogue: 0,0:00:34.95,0:00:40.67,Sub,,0,0,0,,I was really looking forward to it because I think what Schneider Electric is working on and some of the challenges that
+Dialogue: 0,0:00:40.72,0:00:48.80,Sub,,0,0,0,,you are solving are some of the biggest challenges we are frankly facing right now when it comes to AI infrastructure and scaling.
+Dialogue: 0,0:00:48.85,0:00:52.43,Sub,,0,0,0,,And on that note, we are seeing incredible momentum around AI factories.
+Dialogue: 0,0:00:52.48,0:00:59.47,Sub,,0,0,0,,We're seeing a ton of them starting to pop up, but in order for them to be successful, they need a ton of power.
+Dialogue: 0,0:00:59.52,0:01:04.83,Sub,,0,0,0,,Can you share with me a little bit about some of the challenges and also opportunities that brings?
+Dialogue: 0,0:01:04.88,0:01:09.27,Sub,,0,0,0,,It it brings first of all a lot of challenges uh and opportunities.
+Dialogue: 0,0:01:09.32,0:01:14.39,Sub,,0,0,0,,So, maybe just take a step back if you heard the keynote when Jensen was sharing the the five-layered cake.
+Dialogue: 0,0:01:14.44,0:01:14.79,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:01:14.82,0:01:23.59,Sub,,0,0,0,,Uh and we we we play at many layers, obviously, but the primary role we play is at the bottom uh where the energy infrastructure has to come in.
+Dialogue: 0,0:01:23.64,0:01:30.43,Sub,,0,0,0,,Now, the challenge at hand is that the utilization and applications of AI are starting to increase dramatically.
+Dialogue: 0,0:01:30.48,0:01:32.07,Sub,,0,0,0,,I mean, we see it in our own lives, right?
+Dialogue: 0,0:01:32.12,0:01:38.27,Sub,,0,0,0,,As consumers or in businesses and and how it is making everything more efficient and so on.
+Dialogue: 0,0:01:38.32,0:01:46.13,Sub,,0,0,0,,But to build all of that, you need the AI factories for which, of course, you need physical infrastructure and also you need available energy.
+Dialogue: 0,0:01:46.18,0:01:46.48,Sub,,0,0,0,,Now,
+Dialogue: 0,0:01:46.41,0:01:49.75,Sub,,0,0,0,,when we think about the overall planet and the amount of energy available and we have
+Dialogue: 0,0:01:49.80,0:01:52.58,Sub,,0,0,0,,to keep in mind that at the end of the day it has to be sustainable,
+Dialogue: 0,0:01:52.63,0:01:53.31,Sub,,0,0,0,,too, right?
+Dialogue: 0,0:01:53.36,0:01:57.80,Sub,,0,0,0,,So, available energy and green energy availability is overall a challenge.
+Dialogue: 0,0:01:57.85,0:01:59.94,Sub,,0,0,0,,And that's why the big push right now.
+Dialogue: 0,0:01:59.99,0:02:04.78,Sub,,0,0,0,,And when Jensen also shares the bottom layer, it's so important for us to be able to solve for that.
+Dialogue: 0,0:02:04.83,0:02:07.05,Sub,,0,0,0,,So, yeah, that's a huge issue at hand.
+Dialogue: 0,0:02:07.10,0:02:11.25,Sub,,0,0,0,,So, it's related to grid infrastructures, it's related to clean generation of energy,
+Dialogue: 0,0:02:11.30,0:02:17.30,Sub,,0,0,0,,it's related to availability of physical infrastructure which is efficient, which is where companies like us come in.
+Dialogue: 0,0:02:17.35,0:02:19.26,Sub,,0,0,0,,So, so that's the overall challenge.
+Dialogue: 0,0:02:19.31,0:02:21.57,Sub,,0,0,0,,But like you said, it's also a huge opportunity.
+Dialogue: 0,0:02:21.62,0:02:27.47,Sub,,0,0,0,,It's a huge opportunity because while you think about availability of energy,
+Dialogue: 0,0:02:27.52,0:02:34.15,Sub,,0,0,0,,you also have to think about how utilizing AI you can make the availability of energy better.
+Dialogue: 0,0:02:34.20,0:02:39.21,Sub,,0,0,0,,So, at Schneider, for example, what we talk about is AI for energy and energy for AI, right?
+Dialogue: 0,0:02:39.26,0:02:42.81,Sub,,0,0,0,,Everybody talks about energy for AI or energy so much of energy needed.
+Dialogue: 0,0:02:42.86,0:02:48.15,Sub,,0,0,0,,But AI can actually enable by simplifying through digital and so on.
+Dialogue: 0,0:02:48.20,0:02:50.57,Sub,,0,0,0,,Isn't that so funny how it works where it's, you know,
+Dialogue: 0,0:02:50.62,0:02:57.99,Sub,,0,0,0,,we need so much energy for AI and AI is going to be the enabler to solve that that challenge at the end of the day.
+Dialogue: 0,0:02:58.04,0:03:04.22,Sub,,0,0,0,,What are some examples of of AI being able to do that that you have seen being able to solve some
+Dialogue: 0,0:03:04.27,0:03:10.55,Sub,,0,0,0,,of these grid challenges because the grid really isn't set up for this level of scaling when it comes to AI?
+Dialogue: 0,0:03:10.60,0:03:13.11,Sub,,0,0,0,,Multiple examples I can give you.
+Dialogue: 0,0:03:13.16,0:03:18.87,Sub,,0,0,0,,So, one of the examples I give you is when you think about uh in a large data center, right?
+Dialogue: 0,0:03:18.92,0:03:22.67,Sub,,0,0,0,,You there's so much of heat getting generation generated because of compute.
+Dialogue: 0,0:03:22.72,0:03:28.19,Sub,,0,0,0,,So, you need to take out the heat, which means you need cooling and you need cooling systems and HVACs and so on.
+Dialogue: 0,0:03:28.24,0:03:36.72,Sub,,0,0,0,,Just by utilizing AI algorithms on how historically the air conditioning system HVAC systems are working,
+Dialogue: 0,0:03:36.77,0:03:39.99,Sub,,0,0,0,,we are able to save almost 10% energy being utilized, right?
+Dialogue: 0,0:03:40.04,0:03:44.87,Sub,,0,0,0,,So, this is when you turn them on, turn them off, etc. So, this is where Agentic comes into play, right?
+Dialogue: 0,0:03:44.92,0:03:48.35,Sub,,0,0,0,,I mean, it automates the whole performance.
+Dialogue: 0,0:03:48.40,0:03:54.29,Sub,,0,0,0,,Other examples of where AI uh can help is uh for example,
+Dialogue: 0,0:03:54.34,0:04:00.35,Sub,,0,0,0,,overall in a in a in a large data center environment, in the on the physical layer, you have compute.
+Dialogue: 0,0:04:00.40,0:04:06.20,Sub,,0,0,0,,So, when you apply AI to think about when is compute needed and when it is not needed,
+Dialogue: 0,0:04:06.25,0:04:12.71,Sub,,0,0,0,,let's say in a large training factory, that can then help utilization of energy and bringing the need for energy down.
+Dialogue: 0,0:04:12.76,0:04:16.22,Sub,,0,0,0,,So, AI for energy actually is a very important tool.
+Dialogue: 0,0:04:16.27,0:04:19.86,Sub,,0,0,0,,And and and I try to say that whenever somebody asks me this question because
+Dialogue: 0,0:04:19.91,0:04:23.92,Sub,,0,0,0,,it's very easy to just get overly and then perplexed by the fact that oh,
+Dialogue: 0,0:04:23.97,0:04:27.71,Sub,,0,0,0,,there's so much of energy needed, but unless we do AI, we can't even solve for that.
+Dialogue: 0,0:04:27.76,0:04:32.79,Sub,,0,0,0,,Of course, we need to generate, but we can't solve for what is available and how much is getting utilized.
+Dialogue: 0,0:04:32.84,0:04:33.40,Sub,,0,0,0,,Absolutely.
+Dialogue: 0,0:04:33.45,0:04:40.23,Sub,,0,0,0,,And I think that's on a personal level, I think to be honest with you, that's where I am currently at in my my research journey, if you will,
+Dialogue: 0,0:04:40.28,0:04:48.79,Sub,,0,0,0,,when it comes to AI and the energy required to to keep on scaling is I'm I'm in that stuck phase where it's,
+Dialogue: 0,0:04:48.84,0:04:50.51,Sub,,0,0,0,,you know, well, how are we going to solve this?
+Dialogue: 0,0:04:50.56,0:04:51.27,Sub,,0,0,0,,Where is it going to go?
+Dialogue: 0,0:04:51.32,0:04:59.35,Sub,,0,0,0,,So, hearing from you of that you those use cases and examples with AI is really exciting, especially that stat 10% for cooling.
+Dialogue: 0,0:04:59.40,0:04:59.70,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:04:59.66,0:05:03.16,Sub,,0,0,0,,I mean, there there are other examples I'll give you like when you think about software.
+Dialogue: 0,0:05:03.21,0:05:08.43,Sub,,0,0,0,,We have one of our businesses which is called the digital grid business, which is how do you optimize the grid?
+Dialogue: 0,0:05:08.48,0:05:17.55,Sub,,0,0,0,,Just by utilizing software on how the grid is managed, you're able to bring down the technical losses by a few percentage points.
+Dialogue: 0,0:05:17.60,0:05:23.57,Sub,,0,0,0,,Now, that means that much of available energy which can be utilized for all the other things we're trying to do.
+Dialogue: 0,0:05:23.62,0:05:26.52,Sub,,0,0,0,,Now, if you put that in AI, AI helps again, right?
+Dialogue: 0,0:05:26.57,0:05:29.47,Sub,,0,0,0,,So, it's it's almost circular if you think about it.
+Dialogue: 0,0:05:29.52,0:05:30.11,Sub,,0,0,0,,You know,
+Dialogue: 0,0:05:30.16,0:05:38.40,Sub,,0,0,0,,have you at Schneider been working on this with AI for I'm curious because right now I feel like it's a topic of conversation and I'm sure you've,
+Dialogue: 0,0:05:38.45,0:05:39.09,Sub,,0,0,0,,you know,
+Dialogue: 0,0:05:39.14,0:05:44.54,Sub,,0,0,0,,been bombarded with so many questions around this, but have you been working on this way before,
+Dialogue: 0,0:05:44.59,0:05:49.13,Sub,,0,0,0,,I'm sure, that people were even starting to really think about it, like the general public?
+Dialogue: 0,0:05:49.18,0:05:57.15,Sub,,0,0,0,,Yeah, and and and look, the the need for energy is something which has been a challenge for many years.
+Dialogue: 0,0:05:57.20,0:05:59.23,Sub,,0,0,0,,It's not something new, right?
+Dialogue: 0,0:05:59.28,0:06:06.97,Sub,,0,0,0,,The only thing is because now we have stronger LLMs and we have much stronger compute capability,
+Dialogue: 0,0:06:07.02,0:06:11.85,Sub,,0,0,0,,NVIDIA, the the application of AI has become rapidly faster.
+Dialogue: 0,0:06:11.90,0:06:19.95,Sub,,0,0,0,,So, hence the need of energy has gone up dramatically, but the need of energy for data centers has always been a challenge.
+Dialogue: 0,0:06:20.00,0:06:23.99,Sub,,0,0,0,,For a company like us, we look at it from two points of view.
+Dialogue: 0,0:06:24.04,0:06:30.07,Sub,,0,0,0,,First, because we create the physical infrastructure, so our goal always is to make it more and more efficient.
+Dialogue: 0,0:06:30.12,0:06:31.81,Sub,,0,0,0,,And efficiency then helps.
+Dialogue: 0,0:06:31.86,0:06:39.35,Sub,,0,0,0,,Efficiency is through design of the product, but efficiency is also through digital, which is how you manage those products.
+Dialogue: 0,0:06:39.40,0:06:42.46,Sub,,0,0,0,,The entire the entire digital part, the software part of it.
+Dialogue: 0,0:06:42.51,0:06:42.81,Sub,,0,0,0,,So,
+Dialogue: 0,0:06:42.74,0:06:48.79,Sub,,0,0,0,,we've always as a company been been working on bringing out those kind of technologies so that the
+Dialogue: 0,0:06:48.84,0:06:53.80,Sub,,0,0,0,,input energy which is going into a data center and how much is actually getting utilized by compute,
+Dialogue: 0,0:06:53.85,0:06:55.83,Sub,,0,0,0,,you try to reduce that gap dramatically.
+Dialogue: 0,0:06:55.88,0:07:00.79,Sub,,0,0,0,,So, that's been an effort of Schneider Electric for a very long time.
+Dialogue: 0,0:07:00.84,0:07:05.64,Sub,,0,0,0,,We've also been also focused on thinking about how you utilize that in a sustainable fashion.
+Dialogue: 0,0:07:05.69,0:07:10.90,Sub,,0,0,0,,It's just that today, with the demand going up so much, everything needs to be accelerated, right?
+Dialogue: 0,0:07:10.95,0:07:16.65,Sub,,0,0,0,,So, it's not just accelerated compute, it's accelerated generation of energy, it's accelerated infrastructure which is needed,
+Dialogue: 0,0:07:16.70,0:07:20.93,Sub,,0,0,0,,it's accelerated uh digital, which is all softwares which are going to make it easier.
+Dialogue: 0,0:07:20.98,0:07:22.72,Sub,,0,0,0,,So, all of that has to be accelerated.
+Dialogue: 0,0:07:22.77,0:07:24.86,Sub,,0,0,0,,It really can't be done in silos.
+Dialogue: 0,0:07:24.91,0:07:27.70,Sub,,0,0,0,,It has to be a solution all together almost.
+Dialogue: 0,0:07:27.75,0:07:28.23,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:07:28.28,0:07:36.40,Sub,,0,0,0,,I mean, that's such a good point you're making because when you also think about the entire buildout of a AI factory, the each system,
+Dialogue: 0,0:07:36.45,0:07:43.43,Sub,,0,0,0,,each each component of the system is important because you get the best optimization
+Dialogue: 0,0:07:43.48,0:07:47.86,Sub,,0,0,0,,of both the physical layer and the software when it works as a system.
+Dialogue: 0,0:07:47.91,0:07:49.71,Sub,,0,0,0,,So, the system plays absolutely critical.
+Dialogue: 0,0:07:49.76,0:07:50.69,Sub,,0,0,0,,So, great point.
+Dialogue: 0,0:07:50.74,0:07:57.29,Sub,,0,0,0,,You know, I know Schneider does both, as you mentioned, the physical aspect, like the the physical side of things and then also the software.
+Dialogue: 0,0:07:57.34,0:08:01.50,Sub,,0,0,0,,Are there any scenarios where you are solving a problem,
+Dialogue: 0,0:08:01.55,0:08:09.52,Sub,,0,0,0,,working with a company who already has one or the other and even though both are so important, you have to kind of really adjust based on that?
+Dialogue: 0,0:08:09.57,0:08:17.00,Sub,,0,0,0,,So, maybe it's an existing AI factory or they have pretty archaic software that they're dealing with.
+Dialogue: 0,0:08:17.05,0:08:18.34,Sub,,0,0,0,,Are there any cases of that?
+Dialogue: 0,0:08:18.39,0:08:23.50,Sub,,0,0,0,,So, your your question really is around, let's say, brownfield Yeah. will, right?
+Dialogue: 0,0:08:23.55,0:08:26.20,Sub,,0,0,0,,And uh I mean, there are not many existing AI factories.
+Dialogue: 0,0:08:26.25,0:08:26.98,Sub,,0,0,0,,Yeah, that's true.
+Dialogue: 0,0:08:27.03,0:08:28.59,Sub,,0,0,0,,That's true.
+Dialogue: 0,0:08:28.64,0:08:30.68,Sub,,0,0,0,,But we've we've been building data centers.
+Dialogue: 0,0:08:30.73,0:08:34.07,Sub,,0,0,0,,Some of the world's been building data centers for many decades now, right?
+Dialogue: 0,0:08:34.12,0:08:41.83,Sub,,0,0,0,,The and typical utilization levels in data centers are extremely high right now, as you can imagine, because the demand is so high.
+Dialogue: 0,0:08:41.88,0:08:52.83,Sub,,0,0,0,,But some of the builds which happened in the past have reached a limit of performance simply because they were never built for this level of compute.
+Dialogue: 0,0:08:52.88,0:08:58.11,Sub,,0,0,0,,So, we have those kind of examples and to your point, both on the physical layer and the software which is utilized there.
+Dialogue: 0,0:08:58.16,0:09:04.06,Sub,,0,0,0,,There are times when you can have a brownfield environment and you can apply software and when we say software,
+Dialogue: 0,0:09:04.11,0:09:08.99,Sub,,0,0,0,,we talk about energy intelligence and I'll maybe take a second here to explain to you what that means.
+Dialogue: 0,0:09:09.04,0:09:15.29,Sub,,0,0,0,,Energy intelligence is where when you have performance data of data centers as one
+Dialogue: 0,0:09:15.34,0:09:20.06,Sub,,0,0,0,,example and any other application for that matter for the longest period of time,
+Dialogue: 0,0:09:20.11,0:09:27.03,Sub,,0,0,0,,for decades, you utilize that data and then put AI on top of the data with the help of software,
+Dialogue: 0,0:09:27.08,0:09:37.01,Sub,,0,0,0,,come up with insights which you can either be AI augmented or AI native, more so AI native now when you heard that as a conversation,
+Dialogue: 0,0:09:37.06,0:09:43.34,Sub,,0,0,0,,so that those insights can help improve the performance of the physical layer, right?
+Dialogue: 0,0:09:43.39,0:09:49.67,Sub,,0,0,0,,Now, in a brownfield brownfield environment, sometimes with energy intelligence this can be done.
+Dialogue: 0,0:09:49.72,0:09:57.47,Sub,,0,0,0,,The challenge always is if it is a much older environment, the physical layer is not digital.
+Dialogue: 0,0:09:57.52,0:09:57.82,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:09:57.80,0:10:08.79,Sub,,0,0,0,,So, either you attach something like an appliance on the physical layer to make it digital or you really need to swipe it out.
+Dialogue: 0,0:10:08.84,0:10:11.63,Sub,,0,0,0,,So it's a whole process like as a company we do that for our customer.
+Dialogue: 0,0:10:11.68,0:10:17.07,Sub,,0,0,0,,First of all we have ourselves been building data centers for our customers for many decades now, right?
+Dialogue: 0,0:10:17.12,0:10:26.16,Sub,,0,0,0,,So we work with them to think about their physical layer and do a complete asset analysis etc. Try to bring in digital software etc. to simplify.
+Dialogue: 0,0:10:26.21,0:10:33.52,Sub,,0,0,0,,But if there are times there the physical layer is just not digital at all then all you have to do is you have to swap it out.
+Dialogue: 0,0:10:33.57,0:10:35.44,Sub,,0,0,0,,Absolutely. are those kind of scenarios.
+Dialogue: 0,0:10:35.49,0:10:36.92,Sub,,0,0,0,,That's really interesting.
+Dialogue: 0,0:10:36.97,0:10:43.67,Sub,,0,0,0,,It's it's exciting to me or interesting to me because every scenario is so different and every challenge is is
+Dialogue: 0,0:10:43.72,0:10:49.26,Sub,,0,0,0,,I mean there's a lot of similarities but the way you have to think slightly about each one is different.
+Dialogue: 0,0:10:49.31,0:10:52.89,Sub,,0,0,0,,Yeah, I mean it's different also because it depends on where the data center is located.
+Dialogue: 0,0:10:52.94,0:10:57.82,Sub,,0,0,0,,It depends on the the environment around availability of power.
+Dialogue: 0,0:10:57.87,0:11:02.42,Sub,,0,0,0,,How much more power is needed like for example if you already maxed out on power availability
+Dialogue: 0,0:11:02.47,0:11:08.63,Sub,,0,0,0,,in a certain geographical location even if you can build more it there is no point of that,
+Dialogue: 0,0:11:08.68,0:11:08.98,Sub,,0,0,0,,right?
+Dialogue: 0,0:11:08.95,0:11:10.15,Sub,,0,0,0,,Yeah, I didn't think about that.
+Dialogue: 0,0:11:10.20,0:11:11.91,Sub,,0,0,0,,That's a very good point.
+Dialogue: 0,0:11:11.96,0:11:19.60,Sub,,0,0,0,,Why is it important and we kind of spoke about this earlier but why is it important to manage all of these systems together for AI factories?
+Dialogue: 0,0:11:19.65,0:11:21.22,Sub,,0,0,0,,Can you expand on that a bit more?
+Dialogue: 0,0:11:21.27,0:11:26.71,Sub,,0,0,0,,Yeah, you know when you think about an AI factory and when you think about everything that goes into the physical layer.
+Dialogue: 0,0:11:26.76,0:11:32.97,Sub,,0,0,0,,So first of all you have energy coming in and even in an AI factory which by the way is some
+Dialogue: 0,0:11:33.02,0:11:40.61,Sub,,0,0,0,,of the most let's say well utilized environments also because there's a lot of training which is happening in those AI factories,
+Dialogue: 0,0:11:40.66,0:11:40.96,Sub,,0,0,0,,right?
+Dialogue: 0,0:11:40.91,0:11:44.15,Sub,,0,0,0,,So it's it's kind of similar type of loads, right?
+Dialogue: 0,0:11:44.20,0:11:49.32,Sub,,0,0,0,,Even in those environments there is standard capacity of energy which means if you're getting
+Dialogue: 0,0:11:49.37,0:11:54.95,Sub,,0,0,0,,100 points of energy coming in you're utilizing only 64 as an example for compute.
+Dialogue: 0,0:11:55.00,0:11:55.72,Sub,,0,0,0,,Which is the whole point.
+Dialogue: 0,0:11:55.77,0:11:58.37,Sub,,0,0,0,,Which means you still have 40 which is standard somewhere.
+Dialogue: 0,0:11:58.42,0:11:58.79,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:11:58.82,0:12:00.31,Sub,,0,0,0,,So that's one example.
+Dialogue: 0,0:12:00.36,0:12:03.45,Sub,,0,0,0,,Then when So what do you do to make it better?
+Dialogue: 0,0:12:03.50,0:12:06.79,Sub,,0,0,0,,So this is where software AI energy intelligence kind of things come into play.
+Dialogue: 0,0:12:06.84,0:12:13.36,Sub,,0,0,0,,The second point is when you think about the physical layer there so you have different parts of physical layer.
+Dialogue: 0,0:12:13.41,0:12:16.13,Sub,,0,0,0,,So you have the power infrastructure, you have the cooling infrastructure,
+Dialogue: 0,0:12:16.18,0:12:20.39,Sub,,0,0,0,,you know you have cabling, you have data, you have all of those things, right?
+Dialogue: 0,0:12:20.44,0:12:24.99,Sub,,0,0,0,,So each one of them individually has to be the most efficient.
+Dialogue: 0,0:12:25.04,0:12:29.39,Sub,,0,0,0,,But collectively is where the handovers happen.
+Dialogue: 0,0:12:29.44,0:12:34.80,Sub,,0,0,0,,So as an example the amount of compute getting generated leads to the utilization of
+Dialogue: 0,0:12:34.84,0:12:41.83,Sub,,0,0,0,,the power infrastructure and when that's linked to the cooling infrastructure that handover is absolutely critical.
+Dialogue: 0,0:12:41.88,0:12:45.97,Sub,,0,0,0,,If that handover is not seamless then you're losing a lot of energy.
+Dialogue: 0,0:12:46.02,0:12:49.27,Sub,,0,0,0,,You talk about the standard capacity that's where you're losing.
+Dialogue: 0,0:12:49.32,0:12:58.71,Sub,,0,0,0,,So that's why the play of the system is absolutely critical even if each one of those individual components are the most efficient components,
+Dialogue: 0,0:12:58.76,0:13:00.35,Sub,,0,0,0,,software defined components.
+Dialogue: 0,0:13:00.40,0:13:02.20,Sub,,0,0,0,,But the system play is absolutely critical.
+Dialogue: 0,0:13:02.25,0:13:02.65,Sub,,0,0,0,,Absolutely.
+Dialogue: 0,0:13:02.70,0:13:03.40,Sub,,0,0,0,,That makes sense.
+Dialogue: 0,0:13:03.45,0:13:12.79,Sub,,0,0,0,,So much energy and heat is lost if it's not for example going back to liquid cooling or or properly system put in place.
+Dialogue: 0,0:13:12.84,0:13:13.56,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:13:13.61,0:13:20.26,Sub,,0,0,0,,So so liquid cooling now of course I mean for us is is is an integral part of what we do, right?
+Dialogue: 0,0:13:20.31,0:13:24.31,Sub,,0,0,0,,When we uh what two years ago we had Motive Air come in and join our company and they're the
+Dialogue: 0,0:13:24.36,0:13:31.22,Sub,,0,0,0,,number one leader in the world in that space but it's important there not just So back to the system play.
+Dialogue: 0,0:13:31.27,0:13:37.85,Sub,,0,0,0,,It's not just important to have the best liquid cooling technology from an offer standpoint whether the cooling distribution units or the heat
+Dialogue: 0,0:13:37.90,0:13:47.75,Sub,,0,0,0,,exchangers etc. It's also important how the flow of fluid is managed inside the data center and at what temperatures it's getting managed.
+Dialogue: 0,0:13:47.80,0:13:49.32,Sub,,0,0,0,,What's the optimum temperature?
+Dialogue: 0,0:13:49.37,0:13:54.95,Sub,,0,0,0,,Because all of that eventually is leading into the amount of energy we are consuming.
+Dialogue: 0,0:13:55.00,0:14:00.78,Sub,,0,0,0,,And if you're wasting energy when you're consuming it then that's that's something which makes it inefficient and of
+Dialogue: 0,0:14:00.83,0:14:04.15,Sub,,0,0,0,,and and again we are talking about the fact we need more and more and more and more energy,
+Dialogue: 0,0:14:04.20,0:14:04.50,Sub,,0,0,0,,right?
+Dialogue: 0,0:14:04.52,0:14:05.03,Sub,,0,0,0,,Absolutely.
+Dialogue: 0,0:14:05.08,0:14:06.43,Sub,,0,0,0,,That's such a good point.
+Dialogue: 0,0:14:06.48,0:14:10.05,Sub,,0,0,0,,I never thought of it from that perspective especially around with liquid cooling.
+Dialogue: 0,0:14:10.10,0:14:16.62,Sub,,0,0,0,,I'm like oh liquid cooling it's going to solve going to solve so many problems but there's so much more that goes into it even the way it's flowing,
+Dialogue: 0,0:14:16.67,0:14:17.50,Sub,,0,0,0,,the way it's set up.
+Dialogue: 0,0:14:17.55,0:14:20.79,Sub,,0,0,0,,If it's not done properly then wasting energy.
+Dialogue: 0,0:14:20.84,0:14:21.79,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:14:21.84,0:14:27.05,Sub,,0,0,0,,There is you know throughout our conversation we've addressed that there is a bottleneck
+Dialogue: 0,0:14:27.10,0:14:32.19,Sub,,0,0,0,,when it comes to AI scaling and one of that those bottlenecks is around power.
+Dialogue: 0,0:14:32.24,0:14:37.03,Sub,,0,0,0,,Other than for example liquid cooling, what are some other ways to unlock this?
+Dialogue: 0,0:14:37.08,0:14:42.67,Sub,,0,0,0,,So So liquid cooling is a part of the physical layer, right?
+Dialogue: 0,0:14:42.72,0:14:49.59,Sub,,0,0,0,,So everything on the physical layer whether it's power infrastructure, cooling infrastructure has to become more and more efficient, right?
+Dialogue: 0,0:14:49.64,0:14:51.63,Sub,,0,0,0,,Which is what we spoke about already.
+Dialogue: 0,0:14:51.68,0:14:57.65,Sub,,0,0,0,,On top of that one way to unlock it now is with the energy intelligence.
+Dialogue: 0,0:14:57.70,0:14:58.10,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:14:58.15,0:14:58.72,Sub,,0,0,0,,Right?
+Dialogue: 0,0:14:58.77,0:15:05.60,Sub,,0,0,0,,So with energy intelligence the ability to capture data to be able to design
+Dialogue: 0,0:15:05.65,0:15:09.40,Sub,,0,0,0,,better you know we talk a lot about SimReady in this conference with Nvidia.
+Dialogue: 0,0:15:09.45,0:15:11.20,Sub,,0,0,0,,There's a reason for that, right?
+Dialogue: 0,0:15:11.25,0:15:13.78,Sub,,0,0,0,,Because everything which you put in if it is simulation ready,
+Dialogue: 0,0:15:13.83,0:15:20.80,Sub,,0,0,0,,SimReady simulation ready then it's able to do the digital twin where even before
+Dialogue: 0,0:15:20.85,0:15:25.17,Sub,,0,0,0,,building the AI factory you have a design which is the most optimum design,
+Dialogue: 0,0:15:25.22,0:15:25.61,Sub,,0,0,0,,right?
+Dialogue: 0,0:15:25.64,0:15:29.62,Sub,,0,0,0,,So that's why this entire energy intelligence layer comes into play.
+Dialogue: 0,0:15:29.67,0:15:35.61,Sub,,0,0,0,,So now what you can do is you can build a digital twin in advance before you make the AI factory
+Dialogue: 0,0:15:35.66,0:15:42.11,Sub,,0,0,0,,but with the intelligence of all the years of data which you have in functioning of each one of those offers,
+Dialogue: 0,0:15:42.16,0:15:51.83,Sub,,0,0,0,,those physical layer offers you create AI algorithms which tells you how to now build so much better than the way you would have built in the past.
+Dialogue: 0,0:15:51.88,0:15:58.75,Sub,,0,0,0,,So to unlock to your point the the utilization of energy it's both on the efficiency of
+Dialogue: 0,0:15:58.80,0:16:03.09,Sub,,0,0,0,,the physical layer but it's also on the energy intelligence which comes which is again AI for energy.
+Dialogue: 0,0:16:03.14,0:16:04.04,Sub,,0,0,0,,I love that.
+Dialogue: 0,0:16:04.09,0:16:05.29,Sub,,0,0,0,,Energy intelligence.
+Dialogue: 0,0:16:05.34,0:16:06.67,Sub,,0,0,0,,Energy intelligence, yes.
+Dialogue: 0,0:16:06.72,0:16:13.15,Sub,,0,0,0,,That's why I learned a lot through this conversation but that was for me that's the take home that I I uh That's what we do.
+Dialogue: 0,0:16:13.20,0:16:13.84,Sub,,0,0,0,,That's what we do.
+Dialogue: 0,0:16:13.89,0:16:17.03,Sub,,0,0,0,,I mean as a company if you think about Schneider Electric again we've been in
+Dialogue: 0,0:16:17.08,0:16:21.91,Sub,,0,0,0,,the not just data center many other businesses but we are an energy management company.
+Dialogue: 0,0:16:21.96,0:16:22.53,Sub,,0,0,0,,Yeah, yeah.
+Dialogue: 0,0:16:22.58,0:16:33.25,Sub,,0,0,0,,But more and more energy needed for AI cannot happen without energy intelligence because of the learning what we have collectively for
+Dialogue: 0,0:16:33.30,0:16:39.49,Sub,,0,0,0,,so many decades on how the performance of energy is and utilization is you have to apply on that and that's energy intelligence.
+Dialogue: 0,0:16:39.54,0:16:44.95,Sub,,0,0,0,,And of course there are other things then you need more grids, you need better grids and there are the many other things we need to do.
+Dialogue: 0,0:16:45.00,0:16:46.84,Sub,,0,0,0,,Pankaj, thank you so much for your time today.
+Dialogue: 0,0:16:46.89,0:16:49.18,Sub,,0,0,0,,This was a really insightful conversation.
+Dialogue: 0,0:16:49.23,0:16:49.80,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:16:49.85,0:16:51.39,Sub,,0,0,0,,And thank you all for tuning in.
+Dialogue: 0,0:16:51.44,0:16:58.59,Sub,,0,0,0,,Make sure to go check out more sessions on demand in the GTC catalog.

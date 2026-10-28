@@ -1,0 +1,5507 @@
+1
+00:00:00,000 --> 00:00:01,007
+Uh, welcome to Figure.
+
+2
+00:00:01,057 --> 00:00:02,391
+We make humanoid robots here.
+
+3
+00:00:02,441 --> 00:00:04,798
+We design them, we build them, we test them all.
+
+4
+00:00:04,848 --> 00:00:07,141
+Here, this is a secret room that nobody's allowed to come in.
+
+5
+00:00:07,191 --> 00:00:09,140
+I'm going to show you every robot we've ever built.
+
+6
+00:00:09,190 --> 00:00:11,045
+So, here we lost like a left knee.
+
+7
+00:00:11,095 --> 00:00:14,821
+And you can see the robot's kind of like hobbling on the left leg.
+
+8
+00:00:14,871 --> 00:00:17,573
+So, we have a robot doing burpees here.
+
+9
+00:00:17,623 --> 00:00:20,590
+This is where we manufacture figure 3 robots.
+
+10
+00:00:20,640 --> 00:00:21,009
+Wow.
+
+11
+00:00:21,039 --> 00:00:25,406
+And this was the first car in the world built by a humanoid robot that we're aware of.
+
+12
+00:00:25,456 --> 00:00:28,620
+We have a robot here that is designed to tidy the house.
+
+13
+00:00:28,670 --> 00:00:33,422
+These robots are running purely autonomously from a onboard AI policy called Helix.
+
+14
+00:00:33,472 --> 00:00:34,430
+Give it a push.
+
+15
+00:00:34,480 --> 00:00:39,043
+Oh gosh.
+
+16
+00:00:39,093 --> 00:00:42,119
+Okay.
+
+17
+00:00:42,169 --> 00:00:48,270
+I feel bad.
+
+18
+00:00:48,320 --> 00:00:49,070
+Welcome.
+
+19
+00:00:49,120 --> 00:00:49,550
+Hi.
+
+20
+00:00:49,600 --> 00:00:50,349
+How you doing?
+
+21
+00:00:50,399 --> 00:00:50,699
+Good.
+
+22
+00:00:50,627 --> 00:00:51,070
+How are you?
+
+23
+00:00:51,120 --> 00:00:52,509
+Good to see you.
+
+24
+00:00:52,559 --> 00:00:53,390
+I'm excited.
+
+25
+00:00:53,440 --> 00:00:53,953
+Yeah.
+
+26
+00:00:54,003 --> 00:00:56,110
+Uh, welcome to Figure.
+
+27
+00:00:56,160 --> 00:00:56,606
+Thanks.
+
+28
+00:00:56,656 --> 00:00:58,280
+So where are we right now?
+
+29
+00:00:58,330 --> 00:00:58,878
+What is this?
+
+30
+00:00:58,928 --> 00:00:59,710
+This is the headquarters.
+
+31
+00:00:59,760 --> 00:01:01,149
+This is a robot campus.
+
+32
+00:01:01,199 --> 00:01:01,950
+Robot campus.
+
+33
+00:01:02,000 --> 00:01:02,654
+Robot campus.
+
+34
+00:01:02,704 --> 00:01:03,710
+We make robots here.
+
+35
+00:01:03,760 --> 00:01:04,189
+Robots.
+
+36
+00:01:04,239 --> 00:01:05,870
+We make humanoid robots here.
+
+37
+00:01:05,920 --> 00:01:06,290
+Okay.
+
+38
+00:01:06,320 --> 00:01:09,550
+We design them and we build them and we test them all here.
+
+39
+00:01:09,600 --> 00:01:16,990
+So for people who don't know what a humanoid robot you will see in a second cuz this is kind of freaky, but can you explain what they are?
+
+40
+00:01:17,040 --> 00:01:17,532
+Yeah.
+
+41
+00:01:17,582 --> 00:01:24,401
+Um our goal is to build advanced AI that we can put into a general purpose uh humanoid body.
+
+42
+00:01:24,451 --> 00:01:27,822
+Um, a humanoid is basically just like a robot with a human form.
+
+43
+00:01:27,872 --> 00:01:31,238
+So, we have uh arms, hands, head, feet, legs.
+
+44
+00:01:31,288 --> 00:01:36,096
+We can basically do everything a human can in the world with one piece of hardware.
+
+45
+00:01:36,146 --> 00:01:37,310
+Uh, so um yeah,
+
+46
+00:01:37,360 --> 00:01:44,830
+our goal is to be able to go out and basically design and ship humanoid robots in the world that can do everything from housework to dishes,
+
+47
+00:01:44,880 --> 00:01:52,932
+laundry, uh to manufacturing, healthcare, just basically as much things in the world as possible that we can go out and ship robots to.
+
+48
+00:01:52,982 --> 00:01:55,470
+Oh, we see this on the screen.
+
+49
+00:01:55,520 --> 00:01:56,110
+Oh, yeah.
+
+50
+00:01:56,160 --> 00:01:59,026
+That's our uh that's our This is your hype machine.
+
+51
+00:01:59,076 --> 00:01:59,376
+Yeah.
+
+52
+00:01:59,369 --> 00:01:59,729
+Screen.
+
+53
+00:01:59,759 --> 00:02:00,876
+Yeah, exactly.
+
+54
+00:02:00,926 --> 00:02:04,418
+Uh that's our latest generation robot figure three.
+
+55
+00:02:04,468 --> 00:02:07,310
+Doing a little like uh concier's job.
+
+56
+00:02:07,360 --> 00:02:07,660
+Cool.
+
+57
+00:02:07,641 --> 00:02:07,941
+Okay.
+
+58
+00:02:07,922 --> 00:02:09,580
+So, what are we going to see today?
+
+59
+00:02:09,630 --> 00:02:10,429
+What's the plan?
+
+60
+00:02:10,479 --> 00:02:11,013
+Okay, come on in.
+
+61
+00:02:11,063 --> 00:02:12,590
+I want to show you some of my robots.
+
+62
+00:02:12,640 --> 00:02:13,070
+Okay.
+
+63
+00:02:13,120 --> 00:02:22,390
+Um I think first here is we have uh we have some robots that we basically have constantly running uh around the office 247 talking to humans.
+
+64
+00:02:22,440 --> 00:02:27,297
+uh greeting people just uh you know basically doing useful work.
+
+65
+00:02:27,347 --> 00:02:34,580
+Um these robots uh basically can run fully autonomously without any humans and they can automatically dock themselves
+
+66
+00:02:34,630 --> 00:02:39,846
+and charge and then um once they're fully charged basically come off and be able to do useful work.
+
+67
+00:02:39,896 --> 00:02:44,074
+So these robots that are docking here um are charging through the feet.
+
+68
+00:02:44,124 --> 00:02:48,116
+So we have a wireless charging stand like similar how you would charge a phone like inductively.
+
+69
+00:02:48,166 --> 00:02:48,466
+Okay.
+
+70
+00:02:48,464 --> 00:02:51,790
+Uh the robots can charge to their feet at two kilowatts.
+
+71
+00:02:51,840 --> 00:02:59,390
+So basically like um the the battery lasts about um about four to five hours and we can charge basically for an hour and go back and do work again.
+
+72
+00:02:59,440 --> 00:03:00,842
+So the robots we don't need to do anything.
+
+73
+00:03:00,892 --> 00:03:01,870
+We don't need to plug them in.
+
+74
+00:03:01,920 --> 00:03:06,030
+Uh they can basically autocharge themselves and just do 247 operations.
+
+75
+00:03:06,080 --> 00:03:09,838
+Is the role for this one right here just for the docking exercise?
+
+76
+00:03:09,888 --> 00:03:11,150
+Do these ones roam around?
+
+77
+00:03:11,200 --> 00:03:12,109
+These ones roam around.
+
+78
+00:03:12,159 --> 00:03:12,459
+Okay.
+
+79
+00:03:12,480 --> 00:03:12,780
+Yeah.
+
+80
+00:03:12,707 --> 00:03:13,007
+Yeah.
+
+81
+00:03:12,935 --> 00:03:17,310
+They're just docking here just to charge and then they'll be out doing doing useful work all day.
+
+82
+00:03:17,360 --> 00:03:17,913
+Okay.
+
+83
+00:03:17,963 --> 00:03:20,928
+And I saw these ones as well.
+
+84
+00:03:20,978 --> 00:03:22,909
+Is one of these special?
+
+85
+00:03:22,959 --> 00:03:29,630
+Yeah, the So this robot right here, the one uh the American flag was actually at the White House last week.
+
+86
+00:03:29,680 --> 00:03:30,749
+How did that happen?
+
+87
+00:03:30,799 --> 00:03:39,546
+We got a call uh asking to be basically the first humanoid group uh basically ever uh to put robots in the White House.
+
+88
+00:03:39,596 --> 00:03:49,352
+And uh so last week we basically had the you know first robots in humanoid robots in history there uh doing stuff talking greeting folks.
+
+89
+00:03:49,402 --> 00:03:54,670
+Um we were basically at a very special event with the first lady and um it it went really well.
+
+90
+00:03:54,720 --> 00:03:55,549
+It's exciting.
+
+91
+00:03:55,599 --> 00:03:56,015
+Yeah.
+
+92
+00:03:56,065 --> 00:03:58,889
+So this is our uh corporate headquarters.
+
+93
+00:03:58,939 --> 00:04:01,047
+We have uh four buildings on campus.
+
+94
+00:04:01,097 --> 00:04:05,150
+Uh so here we do uh a lot of basically engineering design work.
+
+95
+00:04:05,200 --> 00:04:06,670
+How many people work out here?
+
+96
+00:04:06,720 --> 00:04:08,886
+We have about 500 a little over 500 people.
+
+97
+00:04:08,936 --> 00:04:10,829
+How many are in the total company?
+
+98
+00:04:10,879 --> 00:04:11,830
+Um five Oh, sorry.
+
+99
+00:04:11,880 --> 00:04:16,270
+There's about there's about 250 300 people here and we have 500 in the company.
+
+100
+00:04:16,320 --> 00:04:16,909
+Oh wow.
+
+101
+00:04:16,959 --> 00:04:17,259
+Yeah.
+
+102
+00:04:17,287 --> 00:04:17,587
+Yeah.
+
+103
+00:04:17,615 --> 00:04:21,925
+I would say most all of it's engineering and then we've been growing out manufacturing uh
+
+104
+00:04:21,975 --> 00:04:26,429
+supply chain some of the areas to basically how do we make more robots pretty aggressively.
+
+105
+00:04:26,479 --> 00:04:28,270
+And how many robots do you have here?
+
+106
+00:04:28,320 --> 00:04:29,390
+How many there?
+
+107
+00:04:29,440 --> 00:04:30,589
+A few hundred right now.
+
+108
+00:04:30,639 --> 00:04:30,966
+Okay.
+
+109
+00:04:30,996 --> 00:04:38,141
+Are they outpacing the humans or uh there's slow my my goal for the for this building is I want more robots humanoid robots than humans.
+
+110
+00:04:38,191 --> 00:04:38,491
+Okay.
+
+111
+00:04:38,479 --> 00:04:40,778
+Uh, walking around and they don't necessarily need to walk.
+
+112
+00:04:40,828 --> 00:04:44,510
+They could be sitting or talking.
+
+113
+00:04:44,560 --> 00:04:46,270
+Yeah.
+
+114
+00:04:46,320 --> 00:04:52,589
+So, basically we have uh we basically do a lot of uh basically hardware and software validation testing here.
+
+115
+00:04:52,639 --> 00:04:53,070
+Okay.
+
+116
+00:04:53,120 --> 00:05:04,750
+Um, so like testing for burn-in uh durability um bas basically like uh any new software hardware gets validated through this through this facility.
+
+117
+00:05:04,800 --> 00:05:05,111
+Yeah.
+
+118
+00:05:05,141 --> 00:05:08,989
+Uh so you have robots doing all kinds of crazy stuff here.
+
+119
+00:05:09,039 --> 00:05:11,630
+That is that is definitely some yoga.
+
+120
+00:05:11,680 --> 00:05:13,977
+Robot getting on the ground and getting back up again.
+
+121
+00:05:14,027 --> 00:05:18,989
+Um we're basically trying to stress test the robots to try to any trying to find any potential failures.
+
+122
+00:05:19,039 --> 00:05:19,410
+Okay.
+
+123
+00:05:19,440 --> 00:05:21,950
+Before like any new hardware software could get released.
+
+124
+00:05:22,000 --> 00:05:29,630
+So if we have a new camera um uh new type of like uh say structure or anything else, we'll we'll test it here before it goes out.
+
+125
+00:05:29,680 --> 00:05:32,810
+How many potential body movements can they do?
+
+126
+00:05:32,860 --> 00:05:33,766
+Uh, okay.
+
+127
+00:05:33,816 --> 00:05:36,111
+So, this is kind of a crazy.
+
+128
+00:05:36,161 --> 00:05:39,470
+So, the the robot's basically made up of about 40 like motors.
+
+129
+00:05:39,520 --> 00:05:39,889
+Okay.
+
+130
+00:05:39,919 --> 00:05:43,470
+Every motor can spin like 360 degrees like all the way around.
+
+131
+00:05:43,520 --> 00:05:47,630
+So, the the mathematically like how many states it could be in like body positions.
+
+132
+00:05:47,680 --> 00:05:48,190
+Yeah.
+
+133
+00:05:48,240 --> 00:05:50,589
+Is 360 to the power of 40.
+
+134
+00:05:50,639 --> 00:05:51,070
+What?
+
+135
+00:05:51,120 --> 00:05:51,420
+Yeah.
+
+136
+00:05:51,440 --> 00:05:56,510
+It's uh more body positions than atoms in the universe, which is crazy.
+
+137
+00:05:56,560 --> 00:05:57,149
+Potentially.
+
+138
+00:05:57,199 --> 00:05:57,961
+Yeah, I've done the math.
+
+139
+00:05:58,011 --> 00:05:58,429
+It's for sure.
+
+140
+00:05:58,479 --> 00:05:59,285
+You've done the math?
+
+141
+00:05:59,335 --> 00:05:59,869
+Yes, for sure.
+
+142
+00:05:59,919 --> 00:06:00,337
+Okay.
+
+143
+00:06:00,387 --> 00:06:05,550
+Um, so we uh, so it's basically like the the difficulty here is like how do you control it?
+
+144
+00:06:05,600 --> 00:06:07,310
+You can't write code to make this work.
+
+145
+00:06:07,360 --> 00:06:10,632
+Uh, so all of our robots here run on a neural network we call Helix.
+
+146
+00:06:10,682 --> 00:06:11,149
+It's um,
+
+147
+00:06:11,199 --> 00:06:15,447
+it's a vision language action model we designed here internally to to tell the robot
+
+148
+00:06:15,497 --> 00:06:19,357
+what to go do to stay balanced like how to move its joints basically uh,
+
+149
+00:06:19,407 --> 00:06:21,230
+from pixels from from camera space.
+
+150
+00:06:21,280 --> 00:06:23,869
+And so that team that works on Helix is in the same building.
+
+151
+00:06:23,919 --> 00:06:25,470
+They're in the same building right here.
+
+152
+00:06:25,520 --> 00:06:27,398
+Yeah, they're uh, they're phenomenal.
+
+153
+00:06:27,448 --> 00:06:30,472
+We basically have a large scale data collection efforts that's going on and then we
+
+154
+00:06:30,522 --> 00:06:34,215
+train our own models here internally and then we test them all all here as well.
+
+155
+00:06:34,265 --> 00:06:38,110
+Uh that's it's not just like um it's not just like for like for
+
+156
+00:06:38,160 --> 00:06:42,044
+balancing and being able to have stability which we need to have like humanlike stability.
+
+157
+00:06:42,094 --> 00:06:44,522
+It's for how do we um how do we know what to go do?
+
+158
+00:06:44,572 --> 00:06:49,690
+How do we take in prompts from humans and say um like vision from the cameras and how do we
+
+159
+00:06:49,740 --> 00:06:55,042
+output every single joint including where the body's positioned and feet and hands to do stuff like it could be
+
+160
+00:06:55,092 --> 00:06:59,790
+folding laundry doing manufacturing and logistics that you'll see here later today and we have to do that like a
+
+161
+00:06:59,840 --> 00:07:06,190
+few hundred times a second from camera images and uh on a neural network that runs on board the robot.
+
+162
+00:07:06,240 --> 00:07:08,429
+So it's um it's a really hard project.
+
+163
+00:07:08,479 --> 00:07:08,910
+Wow.
+
+164
+00:07:08,960 --> 00:07:09,360
+Yeah.
+
+165
+00:07:09,405 --> 00:07:17,230
+Um, so yeah, all the bays here are running some sort of test uh for for durability or reliability testing.
+
+166
+00:07:17,280 --> 00:07:20,350
+Um, why do some have different suits?
+
+167
+00:07:20,400 --> 00:07:21,869
+Oh, we are we outfit them.
+
+168
+00:07:21,919 --> 00:07:22,219
+You do?
+
+169
+00:07:22,240 --> 00:07:27,361
+They have uh all the outfits are uh fabric like a human like clothes.
+
+170
+00:07:27,411 --> 00:07:27,729
+Yeah.
+
+171
+00:07:27,759 --> 00:07:29,470
+And they all have different clothes.
+
+172
+00:07:29,520 --> 00:07:34,796
+Um which is cool because we can like um you can accessorize the robots the how you want it.
+
+173
+00:07:34,846 --> 00:07:39,377
+Um, our clients can have different like outfits that show like the client logos and the colors.
+
+174
+00:07:39,427 --> 00:07:39,729
+Yeah.
+
+175
+00:07:39,759 --> 00:07:41,070
+This is a new level of merch.
+
+176
+00:07:41,120 --> 00:07:42,492
+Yeah, it's a new level of merch.
+
+177
+00:07:42,542 --> 00:07:42,842
+Okay.
+
+178
+00:07:42,800 --> 00:07:48,589
+Um, it's also nice because if like things get dirty or they rip or whatever, we can basically easily replace it without a technician.
+
+179
+00:07:48,639 --> 00:07:49,009
+Yeah.
+
+180
+00:07:49,039 --> 00:07:49,339
+Yeah.
+
+181
+00:07:49,300 --> 00:07:51,368
+All the robots have a little zipper on the back.
+
+182
+00:07:51,418 --> 00:07:52,140
+I'm sure you see.
+
+183
+00:07:52,190 --> 00:07:55,950
+We can basically just unzip it and basically take it off and put something new on.
+
+184
+00:07:56,000 --> 00:07:56,429
+Okay.
+
+185
+00:07:56,479 --> 00:07:56,819
+Yeah.
+
+186
+00:07:56,849 --> 00:07:58,589
+Also, it's just really cool.
+
+187
+00:07:58,639 --> 00:07:59,442
+It is pretty cool.
+
+188
+00:07:59,492 --> 00:08:01,230
+Their shoes look like real sneakers.
+
+189
+00:08:01,280 --> 00:08:02,190
+They're high tops.
+
+190
+00:08:02,240 --> 00:08:02,817
+They're high tops.
+
+191
+00:08:02,867 --> 00:08:04,285
+They're hightop sneakers.
+
+192
+00:08:04,335 --> 00:08:08,030
+Um and uh yeah, they look they don't they look awesome.
+
+193
+00:08:08,080 --> 00:08:11,709
+Yeah, I mean they look like human bodies.
+
+194
+00:08:11,759 --> 00:08:18,670
+But getting the lab to this level of like um like infrastructure to be able to run them like this every single day is like actually quite difficult.
+
+195
+00:08:18,720 --> 00:08:22,016
+Uh and then we need to be very diligent about when we find issues like how to track them,
+
+196
+00:08:22,066 --> 00:08:24,990
+how to do fault analysis really quickly and then how to solve them and then how
+
+197
+00:08:25,040 --> 00:08:28,845
+to solve them across the global fleet or basically our whole fleet where wherever they're at.
+
+198
+00:08:28,895 --> 00:08:34,300
+How many are you in development testing all at the same time?
+
+199
+00:08:34,350 --> 00:08:37,956
+Like what is the typical is it these bays are always active?
+
+200
+00:08:38,006 --> 00:08:39,116
+How does it work?
+
+201
+00:08:39,166 --> 00:08:39,541
+Yeah,
+
+202
+00:08:39,571 --> 00:08:44,990
+we basically uh so the goal of this lab is to basically do final uh final checks for
+
+203
+00:08:45,040 --> 00:08:50,126
+all software that could be like that could be embedded software could be like a neural network like Helix,
+
+204
+00:08:50,176 --> 00:08:53,742
+it could be firmware on the robot and then any new hardware changes we have.
+
+205
+00:08:53,792 --> 00:08:58,573
+We need to make sure like they're those those changes are bulletproof before they head out of here because there it's going to
+
+206
+00:08:58,623 --> 00:09:03,396
+cause a lot of problems if like we're trying to run a use case for logistics or home and the robots are messing up.
+
+207
+00:09:03,446 --> 00:09:04,577
+We're not sure why it's messing up.
+
+208
+00:09:04,627 --> 00:09:05,530
+That's not great for us.
+
+209
+00:09:05,580 --> 00:09:07,920
+So basically here we're basically doing a ton of testing.
+
+210
+00:09:07,970 --> 00:09:09,966
+We have like test plans laid out every single morning.
+
+211
+00:09:10,016 --> 00:09:13,119
+We're running those down and we see any potential falls, we have to go solve it.
+
+212
+00:09:13,169 --> 00:09:14,822
+Then we have to retest those plans.
+
+213
+00:09:14,872 --> 00:09:20,590
+Uh so these these robots running here like all day uh every single week and we run them really hard.
+
+214
+00:09:20,640 --> 00:09:20,940
+Yeah.
+
+215
+00:09:20,959 --> 00:09:25,229
+And the goal is like the goal is we don't want to be finding like failures upstream out of this lab.
+
+216
+00:09:25,279 --> 00:09:25,579
+Yeah.
+
+217
+00:09:25,591 --> 00:09:30,270
+So this is like the the banner on here on system integration tests is trust but verify.
+
+218
+00:09:30,320 --> 00:09:30,676
+Okay.
+
+219
+00:09:30,706 --> 00:09:38,024
+So, um, yeah, we basically have to make sure we run down, uh, every potential thing that could go wrong before leaving here.
+
+220
+00:09:38,074 --> 00:09:40,030
+This is this is like, um, this is a hard thing.
+
+221
+00:09:40,080 --> 00:09:43,230
+Like, the robot has 40 plus moving joints.
+
+222
+00:09:43,280 --> 00:09:46,201
+Um, it's like a walking cell phone self-driving car.
+
+223
+00:09:46,251 --> 00:09:48,196
+Uh, all the supply chain is basically new.
+
+224
+00:09:48,246 --> 00:09:50,010
+We've designed almost all of it.
+
+225
+00:09:50,060 --> 00:09:51,778
+And so, it's um, it's hard.
+
+226
+00:09:51,828 --> 00:09:53,800
+It's hard to get the system to be really reliable.
+
+227
+00:09:53,850 --> 00:10:00,492
+And it's not like if we lose power like you know we're not like like uh like we're not like statically uh stable.
+
+228
+00:10:00,542 --> 00:10:02,350
+So like if we lose power the robot falls.
+
+229
+00:10:02,400 --> 00:10:03,944
+So we can like never lose power.
+
+230
+00:10:03,994 --> 00:10:05,065
+We can never lose calms.
+
+231
+00:10:05,115 --> 00:10:09,273
+And then we need to be able to balance at all times everywhere we're going even if we're moving the body like your pelvis and
+
+232
+00:10:09,323 --> 00:10:14,637
+hips and everything are moving uh in relation to your like you know as it relates to your hand moving and things like this and head.
+
+233
+00:10:14,687 --> 00:10:17,070
+So it's a it's a quite a difficult problem.
+
+234
+00:10:17,120 --> 00:10:20,621
+And so that's why you dock them at 15 minutes or 15%.
+
+235
+00:10:20,671 --> 00:10:26,190
+We dock like yeah around 10 to 15% they'll go to dock and then if we need another robot in we'll sub them
+
+236
+00:10:26,240 --> 00:10:32,421
+in off the dock and you'll see here later in like logistics and other use cases that need like constant like 247 uh attention.
+
+237
+00:10:32,471 --> 00:10:37,125
+The robot will undock right before the other robot needs to go like leave and the robot will
+
+238
+00:10:37,175 --> 00:10:41,568
+then uh basically do a quick swap and like within like you know 30 seconds it's now doing work.
+
+239
+00:10:41,618 --> 00:10:46,929
+Another robot will go into dock and we'll just run that every four or five hours on repeat 247.
+
+240
+00:10:46,979 --> 00:10:50,990
+What's the most common error that they make?
+
+241
+00:10:51,040 --> 00:10:52,510
+We most is software at this point.
+
+242
+00:10:52,560 --> 00:10:52,990
+Software.
+
+243
+00:10:53,040 --> 00:10:53,340
+Yeah.
+
+244
+00:10:53,227 --> 00:10:53,527
+Okay.
+
+245
+00:10:53,413 --> 00:10:54,578
+The hardware has gotten really robust.
+
+246
+00:10:54,628 --> 00:10:56,328
+I mean, the hardware here is like is is great.
+
+247
+00:10:56,378 --> 00:10:58,990
+We just like basically it's basically a software issue.
+
+248
+00:10:59,040 --> 00:11:03,789
+And then in terms of hardware, you're manufacturing also on campus.
+
+249
+00:11:03,839 --> 00:11:06,430
+Um yeah, we manufacture here at Bakyu next door.
+
+250
+00:11:06,480 --> 00:11:06,850
+Okay.
+
+251
+00:11:06,880 --> 00:11:07,180
+Yeah.
+
+252
+00:11:07,058 --> 00:11:08,349
+We're going to show you that today.
+
+253
+00:11:08,399 --> 00:11:08,830
+Okay.
+
+254
+00:11:08,880 --> 00:11:09,280
+Yeah.
+
+255
+00:11:09,322 --> 00:11:09,722
+Okay.
+
+256
+00:11:09,764 --> 00:11:13,450
+So, we have a basically a robot doing burpees here.
+
+257
+00:11:13,500 --> 00:11:16,812
+Uh we want to be able to safely for any event get down to the ground.
+
+258
+00:11:16,862 --> 00:11:19,070
+Um and then we want to be able to safely get up.
+
+259
+00:11:19,120 --> 00:11:19,420
+Okay.
+
+260
+00:11:19,440 --> 00:11:21,985
+Uh it's like important in case we're like uh not sure what to do.
+
+261
+00:11:22,035 --> 00:11:26,301
+We could be on like a very low battery and we might need to be like safely get down.
+
+262
+00:11:26,351 --> 00:11:34,670
+Um we could we could have like um and then we then we want to be able to be be able to get off up off the ground really easily.
+
+263
+00:11:34,720 --> 00:11:35,770
+It's also quite hard.
+
+264
+00:11:35,820 --> 00:11:42,349
+You need a kind a ton of like uh like range of motion in the legs and the hips to be able to do this kind of maneuver.
+
+265
+00:11:42,399 --> 00:11:44,349
+Yeah, he's going to need some knee pads.
+
+266
+00:11:44,399 --> 00:11:48,029
+Is there a reason why the joints are hard and not you don't have soft tissue?
+
+267
+00:11:48,079 --> 00:11:51,469
+Um, yeah, the most of the upper body torso is all soft.
+
+268
+00:11:51,519 --> 00:11:51,890
+Okay.
+
+269
+00:11:51,920 --> 00:11:56,670
+And then we have some uh soft foam underneath the legs and uh and arms right now.
+
+270
+00:11:56,720 --> 00:11:57,710
+Yeah.
+
+271
+00:11:57,760 --> 00:12:02,349
+Obviously like the more um the more patty and more soft I think is is great.
+
+272
+00:12:02,399 --> 00:12:03,756
+It just adds like a different level.
+
+273
+00:12:03,806 --> 00:12:05,630
+It adds more volume and mass to the robot.
+
+274
+00:12:05,680 --> 00:12:06,049
+Yeah.
+
+275
+00:12:06,079 --> 00:12:06,379
+Yeah.
+
+276
+00:12:06,339 --> 00:12:08,589
+It makes the robot look bigger basically.
+
+277
+00:12:08,639 --> 00:12:10,349
+Some thick robots.
+
+278
+00:12:10,399 --> 00:12:12,830
+Yeah.
+
+279
+00:12:12,880 --> 00:12:13,310
+Cool.
+
+280
+00:12:13,360 --> 00:12:13,660
+Okay.
+
+281
+00:12:13,680 --> 00:12:13,985
+All right.
+
+282
+00:12:14,015 --> 00:12:14,315
+Let's go.
+
+283
+00:12:14,320 --> 00:12:15,310
+Cool.
+
+284
+00:12:15,360 --> 00:12:19,178
+So, how often do you come into the office every day and you check in on them?
+
+285
+00:12:19,228 --> 00:12:21,357
+Like, how do you do they feel like your babies?
+
+286
+00:12:21,407 --> 00:12:23,310
+Like, do you feel like they're for sure babies?
+
+287
+00:12:23,360 --> 00:12:25,150
+Parasocial relationship with them.
+
+288
+00:12:25,200 --> 00:12:30,518
+They're like we we like made these like they're little kids and we have to like get them to do useful things now.
+
+289
+00:12:30,568 --> 00:12:35,469
+Um, I think the good news is like we're at a point where the hardware has gotten like pretty like almost like like very robust.
+
+290
+00:12:35,519 --> 00:12:35,819
+Yeah.
+
+291
+00:12:35,839 --> 00:12:38,464
+Like the we can run them all day every day.
+
+292
+00:12:38,514 --> 00:12:43,717
+like uh we still we see we still see like hardware failures but it it's very few and far between.
+
+293
+00:12:43,767 --> 00:12:49,961
+Most of our problems now are like uh like as we think about this this baby growing up are like software problems or AI problems.
+
+294
+00:12:50,011 --> 00:12:56,270
+How do we get the software incredibly stable and how do we get the neural networks to be able to actually do useful things 247 without failures.
+
+295
+00:12:56,320 --> 00:13:00,182
+Like most of our failures today are uh kind of in software land.
+
+296
+00:13:00,232 --> 00:13:06,190
+Um and speaking of software uh Mort's uh like one of our favorite things to do is like push robots around.
+
+297
+00:13:06,240 --> 00:13:06,570
+Okay.
+
+298
+00:13:06,600 --> 00:13:06,930
+Okay.
+
+299
+00:13:06,960 --> 00:13:13,630
+And so Mortz here uh is one of our leads on the basically helix controls team and is going to maybe you can give him a quick give her a quick
+
+300
+00:13:13,680 --> 00:13:20,750
+101 of uh kind of the S0 controller we have here and then uh we would love we would love for you to push the robot as hard as you can.
+
+301
+00:13:20,800 --> 00:13:21,100
+Yeah.
+
+302
+00:13:21,088 --> 00:13:26,758
+So I I think what we did recently switched fully to RL from a model stacked on this is
+
+303
+00:13:26,808 --> 00:13:32,664
+that that we have all this variation that we can give to the robot when we train it in sin.
+
+304
+00:13:32,714 --> 00:13:37,528
+So all edge cases are now known to the controller and gets robust to it.
+
+305
+00:13:37,578 --> 00:13:42,727
+So what this means for example before a modern based robot stack goes freaked out um
+
+306
+00:13:42,777 --> 00:13:49,341
+you have this very robust uh to external services we push it around uh go ahead to
+
+307
+00:13:49,391 --> 00:13:54,542
+convince yourself really I think this really nicely showcases how robust our stack is give it
+
+308
+00:13:54,592 --> 00:14:00,349
+a push oh gosh okay I feel bad
+
+309
+00:14:00,399 --> 00:14:06,709
+that's a little harder okay so they don't No,
+
+310
+00:14:06,759 --> 00:14:09,599
+they like what do they do if they get attacked?
+
+311
+00:14:09,649 --> 00:14:12,026
+You know how like Whimos get attacked?
+
+312
+00:14:12,076 --> 00:14:14,110
+People were attacking bird scooters.
+
+313
+00:14:14,160 --> 00:14:14,670
+Yeah.
+
+314
+00:14:14,720 --> 00:14:15,020
+Yeah.
+
+315
+00:14:15,040 --> 00:14:16,349
+Do they have a defense mechanism?
+
+316
+00:14:16,399 --> 00:14:17,469
+No defense mechanism.
+
+317
+00:14:17,519 --> 00:14:17,890
+None.
+
+318
+00:14:17,920 --> 00:14:19,253
+No, it's not trained into them.
+
+319
+00:14:19,303 --> 00:14:20,498
+They don't see the internet.
+
+320
+00:14:20,548 --> 00:14:21,710
+And no harm to humans.
+
+321
+00:14:21,760 --> 00:14:22,750
+No harm to humans.
+
+322
+00:14:22,800 --> 00:14:25,550
+No. No. Uh they're here just to help.
+
+323
+00:14:25,600 --> 00:14:25,970
+Okay.
+
+324
+00:14:26,000 --> 00:14:26,300
+Yeah.
+
+325
+00:14:26,253 --> 00:14:31,070
+They're here to take a take a push, too, if you need to.
+
+326
+00:14:31,120 --> 00:14:31,420
+Yeah.
+
+327
+00:14:31,342 --> 00:14:33,550
+You want You want to get another one in?
+
+328
+00:14:33,600 --> 00:14:34,029
+Sure.
+
+329
+00:14:34,079 --> 00:14:36,830
+Yeah.
+
+330
+00:14:36,880 --> 00:14:38,430
+It feels really heavy.
+
+331
+00:14:38,480 --> 00:14:38,780
+Yeah.
+
+332
+00:14:38,791 --> 00:14:39,091
+Yeah.
+
+333
+00:14:39,101 --> 00:14:46,985
+It's uh it's like 135 pounds, but it's like it's it's actually really um it's got like, you know, human level like stability.
+
+334
+00:14:47,035 --> 00:14:52,022
+And um as Mor mentioned, like we're we're learning that coverage in a simulator.
+
+335
+00:14:52,072 --> 00:15:00,493
+So, the whole controller like learns uh how to stay stable like this in like synthetically like in a sim like in a basically like a video game.
+
+336
+00:15:00,543 --> 00:15:04,561
+And uh from there uh the robot learns how to stay balanced uh how to basically
+
+337
+00:15:04,611 --> 00:15:09,295
+like uh how to basically not fall whenever there's certain c certain forces and we basically can
+
+338
+00:15:09,345 --> 00:15:12,466
+zero shot it onto this robot meaning like we can just put it right on load it
+
+339
+00:15:12,516 --> 00:15:17,870
+to the computer and we can basically uh and get this level of performance in the controller.
+
+340
+00:15:17,920 --> 00:15:21,979
+What are like again like what are the most common tweaks within that in
+
+341
+00:15:22,029 --> 00:15:26,879
+the software like what are you you're obviously balancing a lot of physical issues there.
+
+342
+00:15:26,929 --> 00:15:30,110
+So how do you tweak that in the models?
+
+343
+00:15:30,160 --> 00:15:34,990
+Mortz, how do we how do we uh how do we get the models to be able to perform like this?
+
+344
+00:15:35,040 --> 00:15:35,340
+Um,
+
+345
+00:15:35,288 --> 00:15:39,595
+basically I think we spend a lot of time thinking what are all the things that
+
+346
+00:15:39,645 --> 00:15:44,350
+can happen to the robot in the real world and then make them happen in simulation.
+
+347
+00:15:44,400 --> 00:15:47,696
+I think that's the we basically have like it's like a physics simulator.
+
+348
+00:15:47,746 --> 00:15:50,589
+So it has like gravity has like friction coefficients.
+
+349
+00:15:50,639 --> 00:15:54,442
+Uh we want to try to mirror like what forces robots seeing here so we can run them in sim.
+
+350
+00:15:54,492 --> 00:15:58,750
+And if they can run in sim well what we've seen is we basically have a really great sim tore transfer.
+
+351
+00:15:58,800 --> 00:16:02,984
+So we can get it from a simulator that shows like you'll see it like in a simulator like video game.
+
+352
+00:16:03,034 --> 00:16:05,609
+It can like as it can like stay stable with these forces.
+
+353
+00:16:05,659 --> 00:16:12,190
+Then we load load to the robot and we see the same in the real world and we have like a basically a very high transfer rate.
+
+354
+00:16:12,240 --> 00:16:13,414
+It's interesting.
+
+355
+00:16:13,464 --> 00:16:21,251
+I feel like um I feel like it would be it would be interesting to hear your perspective or differentiation on your robot
+
+356
+00:16:21,301 --> 00:16:27,440
+versus the other humanoid robots and like where this physicality and essentially
+
+357
+00:16:27,490 --> 00:16:32,581
+like the behavioral mechanisms change is some might be more commercially focused.
+
+358
+00:16:32,631 --> 00:16:35,950
+These ones are clearly as humanoid as I've seen.
+
+359
+00:16:36,000 --> 00:16:37,445
+Yeah, we're a pure play humanoid.
+
+360
+00:16:37,495 --> 00:16:37,795
+Okay.
+
+361
+00:16:37,759 --> 00:16:38,236
+Uh yeah.
+
+362
+00:16:38,286 --> 00:16:40,110
+No. Uh I think uh a few things.
+
+363
+00:16:40,160 --> 00:16:44,338
+Uh, one is like we need to get the hardware in a really good spot that can do like a lot of what humans can do.
+
+364
+00:16:44,388 --> 00:16:48,019
+You really want this um you kind of want this like iPhone moment where like
+
+365
+00:16:48,069 --> 00:16:50,687
+my iPhone has a bunch of different apps and if I wanted to learn something new,
+
+366
+00:16:50,737 --> 00:16:52,129
+I just download another app.
+
+367
+00:16:52,179 --> 00:16:53,453
+The same thing for humanoids.
+
+368
+00:16:53,503 --> 00:16:58,820
+Want the same humanoid to be able to do like dishes and laundry but also do some like package logistics and healthcare and other stuff.
+
+369
+00:16:58,870 --> 00:17:00,053
+That's what humans can do, right?
+
+370
+00:17:00,103 --> 00:17:02,110
+We're all fairly general purpose.
+
+371
+00:17:02,160 --> 00:17:06,474
+And uh so we want one set of hardware that we can advertise over like a lot of different use cases.
+
+372
+00:17:06,524 --> 00:17:12,738
+Uh, so the goal is to get the hardware like robust enough to do like most things a human can in terms like range of motion, be able to get down,
+
+373
+00:17:12,788 --> 00:17:17,730
+get off the ground, be able to reach up high, be able to reach inside of sink, like all these different like things we need to do.
+
+374
+00:17:17,780 --> 00:17:21,722
+We also need to carry a decent amount of payloads and we operate at decently fast speeds.
+
+375
+00:17:21,772 --> 00:17:23,722
+So we've designed the hardware to be able to do that.
+
+376
+00:17:23,772 --> 00:17:25,952
+And then separately on the software on the AI side,
+
+377
+00:17:26,002 --> 00:17:30,947
+you really want to be able to design the neural nets so that it can basically take a take a task uh
+
+378
+00:17:30,997 --> 00:17:37,250
+and then reason through pixel space like take camera videos of like what's happening and then output what the body should be doing.
+
+379
+00:17:37,300 --> 00:17:44,670
+Um the the you know the math we were doing before um on like how many states the robot could be in is just it's so high.
+
+380
+00:17:44,720 --> 00:17:45,020
+Yeah.
+
+381
+00:17:45,039 --> 00:17:47,431
+Um that like the problem just kind of runs away.
+
+382
+00:17:47,481 --> 00:17:49,724
+It's um it's like a curse of dimiality.
+
+383
+00:17:49,774 --> 00:17:51,070
+It's like it's just too hard.
+
+384
+00:17:51,120 --> 00:17:56,350
+So you can't solve it with like writing like like lines of code like attritionally like in robotics and uh
+
+385
+00:17:56,400 --> 00:18:00,560
+even like three or four years ago here a figure like we would solve the same controller here in code.
+
+386
+00:18:00,610 --> 00:18:04,317
+We'd have like hundreds of thousands of lines of C++ to figure out how
+
+387
+00:18:04,367 --> 00:18:08,969
+to solve this like inverted pendulum math of how to like like stay balanced here.
+
+388
+00:18:09,019 --> 00:18:11,741
+Um and what we found is it just doesn't scale doesn't work.
+
+389
+00:18:11,791 --> 00:18:15,868
+You can't like really um in your head as humans uh work across many different humans
+
+390
+00:18:15,918 --> 00:18:18,468
+to code all the stuff into the robot that you think it could encounter in the world.
+
+391
+00:18:18,518 --> 00:18:19,489
+It's just too difficult.
+
+392
+00:18:19,539 --> 00:18:25,310
+Uh so we transitioned only like purely to neural networks uh with Helix our neural network arch uh model.
+
+393
+00:18:25,360 --> 00:18:31,925
+For those I I know you mentioned this a couple times but this will be like a general audience for those that don't know what a neural network is.
+
+394
+00:18:31,975 --> 00:18:33,550
+Can you just explain that a little bit further?
+
+395
+00:18:33,600 --> 00:18:37,310
+Yeah, we basically use like an AI policy that we've trained here with like data.
+
+396
+00:18:37,360 --> 00:18:42,509
+We trained like a transformer transformer policy to basically output uh a certain type of action space.
+
+397
+00:18:42,559 --> 00:18:47,547
+Basically we train an AI policy to do this work of what COD used to do and learn this.
+
+398
+00:18:47,597 --> 00:18:53,618
+Uh so now uh now basically we we run inference on board the robot across a policy that we call helix.
+
+399
+00:18:53,668 --> 00:18:58,430
+It's a AI it's an AI model that we designed here internally and that policy is outputting what the robot
+
+400
+00:18:58,480 --> 00:19:02,721
+should go do similar to how you'll talk to like an LLM and you'll ask it what to go do.
+
+401
+00:19:02,771 --> 00:19:08,034
+Uh it'll just it'll it'll do inference and output like basically like a next token prediction for words.
+
+402
+00:19:08,084 --> 00:19:13,068
+Uh we do the same thing here but for uh like a physical physical physical humanoid.
+
+403
+00:19:13,118 --> 00:19:20,191
+And we'll output things like where to put the wrist, head, uh torso, every joint will get an output from the neural network like what to go do.
+
+404
+00:19:20,241 --> 00:19:23,224
+And we'll do that anywhere between 50 and 100 like 200 milliseconds.
+
+405
+00:19:23,274 --> 00:19:30,029
+Uh so basically like 50 to 200 times a second, the neural network uh computer is then telling all the joints like what to go what to go do.
+
+406
+00:19:30,079 --> 00:19:37,230
+And then every joint level, our motor controllers are outputting torque on on where to send basically uh like like where to position the motors.
+
+407
+00:19:37,280 --> 00:19:37,580
+Wow.
+
+408
+00:19:37,600 --> 00:19:37,910
+So yeah.
+
+409
+00:19:37,940 --> 00:19:43,879
+So like basically like you basically we like uh you can have like two pass here like two two you basically can code your way out of
+
+410
+00:19:43,929 --> 00:19:49,926
+this and I think that's a full dead end or you can run an AI first strategy in a market and that's what we do here at figure.
+
+411
+00:19:49,976 --> 00:19:54,634
+Uh so I think what differentiates us is like from a hardware perspective I think we probably have I think this is probably the best humanoid
+
+412
+00:19:54,684 --> 00:20:01,470
+hardware in the world to do general purpose work and secondly all the work that we're doing is all like neural network based or AI based.
+
+413
+00:20:01,520 --> 00:20:03,390
+We don't code any of this work anymore.
+
+414
+00:20:03,440 --> 00:20:07,310
+Uh so like you'll see some use cases today that we do both for the home and
+
+415
+00:20:07,360 --> 00:20:11,517
+for uh in like like cases of like commercial market those are all run by our helix nal
+
+416
+00:20:11,567 --> 00:20:16,430
+network which is hard like we have to we have to kind of tell the whole body
+
+417
+00:20:16,480 --> 00:20:22,642
+uh how to reason over like camera frames and then how to like position itself fast and dynamic.
+
+418
+00:20:22,692 --> 00:20:28,458
+So you'll see in cases like logistics these packages are like moving they're moving while we're grabbing them because they're plastic.
+
+419
+00:20:28,508 --> 00:20:32,332
+We have to reason over all of that in real time and be able to do like you know
+
+420
+00:20:32,382 --> 00:20:36,416
+if we like uh if things move in real time we have to basically like closed loop react to it.
+
+421
+00:20:36,466 --> 00:20:37,507
+That's like really hard.
+
+422
+00:20:37,557 --> 00:20:40,776
+We've been spending like the greater of like last two years trying to solve this problem.
+
+423
+00:20:40,826 --> 00:20:45,150
+And I think uh I think we probably have like some of the best AI policies for humanoids in the planet today.
+
+424
+00:20:45,200 --> 00:20:54,275
+Sorcery is brought to you by Brex the financial stack trusted by more than 30,000 companies including one in three ventureback startups in the US.
+
+425
+00:20:54,325 --> 00:20:58,109
+Nearly 40% of startups fail because they run out of cash.
+
+426
+00:20:58,159 --> 00:21:00,891
+Rex is literally built to help founders avoid that.
+
+427
+00:21:00,941 --> 00:21:08,961
+Unlike traditional banks that let your money sit idle, chipping away at it with fees, Rex is designed to help you spend smarter and move faster.
+
+428
+00:21:09,011 --> 00:21:15,938
+Their all-in-one solution combines checking, treasury, and FDIC protection into one powerful account.
+
+429
+00:21:15,988 --> 00:21:19,496
+You can send and receive money globally at lightning speeds.
+
+430
+00:21:19,546 --> 00:21:28,216
+Get 20 times the standard FDIC coverage through their partner banks and even high yield from day one with same day and even same hour liquidity.
+
+431
+00:21:28,266 --> 00:21:30,509
+Access your funds anytime.
+
+432
+00:21:30,559 --> 00:21:37,790
+Companies like Scale AAI, Door Dash, Service Titan, HIMS, Anthropic, Flexport, Robin Hood, and Plaid.
+
+433
+00:21:37,840 --> 00:21:39,086
+Trust and use BRs.
+
+434
+00:21:39,136 --> 00:21:42,670
+Start today at brex.com/sourcy.
+
+435
+00:21:42,720 --> 00:21:46,989
+That's brx.com/sourcy.
+
+436
+00:21:47,039 --> 00:21:53,151
+Touring is training the next generation of AI with tasks that require real expertise and realworld judgment.
+
+437
+00:21:53,201 --> 00:21:59,518
+That's why companies like Nvidia, Anthropic, Salesforce, and Gemini partner with Turing.
+
+438
+00:21:59,568 --> 00:22:05,963
+Turing builds realistic reinforcement learning environments and data systems based on real operational traces.
+
+439
+00:22:06,013 --> 00:22:11,758
+The kind of infrastructure frontier labs need to train super intelligence.
+
+440
+00:22:11,808 --> 00:22:14,910
+Visit turring.comsur y.
+
+441
+00:22:14,960 --> 00:22:21,164
+Another thing I want to show you is um uh this is like um you know we just walked out of system integration and test the lab.
+
+442
+00:22:21,214 --> 00:22:23,390
+We're trying to find all these different failure cases.
+
+443
+00:22:23,440 --> 00:22:23,810
+Yeah.
+
+444
+00:22:23,840 --> 00:22:26,623
+One of our failure cases is for a humanoid like we we we're balancing.
+
+445
+00:22:26,673 --> 00:22:29,629
+So if we lose power uh like the robot falls.
+
+446
+00:22:29,679 --> 00:22:33,230
+Uh it's the same for like losing power or like losing a motor in the leg.
+
+447
+00:22:33,280 --> 00:22:35,390
+Do they need to be connected to Wi-Fi too?
+
+448
+00:22:35,440 --> 00:22:38,230
+Uh what are the what are all the integrations?
+
+449
+00:22:38,280 --> 00:22:40,749
+These these robots have 5G and Wi-Fi and Bluetooth.
+
+450
+00:22:40,799 --> 00:22:42,946
+Uh but we do not need to be connected to Wi-Fi to do work.
+
+451
+00:22:42,996 --> 00:22:47,401
+Like these robots out here, if they lost like internet connection or network, they can basically continue to do work.
+
+452
+00:22:47,451 --> 00:22:48,531
+We run Helix on board.
+
+453
+00:22:48,581 --> 00:22:53,862
+Uh so they're actually loaded into uh GPUs on board in memory and we run inference on board.
+
+454
+00:22:53,912 --> 00:22:59,550
+Meaning if we uh if we lose internet connection, we can still do housework and logistics like like humans are.
+
+455
+00:22:59,600 --> 00:22:59,900
+Yeah.
+
+456
+00:22:59,840 --> 00:23:04,986
+I mean maybe I have a hard time like doing work when I like lo connection, but most humans can do most work.
+
+457
+00:23:05,036 --> 00:23:12,299
+Um, so, uh, so another thing that we, um, we like we're working on solving that I'm excited to show you here is, um,
+
+458
+00:23:12,349 --> 00:23:17,917
+what if you lose like what if you lose communications with like all any of the 40 joints or what if you lose power?
+
+459
+00:23:17,967 --> 00:23:23,592
+And upper body is kind of fine if you lose a wrist or elbow like it's like you're not you're not going to fall at the very least.
+
+460
+00:23:23,642 --> 00:23:26,445
+Um, but falling is like a it's terrible event for us.
+
+461
+00:23:26,495 --> 00:23:27,516
+We don't ever want to fall.
+
+462
+00:23:27,566 --> 00:23:30,509
+We actually have an initiative internally called never fall.
+
+463
+00:23:30,559 --> 00:23:32,670
+It's like we never ever want to fall even.
+
+464
+00:23:32,720 --> 00:23:35,976
+Uh and you know we will fall but we don't ever want to tolerate it.
+
+465
+00:23:36,026 --> 00:23:41,629
+Um the hardest problem here uh for the controller is like what if we lose like a like a like an ankle, a knee or hip?
+
+466
+00:23:41,679 --> 00:23:45,668
+What if you just like lost a knee like right um you know normally for humanoids you
+
+467
+00:23:45,718 --> 00:23:49,334
+just like you just literally fall over like you can't really balance if you like lose a knee.
+
+468
+00:23:49,384 --> 00:23:54,509
+Uh we've uh we've been working on a project we call uh Vulcan here internally um that basically
+
+469
+00:23:54,559 --> 00:23:59,290
+allows us to lose uh a single or even multiple joints in the legs and still not fall.
+
+470
+00:23:59,340 --> 00:24:04,213
+So, what we're going to do here is Morort, can you show her what would happen if we lost like a left knee?
+
+471
+00:24:04,263 --> 00:24:08,830
+So, here we have um a view of like all the different joints on the robot.
+
+472
+00:24:08,880 --> 00:24:14,658
+Green means like we have comms and power to him and the robot's like uh can basically communicate and it's fine.
+
+473
+00:24:14,708 --> 00:24:17,713
+And red here will mean we'll lose certain communications with the robot.
+
+474
+00:24:17,763 --> 00:24:23,380
+So, here we lost like a left knee and you can see the robot's kind of like hobbling on the left leg.
+
+475
+00:24:23,430 --> 00:24:23,730
+Yeah.
+
+476
+00:24:23,760 --> 00:24:28,421
+So, right now the knee is basically we lost we lost we lost power communications now to the knee.
+
+477
+00:24:28,471 --> 00:24:29,402
+The knee's locked.
+
+478
+00:24:29,452 --> 00:24:30,430
+Got a locked knee.
+
+479
+00:24:30,480 --> 00:24:34,430
+So, so we velocity locked the knee and we can basically hobble around.
+
+480
+00:24:34,480 --> 00:24:36,358
+I thought it was going to be a little bit more dramatic.
+
+481
+00:24:36,408 --> 00:24:37,869
+Honestly, it's not bad, right?
+
+482
+00:24:37,919 --> 00:24:38,910
+It's not that bad.
+
+483
+00:24:38,960 --> 00:24:41,733
+What's unbelievable uh that we can even do this kind of work.
+
+484
+00:24:41,783 --> 00:24:46,830
+We're doing this also into in inside of a reinforcement learned neural net controller.
+
+485
+00:24:46,880 --> 00:24:49,623
+So, the same stuff that Morris talked about earlier of us learning in simulation,
+
+486
+00:24:49,673 --> 00:24:55,501
+the robot learned in simulation how to move the body here uh to extend it lost different joints.
+
+487
+00:24:55,551 --> 00:24:57,932
+Uh this is uh I watched the robot like a few weeks ago.
+
+488
+00:24:57,982 --> 00:25:05,460
+We were doing like work on this like um basically logistics use case and it's like u you know like months ago we like lose a knee.
+
+489
+00:25:05,510 --> 00:25:06,872
+The robot would just fall.
+
+490
+00:25:06,922 --> 00:25:08,133
+Now the robot loses a knee.
+
+491
+00:25:08,183 --> 00:25:11,352
+It can either continue to do work or can just like hobble off and another Yeah.
+
+492
+00:25:11,402 --> 00:25:14,845
+I can basically ask this buddy in the back say I need another robot to come fill in.
+
+493
+00:25:14,895 --> 00:25:20,989
+And the robot comes in and fills in and continues to do work and we basically don't lose any time.
+
+494
+00:25:21,039 --> 00:25:21,950
+It's pretty impressive.
+
+495
+00:25:22,000 --> 00:25:23,009
+Yeah, it's it's really impressive.
+
+496
+00:25:23,059 --> 00:25:25,580
+I think um this is kudos to the uh controls team.
+
+497
+00:25:25,630 --> 00:25:28,509
+I think we have like one of the best controls team in the world.
+
+498
+00:25:28,559 --> 00:25:33,476
+About a year ago, we made a strong pivot away from code into neural networks.
+
+499
+00:25:33,526 --> 00:25:40,270
+Um and I think the team has probably shown like I think some of the best neural networks for control uh in the world on on humanoids.
+
+500
+00:25:40,320 --> 00:25:44,030
+What happens if it loses its knee while it's bent?
+
+501
+00:25:44,080 --> 00:25:49,260
+Uh it'll just it'll basically do a velocity lock on that knee and uh should be able to hobble around it.
+
+502
+00:25:49,310 --> 00:25:51,683
+Obviously depends where if we're like in a full squad down.
+
+503
+00:25:51,733 --> 00:25:53,236
+Yeah, that might be really tough.
+
+504
+00:25:53,286 --> 00:25:59,629
+It depends where what state it's in, but like in most cases uh we can basically recover from this at this point and uh survive.
+
+505
+00:25:59,679 --> 00:26:03,229
+You want to build a real-time operating system that is basically like fault-free.
+
+506
+00:26:03,279 --> 00:26:09,201
+So this team here is all focused on trying to figure out all of the potential faults and risks.
+
+507
+00:26:09,251 --> 00:26:14,000
+This team here is responsible for building our controller which is responsible for how do we move the
+
+508
+00:26:14,050 --> 00:26:19,229
+entire like the like all the joints on the robot keep balance and ultimately end up doing tasks.
+
+509
+00:26:19,279 --> 00:26:25,869
+How many different teams are in the company and like how do you portion out who works on what and who gets integrated?
+
+510
+00:26:25,919 --> 00:26:27,205
+So this is our part of our AI team.
+
+511
+00:26:27,255 --> 00:26:28,999
+It's one of our biggest teams here.
+
+512
+00:26:29,049 --> 00:26:31,807
+Uh we have like multiple different groups inside the AI AI division.
+
+513
+00:26:31,857 --> 00:26:33,435
+We also have a team that does hardware.
+
+514
+00:26:33,485 --> 00:26:39,882
+So they design motors, batteries, wire harness, structure, joints, kinematics, like basically a wide range of stuff.
+
+515
+00:26:39,932 --> 00:26:44,303
+Uh we have a platform software team that does all of our embedded software, uh firmware.
+
+516
+00:26:44,353 --> 00:26:50,592
+Uh we also have electronics team that basically builds like all the PCBs and electronics work that we do here internally.
+
+517
+00:26:50,642 --> 00:26:55,570
+We design almost uh there's over 100 PCBs that we design here on the robot that we do on that team.
+
+518
+00:26:55,620 --> 00:26:58,695
+Uh things like our motor controllers, all this different type of work.
+
+519
+00:26:58,745 --> 00:27:04,869
+Uh we have a system integration test team that you saw today that helps basically make sure we ship like really good robots out to the world.
+
+520
+00:27:04,919 --> 00:27:10,689
+Uh we also have a team that does uh like basically design like industrial design which we're going to show you towards the end of this uh tour.
+
+521
+00:27:10,739 --> 00:27:17,753
+Uh how do we design something that's like how do we design something that's like um like people really want and I
+
+522
+00:27:17,803 --> 00:27:23,222
+think we have we we have a pretty high design standard here of designing something that is a really delightful piece of technology.
+
+523
+00:27:23,272 --> 00:27:26,989
+Uh we also have a teams that also work on system design and thermals.
+
+524
+00:27:27,039 --> 00:27:31,222
+uh the robot produces a lot of heat while it's moving around and how do we get that heat out of the robot and how do we
+
+525
+00:27:31,272 --> 00:27:35,568
+design for it here we also have fabrication teams that like make fabrication prototypes
+
+526
+00:27:35,618 --> 00:27:41,611
+we have a bachue team for manufacturing supply chain team um facilities uh and
+
+527
+00:27:41,661 --> 00:27:50,278
+then we have like all of our business operations side so maybe like a dozen teams here internally that are needed to do this um it's basically the
+
+528
+00:27:50,328 --> 00:27:57,645
+same teams that you need to build robots so like any kind of robots like when I um you know uh at archer when I was building aircraft.
+
+529
+00:27:57,695 --> 00:27:58,853
+We have like it's like a flying robot.
+
+530
+00:27:58,903 --> 00:28:00,047
+So you have like the same type of stuff.
+
+531
+00:28:00,097 --> 00:28:04,590
+You have like electric motors, batteries, control software, embedded systems and sensors.
+
+532
+00:28:04,640 --> 00:28:06,306
+So we have basically teams around all that.
+
+533
+00:28:06,356 --> 00:28:09,642
+And then uh and then obviously on the AI side is a big focus here internally.
+
+534
+00:28:09,692 --> 00:28:11,629
+Uh do you want to see some stuff in the home?
+
+535
+00:28:11,679 --> 00:28:12,349
+Yeah, let's go.
+
+536
+00:28:12,399 --> 00:28:13,516
+All right, let's go.
+
+537
+00:28:13,566 --> 00:28:14,349
+Thanks, Mortz.
+
+538
+00:28:14,399 --> 00:28:18,030
+Thank you.
+
+539
+00:28:18,080 --> 00:28:21,629
+All right, so I was hoping it would be more dramatic, but lose the knee.
+
+540
+00:28:21,679 --> 00:28:22,910
+Yeah.
+
+541
+00:28:22,960 --> 00:28:23,326
+Yeah.
+
+542
+00:28:23,356 --> 00:28:29,950
+It's uh it's like honestly it's a really hard engineering problem that we're we're so proud of internally.
+
+543
+00:28:30,000 --> 00:28:33,463
+Uh we have a large initiative like one of the teams that we have here here is like
+
+544
+00:28:33,513 --> 00:28:39,150
+a never fall team and it's a team that basically predict any potential faults and design around him.
+
+545
+00:28:39,200 --> 00:28:45,713
+This is a case where like I think you're always going to have this a period of time where you're going to lose a lower body like motor or actuator.
+
+546
+00:28:45,763 --> 00:28:47,390
+Then how do we survive this?
+
+547
+00:28:47,440 --> 00:28:47,810
+Right.
+
+548
+00:28:47,840 --> 00:28:48,140
+Okay.
+
+549
+00:28:48,130 --> 00:28:51,304
+Outside of stuff we're doing on the um commercial market,
+
+550
+00:28:51,354 --> 00:28:56,150
+one of our big focuses here is how do we ship a general purpose robot to do things like in the home.
+
+551
+00:28:56,200 --> 00:28:58,010
+So, all right, come over here.
+
+552
+00:28:58,060 --> 00:29:03,025
+Um we have a robot here that uh is designed to tidy the house.
+
+553
+00:29:03,075 --> 00:29:09,869
+Um so, clean up any um uh clean up the table, like basically like uh put away all the different cups,
+
+554
+00:29:09,919 --> 00:29:16,813
+uh clean the toys up, uh tidy tidy the couch, um like you know, things in my house is kind of chaos.
+
+555
+00:29:16,863 --> 00:29:19,390
+It's spraying and cleaning the table.
+
+556
+00:29:19,440 --> 00:29:20,670
+Oh, yeah.
+
+557
+00:29:20,720 --> 00:29:22,509
+Don't you want We all We all need this.
+
+558
+00:29:22,559 --> 00:29:25,950
+It's like uh that was a little sassy.
+
+559
+00:29:26,000 --> 00:29:27,748
+It was um So,
+
+560
+00:29:27,798 --> 00:29:38,460
+what's cool here is the robot is running um an onboard Helix 2 neural network to be able to uh uh do to do all this work,
+
+561
+00:29:38,510 --> 00:29:40,042
+to be able to do all this cleaning.
+
+562
+00:29:40,092 --> 00:29:43,356
+So um so it's basically just taking a prompt which is like clean the clean
+
+563
+00:29:43,406 --> 00:29:47,243
+the living room and it's basically reasoning through what to do from its cameras and it's
+
+564
+00:29:47,293 --> 00:29:50,910
+ultimately telling the whole body what to what to do from a neural network from from
+
+565
+00:29:50,960 --> 00:29:56,278
+how many hours has this been trained on doesn't it take millions of hours to train?
+
+566
+00:29:56,328 --> 00:30:04,190
+We've probably had um in Helix like the like the like in in like kind of base pre and mid-training uh helix
+
+567
+00:30:04,240 --> 00:30:11,390
+models that we're working on now have um maybe like maybe like uh a little under a million hours of total data.
+
+568
+00:30:11,440 --> 00:30:16,746
+Um and then uh we also do uh from mid-training and pre-training we do post-training uh here
+
+569
+00:30:16,796 --> 00:30:22,565
+which probably is uh I would say low like basically thousands of hours okay that are running here.
+
+570
+00:30:22,615 --> 00:30:27,538
+Uh the goal for us is design uh a single kind of neural network uh platform
+
+571
+00:30:27,588 --> 00:30:31,790
+that can basically do things like tidy tidy this living room but also do things like logistics.
+
+572
+00:30:31,840 --> 00:30:33,710
+And this isn't tea operated.
+
+573
+00:30:33,760 --> 00:30:34,910
+This is not teleyoperated.
+
+574
+00:30:34,960 --> 00:30:36,830
+There are rumors that these are tea operated.
+
+575
+00:30:36,880 --> 00:30:37,790
+For sure not teleyoperated.
+
+576
+00:30:37,840 --> 00:30:39,710
+You don't have a secret room back here.
+
+577
+00:30:39,760 --> 00:30:41,150
+Who's in there?
+
+578
+00:30:41,200 --> 00:30:42,430
+No secret room.
+
+579
+00:30:42,480 --> 00:30:50,348
+Uh these robots are running purely autonomously from a onboard uh AI policy called Helix running on board the robot in the torso.
+
+580
+00:30:50,398 --> 00:30:53,394
+And so this robot's job is to clean this room up.
+
+581
+00:30:53,444 --> 00:30:57,193
+And does this robot do this over and over again each day or do they take turns?
+
+582
+00:30:57,243 --> 00:31:00,509
+Like how do you any robot in the fleet can do any of this work here?
+
+583
+00:31:00,559 --> 00:31:00,917
+Okay.
+
+584
+00:31:00,947 --> 00:31:02,190
+So it all connects.
+
+585
+00:31:02,240 --> 00:31:03,511
+Yeah, it all connects.
+
+586
+00:31:03,561 --> 00:31:06,944
+We run a single uh neural network that can basically run it's the goal.
+
+587
+00:31:06,994 --> 00:31:08,622
+It's the reason why humanoid is so great.
+
+588
+00:31:08,672 --> 00:31:15,763
+It's like a this same humanoid can go over and do like logistics and healthcare and manufacturing uh or do like do dishes like just like we can,
+
+589
+00:31:15,813 --> 00:31:16,189
+right?
+
+590
+00:31:16,219 --> 00:31:16,519
+Um,
+
+591
+00:31:16,451 --> 00:31:19,604
+so we like our our uh our platform here is to basically run a single
+
+592
+00:31:19,654 --> 00:31:24,030
+neural network that we call Helix on board the robot that can multitask between different things.
+
+593
+00:31:24,080 --> 00:31:33,229
+When they're in people's homes, will that data still be trained and will it stay local or will it be spread throughout the network?
+
+594
+00:31:33,279 --> 00:31:33,697
+Yeah,
+
+595
+00:31:33,747 --> 00:31:38,021
+we basically at uh we need data like basically the biggest blocker for us now
+
+596
+00:31:38,071 --> 00:31:42,065
+of going from where we're at today to like like large scale deployment is data.
+
+597
+00:31:42,115 --> 00:31:44,374
+We need like an enormous amount of data.
+
+598
+00:31:44,424 --> 00:31:48,768
+uh we need to pull a lot of our resources further into pre-training for the Helix
+
+599
+00:31:48,818 --> 00:31:53,066
+team and we just need a lot of diverse really high quality data across the world.
+
+600
+00:31:53,116 --> 00:31:56,374
+This means like data in the home means maybe data more in the commercial market.
+
+601
+00:31:56,424 --> 00:31:58,109
+So we have like two efforts going on here.
+
+602
+00:31:58,159 --> 00:32:01,916
+One is like basically a large scale data collection effort that we're doing now at the company and two
+
+603
+00:32:01,966 --> 00:32:05,532
+is when we deploy robots we do want to be collecting data and we do want to be training
+
+604
+00:32:05,582 --> 00:32:10,030
+on that and we do want to be sending that out up training on it into a central training
+
+605
+00:32:10,080 --> 00:32:14,190
+training jobs and then we want to be software updating the robots with the latest neural network uh weights.
+
+606
+00:32:14,240 --> 00:32:15,390
+Does it get anonymized?
+
+607
+00:32:15,440 --> 00:32:17,150
+How do you deal with the privacy off?
+
+608
+00:32:17,200 --> 00:32:19,429
+Oh yeah, we like fully want to anonymize all of it.
+
+609
+00:32:19,479 --> 00:32:21,668
+Uh there's a lot of data we really don't care about.
+
+610
+00:32:21,718 --> 00:32:27,058
+Most of the data we care about is like what what do we uh what's the robot from a state perspective like uh like scene
+
+611
+00:32:27,108 --> 00:32:33,310
+and how do we use that to basically train the robot to uh be more like to generalize better in the future at those different areas.
+
+612
+00:32:33,360 --> 00:32:39,725
+Are you sticking mostly to the US now because if you go to Europe there's obviously most of all of our work today is in the US.
+
+613
+00:32:39,775 --> 00:32:40,129
+Okay.
+
+614
+00:32:40,159 --> 00:32:40,459
+Yeah.
+
+615
+00:32:40,412 --> 00:32:41,710
+We do want to be global though.
+
+616
+00:32:41,760 --> 00:32:42,060
+Yeah.
+
+617
+00:32:41,985 --> 00:32:42,910
+Europe's a little tricky.
+
+618
+00:32:42,960 --> 00:32:43,260
+Yeah.
+
+619
+00:32:43,225 --> 00:32:43,525
+Yeah.
+
+620
+00:32:43,491 --> 00:32:44,590
+What what are your plans?
+
+621
+00:32:44,640 --> 00:32:46,509
+Like how do you skirt around their data privacy?
+
+622
+00:32:46,559 --> 00:32:49,293
+Uh you basically we we got to play by the rules in Europe.
+
+623
+00:32:49,343 --> 00:32:49,697
+Yeah.
+
+624
+00:32:49,727 --> 00:32:54,468
+I I think um our hypothesis here is that we're we're missing a certain set of data that
+
+625
+00:32:54,518 --> 00:32:59,120
+we're like we're collecting now that will allow the robot to generalize in almost every condition it sees.
+
+626
+00:32:59,170 --> 00:33:01,348
+Like we're kind of going off and doing the same things every day.
+
+627
+00:33:01,398 --> 00:33:04,214
+We're doing dishes and laundry and tidying the home.
+
+628
+00:33:04,264 --> 00:33:05,416
+Like the same stuff we're seeing.
+
+629
+00:33:05,466 --> 00:33:10,532
+We're kind of doing the same movements like grabbing something off the ground, putting away or pulling a like the like the dishwasher open.
+
+630
+00:33:10,582 --> 00:33:12,168
+Like it's kind of the same stuff.
+
+631
+00:33:12,218 --> 00:33:16,015
+uh our hypothesis now is that we will see enormous amount of positive transfer from the
+
+632
+00:33:16,065 --> 00:33:21,620
+data collection efforts we're doing now into pre-training across like basically any environment in the world.
+
+633
+00:33:21,670 --> 00:33:30,116
+Um I mean that'll be like it'll be somewhat um you know we we'll we'll approach that somewhat like um it'll take I would say over time a large
+
+634
+00:33:30,166 --> 00:33:33,742
+amount of data to to find every out of distribution like basically be able to
+
+635
+00:33:33,792 --> 00:33:36,504
+do everything possible in the world but we think there's a path to do this.
+
+636
+00:33:36,554 --> 00:33:42,030
+And what is the price point differentiation for the inhome robot versus commercial?
+
+637
+00:33:42,080 --> 00:33:45,845
+Uh the inhome like we we have we're not selling right now to the home.
+
+638
+00:33:45,895 --> 00:33:49,960
+We want we want to sell here uh like in the near term and we want to sell
+
+639
+00:33:50,010 --> 00:33:55,310
+the robot like for like hundreds of dollars a month and as a like somewhere like a car lease.
+
+640
+00:33:55,360 --> 00:33:57,950
+Um maybe like four, five, six hundred bucks a month.
+
+641
+00:33:58,000 --> 00:33:59,604
+How are you thinking of deploying them in homes?
+
+642
+00:33:59,654 --> 00:34:03,372
+Like do you have to see if people have enough room like in New York City?
+
+643
+00:34:03,422 --> 00:34:05,390
+Yeah, I can't imagine these little apartments.
+
+644
+00:34:05,440 --> 00:34:06,940
+Uh they just takes a dock.
+
+645
+00:34:06,990 --> 00:34:08,621
+It's like 2 feet by 2 feet.
+
+646
+00:34:08,671 --> 00:34:10,739
+Uh you can plug it in a wall outlet.
+
+647
+00:34:10,789 --> 00:34:12,227
+It'll go to its dock and charge.
+
+648
+00:34:12,277 --> 00:34:14,504
+And then throughout the day, it'll just go off and do work.
+
+649
+00:34:14,554 --> 00:34:14,854
+What?
+
+650
+00:34:14,800 --> 00:34:16,430
+Whatever you want to go want it to do.
+
+651
+00:34:16,480 --> 00:34:23,390
+Like for me, I wanted to do like the laundry probably almost every day, dishes every day, and tidy the house multiple times a day.
+
+652
+00:34:23,440 --> 00:34:24,807
+Do they have a distinctive diet?
+
+653
+00:34:24,857 --> 00:34:25,629
+What do they eat?
+
+654
+00:34:25,679 --> 00:34:27,230
+They eat nothing.
+
+655
+00:34:27,280 --> 00:34:27,789
+They're keto.
+
+656
+00:34:27,839 --> 00:34:28,990
+They just work 247.
+
+657
+00:34:29,040 --> 00:34:30,603
+They're just constantly intermittent fasting.
+
+658
+00:34:30,653 --> 00:34:36,510
+They're in this like they're in this like uh they're in this like purgatory state of just working 24/7 for us their lives.
+
+659
+00:34:36,560 --> 00:34:37,309
+Wow.
+
+660
+00:34:37,359 --> 00:34:37,950
+Yeah.
+
+661
+00:34:38,000 --> 00:34:38,670
+Fun.
+
+662
+00:34:38,720 --> 00:34:39,096
+Yeah.
+
+663
+00:34:39,126 --> 00:34:39,502
+Okay.
+
+664
+00:34:39,532 --> 00:34:43,309
+I want to next go show you how we make them over at Baku.
+
+665
+00:34:43,359 --> 00:34:43,659
+Yeah.
+
+666
+00:34:43,617 --> 00:34:43,917
+Great.
+
+667
+00:34:43,919 --> 00:34:44,990
+Let's go.
+
+668
+00:34:45,040 --> 00:34:48,430
+It's uh you know like kind of like HQ but Baku.
+
+669
+00:34:48,480 --> 00:34:50,109
+I don't HQ for bots.
+
+670
+00:34:50,159 --> 00:34:51,309
+Oh, it's bot.
+
+671
+00:34:51,359 --> 00:34:51,679
+Yeah.
+
+672
+00:34:51,709 --> 00:34:52,009
+Bot.
+
+673
+00:34:52,000 --> 00:34:53,629
+I thought you were saying Baku.
+
+674
+00:34:53,679 --> 00:34:55,789
+No. Isn't BQ.
+
+675
+00:34:55,839 --> 00:34:56,429
+Botchi.
+
+676
+00:34:56,479 --> 00:34:58,631
+No. Anyways, this is robot Q.
+
+677
+00:34:58,681 --> 00:35:00,270
+This is robot quarters.
+
+678
+00:35:00,320 --> 00:35:00,620
+Um,
+
+679
+00:35:00,542 --> 00:35:07,135
+one thing that's really cool is on the way is uh we we we uh we work at BMW and last
+
+680
+00:35:07,185 --> 00:35:13,390
+year we h we deployed uh for six months robots on the uh basically body shop factory line to build cars.
+
+681
+00:35:13,440 --> 00:35:13,950
+Yeah.
+
+682
+00:35:14,000 --> 00:35:16,910
+Uh and this was the first you built this entire car.
+
+683
+00:35:16,960 --> 00:35:19,658
+No, not the entire thing, but we helped build this car.
+
+684
+00:35:19,708 --> 00:35:20,108
+Okay.
+
+685
+00:35:20,139 --> 00:35:25,997
+Uh this is an X3 uh that we helped basically uh like we basically helped the robot helped assemble it and this was
+
+686
+00:35:26,047 --> 00:35:31,789
+the first car in the world built by a humanoid robot that we that we're aware of and straight off the assembly line.
+
+687
+00:35:31,839 --> 00:35:33,950
+Straight off as I actually I bought the first four.
+
+688
+00:35:34,000 --> 00:35:34,370
+Okay.
+
+689
+00:35:34,400 --> 00:35:36,910
+We have three here on campus and I have one at my house.
+
+690
+00:35:36,960 --> 00:35:40,510
+And uh yeah, it's like a collector's item now.
+
+691
+00:35:40,560 --> 00:35:41,150
+That's exciting.
+
+692
+00:35:41,200 --> 00:35:42,990
+Yeah, it's pretty pretty interesting.
+
+693
+00:35:43,040 --> 00:35:45,127
+All right.
+
+694
+00:35:45,177 --> 00:35:49,256
+Um so we have uh this is kind of our our campus here.
+
+695
+00:35:49,306 --> 00:35:51,224
+We have four buildings.
+
+696
+00:35:51,274 --> 00:35:55,230
+Um we're going to go through our manufacturing site which is bot Q.
+
+697
+00:35:55,280 --> 00:36:00,430
+And then we also have a site uh up here that I'll show you uh called the grid.
+
+698
+00:36:00,480 --> 00:36:00,780
+Okay.
+
+699
+00:36:00,800 --> 00:36:05,925
+And the goal of that facility is to run robots like just like we would at our client sites.
+
+700
+00:36:05,975 --> 00:36:10,430
+Could be in the home and also in the commercial side and 247 operations.
+
+701
+00:36:10,480 --> 00:36:11,549
+Why is it called the grid?
+
+702
+00:36:11,599 --> 00:36:15,085
+Um it's a kind of a nod to like a sci-fi movie.
+
+703
+00:36:15,135 --> 00:36:17,055
+Uh and um I don't know.
+
+704
+00:36:17,105 --> 00:36:19,947
+Do you have a lot of inspiration from sci-fi movies?
+
+705
+00:36:19,997 --> 00:36:21,549
+Are you a sci-fi geek?
+
+706
+00:36:21,599 --> 00:36:22,592
+Total sci-fi geek.
+
+707
+00:36:22,642 --> 00:36:24,430
+I've seen every sci-fi movie.
+
+708
+00:36:24,480 --> 00:36:25,549
+What's your favorite?
+
+709
+00:36:25,599 --> 00:36:27,927
+Um, probably Contact.
+
+710
+00:36:27,977 --> 00:36:30,590
+Jodyie Foster, the alien thing.
+
+711
+00:36:30,640 --> 00:36:30,940
+Yeah.
+
+712
+00:36:30,880 --> 00:36:33,309
+It's kind of embarrassing to say, but why?
+
+713
+00:36:33,359 --> 00:36:34,398
+Uh, I don't know.
+
+714
+00:36:34,448 --> 00:36:36,190
+I just I The contact's amazing.
+
+715
+00:36:36,240 --> 00:36:37,549
+If you like it, don't be embarrassed.
+
+716
+00:36:37,599 --> 00:36:37,917
+Yeah.
+
+717
+00:36:37,947 --> 00:36:40,690
+Um, but like I'll just I'll watch I'm a sci-fi junkie.
+
+718
+00:36:40,740 --> 00:36:42,418
+I'll watch any kind of sci-fi.
+
+719
+00:36:42,468 --> 00:36:43,279
+Um, yeah.
+
+720
+00:36:43,329 --> 00:36:46,159
+So, uh, so that's the grid up here.
+
+721
+00:36:46,209 --> 00:36:50,910
+Um, and we we'll run robots in that facility 247.
+
+722
+00:36:50,960 --> 00:36:57,230
+And the goal of that is, uh, last line of defense before we send out any code to our customers.
+
+723
+00:36:57,280 --> 00:37:01,568
+So, you don't want robots, uh, you know, you don't want you don't want like robots having any problems.
+
+724
+00:37:01,618 --> 00:37:06,003
+We want to run them close enough to like heavy operations that we would see out in the real world.
+
+725
+00:37:06,053 --> 00:37:11,039
+And so, we have a whole facility dedicated to basically running robots as hard as possible, 247.
+
+726
+00:37:11,089 --> 00:37:14,910
+We we run on holidays, weekends, 2 to three in the morning.
+
+727
+00:37:14,960 --> 00:37:16,110
+And they just run all day every day.
+
+728
+00:37:16,160 --> 00:37:17,390
+Have any escaped?
+
+729
+00:37:17,440 --> 00:37:23,069
+No, we've we've had one almost escaped and we really No, nothing's nothing's escaped.
+
+730
+00:37:23,119 --> 00:37:25,675
+Do they Do you geo fence them within properties?
+
+731
+00:37:25,725 --> 00:37:27,549
+Like do you do that when you set them up?
+
+732
+00:37:27,599 --> 00:37:28,211
+We we track them.
+
+733
+00:37:28,261 --> 00:37:32,034
+Obviously, this is like for us right now it's like a these are like high IP, right?
+
+734
+00:37:32,084 --> 00:37:33,587
+Uh like very complicated hardware.
+
+735
+00:37:33,637 --> 00:37:35,950
+We don't want to get stolen or out in the wrong hands.
+
+736
+00:37:36,000 --> 00:37:37,470
+So, uh so we track it.
+
+737
+00:37:37,520 --> 00:37:38,538
+Has that happened before?
+
+738
+00:37:38,588 --> 00:37:40,110
+Are people stealing your IP?
+
+739
+00:37:40,160 --> 00:37:43,490
+Um we do a lot of work on security internally here.
+
+740
+00:37:43,540 --> 00:37:47,549
+Um, so we haven't had any known IP thefts at the company.
+
+741
+00:37:47,599 --> 00:37:47,970
+Okay.
+
+742
+00:37:48,000 --> 00:37:48,529
+Yeah.
+
+743
+00:37:48,579 --> 00:37:49,590
+All right.
+
+744
+00:37:49,640 --> 00:37:51,230
+Welcome to Baku.
+
+745
+00:37:51,280 --> 00:37:52,110
+All right.
+
+746
+00:37:52,160 --> 00:37:53,230
+Now, oh my god.
+
+747
+00:37:53,280 --> 00:37:55,390
+Now, welcome to Baku.
+
+748
+00:37:55,440 --> 00:38:01,150
+Um, so this is where we uh this is where we manufacture uh figure 3 robots.
+
+749
+00:38:01,200 --> 00:38:01,710
+Wow.
+
+750
+00:38:01,760 --> 00:38:09,907
+Um, so we uh we do everything from build heads, batteries, legs, arms, fingers, thumbs, hands.
+
+751
+00:38:09,957 --> 00:38:14,990
+Uh, and we basically do all testing here before we box the robots out or they walk next door.
+
+752
+00:38:15,040 --> 00:38:16,110
+What does a box look like?
+
+753
+00:38:16,160 --> 00:38:16,460
+A box?
+
+754
+00:38:16,460 --> 00:38:16,760
+Yeah.
+
+755
+00:38:16,718 --> 00:38:17,527
+Um, we'll show you.
+
+756
+00:38:17,577 --> 00:38:19,150
+We have one over there in in a minute.
+
+757
+00:38:19,200 --> 00:38:19,569
+Really?
+
+758
+00:38:19,599 --> 00:38:23,470
+Um, and right now we basically if we need them at headquarters or the grid, they basically just walk over.
+
+759
+00:38:23,520 --> 00:38:24,670
+Where do you store them?
+
+760
+00:38:24,720 --> 00:38:27,870
+Um, at the at the office or client sites.
+
+761
+00:38:27,920 --> 00:38:28,220
+Mhm.
+
+762
+00:38:28,240 --> 00:38:28,540
+Yeah.
+
+763
+00:38:28,555 --> 00:38:29,608
+Uh, on on the docks.
+
+764
+00:38:29,658 --> 00:38:33,038
+They basically dock at nighttime or when they're not not needed.
+
+765
+00:38:33,088 --> 00:38:33,558
+Um, okay.
+
+766
+00:38:33,608 --> 00:38:36,073
+We're going to show you some of the manufacturing lines.
+
+767
+00:38:36,123 --> 00:38:45,950
+So we start first uh with basically head and uh and battery uh and we do some electronics uh like basically quality and EOL checking.
+
+768
+00:38:46,000 --> 00:38:46,935
+EOL is end of line.
+
+769
+00:38:46,985 --> 00:38:51,331
+So we make sure we want every single subsystem to go through a bit pretty like pretty crazy test.
+
+770
+00:38:51,381 --> 00:38:53,150
+Here's our here's our headline.
+
+771
+00:38:53,200 --> 00:38:53,950
+A rack of heads.
+
+772
+00:38:54,000 --> 00:38:55,579
+Uh rack of heads.
+
+773
+00:38:55,629 --> 00:38:58,324
+So um here here's a head.
+
+774
+00:38:58,374 --> 00:39:05,093
+Our heads have um basically uh Bluetooth like Wi-Fi 5G.
+
+775
+00:39:05,143 --> 00:39:07,765
+They have camera systems on on board.
+
+776
+00:39:07,815 --> 00:39:09,035
+Uh we have lights.
+
+777
+00:39:09,085 --> 00:39:10,872
+Uh we have thermal systems.
+
+778
+00:39:10,922 --> 00:39:11,756
+Uh we have an IMU.
+
+779
+00:39:11,806 --> 00:39:15,950
+So basically the head is like basically a lot of sensors in here.
+
+780
+00:39:16,000 --> 00:39:26,227
+Um the heads go through a pretty uh like a rigorous test uh here um uh that we've designed uh internally for end of line testing.
+
+781
+00:39:26,277 --> 00:39:32,884
+So heads here go through a well first is we basically are are flashing software here under the head for the first time.
+
+782
+00:39:32,934 --> 00:39:36,879
+Uh all the firmware it's going through a calibration process for the cameras.
+
+783
+00:39:36,929 --> 00:39:41,726
+Uh and then we're basically making sure their head is in a nominal state to basically put onto a robot.
+
+784
+00:39:41,776 --> 00:39:43,714
+So does it getting are we getting signals out of it?
+
+785
+00:39:43,764 --> 00:39:46,781
+Uh does it have any does it have any issues at all or any errors?
+
+786
+00:39:46,831 --> 00:39:48,325
+If it does we'll try to triage it.
+
+787
+00:39:48,375 --> 00:39:50,990
+If it doesn't we'll end up putting on a robot.
+
+788
+00:39:51,040 --> 00:39:53,390
+This is like when it's first born.
+
+789
+00:39:53,440 --> 00:39:53,740
+Yeah.
+
+790
+00:39:53,738 --> 00:39:57,136
+It's like uh it's kind of just like just raw hardware and it goes in here and
+
+791
+00:39:57,186 --> 00:40:00,910
+it comes out with software and comes out with all the checks that we can use it with.
+
+792
+00:40:00,960 --> 00:40:01,470
+Wow.
+
+793
+00:40:01,520 --> 00:40:03,470
+Yeah.
+
+794
+00:40:03,520 --> 00:40:06,990
+All right.
+
+795
+00:40:07,040 --> 00:40:10,330
+How often do you walk through every part of the campus?
+
+796
+00:40:10,380 --> 00:40:11,390
+Like uh every day.
+
+797
+00:40:11,440 --> 00:40:12,029
+Every day.
+
+798
+00:40:12,079 --> 00:40:12,864
+Every day.
+
+799
+00:40:12,914 --> 00:40:15,736
+Um so here is uh here's our battery line.
+
+800
+00:40:15,786 --> 00:40:23,683
+So we have battery cells that come in uh and then we basically do uh cell testing and uh like basically voltage balancing.
+
+801
+00:40:23,733 --> 00:40:31,022
+So here we're basically checking every single cell against the data sheet and we're also checking voltage and we're balancing out the packs.
+
+802
+00:40:31,072 --> 00:40:34,390
+So if there's any um like kind of voltage differential.
+
+803
+00:40:34,440 --> 00:40:38,750
+We're basically uh making sure that all the packs basically have somewhat of a somewhat balanced voltage.
+
+804
+00:40:38,800 --> 00:40:40,750
+Where do you get this machine from?
+
+805
+00:40:40,800 --> 00:40:41,789
+We designed this machine.
+
+806
+00:40:41,839 --> 00:40:42,693
+Oh yeah.
+
+807
+00:40:42,743 --> 00:40:53,789
+This was custom designed uh for uh for figure here for battery and then uh we go through a process for uh for potting um uh like wire bonding and
+
+808
+00:40:53,839 --> 00:40:57,806
+there's some polyurethane we put inside the battery pack for thermal runaway and then at
+
+809
+00:40:57,856 --> 00:41:04,590
+the end pops out uh basically a pretty heavy uh 2.25 kilowatt hour battery pack.
+
+810
+00:41:04,640 --> 00:41:04,940
+Yeah.
+
+811
+00:41:04,848 --> 00:41:05,697
+I don't even want to try.
+
+812
+00:41:05,747 --> 00:41:07,150
+It's really quite heavy.
+
+813
+00:41:07,200 --> 00:41:08,510
+Oh yeah.
+
+814
+00:41:08,560 --> 00:41:11,230
+No, I I don't think it's Wait, let me try.
+
+815
+00:41:11,280 --> 00:41:13,194
+Oh, no. That is actually really heavy.
+
+816
+00:41:13,244 --> 00:41:18,110
+So, this uh so this battery uh will basically go right into the torso.
+
+817
+00:41:18,160 --> 00:41:20,510
+It's one of the heaviest components we have.
+
+818
+00:41:20,560 --> 00:41:21,150
+Yeah.
+
+819
+00:41:21,200 --> 00:41:29,150
+How do you I mean I know all this is stabilized, but like is it better that it's one piece in the torso versus distributed across the body?
+
+820
+00:41:29,200 --> 00:41:30,934
+Yeah, it's way better one piece.
+
+821
+00:41:30,984 --> 00:41:34,190
+The battery pack has um just even for safety,
+
+822
+00:41:34,240 --> 00:41:38,145
+we have like a lot of thermal runaway um properties inside the pack that
+
+823
+00:41:38,195 --> 00:41:42,385
+we've designed here internally to make sure um in the worst case you basically want
+
+824
+00:41:42,435 --> 00:41:48,910
+uh to say like okay if the battery if a cell or battery cell is going to thermal runaway you never want that to ever propagate outside the pack.
+
+825
+00:41:48,960 --> 00:41:51,081
+So you wanted to contain it to the battery system itself.
+
+826
+00:41:51,131 --> 00:41:55,154
+So we have a basically a structural uh system and also basically a thermway
+
+827
+00:41:55,204 --> 00:41:59,259
+venting process we've designed internally to basically allow for the battery to be extremely safe.
+
+828
+00:41:59,309 --> 00:42:02,656
+Like the the requirement is like you want no flame to never exit the pack.
+
+829
+00:42:02,706 --> 00:42:06,054
+You don't want a robot like on fire or something like that out in the world.
+
+830
+00:42:06,104 --> 00:42:08,590
+Uh so we've designed the right safety system.
+
+831
+00:42:08,640 --> 00:42:11,230
+We we've never had a robot ever have catch fire.
+
+832
+00:42:11,280 --> 00:42:17,309
+No. No. And then our all of our figure 3s are designed in a way that basically will prevent the robot from ever catching fire.
+
+833
+00:42:17,359 --> 00:42:17,739
+Okay.
+
+834
+00:42:17,769 --> 00:42:23,150
+Um so that that actually was a cra pretty crazy hard engineering feat that we've designed here internally.
+
+835
+00:42:23,200 --> 00:42:26,694
+Um also the the the pack is structural take loads.
+
+836
+00:42:26,744 --> 00:42:32,572
+So in case we fall even on like sharp objects or corners and things like this like we can never propagate inside the pack uh
+
+837
+00:42:32,622 --> 00:42:40,269
+the cells itself meaning you don't want anything to uh kind of like uh kind of like send the battery cells itself into thermal away conditions.
+
+838
+00:42:40,319 --> 00:42:44,918
+Have you had any supply chain risks whether it's with China or other countries?
+
+839
+00:42:44,968 --> 00:42:46,332
+Is that why you do everything here?
+
+840
+00:42:46,382 --> 00:42:50,478
+We do most of the manufacturing here because the product is so new and it needs to
+
+841
+00:42:50,528 --> 00:42:54,962
+be really controlled and we also need uh we also think about IP as really important here.
+
+842
+00:42:55,012 --> 00:42:57,150
+Uh we don't want any of the technologies to be stolen.
+
+843
+00:42:57,200 --> 00:42:57,500
+Yeah.
+
+844
+00:42:57,440 --> 00:43:01,915
+Um and I think this is just hard too like um we be able to put this thing together through a basically
+
+845
+00:43:01,965 --> 00:43:05,725
+a brand new supply chain that we had to design and get it in and make it work is like it's non-trivial.
+
+846
+00:43:05,775 --> 00:43:08,514
+Like you see how much testing we do at headquarters for all this work.
+
+847
+00:43:08,564 --> 00:43:10,269
+Uh testing we do at the grid.
+
+848
+00:43:10,319 --> 00:43:12,228
+We'll do a ton of testing we'll show you here today.
+
+849
+00:43:12,278 --> 00:43:18,715
+It's uh it's enormous and the product is um we're kind of like early in the humanoid kind of like chapter book.
+
+850
+00:43:18,765 --> 00:43:21,554
+Uh so like uh car has been around for over a century.
+
+851
+00:43:21,604 --> 00:43:23,899
+We kind of the company has been around for four years.
+
+852
+00:43:23,949 --> 00:43:24,546
+No. Yeah.
+
+853
+00:43:24,596 --> 00:43:26,029
+Not even four years yet.
+
+854
+00:43:26,079 --> 00:43:26,830
+Yeah.
+
+855
+00:43:26,880 --> 00:43:31,150
+And then humanoids are like really uh like really early in that whole process.
+
+856
+00:43:31,200 --> 00:43:34,442
+How did you We'll talk about this more in the long form,
+
+857
+00:43:34,492 --> 00:43:40,350
+but like in terms of getting this up to scale so fast like you have now created a humanoid robot.
+
+858
+00:43:40,400 --> 00:43:46,897
+This is one of the most complex robot like I don't know engineering problems ever.
+
+859
+00:43:46,947 --> 00:43:50,110
+So like how did you get up to speed so fast?
+
+860
+00:43:50,160 --> 00:43:55,020
+Um my company before this designed like flying robots at Archer and it's got the same properties.
+
+861
+00:43:55,070 --> 00:44:00,256
+We have a battery pack but instead of like uh 2 kilowatt hours, it's 160 kilowatt hours and it's distributed.
+
+862
+00:44:00,306 --> 00:44:04,547
+Uh we have electric motors, we have control software, we have embedded systems and sensors.
+
+863
+00:44:04,597 --> 00:44:05,507
+That's a robot.
+
+864
+00:44:05,557 --> 00:44:11,309
+And like Archer's aircrafts, uh like my aircrafts there at like say midnight are like highly overactuated.
+
+865
+00:44:11,359 --> 00:44:14,190
+All the propellers uh at variable pitch.
+
+866
+00:44:14,240 --> 00:44:17,494
+Uh the front leading edge actuators tilt 90 degrees.
+
+867
+00:44:17,544 --> 00:44:20,828
+You have uh the flaps uh on the wings and tail all move.
+
+868
+00:44:20,878 --> 00:44:22,750
+You have like basically 24 degrees of freedom.
+
+869
+00:44:22,800 --> 00:44:25,520
+You have about over a little over 40 here on the robot.
+
+870
+00:44:25,570 --> 00:44:31,037
+So um so in some way it's like um like similar enough systems here.
+
+871
+00:44:31,087 --> 00:44:38,350
+Um and then you know when I started figure we we were like uh we have a very crisp and clear vision for the how to think about the product and
+
+872
+00:44:38,400 --> 00:44:42,545
+engineering roadmap and we just like went like went really hard building a team to
+
+873
+00:44:42,595 --> 00:44:46,042
+40 and uh putting the right resources in place for us to design stuff really fast.
+
+874
+00:44:46,092 --> 00:44:49,969
+We had the we we'll show you here next visit but we have our figure one robot.
+
+875
+00:44:50,019 --> 00:44:51,214
+It it's kind of gnarly.
+
+876
+00:44:51,264 --> 00:44:52,240
+It's got wires everywhere.
+
+877
+00:44:52,290 --> 00:44:53,569
+It's our first generation.
+
+878
+00:44:53,619 --> 00:44:58,468
+We had that walking before we were uh a year old and we think it's probably one of the fastest times in human history.
+
+879
+00:44:58,518 --> 00:45:02,990
+So it was just like a you know we were like laser focused pedal to the metal trying to get this thing to work.
+
+880
+00:45:03,040 --> 00:45:03,470
+Yeah.
+
+881
+00:45:03,520 --> 00:45:03,820
+Yeah.
+
+882
+00:45:03,772 --> 00:45:04,072
+Okay.
+
+883
+00:45:04,025 --> 00:45:05,543
+Let me show you some more stuff.
+
+884
+00:45:05,593 --> 00:45:13,889
+So we have uh we have a a bunch of different lines here that helps build pelvises install battery compute uh arms legs.
+
+885
+00:45:13,939 --> 00:45:17,069
+Uh here we're installing the lower leg on top.
+
+886
+00:45:17,119 --> 00:45:19,830
+Is there a reason there are humans installing the leg?
+
+887
+00:45:19,880 --> 00:45:23,630
+Um, at some point we will have robots doing all of this work.
+
+888
+00:45:23,680 --> 00:45:25,150
+Don't let them hear that.
+
+889
+00:45:25,200 --> 00:45:25,507
+Yeah.
+
+890
+00:45:25,537 --> 00:45:29,201
+Uh, and we're putting more and more automation in the lines now.
+
+891
+00:45:29,251 --> 00:45:34,432
+We're we will be shipping robots human our humanoid robots into the production lines here uh this year.
+
+892
+00:45:34,482 --> 00:45:38,325
+And um, and yeah, now now we're doing like the lower leg assembly for this robot.
+
+893
+00:45:38,375 --> 00:45:40,773
+And at some point today, it will go through some testing.
+
+894
+00:45:40,823 --> 00:45:41,593
+We'll show you in a minute.
+
+895
+00:45:41,643 --> 00:45:45,735
+and we'll basically walk over to headquarters and start basically uh helping us either
+
+896
+00:45:45,785 --> 00:45:52,510
+do uh like AI development or doing uh use case testing for our customers.
+
+897
+00:45:52,560 --> 00:45:53,309
+Pretty cool, huh?
+
+898
+00:45:53,359 --> 00:45:54,629
+It's pretty cool.
+
+899
+00:45:54,679 --> 00:45:55,079
+Yeah.
+
+900
+00:45:55,119 --> 00:45:55,549
+Yeah.
+
+901
+00:45:55,599 --> 00:45:59,470
+So crazy seeing them get assembled.
+
+902
+00:45:59,520 --> 00:46:02,430
+Are you worried they're going to become sentient?
+
+903
+00:46:02,480 --> 00:46:09,630
+Um I I think we'll I think we'll be okay.
+
+904
+00:46:09,680 --> 00:46:15,384
+um these things will get really smart like they're they're able to like do what humans can physically and I
+
+905
+00:46:15,434 --> 00:46:21,390
+think the neural network uh technologies we're designing are we're trying to give like human common sense to all the robots.
+
+906
+00:46:21,440 --> 00:46:27,505
+Um so in some way uh I think we'll get to add or even beyond human level intelligence in these systems.
+
+907
+00:46:27,555 --> 00:46:32,750
+It actually might be the case that we we get to artificial general intelligence first in these embodiment.
+
+908
+00:46:32,800 --> 00:46:33,390
+Really?
+
+909
+00:46:33,440 --> 00:46:33,870
+Yeah.
+
+910
+00:46:33,920 --> 00:46:34,220
+Why?
+
+911
+00:46:34,136 --> 00:46:37,798
+because we're able to like this interaction data of like touching the world um and
+
+912
+00:46:37,848 --> 00:46:43,486
+seeing what happens through trial and error is like um it basically uh mo most of
+
+913
+00:46:43,536 --> 00:46:47,909
+human intelligence uh is built this way and I think this is like the last
+
+914
+00:46:47,959 --> 00:46:54,670
+missing piece to get to true AGI is this like real world interaction with our environments.
+
+915
+00:46:54,720 --> 00:46:55,724
+Okay, come with me over here.
+
+916
+00:46:55,774 --> 00:46:57,537
+I'm g show you some of the testing work.
+
+917
+00:46:57,587 --> 00:47:04,026
+So the robots are basically built uh starting with the pelvis uh torso, head, arms, uh legs and hands.
+
+918
+00:47:04,076 --> 00:47:07,369
+And then we basically want to we want to go through like a basically a very
+
+919
+00:47:07,419 --> 00:47:11,950
+uh strenuous testing process to make sure everything is like working nominally before we send it out.
+
+920
+00:47:12,000 --> 00:47:17,180
+So we don't want any like loose cables or bad parts or bad communication.
+
+921
+00:47:17,230 --> 00:47:21,318
+So we send the robot through what we call a final EOL test or end of line test.
+
+922
+00:47:21,368 --> 00:47:27,470
+This is where the robots go through all the final checks and they basically go through also a burn-in on on these lines.
+
+923
+00:47:27,520 --> 00:47:28,590
+What do you mean by burnin?
+
+924
+00:47:28,640 --> 00:47:30,190
+They'll they'll run for several hours.
+
+925
+00:47:30,240 --> 00:47:30,540
+Okay.
+
+926
+00:47:30,560 --> 00:47:33,983
+And we'll basically make sure there's nothing that basically uh no no issues pop
+
+927
+00:47:34,033 --> 00:47:37,630
+up over those few hours before we before we send the send the robots out.
+
+928
+00:47:37,680 --> 00:47:43,204
+So uh so here we have um these bays that are running a combination
+
+929
+00:47:43,254 --> 00:47:47,669
+of burn-in testing and uh and end ofline checks that we've designed here internally.
+
+930
+00:47:47,719 --> 00:47:53,748
+So we basically go through a process where the robot's basically self like trying to understand itself like do is anything seem wrong.
+
+931
+00:47:53,798 --> 00:47:55,857
+If it is we will uh we'll flag it.
+
+932
+00:47:55,907 --> 00:47:59,334
+If it's not basically we go through a process where we basically do like basically
+
+933
+00:47:59,384 --> 00:48:03,390
+a bunch of checks and burn in make sure the robot's in good good condition.
+
+934
+00:48:03,440 --> 00:48:10,269
+Um if they pass here we basically uh we'll we'll walk over to headquarters and if they fail here we need to go fix it and understand why.
+
+935
+00:48:10,319 --> 00:48:12,910
+Why do these ones have vests on them?
+
+936
+00:48:12,960 --> 00:48:15,162
+Um, when the robots are getting brought up,
+
+937
+00:48:15,212 --> 00:48:24,269
+we basically uh we I think we hold it through a gantry system on the back and they have their vests on for that system.
+
+938
+00:48:24,319 --> 00:48:27,230
+It's basically like the robots are like just been born and they're waking up.
+
+939
+00:48:27,280 --> 00:48:30,097
+They're saying, you know, they look at they look at their hands,
+
+940
+00:48:30,147 --> 00:48:37,470
+they start calibrating itself visually and um try trying to make sure everything's in a healthy state of this campus.
+
+941
+00:48:37,520 --> 00:48:42,269
+What is your favorite part?
+
+942
+00:48:42,319 --> 00:48:44,423
+I think Baku is one of my favorite parts here.
+
+943
+00:48:44,473 --> 00:48:46,590
+Like being able to build robots.
+
+944
+00:48:46,640 --> 00:48:51,830
+Um in March we had record um you know we we we had record manufacturing.
+
+945
+00:48:51,880 --> 00:48:57,259
+We we we we made more robots in March than we had ever in our entire lifetime combined.
+
+946
+00:48:57,309 --> 00:49:00,750
+Um it's just cool to see us being able to do this and then get them out the door.
+
+947
+00:49:00,800 --> 00:49:05,613
+Um so I would say um this is probably one of my favorite places in the in the campus.
+
+948
+00:49:05,663 --> 00:49:09,759
+I think maybe my other favorite place that we'll show um some point here is like
+
+949
+00:49:09,809 --> 00:49:15,723
+the robots doing real useful work 247 um on our either commercial customers or in the home.
+
+950
+00:49:15,773 --> 00:49:20,723
+Uh that stuff is just amazing because what we're here to do is we're here to like basically build like uh humanlike
+
+951
+00:49:20,773 --> 00:49:26,416
+intelligence in the world and to see robots working 247 being able to do things like humans can is like so special.
+
+952
+00:49:26,466 --> 00:49:27,634
+It's like such a hard thing to do.
+
+953
+00:49:27,684 --> 00:49:27,984
+Yeah.
+
+954
+00:49:27,930 --> 00:49:32,258
+And be able to see us doing it like uh at these levels of reliability is like it's awesome.
+
+955
+00:49:32,308 --> 00:49:35,470
+Um, so I think it's probably a couple of my favorite places on campus.
+
+956
+00:49:35,520 --> 00:49:39,870
+If you didn't have your job, what job would you want here?
+
+957
+00:49:39,920 --> 00:49:45,523
+Yeah, I think um I think there's a few things I really like.
+
+958
+00:49:45,573 --> 00:49:51,744
+I like the engineering design process of how do you think about clean sheet improving the system to be like more reliable,
+
+959
+00:49:51,794 --> 00:49:58,483
+cheaper, lower in mass and um overall a better functioning robot that can do more of what humans can with less complexity.
+
+960
+00:49:58,533 --> 00:50:05,973
+I think that that job across the hardware like engineering and software engineering design or is like I I spent a lot of time
+
+961
+00:50:06,023 --> 00:50:12,778
+in that uh like leading engineering here and it's just like a uh yeah it's just a really fun and I think very hard problem.
+
+962
+00:50:12,828 --> 00:50:17,171
+Uh everything you try every choice you make to try to make the robot better for thermals or
+
+963
+00:50:17,221 --> 00:50:22,210
+better like lower lower mass or like lower weight makes the something else on the other side worse.
+
+964
+00:50:22,260 --> 00:50:27,700
+Like if you're trying to make the robot like lighter it means it probably can't like hold as much weight. then can't hold as much weight.
+
+965
+00:50:27,750 --> 00:50:32,972
+The customers are like, "Well, if you can't carry 30 pound boxes around, I I can't use you on this assembly line."
+
+966
+00:50:33,022 --> 00:50:38,032
+Uh, so there's just like um I think there's a lot of just interesting, very hard problems to solve there.
+
+967
+00:50:38,082 --> 00:50:44,430
+I think second is like how do we get neural networks to run on robots and generalize at scale on the Helix team
+
+968
+00:50:44,480 --> 00:50:51,384
+and that for uh really is like a um at this point a data and generalization issue and that's a really hard fun problem.
+
+969
+00:50:51,434 --> 00:50:54,908
+Uh manufacturing is another one of how do we like how do we manufacture robots at scale?
+
+970
+00:50:54,958 --> 00:50:57,974
+How do we continue to get robots in the manufacturing process to build themselves?
+
+971
+00:50:58,024 --> 00:51:01,950
+And how do we get them to off the lines into the real world as fast as possible?
+
+972
+00:51:02,000 --> 00:51:06,750
+At some point here, it'll just be like a it'll just be full lights out manufacturing.
+
+973
+00:51:06,800 --> 00:51:09,505
+Uh we'll have like robots only building robots and sending out to the world.
+
+974
+00:51:09,555 --> 00:51:11,262
+The robots will be getting into boxes themselves.
+
+975
+00:51:11,312 --> 00:51:15,390
+Other robots will be boxing them up and we'll be shipping them out to customers.
+
+976
+00:51:15,440 --> 00:51:15,870
+Yeah.
+
+977
+00:51:15,920 --> 00:51:17,789
+Sounds a bit sentient.
+
+978
+00:51:17,839 --> 00:51:18,723
+It's a bit sentient.
+
+979
+00:51:18,773 --> 00:51:19,073
+Yeah.
+
+980
+00:51:19,040 --> 00:51:23,230
+And uh so that's another area where I'm just like um it's extremely interesting.
+
+981
+00:51:23,280 --> 00:51:27,230
+And I think the last piece is uh um we have a whole commercial operations team
+
+982
+00:51:27,280 --> 00:51:30,494
+that's trying to get robots out to the world at scale and make them really useful.
+
+983
+00:51:30,544 --> 00:51:35,710
+Uh we did this uh with BMW last year and we're doing it with more customers this year for figure three.
+
+984
+00:51:35,760 --> 00:51:40,754
+And it's um it's a really cool problem because it's really hard like robots need to get in the environment needs to get safely.
+
+985
+00:51:40,804 --> 00:51:44,232
+They never like basically can almost never fault and when they do fault they need to understand
+
+986
+00:51:44,282 --> 00:51:48,526
+that and self-correct and then we need to be able to do useful human work at human performance.
+
+987
+00:51:48,576 --> 00:51:54,537
+So our our comparison is like what does a human do today in terms of speeds inaccuracies um and then reliability.
+
+988
+00:51:54,587 --> 00:51:56,209
+So like that's a hard bar to hit.
+
+989
+00:51:56,259 --> 00:52:04,750
+So uh those are all like um kind of like gigantic problems to go solve that I think I if I was you know here I'd want to spend all my time on those.
+
+990
+00:52:04,800 --> 00:52:05,230
+Cool.
+
+991
+00:52:05,280 --> 00:52:05,589
+Yeah.
+
+992
+00:52:05,619 --> 00:52:06,078
+Awesome.
+
+993
+00:52:06,128 --> 00:52:06,438
+Okay.
+
+994
+00:52:06,468 --> 00:52:08,430
+You want to see the design studio?
+
+995
+00:52:08,480 --> 00:52:08,780
+Yeah.
+
+996
+00:52:08,720 --> 00:52:09,089
+Let's go.
+
+997
+00:52:09,119 --> 00:52:12,990
+Let's go.
+
+998
+00:52:13,040 --> 00:52:14,269
+What do you think of this?
+
+999
+00:52:14,319 --> 00:52:15,430
+It's really fun.
+
+1000
+00:52:15,480 --> 00:52:16,591
+It's really fun.
+
+1001
+00:52:16,641 --> 00:52:20,269
+I have the coolest job because I just get to visit people's factories all day.
+
+1002
+00:52:20,319 --> 00:52:20,619
+Yeah.
+
+1003
+00:52:20,640 --> 00:52:22,379
+And everybody's building something different.
+
+1004
+00:52:22,429 --> 00:52:25,194
+I was at Applied Intuition earlier uh this week.
+
+1005
+00:52:25,244 --> 00:52:27,010
+I was then at Skyio.
+
+1006
+00:52:27,060 --> 00:52:29,468
+I've been to Archer.
+
+1007
+00:52:29,518 --> 00:52:33,309
+I've been to um Anderoll.
+
+1008
+00:52:33,359 --> 00:52:37,069
+We have just been looking through every door.
+
+1009
+00:52:37,119 --> 00:52:40,153
+That's awesome.
+
+1010
+00:52:40,203 --> 00:52:41,309
+Yeah.
+
+1011
+00:52:41,359 --> 00:52:49,261
+VCX by Fundrise, the public ticker for private tech, allowing investors of all sizes to invest in venture capital.
+
+1012
+00:52:49,311 --> 00:52:52,910
+View the portfolio at getvcx.com.
+
+1013
+00:52:52,960 --> 00:52:55,870
+That's getvcx.com.
+
+1014
+00:52:55,920 --> 00:53:01,257
+Some of you may not have heard this yet, but our sponsor Public just launched something called Generated Assets,
+
+1015
+00:53:01,307 --> 00:53:05,054
+and it brings AI into investing in a way I've honestly never seen before.
+
+1016
+00:53:05,104 --> 00:53:06,108
+Here's how it works.
+
+1017
+00:53:06,158 --> 00:53:09,789
+You type in an idea like AI powered supply chain companies with
+
+1018
+00:53:09,839 --> 00:53:15,540
+positive free cash flow or defense tech companies growing revenue over 25% year-over-year.
+
+1019
+00:53:15,590 --> 00:53:23,397
+Publix AI then dispatches a swarm of agents that scan every single US stock, evaluates them, and instantly builds a custom index around your thesis.
+
+1020
+00:53:23,447 --> 00:53:26,974
+What really stands out is how clearly it explains why each stock is included.
+
+1021
+00:53:27,024 --> 00:53:34,827
+And before you invest, you can even back test your idea against the S&P 500, so you're making decisions with real context, not just guessing.
+
+1022
+00:53:34,877 --> 00:53:41,015
+And beyond generated assets, Public lets you invest in stocks, bonds, options, crypto, all in one place.
+
+1023
+00:53:41,065 --> 00:53:46,367
+They'll even give you an uncapped 1% match when you transfer your investments over from another platform.
+
+1024
+00:53:46,417 --> 00:53:53,367
+If you want to build a portfolio that actually reflects your thesis, visit public.com/sourcy, paid for by public investing.
+
+1025
+00:53:53,417 --> 00:53:55,630
+Full disclosures in the description.
+
+1026
+00:53:55,680 --> 00:54:02,495
+Enterprise AI runs on Merge, the AI infra platform for integrations, agent tooling, and model orchestration.
+
+1027
+00:54:02,545 --> 00:54:05,069
+So your teams ship product, not plumbing.
+
+1028
+00:54:05,119 --> 00:54:09,106
+Mistral, Dropbox, and Drada already trust merge in production.
+
+1029
+00:54:09,156 --> 00:54:11,470
+Start building at merge.dev.
+
+1030
+00:54:11,520 --> 00:54:13,362
+Founders scale faster on deal.
+
+1031
+00:54:13,412 --> 00:54:15,897
+Set up payroll for any country in minutes.
+
+1032
+00:54:15,947 --> 00:54:17,278
+Hire anyone anywhere.
+
+1033
+00:54:17,328 --> 00:54:20,310
+Get visas handled fast and get back to building.
+
+1034
+00:54:20,360 --> 00:54:23,150
+Visit deal.com/sourcy.
+
+1035
+00:54:23,200 --> 00:54:27,390
+That's deeal.com/sourcy.
+
+1036
+00:54:27,440 --> 00:54:31,111
+5 years ago when I took Arch Republic, um, I saw this campus.
+
+1037
+00:54:31,161 --> 00:54:33,309
+It was all empty and I was like, I got to be here.
+
+1038
+00:54:33,359 --> 00:54:33,659
+Okay.
+
+1039
+00:54:33,680 --> 00:54:35,748
+Like the the build the buildings are like really big.
+
+1040
+00:54:35,798 --> 00:54:37,748
+Uh like it's just like they're all open.
+
+1041
+00:54:37,798 --> 00:54:41,205
+It's just like it's just like and you multiple buildings on campus and they're all
+
+1042
+00:54:41,255 --> 00:54:44,110
+close and it's it's hard to find space like that where you can build hardware in,
+
+1043
+00:54:44,160 --> 00:54:46,990
+make loud noises, but also close where everybody lives in the Bay Area.
+
+1044
+00:54:47,040 --> 00:54:49,150
+Are you worried it's too nice?
+
+1045
+00:54:49,200 --> 00:54:50,559
+Uh no, not at all.
+
+1046
+00:54:50,609 --> 00:54:58,628
+Like uh we're like we like it looks like we're uh we're manufacturing in here and running robots, so it's it's uh No, it's fine for us.
+
+1047
+00:54:58,678 --> 00:55:02,362
+and like you it it has like like some industrial grit here, you know what I mean?
+
+1048
+00:55:02,412 --> 00:55:05,230
+It feels uh like we're like we're kind of like builders and makers.
+
+1049
+00:55:05,280 --> 00:55:06,682
+So, it's uh it's kind of nice.
+
+1050
+00:55:06,732 --> 00:55:12,785
+It's kind of like reflects a lot about like kind of who we are uh on the team and it's just like my happy place.
+
+1051
+00:55:12,835 --> 00:55:13,135
+Mhm.
+
+1052
+00:55:13,119 --> 00:55:19,444
+Been been looking at this for five years and we finally we finally got it and uh it's great and I can just walk to manufacturing.
+
+1053
+00:55:19,494 --> 00:55:20,427
+I can walk to the grid.
+
+1054
+00:55:20,477 --> 00:55:21,930
+I can walk to building four.
+
+1055
+00:55:21,980 --> 00:55:25,524
+I can walk here to headquarters and I can just be here with my team and pop
+
+1056
+00:55:25,574 --> 00:55:30,269
+in where I need uh to solve like any like whatever the biggest problem of the day is.
+
+1057
+00:55:30,319 --> 00:55:33,870
+Is most of your talent down in South Bay or do they all commute?
+
+1058
+00:55:33,920 --> 00:55:37,742
+Um most of the talent is here and then we have a shuttle for folks in the city that want to come down.
+
+1059
+00:55:37,792 --> 00:55:43,527
+So maybe like I don't know five or 10% of the of of you know folks here work in like live in the city and commute
+
+1060
+00:55:43,577 --> 00:55:49,150
+down and then I think maybe most majority of the rest all live kind of pretty local within like 20 or 30 minutes from the office.
+
+1061
+00:55:49,200 --> 00:55:49,500
+Yeah.
+
+1062
+00:55:49,483 --> 00:55:51,301
+Luckily the weather is nice here today.
+
+1063
+00:55:51,351 --> 00:55:54,509
+I mean the weather is just freezing and cold and rainy yesterday.
+
+1064
+00:55:54,559 --> 00:55:54,859
+Yeah.
+
+1065
+00:55:54,805 --> 00:55:55,105
+Yeah.
+
+1066
+00:55:55,052 --> 00:55:58,509
+The weather is pretty much the same here every day.
+
+1067
+00:55:58,559 --> 00:56:00,430
+Okay, let's Oh my god, we're back.
+
+1068
+00:56:00,480 --> 00:56:04,430
+We're back so fast.
+
+1069
+00:56:04,480 --> 00:56:06,479
+How did you come up with the logo?
+
+1070
+00:56:06,529 --> 00:56:06,850
+Okay.
+
+1071
+00:56:06,880 --> 00:56:10,190
+Logo is uh got a couple uh things that are cool here.
+
+1072
+00:56:10,240 --> 00:56:16,910
+It's like one is like uh it kind of like looks like um like basically how the robot steps and tracking its steps and feet.
+
+1073
+00:56:16,960 --> 00:56:17,329
+Yeah.
+
+1074
+00:56:17,359 --> 00:56:22,269
+And then two, it's like a little F for figure.
+
+1075
+00:56:22,319 --> 00:56:24,430
+So, this is the fancy secret room now.
+
+1076
+00:56:24,480 --> 00:56:26,430
+This is a secret room that nobody's allowed to come in.
+
+1077
+00:56:26,480 --> 00:56:27,230
+Oh.
+
+1078
+00:56:27,280 --> 00:56:29,819
+Uh this is our design studio.
+
+1079
+00:56:29,869 --> 00:56:32,910
+So, I'm going to show you every robot we've ever built.
+
+1080
+00:56:32,960 --> 00:56:33,470
+Wow.
+
+1081
+00:56:33,520 --> 00:56:34,304
+Yeah.
+
+1082
+00:56:34,354 --> 00:56:43,549
+Um so we started in 2022 and uh the goal was like how do we get humanoid robots to our AI and software team as fast as possible.
+
+1083
+00:56:43,599 --> 00:56:45,509
+Uh so we designed figure one here.
+
+1084
+00:56:45,559 --> 00:56:49,364
+This is our first generation robot.
+
+1085
+00:56:49,414 --> 00:56:51,549
+Uh pretty cyberpunk.
+
+1086
+00:56:51,599 --> 00:56:58,029
+And how much did this one cost to make and develop going down the line?
+
+1087
+00:56:58,079 --> 00:56:58,817
+Oh wow.
+
+1088
+00:56:58,867 --> 00:57:06,781
+Um, this one was like uh built to be expensive and move extremely fast uh in terms of building it.
+
+1089
+00:57:06,831 --> 00:57:09,390
+So, this was like hundreds of thousands of dollars.
+
+1090
+00:57:09,440 --> 00:57:16,350
+Uh, and the robots we have now are are like uh uh you know, well under $100,000 each.
+
+1091
+00:57:16,400 --> 00:57:24,484
+Um, and uh so yeah, this was very expensive, mostly expensive because we CNC manufactured the entire thing.
+
+1092
+00:57:24,534 --> 00:57:31,717
+Uh like basically the way we made all the metal parts was like extremely high precision like think like Formula 1 race car type type type stuff.
+
+1093
+00:57:31,767 --> 00:57:35,008
+Um we had this walk-in within the first year.
+
+1094
+00:57:35,058 --> 00:57:39,057
+Uh and we did we did a lot of the early AI stuff here that we kind of proved out the company.
+
+1095
+00:57:39,107 --> 00:57:40,146
+It was it was great.
+
+1096
+00:57:40,196 --> 00:57:43,309
+Um and then we moved on to figure two which is which is here.
+
+1097
+00:57:43,359 --> 00:57:49,150
+Uh some improvements we did is we moved the battery uh that was on a backpack into the torso.
+
+1098
+00:57:49,200 --> 00:57:49,569
+Yeah.
+
+1099
+00:57:49,599 --> 00:57:53,290
+And then this one had like a basically relatively small computer compared to this.
+
+1100
+00:57:53,340 --> 00:57:54,990
+We basically tripled the compute.
+
+1101
+00:57:55,040 --> 00:57:58,099
+So we basically doubled the battery pack, tripled the compute.
+
+1102
+00:57:58,149 --> 00:58:02,061
+Uh we have new camera sensors in the head and pelvis in the back.
+
+1103
+00:58:02,111 --> 00:58:07,940
+Uh we had our next generation hands and uh we basically wired the whole robot internally.
+
+1104
+00:58:07,990 --> 00:58:11,965
+Um and we also designed uh designed the structure similar to air.
+
+1105
+00:58:12,015 --> 00:58:14,861
+Air aircrafts take loads to the aircraft skin.
+
+1106
+00:58:14,911 --> 00:58:19,116
+And so we designed the basically the structure is an exoskeleton.
+
+1107
+00:58:19,166 --> 00:58:24,830
+So all the load pass uh for the structures is is exterior of the exterior surface.
+
+1108
+00:58:24,880 --> 00:58:32,910
+Um we made about I think like 50 of these and uh we just recently we're just we're just we just recently retired in about a month or two.
+
+1109
+00:58:32,960 --> 00:58:35,601
+Uh and then we've moved now to generation three.
+
+1110
+00:58:35,651 --> 00:58:37,666
+Uh this is our figure 3 robot.
+
+1111
+00:58:37,716 --> 00:58:40,590
+Those are all three the same with different outfits.
+
+1112
+00:58:40,640 --> 00:58:44,309
+And um the robot here we like reduced we reduced the weight.
+
+1113
+00:58:44,359 --> 00:58:47,168
+We made it skinnier but also keep the same power and torques.
+
+1114
+00:58:47,218 --> 00:58:48,332
+It's got Oic speeds.
+
+1115
+00:58:48,382 --> 00:58:49,730
+It's got Ozimpic.
+
+1116
+00:58:49,780 --> 00:58:51,230
+Yeah, exactly.
+
+1117
+00:58:51,280 --> 00:58:52,468
+Uh I think it looks better.
+
+1118
+00:58:52,518 --> 00:58:56,130
+Like this will look a little too like uh kind of too roboty.
+
+1119
+00:58:56,180 --> 00:58:57,191
+It's much robot.
+
+1120
+00:58:57,241 --> 00:58:57,940
+Less robot.
+
+1121
+00:58:57,990 --> 00:58:59,069
+Too much robot.
+
+1122
+00:58:59,119 --> 00:58:59,519
+Exactly.
+
+1123
+00:58:59,561 --> 00:59:01,472
+Like uh so we slimmed everything down.
+
+1124
+00:59:01,522 --> 00:59:02,509
+We soft wrapped it.
+
+1125
+00:59:02,559 --> 00:59:05,736
+It's got a layer of foam like on the shoulders and to the chest.
+
+1126
+00:59:05,786 --> 00:59:06,557
+So it's soft.
+
+1127
+00:59:06,607 --> 00:59:12,121
+We have our next we have our newest generation hands on this which have camera tactile sensors.
+
+1128
+00:59:12,171 --> 00:59:15,454
+Uh is basically able to grasp items much much easier.
+
+1129
+00:59:15,504 --> 00:59:19,150
+Um we reduced the cost by about 90% between these two.
+
+1130
+00:59:19,200 --> 00:59:19,710
+Really?
+
+1131
+00:59:19,760 --> 00:59:20,090
+Yeah.
+
+1132
+00:59:20,120 --> 00:59:20,420
+Ex.
+
+1133
+00:59:20,360 --> 00:59:20,690
+Yeah.
+
+1134
+00:59:20,720 --> 00:59:22,190
+What was the major cost there?
+
+1135
+00:59:22,240 --> 00:59:27,710
+Um we didn't care like we've optimized these first few generations for speed.
+
+1136
+00:59:27,760 --> 00:59:29,230
+We didn't care as much about cost.
+
+1137
+00:59:29,280 --> 00:59:34,350
+So that was like the biggest misconception of designing it initially with speed.
+
+1138
+00:59:34,400 --> 00:59:34,700
+Yeah.
+
+1139
+00:59:34,724 --> 00:59:36,892
+Like I we were sitting here in 2022.
+
+1140
+00:59:36,942 --> 00:59:43,908
+We're like um our software folks need a humanoid to do testing and do AI work or whatever it is on it.
+
+1141
+00:59:43,958 --> 00:59:49,771
+And so and there's like there wasn't at the time uh still really isn't a good humanoid robot to go by to help us speed us up.
+
+1142
+00:59:49,821 --> 00:59:50,888
+So we had to go build it.
+
+1143
+00:59:50,938 --> 00:59:53,678
+So it's like even if it's expensive like let's get stuff to the team as fast
+
+1144
+00:59:53,728 --> 00:59:58,430
+as possible to start getting like the basically start like working on the development process for commercialization.
+
+1145
+00:59:58,480 --> 01:00:04,190
+And the same with figure 2 the goal was like um we had a lot of problems with reliability here that we needed to clean up.
+
+1146
+01:00:04,240 --> 01:00:07,871
+We had like wires poking out and all kinds of issues here with this robot.
+
+1147
+01:00:07,921 --> 01:00:10,979
+Um it was kind of it was kind of falting every few hours.
+
+1148
+01:00:11,029 --> 01:00:11,329
+Uh,
+
+1149
+01:00:11,291 --> 01:00:16,854
+so we just had a ton of reliability issues we needed to clean up because we're kind of known though because we're moving really really really fast.
+
+1150
+01:00:16,904 --> 01:00:21,450
+So figure two was just like way too expensive, like too hard to manufacture at scale.
+
+1151
+01:00:21,500 --> 01:00:25,142
+So figure three was like how do we like reduce the cost by like almost an order of magnitude?
+
+1152
+01:00:25,192 --> 01:00:26,430
+How do we make a lot of them?
+
+1153
+01:00:26,480 --> 01:00:30,430
+How do we make it like closer to what we think the ideal outcome is for like every robot in the world?
+
+1154
+01:00:30,480 --> 01:00:34,494
+Um, so these robots uh basically have the ability to take these clothes on and off.
+
+1155
+01:00:34,544 --> 01:00:39,950
+So we have different like different different types of um accessories we can put on them.
+
+1156
+01:00:40,000 --> 01:00:44,830
+uh shoes, gloves, uh like yeah, fabrics.
+
+1157
+01:00:44,880 --> 01:00:47,486
+How often are you thinking about the next version?
+
+1158
+01:00:47,536 --> 01:00:50,261
+Like what do you want the next version to be?
+
+1159
+01:00:50,311 --> 01:00:53,829
+And like do you start thinking about it while you're building this one or after it?
+
+1160
+01:00:53,879 --> 01:00:57,610
+Like at what point of the production stage do you start the next iteration?
+
+1161
+01:00:57,660 --> 01:01:03,597
+We we are now building a new robot almost every year and uh we'll have uh you know we
+
+1162
+01:01:03,647 --> 01:01:09,897
+we were like we're like late stage now in the design process for figure 4 and um there are
+
+1163
+01:01:09,947 --> 01:01:13,874
+some changes that we like we want to put into the iterate this is like a it's like this
+
+1164
+01:01:13,924 --> 01:01:18,779
+is like iPhone like iPhones you know what I mean like everyone's getting better yeah exactly uh so every
+
+1165
+01:01:18,829 --> 01:01:22,539
+word we're trying to get better so there there are some things we just didn't get to and have
+
+1166
+01:01:22,589 --> 01:01:26,733
+enough time to work on on figure three that we want to derisk we put into four uh And
+
+1167
+01:01:26,783 --> 01:01:30,246
+there are also some things we've learned from like operating figure three now that we're like man this is
+
+1168
+01:01:30,296 --> 01:01:33,552
+like could be way better if we did this for that that we're putting into figure four as well.
+
+1169
+01:01:33,602 --> 01:01:37,930
+And then we want to keep reducing costs and making it easier to manufacture at every step.
+
+1170
+01:01:37,980 --> 01:01:41,109
+So we're looking at figure four and we're like uh figure three we're like oh
+
+1171
+01:01:41,159 --> 01:01:44,615
+man like some of these things are like kind of hard to manufacture at BCube.
+
+1172
+01:01:44,665 --> 01:01:49,836
+Um or like how are we going to get it out of a box or how are we going to get it like a new user in a home like really easily.
+
+1173
+01:01:49,886 --> 01:01:54,662
+So like taking all those collective like learnings and we're putting them into the engineering design efforts and
+
+1174
+01:01:54,712 --> 01:01:59,150
+we go through many different like basically gating processes for that for like starting with like an architecture
+
+1175
+01:01:59,200 --> 01:02:03,326
+review of what what the system should look like and high level like you know like level zero
+
+1176
+01:02:03,376 --> 01:02:08,048
+requirements all the way through to detail design which we're we're now in for figure uh figure four.
+
+1177
+01:02:08,098 --> 01:02:15,123
+What's kind of crazy here is um I thought at some point we like we would saturate out like an you know iPhone like doesn't really change much anymore.
+
+1178
+01:02:15,173 --> 01:02:18,590
+I thought like figure three at this point was like this is like a this is like our best human
+
+1179
+01:02:18,640 --> 01:02:22,342
+robot in the world and is every robot's going to be like it's going to be better but not by much.
+
+1180
+01:02:22,392 --> 01:02:26,230
+What's going to happen here is you're going to have figure one kind of a you know
+
+1181
+01:02:26,280 --> 01:02:29,651
+to figure two like a step up and figure two to figure three at a step up.
+
+1182
+01:02:29,701 --> 01:02:33,230
+Figure four will be the biggest step up we've ever made by far.
+
+1183
+01:02:33,280 --> 01:02:38,300
+We'll have it out here at one point and you'll be like oh my gosh it's just like radically different.
+
+1184
+01:02:38,350 --> 01:02:40,612
+And um so we obviously can't talk too much.
+
+1185
+01:02:40,662 --> 01:02:43,390
+We can't talk about anything basically on on what we're doing there.
+
+1186
+01:02:43,440 --> 01:02:45,052
+But like uh we are just so early.
+
+1187
+01:02:45,102 --> 01:02:49,143
+We're like almost in like flip phones and now we're entering like iPhone one moment.
+
+1188
+01:02:49,193 --> 01:02:53,172
+I think maybe figure 4 will be our first like iPhone one moment for this where it's just like
+
+1189
+01:02:53,222 --> 01:03:00,190
+radically different and probably like for me I think it's like almost the perfect humanoid robot I can think of.
+
+1190
+01:03:00,240 --> 01:03:03,656
+I'm sure there's things on five and six as we iterate through it'll be even better.
+
+1191
+01:03:03,706 --> 01:03:05,710
+Um but we've learned a lot.
+
+1192
+01:03:05,760 --> 01:03:08,287
+Here's a couple examples we have.
+
+1193
+01:03:08,337 --> 01:03:13,150
+Um, here's some parts we have on the table for uh this is our generation of hands.
+
+1194
+01:03:13,200 --> 01:03:16,830
+Starting with our first generation hand to our current generation hand today.
+
+1195
+01:03:16,880 --> 01:03:22,590
+We've gone through like five uh versions of this kind of well they're kind of like same size as my hands.
+
+1196
+01:03:22,640 --> 01:03:23,309
+Yeah, that one.
+
+1197
+01:03:23,359 --> 01:03:26,190
+Uh, one thing we have never shown is our first generation hand.
+
+1198
+01:03:26,240 --> 01:03:26,670
+Really?
+
+1199
+01:03:26,720 --> 01:03:27,089
+Yeah.
+
+1200
+01:03:27,119 --> 01:03:27,710
+Why?
+
+1201
+01:03:27,760 --> 01:03:32,190
+Um, was really difficult from an IP perspective and engineering perspective to go build.
+
+1202
+01:03:32,240 --> 01:03:37,704
+Um and two is we think um we learned a lot about it and we learned like things like what are good and good and bad.
+
+1203
+01:03:37,754 --> 01:03:43,465
+In this case we felt like we had um uh learned a lot about the hand of like why it's probably not the right direction.
+
+1204
+01:03:43,515 --> 01:03:47,069
+So our first generation hand you can see here is a tendon driven hand.
+
+1205
+01:03:47,119 --> 01:03:52,418
+Yeah we designed all the motors and actuators here ourselves uh even the gearboxes.
+
+1206
+01:03:52,468 --> 01:03:55,517
+Uh basically the the rationale here is that a human hands like this.
+
+1207
+01:03:55,567 --> 01:04:01,150
+Our most of our motors are on our forearm and they're basically we're like uh little like uh tendons basically driving all the
+
+1208
+01:04:01,200 --> 01:04:07,470
+fingers and um so our first generation hand is like how do we get a really dextrous hand built which is like really
+
+1209
+01:04:07,520 --> 01:04:13,082
+good for intelligence and AI and uh and then uh ultimately that can do a lot of things that human can and how
+
+1210
+01:04:13,132 --> 01:04:19,318
+do we mimic the biological kind of architecture of a human and um so I was like this is going to be great.
+
+1211
+01:04:19,368 --> 01:04:20,411
+We're going to put motors in here.
+
+1212
+01:04:20,461 --> 01:04:21,502
+They're going to be really powerful.
+
+1213
+01:04:21,552 --> 01:04:25,956
+are going to drive a really high degree of freedom hand and ended up becoming uh ended
+
+1214
+01:04:26,006 --> 01:04:31,310
+up becoming like the wrong engineering choice and we end up pivoting away from it really early.
+
+1215
+01:04:31,360 --> 01:04:34,433
+Uh most of the wrist motors are also in here.
+
+1216
+01:04:34,483 --> 01:04:37,577
+So on figure one, I don't know if you noticed, but the wrists look crazy.
+
+1217
+01:04:37,627 --> 01:04:42,430
+And the reason for this is that we pivoted away really early away from this tendon driven hand, right?
+
+1218
+01:04:42,480 --> 01:04:45,636
+We had to figure out a way to get like new motors in for the wrist.
+
+1219
+01:04:45,686 --> 01:04:52,269
+So, uh, instead of waiting like four months to redesign those from scratch, um, I took the the motors from the feet.
+
+1220
+01:04:52,319 --> 01:04:59,331
+So, we have three foot motors here in the forearm, and it's just like this Frankenstein forearm, and it like it bends like in mid like,
+
+1221
+01:04:59,381 --> 01:05:05,082
+you know, the the instead of bending here at the wrist, it bends like halfway through the forearm, which is just like really weird.
+
+1222
+01:05:05,132 --> 01:05:06,598
+And I was like, uh, I was so ashamed.
+
+1223
+01:05:06,648 --> 01:05:07,710
+I'm like, we're gonna get this thing out.
+
+1224
+01:05:07,760 --> 01:05:10,509
+It's like, you know, at the time I was like, this is incredible.
+
+1225
+01:05:10,559 --> 01:05:11,470
+Did you sell any of these?
+
+1226
+01:05:11,520 --> 01:05:12,073
+We didn't sell them.
+
+1227
+01:05:12,123 --> 01:05:13,214
+We just used them internally.
+
+1228
+01:05:13,264 --> 01:05:16,014
+But we showed it and it was like this big like forearm.
+
+1229
+01:05:16,064 --> 01:05:18,021
+I was like, "Everybody's going to notice this big forearm.
+
+1230
+01:05:18,071 --> 01:05:18,989
+It's going to be so weird."
+
+1231
+01:05:19,039 --> 01:05:19,339
+Yeah.
+
+1232
+01:05:19,359 --> 01:05:25,150
+And I don't think I've ever had a single person in like three years ask why the form looks like this.
+
+1233
+01:05:25,200 --> 01:05:25,662
+Really?
+
+1234
+01:05:25,712 --> 01:05:27,870
+Everyone was like, "It's a robot."
+
+1235
+01:05:27,920 --> 01:05:29,346
+Not a single one.
+
+1236
+01:05:29,396 --> 01:05:29,838
+Yeah.
+
+1237
+01:05:29,888 --> 01:05:36,505
+So, we uh so we end up pivoting away from like the tendon driven hand to our current generations of hands.
+
+1238
+01:05:36,555 --> 01:05:44,179
+And um I we we've learned a lot, but like I um yeah, we ultimately I think are building like some of the best hand technology in the world.
+
+1239
+01:05:44,229 --> 01:05:52,794
+We recently unveiled our um high degree of freedom uh hand as a teaser, our next generation hand uh about a month ago.
+
+1240
+01:05:52,844 --> 01:06:00,286
+This hand has uh basically a human level dexterity like as many joints in the hand as a human.
+
+1241
+01:06:00,336 --> 01:06:06,110
+Um, and this is really important not just for like being able to dextrous tasks, but we need to be able to learn passively from humans at scale.
+
+1242
+01:06:06,160 --> 01:06:12,425
+And uh, if humans can move hands in all these different crazy way, we we need to be able to map to this uh, at test time on the robot.
+
+1243
+01:06:12,475 --> 01:06:17,224
+So, we have um, I think this is extremely important to get if we want to solve like uh, uh,
+
+1244
+01:06:17,274 --> 01:06:23,069
+AGI and get to like human intelligence in the physical world, like it's all going to start here with the hands for us.
+
+1245
+01:06:23,119 --> 01:06:24,469
+Yeah, it's intense.
+
+1246
+01:06:24,520 --> 01:06:25,450
+It's complex.
+
+1247
+01:06:25,500 --> 01:06:30,989
+I did see a couple people walking around the campus in spandex outfits.
+
+1248
+01:06:31,039 --> 01:06:35,309
+Yeah, it's a mandatory outfit at work.
+
+1249
+01:06:35,359 --> 01:06:38,658
+Yeah, like you just got to be in spandex so you can't come.
+
+1250
+01:06:38,708 --> 01:06:45,472
+Um yeah so we basically are doing a lot of data collection here where we're trying to I basically do like joint level tracking uh and
+
+1251
+01:06:45,522 --> 01:06:51,470
+different type of uh data collection efforts like learning from humans like our our training set is like how do we like we're a humanoid like we
+
+1252
+01:06:51,520 --> 01:06:54,254
+need to learn from humans at scale and so we're trying to learn
+
+1253
+01:06:54,304 --> 01:06:59,470
+as much as possible about human movements and like image conditioning these policies uh
+
+1254
+01:06:59,520 --> 01:07:08,440
+here at figure is that the oddest job um what is that called um what is the oddest job in the office is you think That's odd.
+
+1255
+01:07:08,490 --> 01:07:09,470
+I think it's kind of cool.
+
+1256
+01:07:09,520 --> 01:07:10,350
+It's uncommon.
+
+1257
+01:07:10,400 --> 01:07:13,037
+Yeah, it's uncommon.
+
+1258
+01:07:13,087 --> 01:07:15,549
+Um, probably the oddest job we have there.
+
+1259
+01:07:15,599 --> 01:07:16,509
+Yeah.
+
+1260
+01:07:16,559 --> 01:07:17,950
+How does one apply?
+
+1261
+01:07:18,000 --> 01:07:19,054
+You apply on the site.
+
+1262
+01:07:19,104 --> 01:07:20,337
+You apply on the website.
+
+1263
+01:07:20,387 --> 01:07:20,687
+Uh,
+
+1264
+01:07:20,594 --> 01:07:24,692
+we do like we basically have like data collection folks that we basically are here
+
+1265
+01:07:24,742 --> 01:07:28,029
+that we have both here and out in the world doing data collection for Helix.
+
+1266
+01:07:28,079 --> 01:07:28,590
+That's cool.
+
+1267
+01:07:28,640 --> 01:07:28,970
+Yeah.
+
+1268
+01:07:29,000 --> 01:07:29,330
+Yeah.
+
+1269
+01:07:29,360 --> 01:07:29,690
+Yeah.
+
+1270
+01:07:29,720 --> 01:07:31,710
+It's I actually think it's a really cool job.
+
+1271
+01:07:31,760 --> 01:07:32,509
+Have you ever tried it?
+
+1272
+01:07:32,559 --> 01:07:33,419
+Uh, full spandex.
+
+1273
+01:07:33,469 --> 01:07:33,769
+Yeah.
+
+1274
+01:07:33,772 --> 01:07:37,470
+Uh, I haven't tried the full spandex, but I've done every other type of data collection effort here.
+
+1275
+01:07:37,520 --> 01:07:38,749
+Maybe that'll be your next job.
+
+1276
+01:07:38,799 --> 01:07:39,273
+Maybe we should.
+
+1277
+01:07:39,323 --> 01:07:43,309
+Yeah, I'm going to go get in some spandex later and I'll test it out.
+
+1278
+01:07:43,359 --> 01:07:45,789
+Okay, so we saw the generation of hands.
+
+1279
+01:07:45,839 --> 01:07:47,396
+Okay, so generation hands.
+
+1280
+01:07:47,446 --> 01:07:50,530
+Uh, we also have some um some mockups for the head and feet.
+
+1281
+01:07:50,580 --> 01:07:52,576
+I think the feet are actually really interesting here.
+
+1282
+01:07:52,626 --> 01:07:54,816
+Uh, this is kind of our first prototype for Figure 3.
+
+1283
+01:07:54,866 --> 01:07:59,309
+Um, it's like basically like we really wanted to get a toe in the robot,
+
+1284
+01:07:59,359 --> 01:08:04,110
+which is important both for like a natural looking gate like as you walk, but also like getting off off the ground.
+
+1285
+01:08:04,160 --> 01:08:04,460
+Yeah.
+
+1286
+01:08:04,480 --> 01:08:05,205
+Is really important.
+
+1287
+01:08:05,255 --> 01:08:06,098
+Or even squatting down.
+
+1288
+01:08:06,148 --> 01:08:08,350
+When we squat down, we're like on our toe box.
+
+1289
+01:08:08,400 --> 01:08:10,590
+Um, and it's really difficult with a flat foot.
+
+1290
+01:08:10,640 --> 01:08:13,999
+Um, and then basically this is our this is our figure two like foot.
+
+1291
+01:08:14,049 --> 01:08:17,149
+It's basically just a a fixed piece of metal.
+
+1292
+01:08:17,199 --> 01:08:19,728
+Uh, nothing too crazy impressive.
+
+1293
+01:08:19,778 --> 01:08:24,669
+And then this is our current generation of feet is for figure three.
+
+1294
+01:08:24,719 --> 01:08:26,350
+We basically have a toe.
+
+1295
+01:08:26,400 --> 01:08:29,086
+We have this um opening here in the foot.
+
+1296
+01:08:29,136 --> 01:08:30,830
+Um some people ask about this.
+
+1297
+01:08:30,880 --> 01:08:34,430
+This is basically for like thermal venting as we're charging.
+
+1298
+01:08:34,480 --> 01:08:37,953
+We're pushing air through the calf and the shin uh through through the foot
+
+1299
+01:08:38,003 --> 01:08:42,030
+to cool it down as it's charging because it's got inductive coils on the bottom.
+
+1300
+01:08:42,080 --> 01:08:47,002
+So these feet are basically uh basically stepping onto uh this basically the charger.
+
+1301
+01:08:47,052 --> 01:08:52,591
+Uh we we then initiate charge like a wirelessly and the the robot can charge at two kilowatts.
+
+1302
+01:08:52,641 --> 01:08:56,109
+So basically we can charge for an hour by standing there.
+
+1303
+01:08:56,159 --> 01:08:57,070
+That's really cool.
+
+1304
+01:08:57,120 --> 01:08:57,789
+That's really cool.
+
+1305
+01:08:57,839 --> 01:08:58,139
+Yeah.
+
+1306
+01:08:58,085 --> 01:09:00,304
+We can charge like at client sites like this.
+
+1307
+01:09:00,354 --> 01:09:03,166
+We can walk over uh we can dock to it.
+
+1308
+01:09:03,216 --> 01:09:04,866
+We can just stand on it.
+
+1309
+01:09:04,916 --> 01:09:10,310
+Um over time we're going to get these uh systems uh even smaller and uh be able to put
+
+1310
+01:09:10,360 --> 01:09:14,669
+them basically be able to put it anywhere and you can plug this into a normal wall outlet for charging.
+
+1311
+01:09:14,719 --> 01:09:16,668
+Are you going to do any brand deals?
+
+1312
+01:09:16,718 --> 01:09:18,567
+Um like foot brand like foot deals.
+
+1313
+01:09:18,617 --> 01:09:21,229
+Uh I would love to do maybe not foot but sneaker deals.
+
+1314
+01:09:21,279 --> 01:09:24,859
+Sneaker deals if like if Nikey's watching like be our next uh Yeah.
+
+1315
+01:09:24,909 --> 01:09:26,109
+Nike sneaker shoe dealer.
+
+1316
+01:09:26,159 --> 01:09:26,466
+Yeah.
+
+1317
+01:09:26,496 --> 01:09:28,637
+I really wanted a high top for figure three.
+
+1318
+01:09:28,687 --> 01:09:29,709
+I think it's just like so cool.
+
+1319
+01:09:29,759 --> 01:09:30,059
+Yeah.
+
+1320
+01:09:29,919 --> 01:09:30,350
+It's pretty cool.
+
+1321
+01:09:30,400 --> 01:09:33,870
+Um like our figure two looks like a like a penny loafer and just like you know what I mean?
+
+1322
+01:09:33,920 --> 01:09:34,682
+Can't be having that.
+
+1323
+01:09:34,732 --> 01:09:36,030
+No. We can't have a penny loafer out here.
+
+1324
+01:09:36,080 --> 01:09:38,350
+It's like this high top's like kind of made to doing work.
+
+1325
+01:09:38,400 --> 01:09:42,205
+So of the designs here like you have quite a sleek design.
+
+1326
+01:09:42,255 --> 01:09:44,024
+It's very futuristic.
+
+1327
+01:09:44,074 --> 01:09:48,189
+How did how did like how did you get to this point?
+
+1328
+01:09:48,239 --> 01:09:48,539
+Yeah,
+
+1329
+01:09:48,559 --> 01:09:55,667
+we have a design we have a industrial design team here internally run by uh David uh who you just met and we we have a team that
+
+1330
+01:09:55,717 --> 01:10:06,398
+are obsessed with trying to create like uh yeah trying to create like the um we we want to create something that uh is really delightful to be around.
+
+1331
+01:10:06,448 --> 01:10:11,109
+And um it's it's not just like the way the robot looks or the size of it.
+
+1332
+01:10:11,159 --> 01:10:16,205
+It's how it walks and interacts and how it's body language and how the human machine interaction.
+
+1333
+01:10:16,255 --> 01:10:18,577
+Is it does it look at you while it's while it's talking?
+
+1334
+01:10:18,627 --> 01:10:20,190
+Uh how do we deal with speech?
+
+1335
+01:10:20,240 --> 01:10:22,507
+What do we do with like we have like three screens in the head?
+
+1336
+01:10:22,557 --> 01:10:23,452
+Like what do we show there?
+
+1337
+01:10:23,502 --> 01:10:26,270
+How do they make us like really pleasant to be around?
+
+1338
+01:10:26,320 --> 01:10:28,430
+Are there any I mean you love sci-fi.
+
+1339
+01:10:28,480 --> 01:10:31,950
+Were there any sci-fi movies where you wanted Oh yeah, like the robot movies.
+
+1340
+01:10:32,000 --> 01:10:33,390
+Iroot X Machina.
+
+1341
+01:10:33,440 --> 01:10:34,830
+Like which ones?
+
+1342
+01:10:34,880 --> 01:10:38,071
+I think a thing we always talk about here is like there's like two roads for humanoids.
+
+1343
+01:10:38,121 --> 01:10:43,790
+There's like a road to head like down like the robotic road which is like I robot and there's a road to head down for like Westworld.
+
+1344
+01:10:43,840 --> 01:10:44,140
+Okay.
+
+1345
+01:10:44,159 --> 01:10:45,070
+It's also humanoid.
+
+1346
+01:10:45,120 --> 01:10:45,490
+Yeah.
+
+1347
+01:10:45,520 --> 01:10:48,109
+Uh where do we go?
+
+1348
+01:10:48,159 --> 01:10:49,870
+What do you think?
+
+1349
+01:10:49,920 --> 01:10:53,070
+Um I mean I'm a big fan of XM.
+
+1350
+01:10:53,120 --> 01:10:53,454
+Okay.
+
+1351
+01:10:53,484 --> 01:10:54,830
+So we go to Westworld.
+
+1352
+01:10:54,880 --> 01:10:55,310
+Yeah.
+
+1353
+01:10:55,360 --> 01:10:55,771
+Yeah.
+
+1354
+01:10:55,821 --> 01:10:56,232
+Okay.
+
+1355
+01:10:56,282 --> 01:10:57,230
+Let's do it.
+
+1356
+01:10:57,280 --> 01:10:58,035
+Yeah.
+
+1357
+01:10:58,085 --> 01:11:01,790
+We're heading to Westworld.
+
+1358
+01:11:01,840 --> 01:11:07,111
+Um I think lastly is we're like super proud to be on the cover of Time magazine this past year which is really cool.
+
+1359
+01:11:07,161 --> 01:11:11,392
+Uh we had a robot in in uh in a home basically doing like full
+
+1360
+01:11:11,442 --> 01:11:16,989
+like you know like doing housework with Helix um AI system that we designed here internally.
+
+1361
+01:11:17,039 --> 01:11:19,870
+Um what's with the dead mouth five record?
+
+1362
+01:11:19,920 --> 01:11:26,740
+Oh yeah we had uh we had dead mouse at our holiday party two years ago and he was like this is insane.
+
+1363
+01:11:26,790 --> 01:11:32,062
+We had robots on stage like I got to get you guys out to concerts with me and we got to be like dancing on stage.
+
+1364
+01:11:32,112 --> 01:11:32,412
+Yeah.
+
+1365
+01:11:32,400 --> 01:11:36,202
+So we opened for him at Red Rock uh end of last year uh in Colorado.
+
+1366
+01:11:36,252 --> 01:11:38,510
+I don't know if you've been to the uh concert.
+
+1367
+01:11:38,560 --> 01:11:39,212
+I flew in for it.
+
+1368
+01:11:39,262 --> 01:11:39,835
+It was amazing.
+
+1369
+01:11:39,885 --> 01:11:44,638
+Just like amazing venue and we had multiple robots on stage just dancing and they're all tuned in
+
+1370
+01:11:44,688 --> 01:11:48,894
+to the music and um and they kind of danced with it and it was just it was awesome.
+
+1371
+01:11:48,944 --> 01:11:51,932
+And we had him also here at our last holiday party in December.
+
+1372
+01:11:51,982 --> 01:11:55,870
+Um and uh I don't know just we just we just raged with Dead Mouse.
+
+1373
+01:11:55,920 --> 01:11:56,731
+Hey, it's Molly.
+
+1374
+01:11:56,781 --> 01:11:58,108
+If you enjoy our interviews,
+
+1375
+01:11:58,158 --> 01:12:07,119
+check out our newsletter sorcery.bc VC where we deliver a once a week top deals and tech headlines email and also go deeper on our podcast interviews.
+
+1376
+01:12:07,169 --> 01:12:14,582
+Subscribe to Sorcery today and don't forget to subscribe to the podcast on YouTube, Spotify, Apple or wherever you listen.
+
+1377
+01:12:14,632 --> 01:12:19,080
+Link in description to sign up.

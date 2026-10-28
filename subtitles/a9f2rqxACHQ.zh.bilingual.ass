@@ -1,0 +1,1029 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:03.04,0:00:04.56,Sub,,0,0,0,,Okay, welcome everyone.\N好的，欢迎各位。
+Dialogue: 0,0:00:04.62,0:00:11.40,Sub,,0,0,0,,So this is the keynote session uh robot learning and models and it is my great pleasure to be the chairman of this session.\N这是主题演讲环节，主题是机器人学习与模型，我很荣幸担任本环节的主席。
+Dialogue: 0,0:00:11.45,0:00:15.54,Sub,,0,0,0,,My name is Karinne Ramirez-Amaro and I'm an associate professor at Chalmers University of\N我叫卡琳娜·拉米雷斯-阿马罗，是瑞典查尔姆斯理工大学的副教授。
+Dialogue: 0,0:00:15.59,0:00:20.87,Sub,,0,0,0,,Technology in Sweden and it's my great pleasure to introduce our first speaker uh David Hsu.\N我非常荣幸地介绍我们的第一位演讲嘉宾，大卫·许。
+Dialogue: 0,0:00:20.92,0:00:28.06,Sub,,0,0,0,,David is a provost chair professor in the department of computer science at the national university of Singapore.\N大卫是新加坡国立大学计算机科学系的校长讲席教授。
+Dialogue: 0,0:00:28.11,0:00:34.65,Sub,,0,0,0,,He's also the director of NVIDIA Research Lab in Singapore and he is an IEEE Fellow and of course has\N他同时也是英伟达新加坡研究实验室的负责人，IEEE会士，当然还获得了多项奖项，
+Dialogue: 0,0:00:34.70,0:00:43.37,Sub,,0,0,0,,won multiple awards for example the test time award at RSS in 2021 and the IJCAI-JAIR Best Paper Prize in 2022.\N例如2021年RSS的时间检验奖（Test of Time Award），\N以及2022年IJCAI-JAIR最佳论文奖。
+Dialogue: 0,0:00:43.42,0:00:50.51,Sub,,0,0,0,,So without further notice I I will give you the award.\N那么，不耽误大家时间，我现在就将奖项颁发给您。
+Dialogue: 0,0:00:50.56,0:00:53.81,Sub,,0,0,0,,Well, right.\N好的，没错。
+Dialogue: 0,0:00:53.86,0:00:56.38,Sub,,0,0,0,,It is a really exciting time for robotics, right?\N机器人领域现在确实是一个令人兴奋的时刻，对吧？
+Dialogue: 0,0:00:56.43,0:01:04.94,Sub,,0,0,0,,And we have massive amount of compute and data and the foundation models have brought in a new age of robotics research, technology and the industry.\N我们拥有海量的算力和数据，基础模型为机器人研究、技术和产业带来了全新的时代。
+Dialogue: 0,0:01:04.99,0:01:10.83,Sub,,0,0,0,,Uh now against this exciting background, I want to ask a very basic and hopefully important question.\N在这样一个令人振奋的背景下，我想提出一个非常基础但希望重要的问题。
+Dialogue: 0,0:01:10.88,0:01:15.71,Sub,,0,0,0,,Have we solved the problem of robot decision- making in the open world?\N我们是否解决了开放世界中机器人决策的问题？
+Dialogue: 0,0:01:15.76,0:01:17.43,Sub,,0,0,0,,Uh so what's the open world?\N嗯，那开放世界到底是什么意思？
+Dialogue: 0,0:01:17.48,0:01:22.04,Sub,,0,0,0,,Well, imagine that we have we unbox a home service robot in a new home.\N想象一下，我们在一个新家里拆开了一台家用服务机器人。
+Dialogue: 0,0:01:22.10,0:01:25.79,Sub,,0,0,0,,This robot has been trained in the factory on a variety of different kind of home but it\N这台机器人在工厂里接受了各种不同类型家庭的训练，但它
+Dialogue: 0,0:01:25.84,0:01:32.23,Sub,,0,0,0,,has never met seen this home and this robot is equipped with an RGBD camera or other sensors.\N从未见过这个家，而这台机器人配备了RGBD摄像头或其他传感器。
+Dialogue: 0,0:01:32.28,0:01:42.41,Sub,,0,0,0,,It is pre-trained with some scales to pick up and place objects to open and close doors etc etc. it has access to uh foundation models,\N它已经过预训练，具备抓取和放置物体、开关门等基本能力，还能访问基础模型，
+Dialogue: 0,0:01:42.46,0:01:46.51,Sub,,0,0,0,,lms, VLMs or whatever the latest variety is.\N大语言模型、视觉语言模型，或任何最新的模型类型。
+Dialogue: 0,0:01:46.56,0:01:54.31,Sub,,0,0,0,,Uh to make this really concrete, maybe all we wanted the robot to do is to operate the variety of different home appliances at home.\N为了更具体地说明，也许我们只希望机器人能操作家里各种不同的家用电器。
+Dialogue: 0,0:01:54.36,0:01:58.43,Sub,,0,0,0,,And in my view, the challenge remains in the open world.\N在我看来，挑战依然存在于开放世界中。
+Dialogue: 0,0:01:58.48,0:02:00.12,Sub,,0,0,0,,There are two two of them.\N有两个关键问题。
+Dialogue: 0,0:02:00.17,0:02:02.44,Sub,,0,0,0,,The first one is the scalability.\N第一个是可扩展性。
+Dialogue: 0,0:02:02.49,0:02:05.21,Sub,,0,0,0,,We have many different kind of home appliances.\N我们有各种各样的家用电器。
+Dialogue: 0,0:02:05.26,0:02:07.60,Sub,,0,0,0,,Each of them can be fairly complex.\N它们每一个都可能相当复杂。
+Dialogue: 0,0:02:07.65,0:02:12.82,Sub,,0,0,0,,And second, any of those appliance may be new to our robot and it doesn't know what to do about it.\N第二，这些电器中的任何一个都可能是我们的机器人从未见过的，它不知道该如何应对。
+Dialogue: 0,0:02:12.87,0:02:14.99,Sub,,0,0,0,,So there's uncertainty.\N因此存在不确定性。
+Dialogue: 0,0:02:15.04,0:02:18.88,Sub,,0,0,0,,So what ideas do we have to address these two challenges?\N那么，我们有哪些想法可以应对这两个挑战？
+Dialogue: 0,0:02:18.93,0:02:23.15,Sub,,0,0,0,,In the abstract, we can think of our robot as a function.\N从抽象层面来看，我们可以把机器人看作一个函数。
+Dialogue: 0,0:02:23.20,0:02:30.83,Sub,,0,0,0,,It's just a box that maps a history of perceptual inputs to output and action for robot execution.\N它只是一个将感知输入历史映射为机器人执行输出和动作的黑箱。
+Dialogue: 0,0:02:30.88,0:02:36.25,Sub,,0,0,0,,Now in the classic era of uh robotics, it's primarily model-based.\N在传统的机器人时代，这主要是基于模型的方法。
+Dialogue: 0,0:02:36.30,0:02:39.74,Sub,,0,0,0,,We think of this box consisting of modules.\N我们可以将这个黑箱看作由多个模块组成。
+Dialogue: 0,0:02:39.79,0:02:44.14,Sub,,0,0,0,,Modules for perception, state estimation, planning and control.\N包括感知、状态估计、规划和控制模块。
+Dialogue: 0,0:02:44.19,0:02:52.37,Sub,,0,0,0,,Within each of module, we have models for system dynamics, for sensor observations, for task objectives.\N在每个模块中，我们都有系统动力学、传感器观测和任务目标的模型。
+Dialogue: 0,0:02:52.42,0:02:58.19,Sub,,0,0,0,,We reason over these models in order to derive the desirable robot behavior.\N我们通过推理这些模型来推导出理想的机器人行为。
+Dialogue: 0,0:02:58.24,0:03:03.20,Sub,,0,0,0,,This uh model-based approach has a distinguished and long record.\N这种基于模型的方法有着卓越且悠久的历史。
+Dialogue: 0,0:03:03.26,0:03:06.19,Sub,,0,0,0,,Most celebrated robots are built this way.\N最著名的机器人都是这样构建的。
+Dialogue: 0,0:03:06.24,0:03:08.91,Sub,,0,0,0,,Shakey, the very first robot system.\NShakey，第一个机器人系统。
+Dialogue: 0,0:03:08.96,0:03:14.13,Sub,,0,0,0,,Stanley, the one that opened up the autonomous driving industry.\NStanley，开启了自动驾驶行业的那个。
+Dialogue: 0,0:03:14.18,0:03:22.11,Sub,,0,0,0,,In fact, most of the engineering systems that we experience in our daily life is built this way.\N事实上，我们日常生活中所接触的大多数工程系统都是这样构建的。
+Dialogue: 0,0:03:22.16,0:03:32.83,Sub,,0,0,0,,Now, the biggest challenge to this model based um approach in practice is how do we acquire good models, right?\N现在，基于模型的方法在实践中面临的最大挑战是如何获取优质模型，对吧？
+Dialogue: 0,0:03:32.88,0:03:38.42,Sub,,0,0,0,,uh a little bit less than uh a decade ago and there came the deep learning era.\N大约十年前，深度学习时代到来了。
+Dialogue: 0,0:03:38.47,0:03:41.00,Sub,,0,0,0,,Deep learning era is datadriven.\N深度学习时代是数据驱动的。
+Dialogue: 0,0:03:41.05,0:03:46.86,Sub,,0,0,0,,We think of this box uh we put in this box uh single monolithic uh\N我们设想这样一个盒子，把单一的、整体的
+Dialogue: 0,0:03:46.91,0:03:53.81,Sub,,0,0,0,,neural network and we acquire massive amount of data to train this neural network control policy.\N神经网络放进去，然后用海量数据来训练这个神经网络控制策略。
+Dialogue: 0,0:03:53.86,0:04:01.23,Sub,,0,0,0,,And this approach although very sounds very simple has achieved enormous proc uh pro uh success on some of the\N尽管这种方法听起来非常简单，但在一些基于模型方法难以应对的
+Dialogue: 0,0:04:01.28,0:04:08.91,Sub,,0,0,0,,most challenging tasks that the model based approach have difficulty with right at the same time I think we should probably\N最具挑战性的任务上，它取得了巨大的成功。与此同时，我认为我们可能
+Dialogue: 0,0:04:08.96,0:04:18.81,Sub,,0,0,0,,um take the uh experimental evidence holistically despite the success of this datadriven approach probably I'm not aware of a\N应该全面看待实验证据，尽管数据驱动方法取得了成功，但可能我并不了解
+Dialogue: 0,0:04:18.86,0:04:25.88,Sub,,0,0,0,,uh aircraft autopilot implemented this way uh if there is one and please Now let me know which airlines flying that.\N呃，如果飞机自动驾驶系统是这样实现的，呃，如果有这样的系统，请告诉我哪家航空公司正在使用。
+Dialogue: 0,0:04:25.93,0:04:30.59,Sub,,0,0,0,,I'm not going to get get onto the airplane again with that airline.\N我不会再乘坐那家航空公司的飞机了。
+Dialogue: 0,0:04:30.64,0:04:39.05,Sub,,0,0,0,,Um more technically uh if we have trained such a neural network controller what if we\N呃，从技术上讲，如果我们已经训练出这样的神经网络控制器，那如果我们
+Dialogue: 0,0:04:39.10,0:04:45.63,Sub,,0,0,0,,change something we change the robot we change a sensor or maybe just change a sensor mounting.\N改变某些东西，比如更换机器人，或更换传感器，甚至只是改变传感器的安装方式。
+Dialogue: 0,0:04:45.68,0:04:54.03,Sub,,0,0,0,,uh what do we usually do and how do we generalize generals over different tasks, environment conditions and sometimes robot embodiment.\N呃，我们通常怎么做？如何在不同任务、环境条件，以及有时在不同机器人形态之间实现泛化？
+Dialogue: 0,0:04:54.08,0:04:59.31,Sub,,0,0,0,,So the key question over here is can we generalize?\N所以这里的关键问题是，我们能否实现泛化？
+Dialogue: 0,0:04:59.36,0:05:02.27,Sub,,0,0,0,,Here comes now the foundation model.\N现在，基础模型登场了。
+Dialogue: 0,0:05:02.32,0:05:06.98,Sub,,0,0,0,,Foundation model brings us um a lot lot more interesting choices.\N基础模型为我们带来了大量更有趣的选择。
+Dialogue: 0,0:05:07.04,0:05:13.11,Sub,,0,0,0,,We actually have to lay out our strategy over a two-dimensional space.\N我们实际上必须在二维空间中规划我们的策略。
+Dialogue: 0,0:05:13.16,0:05:17.15,Sub,,0,0,0,,The first one is how do we represent information?\N第一个问题是，我们如何表示信息？
+Dialogue: 0,0:05:17.20,0:05:27.68,Sub,,0,0,0,,We can represent uh task relevant information in an unstructured manner as sequence of raw text, images or tokenized version of that.\N我们可以以非结构化的方式表示任务相关的信息，比如原始文本序列、图像，或这些内容的词元化版本。
+Dialogue: 0,0:05:27.73,0:05:34.47,Sub,,0,0,0,,At the other end, we can have structured representation as a list of objects, scene graphs and so on so forth.\N在另一端，我们可以采用结构化表示，例如对象列表、场景图等。
+Dialogue: 0,0:05:34.52,0:05:39.87,Sub,,0,0,0,,And similarly in the other direction dimension, we have reasoning mechanisms.\N同样地，在另一个方向维度上，我们也有推理机制。
+Dialogue: 0,0:05:39.92,0:05:45.16,Sub,,0,0,0,,We have structured reasoning mechanisms which we systematically reason through\N我们具备结构化推理机制，能够系统地进行推理。
+Dialogue: 0,0:05:45.21,0:05:50.77,Sub,,0,0,0,,combinations of information by searching a tree or perform dynamic programming.\N通过搜索树或执行动态规划来组合信息。
+Dialogue: 0,0:05:50.82,0:05:57.91,Sub,,0,0,0,,We call this I call this planning or alternatively at the other end we can perform\N我们称之为规划，或者在另一端，我们可以执行
+Dialogue: 0,0:05:57.96,0:06:08.19,Sub,,0,0,0,,autoregressive uh token prediction basically token concatenation I call that plan prediction planning and plant\N我称之为计划预测。规划与计划
+Dialogue: 0,0:06:08.24,0:06:15.43,Sub,,0,0,0,,prediction sometimes can generate the similar results however they are different the underlying um mechanism for\N预测有时能生成相似结果，但其背后的机制不同。
+Dialogue: 0,0:06:15.48,0:06:21.67,Sub,,0,0,0,,generating these results are different even though that the results sometimes are very similar or the same.\N生成这些结果的方式各不相同，尽管结果有时非常相似甚至相同。
+Dialogue: 0,0:06:21.72,0:06:27.61,Sub,,0,0,0,,So all the on the lower left quadrant we basically have the classic error the model based reasoning and\N所以左下象限基本上就是经典的基于模型的推理与规划；
+Dialogue: 0,0:06:27.66,0:06:34.66,Sub,,0,0,0,,planning we have states base search first order logic MDP so on so forth right and they are um\N规划方面，我们有基于状态的搜索、一阶逻辑、马尔可夫决策过程等，依此类推，对吧？
+Dialogue: 0,0:06:34.72,0:06:45.06,Sub,,0,0,0,,compact efficient very precise but mostly close because of the model assumptions on the upper right quadrant uh we\N紧凑、高效、非常精确，但大多是封闭的，因为受模型假设限制。而在右上象限，
+Dialogue: 0,0:06:45.11,0:06:53.99,Sub,,0,0,0,,can use the LLMs/VLMs simply as a policy we feed in the input and just ask the models\N可以直接将大语言模型/视觉语言模型用作策略，输入数据后直接向模型提问即可
+Dialogue: 0,0:06:54.04,0:07:01.07,Sub,,0,0,0,,what should I do next right so it's definitely not compact it sometimes hallucinates but it's very expressive it\N接下来我该怎么做？嗯，它肯定不是紧凑的，有时候会幻觉，但表达非常生动。
+Dialogue: 0,0:07:01.12,0:07:08.86,Sub,,0,0,0,,has no difficulty with open world at the cost of course sometimes hallucination in my view what's most interesting\N在开放世界中没有困难，当然有时会出现幻觉，我认为最有趣的是
+Dialogue: 0,0:07:08.92,0:07:18.03,Sub,,0,0,0,,the other remaining quadrants on the lower right even though we represent uh information in an unstructured manner we\N右下角的其他象限，尽管我们以非结构化的方式表示信息
+Dialogue: 0,0:07:18.08,0:07:24.68,Sub,,0,0,0,,structure the inference mechanism as a linear chain chain of thought as a table as a tree or graph.\N但我们将推理机制结构化为思维链、表格、树或图
+Dialogue: 0,0:07:24.73,0:07:28.72,Sub,,0,0,0,,Now the upper left quadrant even more interesting.\N现在左上角的象限则更加有趣
+Dialogue: 0,0:07:28.77,0:07:36.74,Sub,,0,0,0,,It says that we have structured the representation and then we ask the large model to predict what is the action to perform.\N它表示我们已经对表示进行了结构化，然后我们要求大模型预测应执行的动作
+Dialogue: 0,0:07:36.79,0:07:44.48,Sub,,0,0,0,,If you come from a reasoning or planning background, this will be a very strange combination because if we had the structural representation,\N如果你来自推理或规划背景，这会是一个非常奇怪的组合，因为如果我们已经有了结构化表示
+Dialogue: 0,0:07:44.54,0:07:48.89,Sub,,0,0,0,,why don't we perform structured inference that should give us better results?\N为什么不进行结构化推理，这本应带来更好的结果？
+Dialogue: 0,0:07:48.94,0:07:51.47,Sub,,0,0,0,,That's a very interesting um question.\N这是一个非常有趣的问题
+Dialogue: 0,0:07:51.52,0:07:58.83,Sub,,0,0,0,,Now one reason could be maybe that uh the answer uh the output is actually very simple is easy to learn.\N一个可能的原因是，也许答案本身非常简单，容易学习
+Dialogue: 0,0:07:58.88,0:08:02.25,Sub,,0,0,0,,It does not require sophisticated the reasoning.\N它不需要复杂的推理
+Dialogue: 0,0:08:02.30,0:08:02.70,Sub,,0,0,0,,Okay.\N好的
+Dialogue: 0,0:08:02.74,0:08:08.07,Sub,,0,0,0,,Now let's uh now for this talk mostly I'm going to focus on the left two quadrants and\N现在，接下来的讨论中，我主要将聚焦于左两个象限
+Dialogue: 0,0:08:08.12,0:08:18.43,Sub,,0,0,0,,show that the structured information representation benefits both plan prediction and planning with the help of foundation models.\N证明结构化信息表示在基础模型的帮助下，对计划预测和规划都有益处。
+Dialogue: 0,0:08:18.48,0:08:25.07,Sub,,0,0,0,,Now let's look at uh first of all the robot operating home app appliances.\N现在让我们先看看机器人操作家用电器的情况。
+Dialogue: 0,0:08:25.12,0:08:30.26,Sub,,0,0,0,,So model home appliances can have a very complex uh control\N因此，模型化的家用电器可能具有非常复杂的控制面板，
+Dialogue: 0,0:08:30.31,0:08:35.79,Sub,,0,0,0,,panel with underlying partially observable mechanism right that's why it comes on manual\N以及底层部分可观测的机械结构，这就是为什么需要说明书。
+Dialogue: 0,0:08:35.84,0:08:43.48,Sub,,0,0,0,,so the manual contains two kinds of things one is basically uh partial policies it tells us if you want to do this here are\N说明书中包含两类信息，一类是部分策略，它告诉我们如果想做某事，这里有哪些步骤和操作。
+Dialogue: 0,0:08:43.54,0:08:51.52,Sub,,0,0,0,,the number of steps of actions the other one is system dynamics if I do this here are the consequences right now with that one\N另一类是系统动态，即如果我执行某操作，会产生什么后果。现在有了这些信息，
+Dialogue: 0,0:08:51.57,0:08:59.95,Sub,,0,0,0,,strategy is simply to condition the foundation model on the manual uh a PDF file and ask it to tell us what to do next.\N策略就是将基础模型基于说明书（PDF 文件）进行条件化，并让它告诉我们下一步该做什么。
+Dialogue: 0,0:09:00.00,0:09:01.24,Sub,,0,0,0,,Alternatively,\N另一种方式是，
+Dialogue: 0,0:09:01.29,0:09:07.74,Sub,,0,0,0,,we may want to extract structured appliance model appliance model from this manual\N我们可能希望从说明书中提取出结构化的电器模型。
+Dialogue: 0,0:09:07.79,0:09:12.88,Sub,,0,0,0,,and then condition the model on this structured information and do the plan prediction\N然后将模型基于这种结构化信息进行条件化，并执行计划预测。
+Dialogue: 0,0:09:12.93,0:09:16.21,Sub,,0,0,0,,a little bit more precisely that we're going to using the foundation model\N更精确地说，我们将使用基础模型
+Dialogue: 0,0:09:16.26,0:09:21.65,Sub,,0,0,0,,to extract an appliance model consist of a state actions and and transition dynamics.\N提取一个由状态、动作和转移动态组成的电器模型。
+Dialogue: 0,0:09:21.70,0:09:22.46,Sub,,0,0,0,,Basically,\N基本上，
+Dialogue: 0,0:09:22.51,0:09:28.01,Sub,,0,0,0,,it's a factor the finance data model and we also extract macro actions in order to\N这是金融数据模型的一个因素，我们还会提取宏观动作，以便
+Dialogue: 0,0:09:28.06,0:09:37.65,Sub,,0,0,0,,act precisely to adjust certain variables very precisely through multiple se uh multiple uh repeated actions deterministically.\N精确地执行，通过多次重复的确定性操作，精确调整某些变量。
+Dialogue: 0,0:09:37.70,0:09:41.37,Sub,,0,0,0,,For example, set the temperature to 85 degrees exactly, right?\N比如，将温度精确设置为 85 度，对吧？
+Dialogue: 0,0:09:41.42,0:09:48.20,Sub,,0,0,0,,And with that and then at a deployment time the user gives a natural language instruction and we look at\N然后在部署阶段，用户给出自然语言指令，我们查看
+Dialogue: 0,0:09:48.25,0:09:56.67,Sub,,0,0,0,,the control panel visually and then condition all this information the language model will give us uh the next action.\N控制面板的视觉信息，再结合所有这些信息，语言模型将给出下一步操作。
+Dialogue: 0,0:09:56.72,0:10:00.52,Sub,,0,0,0,,Um so let's look at the some of the robot experiments.\N嗯，让我们看看一些机器人实验。
+Dialogue: 0,0:10:00.57,0:10:06.65,Sub,,0,0,0,,So for our robots you know operate a blender induction cooker and the water dispenser right.\N我们的机器人可以操作搅拌机、电磁炉和饮水机，对吧。
+Dialogue: 0,0:10:06.70,0:10:07.06,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:10:07.09,0:10:11.88,Sub,,0,0,0,,So let's look at the induction cooker a little bit more carefully that it's going to set it to\N让我们更仔细地看一下电磁炉，它将设置为
+Dialogue: 0,0:10:11.93,0:10:21.55,Sub,,0,0,0,,the hot spot hot pot mode and set a power to exactly 1600 uh 1600 watts for boiling the water.\N热点模式，功率精确设置为 1600 瓦，用于烧水。
+Dialogue: 0,0:10:21.60,0:10:30.04,Sub,,0,0,0,,Right now looking more closely into the performance details or we primary want to compare uh the\N现在更深入地观察性能细节，我们主要想比较一下
+Dialogue: 0,0:10:30.09,0:10:36.87,Sub,,0,0,0,,benefits of the structured information in our approach versus if you just look query the foundation model directly.\N我们方法中结构化信息的优势，相较于直接查询基座模型的情况。
+Dialogue: 0,0:10:36.92,0:10:43.97,Sub,,0,0,0,,It should the performance should be the the the chart is clear that structured information representation enhances\N性能表现应如图表所示，结构化信息表示能提升性能。
+Dialogue: 0,0:10:44.02,0:10:50.72,Sub,,0,0,0,,performance for um plan production over a wider variety of home appliances that we tested in simulation.\N在模拟中测试的多种家用电器上，结构化信息表示能提升计划生成的性能。
+Dialogue: 0,0:10:50.77,0:10:51.12,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:10:51.15,0:10:58.59,Sub,,0,0,0,,Further this benefits expands if the appliance becomes more complex that the number of variables that control the appliances increases.\N当设备变得更为复杂，控制设备的变量数量增加时，这种优势将进一步扩大。
+Dialogue: 0,0:10:58.64,0:11:04.65,Sub,,0,0,0,,Right now let's uh uh go back to the more broader kitchen tasks.\N现在，让我们回到更广泛的厨房任务。
+Dialogue: 0,0:11:04.70,0:11:07.23,Sub,,0,0,0,,Now we are facing an unknown environment.\N现在我们面对的是一个未知环境。
+Dialogue: 0,0:11:07.28,0:11:11.62,Sub,,0,0,0,,uh even though we can have a a manual for the uh for the for the appliance,\N尽管我们可以获得设备的说明书，
+Dialogue: 0,0:11:11.68,0:11:14.92,Sub,,0,0,0,,it's more difficult to have a manual for the home and the robot will face\N但要为整个家庭环境提供说明书则更加困难，机器人将面临
+Dialogue: 0,0:11:14.97,0:11:23.52,Sub,,0,0,0,,arbitrary objects unexpect uh different new object attributes and also the interaction uh of the objects.\N各种任意的、意外的、全新的物体属性，以及物体之间的交互。
+Dialogue: 0,0:11:23.57,0:11:27.55,Sub,,0,0,0,,It may encounter unexpected failures as well.\N也可能遇到意料之外的故障。
+Dialogue: 0,0:11:27.60,0:11:32.91,Sub,,0,0,0,,Now uh since the environment is new to the robots uh the robot needs to make hypothesis about\N现在由于环境对机器人来说是全新的，机器人需要提出假设。
+Dialogue: 0,0:11:32.96,0:11:41.43,Sub,,0,0,0,,the world about objects about new predicates that describing the object attributes and also the action um effects.\N世界中关于物体的新谓词，描述物体属性以及动作的影响。
+Dialogue: 0,0:11:41.48,0:11:46.18,Sub,,0,0,0,,Now every time we make a hypothesis it could be true,\N每当我们提出一个假设时，它可能是正确的，
+Dialogue: 0,0:11:46.22,0:11:55.97,Sub,,0,0,0,,false or simply unknown and the robot must verify whether the hypothesis uh is true or false actively through reasoning.\N错误的，或仅仅是未知的，机器人必须通过推理主动验证该假设是否为真或为假。
+Dialogue: 0,0:11:56.02,0:12:04.12,Sub,,0,0,0,,Now uh in short uh what do we do is that internally we maintain a set of hypothesis whose whose uh veracity may be unknown.\N简而言之，我们内部维护一组假设，这些假设的真实性可能未知。
+Dialogue: 0,0:12:04.17,0:12:07.20,Sub,,0,0,0,,We have a scene graph and there is a system dynamics.\N我们有一个场景图，以及系统动态。
+Dialogue: 0,0:12:07.25,0:12:12.67,Sub,,0,0,0,,The system dynamic controls that the out outcome of actions on the on the objects in\N系统动态控制动作对世界中物体所产生的结果，
+Dialogue: 0,0:12:12.72,0:12:18.67,Sub,,0,0,0,,the in the world but also affects our belief on whether the hypothesis is true or not.\N同时也影响我们对假设是否为真的信念。
+Dialogue: 0,0:12:18.72,0:12:23.81,Sub,,0,0,0,,Then we can uh then we want to derive the plan of actions for the robots.\N然后我们可以为机器人推导出行动计划。
+Dialogue: 0,0:12:23.86,0:12:25.61,Sub,,0,0,0,,There are two approaches.\N有两种方法。
+Dialogue: 0,0:12:25.66,0:12:35.35,Sub,,0,0,0,,One is again we can ask um the foundation model to predict the plan directly or alternatively uh we can do a search\N一种是再次让基础模型直接预测计划，或者另一种方法是进行搜索，
+Dialogue: 0,0:12:35.40,0:12:43.75,Sub,,0,0,0,,in this case that we are going to encode the input into a PDDL format and do the Fast Downward.\N在这种情况下，我们将输入编码为 PDDL 格式，并执行 Fast Downward。
+Dialogue: 0,0:12:43.80,0:12:51.15,Sub,,0,0,0,,Now one challenge here is that PDDL planning is deterministic while our uh hypothesis are uncertain.\N现在的一个挑战是，PDDL 规划是确定性的，而我们的假设却是不确定的。
+Dialogue: 0,0:12:51.20,0:12:56.35,Sub,,0,0,0,,Therefore, we have to u perform a determinization trick in order to plan effectively.\N因此，我们必须进行一次确定化处理，才能有效规划。
+Dialogue: 0,0:12:56.40,0:12:59.34,Sub,,0,0,0,,Skipping some technical uh details.\N略过一些技术细节。
+Dialogue: 0,0:12:59.39,0:12:59.79,Sub,,0,0,0,,So,\N所以，
+Dialogue: 0,0:12:59.83,0:13:06.36,Sub,,0,0,0,,let's take a look at u the uh how our robot works this\N让我们来看看这次机器人的工作流程，
+Dialogue: 0,0:13:06.41,0:13:12.35,Sub,,0,0,0,,time to heat up a chicken burger and put on the coffee table.\N为加热一个鸡肉汉堡并放到茶几上。
+Dialogue: 0,0:13:12.40,0:13:18.59,Sub,,0,0,0,,So, it has to find the burger and make sure it is made of chicken.\N它必须找到这个汉堡，并确认它是鸡肉做的。
+Dialogue: 0,0:13:18.64,0:13:26.19,Sub,,0,0,0,,So it detects that maybe there is a burger on the on the on the table and have to take a look.\N它检测到桌上可能有一个汉堡，需要进一步查看。
+Dialogue: 0,0:13:26.24,0:13:28.19,Sub,,0,0,0,,Well, unfortunately it's not made of chicken.\N不幸的是，这个汉堡并不是鸡肉做的。
+Dialogue: 0,0:13:28.24,0:13:32.99,Sub,,0,0,0,,So we have to regenerate that hypothesis and replan.\N因此我们必须重新生成假设并重新规划。
+Dialogue: 0,0:13:33.04,0:13:35.39,Sub,,0,0,0,,But they have to put away this burger first.\N但它们得先把这个汉堡收起来。
+Dialogue: 0,0:13:35.44,0:13:40.27,Sub,,0,0,0,,Then this time it discovers the kitchen and reasons that\N这次它发现了厨房，并推理出
+Dialogue: 0,0:13:40.32,0:13:50.75,Sub,,0,0,0,,the the the fridge the fridge may contain the burger.\N冰箱里可能有那个汉堡。
+Dialogue: 0,0:13:50.80,0:13:52.91,Sub,,0,0,0,,Ah, this one it is a chicken burger.\N啊，这个是鸡汉堡。
+Dialogue: 0,0:13:52.96,0:13:55.47,Sub,,0,0,0,,Good.\N好的。
+Dialogue: 0,0:13:55.52,0:14:01.55,Sub,,0,0,0,,Put it into the microwave.\N放进微波炉里。
+Dialogue: 0,0:14:01.60,0:14:10.08,Sub,,0,0,0,,activate it to heat\N启动加热功能，
+Dialogue: 0,0:14:10.12,0:14:17.28,Sub,,0,0,0,,it up until finally\N直到最终
+Dialogue: 0,0:14:17.33,0:14:19.97,Sub,,0,0,0,,it wants to u serve it on the table,\N它想把食物端上桌，
+Dialogue: 0,0:14:20.02,0:14:20.40,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:14:20.43,0:14:22.42,Sub,,0,0,0,,It's a very long horizon task.\N这是一个非常长的时序任务。
+Dialogue: 0,0:14:22.46,0:14:27.98,Sub,,0,0,0,,We tried on quite a variety of different kitchen and the living room and tasks.\N我们在各种不同的厨房和客厅场景中进行了尝试，涉及多种任务。
+Dialogue: 0,0:14:28.03,0:14:35.08,Sub,,0,0,0,,And the first one is kind of cute that it wants to turn off the living room light and just look at the control panel at the number of buttons on it.\N第一个任务挺有趣的，它想关掉客厅的灯，然后盯着控制面板，数上面有多少个按钮。
+Dialogue: 0,0:14:35.13,0:14:37.72,Sub,,0,0,0,,Even the human would have difficulty with that.\N就连人类也可能会遇到困难。
+Dialogue: 0,0:14:37.77,0:14:41.85,Sub,,0,0,0,,So the robot has to try out and make hypothesis which one is the right one\N所以机器人必须不断尝试，并提出假设，判断哪个是正确的操作。
+Dialogue: 0,0:14:41.90,0:14:46.64,Sub,,0,0,0,,until it turns it off and checks that in the living room that it's actually dark.\N直到它关闭灯光，并确认客厅里确实变暗了。
+Dialogue: 0,0:14:46.69,0:14:50.61,Sub,,0,0,0,,We actually tried on different robots as well on the same with the same system.\N我们实际上也在其他机器人上使用了相同的系统进行了测试。
+Dialogue: 0,0:14:50.66,0:14:55.47,Sub,,0,0,0,,And this one's operating a microwave right now and uh and uh looking\N这个机器人现在正在操作微波炉，嗯，正在寻找
+Dialogue: 0,0:14:55.52,0:14:58.28,Sub,,0,0,0,,for drinks and looking for a mug\N饮料，还在找一只马克杯，
+Dialogue: 0,0:14:58.33,0:15:10.19,Sub,,0,0,0,,with a smiley face on the fridge.\N杯子上有笑脸，放在冰箱上。
+Dialogue: 0,0:15:10.24,0:15:12.03,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:15:12.08,0:15:12.50,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:15:12.56,0:15:15.24,Sub,,0,0,0,,Look at the performance a little bit more in closer details.\N我们再更详细地看一下它的表现。
+Dialogue: 0,0:15:15.29,0:15:18.35,Sub,,0,0,0,,that we systematically evaluated in two experimental setting.\N我们在两种实验设置中系统性地评估了它。
+Dialogue: 0,0:15:18.40,0:15:21.83,Sub,,0,0,0,,The first one is the blocks processing world.\N第一种是积木处理世界。
+Dialogue: 0,0:15:21.88,0:15:29.47,Sub,,0,0,0,,It's very similar to the classic blocks world but with an additional feature that we have a set of processors that can color or\N它与经典的积木世界非常相似，但多了一个额外功能：我们有一组处理器，可以给积木上色或
+Dialogue: 0,0:15:29.52,0:15:38.31,Sub,,0,0,0,,texturize the blocks and uh and but the function of each of this processor is unknown to the robot in advance and therefore that\N赋予纹理，但机器人事先并不知道每个处理器的具体功能，因此
+Dialogue: 0,0:15:38.36,0:15:45.67,Sub,,0,0,0,,the robots to find out in order to to operate properly and the the goal is simply to achieve a configuration of blocks that\N机器人需要找出如何正确操作，目标是实现一组积木的特定配置，
+Dialogue: 0,0:15:45.72,0:15:54.04,Sub,,0,0,0,,with the right kind of uh color and texture right and the other setting is the the well-known AI2 to thorough here are the results.\N具有正确的颜色和纹理，另一个设置是众所周知的 AI2 任务，这里展示了结果。
+Dialogue: 0,0:15:54.09,0:15:59.25,Sub,,0,0,0,,Uh so there are three uh variants of this with no hypothesis being made.\N嗯，这里有三种变体，且不做出任何假设。
+Dialogue: 0,0:15:59.30,0:16:03.64,Sub,,0,0,0,,Uh we make hypothesis but assume that is always correct.\N嗯，我们做出假设，但假设其始终正确。
+Dialogue: 0,0:16:03.69,0:16:07.47,Sub,,0,0,0,,Uh and finally that we assume we make a hypothesis assume is uncertain.\N嗯，最后一种情况是我们假设做出的假设是不确定的。
+Dialogue: 0,0:16:07.52,0:16:10.70,Sub,,0,0,0,,We have to actively explore the environment in order to verify it.\N我们必须主动探索环境以验证这一点。
+Dialogue: 0,0:16:10.75,0:16:16.28,Sub,,0,0,0,,And then we use we in the first version we just query the foundation model directly.\N然后在第一种版本中，我们直接查询基础模型。
+Dialogue: 0,0:16:16.32,0:16:16.67,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:16:16.70,0:16:20.33,Sub,,0,0,0,,And you can see is that first of all that structure the model\N你可以看到，首先，结构化模型表示——
+Dialogue: 0,0:16:20.38,0:16:26.96,Sub,,0,0,0,,representation by explicitly uh enumerating and tracking the hypothesis actually helps right and second\N也就是显式枚举和跟踪假设——实际上确实有帮助；其次，
+Dialogue: 0,0:16:27.01,0:16:33.26,Sub,,0,0,0,,inserting the awareness actively exploring the world further improves the performance by a\N主动意识到并探索世界进一步显著提升了性能，
+Dialogue: 0,0:16:33.31,0:16:39.79,Sub,,0,0,0,,long margin and this is true independent whether we do planning or plan prediction.\N无论我们进行规划还是计划预测，这一结论都成立。
+Dialogue: 0,0:16:39.84,0:16:45.31,Sub,,0,0,0,,And finally that if we do structured uh reasoning that gives\N最后，如果我们进行结构化推理，这将带来
+Dialogue: 0,0:16:45.36,0:16:53.55,Sub,,0,0,0,,a significant additional um performance boost and as we increasing and the\N显著的额外性能提升，随着我们不断加大投入，
+Dialogue: 0,0:16:53.60,0:17:02.70,Sub,,0,0,0,,number of blocks the task becomes more complex and uh and and the the benefits of structured reasoning increases as we would expect.\N任务中块的数量越多，任务复杂度就越高，正如我们所预期的，结构化推理的优势也随之增加。
+Dialogue: 0,0:17:02.75,0:17:07.47,Sub,,0,0,0,,Now if we increase the number of processors the function of each process is unknown.\N现在如果我们增加处理器的数量，每个进程的功能就未知了。
+Dialogue: 0,0:17:07.52,0:17:09.10,Sub,,0,0,0,,So the uncertainty increases.\N因此，不确定性增加了。
+Dialogue: 0,0:17:09.15,0:17:11.31,Sub,,0,0,0,,So the wall becomes more open.\N于是墙变得越来越开放。
+Dialogue: 0,0:17:11.36,0:17:21.23,Sub,,0,0,0,,In this case that it's more important that uh it's more important that we um maintain the hypothesis and tracking explicitly.\N在这种情况下，更重要的是我们要明确地保持假设和跟踪。
+Dialogue: 0,0:17:21.28,0:17:28.38,Sub,,0,0,0,,Structured the reasoning becomes less important because in uncertain world if the uncertainty is high then the optimal policy\N结构化推理变得不那么重要，因为在不确定性高的世界里，最优策略并不依赖于此。
+Dialogue: 0,0:17:28.43,0:17:35.95,Sub,,0,0,0,,cannot do that well and therefore thinking about very hard about it doesn't bring a whole lot of diff benefits.\N做不到很好，因此想得再深入也未必带来太多实际好处。
+Dialogue: 0,0:17:36.00,0:17:38.29,Sub,,0,0,0,,To summarize all this,\N总而言之，
+Dialogue: 0,0:17:38.34,0:17:43.51,Sub,,0,0,0,,I'll say that structured information representation benefits both planning and\N结构化信息表示对规划都有益
+Dialogue: 0,0:17:43.56,0:17:48.59,Sub,,0,0,0,,plan prediction as structured reasoning is very important particularly for long\N计划预测作为结构化推理，在长时序场景中尤为重要
+Dialogue: 0,0:17:48.64,0:17:54.57,Sub,,0,0,0,,horizon tasks and explicitly forming hypothesis and actively exploring the environment\N长期任务和明确形成假设并主动探索环境
+Dialogue: 0,0:17:54.62,0:17:58.40,Sub,,0,0,0,,to verify them enhances the performance significantly in the open world.\N验证这些假设能显著提升开放世界中的性能
+Dialogue: 0,0:17:58.45,0:18:06.27,Sub,,0,0,0,,Right now back to our uh general question that uh\N现在回到我们之前提出的那个一般性问题
+Dialogue: 0,0:18:06.32,0:18:11.05,Sub,,0,0,0,,with foundation models we are facing a lot more interesting choices.\N使用基础模型时，我们面临更多有趣的选择
+Dialogue: 0,0:18:11.10,0:18:21.95,Sub,,0,0,0,,It's tempting to think that the train has left the classical era is headed towards uh the destination of a single monolithic neural network model.\N很容易让人认为，经典时代已经过去，正驶向单一庞大神经网络模型的终点
+Dialogue: 0,0:18:22.00,0:18:27.63,Sub,,0,0,0,,In reality I think that what we will end up with is a set of parallel tracks.\N实际上我认为，我们最终会得到一系列并行的路径
+Dialogue: 0,0:18:27.68,0:18:31.55,Sub,,0,0,0,,Each track represents a trade-off between structure and data.\N每条路径代表结构与数据之间的权衡
+Dialogue: 0,0:18:31.60,0:18:36.18,Sub,,0,0,0,,If you want to root for data, we better make sure that we have enough of them.\N如果你倾向于数据，我们必须确保数据量足够充足
+Dialogue: 0,0:18:36.23,0:18:41.92,Sub,,0,0,0,,If you want to root for structure, we have to make sure they are correct for the task domain.\N如果你倾向于结构，就必须确保它们适用于任务领域
+Dialogue: 0,0:18:41.96,0:18:49.58,Sub,,0,0,0,,And this um uh the um uh the the the future of robot architecture\N而这个，呃，机器人架构的未来
+Dialogue: 0,0:18:49.63,0:18:57.07,Sub,,0,0,0,,depends critically on this trade-off and also on this foundational consideration and their interplay,\N严重依赖于这种权衡，也依赖于这一基础性考量及其相互作用
+Dialogue: 0,0:18:57.12,0:18:58.19,Sub,,0,0,0,,right?\N对吗？
+Dialogue: 0,0:18:58.24,0:19:06.50,Sub,,0,0,0,,uh let me end by thanking the wonderful people that I'm privileged uh to work with the students the postocs and the interns especially the\N让我最后感谢一下我有幸共事的优秀团队——学生们、博士后和实习生们，尤其要感谢他们
+Dialogue: 0,0:19:06.55,0:19:10.39,Sub,,0,0,0,,three who did most of the work presented over here and also\N其中三位是这里展示的大部分工作的主要完成者
+Dialogue: 0,0:19:10.44,0:19:21.69,Sub,,0,0,0,,the our robot buddies who survived all our uh abuses during the experiments.\N我们那些在实验中经受了我们各种虐待却依然存活下来的机器人伙伴。
+Dialogue: 0,0:19:21.74,0:19:25.87,Sub,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,0:19:25.92,0:19:26.43,Sub,,0,0,0,,Excellent.\N很好。
+Dialogue: 0,0:19:26.48,0:19:27.49,Sub,,0,0,0,,Thank you very much.\N非常感谢。
+Dialogue: 0,0:19:27.54,0:19:34.27,Sub,,0,0,0,,Uh do we we have time for one or two questions?\N呃，我们还有时间问一两个问题吗？
+Dialogue: 0,0:19:34.32,0:19:35.71,Sub,,0,0,0,,Yes.\N是的。
+Dialogue: 0,0:19:35.76,0:19:40.75,Sub,,0,0,0,,Thank you very much uh for the great talk and uh just referring back to the\N非常感谢您的精彩演讲，顺便再提一下
+Dialogue: 0,0:19:40.80,0:19:46.58,Sub,,0,0,0,,sort of quadrants that you shown that can we can organize uh data as well as reasoning.\N类似于你展示的那些象限，我们也可以对数据和推理进行分类整理。
+Dialogue: 0,0:19:46.63,0:19:56.12,Sub,,0,0,0,,I'm just curious uh do you believe that there should be another axis that accounts for more abstract versus more more concrete and physically tangible\N我只是好奇，你觉得是否应该增加一个轴，用来衡量抽象程度与具体、物理可感程度的差异？
+Dialogue: 0,0:19:56.17,0:20:04.28,Sub,,0,0,0,,forms of data or even reasoning or do you think that the model that you have already proposed readily captures uh those nuances as well?\N数据形式，甚至推理方式，你认为你之前提出的模型也能轻易捕捉到这些细微差别吗？
+Dialogue: 0,0:20:04.33,0:20:07.63,Sub,,0,0,0,,Can you elaborate on what you mean by physically tangible?\N你能详细说明一下你所说的“物理可感知”是什么意思吗？
+Dialogue: 0,0:20:07.68,0:20:14.09,Sub,,0,0,0,,Uh such as um perhaps we could view the world like more abstractly maybe\N嗯，比如我们或许可以更抽象地看待世界，也许通过层级关系。
+Dialogue: 0,0:20:14.14,0:20:19.67,Sub,,0,0,0,,through like hierarchical relationships uh or we can view the world let's say more metrically.\N或者我们可以更度量地看待世界。
+Dialogue: 0,0:20:19.72,0:20:25.23,Sub,,0,0,0,,It just feels like uh there's also like that gradient of abstract versus in the data.\N只是感觉数据中也存在这种抽象与具体的梯度。
+Dialogue: 0,0:20:25.28,0:20:25.57,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,0:20:25.60,0:20:29.26,Sub,,0,0,0,,So so the one theme of this chart is about the structure.\N所以这张图的一个主题是关于结构。
+Dialogue: 0,0:20:29.31,0:20:36.42,Sub,,0,0,0,,uh so uh I'm dividing structure in probably the coarsest form possible you can elaborate uh this structure\N嗯，我目前以最粗略的形式划分结构，你可以进一步阐述一下这个结构。
+Dialogue: 0,0:20:36.47,0:20:46.06,Sub,,0,0,0,,further for example through hierarchy thank you are there\N比如通过层级关系，谢谢。还有其他问题吗？
+Dialogue: 0,0:20:46.11,0:20:51.70,Sub,,0,0,0,,any other questions okay\N还有其他问题吗？好的。
+Dialogue: 0,0:20:51.75,0:20:59.82,Sub,,0,0,0,,no thank you very Okay.\N没有了，谢谢，好的。
+Dialogue: 0,0:20:59.88,0:21:06.21,Sub,,0,0,0,,So while uh Stefanie set up I will time I will have some time to introduce her.\N趁 Stefanie 准备的时候，我还有点时间介绍她。
+Dialogue: 0,0:21:06.26,0:21:09.26,Sub,,0,0,0,,So it is my great pleasure to introduce Stefanie.\N我非常荣幸地向大家介绍斯特凡妮。
+Dialogue: 0,0:21:09.31,0:21:16.99,Sub,,0,0,0,,Sorry I need to go.\N对不起，我得走了。
+Dialogue: 0,0:21:17.04,0:21:24.25,Sub,,0,0,0,,So Stefanie Tellex uh she is a professor in computer science at Brown University and her work has received of course several\N斯特凡妮·特勒克斯，她是布朗大学计算机科学系的教授，她的研究当然获得了多项奖项，
+Dialogue: 0,0:21:24.30,0:21:33.16,Sub,,0,0,0,,awards for example thei classic paper award which is one of the recognitions as the most influential paper in the 25th AAI conference.\N例如，她那篇经典论文奖，这是对过去25年AI会议上最具影响力论文的认可之一。
+Dialogue: 0,0:21:33.21,0:21:36.87,Sub,,0,0,0,,So I will not take more of your time because this is precious.\N所以我就不多占用您的时间了，因为时间非常宝贵。
+Dialogue: 0,0:21:36.92,0:21:37.86,Sub,,0,0,0,,Uh, please.\N呃，请。
+Dialogue: 0,0:21:37.91,0:21:38.35,Sub,,0,0,0,,Yeah.\N好的。
+Dialogue: 0,0:21:38.40,0:21:44.91,Sub,,0,0,0,,Thanks.\N谢谢。
+Dialogue: 0,0:21:44.96,0:21:45.36,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:21:45.41,0:21:49.23,Sub,,0,0,0,,So, today we're going to talk about how to program your robot.\N今天我们要讨论如何编程你的机器人。
+Dialogue: 0,0:21:49.28,0:21:52.19,Sub,,0,0,0,,Uh, so I want to start out by quoting Rod Brooks.\N呃，我想先引用罗德·布鲁克斯的一句话。
+Dialogue: 0,0:21:52.24,0:22:01.14,Sub,,0,0,0,,So technologies for robotics need 10 plus years of steady improvement beyond lab demos on t of the target task to mature to low cost and to\N机器人技术需要在实验室演示的基础上，针对目标任务持续改进超过十年，才能成熟到低成本，
+Dialogue: 0,0:22:01.19,0:22:06.14,Sub,,0,0,0,,have their limitations characterized well enough that they can deliver 99% of the\N并且其局限性能够被充分认知，从而实现99%的可靠交付。
+Dialogue: 0,0:22:06.18,0:22:12.08,Sub,,0,0,0,,time and every 10 years gives you another nine in the in the reliability.\N每十年可靠性再增加一个 9。
+Dialogue: 0,0:22:12.13,0:22:19.04,Sub,,0,0,0,,So even with all these large models and big data sets I think that we're still going to have to program our robot.\N即便拥有这些大型模型和庞大的数据集，我认为我们仍然需要编程来控制机器人。
+Dialogue: 0,0:22:19.09,0:22:23.59,Sub,,0,0,0,,We're taking important steps towards one hardware software loadout.\N我们正在朝着统一的软硬件配置迈出重要一步。
+Dialogue: 0,0:22:23.64,0:22:29.16,Sub,,0,0,0,,We're looking at all these humanoids in the expedition center and stuff that can do many different tasks,\N我们在展览中心看到这些仿人机器人，它们能完成多种不同的任务，
+Dialogue: 0,0:22:29.21,0:22:31.65,Sub,,0,0,0,,but there's still going to be some kind of process,\N但仍然需要某种流程，
+Dialogue: 0,0:22:31.70,0:22:37.03,Sub,,0,0,0,,some kind of programming process to specify that task and to reach those very high\N某种编程流程来定义任务，并达到我们部署这些系统到现实世界所需的
+Dialogue: 0,0:22:37.08,0:22:41.71,Sub,,0,0,0,,levels of speed and robustness that we need to deploy these systems in the real world.\N极高速度和鲁棒性水平。
+Dialogue: 0,0:22:41.76,0:22:47.20,Sub,,0,0,0,,And so the research question my group's been thinking about is what is the best way to specify that task?\N因此，我团队一直在思考的研究问题是：定义任务的最佳方式是什么？
+Dialogue: 0,0:22:47.25,0:22:48.93,Sub,,0,0,0,,Um, and there's a lot of different options.\N嗯，有很多不同的选择。
+Dialogue: 0,0:22:48.98,0:22:52.04,Sub,,0,0,0,,So, Python or C++, your favorite programming language.\N比如 Python 或 C++，你最喜欢的编程语言。
+Dialogue: 0,0:22:52.09,0:22:54.55,Sub,,0,0,0,,We've thought a lot about human language.\N我们也深入思考过人类语言。
+Dialogue: 0,0:22:54.60,0:23:00.53,Sub,,0,0,0,,Um, there's also, I think, you can't you can't be in robotics today and not think about reinforcement learning.\N嗯，我认为如今做机器人研究，不可能不考虑强化学习。
+Dialogue: 0,0:23:00.58,0:23:08.41,Sub,,0,0,0,,Uh, and so using reward functions and simulation frameworks to specify your tasks and of course demonstrations if you're doing LFD frameworks.\N嗯，因此我们使用奖励函数和仿真框架来定义任务，当然如果采用LFD框架的话，还需要示范。
+Dialogue: 0,0:23:08.46,0:23:11.48,Sub,,0,0,0,,I think there's more too, but that this is what we'll focus on today.\N我认为还有更多内容，但今天我们将聚焦于此。
+Dialogue: 0,0:23:11.53,0:23:16.47,Sub,,0,0,0,,Um, so to quote Nick Roy, someone has to sit next to the robot and make it do the thing.\N嗯，正如尼克·罗伊所说，必须有人坐在机器人旁边，让它完成任务。
+Dialogue: 0,0:23:16.52,0:23:19.16,Sub,,0,0,0,,Uh so the question is what are they doing when they're doing that?\N那么问题来了，当他们这样做时，到底在做什么？
+Dialogue: 0,0:23:19.21,0:23:25.58,Sub,,0,0,0,,What does that process look like and what should that process look like to reach these very high levels of robustness?\N这个过程看起来是什么样的？为了达到如此高的鲁棒性，这个过程应该是什么样的？
+Dialogue: 0,0:23:25.63,0:23:29.57,Sub,,0,0,0,,Uh so my group started thinking about learning from demonstration.\N嗯，因此我的团队开始思考从示范中学习。
+Dialogue: 0,0:23:29.62,0:23:35.21,Sub,,0,0,0,,Um and the thing about LFD is that it's limited to the speed of the demonstration.\N嗯，LFD的局限在于它受限于示范的速度。
+Dialogue: 0,0:23:35.26,0:23:37.62,Sub,,0,0,0,,So you can't make the robot move very fast.\N所以你无法让机器人移动得很快。
+Dialogue: 0,0:23:37.67,0:23:43.19,Sub,,0,0,0,,um if you're limited to what a human is able to telly app um or or if you're or even\N如果你受限于人类能示范的速度，或者受限于人类身体本身，
+Dialogue: 0,0:23:43.24,0:23:50.21,Sub,,0,0,0,,the human body it also has a lack of closed loop reasoning for uh which means it's hard to be robust.\N它还缺乏闭环推理能力，这意味着很难做到鲁棒。
+Dialogue: 0,0:23:50.26,0:23:53.55,Sub,,0,0,0,,So then you start to think about well okay maybe RL can fix that\N于是你开始想，好吧，也许强化学习能解决这个问题，
+Dialogue: 0,0:23:53.60,0:23:59.43,Sub,,0,0,0,,because you're doing this closed loop reasoning you could potentially reach superhuman performance uh for\N因为它在做闭环推理，有可能达到超越人类的性能。
+Dialogue: 0,0:23:59.48,0:24:07.24,Sub,,0,0,0,,the robot but then there's a challenge that you need lots of onroot data and you also have to give it a reward function to learn a good policy.\N但挑战是，你需要大量在真实机器人上采集的数据，还要给出奖励函数，才能学出好策略。
+Dialogue: 0,0:24:07.30,0:24:13.41,Sub,,0,0,0,,So we've been thinking about how to combine reinforcement learning and LFD to kind of get the best of both approaches.\N因此，我们一直在思考如何结合强化学习和模仿学习，以融合两种方法的优势。
+Dialogue: 0,0:24:13.46,0:24:18.00,Sub,,0,0,0,,So we started with um building off of the existing work of residual RL.\N所以我们从现有的残差强化学习工作基础上开始。
+Dialogue: 0,0:24:18.05,0:24:19.78,Sub,,0,0,0,,So my student Laxida who's here today,\N今天在场的我的学生拉克西达，
+Dialogue: 0,0:24:19.83,0:24:25.61,Sub,,0,0,0,,she presented this morning um in the poster session work on accelerating residual\N她今天上午在海报展示环节介绍了关于加速残差的研究工作。
+Dialogue: 0,0:24:25.66,0:24:31.88,Sub,,0,0,0,,RL by only using it when the base LFD policy is is unconfident.\N仅在基础 LFD 策略不确定时才使用强化学习。
+Dialogue: 0,0:24:31.94,0:24:35.89,Sub,,0,0,0,,So if it's not confident, then we'll use RL to try to improve it.\N如果它不够自信，我们就用强化学习来尝试改进它。
+Dialogue: 0,0:24:35.94,0:24:43.66,Sub,,0,0,0,,But if the base policy thinks it knows pretty well what to do, then we don't waste our RL trials and our learning on on that.\N但如果基础策略已经相当清楚该怎么做，我们就不会在强化学习的试验和学习上浪费资源。
+Dialogue: 0,0:24:43.71,0:24:54.64,Sub,,0,0,0,,Um and then she built on this work to do a system is called Q2RL where we extract a Q function from the LFD policy.\N然后她在此基础上构建了一个名为 Q2RL 的系统，我们从中提取了 LFD 策略的 Q 函数。
+Dialogue: 0,0:24:54.69,0:25:00.64,Sub,,0,0,0,,And what that lets us do is start with the LFD policy and improve it with reinforcement learning.\N这使我们能够从LFD策略出发，通过强化学习对其进行优化。
+Dialogue: 0,0:25:00.69,0:25:04.10,Sub,,0,0,0,,So you can see the LFD policy, this is a tight fit insertion task.\N所以你可以看到LFD策略，这是一个紧密配合的插入任务。
+Dialogue: 0,0:25:04.15,0:25:05.47,Sub,,0,0,0,,It kind of gets stuck.\N它好像卡住了。
+Dialogue: 0,0:25:05.52,0:25:13.50,Sub,,0,0,0,,Whereas the reinforcement learning policy is able to learn its way through that and deliver a robust policy for doing this tight fit insertion.\N而强化学习策略能够自行摸索出解决方案，从而实现这种精密插入的稳健策略。
+Dialogue: 0,0:25:13.55,0:25:17.39,Sub,,0,0,0,,And that's going to be at RSS in 2026.\N那篇工作将在 RSS 2026 发表。
+Dialogue: 0,0:25:17.44,0:25:20.64,Sub,,0,0,0,,Um okay, let's go to the next slide.\N嗯，好的，我们来看下一页。
+Dialogue: 0,0:25:20.69,0:25:21.72,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:25:21.77,0:25:26.97,Sub,,0,0,0,,Um we also like this is kind of in line with what David was talking about.\N嗯，这其实也符合大卫刚才谈到的内容。
+Dialogue: 0,0:25:27.02,0:25:31.93,Sub,,0,0,0,,We're once you start having these skills, you want to be able to chain them together.\N一旦你掌握了这些技能，就希望能够将它们串联起来。
+Dialogue: 0,0:25:31.98,0:25:40.03,Sub,,0,0,0,,And if you spend a lot of time programming your robot to get this very high level of robust performance, you'd really like to to save that work.\N如果你花了很多时间编程，让机器人达到如此高水平的鲁棒性，那你肯定希望保留这份工作成果。
+Dialogue: 0,0:25:40.08,0:25:49.10,Sub,,0,0,0,,You don't want to just throw it all in a big a big blackbox model that maybe will drop you from 99.99 back to 95 because there's so much other data.\N你不想把所有数据都扔进一个庞大的黑箱模型里，因为其他数据太多，\N可能导致准确率从99.99%骤降到95%。
+Dialogue: 0,0:25:49.15,0:25:57.87,Sub,,0,0,0,,Um, so another paper we have here that's going to be presented at 3 PM is about how to chain heterogeneous skills including learn skills,\N嗯，我们这里还有一篇将在下午3点发表的论文，内容是关于如何串联异构技能，包括学习技能。
+Dialogue: 0,0:25:57.92,0:26:04.24,Sub,,0,0,0,,built-in skills that you get from the robot developer and closed loop force control policies into long horizon\N机器人开发者提供的内置技能，以及闭环力控制策略，融入长期任务中
+Dialogue: 0,0:26:04.29,0:26:09.74,Sub,,0,0,0,,plans so that you can kind of leverage the work that you've done to to make these things work.\N这样安排计划，就能充分利用你已有的工作成果，让这些事情顺利运行。
+Dialogue: 0,0:26:09.79,0:26:13.44,Sub,,0,0,0,,Okay, so now I'm going to talk about programming via natural language.\N现在，我将谈谈通过自然语言进行编程。
+Dialogue: 0,0:26:13.49,0:26:15.63,Sub,,0,0,0,,And this is something I've been working on for a long time.\N这是我长期致力于的一项工作。
+Dialogue: 0,0:26:15.68,0:26:22.18,Sub,,0,0,0,,and we got this classic paper award this year from AAAI for work we did back in 2011.\N我们今年获得了 AAAI 颁发的经典论文奖，表彰我们 2011 年的工作。
+Dialogue: 0,0:26:22.23,0:26:29.24,Sub,,0,0,0,,Um so I think that there's kind of two main approaches people are using to do this today.\N我认为目前人们主要采用两种方法来实现这一点。
+Dialogue: 0,0:26:29.29,0:26:31.55,Sub,,0,0,0,,So and it's a of course it's a spectrum.\N当然，这是一条连续的谱系。
+Dialogue: 0,0:26:31.60,0:26:38.72,Sub,,0,0,0,,Uh so on one end of the spectrum people are trying to make robots understand language by going from English or whatever the human\N在谱系的一端，人们试图让机器人理解语言：从英语或其他人类语言
+Dialogue: 0,0:26:38.77,0:26:46.75,Sub,,0,0,0,,language is to some formal representation of what those words mean and then from that to motor movements that actually make the robot go.\N映射到词语含义的形式化表示，再转化为真正驱动机器人运动的指令。
+Dialogue: 0,0:26:46.80,0:26:53.39,Sub,,0,0,0,,Um and this approach the the formal representation is is sort of a first class research question.\N这种方法中的形式化表示本身就是一个核心研究问题。
+Dialogue: 0,0:26:53.44,0:26:56.00,Sub,,0,0,0,,So I would put code as policies in this category.\N我认为代码作为策略就属于这一类别。
+Dialogue: 0,0:26:56.05,0:27:00.19,Sub,,0,0,0,,the formal language is Python or really a specific Python API that you're\N这种形式化语言是Python，或者更具体地说，是你提供的特定Python API。
+Dialogue: 0,0:27:00.24,0:27:05.40,Sub,,0,0,0,,providing sean um one of the first LLM based language understanding papers where the\N这是最早一批基于大语言模型的语言理解论文之一，其中
+Dialogue: 0,0:27:05.46,0:27:10.25,Sub,,0,0,0,,formal language was a predefined space of symbolic actions or our own work linked\N形式化语言是一个预定义的符号动作空间；我们自己的工作则把语言
+Dialogue: 0,0:27:10.30,0:27:15.33,Sub,,0,0,0,,to LTL where we're using linear temporal logic as the formal representation and the\N链接到 LTL，用线性时序逻辑作为形式化表示，
+Dialogue: 0,0:27:15.38,0:27:23.00,Sub,,0,0,0,,advantage of this approach is that we're as or well it's it's an advantage and disadvantage we can be as general or not as the formal language we\N这种方法的优势在于，我们可以像形式语言那样通用，或者说，这既是优势也是劣势，\N因为我们能保持与形式语言一样的通用性，或不那么通用。
+Dialogue: 0,0:27:23.05,0:27:26.69,Sub,,0,0,0,,can't say things that the formal language can't today um if it's not in\N我们无法表达形式语言目前无法表达的内容，如果它不在形式语言中。
+Dialogue: 0,0:27:26.74,0:27:30.57,Sub,,0,0,0,,the formal language then the model will never be able to transcend that language.\N那么模型将永远无法超越这种语言。
+Dialogue: 0,0:27:30.62,0:27:32.65,Sub,,0,0,0,,It will never be able to understand that language.\N它将永远无法理解这种语言。
+Dialogue: 0,0:27:32.70,0:27:41.47,Sub,,0,0,0,,On the other hand, by limiting and structuring the search space uh for the for the policy, we're able to learn for much less data.\N另一方面，通过限制和结构化策略的搜索空间，我们能够用更少的数据进行学习。
+Dialogue: 0,0:27:41.52,0:27:46.48,Sub,,0,0,0,,We're also able to be crossplatform because you can retarget the formal language\N我们还能实现跨平台，因为你可以将形式语言重新定位到不同的机器人平台。
+Dialogue: 0,0:27:46.53,0:27:51.35,Sub,,0,0,0,,to a different robotic platform without collecting new data and without doing new learning.\N无需收集新数据，也无需进行新的学习。
+Dialogue: 0,0:27:51.40,0:27:56.30,Sub,,0,0,0,,And there's also an approach for safety and explanability guarantees because you have this very crispy thing\N此外，这种方法还能提供安全性和可解释性保障，因为你有一个非常清晰明确的东西。
+Dialogue: 0,0:27:56.35,0:28:00.68,Sub,,0,0,0,,that the robot's going to try to do um after you use the LLM to extract it.\N机器人将尝试去执行这个东西，而这是在使用大语言模型提取之后得到的。
+Dialogue: 0,0:28:00.72,0:28:04.72,Sub,,0,0,0,,So on the other end of the spectrum is going from English or whatever the\N在谱系的另一端，是从英语或其他人类语言
+Dialogue: 0,0:28:04.77,0:28:10.10,Sub,,0,0,0,,human language is to some highdimensional vector space and then back out to to movement.\N映射到高维向量空间，再转换回运动。
+Dialogue: 0,0:28:10.15,0:28:13.33,Sub,,0,0,0,,So so like in the old days people would say pixels to torqus.\N就像过去人们常说的“从像素到力矩”。
+Dialogue: 0,0:28:13.38,0:28:21.04,Sub,,0,0,0,,Um now it's usually um pixels and then English the observations to joint states or Cartesian end-effector poses.\N如今通常是像素加英语观测，映射到关节状态或笛卡尔末端位姿。
+Dialogue: 0,0:28:21.10,0:28:26.11,Sub,,0,0,0,,Um so π0.5, OpenVLA, Google RT-2 are all examples of this.\N比如 π0.5、OpenVLA、Google RT-2 都是这类方法的例子。
+Dialogue: 0,0:28:26.16,0:28:31.76,Sub,,0,0,0,,You can't look at ChatGPT and not be really excited about this kind of approach.\N看着 ChatGPT，你不可能不对这类方法感到兴奋。
+Dialogue: 0,0:28:31.82,0:28:38.47,Sub,,0,0,0,,The generality of being able to map between the human language and the robot isn't limited by some formal language.\N能够在人类语言和机器人之间进行映射的通用性，并不受限于某种形式语言。
+Dialogue: 0,0:28:38.52,0:28:41.40,Sub,,0,0,0,,Um but there are trade-offs to to being over here.\N但在这里也有权衡之处。
+Dialogue: 0,0:28:41.44,0:28:45.86,Sub,,0,0,0,,So, so there's it's slower to do cross-platform generalization.\N因此，跨平台泛化速度较慢。
+Dialogue: 0,0:28:45.90,0:28:52.09,Sub,,0,0,0,,Um, and there's also questions about research questions that are about how to do safety and explanability.\N此外，还存在关于如何实现安全性和可解释性的研究问题。
+Dialogue: 0,0:28:52.14,0:28:52.46,Sub,,0,0,0,,So,\N所以，
+Dialogue: 0,0:28:52.49,0:28:58.11,Sub,,0,0,0,,we we I got a team together of people from from us which were more on the formal side and people who are\N我组建了一支团队，成员来自我们这边，一部分人更偏向形式化方法，另一部分人更偏向端到端方法，
+Dialogue: 0,0:28:58.16,0:29:04.67,Sub,,0,0,0,,more on the endto-end side uh to write a review paper about all the work that's going on sort of in this space.\N以撰写一篇综述论文，涵盖这一领域当前正在进行的所有工作。
+Dialogue: 0,0:29:04.72,0:29:12.76,Sub,,0,0,0,,We published this atkai in 24 and what we saw is that there's actually a spectrum of approaches um you know from one end where you're going to really\N我们在 2024 年发表了这篇综述，发现方法其实是一条谱系：
+Dialogue: 0,0:29:12.81,0:29:18.26,Sub,,0,0,0,,high level abstract specification languages to the other end where you're really going from you're\N一端是高层抽象规范语言，另一端是直接输出低层动作空间；每个端点都有取舍。
+Dialogue: 0,0:29:18.31,0:29:23.31,Sub,,0,0,0,,outputting very low-level uh spaces and there's trade-offs there's reasons to be at each end.\N每个端点都有其存在的理由。
+Dialogue: 0,0:29:23.36,0:29:28.14,Sub,,0,0,0,,So my goal with this team to write the paper is like everything we write about the trade-offs we should all agree with.\N因此，我带领这个团队写论文的目标是，我们所讨论的每一项权衡，所有成员都应达成共识。
+Dialogue: 0,0:29:28.19,0:29:35.55,Sub,,0,0,0,,all the members all the authors should agree with even if they are more biased towards one end or the other end of the spectrum.\N所有成员、所有作者都应认同，即使他们更偏向于光谱的一端或另一端。
+Dialogue: 0,0:29:35.60,0:29:37.09,Sub,,0,0,0,,So, so now I'll go back.\N所以，我现在会回到之前的内容。
+Dialogue: 0,0:29:37.14,0:29:43.79,Sub,,0,0,0,,So, so then I want to situate some of our work um and language understanding in this in this kind of approach.\N因此，我想把我们的一些工作，特别是语言理解，放在这种方法的背景下进行定位。
+Dialogue: 0,0:29:43.84,0:29:49.98,Sub,,0,0,0,,Uh so one paper this was at RAL in 25 called grounded equavariant manipulation.\N有一篇论文发表于 2025 年的 RAL，题目是“语言接地的等变操作”。
+Dialogue: 0,0:29:50.03,0:29:55.47,Sub,,0,0,0,,So the idea is we want to give the robot language instructions and then output robot actions.\N核心思想是，我们希望给机器人下达语言指令，然后输出机器人的动作。
+Dialogue: 0,0:29:55.52,0:30:03.02,Sub,,0,0,0,,But if we use this zeroot um even with with lots and lots and lots of data, we're not going to reach the levels of robustness that we need.\N但如果我们使用这种零样本方法，即使拥有海量数据，也难以达到所需的鲁棒性水平。
+Dialogue: 0,0:30:03.07,0:30:06.18,Sub,,0,0,0,,So then we're going to do some task specific fine-tuning, right?\N因此，我们将进行一些任务特定的微调，对吧？
+Dialogue: 0,0:30:06.23,0:30:10.75,Sub,,0,0,0,,We're going to collect task specific data to try to improve performance.\N我们将收集任务特定的数据，以尝试提升性能。
+Dialogue: 0,0:30:10.80,0:30:19.95,Sub,,0,0,0,,Um so if you do this with an end-to-end model like OpenVLA or CLIPort or RT-2, you can fine-tune these models.\N如果你用端到端模型，比如 OpenVLA、CLIPort 或 RT-2，就可以对这些模型进行微调。
+Dialogue: 0,0:30:20.00,0:30:26.25,Sub,,0,0,0,,Um but for CLIPort you need between 50 and 100 demonstrations in order to get robust performance.\N但对于 CLIPort，你需要大约 50 到 100 次示范，才能获得鲁棒的性能。
+Dialogue: 0,0:30:26.30,0:30:30.22,Sub,,0,0,0,,So it's very expensive um to to do this fine-tuning process.\N所以进行这种微调过程非常昂贵。
+Dialogue: 0,0:30:30.27,0:30:35.10,Sub,,0,0,0,,So we were asking ourselves well can we improve uh this can we still leverage internet\N所以我们一直在思考，能否改进这一点，我们是否还能继续利用互联网
+Dialogue: 0,0:30:35.15,0:30:41.39,Sub,,0,0,0,,scale models but reduce the amount of data and work that it takes to do this fine-tuning.\N利用互联网规模模型，同时减少微调所需的数据量和工作量。
+Dialogue: 0,0:30:41.44,0:30:51.87,Sub,,0,0,0,,Um so we did this by assuming we're going to give our robot a formal representation of parameterized skills pick and place um and then using\N所以我们假设给机器人一个参数化技能的正式表示，比如抓取和放置，然后使用
+Dialogue: 0,0:30:51.92,0:30:58.11,Sub,,0,0,0,,this structure we can leverage internet scale models like Grounding DINO to\N我们可以利用互联网规模的模型，比如 Grounding DINO，来实现这一结构。
+Dialogue: 0,0:30:58.16,0:31:04.17,Sub,,0,0,0,,produce uh heat map representations uh to to understand things in the language.\N生成热力图表示，以理解语言中的各种情况。
+Dialogue: 0,0:31:04.22,0:31:09.94,Sub,,0,0,0,,So if you say something like pick the banana, right, if you just use straight up Grounding DINO, it is not really sure.\N所以如果你说“拿香蕉”，对吧？如果直接用 Grounding DINO，它其实不太确定。
+Dialogue: 0,0:31:09.99,0:31:12.62,Sub,,0,0,0,,It's like the whole banana is is it comes back.\N它把整根香蕉都框出来了。
+Dialogue: 0,0:31:12.67,0:31:17.81,Sub,,0,0,0,,Um but then if you fine-tune it on the on using our approach on demonstrations,\N但如果你用我们的演示方法对其进行微调，
+Dialogue: 0,0:31:17.86,0:31:25.92,Sub,,0,0,0,,it's able to learn uh in in the in the top the middle one there uh a more targeted um representation\N它能够学习，那个中间的更精准的表示方式
+Dialogue: 0,0:31:25.98,0:31:32.51,Sub,,0,0,0,,that's actually able to figure out that that tip of the banana is is where you should it wants to be grabbing.\N实际上能判断出香蕉尖端才是应该抓取的位置。
+Dialogue: 0,0:31:32.56,0:31:37.40,Sub,,0,0,0,,Um, but we can do this in a way that generalizes uh to different demonstrations.\N嗯，但我们可以通过一种能泛化到不同示范的方式做到这一点。
+Dialogue: 0,0:31:37.45,0:31:41.27,Sub,,0,0,0,,So we're able to do things like generalize across different colors where if you say\N因此我们能够实现跨不同颜色的泛化，比如当你要求
+Dialogue: 0,0:31:41.32,0:31:47.12,Sub,,0,0,0,,like place on the blue plate um without using a visual mele app it like fixates\N把东西放在蓝色盘子上时，即使不使用视觉模型应用，它也会
+Dialogue: 0,0:31:47.17,0:31:52.88,Sub,,0,0,0,,on blue and it and it will just grab it'll be like I'm not sure which one but it's blue so I'm going to I'm going to highlight all the blue things.\N专注于蓝色，然后就会说：“我不确定是哪一个，但它是蓝色的，所以我把所有蓝色的东西都标出来。”
+Dialogue: 0,0:31:52.93,0:32:02.72,Sub,,0,0,0,,If you do the fine-tuning then it's able to to to remove like find its way through some of that and focus on the right thing the blue plate.\N如果进行了微调，它就能摆脱一些干扰，专注于正确的物体——蓝色盘子。
+Dialogue: 0,0:32:02.77,0:32:10.38,Sub,,0,0,0,,Um so uh by by you leveraging equivariance we're able to generalize to poses we haven't seen at training time.\N通过利用等变性，我们能够泛化到训练时未见过的物体姿态。
+Dialogue: 0,0:32:10.43,0:32:17.92,Sub,,0,0,0,,So we can train on a few poses of the object and then test on um unseen poses and get good performance.\N因此我们只需在少量物体姿态上进行训练，然后在未见过的姿态上测试，仍能获得良好性能。
+Dialogue: 0,0:32:17.98,0:32:23.09,Sub,,0,0,0,,Um and by leveraging the internet scale model we can do fshot learning to new tasks.\N通过利用互联网规模模型，我们可以实现少样本学习新任务。
+Dialogue: 0,0:32:23.14,0:32:26.98,Sub,,0,0,0,,So you can train on open the red drawer or open the green the the yellow drawer and the\N你可以训练模型打开红色抽屉、打开绿色抽屉或打开黄色抽屉，
+Dialogue: 0,0:32:27.03,0:32:32.35,Sub,,0,0,0,,green drawer and at test time you can do open the red drawer because that's in the internet scale\N在测试时，你可以要求打开红色抽屉，因为互联网规模模型中包含了这一信息。
+Dialogue: 0,0:32:32.40,0:32:36.16,Sub,,0,0,0,,model and you can do the things like like you can tell it to to put the cup on\N你可以告诉它把杯子放在泰姬陵的图片上，
+Dialogue: 0,0:32:36.21,0:32:40.70,Sub,,0,0,0,,the picture of the Taj Mahal and stuff like that and because it's all there in the internet scale model.\N诸如此类，因为这些信息都在互联网规模模型里。
+Dialogue: 0,0:32:40.75,0:32:45.78,Sub,,0,0,0,,Um also because we're using this structured representation this abstract skill\N此外，由于我们使用了这种结构化表示的抽象技能
+Dialogue: 0,0:32:45.83,0:32:50.43,Sub,,0,0,0,,representation we can generalize this to a lot of different robotic platforms.\N我们可以将这种表示方法推广到多种不同的机器人平台。
+Dialogue: 0,0:32:50.48,0:32:56.00,Sub,,0,0,0,,So I am not going to play all the videos and stuff but we make it run on Franka on UR on Spot\N所以我不会播放所有视频和资料，但我们可以让它在 Franka、UR 和 Spot 上运行。
+Dialogue: 0,0:32:56.06,0:33:05.09,Sub,,0,0,0,,on a bunch of different tasks because we can change what the formal representation is what what platform the formal representation is pointing to.\N在各种不同任务上运行，因为我们能改变形式化表示的内容，以及该表示所指向的平台。
+Dialogue: 0,0:33:05.14,0:33:15.61,Sub,,0,0,0,,Um and then last we we can we can we sort of showing the performance as we add more and more unseen uh translations in this case to the to the set.\N然后最后，我们展示了随着我们不断加入越来越多未见过的\N变换（在此情况下是到集合中的变换），性能的变化情况。
+Dialogue: 0,0:33:15.66,0:33:18.03,Sub,,0,0,0,,So open VLA drops as we add these.\N随着这些变换加入，OpenVLA 的性能开始下降。
+Dialogue: 0,0:33:18.08,0:33:23.76,Sub,,0,0,0,,Um and our approach um because of the equivariance is able to maintain good performance.\N而我们的方法由于具备等变性，能够保持良好的性能。
+Dialogue: 0,0:33:23.81,0:33:28.66,Sub,,0,0,0,,Uh and we see the same pattern with rotations as well as adding novel objects.\N我们在旋转和新增物体时也观察到了同样的模式。
+Dialogue: 0,0:33:28.71,0:33:34.99,Sub,,0,0,0,,We're doing better with less data because of the structure um that we're injecting.\N由于我们注入了结构，因此在更少数据下表现得更好。
+Dialogue: 0,0:33:35.04,0:33:35.61,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:33:35.66,0:33:39.88,Sub,,0,0,0,,Um so now I want to talk about object search.\N现在我想谈谈物体搜索。
+Dialogue: 0,0:33:39.93,0:33:46.90,Sub,,0,0,0,,Uh so for lots of things that you might want to do with your robot, it involves finding objects in the environment.\N对于你希望机器人完成的许多任务，都涉及在环境中寻找物体。
+Dialogue: 0,0:33:46.95,0:33:52.77,Sub,,0,0,0,,Um that's kind of the first thing to almost anything that you want to see happen with the robot.\N这几乎是任何你希望机器人实现的目标的第一步。
+Dialogue: 0,0:33:52.82,0:34:01.48,Sub,,0,0,0,,Uh so we have been thinking about how to do this for for a bunch of years, leveraging information from language um and also from gesture.\N嗯，我们已经为此思考了好几年，利用语言和手势的信息。
+Dialogue: 0,0:34:01.54,0:34:09.14,Sub,,0,0,0,,Um and some of the work we've been doing recently has been looking at nonhuman how nonhumans interpret gestures like puppy dogs.\N嗯，我们最近的一些研究工作是探讨非人类如何理解手势，比如小狗。
+Dialogue: 0,0:34:09.19,0:34:12.56,Sub,,0,0,0,,So puppies can interpret a human pointing gesture.\N小狗可以理解人类的指向手势。
+Dialogue: 0,0:34:12.61,0:34:16.51,Sub,,0,0,0,,Um, and we can actually learn from them how they're doing it.\N嗯，我们实际上可以从它们身上学习它们是如何做到这一点的。
+Dialogue: 0,0:34:16.56,0:34:24.56,Sub,,0,0,0,,Uh, because they're they they're probably we think they're using less sophisticated cues about how to do this um than people are doing.\N嗯，我们认为它们可能使用的线索比人类更简单。
+Dialogue: 0,0:34:24.61,0:34:29.22,Sub,,0,0,0,,Uh, so we are collaborating with Daphna Buchsbaum's Lab at Brown.\N我们正在与布朗大学的 Daphna Buchsbaum 实验室合作。
+Dialogue: 0,0:34:29.27,0:34:31.44,Sub,,0,0,0,,We put eye trackers on puppies.\N我们给小狗戴上了眼动仪。
+Dialogue: 0,0:34:31.49,0:34:38.02,Sub,,0,0,0,,Um, and we have humans and their dogs that you bring your pet dog in and you do a collaborative object search task.\N嗯，让人类和他们的狗一起参与协作找物任务，你可以带你的宠物狗来参与。
+Dialogue: 0,0:34:38.07,0:34:43.00,Sub,,0,0,0,,Um, and then we're trying to learn from that how to better improve the robot performance.\N嗯，然后我们试图从中学习，以更好地提升机器人的表现。
+Dialogue: 0,0:34:43.05,0:34:49.46,Sub,,0,0,0,,So we had an HRI paper about resolving pointing gestures that was kind of inspired by dogs with a POMDP.\N我们有一篇关于解决指向手势的人机交互论文，灵感来自小狗，使用了 POMDP。
+Dialogue: 0,0:34:49.51,0:34:53.05,Sub,,0,0,0,,So you can say spot, can you get the red cup?\N你可以说“斯波特，去把红色杯子拿过来？”
+Dialogue: 0,0:34:53.10,0:34:57.26,Sub,,0,0,0,,And you point um but and then it goes off and finds it.\N然后你指向它，它就去找并找到了。
+Dialogue: 0,0:34:57.31,0:35:00.82,Sub,,0,0,0,,Uh, and this work the robot has to start out staring at the person.\N嗯，这个工作要求机器人一开始必须盯着人看。
+Dialogue: 0,0:35:00.87,0:35:09.02,Sub,,0,0,0,,When we were doing the the human dog interaction, um we found that um actually the dog is looking all over the place.\N在进行人与狗互动时，我们发现其实狗的视线到处乱转。
+Dialogue: 0,0:35:09.07,0:35:11.92,Sub,,0,0,0,,So here's a video of a dog doing the search task.\N这是一段狗完成搜索任务的视频。
+Dialogue: 0,0:35:11.97,0:35:15.39,Sub,,0,0,0,,Um this is I my student Ivy and her pet dog Minion.\N这是我的学生 Ivy，还有她的宠物狗 Minion。
+Dialogue: 0,0:35:15.44,0:35:22.52,Sub,,0,0,0,,Uh so she's going to point for the dog and he kind of glances at the right cup and then he goes to the wrong cup and he goes over to the right cup.\N嗯，她指向狗，狗看了看右边的杯子，然后却走向了错误的杯子，接着又走到正确的杯子那里。
+Dialogue: 0,0:35:22.57,0:35:25.55,Sub,,0,0,0,,Um, and so we're collecting data of human dog diads.\N嗯，所以我们正在收集人类与狗狗配对的数据。
+Dialogue: 0,0:35:25.60,0:35:36.02,Sub,,0,0,0,,And then we're trying to do LFD policies to learn from the dog data uh and and train an autonomous policy from that for the robot especially\N然后我们正尝试利用狗的数据来学习LFD策略，并据此训练出机器人的自主策略，尤其是针对这一场景。
+Dialogue: 0,0:35:36.06,0:35:40.13,Sub,,0,0,0,,to reproduce this looking behavior that dogs are really interested like they're looking\N重现狗狗真正感兴趣、仿佛在凝视的样子
+Dialogue: 0,0:35:40.18,0:35:43.74,Sub,,0,0,0,,and at you and they're looking at the environment and and all that stuff.\N然后看向你，观察着周围环境，还有所有那些东西。
+Dialogue: 0,0:35:43.79,0:35:55.63,Sub,,0,0,0,,Um, and this is a this is going to be presented tomorrow at uh the workshop on bridging the gap between robot learning and human robot interaction.\N嗯，这个将在明天关于弥合机器人学习与人机交互之间差距的研讨会上展示。
+Dialogue: 0,0:35:55.68,0:35:58.09,Sub,,0,0,0,,Okay, I'm going to skip stuff because we're out of time,\N好吧，时间不够了，我得跳过一些内容。
+Dialogue: 0,0:35:58.14,0:36:05.13,Sub,,0,0,0,,but we have a bunch of work on English to linear temporal logic which was led by my PhD student Jason.\N但我们有一项关于将英语转换为线性时序逻辑的工作，由我的博士生杰森主导。
+Dialogue: 0,0:36:05.18,0:36:08.00,Sub,,0,0,0,,Um, and I wanted to mention that he's on the job market.\N呃，我想提一下，他正在找工作。
+Dialogue: 0,0:36:08.05,0:36:14.09,Sub,,0,0,0,,So if you're interested in going from English to uh rich semantic representations\N如果你有兴趣将英文转换为丰富的语义表示
+Dialogue: 0,0:36:14.14,0:36:18.50,Sub,,0,0,0,,to understand constraints and stuff um Jason is the person to talk to.\N要了解限制条件之类的问题，可以找杰森，他是最合适的人选。
+Dialogue: 0,0:36:18.55,0:36:26.51,Sub,,0,0,0,,Um we've also leveraged this LTL representation to enforce uh safety constraints for robot agents.\N此外，我们还利用这种LTL表示法来为机器人智能体施加安全约束。
+Dialogue: 0,0:36:26.56,0:36:31.33,Sub,,0,0,0,,Um so like existing ISO safety standards require you to promise with 10 to\N所以现有的 ISO 安全标准要求你承诺 10 的负 5 次方
+Dialogue: 0,0:36:31.38,0:36:35.39,Sub,,0,0,0,,the minus 5th probability that you're not going to fail in a way that's dangerous.\N的故障概率，也就是说不会以危险的方式失效。
+Dialogue: 0,0:36:35.44,0:36:41.44,Sub,,0,0,0,,So when you hit the kill switch on your robot, there's a 10 to the minus 5th pathway that's actually going to stop the robot.\N当你按下机器人的急停开关时，实际上只有 10 的负 5 次方量级的失效路径。
+Dialogue: 0,0:36:41.49,0:36:48.51,Sub,,0,0,0,,Um, so we asked the question, how can we have this kind of certainty on these large LLM systems?\N嗯，所以我们提出了一个问题：如何在这些大型语言模型系统上获得这种确定性？
+Dialogue: 0,0:36:48.56,0:36:52.95,Sub,,0,0,0,,Um, and we can do it in a way uh by by leveraging some of the work that we're doing with LTL,\N嗯，我们可以借助我们正在开展的 LTL 相关工作，以一种方式来实现。
+Dialogue: 0,0:36:53.00,0:36:56.21,Sub,,0,0,0,,but I don't have time to talk about it, so sorry for that.\N但我没时间聊这个，抱歉了。
+Dialogue: 0,0:36:56.26,0:37:04.78,Sub,,0,0,0,,Um, and we've also been thinking a lot about where things are at with language and robotics in this sort of new age.\N嗯，我们也在深入思考，在这个新时代背景下，语言和机器人技术的发展现状。
+Dialogue: 0,0:37:04.83,0:37:06.68,Sub,,0,0,0,,So, we were inspired by Rod's old paper.\N因此，我们受到了罗德那篇旧论文的启发。
+Dialogue: 0,0:37:06.73,0:37:09.51,Sub,,0,0,0,,Rodney Brook wrote a paper called Elephants Don't Play Chess.\N罗德尼·布鲁克斯写过一篇名为《大象不会下棋》的论文。
+Dialogue: 0,0:37:09.56,0:37:11.31,Sub,,0,0,0,,Um, a long long time ago.\N呃，很久很久以前。
+Dialogue: 0,0:37:11.36,0:37:16.19,Sub,,0,0,0,,Um, and we decided to kind of recapitulate that.\N呃，我们决定重新演绎一下这个想法。
+Dialogue: 0,0:37:16.24,0:37:17.79,Sub,,0,0,0,,It was with a with an article.\N是通过一篇文章来实现的。
+Dialogue: 0,0:37:17.84,0:37:20.24,Sub,,0,0,0,,We called it Elephants Don't Write Sonnets.\N我们把它叫做《大象不会写十四行诗》。
+Dialogue: 0,0:37:20.29,0:37:29.57,Sub,,0,0,0,,Uh, so back when Turing proposed the original Turing test, one of his prompts was please write me a sonnet on the subject of the Forth Bridge.\N当图灵提出最初的图灵测试时，其中一个提示是：请以福斯桥为主题写一首十四行诗。
+Dialogue: 0,0:37:29.62,0:37:32.09,Sub,,0,0,0,,And the agent um, actually deflects.\N而这个智能体，实际上回避了这个问题。
+Dialogue: 0,0:37:32.14,0:37:33.45,Sub,,0,0,0,,It does not write a sonnet.\N它并没有写一首十四行诗。
+Dialogue: 0,0:37:33.50,0:37:35.43,Sub,,0,0,0,,But of course today this is easy.\N但当然，今天这很容易。
+Dialogue: 0,0:37:35.48,0:37:36.76,Sub,,0,0,0,,Um any LLM can do it.\N呃，任何大语言模型都能做到。
+Dialogue: 0,0:37:36.81,0:37:38.76,Sub,,0,0,0,,This was from chat GPT.\N这是来自 ChatGPT 的结果。
+Dialogue: 0,0:37:38.81,0:37:43.53,Sub,,0,0,0,,Um and so some of what Turing's telling us is we can actually do it.\N呃，所以图灵告诉我们的一些内容，其实我们现在已经可以做到了。
+Dialogue: 0,0:37:43.58,0:37:46.93,Sub,,0,0,0,,Uh so what does that mean for robotics?\N那么这对机器人技术意味着什么？
+Dialogue: 0,0:37:46.98,0:37:50.77,Sub,,0,0,0,,Uh so we wrote this article to try to to to think about this.\N嗯，所以我们写了这篇文章，试图思考这个问题。
+Dialogue: 0,0:37:50.82,0:37:54.26,Sub,,0,0,0,,So we think intelligent agents have to be embodied.\N我们认为智能体必须具有实体。
+Dialogue: 0,0:37:54.31,0:38:00.79,Sub,,0,0,0,,They have to be processing highdimensional high frame rate input like images and joint encoders.\N它们必须处理高维度、高帧率的输入，比如图像和关节编码器数据。
+Dialogue: 0,0:38:00.84,0:38:09.47,Sub,,0,0,0,,they have to be producing highdimensional high frame rate output and they have to be doing long horizon goal- directed behavior over time.\N它们必须产生高维度、高帧率的输出，并且需要在长时间跨度内执行具有目标导向的行为。
+Dialogue: 0,0:38:09.52,0:38:14.01,Sub,,0,0,0,,Um, and then paired with this, we proposed something we called the grounded Turing test.\N与此相关，我们提出了一种称为“具身图灵测试”的方法。
+Dialogue: 0,0:38:14.06,0:38:19.77,Sub,,0,0,0,,So, we don't think language is required for intelligence, but we can still use language to assess intelligence.\N我们认为语言并非智能所必需，但仍然可以利用语言来评估智能。
+Dialogue: 0,0:38:19.82,0:38:23.13,Sub,,0,0,0,,Um, and we kind of go through that from a language and robotics perspective.\N嗯，我们从语言和机器人学的角度探讨了这一点。
+Dialogue: 0,0:38:23.18,0:38:27.68,Sub,,0,0,0,,And then me and my co-author David Watkins, we started a blog, you should like and subscribe and stuff.\N然后我和我的合著者戴维·沃特金斯开始了一个博客，你们可以点赞并订阅。
+Dialogue: 0,0:38:27.73,0:38:30.21,Sub,,0,0,0,,Um, that kind of explores these issues.\N嗯，这个博客探讨了这些问题。
+Dialogue: 0,0:38:30.26,0:38:33.23,Sub,,0,0,0,,um and and lots of the other stuff I'm talking about.\N嗯，还有我刚才提到的其他很多内容。
+Dialogue: 0,0:38:33.28,0:38:34.44,Sub,,0,0,0,,So, I'll stop there.\N那我就讲到这里。
+Dialogue: 0,0:38:34.49,0:38:41.63,Sub,,0,0,0,,Um I talked about one hardware software loadout that can do many different tasks, programming these tasks via demonstrations,\N嗯，我讲了一种硬件软件配置，它能完成多种不同任务，通过示范来编程这些任务，
+Dialogue: 0,0:38:41.68,0:38:48.67,Sub,,0,0,0,,reinforcement learning, formal language, and natural language, and how to get robustness and safety in the longtail.\N强化学习、形式语言和自然语言，以及如何在长尾场景中实现鲁棒性和安全性。
+Dialogue: 0,0:38:48.72,0:38:55.07,Sub,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,0:38:55.12,0:38:56.01,Sub,,0,0,0,,Thank you very much.\N非常感谢。
+Dialogue: 0,0:38:56.06,0:38:56.59,Sub,,0,0,0,,Fascinating.\N非常有趣。
+Dialogue: 0,0:38:56.64,0:38:58.63,Sub,,0,0,0,,Thanks.\N谢谢。
+Dialogue: 0,0:38:58.68,0:39:02.19,Sub,,0,0,0,,Um questions.\N嗯，有问题。
+Dialogue: 0,0:39:02.24,0:39:08.35,Sub,,0,0,0,,I don't I don't see I have a question.\N我没看到……我有一个问题。
+Dialogue: 0,0:39:08.40,0:39:09.07,Sub,,0,0,0,,Thanks.\N谢谢。
+Dialogue: 0,0:39:09.12,0:39:09.48,Sub,,0,0,0,,Yes.\N嗯。
+Dialogue: 0,0:39:09.51,0:39:11.95,Sub,,0,0,0,,So for the in the doc research.\N那么关于狗的研究方面。
+Dialogue: 0,0:39:12.00,0:39:12.37,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:39:12.40,0:39:18.43,Sub,,0,0,0,,So how are you going to do the for the modeling the transfer from the modeling of the robot the human?\N那么你打算如何建模从机器人到人类的迁移过程？
+Dialogue: 0,0:39:18.48,0:39:18.76,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:39:18.79,0:39:18.97,Sub,,0,0,0,,So,\N所以，
+Dialogue: 0,0:39:19.00,0:39:23.28,Sub,,0,0,0,,so we think actually we're just scratching the surface like like it's funny because like\N我们认为实际上我们才刚刚触及表面，这很有趣，因为
+Dialogue: 0,0:39:23.33,0:39:27.70,Sub,,0,0,0,,Howie Choset's been doing snake robots for years and Sangbae Kim with Cheetah and stuff.\NHowie Choset 多年来一直在研究蛇形机器人，Sangbae Kim 则专注于猎豹等机器人。
+Dialogue: 0,0:39:27.75,0:39:38.24,Sub,,0,0,0,,We have lots and lots of work of animal inspired robotics um but very little work surprisingly little work in animal inspired human robot interaction\N我们在受动物启发的机器人领域做了大量工作，但令人惊讶的是，\N在受动物启发的人机交互方面，相关研究却非常少。
+Dialogue: 0,0:39:38.29,0:39:45.47,Sub,,0,0,0,,despite us like using dogs to do a lot of the tasks that we want our robots to do like search and rescue and stuff.\N尽管我们经常使用狗来完成机器人需要执行的任务，比如搜救等。
+Dialogue: 0,0:39:45.52,0:39:45.73,Sub,,0,0,0,,Um,\N呃，
+Dialogue: 0,0:39:45.76,0:39:48.65,Sub,,0,0,0,,and we're also interested in I was really excited to be at the banquet last\N我也对昨晚在宴会上与马在一起感到非常兴奋，
+Dialogue: 0,0:39:48.70,0:39:52.35,Sub,,0,0,0,,night with the horses because we think there's a lot to learn from horses as well.\N因为我们认为马也提供了很多值得学习的经验。
+Dialogue: 0,0:39:52.40,0:39:58.47,Sub,,0,0,0,,Um, these are species where we already collaborate closely with these non-human species.\N呃，这些是我们已经与非人类物种密切协作的物种。
+Dialogue: 0,0:39:58.52,0:40:03.39,Sub,,0,0,0,,Um, and I think we're just scratching the surface on on what we can learn from how that goes.\N呃，我认为我们才刚刚开始理解从这种协作中能学到什么。
+Dialogue: 0,0:40:03.44,0:40:06.33,Sub,,0,0,0,,It also kind of sidesteps the uncanny valley, I think.\N它在某种程度上也避开了恐怖谷效应，我认为是这样。
+Dialogue: 0,0:40:06.38,0:40:09.51,Sub,,0,0,0,,Um, because they're not human, so we don't expect them to be human.\N嗯，因为它们不是人类，所以我们并不期待它们像人类一样。
+Dialogue: 0,0:40:09.56,0:40:14.27,Sub,,0,0,0,,So, learning from like at a high level, abstract level like design guidelines from this.\N所以，从高层次、抽象层面学习，比如从这些案例中提炼设计准则。
+Dialogue: 0,0:40:14.32,0:40:23.50,Sub,,0,0,0,,Um, but then also learning at a at a at a at a more like neural deep learning level from like the actual behaviors of dogs and horses,\N嗯，同时也能从更深层的神经网络深度学习层面，学习狗和马的实际行为。
+Dialogue: 0,0:40:23.55,0:40:27.55,Sub,,0,0,0,,I think is a really and other other species as well, but we're focusing on those two for now.\N我认为这真的很有意思，其他物种也一样，但我们现在主要关注狗和马。
+Dialogue: 0,0:40:27.60,0:40:27.75,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:40:27.76,0:40:29.55,Sub,,0,0,0,,Especially when they have different languages, right?\N尤其是当它们使用不同语言的时候，对吧？
+Dialogue: 0,0:40:29.60,0:40:30.19,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:40:30.24,0:40:32.19,Sub,,0,0,0,,Representations, different abstractions.\N表示方式，不同的抽象层次。
+Dialogue: 0,0:40:32.24,0:40:32.51,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:40:32.54,0:40:32.82,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:40:32.85,0:40:37.40,Sub,,0,0,0,,So, the work I'm showing, we're we're tracking the dog's position and then the eye gaze.\N所以我展示的这项工作，我们正在追踪狗的位置和眼神方向。
+Dialogue: 0,0:40:37.45,0:40:40.47,Sub,,0,0,0,,We have Daphna's lab made an eye tracker for dogs.\N我们有达芙娜的实验室为狗制作了一个眼动追踪装置。
+Dialogue: 0,0:40:40.52,0:40:43.10,Sub,,0,0,0,,Um, so you you train your dog to wear like a mask.\N嗯，就是训练你的狗戴上类似面具的东西。
+Dialogue: 0,0:40:43.15,0:40:47.59,Sub,,0,0,0,,Um, and then it tracks the position in the dog of where the dog is looking and stuff.\N然后它会追踪狗眼睛的位置，以及狗在看哪里。
+Dialogue: 0,0:40:47.64,0:40:51.87,Sub,,0,0,0,,Um, and then we're just translating that to the robot so the robot can move around and look around.\N然后我们把这种信息翻译给机器人，让机器人能移动并四处观察。
+Dialogue: 0,0:40:51.92,0:40:53.89,Sub,,0,0,0,,Um, and so we're outputting a policy.\N嗯，我们输出的是一个策略。
+Dialogue: 0,0:40:53.94,0:40:57.32,Sub,,0,0,0,,Um, and it's basically just memorizing the training set at the moment.\N目前它基本上只是在记忆训练数据集。
+Dialogue: 0,0:40:57.37,0:41:02.91,Sub,,0,0,0,,It's like this is just a workshop paper that that that's atra, but I think there's a lot more we can do um, in this space.\N这其实只是一篇工作坊论文，但我觉得在这个领域我们还能做更多。
+Dialogue: 0,0:41:02.96,0:41:03.55,Sub,,0,0,0,,Super cool.\N非常酷。
+Dialogue: 0,0:41:03.60,0:41:04.97,Sub,,0,0,0,,I'm so excited about it.\N我对此非常兴奋。
+Dialogue: 0,0:41:05.02,0:41:06.67,Sub,,0,0,0,,Yeah, I think I see a question here.\N是的，我觉得这里有个问题。
+Dialogue: 0,0:41:06.72,0:41:08.35,Sub,,0,0,0,,Thanks.\N谢谢。
+Dialogue: 0,0:41:08.40,0:41:08.72,Sub,,0,0,0,,Hi.\N你好。
+Dialogue: 0,0:41:08.75,0:41:12.99,Sub,,0,0,0,,Um, how do real dogs react to having all these robot dogs around?\N嗯，真正的狗看到这么多机器狗会有什么反应呢？
+Dialogue: 0,0:41:13.04,0:41:14.88,Sub,,0,0,0,,How do how do real dogs react?\N真正的狗会有什么反应呢？
+Dialogue: 0,0:41:14.93,0:41:16.16,Sub,,0,0,0,,Um, it depends.\N嗯，这要看情况。
+Dialogue: 0,0:41:16.21,0:41:18.33,Sub,,0,0,0,,It depends on the dog.\N这取决于狗本身。
+Dialogue: 0,0:41:18.38,0:41:23.66,Sub,,0,0,0,,Um, so when we take our spot for walks around campus, some dogs are just like whatever.\N嗯，当我们带狗在校园里散步时，有些狗完全无所谓。
+Dialogue: 0,0:41:23.70,0:41:28.09,Sub,,0,0,0,,And other dogs are like, holy, I don't swear, but like, oh my god, what is this?\N有些狗则会惊呼，虽然我不说脏话，但就像天啊，这到底是什么东西？
+Dialogue: 0,0:41:28.14,0:41:31.93,Sub,,0,0,0,,Like, and and they bark and and get really freaked out by it.\N就是说，它们会叫，被吓得不得了。
+Dialogue: 0,0:41:31.98,0:41:37.76,Sub,,0,0,0,,Um, and I think a lot of it depends on the dog, the personality of the dog, and how it's been socialized.\N嗯，我觉得这很大程度上取决于狗的性格，以及它被社会化的方式。
+Dialogue: 0,0:41:37.81,0:41:43.93,Sub,,0,0,0,,And we've also found like Ivy brought her dog Minion into our lab and was able to to get him used to the robot.\N我们还发现，伊芙带她的狗米尼翁来过实验室，成功让它适应了机器狗。
+Dialogue: 0,0:41:43.98,0:41:50.51,Sub,,0,0,0,,So, um, you know, with some some training and some support, he was able to be less less concerned about it.\N所以，嗯，经过一些训练和帮助，它对机器狗的担忧减少了。
+Dialogue: 0,0:41:50.56,0:41:51.76,Sub,,0,0,0,,Um, cool.\N嗯，真酷。
+Dialogue: 0,0:41:51.81,0:41:52.77,Sub,,0,0,0,,Thank you very much.\N非常感谢。
+Dialogue: 0,0:41:52.82,0:41:54.49,Sub,,0,0,0,,So, we would like to thank Stefanie.\N因此，我们想感谢斯蒂法妮。
+Dialogue: 0,0:41:54.54,0:41:55.63,Sub,,0,0,0,,Thank you very much.\N非常感谢。
+Dialogue: 0,0:41:55.68,0:42:05.71,Sub,,0,0,0,,Thanks.\N谢谢。
+Dialogue: 0,0:42:05.76,0:42:09.95,Sub,,0,0,0,,Okay, while the next speaker set up, I will have the time for introducing her.\N好的，在下一位演讲者准备期间，我来介绍一下她。
+Dialogue: 0,0:42:10.00,0:42:15.83,Sub,,0,0,0,,So, um, her name is Noémie Jaquier and she's an assistant professor at KTH,\N她名叫 Noémie Jaquier，是瑞典皇家理工学院的助理教授，
+Dialogue: 0,0:42:15.88,0:42:23.07,Sub,,0,0,0,,the Royal Royal Institute of Technology in Sweden where she is leading the geometric robot lab.\N同时也是该校几何机器人实验室的负责人。
+Dialogue: 0,0:42:23.12,0:42:31.03,Sub,,0,0,0,,uh she received of course several awards for example the best paper award finalist for Iris 23rd and 24th and and the H\N她获得过多项奖项，例如 IROS 2023 和 2024 的最佳论文奖提名，以及多项学术奖项。
+Dialogue: 0,0:42:31.08,0:42:34.17,Sub,,0,0,0,,highleber academic science so I skip some of the awards but she\N我省略了一些奖项，但她确实非常出色。
+Dialogue: 0,0:42:34.22,0:42:45.86,Sub,,0,0,0,,is very uh thank you very much okay thank you very much\N非常感谢，谢谢。
+Dialogue: 0,0:42:45.91,0:42:51.16,Sub,,0,0,0,,for the kind introduction um so I'm very happy to be here today and I would like to talk to you about traveling the\N感谢您亲切的介绍，今天我很高兴能来到这里，我想和大家谈谈机器人学习流形——
+Dialogue: 0,0:42:51.21,0:43:01.23,Sub,,0,0,0,,robot learning manifold or on how we can use the many geometries and inductive biases that naturally arise in robotics to enhance robot learning.\N也就是如何利用机器人中自然出现的多种几何结构和归纳偏置来提升机器人学习。
+Dialogue: 0,0:43:01.28,0:43:04.40,Sub,,0,0,0,,So relevant robotic variable feature a variety of geometries.\N相关的机器人变量具有各种几何特性。
+Dialogue: 0,0:43:04.45,0:43:08.91,Sub,,0,0,0,,You can think about the Euclidean space that you typically use to encode position.\N你可以将通常用来编码位置的欧几里得空间想象成一个坐标系。
+Dialogue: 0,0:43:08.96,0:43:13.40,Sub,,0,0,0,,Usually you also want to encode the orientation of your end-effector which you can do either via unit\N通常你还希望编码末端执行器的朝向，可以用单位四元数，
+Dialogue: 0,0:43:13.45,0:43:19.60,Sub,,0,0,0,,quaternion that lie on a sphere or rotation matrices that belong to the manifold of the special orthogonal group.\N它位于球面上；也可以用属于特殊正交群流形的旋转矩阵。
+Dialogue: 0,0:43:19.65,0:43:23.31,Sub,,0,0,0,,We have many more joint configuration typically lie on the torus.\N更多关节构型通常位于环面上。
+Dialogue: 0,0:43:23.36,0:43:29.94,Sub,,0,0,0,,Um control gains, inertia matrices, manipulability ellipsoids and many more are symmetric positive definite matrices.\N控制增益、惯性矩阵、可操作度椭球等都是对称正定矩阵。
+Dialogue: 0,0:43:29.99,0:43:36.99,Sub,,0,0,0,,And another one I will talk about today is the configuration manifold that describes Lagrangian and Hamiltonian dynamics.\N今天我要谈的另一个概念是描述拉格朗日和哈密顿动力学的构型流形。
+Dialogue: 0,0:43:37.04,0:43:42.22,Sub,,0,0,0,,So all the mathematical spaces that you just saw here are all smooth manifolds or differentiable manifolds.\N因此，你刚才看到的所有数学空间都是光滑流形或可微流形。
+Dialogue: 0,0:43:42.26,0:43:46.38,Sub,,0,0,0,,They are essentially curved space that locally look but globally are not.\N它们本质上是弯曲的空间，局部看起来是平的，但从整体上看并非如此。
+Dialogue: 0,0:43:46.43,0:43:54.60,Sub,,0,0,0,,And the idea here is to use all their geometries as inductive biases to guide the robot learning algorithm and achieve higher performance,\N这里的理念是利用它们的所有几何特征作为归纳偏置，引导机器人学习算法，从而实现更高性能。
+Dialogue: 0,0:43:54.65,0:44:00.99,Sub,,0,0,0,,enhance data efficiency and also to endo them with some additional guarantees.\N提升数据效率，并为它们附加一些额外的保障。
+Dialogue: 0,0:44:01.04,0:44:06.63,Sub,,0,0,0,,So let me start with a very simple example that illustrates why considering geometry is actually relevant.\N让我先举一个非常简单的例子，说明为什么考虑几何形状实际上很重要。
+Dialogue: 0,0:44:06.68,0:44:11.90,Sub,,0,0,0,,So you can think here about the sphere manifold that we use to encode orientation as a unit quaternion.\N因此，你可以将我们用来以单位四元数编码方向的球面流形考虑在内。
+Dialogue: 0,0:44:11.95,0:44:15.50,Sub,,0,0,0,,So here we simply want to compute the mean of three points on the sphere.\N所以这里我们只需要计算球面上三个点的平均值。
+Dialogue: 0,0:44:15.55,0:44:17.86,Sub,,0,0,0,,So you can do that in a classical Euclidean way.\N你可以用经典的欧几里得方法来实现。
+Dialogue: 0,0:44:17.91,0:44:21.91,Sub,,0,0,0,,You take them, you average them and you actually obtain something that is inside the sphere.\N你把它们取出来，求平均，结果实际上会落在球体内部。
+Dialogue: 0,0:44:21.96,0:44:24.04,Sub,,0,0,0,,So it doesn't give you an orientation that is valid.\N所以这种方法得不到一个有效的方向。
+Dialogue: 0,0:44:24.09,0:44:27.23,Sub,,0,0,0,,So typically what we do is some kind of post-processing step.\N通常我们会进行某种后处理步骤。
+Dialogue: 0,0:44:27.28,0:44:29.79,Sub,,0,0,0,,But this can actually lead to some issues.\N但这实际上可能引发一些问题。
+Dialogue: 0,0:44:29.84,0:44:31.97,Sub,,0,0,0,,Another way is to take spherical coordinates instead.\N另一种方法是改用球坐标。
+Dialogue: 0,0:44:32.02,0:44:34.75,Sub,,0,0,0,,So you are sure that the mean will lie on the sphere.\N这样你就能确保平均值落在球面上。
+Dialogue: 0,0:44:34.80,0:44:39.28,Sub,,0,0,0,,But in that case the mean actually is completely out of the support of the data distribution.\N但在这种情况下，平均值实际上完全超出了数据分布的支持范围。
+Dialogue: 0,0:44:39.33,0:44:44.62,Sub,,0,0,0,,So what you need to do is to actually consider the geometry of the sphere and comput a geometric mean which\N所以你需要真正考虑球面的几何结构，计算一个几何平均值，
+Dialogue: 0,0:44:44.67,0:44:51.87,Sub,,0,0,0,,will be completely independent of the coordinates that you choose and that will give you the real mean of those three data.\N它将完全独立于你选择的坐标系，从而给出这三个数据的真实平均值。
+Dialogue: 0,0:44:51.92,0:44:56.56,Sub,,0,0,0,,So I hope that you're convinced that with such a simple example we already have issues if we don't consider geometry.\N所以我希望你相信，通过这样一个简单的例子，我们已经发现，如果不考虑几何结构，就会出现问题。
+Dialogue: 0,0:44:56.61,0:45:00.11,Sub,,0,0,0,,So it's actually important for all types of robot learning algorithms.\N因此，这对所有类型的机器人学习算法都非常重要。
+Dialogue: 0,0:45:00.16,0:45:06.14,Sub,,0,0,0,,So in the remaining of the talk I will show you example of applications where we use the inductive bias that arises from geometry which\N所以在接下来的演讲中，我将向大家展示一些应用实例，我们在其中利用了由几何产生的归纳偏置，
+Dialogue: 0,0:45:06.19,0:45:10.03,Sub,,0,0,0,,is sometimes complemented with other types of inductive biases from physics or from\N有时还会结合来自物理或
+Dialogue: 0,0:45:10.08,0:45:15.12,Sub,,0,0,0,,control theory for example um to see how we can enhance robot learning.\N控制理论等其他类型的归纳偏置，例如，来观察我们如何提升机器人学习效果。
+Dialogue: 0,0:45:15.17,0:45:22.35,Sub,,0,0,0,,So let me start with an example where we learn motion policies that encode both position and orientation.\N让我先从一个例子开始，我们学习同时编码位置和方向的运动策略。
+Dialogue: 0,0:45:22.40,0:45:26.48,Sub,,0,0,0,,So here we use flow matching which I guess all of you know is a powerful generative model for\N这里我们使用流匹配，我想你们都知道，这是一种强大的生成模型，
+Dialogue: 0,0:45:26.53,0:45:34.57,Sub,,0,0,0,,imitation learning due to its ability to handle highdimensional multimodal data distribution um that are conditioned um on vision data.\N由于其能够处理高维多模态数据分布，并且可以基于视觉数据进行条件化，因此在模仿学习中非常有效。
+Dialogue: 0,0:45:34.62,0:45:39.07,Sub,,0,0,0,,So here what we do is that we take an action from a simple base distribution\N这里我们从一个简单的基础分布中获取一个动作，
+Dialogue: 0,0:45:39.12,0:45:44.03,Sub,,0,0,0,,and typically we flow it until a more complex target distribution and flow matching does that\N通常将其流动到更复杂的目标分布，而流匹配通过
+Dialogue: 0,0:45:44.08,0:45:47.85,Sub,,0,0,0,,by simply defining a vector field a desired vector field that defines the flow and by\N简单定义一个向量场，即期望的向量场来定义流，并通过
+Dialogue: 0,0:45:47.90,0:45:54.35,Sub,,0,0,0,,simply learning a neural network that would be conditioned on your observation um to predict the flow.\N简单学习一个神经网络，该网络基于你的观测来预测流。
+Dialogue: 0,0:45:54.40,0:45:58.31,Sub,,0,0,0,,Um and then when you want to do inference you simply use integration of your vector field.\N然后当你需要进行推理时，只需对向量场进行积分即可。
+Dialogue: 0,0:45:58.36,0:46:02.22,Sub,,0,0,0,,you obtain your flow and then you can have such kind of robot motion policies where\N你获得流动后，就可以拥有这类机器人运动策略
+Dialogue: 0,0:46:02.27,0:46:07.07,Sub,,0,0,0,,here we learned we did we we taught a robot to move a mug onto the plate.\N在这里我们学会了让机器人将杯子移动到盘子上
+Dialogue: 0,0:46:07.12,0:46:09.37,Sub,,0,0,0,,You can see here there's not much changes in orientation.\N你可以看到这里的朝向几乎没有变化
+Dialogue: 0,0:46:09.42,0:46:14.73,Sub,,0,0,0,,If you actually want to consider the orientation of then the vector as well we need to use remmanion flow matching.\N如果你真的想考虑朝向的向量，我们就需要使用黎曼流匹配
+Dialogue: 0,0:46:14.78,0:46:18.25,Sub,,0,0,0,,So in that case you have your data that are encoded on the sphere.\N在这种情况下，你的数据被编码在球面上
+Dialogue: 0,0:46:18.30,0:46:22.69,Sub,,0,0,0,,So your actions are belonging to the surface of the sphere and we start from a base distribution which\N你的动作属于球面的表面，我们从一个基础分布开始，该分布
+Dialogue: 0,0:46:22.74,0:46:28.14,Sub,,0,0,0,,is in that case a Gaussian that you can really imagine as a Gaussian wrapped around the sphere essentially and\N在这种情况可以想象成一个包裹在球面上的高斯分布；
+Dialogue: 0,0:46:28.19,0:46:33.84,Sub,,0,0,0,,the flow goes along a geodeic which is the shortest path possible on the manifold and this flow is\N流沿着测地线进行，这是流形上可能的最短路径，而该流
+Dialogue: 0,0:46:33.89,0:46:39.48,Sub,,0,0,0,,defined on the tangent space at every single point by a vector field and then the principle is very similar.\N在每个点的切空间上由一个向量场定义，原理非常相似
+Dialogue: 0,0:46:39.53,0:46:42.42,Sub,,0,0,0,,You define a desired vector field on every single tangent space.\N你在每个切空间上定义一个期望的向量场
+Dialogue: 0,0:46:42.47,0:46:45.77,Sub,,0,0,0,,You match a neural network that you can condition an observation.\N你训练一个神经网络，可以根据观测条件进行调整
+Dialogue: 0,0:46:45.82,0:46:50.00,Sub,,0,0,0,,And then uh to integrate you actually need to use the exponential map that\N然后为了积分，你实际上需要使用指数映射
+Dialogue: 0,0:46:50.05,0:46:53.74,Sub,,0,0,0,,will map the vector field on the tangent space onto the manifold of interest.\N将切空间上的向量场映射到感兴趣的流形上。
+Dialogue: 0,0:46:53.79,0:46:57.42,Sub,,0,0,0,,And when you do that you can actually handle big changes in orientation.\N这样做后，你实际上可以处理方向上的大幅变化。
+Dialogue: 0,0:46:57.47,0:47:04.59,Sub,,0,0,0,,So this is a remmanion flow matching policy trained again to rotate the mug and put it on the plate.\N因此这是一个黎曼流匹配策略，再次用于旋转杯子并将其放在盘子上。
+Dialogue: 0,0:47:04.64,0:47:10.29,Sub,,0,0,0,,So the flow matching policies that we just discussed handle geometric action spaces but they actually do not ensure safe behaviors.\N我们刚才讨论的流匹配策略能够处理几何动作空间，但它们实际上并不能保证安全行为。
+Dialogue: 0,0:47:10.34,0:47:14.78,Sub,,0,0,0,,So you can have these kind of issues uh where the the skill doesn't converge.\N所以你可能会遇到这类问题，即技能无法收敛。
+Dialogue: 0,0:47:14.83,0:47:22.43,Sub,,0,0,0,,So a common way to um ensure stability is to model robot motion as dynamical systems that you make stable by construction and here we\N一种常见的确保稳定性的方法是将机器人运动建模为通过构造保证稳定的动力学系统，而我们在这里
+Dialogue: 0,0:47:22.48,0:47:25.74,Sub,,0,0,0,,propose to model such dynamical systems via flow matching and to use\N建议通过流匹配来建模这类动力学系统，并利用
+Dialogue: 0,0:47:25.79,0:47:31.63,Sub,,0,0,0,,inductive bias coming from control theory to ensure stable convergence to an equilibrium.\N来自控制理论的归纳偏置，以确保稳定地收敛到平衡点。
+Dialogue: 0,0:47:31.68,0:47:34.98,Sub,,0,0,0,,So the main idea again in this case we are working on Lie groups.\N因此，这个案例的核心思想是我们在李群上工作。
+Dialogue: 0,0:47:35.03,0:47:39.79,Sub,,0,0,0,,You define an desired equilibrium on the manifolds and you define a leapono function by hand\N你在流形上定义一个期望的平衡点，并手动定义一个李雅普诺夫函数，
+Dialogue: 0,0:47:39.84,0:47:45.18,Sub,,0,0,0,,that essentially will define a set of admissible velocity at every single point in your manifold.\N它本质上会定义流形上每个点处允许的速度集合。
+Dialogue: 0,0:47:45.23,0:47:50.94,Sub,,0,0,0,,And then what we propose to do is to learn a constraint flow matching model that will give you some of those velocities and\N然后我们提出的方法是学习一个约束流匹配模型，以获得其中一些速度。
+Dialogue: 0,0:47:50.99,0:48:00.19,Sub,,0,0,0,,essentially when you then obtain uh the flow from this vector field you will um converge with guarantees to the stable point on the manifold.\N本质上，当你从这个向量场获得流动时，你将保证收敛到流形上的稳定点。
+Dialogue: 0,0:48:00.24,0:48:02.93,Sub,,0,0,0,,Um the issue here is that if we have a simple yapon of function that\N这里的问题是，如果我们有一个简单的李雅普诺夫函数，
+Dialogue: 0,0:48:02.98,0:48:08.23,Sub,,0,0,0,,allows us to have this admissible velocity set um they may only encode limited dynamic behaviors.\N虽然能实现允许的速度集合，但它们可能仅能编码有限的动态行为。
+Dialogue: 0,0:48:08.28,0:48:13.07,Sub,,0,0,0,,So we want to increase expressivity and we can do so by learning an additional deformism that\N因此我们希望提高表达能力，可以通过学习一个额外的微分同胚来实现，
+Dialogue: 0,0:48:13.12,0:48:20.83,Sub,,0,0,0,,will move us from this simple dynamical system to something more complex that can match uh complex demonstrations.\N从而将我们从这个简单的动力系统转移到更复杂的系统，以匹配复杂的示范。
+Dialogue: 0,0:48:20.88,0:48:24.32,Sub,,0,0,0,,And what is really cool is that those stable flow matching dynamical system they are then\N真正酷的是，这些稳定的流匹配动力系统能够
+Dialogue: 0,0:48:24.37,0:48:30.33,Sub,,0,0,0,,able to combine the stability and expressivity of flow matching with formal stability guarantees from control theory.\N结合流匹配的稳定性和表达能力，以及控制理论中的形式化稳定性保证。
+Dialogue: 0,0:48:30.38,0:48:35.67,Sub,,0,0,0,,So essentially when you have new demonstration you can simply learn the flow matching vector field and then\N所以本质上，当你获得新的示范时，只需学习流匹配向量场，然后
+Dialogue: 0,0:48:35.72,0:48:41.16,Sub,,0,0,0,,um whatever wherever you start in the space you will follow your demonstration and converge to a stable equilibrium.\N无论你在空间中的哪个位置开始，你都将沿着示范前进，并收敛到一个稳定平衡点。
+Dialogue: 0,0:48:41.22,0:48:45.72,Sub,,0,0,0,,So we train such policies on the Lie group SE(3) to encode position and orientation.\N我们在李群 SE(3) 上训练这类策略，以编码位置和方向。
+Dialogue: 0,0:48:45.77,0:48:53.49,Sub,,0,0,0,,You see here two different types of examples and you can see that regardless of where we start we actually converge always to the equilibrium point.\N你在这里看到两种不同类型的例子，可以看到，无论我们从何处开始，最终都会收敛到平衡点。
+Dialogue: 0,0:48:53.54,0:48:57.37,Sub,,0,0,0,,So to the goal here uh and those policies are also stable to preservation.\N所以目标是这里；这些策略对扰动也稳定。
+Dialogue: 0,0:48:57.42,0:49:02.59,Sub,,0,0,0,,We show that in the paper that you can see below.\N我们在下面这篇论文中展示了这一点。
+Dialogue: 0,0:49:02.64,0:49:06.70,Sub,,0,0,0,,So in general we would like to even more enhance the generalizability of such systems and\N因此，一般来说，我们希望进一步提升这类系统的泛化能力。
+Dialogue: 0,0:49:06.75,0:49:12.29,Sub,,0,0,0,,here we approach that through the lens of symmetries using uh on top of geometry group theory.\N在这里，我们通过几何群论的视角，利用对称性来实现这一目标。
+Dialogue: 0,0:49:12.34,0:49:15.97,Sub,,0,0,0,,So the main idea of symmetries for robot learning is to use either\N机器人学习中对称性的核心思想是使用
+Dialogue: 0,0:49:16.02,0:49:20.47,Sub,,0,0,0,,data augmentation or equivalent neural network to generalize the behavior of a policy.\N数据增强或等效神经网络，以泛化策略的行为。
+Dialogue: 0,0:49:20.52,0:49:25.53,Sub,,0,0,0,,So for example, if your robot learns how to pick a mug with a given orientation of the handle,\N例如，如果您的机器人学会了以特定手柄朝向抓取一个马克杯，
+Dialogue: 0,0:49:25.58,0:49:30.27,Sub,,0,0,0,,if you use such a network, you will be able to pick the mug with any types of orientation.\N如果使用这种网络，您就能以任何朝向抓取该马克杯。
+Dialogue: 0,0:49:30.32,0:49:32.11,Sub,,0,0,0,,So there are many other symmetries in robotics.\N机器人领域还有许多其他对称性。
+Dialogue: 0,0:49:32.16,0:49:36.67,Sub,,0,0,0,,You can think about for example scaling the mug where you want to learn to pick mugs that are smaller or bigger.\N例如，您可以考虑缩放马克杯，学习抓取更小或更大的马克杯。
+Dialogue: 0,0:49:36.72,0:49:44.59,Sub,,0,0,0,,Or you may also want to have a policy trained on one of the arms of the robot and be able to replicate it immediately with the other arm.\N或者，您可能希望在机器人的一条手臂上训练策略，然后立即在另一条手臂上复现。
+Dialogue: 0,0:49:44.64,0:49:50.59,Sub,,0,0,0,,Um so such policies are well developed in the literature but they typically handle only one single symmetry at a time.\N这类策略在文献中已有充分研究，但通常只能处理单一的对称性。
+Dialogue: 0,0:49:50.64,0:49:56.65,Sub,,0,0,0,,Although many many tasks actually will benefit from taking into account several of those symmetries at the same time.\N尽管许多任务实际上会从同时考虑多个对称性中获益。
+Dialogue: 0,0:49:56.70,0:50:00.43,Sub,,0,0,0,,So what we wanted to see here is if we can compose all those different\N所以我们想在这里看到的是，能否将所有这些不同的对称性组合起来
+Dialogue: 0,0:50:00.48,0:50:05.09,Sub,,0,0,0,,symmetries and in general this is difficult because the symmetry arise in different types of spaces.\N一般来说，这很困难，因为对称性出现在不同类型的空间中
+Dialogue: 0,0:50:05.14,0:50:11.54,Sub,,0,0,0,,So if you think here about the planer rotation and the scaling both of them arise in the task space they are concerned about the object and um if\N所以如果你考虑平面旋转和缩放，它们都出现在任务空间中，都与物体有关
+Dialogue: 0,0:50:11.59,0:50:15.61,Sub,,0,0,0,,you think then about the the morphological symmetry here that generalizes to the left\N然后如果你再考虑这里的形态对称性，它推广到左右手臂
+Dialogue: 0,0:50:15.66,0:50:20.59,Sub,,0,0,0,,and the right arm this arise in the configuration space of your system at hand.\N这种对称性出现在你当前系统的构型空间中
+Dialogue: 0,0:50:20.64,0:50:26.84,Sub,,0,0,0,,So what we propose to do is to view symmetries through the lens of vector field where we essentially define uh a vector\N我们提出的方法是通过向量场的视角来看待对称性，本质上定义一个向量场
+Dialogue: 0,0:50:26.90,0:50:32.10,Sub,,0,0,0,,field that tells you how here in this case the mug is rotating according to the symmetry and then what we can do is\N它告诉你，在这种情况下，杯子如何根据对称性旋转，然后我们可以
+Dialogue: 0,0:50:32.14,0:50:40.44,Sub,,0,0,0,,to use the geometry of the forward kinematic map to lift this vector field horizontally onto the configuration space and this essentially tells you\N利用正向运动学映射的几何结构，将这个向量场水平提升到构型空间，这实际上告诉你
+Dialogue: 0,0:50:40.49,0:50:47.26,Sub,,0,0,0,,how the configuration of the robot will change when you want to have the mock um to handle the mug rotated in different ways.\N当你想让杯子以不同方式旋转时，机器人的构型将如何变化
+Dialogue: 0,0:50:47.31,0:50:50.44,Sub,,0,0,0,,We can do the same uh in this case for the scaling.\N我们可以在这个情况下对缩放做同样的操作
+Dialogue: 0,0:50:50.49,0:50:57.21,Sub,,0,0,0,,And once we have all um the vector field in the same space, we can simply combine them by composing the different vector fields.\N一旦我们把所有向量场都放在同一个空间中，就可以简单地通过组合不同的向量场来合并它们
+Dialogue: 0,0:50:57.26,0:51:02.35,Sub,,0,0,0,,And with that, you can actually handle uh symmetries in a composition.\N通过这种方式，你实际上可以以组合的方式处理对称性
+Dialogue: 0,0:51:02.40,0:51:07.45,Sub,,0,0,0,,So we have now here an example where my PhD student is demonstrating the robot how to um draw a\N现在这里有一个例子，我的博士生正在向机器人演示如何画图。
+Dialogue: 0,0:51:07.50,0:51:12.00,Sub,,0,0,0,,C letter with the left arm of the robot and an N letter with the right arm of the robot.\N机器人左臂摆出C字母，右臂摆出N字母。
+Dialogue: 0,0:51:12.05,0:51:13.90,Sub,,0,0,0,,And we learn a policy based on this.\N我们基于此学习一种策略。
+Dialogue: 0,0:51:13.95,0:51:16.66,Sub,,0,0,0,,And what we can do then is data augmentation.\N那么我们能做的就是数据增强。
+Dialogue: 0,0:51:16.72,0:51:21.57,Sub,,0,0,0,,And essentially then the robot is able to replicate exactly the same skill but with rotation of the letters,\N本质上，机器人能够完全复制相同的技能，只是字母的朝向发生了旋转。
+Dialogue: 0,0:51:21.62,0:51:26.32,Sub,,0,0,0,,scaling of the letters and also swapping the rolls of the two arms for this task.\N调整字母的大小，并在这项任务中交换两臂的角色。
+Dialogue: 0,0:51:26.37,0:51:32.43,Sub,,0,0,0,,And here the only demonstration that recorded are the one that you see on the top right.\N此处唯一记录下来的演示，就是您在右上角看到的那一个。
+Dialogue: 0,0:51:32.48,0:51:40.51,Sub,,0,0,0,,So here composing symmetries leads to enhanced generalizability of the skills and also more data efficiency.\N因此，通过组合对称性，可以提升技能的泛化能力，同时提高数据使用效率。
+Dialogue: 0,0:51:40.56,0:51:45.71,Sub,,0,0,0,,So here I showed you example of how geometry allows us to learn robot skills involving full poses and how when we\N因此，我向你们展示了几何如何帮助我们学习涉及完整位姿的机器人技能，以及当
+Dialogue: 0,0:51:45.76,0:51:53.79,Sub,,0,0,0,,combine it with inductive biases from control and from group theory it also leads to stable generalizable and data efficient robot policies.\N结合控制论和群论的归纳偏置，还能带来稳定、可泛化且数据高效的机器人策略。
+Dialogue: 0,0:51:53.84,0:51:56.83,Sub,,0,0,0,,So for the second part of the talk I would like to turn our attentions\N接下来，我想把话题转向演讲的第二部分
+Dialogue: 0,0:51:56.88,0:52:01.86,Sub,,0,0,0,,to the objects that the robot has to manipulate and specifically focusing on deformable objects.\N针对机器人需要操作的物体，特别是可变形物体。
+Dialogue: 0,0:52:01.91,0:52:07.87,Sub,,0,0,0,,So when we want to manipulate such objects essentially what we typically do is that we build a model.\N因此当我们想要操作这类物体时，通常的做法是建立一个模型。
+Dialogue: 0,0:52:07.92,0:52:12.43,Sub,,0,0,0,,So here the idea is that given the position the velocity of your object and the force you\N这里的思路是，给定物体的位置、速度以及你施加的力，
+Dialogue: 0,0:52:12.48,0:52:16.00,Sub,,0,0,0,,are applying onto it you would like to know what is the acceleration that the object is going\N你希望知道物体将产生的加速度是多少。
+Dialogue: 0,0:52:16.05,0:52:20.03,Sub,,0,0,0,,to take and once you have such a model simply what we can do is to infer which\N一旦有了这样的模型，我们就可以推断出
+Dialogue: 0,0:52:20.08,0:52:25.31,Sub,,0,0,0,,is the force that we need to apply on the object such that it follows a desired trajectory.\N为了使物体沿预期轨迹运动，需要施加多大的力。
+Dialogue: 0,0:52:25.36,0:52:30.91,Sub,,0,0,0,,What is really difficult with deformable objects is that they have high or even infinite dimensional configuration spaces\N对于可变形物体而言，真正困难的是它们具有高维甚至无限维的构型空间，
+Dialogue: 0,0:52:30.96,0:52:37.71,Sub,,0,0,0,,which mean they have basically infinite degrees of freedom and they also have nonlinear and very complex dynamics.\N这意味着它们基本上具有无限自由度，且动力学特性非线性且非常复杂。
+Dialogue: 0,0:52:37.76,0:52:44.68,Sub,,0,0,0,,So what we propose to do here is to take inductive bias from geometry but also from physics and to account for the fact that those\N因此我们在这里提出的方法是，从几何和物理中引入归纳偏置，并考虑到这些
+Dialogue: 0,0:52:44.73,0:52:49.00,Sub,,0,0,0,,objects follow langian dynamics which can be represented on a high dimensional remmanion\N物体遵循拉格朗日动力学，这种动力学可以在一个高维黎曼流形上表示，
+Dialogue: 0,0:52:49.05,0:52:53.71,Sub,,0,0,0,,manifold that is completely described by the mass inertia matrix of your system.\N该流形完全由系统的质量惯性矩阵描述。
+Dialogue: 0,0:52:53.76,0:52:56.66,Sub,,0,0,0,,So essentially what we'd like to do is to have we have this\N因此我们本质上希望拥有这样一个
+Dialogue: 0,0:52:56.71,0:53:00.52,Sub,,0,0,0,,unknown highdimensional langent dynamics and we would like to learn the parameters of that.\N未知的高维拉格朗日动力学模型，并希望学习该模型的参数。
+Dialogue: 0,0:53:00.57,0:53:06.99,Sub,,0,0,0,,So what we propose to do here is to take the manifold hypothesis and to approximate trajectories on this highdimensional\N因此，我们在这里提出的方法是，基于流形假设，对高维空间中的轨迹进行近似。
+Dialogue: 0,0:53:07.04,0:53:14.83,Sub,,0,0,0,,manifold on which the langian dynamics are evolving by trajectories on a much lower dimensional manifold that keeps the same structure.\N流形上，拉格朗日动力学通过一个维度低得多的流形上的轨迹演化，同时保持相同的结构。
+Dialogue: 0,0:53:14.88,0:53:23.23,Sub,,0,0,0,,So essentially we want to approximate our high dimensional Lagrangian dynamics by much lower dimensional Lagrangian dynamics again.\N本质上，我们希望用更低维的拉格朗日动力学来近似高维拉格朗日动力学。
+Dialogue: 0,0:53:23.28,0:53:25.63,Sub,,0,0,0,,So we need two key elements to do that.\N所以我们需要两个关键要素来实现这一点。
+Dialogue: 0,0:53:25.68,0:53:28.48,Sub,,0,0,0,,The first one is an encoder decoder framework.\N第一个是编码器-解码器框架。
+Dialogue: 0,0:53:28.53,0:53:36.03,Sub,,0,0,0,,So here we use a geometric biorthogonal autoencoder where essentially the geometry that you have in this autoencoder allows you to\N因此我们使用一种几何双正交自编码器，本质上，这个自编码器中的几何结构使你能够
+Dialogue: 0,0:53:36.08,0:53:42.14,Sub,,0,0,0,,maintain the langion structure um that we know arise in the high dimensional space but into the latent space in that case.\N保持我们所知的高维空间中的拉格朗日结构，映射到该情况下的潜空间中。
+Dialogue: 0,0:53:42.19,0:53:46.51,Sub,,0,0,0,,Um and here the parameters of this autoenccoder are um points on the\N嗯，这里的自编码器参数是黎曼流形上的点，
+Dialogue: 0,0:53:46.56,0:53:51.31,Sub,,0,0,0,,Riemannian manifolds and then we train all of these using actually Riemannian optimization.\N然后我们实际上用黎曼优化来训练它们。
+Dialogue: 0,0:53:51.36,0:53:55.24,Sub,,0,0,0,,The second key element is what allows you to learn the dynamics in the latent space.\N第二个关键要素是让你能够学习潜在空间中动态变化的机制。
+Dialogue: 0,0:53:55.29,0:53:57.15,Sub,,0,0,0,,It is a geometric Lagrangian neural network.\N这是一个几何拉格朗日神经网络。
+Dialogue: 0,0:53:57.20,0:54:01.18,Sub,,0,0,0,,So again inductive biases from geometry and from physics and here we account for the\N因此，我们再次引入几何和物理带来的归纳偏置，而在这里我们对此进行了考量。
+Dialogue: 0,0:54:01.23,0:54:05.65,Sub,,0,0,0,,fact that the mass inertia matrix belong to the manifold of symmetric positive definite matrices.\N质量惯性矩阵属于对称正定矩阵流形的事实。
+Dialogue: 0,0:54:05.70,0:54:08.08,Sub,,0,0,0,,So again we train this via remmanion optimization.\N因此，我们再次通过黎曼优化来训练它。
+Dialogue: 0,0:54:08.13,0:54:13.77,Sub,,0,0,0,,And what is really cool here is that the physical laws of our highdimensional deformable\N真正酷的是，这里的物理定律适用于我们高维度的可变形系统。
+Dialogue: 0,0:54:13.82,0:54:19.07,Sub,,0,0,0,,objects are completely preserved here both by the geometric mappings and the latent geometric Lagrangian neural network.\N物体在这里通过几何映射和潜空间几何拉格朗日神经网络得到了完全保留。
+Dialogue: 0,0:54:19.12,0:54:24.99,Sub,,0,0,0,,So you are guaranteed that whatever your model is actually predicting follows the laws of physics.\N因此，你的模型实际预测的结果必然遵循物理定律。
+Dialogue: 0,0:54:25.04,0:54:31.58,Sub,,0,0,0,,So here we have an example and this is simply comparing the geometric Lagrangian neural network with respect to a classical neural network for a\N这里我们有一个例子，这是将几何拉格朗日神经网络与经典神经网络进行对比。
+Dialogue: 0,0:54:31.63,0:54:34.73,Sub,,0,0,0,,two degrees of freedom pendalum system and you see that after a\N二自由度摆系统，你可以看到，经过一段时间后
+Dialogue: 0,0:54:34.78,0:54:39.45,Sub,,0,0,0,,few seconds the classical neural network starts diverging while the geometric one doesn't.\N几秒钟后，经典神经网络开始发散，而几何神经网络则不会。
+Dialogue: 0,0:54:39.50,0:54:42.89,Sub,,0,0,0,,Um and we also learn here with much more data efficiency.\N而且我们在这里还能实现更高的数据效率。
+Dialogue: 0,0:54:42.94,0:54:46.19,Sub,,0,0,0,,So you can check again the referred paper for that.\N你可以再次查阅文中提到的论文。
+Dialogue: 0,0:54:46.24,0:54:47.93,Sub,,0,0,0,,We can then move to high dimensional systems.\N然后我们可以转向高维系统。
+Dialogue: 0,0:54:47.98,0:54:53.05,Sub,,0,0,0,,So here we have this 600 degrees of freedom cloth that we approximate with a 10-dimensional latent space.\N这里我们有一个600个自由度的布料，通过一个10维的潜空间来近似。
+Dialogue: 0,0:54:53.10,0:54:59.31,Sub,,0,0,0,,And you see that our model is actually very nicely able to model the dynamics of the cloth.\N你会发现，我们的模型实际上能够很好地模拟布料的动力学特性。
+Dialogue: 0,0:54:59.36,0:55:04.68,Sub,,0,0,0,,And here again this is really thanks to the geometry that we have both in the mappings and in the Lagrangian neural network.\N这里再次得益于我们在映射和拉格朗日神经网络中所采用的几何结构。
+Dialogue: 0,0:55:04.73,0:55:10.35,Sub,,0,0,0,,If we don't have the geometry I cannot even show you here what this will actually give.\N如果没有这种几何结构，我甚至无法向你展示这会实际产生什么效果。
+Dialogue: 0,0:55:10.40,0:55:14.91,Sub,,0,0,0,,What is also really nice with those models is that we can then make use of the learn latent space for control.\N这些模型还有一个优点，就是我们可以利用学习到的隐空间来进行控制。
+Dialogue: 0,0:55:14.96,0:55:19.17,Sub,,0,0,0,,First by defining a desired trajectory um that we know in the high dimensional space\N首先，定义一个我们已知的高维空间中的期望轨迹，
+Dialogue: 0,0:55:19.22,0:55:22.75,Sub,,0,0,0,,onto the latent space and then we can apply in this case a simple PD\N映射到隐空间，然后在此情况下应用一个简单的PD
+Dialogue: 0,0:55:22.80,0:55:27.63,Sub,,0,0,0,,plus controller in the latent space which is composed of a forward fit forward term\N加控制器，该控制器由前向拟合项构成，
+Dialogue: 0,0:55:27.68,0:55:33.16,Sub,,0,0,0,,um made of the learned latent dynamic and of a latent um proportional derivative term.\N前向项基于学习到的隐空间动力学，以及一个隐空间的比例微分项。
+Dialogue: 0,0:55:33.21,0:55:36.62,Sub,,0,0,0,,And then once we have the desired control comment in latent space,\N一旦我们获得了隐空间中的期望控制指令，
+Dialogue: 0,0:55:36.67,0:55:41.30,Sub,,0,0,0,,we can map it back onto the high dimension space based on the mappings that we learned.\N我们就可以根据所学习的映射关系将其映射回高维空间。
+Dialogue: 0,0:55:41.35,0:55:45.72,Sub,,0,0,0,,The big advantage of this approach is that we can derive control guarantees on it.\N这种方法的最大优势在于，我们能够为其提供控制保证。
+Dialogue: 0,0:55:45.77,0:55:49.72,Sub,,0,0,0,,So essentially here this method is locally exponential input to state stabil\N因此，本质上，该方法在局部具有指数型输入到状态稳定性。
+Dialogue: 0,0:55:49.77,0:55:56.51,Sub,,0,0,0,,stable which means that your error is decreasing exponentially and is upper bounded.\N稳定，意味着你的误差呈指数下降且有上界。
+Dialogue: 0,0:55:56.56,0:56:01.39,Sub,,0,0,0,,So you can see here in example we learned a model of a pendulum mesh system of 15 degrees of freedom.\N你看，这里我们学习了一个15自由度摆动网格系统的模型。
+Dialogue: 0,0:56:01.44,0:56:02.68,Sub,,0,0,0,,We reduced it to three.\N我们将其简化为三个自由度。
+Dialogue: 0,0:56:02.73,0:56:06.90,Sub,,0,0,0,,And here we are aiming at tracking the black circle that you see uh in the background.\N这里我们旨在跟踪你看到的背景中的黑色圆圈。
+Dialogue: 0,0:56:06.96,0:56:15.15,Sub,,0,0,0,,And you see that again our controller is much better able to track the circle compared to a model that doesn't have any idea about uh the dynamics.\N你可以看到，我们的控制器相比那些完全不了解动力学特性的模型，能更出色地跟踪该圆圈。
+Dialogue: 0,0:56:15.20,0:56:17.66,Sub,,0,0,0,,We can go also to more complex real world system.\N我们也可以扩展到更复杂的现实世界系统。
+Dialogue: 0,0:56:17.71,0:56:22.17,Sub,,0,0,0,,So here we had an underactuated plush monkey puppet manipulated by the robot.\N这里我们有一个由机器人操控的欠驱动毛绒猴子玩偶。
+Dialogue: 0,0:56:22.22,0:56:22.46,Sub,,0,0,0,,Um,\N嗯，
+Dialogue: 0,0:56:22.49,0:56:29.15,Sub,,0,0,0,,so the state of the monkey is obtained via RGBD video measurement and then we control it via the 3D angular velocity input\N猴子的状态通过RGBD视频测量获得，然后我们通过机器人的三维角速度输入来控制它。
+Dialogue: 0,0:56:29.20,0:56:35.52,Sub,,0,0,0,,of the robot and we aim at regulating the pose of the puppets um towards the blue shade that you can see here.\N我们的目标是将玩偶的姿态调节到你看到的蓝色区域。
+Dialogue: 0,0:56:35.56,0:56:46.19,Sub,,0,0,0,,And you can see that our controller is able to do that for a wide set of different initial condition and target regulation poses.\N你可以看到，我们的控制器能够针对一系列不同的初始条件和目标姿态调节成功。
+Dialogue: 0,0:56:46.24,0:56:51.68,Sub,,0,0,0,,Um based on that we actually wanted to investigate if we can truly account for the infinite dimensionality\N基于此，我们实际上想探究是否真正能够处理无限维特性。
+Dialogue: 0,0:56:51.73,0:56:57.67,Sub,,0,0,0,,of the deformable objects and we took inspiration from uh the dynamics of a continuum mechanics to do so.\N可变形物体，并且我们从连续介质力学的动力学中获得了灵感来实现这一点。
+Dialogue: 0,0:56:57.72,0:57:01.63,Sub,,0,0,0,,So essentially in that case we are going towards infinite dimensional manifolds.\N因此，在这种情况下，我们正朝着无限维流形迈进。
+Dialogue: 0,0:57:01.68,0:57:07.31,Sub,,0,0,0,,So the configuration manifold becomes an infinite dimensional so-called freshet manifold and the dynamics are\N因此，构型流形变成一个无限维的所谓流形，而动力学则
+Dialogue: 0,0:57:07.36,0:57:12.12,Sub,,0,0,0,,characterized on it by an infinite dimensional langian functional and then the idea is similar.\N通过一个无限维的拉格朗日泛函来刻画，其思想与此类似。
+Dialogue: 0,0:57:12.17,0:57:15.27,Sub,,0,0,0,,we define a finite dimensional langian latent space.\N我们定义了一个有限维的拉格朗日潜空间。
+Dialogue: 0,0:57:15.32,0:57:23.55,Sub,,0,0,0,,Um and in that case the mappings the geometric mappings allow allowing us for to go from infinite dimension to thin dimensions are made um via an a\N在这种情况下，几何映射使得我们能够从无限维到低维进行转换，这是通过一个
+Dialogue: 0,0:57:23.60,0:57:28.51,Sub,,0,0,0,,recent implicit neural field and the encoder is replaced by an auto decoding framework\N最近的隐式神经场实现的，编码器被替换为一个自解码框架。
+Dialogue: 0,0:57:28.56,0:57:33.15,Sub,,0,0,0,,and the latent space dynamics are learned very similarly as what we had before.\N潜空间的动力学学习方式与我们之前的方法非常相似。
+Dialogue: 0,0:57:33.20,0:57:38.81,Sub,,0,0,0,,What is really cool is that the lran general field that we obtain in that way are remain they remain physically consistent.\N真正酷的是，我们以这种方式获得的拉格朗日通用场仍然保持物理一致性。
+Dialogue: 0,0:57:38.86,0:57:44.67,Sub,,0,0,0,,we know that we learn um dynamics that obey the physical laws and they are also discretization agnostic.\N我们知道，我们学习到的动力学遵守物理定律，且与离散化无关。
+Dialogue: 0,0:57:44.72,0:57:47.79,Sub,,0,0,0,,So essentially it means that we can predict the dynamics at any point of\N因此，这意味着我们可以独立于训练模型所用的数据，
+Dialogue: 0,0:57:47.84,0:57:53.79,Sub,,0,0,0,,of the deformable object independently of the data that we had to train the model.\N预测可变形物体上任意点的动力学。
+Dialogue: 0,0:57:53.84,0:57:59.14,Sub,,0,0,0,,So we have here the example of learning the dynamics of a membrane or a kind of closelike object and you see that our lan\N所以这里我们展示了一个学习膜状物体或类似封闭物体动力学的例子，\N你可以看到我们的模型预测结果与真实情况非常接近。
+Dialogue: 0,0:57:59.19,0:58:09.63,Sub,,0,0,0,,general field predicts something that is very very close to the ground truth and you also see how the learn latent dynamics actually look like.\N普遍场预测的结果与真实值极为接近，你也能看到学习到的隐式动力学实际表现得如何。
+Dialogue: 0,0:58:09.68,0:58:17.23,Sub,,0,0,0,,So today I wanted to show you how robotics entails a plethora of geometries and inductive biases and how we can use it for many many many tasks.\N今天我想向大家展示机器人学涉及大量几何结构和归纳偏置，以及我们如何利用它们完成众多任务。
+Dialogue: 0,0:58:17.28,0:58:23.18,Sub,,0,0,0,,uh so we started with remmanion flow matching model and stable flow matching dynamical systems where we used remmanion geometry and le\N我们从黎曼流匹配模型和稳定流匹配动力系统入手，利用黎曼几何和李群理论，
+Dialogue: 0,0:58:23.23,0:58:32.81,Sub,,0,0,0,,group theory coupled with control theory to learn full pose scalable multimodel stable motion policies then to increase generalizability we saw how\N结合控制理论，学习全姿态、可扩展、多模态且稳定的运动策略；随后为了提升泛化能力，我们看到了如何
+Dialogue: 0,0:58:32.86,0:58:42.40,Sub,,0,0,0,,we can combine symmetries across spaces uh and this was using group theory coupled with symmetries and it led to generalizable efficient\N跨空间结合对称性，这通过群论与对称性结合实现，从而得到具有泛化能力且高效的
+Dialogue: 0,0:58:42.45,0:58:48.98,Sub,,0,0,0,,motion policies um and finally last but not least we had a look at how to learn the dynamics of um deformable objects.\N运动策略。最后但同样重要的是，我们探讨了如何学习可变形物体的动力学。
+Dialogue: 0,0:58:49.03,0:58:54.35,Sub,,0,0,0,,So here we showed the reduced order Lagrangian networks and Lagrangian fields and here we use Riemannian geometry\N这里我们展示了降阶的拉格朗日网络和拉格朗日场，同时使用了黎曼几何
+Dialogue: 0,0:58:54.40,0:59:02.99,Sub,,0,0,0,,coupled with physics and control theory to obtain scalable data efficient dynamic models um coupled with input to state stable controllers.\N结合物理和控制理论，获得了可扩展且数据高效的动态模型，并搭配了输入到状态稳定的控制器。
+Dialogue: 0,0:59:03.04,0:59:06.30,Sub,,0,0,0,,So I really hope that I managed to convince you a little bit today that geometry can\N我真心希望今天能让你稍微信服一点：几何可以
+Dialogue: 0,0:59:06.35,0:59:13.07,Sub,,0,0,0,,be a very powerful and expressive form of inductive bias that you can integrate in robot learning algorithms.\N成为一种强大且富有表现力的归纳偏置，可以融入机器人学习算法中。
+Dialogue: 0,0:59:13.12,0:59:17.15,Sub,,0,0,0,,And if you are actually interested in incorporating this into your research,\N如果你真的对将这一方法融入你的研究感兴趣，
+Dialogue: 0,0:59:17.20,0:59:23.36,Sub,,0,0,0,,um I'm very happy to announce that we released our book last Monday that you can find freely available online.\N嗯，我很高兴地宣布，我们的书上周一发布了，你可以在线免费获取。
+Dialogue: 0,0:59:23.41,0:59:26.23,Sub,,0,0,0,,You can download it by by having the QR code here.\N你可以通过扫描这里的二维码下载。
+Dialogue: 0,0:59:26.28,0:59:34.43,Sub,,0,0,0,,And this shows you essentially how you can apply Riemannian manifold theory to robot learning, optimization and control.\N这基本上展示了你如何将黎曼流形理论应用于机器人学习、优化和控制。
+Dialogue: 0,0:59:34.48,0:59:36.88,Sub,,0,0,0,,And with this, I would like to thank my team very much.\N借此机会，我想非常感谢我的团队。
+Dialogue: 0,0:59:36.93,0:59:42.57,Sub,,0,0,0,,They're actually all here in the front row if you want to catch up with them during the conference and talk to them about the research.\N他们实际上就坐在前排，如果你在会议期间想和他们交流，可以随时过去聊聊研究。
+Dialogue: 0,0:59:42.62,0:59:45.94,Sub,,0,0,0,,um they're really amazing people to work with and I also would like to to\N嗯，和他们共事真的非常棒，我也想特别
+Dialogue: 0,0:59:45.99,0:59:54.11,Sub,,0,0,0,,thank the funding agencies that are supporting our research and all of you for your attention.\N感谢支持我们研究的资助机构，以及各位的专注聆听。
+Dialogue: 0,0:59:54.16,0:59:58.51,Sub,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,0:59:58.56,0:59:59.66,Sub,,0,0,0,,Thank you very much.\N非常感谢。
+Dialogue: 0,0:59:59.71,1:00:00.75,Sub,,0,0,0,,That was fantastic.\N太棒了。
+Dialogue: 0,1:00:00.80,1:00:07.79,Sub,,0,0,0,,Um are there questions?\N嗯，有提问吗？
+Dialogue: 0,1:00:07.84,1:00:10.83,Sub,,0,0,0,,Yes, I can see.\N有，我看到了。
+Dialogue: 0,1:00:10.88,1:00:11.68,Sub,,0,0,0,,Great talk.\N太棒的演讲。
+Dialogue: 0,1:00:11.73,1:00:12.46,Sub,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,1:00:12.51,1:00:16.63,Sub,,0,0,0,,So these uh lowdimensional embeddings, they're great analytical and descriptive tools,\N所以这些低维嵌入，它们是很好的分析和描述工具，
+Dialogue: 0,1:00:16.68,1:00:21.52,Sub,,0,0,0,,but when you do control, the real system can move in the null space, right?\N但在进行控制时，实际系统会在零空间中运动，对吧？
+Dialogue: 0,1:00:21.57,1:00:24.67,Sub,,0,0,0,,And presumably you need some feedback control to keep it on your sub manifold.\N你大概需要一些反馈控制，以使其保持在子流形上。
+Dialogue: 0,1:00:24.72,1:00:27.39,Sub,,0,0,0,,So how do you do that?\N那么你该如何实现这一点？
+Dialogue: 0,1:00:27.44,1:00:31.48,Sub,,0,0,0,,So the the big advantage actually of this learning model is that the the mappings\N其实这种学习模型的最大优势在于，你所学习的映射
+Dialogue: 0,1:00:31.53,1:00:36.69,Sub,,0,0,0,,that you learn will naturally um learn the manifold where your object is moving the most.\N会自然地学习到物体运动最频繁的流形。
+Dialogue: 0,1:00:36.74,1:00:41.77,Sub,,0,0,0,,So essentially the the null space term will remain like small if your model is well well trained.\N因此，如果模型训练得当，零空间项将保持很小。
+Dialogue: 0,1:00:41.82,1:00:46.15,Sub,,0,0,0,,Um otherwise if you're you still need to compensate for that you can actually put\N否则，如果你仍需补偿这一点，实际上可以在零空间中加入
+Dialogue: 0,1:00:46.20,1:00:53.31,Sub,,0,0,0,,just some dissipative control term in the null space and that should cover for it.\N一些耗散控制项，这应该就能覆盖该问题。
+Dialogue: 0,1:00:53.36,1:00:53.95,Sub,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,1:00:54.00,1:00:59.40,Sub,,0,0,0,,Thank you for very beautiful theory uh which I think it's very powerful.\N非常感谢您精彩的理论，我认为它非常强大。
+Dialogue: 0,1:00:59.45,1:01:06.02,Sub,,0,0,0,,Um but uh um most of the challenging robotics programs are hybrid systems\N嗯，但大多数具有挑战性的机器人问题都是混合系统，
+Dialogue: 0,1:01:06.07,1:01:12.41,Sub,,0,0,0,,or switched systems where single differential equation can't actually describe the whole things.\N或切换系统，单个微分方程无法描述整个系统。
+Dialogue: 0,1:01:12.46,1:01:24.11,Sub,,0,0,0,,How is your method applicable to those very challenging things where the robot contact and break the contact and hybrid is very significant nature.\N您的方法如何适用于这些极具挑战性的情况，即机器人接触又脱离接触，混合特性非常显著的情况？
+Dialogue: 0,1:01:24.16,1:01:24.38,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,1:01:24.41,1:01:27.73,Sub,,0,0,0,,I I think some of the things you cannot necessarily represent by structure,\N我认为有些东西你无法通过结构来完全表达。
+Dialogue: 0,1:01:27.78,1:01:31.69,Sub,,0,0,0,,but you can always combine kind of a structured based model with some learning on top.\N但你总可以将一种基于结构的模型与上层的学习方法结合起来。
+Dialogue: 0,1:01:31.74,1:01:34.96,Sub,,0,0,0,,So I think if you don't have access to the full physical structure of your system,\N所以我认为，如果你无法获取系统的完整物理结构，
+Dialogue: 0,1:01:35.01,1:01:41.31,Sub,,0,0,0,,you can add like a residual that is going to take care of the part maybe you don't you cannot or you don't want to represent.\N你可以添加一个残差项，来处理那些你可能无法表示、或不想表示的部分。
+Dialogue: 0,1:01:41.36,1:01:45.15,Sub,,0,0,0,,So I think it's I will go in the direction of hybrid methods in that case.\N所以我认为在这种情况下，我会选择混合方法。
+Dialogue: 0,1:01:45.20,1:01:47.79,Sub,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,1:01:47.84,1:01:49.30,Sub,,0,0,0,,First of all, congratulations.\N首先，恭喜你。
+Dialogue: 0,1:01:49.35,1:01:50.30,Sub,,0,0,0,,Fantastic talk.\N非常精彩的演讲。
+Dialogue: 0,1:01:50.35,1:01:58.54,Sub,,0,0,0,,uh in your decoder encoder structure um you didn't mention maybe you are using but I mean it seems to me very logical to use\N嗯，在你的解码器-编码器结构中，你没有提到，但我觉得使用它非常合理。
+Dialogue: 0,1:01:58.58,1:02:03.63,Sub,,0,0,0,,exterior calculus because then you have discrete uh you know structure preserving\N外微分，因为这样你可以获得离散的、结构保持的。
+Dialogue: 0,1:02:03.68,1:02:07.55,Sub,,0,0,0,,discretizations which actually preserve the physics up to any any level you want\N离散化方法，这些方法实际上可以保持物理规律到你想要的任何程度。
+Dialogue: 0,1:02:07.60,1:02:13.69,Sub,,0,0,0,,to have you are you using that are you planning to use that we are not using that yet but actually we will be interested\N你们在用吗？或者计划用吗？
+Dialogue: 0,1:02:13.74,1:02:21.41,Sub,,0,0,0,,in in getting a little bit into that I think we have to talk yeah thanks thanks again for the thanks Thanks again for the talk.\N我们目前还没用，但其实很感兴趣，会稍微深入了解一下。我想我们需要谈谈。再次感谢你的演讲。
+Dialogue: 0,1:02:21.46,1:02:30.43,Sub,,0,0,0,,My question is regarding if if you are working on such high dimensions how they're able to behave in front of outliers and if\N我的问题是，如果你们在处理如此高维度的情况，它们如何应对异常值，以及是否受到维度诅咒的影响。
+Dialogue: 0,1:02:30.48,1:02:39.95,Sub,,0,0,0,,you're affected from the curse of dimensionality like as more dimension you insert the higher and the more difficult is to learn the state system.\N随着维度增加，学习状态系统的难度会越来越高，越来越难。
+Dialogue: 0,1:02:40.00,1:02:45.63,Sub,,0,0,0,,Um so with with those dynamics model that you learn you're always kind of robust in a region around your training data.\N用你们学习到的动力学模型，通常在训练数据附近的区域具有一定的鲁棒性。
+Dialogue: 0,1:02:45.68,1:02:50.11,Sub,,0,0,0,,When you go too much out of distribution you don't really know what's going to happen.\N当你偏离训练数据分布太远时，就很难预测会发生什么。
+Dialogue: 0,1:02:50.16,1:02:58.50,Sub,,0,0,0,,uh in in terms of scaling with the dimension essentially the the main challenge is to know how many dimension you should give to your latent space.\N从维度扩展的角度来看，主要挑战在于确定应该给潜在空间多少维度。
+Dialogue: 0,1:02:58.55,1:03:06.22,Sub,,0,0,0,,So the more complex behaviors you need to encode in high dimension you need to add more dimensions in the latent space essentially.\N所以，你需要在高维度中编码越复杂的动作，就需要在潜在空间中增加越多的维度。
+Dialogue: 0,1:03:06.27,1:03:13.95,Sub,,0,0,0,,But if you know that your system is correlated in some dimensions then you kind of have an idea of how big your latent space should be.\N但如果你知道你的系统在某些维度上存在相关性，那么你就能大致判断出潜在空间的大小应该有多大。
+Dialogue: 0,1:03:14.00,1:03:16.59,Sub,,0,0,0,,So it becomes like a hyperparameter.\N所以它就变成一个超参数。
+Dialogue: 0,1:03:16.64,1:03:19.28,Sub,,0,0,0,,Yes. essentially.\N是的，本质上是这样。
+Dialogue: 0,1:03:19.33,1:03:20.03,Sub,,0,0,0,,Yes.\N是的。
+Dialogue: 0,1:03:20.08,1:03:26.81,Sub,,0,0,0,,Thank you\N谢谢。
+Dialogue: 0,1:03:26.86,1:03:34.27,Sub,,0,0,0,,very much.\N非常感谢。
+Dialogue: 0,1:03:34.32,1:03:34.61,Sub,,0,0,0,,Good.\N很好。
+Dialogue: 0,1:03:34.64,1:03:40.55,Sub,,0,0,0,,So then it's my pleasure to welcome uh Paolo Robuffo Giordano.\N那么，我很荣幸地欢迎保罗·罗布富·乔尔达诺。
+Dialogue: 0,1:03:40.60,1:03:41.23,Sub,,0,0,0,,Yes.\N是的。
+Dialogue: 0,1:03:41.28,1:03:51.69,Sub,,0,0,0,,So Paolo is a CNRS senior research scientist in IRISA in Rennes, France uh where he directs the Rainbow team, a joint team between IRISA and Inria and he\N保罗是位于法国雷恩的IRISA研究中心的高级研究员，\N他领导着IRISA与Inria联合成立的Rainbow团队，同时
+Dialogue: 0,1:03:51.74,1:03:56.93,Sub,,0,0,0,,is the recipient of the 2019 Michel Monpetit Award from the French Academy of\N他荣获了法国科学院颁发的2019年米歇尔·蒙佩蒂奖。
+Dialogue: 0,1:03:56.98,1:04:03.14,Sub,,0,0,0,,Science and a distinguished lecturer from the IEEE RAS technical committee multi-robot systems.\N并且是IEEE RAS多机器人系统技术委员会的杰出讲师。
+Dialogue: 0,1:04:03.19,1:04:03.87,Sub,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,1:04:03.92,1:04:09.41,Sub,,0,0,0,,Thank you very much.\N非常感谢。
+Dialogue: 0,1:04:09.46,1:04:10.99,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,1:04:11.04,1:04:14.81,Sub,,0,0,0,,So, uh I'll try to not be too late for lunch.\N所以，呃，我会尽量别迟到吃午饭。
+Dialogue: 0,1:04:14.86,1:04:21.08,Sub,,0,0,0,,So, I want to start with acknowledgement because this as the title suggests has been a journey for me.\N所以，我想先致谢，因为正如标题所示，这对我而言是一段旅程。
+Dialogue: 0,1:04:21.13,1:04:26.02,Sub,,0,0,0,,So, we started on this activity a long time ago with a colleague of mine Antonio Franchi.\N我们很久以前就和我的同事 Antonio Franchi 开始了这项工作。
+Dialogue: 0,1:04:26.07,1:04:33.18,Sub,,0,0,0,,At the time we didn't think that we could achieve what what we achieved and it has been thanks to all these people.\N当时我们并不认为能取得今天这样的成果，这一切都要感谢在座的各位。
+Dialogue: 0,1:04:33.23,1:04:37.63,Sub,,0,0,0,,I think I didn't forget anyone who with the discussions their work and so forth.\N我觉得我没漏掉任何一位参与讨论、贡献工作的人。
+Dialogue: 0,1:04:37.68,1:04:40.53,Sub,,0,0,0,,So thanks to everyone and you may notice there is still a free spot.\N所以，谢谢大家，你们可能也注意到，还有一个空位。
+Dialogue: 0,1:04:40.58,1:04:43.11,Sub,,0,0,0,,I mean in case everyone is interested in working this topic.\N我的意思是，如果大家有兴趣参与这个话题。
+Dialogue: 0,1:04:43.16,1:04:45.23,Sub,,0,0,0,,So you're free to join.\N那么欢迎随时加入。
+Dialogue: 0,1:04:45.28,1:04:45.61,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:04:45.64,1:04:47.39,Sub,,0,0,0,,So uh what is the motivation?\N那么，动机是什么呢？
+Dialogue: 0,1:04:47.44,1:04:56.35,Sub,,0,0,0,,Motivation is that as we all know uh in robotics we have to deal with uncertainties and uncertainties can be in perception in modeling and so forth.\N动机在于，正如我们所知，在机器人领域，我们必须应对各种不确定性，\N这些不确定性可能出现在感知、建模等方面。
+Dialogue: 0,1:04:56.40,1:04:59.14,Sub,,0,0,0,,So we focus mostly on modeling uncertainties.\N因此，我们主要关注建模中的不确定性。
+Dialogue: 0,1:04:59.19,1:05:01.70,Sub,,0,0,0,,So a robot is a model of itself of the environment.\N机器人本质上是对自己和环境的建模。
+Dialogue: 0,1:05:01.75,1:05:08.04,Sub,,0,0,0,,This model is uncertain by construction then it has to do to deal with this uncertainty for taking decisions.\N这个模型从构建之初就带有不确定性，因此必须应对这种不确定性以做出决策。
+Dialogue: 0,1:05:08.09,1:05:08.49,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:05:08.54,1:05:14.30,Sub,,0,0,0,,So what are the possible approaches and in general people take or took in robotics.\N那么可能的应对方法有哪些？通常人们在机器人领域会采用或曾经采用过哪些方法？
+Dialogue: 0,1:05:14.35,1:05:20.17,Sub,,0,0,0,,So you can uh try to have a fancy controller policy that is able to deal with uncertainty.\N你可以尝试设计一个复杂的控制器或策略，使其能够应对不确定性。
+Dialogue: 0,1:05:20.22,1:05:27.38,Sub,,0,0,0,,The point here is that you can but this can be sometimes cumbersome or hard to implement and sometimes you don't want to do that.\N这里的关键是，虽然你可以这么做，但有时会很繁琐或难以实现，有时你也不希望这么做。
+Dialogue: 0,1:05:27.43,1:05:27.95,Sub,,0,0,0,,In what sense?\N什么意思？
+Dialogue: 0,1:05:28.00,1:05:32.45,Sub,,0,0,0,,the sense that sometimes you get a robot with has already a controller and that's it.\N意思是，有时你得到的机器人已经自带控制器，仅此而已。
+Dialogue: 0,1:05:32.50,1:05:33.42,Sub,,0,0,0,,You cannot change it.\N你无法更改它。
+Dialogue: 0,1:05:33.47,1:05:34.82,Sub,,0,0,0,,You have to work with what you have.\N你必须利用手头现有的东西。
+Dialogue: 0,1:05:34.87,1:05:37.03,Sub,,0,0,0,,Okay, so this is not always possible.\N好吧，这并不总是可行的。
+Dialogue: 0,1:05:37.08,1:05:43.01,Sub,,0,0,0,,Okay, then you may seek strong guarantees from the us of a specific policy or controller.\N那么你可能需要从特定策略或控制器中获得强保证。
+Dialogue: 0,1:05:43.06,1:05:49.16,Sub,,0,0,0,,And this the problem here is that many times it is possible if you simplify your model because so you're saying I want strong guarantees but then\N这里的问题是，如果你简化模型，很多时候是可行的，因为你要求强保证，但
+Dialogue: 0,1:05:49.22,1:05:56.22,Sub,,0,0,0,,I have to use a simplified model and then your guarantees are not that strong you know in practice and also you have to invent many times something.\N你必须使用简化模型，那么你的保证在实践中就不是那么强了，而且你往往还需要发明很多东西。
+Dialogue: 0,1:05:56.27,1:06:03.07,Sub,,0,0,0,,like some quantities, some function, contraction metric and this is also not always possible then you want to compute\N比如一些量、函数、收缩度量，这同样并不总是可行的，然后你想要计算
+Dialogue: 0,1:06:03.12,1:06:10.89,Sub,,0,0,0,,computational feasibility and this again can be manageable only for simplified models okay and another point that I think many people\N计算可行性，而这再次只能在简化模型下才可管理，好吧，另一个我认为很多人
+Dialogue: 0,1:06:10.94,1:06:19.03,Sub,,0,0,0,,take is to say my uncertainty is a generic perturbation like you know an additive process noise something like that this\N会认为的是，我的不确定性是一种通用扰动，比如你知道的加性过程噪声之类的东西，这
+Dialogue: 0,1:06:19.08,1:06:27.05,Sub,,0,0,0,,simplifies the math but then you don't have any structure and then your uncertainty prediction will be very very conservative Okay.\N简化了数学，但你没有结构，那么你的不确定性预测就会非常非常保守。
+Dialogue: 0,1:06:27.10,1:06:33.45,Sub,,0,0,0,,So, so what we try to do, so we try to have a method which is um which has a general applicability.\N所以，我们尝试做的是，我们试图找到一种具有通用适用性的方法。
+Dialogue: 0,1:06:33.50,1:06:38.37,Sub,,0,0,0,,So that doesn't require any unnecessary simplification of the model of the robot.\N这样就不需要对机器人模型进行任何不必要的简化。
+Dialogue: 0,1:06:38.42,1:06:42.67,Sub,,0,0,0,,Whatever it is, we can use it under some assumptions.\N无论是什么，我们都可以在某些假设下使用它。
+Dialogue: 0,1:06:42.72,1:06:44.50,Sub,,0,0,0,,An approach which is systematic.\N一种系统化的方法。
+Dialogue: 0,1:06:44.55,1:06:46.37,Sub,,0,0,0,,We don't have to invent anything at all.\N我们根本不需要发明任何东西。
+Dialogue: 0,1:06:46.42,1:06:54.39,Sub,,0,0,0,,We take the model of the robot and we can apply our approach you know also in automized way which has a computational feasibility.\N我们采用机器人的模型，就可以以自动化的方式应用我们的方法，同时具备计算可行性。
+Dialogue: 0,1:06:54.44,1:06:57.95,Sub,,0,0,0,,So we don't have to resort to a full GPU cluster to run our stuff.\N因此我们无需依赖完整的 GPU 集群来运行我们的系统。
+Dialogue: 0,1:06:58.00,1:06:58.48,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,1:06:58.53,1:07:02.61,Sub,,0,0,0,,And that exploits at most the structure of uncertainty.\N它最大限度地利用了不确定性结构。
+Dialogue: 0,1:07:02.66,1:07:09.41,Sub,,0,0,0,,So we want really to avoid the use of generic additive process noise or kind of the same kind\N所以我们真正想避免的是使用通用的加性过程噪声，或类似的一般性不确定性表示方式。
+Dialogue: 0,1:07:09.46,1:07:16.13,Sub,,0,0,0,,of uncertainty representations to a very structured uncertainty that we can exploit in the in the in the planning.\N而是采用一种结构化的不确定性，我们可以在规划中加以利用。
+Dialogue: 0,1:07:16.18,1:07:17.97,Sub,,0,0,0,,So there is a price to pay of course.\N当然，这也需要付出代价。
+Dialogue: 0,1:07:18.02,1:07:25.17,Sub,,0,0,0,,I mean the price for us is that the approach that we developed is a a local approach and the guarantees are soft guarantees\N我的意思是，对我们而言，这种方法是局部的，其保证属于软性保证。
+Dialogue: 0,1:07:25.22,1:07:31.77,Sub,,0,0,0,,but in my mind this is my opinion if you think about it when you want strong guarantees but then you simplify the model you\N但在我看来，如果你思考一下，当你追求强保证时，却简化了模型，
+Dialogue: 0,1:07:31.82,1:07:39.87,Sub,,0,0,0,,are anyway soft guarantees so it's debatable I would say with this art an art guarantee where your model is highly simplified so we are\N那么本质上你得到的仍然是软性保证，所以这是否成立，我认为是值得商榷的，\N尤其是在模型高度简化的这种情况下。
+Dialogue: 0,1:07:39.92,1:07:44.53,Sub,,0,0,0,,basically in between of this spectrum between you know formal methods which\N基本上在这两种方法之间的某个位置，你知道的，一种是形式化方法，另一种是……
+Dialogue: 0,1:07:44.58,1:07:49.28,Sub,,0,0,0,,have a limited applicability and empirical particular methods that have a wide applicability.\N适用范围有限，而经验性方法则具有广泛的适用性。
+Dialogue: 0,1:07:49.33,1:07:50.67,Sub,,0,0,0,,So what is the math?\N那么，数学上是怎么回事？
+Dialogue: 0,1:07:50.72,1:07:51.57,Sub,,0,0,0,,So I I have some math.\N所以，我要讲点数学。
+Dialogue: 0,1:07:51.62,1:07:54.63,Sub,,0,0,0,,I mean I'll try to to explain as as clear as I can.\N我的意思是，我会尽量清楚地解释。
+Dialogue: 0,1:07:54.68,1:07:59.05,Sub,,0,0,0,,So this is something that again we started with Antonio Frankie long time ago now in 2018.\N所以这件事，我们早在很久以前就和安东尼奥·弗兰基开始了，那时是2018年。
+Dialogue: 0,1:07:59.10,1:08:04.71,Sub,,0,0,0,,So we said let's say we have a model of a robot whatever it is we just have to know it.\N所以我们说，假设我们有一个机器人的模型，不管它是什么，我们只需要了解它就行了。
+Dialogue: 0,1:08:04.76,1:08:06.74,Sub,,0,0,0,,Then we have some tracking task.\N然后我们有一个跟踪任务。
+Dialogue: 0,1:08:06.80,1:08:11.01,Sub,,0,0,0,,We want to track a trajectory and we have some controller whatever it is.\N我们想要追踪一条轨迹，同时拥有某种控制器，不管它是什么。
+Dialogue: 0,1:08:11.06,1:08:11.43,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,1:08:11.46,1:08:17.15,Sub,,0,0,0,,Now the point here is that the model of the robot has some parameters P that we don't know and the\N这里的重点是，机器人的模型中有一些参数 P，我们并不知道。
+Dialogue: 0,1:08:17.20,1:08:24.35,Sub,,0,0,0,,controller uses some nominal value of these parameters and there is a mismatch between the real parameters and the nominal ones.\N控制器使用了这些参数的标称值，而实际参数与标称值之间存在不匹配。
+Dialogue: 0,1:08:24.40,1:08:26.87,Sub,,0,0,0,,So we want to optimize the trajectory.\N因此我们希望优化轨迹。
+Dialogue: 0,1:08:26.92,1:08:28.00,Sub,,0,0,0,,This was the point.\N这正是关键所在。
+Dialogue: 0,1:08:28.05,1:08:30.35,Sub,,0,0,0,,We don't want to build a fancy controller.\N我们不想打造一个复杂的控制器。
+Dialogue: 0,1:08:30.40,1:08:36.23,Sub,,0,0,0,,We take whatever we have but we want to optimize the motion the trajectory such that the closed loop\N我们使用现有的系统，但希望优化运动和轨迹，使得闭环系统
+Dialogue: 0,1:08:36.28,1:08:42.45,Sub,,0,0,0,,so the the the the execution of this task will be insensitive to the discrepancies between P and PC.\N从而在 P 与 PC 之间存在差异时，该任务的执行仍保持不敏感。
+Dialogue: 0,1:08:42.50,1:08:44.46,Sub,,0,0,0,,So how to do this?\N那么该如何实现这一点呢？
+Dialogue: 0,1:08:44.51,1:08:52.59,Sub,,0,0,0,,We came up with this metric this sensitivity matrix which basically is the variation of the evolution of the state in closed loop.\N我们提出了这个度量标准——敏感性矩阵，它本质上是闭环状态下状态演化的变动情况。
+Dialogue: 0,1:08:52.64,1:08:59.43,Sub,,0,0,0,,So for the robots and the controller against variations on the parameters evaluated at the nominal values.\N因此，该矩阵可用于评估机器人和控制器对参数变化的鲁棒性，评估点位于标称值处。
+Dialogue: 0,1:08:59.48,1:09:06.43,Sub,,0,0,0,,So this is a matrix that you can compute easily and it can be used as a metric a metric for optimization for generating motion plans.\N这是一个可以轻松计算的矩阵，可作为优化的度量标准，用于生成运动规划。
+Dialogue: 0,1:09:06.48,1:09:06.91,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:09:06.96,1:09:10.14,Sub,,0,0,0,,So it can be used as a robustness metric.\N因此它可作为鲁棒性度量使用。
+Dialogue: 0,1:09:10.19,1:09:15.82,Sub,,0,0,0,,Now this matrix doesn't have a close form but you can come up with a very easily with an OD\N现在该矩阵没有闭式解，但你可以很容易地通过一个 ODE 来求解。
+Dialogue: 0,1:09:15.87,1:09:22.84,Sub,,0,0,0,,a standard OD that you for propagate and again this the point here is that this step is completely systematic.\N一个标准的OD，你可以用来传播，再次强调的是，这一步完全是系统性的。
+Dialogue: 0,1:09:22.89,1:09:29.48,Sub,,0,0,0,,This can always be done as long as you can compute the Jacobians of your robot dynamics and control.\N只要能计算出机器人动力学和控制的雅可比矩阵，这一点始终可以实现。
+Dialogue: 0,1:09:29.53,1:09:34.19,Sub,,0,0,0,,So the assumption now is that uh these jacobians are computable.\N因此，现在的假设是这些雅可比矩阵是可计算的。
+Dialogue: 0,1:09:34.24,1:09:37.40,Sub,,0,0,0,,So the robot is differentiable the control is differentiable.\N因此，机器人是可微的，控制也是可微的。
+Dialogue: 0,1:09:37.45,1:09:41.88,Sub,,0,0,0,,But if you can do that this can be computed you for integrated and you get your matrix.\N但如果你能做到这一点，就可以进行计算，实现集成，从而得到你的矩阵。
+Dialogue: 0,1:09:41.93,1:09:44.54,Sub,,0,0,0,,Okay there is nothing to invent at this stage.\N现阶段没什么可发明的。
+Dialogue: 0,1:09:44.59,1:09:47.84,Sub,,0,0,0,,So now once you have this matrix you can set up an optimization problem.\N现在有了这个矩阵，你就可以建立一个优化问题。
+Dialogue: 0,1:09:47.89,1:09:51.66,Sub,,0,0,0,,So for example these are you know the first ideas that we had at the time.\N比如，这些就是我们当时最初的一些想法。
+Dialogue: 0,1:09:51.71,1:09:57.32,Sub,,0,0,0,,Let's optimize the trajectory that we want to track such that you know we minimize a metric of this\N让我们优化想要跟踪的轨迹，以最小化这一指标
+Dialogue: 0,1:09:57.37,1:10:03.84,Sub,,0,0,0,,matrix at the final time or we minimize the integral of the norm or whatever you want to optimize.\N在最终时刻的矩阵，或最小化范数的积分，或你想要优化的任何目标。
+Dialogue: 0,1:10:03.89,1:10:04.29,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:10:04.34,1:10:06.76,Sub,,0,0,0,,So this is an example back in the day.\N所以这是当年的一个例子。
+Dialogue: 0,1:10:06.81,1:10:10.63,Sub,,0,0,0,,So I just show you the explain the context and show the video.\N所以我先向你们展示一下，解释一下背景，然后播放视频。
+Dialogue: 0,1:10:10.68,1:10:18.95,Sub,,0,0,0,,So in the top rows the trajectory is not optimized and the parameters are 80% and 100% the nominal values.\N在上方的行中，轨迹未经过优化，参数为额定值的80%和100%。
+Dialogue: 0,1:10:19.00,1:10:21.74,Sub,,0,0,0,,In the bottom rows, the trajectory is optimized.\N在下方的行中，轨迹经过了优化。
+Dialogue: 0,1:10:21.79,1:10:23.14,Sub,,0,0,0,,This is for a quadrotor.\N这是针对四旋翼飞行器的。
+Dialogue: 0,1:10:23.19,1:10:28.05,Sub,,0,0,0,,The parameters were the mass, thrust coefficients, and location of the central mass.\N参数包括质量、推力系数以及中心质量的位置。
+Dialogue: 0,1:10:28.10,1:10:30.75,Sub,,0,0,0,,And you may see it again.\N你们可以再看一遍。
+Dialogue: 0,1:10:30.80,1:10:32.38,Sub,,0,0,0,,I don't know if you can notice that.\N不知道你们是否注意到这一点。
+Dialogue: 0,1:10:32.43,1:10:39.20,Sub,,0,0,0,,So the quadrotor does something strange in the sense tries to track the trajectory under this perturbation.\N四旋翼在受到扰动的情况下，做了一些奇怪的事，试图跟踪轨迹。
+Dialogue: 0,1:10:39.25,1:10:47.68,Sub,,0,0,0,,But the point is that if you look at the end because that this is where we optimize in the optimized case you see the quadrotor arrives\N但重点是，如果你看结尾，因为在优化情况下我们正是在此处进行优化，可以看到四旋翼几乎完全到达目标状态。
+Dialogue: 0,1:10:47.73,1:10:52.32,Sub,,0,0,0,,almost exactly at the target state while in the nonoptimized case you get an\N而在未优化的情况下，由于参数不确定性，你得到的是一个
+Dialogue: 0,1:10:52.38,1:10:57.62,Sub,,0,0,0,,error because of the parameter uncertainty and this is done without touching the control.\N误差，而且这一切都没有调整控制。
+Dialogue: 0,1:10:57.67,1:10:57.90,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:10:57.94,1:11:02.74,Sub,,0,0,0,,So the control is the same in this case and in this case same control gain same control structure.\N因此在这种情况下和这种情况下，控制是相同的，控制增益和控制结构都一样。
+Dialogue: 0,1:11:02.79,1:11:10.13,Sub,,0,0,0,,The only difference is the motion is the trajectory that we generated which has an intrinsic robustness to uncertainties.\N唯一的区别在于运动轨迹是我们生成的，这种轨迹对不确定性具有内在的鲁棒性。
+Dialogue: 0,1:11:10.18,1:11:10.60,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:11:10.65,1:11:14.13,Sub,,0,0,0,,And yes, this is just another visualization of the same.\N是的，这只是同一内容的另一种可视化展示。
+Dialogue: 0,1:11:14.18,1:11:19.63,Sub,,0,0,0,,So in nonoptimized and optimized cases with over many repetitions in the optimized case the\N因此在非优化和优化情况下，经过多次重复实验后，在优化情况下
+Dialogue: 0,1:11:19.68,1:11:23.39,Sub,,0,0,0,,quadroer is able to reach you know better and better the final the final target.\N四旋翼能够越来越准确地达到最终目标。
+Dialogue: 0,1:11:23.44,1:11:23.87,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:11:23.92,1:11:27.08,Sub,,0,0,0,,Then you can go on and you can invent other quantities.\N然后你可以继续，创造出其他量。
+Dialogue: 0,1:11:27.14,1:11:27.91,Sub,,0,0,0,,For example,\N例如，
+Dialogue: 0,1:11:27.96,1:11:32.81,Sub,,0,0,0,,you can say I also want to consider an input sensitivity which would be the\N你可以提出，我还想考虑输入敏感性，即闭环下输入的变化
+Dialogue: 0,1:11:32.86,1:11:37.26,Sub,,0,0,0,,variation of the inputs in close loop uh against variation of the of the parameters.\N与参数变化之间的关系。
+Dialogue: 0,1:11:37.31,1:11:39.41,Sub,,0,0,0,,And this can be used as a regalization term.\N这可以作为正则化项使用。
+Dialogue: 0,1:11:39.46,1:11:44.01,Sub,,0,0,0,,Basically in your optimization you can ask I want a trajectory such that the inputs\N基本上在你的优化中，你可以要求得到一条轨迹，使得输入在模型存在扰动时几乎始终保持一致
+Dialogue: 0,1:11:44.06,1:11:49.27,Sub,,0,0,0,,will be almost always the same even when I have perturbations in the models and\N因此你对饱和情况更具鲁棒性，例如对输入约束的鲁棒性，或者你可以
+Dialogue: 0,1:11:49.32,1:11:53.92,Sub,,0,0,0,,so you are more robust against saturations for example against input constraints or you can\N设计对初始条件的敏感性，这又是另一种观测器（OD），这种敏感性
+Dialogue: 0,1:11:53.97,1:11:59.36,Sub,,0,0,0,,invent a sensitivity to initial conditions which is another OD again which can be that\N可以从雅可比矩阵中系统地计算出来，这能告诉你初始条件的不确定性
+Dialogue: 0,1:11:59.41,1:12:04.59,Sub,,0,0,0,,can be computed systematically from the jacobians and this is you know how uncertainties in\N将如何传播，这对重规划非常有用，比如你在使用模型预测控制（MPC）或规划时
+Dialogue: 0,1:12:04.64,1:12:08.13,Sub,,0,0,0,,the initial conditions will propagate and this is very useful for replanning you know when\N初始条件的影响会传播开来，这对重规划非常有用。
+Dialogue: 0,1:12:08.18,1:12:12.14,Sub,,0,0,0,,you do MPC or planning and you don't know exactly the current state from sensors\N比如做 MPC 或规划时，你无法从传感器精确知道当前状态，
+Dialogue: 0,1:12:12.19,1:12:17.70,Sub,,0,0,0,,and you want to replan by taking into account this uncertainty at the initial state.\N希望在重规划时把初始状态的不确定性考虑进去。
+Dialogue: 0,1:12:17.74,1:12:18.35,Sub,,0,0,0,,Okay.\N好。
+Dialogue: 0,1:12:18.40,1:12:22.56,Sub,,0,0,0,,Then we uh at some point worked on the tubes.\N然后我们曾在某个阶段研究过‘管道’方法。
+Dialogue: 0,1:12:22.62,1:12:26.61,Sub,,0,0,0,,So in what I said so far we didn't have any way of quantifying\N到目前为止，我讲的内容还没有办法量化
+Dialogue: 0,1:12:26.66,1:12:31.69,Sub,,0,0,0,,you know how much the spread the trajectories are spreading over time because of uncertainty.\N不确定性导致轨迹随时间发散的程度。
+Dialogue: 0,1:12:31.74,1:12:36.70,Sub,,0,0,0,,Then you can define tubes like you know many people do for for tube based MPC.\N然后你可以像很多人做基于管道的模型预测控制那样定义管道。
+Dialogue: 0,1:12:36.75,1:12:44.45,Sub,,0,0,0,,For example, in our case, the point is that these tubes are I will say more precise because they exactly exploit the structure of the model.\N例如，在我们的案例中，这些管道更精确，因为它们恰好利用了模型的结构。
+Dialogue: 0,1:12:44.50,1:12:51.26,Sub,,0,0,0,,The fact that we are assuming uncertainties in a specific set of parameters and the story is quite simple.\N我们假设不确定性存在于特定参数集合中的事实，整个故事相当简单。
+Dialogue: 0,1:12:51.30,1:12:57.34,Sub,,0,0,0,,You define space or ranges for the tubes and ellipsoid in parameter space and then you want to map this ellipoid in\N你定义参数空间中管道和椭球的范围或区间，然后你想将该椭球映射到
+Dialogue: 0,1:12:57.39,1:13:03.58,Sub,,0,0,0,,parameter space into an ellypoid in state space or input space and this is done by using the the matrix the sensity matrix.\N状态空间或输入空间中的椭球，这通过使用灵敏度矩阵来实现。
+Dialogue: 0,1:13:03.63,1:13:10.45,Sub,,0,0,0,,When you have this ellypoid then you can compute for example the radius of the tube along the particular direction.\N当你有了这个椭球后，就可以计算出沿特定方向的管道半径。
+Dialogue: 0,1:13:10.50,1:13:13.99,Sub,,0,0,0,,So a component of the state a component of the input or whatever function\N因此，状态的一个分量、输入的一个分量，或任何你感兴趣函数
+Dialogue: 0,1:13:14.04,1:13:18.94,Sub,,0,0,0,,you want and this radius of the tube can be used for robustifying constraints.\N的管道半径可用于强化约束的鲁棒性。
+Dialogue: 0,1:13:18.99,1:13:24.43,Sub,,0,0,0,,So this is what we then started doing after you know we we came up with this tube idea.\N这就是我们提出管道概念后开始做的事情。
+Dialogue: 0,1:13:24.48,1:13:27.32,Sub,,0,0,0,,So we set up an optimization problem.\N于是我们建立了一个优化问题。
+Dialogue: 0,1:13:27.37,1:13:30.35,Sub,,0,0,0,,We compute tubes on states, inputs,\N我们计算状态、输入
+Dialogue: 0,1:13:30.40,1:13:36.12,Sub,,0,0,0,,whatever quantity we are interested in and then we robustify the constraints with the with the margins from\N以及我们感兴趣的所有其他量的管道，然后用这些裕度来强化约束。
+Dialogue: 0,1:13:36.17,1:13:43.21,Sub,,0,0,0,,the tubes and we can set up a robust optimization problem and just uh as information so we in\N管道和我们可以建立一个稳健的优化问题，只需提供信息即可，我们
+Dialogue: 0,1:13:43.26,1:13:49.98,Sub,,0,0,0,,the original formulation we using ellipoids but then we also generalize to box or con so parameter in a\N在原始公式中我们使用椭球体，但随后我们也推广到了盒子或锥形，即参数在
+Dialogue: 0,1:13:50.03,1:13:55.49,Sub,,0,0,0,,box or a parameter in a super quadricing parameter space and this is presented this afternoon at 3 p.m.\N一个盒子或超二次参数空间中，这个内容将在今天下午 3 点展示，
+Dialogue: 0,1:13:55.54,1:13:58.70,Sub,,0,0,0,,at poster 16 if you're interested in the topic.\N海报 16 号，如果你对这个话题感兴趣。
+Dialogue: 0,1:13:58.75,1:14:00.50,Sub,,0,0,0,,So then some results.\N那么接下来是一些结果。
+Dialogue: 0,1:14:00.55,1:14:05.07,Sub,,0,0,0,,So we applied all these ideas to many case studies over the years in the offline\N我们多年来将这些思想应用于多个案例研究，包括离线
+Dialogue: 0,1:14:05.12,1:14:10.46,Sub,,0,0,0,,online case and also in in manipulation also in learning as I will come in a moment.\N在线情况，以及在操作和学习中的应用，我稍后会具体说明。
+Dialogue: 0,1:14:10.51,1:14:18.12,Sub,,0,0,0,,So for offline uh planning this is an example for which we got the best paper award at the conference for for drones.\N对于离线规划，这是一个例子，我们在无人机会议上获得了最佳论文奖。
+Dialogue: 0,1:14:18.17,1:14:25.15,Sub,,0,0,0,,So here basically we're planning a trajectory for a drone where we physically attached stuff on the drone.\N基本上，我们正在为一架无人机规划轨迹，这架无人机上物理挂载了物品。
+Dialogue: 0,1:14:25.20,1:14:30.77,Sub,,0,0,0,,I mean it's hard to see on this picture but every repetition has the drone with something attached here and there for changing\N这张图上很难看出来，但每次重复时，无人机都在不同位置挂载了东西，以改变
+Dialogue: 0,1:14:30.82,1:14:38.00,Sub,,0,0,0,,the the location of the central mass for example then the drone had to fly precisely through an obstacle through a window and\N重心的位置，然后无人机必须精确地穿过一个障碍物，穿过一扇窗户，
+Dialogue: 0,1:14:38.05,1:14:46.16,Sub,,0,0,0,,in the optimized case this was uh much I mean it could do it much more accurately because we were basically with the\N在优化情况下，它能够更准确地完成，因为我们基本上是通过
+Dialogue: 0,1:14:46.21,1:14:54.67,Sub,,0,0,0,,inputs on the tubes we could guarantee that the inputs were not saturating despite the uncertainties that we didn't know in the model.\N我们可以确保管状输入不会饱和，即使模型中存在未知的不确定性。
+Dialogue: 0,1:14:54.72,1:15:01.23,Sub,,0,0,0,,Then uh with other colleagues from uh University of Tuente and the University of Monia,\N然后，与意大利两所大学的同事一起，
+Dialogue: 0,1:15:01.28,1:15:08.51,Sub,,0,0,0,,we also use the same ideas on Xar by exploiting this time also that the sensitivity to initial conditions\N我们也将同样的思想应用到一个四旋翼平台上，这次还利用了对初始条件的敏感性，
+Dialogue: 0,1:15:08.56,1:15:16.40,Sub,,0,0,0,,for capturing how you know uncertainties in the initial state propagates and we did an experiment evaluation and the point\N以捕捉初始状态不确定性如何传播，并进行了实验评估，重点在于，
+Dialogue: 0,1:15:16.45,1:15:21.08,Sub,,0,0,0,,here is that I don't know if it's clear from this picture but when you compute these tubes if we\N这里我想说明的是，从这张图中可能不太清楚，但当你计算这些管状区域时，如果我们
+Dialogue: 0,1:15:21.13,1:15:29.27,Sub,,0,0,0,,don't consider the uncertainties the initial ial condition the tubes don't capture well the initial phase of the perturbed trajectories.\N不考虑初始条件的不确定性，这些管状区域就无法很好地捕捉到受扰轨迹的初始阶段。
+Dialogue: 0,1:15:29.32,1:15:29.61,Sub,,0,0,0,,Well,\N事实上，
+Dialogue: 0,1:15:29.64,1:15:33.55,Sub,,0,0,0,,if you do if you do consider the uncertainties in the initial condition that you get tubes\N如果你考虑初始条件的不确定性，所得到的管状区域
+Dialogue: 0,1:15:33.60,1:15:40.67,Sub,,0,0,0,,that are much more representative of the real envelope of perturbed trajectories because the initial condition is uncertain.\N就能更真实地反映受扰轨迹的实际包络范围，因为初始条件本身是不确定的。
+Dialogue: 0,1:15:40.72,1:15:50.30,Sub,,0,0,0,,Then uh with colleagues at last we um did some planning in the sense of RRT planning by using the sensitivity metrics and tubes for planning.\N然后，与同事们合作，我们利用敏感性度量和管状区域进行了规划，具体是 RRT 规划。
+Dialogue: 0,1:15:50.35,1:15:56.06,Sub,,0,0,0,,So for passing through a window again or in a nice experiment where the drone had a had a perch and\N比如再次穿过窗户，或在一个精彩的实验中，无人机先停靠在某个位置，
+Dialogue: 0,1:15:56.11,1:16:01.95,Sub,,0,0,0,,with this perch that to catch some rings while flying and every time it was catching a ring you know the\N然后在飞行过程中抓住一些环，每次抓住一个环时，你知道的
+Dialogue: 0,1:16:02.00,1:16:07.15,Sub,,0,0,0,,mass the central mass was changing because now there was a ring on the perch but the planner didn't know this\N中心质量发生变化，因为现在栖木上多了一个环，但规划器并不知道这一点
+Dialogue: 0,1:16:07.20,1:16:14.99,Sub,,0,0,0,,but since we planned with this robust metrics it was possible to plan ahead of time by by meeting the robustness constraints.\N但由于我们使用了这种鲁棒性度量进行规划，因此能够提前满足鲁棒性约束，实现前瞻性规划
+Dialogue: 0,1:16:15.04,1:16:18.32,Sub,,0,0,0,,Then we also applied these ideas to manipulation.\N然后我们也将这些思想应用于操作任务
+Dialogue: 0,1:16:18.37,1:16:24.32,Sub,,0,0,0,,So a manipulator robot that has to move a load with stuff in a box where we don't know exactly what is in the box.\N例如一个机械臂机器人需要移动一个箱子里的负载，但我们并不确切知道箱子里装了什么
+Dialogue: 0,1:16:24.37,1:16:30.27,Sub,,0,0,0,,So we don't know exactly the properties of the the initial properties and location of the central mass of of the box.\N我们并不确切知道箱子的初始质量中心的属性和位置
+Dialogue: 0,1:16:30.32,1:16:34.81,Sub,,0,0,0,,And then we also applied the idea these ideas to online planning to NPC.\N然后我们还将这些思想应用于在线 MPC 规划。
+Dialogue: 0,1:16:34.86,1:16:38.29,Sub,,0,0,0,,So uh this is a paper that we published last year and we just\N这是我们去年发表的一篇论文，最近
+Dialogue: 0,1:16:38.34,1:16:43.91,Sub,,0,0,0,,recently got an award from the technical committee in optimization for robotics for this work.\N刚刚获得了机器人优化技术委员会颁发的奖项，以表彰这项工作
+Dialogue: 0,1:16:43.96,1:16:46.43,Sub,,0,0,0,,So the idea on paper looks quite simple.\N论文中的想法看起来相当简单
+Dialogue: 0,1:16:46.48,1:16:51.19,Sub,,0,0,0,,to do an MPC where we use sensit these sensitivity tubes forifying constraints.\N即在模型预测控制中，利用这些敏感性管来强化约束。
+Dialogue: 0,1:16:51.24,1:16:52.93,Sub,,0,0,0,,Okay, so it looks simple on paper.\N好，论文上的方法看起来很简单
+Dialogue: 0,1:16:52.98,1:16:56.72,Sub,,0,0,0,,The math is not that simple in sense that there are many subties that you have to solve\N但实际上数学上并不简单，因为需要解决许多细微复杂的子问题
+Dialogue: 0,1:16:56.77,1:17:04.32,Sub,,0,0,0,,for doing this online on the hardware but uh we managed to do it and these are some results.\N在硬件上实时完成这项工作，嗯，我们成功做到了，这是部分结果。
+Dialogue: 0,1:17:04.37,1:17:13.37,Sub,,0,0,0,,So uh the red envelope is the MPC in a non- robust configuration while the blue envelope is the robust NPC.\N红色包络线代表非鲁棒配置下的 MPC，蓝色包络线则代表鲁棒 MPC。
+Dialogue: 0,1:17:13.42,1:17:19.06,Sub,,0,0,0,,And since the robust NPC is able to reason about uncertainties and guarantee basically it avoids\N而且由于鲁棒 MPC 能够推理不确定性，并基本保证规避风险
+Dialogue: 0,1:17:19.11,1:17:23.95,Sub,,0,0,0,,saturations of the motors because of uncertainties it is able to do a much better tracking.\N由于存在不确定性，电机饱和情况得以缓解，因此能够实现更精准的跟踪。
+Dialogue: 0,1:17:24.00,1:17:31.43,Sub,,0,0,0,,So it it deviates less from the from the plan trajectory and uh yes it's the same for for passing through window and\N因此它偏离计划轨迹的程度更小，是的，穿过窗户时也是如此。
+Dialogue: 0,1:17:31.48,1:17:39.50,Sub,,0,0,0,,we also did an anard implementation on on a robot on a real drone or full on board and a nice point is that\N我们还在一台真实无人机或完整机载系统上的机器人上实现了这一方案，一个有趣的特点是
+Dialogue: 0,1:17:39.56,1:17:46.04,Sub,,0,0,0,,you may ask one question you may have is cool but you know does it link it all this takes much longer than a\N你可能会问一个问题：这听起来不错，但你知道吗，\N它真的能把所有这些都连起来吗？这需要的时间可比想象中长多了。
+Dialogue: 0,1:17:46.09,1:17:53.31,Sub,,0,0,0,,standard MPC the answer is no it takes a little bit longer to compute the sensitivity tubes but this uh overhead is negligible it's\N标准MPC的答案是否定的，计算敏感性管所需时间稍长一些，但这个开销可以忽略不计。
+Dialogue: 0,1:17:53.36,1:18:01.09,Sub,,0,0,0,,a very small overhead complain to a planner to a plane MPC and this is just a nice experiment that where the plane MPC\N与普通 MPC 相比开销非常小；这只是一个有趣的实验，普通 MPC
+Dialogue: 0,1:18:01.14,1:18:10.77,Sub,,0,0,0,,completely crashed because it wasn't able to deal with you know something that we attached on the robot uh somewhere on the frame while\N完全崩溃了，因为它无法处理我们附加在机器人框架上的某个东西，
+Dialogue: 0,1:18:10.82,1:18:18.08,Sub,,0,0,0,,when we did you know the robots version the robots version didn't saturate and then you know it didn't didn't crash all right then\N当我们做机器人版本时，那个机器人版本没有饱和，然后你知道，它也没崩溃，好吧。
+Dialogue: 0,1:18:18.13,1:18:27.14,Sub,,0,0,0,,uh for the online case uh with again with colleagues at robotics as a robotic the adversary of 20 the robotics group of 10.\N嗯，对于在线情况，再次与机器人组的同事们合作。
+Dialogue: 0,1:18:27.19,1:18:33.81,Sub,,0,0,0,,We did also an MPPI version of that presented last year and we recently at this\N我们去年还展示了该方法的 MPPI 版本，最近我们在此基础上进行了进一步研究。
+Dialogue: 0,1:18:33.86,1:18:40.74,Sub,,0,0,0,,we presented a preliminary work where uh we showed the way to consider basically this continuous dynamics.\N我们展示了一项初步工作，其中我们说明了如何基本考虑这种连续动力学。
+Dialogue: 0,1:18:40.79,1:18:48.15,Sub,,0,0,0,,So for example when you have contacts so when you have a contact you can see that the dynamics becomes a switch in dynamics and then you\N例如，当你遇到接触时，动力学就会发生切换，此时你可以看到动力学变为切换动力学。
+Dialogue: 0,1:18:48.20,1:18:52.19,Sub,,0,0,0,,basically you can derive how this sensitivity can has to be reset at the\N基本上你可以推导出，这种敏感性应在切换时刻如何重置。
+Dialogue: 0,1:18:52.24,1:18:57.07,Sub,,0,0,0,,switching time and how to propagate the tubes also with the switch in dynamics.\N以及如何在动力学切换的情况下，继续传播这些管状轨迹。
+Dialogue: 0,1:18:57.12,1:19:03.23,Sub,,0,0,0,,So this is a preliminary work but the math is there and it seems promising to us.\N这是一项初步工作，但数学基础已经存在，对我们而言前景看起来很有希望。
+Dialogue: 0,1:19:03.28,1:19:05.90,Sub,,0,0,0,,Okay then let me come to to learning.\N好的，接下来我来谈谈学习。
+Dialogue: 0,1:19:05.95,1:19:11.95,Sub,,0,0,0,,So I'm not a learning uh guy but with the students we started looking at how to\N我本人并不是学习方面的专家，但我和学生们开始研究如何将这些想法用于学习。
+Dialogue: 0,1:19:12.00,1:19:17.19,Sub,,0,0,0,,use these ideas for learning because there is a big potential for us also in the learning world.\N因为在学习领域，我们也有巨大的潜力。
+Dialogue: 0,1:19:17.24,1:19:25.73,Sub,,0,0,0,,For example this is the first work that uh we got recently accepted at RA and the idea is is quite simp simple.\N例如，这是最近被 RA-L 接受的首项工作，其想法相当简单。
+Dialogue: 0,1:19:25.78,1:19:30.16,Sub,,0,0,0,,So imagine that you train many policies uh for doing some task.\N想象一下，你为完成某个任务训练了许多策略。
+Dialogue: 0,1:19:30.22,1:19:38.41,Sub,,0,0,0,,So flying with a drone then you can use for each policy you can evaluate the sensitivity where you treat the policies\N比如用无人机飞行，那么对于每个策略，你都可以评估其敏感性，将策略视为输入。
+Dialogue: 0,1:19:38.46,1:19:44.97,Sub,,0,0,0,,as a controller over a trae the tra trajectory you want to do and then every policy would have a different sensitivity cause.\N作为轨迹控制器，你想要执行的轨迹，然后每个策略都会有不同的敏感度。
+Dialogue: 0,1:19:45.02,1:19:49.10,Sub,,0,0,0,,So this can be treated as a score and then you can use this score to select\N所以这可以被视为一个评分，然后你可以用这个评分来选择
+Dialogue: 0,1:19:49.15,1:19:56.10,Sub,,0,0,0,,the policy which is less sensitive to parameter uncertainties where here parameters uncertainty is the cmtorial gap.\N对参数不确定性不那么敏感的策略，这里的参数不确定性指的是实际与仿真之间的差距。
+Dialogue: 0,1:19:56.15,1:19:56.45,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:19:56.48,1:20:02.82,Sub,,0,0,0,,So we train in simulation and then we select the policy which will be more robust when we deploy on the on the real robot.\N我们在仿真中进行训练，然后选择在真实机器人部署时更具鲁棒性的策略。
+Dialogue: 0,1:20:02.87,1:20:04.61,Sub,,0,0,0,,Yeah. by construction.\N对，这是构造上的结果。
+Dialogue: 0,1:20:04.66,1:20:05.08,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,1:20:05.13,1:20:07.23,Sub,,0,0,0,,And uh yeah,\N而且，对，
+Dialogue: 0,1:20:07.28,1:20:17.98,Sub,,0,0,0,,once one colleague this this next feature for for for the paper and uh it works quite well in the sense that if we select\N当一位同事为论文添加了这个新特性后，它表现得相当不错，也就是说，\N如果我们选择在仿真中敏感度评分最小的策略，
+Dialogue: 0,1:20:18.03,1:20:27.24,Sub,,0,0,0,,the policy which in simulation has the smallest sensitivity score then when it is deployed on the real robots the real robots flies quite well.\N那么当它部署到真实机器人上时，真实机器人飞行得相当好。
+Dialogue: 0,1:20:27.30,1:20:34.78,Sub,,0,0,0,,While if we select a policy which didn't have a small CV score then because of the immaterial gap the drone crashes.\N而如果我们选择了一个没有小CV评分的策略，由于实际与仿真之间的差距，无人机就会坠毁。
+Dialogue: 0,1:20:34.83,1:20:39.33,Sub,,0,0,0,,So it's a way of selecting basically having a signal that tells you what is\N所以这是一种基本的方法，通过一个信号来告诉你什么才是
+Dialogue: 0,1:20:39.38,1:20:45.71,Sub,,0,0,0,,an intrinsic robust policies by by construction and then you can go farther along this road.\N通过构造本身就具备内在鲁棒性的策略，然后你可以沿着这条道路走得更远。
+Dialogue: 0,1:20:45.76,1:20:53.53,Sub,,0,0,0,,So we are now uh working on how to embed this sensitivity as a reward signal for RL for enforcement learning.\N所以我们现在正在研究如何将这种敏感性作为强化学习的奖励信号。
+Dialogue: 0,1:20:53.58,1:20:56.86,Sub,,0,0,0,,And again the idea is quite uh simple on paper.\N再次强调，这个想法在纸面上相当简单。
+Dialogue: 0,1:20:56.91,1:21:00.77,Sub,,0,0,0,,So you can in the reward you can add the sensitivity cost and then\N所以你可以在奖励中加入敏感性成本，然后
+Dialogue: 0,1:21:00.82,1:21:04.99,Sub,,0,0,0,,you do your gradient derivation because now the the reward depends on the policy parameters.\N进行梯度推导，因为现在奖励依赖于策略参数。
+Dialogue: 0,1:21:05.04,1:21:13.79,Sub,,0,0,0,,So you need some additional terms in the in the gradient of the cost and you train with this signal and the idea is that you will get a policy that is\N因此你需要在成本梯度中加入一些额外项，并使用这个信号进行训练，其理念是你会得到一个策略，
+Dialogue: 0,1:21:13.84,1:21:20.19,Sub,,0,0,0,,trained such that it can solve the task and also be minimally sensitive to parameters uncertainty\N该策略经过训练后不仅能完成任务，还能对参数不确定性保持最小敏感性。
+Dialogue: 0,1:21:20.24,1:21:25.55,Sub,,0,0,0,,which again in this context means being min minimally sensitive to the sim to real gap.\N这在当前语境下意味着对仿真到现实的差距保持最小敏感性。
+Dialogue: 0,1:21:25.60,1:21:29.66,Sub,,0,0,0,,So when you deploy it should work much better on the real hardware.\N因此当你部署时，它在真实硬件上的表现会好得多。
+Dialogue: 0,1:21:29.71,1:21:33.46,Sub,,0,0,0,,We don't have hardware experiments so far just some simulations.\N目前我们还没有硬件实验，只有仿真结果。
+Dialogue: 0,1:21:33.51,1:21:42.38,Sub,,0,0,0,,So these are two cases where in this left case the policy was uh didn't have any domain randomization at all\N这是两种情况：在左侧情况下，策略根本没有进行任何领域随机化，
+Dialogue: 0,1:21:42.44,1:21:50.11,Sub,,0,0,0,,on purpose just to show that without domain randomization a plane policy of course doesn't work while with our robust version.\N故意如此，只是为了说明没有领域随机化时，普通策略当然无法工作，而我们的鲁棒版本则可以。
+Dialogue: 0,1:21:50.16,1:21:54.40,Sub,,0,0,0,,So when we train with this sensitivity signal in the reward without doing any\N所以当我们使用这种敏感性信号作为奖励进行训练，而无需进行领域随机化时，
+Dialogue: 0,1:21:54.45,1:22:00.84,Sub,,0,0,0,,domain randomization still we get that the policy is robust without domain randomization at all.\N仍然能够得到策略具备鲁棒性，甚至完全不需要领域随机化。
+Dialogue: 0,1:22:00.89,1:22:07.23,Sub,,0,0,0,,Then if you add domain randomization of course it's gets even better.\N如果你再加入领域随机化，当然效果会更好。
+Dialogue: 0,1:22:07.28,1:22:07.73,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:22:07.78,1:22:12.87,Sub,,0,0,0,,So I'm uh almost done just some thoughts and perspectives.\N所以我差不多讲完了，最后分享一些想法和视角。
+Dialogue: 0,1:22:12.92,1:22:19.51,Sub,,0,0,0,,So uh so we developed many many ideas around this um yeah the idea of using this metric sensitivity\N我们围绕这个概念发展出了许多想法，比如利用这种度量敏感性矩阵
+Dialogue: 0,1:22:19.56,1:22:26.12,Sub,,0,0,0,,matrix as a metric for planning for as a robustness metric where the advantage is that you can compute\N作为规划的度量标准，或作为鲁棒性度量，其优势在于你可以
+Dialogue: 0,1:22:26.17,1:22:32.11,Sub,,0,0,0,,this very easily basically on any robot and any policy control that you have as long as you have\N非常轻松地在任何机器人和任何策略控制上计算它，只要
+Dialogue: 0,1:22:32.16,1:22:37.41,Sub,,0,0,0,,a model as you have a model from which you can take jagobians of of your model or controller policy.\N你有一个模型，能够从中提取出模型或控制器策略的雅可比矩阵。
+Dialogue: 0,1:22:37.46,1:22:37.90,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:22:37.95,1:22:45.46,Sub,,0,0,0,,So we are currently working on uh yeah some other ideas like uh cooperative transportation with robots\N目前我们正在研究其他一些想法，比如机器人之间的协作运输，
+Dialogue: 0,1:22:45.50,1:22:51.47,Sub,,0,0,0,,um manipulation of deformable objects where you have a lot of a lot of uncertainties and so forth.\N以及对可变形物体的操作，这类任务中存在大量不确定性等复杂情况。
+Dialogue: 0,1:22:51.52,1:22:57.63,Sub,,0,0,0,,I just want to discuss briefly about some yeah some perspective on this whole idea.\N我只想简要讨论一下关于这个整体概念的一些视角。
+Dialogue: 0,1:22:57.68,1:23:04.58,Sub,,0,0,0,,So uh basically what so what we do can be interpreted in a let's say in a probabilistic way if you want\N所以基本上，我们可以从某种概率角度来理解我们的做法，如果你愿意的话。
+Dialogue: 0,1:23:04.63,1:23:13.45,Sub,,0,0,0,,in the sense that basically we propagate a mean on the nominal values of the parameters we propagate a coariance it's not\N从本质上讲，我们传播的是参数名义值的均值，同时传播协方差，\N但这并非标准协方差，而是参数空间中的协方差。
+Dialogue: 0,1:23:13.50,1:23:19.99,Sub,,0,0,0,,really the standard coariance it is a coariance in parameter space and then we minimize you know find a trajectory or a\N然后我们最小化这个协方差，也就是寻找一条轨迹或策略，使其最小化协方差。
+Dialogue: 0,1:23:20.04,1:23:29.04,Sub,,0,0,0,,policy that minimizes this coariance now to for doing this we need gradients and also So this is a first order linearization.\N为了实现这一点，我们需要梯度，这也是一个一阶线性化过程。
+Dialogue: 0,1:23:29.09,1:23:31.47,Sub,,0,0,0,,So the tubes that you get are symmetric.\N你得到的这些管状区域是对称的。
+Dialogue: 0,1:23:31.52,1:23:33.34,Sub,,0,0,0,,You get the symmetric distribution.\N你会得到一个对称的分布。
+Dialogue: 0,1:23:33.39,1:23:38.38,Sub,,0,0,0,,Now if you want to go forward, this is what we are investigating right now.\N现在如果你想继续推进，这正是我们目前正在研究的内容。
+Dialogue: 0,1:23:38.43,1:23:47.04,Sub,,0,0,0,,You can try to not linearize but basically to forward propagate many samples, like in MPPI you propagate\N你可以尝试不进行线性化，而是直接前向传播大量样本，就像 MPPI 那样，对动力学模型进行前向传播。
+Dialogue: 0,1:23:47.09,1:23:55.07,Sub,,0,0,0,,forward propagate many samples of your dynamics where you sample in a correct way and then you can appro approximate the\N你以正确的方式采样大量样本，然后可以通过这些样本近似地得到后验统计特性。
+Dialogue: 0,1:23:55.12,1:24:03.76,Sub,,0,0,0,,staticis of your posterior via samples and this gives a way of basically going beyond linearization to get an approximation of\N这提供了一种方法，基本上可以超越线性化，从而近似得到在参数分布给定条件下状态的真实后验。
+Dialogue: 0,1:24:03.81,1:24:10.65,Sub,,0,0,0,,the real posterior of the states given a distribution on the parameters And this is something that we are working on now.\N这正是我们目前正在研究的内容。
+Dialogue: 0,1:24:10.70,1:24:13.08,Sub,,0,0,0,,So I hope soon we will get some papers out of it.\N所以我希望很快能从中产出一些论文。
+Dialogue: 0,1:24:13.13,1:24:21.79,Sub,,0,0,0,,So thank you very much for the attention.\N非常感谢大家的关注。
+Dialogue: 0,1:24:21.84,1:24:22.85,Sub,,0,0,0,,Thank you very much.\N非常感谢。
+Dialogue: 0,1:24:22.90,1:24:30.83,Sub,,0,0,0,,So I was told we don't have that much time but if there is a one very quick question.\N所以我被告知我们时间不多了，但如果有一个非常简短的问题。
+Dialogue: 0,1:24:30.88,1:24:33.07,Sub,,0,0,0,,Yes.\N好的。
+Dialogue: 0,1:24:33.12,1:24:41.39,Sub,,0,0,0,,Uh so when you start uh using sampling to um to quantify robustness, aren't you just doing domain randomization?\N嗯，当你开始使用采样来量化鲁棒性时，这不就是域随机化吗？
+Dialogue: 0,1:24:41.44,1:24:48.39,Sub,,0,0,0,,It is not, you mean in this it is not exactly a random decision in the sense that the point here is that we sample\N不是的，我的意思是，这不完全是随机决策，重点在于我们通过采样来实现。
+Dialogue: 0,1:24:48.44,1:24:56.75,Sub,,0,0,0,,is that we sample on um the correct samples such that so we sample on the minimal number of samples that we need for\N我们采样的是正确的样本，只用最少数量的样本，
+Dialogue: 0,1:24:56.80,1:25:05.90,Sub,,0,0,0,,reconstructing with a good approximation the posterior but the number of samples is not random or where we sample we sample in the exact\N就能以很好的近似重构后验；但样本数量不是随机的，采样位置也是精确的。
+Dialogue: 0,1:25:05.94,1:25:12.83,Sub,,0,0,0,,right places where we need to sample such that with this minimum number of sample we and they construct the posterior on the states.\N我们只在真正需要的位置采样，用最少的样本构建状态后验。
+Dialogue: 0,1:25:12.88,1:25:13.77,Sub,,0,0,0,,So this is the point.\N这就是关键点。
+Dialogue: 0,1:25:13.82,1:25:14.05,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,1:25:14.08,1:25:15.71,Sub,,0,0,0,,So it is educated domain randomization.\N所以这是‘有学问的’域随机化。
+Dialogue: 0,1:25:15.76,1:25:16.45,Sub,,0,0,0,,Yes.\N是的。
+Dialogue: 0,1:25:16.50,1:25:18.67,Sub,,0,0,0,,Very educated.\N非常有针对性。
+Dialogue: 0,1:25:18.72,1:25:19.36,Sub,,0,0,0,,Very nice.\N非常好。
+Dialogue: 0,1:25:19.41,1:25:20.67,Sub,,0,0,0,,Thank you very much.\N非常感谢。
+Dialogue: 0,1:25:20.72,1:25:25.76,Sub,,0,0,0,,So thank you very much for being in this session and I would like to thank all the speakers.\N所以非常感谢大家参加本次会议，我也想感谢所有演讲者。
+Dialogue: 0,1:25:25.81,1:25:28.60,Sub,,0,0,0,,Thank you very much.\N非常感谢。

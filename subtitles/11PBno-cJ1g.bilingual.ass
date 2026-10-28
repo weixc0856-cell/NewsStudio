@@ -1,0 +1,978 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:02:09.58,0:02:16.56,Sub,,0,0,0,,Please welcome to the stage CEO of Google Cloud, Thomas Kurian.
+Dialogue: 0,0:02:34.78,0:02:35.66,Sub,,0,0,0,,Hello.
+Dialogue: 0,0:02:43.90,0:02:46.90,Sub,,0,0,0,,Welcome everyone to Google Cloud Next.
+Dialogue: 0,0:02:46.90,0:02:53.58,Sub,,0,0,0,,Just one year ago, we stood on this same stage and promised a new future for AI.
+Dialogue: 0,0:02:53.58,0:03:00.94,Sub,,0,0,0,,Today, that future is running in production at a scale that the world has never seen.
+Dialogue: 0,0:03:00.94,0:03:05.06,Sub,,0,0,0,,Over the last year, we didn't just see adoption.
+Dialogue: 0,0:03:05.06,0:03:07.66,Sub,,0,0,0,,We saw transformation.
+Dialogue: 0,0:03:07.66,0:03:15.18,Sub,,0,0,0,,Nearly 75% of Google Cloud customers now leverage our AI products to power their businesses.
+Dialogue: 0,0:03:15.18,0:03:20.26,Sub,,0,0,0,,We have thousands of agents and services across every industry,
+Dialogue: 0,0:03:20.26,0:03:25.46,Sub,,0,0,0,,reaching billions of people through the global scale of our partner network.
+Dialogue: 0,0:03:25.46,0:03:28.86,Sub,,0,0,0,,You have moved beyond the pilot.
+Dialogue: 0,0:03:28.86,0:03:31.66,Sub,,0,0,0,,The experimenting phase is behind us.
+Dialogue: 0,0:03:31.66,0:03:34.46,Sub,,0,0,0,,And now, the real challenge begins.
+Dialogue: 0,0:03:34.46,0:03:40.86,Sub,,0,0,0,,How do you move AI into production across your entire enterprise?
+Dialogue: 0,0:03:40.86,0:03:43.34,Sub,,0,0,0,,The answer is a unified stack.
+Dialogue: 0,0:03:43.34,0:03:51.38,Sub,,0,0,0,,You cannot deliver AI by piecing together a puzzle piece of fragmented silicon and disconnected models.
+Dialogue: 0,0:03:51.38,0:03:58.93,Sub,,0,0,0,,To drive real value, you need an architecture where chips are designed for the models,
+Dialogue: 0,0:03:58.93,0:04:09.13,Sub,,0,0,0,,models are grounded in your data, agents and applications are built with models and secured by the infrastructure.
+Dialogue: 0,0:04:09.13,0:04:23.29,Sub,,0,0,0,,Google uses this exact same OpenStack to reimagine how we serve users using our AI tools across Search, YouTube, Chrome, and Android.
+Dialogue: 0,0:04:23.29,0:04:28.29,Sub,,0,0,0,,To take you inside that journey, let's hear from Sundar Pichai.
+Dialogue: 0,0:04:32.21,0:04:34.73,Sub,,0,0,0,,Thanks, Thomas, and hello, everyone.
+Dialogue: 0,0:04:34.73,0:04:37.01,Sub,,0,0,0,,We are so glad you are here.
+Dialogue: 0,0:04:37.01,0:04:44.89,Sub,,0,0,0,,The pace of technological change has been faster than I've ever seen, and I've been around technology for a while.
+Dialogue: 0,0:04:44.89,0:04:52.08,Sub,,0,0,0,,In fact, this Sunday, I'm celebrating my Googleversary-- 22 years, and I'm still feeling lucky.
+Dialogue: 0,0:04:52.08,0:04:56.28,Sub,,0,0,0,,And I hope that luck extends to all of you in Vegas this week.
+Dialogue: 0,0:04:56.28,0:05:00.96,Sub,,0,0,0,,I was drawn to Google all those years ago because of its ambitious mission.
+Dialogue: 0,0:05:00.96,0:05:09.00,Sub,,0,0,0,,From the web to mobile to AI, every platform shift has given us new opportunities to advance our mission
+Dialogue: 0,0:05:09.00,0:05:13.84,Sub,,0,0,0,,and to help our customers and partners achieve yours.
+Dialogue: 0,0:05:13.84,0:05:18.48,Sub,,0,0,0,,As we move into the agentic era, we are taking this to the next level.
+Dialogue: 0,0:05:18.48,0:05:22.56,Sub,,0,0,0,,We are making big investments now and for the future.
+Dialogue: 0,0:05:22.56,0:05:27.28,Sub,,0,0,0,,In 2022, we were investing $31 billion in CapEx.
+Dialogue: 0,0:05:27.28,0:05:38.36,Sub,,0,0,0,,This year, we plan to invest between $175 to $185 billion in total CapEx, a nearly 6x increase in just four years.
+Dialogue: 0,0:05:38.36,0:05:47.88,Sub,,0,0,0,,And for 2026, just over half of our machine learning compute is expected to go towards the cloud business, so it will greatly benefit all of you.
+Dialogue: 0,0:05:47.88,0:05:55.51,Sub,,0,0,0,,These investments are how we continue to stay at the frontier and ensure you're at the cutting edge as well.
+Dialogue: 0,0:05:55.51,0:06:03.15,Sub,,0,0,0,,A big focus for us is to always be customer 0 for our own technologies, so we can be a better partner to all of you.
+Dialogue: 0,0:06:03.15,0:06:08.87,Sub,,0,0,0,,Let me share a few examples of how we are rewiring our work with AI.
+Dialogue: 0,0:06:08.87,0:06:14.83,Sub,,0,0,0,,First, coding-- we've been using AI to generate code internally at Google for a while.
+Dialogue: 0,0:06:14.83,0:06:23.91,Sub,,0,0,0,,Today, nearly 75% of all new code at Google is AI-generated and approved by engineers, up from 50% last fall.
+Dialogue: 0,0:06:23.91,0:06:27.83,Sub,,0,0,0,,We are now shifting to truly agentic workflows.
+Dialogue: 0,0:06:27.83,0:06:37.59,Sub,,0,0,0,,Our engineers are orchestrating fully autonomous digital task forces, firing off agents, and accomplishing incredible things.
+Dialogue: 0,0:06:37.59,0:06:45.35,Sub,,0,0,0,,As one example of how we are using agents, we recently executed a particularly complex code migration.
+Dialogue: 0,0:06:45.35,0:06:50.02,Sub,,0,0,0,,Anyone familiar knows these migrations can take a while to get done.
+Dialogue: 0,0:06:50.02,0:06:58.22,Sub,,0,0,0,,We created a system of agents taking on three different types of roles-- planners, orchestrators, and coders.
+Dialogue: 0,0:06:58.22,0:07:04.98,Sub,,0,0,0,,Working together with engineers, we completed the migration 6x faster than we could have a year ago.
+Dialogue: 0,0:07:04.98,0:07:13.14,Sub,,0,0,0,,And now we are applying that approach across our entire development cycle, from experimentation to testing to evals.
+Dialogue: 0,0:07:13.14,0:07:17.66,Sub,,0,0,0,,It's not just developers who are infusing AI into their workflows.
+Dialogue: 0,0:07:17.66,0:07:23.34,Sub,,0,0,0,,Our marketing teams are fundamentally rethinking the creative process from concept to launch.
+Dialogue: 0,0:07:23.34,0:07:28.50,Sub,,0,0,0,,Historically, adapting a campaign for every audience, channel, and country took weeks.
+Dialogue: 0,0:07:28.50,0:07:37.30,Sub,,0,0,0,,For the recent launch of Gemini and Chrome, teams used our models to rapidly generate thousands of variations of our creative assets.
+Dialogue: 0,0:07:37.30,0:07:41.18,Sub,,0,0,0,,This enabled personalization at a massive scale.
+Dialogue: 0,0:07:41.18,0:07:47.02,Sub,,0,0,0,,It also led to 70% faster turnaround and a 20% increase in conversion.
+Dialogue: 0,0:07:47.02,0:07:49.42,Sub,,0,0,0,,We are not only getting to market faster.
+Dialogue: 0,0:07:49.42,0:07:52.82,Sub,,0,0,0,,We are also doing it more effectively with AI.
+Dialogue: 0,0:07:52.82,0:07:57.10,Sub,,0,0,0,,Our security teams are also seeing significant gains with AI.
+Dialogue: 0,0:07:57.10,0:08:07.10,Sub,,0,0,0,,Each month, our teams receive unstructured threat reports at a scale that would take thousands of hours to review-- a nearly impossible task.
+Dialogue: 0,0:08:07.10,0:08:15.94,Sub,,0,0,0,,Today, our Security Operations Center agents automatically triage tens of thousands of unstructured threat reports each month.
+Dialogue: 0,0:08:15.94,0:08:24.98,Sub,,0,0,0,,By accelerating the extraction of critical intelligence and filtering out the noise, it's reduced threat mitigation time by over 90%
+Dialogue: 0,0:08:24.98,0:08:28.54,Sub,,0,0,0,,We are more on the front foot than ever before.
+Dialogue: 0,0:08:28.54,0:08:31.98,Sub,,0,0,0,,Those are just a few examples of what we are trying at Google.
+Dialogue: 0,0:08:31.98,0:08:35.26,Sub,,0,0,0,,We are moving in a bold and responsible way.
+Dialogue: 0,0:08:35.26,0:08:37.22,Sub,,0,0,0,,There's a lot of change happening.
+Dialogue: 0,0:08:37.22,0:08:40.98,Sub,,0,0,0,,And it can feel like we are in the messy part of the innovation cycle.
+Dialogue: 0,0:08:40.98,0:08:48.05,Sub,,0,0,0,,But we are starting to see the foundational building blocks coming together, unlocking a new wave of innovation.
+Dialogue: 0,0:08:48.05,0:08:53.73,Sub,,0,0,0,,One thing that is super clear-- we are firmly in the agentic Gemini era.
+Dialogue: 0,0:08:53.73,0:09:00.41,Sub,,0,0,0,,Last fall, we introduced Gemini Enterprise as a front door to agentic AI in the workplace.
+Dialogue: 0,0:09:00.41,0:09:08.05,Sub,,0,0,0,,What we have seen in just a few months since launch is how every employee in every organization can become a builder.
+Dialogue: 0,0:09:08.05,0:09:10.29,Sub,,0,0,0,,This is an incredible shift.
+Dialogue: 0,0:09:10.29,0:09:15.73,Sub,,0,0,0,,We are accomplishing bigger things faster, but this comes with complexity.
+Dialogue: 0,0:09:15.73,0:09:22.37,Sub,,0,0,0,,The conversation has gone from can we build an agent to how do we manage thousands of them?
+Dialogue: 0,0:09:22.37,0:09:28.37,Sub,,0,0,0,,Today, I'm excited to announce our new Gemini Enterprise Agent Platform.
+Dialogue: 0,0:09:28.37,0:09:38.97,Sub,,0,0,0,,It provides the secure, full-stack connective tissue you need to build, scale, govern, and optimize your agents with confidence.
+Dialogue: 0,0:09:38.97,0:09:48.24,Sub,,0,0,0,,Think of it as mission control for the agentic enterprise to help move your organization into the next phase of the agentic era.
+Dialogue: 0,0:09:48.24,0:09:51.24,Sub,,0,0,0,,I'm going to turn it back over to Thomas to share more.
+Dialogue: 0,0:09:51.24,0:09:54.44,Sub,,0,0,0,,But first, thanks again for being here.
+Dialogue: 0,0:09:54.44,0:10:01.84,Sub,,0,0,0,,Together, we are building a blueprint for true business transformation, and I'm excited to see where it takes us next.
+Dialogue: 0,0:10:01.84,0:10:05.21,Sub,,0,0,0,,Thomas, back to you.
+Dialogue: 0,0:10:20.28,0:10:22.00,Sub,,0,0,0,,Thank you, Sundar.
+Dialogue: 0,0:10:22.00,0:10:29.04,Sub,,0,0,0,,Today, we're taking the next step in bringing Google AI to every employee and every workflow.
+Dialogue: 0,0:10:29.04,0:10:38.64,Sub,,0,0,0,,Gemini Enterprise is now the end-to-end system for the agentic era, the connective tissue between your data, your people, and your goals.
+Dialogue: 0,0:10:38.64,0:10:43.55,Sub,,0,0,0,,It transforms disconnected processes into a single intelligent flow.
+Dialogue: 0,0:10:43.55,0:10:47.59,Sub,,0,0,0,,This is our blueprint for the agentic enterprise.
+Dialogue: 0,0:10:47.59,0:10:51.47,Sub,,0,0,0,,It's also the answer to that fundamental question.
+Dialogue: 0,0:10:51.47,0:10:56.59,Sub,,0,0,0,,Intelligence plus automation must deliver value.
+Dialogue: 0,0:10:56.59,0:11:01.35,Sub,,0,0,0,,To make this work, you need context and action.
+Dialogue: 0,0:11:01.35,0:11:04.03,Sub,,0,0,0,,Intelligence comes from your data.
+Dialogue: 0,0:11:04.03,0:11:06.87,Sub,,0,0,0,,Automation is driven by agents.
+Dialogue: 0,0:11:06.87,0:11:13.03,Sub,,0,0,0,,To solve this equation at scale, you need a complete integrated system.
+Dialogue: 0,0:11:13.03,0:11:23.71,Sub,,0,0,0,,Today, we will show you the layers of that system and all the innovations we're introducing at every layer, starting with the AI Hypercomputer,
+Dialogue: 0,0:11:23.71,0:11:29.79,Sub,,0,0,0,,the purpose-built foundation optimized for the physics of the agentic era;
+Dialogue: 0,0:11:29.79,0:11:40.34,Sub,,0,0,0,,the Agentic Data Cloud, the engine that provides agents with trusted business context; Agentic Defense, the autonomous
+Dialogue: 0,0:11:40.34,0:11:45.06,Sub,,0,0,0,,protection that secures your entire AI lifecycle;
+Dialogue: 0,0:11:45.06,0:11:53.34,Sub,,0,0,0,,the Agentic Platform, the system to build, deploy, and manage agents; and finally, the Agentic Task
+Dialogue: 0,0:11:53.34,0:12:02.10,Sub,,0,0,0,,Force, the pre-built specialized agents that we offer that are ready to transform your business.
+Dialogue: 0,0:12:02.10,0:12:03.98,Sub,,0,0,0,,Let's dive in.
+Dialogue: 0,0:12:03.98,0:12:14.18,Sub,,0,0,0,,Now, the Gemini Enterprise Agent platform is the environment where your business logic, your data, and your models converge to drive autonomous action.
+Dialogue: 0,0:12:14.18,0:12:22.18,Sub,,0,0,0,,It expands on the previous capabilities of Vertex AI and brings new capabilities to enable your teams
+Dialogue: 0,0:12:22.18,0:12:32.62,Sub,,0,0,0,,to build, scale, govern, and optimize agents with the same architectural rigor you apply to your most mission-critical systems.
+Dialogue: 0,0:12:32.62,0:12:37.82,Sub,,0,0,0,,At its core, we build on our support for state-of-the-art models.
+Dialogue: 0,0:12:37.82,0:12:42.98,Sub,,0,0,0,,Our most advanced reasoning model, Gemini 3.1 Pro, is available in preview.
+Dialogue: 0,0:12:42.98,0:12:46.30,Sub,,0,0,0,,It's optimized for complex workflow orchestration.
+Dialogue: 0,0:12:46.30,0:12:54.34,Sub,,0,0,0,,It bridges the gap between strategy and autonomous execution, interacting with your APIs and systems with minimal tuning.
+Dialogue: 0,0:12:54.34,0:13:01.70,Sub,,0,0,0,,Industry leaders, including Databricks, JetBrains, and Replit, have chosen Gemini 3.1 Pro.
+Dialogue: 0,0:13:01.70,0:13:06.06,Sub,,0,0,0,,We're also announcing Gemini 3.1 Flash Image,
+Dialogue: 0,0:13:06.06,0:13:11.38,Sub,,0,0,0,,also known as Nano Banana 2, for high-fidelity visual assets;
+Dialogue: 0,0:13:11.38,0:13:16.94,Sub,,0,0,0,,Veo 3.1 Lite, our most cost-effective video model,
+Dialogue: 0,0:13:16.94,0:13:20.34,Sub,,0,0,0,,designed to build high-volume video applications;
+Dialogue: 0,0:13:20.34,0:13:30.38,Sub,,0,0,0,,and Lyria 3 Pro, a state-of-the-art model for enterprise and professional-grade audio and music.
+Dialogue: 0,0:13:30.38,0:13:33.74,Sub,,0,0,0,,All of these models are available in preview.
+Dialogue: 0,0:13:33.74,0:13:41.57,Sub,,0,0,0,,Finally, we support all the leading models from Anthropic, including Claude Opus, Sonnet, and Haiku.
+Dialogue: 0,0:13:41.57,0:13:47.69,Sub,,0,0,0,,And today, we're adding support for Anthropic's Claude Opus 4.7.
+Dialogue: 0,0:13:47.69,0:13:59.09,Sub,,0,0,0,,While all of these models represent a massive leap in intelligence, their true value is realized when they're operationalized to solve mission-critical problems.
+Dialogue: 0,0:13:59.09,0:14:07.33,Sub,,0,0,0,,Earlier this year, we announced a monumental partnership with one of the world's most iconic brands,
+Dialogue: 0,0:14:07.33,0:14:12.13,Sub,,0,0,0,,that will bring the power of our technology to users everywhere around the world.
+Dialogue: 0,0:14:12.13,0:14:22.29,Sub,,0,0,0,,We're collaborating with Apple as their preferred cloud provider to develop the next generation of Apple foundation models based on Gemini technology.
+Dialogue: 0,0:14:22.29,0:14:33.93,Sub,,0,0,0,,These models will help power future Apple Intelligence features, including a more personalized Siri coming later this year.
+Dialogue: 0,0:14:33.93,0:14:38.68,Sub,,0,0,0,,Leading organizations aren't just using Gemini Enterprise to work faster.
+Dialogue: 0,0:14:38.68,0:14:43.08,Sub,,0,0,0,,They're using it to redefine what their businesses can do.
+Dialogue: 0,0:14:43.08,0:14:47.44,Sub,,0,0,0,,Citi Wealth, in partnership with Google Cloud and DeepMind,
+Dialogue: 0,0:14:47.44,0:14:56.80,Sub,,0,0,0,,today unveiled Citi Sky, an always-on AI-powered member of the Citi Wealth team that brings
+Dialogue: 0,0:14:56.80,0:15:03.08,Sub,,0,0,0,,Citi's global intelligence to clients' fingertips.
+Dialogue: 0,0:15:03.08,0:15:06.24,Sub,,0,0,0,,Citi Sky will provide an exemplary experience,
+Dialogue: 0,0:15:06.24,0:15:15.68,Sub,,0,0,0,,allowing clients and colleagues to ask more of Citi Wealth whenever they need it, and in multiple languages.
+Dialogue: 0,0:15:15.68,0:15:25.76,Sub,,0,0,0,,Honeywell generates billions of insights for managing buildings by training digital twins on over a million product specifications.
+Dialogue: 0,0:15:25.76,0:15:36.99,Sub,,0,0,0,,Liverpool is bringing their signature in-store service online, projecting a 10 times return on investment on their new shopping assistant.
+Dialogue: 0,0:15:36.99,0:15:42.11,Sub,,0,0,0,,And for a mission that's quite literally out of this world,
+Dialogue: 0,0:15:42.11,0:15:45.67,Sub,,0,0,0,,we were very proud to partner with NASA--
+Dialogue: 0,0:15:53.95,0:16:03.51,Sub,,0,0,0,,--to use Gemini Enterprise Agents to power flight readiness and ensure astronaut safety for Artemis II, which
+Dialogue: 0,0:16:03.51,0:16:09.39,Sub,,0,0,0,,set the human spaceflight record for traveling the furthest distance from Earth.
+Dialogue: 0,0:16:09.39,0:16:15.27,Sub,,0,0,0,,Now, we built the agent platform to manage the entire lifecycle of an agent.
+Dialogue: 0,0:16:15.27,0:16:22.87,Sub,,0,0,0,,The low-code Agent Studio enables every employee to build and deploy agents using natural language.
+Dialogue: 0,0:16:22.87,0:16:33.34,Sub,,0,0,0,,It grounds LLM reasoning in your specific business rules, bringing predictable, autonomous action to every workflow at scale.
+Dialogue: 0,0:16:33.34,0:16:39.74,Sub,,0,0,0,,To manage these assets, the agent registry provides a single point of control,
+Dialogue: 0,0:16:39.74,0:16:47.86,Sub,,0,0,0,,indexing every internal agent and tool across your organization to ensure they're discoverable and governed.
+Dialogue: 0,0:16:47.86,0:16:58.02,Sub,,0,0,0,,Similarly, our Skills and Tools Registry allows you to define modular, reusable packages of instructions, scripts, and resources
+Dialogue: 0,0:16:58.02,0:17:04.38,Sub,,0,0,0,,to teach agents to perform specialized tasks or repeatable workflows.
+Dialogue: 0,0:17:04.38,0:17:14.18,Sub,,0,0,0,,We also expose skills for every GCP service and every service in Workspace in our skills registry.
+Dialogue: 0,0:17:14.18,0:17:18.46,Sub,,0,0,0,,All of this is also supported by our Agent Marketplace,
+Dialogue: 0,0:17:18.46,0:17:31.92,Sub,,0,0,0,,allowing you to search and deploy specialized agents from our global partner ecosystem directly in Gemini Enterprise, including Atlassian, Box,
+Dialogue: 0,0:17:31.92,0:17:38.46,Sub,,0,0,0,,Lovable, Oracle, ServiceNow, Workday, and many, many more.
+Dialogue: 0,0:17:38.46,0:17:49.70,Sub,,0,0,0,,Finally, with our native integration of Model Context Protocol, or MCP, you can connect our agent platform to any MCP server.
+Dialogue: 0,0:17:49.70,0:18:01.22,Sub,,0,0,0,,We're also exposing all of our GCP services as MCP to allow you to interact seamlessly with GCP from any agent.
+Dialogue: 0,0:18:01.22,0:18:11.38,Sub,,0,0,0,,In addition to developing this agent platform, it also provides the framework to orchestrate and scale your entire agentic workforce.
+Dialogue: 0,0:18:11.38,0:18:14.86,Sub,,0,0,0,,We enable agent-to-agent orchestration,
+Dialogue: 0,0:18:14.86,0:18:27.81,Sub,,0,0,0,,allowing agents to seamlessly delegate tasks from one to another, including support for complex generative and deterministic orchestration patterns.
+Dialogue: 0,0:18:27.81,0:18:34.85,Sub,,0,0,0,,This helps ensure that for your critical workflows, such as those that need compliance,
+Dialogue: 0,0:18:34.85,0:18:44.01,Sub,,0,0,0,,your agents can follow well-specified paths every single time, guaranteeing predictable outcomes.
+Dialogue: 0,0:18:44.01,0:18:47.61,Sub,,0,0,0,,Orchestration flows and agents can respond to events.
+Dialogue: 0,0:18:47.61,0:18:49.73,Sub,,0,0,0,,These events can be real-time.
+Dialogue: 0,0:18:49.73,0:18:51.89,Sub,,0,0,0,,They can be schedule-based.
+Dialogue: 0,0:18:51.89,0:18:56.69,Sub,,0,0,0,,They can be trigger-based, or they can be batch inference job.
+Dialogue: 0,0:18:56.69,0:19:04.49,Sub,,0,0,0,,We're bringing zero-trust verification to every agent and every orchestration step.
+Dialogue: 0,0:19:04.49,0:19:15.81,Sub,,0,0,0,,And now with Agent Identity, every agent has a unique cryptographic ID and well-defined authorization
+Dialogue: 0,0:19:15.81,0:19:19.29,Sub,,0,0,0,,policies that are traceable and auditable,
+Dialogue: 0,0:19:19.29,0:19:27.68,Sub,,0,0,0,,ensuring you can track every action in your company and manage all your agents.
+Dialogue: 0,0:19:27.68,0:19:38.36,Sub,,0,0,0,,They're also centrally managed through our Agent Gateway, which provides a single command center for policy enforcement across the organization.
+Dialogue: 0,0:19:38.36,0:19:42.24,Sub,,0,0,0,,Paired with Model Armor, you protect your models.
+Dialogue: 0,0:19:42.24,0:19:49.04,Sub,,0,0,0,,You protect your proprietary enterprise data from threats such as sensitive data leakage.
+Dialogue: 0,0:19:49.04,0:19:57.84,Sub,,0,0,0,,This integrated approach, from secure sandboxes to a single management console, provides the visibility
+Dialogue: 0,0:19:57.84,0:20:06.32,Sub,,0,0,0,,and isolation you need to run your most-sensitive workloads with a high degree of confidence.
+Dialogue: 0,0:20:06.32,0:20:12.40,Sub,,0,0,0,,Now, optimization and observability are also built into the fabric of the platform.
+Dialogue: 0,0:20:12.40,0:20:25.07,Sub,,0,0,0,,Agent observability delivers granular instrumentation, allowing you to visualize the full execution path of any agent using OTel-compliant telemetry.
+Dialogue: 0,0:20:25.07,0:20:33.91,Sub,,0,0,0,,You can retrieve traces, monitor tool use, quickly diagnose reasoning loops with fine-grained logging.
+Dialogue: 0,0:20:33.91,0:20:37.47,Sub,,0,0,0,,All of these capabilities that we've just detailed--
+Dialogue: 0,0:20:37.47,0:20:46.43,Sub,,0,0,0,,the orchestration, zero-trust security, and developer tools-- form the core engine of Gemini Enterprise.
+Dialogue: 0,0:20:46.43,0:20:58.51,Sub,,0,0,0,,While the agent platform is where your technical teams build and govern agent, the Gemini Enterprise application is the primary environment where your business actually operates.
+Dialogue: 0,0:20:58.51,0:21:10.31,Sub,,0,0,0,,It's that new front door to AI for all your employees, turning complex agentic capabilities into a simple, new way to work for every employee.
+Dialogue: 0,0:21:10.31,0:21:17.63,Sub,,0,0,0,,By unifying data across your entire stack, including Google Workspace, coding tools,
+Dialogue: 0,0:21:17.63,0:21:24.74,Sub,,0,0,0,,and enterprise systems, we've created a single intelligent flow for the entire organization.
+Dialogue: 0,0:21:24.74,0:21:32.22,Sub,,0,0,0,,To give your teams a permanent memory, we're introducing Gemini Enterprise projects.
+Dialogue: 0,0:21:32.22,0:21:45.02,Sub,,0,0,0,,Projects give your agents a high-fidelity workspace and the ability to use deep think to solve your most complex business challenges without context pollution.
+Dialogue: 0,0:21:45.02,0:21:56.46,Sub,,0,0,0,,We're also adding Microsoft 365 interoperability, allowing you to export the Docs and Slides you've created within Canvas into common Microsoft Office formats.
+Dialogue: 0,0:22:02.02,0:22:07.46,Sub,,0,0,0,,Leading innovators already use this platform to redefine their industries.
+Dialogue: 0,0:22:07.46,0:22:11.57,Sub,,0,0,0,,Let's hear from one of them, Virgin Voyages.
+Dialogue: 0,0:22:15.74,0:22:17.82,Sub,,0,0,0,,Our people are a secret sauce.
+Dialogue: 0,0:22:17.82,0:22:23.42,Sub,,0,0,0,,So anytime we can use data to make our people more empowered, we're all in.
+Dialogue: 0,0:22:23.42,0:22:30.08,Sub,,0,0,0,,Gemini Enterprise is a front door for AI in our business, and we're using it to bring natural language intelligence to our crew.
+Dialogue: 0,0:22:30.08,0:22:33.76,Sub,,0,0,0,,Gemini Enterprise is helping us bring Project 3D to life.
+Dialogue: 0,0:22:33.76,0:22:38.24,Sub,,0,0,0,,It's going to allow our crew to feel confident with any question they're asked.
+Dialogue: 0,0:22:38.24,0:22:44.42,Sub,,0,0,0,,So for sailors, Rovey is a personal concierge to maximize the value they get out of their vacation,
+Dialogue: 0,0:22:44.42,0:22:50.38,Sub,,0,0,0,,inspired at home all the way through the last day of their voyage to make sure they have the best time on vacation with us.
+Dialogue: 0,0:22:50.38,0:22:55.86,Sub,,0,0,0,,Our crew are already world-renowned and award-winning for the exceptional service they deliver as humans.
+Dialogue: 0,0:22:55.86,0:23:00.42,Sub,,0,0,0,,We want Project 3D and Gemini Enterprise to be able to take that even further.
+Dialogue: 0,0:23:00.42,0:23:05.26,Sub,,0,0,0,,So you can imagine when you're building something for a cruise ship, there are challenges that pop up.
+Dialogue: 0,0:23:05.26,0:23:08.50,Sub,,0,0,0,,There's not exactly a fiber cable running out the back of the ship.
+Dialogue: 0,0:23:08.50,0:23:13.28,Sub,,0,0,0,,With Google Distributed Cloud Edge, we had data resiliency at the core of the project.
+Dialogue: 0,0:23:13.28,0:23:17.86,Sub,,0,0,0,,And that means, even when we're offline, our intelligence is still online.
+Dialogue: 0,0:23:17.86,0:23:24.79,Sub,,0,0,0,,Using our AI stack in Google Cloud has helped us not only reduce our production timeline by up to 60%,
+Dialogue: 0,0:23:24.79,0:23:31.93,Sub,,0,0,0,,but we have contributed to a 28% increase month on month for a record sales quarter.
+Dialogue: 0,0:23:31.93,0:23:41.58,Sub,,0,0,0,,We could truly see a day where you get on a Virgin Atlantic flight, stay at a Virgin hotel, and end up on a Virgin Voyage, all connected seamlessly by Project Ruby and Gemini Enterprise.
+Dialogue: 0,0:23:41.58,0:23:44.45,Sub,,0,0,0,,Google has been a foundational partner for us.
+Dialogue: 0,0:23:44.45,0:23:45.51,Sub,,0,0,0,,The extension of Gemini.
+Dialogue: 0,0:23:45.51,0:23:48.23,Sub,,0,0,0,,Enterprise was the natural way to bring that mission to life.
+Dialogue: 0,0:23:58.29,0:24:00.81,Sub,,0,0,0,,The era of the pilot is over.
+Dialogue: 0,0:24:00.81,0:24:03.17,Sub,,0,0,0,,The era of the agent is here.
+Dialogue: 0,0:24:03.17,0:24:07.61,Sub,,0,0,0,,But the true power comes from how it changes your workflow.
+Dialogue: 0,0:24:07.61,0:24:09.41,Sub,,0,0,0,,Let's see it in action.
+Dialogue: 0,0:24:09.41,0:24:11.89,Sub,,0,0,0,,Please welcome Erika Chuong.
+Dialogue: 0,0:24:21.92,0:24:23.48,Sub,,0,0,0,,Thanks, Thomas.
+Dialogue: 0,0:24:23.48,0:24:28.60,Sub,,0,0,0,,Gemini Enterprise is a platform to build, manage, and interact with agents.
+Dialogue: 0,0:24:28.60,0:24:36.56,Sub,,0,0,0,,I'll demonstrate how it can orchestrate multiple agents across platforms, share context for seamless handoffs, and streamline workflows.
+Dialogue: 0,0:24:36.56,0:24:39.72,Sub,,0,0,0,,Imagine I work for a global furniture retailer.
+Dialogue: 0,0:24:39.72,0:24:49.12,Sub,,0,0,0,,Here's my personalized homepage where I can interact with internal business context and external sources in a single pane of glass.
+Dialogue: 0,0:24:49.12,0:24:55.74,Sub,,0,0,0,,The agent gallery hosts my approved selection of agents, including built-in ones by Google and my company's agents,
+Dialogue: 0,0:24:55.74,0:25:03.64,Sub,,0,0,0,,like this one for price and margin optimization, which autonomously orchestrates across agents, tools, and sources.
+Dialogue: 0,0:25:03.64,0:25:07.48,Sub,,0,0,0,,Now, let's see Gemini Enterprise in action.
+Dialogue: 0,0:25:07.48,0:25:14.78,Sub,,0,0,0,,To bring some less popular product lines back to life, we'll ask our agent to analyze current interior design trends,
+Dialogue: 0,0:25:14.78,0:25:20.23,Sub,,0,0,0,,identify dead stock in our warehouse, and orchestrate a relaunch campaign.
+Dialogue: 0,0:25:20.23,0:25:26.43,Sub,,0,0,0,,With that one prompt, multiple agents complete a series of actions in minutes instead of hours.
+Dialogue: 0,0:25:26.43,0:25:36.23,Sub,,0,0,0,,My market research agent, powered by Deep Research, analyzes the latest Google Search information alongside my own sales and CSAT data.
+Dialogue: 0,0:25:36.23,0:25:43.23,Sub,,0,0,0,,My data insights agent is connecting to our global product catalog, regardless of location or format.
+Dialogue: 0,0:25:43.23,0:25:51.71,Sub,,0,0,0,,It knows that dead stock refers to stale inventory, and it uses our Agentic Data Cloud to identify the right data sets.
+Dialogue: 0,0:25:51.71,0:25:55.43,Sub,,0,0,0,,And my product strategy agent pulls everything together.
+Dialogue: 0,0:25:55.43,0:25:57.55,Sub,,0,0,0,,I'll go ahead and approve this plan.
+Dialogue: 0,0:25:57.55,0:26:00.67,Sub,,0,0,0,,This can take a few minutes, so we'll fast-forward.
+Dialogue: 0,0:26:00.67,0:26:03.07,Sub,,0,0,0,,Here are the highlights.
+Dialogue: 0,0:26:03.07,0:26:08.71,Sub,,0,0,0,,Organic Modern is a huge trend, and customers are paying top dollar.
+Dialogue: 0,0:26:08.71,0:26:17.30,Sub,,0,0,0,,Our Tuscany collection has leftover inventory that actually fits right in, but sales haven't been great.
+Dialogue: 0,0:26:17.30,0:26:25.06,Sub,,0,0,0,,The recommendation-- rebrand and reprice it above our current discount but below competitor pricing.
+Dialogue: 0,0:26:25.06,0:26:28.50,Sub,,0,0,0,,All of that with one simple prompt.
+Dialogue: 0,0:26:28.50,0:26:33.62,Sub,,0,0,0,,I can even see the sources that it analyzed to make these recommendations.
+Dialogue: 0,0:26:33.62,0:26:40.58,Sub,,0,0,0,,Gemini Enterprise is also suggesting a new landing page and new media to put front and center.
+Dialogue: 0,0:26:40.58,0:26:44.28,Sub,,0,0,0,,I'll ask my product strategy agent to generate some videos.
+Dialogue: 0,0:26:47.90,0:26:51.96,Sub,,0,0,0,,This part can also take a little bit of time, so we'll look at some pre-generated options.
+Dialogue: 0,0:26:56.94,0:26:59.10,Sub,,0,0,0,,This looks amazing.
+Dialogue: 0,0:26:59.10,0:27:05.06,Sub,,0,0,0,,Veo 3.0 placed the exact pieces in a whole new organic living style space.
+Dialogue: 0,0:27:05.06,0:27:08.14,Sub,,0,0,0,,Now, let's get that website updated.
+Dialogue: 0,0:27:08.14,0:27:13.09,Sub,,0,0,0,,I'll ask my dev agent to coordinate with our engineering team.
+Dialogue: 0,0:27:13.09,0:27:20.05,Sub,,0,0,0,,It connects directly with Jira to give a developer full context for a seamless handoff.
+Dialogue: 0,0:27:20.05,0:27:28.33,Sub,,0,0,0,,And on the developer's end, I'll automatically get a notification right here in my Google Chat with that Jira ticket.
+Dialogue: 0,0:27:28.33,0:27:29.95,Sub,,0,0,0,,I'll get this going with CLI.
+Dialogue: 0,0:27:33.01,0:27:37.41,Sub,,0,0,0,,Here, I'll ask my dev agent to start working on that Jira ticket.
+Dialogue: 0,0:27:37.41,0:27:40.63,Sub,,0,0,0,,It's going to give me an overview of the strategy,
+Dialogue: 0,0:27:40.63,0:27:52.01,Sub,,0,0,0,,the assets, and how it plans to execute on this web page using all of the context from the previous Gemini Enterprise session, the ticket, and our brand and coding guidelines.
+Dialogue: 0,0:27:52.01,0:27:53.73,Sub,,0,0,0,,This is really easy.
+Dialogue: 0,0:27:53.73,0:27:56.97,Sub,,0,0,0,,Let's go ahead and get this built and deployed.
+Dialogue: 0,0:27:56.97,0:28:03.77,Sub,,0,0,0,,From here, this can take a little bit of time-- I'm sure the devs in the audience know that-- so I gave it a little bit of a head start.
+Dialogue: 0,0:28:03.77,0:28:07.89,Sub,,0,0,0,,Let's check out that final product.
+Dialogue: 0,0:28:07.89,0:28:10.65,Sub,,0,0,0,,This looks perfect.
+Dialogue: 0,0:28:10.65,0:28:16.21,Sub,,0,0,0,,Now let's head back over to Gemini Enterprise to prepare our stores for the launch.
+Dialogue: 0,0:28:16.21,0:28:22.41,Sub,,0,0,0,,Our store operations team would usually handle this piece, so I'm in a brand-new session.
+Dialogue: 0,0:28:22.41,0:28:27.45,Sub,,0,0,0,,I'll ask for a deck to get our regional distributors up to speed.
+Dialogue: 0,0:28:27.45,0:28:37.17,Sub,,0,0,0,,Gemini Enterprise uses my company's context to find exactly what I need to know about that launch, how I've managed these in the past, and my team's sales goals.
+Dialogue: 0,0:28:37.17,0:28:42.69,Sub,,0,0,0,,Then it works with the Google Workspace agent to create a branded deck in my personal style.
+Dialogue: 0,0:28:42.69,0:28:47.53,Sub,,0,0,0,,Again, this can take a minute or two, so we'll look at one I generated ahead of time.
+Dialogue: 0,0:28:47.53,0:28:48.49,Sub,,0,0,0,,Get this.
+Dialogue: 0,0:28:48.49,0:28:57.25,Sub,,0,0,0,,With our brand-new Canvas mode, I can make edits and collaborate in Google Slides without ever having to leave Gemini Enterprise.
+Dialogue: 0,0:28:57.25,0:29:05.09,Sub,,0,0,0,,Overall, I think this looks great, but I actually prefer the word "reimagined" here.
+Dialogue: 0,0:29:05.09,0:29:08.10,Sub,,0,0,0,,Perfect, and I'll go ahead and share this with my team.
+Dialogue: 0,0:29:14.88,0:29:17.64,Sub,,0,0,0,,And it looks like some of them are already jumping in.
+Dialogue: 0,0:29:17.64,0:29:18.92,Sub,,0,0,0,,Let's recap.
+Dialogue: 0,0:29:18.92,0:29:24.40,Sub,,0,0,0,,We saw Gemini Enterprise orchestrate multiple agents with a single prompt, share context,
+Dialogue: 0,0:29:24.40,0:29:35.00,Sub,,0,0,0,,and generate and collaborate content with Google Workspace, all supported by our enterprise-grade governance, which gives organizations the power to manage and secure agents
+Dialogue: 0,0:29:35.00,0:29:39.88,Sub,,0,0,0,,at scale, all while maintaining control over their business data.
+Dialogue: 0,0:29:39.88,0:29:44.52,Sub,,0,0,0,,That's the magic of the Gemini Enterprise Agent platform.
+Dialogue: 0,0:30:03.24,0:30:05.04,Sub,,0,0,0,,Thank you, Erica.
+Dialogue: 0,0:30:05.04,0:30:12.11,Sub,,0,0,0,,Thousands of companies around the world and across industries are choosing Gemini Enterprise to transform their business.
+Dialogue: 0,0:30:12.11,0:30:13.99,Sub,,0,0,0,,We're seeing a profound shift.
+Dialogue: 0,0:30:13.99,0:30:16.61,Sub,,0,0,0,,Companies aren't just redesigning workflows.
+Dialogue: 0,0:30:16.61,0:30:25.15,Sub,,0,0,0,,They're turning their everyday employees into AI builders, empowering them to solve their own hardest problems.
+Dialogue: 0,0:30:25.15,0:30:31.19,Sub,,0,0,0,,Signal Iduna is redefining insurance in Germany with Gemini Enterprise.
+Dialogue: 0,0:30:31.19,0:30:37.07,Sub,,0,0,0,,They hit 80% adoption within weeks, making it their front door for AI.
+Dialogue: 0,0:30:37.07,0:30:41.67,Sub,,0,0,0,,11,000 employees are now building specialized agents.
+Dialogue: 0,0:30:41.67,0:30:49.35,Sub,,0,0,0,,Their health agent automatically verifies coverage against a century of complex policy data,
+Dialogue: 0,0:30:49.35,0:30:57.03,Sub,,0,0,0,,driving a 400% surge in weekly users and providing answers 37% faster.
+Dialogue: 0,0:30:57.03,0:31:00.87,Sub,,0,0,0,,Bosch is adopting Gemini Enterprise globally.
+Dialogue: 0,0:31:00.87,0:31:09.94,Sub,,0,0,0,,From finance to engineering, employees are deploying custom agents so that they can reclaim time for complex research.
+Dialogue: 0,0:31:09.94,0:31:17.26,Sub,,0,0,0,,KPMG reached 90% adoption with over 100 agents in just the first month.
+Dialogue: 0,0:31:17.26,0:31:23.50,Sub,,0,0,0,,The American Society for Clinical Oncology is now delivering cancer expertise faster.
+Dialogue: 0,0:31:23.50,0:31:34.18,Sub,,0,0,0,,Merck is bringing Gemini Enterprise to 75,000 employees to support their purpose to save and improve lives.
+Dialogue: 0,0:31:34.18,0:31:38.42,Sub,,0,0,0,,And Walmart is rolling out Gemini Enterprise--
+Dialogue: 0,0:31:41.18,0:31:47.90,Sub,,0,0,0,,Walmart is rolling out Gemini Enterprise to help their store leaders spend more time with customers.
+Dialogue: 0,0:31:47.90,0:31:48.96,Sub,,0,0,0,,Let's take a look.
+Dialogue: 0,0:31:52.04,0:31:56.04,Sub,,0,0,0,,At Walmart, we're known for being people-led and tech-powered.
+Dialogue: 0,0:31:56.04,0:32:02.46,Sub,,0,0,0,,It's how we deliver on our promise to help our customers save money and live better.
+Dialogue: 0,0:32:02.46,0:32:10.09,Sub,,0,0,0,,But in a retail landscape that's moving faster than ever, there's one thing that's critical to our success-- trust.
+Dialogue: 0,0:32:10.09,0:32:14.07,Sub,,0,0,0,,It's the backbone of our relationship with our associates and customers.
+Dialogue: 0,0:32:14.07,0:32:20.89,Sub,,0,0,0,,And our field leaders build trust by being present on the sales floor, not in their offices at a screen.
+Dialogue: 0,0:32:20.89,0:32:31.01,Sub,,0,0,0,,So we're giving our associates the latest tech and tools at their fingertips so that they can spend more time on the floor with their teams, serving our customers.
+Dialogue: 0,0:32:31.01,0:32:40.45,Sub,,0,0,0,,By combining our data with advanced AI technology, Google Cloud is helping our leaders make better decisions with clearer insights.
+Dialogue: 0,0:32:40.45,0:32:49.41,Sub,,0,0,0,,Gemini Enterprise is helping us take an important step forward, helping our leaders lead and solving problems so we can serve our customers better.
+Dialogue: 0,0:32:49.41,0:32:59.89,Sub,,0,0,0,,Our store and supply chain leaders now have a Pixel Fold connected to Walmart's enterprise data and giving them the answers they need in seconds, not hours.
+Dialogue: 0,0:32:59.89,0:33:05.41,Sub,,0,0,0,,By putting people first and taking their hands, we're building a stronger future.
+Dialogue: 0,0:33:05.41,0:33:11.13,Sub,,0,0,0,,Thanks to our partnership with Google Cloud, we continue to transform retail every day.
+Dialogue: 0,0:33:11.13,0:33:15.73,Sub,,0,0,0,,I'm excited for what's next.
+Dialogue: 0,0:33:21.49,0:33:30.69,Sub,,0,0,0,,This winter, ahead of one of the biggest moments in global sports, our world-class engineers collaborated with world-class athletes.
+Dialogue: 0,0:33:30.69,0:33:37.95,Sub,,0,0,0,,We're incredibly proud of how Google Cloud is helping athletes push the boundaries of their sport with AI.
+Dialogue: 0,0:33:41.83,0:33:45.83,Sub,,0,0,0,,There are sports that have a limited amount of data that's captured.
+Dialogue: 0,0:33:45.83,0:33:49.35,Sub,,0,0,0,,And I think that's a beautifully perfect challenge for a company like Google.
+Dialogue: 0,0:33:49.35,0:33:50.84,Sub,,0,0,0,,Let's roll it.
+Dialogue: 0,0:33:50.84,0:33:58.55,Sub,,0,0,0,,One of the really cool things that we're partnering with Team USA to do is to help them understand what's that edge that we can possibly give them?
+Dialogue: 0,0:33:58.55,0:34:01.19,Sub,,0,0,0,,They understand what's happening in the moment better than anybody.
+Dialogue: 0,0:34:01.19,0:34:06.02,Sub,,0,0,0,,So to have their input and their say can really help us create something that's of benefit.
+Dialogue: 0,0:34:06.02,0:34:08.88,Sub,,0,0,0,,The side-by-side comparison thing I'm excited for.
+Dialogue: 0,0:34:08.88,0:34:11.30,Sub,,0,0,0,,Everything is running on Google Cloud.
+Dialogue: 0,0:34:11.30,0:34:15.06,Sub,,0,0,0,,The 3D model that we're using is a collaboration with Google DeepMind.
+Dialogue: 0,0:34:15.06,0:34:18.59,Sub,,0,0,0,,We've moved so far past talking to an LLM with text.
+Dialogue: 0,0:34:18.59,0:34:20.38,Sub,,0,0,0,,It's so clear as day right here.
+Dialogue: 0,0:34:20.38,0:34:20.98,Sub,,0,0,0,,It's amazing.
+Dialogue: 0,0:34:20.98,0:34:22.04,Sub,,0,0,0,,Whoa. Is that me?
+Dialogue: 0,0:34:22.04,0:34:23.82,Sub,,0,0,0,,That's crazy.
+Dialogue: 0,0:34:23.82,0:34:28.70,Sub,,0,0,0,,Operating at the speed of sports is one of the greatest challenges that we could be helping solve.
+Dialogue: 0,0:34:28.70,0:34:36.76,Sub,,0,0,0,,If we can do that for the Winter Olympics in Milan, we can do that for any industry all over the world.
+Dialogue: 0,0:34:36.76,0:34:44.20,Sub,,0,0,0,,Please welcome three-time Olympic gold medalist, entrepreneur, and snowboarding legend, Shaun White.
+Dialogue: 0,0:34:49.84,0:34:51.78,Sub,,0,0,0,,What's up, Google Cloud Next?
+Dialogue: 0,0:34:55.32,0:34:56.14,Sub,,0,0,0,,Oh, wow.
+Dialogue: 0,0:34:59.31,0:35:02.33,Sub,,0,0,0,,Man, I love seeing it snow in the desert.
+Dialogue: 0,0:35:02.33,0:35:03.39,Sub,,0,0,0,,This is wild.
+Dialogue: 0,0:35:03.39,0:35:04.75,Sub,,0,0,0,,All right.
+Dialogue: 0,0:35:04.75,0:35:10.31,Sub,,0,0,0,,Look, back when I was training, our tools were camcorders and basically guesswork.
+Dialogue: 0,0:35:10.31,0:35:16.31,Sub,,0,0,0,,You'd land a trick and watch it back, and you'd be looking at it thinking, how can I make that trick better?
+Dialogue: 0,0:35:16.31,0:35:20.13,Sub,,0,0,0,,Over time, I've seen the tricks get bigger and the walls get higher.
+Dialogue: 0,0:35:20.13,0:35:23.59,Sub,,0,0,0,,And now, Google Cloud is bringing AI to the mountain.
+Dialogue: 0,0:35:23.59,0:35:29.07,Sub,,0,0,0,,This winter, I worked with some crazy-smart Google Cloud engineers on some awesome tech.
+Dialogue: 0,0:35:29.07,0:35:34.03,Sub,,0,0,0,,And to show you how rad this is, give it up for Jason Davenport.
+Dialogue: 0,0:35:42.19,0:35:43.78,Sub,,0,0,0,,What's up, Shaun?
+Dialogue: 0,0:35:43.78,0:35:45.57,Sub,,0,0,0,,What have we got for everyone?
+Dialogue: 0,0:35:45.57,0:35:46.99,Sub,,0,0,0,,All right, Shaun.
+Dialogue: 0,0:35:46.99,0:35:48.37,Sub,,0,0,0,,This is going to be super fun.
+Dialogue: 0,0:35:48.37,0:35:52.51,Sub,,0,0,0,,Let's unleash the power of Google Cloud AI into the half-pipe.
+Dialogue: 0,0:35:52.51,0:35:57.12,Sub,,0,0,0,,And to do that, we're going to pull up a trick from your 2017 Burton US Open.
+Dialogue: 0,0:35:57.12,0:35:58.00,Sub,,0,0,0,,Oh, wow.
+Dialogue: 0,0:35:58.00,0:35:59.24,Sub,,0,0,0,,I'm sure you remember this one.
+Dialogue: 0,0:35:59.24,0:36:00.04,Sub,,0,0,0,,It's a throwback.
+Dialogue: 0,0:36:00.04,0:36:00.92,Sub,,0,0,0,,It's a throwback.
+Dialogue: 0,0:36:00.92,0:36:03.96,Sub,,0,0,0,,It is. So let's analyze this clip for the audience.
+Dialogue: 0,0:36:03.96,0:36:06.20,Sub,,0,0,0,,And so they can see all the cool things that AI sees.
+Dialogue: 0,0:36:06.20,0:36:06.86,Sub,,0,0,0,,All right.
+Dialogue: 0,0:36:06.86,0:36:08.82,Sub,,0,0,0,,All right, let's start it off.
+Dialogue: 0,0:36:08.82,0:36:12.18,Sub,,0,0,0,,First, this trick is over in under three seconds.
+Dialogue: 0,0:36:12.18,0:36:14.98,Sub,,0,0,0,,You are literally-- it's a split-second blur.
+Dialogue: 0,0:36:14.98,0:36:17.64,Sub,,0,0,0,,And for everyone watching, what trick is this?
+Dialogue: 0,0:36:17.64,0:36:20.63,Sub,,0,0,0,,This is a switch cab double flip 1440.
+Dialogue: 0,0:36:20.63,0:36:21.96,Sub,,0,0,0,,That is insane.
+Dialogue: 0,0:36:21.96,0:36:25.62,Sub,,0,0,0,,But for everyone else, what does that actually mean?
+Dialogue: 0,0:36:25.62,0:36:28.60,Sub,,0,0,0,,Basically, it's my unnatural way of riding.
+Dialogue: 0,0:36:28.60,0:36:31.54,Sub,,0,0,0,,I do four full rotations with two flips in the middle.
+Dialogue: 0,0:36:31.54,0:36:35.66,Sub,,0,0,0,,I tried stopping using the camcorder, and I couldn't do it.
+Dialogue: 0,0:36:35.66,0:36:37.52,Sub,,0,0,0,,So let's slow this down.
+Dialogue: 0,0:36:37.52,0:36:42.82,Sub,,0,0,0,,And to do this, we need to analyze this frame by frame and see what Google Cloud sees.
+Dialogue: 0,0:36:42.82,0:36:46.44,Sub,,0,0,0,,And we're going to do this essentially with every single stop in this.
+Dialogue: 0,0:36:46.44,0:36:49.62,Sub,,0,0,0,,So first, let's start with your pose.
+Dialogue: 0,0:36:49.62,0:36:51.26,Sub,,0,0,0,,So this is what's super cool.
+Dialogue: 0,0:36:51.26,0:37:01.23,Sub,,0,0,0,,We built a model in collaboration with Google DeepMind that can track you spatially, and it creates a three-dimensional, essentially pose of you from a flat, two-dimensional video.
+Dialogue: 0,0:37:01.23,0:37:02.23,Sub,,0,0,0,,So awesome.
+Dialogue: 0,0:37:02.23,0:37:03.69,Sub,,0,0,0,,I mean, I love it.
+Dialogue: 0,0:37:03.69,0:37:05.15,Sub,,0,0,0,,I can't even see you here.
+Dialogue: 0,0:37:05.15,0:37:06.31,Sub,,0,0,0,,How does it do it?
+Dialogue: 0,0:37:06.31,0:37:09.71,Sub,,0,0,0,,This was my tight pant, leather jacket phase.
+Dialogue: 0,0:37:09.71,0:37:11.79,Sub,,0,0,0,,So you got to really punch in on it.
+Dialogue: 0,0:37:11.79,0:37:14.75,Sub,,0,0,0,,I know. I got some out back, too.
+Dialogue: 0,0:37:14.75,0:37:15.55,Sub,,0,0,0,,It was a good look.
+Dialogue: 0,0:37:15.55,0:37:17.13,Sub,,0,0,0,,I know. It's still a good look.
+Dialogue: 0,0:37:17.13,0:37:17.87,Sub,,0,0,0,,All right.
+Dialogue: 0,0:37:17.87,0:37:19.67,Sub,,0,0,0,,Let's talk about the next thing.
+Dialogue: 0,0:37:19.67,0:37:21.89,Sub,,0,0,0,,These are stats powered by Gemini.
+Dialogue: 0,0:37:21.89,0:37:27.09,Sub,,0,0,0,,Here, we're tracking your flight dynamics, rotational velocity, and even your tuck compression.
+Dialogue: 0,0:37:27.09,0:37:28.55,Sub,,0,0,0,,Yeah, this is amazing.
+Dialogue: 0,0:37:28.55,0:37:29.68,Sub,,0,0,0,,We didn't have this before.
+Dialogue: 0,0:37:29.68,0:37:31.91,Sub,,0,0,0,,I can see how much time I've spent in the air.
+Dialogue: 0,0:37:31.91,0:37:39.55,Sub,,0,0,0,,And now take old footage that I've done and compare it with new footage of how much time was I in the air when I landed the trick, and when I didn't land the trick.
+Dialogue: 0,0:37:39.55,0:37:40.71,Sub,,0,0,0,,And I can compare the two.
+Dialogue: 0,0:37:40.71,0:37:42.95,Sub,,0,0,0,,And that data is really going to help me progress.
+Dialogue: 0,0:37:42.95,0:37:45.99,Sub,,0,0,0,,And obviously, the next generation can use these tools too.
+Dialogue: 0,0:37:45.99,0:37:46.35,Sub,,0,0,0,,It's true.
+Dialogue: 0,0:37:46.35,0:37:50.71,Sub,,0,0,0,,And what I love is I love seeing how quickly your rotational velocity gets up here.
+Dialogue: 0,0:37:50.71,0:37:52.30,Sub,,0,0,0,,It's all about how you exit the pipe.
+Dialogue: 0,0:37:52.30,0:37:54.47,Sub,,0,0,0,,Torque-- exactly, and coming out of it.
+Dialogue: 0,0:37:54.47,0:37:54.83,Sub,,0,0,0,,All right.
+Dialogue: 0,0:37:54.83,0:37:58.03,Sub,,0,0,0,,So let's look at one more cool thing that we've done here, which is the ribbon overlay.
+Dialogue: 0,0:37:58.03,0:37:58.95,Sub,,0,0,0,,Oh, I love this.
+Dialogue: 0,0:37:58.95,0:38:01.03,Sub,,0,0,0,,So here's what I love about this.
+Dialogue: 0,0:38:01.03,0:38:04.03,Sub,,0,0,0,,We're actually showing your cork here with the whole visualization.
+Dialogue: 0,0:38:04.03,0:38:05.61,Sub,,0,0,0,,So what happens here?
+Dialogue: 0,0:38:05.61,0:38:08.03,Sub,,0,0,0,,We're moving from blue to green on the thing.
+Dialogue: 0,0:38:08.03,0:38:08.57,Sub,,0,0,0,,What is that?
+Dialogue: 0,0:38:08.57,0:38:12.23,Sub,,0,0,0,,When I was working with the engineers, I was trying to describe this trick.
+Dialogue: 0,0:38:12.23,0:38:20.85,Sub,,0,0,0,,And there's a turning point where normally I do one front flip and then come in for the second, but then you have to pause and then go backflip.
+Dialogue: 0,0:38:20.85,0:38:25.07,Sub,,0,0,0,,If you miss that turning point in the trick, well, it's not good.
+Dialogue: 0,0:38:25.07,0:38:26.33,Sub,,0,0,0,,It's not good.
+Dialogue: 0,0:38:26.33,0:38:28.47,Sub,,0,0,0,,But this really pinpoints it exactly.
+Dialogue: 0,0:38:28.47,0:38:29.71,Sub,,0,0,0,,It is so cool to watch this.
+Dialogue: 0,0:38:29.71,0:38:33.39,Sub,,0,0,0,,And what I love is that this is making sports more accessible for fans.
+Dialogue: 0,0:38:33.39,0:38:36.99,Sub,,0,0,0,,We can see all of the craziness that you're putting into this sport.
+Dialogue: 0,0:38:36.99,0:38:37.86,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:38:37.86,0:38:38.99,Sub,,0,0,0,,All right.
+Dialogue: 0,0:38:38.99,0:38:41.41,Sub,,0,0,0,,So let's bring this back and talk a little bit more tech.
+Dialogue: 0,0:38:41.41,0:38:49.13,Sub,,0,0,0,,Google Cloud is helping everyone innovate here by creating new use-case specific models, even for things like spatial analysis,
+Dialogue: 0,0:38:49.13,0:39:02.04,Sub,,0,0,0,,training these large amounts of data and even models with Google Cloud TPUs, and helping everyone to build a secure data and agent foundation with Gemini Enterprise Agent Platform.
+Dialogue: 0,0:39:02.04,0:39:07.70,Sub,,0,0,0,,Compute, models, and platform-- this is the power of Google Cloud AI.
+Dialogue: 0,0:39:07.70,0:39:12.82,Sub,,0,0,0,,And look, from my personal experience, I can tell you, learning a trick on the mountain is one thing,
+Dialogue: 0,0:39:12.82,0:39:16.88,Sub,,0,0,0,,but actually understanding the physics of a trick is a whole other thing.
+Dialogue: 0,0:39:16.88,0:39:24.78,Sub,,0,0,0,,And this is really going to help not only the next generation of athletes learn new skills but also help the fans at home understand the sport better.
+Dialogue: 0,0:39:24.78,0:39:28.52,Sub,,0,0,0,,And not just for snowboarding, but I think sports globally.
+Dialogue: 0,0:39:28.52,0:39:30.77,Sub,,0,0,0,,Look, I'm so stoked to see what's ahead.
+Dialogue: 0,0:39:30.77,0:39:31.48,Sub,,0,0,0,,Thank you, Jason.
+Dialogue: 0,0:39:31.48,0:39:34.29,Sub,,0,0,0,,And thank you, Google Cloud Next.
+Dialogue: 0,0:39:39.72,0:39:47.48,Sub,,0,0,0,,Please welcome SVP and chief technologist, AI and infrastructure, Amin Vahdat.
+Dialogue: 0,0:39:59.74,0:40:00.99,Sub,,0,0,0,,Thank you, Shaun.
+Dialogue: 0,0:40:00.99,0:40:06.09,Sub,,0,0,0,,We're taking the exact same technology that empowers athletes and applying it to the enterprise.
+Dialogue: 0,0:40:06.09,0:40:11.39,Sub,,0,0,0,,Because while athletes use data to understand the game, the enterprise needs it to change the game.
+Dialogue: 0,0:40:11.39,0:40:15.55,Sub,,0,0,0,,That kind of scale is the ultimate stress test for a unified system.
+Dialogue: 0,0:40:15.55,0:40:26.51,Sub,,0,0,0,,When you process massive video feeds, reaching over decades of historical data, and defend every byte in near real time, you have a foundation built for anything.
+Dialogue: 0,0:40:26.51,0:40:31.07,Sub,,0,0,0,,But to solve this at a global scale, we first have to solve a physics problem.
+Dialogue: 0,0:40:31.07,0:40:40.47,Sub,,0,0,0,,It is a constant struggle against the limits of software architecture, hardware architecture, power, cooling, and even the speed of light.
+Dialogue: 0,0:40:40.47,0:40:43.95,Sub,,0,0,0,,This is the foundation of our AI Hypercomputer.
+Dialogue: 0,0:40:43.95,0:40:54.02,Sub,,0,0,0,,We integrate clean energy, massive physical scale, and our purpose-built infrastructure into a single unified engine of efficiency and innovation.
+Dialogue: 0,0:40:54.02,0:40:57.82,Sub,,0,0,0,,Because in the agentic era, compute is no longer defined by chip.
+Dialogue: 0,0:40:57.82,0:41:02.14,Sub,,0,0,0,,Compute is the entire data center.
+Dialogue: 0,0:41:02.14,0:41:07.00,Sub,,0,0,0,,We give you the ultimate flexibility to pick the right architecture without compromise.
+Dialogue: 0,0:41:07.00,0:41:11.86,Sub,,0,0,0,,You can see this in how different industry leaders are innovating on Google Cloud.
+Dialogue: 0,0:41:11.86,0:41:21.30,Sub,,0,0,0,,Axia Energia, Brazil's largest power company, helps prevent power outages for millions of customers by running advanced weather modeling on TPU clusters.
+Dialogue: 0,0:41:21.30,0:41:28.82,Sub,,0,0,0,,By forecasting severe weather conditions up to 10 days in advance, the company can proactively plan and execute preventative measures
+Dialogue: 0,0:41:28.82,0:41:35.30,Sub,,0,0,0,,before storms hit, significantly reducing service interruptions year over year.
+Dialogue: 0,0:41:35.30,0:41:43.38,Sub,,0,0,0,,Thinking Machine Labs shows our NVIDIA-based infrastructure to power Tinker, an open platform for reinforcement learning and fine-tuning
+Dialogue: 0,0:41:43.38,0:41:47.25,Sub,,0,0,0,,of frontier models for specialized use cases.
+Dialogue: 0,0:41:47.25,0:41:54.89,Sub,,0,0,0,,Woven by Toyota achieved 42% faster training for models that predict complex traffic events.
+Dialogue: 0,0:41:54.89,0:42:05.49,Sub,,0,0,0,,The US Department of Energy is powering AI coscientists across all 17 national labs to accelerate the pace of scientific discovery.
+Dialogue: 0,0:42:05.49,0:42:16.45,Sub,,0,0,0,,And Boston Dynamics is training and safely deploying flexible vision-language models to scale robotics across diverse industrial applications.
+Dialogue: 0,0:42:16.45,0:42:22.93,Sub,,0,0,0,,As we enter the agentic era, we see that the demands of training and serving have completely diverged.
+Dialogue: 0,0:42:22.93,0:42:31.68,Sub,,0,0,0,,To meet the performance needs of these explosive workloads, I am proud to announce our eighth-generation TPUs.
+Dialogue: 0,0:42:51.49,0:42:53.01,Sub,,0,0,0,,These are things of beauty.
+Dialogue: 0,0:42:53.01,0:43:02.05,Sub,,0,0,0,,For the very first time, we are launching two specialized platforms, each built from the ground up for the distinct demands of training and serving.
+Dialogue: 0,0:43:02.05,0:43:06.09,Sub,,0,0,0,,TPU 8t is a powerhouse optimized for training.
+Dialogue: 0,0:43:06.09,0:43:13.37,Sub,,0,0,0,,We have redefined performance capability by moving block scale multiplication directly inside the MXUs.
+Dialogue: 0,0:43:13.37,0:43:22.73,Sub,,0,0,0,,This native MXU quantization eliminates VPU overhead, delivering nearly three times the compute performance per pod over previous generations.
+Dialogue: 0,0:43:22.73,0:43:31.21,Sub,,0,0,0,,This allows us to push the absolute limits of model flops utilization at a massive scale and reduces the training time of frontier models.
+Dialogue: 0,0:43:31.21,0:43:45.20,Sub,,0,0,0,,It leverages our breakthrough inter-chip interconnect technology, which now delivers twice the bandwidth compared to Ironwood, scaling up to 9,600 TPUs connected via our 3D torus topology.
+Dialogue: 0,0:43:45.20,0:43:55.56,Sub,,0,0,0,,This is a 2.8x improvement over Ironwood to deliver 1.21 exaflops of FP4 compute per pod.
+Dialogue: 0,0:43:55.56,0:44:07.12,Sub,,0,0,0,,8t provides two petabytes of shared bandwidth memory in a single superpod and utilizes the new TPUDirect storage to enable high-speed data transfers from managed storage.
+Dialogue: 0,0:44:07.12,0:44:18.36,Sub,,0,0,0,,To put that scale in perspective, two petabytes is enough to hold the entire digital connection of the Library of Congress 100 times over.
+Dialogue: 0,0:44:18.36,0:44:23.92,Sub,,0,0,0,,TPU 8i is optimized for the thinking part of the equation-- inference and reinforcement learning.
+Dialogue: 0,0:44:23.92,0:44:31.52,Sub,,0,0,0,,At the chip level, we have integrated a specialized collectives acceleration engine, which reduces latency by an additional 5x.
+Dialogue: 0,0:44:31.52,0:44:38.92,Sub,,0,0,0,,By hosting the memory cache entirely on silicon, we've finally broken the memory wall that slows down long-context decoding.
+Dialogue: 0,0:44:38.92,0:44:43.15,Sub,,0,0,0,,We then scaled this on-chip performance through our new board flight topology,
+Dialogue: 0,0:44:43.15,0:44:52.07,Sub,,0,0,0,,which deploys 1152 TPUs into a single pod to run millions of concurrent agents with near-zero latency.
+Dialogue: 0,0:44:52.07,0:45:02.71,Sub,,0,0,0,,This delivers 11.6 FP8 exaflops for a substantial 9.8x increase in performance over the 256-chip Ironwood pod.
+Dialogue: 0,0:45:05.99,0:45:12.59,Sub,,0,0,0,,We are extending our infrastructure leadership to general purpose workloads as well with Google Cloud Axion.
+Dialogue: 0,0:45:12.59,0:45:17.89,Sub,,0,0,0,,Our Google Axion N48 compute instances, powered by a custom-designed ARM CPU,
+Dialogue: 0,0:45:17.89,0:45:25.95,Sub,,0,0,0,,deliver up to twice better price performance and 80% better performance per watt than comparable x86 instances.
+Dialogue: 0,0:45:25.95,0:45:36.71,Sub,,0,0,0,,This provides a sustained, continuous operation designed to eliminate cold starts in logic apps, ensuring your agents are always on and ready to respond.
+Dialogue: 0,0:45:36.71,0:45:43.18,Sub,,0,0,0,,We are the preferred cloud for NVIDIA GPUs by some of the largest scale and most innovative customers in the world.
+Dialogue: 0,0:45:43.18,0:45:51.61,Sub,,0,0,0,,Today, I am pleased to announce that Google Cloud will be among the first to offer the NVIDIA Vera Rubin NVL72.
+Dialogue: 0,0:45:57.78,0:46:06.90,Sub,,0,0,0,,Vera Rubin NVL72 on Google Cloud achieves 10 times performance efficiency, optimized for high interactivity and long-context workloads.
+Dialogue: 0,0:46:06.90,0:46:09.54,Sub,,0,0,0,,Of course, silicon is only half the battle.
+Dialogue: 0,0:46:09.54,0:46:14.18,Sub,,0,0,0,,To feed these chips, we've redesigned our entire storage and networking pipeline.
+Dialogue: 0,0:46:14.18,0:46:21.50,Sub,,0,0,0,,I am pleased to announce that Managed Lustre now supports throughput up to an industry-leading 10 terabytes per second.
+Dialogue: 0,0:46:21.50,0:46:24.30,Sub,,0,0,0,,We tied it all together with our new Virgo Network.
+Dialogue: 0,0:46:24.30,0:46:28.82,Sub,,0,0,0,,Virgo doubles connectivity to scale training beyond the superpod.
+Dialogue: 0,0:46:28.82,0:46:40.01,Sub,,0,0,0,,It links 134,000 chips with up to 47pb per second of non-blocking bandwidth to deliver over 1.7 million exaflops of compute.
+Dialogue: 0,0:46:40.01,0:46:49.71,Sub,,0,0,0,,We can now turn months of training into weeks with the power of a million-plus TPU chips in a single cluster, all orchestrated by Pathways and JAX.
+Dialogue: 0,0:46:58.83,0:47:08.61,Sub,,0,0,0,,With up to four times the bandwidth per accelerator over the previous generation, this combination delivers near-linear scaling, ensuring you get the full power of every chip you pay for.
+Dialogue: 0,0:47:08.61,0:47:18.01,Sub,,0,0,0,,We are also making Virgo available on NVIDIA, Vera Rubin, and NVL72, supporting up to 960,000 GPUs.
+Dialogue: 0,0:47:18.01,0:47:24.29,Sub,,0,0,0,,Leading financial institutions are using this exact combination of silicon networking to gain a massive edge.
+Dialogue: 0,0:47:24.29,0:47:29.53,Sub,,0,0,0,,Let's hear from Citadel Securities on how we are innovating together.
+Dialogue: 0,0:47:29.53,0:47:32.57,Sub,,0,0,0,,We trade over half a trillion dollars per day.
+Dialogue: 0,0:47:32.57,0:47:34.11,Sub,,0,0,0,,But it's not just about volumes.
+Dialogue: 0,0:47:34.11,0:47:35.93,Sub,,0,0,0,,It's also about speed.
+Dialogue: 0,0:47:35.93,0:47:40.41,Sub,,0,0,0,,In financial markets, time is measured in nanoseconds.
+Dialogue: 0,0:47:40.41,0:47:42.55,Sub,,0,0,0,,We connect markets all around the world,
+Dialogue: 0,0:47:42.55,0:47:49.13,Sub,,0,0,0,,whether pension funds or somebody doing their first trade as part of their retirement, meet their investment objectives.
+Dialogue: 0,0:47:49.13,0:47:56.29,Sub,,0,0,0,,We've partnered with Google Cloud to build what we think is the preeminent scalable, cloud-based research environment.
+Dialogue: 0,0:47:56.29,0:48:06.17,Sub,,0,0,0,,For instance, we've been working in depth on TPU to ensure that we get the efficiency we need to run our business.
+Dialogue: 0,0:48:06.17,0:48:12.64,Sub,,0,0,0,,Today, we're able to run workloads two to four times as fast with a 30% lower cost.
+Dialogue: 0,0:48:12.64,0:48:17.97,Sub,,0,0,0,,With TPU Ironwood, we can now run thousands of parallel chips for a single workload.
+Dialogue: 0,0:48:17.97,0:48:27.53,Sub,,0,0,0,,And what that means for our business is workloads that used to take weeks or days, we can now execute those in hours or even minutes.
+Dialogue: 0,0:48:27.53,0:48:29.47,Sub,,0,0,0,,Imagine you're a quantitative researcher.
+Dialogue: 0,0:48:29.47,0:48:32.07,Sub,,0,0,0,,You have 100 novel ideas that you want to execute.
+Dialogue: 0,0:48:32.07,0:48:44.04,Sub,,0,0,0,,Can we empower our researchers to be able to test all of their ideas and really be limited by not the scale of the platform or the economics of the problem, but by their own creativity?
+Dialogue: 0,0:48:44.04,0:48:46.56,Sub,,0,0,0,,As we like to say, steel sharpens steel.
+Dialogue: 0,0:48:46.56,0:48:50.82,Sub,,0,0,0,,Google Cloud and Citadel Securities' collaboration has been exactly that.
+Dialogue: 0,0:49:00.36,0:49:07.76,Sub,,0,0,0,,Citadel Securities is just one example of many innovators who are gaining a competitive edge on our foundational AI Hypercomputer.
+Dialogue: 0,0:49:07.76,0:49:12.00,Sub,,0,0,0,,At this scale, you cannot have humans manually troubleshooting configurations.
+Dialogue: 0,0:49:12.00,0:49:15.40,Sub,,0,0,0,,You need a cloud that drives itself.
+Dialogue: 0,0:49:15.40,0:49:22.88,Sub,,0,0,0,,We have used the Model Context Protocol to turn every Google Cloud service into a tool that agents can orchestrate directly.
+Dialogue: 0,0:49:22.88,0:49:29.72,Sub,,0,0,0,,By integrating Gemini reasoning into our own telemetry, the system now performs autonomous root cause analysis,
+Dialogue: 0,0:49:29.72,0:49:35.27,Sub,,0,0,0,,identifying and fixing misconfigurations before you even realize there's a problem.
+Dialogue: 0,0:49:35.27,0:49:42.23,Sub,,0,0,0,,This is the AI Hypercomputer-- purpose-built infrastructure to accelerate the entire AI lifecycle.
+Dialogue: 0,0:49:42.23,0:49:47.64,Sub,,0,0,0,,To show you how we feed this engine with your data, please welcome Karthik Narain.
+Dialogue: 0,0:50:01.87,0:50:03.31,Sub,,0,0,0,,Thank you, Amin.
+Dialogue: 0,0:50:03.31,0:50:08.03,Sub,,0,0,0,,Amin just showed you how we built the world's most--powerful reasoning engine.
+Dialogue: 0,0:50:08.03,0:50:09.67,Sub,,0,0,0,,But here's the reality.
+Dialogue: 0,0:50:09.67,0:50:13.27,Sub,,0,0,0,,Reasoning without context is just a guess.
+Dialogue: 0,0:50:13.27,0:50:20.79,Sub,,0,0,0,,And when you expect your AI to make decisions and your agents to take actions, you cannot afford to guess.
+Dialogue: 0,0:50:20.79,0:50:26.03,Sub,,0,0,0,,Trusted context turns an intelligent guess to a decisive action.
+Dialogue: 0,0:50:26.03,0:50:29.90,Sub,,0,0,0,,Today, we are completely rethinking the data platform.
+Dialogue: 0,0:50:29.90,0:50:34.42,Sub,,0,0,0,,We call it the Agenetic Data Cloud.
+Dialogue: 0,0:50:34.42,0:50:40.10,Sub,,0,0,0,,To make this real, I'm thrilled to share four foundational innovations.
+Dialogue: 0,0:50:40.10,0:50:43.54,Sub,,0,0,0,,It all starts with the foundation of truth.
+Dialogue: 0,0:50:43.54,0:50:51.02,Sub,,0,0,0,,Right now, your data is trapped in PDFs, video calls, multiple data stores, and SaaS applications.
+Dialogue: 0,0:50:51.02,0:50:54.42,Sub,,0,0,0,,How do we help AI make sense of it all?
+Dialogue: 0,0:50:54.42,0:51:01.86,Sub,,0,0,0,,Today, we are introducing the Knowledge Catalog, a universal context engine for your enterprise.
+Dialogue: 0,0:51:01.86,0:51:12.46,Sub,,0,0,0,,Starting with your structured world, the Knowledge Catalog natively integrates with BigQuery, mapping tables and metadata into unified business logic.
+Dialogue: 0,0:51:12.46,0:51:20.26,Sub,,0,0,0,,And we are going even further, extending the same capability to the unstructured world as well through Smart Storage.
+Dialogue: 0,0:51:20.26,0:51:25.74,Sub,,0,0,0,,In the past, a file landing in your storage sat passive, waiting for a pipeline.
+Dialogue: 0,0:51:25.74,0:51:30.13,Sub,,0,0,0,,Now, the second that image or PDF hits Google Cloud Storage,
+Dialogue: 0,0:51:30.13,0:51:37.73,Sub,,0,0,0,,they are instantly tagged, enriched, and made agent-ready-- zero manual data engineering.
+Dialogue: 0,0:51:37.73,0:51:51.25,Sub,,0,0,0,,Powered natively by Gemini, the Knowledge Catalog goes even deeper, reading files, autonomously extracting entities, mapping relationships, and learning about your unique business semantics.
+Dialogue: 0,0:51:51.25,0:51:57.41,Sub,,0,0,0,,When an agent hears net revenue or risk, it understands the exact meaning.
+Dialogue: 0,0:51:57.41,0:51:59.41,Sub,,0,0,0,,Take Virgin Media O2.
+Dialogue: 0,0:51:59.41,0:52:04.37,Sub,,0,0,0,,They had over 20,000 data assets, many of which were untapped.
+Dialogue: 0,0:52:04.37,0:52:11.73,Sub,,0,0,0,,Knowledge Catalog is helping them activate this data to empower their global product teams.
+Dialogue: 0,0:52:11.73,0:52:22.81,Sub,,0,0,0,,Now, combined with direct zero-copy access to applications, operating systems, and AI platforms like Palantir, Salesforce, SAP, ServiceNow, and Workday,
+Dialogue: 0,0:52:22.81,0:52:28.98,Sub,,0,0,0,,you now have instant context to your entire business.
+Dialogue: 0,0:52:30.93,0:52:33.53,Sub,,0,0,0,,That's right.
+Dialogue: 0,0:52:33.53,0:52:39.45,Sub,,0,0,0,,This trusted context enables agents to act with certainty.
+Dialogue: 0,0:52:39.45,0:52:44.77,Sub,,0,0,0,,Now imagine this power in the hands of every employee, every day.
+Dialogue: 0,0:52:44.77,0:52:50.85,Sub,,0,0,0,,We've integrated the Knowledge Catalog with Gemini Enterprise's Deep Research Agent.
+Dialogue: 0,0:52:50.85,0:52:58.81,Sub,,0,0,0,,You can now enable multi-step reasoning across internal and web data for precise cited business answers.
+Dialogue: 0,0:52:58.81,0:53:05.41,Sub,,0,0,0,,What took weeks of manual effort now happens seamlessly.
+Dialogue: 0,0:53:05.41,0:53:08.85,Sub,,0,0,0,,This is the Knowledge Catalog.
+Dialogue: 0,0:53:08.85,0:53:22.17,Sub,,0,0,0,,Second, we are unveiling a Gemini-powered data science authoring experience that fundamentally transforms how data practitioners work with our new Data Agent Kit.
+Dialogue: 0,0:53:22.17,0:53:25.96,Sub,,0,0,0,,We didn't just want to build another platform you have to learn.
+Dialogue: 0,0:53:25.96,0:53:34.76,Sub,,0,0,0,,Instead, the Data Agent Kit integrates comprehensively with libraries of AI skills and plugins directly
+Dialogue: 0,0:53:34.76,0:53:37.56,Sub,,0,0,0,,into your workflows that you already use.
+Dialogue: 0,0:53:37.56,0:53:44.24,Sub,,0,0,0,,Your IDE, your notebook, your terminal, whether you are in VS Code, Cloud Code, or Gemini CLI,
+Dialogue: 0,0:53:44.24,0:53:49.80,Sub,,0,0,0,,we instantly turn your everyday workspace into a native data environment.
+Dialogue: 0,0:53:49.80,0:53:51.76,Sub,,0,0,0,,Here's how it works.
+Dialogue: 0,0:53:51.76,0:53:59.40,Sub,,0,0,0,,You just state your intent, predict customer churn, and your environment simply takes over.
+Dialogue: 0,0:53:59.40,0:54:06.36,Sub,,0,0,0,,It autonomously builds the pipelines and deploys the models right on Google's Agentic Data Cloud.
+Dialogue: 0,0:54:06.36,0:54:15.36,Sub,,0,0,0,,It handles all the complex orchestration for you, creating a direct path from your business objective straight to the business outcome.
+Dialogue: 0,0:54:15.36,0:54:21.22,Sub,,0,0,0,,For researchers at Bayer Crop Science, this eliminates manual data management and analytics,
+Dialogue: 0,0:54:21.22,0:54:27.93,Sub,,0,0,0,,freeing them to focus on pioneering agricultural innovations for a sustainable and productive future.
+Dialogue: 0,0:54:30.55,0:54:35.43,Sub,,0,0,0,,Third, the demand on data is extreme in this agentic era.
+Dialogue: 0,0:54:35.43,0:54:41.83,Sub,,0,0,0,,To address the scale challenge, we're unleashing the Lightning Engine for Apache Spark.
+Dialogue: 0,0:54:41.83,0:54:45.71,Sub,,0,0,0,,It not only delivers industry-leading performance for Spark.
+Dialogue: 0,0:54:45.71,0:54:52.19,Sub,,0,0,0,,Lightning Engine delivers up to 2x the price performance over the previous market leader.
+Dialogue: 0,0:54:57.23,0:55:01.83,Sub,,0,0,0,,We fundamentally rebuilt this engine for the agentic era,
+Dialogue: 0,0:55:01.83,0:55:12.07,Sub,,0,0,0,,reasoning with trusted context enables autonomous agents, and with the Lightning Engine, that autonomy operates at massive scale.
+Dialogue: 0,0:55:12.07,0:55:23.06,Sub,,0,0,0,,Industry-leading organizations like Flipkart, Lowe's, and Meesho are accelerating their Apache Spark workloads with Lightning Engine.
+Dialogue: 0,0:55:23.06,0:55:28.42,Sub,,0,0,0,,Finally, let's address the biggest and the longest-running debate of all.
+Dialogue: 0,0:55:28.42,0:55:30.70,Sub,,0,0,0,,Where should your data reside?
+Dialogue: 0,0:55:30.70,0:55:38.62,Sub,,0,0,0,,The reality is it lives everywhere-- at Google, at AWS, Azure, and across your SaaS applications.
+Dialogue: 0,0:55:38.62,0:55:45.94,Sub,,0,0,0,,Your old lakehouse expected the analytical engine and the data storage to reside in the same cloud.
+Dialogue: 0,0:55:45.94,0:55:48.42,Sub,,0,0,0,,This approach is broken.
+Dialogue: 0,0:55:48.42,0:55:59.40,Sub,,0,0,0,,Today, we are introducing the Cross-Cloud Lakehouse, where your analytical engine reasons over data in any cloud.
+Dialogue: 0,0:56:04.58,0:56:09.38,Sub,,0,0,0,,Built on the open Apache Iceberg standard, it is completely borderless.
+Dialogue: 0,0:56:09.38,0:56:21.37,Sub,,0,0,0,,Instead of forcing you to accept complex networking hurdles or massive egress fees, we deliver low-latency direct connectivity to AWS and Azure as if the data sat natively
+Dialogue: 0,0:56:21.37,0:56:29.06,Sub,,0,0,0,,in Google Cloud-- no more moving data, no more vendor lock in-- just freedom.
+Dialogue: 0,0:56:33.73,0:56:44.81,Sub,,0,0,0,,No matter where your data lives, from traditional systems to SaaS applications, we provide the trusted context and connectivity your business needs to act upon.
+Dialogue: 0,0:56:44.81,0:56:50.79,Sub,,0,0,0,,This is why customers are choosing our Agentic Data Cloud to drive their agentic transformation.
+Dialogue: 0,0:56:53.69,0:56:57.17,Sub,,0,0,0,,One example of this transformation is Vodafone.
+Dialogue: 0,0:56:57.17,0:57:04.49,Sub,,0,0,0,,Vodafone unified their data on BigQuery to build a more resilient global network for their customers.
+Dialogue: 0,0:57:04.49,0:57:12.97,Sub,,0,0,0,,And with Gemini Enterprise, they are launching hundreds of agents to proactively resolve outages and optimize infrastructure,
+Dialogue: 0,0:57:12.97,0:57:18.29,Sub,,0,0,0,,scaling network reliability and saving millions every year.
+Dialogue: 0,0:57:18.29,0:57:27.45,Sub,,0,0,0,,Macquarie Bank's goal was to securely scale AI across their entire operation to deliver more personalized customer experiences.
+Dialogue: 0,0:57:27.45,0:57:32.53,Sub,,0,0,0,,They deployed Gemini Enterprise to all staff and supercharged productivity.
+Dialogue: 0,0:57:32.53,0:57:42.41,Sub,,0,0,0,,And for their two million customers, Macquarie's 24 by 7 AI assistant queue autonomously answers banking questions.
+Dialogue: 0,0:57:42.41,0:57:48.69,Sub,,0,0,0,,All of this was made possible by unifying their data on BigQuery and Spanner.
+Dialogue: 0,0:57:48.69,0:57:55.69,Sub,,0,0,0,,With this foundation, Macquarie has already cut client losses from scams by half.
+Dialogue: 0,0:57:55.69,0:58:00.57,Sub,,0,0,0,,That's secure, frictionless banking at scale.
+Dialogue: 0,0:58:00.57,0:58:11.93,Sub,,0,0,0,,American Express is redefining trust by centralizing its core data on Google Cloud to enable faster fraud and risk analysis at global scale.
+Dialogue: 0,0:58:11.93,0:58:22.56,Sub,,0,0,0,,Costco leverages BigQuery to accelerate member insights, empowering associates to optimize experience and maximize value for millions of members.
+Dialogue: 0,0:58:22.56,0:58:25.08,Sub,,0,0,0,,This is the Agentic Data Cloud.
+Dialogue: 0,0:58:25.08,0:58:30.80,Sub,,0,0,0,,You and your AI agents now have a platform that operates with universal context,
+Dialogue: 0,0:58:30.80,0:58:40.88,Sub,,0,0,0,,is defined by your defined intent, and scales autonomously across your borderless data and the applications you already use today.
+Dialogue: 0,0:58:44.68,0:58:51.61,Sub,,0,0,0,,To show you how to bring trusted context to your business, please welcome Yasmeen Ahmad.
+Dialogue: 0,0:59:02.80,0:59:07.32,Sub,,0,0,0,,Karthik gave us the recipe, so now let's see how it all plates up.
+Dialogue: 0,0:59:07.32,0:59:11.88,Sub,,0,0,0,,Most companies take five weeks to turn a trend into a decision.
+Dialogue: 0,0:59:11.88,0:59:14.39,Sub,,0,0,0,,We're going to do it in five minutes.
+Dialogue: 0,0:59:14.39,0:59:17.15,Sub,,0,0,0,,To get there, we're breaking three barriers--
+Dialogue: 0,0:59:17.15,0:59:27.19,Sub,,0,0,0,,dark data with our Knowledge Catalog, data silos with our Cross-Cloud Lakehouse, and manual code with Google's new agentic tools and skills.
+Dialogue: 0,0:59:27.19,0:59:29.39,Sub,,0,0,0,,So let's get cooking.
+Dialogue: 0,0:59:29.39,0:59:36.03,Sub,,0,0,0,,Our new agentic workflow triggers have detected a tasty trend-- Midnight Swirl froyo.
+Dialogue: 0,0:59:36.03,0:59:37.43,Sub,,0,0,0,,Looks delicious.
+Dialogue: 0,0:59:37.43,0:59:41.23,Sub,,0,0,0,,But with any new flavor, I need to know is it safe?
+Dialogue: 0,0:59:41.23,0:59:43.07,Sub,,0,0,0,,Are there any hidden allergens?
+Dialogue: 0,0:59:43.07,0:59:44.41,Sub,,0,0,0,,Is there a market?
+Dialogue: 0,0:59:44.41,0:59:46.19,Sub,,0,0,0,,Where are my hungry customers?
+Dialogue: 0,0:59:46.19,0:59:47.61,Sub,,0,0,0,,And is it worth it?
+Dialogue: 0,0:59:47.61,0:59:49.79,Sub,,0,0,0,,What's the real ROI?
+Dialogue: 0,0:59:49.79,0:59:52.47,Sub,,0,0,0,,But first, safety.
+Dialogue: 0,0:59:52.47,0:59:55.75,Sub,,0,0,0,,We have thousands of PDF recipes.
+Dialogue: 0,0:59:55.75,0:59:57.79,Sub,,0,0,0,,I'm going to search for soy.
+Dialogue: 0,0:59:57.79,1:00:01.15,Sub,,0,0,0,,It's a top food allergen, and safety is non-negotiable.
+Dialogue: 0,1:00:01.15,1:00:05.35,Sub,,0,0,0,,Zero results-- looks good so far.
+Dialogue: 0,1:00:05.35,1:00:10.39,Sub,,0,0,0,,But this recipe does contain an ingredient, base 204.
+Dialogue: 0,1:00:10.39,1:00:14.62,Sub,,0,0,0,,Let's check the supplier manual for base 204.
+Dialogue: 0,1:00:14.62,1:00:16.80,Sub,,0,0,0,,And here it is.
+Dialogue: 0,1:00:16.80,1:00:19.90,Sub,,0,0,0,,Base 204 actually contains soy.
+Dialogue: 0,1:00:19.90,1:00:27.38,Sub,,0,0,0,,A simple GenAI search would miss this connection because the information is trapped across two separate PDFs.
+Dialogue: 0,1:00:27.38,1:00:32.62,Sub,,0,0,0,,So how do we digest all of this data to find those hidden connections?
+Dialogue: 0,1:00:32.62,1:00:40.18,Sub,,0,0,0,,Well, I need an agent that has the skill to work with my PDF data combined with our Knowledge Catalog.
+Dialogue: 0,1:00:40.18,1:00:46.90,Sub,,0,0,0,,Watch. Our agent helps us find hidden allergens in a recipe for Midnight Swirl.
+Dialogue: 0,1:00:46.90,1:00:48.38,Sub,,0,0,0,,And here it is.
+Dialogue: 0,1:00:48.38,1:00:55.98,Sub,,0,0,0,,Midnight Swirl contains soy, and it's giving me a data citation, a schema called product specs.
+Dialogue: 0,1:00:55.98,1:00:59.20,Sub,,0,0,0,,Now, this schema was generated by our Knowledge Catalog,
+Dialogue: 0,1:00:59.20,1:01:13.97,Sub,,0,0,0,,working with Gemini to reason over our supplier and recipe PDFs and extract entities like recipe, ingredient, and allergen and mapping those previously invisible connections between them.
+Dialogue: 0,1:01:13.97,1:01:18.85,Sub,,0,0,0,,This is trusted context built over dark data.
+Dialogue: 0,1:01:18.85,1:01:27.17,Sub,,0,0,0,,Next, market size-- to launch this globally, I need a precision list of customers with zero soy allergies.
+Dialogue: 0,1:01:27.17,1:01:30.93,Sub,,0,0,0,,However, I have two data sets that have never met.
+Dialogue: 0,1:01:30.93,1:01:42.33,Sub,,0,0,0,,Our allergen schema is here in Google, while my loyalty list with millions of customers and dietary preferences is in AWS S3 Iceberg.
+Dialogue: 0,1:01:42.33,1:01:47.81,Sub,,0,0,0,,Now, usually you'd call your data engineer and wait three days for a migration.
+Dialogue: 0,1:01:47.81,1:01:48.97,Sub,,0,0,0,,Not today.
+Dialogue: 0,1:01:48.97,1:01:51.37,Sub,,0,0,0,,No more slow churn.
+Dialogue: 0,1:01:51.37,1:01:58.25,Sub,,0,0,0,,With our cross-cloud Lakehouse, the data stays exactly where it is while we dynamically build the list.
+Dialogue: 0,1:01:58.25,1:02:07.73,Sub,,0,0,0,,Before writing a single line of code, Gemini builds a plan using our data engineering tools while respecting my built-in security and permissions.
+Dialogue: 0,1:02:07.73,1:02:11.31,Sub,,0,0,0,,As the data scientist, you're the chef.
+Dialogue: 0,1:02:11.31,1:02:13.13,Sub,,0,0,0,,You can review.
+Dialogue: 0,1:02:13.13,1:02:17.81,Sub,,0,0,0,,Let's accept and see what our agents serve up.
+Dialogue: 0,1:02:17.81,1:02:20.11,Sub,,0,0,0,,They execute on our Lightning Engine,
+Dialogue: 0,1:02:20.11,1:02:32.05,Sub,,0,0,0,,which is two times more price-performant than the market proprietary alternative, filtering our soy-sensitive customers in mere seconds.
+Dialogue: 0,1:02:32.05,1:02:36.97,Sub,,0,0,0,,AWS and BigQuery sources connected-- zero complexity.
+Dialogue: 0,1:02:36.97,1:02:40.73,Sub,,0,0,0,,It's as smooth as a batch of Midnight Swirl.
+Dialogue: 0,1:02:40.73,1:02:44.93,Sub,,0,0,0,,Finally, ROI-- is this worth a global launch?
+Dialogue: 0,1:02:44.93,1:02:48.69,Sub,,0,0,0,,An annual forecast would help.
+Dialogue: 0,1:02:48.69,1:02:50.53,Sub,,0,0,0,,Again, our agents don't guess.
+Dialogue: 0,1:02:50.53,1:02:54.25,Sub,,0,0,0,,Gemini builds a multi-step execution plan.
+Dialogue: 0,1:02:54.25,1:02:55.93,Sub,,0,0,0,,Can you make changes?
+Dialogue: 0,1:02:55.93,1:02:57.85,Sub,,0,0,0,,Yes, Chef.
+Dialogue: 0,1:02:57.85,1:03:06.56,Sub,,0,0,0,,So let's take a look and change the number of simulations from 1,000 to 2,000.
+Dialogue: 0,1:03:06.56,1:03:10.36,Sub,,0,0,0,,And we will accept.
+Dialogue: 0,1:03:10.36,1:03:21.32,Sub,,0,0,0,,Acting as the orchestrator, Gemini delegates to our specialized data science tools, choosing the right models, and again, executing on our Lightning Engine for Spark.
+Dialogue: 0,1:03:21.32,1:03:24.00,Sub,,0,0,0,,It's built an entire notebook for me.
+Dialogue: 0,1:03:24.00,1:03:29.68,Sub,,0,0,0,,Now, training usually takes a bit of time, so here's one I ran earlier.
+Dialogue: 0,1:03:29.68,1:03:32.24,Sub,,0,0,0,,$15 million.
+Dialogue: 0,1:03:32.24,1:03:37.44,Sub,,0,0,0,,Even after protecting our soy-sensitive market, the demand is massive.
+Dialogue: 0,1:03:37.44,1:03:39.92,Sub,,0,0,0,,Can we bring back the timer?
+Dialogue: 0,1:03:39.92,1:03:41.42,Sub,,0,0,0,,Look what we accomplished.
+Dialogue: 0,1:03:41.42,1:03:47.64,Sub,,0,0,0,,In less than five minutes, we turned a viral trend into a $15 million decision.
+Dialogue: 0,1:03:47.64,1:03:51.72,Sub,,0,0,0,,First, Knowledge Catalog found the hidden soy connection.
+Dialogue: 0,1:03:51.72,1:03:59.32,Sub,,0,0,0,,Second, Cross-Cloud Lakehouse, powered by the Lightning Engine, connected to AWS with zero complexity.
+Dialogue: 0,1:03:59.32,1:04:05.55,Sub,,0,0,0,,And third, our agentic skills and tools built the forecast with zero manual code.
+Dialogue: 0,1:04:05.55,1:04:08.95,Sub,,0,0,0,,This is the Agentic Data Cloud.
+Dialogue: 0,1:04:17.51,1:04:18.79,Sub,,0,0,0,,We did it.
+Dialogue: 0,1:04:18.79,1:04:26.54,Sub,,0,0,0,,And now, here to share how we're securing your agentic enterprise, please welcome Francis deSouza
+Dialogue: 0,1:04:40.43,1:04:42.51,Sub,,0,0,0,,In an agentic enterprise,
+Dialogue: 0,1:04:42.51,1:04:51.67,Sub,,0,0,0,,giving agents the power to act means that security must become an autonomous force, moving faster than the threats themselves.
+Dialogue: 0,1:04:51.67,1:04:56.75,Sub,,0,0,0,,Human analysts simply can't keep up with AI-driven attacks.
+Dialogue: 0,1:04:56.75,1:05:06.14,Sub,,0,0,0,,The mean time to exploit the vulnerability has dropped to minus seven days, meaning that today exploits routinely occur before a patch is
+Dialogue: 0,1:05:06.14,1:05:17.54,Sub,,0,0,0,,released, and the handoff time between initial access and handover to a secondary threat group has dropped from eight hours to 22 seconds.
+Dialogue: 0,1:05:17.54,1:05:21.86,Sub,,0,0,0,,Your security must operate at machine speed.
+Dialogue: 0,1:05:21.86,1:05:30.26,Sub,,0,0,0,,Now, to do that, we're moving the heavy lifting to a Gemini-native agentic Security Operations Center, or SOC.
+Dialogue: 0,1:05:30.26,1:05:32.90,Sub,,0,0,0,,And the results are already here.
+Dialogue: 0,1:05:32.90,1:05:40.38,Sub,,0,0,0,,Our triage agents are turning 30-minute investigations into 60-second resolutions.
+Dialogue: 0,1:05:40.38,1:05:51.26,Sub,,0,0,0,,And our new threat hunting and detection agents proactively sweep your environments for risks at a scale and speed that no human team could match.
+Dialogue: 0,1:05:51.26,1:05:57.82,Sub,,0,0,0,,By leveraging Google's unparalleled telemetry, including Mandiant, VirusTotal, and Chrome,
+Dialogue: 0,1:05:57.82,1:06:02.33,Sub,,0,0,0,,we are delivering a defense system based on global intelligence.
+Dialogue: 0,1:06:02.33,1:06:11.09,Sub,,0,0,0,,And now, with our integrated dark web intelligence, we can identify external threats with 98% accuracy.
+Dialogue: 0,1:06:11.09,1:06:16.73,Sub,,0,0,0,,Customers are already seeing big benefits from Google Cloud's security offerings.
+Dialogue: 0,1:06:16.73,1:06:30.33,Sub,,0,0,0,,CME Group depends on a unified stack of Mandiant Security Command Center and Google's SecOps to protect the world's largest derivatives system against novel threats.
+Dialogue: 0,1:06:30.33,1:06:37.29,Sub,,0,0,0,,In an ultra high-stakes environment, Google's security offering is matched by speed.
+Dialogue: 0,1:06:37.29,1:06:43.85,Sub,,0,0,0,,CME Group achieves nanosecond precision with Google's ultra low-latency solution,
+Dialogue: 0,1:06:43.85,1:06:50.69,Sub,,0,0,0,,supporting billions of transactions daily and lowering the barrier of entry for new traders.
+Dialogue: 0,1:06:50.69,1:06:53.81,Sub,,0,0,0,,Now, the biggest threats today aren't just hackers.
+Dialogue: 0,1:06:53.81,1:07:02.89,Sub,,0,0,0,,It's also shadow AI, unauthorized models and agents that are operating in your enterprise but outside your control.
+Dialogue: 0,1:07:02.89,1:07:11.25,Sub,,0,0,0,,And to meet this challenge, we have integrated the industry's deepest security context directly into our AI fabric.
+Dialogue: 0,1:07:11.25,1:07:17.57,Sub,,0,0,0,,That is why I am thrilled to officially welcome the Wiz team to Google Cloud.
+Dialogue: 0,1:07:24.01,1:07:29.37,Sub,,0,0,0,,Together, we are building a new security posture for the agentic enterprise.
+Dialogue: 0,1:07:29.37,1:07:35.87,Sub,,0,0,0,,While the New agent platform in Gemini Enterprise secures and governs your agents, with Wiz,
+Dialogue: 0,1:07:35.87,1:07:43.77,Sub,,0,0,0,,we're now extending that protection to every asset on your premises and across all major clouds.
+Dialogue: 0,1:07:43.77,1:07:51.25,Sub,,0,0,0,,To explain how we're solving this, I'm excited to introduce to the stage Wiz co-founder Yinon Costica.
+Dialogue: 0,1:08:07.60,1:08:09.56,Sub,,0,0,0,,Thank you, Francis.
+Dialogue: 0,1:08:09.56,1:08:17.32,Sub,,0,0,0,,At Wiz, our mission from day one has been to help customers protect everything they build and run.
+Dialogue: 0,1:08:17.32,1:08:23.68,Sub,,0,0,0,,Wiz began by unifying code and cloud and runtime context to move at developer speed.
+Dialogue: 0,1:08:23.68,1:08:28.16,Sub,,0,0,0,,But AI has fundamentally changed the environment.
+Dialogue: 0,1:08:28.16,1:08:36.92,Sub,,0,0,0,,With autonomous products, hyperscale code generation, and AI-weaponized threats, the stakes have never been higher.
+Dialogue: 0,1:08:36.92,1:08:42.52,Sub,,0,0,0,,To protect this new frontier, security must now move at machine speed.
+Dialogue: 0,1:08:42.52,1:08:51.32,Sub,,0,0,0,,And that is exactly why we built Wiz as the first AI Application Protection Platform, or in short, AI APP.
+Dialogue: 0,1:08:51.32,1:08:55.95,Sub,,0,0,0,,It solves four key security challenges for the AI era--
+Dialogue: 0,1:08:55.95,1:09:00.87,Sub,,0,0,0,,giving security unparalleled visibility into the AI stack,
+Dialogue: 0,1:09:00.87,1:09:09.39,Sub,,0,0,0,,finding and proactively remediating critical risks before attackers can use them, enabling our builders
+Dialogue: 0,1:09:09.39,1:09:19.67,Sub,,0,0,0,,to start secure by design in their AI enabled IDEs, and lastly, arming SecOps teams to stop threats to cloud and AI environments.
+Dialogue: 0,1:09:19.67,1:09:26.27,Sub,,0,0,0,,In order to outpace attackers, Wiz delivers a set of expert AI agents.
+Dialogue: 0,1:09:26.27,1:09:28.83,Sub,,0,0,0,,It's a really cool concept.
+Dialogue: 0,1:09:28.83,1:09:36.47,Sub,,0,0,0,,Our red, blue, and green agents are named after the teams they help-- red, blue, and green teams.
+Dialogue: 0,1:09:36.47,1:09:40.35,Sub,,0,0,0,,They form an AI layer to autonomously identify,
+Dialogue: 0,1:09:40.35,1:09:49.31,Sub,,0,0,0,,investigate, and then fix critical risks at machine speed, leveraging context from our unique security graph.
+Dialogue: 0,1:09:49.31,1:09:52.55,Sub,,0,0,0,,Security starts with visibility, always.
+Dialogue: 0,1:09:52.55,1:09:53.50,Sub,,0,0,0,,But today.
+Dialogue: 0,1:09:53.50,1:09:57.60,Sub,,0,0,0,,Your AI footprint is an orbit of interconnected tools.
+Dialogue: 0,1:09:57.60,1:10:01.54,Sub,,0,0,0,,It spins models like Gemini, Claude, OpenAI.
+Dialogue: 0,1:10:01.54,1:10:12.06,Sub,,0,0,0,,Your teams are using agent studios such as Gemini Enterprise Agent Platform, Lovable, Copilot Studio, Salesforce's Agentforce.
+Dialogue: 0,1:10:12.06,1:10:21.86,Sub,,0,0,0,,And to secure all of these environments, we examine every layer-- the clouds, the data, the models, the agents.
+Dialogue: 0,1:10:21.86,1:10:28.46,Sub,,0,0,0,,And we continuously correlate these risks to find and fix the attack path that matter most.
+Dialogue: 0,1:10:28.46,1:10:31.55,Sub,,0,0,0,,Now let's see it in action.
+Dialogue: 0,1:10:40.00,1:10:42.18,Sub,,0,0,0,,So this is Wiz.
+Dialogue: 0,1:10:42.18,1:10:50.78,Sub,,0,0,0,,Wiz basically starts by automatically building a dynamic inventory from your code and cloud, completely agentlessly.
+Dialogue: 0,1:10:50.78,1:11:02.01,Sub,,0,0,0,,This means that you can see every visibility into the environment, into everything that your teams are building using AI, without any friction.
+Dialogue: 0,1:11:02.01,1:11:05.13,Sub,,0,0,0,,Wiz then builds the security graph.
+Dialogue: 0,1:11:05.13,1:11:13.13,Sub,,0,0,0,,The security graph-- think of it as a living map that explains the architecture and the logic of any AI application it sees.
+Dialogue: 0,1:11:13.13,1:11:18.37,Sub,,0,0,0,,Here we see an example of an agent that is actually running on cloud.
+Dialogue: 0,1:11:18.37,1:11:22.77,Sub,,0,0,0,,It has tools to query a database and even execute code.
+Dialogue: 0,1:11:22.77,1:11:29.29,Sub,,0,0,0,,And you can see that Wiz actually flags that this agent is internet-exposed.
+Dialogue: 0,1:11:29.29,1:11:33.41,Sub,,0,0,0,,And also, it has access to sensitive customer data.
+Dialogue: 0,1:11:33.41,1:11:38.05,Sub,,0,0,0,,Now, this is security moving at the speed of AI.
+Dialogue: 0,1:11:38.05,1:11:41.13,Sub,,0,0,0,,You don't need any reviews with your development teams.
+Dialogue: 0,1:11:41.13,1:11:43.65,Sub,,0,0,0,,It just works.
+Dialogue: 0,1:11:43.65,1:11:56.81,Sub,,0,0,0,,And in the AI era, the best defense is to continuously use AI against ourselves in order to give the defenders the first-mover advantage over the attackers.
+Dialogue: 0,1:11:56.81,1:12:00.61,Sub,,0,0,0,,And this is exactly what the Wiz Red Agent does.
+Dialogue: 0,1:12:00.61,1:12:04.85,Sub,,0,0,0,,It validates every single exposure that Wiz identified.
+Dialogue: 0,1:12:04.85,1:12:12.97,Sub,,0,0,0,,And you can think of it as a friendly hacker that continuously scans your outside like an elite red team.
+Dialogue: 0,1:12:12.97,1:12:20.33,Sub,,0,0,0,,And look, this is a finding that the Red Agent actually found-- an authentication bypass vulnerability.
+Dialogue: 0,1:12:20.33,1:12:32.21,Sub,,0,0,0,,This means that it enables an attacker to gain access to that agent but also to that sensitive database behind it to exfiltrate sensitive information.
+Dialogue: 0,1:12:32.21,1:12:35.45,Sub,,0,0,0,,Now, it's not a potential risk anymore.
+Dialogue: 0,1:12:35.45,1:12:37.85,Sub,,0,0,0,,This is a validated risk.
+Dialogue: 0,1:12:37.85,1:12:44.65,Sub,,0,0,0,,And this gives our developers the prioritization and the confidence in fixing it immediately.
+Dialogue: 0,1:12:44.65,1:12:51.56,Sub,,0,0,0,,Now, in the past, triage used to mean very, very long meetings and waiting and spreadsheets.
+Dialogue: 0,1:12:51.56,1:12:57.30,Sub,,0,0,0,,And you don't need that anymore because we have the Wiz Green Agent.
+Dialogue: 0,1:12:57.30,1:13:06.64,Sub,,0,0,0,,The Wiz Green Agent automates the entire triage process from identifying the owner, suggesting the fix,
+Dialogue: 0,1:13:06.64,1:13:14.30,Sub,,0,0,0,,identifying the exact line of code that caused the risk in the first place-- all automated-- no phone tag, no friction.
+Dialogue: 0,1:13:14.30,1:13:15.98,Sub,,0,0,0,,And from here, you have a choice.
+Dialogue: 0,1:13:15.98,1:13:26.76,Sub,,0,0,0,,You can send it to the developers as a PR, or maybe better, send it to a coding agent like CodeMender to execute the final fix at the source automatically.
+Dialogue: 0,1:13:26.76,1:13:36.28,Sub,,0,0,0,,And this is how we can move from a validated risk to a verified fix, end-to-end visibility, control, and full confidence.
+Dialogue: 0,1:13:36.28,1:13:48.51,Sub,,0,0,0,,So to summarize, whenever you have an AI team that ships a new product or even someone in finance that then codes a new agent, now, within minutes, security
+Dialogue: 0,1:13:48.51,1:13:53.27,Sub,,0,0,0,,is able to, one, identify the agent and its architecture, two,
+Dialogue: 0,1:13:53.27,1:14:03.87,Sub,,0,0,0,,automatically conduct a security review to find and validate the risks, and three, automatically suggest the fix, send it to the dev teams in their own native tools.
+Dialogue: 0,1:14:03.87,1:14:11.75,Sub,,0,0,0,,Ta-da. This is how AI agents unlock secure innovation with AI at scale.
+Dialogue: 0,1:14:11.75,1:14:12.65,Sub,,0,0,0,,Thank you, all.
+Dialogue: 0,1:14:12.65,1:14:14.84,Sub,,0,0,0,,Back to you, Francis.
+Dialogue: 0,1:14:23.12,1:14:35.67,Sub,,0,0,0,,The unique combination of Google's agentic SOC and Wiz's deep cloud context gives customers the confidence to build and deploy generative AI everywhere safely.
+Dialogue: 0,1:14:35.67,1:14:43.27,Sub,,0,0,0,,We're helping the Los Angeles Department of Water and Power secure critical infrastructure ahead of the LA 28 games,
+Dialogue: 0,1:14:43.27,1:14:50.26,Sub,,0,0,0,,while Singapore's CSIT enables proactive defense against advanced digital threats.
+Dialogue: 0,1:14:50.26,1:14:56.54,Sub,,0,0,0,,DBS strengthens security by embedding Google Cloud's protection directly into their architecture,
+Dialogue: 0,1:14:56.54,1:15:02.78,Sub,,0,0,0,,enabling real-time threat detection and response, reinforcing customer trust.
+Dialogue: 0,1:15:02.78,1:15:12.70,Sub,,0,0,0,,Morgan Stanley chose Wiz as a key component of its cloud security strategy and is expanding visibility and control across its cloud environments.
+Dialogue: 0,1:15:12.70,1:15:21.50,Sub,,0,0,0,,Now, as part of this strategy, the firm is deploying Google Cloud Security capabilities to support its evolving cloud platforms.
+Dialogue: 0,1:15:21.50,1:15:34.82,Sub,,0,0,0,,And trusted global icons from Nestlé to LVMH, from BMW to Shell, rely on Wiz and Google Cloud Security to ensure their AI-driven future is secure by design.
+Dialogue: 0,1:15:34.82,1:15:38.98,Sub,,0,0,0,,We have closed the loop between the defender and the builder.
+Dialogue: 0,1:15:38.98,1:15:47.69,Sub,,0,0,0,,Google and Wiz provide a unified agentic defense that is secure by design and autonomous by nature.
+Dialogue: 0,1:15:47.69,1:15:56.81,Sub,,0,0,0,,Together, we are redefining cybersecurity for the AI era so security teams can protect their organizations at machine
+Dialogue: 0,1:15:56.81,1:16:04.70,Sub,,0,0,0,,speed. To share more about how our agents are helping your customers, please welcome Carrie Tharp.
+Dialogue: 0,1:16:20.93,1:16:22.57,Sub,,0,0,0,,Thank you, Francis.
+Dialogue: 0,1:16:22.57,1:16:26.69,Sub,,0,0,0,,A secure foundation gives you the confidence to innovate.
+Dialogue: 0,1:16:26.69,1:16:31.57,Sub,,0,0,0,,At Google, we are using that foundation to solve two of your biggest challenges--
+Dialogue: 0,1:16:31.57,1:16:35.89,Sub,,0,0,0,,serving your customers and helping your employees work smarter.
+Dialogue: 0,1:16:35.89,1:16:47.44,Sub,,0,0,0,,We do this by deploying a coordinated agentic task force, specialized agents that don't just assist your team-- they operate alongside them.
+Dialogue: 0,1:16:47.44,1:16:52.00,Sub,,0,0,0,,In the agentic era, an agent is no longer just a tool.
+Dialogue: 0,1:16:52.00,1:17:02.56,Sub,,0,0,0,,It's a strategic extension of your business, built to expand your reach, deepen engagement, and personalized service at scale.
+Dialogue: 0,1:17:02.56,1:17:11.84,Sub,,0,0,0,,Earlier this year, we launched Gemini Enterprise for Customer Experience, a suite designed to enhance the entire customer journey
+Dialogue: 0,1:17:11.84,1:17:17.24,Sub,,0,0,0,,from the first moment of discovery to ongoing service interactions.
+Dialogue: 0,1:17:17.24,1:17:20.48,Sub,,0,0,0,,Central to this is agentic commerce.
+Dialogue: 0,1:17:20.48,1:17:31.76,Sub,,0,0,0,,We have introduced pre-built shopping and food ordering agents that handle everything from discovery to checkout entirely through natural language.
+Dialogue: 0,1:17:31.76,1:17:36.34,Sub,,0,0,0,,By pairing these agents with our customer engagement agents,
+Dialogue: 0,1:17:36.34,1:17:45.76,Sub,,0,0,0,,we've created a seamless journey from search to service, turning every interaction into revenue and retention opportunities.
+Dialogue: 0,1:17:45.76,1:17:48.66,Sub,,0,0,0,,For example, with the food ordering agent,
+Dialogue: 0,1:17:48.66,1:17:58.72,Sub,,0,0,0,,Papa John's is building a hyper-personalized system that remembers customer preferences to get the food to your door faster.
+Dialogue: 0,1:17:58.72,1:18:08.60,Sub,,0,0,0,,During live interactions, Agent Assist coaches employees to deliver fast and more accurate answers to customer questions.
+Dialogue: 0,1:18:08.60,1:18:13.76,Sub,,0,0,0,,For example, Best Buy is guiding shoppers through those complex tech specs,
+Dialogue: 0,1:18:13.76,1:18:19.16,Sub,,0,0,0,,issue resolution, and appointment scheduling, all autonomously.
+Dialogue: 0,1:18:19.16,1:18:26.00,Sub,,0,0,0,,And our new omnichannel gateway helps ensure your agents maintain contacts across every surface--
+Dialogue: 0,1:18:26.00,1:18:33.44,Sub,,0,0,0,,web, mobile, voice-- while preserving universal consumer context.
+Dialogue: 0,1:18:33.44,1:18:37.28,Sub,,0,0,0,,If a customer moves from a text chat to a phone call,
+Dialogue: 0,1:18:37.28,1:18:41.79,Sub,,0,0,0,,the agent seamlessly remembers exactly where they left off,
+Dialogue: 0,1:18:41.79,1:18:48.83,Sub,,0,0,0,,and this scales globally, conversing with human-like voice capabilities in multiple languages.
+Dialogue: 0,1:18:48.83,1:18:58.63,Sub,,0,0,0,,Gemini Enterprise for Customer Experience is the technology powering the Home Depot's Magic Apron Assistant to reach customers across every channel.
+Dialogue: 0,1:18:58.63,1:19:00.44,Sub,,0,0,0,,Let's hear from the Home Depot.
+Dialogue: 0,1:19:00.44,1:19:07.61,Sub,,0,0,0,,There's a customer journey that often starts with inspiration, goes into research, and then into shopping and buying and then into doing.
+Dialogue: 0,1:19:07.61,1:19:11.65,Sub,,0,0,0,,And Magic Apron is really a digital agent to help through that whole journey,
+Dialogue: 0,1:19:11.65,1:19:23.55,Sub,,0,0,0,,and it is really there to provide that orange apron experience for help and customer service, the same way that as you come into a store, you're used to that great customer service.
+Dialogue: 0,1:19:23.55,1:19:31.27,Sub,,0,0,0,,So we've had a partnership with Google for quite some time, and the latest things that they're bringing to market are incredibly exciting to us.
+Dialogue: 0,1:19:31.27,1:19:36.20,Sub,,0,0,0,,We're really excited about Magic Apron Shopping Assistant.
+Dialogue: 0,1:19:36.20,1:19:40.48,Sub,,0,0,0,,Our relationship with Google has really made this possible in a variety of different ways.
+Dialogue: 0,1:19:40.48,1:19:49.22,Sub,,0,0,0,,If you just focus for a second on Gemini Enterprise and you think about how it's the bedrock of what we are doing with Magic Apron, it gives us the power
+Dialogue: 0,1:19:49.22,1:19:54.93,Sub,,0,0,0,,and the speed in which we need in order to power these great technologies.
+Dialogue: 0,1:19:54.93,1:20:01.08,Sub,,0,0,0,,Now, with Gemini Enterprise, we think that we can blend those channels because we'll have an agentic back end.
+Dialogue: 0,1:20:01.08,1:20:08.22,Sub,,0,0,0,,Maybe most importantly, we see a higher conversion rate when they leverage the tool versus when they don't.
+Dialogue: 0,1:20:08.22,1:20:12.59,Sub,,0,0,0,,When customers come into the store and they use Magic Apron, typically it's about wayfinding.
+Dialogue: 0,1:20:12.59,1:20:13.80,Sub,,0,0,0,,It's about product knowledge.
+Dialogue: 0,1:20:13.80,1:20:15.34,Sub,,0,0,0,,It's about compatibility.
+Dialogue: 0,1:20:15.34,1:20:17.76,Sub,,0,0,0,,But they also use it at home on our website.
+Dialogue: 0,1:20:17.76,1:20:26.12,Sub,,0,0,0,,Those experiences should all get better-- easier to be inspired, easier to find what I need, easier to order it and get it, easier to get support after the fact.
+Dialogue: 0,1:20:26.12,1:20:32.56,Sub,,0,0,0,,The partnership really keeps us at the forefront of building great experiences for our customers and our associates.
+Dialogue: 0,1:20:41.37,1:20:47.25,Sub,,0,0,0,,The same agentic approach is also reshaping digital-first industries.
+Dialogue: 0,1:20:47.25,1:20:49.93,Sub,,0,0,0,,One example of this is Reliance.
+Dialogue: 0,1:20:49.93,1:20:55.21,Sub,,0,0,0,,Reliance is transforming retail for millions in India with a shopping agent.
+Dialogue: 0,1:20:55.21,1:21:06.69,Sub,,0,0,0,,Customers can simply type "plan a birthday party," and the agent guides their journey across categories and assembles their cart, which drives more revenue per visit.
+Dialogue: 0,1:21:06.69,1:21:15.09,Sub,,0,0,0,,Gemini-powered catalog enrichment supports this, analyzing millions of images in minutes instead of months.
+Dialogue: 0,1:21:15.09,1:21:22.85,Sub,,0,0,0,,Gemini Enterprise for Customer Experience is hard at work across many industries and enterprises.
+Dialogue: 0,1:21:22.85,1:21:30.57,Sub,,0,0,0,,Internally, teams at Google, including Google Store, Google Photos, Google One, and YouTube,
+Dialogue: 0,1:21:30.57,1:21:35.88,Sub,,0,0,0,,are partnering with us to power our own scaled customer experiences.
+Dialogue: 0,1:21:35.88,1:21:40.52,Sub,,0,0,0,,Let's take a look at how one of our first internal customers is doing this.
+Dialogue: 0,1:21:40.52,1:21:42.36,Sub,,0,0,0,,Over to you, Patrick.
+Dialogue: 0,1:21:51.34,1:21:52.42,Sub,,0,0,0,,All right.
+Dialogue: 0,1:21:52.42,1:21:53.48,Sub,,0,0,0,,Thanks, Carrie.
+Dialogue: 0,1:21:53.48,1:21:54.10,Sub,,0,0,0,,Hey, y'all.
+Dialogue: 0,1:21:54.10,1:21:57.76,Sub,,0,0,0,,I'm Patrick Marlow, a senior product manager here at Google Cloud.
+Dialogue: 0,1:21:57.76,1:22:05.60,Sub,,0,0,0,,YouTube TV customer support recently launched a voice agent to help users with NFL Sunday Ticket and YouTube TV plan subscriptions.
+Dialogue: 0,1:22:05.60,1:22:09.34,Sub,,0,0,0,,It's currently live in production, serving 100% of their users.
+Dialogue: 0,1:22:09.34,1:22:11.38,Sub,,0,0,0,,We're going to take a look at it in action today.
+Dialogue: 0,1:22:11.38,1:22:13.09,Sub,,0,0,0,,I'm going to call the support number now.
+Dialogue: 0,1:22:18.12,1:22:22.42,Sub,,0,0,0,,Thanks for calling the YouTube TV and NFL Sunday Ticket Support Line.
+Dialogue: 0,1:22:22.42,1:22:24.46,Sub,,0,0,0,,So tell me, how can I help you today?
+Dialogue: 0,1:22:24.46,1:22:28.27,Sub,,0,0,0,,Hey yeah, I've got a bunch of my friends coming over tomorrow night for the NFL draft.
+Dialogue: 0,1:22:28.27,1:22:29.06,Sub,,0,0,0,,I don't have cable.
+Dialogue: 0,1:22:29.06,1:22:31.30,Sub,,0,0,0,,And to be honest, I really only watch sports.
+Dialogue: 0,1:22:31.30,1:22:33.50,Sub,,0,0,0,,Does YouTube TV have a plan that's just for that?
+Dialogue: 0,1:22:37.12,1:22:38.24,Sub,,0,0,0,,Yes, we do.
+Dialogue: 0,1:22:38.24,1:22:45.38,Sub,,0,0,0,,The YouTube TV Sports Plan has exactly what you're looking for, plus over 30 other sports channels.
+Dialogue: 0,1:22:45.38,1:22:48.60,Sub,,0,0,0,,It's $18 less per month than the base plan.
+Dialogue: 0,1:22:48.60,1:22:53.62,Sub,,0,0,0,,Would you like me to text you a link to the number you're calling from that will take you directly-- Yeah, go ahead and send me a link.
+Dialogue: 0,1:22:53.62,1:22:54.66,Sub,,0,0,0,,I'll take a look at it.
+Dialogue: 0,1:23:00.12,1:23:02.84,Sub,,0,0,0,,Great, I just sent the link to your mobile phone.
+Dialogue: 0,1:23:02.84,1:23:05.28,Sub,,0,0,0,,Is there anything else I can help with today?
+Dialogue: 0,1:23:05.28,1:23:07.74,Sub,,0,0,0,,Yeah, I'm going to take a look at this now.
+Dialogue: 0,1:23:07.74,1:23:10.28,Sub,,0,0,0,,Actually, my father-in-law is hanging out with me here today.
+Dialogue: 0,1:23:10.28,1:23:13.46,Sub,,0,0,0,,He's been thinking about getting the sports plan for his account as well.
+Dialogue: 0,1:23:13.46,1:23:15.42,Sub,,0,0,0,,I just wanted to see what he thinks about this.
+Dialogue: 0,1:23:19.00,1:23:22.58,Sub,,0,0,0,,Actually, could you just quickly summarize this plan for him in Spanish?
+Dialogue: 0,1:23:22.58,1:23:28.10,Sub,,0,0,0,,I think he just wants to know that he can get both football e football.
+Dialogue: 0,1:23:42.70,1:23:44.41,Sub,,0,0,0,,Look, one other question.
+Dialogue: 0,1:23:44.41,1:23:49.45,Sub,,0,0,0,,I was planning on setting up multiple TVs throughout the house, like one in the living room, one over on the patio.
+Dialogue: 0,1:23:49.45,1:23:53.27,Sub,,0,0,0,,Would that be OK with this plan?
+Dialogue: 0,1:23:53.27,1:23:58.73,Sub,,0,0,0,,Definitely, with the Sports Plan, you can stream on up to three screens at the same time.
+Dialogue: 0,1:23:58.73,1:23:59.69,Sub,,0,0,0,,Is there anything else?
+Dialogue: 0,1:23:59.69,1:24:00.69,Sub,,0,0,0,,Awesome.
+Dialogue: 0,1:24:00.69,1:24:06.47,Sub,,0,0,0,,No, look, I'm actually in the middle of a stadium full of people right now, and I think there's millions watching me on the live stream.
+Dialogue: 0,1:24:06.47,1:24:07.61,Sub,,0,0,0,,So I kind of got to run.
+Dialogue: 0,1:24:07.61,1:24:07.93,Sub,,0,0,0,,All right.
+Dialogue: 0,1:24:07.93,1:24:08.76,Sub,,0,0,0,,You've been helpful.
+Dialogue: 0,1:24:08.76,1:24:11.07,Sub,,0,0,0,,Later.
+Dialogue: 0,1:24:16.07,1:24:17.23,Sub,,0,0,0,,All right.
+Dialogue: 0,1:24:17.23,1:24:19.07,Sub,,0,0,0,,Now, that was pretty easy.
+Dialogue: 0,1:24:19.07,1:24:23.83,Sub,,0,0,0,,The agent was able to handle complex product logic and seamlessly pivoted languages.
+Dialogue: 0,1:24:23.83,1:24:26.43,Sub,,0,0,0,,But what happens if the team wants to make a change?
+Dialogue: 0,1:24:26.43,1:24:30.50,Sub,,0,0,0,,They don't need a bunch of software engineers updating endless lines of code.
+Dialogue: 0,1:24:30.50,1:24:33.54,Sub,,0,0,0,,They just need CX Agent Studio.
+Dialogue: 0,1:24:33.54,1:24:42.60,Sub,,0,0,0,,Here, we have our Visual Builder, inside of CX Agent Studio, which is designed to give you complete transparency and control over your entire agent-building experience.
+Dialogue: 0,1:24:42.60,1:24:47.30,Sub,,0,0,0,,This is the behind-the-scenes look at the actual YouTube TV's agent that they put in production.
+Dialogue: 0,1:24:47.30,1:24:54.26,Sub,,0,0,0,,The orchestration is managed across multiple specialized agents, which can handle even the most complex requests.
+Dialogue: 0,1:24:54.26,1:24:56.72,Sub,,0,0,0,,And with our built-in test interface,
+Dialogue: 0,1:24:56.72,1:25:05.26,Sub,,0,0,0,,you can ensure that every answer is grounded, factual, and pulled directly from a knowledge base, like the Agents Price Finder tool here.
+Dialogue: 0,1:25:05.26,1:25:06.94,Sub,,0,0,0,,And the best part?
+Dialogue: 0,1:25:06.94,1:25:13.50,Sub,,0,0,0,,YouTube TV customer support built and deployed this entire experience in just six weeks.
+Dialogue: 0,1:25:13.50,1:25:16.42,Sub,,0,0,0,,Now, let's say that the team wants to run a promotion.
+Dialogue: 0,1:25:16.42,1:25:19.98,Sub,,0,0,0,,It's really simple for me to add a new subagent here.
+Dialogue: 0,1:25:19.98,1:25:21.82,Sub,,0,0,0,,Click Add a New Subagent.
+Dialogue: 0,1:25:21.82,1:25:26.13,Sub,,0,0,0,,And I will make this our new promotions agent.
+Dialogue: 0,1:25:26.13,1:25:28.49,Sub,,0,0,0,,Say promotions.
+Dialogue: 0,1:25:28.49,1:25:29.73,Sub,,0,0,0,,I'll hit Save.
+Dialogue: 0,1:25:29.73,1:25:37.93,Sub,,0,0,0,,And then I'm going to quickly add a set of business logic via instructions in natural language to our agent.
+Dialogue: 0,1:25:37.93,1:25:39.85,Sub,,0,0,0,,I'll hit Create.
+Dialogue: 0,1:25:39.85,1:25:45.29,Sub,,0,0,0,,And just like that, our multi-agent system has instantly adapted to this new specialized agent.
+Dialogue: 0,1:25:45.29,1:25:47.73,Sub,,0,0,0,,It's really that simple.
+Dialogue: 0,1:25:47.73,1:25:55.45,Sub,,0,0,0,,Finally, with conversational insights, the YouTube TV team can instantly see how these calls are performing, all within the same platform.
+Dialogue: 0,1:25:55.45,1:25:58.21,Sub,,0,0,0,,Here's one of my test calls from earlier this morning.
+Dialogue: 0,1:25:58.21,1:26:00.17,Sub,,0,0,0,,Now, let's recap.
+Dialogue: 0,1:26:00.17,1:26:08.21,Sub,,0,0,0,,We just turned a routine support call into a multilingual upgrade and a globally deployed promotion, all in under four minutes.
+Dialogue: 0,1:26:08.21,1:26:12.43,Sub,,0,0,0,,This is the power of Gemini Enterprise for Customer Experience.
+Dialogue: 0,1:26:12.43,1:26:21.29,Sub,,0,0,0,,It gives you enterprise-grade reasoning, deep tool integration, a powerful Visual Builder, and insights to iterate at the speed of your business.
+Dialogue: 0,1:26:21.29,1:26:25.00,Sub,,0,0,0,,We can't wait to see what you will build next.
+Dialogue: 0,1:26:25.00,1:26:26.24,Sub,,0,0,0,,Thank you.
+Dialogue: 0,1:26:30.12,1:26:36.32,Sub,,0,0,0,,Please welcome VP of product, Google Workspace, Yulie Kwon Kim.
+Dialogue: 0,1:26:50.48,1:26:54.96,Sub,,0,0,0,,Google Workspace is the world's most popular productivity tool.
+Dialogue: 0,1:26:54.96,1:27:01.76,Sub,,0,0,0,,But even with the best tools at our fingertips, work can still feel incredibly fragmented.
+Dialogue: 0,1:27:01.76,1:27:03.06,Sub,,0,0,0,,We've all been there.
+Dialogue: 0,1:27:03.06,1:27:09.28,Sub,,0,0,0,,You're trying to answer one simple question, and 10 minutes later, you have 15 tabs open.
+Dialogue: 0,1:27:09.28,1:27:18.32,Sub,,0,0,0,,You're jumping from a stale email to a slide deck that's being edited as you watch and digging through a spreadsheet just to find a quick answer.
+Dialogue: 0,1:27:18.32,1:27:25.48,Sub,,0,0,0,,We all spend half our day finding information and the other half figuring out what to do with it.
+Dialogue: 0,1:27:25.48,1:27:29.44,Sub,,0,0,0,,What if you could skip both?
+Dialogue: 0,1:27:29.44,1:27:33.84,Sub,,0,0,0,,Today, we're introducing Workspace Intelligence.
+Dialogue: 0,1:27:37.76,1:27:42.52,Sub,,0,0,0,,With the advanced reasoning capabilities of Gemini and state-of-the-art embedding models,
+Dialogue: 0,1:27:42.52,1:27:48.00,Sub,,0,0,0,,we're eliminating context fragmentation across the Workspace suite.
+Dialogue: 0,1:27:48.00,1:27:53.60,Sub,,0,0,0,,Think of it as a unified intelligence layer that lives inside every Workspace app.
+Dialogue: 0,1:27:53.60,1:27:57.72,Sub,,0,0,0,,It connects the dots and lets AI do the heavy lifting.
+Dialogue: 0,1:27:57.72,1:28:00.13,Sub,,0,0,0,,Let's see it in action.
+Dialogue: 0,1:28:10.44,1:28:14.48,Sub,,0,0,0,,So remember that furniture rebrand you saw earlier?
+Dialogue: 0,1:28:14.48,1:28:19.08,Sub,,0,0,0,,Let's say I'm the regional distributor, and here I am in Google Chat.
+Dialogue: 0,1:28:19.08,1:28:24.11,Sub,,0,0,0,,This is where I collaborate with my colleagues and now my agents, all in one place.
+Dialogue: 0,1:28:24.11,1:28:27.55,Sub,,0,0,0,,I'm here in the Regional Managers chat space.
+Dialogue: 0,1:28:27.55,1:28:28.99,Sub,,0,0,0,,And look at this.
+Dialogue: 0,1:28:28.99,1:28:38.47,Sub,,0,0,0,,The Regional Operations Agent, which we built in Gemini Enterprise, just alerted the team that our new display kits are arriving early.
+Dialogue: 0,1:28:38.47,1:28:44.07,Sub,,0,0,0,,And as you can see, I have multiple chats blowing up.
+Dialogue: 0,1:28:44.07,1:28:46.99,Sub,,0,0,0,,What do I need to do next?
+Dialogue: 0,1:28:46.99,1:28:53.03,Sub,,0,0,0,,With Ask Gemini, Google Chat becomes my Command Center.
+Dialogue: 0,1:28:53.03,1:28:54.31,Sub,,0,0,0,,Look here.
+Dialogue: 0,1:28:54.31,1:28:58.51,Sub,,0,0,0,,Gemini tells me exactly what matters right now.
+Dialogue: 0,1:28:58.51,1:29:02.99,Sub,,0,0,0,,See? It surfaced an urgent task.
+Dialogue: 0,1:29:02.99,1:29:09.63,Sub,,0,0,0,,It linked the pitch deck that I need to localize, and it flagged my 4:00 PM deadline for the regional plan.
+Dialogue: 0,1:29:09.63,1:29:10.85,Sub,,0,0,0,,The gathering is done.
+Dialogue: 0,1:29:10.85,1:29:14.31,Sub,,0,0,0,,And I haven't opened a single extra tab.
+Dialogue: 0,1:29:14.31,1:29:23.66,Sub,,0,0,0,,Now, to build this plan, I remember we had a great chart that showed regional sales last quarter-- somewhere.
+Dialogue: 0,1:29:23.66,1:29:26.56,Sub,,0,0,0,,Normally, this is where the hunt begins.
+Dialogue: 0,1:29:26.56,1:29:30.62,Sub,,0,0,0,,I jump into a folder and stare at dozens of files.
+Dialogue: 0,1:29:30.62,1:29:34.02,Sub,,0,0,0,,Instead, I'll ask Gemini.
+Dialogue: 0,1:29:34.02,1:29:41.54,Sub,,0,0,0,,Find the merchandising playbook from last quarter, the one with the chart showing regional sales.
+Dialogue: 0,1:29:41.54,1:29:43.62,Sub,,0,0,0,,This isn't just keyword matching.
+Dialogue: 0,1:29:43.62,1:29:50.14,Sub,,0,0,0,,Workspace Intelligence understands the context of my meetings and the content inside my files.
+Dialogue: 0,1:29:50.14,1:29:51.42,Sub,,0,0,0,,Here it is.
+Dialogue: 0,1:29:51.42,1:30:00.34,Sub,,0,0,0,,It pointed me directly to the dock with the exact graph I need-- a needle in a haystack, solved in seconds.
+Dialogue: 0,1:30:00.34,1:30:05.10,Sub,,0,0,0,,Now I need to turn this scattered data into a regional plan.
+Dialogue: 0,1:30:05.10,1:30:12.50,Sub,,0,0,0,,I have a standard format for briefing store managers, and with Ask Gemini, I basically say just do it for me.
+Dialogue: 0,1:30:12.50,1:30:15.26,Sub,,0,0,0,,Watch this.
+Dialogue: 0,1:30:15.26,1:30:25.25,Sub,,0,0,0,,Let's see, use the regional campaign skill to-- oops,
+Dialogue: 0,1:30:25.25,1:30:29.77,Sub,,0,0,0,,create a deck with a plan for organic living.
+Dialogue: 0,1:30:29.77,1:30:34.45,Sub,,0,0,0,,By tagging that specific skill, Workspace Intelligence goes to work.
+Dialogue: 0,1:30:34.45,1:30:38.09,Sub,,0,0,0,,It cross-references my emails, my chats, my other docs.
+Dialogue: 0,1:30:38.09,1:30:40.69,Sub,,0,0,0,,It pulls live HubSpot win-loss data.
+Dialogue: 0,1:30:40.69,1:30:46.89,Sub,,0,0,0,,It uses our corporate branding, all to generate a new Google slide deck.
+Dialogue: 0,1:30:46.89,1:30:49.19,Sub,,0,0,0,,It's hard at work pulling that deck together.
+Dialogue: 0,1:30:49.19,1:30:51.37,Sub,,0,0,0,,And here it is.
+Dialogue: 0,1:30:51.37,1:31:03.25,Sub,,0,0,0,,And in the citations up here, you can see all the sources Workspace Intelligence pulled in without me having to ask-- the emails, the chats, the other files.
+Dialogue: 0,1:31:03.25,1:31:06.65,Sub,,0,0,0,,Should we take a look?
+Dialogue: 0,1:31:06.65,1:31:09.29,Sub,,0,0,0,,Yeah, look at this.
+Dialogue: 0,1:31:09.29,1:31:11.17,Sub,,0,0,0,,It's beautiful.
+Dialogue: 0,1:31:11.17,1:31:17.92,Sub,,0,0,0,,It matches my brand, and it's consistent with how I've structured all of my regional plan decks in the past.
+Dialogue: 0,1:31:17.92,1:31:23.52,Sub,,0,0,0,,And it looks like it was designed by a creative pro, not a terminal.
+Dialogue: 0,1:31:23.52,1:31:26.52,Sub,,0,0,0,,I'm ready to brief my team.
+Dialogue: 0,1:31:26.52,1:31:30.60,Sub,,0,0,0,,Workspace Intelligence is the end of the context tax.
+Dialogue: 0,1:31:30.60,1:31:36.60,Sub,,0,0,0,,It transforms how you work by turning fragmented information into a clear path forward.
+Dialogue: 0,1:31:36.60,1:31:38.20,Sub,,0,0,0,,No complicated setup.
+Dialogue: 0,1:31:38.20,1:31:39.34,Sub,,0,0,0,,It's secure.
+Dialogue: 0,1:31:39.34,1:31:40.48,Sub,,0,0,0,,It's integrated.
+Dialogue: 0,1:31:40.48,1:31:43.24,Sub,,0,0,0,,It just works.
+Dialogue: 0,1:31:43.24,1:31:53.20,Sub,,0,0,0,,By moving from simple automation to full-scale AI orchestration, industry leaders are using Workspace to fundamentally redefine global productivity.
+Dialogue: 0,1:31:53.20,1:32:00.44,Sub,,0,0,0,,For example, customers like Colgate-Palmolive rolled out Google Workspace to 34,000 employees.
+Dialogue: 0,1:32:00.44,1:32:09.12,Sub,,0,0,0,,AI agents built on Gemini helped their teams drive innovation, turning data into new product concepts in minutes, not months.
+Dialogue: 0,1:32:09.12,1:32:20.12,Sub,,0,0,0,,And they drive business growth by unlocking actionable insights from decades of sales history, empowering their teams to help brighten millions of smiles every morning.
+Dialogue: 0,1:32:20.12,1:32:28.72,Sub,,0,0,0,,At Natura, custom agents are accelerating data-driven reporting by 10x, while at Korean Air,
+Dialogue: 0,1:32:28.72,1:32:36.92,Sub,,0,0,0,,over 22,000 global employees use AI agents and tools to accelerate high-impact operational and care tasks.
+Dialogue: 0,1:32:36.92,1:32:45.72,Sub,,0,0,0,,And at Compass Real Estate, Gemini is managing tasks for employees so they can focus on valuable client relationships.
+Dialogue: 0,1:32:45.72,1:32:52.64,Sub,,0,0,0,,We know many companies want to make the shift to Workspace but worry about the complexity of migration.
+Dialogue: 0,1:32:52.64,1:33:03.64,Sub,,0,0,0,,I'm thrilled to announce that migrating your entire organization, including complex and finance teams from Microsoft 365 to Google Workspace,
+Dialogue: 0,1:33:03.64,1:33:12.07,Sub,,0,0,0,,is now up to five times faster, thanks to our new migration and interoperability enhancements.
+Dialogue: 0,1:33:12.07,1:33:19.15,Sub,,0,0,0,,Today, you've seen what it looks like to fundamentally change how your employees operate.
+Dialogue: 0,1:33:19.15,1:33:22.41,Sub,,0,0,0,,Go ahead, close those 15 tabs.
+Dialogue: 0,1:33:22.41,1:33:27.71,Sub,,0,0,0,,Workspace Intelligence is now ready to do the heavy lifting for you.
+Dialogue: 0,1:33:27.71,1:33:29.55,Sub,,0,0,0,,Thomas, over to you.
+Dialogue: 0,1:33:43.91,1:33:45.59,Sub,,0,0,0,,Wasn't that amazing?
+Dialogue: 0,1:33:50.55,1:33:52.27,Sub,,0,0,0,,Thank you, Yulie.
+Dialogue: 0,1:33:52.27,1:33:57.63,Sub,,0,0,0,,Before we close, let's take a look at one of the most respected brands in the world.
+Dialogue: 0,1:33:57.63,1:34:01.47,Sub,,0,0,0,,Serving 3.7 billion people around the world,
+Dialogue: 0,1:34:01.47,1:34:06.63,Sub,,0,0,0,,Unilever chose Google Cloud to build and deploy agents at scale.
+Dialogue: 0,1:34:06.63,1:34:10.38,Sub,,0,0,0,,Let's hear their story.
+Dialogue: 0,1:34:10.38,1:34:15.62,Sub,,0,0,0,,At Unilever, we serve 3.7 billion people every day with our products.
+Dialogue: 0,1:34:15.62,1:34:23.66,Sub,,0,0,0,,We need to understand these individuals at a unique level, and that's what the partnership with Google Cloud allows us to do.
+Dialogue: 0,1:34:23.66,1:34:29.72,Sub,,0,0,0,,It's about personalization at scale, desire at scale, and that's very unique.
+Dialogue: 0,1:34:29.72,1:34:33.30,Sub,,0,0,0,,And it's at the core of our strategy.
+Dialogue: 0,1:34:33.30,1:34:38.98,Sub,,0,0,0,,We are connecting our business end-to-end for faster AI deployment across the enterprise.
+Dialogue: 0,1:34:38.98,1:34:45.36,Sub,,0,0,0,,This means using AI to supercharge demand generation, get early access to advanced AI and large language models,
+Dialogue: 0,1:34:45.36,1:34:50.84,Sub,,0,0,0,,and build even stronger partnerships with retailers, connecting data in smarter ways so we can grow together.
+Dialogue: 0,1:34:50.84,1:34:57.58,Sub,,0,0,0,,Underpinning all of this is a strong digital backbone powered by Google Cloud.
+Dialogue: 0,1:34:57.58,1:35:08.01,Sub,,0,0,0,,So my role is to operationalize this really exciting vision, co-creating that with Google to deliver our agentic foundations so that our agents can be architected for performance,
+Dialogue: 0,1:35:08.01,1:35:12.65,Sub,,0,0,0,,scale, security, and observability right from the outset.
+Dialogue: 0,1:35:12.65,1:35:16.95,Sub,,0,0,0,,The competitive buying multiagentic solution, co-created with our Horizon3 Labs,
+Dialogue: 0,1:35:16.95,1:35:25.09,Sub,,0,0,0,,is leveraging core Google Cloud technologies such as Gemini Enterprise and ADK, your Agent Development Kit, and the underlying Gemini models.
+Dialogue: 0,1:35:25.09,1:35:30.97,Sub,,0,0,0,,So this solution orchestrates a multitude of agents together through one single user interface.
+Dialogue: 0,1:35:30.97,1:35:36.41,Sub,,0,0,0,,This helps my procurement colleagues make analysis and decisions in minutes instead of days.
+Dialogue: 0,1:35:36.41,1:35:40.19,Sub,,0,0,0,,This solution has enabled us to make smarter sourcing decisions.
+Dialogue: 0,1:35:40.19,1:35:44.07,Sub,,0,0,0,,With Google Cloud, we are turning intelligence into a growth engine.
+Dialogue: 0,1:35:53.22,1:35:56.77,Sub,,0,0,0,,There's one final difference in how we work with you.
+Dialogue: 0,1:35:56.77,1:36:00.29,Sub,,0,0,0,,We believe the future of AI must be open.
+Dialogue: 0,1:36:00.29,1:36:06.40,Sub,,0,0,0,,While others want to lock you into a wall garden that owns your models, your data, and your agents,
+Dialogue: 0,1:36:06.40,1:36:13.68,Sub,,0,0,0,,we offer you an integrated stack, but the freedom to choose the world's best chips and models,
+Dialogue: 0,1:36:13.68,1:36:21.92,Sub,,0,0,0,,the freedom to run AI wherever your data may live, the freedom to control your own destiny with deep governance features.
+Dialogue: 0,1:36:21.92,1:36:25.44,Sub,,0,0,0,,We scale this mission through our partners,
+Dialogue: 0,1:36:25.44,1:36:33.18,Sub,,0,0,0,,with whom we're building a broad and deep network of forward-deployed engineers, including Accenture, BCG,
+Dialogue: 0,1:36:33.18,1:36:40.88,Sub,,0,0,0,,Deloitte, and McKinsey, who've announced major expansion of their Google Gemini AI practices.
+Dialogue: 0,1:36:40.88,1:36:49.56,Sub,,0,0,0,,Along with AI-led service partners like Quantium, Distil and Tribe.AI, we're helping independent software vendors
+Dialogue: 0,1:36:49.56,1:36:55.88,Sub,,0,0,0,,and SaaS companies transform their solutions with Gemini Enterprise Agent Platform.
+Dialogue: 0,1:36:55.88,1:37:04.36,Sub,,0,0,0,,And we're bringing AI to small to medium-sized businesses by helping them adopt Gemini Enterprise and our AI
+Dialogue: 0,1:37:04.36,1:37:09.12,Sub,,0,0,0,,advances in Workspace that work so seamlessly together now.
+Dialogue: 0,1:37:09.12,1:37:11.52,Sub,,0,0,0,,We've covered a lot of ground today.
+Dialogue: 0,1:37:11.52,1:37:18.04,Sub,,0,0,0,,We've introduced our agentic blueprint as a foundation for agents to transform your companies--
+Dialogue: 0,1:37:18.04,1:37:26.22,Sub,,0,0,0,,first, the AI Hypercomputer, the purpose-built foundation optimized for the physics of the agentic era; second,
+Dialogue: 0,1:37:26.22,1:37:34.72,Sub,,0,0,0,,the Agentic Data Cloud, the engine that provides agents with trusted business context; Agentic Defense,
+Dialogue: 0,1:37:34.72,1:37:43.60,Sub,,0,0,0,,the autonomous protection that secures your entire AI lifecycle; fourth, the Gemini Enterprise Agent Platform,
+Dialogue: 0,1:37:43.60,1:37:50.30,Sub,,0,0,0,,a new agentic platform with state-of-the-art models to build, deploy, and manage agents; and finally,
+Dialogue: 0,1:37:50.30,1:38:05.39,Sub,,0,0,0,,the Agentic Task Force, the specialized agents that are already transforming customer experience and employee productivity and transforming workflows all served up to users to the Gemini Enterprise Application.
+Dialogue: 0,1:38:05.39,1:38:14.39,Sub,,0,0,0,,To each of our customers and partners, thank you, each of you, for being on this amazing journey with us.
+Dialogue: 0,1:38:14.39,1:38:24.95,Sub,,0,0,0,,Our teams have worked so hard this last year to prepare this amazing technology for you, and we're all so proud of the work they've done.
+Dialogue: 0,1:38:24.95,1:38:27.39,Sub,,0,0,0,,This platform is ready.
+Dialogue: 0,1:38:27.39,1:38:30.39,Sub,,0,0,0,,So what will each of you build?
+Dialogue: 0,1:38:30.39,1:38:38.67,Sub,,0,0,0,,We have three fantastic days planned for you, and a great set of sessions and spotlights still to come.
+Dialogue: 0,1:38:38.67,1:38:42.17,Sub,,0,0,0,,Thank you and have an amazing Cloud Next.

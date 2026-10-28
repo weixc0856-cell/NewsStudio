@@ -1,0 +1,478 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:07.16,0:00:14.35,Sub,,0,0,0,,Please welcome AI researcher and founding member of OpenAI, Andrej Karpathy.\N欢迎人工智能研究员、OpenAI 联合创始人安德烈·卡帕西。
+Dialogue: 0,0:00:21.17,0:00:31.90,Sub,,0,0,0,,Hi, everyone. I'm happy to be here to tell you about the state of GPT and more generally about the rapidly growing ecosystem of large language models.\N大家好，我很高兴来到这里，向大家介绍 GPT 的现状，\N以及更广泛的大语言模型生态系统正在迅速发展的情况。
+Dialogue: 0,0:00:31.90,0:00:35.02,Sub,,0,0,0,,I would like to partition the talk into two parts.\N我想把这次演讲分为两个部分。
+Dialogue: 0,0:00:35.02,0:00:40.61,Sub,,0,0,0,,In the first part, I would like to tell you about how we train GPT Assistance, and then in the second part,\N在第一部分，我想谈谈我们如何训练 GPT 助手，然后在第二部分，
+Dialogue: 0,0:00:40.61,0:00:46.39,Sub,,0,0,0,,we're going to take a look at how we can use these assistants effectively for your applications.\N我们将探讨如何有效地将这些助手应用于您的实际场景。
+Dialogue: 0,0:00:46.39,0:00:53.03,Sub,,0,0,0,,First, let's take a look at the emerging recipe for how to train these assistants and keep in mind that this is all very new and still rapidly evolving,\N首先，让我们看看训练这些助手的新兴方法，同时请记住，这一切都还非常新，且在快速演变中，
+Dialogue: 0,0:00:53.03,0:00:55.54,Sub,,0,0,0,,but so far, the recipe looks something like this.\N但到目前为止，这个方法大致如下。
+Dialogue: 0,0:00:55.54,0:01:01.25,Sub,,0,0,0,,Now, this is a complicated slide, I'm going to go through it piece by piece, but roughly speaking,\N现在，这是一张复杂的幻灯片，我将逐部分讲解，但大致来说，
+Dialogue: 0,0:01:01.25,0:01:09.64,Sub,,0,0,0,,we have four major stages, pretraining, supervised finetuning, reward modeling, reinforcement learning, and they follow each other serially.\N我们有四个主要阶段：预训练、监督微调、奖励模型构建、强化学习，它们按顺序依次进行。
+Dialogue: 0,0:01:09.64,0:01:14.53,Sub,,0,0,0,,Now, in each stage, we have a dataset that powers that stage.\N在每个阶段，我们都有一个支撑该阶段的数据集。
+Dialogue: 0,0:01:14.53,0:01:22.07,Sub,,0,0,0,,We have an algorithm that for our purposes will be a objective and over for training the neural network,\N我们有一个算法，用于我们的目的，即作为训练神经网络的目标函数，
+Dialogue: 0,0:01:22.07,0:01:25.68,Sub,,0,0,0,,and then we have a resulting model, and then there are some notes on the bottom.\N以及一个最终得到的模型，下方还有一些备注。
+Dialogue: 0,0:01:25.68,0:01:28.58,Sub,,0,0,0,,The first stage we're going to start with as the pretraining stage.\N我们将从预训练阶段开始。
+Dialogue: 0,0:01:28.58,0:01:36.36,Sub,,0,0,0,,Now, this stage is special in this diagram, and this diagram is not to scale because this stage is where all of the computational work basically happens.\N在这个图中，这个阶段是特殊的，而且这个图并不是按比例绘制的，因为所有计算工作基本上都发生在这个阶段。
+Dialogue: 0,0:01:36.37,0:01:41.97,Sub,,0,0,0,,This is 99 percent of the training compute time and also flops.\N这占了训练计算时间的99%，也占了浮点运算次数的99%。
+Dialogue: 0,0:01:41.97,0:01:51.10,Sub,,0,0,0,,This is where we are dealing with Internet scale datasets with thousands of GPUs in the supercomputer and also months of training potentially.\N这里我们处理的是互联网规模的数据集，使用超级计算机中的数千块GPU，训练时间可能长达数月。
+Dialogue: 0,0:01:51.10,0:01:59.04,Sub,,0,0,0,,The other three stages are finetuning stages that are much more along the lines of small few number of GPUs and hours or days.\N其他三个阶段是微调阶段，更接近于使用少量GPU和数小时或数天的训练。
+Dialogue: 0,0:01:59.05,0:02:03.05,Sub,,0,0,0,,Let's take a look at the pretraining stage to achieve a base model.\N让我们来看看预训练阶段，以获得一个基座模型。
+Dialogue: 0,0:02:03.05,0:02:07.49,Sub,,0,0,0,,First, we are going to gather a large amount of data.\N首先，我们将收集大量数据。
+Dialogue: 0,0:02:07.49,0:02:16.60,Sub,,0,0,0,,Here's an example of what we call a data mixture that comes from this paper that was released by Meta where they released this LLaMA based model.\N这是一个来自Meta发布的论文的例子，他们发布了这个基于LLaMA的模型。
+Dialogue: 0,0:02:16.60,0:02:20.44,Sub,,0,0,0,,Now, you can see roughly the datasets that enter into these collections.\N现在，你可以大致看到进入这些数据集合的数据集。
+Dialogue: 0,0:02:20.45,0:02:27.26,Sub,,0,0,0,,We have CommonCrawl, which is a web scrape, C4, which is also CommonCrawl, and then some high quality datasets as well.\N我们有CommonCrawl，这是一个网络爬取数据，C4，也是CommonCrawl，\N还有一些高质量的数据集。
+Dialogue: 0,0:02:27.26,0:02:31.32,Sub,,0,0,0,,For example, GitHub, Wikipedia, Books, Archives, Stock Exchange and so on.\N例如，GitHub、维基百科、书籍、档案、证券交易所等。
+Dialogue: 0,0:02:31.33,0:02:40.43,Sub,,0,0,0,,These are all mixed up together, and then they are sampled according to some given proportions, and that forms the training set for the GPT.\N这些数据都被混合在一起，然后根据给定的比例进行采样，从而形成GPT的训练集。
+Dialogue: 0,0:02:40.43,0:02:46.67,Sub,,0,0,0,,Now before we can actually train on this data, we need to go through one more preprocessing step, and that is tokenization.\N在我们实际用这些数据进行训练之前，还需要进行一个额外的预处理步骤，那就是分词。
+Dialogue: 0,0:02:46.67,0:02:57.08,Sub,,0,0,0,,This is basically a translation of the raw text that we scrape from the Internet into sequences of integers because that's the native representation over which GPTs function.\N这本质上是将从互联网上抓取的原始文本转换为整数序列，因为这是 GPT 模型运作的原生表示形式。
+Dialogue: 0,0:02:57.08,0:03:05.75,Sub,,0,0,0,,Now, this is a lossless translation between pieces of texts and tokens and integers, and there are a number of algorithms for the stage.\N这种文本片段与词元和整数之间的转换是无损的，这一阶段有多种算法可供选择。
+Dialogue: 0,0:03:05.75,0:03:13.75,Sub,,0,0,0,,Typically, for example, you could use something like byte pair encoding, which iteratively merges text chunks and groups them into tokens.\N例如，你可以使用字节对编码，它会迭代地合并文本片段并将其归类为词元。
+Dialogue: 0,0:03:13.75,0:03:21.30,Sub,,0,0,0,,Here, I'm showing some example chunks of these tokens, and then this is the raw integer sequence that will actually feed into a transformer.\N这里我展示了一些词元的示例片段，接下来就是将实际输入到 Transformer 模型中的原始整数序列\N。
+Dialogue: 0,0:03:21.30,0:03:28.16,Sub,,0,0,0,,Now, here I'm showing two examples for hybrid parameters that govern this stage.\N这里我展示了控制这一阶段的两种混合参数示例。
+Dialogue: 0,0:03:28.16,0:03:33.84,Sub,,0,0,0,,GPT-4, we did not release too much information about how it was trained and so on, I'm using GPT-3s numbers,\N对于 GPT-4，我们并未公开太多关于其训练方式等信息，因此我使用的是 GPT-3 的数据。
+Dialogue: 0,0:03:33.85,0:03:37.60,Sub,,0,0,0,,but GPT-3 is of course a little bit old by now, about three years ago.\N但 GPT-3 现在当然已经有些过时了，大约是三年前的模型。
+Dialogue: 0,0:03:37.60,0:03:40.53,Sub,,0,0,0,,But LLaMA is a fairly recent model from Meta.\N而 LLaMA 是 Meta 最近推出的一个模型。
+Dialogue: 0,0:03:40.53,0:03:44.78,Sub,,0,0,0,,These are roughly the orders of magnitude that we're dealing with when we're doing pretraining.\N这些大致就是我们在进行预训练时所涉及的数量级。
+Dialogue: 0,0:03:44.78,0:03:48.14,Sub,,0,0,0,,The vocabulary size is usually a couple 10,000 tokens.\N词汇表大小通常在几万个词元左右。
+Dialogue: 0,0:03:48.14,0:03:53.24,Sub,,0,0,0,,The context length is usually something like 2,000, 4,000, or nowadays even 100,000,\N上下文长度通常为 2,000、4,000，或者如今甚至达到 100,000。
+Dialogue: 0,0:03:53.24,0:04:01.28,Sub,,0,0,0,,and this governs the maximum number of integers that the GPT will look at when it's trying to predict the next integer in a sequence.\N这决定了 GPT 在尝试预测序列中下一个整数时，最多会查看多少个整数。
+Dialogue: 0,0:04:01.28,0:04:06.14,Sub,,0,0,0,,You can see that roughly the number of parameters say, 65 billion for LLaMA.\N你可以看到，参数数量大约为 650 亿，比如 LLaMA。
+Dialogue: 0,0:04:06.14,0:04:11.32,Sub,,0,0,0,,Now, even though LLaMA has only 65B parameters compared to GPP-3s 175 billion parameters,\N尽管 LLaMA 的参数量只有 650 亿，相比 GPT-3 的 1750 亿要少得多，
+Dialogue: 0,0:04:11.32,0:04:17.87,Sub,,0,0,0,,LLaMA is a significantly more powerful model, and intuitively, that's because the model is trained for significantly longer.\NLLaMA 却是一个强大得多的模型，直观来看，这是因为该模型的训练时间显著更长。
+Dialogue: 0,0:04:17.87,0:04:21.67,Sub,,0,0,0,,In this case, 1.4 trillion tokens, instead of 300 billion tokens.\N在这种情况下，训练使用了 1.4 万亿个词元，而不是 3000 亿个词元。
+Dialogue: 0,0:04:21.67,0:04:26.27,Sub,,0,0,0,,You shouldn't judge the power of a model by the number of parameters that it contains.\N不应仅凭模型的参数数量来判断其能力。
+Dialogue: 0,0:04:26.28,0:04:34.31,Sub,,0,0,0,,Below, I'm showing some tables of rough hyperparameters that typically go into specifying the transformer neural network,\N下面我展示了一些通常用于定义 Transformer 神经网络的粗略超参数，
+Dialogue: 0,0:04:34.31,0:04:41.15,Sub,,0,0,0,,the number of heads, the dimension size, number of layers, and so on, and on the bottom I'm showing some training hyperparameters.\N包括注意力头数量、维度大小、层数等，底部则展示了一些训练超参数。
+Dialogue: 0,0:04:41.16,0:04:52.56,Sub,,0,0,0,,For example, to train the 65B model, Meta used 2,000 GPUs, roughly 21 days of training and a roughly several million dollars.\N例如，为了训练 650 亿参数的模型，Meta 使用了约 2000 块 GPU，\N训练时间约为 21 天，花费约数百万美元。
+Dialogue: 0,0:04:52.56,0:04:57.93,Sub,,0,0,0,,That's the rough orders of magnitude that you should have in mind for the pre-training stage.\N这就是你在预训练阶段应该考虑的大致数量级。
+Dialogue: 0,0:04:57.98,0:05:00.90,Sub,,0,0,0,,Now, when we're actually pre-training, what happens?\N那么，当我们真正进行预训练时，会发生什么？
+Dialogue: 0,0:05:00.91,0:05:06.12,Sub,,0,0,0,,Roughly speaking, we are going to take our tokens, and we're going to lay them out into data batches.\N粗略地说，我们将把词元整理成数据批次。
+Dialogue: 0,0:05:06.13,0:05:10.82,Sub,,0,0,0,,We have these arrays that will feed into the transformer, and these arrays are B,\N我们有这些数组将输入到变换器中，这些数组是 B，
+Dialogue: 0,0:05:10.82,0:05:17.97,Sub,,0,0,0,,the batch size and these are all independent examples stocked up in rows and B by T, T being the maximum context length.\N批次大小，所有独立的样本都按行堆叠，维度为 B 乘以 T，T 表示最大上下文长度。
+Dialogue: 0,0:05:17.97,0:05:23.03,Sub,,0,0,0,,In my picture I only have 10 the context lengths, so this could be 2,000, 4,000, etc.\N在我的图中，上下文长度只有 10，因此这可能是 2,000、4,000 等。
+Dialogue: 0,0:05:23.03,0:05:24.86,Sub,,0,0,0,,These are extremely long rows.\N这些行非常长。
+Dialogue: 0,0:05:24.86,0:05:31.68,Sub,,0,0,0,,What we do is we take these documents, and we pack them into rows, and we delimit them with these special end of texts tokens,\N我们所做的就是将这些文档打包成行，并用这些特殊的文本结束标记分隔它们，
+Dialogue: 0,0:05:31.69,0:05:35.00,Sub,,0,0,0,,basically telling the transformer where a new document begins.\N基本上告诉变换器一个新文档从哪里开始。
+Dialogue: 0,0:05:35.01,0:05:41.54,Sub,,0,0,0,,Here, I have a few examples of documents and then I stretch them out into this input.\N这里，我有几个文档的例子，然后我把它们拉伸成这个输入。
+Dialogue: 0,0:05:41.55,0:05:46.12,Sub,,0,0,0,,Now, we're going to feed all of these numbers into transformer.\N现在，我们将把这些数字全部输入到变换器中。
+Dialogue: 0,0:05:46.12,0:05:52.49,Sub,,0,0,0,,Let me just focus on a single particular cell, but the same thing will happen at every cell in this diagram.\N我先专注于一个特定的单元格，但图中每个单元格都会发生同样的事情。
+Dialogue: 0,0:05:52.49,0:05:54.36,Sub,,0,0,0,,Let's look at the green cell.\N我们来看绿色单元格。
+Dialogue: 0,0:05:54.37,0:06:00.24,Sub,,0,0,0,,The green cell is going to take a look at all of the tokens before it, so all of the tokens in yellow,\N绿色单元格将查看它之前的所有标记，也就是所有黄色的标记，
+Dialogue: 0,0:06:00.24,0:06:05.10,Sub,,0,0,0,,and we're going to feed that entire context into the transforming neural network,\N然后我们将整个上下文输入到变换神经网络中，
+Dialogue: 0,0:06:05.11,0:06:10.18,Sub,,0,0,0,,and the transformer is going to try to predict the next token in a sequence, in this case in red.\N变压器将尝试预测序列中的下一个词元，本例中为红色部分。
+Dialogue: 0,0:06:10.18,0:06:13.04,Sub,,0,0,0,,Now the transformer, I don't have too much time to, unfortunately,\N现在，变压器，我遗憾地没有太多时间，
+Dialogue: 0,0:06:13.04,0:06:18.95,Sub,,0,0,0,,go into the full details of this neural network architecture is just a large blob of neural net stuff for our purposes,\N详细讲解这种神经网络架构，从我们的目的来看，它只是一个庞大的神经网络集合。
+Dialogue: 0,0:06:18.95,0:06:22.45,Sub,,0,0,0,,and it's got several, 10 billion parameters typically or something like that.\N它通常包含约100亿个参数，或类似数量。
+Dialogue: 0,0:06:22.45,0:06:28.93,Sub,,0,0,0,,Of course, as I tune these parameters, you're getting slightly different predicted distributions for every single one of these cells.\N当我调整这些参数时，每个单元的预测分布都会略有不同。
+Dialogue: 0,0:06:28.93,0:06:34.37,Sub,,0,0,0,,For example, if our vocabulary size is 50,257 tokens,\N例如，如果我们的词表大小为50,257个词元，
+Dialogue: 0,0:06:34.37,0:06:40.22,Sub,,0,0,0,,then we're going to have that many numbers because we need to specify a probability distribution for what comes next.\N那么我们就需要这么多数字，因为必须指定下一个词元的概率分布。
+Dialogue: 0,0:06:40.22,0:06:42.78,Sub,,0,0,0,,Basically, we have a probability for whatever may follow.\N基本上，我们为接下来可能出现的任何内容都赋予一个概率。
+Dialogue: 0,0:06:42.78,0:06:51.62,Sub,,0,0,0,,Now, in this specific example, for this specific cell, 513 will come next, and so we can use this as a source of supervision to update our transformers weights.\N在这个具体例子中，对于这个特定单元，下一个词元将是513，\N因此我们可以用它作为监督信号来更新变压器的权重。
+Dialogue: 0,0:06:51.63,0:06:56.62,Sub,,0,0,0,,We're applying this basically on every single cell in the parallel, and we keep swapping batches,\N我们基本上在并行处理每一个单元，不断轮换批次，
+Dialogue: 0,0:06:56.62,0:07:02.06,Sub,,0,0,0,,and we're trying to get the transformer to make the correct predictions over what token comes next in a sequence.\N并试图让变压器正确预测序列中下一个词元是什么。
+Dialogue: 0,0:07:02.07,0:07:05.46,Sub,,0,0,0,,Let me show you more concretely what this looks like when you train one of these models.\N让我更具体地展示一下训练这类模型时的实际过程。
+Dialogue: 0,0:07:05.47,0:07:11.06,Sub,,0,0,0,,This is actually coming from the New York Times, and they trained a small GPT on Shakespeare.\N这实际上来自《纽约时报》，他们用莎士比亚的作品训练了一个小型 GPT。
+Dialogue: 0,0:07:11.06,0:07:14.41,Sub,,0,0,0,,Here's a small snippet of Shakespeare, and they train their GPT on it.\N这是莎士比亚作品的一小段，他们用这段内容训练自己的 GPT。
+Dialogue: 0,0:07:14.41,0:07:19.19,Sub,,0,0,0,,Now, in the beginning, at initialization, the GPT starts with completely random weights.\N最初，在初始化阶段，GPT 的权重完全是随机的。
+Dialogue: 0,0:07:19.19,0:07:21.96,Sub,,0,0,0,,You're getting completely random outputs as well.\N你得到的输出也是完全随机的。
+Dialogue: 0,0:07:21.97,0:07:26.02,Sub,,0,0,0,,But over time, as you train the GPT longer and longer,\N但随着时间推移，随着 GPT 的训练不断深入，
+Dialogue: 0,0:07:26.02,0:07:32.87,Sub,,0,0,0,,you are getting more and more coherent and consistent samples from the model, and the way you sample from it, of course,\N你从模型中获得的样本越来越连贯且一致，而采样的方式当然，
+Dialogue: 0,0:07:32.87,0:07:42.18,Sub,,0,0,0,,is you predict what comes next, you sample from that distribution and you keep feeding that back into the process, and you can basically sample large sequences.\N是预测下一个词，从该分布中采样，并将结果不断反馈回流程中，从而基本上可以生成长序列。
+Dialogue: 0,0:07:42.19,0:07:48.23,Sub,,0,0,0,,By the end, you see that the transformer has learned about words and where to put spaces and where to put commas and so on.\N最终，你可以看到 Transformer 已经学会了词语、空格和逗号的位置等。
+Dialogue: 0,0:07:48.23,0:07:51.12,Sub,,0,0,0,,We're making more and more consistent predictions over time.\N我们随着时间推移，做出越来越一致的预测。
+Dialogue: 0,0:07:51.12,0:07:54.77,Sub,,0,0,0,,These are the plots that you are looking at when you're doing model pretraining.\N这些是你在进行模型预训练时所观察到的预测结果。
+Dialogue: 0,0:07:54.77,0:07:58.51,Sub,,0,0,0,,Effectively, we're looking at the loss function over time as you train,\N实际上，我们是在观察训练过程中损失函数的变化，
+Dialogue: 0,0:07:58.51,0:08:06.87,Sub,,0,0,0,,and low loss means that our transformer is giving a higher probability to the next correct integer in the sequence.\N损失值越低，说明我们的 Transformer 对序列中下一个正确词元的概率预测越高。
+Dialogue: 0,0:08:06.87,0:08:10.72,Sub,,0,0,0,,What are we going to do with model once we've trained it after a month?\N我们在训练完模型一个月后，接下来该怎么做？
+Dialogue: 0,0:08:10.72,0:08:18.56,Sub,,0,0,0,,Well, the first thing that we noticed, we the field, is that these models basically in the process of language modeling,\N嗯，我们和领域内的人注意到，这些模型在语言建模过程中，
+Dialogue: 0,0:08:18.56,0:08:21.18,Sub,,0,0,0,,learn very powerful general representations,\N会学习到非常强大的通用表征，
+Dialogue: 0,0:08:21.19,0:08:26.41,Sub,,0,0,0,,and it's possible to very efficiently fine tune them for any arbitrary downstream tasks you might be interested in.\N而且可以非常高效地对任何你感兴趣的下游任务进行微调。
+Dialogue: 0,0:08:26.41,0:08:29.22,Sub,,0,0,0,,As an example, if you're interested in sentiment classification,\N比如说，如果你关注情感分类，
+Dialogue: 0,0:08:29.23,0:08:38.15,Sub,,0,0,0,,the approach used to be that you collect a bunch of positives and negatives and then you train some NLP model for that, but the new approach is:\N以前的做法是收集大量正向和负向样本，然后训练一个NLP模型，但现在的新方法是：
+Dialogue: 0,0:08:38.15,0:08:44.74,Sub,,0,0,0,,ignore sentiment classification, go off and do large language model pretraining, train a large transformer,\N忽略情感分类，转而去进行大规模语言模型的预训练，训练一个大型Transformer，
+Dialogue: 0,0:08:44.74,0:08:51.04,Sub,,0,0,0,,and then you may only have a few examples and you can very efficiently fine tune your model for that task.\N然后你可能只需要少量样本，就能非常高效地为该任务微调模型。
+Dialogue: 0,0:08:51.04,0:08:53.55,Sub,,0,0,0,,This works very well in practice.\N这种方法在实践中效果非常好。
+Dialogue: 0,0:08:53.55,0:09:00.42,Sub,,0,0,0,,The reason for this is that basically the transformer is forced to multitask a huge amount of tasks in the language modeling task,\N原因在于，Transformer在语言建模任务中被迫同时处理大量任务，
+Dialogue: 0,0:09:00.42,0:09:09.12,Sub,,0,0,0,,because in terms of predicting the next token, it's forced to understand a lot about the structure of the text and all the different concepts therein.\N因为在预测下一个词元时，它必须理解文本的结构以及其中的各种概念。
+Dialogue: 0,0:09:09.35,0:09:17.92,Sub,,0,0,0,,That was GPT-1. Now around the time of GPT-2, people noticed that actually even better than fine tuning, you can actually prompt these models very effectively.\N这是GPT-1。到了GPT-2时期，人们发现，实际上比微调更有效的方法是，\N对这些模型进行非常有效的提示。
+Dialogue: 0,0:09:17.92,0:09:25.62,Sub,,0,0,0,,These are language models and they want to complete documents, you can actually trick them into performing tasks by arranging these fake documents.\N这些是语言模型，它们试图完成文档，你实际上可以通过构造这些假文档来诱导它们执行任务。
+Dialogue: 0,0:09:25.62,0:09:31.02,Sub,,0,0,0,,In this example, for example, we have some passage and then we like do QA, QA, QA.\N比如在这个例子中，我们有一段文字，然后进行问答，问答，问答。
+Dialogue: 0,0:09:31.03,0:09:37.81,Sub,,0,0,0,,This is called Few-shot prompt, and then we do Q, and then as the transformer is tried to complete the document is actually answering our question.\N这被称为少样本提示，然后我们提出问题，当变换器试图完成文档时，实际上它正在回答我们的问题。
+Dialogue: 0,0:09:37.81,0:09:45.74,Sub,,0,0,0,,This is an example of prompt engineering based model, making it believe that it's imitating a document and getting it to perform a task.\N这是一个基于提示工程的模型示例，让它相信自己在模仿一份文档，从而让它执行任务。
+Dialogue: 0,0:09:45.74,0:09:48.64,Sub,,0,0,0,,This kicked off, I think the era of, I would say,\N这开启了我认为的，
+Dialogue: 0,0:09:48.64,0:09:53.38,Sub,,0,0,0,,prompting over fine tuning and seeing that this actually can work extremely well on a lot of problems,\N提示优于微调的时代，我们看到这种方法在许多问题上确实表现得非常出色，
+Dialogue: 0,0:09:53.38,0:09:56.73,Sub,,0,0,0,,even without training any neural networks, fine tuning or so on.\N即使不训练任何神经网络或进行微调也能实现。
+Dialogue: 0,0:09:56.73,0:10:02.52,Sub,,0,0,0,,Now since then, we've seen an entire evolutionary tree of base models that everyone has trained.\N从那以后，我们看到了所有基础模型的完整演化树，每个人都在训练自己的模型。
+Dialogue: 0,0:10:02.53,0:10:05.12,Sub,,0,0,0,,Not all of these models are available.\N并非所有这些模型都可供使用。
+Dialogue: 0,0:10:05.12,0:10:08.24,Sub,,0,0,0,,for example, the GPT-4 base model was never released.\N比如说，GPT-4 的基础模型从未发布过。
+Dialogue: 0,0:10:08.24,0:10:15.80,Sub,,0,0,0,,The GPT-4 model that you might be interacting with over API is not a base model, it's an assistant model, and we're going to cover how to get those in a bit.\N你通过 API 交互的 GPT-4 模型并不是一个基础模型，而是一个助手模型，\N我们稍后会介绍如何获取这类模型。
+Dialogue: 0,0:10:15.80,0:10:24.40,Sub,,0,0,0,,GPT-3 based model is available via the API under the name Devanshi and GPT-2 based model is available even as weights on our GitHub repo.\N基于 GPT-3 的模型可通过 API 以名称 Devanshi 提供，\N而基于 GPT-2 的模型甚至可以在我们的 GitHub 仓库中以权重形式获取。
+Dialogue: 0,0:10:24.40,0:10:32.61,Sub,,0,0,0,,But currently the best available base model probably is the LLaMA series from Meta, although it is not commercially licensed.\N但目前可用的最佳基座模型很可能是 Meta 的 LLaMA 系列，尽管它没有商业许可。
+Dialogue: 0,0:10:32.88,0:10:36.74,Sub,,0,0,0,,Now, one thing to point out is base models are not assistants.\N有一点需要指出的是，基座模型并不是智能助手。
+Dialogue: 0,0:10:36.75,0:10:43.00,Sub,,0,0,0,,They don't want to make answers to your questions, they want to complete documents.\N它们并不想回答你的问题，而是想完成文档。
+Dialogue: 0,0:10:43.00,0:10:51.38,Sub,,0,0,0,,If you tell them to write a poem about the bread and cheese, it will answer questions with more questions, it's completing what it thinks is a document.\N如果你让它们写一首关于面包和奶酪的诗，它们会用更多问题来回应，因为它们在完成自己认为的文档。
+Dialogue: 0,0:10:51.39,0:10:57.54,Sub,,0,0,0,,However, you can prompt them in a specific way for base models that is more likely to work.\N但你可以用特定方式提示基座模型，这样更有可能奏效。
+Dialogue: 0,0:10:57.54,0:11:02.44,Sub,,0,0,0,,As an example, here's a poem about bread and cheese, and in that case it will autocomplete correctly.\N举个例子，这里有一首关于面包和奶酪的诗，这时它就能正确自动补全。
+Dialogue: 0,0:11:02.44,0:11:06.22,Sub,,0,0,0,,You can even trick base models into being assistants.\N你甚至可以骗过基座模型，让它们表现得像智能助手。
+Dialogue: 0,0:11:06.22,0:11:16.32,Sub,,0,0,0,,The way you would do this is you would create a specific few-shot prompt that makes it look like there's some document between the human and assistant and they're exchanging information.\N实现方法是创建一个特定的少样本提示，让模型看起来像是在人类和助手之间有一份文档，双方正在交换信息。
+Dialogue: 0,0:11:16.32,0:11:17.86,Sub,,0,0,0,,Then at the bottom,\N然后在底部，
+Dialogue: 0,0:11:17.86,0:11:26.65,Sub,,0,0,0,,you put your query at the end and the base model will condition itself into being a helpful assistant and answer,\N把你的问题放在最后，基座模型就会调整自己，变成一个有帮助的助手并给出回答，
+Dialogue: 0,0:11:26.65,0:11:30.79,Sub,,0,0,0,,but this is not very reliable and doesn't work super well in practice, although it can be done.\N但这种方法并不可靠，在实际应用中效果也不太好，尽管技术上可行。
+Dialogue: 0,0:11:30.79,0:11:37.10,Sub,,0,0,0,,Instead, we have a different path to make actual GPT assistants not base model document completers.\N相反，我们有另一条路径，可以真正打造 GPT 智能助手，而不是基座模型的文档补全器。
+Dialogue: 0,0:11:37.11,0:11:39.52,Sub,,0,0,0,,That takes us into supervised finetuning.\N这将我们带入监督微调阶段。
+Dialogue: 0,0:11:39.52,0:11:45.94,Sub,,0,0,0,,In the supervised finetuning stage, we are going to collect small but high quality data-sets, and in this case,\N在监督微调阶段，我们将收集少量但高质量的数据集，在这种情况下，
+Dialogue: 0,0:11:45.94,0:11:52.78,Sub,,0,0,0,,we're going to ask human contractors to gather data of the form prompt and ideal response.\N我们会请人工承包商收集“提示”和“理想回复”形式的数据。
+Dialogue: 0,0:11:52.78,0:11:56.54,Sub,,0,0,0,,We're going to collect lots of these typically tens of thousands or something like that.\N我们通常会收集大量这类数据，通常是数万条左右。
+Dialogue: 0,0:11:56.55,0:11:59.52,Sub,,0,0,0,,Then we're going to still do language modeling on this data.\N然后我们仍将在这些数据上进行语言建模。
+Dialogue: 0,0:11:59.52,0:12:02.86,Sub,,0,0,0,,Nothing changed algorithmically, we're swapping out a training set.\N算法上没有任何变化，我们只是更换了训练数据集。
+Dialogue: 0,0:12:02.86,0:12:11.41,Sub,,0,0,0,,It used to be Internet documents, which has a high quantity local for basically Q8 prompt response data.\N以前使用的是互联网文档，其数据量大，但基本都是 Q8 提示-回复数据。
+Dialogue: 0,0:12:11.41,0:12:13.88,Sub,,0,0,0,,That is low quantity, high quality.\N而现在是数据量少，但质量高。
+Dialogue: 0,0:12:13.89,0:12:18.19,Sub,,0,0,0,,We will still do language modeling and then after training, we get an SFT model.\N我们仍会进行语言建模，训练完成后，得到一个 SFT 模型。
+Dialogue: 0,0:12:18.19,0:12:22.81,Sub,,0,0,0,,You can actually deploy these models and they are actual assistants and they work to some extent.\N你实际上可以部署这些模型，它们确实是可用的智能助手，能在一定程度上发挥作用。
+Dialogue: 0,0:12:22.81,0:12:25.75,Sub,,0,0,0,,Let me show you what an example demonstration might look like.\N让我展示一下示例演示可能是什么样子。
+Dialogue: 0,0:12:25.75,0:12:28.26,Sub,,0,0,0,,Here's something that a human contractor might come up with.\N这是人工承包商可能提出的一个例子。
+Dialogue: 0,0:12:28.26,0:12:34.33,Sub,,0,0,0,,Here's some random prompt. Can you write a short introduction about the relevance of the term monopsony or something like that?\N这是一个随机的提示。你能写一段简短的介绍，说明“买方垄断”这个术语的相关性吗？
+Dialogue: 0,0:12:34.33,0:12:37.36,Sub,,0,0,0,,Then the contractor also writes out an ideal response.\N然后承包商还会写出一个理想的回答。
+Dialogue: 0,0:12:37.36,0:12:45.82,Sub,,0,0,0,,When they write out these responses, they are following extensive labeling documentations and they are being asked to be helpful, truthful, and harmless.\N当他们写下这些回答时，会遵循详尽的标注文档，并被要求做到有帮助、真实且无害。
+Dialogue: 0,0:12:45.82,0:12:50.68,Sub,,0,0,0,,These labeling instructions here, you probably can't read it, neither can I,\N这里的标注说明，你可能看不清，我也看不清，
+Dialogue: 0,0:12:50.68,0:12:55.64,Sub,,0,0,0,,but they're long and this is people following instructions and trying to complete these prompts.\N但它们非常长，这是人们在遵循指令并努力完成这些提示。
+Dialogue: 0,0:12:55.65,0:12:57.43,Sub,,0,0,0,,That's what the dataset looks like.\N这就是数据集的样子。
+Dialogue: 0,0:12:57.43,0:12:59.95,Sub,,0,0,0,,You can train these models. This works to some extent.\N你可以用这些模型进行训练，这在一定程度上是有效的。
+Dialogue: 0,0:12:59.95,0:13:05.17,Sub,,0,0,0,,Now, you can actually continue the pipeline from here on, and go into RLHF,\N现在，你可以从这里继续推进整个流程，进入 RLHF，
+Dialogue: 0,0:13:05.17,0:13:10.38,Sub,,0,0,0,,reinforcement learning from human feedback that consists of both reward modeling and reinforcement learning.\N即基于人类反馈的强化学习，它包含奖励建模和强化学习两个部分。
+Dialogue: 0,0:13:10.38,0:13:16.46,Sub,,0,0,0,,Let me cover that and then I'll come back to why you may want to go through the extra steps and how that compares to SFT models.\N我先讲一下这部分，然后再回到为什么你可能需要走额外的步骤，以及这与 SFT 模型相比有何不同。
+Dialogue: 0,0:13:16.46,0:13:23.01,Sub,,0,0,0,,In the reward modeling step, what we're going to do is we're now going to shift our data collection to be of the form of comparisons.\N在奖励建模阶段，我们将把数据收集方式转变为比较形式。
+Dialogue: 0,0:13:23.01,0:13:25.36,Sub,,0,0,0,,Here's an example of what our dataset will look like.\N这是我们的数据集将呈现的一个例子。
+Dialogue: 0,0:13:25.36,0:13:35.38,Sub,,0,0,0,,I have the same identical prompt on the top, which is asking the assistant to write a program or a function that checks if a given string is a palindrome.\N我在顶部使用了完全相同的提示，要求助手编写一个程序或函数，用于检查给定字符串是否为回文。
+Dialogue: 0,0:13:35.38,0:13:41.17,Sub,,0,0,0,,Then what we do is we take the SFT model which we've already trained and we create multiple completions.\N接下来我们使用已经训练好的 SFT 模型，生成多个补全结果。
+Dialogue: 0,0:13:41.17,0:13:47.04,Sub,,0,0,0,,In this case, we have three completions that the model has created, and then we ask people to rank these completions.\N在这种情况下，模型生成了三个补全结果，然后我们请人们对这些补全结果进行排序。
+Dialogue: 0,0:13:47.04,0:13:52.86,Sub,,0,0,0,,If you stare at this for a while, and by the way, these are very difficult things to do to compare some of these predictions.\N如果你仔细观察一段时间，顺便说一下，要比较这些预测结果非常困难。
+Dialogue: 0,0:13:52.86,0:14:03.06,Sub,,0,0,0,,This can take people even hours for a single prompt completion pairs, but let's say we decided that one of these is much better than the others and so on. We rank them.\N这个过程甚至可能需要人们花费数小时来处理单个提示与补全结果的配对，\N但假设我们决定其中一个是明显优于其他两个的，于是我们进行排序。
+Dialogue: 0,0:14:03.06,0:14:10.24,Sub,,0,0,0,,Then we can follow that with something that looks very much like a binary classification on all the possible pairs between these completions.\N然后我们可以接着执行类似二分类的任务，针对所有补全结果之间的可能配对。
+Dialogue: 0,0:14:10.24,0:14:16.15,Sub,,0,0,0,,What we do now is, we lay out our prompt in rows, and the prompt is identical across all three rows here.\N现在我们把提示按行排列，这里三行中的提示完全相同。
+Dialogue: 0,0:14:16.15,0:14:19.21,Sub,,0,0,0,,It's all the same prompt, but the completion of this varies.\N这是完全相同的提示，但补全结果各不相同。
+Dialogue: 0,0:14:19.21,0:14:21.86,Sub,,0,0,0,,The yellow tokens are coming from the SFT model.\N黄色的词元来自 SFT 模型。
+Dialogue: 0,0:14:21.87,0:14:31.72,Sub,,0,0,0,,Then what we do is we append another special reward readout token at the end and we basically only supervise the transformer at this single green token.\N接下来我们在末尾附加一个特殊的奖励读出词元，我们仅对这个单一的绿色词元进行监督。
+Dialogue: 0,0:14:31.72,0:14:42.14,Sub,,0,0,0,,The transformer will predict some reward for how good that completion is for that prompt and basically it makes a guess about the quality of each completion.\N变换器会预测该补全结果对于该提示的好坏程度，并基本上对每个补全结果的质量做出猜测。
+Dialogue: 0,0:14:42.15,0:14:47.96,Sub,,0,0,0,,Then once it makes a guess for every one of them, we also have the ground truth which is telling us the ranking of them.\N然后一旦它对每一个补全结果都做出了猜测，我们还拥有真实标签，告诉我们它们的排序情况。
+Dialogue: 0,0:14:47.97,0:14:52.27,Sub,,0,0,0,,We can actually enforce that some of these numbers should be much higher than others, and so on.\N实际上，我们可以强制要求其中一些数字远高于其他数字，以此类推。
+Dialogue: 0,0:14:52.27,0:14:58.48,Sub,,0,0,0,,We formulate this into a loss function and we train our model to make reward predictions that are consistent with the ground truth coming\N我们将这个问题表述为一个损失函数，并训练模型使其奖励预测与真实数据保持一致。
+Dialogue: 0,0:14:58.48,0:15:01.10,Sub,,0,0,0,,from the comparisons from all these contractors.\N来自所有这些承包商的对比。
+Dialogue: 0,0:15:01.11,0:15:02.78,Sub,,0,0,0,,That's how we train our reward model.\N这就是我们训练奖励模型的方式。
+Dialogue: 0,0:15:02.79,0:15:06.61,Sub,,0,0,0,,That allows us to score how good a completion is for a prompt.\N这使我们能够评估某个补全结果对提示的适配程度。
+Dialogue: 0,0:15:06.61,0:15:13.34,Sub,,0,0,0,,Once we have a reward model, we can't deploy this because this is not very useful as an assistant by itself,\N有了奖励模型后，我们无法直接部署，因为它本身作为助手用处不大。
+Dialogue: 0,0:15:13.35,0:15:16.92,Sub,,0,0,0,,but it's very useful for the reinforcement learning stage that follows now.\N但它对接下来的强化学习阶段非常有用。
+Dialogue: 0,0:15:16.92,0:15:22.90,Sub,,0,0,0,,Because we have a reward model, we can score the quality of any arbitrary completion for any given prompt.\N因为我们有奖励模型，所以可以对任意提示词的任意完成结果进行质量评分。
+Dialogue: 0,0:15:22.90,0:15:26.06,Sub,,0,0,0,,What we do during reinforcement learning is we basically get, again,\N我们在强化学习过程中所做的，基本上是再次获得
+Dialogue: 0,0:15:26.07,0:15:32.28,Sub,,0,0,0,,a large collection of prompts and now we do reinforcement learning with respect to the reward model. Here's what that looks like.\N大量提示语，现在我们根据奖励模型进行强化学习。这就是它的样子。
+Dialogue: 0,0:15:32.28,0:15:36.00,Sub,,0,0,0,,We take a single prompt, we lay it out in rows,\N我们输入一个提示，将其按行排列，
+Dialogue: 0,0:15:36.00,0:15:43.44,Sub,,0,0,0,,and now we use basically the model we'd like to train which was initialized at SFT model to create some completions in yellow,\N现在我们使用想要训练的模型，该模型以 SFT 模型初始化，生成一些黄色的补全内容。
+Dialogue: 0,0:15:43.44,0:15:50.47,Sub,,0,0,0,,and then we append the reward token again and we read off the reward according to the reward model, which is now kept fixed.\N然后我们再次追加奖励词元，并根据固定的奖励模型读取奖励值。
+Dialogue: 0,0:15:50.47,0:15:58.45,Sub,,0,0,0,,It doesn't change any more. Now the reward model tells us the quality of every single completion for all these prompts and so what we can do is we can now\N它不再发生变化。现在奖励模型告诉我们所有这些提示对应的每个完整输出的质量，因此我们可以
+Dialogue: 0,0:15:58.45,0:16:04.62,Sub,,0,0,0,,just basically apply the same language modeling loss function, but we're currently training on the yellow tokens,\N基本上应用相同的语言建模损失函数，但目前我们正在对黄色词元进行训练，
+Dialogue: 0,0:16:04.62,0:16:11.28,Sub,,0,0,0,,and we are weighing the language modeling objective by the rewards indicated by the reward model.\N并根据奖励模型指示的奖励值来加权语言建模目标。
+Dialogue: 0,0:16:11.28,0:16:13.16,Sub,,0,0,0,,As an example, in the first row,\N举个例子，在第一行中，
+Dialogue: 0,0:16:13.17,0:16:21.43,Sub,,0,0,0,,the reward model said that this is a fairly high-scoring completion and so all the tokens that we happen to sample on the first row are going to get\N奖励模型认为这是一个得分较高的完整输出，因此我们在第一行中采样的所有词元都将
+Dialogue: 0,0:16:21.43,0:16:25.08,Sub,,0,0,0,,reinforced and they're going to get higher probabilities for the future.\N被强化，并在未来获得更高的概率。
+Dialogue: 0,0:16:25.08,0:16:29.94,Sub,,0,0,0,,Conversely, on the second row, the reward model really did not like this completion, -1.2.\N相反，在第二行中，奖励模型对这个完整输出非常不满意，得分为 -1.2。
+Dialogue: 0,0:16:29.94,0:16:36.12,Sub,,0,0,0,,Therefore, every single token that we sampled in that second row is going to get a slightly higher probability for the future.\N因此，我们在第二行中采样的每一个词元在未来都将获得稍高的概率。
+Dialogue: 0,0:16:36.12,0:16:43.09,Sub,,0,0,0,,We do this over and over on many prompts on many batches and basically, we get a policy that creates yellow tokens here.\N我们在多个提示和多个批次上反复执行这一过程，最终得到一个在此处生成黄色词元的策略。
+Dialogue: 0,0:16:43.09,0:16:50.57,Sub,,0,0,0,,It's basically all the completions here will score high according to the reward model that we trained in the previous stage.\N这里所有的完整输出都将根据我们在上一阶段训练的奖励模型获得高分。
+Dialogue: 0,0:16:51.93,0:16:55.54,Sub,,0,0,0,,That's what the RLHF pipeline is.\N这就是 RLHF 流水线的原理。
+Dialogue: 0,0:16:55.54,0:16:58.93,Sub,,0,0,0,,Then at the end, you get a model that you could deploy.\N最后，你将得到一个可以部署的模型。
+Dialogue: 0,0:16:58.93,0:17:08.23,Sub,,0,0,0,,As an example, ChatGPT is an RLHF model, but some other models that you might come across for example, Vicuna-13B, and so on, these are SFT models.\N举个例子，ChatGPT 是一个 RLHF 模型，但你可能会遇到的其他一些模型，\N比如 Vicuna-13B 等，这些是 SFT 模型。
+Dialogue: 0,0:17:08.23,0:17:12.13,Sub,,0,0,0,,We have base models, SFT models, and RLHF models.\N我们有基座模型、SFT 模型和 RLHF 模型。
+Dialogue: 0,0:17:12.13,0:17:14.50,Sub,,0,0,0,,That's the state of things there.\N这就是目前的情况。
+Dialogue: 0,0:17:14.50,0:17:16.92,Sub,,0,0,0,,Now why would you want to do RLHF?\N那么，你为什么想要做 RLHF 呢？
+Dialogue: 0,0:17:16.92,0:17:20.95,Sub,,0,0,0,,One answer that's not that exciting is that it works better.\N一个不太激动人心的答案是，它效果更好。
+Dialogue: 0,0:17:20.95,0:17:22.84,Sub,,0,0,0,,This comes from the instruct GPT paper.\N这来自 instruct GPT 论文。
+Dialogue: 0,0:17:22.84,0:17:28.04,Sub,,0,0,0,,According to these experiments a while ago now, these PPO models are RLHF.\N根据之前的一些实验，这些 PPO 模型就是 RLHF。
+Dialogue: 0,0:17:28.05,0:17:33.78,Sub,,0,0,0,,We see that they are basically preferred in a lot of comparisons when we give them to humans.\N我们发现，当把它们交给人类时，在很多对比中它们都更受青睐。
+Dialogue: 0,0:17:33.78,0:17:43.75,Sub,,0,0,0,,Humans prefer basically tokens that come from RLHF models compared to SFT models, compared to base model that is prompted to be an assistant. It just works better.\N人类基本上更喜欢来自 RLHF 模型的词元，而不是 SFT 模型，也不是被提示扮演助手的基座模型。\N它就是更有效。
+Dialogue: 0,0:17:43.75,0:17:47.34,Sub,,0,0,0,,But you might ask why does it work better?\N但你可能会问，为什么它效果更好？
+Dialogue: 0,0:17:47.34,0:17:55.49,Sub,,0,0,0,,I don't think that there's a single amazing answer that the community has really agreed on, but I will offer one reason potentially.\N我认为目前社区还没有一个公认的惊人答案，但我可以提供一个可能的原因。
+Dialogue: 0,0:17:55.50,0:18:02.24,Sub,,0,0,0,,It has to do with the asymmetry between how easy computationally it is to compare versus generate.\N这与计算上比较和生成的不对称性有关。
+Dialogue: 0,0:18:02.25,0:18:04.86,Sub,,0,0,0,,Let's take an example of generating a haiku.\N我们以生成一首俳句为例。
+Dialogue: 0,0:18:04.86,0:18:07.99,Sub,,0,0,0,,Suppose I ask a model to write a haiku about paper clips.\N假设我让一个模型写一首关于回形针的俳句。
+Dialogue: 0,0:18:07.99,0:18:14.24,Sub,,0,0,0,,If you're a contractor trying to train data, then imagine being a contractor collecting basically data for the SFT stage,\N如果你是一名试图训练数据的承包商，那就想象一下你在为监督微调阶段收集数据。
+Dialogue: 0,0:18:14.25,0:18:16.84,Sub,,0,0,0,,how are you supposed to create a nice haiku for a paper clip?\N你该如何为回形针创作一首优美的俳句？
+Dialogue: 0,0:18:16.84,0:18:24.25,Sub,,0,0,0,,You might not be very good at that, but if I give you a few examples of haikus you might be able to appreciate some of these haikus a lot more than others.\N你可能在这方面并不擅长，但如果我给你几首俳句的例子，你可能会更欣赏其中一些，而不是其他。
+Dialogue: 0,0:18:24.25,0:18:27.40,Sub,,0,0,0,,Judging which one of these is good is a much easier task.\N判断哪一首更好要容易得多。
+Dialogue: 0,0:18:27.40,0:18:37.60,Sub,,0,0,0,,Basically, this asymmetry makes it so that comparisons are a better way to potentially leverage yourself as a human and your judgment to create a slightly better model.\N基本上，这种不对称性意味着，通过比较来利用人类的判断力，\N可能比直接生成更能帮助你微调出稍好一些的模型。
+Dialogue: 0,0:18:37.60,0:18:43.58,Sub,,0,0,0,,Now, RLHF models are not strictly an improvement on the base models in some cases.\N现在，RLHF 模型在某些情况下并非严格优于基座模型。
+Dialogue: 0,0:18:43.59,0:18:46.90,Sub,,0,0,0,,In particular, we'd notice for example that they lose some entropy.\N特别地，我们会注意到，它们的熵值有所下降。
+Dialogue: 0,0:18:46.90,0:18:49.66,Sub,,0,0,0,,That means that they give more peaky results.\N这意味着它们的输出结果更加集中。
+Dialogue: 0,0:18:49.66,0:18:55.94,Sub,,0,0,0,,They can output samples with lower variation than the base model.\N它们生成的样本变化性低于基座模型。
+Dialogue: 0,0:18:55.95,0:19:00.16,Sub,,0,0,0,,The base model has lots of entropy and will give lots of diverse outputs.\N基座模型具有很高的熵，会产生多种多样的输出。
+Dialogue: 0,0:19:00.16,0:19:09.80,Sub,,0,0,0,,For example, one place where I still prefer to use a base model is in the setup where you basically have\N例如，我仍然更倾向于使用基座模型的一个场景是，当你基本上需要
+Dialogue: 0,0:19:09.81,0:19:13.73,Sub,,0,0,0,,n things and you want to generate more things like it.\N你想要生成更多类似的东西。
+Dialogue: 0,0:19:13.74,0:19:16.44,Sub,,0,0,0,,Here is an example that I just cooked up.\N这是我刚想出来的一个例子。
+Dialogue: 0,0:19:16.44,0:19:18.79,Sub,,0,0,0,,I want to generate cool Pokemon names.\N我想生成一些酷炫的宝可梦名字。
+Dialogue: 0,0:19:18.79,0:19:24.58,Sub,,0,0,0,,I gave it seven Pokemon names and I asked the base model to complete the document and it gave me a lot more Pokemon names.\N我给了它七个宝可梦的名字，然后让基座模型完成文档，结果它给了我更多宝可梦的名字。
+Dialogue: 0,0:19:24.58,0:19:27.01,Sub,,0,0,0,,These are fictitious. I tried to look them up.\N这些都是虚构的。我试着查过。
+Dialogue: 0,0:19:27.01,0:19:29.14,Sub,,0,0,0,,I don't believe they're actual Pokemons.\N我不相信它们是真正的宝可梦。
+Dialogue: 0,0:19:29.14,0:19:33.37,Sub,,0,0,0,,This is the task that I think the base model would be good at because it still has lots of entropy.\N我认为这个任务是基座模型擅长的，因为它仍然具有很高的熵。
+Dialogue: 0,0:19:33.37,0:19:39.26,Sub,,0,0,0,,It'll give you lots of diverse cool more things that look like whatever you give it before.\N它会给你许多多样且酷炫的新东西，看起来都像你之前给它的内容。
+Dialogue: 0,0:19:41.82,0:19:47.11,Sub,,0,0,0,,Having said all that, these are the assistant models that are probably available to you at this point.\N话虽如此，这些就是目前你可能能用到的助手模型。
+Dialogue: 0,0:19:47.11,0:19:53.42,Sub,,0,0,0,,There was a team at Berkeley that ranked a lot of the available assistant models and give them basically Elo ratings.\N伯克利有一个团队，对大量可用的助手模型进行了排名，并为其大致打出了埃洛评分。
+Dialogue: 0,0:19:53.42,0:19:58.36,Sub,,0,0,0,,Currently, some of the best models, of course, are GPT-4, by far, I would say, followed by Claude,\N目前，一些表现最好的模型当然是 GPT-4，我可以说，其次是 Claude，
+Dialogue: 0,0:19:58.37,0:20:04.74,Sub,,0,0,0,,GPT-3.5, and then a number of models, some of these might be available as weights, like Vicuna, Koala, etc.\N然后是 GPT-3.5，再之后是一些其他模型，其中部分模型可能以权重形式提供，比如 Vicuna、\NKoala 等。
+Dialogue: 0,0:20:04.75,0:20:14.21,Sub,,0,0,0,,The first three rows here are all RLHF models and all of the other models to my knowledge, are SFT models, I believe.\N这里前三个模型都是基于 RLHF 训练的，据我所知，其余所有模型都是 SFT 模型。
+Dialogue: 0,0:20:15.81,0:20:19.24,Sub,,0,0,0,,That's how we train these models on the high level.\N这就是我们在高层次上训练这些模型的方式。
+Dialogue: 0,0:20:19.24,0:20:26.08,Sub,,0,0,0,,Now I'm going to switch gears and let's look at how we can best apply the GPT assistant model to your problems.\N现在，我将转换话题，来看看我们如何最好地将 GPT 助手模型应用到你的问题中。
+Dialogue: 0,0:20:26.08,0:20:29.94,Sub,,0,0,0,,Now, I would like to work in setting of a concrete example.\N现在我想以一个具体例子为背景来展开。
+Dialogue: 0,0:20:29.94,0:20:32.90,Sub,,0,0,0,,Let's work with a concrete example here.\N让我们在这里用一个具体例子来说明。
+Dialogue: 0,0:20:32.91,0:20:38.47,Sub,,0,0,0,,Let's say that you are working on an article or a blog post, and you're going to write this sentence at the end.\N假设你正在撰写一篇文章或博客，你打算在结尾写下这句话。
+Dialogue: 0,0:20:38.47,0:20:44.72,Sub,,0,0,0,,"California's population is 53 times that of Alaska." So for some reason, you want to compare the populations of these two states.\N“加利福尼亚州的人口是阿拉斯加的 53 倍。” 因为某种原因，你想比较这两个州的人口。
+Dialogue: 0,0:20:44.73,0:20:53.36,Sub,,0,0,0,,Think about the rich internal monologue and tool use and how much work actually goes computationally in your brain to generate this one final sentence.\N想想你大脑中丰富的内心独白、工具使用，以及生成这一句最终结论所涉及的大量计算工作。
+Dialogue: 0,0:20:53.37,0:20:55.62,Sub,,0,0,0,,Here's maybe what that could look like in your brain.\N这可能是你大脑中实际呈现的样子。
+Dialogue: 0,0:20:55.63,0:21:01.18,Sub,,0,0,0,,For this next step, let me blog on my blog, let me compare these two populations.\N接下来这一步，让我在我的博客上写一篇博文，让我来比较这两个州的人口。
+Dialogue: 0,0:21:01.19,0:21:05.01,Sub,,0,0,0,,First I'm going to obviously need to get both of these populations.\N首先，我显然需要获取这两个地区的人口数据。
+Dialogue: 0,0:21:05.01,0:21:12.84,Sub,,0,0,0,,Now, I know that I probably don't know these populations off the top of my head so I'm aware of what I know or don't know of my self-knowledge.\N现在我知道，我可能记不住这两个地区的人口，因此我清楚自己知道或不知道什么，这就是自我认知。
+Dialogue: 0,0:21:12.84,0:21:19.82,Sub,,0,0,0,,I go, I do some tool use and I go to Wikipedia and I look up California's population and Alaska's population.\N我使用工具，去维基百科查找加利福尼亚州和阿拉斯加的人口数据。
+Dialogue: 0,0:21:19.83,0:21:26.90,Sub,,0,0,0,,Now, I know that I should divide the two, but again, I know that dividing 39.2 by 0.74 is very unlikely to succeed.\N现在我知道应该将两者相除，但同样地，我知道心算39.2除以0.74几乎不可能成功。
+Dialogue: 0,0:21:26.91,0:21:30.34,Sub,,0,0,0,,That's not the thing that I can do in my head and so therefore,\N这不是我能在脑子里完成的事情，因此，
+Dialogue: 0,0:21:30.34,0:21:36.83,Sub,,0,0,0,,I'm going to rely on the calculator so I'm going to use a calculator, punch it in and see that the output is roughly 53.\N我将依赖计算器，使用计算器输入并发现结果大约是53。
+Dialogue: 0,0:21:36.83,0:21:42.45,Sub,,0,0,0,,Then maybe I do some reflection and sanity checks in my brain so does 53 makes sense?\N然后我可能在脑海中进行一些反思和合理性检查，53这个数字合理吗？
+Dialogue: 0,0:21:42.45,0:21:47.93,Sub,,0,0,0,,Well, that's quite a large fraction, but then California is the most populous state, so maybe that looks okay.\N嗯，这个比例确实很高，但加利福尼亚州是人口最多的州，所以这可能还算合理。
+Dialogue: 0,0:21:47.93,0:21:52.76,Sub,,0,0,0,,Then I have all the information I might need, and now I get to the creative portion of writing.\N现在我已经掌握了可能需要的所有信息，接下来进入写作的创造性阶段。
+Dialogue: 0,0:21:52.77,0:21:58.48,Sub,,0,0,0,,I might start to write something like "California has 53x times greater" and then I think to myself,\N我可能会开始写类似“加利福尼亚州的人口是阿拉斯加的53倍”，然后我心想，
+Dialogue: 0,0:21:58.48,0:22:03.60,Sub,,0,0,0,,that's actually like really awkward phrasing so let me actually delete that and let me try again.\N这种表达其实非常别扭，所以我干脆删掉，重新尝试。
+Dialogue: 0,0:22:03.60,0:22:06.30,Sub,,0,0,0,,As I'm writing, I have this separate process,\N在写作过程中，我有一个独立的思考流程，
+Dialogue: 0,0:22:06.30,0:22:15.62,Sub,,0,0,0,,almost inspecting what I'm writing and judging whether it looks good or not and then maybe I delete and maybe I reframe it, and then maybe I'm happy with what comes out.\N几乎在检查我写的内容，判断它看起来是否合适，然后可能删除，可能重新组织，最后也许对结果感到满意。
+Dialogue: 0,0:22:15.63,0:22:21.85,Sub,,0,0,0,,Basically long story short, a ton happens under the hood in terms of your internal monologue when you create sentences like this.\N简而言之，当你写出这样的句子时，你的内心独白中发生了大量后台操作。
+Dialogue: 0,0:22:21.85,0:22:26.76,Sub,,0,0,0,,But what does a sentence like this look like when we are training a GPT on it?\N但当我们用这样的句子训练 GPT 时，它会是什么样子？
+Dialogue: 0,0:22:26.77,0:22:30.58,Sub,,0,0,0,,From GPT's perspective, this is just a sequence of tokens.\N从 GPT 的视角来看，这仅仅是一串词元。
+Dialogue: 0,0:22:30.59,0:22:40.30,Sub,,0,0,0,,GPT, when it's reading or generating these tokens, it just goes chunk, chunk, chunk, chunk and each chunk is roughly the same amount of computational work for each token.\NGPT 在读取或生成这些词元时，只是不断处理一个个块，每个块的计算量大致相同。
+Dialogue: 0,0:22:40.30,0:22:47.96,Sub,,0,0,0,,These transformers are not very shallow networks they have about 80 layers of reasoning, but 80 is still not like too much.\N这些 Transformer 网络并不浅，它们有大约 80 层推理结构，但 80 层其实也不算太多。
+Dialogue: 0,0:22:47.97,0:22:56.12,Sub,,0,0,0,,This transformer is going to do its best to imitate, but of course, the process here looks very different from the process that you took.\N这个 Transformer 会尽力模仿，但显然这个过程与你所经历的完全不同。
+Dialogue: 0,0:22:56.13,0:23:00.34,Sub,,0,0,0,,In particular, in our final artifacts in the data sets that we create,\N尤其是在我们创建的数据集中最终产出的成果中，
+Dialogue: 0,0:23:00.34,0:23:07.81,Sub,,0,0,0,,and then eventually feed to LLMs, all that internal dialogue was completely stripped and unlike you,\N然后最终输入到大语言模型中时，所有内部对话都被完全剥离了，与你不同，
+Dialogue: 0,0:23:07.81,0:23:12.07,Sub,,0,0,0,,the GPT will look at every single token and spend the same amount of compute on every one of them.\NGPT 会查看每一个词元，并对每个词元投入相同的计算量。
+Dialogue: 0,0:23:12.07,0:23:21.01,Sub,,0,0,0,,So, you can't expect it to do too much work per token and also in particular,\N因此，你不能指望它每个词元都做太多工作，尤其如此，
+Dialogue: 0,0:23:21.01,0:23:26.08,Sub,,0,0,0,,basically these transformers are just like token simulators, they don't know what they don't know.\N本质上这些 Transformer 就像词元模拟器，它们不知道自己不知道什么。
+Dialogue: 0,0:23:26.08,0:23:27.82,Sub,,0,0,0,,They just imitate the next token.\N它们只是在模仿下一个词元。
+Dialogue: 0,0:23:27.82,0:23:29.78,Sub,,0,0,0,,They don't know what they're good at or not good at.\N它们并不知道自己擅长或不擅长什么。
+Dialogue: 0,0:23:29.79,0:23:32.10,Sub,,0,0,0,,They just tried their best to imitate the next token.\N它们只是尽力去模仿下一个词元。
+Dialogue: 0,0:23:32.10,0:23:34.09,Sub,,0,0,0,,They don't reflect in the loop.\N它们不会在循环中进行反思。
+Dialogue: 0,0:23:34.09,0:23:35.50,Sub,,0,0,0,,They don't sanity check anything.\N它们不会对任何内容进行合理性检查。
+Dialogue: 0,0:23:35.50,0:23:37.28,Sub,,0,0,0,,They don't correct their mistakes along the way.\N它们不会在过程中纠正自己的错误。
+Dialogue: 0,0:23:37.29,0:23:40.60,Sub,,0,0,0,,By default, they just are sample token sequences.\N默认情况下，它们只是随机生成的词元序列。
+Dialogue: 0,0:23:40.60,0:23:45.34,Sub,,0,0,0,,They don't have separate inner monologue streams in their head right? They're evaluating what's happening.\N它们并没有在脑海中拥有独立的内心独白流，它们只是在评估当前发生的情况。
+Dialogue: 0,0:23:45.34,0:23:48.44,Sub,,0,0,0,,Now, they do have some cognitive advantages,\N现在，它们确实有一些认知优势，
+Dialogue: 0,0:23:48.45,0:23:57.07,Sub,,0,0,0,,I would say and that is that they do actually have a very large fact-based knowledge across a vast number of areas because they have, say, several, 10 billion parameters.\N我认为，那就是它们实际上在大量领域中拥有非常庞大的基于事实的知识，因为它们拥有数十亿个参数。
+Dialogue: 0,0:23:57.07,0:23:59.90,Sub,,0,0,0,,That's a lot of storage for a lot of facts.\N这为存储大量事实提供了巨大的容量。
+Dialogue: 0,0:23:59.91,0:24:04.70,Sub,,0,0,0,,They also, I think have a relatively large and perfect working memory.\N它们还拥有相对较大且完美的工作记忆。
+Dialogue: 0,0:24:04.71,0:24:14.89,Sub,,0,0,0,,Whatever fits into the context window is immediately available to the transformer through its internal self attention mechanism and so it's perfect memory,\N只要能放进上下文窗口，Transformer 就能通过其内部的自注意力机制立即获取，\N因此它的记忆完美无瑕，
+Dialogue: 0,0:24:14.89,0:24:23.70,Sub,,0,0,0,,but it's got a finite size, but the transformer has a very direct access to it and so it can a losslessly remember anything that is inside its context window.\N但上下文窗口有固定大小，而 Transformer 对其有非常直接的访问，\N因此它可以无损地记住窗口内的任何内容。
+Dialogue: 0,0:24:23.70,0:24:29.23,Sub,,0,0,0,,This is how I would compare those two and the reason I bring all of this up is because I think to a large extent,\N这就是我比较这两者的办法，我之所以提到这些，是因为我认为在很大程度上，
+Dialogue: 0,0:24:29.23,0:24:39.52,Sub,,0,0,0,,prompting is just making up for this cognitive difference between these two architectures like our brains here and LLM brains.\N提示工程本质上就是在弥补这两种架构之间的认知差异——我们人类的大脑和大型语言模型的大脑。
+Dialogue: 0,0:24:39.52,0:24:41.68,Sub,,0,0,0,,You can look at it that way almost.\N你可以这样理解。
+Dialogue: 0,0:24:41.68,0:24:45.31,Sub,,0,0,0,,Here's one thing that people found for example works pretty well in practice.\N举个例子，人们发现有一种方法在实践中效果很好。
+Dialogue: 0,0:24:45.31,0:24:52.36,Sub,,0,0,0,,Especially if your tasks require reasoning, you can't expect the transformer to do too much reasoning per token.\N尤其是当你的任务需要推理时，你不能指望 Transformer 每个词元都进行太多推理。
+Dialogue: 0,0:24:52.36,0:24:56.05,Sub,,0,0,0,,You have to really spread out the reasoning across more and more tokens.\N你必须真正把推理过程分散到越来越多的词元中。
+Dialogue: 0,0:24:56.05,0:25:00.97,Sub,,0,0,0,,For example, you can't give a transformer a very complicated question and expect it to get the answer in a single token.\N例如，你不能给 Transformer 一个非常复杂的问题，就指望它用一个词元就给出答案。
+Dialogue: 0,0:25:00.97,0:25:02.54,Sub,,0,0,0,,There's just not enough time for it.\N时间根本不够。
+Dialogue: 0,0:25:02.55,0:25:06.98,Sub,,0,0,0,,"These transformers need tokens to think," I like to say sometimes.\N我有时喜欢说：“这些 Transformer 需要词元来思考。”
+Dialogue: 0,0:25:06.99,0:25:08.88,Sub,,0,0,0,,This is some of the things that work well,\N这些是一些行之有效的方法。
+Dialogue: 0,0:25:08.88,0:25:17.17,Sub,,0,0,0,,you may for example have a few-shot prompt that shows the transformer that it should show its work when it's answering question and if you give a few examples,\N例如，你可以使用一个少样本提示，向变换器展示在回答问题时应展示解题过程，如果你提供几个示例，
+Dialogue: 0,0:25:17.17,0:25:24.22,Sub,,0,0,0,,the transformer will imitate that template and it will just end up working out better in terms of its evaluation.\N变换器就会模仿这种模板，从而在评估中表现得更好。
+Dialogue: 0,0:25:24.22,0:25:29.28,Sub,,0,0,0,,Additionally, you can elicit this behavior from the transformer by saying, let things step-by-step.\N此外，你还可以通过说“逐步思考”来引导变换器表现出这种行为。
+Dialogue: 0,0:25:29.28,0:25:40.28,Sub,,0,0,0,,Because this conditions the transformer into showing its work and because it snaps into a mode of showing its work, is going to do less computational work per token.\N因为这会让变换器养成展示解题过程的习惯，一旦进入这种模式，它每个词元的计算量就会减少。
+Dialogue: 0,0:25:40.29,0:25:46.02,Sub,,0,0,0,,It's more likely to succeed as a result because it's making slower reasoning over time.\N由于它在推理过程中变得更加缓慢，因此成功的可能性也更高。
+Dialogue: 0,0:25:46.02,0:25:49.46,Sub,,0,0,0,,Here's another example, this one is called self-consistency.\N这是另一个例子，称为自洽性。
+Dialogue: 0,0:25:49.47,0:26:00.76,Sub,,0,0,0,,We saw that we had the ability to start writing and then if it didn't work out, I can try again and I can try multiple times and maybe select the one that worked best.\N我们发现，可以开始写作，如果不行，就可以重试，可以多次尝试，然后选择效果最好的那个。
+Dialogue: 0,0:26:00.76,0:26:03.79,Sub,,0,0,0,,In these approaches, you may sample not just once,\N在这些方法中，你可能不止采样一次，
+Dialogue: 0,0:26:03.79,0:26:11.96,Sub,,0,0,0,,but you may sample multiple times and then have some process for finding the ones that are good and then keeping just those samples or doing a majority vote or something like that.\N而是多次采样，然后通过某种机制筛选出表现好的样本，再保留这些样本，或者进行多数投票，类似这样的操作。
+Dialogue: 0,0:26:11.97,0:26:16.93,Sub,,0,0,0,,Basically these transformers in the process as they predict the next token, just like you,\N基本上，这些变换器在预测下一个词元的过程中，就像你一样，
+Dialogue: 0,0:26:16.93,0:26:24.40,Sub,,0,0,0,,they can get unlucky and they could sample a not a very good token and they can go down like a blind alley in terms of reasoning.\N它们可能运气不好，采样到一个不太好的词元，推理过程就会像走入死胡同一样。
+Dialogue: 0,0:26:24.40,0:26:27.26,Sub,,0,0,0,,Unlike you, they cannot recover from that.\N与你不同的是，它们无法从这种错误中恢复。
+Dialogue: 0,0:26:27.27,0:26:34.20,Sub,,0,0,0,,They are stuck with every single token they sample and so they will continue the sequence, even if they know that this sequence is not going to work out.\N他们必须坚持每一个采样的词元，因此即使知道这个序列行不通，也会继续下去。
+Dialogue: 0,0:26:34.20,0:26:40.74,Sub,,0,0,0,,Give them the ability to look back, inspect or try to basically sample around it.\N给他们回溯、检查或尝试重新采样的能力。
+Dialogue: 0,0:26:40.74,0:26:47.34,Sub,,0,0,0,,Here's one technique also, it turns out that actually LLMs, they know when they've screwed up,\N这里还有一个技巧，实际上大型语言模型知道它们什么时候搞砸了。
+Dialogue: 0,0:26:47.34,0:26:55.92,Sub,,0,0,0,,so as an example, say you ask the model to generate a poem that does not rhyme and it might give you a poem, but it actually rhymes.\N比如你让模型生成一首不押韵的诗，它可能会给你一首，但实际上押韵了。
+Dialogue: 0,0:26:55.92,0:27:01.12,Sub,,0,0,0,,But it turns out that especially for the bigger models like GPT-4, you can just ask it "did you meet the assignment?"\N但事实证明，对于像 GPT-4 这样的大模型，你只需问它：“你完成任务了吗？”
+Dialogue: 0,0:27:01.12,0:27:04.82,Sub,,0,0,0,,Actually GPT-4 knows very well that it did not meet the assignment.\N实际上 GPT-4 非常清楚自己没有完成任务。
+Dialogue: 0,0:27:04.83,0:27:07.24,Sub,,0,0,0,,It just got unlucky in its sampling.\N它只是采样时运气不好。
+Dialogue: 0,0:27:07.24,0:27:10.78,Sub,,0,0,0,,It will tell you, "No, I didn't actually meet the assignment here. Let me try again."\N它会告诉你：“不，我实际上没完成任务，让我再试一次。”
+Dialogue: 0,0:27:10.78,0:27:17.98,Sub,,0,0,0,,But without you prompting it it doesn't know to revisit and so on.\N但如果没有你提示它，它不会自己去重新审视。
+Dialogue: 0,0:27:17.98,0:27:23.05,Sub,,0,0,0,,You have to make up for that in your prompts, and you have to get it to check, if you don't ask it to check,\N你必须在提示中弥补这一点，必须让它进行检查，如果你不要求它检查，
+Dialogue: 0,0:27:23.05,0:27:26.33,Sub,,0,0,0,,its not going to check by itself it's just a token simulator.\N它不会自己去检查，它本质上只是一个词元模拟器。
+Dialogue: 0,0:27:28.17,0:27:34.63,Sub,,0,0,0,,I think more generally, a lot of these techniques fall into the bucket of what I would say recreating our System 2.\N我认为更普遍地说，这些技术大多属于我所说的“重建我们的系统2”这一范畴。
+Dialogue: 0,0:27:34.63,0:27:37.88,Sub,,0,0,0,,You might be familiar with the System 1 and System 2 thinking for humans.\N你可能熟悉人类的系统1和系统2思维。
+Dialogue: 0,0:27:37.89,0:27:43.62,Sub,,0,0,0,,System 1 is a fast automatic process and I think corresponds to an LLM just sampling tokens.\N系统1是一种快速的自动过程，我认为它对应于大语言模型仅采样词元的情况。
+Dialogue: 0,0:27:43.62,0:27:49.26,Sub,,0,0,0,,System 2 is the slower deliberate planning part of your brain.\N系统2是你大脑中较慢的、有意识的规划部分。
+Dialogue: 0,0:27:49.26,0:27:56.03,Sub,,0,0,0,,This is a paper actually from just last week because this space is pretty quickly evolving, it's called Tree of Thought.\N这篇论文实际上发表于上周，因为这个领域发展非常迅速，论文名为“思维树”。
+Dialogue: 0,0:27:56.34,0:28:04.45,Sub,,0,0,0,,The authors of this paper proposed maintaining multiple completions for any given prompt and then they are also scoring them along\N该论文的作者提出，对于给定的提示，应同时维护多个完成版本，并在过程中对它们进行评分，
+Dialogue: 0,0:28:04.45,0:28:08.38,Sub,,0,0,0,,the way and keeping the ones that are going well if that makes sense.\N保留进展顺利的版本，如果这样理解的话。
+Dialogue: 0,0:28:08.38,0:28:19.54,Sub,,0,0,0,,A lot of people are really playing around with prompt engineering to basically bring back some of these abilities that we have in our brain for LLMs.\N很多人正在积极尝试提示工程，以期在大语言模型中重新引入我们大脑中的一些能力。
+Dialogue: 0,0:28:19.54,0:28:22.78,Sub,,0,0,0,,Now, one thing I would like to note here is that this is not just a prompt.\N这里有一点我想特别指出：这不仅仅是一个提示。
+Dialogue: 0,0:28:22.78,0:28:30.82,Sub,,0,0,0,,This is actually prompts that are together used with some Python Glue code because you actually have to maintain multiple prompts and you also have to do\N这实际上是多个提示与一些 Python 拼接代码共同使用，因为你实际上需要维护多个提示，\N还必须在此处执行
+Dialogue: 0,0:28:30.82,0:28:35.38,Sub,,0,0,0,,some tree search algorithm here to figure out which prompts to expand, etc.\N某种树搜索算法，以确定应扩展哪些提示等。
+Dialogue: 0,0:28:35.38,0:28:42.04,Sub,,0,0,0,,It's a symbiosis of Python Glue code and individual prompts that are called in a while loop or in a bigger algorithm.\N这是 Python 拼接代码与在 while 循环或更大算法中调用的各个提示之间的一种协同关系。
+Dialogue: 0,0:28:42.04,0:28:44.98,Sub,,0,0,0,,I also think there's a really cool parallel here to AlphaGo.\N我还认为，这里与 AlphaGo 之间存在一个非常有趣的类比。
+Dialogue: 0,0:28:44.99,0:28:52.38,Sub,,0,0,0,,AlphaGo has a policy for placing the next stone when it plays go, and its policy was trained originally by imitating humans.\NAlphaGo 在下围棋时有一个放置下一步棋子的策略，该策略最初是通过模仿人类训练得到的。
+Dialogue: 0,0:28:52.39,0:28:56.59,Sub,,0,0,0,,But in addition to this policy, it also does Monte Carlo Tree Search.\N但除了这一策略外，它还进行了蒙特卡洛树搜索。
+Dialogue: 0,0:28:56.59,0:29:01.98,Sub,,0,0,0,,Basically, it will play out a number of possibilities in its head and evaluate all of them and only keep the ones that work well.\N基本上，它会在脑海中模拟多种可能性，评估所有情况，只保留效果较好的那些。
+Dialogue: 0,0:29:01.98,0:29:08.18,Sub,,0,0,0,,I think this is an equivalent of AlphaGo but for text if that makes sense.\N我认为这相当于将 AlphaGo 的方法应用于文本，如果这样说能理解的话。
+Dialogue: 0,0:29:08.19,0:29:10.34,Sub,,0,0,0,,Just like Tree of Thought,\N就像思维树一样，
+Dialogue: 0,0:29:10.35,0:29:17.46,Sub,,0,0,0,,I think more generally people are starting to really explore more general techniques of not just the simple question-answer prompts,\N我认为更普遍地，人们开始真正探索更通用的技术，而不仅仅是简单的问答提示，
+Dialogue: 0,0:29:17.46,0:29:22.06,Sub,,0,0,0,,but something that looks a lot more like Python Glue code stringing together many prompts.\N而是更像用 Python Glue 代码将多个提示串联起来的形式。
+Dialogue: 0,0:29:22.06,0:29:32.46,Sub,,0,0,0,,On the right, I have an example from this paper called React where they structure the answer to a prompt as a sequence of thought-action-observation,\N在右边，我举了一个来自这篇论文的例子，名为 ReAct，\N他们将提示的回答结构化为一系列的思考-行动-观察，
+Dialogue: 0,0:29:32.46,0:29:38.42,Sub,,0,0,0,,thought-action-observation, and it's a full rollout and a thinking process to answer the query.\N思考-行动-观察，这是一个完整的展开过程，也是一种思考流程，用于回答查询。
+Dialogue: 0,0:29:38.43,0:29:42.12,Sub,,0,0,0,,In these actions, the model is also allowed to tool use.\N在这些行动中，模型还被允许使用工具。
+Dialogue: 0,0:29:42.13,0:29:45.39,Sub,,0,0,0,,On the left, I have an example of AutoGPT.\N在左边，我举了 AutoGPT 的一个例子。
+Dialogue: 0,0:29:45.39,0:29:55.14,Sub,,0,0,0,,Now AutoGPT by the way is a project that I think got a lot of hype recently, but I think I still find it inspirationally interesting.\N顺便说一下，AutoGPT 是一个最近引起很大关注的项目，但我仍然觉得它具有启发性的趣味。
+Dialogue: 0,0:29:55.14,0:30:02.12,Sub,,0,0,0,,It's a project that allows an LLM to keep the task list and continue to recursively break down tasks.\N这是一个让大语言模型保持任务列表并持续递归分解任务的项目。
+Dialogue: 0,0:30:02.13,0:30:07.10,Sub,,0,0,0,,I don't think this currently works very well and I would not advise people to use it in practical applications.\N我认为目前这效果并不好，不建议人们在实际应用中使用。
+Dialogue: 0,0:30:07.11,0:30:12.29,Sub,,0,0,0,,I just think it's something to generally take inspiration from in terms of where this is going, I think over time.\N我觉得这只是一个整体方向上的启发，随着时间推移，这一点会越来越重要。
+Dialogue: 0,0:30:12.54,0:30:16.16,Sub,,0,0,0,,That's like giving our model System 2 thinking.\N这就像是赋予我们的模型系统2的思维方式。
+Dialogue: 0,0:30:16.17,0:30:23.22,Sub,,0,0,0,,The next thing I find interesting is, this following serve I would say almost psychological quirk of LLMs,\N我觉得接下来有趣的是，接下来这个现象，我可以说几乎是大语言模型的一种心理特征。
+Dialogue: 0,0:30:23.22,0:30:28.10,Sub,,0,0,0,,is that LLMs don't want to succeed, they want to imitate.\N大语言模型并不想成功，它们只想模仿。
+Dialogue: 0,0:30:28.11,0:30:31.10,Sub,,0,0,0,,You want to succeed, and you should ask for it.\N你想要成功，就应该主动去争取。
+Dialogue: 0,0:30:31.11,0:30:35.16,Sub,,0,0,0,,What I mean by that is, when transformers are trained,\N我的意思是，当变换器模型进行训练时，
+Dialogue: 0,0:30:35.16,0:30:41.50,Sub,,0,0,0,,they have training sets and there can be an entire spectrum of performance qualities in their training data.\N它们拥有训练数据集，而这些数据中的表现质量可以呈现出一个完整的光谱。
+Dialogue: 0,0:30:41.50,0:30:45.42,Sub,,0,0,0,,For example, there could be some kind of a prompt for some physics question or something like that,\N例如，可能有一个关于物理问题的提示，
+Dialogue: 0,0:30:45.42,0:30:50.95,Sub,,0,0,0,,and there could be a student's solution that is completely wrong but there can also be an expert answer that is extremely right.\N里面既有完全错误的学生解答，也有极其准确的专家答案。
+Dialogue: 0,0:30:50.95,0:30:57.96,Sub,,0,0,0,,Transformers can't tell the difference between low, they know about low-quality solutions and high-quality solutions,\N变换器无法区分低质量与高质量的解答，它们都了解低质量与高质量的解决方案。
+Dialogue: 0,0:30:57.96,0:31:02.42,Sub,,0,0,0,,but by default, they want to imitate all of it because they're just trained on language modeling.\N但默认情况下，它们会试图模仿全部内容，因为它们只是通过语言建模训练出来的。
+Dialogue: 0,0:31:02.43,0:31:06.12,Sub,,0,0,0,,At test time, you actually have to ask for a good performance.\N在测试时，你实际上必须明确要求获得良好表现。
+Dialogue: 0,0:31:06.12,0:31:10.88,Sub,,0,0,0,,In this example in this paper, they tried various prompts.\N在这篇论文的这个例子中，他们尝试了各种提示。
+Dialogue: 0,0:31:10.89,0:31:15.66,Sub,,0,0,0,,Let's think step-by-step was very powerful because it spread out the reasoning over many tokens.\N逐步思考非常有效，因为它将推理过程分散到了多个词元上。
+Dialogue: 0,0:31:15.66,0:31:20.90,Sub,,0,0,0,,But what worked even better is, let's work this out in a step-by-step way to be sure we have the right answer.\N但效果更好的是，让我们以逐步的方式解决这个问题，以确保得到正确答案。
+Dialogue: 0,0:31:20.91,0:31:23.71,Sub,,0,0,0,,It's like conditioning on getting the right answer,\N这就像在假设得到正确答案的前提下进行推理。
+Dialogue: 0,0:31:23.71,0:31:33.12,Sub,,0,0,0,,and this actually makes the transformer work better because the transformer doesn't have to now hedge its probability mass on low-quality solutions, as ridiculous as that sounds.\N这实际上让变换器表现得更好，因为变换器不再需要将概率集中在低质量的解决方案上，尽管听起来这有点荒谬。
+Dialogue: 0,0:31:33.12,0:31:37.22,Sub,,0,0,0,,Basically, feel free to ask for a strong solution.\N基本上，可以放心地要求一个强解决方案。
+Dialogue: 0,0:31:37.23,0:31:39.76,Sub,,0,0,0,,Say something like, you are a leading expert on this topic.\N说类似这样的话：你是在这个领域中的顶尖专家。
+Dialogue: 0,0:31:39.76,0:31:41.94,Sub,,0,0,0,,Pretend you have IQ 120, etc.\N假装你的智商是120，等等。
+Dialogue: 0,0:31:41.94,0:31:48.30,Sub,,0,0,0,,But don't try to ask for too much IQ because if you ask for IQ 400, you might be out of data distribution,\N但不要试图要求过高的智商，如果你要求智商400，可能会超出数据分布范围。
+Dialogue: 0,0:31:48.30,0:31:56.98,Sub,,0,0,0,,or even worse, you could be in data distribution for something like sci-fi stuff and it will start to take on some sci-fi, or like roleplaying or something like that.\N或者更糟的是，你可能进入了类似科幻内容的数据分布，它开始表现出一些科幻风格，或者类似角色扮演的内容。
+Dialogue: 0,0:31:56.98,0:31:59.48,Sub,,0,0,0,,You have to find the right amount of IQ.\N你需要找到合适的智商水平。
+Dialogue: 0,0:31:59.49,0:32:02.52,Sub,,0,0,0,,I think it's got some U-shaped curve there.\N我认为那里可能存在一个倒U型曲线。
+Dialogue: 0,0:32:02.52,0:32:12.02,Sub,,0,0,0,,Next up, as we saw when we are trying to solve problems, we know what we are good at and what we're not good at, and we lean on tools computationally.\N接下来，正如我们在解决问题时所看到的，我们知道自己的强项和弱项，并依赖计算工具。
+Dialogue: 0,0:32:12.03,0:32:15.31,Sub,,0,0,0,,You want to do the same potentially with your LLMs.\N你或许也应该对你的大语言模型做同样的事情。
+Dialogue: 0,0:32:15.31,0:32:21.00,Sub,,0,0,0,,In particular, we may want to give them calculators, code interpreters,\N特别地，我们可能希望为它们提供计算器、代码解释器，
+Dialogue: 0,0:32:21.00,0:32:27.08,Sub,,0,0,0,,and so on, the ability to do search, and there's a lot of techniques for doing that.\N以及搜索能力等，有很多实现这些功能的技术。
+Dialogue: 0,0:32:27.08,0:32:32.94,Sub,,0,0,0,,One thing to keep in mind, again, is that these transformers by default may not know what they don't know.\N有一点需要记住的是，这些变换器默认情况下可能并不知道自己不知道什么。
+Dialogue: 0,0:32:32.94,0:32:37.58,Sub,,0,0,0,,You may even want to tell the transformer in a prompt you are not very good at mental arithmetic.\N你甚至可以在提示中明确告诉变换器，你不太擅长心算。
+Dialogue: 0,0:32:37.58,0:32:42.49,Sub,,0,0,0,,Whenever you need to do very large number addition, multiplication, or whatever, instead, use this calculator.\N每当你需要进行非常大的数字加法、乘法或其他运算时，改用这个计算器。
+Dialogue: 0,0:32:42.49,0:32:46.26,Sub,,0,0,0,,Here's how you use the calculator, you use this token combination, etc.\N这是使用计算器的方法，你使用这个词元组合，等等。
+Dialogue: 0,0:32:46.27,0:32:54.61,Sub,,0,0,0,,You have to actually spell it out because the model by default doesn't know what it's good at or not good at, necessarily, just like you and I might be.\N你必须明确说明，因为模型默认并不知道自己的强项和弱项，就像你我可能一样。
+Dialogue: 0,0:32:54.66,0:33:02.22,Sub,,0,0,0,,Next up, I think something that is very interesting is we went from a world that was retrieval only all the way,\N接下来，我认为一个非常有趣的是，我们从一个纯粹依赖检索的世界，一路走来，
+Dialogue: 0,0:33:02.22,0:33:06.12,Sub,,0,0,0,,the pendulum has swung to the other extreme where its memory only in LLMs.\N天平已经摆到了另一个极端，记忆仅存在于大语言模型中。
+Dialogue: 0,0:33:06.12,0:33:12.91,Sub,,0,0,0,,But actually, there's this entire space in-between of these retrieval-augmented models and this works extremely well in practice.\N但实际上，在检索增强模型之间存在着一个广阔的空间，这种方案在实践中效果极佳。
+Dialogue: 0,0:33:12.91,0:33:17.02,Sub,,0,0,0,,As I mentioned, the context window of a transformer is its working memory.\N如我所提到的，变换器的上下文窗口就是它的工作内存。
+Dialogue: 0,0:33:17.02,0:33:26.34,Sub,,0,0,0,,If you can load the working memory with any information that is relevant to the task, the model will work extremely well because it can immediately access all that memory.\N如果你能将与任务相关的信息加载到工作内存中，模型就能表现得非常出色，因为它可以立即访问所有这些信息。
+Dialogue: 0,0:33:26.34,0:33:32.98,Sub,,0,0,0,,I think a lot of people are really interested in basically retrieval-augment degeneration.\N我认为很多人对检索增强退化现象非常感兴趣。
+Dialogue: 0,0:33:32.98,0:33:38.86,Sub,,0,0,0,,On the bottom, I have an example of LlamaIndex which is one data connector to lots of different types of data.\N在下方，我举了一个 LlamaIndex 的例子，它是一个连接多种不同类型数据的数据连接器。
+Dialogue: 0,0:33:38.86,0:33:44.20,Sub,,0,0,0,,You can index all of that data and you can make it accessible to LLMs.\N你可以索引所有这些数据，并使其对大语言模型可用。
+Dialogue: 0,0:33:44.20,0:33:50.50,Sub,,0,0,0,,The emerging recipe there is you take relevant documents, you split them up into chunks, you embed all of them,\N那里的新兴方法是：获取相关文档，将它们拆分成块，对所有块进行嵌入，
+Dialogue: 0,0:33:50.50,0:33:53.32,Sub,,0,0,0,,and you basically get embedding vectors that represent that data.\N从而得到代表这些数据的嵌入向量。
+Dialogue: 0,0:33:53.32,0:33:56.22,Sub,,0,0,0,,You store that in the vector store and then at test time,\N你将这些向量存储在向量数据库中，然后在测试时，
+Dialogue: 0,0:33:56.22,0:34:04.06,Sub,,0,0,0,,you make some kind of a query to your vector store and you fetch chunks that might be relevant to your task and you stuff them into the prompt and then you generate.\N向你的向量数据库发起某种查询，获取可能与你的任务相关的块，并将它们填入提示中，再进行生成。
+Dialogue: 0,0:34:04.06,0:34:06.38,Sub,,0,0,0,,This can work quite well in practice.\N这种方法在实践中效果相当不错。
+Dialogue: 0,0:34:06.39,0:34:09.36,Sub,,0,0,0,,This is, I think, similar to when you and I solve problems.\N我认为，这类似于你我解决问题时的情况。
+Dialogue: 0,0:34:09.36,0:34:17.83,Sub,,0,0,0,,You can do everything from your memory and transformers have very large and extensive memory, but also it really helps to reference some primary documents.\N你可以依靠记忆完成所有事情，而变压器模型拥有非常庞大且广泛的记忆，但参考一些原始文档确实很有帮助。
+Dialogue: 0,0:34:17.83,0:34:21.02,Sub,,0,0,0,,Whenever you find yourself going back to a textbook to find something,\N每当你发现自己需要翻回教科书查找某些内容时，
+Dialogue: 0,0:34:21.03,0:34:27.61,Sub,,0,0,0,,or whenever you find yourself going back to documentation of the library to look something up, transformers definitely want to do that too.\N或者每当发现自己需要查阅某个库的文档来查找信息时，变压器模型也肯定希望这么做。
+Dialogue: 0,0:34:27.61,0:34:33.28,Sub,,0,0,0,,You have some memory over how some documentation of the library works but it's much better to look it up.\N你对某个库的文档工作方式有一定记忆，但直接查阅显然更好。
+Dialogue: 0,0:34:33.28,0:34:35.84,Sub,,0,0,0,,The same applies here.\N这里同样适用。
+Dialogue: 0,0:34:35.94,0:34:39.68,Sub,,0,0,0,,Next, I wanted to briefly talk about constraint prompting.\N接下来，我想简要谈谈约束提示。
+Dialogue: 0,0:34:39.69,0:34:41.64,Sub,,0,0,0,,I also find this very interesting.\N我也觉得这个非常有趣。
+Dialogue: 0,0:34:41.64,0:34:50.34,Sub,,0,0,0,,This is basically techniques for forcing a certain template in the outputs of LLMs.\N这本质上是强制大语言模型输出采用特定模板的技术。
+Dialogue: 0,0:34:50.34,0:34:53.46,Sub,,0,0,0,,Guidance is one example from Microsoft actually.\N微软的一个例子就是引导提示。
+Dialogue: 0,0:34:53.46,0:34:57.80,Sub,,0,0,0,,Here we are enforcing that the output from the LLM will be JSON.\N在这里，我们强制大语言模型的输出必须是 JSON 格式。
+Dialogue: 0,0:34:57.81,0:35:04.63,Sub,,0,0,0,,This will actually guarantee that the output will take on this form because they go in and they mess with the probabilities of all the different tokens that\N这实际上能保证输出具有这种形式，因为他们会介入并调整所有不同词元的概率。
+Dialogue: 0,0:35:04.63,0:35:09.94,Sub,,0,0,0,,come out of the transformer and they clamp those tokens and then the transformer is only filling in the blanks here,\N从变换器中输出这些词元并将其固定，然后变换器只负责填充空白处，
+Dialogue: 0,0:35:09.94,0:35:13.44,Sub,,0,0,0,,and then you can enforce additional restrictions on what could go into those blanks.\N你还可以对这些空白处可能填入的内容施加额外的限制。
+Dialogue: 0,0:35:13.44,0:35:18.41,Sub,,0,0,0,,This might be really helpful, and I think this constraint sampling is also extremely interesting.\N这可能非常有帮助，我认为这种约束采样也极为有趣。
+Dialogue: 0,0:35:19.22,0:35:22.32,Sub,,0,0,0,,I also want to say a few words about fine tuning.\N我还想简单说几句关于微调的内容。
+Dialogue: 0,0:35:22.32,0:35:29.42,Sub,,0,0,0,,It is the case that you can get really far with prompt engineering, but it's also possible to think about fine tuning your models.\N你确实可以通过提示工程走得很远，但也可以考虑对模型进行微调。
+Dialogue: 0,0:35:29.42,0:35:33.96,Sub,,0,0,0,,Now, fine tuning models means that you are actually going to change the weights of the model.\N现在，微调模型意味着你实际上会改变模型的权重。
+Dialogue: 0,0:35:33.96,0:35:43.05,Sub,,0,0,0,,It is becoming a lot more accessible to do this in practice, and that's because of a number of techniques that have been developed and have libraries for very recently.\N这在实践中变得越来越容易，这得益于最近开发出的多种技术以及相应的工具库。
+Dialogue: 0,0:35:43.05,0:35:51.02,Sub,,0,0,0,,So for example parameter efficient fine tuning techniques like Laura, make sure that you're only training small, sparse pieces of your model.\N例如，参数高效的微调技术如 LoRA，确保你只训练模型中很小且稀疏的部分。
+Dialogue: 0,0:35:51.02,0:35:58.35,Sub,,0,0,0,,So most of the model is kept clamped at the base model and some pieces of it are allowed to change and this still works pretty well empirically and makes\N因此，模型的大部分仍保持固定在基座模型状态，只有部分允许变化，这在实践中依然效果很好，且
+Dialogue: 0,0:35:58.35,0:36:02.22,Sub,,0,0,0,,it much cheaper to tune only small pieces of your model.\N使得仅微调模型的小部分变得成本低得多。
+Dialogue: 0,0:36:02.22,0:36:05.70,Sub,,0,0,0,,It also means that because most of your model is clamped,\N同时，由于模型的大部分是固定的，
+Dialogue: 0,0:36:05.70,0:36:12.18,Sub,,0,0,0,,you can use very low precision inference for computing those parts because you are not going to be updated by gradient descent and so that\N你可以对这些部分使用极低精度的推理计算，因为它们不会通过梯度下降进行更新，所以
+Dialogue: 0,0:36:12.18,0:36:13.96,Sub,,0,0,0,,makes everything a lot more efficient as well.\N也让所有事情的效率大大提高。
+Dialogue: 0,0:36:13.97,0:36:17.46,Sub,,0,0,0,,And in addition, we have a number of open source, high-quality base models.\N此外，我们还拥有一些开源的高质量基座模型。
+Dialogue: 0,0:36:17.46,0:36:23.52,Sub,,0,0,0,,Currently, as I mentioned, I think LLaMa is quite nice, although it is not commercially licensed, I believe right now.\N目前，正如我提到的，我认为 LLaMa 非常不错，尽管它目前没有商业许可。
+Dialogue: 0,0:36:23.52,0:36:29.45,Sub,,0,0,0,,Some things to keep in mind is that basically fine tuning is a lot more technically involved.\N需要注意的是，微调在技术上要复杂得多。
+Dialogue: 0,0:36:29.45,0:36:32.67,Sub,,0,0,0,,It requires a lot more, I think, technical expertise to do right.\N我认为，要正确完成微调，需要更多的技术专长。
+Dialogue: 0,0:36:32.67,0:36:38.39,Sub,,0,0,0,,It requires human data contractors for datasets and/or synthetic data pipelines that can be pretty complicated.\N它需要人工数据标注人员来构建数据集，或建立复杂的合成数据管道。
+Dialogue: 0,0:36:38.39,0:36:41.68,Sub,,0,0,0,,This will definitely slow down your iteration cycle by a lot,\N这肯定会大大延长你的迭代周期。
+Dialogue: 0,0:36:41.69,0:36:48.24,Sub,,0,0,0,,and I would say on a high level SFT is achievable because you're continuing the language modeling task.\N从整体来看，SFT 是可以实现的，因为你在延续语言建模任务。
+Dialogue: 0,0:36:48.24,0:36:55.74,Sub,,0,0,0,,It's relatively straightforward, but RLHF, I would say is very much research territory and is even much harder to get to work,\N这相对简单直接，但 RLHF 则属于研究领域，要让它正常工作要困难得多。
+Dialogue: 0,0:36:55.74,0:37:00.57,Sub,,0,0,0,,and so I would probably not advise that someone just tries to roll their own RLHF of implementation.\N因此，我建议不要轻易尝试自行搭建 RLHF 实现。
+Dialogue: 0,0:37:00.57,0:37:06.00,Sub,,0,0,0,,These things are pretty unstable, very difficult to train, not something that is, I think, very beginner friendly right now,\N这些技术相当不稳定，训练难度很高，目前对初学者并不友好。
+Dialogue: 0,0:37:06.00,0:37:11.28,Sub,,0,0,0,,and it's also potentially likely also to change pretty rapidly still.\N而且，这些技术本身也有可能迅速发生变化。
+Dialogue: 0,0:37:11.28,0:37:15.44,Sub,,0,0,0,,So I think these are my default recommendations right now.\N所以我认为这些是我目前的默认建议。
+Dialogue: 0,0:37:15.44,0:37:18.32,Sub,,0,0,0,,I would break up your task into two major parts.\N我会把你的任务拆分成两个主要部分。
+Dialogue: 0,0:37:18.32,0:37:23.98,Sub,,0,0,0,,Number 1, achieve your top performance, and Number 2, optimize your performance in that order.\N第一，实现最高性能，第二，按此顺序优化性能。
+Dialogue: 0,0:37:23.99,0:37:27.55,Sub,,0,0,0,,Number 1, the best performance will currently come from GPT-4 model.\N第一，目前最佳性能将来自 GPT-4 模型。
+Dialogue: 0,0:37:27.56,0:37:29.66,Sub,,0,0,0,,It is the most capable of all by far.\N它在所有模型中明显最强大。
+Dialogue: 0,0:37:29.66,0:37:31.95,Sub,,0,0,0,,Use prompts that are very detailed.\N使用非常详细的提示。
+Dialogue: 0,0:37:31.95,0:37:36.24,Sub,,0,0,0,,They have lots of task content, relevant information and instructions.\N提示中包含大量任务内容、相关信息和指令。
+Dialogue: 0,0:37:36.24,0:37:40.65,Sub,,0,0,0,,Think along the lines of what would you tell a task contractor if they can't email you back,\N想象一下，如果你无法通过邮件回复任务承包人，
+Dialogue: 0,0:37:40.65,0:37:46.14,Sub,,0,0,0,,but then also keep in mind that a task contractor is a human and they have inner monologue and they're very clever, etc.\N但也要记住，任务承包人是人类，有内心独白，非常聪明等等。
+Dialogue: 0,0:37:46.14,0:37:48.52,Sub,,0,0,0,,LLMs do not possess those qualities.\N大语言模型不具备这些特质。
+Dialogue: 0,0:37:48.53,0:37:54.93,Sub,,0,0,0,,So make sure to think through the psychology of the LLM almost and cater prompts to that.\N所以务必考虑大语言模型的心理特点，并据此设计提示。
+Dialogue: 0,0:37:54.93,0:37:59.61,Sub,,0,0,0,,Retrieve and add any relevant context and information to these prompts.\N将任何相关上下文和信息检索并添加到这些提示中。
+Dialogue: 0,0:37:59.61,0:38:02.97,Sub,,0,0,0,,Basically refer to a lot of the prompt engineering techniques.\N基本上指的是许多提示工程技巧。
+Dialogue: 0,0:38:02.97,0:38:11.58,Sub,,0,0,0,,Some of them I've highlighted in the slides above, but also this is a very large space and I would just advise you to look for prompt engineering techniques online.\N我在上面的幻灯片中已经标出了其中一些，但这个领域非常广阔，我建议你们上网查找提示工程技巧。
+Dialogue: 0,0:38:11.58,0:38:13.28,Sub,,0,0,0,,There's a lot to cover there.\N这里有很多内容需要涵盖。
+Dialogue: 0,0:38:13.28,0:38:15.63,Sub,,0,0,0,,Experiment with few-shot examples.\N尝试使用少样本示例。
+Dialogue: 0,0:38:15.63,0:38:19.74,Sub,,0,0,0,,What this refers to is, you don't just want to tell, you want to show whenever it's possible.\N这指的是，你不仅想告诉模型，还应在可能的情况下展示。
+Dialogue: 0,0:38:19.74,0:38:25.14,Sub,,0,0,0,,So give it examples of everything that helps it really understand what you mean if you can.\N所以尽可能提供能帮助它真正理解你意图的各类示例。
+Dialogue: 0,0:38:25.14,0:38:30.42,Sub,,0,0,0,,Experiment with tools and plug-ins to offload tasks that are difficult for LLMs natively,\N尝试使用工具和插件，将那些 LLM 原生难以处理的任务卸载出去。
+Dialogue: 0,0:38:30.42,0:38:33.45,Sub,,0,0,0,,and then think about not just a single prompt and answer,\N然后不要只考虑单一的提示和回答。
+Dialogue: 0,0:38:33.45,0:38:40.12,Sub,,0,0,0,,think about potential chains and reflection and how you glue them together and how you can potentially make multiple samples and so on.\N考虑潜在的推理链和反思机制，思考如何将它们串联起来，以及如何可能生成多个样本等。
+Dialogue: 0,0:38:40.13,0:38:45.74,Sub,,0,0,0,,Finally, if you think you've squeezed out prompt engineering, which I think you should stick with for a while,\N最后，如果你觉得自己已经把提示工程发挥到极致了，我认为你应该暂时坚持使用这种方法。
+Dialogue: 0,0:38:45.74,0:38:51.34,Sub,,0,0,0,,look at some potentially fine tuning a model to your application,\N考虑是否可以针对你的应用对模型进行微调。
+Dialogue: 0,0:38:51.35,0:38:58.30,Sub,,0,0,0,,but expect this to be a lot more slower in the vault and then there's an expert fragile research zone here and I would say that is RLHF,\N但要预期这在实际应用中会慢得多，而且这里还涉及一个专家且脆弱的研究领域，我认为那就是 RLHF。
+Dialogue: 0,0:38:58.31,0:39:02.22,Sub,,0,0,0,,which currently does work a bit better than SFT if you can get it to work.\N目前如果能用好，其效果比监督微调（SFT）略好一些。
+Dialogue: 0,0:39:02.22,0:39:05.04,Sub,,0,0,0,,But again, this is pretty involved, I would say.\N但再次强调，这相当复杂，我认为。
+Dialogue: 0,0:39:05.04,0:39:11.95,Sub,,0,0,0,,And to optimize your costs, try to explore lower capacity models or shorter prompts and so on.\N为了优化成本，建议尝试探索低容量模型或更短的提示词等方法。
+Dialogue: 0,0:39:12.23,0:39:18.68,Sub,,0,0,0,,I also wanted to say a few words about the use cases in which I think LLMs are currently well suited for.\N我还想说几句关于我认为当前大语言模型适用的使用场景。
+Dialogue: 0,0:39:18.68,0:39:26.18,Sub,,0,0,0,,In particular, note that there's a large number of limitations to LLMs today, and so I would keep that definitely in mind for all of your applications.\N特别要注意的是，如今大语言模型存在大量局限性，因此在所有应用中都必须牢记这一点。
+Dialogue: 0,0:39:26.18,0:39:28.57,Sub,,0,0,0,,Models, and this by the way could be an entire talk.\N模型，顺便说一句，这本身就可以作为一个完整的演讲主题。
+Dialogue: 0,0:39:28.58,0:39:30.57,Sub,,0,0,0,,So I don't have time to cover it in full detail.\N所以我没有时间详细展开。
+Dialogue: 0,0:39:30.57,0:39:35.55,Sub,,0,0,0,,Models may be biased, they may fabricate, hallucinate information, they may have reasoning errors,\N模型可能存在偏见，可能编造信息，产生幻觉，可能在推理上出错，
+Dialogue: 0,0:39:35.55,0:39:43.76,Sub,,0,0,0,,they may struggle in entire classes of applications, they have knowledge cut-offs, so they might not know any information above, say, September, 2021.\N可能在某些类型的应用中表现不佳，存在知识截止问题，例如可能不知道2021年9月之后的信息。
+Dialogue: 0,0:39:43.76,0:39:48.80,Sub,,0,0,0,,They are susceptible to a large range of attacks which are coming out on Twitter daily,\N它们容易受到各种攻击，而这些攻击每天都在推特上不断出现，
+Dialogue: 0,0:39:48.80,0:39:52.76,Sub,,0,0,0,,including prompt injection, jailbreak attacks, data poisoning attacks and so on.\N包括提示注入、越狱攻击、数据污染攻击等。
+Dialogue: 0,0:39:52.76,0:39:57.63,Sub,,0,0,0,,So my recommendation right now is use LLMs in low-stakes applications.\N因此，我目前的建议是，将大语言模型用于低风险的应用场景。
+Dialogue: 0,0:39:57.63,0:40:00.14,Sub,,0,0,0,,Combine them always with human oversight.\N始终结合人工监督使用它们。
+Dialogue: 0,0:40:00.14,0:40:07.77,Sub,,0,0,0,,Use them as a source of inspiration and suggestions and think co-pilots, instead of completely autonomous agents that are just like performing a task somewhere.\N将它们用作灵感和建议的来源，思考协作式助手，而不是完全自主、仅在某处执行任务的智能体。
+Dialogue: 0,0:40:07.77,0:40:11.38,Sub,,0,0,0,,It's just not clear that the models are there right now.\N目前尚不清楚这些模型是否已经到位。
+Dialogue: 0,0:40:11.47,0:40:15.12,Sub,,0,0,0,,So I wanted to close by saying that GPT-4 is an amazing artifact.\N因此我想以一句结语收尾：GPT-4 是一件非凡的杰作。
+Dialogue: 0,0:40:15.13,0:40:18.32,Sub,,0,0,0,,I'm very thankful that it exists, and it's beautiful.\N我非常感激它的存在，它非常美妙。
+Dialogue: 0,0:40:18.32,0:40:20.36,Sub,,0,0,0,,It has a ton of knowledge across so many areas.\N它在众多领域都拥有海量知识。
+Dialogue: 0,0:40:20.36,0:40:22.98,Sub,,0,0,0,,It can do math, code and so on.\N它能进行数学运算、编写代码等。
+Dialogue: 0,0:40:22.98,0:40:29.14,Sub,,0,0,0,,And in addition, there's this thriving ecosystem of everything else that is being built and incorporated into the ecosystem.\N此外，还有大量正在构建并融入生态系统的其他事物，形成了一个蓬勃发展的生态系统。
+Dialogue: 0,0:40:29.15,0:40:35.68,Sub,,0,0,0,,Some of these things I've talked about, and all of this power is accessible at your fingertips.\N我提到过其中一些内容，而所有这些强大功能都触手可及。
+Dialogue: 0,0:40:35.69,0:40:42.33,Sub,,0,0,0,,So here's everything that's needed in terms of code to ask GPT-4 a question, to prompt it, and get a response.\N这里是调用 GPT-4 提问、提示并获取回应所需的所有代码。
+Dialogue: 0,0:40:42.33,0:40:47.78,Sub,,0,0,0,,In this case, I said, can you say something to inspire the audience of Microsoft Build 2023?\N在这种情况下，我问它：你能为微软 Build 2023 的观众说点鼓舞人心的话吗？
+Dialogue: 0,0:40:47.78,0:40:57.28,Sub,,0,0,0,,And I just punched this into Python and verbatim GPT-4 said the following: And by the way, I did not know that they used this trick in the keynote.\N我直接将这段内容输入 Python，GPT-4 原样回复如下：顺便说一句，\N我并不知道他们在主题演讲中用了这个技巧。
+Dialogue: 0,0:40:57.29,0:41:02.79,Sub,,0,0,0,,So I thought I was being clever, but it is really good at this.\N所以我以为自己很聪明，但它在这方面真的非常出色。
+Dialogue: 0,0:41:02.79,0:41:07.28,Sub,,0,0,0,,It says, ladies and gentlemen, innovators and trailblazers Microsoft Build 2023.\N诸位女士先生们，创新者和开拓者们，欢迎来到微软 Build 2023。
+Dialogue: 0,0:41:07.28,0:41:11.85,Sub,,0,0,0,,Welcome to the gathering of brilliant minds like no other, you are the architects of the future,\N欢迎来到这场独一无二的智慧汇聚，你们是未来的缔造者，
+Dialogue: 0,0:41:11.85,0:41:15.51,Sub,,0,0,0,,the visionaries molding the digital realm in which humanity thrives.\N是塑造人类得以繁荣发展的数字世界的远见者。
+Dialogue: 0,0:41:15.51,0:41:20.36,Sub,,0,0,0,,Embrace the limitless possibilities of technologies and let your ideas soar as high as your imagination.\N拥抱技术带来的无限可能，让你们的创意如想象力般自由翱翔。
+Dialogue: 0,0:41:20.36,0:41:25.23,Sub,,0,0,0,,Together, let's create a more connected, remarkable, and inclusive world for generations to come.\N让我们携手共创一个更加互联、非凡且包容的世界，惠及子孙后代。
+Dialogue: 0,0:41:25.23,0:41:30.32,Sub,,0,0,0,,Get ready to unleash your creativity, canvas the unknown, and turn dreams into reality.\N准备好释放你们的创造力，探索未知领域，将梦想变为现实。
+Dialogue: 0,0:41:30.32,0:41:33.34,Sub,,0,0,0,,Your journey begins today!\N你的旅程从今天开始！

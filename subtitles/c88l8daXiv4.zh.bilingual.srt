@@ -1,0 +1,1584 @@
+1
+00:00:10,040 --> 00:00:12,670
+everyone I'm happy to have Dylan here.
+大家好，我很高兴 Dylan 能来。
+
+2
+00:00:12,720 --> 00:00:18,339
+The first time I saw one of his videos was an interview when he talked about all the way up to
+我第一次看到他的视频，是在一次采访中，他谈到了方方面面
+
+3
+00:00:18,389 --> 00:00:22,916
+CPUs to talk about like neoclouds and why they have the right to exist and that was super interesting for me
+CPU 讨论像新云厂商这类话题，以及它们为何有存在的正当理由，这对我来说非常有趣。
+
+4
+00:00:22,966 --> 00:00:28,605
+because the theme of today is all like what are the new infrastructure primitives now that agents are here and so you
+因为今天的主题是，如今智能体已经出现，新的基础设施基本单元是什么
+
+5
+00:00:28,655 --> 00:00:34,530
+are tricking at that really well at that point why neoclouds are different from hyperscalers and why they should exist.
+你当时就很好地抓住了重点：新云厂商与超大规模云厂商有何不同，以及它们为何应该存在。
+
+6
+00:00:34,580 --> 00:00:36,830
+So can you share any of that with us?
+那你能跟我们分享一些吗？
+
+7
+00:00:36,880 --> 00:00:37,430
+Sure.
+当然。
+
+8
+00:00:37,480 --> 00:00:41,630
+I mean um in the age of AI the hyperscalers were a little bit slow to move right Google
+我的意思是，在人工智能时代，超大规模云厂商的反应稍微有点迟缓，比如谷歌
+
+9
+00:00:41,680 --> 00:00:49,099
+Amazon Microsoft bit slow to move into AI and so a whole new crop of companies popped up and there was
+亚马逊和微软在进入人工智能领域时反应较慢，因此涌现出一大批全新的公司。
+
+10
+00:00:49,149 --> 00:00:55,344
+a new low bar right there's no need for a lot of the complex software that Amazon Microsoft Google had built
+出现了一个新的低门槛：不再需要亚马逊、微软、谷歌构建的那些复杂软件。
+
+11
+00:00:55,394 --> 00:01:00,939
+up and a lot of this in fact slowed down AI right they had custom networks that were actually not that
+而且事实上，很多这类东西反而拖慢了 AI：他们的定制网络对 AI 并不算好，
+
+12
+00:01:00,989 --> 00:01:07,477
+great for AI they were more focused around reliability and storage traffic rather than you know doing an AllReduce across
+这些网络更关注可靠性和存储流量，而不是做跨节点的 AllReduce。
+
+13
+00:01:07,527 --> 00:01:12,310
+the network or something like this so so there was a lot of things that these large cloud companies these hyper
+网络之类的东西。所以这些大型云公司、这些超大规模云厂商拥有的很多东西，
+
+14
+00:01:12,360 --> 00:01:19,136
+scalers had that neoclouds could just skip right and and then build focused optimized solutions and deliver much lower cost
+新云厂商可以直接跳过，转而构建专注优化的解决方案，把成本降得多得多。
+
+15
+00:01:19,186 --> 00:01:26,866
+because they have much lower overhead right there's not 20,000 Google PMs sitting in a meeting at these neoclouds right
+因为它们的开销低得多，这些新云厂商里可没有两万名谷歌产品经理在开会。
+
+16
+00:01:26,916 --> 00:01:34,470
+although some of them have started hiring Google PMs and slowed down the the the neoclouds they they they
+尽管其中一些公司已经开始招聘谷歌的产品经理，并放缓了新云厂商的扩张步伐。
+
+17
+00:01:34,520 --> 00:01:39,881
+just moved fast on energy they moved fast on bringing up GPU clusters and so they were able to carve out
+他们迅速推进能源建设，快速搭建 GPU 集群，因此开辟出了一块市场。
+
+18
+00:01:39,931 --> 00:01:44,437
+a market right and then you know those are the early ones and then since then there have been a lot
+一个市场，然后你知道，那些是早期的，从那以后就有很多了
+
+19
+00:01:44,487 --> 00:01:51,720
+more copycats or followers many who haven't succeeded many who are succeeding right it really is like a a battle of
+更多跟风者或追随者，有失败的，也有正在成功的，这真像一场较量。
+
+20
+00:01:51,770 --> 00:01:56,990
+like who's the most competent And so are all the cuz there's like I think you said there's like an order
+谁是最能干的？所以大家都很厉害，我觉得你说过，好像有个顺序
+
+21
+00:01:57,040 --> 00:02:03,976
+there's like a 200 of these neoclouds or give or take right and so are there differentiations between them that
+这类新云厂商大概有两百个左右，或者差不多，它们之间有什么区别吗？
+
+22
+00:02:04,026 --> 00:02:09,859
+you see like are are some of them just copying the the sort of software stack that these first ones did
+你看，有些公司是不是只是在复制最早那批公司的软件栈？
+
+23
+00:02:09,909 --> 00:02:15,541
+or they doing something else like anything that you've seen that have been successful and less successful across these neoclouds?
+还是说他们在做别的事情？你看到这些新云厂商里，哪些成功、哪些不成功？
+
+24
+00:02:15,591 --> 00:02:20,177
+Yeah so there's a variety of things that separate them right so we have something called ClusterMAX that
+是的，它们之间有很多不同之处，比如我们有名为 ClusterMAX 的产品。
+
+25
+00:02:20,227 --> 00:02:30,724
+ranks all the neoclouds but we test for various things such as observability reliability networking security um orchestration all
+它会给所有新云厂商排名，但我们测试的是可观测性、可靠性、网络、安全和编排等各方面。
+
+26
+00:02:30,774 --> 00:02:36,778
+these sorts of things are different right like does does someone test for their GPUs to be working properly
+这类事情是不一样的。比如，有人会测试 GPU 在用户不用时是否仍正常工作吗？
+
+27
+00:02:36,828 --> 00:02:42,531
+in when the GPUs are idle for a user right that's active health check or a passive health check hey
+这就是主动健康检查或被动健康检查。风扇转速对吗？功耗对吗？
+
+28
+00:02:42,581 --> 00:02:46,978
+are the fans spinning at the right speed or are the you know is it drawing the right power
+风扇转速是否正常，功耗是否正常，
+
+29
+00:02:47,028 --> 00:02:51,290
+is there something wrong with the node is the is the network flapping or is anything problem problem with the
+节点有没有问题，网络是不是在抖动，还是出了别的毛病，
+
+30
+00:02:51,340 --> 00:02:56,823
+network is the performance there right like there's all these sorts of checks and tests because GPUs are unreliable um
+网络性能是否达标。这类检查和测试五花八门，因为 GPU 并不可靠。
+
+31
+00:02:56,873 --> 00:03:02,510
+there's all sorts of stuff around um the types of software you run on top of the GPU right many
+围绕 GPU 运行的软件类型也有各种讲究。很多人
+
+32
+00:03:02,560 --> 00:03:07,963
+people started off doing just bare metal right so when you go look at like hey Microsoft's first contracts
+人们一开始只是直接使用裸金属，所以你看微软的首批合同
+
+33
+00:03:08,013 --> 00:03:13,510
+with CoreWeave they were all bare metal right you just SSH in and Microsoft would set up their own stuff
+使用 CoreWeave 时，他们都是裸金属服务器，你只需通过 SSH 登录，微软会自行搭建他们的系统。
+
+34
+00:03:13,560 --> 00:03:20,005
+but as we've stepped forward there's a lot more people want right people wanted Slurm installed okay that's simple people
+但当我们向前迈进时，大家想要的东西更多了：有人想装 Slurm，这很简单，还有人
+
+35
+00:03:20,055 --> 00:03:26,483
+wanted Kubernetes installed that's a little bit more difficult but still pretty simple people wanted Slurm on Kubernetes installed cuz
+想要安装Kubernetes，这稍微有点困难，但仍然相当简单，人们还想在Kubernetes上安装Slurm。
+
+36
+00:03:26,533 --> 00:03:30,424
+it's easier to push out jobs and things like that right and now you're starting to see people do
+因为这样分发任务更方便。现在你开始看到人们需要
+
+37
+00:03:30,474 --> 00:03:37,390
+things like managed Ray services and all these things for RL and so there is a class of neoclouds
+像托管 Ray 服务这类东西，以及用于强化学习的各种服务，因此出现了一类新云厂商。
+
+38
+00:03:37,440 --> 00:03:40,565
+that are building these things and there's a class of neoclouds that are like I don't care about that
+有些新云厂商在构建这些服务，而另一类新云厂商则说我不在乎这些，
+
+39
+00:03:40,615 --> 00:03:45,601
+I'm just going to build GPUs and rent them out at bare metal and and there is a difference in
+我就只做GPU，然后以裸金属的形式租出去，这中间是有区别的。
+
+40
+00:03:45,651 --> 00:03:51,494
+cost right like the the clouds that have the good software also tend to charge more and and sort
+那些软件好的云服务商往往收费更高，这又回到了老模式，
+
+41
+00:03:51,544 --> 00:03:59,213
+of returns back to the old school model where Google Microsoft Amazon had good software and they charged right and
+也就是谷歌、微软、亚马逊当年软件好、收费也高。
+
+42
+00:03:59,263 --> 00:04:04,430
+so you know and and you see a lot of these cloud companies start trying to launch inference services
+所以你知道，你看到很多云公司开始尝试推出推理服务
+
+43
+00:04:04,480 --> 00:04:12,092
+and all these other things yeah So like that similarly in that vein I'll just get to the CPU ones
+还有其他这些事情，是的。类似地，我就直接讲CPU的部分了。
+
+44
+00:04:12,142 --> 00:04:16,730
+where historically we have customers that ask for this with like open cloud that happened so that there's a
+历史上，我们的客户曾提出类似开放云的需求，因此出现了这种情况。
+
+45
+00:04:16,780 --> 00:04:21,680
+bunch of people that are like oh I need my sandbox or CPU box running for a very very long
+一堆人说，我需要让我的沙盒或 CPU 服务器长时间运行
+
+46
+00:04:21,730 --> 00:04:27,788
+time can you give me like a $5 Hetzner type you know offering and I'm like well no because like
+你能给我一个像 Hetzner 那样五美元左右的套餐吗？我说，呃，不行，因为……
+
+47
+00:04:27,838 --> 00:04:34,178
+that is a bare metal machine that has no incurs very little cost but when you have something that's larger
+这是一台裸金属机器，几乎不产生成本，但当你处理更大规模的系统时，情况就不同了
+
+48
+00:04:34,228 --> 00:04:38,178
+software offering then there is more cost so it's hard to to compete with that so I would assume
+软件产品的话成本更高，因此很难与之竞争，所以我推测
+
+49
+00:04:38,228 --> 00:04:42,195
+also on the neoclouds that like the ones that are bare metal as you mentioned have a lower cost
+此外，像你提到的那些裸金属新云厂商，成本也更低。
+
+50
+00:04:42,245 --> 00:04:49,325
+of sale than the the software ones um that moving just I was just curious about that like why the
+销售成本比软件类新云厂商更低。我只是好奇，为什么会出现这种情况，
+
+51
+00:04:49,375 --> 00:04:55,559
+right to exist they had because it's sort of analogized with what we do but the real question is you
+它们有存在的理由，因为这有点像我们所做的事，但真正的问题是，你
+
+52
+00:04:55,609 --> 00:05:00,947
+brought this up which is directionally what we're thinking about is that CPUs are the new bottleneck like every
+提到了这一点，这正是我们目前思考的方向：CPU 正成为新的瓶颈。
+
+53
+00:05:00,997 --> 00:05:06,414
+investor partner everyone that I talked to historically was just like GPU GPU GPU and now you had this big
+投资伙伴、我过去交谈过的每个人，都只关心 GPU、GPU、GPU，而现在你们出了这份
+
+54
+00:05:06,464 --> 00:05:12,217
+report about like CPUs and I'm like okay yes thank you and so you reported like this year will be
+关于CPU的报告，我说，好吧，谢谢，所以你报告说今年将会是
+
+55
+00:05:12,267 --> 00:05:17,321
+a bottleneck so just give us a high level TLDR why is CPU now bottleneck and what do you see?
+一个瓶颈，所以请简要说明一下，为什么现在CPU成了瓶颈，你看到了什么？
+
+56
+00:05:17,371 --> 00:05:25,502
+Yeah I mean for the first few years of AI CPU was a real big lagger right sure you used it for some storage used it for some checkpointing
+是的，我的意思是，在 AI 发展的头几年，CPU 确实是个明显的短板，虽然你用它来做一些存储和检查点操作。
+
+57
+00:05:25,552 --> 00:05:29,945
+used it for pre-processing your data and pre-training but it was pretty light and then
+做数据预处理和预训练，但负载很轻。后来
+
+58
+00:05:29,995 --> 00:05:33,881
+inference was also like the models just weren't good enough to be agentic you couldn't
+推理时也感觉模型还不够好，无法实现代理式行为，你无法让它做到。
+
+59
+00:05:33,931 --> 00:05:40,630
+you know go step by step by step so there was no there was no capability for a model to go and do actions and string them together so then
+你知道，得一步一步来，所以当时模型还无法自主采取行动并把它们串联起来。
+
+60
+00:05:40,680 --> 00:05:46,736
+it wasn't really it was like it was like you would send a string and it send a string back right simple inference and so there was not much need
+其实它就像你发送一段字符串，它就返回一段字符串，很简单地推理，因此并没有太多需求
+
+61
+00:05:46,786 --> 00:05:56,872
+for CPUs but then over the last few years or last couple years it's not even like last couple years right you know Q* and OpenAI had that and
+经历了那么多风波，但最终 o1 预览版上线了，我想大概是 15、16 个月前，感觉像是很久以前了。
+
+62
+00:05:56,922 --> 00:06:05,697
+they had all that drama but then finally o1 preview launched I want to say like 15 16 months ago feels like much longer ago a long time ago Yeah
+他们之前闹了那么多风波，但最终o1预览版还是上线了，我想大概是15、16个月前的事了，感觉像是很久以前的事了，真的很久以前了。
+
+63
+00:06:05,747 --> 00:06:13,862
+ages yeah but o1 was the first model sort of there and and we we sort of had a entire flood of models right like before people would do simple
+是的，但 o1 是首个出现的模型，之后我们迎来了大量模型的涌现，就像以前人们只会做简单的事情一样。
+
+64
+00:06:13,912 --> 00:06:19,358
+things like check the output of the model with regex or something simple just to
+比如用正则表达式之类的简单方法检查模型的输出
+
+65
+00:06:19,408 --> 00:06:23,105
+see if it was doing structured properly doing structured outputs you know for function calling
+看看它有没有正确生成结构化输出，比如用于函数调用，
+
+66
+00:06:23,155 --> 00:06:28,041
+and things like this right but as we've stepped forward the the the checks on
+诸如此类。但随着我们往前走，对模型的检查
+
+67
+00:06:28,091 --> 00:06:32,750
+the model are much much larger integrated fully into training right with reinforcement learning right
+规模大得多，而且完全整合进训练，通过强化学习来实现。
+
+68
+00:06:32,800 --> 00:06:36,643
+instead of just doing regex you're doing like various classifiers instead of doing classifiers you're
+不再只是正则匹配，而是各种分类器；不再只是分类器，
+
+69
+00:06:36,693 --> 00:06:41,588
+doing like code unit test and compilation instead of doing that you're running you know
+而是代码单元测试和编译；再往后，你运行的是
+
+70
+00:06:41,638 --> 00:06:47,442
+agentic flows where it's actually calling databases and stuff or you're interfacing with some environment
+代理式流程，比如它会真正调用数据库或其他操作，或者你正在与某个环境进行交互
+
+71
+00:06:47,492 --> 00:06:52,449
+that is heavy on CPU like a physics simulation or or biology simulation you just
+就像物理模拟或生物模拟那样对 CPU 负载很高的场景，你只需
+
+72
+00:06:52,499 --> 00:06:57,796
+kept stepping into more and more complicated things where the model outputs to checks it
+不断深入更复杂的事物，模型输出后进行检查
+
+73
+00:06:57,846 --> 00:07:01,668
+right this environment reinforcement learning environment and then goes back and trains on it and
+这个环境是强化学习环境，然后它会返回并在此环境中进行训练。
+
+74
+00:07:01,718 --> 00:07:05,243
+and this loop has gotten tighter and tighter and tighter over the last couple years
+过去几年里，这个循环变得越来越紧密。
+
+75
+00:07:05,293 --> 00:07:10,371
+and then more recently over the let's call it really the last 6 months you
+然后最近，大概过去六个月里，你
+
+76
+00:07:10,421 --> 00:07:21,340
+know code agent revenue has gone from a couple billion to north of 10 billion in like a very short amount of time and and these the horizon of these
+代码智能体的收入在极短时间内从几十亿美元涨到超过 100 亿美元，而这些智能体的任务时长
+
+77
+00:07:21,390 --> 00:07:26,390
+has also increased dramatically right like GPT-5.4 Codex can work for like 6-7 hours and
+也大幅增加。比如 GPT-5.4 Codex 能连续工作六七个小时，
+
+78
+00:07:26,440 --> 00:07:33,282
+it's like fine right and so you know it's it's in that time frame it's
+而且表现还不错。在这段时间里，它
+
+79
+00:07:33,332 --> 00:07:40,430
+doing all sorts of calls to databases it's doing calls to you know at least we we use a lot of cron servers but you know like whatever whatever it
+它在不断调用各种数据库，比如我们用了很多 cron 服务器，但不管怎样，不管它在做什么
+
+80
+00:07:40,480 --> 00:07:44,372
+is right there's anything and everything it can go ping check it out scrape
+就在那儿，它能做任何事，去 ping 一下看看，去抓取一下
+
+81
+00:07:44,422 --> 00:07:48,430
+and just work agentically on its own and that's also requiring a lot of CPUs
+并能自主地以智能体方式运行，这也需要大量 CPU。
+
+82
+00:07:48,480 --> 00:07:52,514
+so over the last 6 months that's ballooned as well in addition to the reinforcement
+因此，在过去六个月里，除了强化学习之外，这一数字也大幅增长。
+
+83
+00:07:52,564 --> 00:07:57,130
+learning training loop getting tighter and tighter and so over the last 6 months we've
+训练循环越来越紧密，过去六个月里我们已经看到这一趋势不断加强。
+
+84
+00:07:57,180 --> 00:08:03,372
+seen um the entire cloud market run out of CPUs right I don't know if
+我看到整个云市场CPU都快用完了，我不知道
+
+85
+00:08:03,422 --> 00:08:07,511
+you folks have interacted with GitHub a lot recently but it's really unstable I think
+不知道你们最近是不是经常用 GitHub，它真的很不稳定。
+
+86
+00:08:07,561 --> 00:08:11,404
+you're the third person to mention that today Okay Yeah Yeah yeah so we've we've
+今天第三个人提到这个了。嗯，是的，没错，我们确实……
+
+87
+00:08:11,454 --> 00:08:15,254
+been we've been like checking GitHub's like stats on like how often is it down
+我们一直在查看 GitHub 的状态，比如它多久会宕机一次
+
+88
+00:08:15,304 --> 00:08:19,095
+how often does it fail to commit like you know whatever right it's it's terrible
+它经常无法提交，你知道的，反正就是太糟糕了
+
+89
+00:08:19,145 --> 00:08:23,030
+and that's because Microsoft sold all their CPUs that they had spare to other people
+这是因为微软把所有闲置的CPU都卖给了别人。
+
+90
+00:08:23,080 --> 00:08:28,310
+right either internal use for their lab but you know not really more so like
+要么是内部实验室使用，但其实也就是那样了
+
+91
+00:08:28,360 --> 00:08:33,045
+external labs they signed deals with Anthropic and OpenAI and so they just have like
+外部实验室——他们和 Anthropic、OpenAI 签了协议，所以微软手里
+
+92
+00:08:33,095 --> 00:08:42,801
+no CPUs left right and we've seen you know the same at many other firms right so whereas before you'd have like you know have many GPU servers per CPU
+CPU 已经用完了，我们也在其他很多公司看到过这种情况，所以以前你可能每台 CPU 配多台 GPU 服务器，但现在不行了。
+
+93
+00:08:42,851 --> 00:08:50,930
+server and so you'd be like you know 100 megawatts of GPUs would be served by even like 1 megawatt or less of CPUs nowadays the ratio is like getting
+正在大幅缩小，无论强化学习训练还是代理式推理都是如此。所以
+
+94
+00:08:50,980 --> 00:08:56,750
+much much closer both for RL training and and for inference agentic inference so then
+在强化学习训练和代理式推理方面都更加接近了，所以接下来
+
+95
+00:08:56,800 --> 00:09:03,140
+you you've just seen everyone run out of CPUs Amazon's volumes on CPUs of CPU
+你看到所有人都把 CPU 用光了。亚马逊的 CPU 服务器
+
+96
+00:09:03,190 --> 00:09:07,710
+servers they're installing have 3x year on year right from this year versus last year
+安装量同比增长了三倍，今年对比去年。
+
+97
+00:09:07,760 --> 00:09:13,230
+and so that there's just no capacity anywhere and that's causing a lot of instability
+因此，任何地方都没有产能，这导致了很大的不稳定性。
+
+98
+00:09:13,280 --> 00:09:17,709
+not just in GitHub but probably other places too I mean a lot of infrastructure
+不仅在 GitHub 上，可能在其他地方也是如此，我的意思是，很多基础设施都是如此。
+
+99
+00:09:17,759 --> 00:09:21,411
+today we talked about this like every day it's normal to see that some infra
+今天我们就这个问题聊了聊，就像每天一样，看到一些基础设施问题再正常不过了。
+
+100
+00:09:21,461 --> 00:09:29,743
+provider be it GitHub or being like an actual not to name like they go down like it's become quite a constant thing and so could be lack of CPUs
+提供商宕机，不管是 GitHub 还是别的什么，已经成了常态。这可能是 CPU 不足，
+
+101
+00:09:29,793 --> 00:09:33,904
+but also scale of the workloads and what not so that everyone's infra code is
+也可能是工作负载规模太大等等。所以现在每个人的基础设施代码都是
+
+102
+00:09:33,954 --> 00:09:37,469
+vibe coded Yeah it could be that everyone's infra code is vibe coded yeah could
+氛围编码出来的。是的，也可能每个人的基础设施代码都是氛围编码的，
+
+103
+00:09:37,519 --> 00:09:45,190
+that be as well I don't think it's all but there could be there could be parts of that that is there and so what I see which is interesting
+这也有可能。我不认为全是这样，但可能有一部分是。我觉得有意思的是，
+
+104
+00:09:45,240 --> 00:09:53,254
+as well as the number of CPU workloads or the number of that are running on us so Daytona has basically three use cases so it's like code and command
+运行在我们这里的 CPU 工作负载数量。Daytona 基本上有三类用例：代码与命令
+
+105
+00:09:53,304 --> 00:10:02,337
+execution so if you like a a Claude Code type of thing needs to run on a We have computer use cases which we see actually growing really fast.
+执行，比如 Claude Code 这类东西需要在 CPU 上运行；还有电脑操作场景，我们看到它增长得非常快。
+
+106
+00:10:02,387 --> 00:10:06,362
+We've now launched today we announced our Windows sandbox which runs on a CPU.
+今天我们正式发布：基于 CPU 运行的 Windows 沙箱。
+
+107
+00:10:06,412 --> 00:10:12,700
+So if you need an agent to do like on legacy software which is like all finance, all support, all um that's all there.
+所以如果你需要一个智能体来处理像旧软件这样的任务，比如所有财务、所有支持，这些都在里面。
+
+108
+00:10:12,750 --> 00:10:18,212
+But I'll also to your point like reinforcement learning, we have a bunch of people that usually use like Kubernetes.
+但就你提到的强化学习而言，我们有很多客户通常用 Kubernetes，
+
+109
+00:10:18,262 --> 00:10:19,266
+Now they would use us.
+现在他们会用我们。
+
+110
+00:10:19,316 --> 00:10:25,048
+But the interesting thing is the the size and scale of these loads are insanely large and they're growing insanely large.
+但有趣的是，这些负载的规模和体量大得惊人，而且还在急剧扩大。
+
+111
+00:10:25,098 --> 00:10:28,747
+And we're like the smallest cloud in the world.
+而我们大概是世界上最小的云。
+
+112
+00:10:28,797 --> 00:10:36,242
+So my interest to what in the question is like if we as a very very small company have this much, what does that do at the large scale, right?
+所以，我对这个问题的兴趣在于，如果我们作为一家非常非常小的公司，已经能做到这种程度，那么在大规模上会怎样呢，对吧？
+
+113
+00:10:36,292 --> 00:10:39,855
+Like so um and we've had I'm curious if you have any insight on this,
+就像这样，呃，我很好奇，你对这个问题有什么见解吗？
+
+114
+00:10:39,905 --> 00:10:45,418
+but just just RL let alone the long running agents which are on their own, we we see customers coming in.
+但仅仅是强化学习，更不用说那些独立运行的长期智能体，我们已经看到客户纷纷上门。
+
+115
+00:10:45,468 --> 00:10:49,350
+One of them ran a million one single customer yesterday in the span of 6 hours.
+其中一位客户昨天在 6 小时内跑了一百万个这样的 CPU 工作负载。
+
+116
+00:10:49,400 --> 00:10:50,966
+Like 1 million of these CPU workloads.
+像一百万个这样的CPU工作负载。
+
+117
+00:10:51,016 --> 00:10:52,049
+So that's one customer.
+这就是一位客户。
+
+118
+00:10:52,099 --> 00:10:53,660
+And so like how many of these customers are doing RL?
+那么，有多少客户在使用强化学习呢？
+
+119
+00:10:53,710 --> 00:10:54,640
+They're going to need this.
+他们将会需要这个。
+
+120
+00:10:54,690 --> 00:10:57,510
+I I don't know if you have any insights on this, but I'm just curious.
+我不确定你有没有什么见解，只是有点好奇。
+
+121
+00:10:57,560 --> 00:11:01,744
+Um I mean I mean there there there there are some pretty uh shocking metrics.
+呃，我的意思是，有些数据确实相当惊人。
+
+122
+00:11:01,794 --> 00:11:04,310
+Like a million vCPUs sounds insane.
+一百万个 vCPU 听起来太疯狂了。
+
+123
+00:11:04,360 --> 00:11:12,030
+Um but there some of the some of the scale of the workloads and contracts people are signing are are even like more ridiculous than that, right?
+但有些工作负载和合同的规模，人们签下的甚至比那还荒谬，对吧？
+
+124
+00:11:12,080 --> 00:11:13,710
+Um I'm sure that's because we're really small.
+嗯，我猜是因为我们实在太小了。
+
+125
+00:11:13,760 --> 00:11:14,787
+That's what I Yeah, yeah.
+我就是这个意思。对，对。
+
+126
+00:11:14,837 --> 00:11:19,707
+So so I guess I guess like when you look at like again like when you look at like the Anthropic and OpenAI of the world,
+所以当你看 Anthropic 和 OpenAI 这样的公司，
+
+127
+00:11:19,757 --> 00:11:24,207
+they have they have fully just eaten the entire capacity of multiple clouds, right?
+他们已经把多个云平台的全部算力都吃干抹净了，对吧？
+
+128
+00:11:24,257 --> 00:11:29,875
+A lot of the impetus for the recent Amazon and OpenAI deal was yes, OpenAI wanted money, yes,
+最近亚马逊与OpenAI达成交易的很大动因是，没错，OpenAI确实需要资金，没错，
+
+129
+00:11:29,925 --> 00:11:34,030
+they needed compute, but they also just like went to Amazon and were like give us your CPU.
+他们需要计算能力，于是直接找到亚马逊，说给我们你的CPU就行。
+
+130
+00:11:34,080 --> 00:11:35,327
+CPUs, yeah.
+CPU，没错。
+
+131
+00:11:35,377 --> 00:11:36,084
+Right?
+对吧？
+
+132
+00:11:36,134 --> 00:11:43,850
+Um and and before OpenAI's stack was pretty much only on x86 CPUs, but Amazon had tons of Arm CPUs and so they ported the whole thing, right?
+嗯，之前 OpenAI 的系统基本只运行在 x86 CPU 上，但亚马逊有大量 Arm CPU，所以他们就把整个系统都移植过去了，对吧？
+
+133
+00:11:43,900 --> 00:11:47,646
+It's like anywhere I'll I'll port my code base to get uh access, right?
+就像只要能拿到 CPU，我在哪儿都愿意把代码库移植过去，对吧？
+
+134
+00:11:47,696 --> 00:11:48,582
+To access to CPUs.
+访问 CPU。
+
+135
+00:11:48,632 --> 00:11:53,600
+And so this is like the the level of like and it's not that difficult to port port from x86 to Arm, but you know,
+所以这就像是那种程度，从 x86 迁移到 Arm 并不难，你懂的。
+
+136
+00:11:53,650 --> 00:11:56,556
+like there's there's very few dependencies that aren't working now,
+现在几乎没有不工作的依赖项了。
+
+137
+00:11:56,606 --> 00:12:02,217
+but um this is the level of like um engineering people are willing to go to, right?
+但呃，这就是工程师们愿意做到的程度，对吧？
+
+138
+00:12:02,267 --> 00:12:09,110
+Cuz usually devs are too lazy to do anything um and they'll just go get capacity elsewhere, but there isn't capacity anywhere else.
+因为通常开发者都懒得动手，只会去别处找算力，但别处根本没算力。
+
+139
+00:12:09,160 --> 00:12:11,181
+Yeah, so I mean that's interesting like we're all x86.
+是的，这挺有意思的，我们大家都是 x86。
+
+140
+00:12:11,231 --> 00:12:12,128
+That's all we have.
+我们只有这些。
+
+141
+00:12:12,178 --> 00:12:14,030
+We don't have our our ARM at the moment.
+我们目前没有自己的 Arm。
+
+142
+00:12:14,080 --> 00:12:20,359
+But then like there's those two which I know, but also like NVIDIA has their like CPU, other people building out their CPUs.
+但除了那两个我了解的，英伟达也有自己的CPU，其他人也在开发自己的CPU。
+
+143
+00:12:20,409 --> 00:12:22,432
+There's also differences between these CPUs.
+这些 CPU 之间也存在差异。
+
+144
+00:12:22,482 --> 00:12:24,230
+Are there just going to be like these general purpose CPUs?
+难道以后就只有这些通用型 CPU 了吗？
+
+145
+00:12:24,280 --> 00:12:26,539
+There's also like you probably know more about this than I do.
+你可能比我更了解这方面的情况。
+
+146
+00:12:26,589 --> 00:12:28,630
+I'm just like super curious.
+我就是特别好奇。
+
+147
+00:12:28,680 --> 00:12:30,159
+Um on the types of CPUs?
+嗯，关于 CPU 的类型？
+
+148
+00:12:30,209 --> 00:12:32,848
+Like now there's so many there used to be just like x86 and ARM.
+现在种类这么多，以前基本上只有 x86 和 Arm。
+
+149
+00:12:32,898 --> 00:12:34,428
+That was it like for the most part.
+基本上就是这样了。
+
+150
+00:12:34,478 --> 00:12:36,111
+Now there's different types of CPUs.
+现在有不同类型的CPU。
+
+151
+00:12:36,161 --> 00:12:40,590
+Is it just because everyone's run out or are they like better at some things than others?
+是因为大家都用尽了，还是说他们在某些方面确实更擅长？
+
+152
+00:12:40,640 --> 00:12:49,862
+Are there anything I mean usually what happens like when there's a gold rush is the person with a broken pickaxe can also sell their pickaxes.
+通常来说，就像淘金热时期，即使拿着一把坏镐的人也能把镐卖出去。
+
+153
+00:12:49,912 --> 00:12:50,846
+Yeah, yeah.
+对，对。
+
+154
+00:12:50,896 --> 00:12:55,830
+Um but like yeah, I mean this the CPU market is like quite dynamic, right?
+嗯，不过说实话，CPU市场确实相当活跃，对吧？
+
+155
+00:12:55,880 --> 00:12:57,190
+Um you know, it it was mostly Intel AMD.
+嗯，你知道的，主要是英特尔和 AMD。
+
+156
+00:12:57,240 --> 00:13:00,110
+I assume you mostly use Intel and AMD CPUs.
+我猜你主要用的是英特尔和 AMD 的 CPU。
+
+157
+00:13:00,160 --> 00:13:03,635
+Um Both of them have said they're like fully sold out.
+两者都表示已经完全售罄。
+
+158
+00:13:03,685 --> 00:13:06,699
+They've sent price increase notices to their customers.
+他们已向客户发出涨价通知。
+
+159
+00:13:06,749 --> 00:13:08,357
+Um so they're not even competing with each other anymore.
+所以他们现在甚至都不再互相竞争了。
+
+160
+00:13:08,407 --> 00:13:11,162
+They're just like how many can I make and sell?
+他们只是在想我能生产多少并卖出去多少？
+
+161
+00:13:11,212 --> 00:13:14,442
+Um and likewise like Amazon had their Graviton CPUs.
+而且就像亚马逊有他们的自研 Graviton CPU 一样。
+
+162
+00:13:14,492 --> 00:13:15,273
+They've had what?
+他们出到第几代了？
+
+163
+00:13:15,323 --> 00:13:17,630
+Five, six generations now.
+到现在已经五六代了。
+
+164
+00:13:17,680 --> 00:13:20,235
+Um And NVIDIA has their Vera CPU.
+嗯，英伟达有他们的 Vera CPU。
+
+165
+00:13:20,285 --> 00:13:20,685
+Right.
+对。
+
+166
+00:13:20,720 --> 00:13:23,350
+And NVIDIA has their Grace and Vera CPUs.
+英伟达拥有其 Grace 和 Vera 处理器。
+
+167
+00:13:23,400 --> 00:13:26,813
+Um and no one really deployed Grace standalone CPU boxes.
+而且没人真正部署过独立的 Grace CPU 服务器。
+
+168
+00:13:26,863 --> 00:13:30,877
+There was like a couple small deployments that NVIDIA NVIDIA did for PR with people,
+英伟达为了公关效果，和几家客户做过几个小规模部署，
+
+169
+00:13:30,927 --> 00:13:34,984
+but in reality there's like very few like standalone CPU deployments that NVIDIA was able to do.
+但实际上，英伟达能够实现的独立CPU部署非常少。
+
+170
+00:13:35,034 --> 00:13:35,392
+Okay.
+好的。
+
+171
+00:13:35,422 --> 00:13:38,110
+Um but now well, just they're just not as good, right?
+嗯，但现在他们确实没那么好了，对吧？
+
+172
+00:13:38,160 --> 00:13:38,357
+Okay.
+好的。
+
+173
+00:13:38,387 --> 00:13:41,510
+Um but now as we step forward, maybe their CPU got better.
+但如今我们向前迈进，也许他们的CPU变得更强大了。
+
+174
+00:13:41,560 --> 00:13:44,670
+Um maybe they're bundling better, but also just because they have capacity.
+也许他们捆绑得更好了，但也确实是因为他们有产能。
+
+175
+00:13:44,720 --> 00:13:45,703
+Because no one else has them.
+因为别人都没有。
+
+176
+00:13:45,753 --> 00:13:52,507
+Yeah, they're they're they're able to get a lot more contracts on their uh Vera CPUs uh that are going to deploy sort of later this year,
+是的，他们现在能拿到更多关于Vera CPU的合同，这些CPU预计将在今年稍晚时候部署。
+
+177
+00:13:52,557 --> 00:13:55,350
+early next year time frame um is when they start deploying.
+明年年初左右，他们就会开始部署。
+
+178
+00:13:55,400 --> 00:13:57,867
+So it's sort of like a very um dynamic market.
+所以这有点像一个非常动态的市场。
+
+179
+00:13:57,917 --> 00:14:03,010
+And then and then you've got like Microsoft and Google are starting to deploy their CPUs in volumes.
+然后，微软和谷歌也开始大规模部署他们的CPU了。
+
+180
+00:14:03,060 --> 00:14:10,386
+Um ARM is going to launch a CPU in like a few weeks uh that Meta is going to adopt and a few others are going to adopt um like Cloudflare.
+嗯，Arm 几周后将推出一款 CPU，Meta 将采用，还有像 Cloudflare 这样的公司也会采用。
+
+181
+00:14:10,436 --> 00:14:15,499
+And so there's going to be a lot more proliferation like Arm standalone rather than like Arm licensing the IP to someone.
+因此会出现更多 Arm 独立芯片，而不是 Arm 把 IP 授权给别人。
+
+182
+00:14:15,549 --> 00:14:22,497
+So there's a lot more um diversification in the market um which which happens when there's a gold rush, right?
+所以市场上有更多的多样化，这在出现淘金热时就会发生，对吧？
+
+183
+00:14:22,547 --> 00:14:29,707
+And then we'll see what actually is the best quality and is left standing as the sort of supply demand gap get closes.
+随后我们将看到，当供需差距逐渐缩小后，究竟哪种质量的产品能够脱颖而出，保持领先。
+
+184
+00:14:29,757 --> 00:14:30,157
+Yeah.
+嗯。
+
+185
+00:14:30,200 --> 00:14:36,346
+But it seems that supply and demand will still grow like at least what I see like one the RL and it it seems like RL is mostly done,
+但看起来供需仍会继续增长。至少从我看到的情况，强化学习大多是在后训练阶段完成，
+
+186
+00:14:36,396 --> 00:14:44,807
+you know, they do post trading on RL, but we have now vendors and companies that are pitching and creating services that do RL in real time.
+你知道，他们确实会用强化学习做后训练，但现在已有供应商在提供实时强化学习服务。
+
+187
+00:14:44,857 --> 00:14:50,672
+And since you have like some agents you have some SaaS that's an agentic in the background and then
+而且因为你们有一些智能体，有些 SaaS 在后台以代理式方式运行。
+
+188
+00:14:50,722 --> 00:14:56,161
+it will do RL at the end of the day basically to like learn against what it has done.
+说到底，它最终会进行强化学习，以根据自身行为进行学习。
+
+189
+00:14:56,211 --> 00:14:57,321
+And so that grows.
+于是它不断增长。
+
+190
+00:14:57,371 --> 00:15:05,525
+But also these long running agents, if they the way it seems to be working directionally is if the agents can work longer and solve for more things,
+但还有这些长时间运行的智能体，从目前看来，它们若能持续工作更久，解决更多问题，效果会更好。
+
+191
+00:15:05,575 --> 00:15:11,615
+you can essentially ask them to do more and they will spin up more and more of these agents which means more and more CPU boxes.
+你基本上可以要求它们做更多事情，它们就会不断启动更多的智能体，这意味着需要更多的 CPU 服务器。
+
+192
+00:15:11,665 --> 00:15:18,396
+So do you see that like from your purview do you like I understand market dynamics and that'll probably converge at some point,
+所以从你的角度看，我理解市场动态，它们最终可能会趋于一致。
+
+193
+00:15:18,446 --> 00:15:22,388
+but I feel it's getting wider before it's shrinking the need for that.
+但我感觉在需求减少之前，差距反而在扩大。
+
+194
+00:15:22,438 --> 00:15:28,230
+Yeah, I mean it it it's that's totally the case because initially all the RL was like, let's do math proofs.
+是的，我的意思是，这完全符合实际情况，因为最初所有的强化学习都是围绕数学证明展开的。
+
+195
+00:15:28,280 --> 00:15:31,297
+And I was like, okay, math proofs are really low on resources.
+我当时心想，数学证明所需的资源实在太少了。
+
+196
+00:15:31,347 --> 00:15:33,074
+And also the model, right?
+还有这个模型，对吧？
+
+197
+00:15:33,124 --> 00:15:37,820
+The generator will generate tons of output and then it'll send the correct answer or what
+生成器会产生大量输出，然后把正确答案，或者
+
+198
+00:15:37,870 --> 00:15:41,740
+it thinks is the correct answer to the server and then the server will verify it.
+它认为正确的答案发给服务器，然后由服务器验证。
+
+199
+00:15:41,790 --> 00:15:44,125
+Um but as we've moved forward, right?
+但随着我们不断前进，对吧？
+
+200
+00:15:44,175 --> 00:15:45,390
+Like it's it's not just that.
+不只是这样。
+
+201
+00:15:45,440 --> 00:15:46,221
+It's like,
+就像是，
+
+202
+00:15:46,271 --> 00:15:50,504
+oh actually the model is committing many times or it's like trying to
+哦，实际上模型在反复提交代码，或者是在尝试
+
+203
+00:15:50,554 --> 00:15:53,935
+compile many times or it's trying to do unit tests throughout its agentic process.
+频繁编译，或者它在代理式流程中不断尝试单元测试。
+
+204
+00:15:53,985 --> 00:16:00,248
+Okay, now that's that's increasing the frequency in which the generator, i.e. the model, is sending to the verifier.
+现在，这相当于提高了生成器，也就是模型，向验证器发送的频率。
+
+205
+00:16:00,298 --> 00:16:02,891
+Um and that loop gets tighter and tighter and tighter.
+而且这个循环变得越来越紧密。
+
+206
+00:16:02,941 --> 00:16:10,448
+And as we as we continue to move to more complex RL, it's like the model will actually uh be verifying its output constantly, right?
+随着我们不断迈向更复杂的强化学习，模型实际上会持续验证其输出，对吧？
+
+207
+00:16:10,498 --> 00:16:14,933
+Like if you imagine um let's say models that are training over the next year or two is
+就像你想象一下，假设未来一两年内模型正在训练
+
+208
+00:16:14,983 --> 00:16:19,437
+is let's say a robot model that's verifying and that's that's in in a like a world model,
+比如一个正在验证的机器人模型，它处于类似世界模型的环境中。
+
+209
+00:16:19,487 --> 00:16:20,004
+right?
+对吧？
+
+210
+00:16:20,054 --> 00:16:24,792
+So uh VLM is is navigating across the world trying to pick up things, put them down.
+嗯，VLM 在虚拟世界里移动，试图捡起东西、放下东西。
+
+211
+00:16:24,842 --> 00:16:29,626
+Every single action needs to be verified against the physics model that is sitting on some CPUs.
+每一项操作都必须与运行在某些 CPU 上的物理模型进行核对。
+
+212
+00:16:29,676 --> 00:16:38,004
+And so that's that's insanely way more CPUs than you need for say doing unit tests or running a math proof, right?
+所以，这比做单元测试或运行数学证明所需的 CPU 多出太多了，对吧？
+
+213
+00:16:38,054 --> 00:16:41,024
+And when we look at like o1, that's like all it could do was math, right?
+当我们看 o1 的时候，它能做的就只有数学运算，对吧？
+
+214
+00:16:41,074 --> 00:16:48,811
+Um and as we look at like you know, sort of uh GPT-5.4 or Opus 4.6, like it's okay agentic software,
+嗯，像 GPT-5.4 或 Opus 4.6，它们作为代理式软件已经算可以了，
+
+215
+00:16:48,861 --> 00:16:52,684
+but like as we move forward to the next stage of, you know, whatever's coming,
+但随着我们迈向下一个阶段，也就是接下来可能出现的任何事物，
+
+216
+00:16:52,734 --> 00:16:58,390
+it's going to be models that can understand, oh, I need to tie my shoe and like when I tie it,
+它会理解：哦，我需要系鞋带，而系的时候要用多大力量，
+
+217
+00:16:58,440 --> 00:17:00,854
+what's the strength strength, yeah. like what's the tensile strength?
+强度是多少？比如抗拉强度？
+
+218
+00:17:00,904 --> 00:17:06,210
+All these things like as to the the has to be calculated cuz the verifier is just generating, you know, what's the next step.
+所有这些都必须被计算，因为验证器只是在生成下一步该做什么。
+
+219
+00:17:06,260 --> 00:17:13,029
+Um but every step needs to be checked way more often and the intensity of that calculation for checking the step it goes up a time.
+但每一步都需要更频繁地检查，而检查这一步的计算强度也会随之增加。
+
+220
+00:17:13,079 --> 00:17:13,371
+Yeah.
+嗯。
+
+221
+00:17:13,401 --> 00:17:19,324
+But there's also another thing and you probably know better than I is like the the the level
+但还有另一件事，你可能比我更清楚，就是那个程度
+
+222
+00:17:19,374 --> 00:17:26,014
+of the the the strength of the GPUs can handle in parallel a certain amount of CPUs boxes.
+GPU 的算力可以并行处理多少台 CPU 服务器。
+
+223
+00:17:26,064 --> 00:17:29,104
+And so as we get next generations of GPUs,
+因此，当我们迎来下一代 GPU 时，
+
+224
+00:17:29,154 --> 00:17:38,830
+I feel that they will be able to spin up manage or work on more CPUs than they do now which is another stressor on CPUs now.
+我觉得他们将能够启动、管理或处理比现在更多的 CPU，这也会给 CPU 带来新的压力。
+
+225
+00:17:38,880 --> 00:17:40,735
+Yeah, I mean that's that's certainly the case, right?
+是的，那确实如此，对吧？
+
+226
+00:17:40,785 --> 00:17:44,388
+GPU Well, GPUs are also just like getting way higher power, right?
+GPU，其实 GPU 的功耗也在大幅上升，对吧？
+
+227
+00:17:44,438 --> 00:17:49,070
+So one GPU will equal many many more CPUs over time, right?
+所以随着时间推移，一块GPU将相当于众多CPU，对吧？
+
+228
+00:17:49,120 --> 00:17:55,166
+Um and GPUs are getting more expensive gen on gen on gen, whereas vCPUs are flat, slightly down.
+而且 GPU 一代比一代贵，而 vCPU 的价格持平甚至略有下降。
+
+229
+00:17:55,216 --> 00:17:55,685
+Yeah.
+嗯。
+
+230
+00:17:55,735 --> 00:17:58,750
+Um and so certainly it's a different scale, right?
+嗯，所以这确实是一个不同的规模，对吧？
+
+231
+00:17:58,800 --> 00:18:02,587
+Like one Blackwell versus one Rubin, performance is up X.
+一块 Blackwell 对比一块 Rubin，性能提升了 X 倍。
+
+232
+00:18:02,637 --> 00:18:04,070
+Price is also up X.
+价格也上涨了 X。
+
+233
+00:18:04,120 --> 00:18:12,925
+Um whereas, you know, you may buy last generation CPU, new generation CPU and there's 192 vCPUs in this gen and last gen was like 96, right?
+嗯，比如说，你可能买上一代的CPU，或者新一代的CPU，这一代有192个vCPU，上一代大概是96个，对吧？
+
+234
+00:18:12,975 --> 00:18:18,707
+So now you've got way more CPUs, but the the price increase is equivalent to what you got in additional vCPUs.
+现在你的CPU数量多了很多，但价格涨幅相当于你获得的额外vCPU所带来的成本增加。
+
+235
+00:18:18,757 --> 00:18:23,198
+So it's like sort of yeah, the the ratio will grow in the favor of vCPUs,
+所以比例会向 vCPU 倾斜，
+
+236
+00:18:23,248 --> 00:18:28,803
+but the cost will be sort of also probably in the direction of CPUs, but not sure how much.
+但成本可能也会向 CPU 方向上升，不过不确定会升多少。
+
+237
+00:18:28,853 --> 00:18:29,160
+Yeah.
+嗯。
+
+238
+00:18:29,190 --> 00:18:35,560
+And and also the other stressor on that and we've seen this with with larger customers when they have
+而且另一个压力源也存在，我们之前在大客户身上就看到过这种情况。
+
+239
+00:18:35,610 --> 00:18:40,353
+like they don't they have like a time allotment for GPUs and they don't want their GPUs to be idle.
+他们好像有分配给 GPU 的时间配额，不希望 GPU 处于空闲状态。
+
+240
+00:18:40,403 --> 00:18:48,689
+So they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot.
+所以他们宁愿为持续运行的热池CPU付费，这样当GPU有任务过来时，CPU就已经处于就绪状态。
+
+241
+00:18:48,739 --> 00:18:50,466
+They're essentially working, right?
+CPU 实际上已经在工作了，对吧？
+
+242
+00:18:50,516 --> 00:18:54,868
+So they'll we we I say we cuz we do mostly CPUs are certainly the cheap resource.
+所以我们会说，因为我们主要做 CPU，这显然是成本较低的资源。
+
+243
+00:18:54,918 --> 00:18:57,207
+I don't know if we're cheap, but cheap resource for this.
+我不知道我们是不是便宜，但这个资源确实很便宜。
+
+244
+00:18:57,257 --> 00:19:04,989
+And so that spends more GPUs actually just because the cost of having an idle GPU is to is way more expensive, right?
+所以实际上会用更多GPU，因为让GPU闲置的成本要高得多，对吧？
+
+245
+00:19:05,039 --> 00:19:06,923
+Yeah, it's actually like a really interesting point, right?
+是的，这实际上是个非常有趣的观点，对吧？
+
+246
+00:19:06,973 --> 00:19:10,918
+The business model is like no one does I mean sure, there's on demand GPUs,
+这个商业模式——我是说，确实有按需 GPU，
+
+247
+00:19:10,968 --> 00:19:16,620
+but like Lambda has like 50,000 plus GPUs and only 4,000 of them are on demand, right?
+但就像 Lambda 有超过 5 万块 GPU，其中只有 4000 块是按需可用的，对吧？
+
+248
+00:19:16,670 --> 00:19:17,795
+And they're always sold out.
+而且总是卖光。
+
+249
+00:19:17,845 --> 00:19:20,055
+So like no one really has on demand GPUs.
+所以其实没人真的拥有按需 GPU。
+
+250
+00:19:20,105 --> 00:19:27,528
+Everyone's signing at minimum like long-term, you know, multi-month contracts, but in most cases multi-year contracts.
+大家都在签至少长期的合同，你知道的，几个月起步，大多数是多年期的合同。
+
+251
+00:19:27,578 --> 00:19:32,338
+Um and so like CPUs have been used to like you can spin them up and down, right?
+嗯，就像 CPU 可以随时启动和关闭一样，对吧？
+
+252
+00:19:32,388 --> 00:19:34,910
+That's why everyone moved to the cloud, right?
+这就是为什么大家都转向了云端，对吧？
+
+253
+00:19:34,960 --> 00:19:42,037
+Um but with these RL workloads, it's like, okay, the GPU: the generator, the model running on a GPU generated a bunch of stuff.
+但这些强化学习工作负载的情况是，好吧，GPU作为生成器，运行在GPU上的模型生成了一大堆内容。
+
+254
+00:19:42,087 --> 00:19:44,030
+It sends it to the verifier.
+它将其发送给验证器。
+
+255
+00:19:44,080 --> 00:19:46,123
+If the verifier is not ready and waiting Then it's idle.
+如果验证器没有提前准备好并等待，GPU 就会空闲。
+
+256
+00:19:46,173 --> 00:19:46,710
+Then it's waiting.
+然后它在等待。
+
+257
+00:19:46,760 --> 00:19:46,924
+Right.
+对。
+
+258
+00:19:46,954 --> 00:19:47,916
+Like the GPU is just sitting there.
+就像 GPU 就那样闲置着。
+
+259
+00:19:47,966 --> 00:19:51,163
+So it's like, okay, well, I've already paid for this.
+反正我已经付过钱了，就这样吧。
+
+260
+00:19:51,213 --> 00:19:51,670
+Yes.
+是的。
+
+261
+00:19:51,720 --> 00:20:00,228
+So if you can't get your instantaneous you know you know resources spun up on the CPU side and in fact you should do it preemptively so it's not
+所以如果你无法立即获得资源，你知道的，就在CPU端预先启动起来，事实上你应该提前做好准备，这样就不会耽误了
+
+262
+00:20:00,278 --> 00:20:05,266
+like loading you know the the simulator that you or the generation the environment
+就像加载你所知道的模拟器，或是生成的环境
+
+263
+00:20:05,316 --> 00:20:08,041
+right you you're wasting money so yeah like that that makes a lot of sense.
+没错，你这是在浪费钱，所以这确实很有道理。
+
+264
+00:20:08,091 --> 00:20:11,190
+And not only that then you have that running and then as soon as those are running you're
+这些一跑起来，你又去启动另一个热池，
+
+265
+00:20:11,240 --> 00:20:16,441
+spinning up another warm pool of these so that every new iteration of them are are continually growing.
+启动另一个热池，使它们的每一次迭代都能持续增长。
+
+266
+00:20:16,491 --> 00:20:18,351
+So what does that mean generally?
+那通常意味着什么呢？
+
+267
+00:20:18,401 --> 00:20:26,037
+So we skipped over RAM we didn't talk about that where it's like GPU was a bottleneck RAM was a bottleneck and now CPUs.
+所以我们跳过了内存，没提它，因为之前是GPU成为瓶颈，后来是内存成为瓶颈，现在轮到CPU了。
+
+268
+00:20:26,087 --> 00:20:32,576
+So just very closer to home for most people is that like it's very hard to buy a PC today because it's like super expensive is is that
+对大多数人来说，更贴近生活的是，现在买台电脑非常困难，因为实在太贵了。
+
+269
+00:20:32,626 --> 00:20:36,482
+happening to the CPUs because we just mentioned that they're like they're fairly inexpensive
+这种情况会发生在 CPU 上吗？因为我们刚才提到它们相当便宜，
+
+270
+00:20:36,532 --> 00:20:41,950
+and flat does the market pressure now demand sort of that these prices now increase?
+而如今市场压力是否要求这些价格现在上涨呢？
+
+271
+00:20:42,000 --> 00:20:47,985
+Yeah I mean it's it's pretty much the case for all like PCs laptops building a PC
+是的，其实对所有电脑、笔记本电脑来说都是这样，组装一台电脑
+
+272
+00:20:48,035 --> 00:20:54,910
+that it's hard to get you know Apple is pretty sold out of like Mac minis for example.
+要知道，苹果的Mac mini之类的机型基本上已经售罄了。
+
+273
+00:20:54,960 --> 00:20:59,036
+We we bought a bunch of Mac minis because people are switching from you know people who
+我们买了不少 Mac mini，因为很多人正在从其他设备转过来。
+
+274
+00:20:59,086 --> 00:21:02,404
+used a bunch of Excel and like Windows are like okay I want to use Claude Code and
+用了一堆 Excel，还有 Windows，就是想试试 Claude Code
+
+275
+00:21:02,454 --> 00:21:08,843
+OS X is obviously a better um dev environment right so we just bought a bunch of Mac
+显然，macOS 是一个更好的开发环境，所以我们买了一堆 Mac。
+
+276
+00:21:08,893 --> 00:21:13,799
+minis and people are deploying them and using them and and sort of I think similar has happened
+Mac mini，人们正在部署和使用它们。我觉得情况类似，
+
+277
+00:21:13,849 --> 00:21:19,127
+across the space and then data centers are way more of an inelastic buyer of resources and
+在这一领域中，数据中心对资源的采购则更加缺乏弹性。
+
+278
+00:21:19,177 --> 00:21:24,662
+so that's also caused prices to go up right so like GPUs always were expensive and video's margins
+这也推高了价格。GPU 一直很贵，英伟达的利润率
+
+279
+00:21:24,712 --> 00:21:29,638
+have always been you know 70% plus CPUs the margins were not that high but they're creeping up
+一直高达 70% 以上；CPU 的利润率没那么高，但正在上升，
+
+280
+00:21:29,688 --> 00:21:35,747
+because Intel and AMD are raising prices and they're tight memory has like 4x in price over the
+因为英特尔和 AMD 在涨价，而且供应紧张。内存价格过去一年涨了约 4 倍，
+
+281
+00:21:35,797 --> 00:21:40,765
+last like year and it's going to continue to go up and then now storage SSD right
+还会继续涨；现在轮到存储，SSD
+
+282
+00:21:40,815 --> 00:21:45,717
+so it's like all of the resources are SSDs are also up like three four x in price
+所以所有资源都在涨，SSD 也涨了三四倍，
+
+283
+00:21:45,767 --> 00:21:49,548
+and going to keep going up at least another like 60% not as much as DRAM but up
+而且还会继续上涨，至少再涨60%左右，虽然没有DRAM涨得那么多，但涨幅也不小。
+
+284
+00:21:49,598 --> 00:21:56,264
+a lot and so between these like four like these things right it's like well the CPU capacity
+很多。在这四类东西之间——CPU、
+
+285
+00:21:56,314 --> 00:22:03,263
+for Intel and AMD is somewhat fungible between and substrate and all these things somewhat fungible between PCs
+英特尔和 AMD 的产能，在 PC 和数据中心之间、在基板等环节上，某种程度上可以互换；
+
+286
+00:22:03,313 --> 00:22:09,130
+and and data centers RAM and storage are very fungible and so you've ended up with this like
+内存和存储则高度可互换。于是你陷入了这样一个
+
+287
+00:22:09,180 --> 00:22:15,271
+conundrum that like look screw the screw the like normally humans screw the humans yeah you have to
+怪圈：算了，反正吃亏的总是普通人。你得
+
+288
+00:22:15,321 --> 00:22:21,470
+buy a Mac Mac mini now otherwise you'll never escape the permanent underclass is like the thought process.
+现在就买一台 Mac mini，否则永远逃不出底层——大概就是这个思路。
+
+289
+00:22:21,520 --> 00:22:28,996
+And one last note before we're close to the end but one thing not financial advice like Intel was in a very bad spot like quite like recently.
+最后再补充一点，虽然我们快结束了，但要说明一下，这并非财务建议，就像英特尔最近处境非常糟糕一样。
+
+290
+00:22:29,046 --> 00:22:29,710
+Still are.
+仍然如此。
+
+291
+00:22:29,760 --> 00:22:32,291
+Yeah but does this pull them out?
+但这样能把它拉出困境吗？
+
+292
+00:22:32,341 --> 00:22:40,550
+Um I mean they'll do better but like it's not like it's like a long-term like you know oh the company's saved right?
+嗯，我是说他们表现会更好，但并不是说公司就真的长期得救了，对吧？
+
+293
+00:22:40,600 --> 00:22:46,660
+Company's valued on like future cash flows but like and also like some potentiality they get like
+公司估值基于未来的现金流，但也基于其潜在可能性。
+
+294
+00:22:46,710 --> 00:22:49,910
+Apple or someone else as a customer and this is actually like the funnier thing is it's
+苹果或其他客户。更有趣的是，
+
+295
+00:22:49,960 --> 00:22:54,021
+not because CPU demand is so high Intel have some short-term profits from that but you know
+不是因为CPU需求太高，英特尔因此获得了一些短期利润，但你知道
+
+296
+00:22:54,071 --> 00:22:58,170
+others will catch up AMD and Amazon and others will catch up on capacity that they have.
+其他公司也会赶上，比如 AMD 和亚马逊，它们在产能上会追上来。
+
+297
+00:22:58,220 --> 00:23:05,774
+More importantly is that AI is buying all the capacity on 3 nanometer and 2 nanometer in a couple
+更重要的是，AI 正在短时间内买下了所有 3 纳米和 2 纳米的产能。
+
+298
+00:23:05,824 --> 00:23:09,655
+years that you know people are having to turn to other directions right like one of the like you
+这些年，你知道人们不得不转向其他方向，比如其中一个，就像你所说的那样
+
+299
+00:23:09,705 --> 00:23:15,909
+know people make all these like nonsense reasons up why NVIDIA acquired Groq part of it was because they
+人们总是编出各种荒谬的理由来解释英伟达收购Groq的原因，其中一部分原因确实是因为他们
+
+300
+00:23:15,959 --> 00:23:22,629
+want to have really fast inference but like part of it is that Groq is manufactured on Samsung right?
+我想实现非常快速的推理，但其中一部分原因是 Groq 是在三星制造的，对吧？
+
+301
+00:23:22,679 --> 00:23:27,065
+Because there's no 3 nanometer capacity for them at TSMC they need a chip somewhere else and
+由于台积电没有3纳米产能，他们不得不在其他地方寻找芯片代工。
+
+302
+00:23:27,115 --> 00:23:30,710
+if you just if AI is as crazy as like we believe it is and demand is
+如果 AI 真像我们想的那么疯狂，需求也
+
+303
+00:23:30,760 --> 00:23:33,559
+as crazy as we believe it is it's going to be even crazier next year and so
+真像我们想的那么疯狂，那明年还会更疯狂。所以
+
+304
+00:23:33,609 --> 00:23:37,885
+like just make any decent chip and it'll sell right is like sort of the philosophy there.
+只要做出一块像样的芯片，就一定能卖出去，大概就是这种理念。
+
+305
+00:23:37,935 --> 00:23:42,577
+Obviously there's a lot more they're doing there on the architecture and stuff but same applies to like Apple is
+显然，他们在架构等方面还做了很多事，但苹果的情况也是一样。
+
+306
+00:23:42,627 --> 00:23:49,830
+getting squeezed out right like TSMC told them hey like get off of 3 nanometer move to 2 nanometer faster right?
+被挤得喘不过气。就像台积电告诉他们：离开 3 纳米，加快转到 2 纳米，
+
+307
+00:23:49,880 --> 00:23:54,136
+Because all the AI chips are on 3 nanometer and it takes time right small mobile chips are
+因为所有 AI 芯片都在 3 纳米上，而这需要时间。小型移动芯片
+
+308
+00:23:54,186 --> 00:24:00,415
+easier to make than big AI chips so all the AI chips are moving to 3 nanometer now right?
+制造起来比大芯片更容易，所以现在所有的AI芯片都在转向3纳米，对吧？
+
+309
+00:24:00,465 --> 00:24:06,887
+MI350 from late last year from AMD or Trainium 3 and TPU v7 from late last year or
+去年底发布的 AMD MI350 或 Trainium 3，以及去年底发布的 TPU v7
+
+310
+00:24:06,937 --> 00:24:15,358
+slash early this year from Amazon and Google or you know NVIDIA is launching Rubin next week right?
+今年早些时候亚马逊和谷歌的产品，或者英伟达下周要发布的 Rubin，对吧？
+
+311
+00:24:15,408 --> 00:24:21,431
+That's that's also so all these things are 3 nanometer and and they're just telling Apple to get off.
+这些也都是 3 纳米，而台积电只是在让苹果让出产能。
+
+312
+00:24:21,481 --> 00:24:25,910
+They're telling Qualcomm and MediaTek to get off and all three of these companies are like oh maybe we
+他们也让高通和联发科让出产能，这三家公司都在想：也许我们
+
+313
+00:24:25,960 --> 00:24:31,750
+should use Intel because they're not telling us to get off because they don't they can't manufacture AI chips.
+该用英特尔，因为英特尔没有要求他们让出产能，因为英特尔造不了 AI 芯片。
+
+314
+00:24:31,800 --> 00:24:35,110
+Yeah so so it's it's pretty it's pretty tough for everyone.
+是啊，对每个人来说都挺难的。
+
+315
+00:24:35,160 --> 00:24:41,470
+Um I have like a bunch of questions I'd love to ask you we're like we have 20 seconds left so the next question I ask
+呃，我有一堆问题想问你，我们只剩20秒了，那我下一个问题就是
+
+316
+00:24:41,520 --> 00:24:48,713
+you is probably going to go off so with that I'll just like keep us on time and appreciate so much for coming and talking to us.
+可能就收不住了。所以我就先控制一下时间，非常感谢你来交流。
+
+317
+00:24:48,763 --> 00:24:51,920
+Thank you so much.
+非常感谢你。

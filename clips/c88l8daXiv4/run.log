@@ -1,0 +1,92 @@
+[16:19:26] === auto_clip 2026-10-28T08:19:26+00:00 ===
+[16:19:26] srt: subtitles/c88l8daXiv4.zh.bilingual.srt
+[16:19:26] cues: 317 | span 00:00:10.040 – 00:24:51.920
+[16:19:26] windows: 3
+[16:19:27] model: Qwen3-30B-A3B-Instruct-2507-Q4_K_M
+[16:21:24] window 0: OK (1~121, 121 cues)
+[16:23:49] window 1: OK (78~238, 161 cues)
+[16:25:47] window 2: OK (190~317, 128 cues)
+[16:25:47] wrote clips/c88l8daXiv4/analysis.json
+[16:25:47] analysis status: ANALYSIS_OK
+[16:26:09] === auto_clip 2026-10-28T08:26:09+00:00 ===
+[16:26:09] srt: subtitles/c88l8daXiv4.zh.bilingual.srt
+[16:26:09] cues: 317 | span 00:00:10.040 – 00:24:51.920
+[16:26:09] reusing clips/c88l8daXiv4/analysis.json (1 selected candidates)
+[16:26:09] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv
+[16:26:09] source: vp9 19001/317 (1504061 ms)
+[16:26:09] wrote clips/c88l8daXiv4/analysis.json
+[16:26:09] clip 01: 00:04:55.609–00:09:29.743 (274134 ms, 49 cues) CPU成AI新瓶颈
+[16:26:09] $ ffmpeg -hide_banner -y -ss 295.609 -i E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv -t 274.134 -map 0:v:0 -map 0:a:0 -vf ass=clips/c88l8daXiv4/work/clip-01.ass -c:v h264_qsv -global_quality:v 19 -preset slow -c:a aac -b:a 160k -sn -dn -movflags +faststart -avoid_negative_ts make_zero E:\YouTube-B\clips\c88l8daXiv4\work\clip-01.tmp.mp4
+[16:26:55] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\clips\c88l8daXiv4\work\clip-01.tmp.mp4
+[16:26:55] clip 01 accepted → clips/c88l8daXiv4/final/c88l8daXiv4.highlight-01.CPU成AI新瓶颈.mp4
+[16:26:55] wrote clips/c88l8daXiv4/result.json
+[16:26:55] final status: SUCCESS (windows 3, valid 1, accepted 1)
+[16:27:48] === auto_clip 2026-10-28T08:27:48+00:00 ===
+[16:27:48] srt: subtitles/c88l8daXiv4.zh.bilingual.srt
+[16:27:48] cues: 317 | span 00:00:10.040 – 00:24:51.920
+[16:27:48] reusing clips/c88l8daXiv4/analysis.json (1 selected candidates)
+[16:27:48] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv
+[16:27:48] source: vp9 19001/317 (1504061 ms)
+[16:27:48] wrote clips/c88l8daXiv4/analysis.json
+[16:27:48] clip 01: 00:04:55.609–00:09:29.743 (274134 ms, 49 cues) CPU成AI新瓶颈
+[16:27:48] $ ffmpeg -hide_banner -y -ss 295.609 -i E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv -t 274.134 -map 0:v:0 -map 0:a:0 -map_chapters -1 -vf ass=clips/c88l8daXiv4/work/clip-01.ass -c:v h264_qsv -global_quality:v 19 -preset slow -c:a aac -b:a 160k -sn -dn -movflags +faststart -avoid_negative_ts make_zero E:\YouTube-B\clips\c88l8daXiv4\work\clip-01.tmp.mp4
+[16:28:28] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\clips\c88l8daXiv4\work\clip-01.tmp.mp4
+[16:28:28] clip 01 accepted → clips/c88l8daXiv4/final/c88l8daXiv4.highlight-01.CPU成AI新瓶颈.mp4
+[16:28:28] wrote clips/c88l8daXiv4/result.json
+[16:28:28] final status: SUCCESS (windows 3, valid 1, accepted 1)
+[16:31:13] === auto_clip 2026-10-28T08:31:13+00:00 ===
+[16:31:13] srt: subtitles/c88l8daXiv4.zh.bilingual.srt
+[16:31:13] cues: 317 | span 00:00:10.040 – 00:24:51.920
+[16:31:13] windows: 3
+[16:31:13] model: Qwen3-30B-A3B-Instruct-2507-Q4_K_M
+[16:31:22] window 0: OK (1~121, 121 cues)
+[16:31:32] window 1: OK (78~238, 161 cues)
+[16:31:42] window 2: OK (190~317, 128 cues)
+[16:31:42] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv
+[16:31:42] source: vp9 19001/317 (1504061 ms)
+[16:31:42] wrote clips/c88l8daXiv4/analysis.json
+[16:31:42] clip 01: 00:04:55.609–00:11:01.744 (366135 ms, 70 cues) CPU成AI新瓶颈
+[16:31:42] $ ffmpeg -hide_banner -y -ss 295.609 -i E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv -t 366.135 -map 0:v:0 -map 0:a:0 -map_chapters -1 -vf ass=clips/c88l8daXiv4/work/clip-01.ass -c:v h264_qsv -global_quality:v 19 -preset slow -c:a aac -b:a 160k -sn -dn -movflags +faststart -avoid_negative_ts make_zero E:\YouTube-B\clips\c88l8daXiv4\work\clip-01.tmp.mp4
+[16:32:36] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\clips\c88l8daXiv4\work\clip-01.tmp.mp4
+[16:32:36] clip 01 accepted → clips/c88l8daXiv4/final/c88l8daXiv4.highlight-01.CPU成AI新瓶颈.mp4
+[16:32:36] clip 02: 00:15:44.175–00:19:20.055 (215880 ms, 50 cues) AI推理对硬件资源的冲击
+[16:32:36] $ ffmpeg -hide_banner -y -ss 944.175 -i E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv -t 215.880 -map 0:v:0 -map 0:a:0 -map_chapters -1 -vf ass=clips/c88l8daXiv4/work/clip-02.ass -c:v h264_qsv -global_quality:v 19 -preset slow -c:a aac -b:a 160k -sn -dn -movflags +faststart -avoid_negative_ts make_zero E:\YouTube-B\clips\c88l8daXiv4\work\clip-02.tmp.mp4
+[16:33:11] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\clips\c88l8daXiv4\work\clip-02.tmp.mp4
+[16:33:11] clip 02 accepted → clips/c88l8daXiv4/final/c88l8daXiv4.highlight-02.AI推理对硬件资源的冲击.mp4
+[16:33:11] wrote clips/c88l8daXiv4/result.json
+[16:33:11] final status: SUCCESS (windows 3, valid 2, accepted 2)
+[16:36:41] === auto_clip 2026-10-28T08:36:41+00:00 ===
+[16:36:41] srt: subtitles/c88l8daXiv4.zh.bilingual.srt
+[16:36:41] cues: 317 | span 00:00:10.040 – 00:24:51.920
+[16:36:41] reusing clips/c88l8daXiv4/analysis.json (2 selected candidates)
+[16:36:41] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv
+[16:36:41] source: vp9 19001/317 (1504061 ms)
+[16:36:41] wrote clips/c88l8daXiv4/analysis.json
+[16:36:41] clip 01: 00:04:55.609–00:11:01.744 (366135 ms, 70 cues) CPU成AI新瓶颈
+[16:36:41] $ ffmpeg -hide_banner -y -ss 295.609 -i E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv -t 366.135 -map 0:v:0 -map 0:a:0 -map_chapters -1 -vf ass=clips/c88l8daXiv4/work/clip-01.ass -c:v h264_qsv -global_quality:v 19 -preset slow -c:a aac -b:a 160k -sn -dn -movflags +faststart -avoid_negative_ts make_zero E:\YouTube-B\clips\c88l8daXiv4\work\clip-01.tmp.mp4
+[16:37:36] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\clips\c88l8daXiv4\work\clip-01.tmp.mp4
+[16:37:36] clip 01 accepted → clips/c88l8daXiv4/final/c88l8daXiv4.highlight-01.CPU成AI新瓶颈.mp4
+[16:37:36] clip 02: 00:15:44.175–00:19:20.055 (215880 ms, 50 cues) AI推理对硬件资源的冲击
+[16:37:36] $ ffmpeg -hide_banner -y -ss 944.175 -i E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv -t 215.880 -map 0:v:0 -map 0:a:0 -map_chapters -1 -vf ass=clips/c88l8daXiv4/work/clip-02.ass -c:v h264_qsv -global_quality:v 19 -preset slow -c:a aac -b:a 160k -sn -dn -movflags +faststart -avoid_negative_ts make_zero E:\YouTube-B\clips\c88l8daXiv4\work\clip-02.tmp.mp4
+[16:38:07] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\clips\c88l8daXiv4\work\clip-02.tmp.mp4
+[16:38:07] clip 02 accepted → clips/c88l8daXiv4/final/c88l8daXiv4.highlight-02.AI推理对硬件资源的冲击.mp4
+[16:38:07] wrote clips/c88l8daXiv4/result.json
+[16:38:07] final status: SUCCESS (windows 3, valid 2, accepted 2)
+[17:00:46] === auto_clip 2026-10-28T09:00:46+00:00 ===
+[17:00:46] srt: subtitles/c88l8daXiv4.zh.bilingual.srt
+[17:00:46] cues: 317 | span 00:00:10.040 – 00:24:51.920
+[17:00:46] reusing clips/c88l8daXiv4/analysis.json (2 selected candidates)
+[17:00:46] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv
+[17:00:47] source: vp9 19001/317 (1504061 ms)
+[17:00:47] override clip 01: 00:04:55.609 → 00:04:49.375 (cue 51), duration 372369 ms
+[17:00:47] wrote clips/c88l8daXiv4/analysis.json
+[17:00:47] clip 01: 00:04:49.375–00:11:01.744 (372369 ms, 71 cues) CPU成AI新瓶颈
+[17:00:47] $ ffmpeg -hide_banner -y -ss 289.375 -i E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv -t 372.369 -map 0:v:0 -map 0:a:0 -map_chapters -1 -vf ass=clips/c88l8daXiv4/work/clip-01.ass -c:v h264_qsv -global_quality:v 19 -preset slow -c:a aac -b:a 160k -sn -dn -movflags +faststart -avoid_negative_ts make_zero E:\YouTube-B\clips\c88l8daXiv4\work\clip-01.tmp.mp4
+[17:01:58] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\clips\c88l8daXiv4\work\clip-01.tmp.mp4
+[17:01:59] clip 01 accepted → clips/c88l8daXiv4/final/c88l8daXiv4.highlight-01.CPU成AI新瓶颈.mp4
+[17:01:59] clip 02: 00:15:44.175–00:19:20.055 (215880 ms, 50 cues) AI推理对硬件资源的冲击
+[17:01:59] $ ffmpeg -hide_banner -y -ss 944.175 -i E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv -t 215.880 -map 0:v:0 -map 0:a:0 -map_chapters -1 -vf ass=clips/c88l8daXiv4/work/clip-02.ass -c:v h264_qsv -global_quality:v 19 -preset slow -c:a aac -b:a 160k -sn -dn -movflags +faststart -avoid_negative_ts make_zero E:\YouTube-B\clips\c88l8daXiv4\work\clip-02.tmp.mp4
+[17:02:37] $ ffprobe -v error -print_format json -show_format -show_streams E:\YouTube-B\clips\c88l8daXiv4\work\clip-02.tmp.mp4
+[17:02:37] clip 02 accepted → clips/c88l8daXiv4/final/c88l8daXiv4.highlight-02.AI推理对硬件资源的冲击.mp4
+[17:02:37] wrote clips/c88l8daXiv4/result.json
+[17:02:37] final status: SUCCESS (windows 3, valid 2, accepted 2)

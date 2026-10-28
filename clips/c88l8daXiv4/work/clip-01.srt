@@ -1,0 +1,354 @@
+1
+00:00:00,000 --> 00:00:06,184
+right to exist they had because it's sort of analogized with what we do but the real question is you
+它们有存在的理由，因为这有点像我们所做的事，但真正的问题是，你
+
+2
+00:00:06,234 --> 00:00:11,572
+brought this up which is directionally what we're thinking about is that CPUs are the new bottleneck like every
+提到了这一点，这正是我们目前思考的方向：CPU 正成为新的瓶颈。
+
+3
+00:00:11,622 --> 00:00:17,039
+investor partner everyone that I talked to historically was just like GPU GPU GPU and now you had this big
+投资伙伴、我过去交谈过的每个人，都只关心 GPU、GPU、GPU，而现在你们出了这份
+
+4
+00:00:17,089 --> 00:00:22,842
+report about like CPUs and I'm like okay yes thank you and so you reported like this year will be
+关于CPU的报告，我说，好吧，谢谢，所以你报告说今年将会是
+
+5
+00:00:22,892 --> 00:00:27,946
+a bottleneck so just give us a high level TLDR why is CPU now bottleneck and what do you see?
+一个瓶颈，所以请简要说明一下，为什么现在CPU成了瓶颈，你看到了什么？
+
+6
+00:00:27,996 --> 00:00:36,127
+Yeah I mean for the first few years of AI CPU was a real big lagger right sure you used it for some storage used it for some checkpointing
+是的，我的意思是，在 AI 发展的头几年，CPU 确实是个明显的短板，虽然你用它来做一些存储和检查点操作。
+
+7
+00:00:36,177 --> 00:00:40,570
+used it for pre-processing your data and pre-training but it was pretty light and then
+做数据预处理和预训练，但负载很轻。后来
+
+8
+00:00:40,620 --> 00:00:44,506
+inference was also like the models just weren't good enough to be agentic you couldn't
+推理时也感觉模型还不够好，无法实现代理式行为，你无法让它做到。
+
+9
+00:00:44,556 --> 00:00:51,255
+you know go step by step by step so there was no there was no capability for a model to go and do actions and string them together so then
+你知道，得一步一步来，所以当时模型还无法自主采取行动并把它们串联起来。
+
+10
+00:00:51,305 --> 00:00:57,361
+it wasn't really it was like it was like you would send a string and it send a string back right simple inference and so there was not much need
+其实它就像你发送一段字符串，它就返回一段字符串，很简单地推理，因此并没有太多需求
+
+11
+00:00:57,411 --> 00:01:07,497
+for CPUs but then over the last few years or last couple years it's not even like last couple years right you know Q* and OpenAI had that and
+经历了那么多风波，但最终 o1 预览版上线了，我想大概是 15、16 个月前，感觉像是很久以前了。
+
+12
+00:01:07,547 --> 00:01:16,322
+they had all that drama but then finally o1 preview launched I want to say like 15 16 months ago feels like much longer ago a long time ago Yeah
+他们之前闹了那么多风波，但最终o1预览版还是上线了，我想大概是15、16个月前的事了，感觉像是很久以前的事了，真的很久以前了。
+
+13
+00:01:16,372 --> 00:01:24,487
+ages yeah but o1 was the first model sort of there and and we we sort of had a entire flood of models right like before people would do simple
+是的，但 o1 是首个出现的模型，之后我们迎来了大量模型的涌现，就像以前人们只会做简单的事情一样。
+
+14
+00:01:24,537 --> 00:01:29,983
+things like check the output of the model with regex or something simple just to
+比如用正则表达式之类的简单方法检查模型的输出
+
+15
+00:01:30,033 --> 00:01:33,730
+see if it was doing structured properly doing structured outputs you know for function calling
+看看它有没有正确生成结构化输出，比如用于函数调用，
+
+16
+00:01:33,780 --> 00:01:38,666
+and things like this right but as we've stepped forward the the the checks on
+诸如此类。但随着我们往前走，对模型的检查
+
+17
+00:01:38,716 --> 00:01:43,375
+the model are much much larger integrated fully into training right with reinforcement learning right
+规模大得多，而且完全整合进训练，通过强化学习来实现。
+
+18
+00:01:43,425 --> 00:01:47,268
+instead of just doing regex you're doing like various classifiers instead of doing classifiers you're
+不再只是正则匹配，而是各种分类器；不再只是分类器，
+
+19
+00:01:47,318 --> 00:01:52,213
+doing like code unit test and compilation instead of doing that you're running you know
+而是代码单元测试和编译；再往后，你运行的是
+
+20
+00:01:52,263 --> 00:01:58,067
+agentic flows where it's actually calling databases and stuff or you're interfacing with some environment
+代理式流程，比如它会真正调用数据库或其他操作，或者你正在与某个环境进行交互
+
+21
+00:01:58,117 --> 00:02:03,074
+that is heavy on CPU like a physics simulation or or biology simulation you just
+就像物理模拟或生物模拟那样对 CPU 负载很高的场景，你只需
+
+22
+00:02:03,124 --> 00:02:08,421
+kept stepping into more and more complicated things where the model outputs to checks it
+不断深入更复杂的事物，模型输出后进行检查
+
+23
+00:02:08,471 --> 00:02:12,293
+right this environment reinforcement learning environment and then goes back and trains on it and
+这个环境是强化学习环境，然后它会返回并在此环境中进行训练。
+
+24
+00:02:12,343 --> 00:02:15,868
+and this loop has gotten tighter and tighter and tighter over the last couple years
+过去几年里，这个循环变得越来越紧密。
+
+25
+00:02:15,918 --> 00:02:20,996
+and then more recently over the let's call it really the last 6 months you
+然后最近，大概过去六个月里，你
+
+26
+00:02:21,046 --> 00:02:31,965
+know code agent revenue has gone from a couple billion to north of 10 billion in like a very short amount of time and and these the horizon of these
+代码智能体的收入在极短时间内从几十亿美元涨到超过 100 亿美元，而这些智能体的任务时长
+
+27
+00:02:32,015 --> 00:02:37,015
+has also increased dramatically right like GPT-5.4 Codex can work for like 6-7 hours and
+也大幅增加。比如 GPT-5.4 Codex 能连续工作六七个小时，
+
+28
+00:02:37,065 --> 00:02:43,907
+it's like fine right and so you know it's it's in that time frame it's
+而且表现还不错。在这段时间里，它
+
+29
+00:02:43,957 --> 00:02:51,055
+doing all sorts of calls to databases it's doing calls to you know at least we we use a lot of cron servers but you know like whatever whatever it
+它在不断调用各种数据库，比如我们用了很多 cron 服务器，但不管怎样，不管它在做什么
+
+30
+00:02:51,105 --> 00:02:54,997
+is right there's anything and everything it can go ping check it out scrape
+就在那儿，它能做任何事，去 ping 一下看看，去抓取一下
+
+31
+00:02:55,047 --> 00:02:59,055
+and just work agentically on its own and that's also requiring a lot of CPUs
+并能自主地以智能体方式运行，这也需要大量 CPU。
+
+32
+00:02:59,105 --> 00:03:03,139
+so over the last 6 months that's ballooned as well in addition to the reinforcement
+因此，在过去六个月里，除了强化学习之外，这一数字也大幅增长。
+
+33
+00:03:03,189 --> 00:03:07,755
+learning training loop getting tighter and tighter and so over the last 6 months we've
+训练循环越来越紧密，过去六个月里我们已经看到这一趋势不断加强。
+
+34
+00:03:07,805 --> 00:03:13,997
+seen um the entire cloud market run out of CPUs right I don't know if
+我看到整个云市场CPU都快用完了，我不知道
+
+35
+00:03:14,047 --> 00:03:18,136
+you folks have interacted with GitHub a lot recently but it's really unstable I think
+不知道你们最近是不是经常用 GitHub，它真的很不稳定。
+
+36
+00:03:18,186 --> 00:03:22,029
+you're the third person to mention that today Okay Yeah Yeah yeah so we've we've
+今天第三个人提到这个了。嗯，是的，没错，我们确实……
+
+37
+00:03:22,079 --> 00:03:25,879
+been we've been like checking GitHub's like stats on like how often is it down
+我们一直在查看 GitHub 的状态，比如它多久会宕机一次
+
+38
+00:03:25,929 --> 00:03:29,720
+how often does it fail to commit like you know whatever right it's it's terrible
+它经常无法提交，你知道的，反正就是太糟糕了
+
+39
+00:03:29,770 --> 00:03:33,655
+and that's because Microsoft sold all their CPUs that they had spare to other people
+这是因为微软把所有闲置的CPU都卖给了别人。
+
+40
+00:03:33,705 --> 00:03:38,935
+right either internal use for their lab but you know not really more so like
+要么是内部实验室使用，但其实也就是那样了
+
+41
+00:03:38,985 --> 00:03:43,670
+external labs they signed deals with Anthropic and OpenAI and so they just have like
+外部实验室——他们和 Anthropic、OpenAI 签了协议，所以微软手里
+
+42
+00:03:43,720 --> 00:03:53,426
+no CPUs left right and we've seen you know the same at many other firms right so whereas before you'd have like you know have many GPU servers per CPU
+CPU 已经用完了，我们也在其他很多公司看到过这种情况，所以以前你可能每台 CPU 配多台 GPU 服务器，但现在不行了。
+
+43
+00:03:53,476 --> 00:04:01,555
+server and so you'd be like you know 100 megawatts of GPUs would be served by even like 1 megawatt or less of CPUs nowadays the ratio is like getting
+正在大幅缩小，无论强化学习训练还是代理式推理都是如此。所以
+
+44
+00:04:01,605 --> 00:04:07,375
+much much closer both for RL training and and for inference agentic inference so then
+在强化学习训练和代理式推理方面都更加接近了，所以接下来
+
+45
+00:04:07,425 --> 00:04:13,765
+you you've just seen everyone run out of CPUs Amazon's volumes on CPUs of CPU
+你看到所有人都把 CPU 用光了。亚马逊的 CPU 服务器
+
+46
+00:04:13,815 --> 00:04:18,335
+servers they're installing have 3x year on year right from this year versus last year
+安装量同比增长了三倍，今年对比去年。
+
+47
+00:04:18,385 --> 00:04:23,855
+and so that there's just no capacity anywhere and that's causing a lot of instability
+因此，任何地方都没有产能，这导致了很大的不稳定性。
+
+48
+00:04:23,905 --> 00:04:28,334
+not just in GitHub but probably other places too I mean a lot of infrastructure
+不仅在 GitHub 上，可能在其他地方也是如此，我的意思是，很多基础设施都是如此。
+
+49
+00:04:28,384 --> 00:04:32,036
+today we talked about this like every day it's normal to see that some infra
+今天我们就这个问题聊了聊，就像每天一样，看到一些基础设施问题再正常不过了。
+
+50
+00:04:32,086 --> 00:04:40,368
+provider be it GitHub or being like an actual not to name like they go down like it's become quite a constant thing and so could be lack of CPUs
+提供商宕机，不管是 GitHub 还是别的什么，已经成了常态。这可能是 CPU 不足，
+
+51
+00:04:40,418 --> 00:04:44,529
+but also scale of the workloads and what not so that everyone's infra code is
+也可能是工作负载规模太大等等。所以现在每个人的基础设施代码都是
+
+52
+00:04:44,579 --> 00:04:48,094
+vibe coded Yeah it could be that everyone's infra code is vibe coded yeah could
+氛围编码出来的。是的，也可能每个人的基础设施代码都是氛围编码的，
+
+53
+00:04:48,144 --> 00:04:55,815
+that be as well I don't think it's all but there could be there could be parts of that that is there and so what I see which is interesting
+这也有可能。我不认为全是这样，但可能有一部分是。我觉得有意思的是，
+
+54
+00:04:55,865 --> 00:05:03,879
+as well as the number of CPU workloads or the number of that are running on us so Daytona has basically three use cases so it's like code and command
+运行在我们这里的 CPU 工作负载数量。Daytona 基本上有三类用例：代码与命令
+
+55
+00:05:03,929 --> 00:05:12,962
+execution so if you like a a Claude Code type of thing needs to run on a We have computer use cases which we see actually growing really fast.
+执行，比如 Claude Code 这类东西需要在 CPU 上运行；还有电脑操作场景，我们看到它增长得非常快。
+
+56
+00:05:13,012 --> 00:05:16,987
+We've now launched today we announced our Windows sandbox which runs on a CPU.
+今天我们正式发布：基于 CPU 运行的 Windows 沙箱。
+
+57
+00:05:17,037 --> 00:05:23,325
+So if you need an agent to do like on legacy software which is like all finance, all support, all um that's all there.
+所以如果你需要一个智能体来处理像旧软件这样的任务，比如所有财务、所有支持，这些都在里面。
+
+58
+00:05:23,375 --> 00:05:28,837
+But I'll also to your point like reinforcement learning, we have a bunch of people that usually use like Kubernetes.
+但就你提到的强化学习而言，我们有很多客户通常用 Kubernetes，
+
+59
+00:05:28,887 --> 00:05:29,891
+Now they would use us.
+现在他们会用我们。
+
+60
+00:05:29,941 --> 00:05:35,673
+But the interesting thing is the the size and scale of these loads are insanely large and they're growing insanely large.
+但有趣的是，这些负载的规模和体量大得惊人，而且还在急剧扩大。
+
+61
+00:05:35,723 --> 00:05:39,372
+And we're like the smallest cloud in the world.
+而我们大概是世界上最小的云。
+
+62
+00:05:39,422 --> 00:05:46,867
+So my interest to what in the question is like if we as a very very small company have this much, what does that do at the large scale, right?
+所以，我对这个问题的兴趣在于，如果我们作为一家非常非常小的公司，已经能做到这种程度，那么在大规模上会怎样呢，对吧？
+
+63
+00:05:46,917 --> 00:05:50,480
+Like so um and we've had I'm curious if you have any insight on this,
+就像这样，呃，我很好奇，你对这个问题有什么见解吗？
+
+64
+00:05:50,530 --> 00:05:56,043
+but just just RL let alone the long running agents which are on their own, we we see customers coming in.
+但仅仅是强化学习，更不用说那些独立运行的长期智能体，我们已经看到客户纷纷上门。
+
+65
+00:05:56,093 --> 00:05:59,975
+One of them ran a million one single customer yesterday in the span of 6 hours.
+其中一位客户昨天在 6 小时内跑了一百万个这样的 CPU 工作负载。
+
+66
+00:06:00,025 --> 00:06:01,591
+Like 1 million of these CPU workloads.
+像一百万个这样的CPU工作负载。
+
+67
+00:06:01,641 --> 00:06:02,674
+So that's one customer.
+这就是一位客户。
+
+68
+00:06:02,724 --> 00:06:04,285
+And so like how many of these customers are doing RL?
+那么，有多少客户在使用强化学习呢？
+
+69
+00:06:04,335 --> 00:06:05,265
+They're going to need this.
+他们将会需要这个。
+
+70
+00:06:05,315 --> 00:06:08,135
+I I don't know if you have any insights on this, but I'm just curious.
+我不确定你有没有什么见解，只是有点好奇。
+
+71
+00:06:08,185 --> 00:06:12,369
+Um I mean I mean there there there there are some pretty uh shocking metrics.
+呃，我的意思是，有些数据确实相当惊人。

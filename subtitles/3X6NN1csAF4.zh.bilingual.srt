@@ -1,0 +1,4049 @@
+1
+00:00:02,639 --> 00:00:09,101
+Welcome to Hot Chips 2026 keynote
+欢迎出席 2026 年 Hot Chips 主题演讲
+
+2
+00:00:09,151 --> 00:00:10,433
+compute in motion
+动态计算
+
+3
+00:00:10,483 --> 00:00:11,469
+challenges of
+面临的挑战
+
+4
+00:00:11,519 --> 00:00:21,854
+autonomous
+自主
+
+5
+00:00:21,904 --> 00:00:30,350
+driving.
+驾驶
+
+6
+00:00:30,400 --> 00:00:31,203
+Thank you.
+谢谢
+
+7
+00:00:31,253 --> 00:00:37,965
+And also welcome to I personally been thinking about it as Waymo day, but it's I guess the Waymo section of Hot Chips this year.
+同时也欢迎各位，我个人一直把这一天当作“Waymo 日”，不过它实际上是今年 Hot Chips 中的 Waymo 专题环节
+
+8
+00:00:38,015 --> 00:00:43,550
+This day has been a long time coming for Alphabet where I work and my friends at Waymo,
+这一天对我在 Alphabet 工作的地方以及我在 Waymo 的朋友们来说，已经期待已久
+
+9
+00:00:43,600 --> 00:00:47,069
+uh, two of whom you'll get to hear in the next couple of hours.
+其中两位，你们将在接下来的几个小时内听到他们的发言
+
+10
+00:00:47,119 --> 00:00:50,029
+So, by way of post lunch, everybody's falling asleep.
+作为午餐后的开场，大家都有些昏昏欲睡
+
+11
+00:00:50,079 --> 00:00:53,390
+Raise your hand if you've heard of Waymo.
+听说过 Waymo 的请举手
+
+12
+00:00:53,440 --> 00:00:56,225
+Keep your hand up if you've ridden in a Waymo.
+如果你曾经乘坐过 Waymo，请继续保持举手
+
+13
+00:00:56,275 --> 00:00:56,675
+Great.
+很棒。
+
+14
+00:00:56,711 --> 00:00:59,351
+Some people put their hands up and had Okay.
+有些人举起了手，然后又放下
+
+15
+00:00:59,401 --> 00:01:04,770
+Anyway, uh, and and keep your hand up still if you've reached stage three of the Waymo experience.
+无论如何，如果你已经达到了 Waymo 体验的第三阶段，请继续保持举手。
+
+16
+00:01:04,820 --> 00:01:07,542
+Stage one is, "Oh my god, there's no driver in the car."
+第一阶段是：“天啊，车里没有司机。”
+
+17
+00:01:07,592 --> 00:01:09,710
+Stage two is Wow, that seems to be working.
+第二阶段是：“哇，这好像真的能用。”
+
+18
+00:01:09,760 --> 00:01:10,854
+There's a little display there.
+那里有个小显示屏。
+
+19
+00:01:10,904 --> 00:01:14,510
+Stage three is I'm on my phone.
+第三阶段是：“我在用手机。”
+
+20
+00:01:14,560 --> 00:01:15,127
+Cool.
+太酷了。
+
+21
+00:01:15,177 --> 00:01:21,331
+Uh, as you'll see today, our friends at Waymo have been doing some amazing engineering.
+今天你们会看到，Waymo 的朋友们已经完成了令人惊叹的工程。
+
+22
+00:01:21,381 --> 00:01:25,605
+I remember first hearing about it and seeing the demos and thinking, "That is so cool.
+我记得第一次听说这件事，看到演示时心想：“这太酷了。”
+
+23
+00:01:25,655 --> 00:01:27,656
+My daughters will never have to learn how to drive."
+我的女儿们永远都不用学开车了。
+
+24
+00:01:27,706 --> 00:01:30,401
+I I was a little over optimistic about that,
+我对这一点有点过于乐观了。
+
+25
+00:01:30,451 --> 00:01:37,170
+but I think a key thing you'll see in the presentation today is incredible persistence about excellent
+但我想今天演示中你将看到的一个关键点是，对卓越工程的惊人坚持
+
+26
+00:01:37,220 --> 00:01:44,190
+engineering and understanding failure cases out to I guess one of the earlier speakers today had nine nines.
+以及对失败案例的深入理解——今天早些时候的一位演讲者提到了九个 9 的可靠性
+
+27
+00:01:44,240 --> 00:01:50,174
+But I think a bunch of the persistence that is emblematic of how my colleagues approach the incredible
+但我觉得，我同事在完成这项非凡安全工作时所展现出的坚持精神
+
+28
+00:01:50,224 --> 00:01:58,466
+safety job they do and the possibility of superhuman driving is that they have to make it work.
+正是实现超人驾驶可能性的核心所在，因为他们必须让这一切真正奏效
+
+29
+00:01:58,516 --> 00:02:03,142
+Uh it requires incredible discipline, focus across years.
+这需要多年如一日的惊人纪律和专注
+
+30
+00:02:03,192 --> 00:02:08,590
+It may have taken a little bit longer than my initial estimate that my now 20-year-old would never have to learn how to drive.
+或许比我最初的预估耗时更久，那时我还认为我那现在20岁的孩子永远不必学开车
+
+31
+00:02:08,640 --> 00:02:13,630
+And yet, if you've ridden in a Waymo, it's kind of in in immediately miraculous.
+但如果你曾乘坐过 Waymo 的车，你会立刻感受到它的神奇之处
+
+32
+00:02:13,680 --> 00:02:17,470
+And then soon after that you realize, wow, this thing is better than I am.
+紧接着你就会意识到，这东西比我强得多
+
+33
+00:02:17,520 --> 00:02:19,157
+Like literally better than I am.
+真的，比我还强
+
+34
+00:02:19,207 --> 00:02:21,952
+It helps that it sees in all directions, which I can't.
+它能全方位观察，而我做不到
+
+35
+00:02:22,002 --> 00:02:24,588
+But the technology is fantastic.
+但这项技术实在太棒了
+
+36
+00:02:24,638 --> 00:02:28,750
+It's the kind of thing where this is a good kind of superhum, right?
+这正是那种令人欣喜的超人能力，对吧？
+
+37
+00:02:28,800 --> 00:02:30,278
+We talk about the AI revolution.
+我们在谈论人工智能的革命。
+
+38
+00:02:30,328 --> 00:02:36,175
+It's certainly in the air and one of the reasons why many people came to the conference this year, but there are great things going on.
+这股浪潮确实扑面而来，也是今年许多人前来参会的原因之一，但更令人振奋的是，目前正有许多精彩的事情在发生。
+
+39
+00:02:36,225 --> 00:02:42,088
+And if we can save some fraction of the 40,000 lives a year that are lost here in America to better driving,
+如果我们能挽救每年在美国因驾驶事故而失去的四万条生命中的哪怕一小部分，
+
+40
+00:02:42,138 --> 00:02:49,852
+if we can reduce property damage, if cars can just be a thing that works for us, then how much better are our lives be?
+如果我们能减少财产损失，如果汽车真的能成为为我们所用的可靠工具，那么我们的生活会变得多好？
+
+41
+00:02:49,902 --> 00:02:55,291
+So, by way of introduction, our keynote speaker for the conference is Daniel Rosenband.
+作为开场介绍，本次大会的主题演讲嘉宾是丹尼尔·罗森班德。
+
+42
+00:02:55,341 --> 00:02:59,114
+He and I joined Google around the same time and have known each other for most of our
+他和我几乎在同一时间加入谷歌，多年来一直相识相知，
+
+43
+00:02:59,164 --> 00:03:04,183
+time at Google because back at the time there was kind of a secretive hardware community inside of Google.
+因为当时谷歌内部有一个相对保密的硬件团队。
+
+44
+00:03:04,233 --> 00:03:08,221
+I think when we first started working, Google wasn't out about doing hardware projects.
+我想，当我们刚开始工作时，谷歌还不太愿意公开进行硬件项目。
+
+45
+00:03:08,271 --> 00:03:09,795
+And so it's uh been super cool.
+所以这真的非常酷。
+
+46
+00:03:09,845 --> 00:03:17,150
+Daniel actually spoke at Hot Chips nine years ago uh in a similar keynote, but there's way more to talk about uh today.
+丹尼尔九年前曾在 Hot Chips 大会上做过类似的主旨演讲，但今天要讲的内容要丰富得多。
+
+47
+00:03:17,200 --> 00:03:20,380
+You can see his bio in the uh Slack channel.
+你可以在 Slack 频道里看到他的个人简介。
+
+48
+00:03:20,430 --> 00:03:29,503
+He has founded startups and designed DRAMs and spent the last 13 years at Waymo making their compute be what it needs to be.
+他创办过初创公司，设计过 DRAM，并在过去十三年里在 Waymo 工作，致力于让他们的计算能力达到所需水平。
+
+49
+00:03:29,553 --> 00:03:32,642
+Um, I was going to say something about the the depth of time.
+嗯，我想说一下时间的深度。
+
+50
+00:03:32,692 --> 00:03:33,322
+Oh, yes.
+噢，是的。
+
+51
+00:03:33,372 --> 00:03:38,240
+And from my personal perspective, Daniel is the constant person at Waymo,
+从我个人的角度来看，丹尼尔是 Waymo 里始终不变的那个人，
+
+52
+00:03:38,290 --> 00:03:43,028
+the person who as long as I've been here has been the person I could call up and say, "Hey, heard about this.
+自从我来到这里，他就是我随时可以打电话说“嘿，听说了这件事，
+
+53
+00:03:43,078 --> 00:03:45,409
+Is there some interesting thing we should talk about there,
+有没有什么有趣的内容值得我们讨论一下，
+
+54
+00:03:45,459 --> 00:03:51,537
+it's been super cool to have somebody with that degree of stability and persistence during the last few years.
+近几年能有这样一位稳定且坚持不懈的伙伴，真的非常棒。
+
+55
+00:03:51,587 --> 00:03:55,691
+So, I'm really psyched about his talk today and I hope you enjoy it as much as we do."
+所以，我非常期待他今天的演讲，希望你们也能像我们一样享受其中。"
+
+56
+00:03:55,741 --> 00:03:57,389
+Daniel, please take it away.
+丹尼尔，请开始吧。
+
+57
+00:03:57,439 --> 00:04:04,030
+Thank you, Cliff.
+谢谢，克里夫。
+
+58
+00:04:04,080 --> 00:04:05,722
+It's really good to be here.
+很高兴来到这里。
+
+59
+00:04:05,772 --> 00:04:15,642
+Um it's been a long journey at Waymo with really amazing progress and of course a lot lot is a lot of that is due to progress on the silicon side.
+嗯，在 Waymo 的这段旅程中，我们取得了非常惊人的进展，当然，这其中很大一部分要归功于芯片技术的进步。
+
+60
+00:04:15,692 --> 00:04:25,641
+Um now when we think about silicon these days of course it is all about AI right its power systems its interconnects its compute its
+嗯，如今我们谈到芯片，当然都围绕着 AI：电源系统、互连、计算、内存系统。
+
+61
+00:04:25,691 --> 00:04:35,110
+memory system right everything funnels into AI when you think about where does that AI live of course most of it today is in the
+内存系统——一切都汇入 AI。当你思考 AI 在哪里运行时，今天大部分都在
+
+62
+00:04:35,160 --> 00:04:42,017
+data centers right enormous buildings gigawatts of power but increasingly also right
+数据中心：巨大的建筑、千兆瓦级的电力。但越来越多地，
+
+63
+00:04:42,067 --> 00:04:47,913
+we have these cars driving around physical AI physical systems that very very
+我们也有这些在道路上行驶的汽车——物理 AI、物理系统，它们非常非常
+
+64
+00:04:47,963 --> 00:04:57,259
+much rely on AI and within these physical systems of course we also have a tremendous amount of compute and semiconductors to make that possible.
+依赖 AI。当然，在这些物理系统中，我们也有大量计算和半导体来实现这一点。
+
+65
+00:04:57,309 --> 00:05:01,257
+So hopefully today you'll see a little bit of our journey as a company
+所以希望今天你们能看到我们公司的一小段发展历程，
+
+66
+00:05:01,307 --> 00:05:06,928
+and how important the silicon aspects are to enable compute and our autonomous drives.
+以及硅基技术对实现计算和自动驾驶有多重要。
+
+67
+00:05:06,978 --> 00:05:11,538
+Um as part of that hopefully you also see a little bit of contrast between
+作为其中一部分，希望你们也能看到一些对比：
+
+68
+00:05:11,588 --> 00:05:20,030
+what happens in the digital pure digital world and physical world in terms of AI systems.
+在 AI 系统方面，纯数字世界与物理世界有什么不同。
+
+69
+00:05:20,080 --> 00:05:28,551
+Now when we when we think about kind of physical AI few things are are clearly different right one is
+当我们思考物理 AI 时，有几个方面显然不同。第一是
+
+70
+00:05:28,601 --> 00:05:34,589
+just a physical scale right we want to run the biggest models we can on the car but we only
+物理尺度：我们想在车里运行尽可能大的模型，但我们只有
+
+71
+00:05:34,639 --> 00:05:41,862
+have sort of a car's worth of compute for us that's a pizza box um we we also care very
+一辆车那么大的计算资源——对我们来说就是一个披萨盒。我们还非常
+
+72
+00:05:41,912 --> 00:05:50,045
+much about latency right we we have a real-time system when you're talking to your to your favorite chat AI Right?
+在意延迟。我们是一个实时系统；而当你和喜欢的聊天 AI 对话时，
+
+73
+00:05:50,095 --> 00:05:55,416
+Sometimes it takes seconds, sometimes it takes minutes to respond in a physical AI system.
+有时要几秒、有时要几分钟才响应。在物理 AI 系统里，
+
+74
+00:05:55,466 --> 00:05:56,761
+That's not possible.
+这不可能。
+
+75
+00:05:56,811 --> 00:05:57,181
+Right?
+对吧？
+
+76
+00:05:57,211 --> 00:06:03,342
+We have real time latency constraints usually in the millisecond range and we need to solve for those.
+我们通常面临毫秒级的实时延迟约束，必须解决这些问题。
+
+77
+00:06:03,392 --> 00:06:09,521
+And then the third aspect that's really fundamentally different is a cost of errors, right?
+然后第三个根本不同的方面是错误的成本，对吧？
+
+78
+00:06:09,571 --> 00:06:12,188
+These are big systems moving around.
+这些是四处移动的大型系统。
+
+79
+00:06:12,238 --> 00:06:14,979
+Could be robots, could be cars, right?
+可能是机器人，也可能是汽车，对吧？
+
+80
+00:06:15,029 --> 00:06:18,505
+And they need to behave well in the world.
+它们需要在现实世界中表现良好。
+
+81
+00:06:18,555 --> 00:06:21,875
+Um, and maybe just one simple anecdote, right?
+呃，或许就举一个简单的例子吧，对吧？
+
+82
+00:06:21,925 --> 00:06:26,695
+Like, uh, was recently on vacation with my daughter.
+比如，最近我和女儿去度假。
+
+83
+00:06:26,745 --> 00:06:28,510
+We were creating a horse game.
+我们在玩一个马的游戏。
+
+84
+00:06:28,560 --> 00:06:32,729
+A horse had two legs and was jumping backwards over its jump.
+那匹马有两条腿，正朝后跳过障碍物。
+
+85
+00:06:32,779 --> 00:06:40,684
+Um, and that's that's still pretty good and impressive for AI, but those types of things in a physical system, right, are not quite acceptable.
+嗯，对 AI 来说这仍然相当不错且令人印象深刻，但在物理系统中，这类情况显然无法接受。
+
+86
+00:06:40,734 --> 00:06:42,867
+And she's the biggest critique, right?
+而她正是最严厉的批评者，对吧？
+
+87
+00:06:42,917 --> 00:06:48,872
+when she's in a Waymo car, she'll she'll definitely notice when we stutter for a quarter second at an intersection,
+当她坐在 Waymo 的车里时，如果我们在路口卡顿零点二五秒，她一定会立刻察觉。
+
+88
+00:06:48,922 --> 00:06:56,269
+but that's sort of a level of of sort of what of a quality bar we need to read.
+但这也正是我们所需要达到的质量标准。
+
+89
+00:06:56,319 --> 00:07:04,016
+Now, of course, there's also the really important aspect of of what impact are we having with the the the self-driving cars,
+当然，还有一个非常重要的方面，就是我们自动驾驶汽车带来的实际影响。
+
+90
+00:07:04,066 --> 00:07:08,362
+and there one of the biggest ones, of course, is is just the safety.
+其中最重要的，当然是安全性。
+
+91
+00:07:08,412 --> 00:07:18,509
+When you when you look at cars in general across the world, about one person dies every 26 seconds, right, due to a car accident.
+当你纵观全球所有车辆，每 26 秒就有一人死于交通事故。
+
+92
+00:07:18,559 --> 00:07:30,030
+And so being engineers, being a company that's able to transform the world to help in those cases is of course a really awesome win.
+因此，作为工程师，作为一家有能力改变世界、帮助解决此类问题的公司，这无疑是一次巨大的成功。
+
+93
+00:07:30,080 --> 00:07:32,892
+So quick outline for the talk.
+那么，先快速介绍一下本次演讲的框架。
+
+94
+00:07:32,942 --> 00:07:37,054
+Um I'll give you a quick overview of where we've been within Waymo, right?
+嗯，我将简要回顾一下我们在 Waymo 的发展历程。
+
+95
+00:07:37,104 --> 00:07:44,038
+what our journey has been, give a a sense of how our sensor suite has evolved and then dive into compute,
+介绍我们的传感器系统是如何演进的，然后深入探讨计算部分，
+
+96
+00:07:44,088 --> 00:07:51,709
+finishing with what our ML models look like and what is really motivating all that compute.
+最后展示我们的机器学习模型是什么样子，以及是什么真正推动了如此庞大的计算需求。
+
+97
+00:07:51,759 --> 00:07:59,806
+So first a look back right we started Waymo in about 2009 um 10 years ago gave a talk
+首先回顾一下，我们大约在 2009 年启动了 Waymo 项目。十年前我做过一次演讲，
+
+98
+00:07:59,856 --> 00:08:06,250
+and was looking at some of those slides and you'll see there's sort of a the challenge picture to the
+翻看那些幻灯片时，你会看到左边有一张挑战性图片
+
+99
+00:08:06,300 --> 00:08:12,221
+left right at the time this was a really really difficult scene for us to to support right you can
+当时，这对我们来说是一个非常非常困难的场景，你看
+
+100
+00:08:12,271 --> 00:08:19,950
+see there's a traffic light that's clearly green there's another traffic light that's occluded by a red red object Um,
+有一个交通灯明显是绿色的，另一个交通灯却被一个红色物体遮挡了
+
+101
+00:08:20,000 --> 00:08:27,149
+and sort of having the contextual information, making that really, really longtail decision, right?
+要获取上下文信息，做出这种长尾判断，真的非常困难
+
+102
+00:08:27,199 --> 00:08:30,622
+Do you call this light red or do you call it green?
+你会把这盏灯判断为红色还是绿色？
+
+103
+00:08:30,672 --> 00:08:32,871
+Is not an easy thing, right?
+这并不是一件容易的事
+
+104
+00:08:32,921 --> 00:08:42,186
+And it's an example where it's easy to be right 90% 99% of the time, but traffic lights, you really want to be right all the time.
+这是一个很容易做到 90%、99% 正确率的例子，但对交通灯来说，你必须每次都判断正确
+
+105
+00:08:42,236 --> 00:08:45,469
+And so, at the time, this was a really hard problem.
+所以当时，这是一个非常棘手的问题
+
+106
+00:08:45,519 --> 00:08:52,190
+Um, today I I I I punched this into into Gemini, one of our flash models, right?
+而今天，我把这个场景输入到了Gemini，我们的一款快速模型中
+
+107
+00:08:52,240 --> 00:08:59,950
+Query that is is a traffic light red or green and it can immediately tell you, right, what's happening in this scene.
+询问“这个交通灯是红的还是绿的”，它能立刻告诉你这个场景中发生了什么
+
+108
+00:09:00,000 --> 00:09:10,430
+So sort of AI has definitely advanced a long way and and helps tremendously in our journey to to have a really robust system.
+所以可以说，人工智能确实已经取得了长足进步，极大地帮助了我们构建一个真正可靠的系统
+
+109
+00:09:10,480 --> 00:09:14,112
+From a compute perspective, things have changed a lot too, right?
+从计算角度来看，情况也发生了很大变化，对吧？
+
+110
+00:09:14,162 --> 00:09:21,261
+At the time we were just transitioning from surface streets to uh sorry from freeway driving to surface streets.
+当时我们正从高速公路驾驶转向普通道路驾驶。
+
+111
+00:09:21,311 --> 00:09:25,177
+We knew the amount of compute would increase dramatically with that.
+我们知道，随着这一转变，计算需求将大幅增加。
+
+112
+00:09:25,227 --> 00:09:25,570
+Right?
+对吧？
+
+113
+00:09:25,600 --> 00:09:30,222
+Like surface streets you have more agents you you more people you interact with.
+普通道路上有更多交通参与者，与你互动的人也更多。
+
+114
+00:09:30,272 --> 00:09:33,651
+The traffic rules tend to be more complicated.
+交通规则也变得更加复杂。
+
+115
+00:09:33,701 --> 00:09:37,135
+Um and so we were projecting a big bump in compute.
+所以我们预估计算需求会有显著提升。
+
+116
+00:09:37,185 --> 00:09:39,797
+Um a fair amount of that was CPU right?
+其中相当一部分来自 CPU，对吧？
+
+117
+00:09:39,847 --> 00:09:44,030
+We were doing a lot of planning decisions on CPU at the time.
+当时我们大量依赖 CPU 进行规划决策。
+
+118
+00:09:44,080 --> 00:09:47,557
+It was also our first big bump on the ML side, right?
+这也是我们在机器学习方面迎来的首次重大提升，对吧？
+
+119
+00:09:47,607 --> 00:09:52,988
+Where GPUs and other technologies started really advancing and being amazing at ML.
+从那时起，GPU 及其他技术开始真正快速发展，在机器学习领域表现卓越。
+
+120
+00:09:53,038 --> 00:09:55,630
+And so we we saw a nice uptick.
+于是我们看到了明显的增长。
+
+121
+00:09:55,680 --> 00:09:58,894
+Now you also see the picture on the left, right?
+现在你也能看到左边的图像，对吧？
+
+122
+00:09:58,944 --> 00:10:01,357
+This was our inspiration at the time, right?
+那就是我们当时获得的灵感，对吧？
+
+123
+00:10:01,407 --> 00:10:04,086
+Kind of thinking 50 TOPS, 100 TOPS.
+大致在思考50 TOPS、100 TOPS的算力。
+
+124
+00:10:04,136 --> 00:10:05,790
+Wow, that's amazing.
+哇，这太棒了。
+
+125
+00:10:05,840 --> 00:10:08,518
+Um the world has of course changed.
+嗯，世界当然已经变了。
+
+126
+00:10:08,568 --> 00:10:12,813
+Um and we we have a lot more TOPS now and we use them.
+嗯，我们现在拥有的算力更多了，也正在使用它们。
+
+127
+00:10:12,863 --> 00:10:16,990
+Uh so is is good.
+嗯，这样很好。
+
+128
+00:10:17,040 --> 00:10:22,014
+In terms of vehicles, um we are now on our sixth generation platform.
+就车辆而言，我们现在正处于第六代平台。
+
+129
+00:10:22,064 --> 00:10:27,390
+Our compute often iterates a little bit more quickly than these vehicle platforms.
+我们的计算平台通常比这些车辆平台迭代得更快一些。
+
+130
+00:10:27,440 --> 00:10:30,366
+Um but you can see a gradual transition, right?
+嗯，你可以看到一个渐进的过渡过程，对吧？
+
+131
+00:10:30,416 --> 00:10:35,310
+We started initially with basically all off-the-shelf components.
+我们最初基本上全部使用现成的组件。
+
+132
+00:10:35,360 --> 00:10:38,766
+Second generation started integrating sensors.
+第二代开始整合传感器。
+
+133
+00:10:38,816 --> 00:10:47,908
+Third generations all all Waymo hardware and so has evolved and with closer and closer relationships with the OEMs as well.
+第三代产品全部采用 Waymo 的硬件，同时也与原始设备制造商建立了越来越紧密的合作关系。
+
+134
+00:10:47,958 --> 00:10:50,432
+We're now with a sixth generation.
+我们现在已进入第六代产品。
+
+135
+00:10:50,482 --> 00:10:52,686
+We have an Ojai vehicle, right?
+我们有一辆 Ojai 车辆，对吧？
+
+136
+00:10:52,736 --> 00:10:57,070
+Very carefully designed to be a really awesome self-driving vehicle.
+经过精心设计，是一款非常出色的自动驾驶车辆。
+
+137
+00:10:57,120 --> 00:10:58,750
+Also a Hyundai Ioniq 5.
+还有一辆现代 Ioniq 5。
+
+138
+00:10:58,800 --> 00:11:05,469
+We have a close partnership to to launch that soon.
+我们正与他们紧密合作，即将推出这款车型。
+
+139
+00:11:05,519 --> 00:11:10,892
+Now, when you think about the trajectory of what were the capabilities of a Waymo driver,
+当你思考 Waymo 驾驶员能力的发展轨迹时，
+
+140
+00:11:10,942 --> 00:11:16,750
+right, this is a video from 2009 and maps that we actually drove, right?
+这是 2009 年的视频，展示的是我们实际驾驶过的地图，对吧？
+
+141
+00:11:16,800 --> 00:11:23,196
+These were kind of 10 times 100 mile challenge routes, right, that Google founders gave us.
+这些是谷歌创始人给我们设定的“十乘一百英里”挑战路线，对吧？
+
+142
+00:11:23,246 --> 00:11:28,190
+And the goal was to drive these routes with zero disengages.
+目标是全程零脱离驾驶。
+
+143
+00:11:28,240 --> 00:11:33,689
+And as you can see from the maps or the videos, these are actually pretty complicated routes, right?
+从地图或视频中可以看出，这些路线实际上相当复杂，对吧？
+
+144
+00:11:33,739 --> 00:11:40,430
+Traffic lights, lane changes, pedestrians, bicyclists, toll booths, bridges, right?
+交通灯、变道、行人、骑自行车的人、收费站、桥梁，对吧？
+
+145
+00:11:40,480 --> 00:11:41,700
+All kinds of things.
+各种各样的事情。
+
+146
+00:11:41,750 --> 00:11:46,670
+And within about 18 months, we we had this working, right?
+大约18个月后，我们就让这个系统跑起来了，对吧？
+
+147
+00:11:46,720 --> 00:11:49,006
+Which of course gave us tremendous confidence.
+这当然让我们信心倍增。
+
+148
+00:11:49,056 --> 00:11:51,554
+Hey, we can build self-driving cars.
+嘿，我们可以制造自动驾驶汽车。
+
+149
+00:11:51,604 --> 00:11:54,418
+But it's really a demo, right?
+但这其实只是一个演示，对吧？
+
+150
+00:11:54,468 --> 00:11:56,467
+A very capable demo.
+一个非常出色的演示。
+
+151
+00:11:56,517 --> 00:12:02,442
+Um but it is not fully self-driving right we still had a safety driver in the driver's seat.
+但还不是完全自动驾驶，我们仍然让安全驾驶员坐在驾驶座上。
+
+152
+00:12:02,492 --> 00:12:08,589
+Now technology-wise you can think right this is a time when we were using boosted decision trees random
+从技术角度来看，这是当时我们使用提升决策树和随机森林的时期。
+
+153
+00:12:08,639 --> 00:12:17,384
+forests right CNNs um transformers world models right these things didn't exist yet right so this is all based
+随机森林、CNN、Transformer、世界模型——这些概念当时都还不存在，所以这一切都是基于
+
+154
+00:12:17,434 --> 00:12:29,033
+on sort of pre pre new ML um technologies so where are we today right like 2009ish we we
+前深度学习时代的机器学习技术。那么我们现在处于什么阶段？比如 2009 年左右，我们……
+
+155
+00:12:29,083 --> 00:12:37,738
+completed those demos um it took us a good amount of time to get to fully driverless from there.
+完成那些演示后，从那里实现完全无人驾驶，我们花了不少时间。
+
+156
+00:12:37,788 --> 00:12:41,454
+Um, and then even more time to really deploy at scale.
+而且还有更多时间来真正实现大规模部署。
+
+157
+00:12:41,504 --> 00:12:44,149
+And you can see where we are today.
+你就能看到我们今天所处的位置。
+
+158
+00:12:44,199 --> 00:12:48,264
+We've driven over 200 million miles fully autonomously, right?
+我们已经实现了超过两亿英里的完全自动驾驶，对吧？
+
+159
+00:12:48,314 --> 00:12:52,994
+These are these are rides that users use the app and take.
+这些是用户通过 App 叫的行程。
+
+160
+00:12:53,044 --> 00:12:56,214
+Um, we we are operating in 15 cities.
+嗯，我们正在15个城市运营。
+
+161
+00:12:56,264 --> 00:12:59,982
+And just to think about the growth curve here, right?
+想想这里的增长曲线，对吧？
+
+162
+00:13:00,032 --> 00:13:05,043
+Our first 100 million miles took about 15 years.
+我们完成前1亿英里的路程大约花了15年。
+
+163
+00:13:05,093 --> 00:13:08,829
+Um our second 100 million miles took about 7 months.
+我们的第二个一亿英里用了大约 7 个月。
+
+164
+00:13:08,879 --> 00:13:14,830
+Um cities right from the time we did our first fully autonomous
+嗯，城市方面，从我们实现首个完全自动驾驶
+
+165
+00:13:14,880 --> 00:13:22,485
+driving mile um until we were in four cities took about eight years.
+里程，到进入四个城市，花了大约八年时间。
+
+166
+00:13:22,535 --> 00:13:26,622
+Just a few months ago, we launched in four cities in a single day.
+就在几个月前，我们一天之内在四个城市推出了服务。
+
+167
+00:13:26,672 --> 00:13:27,050
+Right?
+对吧？
+
+168
+00:13:27,080 --> 00:13:32,531
+So, we're at this inflection point where the technology has really matured.
+因此，我们正处在一个技术真正成熟的转折点上。
+
+169
+00:13:32,581 --> 00:13:38,990
+Um, it works as fully autonomous technology and we're able to deploy at scale.
+嗯，它作为完全自主的技术运行，我们能够实现规模化部署。
+
+170
+00:13:39,040 --> 00:13:41,589
+So, what's one of the things to think about here, right?
+那么，这里需要考虑的一件事是什么，对吧？
+
+171
+00:13:41,639 --> 00:13:44,953
+Like when you when you think about physical AI, right?
+比如当你想到物理 AI 的时候，对吧？
+
+172
+00:13:45,003 --> 00:13:47,589
+It it often is fairly easy.
+它通常相当容易。
+
+173
+00:13:47,639 --> 00:13:53,699
+um or maybe not easy, can still be hard, but you can get to a demo fairly quickly, right?
+嗯，或者可能并不容易，但仍然可能很难，不过你很快就能做出演示，对吧？
+
+174
+00:13:53,749 --> 00:13:56,270
+And these can be pretty impressive demos.
+而这些演示往往非常令人印象深刻。
+
+175
+00:13:56,320 --> 00:14:03,052
+But when you think about the product, and this whether it's robotics or self-driving cars or industrial controls, right?
+但当你考虑产品本身，无论是机器人、自动驾驶汽车还是工业控制，对吧？
+
+176
+00:14:03,102 --> 00:14:07,747
+Like very complicated systems that interact with the physical world, right?
+比如那些与物理世界交互的非常复杂的系统，对吧？
+
+177
+00:14:07,797 --> 00:14:16,589
+Making sure that all those full stack of nines are solved for is critical to have a product, right?
+确保所有全栈九个九的指标都得到解决，对打造产品至关重要，对吧？
+
+178
+00:14:16,639 --> 00:14:18,842
+And that's that's the journey we've been on here.
+这正是我们一直在走的旅程。
+
+179
+00:14:18,892 --> 00:14:21,838
+And of course there's many parts to the system.
+当然，系统包含许多部分。
+
+180
+00:14:21,888 --> 00:14:28,589
+Um compute is one area where where we've of course helped make that happen.
+嗯，计算是其中一个领域，我们当然在这方面助力实现了突破。
+
+181
+00:14:28,639 --> 00:14:34,859
+Now from a design philosophy standpoint, um we often think about these curves, right?
+从设计哲学的角度来看，我们通常会考虑这些曲线，对吧？
+
+182
+00:14:34,909 --> 00:14:40,456
+Like you you pick a technology and you know there's going to be a fairly quick ramp, right?
+比如你选择一项技术，就会知道它会迅速上升，对吧？
+
+183
+00:14:40,506 --> 00:14:41,783
+You can make progress.
+你可以取得进展。
+
+184
+00:14:41,833 --> 00:14:47,462
+you improve performance of a system whether it's reliability or scene understanding.
+你可以提升系统的性能，无论是可靠性还是场景理解能力。
+
+185
+00:14:47,512 --> 00:14:51,424
+Um and then at some point the curve flatlines.
+然后在某个时刻，曲线就会趋于平缓。
+
+186
+00:14:51,474 --> 00:14:56,841
+Um and for us we we've generally made the decision to make the the longer term
+对我们而言，我们通常会做出这样的决定：投入更长期、更艰难的赌注。
+
+187
+00:14:56,891 --> 00:15:03,964
+harder harder bets to achieve kind of the the best best possible outcome that we can envision.
+以实现我们所能设想的最好结果。
+
+188
+00:15:04,014 --> 00:15:11,413
+And often times that means right adding more things to our car, adding complexity, solving hard harder problems.
+这通常意味着要为我们的汽车增加更多功能，引入更多复杂性，解决更难的问题。
+
+189
+00:15:11,463 --> 00:15:14,904
+But our goal really is to have a superhuman driver.
+但我们的目标真正是打造一个超人驾驶员。
+
+190
+00:15:14,954 --> 00:15:21,550
+And the only way we can accomplish that is by aiming really as high as we can on these curves.
+而要实现这一点，唯一的方法就是尽可能地将这些曲线推到最高点。
+
+191
+00:15:21,600 --> 00:15:26,603
+And one classic example for that is when you think about the sensing systems, right?
+一个典型的例子就是感知系统，对吧？
+
+192
+00:15:26,653 --> 00:15:30,274
+All of you have probably seen some forms of discussion, right?
+你们可能都见过一些相关的讨论，对吧？
+
+193
+00:15:30,324 --> 00:15:33,550
+Should you have cars with camera only systems?
+你是否应该使用仅配备摄像头的系统来驾驶汽车？
+
+194
+00:15:33,600 --> 00:15:36,221
+Why are other sensors may be needed?
+为什么其他传感器可能是必要的？
+
+195
+00:15:36,271 --> 00:15:40,270
+Um, and you can reference, well, humans drive with two eyes.
+嗯，你可以参考一下，人类驾驶时是用两只眼睛的。
+
+196
+00:15:40,320 --> 00:15:43,949
+Um, why should a car not drive with two eyes?
+那么，为什么汽车不能也用两只眼睛来驾驶呢？
+
+197
+00:15:43,999 --> 00:15:46,670
+And the answer is actually pretty easy, right?
+其实答案相当简单，对吧？
+
+198
+00:15:46,720 --> 00:15:53,312
+Like we want a superhuman driver, a driver that has far fewer incidents as a human does.
+我们想要的是一位超人驾驶员，其事故率远低于人类驾驶员。
+
+199
+00:15:53,362 --> 00:15:57,772
+And so having having the additional technologies to assist there, right,
+因此，引入额外的技术来辅助驾驶，对吧，
+
+200
+00:15:57,822 --> 00:16:03,143
+definitely adds complexity to our cars but dramatically boosts the performance.
+虽然确实增加了汽车的复杂性，但能显著提升性能。
+
+201
+00:16:03,193 --> 00:16:06,349
+And so these are kind of the decisions we make, right?
+所以这些就是我们做出的一些决策，对吧？
+
+202
+00:16:06,399 --> 00:16:11,320
+Technologies change over time and we we swap, we make different decisions,
+技术会随时间变化，我们会进行替换，做出不同的选择，
+
+203
+00:16:11,370 --> 00:16:21,630
+but our goal always is to really be at the maximum performance level to deliver the best driver that we can.
+但我们的目标始终是达到最高性能水平，以提供我们能做到的最佳驾驶员。
+
+204
+00:16:21,680 --> 00:16:24,622
+So looking at the the Waymo driver a little bit.
+所以我们来稍微看一下 Waymo 的驾驶员。
+
+205
+00:16:24,672 --> 00:16:32,118
+Um it's a combination of course of a hardware suite and and a software suite.
+嗯，这是一套硬件和一套软件的结合。
+
+206
+00:16:32,168 --> 00:16:36,140
+Um here we we look at the the vehicle itself.
+嗯，这里我们看的是车辆本身。
+
+207
+00:16:36,190 --> 00:16:38,584
+We we have multimodal sensors.
+我们配备了多模态传感器。
+
+208
+00:16:38,634 --> 00:16:43,070
+We have cameras, radars, lidars and microphones.
+包括摄像头、雷达、激光雷达和麦克风。
+
+209
+00:16:43,120 --> 00:16:45,522
+Then as you'll see in the trunk is our computer.
+然后你看到的后备箱里就是我们的计算机。
+
+210
+00:16:45,572 --> 00:16:49,230
+These are all sensors that complement each other.
+这些传感器彼此互补。
+
+211
+00:16:49,280 --> 00:16:49,790
+Right?
+对吧？
+
+212
+00:16:49,840 --> 00:16:53,402
+We we have sort of our sensor fusion networks.
+我们有传感器融合网络。
+
+213
+00:16:53,452 --> 00:16:56,445
+We have encoders for each of the sensors.
+每个传感器都有对应的编码器。
+
+214
+00:16:56,495 --> 00:16:58,683
+A sensor fusion network combines them.
+传感器融合网络将它们整合在一起。
+
+215
+00:16:58,733 --> 00:17:02,129
+And so we get a holistic view of of the overall world.
+于是我们就能获得对整个世界的一个整体视图。
+
+216
+00:17:02,179 --> 00:17:08,394
+And each of the sensors, right, depending on the scene is of course contributing different amounts of data to that.
+而每个传感器，根据场景的不同，当然会贡献不同数量的数据。
+
+217
+00:17:08,444 --> 00:17:16,655
+And if you think about the sensors, right, like we have high high resolution cameras, they can see color, but it's a passive sensor, right?
+如果你考虑传感器的话，比如我们有高分辨率的摄像头，它们能识别颜色，但这是被动式传感器，对吧？
+
+218
+00:17:16,705 --> 00:17:22,199
+if it's dark, if you're looking into a really glaring sun, it may not be the optimal sensor.
+如果环境黑暗，或者你正对着强烈的阳光，这种传感器可能就不是最佳选择。
+
+219
+00:17:22,249 --> 00:17:27,629
+And so their lidar and radar can complement things really well.
+因此，它们的激光雷达和毫米波雷达可以很好地互补。
+
+220
+00:17:27,679 --> 00:17:29,650
+And just to go through an example of that.
+就用一个例子来说明一下。
+
+221
+00:17:29,700 --> 00:17:32,526
+Um, so here here we're showing an image.
+嗯，这里我们展示一张图像。
+
+222
+00:17:32,576 --> 00:17:35,597
+Um, it's in a dust storm in Phoenix, right?
+这是在凤凰城的一场沙尘暴中，对吧？
+
+223
+00:17:35,647 --> 00:17:40,019
+You can you can look at it and kind of see the car in front of you.
+你可以看这张图，大概能分辨出前面那辆车。
+
+224
+00:17:40,069 --> 00:17:44,417
+So maybe not that bad, but then you add lidar to it, right?
+所以可能还不算太糟糕，但当你加上激光雷达后，情况就不同了，对吧？
+
+225
+00:17:44,467 --> 00:17:47,905
+And you see there's a pedestrian right at the side of a road.
+你就能看到路边有一个行人。
+
+226
+00:17:47,955 --> 00:17:52,430
+And using this information, we of course know to be cautious, right?
+利用这些信息，我们当然会提高警惕，对吧？
+
+227
+00:17:52,480 --> 00:17:55,983
+Like that pedestrian may not actually be able to see our car, right?
+因为那个行人可能实际上看不到我们的车，对吧？
+
+228
+00:17:56,033 --> 00:17:57,292
+This is a dust storm.
+这是一场沙尘暴。
+
+229
+00:17:57,342 --> 00:18:00,123
+They may take a step into the road, right?
+他们可能会跨步走上马路，对吧？
+
+230
+00:18:00,173 --> 00:18:03,423
+And so having that visibility is is of course
+因此，当你想要
+
+231
+00:18:03,473 --> 00:18:05,101
+really important when you want
+最安全的
+
+232
+00:18:05,151 --> 00:18:05,629
+the safest
+驾驶员
+
+233
+00:18:05,679 --> 00:18:11,754
+driver
+时，这种视野当然
+
+234
+00:18:11,804 --> 00:18:19,629
+you can.
+至关重要。
+
+235
+00:18:19,679 --> 00:18:21,219
+Here's another example, right?
+这是另一个例子，对吧？
+
+236
+00:18:21,269 --> 00:18:26,311
+You see the car driving and you see it making sort of a bit of a zigzag, right?
+你看到那辆车在行驶，还看到它有点像在做蛇形路线，对吧？
+
+237
+00:18:26,361 --> 00:18:29,841
+You're probably wondering why, right?
+你可能在想这是为什么，对吧？
+
+238
+00:18:29,891 --> 00:18:30,678
+This is why.
+这就是原因。
+
+239
+00:18:30,728 --> 00:18:40,946
+Um, there's actually several pedestrians in the median of this freeway that are about to climb over it and go into the road using just cameras.
+其实，这条高速公路的中央隔离带里有好几位行人，正准备翻越护栏进入车道，
+
+240
+00:18:40,996 --> 00:18:43,726
+You could not see that, right?
+只靠摄像头，你根本看不到，对吧？
+
+241
+00:18:43,776 --> 00:18:48,710
+And so here you can see the kind of merge sensor view right to the car is very clear, right?
+因此，你可以看到这种融合传感器视图——那辆车非常清晰，对吧？
+
+242
+00:18:48,760 --> 00:18:55,470
+There are people climbing into the road and the car should avoid them.
+有人正在爬进车道，汽车应当避开他们。
+
+243
+00:18:55,520 --> 00:18:59,930
+Now camera of course is a very important sensor to us as well.
+当然，摄像头对我们来说也是一个非常重要的传感器。
+
+244
+00:18:59,980 --> 00:19:05,428
+Um we have pretty much the best sort of high dynamic range imagers.
+嗯，我们基本上拥有最顶尖的高动态范围成像设备。
+
+245
+00:19:05,478 --> 00:19:11,568
+We do sophisticated image processing right for example temporal d noiseise right also other
+我们能进行复杂的图像处理，比如时间域去噪，以及其他操作。
+
+246
+00:19:11,618 --> 00:19:18,590
+things to really extract the best information that we can from our camera images.
+以及其他操作，尽可能从相机图像中提取最好的信息。
+
+247
+00:19:18,640 --> 00:19:26,021
+Now given this is a chips related conference um quickly we'll mention right like a lot we will be
+既然这是个芯片相关的会议，我们简单提一下：
+
+248
+00:19:26,071 --> 00:19:33,813
+talking about kind of a bigger compute digital um chips that we build and also others in the industry.
+我们要讲的是更大规模的计算数字芯片——我们自研的，也包括行业里其他人的。
+
+249
+00:19:33,863 --> 00:19:37,932
+Um we we also occasionally build silicon for our sensors.
+嗯，我们偶尔也会为传感器定制芯片。
+
+250
+00:19:37,982 --> 00:19:45,168
+Um one nice example is a sort of a a lidar processing um chip that lives within our lidars.
+一个不错的例子是我们激光雷达内部集成的激光雷达处理芯片。
+
+251
+00:19:45,218 --> 00:19:47,950
+You can think of it as a mixed signal chip, right?
+你可以把它看作是一种混合信号芯片，对吧？
+
+252
+00:19:48,000 --> 00:19:54,195
+Essentially what it's doing is you shoot a laser, it's measuring the time until the pulse returns.
+本质上，它的工作原理是发射一束激光，然后测量脉冲返回所需的时间。
+
+253
+00:19:54,245 --> 00:19:58,863
+Um, and then based on that, you can derive derive distance.
+嗯，然后基于这个，你可以推导出距离。
+
+254
+00:19:58,913 --> 00:20:04,250
+Now, one of the interesting things here is when you think about our sensors and ML models,
+现在，这里一个有趣的地方是，当我们思考传感器和机器学习模型时，
+
+255
+00:20:04,300 --> 00:20:10,325
+we generally want to ship as much data as we can, right, from the sensors into the ML models.
+我们通常希望尽可能多地将传感器数据传输到机器学习模型中，对吧？
+
+256
+00:20:10,375 --> 00:20:13,119
+And so there's constant tension, right?
+所以一直存在这种张力，对吧？
+
+257
+00:20:13,169 --> 00:20:16,030
+like how big of an interconnect can you build in a car?
+比如说，你能在汽车里构建多大的互连？
+
+258
+00:20:16,080 --> 00:20:18,733
+How much data, right, can we cross?
+我们能传输多少数据，对吧？
+
+259
+00:20:18,783 --> 00:20:21,722
+Which data should we select in the sensor head?
+在传感器前端应该选择哪些数据？
+
+260
+00:20:21,772 --> 00:20:25,981
+Um and so here showing just a very simplistic view of that, right?
+嗯，这里只是展示了一个非常简化的视图，对吧？
+
+261
+00:20:26,031 --> 00:20:29,431
+Like you can do threshold-based um compression, right?
+比如你可以采用基于阈值的压缩，对吧？
+
+262
+00:20:29,481 --> 00:20:33,470
+Where we say only only pulses above some level we return.
+我们只返回超过某个阈值的脉冲。
+
+263
+00:20:33,520 --> 00:20:39,318
+Um but there very sophisticated algorithms and at some point perhaps even ML driven, right?
+嗯，但也有非常复杂的算法，甚至在某些情况下由机器学习驱动，对吧？
+
+264
+00:20:39,368 --> 00:20:48,749
+decision making within the sensor heads for what what is the most useful information to pass to the core compute.
+在传感器前端进行决策，判断哪些信息对核心计算最有用。
+
+265
+00:20:48,799 --> 00:20:51,088
+So let's look at our compute a little bit.
+那么我们来稍微看一下我们的计算能力。
+
+266
+00:20:51,138 --> 00:20:57,390
+Um so physical AI there actually are multiple different compute surfaces.
+事实上，物理 AI 存在多种不同的计算平台。
+
+267
+00:20:57,440 --> 00:21:01,146
+Most of the time we spend on what you see in the top left, right?
+我们大部分时间都在处理你看到的左上角的内容，对吧？
+
+268
+00:21:01,196 --> 00:21:03,244
+Our high high performance computer.
+我们的高性能计算机。
+
+269
+00:21:03,294 --> 00:21:09,550
+We call it our our BFC, our big friendly uh computer.
+我们称它为 BFC，也就是我们那个又大又友好的计算机。
+
+270
+00:21:09,600 --> 00:21:14,646
+Um and so so of course super important.
+呃，当然非常重要。
+
+271
+00:21:14,696 --> 00:21:17,870
+Um but there also are other computers that are very important.
+呃，但还有其他同样重要的计算机。
+
+272
+00:21:17,920 --> 00:21:20,563
+Um perhaps even increasingly so, right?
+呃，甚至可能越来越重要，对吧？
+
+273
+00:21:20,613 --> 00:21:22,317
+One is a control computer.
+其中一个是控制计算机。
+
+274
+00:21:22,367 --> 00:21:26,287
+You can think of this a bit of a brain stem of a car, right?
+你可以把它想象成汽车的脑干，对吧？
+
+275
+00:21:26,337 --> 00:21:29,628
+like it interfaces with the brakes, the throttle, right?
+它连接刹车和油门，对吧？
+
+276
+00:21:29,678 --> 00:21:33,214
+Really making making decisions that actuate the vehicle.
+真正做出决策，来驱动车辆运行。
+
+277
+00:21:33,264 --> 00:21:37,150
+And so safety is paramount with that type of computer.
+因此，对于这类计算机而言，安全是首要考虑的。
+
+278
+00:21:37,200 --> 00:21:38,993
+We have infotainment, right?
+我们有信息娱乐系统，对吧？
+
+279
+00:21:39,043 --> 00:21:41,034
+Today you go in our cars, right?
+现在你进入我们的汽车，对吧？
+
+280
+00:21:41,084 --> 00:21:44,847
+We have a nice user interface, a touch screen.
+我们有一个不错的用户界面，带触摸屏。
+
+281
+00:21:44,897 --> 00:21:53,137
+We've gotten feedback that kind of a visibility you get into what's happening around the car is really important, the voice prompts.
+我们收到了反馈，能够清晰看到车辆周围发生的情况，以及语音提示，这一点非常重要。
+
+282
+00:21:53,187 --> 00:21:55,906
+But you can also think about the future, right?
+但你也可以展望未来，对吧？
+
+283
+00:21:55,956 --> 00:22:04,825
+Where will cars be three, four, five years from now when they're purpose-built for sort of in in vehicle experience when you're not driving the car?
+三年、四年、五年后，当汽车专为车内体验而设计，而你不再驾驶时，它们会变成什么样？
+
+284
+00:22:04,875 --> 00:22:07,163
+And so, lots of opportunities there.
+所以，那里有大量机会。
+
+285
+00:22:07,213 --> 00:22:12,749
+Um, of course, integration with a vehicle, but also interesting AI applications.
+当然，要与车辆集成，同时还有有趣的 AI 应用。
+
+286
+00:22:12,799 --> 00:22:16,410
+And then the last compute surface I'll mention is connectivity.
+然后我提到的最后一个计算面是连接性。
+
+287
+00:22:16,460 --> 00:22:22,137
+Um, of course, the car itself makes all the decisions on how it should drive, right?
+当然，汽车本身会做出所有关于如何驾驶的决策，对吧？
+
+288
+00:22:22,187 --> 00:22:24,686
+So we we we use local compute.
+所以我们使用本地计算。
+
+289
+00:22:24,736 --> 00:22:28,156
+Um we don't don't farm that out to elsewhere.
+嗯，我们不会把这部分外包到其他地方。
+
+290
+00:22:28,206 --> 00:22:30,910
+But still connectivity can be important, right?
+但连接性仍然很重要，对吧？
+
+291
+00:22:30,960 --> 00:22:33,858
+Some of that is just for user interactions, right?
+其中一些只是用于用户交互，对吧？
+
+292
+00:22:33,908 --> 00:22:37,408
+You're we've we've announced Gemini in our car.
+我们已经在汽车中推出了 Gemini。
+
+293
+00:22:37,458 --> 00:22:42,955
+Um other things you want to watch a YouTube video, um play Spotify, right?
+嗯，还有你想看 YouTube 视频，或者播放 Spotify，对吧？
+
+294
+00:22:43,005 --> 00:22:46,990
+These are all things that require connectivity.
+这些都需要连接性。
+
+295
+00:22:47,040 --> 00:22:48,960
+Um also the car calls home, right?
+嗯，汽车也会主动与总部通信，对吧？
+
+296
+00:22:49,010 --> 00:22:53,828
+just operationally, we want to know where are the cars, are they behaving safely, right?
+从运营角度来说，我们想知道车辆在哪里，它们是否安全运行，对吧？
+
+297
+00:22:53,878 --> 00:22:54,952
+Things like that.
+像这样的事情。
+
+298
+00:22:55,002 --> 00:22:58,730
+And so connectivity is an area we're investing increasingly.
+所以连接性是我们正在加大投入的领域。
+
+299
+00:22:58,780 --> 00:23:09,684
+Um, and like challenge of course is how do you get connectivity when you hit that long tail in terms of congestion or or sort of multipath problems.
+嗯，当然面临的挑战是，当遇到拥堵或多重路径问题这类长尾情况时，如何保证连接性。
+
+300
+00:23:09,734 --> 00:23:12,129
+Many many challenges we see there.
+我们看到那里存在许多挑战。
+
+301
+00:23:12,179 --> 00:23:15,678
+And so I think hopefully this gives you a perspective, right?
+所以我认为这或许能给你一个视角，对吧？
+
+302
+00:23:15,728 --> 00:23:22,063
+Similar things apply to I think phys whether you're looking at robotics or or other physical applications right
+我觉得无论是机器人还是其他物理应用，类似的情况都适用，对吧？
+
+303
+00:23:22,113 --> 00:23:31,056
+the really high performance compute is is an anchor but there are other compute surfaces that really matter
+高性能计算确实是核心，但其他计算层面也同样重要。
+
+304
+00:23:31,106 --> 00:23:38,090
+too so let's look at the high performance compute um what does it do so first right we
+那么，我们来看看高性能计算。它能做什么？首先，
+
+305
+00:23:38,140 --> 00:23:47,950
+have a sensors cameras, lidars, radars all feed high bandwidth data they feed feed that into into our BFC,
+我们有传感器、摄像头、激光雷达和雷达，它们都提供高带宽数据，输入到我们的 BFC，
+
+306
+00:23:48,000 --> 00:23:48,349
+right?
+对吧？
+
+307
+00:23:48,379 --> 00:23:51,070
+And that's that's where perception runs, right?
+这就是感知系统运行的地方，对吧？
+
+308
+00:23:51,120 --> 00:23:57,851
+Like it understands where we are in the world, what's happening around the vehicle and then makes the decisions, right?
+它能理解我们所处的世界位置，周围发生了什么，然后做出决策，对吧？
+
+309
+00:23:57,901 --> 00:24:00,866
+Based on what it predicts, other agents will do, right?
+基于它预测其他智能体将采取的行动，对吧？
+
+310
+00:24:00,916 --> 00:24:04,694
+It will decide what what the next action should be.
+它会决定下一步应该采取什么行动。
+
+311
+00:24:04,744 --> 00:24:08,074
+And tra us usually the output is a trajectory, right?
+通常输出是一条轨迹，对吧？
+
+312
+00:24:08,124 --> 00:24:18,590
+car should move along a certain path at a certain velocity profile and then that moves into our control computer and vehicle actuation, right?
+汽车应沿着特定路径以特定速度曲线移动，然后进入控制计算机和车辆执行系统，对吧？
+
+313
+00:24:18,640 --> 00:24:26,509
+Which actually kind of performs the physical operations of a vehicle.
+实际上执行车辆的物理操作。
+
+314
+00:24:26,559 --> 00:24:28,771
+This is what our compute looked like in 2013.
+这就是我们在2013年时的计算系统的样子。
+
+315
+00:24:28,821 --> 00:24:34,957
+Um, some of the most fun times, um, but also clearly not scalable.
+呃，有些时候非常有趣，但显然不可扩展。
+
+316
+00:24:35,007 --> 00:24:42,859
+Um, so we we often puzzle together these we call them duct tape systems um to experiment to make sure that things work.
+呃，我们经常拼凑出一些我们称之为“胶带系统”的东西，用来实验，确保一切正常工作。
+
+317
+00:24:42,909 --> 00:24:45,798
+Um, in this case we'd actually drive around with it.
+在这种情况下，我们实际上会开着它到处跑。
+
+318
+00:24:45,848 --> 00:24:47,523
+We don't do that anymore.
+我们现在不再这么做了。
+
+319
+00:24:47,573 --> 00:24:55,550
+Um, but we today we have lab setups that that look at least a little bit similar to this.
+呃，但如今我们的实验室设置至少在外观上和这个有点相似。
+
+320
+00:24:55,600 --> 00:25:01,917
+Today our compute, right, like we work with a car companies, we have an amazing mechanical engineering team, right?
+如今我们的计算系统，嗯，我们与汽车公司合作，拥有一个非常出色的机械工程团队，对吧？
+
+321
+00:25:01,967 --> 00:25:04,762
+They they think about how to integrate everything, right?
+他们思考如何整合所有部件，对吧？
+
+322
+00:25:04,812 --> 00:25:09,350
+Like we have liquid cooling, we have high power connections, tons of sensor cables.
+比如我们有液冷系统，高功率连接，还有大量传感器线缆。
+
+323
+00:25:09,400 --> 00:25:13,205
+You can see these compute modules stacked on top of each other, right?
+你可以看到这些计算模块堆叠在一起，对吧？
+
+324
+00:25:13,255 --> 00:25:19,047
+And always sort of with attention of making sure we we leave enough trunk space for golf clubs
+而且始终注意留出足够的后备箱空间放高尔夫球杆。
+
+325
+00:25:19,097 --> 00:25:25,343
+or suitcases or what the product team needs for
+或者是行李箱，或者是产品团队需要的其他东西
+
+326
+00:25:25,393 --> 00:25:31,346
+kind of constraints or challenges when we build the compute.
+在构建计算系统时，会遇到一些约束或挑战
+
+327
+00:25:31,396 --> 00:25:39,413
+Um, like we we we really care about resilience, right?
+嗯，我们非常重视系统的韧性，对吧？
+
+328
+00:25:39,463 --> 00:25:42,167
+And a lot of this is user experience, right?
+而且很多问题都关乎用户体验，对吧？
+
+329
+00:25:42,217 --> 00:25:49,189
+You don't want parts that fail, even if they fail and were safe if it leads to degraded performance, right?
+你不希望出现部件故障，即使故障是安全的，但如果导致性能下降，也不行，对吧？
+
+330
+00:25:49,239 --> 00:25:52,056
+Is often a a hit on the user experience.
+这通常会影响用户体验
+
+331
+00:25:52,106 --> 00:25:57,390
+And so we want components that that will really live through the harshest environments.
+所以我们希望使用那些能在最恶劣环境中长期稳定运行的组件
+
+332
+00:25:57,440 --> 00:26:01,374
+And this applies to cars, also applies to anything else, right?
+这不仅适用于汽车，也适用于其他任何场景，对吧？
+
+333
+00:26:01,424 --> 00:26:03,792
+You're building for the physical world, right?
+你是在为物理世界构建产品，对吧？
+
+334
+00:26:03,842 --> 00:26:09,383
+Robots will will get wet um or go into freezing temperatures.
+机器人可能会被淋湿，或者进入极低温环境
+
+335
+00:26:09,433 --> 00:26:11,697
+Um and so we do a lot of testing.
+所以我们会做大量测试
+
+336
+00:26:11,747 --> 00:26:14,580
+We we typically do the testing at the module level.
+我们通常在模块级别进行测试
+
+337
+00:26:14,630 --> 00:26:17,253
+We also do a lot of vehicle level testing, right?
+我们还进行了大量的整车级测试，对吧？
+
+338
+00:26:17,303 --> 00:26:23,425
+We'll take the cars out into the desert or kind of go racing around tracks in the snow.
+我们会把汽车开到沙漠里，或者在雪地里绕着赛道进行竞速测试。
+
+339
+00:26:23,475 --> 00:26:26,244
+Um so lot lots of different things to make we
+嗯，有很多不同的事情要做，以确保
+
+340
+00:26:26,294 --> 00:26:36,883
+make sure that the systems are robust redundancy also really important.
+系统具备鲁棒性，冗余也非常重要。
+
+341
+00:26:36,933 --> 00:26:39,061
+Um you can probably guess what's happening here.
+嗯，你大概能猜到这里发生了什么。
+
+342
+00:26:39,111 --> 00:26:46,639
+We we're cutting kind of our main power to to our core compute and you'll see the the car continues operating safely.
+我们正在切断核心计算单元的主要电源，你会看到汽车仍能安全运行。
+
+343
+00:26:46,689 --> 00:26:56,083
+And this doesn't mean we we do full redundant compute of everything, but we design the system to to have redundancy built in, right?
+这并不意味着我们对所有东西都做完全的冗余计算，但我们设计系统时会内置冗余，对吧？
+
+344
+00:26:56,133 --> 00:26:58,859
+And it may mean degraded capability, right?
+但这可能意味着性能会下降，对吧？
+
+345
+00:26:58,909 --> 00:27:09,390
+You you cut power to to one portion of a system, but you're able to carry over and and operate on a different portion of them.
+你切断了系统某一部分的电源，但仍能切换到另一部分继续运行。
+
+346
+00:27:09,440 --> 00:27:11,150
+Then there's performance, right?
+然后是性能，对吧？
+
+347
+00:27:11,200 --> 00:27:17,114
+performance is really what we we spend most of our time on within the team and sort of in the compute
+性能是我们团队在计算领域花费最多时间的地方。
+
+348
+00:27:17,164 --> 00:27:25,807
+context and here it's it is always very clear more performance allows our software teams to do better stuff um and so
+这里非常清楚，更高的性能能让我们的软件团队做出更好的成果。
+
+349
+00:27:25,857 --> 00:27:34,030
+so we work hard on that um the the three key things we plotted here right is CPU GPU and ML
+所以我们在那方面下了很大功夫，这里我们列出的三个关键点是 CPU、GPU 和 ML。
+
+350
+00:27:34,080 --> 00:27:42,697
+and ML right probably not unexpected has followed a very good trajectory um in many ways sim similar to data center capabilities,
+而 ML 的发展轨迹非常出色，从很多方面来看，与数据中心能力的发展趋势相似。
+
+351
+00:27:42,747 --> 00:27:43,047
+right?
+对吧？
+
+352
+00:27:43,042 --> 00:27:51,934
+If you look at the biggest chips, um how they've scaled, we've been able to scale the ML capability in the car very aggressively as well.
+如果你看看最大的芯片是如何演进的，我们同样能够非常激进地提升汽车中的 ML 能力。
+
+353
+00:27:51,984 --> 00:27:56,137
+And then CPU and GPU have fluctuated a little bit.
+而 CPU 和 GPU 的性能则出现了一些波动。
+
+354
+00:27:56,187 --> 00:28:02,968
+I mentioned CPU was was kind of a really important compute element for a long time, continues to be.
+我提到过，CPU 曾经是极为重要的计算单元，至今依然如此。
+
+355
+00:28:03,018 --> 00:28:07,310
+Um but some of the CPU workload has been replaced by ML.
+不过，部分 CPU 的工作负载已经被 ML 取代。
+
+356
+00:28:07,360 --> 00:28:09,082
+Similarly with GPU, right?
+GPU 也是类似的情况，对吧？
+
+357
+00:28:09,132 --> 00:28:16,966
+We we do do GPGPU compute um for some of our workloads and that bounces up and down a little bit.
+我们在部分工作负载中使用 GPGPU 计算，这部分性能也有所起伏。
+
+358
+00:28:17,016 --> 00:28:24,843
+Um so I think overall trend right like at least what we're seeing here is kind of CPU and GPGPU fairly flat.
+所以我认为整体趋势是，至少从我们看到的情况来看，CPU 和 GPGPU 的性能基本保持平稳。
+
+359
+00:28:24,893 --> 00:28:34,830
+Um ML continues to just be an insatiable demand for for more compute in the cars.
+ML 对汽车中更多计算能力的需求始终是永无止境的。
+
+360
+00:28:34,880 --> 00:28:44,564
+And when you come back to these curves, right, like how does it tie in from an effort and and really vehicle performance perspective, right?
+当你回到这些曲线时，从投入和车辆实际性能的角度来看，它们之间是如何关联的呢？
+
+361
+00:28:44,614 --> 00:28:48,146
+More compute helps in two different ways, right?
+更多的计算能力可以从两个不同方面带来帮助，对吧？
+
+362
+00:28:48,196 --> 00:28:50,199
+One is software developer velocity.
+一个是软件开发者的开发效率。
+
+363
+00:28:50,249 --> 00:28:57,685
+If we're not constantly struggling with improving performance and making things hit our latency targets, it helps, right?
+如果我们不必不断为提升性能和达成延迟目标而挣扎，这就会有帮助，对吧？
+
+364
+00:28:57,735 --> 00:29:00,042
+We're able to land our CLS faster.
+我们能更快地提交代码变更（CL）。
+
+365
+00:29:00,092 --> 00:29:02,990
+They can try more aggressive algorithms.
+他们可以尝试更激进的算法。
+
+366
+00:29:03,040 --> 00:29:06,270
+And so definitely one big win we've had.
+所以这无疑是我们取得的一大成功。
+
+367
+00:29:06,320 --> 00:29:11,896
+And of course on the ML side larger models right like we're we're able
+当然，在 ML 方面，更大的模型——我们能够
+
+368
+00:29:11,946 --> 00:29:19,790
+to train larger models and as with many industries that leads to improved driver performance.
+训练更大的模型；与许多行业一样，这会带来驾驶性能的提升。
+
+369
+00:29:19,840 --> 00:29:27,752
+Now increasingly we're also investing in sort of opposite direction right like we we we will be scaling a
+现在，我们也在越来越多地投资于相反的方向，对吧？比如我们将会在
+
+370
+00:29:27,802 --> 00:29:33,950
+lot um you can think of cars you can think of robots right kind of anything in this space has
+很多领域进行扩展，你可以想到汽车，也可以想到机器人，对这个领域里的任何事物，
+
+371
+00:29:34,000 --> 00:29:41,226
+a just enormous market potential um and with that there's of course economic pressures right how do you how do
+都有着巨大的市场潜力。随之而来的是经济压力：你如何
+
+372
+00:29:41,276 --> 00:29:50,093
+you really fit all the capability in a smaller cost footprint and so very increasingly we're investing into optimization efforts.
+才能把所有能力塞进更小的成本空间？所以，我们正越来越多地投入优化工作。
+
+373
+00:29:50,143 --> 00:29:51,664
+Some of that is silicon,
+其中一部分是芯片，
+
+374
+00:29:51,714 --> 00:30:02,109
+a lot of that is also software to make sure that we're optimizing the stack really for for for our needs.
+还有一部分则是软件，以确保我们能针对自身需求对整个技术栈进行充分优化。
+
+375
+00:30:02,159 --> 00:30:04,420
+Now, what does this practically look like, right?
+那么，这在实际中具体是什么样子的呢？
+
+376
+00:30:04,470 --> 00:30:11,321
+Like we when we look at our workloads, we don't actually have like a single number that tells us how fast we are.
+比如说，当我们查看工作负载时，并没有一个单一的数字能告诉我们运行速度。
+
+377
+00:30:11,371 --> 00:30:20,119
+Most of our things are kind of probability distributions where how long things take on the car vary quite
+我们大多数情况下的表现都类似于概率分布，车辆上任务的耗时差异相当大。
+
+378
+00:30:20,169 --> 00:30:27,034
+a bit right can be seen dependent can be how things are scheduled and batched right so could be how
+这取决于任务的调度和批处理方式，比如系统中同时运行的智能体数量。
+
+379
+00:30:27,084 --> 00:30:32,430
+many agents are in the world if you're at a busy intersection with lots of things happening there's a different
+如果你在交通繁忙的十字路口，周围有很多事情同时发生，计算负载会明显不同。
+
+380
+00:30:32,480 --> 00:30:40,989
+compute load than perhaps being on a freeway right with no traffic so so there's there's pretty high variability there.
+而在几乎没有车辆的高速公路上，计算负载则会低得多，因此这里的差异非常显著。
+
+381
+00:30:41,039 --> 00:30:44,881
+We put a lot of effort into pushing down the average.
+我们投入了大量精力来降低平均延迟。
+
+382
+00:30:44,931 --> 00:30:48,272
+Um, we also put a lot of effort into flattening it, right?
+同时，我们也投入了大量精力来使延迟分布更平坦，对吧？
+
+383
+00:30:48,322 --> 00:30:53,950
+Because a flatter system just is easy easier for us to schedule and reason about.
+因为一个更平坦的系统，对我们来说更容易调度和推理。
+
+384
+00:30:54,000 --> 00:30:57,926
+Now, things we can do there, right?
+在这方面，我们能做的事情还有很多，对吧？
+
+385
+00:30:57,976 --> 00:31:05,310
+Like obviously there's a lot on the software side we do um but also on the hardware side.
+显然，软件方面我们做了很多，但硬件方面也同样如此。
+
+386
+00:31:05,360 --> 00:31:09,869
+Now this is the high performance computer I talked about.
+现在这就是我之前提到的高性能计算机。
+
+387
+00:31:09,919 --> 00:31:15,366
+When we look inside, right, it's really partitioned in the the key areas I mentioned.
+当我们看内部结构时，它确实被划分成了我提到的关键区域。
+
+388
+00:31:15,416 --> 00:31:17,876
+We we have a power system, right?
+我们有一个电源系统，对吧？
+
+389
+00:31:17,926 --> 00:31:24,055
+Most of our power comes from the vehicle is not not the pristine power we'd always like.
+我们的大部分电力来自车辆，而不是我们理想中的纯净电源。
+
+390
+00:31:24,105 --> 00:31:27,798
+Um we have a sensor processing interface.
+我们有一个传感器处理接口。
+
+391
+00:31:27,848 --> 00:31:33,364
+Um so that's that is able to accept all the sensor data, do some early ML fusion.
+所以它能够接收所有传感器数据，并进行初步的机器学习融合。
+
+392
+00:31:33,414 --> 00:31:41,512
+we have high performance CPU subsystem and then we we have ML and GPGPU accelerators.
+我们有高性能 CPU 子系统，以及机器学习和 GPGPU 加速器。
+
+393
+00:31:41,562 --> 00:31:47,265
+Um so you can think of these roughly as as proportional sizes to the circuit boards we have.
+你可以把它们大致看作与我们电路板的尺寸成比例。
+
+394
+00:31:47,315 --> 00:31:50,142
+Um not all of this is compute, right?
+并不是所有这些都用于计算，对吧？
+
+395
+00:31:50,192 --> 00:31:54,109
+There's also a fair amount of interface logic, a lot of memory chips.
+还有相当多的接口逻辑和大量内存芯片。
+
+396
+00:31:54,159 --> 00:31:59,390
+Um but gives you a rough idea of how things are partitioned in the system.
+但这样能让你大致了解系统内部是如何划分的。
+
+397
+00:31:59,440 --> 00:32:05,398
+Now when you think of a system overall, one thing we do is we have AB sides, right?
+当你整体考虑一个系统时，我们做的一件事就是设置 A/B 两面，对吧？
+
+398
+00:32:05,448 --> 00:32:12,842
+So there's a cold plate, a liquid cooled cold plate in the center of this and we we mirror the the hardware on the other side.
+中间有一个冷板，是液冷冷板，我们在另一侧镜像了相同的硬件。
+
+399
+00:32:12,892 --> 00:32:18,093
+And most of the time we're using both of those sides to hand over the full workload, right?
+大多数情况下，我们会同时使用这两侧来分担全部工作负载，对吧？
+
+400
+00:32:18,143 --> 00:32:22,415
+But occasionally, right, like in my example where someone cut the power,
+但偶尔，就像我举的例子中有人切断了电源，
+
+401
+00:32:22,465 --> 00:32:30,787
+we're able to fail over to either a single A or a single B side to to operate in perhaps a somewhat degraded mode,
+我们可以切换到单独的A侧或B侧运行，以某种降级模式继续工作，
+
+402
+00:32:30,837 --> 00:32:38,030
+but still safe mode and either complete the mission or for example pull over to a gas station.
+但仍处于安全模式，要么完成任务，要么比如靠边停到加油站。
+
+403
+00:32:38,080 --> 00:32:43,208
+And sort of this redundancy of course is important from a compute element perspective.
+从计算单元的角度来看，这种冗余当然很重要。
+
+404
+00:32:43,258 --> 00:32:48,782
+Also really critical from a sensor connectivity perspective. um power perspective.
+同样，从传感器连接性和电源角度来看也极为关键。
+
+405
+00:32:48,832 --> 00:32:53,604
+So throughout the system, we think about do we have redundancy?
+所以在整个系统中，我们都会思考：我们有冗余吗？
+
+406
+00:32:53,654 --> 00:32:57,365
+If things fail, is there something else that covers it?
+如果出现故障，是否有其他组件可以覆盖这种情况？
+
+407
+00:32:57,415 --> 00:33:05,131
+Um right, could be a sensor, maybe a camera fails, could be another camera that has sort of a field of view overlap.
+比如某个传感器失效，可能另一个摄像头具有重叠的视野范围。
+
+408
+00:33:05,181 --> 00:33:09,902
+Could be a case where we can rely on radar, lidar for a short amount of time.
+也有可能在短时间内依赖雷达或激光雷达。
+
+409
+00:33:09,952 --> 00:33:11,456
+So throughout the system,
+因此在整个系统中，
+
+410
+00:33:11,506 --> 00:33:13,710
+we think deeply about redundancy
+我们深入思考冗余问题
+
+411
+00:33:13,760 --> 00:33:18,864
+and how we
+以及我们如何
+
+412
+00:33:18,914 --> 00:33:26,830
+cover from that.
+实现全面覆盖。
+
+413
+00:33:26,880 --> 00:33:31,309
+This gives you a picture of of kind of how our compute pipeline works.
+这能让你大致了解我们的计算流水线是如何工作的。
+
+414
+00:33:31,359 --> 00:33:33,699
+Um, sensor data comes in, right?
+传感器数据会进来，对吧？
+
+415
+00:33:33,749 --> 00:33:36,750
+Kind of ISP, DSP, accelerators, right?
+比如 ISP、DSP 和加速器，对吧？
+
+416
+00:33:36,800 --> 00:33:41,129
+Munch job that data to make it processable.
+对数据进行处理，使其可被使用。
+
+417
+00:33:41,179 --> 00:33:44,109
+Um, some of that goes through GPGPU as well.
+其中一部分数据也会通过 GPGPU。
+
+418
+00:33:44,159 --> 00:33:51,469
+And then we have a set of ML models, right, that that encode that data and and do fusion.
+然后我们有一组机器学习模型，对数据进行编码并完成融合。
+
+419
+00:33:51,519 --> 00:33:56,142
+Then we have sort of really really big ML um that does more stuff.
+接着是规模非常大的机器学习模型，执行更多任务。
+
+420
+00:33:56,192 --> 00:33:59,914
+And then we have a couple stages of optimizers and validators.
+最后我们有几阶段的优化器和验证器。
+
+421
+00:33:59,964 --> 00:34:02,931
+And these are really critical, right?
+而这些确实非常关键，对吧？
+
+422
+00:34:02,981 --> 00:34:09,150
+Optimization can can sometimes find better solutions, right, for user comfort or other items.
+优化有时可以找到更好的解决方案，比如提升用户舒适度或其他方面。
+
+423
+00:34:09,200 --> 00:34:14,152
+Validation really important for us from a safety perspective, right?
+从安全角度来看，验证对我们来说真的非常重要，对吧？
+
+424
+00:34:14,202 --> 00:34:23,789
+like we we don't take ML models directly um but double check that everything is safe around their outputs.
+我们不会直接使用机器学习模型的输出，而是会复核它们的输出是否安全。
+
+425
+00:34:23,839 --> 00:34:29,554
+Um within the hardware we we also do a lot of other checking right we have error checking we have
+在硬件内部，我们也会做大量其他检查，比如错误检测，我们有
+
+426
+00:34:29,604 --> 00:34:40,270
+software test libraries um most of our own silicon and partner silicon has sort of self-checking capabilities built into their circuits.
+软件测试库，我们大部分自研芯片和合作伙伴芯片的电路中都内置了自检功能。
+
+427
+00:34:40,320 --> 00:34:45,230
+So a lot of things right we're pushing on and in some cases also moving into data
+所以有很多方面，我们正在推进，有些情况下也已延伸到数据
+
+428
+00:34:45,280 --> 00:34:53,950
+center right that improve the safety and reliability and detectability of faults within these types of pipelines.
+中心，以提升这类流程中的安全性、可靠性以及故障可检测性。
+
+429
+00:34:54,000 --> 00:34:57,764
+I'll call out kind of a CPU component a little bit, right?
+我想特别提一下一个 CPU 组件，稍微说一下，对吧？
+
+430
+00:34:57,814 --> 00:35:02,270
+Like I mentioned, we we while CPU has gone down a little bit,
+就像我提到的，虽然 CPU 的占比略有下降，
+
+431
+00:35:02,320 --> 00:35:08,594
+um it continues to be a really important part of our compute, part of that is just orchestration and scheduling.
+但它仍然是我们计算架构中一个非常重要的部分，部分原因在于它负责协调和调度。
+
+432
+00:35:08,644 --> 00:35:11,908
+There are a lot of decisions that need to be made fairly quickly.
+有很多决策需要快速做出。
+
+433
+00:35:11,958 --> 00:35:15,326
+There's a lot of data that moves around the system, right?
+系统中有很多数据在流动，对吧？
+
+434
+00:35:15,376 --> 00:35:22,750
+And CPUs tend to be a very good substrate for us to implement some of those things.
+而 CPU 通常是我们实现这些功能的绝佳基础平台。
+
+435
+00:35:22,800 --> 00:35:31,270
+Now this box here right kind of ISP um early sensor processing and fusion um is something we've actually built a
+这个盒子——ISP、早期传感器处理和融合——我们实际上围绕它做了一颗芯片，
+
+436
+00:35:31,320 --> 00:35:39,452
+chip around and Sabareesh and Pieter are giving a talk a little bit later right we'll dive into many more of these
+Sabareesh 和 Pieter 稍后会做一场演讲，我们将会深入探讨更多细节。
+
+437
+00:35:39,502 --> 00:35:45,488
+details um but to me is always super cool right you look at this type of picture and it's like wow this
+但对我来说，这始终非常酷——你看这种图时，会感叹：哇，
+
+438
+00:35:45,538 --> 00:35:52,830
+chip is actually like driving a good chunk of a car um so really proud proud of what we've gotten done there.
+这颗芯片实际上在驱动一辆车的很大一部分。所以，我真的为我们取得的成果感到自豪。
+
+439
+00:35:52,880 --> 00:35:57,813
+Um, and it's it's it's just really cool technology.
+这技术真的很酷。
+
+440
+00:35:57,863 --> 00:36:02,418
+Um, and like maybe first off, why why do we build this type of chip, right?
+也许首先，我们为什么要打造这种芯片，对吧？
+
+441
+00:36:02,468 --> 00:36:05,946
+Like one is we're we're really implementing unique capabilities.
+一方面，我们正在实现独特的功能。
+
+442
+00:36:05,996 --> 00:36:12,615
+You see, we we know a lot about our sensors, the data products they produce, and pushing on the latency is critical.
+我们非常了解自己的传感器，以及它们产生的数据产品，而降低延迟至关重要。
+
+443
+00:36:12,665 --> 00:36:21,680
+Everything we can squeeze out of that latency, right, from pixels until they hit our real ML models, right, is things we can put into the ML pipeline.
+我们能从像素到进入真实 ML 模型的整个链路上压缩掉的每一分延迟，都可以转化为 ML 流水线的收益。
+
+444
+00:36:21,730 --> 00:36:25,403
+So, optimizing that latency really important.
+因此，优化这一延迟非常关键。
+
+445
+00:36:25,453 --> 00:36:28,853
+Um, we've implemented some really innovative algorithms, right?
+嗯，我们实现了一些非常创新的算法，对吧？
+
+446
+00:36:28,903 --> 00:36:31,240
+Like I gave a camera example, right?
+就像我举的那个摄像头的例子，对吧？
+
+447
+00:36:31,290 --> 00:36:34,670
+We want the best SNR that we can from our sensors, right?
+我们希望从传感器中获得尽可能高的信噪比，对吧？
+
+448
+00:36:34,720 --> 00:36:39,829
+Extract every last bit of information to build the safest system that we can.
+提取每一点信息，以构建最安全的系统。
+
+449
+00:36:39,879 --> 00:36:46,270
+And then there is a slice of ML in these chips as well very much tailored towards low latency, right?
+这些芯片中还有一部分机器学习模块，专门针对低延迟进行了优化，对吧？
+
+450
+00:36:46,320 --> 00:36:48,503
+Like we want to get the pixels in.
+就像我们希望尽快获取像素数据。
+
+451
+00:36:48,553 --> 00:36:58,350
+We want to have objects or embeddings come out as fast as we can so that they can feed into the bigger models.
+我们希望物体或嵌入向量能尽可能快地输出，以便输入到更大的模型中。
+
+452
+00:36:58,400 --> 00:37:03,418
+One small example, right, that that maybe motivate this.
+举个小例子，对吧，也许能说明这一点。
+
+453
+00:37:03,468 --> 00:37:11,710
+Um if you think of a world, right, it's mostly free space. um our lidars produce point clouds, right?
+嗯，如果你想象一个世界，对吧，它大部分都是空旷空间。我们的激光雷达生成点云，对吧？
+
+454
+00:37:11,760 --> 00:37:15,309
+So a very very sparse representation.
+所以这是一种非常非常稀疏的表示。
+
+455
+00:37:15,359 --> 00:37:19,238
+All our ML hardware loves dense matrices, right?
+我们所有的机器学习硬件都偏爱稠密矩阵，对吧？
+
+456
+00:37:19,288 --> 00:37:24,258
+And so there's always a question, how do we transform these sparse representations, right?
+因此总有一个问题，我们如何将这些稀疏表示进行转换，对吧？
+
+457
+00:37:24,308 --> 00:37:34,569
+Whether it's 3D worlds or in some cases also 2D worlds into dense representations that run efficiently on AI hardware, right?
+无论是3D世界，还是在某些情况下2D世界，都能转化为在AI硬件上高效运行的密集表示，对吧？
+
+458
+00:37:34,619 --> 00:37:37,253
+And so there some of it is algorithmic, right?
+所以其中一部分是算法相关的，对吧？
+
+459
+00:37:37,303 --> 00:37:38,430
+How do we bin things?
+我们怎么对事物进行分类呢？
+
+460
+00:37:38,480 --> 00:37:40,149
+How do we create the data structure?
+我们该如何构建数据结构？
+
+461
+00:37:40,199 --> 00:37:43,630
+Some of it is very very simple hardware mechanisms, right?
+其中一些只是非常非常简单的硬件机制，对吧？
+
+462
+00:37:43,680 --> 00:37:48,713
+Scatter gather or derivatives of it which from a TOPS perspective of course don't
+散列-聚集（scatter-gather）或其衍生机制，从 TOPS 指标看当然不会
+
+463
+00:37:48,763 --> 00:37:56,190
+add anything to a chip but from an achieved performance perspective have a tremendous impact.
+给芯片增加任何数字，但从实际达到的性能看，影响巨大。
+
+464
+00:37:56,240 --> 00:38:03,854
+Other area of course is software and here every one of these areas makes a big difference right like we we very much
+另一个领域当然是软件，而这些领域中的每一个都至关重要，确实如此。
+
+465
+00:38:03,904 --> 00:38:08,024
+have a philosophy of co-design and so whether it's it's working
+秉持协同设计的理念，无论是在编译器工程师与模型开发者之间，
+
+466
+00:38:08,074 --> 00:38:13,274
+like compiler engineers with model developers model developers with architects right we
+就像编译器工程师与模型开发者、模型开发者与架构师之间的协作一样，对吧？
+
+467
+00:38:13,324 --> 00:38:21,154
+very much embody the co-design spirit and many opportunities there right some of that is with our own silicon a lot of it
+充分体现了协同设计的精神，这里有很多机会：有些来自我们自己的芯片，
+
+468
+00:38:21,204 --> 00:38:31,309
+also with partner silicon right so in both cases co-design can make a huge difference in terms of a performance we're able to achieve.
+很多也来自合作伙伴的芯片。无论哪种情况，协同设计都能大幅提升我们实现的性能。
+
+469
+00:38:31,359 --> 00:38:38,657
+So maybe from a compute side right just to recap right most of you probably working on the data center
+所以从计算角度来说，简单回顾一下，你们大多数人可能都在数据中心工作
+
+470
+00:38:38,707 --> 00:38:46,522
+side um so few things I'll call out right so performance you've probably heard loud and clear latency really matters
+从性能方面来说，你们可能已经听得很清楚了，延迟非常重要
+
+471
+00:38:46,572 --> 00:38:54,284
+a lot to us um latency matters in data center these days as well so what's really the difference well
+对我们来说，延迟在数据中心如今同样至关重要，那么真正区别在哪里呢？
+
+472
+00:38:54,334 --> 00:39:01,262
+the real implementations of course vary a lot right if you think about what's happening in data center these days,
+当然，实际实现方式有很大差异，如果你想想现在数据中心正在发生什么
+
+473
+00:39:01,312 --> 00:39:01,794
+right?
+对吧？
+
+474
+00:39:01,844 --> 00:39:08,797
+Racks and racks full of enormous chips with enormous memory bandwidth with batching, right?
+一排又一排的机架，塞满了巨大的芯片，拥有巨大的内存带宽，以及批量处理
+
+475
+00:39:08,847 --> 00:39:11,928
+Running on enormous networks in our car.
+运行着巨大的网络。而在我们的车里，
+
+476
+00:39:11,978 --> 00:39:17,273
+We need to solve these same problems with one chip, maybe two chips, right?
+我们需要用一颗芯片——也许两颗——解决同样的问题，对吧？
+
+477
+00:39:17,323 --> 00:39:25,336
+So, how do you land the biggest networks in a low batch environment to run really efficiently at low latency?
+那么，如何在低批量环境下，让最大的网络高效运行并保持低延迟？
+
+478
+00:39:25,386 --> 00:39:30,590
+Um, so different types of technologies there.
+不同的技术类型存在
+
+479
+00:39:30,640 --> 00:39:41,671
+Um, so a few minutes on the actual model architectures, right, to give you sort of a glimpse of what really drives this performance, right?
+简要讲一下实际的模型架构，让你们大致了解真正驱动性能的关键因素
+
+480
+00:39:41,721 --> 00:39:46,032
+Hopefully you've gotten the sense that we have amazing compute.
+希望你们已经感受到，我们的计算能力非常强大
+
+481
+00:39:46,082 --> 00:39:51,732
+It's a pizza box in the car with just the most awesome silicon we can make or buy.
+这就是一辆车里的披萨盒，里面装着我们能制造或买到的最酷的硅芯片。
+
+482
+00:39:51,782 --> 00:39:56,414
+Um, but maybe a little bit of a question of why.
+嗯，但也许会有人问，为什么呢？
+
+483
+00:39:56,464 --> 00:40:03,870
+Um, so here's one motivating example.
+这里有一个很有说服力的例子。
+
+484
+00:40:03,920 --> 00:40:10,270
+Yeah, like these things actually happen and at least there's been press that Waymo cars have gotten parking tickets.
+是的，这类事情确实会发生，至少有媒体报道过 Waymo 的汽车被贴过停车罚单。
+
+485
+00:40:10,320 --> 00:40:13,611
+So we we'll keep working on it.
+所以我们会继续努力改进。
+
+486
+00:40:13,661 --> 00:40:16,828
+Um, but there's also many other cases, right?
+嗯，但还有许多其他情况，对吧？
+
+487
+00:40:16,878 --> 00:40:22,650
+And it's if you go back to the beginning of my presentation, it's really the long tail, right?
+而且如果你回到我演讲的开头，真正的问题就在于长尾问题，对吧？
+
+488
+00:40:22,700 --> 00:40:27,156
+things that that maybe you'd encounter once in a lifetime, right?
+那些可能一生只会遇到一次的事情，对吧？
+
+489
+00:40:27,206 --> 00:40:29,177
+We encounter them all the time.
+但我们却经常遇到。
+
+490
+00:40:29,227 --> 00:40:37,140
+And so it could be a tree falling over next to a car or a kid running into into the road right in front of you, right?
+比如一棵树倒在车旁边，或者一个孩子突然冲到你正前方的马路上，对吧？
+
+491
+00:40:37,190 --> 00:40:39,337
+Or various kinds of accidents, right?
+或者各种类型的事故，对吧？
+
+492
+00:40:39,387 --> 00:40:43,550
+We've we've seen secondary or tertiary collisions on a freeway, right?
+我们见过高速公路上的二次或三次碰撞，对吧？
+
+493
+00:40:43,600 --> 00:40:45,359
+How does a car react to those?
+汽车对这些情况会如何反应？
+
+494
+00:40:45,409 --> 00:40:50,430
+And those are really the examples where ML of deep reasoning and deep
+而这些正是深度推理和对世界深度理解非常重要的例子，
+
+495
+00:40:50,480 --> 00:40:57,789
+understanding of the world is really important and really drives the compute requirements.
+也正是这些因素真正驱动了计算需求。
+
+496
+00:40:57,839 --> 00:41:04,065
+Um to give a sense of that right like at Waymo we've we've been about ML really since the beginning.
+举个例子，就像我们在 Waymo 从一开始就专注于机器学习一样。
+
+497
+00:41:04,115 --> 00:41:12,076
+Initially it was as I mentioned right boosted decision trees random forests but we were on convolution networks right right
+最初，正如我提到的，我们使用的是提升决策树和随机森林，但当我们看到 AlexNet 发表时，
+
+498
+00:41:12,126 --> 00:41:19,892
+around when Alex net got published right like we we recognized it quickly that it was super helpful for perception
+我们立刻意识到卷积网络对感知任务非常有帮助。
+
+499
+00:41:19,942 --> 00:41:28,670
+um started using convolutional networks um as transformers became available right use them very quickly and when you think of
+随后，随着 Transformer 模型的出现，我们迅速开始使用它们，当你想到 Transformer 时，
+
+500
+00:41:28,720 --> 00:41:35,954
+transformers it actually maps very well to what you might think about in driving right like there's always local information,
+它实际上非常契合驾驶场景中的思维模式，比如总存在局部信息，
+
+501
+00:41:36,004 --> 00:41:36,365
+right?
+对吧？
+
+502
+00:41:36,395 --> 00:41:37,975
+That's super helpful, right?
+这非常有帮助，对吧？
+
+503
+00:41:38,025 --> 00:41:42,230
+So, attention there, but there's also global context that's really needed.
+所以，注意力机制在这里非常关键，但同时全局上下文也同样重要。
+
+504
+00:41:42,280 --> 00:41:45,940
+And so, transformers really an enabling technology there.
+因此，Transformer 真正成为了一项关键使能技术。
+
+505
+00:41:45,990 --> 00:41:51,295
+And we've we've been using it since since the early days um since our invention at Google.
+我们从早期开始就一直在使用它，也就是我们在谷歌发明它的那个时期。
+
+506
+00:41:51,345 --> 00:41:55,327
+Today, we use some of the most advanced DLMs.
+如今，我们使用了一些最先进的深度学习模型。
+
+507
+00:41:55,377 --> 00:41:58,896
+Um we have foundation models, world models, right?
+嗯，我们有基础模型、世界模型，对吧？
+
+508
+00:41:58,946 --> 00:42:07,011
+So really pushing the envelope to have the deepest ML technology that we can on our cars and more and
+真正突破极限，将我们所能实现的最深层机器学习技术融入到汽车中，并不断推进。
+
+509
+00:42:07,061 --> 00:42:14,005
+more the this ML technology it really provides a foundation for not only what's happening on the car but also
+这种机器学习技术越深入，就越能为汽车上的各种应用提供坚实基础，同时也为其他领域的发展奠定基础。
+
+510
+00:42:14,055 --> 00:42:19,141
+what we're able to do in the data center right where simulation is really important we have a lot of
+以及我们在数据中心能做什么——在那里仿真非常重要。我们有很多
+
+511
+00:42:19,191 --> 00:42:26,369
+analytics that use ML to sort of triage and understand what the car did in simulation or the real world.
+利用机器学习做数据分析的工作，用来分类并理解汽车在仿真或现实世界中的行为。
+
+512
+00:42:26,419 --> 00:42:37,710
+So having this sort of foundation model that cover everything is of course an enormous thing to enable us to scale.
+因此，拥有这样一个涵盖一切的基础模型，无疑将极大助力我们实现规模化。
+
+513
+00:42:37,760 --> 00:42:39,870
+So let's look at the model a little bit.
+那我们来稍微看一下这个模型。
+
+514
+00:42:39,920 --> 00:42:46,573
+Um there's a sensor fusion encoder right I had referred to this previously encodes each of
+嗯，有一个传感器融合编码器——我之前提到过——它会编码每个
+
+515
+00:42:46,623 --> 00:42:54,350
+the sensors fuses the data provides a world picture and this tends to be very very fast.
+传感器，融合数据，给出世界图景，而且通常非常快。
+
+516
+00:42:54,400 --> 00:42:56,144
+Then we we have a VLM.
+然后我们有一个视觉-语言模型。
+
+517
+00:42:56,194 --> 00:42:58,564
+This tends to be much slower, right?
+这通常要慢得多，对吧？
+
+518
+00:42:58,614 --> 00:43:04,237
+Like we'd like to run it as fast as we can, but types of things it may ask about is like,
+我们当然希望它尽可能快地运行，但它可能需要回答的问题类型是这样的，
+
+519
+00:43:04,287 --> 00:43:08,875
+okay, there's a fire hydrant spewing water onto the road, right?
+好的，有一个消防栓正在向路上喷水，对吧？
+
+520
+00:43:08,925 --> 00:43:11,152
+Is it safe to proceed or not?
+这种情况下是否安全继续前行？
+
+521
+00:43:11,202 --> 00:43:11,987
+Um, right?
+嗯，对吧？
+
+522
+00:43:12,037 --> 00:43:16,730
+So these are questions that you don't have to answer in 10 or 20 milliseconds,
+所以这些问题不需要你在10或20毫秒内回答，
+
+523
+00:43:16,780 --> 00:43:21,484
+but if you take half a second or even 1 second might be acceptable, right?
+即使花半秒甚至一秒也是可以接受的，对吧？
+
+524
+00:43:21,534 --> 00:43:27,185
+So these these tend to be much larger models making a little bit slower decisions.
+所以这类模型通常更大，决策速度稍微慢一些。
+
+525
+00:43:27,235 --> 00:43:34,910
+So kind of a fast think fast think slow approach to to understanding the world.
+这是一种“快速思考，慢速思考”相结合的方式来理解世界。
+
+526
+00:43:34,960 --> 00:43:38,243
+These then feed into kind of a world decoder, right?
+这些信息随后会输入到一种“世界解码器”中，对吧？
+
+527
+00:43:38,293 --> 00:43:46,190
+Which then makes the decision decisions what what should the car actually be doing.
+它再决定车辆实际应该采取什么行动。
+
+528
+00:43:46,240 --> 00:43:46,558
+Right?
+对吧？
+
+529
+00:43:46,588 --> 00:43:50,533
+Now the model itself we start with a very very big model.
+现在我们从一个非常非常大的模型开始。
+
+530
+00:43:50,583 --> 00:43:53,769
+Um we distill it for a version that runs on the car.
+我们对模型进行蒸馏，以得到一个能在汽车上运行的版本。
+
+531
+00:43:53,819 --> 00:43:58,873
+Um of course we try to run the biggest version as that we can.
+当然，我们尝试运行尽可能大的版本。
+
+532
+00:43:58,923 --> 00:44:04,350
+Um but of course distillation making a lot of progress too.
+但蒸馏技术也在取得巨大进展。
+
+533
+00:44:04,400 --> 00:44:06,990
+Um just a glimpse on simulation.
+这里简单展示一下仿真效果。
+
+534
+00:44:07,040 --> 00:44:14,937
+Um this is something we we have a large team spending a lot of time on and it's been really transformative to what we've been able to do.
+这是我们一个大型团队投入大量时间的工作，它极大地改变了我们的能力。
+
+535
+00:44:14,987 --> 00:44:18,487
+Um and it's it's just really cool videos too.
+而且这些视频本身也非常酷。
+
+536
+00:44:18,537 --> 00:44:19,722
+So, I thought I'd share.
+所以我觉得应该分享一下。
+
+537
+00:44:19,772 --> 00:44:21,136
+Um, so this one, right?
+就是这个，对吧？
+
+538
+00:44:21,186 --> 00:44:22,288
+You're driving.
+你在开车。
+
+539
+00:44:22,338 --> 00:44:29,051
+You can see you kind of on a freeway come up to a car that stalled and you drive around it, right?
+你可以看到，你在高速公路上接近一辆抛锚的车，然后绕了过去，对吧？
+
+540
+00:44:29,101 --> 00:44:32,354
+And there's something, I don't know, you drive on 101 here.
+而且这里，我也不清楚，你是在 101 号公路上行驶。
+
+541
+00:44:32,404 --> 00:44:35,950
+May happen like once a year, something like that, right?
+可能一年才发生一次，类似这样的情况，对吧？
+
+542
+00:44:36,000 --> 00:44:38,510
+We've all seen these types of things.
+我们都见过这类东西。
+
+543
+00:44:38,560 --> 00:44:46,532
+Um, but we can also do a little bit more unusual things.
+嗯，但我们也可以做些更不寻常的事情。
+
+544
+00:44:46,582 --> 00:44:47,950
+Oops.
+糟糕。
+
+545
+00:44:48,000 --> 00:44:48,521
+All right.
+好的。
+
+546
+00:44:48,571 --> 00:44:53,510
+So here we're driving and there's a plane landing in front of us and I think a few
+我们正开着车，突然前方有一架飞机降落，我觉得有点儿……
+
+547
+00:44:53,560 --> 00:44:58,128
+years ago I saw a plane on the side of a road but never landing in front of me.
+多年前，我曾在路边看到一架飞机，但从未亲眼见到它在我面前降落。
+
+548
+00:44:58,178 --> 00:44:58,551
+Right?
+对吧？
+
+549
+00:44:58,581 --> 00:45:02,030
+So this were this is happening fully in simulation, right?
+所以这是完全在仿真中进行的，对吧？
+
+550
+00:45:02,080 --> 00:45:10,300
+Like we we have AI agents modeling the other vehicles um modeling the the physics everything in great detail, right?
+就像我们让AI智能体来模拟其他车辆，模拟物理世界，把方方面面都建模得非常详细，对吧？
+
+551
+00:45:10,350 --> 00:45:16,910
+So we both have a sensor side and the behavioral side.
+所以我们都有感知层面和行为层面。
+
+552
+00:45:16,960 --> 00:45:20,130
+Here's another fun example, right?
+再来一个有趣的例子，对吧？
+
+553
+00:45:20,180 --> 00:45:22,775
+Like okay, elephant could escape a zoo.
+好吧，大象有可能从动物园逃出来。
+
+554
+00:45:22,825 --> 00:45:26,289
+Um so let's see what the car would do.
+那么我们来看看这辆车会怎么做。
+
+555
+00:45:26,339 --> 00:45:33,310
+Um, and then last one, I don't know if this will ever happen regardless of kind of which side of global warming you're on.
+还有最后一个，不管你是站在全球变暖的哪一边，我觉得这事儿可能永远都不会发生。
+
+556
+00:45:33,360 --> 00:45:36,590
+Like I think snow on the Golden Gate seems unlikely.
+我觉得金门大桥上出现积雪的可能性不大。
+
+557
+00:45:36,640 --> 00:45:39,912
+Um, but it's an example of something we can model, right?
+但这正是一个我们可以建模的例子，对吧？
+
+558
+00:45:39,962 --> 00:45:42,139
+And again, the physics are embedded, right?
+而且再次强调，物理规律已经嵌入其中，对吧？
+
+559
+00:45:42,189 --> 00:45:47,424
+So understanding the slipperiness of a road, um, visibility, reflectivity, right?
+所以理解路面的湿滑程度、能见度、反光性，对吧？
+
+560
+00:45:47,474 --> 00:45:54,643
+All these things
+所有这些因素
+
+561
+00:45:54,693 --> 00:46:02,110
+are in there.
+都包含在内。
+
+562
+00:46:02,160 --> 00:46:03,936
+So where does this leave us, right?
+那么这让我们处于什么位置，对吧？
+
+563
+00:46:03,986 --> 00:46:05,539
+Like we put tremendous effort.
+我们投入了巨大的努力。
+
+564
+00:46:05,589 --> 00:46:08,110
+We're on a path to scaling.
+我们正走在规模化的道路上。
+
+565
+00:46:08,160 --> 00:46:09,342
+Do we have a results?
+我们有结果了吗？
+
+566
+00:46:09,392 --> 00:46:11,365
+And the answer is yes, right?
+答案是肯定的，对吧？
+
+567
+00:46:11,415 --> 00:46:20,430
+like roughly 13x fewer accidents um in the Waymo car regardless of fault um is is really an amazing
+比如，Waymo 车辆的事故率约为人类的 1/13，无论责任归属如何，这真的非常惊人。
+
+568
+00:46:20,480 --> 00:46:27,870
+accomplishment right like at at the mileage I mentioned it means we've had meaningful impact already right and if
+按我提到的行驶里程来看，我们已经产生了实质性的积极影响，对吧？而且如果
+
+569
+00:46:27,920 --> 00:46:33,906
+you think about the scaling ahead right these things will really change people's lives to the better so is
+你考虑到未来的规模扩展，这些技术真的会极大地改善人们的生活，所以
+
+570
+00:46:33,956 --> 00:46:41,789
+it was a very cool part thing to be a part of things we're doing as a company Um,
+能参与公司正在做的事情，这确实是非常酷的一件事。
+
+571
+00:46:41,839 --> 00:46:46,012
+obviously we're we're aiming for new operating domains.
+显然，我们正致力于开拓新的运营领域。
+
+572
+00:46:46,062 --> 00:46:47,546
+Snow is a really big one.
+雪天驾驶是一个非常重要的领域。
+
+573
+00:46:47,596 --> 00:46:54,001
+Um, you've probably seen most of our cities today are are more of a southern states in the US, right?
+你可能已经注意到，我们目前的大多数城市都在美国南部，对吧？
+
+574
+00:46:54,051 --> 00:46:58,122
+With within a very soon time, we'll will be in northern cities, too.
+很快，我们也将进入北方城市。
+
+575
+00:46:58,172 --> 00:46:59,945
+International markets, right?
+国际市场，对吧？
+
+576
+00:46:59,995 --> 00:47:02,438
+We've we've announced London and Tokyo.
+我们已经宣布了伦敦和东京。
+
+577
+00:47:02,488 --> 00:47:03,870
+More to come there.
+后面还有更多内容。
+
+578
+00:47:03,920 --> 00:47:05,918
+And then also just scaling, right?
+然后还有单纯的规模扩展，对吧？
+
+579
+00:47:05,968 --> 00:47:09,910
+Today we have I don't know four or 5 thousand cars on the road which is
+目前我们路上有四千到五千辆汽车，这已经非常棒了，
+
+580
+00:47:09,960 --> 00:47:14,590
+is really awesome but it's going to be just dramatically more in the next few years.
+但未来几年里，数量将会有质的飞跃。
+
+581
+00:47:14,640 --> 00:47:22,431
+And so with that of course there's operational challenges right we'll discover more longtail events that we have to address.
+因此，随之而来的自然会有运营上的挑战，我们会发现更多需要应对的长尾事件。
+
+582
+00:47:22,481 --> 00:47:26,137
+Um hardware scaling is always hard as I'm sure many of you know.
+硬件扩展总是很困难，我相信在座很多人知道这一点。
+
+583
+00:47:26,187 --> 00:47:31,994
+So should be a really fun journey ahead of us from a silicon side.
+所以从芯片角度来看，前方将是一段非常有趣的旅程。
+
+584
+00:47:32,044 --> 00:47:35,470
+Um there's just endless stuff to continue doing, right?
+事实上，还有很多事情可以持续做下去，对吧？
+
+585
+00:47:35,520 --> 00:47:39,714
+I jotted down a few notes here, but this there's not a complete list.
+我在这里简单记了几点，但这并不是一个完整的清单。
+
+586
+00:47:39,764 --> 00:47:47,150
+And when we brainstorm within the team or or with friends, right, like many other things come up to within sensing, right?
+当我们在团队内部或与朋友头脑风暴时，像感知领域还有很多其他事情浮现出来。
+
+587
+00:47:47,200 --> 00:47:49,304
+There's always more fidelity.
+总是能进一步提升精度。
+
+588
+00:47:49,354 --> 00:47:50,304
+Compute, right?
+计算，对吧？
+
+589
+00:47:50,354 --> 00:47:52,783
+Integration is a big big thing we're aiming for.
+集成是我们正在努力实现的一个非常重要的目标。
+
+590
+00:47:52,833 --> 00:47:54,213
+Today, we have a pizza box.
+如今，我们有一个披萨盒大小的设备。
+
+591
+00:47:54,263 --> 00:47:58,482
+We'd really like that to be a laptop-sized computer in the car.
+我们非常希望它能变成一辆车里的笔记本电脑大小的计算机。
+
+592
+00:47:58,532 --> 00:48:00,458
+Um silicon reliability.
+硅片可靠性。
+
+593
+00:48:00,508 --> 00:48:07,777
+Um lot of things happening there for data center side as well right where when you have so many chips in the world doing
+数据中心方面也有很多事情在发生。当世界上有这么多芯片在做
+
+594
+00:48:07,827 --> 00:48:17,120
+really critical things you want that silicon to be more reliable memory technology just endless things to do right like and there we're in
+关键任务时，你希望硅片更可靠。内存技术也有无尽的改进空间。而且我们处于
+
+595
+00:48:17,170 --> 00:48:24,782
+a different domain than data center so different technologies may be the right thing to do but really very likely to be applicable to
+与数据中心不同的领域，所以也许该用不同的技术，但这些技术很可能适用于
+
+596
+00:48:24,832 --> 00:48:34,877
+really anything that happens in physical AI right where you have robots that need very similar smarts and will have enormous scale similar to cars.
+物理 AI 中的任何事情：机器人需要类似的智能，规模也会像汽车一样巨大。
+
+597
+00:48:34,927 --> 00:48:41,582
+Um so a few maybe provocative questions right today our model's not this big right but ideally we'd
+所以，有几个可能有点挑衅性的问题。今天我们的模型还没这么大，但理想情况下我们
+
+598
+00:48:41,632 --> 00:48:47,870
+be able to run a trillion parameter model on a car right we know right a trillion parameter model
+应该能在车里运行一个万亿参数的模型。我们知道，万亿参数模型
+
+599
+00:48:47,920 --> 00:48:54,425
+is smarter than a smaller one right memory systems how do we deal with low batch how do
+比小模型更聪明。那么内存系统怎么办？低批量怎么办？
+
+600
+00:48:54,475 --> 00:49:03,789
+we deal with in a single chip environment CPUs right like with agentic behavior with model architectures changing Right?
+在单芯片环境里，CPU 怎么办？比如代理式行为、模型架构不断变化的时候。
+
+601
+00:49:03,839 --> 00:49:06,598
+Do CPUs become much more important?
+CPU 是否变得重要得多？
+
+602
+00:49:06,648 --> 00:49:08,231
+And then maybe last one, right?
+然后也许最后一个，对吧？
+
+603
+00:49:08,281 --> 00:49:12,509
+I referred to a little bit kind of a boundary between sensors and compute, right?
+我提到了传感器与计算之间的一条边界，对吧？
+
+604
+00:49:12,559 --> 00:49:20,430
+Where do we draw that line between raw data versus pre at least somewhat pre-processed data.
+我们该如何划分原始数据与至少经过一定预处理的数据之间的界限？
+
+605
+00:49:20,480 --> 00:49:24,670
+So, we're really at the dawn of sort of physical AI changing the world, right?
+所以，我们正处在物理 AI 改变世界的黎明时刻，对吧？
+
+606
+00:49:24,720 --> 00:49:32,446
+Similar to, I think, what we've seen in the last years from from a digital side, physical AI is going to make a huge difference.
+正如我们过去几年在数字领域所看到的那样，物理 AI 将带来巨大影响。
+
+607
+00:49:32,496 --> 00:49:39,751
+And so so really appreciate everything that's happened in the industry to make this possible and also looking
+因此，非常感谢整个行业所做的一切，让这一切成为可能，同时也期待
+
+608
+00:49:39,801 --> 00:49:50,606
+forward to a lot of innovation that's ahead to to make this scale and and make it even better.
+未来将涌现的大量创新，让这项技术得以扩展并变得更好。
+
+609
+00:49:50,656 --> 00:49:54,110
+So thank you.
+所以谢谢。
+
+610
+00:49:54,160 --> 00:49:55,710
+Thanks for a wonderful keynote Daniel.
+谢谢你精彩的主旨演讲，丹尼尔。
+
+611
+00:49:55,760 --> 00:49:57,432
+That was delightful.
+那真是太棒了。
+
+612
+00:49:57,482 --> 00:49:59,884
+uh to get ahead of a procedural question,
+嗯，提前回应一个程序性问题，
+
+613
+00:49:59,934 --> 00:50:05,823
+a number of people have asked about the slides and you may have noticed there was a lot of video and animation in the slides.
+有不少人询问了幻灯片的事，你们可能已经注意到，幻灯片中包含大量视频和动画。
+
+614
+00:50:05,873 --> 00:50:06,173
+So,
+所以，
+
+615
+00:50:06,160 --> 00:50:14,233
+Waymo is a little bit less comfortable distilling that into something static and so uh all of you who attend and all of you who attend remotely
+Waymo 在将这些内容提炼为静态形式时略感吃力，因此所有现场参会者以及远程参会者
+
+616
+00:50:14,283 --> 00:50:20,124
+have access to the live stream and the live stream will stay up for quite a while and then eventually other forms of video will be available.
+都可以观看直播，直播将持续一段时间，之后将陆续提供其他形式的视频内容。
+
+617
+00:50:20,174 --> 00:50:26,606
+So, I think seeing the presentation in its intended form is available for attendees right now and the world eventually.
+我认为，以原本设计的形式观看演示，目前对参会者是可行的，全世界最终也能看到。
+
+618
+00:50:26,656 --> 00:50:31,162
+So, please lean into that rather than the static frozen version of the slides.
+所以，请大家尽量观看直播，而不是静态的幻灯片截图。
+
+619
+00:50:31,212 --> 00:50:36,830
+I think the the pointing out the human in the dust storm is less good on PDF.
+我觉得在 PDF 版本中突出显示沙尘暴中的人，效果并不好。
+
+620
+00:50:36,880 --> 00:50:39,590
+Uh, and please begin lining up for the for the microphones.
+呃，请大家开始排队等候话筒。
+
+621
+00:50:39,640 --> 00:50:41,011
+There's also a microphone on this side.
+这边也有一个话筒。
+
+622
+00:50:41,061 --> 00:50:42,102
+I don't think we have one upstairs.
+我认为楼上没有话筒。
+
+623
+00:50:42,152 --> 00:50:45,326
+So, if you're in the balcony, really want to ask a question, please come downstairs for that.
+如果你在楼座里，真想提问，请下楼来。
+
+624
+00:50:45,376 --> 00:50:49,339
+I'll exercise moderator privilege and say, Daniel, you said liquid cooling.
+我行使主持人特权，说一下，丹尼尔，你说到了液冷。
+
+625
+00:50:49,389 --> 00:50:51,396
+You have liquid cooling in your car.
+你的车里有液冷系统。
+
+626
+00:50:51,446 --> 00:50:54,029
+Could you elaborate a little bit, please?
+你能稍微详细说明一下吗？
+
+627
+00:50:54,079 --> 00:50:55,013
+Yeah, good question.
+嗯，好问题。
+
+628
+00:50:55,063 --> 00:51:00,454
+Like we've actually had liquid cooling since I don't know 2014 or so.
+其实我们从大约2014年左右就开始使用液冷了。
+
+629
+00:51:00,504 --> 00:51:08,158
+Um so some of it comes from if you look at cars they actually naturally have liquid for cooling.
+嗯，你看汽车本身其实天然就具备液冷系统。
+
+630
+00:51:08,208 --> 00:51:15,630
+Um especially EVs right like the battery pack needs cooling and typically has some liquid system associated with it.
+尤其是电动车，电池组需要冷却，通常都配有相应的液冷系统。
+
+631
+00:51:15,680 --> 00:51:20,350
+Um and so we worked with partner companies to make sure we're able to tap into that.
+所以我们与合作伙伴公司合作，确保能够利用这一系统。
+
+632
+00:51:20,400 --> 00:51:23,829
+It is not as nice as data center liquid, right?
+这不像数据中心的液冷那么理想，对吧？
+
+633
+00:51:23,879 --> 00:51:26,430
+Like our liquid, it is not chilled.
+我们的液冷系统并不是制冷的。
+
+634
+00:51:26,480 --> 00:51:30,624
+So, you can imagine kind of driving in Phoenix, right?
+你可以想象一下在凤凰城开车的情景，对吧？
+
+635
+00:51:30,674 --> 00:51:32,366
+It's, I don't know, 2:00 p.m.
+大概是下午两点。
+
+636
+00:51:32,416 --> 00:51:34,642
+Sun has been shining on a car all day.
+太阳一整天都在照射着这辆车。
+
+637
+00:51:34,692 --> 00:51:36,691
+You're static, so there's no air flow.
+你停着不动，所以没有气流。
+
+638
+00:51:36,741 --> 00:51:40,410
+And so, that liquid can be, I don't know, 65 C or so, right?
+那么这种液体的温度可能是，我不确定，大约65摄氏度，对吧？
+
+639
+00:51:40,460 --> 00:51:48,029
+So, it's it's very different from sort of data center liquid, but still better than having fans going crazy in the car.
+所以它和数据中心的液冷方式非常不同，但仍然比车里风扇疯狂运转要好。
+
+640
+00:51:48,079 --> 00:51:49,866
+So, let's start taking questions.
+那么，我们开始提问吧。
+
+641
+00:51:49,916 --> 00:51:54,488
+uh my left side first one in line please identify yourself and your company and then ask your question.
+嗯，先请排在左边第一位的提问，请先说明您的姓名和公司，然后提问。
+
+642
+00:51:54,538 --> 00:52:00,869
+Uh hello Sari uh Nvidia uh I'm approaching this from a curiosity standpoint and my understanding of this is that you have a lot
+嗯，你好 Sari，英伟达。我从好奇的角度提问。据我了解，你们在软件和硬件里内置了大量
+
+643
+00:52:00,919 --> 00:52:10,020
+of software and hardware uh safety features redundancies resiliences built in uh my question is do you understand what is the most critical link
+安全特性、冗余和容错能力。我的问题是：你们是否清楚整个系统中
+
+644
+00:52:10,070 --> 00:52:16,306
+of failure in this whole system because I'm just trying to draw the corary from air crash investigation is like it's never just one
+最关键的失效环节是什么？因为我总想从空难调查里找类比——从来不是单一
+
+645
+00:52:16,356 --> 00:52:25,069
+system failure it's always a sequence of complicated time dependent uh temporal things failing all in one order to cause the whole system to fail.
+系统失效，而是一连串复杂的、与时间相关的故障按某种顺序叠加，才导致整个系统崩溃。
+
+646
+00:52:25,119 --> 00:52:30,196
+In this case, do you even understand um what that point is?
+在这种情况下，你们真的知道那个临界点在哪里吗？
+
+647
+00:52:30,246 --> 00:52:35,693
+And then if you kind of classify that this is kind of that uh this is beyond that risk,
+如果你们判断某件事已经超出可接受的风险，
+
+648
+00:52:35,743 --> 00:52:39,438
+do you like advertise that hey maybe this is too risky to drive right now,
+你们会公开提示‘现在驾驶太危险’吗？
+
+649
+00:52:39,488 --> 00:52:43,474
+maybe we should stop or maybe sometimes stopping isn't the right answer because there may be a car behind you.
+或许我们应该停下来，但有时候停下来可能并不是正确的选择，因为后面可能有车。
+
+650
+00:52:43,524 --> 00:52:49,175
+So I'm trying to understand is how do you look at it from a whole subsystem not just the semiconductor
+所以我想弄清楚的是，你如何从一个完整子系统来看待问题，而不仅仅是半导体。
+
+651
+00:52:49,225 --> 00:52:55,549
+but also like at a at a full system at a world level of failure mode because it's so complex.
+还要考虑到整个系统乃至全球范围内的故障模式，因为它的复杂性太高了。
+
+652
+00:52:55,599 --> 00:52:56,915
+Yeah, really good question.
+是的，非常好的问题。
+
+653
+00:52:56,965 --> 00:52:59,630
+Like for us, safety is really our northstar, right?
+对我们来说，安全真的是我们的核心准则，对吧？
+
+654
+00:52:59,680 --> 00:53:06,965
+So whole company is sort of founded on the basis of safety and so we the approach we take there, right?
+所以整个公司都是建立在安全基础之上的，因此我们在那方面的做法是怎样的，对吧？
+
+655
+00:53:07,015 --> 00:53:13,630
+Like we we of course do all the analysis to estimate failure rates for various things we we can imagine.
+我们当然会对各种可能的情况进行分析，以估算故障率。
+
+656
+00:53:13,680 --> 00:53:18,824
+Um and a lot of it ties into hardware systems, some of it into the software systems.
+这其中很多都与硬件系统相关，也有一部分涉及软件系统。
+
+657
+00:53:18,874 --> 00:53:26,223
+And so our safety team does reviews right and and has estimates for what are all the various probabilities.
+因此我们的安全团队会进行评审，并对各种可能性的概率做出评估。
+
+658
+00:53:26,273 --> 00:53:33,304
+Um we also have an enormous amount of data right so we do we do structured testing right where we we think
+我们还有海量数据。我们会做结构化测试，把测试环境设想成
+
+659
+00:53:33,354 --> 00:53:40,670
+of it as a a mini city right that we build that the cars operate around and we're able to test against.
+一座我们搭建的微型城市，让车辆在其中运行并测试。
+
+660
+00:53:40,720 --> 00:53:48,178
+um we do an enor billions of miles of driving and simulation before we do a software release right we test that release
+在发布软件之前，我们会做数十亿英里的驾驶和仿真测试；
+
+661
+00:53:48,228 --> 00:53:55,060
+for many many miles and so there's some of it is very analytical right based on what we know about the system and the
+对一个版本进行大量里程的测试。所以，一部分是基于我们对系统特性和目标的分析，
+
+662
+00:53:55,110 --> 00:54:02,670
+properties and our goals some of it is datadriven based on what we're able to observe through for very rigorous testing at different
+另一部分则基于我们通过在不同层级或不同测试模式下进行严格测试所观察到的数据，
+
+663
+00:54:02,720 --> 00:54:11,763
+levels of of sort of or or different modes of testing so what's the weakest link if if I may Just one question please.
+所以最薄弱的环节是什么？如果可以的话，我只想问一个问题。
+
+664
+00:54:11,813 --> 00:54:15,751
+Uh and I'll do load balancing and fair queuing and say let's take another one from the left side.
+嗯，我会做负载均衡和公平排队，然后我们再从左边拿一个。
+
+665
+00:54:15,801 --> 00:54:19,390
+Please do try to keep the question short so we can maximize our Daniel time.
+请尽量让问题简短一些，以便我们能最大化利用丹尼尔的时间。
+
+666
+00:54:19,440 --> 00:54:19,790
+Yep.
+好的。
+
+667
+00:54:19,820 --> 00:54:22,205
+Shou Mukerji, Applied Intuition.
+Shou Mukerji，Applied Intuition。
+
+668
+00:54:22,255 --> 00:54:23,173
+Hey thanks Daniel.
+嘿，谢谢丹尼尔。
+
+669
+00:54:23,223 --> 00:54:26,927
+You gave me a ride in a Waymo car a long time back before it went into production.
+你很久以前曾让我坐过一辆 Waymo 的车，那时候它还没投入生产。
+
+670
+00:54:26,977 --> 00:54:27,549
+So thank you.
+所以谢谢。
+
+671
+00:54:27,599 --> 00:54:27,959
+Question.
+问题。
+
+672
+00:54:27,989 --> 00:54:30,158
+What is how does the economics of this work?
+这个的经济模式是怎么运作的？
+
+673
+00:54:30,208 --> 00:54:39,377
+Can you please explain uh thousands of chips typically takes millions to even you know get to a point where it you can recoup the cost.
+你能解释一下吗？通常需要数千块芯片，成本可能达到数百万，甚至更高，才能收回投入。
+
+674
+00:54:39,427 --> 00:54:41,870
+So when do you think Waymo will break even?
+那你觉得 Waymo 什么时候能实现盈亏平衡？
+
+675
+00:54:41,920 --> 00:54:45,870
+Five years, 10 years?
+五年，还是十年？
+
+676
+00:54:45,920 --> 00:54:49,390
+Thought you were going to ask when do we IPO?
+我还以为你会问我们什么时候上市呢。
+
+677
+00:54:49,440 --> 00:54:53,998
+Um well, so I think there's two sides to the question, right?
+嗯，我觉得这个问题有两个层面，对吧？
+
+678
+00:54:54,048 --> 00:54:56,904
+One is of course way more economics overall, right?
+一个是整体上更显著的经济性，对吧？
+
+679
+00:54:56,954 --> 00:54:59,716
+And there I think the business case is very strong, right?
+而我认为，从商业角度看，这个案例非常有力，对吧？
+
+680
+00:54:59,766 --> 00:55:04,617
+You we released some things around our latest funding round there, so I won't dive into those,
+我们之前发布过一些关于最新融资轮的信息，所以我不展开讲了，
+
+681
+00:55:04,667 --> 00:55:08,694
+but is is a very strong kind of business case for Waymo as a company.
+但 Waymo 作为一家公司，确实拥有非常强劲的商业前景。
+
+682
+00:55:08,744 --> 00:55:14,447
+when we look at chips right like I think that may be the other part of your question right how do you decide
+我们来看芯片，我想这可能是你问题的另一部分，对吧？你是怎么决定
+
+683
+00:55:14,497 --> 00:55:22,486
+to really make a massive investments in silicon right because it's building the silicon tapeout's expensive now and as you can tell right we
+真正大规模投资硅基芯片的？因为现在制造芯片的成本很高，而且正如你所知，我们
+
+684
+00:55:22,536 --> 00:55:27,051
+also have a meaningful software effort around it right with compiler technologies
+在软件方面也有相当大的投入，比如编译器技术。
+
+685
+00:55:27,101 --> 00:55:32,879
+performance optimizations and for us that's it's really a long-term investment right
+性能优化，对我们而言，这确实是一笔长期投资。
+
+686
+00:55:32,929 --> 00:55:40,423
+like we know we know this is critical technology to our cars we're able to meaningfully move the needle today in terms of capabilities.
+正如我们所知，这项技术对我们的汽车至关重要，我们如今已能显著提升功能能力。
+
+687
+00:55:40,473 --> 00:55:47,331
+We're able to left shift for software development and we know long-term economics makes sense too, right?
+我们能够提前进行软件开发，而且从长期经济角度看，这也完全合理，对吧？
+
+688
+00:55:47,381 --> 00:55:51,675
+As we scale and so it's it's a very strong technical win today.
+随着规模扩大，这在今天已是一次非常强劲的技术胜利。
+
+689
+00:55:51,725 --> 00:55:54,670
+It's an economic win longer term.
+从长远来看，这更是一次经济上的胜利。
+
+690
+00:55:54,720 --> 00:55:55,549
+Thank you.
+谢谢。
+
+691
+00:55:55,599 --> 00:55:57,150
+Let's go stage right, please.
+请右侧的观众提问。
+
+692
+00:55:57,200 --> 00:55:57,601
+All right.
+好的。
+
+693
+00:55:57,651 --> 00:56:00,355
+Uh Kevin Krewell, independent analyst.
+你好，凯文·克鲁威尔，独立分析师。
+
+694
+00:56:00,405 --> 00:56:02,676
+Um Oh, yeah.
+噢，对，没错。
+
+695
+00:56:02,726 --> 00:56:11,390
+over here the um the sensors you have a you have radar, lidar as well as a microphone.
+这边，你们有传感器，包括雷达、激光雷达，还有麦克风。
+
+696
+00:56:11,440 --> 00:56:18,659
+Uh c can you explain how the microphone is using what are you using that for kind of wave hey Waymo and wave you down?
+嗯，你能解释一下麦克风的用途吗？比如你朝 Waymo 挥手叫车，它能识别并停下来？
+
+697
+00:56:18,709 --> 00:56:26,509
+Um or also do you are you permanently committed to both lidar and radar?
+也就是说，你是否永久地同时采用激光雷达和毫米波雷达？
+
+698
+00:56:26,559 --> 00:56:26,959
+Yeah.
+是的。
+
+699
+00:56:27,001 --> 00:56:30,744
+So so microphone primary use is sirens, right?
+所以麦克风的主要用途是警报声，对吧？
+
+700
+00:56:30,794 --> 00:56:39,797
+emergency vehicles and we we are able to use them both to hear and in some cases localize um honking and other nearby
+应急车辆，我们既能用它们来听，也能在某些情况下定位鸣笛声和其他附近的声响。
+
+701
+00:56:39,847 --> 00:56:51,789
+behavior can also be important but for primary use cases as sort of emergency vehicles and then lidar and radar we're all in permanently.
+其他行为也可能重要，但主要用途还是应急车辆，而激光雷达和毫米波雷达，我们是永久投入的。
+
+702
+00:56:51,839 --> 00:56:53,069
+Okay, thanks.
+好的，谢谢。
+
+703
+00:56:53,119 --> 00:56:53,886
+Thanks.
+谢谢。
+
+704
+00:56:53,936 --> 00:56:56,029
+Let's go stage left.
+请左侧的观众提问。
+
+705
+00:56:56,079 --> 00:56:57,390
+Hey, thanks for the great presentation.
+嘿，感谢精彩的演示。
+
+706
+00:56:57,440 --> 00:56:59,990
+So my question is a little bit towards the future.
+我的问题稍微偏向未来。
+
+707
+00:57:00,040 --> 00:57:06,269
+Um how could you comment on trying to solve the accident problem or just driving as a coordination problem?
+你如何看待将事故问题或驾驶本身视为一个协调问题来解决？
+
+708
+00:57:06,319 --> 00:57:12,313
+So you have this one car which has a lot of sensing a lot of technology a lot of learning as a platform.
+所以你有一辆汽车，它具备大量传感、大量技术以及大量学习能力，作为一个平台。
+
+709
+00:57:12,363 --> 00:57:20,573
+Could multiple of these cars communicate or come together with an arrangement so that accidents become less likely become less ingenuous and so
+这些汽车能否相互沟通或以某种方式协同工作，从而降低事故发生的可能性，使情况变得更安全？
+
+710
+00:57:20,623 --> 00:57:26,477
+on and do could you have any comments on that and how would that change the platform the car as a computer for example?
+你对此有什么看法吗？这会如何改变汽车作为一台计算机的平台呢？
+
+711
+00:57:26,527 --> 00:57:31,124
+Yeah, really interesting question and something we we continuously look at, right?
+是的，这是一个非常有趣的问题，也是我们持续关注的议题，对吧？
+
+712
+00:57:31,174 --> 00:57:33,767
+Sort of falls under V2X technology, right?
+这大致属于车对万物（V2X）技术的范畴，对吧？
+
+713
+00:57:33,817 --> 00:57:35,379
+Can vehicles talk to vehicles?
+汽车之间能否相互通信？
+
+714
+00:57:35,429 --> 00:57:37,646
+Can vehicles talk to infrastructure?
+汽车能否与基础设施通信？
+
+715
+00:57:37,696 --> 00:57:42,370
+Even vehicles possibly to a cell phone in your in your pocket.
+甚至可能与你口袋里的手机进行通信。
+
+716
+00:57:42,420 --> 00:57:48,269
+Um, so we we we think some of that could be good technology, right?
+嗯，我们认为其中一些技术是有前景的，对吧？
+
+717
+00:57:48,319 --> 00:57:52,071
+Like it has to be deployed at scale to make a meaningful difference.
+但必须大规模部署，才能产生实质性影响。
+
+718
+00:57:52,121 --> 00:57:55,097
+So it's not something we rely on as a company, right?
+所以这并不是我们公司所依赖的技术，对吧？
+
+719
+00:57:55,147 --> 00:58:00,430
+But as adoption increases, I'm sure we'll participate in in a good way too.
+但随着普及率提高，我相信我们也会以积极的方式参与其中。
+
+720
+00:58:00,480 --> 00:58:00,780
+Okay.
+好的。
+
+721
+00:58:00,799 --> 00:58:01,099
+Right.
+对。
+
+722
+00:58:01,127 --> 00:58:04,830
+But today, right, like we we want self-driving technology today, right?
+但今天，我们确实需要自动驾驶技术，对吧？
+
+723
+00:58:04,880 --> 00:58:07,309
+V2X infrastructure doesn't exist yet.
+V2X 基础设施尚未建成。
+
+724
+00:58:07,359 --> 00:58:10,350
+Um, so today we operate without it.
+所以目前我们是在没有它的情况下运行的。
+
+725
+00:58:10,400 --> 00:58:10,812
+Thank you.
+谢谢。
+
+726
+00:58:10,862 --> 00:58:13,230
+I'm So from Qualcomm, by the way.
+我是高通的，顺便说一下。
+
+727
+00:58:13,280 --> 00:58:14,509
+Oh, okay.
+哦，好的。
+
+728
+00:58:14,559 --> 00:58:15,126
+Thanks.
+谢谢。
+
+729
+00:58:15,176 --> 00:58:16,670
+Stage rate, please.
+请右侧的观众提问。
+
+730
+00:58:16,720 --> 00:58:22,079
+Michael Ari, NASA. Fantastic statistics compared to the average driver.
+迈克尔·阿里，NASA。与普通驾驶员相比，这些数据非常惊人。
+
+731
+00:58:22,129 --> 00:58:29,363
+How's it compare to the best and most adaptive human drivers both quantitatively if you have that
+它在定量上与最优秀、最适应的驾驶员相比如何？如果有的话，定性上又如何？
+
+732
+00:58:29,413 --> 00:58:38,830
+and qualitatively and then finally how can we adapt to real extreme environments like the lunar surface.
+最后，我们如何适应真实极端环境，比如月球表面？
+
+733
+00:58:38,880 --> 00:58:41,704
+Um first question I actually don't know the answer.
+嗯，第一个问题，我其实不知道答案。
+
+734
+00:58:41,754 --> 00:58:46,625
+Um, so I think Bear, we're we're actually very transparent in our safety reports, right?
+嗯，我认为——其实我们在安全报告里非常透明，对吧？
+
+735
+00:58:46,675 --> 00:58:54,384
+I I honestly don't know if if we have a stats on the safety reports, but if you're curious, like take a look and if not, reach out, right?
+我实话实说，我不确定我们是否有安全报告的数据，但如果你感兴趣，可以自己看看，如果没有，就联系一下，对吧？
+
+736
+00:58:54,434 --> 00:59:00,875
+Happy to connect with with people on the safety team on Lunar Surface.
+关于月球表面，我很乐意帮你联系安全团队的人。
+
+737
+00:59:00,925 --> 00:59:04,056
+Um, sounds really cool.
+嗯，听起来真的很酷。
+
+738
+00:59:04,106 --> 00:59:05,789
+Let's do it.
+那就这么定了。
+
+739
+00:59:05,839 --> 00:59:06,749
+Thank you.
+谢谢。
+
+740
+00:59:06,799 --> 00:59:10,509
+Stage left.
+请左侧的观众提问。
+
+741
+00:59:10,559 --> 00:59:11,752
+Hi, Leonard Lee.
+你好，Leonard Lee。
+
+742
+00:59:11,802 --> 00:59:12,630
+Next curve.
+neXt Curve。
+
+743
+00:59:12,680 --> 00:59:14,775
+Um, a really complex question here.
+嗯，这里有个非常复杂的问题。
+
+744
+00:59:14,825 --> 00:59:19,314
+Uh, you mentioned GPU, but why not TPU or custom ASIC?
+嗯，你提到了 GPU，但为什么不考虑 TPU 或定制 ASIC 呢？
+
+745
+00:59:19,364 --> 00:59:21,230
+Thank you.
+谢谢。
+
+746
+00:59:21,280 --> 00:59:21,580
+Yes.
+是的。
+
+747
+00:59:21,580 --> 00:59:27,998
+So, I think on custom ASIC, right, I think you probably got a glimmer that yes, we are building custom silicon, right?
+所以我认为在定制 ASIC 方面，你可能已经察觉到，没错，我们确实在开发定制芯片，对吧？
+
+748
+00:59:28,048 --> 00:59:29,156
+I gave a lidar example.
+我举了激光雷达的例子。
+
+749
+00:59:29,206 --> 00:59:31,056
+I gave a sensor processing chip, right?
+我举了传感器处理芯片的例子，对吧？
+
+750
+00:59:31,106 --> 00:59:35,251
+So those are custom chips we've designed within within the team.
+这些都是我们团队内部设计的定制芯片。
+
+751
+00:59:35,301 --> 00:59:41,876
+um they are on our cars and in some cases we've had several generations before that and they they tend
+它们已经用在我们的汽车上，在某些情况下我们之前已经推出了好几代产品，它们通常
+
+752
+00:59:41,926 --> 00:59:49,950
+to complement right kind of off a shelf or semi-custom solutions we we get from partners um TPUs right like of
+作为补充，与现成或半定制的解决方案搭配使用，比如来自合作伙伴的 TPUs，当然
+
+753
+00:59:50,000 --> 00:59:57,553
+course we are we are part of Alphabet we've worked very long closely with cliff for a long time from sea
+我们是 Alphabet 的一部分，我们和克里夫合作了很长时间，从早期的 Sea Star 时代就开始了，
+
+754
+00:59:57,603 --> 01:00:06,110
+star days um so there's there's there's good history and good collaboration um but especially today When you look at TPU,
+所以我们有深厚的合作历史和良好的协作关系，但尤其今天来看，当你审视 TPU 时，
+
+755
+01:00:06,160 --> 01:00:09,020
+right, like it's it's a data center chip, right?
+它是数据中心芯片，对吧？
+
+756
+01:00:09,070 --> 01:00:12,403
+You look at edge TPU, it's a cell phone chip, right?
+你再看边缘 TPU，它是一颗手机芯片，对吧？
+
+757
+01:00:12,453 --> 01:00:16,407
+And where we are with cars is is really in between, right?
+我们在汽车领域的进展，其实正处于一个中间状态，对吧？
+
+758
+01:00:16,457 --> 01:00:25,346
+It has different different ML requirements, uh has different environmental requirements and also sizing requirements that are somewhere in between.
+它有不同的机器学习需求，也有不同的环境要求和尺寸要求，这些都处于中间水平。
+
+759
+01:00:25,396 --> 01:00:27,950
+So definitely deep collaborations.
+因此，深度合作是必然的。
+
+760
+01:00:28,000 --> 01:00:32,990
+Um but as with many things, it's not a one-size-fits-all.
+但和许多事情一样，这并不是一种方案适用于所有情况。
+
+761
+01:00:33,040 --> 01:00:34,350
+Thank you.
+谢谢。
+
+762
+01:00:34,400 --> 01:00:36,845
+I think maybe one or two questions which is about the line.
+我想可能有一两个问题，是关于这条线的。
+
+763
+01:00:36,895 --> 01:00:39,230
+So stage right please if you can go quick that'd be great.
+请右侧的观众提问，尽量快一点，谢谢。
+
+764
+01:00:39,280 --> 01:00:42,263
+Hi there it's Bruno Ben from Grabbc.
+大家好，我是来自 Grabbc 的布鲁诺·本。
+
+765
+01:00:42,313 --> 01:00:47,643
+Um Daniel you talked about the interest in running very large trillion parameter models.
+丹尼尔，你提到过对运行超大规模万亿参数模型的兴趣。
+
+766
+01:00:47,693 --> 01:00:53,100
+U most of the time power and latency requirements preclude that.
+但大多数情况下，功耗和延迟要求会限制这种做法。
+
+767
+01:00:53,150 --> 01:00:58,829
+Um but I was interested about how often would that be helpful that you can trade off in latency and compute.
+不过我很好奇，这种情况在多大程度上会有帮助，是否可以通过牺牲延迟和计算能力来换取收益。
+
+768
+01:00:58,879 --> 01:01:00,066
+So for example,
+比如说，
+
+769
+01:01:00,116 --> 01:01:08,910
+the car is slow or stationary interacting with a police officer and it might choose to switch to a very different model but still run locally.
+汽车速度缓慢或静止，正在与警察互动，它可能会切换到一个截然不同的模型，但仍保持本地运行。
+
+770
+01:01:08,960 --> 01:01:10,269
+Yeah.
+嗯。
+
+771
+01:01:10,319 --> 01:01:10,619
+Yeah.
+嗯。
+
+772
+01:01:10,627 --> 01:01:14,148
+And it's a balance we're working through, right, with these models, right?
+我们正在努力平衡这些模型之间的关系，对吧？
+
+773
+01:01:14,198 --> 01:01:16,830
+I mentioned sort of think fast, think slow, right?
+我提到了“快速思考”和“慢速思考”，对吧？
+
+774
+01:01:16,880 --> 01:01:20,192
+So those those are increasingly modes we operate in.
+所以这些越来越成为我们所处的运行模式。
+
+775
+01:01:20,242 --> 01:01:27,710
+And so exactly what is the threshold for think slow depends on the scene and the problem you're trying to solve.
+因此，“慢速思考”的触发阈值取决于具体场景以及你试图解决的问题。
+
+776
+01:01:27,760 --> 01:01:29,840
+Thank you. stage left.
+谢谢。请左侧的观众。
+
+777
+01:01:29,890 --> 01:01:30,903
+Last question.
+最后一个问题。
+
+778
+01:01:30,953 --> 01:01:31,470
+Thanks.
+谢谢。
+
+779
+01:01:31,520 --> 01:01:35,384
+Alexander Kaza, uh, undergrad at the University of Toronto.
+亚历山大·卡扎，多伦多大学本科生。
+
+780
+01:01:35,434 --> 01:01:42,184
+I'm wondering what challenges did you expect would be easy to solve that turned out to be far more difficult than you thought?
+我想知道，你原本以为容易解决的挑战，后来发现远比想象中困难的是哪些？
+
+781
+01:01:42,234 --> 01:01:44,029
+Thank you.
+谢谢。
+
+782
+01:01:44,079 --> 01:01:46,269
+Oh, that's a hard one.
+噢，这可真难。
+
+783
+01:01:46,319 --> 01:01:52,387
+Um, I think one challenge is always the the hardware-software co-design, right?
+嗯，我认为一个挑战始终是软硬件协同设计，对吧？
+
+784
+01:01:52,437 --> 01:02:00,074
+like we we we have an advantage of being sort of very open and and sort of small teams, right?
+就像我们有优势，能够保持开放，团队规模也小，对吧？
+
+785
+01:02:00,124 --> 01:02:02,590
+So there there's no real friction.
+所以实际上没有太多摩擦。
+
+786
+01:02:02,640 --> 01:02:06,110
+At the same time, everyone is running really fast, right?
+同时，大家都在飞快地前进，对吧？
+
+787
+01:02:06,160 --> 01:02:07,849
+We're solving hard problems.
+我们在解决难题。
+
+788
+01:02:07,899 --> 01:02:10,485
+We want to advance the Waymo driver.
+我们希望推进 Waymo 驾驶系统。
+
+789
+01:02:10,535 --> 01:02:16,590
+And so making sure that the teams are really working to close working together closely and and doing
+因此确保团队真正紧密协作，尽可能多地进行协同设计，
+
+790
+01:02:16,640 --> 01:02:23,839
+as much co-design as we could um is is sometimes more challenging than maybe expected but I think overall
+有时比预期的更具挑战性，但我认为总体上
+
+791
+01:02:23,889 --> 01:02:29,404
+we've gotten tremendous results there and some of this is sort of self-feeding as well right based on
+我们在那里取得了巨大的成果，而且有些方面也形成了良性循环，基于
+
+792
+01:02:29,454 --> 01:02:35,470
+the results we've achieved in the last years right expect more and more of that in the next years.
+过去几年取得的成果，我们预计未来几年将取得更多成果。
+
+793
+01:02:35,520 --> 01:02:37,309
+Thank you.
+谢谢。
+
+794
+01:02:37,359 --> 01:02:43,073
+I'll throw in one more ideally humorous question which is I think a bunch of what you're doing
+我再提一个尽量幽默的问题：我觉得你们做的很多事情
+
+795
+01:02:43,123 --> 01:02:48,641
+is reaching scale and the scale and miles driven and things experienced has a long tail to it.
+都在走向规模，而规模、行驶里程和经历的事情都有长尾效应。
+
+796
+01:02:48,691 --> 01:02:53,925
+So what was the weirdest thing a car has actually experienced that you have seen so far
+所以，你亲眼见过的、汽车实际经历过的最奇怪的事情是什么？
+
+797
+01:02:53,975 --> 01:03:04,110
+that you can tell us about uh uh as part of this 13-year voyage in figuring out autonomy?
+能跟我们分享一件吗——作为这 13 年探索自动驾驶之旅的一部分？
+
+798
+01:03:04,160 --> 01:03:11,060
+I guess the one slide I showed like I find the tree falling one pretty pretty unique, right?
+我想，我展示过的那张幻灯片里，树倒下的场景就挺独特的，对吧？
+
+799
+01:03:11,110 --> 01:03:17,549
+Like I don't know of all the scenarios I thought of at least I never thought of kind of a tree falling right in front of a car.
+我想不出所有场景，至少我从没想过一棵树会正好倒在车前。
+
+800
+01:03:17,599 --> 01:03:19,069
+Not on your bingo card.
+这不在你的 bingo 卡上。
+
+801
+01:03:19,119 --> 01:03:19,434
+Yeah.
+对。
+
+802
+01:03:19,464 --> 01:03:25,404
+And I don't know like we've seen power lines go down and other stuff like it's every time you hear these
+而且我们见过电线倒下之类的情况——每次听到这些，
+
+803
+01:03:25,454 --> 01:03:31,450
+it's like oh yeah that could happen but I don't know it's hard to predict and so so there of course
+你都会想，哦，这确实可能发生，但很难预测。所以当然，
+
+804
+01:03:31,500 --> 01:03:36,525
+like we want to know the scenarios but we also want a model that can reason right so you don't have
+我们想知道各种场景，但我们也想要一个能推理的模型，这样你就不必
+
+805
+01:03:36,575 --> 01:03:43,999
+to pre-program essentially or train against every scenario but you really have that world model that can reason about what's happening.
+预先编程或针对每个场景训练，而是拥有一个能推理当前情况的世界模型。
+
+806
+01:03:44,049 --> 01:03:51,710
+Yeah, I really look forward to my superhuman car noticing a situation and doing just the right thing in ways that I would have never guessed.
+是的，我非常期待我的超人驾驶汽车能察觉到某种情况，并以我从未预料到的方式做出正确反应。
+
+807
+01:03:51,760 --> 01:03:53,710
+So, please keep up the good work.
+所以，请继续努力，保持优秀的工作。
+
+808
+01:03:53,760 --> 01:03:59,285
+Everybody, let's thank Daniel once again for a wonderful keynote.
+各位，让我们再次感谢丹尼尔带来的精彩主题演讲。
+
+809
+01:03:59,335 --> 01:04:01,069
+Thank you.
+谢谢。
+
+810
+01:04:01,119 --> 01:04:04,440
+Thanks.
+谢谢。

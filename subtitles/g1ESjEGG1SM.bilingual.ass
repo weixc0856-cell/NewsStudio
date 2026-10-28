@@ -1,0 +1,548 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:03.63,Sub,,0,0,0,,The meta problem in robotics is to be able to solve a humanoid robot.
+Dialogue: 0,0:00:03.68,0:00:06.22,Sub,,0,0,0,,If you can solve this, it'll build the biggest business in the world by a large factor.
+Dialogue: 0,0:00:06.27,0:00:08.07,Sub,,0,0,0,,We'll own over half the world's GDP as human labor.
+Dialogue: 0,0:00:08.12,0:00:13.48,Sub,,0,0,0,,You recently went viral for comments on your OpenAI partnership with Finger.
+Dialogue: 0,0:00:13.53,0:00:14.67,Sub,,0,0,0,,What happened there?
+Dialogue: 0,0:00:14.72,0:00:18.14,Sub,,0,0,0,,So, OpenAI led our series B a couple years ago.
+Dialogue: 0,0:00:18.19,0:00:19.85,Sub,,0,0,0,,They brought in Satya and Microsoft.
+Dialogue: 0,0:00:19.90,0:00:24.04,Sub,,0,0,0,,It got to the point where our team internally that was designing these models were running circles around OpenAI.
+Dialogue: 0,0:00:24.09,0:00:26.04,Sub,,0,0,0,,We were just way better at this, so I fired them.
+Dialogue: 0,0:00:26.09,0:00:27.63,Sub,,0,0,0,,I self-funded the whole company up front.
+Dialogue: 0,0:00:27.68,0:00:29.75,Sub,,0,0,0,,You know, we got to a million a month of burn in 4 months.
+Dialogue: 0,0:00:29.80,0:00:32.59,Sub,,0,0,0,,Getting the robots to do the things we showed you today has almost killed me.
+Dialogue: 0,0:00:32.64,0:00:35.64,Sub,,0,0,0,,We had record production in March, and we're going to try to 3x that by May.
+Dialogue: 0,0:00:35.69,0:00:37.55,Sub,,0,0,0,,We want to be able to get to a million units a year.
+Dialogue: 0,0:00:37.60,0:00:43.77,Sub,,0,0,0,,You've raised nearly $2 billion publicly stated at $39 billion.
+Dialogue: 0,0:00:43.82,0:00:48.47,Sub,,0,0,0,,Do you see capital as a risk or a constraint or the valuation as a risk?
+Dialogue: 0,0:00:48.52,0:00:51.82,Sub,,0,0,0,,We'll just build like enormous of tens of trillions of revenue.
+Dialogue: 0,0:00:51.87,0:00:53.09,Sub,,0,0,0,,We'll build something massive.
+Dialogue: 0,0:00:53.14,0:00:54.50,Sub,,0,0,0,,I mean, what do most companies trade at?
+Dialogue: 0,0:00:54.55,0:00:56.09,Sub,,0,0,0,,Tech companies trade at 10 or 20 times revenue.
+Dialogue: 0,0:00:56.14,0:01:00.49,Sub,,0,0,0,,You're in like $10 trillion or, you know, whatever, $100 billion to $20 million in revs.
+Dialogue: 0,0:01:00.54,0:01:00.84,Sub,,0,0,0,,Like,
+Dialogue: 0,0:01:00.75,0:01:04.85,Sub,,0,0,0,,this is going to
+Dialogue: 0,0:01:04.90,0:01:13.43,Sub,,0,0,0,,be a huge business.
+Dialogue: 0,0:01:13.48,0:01:15.35,Sub,,0,0,0,,Brett, welcome to Sourcery.
+Dialogue: 0,0:01:15.40,0:01:16.43,Sub,,0,0,0,,Thanks for having me.
+Dialogue: 0,0:01:16.48,0:01:20.15,Sub,,0,0,0,,I don't know if this is going to be part one or part two, but this is a series now.
+Dialogue: 0,0:01:20.20,0:01:21.29,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:01:21.34,0:01:22.63,Sub,,0,0,0,,Great.
+Dialogue: 0,0:01:22.68,0:01:27.01,Sub,,0,0,0,,We did the entire tour, and now we're going to do a sit-down interview.
+Dialogue: 0,0:01:27.06,0:01:32.47,Sub,,0,0,0,,I figured uh we recently went viral for a lot of these hot takes at Hill and Valley.
+Dialogue: 0,0:01:32.52,0:01:35.63,Sub,,0,0,0,,And so, I think it would be great if we just start there.
+Dialogue: 0,0:01:35.68,0:01:37.79,Sub,,0,0,0,,So, what is your hottest take right now?
+Dialogue: 0,0:01:37.84,0:01:39.15,Sub,,0,0,0,,On in robotics?
+Dialogue: 0,0:01:39.20,0:01:41.51,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:01:41.56,0:01:43.92,Sub,,0,0,0,,My hot take.
+Dialogue: 0,0:01:43.96,0:01:50.27,Sub,,0,0,0,,Um I think one thing that we spend a lot of time on is doing things with like fully autonomous and end-to-end.
+Dialogue: 0,0:01:50.32,0:01:55.31,Sub,,0,0,0,,And you asked us a few questions uh here when we walked in of like, "Is this like teleoperated?"
+Dialogue: 0,0:01:55.36,0:01:57.27,Sub,,0,0,0,,We're not teleoperating this stuff.
+Dialogue: 0,0:01:57.32,0:02:01.12,Sub,,0,0,0,,I think our hot take for robotics is just it's like it's kind of really difficult
+Dialogue: 0,0:02:01.17,0:02:06.09,Sub,,0,0,0,,to see what's really happening in the space without coming on site and really seeing stuff.
+Dialogue: 0,0:02:06.14,0:02:10.11,Sub,,0,0,0,,So, I hope I I hope you had a good experience here today seeing everything we're doing.
+Dialogue: 0,0:02:10.16,0:02:18.31,Sub,,0,0,0,,Um I think my and I think the hottest take I have is like we just want humanoid robots to work and like they're working now.
+Dialogue: 0,0:02:18.36,0:02:19.24,Sub,,0,0,0,,And it's pretty simple.
+Dialogue: 0,0:02:19.29,0:02:25.20,Sub,,0,0,0,,Like we're seeing robots um to do everyday things like we saw it clean up a living room, do commercial work.
+Dialogue: 0,0:02:25.25,0:02:26.44,Sub,,0,0,0,,Like it's just it's cool to see it.
+Dialogue: 0,0:02:26.49,0:02:30.27,Sub,,0,0,0,,Like it's cool to see that this going to happen next few years.
+Dialogue: 0,0:02:30.32,0:02:37.53,Sub,,0,0,0,,This is a very hotly contested space and it's becoming more and more competitive as It was funny
+Dialogue: 0,0:02:37.58,0:02:44.22,Sub,,0,0,0,,cuz we did this interview with Skydio and he was talking about Adam was talking about the drone cycles.
+Dialogue: 0,0:02:44.27,0:02:47.64,Sub,,0,0,0,,There are drone cycles where there's hype cycles and that kind of thing.
+Dialogue: 0,0:02:47.69,0:02:54.44,Sub,,0,0,0,,But humanoid robots are certainly at a different scale and pace than before.
+Dialogue: 0,0:02:54.49,0:02:59.11,Sub,,0,0,0,,So, how does this feel with the competition?
+Dialogue: 0,0:02:59.16,0:03:08.95,Sub,,0,0,0,,Um I think like the Listen, our internal goal is like how do we get these things to do real stuff and get paid for it?
+Dialogue: 0,0:03:09.00,0:03:13.51,Sub,,0,0,0,,And um so, we got we think a lot about how do we do autonomous useful work?
+Dialogue: 0,0:03:13.56,0:03:14.67,Sub,,0,0,0,,That's our bar.
+Dialogue: 0,0:03:14.72,0:03:19.48,Sub,,0,0,0,,And um we need to do that with like AI models really well and we need to do it on good good hardware.
+Dialogue: 0,0:03:19.53,0:03:23.84,Sub,,0,0,0,,It's like, you know, cost-effective, we can make a lot of it, we make a lot of robots.
+Dialogue: 0,0:03:23.89,0:03:30.89,Sub,,0,0,0,,Um you know, we think probably at this point a few years ahead of every big everybody globally doing this at this level,
+Dialogue: 0,0:03:30.94,0:03:35.91,Sub,,0,0,0,,which is like um we're kind of early in the humanoid, you know, book.
+Dialogue: 0,0:03:35.96,0:03:39.99,Sub,,0,0,0,,And um hopefully the next step is like how do we get more robots out at scale?
+Dialogue: 0,0:03:40.04,0:03:42.17,Sub,,0,0,0,,And I we want to be first to be able to do that.
+Dialogue: 0,0:03:42.22,0:03:48.31,Sub,,0,0,0,,How do we get, you know, hundreds and thousands and tens of thousands of robots in the world that run every day?
+Dialogue: 0,0:03:48.36,0:03:49.98,Sub,,0,0,0,,And the the space is just early.
+Dialogue: 0,0:03:50.03,0:03:56.52,Sub,,0,0,0,,There's a lot of uh we're just like we're like in the first chapter of humanoids coming into society at scale.
+Dialogue: 0,0:03:56.57,0:04:00.15,Sub,,0,0,0,,And um yeah, I mean we're we're we're we're pumped about here internally as it's working.
+Dialogue: 0,0:04:00.20,0:04:02.07,Sub,,0,0,0,,And it's just chapter one.
+Dialogue: 0,0:04:02.12,0:04:05.64,Sub,,0,0,0,,Chapter two is like get more out the door and get them working even like uh bigger scale.
+Dialogue: 0,0:04:05.69,0:04:09.15,Sub,,0,0,0,,And at some point we want to really be able to generalize to do everything a human can.
+Dialogue: 0,0:04:09.20,0:04:12.43,Sub,,0,0,0,,How much do you want to produce a year?
+Dialogue: 0,0:04:12.48,0:04:13.23,Sub,,0,0,0,,What's the goal?
+Dialogue: 0,0:04:13.28,0:04:21.55,Sub,,0,0,0,,Uh we'll make thousands of robots over the like here like basically as fast as we can this year.
+Dialogue: 0,0:04:21.60,0:04:25.57,Sub,,0,0,0,,Uh so we're ramping bot queue like lines up as fast as we can.
+Dialogue: 0,0:04:25.62,0:04:29.91,Sub,,0,0,0,,We had record production in March and we're going to 3x that by May.
+Dialogue: 0,0:04:29.96,0:04:32.95,Sub,,0,0,0,,And uh we'll build thousands of robots.
+Dialogue: 0,0:04:33.00,0:04:38.03,Sub,,0,0,0,,Um we basically have we already have the parts in house to do this and we're ramping up production.
+Dialogue: 0,0:04:38.08,0:04:41.55,Sub,,0,0,0,,And then you know, from there we want to build tens of thousands and hundreds of thousands.
+Dialogue: 0,0:04:41.60,0:04:44.57,Sub,,0,0,0,,And we we are you know, we want to be able to get to a million units a year.
+Dialogue: 0,0:04:44.62,0:04:47.70,Sub,,0,0,0,,And then we need the commercial progress to also to match that.
+Dialogue: 0,0:04:47.75,0:04:54.72,Sub,,0,0,0,,We have like so much commercial demand it's like it's hard to it we have like just overwhelmingly amount of we could I think I
+Dialogue: 0,0:04:54.77,0:05:02.01,Sub,,0,0,0,,could like put uh you know so I could put uh so so many robots into commercial customers today if they were were all ready.
+Dialogue: 0,0:05:02.06,0:05:07.11,Sub,,0,0,0,,So the big gap is here is like getting the robots ready to do uh scale autonomous operations.
+Dialogue: 0,0:05:07.16,0:05:16.15,Sub,,0,0,0,,So the bottleneck right now for commercializing them is it's having enough of them and making them run to a level of human performance at scale.
+Dialogue: 0,0:05:16.20,0:05:18.91,Sub,,0,0,0,,Like what what we don't want to do is like we don't want to put like
+Dialogue: 0,0:05:18.96,0:05:22.51,Sub,,0,0,0,,a thousand robots out the market and have like a thousand problems every single like hour.
+Dialogue: 0,0:05:22.56,0:05:22.86,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:05:22.88,0:05:24.46,Sub,,0,0,0,,Uh that's like that's not good for any of us.
+Dialogue: 0,0:05:24.51,0:05:29.87,Sub,,0,0,0,,Uh so we had a small batch of robots that went out to BMW last year and did work every day.
+Dialogue: 0,0:05:29.92,0:05:32.11,Sub,,0,0,0,,We ran for six months every single day.
+Dialogue: 0,0:05:32.16,0:05:32.61,Sub,,0,0,0,,It was phenomenal.
+Dialogue: 0,0:05:32.66,0:05:34.23,Sub,,0,0,0,,We learned we learned a ton.
+Dialogue: 0,0:05:34.28,0:05:39.43,Sub,,0,0,0,,Uh we refactored our whole approach to how to commercialize the software and AI systems after that.
+Dialogue: 0,0:05:39.48,0:05:46.79,Sub,,0,0,0,,And that kind of led us to Helix 2 which is our like second generation uh AI model internally that we like we launched a couple months ago.
+Dialogue: 0,0:05:46.84,0:05:50.72,Sub,,0,0,0,,and um uh now it's like uh uh you know,
+Dialogue: 0,0:05:50.77,0:05:55.29,Sub,,0,0,0,,how do we like put these robots into many different customers that we'll we'll probably announce a lot of this
+Dialogue: 0,0:05:55.34,0:06:01.38,Sub,,0,0,0,,in the next like 90 days and put them out into those groups uh at like decent scale like this year.
+Dialogue: 0,0:06:01.43,0:06:05.15,Sub,,0,0,0,,And assuming that goes well, we'll just keep we'll just keep compounding that.
+Dialogue: 0,0:06:05.20,0:06:09.43,Sub,,0,0,0,,Um so we, you know, we had robots there last year, that went well, we learned a lot,
+Dialogue: 0,0:06:09.48,0:06:13.96,Sub,,0,0,0,,we'll have like a much larger amount of robots going into many different customers this year.
+Dialogue: 0,0:06:14.01,0:06:17.19,Sub,,0,0,0,,And then six to nine months goes well, we'll just we'll keep like scaling like crazy.
+Dialogue: 0,0:06:17.24,0:06:19.55,Sub,,0,0,0,,Are you worried about Optimus?
+Dialogue: 0,0:06:19.60,0:06:21.45,Sub,,0,0,0,,In my mind, this is not a manufacturing problem.
+Dialogue: 0,0:06:21.50,0:06:24.67,Sub,,0,0,0,,This is an intelligence problem.
+Dialogue: 0,0:06:24.72,0:06:26.53,Sub,,0,0,0,,You're almost four years old.
+Dialogue: 0,0:06:26.58,0:06:28.15,Sub,,0,0,0,,How did you scale up this fast?
+Dialogue: 0,0:06:28.20,0:06:30.03,Sub,,0,0,0,,What was the process like?
+Dialogue: 0,0:06:30.08,0:06:35.18,Sub,,0,0,0,,Um yeah, I've been building companies for like about 20 years now.
+Dialogue: 0,0:06:35.23,0:06:42.59,Sub,,0,0,0,,Uh scaled a software company up pretty fast, sold it, scaled Archer up pretty fast, took it public.
+Dialogue: 0,0:06:42.64,0:06:48.20,Sub,,0,0,0,,And so um you know, every time you know, I'm scale I'm doing I'm in this phase,
+Dialogue: 0,0:06:48.25,0:06:53.03,Sub,,0,0,0,,I get to I get to sit back and say like how do what did I learn from the past experiences and how do I do it better?
+Dialogue: 0,0:06:53.08,0:07:00.15,Sub,,0,0,0,,And um you know, I figure we took a a very differentiated approach to basically vertically design everything.
+Dialogue: 0,0:07:00.20,0:07:07.82,Sub,,0,0,0,,I I don't think there's any group in the world that I wouldn't think on the robotics side that makes it designs more parts than we do on the robot.
+Dialogue: 0,0:07:07.87,0:07:12.71,Sub,,0,0,0,,We design the motors, basically every part within there, the rotor, stator, everything.
+Dialogue: 0,0:07:12.76,0:07:21.73,Sub,,0,0,0,,Um the sensors, the structure, the kinematics, the joints, uh we do like this, you know, the batteries that you saw today, the battery packs.
+Dialogue: 0,0:07:21.78,0:07:24.49,Sub,,0,0,0,,That that I think has really enabled us to like control our destiny.
+Dialogue: 0,0:07:24.54,0:07:26.83,Sub,,0,0,0,,We get to like build our own supply chain.
+Dialogue: 0,0:07:26.88,0:07:32.76,Sub,,0,0,0,,And uh without that, you're like left at the mercy of like some vendor and then if that has an issue, like what how are you going to go solve it?
+Dialogue: 0,0:07:32.81,0:07:34.52,Sub,,0,0,0,,If it's got a code problem, do you understand it?
+Dialogue: 0,0:07:34.57,0:07:35.16,Sub,,0,0,0,,Can you QA it?
+Dialogue: 0,0:07:35.21,0:07:35.88,Sub,,0,0,0,,Can you fix it?
+Dialogue: 0,0:07:35.93,0:07:36.86,Sub,,0,0,0,,Can you patch it?
+Dialogue: 0,0:07:36.91,0:07:40.87,Sub,,0,0,0,,Um so we understand the whole stack from top to bottom.
+Dialogue: 0,0:07:40.92,0:07:43.88,Sub,,0,0,0,,It was an enormous lift up front to get the right people here that could do that.
+Dialogue: 0,0:07:43.93,0:07:46.44,Sub,,0,0,0,,And then we've now been iterating through as you can see behind us to
+Dialogue: 0,0:07:46.49,0:07:51.80,Sub,,0,0,0,,point where we like have like decently reliable systems now that run really well.
+Dialogue: 0,0:07:51.85,0:07:55.38,Sub,,0,0,0,,Um but you know head on I self-funded the whole company up front.
+Dialogue: 0,0:07:55.43,0:07:57.82,Sub,,0,0,0,,We got to you know got to a million a month of burn in four months.
+Dialogue: 0,0:07:57.87,0:07:58.68,Sub,,0,0,0,,It was like a no joke.
+Dialogue: 0,0:07:58.73,0:08:01.07,Sub,,0,0,0,,We had like a 40-person team in four or five months.
+Dialogue: 0,0:08:01.12,0:08:02.57,Sub,,0,0,0,,They were like very good.
+Dialogue: 0,0:08:02.62,0:08:07.47,Sub,,0,0,0,,And um and then just here you know 100 hours a week just trying to make it work with the team.
+Dialogue: 0,0:08:07.52,0:08:11.05,Sub,,0,0,0,,And um we you know we made a we've made some mistakes.
+Dialogue: 0,0:08:11.10,0:08:12.75,Sub,,0,0,0,,We've learned a lot.
+Dialogue: 0,0:08:12.80,0:08:15.55,Sub,,0,0,0,,We done some things well and just recursively getting better.
+Dialogue: 0,0:08:15.60,0:08:17.71,Sub,,0,0,0,,Why did you leave Archer?
+Dialogue: 0,0:08:17.76,0:08:20.93,Sub,,0,0,0,,The the meta problem in robotics is be able to solve a humanoid robot.
+Dialogue: 0,0:08:20.98,0:08:24.91,Sub,,0,0,0,,It's if you can solve this it'll build the biggest business in the world by like a large factor.
+Dialogue: 0,0:08:24.96,0:08:28.19,Sub,,0,0,0,,Half the world's GDP like a little under half the world's GDP is human labor.
+Dialogue: 0,0:08:28.24,0:08:33.43,Sub,,0,0,0,,I wanted to go work on building this like this holy grail of robotics.
+Dialogue: 0,0:08:33.48,0:08:38.67,Sub,,0,0,0,,Um at Archer I you know I led design for every aircraft we have there.
+Dialogue: 0,0:08:38.72,0:08:47.35,Sub,,0,0,0,,Uh and I feel um I feel like this is now the decade we're going to bring humanoid robots to the masses.
+Dialogue: 0,0:08:47.40,0:08:53.03,Sub,,0,0,0,,It's the the probably the most important maybe one of the most important businesses of our lifetime.
+Dialogue: 0,0:08:53.08,0:08:58.89,Sub,,0,0,0,,And um so while I'm like a you know uh yeah so I basically get I get to I get to spend time I get
+Dialogue: 0,0:08:58.94,0:09:04.31,Sub,,0,0,0,,to you know get to work now on like what I think is probably the one of the more important areas of my whole career.
+Dialogue: 0,0:09:04.36,0:09:07.67,Sub,,0,0,0,,Um at Archer I built the you know I built the whole team up.
+Dialogue: 0,0:09:07.72,0:09:13.68,Sub,,0,0,0,,Built like uh all the led all engineering design for all the aircraft and led the company through public offering like uh so
+Dialogue: 0,0:09:13.73,0:09:20.03,Sub,,0,0,0,,we we're we were in a good we're now in a good spot to certify the aircraft in in inner like federal airspace.
+Dialogue: 0,0:09:20.08,0:09:25.51,Sub,,0,0,0,,And uh and Figure is also in a good spot here to really scale up like physical intelligence the world.
+Dialogue: 0,0:09:25.56,0:09:31.30,Sub,,0,0,0,,I recently had Michelle Dell Buono from a16z perennial on.
+Dialogue: 0,0:09:31.35,0:09:34.46,Sub,,0,0,0,,It's Mark and Ben's multi-family office.
+Dialogue: 0,0:09:34.51,0:09:42.49,Sub,,0,0,0,,And we were talking through liquidity events and what you do as a founder for your first liquidity event or second or third.
+Dialogue: 0,0:09:42.54,0:09:46.79,Sub,,0,0,0,,Why did you decide after the IPO to start another company?
+Dialogue: 0,0:09:46.84,0:09:47.14,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:09:47.16,0:09:48.03,Sub,,0,0,0,,And fund it.
+Dialogue: 0,0:09:48.08,0:09:49.31,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:09:49.36,0:09:53.55,Sub,,0,0,0,,Um I started a few other companies actually since then as well.
+Dialogue: 0,0:09:53.60,0:10:01.03,Sub,,0,0,0,,Um I think the short story is I feel that I've been watching the humanoid space for like a couple decades.
+Dialogue: 0,0:10:01.08,0:10:03.32,Sub,,0,0,0,,Like these we've been like seeing humanoids for a long time.
+Dialogue: 0,0:10:03.37,0:10:05.99,Sub,,0,0,0,,They've just been like the wrong we're on the wrong vector.
+Dialogue: 0,0:10:06.04,0:10:11.34,Sub,,0,0,0,,Like we were building the wrong stuff or we're doing it in a hobbyist grade or you know,
+Dialogue: 0,0:10:11.39,0:10:14.44,Sub,,0,0,0,,um the engineering decisions were like I think we're not maybe correct.
+Dialogue: 0,0:10:14.49,0:10:19.83,Sub,,0,0,0,,And I just I felt there was a need to uh advance the space much more rapidly.
+Dialogue: 0,0:10:19.88,0:10:21.34,Sub,,0,0,0,,And I'm doing the same with Harkin Cover.
+Dialogue: 0,0:10:21.39,0:10:26.12,Sub,,0,0,0,,I have a couple other companies I'm doing where I also feel it's a similar situation there where I feel like
+Dialogue: 0,0:10:26.17,0:10:32.51,Sub,,0,0,0,,if uh left to the the world to go do it I'm unclear if like we would head to the right direction.
+Dialogue: 0,0:10:32.56,0:10:39.15,Sub,,0,0,0,,And I think for humanoids like, you know, the best we had 4 years ago was like a you know, Boston Dynamics had a hydraulic humanoid called Atlas.
+Dialogue: 0,0:10:39.20,0:10:41.55,Sub,,0,0,0,,It like dripped oils everywhere, lasted like 20 minutes.
+Dialogue: 0,0:10:41.60,0:10:43.37,Sub,,0,0,0,,It was like very big, it very unsafe.
+Dialogue: 0,0:10:43.42,0:10:45.67,Sub,,0,0,0,,You could never put it next to humans.
+Dialogue: 0,0:10:45.72,0:10:48.75,Sub,,0,0,0,,Uh classical controls methodology there.
+Dialogue: 0,0:10:48.80,0:10:54.31,Sub,,0,0,0,,And it was just like, man, you need to like it's like a and you know, Boston Dynamics is really a large heritage around research.
+Dialogue: 0,0:10:54.36,0:10:56.43,Sub,,0,0,0,,You know, not commercialization.
+Dialogue: 0,0:10:56.48,0:10:57.96,Sub,,0,0,0,,Or not as much commercialization.
+Dialogue: 0,0:10:58.01,0:11:05.55,Sub,,0,0,0,,So, I just felt that there was a need for a group to come in to really like send this thing to the masses.
+Dialogue: 0,0:11:05.60,0:11:10.23,Sub,,0,0,0,,And I felt without my intervention in the space it I don't I don't know if we would have gotten there.
+Dialogue: 0,0:11:10.28,0:11:11.12,Sub,,0,0,0,,Or maybe we will.
+Dialogue: 0,0:11:11.17,0:11:12.33,Sub,,0,0,0,,We'll we'll find out.
+Dialogue: 0,0:11:12.38,0:11:15.83,Sub,,0,0,0,,But I think Figure has really shown that we've been able to kind of push the timelines
+Dialogue: 0,0:11:15.88,0:11:21.49,Sub,,0,0,0,,left now in this chapter book to get to to get to get into the real world.
+Dialogue: 0,0:11:21.54,0:11:24.23,Sub,,0,0,0,,And um and like I said, I think it's a significant business.
+Dialogue: 0,0:11:24.28,0:11:32.78,Sub,,0,0,0,,Sorcery is brought to you by Brex, the financial stack trusted by more than 30,000 companies including one in three venture-backed startups in the US.
+Dialogue: 0,0:11:32.83,0:11:37.12,Sub,,0,0,0,,Nearly 40% of startups fail because they run out of cash.
+Dialogue: 0,0:11:37.17,0:11:40.27,Sub,,0,0,0,,Brex is literally built to help founders avoid that.
+Dialogue: 0,0:11:40.32,0:11:48.30,Sub,,0,0,0,,Unlike traditional banks that let your money sit idle, chipping away at it with fees, Brex is designed to help you spend smarter and move faster.
+Dialogue: 0,0:11:48.35,0:11:55.10,Sub,,0,0,0,,Their all-in-one solution combines checking, treasury, and FDIC protection into one powerful account.
+Dialogue: 0,0:11:55.15,0:11:58.47,Sub,,0,0,0,,You can send and receive money globally at lightning speeds,
+Dialogue: 0,0:11:58.52,0:12:04.38,Sub,,0,0,0,,get 20 times the standard FDIC coverage through their partner banks, and even high yield from day one.
+Dialogue: 0,0:12:04.43,0:12:09.31,Sub,,0,0,0,,With same-day and even same-hour liquidity, access your funds anytime.
+Dialogue: 0,0:12:09.36,0:12:18.04,Sub,,0,0,0,,Companies like Scale AI, DoorDash, ServiceTitan, Hims, Anthropic, Flexport, Robinhood, and Plaid trust and use Brex.
+Dialogue: 0,0:12:18.09,0:12:21.67,Sub,,0,0,0,,Start today at brex.com/sourcery.
+Dialogue: 0,0:12:21.72,0:12:26.11,Sub,,0,0,0,,That's b r e x.com/sourcery.
+Dialogue: 0,0:12:26.16,0:12:32.20,Sub,,0,0,0,,Turing is training the next generation of AI with tasks that require real expertise and real-world judgment.
+Dialogue: 0,0:12:32.25,0:12:38.91,Sub,,0,0,0,,That's why companies like Nvidia, Anthropic, Salesforce, and Gemini partner with Turing.
+Dialogue: 0,0:12:38.96,0:12:45.36,Sub,,0,0,0,,Turing builds realistic reinforcement learning environments and data systems based on real operational traces,
+Dialogue: 0,0:12:45.41,0:12:49.83,Sub,,0,0,0,,the kind of infrastructure frontier labs need to train superintelligence.
+Dialogue: 0,0:12:49.88,0:12:54.27,Sub,,0,0,0,,Visit c e r y.
+Dialogue: 0,0:12:54.32,0:12:56.99,Sub,,0,0,0,,How do you have time to also work on Harkin Cover?
+Dialogue: 0,0:12:57.04,0:12:58.63,Sub,,0,0,0,,The trick is just not sleep.
+Dialogue: 0,0:12:58.68,0:12:59.91,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:12:59.96,0:13:01.75,Sub,,0,0,0,,Do you have an eight sleeve or you just don't sleep?
+Dialogue: 0,0:13:01.80,0:13:03.90,Sub,,0,0,0,,You just don't sleep.
+Dialogue: 0,0:13:03.95,0:13:06.03,Sub,,0,0,0,,Um Uh uh the trick I Here, listen.
+Dialogue: 0,0:13:06.08,0:13:09.83,Sub,,0,0,0,,I I like um Also, explain what those companies do for people.
+Dialogue: 0,0:13:09.88,0:13:10.61,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:13:10.66,0:13:17.23,Sub,,0,0,0,,So, um So, Cover is basically designing uh like detection systems for K-12 schools.
+Dialogue: 0,0:13:17.28,0:13:21.71,Sub,,0,0,0,,So, school shootings in the US have gone up 10x last 10 years.
+Dialogue: 0,0:13:21.76,0:13:25.59,Sub,,0,0,0,,And just like this is like actual like a weapon's been fired.
+Dialogue: 0,0:13:25.64,0:13:28.96,Sub,,0,0,0,,And um it's like it's just like basically got fully out of hand.
+Dialogue: 0,0:13:29.01,0:13:30.91,Sub,,0,0,0,,Uh, my view is that it's a perception problem.
+Dialogue: 0,0:13:30.96,0:13:35.58,Sub,,0,0,0,,We need to see if people have guns like kids or students have guns on them when they're entering schools.
+Dialogue: 0,0:13:35.63,0:13:38.07,Sub,,0,0,0,,If they do, like kids get them off the students.
+Dialogue: 0,0:13:38.12,0:13:40.27,Sub,,0,0,0,,If they don't, let those students go in.
+Dialogue: 0,0:13:40.32,0:13:45.11,Sub,,0,0,0,,There's a technology that was designed at NASA Jet Propulsion Lab about a decade ago
+Dialogue: 0,0:13:45.16,0:13:49.89,Sub,,0,0,0,,that it can detect weapons underneath clothes and in backpacks and bags from like uh,
+Dialogue: 0,0:13:49.94,0:13:53.59,Sub,,0,0,0,,10 20 you know, 5 10 20 m away.
+Dialogue: 0,0:13:53.64,0:14:00.20,Sub,,0,0,0,,And they built it for the Iraq Afghanistan war to find like bomb vests and other explosives and stuff on folks from a standoff distance.
+Dialogue: 0,0:14:00.25,0:14:05.27,Sub,,0,0,0,,So think about this like a like technology similar to like the L3 uh,
+Dialogue: 0,0:14:05.32,0:14:08.11,Sub,,0,0,0,,like scanning systems at a airport, but you can only do that from a few feet away.
+Dialogue: 0,0:14:08.16,0:14:13.07,Sub,,0,0,0,,But if you can do that 10x further away, you could just basically scan everybody as they're as they're coming in schools.
+Dialogue: 0,0:14:13.12,0:14:13.96,Sub,,0,0,0,,And it's not just a school thing.
+Dialogue: 0,0:14:14.01,0:14:16.35,Sub,,0,0,0,,You could use it every public venue in the world.
+Dialogue: 0,0:14:16.40,0:14:18.92,Sub,,0,0,0,,And um, it's been on my passion pro-
+Dialogue: 0,0:14:18.97,0:14:26.35,Sub,,0,0,0,,I've been like following the space in here like this is like a the the the nerdy topic here is called terahertz imaging radar.
+Dialogue: 0,0:14:26.40,0:14:28.07,Sub,,0,0,0,,And that's what we do here at Cover.
+Dialogue: 0,0:14:28.12,0:14:31.96,Sub,,0,0,0,,And so I have a team, uh, most of which are from NASA Jet Propulsion Lab.
+Dialogue: 0,0:14:32.01,0:14:34.21,Sub,,0,0,0,,So I one is I own the IP from NASA Jet Propulsion Lab.
+Dialogue: 0,0:14:34.26,0:14:36.51,Sub,,0,0,0,,I spun it out 2 years ago and I'm funding this project.
+Dialogue: 0,0:14:36.56,0:14:37.03,Sub,,0,0,0,,Oh.
+Dialogue: 0,0:14:37.08,0:14:37.38,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:37.36,0:14:38.95,Sub,,0,0,0,,How did you get it? it.
+Dialogue: 0,0:14:39.00,0:14:39.55,Sub,,0,0,0,,Oh.
+Dialogue: 0,0:14:39.60,0:14:41.27,Sub,,0,0,0,,They they'll sell it to you.
+Dialogue: 0,0:14:41.32,0:14:41.70,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:41.73,0:14:43.51,Sub,,0,0,0,,Uh, so they sold it to me.
+Dialogue: 0,0:14:43.56,0:14:45.11,Sub,,0,0,0,,100% you own it 100%?
+Dialogue: 0,0:14:45.16,0:14:45.63,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:45.68,0:14:46.08,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:14:46.12,0:14:53.71,Sub,,0,0,0,,And then uh, and Caltech which is like you know, NASA basically JPL uh, has a small uh, very small minority interest in the business.
+Dialogue: 0,0:14:53.76,0:14:54.06,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:54.08,0:14:58.83,Sub,,0,0,0,,And then a lot of the core team that did that is on my team now at Cover.
+Dialogue: 0,0:14:58.88,0:14:59.48,Sub,,0,0,0,,And it's awesome.
+Dialogue: 0,0:14:59.53,0:15:02.33,Sub,,0,0,0,,Like the images we get it's like it's like a it's like a hardware and AI problem.
+Dialogue: 0,0:15:02.38,0:15:05.19,Sub,,0,0,0,,It's like a vision problem that you have to solve with AI.
+Dialogue: 0,0:15:05.24,0:15:08.35,Sub,,0,0,0,,And we have prototypes now in in in like that are running now.
+Dialogue: 0,0:15:08.40,0:15:13.07,Sub,,0,0,0,,Um, and we will deploy hopefully to our first schools in beta by end of year.
+Dialogue: 0,0:15:13.12,0:15:15.62,Sub,,0,0,0,,And we wanted to deploy there's 130,000 K-12 schools.
+Dialogue: 0,0:15:15.67,0:15:18.75,Sub,,0,0,0,,There's like a huge amount we have to manufacture and get out the door.
+Dialogue: 0,0:15:18.80,0:15:20.49,Sub,,0,0,0,,So I've been self-funding that company for 2 years.
+Dialogue: 0,0:15:20.54,0:15:23.27,Sub,,0,0,0,,Uh, we're making incredible progress.
+Dialogue: 0,0:15:23.32,0:15:27.43,Sub,,0,0,0,,And uh I have a team in Pasadena, right next to Jet Propulsion Lab in LA.
+Dialogue: 0,0:15:27.48,0:15:28.88,Sub,,0,0,0,,And they're funding that.
+Dialogue: 0,0:15:28.93,0:15:31.47,Sub,,0,0,0,,So, um and then I have a separate company called Hark.
+Dialogue: 0,0:15:31.52,0:15:33.30,Sub,,0,0,0,,It's an AI lab I started about 7-8 months ago.
+Dialogue: 0,0:15:33.35,0:15:37.47,Sub,,0,0,0,,It's trying to design like really highly personalized and uh intelligence.
+Dialogue: 0,0:15:37.52,0:15:44.27,Sub,,0,0,0,,So, we're designing next generation AI models and also um the next generation of AI devices uh to interact with AI.
+Dialogue: 0,0:15:44.32,0:15:50.35,Sub,,0,0,0,,Like right now we interact with AI through like 20-year-old computers, like phones and MacBooks and stuff like that.
+Dialogue: 0,0:15:50.40,0:15:54.71,Sub,,0,0,0,,And they're just they're not the ideal like intermediary and interface to AI.
+Dialogue: 0,0:15:54.76,0:15:58.43,Sub,,0,0,0,,So, um so we just came out of stealth like 2 weeks ago.
+Dialogue: 0,0:15:58.48,0:15:59.95,Sub,,0,0,0,,We have a team of like 50.
+Dialogue: 0,0:16:00.00,0:16:06.75,Sub,,0,0,0,,And we're building like we're building really awesome, magical AI models and we're building really magical hardware.
+Dialogue: 0,0:16:06.80,0:16:13.03,Sub,,0,0,0,,You recently went viral for comments on your OpenAI partnership with Figure.
+Dialogue: 0,0:16:13.08,0:16:14.27,Sub,,0,0,0,,What happened there?
+Dialogue: 0,0:16:14.32,0:16:15.68,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:16:15.73,0:16:20.72,Sub,,0,0,0,,Um so OpenAI led our led my Series B a couple years ago.
+Dialogue: 0,0:16:20.77,0:16:26.19,Sub,,0,0,0,,Um and as a part of that we did a collaboration agreement to work on like next generation AI models together.
+Dialogue: 0,0:16:26.24,0:16:28.24,Sub,,0,0,0,,Uh and uh you know, it's great.
+Dialogue: 0,0:16:28.29,0:16:31.45,Sub,,0,0,0,,Like something like uh got to know the team really well over there.
+Dialogue: 0,0:16:31.50,0:16:34.35,Sub,,0,0,0,,Sam and the rest of group and you know, they led our round.
+Dialogue: 0,0:16:34.40,0:16:37.18,Sub,,0,0,0,,They brought in Satya and Microsoft.
+Dialogue: 0,0:16:37.23,0:16:38.75,Sub,,0,0,0,,They co-led it.
+Dialogue: 0,0:16:38.80,0:16:44.24,Sub,,0,0,0,,And um and then we spent a basically a year like collaborating together on like how do we get AI models to work like on a humanoid?
+Dialogue: 0,0:16:44.29,0:16:47.19,Sub,,0,0,0,,Or how do we get like language models to work on a humanoid?
+Dialogue: 0,0:16:47.24,0:16:52.39,Sub,,0,0,0,,And um they were very interested in robotics and uh we were very interested in like
+Dialogue: 0,0:16:52.44,0:16:57.08,Sub,,0,0,0,,understanding uh better about how do we get like language like like language models on robots?
+Dialogue: 0,0:16:57.13,0:17:01.03,Sub,,0,0,0,,Like what what what part they play or do they play a part in robotics?
+Dialogue: 0,0:17:01.08,0:17:02.95,Sub,,0,0,0,,And so we spent a year working with them.
+Dialogue: 0,0:17:03.00,0:17:10.39,Sub,,0,0,0,,Um like ni- nice folks, like um you know, I was in the I was like working with them for you know,
+Dialogue: 0,0:17:10.44,0:17:13.99,Sub,,0,0,0,,almost every like every day every week and it it got to a point where we
+Dialogue: 0,0:17:14.04,0:17:18.87,Sub,,0,0,0,,were just like our team internally that was designing these models were were running circles around OpenAI.
+Dialogue: 0,0:17:18.92,0:17:20.99,Sub,,0,0,0,,We were just way better at this.
+Dialogue: 0,0:17:21.04,0:17:26.71,Sub,,0,0,0,,And um we were better about testing on the robots, training the models, like all all of it.
+Dialogue: 0,0:17:26.76,0:17:31.11,Sub,,0,0,0,,My team had come from robot learning backgrounds for over a decade.
+Dialogue: 0,0:17:31.16,0:17:37.71,Sub,,0,0,0,,And um and I think there was also like some interest as OpenAI was watching us getting into robotics.
+Dialogue: 0,0:17:37.76,0:17:40.03,Sub,,0,0,0,,And so I fired him.
+Dialogue: 0,0:17:40.08,0:17:43.07,Sub,,0,0,0,,Why did you let them invest in the first place?
+Dialogue: 0,0:17:43.12,0:17:50.92,Sub,,0,0,0,,Um I got to know Sam well and the team and I thought there could be like a lot of potential strategic interests from from from both of us,
+Dialogue: 0,0:17:50.97,0:17:54.19,Sub,,0,0,0,,like of how to develop some of these systems and learn from each other.
+Dialogue: 0,0:17:54.24,0:17:59.67,Sub,,0,0,0,,And um it turned out I was kind of wrong on that.
+Dialogue: 0,0:17:59.72,0:18:00.43,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:18:00.48,0:18:05.35,Sub,,0,0,0,,Is that when or even before that when you started to become more secure here?
+Dialogue: 0,0:18:05.40,0:18:13.90,Sub,,0,0,0,,Cuz even coming in, my phone is covered, you know, there's restricted areas, it's very close on IP, like what is Yeah.
+Dialogue: 0,0:18:13.95,0:18:15.65,Sub,,0,0,0,,Oh, and so we've always been pretty secure.
+Dialogue: 0,0:18:15.70,0:18:19.09,Sub,,0,0,0,,Uh I think what we're doing is like a very high IP risk.
+Dialogue: 0,0:18:19.14,0:18:22.67,Sub,,0,0,0,,Um so we really think about carefully about our like engineering CAD and software,
+Dialogue: 0,0:18:22.72,0:18:27.44,Sub,,0,0,0,,like making sure it's like very secure from a you know, cybersecurity perspective and internal security perspective.
+Dialogue: 0,0:18:27.49,0:18:29.04,Sub,,0,0,0,,And then our office is like really open.
+Dialogue: 0,0:18:29.09,0:18:31.19,Sub,,0,0,0,,You can like see a lot of stuff from your computer.
+Dialogue: 0,0:18:31.24,0:18:33.71,Sub,,0,0,0,,Yeah, so we used to have people come in and just like snap photos randomly.
+Dialogue: 0,0:18:33.76,0:18:35.08,Sub,,0,0,0,,You're like, "Whoa, that's like not okay."
+Dialogue: 0,0:18:35.13,0:18:38.44,Sub,,0,0,0,,Like I don't like, you know, like I like hardware or something in front of the person.
+Dialogue: 0,0:18:38.49,0:18:43.55,Sub,,0,0,0,,And so we like in the Bay Area and there's a lot of honey pots, spies.
+Dialogue: 0,0:18:43.60,0:18:47.19,Sub,,0,0,0,,One day we're like uh looking up and we're like uh it was in this office and I we
+Dialogue: 0,0:18:47.24,0:18:51.04,Sub,,0,0,0,,look at the corner of the window at the top there's like a drone sitting there looking in the office,
+Dialogue: 0,0:18:51.09,0:18:52.39,Sub,,0,0,0,,like right over here.
+Dialogue: 0,0:18:52.44,0:18:52.77,Sub,,0,0,0,,Believe it.
+Dialogue: 0,0:18:52.80,0:18:53.26,Sub,,0,0,0,,Main area, yeah.
+Dialogue: 0,0:18:53.31,0:18:55.39,Sub,,0,0,0,,We're like, "Oh my gosh, we got to like change some things here."
+Dialogue: 0,0:18:55.44,0:18:56.79,Sub,,0,0,0,,Did you find out who that was?
+Dialogue: 0,0:18:56.84,0:19:03.63,Sub,,0,0,0,,find out who it was, but we like we tinted all the all the glass, like we have like we have a really strict security, both physical and digital now.
+Dialogue: 0,0:19:03.68,0:19:08.91,Sub,,0,0,0,,Um I mean, we're designing some crazy stuff, so we want to protect it at all all costs uh here.
+Dialogue: 0,0:19:08.96,0:19:12.35,Sub,,0,0,0,,Um but no, we've we've we've kind of always been like this.
+Dialogue: 0,0:19:12.40,0:19:15.27,Sub,,0,0,0,,A little a little paranoid, which always helps.
+Dialogue: 0,0:19:15.32,0:19:16.63,Sub,,0,0,0,,Typical founder trait, right?
+Dialogue: 0,0:19:16.68,0:19:18.11,Sub,,0,0,0,,Yeah, exactly.
+Dialogue: 0,0:19:18.16,0:19:24.63,Sub,,0,0,0,,Speaking of that, so one of our sponsors is Brex and they're about performance, spending smarter, moving faster.
+Dialogue: 0,0:19:24.68,0:19:36.59,Sub,,0,0,0,,I'm curious from your standpoint as a leader, how do you maintain your performance whether it's like mental or like team leadership-wise?
+Dialogue: 0,0:19:36.64,0:19:40.18,Sub,,0,0,0,,Yeah, you asked before like how do I have time to do all this stuff?
+Dialogue: 0,0:19:40.23,0:19:43.15,Sub,,0,0,0,,Um You know, I think like I always had like these three buckets of time in my life.
+Dialogue: 0,0:19:43.20,0:19:48.71,Sub,,0,0,0,,I feel like I have like my family, I have like work, and I have like, you know, you have like things you do with like friends and people you know.
+Dialogue: 0,0:19:48.76,0:19:54.06,Sub,,0,0,0,,Whatever, annual trip with friends or golf or whatever else it is from college.
+Dialogue: 0,0:19:54.11,0:20:00.23,Sub,,0,0,0,,Um about like, you know, when I was at Archer, I I got to the point where I was like man, I I don't really have time to do all three anymore.
+Dialogue: 0,0:20:00.28,0:20:04.75,Sub,,0,0,0,,So, I decided like 5 years ago to like stop doing like the annual golf trip.
+Dialogue: 0,0:20:04.80,0:20:07.81,Sub,,0,0,0,,And stop doing like this person's in town I haven't seen in 10 years, we need to go out to dinner.
+Dialogue: 0,0:20:07.86,0:20:09.55,Sub,,0,0,0,,I I I just don't do that anymore.
+Dialogue: 0,0:20:09.60,0:20:12.99,Sub,,0,0,0,,It's been all my time with family or on my companies.
+Dialogue: 0,0:20:13.04,0:20:14.15,Sub,,0,0,0,,That's all I do.
+Dialogue: 0,0:20:14.20,0:20:15.86,Sub,,0,0,0,,Um and it's it's kind of nice.
+Dialogue: 0,0:20:15.91,0:20:20.35,Sub,,0,0,0,,So, it's it's like the stuff I really care about and I get to kind of go all in on it and do a really good job.
+Dialogue: 0,0:20:20.40,0:20:26.19,Sub,,0,0,0,,Uh so, here I'm like you I was at the office last night till like midnight, but like I I come home every night to have dinner with my kids.
+Dialogue: 0,0:20:26.24,0:20:31.89,Sub,,0,0,0,,Um so, I'm at home by 6:00 and I do dinner and do bedtime and then come back in if I need to or stay home depending on what's going on,
+Dialogue: 0,0:20:31.94,0:20:33.19,Sub,,0,0,0,,but usually it's back to work.
+Dialogue: 0,0:20:33.24,0:20:40.23,Sub,,0,0,0,,Um and just make sure I get the like make sure I unblock the most pernicious problems at these companies and help help scale.
+Dialogue: 0,0:20:40.28,0:20:47.89,Sub,,0,0,0,,Um so, anyway, I think from a time perspective, uh yeah, I kind of have to be very thoughtful about about about what I what I do.
+Dialogue: 0,0:20:47.94,0:20:52.15,Sub,,0,0,0,,When I'm even in the office now, I got to be really thoughtful about I spend my time on.
+Dialogue: 0,0:20:52.20,0:20:55.54,Sub,,0,0,0,,So, what I've learned over the time, you asked when you when you came here is like,
+Dialogue: 0,0:20:55.59,0:20:59.55,Sub,,0,0,0,,do you have like the corner office or do you have like a you're in the you know, the bullpen.
+Dialogue: 0,0:20:59.60,0:21:01.50,Sub,,0,0,0,,The bullpen.
+Dialogue: 0,0:21:01.55,0:21:09.12,Sub,,0,0,0,,Um man, I have like a So, I you know, one day after we took the car, Archer public, I woke up one day and I was like,
+Dialogue: 0,0:21:09.17,0:21:15.99,Sub,,0,0,0,,I feel like I was in this Groundhog movie where I was like in this conference room with all my C-suite and was in there like every day.
+Dialogue: 0,0:21:16.04,0:21:22.79,Sub,,0,0,0,,And, you know, usually I'm like on the floor of product engineering helping to build build aircraft design and I was just like stuck.
+Dialogue: 0,0:21:22.84,0:21:29.90,Sub,,0,0,0,,I was stuck in like two day a quarter board meetings and analyst callbacks and talking about, you know,
+Dialogue: 0,0:21:29.95,0:21:35.27,Sub,,0,0,0,,my CHRO or GC and all these different things and I was like, this is just something's wrong here.
+Dialogue: 0,0:21:35.32,0:21:41.87,Sub,,0,0,0,,I mean, it's like a lead office over here like looking down on everybody, like not doing real work on the ground.
+Dialogue: 0,0:21:41.92,0:21:43.90,Sub,,0,0,0,,And, um, you know,
+Dialogue: 0,0:21:43.95,0:21:50.35,Sub,,0,0,0,,I made a decision kind of around that time to like just basically remove everything on my plate just spend time on like product engineering.
+Dialogue: 0,0:21:50.40,0:21:55.27,Sub,,0,0,0,,So, I do a few things like you're like the uh you're the first person that's actually seen the whole office like this.
+Dialogue: 0,0:21:55.32,0:21:55.65,Sub,,0,0,0,,Wow.
+Dialogue: 0,0:21:55.68,0:21:56.15,Sub,,0,0,0,,Which is cool.
+Dialogue: 0,0:21:56.20,0:21:58.35,Sub,,0,0,0,,We don't do a lot of these and I uh I love your show,
+Dialogue: 0,0:21:58.40,0:22:01.79,Sub,,0,0,0,,so it's like great to have you here and kind of give a sneak peek to the world on like what we're doing.
+Dialogue: 0,0:22:01.84,0:22:02.24,Sub,,0,0,0,,Cute.
+Dialogue: 0,0:22:02.28,0:22:02.58,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:22:02.58,0:22:06.39,Sub,,0,0,0,,And, um, and then the rest of my time's on like how do I like work on product engineering?
+Dialogue: 0,0:22:06.44,0:22:08.86,Sub,,0,0,0,,How do I advance the humanoid to do better things?
+Dialogue: 0,0:22:08.91,0:22:11.76,Sub,,0,0,0,,Or how do I make covers system out to the world?
+Dialogue: 0,0:22:11.81,0:22:13.49,Sub,,0,0,0,,We need to start testing it and getting feedback.
+Dialogue: 0,0:22:13.54,0:22:16.45,Sub,,0,0,0,,And how do we get heart models and devices out to the world to scale?
+Dialogue: 0,0:22:16.50,0:22:18.63,Sub,,0,0,0,,Like those are the things I think really matter.
+Dialogue: 0,0:22:18.68,0:22:21.35,Sub,,0,0,0,,Matters less about like doing traditional PR and event, you know,
+Dialogue: 0,0:22:21.40,0:22:27.97,Sub,,0,0,0,,like going to like trade shows and, you know, um, sitting on like these like panels and stuff.
+Dialogue: 0,0:22:28.02,0:22:28.91,Sub,,0,0,0,,None of this matters.
+Dialogue: 0,0:22:28.96,0:22:29.36,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:22:29.40,0:22:30.26,Sub,,0,0,0,,It's not real.
+Dialogue: 0,0:22:30.32,0:22:30.62,Sub,,0,0,0,,So,
+Dialogue: 0,0:22:30.56,0:22:34.26,Sub,,0,0,0,,uh so I try to spend my time in the bullpen and then I try to like
+Dialogue: 0,0:22:34.31,0:22:38.19,Sub,,0,0,0,,maximize my time both when I'm in or out of the office on things that are important.
+Dialogue: 0,0:22:38.24,0:22:46.35,Sub,,0,0,0,,VCX by Fundrise, the public ticker for private tech, allowing investors of all sizes to invest in venture capital.
+Dialogue: 0,0:22:46.40,0:22:49.79,Sub,,0,0,0,,View the portfolio at getvcx.com.
+Dialogue: 0,0:22:49.84,0:22:52.67,Sub,,0,0,0,,That's getvcx.com.
+Dialogue: 0,0:22:52.72,0:22:54.51,Sub,,0,0,0,,Some of you may not have heard this yet,
+Dialogue: 0,0:22:54.56,0:23:01.82,Sub,,0,0,0,,but our sponsor Public just launched something called generated assets and it brings AI into investing in a way I've honestly never seen before.
+Dialogue: 0,0:23:01.87,0:23:02.87,Sub,,0,0,0,,Here's how it works.
+Dialogue: 0,0:23:02.92,0:23:07.23,Sub,,0,0,0,,You type in an idea like AI-powered supply chain companies with positive
+Dialogue: 0,0:23:07.28,0:23:12.55,Sub,,0,0,0,,free cash flow or defense tech companies growing revenue over 25% year-over-year.
+Dialogue: 0,0:23:12.60,0:23:20.32,Sub,,0,0,0,,Public's AI then dispatches a swarm of agents that scan every single US stock, evaluates them, and instantly builds a custom index around your thesis.
+Dialogue: 0,0:23:20.37,0:23:23.90,Sub,,0,0,0,,What really stands out is how clearly it explains why each stock is included.
+Dialogue: 0,0:23:23.95,0:23:31.83,Sub,,0,0,0,,And before you invest, you can even backtest your idea against the S&P 500, so you're making decisions with real context, not just guessing.
+Dialogue: 0,0:23:31.88,0:23:37.90,Sub,,0,0,0,,And beyond generated assets, Public lets you invest in stocks, bonds, options, crypto, all in one place.
+Dialogue: 0,0:23:37.95,0:23:43.20,Sub,,0,0,0,,They'll even give you an uncapped 1% match when you transfer your investments over from another platform.
+Dialogue: 0,0:23:43.25,0:23:48.71,Sub,,0,0,0,,If you want to build a portfolio that actually reflects your thesis, visit public.com/sourcing.
+Dialogue: 0,0:23:48.76,0:23:50.18,Sub,,0,0,0,,Paid for by Public Investing.
+Dialogue: 0,0:23:50.23,0:23:52.43,Sub,,0,0,0,,Full disclosures in the description.
+Dialogue: 0,0:23:52.48,0:23:59.21,Sub,,0,0,0,,Enterprise AI runs on Merge, the AI infra platform for integrations, agent tooling, and model orchestration.
+Dialogue: 0,0:23:59.26,0:24:01.87,Sub,,0,0,0,,So, your team should ship product, not plumbing.
+Dialogue: 0,0:24:01.92,0:24:05.97,Sub,,0,0,0,,Mistral, Dropbox, and Drata already trust Merge in production.
+Dialogue: 0,0:24:06.02,0:24:08.43,Sub,,0,0,0,,Start building at merge.dev.
+Dialogue: 0,0:24:08.48,0:24:10.26,Sub,,0,0,0,,Founders scale faster on Deel.
+Dialogue: 0,0:24:10.31,0:24:17.17,Sub,,0,0,0,,Set up payroll for any country in minutes, hire anyone anywhere, get visas handled fast, and get back to building.
+Dialogue: 0,0:24:17.22,0:24:19.95,Sub,,0,0,0,,Visit deel.com/sourcing.
+Dialogue: 0,0:24:20.00,0:24:24.15,Sub,,0,0,0,,That's d e e l.com/sourcing.
+Dialogue: 0,0:24:24.20,0:24:32.79,Sub,,0,0,0,,You mentioned a bit of inspiration on ideas around coming from Shopify, but on the leadership standpoint,
+Dialogue: 0,0:24:32.84,0:24:39.71,Sub,,0,0,0,,like who are people that you admire or have looked up to that like help carry you forward and keep you motivated?
+Dialogue: 0,0:24:39.76,0:24:45.06,Sub,,0,0,0,,Yeah, I was I I mean, kind of like a generation behind like Steve Jobs and that whole, you know, uh crew, like Jeff Bezos,
+Dialogue: 0,0:24:45.11,0:24:51.03,Sub,,0,0,0,,which is a big investor for us at Figure, and you know, I get I get to basically have access to and talk with.
+Dialogue: 0,0:24:51.08,0:24:55.91,Sub,,0,0,0,,And um you know, for me, like I want to play the game like 11 out of 10.
+Dialogue: 0,0:24:55.96,0:24:57.89,Sub,,0,0,0,,I want to go really hard at this.
+Dialogue: 0,0:24:57.94,0:24:59.27,Sub,,0,0,0,,Like so we're really serious.
+Dialogue: 0,0:24:59.32,0:25:00.69,Sub,,0,0,0,,I'm pretty competitive person.
+Dialogue: 0,0:25:00.74,0:25:06.37,Sub,,0,0,0,,So if I'm going to do this and like sacrifice my life to do this and my time, I I I just want to nail it.
+Dialogue: 0,0:25:06.42,0:25:11.84,Sub,,0,0,0,,I want to win and I want to do uh I want to do everything to the most hardcore level possible.
+Dialogue: 0,0:25:11.89,0:25:16.13,Sub,,0,0,0,,And um so I think the folks I looked up to in the world are the folks that have done that, have been successful,
+Dialogue: 0,0:25:16.18,0:25:21.75,Sub,,0,0,0,,but have like really devoted their time to being um kind of best athlete in those situations.
+Dialogue: 0,0:25:21.80,0:25:25.22,Sub,,0,0,0,,Um So uh yeah, and I'm looking at myself here.
+Dialogue: 0,0:25:25.27,0:25:26.58,Sub,,0,0,0,,Like how do I make these companies work?
+Dialogue: 0,0:25:26.63,0:25:32.35,Sub,,0,0,0,,There's just nothing worse than like 10, 15, 20 years from now these things not working.
+Dialogue: 0,0:25:32.40,0:25:34.69,Sub,,0,0,0,,Like what I I should I like I missed all my golf trips.
+Dialogue: 0,0:25:34.74,0:25:35.59,Sub,,0,0,0,,You know what I mean?
+Dialogue: 0,0:25:35.64,0:25:37.31,Sub,,0,0,0,,I missed like time with the family.
+Dialogue: 0,0:25:37.36,0:25:39.67,Sub,,0,0,0,,It's just like I just missed all this stuff in my life.
+Dialogue: 0,0:25:39.72,0:25:41.71,Sub,,0,0,0,,And I at this point I have plenty of money.
+Dialogue: 0,0:25:41.76,0:25:43.44,Sub,,0,0,0,,So it's like I'm doing this because I love it.
+Dialogue: 0,0:25:43.49,0:25:45.68,Sub,,0,0,0,,And I better be getting better at it.
+Dialogue: 0,0:25:45.73,0:25:48.56,Sub,,0,0,0,,And you know, recursively improving.
+Dialogue: 0,0:25:48.61,0:25:52.10,Sub,,0,0,0,,And I think I look up to the folks like that that have done that through their time.
+Dialogue: 0,0:25:52.15,0:25:58.08,Sub,,0,0,0,,If you look at like Steve and Jeff and some of these group groups are kind of a generation above me.
+Dialogue: 0,0:25:58.13,0:26:01.43,Sub,,0,0,0,,They they've been good at many things in their life across many different areas.
+Dialogue: 0,0:26:01.48,0:26:07.15,Sub,,0,0,0,,And um they've also too devoted their life to doing this and have been like a good source of inspiration.
+Dialogue: 0,0:26:07.20,0:26:10.27,Sub,,0,0,0,,Um and it's been hard and they've done it over decades.
+Dialogue: 0,0:26:10.32,0:26:13.55,Sub,,0,0,0,,This stuff is like not This stuff doesn't happen overnight.
+Dialogue: 0,0:26:13.60,0:26:18.63,Sub,,0,0,0,,I've been work I've been doing like 20 years now doing all this stuff and I feel like I'm just starting.
+Dialogue: 0,0:26:18.68,0:26:21.75,Sub,,0,0,0,,What are the biggest risks to the business?
+Dialogue: 0,0:26:21.80,0:26:24.07,Sub,,0,0,0,,The humanoid thing is just so hard.
+Dialogue: 0,0:26:24.12,0:26:27.79,Sub,,0,0,0,,Um I can't like even explain it very well.
+Dialogue: 0,0:26:27.84,0:26:34.71,Sub,,0,0,0,,It's uh getting the robots to do the things we showed you today has been like it has almost killed me.
+Dialogue: 0,0:26:34.76,0:26:37.39,Sub,,0,0,0,,And we have such an uphill battle to go do that.
+Dialogue: 0,0:26:37.44,0:26:38.36,Sub,,0,0,0,,Same with Archer.
+Dialogue: 0,0:26:38.41,0:26:43.33,Sub,,0,0,0,,We have to fly aircraft every day above cities and make it really safe.
+Dialogue: 0,0:26:43.38,0:26:46.47,Sub,,0,0,0,,And it's like one of the safest forms of transportation you have.
+Dialogue: 0,0:26:46.52,0:26:54.31,Sub,,0,0,0,,So this this stuff I'm working through is just like um like if you look at the odds of it of of these things,
+Dialogue: 0,0:26:54.36,0:26:57.07,Sub,,0,0,0,,you know, working they're like super low.
+Dialogue: 0,0:26:57.12,0:26:59.63,Sub,,0,0,0,,And I think that's probably pretty accurate.
+Dialogue: 0,0:26:59.68,0:27:07.35,Sub,,0,0,0,,So, um I basically have like a I basically have a funnel of the hardest, most pernicious problems I have to go solve every day.
+Dialogue: 0,0:27:07.40,0:27:10.32,Sub,,0,0,0,,And they're like they're really really tough.
+Dialogue: 0,0:27:10.37,0:27:18.03,Sub,,0,0,0,,I am So, like my biggest risk, there's like a list of risk list like s- a very long list of risks.
+Dialogue: 0,0:27:18.08,0:27:20.75,Sub,,0,0,0,,And things that could hurt like things that could like make us to not make it.
+Dialogue: 0,0:27:20.80,0:27:29.75,Sub,,0,0,0,,Um the figure, the most important thing is to be able to do end-to-end useful work over a long time horizon.
+Dialogue: 0,0:27:29.80,0:27:37.07,Sub,,0,0,0,,I want to be able to put a robot into a home and be able to do like 7 to 10 hours of work successfully without failures.
+Dialogue: 0,0:27:37.12,0:27:41.91,Sub,,0,0,0,,With to know with no human intervention and then do that every day forever.
+Dialogue: 0,0:27:41.96,0:27:43.12,Sub,,0,0,0,,It's just like a hard problem.
+Dialogue: 0,0:27:43.17,0:27:45.15,Sub,,0,0,0,,Nobody's ever shown that.
+Dialogue: 0,0:27:45.20,0:27:46.11,Sub,,0,0,0,,The robot's very complicated.
+Dialogue: 0,0:27:46.16,0:27:49.27,Sub,,0,0,0,,It's like designing like a turbofan or a rocket.
+Dialogue: 0,0:27:49.32,0:27:51.67,Sub,,0,0,0,,Like an aircraft from scratch.
+Dialogue: 0,0:27:51.72,0:27:55.53,Sub,,0,0,0,,It's just like a very difficult thing that we've also designed the entire supply chain from scratch.
+Dialogue: 0,0:27:55.58,0:27:57.20,Sub,,0,0,0,,So, it's like it's got a ton of problems.
+Dialogue: 0,0:27:57.25,0:27:59.63,Sub,,0,0,0,,You know, it doesn't work the first time.
+Dialogue: 0,0:27:59.68,0:28:00.78,Sub,,0,0,0,,We're working those problems out.
+Dialogue: 0,0:28:00.83,0:28:07.23,Sub,,0,0,0,,Like we used to run that robot here, figure figure one, and man that robot could like run for like an hour.
+Dialogue: 0,0:28:07.28,0:28:08.71,Sub,,0,0,0,,And it would like fault.
+Dialogue: 0,0:28:08.76,0:28:10.87,Sub,,0,0,0,,We know all the reasons why it would fall.
+Dialogue: 0,0:28:10.92,0:28:13.27,Sub,,0,0,0,,Or it would like, you know, lose power.
+Dialogue: 0,0:28:13.32,0:28:15.06,Sub,,0,0,0,,And you know, we moved to figure two.
+Dialogue: 0,0:28:15.11,0:28:18.83,Sub,,0,0,0,,I think we probably like maybe we saw that like once a day.
+Dialogue: 0,0:28:18.88,0:28:23.95,Sub,,0,0,0,,And now figure three like I think, you know, everywhere here they're all running all all day.
+Dialogue: 0,0:28:24.00,0:28:27.51,Sub,,0,0,0,,And we see faults we'll see faults every week.
+Dialogue: 0,0:28:27.56,0:28:29.75,Sub,,0,0,0,,Not on every single robot, but we'll see faults.
+Dialogue: 0,0:28:29.80,0:28:31.95,Sub,,0,0,0,,And we have a list of those and we're working those down.
+Dialogue: 0,0:28:32.00,0:28:34.23,Sub,,0,0,0,,Um but it's really hard.
+Dialogue: 0,0:28:34.28,0:28:38.71,Sub,,0,0,0,,And as we're growing the fleet, the absolute number of faults are rising and we got to go figure out how to solve those.
+Dialogue: 0,0:28:38.76,0:28:41.59,Sub,,0,0,0,,Cuz like you said before like the amount of states the robot can be in is so high.
+Dialogue: 0,0:28:41.64,0:28:48.31,Sub,,0,0,0,,So, you can't really reasonably predict what the robot's going to like look like at every single time stamp everywhere in the world.
+Dialogue: 0,0:28:48.36,0:28:49.68,Sub,,0,0,0,,You kind of can for a car.
+Dialogue: 0,0:28:49.73,0:28:52.43,Sub,,0,0,0,,It's like kind of you can just drive on roads.
+Dialogue: 0,0:28:52.48,0:28:53.94,Sub,,0,0,0,,You It's a hard problem, too.
+Dialogue: 0,0:28:53.99,0:28:58.36,Sub,,0,0,0,,So, like um anyway, I think what I'm trying to say is like we have like a funhouse of problems,
+Dialogue: 0,0:28:58.41,0:29:02.97,Sub,,0,0,0,,and it's like never-ending problem city for the company.
+Dialogue: 0,0:29:03.02,0:29:04.99,Sub,,0,0,0,,Um we have to be able to manufacture unprecedented rates.
+Dialogue: 0,0:29:05.04,0:29:08.44,Sub,,0,0,0,,We have to get humanoid robots to work autonomously without human intervention.
+Dialogue: 0,0:29:08.49,0:29:09.31,Sub,,0,0,0,,Nobody's ever shown that.
+Dialogue: 0,0:29:09.36,0:29:11.99,Sub,,0,0,0,,We have to make it work with like a AI policies.
+Dialogue: 0,0:29:12.04,0:29:12.87,Sub,,0,0,0,,The hardware can't fail.
+Dialogue: 0,0:29:12.92,0:29:13.97,Sub,,0,0,0,,It's got to be really affordable.
+Dialogue: 0,0:29:14.02,0:29:17.43,Sub,,0,0,0,,We've got to make a lot of them.
+Dialogue: 0,0:29:17.48,0:29:19.59,Sub,,0,0,0,,And we've got to get consumers to want them.
+Dialogue: 0,0:29:19.64,0:29:20.71,Sub,,0,0,0,,That's a lot.
+Dialogue: 0,0:29:20.76,0:29:23.59,Sub,,0,0,0,,And you've raised nearly $2 billion.
+Dialogue: 0,0:29:23.64,0:29:28.77,Sub,,0,0,0,,I think most recently publicly stated at $39 billion.
+Dialogue: 0,0:29:28.82,0:29:37.46,Sub,,0,0,0,,Do you see capital as a risk or a constraint or the valuation as a risk or This will build like the biggest business in the world.
+Dialogue: 0,0:29:37.51,0:29:40.46,Sub,,0,0,0,,Like half of like little under half of GDP is human labor in the commercial market.
+Dialogue: 0,0:29:40.51,0:29:42.54,Sub,,0,0,0,,Like they pay wages for humans.
+Dialogue: 0,0:29:42.59,0:29:44.39,Sub,,0,0,0,,We We do human work.
+Dialogue: 0,0:29:44.44,0:29:51.11,Sub,,0,0,0,,So, you're looking at we will have the ability to ship, if the robots work well, billions of robots in the commercial workforce.
+Dialogue: 0,0:29:51.16,0:29:53.58,Sub,,0,0,0,,Uh you'll produce you know,
+Dialogue: 0,0:29:53.63,0:30:03.15,Sub,,0,0,0,,there's like 30 trillion 40 trillion of wages paid to this like every year to that to like to to for to folks that'd be doing that work.
+Dialogue: 0,0:30:03.20,0:30:08.23,Sub,,0,0,0,,We'll be able to expand that work, automate more like a lot of it, and to continue to scale it up.
+Dialogue: 0,0:30:08.28,0:30:17.11,Sub,,0,0,0,,I think like that, plus the stuff we're seeing in the home, will just build like enormous of tens of trillions of revenue.
+Dialogue: 0,0:30:17.16,0:30:19.31,Sub,,0,0,0,,You'll build something massive.
+Dialogue: 0,0:30:19.36,0:30:21.11,Sub,,0,0,0,,I mean, what do most companies trade at?
+Dialogue: 0,0:30:21.16,0:30:22.81,Sub,,0,0,0,,Tech companies trade at 10 or 20 times revenue.
+Dialogue: 0,0:30:22.86,0:30:29.47,Sub,,0,0,0,,You're in like 10 trillion dollars or you know, whatever, 100 billion dollars to trillion dollars of revs.
+Dialogue: 0,0:30:29.52,0:30:31.87,Sub,,0,0,0,,Like this is going to be a huge business.
+Dialogue: 0,0:30:31.92,0:30:34.59,Sub,,0,0,0,,Do you have plans for the moon or Mars?
+Dialogue: 0,0:30:34.64,0:30:37.99,Sub,,0,0,0,,We'd love to send robots into space.
+Dialogue: 0,0:30:38.04,0:30:39.35,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:30:39.40,0:30:41.15,Sub,,0,0,0,,Let's get them out there.
+Dialogue: 0,0:30:41.20,0:30:41.83,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:30:41.88,0:30:42.91,Sub,,0,0,0,,I have a gift for you.
+Dialogue: 0,0:30:42.96,0:30:43.43,Sub,,0,0,0,,You do?
+Dialogue: 0,0:30:43.48,0:30:44.35,Sub,,0,0,0,,I do. it?
+Dialogue: 0,0:30:44.40,0:30:45.59,Sub,,0,0,0,,I have some figure robot?
+Dialogue: 0,0:30:45.64,0:30:47.43,Sub,,0,0,0,,I have some figure swag.
+Dialogue: 0,0:30:47.48,0:30:50.63,Sub,,0,0,0,,Um, so yeah, some hats, shirts.
+Dialogue: 0,0:30:50.68,0:30:53.99,Sub,,0,0,0,,So you can rep the Figure brand here. is a lot of merch. of merch.
+Dialogue: 0,0:30:54.04,0:30:58.03,Sub,,0,0,0,,Wow, I'm going to have to get a new closet.
+Dialogue: 0,0:30:58.08,0:30:58.48,Sub,,0,0,0,,This is great.
+Dialogue: 0,0:30:58.53,0:31:03.47,Sub,,0,0,0,,It was funny, I don't think they caught this when we were recording the the the tour,
+Dialogue: 0,0:31:03.52,0:31:10.19,Sub,,0,0,0,,but I asked you how you made the logo and you said it was uh the robot steps.
+Dialogue: 0,0:31:10.24,0:31:12.01,Sub,,0,0,0,,Yeah, it basically the robot takes footsteps like this.
+Dialogue: 0,0:31:12.06,0:31:14.43,Sub,,0,0,0,,Even in simulation they look like little squares.
+Dialogue: 0,0:31:14.48,0:31:20.27,Sub,,0,0,0,,Uh so you have like a little uh like kind of a walk a walk and then you also have a little a kind of an F abstract F.
+Dialogue: 0,0:31:20.32,0:31:24.03,Sub,,0,0,0,,It's not really.
+Dialogue: 0,0:31:24.08,0:31:25.51,Sub,,0,0,0,,Okay, we'll keep the walk.
+Dialogue: 0,0:31:25.56,0:31:25.96,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:31:25.99,0:31:31.19,Sub,,0,0,0,,Well, as we wrap up, what are you most looking forward to for this next year?
+Dialogue: 0,0:31:31.24,0:31:37.30,Sub,,0,0,0,,Um Uh for this year I want to ship robots at scale out to the world and second thing I want to solve
+Dialogue: 0,0:31:37.35,0:31:42.75,Sub,,0,0,0,,is I want to solve There's like um we have like an extreme focus here to solve like what I call general robotics.
+Dialogue: 0,0:31:42.80,0:31:44.20,Sub,,0,0,0,,Like a robot that can do everything a human can.
+Dialogue: 0,0:31:44.25,0:31:47.04,Sub,,0,0,0,,And you have like almost like a feeling of like a human in a body suit.
+Dialogue: 0,0:31:47.09,0:31:49.44,Sub,,0,0,0,,You can talk to, can look at you, reason,
+Dialogue: 0,0:31:49.49,0:31:56.11,Sub,,0,0,0,,visual understanding and you can drop into any place and like kind of just like look around, reason and understand.
+Dialogue: 0,0:31:56.16,0:31:57.75,Sub,,0,0,0,,Uh we want to solve that problem.
+Dialogue: 0,0:31:57.80,0:32:00.06,Sub,,0,0,0,,And that's a huge that's a Helix problem for us.
+Dialogue: 0,0:32:00.11,0:32:04.13,Sub,,0,0,0,,And um so we have a huge focus to get robots out the door.
+Dialogue: 0,0:32:04.18,0:32:06.96,Sub,,0,0,0,,We have a huge focus to solve general robotics here.
+Dialogue: 0,0:32:07.01,0:32:12.71,Sub,,0,0,0,,I want this to be the first place where we see um see AGI in the physical world.
+Dialogue: 0,0:32:12.76,0:32:21.63,Sub,,0,0,0,,And uh we think we have the recipe and uh we think we have like the right um training processes in place to do this.
+Dialogue: 0,0:32:21.68,0:32:27.07,Sub,,0,0,0,,We uh and this will be an important this year and next will be important to see if we can crack this.
+Dialogue: 0,0:32:27.12,0:32:27.82,Sub,,0,0,0,,Exciting.
+Dialogue: 0,0:32:27.87,0:32:34.68,Sub,,0,0,0,,Well, thank you so much for the full day here, the entire tour of the whole campus and the thoughtful discussion.
+Dialogue: 0,0:32:34.73,0:32:36.11,Sub,,0,0,0,,I really It It was great to have you.
+Dialogue: 0,0:32:36.16,0:32:36.99,Sub,,0,0,0,,Hey, it's Molly.
+Dialogue: 0,0:32:37.04,0:32:38.26,Sub,,0,0,0,,If you enjoy our interviews,
+Dialogue: 0,0:32:38.31,0:32:47.59,Sub,,0,0,0,,check out our newsletter sorcery.vc where we deliver a once-a-week top deals and tech headlines email and also go deeper on our podcast interviews.
+Dialogue: 0,0:32:47.64,0:32:54.78,Sub,,0,0,0,,Subscribe to sorcery today and don't forget to subscribe to the podcast on YouTube, Spotify, Apple, or wherever you listen.
+Dialogue: 0,0:32:54.82,0:32:58.80,Sub,,0,0,0,,Link in description to sign up.

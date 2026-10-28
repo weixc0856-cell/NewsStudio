@@ -1,0 +1,1299 @@
+1
+00:00:04,160 --> 00:00:14,790
+hello again it's my privilege to welcome you know Jensen Huang who of course needs no introduction okay and
+大家好，再次见到你们是我的荣幸，今天我很荣幸地欢迎黄仁勋，他当然无需多做介绍，好了，
+
+2
+00:00:14,840 --> 00:00:21,652
+we have a partnership with Nvidia for a long time and it's really remarkable to see you know how
+我们与英伟达合作已久，真的令人惊叹地看到
+
+3
+00:00:21,702 --> 00:00:28,874
+Jensen and Nvidia is is transforming the world okay and also Jensen himself is running a master class for
+黄仁勋和英伟达是如何改变世界的，好了，同时黄仁勋本人也一直在
+
+4
+00:00:28,924 --> 00:00:36,957
+last 30 years on how to lead a company how to transform Industries how to create new markets and and
+过去30年里，主讲一门关于如何领导公司、如何变革产业、如何创造新市场的大师课，以及
+
+5
+00:00:37,007 --> 00:00:38,047
+it's really great to
+真的非常棒
+
+6
+00:00:38,097 --> 00:00:49,654
+have Jensen here Jensen please
+欢迎黄仁勋，黄仁勋，请
+
+7
+00:00:49,704 --> 00:00:58,469
+and rude it's great to be here I love designers
+谢谢，很高兴来到这里，我热爱设计师们
+
+8
+00:00:58,519 --> 00:01:09,267
+I love design tools yes I love K oh thank
+我热爱设计工具，是的，我热爱 K，哦，谢谢
+
+9
+00:01:09,317 --> 00:01:19,190
+you guys so I love them all I love virtuoso
+你们，我爱所有这些工具，我爱 Virtuoso
+
+10
+00:01:19,240 --> 00:01:26,201
+Allegro Palladium Palladium Palladium is the only Appliance that's
+Allegro Palladium，Palladium 是唯一一个
+
+11
+00:01:26,251 --> 00:01:33,970
+more important to me than the refrigerator it is the
+对我来说比冰箱还重要的设备，它是我生活中
+
+12
+00:01:34,020 --> 00:01:42,657
+single most important Appliance in my life with we are the largest installation of Palladiums anywhere you know that and
+最重要的设备，我们是全球最大的 Palladium 安装用户，你们知道这一点吗
+
+13
+00:01:42,707 --> 00:01:49,618
+um they are the first supercomputers we ever installed and operated and we we are we are uh we
+呃，它们是我们首次安装和运行的超级计算机，我们……我们……我们对它们非常着迷
+
+14
+00:01:49,668 --> 00:01:57,353
+are we are incredibly incredibly enamored with Palladium and so we love the work that you guys do
+我们对帕拉迪姆（Palladium）极为着迷，因此我们非常欣赏你们所做的工作
+
+15
+00:01:57,403 --> 00:02:03,906
+Blackwell would not be possible without Palladium well thank you Jensen we love this partnership it's remarkable to see
+黑威尔（Blackwell）的实现离不开帕拉迪姆，谢谢您，黄仁勋，我们非常珍视这一合作，看到这一切令人惊叹
+
+16
+00:02:03,956 --> 00:02:09,846
+and you know you are now The Godfather right everybody just calls you The Godfather you know come on God
+现在你就是教父了，大家都叫你教父，拜托，教父
+
+17
+00:02:09,896 --> 00:02:14,213
+so you know we can talk about a lot of things but first you know as the front row
+所以我们可以聊很多话题，但首先，作为最前排的座位
+
+18
+00:02:14,263 --> 00:02:25,540
+seat of driving when The Godfather says something it happens yeah when The Godfather wants something it happens yes obviously
+当教父说话时，事情就会发生，当教父想要什么时，事情就会发生，当然
+
+19
+00:02:25,590 --> 00:02:36,123
+that's not true for you but in terms of AI you know you have you know of course you
+这对你来说不成立，但就 AI 而言，你当然有最前排的视角
+
+20
+00:02:36,173 --> 00:02:42,998
+have front row seat you're driving most of these Innovation what do you see you know next 5 years you
+你主导了大部分创新，你认为未来五年会怎样？这些模型会变得更大，更专精，数据中心的架构会如何演变
+
+21
+00:02:43,048 --> 00:02:48,730
+know this like models get bigger models get more specific what happens to the architecture of the data center
+你对未来五年有什么看法？当然，这是一段长期旅程，但尤其在接下来的
+
+22
+00:02:48,780 --> 00:02:52,956
+what do you see for next you know of course this is long-term Journey but especially for the next
+五年里，你认为 AI 将如何演进？让我先退一步，事实上，你的主题演讲和鲁德
+
+23
+00:02:53,006 --> 00:03:01,023
+5 years how do you think AI is going to evolve I got that the um uh let's take
+可能是迄今为止最浓缩的……
+
+24
+00:03:01,073 --> 00:03:08,730
+a step back and and in fact in fact your keynote and rude is is probably the most condensed um
+呃，让我们先退一步，事实上，你的主题演讲和鲁德……
+
+25
+00:03:08,780 --> 00:03:17,274
+uh example highlight of the transformation of computing underneath and the reason for that is of of course as
+例如，计算底层变革的突出例子，其原因当然是……
+
+26
+00:03:17,324 --> 00:03:26,583
+you know without Computing uh without Cadence there's no Computing without Computing there's no Cadence mhm and and so so
+你知道，没有计算，就没有楷登电子；没有楷登电子，也没有计算，嗯嗯，所以……
+
+27
+00:03:26,633 --> 00:03:34,750
+the the uh the fundamental changes transitions of the Computing platforms underneath uh it's it's foundational to Cadence and
+计算平台底层的根本性变革与转型，对楷登电子而言至关重要，且……
+
+28
+00:03:34,800 --> 00:03:42,030
+it's foundational to to every single industry that relies on cadens which is every single industry and and um what's
+对依赖楷登电子的每一个行业而言都至关重要，而这些行业就是所有行业，那么……
+
+29
+00:03:42,080 --> 00:03:50,442
+happening if you look at your keynote uh well your keynote very clearly highlighted the in fact Millennium alone
+如果你看看你的主题演讲，你的主题演讲非常清楚地突出了这一点，实际上仅千年平台就……
+
+30
+00:03:50,492 --> 00:03:57,972
+highlighted the incredible benefits of accelerated Computing and once you get on accelerated Computing the the next thing that
+突出了加速计算的惊人优势，一旦进入加速计算，接下来就……
+
+31
+00:03:58,022 --> 00:04:04,831
+is possible generative AI is additive on top of that without that transition to accelerated Computing generative AI would
+成为可能，生成式AI是在此基础上叠加的，没有向加速计算的转型，生成式AI将非常难以实现……
+
+32
+00:04:04,881 --> 00:04:11,835
+be very difficult to do the benefit of going to accelerated Computing is all of a sudden what was what
+采用加速计算带来的好处是，突然之间，过去使用CPU难以扩展的……
+
+33
+00:04:11,885 --> 00:04:19,202
+was difficult to scale in the past using CPU scaling all of a sudden you're talking about a thousand
+所有内容都实现了千倍的扩展因子，再加上生成式AI的引入，又额外提升了30倍……
+
+34
+00:04:19,252 --> 00:04:25,201
+times x factors and on top of that another 30X X Factor on top of that when you add generative
+扩展因子，当生成式AI叠加其上时，又带来了额外的10万倍扩展因子……
+
+35
+00:04:25,251 --> 00:04:30,715
+AI to that there's another 100,000 X Factor on top of that um you also said something that was
+你还在开头提到过一件非常棒的事，你提到设计工具……
+
+36
+00:04:30,765 --> 00:04:39,716
+really really terrific in the beginning um uh you said that design tools uh complete does the processing one time
+完成一次处理，就完成了全部计算过程
+
+37
+00:04:39,766 --> 00:04:50,330
+and yet what designers want to do is explore a multi-dimensional um multimodality often times uh uh exploration space
+但设计师想要做的，是探索多维度、多模态的探索空间
+
+38
+00:04:50,380 --> 00:04:56,980
+and there isn't a right answer there's simply a best answer MH and so we need to explore hundreds
+那里没有正确答案，只有最佳答案，所以我们需要探索成百上千个不同的区域
+
+39
+00:04:57,030 --> 00:05:04,785
+of thousands of of um uh different areas but of course the universe the the exhaustive exploration of the
+但当然，对设计空间进行穷尽式探索根本不可能实现，即使拥有无限的计算资源也无法完成
+
+40
+00:05:04,835 --> 00:05:10,051
+design space is simply too hard to do no an infinite amount of computation would not be able to do
+因此我们需要人工智能帮助我们跳入某个特定的探索区域
+
+41
+00:05:10,101 --> 00:05:16,627
+it and so we need AI to help us jump into a particular area of of uh of exploration
+并进行优化，然后利用有原则的求解器，真正精准地聚焦于该区域，因此我们可以共同完成各种不同的事情
+
+42
+00:05:16,677 --> 00:05:23,336
+and optimization and then using principled solvers uh really really home in on that and so there's all kinds of
+比如加速计算，我认为生成式 AI 首先会彻底改变楷登开发软件的方式，也会改变我们使用软件的方式
+
+43
+00:05:23,386 --> 00:05:28,626
+different different uh different things that we can do together so accelerated Computing I think generative AI first of
+我认为这是最重要的，我认为还有几个其他好处
+
+44
+00:05:28,676 --> 00:05:34,592
+all is going to trans transform uh the way that uh Cadence develops software and it'll transform the way that
+除了能够设计电路、芯片、PCB 和系统之外，现在我们甚至在楷登内设计数据中心
+
+45
+00:05:34,642 --> 00:05:40,470
+we use software I think that's that's number one I think the the um uh there are several several
+你非常清楚这一点，我们使用你进行电路设计、逻辑设计、系统设计、仿真、验证和形式化验证等
+
+46
+00:05:40,520 --> 00:05:50,190
+other benefits aside from being able to do uh well we design our circuits our chips our pcbs our
+从电路设计到逻辑设计，再到系统设计，再到仿真、验证和形式化验证，等等
+
+47
+00:05:50,240 --> 00:05:56,252
+systems and now even our data centers in Cadence right you know you know this quite well uh we
+我们使用你进行电路设计、逻辑设计、系统设计、仿真、验证和形式化验证等
+
+48
+00:05:56,302 --> 00:06:03,211
+use you for circuit design to logic design to system design to emulation to verification formal verification so on so
+从电路设计到逻辑设计，再到系统设计，再到仿真、验证和形式化验证，等等
+
+49
+00:06:03,261 --> 00:06:11,162
+forth uh end to end all the way to fluids and and so uh the design space anymore is
+此外，从头到尾贯穿到流体部分，因此设计空间如今已完全不同
+
+50
+00:06:11,212 --> 00:06:16,688
+not about a chip or a system but it's really a codesign that goes across the entire thing Millennium is
+这不只关乎一块芯片或一个系统，而是一次贯穿始终的协同设计，Millennium 就是如此。
+
+51
+00:06:16,738 --> 00:06:23,310
+really quite an excellent example because you're codesign Company by Nature we're codesign Company by Nature uh the way
+这确实是一个非常出色的例子，因为从本质上讲，我们就是一家协同设计公司，我们就是一家协同设计公司。
+
+52
+00:06:23,360 --> 00:06:28,630
+that the computer science Industry the Computing industry talks about it we're the way we we talk about it in
+计算机科学产业和计算产业都在谈论它，我们谈论的方式就是这样。
+
+53
+00:06:28,680 --> 00:06:34,545
+engineering is code is design the way that's talked about uh in uh in Computing is called Full stack
+工程就是代码，就是设计，这在计算机领域被称为全栈。
+
+54
+00:06:34,595 --> 00:06:39,392
+um but it's the same idea that you have to innovate across the whole thing and so so your
+但道理是一样的，你必须在整个环节上不断创新。
+
+55
+00:06:39,442 --> 00:06:46,486
+transformation of Cadence from a chip design an EDA company to an EDA SDA company I think is really
+我认为楷登电子从一家芯片设计和EDA公司转型为EDA与SDA公司，这一转变非常了不起
+
+56
+00:06:46,536 --> 00:06:51,534
+uh really Visionary and is really essential and that's kind of the way it is in fact exactly the way
+啊，确实很有远见，也确实至关重要，事实上正是如此。
+
+57
+00:06:51,584 --> 00:06:58,794
+that we work uh uh with Cadence and um and the way that we Design Systems some of the
+我们与楷登电子合作，设计系统的方式中有一些独特之处
+
+58
+00:06:58,844 --> 00:07:04,804
+areas that that will will um uh people are starting to to realize and in fact you you your Kino
+人们开始意识到这些领域，事实上，你的基诺
+
+59
+00:07:04,854 --> 00:07:09,847
+is actually excellent uh in fact I recommend everybody watch it a few more times because it's so dense
+实际上非常棒，事实上我建议大家多看几遍，因为内容太密集了
+
+60
+00:07:09,897 --> 00:07:15,230
+it is so dense now of course you and I speak the same language and so so u high bandwidth
+现在密集得不得了，当然你和我讲同一种语言，所以沟通非常高效
+
+61
+00:07:15,280 --> 00:07:19,632
+communication yeah exactly you only had you said it once you said it once and I I you know
+沟通，是的，完全正确，你只说了一次，你就说了一次，我知道
+
+62
+00:07:19,682 --> 00:07:25,389
+of course but you unique in that you are unique in that you understand things like that's not true
+当然，但你很特别，因为你与众不同，你理解那些事情并不真实
+
+63
+00:07:25,439 --> 00:07:34,482
+I just understand you like yeah both of us both of us are engineers and so and anyways anyways
+我只是理解你，是的，我们两个都是工程师，所以呢，不管怎样
+
+64
+00:07:34,532 --> 00:07:40,998
+um uh one of the areas that you touched on which is really profound is that by investing in accelerated
+嗯，你提到的一个领域非常深刻，那就是通过投资加速计算
+
+65
+00:07:41,048 --> 00:07:48,030
+Computing by investing in AI um by investing in data centers we're able to design better and more energy
+通过投资人工智能，通过投资数据中心，我们能够设计出更好、更节能的产品
+
+66
+00:07:48,080 --> 00:07:55,894
+efficient products yeah now remember you designed the chip once but you ship at a trillion times you you built
+现在记住，你只设计了一次芯片，但你却交付了万亿次，你只建造了一次数据中心
+
+67
+00:07:55,944 --> 00:08:02,113
+a data center once but you save power that 6% power that on mediate Tech that you showed that
+但你节省的那6%电力，你在中微科技展示的那6%电力
+
+68
+00:08:02,163 --> 00:08:09,624
+6% is going to get enjoyed by a billion people M all day long so the amount of energy that
+将被十亿人全天候享受，所以通过设计更优的软件、更优的芯片、更优的系统
+
+69
+00:08:09,674 --> 00:08:15,536
+we're going to be able to to save for the World by designing better software better chips better systems
+我们将为世界节省的能源量，对社会具有持续不断的益处
+
+70
+00:08:15,586 --> 00:08:21,137
+has has a Perpetual benefit to society and is uh on the one hand we're going to consume more
+一方面，我们将消耗更多电力和数据中心资源用于人工智能
+
+71
+00:08:21,187 --> 00:08:27,064
+uh Power and data centers for AI on the other hand for the other 98% of the power that's
+但另一方面，对于另外98%的电力和能源消耗
+
+72
+00:08:27,114 --> 00:08:33,789
+consumed and energy that's consumed we're going to use that M uh design better better products design better computers better
+我们将用这些资源来设计更优的产品，设计更优的电脑，更优的系统
+
+73
+00:08:33,839 --> 00:08:38,623
+cars better phones you know so on so forth better materials uh so and so forth so I think
+汽车比手机更好，诸如此类，更好的材料，等等，所以我认为
+
+74
+00:08:38,673 --> 00:08:45,213
+I think we're at a really uh a a you know people call it an inflection point a transition um
+我觉得我们正处于一个真正的转折点，人们称之为转折点，一个过渡期
+
+75
+00:08:45,263 --> 00:08:50,194
+all of that is completely true and and I I think um really exciting times and your Kino really
+所有这些都完全正确，而且我认为这真的是一个令人兴奋的时期，你的基诺也真正凸显了这一点
+
+76
+00:08:50,244 --> 00:08:55,633
+highlights it no thank know one thing is remarkable I mean a lot of things remarkable in media but one
+有一件事非常引人注目，媒体中有很多令人瞩目的事情，但有一件事真正令人惊叹
+
+77
+00:08:55,683 --> 00:09:02,932
+thing is truly remarkable you know this transformation and you talk about it over the and you always probably
+你所谈到的这种转变，你一直在思考这种转变，不仅仅是制造芯片，因为人们常常混淆
+
+78
+00:09:02,982 --> 00:09:08,610
+always had it in your mind of transform not just making chips because people confuse n of course Nvidia
+当然，英伟达在制造最好的芯片，但你甚至在 GTC 上提到的键位，其实是在构建整个数据中心
+
+79
+00:09:08,660 --> 00:09:14,670
+is making the best chips but this even your keyot at GTC you know is building entire data center
+完整的系统，完整的软件栈，把它们整合在一起，你有机架和液冷数据中心
+
+80
+00:09:14,720 --> 00:09:22,458
+very entire systems entire software stack you know and putting them together you have racks and liquid cooling data centers
+所以整个架构，这对一家典型的芯片公司来说并不是一件容易的转型，而英伟达已经变成了一家完整的
+
+81
+00:09:22,508 --> 00:09:30,298
+so the whole architecture that's not easy transformation for a typical chip company Andia has become like a whole
+软件系统公司，所以我很好奇，你是怎么做到这一点的，或者你一直有这个想法吗
+
+82
+00:09:30,348 --> 00:09:36,810
+Software System company right so H I'm just curious to see like how did you do that or what at
+或者这个过程是如何展开的，这非常难以实现
+
+83
+00:09:36,859 --> 00:09:41,621
+what or you always had this in mind or how did it unroll from this is very difficult to
+现在有些公司正试图成为系统公司，同时也在尝试制造芯片，这很困难，但英伟达已经
+
+84
+00:09:41,671 --> 00:09:47,558
+implement now some companies are trying to system companies are trying to do chips which is difficult but Nvidia has
+做到了
+
+85
+00:09:47,608 --> 00:09:55,186
+executed this flawlessly this transformation from not just chips to systems to software to to data and all that
+你完美地完成了这场转型，从芯片到系统，再到软件和数据，全部都做到了
+
+86
+00:09:55,236 --> 00:09:59,775
+so I just curious how you go about something like this yeah well I think the most most important
+所以我只是好奇，你是如何做到这一点的？嗯，我认为刚才你说的最关键的是“完美地”
+
+87
+00:09:59,825 --> 00:10:09,808
+thing you said just now was flawlessly yeah you know this entire audience you all of us grew up
+你刚才说的“完美地”这一点，你知道，整个观众席上的所有人，我们都在一起成长
+
+88
+00:10:09,858 --> 00:10:16,206
+together yeah and I've been a chip designer for a very long time this is my entire career and and
+是的，我做芯片设计已经非常久了，这几乎就是我整个职业生涯
+
+89
+00:10:16,256 --> 00:10:24,132
+and and so so there are many people in the audience uh who when you said flawlessly uh I'm
+所以在座的很多人，当你提到“完美地”时，我敢肯定大家心里都在想
+
+90
+00:10:24,182 --> 00:10:32,172
+sure the audience went really there are some there are several things that we observed uh a long time ago
+其实我们很久以前就观察到了一些事情，而这些观察后来证明是正确的
+
+91
+00:10:32,222 --> 00:10:38,238
+which was which was uh um which turned out to have been right okay and so so the first
+所以第一点是，我们注意到程序中只有极少数代码，占很小比例，却占据了绝大部分运行时间
+
+92
+00:10:38,288 --> 00:10:44,522
+thing is to observe that that a few a small amount of the code in a program represents the vast
+比如说在计算流体动力学（CFD）中，大概只有3%的代码，却占了99.9999%的运行时间
+
+93
+00:10:44,572 --> 00:10:52,394
+majority of its rent time so for example cfd it's probably call it 3% of the code represents 99.9999%
+如果情况如此，那为什么你要用完全相同的工具、相同的仪器、相同的处理器来处理全部100%的代码呢？
+
+94
+00:10:52,444 --> 00:10:57,399
+of the rent time and if that's the case why do you use exactly the same tool the same
+为什么不对97%的代码用常规方式处理，而对那3%的代码采取特殊优化呢？
+
+95
+00:10:57,449 --> 00:11:03,110
+instrument the same processor to process all 90 all 100% of the code why don't you do something for
+通过这样做，你完全可以实现性能的大幅提升
+
+96
+00:11:03,160 --> 00:11:09,073
+97% of the code and then something special for 3% of the code and and by doing so you could
+97%的代码用通用方式处理，而对那3%的关键代码进行专门优化
+
+97
+00:11:09,123 --> 00:11:16,378
+speed up an application 100,000 times yes that was the observation and of course of course um uh the
+将应用程序提速十万倍，是的，这是我们的观察结果，当然当然，呃，
+
+98
+00:11:16,428 --> 00:11:22,830
+type of applications that required that benefit from that that re would would want to do the rewrite was very
+需要这种加速的应用程序非常少，而我们想要重写的应用程序更是少之又少，
+
+99
+00:11:22,880 --> 00:11:28,914
+very small and we were we were um uh clever to have chosen computer Graphics as our first choice
+我们很聪明地选择了计算机图形学作为我们的首个切入点，
+
+100
+00:11:28,964 --> 00:11:36,480
+for excel Computing because it turned out to have been um an application that required a tremendous amount of comp
+因为事实证明，这是一类需要大量并行计算的应用，
+
+101
+00:11:36,530 --> 00:11:42,776
+computation in a in a parallel way it's conducive to parallel processing and it's also a very large Market
+它非常适合并行处理，而且市场也十分庞大，
+
+102
+00:11:42,826 --> 00:11:47,818
+that churned very quickly that innovated very quickly and so so we chose a good good Market as a
+市场周转非常快，创新速度也非常快，因此我们选择了一个很好的市场作为起点，
+
+103
+00:11:47,868 --> 00:11:53,287
+starting point but we always always imagined that beyond computer Graphics uh there would be a whole bunch of
+但我们也始终认为，在计算机图形学之外，还会涌现出大量其他应用，
+
+104
+00:11:53,337 --> 00:12:00,664
+other applications that would come along accelerated Computing is not like general purpose computing in general purpose Computing you could
+加速计算并非通用计算，通用计算中你只需一个处理器就能运行所有代码，
+
+105
+00:12:00,714 --> 00:12:06,310
+create One processor and it will run all code mhm that is absolutely not the case with accelerated Computing
+这在加速计算中绝对不成立，
+
+106
+00:12:06,360 --> 00:12:13,321
+because in fact you know I I coined the word accelerated Computing and what I meant by that was you
+因为事实上，我创造了“加速计算”这个词，我的意思是，你加速的是特定应用，
+
+107
+00:12:13,371 --> 00:12:22,710
+accelerate an application it's an application acceleration Computing platform and you have to know what application is yes and
+这是一个应用加速的计算平台，你必须清楚具体是哪个应用，
+
+108
+00:12:22,760 --> 00:12:28,848
+so in the case of Nvidia we started by uh selecting uh computer Graphics but we also did Imaging and
+所以在英伟达的案例中，我们最初选择了计算机图形学，但也同时涉足了成像领域。
+
+109
+00:12:28,898 --> 00:12:33,270
+then we did molecular Dynamics I'm so happy to to see the work that you guys do in digital
+然后我们进行了分子动力学模拟，我很高兴看到你们在数字生物学领域所做的工作
+
+110
+00:12:33,320 --> 00:12:39,259
+biology by the way just as a quick you know today we call it drug Discovery the re the
+顺便说一下，今天我们将它称为药物发现，其实
+
+111
+00:12:39,309 --> 00:12:44,274
+reason why we call it drug Discovery is because it's a little bit like you know mushroom Discovery you
+我们之所以称之为药物发现，是因为它有点像蘑菇的发现
+
+112
+00:12:44,324 --> 00:12:49,113
+you go on to the forest and and then you come you go oh look what I found could you
+你走进森林，然后突然发现，看我找到了什么，你能想象吗
+
+113
+00:12:49,163 --> 00:12:56,925
+imagine if the chip design industry was called chip Discovery industry and and and the re the reason for
+如果芯片设计行业被称为芯片发现行业，那会怎样
+
+114
+00:12:56,975 --> 00:13:04,527
+that is because my engineering team would come up hey ch look what we found Blackwell um and then next
+原因在于我的工程团队会跑过来，嘿，看我们找到了什么，黑威尔
+
+115
+00:13:04,577 --> 00:13:12,233
+year it would be like dry spell again yeah nothing Happ what happened this year we didn't find anything
+然后第二年又变成干旱期，什么都没找到，今年我们什么都没发现
+
+116
+00:13:12,283 --> 00:13:18,110
+completely understandable you know but we would never do that isn't that right and so so you know that the
+这完全能理解，但我们绝不会这么做，对吧
+
+117
+00:13:18,160 --> 00:13:22,670
+the and the reason for that is because biology is much much more complicated you know we shape a
+所以原因在于生物学要复杂得多
+
+118
+00:13:22,720 --> 00:13:28,104
+transistor until we could use design tools on it you can't shape biology until you could use design tools
+我们能塑造晶体管，直到可以使用设计工具来优化它
+
+119
+00:13:28,154 --> 00:13:32,573
+on it you need design tools to catch up to the biology exactly which is which is near so
+但你无法塑造生物学，直到你能使用设计工具来优化它
+
+120
+00:13:32,623 --> 00:13:38,710
+I think the the uh one of the largest Industries in the world is going to become a Cadence industry
+你需要设计工具跟上生物学的发展，而这正是目前的难点所在，所以我认为
+
+121
+00:13:38,760 --> 00:13:47,347
+and instead of that 1% you were talking about I think there's a giant giant opportunity ahead um the
+而不是你刚才提到的那1%，我认为前方有巨大的巨大机遇，呃，
+
+122
+00:13:47,397 --> 00:13:56,180
+each one of the the industries uh biology uh you you mentioned uh Transportation all of the applications are different
+每个行业都不同，比如生物学，你提到的交通运输，所有应用都各不相同，
+
+123
+00:13:56,230 --> 00:14:01,127
+and some of it related to Imaging some of it is related to particle physics some of it's related
+有些与成像有关，有些与粒子物理有关，有些与流体有关，
+
+124
+00:14:01,177 --> 00:14:06,857
+to to fluid some of it's related to um you know finite element right grids and things like that and
+有些与有限元、网格等有关，诸如此类，
+
+125
+00:14:06,907 --> 00:14:14,193
+so the algorithms are different and the fact that that Cadence is a mathematics and a Computing company in
+因此算法也不同，而楷登电子在很大程度上是一家数学和计算公司，
+
+126
+00:14:14,243 --> 00:14:18,610
+a lot of ways Nvidia as a mathematics and a Computing company exactly yeah and that's the reason why
+英伟达也是一家数学和计算公司，完全正确，这正是我们合作得如此融洽的原因，
+
+127
+00:14:18,660 --> 00:14:24,870
+we get along so well absolutely yeah and and you when when um when and R and I get
+当你和我，还有R，聚在一起时，我们彼此交流，很快就能理解对方，
+
+128
+00:14:24,920 --> 00:14:33,506
+together uh you know we're we're saying things to each other and and very quickly we understand when I understand
+当我理解某件事时，我会点头，当他理解时，他会摇头，就像这样，
+
+129
+00:14:33,556 --> 00:14:40,135
+something I nod when he understands something he shakes his head like that and so is it me it's
+所以不是我错了，也不是我，我知道，所以当你看到我们两人时，
+
+130
+00:14:40,185 --> 00:14:46,005
+not right it's not me I know for a and so so when when you see the two of us
+我们在一家餐厅里，正互相讨论这些未来的话题，
+
+131
+00:14:46,055 --> 00:14:50,268
+we're we're at a at a restaurant and we're talking to each other about all this stuff in the
+一个人这样比划，另一个人那样比划，我们就是这样，
+
+132
+00:14:50,318 --> 00:14:55,973
+future one of us going like this and the other one's going like this and that's because we're we're we're
+因为我们正在用数学和计算的方式思考未来。
+
+133
+00:14:56,023 --> 00:15:03,130
+agreeing with each other as soon as I go go like this and he goes like this that means
+一我一动，他就跟着动，就像这样，他就像那样，这就意味着
+
+134
+00:15:03,180 --> 00:15:10,763
+we're in trouble and so anyways we were we were always about about domain specific acceleration and over the
+我们有麻烦了，所以不管怎样，我们一直专注于领域专用加速，而且在
+
+135
+00:15:10,813 --> 00:15:17,971
+course of 30 years we've um we've accumulated on top of one architecture with Cuda all of these different
+过去30年里，我们在CUDA这一架构之上，积累了各种不同的
+
+136
+00:15:18,021 --> 00:15:23,770
+dsls domain specific libraries and some of it's for particles some of it's for Imaging some of it's for artificial
+领域专用语言、领域专用库，有些用于粒子模拟，有些用于成像，有些用于人工智能
+
+137
+00:15:23,820 --> 00:15:29,830
+intelligence and so on so forth yeah and then you know this platform of course you had a great
+以此类推，是的，然后你当然也做了场精彩的演讲
+
+138
+00:15:29,880 --> 00:15:36,603
+talk at GTC that's remarkable that's I was telling Jensen he needs a bigger Stadium next time you know that
+在GTC上，非常了不起，我跟黄仁勋说，下次你得找个更大的体育场，你知道吗
+
+139
+00:15:36,653 --> 00:15:42,149
+there was no enough space in that huge stadium so maybe next time you find Vegas or I know
+那个巨大的体育场都装不下，所以也许下次你去拉斯维加斯，我知道
+
+140
+00:15:42,199 --> 00:15:49,086
+where you're going to be but there are so many applications you highlighted you know there's horizontal enablement of almost
+你下一次会在哪儿，但你提到的应用实在太多了，几乎涵盖了所有行业
+
+141
+00:15:49,136 --> 00:15:55,129
+all Industries but then there's certain industries the impact can be huge like you mentioned Life Sciences but you
+的横向赋能，但某些行业的影响可能特别巨大，就像你提到的生命科学，还有
+
+142
+00:15:55,179 --> 00:16:01,228
+also talked about robotics you know or self-driving so is there one or two that of course you're involved
+机器人，自动驾驶，那么在短期内或中期，你特别投入、特别兴奋的
+
+143
+00:16:01,278 --> 00:16:06,445
+in so that you're super excited about in the short term or medium term that has the maximum potential
+一两个领域，哪个最有潜力、影响最大呢
+
+144
+00:16:06,495 --> 00:16:12,227
+of impact well you mentioned you mentioned several of them uh the three industries that you highlighted uh happen to
+嗯，你提到了好几个，你重点强调的三个行业，恰好
+
+145
+00:16:12,277 --> 00:16:18,898
+be the three Industries I'm super excited about as well one of them is data centers or just Computing
+我也非常期待的三个产业之一是数据中心，或者说计算领域
+
+146
+00:16:18,948 --> 00:16:28,847
+um the second is is um you mentioned Automotive but if I could just abstract Automotive into robotics um autonomous
+第二个是，你提到了汽车，但如果我能把汽车抽象为机器人领域，比如自动驾驶
+
+147
+00:16:28,897 --> 00:16:37,498
+machines autonomous systems and uh or semi-autonomous systems that whole General category whether it's a cars or trucks or
+机器、自主系统，或者半自主系统，这个大类别无论是汽车还是卡车，
+
+148
+00:16:37,548 --> 00:16:46,790
+uh pizza delivery robots or uh humanoid articulation self articulated robots those kind of uh systems have a lot of
+还是披萨配送机器人，或者人形关节机器人、自驱动机器人，这类系统有很多
+
+149
+00:16:46,840 --> 00:16:53,320
+commonality they they all need to have multiple sensors uh they uh require the functional safety is really important
+共同点，它们都需要多种传感器，而且功能安全至关重要
+
+150
+00:16:53,370 --> 00:16:58,537
+so the the way you design the computer and validate the computer verify the computer certify the computer very
+所以你设计计算机、验证计算机、确认计算机、认证计算机的方式
+
+151
+00:16:58,587 --> 00:17:04,500
+very important the operating system is not your normal type of operating system these operating systems are are fail
+非常重要，操作系统也不是普通的操作系统，这些操作系统是容错安全的
+
+152
+00:17:04,550 --> 00:17:10,749
+safe operating systems and so the way you design the systems is quite meticulous and quite specific and and of
+因此系统的设计非常细致且具有特定要求
+
+153
+00:17:10,799 --> 00:17:18,264
+course the the use of artificial intelligence uh um quite quite expansive and those those systems will be connected
+当然，人工智能的应用也极为广泛，这些系统会始终连接云端和数据中心
+
+154
+00:17:18,314 --> 00:17:23,616
+to the cloud to the data center at all times so that it could be it could um of course
+以便随时更新新体验，报告故障和新情况，然后下载新模型
+
+155
+00:17:23,666 --> 00:17:31,984
+update new experiences um uh uh report failures and uh new circumstances and then download new models and so
+所以我非常热爱整个自主系统领域，这是一类全新的设备类别
+
+156
+00:17:32,034 --> 00:17:38,880
+so that I I love that that entire area of autonomous systems a whole new category of devices for all
+为所有领域带来全新的可能性
+
+157
+00:17:38,930 --> 00:17:43,789
+of us to be building in the in the near future are going to be human robots and and
+未来我们即将打造的将主要是人形机器人
+
+158
+00:17:43,839 --> 00:17:48,269
+you could just see that the manufacturing cost of a human or robot is likely to be a lot
+你可能会发现，制造一个人或机器人成本可能远低于人们的预期
+
+159
+00:17:48,319 --> 00:17:54,035
+a lot lower than than people would expect why would it be any more than $ 10 to $20,000
+为什么不会低于10到2万美元？
+
+160
+00:17:54,085 --> 00:18:00,388
+and um you buy cars for10 to $220,000 why can't you have a human or robot for 10 to $20,000
+你买一辆车都要10万到22万美元，为什么不能花10万到2万美元买一个人或机器人？
+
+161
+00:18:00,438 --> 00:18:06,181
+um and and that robot will likely be a lot more agile and more versatile in an environment in
+而且这个机器人在我们为人类设计的环境中，很可能更加灵活和多用途
+
+162
+00:18:06,231 --> 00:18:12,206
+a world that we designed for humans and so manufacturing lines were designed for humans warehouses were designed for humans
+我们所处的世界是为人类设计的，因此生产线是为人类设计的，仓库也是为人类设计的
+
+163
+00:18:12,256 --> 00:18:17,613
+um a whole bunch of things were designed for humans and therefore uh it's more likely that the human
+很多事物都是为人类设计的，因此人形机器人在这样的环境中更有可能高效工作
+
+164
+00:18:17,663 --> 00:18:22,200
+robot would be productive in that environment so I I love that um I love that we're going to turn
+我非常喜欢这一点，我很喜欢我们即将把生物学转变为工程学领域
+
+165
+00:18:22,250 --> 00:18:30,094
+biology into into a field for engineering uh the scientific discovery process uh really essential but but it's sporadic
+科学发现过程至关重要，但目前是零星发生的
+
+166
+00:18:30,144 --> 00:18:35,917
+and it's the reason why the EO uh so for the EO law is is true yes and and
+这也正是为什么EO定律成立的原因，是的，确实如此
+
+167
+00:18:35,967 --> 00:18:40,028
+by the way if we don't move to our accelerated Computing if we don't go to AI uh the
+顺便说一句，如果我们不转向加速计算，不转向AI
+
+168
+00:18:40,078 --> 00:18:45,629
+computer industry will go through the EO law and the reason for that is very very clear the amount of
+计算机行业将面临EO定律，原因非常明确，即
+
+169
+00:18:45,679 --> 00:18:51,116
+work that we do the computation that we do uh is growing all the time but CPU scaling has
+我们所进行的计算工作量正在持续增长，但CPU的性能提升已放缓
+
+170
+00:18:51,166 --> 00:18:58,830
+slowed and therefore we're going to enjoy ex uh inflation and not not not um uh not reduction in cost
+因此我们将迎来成本的持续上涨，而非成本下降
+
+171
+00:18:58,880 --> 00:19:05,448
+Computing and so so we have to move to accelerated Computing to save power save time save um save
+计算领域必须转向加速计算，以节省电力、节省时间、节省成本
+
+172
+00:19:05,498 --> 00:19:11,590
+money and uh uh and but anyways I I think uh digital biology is going to go through a whole
+但无论如何，我认为数字生物学将迎来一场全新的复兴
+
+173
+00:19:11,640 --> 00:19:21,519
+Renaissance um where science and engineering comes closer and closer it's a very complicated field obviously uh you know
+科学与工程将越来越紧密地结合，这显然是一门非常复杂的领域
+
+174
+00:19:21,569 --> 00:19:27,201
+we don't talk about sh jur equations um in chip design yes because we CH we changed the transistors
+我们在芯片设计中不会讨论薛定谔方程，因为我们已经改变了晶体管
+
+175
+00:19:27,251 --> 00:19:34,873
+until we could yes you know avoid shers equations but unfortunately in biology coent bonds the way that the
+直到能够避开薛定谔方程为止，但在生物学中，共价键以及化学运作的方式
+
+176
+00:19:34,923 --> 00:19:40,359
+way that chemistry Works um you know obviously show equation is essential and so so I think there there's a
+显然，薛定谔方程是必不可少的，因此我认为我们需要创新的领域非常多
+
+177
+00:19:40,409 --> 00:19:44,920
+whole lot of things that that um uh that we have to go innovate but for the very first
+但这是第一次，我们拥有了必要的工具
+
+178
+00:19:44,970 --> 00:19:52,942
+time we have the necessary tools um the Computing the Computing systems uh the uh uh the algorithms that help
+计算能力、计算系统，以及帮助我们应对极其庞大且高度混沌系统的算法
+
+179
+00:19:52,992 --> 00:19:59,390
+helps us deal with very large systems that are very chaotic absolutely yeah and the DAT data driven approach
+数据驱动的方法与你之前提到的基于原理的模拟方法相结合
+
+180
+00:19:59,440 --> 00:20:07,757
+fused with what you said earlier principled principal simulation approaches that Fusion might give us a chance yeah but those
+这种融合或许能为我们带来一线希望，但那些
+
+181
+00:20:07,807 --> 00:20:13,230
+three Industries I think are are spot on yeah these are huge all them yeah yeah enough but but
+三个行业我认为非常准确，是的，这些都非常重要，是的，足够了，但……
+
+182
+00:20:13,280 --> 00:20:21,001
+robot planetary scales enough yeah because Automotive anyway is going to be like you know with self-driving maybe the
+机器人和行星规模的规模已经足够了，是的，因为汽车工业无论如何都会像自动驾驶那样发展，
+
+183
+00:20:21,051 --> 00:20:27,482
+first robotics but then humanoid is another huge that's right exactly and then you know I would like you
+第一个机器人领域，但人形机器人是另一个巨大的领域，没错，完全正确，然后你知道我想说的，
+
+184
+00:20:27,532 --> 00:20:32,552
+to me of course we have this great partnership really value and like started on the chip part system part
+对我来说，当然我们有这个很棒的合作关系，非常重视，从芯片、系统、平台部分开始，
+
+185
+00:20:32,602 --> 00:20:38,721
+padium part but now recently in BIO and then also in reality right in data centers right so the
+之前是Palladium部分，但现在最近在生物领域，还有在现实世界中，数据中心里也是如此，所以，
+
+186
+00:20:38,771 --> 00:20:44,097
+one big issue there is of course power we use Cadence to design our data centers yeah thank you so
+一个大问题是电力，我们用Cadence来设计我们的数据中心，是的，谢谢，
+
+187
+00:20:44,147 --> 00:20:50,504
+the issue of power because a computer is a whole data center now right exactly but what what's your
+电力问题，因为现在计算机就是整个数据中心，没错，但你对AI消耗电力怎么看，
+
+188
+00:20:50,554 --> 00:20:55,334
+thought on like power that AI is taking you know these data centers are taking of course we can optimize
+你知道这些数据中心确实消耗大量电力，当然我们可以优化，
+
+189
+00:20:55,384 --> 00:20:58,975
+but what else can we do for this you know one way to do it is if you do
+但除此之外我们还能做什么呢？一种方法是如果你们做更多加速计算，
+
+190
+00:20:59,025 --> 00:21:04,870
+more accelerate Computing actually you know what people don't realize that your power utiliz is going down for that's
+实际上人们没有意识到的是，你的电力利用率反而会下降，是的，
+
+191
+00:21:04,920 --> 00:21:10,286
+right but just your thoughts on power consumption of AI and what all can we do in that yeah
+但你对AI的电力消耗有什么看法，我们还能做些什么呢？
+
+192
+00:21:10,336 --> 00:21:17,971
+there's two things that so uh first thing that you said absolutely true the power usage of accelerated Computing is
+有两件事，首先你说的完全正确，加速计算的电力消耗确实……
+
+193
+00:21:18,021 --> 00:21:25,184
+incredibly High and the reason for that is because the computers are incredibly dense mhh and and so the
+非常高，原因在于这些计算机的密度极高，嗯，因此
+
+194
+00:21:25,234 --> 00:21:35,224
+power consumption is high and whatever optimization we can do for power utilization translates directly to more performance and that
+功耗也很高，而我们对功耗利用效率所做的任何优化，都能直接转化为更高的性能，而这
+
+195
+00:21:35,274 --> 00:21:43,287
+performance could be could be measured as in you know more productivity doing uh generating more uh revenues or
+性能可以体现为更高的生产力，比如创造更多的收入，或者
+
+196
+00:21:43,337 --> 00:21:49,152
+directly into savings for the same amount of performance you could buy something a lot smaller okay and so so
+在保持相同性能的前提下，你可以买到更小的设备，所以
+
+197
+00:21:49,202 --> 00:21:57,152
+I think power management uh in accelerated Computing directly translates into all the things that you care about um
+我认为在加速计算中，功耗管理直接关系到你所关心的所有方面，嗯
+
+198
+00:21:57,202 --> 00:22:04,506
+I just said something that that that seems right on observation but in fact the second thing you said
+我刚才说的那句话看似符合直觉，但实际上你接下来所说的
+
+199
+00:22:04,556 --> 00:22:10,020
+would suggest that it's in fact completely wrong and and what what we mean by that and what anude
+却表明它实际上完全错误，而我们所说的，以及阿努德
+
+200
+00:22:10,070 --> 00:22:18,085
+was implying is that accelerated Computing as you saw in his presentation took tens of thousands of general purpose servers
+所暗示的是，正如他在演示中所展示的，加速计算将数以万计的通用服务器
+
+201
+00:22:18,135 --> 00:22:26,989
+which would have consumed 10 times 20 times more cost 20 30 times more energy and reduce it into
+替代为一个极其密集的 MH 设备，从而将成本降低十倍、二十倍，能耗降低二十到三十倍
+
+202
+00:22:27,039 --> 00:22:33,270
+something that is in incredibly dense MH and so the density of accelerated Computing is the reason why people think
+并将其压缩成一个极其密集的 MH 设备，因此加速计算的高密度正是人们认为
+
+203
+00:22:33,320 --> 00:22:38,823
+it's it's it's power hungry and cost a lot of money but if you replace if you look at
+它功耗高、成本高的原因，但如果你从单位工作量或单位吞吐量的角度来看
+
+204
+00:22:38,873 --> 00:22:45,223
+it from E ISO work done or ISO throughput in fact you save an enormous amount of money and that's
+实际上你节省了巨大的成本，而这正是关键所在
+
+205
+00:22:45,273 --> 00:22:51,086
+the reason why it is essential uh as CPU scaling has slowed that we have to move towards accelerated
+之所以至关重要，是因为随着CPU的扩展速度放缓，我们必须转向加速计算
+
+206
+00:22:51,136 --> 00:22:56,666
+Computing because you're not going to be able to keep scaling out that traditional way anyways and so accelerate
+因为你无论如何都无法再以传统方式持续扩展，因此必须加速
+
+207
+00:22:56,716 --> 00:23:03,893
+accelerated uh accelerated Computing uh is essential the second thing that that you highlighted in your in your keynote
+加速计算至关重要，这正是你在主题演讲中强调的第二点
+
+208
+00:23:03,943 --> 00:23:10,190
+you just have to pay super close attention you you you were so crisp on it that AI actually helps
+你必须高度关注，你对此的表述非常清晰：AI实际上有助于节省能源
+
+209
+00:23:10,240 --> 00:23:16,681
+people save energy if not for the AI models you created that we now use in the tools how
+如果没有你创建的AI模型，我们如今用于工具中的那些模型，我们如何才能实现6%的节能或10倍的节能
+
+210
+00:23:16,731 --> 00:23:25,109
+would we have found 6% more savings or 10x more savings uh that wasn't possible without Ai and so you
+这种节能效果在没有AI的情况下是不可能实现的，因此你只需投入一次模型训练
+
+211
+00:23:25,159 --> 00:23:30,417
+invest in the training of the model once and then millions of Eng like ourselves get to benefit from
+之后数百万像我们这样的人就能从中受益
+
+212
+00:23:30,467 --> 00:23:37,030
+it and billions of people across decades will get get to uh enjoy the savings and so that's kind of
+数十亿人将在未来几十年里都能享受到这些节能成果，所以这就是
+
+213
+00:23:37,080 --> 00:23:43,810
+the the way to think about um cost the way to think about Investments not just on an instance
+思考成本和投资的方式，不应仅从单个实例的角度考虑
+
+214
+00:23:43,860 --> 00:23:51,057
+by instance basis but in healthcare speak longitudinally you have to look at savings look at climate change look
+而应像医疗领域那样进行纵向思考，必须关注节省的能源、气候变化和资金节约
+
+215
+00:23:51,107 --> 00:24:00,044
+at money savings Energy savings longitudinally across the entire span of not just the products that you're building but
+从整个产品生命周期来看，不仅包括你所构建的产品本身，还包括
+
+216
+00:24:00,094 --> 00:24:05,280
+the way that you're designing the products the products that you build and the impact of the product being used
+你设计产品的方式、所构建的产品以及产品使用带来的影响
+
+217
+00:24:05,330 --> 00:24:11,707
+when you look at it longitudinally like that AI is going to be utterly transformative in helping us with
+从纵向来看，人工智能将彻底改变我们应对气候变化的方式，以更低的能耗实现更高的能效，诸如此类，而令人欣喜的是，你
+
+218
+00:24:11,757 --> 00:24:17,670
+climate change using less power being more energy efficient so on so forth and the great thing is that you
+知道，这种三层蛋糕式的结构，即英伟达与楷登之间的巨大协同效应，使得
+
+219
+00:24:17,720 --> 00:24:24,353
+know with this three layer cake that IAL this massive alignment in terms of between Nvidia and Cadence you
+你如今正处在变革之中，顺便说一句，黄仁勋，为什么我总是在最底层？
+
+220
+00:24:24,403 --> 00:24:29,121
+know you are transforming now by the way Jensen is a why am I always on the bottom of the
+哪里？你其实处在所有三层里，黄仁勋，开玩笑的，开玩笑的，你确实处在所有三层里，是的，我
+
+221
+00:24:29,171 --> 00:24:34,761
+cake no you are in all three layers Jensen just kidding I'm just kidding all three layers yeah I
+想当那层糖霜，是的，是的，但你知道，黄仁勋，你也有像上次在英伟达见面时那样的自制饼干，
+
+222
+00:24:34,811 --> 00:24:42,060
+want to be the frosting yeah yeah but the people jenset is also you know you had like homemade
+我可是个很棒的主人，随时欢迎任何人来访，我
+
+223
+00:24:42,110 --> 00:24:46,708
+cookies last time I met you at Nvidia I I'm a great host anybody will drop by I'm a
+总是照顾好他们，是的，谢谢，哦，能与这三方合作真是太棒了，
+
+224
+00:24:46,758 --> 00:24:52,736
+great host I always take care of them yeah thank you oh it's great to but partner with all these
+但有一点，黄仁勋，你的管理风格也相当独特，你知道，你的领导风格众所周知，你
+
+225
+00:24:52,786 --> 00:24:59,710
+three but one thing uh Jensen you also have a very unique um management style right you know your
+的飞行式组织、快速决策，真的令人惊叹，现场有很多工程师、经理和领导者，
+
+226
+00:24:59,760 --> 00:25:06,629
+leadership style is well known you know flight organization fast decision making is truly remarkable to see and there are
+所以你有什么建议吗？你知道，如何将想法转化为行动，如何
+
+227
+00:25:06,679 --> 00:25:11,463
+a lot of people you know engineers and managers and leaders in the audience so any advice you have
+做到这一点，对于那些人来说，你知道，如何把想法变成现实，如何
+
+228
+00:25:11,513 --> 00:25:17,629
+for those things you know how to turn you know because turn ideas into action you know uh at the
+将想法转化为行动，你知道，对于那些人来说，如何把想法变成现实，如何
+
+229
+00:25:17,679 --> 00:25:24,354
+core at the core of a vide management system and and Leadership philosophy if you will uh is to
+核心在于视频管理系统和领导力理念，如果可以这么称呼的话，就是要
+
+230
+00:25:24,404 --> 00:25:32,729
+create the conditions by which amazing people could do their life's work that is and I I just described
+创造让杰出人才能够完成他们毕生事业的环境，这正是我刚才所描述的
+
+231
+00:25:32,779 --> 00:25:40,150
+a a um a philosophy a mission statement if you will and and a way of conduct of of
+一种理念，一种使命宣言，如果可以这么称呼的话，以及一种行为准则
+
+232
+00:25:40,200 --> 00:25:45,779
+myself and and the leaders and so the question is what can we do to create the conditions by which
+适用于我自己和各位领导者。因此问题在于，我们能做些什么来创造让
+
+233
+00:25:45,829 --> 00:25:53,043
+people could do their life's work one of the most important uh aspects is to empower them with information
+人们能够完成他们毕生事业的环境？其中最重要的方面之一，就是赋予他们信息
+
+234
+00:25:53,093 --> 00:25:59,785
+and so I I I don't think there's any decisions I make where only one person needs to hear it
+我认为我所做的任何决策，都不应该只让一个人听到
+
+235
+00:25:59,835 --> 00:26:07,407
+um or that I need to whisper some information to somebody on a oneone uh because nobody else deserves
+或者我需要私下告诉某个人某些信息，因为别人都不配听
+
+236
+00:26:07,457 --> 00:26:11,239
+to hear it or can hear it or you know too tough to hear or whatever it is and so
+或者听不懂，或者承受不了，诸如此类。因此
+
+237
+00:26:11,289 --> 00:26:18,272
+I tend to do most of my work uh in in large environments uh where where a diverse team
+我倾向于在大型环境中开展大部分工作，让来自不同背景的专家
+
+238
+00:26:18,322 --> 00:26:24,731
+of experts and uh people who can contribute uh uh comes together and we we just work the problem
+和能够贡献智慧的人汇聚在一起，我们共同解决难题
+
+239
+00:26:24,781 --> 00:26:31,377
+we just work the issue uh so that's that's one um I also like that uh in addition to
+我们共同应对问题。这就是其中一种方式。此外，我还喜欢
+
+240
+00:26:31,427 --> 00:26:37,620
+the transparency of of the challenges of the company and the information that that people should get I also like
+除了公司面临的挑战和人们应当了解的信息的透明度之外
+
+241
+00:26:37,670 --> 00:26:45,730
+that I have opportunity to reason through things in front of people it it forces us to um ad
+我有机会当着大家的面进行思考，这迫使我们去……
+
+242
+00:26:45,780 --> 00:26:54,989
+make suggestions of of directions that are that are uh fundamentally grounded on good reasoning and so by forcing myself
+提出基于良好推理的根本性方向建议，因此通过强迫自己进行思考，
+
+243
+00:26:55,039 --> 00:27:02,577
+to reason through things I'm doing two things um you know of course influencing others second teaching other people
+我在做两件事，当然，影响他人，其次是教会别人
+
+244
+00:27:02,627 --> 00:27:09,394
+how to reason and the ability to take a a very complicated abstract idea and reason it all the way
+如何将一个非常复杂抽象的概念，一路推理到
+
+245
+00:27:09,444 --> 00:27:13,922
+down to exactly what we ought to do now uh why we should do it now or not do
+我们现在究竟应该做什么，为什么现在要做，或者为什么不该做，
+
+246
+00:27:13,972 --> 00:27:19,164
+it now most of the time is about not doing it now um or not doing it at all
+通常情况下，这更多是关于现在不该做，或者根本就不要做，
+
+247
+00:27:19,214 --> 00:27:27,053
+I that reasoning process is incredibly empowering to people and so I I think it's one of the reasons
+这种推理过程对人们来说极具赋能作用，因此我认为这也是英伟达如此成功的原因之一，
+
+248
+00:27:27,103 --> 00:27:33,415
+why why Nvidia so small we're only 28,000 people large um but we we punched so far above our weight
+尽管英伟达规模很小，我们只有28,000人，规模庞大，但我们却取得了远超自身体量的成就，
+
+249
+00:27:33,465 --> 00:27:42,485
+because almost every everybody is empowered uh to make you know good reasoned principled first principled reasons uh reasoned
+因为几乎每个人都具备赋能，能够为我做出基于良好推理、原则性、有依据的决策，
+
+250
+00:27:42,535 --> 00:27:47,710
+decisions on my behalf and so so that that's kind of the reason why we did what we did and
+所以这就是我们之所以做出那些决定的原因，
+
+251
+00:27:47,760 --> 00:27:55,914
+then finally uh the properties of your your organization should reflect the product that you make and Nvidia is
+最后，组织的特性应当反映你所打造的产品，英伟达是一家全栈公司，我们完全
+
+252
+00:27:55,964 --> 00:28:03,693
+a full stack company we're full you know we're just like you we completely co-designed and co-design suggests right up
+就像你们一样，从头到尾完全协同设计，协同提出建议，没错
+
+253
+00:28:03,743 --> 00:28:09,070
+front that you shouldn't be doing something just with a hardware team you shouldn't do be doing something just
+你不应该只靠硬件团队来做某件事，也不应该只靠软件团队来做某件事，你应该同时在所有层面推进
+
+254
+00:28:09,120 --> 00:28:15,215
+with the software team you should be doing something across everything at the same time because you're doing codesign yes
+因为你们在进行协同设计，是的
+
+255
+00:28:15,265 --> 00:28:21,631
+and so I tried to create an environment where um uh the experts and the uh contributors at every
+所以我努力创造一个环境，让公司每个层级的专家和贡献者都能
+
+256
+00:28:21,681 --> 00:28:27,678
+single layer of the company can uh be engaged uh with a problem engage a problem at the same time
+同时参与一个问题的解决
+
+257
+00:28:27,728 --> 00:28:32,811
+and so those are some of the principles yeah it's remarkable it's remarkable to see well it's remarkable what
+这些就是一些核心原则，是的，令人惊叹，真是令人惊叹
+
+258
+00:28:32,861 --> 00:28:37,618
+you guys have done yeah no thank it's great partnership Jensen you know we are out of time but thank
+你们所取得的成就，是的，非常感谢合作，黄仁勋，时间到了，但非常感谢
+
+259
+00:28:37,668 --> 00:28:42,927
+you for the partnership it's great to work with Nvidia you know great to be a part of this
+与英伟达的合作，非常愉快，能参与
+
+260
+00:28:42,977 --> 00:28:51,480
+massive transformation you're leading for the entire world thank you very much and thank you for your partnership thank you
+这场引领全球的巨大变革，真的非常感谢，也感谢你们的合作

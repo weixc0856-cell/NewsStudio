@@ -1,0 +1,2365 @@
+{
+  "wireMagic": "pb3",
+  "pens": [ {
+  
+  } ],
+  "wsWinStyles": [ {
+  
+  } ],
+  "wpWinPositions": [ {
+  
+  } ],
+  "events": [ {
+    "tStartMs": 1380,
+    "dDurationMs": 1290,
+    "segs": [ {
+      "utf8": "- My name is James Leahy,"
+    } ]
+  }, {
+    "tStartMs": 2670,
+    "dDurationMs": 2670,
+    "segs": [ {
+      "utf8": "and I'm a principal research\nscientist at PhysicsX"
+    } ]
+  }, {
+    "tStartMs": 5340,
+    "dDurationMs": 1800,
+    "segs": [ {
+      "utf8": "and a mathematician."
+    } ]
+  }, {
+    "tStartMs": 7140,
+    "dDurationMs": 1500,
+    "segs": [ {
+      "utf8": "I'm here to tell you\nabout how we're building"
+    } ]
+  }, {
+    "tStartMs": 8640,
+    "dDurationMs": 1770,
+    "segs": [ {
+      "utf8": "foundation models for physics"
+    } ]
+  }, {
+    "tStartMs": 10410,
+    "dDurationMs": 2370,
+    "segs": [ {
+      "utf8": "and specifically aerodynamics in this case"
+    } ]
+  }, {
+    "tStartMs": 12780,
+    "dDurationMs": 1890,
+    "segs": [ {
+      "utf8": "and automotive aerodynamics."
+    } ]
+  }, {
+    "tStartMs": 14670,
+    "dDurationMs": 990,
+    "segs": [ {
+      "utf8": "And we're gonna talk,"
+    } ]
+  }, {
+    "tStartMs": 15660,
+    "dDurationMs": 3090,
+    "segs": [ {
+      "utf8": "I'm gonna show you some\nscaling loss that we're seeing."
+    } ]
+  }, {
+    "tStartMs": 18750,
+    "dDurationMs": 1440,
+    "segs": [ {
+      "utf8": "More data, better models."
+    } ]
+  }, {
+    "tStartMs": 20190,
+    "dDurationMs": 1410,
+    "segs": [ {
+      "utf8": "It's kind of obvious when you see"
+    } ]
+  }, {
+    "tStartMs": 21600,
+    "dDurationMs": 1590,
+    "segs": [ {
+      "utf8": "this happening in language and video."
+    } ]
+  }, {
+    "tStartMs": 23190,
+    "dDurationMs": 2190,
+    "segs": [ {
+      "utf8": "But for engineering and physics,"
+    } ]
+  }, {
+    "tStartMs": 25380,
+    "dDurationMs": 2520,
+    "segs": [ {
+      "utf8": "this is very far from a trivial problem"
+    } ]
+  }, {
+    "tStartMs": 27900,
+    "dDurationMs": 1920,
+    "segs": [ {
+      "utf8": "and it's an ongoing effort."
+    } ]
+  }, {
+    "tStartMs": 29820,
+    "dDurationMs": 2703,
+    "segs": [ {
+      "utf8": "And we'll see some early results today."
+    } ]
+  }, {
+    "tStartMs": 34320,
+    "dDurationMs": 1920,
+    "segs": [ {
+      "utf8": "Here's what we're gonna cover."
+    } ]
+  }, {
+    "tStartMs": 36240,
+    "dDurationMs": 1515,
+    "segs": [ {
+      "utf8": "First, I'm gonna give\nyou a quick introduction"
+    } ]
+  }, {
+    "tStartMs": 37755,
+    "dDurationMs": 1845,
+    "segs": [ {
+      "utf8": "to who PhysicsX is."
+    } ]
+  }, {
+    "tStartMs": 39600,
+    "dDurationMs": 2250,
+    "segs": [ {
+      "utf8": "Then I'll explain how pre-trained models"
+    } ]
+  }, {
+    "tStartMs": 41850,
+    "dDurationMs": 2583,
+    "segs": [ {
+      "utf8": "are the next frontier for physics AI."
+    } ]
+  }, {
+    "tStartMs": 45300,
+    "dDurationMs": 1410,
+    "segs": [ {
+      "utf8": "I'll talk about our new pre-trained model"
+    } ]
+  }, {
+    "tStartMs": 46710,
+    "dDurationMs": 2310,
+    "segs": [ {
+      "utf8": "for automotive aerodynamics,"
+    } ]
+  }, {
+    "tStartMs": 49020,
+    "dDurationMs": 2250,
+    "segs": [ {
+      "utf8": "and then I'll show you some scaling laws."
+    } ]
+  }, {
+    "tStartMs": 51270,
+    "dDurationMs": 3270,
+    "segs": [ {
+      "utf8": "We'll look at how AWS infrastructure\nis making this possible"
+    } ]
+  }, {
+    "tStartMs": 54540,
+    "dDurationMs": 2500,
+    "segs": [ {
+      "utf8": "and then I'll close with\nwhere we're heading next."
+    } ]
+  }, {
+    "tStartMs": 59130,
+    "dDurationMs": 2233,
+    "segs": [ {
+      "utf8": "So let's start with who PhysicsX is."
+    } ]
+  }, {
+    "tStartMs": 62309,
+    "dDurationMs": 2101,
+    "segs": [ {
+      "utf8": "PhysicsX is an AI company"
+    } ]
+  }, {
+    "tStartMs": 64410,
+    "dDurationMs": 3120,
+    "segs": [ {
+      "utf8": "and we're focused on\nindustrial applications."
+    } ]
+  }, {
+    "tStartMs": 67530,
+    "dDurationMs": 3240,
+    "segs": [ {
+      "utf8": "Our mission is simple, build and deploy AI"
+    } ]
+  }, {
+    "tStartMs": 70770,
+    "dDurationMs": 2190,
+    "segs": [ {
+      "utf8": "to accelerate industrial innovation."
+    } ]
+  }, {
+    "tStartMs": 72960,
+    "dDurationMs": 4440,
+    "segs": [ {
+      "utf8": "We've raised over $155\nmillion in series B funding."
+    } ]
+  }, {
+    "tStartMs": 77400,
+    "dDurationMs": 2070,
+    "segs": [ {
+      "utf8": "We have over 200 engineers,"
+    } ]
+  }, {
+    "tStartMs": 79470,
+    "dDurationMs": 3270,
+    "segs": [ {
+      "utf8": "a mix of AI researchers,\nsimulation engineers,"
+    } ]
+  }, {
+    "tStartMs": 82740,
+    "dDurationMs": 2010,
+    "segs": [ {
+      "utf8": "and software engineers."
+    } ]
+  }, {
+    "tStartMs": 84750,
+    "dDurationMs": 1770,
+    "segs": [ {
+      "utf8": "I think, crucially, it's\nimportant to understand"
+    } ]
+  }, {
+    "tStartMs": 86520,
+    "dDurationMs": 2730,
+    "segs": [ {
+      "utf8": "that we're not just a\nresearch organization."
+    } ]
+  }, {
+    "tStartMs": 89250,
+    "dDurationMs": 2370,
+    "segs": [ {
+      "utf8": "We work directly with our customers"
+    } ]
+  }, {
+    "tStartMs": 91620,
+    "dDurationMs": 4110,
+    "segs": [ {
+      "utf8": "to build the things that\nare usable and used."
+    } ]
+  }, {
+    "tStartMs": 95730,
+    "dDurationMs": 1380,
+    "segs": [ {
+      "utf8": "We partner with leading players"
+    } ]
+  }, {
+    "tStartMs": 97110,
+    "dDurationMs": 3060,
+    "segs": [ {
+      "utf8": "across aerospace and defense,"
+    } ]
+  }, {
+    "tStartMs": 100170,
+    "dDurationMs": 4260,
+    "segs": [ {
+      "utf8": "semiconductors, materials,\nenergy and renewables,"
+    } ]
+  }, {
+    "tStartMs": 104430,
+    "dDurationMs": 1653,
+    "segs": [ {
+      "utf8": "industrials, and automotive."
+    } ]
+  }, {
+    "tStartMs": 109500,
+    "dDurationMs": 960,
+    "segs": [ {
+      "utf8": "So what you're seeing here"
+    } ]
+  }, {
+    "tStartMs": 110460,
+    "dDurationMs": 2880,
+    "segs": [ {
+      "utf8": "is a computational\nfluid dynamic simulation"
+    } ]
+  }, {
+    "tStartMs": 113340,
+    "dDurationMs": 2310,
+    "segs": [ {
+      "utf8": "that's approximating the\nNavier-Stokes equation"
+    } ]
+  }, {
+    "tStartMs": 115650,
+    "dDurationMs": 4380,
+    "segs": [ {
+      "utf8": "around an immersed body,\nin this case, an airplane,"
+    } ]
+  }, {
+    "tStartMs": 120030,
+    "dDurationMs": 2130,
+    "segs": [ {
+      "utf8": "CFD was a major step change"
+    } ]
+  }, {
+    "tStartMs": 122160,
+    "dDurationMs": 2160,
+    "segs": [ {
+      "utf8": "from building physical prototypes."
+    } ]
+  }, {
+    "tStartMs": 124320,
+    "dDurationMs": 2220,
+    "segs": [ {
+      "utf8": "Before CFD, if you wanted to know"
+    } ]
+  }, {
+    "tStartMs": 126540,
+    "dDurationMs": 1680,
+    "segs": [ {
+      "utf8": "how air flowed around a design,"
+    } ]
+  }, {
+    "tStartMs": 128220,
+    "dDurationMs": 2400,
+    "segs": [ {
+      "utf8": "you had to build it,\nput it in a wind tunnel."
+    } ]
+  }, {
+    "tStartMs": 130620,
+    "dDurationMs": 3360,
+    "segs": [ {
+      "utf8": "Wind tunnels still play\na vital role today,"
+    } ]
+  }, {
+    "tStartMs": 133980,
+    "dDurationMs": 2130,
+    "segs": [ {
+      "utf8": "but everyone knows that simulations"
+    } ]
+  }, {
+    "tStartMs": 136110,
+    "dDurationMs": 1320,
+    "segs": [ {
+      "utf8": "have fundamentally increased the speed"
+    } ]
+  }, {
+    "tStartMs": 137430,
+    "dDurationMs": 1470,
+    "segs": [ {
+      "utf8": "at which we can innovate."
+    } ]
+  }, {
+    "tStartMs": 138900,
+    "dDurationMs": 2700,
+    "segs": [ {
+      "utf8": "Simulations though still are a bottleneck,"
+    } ]
+  }, {
+    "tStartMs": 141600,
+    "dDurationMs": 2043,
+    "segs": [ {
+      "utf8": "and there's room to innovate faster."
+    } ]
+  }, {
+    "tStartMs": 145650,
+    "dDurationMs": 2340,
+    "segs": [ {
+      "utf8": "That's where physics AI comes in."
+    } ]
+  }, {
+    "tStartMs": 147990,
+    "dDurationMs": 2430,
+    "segs": [ {
+      "utf8": "A legacy simulation, like\nthe one you just saw,"
+    } ]
+  }, {
+    "tStartMs": 150420,
+    "dDurationMs": 2250,
+    "segs": [ {
+      "utf8": "which was a seven-second\ntransient simulation"
+    } ]
+  }, {
+    "tStartMs": 153510,
+    "dDurationMs": 2100,
+    "segs": [ {
+      "utf8": "consisting of over a\nbillion mesh elements,"
+    } ]
+  }, {
+    "tStartMs": 155610,
+    "dDurationMs": 1950,
+    "segs": [ {
+      "utf8": "takes four days to compute"
+    } ]
+  }, {
+    "tStartMs": 157560,
+    "dDurationMs": 2100,
+    "segs": [ {
+      "utf8": "Using physics AI, we can do this"
+    } ]
+  }, {
+    "tStartMs": 159660,
+    "dDurationMs": 1980,
+    "segs": [ {
+      "utf8": "in a six-second inference step."
+    } ]
+  }, {
+    "tStartMs": 161640,
+    "dDurationMs": 3330,
+    "segs": [ {
+      "utf8": "Four days becomes six\nseconds in inference."
+    } ]
+  }, {
+    "tStartMs": 164970,
+    "dDurationMs": 2100,
+    "segs": [ {
+      "utf8": "That's not just an\nincremental improvement,"
+    } ]
+  }, {
+    "tStartMs": 167070,
+    "dDurationMs": 2220,
+    "segs": [ {
+      "utf8": "that's just the fundamental transformation"
+    } ]
+  }, {
+    "tStartMs": 169290,
+    "dDurationMs": 2613,
+    "segs": [ {
+      "utf8": "is how manufacturers\ncan innovate and design."
+    } ]
+  }, {
+    "tStartMs": 173400,
+    "dDurationMs": 1950,
+    "segs": [ {
+      "utf8": "The models, they're called surrogates"
+    } ]
+  }, {
+    "tStartMs": 175350,
+    "dDurationMs": 1770,
+    "segs": [ {
+      "utf8": "because they act as stand-ins"
+    } ]
+  }, {
+    "tStartMs": 177120,
+    "dDurationMs": 2400,
+    "segs": [ {
+      "utf8": "for expensive physics simulations."
+    } ]
+  }, {
+    "tStartMs": 179520,
+    "dDurationMs": 1770,
+    "segs": [ {
+      "utf8": "A well-trained surrogate\ncan give you answers"
+    } ]
+  }, {
+    "tStartMs": 181290,
+    "dDurationMs": 1380,
+    "segs": [ {
+      "utf8": "that are accurate enough"
+    } ]
+  }, {
+    "tStartMs": 182670,
+    "dDurationMs": 1620,
+    "segs": [ {
+      "utf8": "to make engineering decisions"
+    } ]
+  }, {
+    "tStartMs": 184290,
+    "dDurationMs": 2000,
+    "segs": [ {
+      "utf8": "at a fraction of the computational cost."
+    } ]
+  }, {
+    "tStartMs": 189960,
+    "dDurationMs": 1953,
+    "segs": [ {
+      "utf8": "We don't just work on aircrafts."
+    } ]
+  }, {
+    "tStartMs": 193020,
+    "dDurationMs": 3150,
+    "segs": [ {
+      "utf8": "Our technology applies\nacross engineering domains,"
+    } ]
+  }, {
+    "tStartMs": 196170,
+    "dDurationMs": 1350,
+    "segs": [ {
+      "utf8": "as I spoke about earlier."
+    } ]
+  }, {
+    "tStartMs": 197520,
+    "dDurationMs": 1350,
+    "segs": [ {
+      "utf8": "Aerodynamics for vehicles,"
+    } ]
+  }, {
+    "tStartMs": 198870,
+    "dDurationMs": 2040,
+    "segs": [ {
+      "utf8": "heat transfer for thermal management,"
+    } ]
+  }, {
+    "tStartMs": 200910,
+    "dDurationMs": 1680,
+    "segs": [ {
+      "utf8": "chemistry for reactions,"
+    } ]
+  }, {
+    "tStartMs": 202590,
+    "dDurationMs": 2790,
+    "segs": [ {
+      "utf8": "and electromagnetics for electronics."
+    } ]
+  }, {
+    "tStartMs": 205380,
+    "dDurationMs": 2550,
+    "segs": [ {
+      "utf8": "The physics is different in each domain,"
+    } ]
+  }, {
+    "tStartMs": 207930,
+    "dDurationMs": 2280,
+    "segs": [ {
+      "utf8": "but the fundamental approach is the same."
+    } ]
+  }, {
+    "tStartMs": 210210,
+    "dDurationMs": 1710,
+    "segs": [ {
+      "utf8": "We learn from simulation"
+    } ]
+  }, {
+    "tStartMs": 211920,
+    "dDurationMs": 2850,
+    "segs": [ {
+      "utf8": "and hopefully more experimental data"
+    } ]
+  }, {
+    "tStartMs": 214770,
+    "dDurationMs": 2073,
+    "segs": [ {
+      "utf8": "and make fast, accurate predictions."
+    } ]
+  }, {
+    "tStartMs": 222240,
+    "dDurationMs": 3450,
+    "segs": [ {
+      "utf8": "So what does it take to\nbuild an AI surrogate?"
+    } ]
+  }, {
+    "tStartMs": 225690,
+    "dDurationMs": 2070,
+    "segs": [ {
+      "utf8": "Well, you have to do some of\nthose expensive simulations"
+    } ]
+  }, {
+    "tStartMs": 227760,
+    "dDurationMs": 1750,
+    "segs": [ {
+      "utf8": "that I talked about earlier upfront"
+    } ]
+  }, {
+    "tStartMs": 230430,
+    "dDurationMs": 1650,
+    "segs": [ {
+      "utf8": "to generate the training data."
+    } ]
+  }, {
+    "tStartMs": 232080,
+    "dDurationMs": 2040,
+    "segs": [ {
+      "utf8": "You need to store that data,"
+    } ]
+  }, {
+    "tStartMs": 234120,
+    "dDurationMs": 1020,
+    "segs": [ {
+      "utf8": "you need to process it,"
+    } ]
+  }, {
+    "tStartMs": 235140,
+    "dDurationMs": 2370,
+    "segs": [ {
+      "utf8": "you need to clean it and\nconvert it to formats"
+    } ]
+  }, {
+    "tStartMs": 237510,
+    "dDurationMs": 2580,
+    "segs": [ {
+      "utf8": "that ML models can consume."
+    } ]
+  }, {
+    "tStartMs": 240090,
+    "dDurationMs": 1170,
+    "segs": [ {
+      "utf8": "Then you need to train the models,"
+    } ]
+  }, {
+    "tStartMs": 241260,
+    "dDurationMs": 2190,
+    "segs": [ {
+      "utf8": "validate them, and deploy them."
+    } ]
+  }, {
+    "tStartMs": 243450,
+    "dDurationMs": 2970,
+    "segs": [ {
+      "utf8": "We're building a platform designed"
+    } ]
+  }, {
+    "tStartMs": 246420,
+    "dDurationMs": 2340,
+    "segs": [ {
+      "utf8": "to completely support the AI lifecycle"
+    } ]
+  }, {
+    "tStartMs": 248760,
+    "dDurationMs": 1830,
+    "segs": [ {
+      "utf8": "for engineering and physics,"
+    } ]
+  }, {
+    "tStartMs": 250590,
+    "dDurationMs": 3060,
+    "segs": [ {
+      "utf8": "the data management, the model\ntraining, the fine-tuning,"
+    } ]
+  }, {
+    "tStartMs": 253650,
+    "dDurationMs": 3213,
+    "segs": [ {
+      "utf8": "and all deployed as an agentic workflow."
+    } ]
+  }, {
+    "tStartMs": 257880,
+    "dDurationMs": 1530,
+    "segs": [ {
+      "utf8": "We have a simulation workbench"
+    } ]
+  }, {
+    "tStartMs": 259410,
+    "dDurationMs": 2700,
+    "segs": [ {
+      "utf8": "which orchestrates the simulations."
+    } ]
+  }, {
+    "tStartMs": 262110,
+    "dDurationMs": 1200,
+    "segs": [ {
+      "utf8": "We have the AI workbench"
+    } ]
+  }, {
+    "tStartMs": 263310,
+    "dDurationMs": 3120,
+    "segs": [ {
+      "utf8": "to develop and deploy models\nfrom the AI model catalog,"
+    } ]
+  }, {
+    "tStartMs": 266430,
+    "dDurationMs": 3030,
+    "segs": [ {
+      "utf8": "some of which are pre-trained,\nsome of which are not."
+    } ]
+  }, {
+    "tStartMs": 269460,
+    "dDurationMs": 2580,
+    "segs": [ {
+      "utf8": "And then we have a unified data backbone"
+    } ]
+  }, {
+    "tStartMs": 272040,
+    "dDurationMs": 3750,
+    "segs": [ {
+      "utf8": "with enterprise security\nand multi-cloud scalability."
+    } ]
+  }, {
+    "tStartMs": 275790,
+    "dDurationMs": 2730,
+    "segs": [ {
+      "utf8": "This is not just a\nresearch infrastructure,"
+    } ]
+  }, {
+    "tStartMs": 278520,
+    "dDurationMs": 1863,
+    "segs": [ {
+      "utf8": "this is production-grade software."
+    } ]
+  }, {
+    "tStartMs": 282690,
+    "dDurationMs": 1980,
+    "segs": [ {
+      "utf8": "So now, let me talk about\nour pre-trained model"
+    } ]
+  }, {
+    "tStartMs": 284670,
+    "dDurationMs": 1923,
+    "segs": [ {
+      "utf8": "for automotive aerodynamics."
+    } ]
+  }, {
+    "tStartMs": 287970,
+    "dDurationMs": 2640,
+    "segs": [ {
+      "utf8": "So I spoke earlier"
+    } ]
+  }, {
+    "tStartMs": 290610,
+    "dDurationMs": 1350,
+    "segs": [ {
+      "utf8": "about how numerical simulation"
+    } ]
+  }, {
+    "tStartMs": 291960,
+    "dDurationMs": 2880,
+    "segs": [ {
+      "utf8": "was the first major step\nchange for engineering."
+    } ]
+  }, {
+    "tStartMs": 294840,
+    "dDurationMs": 2520,
+    "segs": [ {
+      "utf8": "The simulations are complex to set up."
+    } ]
+  }, {
+    "tStartMs": 297360,
+    "dDurationMs": 2700,
+    "segs": [ {
+      "utf8": "They take hours or days."
+    } ]
+  }, {
+    "tStartMs": 300060,
+    "dDurationMs": 3450,
+    "segs": [ {
+      "utf8": "But you get cheaper and faster exploration"
+    } ]
+  }, {
+    "tStartMs": 303510,
+    "dDurationMs": 1710,
+    "segs": [ {
+      "utf8": "than physical prototypes."
+    } ]
+  }, {
+    "tStartMs": 305220,
+    "dDurationMs": 2880,
+    "segs": [ {
+      "utf8": "Then came traditional ML\nmodels and surrogates."
+    } ]
+  }, {
+    "tStartMs": 308100,
+    "dDurationMs": 1440,
+    "segs": [ {
+      "utf8": "You need a training dataset,"
+    } ]
+  }, {
+    "tStartMs": 309540,
+    "dDurationMs": 2160,
+    "segs": [ {
+      "utf8": "you need an ML model, a pipeline,"
+    } ]
+  }, {
+    "tStartMs": 311700,
+    "dDurationMs": 990,
+    "segs": [ {
+      "utf8": "and once you're trained,"
+    } ]
+  }, {
+    "tStartMs": 312690,
+    "dDurationMs": 3930,
+    "segs": [ {
+      "utf8": "you can get vast design space exploration."
+    } ]
+  }, {
+    "tStartMs": 316620,
+    "dDurationMs": 2373,
+    "segs": [ {
+      "utf8": "But for every customer we encounter,"
+    } ]
+  }, {
+    "tStartMs": 320340,
+    "dDurationMs": 2280,
+    "segs": [ {
+      "utf8": "every new geometry we see,"
+    } ]
+  }, {
+    "tStartMs": 322620,
+    "dDurationMs": 2910,
+    "segs": [ {
+      "utf8": "we have to collect a new\ndataset from scratch."
+    } ]
+  }, {
+    "tStartMs": 325530,
+    "dDurationMs": 1500,
+    "segs": [ {
+      "utf8": "So what we're doing is we're going out"
+    } ]
+  }, {
+    "tStartMs": 327030,
+    "dDurationMs": 4200,
+    "segs": [ {
+      "utf8": "and generating large\npre-training datasets,"
+    } ]
+  }, {
+    "tStartMs": 331230,
+    "dDurationMs": 2223,
+    "segs": [ {
+      "utf8": "coupling it with\nfoundational architectures,"
+    } ]
+  }, {
+    "tStartMs": 334680,
+    "dDurationMs": 2220,
+    "segs": [ {
+      "utf8": "and serious infrastructure that's involved"
+    } ]
+  }, {
+    "tStartMs": 336900,
+    "dDurationMs": 2550,
+    "segs": [ {
+      "utf8": "to get everything from the\nsimulations to the data loader"
+    } ]
+  }, {
+    "tStartMs": 339450,
+    "dDurationMs": 3600,
+    "segs": [ {
+      "utf8": "and to train at scale using\ndynamic data parallelism."
+    } ]
+  }, {
+    "tStartMs": 343050,
+    "dDurationMs": 3900,
+    "segs": [ {
+      "utf8": "And what you get from these\npre-trained foundation models"
+    } ]
+  }, {
+    "tStartMs": 346950,
+    "dDurationMs": 3420,
+    "segs": [ {
+      "utf8": "is you get lower upfront\ndata needs for customers"
+    } ]
+  }, {
+    "tStartMs": 350370,
+    "dDurationMs": 2130,
+    "segs": [ {
+      "utf8": "and better out-of-the-box performance,"
+    } ]
+  }, {
+    "tStartMs": 352500,
+    "dDurationMs": 1533,
+    "segs": [ {
+      "utf8": "zero shot and fine-tuned."
+    } ]
+  }, {
+    "tStartMs": 355590,
+    "dDurationMs": 2310,
+    "segs": [ {
+      "utf8": "So when we wanted to build"
+    } ]
+  }, {
+    "tStartMs": 357900,
+    "dDurationMs": 2190,
+    "segs": [ {
+      "utf8": "the automotive aerodynamics model,"
+    } ]
+  }, {
+    "tStartMs": 360090,
+    "dDurationMs": 2970,
+    "segs": [ {
+      "utf8": "we faced some challenges"
+    } ]
+  }, {
+    "tStartMs": 363060,
+    "dDurationMs": 4830,
+    "segs": [ {
+      "utf8": "is that there wasn't a very\nlarge, diverse corpus of data."
+    } ]
+  }, {
+    "tStartMs": 367890,
+    "dDurationMs": 2160,
+    "segs": [ {
+      "utf8": "Some of the largest public datasets"
+    } ]
+  }, {
+    "tStartMs": 370050,
+    "dDurationMs": 1680,
+    "segs": [ {
+      "utf8": "consists of the DrivAerNet++,"
+    } ]
+  }, {
+    "tStartMs": 371730,
+    "dDurationMs": 3900,
+    "segs": [ {
+      "utf8": "which is out of the MIT\nDeCoDE Lab of Faez Ahmed,"
+    } ]
+  }, {
+    "tStartMs": 375630,
+    "dDurationMs": 2400,
+    "segs": [ {
+      "utf8": "which is a remarkable\ncontribution to the field,"
+    } ]
+  }, {
+    "tStartMs": 378030,
+    "dDurationMs": 1440,
+    "segs": [ {
+      "utf8": "make no doubt,"
+    } ]
+  }, {
+    "tStartMs": 379470,
+    "dDurationMs": 1590,
+    "segs": [ {
+      "utf8": "that consists of 8,000"
+    } ]
+  }, {
+    "tStartMs": 381060,
+    "dDurationMs": 2640,
+    "segs": [ {
+      "utf8": "Reynolds-averaged\nNavier-Stokes simulations."
+    } ]
+  }, {
+    "tStartMs": 383700,
+    "dDurationMs": 2820,
+    "segs": [ {
+      "utf8": "These are steady-state time\naveraged approximations."
+    } ]
+  }, {
+    "tStartMs": 386520,
+    "dDurationMs": 2973,
+    "segs": [ {
+      "utf8": "They're the fastest amongst\nthe different simulation types."
+    } ]
+  }, {
+    "tStartMs": 391140,
+    "dDurationMs": 1390,
+    "segs": [ {
+      "utf8": "And if you look At though"
+    } ]
+  }, {
+    "tStartMs": 393660,
+    "dDurationMs": 1740,
+    "segs": [ {
+      "utf8": "what the data's comprised of,"
+    } ]
+  }, {
+    "tStartMs": 395400,
+    "dDurationMs": 2760,
+    "segs": [ {
+      "utf8": "it's eight cars that are morphed,"
+    } ]
+  }, {
+    "tStartMs": 398160,
+    "dDurationMs": 1860,
+    "segs": [ {
+      "utf8": "and morphing is like stretching"
+    } ]
+  }, {
+    "tStartMs": 400020,
+    "dDurationMs": 1890,
+    "segs": [ {
+      "utf8": "and pulling different parts of the car."
+    } ]
+  }, {
+    "tStartMs": 401910,
+    "dDurationMs": 4170,
+    "segs": [ {
+      "utf8": "You get very topologically similar cars."
+    } ]
+  }, {
+    "tStartMs": 406080,
+    "dDurationMs": 4230,
+    "segs": [ {
+      "utf8": "Another dataset is a Luminary SHIFT SUV,"
+    } ]
+  }, {
+    "tStartMs": 410310,
+    "dDurationMs": 2760,
+    "segs": [ {
+      "utf8": "that's 2,000 detached eddy simulations."
+    } ]
+  }, {
+    "tStartMs": 413070,
+    "dDurationMs": 3476,
+    "segs": [ {
+      "utf8": "These are of higher fidelity than RANS."
+    } ]
+  }, {
+    "tStartMs": 416546,
+    "dDurationMs": 2374,
+    "segs": [ {
+      "utf8": "And here there are only two baseline cars"
+    } ]
+  }, {
+    "tStartMs": 418920,
+    "dDurationMs": 2640,
+    "segs": [ {
+      "utf8": "that are morphed a thousand times."
+    } ]
+  }, {
+    "tStartMs": 421560,
+    "dDurationMs": 4860,
+    "segs": [ {
+      "utf8": "So that's roughly 10 cars\nwhich have a thousand morphs."
+    } ]
+  }, {
+    "tStartMs": 426420,
+    "dDurationMs": 1680,
+    "segs": [ {
+      "utf8": "It's not very diverse."
+    } ]
+  }, {
+    "tStartMs": 428100,
+    "dDurationMs": 1560,
+    "segs": [ {
+      "utf8": "Another challenge I'll mention"
+    } ]
+  }, {
+    "tStartMs": 429660,
+    "dDurationMs": 5000,
+    "segs": [ {
+      "utf8": "is that when you have\nsort of this diverse data,"
+    } ]
+  }, {
+    "tStartMs": 434670,
+    "dDurationMs": 1920,
+    "segs": [ {
+      "utf8": "you have different fidelity simulations,"
+    } ]
+  }, {
+    "tStartMs": 436590,
+    "dDurationMs": 1440,
+    "segs": [ {
+      "utf8": "different turbulence closure models,"
+    } ]
+  }, {
+    "tStartMs": 438030,
+    "dDurationMs": 2880,
+    "segs": [ {
+      "utf8": "and this is sort of still\nan open research problem"
+    } ]
+  }, {
+    "tStartMs": 440910,
+    "dDurationMs": 2070,
+    "segs": [ {
+      "utf8": "as to whether you should\npre-train these models"
+    } ]
+  }, {
+    "tStartMs": 442980,
+    "dDurationMs": 2040,
+    "segs": [ {
+      "utf8": "on diverse sets of simulations"
+    } ]
+  }, {
+    "tStartMs": 445020,
+    "dDurationMs": 1770,
+    "segs": [ {
+      "utf8": "and how exactly you should do it."
+    } ]
+  }, {
+    "tStartMs": 446790,
+    "dDurationMs": 2913,
+    "segs": [ {
+      "utf8": "We'll only focus on the\ngeometric diversity today."
+    } ]
+  }, {
+    "tStartMs": 451224,
+    "dDurationMs": 3186,
+    "segs": [ {
+      "utf8": "So okay, I said that these\ndatasets aren't diverse,"
+    } ]
+  }, {
+    "tStartMs": 454410,
+    "dDurationMs": 2010,
+    "segs": [ {
+      "utf8": "but why does this matter?"
+    } ]
+  }, {
+    "tStartMs": 456420,
+    "dDurationMs": 3180,
+    "segs": [ {
+      "utf8": "So, we pre-trained"
+    } ]
+  }, {
+    "tStartMs": 459600,
+    "dDurationMs": 1860,
+    "segs": [ {
+      "utf8": "various attention-based architectures."
+    } ]
+  }, {
+    "tStartMs": 461460,
+    "dDurationMs": 3540,
+    "segs": [ {
+      "utf8": "If you're familiar, Transolver, ABUPT,"
+    } ]
+  }, {
+    "tStartMs": 465000,
+    "dDurationMs": 2663,
+    "segs": [ {
+      "utf8": "point cloud attention, linear attention."
+    } ]
+  }, {
+    "tStartMs": 467663,
+    "dDurationMs": 2107,
+    "segs": [ {
+      "utf8": "These meshes are very large,"
+    } ]
+  }, {
+    "tStartMs": 469770,
+    "dDurationMs": 3270,
+    "segs": [ {
+      "utf8": "so you have to use variants of\nattention that are suitable."
+    } ]
+  }, {
+    "tStartMs": 473040,
+    "dDurationMs": 2490,
+    "segs": [ {
+      "utf8": "And we trained them on\nLuminary and DrivAerNet,"
+    } ]
+  }, {
+    "tStartMs": 475530,
+    "dDurationMs": 2490,
+    "segs": [ {
+      "utf8": "these two public datasets\nthat I just spoke about."
+    } ]
+  }, {
+    "tStartMs": 478020,
+    "dDurationMs": 2220,
+    "segs": [ {
+      "utf8": "And we looked at their\nout-of-distribution performance"
+    } ]
+  }, {
+    "tStartMs": 480240,
+    "dDurationMs": 1920,
+    "segs": [ {
+      "utf8": "on a representative customer dataset."
+    } ]
+  }, {
+    "tStartMs": 482160,
+    "dDurationMs": 1410,
+    "segs": [ {
+      "utf8": "We call it CustomerNet."
+    } ]
+  }, {
+    "tStartMs": 483570,
+    "dDurationMs": 3960,
+    "segs": [ {
+      "utf8": "That's one baseline simulation\nwith very intricate morphs"
+    } ]
+  }, {
+    "tStartMs": 487530,
+    "dDurationMs": 2490,
+    "segs": [ {
+      "utf8": "that we see that our customers have."
+    } ]
+  }, {
+    "tStartMs": 490020,
+    "dDurationMs": 1410,
+    "segs": [ {
+      "utf8": "And we looked at their performance."
+    } ]
+  }, {
+    "tStartMs": 491430,
+    "dDurationMs": 2340,
+    "segs": [ {
+      "utf8": "What sort of performance\nare we looking at?"
+    } ]
+  }, {
+    "tStartMs": 493770,
+    "dDurationMs": 2250,
+    "segs": [ {
+      "utf8": "I'll first talk about the\nquantities that we're looking at."
+    } ]
+  }, {
+    "tStartMs": 496020,
+    "dDurationMs": 1530,
+    "segs": [ {
+      "utf8": "There's the drag coefficient."
+    } ]
+  }, {
+    "tStartMs": 497550,
+    "dDurationMs": 3213,
+    "segs": [ {
+      "utf8": "This is a measure of the\naerodynamic resistance of the car."
+    } ]
+  }, {
+    "tStartMs": 502560,
+    "dDurationMs": 2790,
+    "segs": [ {
+      "utf8": "A typical sedan has around\na coefficient of drag"
+    } ]
+  }, {
+    "tStartMs": 505350,
+    "dDurationMs": 1890,
+    "segs": [ {
+      "utf8": "between 0.25 and 0.30."
+    } ]
+  }, {
+    "tStartMs": 507240,
+    "dDurationMs": 2010,
+    "segs": [ {
+      "utf8": "Understanding this number"
+    } ]
+  }, {
+    "tStartMs": 509250,
+    "dDurationMs": 2970,
+    "segs": [ {
+      "utf8": "is how automotive manufacturers"
+    } ]
+  }, {
+    "tStartMs": 512220,
+    "dDurationMs": 3480,
+    "segs": [ {
+      "utf8": "can optimize for fuel\nefficiency and EV range"
+    } ]
+  }, {
+    "tStartMs": 515700,
+    "dDurationMs": 1140,
+    "segs": [ {
+      "utf8": "and other aspects."
+    } ]
+  }, {
+    "tStartMs": 516840,
+    "dDurationMs": 1140,
+    "segs": [ {
+      "utf8": "The pressure coefficient,"
+    } ]
+  }, {
+    "tStartMs": 517980,
+    "dDurationMs": 2910,
+    "segs": [ {
+      "utf8": "this is the pressure on\nthe surface of the car."
+    } ]
+  }, {
+    "tStartMs": 520890,
+    "dDurationMs": 2010,
+    "segs": [ {
+      "utf8": "This tells you how pressure varies"
+    } ]
+  }, {
+    "tStartMs": 522900,
+    "dDurationMs": 1800,
+    "segs": [ {
+      "utf8": "across every point of the vehicle surface."
+    } ]
+  }, {
+    "tStartMs": 524700,
+    "dDurationMs": 2100,
+    "segs": [ {
+      "utf8": "You have high pressure region in the front"
+    } ]
+  }, {
+    "tStartMs": 526800,
+    "dDurationMs": 1620,
+    "segs": [ {
+      "utf8": "and a low pressure in the wake."
+    } ]
+  }, {
+    "tStartMs": 528420,
+    "dDurationMs": 3240,
+    "segs": [ {
+      "utf8": "And these differences\nare what create the drag."
+    } ]
+  }, {
+    "tStartMs": 531660,
+    "dDurationMs": 3900,
+    "segs": [ {
+      "utf8": "And if you can predict the\npressure field accurately,"
+    } ]
+  }, {
+    "tStartMs": 535560,
+    "dDurationMs": 2430,
+    "segs": [ {
+      "utf8": "you understand why the\ndesign has its drag."
+    } ]
+  }, {
+    "tStartMs": 537990,
+    "dDurationMs": 2430,
+    "segs": [ {
+      "utf8": "So let's look at these graphs."
+    } ]
+  }, {
+    "tStartMs": 540420,
+    "dDurationMs": 3060,
+    "segs": [ {
+      "utf8": "So if we look at the top one,\nthis is the drag coefficient,"
+    } ]
+  }, {
+    "tStartMs": 543480,
+    "dDurationMs": 1140,
+    "segs": [ {
+      "utf8": "and along the y-axis"
+    } ]
+  }, {
+    "tStartMs": 544620,
+    "dDurationMs": 4440,
+    "segs": [ {
+      "utf8": "is the Spearman rank\ncorrelation coefficient."
+    } ]
+  }, {
+    "tStartMs": 549060,
+    "dDurationMs": 2790,
+    "segs": [ {
+      "utf8": "It measures how accurate\nyou're ranking the designs."
+    } ]
+  }, {
+    "tStartMs": 551850,
+    "dDurationMs": 3120,
+    "segs": [ {
+      "utf8": "And you look, in the green and the orange,"
+    } ]
+  }, {
+    "tStartMs": 554970,
+    "dDurationMs": 3090,
+    "segs": [ {
+      "utf8": "the green is the model\nthat's trained on DrivAerNet,"
+    } ]
+  }, {
+    "tStartMs": 558060,
+    "dDurationMs": 2520,
+    "segs": [ {
+      "utf8": "the orange is the one\nthat's trained on Luminary."
+    } ]
+  }, {
+    "tStartMs": 560580,
+    "dDurationMs": 1860,
+    "segs": [ {
+      "utf8": "And if you look at the performance"
+    } ]
+  }, {
+    "tStartMs": 562440,
+    "dDurationMs": 3390,
+    "segs": [ {
+      "utf8": "within distribution, it's quite good."
+    } ]
+  }, {
+    "tStartMs": 565830,
+    "dDurationMs": 1140,
+    "segs": [ {
+      "utf8": "If we look at how it performs"
+    } ]
+  }, {
+    "tStartMs": 566970,
+    "dDurationMs": 1890,
+    "segs": [ {
+      "utf8": "out of distribution on the CustomerNet,"
+    } ]
+  }, {
+    "tStartMs": 568860,
+    "dDurationMs": 2220,
+    "segs": [ {
+      "utf8": "it's orders of magnitude worse."
+    } ]
+  }, {
+    "tStartMs": 571080,
+    "dDurationMs": 2160,
+    "segs": [ {
+      "utf8": "We see a similar story for\nthe pressure coefficient."
+    } ]
+  }, {
+    "tStartMs": 573240,
+    "dDurationMs": 1380,
+    "segs": [ {
+      "utf8": "Here, lower is better."
+    } ]
+  }, {
+    "tStartMs": 574620,
+    "dDurationMs": 2310,
+    "segs": [ {
+      "utf8": "We're looking at the mean absolute error"
+    } ]
+  }, {
+    "tStartMs": 576930,
+    "dDurationMs": 3573,
+    "segs": [ {
+      "utf8": "of the pressure coefficient\non the surface of the car."
+    } ]
+  }, {
+    "tStartMs": 582330,
+    "dDurationMs": 2850,
+    "segs": [ {
+      "utf8": "So it seems pretty\nobvious you need to go out"
+    } ]
+  }, {
+    "tStartMs": 585180,
+    "dDurationMs": 2490,
+    "segs": [ {
+      "utf8": "and you need to generate\na very diverse dataset."
+    } ]
+  }, {
+    "tStartMs": 587670,
+    "dDurationMs": 3420,
+    "segs": [ {
+      "utf8": "So this dataset is growing as we speak."
+    } ]
+  }, {
+    "tStartMs": 591090,
+    "dDurationMs": 3000,
+    "segs": [ {
+      "utf8": "We are still generating this\ndata and training the model."
+    } ]
+  }, {
+    "tStartMs": 594090,
+    "dDurationMs": 1830,
+    "segs": [ {
+      "utf8": "We'll talk a little bit\nabout how we're getting"
+    } ]
+  }, {
+    "tStartMs": 595920,
+    "dDurationMs": 4920,
+    "segs": [ {
+      "utf8": "more new, diverser designs\nthrough active learning."
+    } ]
+  }, {
+    "tStartMs": 600840,
+    "dDurationMs": 3420,
+    "segs": [ {
+      "utf8": "So here what you see are some numbers"
+    } ]
+  }, {
+    "tStartMs": 604260,
+    "dDurationMs": 2880,
+    "segs": [ {
+      "utf8": "that are trained on 18,000 simulations"
+    } ]
+  }, {
+    "tStartMs": 607140,
+    "dDurationMs": 2010,
+    "segs": [ {
+      "utf8": "with over 120 baselines"
+    } ]
+  }, {
+    "tStartMs": 609150,
+    "dDurationMs": 3180,
+    "segs": [ {
+      "utf8": "at a fixed velocity,\ninlet velocity for now."
+    } ]
+  }, {
+    "tStartMs": 612330,
+    "dDurationMs": 3960,
+    "segs": [ {
+      "utf8": "And we see a difference here,"
+    } ]
+  }, {
+    "tStartMs": 616290,
+    "dDurationMs": 3450,
+    "segs": [ {
+      "utf8": "that our model still performs\nwell on DrivAerNet Luminary,"
+    } ]
+  }, {
+    "tStartMs": 619740,
+    "dDurationMs": 1920,
+    "segs": [ {
+      "utf8": "these public datasets,"
+    } ]
+  }, {
+    "tStartMs": 621660,
+    "dDurationMs": 4110,
+    "segs": [ {
+      "utf8": "but when we look at the\nout-of-shot zero-shot performance,"
+    } ]
+  }, {
+    "tStartMs": 625770,
+    "dDurationMs": 3540,
+    "segs": [ {
+      "utf8": "we get significantly better results."
+    } ]
+  }, {
+    "tStartMs": 629310,
+    "dDurationMs": 1290,
+    "segs": [ {
+      "utf8": "And this is just zero shot."
+    } ]
+  }, {
+    "tStartMs": 630600,
+    "dDurationMs": 1500,
+    "segs": [ {
+      "utf8": "This isn't when you fine-tune."
+    } ]
+  }, {
+    "tStartMs": 633540,
+    "dDurationMs": 3420,
+    "segs": [ {
+      "utf8": "So, now you wanna understand,"
+    } ]
+  }, {
+    "tStartMs": 636960,
+    "dDurationMs": 2280,
+    "segs": [ {
+      "utf8": "as we're growing this dataset,"
+    } ]
+  }, {
+    "tStartMs": 639240,
+    "dDurationMs": 1470,
+    "segs": [ {
+      "utf8": "what's happening out of distribution"
+    } ]
+  }, {
+    "tStartMs": 640710,
+    "dDurationMs": 2760,
+    "segs": [ {
+      "utf8": "is your out-of-distribution\nperformance improving."
+    } ]
+  }, {
+    "tStartMs": 643470,
+    "dDurationMs": 2910,
+    "segs": [ {
+      "utf8": "And so what we're seeing here\nis a graph along the y-axis"
+    } ]
+  }, {
+    "tStartMs": 646380,
+    "dDurationMs": 1450,
+    "segs": [ {
+      "utf8": "is the out of distribution"
+    } ]
+  }, {
+    "tStartMs": 649920,
+    "dDurationMs": 2070,
+    "segs": [ {
+      "utf8": "mean absolute error of\nthe pressure coefficient."
+    } ]
+  }, {
+    "tStartMs": 651990,
+    "dDurationMs": 3630,
+    "segs": [ {
+      "utf8": "And along the x-axis, you\nsee the training set size,"
+    } ]
+  }, {
+    "tStartMs": 655620,
+    "dDurationMs": 1380,
+    "segs": [ {
+      "utf8": "and you see this decreasing."
+    } ]
+  }, {
+    "tStartMs": 657000,
+    "dDurationMs": 1950,
+    "segs": [ {
+      "utf8": "Now, when you look along the x-axis,"
+    } ]
+  }, {
+    "tStartMs": 658950,
+    "dDurationMs": 1590,
+    "segs": [ {
+      "utf8": "you say training set size,"
+    } ]
+  }, {
+    "tStartMs": 660540,
+    "dDurationMs": 2040,
+    "segs": [ {
+      "utf8": "are these just morphs\nor are these baselines?"
+    } ]
+  }, {
+    "tStartMs": 662580,
+    "dDurationMs": 1320,
+    "segs": [ {
+      "utf8": "And these are some of the questions"
+    } ]
+  }, {
+    "tStartMs": 663900,
+    "dDurationMs": 1380,
+    "segs": [ {
+      "utf8": "we're trying to understand."
+    } ]
+  }, {
+    "tStartMs": 665280,
+    "dDurationMs": 2490,
+    "segs": [ {
+      "utf8": "How many times should you morph a car?"
+    } ]
+  }, {
+    "tStartMs": 667770,
+    "dDurationMs": 1983,
+    "segs": [ {
+      "utf8": "Does that improve the performance?"
+    } ]
+  }, {
+    "tStartMs": 670590,
+    "dDurationMs": 2670,
+    "segs": [ {
+      "utf8": "Here, this is going along basically"
+    } ]
+  }, {
+    "tStartMs": 673260,
+    "dDurationMs": 2790,
+    "segs": [ {
+      "utf8": "a hundred morphs per baseline"
+    } ]
+  }, {
+    "tStartMs": 676050,
+    "dDurationMs": 4740,
+    "segs": [ {
+      "utf8": "that we're increasing along the x-axis."
+    } ]
+  }, {
+    "tStartMs": 680790,
+    "dDurationMs": 2250,
+    "segs": [ {
+      "utf8": "And we'll talk about how\nwe're now implementing"
+    } ]
+  }, {
+    "tStartMs": 683040,
+    "dDurationMs": 4320,
+    "segs": [ {
+      "utf8": "active learning and\nthat's going to increase"
+    } ]
+  }, {
+    "tStartMs": 687360,
+    "dDurationMs": 2433,
+    "segs": [ {
+      "utf8": "the slope of these curves."
+    } ]
+  }, {
+    "tStartMs": 691800,
+    "dDurationMs": 3420,
+    "segs": [ {
+      "utf8": "So, accuracy alone"
+    } ]
+  }, {
+    "tStartMs": 695220,
+    "dDurationMs": 2250,
+    "segs": [ {
+      "utf8": "isn't enough for engineering applications."
+    } ]
+  }, {
+    "tStartMs": 697470,
+    "dDurationMs": 2820,
+    "segs": [ {
+      "utf8": "Engineers need to know\nwhen to trust the model."
+    } ]
+  }, {
+    "tStartMs": 700290,
+    "dDurationMs": 2100,
+    "segs": [ {
+      "utf8": "If you're predicting a drag coefficient,"
+    } ]
+  }, {
+    "tStartMs": 702390,
+    "dDurationMs": 2160,
+    "segs": [ {
+      "utf8": "a difference of 0.01 matters."
+    } ]
+  }, {
+    "tStartMs": 704550,
+    "dDurationMs": 2520,
+    "segs": [ {
+      "utf8": "You need to have confidence intervals."
+    } ]
+  }, {
+    "tStartMs": 707070,
+    "dDurationMs": 2733,
+    "segs": [ {
+      "utf8": "And if we look on the right,"
+    } ]
+  }, {
+    "tStartMs": 711720,
+    "dDurationMs": 1950,
+    "segs": [ {
+      "utf8": "this is showing how drag accumulates"
+    } ]
+  }, {
+    "tStartMs": 713670,
+    "dDurationMs": 2310,
+    "segs": [ {
+      "utf8": "throughout the length of the\ncar from the front to the back."
+    } ]
+  }, {
+    "tStartMs": 715980,
+    "dDurationMs": 2430,
+    "segs": [ {
+      "utf8": "You get this by integrating the pressure"
+    } ]
+  }, {
+    "tStartMs": 718410,
+    "dDurationMs": 1920,
+    "segs": [ {
+      "utf8": "and the wall shear stress on surface."
+    } ]
+  }, {
+    "tStartMs": 720330,
+    "dDurationMs": 1740,
+    "segs": [ {
+      "utf8": "And as you get to all the way"
+    } ]
+  }, {
+    "tStartMs": 722070,
+    "dDurationMs": 1560,
+    "segs": [ {
+      "utf8": "to the right point of the graph,"
+    } ]
+  }, {
+    "tStartMs": 723630,
+    "dDurationMs": 2220,
+    "segs": [ {
+      "utf8": "the final number on the upper right,"
+    } ]
+  }, {
+    "tStartMs": 725850,
+    "dDurationMs": 1230,
+    "segs": [ {
+      "utf8": "that's the coefficient of drag."
+    } ]
+  }, {
+    "tStartMs": 727080,
+    "dDurationMs": 3600,
+    "segs": [ {
+      "utf8": "And you can see that that blue band"
+    } ]
+  }, {
+    "tStartMs": 730680,
+    "dDurationMs": 1530,
+    "segs": [ {
+      "utf8": "is the uncertainty region."
+    } ]
+  }, {
+    "tStartMs": 732210,
+    "dDurationMs": 3030,
+    "segs": [ {
+      "utf8": "And at that final point on the right,"
+    } ]
+  }, {
+    "tStartMs": 735240,
+    "dDurationMs": 1950,
+    "segs": [ {
+      "utf8": "that represents the confidence interval"
+    } ]
+  }, {
+    "tStartMs": 737190,
+    "dDurationMs": 1713,
+    "segs": [ {
+      "utf8": "around the final drag coefficient."
+    } ]
+  }, {
+    "tStartMs": 740490,
+    "dDurationMs": 2400,
+    "segs": [ {
+      "utf8": "This is the sort of\nuncertainty quantification"
+    } ]
+  }, {
+    "tStartMs": 742890,
+    "dDurationMs": 2100,
+    "segs": [ {
+      "utf8": "we expect from our models."
+    } ]
+  }, {
+    "tStartMs": 744990,
+    "dDurationMs": 2280,
+    "segs": [ {
+      "utf8": "And we'll see that this\nuncertainty quantification"
+    } ]
+  }, {
+    "tStartMs": 747270,
+    "dDurationMs": 2130,
+    "segs": [ {
+      "utf8": "isn't just crucial for the end use."
+    } ]
+  }, {
+    "tStartMs": 749400,
+    "dDurationMs": 910,
+    "segs": [ {
+      "utf8": "You need to know"
+    } ]
+  }, {
+    "tStartMs": 752816,
+    "dDurationMs": 1954,
+    "segs": [ {
+      "utf8": "at which designs the models are uncertain"
+    } ]
+  }, {
+    "tStartMs": 754770,
+    "dDurationMs": 2370,
+    "segs": [ {
+      "utf8": "to know which designs to go for next."
+    } ]
+  }, {
+    "tStartMs": 757140,
+    "dDurationMs": 2370,
+    "segs": [ {
+      "utf8": "And that's the active learning loop"
+    } ]
+  }, {
+    "tStartMs": 759510,
+    "dDurationMs": 1413,
+    "segs": [ {
+      "utf8": "that I'll speak about next."
+    } ]
+  }, {
+    "tStartMs": 762630,
+    "dDurationMs": 1980,
+    "segs": [ {
+      "utf8": "So let me now talk about,"
+    } ]
+  }, {
+    "tStartMs": 764610,
+    "dDurationMs": 1290,
+    "segs": [ {
+      "utf8": "we're at an AWS conference,"
+    } ]
+  }, {
+    "tStartMs": 765900,
+    "dDurationMs": 3420,
+    "segs": [ {
+      "utf8": "let me talk about how we're using AWS"
+    } ]
+  }, {
+    "tStartMs": 769320,
+    "dDurationMs": 2640,
+    "segs": [ {
+      "utf8": "to simulate and train these models."
+    } ]
+  }, {
+    "tStartMs": 771960,
+    "dDurationMs": 4290,
+    "segs": [ {
+      "utf8": "So let me start with\nthe diverse geometries."
+    } ]
+  }, {
+    "tStartMs": 776250,
+    "dDurationMs": 3570,
+    "segs": [ {
+      "utf8": "Today, we have a diverse\nset of geometries."
+    } ]
+  }, {
+    "tStartMs": 779820,
+    "dDurationMs": 3540,
+    "segs": [ {
+      "utf8": "These then go into our\naerodynamic simulation."
+    } ]
+  }, {
+    "tStartMs": 783360,
+    "dDurationMs": 3090,
+    "segs": [ {
+      "utf8": "We're using Siemens star"
+    } ]
+  }, {
+    "tStartMs": 786450,
+    "dDurationMs": 1920,
+    "segs": [ {
+      "utf8": "and we're using GPU-based solvers,"
+    } ]
+  }, {
+    "tStartMs": 788370,
+    "dDurationMs": 3527,
+    "segs": [ {
+      "utf8": "and these are on SageMaker HyperPod,"
+    } ]
+  }, {
+    "tStartMs": 791897,
+    "dDurationMs": 2713,
+    "segs": [ {
+      "utf8": "the same clusters that our\nmodels are being trained on."
+    } ]
+  }, {
+    "tStartMs": 794610,
+    "dDurationMs": 3360,
+    "segs": [ {
+      "utf8": "So on the output of the\naerodynamic simulations,"
+    } ]
+  }, {
+    "tStartMs": 797970,
+    "dDurationMs": 1890,
+    "segs": [ {
+      "utf8": "you get the diverse resolve flows,"
+    } ]
+  }, {
+    "tStartMs": 799860,
+    "dDurationMs": 1230,
+    "segs": [ {
+      "utf8": "very large set of fields,"
+    } ]
+  }, {
+    "tStartMs": 801090,
+    "dDurationMs": 1203,
+    "segs": [ {
+      "utf8": "terabytes upon terabytes."
+    } ]
+  }, {
+    "tStartMs": 802293,
+    "dDurationMs": 2040,
+    "segs": [ {
+      "utf8": "Those are stored in S3."
+    } ]
+  }, {
+    "tStartMs": 805830,
+    "dDurationMs": 3183,
+    "segs": [ {
+      "utf8": "That's our long-term storage."
+    } ]
+  }, {
+    "tStartMs": 810000,
+    "dDurationMs": 2910,
+    "segs": [ {
+      "utf8": "Then those fields"
+    } ]
+  }, {
+    "tStartMs": 812910,
+    "dDurationMs": 4440,
+    "segs": [ {
+      "utf8": "are then pre-processed\nusing AWS Batch in parallel"
+    } ]
+  }, {
+    "tStartMs": 817350,
+    "dDurationMs": 2730,
+    "segs": [ {
+      "utf8": "to get them to a form that's\ningested by our models."
+    } ]
+  }, {
+    "tStartMs": 820080,
+    "dDurationMs": 1590,
+    "segs": [ {
+      "utf8": "Our models are then also trained"
+    } ]
+  }, {
+    "tStartMs": 821670,
+    "dDurationMs": 2943,
+    "segs": [ {
+      "utf8": "on SageMaker HyperPod\nusing data parallelism,"
+    } ]
+  }, {
+    "tStartMs": 825810,
+    "dDurationMs": 3213,
+    "segs": [ {
+      "utf8": "and the storage that's used\nthere is FSx for Lustre."
+    } ]
+  }, {
+    "tStartMs": 830940,
+    "dDurationMs": 1290,
+    "segs": [ {
+      "utf8": "And then finally, I talked"
+    } ]
+  }, {
+    "tStartMs": 832230,
+    "dDurationMs": 2760,
+    "segs": [ {
+      "utf8": "about that our model has\nuncertainty quantification."
+    } ]
+  }, {
+    "tStartMs": 834990,
+    "dDurationMs": 4440,
+    "segs": [ {
+      "utf8": "So that, plus last year at AWS,"
+    } ]
+  }, {
+    "tStartMs": 839430,
+    "dDurationMs": 2490,
+    "segs": [ {
+      "utf8": "we spoke about our large\ngenerative geometry model."
+    } ]
+  }, {
+    "tStartMs": 841920,
+    "dDurationMs": 2793,
+    "segs": [ {
+      "utf8": "This is a model that can\ngenerate different designs."
+    } ]
+  }, {
+    "tStartMs": 845610,
+    "dDurationMs": 1680,
+    "segs": [ {
+      "utf8": "The uncertainty coupled"
+    } ]
+  }, {
+    "tStartMs": 847290,
+    "dDurationMs": 2580,
+    "segs": [ {
+      "utf8": "with the geometry generative mechanism"
+    } ]
+  }, {
+    "tStartMs": 849870,
+    "dDurationMs": 2340,
+    "segs": [ {
+      "utf8": "are what drives this active learning loop."
+    } ]
+  }, {
+    "tStartMs": 852210,
+    "dDurationMs": 2490,
+    "segs": [ {
+      "utf8": "After we had a set of baseline geometries"
+    } ]
+  }, {
+    "tStartMs": 854700,
+    "dDurationMs": 2220,
+    "segs": [ {
+      "utf8": "to fine-tune the geometry model,"
+    } ]
+  }, {
+    "tStartMs": 856920,
+    "dDurationMs": 960,
+    "segs": [ {
+      "utf8": "this can then tell us"
+    } ]
+  }, {
+    "tStartMs": 857880,
+    "dDurationMs": 2790,
+    "segs": [ {
+      "utf8": "what parts of the design space\nis the model most uncertain,"
+    } ]
+  }, {
+    "tStartMs": 860670,
+    "dDurationMs": 2040,
+    "segs": [ {
+      "utf8": "and we can get those geometries"
+    } ]
+  }, {
+    "tStartMs": 862710,
+    "dDurationMs": 1350,
+    "segs": [ {
+      "utf8": "which then feed back into the loop"
+    } ]
+  }, {
+    "tStartMs": 864060,
+    "dDurationMs": 2160,
+    "segs": [ {
+      "utf8": "to go through the aerodynamic simulation."
+    } ]
+  }, {
+    "tStartMs": 866220,
+    "dDurationMs": 1680,
+    "segs": [ {
+      "utf8": "Now, that aerodynamic simulation"
+    } ]
+  }, {
+    "tStartMs": 867900,
+    "dDurationMs": 3780,
+    "segs": [ {
+      "utf8": "I spoke about was Siemens star."
+    } ]
+  }, {
+    "tStartMs": 871680,
+    "dDurationMs": 1200,
+    "segs": [ {
+      "utf8": "That's RANS at the moment."
+    } ]
+  }, {
+    "tStartMs": 872880,
+    "dDurationMs": 2460,
+    "segs": [ {
+      "utf8": "That's not a transient simulation."
+    } ]
+  }, {
+    "tStartMs": 875340,
+    "dDurationMs": 2070,
+    "segs": [ {
+      "utf8": "I think there's a lot of evidence"
+    } ]
+  }, {
+    "tStartMs": 877410,
+    "dDurationMs": 3900,
+    "segs": [ {
+      "utf8": "showing that training on\ntransient data is a better use,"
+    } ]
+  }, {
+    "tStartMs": 881310,
+    "dDurationMs": 2310,
+    "segs": [ {
+      "utf8": "but to train on transient data,"
+    } ]
+  }, {
+    "tStartMs": 883620,
+    "dDurationMs": 2010,
+    "segs": [ {
+      "utf8": "you need to have an online data loader."
+    } ]
+  }, {
+    "tStartMs": 885630,
+    "dDurationMs": 2010,
+    "segs": [ {
+      "utf8": "That's where it becomes\neven more important"
+    } ]
+  }, {
+    "tStartMs": 887640,
+    "dDurationMs": 2160,
+    "segs": [ {
+      "utf8": "that the simulator and\nthe models are trained"
+    } ]
+  }, {
+    "tStartMs": 889800,
+    "dDurationMs": 1800,
+    "segs": [ {
+      "utf8": "in the same place."
+    } ]
+  }, {
+    "tStartMs": 891600,
+    "dDurationMs": 2580,
+    "segs": [ {
+      "utf8": "So building this\ninfrastructure even for RANS"
+    } ]
+  }, {
+    "tStartMs": 894180,
+    "dDurationMs": 2523,
+    "segs": [ {
+      "utf8": "is setting the stage for\nthe next development."
+    } ]
+  }, {
+    "tStartMs": 898230,
+    "dDurationMs": 2370,
+    "segs": [ {
+      "utf8": "I'll kind of go over this again"
+    } ]
+  }, {
+    "tStartMs": 900600,
+    "dDurationMs": 2910,
+    "segs": [ {
+      "utf8": "in a little more detail\nabout the AWS architecture."
+    } ]
+  }, {
+    "tStartMs": 903510,
+    "dDurationMs": 3330,
+    "segs": [ {
+      "utf8": "So at the heart is the SageMaker HyperPod."
+    } ]
+  }, {
+    "tStartMs": 906840,
+    "dDurationMs": 2040,
+    "segs": [ {
+      "utf8": "We have a Slurm for job management."
+    } ]
+  }, {
+    "tStartMs": 908880,
+    "dDurationMs": 1740,
+    "segs": [ {
+      "utf8": "We have a controller machine"
+    } ]
+  }, {
+    "tStartMs": 910620,
+    "dDurationMs": 2940,
+    "segs": [ {
+      "utf8": "that works across multiple compute nodes"
+    } ]
+  }, {
+    "tStartMs": 913560,
+    "dDurationMs": 1800,
+    "segs": [ {
+      "utf8": "and the simulation node."
+    } ]
+  }, {
+    "tStartMs": 915360,
+    "dDurationMs": 1920,
+    "segs": [ {
+      "utf8": "You have the FSx for Luster,"
+    } ]
+  }, {
+    "tStartMs": 917280,
+    "dDurationMs": 3030,
+    "segs": [ {
+      "utf8": "which is the file system layer."
+    } ]
+  }, {
+    "tStartMs": 920310,
+    "dDurationMs": 3963,
+    "segs": [ {
+      "utf8": "It's bidirectionally synced with S3."
+    } ]
+  }, {
+    "tStartMs": 925470,
+    "dDurationMs": 3123,
+    "segs": [ {
+      "utf8": "The FSx is where the data loader are."
+    } ]
+  }, {
+    "tStartMs": 930210,
+    "dDurationMs": 2667,
+    "segs": [ {
+      "utf8": "And then the network\narchitecture is two subnets."
+    } ]
+  }, {
+    "tStartMs": 932877,
+    "dDurationMs": 2553,
+    "segs": [ {
+      "utf8": "You have the HyperPod, the private one,"
+    } ]
+  }, {
+    "tStartMs": 935430,
+    "dDurationMs": 1080,
+    "segs": [ {
+      "utf8": "which is the HyperPod cluster,"
+    } ]
+  }, {
+    "tStartMs": 936510,
+    "dDurationMs": 1080,
+    "segs": [ {
+      "utf8": "and you have the public subnet,"
+    } ]
+  }, {
+    "tStartMs": 937590,
+    "dDurationMs": 3390,
+    "segs": [ {
+      "utf8": "which hosts the ML flow dashboard\nwhere we see the results,"
+    } ]
+  }, {
+    "tStartMs": 940980,
+    "dDurationMs": 1680,
+    "segs": [ {
+      "utf8": "and all of our researchers"
+    } ]
+  }, {
+    "tStartMs": 942660,
+    "dDurationMs": 2103,
+    "segs": [ {
+      "utf8": "enter in through the AWS Session Manager."
+    } ]
+  }, {
+    "tStartMs": 947790,
+    "dDurationMs": 3960,
+    "segs": [ {
+      "utf8": "So let's wrap up and see what we learned"
+    } ]
+  }, {
+    "tStartMs": 951750,
+    "dDurationMs": 2463,
+    "segs": [ {
+      "utf8": "and where PhysicsX is heading next."
+    } ]
+  }, {
+    "tStartMs": 955980,
+    "dDurationMs": 3270,
+    "segs": [ {
+      "utf8": "So we talked about simulations"
+    } ]
+  }, {
+    "tStartMs": 959250,
+    "dDurationMs": 3930,
+    "segs": [ {
+      "utf8": "and we saw how ML surrogates\nwere a major leap forward"
+    } ]
+  }, {
+    "tStartMs": 963180,
+    "dDurationMs": 2550,
+    "segs": [ {
+      "utf8": "to be able to drive down inference time."
+    } ]
+  }, {
+    "tStartMs": 965730,
+    "dDurationMs": 2490,
+    "segs": [ {
+      "utf8": "Then we talked about pre-training models"
+    } ]
+  }, {
+    "tStartMs": 968220,
+    "dDurationMs": 4420,
+    "segs": [ {
+      "utf8": "and how this will help us"
+    } ]
+  }, {
+    "tStartMs": 974220,
+    "dDurationMs": 2460,
+    "segs": [ {
+      "utf8": "accelerate our customers' workflows"
+    } ]
+  }, {
+    "tStartMs": 976680,
+    "dDurationMs": 2550,
+    "segs": [ {
+      "utf8": "by requiring less data from them upfront."
+    } ]
+  }, {
+    "tStartMs": 979230,
+    "dDurationMs": 2943,
+    "segs": [ {
+      "utf8": "And we're seeing that\nscaling laws are emerging."
+    } ]
+  }, {
+    "tStartMs": 983460,
+    "dDurationMs": 2490,
+    "segs": [ {
+      "utf8": "Now, what's next for us?"
+    } ]
+  }, {
+    "tStartMs": 985950,
+    "dDurationMs": 2100,
+    "segs": [ {
+      "utf8": "We started with automotive aerodynamics"
+    } ]
+  }, {
+    "tStartMs": 988050,
+    "dDurationMs": 1650,
+    "segs": [ {
+      "utf8": "and we'll continue to innovate here,"
+    } ]
+  }, {
+    "tStartMs": 989700,
+    "dDurationMs": 2580,
+    "segs": [ {
+      "utf8": "as I mentioned, going\nto transient and so on."
+    } ]
+  }, {
+    "tStartMs": 992280,
+    "dDurationMs": 2100,
+    "segs": [ {
+      "utf8": "But we'll also be\nlooking at other domains,"
+    } ]
+  }, {
+    "tStartMs": 994380,
+    "dDurationMs": 3780,
+    "segs": [ {
+      "utf8": "radar cross-section, aeroelastics,\nstructural mechanics."
+    } ]
+  }, {
+    "tStartMs": 998160,
+    "dDurationMs": 2100,
+    "segs": [ {
+      "utf8": "And you should ask, \"Well, is\nthis gonna be all one model"
+    } ]
+  }, {
+    "tStartMs": 1000260,
+    "dDurationMs": 1530,
+    "segs": [ {
+      "utf8": "or are these gonna be separate models?\""
+    } ]
+  }, {
+    "tStartMs": 1001790,
+    "dDurationMs": 1110,
+    "segs": [ {
+      "utf8": "Both."
+    } ]
+  }, {
+    "tStartMs": 1002900,
+    "dDurationMs": 1710,
+    "segs": [ {
+      "utf8": "We'll train the best model in class"
+    } ]
+  }, {
+    "tStartMs": 1004610,
+    "dDurationMs": 2250,
+    "segs": [ {
+      "utf8": "and we'll look at what\nhappens when you continue"
+    } ]
+  }, {
+    "tStartMs": 1006860,
+    "dDurationMs": 3660,
+    "segs": [ {
+      "utf8": "to increase the scope of\nthe model for multiphysics."
+    } ]
+  }, {
+    "tStartMs": 1010520,
+    "dDurationMs": 3330,
+    "segs": [ {
+      "utf8": "I think, we're working with our customers"
+    } ]
+  }, {
+    "tStartMs": 1013850,
+    "dDurationMs": 2400,
+    "segs": [ {
+      "utf8": "to understand what are\nthe best models for them,"
+    } ]
+  }, {
+    "tStartMs": 1016250,
+    "dDurationMs": 2460,
+    "segs": [ {
+      "utf8": "and so we'll build both."
+    } ]
+  }, {
+    "tStartMs": 1018710,
+    "dDurationMs": 4050,
+    "segs": [ {
+      "utf8": "I encourage you to visit\nphysicsx.ai to learn more."
+    } ]
+  }, {
+    "tStartMs": 1022760,
+    "dDurationMs": 2643,
+    "segs": [ {
+      "utf8": "We'll be releasing a blog\npost soon about the model."
+    } ]
+  }, {
+    "tStartMs": 1026630,
+    "dDurationMs": 2151,
+    "segs": [ {
+      "utf8": "And I just want to thank\nyou for your time today"
+    } ]
+  }, {
+    "tStartMs": 1028781,
+    "dDurationMs": 1152,
+    "segs": [ {
+      "utf8": "and for listening."
+    } ]
+  } ]
+}

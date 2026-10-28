@@ -1,0 +1,1071 @@
+1
+00:00:03,760 --> 00:00:08,691
+All right, how many people using the tokens this day and complain about I'm out of tokens.
+
+2
+00:00:08,741 --> 00:00:09,950
+Cannot generate image.
+
+3
+00:00:10,000 --> 00:00:12,190
+Cannot generate my stack.
+
+4
+00:00:12,240 --> 00:00:15,275
+How many people also suffering from slow deployment?
+
+5
+00:00:15,325 --> 00:00:20,710
+Get boss, you know, complaining about the revenues delay, all that stuff.
+
+6
+00:00:20,760 --> 00:00:26,150
+Okay, if that's the case, we are talking about MDC, how we can enable how we can solve those problems.
+
+7
+00:00:26,200 --> 00:00:28,470
+Right, so Jensen give two missions.
+
+8
+00:00:28,520 --> 00:00:29,233
+Simple mission, right?
+
+9
+00:00:29,283 --> 00:00:30,088
+How hard can that be?
+
+10
+00:00:30,138 --> 00:00:32,470
+How we can optimize power for token?
+
+11
+00:00:32,520 --> 00:00:40,335
+Right, as we went through this power crisis, this MDC number one, we are simplified and deliver a more efficient power architect.
+
+12
+00:00:40,385 --> 00:00:48,590
+Right, cutting back the cutting out the conversion stages, right, and quickly pushing a more simplified compact power design.
+
+13
+00:00:48,640 --> 00:00:55,830
+And also we are preparing the next generation of the system architect to support the next generation GPUs.
+
+14
+00:00:55,880 --> 00:01:02,790
+And at the same time we try improve the overall efficiency altogether that drives a lower token cost.
+
+15
+00:01:02,840 --> 00:01:05,104
+Secondly, we try to drive the deployment speed.
+
+16
+00:01:05,154 --> 00:01:12,030
+Right, so deployment speed is critical that day one we we embrace AC DC coexistence.
+
+17
+00:01:12,080 --> 00:01:18,430
+Right, so we can have different user, different stage, but you can deliver different adopt different options.
+
+18
+00:01:18,480 --> 00:01:20,750
+And also the footprint can be reduced.
+
+19
+00:01:20,800 --> 00:01:26,561
+Less copper, more integrated system, we can really save the interior space and exterior spaces.
+
+20
+00:01:26,611 --> 00:01:28,190
+And lastly, the modular, right?
+
+21
+00:01:28,240 --> 00:01:32,870
+Everybody talk about modular data centers, this is a driver to make it work.
+
+22
+00:01:32,920 --> 00:01:38,230
+I'll turn over to Jared to talk about roadmap.
+
+23
+00:01:38,280 --> 00:01:42,880
+So, this graph here, hopefully everyone's seen a variant of it.
+
+24
+00:01:42,930 --> 00:01:43,510
+Uh-oh.
+
+25
+00:01:43,560 --> 00:01:44,005
+There we go.
+
+26
+00:01:44,055 --> 00:01:45,771
+Hopefully everyone's seen a variant of this.
+
+27
+00:01:45,821 --> 00:01:50,430
+This is what's ultimately driving the higher power densities over time.
+
+28
+00:01:50,480 --> 00:01:53,908
+Uh so, we essentially have two things that are going on.
+
+29
+00:01:53,958 --> 00:01:57,580
+One is our GPUs, generation over generation, consume more power,
+
+30
+00:01:57,630 --> 00:02:02,430
+but something that's fundamentally different about GPUs is that they get more efficient the more
+
+31
+00:02:02,480 --> 00:02:08,190
+GPUs we can pack in the same space uh because we can network them over copper,
+
+32
+00:02:08,240 --> 00:02:10,950
+which is gives a better TCO.
+
+33
+00:02:11,000 --> 00:02:16,744
+And so over time, we have power increasing, but then we can very rapidly uh increase power, right?
+
+34
+00:02:16,794 --> 00:02:18,830
+It can very rapidly double.
+
+35
+00:02:18,880 --> 00:02:25,336
+And as power engineers, we don't want to be the bottleneck in the um in all of these AI deployments and all these new systems,
+
+36
+00:02:25,386 --> 00:02:32,510
+so we want to get platforms ready so that when uh the chips are are there, they're ready to land.
+
+37
+00:02:32,560 --> 00:02:40,270
+And so for a Gen 1 power rack, we were capable of 145 kW with our 33 kW power shelves.
+
+38
+00:02:40,320 --> 00:02:47,550
+For a Gen 2 power system, we are 330 W capable with our 110 kW power shelves.
+
+39
+00:02:47,600 --> 00:02:54,212
+And for our Gen 3, we've moved to 100 or we are moving 100% liquid-cooled systems.
+
+40
+00:02:54,262 --> 00:02:58,847
+And this uh makes it so if we use our DC-to-DC power shelves,
+
+41
+00:02:58,897 --> 00:03:08,909
+we can support up to 570 kW in a single rack um with both a 54-V liquid-cooled bus bar as well as liquid-cooled power shelves.
+
+42
+00:03:08,959 --> 00:03:11,670
+Now, as those power levels continue to increase,
+
+43
+00:03:11,720 --> 00:03:18,423
+what we're working on now and what we're not ready to show exactly how it will work is the 800-V native racks, right?
+
+44
+00:03:18,473 --> 00:03:21,189
+So that's that's where we're going long-term.
+
+45
+00:03:21,239 --> 00:03:28,630
+And so then we're building these systems and we want to harmonize them with the data center.
+
+46
+00:03:28,680 --> 00:03:36,270
+And so that that's why we're building 800 V is we want we want to both make the rack capable of 1 MW per position,
+
+47
+00:03:36,320 --> 00:03:41,328
+but we also want to make sure that the data center is optimized to what the rack is doing, right?
+
+48
+00:03:41,378 --> 00:03:48,430
+That includes energy storage, that includes um efficient distribution, and a simple distribution end to end.
+
+49
+00:03:48,480 --> 00:03:53,562
+And in order to do that, we we have um uh three different methods.
+
+50
+00:03:53,612 --> 00:03:58,870
+So, looking at AC distribution today, we take AC all the way into the rack.
+
+51
+00:03:58,920 --> 00:04:04,750
+And that's where these yellow blocks that we're showing in the diagram, that's where we're putting capacitors,
+
+52
+00:04:04,800 --> 00:04:12,095
+electrolytic capacitors for load shaping and dealing with the AI workload fluctuations.
+
+53
+00:04:12,145 --> 00:04:16,550
+And so, today that's put into our 110 kW power shelf.
+
+54
+00:04:16,600 --> 00:04:22,202
+Um then as we move to 800 V DC, that moves into our power rack.
+
+55
+00:04:22,252 --> 00:04:26,200
+So, we have capacitors local there for energy storage.
+
+56
+00:04:26,250 --> 00:04:29,833
+Um for option B, that's an end-of-row solution.
+
+57
+00:04:29,883 --> 00:04:34,470
+And option A and option B, we've we've harmonized into a single solution.
+
+58
+00:04:34,520 --> 00:04:43,319
+Um and then for option C is where we move to solid-state transformers, and we really go from the gray space all the way to the rack with 800 V DC.
+
+59
+00:04:43,369 --> 00:04:47,510
+And so, we'll we'll walk through these each of these options.
+
+60
+00:04:47,560 --> 00:04:52,570
+Um So, this is showing uh just DSX today.
+
+61
+00:04:52,620 --> 00:04:57,430
+This is a full super pod with AC input.
+
+62
+00:04:57,480 --> 00:05:00,670
+And then we'll show our power rack.
+
+63
+00:05:00,720 --> 00:05:06,148
+So, this is our 800 V DC MGX power rack, and it takes AC in.
+
+64
+00:05:06,198 --> 00:05:11,002
+It outputs 800 V DC, and then with cross cables in the back,
+
+65
+00:05:11,052 --> 00:05:18,230
+it goes into 800 to 54 V DC to DC power shelf, and then powers the 54 V bus bar.
+
+66
+00:05:18,280 --> 00:05:29,630
+And so, what this will allow us to do is any rack that's 800 V DC capable, it can then land into an AC data center.
+
+67
+00:05:29,680 --> 00:05:41,510
+And so, this is showing an updated pod then with that with that power rack, and taking in AC, but then powering up 800 V racks.
+
+68
+00:05:41,560 --> 00:05:49,510
+And presently we can support a one power rack to four compute rack ratio, but that will adjust depending on the power.
+
+69
+00:05:49,560 --> 00:06:00,133
+Now, for option B, what we've done is we can essentially take that same power rack and integrate it with a remote power panel or a AC PDU.
+
+70
+00:06:00,183 --> 00:06:08,678
+And so then we take in a large AC feed into the top of the rack and we can then power those same DC to or those same AC
+
+71
+00:06:08,728 --> 00:06:18,938
+to 800 V power shelves and then distribute that and treat it just like a remote power panel and power all of the all of the compute racks that way.
+
+72
+00:06:18,988 --> 00:06:29,590
+And so this is this is something that we would use for like a retrofit situation where you want to retrofit an entire row.
+
+73
+00:06:29,640 --> 00:06:38,750
+Now, the connector that we've developed, the 125 amp continuous rated connector is rated for 125 amp continuous globally.
+
+74
+00:06:38,800 --> 00:06:42,310
+And that's uh at 800 V DC.
+
+75
+00:06:42,360 --> 00:06:50,509
+And so we've designed this so that we can basically use it on our power rack and we go from the power rack over to the compute cabinet.
+
+76
+00:06:50,559 --> 00:06:54,190
+But it's also been designed in mind to be used long-term.
+
+77
+00:06:54,240 --> 00:06:56,938
+So when we have 800 V data center,
+
+78
+00:06:56,988 --> 00:07:04,990
+it can be hardwired directly into a tap box as a drop cord and plug directly into the back of our DC to DC power shelf.
+
+79
+00:07:05,040 --> 00:07:14,085
+Now, we're we are moving to the native 800 V racks, but we believe that these DC to DC power shelves and therefore these connectors,
+
+80
+00:07:14,135 --> 00:07:18,590
+they'll be used long-term for storage racks, networking racks.
+
+81
+00:07:18,640 --> 00:07:26,950
+There's going to be all the other components in the data center that will need this long-term.
+
+82
+00:07:27,000 --> 00:07:38,710
+Now, for that connector and for the the drop cord style tap box, we can we're also our goal is to make this as safe as plugging in an EV, right?
+
+83
+00:07:38,760 --> 00:07:49,568
+Everyone or it's it's very common, right, to to plug in EV vehicles today for charging and that's all that's all high voltage, right, 400, 800 volts.
+
+84
+00:07:49,618 --> 00:07:55,491
+And we're putting in the same interlocks and safety mechanisms that are already common in that industry.
+
+85
+00:07:55,541 --> 00:08:02,990
+So, the cord by default is off and then it needs to plug in and have a high voltage interlock to ensure the system is safe.
+
+86
+00:08:03,040 --> 00:08:09,950
+And we're putting in all of those same mechanisms into the cable and into the the power sources.
+
+87
+00:08:10,000 --> 00:08:18,110
+So, the next Mike will talk about option C, which is where we actually move to SST powering racks.
+
+88
+00:08:18,160 --> 00:08:18,529
+Exactly.
+
+89
+00:08:18,559 --> 00:08:19,307
+Thank you, Jared.
+
+90
+00:08:19,357 --> 00:08:19,657
+Right,
+
+91
+00:08:19,667 --> 00:08:24,648
+so Jared talking about what A and B for quick adoption but that adoption and also
+
+92
+00:08:24,698 --> 00:08:28,478
+for retrofit where option C is where we see it's going to be a North Star,
+
+93
+00:08:28,528 --> 00:08:28,880
+right?
+
+94
+00:08:28,910 --> 00:08:30,932
+We try to really accelerate this space.
+
+95
+00:08:30,982 --> 00:08:37,126
+What we show on the screen here is using 34.5 kV as a medium voltage input with RMU loop, right?
+
+96
+00:08:37,176 --> 00:08:39,297
+So, 600 amp is a standard rating.
+
+97
+00:08:39,347 --> 00:08:44,327
+So, that whole loop has 35 35.9 MW of capacity.
+
+98
+00:08:44,377 --> 00:08:48,270
+So, 6 + 1 the N + 1 is what we try to drive here.
+
+99
+00:08:48,320 --> 00:08:53,953
+So, you can see we are deploying 5 MW power block integrate with ESS as one module.
+
+100
+00:08:54,003 --> 00:08:59,870
+And then we have the bottom feed with a auxiliary 5 MW of AC to be reserved.
+
+101
+00:08:59,920 --> 00:09:06,250
+And you can drive the 6 + 1 compute cluster at 30 MW capacity into the data hall.
+
+102
+00:09:06,300 --> 00:09:09,600
+And you have the reserve loop layer to provide a maintenance access.
+
+103
+00:09:09,650 --> 00:09:13,830
+This can also be further enhanced as auto transfer scheme, right?
+
+104
+00:09:13,880 --> 00:09:21,037
+So, you can see this whole block becomes a UPS function with automatic transfer and maintenance access provided.
+
+105
+00:09:21,087 --> 00:09:28,550
+Then straight shot single-ended into the data hall compute cluster to support fast deployment fast interconnection.
+
+106
+00:09:28,600 --> 00:09:31,564
+This day two can be turned into a power container.
+
+107
+00:09:31,614 --> 00:09:40,750
+Right, so we need normal buildings everything can be fully like a parking lot directly plug and play fast deployment parallel to the Okay.
+
+108
+00:09:40,800 --> 00:09:43,311
+construction from the factories to the field.
+
+109
+00:09:43,361 --> 00:09:47,310
+Uh that's how we see the futures look like looking like.
+
+110
+00:09:47,360 --> 00:09:48,270
+So, talking SST, right?
+
+111
+00:09:48,320 --> 00:09:50,070
+This is just a quick visual.
+
+112
+00:09:50,120 --> 00:09:52,620
+Uh we are promoting outdoor solution as we spoke.
+
+113
+00:09:52,670 --> 00:09:54,495
+Uh it's a 5 MV a target.
+
+114
+00:09:54,545 --> 00:09:59,276
+This has been aligned with Google and Microsoft trends as initial target.
+
+115
+00:09:59,326 --> 00:10:07,615
+Uh in the same time, right, the ESS direct intertie will link the DCTC content converter inside the container to drive the performance.
+
+116
+00:10:07,665 --> 00:10:13,750
+Uh and then the catcher could be optional depends on your service uptime and maintenance plan.
+
+117
+00:10:13,800 --> 00:10:20,074
+This one shows exactly how we migrating from AC to DC to be streamlined and then so be more efficient.
+
+118
+00:10:20,124 --> 00:10:27,802
+Right, from the seven-layer AC solution and moving to just a four-layer from the grid to the chip, right, with single power conversion.
+
+119
+00:10:27,852 --> 00:10:33,358
+Uh that's pretty much where we're going to see the whole thing get very very integrated and compact.
+
+120
+00:10:33,408 --> 00:10:35,590
+Um so, it's not just a voltage change, right?
+
+121
+00:10:35,640 --> 00:10:41,364
+It's really drive the simplification, have less conversion stages, and of course smaller footprint.
+
+122
+00:10:41,414 --> 00:10:46,350
+That's why the containerized module design can be supported.
+
+123
+00:10:46,400 --> 00:10:49,794
+This give you a quick overview about how things can get deployed.
+
+124
+00:10:49,844 --> 00:10:52,497
+Right, so we're showing the RMU to the far left,
+
+125
+00:10:52,547 --> 00:10:59,150
+uh where this is the the one of the the the discipline they can design everything on the medium voltage completion.
+
+126
+00:10:59,200 --> 00:11:06,503
+And then you have the space for the ESS and SST with one OEM control scope for quick interconnections.
+
+127
+00:11:06,553 --> 00:11:11,483
+Where the ESS uh can be sized uh based upon the user definition,
+
+128
+00:11:11,533 --> 00:11:18,630
+but of course the power smoothing that'll be a must-have that Jerry will talk about uh in tomorrow's talk in details.
+
+129
+00:11:18,680 --> 00:11:20,595
+Then the power container, like I explained, right?
+
+130
+00:11:20,645 --> 00:11:25,970
+This is where you have the SST medium voltage section coming in with SST to deliver 800 DC,
+
+131
+00:11:26,020 --> 00:11:31,386
+and your DC switchboard will integrate all the power together from the SST output to
+
+132
+00:11:31,436 --> 00:11:38,230
+the catcher's system and an ESS interconnection and an output feeders directly into the building.
+
+133
+00:11:38,280 --> 00:11:40,148
+Inside building have DCRP, right?
+
+134
+00:11:40,198 --> 00:11:41,765
+This where things can get fungible.
+
+135
+00:11:41,815 --> 00:11:45,473
+Depends on your load requirement, you can design different size RPP.
+
+136
+00:11:45,523 --> 00:11:52,350
+And also this DCRP can be different room or adjacent or directly in the same white space as we show.
+
+137
+00:11:52,400 --> 00:11:57,229
+And then the crack units on the side and we are moving towards fully liquid cool solution for the power shelf.
+
+138
+00:11:57,279 --> 00:12:05,990
+So the whole thermal uh re thermal management rejection will be fully lowered than 2% as a target.
+
+139
+00:12:06,040 --> 00:12:07,624
+Then talk about the ESS.
+
+140
+00:12:07,674 --> 00:12:13,990
+Um so I'll talk about key functions and tomorrow Jerry has a during our end-to-end performance review,
+
+141
+00:12:14,040 --> 00:12:18,990
+we can uh showcase exactly what's the key uh driver in performance of that.
+
+142
+00:12:19,040 --> 00:12:22,335
+Um so you can see this uh ESS is bi-directional device, right?
+
+143
+00:12:22,385 --> 00:12:25,983
+It provides uh number one, it's about full right through, right?
+
+144
+00:12:26,033 --> 00:12:33,737
+This is what today best can be done upstream, but it's full right through is more than just connected to the grid under incident or disturbance.
+
+145
+00:12:33,787 --> 00:12:40,830
+It's more important about how you control the IT curve and power quality to meet the compliance to the rack level.
+
+146
+00:12:40,880 --> 00:12:42,773
+And secondly, the backup power time, right?
+
+147
+00:12:42,823 --> 00:12:47,322
+This is where we have friends have BBUs been used a lot to drive that service up time.
+
+148
+00:12:47,372 --> 00:12:48,987
+You can treat as a UPS, right?
+
+149
+00:12:49,037 --> 00:12:51,910
+Where the backup power time can be directly specified.
+
+150
+00:12:51,960 --> 00:12:53,344
+And importantly, power smoothing.
+
+151
+00:12:53,394 --> 00:12:59,443
+We have a parallel talk uh talk about intelligent power smoothing uh where this is where we uh close
+
+152
+00:12:59,493 --> 00:13:07,743
+to design by NVIDIA directly control uh the SOC signal and it directly control the GPU um uh status,
+
+153
+00:13:07,793 --> 00:13:08,179
+right?
+
+154
+00:13:08,209 --> 00:13:14,430
+so it's an active control loop uh to to define and actively tracking the power status.
+
+155
+00:13:14,480 --> 00:13:17,379
+And lastly, importantly is a load averaging function, right?
+
+156
+00:13:17,429 --> 00:13:20,352
+This is very critical because we are driving max IOPs.
+
+157
+00:13:20,402 --> 00:13:25,636
+It's important to use ESS to draw this constant load scenario, right?
+
+158
+00:13:25,686 --> 00:13:31,990
+So number one, your SST is best perform at a fixed percentage, I say 90%, 95%.
+
+159
+00:13:32,040 --> 00:13:37,638
+And secondly, you can utilize your SST much, much higher by subscribing most of the GPUs as you can.
+
+160
+00:13:37,688 --> 00:13:47,190
+Right, so that can be very efficient from the design all the way to the the revenue production using a GPU side.
+
+161
+00:13:47,240 --> 00:13:50,726
+Then most importantly, last part is about the microgrid, right?
+
+162
+00:13:50,776 --> 00:13:57,205
+So as as we design this new architecture, you can start understanding the power container is not just a rectifier.
+
+163
+00:13:57,255 --> 00:14:00,950
+This is where you can really find all the sources tied together,
+
+164
+00:14:01,000 --> 00:14:07,385
+which today is a 5-MW target, and tomorrow is going to be 10 MW and scalable using SST.
+
+165
+00:14:07,435 --> 00:14:11,120
+Right, so starting from utility power to the on-prem generation,
+
+166
+00:14:11,170 --> 00:14:14,910
+all the way to different renewable energy can tie into to drive
+
+167
+00:14:14,960 --> 00:14:21,710
+the optimal uh powers uh sourcing strategy to support environmental and sustainability,
+
+168
+00:14:21,760 --> 00:14:24,590
+and finally, the ESS can be integrated.
+
+169
+00:14:24,640 --> 00:14:32,207
+Right, and this also directly reading exactly what's the current data center uh load requirement from compute, cooling to networking.
+
+170
+00:14:32,257 --> 00:14:35,699
+Right, and then we can we can start training our AI, right?
+
+171
+00:14:35,749 --> 00:14:47,190
+So you can bring back the tokens, and then feed uh support operation by using this smart intelligent uh controller system as a long-term vision.
+
+172
+00:14:47,240 --> 00:14:48,710
+And here's the current road map, right?
+
+173
+00:14:48,760 --> 00:14:56,704
+As Charles uh spoke about, we have our current uh power rack sidecar design completed and ready to roll out to be used.
+
+174
+00:14:56,754 --> 00:15:02,591
+Uh very quickly, Q2 next year, uh we have the power center, the end-to-end solution, right?
+
+175
+00:15:02,641 --> 00:15:08,910
+To support retrofit or even colos to be fungible targeting at a pod level solution.
+
+176
+00:15:08,960 --> 00:15:14,756
+And then the lastly will be the SST transform rectifiers, where we are targeting Q1 20A, right?
+
+177
+00:15:14,806 --> 00:15:18,750
+For the ecosystem to have the full solution ready for deployment.
+
+178
+00:15:18,800 --> 00:15:20,750
+Um and if you look at a journey, right?
+
+179
+00:15:20,800 --> 00:15:24,630
+This is not just like, okay, we get solution done and we we call it a day.
+
+180
+00:15:24,680 --> 00:15:26,977
+It's important to care about grounding protection.
+
+181
+00:15:27,027 --> 00:15:31,550
+We have a separate talk tomorrow with my Microsoft friend Shenyong to discuss exactly
+
+182
+00:15:31,600 --> 00:15:36,910
+how the protection should be planned from the operator side or the asset owner side.
+
+183
+00:15:36,960 --> 00:15:39,019
+Uh then we talk about certification, right?
+
+184
+00:15:39,069 --> 00:15:46,254
+There are lots of things on the SST side, on the SSCB breaker side, all the way to current limiting device, right?
+
+185
+00:15:46,304 --> 00:15:48,008
+Can be certified and proved.
+
+186
+00:15:48,058 --> 00:15:49,444
+Um that's very critical, right?
+
+187
+00:15:49,494 --> 00:15:52,240
+To make sure all from end to end is fully covered.
+
+188
+00:15:52,290 --> 00:15:56,004
+And of course, at the same time, we talk about breakers, right?
+
+189
+00:15:56,054 --> 00:15:59,550
+Um based upon a coordination plan, based upon the full current strategy,
+
+190
+00:15:59,600 --> 00:16:04,870
+the end-to-end system, what's the best solution to select the right protection device.
+
+191
+00:16:04,920 --> 00:16:08,824
+Um then we talk about connection whips that Jerry directly opened up the spec to
+
+192
+00:16:08,874 --> 00:16:15,239
+make sure we're driving this very safe design uh utilizing the EV whips technology with interlock.
+
+193
+00:16:15,289 --> 00:16:19,923
+And finally, it's this high-density power conversion where we start from today's 5 MW,
+
+194
+00:16:19,973 --> 00:16:27,310
+and shooting for 10 MW for day two and in Britain's uh um microgrid design.
+
+195
+00:16:27,360 --> 00:16:28,773
+Here's the last slide, right?
+
+196
+00:16:28,823 --> 00:16:30,607
+So, like I said, it's a journey.
+
+197
+00:16:30,657 --> 00:16:31,550
+It's a roadmap.
+
+198
+00:16:31,600 --> 00:16:31,900
+Right?
+
+199
+00:16:31,880 --> 00:16:34,246
+We're driving very quickly on the engineering side, right?
+
+200
+00:16:34,296 --> 00:16:41,155
+So, as you know, we're starting from the concept to the architecture, and now we'll define exactly the key components that's required.
+
+201
+00:16:41,205 --> 00:16:43,813
+Jerry set out the simulation requirement, right?
+
+202
+00:16:43,863 --> 00:16:44,163
+So,
+
+203
+00:16:44,043 --> 00:16:48,788
+we know on the simulation side how things can be compatible with NVIDIA compute and
+
+204
+00:16:48,838 --> 00:16:54,243
+how we drive the system stability and the the overall right uh simulation uh targets,
+
+205
+00:16:54,293 --> 00:16:54,720
+right?
+
+206
+00:16:54,770 --> 00:16:56,150
+To set the criteria.
+
+207
+00:16:56,200 --> 00:17:00,372
+Then, moving forward, we're going to get into the prototyping phase, right?
+
+208
+00:17:00,422 --> 00:17:06,299
+To make sure the system can be validated not just from simulation, but set up from the small scale,
+
+209
+00:17:06,349 --> 00:17:12,315
+maybe one cell, one one one one power shelf, all the way to a large POC being set up.
+
+210
+00:17:12,365 --> 00:17:21,950
+So, everybody from the customer side, from the regulatory side, and then from our team maker side, can all jointly validate the system outcome.
+
+211
+00:17:22,000 --> 00:17:26,269
+Then regulatory will help with compliance and validation.
+
+212
+00:17:26,319 --> 00:17:30,830
+And we'll be ready for production readiness, for mass production, and for final deployment.
+
+213
+00:17:30,880 --> 00:17:33,355
+And like I said, this is the current option C.
+
+214
+00:17:33,405 --> 00:17:39,230
+We are moving fast on this one, and like to invite the industry owners to join this journey.
+
+215
+00:17:39,280 --> 00:17:41,376
+That's our presentation.
+
+216
+00:17:41,426 --> 00:17:42,750
+Thank you guys.
+
+217
+00:17:42,800 --> 00:17:45,430
+Thank you.
+
+218
+00:17:45,480 --> 00:17:47,052
+Questions for our presenters.
+
+219
+00:17:47,102 --> 00:17:55,830
+Please line up at the mic.
+
+220
+00:17:55,880 --> 00:17:59,489
+Hey, I'm Sylvia from TE Connectivity.
+
+221
+00:17:59,539 --> 00:18:01,585
+I have three questions.
+
+222
+00:18:01,635 --> 00:18:08,482
+One, will the 1500 V DC distribution become mainstream in data center?
+
+223
+00:18:08,532 --> 00:18:12,830
+And if so, what will be the expected timeline?
+
+224
+00:18:12,880 --> 00:18:23,870
+Second question for the SST, and solid state circuit breaker, do you think when will they expect it become mainstream in terms of timeline?
+
+225
+00:18:23,920 --> 00:18:31,710
+And then the third is the for the CDU roadmap, do you see what is the next generation 5 megawatt unit will come?
+
+226
+00:18:31,760 --> 00:18:32,790
+Yeah, three questions.
+
+227
+00:18:32,840 --> 00:18:33,720
+Yeah, quickly.
+
+228
+00:18:33,770 --> 00:18:37,691
+1500 Let's do one question so that others can also Okay, I'll do it very quickly.
+
+229
+00:18:37,741 --> 00:18:39,801
+1500 V DC is not not in the current roadmap.
+
+230
+00:18:39,851 --> 00:18:41,950
+I'm not sure which data center do 1500 V DC.
+
+231
+00:18:42,000 --> 00:18:43,084
+I'd like to hear about it.
+
+232
+00:18:43,134 --> 00:18:45,925
+800 V DC has been set because our target is for compute 800 V.
+
+233
+00:18:45,975 --> 00:18:49,045
+And we're trying to be streamlined for the efficiency.
+
+234
+00:18:49,095 --> 00:18:49,450
+Okay?
+
+235
+00:18:49,480 --> 00:18:51,280
+And I forgot what's your second one.
+
+236
+00:18:51,330 --> 00:18:54,350
+Is SST the SST and solid state circuit breaker.
+
+237
+00:18:54,400 --> 00:18:55,224
+Yeah, SSTB.
+
+238
+00:18:55,274 --> 00:18:56,390
+Yeah, go ahead.
+
+239
+00:18:56,440 --> 00:18:58,950
+Uh I I just wanted to say for 1500 V,
+
+240
+00:18:59,000 --> 00:19:06,846
+the the bottleneck is actually the PDB on the compute tray when we go from 800 V direct to a 12 V, right, in the compute tray.
+
+241
+00:19:06,896 --> 00:19:14,624
+And so if there are any technologies, right, that can give higher density conversion 1500 V direct to 12 in the compute tray.
+
+242
+00:19:14,674 --> 00:19:17,369
+We're interested, but that's that's the challenge, right?
+
+243
+00:19:17,419 --> 00:19:25,030
+Is we're trying to take the the distribution all the way to the compute tray, and that becomes very difficult at 1500 V.
+
+244
+00:19:25,080 --> 00:19:27,990
+Yeah, SSTB depends on size, 125 amp.
+
+245
+00:19:28,040 --> 00:19:30,599
+I think it's getting very available very fast.
+
+246
+00:19:30,649 --> 00:19:32,640
+We just need certification to be ready.
+
+247
+00:19:32,690 --> 00:19:35,584
+Right, in the CDU, we are promoting 500 DC.
+
+248
+00:19:35,634 --> 00:19:37,070
+It should be 800 DC.
+
+249
+00:19:37,120 --> 00:19:37,747
+It has VFD.
+
+250
+00:19:37,797 --> 00:19:40,714
+It's better to be DC input to drive the efficiency up.
+
+251
+00:19:40,764 --> 00:19:41,950
+Okay, you can go to next.
+
+252
+00:19:42,000 --> 00:19:43,190
+All right.
+
+253
+00:19:43,240 --> 00:19:45,067
+Great presentation, Mike and Jarred.
+
+254
+00:19:45,117 --> 00:19:54,948
+Can you please come on comment on what uh standards and codes the industry should drive together in order to make this vision into a reality?
+
+255
+00:19:54,998 --> 00:19:55,630
+Thank you.
+
+256
+00:19:55,680 --> 00:20:00,945
+Yeah, yeah, I think you mentioned SST, UL 2877, right, is the current placeholder.
+
+257
+00:20:00,995 --> 00:20:06,768
+We'd like to hear from all the industry partners, such as a lot to tell us where's the gap, right?
+
+258
+00:20:06,818 --> 00:20:13,804
+And secondly, SSCB, right, also UL 91, be specific, has to help to make sure this can be certified.
+
+259
+00:20:13,854 --> 00:20:19,422
+And I mentioned about current limited approach, right, to make sure that the converter approach,
+
+260
+00:20:19,472 --> 00:20:28,030
+DC-DC converter, as well as galvanic isolation, can be approved as a source limiting methods.
+
+261
+00:20:28,080 --> 00:20:30,636
+Hi, this is Pranesh from Ampsys.
+
+262
+00:20:30,686 --> 00:20:33,710
+Mike, Sorry, we are like at time.
+
+263
+00:20:33,760 --> 00:20:34,917
+Um Quick one.
+
+264
+00:20:34,967 --> 00:20:36,190
+Very quick.
+
+265
+00:20:36,240 --> 00:20:41,310
+I'm sorry, like I have to follow the process like a way but you are free to I will catch up with you later.
+
+266
+00:20:41,360 --> 00:20:43,552
+We have about like two two to three minutes.
+
+267
+00:20:43,602 --> 00:20:45,762
+So, you can follow up with the presenters.
+
+268
+00:20:45,812 --> 00:20:49,360
+So, let's thank our presenters.

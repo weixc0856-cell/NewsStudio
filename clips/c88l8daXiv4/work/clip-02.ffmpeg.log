@@ -1,0 +1,169 @@
+$ ffmpeg -hide_banner -y -ss 944.175 -i E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv -t 215.880 -map 0:v:0 -map 0:a:0 -map_chapters -1 -vf ass=clips/c88l8daXiv4/work/clip-02.ass -c:v h264_qsv -global_quality:v 19 -preset slow -c:a aac -b:a 160k -sn -dn -movflags +faststart -avoid_negative_ts make_zero E:\YouTube-B\clips\c88l8daXiv4\work\clip-02.tmp.mp4
+
+--- stdout ---
+
+--- stderr ---
+Input #0, matroska,webm, from 'E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv':
+  Metadata:
+    title           : Dylan Patel (SemiAnalysis): The Datacenter in 2026: CPUs, RL Environments & Agent-Driven Workloads
+    GENRE           : Education
+    DATE            : 20260407
+    DESCRIPTION     : Dylan Patel (SemiAnalysis) & Ivan Burazin (Daytona)
+                    : Live from Daytona Compute Conference, Chase Center SF, March 9, 2026
+                    : 
+                    : As AI systems move beyond static inference into reinforcement learning and autonomous execution, datacenter architecture is entering a new phase. Training loops require massive parallel CPU environments, agents need persistent execution layers, and verifi
+    SYNOPSIS        : Dylan Patel (SemiAnalysis) & Ivan Burazin (Daytona)
+                    : Live from Daytona Compute Conference, Chase Center SF, March 9, 2026
+                    : 
+                    : As AI systems move beyond static inference into reinforcement learning and autonomous execution, datacenter architecture is entering a new phase. Training loops require massive parallel CPU environments, agents need persistent execution layers, and verifi
+    PURL            : https://www.youtube.com/watch?v=c88l8daXiv4
+    COMMENT         : https://www.youtube.com/watch?v=c88l8daXiv4
+    ARTIST          : Daytona, SemiAnalysis
+    ENCODER         : Lavf62.12.100
+  Duration: 00:25:04.06, start: 0.000000, bitrate: 2141 kb/s
+  Chapters:
+    Chapter #0:0: start 0.000000, end 286.000000
+      Metadata:
+        title           : The role of Neoclouds
+    Chapter #0:1: start 286.000000, end 515.000000
+      Metadata:
+        title           : CPUs as the new bottleneck
+    Chapter #0:2: start 515.000000, end 729.000000
+      Metadata:
+        title           : The impact of agentic workloads
+    Chapter #0:3: start 729.000000, end 922.000000
+      Metadata:
+        title           : Dynamics of the CPU market
+    Chapter #0:4: start 922.000000, end 1216.000000
+      Metadata:
+        title           : RL loops and compute pressure
+    Chapter #0:5: start 1216.000000, end 1504.000000
+      Metadata:
+        title           : Supply chains and chip scarcity
+  Stream #0:0(eng): Video: vp9 (Profile 0), yuv420p(tv, bt709), 1920x1080, SAR 1:1 DAR 16:9, 59.94 fps, 59.94 tbr, 1k tbn (default)
+    Metadata:
+      DURATION        : 00:25:04.019000000
+  Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)
+    Metadata:
+      DURATION        : 00:25:04.061000000
+[Parsed_ass_0 @ 00000233fe35ab40] libass API version: 0x1704000
+[Parsed_ass_0 @ 00000233fe35ab40] libass source: commit: 0.17.4-21-gfadc390583f24eb5cf98f16925fd3adee50bca88
+[Parsed_ass_0 @ 00000233fe35ab40] Shaper: FriBidi 1.0.16 (SIMPLE) HarfBuzz-ng 13.1.1 (COMPLEX)
+[Parsed_ass_0 @ 00000233fe35ab40] Using font provider directwrite (with GDI)
+[Parsed_ass_0 @ 00000233fe35ab40] Added subtitle file: 'clips/c88l8daXiv4/work/clip-02.ass' (2 styles, 50 events)
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (h264_qsv))
+  Stream #0:1 -> #0:1 (opus (native) -> aac (native))
+Press [q] to stop, [?] for help
+[Parsed_ass_0 @ 00000233feaf6d80] libass API version: 0x1704000
+[Parsed_ass_0 @ 00000233feaf6d80] libass source: commit: 0.17.4-21-gfadc390583f24eb5cf98f16925fd3adee50bca88
+[Parsed_ass_0 @ 00000233feaf6d80] Shaper: FriBidi 1.0.16 (SIMPLE) HarfBuzz-ng 13.1.1 (COMPLEX)
+[Parsed_ass_0 @ 00000233feaf6d80] Using font provider directwrite (with GDI)
+[Parsed_ass_0 @ 00000233feaf6d80] Added subtitle file: 'clips/c88l8daXiv4/work/clip-02.ass' (2 styles, 50 events)
+[Parsed_ass_0 @ 00000233feaf6d80] fontselect: (Microsoft YaHei, 400, 0) -> MicrosoftYaHei, 0, MicrosoftYaHei
+Output #0, mp4, to 'E:\YouTube-B\clips\c88l8daXiv4\work\clip-02.tmp.mp4':
+  Metadata:
+    title           : Dylan Patel (SemiAnalysis): The Datacenter in 2026: CPUs, RL Environments & Agent-Driven Workloads
+    GENRE           : Education
+    DATE            : 20260407
+    DESCRIPTION     : Dylan Patel (SemiAnalysis) & Ivan Burazin (Daytona)
+                    : Live from Daytona Compute Conference, Chase Center SF, March 9, 2026
+                    : 
+                    : As AI systems move beyond static inference into reinforcement learning and autonomous execution, datacenter architecture is entering a new phase. Training loops require massive parallel CPU environments, agents need persistent execution layers, and verifi
+    SYNOPSIS        : Dylan Patel (SemiAnalysis) & Ivan Burazin (Daytona)
+                    : Live from Daytona Compute Conference, Chase Center SF, March 9, 2026
+                    : 
+                    : As AI systems move beyond static inference into reinforcement learning and autonomous execution, datacenter architecture is entering a new phase. Training loops require massive parallel CPU environments, agents need persistent execution layers, and verifi
+    PURL            : https://www.youtube.com/watch?v=c88l8daXiv4
+    COMMENT         : https://www.youtube.com/watch?v=c88l8daXiv4
+    ARTIST          : Daytona, SemiAnalysis
+    encoder         : Lavf62.12.100
+  Stream #0:0(eng): Video: h264 (avc1 / 0x31637661), nv12(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 59.94 fps, 19001 tbn (default)
+    Metadata:
+      encoder         : Lavc62.28.100 h264_qsv
+      DURATION        : 00:25:04.019000000
+    Side data:
+      CPB properties: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 160 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.28.100 aac
+      DURATION        : 00:25:04.061000000
+frame=  117 fps=115 q=25.0 size=    1024KiB time=00:00:01.90 bitrate=4410.8kbits/s speed=1.86x elapsed=0:00:01.02    
+frame=  371 fps=241 q=24.0 size=    3584KiB time=00:00:06.13 bitrate=4782.3kbits/s speed=3.99x elapsed=0:00:01.53    
+frame=  618 fps=301 q=20.0 size=    6656KiB time=00:00:10.26 bitrate=5314.3kbits/s speed=   5x elapsed=0:00:02.05    
+frame=  839 fps=327 q=23.0 size=    9728KiB time=00:00:13.94 bitrate=5713.8kbits/s speed=5.43x elapsed=0:00:02.56    
+frame= 1068 fps=346 q=27.0 size=   12800KiB time=00:00:17.76 bitrate=5901.6kbits/s speed=5.76x elapsed=0:00:03.08    
+frame= 1234 fps=343 q=20.0 size=   14336KiB time=00:00:20.53 bitrate=5718.5kbits/s speed= 5.7x elapsed=0:00:03.60    
+frame= 1379 fps=335 q=22.0 size=   16128KiB time=00:00:22.95 bitrate=5755.3kbits/s speed=5.58x elapsed=0:00:04.11    
+frame= 1524 fps=329 q=27.0 size=   17408KiB time=00:00:25.37 bitrate=5619.9kbits/s speed=5.48x elapsed=0:00:04.63    
+frame= 1704 fps=331 q=27.0 size=   18688KiB time=00:00:28.37 bitrate=5394.7kbits/s speed=5.51x elapsed=0:00:05.14    
+frame= 1907 fps=337 q=23.0 size=   20480KiB time=00:00:31.76 bitrate=5281.7kbits/s speed=5.61x elapsed=0:00:05.66    
+frame= 2086 fps=338 q=20.0 size=   22272KiB time=00:00:34.75 bitrate=5250.2kbits/s speed=5.63x elapsed=0:00:06.17    
+frame= 2288 fps=342 q=27.0 size=   24320KiB time=00:00:38.12 bitrate=5226.2kbits/s speed= 5.7x elapsed=0:00:06.69    
+frame= 2473 fps=343 q=24.0 size=   26624KiB time=00:00:41.20 bitrate=5292.8kbits/s speed=5.72x elapsed=0:00:07.20    
+frame= 2645 fps=342 q=24.0 size=   28672KiB time=00:00:44.07 bitrate=5328.8kbits/s speed=5.71x elapsed=0:00:07.72    
+frame= 2811 fps=341 q=23.0 size=   30464KiB time=00:00:46.84 bitrate=5327.2kbits/s speed=5.69x elapsed=0:00:08.23    
+frame= 2966 fps=339 q=20.0 size=   32256KiB time=00:00:49.43 bitrate=5345.5kbits/s speed=5.65x elapsed=0:00:08.75    
+frame= 3109 fps=335 q=24.0 size=   33792KiB time=00:00:51.81 bitrate=5342.2kbits/s speed=5.59x elapsed=0:00:09.27    
+frame= 3283 fps=335 q=23.0 size=   35584KiB time=00:00:54.72 bitrate=5327.1kbits/s speed=5.59x elapsed=0:00:09.78    
+frame= 3471 fps=337 q=23.0 size=   37376KiB time=00:00:57.85 bitrate=5292.0kbits/s speed=5.62x elapsed=0:00:10.30    
+frame= 3638 fps=336 q=20.0 size=   38912KiB time=00:01:00.64 bitrate=5256.4kbits/s speed=5.61x elapsed=0:00:10.81    
+frame= 3814 fps=337 q=20.0 size=   40448KiB time=00:01:03.58 bitrate=5211.5kbits/s speed=5.61x elapsed=0:00:11.33    
+frame= 3988 fps=337 q=27.0 size=   42752KiB time=00:01:06.48 bitrate=5267.9kbits/s speed=5.61x elapsed=0:00:11.84    
+frame= 4160 fps=336 q=27.0 size=   44544KiB time=00:01:09.35 bitrate=5261.6kbits/s speed=5.61x elapsed=0:00:12.36    
+frame= 4339 fps=337 q=23.0 size=   46336KiB time=00:01:12.33 bitrate=5247.3kbits/s speed=5.62x elapsed=0:00:12.88    
+frame= 4558 fps=340 q=20.0 size=   49152KiB time=00:01:15.99 bitrate=5298.6kbits/s speed=5.67x elapsed=0:00:13.39    
+frame= 4717 fps=339 q=24.0 size=   51712KiB time=00:01:18.64 bitrate=5386.5kbits/s speed=5.65x elapsed=0:00:13.91    
+frame= 4870 fps=338 q=20.0 size=   53760KiB time=00:01:21.19 bitrate=5423.8kbits/s speed=5.63x elapsed=0:00:14.42    
+frame= 5021 fps=336 q=25.0 size=   55552KiB time=00:01:23.71 bitrate=5436.0kbits/s speed= 5.6x elapsed=0:00:14.94    
+frame= 5160 fps=334 q=27.0 size=   57600KiB time=00:01:26.03 bitrate=5484.4kbits/s speed=5.57x elapsed=0:00:15.45    
+frame= 5314 fps=333 q=20.0 size=   59392KiB time=00:01:28.60 bitrate=5491.1kbits/s speed=5.55x elapsed=0:00:15.97    
+frame= 5508 fps=334 q=26.0 size=   60928KiB time=00:01:31.84 bitrate=5434.6kbits/s speed=5.57x elapsed=0:00:16.48    
+frame= 5690 fps=335 q=20.0 size=   61952KiB time=00:01:34.87 bitrate=5349.1kbits/s speed=5.58x elapsed=0:00:17.00    
+frame= 5902 fps=337 q=21.0 size=   63744KiB time=00:01:38.41 bitrate=5306.0kbits/s speed=5.62x elapsed=0:00:17.52    
+frame= 6085 fps=337 q=25.0 size=   65024KiB time=00:01:41.46 bitrate=5249.7kbits/s speed=5.63x elapsed=0:00:18.03    
+frame= 6308 fps=340 q=27.0 size=   66816KiB time=00:01:45.18 bitrate=5203.6kbits/s speed=5.67x elapsed=0:00:18.55    
+frame= 6434 fps=337 q=21.0 size=   67840KiB time=00:01:47.29 bitrate=5179.8kbits/s speed=5.63x elapsed=0:00:19.06    
+frame= 6569 fps=335 q=25.0 size=   69120KiB time=00:01:49.54 bitrate=5169.0kbits/s speed=5.59x elapsed=0:00:19.58    
+frame= 6696 fps=333 q=27.0 size=   70144KiB time=00:01:51.66 bitrate=5146.1kbits/s speed=5.56x elapsed=0:00:20.09    
+frame= 6842 fps=332 q=20.0 size=   71424KiB time=00:01:54.09 bitrate=5128.1kbits/s speed=5.53x elapsed=0:00:20.61    
+frame= 7065 fps=334 q=25.0 size=   72704KiB time=00:01:57.81 bitrate=5055.2kbits/s speed=5.58x elapsed=0:00:21.13    
+frame= 7286 fps=337 q=20.0 size=   73984KiB time=00:02:01.50 bitrate=4988.1kbits/s speed=5.61x elapsed=0:00:21.64    
+frame= 7501 fps=338 q=24.0 size=   75776KiB time=00:02:05.09 bitrate=4962.4kbits/s speed=5.64x elapsed=0:00:22.16    
+frame= 7655 fps=338 q=24.0 size=   76800KiB time=00:02:07.66 bitrate=4928.3kbits/s speed=5.63x elapsed=0:00:22.67    
+frame= 7824 fps=337 q=27.0 size=   78336KiB time=00:02:10.48 bitrate=4918.2kbits/s speed=5.63x elapsed=0:00:23.19    
+frame= 8072 fps=340 q=27.0 size=   80128KiB time=00:02:14.61 bitrate=4876.1kbits/s speed=5.68x elapsed=0:00:23.70    
+frame= 8294 fps=342 q=20.0 size=   82432KiB time=00:02:18.32 bitrate=4882.0kbits/s speed=5.71x elapsed=0:00:24.22    
+frame= 8462 fps=342 q=20.0 size=   83968KiB time=00:02:21.12 bitrate=4874.2kbits/s speed= 5.7x elapsed=0:00:24.74    
+frame= 8593 fps=340 q=24.0 size=   84992KiB time=00:02:23.30 bitrate=4858.4kbits/s speed=5.67x elapsed=0:00:25.25    
+frame= 8704 fps=338 q=27.0 size=   86272KiB time=00:02:25.16 bitrate=4868.6kbits/s speed=5.63x elapsed=0:00:25.77    
+frame= 8825 fps=336 q=25.0 size=   87808KiB time=00:02:27.18 bitrate=4887.4kbits/s speed= 5.6x elapsed=0:00:26.28    
+frame= 8953 fps=334 q=24.0 size=   89344KiB time=00:02:29.31 bitrate=4901.7kbits/s speed=5.57x elapsed=0:00:26.80    
+frame= 9095 fps=333 q=24.0 size=   91136KiB time=00:02:31.68 bitrate=4922.0kbits/s speed=5.55x elapsed=0:00:27.31    
+frame= 9247 fps=332 q=23.0 size=   93184KiB time=00:02:34.22 bitrate=4949.8kbits/s speed=5.54x elapsed=0:00:27.83    
+frame= 9498 fps=335 q=20.0 size=   95744KiB time=00:02:38.40 bitrate=4951.4kbits/s speed=5.59x elapsed=0:00:28.34    
+frame= 9683 fps=335 q=22.0 size=   98304KiB time=00:02:41.49 bitrate=4986.6kbits/s speed=5.59x elapsed=0:00:28.86    
+frame= 9868 fps=336 q=27.0 size=   99584KiB time=00:02:44.58 bitrate=4956.8kbits/s speed= 5.6x elapsed=0:00:29.38    
+frame=10046 fps=336 q=20.0 size=  100864KiB time=00:02:47.55 bitrate=4931.5kbits/s speed= 5.6x elapsed=0:00:29.89    
+frame=10211 fps=336 q=22.0 size=  102144KiB time=00:02:50.30 bitrate=4913.4kbits/s speed= 5.6x elapsed=0:00:30.41    
+frame=10398 fps=336 q=20.0 size=  103936KiB time=00:02:53.42 bitrate=4909.6kbits/s speed=5.61x elapsed=0:00:30.92    
+frame=10579 fps=336 q=23.0 size=  105728KiB time=00:02:56.44 bitrate=4908.8kbits/s speed=5.61x elapsed=0:00:31.44    
+frame=10706 fps=335 q=20.0 size=  106496KiB time=00:02:58.56 bitrate=4885.8kbits/s speed=5.59x elapsed=0:00:31.95    
+frame=10853 fps=334 q=24.0 size=  107776KiB time=00:03:01.01 bitrate=4877.5kbits/s speed=5.57x elapsed=0:00:32.47    
+frame=10993 fps=333 q=24.0 size=  108800KiB time=00:03:03.34 bitrate=4861.1kbits/s speed=5.56x elapsed=0:00:32.99    
+frame=11189 fps=334 q=24.0 size=  110336KiB time=00:03:06.61 bitrate=4843.4kbits/s speed=5.57x elapsed=0:00:33.50    
+frame=11368 fps=334 q=26.0 size=  111872KiB time=00:03:09.60 bitrate=4833.5kbits/s speed=5.57x elapsed=0:00:34.02    
+frame=11584 fps=335 q=27.0 size=  113664KiB time=00:03:13.20 bitrate=4819.3kbits/s speed=5.59x elapsed=0:00:34.53    
+frame=11731 fps=335 q=23.0 size=  114688KiB time=00:03:15.66 bitrate=4801.8kbits/s speed=5.58x elapsed=0:00:35.05    
+frame=11890 fps=334 q=20.0 size=  115968KiB time=00:03:18.31 bitrate=4790.4kbits/s speed=5.58x elapsed=0:00:35.56    
+frame=12044 fps=334 q=26.0 size=  117504KiB time=00:03:20.88 bitrate=4791.8kbits/s speed=5.57x elapsed=0:00:36.08    
+frame=12275 fps=335 q=24.0 size=  119296KiB time=00:03:24.73 bitrate=4773.3kbits/s speed=5.59x elapsed=0:00:36.60    
+frame=12469 fps=336 q=25.0 size=  120832KiB time=00:03:27.97 bitrate=4759.5kbits/s speed= 5.6x elapsed=0:00:37.11    
+frame=12639 fps=336 q=23.0 size=  122624KiB time=00:03:30.81 bitrate=4765.1kbits/s speed= 5.6x elapsed=0:00:37.63    
+frame=12844 fps=337 q=27.0 size=  124928KiB time=00:03:34.23 bitrate=4777.1kbits/s speed=5.62x elapsed=0:00:38.14    
+[mp4 @ 00000233fe355980] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 00000233fe3544c0] video:121994KiB audio:4227KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.279108%
+frame=12940 fps=337 q=27.0 Lsize=  126573KiB time=00:03:35.83 bitrate=4804.1kbits/s speed=5.62x elapsed=0:00:38.39    
+[aac @ 00000233feb194c0] Qavg: 920.443
+
+--- exit 0 ---

@@ -1,0 +1,949 @@
+1
+00:00:01,380 --> 00:00:07,140
+My name is James Leahy, and I'm a principal research scientist at PhysicsX and a mathematician.
+我叫詹姆斯·莱希，是 PhysicsX 的首席研究科学家，也是一名数学家。
+
+2
+00:00:07,140 --> 00:00:14,670
+I'm here to tell you about how we're building foundation models for physics and specifically aerodynamics in this case and automotive aerodynamics.
+我今天要跟大家讲讲我们是如何构建物理领域的基础模型，特别是汽车空气动力学方面的模型。
+
+3
+00:00:14,670 --> 00:00:18,750
+And we're gonna talk, I'm gonna show you some scaling loss that we're seeing.
+我们将展示一些正在观察到的缩放损失现象。
+
+4
+00:00:18,750 --> 00:00:20,190
+More data, better models.
+数据越多，模型越好。
+
+5
+00:00:20,190 --> 00:00:23,190
+It's kind of obvious when you see this happening in language and video.
+当你在语言和视频领域看到这种情况时，这其实显而易见。
+
+6
+00:00:23,190 --> 00:00:29,820
+But for engineering and physics, this is very far from a trivial problem and it's an ongoing effort.
+但在工程和物理领域，这远非一个简单问题，而是一个持续进行的努力。
+
+7
+00:00:29,820 --> 00:00:32,523
+And we'll see some early results today.
+今天我们将看到一些初步成果。
+
+8
+00:00:34,320 --> 00:00:36,240
+Here's what we're gonna cover.
+这是我们今天要涵盖的内容。
+
+9
+00:00:36,240 --> 00:00:39,600
+First, I'm gonna give you a quick introduction to who PhysicsX is.
+首先，我将快速介绍一下 PhysicsX 是谁。
+
+10
+00:00:39,600 --> 00:00:44,433
+Then I'll explain how pre-trained models are the next frontier for physics AI.
+然后我会解释预训练模型是物理 AI 的下一个前沿。
+
+11
+00:00:45,300 --> 00:00:51,270
+I'll talk about our new pre-trained model for automotive aerodynamics, and then I'll show you some scaling laws.
+我会介绍我们最新推出的汽车空气动力学预训练模型，然后向大家展示一些缩放定律。
+
+12
+00:00:51,270 --> 00:00:57,040
+We'll look at how AWS infrastructure is making this possible and then I'll close with where we're heading next.
+我们将探讨 AWS 基础设施如何使这一切成为可能，最后我会谈谈我们接下来的发展方向。
+
+13
+00:00:59,130 --> 00:01:01,363
+So let's start with who PhysicsX is.
+那么，我们先来了解一下 PhysicsX 是谁。
+
+14
+00:01:02,309 --> 00:01:07,530
+PhysicsX is an AI company and we're focused on industrial applications.
+PhysicsX 是一家人工智能公司，我们专注于工业应用。
+
+15
+00:01:07,530 --> 00:01:12,960
+Our mission is simple, build and deploy AI to accelerate industrial innovation.
+我们的使命很简单，就是构建并部署人工智能，以加速工业创新。
+
+16
+00:01:12,960 --> 00:01:17,400
+We've raised over $155 million in series B funding.
+我们已获得超过 1.55 亿美元的 B 轮融资。
+
+17
+00:01:17,400 --> 00:01:24,750
+We have over 200 engineers, a mix of AI researchers, simulation engineers, and software engineers.
+我们拥有超过 200 名工程师，包括人工智能研究员、仿真工程师和软件工程师。
+
+18
+00:01:24,750 --> 00:01:29,250
+I think, crucially, it's important to understand that we're not just a research organization.
+我认为，至关重要的是，必须明白我们不仅仅是一个研究机构。
+
+19
+00:01:29,250 --> 00:01:35,730
+We work directly with our customers to build the things that are usable and used.
+我们直接与客户合作，打造真正可用且被使用的产品。
+
+20
+00:01:35,730 --> 00:01:40,170
+We partner with leading players across aerospace and defense,
+我们与航空航天和国防领域的领先企业合作。
+
+21
+00:01:40,170 --> 00:01:46,083
+semiconductors, materials, energy and renewables, industrials, and automotive.
+还有半导体、材料、能源与可再生能源、工业以及汽车领域。
+
+22
+00:01:49,500 --> 00:02:00,030
+So what you're seeing here is a computational fluid dynamic simulation that's approximating the Navier-Stokes equation around an immersed body, in this case, an airplane,
+你们在这里看到的是一个计算流体动力学模拟，它近似求解了浸入物体周围的纳维-斯托克斯方程，本例中是一架飞机。
+
+23
+00:02:00,030 --> 00:02:04,320
+CFD was a major step change from building physical prototypes.
+CFD 的出现是相对于制造物理原型的一次重大飞跃。
+
+24
+00:02:04,320 --> 00:02:10,620
+Before CFD, if you wanted to know how air flowed around a design, you had to build it, put it in a wind tunnel.
+在 CFD 出现之前，如果你想了解空气如何流过一个设计，就必须制造出来，放进风洞里测试。
+
+25
+00:02:10,620 --> 00:02:18,900
+Wind tunnels still play a vital role today, but everyone knows that simulations have fundamentally increased the speed at which we can innovate.
+风洞至今仍发挥着至关重要的作用，但大家都知道，仿真技术已从根本上提升了我们的创新速度。
+
+26
+00:02:18,900 --> 00:02:23,643
+Simulations though still are a bottleneck, and there's room to innovate faster.
+尽管如此，仿真仍是瓶颈，我们仍有更快创新的空间。
+
+27
+00:02:25,650 --> 00:02:27,990
+That's where physics AI comes in.
+这正是物理 AI 发挥作用的地方。
+
+28
+00:02:27,990 --> 00:02:30,420
+A legacy simulation, like the one you just saw,
+一种传统的仿真，就像你刚才看到的那样，
+
+29
+00:02:30,420 --> 00:02:35,610
+which was a seven-second transient simulation consisting of over a billion mesh elements,
+一次持续七秒的瞬态仿真，包含超过十亿个网格单元，
+
+30
+00:02:35,610 --> 00:02:41,640
+takes four days to compute Using physics AI, we can do this in a six-second inference step.
+使用物理 AI，我们可以在六秒的推理步骤内完成计算。
+
+31
+00:02:41,640 --> 00:02:44,970
+Four days becomes six seconds in inference.
+四天缩短为六秒的推理时间。
+
+32
+00:02:44,970 --> 00:02:51,903
+That's not just an incremental improvement, that's just the fundamental transformation is how manufacturers can innovate and design.
+这不仅仅是渐进式的改进，而是制造和设计方式的根本性变革。
+
+33
+00:02:53,400 --> 00:02:59,520
+The models, they're called surrogates because they act as stand-ins for expensive physics simulations.
+这些模型被称为代理模型，因为它们可以替代昂贵的物理仿真。
+
+34
+00:02:59,520 --> 00:03:06,290
+A well-trained surrogate can give you answers that are accurate enough to make engineering decisions at a fraction of the computational cost.
+一个训练良好的代理模型，能在计算成本仅为原方法几分之一的情况下，提供足够准确的答案，以支持工程决策。
+
+35
+00:03:09,960 --> 00:03:11,913
+We don't just work on aircrafts.
+我们并不只专注于飞机。
+
+36
+00:03:13,020 --> 00:03:17,520
+Our technology applies across engineering domains, as I spoke about earlier.
+我们的技术适用于各种工程领域，正如我之前所讲的那样。
+
+37
+00:03:17,520 --> 00:03:25,380
+Aerodynamics for vehicles, heat transfer for thermal management, chemistry for reactions, and electromagnetics for electronics.
+车辆空气动力学、热管理中的传热、化学反应中的化学，以及电子学中的电磁学。
+
+38
+00:03:25,380 --> 00:03:30,210
+The physics is different in each domain, but the fundamental approach is the same.
+每个领域的物理规律各不相同，但基本方法是一致的。
+
+39
+00:03:30,210 --> 00:03:36,843
+We learn from simulation and hopefully more experimental data and make fast, accurate predictions.
+我们通过仿真学习，并希望结合更多实验数据，实现快速而准确的预测。
+
+40
+00:03:42,240 --> 00:03:45,690
+So what does it take to build an AI surrogate?
+那么，构建一个AI代理模型需要什么条件？
+
+41
+00:03:45,690 --> 00:03:52,080
+Well, you have to do some of those expensive simulations that I talked about earlier upfront to generate the training data.
+你需要提前进行一些我之前提到过的昂贵仿真，以生成训练数据。
+
+42
+00:03:52,080 --> 00:04:00,090
+You need to store that data, you need to process it, you need to clean it and convert it to formats that ML models can consume.
+你需要存储这些数据，处理它们，清洗并转换为机器学习模型可使用的格式。
+
+43
+00:04:00,090 --> 00:04:03,450
+Then you need to train the models, validate them, and deploy them.
+然后你需要训练模型，验证它们，并进行部署。
+
+44
+00:04:03,450 --> 00:04:10,590
+We're building a platform designed to completely support the AI lifecycle for engineering and physics,
+我们正在构建一个平台，旨在全面支持工程与物理领域的AI全生命周期。
+
+45
+00:04:10,590 --> 00:04:16,863
+the data management, the model training, the fine-tuning, and all deployed as an agentic workflow.
+包括数据管理、模型训练、微调，以及全部以代理式工作流的形式部署。
+
+46
+00:04:17,880 --> 00:04:22,110
+We have a simulation workbench which orchestrates the simulations.
+我们有一个仿真工作台，用于协调各类仿真。
+
+47
+00:04:22,110 --> 00:04:29,460
+We have the AI workbench to develop and deploy models from the AI model catalog, some of which are pre-trained, some of which are not.
+我们还有一个AI工作台，用于从AI模型目录中开发和部署模型，其中一些是预训练的，一些则不是。
+
+48
+00:04:29,460 --> 00:04:35,790
+And then we have a unified data backbone with enterprise security and multi-cloud scalability.
+然后我们还拥有一个统一的数据基础架构，具备企业级安全性和多云可扩展性。
+
+49
+00:04:35,790 --> 00:04:40,383
+This is not just a research infrastructure, this is production-grade software.
+这不仅仅是一个研究基础设施，更是生产级别的软件。
+
+50
+00:04:42,690 --> 00:04:46,593
+So now, let me talk about our pre-trained model for automotive aerodynamics.
+现在，让我来谈谈我们用于汽车空气动力学的预训练模型。
+
+51
+00:04:47,970 --> 00:04:54,840
+So I spoke earlier about how numerical simulation was the first major step change for engineering.
+之前我提到过，数值模拟是工程领域第一次重大的变革。
+
+52
+00:04:54,840 --> 00:04:57,360
+The simulations are complex to set up.
+这些模拟设置起来很复杂。
+
+53
+00:04:57,360 --> 00:05:00,060
+They take hours or days.
+需要数小时甚至数天。
+
+54
+00:05:00,060 --> 00:05:05,220
+But you get cheaper and faster exploration than physical prototypes.
+但相比物理原型，你能实现更低成本、更快的探索。
+
+55
+00:05:05,220 --> 00:05:08,100
+Then came traditional ML models and surrogates.
+随后出现了传统的机器学习模型和代理模型。
+
+56
+00:05:08,100 --> 00:05:16,620
+You need a training dataset, you need an ML model, a pipeline, and once you're trained, you can get vast design space exploration.
+你需要训练数据集、机器学习模型、数据流水线，训练完成后，就能实现大规模的设计空间探索。
+
+57
+00:05:16,620 --> 00:05:25,530
+But for every customer we encounter, every new geometry we see, we have to collect a new dataset from scratch.
+但每次面对新客户或新几何结构时，我们都必须从零开始收集新的数据集。
+
+58
+00:05:25,530 --> 00:05:33,453
+So what we're doing is we're going out and generating large pre-training datasets, coupling it with foundational architectures,
+我们正在做的，是主动生成大规模的预训练数据集，并将其与基础架构相结合，
+
+59
+00:05:34,680 --> 00:05:43,050
+and serious infrastructure that's involved to get everything from the simulations to the data loader and to train at scale using dynamic data parallelism.
+以及支撑整个流程的坚实基础设施，确保从模拟到数据加载，再到利用动态数据并行实现大规模训练。
+
+60
+00:05:43,050 --> 00:05:54,033
+And what you get from these pre-trained foundation models is you get lower upfront data needs for customers and better out-of-the-box performance, zero shot and fine-tuned.
+从这些预训练的基础模型中，客户将获得更低的前期数据需求，以及更好的开箱即用性能，无论是零样本还是微调后表现都更优。
+
+61
+00:05:55,590 --> 00:06:07,890
+So when we wanted to build the automotive aerodynamics model, we faced some challenges is that there wasn't a very large, diverse corpus of data.
+于是当我们想构建汽车空气动力学模型时，遇到了一些挑战，那就是缺乏一个非常庞大且多样化的数据语料库。
+
+62
+00:06:07,890 --> 00:06:15,630
+Some of the largest public datasets consists of the DrivAerNet++, which is out of the MIT DeCoDE Lab of Faez Ahmed,
+其中一些最大的公开数据集是来自法兹·艾哈迈德的麻省理工学院 DeCoDE 实验室的 DrivAerNet++。
+
+63
+00:06:15,630 --> 00:06:23,700
+which is a remarkable contribution to the field, make no doubt, that consists of 8,000 Reynolds-averaged Navier-Stokes simulations.
+这无疑是对该领域的一项杰出贡献，包含8000次雷诺平均纳维-斯托克斯模拟。
+
+64
+00:06:23,700 --> 00:06:26,520
+These are steady-state time averaged approximations.
+这些是稳态时间平均近似值。
+
+65
+00:06:26,520 --> 00:06:29,493
+They're the fastest amongst the different simulation types.
+它们是各类模拟类型中速度最快的。
+
+66
+00:06:31,140 --> 00:06:38,160
+And if you look At though what the data's comprised of, it's eight cars that are morphed,
+如果你观察这些数据的构成，会发现是8辆经过变形的汽车。
+
+67
+00:06:38,160 --> 00:06:41,910
+and morphing is like stretching and pulling different parts of the car.
+变形就像是拉伸和拉拽汽车的不同部分。
+
+68
+00:06:41,910 --> 00:06:46,080
+You get very topologically similar cars.
+你会得到拓扑结构非常相似的汽车。
+
+69
+00:06:46,080 --> 00:06:53,070
+Another dataset is a Luminary SHIFT SUV, that's 2,000 detached eddy simulations.
+另一个数据集是 Luminary SHIFT SUV，包含2000次分离涡模拟。
+
+70
+00:06:53,070 --> 00:06:56,546
+These are of higher fidelity than RANS.
+这些模拟的保真度高于 RANS。
+
+71
+00:06:56,546 --> 00:07:01,560
+And here there are only two baseline cars that are morphed a thousand times.
+这里只有两辆基准汽车被变形了一千次。
+
+72
+00:07:01,560 --> 00:07:06,420
+So that's roughly 10 cars which have a thousand morphs.
+所以大致相当于10辆汽车，每辆有上千种变形。
+
+73
+00:07:06,420 --> 00:07:08,100
+It's not very diverse.
+它的多样性并不高。
+
+74
+00:07:08,100 --> 00:07:14,660
+Another challenge I'll mention is that when you have sort of this diverse data,
+我要提到的另一个挑战是，当你拥有这种多样化数据时，
+
+75
+00:07:14,670 --> 00:07:18,030
+you have different fidelity simulations, different turbulence closure models,
+你会遇到不同精度的仿真结果，以及不同的湍流闭合模型，
+
+76
+00:07:18,030 --> 00:07:26,790
+and this is sort of still an open research problem as to whether you should pre-train these models on diverse sets of simulations and how exactly you should do it.
+这仍然是一个开放的研究问题，即是否应该在多样化的仿真数据集上预训练这些模型，以及如何具体操作。
+
+77
+00:07:26,790 --> 00:07:29,703
+We'll only focus on the geometric diversity today.
+今天我们将仅关注几何多样性。
+
+78
+00:07:31,224 --> 00:07:36,420
+So okay, I said that these datasets aren't diverse, but why does this matter?
+所以，我说过这些数据集缺乏多样性，但这为什么重要呢？
+
+79
+00:07:36,420 --> 00:07:41,460
+So, we pre-trained various attention-based architectures.
+我们对多种基于注意力机制的架构进行了预训练。
+
+80
+00:07:41,460 --> 00:07:47,663
+If you're familiar, Transolver, ABUPT, point cloud attention, linear attention.
+如果你熟悉的话，包括 Transolver、ABUPT、点云注意力和线性注意力。
+
+81
+00:07:47,663 --> 00:07:53,040
+These meshes are very large, so you have to use variants of attention that are suitable.
+这些网格非常庞大，因此必须使用适合的注意力变体。
+
+82
+00:07:53,040 --> 00:07:58,020
+And we trained them on Luminary and DrivAerNet, these two public datasets that I just spoke about.
+我们在 Luminary 和 DrivAerNet 这两个公开数据集上训练了它们，我刚才提到的就是这两个数据集。
+
+83
+00:07:58,020 --> 00:08:02,160
+And we looked at their out-of-distribution performance on a representative customer dataset.
+我们考察了它们在代表性客户数据集上的分布外性能。
+
+84
+00:08:02,160 --> 00:08:03,570
+We call it CustomerNet.
+我们称它为 CustomerNet。
+
+85
+00:08:03,570 --> 00:08:10,020
+That's one baseline simulation with very intricate morphs that we see that our customers have.
+这是一次基础仿真，展示了我们客户所遇到的复杂形态。
+
+86
+00:08:10,020 --> 00:08:11,430
+And we looked at their performance.
+我们分析了它们的性能表现。
+
+87
+00:08:11,430 --> 00:08:13,770
+What sort of performance are we looking at?
+我们在关注什么样的性能指标？
+
+88
+00:08:13,770 --> 00:08:16,020
+I'll first talk about the quantities that we're looking at.
+我先来介绍我们关注的几个量。
+
+89
+00:08:16,020 --> 00:08:17,550
+There's the drag coefficient.
+阻力系数。
+
+90
+00:08:17,550 --> 00:08:20,763
+This is a measure of the aerodynamic resistance of the car.
+这是衡量汽车空气动力阻力的指标。
+
+91
+00:08:22,560 --> 00:08:27,240
+A typical sedan has around a coefficient of drag between 0.25 and 0.30.
+一辆典型的轿车阻力系数大约在 0.25 到 0.30 之间。
+
+92
+00:08:27,240 --> 00:08:36,840
+Understanding this number is how automotive manufacturers can optimize for fuel efficiency and EV range and other aspects.
+理解这个数值，有助于汽车制造商优化燃油效率、电动车续航以及其他方面。
+
+93
+00:08:36,840 --> 00:08:40,890
+The pressure coefficient, this is the pressure on the surface of the car.
+压力系数，这是指车体表面的压力。
+
+94
+00:08:40,890 --> 00:08:44,700
+This tells you how pressure varies across every point of the vehicle surface.
+它能告诉你车辆表面各点的压力如何变化。
+
+95
+00:08:44,700 --> 00:08:48,420
+You have high pressure region in the front and a low pressure in the wake.
+前部是高压区，尾部是低压区。
+
+96
+00:08:48,420 --> 00:08:51,660
+And these differences are what create the drag.
+这些压力差异正是产生阻力的原因。
+
+97
+00:08:51,660 --> 00:08:57,990
+And if you can predict the pressure field accurately, you understand why the design has its drag.
+如果你能准确预测压力场，就能理解为何该设计会产生阻力。
+
+98
+00:08:57,990 --> 00:09:00,420
+So let's look at these graphs.
+那么我们来看一下这些图表。
+
+99
+00:09:00,420 --> 00:09:09,060
+So if we look at the top one, this is the drag coefficient, and along the y-axis is the Spearman rank correlation coefficient.
+如果我们看上面那张图，这是阻力系数，纵轴是斯皮尔曼秩相关系数。
+
+100
+00:09:09,060 --> 00:09:11,850
+It measures how accurate you're ranking the designs.
+它衡量的是你对设计方案排序的准确性。
+
+101
+00:09:11,850 --> 00:09:20,580
+And you look, in the green and the orange, the green is the model that's trained on DrivAerNet, the orange is the one that's trained on Luminary.
+你看到绿色和橙色部分，绿色是基于 DrivAerNet 训练的模型，橙色是基于 Luminary 训练的模型。
+
+102
+00:09:20,580 --> 00:09:25,830
+And if you look at the performance within distribution, it's quite good.
+如果看模型在分布内表现，结果相当不错。
+
+103
+00:09:25,830 --> 00:09:31,080
+If we look at how it performs out of distribution on the CustomerNet, it's orders of magnitude worse.
+但若看它在 CustomerNet 上的分布外表现，性能差了几个数量级。
+
+104
+00:09:31,080 --> 00:09:33,240
+We see a similar story for the pressure coefficient.
+压力系数的情况也类似。
+
+105
+00:09:33,240 --> 00:09:34,620
+Here, lower is better.
+这里数值越低越好。
+
+106
+00:09:34,620 --> 00:09:40,503
+We're looking at the mean absolute error of the pressure coefficient on the surface of the car.
+我们关注的是汽车表面压力系数的平均绝对误差。
+
+107
+00:09:42,330 --> 00:09:47,670
+So it seems pretty obvious you need to go out and you need to generate a very diverse dataset.
+所以很明显，你需要走出去，生成一个非常多样化的数据集。
+
+108
+00:09:47,670 --> 00:09:51,090
+So this dataset is growing as we speak.
+因此这个数据集正在实时增长。
+
+109
+00:09:51,090 --> 00:09:54,090
+We are still generating this data and training the model.
+我们仍在生成数据并训练模型。
+
+110
+00:09:54,090 --> 00:10:00,840
+We'll talk a little bit about how we're getting more new, diverser designs through active learning.
+我们将简要介绍如何通过主动学习获得更多的新设计和更多样化的设计。
+
+111
+00:10:00,840 --> 00:10:09,150
+So here what you see are some numbers that are trained on 18,000 simulations with over 120 baselines
+这里展示的是在18,000次模拟和120多个基线数据上训练得到的一些数据。
+
+112
+00:10:09,150 --> 00:10:12,330
+at a fixed velocity, inlet velocity for now.
+速度固定，目前为入口速度。
+
+113
+00:10:12,330 --> 00:10:19,740
+And we see a difference here, that our model still performs well on DrivAerNet Luminary,
+我们看到，我们的模型在DrivAerNet Luminary等公开数据集上表现依然良好。
+
+114
+00:10:19,740 --> 00:10:29,310
+these public datasets, but when we look at the out-of-shot zero-shot performance, we get significantly better results.
+但当我们观察分布外的零样本性能时，结果显著更优。
+
+115
+00:10:29,310 --> 00:10:30,600
+And this is just zero shot.
+这还只是零样本的情况。
+
+116
+00:10:30,600 --> 00:10:32,100
+This isn't when you fine-tune.
+这并非经过微调之后的结果。
+
+117
+00:10:33,540 --> 00:10:43,470
+So, now you wanna understand, as we're growing this dataset, what's happening out of distribution is your out-of-distribution performance improving.
+因此，随着数据集不断增长，你想要理解的是：分布外性能是否在提升。
+
+118
+00:10:43,470 --> 00:10:47,830
+And so what we're seeing here is a graph along the y-axis is the out of distribution
+我们在这里看到的图表中，纵轴是分布外的
+
+119
+00:10:49,920 --> 00:10:51,990
+mean absolute error of the pressure coefficient.
+压力系数的平均绝对误差。
+
+120
+00:10:51,990 --> 00:10:57,000
+And along the x-axis, you see the training set size, and you see this decreasing.
+横轴显示的是训练集大小，可以看到误差在下降。
+
+121
+00:10:57,000 --> 00:11:02,580
+Now, when you look along the x-axis, you say training set size, are these just morphs or are these baselines?
+现在，当你沿着 x 轴观察时，你会看到训练集大小，这些是单纯的形态变化，还是基准数据？
+
+122
+00:11:02,580 --> 00:11:05,280
+And these are some of the questions we're trying to understand.
+这些是我们试图理解的一些问题。
+
+123
+00:11:05,280 --> 00:11:07,770
+How many times should you morph a car?
+一辆汽车应该进行多少次形态变化？
+
+124
+00:11:07,770 --> 00:11:09,753
+Does that improve the performance?
+这是否能提升性能？
+
+125
+00:11:10,590 --> 00:11:20,790
+Here, this is going along basically a hundred morphs per baseline that we're increasing along the x-axis.
+这里，我们沿着 x 轴每条基准线增加了大约一百次形态变化。
+
+126
+00:11:20,790 --> 00:11:29,793
+And we'll talk about how we're now implementing active learning and that's going to increase the slope of these curves.
+我们将讨论如何实现主动学习，这将使这些曲线的斜率进一步上升。
+
+127
+00:11:31,800 --> 00:11:37,470
+So, accuracy alone isn't enough for engineering applications.
+对于工程应用而言，仅靠准确率是不够的。
+
+128
+00:11:37,470 --> 00:11:40,290
+Engineers need to know when to trust the model.
+工程师需要知道何时可以信任模型。
+
+129
+00:11:40,290 --> 00:11:44,550
+If you're predicting a drag coefficient, a difference of 0.01 matters.
+如果你预测的是阻力系数，0.01 的差异就很重要。
+
+130
+00:11:44,550 --> 00:11:47,070
+You need to have confidence intervals.
+你需要有置信区间。
+
+131
+00:11:47,070 --> 00:11:49,803
+And if we look on the right,
+如果我们看向右侧，
+
+132
+00:11:51,720 --> 00:11:55,980
+this is showing how drag accumulates throughout the length of the car from the front to the back.
+这展示了从车头到车尾，阻力如何沿车身长度累积。
+
+133
+00:11:55,980 --> 00:12:00,330
+You get this by integrating the pressure and the wall shear stress on surface.
+这是通过对表面的压力和壁面剪切应力进行积分得到的。
+
+134
+00:12:00,330 --> 00:12:07,080
+And as you get to all the way to the right point of the graph, the final number on the upper right, that's the coefficient of drag.
+当你看到图表最右端的点时，右上角的最终数值就是阻力系数。
+
+135
+00:12:07,080 --> 00:12:12,210
+And you can see that that blue band is the uncertainty region.
+你可以看到，那个蓝色区域就是不确定性的范围。
+
+136
+00:12:12,210 --> 00:12:18,903
+And at that final point on the right, that represents the confidence interval around the final drag coefficient.
+在图表最右端的这个最终点，代表了最终阻力系数周围的置信区间。
+
+137
+00:12:20,490 --> 00:12:24,990
+This is the sort of uncertainty quantification we expect from our models.
+这就是我们期望模型提供的不确定性量化结果。
+
+138
+00:12:24,990 --> 00:12:29,400
+And we'll see that this uncertainty quantification isn't just crucial for the end use.
+我们将看到，这种不确定性量化不仅对最终应用至关重要。
+
+139
+00:12:29,400 --> 00:12:30,310
+You need to know
+你需要知道
+
+140
+00:12:32,816 --> 00:12:37,140
+at which designs the models are uncertain to know which designs to go for next.
+模型在哪些设计上存在不确定性，才能确定下一步该选择哪些设计。
+
+141
+00:12:37,140 --> 00:12:40,923
+And that's the active learning loop that I'll speak about next.
+这就是我接下来要讲的主动学习循环。
+
+142
+00:12:42,630 --> 00:12:51,960
+So let me now talk about, we're at an AWS conference, let me talk about how we're using AWS to simulate and train these models.
+现在我们身处 AWS 大会，让我谈谈我们如何利用 AWS 来模拟和训练这些模型。
+
+143
+00:12:51,960 --> 00:12:56,250
+So let me start with the diverse geometries.
+让我先从多样的几何形状开始。
+
+144
+00:12:56,250 --> 00:12:59,820
+Today, we have a diverse set of geometries.
+如今，我们拥有多样化的几何形状。
+
+145
+00:12:59,820 --> 00:13:03,360
+These then go into our aerodynamic simulation.
+这些数据随后进入我们的空气动力学仿真。
+
+146
+00:13:03,360 --> 00:13:08,370
+We're using Siemens star and we're using GPU-based solvers,
+我们使用西门子星网格，并采用基于 GPU 的求解器，
+
+147
+00:13:08,370 --> 00:13:14,610
+and these are on SageMaker HyperPod, the same clusters that our models are being trained on.
+这些运行在 SageMaker HyperPod 上，与我们模型训练所用的集群相同。
+
+148
+00:13:14,610 --> 00:13:22,293
+So on the output of the aerodynamic simulations, you get the diverse resolve flows, very large set of fields, terabytes upon terabytes.
+因此，空气动力学仿真的输出结果包含多样化的流场，数据量非常庞大，达到数 TB 之多。
+
+149
+00:13:22,293 --> 00:13:24,333
+Those are stored in S3.
+这些数据存储在 S3 中。
+
+150
+00:13:25,830 --> 00:13:29,013
+That's our long-term storage.
+这是我们长期存储的方案。
+
+151
+00:13:30,000 --> 00:13:40,080
+Then those fields are then pre-processed using AWS Batch in parallel to get them to a form that's ingested by our models.
+随后，这些流场数据通过 AWS Batch 并行预处理，转换为模型可接收的格式。
+
+152
+00:13:40,080 --> 00:13:49,023
+Our models are then also trained on SageMaker HyperPod using data parallelism, and the storage that's used there is FSx for Lustre.
+我们的模型也在 SageMaker HyperPod 上使用数据并行方式进行训练，该环境使用的存储为 FSx for Lustre。
+
+153
+00:13:50,940 --> 00:13:54,990
+And then finally, I talked about that our model has uncertainty quantification.
+最后，我提到我们的模型具备不确定性量化能力。
+
+154
+00:13:54,990 --> 00:14:01,920
+So that, plus last year at AWS, we spoke about our large generative geometry model.
+结合去年在 AWS 上我们介绍的大型生成式几何模型，
+
+155
+00:14:01,920 --> 00:14:04,713
+This is a model that can generate different designs.
+这是一个能够生成不同设计方案的模型。
+
+156
+00:14:05,610 --> 00:14:12,210
+The uncertainty coupled with the geometry generative mechanism are what drives this active learning loop.
+不确定性与生成式几何机制的结合，驱动了这一主动学习循环。
+
+157
+00:14:12,210 --> 00:14:16,920
+After we had a set of baseline geometries to fine-tune the geometry model,
+在我们确定了一组基线几何形状以微调几何模型后，
+
+158
+00:14:16,920 --> 00:14:20,670
+this can then tell us what parts of the design space is the model most uncertain,
+这样就能告诉我们模型最不确定的设计空间是哪些部分，
+
+159
+00:14:20,670 --> 00:14:26,220
+and we can get those geometries which then feed back into the loop to go through the aerodynamic simulation.
+我们可以获取这些几何形状，再反馈回循环中，进入空气动力学仿真流程。
+
+160
+00:14:26,220 --> 00:14:31,680
+Now, that aerodynamic simulation I spoke about was Siemens star.
+我刚才提到的空气动力学仿真，是西门子的 Star。
+
+161
+00:14:31,680 --> 00:14:32,880
+That's RANS at the moment.
+目前是 RANS 模拟。
+
+162
+00:14:32,880 --> 00:14:35,340
+That's not a transient simulation.
+这不是瞬态仿真。
+
+163
+00:14:35,340 --> 00:14:41,310
+I think there's a lot of evidence showing that training on transient data is a better use,
+我认为有大量证据表明，使用瞬态数据进行训练效果更好，
+
+164
+00:14:41,310 --> 00:14:45,630
+but to train on transient data, you need to have an online data loader.
+但要使用瞬态数据训练，就需要具备在线数据加载器。
+
+165
+00:14:45,630 --> 00:14:51,600
+That's where it becomes even more important that the simulator and the models are trained in the same place.
+正是在这一点上，仿真器和模型在同一地点训练变得更加重要。
+
+166
+00:14:51,600 --> 00:14:56,703
+So building this infrastructure even for RANS is setting the stage for the next development.
+因此，即使仅针对 RANS 构建这一基础设施，也在为下一次发展铺平道路。
+
+167
+00:14:58,230 --> 00:15:03,510
+I'll kind of go over this again in a little more detail about the AWS architecture.
+我稍后会更详细地再次介绍 AWS 的架构。
+
+168
+00:15:03,510 --> 00:15:06,840
+So at the heart is the SageMaker HyperPod.
+因此，核心是 SageMaker HyperPod。
+
+169
+00:15:06,840 --> 00:15:08,880
+We have a Slurm for job management.
+我们使用 Slurm 进行作业管理。
+
+170
+00:15:08,880 --> 00:15:15,360
+We have a controller machine that works across multiple compute nodes and the simulation node.
+我们有一台控制器机器，可跨多个计算节点和仿真节点工作。
+
+171
+00:15:15,360 --> 00:15:20,310
+You have the FSx for Luster, which is the file system layer.
+你有 FSx for Luster，这是文件系统层。
+
+172
+00:15:20,310 --> 00:15:24,273
+It's bidirectionally synced with S3.
+它与 S3 双向同步。
+
+173
+00:15:25,470 --> 00:15:28,593
+The FSx is where the data loader are.
+FSx 是数据加载器所在的位置。
+
+174
+00:15:30,210 --> 00:15:32,877
+And then the network architecture is two subnets.
+网络架构包含两个子网。
+
+175
+00:15:32,877 --> 00:15:37,590
+You have the HyperPod, the private one, which is the HyperPod cluster, and you have the public subnet,
+你有私有的 HyperPod，即 HyperPod 集群，以及公共子网。
+
+176
+00:15:37,590 --> 00:15:44,763
+which hosts the ML flow dashboard where we see the results, and all of our researchers enter in through the AWS Session Manager.
+公共子网托管了 MLflow 仪表板，我们在这里查看结果，所有研究人员都通过 AWS Session Manager 进入。
+
+177
+00:15:47,790 --> 00:15:54,213
+So let's wrap up and see what we learned and where PhysicsX is heading next.
+那么，让我们总结一下，看看我们学到了什么，以及 PhysicsX 接下来的发展方向。
+
+178
+00:15:55,980 --> 00:16:05,730
+So we talked about simulations and we saw how ML surrogates were a major leap forward to be able to drive down inference time.
+我们讨论了仿真，并看到了机器学习代理模型如何显著降低推理时间，实现了重大突破。
+
+179
+00:16:05,730 --> 00:16:12,640
+Then we talked about pre-training models and how this will help us
+然后我们讨论了预训练模型，以及它如何帮助我们。
+
+180
+00:16:14,220 --> 00:16:19,230
+accelerate our customers' workflows by requiring less data from them upfront.
+通过减少客户前期所需的数据量，加速他们的工作流程。
+
+181
+00:16:19,230 --> 00:16:22,173
+And we're seeing that scaling laws are emerging.
+我们正看到缩放定律正在显现。
+
+182
+00:16:23,460 --> 00:16:25,950
+Now, what's next for us?
+那么，接下来我们该做什么？
+
+183
+00:16:25,950 --> 00:16:32,280
+We started with automotive aerodynamics and we'll continue to innovate here, as I mentioned, going to transient and so on.
+我们从汽车空气动力学起步，正如我提到的，我们将继续在此领域创新，比如转向瞬态分析等。
+
+184
+00:16:32,280 --> 00:16:38,160
+But we'll also be looking at other domains, radar cross-section, aeroelastics, structural mechanics.
+同时，我们也会关注其他领域，如雷达散射截面、气动弹性、结构力学。
+
+185
+00:16:38,160 --> 00:16:41,790
+And you should ask, "Well, is this gonna be all one model or are these gonna be separate models?"
+你应该问自己：“这会是一个统一的模型，还是多个独立的模型？”
+
+186
+00:16:41,790 --> 00:16:50,520
+Both. We'll train the best model in class and we'll look at what happens when you continue to increase the scope of the model for multiphysics.
+两者都有。我们将训练该领域最优秀的模型，并研究当模型的覆盖范围扩展到多物理场时会发生什么。
+
+187
+00:16:50,520 --> 00:16:58,710
+I think, we're working with our customers to understand what are the best models for them, and so we'll build both.
+我认为，我们正与客户合作，了解他们所需的最优模型，因此我们将同时构建这两类模型。
+
+188
+00:16:58,710 --> 00:17:02,760
+I encourage you to visit physicsx.ai to learn more.
+我建议您访问 physicsx.ai 了解更多信息。
+
+189
+00:17:02,760 --> 00:17:05,403
+We'll be releasing a blog post soon about the model.
+我们很快会发布一篇关于该模型的博客文章。
+
+190
+00:17:06,630 --> 00:17:09,933
+And I just want to thank you for your time today and for listening.
+最后，我想感谢大家今天花时间聆听。

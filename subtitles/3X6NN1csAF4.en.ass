@@ -1,0 +1,824 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Arial,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,260,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:02.64,0:00:09.10,Sub,,0,0,0,,Welcome to Hot Chips 2026 keynote
+Dialogue: 0,0:00:09.15,0:00:10.43,Sub,,0,0,0,,compute in motion
+Dialogue: 0,0:00:10.48,0:00:11.47,Sub,,0,0,0,,challenges of
+Dialogue: 0,0:00:11.52,0:00:21.85,Sub,,0,0,0,,autonomous
+Dialogue: 0,0:00:21.90,0:00:30.35,Sub,,0,0,0,,driving.
+Dialogue: 0,0:00:30.40,0:00:31.20,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:00:31.25,0:00:37.97,Sub,,0,0,0,,And also welcome to I personally been thinking about it as Waymo day, but it's I guess the Waymo section of Hot Chips this year.
+Dialogue: 0,0:00:38.02,0:00:43.55,Sub,,0,0,0,,This day has been a long time coming for Alphabet where I work and my friends at Waymo,
+Dialogue: 0,0:00:43.60,0:00:47.07,Sub,,0,0,0,,uh, two of whom you'll get to hear in the next couple of hours.
+Dialogue: 0,0:00:47.12,0:00:50.03,Sub,,0,0,0,,So, by way of post lunch, everybody's falling asleep.
+Dialogue: 0,0:00:50.08,0:00:53.39,Sub,,0,0,0,,Raise your hand if you've heard of Waymo.
+Dialogue: 0,0:00:53.44,0:00:56.22,Sub,,0,0,0,,Keep your hand up if you've ridden in a Waymo.
+Dialogue: 0,0:00:56.28,0:00:56.68,Sub,,0,0,0,,Great.
+Dialogue: 0,0:00:56.71,0:00:59.35,Sub,,0,0,0,,Some people put their hands up and had Okay.
+Dialogue: 0,0:00:59.40,0:01:04.77,Sub,,0,0,0,,Anyway, uh, and and keep your hand up still if you've reached stage three of the Waymo experience.
+Dialogue: 0,0:01:04.82,0:01:07.54,Sub,,0,0,0,,Stage one is, "Oh my god, there's no driver in the car."
+Dialogue: 0,0:01:07.59,0:01:09.71,Sub,,0,0,0,,Stage two is Wow, that seems to be working.
+Dialogue: 0,0:01:09.76,0:01:10.85,Sub,,0,0,0,,There's a little display there.
+Dialogue: 0,0:01:10.90,0:01:14.51,Sub,,0,0,0,,Stage three is I'm on my phone.
+Dialogue: 0,0:01:14.56,0:01:15.13,Sub,,0,0,0,,Cool.
+Dialogue: 0,0:01:15.18,0:01:21.33,Sub,,0,0,0,,Uh, as you'll see today, our friends at Waymo have been doing some amazing engineering.
+Dialogue: 0,0:01:21.38,0:01:25.60,Sub,,0,0,0,,I remember first hearing about it and seeing the demos and thinking, "That is so cool.
+Dialogue: 0,0:01:25.66,0:01:27.66,Sub,,0,0,0,,My daughters will never have to learn how to drive."
+Dialogue: 0,0:01:27.71,0:01:30.40,Sub,,0,0,0,,I I was a little over optimistic about that,
+Dialogue: 0,0:01:30.45,0:01:37.17,Sub,,0,0,0,,but I think a key thing you'll see in the presentation today is incredible persistence about excellent
+Dialogue: 0,0:01:37.22,0:01:44.19,Sub,,0,0,0,,engineering and understanding failure cases out to I guess one of the earlier speakers today had nine nines.
+Dialogue: 0,0:01:44.24,0:01:50.17,Sub,,0,0,0,,But I think a bunch of the persistence that is emblematic of how my colleagues approach the incredible
+Dialogue: 0,0:01:50.22,0:01:58.47,Sub,,0,0,0,,safety job they do and the possibility of superhuman driving is that they have to make it work.
+Dialogue: 0,0:01:58.52,0:02:03.14,Sub,,0,0,0,,Uh it requires incredible discipline, focus across years.
+Dialogue: 0,0:02:03.19,0:02:08.59,Sub,,0,0,0,,It may have taken a little bit longer than my initial estimate that my now 20-year-old would never have to learn how to drive.
+Dialogue: 0,0:02:08.64,0:02:13.63,Sub,,0,0,0,,And yet, if you've ridden in a Waymo, it's kind of in in immediately miraculous.
+Dialogue: 0,0:02:13.68,0:02:17.47,Sub,,0,0,0,,And then soon after that you realize, wow, this thing is better than I am.
+Dialogue: 0,0:02:17.52,0:02:19.16,Sub,,0,0,0,,Like literally better than I am.
+Dialogue: 0,0:02:19.21,0:02:21.95,Sub,,0,0,0,,It helps that it sees in all directions, which I can't.
+Dialogue: 0,0:02:22.00,0:02:24.59,Sub,,0,0,0,,But the technology is fantastic.
+Dialogue: 0,0:02:24.64,0:02:28.75,Sub,,0,0,0,,It's the kind of thing where this is a good kind of superhum, right?
+Dialogue: 0,0:02:28.80,0:02:30.28,Sub,,0,0,0,,We talk about the AI revolution.
+Dialogue: 0,0:02:30.33,0:02:36.18,Sub,,0,0,0,,It's certainly in the air and one of the reasons why many people came to the conference this year, but there are great things going on.
+Dialogue: 0,0:02:36.22,0:02:42.09,Sub,,0,0,0,,And if we can save some fraction of the 40,000 lives a year that are lost here in America to better driving,
+Dialogue: 0,0:02:42.14,0:02:49.85,Sub,,0,0,0,,if we can reduce property damage, if cars can just be a thing that works for us, then how much better are our lives be?
+Dialogue: 0,0:02:49.90,0:02:55.29,Sub,,0,0,0,,So, by way of introduction, our keynote speaker for the conference is Daniel Rosenband.
+Dialogue: 0,0:02:55.34,0:02:59.11,Sub,,0,0,0,,He and I joined Google around the same time and have known each other for most of our
+Dialogue: 0,0:02:59.16,0:03:04.18,Sub,,0,0,0,,time at Google because back at the time there was kind of a secretive hardware community inside of Google.
+Dialogue: 0,0:03:04.23,0:03:08.22,Sub,,0,0,0,,I think when we first started working, Google wasn't out about doing hardware projects.
+Dialogue: 0,0:03:08.27,0:03:09.80,Sub,,0,0,0,,And so it's uh been super cool.
+Dialogue: 0,0:03:09.84,0:03:17.15,Sub,,0,0,0,,Daniel actually spoke at Hot Chips nine years ago uh in a similar keynote, but there's way more to talk about uh today.
+Dialogue: 0,0:03:17.20,0:03:20.38,Sub,,0,0,0,,You can see his bio in the uh Slack channel.
+Dialogue: 0,0:03:20.43,0:03:29.50,Sub,,0,0,0,,He has founded startups and designed DRAMs and spent the last 13 years at Waymo making their compute be what it needs to be.
+Dialogue: 0,0:03:29.55,0:03:32.64,Sub,,0,0,0,,Um, I was going to say something about the the depth of time.
+Dialogue: 0,0:03:32.69,0:03:33.32,Sub,,0,0,0,,Oh, yes.
+Dialogue: 0,0:03:33.37,0:03:38.24,Sub,,0,0,0,,And from my personal perspective, Daniel is the constant person at Waymo,
+Dialogue: 0,0:03:38.29,0:03:43.03,Sub,,0,0,0,,the person who as long as I've been here has been the person I could call up and say, "Hey, heard about this.
+Dialogue: 0,0:03:43.08,0:03:45.41,Sub,,0,0,0,,Is there some interesting thing we should talk about there,
+Dialogue: 0,0:03:45.46,0:03:51.54,Sub,,0,0,0,,it's been super cool to have somebody with that degree of stability and persistence during the last few years.
+Dialogue: 0,0:03:51.59,0:03:55.69,Sub,,0,0,0,,So, I'm really psyched about his talk today and I hope you enjoy it as much as we do."
+Dialogue: 0,0:03:55.74,0:03:57.39,Sub,,0,0,0,,Daniel, please take it away.
+Dialogue: 0,0:03:57.44,0:04:04.03,Sub,,0,0,0,,Thank you, Cliff.
+Dialogue: 0,0:04:04.08,0:04:05.72,Sub,,0,0,0,,It's really good to be here.
+Dialogue: 0,0:04:05.77,0:04:15.64,Sub,,0,0,0,,Um it's been a long journey at Waymo with really amazing progress and of course a lot lot is a lot of that is due to progress on the silicon side.
+Dialogue: 0,0:04:15.69,0:04:25.64,Sub,,0,0,0,,Um now when we think about silicon these days of course it is all about AI right its power systems its interconnects its compute its
+Dialogue: 0,0:04:25.69,0:04:35.11,Sub,,0,0,0,,memory system right everything funnels into AI when you think about where does that AI live of course most of it today is in the
+Dialogue: 0,0:04:35.16,0:04:42.02,Sub,,0,0,0,,data centers right enormous buildings gigawatts of power but increasingly also right
+Dialogue: 0,0:04:42.07,0:04:47.91,Sub,,0,0,0,,we have these cars driving around physical AI physical systems that very very
+Dialogue: 0,0:04:47.96,0:04:57.26,Sub,,0,0,0,,much rely on AI and within these physical systems of course we also have a tremendous amount of compute and semiconductors to make that possible.
+Dialogue: 0,0:04:57.31,0:05:01.26,Sub,,0,0,0,,So hopefully today you'll see a little bit of our journey as a company
+Dialogue: 0,0:05:01.31,0:05:06.93,Sub,,0,0,0,,and how important the silicon aspects are to enable compute and our autonomous drives.
+Dialogue: 0,0:05:06.98,0:05:11.54,Sub,,0,0,0,,Um as part of that hopefully you also see a little bit of contrast between
+Dialogue: 0,0:05:11.59,0:05:20.03,Sub,,0,0,0,,what happens in the digital pure digital world and physical world in terms of AI systems.
+Dialogue: 0,0:05:20.08,0:05:28.55,Sub,,0,0,0,,Now when we when we think about kind of physical AI few things are are clearly different right one is
+Dialogue: 0,0:05:28.60,0:05:34.59,Sub,,0,0,0,,just a physical scale right we want to run the biggest models we can on the car but we only
+Dialogue: 0,0:05:34.64,0:05:41.86,Sub,,0,0,0,,have sort of a car's worth of compute for us that's a pizza box um we we also care very
+Dialogue: 0,0:05:41.91,0:05:50.04,Sub,,0,0,0,,much about latency right we we have a real-time system when you're talking to your to your favorite chat AI Right?
+Dialogue: 0,0:05:50.10,0:05:55.42,Sub,,0,0,0,,Sometimes it takes seconds, sometimes it takes minutes to respond in a physical AI system.
+Dialogue: 0,0:05:55.47,0:05:56.76,Sub,,0,0,0,,That's not possible.
+Dialogue: 0,0:05:56.81,0:05:57.18,Sub,,0,0,0,,Right?
+Dialogue: 0,0:05:57.21,0:06:03.34,Sub,,0,0,0,,We have real time latency constraints usually in the millisecond range and we need to solve for those.
+Dialogue: 0,0:06:03.39,0:06:09.52,Sub,,0,0,0,,And then the third aspect that's really fundamentally different is a cost of errors, right?
+Dialogue: 0,0:06:09.57,0:06:12.19,Sub,,0,0,0,,These are big systems moving around.
+Dialogue: 0,0:06:12.24,0:06:14.98,Sub,,0,0,0,,Could be robots, could be cars, right?
+Dialogue: 0,0:06:15.03,0:06:18.50,Sub,,0,0,0,,And they need to behave well in the world.
+Dialogue: 0,0:06:18.56,0:06:21.88,Sub,,0,0,0,,Um, and maybe just one simple anecdote, right?
+Dialogue: 0,0:06:21.92,0:06:26.70,Sub,,0,0,0,,Like, uh, was recently on vacation with my daughter.
+Dialogue: 0,0:06:26.74,0:06:28.51,Sub,,0,0,0,,We were creating a horse game.
+Dialogue: 0,0:06:28.56,0:06:32.73,Sub,,0,0,0,,A horse had two legs and was jumping backwards over its jump.
+Dialogue: 0,0:06:32.78,0:06:40.68,Sub,,0,0,0,,Um, and that's that's still pretty good and impressive for AI, but those types of things in a physical system, right, are not quite acceptable.
+Dialogue: 0,0:06:40.73,0:06:42.87,Sub,,0,0,0,,And she's the biggest critique, right?
+Dialogue: 0,0:06:42.92,0:06:48.87,Sub,,0,0,0,,when she's in a Waymo car, she'll she'll definitely notice when we stutter for a quarter second at an intersection,
+Dialogue: 0,0:06:48.92,0:06:56.27,Sub,,0,0,0,,but that's sort of a level of of sort of what of a quality bar we need to read.
+Dialogue: 0,0:06:56.32,0:07:04.02,Sub,,0,0,0,,Now, of course, there's also the really important aspect of of what impact are we having with the the the self-driving cars,
+Dialogue: 0,0:07:04.07,0:07:08.36,Sub,,0,0,0,,and there one of the biggest ones, of course, is is just the safety.
+Dialogue: 0,0:07:08.41,0:07:18.51,Sub,,0,0,0,,When you when you look at cars in general across the world, about one person dies every 26 seconds, right, due to a car accident.
+Dialogue: 0,0:07:18.56,0:07:30.03,Sub,,0,0,0,,And so being engineers, being a company that's able to transform the world to help in those cases is of course a really awesome win.
+Dialogue: 0,0:07:30.08,0:07:32.89,Sub,,0,0,0,,So quick outline for the talk.
+Dialogue: 0,0:07:32.94,0:07:37.05,Sub,,0,0,0,,Um I'll give you a quick overview of where we've been within Waymo, right?
+Dialogue: 0,0:07:37.10,0:07:44.04,Sub,,0,0,0,,what our journey has been, give a a sense of how our sensor suite has evolved and then dive into compute,
+Dialogue: 0,0:07:44.09,0:07:51.71,Sub,,0,0,0,,finishing with what our ML models look like and what is really motivating all that compute.
+Dialogue: 0,0:07:51.76,0:07:59.81,Sub,,0,0,0,,So first a look back right we started Waymo in about 2009 um 10 years ago gave a talk
+Dialogue: 0,0:07:59.86,0:08:06.25,Sub,,0,0,0,,and was looking at some of those slides and you'll see there's sort of a the challenge picture to the
+Dialogue: 0,0:08:06.30,0:08:12.22,Sub,,0,0,0,,left right at the time this was a really really difficult scene for us to to support right you can
+Dialogue: 0,0:08:12.27,0:08:19.95,Sub,,0,0,0,,see there's a traffic light that's clearly green there's another traffic light that's occluded by a red red object Um,
+Dialogue: 0,0:08:20.00,0:08:27.15,Sub,,0,0,0,,and sort of having the contextual information, making that really, really longtail decision, right?
+Dialogue: 0,0:08:27.20,0:08:30.62,Sub,,0,0,0,,Do you call this light red or do you call it green?
+Dialogue: 0,0:08:30.67,0:08:32.87,Sub,,0,0,0,,Is not an easy thing, right?
+Dialogue: 0,0:08:32.92,0:08:42.19,Sub,,0,0,0,,And it's an example where it's easy to be right 90% 99% of the time, but traffic lights, you really want to be right all the time.
+Dialogue: 0,0:08:42.24,0:08:45.47,Sub,,0,0,0,,And so, at the time, this was a really hard problem.
+Dialogue: 0,0:08:45.52,0:08:52.19,Sub,,0,0,0,,Um, today I I I I punched this into into Gemini, one of our flash models, right?
+Dialogue: 0,0:08:52.24,0:08:59.95,Sub,,0,0,0,,Query that is is a traffic light red or green and it can immediately tell you, right, what's happening in this scene.
+Dialogue: 0,0:09:00.00,0:09:10.43,Sub,,0,0,0,,So sort of AI has definitely advanced a long way and and helps tremendously in our journey to to have a really robust system.
+Dialogue: 0,0:09:10.48,0:09:14.11,Sub,,0,0,0,,From a compute perspective, things have changed a lot too, right?
+Dialogue: 0,0:09:14.16,0:09:21.26,Sub,,0,0,0,,At the time we were just transitioning from surface streets to uh sorry from freeway driving to surface streets.
+Dialogue: 0,0:09:21.31,0:09:25.18,Sub,,0,0,0,,We knew the amount of compute would increase dramatically with that.
+Dialogue: 0,0:09:25.23,0:09:25.57,Sub,,0,0,0,,Right?
+Dialogue: 0,0:09:25.60,0:09:30.22,Sub,,0,0,0,,Like surface streets you have more agents you you more people you interact with.
+Dialogue: 0,0:09:30.27,0:09:33.65,Sub,,0,0,0,,The traffic rules tend to be more complicated.
+Dialogue: 0,0:09:33.70,0:09:37.14,Sub,,0,0,0,,Um and so we were projecting a big bump in compute.
+Dialogue: 0,0:09:37.18,0:09:39.80,Sub,,0,0,0,,Um a fair amount of that was CPU right?
+Dialogue: 0,0:09:39.85,0:09:44.03,Sub,,0,0,0,,We were doing a lot of planning decisions on CPU at the time.
+Dialogue: 0,0:09:44.08,0:09:47.56,Sub,,0,0,0,,It was also our first big bump on the ML side, right?
+Dialogue: 0,0:09:47.61,0:09:52.99,Sub,,0,0,0,,Where GPUs and other technologies started really advancing and being amazing at ML.
+Dialogue: 0,0:09:53.04,0:09:55.63,Sub,,0,0,0,,And so we we saw a nice uptick.
+Dialogue: 0,0:09:55.68,0:09:58.89,Sub,,0,0,0,,Now you also see the picture on the left, right?
+Dialogue: 0,0:09:58.94,0:10:01.36,Sub,,0,0,0,,This was our inspiration at the time, right?
+Dialogue: 0,0:10:01.41,0:10:04.09,Sub,,0,0,0,,Kind of thinking 50 TOPS, 100 TOPS.
+Dialogue: 0,0:10:04.14,0:10:05.79,Sub,,0,0,0,,Wow, that's amazing.
+Dialogue: 0,0:10:05.84,0:10:08.52,Sub,,0,0,0,,Um the world has of course changed.
+Dialogue: 0,0:10:08.57,0:10:12.81,Sub,,0,0,0,,Um and we we have a lot more TOPS now and we use them.
+Dialogue: 0,0:10:12.86,0:10:16.99,Sub,,0,0,0,,Uh so is is good.
+Dialogue: 0,0:10:17.04,0:10:22.01,Sub,,0,0,0,,In terms of vehicles, um we are now on our sixth generation platform.
+Dialogue: 0,0:10:22.06,0:10:27.39,Sub,,0,0,0,,Our compute often iterates a little bit more quickly than these vehicle platforms.
+Dialogue: 0,0:10:27.44,0:10:30.37,Sub,,0,0,0,,Um but you can see a gradual transition, right?
+Dialogue: 0,0:10:30.42,0:10:35.31,Sub,,0,0,0,,We started initially with basically all off-the-shelf components.
+Dialogue: 0,0:10:35.36,0:10:38.77,Sub,,0,0,0,,Second generation started integrating sensors.
+Dialogue: 0,0:10:38.82,0:10:47.91,Sub,,0,0,0,,Third generations all all Waymo hardware and so has evolved and with closer and closer relationships with the OEMs as well.
+Dialogue: 0,0:10:47.96,0:10:50.43,Sub,,0,0,0,,We're now with a sixth generation.
+Dialogue: 0,0:10:50.48,0:10:52.69,Sub,,0,0,0,,We have an Ojai vehicle, right?
+Dialogue: 0,0:10:52.74,0:10:57.07,Sub,,0,0,0,,Very carefully designed to be a really awesome self-driving vehicle.
+Dialogue: 0,0:10:57.12,0:10:58.75,Sub,,0,0,0,,Also a Hyundai Ioniq 5.
+Dialogue: 0,0:10:58.80,0:11:05.47,Sub,,0,0,0,,We have a close partnership to to launch that soon.
+Dialogue: 0,0:11:05.52,0:11:10.89,Sub,,0,0,0,,Now, when you think about the trajectory of what were the capabilities of a Waymo driver,
+Dialogue: 0,0:11:10.94,0:11:16.75,Sub,,0,0,0,,right, this is a video from 2009 and maps that we actually drove, right?
+Dialogue: 0,0:11:16.80,0:11:23.20,Sub,,0,0,0,,These were kind of 10 times 100 mile challenge routes, right, that Google founders gave us.
+Dialogue: 0,0:11:23.25,0:11:28.19,Sub,,0,0,0,,And the goal was to drive these routes with zero disengages.
+Dialogue: 0,0:11:28.24,0:11:33.69,Sub,,0,0,0,,And as you can see from the maps or the videos, these are actually pretty complicated routes, right?
+Dialogue: 0,0:11:33.74,0:11:40.43,Sub,,0,0,0,,Traffic lights, lane changes, pedestrians, bicyclists, toll booths, bridges, right?
+Dialogue: 0,0:11:40.48,0:11:41.70,Sub,,0,0,0,,All kinds of things.
+Dialogue: 0,0:11:41.75,0:11:46.67,Sub,,0,0,0,,And within about 18 months, we we had this working, right?
+Dialogue: 0,0:11:46.72,0:11:49.01,Sub,,0,0,0,,Which of course gave us tremendous confidence.
+Dialogue: 0,0:11:49.06,0:11:51.55,Sub,,0,0,0,,Hey, we can build self-driving cars.
+Dialogue: 0,0:11:51.60,0:11:54.42,Sub,,0,0,0,,But it's really a demo, right?
+Dialogue: 0,0:11:54.47,0:11:56.47,Sub,,0,0,0,,A very capable demo.
+Dialogue: 0,0:11:56.52,0:12:02.44,Sub,,0,0,0,,Um but it is not fully self-driving right we still had a safety driver in the driver's seat.
+Dialogue: 0,0:12:02.49,0:12:08.59,Sub,,0,0,0,,Now technology-wise you can think right this is a time when we were using boosted decision trees random
+Dialogue: 0,0:12:08.64,0:12:17.38,Sub,,0,0,0,,forests right CNNs um transformers world models right these things didn't exist yet right so this is all based
+Dialogue: 0,0:12:17.43,0:12:29.03,Sub,,0,0,0,,on sort of pre pre new ML um technologies so where are we today right like 2009ish we we
+Dialogue: 0,0:12:29.08,0:12:37.74,Sub,,0,0,0,,completed those demos um it took us a good amount of time to get to fully driverless from there.
+Dialogue: 0,0:12:37.79,0:12:41.45,Sub,,0,0,0,,Um, and then even more time to really deploy at scale.
+Dialogue: 0,0:12:41.50,0:12:44.15,Sub,,0,0,0,,And you can see where we are today.
+Dialogue: 0,0:12:44.20,0:12:48.26,Sub,,0,0,0,,We've driven over 200 million miles fully autonomously, right?
+Dialogue: 0,0:12:48.31,0:12:52.99,Sub,,0,0,0,,These are these are rides that users use the app and take.
+Dialogue: 0,0:12:53.04,0:12:56.21,Sub,,0,0,0,,Um, we we are operating in 15 cities.
+Dialogue: 0,0:12:56.26,0:12:59.98,Sub,,0,0,0,,And just to think about the growth curve here, right?
+Dialogue: 0,0:13:00.03,0:13:05.04,Sub,,0,0,0,,Our first 100 million miles took about 15 years.
+Dialogue: 0,0:13:05.09,0:13:08.83,Sub,,0,0,0,,Um our second 100 million miles took about 7 months.
+Dialogue: 0,0:13:08.88,0:13:14.83,Sub,,0,0,0,,Um cities right from the time we did our first fully autonomous
+Dialogue: 0,0:13:14.88,0:13:22.48,Sub,,0,0,0,,driving mile um until we were in four cities took about eight years.
+Dialogue: 0,0:13:22.54,0:13:26.62,Sub,,0,0,0,,Just a few months ago, we launched in four cities in a single day.
+Dialogue: 0,0:13:26.67,0:13:27.05,Sub,,0,0,0,,Right?
+Dialogue: 0,0:13:27.08,0:13:32.53,Sub,,0,0,0,,So, we're at this inflection point where the technology has really matured.
+Dialogue: 0,0:13:32.58,0:13:38.99,Sub,,0,0,0,,Um, it works as fully autonomous technology and we're able to deploy at scale.
+Dialogue: 0,0:13:39.04,0:13:41.59,Sub,,0,0,0,,So, what's one of the things to think about here, right?
+Dialogue: 0,0:13:41.64,0:13:44.95,Sub,,0,0,0,,Like when you when you think about physical AI, right?
+Dialogue: 0,0:13:45.00,0:13:47.59,Sub,,0,0,0,,It it often is fairly easy.
+Dialogue: 0,0:13:47.64,0:13:53.70,Sub,,0,0,0,,um or maybe not easy, can still be hard, but you can get to a demo fairly quickly, right?
+Dialogue: 0,0:13:53.75,0:13:56.27,Sub,,0,0,0,,And these can be pretty impressive demos.
+Dialogue: 0,0:13:56.32,0:14:03.05,Sub,,0,0,0,,But when you think about the product, and this whether it's robotics or self-driving cars or industrial controls, right?
+Dialogue: 0,0:14:03.10,0:14:07.75,Sub,,0,0,0,,Like very complicated systems that interact with the physical world, right?
+Dialogue: 0,0:14:07.80,0:14:16.59,Sub,,0,0,0,,Making sure that all those full stack of nines are solved for is critical to have a product, right?
+Dialogue: 0,0:14:16.64,0:14:18.84,Sub,,0,0,0,,And that's that's the journey we've been on here.
+Dialogue: 0,0:14:18.89,0:14:21.84,Sub,,0,0,0,,And of course there's many parts to the system.
+Dialogue: 0,0:14:21.89,0:14:28.59,Sub,,0,0,0,,Um compute is one area where where we've of course helped make that happen.
+Dialogue: 0,0:14:28.64,0:14:34.86,Sub,,0,0,0,,Now from a design philosophy standpoint, um we often think about these curves, right?
+Dialogue: 0,0:14:34.91,0:14:40.46,Sub,,0,0,0,,Like you you pick a technology and you know there's going to be a fairly quick ramp, right?
+Dialogue: 0,0:14:40.51,0:14:41.78,Sub,,0,0,0,,You can make progress.
+Dialogue: 0,0:14:41.83,0:14:47.46,Sub,,0,0,0,,you improve performance of a system whether it's reliability or scene understanding.
+Dialogue: 0,0:14:47.51,0:14:51.42,Sub,,0,0,0,,Um and then at some point the curve flatlines.
+Dialogue: 0,0:14:51.47,0:14:56.84,Sub,,0,0,0,,Um and for us we we've generally made the decision to make the the longer term
+Dialogue: 0,0:14:56.89,0:15:03.96,Sub,,0,0,0,,harder harder bets to achieve kind of the the best best possible outcome that we can envision.
+Dialogue: 0,0:15:04.01,0:15:11.41,Sub,,0,0,0,,And often times that means right adding more things to our car, adding complexity, solving hard harder problems.
+Dialogue: 0,0:15:11.46,0:15:14.90,Sub,,0,0,0,,But our goal really is to have a superhuman driver.
+Dialogue: 0,0:15:14.95,0:15:21.55,Sub,,0,0,0,,And the only way we can accomplish that is by aiming really as high as we can on these curves.
+Dialogue: 0,0:15:21.60,0:15:26.60,Sub,,0,0,0,,And one classic example for that is when you think about the sensing systems, right?
+Dialogue: 0,0:15:26.65,0:15:30.27,Sub,,0,0,0,,All of you have probably seen some forms of discussion, right?
+Dialogue: 0,0:15:30.32,0:15:33.55,Sub,,0,0,0,,Should you have cars with camera only systems?
+Dialogue: 0,0:15:33.60,0:15:36.22,Sub,,0,0,0,,Why are other sensors may be needed?
+Dialogue: 0,0:15:36.27,0:15:40.27,Sub,,0,0,0,,Um, and you can reference, well, humans drive with two eyes.
+Dialogue: 0,0:15:40.32,0:15:43.95,Sub,,0,0,0,,Um, why should a car not drive with two eyes?
+Dialogue: 0,0:15:44.00,0:15:46.67,Sub,,0,0,0,,And the answer is actually pretty easy, right?
+Dialogue: 0,0:15:46.72,0:15:53.31,Sub,,0,0,0,,Like we want a superhuman driver, a driver that has far fewer incidents as a human does.
+Dialogue: 0,0:15:53.36,0:15:57.77,Sub,,0,0,0,,And so having having the additional technologies to assist there, right,
+Dialogue: 0,0:15:57.82,0:16:03.14,Sub,,0,0,0,,definitely adds complexity to our cars but dramatically boosts the performance.
+Dialogue: 0,0:16:03.19,0:16:06.35,Sub,,0,0,0,,And so these are kind of the decisions we make, right?
+Dialogue: 0,0:16:06.40,0:16:11.32,Sub,,0,0,0,,Technologies change over time and we we swap, we make different decisions,
+Dialogue: 0,0:16:11.37,0:16:21.63,Sub,,0,0,0,,but our goal always is to really be at the maximum performance level to deliver the best driver that we can.
+Dialogue: 0,0:16:21.68,0:16:24.62,Sub,,0,0,0,,So looking at the the Waymo driver a little bit.
+Dialogue: 0,0:16:24.67,0:16:32.12,Sub,,0,0,0,,Um it's a combination of course of a hardware suite and and a software suite.
+Dialogue: 0,0:16:32.17,0:16:36.14,Sub,,0,0,0,,Um here we we look at the the vehicle itself.
+Dialogue: 0,0:16:36.19,0:16:38.58,Sub,,0,0,0,,We we have multimodal sensors.
+Dialogue: 0,0:16:38.63,0:16:43.07,Sub,,0,0,0,,We have cameras, radars, lidars and microphones.
+Dialogue: 0,0:16:43.12,0:16:45.52,Sub,,0,0,0,,Then as you'll see in the trunk is our computer.
+Dialogue: 0,0:16:45.57,0:16:49.23,Sub,,0,0,0,,These are all sensors that complement each other.
+Dialogue: 0,0:16:49.28,0:16:49.79,Sub,,0,0,0,,Right?
+Dialogue: 0,0:16:49.84,0:16:53.40,Sub,,0,0,0,,We we have sort of our sensor fusion networks.
+Dialogue: 0,0:16:53.45,0:16:56.44,Sub,,0,0,0,,We have encoders for each of the sensors.
+Dialogue: 0,0:16:56.50,0:16:58.68,Sub,,0,0,0,,A sensor fusion network combines them.
+Dialogue: 0,0:16:58.73,0:17:02.13,Sub,,0,0,0,,And so we get a holistic view of of the overall world.
+Dialogue: 0,0:17:02.18,0:17:08.39,Sub,,0,0,0,,And each of the sensors, right, depending on the scene is of course contributing different amounts of data to that.
+Dialogue: 0,0:17:08.44,0:17:16.66,Sub,,0,0,0,,And if you think about the sensors, right, like we have high high resolution cameras, they can see color, but it's a passive sensor, right?
+Dialogue: 0,0:17:16.70,0:17:22.20,Sub,,0,0,0,,if it's dark, if you're looking into a really glaring sun, it may not be the optimal sensor.
+Dialogue: 0,0:17:22.25,0:17:27.63,Sub,,0,0,0,,And so their lidar and radar can complement things really well.
+Dialogue: 0,0:17:27.68,0:17:29.65,Sub,,0,0,0,,And just to go through an example of that.
+Dialogue: 0,0:17:29.70,0:17:32.53,Sub,,0,0,0,,Um, so here here we're showing an image.
+Dialogue: 0,0:17:32.58,0:17:35.60,Sub,,0,0,0,,Um, it's in a dust storm in Phoenix, right?
+Dialogue: 0,0:17:35.65,0:17:40.02,Sub,,0,0,0,,You can you can look at it and kind of see the car in front of you.
+Dialogue: 0,0:17:40.07,0:17:44.42,Sub,,0,0,0,,So maybe not that bad, but then you add lidar to it, right?
+Dialogue: 0,0:17:44.47,0:17:47.90,Sub,,0,0,0,,And you see there's a pedestrian right at the side of a road.
+Dialogue: 0,0:17:47.96,0:17:52.43,Sub,,0,0,0,,And using this information, we of course know to be cautious, right?
+Dialogue: 0,0:17:52.48,0:17:55.98,Sub,,0,0,0,,Like that pedestrian may not actually be able to see our car, right?
+Dialogue: 0,0:17:56.03,0:17:57.29,Sub,,0,0,0,,This is a dust storm.
+Dialogue: 0,0:17:57.34,0:18:00.12,Sub,,0,0,0,,They may take a step into the road, right?
+Dialogue: 0,0:18:00.17,0:18:03.42,Sub,,0,0,0,,And so having that visibility is is of course
+Dialogue: 0,0:18:03.47,0:18:05.10,Sub,,0,0,0,,really important when you want
+Dialogue: 0,0:18:05.15,0:18:05.63,Sub,,0,0,0,,the safest
+Dialogue: 0,0:18:05.68,0:18:11.75,Sub,,0,0,0,,driver
+Dialogue: 0,0:18:11.80,0:18:19.63,Sub,,0,0,0,,you can.
+Dialogue: 0,0:18:19.68,0:18:21.22,Sub,,0,0,0,,Here's another example, right?
+Dialogue: 0,0:18:21.27,0:18:26.31,Sub,,0,0,0,,You see the car driving and you see it making sort of a bit of a zigzag, right?
+Dialogue: 0,0:18:26.36,0:18:29.84,Sub,,0,0,0,,You're probably wondering why, right?
+Dialogue: 0,0:18:29.89,0:18:30.68,Sub,,0,0,0,,This is why.
+Dialogue: 0,0:18:30.73,0:18:40.95,Sub,,0,0,0,,Um, there's actually several pedestrians in the median of this freeway that are about to climb over it and go into the road using just cameras.
+Dialogue: 0,0:18:41.00,0:18:43.73,Sub,,0,0,0,,You could not see that, right?
+Dialogue: 0,0:18:43.78,0:18:48.71,Sub,,0,0,0,,And so here you can see the kind of merge sensor view right to the car is very clear, right?
+Dialogue: 0,0:18:48.76,0:18:55.47,Sub,,0,0,0,,There are people climbing into the road and the car should avoid them.
+Dialogue: 0,0:18:55.52,0:18:59.93,Sub,,0,0,0,,Now camera of course is a very important sensor to us as well.
+Dialogue: 0,0:18:59.98,0:19:05.43,Sub,,0,0,0,,Um we have pretty much the best sort of high dynamic range imagers.
+Dialogue: 0,0:19:05.48,0:19:11.57,Sub,,0,0,0,,We do sophisticated image processing right for example temporal d noiseise right also other
+Dialogue: 0,0:19:11.62,0:19:18.59,Sub,,0,0,0,,things to really extract the best information that we can from our camera images.
+Dialogue: 0,0:19:18.64,0:19:26.02,Sub,,0,0,0,,Now given this is a chips related conference um quickly we'll mention right like a lot we will be
+Dialogue: 0,0:19:26.07,0:19:33.81,Sub,,0,0,0,,talking about kind of a bigger compute digital um chips that we build and also others in the industry.
+Dialogue: 0,0:19:33.86,0:19:37.93,Sub,,0,0,0,,Um we we also occasionally build silicon for our sensors.
+Dialogue: 0,0:19:37.98,0:19:45.17,Sub,,0,0,0,,Um one nice example is a sort of a a lidar processing um chip that lives within our lidars.
+Dialogue: 0,0:19:45.22,0:19:47.95,Sub,,0,0,0,,You can think of it as a mixed signal chip, right?
+Dialogue: 0,0:19:48.00,0:19:54.20,Sub,,0,0,0,,Essentially what it's doing is you shoot a laser, it's measuring the time until the pulse returns.
+Dialogue: 0,0:19:54.24,0:19:58.86,Sub,,0,0,0,,Um, and then based on that, you can derive derive distance.
+Dialogue: 0,0:19:58.91,0:20:04.25,Sub,,0,0,0,,Now, one of the interesting things here is when you think about our sensors and ML models,
+Dialogue: 0,0:20:04.30,0:20:10.32,Sub,,0,0,0,,we generally want to ship as much data as we can, right, from the sensors into the ML models.
+Dialogue: 0,0:20:10.38,0:20:13.12,Sub,,0,0,0,,And so there's constant tension, right?
+Dialogue: 0,0:20:13.17,0:20:16.03,Sub,,0,0,0,,like how big of an interconnect can you build in a car?
+Dialogue: 0,0:20:16.08,0:20:18.73,Sub,,0,0,0,,How much data, right, can we cross?
+Dialogue: 0,0:20:18.78,0:20:21.72,Sub,,0,0,0,,Which data should we select in the sensor head?
+Dialogue: 0,0:20:21.77,0:20:25.98,Sub,,0,0,0,,Um and so here showing just a very simplistic view of that, right?
+Dialogue: 0,0:20:26.03,0:20:29.43,Sub,,0,0,0,,Like you can do threshold-based um compression, right?
+Dialogue: 0,0:20:29.48,0:20:33.47,Sub,,0,0,0,,Where we say only only pulses above some level we return.
+Dialogue: 0,0:20:33.52,0:20:39.32,Sub,,0,0,0,,Um but there very sophisticated algorithms and at some point perhaps even ML driven, right?
+Dialogue: 0,0:20:39.37,0:20:48.75,Sub,,0,0,0,,decision making within the sensor heads for what what is the most useful information to pass to the core compute.
+Dialogue: 0,0:20:48.80,0:20:51.09,Sub,,0,0,0,,So let's look at our compute a little bit.
+Dialogue: 0,0:20:51.14,0:20:57.39,Sub,,0,0,0,,Um so physical AI there actually are multiple different compute surfaces.
+Dialogue: 0,0:20:57.44,0:21:01.15,Sub,,0,0,0,,Most of the time we spend on what you see in the top left, right?
+Dialogue: 0,0:21:01.20,0:21:03.24,Sub,,0,0,0,,Our high high performance computer.
+Dialogue: 0,0:21:03.29,0:21:09.55,Sub,,0,0,0,,We call it our our BFC, our big friendly uh computer.
+Dialogue: 0,0:21:09.60,0:21:14.65,Sub,,0,0,0,,Um and so so of course super important.
+Dialogue: 0,0:21:14.70,0:21:17.87,Sub,,0,0,0,,Um but there also are other computers that are very important.
+Dialogue: 0,0:21:17.92,0:21:20.56,Sub,,0,0,0,,Um perhaps even increasingly so, right?
+Dialogue: 0,0:21:20.61,0:21:22.32,Sub,,0,0,0,,One is a control computer.
+Dialogue: 0,0:21:22.37,0:21:26.29,Sub,,0,0,0,,You can think of this a bit of a brain stem of a car, right?
+Dialogue: 0,0:21:26.34,0:21:29.63,Sub,,0,0,0,,like it interfaces with the brakes, the throttle, right?
+Dialogue: 0,0:21:29.68,0:21:33.21,Sub,,0,0,0,,Really making making decisions that actuate the vehicle.
+Dialogue: 0,0:21:33.26,0:21:37.15,Sub,,0,0,0,,And so safety is paramount with that type of computer.
+Dialogue: 0,0:21:37.20,0:21:38.99,Sub,,0,0,0,,We have infotainment, right?
+Dialogue: 0,0:21:39.04,0:21:41.03,Sub,,0,0,0,,Today you go in our cars, right?
+Dialogue: 0,0:21:41.08,0:21:44.85,Sub,,0,0,0,,We have a nice user interface, a touch screen.
+Dialogue: 0,0:21:44.90,0:21:53.14,Sub,,0,0,0,,We've gotten feedback that kind of a visibility you get into what's happening around the car is really important, the voice prompts.
+Dialogue: 0,0:21:53.19,0:21:55.91,Sub,,0,0,0,,But you can also think about the future, right?
+Dialogue: 0,0:21:55.96,0:22:04.82,Sub,,0,0,0,,Where will cars be three, four, five years from now when they're purpose-built for sort of in in vehicle experience when you're not driving the car?
+Dialogue: 0,0:22:04.88,0:22:07.16,Sub,,0,0,0,,And so, lots of opportunities there.
+Dialogue: 0,0:22:07.21,0:22:12.75,Sub,,0,0,0,,Um, of course, integration with a vehicle, but also interesting AI applications.
+Dialogue: 0,0:22:12.80,0:22:16.41,Sub,,0,0,0,,And then the last compute surface I'll mention is connectivity.
+Dialogue: 0,0:22:16.46,0:22:22.14,Sub,,0,0,0,,Um, of course, the car itself makes all the decisions on how it should drive, right?
+Dialogue: 0,0:22:22.19,0:22:24.69,Sub,,0,0,0,,So we we we use local compute.
+Dialogue: 0,0:22:24.74,0:22:28.16,Sub,,0,0,0,,Um we don't don't farm that out to elsewhere.
+Dialogue: 0,0:22:28.21,0:22:30.91,Sub,,0,0,0,,But still connectivity can be important, right?
+Dialogue: 0,0:22:30.96,0:22:33.86,Sub,,0,0,0,,Some of that is just for user interactions, right?
+Dialogue: 0,0:22:33.91,0:22:37.41,Sub,,0,0,0,,You're we've we've announced Gemini in our car.
+Dialogue: 0,0:22:37.46,0:22:42.96,Sub,,0,0,0,,Um other things you want to watch a YouTube video, um play Spotify, right?
+Dialogue: 0,0:22:43.00,0:22:46.99,Sub,,0,0,0,,These are all things that require connectivity.
+Dialogue: 0,0:22:47.04,0:22:48.96,Sub,,0,0,0,,Um also the car calls home, right?
+Dialogue: 0,0:22:49.01,0:22:53.83,Sub,,0,0,0,,just operationally, we want to know where are the cars, are they behaving safely, right?
+Dialogue: 0,0:22:53.88,0:22:54.95,Sub,,0,0,0,,Things like that.
+Dialogue: 0,0:22:55.00,0:22:58.73,Sub,,0,0,0,,And so connectivity is an area we're investing increasingly.
+Dialogue: 0,0:22:58.78,0:23:09.68,Sub,,0,0,0,,Um, and like challenge of course is how do you get connectivity when you hit that long tail in terms of congestion or or sort of multipath problems.
+Dialogue: 0,0:23:09.73,0:23:12.13,Sub,,0,0,0,,Many many challenges we see there.
+Dialogue: 0,0:23:12.18,0:23:15.68,Sub,,0,0,0,,And so I think hopefully this gives you a perspective, right?
+Dialogue: 0,0:23:15.73,0:23:22.06,Sub,,0,0,0,,Similar things apply to I think phys whether you're looking at robotics or or other physical applications right
+Dialogue: 0,0:23:22.11,0:23:31.06,Sub,,0,0,0,,the really high performance compute is is an anchor but there are other compute surfaces that really matter
+Dialogue: 0,0:23:31.11,0:23:38.09,Sub,,0,0,0,,too so let's look at the high performance compute um what does it do so first right we
+Dialogue: 0,0:23:38.14,0:23:47.95,Sub,,0,0,0,,have a sensors cameras, lidars, radars all feed high bandwidth data they feed feed that into into our BFC,
+Dialogue: 0,0:23:48.00,0:23:48.35,Sub,,0,0,0,,right?
+Dialogue: 0,0:23:48.38,0:23:51.07,Sub,,0,0,0,,And that's that's where perception runs, right?
+Dialogue: 0,0:23:51.12,0:23:57.85,Sub,,0,0,0,,Like it understands where we are in the world, what's happening around the vehicle and then makes the decisions, right?
+Dialogue: 0,0:23:57.90,0:24:00.87,Sub,,0,0,0,,Based on what it predicts, other agents will do, right?
+Dialogue: 0,0:24:00.92,0:24:04.69,Sub,,0,0,0,,It will decide what what the next action should be.
+Dialogue: 0,0:24:04.74,0:24:08.07,Sub,,0,0,0,,And tra us usually the output is a trajectory, right?
+Dialogue: 0,0:24:08.12,0:24:18.59,Sub,,0,0,0,,car should move along a certain path at a certain velocity profile and then that moves into our control computer and vehicle actuation, right?
+Dialogue: 0,0:24:18.64,0:24:26.51,Sub,,0,0,0,,Which actually kind of performs the physical operations of a vehicle.
+Dialogue: 0,0:24:26.56,0:24:28.77,Sub,,0,0,0,,This is what our compute looked like in 2013.
+Dialogue: 0,0:24:28.82,0:24:34.96,Sub,,0,0,0,,Um, some of the most fun times, um, but also clearly not scalable.
+Dialogue: 0,0:24:35.01,0:24:42.86,Sub,,0,0,0,,Um, so we we often puzzle together these we call them duct tape systems um to experiment to make sure that things work.
+Dialogue: 0,0:24:42.91,0:24:45.80,Sub,,0,0,0,,Um, in this case we'd actually drive around with it.
+Dialogue: 0,0:24:45.85,0:24:47.52,Sub,,0,0,0,,We don't do that anymore.
+Dialogue: 0,0:24:47.57,0:24:55.55,Sub,,0,0,0,,Um, but we today we have lab setups that that look at least a little bit similar to this.
+Dialogue: 0,0:24:55.60,0:25:01.92,Sub,,0,0,0,,Today our compute, right, like we work with a car companies, we have an amazing mechanical engineering team, right?
+Dialogue: 0,0:25:01.97,0:25:04.76,Sub,,0,0,0,,They they think about how to integrate everything, right?
+Dialogue: 0,0:25:04.81,0:25:09.35,Sub,,0,0,0,,Like we have liquid cooling, we have high power connections, tons of sensor cables.
+Dialogue: 0,0:25:09.40,0:25:13.20,Sub,,0,0,0,,You can see these compute modules stacked on top of each other, right?
+Dialogue: 0,0:25:13.26,0:25:19.05,Sub,,0,0,0,,And always sort of with attention of making sure we we leave enough trunk space for golf clubs
+Dialogue: 0,0:25:19.10,0:25:25.34,Sub,,0,0,0,,or suitcases or what the product team needs for
+Dialogue: 0,0:25:25.39,0:25:31.35,Sub,,0,0,0,,kind of constraints or challenges when we build the compute.
+Dialogue: 0,0:25:31.40,0:25:39.41,Sub,,0,0,0,,Um, like we we we really care about resilience, right?
+Dialogue: 0,0:25:39.46,0:25:42.17,Sub,,0,0,0,,And a lot of this is user experience, right?
+Dialogue: 0,0:25:42.22,0:25:49.19,Sub,,0,0,0,,You don't want parts that fail, even if they fail and were safe if it leads to degraded performance, right?
+Dialogue: 0,0:25:49.24,0:25:52.06,Sub,,0,0,0,,Is often a a hit on the user experience.
+Dialogue: 0,0:25:52.11,0:25:57.39,Sub,,0,0,0,,And so we want components that that will really live through the harshest environments.
+Dialogue: 0,0:25:57.44,0:26:01.37,Sub,,0,0,0,,And this applies to cars, also applies to anything else, right?
+Dialogue: 0,0:26:01.42,0:26:03.79,Sub,,0,0,0,,You're building for the physical world, right?
+Dialogue: 0,0:26:03.84,0:26:09.38,Sub,,0,0,0,,Robots will will get wet um or go into freezing temperatures.
+Dialogue: 0,0:26:09.43,0:26:11.70,Sub,,0,0,0,,Um and so we do a lot of testing.
+Dialogue: 0,0:26:11.75,0:26:14.58,Sub,,0,0,0,,We we typically do the testing at the module level.
+Dialogue: 0,0:26:14.63,0:26:17.25,Sub,,0,0,0,,We also do a lot of vehicle level testing, right?
+Dialogue: 0,0:26:17.30,0:26:23.42,Sub,,0,0,0,,We'll take the cars out into the desert or kind of go racing around tracks in the snow.
+Dialogue: 0,0:26:23.48,0:26:26.24,Sub,,0,0,0,,Um so lot lots of different things to make we
+Dialogue: 0,0:26:26.29,0:26:36.88,Sub,,0,0,0,,make sure that the systems are robust redundancy also really important.
+Dialogue: 0,0:26:36.93,0:26:39.06,Sub,,0,0,0,,Um you can probably guess what's happening here.
+Dialogue: 0,0:26:39.11,0:26:46.64,Sub,,0,0,0,,We we're cutting kind of our main power to to our core compute and you'll see the the car continues operating safely.
+Dialogue: 0,0:26:46.69,0:26:56.08,Sub,,0,0,0,,And this doesn't mean we we do full redundant compute of everything, but we design the system to to have redundancy built in, right?
+Dialogue: 0,0:26:56.13,0:26:58.86,Sub,,0,0,0,,And it may mean degraded capability, right?
+Dialogue: 0,0:26:58.91,0:27:09.39,Sub,,0,0,0,,You you cut power to to one portion of a system, but you're able to carry over and and operate on a different portion of them.
+Dialogue: 0,0:27:09.44,0:27:11.15,Sub,,0,0,0,,Then there's performance, right?
+Dialogue: 0,0:27:11.20,0:27:17.11,Sub,,0,0,0,,performance is really what we we spend most of our time on within the team and sort of in the compute
+Dialogue: 0,0:27:17.16,0:27:25.81,Sub,,0,0,0,,context and here it's it is always very clear more performance allows our software teams to do better stuff um and so
+Dialogue: 0,0:27:25.86,0:27:34.03,Sub,,0,0,0,,so we work hard on that um the the three key things we plotted here right is CPU GPU and ML
+Dialogue: 0,0:27:34.08,0:27:42.70,Sub,,0,0,0,,and ML right probably not unexpected has followed a very good trajectory um in many ways sim similar to data center capabilities,
+Dialogue: 0,0:27:42.75,0:27:43.01,Sub,,0,0,0,,right?
+Dialogue: 0,0:27:43.04,0:27:51.93,Sub,,0,0,0,,If you look at the biggest chips, um how they've scaled, we've been able to scale the ML capability in the car very aggressively as well.
+Dialogue: 0,0:27:51.98,0:27:56.14,Sub,,0,0,0,,And then CPU and GPU have fluctuated a little bit.
+Dialogue: 0,0:27:56.19,0:28:02.97,Sub,,0,0,0,,I mentioned CPU was was kind of a really important compute element for a long time, continues to be.
+Dialogue: 0,0:28:03.02,0:28:07.31,Sub,,0,0,0,,Um but some of the CPU workload has been replaced by ML.
+Dialogue: 0,0:28:07.36,0:28:09.08,Sub,,0,0,0,,Similarly with GPU, right?
+Dialogue: 0,0:28:09.13,0:28:16.97,Sub,,0,0,0,,We we do do GPGPU compute um for some of our workloads and that bounces up and down a little bit.
+Dialogue: 0,0:28:17.02,0:28:24.84,Sub,,0,0,0,,Um so I think overall trend right like at least what we're seeing here is kind of CPU and GPGPU fairly flat.
+Dialogue: 0,0:28:24.89,0:28:34.83,Sub,,0,0,0,,Um ML continues to just be an insatiable demand for for more compute in the cars.
+Dialogue: 0,0:28:34.88,0:28:44.56,Sub,,0,0,0,,And when you come back to these curves, right, like how does it tie in from an effort and and really vehicle performance perspective, right?
+Dialogue: 0,0:28:44.61,0:28:48.15,Sub,,0,0,0,,More compute helps in two different ways, right?
+Dialogue: 0,0:28:48.20,0:28:50.20,Sub,,0,0,0,,One is software developer velocity.
+Dialogue: 0,0:28:50.25,0:28:57.68,Sub,,0,0,0,,If we're not constantly struggling with improving performance and making things hit our latency targets, it helps, right?
+Dialogue: 0,0:28:57.74,0:29:00.04,Sub,,0,0,0,,We're able to land our CLS faster.
+Dialogue: 0,0:29:00.09,0:29:02.99,Sub,,0,0,0,,They can try more aggressive algorithms.
+Dialogue: 0,0:29:03.04,0:29:06.27,Sub,,0,0,0,,And so definitely one big win we've had.
+Dialogue: 0,0:29:06.32,0:29:11.90,Sub,,0,0,0,,And of course on the ML side larger models right like we're we're able
+Dialogue: 0,0:29:11.95,0:29:19.79,Sub,,0,0,0,,to train larger models and as with many industries that leads to improved driver performance.
+Dialogue: 0,0:29:19.84,0:29:27.75,Sub,,0,0,0,,Now increasingly we're also investing in sort of opposite direction right like we we we will be scaling a
+Dialogue: 0,0:29:27.80,0:29:33.95,Sub,,0,0,0,,lot um you can think of cars you can think of robots right kind of anything in this space has
+Dialogue: 0,0:29:34.00,0:29:41.23,Sub,,0,0,0,,a just enormous market potential um and with that there's of course economic pressures right how do you how do
+Dialogue: 0,0:29:41.28,0:29:50.09,Sub,,0,0,0,,you really fit all the capability in a smaller cost footprint and so very increasingly we're investing into optimization efforts.
+Dialogue: 0,0:29:50.14,0:29:51.66,Sub,,0,0,0,,Some of that is silicon,
+Dialogue: 0,0:29:51.71,0:30:02.11,Sub,,0,0,0,,a lot of that is also software to make sure that we're optimizing the stack really for for for our needs.
+Dialogue: 0,0:30:02.16,0:30:04.42,Sub,,0,0,0,,Now, what does this practically look like, right?
+Dialogue: 0,0:30:04.47,0:30:11.32,Sub,,0,0,0,,Like we when we look at our workloads, we don't actually have like a single number that tells us how fast we are.
+Dialogue: 0,0:30:11.37,0:30:20.12,Sub,,0,0,0,,Most of our things are kind of probability distributions where how long things take on the car vary quite
+Dialogue: 0,0:30:20.17,0:30:27.03,Sub,,0,0,0,,a bit right can be seen dependent can be how things are scheduled and batched right so could be how
+Dialogue: 0,0:30:27.08,0:30:32.43,Sub,,0,0,0,,many agents are in the world if you're at a busy intersection with lots of things happening there's a different
+Dialogue: 0,0:30:32.48,0:30:40.99,Sub,,0,0,0,,compute load than perhaps being on a freeway right with no traffic so so there's there's pretty high variability there.
+Dialogue: 0,0:30:41.04,0:30:44.88,Sub,,0,0,0,,We put a lot of effort into pushing down the average.
+Dialogue: 0,0:30:44.93,0:30:48.27,Sub,,0,0,0,,Um, we also put a lot of effort into flattening it, right?
+Dialogue: 0,0:30:48.32,0:30:53.95,Sub,,0,0,0,,Because a flatter system just is easy easier for us to schedule and reason about.
+Dialogue: 0,0:30:54.00,0:30:57.93,Sub,,0,0,0,,Now, things we can do there, right?
+Dialogue: 0,0:30:57.98,0:31:05.31,Sub,,0,0,0,,Like obviously there's a lot on the software side we do um but also on the hardware side.
+Dialogue: 0,0:31:05.36,0:31:09.87,Sub,,0,0,0,,Now this is the high performance computer I talked about.
+Dialogue: 0,0:31:09.92,0:31:15.37,Sub,,0,0,0,,When we look inside, right, it's really partitioned in the the key areas I mentioned.
+Dialogue: 0,0:31:15.42,0:31:17.88,Sub,,0,0,0,,We we have a power system, right?
+Dialogue: 0,0:31:17.93,0:31:24.06,Sub,,0,0,0,,Most of our power comes from the vehicle is not not the pristine power we'd always like.
+Dialogue: 0,0:31:24.10,0:31:27.80,Sub,,0,0,0,,Um we have a sensor processing interface.
+Dialogue: 0,0:31:27.85,0:31:33.36,Sub,,0,0,0,,Um so that's that is able to accept all the sensor data, do some early ML fusion.
+Dialogue: 0,0:31:33.41,0:31:41.51,Sub,,0,0,0,,we have high performance CPU subsystem and then we we have ML and GPGPU accelerators.
+Dialogue: 0,0:31:41.56,0:31:47.26,Sub,,0,0,0,,Um so you can think of these roughly as as proportional sizes to the circuit boards we have.
+Dialogue: 0,0:31:47.32,0:31:50.14,Sub,,0,0,0,,Um not all of this is compute, right?
+Dialogue: 0,0:31:50.19,0:31:54.11,Sub,,0,0,0,,There's also a fair amount of interface logic, a lot of memory chips.
+Dialogue: 0,0:31:54.16,0:31:59.39,Sub,,0,0,0,,Um but gives you a rough idea of how things are partitioned in the system.
+Dialogue: 0,0:31:59.44,0:32:05.40,Sub,,0,0,0,,Now when you think of a system overall, one thing we do is we have AB sides, right?
+Dialogue: 0,0:32:05.45,0:32:12.84,Sub,,0,0,0,,So there's a cold plate, a liquid cooled cold plate in the center of this and we we mirror the the hardware on the other side.
+Dialogue: 0,0:32:12.89,0:32:18.09,Sub,,0,0,0,,And most of the time we're using both of those sides to hand over the full workload, right?
+Dialogue: 0,0:32:18.14,0:32:22.42,Sub,,0,0,0,,But occasionally, right, like in my example where someone cut the power,
+Dialogue: 0,0:32:22.46,0:32:30.79,Sub,,0,0,0,,we're able to fail over to either a single A or a single B side to to operate in perhaps a somewhat degraded mode,
+Dialogue: 0,0:32:30.84,0:32:38.03,Sub,,0,0,0,,but still safe mode and either complete the mission or for example pull over to a gas station.
+Dialogue: 0,0:32:38.08,0:32:43.21,Sub,,0,0,0,,And sort of this redundancy of course is important from a compute element perspective.
+Dialogue: 0,0:32:43.26,0:32:48.78,Sub,,0,0,0,,Also really critical from a sensor connectivity perspective. um power perspective.
+Dialogue: 0,0:32:48.83,0:32:53.60,Sub,,0,0,0,,So throughout the system, we think about do we have redundancy?
+Dialogue: 0,0:32:53.65,0:32:57.36,Sub,,0,0,0,,If things fail, is there something else that covers it?
+Dialogue: 0,0:32:57.42,0:33:05.13,Sub,,0,0,0,,Um right, could be a sensor, maybe a camera fails, could be another camera that has sort of a field of view overlap.
+Dialogue: 0,0:33:05.18,0:33:09.90,Sub,,0,0,0,,Could be a case where we can rely on radar, lidar for a short amount of time.
+Dialogue: 0,0:33:09.95,0:33:11.46,Sub,,0,0,0,,So throughout the system,
+Dialogue: 0,0:33:11.51,0:33:13.71,Sub,,0,0,0,,we think deeply about redundancy
+Dialogue: 0,0:33:13.76,0:33:18.86,Sub,,0,0,0,,and how we
+Dialogue: 0,0:33:18.91,0:33:26.83,Sub,,0,0,0,,cover from that.
+Dialogue: 0,0:33:26.88,0:33:31.31,Sub,,0,0,0,,This gives you a picture of of kind of how our compute pipeline works.
+Dialogue: 0,0:33:31.36,0:33:33.70,Sub,,0,0,0,,Um, sensor data comes in, right?
+Dialogue: 0,0:33:33.75,0:33:36.75,Sub,,0,0,0,,Kind of ISP, DSP, accelerators, right?
+Dialogue: 0,0:33:36.80,0:33:41.13,Sub,,0,0,0,,Munch job that data to make it processable.
+Dialogue: 0,0:33:41.18,0:33:44.11,Sub,,0,0,0,,Um, some of that goes through GPGPU as well.
+Dialogue: 0,0:33:44.16,0:33:51.47,Sub,,0,0,0,,And then we have a set of ML models, right, that that encode that data and and do fusion.
+Dialogue: 0,0:33:51.52,0:33:56.14,Sub,,0,0,0,,Then we have sort of really really big ML um that does more stuff.
+Dialogue: 0,0:33:56.19,0:33:59.91,Sub,,0,0,0,,And then we have a couple stages of optimizers and validators.
+Dialogue: 0,0:33:59.96,0:34:02.93,Sub,,0,0,0,,And these are really critical, right?
+Dialogue: 0,0:34:02.98,0:34:09.15,Sub,,0,0,0,,Optimization can can sometimes find better solutions, right, for user comfort or other items.
+Dialogue: 0,0:34:09.20,0:34:14.15,Sub,,0,0,0,,Validation really important for us from a safety perspective, right?
+Dialogue: 0,0:34:14.20,0:34:23.79,Sub,,0,0,0,,like we we don't take ML models directly um but double check that everything is safe around their outputs.
+Dialogue: 0,0:34:23.84,0:34:29.55,Sub,,0,0,0,,Um within the hardware we we also do a lot of other checking right we have error checking we have
+Dialogue: 0,0:34:29.60,0:34:40.27,Sub,,0,0,0,,software test libraries um most of our own silicon and partner silicon has sort of self-checking capabilities built into their circuits.
+Dialogue: 0,0:34:40.32,0:34:45.23,Sub,,0,0,0,,So a lot of things right we're pushing on and in some cases also moving into data
+Dialogue: 0,0:34:45.28,0:34:53.95,Sub,,0,0,0,,center right that improve the safety and reliability and detectability of faults within these types of pipelines.
+Dialogue: 0,0:34:54.00,0:34:57.76,Sub,,0,0,0,,I'll call out kind of a CPU component a little bit, right?
+Dialogue: 0,0:34:57.81,0:35:02.27,Sub,,0,0,0,,Like I mentioned, we we while CPU has gone down a little bit,
+Dialogue: 0,0:35:02.32,0:35:08.59,Sub,,0,0,0,,um it continues to be a really important part of our compute, part of that is just orchestration and scheduling.
+Dialogue: 0,0:35:08.64,0:35:11.91,Sub,,0,0,0,,There are a lot of decisions that need to be made fairly quickly.
+Dialogue: 0,0:35:11.96,0:35:15.33,Sub,,0,0,0,,There's a lot of data that moves around the system, right?
+Dialogue: 0,0:35:15.38,0:35:22.75,Sub,,0,0,0,,And CPUs tend to be a very good substrate for us to implement some of those things.
+Dialogue: 0,0:35:22.80,0:35:31.27,Sub,,0,0,0,,Now this box here right kind of ISP um early sensor processing and fusion um is something we've actually built a
+Dialogue: 0,0:35:31.32,0:35:39.45,Sub,,0,0,0,,chip around and Sabareesh and Pieter are giving a talk a little bit later right we'll dive into many more of these
+Dialogue: 0,0:35:39.50,0:35:45.49,Sub,,0,0,0,,details um but to me is always super cool right you look at this type of picture and it's like wow this
+Dialogue: 0,0:35:45.54,0:35:52.83,Sub,,0,0,0,,chip is actually like driving a good chunk of a car um so really proud proud of what we've gotten done there.
+Dialogue: 0,0:35:52.88,0:35:57.81,Sub,,0,0,0,,Um, and it's it's it's just really cool technology.
+Dialogue: 0,0:35:57.86,0:36:02.42,Sub,,0,0,0,,Um, and like maybe first off, why why do we build this type of chip, right?
+Dialogue: 0,0:36:02.47,0:36:05.95,Sub,,0,0,0,,Like one is we're we're really implementing unique capabilities.
+Dialogue: 0,0:36:06.00,0:36:12.61,Sub,,0,0,0,,You see, we we know a lot about our sensors, the data products they produce, and pushing on the latency is critical.
+Dialogue: 0,0:36:12.66,0:36:21.68,Sub,,0,0,0,,Everything we can squeeze out of that latency, right, from pixels until they hit our real ML models, right, is things we can put into the ML pipeline.
+Dialogue: 0,0:36:21.73,0:36:25.40,Sub,,0,0,0,,So, optimizing that latency really important.
+Dialogue: 0,0:36:25.45,0:36:28.85,Sub,,0,0,0,,Um, we've implemented some really innovative algorithms, right?
+Dialogue: 0,0:36:28.90,0:36:31.24,Sub,,0,0,0,,Like I gave a camera example, right?
+Dialogue: 0,0:36:31.29,0:36:34.67,Sub,,0,0,0,,We want the best SNR that we can from our sensors, right?
+Dialogue: 0,0:36:34.72,0:36:39.83,Sub,,0,0,0,,Extract every last bit of information to build the safest system that we can.
+Dialogue: 0,0:36:39.88,0:36:46.27,Sub,,0,0,0,,And then there is a slice of ML in these chips as well very much tailored towards low latency, right?
+Dialogue: 0,0:36:46.32,0:36:48.50,Sub,,0,0,0,,Like we want to get the pixels in.
+Dialogue: 0,0:36:48.55,0:36:58.35,Sub,,0,0,0,,We want to have objects or embeddings come out as fast as we can so that they can feed into the bigger models.
+Dialogue: 0,0:36:58.40,0:37:03.42,Sub,,0,0,0,,One small example, right, that that maybe motivate this.
+Dialogue: 0,0:37:03.47,0:37:11.71,Sub,,0,0,0,,Um if you think of a world, right, it's mostly free space. um our lidars produce point clouds, right?
+Dialogue: 0,0:37:11.76,0:37:15.31,Sub,,0,0,0,,So a very very sparse representation.
+Dialogue: 0,0:37:15.36,0:37:19.24,Sub,,0,0,0,,All our ML hardware loves dense matrices, right?
+Dialogue: 0,0:37:19.29,0:37:24.26,Sub,,0,0,0,,And so there's always a question, how do we transform these sparse representations, right?
+Dialogue: 0,0:37:24.31,0:37:34.57,Sub,,0,0,0,,Whether it's 3D worlds or in some cases also 2D worlds into dense representations that run efficiently on AI hardware, right?
+Dialogue: 0,0:37:34.62,0:37:37.25,Sub,,0,0,0,,And so there some of it is algorithmic, right?
+Dialogue: 0,0:37:37.30,0:37:38.43,Sub,,0,0,0,,How do we bin things?
+Dialogue: 0,0:37:38.48,0:37:40.15,Sub,,0,0,0,,How do we create the data structure?
+Dialogue: 0,0:37:40.20,0:37:43.63,Sub,,0,0,0,,Some of it is very very simple hardware mechanisms, right?
+Dialogue: 0,0:37:43.68,0:37:48.71,Sub,,0,0,0,,Scatter gather or derivatives of it which from a TOPS perspective of course don't
+Dialogue: 0,0:37:48.76,0:37:56.19,Sub,,0,0,0,,add anything to a chip but from an achieved performance perspective have a tremendous impact.
+Dialogue: 0,0:37:56.24,0:38:03.85,Sub,,0,0,0,,Other area of course is software and here every one of these areas makes a big difference right like we we very much
+Dialogue: 0,0:38:03.90,0:38:08.02,Sub,,0,0,0,,have a philosophy of co-design and so whether it's it's working
+Dialogue: 0,0:38:08.07,0:38:13.27,Sub,,0,0,0,,like compiler engineers with model developers model developers with architects right we
+Dialogue: 0,0:38:13.32,0:38:21.15,Sub,,0,0,0,,very much embody the co-design spirit and many opportunities there right some of that is with our own silicon a lot of it
+Dialogue: 0,0:38:21.20,0:38:31.31,Sub,,0,0,0,,also with partner silicon right so in both cases co-design can make a huge difference in terms of a performance we're able to achieve.
+Dialogue: 0,0:38:31.36,0:38:38.66,Sub,,0,0,0,,So maybe from a compute side right just to recap right most of you probably working on the data center
+Dialogue: 0,0:38:38.71,0:38:46.52,Sub,,0,0,0,,side um so few things I'll call out right so performance you've probably heard loud and clear latency really matters
+Dialogue: 0,0:38:46.57,0:38:54.28,Sub,,0,0,0,,a lot to us um latency matters in data center these days as well so what's really the difference well
+Dialogue: 0,0:38:54.33,0:39:01.26,Sub,,0,0,0,,the real implementations of course vary a lot right if you think about what's happening in data center these days,
+Dialogue: 0,0:39:01.31,0:39:01.79,Sub,,0,0,0,,right?
+Dialogue: 0,0:39:01.84,0:39:08.80,Sub,,0,0,0,,Racks and racks full of enormous chips with enormous memory bandwidth with batching, right?
+Dialogue: 0,0:39:08.85,0:39:11.93,Sub,,0,0,0,,Running on enormous networks in our car.
+Dialogue: 0,0:39:11.98,0:39:17.27,Sub,,0,0,0,,We need to solve these same problems with one chip, maybe two chips, right?
+Dialogue: 0,0:39:17.32,0:39:25.34,Sub,,0,0,0,,So, how do you land the biggest networks in a low batch environment to run really efficiently at low latency?
+Dialogue: 0,0:39:25.39,0:39:30.59,Sub,,0,0,0,,Um, so different types of technologies there.
+Dialogue: 0,0:39:30.64,0:39:41.67,Sub,,0,0,0,,Um, so a few minutes on the actual model architectures, right, to give you sort of a glimpse of what really drives this performance, right?
+Dialogue: 0,0:39:41.72,0:39:46.03,Sub,,0,0,0,,Hopefully you've gotten the sense that we have amazing compute.
+Dialogue: 0,0:39:46.08,0:39:51.73,Sub,,0,0,0,,It's a pizza box in the car with just the most awesome silicon we can make or buy.
+Dialogue: 0,0:39:51.78,0:39:56.41,Sub,,0,0,0,,Um, but maybe a little bit of a question of why.
+Dialogue: 0,0:39:56.46,0:40:03.87,Sub,,0,0,0,,Um, so here's one motivating example.
+Dialogue: 0,0:40:03.92,0:40:10.27,Sub,,0,0,0,,Yeah, like these things actually happen and at least there's been press that Waymo cars have gotten parking tickets.
+Dialogue: 0,0:40:10.32,0:40:13.61,Sub,,0,0,0,,So we we'll keep working on it.
+Dialogue: 0,0:40:13.66,0:40:16.83,Sub,,0,0,0,,Um, but there's also many other cases, right?
+Dialogue: 0,0:40:16.88,0:40:22.65,Sub,,0,0,0,,And it's if you go back to the beginning of my presentation, it's really the long tail, right?
+Dialogue: 0,0:40:22.70,0:40:27.16,Sub,,0,0,0,,things that that maybe you'd encounter once in a lifetime, right?
+Dialogue: 0,0:40:27.21,0:40:29.18,Sub,,0,0,0,,We encounter them all the time.
+Dialogue: 0,0:40:29.23,0:40:37.14,Sub,,0,0,0,,And so it could be a tree falling over next to a car or a kid running into into the road right in front of you, right?
+Dialogue: 0,0:40:37.19,0:40:39.34,Sub,,0,0,0,,Or various kinds of accidents, right?
+Dialogue: 0,0:40:39.39,0:40:43.55,Sub,,0,0,0,,We've we've seen secondary or tertiary collisions on a freeway, right?
+Dialogue: 0,0:40:43.60,0:40:45.36,Sub,,0,0,0,,How does a car react to those?
+Dialogue: 0,0:40:45.41,0:40:50.43,Sub,,0,0,0,,And those are really the examples where ML of deep reasoning and deep
+Dialogue: 0,0:40:50.48,0:40:57.79,Sub,,0,0,0,,understanding of the world is really important and really drives the compute requirements.
+Dialogue: 0,0:40:57.84,0:41:04.06,Sub,,0,0,0,,Um to give a sense of that right like at Waymo we've we've been about ML really since the beginning.
+Dialogue: 0,0:41:04.11,0:41:12.08,Sub,,0,0,0,,Initially it was as I mentioned right boosted decision trees random forests but we were on convolution networks right right
+Dialogue: 0,0:41:12.13,0:41:19.89,Sub,,0,0,0,,around when Alex net got published right like we we recognized it quickly that it was super helpful for perception
+Dialogue: 0,0:41:19.94,0:41:28.67,Sub,,0,0,0,,um started using convolutional networks um as transformers became available right use them very quickly and when you think of
+Dialogue: 0,0:41:28.72,0:41:35.95,Sub,,0,0,0,,transformers it actually maps very well to what you might think about in driving right like there's always local information,
+Dialogue: 0,0:41:36.00,0:41:36.36,Sub,,0,0,0,,right?
+Dialogue: 0,0:41:36.40,0:41:37.98,Sub,,0,0,0,,That's super helpful, right?
+Dialogue: 0,0:41:38.02,0:41:42.23,Sub,,0,0,0,,So, attention there, but there's also global context that's really needed.
+Dialogue: 0,0:41:42.28,0:41:45.94,Sub,,0,0,0,,And so, transformers really an enabling technology there.
+Dialogue: 0,0:41:45.99,0:41:51.30,Sub,,0,0,0,,And we've we've been using it since since the early days um since our invention at Google.
+Dialogue: 0,0:41:51.34,0:41:55.33,Sub,,0,0,0,,Today, we use some of the most advanced DLMs.
+Dialogue: 0,0:41:55.38,0:41:58.90,Sub,,0,0,0,,Um we have foundation models, world models, right?
+Dialogue: 0,0:41:58.95,0:42:07.01,Sub,,0,0,0,,So really pushing the envelope to have the deepest ML technology that we can on our cars and more and
+Dialogue: 0,0:42:07.06,0:42:14.00,Sub,,0,0,0,,more the this ML technology it really provides a foundation for not only what's happening on the car but also
+Dialogue: 0,0:42:14.05,0:42:19.14,Sub,,0,0,0,,what we're able to do in the data center right where simulation is really important we have a lot of
+Dialogue: 0,0:42:19.19,0:42:26.37,Sub,,0,0,0,,analytics that use ML to sort of triage and understand what the car did in simulation or the real world.
+Dialogue: 0,0:42:26.42,0:42:37.71,Sub,,0,0,0,,So having this sort of foundation model that cover everything is of course an enormous thing to enable us to scale.
+Dialogue: 0,0:42:37.76,0:42:39.87,Sub,,0,0,0,,So let's look at the model a little bit.
+Dialogue: 0,0:42:39.92,0:42:46.57,Sub,,0,0,0,,Um there's a sensor fusion encoder right I had referred to this previously encodes each of
+Dialogue: 0,0:42:46.62,0:42:54.35,Sub,,0,0,0,,the sensors fuses the data provides a world picture and this tends to be very very fast.
+Dialogue: 0,0:42:54.40,0:42:56.14,Sub,,0,0,0,,Then we we have a VLM.
+Dialogue: 0,0:42:56.19,0:42:58.56,Sub,,0,0,0,,This tends to be much slower, right?
+Dialogue: 0,0:42:58.61,0:43:04.24,Sub,,0,0,0,,Like we'd like to run it as fast as we can, but types of things it may ask about is like,
+Dialogue: 0,0:43:04.29,0:43:08.88,Sub,,0,0,0,,okay, there's a fire hydrant spewing water onto the road, right?
+Dialogue: 0,0:43:08.93,0:43:11.15,Sub,,0,0,0,,Is it safe to proceed or not?
+Dialogue: 0,0:43:11.20,0:43:11.99,Sub,,0,0,0,,Um, right?
+Dialogue: 0,0:43:12.04,0:43:16.73,Sub,,0,0,0,,So these are questions that you don't have to answer in 10 or 20 milliseconds,
+Dialogue: 0,0:43:16.78,0:43:21.48,Sub,,0,0,0,,but if you take half a second or even 1 second might be acceptable, right?
+Dialogue: 0,0:43:21.53,0:43:27.18,Sub,,0,0,0,,So these these tend to be much larger models making a little bit slower decisions.
+Dialogue: 0,0:43:27.24,0:43:34.91,Sub,,0,0,0,,So kind of a fast think fast think slow approach to to understanding the world.
+Dialogue: 0,0:43:34.96,0:43:38.24,Sub,,0,0,0,,These then feed into kind of a world decoder, right?
+Dialogue: 0,0:43:38.29,0:43:46.19,Sub,,0,0,0,,Which then makes the decision decisions what what should the car actually be doing.
+Dialogue: 0,0:43:46.24,0:43:46.56,Sub,,0,0,0,,Right?
+Dialogue: 0,0:43:46.59,0:43:50.53,Sub,,0,0,0,,Now the model itself we start with a very very big model.
+Dialogue: 0,0:43:50.58,0:43:53.77,Sub,,0,0,0,,Um we distill it for a version that runs on the car.
+Dialogue: 0,0:43:53.82,0:43:58.87,Sub,,0,0,0,,Um of course we try to run the biggest version as that we can.
+Dialogue: 0,0:43:58.92,0:44:04.35,Sub,,0,0,0,,Um but of course distillation making a lot of progress too.
+Dialogue: 0,0:44:04.40,0:44:06.99,Sub,,0,0,0,,Um just a glimpse on simulation.
+Dialogue: 0,0:44:07.04,0:44:14.94,Sub,,0,0,0,,Um this is something we we have a large team spending a lot of time on and it's been really transformative to what we've been able to do.
+Dialogue: 0,0:44:14.99,0:44:18.49,Sub,,0,0,0,,Um and it's it's just really cool videos too.
+Dialogue: 0,0:44:18.54,0:44:19.72,Sub,,0,0,0,,So, I thought I'd share.
+Dialogue: 0,0:44:19.77,0:44:21.14,Sub,,0,0,0,,Um, so this one, right?
+Dialogue: 0,0:44:21.19,0:44:22.29,Sub,,0,0,0,,You're driving.
+Dialogue: 0,0:44:22.34,0:44:29.05,Sub,,0,0,0,,You can see you kind of on a freeway come up to a car that stalled and you drive around it, right?
+Dialogue: 0,0:44:29.10,0:44:32.35,Sub,,0,0,0,,And there's something, I don't know, you drive on 101 here.
+Dialogue: 0,0:44:32.40,0:44:35.95,Sub,,0,0,0,,May happen like once a year, something like that, right?
+Dialogue: 0,0:44:36.00,0:44:38.51,Sub,,0,0,0,,We've all seen these types of things.
+Dialogue: 0,0:44:38.56,0:44:46.53,Sub,,0,0,0,,Um, but we can also do a little bit more unusual things.
+Dialogue: 0,0:44:46.58,0:44:47.95,Sub,,0,0,0,,Oops.
+Dialogue: 0,0:44:48.00,0:44:48.52,Sub,,0,0,0,,All right.
+Dialogue: 0,0:44:48.57,0:44:53.51,Sub,,0,0,0,,So here we're driving and there's a plane landing in front of us and I think a few
+Dialogue: 0,0:44:53.56,0:44:58.13,Sub,,0,0,0,,years ago I saw a plane on the side of a road but never landing in front of me.
+Dialogue: 0,0:44:58.18,0:44:58.55,Sub,,0,0,0,,Right?
+Dialogue: 0,0:44:58.58,0:45:02.03,Sub,,0,0,0,,So this were this is happening fully in simulation, right?
+Dialogue: 0,0:45:02.08,0:45:10.30,Sub,,0,0,0,,Like we we have AI agents modeling the other vehicles um modeling the the physics everything in great detail, right?
+Dialogue: 0,0:45:10.35,0:45:16.91,Sub,,0,0,0,,So we both have a sensor side and the behavioral side.
+Dialogue: 0,0:45:16.96,0:45:20.13,Sub,,0,0,0,,Here's another fun example, right?
+Dialogue: 0,0:45:20.18,0:45:22.78,Sub,,0,0,0,,Like okay, elephant could escape a zoo.
+Dialogue: 0,0:45:22.82,0:45:26.29,Sub,,0,0,0,,Um so let's see what the car would do.
+Dialogue: 0,0:45:26.34,0:45:33.31,Sub,,0,0,0,,Um, and then last one, I don't know if this will ever happen regardless of kind of which side of global warming you're on.
+Dialogue: 0,0:45:33.36,0:45:36.59,Sub,,0,0,0,,Like I think snow on the Golden Gate seems unlikely.
+Dialogue: 0,0:45:36.64,0:45:39.91,Sub,,0,0,0,,Um, but it's an example of something we can model, right?
+Dialogue: 0,0:45:39.96,0:45:42.14,Sub,,0,0,0,,And again, the physics are embedded, right?
+Dialogue: 0,0:45:42.19,0:45:47.42,Sub,,0,0,0,,So understanding the slipperiness of a road, um, visibility, reflectivity, right?
+Dialogue: 0,0:45:47.47,0:45:54.64,Sub,,0,0,0,,All these things
+Dialogue: 0,0:45:54.69,0:46:02.11,Sub,,0,0,0,,are in there.
+Dialogue: 0,0:46:02.16,0:46:03.94,Sub,,0,0,0,,So where does this leave us, right?
+Dialogue: 0,0:46:03.99,0:46:05.54,Sub,,0,0,0,,Like we put tremendous effort.
+Dialogue: 0,0:46:05.59,0:46:08.11,Sub,,0,0,0,,We're on a path to scaling.
+Dialogue: 0,0:46:08.16,0:46:09.34,Sub,,0,0,0,,Do we have a results?
+Dialogue: 0,0:46:09.39,0:46:11.36,Sub,,0,0,0,,And the answer is yes, right?
+Dialogue: 0,0:46:11.42,0:46:20.43,Sub,,0,0,0,,like roughly 13x fewer accidents um in the Waymo car regardless of fault um is is really an amazing
+Dialogue: 0,0:46:20.48,0:46:27.87,Sub,,0,0,0,,accomplishment right like at at the mileage I mentioned it means we've had meaningful impact already right and if
+Dialogue: 0,0:46:27.92,0:46:33.91,Sub,,0,0,0,,you think about the scaling ahead right these things will really change people's lives to the better so is
+Dialogue: 0,0:46:33.96,0:46:41.79,Sub,,0,0,0,,it was a very cool part thing to be a part of things we're doing as a company Um,
+Dialogue: 0,0:46:41.84,0:46:46.01,Sub,,0,0,0,,obviously we're we're aiming for new operating domains.
+Dialogue: 0,0:46:46.06,0:46:47.55,Sub,,0,0,0,,Snow is a really big one.
+Dialogue: 0,0:46:47.60,0:46:54.00,Sub,,0,0,0,,Um, you've probably seen most of our cities today are are more of a southern states in the US, right?
+Dialogue: 0,0:46:54.05,0:46:58.12,Sub,,0,0,0,,With within a very soon time, we'll will be in northern cities, too.
+Dialogue: 0,0:46:58.17,0:46:59.94,Sub,,0,0,0,,International markets, right?
+Dialogue: 0,0:47:00.00,0:47:02.44,Sub,,0,0,0,,We've we've announced London and Tokyo.
+Dialogue: 0,0:47:02.49,0:47:03.87,Sub,,0,0,0,,More to come there.
+Dialogue: 0,0:47:03.92,0:47:05.92,Sub,,0,0,0,,And then also just scaling, right?
+Dialogue: 0,0:47:05.97,0:47:09.91,Sub,,0,0,0,,Today we have I don't know four or 5 thousand cars on the road which is
+Dialogue: 0,0:47:09.96,0:47:14.59,Sub,,0,0,0,,is really awesome but it's going to be just dramatically more in the next few years.
+Dialogue: 0,0:47:14.64,0:47:22.43,Sub,,0,0,0,,And so with that of course there's operational challenges right we'll discover more longtail events that we have to address.
+Dialogue: 0,0:47:22.48,0:47:26.14,Sub,,0,0,0,,Um hardware scaling is always hard as I'm sure many of you know.
+Dialogue: 0,0:47:26.19,0:47:31.99,Sub,,0,0,0,,So should be a really fun journey ahead of us from a silicon side.
+Dialogue: 0,0:47:32.04,0:47:35.47,Sub,,0,0,0,,Um there's just endless stuff to continue doing, right?
+Dialogue: 0,0:47:35.52,0:47:39.71,Sub,,0,0,0,,I jotted down a few notes here, but this there's not a complete list.
+Dialogue: 0,0:47:39.76,0:47:47.15,Sub,,0,0,0,,And when we brainstorm within the team or or with friends, right, like many other things come up to within sensing, right?
+Dialogue: 0,0:47:47.20,0:47:49.30,Sub,,0,0,0,,There's always more fidelity.
+Dialogue: 0,0:47:49.35,0:47:50.30,Sub,,0,0,0,,Compute, right?
+Dialogue: 0,0:47:50.35,0:47:52.78,Sub,,0,0,0,,Integration is a big big thing we're aiming for.
+Dialogue: 0,0:47:52.83,0:47:54.21,Sub,,0,0,0,,Today, we have a pizza box.
+Dialogue: 0,0:47:54.26,0:47:58.48,Sub,,0,0,0,,We'd really like that to be a laptop-sized computer in the car.
+Dialogue: 0,0:47:58.53,0:48:00.46,Sub,,0,0,0,,Um silicon reliability.
+Dialogue: 0,0:48:00.51,0:48:07.78,Sub,,0,0,0,,Um lot of things happening there for data center side as well right where when you have so many chips in the world doing
+Dialogue: 0,0:48:07.83,0:48:17.12,Sub,,0,0,0,,really critical things you want that silicon to be more reliable memory technology just endless things to do right like and there we're in
+Dialogue: 0,0:48:17.17,0:48:24.78,Sub,,0,0,0,,a different domain than data center so different technologies may be the right thing to do but really very likely to be applicable to
+Dialogue: 0,0:48:24.83,0:48:34.88,Sub,,0,0,0,,really anything that happens in physical AI right where you have robots that need very similar smarts and will have enormous scale similar to cars.
+Dialogue: 0,0:48:34.93,0:48:41.58,Sub,,0,0,0,,Um so a few maybe provocative questions right today our model's not this big right but ideally we'd
+Dialogue: 0,0:48:41.63,0:48:47.87,Sub,,0,0,0,,be able to run a trillion parameter model on a car right we know right a trillion parameter model
+Dialogue: 0,0:48:47.92,0:48:54.42,Sub,,0,0,0,,is smarter than a smaller one right memory systems how do we deal with low batch how do
+Dialogue: 0,0:48:54.48,0:49:03.79,Sub,,0,0,0,,we deal with in a single chip environment CPUs right like with agentic behavior with model architectures changing Right?
+Dialogue: 0,0:49:03.84,0:49:06.60,Sub,,0,0,0,,Do CPUs become much more important?
+Dialogue: 0,0:49:06.65,0:49:08.23,Sub,,0,0,0,,And then maybe last one, right?
+Dialogue: 0,0:49:08.28,0:49:12.51,Sub,,0,0,0,,I referred to a little bit kind of a boundary between sensors and compute, right?
+Dialogue: 0,0:49:12.56,0:49:20.43,Sub,,0,0,0,,Where do we draw that line between raw data versus pre at least somewhat pre-processed data.
+Dialogue: 0,0:49:20.48,0:49:24.67,Sub,,0,0,0,,So, we're really at the dawn of sort of physical AI changing the world, right?
+Dialogue: 0,0:49:24.72,0:49:32.45,Sub,,0,0,0,,Similar to, I think, what we've seen in the last years from from a digital side, physical AI is going to make a huge difference.
+Dialogue: 0,0:49:32.50,0:49:39.75,Sub,,0,0,0,,And so so really appreciate everything that's happened in the industry to make this possible and also looking
+Dialogue: 0,0:49:39.80,0:49:50.61,Sub,,0,0,0,,forward to a lot of innovation that's ahead to to make this scale and and make it even better.
+Dialogue: 0,0:49:50.66,0:49:54.11,Sub,,0,0,0,,So thank you.
+Dialogue: 0,0:49:54.16,0:49:55.71,Sub,,0,0,0,,Thanks for a wonderful keynote Daniel.
+Dialogue: 0,0:49:55.76,0:49:57.43,Sub,,0,0,0,,That was delightful.
+Dialogue: 0,0:49:57.48,0:49:59.88,Sub,,0,0,0,,uh to get ahead of a procedural question,
+Dialogue: 0,0:49:59.93,0:50:05.82,Sub,,0,0,0,,a number of people have asked about the slides and you may have noticed there was a lot of video and animation in the slides.
+Dialogue: 0,0:50:05.87,0:50:06.13,Sub,,0,0,0,,So,
+Dialogue: 0,0:50:06.16,0:50:14.23,Sub,,0,0,0,,Waymo is a little bit less comfortable distilling that into something static and so uh all of you who attend and all of you who attend remotely
+Dialogue: 0,0:50:14.28,0:50:20.12,Sub,,0,0,0,,have access to the live stream and the live stream will stay up for quite a while and then eventually other forms of video will be available.
+Dialogue: 0,0:50:20.17,0:50:26.61,Sub,,0,0,0,,So, I think seeing the presentation in its intended form is available for attendees right now and the world eventually.
+Dialogue: 0,0:50:26.66,0:50:31.16,Sub,,0,0,0,,So, please lean into that rather than the static frozen version of the slides.
+Dialogue: 0,0:50:31.21,0:50:36.83,Sub,,0,0,0,,I think the the pointing out the human in the dust storm is less good on PDF.
+Dialogue: 0,0:50:36.88,0:50:39.59,Sub,,0,0,0,,Uh, and please begin lining up for the for the microphones.
+Dialogue: 0,0:50:39.64,0:50:41.01,Sub,,0,0,0,,There's also a microphone on this side.
+Dialogue: 0,0:50:41.06,0:50:42.10,Sub,,0,0,0,,I don't think we have one upstairs.
+Dialogue: 0,0:50:42.15,0:50:45.33,Sub,,0,0,0,,So, if you're in the balcony, really want to ask a question, please come downstairs for that.
+Dialogue: 0,0:50:45.38,0:50:49.34,Sub,,0,0,0,,I'll exercise moderator privilege and say, Daniel, you said liquid cooling.
+Dialogue: 0,0:50:49.39,0:50:51.40,Sub,,0,0,0,,You have liquid cooling in your car.
+Dialogue: 0,0:50:51.45,0:50:54.03,Sub,,0,0,0,,Could you elaborate a little bit, please?
+Dialogue: 0,0:50:54.08,0:50:55.01,Sub,,0,0,0,,Yeah, good question.
+Dialogue: 0,0:50:55.06,0:51:00.45,Sub,,0,0,0,,Like we've actually had liquid cooling since I don't know 2014 or so.
+Dialogue: 0,0:51:00.50,0:51:08.16,Sub,,0,0,0,,Um so some of it comes from if you look at cars they actually naturally have liquid for cooling.
+Dialogue: 0,0:51:08.21,0:51:15.63,Sub,,0,0,0,,Um especially EVs right like the battery pack needs cooling and typically has some liquid system associated with it.
+Dialogue: 0,0:51:15.68,0:51:20.35,Sub,,0,0,0,,Um and so we worked with partner companies to make sure we're able to tap into that.
+Dialogue: 0,0:51:20.40,0:51:23.83,Sub,,0,0,0,,It is not as nice as data center liquid, right?
+Dialogue: 0,0:51:23.88,0:51:26.43,Sub,,0,0,0,,Like our liquid, it is not chilled.
+Dialogue: 0,0:51:26.48,0:51:30.62,Sub,,0,0,0,,So, you can imagine kind of driving in Phoenix, right?
+Dialogue: 0,0:51:30.67,0:51:32.37,Sub,,0,0,0,,It's, I don't know, 2:00 p.m.
+Dialogue: 0,0:51:32.42,0:51:34.64,Sub,,0,0,0,,Sun has been shining on a car all day.
+Dialogue: 0,0:51:34.69,0:51:36.69,Sub,,0,0,0,,You're static, so there's no air flow.
+Dialogue: 0,0:51:36.74,0:51:40.41,Sub,,0,0,0,,And so, that liquid can be, I don't know, 65 C or so, right?
+Dialogue: 0,0:51:40.46,0:51:48.03,Sub,,0,0,0,,So, it's it's very different from sort of data center liquid, but still better than having fans going crazy in the car.
+Dialogue: 0,0:51:48.08,0:51:49.87,Sub,,0,0,0,,So, let's start taking questions.
+Dialogue: 0,0:51:49.92,0:51:54.49,Sub,,0,0,0,,uh my left side first one in line please identify yourself and your company and then ask your question.
+Dialogue: 0,0:51:54.54,0:52:00.87,Sub,,0,0,0,,Uh hello Sari uh Nvidia uh I'm approaching this from a curiosity standpoint and my understanding of this is that you have a lot
+Dialogue: 0,0:52:00.92,0:52:10.02,Sub,,0,0,0,,of software and hardware uh safety features redundancies resiliences built in uh my question is do you understand what is the most critical link
+Dialogue: 0,0:52:10.07,0:52:16.31,Sub,,0,0,0,,of failure in this whole system because I'm just trying to draw the corary from air crash investigation is like it's never just one
+Dialogue: 0,0:52:16.36,0:52:25.07,Sub,,0,0,0,,system failure it's always a sequence of complicated time dependent uh temporal things failing all in one order to cause the whole system to fail.
+Dialogue: 0,0:52:25.12,0:52:30.20,Sub,,0,0,0,,In this case, do you even understand um what that point is?
+Dialogue: 0,0:52:30.25,0:52:35.69,Sub,,0,0,0,,And then if you kind of classify that this is kind of that uh this is beyond that risk,
+Dialogue: 0,0:52:35.74,0:52:39.44,Sub,,0,0,0,,do you like advertise that hey maybe this is too risky to drive right now,
+Dialogue: 0,0:52:39.49,0:52:43.47,Sub,,0,0,0,,maybe we should stop or maybe sometimes stopping isn't the right answer because there may be a car behind you.
+Dialogue: 0,0:52:43.52,0:52:49.18,Sub,,0,0,0,,So I'm trying to understand is how do you look at it from a whole subsystem not just the semiconductor
+Dialogue: 0,0:52:49.22,0:52:55.55,Sub,,0,0,0,,but also like at a at a full system at a world level of failure mode because it's so complex.
+Dialogue: 0,0:52:55.60,0:52:56.92,Sub,,0,0,0,,Yeah, really good question.
+Dialogue: 0,0:52:56.96,0:52:59.63,Sub,,0,0,0,,Like for us, safety is really our northstar, right?
+Dialogue: 0,0:52:59.68,0:53:06.96,Sub,,0,0,0,,So whole company is sort of founded on the basis of safety and so we the approach we take there, right?
+Dialogue: 0,0:53:07.02,0:53:13.63,Sub,,0,0,0,,Like we we of course do all the analysis to estimate failure rates for various things we we can imagine.
+Dialogue: 0,0:53:13.68,0:53:18.82,Sub,,0,0,0,,Um and a lot of it ties into hardware systems, some of it into the software systems.
+Dialogue: 0,0:53:18.87,0:53:26.22,Sub,,0,0,0,,And so our safety team does reviews right and and has estimates for what are all the various probabilities.
+Dialogue: 0,0:53:26.27,0:53:33.30,Sub,,0,0,0,,Um we also have an enormous amount of data right so we do we do structured testing right where we we think
+Dialogue: 0,0:53:33.35,0:53:40.67,Sub,,0,0,0,,of it as a a mini city right that we build that the cars operate around and we're able to test against.
+Dialogue: 0,0:53:40.72,0:53:48.18,Sub,,0,0,0,,um we do an enor billions of miles of driving and simulation before we do a software release right we test that release
+Dialogue: 0,0:53:48.23,0:53:55.06,Sub,,0,0,0,,for many many miles and so there's some of it is very analytical right based on what we know about the system and the
+Dialogue: 0,0:53:55.11,0:54:02.67,Sub,,0,0,0,,properties and our goals some of it is datadriven based on what we're able to observe through for very rigorous testing at different
+Dialogue: 0,0:54:02.72,0:54:11.76,Sub,,0,0,0,,levels of of sort of or or different modes of testing so what's the weakest link if if I may Just one question please.
+Dialogue: 0,0:54:11.81,0:54:15.75,Sub,,0,0,0,,Uh and I'll do load balancing and fair queuing and say let's take another one from the left side.
+Dialogue: 0,0:54:15.80,0:54:19.39,Sub,,0,0,0,,Please do try to keep the question short so we can maximize our Daniel time.
+Dialogue: 0,0:54:19.44,0:54:19.79,Sub,,0,0,0,,Yep.
+Dialogue: 0,0:54:19.82,0:54:22.20,Sub,,0,0,0,,Shou Mukerji, Applied Intuition.
+Dialogue: 0,0:54:22.26,0:54:23.17,Sub,,0,0,0,,Hey thanks Daniel.
+Dialogue: 0,0:54:23.22,0:54:26.93,Sub,,0,0,0,,You gave me a ride in a Waymo car a long time back before it went into production.
+Dialogue: 0,0:54:26.98,0:54:27.55,Sub,,0,0,0,,So thank you.
+Dialogue: 0,0:54:27.60,0:54:27.96,Sub,,0,0,0,,Question.
+Dialogue: 0,0:54:27.99,0:54:30.16,Sub,,0,0,0,,What is how does the economics of this work?
+Dialogue: 0,0:54:30.21,0:54:39.38,Sub,,0,0,0,,Can you please explain uh thousands of chips typically takes millions to even you know get to a point where it you can recoup the cost.
+Dialogue: 0,0:54:39.43,0:54:41.87,Sub,,0,0,0,,So when do you think Waymo will break even?
+Dialogue: 0,0:54:41.92,0:54:45.87,Sub,,0,0,0,,Five years, 10 years?
+Dialogue: 0,0:54:45.92,0:54:49.39,Sub,,0,0,0,,Thought you were going to ask when do we IPO?
+Dialogue: 0,0:54:49.44,0:54:54.00,Sub,,0,0,0,,Um well, so I think there's two sides to the question, right?
+Dialogue: 0,0:54:54.05,0:54:56.90,Sub,,0,0,0,,One is of course way more economics overall, right?
+Dialogue: 0,0:54:56.95,0:54:59.72,Sub,,0,0,0,,And there I think the business case is very strong, right?
+Dialogue: 0,0:54:59.77,0:55:04.62,Sub,,0,0,0,,You we released some things around our latest funding round there, so I won't dive into those,
+Dialogue: 0,0:55:04.67,0:55:08.69,Sub,,0,0,0,,but is is a very strong kind of business case for Waymo as a company.
+Dialogue: 0,0:55:08.74,0:55:14.45,Sub,,0,0,0,,when we look at chips right like I think that may be the other part of your question right how do you decide
+Dialogue: 0,0:55:14.50,0:55:22.49,Sub,,0,0,0,,to really make a massive investments in silicon right because it's building the silicon tapeout's expensive now and as you can tell right we
+Dialogue: 0,0:55:22.54,0:55:27.05,Sub,,0,0,0,,also have a meaningful software effort around it right with compiler technologies
+Dialogue: 0,0:55:27.10,0:55:32.88,Sub,,0,0,0,,performance optimizations and for us that's it's really a long-term investment right
+Dialogue: 0,0:55:32.93,0:55:40.42,Sub,,0,0,0,,like we know we know this is critical technology to our cars we're able to meaningfully move the needle today in terms of capabilities.
+Dialogue: 0,0:55:40.47,0:55:47.33,Sub,,0,0,0,,We're able to left shift for software development and we know long-term economics makes sense too, right?
+Dialogue: 0,0:55:47.38,0:55:51.68,Sub,,0,0,0,,As we scale and so it's it's a very strong technical win today.
+Dialogue: 0,0:55:51.72,0:55:54.67,Sub,,0,0,0,,It's an economic win longer term.
+Dialogue: 0,0:55:54.72,0:55:55.55,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:55:55.60,0:55:57.15,Sub,,0,0,0,,Let's go stage right, please.
+Dialogue: 0,0:55:57.20,0:55:57.60,Sub,,0,0,0,,All right.
+Dialogue: 0,0:55:57.65,0:56:00.36,Sub,,0,0,0,,Uh Kevin Krewell, independent analyst.
+Dialogue: 0,0:56:00.40,0:56:02.68,Sub,,0,0,0,,Um Oh, yeah.
+Dialogue: 0,0:56:02.73,0:56:11.39,Sub,,0,0,0,,over here the um the sensors you have a you have radar, lidar as well as a microphone.
+Dialogue: 0,0:56:11.44,0:56:18.66,Sub,,0,0,0,,Uh c can you explain how the microphone is using what are you using that for kind of wave hey Waymo and wave you down?
+Dialogue: 0,0:56:18.71,0:56:26.51,Sub,,0,0,0,,Um or also do you are you permanently committed to both lidar and radar?
+Dialogue: 0,0:56:26.56,0:56:26.96,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:56:27.00,0:56:30.74,Sub,,0,0,0,,So so microphone primary use is sirens, right?
+Dialogue: 0,0:56:30.79,0:56:39.80,Sub,,0,0,0,,emergency vehicles and we we are able to use them both to hear and in some cases localize um honking and other nearby
+Dialogue: 0,0:56:39.85,0:56:51.79,Sub,,0,0,0,,behavior can also be important but for primary use cases as sort of emergency vehicles and then lidar and radar we're all in permanently.
+Dialogue: 0,0:56:51.84,0:56:53.07,Sub,,0,0,0,,Okay, thanks.
+Dialogue: 0,0:56:53.12,0:56:53.89,Sub,,0,0,0,,Thanks.
+Dialogue: 0,0:56:53.94,0:56:56.03,Sub,,0,0,0,,Let's go stage left.
+Dialogue: 0,0:56:56.08,0:56:57.39,Sub,,0,0,0,,Hey, thanks for the great presentation.
+Dialogue: 0,0:56:57.44,0:56:59.99,Sub,,0,0,0,,So my question is a little bit towards the future.
+Dialogue: 0,0:57:00.04,0:57:06.27,Sub,,0,0,0,,Um how could you comment on trying to solve the accident problem or just driving as a coordination problem?
+Dialogue: 0,0:57:06.32,0:57:12.31,Sub,,0,0,0,,So you have this one car which has a lot of sensing a lot of technology a lot of learning as a platform.
+Dialogue: 0,0:57:12.36,0:57:20.57,Sub,,0,0,0,,Could multiple of these cars communicate or come together with an arrangement so that accidents become less likely become less ingenuous and so
+Dialogue: 0,0:57:20.62,0:57:26.48,Sub,,0,0,0,,on and do could you have any comments on that and how would that change the platform the car as a computer for example?
+Dialogue: 0,0:57:26.53,0:57:31.12,Sub,,0,0,0,,Yeah, really interesting question and something we we continuously look at, right?
+Dialogue: 0,0:57:31.17,0:57:33.77,Sub,,0,0,0,,Sort of falls under V2X technology, right?
+Dialogue: 0,0:57:33.82,0:57:35.38,Sub,,0,0,0,,Can vehicles talk to vehicles?
+Dialogue: 0,0:57:35.43,0:57:37.65,Sub,,0,0,0,,Can vehicles talk to infrastructure?
+Dialogue: 0,0:57:37.70,0:57:42.37,Sub,,0,0,0,,Even vehicles possibly to a cell phone in your in your pocket.
+Dialogue: 0,0:57:42.42,0:57:48.27,Sub,,0,0,0,,Um, so we we we think some of that could be good technology, right?
+Dialogue: 0,0:57:48.32,0:57:52.07,Sub,,0,0,0,,Like it has to be deployed at scale to make a meaningful difference.
+Dialogue: 0,0:57:52.12,0:57:55.10,Sub,,0,0,0,,So it's not something we rely on as a company, right?
+Dialogue: 0,0:57:55.15,0:58:00.43,Sub,,0,0,0,,But as adoption increases, I'm sure we'll participate in in a good way too.
+Dialogue: 0,0:58:00.48,0:58:00.77,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:58:00.80,0:58:01.10,Sub,,0,0,0,,Right.
+Dialogue: 0,0:58:01.13,0:58:04.83,Sub,,0,0,0,,But today, right, like we we want self-driving technology today, right?
+Dialogue: 0,0:58:04.88,0:58:07.31,Sub,,0,0,0,,V2X infrastructure doesn't exist yet.
+Dialogue: 0,0:58:07.36,0:58:10.35,Sub,,0,0,0,,Um, so today we operate without it.
+Dialogue: 0,0:58:10.40,0:58:10.81,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:58:10.86,0:58:13.23,Sub,,0,0,0,,I'm So from Qualcomm, by the way.
+Dialogue: 0,0:58:13.28,0:58:14.51,Sub,,0,0,0,,Oh, okay.
+Dialogue: 0,0:58:14.56,0:58:15.13,Sub,,0,0,0,,Thanks.
+Dialogue: 0,0:58:15.18,0:58:16.67,Sub,,0,0,0,,Stage rate, please.
+Dialogue: 0,0:58:16.72,0:58:22.08,Sub,,0,0,0,,Michael Ari, NASA. Fantastic statistics compared to the average driver.
+Dialogue: 0,0:58:22.13,0:58:29.36,Sub,,0,0,0,,How's it compare to the best and most adaptive human drivers both quantitatively if you have that
+Dialogue: 0,0:58:29.41,0:58:38.83,Sub,,0,0,0,,and qualitatively and then finally how can we adapt to real extreme environments like the lunar surface.
+Dialogue: 0,0:58:38.88,0:58:41.70,Sub,,0,0,0,,Um first question I actually don't know the answer.
+Dialogue: 0,0:58:41.75,0:58:46.62,Sub,,0,0,0,,Um, so I think Bear, we're we're actually very transparent in our safety reports, right?
+Dialogue: 0,0:58:46.68,0:58:54.38,Sub,,0,0,0,,I I honestly don't know if if we have a stats on the safety reports, but if you're curious, like take a look and if not, reach out, right?
+Dialogue: 0,0:58:54.43,0:59:00.88,Sub,,0,0,0,,Happy to connect with with people on the safety team on Lunar Surface.
+Dialogue: 0,0:59:00.92,0:59:04.06,Sub,,0,0,0,,Um, sounds really cool.
+Dialogue: 0,0:59:04.11,0:59:05.79,Sub,,0,0,0,,Let's do it.
+Dialogue: 0,0:59:05.84,0:59:06.75,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:59:06.80,0:59:10.51,Sub,,0,0,0,,Stage left.
+Dialogue: 0,0:59:10.56,0:59:11.75,Sub,,0,0,0,,Hi, Leonard Lee.
+Dialogue: 0,0:59:11.80,0:59:12.63,Sub,,0,0,0,,Next curve.
+Dialogue: 0,0:59:12.68,0:59:14.78,Sub,,0,0,0,,Um, a really complex question here.
+Dialogue: 0,0:59:14.82,0:59:19.31,Sub,,0,0,0,,Uh, you mentioned GPU, but why not TPU or custom ASIC?
+Dialogue: 0,0:59:19.36,0:59:21.23,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:59:21.28,0:59:21.55,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:59:21.58,0:59:28.00,Sub,,0,0,0,,So, I think on custom ASIC, right, I think you probably got a glimmer that yes, we are building custom silicon, right?
+Dialogue: 0,0:59:28.05,0:59:29.16,Sub,,0,0,0,,I gave a lidar example.
+Dialogue: 0,0:59:29.21,0:59:31.06,Sub,,0,0,0,,I gave a sensor processing chip, right?
+Dialogue: 0,0:59:31.11,0:59:35.25,Sub,,0,0,0,,So those are custom chips we've designed within within the team.
+Dialogue: 0,0:59:35.30,0:59:41.88,Sub,,0,0,0,,um they are on our cars and in some cases we've had several generations before that and they they tend
+Dialogue: 0,0:59:41.93,0:59:49.95,Sub,,0,0,0,,to complement right kind of off a shelf or semi-custom solutions we we get from partners um TPUs right like of
+Dialogue: 0,0:59:50.00,0:59:57.55,Sub,,0,0,0,,course we are we are part of Alphabet we've worked very long closely with cliff for a long time from sea
+Dialogue: 0,0:59:57.60,1:00:06.11,Sub,,0,0,0,,star days um so there's there's there's good history and good collaboration um but especially today When you look at TPU,
+Dialogue: 0,1:00:06.16,1:00:09.02,Sub,,0,0,0,,right, like it's it's a data center chip, right?
+Dialogue: 0,1:00:09.07,1:00:12.40,Sub,,0,0,0,,You look at edge TPU, it's a cell phone chip, right?
+Dialogue: 0,1:00:12.45,1:00:16.41,Sub,,0,0,0,,And where we are with cars is is really in between, right?
+Dialogue: 0,1:00:16.46,1:00:25.35,Sub,,0,0,0,,It has different different ML requirements, uh has different environmental requirements and also sizing requirements that are somewhere in between.
+Dialogue: 0,1:00:25.40,1:00:27.95,Sub,,0,0,0,,So definitely deep collaborations.
+Dialogue: 0,1:00:28.00,1:00:32.99,Sub,,0,0,0,,Um but as with many things, it's not a one-size-fits-all.
+Dialogue: 0,1:00:33.04,1:00:34.35,Sub,,0,0,0,,Thank you.
+Dialogue: 0,1:00:34.40,1:00:36.84,Sub,,0,0,0,,I think maybe one or two questions which is about the line.
+Dialogue: 0,1:00:36.90,1:00:39.23,Sub,,0,0,0,,So stage right please if you can go quick that'd be great.
+Dialogue: 0,1:00:39.28,1:00:42.26,Sub,,0,0,0,,Hi there it's Bruno Ben from Grabbc.
+Dialogue: 0,1:00:42.31,1:00:47.64,Sub,,0,0,0,,Um Daniel you talked about the interest in running very large trillion parameter models.
+Dialogue: 0,1:00:47.69,1:00:53.10,Sub,,0,0,0,,U most of the time power and latency requirements preclude that.
+Dialogue: 0,1:00:53.15,1:00:58.83,Sub,,0,0,0,,Um but I was interested about how often would that be helpful that you can trade off in latency and compute.
+Dialogue: 0,1:00:58.88,1:01:00.07,Sub,,0,0,0,,So for example,
+Dialogue: 0,1:01:00.12,1:01:08.91,Sub,,0,0,0,,the car is slow or stationary interacting with a police officer and it might choose to switch to a very different model but still run locally.
+Dialogue: 0,1:01:08.96,1:01:10.27,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:01:10.32,1:01:10.60,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:01:10.63,1:01:14.15,Sub,,0,0,0,,And it's a balance we're working through, right, with these models, right?
+Dialogue: 0,1:01:14.20,1:01:16.83,Sub,,0,0,0,,I mentioned sort of think fast, think slow, right?
+Dialogue: 0,1:01:16.88,1:01:20.19,Sub,,0,0,0,,So those those are increasingly modes we operate in.
+Dialogue: 0,1:01:20.24,1:01:27.71,Sub,,0,0,0,,And so exactly what is the threshold for think slow depends on the scene and the problem you're trying to solve.
+Dialogue: 0,1:01:27.76,1:01:29.84,Sub,,0,0,0,,Thank you. stage left.
+Dialogue: 0,1:01:29.89,1:01:30.90,Sub,,0,0,0,,Last question.
+Dialogue: 0,1:01:30.95,1:01:31.47,Sub,,0,0,0,,Thanks.
+Dialogue: 0,1:01:31.52,1:01:35.38,Sub,,0,0,0,,Alexander Kaza, uh, undergrad at the University of Toronto.
+Dialogue: 0,1:01:35.43,1:01:42.18,Sub,,0,0,0,,I'm wondering what challenges did you expect would be easy to solve that turned out to be far more difficult than you thought?
+Dialogue: 0,1:01:42.23,1:01:44.03,Sub,,0,0,0,,Thank you.
+Dialogue: 0,1:01:44.08,1:01:46.27,Sub,,0,0,0,,Oh, that's a hard one.
+Dialogue: 0,1:01:46.32,1:01:52.39,Sub,,0,0,0,,Um, I think one challenge is always the the hardware-software co-design, right?
+Dialogue: 0,1:01:52.44,1:02:00.07,Sub,,0,0,0,,like we we we have an advantage of being sort of very open and and sort of small teams, right?
+Dialogue: 0,1:02:00.12,1:02:02.59,Sub,,0,0,0,,So there there's no real friction.
+Dialogue: 0,1:02:02.64,1:02:06.11,Sub,,0,0,0,,At the same time, everyone is running really fast, right?
+Dialogue: 0,1:02:06.16,1:02:07.85,Sub,,0,0,0,,We're solving hard problems.
+Dialogue: 0,1:02:07.90,1:02:10.48,Sub,,0,0,0,,We want to advance the Waymo driver.
+Dialogue: 0,1:02:10.54,1:02:16.59,Sub,,0,0,0,,And so making sure that the teams are really working to close working together closely and and doing
+Dialogue: 0,1:02:16.64,1:02:23.84,Sub,,0,0,0,,as much co-design as we could um is is sometimes more challenging than maybe expected but I think overall
+Dialogue: 0,1:02:23.89,1:02:29.40,Sub,,0,0,0,,we've gotten tremendous results there and some of this is sort of self-feeding as well right based on
+Dialogue: 0,1:02:29.45,1:02:35.47,Sub,,0,0,0,,the results we've achieved in the last years right expect more and more of that in the next years.
+Dialogue: 0,1:02:35.52,1:02:37.31,Sub,,0,0,0,,Thank you.
+Dialogue: 0,1:02:37.36,1:02:43.07,Sub,,0,0,0,,I'll throw in one more ideally humorous question which is I think a bunch of what you're doing
+Dialogue: 0,1:02:43.12,1:02:48.64,Sub,,0,0,0,,is reaching scale and the scale and miles driven and things experienced has a long tail to it.
+Dialogue: 0,1:02:48.69,1:02:53.92,Sub,,0,0,0,,So what was the weirdest thing a car has actually experienced that you have seen so far
+Dialogue: 0,1:02:53.98,1:03:04.11,Sub,,0,0,0,,that you can tell us about uh uh as part of this 13-year voyage in figuring out autonomy?
+Dialogue: 0,1:03:04.16,1:03:11.06,Sub,,0,0,0,,I guess the one slide I showed like I find the tree falling one pretty pretty unique, right?
+Dialogue: 0,1:03:11.11,1:03:17.55,Sub,,0,0,0,,Like I don't know of all the scenarios I thought of at least I never thought of kind of a tree falling right in front of a car.
+Dialogue: 0,1:03:17.60,1:03:19.07,Sub,,0,0,0,,Not on your bingo card.
+Dialogue: 0,1:03:19.12,1:03:19.43,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:03:19.46,1:03:25.40,Sub,,0,0,0,,And I don't know like we've seen power lines go down and other stuff like it's every time you hear these
+Dialogue: 0,1:03:25.45,1:03:31.45,Sub,,0,0,0,,it's like oh yeah that could happen but I don't know it's hard to predict and so so there of course
+Dialogue: 0,1:03:31.50,1:03:36.52,Sub,,0,0,0,,like we want to know the scenarios but we also want a model that can reason right so you don't have
+Dialogue: 0,1:03:36.58,1:03:44.00,Sub,,0,0,0,,to pre-program essentially or train against every scenario but you really have that world model that can reason about what's happening.
+Dialogue: 0,1:03:44.05,1:03:51.71,Sub,,0,0,0,,Yeah, I really look forward to my superhuman car noticing a situation and doing just the right thing in ways that I would have never guessed.
+Dialogue: 0,1:03:51.76,1:03:53.71,Sub,,0,0,0,,So, please keep up the good work.
+Dialogue: 0,1:03:53.76,1:03:59.28,Sub,,0,0,0,,Everybody, let's thank Daniel once again for a wonderful keynote.
+Dialogue: 0,1:03:59.34,1:04:01.07,Sub,,0,0,0,,Thank you.
+Dialogue: 0,1:04:01.12,1:04:04.44,Sub,,0,0,0,,Thanks.

@@ -1,0 +1,1267 @@
+1
+00:00:10,040 --> 00:00:12,670
+everyone I'm happy to have Dylan here.
+
+2
+00:00:12,720 --> 00:00:18,339
+The first time I saw one of his videos was an interview when he talked about all the way up to
+
+3
+00:00:18,389 --> 00:00:22,916
+CPUs to talk about like neoclouds and why they have the right to exist and that was super interesting for me
+
+4
+00:00:22,966 --> 00:00:28,605
+because the theme of today is all like what are the new infrastructure primitives now that agents are here and so you
+
+5
+00:00:28,655 --> 00:00:34,530
+are tricking at that really well at that point why neoclouds are different from hyperscalers and why they should exist.
+
+6
+00:00:34,580 --> 00:00:36,830
+So can you share any of that with us?
+
+7
+00:00:36,880 --> 00:00:37,430
+Sure.
+
+8
+00:00:37,480 --> 00:00:41,630
+I mean um in the age of AI the hyperscalers were a little bit slow to move right Google
+
+9
+00:00:41,680 --> 00:00:49,099
+Amazon Microsoft bit slow to move into AI and so a whole new crop of companies popped up and there was
+
+10
+00:00:49,149 --> 00:00:55,344
+a new low bar right there's no need for a lot of the complex software that Amazon Microsoft Google had built
+
+11
+00:00:55,394 --> 00:01:00,939
+up and a lot of this in fact slowed down AI right they had custom networks that were actually not that
+
+12
+00:01:00,989 --> 00:01:07,477
+great for AI they were more focused around reliability and storage traffic rather than you know doing an AllReduce across
+
+13
+00:01:07,527 --> 00:01:12,310
+the network or something like this so so there was a lot of things that these large cloud companies these hyper
+
+14
+00:01:12,360 --> 00:01:19,136
+scalers had that neoclouds could just skip right and and then build focused optimized solutions and deliver much lower cost
+
+15
+00:01:19,186 --> 00:01:26,866
+because they have much lower overhead right there's not 20,000 Google PMs sitting in a meeting at these neoclouds right
+
+16
+00:01:26,916 --> 00:01:34,470
+although some of them have started hiring Google PMs and slowed down the the the neoclouds they they they
+
+17
+00:01:34,520 --> 00:01:39,881
+just moved fast on energy they moved fast on bringing up GPU clusters and so they were able to carve out
+
+18
+00:01:39,931 --> 00:01:44,437
+a market right and then you know those are the early ones and then since then there have been a lot
+
+19
+00:01:44,487 --> 00:01:51,720
+more copycats or followers many who haven't succeeded many who are succeeding right it really is like a a battle of
+
+20
+00:01:51,770 --> 00:01:56,990
+like who's the most competent And so are all the cuz there's like I think you said there's like an order
+
+21
+00:01:57,040 --> 00:02:03,976
+there's like a 200 of these neoclouds or give or take right and so are there differentiations between them that
+
+22
+00:02:04,026 --> 00:02:09,859
+you see like are are some of them just copying the the sort of software stack that these first ones did
+
+23
+00:02:09,909 --> 00:02:15,541
+or they doing something else like anything that you've seen that have been successful and less successful across these neoclouds?
+
+24
+00:02:15,591 --> 00:02:20,177
+Yeah so there's a variety of things that separate them right so we have something called ClusterMAX that
+
+25
+00:02:20,227 --> 00:02:30,724
+ranks all the neoclouds but we test for various things such as observability reliability networking security um orchestration all
+
+26
+00:02:30,774 --> 00:02:36,778
+these sorts of things are different right like does does someone test for their GPUs to be working properly
+
+27
+00:02:36,828 --> 00:02:42,531
+in when the GPUs are idle for a user right that's active health check or a passive health check hey
+
+28
+00:02:42,581 --> 00:02:46,978
+are the fans spinning at the right speed or are the you know is it drawing the right power
+
+29
+00:02:47,028 --> 00:02:51,290
+is there something wrong with the node is the is the network flapping or is anything problem problem with the
+
+30
+00:02:51,340 --> 00:02:56,823
+network is the performance there right like there's all these sorts of checks and tests because GPUs are unreliable um
+
+31
+00:02:56,873 --> 00:03:02,510
+there's all sorts of stuff around um the types of software you run on top of the GPU right many
+
+32
+00:03:02,560 --> 00:03:07,963
+people started off doing just bare metal right so when you go look at like hey Microsoft's first contracts
+
+33
+00:03:08,013 --> 00:03:13,510
+with CoreWeave they were all bare metal right you just SSH in and Microsoft would set up their own stuff
+
+34
+00:03:13,560 --> 00:03:20,005
+but as we've stepped forward there's a lot more people want right people wanted Slurm installed okay that's simple people
+
+35
+00:03:20,055 --> 00:03:26,483
+wanted Kubernetes installed that's a little bit more difficult but still pretty simple people wanted Slurm on Kubernetes installed cuz
+
+36
+00:03:26,533 --> 00:03:30,424
+it's easier to push out jobs and things like that right and now you're starting to see people do
+
+37
+00:03:30,474 --> 00:03:37,390
+things like managed Ray services and all these things for RL and so there is a class of neoclouds
+
+38
+00:03:37,440 --> 00:03:40,565
+that are building these things and there's a class of neoclouds that are like I don't care about that
+
+39
+00:03:40,615 --> 00:03:45,601
+I'm just going to build GPUs and rent them out at bare metal and and there is a difference in
+
+40
+00:03:45,651 --> 00:03:51,494
+cost right like the the clouds that have the good software also tend to charge more and and sort
+
+41
+00:03:51,544 --> 00:03:59,213
+of returns back to the old school model where Google Microsoft Amazon had good software and they charged right and
+
+42
+00:03:59,263 --> 00:04:04,430
+so you know and and you see a lot of these cloud companies start trying to launch inference services
+
+43
+00:04:04,480 --> 00:04:12,092
+and all these other things yeah So like that similarly in that vein I'll just get to the CPU ones
+
+44
+00:04:12,142 --> 00:04:16,730
+where historically we have customers that ask for this with like open cloud that happened so that there's a
+
+45
+00:04:16,780 --> 00:04:21,680
+bunch of people that are like oh I need my sandbox or CPU box running for a very very long
+
+46
+00:04:21,730 --> 00:04:27,788
+time can you give me like a $5 Hetzner type you know offering and I'm like well no because like
+
+47
+00:04:27,838 --> 00:04:34,178
+that is a bare metal machine that has no incurs very little cost but when you have something that's larger
+
+48
+00:04:34,228 --> 00:04:38,178
+software offering then there is more cost so it's hard to to compete with that so I would assume
+
+49
+00:04:38,228 --> 00:04:42,195
+also on the neoclouds that like the ones that are bare metal as you mentioned have a lower cost
+
+50
+00:04:42,245 --> 00:04:49,325
+of sale than the the software ones um that moving just I was just curious about that like why the
+
+51
+00:04:49,375 --> 00:04:55,559
+right to exist they had because it's sort of analogized with what we do but the real question is you
+
+52
+00:04:55,609 --> 00:05:00,947
+brought this up which is directionally what we're thinking about is that CPUs are the new bottleneck like every
+
+53
+00:05:00,997 --> 00:05:06,414
+investor partner everyone that I talked to historically was just like GPU GPU GPU and now you had this big
+
+54
+00:05:06,464 --> 00:05:12,217
+report about like CPUs and I'm like okay yes thank you and so you reported like this year will be
+
+55
+00:05:12,267 --> 00:05:17,321
+a bottleneck so just give us a high level TLDR why is CPU now bottleneck and what do you see?
+
+56
+00:05:17,371 --> 00:05:25,502
+Yeah I mean for the first few years of AI CPU was a real big lagger right sure you used it for some storage used it for some checkpointing
+
+57
+00:05:25,552 --> 00:05:29,945
+used it for pre-processing your data and pre-training but it was pretty light and then
+
+58
+00:05:29,995 --> 00:05:33,881
+inference was also like the models just weren't good enough to be agentic you couldn't
+
+59
+00:05:33,931 --> 00:05:40,630
+you know go step by step by step so there was no there was no capability for a model to go and do actions and string them together so then
+
+60
+00:05:40,680 --> 00:05:46,736
+it wasn't really it was like it was like you would send a string and it send a string back right simple inference and so there was not much need
+
+61
+00:05:46,786 --> 00:05:56,872
+for CPUs but then over the last few years or last couple years it's not even like last couple years right you know Q* and OpenAI had that and
+
+62
+00:05:56,922 --> 00:06:05,697
+they had all that drama but then finally o1 preview launched I want to say like 15 16 months ago feels like much longer ago a long time ago Yeah
+
+63
+00:06:05,747 --> 00:06:13,862
+ages yeah but o1 was the first model sort of there and and we we sort of had a entire flood of models right like before people would do simple
+
+64
+00:06:13,912 --> 00:06:19,358
+things like check the output of the model with regex or something simple just to
+
+65
+00:06:19,408 --> 00:06:23,105
+see if it was doing structured properly doing structured outputs you know for function calling
+
+66
+00:06:23,155 --> 00:06:28,041
+and things like this right but as we've stepped forward the the the checks on
+
+67
+00:06:28,091 --> 00:06:32,750
+the model are much much larger integrated fully into training right with reinforcement learning right
+
+68
+00:06:32,800 --> 00:06:36,643
+instead of just doing regex you're doing like various classifiers instead of doing classifiers you're
+
+69
+00:06:36,693 --> 00:06:41,588
+doing like code unit test and compilation instead of doing that you're running you know
+
+70
+00:06:41,638 --> 00:06:47,442
+agentic flows where it's actually calling databases and stuff or you're interfacing with some environment
+
+71
+00:06:47,492 --> 00:06:52,449
+that is heavy on CPU like a physics simulation or or biology simulation you just
+
+72
+00:06:52,499 --> 00:06:57,796
+kept stepping into more and more complicated things where the model outputs to checks it
+
+73
+00:06:57,846 --> 00:07:01,668
+right this environment reinforcement learning environment and then goes back and trains on it and
+
+74
+00:07:01,718 --> 00:07:05,243
+and this loop has gotten tighter and tighter and tighter over the last couple years
+
+75
+00:07:05,293 --> 00:07:10,371
+and then more recently over the let's call it really the last 6 months you
+
+76
+00:07:10,421 --> 00:07:21,340
+know code agent revenue has gone from a couple billion to north of 10 billion in like a very short amount of time and and these the horizon of these
+
+77
+00:07:21,390 --> 00:07:26,390
+has also increased dramatically right like GPT-5.4 Codex can work for like 6-7 hours and
+
+78
+00:07:26,440 --> 00:07:33,282
+it's like fine right and so you know it's it's in that time frame it's
+
+79
+00:07:33,332 --> 00:07:40,430
+doing all sorts of calls to databases it's doing calls to you know at least we we use a lot of cron servers but you know like whatever whatever it
+
+80
+00:07:40,480 --> 00:07:44,372
+is right there's anything and everything it can go ping check it out scrape
+
+81
+00:07:44,422 --> 00:07:48,430
+and just work agentically on its own and that's also requiring a lot of CPUs
+
+82
+00:07:48,480 --> 00:07:52,514
+so over the last 6 months that's ballooned as well in addition to the reinforcement
+
+83
+00:07:52,564 --> 00:07:57,130
+learning training loop getting tighter and tighter and so over the last 6 months we've
+
+84
+00:07:57,180 --> 00:08:03,372
+seen um the entire cloud market run out of CPUs right I don't know if
+
+85
+00:08:03,422 --> 00:08:07,511
+you folks have interacted with GitHub a lot recently but it's really unstable I think
+
+86
+00:08:07,561 --> 00:08:11,404
+you're the third person to mention that today Okay Yeah Yeah yeah so we've we've
+
+87
+00:08:11,454 --> 00:08:15,254
+been we've been like checking GitHub's like stats on like how often is it down
+
+88
+00:08:15,304 --> 00:08:19,095
+how often does it fail to commit like you know whatever right it's it's terrible
+
+89
+00:08:19,145 --> 00:08:23,030
+and that's because Microsoft sold all their CPUs that they had spare to other people
+
+90
+00:08:23,080 --> 00:08:28,310
+right either internal use for their lab but you know not really more so like
+
+91
+00:08:28,360 --> 00:08:33,045
+external labs they signed deals with Anthropic and OpenAI and so they just have like
+
+92
+00:08:33,095 --> 00:08:42,801
+no CPUs left right and we've seen you know the same at many other firms right so whereas before you'd have like you know have many GPU servers per CPU
+
+93
+00:08:42,851 --> 00:08:50,930
+server and so you'd be like you know 100 megawatts of GPUs would be served by even like 1 megawatt or less of CPUs nowadays the ratio is like getting
+
+94
+00:08:50,980 --> 00:08:56,750
+much much closer both for RL training and and for inference agentic inference so then
+
+95
+00:08:56,800 --> 00:09:03,140
+you you've just seen everyone run out of CPUs Amazon's volumes on CPUs of CPU
+
+96
+00:09:03,190 --> 00:09:07,710
+servers they're installing have 3x year on year right from this year versus last year
+
+97
+00:09:07,760 --> 00:09:13,230
+and so that there's just no capacity anywhere and that's causing a lot of instability
+
+98
+00:09:13,280 --> 00:09:17,709
+not just in GitHub but probably other places too I mean a lot of infrastructure
+
+99
+00:09:17,759 --> 00:09:21,411
+today we talked about this like every day it's normal to see that some infra
+
+100
+00:09:21,461 --> 00:09:29,743
+provider be it GitHub or being like an actual not to name like they go down like it's become quite a constant thing and so could be lack of CPUs
+
+101
+00:09:29,793 --> 00:09:33,904
+but also scale of the workloads and what not so that everyone's infra code is
+
+102
+00:09:33,954 --> 00:09:37,469
+vibe coded Yeah it could be that everyone's infra code is vibe coded yeah could
+
+103
+00:09:37,519 --> 00:09:45,190
+that be as well I don't think it's all but there could be there could be parts of that that is there and so what I see which is interesting
+
+104
+00:09:45,240 --> 00:09:53,254
+as well as the number of CPU workloads or the number of that are running on us so Daytona has basically three use cases so it's like code and command
+
+105
+00:09:53,304 --> 00:10:02,337
+execution so if you like a a Claude Code type of thing needs to run on a We have computer use cases which we see actually growing really fast.
+
+106
+00:10:02,387 --> 00:10:06,362
+We've now launched today we announced our Windows sandbox which runs on a CPU.
+
+107
+00:10:06,412 --> 00:10:12,700
+So if you need an agent to do like on legacy software which is like all finance, all support, all um that's all there.
+
+108
+00:10:12,750 --> 00:10:18,212
+But I'll also to your point like reinforcement learning, we have a bunch of people that usually use like Kubernetes.
+
+109
+00:10:18,262 --> 00:10:19,266
+Now they would use us.
+
+110
+00:10:19,316 --> 00:10:25,048
+But the interesting thing is the the size and scale of these loads are insanely large and they're growing insanely large.
+
+111
+00:10:25,098 --> 00:10:28,747
+And we're like the smallest cloud in the world.
+
+112
+00:10:28,797 --> 00:10:36,242
+So my interest to what in the question is like if we as a very very small company have this much, what does that do at the large scale, right?
+
+113
+00:10:36,292 --> 00:10:39,855
+Like so um and we've had I'm curious if you have any insight on this,
+
+114
+00:10:39,905 --> 00:10:45,418
+but just just RL let alone the long running agents which are on their own, we we see customers coming in.
+
+115
+00:10:45,468 --> 00:10:49,350
+One of them ran a million one single customer yesterday in the span of 6 hours.
+
+116
+00:10:49,400 --> 00:10:50,966
+Like 1 million of these CPU workloads.
+
+117
+00:10:51,016 --> 00:10:52,049
+So that's one customer.
+
+118
+00:10:52,099 --> 00:10:53,660
+And so like how many of these customers are doing RL?
+
+119
+00:10:53,710 --> 00:10:54,640
+They're going to need this.
+
+120
+00:10:54,690 --> 00:10:57,510
+I I don't know if you have any insights on this, but I'm just curious.
+
+121
+00:10:57,560 --> 00:11:01,744
+Um I mean I mean there there there there are some pretty uh shocking metrics.
+
+122
+00:11:01,794 --> 00:11:04,310
+Like a million vCPUs sounds insane.
+
+123
+00:11:04,360 --> 00:11:12,030
+Um but there some of the some of the scale of the workloads and contracts people are signing are are even like more ridiculous than that, right?
+
+124
+00:11:12,080 --> 00:11:13,710
+Um I'm sure that's because we're really small.
+
+125
+00:11:13,760 --> 00:11:14,787
+That's what I Yeah, yeah.
+
+126
+00:11:14,837 --> 00:11:19,707
+So so I guess I guess like when you look at like again like when you look at like the Anthropic and OpenAI of the world,
+
+127
+00:11:19,757 --> 00:11:24,207
+they have they have fully just eaten the entire capacity of multiple clouds, right?
+
+128
+00:11:24,257 --> 00:11:29,875
+A lot of the impetus for the recent Amazon and OpenAI deal was yes, OpenAI wanted money, yes,
+
+129
+00:11:29,925 --> 00:11:34,030
+they needed compute, but they also just like went to Amazon and were like give us your CPU.
+
+130
+00:11:34,080 --> 00:11:35,327
+CPUs, yeah.
+
+131
+00:11:35,377 --> 00:11:36,084
+Right?
+
+132
+00:11:36,134 --> 00:11:43,850
+Um and and before OpenAI's stack was pretty much only on x86 CPUs, but Amazon had tons of Arm CPUs and so they ported the whole thing, right?
+
+133
+00:11:43,900 --> 00:11:47,646
+It's like anywhere I'll I'll port my code base to get uh access, right?
+
+134
+00:11:47,696 --> 00:11:48,582
+To access to CPUs.
+
+135
+00:11:48,632 --> 00:11:53,600
+And so this is like the the level of like and it's not that difficult to port port from x86 to Arm, but you know,
+
+136
+00:11:53,650 --> 00:11:56,556
+like there's there's very few dependencies that aren't working now,
+
+137
+00:11:56,606 --> 00:12:02,217
+but um this is the level of like um engineering people are willing to go to, right?
+
+138
+00:12:02,267 --> 00:12:09,110
+Cuz usually devs are too lazy to do anything um and they'll just go get capacity elsewhere, but there isn't capacity anywhere else.
+
+139
+00:12:09,160 --> 00:12:11,181
+Yeah, so I mean that's interesting like we're all x86.
+
+140
+00:12:11,231 --> 00:12:12,128
+That's all we have.
+
+141
+00:12:12,178 --> 00:12:14,030
+We don't have our our ARM at the moment.
+
+142
+00:12:14,080 --> 00:12:20,359
+But then like there's those two which I know, but also like NVIDIA has their like CPU, other people building out their CPUs.
+
+143
+00:12:20,409 --> 00:12:22,432
+There's also differences between these CPUs.
+
+144
+00:12:22,482 --> 00:12:24,230
+Are there just going to be like these general purpose CPUs?
+
+145
+00:12:24,280 --> 00:12:26,539
+There's also like you probably know more about this than I do.
+
+146
+00:12:26,589 --> 00:12:28,630
+I'm just like super curious.
+
+147
+00:12:28,680 --> 00:12:30,159
+Um on the types of CPUs?
+
+148
+00:12:30,209 --> 00:12:32,848
+Like now there's so many there used to be just like x86 and ARM.
+
+149
+00:12:32,898 --> 00:12:34,428
+That was it like for the most part.
+
+150
+00:12:34,478 --> 00:12:36,111
+Now there's different types of CPUs.
+
+151
+00:12:36,161 --> 00:12:40,590
+Is it just because everyone's run out or are they like better at some things than others?
+
+152
+00:12:40,640 --> 00:12:49,862
+Are there anything I mean usually what happens like when there's a gold rush is the person with a broken pickaxe can also sell their pickaxes.
+
+153
+00:12:49,912 --> 00:12:50,846
+Yeah, yeah.
+
+154
+00:12:50,896 --> 00:12:55,830
+Um but like yeah, I mean this the CPU market is like quite dynamic, right?
+
+155
+00:12:55,880 --> 00:12:57,190
+Um you know, it it was mostly Intel AMD.
+
+156
+00:12:57,240 --> 00:13:00,110
+I assume you mostly use Intel and AMD CPUs.
+
+157
+00:13:00,160 --> 00:13:03,635
+Um Both of them have said they're like fully sold out.
+
+158
+00:13:03,685 --> 00:13:06,699
+They've sent price increase notices to their customers.
+
+159
+00:13:06,749 --> 00:13:08,357
+Um so they're not even competing with each other anymore.
+
+160
+00:13:08,407 --> 00:13:11,162
+They're just like how many can I make and sell?
+
+161
+00:13:11,212 --> 00:13:14,442
+Um and likewise like Amazon had their Graviton CPUs.
+
+162
+00:13:14,492 --> 00:13:15,273
+They've had what?
+
+163
+00:13:15,323 --> 00:13:17,630
+Five, six generations now.
+
+164
+00:13:17,680 --> 00:13:20,235
+Um And NVIDIA has their Vera CPU.
+
+165
+00:13:20,285 --> 00:13:20,685
+Right.
+
+166
+00:13:20,720 --> 00:13:23,350
+And NVIDIA has their Grace and Vera CPUs.
+
+167
+00:13:23,400 --> 00:13:26,813
+Um and no one really deployed Grace standalone CPU boxes.
+
+168
+00:13:26,863 --> 00:13:30,877
+There was like a couple small deployments that NVIDIA NVIDIA did for PR with people,
+
+169
+00:13:30,927 --> 00:13:34,984
+but in reality there's like very few like standalone CPU deployments that NVIDIA was able to do.
+
+170
+00:13:35,034 --> 00:13:35,392
+Okay.
+
+171
+00:13:35,422 --> 00:13:38,110
+Um but now well, just they're just not as good, right?
+
+172
+00:13:38,160 --> 00:13:38,460
+Okay.
+
+173
+00:13:38,387 --> 00:13:41,510
+Um but now as we step forward, maybe their CPU got better.
+
+174
+00:13:41,560 --> 00:13:44,670
+Um maybe they're bundling better, but also just because they have capacity.
+
+175
+00:13:44,720 --> 00:13:45,703
+Because no one else has them.
+
+176
+00:13:45,753 --> 00:13:52,507
+Yeah, they're they're they're able to get a lot more contracts on their uh Vera CPUs uh that are going to deploy sort of later this year,
+
+177
+00:13:52,557 --> 00:13:55,350
+early next year time frame um is when they start deploying.
+
+178
+00:13:55,400 --> 00:13:57,867
+So it's sort of like a very um dynamic market.
+
+179
+00:13:57,917 --> 00:14:03,010
+And then and then you've got like Microsoft and Google are starting to deploy their CPUs in volumes.
+
+180
+00:14:03,060 --> 00:14:10,386
+Um ARM is going to launch a CPU in like a few weeks uh that Meta is going to adopt and a few others are going to adopt um like Cloudflare.
+
+181
+00:14:10,436 --> 00:14:15,499
+And so there's going to be a lot more proliferation like Arm standalone rather than like Arm licensing the IP to someone.
+
+182
+00:14:15,549 --> 00:14:22,497
+So there's a lot more um diversification in the market um which which happens when there's a gold rush, right?
+
+183
+00:14:22,547 --> 00:14:29,707
+And then we'll see what actually is the best quality and is left standing as the sort of supply demand gap get closes.
+
+184
+00:14:29,757 --> 00:14:30,157
+Yeah.
+
+185
+00:14:30,200 --> 00:14:36,346
+But it seems that supply and demand will still grow like at least what I see like one the RL and it it seems like RL is mostly done,
+
+186
+00:14:36,396 --> 00:14:44,807
+you know, they do post trading on RL, but we have now vendors and companies that are pitching and creating services that do RL in real time.
+
+187
+00:14:44,857 --> 00:14:50,672
+And since you have like some agents you have some SaaS that's an agentic in the background and then
+
+188
+00:14:50,722 --> 00:14:56,161
+it will do RL at the end of the day basically to like learn against what it has done.
+
+189
+00:14:56,211 --> 00:14:57,321
+And so that grows.
+
+190
+00:14:57,371 --> 00:15:05,525
+But also these long running agents, if they the way it seems to be working directionally is if the agents can work longer and solve for more things,
+
+191
+00:15:05,575 --> 00:15:11,615
+you can essentially ask them to do more and they will spin up more and more of these agents which means more and more CPU boxes.
+
+192
+00:15:11,665 --> 00:15:18,396
+So do you see that like from your purview do you like I understand market dynamics and that'll probably converge at some point,
+
+193
+00:15:18,446 --> 00:15:22,388
+but I feel it's getting wider before it's shrinking the need for that.
+
+194
+00:15:22,438 --> 00:15:28,230
+Yeah, I mean it it it's that's totally the case because initially all the RL was like, let's do math proofs.
+
+195
+00:15:28,280 --> 00:15:31,297
+And I was like, okay, math proofs are really low on resources.
+
+196
+00:15:31,347 --> 00:15:33,074
+And also the model, right?
+
+197
+00:15:33,124 --> 00:15:37,820
+The generator will generate tons of output and then it'll send the correct answer or what
+
+198
+00:15:37,870 --> 00:15:41,740
+it thinks is the correct answer to the server and then the server will verify it.
+
+199
+00:15:41,790 --> 00:15:44,125
+Um but as we've moved forward, right?
+
+200
+00:15:44,175 --> 00:15:45,390
+Like it's it's not just that.
+
+201
+00:15:45,440 --> 00:15:46,221
+It's like,
+
+202
+00:15:46,271 --> 00:15:50,504
+oh actually the model is committing many times or it's like trying to
+
+203
+00:15:50,554 --> 00:15:53,935
+compile many times or it's trying to do unit tests throughout its agentic process.
+
+204
+00:15:53,985 --> 00:16:00,248
+Okay, now that's that's increasing the frequency in which the generator, i.e. the model, is sending to the verifier.
+
+205
+00:16:00,298 --> 00:16:02,891
+Um and that loop gets tighter and tighter and tighter.
+
+206
+00:16:02,941 --> 00:16:10,448
+And as we as we continue to move to more complex RL, it's like the model will actually uh be verifying its output constantly, right?
+
+207
+00:16:10,498 --> 00:16:14,933
+Like if you imagine um let's say models that are training over the next year or two is
+
+208
+00:16:14,983 --> 00:16:19,437
+is let's say a robot model that's verifying and that's that's in in a like a world model,
+
+209
+00:16:19,487 --> 00:16:20,004
+right?
+
+210
+00:16:20,054 --> 00:16:24,792
+So uh VLM is is navigating across the world trying to pick up things, put them down.
+
+211
+00:16:24,842 --> 00:16:29,626
+Every single action needs to be verified against the physics model that is sitting on some CPUs.
+
+212
+00:16:29,676 --> 00:16:38,004
+And so that's that's insanely way more CPUs than you need for say doing unit tests or running a math proof, right?
+
+213
+00:16:38,054 --> 00:16:41,024
+And when we look at like o1, that's like all it could do was math, right?
+
+214
+00:16:41,074 --> 00:16:48,811
+Um and as we look at like you know, sort of uh GPT-5.4 or Opus 4.6, like it's okay agentic software,
+
+215
+00:16:48,861 --> 00:16:52,684
+but like as we move forward to the next stage of, you know, whatever's coming,
+
+216
+00:16:52,734 --> 00:16:58,390
+it's going to be models that can understand, oh, I need to tie my shoe and like when I tie it,
+
+217
+00:16:58,440 --> 00:17:00,854
+what's the strength strength, yeah. like what's the tensile strength?
+
+218
+00:17:00,904 --> 00:17:06,210
+All these things like as to the the has to be calculated cuz the verifier is just generating, you know, what's the next step.
+
+219
+00:17:06,260 --> 00:17:13,029
+Um but every step needs to be checked way more often and the intensity of that calculation for checking the step it goes up a time.
+
+220
+00:17:13,079 --> 00:17:13,379
+Yeah.
+
+221
+00:17:13,401 --> 00:17:19,324
+But there's also another thing and you probably know better than I is like the the the level
+
+222
+00:17:19,374 --> 00:17:26,014
+of the the the strength of the GPUs can handle in parallel a certain amount of CPUs boxes.
+
+223
+00:17:26,064 --> 00:17:29,104
+And so as we get next generations of GPUs,
+
+224
+00:17:29,154 --> 00:17:38,830
+I feel that they will be able to spin up manage or work on more CPUs than they do now which is another stressor on CPUs now.
+
+225
+00:17:38,880 --> 00:17:40,735
+Yeah, I mean that's that's certainly the case, right?
+
+226
+00:17:40,785 --> 00:17:44,388
+GPU Well, GPUs are also just like getting way higher power, right?
+
+227
+00:17:44,438 --> 00:17:49,070
+So one GPU will equal many many more CPUs over time, right?
+
+228
+00:17:49,120 --> 00:17:55,166
+Um and GPUs are getting more expensive gen on gen on gen, whereas vCPUs are flat, slightly down.
+
+229
+00:17:55,216 --> 00:17:55,685
+Yeah.
+
+230
+00:17:55,735 --> 00:17:58,750
+Um and so certainly it's a different scale, right?
+
+231
+00:17:58,800 --> 00:18:02,587
+Like one Blackwell versus one Rubin, performance is up X.
+
+232
+00:18:02,637 --> 00:18:04,070
+Price is also up X.
+
+233
+00:18:04,120 --> 00:18:12,925
+Um whereas, you know, you may buy last generation CPU, new generation CPU and there's 192 vCPUs in this gen and last gen was like 96, right?
+
+234
+00:18:12,975 --> 00:18:18,707
+So now you've got way more CPUs, but the the price increase is equivalent to what you got in additional vCPUs.
+
+235
+00:18:18,757 --> 00:18:23,198
+So it's like sort of yeah, the the ratio will grow in the favor of vCPUs,
+
+236
+00:18:23,248 --> 00:18:28,803
+but the cost will be sort of also probably in the direction of CPUs, but not sure how much.
+
+237
+00:18:28,853 --> 00:18:29,160
+Yeah.
+
+238
+00:18:29,190 --> 00:18:35,560
+And and also the other stressor on that and we've seen this with with larger customers when they have
+
+239
+00:18:35,610 --> 00:18:40,353
+like they don't they have like a time allotment for GPUs and they don't want their GPUs to be idle.
+
+240
+00:18:40,403 --> 00:18:48,689
+So they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot.
+
+241
+00:18:48,739 --> 00:18:50,466
+They're essentially working, right?
+
+242
+00:18:50,516 --> 00:18:54,868
+So they'll we we I say we cuz we do mostly CPUs are certainly the cheap resource.
+
+243
+00:18:54,918 --> 00:18:57,207
+I don't know if we're cheap, but cheap resource for this.
+
+244
+00:18:57,257 --> 00:19:04,989
+And so that spends more GPUs actually just because the cost of having an idle GPU is to is way more expensive, right?
+
+245
+00:19:05,039 --> 00:19:06,923
+Yeah, it's actually like a really interesting point, right?
+
+246
+00:19:06,973 --> 00:19:10,918
+The business model is like no one does I mean sure, there's on demand GPUs,
+
+247
+00:19:10,968 --> 00:19:16,620
+but like Lambda has like 50,000 plus GPUs and only 4,000 of them are on demand, right?
+
+248
+00:19:16,670 --> 00:19:17,795
+And they're always sold out.
+
+249
+00:19:17,845 --> 00:19:20,055
+So like no one really has on demand GPUs.
+
+250
+00:19:20,105 --> 00:19:27,528
+Everyone's signing at minimum like long-term, you know, multi-month contracts, but in most cases multi-year contracts.
+
+251
+00:19:27,578 --> 00:19:32,338
+Um and so like CPUs have been used to like you can spin them up and down, right?
+
+252
+00:19:32,388 --> 00:19:34,910
+That's why everyone moved to the cloud, right?
+
+253
+00:19:34,960 --> 00:19:42,037
+Um but with these RL workloads, it's like, okay, the GPU: the generator, the model running on a GPU generated a bunch of stuff.
+
+254
+00:19:42,087 --> 00:19:44,030
+It sends it to the verifier.
+
+255
+00:19:44,080 --> 00:19:46,123
+If the verifier is not ready and waiting Then it's idle.
+
+256
+00:19:46,173 --> 00:19:46,710
+Then it's waiting.
+
+257
+00:19:46,760 --> 00:19:47,060
+Right.
+
+258
+00:19:46,954 --> 00:19:47,916
+Like the GPU is just sitting there.
+
+259
+00:19:47,966 --> 00:19:51,163
+So it's like, okay, well, I've already paid for this.
+
+260
+00:19:51,213 --> 00:19:51,670
+Yes.
+
+261
+00:19:51,720 --> 00:20:00,228
+So if you can't get your instantaneous you know you know resources spun up on the CPU side and in fact you should do it preemptively so it's not
+
+262
+00:20:00,278 --> 00:20:05,266
+like loading you know the the simulator that you or the generation the environment
+
+263
+00:20:05,316 --> 00:20:08,041
+right you you're wasting money so yeah like that that makes a lot of sense.
+
+264
+00:20:08,091 --> 00:20:11,190
+And not only that then you have that running and then as soon as those are running you're
+
+265
+00:20:11,240 --> 00:20:16,441
+spinning up another warm pool of these so that every new iteration of them are are continually growing.
+
+266
+00:20:16,491 --> 00:20:18,351
+So what does that mean generally?
+
+267
+00:20:18,401 --> 00:20:26,037
+So we skipped over RAM we didn't talk about that where it's like GPU was a bottleneck RAM was a bottleneck and now CPUs.
+
+268
+00:20:26,087 --> 00:20:32,576
+So just very closer to home for most people is that like it's very hard to buy a PC today because it's like super expensive is is that
+
+269
+00:20:32,626 --> 00:20:36,482
+happening to the CPUs because we just mentioned that they're like they're fairly inexpensive
+
+270
+00:20:36,532 --> 00:20:41,950
+and flat does the market pressure now demand sort of that these prices now increase?
+
+271
+00:20:42,000 --> 00:20:47,985
+Yeah I mean it's it's pretty much the case for all like PCs laptops building a PC
+
+272
+00:20:48,035 --> 00:20:54,910
+that it's hard to get you know Apple is pretty sold out of like Mac minis for example.
+
+273
+00:20:54,960 --> 00:20:59,036
+We we bought a bunch of Mac minis because people are switching from you know people who
+
+274
+00:20:59,086 --> 00:21:02,404
+used a bunch of Excel and like Windows are like okay I want to use Claude Code and
+
+275
+00:21:02,454 --> 00:21:08,843
+OS X is obviously a better um dev environment right so we just bought a bunch of Mac
+
+276
+00:21:08,893 --> 00:21:13,799
+minis and people are deploying them and using them and and sort of I think similar has happened
+
+277
+00:21:13,849 --> 00:21:19,127
+across the space and then data centers are way more of an inelastic buyer of resources and
+
+278
+00:21:19,177 --> 00:21:24,662
+so that's also caused prices to go up right so like GPUs always were expensive and video's margins
+
+279
+00:21:24,712 --> 00:21:29,638
+have always been you know 70% plus CPUs the margins were not that high but they're creeping up
+
+280
+00:21:29,688 --> 00:21:35,747
+because Intel and AMD are raising prices and they're tight memory has like 4x in price over the
+
+281
+00:21:35,797 --> 00:21:40,765
+last like year and it's going to continue to go up and then now storage SSD right
+
+282
+00:21:40,815 --> 00:21:45,717
+so it's like all of the resources are SSDs are also up like three four x in price
+
+283
+00:21:45,767 --> 00:21:49,548
+and going to keep going up at least another like 60% not as much as DRAM but up
+
+284
+00:21:49,598 --> 00:21:56,264
+a lot and so between these like four like these things right it's like well the CPU capacity
+
+285
+00:21:56,314 --> 00:22:03,263
+for Intel and AMD is somewhat fungible between and substrate and all these things somewhat fungible between PCs
+
+286
+00:22:03,313 --> 00:22:09,130
+and and data centers RAM and storage are very fungible and so you've ended up with this like
+
+287
+00:22:09,180 --> 00:22:15,271
+conundrum that like look screw the screw the like normally humans screw the humans yeah you have to
+
+288
+00:22:15,321 --> 00:22:21,470
+buy a Mac Mac mini now otherwise you'll never escape the permanent underclass is like the thought process.
+
+289
+00:22:21,520 --> 00:22:28,996
+And one last note before we're close to the end but one thing not financial advice like Intel was in a very bad spot like quite like recently.
+
+290
+00:22:29,046 --> 00:22:29,710
+Still are.
+
+291
+00:22:29,760 --> 00:22:32,291
+Yeah but does this pull them out?
+
+292
+00:22:32,341 --> 00:22:40,550
+Um I mean they'll do better but like it's not like it's like a long-term like you know oh the company's saved right?
+
+293
+00:22:40,600 --> 00:22:46,660
+Company's valued on like future cash flows but like and also like some potentiality they get like
+
+294
+00:22:46,710 --> 00:22:49,910
+Apple or someone else as a customer and this is actually like the funnier thing is it's
+
+295
+00:22:49,960 --> 00:22:54,021
+not because CPU demand is so high Intel have some short-term profits from that but you know
+
+296
+00:22:54,071 --> 00:22:58,170
+others will catch up AMD and Amazon and others will catch up on capacity that they have.
+
+297
+00:22:58,220 --> 00:23:05,774
+More importantly is that AI is buying all the capacity on 3 nanometer and 2 nanometer in a couple
+
+298
+00:23:05,824 --> 00:23:09,655
+years that you know people are having to turn to other directions right like one of the like you
+
+299
+00:23:09,705 --> 00:23:15,909
+know people make all these like nonsense reasons up why NVIDIA acquired Groq part of it was because they
+
+300
+00:23:15,959 --> 00:23:22,629
+want to have really fast inference but like part of it is that Groq is manufactured on Samsung right?
+
+301
+00:23:22,679 --> 00:23:27,065
+Because there's no 3 nanometer capacity for them at TSMC they need a chip somewhere else and
+
+302
+00:23:27,115 --> 00:23:30,710
+if you just if AI is as crazy as like we believe it is and demand is
+
+303
+00:23:30,760 --> 00:23:33,559
+as crazy as we believe it is it's going to be even crazier next year and so
+
+304
+00:23:33,609 --> 00:23:37,885
+like just make any decent chip and it'll sell right is like sort of the philosophy there.
+
+305
+00:23:37,935 --> 00:23:42,577
+Obviously there's a lot more they're doing there on the architecture and stuff but same applies to like Apple is
+
+306
+00:23:42,627 --> 00:23:49,830
+getting squeezed out right like TSMC told them hey like get off of 3 nanometer move to 2 nanometer faster right?
+
+307
+00:23:49,880 --> 00:23:54,136
+Because all the AI chips are on 3 nanometer and it takes time right small mobile chips are
+
+308
+00:23:54,186 --> 00:24:00,415
+easier to make than big AI chips so all the AI chips are moving to 3 nanometer now right?
+
+309
+00:24:00,465 --> 00:24:06,887
+MI350 from late last year from AMD or Trainium 3 and TPU v7 from late last year or
+
+310
+00:24:06,937 --> 00:24:15,358
+slash early this year from Amazon and Google or you know NVIDIA is launching Rubin next week right?
+
+311
+00:24:15,408 --> 00:24:21,431
+That's that's also so all these things are 3 nanometer and and they're just telling Apple to get off.
+
+312
+00:24:21,481 --> 00:24:25,910
+They're telling Qualcomm and MediaTek to get off and all three of these companies are like oh maybe we
+
+313
+00:24:25,960 --> 00:24:31,750
+should use Intel because they're not telling us to get off because they don't they can't manufacture AI chips.
+
+314
+00:24:31,800 --> 00:24:35,110
+Yeah so so it's it's pretty it's pretty tough for everyone.
+
+315
+00:24:35,160 --> 00:24:41,470
+Um I have like a bunch of questions I'd love to ask you we're like we have 20 seconds left so the next question I ask
+
+316
+00:24:41,520 --> 00:24:48,713
+you is probably going to go off so with that I'll just like keep us on time and appreciate so much for coming and talking to us.
+
+317
+00:24:48,763 --> 00:24:51,920
+Thank you so much. you.

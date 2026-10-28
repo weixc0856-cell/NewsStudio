@@ -1,0 +1,1039 @@
+1
+00:00:04,160 --> 00:00:14,790
+hello again it's my privilege to welcome you know Jensen Huang who of course needs no introduction okay and
+
+2
+00:00:14,840 --> 00:00:21,652
+we have a partnership with Nvidia for a long time and it's really remarkable to see you know how
+
+3
+00:00:21,702 --> 00:00:28,874
+Jensen and Nvidia is is transforming the world okay and also Jensen himself is running a master class for
+
+4
+00:00:28,924 --> 00:00:36,957
+last 30 years on how to lead a company how to transform Industries how to create new markets and and
+
+5
+00:00:37,007 --> 00:00:38,047
+it's really great to
+
+6
+00:00:38,097 --> 00:00:49,654
+have Jensen here Jensen please
+
+7
+00:00:49,704 --> 00:00:58,469
+and rude it's great to be here I love designers
+
+8
+00:00:58,519 --> 00:01:09,267
+I love design tools yes I love K oh thank
+
+9
+00:01:09,317 --> 00:01:19,190
+you guys so I love them all I love virtuoso
+
+10
+00:01:19,240 --> 00:01:26,201
+Allegro Palladium Palladium Palladium is the only Appliance that's
+
+11
+00:01:26,251 --> 00:01:33,970
+more important to me than the refrigerator it is the
+
+12
+00:01:34,020 --> 00:01:42,657
+single most important Appliance in my life with we are the largest installation of Palladiums anywhere you know that and
+
+13
+00:01:42,707 --> 00:01:49,618
+um they are the first supercomputers we ever installed and operated and we we are we are uh we
+
+14
+00:01:49,668 --> 00:01:57,353
+are we are incredibly incredibly enamored with Palladium and so we love the work that you guys do
+
+15
+00:01:57,403 --> 00:02:03,906
+Blackwell would not be possible without Palladium well thank you Jensen we love this partnership it's remarkable to see
+
+16
+00:02:03,956 --> 00:02:09,846
+and you know you are now The Godfather right everybody just calls you The Godfather you know come on God
+
+17
+00:02:09,896 --> 00:02:14,213
+so you know we can talk about a lot of things but first you know as the front row
+
+18
+00:02:14,263 --> 00:02:25,540
+seat of driving when The Godfather says something it happens yeah when The Godfather wants something it happens yes obviously
+
+19
+00:02:25,590 --> 00:02:36,123
+that's not true for you but in terms of AI you know you have you know of course you
+
+20
+00:02:36,173 --> 00:02:42,998
+have front row seat you're driving most of these Innovation what do you see you know next 5 years you
+
+21
+00:02:43,048 --> 00:02:48,730
+know this like models get bigger models get more specific what happens to the architecture of the data center
+
+22
+00:02:48,780 --> 00:02:52,956
+what do you see for next you know of course this is long-term Journey but especially for the next
+
+23
+00:02:53,006 --> 00:03:01,023
+5 years how do you think AI is going to evolve I got that the um uh let's take
+
+24
+00:03:01,073 --> 00:03:08,730
+a step back and and in fact in fact your keynote and rude is is probably the most condensed um
+
+25
+00:03:08,780 --> 00:03:17,274
+uh example highlight of the transformation of computing underneath and the reason for that is of of course as
+
+26
+00:03:17,324 --> 00:03:26,583
+you know without Computing uh without Cadence there's no Computing without Computing there's no Cadence mhm and and so so
+
+27
+00:03:26,633 --> 00:03:34,750
+the the uh the fundamental changes transitions of the Computing platforms underneath uh it's it's foundational to Cadence and
+
+28
+00:03:34,800 --> 00:03:42,030
+it's foundational to to every single industry that relies on cadens which is every single industry and and um what's
+
+29
+00:03:42,080 --> 00:03:50,442
+happening if you look at your keynote uh well your keynote very clearly highlighted the in fact Millennium alone
+
+30
+00:03:50,492 --> 00:03:57,972
+highlighted the incredible benefits of accelerated Computing and once you get on accelerated Computing the the next thing that
+
+31
+00:03:58,022 --> 00:04:04,831
+is possible generative AI is additive on top of that without that transition to accelerated Computing generative AI would
+
+32
+00:04:04,881 --> 00:04:11,835
+be very difficult to do the benefit of going to accelerated Computing is all of a sudden what was what
+
+33
+00:04:11,885 --> 00:04:19,202
+was difficult to scale in the past using CPU scaling all of a sudden you're talking about a thousand
+
+34
+00:04:19,252 --> 00:04:25,201
+times x factors and on top of that another 30X X Factor on top of that when you add generative
+
+35
+00:04:25,251 --> 00:04:30,715
+AI to that there's another 100,000 X Factor on top of that um you also said something that was
+
+36
+00:04:30,765 --> 00:04:39,716
+really really terrific in the beginning um uh you said that design tools uh complete does the processing one time
+
+37
+00:04:39,766 --> 00:04:50,330
+and yet what designers want to do is explore a multi-dimensional um multimodality often times uh uh exploration space
+
+38
+00:04:50,380 --> 00:04:56,980
+and there isn't a right answer there's simply a best answer MH and so we need to explore hundreds
+
+39
+00:04:57,030 --> 00:05:04,785
+of thousands of of um uh different areas but of course the universe the the exhaustive exploration of the
+
+40
+00:05:04,835 --> 00:05:10,051
+design space is simply too hard to do no an infinite amount of computation would not be able to do
+
+41
+00:05:10,101 --> 00:05:16,627
+it and so we need AI to help us jump into a particular area of of uh of exploration
+
+42
+00:05:16,677 --> 00:05:23,336
+and optimization and then using principled solvers uh really really home in on that and so there's all kinds of
+
+43
+00:05:23,386 --> 00:05:28,626
+different different uh different things that we can do together so accelerated Computing I think generative AI first of
+
+44
+00:05:28,676 --> 00:05:34,592
+all is going to trans transform uh the way that uh Cadence develops software and it'll transform the way that
+
+45
+00:05:34,642 --> 00:05:40,470
+we use software I think that's that's number one I think the the um uh there are several several
+
+46
+00:05:40,520 --> 00:05:50,190
+other benefits aside from being able to do uh well we design our circuits our chips our pcbs our
+
+47
+00:05:50,240 --> 00:05:56,252
+systems and now even our data centers in Cadence right you know you know this quite well uh we
+
+48
+00:05:56,302 --> 00:06:03,211
+use you for circuit design to logic design to system design to emulation to verification formal verification so on so
+
+49
+00:06:03,261 --> 00:06:11,162
+forth uh end to end all the way to fluids and and so uh the design space anymore is
+
+50
+00:06:11,212 --> 00:06:16,688
+not about a chip or a system but it's really a codesign that goes across the entire thing Millennium is
+
+51
+00:06:16,738 --> 00:06:23,310
+really quite an excellent example because you're codesign Company by Nature we're codesign Company by Nature uh the way
+
+52
+00:06:23,360 --> 00:06:28,630
+that the computer science Industry the Computing industry talks about it we're the way we we talk about it in
+
+53
+00:06:28,680 --> 00:06:34,545
+engineering is code is design the way that's talked about uh in uh in Computing is called Full stack
+
+54
+00:06:34,595 --> 00:06:39,392
+um but it's the same idea that you have to innovate across the whole thing and so so your
+
+55
+00:06:39,442 --> 00:06:46,486
+transformation of Cadence from a chip design an EDA company to an EDA SDA company I think is really
+
+56
+00:06:46,536 --> 00:06:51,534
+uh really Visionary and is really essential and that's kind of the way it is in fact exactly the way
+
+57
+00:06:51,584 --> 00:06:58,794
+that we work uh uh with Cadence and um and the way that we Design Systems some of the
+
+58
+00:06:58,844 --> 00:07:04,804
+areas that that will will um uh people are starting to to realize and in fact you you your Kino
+
+59
+00:07:04,854 --> 00:07:09,847
+is actually excellent uh in fact I recommend everybody watch it a few more times because it's so dense
+
+60
+00:07:09,897 --> 00:07:15,230
+it is so dense now of course you and I speak the same language and so so u high bandwidth
+
+61
+00:07:15,280 --> 00:07:19,632
+communication yeah exactly you only had you said it once you said it once and I I you know
+
+62
+00:07:19,682 --> 00:07:25,389
+of course but you unique in that you are unique in that you understand things like that's not true
+
+63
+00:07:25,439 --> 00:07:34,482
+I just understand you like yeah both of us both of us are engineers and so and anyways anyways
+
+64
+00:07:34,532 --> 00:07:40,998
+um uh one of the areas that you touched on which is really profound is that by investing in accelerated
+
+65
+00:07:41,048 --> 00:07:48,030
+Computing by investing in AI um by investing in data centers we're able to design better and more energy
+
+66
+00:07:48,080 --> 00:07:55,894
+efficient products yeah now remember you designed the chip once but you ship at a trillion times you you built
+
+67
+00:07:55,944 --> 00:08:02,113
+a data center once but you save power that 6% power that on mediate Tech that you showed that
+
+68
+00:08:02,163 --> 00:08:09,624
+6% is going to get enjoyed by a billion people M all day long so the amount of energy that
+
+69
+00:08:09,674 --> 00:08:15,536
+we're going to be able to to save for the World by designing better software better chips better systems
+
+70
+00:08:15,586 --> 00:08:21,137
+has has a Perpetual benefit to society and is uh on the one hand we're going to consume more
+
+71
+00:08:21,187 --> 00:08:27,064
+uh Power and data centers for AI on the other hand for the other 98% of the power that's
+
+72
+00:08:27,114 --> 00:08:33,789
+consumed and energy that's consumed we're going to use that M uh design better better products design better computers better
+
+73
+00:08:33,839 --> 00:08:38,623
+cars better phones you know so on so forth better materials uh so and so forth so I think
+
+74
+00:08:38,673 --> 00:08:45,213
+I think we're at a really uh a a you know people call it an inflection point a transition um
+
+75
+00:08:45,263 --> 00:08:50,194
+all of that is completely true and and I I think um really exciting times and your Kino really
+
+76
+00:08:50,244 --> 00:08:55,633
+highlights it no thank know one thing is remarkable I mean a lot of things remarkable in media but one
+
+77
+00:08:55,683 --> 00:09:02,932
+thing is truly remarkable you know this transformation and you talk about it over the and you always probably
+
+78
+00:09:02,982 --> 00:09:08,610
+always had it in your mind of transform not just making chips because people confuse n of course Nvidia
+
+79
+00:09:08,660 --> 00:09:14,670
+is making the best chips but this even your keyot at GTC you know is building entire data center
+
+80
+00:09:14,720 --> 00:09:22,458
+very entire systems entire software stack you know and putting them together you have racks and liquid cooling data centers
+
+81
+00:09:22,508 --> 00:09:30,298
+so the whole architecture that's not easy transformation for a typical chip company Andia has become like a whole
+
+82
+00:09:30,348 --> 00:09:36,810
+Software System company right so H I'm just curious to see like how did you do that or what at
+
+83
+00:09:36,859 --> 00:09:41,621
+what or you always had this in mind or how did it unroll from this is very difficult to
+
+84
+00:09:41,671 --> 00:09:47,558
+implement now some companies are trying to system companies are trying to do chips which is difficult but Nvidia has
+
+85
+00:09:47,608 --> 00:09:55,186
+executed this flawlessly this transformation from not just chips to systems to software to to data and all that
+
+86
+00:09:55,236 --> 00:09:59,775
+so I just curious how you go about something like this yeah well I think the most most important
+
+87
+00:09:59,825 --> 00:10:09,808
+thing you said just now was flawlessly yeah you know this entire audience you all of us grew up
+
+88
+00:10:09,858 --> 00:10:16,206
+together yeah and I've been a chip designer for a very long time this is my entire career and and
+
+89
+00:10:16,256 --> 00:10:24,132
+and and so so there are many people in the audience uh who when you said flawlessly uh I'm
+
+90
+00:10:24,182 --> 00:10:32,172
+sure the audience went really there are some there are several things that we observed uh a long time ago
+
+91
+00:10:32,222 --> 00:10:38,238
+which was which was uh um which turned out to have been right okay and so so the first
+
+92
+00:10:38,288 --> 00:10:44,522
+thing is to observe that that a few a small amount of the code in a program represents the vast
+
+93
+00:10:44,572 --> 00:10:52,394
+majority of its rent time so for example cfd it's probably call it 3% of the code represents 99.9999%
+
+94
+00:10:52,444 --> 00:10:57,399
+of the rent time and if that's the case why do you use exactly the same tool the same
+
+95
+00:10:57,449 --> 00:11:03,110
+instrument the same processor to process all 90 all 100% of the code why don't you do something for
+
+96
+00:11:03,160 --> 00:11:09,073
+97% of the code and then something special for 3% of the code and and by doing so you could
+
+97
+00:11:09,123 --> 00:11:16,378
+speed up an application 100,000 times yes that was the observation and of course of course um uh the
+
+98
+00:11:16,428 --> 00:11:22,830
+type of applications that required that benefit from that that re would would want to do the rewrite was very
+
+99
+00:11:22,880 --> 00:11:28,914
+very small and we were we were um uh clever to have chosen computer Graphics as our first choice
+
+100
+00:11:28,964 --> 00:11:36,480
+for excel Computing because it turned out to have been um an application that required a tremendous amount of comp
+
+101
+00:11:36,530 --> 00:11:42,776
+computation in a in a parallel way it's conducive to parallel processing and it's also a very large Market
+
+102
+00:11:42,826 --> 00:11:47,818
+that churned very quickly that innovated very quickly and so so we chose a good good Market as a
+
+103
+00:11:47,868 --> 00:11:53,287
+starting point but we always always imagined that beyond computer Graphics uh there would be a whole bunch of
+
+104
+00:11:53,337 --> 00:12:00,664
+other applications that would come along accelerated Computing is not like general purpose computing in general purpose Computing you could
+
+105
+00:12:00,714 --> 00:12:06,310
+create One processor and it will run all code mhm that is absolutely not the case with accelerated Computing
+
+106
+00:12:06,360 --> 00:12:13,321
+because in fact you know I I coined the word accelerated Computing and what I meant by that was you
+
+107
+00:12:13,371 --> 00:12:22,710
+accelerate an application it's an application acceleration Computing platform and you have to know what application is yes and
+
+108
+00:12:22,760 --> 00:12:28,848
+so in the case of Nvidia we started by uh selecting uh computer Graphics but we also did Imaging and
+
+109
+00:12:28,898 --> 00:12:33,270
+then we did molecular Dynamics I'm so happy to to see the work that you guys do in digital
+
+110
+00:12:33,320 --> 00:12:39,259
+biology by the way just as a quick you know today we call it drug Discovery the re the
+
+111
+00:12:39,309 --> 00:12:44,274
+reason why we call it drug Discovery is because it's a little bit like you know mushroom Discovery you
+
+112
+00:12:44,324 --> 00:12:49,113
+you go on to the forest and and then you come you go oh look what I found could you
+
+113
+00:12:49,163 --> 00:12:56,925
+imagine if the chip design industry was called chip Discovery industry and and and the re the reason for
+
+114
+00:12:56,975 --> 00:13:04,527
+that is because my engineering team would come up hey ch look what we found Blackwell um and then next
+
+115
+00:13:04,577 --> 00:13:12,233
+year it would be like dry spell again yeah nothing Happ what happened this year we didn't find anything
+
+116
+00:13:12,283 --> 00:13:18,110
+completely understandable you know but we would never do that isn't that right and so so you know that the
+
+117
+00:13:18,160 --> 00:13:22,670
+the and the reason for that is because biology is much much more complicated you know we shape a
+
+118
+00:13:22,720 --> 00:13:28,104
+transistor until we could use design tools on it you can't shape biology until you could use design tools
+
+119
+00:13:28,154 --> 00:13:32,573
+on it you need design tools to catch up to the biology exactly which is which is near so
+
+120
+00:13:32,623 --> 00:13:38,710
+I think the the uh one of the largest Industries in the world is going to become a Cadence industry
+
+121
+00:13:38,760 --> 00:13:47,347
+and instead of that 1% you were talking about I think there's a giant giant opportunity ahead um the
+
+122
+00:13:47,397 --> 00:13:56,180
+each one of the the industries uh biology uh you you mentioned uh Transportation all of the applications are different
+
+123
+00:13:56,230 --> 00:14:01,127
+and some of it related to Imaging some of it is related to particle physics some of it's related
+
+124
+00:14:01,177 --> 00:14:06,857
+to to fluid some of it's related to um you know finite element right grids and things like that and
+
+125
+00:14:06,907 --> 00:14:14,193
+so the algorithms are different and the fact that that Cadence is a mathematics and a Computing company in
+
+126
+00:14:14,243 --> 00:14:18,610
+a lot of ways Nvidia as a mathematics and a Computing company exactly yeah and that's the reason why
+
+127
+00:14:18,660 --> 00:14:24,870
+we get along so well absolutely yeah and and you when when um when and R and I get
+
+128
+00:14:24,920 --> 00:14:33,506
+together uh you know we're we're saying things to each other and and very quickly we understand when I understand
+
+129
+00:14:33,556 --> 00:14:40,135
+something I nod when he understands something he shakes his head like that and so is it me it's
+
+130
+00:14:40,185 --> 00:14:46,005
+not right it's not me I know for a and so so when when you see the two of us
+
+131
+00:14:46,055 --> 00:14:50,268
+we're we're at a at a restaurant and we're talking to each other about all this stuff in the
+
+132
+00:14:50,318 --> 00:14:55,973
+future one of us going like this and the other one's going like this and that's because we're we're we're
+
+133
+00:14:56,023 --> 00:15:03,130
+agreeing with each other as soon as I go go like this and he goes like this that means
+
+134
+00:15:03,180 --> 00:15:10,763
+we're in trouble and so anyways we were we were always about about domain specific acceleration and over the
+
+135
+00:15:10,813 --> 00:15:17,971
+course of 30 years we've um we've accumulated on top of one architecture with Cuda all of these different
+
+136
+00:15:18,021 --> 00:15:23,770
+dsls domain specific libraries and some of it's for particles some of it's for Imaging some of it's for artificial
+
+137
+00:15:23,820 --> 00:15:29,830
+intelligence and so on so forth yeah and then you know this platform of course you had a great
+
+138
+00:15:29,880 --> 00:15:36,603
+talk at GTC that's remarkable that's I was telling Jensen he needs a bigger Stadium next time you know that
+
+139
+00:15:36,653 --> 00:15:42,149
+there was no enough space in that huge stadium so maybe next time you find Vegas or I know
+
+140
+00:15:42,199 --> 00:15:49,086
+where you're going to be but there are so many applications you highlighted you know there's horizontal enablement of almost
+
+141
+00:15:49,136 --> 00:15:55,129
+all Industries but then there's certain industries the impact can be huge like you mentioned Life Sciences but you
+
+142
+00:15:55,179 --> 00:16:01,228
+also talked about robotics you know or self-driving so is there one or two that of course you're involved
+
+143
+00:16:01,278 --> 00:16:06,445
+in so that you're super excited about in the short term or medium term that has the maximum potential
+
+144
+00:16:06,495 --> 00:16:12,227
+of impact well you mentioned you mentioned several of them uh the three industries that you highlighted uh happen to
+
+145
+00:16:12,277 --> 00:16:18,898
+be the three Industries I'm super excited about as well one of them is data centers or just Computing
+
+146
+00:16:18,948 --> 00:16:28,847
+um the second is is um you mentioned Automotive but if I could just abstract Automotive into robotics um autonomous
+
+147
+00:16:28,897 --> 00:16:37,498
+machines autonomous systems and uh or semi-autonomous systems that whole General category whether it's a cars or trucks or
+
+148
+00:16:37,548 --> 00:16:46,790
+uh pizza delivery robots or uh humanoid articulation self articulated robots those kind of uh systems have a lot of
+
+149
+00:16:46,840 --> 00:16:53,320
+commonality they they all need to have multiple sensors uh they uh require the functional safety is really important
+
+150
+00:16:53,370 --> 00:16:58,537
+so the the way you design the computer and validate the computer verify the computer certify the computer very
+
+151
+00:16:58,587 --> 00:17:04,500
+very important the operating system is not your normal type of operating system these operating systems are are fail
+
+152
+00:17:04,550 --> 00:17:10,749
+safe operating systems and so the way you design the systems is quite meticulous and quite specific and and of
+
+153
+00:17:10,799 --> 00:17:18,264
+course the the use of artificial intelligence uh um quite quite expansive and those those systems will be connected
+
+154
+00:17:18,314 --> 00:17:23,616
+to the cloud to the data center at all times so that it could be it could um of course
+
+155
+00:17:23,666 --> 00:17:31,984
+update new experiences um uh uh report failures and uh new circumstances and then download new models and so
+
+156
+00:17:32,034 --> 00:17:38,880
+so that I I love that that entire area of autonomous systems a whole new category of devices for all
+
+157
+00:17:38,930 --> 00:17:43,789
+of us to be building in the in the near future are going to be human robots and and
+
+158
+00:17:43,839 --> 00:17:48,269
+you could just see that the manufacturing cost of a human or robot is likely to be a lot
+
+159
+00:17:48,319 --> 00:17:54,035
+a lot lower than than people would expect why would it be any more than $ 10 to $20,000
+
+160
+00:17:54,085 --> 00:18:00,388
+and um you buy cars for10 to $220,000 why can't you have a human or robot for 10 to $20,000
+
+161
+00:18:00,438 --> 00:18:06,181
+um and and that robot will likely be a lot more agile and more versatile in an environment in
+
+162
+00:18:06,231 --> 00:18:12,206
+a world that we designed for humans and so manufacturing lines were designed for humans warehouses were designed for humans
+
+163
+00:18:12,256 --> 00:18:17,613
+um a whole bunch of things were designed for humans and therefore uh it's more likely that the human
+
+164
+00:18:17,663 --> 00:18:22,200
+robot would be productive in that environment so I I love that um I love that we're going to turn
+
+165
+00:18:22,250 --> 00:18:30,094
+biology into into a field for engineering uh the scientific discovery process uh really essential but but it's sporadic
+
+166
+00:18:30,144 --> 00:18:35,917
+and it's the reason why the EO uh so for the EO law is is true yes and and
+
+167
+00:18:35,967 --> 00:18:40,028
+by the way if we don't move to our accelerated Computing if we don't go to AI uh the
+
+168
+00:18:40,078 --> 00:18:45,629
+computer industry will go through the EO law and the reason for that is very very clear the amount of
+
+169
+00:18:45,679 --> 00:18:51,116
+work that we do the computation that we do uh is growing all the time but CPU scaling has
+
+170
+00:18:51,166 --> 00:18:58,830
+slowed and therefore we're going to enjoy ex uh inflation and not not not um uh not reduction in cost
+
+171
+00:18:58,880 --> 00:19:05,448
+Computing and so so we have to move to accelerated Computing to save power save time save um save
+
+172
+00:19:05,498 --> 00:19:11,590
+money and uh uh and but anyways I I think uh digital biology is going to go through a whole
+
+173
+00:19:11,640 --> 00:19:21,519
+Renaissance um where science and engineering comes closer and closer it's a very complicated field obviously uh you know
+
+174
+00:19:21,569 --> 00:19:27,201
+we don't talk about sh jur equations um in chip design yes because we CH we changed the transistors
+
+175
+00:19:27,251 --> 00:19:34,873
+until we could yes you know avoid shers equations but unfortunately in biology coent bonds the way that the
+
+176
+00:19:34,923 --> 00:19:40,359
+way that chemistry Works um you know obviously show equation is essential and so so I think there there's a
+
+177
+00:19:40,409 --> 00:19:44,920
+whole lot of things that that um uh that we have to go innovate but for the very first
+
+178
+00:19:44,970 --> 00:19:52,942
+time we have the necessary tools um the Computing the Computing systems uh the uh uh the algorithms that help
+
+179
+00:19:52,992 --> 00:19:59,390
+helps us deal with very large systems that are very chaotic absolutely yeah and the DAT data driven approach
+
+180
+00:19:59,440 --> 00:20:07,757
+fused with what you said earlier principled principal simulation approaches that Fusion might give us a chance yeah but those
+
+181
+00:20:07,807 --> 00:20:13,230
+three Industries I think are are spot on yeah these are huge all them yeah yeah enough but but
+
+182
+00:20:13,280 --> 00:20:21,001
+robot planetary scales enough yeah because Automotive anyway is going to be like you know with self-driving maybe the
+
+183
+00:20:21,051 --> 00:20:27,482
+first robotics but then humanoid is another huge that's right exactly and then you know I would like you
+
+184
+00:20:27,532 --> 00:20:32,552
+to me of course we have this great partnership really value and like started on the chip part system part
+
+185
+00:20:32,602 --> 00:20:38,721
+padium part but now recently in BIO and then also in reality right in data centers right so the
+
+186
+00:20:38,771 --> 00:20:44,097
+one big issue there is of course power we use Cadence to design our data centers yeah thank you so
+
+187
+00:20:44,147 --> 00:20:50,504
+the issue of power because a computer is a whole data center now right exactly but what what's your
+
+188
+00:20:50,554 --> 00:20:55,334
+thought on like power that AI is taking you know these data centers are taking of course we can optimize
+
+189
+00:20:55,384 --> 00:20:58,975
+but what else can we do for this you know one way to do it is if you do
+
+190
+00:20:59,025 --> 00:21:04,870
+more accelerate Computing actually you know what people don't realize that your power utiliz is going down for that's
+
+191
+00:21:04,920 --> 00:21:10,286
+right but just your thoughts on power consumption of AI and what all can we do in that yeah
+
+192
+00:21:10,336 --> 00:21:17,971
+there's two things that so uh first thing that you said absolutely true the power usage of accelerated Computing is
+
+193
+00:21:18,021 --> 00:21:25,184
+incredibly High and the reason for that is because the computers are incredibly dense mhh and and so the
+
+194
+00:21:25,234 --> 00:21:35,224
+power consumption is high and whatever optimization we can do for power utilization translates directly to more performance and that
+
+195
+00:21:35,274 --> 00:21:43,287
+performance could be could be measured as in you know more productivity doing uh generating more uh revenues or
+
+196
+00:21:43,337 --> 00:21:49,152
+directly into savings for the same amount of performance you could buy something a lot smaller okay and so so
+
+197
+00:21:49,202 --> 00:21:57,152
+I think power management uh in accelerated Computing directly translates into all the things that you care about um
+
+198
+00:21:57,202 --> 00:22:04,506
+I just said something that that that seems right on observation but in fact the second thing you said
+
+199
+00:22:04,556 --> 00:22:10,020
+would suggest that it's in fact completely wrong and and what what we mean by that and what anude
+
+200
+00:22:10,070 --> 00:22:18,085
+was implying is that accelerated Computing as you saw in his presentation took tens of thousands of general purpose servers
+
+201
+00:22:18,135 --> 00:22:26,989
+which would have consumed 10 times 20 times more cost 20 30 times more energy and reduce it into
+
+202
+00:22:27,039 --> 00:22:33,270
+something that is in incredibly dense MH and so the density of accelerated Computing is the reason why people think
+
+203
+00:22:33,320 --> 00:22:38,823
+it's it's it's power hungry and cost a lot of money but if you replace if you look at
+
+204
+00:22:38,873 --> 00:22:45,223
+it from E ISO work done or ISO throughput in fact you save an enormous amount of money and that's
+
+205
+00:22:45,273 --> 00:22:51,086
+the reason why it is essential uh as CPU scaling has slowed that we have to move towards accelerated
+
+206
+00:22:51,136 --> 00:22:56,666
+Computing because you're not going to be able to keep scaling out that traditional way anyways and so accelerate
+
+207
+00:22:56,716 --> 00:23:03,893
+accelerated uh accelerated Computing uh is essential the second thing that that you highlighted in your in your keynote
+
+208
+00:23:03,943 --> 00:23:10,190
+you just have to pay super close attention you you you were so crisp on it that AI actually helps
+
+209
+00:23:10,240 --> 00:23:16,681
+people save energy if not for the AI models you created that we now use in the tools how
+
+210
+00:23:16,731 --> 00:23:25,109
+would we have found 6% more savings or 10x more savings uh that wasn't possible without Ai and so you
+
+211
+00:23:25,159 --> 00:23:30,417
+invest in the training of the model once and then millions of Eng like ourselves get to benefit from
+
+212
+00:23:30,467 --> 00:23:37,030
+it and billions of people across decades will get get to uh enjoy the savings and so that's kind of
+
+213
+00:23:37,080 --> 00:23:43,810
+the the way to think about um cost the way to think about Investments not just on an instance
+
+214
+00:23:43,860 --> 00:23:51,057
+by instance basis but in healthcare speak longitudinally you have to look at savings look at climate change look
+
+215
+00:23:51,107 --> 00:24:00,044
+at money savings Energy savings longitudinally across the entire span of not just the products that you're building but
+
+216
+00:24:00,094 --> 00:24:05,280
+the way that you're designing the products the products that you build and the impact of the product being used
+
+217
+00:24:05,330 --> 00:24:11,707
+when you look at it longitudinally like that AI is going to be utterly transformative in helping us with
+
+218
+00:24:11,757 --> 00:24:17,670
+climate change using less power being more energy efficient so on so forth and the great thing is that you
+
+219
+00:24:17,720 --> 00:24:24,353
+know with this three layer cake that IAL this massive alignment in terms of between Nvidia and Cadence you
+
+220
+00:24:24,403 --> 00:24:29,121
+know you are transforming now by the way Jensen is a why am I always on the bottom of the
+
+221
+00:24:29,171 --> 00:24:34,761
+cake no you are in all three layers Jensen just kidding I'm just kidding all three layers yeah I
+
+222
+00:24:34,811 --> 00:24:42,060
+want to be the frosting yeah yeah but the people jenset is also you know you had like homemade
+
+223
+00:24:42,110 --> 00:24:46,708
+cookies last time I met you at Nvidia I I'm a great host anybody will drop by I'm a
+
+224
+00:24:46,758 --> 00:24:52,736
+great host I always take care of them yeah thank you oh it's great to but partner with all these
+
+225
+00:24:52,786 --> 00:24:59,710
+three but one thing uh Jensen you also have a very unique um management style right you know your
+
+226
+00:24:59,760 --> 00:25:06,629
+leadership style is well known you know flight organization fast decision making is truly remarkable to see and there are
+
+227
+00:25:06,679 --> 00:25:11,463
+a lot of people you know engineers and managers and leaders in the audience so any advice you have
+
+228
+00:25:11,513 --> 00:25:17,629
+for those things you know how to turn you know because turn ideas into action you know uh at the
+
+229
+00:25:17,679 --> 00:25:24,354
+core at the core of a vide management system and and Leadership philosophy if you will uh is to
+
+230
+00:25:24,404 --> 00:25:32,729
+create the conditions by which amazing people could do their life's work that is and I I just described
+
+231
+00:25:32,779 --> 00:25:40,150
+a a um a philosophy a mission statement if you will and and a way of conduct of of
+
+232
+00:25:40,200 --> 00:25:45,779
+myself and and the leaders and so the question is what can we do to create the conditions by which
+
+233
+00:25:45,829 --> 00:25:53,043
+people could do their life's work one of the most important uh aspects is to empower them with information
+
+234
+00:25:53,093 --> 00:25:59,785
+and so I I I don't think there's any decisions I make where only one person needs to hear it
+
+235
+00:25:59,835 --> 00:26:07,407
+um or that I need to whisper some information to somebody on a oneone uh because nobody else deserves
+
+236
+00:26:07,457 --> 00:26:11,239
+to hear it or can hear it or you know too tough to hear or whatever it is and so
+
+237
+00:26:11,289 --> 00:26:18,272
+I tend to do most of my work uh in in large environments uh where where a diverse team
+
+238
+00:26:18,322 --> 00:26:24,731
+of experts and uh people who can contribute uh uh comes together and we we just work the problem
+
+239
+00:26:24,781 --> 00:26:31,377
+we just work the issue uh so that's that's one um I also like that uh in addition to
+
+240
+00:26:31,427 --> 00:26:37,620
+the transparency of of the challenges of the company and the information that that people should get I also like
+
+241
+00:26:37,670 --> 00:26:45,730
+that I have opportunity to reason through things in front of people it it forces us to um ad
+
+242
+00:26:45,780 --> 00:26:54,989
+make suggestions of of directions that are that are uh fundamentally grounded on good reasoning and so by forcing myself
+
+243
+00:26:55,039 --> 00:27:02,577
+to reason through things I'm doing two things um you know of course influencing others second teaching other people
+
+244
+00:27:02,627 --> 00:27:09,394
+how to reason and the ability to take a a very complicated abstract idea and reason it all the way
+
+245
+00:27:09,444 --> 00:27:13,922
+down to exactly what we ought to do now uh why we should do it now or not do
+
+246
+00:27:13,972 --> 00:27:19,164
+it now most of the time is about not doing it now um or not doing it at all
+
+247
+00:27:19,214 --> 00:27:27,053
+I that reasoning process is incredibly empowering to people and so I I think it's one of the reasons
+
+248
+00:27:27,103 --> 00:27:33,415
+why why Nvidia so small we're only 28,000 people large um but we we punched so far above our weight
+
+249
+00:27:33,465 --> 00:27:42,485
+because almost every everybody is empowered uh to make you know good reasoned principled first principled reasons uh reasoned
+
+250
+00:27:42,535 --> 00:27:47,710
+decisions on my behalf and so so that that's kind of the reason why we did what we did and
+
+251
+00:27:47,760 --> 00:27:55,914
+then finally uh the properties of your your organization should reflect the product that you make and Nvidia is
+
+252
+00:27:55,964 --> 00:28:03,693
+a full stack company we're full you know we're just like you we completely co-designed and co-design suggests right up
+
+253
+00:28:03,743 --> 00:28:09,070
+front that you shouldn't be doing something just with a hardware team you shouldn't do be doing something just
+
+254
+00:28:09,120 --> 00:28:15,215
+with the software team you should be doing something across everything at the same time because you're doing codesign yes
+
+255
+00:28:15,265 --> 00:28:21,631
+and so I tried to create an environment where um uh the experts and the uh contributors at every
+
+256
+00:28:21,681 --> 00:28:27,678
+single layer of the company can uh be engaged uh with a problem engage a problem at the same time
+
+257
+00:28:27,728 --> 00:28:32,811
+and so those are some of the principles yeah it's remarkable it's remarkable to see well it's remarkable what
+
+258
+00:28:32,861 --> 00:28:37,618
+you guys have done yeah no thank it's great partnership Jensen you know we are out of time but thank
+
+259
+00:28:37,668 --> 00:28:42,927
+you for the partnership it's great to work with Nvidia you know great to be a part of this
+
+260
+00:28:42,977 --> 00:28:51,480
+massive transformation you're leading for the entire world thank you very much and thank you for your partnership thank you

@@ -1,0 +1,6811 @@
+{
+  "wireMagic": "pb3",
+  "pens": [ {
+  
+  } ],
+  "wsWinStyles": [ {
+  
+  } ],
+  "wpWinPositions": [ {
+  
+  } ],
+  "events": [ {
+    "tStartMs": 235,
+    "dDurationMs": 6200,
+    "segs": [ {
+      "utf8": "[MUSIC]"
+    } ]
+  }, {
+    "tStartMs": 7159,
+    "dDurationMs": 1736,
+    "segs": [ {
+      "utf8": "ANNOUNCER:\nPlease welcome"
+    } ]
+  }, {
+    "tStartMs": 8896,
+    "dDurationMs": 1334,
+    "segs": [ {
+      "utf8": "AI researcher and"
+    } ]
+  }, {
+    "tStartMs": 10231,
+    "dDurationMs": 4119,
+    "segs": [ {
+      "utf8": "founding member of\nOpenAI, Andrej Karpathy."
+    } ]
+  }, {
+    "tStartMs": 21169,
+    "dDurationMs": 3091,
+    "segs": [ {
+      "utf8": "ANDREJ KARPATHY:\nHi, everyone. I'm happy"
+    } ]
+  }, {
+    "tStartMs": 24261,
+    "dDurationMs": 1769,
+    "segs": [ {
+      "utf8": "to be here to tell you\nabout the state of"
+    } ]
+  }, {
+    "tStartMs": 26031,
+    "dDurationMs": 2429,
+    "segs": [ {
+      "utf8": "GPT and more generally about"
+    } ]
+  }, {
+    "tStartMs": 28461,
+    "dDurationMs": 3439,
+    "segs": [ {
+      "utf8": "the rapidly growing ecosystem\nof large language models."
+    } ]
+  }, {
+    "tStartMs": 31901,
+    "dDurationMs": 3114,
+    "segs": [ {
+      "utf8": "I would like to partition\nthe talk into two parts."
+    } ]
+  }, {
+    "tStartMs": 35016,
+    "dDurationMs": 1934,
+    "segs": [ {
+      "utf8": "In the first part, I would\nlike to tell you about"
+    } ]
+  }, {
+    "tStartMs": 36951,
+    "dDurationMs": 2159,
+    "segs": [ {
+      "utf8": "how we train GPT Assistance,"
+    } ]
+  }, {
+    "tStartMs": 39111,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "and then in the second part,"
+    } ]
+  }, {
+    "tStartMs": 40611,
+    "dDurationMs": 2309,
+    "segs": [ {
+      "utf8": "we're going to take a\nlook at how we can use"
+    } ]
+  }, {
+    "tStartMs": 42921,
+    "dDurationMs": 3469,
+    "segs": [ {
+      "utf8": "these assistants effectively\nfor your applications."
+    } ]
+  }, {
+    "tStartMs": 46391,
+    "dDurationMs": 1914,
+    "segs": [ {
+      "utf8": "First, let's take a\nlook at the emerging"
+    } ]
+  }, {
+    "tStartMs": 48306,
+    "dDurationMs": 1484,
+    "segs": [ {
+      "utf8": "recipe for how to train"
+    } ]
+  }, {
+    "tStartMs": 49791,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "these assistants and keep\nin mind that this is all"
+    } ]
+  }, {
+    "tStartMs": 51381,
+    "dDurationMs": 1649,
+    "segs": [ {
+      "utf8": "very new and still\nrapidly evolving,"
+    } ]
+  }, {
+    "tStartMs": 53031,
+    "dDurationMs": 2504,
+    "segs": [ {
+      "utf8": "but so far, the recipe\nlooks something like this."
+    } ]
+  }, {
+    "tStartMs": 55536,
+    "dDurationMs": 2009,
+    "segs": [ {
+      "utf8": "Now, this is a\ncomplicated slide,"
+    } ]
+  }, {
+    "tStartMs": 57546,
+    "dDurationMs": 1484,
+    "segs": [ {
+      "utf8": "I'm going to go\nthrough it piece by"
+    } ]
+  }, {
+    "tStartMs": 59031,
+    "dDurationMs": 2219,
+    "segs": [ {
+      "utf8": "piece, but roughly speaking,"
+    } ]
+  }, {
+    "tStartMs": 61251,
+    "dDurationMs": 2789,
+    "segs": [ {
+      "utf8": "we have four major\nstages, pretraining,"
+    } ]
+  }, {
+    "tStartMs": 64041,
+    "dDurationMs": 2189,
+    "segs": [ {
+      "utf8": "supervised finetuning,\nreward modeling,"
+    } ]
+  }, {
+    "tStartMs": 66231,
+    "dDurationMs": 1259,
+    "segs": [ {
+      "utf8": "reinforcement learning,"
+    } ]
+  }, {
+    "tStartMs": 67491,
+    "dDurationMs": 2144,
+    "segs": [ {
+      "utf8": "and they follow each\nother serially."
+    } ]
+  }, {
+    "tStartMs": 69636,
+    "dDurationMs": 1454,
+    "segs": [ {
+      "utf8": "Now, in each stage,"
+    } ]
+  }, {
+    "tStartMs": 71091,
+    "dDurationMs": 3439,
+    "segs": [ {
+      "utf8": "we have a dataset that\npowers that stage."
+    } ]
+  }, {
+    "tStartMs": 74531,
+    "dDurationMs": 2589,
+    "segs": [ {
+      "utf8": "We have an algorithm that\nfor our purposes will be"
+    } ]
+  }, {
+    "tStartMs": 77121,
+    "dDurationMs": 4949,
+    "segs": [ {
+      "utf8": "a objective and over for\ntraining the neural network,"
+    } ]
+  }, {
+    "tStartMs": 82071,
+    "dDurationMs": 1709,
+    "segs": [ {
+      "utf8": "and then we have a\nresulting model,"
+    } ]
+  }, {
+    "tStartMs": 83781,
+    "dDurationMs": 1894,
+    "segs": [ {
+      "utf8": "and then there are some\nnotes on the bottom."
+    } ]
+  }, {
+    "tStartMs": 85676,
+    "dDurationMs": 1404,
+    "segs": [ {
+      "utf8": "The first stage\nwe're going to start"
+    } ]
+  }, {
+    "tStartMs": 87081,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "with as the pretraining stage."
+    } ]
+  }, {
+    "tStartMs": 88581,
+    "dDurationMs": 2939,
+    "segs": [ {
+      "utf8": "Now, this stage is\nspecial in this diagram,"
+    } ]
+  }, {
+    "tStartMs": 91521,
+    "dDurationMs": 2189,
+    "segs": [ {
+      "utf8": "and this diagram is\nnot to scale because"
+    } ]
+  }, {
+    "tStartMs": 93711,
+    "dDurationMs": 1049,
+    "segs": [ {
+      "utf8": "this stage is where all of"
+    } ]
+  }, {
+    "tStartMs": 94761,
+    "dDurationMs": 1604,
+    "segs": [ {
+      "utf8": "the computational work\nbasically happens."
+    } ]
+  }, {
+    "tStartMs": 96366,
+    "dDurationMs": 2114,
+    "segs": [ {
+      "utf8": "This is 99 percent\nof the training"
+    } ]
+  }, {
+    "tStartMs": 98481,
+    "dDurationMs": 3489,
+    "segs": [ {
+      "utf8": "compute time and also flops."
+    } ]
+  }, {
+    "tStartMs": 101971,
+    "dDurationMs": 2239,
+    "segs": [ {
+      "utf8": "This is where we\nare dealing with"
+    } ]
+  }, {
+    "tStartMs": 104211,
+    "dDurationMs": 2399,
+    "segs": [ {
+      "utf8": "Internet scale datasets\nwith thousands"
+    } ]
+  }, {
+    "tStartMs": 106611,
+    "dDurationMs": 2084,
+    "segs": [ {
+      "utf8": "of GPUs in the supercomputer and"
+    } ]
+  }, {
+    "tStartMs": 108696,
+    "dDurationMs": 2399,
+    "segs": [ {
+      "utf8": "also months of\ntraining potentially."
+    } ]
+  }, {
+    "tStartMs": 111096,
+    "dDurationMs": 1934,
+    "segs": [ {
+      "utf8": "The other three\nstages are finetuning"
+    } ]
+  }, {
+    "tStartMs": 113031,
+    "dDurationMs": 1709,
+    "segs": [ {
+      "utf8": "stages that are much more along"
+    } ]
+  }, {
+    "tStartMs": 114741,
+    "dDurationMs": 4304,
+    "segs": [ {
+      "utf8": "the lines of small few number\nof GPUs and hours or days."
+    } ]
+  }, {
+    "tStartMs": 119046,
+    "dDurationMs": 1829,
+    "segs": [ {
+      "utf8": "Let's take a look at\nthe pretraining stage"
+    } ]
+  }, {
+    "tStartMs": 120876,
+    "dDurationMs": 2174,
+    "segs": [ {
+      "utf8": "to achieve a base model."
+    } ]
+  }, {
+    "tStartMs": 123051,
+    "dDurationMs": 4439,
+    "segs": [ {
+      "utf8": "First, we are going to gather\na large amount of data."
+    } ]
+  }, {
+    "tStartMs": 127491,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "Here's an example\nof what we call a"
+    } ]
+  }, {
+    "tStartMs": 128901,
+    "dDurationMs": 1709,
+    "segs": [ {
+      "utf8": "data mixture that comes from"
+    } ]
+  }, {
+    "tStartMs": 130611,
+    "dDurationMs": 2669,
+    "segs": [ {
+      "utf8": "this paper that was released by"
+    } ]
+  }, {
+    "tStartMs": 133281,
+    "dDurationMs": 3319,
+    "segs": [ {
+      "utf8": "Meta where they released\nthis LLaMA based model."
+    } ]
+  }, {
+    "tStartMs": 136601,
+    "dDurationMs": 1969,
+    "segs": [ {
+      "utf8": "Now, you can see roughly\nthe datasets that"
+    } ]
+  }, {
+    "tStartMs": 138571,
+    "dDurationMs": 1874,
+    "segs": [ {
+      "utf8": "enter into these collections."
+    } ]
+  }, {
+    "tStartMs": 140446,
+    "dDurationMs": 2959,
+    "segs": [ {
+      "utf8": "We have CommonCrawl, which\nis a web scrape, C4,"
+    } ]
+  }, {
+    "tStartMs": 143406,
+    "dDurationMs": 1634,
+    "segs": [ {
+      "utf8": "which is also CommonCrawl,"
+    } ]
+  }, {
+    "tStartMs": 145041,
+    "dDurationMs": 2219,
+    "segs": [ {
+      "utf8": "and then some high\nquality datasets as well."
+    } ]
+  }, {
+    "tStartMs": 147261,
+    "dDurationMs": 1844,
+    "segs": [ {
+      "utf8": "For example, GitHub, Wikipedia,"
+    } ]
+  }, {
+    "tStartMs": 149106,
+    "dDurationMs": 2219,
+    "segs": [ {
+      "utf8": "Books, Archives, Stock\nExchange and so on."
+    } ]
+  }, {
+    "tStartMs": 151326,
+    "dDurationMs": 1604,
+    "segs": [ {
+      "utf8": "These are all mixed up together,"
+    } ]
+  }, {
+    "tStartMs": 152931,
+    "dDurationMs": 1514,
+    "segs": [ {
+      "utf8": "and then they are sampled"
+    } ]
+  }, {
+    "tStartMs": 154446,
+    "dDurationMs": 1934,
+    "segs": [ {
+      "utf8": "according to some\ngiven proportions,"
+    } ]
+  }, {
+    "tStartMs": 156381,
+    "dDurationMs": 4044,
+    "segs": [ {
+      "utf8": "and that forms the\ntraining set for the GPT."
+    } ]
+  }, {
+    "tStartMs": 160426,
+    "dDurationMs": 2764,
+    "segs": [ {
+      "utf8": "Now before we can actually\ntrain on this data,"
+    } ]
+  }, {
+    "tStartMs": 163191,
+    "dDurationMs": 2159,
+    "segs": [ {
+      "utf8": "we need to go through one\nmore preprocessing step,"
+    } ]
+  }, {
+    "tStartMs": 165351,
+    "dDurationMs": 1319,
+    "segs": [ {
+      "utf8": "and that is tokenization."
+    } ]
+  }, {
+    "tStartMs": 166671,
+    "dDurationMs": 1829,
+    "segs": [ {
+      "utf8": "This is basically\na translation of"
+    } ]
+  }, {
+    "tStartMs": 168501,
+    "dDurationMs": 2999,
+    "segs": [ {
+      "utf8": "the raw text that we scrape\nfrom the Internet into"
+    } ]
+  }, {
+    "tStartMs": 171501,
+    "dDurationMs": 2359,
+    "segs": [ {
+      "utf8": "sequences of integers because"
+    } ]
+  }, {
+    "tStartMs": 173861,
+    "dDurationMs": 1419,
+    "segs": [ {
+      "utf8": "that's the native representation"
+    } ]
+  }, {
+    "tStartMs": 175281,
+    "dDurationMs": 1799,
+    "segs": [ {
+      "utf8": "over which GPTs function."
+    } ]
+  }, {
+    "tStartMs": 177081,
+    "dDurationMs": 3089,
+    "segs": [ {
+      "utf8": "Now, this is a\nlossless translation"
+    } ]
+  }, {
+    "tStartMs": 180171,
+    "dDurationMs": 3304,
+    "segs": [ {
+      "utf8": "between pieces of texts\nand tokens and integers,"
+    } ]
+  }, {
+    "tStartMs": 183476,
+    "dDurationMs": 2274,
+    "segs": [ {
+      "utf8": "and there are a number of\nalgorithms for the stage."
+    } ]
+  }, {
+    "tStartMs": 185751,
+    "dDurationMs": 1349,
+    "segs": [ {
+      "utf8": "Typically, for\nexample, you could"
+    } ]
+  }, {
+    "tStartMs": 187101,
+    "dDurationMs": 1604,
+    "segs": [ {
+      "utf8": "use something like\nbyte pair encoding,"
+    } ]
+  }, {
+    "tStartMs": 188706,
+    "dDurationMs": 2489,
+    "segs": [ {
+      "utf8": "which iteratively\nmerges text chunks"
+    } ]
+  }, {
+    "tStartMs": 191196,
+    "dDurationMs": 2554,
+    "segs": [ {
+      "utf8": "and groups them into tokens."
+    } ]
+  }, {
+    "tStartMs": 193751,
+    "dDurationMs": 3009,
+    "segs": [ {
+      "utf8": "Here, I'm showing some example\nchunks of these tokens,"
+    } ]
+  }, {
+    "tStartMs": 196761,
+    "dDurationMs": 2099,
+    "segs": [ {
+      "utf8": "and then this is the\nraw integer sequence"
+    } ]
+  }, {
+    "tStartMs": 198861,
+    "dDurationMs": 2434,
+    "segs": [ {
+      "utf8": "that will actually feed\ninto a transformer."
+    } ]
+  }, {
+    "tStartMs": 201296,
+    "dDurationMs": 1819,
+    "segs": [ {
+      "utf8": "Now, here I'm showing"
+    } ]
+  }, {
+    "tStartMs": 203116,
+    "dDurationMs": 3664,
+    "segs": [ {
+      "utf8": "two examples for\nhybrid parameters"
+    } ]
+  }, {
+    "tStartMs": 206781,
+    "dDurationMs": 1379,
+    "segs": [ {
+      "utf8": "that govern this stage."
+    } ]
+  }, {
+    "tStartMs": 208161,
+    "dDurationMs": 2129,
+    "segs": [ {
+      "utf8": "GPT-4, we did not release"
+    } ]
+  }, {
+    "tStartMs": 210291,
+    "dDurationMs": 1934,
+    "segs": [ {
+      "utf8": "too much information about\nhow it was trained and so on,"
+    } ]
+  }, {
+    "tStartMs": 212226,
+    "dDurationMs": 1619,
+    "segs": [ {
+      "utf8": "I'm using GPT-3s numbers,"
+    } ]
+  }, {
+    "tStartMs": 213846,
+    "dDurationMs": 1724,
+    "segs": [ {
+      "utf8": "but GPT-3 is of course\na little bit old"
+    } ]
+  }, {
+    "tStartMs": 215571,
+    "dDurationMs": 2024,
+    "segs": [ {
+      "utf8": "by now, about three years ago."
+    } ]
+  }, {
+    "tStartMs": 217596,
+    "dDurationMs": 2934,
+    "segs": [ {
+      "utf8": "But LLaMA is a fairly\nrecent model from Meta."
+    } ]
+  }, {
+    "tStartMs": 220531,
+    "dDurationMs": 1879,
+    "segs": [ {
+      "utf8": "These are roughly the orders of"
+    } ]
+  }, {
+    "tStartMs": 222411,
+    "dDurationMs": 869,
+    "segs": [ {
+      "utf8": "magnitude that we're dealing"
+    } ]
+  }, {
+    "tStartMs": 223281,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "with when we're\ndoing pretraining."
+    } ]
+  }, {
+    "tStartMs": 224781,
+    "dDurationMs": 3359,
+    "segs": [ {
+      "utf8": "The vocabulary size is usually\na couple 10,000 tokens."
+    } ]
+  }, {
+    "tStartMs": 228141,
+    "dDurationMs": 2399,
+    "segs": [ {
+      "utf8": "The context length is usually\nsomething like 2,000,"
+    } ]
+  }, {
+    "tStartMs": 230541,
+    "dDurationMs": 2699,
+    "segs": [ {
+      "utf8": "4,000, or nowadays even 100,000,"
+    } ]
+  }, {
+    "tStartMs": 233241,
+    "dDurationMs": 3434,
+    "segs": [ {
+      "utf8": "and this governs the maximum\nnumber of integers that"
+    } ]
+  }, {
+    "tStartMs": 236676,
+    "dDurationMs": 1754,
+    "segs": [ {
+      "utf8": "the GPT will look at\nwhen it's trying to"
+    } ]
+  }, {
+    "tStartMs": 238431,
+    "dDurationMs": 2849,
+    "segs": [ {
+      "utf8": "predict the next\ninteger in a sequence."
+    } ]
+  }, {
+    "tStartMs": 241281,
+    "dDurationMs": 3209,
+    "segs": [ {
+      "utf8": "You can see that roughly the\nnumber of parameters say,"
+    } ]
+  }, {
+    "tStartMs": 244491,
+    "dDurationMs": 1649,
+    "segs": [ {
+      "utf8": "65 billion for LLaMA."
+    } ]
+  }, {
+    "tStartMs": 246141,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "Now, even though LLaMA\nhas only 65B parameters"
+    } ]
+  }, {
+    "tStartMs": 248601,
+    "dDurationMs": 2719,
+    "segs": [ {
+      "utf8": "compared to GPP-3s 175\nbillion parameters,"
+    } ]
+  }, {
+    "tStartMs": 251321,
+    "dDurationMs": 2574,
+    "segs": [ {
+      "utf8": "LLaMA is a significantly\nmore powerful model,"
+    } ]
+  }, {
+    "tStartMs": 253896,
+    "dDurationMs": 1964,
+    "segs": [ {
+      "utf8": "and intuitively, that's because"
+    } ]
+  }, {
+    "tStartMs": 255861,
+    "dDurationMs": 2009,
+    "segs": [ {
+      "utf8": "the model is trained for\nsignificantly longer."
+    } ]
+  }, {
+    "tStartMs": 257871,
+    "dDurationMs": 1989,
+    "segs": [ {
+      "utf8": "In this case, 1.4\ntrillion tokens,"
+    } ]
+  }, {
+    "tStartMs": 259861,
+    "dDurationMs": 1809,
+    "segs": [ {
+      "utf8": "instead of 300 billion tokens."
+    } ]
+  }, {
+    "tStartMs": 261671,
+    "dDurationMs": 1989,
+    "segs": [ {
+      "utf8": "You shouldn't judge the\npower of a model by"
+    } ]
+  }, {
+    "tStartMs": 263661,
+    "dDurationMs": 2614,
+    "segs": [ {
+      "utf8": "the number of parameters\nthat it contains."
+    } ]
+  }, {
+    "tStartMs": 266276,
+    "dDurationMs": 2034,
+    "segs": [ {
+      "utf8": "Below, I'm showing\nsome tables of"
+    } ]
+  }, {
+    "tStartMs": 268311,
+    "dDurationMs": 2909,
+    "segs": [ {
+      "utf8": "rough hyperparameters\nthat typically"
+    } ]
+  }, {
+    "tStartMs": 271221,
+    "dDurationMs": 3089,
+    "segs": [ {
+      "utf8": "go into specifying the\ntransformer neural network,"
+    } ]
+  }, {
+    "tStartMs": 274311,
+    "dDurationMs": 629,
+    "segs": [ {
+      "utf8": "the number of heads,"
+    } ]
+  }, {
+    "tStartMs": 274941,
+    "dDurationMs": 1649,
+    "segs": [ {
+      "utf8": "the dimension size,\nnumber of layers,"
+    } ]
+  }, {
+    "tStartMs": 276591,
+    "dDurationMs": 1994,
+    "segs": [ {
+      "utf8": "and so on, and on the bottom"
+    } ]
+  }, {
+    "tStartMs": 278586,
+    "dDurationMs": 2569,
+    "segs": [ {
+      "utf8": "I'm showing some training\nhyperparameters."
+    } ]
+  }, {
+    "tStartMs": 281156,
+    "dDurationMs": 3094,
+    "segs": [ {
+      "utf8": "For example, to\ntrain the 65B model,"
+    } ]
+  }, {
+    "tStartMs": 284251,
+    "dDurationMs": 2369,
+    "segs": [ {
+      "utf8": "Meta used 2,000 GPUs,"
+    } ]
+  }, {
+    "tStartMs": 286621,
+    "dDurationMs": 2309,
+    "segs": [ {
+      "utf8": "roughly 21 days of training and"
+    } ]
+  }, {
+    "tStartMs": 288931,
+    "dDurationMs": 3629,
+    "segs": [ {
+      "utf8": "a roughly several\nmillion dollars."
+    } ]
+  }, {
+    "tStartMs": 292561,
+    "dDurationMs": 2269,
+    "segs": [ {
+      "utf8": "That's the rough orders of\nmagnitude that you should have"
+    } ]
+  }, {
+    "tStartMs": 294831,
+    "dDurationMs": 3099,
+    "segs": [ {
+      "utf8": "in mind for the\npre-training stage."
+    } ]
+  }, {
+    "tStartMs": 297980,
+    "dDurationMs": 2925,
+    "segs": [ {
+      "utf8": "Now, when we're actually\npre-training, what happens?"
+    } ]
+  }, {
+    "tStartMs": 300906,
+    "dDurationMs": 2759,
+    "segs": [ {
+      "utf8": "Roughly speaking, we are\ngoing to take our tokens,"
+    } ]
+  }, {
+    "tStartMs": 303666,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "and we're going to lay them\nout into data batches."
+    } ]
+  }, {
+    "tStartMs": 306126,
+    "dDurationMs": 1574,
+    "segs": [ {
+      "utf8": "We have these arrays"
+    } ]
+  }, {
+    "tStartMs": 307701,
+    "dDurationMs": 1529,
+    "segs": [ {
+      "utf8": "that will feed into\nthe transformer,"
+    } ]
+  }, {
+    "tStartMs": 309231,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "and these arrays are B,"
+    } ]
+  }, {
+    "tStartMs": 310821,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "the batch size and these are\nall independent examples"
+    } ]
+  }, {
+    "tStartMs": 313281,
+    "dDurationMs": 2859,
+    "segs": [ {
+      "utf8": "stocked up in rows and B by T,"
+    } ]
+  }, {
+    "tStartMs": 316141,
+    "dDurationMs": 1829,
+    "segs": [ {
+      "utf8": "T being the maximum\ncontext length."
+    } ]
+  }, {
+    "tStartMs": 317971,
+    "dDurationMs": 3019,
+    "segs": [ {
+      "utf8": "In my picture I only have\n10 the context lengths,"
+    } ]
+  }, {
+    "tStartMs": 320991,
+    "dDurationMs": 2039,
+    "segs": [ {
+      "utf8": "so this could be\n2,000, 4,000, etc."
+    } ]
+  }, {
+    "tStartMs": 323031,
+    "dDurationMs": 1829,
+    "segs": [ {
+      "utf8": "These are extremely long rows."
+    } ]
+  }, {
+    "tStartMs": 324861,
+    "dDurationMs": 1664,
+    "segs": [ {
+      "utf8": "What we do is we take\nthese documents,"
+    } ]
+  }, {
+    "tStartMs": 326526,
+    "dDurationMs": 1514,
+    "segs": [ {
+      "utf8": "and we pack them into rows,"
+    } ]
+  }, {
+    "tStartMs": 328041,
+    "dDurationMs": 1199,
+    "segs": [ {
+      "utf8": "and we delimit them with"
+    } ]
+  }, {
+    "tStartMs": 329241,
+    "dDurationMs": 2444,
+    "segs": [ {
+      "utf8": "these special end\nof texts tokens,"
+    } ]
+  }, {
+    "tStartMs": 331686,
+    "dDurationMs": 1214,
+    "segs": [ {
+      "utf8": "basically telling\nthe transformer"
+    } ]
+  }, {
+    "tStartMs": 332901,
+    "dDurationMs": 2104,
+    "segs": [ {
+      "utf8": "where a new document begins."
+    } ]
+  }, {
+    "tStartMs": 335006,
+    "dDurationMs": 3354,
+    "segs": [ {
+      "utf8": "Here, I have a few examples\nof documents and then"
+    } ]
+  }, {
+    "tStartMs": 338361,
+    "dDurationMs": 3184,
+    "segs": [ {
+      "utf8": "I stretch them out\ninto this input."
+    } ]
+  }, {
+    "tStartMs": 341546,
+    "dDurationMs": 2244,
+    "segs": [ {
+      "utf8": "Now, we're going to feed all of"
+    } ]
+  }, {
+    "tStartMs": 343791,
+    "dDurationMs": 2324,
+    "segs": [ {
+      "utf8": "these numbers into transformer."
+    } ]
+  }, {
+    "tStartMs": 346116,
+    "dDurationMs": 3449,
+    "segs": [ {
+      "utf8": "Let me just focus on a\nsingle particular cell,"
+    } ]
+  }, {
+    "tStartMs": 349566,
+    "dDurationMs": 1184,
+    "segs": [ {
+      "utf8": "but the same thing\nwill happen at"
+    } ]
+  }, {
+    "tStartMs": 350751,
+    "dDurationMs": 1739,
+    "segs": [ {
+      "utf8": "every cell in this diagram."
+    } ]
+  }, {
+    "tStartMs": 352491,
+    "dDurationMs": 1874,
+    "segs": [ {
+      "utf8": "Let's look at the green cell."
+    } ]
+  }, {
+    "tStartMs": 354366,
+    "dDurationMs": 2204,
+    "segs": [ {
+      "utf8": "The green cell is going to take"
+    } ]
+  }, {
+    "tStartMs": 356571,
+    "dDurationMs": 2099,
+    "segs": [ {
+      "utf8": "a look at all of the\ntokens before it,"
+    } ]
+  }, {
+    "tStartMs": 358671,
+    "dDurationMs": 1564,
+    "segs": [ {
+      "utf8": "so all of the tokens in yellow,"
+    } ]
+  }, {
+    "tStartMs": 360236,
+    "dDurationMs": 2859,
+    "segs": [ {
+      "utf8": "and we're going to feed\nthat entire context"
+    } ]
+  }, {
+    "tStartMs": 363096,
+    "dDurationMs": 2009,
+    "segs": [ {
+      "utf8": "into the transforming\nneural network,"
+    } ]
+  }, {
+    "tStartMs": 365106,
+    "dDurationMs": 2294,
+    "segs": [ {
+      "utf8": "and the transformer\nis going to try to"
+    } ]
+  }, {
+    "tStartMs": 367401,
+    "dDurationMs": 1049,
+    "segs": [ {
+      "utf8": "predict the next token in"
+    } ]
+  }, {
+    "tStartMs": 368451,
+    "dDurationMs": 1724,
+    "segs": [ {
+      "utf8": "a sequence, in this case in red."
+    } ]
+  }, {
+    "tStartMs": 370176,
+    "dDurationMs": 1544,
+    "segs": [ {
+      "utf8": "Now the transformer,\nI don't have"
+    } ]
+  }, {
+    "tStartMs": 371721,
+    "dDurationMs": 1319,
+    "segs": [ {
+      "utf8": "too much time to, unfortunately,"
+    } ]
+  }, {
+    "tStartMs": 373041,
+    "dDurationMs": 1079,
+    "segs": [ {
+      "utf8": "go into the full details of this"
+    } ]
+  }, {
+    "tStartMs": 374121,
+    "dDurationMs": 1529,
+    "segs": [ {
+      "utf8": "neural network architecture is"
+    } ]
+  }, {
+    "tStartMs": 375651,
+    "dDurationMs": 3299,
+    "segs": [ {
+      "utf8": "just a large blob of neural\nnet stuff for our purposes,"
+    } ]
+  }, {
+    "tStartMs": 378951,
+    "dDurationMs": 1139,
+    "segs": [ {
+      "utf8": "and it's got several,"
+    } ]
+  }, {
+    "tStartMs": 380091,
+    "dDurationMs": 2359,
+    "segs": [ {
+      "utf8": "10 billion parameters typically\nor something like that."
+    } ]
+  }, {
+    "tStartMs": 382451,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "Of course, as I tune\nthese parameters,"
+    } ]
+  }, {
+    "tStartMs": 383951,
+    "dDurationMs": 1015,
+    "segs": [ {
+      "utf8": "you're getting slightly"
+    } ]
+  }, {
+    "tStartMs": 384978,
+    "dDurationMs": 1562,
+    "segs": [ {
+      "utf8": "different predicted\ndistributions"
+    } ]
+  }, {
+    "tStartMs": 386541,
+    "dDurationMs": 2389,
+    "segs": [ {
+      "utf8": "for every single\none of these cells."
+    } ]
+  }, {
+    "tStartMs": 388931,
+    "dDurationMs": 5439,
+    "segs": [ {
+      "utf8": "For example, if our vocabulary\nsize is 50,257 tokens,"
+    } ]
+  }, {
+    "tStartMs": 394371,
+    "dDurationMs": 1139,
+    "segs": [ {
+      "utf8": "then we're going\nto have that many"
+    } ]
+  }, {
+    "tStartMs": 395511,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "numbers because we need to"
+    } ]
+  }, {
+    "tStartMs": 396921,
+    "dDurationMs": 1225,
+    "segs": [ {
+      "utf8": "specify a probability"
+    } ]
+  }, {
+    "tStartMs": 398158,
+    "dDurationMs": 2062,
+    "segs": [ {
+      "utf8": "distribution for\nwhat comes next."
+    } ]
+  }, {
+    "tStartMs": 400221,
+    "dDurationMs": 1379,
+    "segs": [ {
+      "utf8": "Basically, we have\na probability for"
+    } ]
+  }, {
+    "tStartMs": 401601,
+    "dDurationMs": 1174,
+    "segs": [ {
+      "utf8": "whatever may follow."
+    } ]
+  }, {
+    "tStartMs": 402776,
+    "dDurationMs": 1494,
+    "segs": [ {
+      "utf8": "Now, in this specific example,"
+    } ]
+  }, {
+    "tStartMs": 404271,
+    "dDurationMs": 1079,
+    "segs": [ {
+      "utf8": "for this specific cell,"
+    } ]
+  }, {
+    "tStartMs": 405351,
+    "dDurationMs": 1829,
+    "segs": [ {
+      "utf8": "513 will come next,"
+    } ]
+  }, {
+    "tStartMs": 407181,
+    "dDurationMs": 1739,
+    "segs": [ {
+      "utf8": "and so we can use this as"
+    } ]
+  }, {
+    "tStartMs": 408921,
+    "dDurationMs": 1004,
+    "segs": [ {
+      "utf8": "a source of supervision to"
+    } ]
+  }, {
+    "tStartMs": 409926,
+    "dDurationMs": 1699,
+    "segs": [ {
+      "utf8": "update our transformers weights."
+    } ]
+  }, {
+    "tStartMs": 411626,
+    "dDurationMs": 1644,
+    "segs": [ {
+      "utf8": "We're applying this basically"
+    } ]
+  }, {
+    "tStartMs": 413271,
+    "dDurationMs": 1289,
+    "segs": [ {
+      "utf8": "on every single cell\nin the parallel,"
+    } ]
+  }, {
+    "tStartMs": 414561,
+    "dDurationMs": 2054,
+    "segs": [ {
+      "utf8": "and we keep swapping batches,"
+    } ]
+  }, {
+    "tStartMs": 416616,
+    "dDurationMs": 1904,
+    "segs": [ {
+      "utf8": "and we're trying to get\nthe transformer to make"
+    } ]
+  }, {
+    "tStartMs": 418521,
+    "dDurationMs": 1394,
+    "segs": [ {
+      "utf8": "the correct\npredictions over what"
+    } ]
+  }, {
+    "tStartMs": 419916,
+    "dDurationMs": 2149,
+    "segs": [ {
+      "utf8": "token comes next in a sequence."
+    } ]
+  }, {
+    "tStartMs": 422066,
+    "dDurationMs": 1734,
+    "segs": [ {
+      "utf8": "Let me show you more\nconcretely what this looks"
+    } ]
+  }, {
+    "tStartMs": 423801,
+    "dDurationMs": 1664,
+    "segs": [ {
+      "utf8": "like when you train\none of these models."
+    } ]
+  }, {
+    "tStartMs": 425466,
+    "dDurationMs": 2369,
+    "segs": [ {
+      "utf8": "This is actually coming\nfrom the New York Times,"
+    } ]
+  }, {
+    "tStartMs": 427836,
+    "dDurationMs": 3224,
+    "segs": [ {
+      "utf8": "and they trained a small\nGPT on Shakespeare."
+    } ]
+  }, {
+    "tStartMs": 431061,
+    "dDurationMs": 1829,
+    "segs": [ {
+      "utf8": "Here's a small snippet\nof Shakespeare,"
+    } ]
+  }, {
+    "tStartMs": 432891,
+    "dDurationMs": 1519,
+    "segs": [ {
+      "utf8": "and they train their GPT on it."
+    } ]
+  }, {
+    "tStartMs": 434411,
+    "dDurationMs": 1389,
+    "segs": [ {
+      "utf8": "Now, in the beginning,"
+    } ]
+  }, {
+    "tStartMs": 435801,
+    "dDurationMs": 1214,
+    "segs": [ {
+      "utf8": "at initialization,"
+    } ]
+  }, {
+    "tStartMs": 437016,
+    "dDurationMs": 2174,
+    "segs": [ {
+      "utf8": "the GPT starts with\ncompletely random weights."
+    } ]
+  }, {
+    "tStartMs": 439191,
+    "dDurationMs": 2774,
+    "segs": [ {
+      "utf8": "You're getting completely\nrandom outputs as well."
+    } ]
+  }, {
+    "tStartMs": 441966,
+    "dDurationMs": 4049,
+    "segs": [ {
+      "utf8": "But over time, as you train\nthe GPT longer and longer,"
+    } ]
+  }, {
+    "tStartMs": 446016,
+    "dDurationMs": 2084,
+    "segs": [ {
+      "utf8": "you are getting more\nand more coherent and"
+    } ]
+  }, {
+    "tStartMs": 448101,
+    "dDurationMs": 3339,
+    "segs": [ {
+      "utf8": "consistent samples\nfrom the model,"
+    } ]
+  }, {
+    "tStartMs": 451441,
+    "dDurationMs": 1429,
+    "segs": [ {
+      "utf8": "and the way you sample\nfrom it, of course,"
+    } ]
+  }, {
+    "tStartMs": 452871,
+    "dDurationMs": 2399,
+    "segs": [ {
+      "utf8": "is you predict what comes next,"
+    } ]
+  }, {
+    "tStartMs": 455271,
+    "dDurationMs": 1709,
+    "segs": [ {
+      "utf8": "you sample from that\ndistribution and"
+    } ]
+  }, {
+    "tStartMs": 456981,
+    "dDurationMs": 1854,
+    "segs": [ {
+      "utf8": "you keep feeding that\nback into the process,"
+    } ]
+  }, {
+    "tStartMs": 458836,
+    "dDurationMs": 3349,
+    "segs": [ {
+      "utf8": "and you can basically\nsample large sequences."
+    } ]
+  }, {
+    "tStartMs": 462186,
+    "dDurationMs": 1544,
+    "segs": [ {
+      "utf8": "By the end, you see\nthat the transformer"
+    } ]
+  }, {
+    "tStartMs": 463731,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "has learned about words and"
+    } ]
+  }, {
+    "tStartMs": 465141,
+    "dDurationMs": 3089,
+    "segs": [ {
+      "utf8": "where to put spaces and where\nto put commas and so on."
+    } ]
+  }, {
+    "tStartMs": 468231,
+    "dDurationMs": 719,
+    "segs": [ {
+      "utf8": "We're making"
+    } ]
+  }, {
+    "tStartMs": 468951,
+    "dDurationMs": 2164,
+    "segs": [ {
+      "utf8": "more and more consistent\npredictions over time."
+    } ]
+  }, {
+    "tStartMs": 471116,
+    "dDurationMs": 2004,
+    "segs": [ {
+      "utf8": "These are the plots\nthat you are looking at"
+    } ]
+  }, {
+    "tStartMs": 473121,
+    "dDurationMs": 1649,
+    "segs": [ {
+      "utf8": "when you're doing\nmodel pretraining."
+    } ]
+  }, {
+    "tStartMs": 474771,
+    "dDurationMs": 1259,
+    "segs": [ {
+      "utf8": "Effectively, we're looking at"
+    } ]
+  }, {
+    "tStartMs": 476031,
+    "dDurationMs": 2479,
+    "segs": [ {
+      "utf8": "the loss function over\ntime as you train,"
+    } ]
+  }, {
+    "tStartMs": 478511,
+    "dDurationMs": 2199,
+    "segs": [ {
+      "utf8": "and low loss means\nthat our transformer"
+    } ]
+  }, {
+    "tStartMs": 480711,
+    "dDurationMs": 3129,
+    "segs": [ {
+      "utf8": "is giving a higher probability"
+    } ]
+  }, {
+    "tStartMs": 483841,
+    "dDurationMs": 3029,
+    "segs": [ {
+      "utf8": "to the next correct\ninteger in the sequence."
+    } ]
+  }, {
+    "tStartMs": 486871,
+    "dDurationMs": 2099,
+    "segs": [ {
+      "utf8": "What are we going\nto do with model"
+    } ]
+  }, {
+    "tStartMs": 488971,
+    "dDurationMs": 1749,
+    "segs": [ {
+      "utf8": "once we've trained\nit after a month?"
+    } ]
+  }, {
+    "tStartMs": 490721,
+    "dDurationMs": 3474,
+    "segs": [ {
+      "utf8": "Well, the first thing that\nwe noticed, we the field,"
+    } ]
+  }, {
+    "tStartMs": 494196,
+    "dDurationMs": 2104,
+    "segs": [ {
+      "utf8": "is that these models"
+    } ]
+  }, {
+    "tStartMs": 496301,
+    "dDurationMs": 2259,
+    "segs": [ {
+      "utf8": "basically in the process\nof language modeling,"
+    } ]
+  }, {
+    "tStartMs": 498561,
+    "dDurationMs": 2624,
+    "segs": [ {
+      "utf8": "learn very powerful\ngeneral representations,"
+    } ]
+  }, {
+    "tStartMs": 501186,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "and it's possible to very\nefficiently fine tune them"
+    } ]
+  }, {
+    "tStartMs": 503646,
+    "dDurationMs": 1664,
+    "segs": [ {
+      "utf8": "for any arbitrary\ndownstream tasks"
+    } ]
+  }, {
+    "tStartMs": 505311,
+    "dDurationMs": 1099,
+    "segs": [ {
+      "utf8": "you might be interested in."
+    } ]
+  }, {
+    "tStartMs": 506411,
+    "dDurationMs": 1059,
+    "segs": [ {
+      "utf8": "As an example, if you're"
+    } ]
+  }, {
+    "tStartMs": 507471,
+    "dDurationMs": 1754,
+    "segs": [ {
+      "utf8": "interested in sentiment\nclassification,"
+    } ]
+  }, {
+    "tStartMs": 509226,
+    "dDurationMs": 1994,
+    "segs": [ {
+      "utf8": "the approach used to be"
+    } ]
+  }, {
+    "tStartMs": 511221,
+    "dDurationMs": 1799,
+    "segs": [ {
+      "utf8": "that you collect a\nbunch of positives"
+    } ]
+  }, {
+    "tStartMs": 513021,
+    "dDurationMs": 2624,
+    "segs": [ {
+      "utf8": "and negatives and then you\ntrain some NLP model"
+    } ]
+  }, {
+    "tStartMs": 515646,
+    "dDurationMs": 2504,
+    "segs": [ {
+      "utf8": "for that, but the\nnew approach is:"
+    } ]
+  }, {
+    "tStartMs": 518151,
+    "dDurationMs": 779,
+    "segs": [ {
+      "utf8": "ignore sentiment"
+    } ]
+  }, {
+    "tStartMs": 518931,
+    "dDurationMs": 2549,
+    "segs": [ {
+      "utf8": "classification,\ngo off and do large"
+    } ]
+  }, {
+    "tStartMs": 521481,
+    "dDurationMs": 1693,
+    "segs": [ {
+      "utf8": "language model pretraining,"
+    } ]
+  }, {
+    "tStartMs": 523175,
+    "dDurationMs": 1560,
+    "segs": [ {
+      "utf8": "train a large transformer,"
+    } ]
+  }, {
+    "tStartMs": 524736,
+    "dDurationMs": 2894,
+    "segs": [ {
+      "utf8": "and then you may only\nhave a few examples and"
+    } ]
+  }, {
+    "tStartMs": 527631,
+    "dDurationMs": 1349,
+    "segs": [ {
+      "utf8": "you can very\nefficiently fine tune"
+    } ]
+  }, {
+    "tStartMs": 528981,
+    "dDurationMs": 2059,
+    "segs": [ {
+      "utf8": "your model for that task."
+    } ]
+  }, {
+    "tStartMs": 531041,
+    "dDurationMs": 2509,
+    "segs": [ {
+      "utf8": "This works very\nwell in practice."
+    } ]
+  }, {
+    "tStartMs": 533551,
+    "dDurationMs": 1549,
+    "segs": [ {
+      "utf8": "The reason for this\nis that basically"
+    } ]
+  }, {
+    "tStartMs": 535101,
+    "dDurationMs": 1529,
+    "segs": [ {
+      "utf8": "the transformer is forced to"
+    } ]
+  }, {
+    "tStartMs": 536631,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "multitask a huge amount of"
+    } ]
+  }, {
+    "tStartMs": 538131,
+    "dDurationMs": 2284,
+    "segs": [ {
+      "utf8": "tasks in the language\nmodeling task,"
+    } ]
+  }, {
+    "tStartMs": 540416,
+    "dDurationMs": 2814,
+    "segs": [ {
+      "utf8": "because in terms of\npredicting the next token,"
+    } ]
+  }, {
+    "tStartMs": 543231,
+    "dDurationMs": 2159,
+    "segs": [ {
+      "utf8": "it's forced to understand a\nlot about the structure of"
+    } ]
+  }, {
+    "tStartMs": 545391,
+    "dDurationMs": 3729,
+    "segs": [ {
+      "utf8": "the text and all the\ndifferent concepts therein."
+    } ]
+  }, {
+    "tStartMs": 549350,
+    "dDurationMs": 3230,
+    "segs": [ {
+      "utf8": "That was GPT-1. Now\naround the time of GPT-2,"
+    } ]
+  }, {
+    "tStartMs": 552581,
+    "dDurationMs": 1509,
+    "segs": [ {
+      "utf8": "people noticed that actually"
+    } ]
+  }, {
+    "tStartMs": 554091,
+    "dDurationMs": 1319,
+    "segs": [ {
+      "utf8": "even better than fine tuning,"
+    } ]
+  }, {
+    "tStartMs": 555411,
+    "dDurationMs": 2509,
+    "segs": [ {
+      "utf8": "you can actually prompt these\nmodels very effectively."
+    } ]
+  }, {
+    "tStartMs": 557921,
+    "dDurationMs": 1269,
+    "segs": [ {
+      "utf8": "These are language\nmodels and they want"
+    } ]
+  }, {
+    "tStartMs": 559191,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "to complete documents,"
+    } ]
+  }, {
+    "tStartMs": 560601,
+    "dDurationMs": 1829,
+    "segs": [ {
+      "utf8": "you can actually trick\nthem into performing"
+    } ]
+  }, {
+    "tStartMs": 562431,
+    "dDurationMs": 3189,
+    "segs": [ {
+      "utf8": "tasks by arranging\nthese fake documents."
+    } ]
+  }, {
+    "tStartMs": 565621,
+    "dDurationMs": 2064,
+    "segs": [ {
+      "utf8": "In this example, for example,"
+    } ]
+  }, {
+    "tStartMs": 567686,
+    "dDurationMs": 3339,
+    "segs": [ {
+      "utf8": "we have some passage and\nthen we like do QA, QA, QA."
+    } ]
+  }, {
+    "tStartMs": 571026,
+    "dDurationMs": 2384,
+    "segs": [ {
+      "utf8": "This is called Few-shot\nprompt, and then we do Q,"
+    } ]
+  }, {
+    "tStartMs": 573411,
+    "dDurationMs": 1859,
+    "segs": [ {
+      "utf8": "and then as the\ntransformer is tried to"
+    } ]
+  }, {
+    "tStartMs": 575271,
+    "dDurationMs": 2539,
+    "segs": [ {
+      "utf8": "complete the document is\nactually answering our question."
+    } ]
+  }, {
+    "tStartMs": 577811,
+    "dDurationMs": 3009,
+    "segs": [ {
+      "utf8": "This is an example of prompt\nengineering based model,"
+    } ]
+  }, {
+    "tStartMs": 580821,
+    "dDurationMs": 1739,
+    "segs": [ {
+      "utf8": "making it believe\nthat it's imitating"
+    } ]
+  }, {
+    "tStartMs": 582561,
+    "dDurationMs": 3179,
+    "segs": [ {
+      "utf8": "a document and getting\nit to perform a task."
+    } ]
+  }, {
+    "tStartMs": 585741,
+    "dDurationMs": 2894,
+    "segs": [ {
+      "utf8": "This kicked off, I think\nthe era of, I would say,"
+    } ]
+  }, {
+    "tStartMs": 588636,
+    "dDurationMs": 2294,
+    "segs": [ {
+      "utf8": "prompting over fine tuning\nand seeing that this"
+    } ]
+  }, {
+    "tStartMs": 590931,
+    "dDurationMs": 2444,
+    "segs": [ {
+      "utf8": "actually can work extremely\nwell on a lot of problems,"
+    } ]
+  }, {
+    "tStartMs": 593376,
+    "dDurationMs": 1679,
+    "segs": [ {
+      "utf8": "even without training\nany neural networks,"
+    } ]
+  }, {
+    "tStartMs": 595056,
+    "dDurationMs": 1674,
+    "segs": [ {
+      "utf8": "fine tuning or so on."
+    } ]
+  }, {
+    "tStartMs": 596731,
+    "dDurationMs": 1924,
+    "segs": [ {
+      "utf8": "Now since then, we've seen"
+    } ]
+  }, {
+    "tStartMs": 598656,
+    "dDurationMs": 1544,
+    "segs": [ {
+      "utf8": "an entire evolutionary tree of"
+    } ]
+  }, {
+    "tStartMs": 600201,
+    "dDurationMs": 2324,
+    "segs": [ {
+      "utf8": "base models that\neveryone has trained."
+    } ]
+  }, {
+    "tStartMs": 602526,
+    "dDurationMs": 2594,
+    "segs": [ {
+      "utf8": "Not all of these\nmodels are available."
+    } ]
+  }, {
+    "tStartMs": 605121,
+    "dDurationMs": 3119,
+    "segs": [ {
+      "utf8": "for example, the GPT-4 base\nmodel was never released."
+    } ]
+  }, {
+    "tStartMs": 608241,
+    "dDurationMs": 1439,
+    "segs": [ {
+      "utf8": "The GPT-4 model\nthat you might be"
+    } ]
+  }, {
+    "tStartMs": 609681,
+    "dDurationMs": 2324,
+    "segs": [ {
+      "utf8": "interacting with over\nAPI is not a base model,"
+    } ]
+  }, {
+    "tStartMs": 612006,
+    "dDurationMs": 1224,
+    "segs": [ {
+      "utf8": "it's an assistant model,"
+    } ]
+  }, {
+    "tStartMs": 613231,
+    "dDurationMs": 2569,
+    "segs": [ {
+      "utf8": "and we're going to cover\nhow to get those in a bit."
+    } ]
+  }, {
+    "tStartMs": 615801,
+    "dDurationMs": 3599,
+    "segs": [ {
+      "utf8": "GPT-3 based model is\navailable via the API under"
+    } ]
+  }, {
+    "tStartMs": 619401,
+    "dDurationMs": 2429,
+    "segs": [ {
+      "utf8": "the name Devanshi and\nGPT-2 based model"
+    } ]
+  }, {
+    "tStartMs": 621831,
+    "dDurationMs": 2564,
+    "segs": [ {
+      "utf8": "is available even as\nweights on our GitHub repo."
+    } ]
+  }, {
+    "tStartMs": 624396,
+    "dDurationMs": 2834,
+    "segs": [ {
+      "utf8": "But currently the best\navailable base model"
+    } ]
+  }, {
+    "tStartMs": 627231,
+    "dDurationMs": 2714,
+    "segs": [ {
+      "utf8": "probably is the LLaMA\nseries from Meta,"
+    } ]
+  }, {
+    "tStartMs": 629946,
+    "dDurationMs": 2664,
+    "segs": [ {
+      "utf8": "although it is not\ncommercially licensed."
+    } ]
+  }, {
+    "tStartMs": 632879,
+    "dDurationMs": 1541,
+    "segs": [ {
+      "utf8": "Now, one thing"
+    } ]
+  }, {
+    "tStartMs": 634421,
+    "dDurationMs": 734,
+    "segs": [ {
+      "utf8": "to point out is"
+    } ]
+  }, {
+    "tStartMs": 635156,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "base models are not assistants."
+    } ]
+  }, {
+    "tStartMs": 636746,
+    "dDurationMs": 4364,
+    "segs": [ {
+      "utf8": "They don't want to make\nanswers to your questions,"
+    } ]
+  }, {
+    "tStartMs": 641111,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "they want to complete documents."
+    } ]
+  }, {
+    "tStartMs": 643001,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "If you tell them to write"
+    } ]
+  }, {
+    "tStartMs": 644591,
+    "dDurationMs": 1559,
+    "segs": [ {
+      "utf8": "a poem about the\nbread and cheese,"
+    } ]
+  }, {
+    "tStartMs": 646151,
+    "dDurationMs": 3104,
+    "segs": [ {
+      "utf8": "it will answer questions\nwith more questions,"
+    } ]
+  }, {
+    "tStartMs": 649256,
+    "dDurationMs": 2129,
+    "segs": [ {
+      "utf8": "it's completing what it\nthinks is a document."
+    } ]
+  }, {
+    "tStartMs": 651386,
+    "dDurationMs": 2714,
+    "segs": [ {
+      "utf8": "However, you can prompt\nthem in a specific way for"
+    } ]
+  }, {
+    "tStartMs": 654101,
+    "dDurationMs": 3434,
+    "segs": [ {
+      "utf8": "base models that is\nmore likely to work."
+    } ]
+  }, {
+    "tStartMs": 657536,
+    "dDurationMs": 2219,
+    "segs": [ {
+      "utf8": "As an example, here's a poem\nabout bread and cheese,"
+    } ]
+  }, {
+    "tStartMs": 659756,
+    "dDurationMs": 2684,
+    "segs": [ {
+      "utf8": "and in that case it will\nautocomplete correctly."
+    } ]
+  }, {
+    "tStartMs": 662441,
+    "dDurationMs": 3779,
+    "segs": [ {
+      "utf8": "You can even trick base\nmodels into being assistants."
+    } ]
+  }, {
+    "tStartMs": 666221,
+    "dDurationMs": 1784,
+    "segs": [ {
+      "utf8": "The way you would do\nthis is you would create"
+    } ]
+  }, {
+    "tStartMs": 668006,
+    "dDurationMs": 1874,
+    "segs": [ {
+      "utf8": "a specific few-shot prompt"
+    } ]
+  }, {
+    "tStartMs": 669881,
+    "dDurationMs": 1199,
+    "segs": [ {
+      "utf8": "that makes it look like there's"
+    } ]
+  }, {
+    "tStartMs": 671081,
+    "dDurationMs": 2159,
+    "segs": [ {
+      "utf8": "some document between\nthe human and assistant"
+    } ]
+  }, {
+    "tStartMs": 673241,
+    "dDurationMs": 3074,
+    "segs": [ {
+      "utf8": "and they're exchanging\ninformation."
+    } ]
+  }, {
+    "tStartMs": 676316,
+    "dDurationMs": 1544,
+    "segs": [ {
+      "utf8": "Then at the bottom,"
+    } ]
+  }, {
+    "tStartMs": 677861,
+    "dDurationMs": 3149,
+    "segs": [ {
+      "utf8": "you put your query at the\nend and the base model"
+    } ]
+  }, {
+    "tStartMs": 681011,
+    "dDurationMs": 2369,
+    "segs": [ {
+      "utf8": "will condition itself into"
+    } ]
+  }, {
+    "tStartMs": 683381,
+    "dDurationMs": 3269,
+    "segs": [ {
+      "utf8": "being a helpful\nassistant and answer,"
+    } ]
+  }, {
+    "tStartMs": 686651,
+    "dDurationMs": 1859,
+    "segs": [ {
+      "utf8": "but this is not very\nreliable and doesn't work"
+    } ]
+  }, {
+    "tStartMs": 688511,
+    "dDurationMs": 2279,
+    "segs": [ {
+      "utf8": "super well in practice,\nalthough it can be done."
+    } ]
+  }, {
+    "tStartMs": 690791,
+    "dDurationMs": 2129,
+    "segs": [ {
+      "utf8": "Instead, we have a\ndifferent path to make"
+    } ]
+  }, {
+    "tStartMs": 692921,
+    "dDurationMs": 4184,
+    "segs": [ {
+      "utf8": "actual GPT assistants not base\nmodel document completers."
+    } ]
+  }, {
+    "tStartMs": 697106,
+    "dDurationMs": 2414,
+    "segs": [ {
+      "utf8": "That takes us into\nsupervised finetuning."
+    } ]
+  }, {
+    "tStartMs": 699521,
+    "dDurationMs": 2039,
+    "segs": [ {
+      "utf8": "In the supervised\nfinetuning stage,"
+    } ]
+  }, {
+    "tStartMs": 701561,
+    "dDurationMs": 1454,
+    "segs": [ {
+      "utf8": "we are going to collect"
+    } ]
+  }, {
+    "tStartMs": 703016,
+    "dDurationMs": 2924,
+    "segs": [ {
+      "utf8": "small but high quality\ndata-sets, and in this case,"
+    } ]
+  }, {
+    "tStartMs": 705941,
+    "dDurationMs": 3029,
+    "segs": [ {
+      "utf8": "we're going to ask human\ncontractors to gather data of"
+    } ]
+  }, {
+    "tStartMs": 708971,
+    "dDurationMs": 3809,
+    "segs": [ {
+      "utf8": "the form prompt and\nideal response."
+    } ]
+  }, {
+    "tStartMs": 712781,
+    "dDurationMs": 1259,
+    "segs": [ {
+      "utf8": "We're going to\ncollect lots of these"
+    } ]
+  }, {
+    "tStartMs": 714041,
+    "dDurationMs": 2504,
+    "segs": [ {
+      "utf8": "typically tens of thousands\nor something like that."
+    } ]
+  }, {
+    "tStartMs": 716546,
+    "dDurationMs": 1784,
+    "segs": [ {
+      "utf8": "Then we're going to\nstill do language"
+    } ]
+  }, {
+    "tStartMs": 718331,
+    "dDurationMs": 1184,
+    "segs": [ {
+      "utf8": "modeling on this data."
+    } ]
+  }, {
+    "tStartMs": 719516,
+    "dDurationMs": 1529,
+    "segs": [ {
+      "utf8": "Nothing changed algorithmically,"
+    } ]
+  }, {
+    "tStartMs": 721046,
+    "dDurationMs": 1814,
+    "segs": [ {
+      "utf8": "we're swapping out\na training set."
+    } ]
+  }, {
+    "tStartMs": 722861,
+    "dDurationMs": 1679,
+    "segs": [ {
+      "utf8": "It used to be\nInternet documents,"
+    } ]
+  }, {
+    "tStartMs": 724541,
+    "dDurationMs": 2309,
+    "segs": [ {
+      "utf8": "which has a high quantity local"
+    } ]
+  }, {
+    "tStartMs": 726851,
+    "dDurationMs": 4559,
+    "segs": [ {
+      "utf8": "for basically Q8 prompt\nresponse data."
+    } ]
+  }, {
+    "tStartMs": 731411,
+    "dDurationMs": 2474,
+    "segs": [ {
+      "utf8": "That is low quantity,\nhigh quality."
+    } ]
+  }, {
+    "tStartMs": 733886,
+    "dDurationMs": 1619,
+    "segs": [ {
+      "utf8": "We will still do\nlanguage modeling"
+    } ]
+  }, {
+    "tStartMs": 735506,
+    "dDurationMs": 1184,
+    "segs": [ {
+      "utf8": "and then after training,"
+    } ]
+  }, {
+    "tStartMs": 736691,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "we get an SFT model."
+    } ]
+  }, {
+    "tStartMs": 738191,
+    "dDurationMs": 2189,
+    "segs": [ {
+      "utf8": "You can actually deploy\nthese models and"
+    } ]
+  }, {
+    "tStartMs": 740381,
+    "dDurationMs": 2429,
+    "segs": [ {
+      "utf8": "they are actual assistants\nand they work to some extent."
+    } ]
+  }, {
+    "tStartMs": 742811,
+    "dDurationMs": 1319,
+    "segs": [ {
+      "utf8": "Let me show you what an"
+    } ]
+  }, {
+    "tStartMs": 744131,
+    "dDurationMs": 1619,
+    "segs": [ {
+      "utf8": "example demonstration\nmight look like."
+    } ]
+  }, {
+    "tStartMs": 745751,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "Here's something that\na human contractor"
+    } ]
+  }, {
+    "tStartMs": 747341,
+    "dDurationMs": 914,
+    "segs": [ {
+      "utf8": "might come up with."
+    } ]
+  }, {
+    "tStartMs": 748256,
+    "dDurationMs": 1634,
+    "segs": [ {
+      "utf8": "Here's some random\nprompt. Can you"
+    } ]
+  }, {
+    "tStartMs": 749891,
+    "dDurationMs": 1169,
+    "segs": [ {
+      "utf8": "write a short introduction"
+    } ]
+  }, {
+    "tStartMs": 751061,
+    "dDurationMs": 1199,
+    "segs": [ {
+      "utf8": "about the relevance of"
+    } ]
+  }, {
+    "tStartMs": 752261,
+    "dDurationMs": 2069,
+    "segs": [ {
+      "utf8": "the term monopsony or\nsomething like that?"
+    } ]
+  }, {
+    "tStartMs": 754331,
+    "dDurationMs": 3029,
+    "segs": [ {
+      "utf8": "Then the contractor also\nwrites out an ideal response."
+    } ]
+  }, {
+    "tStartMs": 757361,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "When they write out\nthese responses,"
+    } ]
+  }, {
+    "tStartMs": 758861,
+    "dDurationMs": 1529,
+    "segs": [ {
+      "utf8": "they are following\nextensive labeling"
+    } ]
+  }, {
+    "tStartMs": 760391,
+    "dDurationMs": 1679,
+    "segs": [ {
+      "utf8": "documentations and\nthey are being"
+    } ]
+  }, {
+    "tStartMs": 762071,
+    "dDurationMs": 3749,
+    "segs": [ {
+      "utf8": "asked to be helpful,\ntruthful, and harmless."
+    } ]
+  }, {
+    "tStartMs": 765821,
+    "dDurationMs": 2249,
+    "segs": [ {
+      "utf8": "These labeling\ninstructions here,"
+    } ]
+  }, {
+    "tStartMs": 768071,
+    "dDurationMs": 2609,
+    "segs": [ {
+      "utf8": "you probably can't\nread it, neither can I,"
+    } ]
+  }, {
+    "tStartMs": 770681,
+    "dDurationMs": 2039,
+    "segs": [ {
+      "utf8": "but they're long\nand this is people"
+    } ]
+  }, {
+    "tStartMs": 772721,
+    "dDurationMs": 1109,
+    "segs": [ {
+      "utf8": "following instructions\nand trying"
+    } ]
+  }, {
+    "tStartMs": 773831,
+    "dDurationMs": 1814,
+    "segs": [ {
+      "utf8": "to complete these prompts."
+    } ]
+  }, {
+    "tStartMs": 775646,
+    "dDurationMs": 1784,
+    "segs": [ {
+      "utf8": "That's what the\ndataset looks like."
+    } ]
+  }, {
+    "tStartMs": 777431,
+    "dDurationMs": 2519,
+    "segs": [ {
+      "utf8": "You can train these models.\nThis works to some extent."
+    } ]
+  }, {
+    "tStartMs": 779951,
+    "dDurationMs": 2609,
+    "segs": [ {
+      "utf8": "Now, you can actually\ncontinue the pipeline from"
+    } ]
+  }, {
+    "tStartMs": 782561,
+    "dDurationMs": 2609,
+    "segs": [ {
+      "utf8": "here on, and go into RLHF,"
+    } ]
+  }, {
+    "tStartMs": 785171,
+    "dDurationMs": 2219,
+    "segs": [ {
+      "utf8": "reinforcement learning\nfrom human feedback that"
+    } ]
+  }, {
+    "tStartMs": 787391,
+    "dDurationMs": 1649,
+    "segs": [ {
+      "utf8": "consists of both reward modeling"
+    } ]
+  }, {
+    "tStartMs": 789041,
+    "dDurationMs": 1334,
+    "segs": [ {
+      "utf8": "and reinforcement learning."
+    } ]
+  }, {
+    "tStartMs": 790376,
+    "dDurationMs": 1514,
+    "segs": [ {
+      "utf8": "Let me cover that and then I'll"
+    } ]
+  }, {
+    "tStartMs": 791891,
+    "dDurationMs": 1439,
+    "segs": [ {
+      "utf8": "come back to why you\nmay want to go through"
+    } ]
+  }, {
+    "tStartMs": 793331,
+    "dDurationMs": 3129,
+    "segs": [ {
+      "utf8": "the extra steps and how that\ncompares to SFT models."
+    } ]
+  }, {
+    "tStartMs": 796461,
+    "dDurationMs": 1554,
+    "segs": [ {
+      "utf8": "In the reward modeling step,"
+    } ]
+  }, {
+    "tStartMs": 798016,
+    "dDurationMs": 2114,
+    "segs": [ {
+      "utf8": "what we're going to do is\nwe're now going to shift"
+    } ]
+  }, {
+    "tStartMs": 800131,
+    "dDurationMs": 2879,
+    "segs": [ {
+      "utf8": "our data collection to be\nof the form of comparisons."
+    } ]
+  }, {
+    "tStartMs": 803011,
+    "dDurationMs": 2344,
+    "segs": [ {
+      "utf8": "Here's an example of what\nour dataset will look like."
+    } ]
+  }, {
+    "tStartMs": 805356,
+    "dDurationMs": 2959,
+    "segs": [ {
+      "utf8": "I have the same identical\nprompt on the top,"
+    } ]
+  }, {
+    "tStartMs": 808316,
+    "dDurationMs": 2879,
+    "segs": [ {
+      "utf8": "which is asking the\nassistant to write"
+    } ]
+  }, {
+    "tStartMs": 811196,
+    "dDurationMs": 1784,
+    "segs": [ {
+      "utf8": "a program or a function that"
+    } ]
+  }, {
+    "tStartMs": 812981,
+    "dDurationMs": 2399,
+    "segs": [ {
+      "utf8": "checks if a given\nstring is a palindrome."
+    } ]
+  }, {
+    "tStartMs": 815381,
+    "dDurationMs": 3029,
+    "segs": [ {
+      "utf8": "Then what we do is we\ntake the SFT model which"
+    } ]
+  }, {
+    "tStartMs": 818411,
+    "dDurationMs": 2759,
+    "segs": [ {
+      "utf8": "we've already trained and we\ncreate multiple completions."
+    } ]
+  }, {
+    "tStartMs": 821171,
+    "dDurationMs": 1289,
+    "segs": [ {
+      "utf8": "In this case, we have\nthree completions"
+    } ]
+  }, {
+    "tStartMs": 822461,
+    "dDurationMs": 1469,
+    "segs": [ {
+      "utf8": "that the model has created,"
+    } ]
+  }, {
+    "tStartMs": 823931,
+    "dDurationMs": 3104,
+    "segs": [ {
+      "utf8": "and then we ask people to\nrank these completions."
+    } ]
+  }, {
+    "tStartMs": 827036,
+    "dDurationMs": 2564,
+    "segs": [ {
+      "utf8": "If you stare at this for\na while, and by the way,"
+    } ]
+  }, {
+    "tStartMs": 829601,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "these are very\ndifficult things to do to"
+    } ]
+  }, {
+    "tStartMs": 831101,
+    "dDurationMs": 1754,
+    "segs": [ {
+      "utf8": "compare some of\nthese predictions."
+    } ]
+  }, {
+    "tStartMs": 832856,
+    "dDurationMs": 1964,
+    "segs": [ {
+      "utf8": "This can take people\neven hours for"
+    } ]
+  }, {
+    "tStartMs": 834821,
+    "dDurationMs": 3059,
+    "segs": [ {
+      "utf8": "a single prompt\ncompletion pairs,"
+    } ]
+  }, {
+    "tStartMs": 837881,
+    "dDurationMs": 2519,
+    "segs": [ {
+      "utf8": "but let's say we decided\nthat one of these is"
+    } ]
+  }, {
+    "tStartMs": 840401,
+    "dDurationMs": 2654,
+    "segs": [ {
+      "utf8": "much better than the others\nand so on. We rank them."
+    } ]
+  }, {
+    "tStartMs": 843056,
+    "dDurationMs": 1454,
+    "segs": [ {
+      "utf8": "Then we can follow that with"
+    } ]
+  }, {
+    "tStartMs": 844511,
+    "dDurationMs": 1529,
+    "segs": [ {
+      "utf8": "something that looks\nvery much like"
+    } ]
+  }, {
+    "tStartMs": 846041,
+    "dDurationMs": 1454,
+    "segs": [ {
+      "utf8": "a binary classification on"
+    } ]
+  }, {
+    "tStartMs": 847496,
+    "dDurationMs": 2744,
+    "segs": [ {
+      "utf8": "all the possible pairs\nbetween these completions."
+    } ]
+  }, {
+    "tStartMs": 850241,
+    "dDurationMs": 3119,
+    "segs": [ {
+      "utf8": "What we do now is, we lay\nout our prompt in rows,"
+    } ]
+  }, {
+    "tStartMs": 853361,
+    "dDurationMs": 2789,
+    "segs": [ {
+      "utf8": "and the prompt is identical\nacross all three rows here."
+    } ]
+  }, {
+    "tStartMs": 856151,
+    "dDurationMs": 1559,
+    "segs": [ {
+      "utf8": "It's all the same prompt, but"
+    } ]
+  }, {
+    "tStartMs": 857711,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "the completion of this varies."
+    } ]
+  }, {
+    "tStartMs": 859211,
+    "dDurationMs": 2654,
+    "segs": [ {
+      "utf8": "The yellow tokens are\ncoming from the SFT model."
+    } ]
+  }, {
+    "tStartMs": 861866,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "Then what we do is we append"
+    } ]
+  }, {
+    "tStartMs": 863366,
+    "dDurationMs": 3104,
+    "segs": [ {
+      "utf8": "another special reward\nreadout token at"
+    } ]
+  }, {
+    "tStartMs": 866471,
+    "dDurationMs": 2099,
+    "segs": [ {
+      "utf8": "the end and we basically only"
+    } ]
+  }, {
+    "tStartMs": 868571,
+    "dDurationMs": 3149,
+    "segs": [ {
+      "utf8": "supervise the transformer\nat this single green token."
+    } ]
+  }, {
+    "tStartMs": 871721,
+    "dDurationMs": 2549,
+    "segs": [ {
+      "utf8": "The transformer will\npredict some reward"
+    } ]
+  }, {
+    "tStartMs": 874271,
+    "dDurationMs": 2654,
+    "segs": [ {
+      "utf8": "for how good that completion is"
+    } ]
+  }, {
+    "tStartMs": 876926,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "for that prompt and\nbasically it makes"
+    } ]
+  }, {
+    "tStartMs": 879386,
+    "dDurationMs": 2759,
+    "segs": [ {
+      "utf8": "a guess about the quality\nof each completion."
+    } ]
+  }, {
+    "tStartMs": 882146,
+    "dDurationMs": 2594,
+    "segs": [ {
+      "utf8": "Then once it makes a guess\nfor every one of them,"
+    } ]
+  }, {
+    "tStartMs": 884741,
+    "dDurationMs": 1349,
+    "segs": [ {
+      "utf8": "we also have the ground truth"
+    } ]
+  }, {
+    "tStartMs": 886091,
+    "dDurationMs": 1874,
+    "segs": [ {
+      "utf8": "which is telling us\nthe ranking of them."
+    } ]
+  }, {
+    "tStartMs": 887966,
+    "dDurationMs": 2144,
+    "segs": [ {
+      "utf8": "We can actually\nenforce that some of"
+    } ]
+  }, {
+    "tStartMs": 890111,
+    "dDurationMs": 1049,
+    "segs": [ {
+      "utf8": "these numbers should\nbe much higher"
+    } ]
+  }, {
+    "tStartMs": 891161,
+    "dDurationMs": 1109,
+    "segs": [ {
+      "utf8": "than others, and so on."
+    } ]
+  }, {
+    "tStartMs": 892271,
+    "dDurationMs": 1919,
+    "segs": [ {
+      "utf8": "We formulate this into\na loss function and we"
+    } ]
+  }, {
+    "tStartMs": 894191,
+    "dDurationMs": 2279,
+    "segs": [ {
+      "utf8": "train our model to make\nreward predictions"
+    } ]
+  }, {
+    "tStartMs": 896471,
+    "dDurationMs": 2009,
+    "segs": [ {
+      "utf8": "that are consistent with\nthe ground truth coming"
+    } ]
+  }, {
+    "tStartMs": 898481,
+    "dDurationMs": 2624,
+    "segs": [ {
+      "utf8": "from the comparisons from\nall these contractors."
+    } ]
+  }, {
+    "tStartMs": 901106,
+    "dDurationMs": 1679,
+    "segs": [ {
+      "utf8": "That's how we train\nour reward model."
+    } ]
+  }, {
+    "tStartMs": 902786,
+    "dDurationMs": 1454,
+    "segs": [ {
+      "utf8": "That allows us to score how good"
+    } ]
+  }, {
+    "tStartMs": 904241,
+    "dDurationMs": 2369,
+    "segs": [ {
+      "utf8": "a completion is for a prompt."
+    } ]
+  }, {
+    "tStartMs": 906611,
+    "dDurationMs": 2414,
+    "segs": [ {
+      "utf8": "Once we have a reward model,"
+    } ]
+  }, {
+    "tStartMs": 909026,
+    "dDurationMs": 2144,
+    "segs": [ {
+      "utf8": "we can't deploy this\nbecause this is"
+    } ]
+  }, {
+    "tStartMs": 911171,
+    "dDurationMs": 2174,
+    "segs": [ {
+      "utf8": "not very useful as an\nassistant by itself,"
+    } ]
+  }, {
+    "tStartMs": 913346,
+    "dDurationMs": 2024,
+    "segs": [ {
+      "utf8": "but it's very useful\nfor the reinforcement"
+    } ]
+  }, {
+    "tStartMs": 915371,
+    "dDurationMs": 1544,
+    "segs": [ {
+      "utf8": "learning stage that follows now."
+    } ]
+  }, {
+    "tStartMs": 916916,
+    "dDurationMs": 1529,
+    "segs": [ {
+      "utf8": "Because we have a reward model,"
+    } ]
+  }, {
+    "tStartMs": 918446,
+    "dDurationMs": 1319,
+    "segs": [ {
+      "utf8": "we can score the quality of"
+    } ]
+  }, {
+    "tStartMs": 919766,
+    "dDurationMs": 3134,
+    "segs": [ {
+      "utf8": "any arbitrary completion\nfor any given prompt."
+    } ]
+  }, {
+    "tStartMs": 922901,
+    "dDurationMs": 1814,
+    "segs": [ {
+      "utf8": "What we do during\nreinforcement learning"
+    } ]
+  }, {
+    "tStartMs": 924716,
+    "dDurationMs": 1349,
+    "segs": [ {
+      "utf8": "is we basically get, again,"
+    } ]
+  }, {
+    "tStartMs": 926066,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "a large collection of\nprompts and now we do"
+    } ]
+  }, {
+    "tStartMs": 928526,
+    "dDurationMs": 1364,
+    "segs": [ {
+      "utf8": "reinforcement learning\nwith respect to"
+    } ]
+  }, {
+    "tStartMs": 929891,
+    "dDurationMs": 2384,
+    "segs": [ {
+      "utf8": "the reward model. Here's\nwhat that looks like."
+    } ]
+  }, {
+    "tStartMs": 932276,
+    "dDurationMs": 2039,
+    "segs": [ {
+      "utf8": "We take a single prompt,"
+    } ]
+  }, {
+    "tStartMs": 934316,
+    "dDurationMs": 1679,
+    "segs": [ {
+      "utf8": "we lay it out in rows,"
+    } ]
+  }, {
+    "tStartMs": 935996,
+    "dDurationMs": 2384,
+    "segs": [ {
+      "utf8": "and now we use basically"
+    } ]
+  }, {
+    "tStartMs": 938381,
+    "dDurationMs": 1259,
+    "segs": [ {
+      "utf8": "the model we'd like\nto train which"
+    } ]
+  }, {
+    "tStartMs": 939641,
+    "dDurationMs": 1949,
+    "segs": [ {
+      "utf8": "was initialized at SFT model"
+    } ]
+  }, {
+    "tStartMs": 941591,
+    "dDurationMs": 1844,
+    "segs": [ {
+      "utf8": "to create some\ncompletions in yellow,"
+    } ]
+  }, {
+    "tStartMs": 943436,
+    "dDurationMs": 2534,
+    "segs": [ {
+      "utf8": "and then we append the\nreward token again"
+    } ]
+  }, {
+    "tStartMs": 945971,
+    "dDurationMs": 1859,
+    "segs": [ {
+      "utf8": "and we read off the reward"
+    } ]
+  }, {
+    "tStartMs": 947831,
+    "dDurationMs": 1274,
+    "segs": [ {
+      "utf8": "according to the reward model,"
+    } ]
+  }, {
+    "tStartMs": 949106,
+    "dDurationMs": 1364,
+    "segs": [ {
+      "utf8": "which is now kept fixed."
+    } ]
+  }, {
+    "tStartMs": 950471,
+    "dDurationMs": 3029,
+    "segs": [ {
+      "utf8": "It doesn't change any\nmore. Now the reward model"
+    } ]
+  }, {
+    "tStartMs": 953501,
+    "dDurationMs": 2024,
+    "segs": [ {
+      "utf8": "tells us the quality of\nevery single completion"
+    } ]
+  }, {
+    "tStartMs": 955526,
+    "dDurationMs": 2924,
+    "segs": [ {
+      "utf8": "for all these prompts and so\nwhat we can do is we can now"
+    } ]
+  }, {
+    "tStartMs": 958451,
+    "dDurationMs": 1439,
+    "segs": [ {
+      "utf8": "just basically apply the same"
+    } ]
+  }, {
+    "tStartMs": 959891,
+    "dDurationMs": 1904,
+    "segs": [ {
+      "utf8": "language modeling loss function,"
+    } ]
+  }, {
+    "tStartMs": 961796,
+    "dDurationMs": 2819,
+    "segs": [ {
+      "utf8": "but we're currently training\non the yellow tokens,"
+    } ]
+  }, {
+    "tStartMs": 964616,
+    "dDurationMs": 2324,
+    "segs": [ {
+      "utf8": "and we are weighing"
+    } ]
+  }, {
+    "tStartMs": 966941,
+    "dDurationMs": 1874,
+    "segs": [ {
+      "utf8": "the language modeling objective"
+    } ]
+  }, {
+    "tStartMs": 968816,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "by the rewards indicated\nby the reward model."
+    } ]
+  }, {
+    "tStartMs": 971276,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "As an example, in the first row,"
+    } ]
+  }, {
+    "tStartMs": 973166,
+    "dDurationMs": 2339,
+    "segs": [ {
+      "utf8": "the reward model\nsaid that this is"
+    } ]
+  }, {
+    "tStartMs": 975506,
+    "dDurationMs": 1694,
+    "segs": [ {
+      "utf8": "a fairly high-scoring completion"
+    } ]
+  }, {
+    "tStartMs": 977201,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "and so all the tokens that we"
+    } ]
+  }, {
+    "tStartMs": 978611,
+    "dDurationMs": 2819,
+    "segs": [ {
+      "utf8": "happen to sample on the\nfirst row are going to get"
+    } ]
+  }, {
+    "tStartMs": 981431,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "reinforced and\nthey're going to get"
+    } ]
+  }, {
+    "tStartMs": 982931,
+    "dDurationMs": 2144,
+    "segs": [ {
+      "utf8": "higher probabilities\nfor the future."
+    } ]
+  }, {
+    "tStartMs": 985076,
+    "dDurationMs": 1754,
+    "segs": [ {
+      "utf8": "Conversely, on the second row,"
+    } ]
+  }, {
+    "tStartMs": 986831,
+    "dDurationMs": 1349,
+    "segs": [ {
+      "utf8": "the reward model\nreally did not like"
+    } ]
+  }, {
+    "tStartMs": 988181,
+    "dDurationMs": 1754,
+    "segs": [ {
+      "utf8": "this completion, -1.2."
+    } ]
+  }, {
+    "tStartMs": 989936,
+    "dDurationMs": 2864,
+    "segs": [ {
+      "utf8": "Therefore, every single\ntoken that we sampled in"
+    } ]
+  }, {
+    "tStartMs": 992801,
+    "dDurationMs": 1289,
+    "segs": [ {
+      "utf8": "that second row is going to get"
+    } ]
+  }, {
+    "tStartMs": 994091,
+    "dDurationMs": 2024,
+    "segs": [ {
+      "utf8": "a slightly higher\nprobability for the future."
+    } ]
+  }, {
+    "tStartMs": 996116,
+    "dDurationMs": 1574,
+    "segs": [ {
+      "utf8": "We do this over and over on"
+    } ]
+  }, {
+    "tStartMs": 997691,
+    "dDurationMs": 2099,
+    "segs": [ {
+      "utf8": "many prompts on many\nbatches and basically,"
+    } ]
+  }, {
+    "tStartMs": 999791,
+    "dDurationMs": 3299,
+    "segs": [ {
+      "utf8": "we get a policy that\ncreates yellow tokens here."
+    } ]
+  }, {
+    "tStartMs": 1003091,
+    "dDurationMs": 3209,
+    "segs": [ {
+      "utf8": "It's basically all the\ncompletions here will"
+    } ]
+  }, {
+    "tStartMs": 1006301,
+    "dDurationMs": 1379,
+    "segs": [ {
+      "utf8": "score high according to"
+    } ]
+  }, {
+    "tStartMs": 1007681,
+    "dDurationMs": 2889,
+    "segs": [ {
+      "utf8": "the reward model that we\ntrained in the previous stage."
+    } ]
+  }, {
+    "tStartMs": 1011930,
+    "dDurationMs": 3610,
+    "segs": [ {
+      "utf8": "That's what the\nRLHF pipeline is."
+    } ]
+  }, {
+    "tStartMs": 1015541,
+    "dDurationMs": 3389,
+    "segs": [ {
+      "utf8": "Then at the end, you get a\nmodel that you could deploy."
+    } ]
+  }, {
+    "tStartMs": 1018931,
+    "dDurationMs": 3554,
+    "segs": [ {
+      "utf8": "As an example, ChatGPT\nis an RLHF model,"
+    } ]
+  }, {
+    "tStartMs": 1022486,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "but some other models\nthat you might"
+    } ]
+  }, {
+    "tStartMs": 1023896,
+    "dDurationMs": 1274,
+    "segs": [ {
+      "utf8": "come across for example,"
+    } ]
+  }, {
+    "tStartMs": 1025171,
+    "dDurationMs": 1469,
+    "segs": [ {
+      "utf8": "Vicuna-13B, and so on,"
+    } ]
+  }, {
+    "tStartMs": 1026641,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "these are SFT models."
+    } ]
+  }, {
+    "tStartMs": 1028231,
+    "dDurationMs": 3899,
+    "segs": [ {
+      "utf8": "We have base models, SFT\nmodels, and RLHF models."
+    } ]
+  }, {
+    "tStartMs": 1032131,
+    "dDurationMs": 2369,
+    "segs": [ {
+      "utf8": "That's the state\nof things there."
+    } ]
+  }, {
+    "tStartMs": 1034501,
+    "dDurationMs": 2414,
+    "segs": [ {
+      "utf8": "Now why would you\nwant to do RLHF?"
+    } ]
+  }, {
+    "tStartMs": 1036916,
+    "dDurationMs": 2264,
+    "segs": [ {
+      "utf8": "One answer that's not"
+    } ]
+  }, {
+    "tStartMs": 1039181,
+    "dDurationMs": 1769,
+    "segs": [ {
+      "utf8": "that exciting is that\nit works better."
+    } ]
+  }, {
+    "tStartMs": 1040951,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "This comes from the\ninstruct GPT paper."
+    } ]
+  }, {
+    "tStartMs": 1042841,
+    "dDurationMs": 2744,
+    "segs": [ {
+      "utf8": "According to these\nexperiments a while ago now,"
+    } ]
+  }, {
+    "tStartMs": 1045586,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "these PPO models are RLHF."
+    } ]
+  }, {
+    "tStartMs": 1048046,
+    "dDurationMs": 2684,
+    "segs": [ {
+      "utf8": "We see that they are\nbasically preferred in a lot"
+    } ]
+  }, {
+    "tStartMs": 1050731,
+    "dDurationMs": 3044,
+    "segs": [ {
+      "utf8": "of comparisons when we\ngive them to humans."
+    } ]
+  }, {
+    "tStartMs": 1053776,
+    "dDurationMs": 2804,
+    "segs": [ {
+      "utf8": "Humans prefer basically tokens"
+    } ]
+  }, {
+    "tStartMs": 1056581,
+    "dDurationMs": 2759,
+    "segs": [ {
+      "utf8": "that come from RLHF models\ncompared to SFT models,"
+    } ]
+  }, {
+    "tStartMs": 1059341,
+    "dDurationMs": 2009,
+    "segs": [ {
+      "utf8": "compared to base model\nthat is prompted to be"
+    } ]
+  }, {
+    "tStartMs": 1061351,
+    "dDurationMs": 2399,
+    "segs": [ {
+      "utf8": "an assistant. It\njust works better."
+    } ]
+  }, {
+    "tStartMs": 1063751,
+    "dDurationMs": 3584,
+    "segs": [ {
+      "utf8": "But you might ask why\ndoes it work better?"
+    } ]
+  }, {
+    "tStartMs": 1067336,
+    "dDurationMs": 2384,
+    "segs": [ {
+      "utf8": "I don't think that there's\na single amazing answer"
+    } ]
+  }, {
+    "tStartMs": 1069721,
+    "dDurationMs": 2009,
+    "segs": [ {
+      "utf8": "that the community\nhas really agreed on,"
+    } ]
+  }, {
+    "tStartMs": 1071731,
+    "dDurationMs": 3764,
+    "segs": [ {
+      "utf8": "but I will offer one\nreason potentially."
+    } ]
+  }, {
+    "tStartMs": 1075496,
+    "dDurationMs": 2834,
+    "segs": [ {
+      "utf8": "It has to do with the\nasymmetry between how easy"
+    } ]
+  }, {
+    "tStartMs": 1078331,
+    "dDurationMs": 3914,
+    "segs": [ {
+      "utf8": "computationally it is to\ncompare versus generate."
+    } ]
+  }, {
+    "tStartMs": 1082246,
+    "dDurationMs": 2609,
+    "segs": [ {
+      "utf8": "Let's take an example\nof generating a haiku."
+    } ]
+  }, {
+    "tStartMs": 1084856,
+    "dDurationMs": 3134,
+    "segs": [ {
+      "utf8": "Suppose I ask a model to write\na haiku about paper clips."
+    } ]
+  }, {
+    "tStartMs": 1087991,
+    "dDurationMs": 2729,
+    "segs": [ {
+      "utf8": "If you're a contractor\ntrying to train data,"
+    } ]
+  }, {
+    "tStartMs": 1090721,
+    "dDurationMs": 1439,
+    "segs": [ {
+      "utf8": "then imagine being a contractor"
+    } ]
+  }, {
+    "tStartMs": 1092161,
+    "dDurationMs": 2084,
+    "segs": [ {
+      "utf8": "collecting basically\ndata for the SFT stage,"
+    } ]
+  }, {
+    "tStartMs": 1094246,
+    "dDurationMs": 1109,
+    "segs": [ {
+      "utf8": "how are you supposed to create"
+    } ]
+  }, {
+    "tStartMs": 1095356,
+    "dDurationMs": 1484,
+    "segs": [ {
+      "utf8": "a nice haiku for a paper clip?"
+    } ]
+  }, {
+    "tStartMs": 1096841,
+    "dDurationMs": 1829,
+    "segs": [ {
+      "utf8": "You might not be\nvery good at that,"
+    } ]
+  }, {
+    "tStartMs": 1098671,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "but if I give you\na few examples of"
+    } ]
+  }, {
+    "tStartMs": 1100081,
+    "dDurationMs": 1289,
+    "segs": [ {
+      "utf8": "haikus you might be able to"
+    } ]
+  }, {
+    "tStartMs": 1101371,
+    "dDurationMs": 2879,
+    "segs": [ {
+      "utf8": "appreciate some of these\nhaikus a lot more than others."
+    } ]
+  }, {
+    "tStartMs": 1104251,
+    "dDurationMs": 3149,
+    "segs": [ {
+      "utf8": "Judging which one of these is\ngood is a much easier task."
+    } ]
+  }, {
+    "tStartMs": 1107401,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "Basically, this asymmetry"
+    } ]
+  }, {
+    "tStartMs": 1109291,
+    "dDurationMs": 2039,
+    "segs": [ {
+      "utf8": "makes it so that comparisons are"
+    } ]
+  }, {
+    "tStartMs": 1111331,
+    "dDurationMs": 2519,
+    "segs": [ {
+      "utf8": "a better way to\npotentially leverage"
+    } ]
+  }, {
+    "tStartMs": 1113851,
+    "dDurationMs": 1079,
+    "segs": [ {
+      "utf8": "yourself as a human and"
+    } ]
+  }, {
+    "tStartMs": 1114931,
+    "dDurationMs": 2669,
+    "segs": [ {
+      "utf8": "your judgment to create\na slightly better model."
+    } ]
+  }, {
+    "tStartMs": 1117601,
+    "dDurationMs": 3014,
+    "segs": [ {
+      "utf8": "Now, RLHF models are not"
+    } ]
+  }, {
+    "tStartMs": 1120616,
+    "dDurationMs": 2969,
+    "segs": [ {
+      "utf8": "strictly an improvement on the\nbase models in some cases."
+    } ]
+  }, {
+    "tStartMs": 1123586,
+    "dDurationMs": 1604,
+    "segs": [ {
+      "utf8": "In particular, we'd\nnotice for example"
+    } ]
+  }, {
+    "tStartMs": 1125191,
+    "dDurationMs": 1709,
+    "segs": [ {
+      "utf8": "that they lose some entropy."
+    } ]
+  }, {
+    "tStartMs": 1126901,
+    "dDurationMs": 2759,
+    "segs": [ {
+      "utf8": "That means that they\ngive more peaky results."
+    } ]
+  }, {
+    "tStartMs": 1129661,
+    "dDurationMs": 4469,
+    "segs": [ {
+      "utf8": "They can output samples"
+    } ]
+  }, {
+    "tStartMs": 1134131,
+    "dDurationMs": 1814,
+    "segs": [ {
+      "utf8": "with lower variation\nthan the base model."
+    } ]
+  }, {
+    "tStartMs": 1135946,
+    "dDurationMs": 1514,
+    "segs": [ {
+      "utf8": "The base model has\nlots of entropy and"
+    } ]
+  }, {
+    "tStartMs": 1137461,
+    "dDurationMs": 2699,
+    "segs": [ {
+      "utf8": "will give lots of\ndiverse outputs."
+    } ]
+  }, {
+    "tStartMs": 1140161,
+    "dDurationMs": 3299,
+    "segs": [ {
+      "utf8": "For example, one\nplace where I still"
+    } ]
+  }, {
+    "tStartMs": 1143461,
+    "dDurationMs": 2729,
+    "segs": [ {
+      "utf8": "prefer to use a base\nmodel is in the setup"
+    } ]
+  }, {
+    "tStartMs": 1146191,
+    "dDurationMs": 3614,
+    "segs": [ {
+      "utf8": "where you basically have"
+    } ]
+  }, {
+    "tStartMs": 1149806,
+    "dDurationMs": 3929,
+    "segs": [ {
+      "utf8": "n things and you want to\ngenerate more things like it."
+    } ]
+  }, {
+    "tStartMs": 1153736,
+    "dDurationMs": 2699,
+    "segs": [ {
+      "utf8": "Here is an example\nthat I just cooked up."
+    } ]
+  }, {
+    "tStartMs": 1156436,
+    "dDurationMs": 2354,
+    "segs": [ {
+      "utf8": "I want to generate\ncool Pokemon names."
+    } ]
+  }, {
+    "tStartMs": 1158791,
+    "dDurationMs": 2789,
+    "segs": [ {
+      "utf8": "I gave it seven Pokemon names\nand I asked the base model"
+    } ]
+  }, {
+    "tStartMs": 1161581,
+    "dDurationMs": 1379,
+    "segs": [ {
+      "utf8": "to complete the document and it"
+    } ]
+  }, {
+    "tStartMs": 1162961,
+    "dDurationMs": 1619,
+    "segs": [ {
+      "utf8": "gave me a lot more\nPokemon names."
+    } ]
+  }, {
+    "tStartMs": 1164581,
+    "dDurationMs": 2429,
+    "segs": [ {
+      "utf8": "These are fictitious. I\ntried to look them up."
+    } ]
+  }, {
+    "tStartMs": 1167011,
+    "dDurationMs": 2129,
+    "segs": [ {
+      "utf8": "I don't believe they're\nactual Pokemons."
+    } ]
+  }, {
+    "tStartMs": 1169141,
+    "dDurationMs": 2309,
+    "segs": [ {
+      "utf8": "This is the task that I think\nthe base model would be"
+    } ]
+  }, {
+    "tStartMs": 1171451,
+    "dDurationMs": 1919,
+    "segs": [ {
+      "utf8": "good at because it still\nhas lots of entropy."
+    } ]
+  }, {
+    "tStartMs": 1173371,
+    "dDurationMs": 2249,
+    "segs": [ {
+      "utf8": "It'll give you lots\nof diverse cool"
+    } ]
+  }, {
+    "tStartMs": 1175621,
+    "dDurationMs": 3639,
+    "segs": [ {
+      "utf8": "more things that look like\nwhatever you give it before."
+    } ]
+  }, {
+    "tStartMs": 1181820,
+    "dDurationMs": 2170,
+    "segs": [ {
+      "utf8": "Having said all that, these are"
+    } ]
+  }, {
+    "tStartMs": 1183991,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "the assistant models\nthat are probably"
+    } ]
+  }, {
+    "tStartMs": 1185491,
+    "dDurationMs": 1619,
+    "segs": [ {
+      "utf8": "available to you at this point."
+    } ]
+  }, {
+    "tStartMs": 1187111,
+    "dDurationMs": 3079,
+    "segs": [ {
+      "utf8": "There was a team at Berkeley\nthat ranked a lot of"
+    } ]
+  }, {
+    "tStartMs": 1190191,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "the available assistant models"
+    } ]
+  }, {
+    "tStartMs": 1191601,
+    "dDurationMs": 1814,
+    "segs": [ {
+      "utf8": "and give them\nbasically Elo ratings."
+    } ]
+  }, {
+    "tStartMs": 1193416,
+    "dDurationMs": 1184,
+    "segs": [ {
+      "utf8": "Currently, some of\nthe best models,"
+    } ]
+  }, {
+    "tStartMs": 1194601,
+    "dDurationMs": 1154,
+    "segs": [ {
+      "utf8": "of course, are GPT-4,"
+    } ]
+  }, {
+    "tStartMs": 1195756,
+    "dDurationMs": 1289,
+    "segs": [ {
+      "utf8": "by far, I would say,"
+    } ]
+  }, {
+    "tStartMs": 1197046,
+    "dDurationMs": 1319,
+    "segs": [ {
+      "utf8": "followed by Claude,"
+    } ]
+  }, {
+    "tStartMs": 1198366,
+    "dDurationMs": 2324,
+    "segs": [ {
+      "utf8": "GPT-3.5, and then a\nnumber of models,"
+    } ]
+  }, {
+    "tStartMs": 1200691,
+    "dDurationMs": 1619,
+    "segs": [ {
+      "utf8": "some of these might be\navailable as weights,"
+    } ]
+  }, {
+    "tStartMs": 1202311,
+    "dDurationMs": 2434,
+    "segs": [ {
+      "utf8": "like Vicuna, Koala, etc."
+    } ]
+  }, {
+    "tStartMs": 1204746,
+    "dDurationMs": 2284,
+    "segs": [ {
+      "utf8": "The first three rows here are"
+    } ]
+  }, {
+    "tStartMs": 1207031,
+    "dDurationMs": 2819,
+    "segs": [ {
+      "utf8": "all RLHF models and"
+    } ]
+  }, {
+    "tStartMs": 1209851,
+    "dDurationMs": 1544,
+    "segs": [ {
+      "utf8": "all of the other models\nto my knowledge,"
+    } ]
+  }, {
+    "tStartMs": 1211396,
+    "dDurationMs": 2814,
+    "segs": [ {
+      "utf8": "are SFT models, I believe."
+    } ]
+  }, {
+    "tStartMs": 1215809,
+    "dDurationMs": 2021,
+    "segs": [ {
+      "utf8": "That's how we train"
+    } ]
+  }, {
+    "tStartMs": 1217831,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "these models on the high level."
+    } ]
+  }, {
+    "tStartMs": 1219241,
+    "dDurationMs": 1364,
+    "segs": [ {
+      "utf8": "Now I'm going to switch gears"
+    } ]
+  }, {
+    "tStartMs": 1220606,
+    "dDurationMs": 1454,
+    "segs": [ {
+      "utf8": "and let's look at how we can"
+    } ]
+  }, {
+    "tStartMs": 1222061,
+    "dDurationMs": 4019,
+    "segs": [ {
+      "utf8": "best apply the GPT assistant\nmodel to your problems."
+    } ]
+  }, {
+    "tStartMs": 1226081,
+    "dDurationMs": 1649,
+    "segs": [ {
+      "utf8": "Now, I would like to work"
+    } ]
+  }, {
+    "tStartMs": 1227731,
+    "dDurationMs": 2204,
+    "segs": [ {
+      "utf8": "in setting of a\nconcrete example."
+    } ]
+  }, {
+    "tStartMs": 1229936,
+    "dDurationMs": 2969,
+    "segs": [ {
+      "utf8": "Let's work with a\nconcrete example here."
+    } ]
+  }, {
+    "tStartMs": 1232906,
+    "dDurationMs": 1364,
+    "segs": [ {
+      "utf8": "Let's say that you\nare working on"
+    } ]
+  }, {
+    "tStartMs": 1234271,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "an article or a blog post,"
+    } ]
+  }, {
+    "tStartMs": 1235681,
+    "dDurationMs": 2789,
+    "segs": [ {
+      "utf8": "and you're going to write\nthis sentence at the end."
+    } ]
+  }, {
+    "tStartMs": 1238471,
+    "dDurationMs": 1739,
+    "segs": [ {
+      "utf8": "\"California's population is 53"
+    } ]
+  }, {
+    "tStartMs": 1240211,
+    "dDurationMs": 1874,
+    "segs": [ {
+      "utf8": "times that of Alaska.\"\nSo for some reason,"
+    } ]
+  }, {
+    "tStartMs": 1242086,
+    "dDurationMs": 2639,
+    "segs": [ {
+      "utf8": "you want to compare the\npopulations of these two states."
+    } ]
+  }, {
+    "tStartMs": 1244726,
+    "dDurationMs": 2669,
+    "segs": [ {
+      "utf8": "Think about the rich\ninternal monologue"
+    } ]
+  }, {
+    "tStartMs": 1247396,
+    "dDurationMs": 1694,
+    "segs": [ {
+      "utf8": "and tool use and how much work"
+    } ]
+  }, {
+    "tStartMs": 1249091,
+    "dDurationMs": 1529,
+    "segs": [ {
+      "utf8": "actually goes computationally in"
+    } ]
+  }, {
+    "tStartMs": 1250621,
+    "dDurationMs": 2744,
+    "segs": [ {
+      "utf8": "your brain to generate\nthis one final sentence."
+    } ]
+  }, {
+    "tStartMs": 1253366,
+    "dDurationMs": 2259,
+    "segs": [ {
+      "utf8": "Here's maybe what that could\nlook like in your brain."
+    } ]
+  }, {
+    "tStartMs": 1255626,
+    "dDurationMs": 3489,
+    "segs": [ {
+      "utf8": "For this next step, let\nme blog on my blog,"
+    } ]
+  }, {
+    "tStartMs": 1259116,
+    "dDurationMs": 2069,
+    "segs": [ {
+      "utf8": "let me compare these\ntwo populations."
+    } ]
+  }, {
+    "tStartMs": 1261186,
+    "dDurationMs": 1874,
+    "segs": [ {
+      "utf8": "First I'm going to\nobviously need to"
+    } ]
+  }, {
+    "tStartMs": 1263061,
+    "dDurationMs": 1949,
+    "segs": [ {
+      "utf8": "get both of these populations."
+    } ]
+  }, {
+    "tStartMs": 1265011,
+    "dDurationMs": 1619,
+    "segs": [ {
+      "utf8": "Now, I know that I probably"
+    } ]
+  }, {
+    "tStartMs": 1266631,
+    "dDurationMs": 1739,
+    "segs": [ {
+      "utf8": "don't know these\npopulations off the top of"
+    } ]
+  }, {
+    "tStartMs": 1268371,
+    "dDurationMs": 1779,
+    "segs": [ {
+      "utf8": "my head so I'm aware"
+    } ]
+  }, {
+    "tStartMs": 1270151,
+    "dDurationMs": 2684,
+    "segs": [ {
+      "utf8": "of what I know or don't\nknow of my self-knowledge."
+    } ]
+  }, {
+    "tStartMs": 1272836,
+    "dDurationMs": 3524,
+    "segs": [ {
+      "utf8": "I go, I do some tool use\nand I go to Wikipedia and I"
+    } ]
+  }, {
+    "tStartMs": 1276361,
+    "dDurationMs": 3464,
+    "segs": [ {
+      "utf8": "look up California's population\nand Alaska's population."
+    } ]
+  }, {
+    "tStartMs": 1279826,
+    "dDurationMs": 3089,
+    "segs": [ {
+      "utf8": "Now, I know that I should\ndivide the two, but again,"
+    } ]
+  }, {
+    "tStartMs": 1282916,
+    "dDurationMs": 1799,
+    "segs": [ {
+      "utf8": "I know that dividing 39.2 by"
+    } ]
+  }, {
+    "tStartMs": 1284716,
+    "dDurationMs": 2189,
+    "segs": [ {
+      "utf8": "0.74 is very\nunlikely to succeed."
+    } ]
+  }, {
+    "tStartMs": 1286906,
+    "dDurationMs": 1634,
+    "segs": [ {
+      "utf8": "That's not the thing that I can"
+    } ]
+  }, {
+    "tStartMs": 1288541,
+    "dDurationMs": 1799,
+    "segs": [ {
+      "utf8": "do in my head and so therefore,"
+    } ]
+  }, {
+    "tStartMs": 1290341,
+    "dDurationMs": 1079,
+    "segs": [ {
+      "utf8": "I'm going to rely on"
+    } ]
+  }, {
+    "tStartMs": 1291421,
+    "dDurationMs": 2264,
+    "segs": [ {
+      "utf8": "the calculator so I'm\ngoing to use a calculator,"
+    } ]
+  }, {
+    "tStartMs": 1293686,
+    "dDurationMs": 3144,
+    "segs": [ {
+      "utf8": "punch it in and see that\nthe output is roughly 53."
+    } ]
+  }, {
+    "tStartMs": 1296831,
+    "dDurationMs": 1629,
+    "segs": [ {
+      "utf8": "Then maybe I do"
+    } ]
+  }, {
+    "tStartMs": 1298461,
+    "dDurationMs": 1709,
+    "segs": [ {
+      "utf8": "some reflection and\nsanity checks in"
+    } ]
+  }, {
+    "tStartMs": 1300171,
+    "dDurationMs": 2279,
+    "segs": [ {
+      "utf8": "my brain so does 53 makes sense?"
+    } ]
+  }, {
+    "tStartMs": 1302451,
+    "dDurationMs": 1979,
+    "segs": [ {
+      "utf8": "Well, that's quite\na large fraction,"
+    } ]
+  }, {
+    "tStartMs": 1304431,
+    "dDurationMs": 1049,
+    "segs": [ {
+      "utf8": "but then California is the most"
+    } ]
+  }, {
+    "tStartMs": 1305481,
+    "dDurationMs": 2449,
+    "segs": [ {
+      "utf8": "populous state, so\nmaybe that looks okay."
+    } ]
+  }, {
+    "tStartMs": 1307931,
+    "dDurationMs": 2164,
+    "segs": [ {
+      "utf8": "Then I have all the\ninformation I might need,"
+    } ]
+  }, {
+    "tStartMs": 1310096,
+    "dDurationMs": 2669,
+    "segs": [ {
+      "utf8": "and now I get to the\ncreative portion of writing."
+    } ]
+  }, {
+    "tStartMs": 1312766,
+    "dDurationMs": 2684,
+    "segs": [ {
+      "utf8": "I might start to write\nsomething like \"California has"
+    } ]
+  }, {
+    "tStartMs": 1315451,
+    "dDurationMs": 3029,
+    "segs": [ {
+      "utf8": "53x times greater\" and\nthen I think to myself,"
+    } ]
+  }, {
+    "tStartMs": 1318481,
+    "dDurationMs": 2189,
+    "segs": [ {
+      "utf8": "that's actually like really\nawkward phrasing so let me"
+    } ]
+  }, {
+    "tStartMs": 1320671,
+    "dDurationMs": 2924,
+    "segs": [ {
+      "utf8": "actually delete that\nand let me try again."
+    } ]
+  }, {
+    "tStartMs": 1323596,
+    "dDurationMs": 2699,
+    "segs": [ {
+      "utf8": "As I'm writing, I have\nthis separate process,"
+    } ]
+  }, {
+    "tStartMs": 1326296,
+    "dDurationMs": 1424,
+    "segs": [ {
+      "utf8": "almost inspecting what I'm"
+    } ]
+  }, {
+    "tStartMs": 1327721,
+    "dDurationMs": 2099,
+    "segs": [ {
+      "utf8": "writing and judging\nwhether it looks good"
+    } ]
+  }, {
+    "tStartMs": 1329821,
+    "dDurationMs": 3719,
+    "segs": [ {
+      "utf8": "or not and then maybe I delete\nand maybe I reframe it,"
+    } ]
+  }, {
+    "tStartMs": 1333541,
+    "dDurationMs": 2084,
+    "segs": [ {
+      "utf8": "and then maybe I'm happy\nwith what comes out."
+    } ]
+  }, {
+    "tStartMs": 1335626,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "Basically long story short,"
+    } ]
+  }, {
+    "tStartMs": 1337216,
+    "dDurationMs": 2084,
+    "segs": [ {
+      "utf8": "a ton happens under\nthe hood in terms of"
+    } ]
+  }, {
+    "tStartMs": 1339301,
+    "dDurationMs": 1109,
+    "segs": [ {
+      "utf8": "your internal monologue when you"
+    } ]
+  }, {
+    "tStartMs": 1340411,
+    "dDurationMs": 1439,
+    "segs": [ {
+      "utf8": "create sentences like this."
+    } ]
+  }, {
+    "tStartMs": 1341851,
+    "dDurationMs": 2174,
+    "segs": [ {
+      "utf8": "But what does a sentence\nlike this look like"
+    } ]
+  }, {
+    "tStartMs": 1344026,
+    "dDurationMs": 2739,
+    "segs": [ {
+      "utf8": "when we are training\na GPT on it?"
+    } ]
+  }, {
+    "tStartMs": 1346766,
+    "dDurationMs": 1974,
+    "segs": [ {
+      "utf8": "From GPT's perspective, this"
+    } ]
+  }, {
+    "tStartMs": 1348741,
+    "dDurationMs": 1844,
+    "segs": [ {
+      "utf8": "is just a sequence of tokens."
+    } ]
+  }, {
+    "tStartMs": 1350586,
+    "dDurationMs": 3539,
+    "segs": [ {
+      "utf8": "GPT, when it's reading or\ngenerating these tokens,"
+    } ]
+  }, {
+    "tStartMs": 1354126,
+    "dDurationMs": 1304,
+    "segs": [ {
+      "utf8": "it just goes chunk,\nchunk, chunk,"
+    } ]
+  }, {
+    "tStartMs": 1355431,
+    "dDurationMs": 2159,
+    "segs": [ {
+      "utf8": "chunk and each chunk is roughly"
+    } ]
+  }, {
+    "tStartMs": 1357591,
+    "dDurationMs": 2704,
+    "segs": [ {
+      "utf8": "the same amount of computational\nwork for each token."
+    } ]
+  }, {
+    "tStartMs": 1360296,
+    "dDurationMs": 1759,
+    "segs": [ {
+      "utf8": "These transformers are not"
+    } ]
+  }, {
+    "tStartMs": 1362056,
+    "dDurationMs": 1544,
+    "segs": [ {
+      "utf8": "very shallow networks they have"
+    } ]
+  }, {
+    "tStartMs": 1363601,
+    "dDurationMs": 1739,
+    "segs": [ {
+      "utf8": "about 80 layers of reasoning,"
+    } ]
+  }, {
+    "tStartMs": 1365341,
+    "dDurationMs": 2624,
+    "segs": [ {
+      "utf8": "but 80 is still\nnot like too much."
+    } ]
+  }, {
+    "tStartMs": 1367966,
+    "dDurationMs": 3434,
+    "segs": [ {
+      "utf8": "This transformer is going\nto do its best to imitate,"
+    } ]
+  }, {
+    "tStartMs": 1371401,
+    "dDurationMs": 1949,
+    "segs": [ {
+      "utf8": "but of course, the process here"
+    } ]
+  }, {
+    "tStartMs": 1373351,
+    "dDurationMs": 2774,
+    "segs": [ {
+      "utf8": "looks very different from\nthe process that you took."
+    } ]
+  }, {
+    "tStartMs": 1376126,
+    "dDurationMs": 3059,
+    "segs": [ {
+      "utf8": "In particular, in\nour final artifacts"
+    } ]
+  }, {
+    "tStartMs": 1379186,
+    "dDurationMs": 1154,
+    "segs": [ {
+      "utf8": "in the data sets that we create,"
+    } ]
+  }, {
+    "tStartMs": 1380341,
+    "dDurationMs": 1109,
+    "segs": [ {
+      "utf8": "and then eventually feed to"
+    } ]
+  }, {
+    "tStartMs": 1381451,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "LLMs, all that internal\ndialogue was completely"
+    } ]
+  }, {
+    "tStartMs": 1383911,
+    "dDurationMs": 3899,
+    "segs": [ {
+      "utf8": "stripped and unlike you,"
+    } ]
+  }, {
+    "tStartMs": 1387811,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "the GPT will look at\nevery single token and"
+    } ]
+  }, {
+    "tStartMs": 1389701,
+    "dDurationMs": 2369,
+    "segs": [ {
+      "utf8": "spend the same amount of\ncompute on every one of them."
+    } ]
+  }, {
+    "tStartMs": 1392071,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "So, you can't expect it"
+    } ]
+  }, {
+    "tStartMs": 1393571,
+    "dDurationMs": 7439,
+    "segs": [ {
+      "utf8": "to do too much work per token\nand also in particular,"
+    } ]
+  }, {
+    "tStartMs": 1401011,
+    "dDurationMs": 1199,
+    "segs": [ {
+      "utf8": "basically these transformers are"
+    } ]
+  }, {
+    "tStartMs": 1402211,
+    "dDurationMs": 1769,
+    "segs": [ {
+      "utf8": "just like token simulators,"
+    } ]
+  }, {
+    "tStartMs": 1403981,
+    "dDurationMs": 2099,
+    "segs": [ {
+      "utf8": "they don't know what\nthey don't know."
+    } ]
+  }, {
+    "tStartMs": 1406081,
+    "dDurationMs": 1739,
+    "segs": [ {
+      "utf8": "They just imitate\nthe next token."
+    } ]
+  }, {
+    "tStartMs": 1407821,
+    "dDurationMs": 1964,
+    "segs": [ {
+      "utf8": "They don't know what they're\ngood at or not good at."
+    } ]
+  }, {
+    "tStartMs": 1409786,
+    "dDurationMs": 2309,
+    "segs": [ {
+      "utf8": "They just tried their best\nto imitate the next token."
+    } ]
+  }, {
+    "tStartMs": 1412096,
+    "dDurationMs": 1994,
+    "segs": [ {
+      "utf8": "They don't reflect in the loop."
+    } ]
+  }, {
+    "tStartMs": 1414091,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "They don't sanity\ncheck anything."
+    } ]
+  }, {
+    "tStartMs": 1415501,
+    "dDurationMs": 1784,
+    "segs": [ {
+      "utf8": "They don't correct their\nmistakes along the way."
+    } ]
+  }, {
+    "tStartMs": 1417286,
+    "dDurationMs": 3314,
+    "segs": [ {
+      "utf8": "By default, they just are\nsample token sequences."
+    } ]
+  }, {
+    "tStartMs": 1420601,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "They don't have separate\ninner monologue streams"
+    } ]
+  }, {
+    "tStartMs": 1423061,
+    "dDurationMs": 839,
+    "segs": [ {
+      "utf8": "in their head right? They're"
+    } ]
+  }, {
+    "tStartMs": 1423901,
+    "dDurationMs": 1439,
+    "segs": [ {
+      "utf8": "evaluating what's happening."
+    } ]
+  }, {
+    "tStartMs": 1425341,
+    "dDurationMs": 3104,
+    "segs": [ {
+      "utf8": "Now, they do have some\ncognitive advantages,"
+    } ]
+  }, {
+    "tStartMs": 1428446,
+    "dDurationMs": 2564,
+    "segs": [ {
+      "utf8": "I would say and that is\nthat they do actually have"
+    } ]
+  }, {
+    "tStartMs": 1431011,
+    "dDurationMs": 1754,
+    "segs": [ {
+      "utf8": "a very large\nfact-based knowledge"
+    } ]
+  }, {
+    "tStartMs": 1432766,
+    "dDurationMs": 2369,
+    "segs": [ {
+      "utf8": "across a vast number of\nareas because they have,"
+    } ]
+  }, {
+    "tStartMs": 1435136,
+    "dDurationMs": 1934,
+    "segs": [ {
+      "utf8": "say, several, 10\nbillion parameters."
+    } ]
+  }, {
+    "tStartMs": 1437071,
+    "dDurationMs": 2834,
+    "segs": [ {
+      "utf8": "That's a lot of storage\nfor a lot of facts."
+    } ]
+  }, {
+    "tStartMs": 1439906,
+    "dDurationMs": 2144,
+    "segs": [ {
+      "utf8": "They also, I think have"
+    } ]
+  }, {
+    "tStartMs": 1442051,
+    "dDurationMs": 2654,
+    "segs": [ {
+      "utf8": "a relatively large and\nperfect working memory."
+    } ]
+  }, {
+    "tStartMs": 1444706,
+    "dDurationMs": 3194,
+    "segs": [ {
+      "utf8": "Whatever fits into\nthe context window"
+    } ]
+  }, {
+    "tStartMs": 1447901,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "is immediately available to"
+    } ]
+  }, {
+    "tStartMs": 1449491,
+    "dDurationMs": 1019,
+    "segs": [ {
+      "utf8": "the transformer through"
+    } ]
+  }, {
+    "tStartMs": 1450511,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "its internal self\nattention mechanism"
+    } ]
+  }, {
+    "tStartMs": 1452401,
+    "dDurationMs": 2489,
+    "segs": [ {
+      "utf8": "and so it's perfect memory,"
+    } ]
+  }, {
+    "tStartMs": 1454891,
+    "dDurationMs": 1529,
+    "segs": [ {
+      "utf8": "but it's got a finite size,"
+    } ]
+  }, {
+    "tStartMs": 1456421,
+    "dDurationMs": 1829,
+    "segs": [ {
+      "utf8": "but the transformer has\na very direct access"
+    } ]
+  }, {
+    "tStartMs": 1458251,
+    "dDurationMs": 1289,
+    "segs": [ {
+      "utf8": "to it and so it can a"
+    } ]
+  }, {
+    "tStartMs": 1459541,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "losslessly remember\nanything that"
+    } ]
+  }, {
+    "tStartMs": 1462001,
+    "dDurationMs": 1694,
+    "segs": [ {
+      "utf8": "is inside its context window."
+    } ]
+  }, {
+    "tStartMs": 1463696,
+    "dDurationMs": 2744,
+    "segs": [ {
+      "utf8": "This is how I would compare\nthose two and the reason I"
+    } ]
+  }, {
+    "tStartMs": 1466441,
+    "dDurationMs": 1229,
+    "segs": [ {
+      "utf8": "bring all of this\nup is because I"
+    } ]
+  }, {
+    "tStartMs": 1467671,
+    "dDurationMs": 1559,
+    "segs": [ {
+      "utf8": "think to a large extent,"
+    } ]
+  }, {
+    "tStartMs": 1469231,
+    "dDurationMs": 2339,
+    "segs": [ {
+      "utf8": "prompting is just making up for"
+    } ]
+  }, {
+    "tStartMs": 1471571,
+    "dDurationMs": 2579,
+    "segs": [ {
+      "utf8": "this cognitive\ndifference between"
+    } ]
+  }, {
+    "tStartMs": 1474151,
+    "dDurationMs": 3284,
+    "segs": [ {
+      "utf8": "these two architectures like"
+    } ]
+  }, {
+    "tStartMs": 1477436,
+    "dDurationMs": 2084,
+    "segs": [ {
+      "utf8": "our brains here and LLM brains."
+    } ]
+  }, {
+    "tStartMs": 1479521,
+    "dDurationMs": 2159,
+    "segs": [ {
+      "utf8": "You can look at it\nthat way almost."
+    } ]
+  }, {
+    "tStartMs": 1481681,
+    "dDurationMs": 2339,
+    "segs": [ {
+      "utf8": "Here's one thing that\npeople found for example"
+    } ]
+  }, {
+    "tStartMs": 1484021,
+    "dDurationMs": 1289,
+    "segs": [ {
+      "utf8": "works pretty well in practice."
+    } ]
+  }, {
+    "tStartMs": 1485311,
+    "dDurationMs": 2879,
+    "segs": [ {
+      "utf8": "Especially if your tasks\nrequire reasoning,"
+    } ]
+  }, {
+    "tStartMs": 1488191,
+    "dDurationMs": 1469,
+    "segs": [ {
+      "utf8": "you can't expect the transformer"
+    } ]
+  }, {
+    "tStartMs": 1489661,
+    "dDurationMs": 2699,
+    "segs": [ {
+      "utf8": "to do too much\nreasoning per token."
+    } ]
+  }, {
+    "tStartMs": 1492361,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "You have to really spread out"
+    } ]
+  }, {
+    "tStartMs": 1493771,
+    "dDurationMs": 2279,
+    "segs": [ {
+      "utf8": "the reasoning across\nmore and more tokens."
+    } ]
+  }, {
+    "tStartMs": 1496051,
+    "dDurationMs": 1649,
+    "segs": [ {
+      "utf8": "For example, you can't\ngive a transformer"
+    } ]
+  }, {
+    "tStartMs": 1497701,
+    "dDurationMs": 1439,
+    "segs": [ {
+      "utf8": "a very complicated question and"
+    } ]
+  }, {
+    "tStartMs": 1499141,
+    "dDurationMs": 1829,
+    "segs": [ {
+      "utf8": "expect it to get the\nanswer in a single token."
+    } ]
+  }, {
+    "tStartMs": 1500971,
+    "dDurationMs": 1574,
+    "segs": [ {
+      "utf8": "There's just not\nenough time for it."
+    } ]
+  }, {
+    "tStartMs": 1502546,
+    "dDurationMs": 1814,
+    "segs": [ {
+      "utf8": "\"These transformers\nneed tokens to"
+    } ]
+  }, {
+    "tStartMs": 1504361,
+    "dDurationMs": 2624,
+    "segs": [ {
+      "utf8": "think,\" I like to say sometimes."
+    } ]
+  }, {
+    "tStartMs": 1506986,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "This is some of the\nthings that work well,"
+    } ]
+  }, {
+    "tStartMs": 1508876,
+    "dDurationMs": 2069,
+    "segs": [ {
+      "utf8": "you may for example have\na few-shot prompt that"
+    } ]
+  }, {
+    "tStartMs": 1510946,
+    "dDurationMs": 1994,
+    "segs": [ {
+      "utf8": "shows the transformer\nthat it should show"
+    } ]
+  }, {
+    "tStartMs": 1512941,
+    "dDurationMs": 1139,
+    "segs": [ {
+      "utf8": "its work when it's answering"
+    } ]
+  }, {
+    "tStartMs": 1514081,
+    "dDurationMs": 3089,
+    "segs": [ {
+      "utf8": "question and if you\ngive a few examples,"
+    } ]
+  }, {
+    "tStartMs": 1517171,
+    "dDurationMs": 3299,
+    "segs": [ {
+      "utf8": "the transformer will imitate\nthat template and it"
+    } ]
+  }, {
+    "tStartMs": 1520471,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "will just end up working out"
+    } ]
+  }, {
+    "tStartMs": 1521881,
+    "dDurationMs": 2339,
+    "segs": [ {
+      "utf8": "better in terms of\nits evaluation."
+    } ]
+  }, {
+    "tStartMs": 1524221,
+    "dDurationMs": 2489,
+    "segs": [ {
+      "utf8": "Additionally, you can\nelicit this behavior from"
+    } ]
+  }, {
+    "tStartMs": 1526711,
+    "dDurationMs": 2564,
+    "segs": [ {
+      "utf8": "the transformer by saying,\nlet things step-by-step."
+    } ]
+  }, {
+    "tStartMs": 1529276,
+    "dDurationMs": 3614,
+    "segs": [ {
+      "utf8": "Because this conditions the\ntransformer into showing"
+    } ]
+  }, {
+    "tStartMs": 1532891,
+    "dDurationMs": 1394,
+    "segs": [ {
+      "utf8": "its work and because"
+    } ]
+  }, {
+    "tStartMs": 1534286,
+    "dDurationMs": 2549,
+    "segs": [ {
+      "utf8": "it snaps into a mode\nof showing its work,"
+    } ]
+  }, {
+    "tStartMs": 1536836,
+    "dDurationMs": 3449,
+    "segs": [ {
+      "utf8": "is going to do less\ncomputational work per token."
+    } ]
+  }, {
+    "tStartMs": 1540286,
+    "dDurationMs": 2654,
+    "segs": [ {
+      "utf8": "It's more likely to succeed\nas a result because it's"
+    } ]
+  }, {
+    "tStartMs": 1542941,
+    "dDurationMs": 3074,
+    "segs": [ {
+      "utf8": "making slower\nreasoning over time."
+    } ]
+  }, {
+    "tStartMs": 1546016,
+    "dDurationMs": 1844,
+    "segs": [ {
+      "utf8": "Here's another example, this one"
+    } ]
+  }, {
+    "tStartMs": 1547861,
+    "dDurationMs": 1604,
+    "segs": [ {
+      "utf8": "is called self-consistency."
+    } ]
+  }, {
+    "tStartMs": 1549466,
+    "dDurationMs": 2234,
+    "segs": [ {
+      "utf8": "We saw that we had the ability"
+    } ]
+  }, {
+    "tStartMs": 1551701,
+    "dDurationMs": 2414,
+    "segs": [ {
+      "utf8": "to start writing and then\nif it didn't work out,"
+    } ]
+  }, {
+    "tStartMs": 1554116,
+    "dDurationMs": 2654,
+    "segs": [ {
+      "utf8": "I can try again and I\ncan try multiple times"
+    } ]
+  }, {
+    "tStartMs": 1556771,
+    "dDurationMs": 3989,
+    "segs": [ {
+      "utf8": "and maybe select the\none that worked best."
+    } ]
+  }, {
+    "tStartMs": 1560761,
+    "dDurationMs": 1664,
+    "segs": [ {
+      "utf8": "In these approaches,"
+    } ]
+  }, {
+    "tStartMs": 1562426,
+    "dDurationMs": 1364,
+    "segs": [ {
+      "utf8": "you may sample not just once,"
+    } ]
+  }, {
+    "tStartMs": 1563791,
+    "dDurationMs": 1769,
+    "segs": [ {
+      "utf8": "but you may sample\nmultiple times and"
+    } ]
+  }, {
+    "tStartMs": 1565561,
+    "dDurationMs": 1979,
+    "segs": [ {
+      "utf8": "then have some\nprocess for finding"
+    } ]
+  }, {
+    "tStartMs": 1567541,
+    "dDurationMs": 1679,
+    "segs": [ {
+      "utf8": "the ones that are\ngood and then keeping"
+    } ]
+  }, {
+    "tStartMs": 1569221,
+    "dDurationMs": 1019,
+    "segs": [ {
+      "utf8": "just those samples or doing"
+    } ]
+  }, {
+    "tStartMs": 1570241,
+    "dDurationMs": 1724,
+    "segs": [ {
+      "utf8": "a majority vote or\nsomething like that."
+    } ]
+  }, {
+    "tStartMs": 1571966,
+    "dDurationMs": 2174,
+    "segs": [ {
+      "utf8": "Basically these transformers\nin the process as"
+    } ]
+  }, {
+    "tStartMs": 1574141,
+    "dDurationMs": 2789,
+    "segs": [ {
+      "utf8": "they predict the next\ntoken, just like you,"
+    } ]
+  }, {
+    "tStartMs": 1576931,
+    "dDurationMs": 1094,
+    "segs": [ {
+      "utf8": "they can get unlucky"
+    } ]
+  }, {
+    "tStartMs": 1578026,
+    "dDurationMs": 1934,
+    "segs": [ {
+      "utf8": "and they could sample\na not a very good"
+    } ]
+  }, {
+    "tStartMs": 1579961,
+    "dDurationMs": 1769,
+    "segs": [ {
+      "utf8": "token and they can go down like"
+    } ]
+  }, {
+    "tStartMs": 1581731,
+    "dDurationMs": 2669,
+    "segs": [ {
+      "utf8": "a blind alley in\nterms of reasoning."
+    } ]
+  }, {
+    "tStartMs": 1584401,
+    "dDurationMs": 2864,
+    "segs": [ {
+      "utf8": "Unlike you, they cannot\nrecover from that."
+    } ]
+  }, {
+    "tStartMs": 1587266,
+    "dDurationMs": 1724,
+    "segs": [ {
+      "utf8": "They are stuck with\nevery single token they"
+    } ]
+  }, {
+    "tStartMs": 1588991,
+    "dDurationMs": 2054,
+    "segs": [ {
+      "utf8": "sample and so they will\ncontinue the sequence,"
+    } ]
+  }, {
+    "tStartMs": 1591046,
+    "dDurationMs": 1184,
+    "segs": [ {
+      "utf8": "even if they know"
+    } ]
+  }, {
+    "tStartMs": 1592231,
+    "dDurationMs": 1964,
+    "segs": [ {
+      "utf8": "that this sequence is\nnot going to work out."
+    } ]
+  }, {
+    "tStartMs": 1594196,
+    "dDurationMs": 2249,
+    "segs": [ {
+      "utf8": "Give them the ability\nto look back,"
+    } ]
+  }, {
+    "tStartMs": 1596446,
+    "dDurationMs": 4289,
+    "segs": [ {
+      "utf8": "inspect or try to basically\nsample around it."
+    } ]
+  }, {
+    "tStartMs": 1600736,
+    "dDurationMs": 2354,
+    "segs": [ {
+      "utf8": "Here's one technique also,"
+    } ]
+  }, {
+    "tStartMs": 1603091,
+    "dDurationMs": 2354,
+    "segs": [ {
+      "utf8": "it turns out that actually LLMs,"
+    } ]
+  }, {
+    "tStartMs": 1605446,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "they know when\nthey've screwed up,"
+    } ]
+  }, {
+    "tStartMs": 1607336,
+    "dDurationMs": 3464,
+    "segs": [ {
+      "utf8": "so as an example, say\nyou ask the model"
+    } ]
+  }, {
+    "tStartMs": 1610801,
+    "dDurationMs": 1739,
+    "segs": [ {
+      "utf8": "to generate a poem that does not"
+    } ]
+  }, {
+    "tStartMs": 1612541,
+    "dDurationMs": 2009,
+    "segs": [ {
+      "utf8": "rhyme and it might\ngive you a poem,"
+    } ]
+  }, {
+    "tStartMs": 1614551,
+    "dDurationMs": 1364,
+    "segs": [ {
+      "utf8": "but it actually rhymes."
+    } ]
+  }, {
+    "tStartMs": 1615916,
+    "dDurationMs": 1364,
+    "segs": [ {
+      "utf8": "But it turns out\nthat especially for"
+    } ]
+  }, {
+    "tStartMs": 1617281,
+    "dDurationMs": 1574,
+    "segs": [ {
+      "utf8": "the bigger models like GPT-4,"
+    } ]
+  }, {
+    "tStartMs": 1618856,
+    "dDurationMs": 2264,
+    "segs": [ {
+      "utf8": "you can just ask it \"did you\nmeet the assignment?\""
+    } ]
+  }, {
+    "tStartMs": 1621121,
+    "dDurationMs": 2069,
+    "segs": [ {
+      "utf8": "Actually GPT-4 knows very"
+    } ]
+  }, {
+    "tStartMs": 1623191,
+    "dDurationMs": 1634,
+    "segs": [ {
+      "utf8": "well that it did not\nmeet the assignment."
+    } ]
+  }, {
+    "tStartMs": 1624826,
+    "dDurationMs": 2414,
+    "segs": [ {
+      "utf8": "It just got unlucky\nin its sampling."
+    } ]
+  }, {
+    "tStartMs": 1627241,
+    "dDurationMs": 1679,
+    "segs": [ {
+      "utf8": "It will tell you, \"No,\nI didn't actually meet"
+    } ]
+  }, {
+    "tStartMs": 1628921,
+    "dDurationMs": 1859,
+    "segs": [ {
+      "utf8": "the assignment here.\nLet me try again.\""
+    } ]
+  }, {
+    "tStartMs": 1630781,
+    "dDurationMs": 1529,
+    "segs": [ {
+      "utf8": "But without you prompting"
+    } ]
+  }, {
+    "tStartMs": 1632311,
+    "dDurationMs": 5669,
+    "segs": [ {
+      "utf8": "it it doesn't know to\nrevisit and so on."
+    } ]
+  }, {
+    "tStartMs": 1637981,
+    "dDurationMs": 1904,
+    "segs": [ {
+      "utf8": "You have to make up for\nthat in your prompts,"
+    } ]
+  }, {
+    "tStartMs": 1639886,
+    "dDurationMs": 1979,
+    "segs": [ {
+      "utf8": "and you have to get it to check,"
+    } ]
+  }, {
+    "tStartMs": 1641866,
+    "dDurationMs": 1184,
+    "segs": [ {
+      "utf8": "if you don't ask it to check,"
+    } ]
+  }, {
+    "tStartMs": 1643051,
+    "dDurationMs": 1199,
+    "segs": [ {
+      "utf8": "its not going to check by itself"
+    } ]
+  }, {
+    "tStartMs": 1644251,
+    "dDurationMs": 2079,
+    "segs": [ {
+      "utf8": "it's just a token simulator."
+    } ]
+  }, {
+    "tStartMs": 1648169,
+    "dDurationMs": 1691,
+    "segs": [ {
+      "utf8": "I think more generally,"
+    } ]
+  }, {
+    "tStartMs": 1649861,
+    "dDurationMs": 1529,
+    "segs": [ {
+      "utf8": "a lot of these\ntechniques fall into"
+    } ]
+  }, {
+    "tStartMs": 1651391,
+    "dDurationMs": 3239,
+    "segs": [ {
+      "utf8": "the bucket of what I would\nsay recreating our System 2."
+    } ]
+  }, {
+    "tStartMs": 1654631,
+    "dDurationMs": 1619,
+    "segs": [ {
+      "utf8": "You might be familiar\nwith the System 1 and"
+    } ]
+  }, {
+    "tStartMs": 1656251,
+    "dDurationMs": 1634,
+    "segs": [ {
+      "utf8": "System 2 thinking for humans."
+    } ]
+  }, {
+    "tStartMs": 1657886,
+    "dDurationMs": 2474,
+    "segs": [ {
+      "utf8": "System 1 is a fast\nautomatic process and I"
+    } ]
+  }, {
+    "tStartMs": 1660361,
+    "dDurationMs": 3254,
+    "segs": [ {
+      "utf8": "think corresponds to an\nLLM just sampling tokens."
+    } ]
+  }, {
+    "tStartMs": 1663616,
+    "dDurationMs": 2489,
+    "segs": [ {
+      "utf8": "System 2 is the\nslower deliberate"
+    } ]
+  }, {
+    "tStartMs": 1666106,
+    "dDurationMs": 3149,
+    "segs": [ {
+      "utf8": "planning part of your brain."
+    } ]
+  }, {
+    "tStartMs": 1669256,
+    "dDurationMs": 1874,
+    "segs": [ {
+      "utf8": "This is a paper actually from"
+    } ]
+  }, {
+    "tStartMs": 1671131,
+    "dDurationMs": 1109,
+    "segs": [ {
+      "utf8": "just last week because"
+    } ]
+  }, {
+    "tStartMs": 1672241,
+    "dDurationMs": 1544,
+    "segs": [ {
+      "utf8": "this space is pretty\nquickly evolving,"
+    } ]
+  }, {
+    "tStartMs": 1673786,
+    "dDurationMs": 2244,
+    "segs": [ {
+      "utf8": "it's called Tree of Thought."
+    } ]
+  }, {
+    "tStartMs": 1676340,
+    "dDurationMs": 2860,
+    "segs": [ {
+      "utf8": "The authors of this paper\nproposed maintaining"
+    } ]
+  }, {
+    "tStartMs": 1679201,
+    "dDurationMs": 2969,
+    "segs": [ {
+      "utf8": "multiple completions\nfor any given prompt"
+    } ]
+  }, {
+    "tStartMs": 1682171,
+    "dDurationMs": 2279,
+    "segs": [ {
+      "utf8": "and then they are also\nscoring them along"
+    } ]
+  }, {
+    "tStartMs": 1684451,
+    "dDurationMs": 1649,
+    "segs": [ {
+      "utf8": "the way and keeping\nthe ones that"
+    } ]
+  }, {
+    "tStartMs": 1686101,
+    "dDurationMs": 2279,
+    "segs": [ {
+      "utf8": "are going well if\nthat makes sense."
+    } ]
+  }, {
+    "tStartMs": 1688381,
+    "dDurationMs": 1979,
+    "segs": [ {
+      "utf8": "A lot of people\nare really playing"
+    } ]
+  }, {
+    "tStartMs": 1690361,
+    "dDurationMs": 3134,
+    "segs": [ {
+      "utf8": "around with prompt engineering"
+    } ]
+  }, {
+    "tStartMs": 1693496,
+    "dDurationMs": 2474,
+    "segs": [ {
+      "utf8": "to basically bring back some of"
+    } ]
+  }, {
+    "tStartMs": 1695971,
+    "dDurationMs": 3569,
+    "segs": [ {
+      "utf8": "these abilities that we\nhave in our brain for LLMs."
+    } ]
+  }, {
+    "tStartMs": 1699541,
+    "dDurationMs": 1649,
+    "segs": [ {
+      "utf8": "Now, one thing I\nwould like to note"
+    } ]
+  }, {
+    "tStartMs": 1701191,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "here is that this is\nnot just a prompt."
+    } ]
+  }, {
+    "tStartMs": 1702781,
+    "dDurationMs": 2759,
+    "segs": [ {
+      "utf8": "This is actually prompts\nthat are together"
+    } ]
+  }, {
+    "tStartMs": 1705541,
+    "dDurationMs": 2969,
+    "segs": [ {
+      "utf8": "used with some Python\nGlue code because you"
+    } ]
+  }, {
+    "tStartMs": 1708511,
+    "dDurationMs": 1079,
+    "segs": [ {
+      "utf8": "actually have to\nmaintain multiple"
+    } ]
+  }, {
+    "tStartMs": 1709591,
+    "dDurationMs": 1229,
+    "segs": [ {
+      "utf8": "prompts and you also have to do"
+    } ]
+  }, {
+    "tStartMs": 1710821,
+    "dDurationMs": 1784,
+    "segs": [ {
+      "utf8": "some tree search algorithm here"
+    } ]
+  }, {
+    "tStartMs": 1712606,
+    "dDurationMs": 2774,
+    "segs": [ {
+      "utf8": "to figure out which\nprompts to expand, etc."
+    } ]
+  }, {
+    "tStartMs": 1715381,
+    "dDurationMs": 2759,
+    "segs": [ {
+      "utf8": "It's a symbiosis of\nPython Glue code and"
+    } ]
+  }, {
+    "tStartMs": 1718141,
+    "dDurationMs": 1319,
+    "segs": [ {
+      "utf8": "individual prompts that are"
+    } ]
+  }, {
+    "tStartMs": 1719461,
+    "dDurationMs": 2574,
+    "segs": [ {
+      "utf8": "called in a while loop or\nin a bigger algorithm."
+    } ]
+  }, {
+    "tStartMs": 1722036,
+    "dDurationMs": 1554,
+    "segs": [ {
+      "utf8": "I also think there's\na really cool"
+    } ]
+  }, {
+    "tStartMs": 1723591,
+    "dDurationMs": 1394,
+    "segs": [ {
+      "utf8": "parallel here to AlphaGo."
+    } ]
+  }, {
+    "tStartMs": 1724986,
+    "dDurationMs": 1664,
+    "segs": [ {
+      "utf8": "AlphaGo has a policy for"
+    } ]
+  }, {
+    "tStartMs": 1726651,
+    "dDurationMs": 2264,
+    "segs": [ {
+      "utf8": "placing the next stone\nwhen it plays go,"
+    } ]
+  }, {
+    "tStartMs": 1728916,
+    "dDurationMs": 1229,
+    "segs": [ {
+      "utf8": "and its policy was trained"
+    } ]
+  }, {
+    "tStartMs": 1730146,
+    "dDurationMs": 2239,
+    "segs": [ {
+      "utf8": "originally by imitating humans."
+    } ]
+  }, {
+    "tStartMs": 1732386,
+    "dDurationMs": 1834,
+    "segs": [ {
+      "utf8": "But in addition to this policy,"
+    } ]
+  }, {
+    "tStartMs": 1734221,
+    "dDurationMs": 2369,
+    "segs": [ {
+      "utf8": "it also does Monte\nCarlo Tree Search."
+    } ]
+  }, {
+    "tStartMs": 1736591,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "Basically, it will play out\na number of possibilities in"
+    } ]
+  }, {
+    "tStartMs": 1739051,
+    "dDurationMs": 1289,
+    "segs": [ {
+      "utf8": "its head and evaluate all of"
+    } ]
+  }, {
+    "tStartMs": 1740341,
+    "dDurationMs": 1634,
+    "segs": [ {
+      "utf8": "them and only keep the\nones that work well."
+    } ]
+  }, {
+    "tStartMs": 1741976,
+    "dDurationMs": 2039,
+    "segs": [ {
+      "utf8": "I think this is an equivalent of"
+    } ]
+  }, {
+    "tStartMs": 1744016,
+    "dDurationMs": 4164,
+    "segs": [ {
+      "utf8": "AlphaGo but for text\nif that makes sense."
+    } ]
+  }, {
+    "tStartMs": 1748190,
+    "dDurationMs": 2155,
+    "segs": [ {
+      "utf8": "Just like Tree of Thought,"
+    } ]
+  }, {
+    "tStartMs": 1750346,
+    "dDurationMs": 1424,
+    "segs": [ {
+      "utf8": "I think more\ngenerally people are"
+    } ]
+  }, {
+    "tStartMs": 1751771,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "starting to really explore"
+    } ]
+  }, {
+    "tStartMs": 1753661,
+    "dDurationMs": 1859,
+    "segs": [ {
+      "utf8": "more general techniques of not"
+    } ]
+  }, {
+    "tStartMs": 1755521,
+    "dDurationMs": 1934,
+    "segs": [ {
+      "utf8": "just the simple\nquestion-answer prompts,"
+    } ]
+  }, {
+    "tStartMs": 1757456,
+    "dDurationMs": 1694,
+    "segs": [ {
+      "utf8": "but something that\nlooks a lot more like"
+    } ]
+  }, {
+    "tStartMs": 1759151,
+    "dDurationMs": 2909,
+    "segs": [ {
+      "utf8": "Python Glue code stringing\ntogether many prompts."
+    } ]
+  }, {
+    "tStartMs": 1762061,
+    "dDurationMs": 1919,
+    "segs": [ {
+      "utf8": "On the right, I have\nan example from"
+    } ]
+  }, {
+    "tStartMs": 1763981,
+    "dDurationMs": 1709,
+    "segs": [ {
+      "utf8": "this paper called\nReact where they"
+    } ]
+  }, {
+    "tStartMs": 1765691,
+    "dDurationMs": 3209,
+    "segs": [ {
+      "utf8": "structure the answer to a prompt"
+    } ]
+  }, {
+    "tStartMs": 1768901,
+    "dDurationMs": 3554,
+    "segs": [ {
+      "utf8": "as a sequence of\nthought-action-observation,"
+    } ]
+  }, {
+    "tStartMs": 1772456,
+    "dDurationMs": 2054,
+    "segs": [ {
+      "utf8": "thought-action-observation,\nand it's"
+    } ]
+  }, {
+    "tStartMs": 1774511,
+    "dDurationMs": 1214,
+    "segs": [ {
+      "utf8": "a full rollout and"
+    } ]
+  }, {
+    "tStartMs": 1775726,
+    "dDurationMs": 2699,
+    "segs": [ {
+      "utf8": "a thinking process\nto answer the query."
+    } ]
+  }, {
+    "tStartMs": 1778426,
+    "dDurationMs": 3699,
+    "segs": [ {
+      "utf8": "In these actions, the model\nis also allowed to tool use."
+    } ]
+  }, {
+    "tStartMs": 1782126,
+    "dDurationMs": 3264,
+    "segs": [ {
+      "utf8": "On the left, I have an\nexample of AutoGPT."
+    } ]
+  }, {
+    "tStartMs": 1785391,
+    "dDurationMs": 2579,
+    "segs": [ {
+      "utf8": "Now AutoGPT by the way is"
+    } ]
+  }, {
+    "tStartMs": 1787971,
+    "dDurationMs": 3749,
+    "segs": [ {
+      "utf8": "a project that I think got\na lot of hype recently,"
+    } ]
+  }, {
+    "tStartMs": 1791721,
+    "dDurationMs": 3419,
+    "segs": [ {
+      "utf8": "but I think I still find it\ninspirationally interesting."
+    } ]
+  }, {
+    "tStartMs": 1795141,
+    "dDurationMs": 3369,
+    "segs": [ {
+      "utf8": "It's a project that\nallows an LLM to keep"
+    } ]
+  }, {
+    "tStartMs": 1798511,
+    "dDurationMs": 1679,
+    "segs": [ {
+      "utf8": "the task list and continue to"
+    } ]
+  }, {
+    "tStartMs": 1800191,
+    "dDurationMs": 1934,
+    "segs": [ {
+      "utf8": "recursively break down tasks."
+    } ]
+  }, {
+    "tStartMs": 1802126,
+    "dDurationMs": 1934,
+    "segs": [ {
+      "utf8": "I don't think this currently\nworks very well and I would"
+    } ]
+  }, {
+    "tStartMs": 1804061,
+    "dDurationMs": 3044,
+    "segs": [ {
+      "utf8": "not advise people to use it\nin practical applications."
+    } ]
+  }, {
+    "tStartMs": 1807106,
+    "dDurationMs": 1994,
+    "segs": [ {
+      "utf8": "I just think it's something\nto generally take inspiration"
+    } ]
+  }, {
+    "tStartMs": 1809101,
+    "dDurationMs": 3189,
+    "segs": [ {
+      "utf8": "from in terms of where this\nis going, I think over time."
+    } ]
+  }, {
+    "tStartMs": 1812540,
+    "dDurationMs": 3625,
+    "segs": [ {
+      "utf8": "That's like giving our\nmodel System 2 thinking."
+    } ]
+  }, {
+    "tStartMs": 1816166,
+    "dDurationMs": 2834,
+    "segs": [ {
+      "utf8": "The next thing I\nfind interesting is,"
+    } ]
+  }, {
+    "tStartMs": 1819001,
+    "dDurationMs": 1769,
+    "segs": [ {
+      "utf8": "this following serve I would say"
+    } ]
+  }, {
+    "tStartMs": 1820771,
+    "dDurationMs": 2444,
+    "segs": [ {
+      "utf8": "almost psychological\nquirk of LLMs,"
+    } ]
+  }, {
+    "tStartMs": 1823216,
+    "dDurationMs": 2984,
+    "segs": [ {
+      "utf8": "is that LLMs don't\nwant to succeed,"
+    } ]
+  }, {
+    "tStartMs": 1826201,
+    "dDurationMs": 1904,
+    "segs": [ {
+      "utf8": "they want to imitate."
+    } ]
+  }, {
+    "tStartMs": 1828106,
+    "dDurationMs": 2999,
+    "segs": [ {
+      "utf8": "You want to succeed, and\nyou should ask for it."
+    } ]
+  }, {
+    "tStartMs": 1831106,
+    "dDurationMs": 2219,
+    "segs": [ {
+      "utf8": "What I mean by that is,"
+    } ]
+  }, {
+    "tStartMs": 1833326,
+    "dDurationMs": 1829,
+    "segs": [ {
+      "utf8": "when transformers are trained,"
+    } ]
+  }, {
+    "tStartMs": 1835156,
+    "dDurationMs": 2924,
+    "segs": [ {
+      "utf8": "they have training\nsets and there can be"
+    } ]
+  }, {
+    "tStartMs": 1838081,
+    "dDurationMs": 1244,
+    "segs": [ {
+      "utf8": "an entire spectrum of"
+    } ]
+  }, {
+    "tStartMs": 1839326,
+    "dDurationMs": 2174,
+    "segs": [ {
+      "utf8": "performance qualities\nin their training data."
+    } ]
+  }, {
+    "tStartMs": 1841501,
+    "dDurationMs": 1739,
+    "segs": [ {
+      "utf8": "For example, there could\nbe some kind of a prompt"
+    } ]
+  }, {
+    "tStartMs": 1843241,
+    "dDurationMs": 2174,
+    "segs": [ {
+      "utf8": "for some physics question\nor something like that,"
+    } ]
+  }, {
+    "tStartMs": 1845416,
+    "dDurationMs": 554,
+    "segs": [ {
+      "utf8": "and there could be"
+    } ]
+  }, {
+    "tStartMs": 1845971,
+    "dDurationMs": 1844,
+    "segs": [ {
+      "utf8": "a student's solution\nthat is completely wrong"
+    } ]
+  }, {
+    "tStartMs": 1847816,
+    "dDurationMs": 1364,
+    "segs": [ {
+      "utf8": "but there can also be an expert"
+    } ]
+  }, {
+    "tStartMs": 1849181,
+    "dDurationMs": 1769,
+    "segs": [ {
+      "utf8": "answer that is extremely right."
+    } ]
+  }, {
+    "tStartMs": 1850951,
+    "dDurationMs": 3599,
+    "segs": [ {
+      "utf8": "Transformers can't tell the\ndifference between low,"
+    } ]
+  }, {
+    "tStartMs": 1854551,
+    "dDurationMs": 2219,
+    "segs": [ {
+      "utf8": "they know about\nlow-quality solutions"
+    } ]
+  }, {
+    "tStartMs": 1856771,
+    "dDurationMs": 1184,
+    "segs": [ {
+      "utf8": "and high-quality solutions,"
+    } ]
+  }, {
+    "tStartMs": 1857956,
+    "dDurationMs": 1904,
+    "segs": [ {
+      "utf8": "but by default, they\nwant to imitate all of"
+    } ]
+  }, {
+    "tStartMs": 1859861,
+    "dDurationMs": 2564,
+    "segs": [ {
+      "utf8": "it because they're just\ntrained on language modeling."
+    } ]
+  }, {
+    "tStartMs": 1862426,
+    "dDurationMs": 1844,
+    "segs": [ {
+      "utf8": "At test time, you actually have"
+    } ]
+  }, {
+    "tStartMs": 1864271,
+    "dDurationMs": 1844,
+    "segs": [ {
+      "utf8": "to ask for a good performance."
+    } ]
+  }, {
+    "tStartMs": 1866116,
+    "dDurationMs": 2249,
+    "segs": [ {
+      "utf8": "In this example in this paper,"
+    } ]
+  }, {
+    "tStartMs": 1868366,
+    "dDurationMs": 2519,
+    "segs": [ {
+      "utf8": "they tried various prompts."
+    } ]
+  }, {
+    "tStartMs": 1870886,
+    "dDurationMs": 2144,
+    "segs": [ {
+      "utf8": "Let's think step-by-step\nwas very powerful"
+    } ]
+  }, {
+    "tStartMs": 1873031,
+    "dDurationMs": 2624,
+    "segs": [ {
+      "utf8": "because it spread out the\nreasoning over many tokens."
+    } ]
+  }, {
+    "tStartMs": 1875656,
+    "dDurationMs": 1664,
+    "segs": [ {
+      "utf8": "But what worked even better is,"
+    } ]
+  }, {
+    "tStartMs": 1877321,
+    "dDurationMs": 1904,
+    "segs": [ {
+      "utf8": "let's work this out\nin a step-by-step way"
+    } ]
+  }, {
+    "tStartMs": 1879226,
+    "dDurationMs": 1679,
+    "segs": [ {
+      "utf8": "to be sure we have\nthe right answer."
+    } ]
+  }, {
+    "tStartMs": 1880906,
+    "dDurationMs": 2804,
+    "segs": [ {
+      "utf8": "It's like conditioning on\ngetting the right answer,"
+    } ]
+  }, {
+    "tStartMs": 1883711,
+    "dDurationMs": 1679,
+    "segs": [ {
+      "utf8": "and this actually makes\nthe transformer work"
+    } ]
+  }, {
+    "tStartMs": 1885391,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "better because the\ntransformer doesn't have"
+    } ]
+  }, {
+    "tStartMs": 1887281,
+    "dDurationMs": 2474,
+    "segs": [ {
+      "utf8": "to now hedge its\nprobability mass"
+    } ]
+  }, {
+    "tStartMs": 1889756,
+    "dDurationMs": 1439,
+    "segs": [ {
+      "utf8": "on low-quality solutions,"
+    } ]
+  }, {
+    "tStartMs": 1891196,
+    "dDurationMs": 1919,
+    "segs": [ {
+      "utf8": "as ridiculous as that sounds."
+    } ]
+  }, {
+    "tStartMs": 1893116,
+    "dDurationMs": 4109,
+    "segs": [ {
+      "utf8": "Basically, feel free to\nask for a strong solution."
+    } ]
+  }, {
+    "tStartMs": 1897226,
+    "dDurationMs": 1124,
+    "segs": [ {
+      "utf8": "Say something like, you are"
+    } ]
+  }, {
+    "tStartMs": 1898351,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "a leading expert on this topic."
+    } ]
+  }, {
+    "tStartMs": 1899761,
+    "dDurationMs": 2174,
+    "segs": [ {
+      "utf8": "Pretend you have IQ 120, etc."
+    } ]
+  }, {
+    "tStartMs": 1901936,
+    "dDurationMs": 2144,
+    "segs": [ {
+      "utf8": "But don't try to ask for\ntoo much IQ because if"
+    } ]
+  }, {
+    "tStartMs": 1904081,
+    "dDurationMs": 2249,
+    "segs": [ {
+      "utf8": "you ask for IQ 400,"
+    } ]
+  }, {
+    "tStartMs": 1906331,
+    "dDurationMs": 1964,
+    "segs": [ {
+      "utf8": "you might be out of\ndata distribution,"
+    } ]
+  }, {
+    "tStartMs": 1908296,
+    "dDurationMs": 2984,
+    "segs": [ {
+      "utf8": "or even worse, you could be\nin data distribution for"
+    } ]
+  }, {
+    "tStartMs": 1911281,
+    "dDurationMs": 1439,
+    "segs": [ {
+      "utf8": "something like\nsci-fi stuff and it"
+    } ]
+  }, {
+    "tStartMs": 1912721,
+    "dDurationMs": 1559,
+    "segs": [ {
+      "utf8": "will start to take\non some sci-fi,"
+    } ]
+  }, {
+    "tStartMs": 1914281,
+    "dDurationMs": 2699,
+    "segs": [ {
+      "utf8": "or like roleplaying or\nsomething like that."
+    } ]
+  }, {
+    "tStartMs": 1916981,
+    "dDurationMs": 2504,
+    "segs": [ {
+      "utf8": "You have to find the\nright amount of IQ."
+    } ]
+  }, {
+    "tStartMs": 1919486,
+    "dDurationMs": 3029,
+    "segs": [ {
+      "utf8": "I think it's got some\nU-shaped curve there."
+    } ]
+  }, {
+    "tStartMs": 1922516,
+    "dDurationMs": 2384,
+    "segs": [ {
+      "utf8": "Next up, as we"
+    } ]
+  }, {
+    "tStartMs": 1924901,
+    "dDurationMs": 2129,
+    "segs": [ {
+      "utf8": "saw when we are trying\nto solve problems,"
+    } ]
+  }, {
+    "tStartMs": 1927031,
+    "dDurationMs": 2759,
+    "segs": [ {
+      "utf8": "we know what we are good at\nand what we're not good at,"
+    } ]
+  }, {
+    "tStartMs": 1929791,
+    "dDurationMs": 2234,
+    "segs": [ {
+      "utf8": "and we lean on tools\ncomputationally."
+    } ]
+  }, {
+    "tStartMs": 1932026,
+    "dDurationMs": 3284,
+    "segs": [ {
+      "utf8": "You want to do the same\npotentially with your LLMs."
+    } ]
+  }, {
+    "tStartMs": 1935311,
+    "dDurationMs": 3089,
+    "segs": [ {
+      "utf8": "In particular, we\nmay want to give"
+    } ]
+  }, {
+    "tStartMs": 1938401,
+    "dDurationMs": 2594,
+    "segs": [ {
+      "utf8": "them calculators,\ncode interpreters,"
+    } ]
+  }, {
+    "tStartMs": 1940996,
+    "dDurationMs": 2684,
+    "segs": [ {
+      "utf8": "and so on, the\nability to do search,"
+    } ]
+  }, {
+    "tStartMs": 1943681,
+    "dDurationMs": 3394,
+    "segs": [ {
+      "utf8": "and there's a lot of\ntechniques for doing that."
+    } ]
+  }, {
+    "tStartMs": 1947076,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "One thing to keep\nin mind, again,"
+    } ]
+  }, {
+    "tStartMs": 1948486,
+    "dDurationMs": 1964,
+    "segs": [ {
+      "utf8": "is that these transformers\nby default may"
+    } ]
+  }, {
+    "tStartMs": 1950451,
+    "dDurationMs": 2489,
+    "segs": [ {
+      "utf8": "not know what they don't know."
+    } ]
+  }, {
+    "tStartMs": 1952941,
+    "dDurationMs": 1739,
+    "segs": [ {
+      "utf8": "You may even want to\ntell the transformer in"
+    } ]
+  }, {
+    "tStartMs": 1954681,
+    "dDurationMs": 2899,
+    "segs": [ {
+      "utf8": "a prompt you are not very\ngood at mental arithmetic."
+    } ]
+  }, {
+    "tStartMs": 1957581,
+    "dDurationMs": 2419,
+    "segs": [ {
+      "utf8": "Whenever you need to do\nvery large number addition,"
+    } ]
+  }, {
+    "tStartMs": 1960001,
+    "dDurationMs": 1064,
+    "segs": [ {
+      "utf8": "multiplication, or whatever,"
+    } ]
+  }, {
+    "tStartMs": 1961066,
+    "dDurationMs": 1424,
+    "segs": [ {
+      "utf8": "instead, use this calculator."
+    } ]
+  }, {
+    "tStartMs": 1962491,
+    "dDurationMs": 1319,
+    "segs": [ {
+      "utf8": "Here's how you use\nthe calculator,"
+    } ]
+  }, {
+    "tStartMs": 1963811,
+    "dDurationMs": 2454,
+    "segs": [ {
+      "utf8": "you use this token\ncombination, etc."
+    } ]
+  }, {
+    "tStartMs": 1966266,
+    "dDurationMs": 2224,
+    "segs": [ {
+      "utf8": "You have to actually spell\nit out because the model by"
+    } ]
+  }, {
+    "tStartMs": 1968491,
+    "dDurationMs": 2369,
+    "segs": [ {
+      "utf8": "default doesn't know what\nit's good at or not good at,"
+    } ]
+  }, {
+    "tStartMs": 1970861,
+    "dDurationMs": 3749,
+    "segs": [ {
+      "utf8": "necessarily, just like\nyou and I might be."
+    } ]
+  }, {
+    "tStartMs": 1974660,
+    "dDurationMs": 2260,
+    "segs": [ {
+      "utf8": "Next up, I think\nsomething that is very"
+    } ]
+  }, {
+    "tStartMs": 1976921,
+    "dDurationMs": 1484,
+    "segs": [ {
+      "utf8": "interesting is we went from"
+    } ]
+  }, {
+    "tStartMs": 1978406,
+    "dDurationMs": 3809,
+    "segs": [ {
+      "utf8": "a world that was retrieval\nonly all the way,"
+    } ]
+  }, {
+    "tStartMs": 1982216,
+    "dDurationMs": 1754,
+    "segs": [ {
+      "utf8": "the pendulum has swung\nto the other extreme"
+    } ]
+  }, {
+    "tStartMs": 1983971,
+    "dDurationMs": 2144,
+    "segs": [ {
+      "utf8": "where its memory only in LLMs."
+    } ]
+  }, {
+    "tStartMs": 1986116,
+    "dDurationMs": 2759,
+    "segs": [ {
+      "utf8": "But actually, there's this\nentire space in-between of"
+    } ]
+  }, {
+    "tStartMs": 1988876,
+    "dDurationMs": 1994,
+    "segs": [ {
+      "utf8": "these retrieval-augmented\nmodels and"
+    } ]
+  }, {
+    "tStartMs": 1990871,
+    "dDurationMs": 2039,
+    "segs": [ {
+      "utf8": "this works extremely\nwell in practice."
+    } ]
+  }, {
+    "tStartMs": 1992911,
+    "dDurationMs": 1769,
+    "segs": [ {
+      "utf8": "As I mentioned, the\ncontext window of"
+    } ]
+  }, {
+    "tStartMs": 1994681,
+    "dDurationMs": 2339,
+    "segs": [ {
+      "utf8": "a transformer is\nits working memory."
+    } ]
+  }, {
+    "tStartMs": 1997021,
+    "dDurationMs": 1844,
+    "segs": [ {
+      "utf8": "If you can load\nthe working memory"
+    } ]
+  }, {
+    "tStartMs": 1998866,
+    "dDurationMs": 2489,
+    "segs": [ {
+      "utf8": "with any information that\nis relevant to the task,"
+    } ]
+  }, {
+    "tStartMs": 2001356,
+    "dDurationMs": 1844,
+    "segs": [ {
+      "utf8": "the model will work\nextremely well"
+    } ]
+  }, {
+    "tStartMs": 2003201,
+    "dDurationMs": 3134,
+    "segs": [ {
+      "utf8": "because it can immediately\naccess all that memory."
+    } ]
+  }, {
+    "tStartMs": 2006336,
+    "dDurationMs": 2444,
+    "segs": [ {
+      "utf8": "I think a lot of people\nare really interested"
+    } ]
+  }, {
+    "tStartMs": 2008781,
+    "dDurationMs": 4199,
+    "segs": [ {
+      "utf8": "in basically retrieval-augment\ndegeneration."
+    } ]
+  }, {
+    "tStartMs": 2012981,
+    "dDurationMs": 2879,
+    "segs": [ {
+      "utf8": "On the bottom, I have an\nexample of LlamaIndex which is"
+    } ]
+  }, {
+    "tStartMs": 2015861,
+    "dDurationMs": 2999,
+    "segs": [ {
+      "utf8": "one data connector to lots\nof different types of data."
+    } ]
+  }, {
+    "tStartMs": 2018861,
+    "dDurationMs": 2849,
+    "segs": [ {
+      "utf8": "You can index all"
+    } ]
+  }, {
+    "tStartMs": 2021711,
+    "dDurationMs": 2489,
+    "segs": [ {
+      "utf8": "of that data and you can\nmake it accessible to LLMs."
+    } ]
+  }, {
+    "tStartMs": 2024201,
+    "dDurationMs": 3434,
+    "segs": [ {
+      "utf8": "The emerging recipe there is\nyou take relevant documents,"
+    } ]
+  }, {
+    "tStartMs": 2027636,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "you split them up into chunks,"
+    } ]
+  }, {
+    "tStartMs": 2029046,
+    "dDurationMs": 1454,
+    "segs": [ {
+      "utf8": "you embed all of them,"
+    } ]
+  }, {
+    "tStartMs": 2030501,
+    "dDurationMs": 1529,
+    "segs": [ {
+      "utf8": "and you basically get\nembedding vectors"
+    } ]
+  }, {
+    "tStartMs": 2032031,
+    "dDurationMs": 1289,
+    "segs": [ {
+      "utf8": "that represent that data."
+    } ]
+  }, {
+    "tStartMs": 2033321,
+    "dDurationMs": 2894,
+    "segs": [ {
+      "utf8": "You store that in the vector\nstore and then at test time,"
+    } ]
+  }, {
+    "tStartMs": 2036216,
+    "dDurationMs": 1394,
+    "segs": [ {
+      "utf8": "you make some kind of a query to"
+    } ]
+  }, {
+    "tStartMs": 2037611,
+    "dDurationMs": 2399,
+    "segs": [ {
+      "utf8": "your vector store and\nyou fetch chunks that"
+    } ]
+  }, {
+    "tStartMs": 2040011,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "might be relevant\nto your task and"
+    } ]
+  }, {
+    "tStartMs": 2041901,
+    "dDurationMs": 2159,
+    "segs": [ {
+      "utf8": "you stuff them into the\nprompt and then you generate."
+    } ]
+  }, {
+    "tStartMs": 2044061,
+    "dDurationMs": 2324,
+    "segs": [ {
+      "utf8": "This can work quite\nwell in practice."
+    } ]
+  }, {
+    "tStartMs": 2046386,
+    "dDurationMs": 1484,
+    "segs": [ {
+      "utf8": "This is, I think, similar to"
+    } ]
+  }, {
+    "tStartMs": 2047871,
+    "dDurationMs": 1484,
+    "segs": [ {
+      "utf8": "when you and I solve problems."
+    } ]
+  }, {
+    "tStartMs": 2049356,
+    "dDurationMs": 2099,
+    "segs": [ {
+      "utf8": "You can do everything\nfrom your memory and"
+    } ]
+  }, {
+    "tStartMs": 2051456,
+    "dDurationMs": 2189,
+    "segs": [ {
+      "utf8": "transformers have very\nlarge and extensive memory,"
+    } ]
+  }, {
+    "tStartMs": 2053646,
+    "dDurationMs": 1304,
+    "segs": [ {
+      "utf8": "but also it really helps to"
+    } ]
+  }, {
+    "tStartMs": 2054951,
+    "dDurationMs": 2879,
+    "segs": [ {
+      "utf8": "reference some\nprimary documents."
+    } ]
+  }, {
+    "tStartMs": 2057831,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "Whenever you find yourself going"
+    } ]
+  }, {
+    "tStartMs": 2059421,
+    "dDurationMs": 1604,
+    "segs": [ {
+      "utf8": "back to a textbook\nto find something,"
+    } ]
+  }, {
+    "tStartMs": 2061026,
+    "dDurationMs": 1664,
+    "segs": [ {
+      "utf8": "or whenever you find\nyourself going back to"
+    } ]
+  }, {
+    "tStartMs": 2062691,
+    "dDurationMs": 2309,
+    "segs": [ {
+      "utf8": "documentation of the library\nto look something up,"
+    } ]
+  }, {
+    "tStartMs": 2065001,
+    "dDurationMs": 2609,
+    "segs": [ {
+      "utf8": "transformers definitely\nwant to do that too."
+    } ]
+  }, {
+    "tStartMs": 2067611,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "You have some memory over how"
+    } ]
+  }, {
+    "tStartMs": 2070071,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "some documentation\nof the library"
+    } ]
+  }, {
+    "tStartMs": 2071481,
+    "dDurationMs": 1799,
+    "segs": [ {
+      "utf8": "works but it's much\nbetter to look it up."
+    } ]
+  }, {
+    "tStartMs": 2073281,
+    "dDurationMs": 2559,
+    "segs": [ {
+      "utf8": "The same applies here."
+    } ]
+  }, {
+    "tStartMs": 2075940,
+    "dDurationMs": 2170,
+    "segs": [ {
+      "utf8": "Next, I wanted to briefly talk"
+    } ]
+  }, {
+    "tStartMs": 2078111,
+    "dDurationMs": 1574,
+    "segs": [ {
+      "utf8": "about constraint prompting."
+    } ]
+  }, {
+    "tStartMs": 2079686,
+    "dDurationMs": 1949,
+    "segs": [ {
+      "utf8": "I also find this\nvery interesting."
+    } ]
+  }, {
+    "tStartMs": 2081636,
+    "dDurationMs": 2324,
+    "segs": [ {
+      "utf8": "This is basically techniques"
+    } ]
+  }, {
+    "tStartMs": 2083961,
+    "dDurationMs": 6374,
+    "segs": [ {
+      "utf8": "for forcing a certain template\nin the outputs of LLMs."
+    } ]
+  }, {
+    "tStartMs": 2090336,
+    "dDurationMs": 3119,
+    "segs": [ {
+      "utf8": "Guidance is one example\nfrom Microsoft actually."
+    } ]
+  }, {
+    "tStartMs": 2093456,
+    "dDurationMs": 1844,
+    "segs": [ {
+      "utf8": "Here we are enforcing that"
+    } ]
+  }, {
+    "tStartMs": 2095301,
+    "dDurationMs": 2504,
+    "segs": [ {
+      "utf8": "the output from the\nLLM will be JSON."
+    } ]
+  }, {
+    "tStartMs": 2097806,
+    "dDurationMs": 2294,
+    "segs": [ {
+      "utf8": "This will actually\nguarantee that"
+    } ]
+  }, {
+    "tStartMs": 2100101,
+    "dDurationMs": 2099,
+    "segs": [ {
+      "utf8": "the output will take on\nthis form because they go"
+    } ]
+  }, {
+    "tStartMs": 2102201,
+    "dDurationMs": 1469,
+    "segs": [ {
+      "utf8": "in and they mess with\nthe probabilities of"
+    } ]
+  }, {
+    "tStartMs": 2103671,
+    "dDurationMs": 959,
+    "segs": [ {
+      "utf8": "all the different tokens that"
+    } ]
+  }, {
+    "tStartMs": 2104631,
+    "dDurationMs": 1169,
+    "segs": [ {
+      "utf8": "come out of the transformer and"
+    } ]
+  }, {
+    "tStartMs": 2105801,
+    "dDurationMs": 2009,
+    "segs": [ {
+      "utf8": "they clamp those tokens and then"
+    } ]
+  }, {
+    "tStartMs": 2107811,
+    "dDurationMs": 2129,
+    "segs": [ {
+      "utf8": "the transformer is only\nfilling in the blanks here,"
+    } ]
+  }, {
+    "tStartMs": 2109941,
+    "dDurationMs": 1739,
+    "segs": [ {
+      "utf8": "and then you can enforce\nadditional restrictions"
+    } ]
+  }, {
+    "tStartMs": 2111681,
+    "dDurationMs": 1754,
+    "segs": [ {
+      "utf8": "on what could go\ninto those blanks."
+    } ]
+  }, {
+    "tStartMs": 2113436,
+    "dDurationMs": 1874,
+    "segs": [ {
+      "utf8": "This might be really\nhelpful, and I think"
+    } ]
+  }, {
+    "tStartMs": 2115311,
+    "dDurationMs": 3099,
+    "segs": [ {
+      "utf8": "this constraint sampling is\nalso extremely interesting."
+    } ]
+  }, {
+    "tStartMs": 2119219,
+    "dDurationMs": 1691,
+    "segs": [ {
+      "utf8": "I also want to say"
+    } ]
+  }, {
+    "tStartMs": 2120911,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "a few words about fine tuning."
+    } ]
+  }, {
+    "tStartMs": 2122321,
+    "dDurationMs": 1619,
+    "segs": [ {
+      "utf8": "It is the case that\nyou can get really"
+    } ]
+  }, {
+    "tStartMs": 2123941,
+    "dDurationMs": 1949,
+    "segs": [ {
+      "utf8": "far with prompt engineering,"
+    } ]
+  }, {
+    "tStartMs": 2125891,
+    "dDurationMs": 1619,
+    "segs": [ {
+      "utf8": "but it's also possible to"
+    } ]
+  }, {
+    "tStartMs": 2127511,
+    "dDurationMs": 1904,
+    "segs": [ {
+      "utf8": "think about fine\ntuning your models."
+    } ]
+  }, {
+    "tStartMs": 2129416,
+    "dDurationMs": 2174,
+    "segs": [ {
+      "utf8": "Now, fine tuning\nmodels means that you"
+    } ]
+  }, {
+    "tStartMs": 2131591,
+    "dDurationMs": 2369,
+    "segs": [ {
+      "utf8": "are actually going to change\nthe weights of the model."
+    } ]
+  }, {
+    "tStartMs": 2133961,
+    "dDurationMs": 1469,
+    "segs": [ {
+      "utf8": "It is becoming a lot more"
+    } ]
+  }, {
+    "tStartMs": 2135431,
+    "dDurationMs": 1799,
+    "segs": [ {
+      "utf8": "accessible to do\nthis in practice,"
+    } ]
+  }, {
+    "tStartMs": 2137231,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "and that's because of"
+    } ]
+  }, {
+    "tStartMs": 2138821,
+    "dDurationMs": 959,
+    "segs": [ {
+      "utf8": "a number of techniques\nthat have been"
+    } ]
+  }, {
+    "tStartMs": 2139781,
+    "dDurationMs": 3269,
+    "segs": [ {
+      "utf8": "developed and have libraries\nfor very recently."
+    } ]
+  }, {
+    "tStartMs": 2143051,
+    "dDurationMs": 1439,
+    "segs": [ {
+      "utf8": "So for example\nparameter efficient"
+    } ]
+  }, {
+    "tStartMs": 2144491,
+    "dDurationMs": 1679,
+    "segs": [ {
+      "utf8": "fine tuning techniques\nlike Laura,"
+    } ]
+  }, {
+    "tStartMs": 2146171,
+    "dDurationMs": 3149,
+    "segs": [ {
+      "utf8": "make sure that you're\nonly training small,"
+    } ]
+  }, {
+    "tStartMs": 2149321,
+    "dDurationMs": 1694,
+    "segs": [ {
+      "utf8": "sparse pieces of your model."
+    } ]
+  }, {
+    "tStartMs": 2151016,
+    "dDurationMs": 1994,
+    "segs": [ {
+      "utf8": "So most of the model\nis kept clamped at"
+    } ]
+  }, {
+    "tStartMs": 2153011,
+    "dDurationMs": 2429,
+    "segs": [ {
+      "utf8": "the base model and some\npieces of it are allowed to"
+    } ]
+  }, {
+    "tStartMs": 2155441,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "change and this\nstill works pretty"
+    } ]
+  }, {
+    "tStartMs": 2156851,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "well empirically and makes"
+    } ]
+  }, {
+    "tStartMs": 2158351,
+    "dDurationMs": 3869,
+    "segs": [ {
+      "utf8": "it much cheaper to tune only\nsmall pieces of your model."
+    } ]
+  }, {
+    "tStartMs": 2162221,
+    "dDurationMs": 3479,
+    "segs": [ {
+      "utf8": "It also means that because\nmost of your model is clamped,"
+    } ]
+  }, {
+    "tStartMs": 2165701,
+    "dDurationMs": 2099,
+    "segs": [ {
+      "utf8": "you can use very low\nprecision inference"
+    } ]
+  }, {
+    "tStartMs": 2167801,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "for computing those\nparts because"
+    } ]
+  }, {
+    "tStartMs": 2169691,
+    "dDurationMs": 1079,
+    "segs": [ {
+      "utf8": "you are not going\nto be updated by"
+    } ]
+  }, {
+    "tStartMs": 2170771,
+    "dDurationMs": 1409,
+    "segs": [ {
+      "utf8": "gradient descent and so that"
+    } ]
+  }, {
+    "tStartMs": 2172181,
+    "dDurationMs": 1784,
+    "segs": [ {
+      "utf8": "makes everything a lot\nmore efficient as well."
+    } ]
+  }, {
+    "tStartMs": 2173966,
+    "dDurationMs": 1784,
+    "segs": [ {
+      "utf8": "And in addition, we\nhave a number of"
+    } ]
+  }, {
+    "tStartMs": 2175751,
+    "dDurationMs": 1709,
+    "segs": [ {
+      "utf8": "open source, high-quality\nbase models."
+    } ]
+  }, {
+    "tStartMs": 2177461,
+    "dDurationMs": 1199,
+    "segs": [ {
+      "utf8": "Currently, as I mentioned,"
+    } ]
+  }, {
+    "tStartMs": 2178661,
+    "dDurationMs": 1499,
+    "segs": [ {
+      "utf8": "I think LLaMa is quite nice,"
+    } ]
+  }, {
+    "tStartMs": 2180161,
+    "dDurationMs": 1439,
+    "segs": [ {
+      "utf8": "although it is not commercially"
+    } ]
+  }, {
+    "tStartMs": 2181601,
+    "dDurationMs": 1919,
+    "segs": [ {
+      "utf8": "licensed, I believe right now."
+    } ]
+  }, {
+    "tStartMs": 2183521,
+    "dDurationMs": 3149,
+    "segs": [ {
+      "utf8": "Some things to keep in\nmind is that basically"
+    } ]
+  }, {
+    "tStartMs": 2186671,
+    "dDurationMs": 2774,
+    "segs": [ {
+      "utf8": "fine tuning is a lot more\ntechnically involved."
+    } ]
+  }, {
+    "tStartMs": 2189446,
+    "dDurationMs": 1454,
+    "segs": [ {
+      "utf8": "It requires a lot more, I think,"
+    } ]
+  }, {
+    "tStartMs": 2190901,
+    "dDurationMs": 1769,
+    "segs": [ {
+      "utf8": "technical expertise to do right."
+    } ]
+  }, {
+    "tStartMs": 2192671,
+    "dDurationMs": 2309,
+    "segs": [ {
+      "utf8": "It requires human\ndata contractors for"
+    } ]
+  }, {
+    "tStartMs": 2194981,
+    "dDurationMs": 2009,
+    "segs": [ {
+      "utf8": "datasets and/or\nsynthetic data pipelines"
+    } ]
+  }, {
+    "tStartMs": 2196991,
+    "dDurationMs": 1394,
+    "segs": [ {
+      "utf8": "that can be pretty complicated."
+    } ]
+  }, {
+    "tStartMs": 2198386,
+    "dDurationMs": 1634,
+    "segs": [ {
+      "utf8": "This will definitely slow down"
+    } ]
+  }, {
+    "tStartMs": 2200021,
+    "dDurationMs": 1664,
+    "segs": [ {
+      "utf8": "your iteration cycle by a lot,"
+    } ]
+  }, {
+    "tStartMs": 2201686,
+    "dDurationMs": 2834,
+    "segs": [ {
+      "utf8": "and I would say on\na high level SFT is"
+    } ]
+  }, {
+    "tStartMs": 2204521,
+    "dDurationMs": 2669,
+    "segs": [ {
+      "utf8": "achievable because\nyou're continuing"
+    } ]
+  }, {
+    "tStartMs": 2207191,
+    "dDurationMs": 1049,
+    "segs": [ {
+      "utf8": "the language modeling task."
+    } ]
+  }, {
+    "tStartMs": 2208241,
+    "dDurationMs": 2399,
+    "segs": [ {
+      "utf8": "It's relatively\nstraightforward, but RLHF,"
+    } ]
+  }, {
+    "tStartMs": 2210641,
+    "dDurationMs": 2519,
+    "segs": [ {
+      "utf8": "I would say is very\nmuch research territory"
+    } ]
+  }, {
+    "tStartMs": 2213161,
+    "dDurationMs": 2579,
+    "segs": [ {
+      "utf8": "and is even much\nharder to get to work,"
+    } ]
+  }, {
+    "tStartMs": 2215741,
+    "dDurationMs": 2369,
+    "segs": [ {
+      "utf8": "and so I would probably\nnot advise that someone"
+    } ]
+  }, {
+    "tStartMs": 2218111,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "just tries to roll their own\nRLHF of implementation."
+    } ]
+  }, {
+    "tStartMs": 2220571,
+    "dDurationMs": 1469,
+    "segs": [ {
+      "utf8": "These things are\npretty unstable,"
+    } ]
+  }, {
+    "tStartMs": 2222041,
+    "dDurationMs": 2639,
+    "segs": [ {
+      "utf8": "very difficult to train, not\nsomething that is, I think,"
+    } ]
+  }, {
+    "tStartMs": 2224681,
+    "dDurationMs": 1319,
+    "segs": [ {
+      "utf8": "very beginner\nfriendly right now,"
+    } ]
+  }, {
+    "tStartMs": 2226001,
+    "dDurationMs": 2099,
+    "segs": [ {
+      "utf8": "and it's also\npotentially likely also"
+    } ]
+  }, {
+    "tStartMs": 2228101,
+    "dDurationMs": 3179,
+    "segs": [ {
+      "utf8": "to change pretty rapidly still."
+    } ]
+  }, {
+    "tStartMs": 2231281,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "So I think these are"
+    } ]
+  }, {
+    "tStartMs": 2232871,
+    "dDurationMs": 2564,
+    "segs": [ {
+      "utf8": "my default recommendations\nright now."
+    } ]
+  }, {
+    "tStartMs": 2235436,
+    "dDurationMs": 2879,
+    "segs": [ {
+      "utf8": "I would break up your task\ninto two major parts."
+    } ]
+  }, {
+    "tStartMs": 2238316,
+    "dDurationMs": 2294,
+    "segs": [ {
+      "utf8": "Number 1, achieve\nyour top performance,"
+    } ]
+  }, {
+    "tStartMs": 2240611,
+    "dDurationMs": 3374,
+    "segs": [ {
+      "utf8": "and Number 2, optimize your\nperformance in that order."
+    } ]
+  }, {
+    "tStartMs": 2243986,
+    "dDurationMs": 1904,
+    "segs": [ {
+      "utf8": "Number 1, the best\nperformance will"
+    } ]
+  }, {
+    "tStartMs": 2245891,
+    "dDurationMs": 1664,
+    "segs": [ {
+      "utf8": "currently come from GPT-4 model."
+    } ]
+  }, {
+    "tStartMs": 2247556,
+    "dDurationMs": 2099,
+    "segs": [ {
+      "utf8": "It is the most capable\nof all by far."
+    } ]
+  }, {
+    "tStartMs": 2249656,
+    "dDurationMs": 2294,
+    "segs": [ {
+      "utf8": "Use prompts that\nare very detailed."
+    } ]
+  }, {
+    "tStartMs": 2251951,
+    "dDurationMs": 1769,
+    "segs": [ {
+      "utf8": "They have lots of\ntask content,"
+    } ]
+  }, {
+    "tStartMs": 2253721,
+    "dDurationMs": 2519,
+    "segs": [ {
+      "utf8": "relevant information\nand instructions."
+    } ]
+  }, {
+    "tStartMs": 2256241,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "Think along the lines\nof what would you tell"
+    } ]
+  }, {
+    "tStartMs": 2258131,
+    "dDurationMs": 2519,
+    "segs": [ {
+      "utf8": "a task contractor if they\ncan't email you back,"
+    } ]
+  }, {
+    "tStartMs": 2260651,
+    "dDurationMs": 2459,
+    "segs": [ {
+      "utf8": "but then also keep in mind\nthat a task contractor is a"
+    } ]
+  }, {
+    "tStartMs": 2263111,
+    "dDurationMs": 1049,
+    "segs": [ {
+      "utf8": "human and they have"
+    } ]
+  }, {
+    "tStartMs": 2264161,
+    "dDurationMs": 1979,
+    "segs": [ {
+      "utf8": "inner monologue and\nthey're very clever, etc."
+    } ]
+  }, {
+    "tStartMs": 2266141,
+    "dDurationMs": 2384,
+    "segs": [ {
+      "utf8": "LLMs do not possess\nthose qualities."
+    } ]
+  }, {
+    "tStartMs": 2268526,
+    "dDurationMs": 2354,
+    "segs": [ {
+      "utf8": "So make sure to think through"
+    } ]
+  }, {
+    "tStartMs": 2270881,
+    "dDurationMs": 1364,
+    "segs": [ {
+      "utf8": "the psychology of the LLM"
+    } ]
+  }, {
+    "tStartMs": 2272246,
+    "dDurationMs": 2684,
+    "segs": [ {
+      "utf8": "almost and cater\nprompts to that."
+    } ]
+  }, {
+    "tStartMs": 2274931,
+    "dDurationMs": 2534,
+    "segs": [ {
+      "utf8": "Retrieve and add any\nrelevant context"
+    } ]
+  }, {
+    "tStartMs": 2277466,
+    "dDurationMs": 2144,
+    "segs": [ {
+      "utf8": "and information\nto these prompts."
+    } ]
+  }, {
+    "tStartMs": 2279611,
+    "dDurationMs": 1979,
+    "segs": [ {
+      "utf8": "Basically refer to a lot of"
+    } ]
+  }, {
+    "tStartMs": 2281591,
+    "dDurationMs": 1379,
+    "segs": [ {
+      "utf8": "the prompt engineering\ntechniques."
+    } ]
+  }, {
+    "tStartMs": 2282971,
+    "dDurationMs": 1994,
+    "segs": [ {
+      "utf8": "Some of them I've highlighted\nin the slides above,"
+    } ]
+  }, {
+    "tStartMs": 2284966,
+    "dDurationMs": 2954,
+    "segs": [ {
+      "utf8": "but also this is a very\nlarge space and I would"
+    } ]
+  }, {
+    "tStartMs": 2287921,
+    "dDurationMs": 1709,
+    "segs": [ {
+      "utf8": "just advise you to look"
+    } ]
+  }, {
+    "tStartMs": 2289631,
+    "dDurationMs": 1949,
+    "segs": [ {
+      "utf8": "for prompt engineering\ntechniques online."
+    } ]
+  }, {
+    "tStartMs": 2291581,
+    "dDurationMs": 1694,
+    "segs": [ {
+      "utf8": "There's a lot to cover there."
+    } ]
+  }, {
+    "tStartMs": 2293276,
+    "dDurationMs": 2354,
+    "segs": [ {
+      "utf8": "Experiment with\nfew-shot examples."
+    } ]
+  }, {
+    "tStartMs": 2295631,
+    "dDurationMs": 2084,
+    "segs": [ {
+      "utf8": "What this refers to is, you\ndon't just want to tell,"
+    } ]
+  }, {
+    "tStartMs": 2297716,
+    "dDurationMs": 2024,
+    "segs": [ {
+      "utf8": "you want to show\nwhenever it's possible."
+    } ]
+  }, {
+    "tStartMs": 2299741,
+    "dDurationMs": 2084,
+    "segs": [ {
+      "utf8": "So give it examples\nof everything"
+    } ]
+  }, {
+    "tStartMs": 2301826,
+    "dDurationMs": 3314,
+    "segs": [ {
+      "utf8": "that helps it really understand\nwhat you mean if you can."
+    } ]
+  }, {
+    "tStartMs": 2305141,
+    "dDurationMs": 2009,
+    "segs": [ {
+      "utf8": "Experiment with tools\nand plug-ins to"
+    } ]
+  }, {
+    "tStartMs": 2307151,
+    "dDurationMs": 3269,
+    "segs": [ {
+      "utf8": "offload tasks that are\ndifficult for LLMs natively,"
+    } ]
+  }, {
+    "tStartMs": 2310421,
+    "dDurationMs": 1769,
+    "segs": [ {
+      "utf8": "and then think about not just a"
+    } ]
+  }, {
+    "tStartMs": 2312191,
+    "dDurationMs": 1259,
+    "segs": [ {
+      "utf8": "single prompt and answer,"
+    } ]
+  }, {
+    "tStartMs": 2313451,
+    "dDurationMs": 1514,
+    "segs": [ {
+      "utf8": "think about potential chains"
+    } ]
+  }, {
+    "tStartMs": 2314966,
+    "dDurationMs": 1514,
+    "segs": [ {
+      "utf8": "and reflection and how you glue"
+    } ]
+  }, {
+    "tStartMs": 2316481,
+    "dDurationMs": 1199,
+    "segs": [ {
+      "utf8": "them together and how you can"
+    } ]
+  }, {
+    "tStartMs": 2317681,
+    "dDurationMs": 2444,
+    "segs": [ {
+      "utf8": "potentially make multiple\nsamples and so on."
+    } ]
+  }, {
+    "tStartMs": 2320126,
+    "dDurationMs": 2084,
+    "segs": [ {
+      "utf8": "Finally, if you think\nyou've squeezed"
+    } ]
+  }, {
+    "tStartMs": 2322211,
+    "dDurationMs": 1109,
+    "segs": [ {
+      "utf8": "out prompt engineering,"
+    } ]
+  }, {
+    "tStartMs": 2323321,
+    "dDurationMs": 2414,
+    "segs": [ {
+      "utf8": "which I think you should\nstick with for a while,"
+    } ]
+  }, {
+    "tStartMs": 2325736,
+    "dDurationMs": 2849,
+    "segs": [ {
+      "utf8": "look at some potentially"
+    } ]
+  }, {
+    "tStartMs": 2328586,
+    "dDurationMs": 2759,
+    "segs": [ {
+      "utf8": "fine tuning a model\nto your application,"
+    } ]
+  }, {
+    "tStartMs": 2331346,
+    "dDurationMs": 1604,
+    "segs": [ {
+      "utf8": "but expect this to be a lot more"
+    } ]
+  }, {
+    "tStartMs": 2332951,
+    "dDurationMs": 1709,
+    "segs": [ {
+      "utf8": "slower in the vault and then"
+    } ]
+  }, {
+    "tStartMs": 2334661,
+    "dDurationMs": 1829,
+    "segs": [ {
+      "utf8": "there's an expert\nfragile research zone"
+    } ]
+  }, {
+    "tStartMs": 2336491,
+    "dDurationMs": 1814,
+    "segs": [ {
+      "utf8": "here and I would\nsay that is RLHF,"
+    } ]
+  }, {
+    "tStartMs": 2338306,
+    "dDurationMs": 1844,
+    "segs": [ {
+      "utf8": "which currently does work a bit"
+    } ]
+  }, {
+    "tStartMs": 2340151,
+    "dDurationMs": 2069,
+    "segs": [ {
+      "utf8": "better than SFT if you\ncan get it to work."
+    } ]
+  }, {
+    "tStartMs": 2342221,
+    "dDurationMs": 2819,
+    "segs": [ {
+      "utf8": "But again, this is pretty\ninvolved, I would say."
+    } ]
+  }, {
+    "tStartMs": 2345041,
+    "dDurationMs": 1394,
+    "segs": [ {
+      "utf8": "And to optimize your costs,"
+    } ]
+  }, {
+    "tStartMs": 2346436,
+    "dDurationMs": 2654,
+    "segs": [ {
+      "utf8": "try to explore lower\ncapacity models"
+    } ]
+  }, {
+    "tStartMs": 2349091,
+    "dDurationMs": 2859,
+    "segs": [ {
+      "utf8": "or shorter prompts and so on."
+    } ]
+  }, {
+    "tStartMs": 2352230,
+    "dDurationMs": 3505,
+    "segs": [ {
+      "utf8": "I also wanted to say a few\nwords about the use cases"
+    } ]
+  }, {
+    "tStartMs": 2355736,
+    "dDurationMs": 2939,
+    "segs": [ {
+      "utf8": "in which I think LLMs are\ncurrently well suited for."
+    } ]
+  }, {
+    "tStartMs": 2358676,
+    "dDurationMs": 1964,
+    "segs": [ {
+      "utf8": "In particular, note that\nthere's a large number"
+    } ]
+  }, {
+    "tStartMs": 2360641,
+    "dDurationMs": 1904,
+    "segs": [ {
+      "utf8": "of limitations to LLMs today,"
+    } ]
+  }, {
+    "tStartMs": 2362546,
+    "dDurationMs": 1724,
+    "segs": [ {
+      "utf8": "and so I would keep that"
+    } ]
+  }, {
+    "tStartMs": 2364271,
+    "dDurationMs": 1904,
+    "segs": [ {
+      "utf8": "definitely in mind for\nall of your applications."
+    } ]
+  }, {
+    "tStartMs": 2366176,
+    "dDurationMs": 2399,
+    "segs": [ {
+      "utf8": "Models, and this by the way\ncould be an entire talk."
+    } ]
+  }, {
+    "tStartMs": 2368576,
+    "dDurationMs": 1994,
+    "segs": [ {
+      "utf8": "So I don't have time to\ncover it in full detail."
+    } ]
+  }, {
+    "tStartMs": 2370571,
+    "dDurationMs": 2159,
+    "segs": [ {
+      "utf8": "Models may be biased,\nthey may fabricate,"
+    } ]
+  }, {
+    "tStartMs": 2372731,
+    "dDurationMs": 1154,
+    "segs": [ {
+      "utf8": "hallucinate information,"
+    } ]
+  }, {
+    "tStartMs": 2373886,
+    "dDurationMs": 1664,
+    "segs": [ {
+      "utf8": "they may have reasoning errors,"
+    } ]
+  }, {
+    "tStartMs": 2375551,
+    "dDurationMs": 2939,
+    "segs": [ {
+      "utf8": "they may struggle in entire\nclasses of applications,"
+    } ]
+  }, {
+    "tStartMs": 2378491,
+    "dDurationMs": 1559,
+    "segs": [ {
+      "utf8": "they have knowledge cut-offs,"
+    } ]
+  }, {
+    "tStartMs": 2380051,
+    "dDurationMs": 2054,
+    "segs": [ {
+      "utf8": "so they might not know\nany information above,"
+    } ]
+  }, {
+    "tStartMs": 2382106,
+    "dDurationMs": 1649,
+    "segs": [ {
+      "utf8": "say, September, 2021."
+    } ]
+  }, {
+    "tStartMs": 2383756,
+    "dDurationMs": 1994,
+    "segs": [ {
+      "utf8": "They are susceptible\nto a large range of"
+    } ]
+  }, {
+    "tStartMs": 2385751,
+    "dDurationMs": 3044,
+    "segs": [ {
+      "utf8": "attacks which are coming\nout on Twitter daily,"
+    } ]
+  }, {
+    "tStartMs": 2388796,
+    "dDurationMs": 2264,
+    "segs": [ {
+      "utf8": "including prompt injection,\njailbreak attacks,"
+    } ]
+  }, {
+    "tStartMs": 2391061,
+    "dDurationMs": 1694,
+    "segs": [ {
+      "utf8": "data poisoning\nattacks and so on."
+    } ]
+  }, {
+    "tStartMs": 2392756,
+    "dDurationMs": 1919,
+    "segs": [ {
+      "utf8": "So my recommendation\nright now is"
+    } ]
+  }, {
+    "tStartMs": 2394676,
+    "dDurationMs": 2954,
+    "segs": [ {
+      "utf8": "use LLMs in low-stakes\napplications."
+    } ]
+  }, {
+    "tStartMs": 2397631,
+    "dDurationMs": 2504,
+    "segs": [ {
+      "utf8": "Combine them always\nwith human oversight."
+    } ]
+  }, {
+    "tStartMs": 2400136,
+    "dDurationMs": 1784,
+    "segs": [ {
+      "utf8": "Use them as a source\nof inspiration and"
+    } ]
+  }, {
+    "tStartMs": 2401921,
+    "dDurationMs": 2414,
+    "segs": [ {
+      "utf8": "suggestions and think co-pilots,"
+    } ]
+  }, {
+    "tStartMs": 2404336,
+    "dDurationMs": 1544,
+    "segs": [ {
+      "utf8": "instead of completely\nautonomous agents"
+    } ]
+  }, {
+    "tStartMs": 2405881,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "that are just like\nperforming a task somewhere."
+    } ]
+  }, {
+    "tStartMs": 2407771,
+    "dDurationMs": 3609,
+    "segs": [ {
+      "utf8": "It's just not clear that the\nmodels are there right now."
+    } ]
+  }, {
+    "tStartMs": 2411470,
+    "dDurationMs": 2020,
+    "segs": [ {
+      "utf8": "So I wanted to close\nby saying that"
+    } ]
+  }, {
+    "tStartMs": 2413491,
+    "dDurationMs": 1634,
+    "segs": [ {
+      "utf8": "GPT-4 is an amazing artifact."
+    } ]
+  }, {
+    "tStartMs": 2415126,
+    "dDurationMs": 3194,
+    "segs": [ {
+      "utf8": "I'm very thankful that it\nexists, and it's beautiful."
+    } ]
+  }, {
+    "tStartMs": 2418321,
+    "dDurationMs": 2039,
+    "segs": [ {
+      "utf8": "It has a ton of knowledge\nacross so many areas."
+    } ]
+  }, {
+    "tStartMs": 2420361,
+    "dDurationMs": 2614,
+    "segs": [ {
+      "utf8": "It can do math, code and so on."
+    } ]
+  }, {
+    "tStartMs": 2422976,
+    "dDurationMs": 1234,
+    "segs": [ {
+      "utf8": "And in addition, there's this"
+    } ]
+  }, {
+    "tStartMs": 2424211,
+    "dDurationMs": 1589,
+    "segs": [ {
+      "utf8": "thriving ecosystem of everything"
+    } ]
+  }, {
+    "tStartMs": 2425801,
+    "dDurationMs": 1229,
+    "segs": [ {
+      "utf8": "else that is being built and"
+    } ]
+  }, {
+    "tStartMs": 2427031,
+    "dDurationMs": 2114,
+    "segs": [ {
+      "utf8": "incorporated into the ecosystem."
+    } ]
+  }, {
+    "tStartMs": 2429146,
+    "dDurationMs": 2684,
+    "segs": [ {
+      "utf8": "Some of these things\nI've talked about,"
+    } ]
+  }, {
+    "tStartMs": 2431831,
+    "dDurationMs": 3854,
+    "segs": [ {
+      "utf8": "and all of this power is\naccessible at your fingertips."
+    } ]
+  }, {
+    "tStartMs": 2435686,
+    "dDurationMs": 2264,
+    "segs": [ {
+      "utf8": "So here's everything\nthat's needed in terms of"
+    } ]
+  }, {
+    "tStartMs": 2437951,
+    "dDurationMs": 2489,
+    "segs": [ {
+      "utf8": "code to ask GPT-4 a question,"
+    } ]
+  }, {
+    "tStartMs": 2440441,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "to prompt it, and\nget a response."
+    } ]
+  }, {
+    "tStartMs": 2442331,
+    "dDurationMs": 1694,
+    "segs": [ {
+      "utf8": "In this case, I said,"
+    } ]
+  }, {
+    "tStartMs": 2444026,
+    "dDurationMs": 1424,
+    "segs": [ {
+      "utf8": "can you say something to inspire"
+    } ]
+  }, {
+    "tStartMs": 2445451,
+    "dDurationMs": 2324,
+    "segs": [ {
+      "utf8": "the audience of\nMicrosoft Build 2023?"
+    } ]
+  }, {
+    "tStartMs": 2447776,
+    "dDurationMs": 2564,
+    "segs": [ {
+      "utf8": "And I just punched this\ninto Python and verbatim"
+    } ]
+  }, {
+    "tStartMs": 2450341,
+    "dDurationMs": 3344,
+    "segs": [ {
+      "utf8": "GPT-4 said the following:"
+    } ]
+  }, {
+    "tStartMs": 2453686,
+    "dDurationMs": 1964,
+    "segs": [ {
+      "utf8": "And by the way, I did\nnot know that they"
+    } ]
+  }, {
+    "tStartMs": 2455651,
+    "dDurationMs": 1634,
+    "segs": [ {
+      "utf8": "used this trick in the keynote."
+    } ]
+  }, {
+    "tStartMs": 2457286,
+    "dDurationMs": 1724,
+    "segs": [ {
+      "utf8": "So I thought I was being clever,"
+    } ]
+  }, {
+    "tStartMs": 2459011,
+    "dDurationMs": 3779,
+    "segs": [ {
+      "utf8": "but it is really good at this."
+    } ]
+  }, {
+    "tStartMs": 2462791,
+    "dDurationMs": 1469,
+    "segs": [ {
+      "utf8": "It says, ladies and gentlemen,"
+    } ]
+  }, {
+    "tStartMs": 2464261,
+    "dDurationMs": 3014,
+    "segs": [ {
+      "utf8": "innovators and trailblazers\nMicrosoft Build 2023."
+    } ]
+  }, {
+    "tStartMs": 2467276,
+    "dDurationMs": 1484,
+    "segs": [ {
+      "utf8": "Welcome to the\ngathering of brilliant"
+    } ]
+  }, {
+    "tStartMs": 2468761,
+    "dDurationMs": 1229,
+    "segs": [ {
+      "utf8": "minds like no other,"
+    } ]
+  }, {
+    "tStartMs": 2469991,
+    "dDurationMs": 1859,
+    "segs": [ {
+      "utf8": "you are the architects\nof the future,"
+    } ]
+  }, {
+    "tStartMs": 2471851,
+    "dDurationMs": 2054,
+    "segs": [ {
+      "utf8": "the visionaries molding\nthe digital realm"
+    } ]
+  }, {
+    "tStartMs": 2473906,
+    "dDurationMs": 1604,
+    "segs": [ {
+      "utf8": "in which humanity thrives."
+    } ]
+  }, {
+    "tStartMs": 2475511,
+    "dDurationMs": 1919,
+    "segs": [ {
+      "utf8": "Embrace the limitless\npossibilities of"
+    } ]
+  }, {
+    "tStartMs": 2477431,
+    "dDurationMs": 1259,
+    "segs": [ {
+      "utf8": "technologies and let your ideas"
+    } ]
+  }, {
+    "tStartMs": 2478691,
+    "dDurationMs": 1664,
+    "segs": [ {
+      "utf8": "soar as high as\nyour imagination."
+    } ]
+  }, {
+    "tStartMs": 2480356,
+    "dDurationMs": 1889,
+    "segs": [ {
+      "utf8": "Together, let's create\na more connected,"
+    } ]
+  }, {
+    "tStartMs": 2482246,
+    "dDurationMs": 2984,
+    "segs": [ {
+      "utf8": "remarkable, and inclusive\nworld for generations to come."
+    } ]
+  }, {
+    "tStartMs": 2485231,
+    "dDurationMs": 2129,
+    "segs": [ {
+      "utf8": "Get ready to unleash\nyour creativity,"
+    } ]
+  }, {
+    "tStartMs": 2487361,
+    "dDurationMs": 2954,
+    "segs": [ {
+      "utf8": "canvas the unknown, and\nturn dreams into reality."
+    } ]
+  }, {
+    "tStartMs": 2490316,
+    "dDurationMs": 3024,
+    "segs": [ {
+      "utf8": "Your journey begins today!"
+    } ]
+  } ]
+}

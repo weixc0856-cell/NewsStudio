@@ -1,0 +1,799 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Arial,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:08.00,0:00:13.68,Sub,,0,0,0,,Welcome to the CES stage, Roland. Have fun!
+Dialogue: 0,0:00:13.68,0:00:19.60,Sub,,0,0,0,,I want you to think back to the time before electricity.
+Dialogue: 0,0:00:19.60,0:00:29.20,Sub,,0,0,0,,The world moved at the pace of people, but horses stretched our distances.
+Dialogue: 0,0:00:29.20,0:00:41.52,Sub,,0,0,0,,Steam powered our machines and ideas moved only as fast as a letter or a human voice.
+Dialogue: 0,0:00:41.52,0:00:45.68,Sub,,0,0,0,,Then electricity arrived.
+Dialogue: 0,0:00:45.68,0:00:50.48,Sub,,0,0,0,,This general purpose technology became the foundation of modern life.
+Dialogue: 0,0:00:51.44,0:00:56.93,Sub,,0,0,0,,It turned night into day, amplified human capabilities,
+Dialogue: 0,0:00:56.93,0:01:03.92,Sub,,0,0,0,,boosted productivity and powered progress that once felt out of reach.
+Dialogue: 0,0:01:03.92,0:01:08.96,Sub,,0,0,0,,At Siemens, we brought this world to life.
+Dialogue: 0,0:01:08.96,0:01:14.80,Sub,,0,0,0,,Pioneering telecommunications and electric grids.
+Dialogue: 0,0:01:14.80,0:01:23.28,Sub,,0,0,0,,Developing the machines that accelerated mass production, moving people and goods via electric trains.
+Dialogue: 0,0:01:23.28,0:01:29.76,Sub,,0,0,0,,Scaling the benefits of electricity all around the world.
+Dialogue: 0,0:01:29.76,0:01:33.58,Sub,,0,0,0,,Fast forward one and a half centuries later,
+Dialogue: 0,0:01:33.58,0:01:40.88,Sub,,0,0,0,,another general purpose technology has arrived, and this time it's not about energy.
+Dialogue: 0,0:01:40.88,0:01:44.00,Sub,,0,0,0,,It's about intelligence.
+Dialogue: 0,0:01:44.00,0:01:52.96,Sub,,0,0,0,,Artificial Intelligence will be as transformative for this century as electricity was for the last.
+Dialogue: 0,0:01:52.96,0:01:56.48,Sub,,0,0,0,,It's redefining how we design and manufacture products.
+Dialogue: 0,0:01:56.48,0:02:00.24,Sub,,0,0,0,,From the phones in your hands to the cars you drive.
+Dialogue: 0,0:02:01.04,0:02:08.24,Sub,,0,0,0,,It's revolutionizing how we build and operate infrastructure including buildings just like this one.
+Dialogue: 0,0:02:08.24,0:02:19.36,Sub,,0,0,0,,And it's allowing us to make entire systems, grids, cities, economies more adaptive and more efficient.
+Dialogue: 0,0:02:19.36,0:02:25.84,Sub,,0,0,0,,A century ago, Siemens helped build the world in the light of electricity.
+Dialogue: 0,0:02:25.84,0:02:32.08,Sub,,0,0,0,,Now we get to do it again in the age of intelligence.
+Dialogue: 0,0:02:32.08,0:02:37.12,Sub,,0,0,0,,We are powering the industrial AI revolution.
+Dialogue: 0,0:02:37.12,0:02:42.88,Sub,,0,0,0,,It has already begun, and it's picking up steam faster than steam ever did.
+Dialogue: 0,0:02:42.88,0:02:47.92,Sub,,0,0,0,,In fact, steam took 60 years to transform society.
+Dialogue: 0,0:02:47.92,0:02:48.88,Sub,,0,0,0,,Electricity.
+Dialogue: 0,0:02:48.88,0:02:52.16,Sub,,0,0,0,,30 computers, 15 for AI.
+Dialogue: 0,0:02:52.16,0:03:03.04,Sub,,0,0,0,,We're looking at seven years or less before intelligence is embedded in the system we rely on every day.
+Dialogue: 0,0:03:03.04,0:03:07.50,Sub,,0,0,0,,And that changes something fundamentally,
+Dialogue: 0,0:03:07.50,0:03:15.12,Sub,,0,0,0,,because when an AI enters a physical system, it stops being a feature.
+Dialogue: 0,0:03:15.12,0:03:16.72,Sub,,0,0,0,,It becomes a force.
+Dialogue: 0,0:03:16.72,0:03:20.24,Sub,,0,0,0,,A force with direct real world impact.
+Dialogue: 0,0:03:20.24,0:03:26.50,Sub,,0,0,0,,A force that transforms how we design and build, how factories produce,
+Dialogue: 0,0:03:26.50,0:03:31.52,Sub,,0,0,0,,how infrastructure operates, how the world powers itself.
+Dialogue: 0,0:03:31.52,0:03:35.12,Sub,,0,0,0,,Now, how do we do it?
+Dialogue: 0,0:03:35.12,0:03:37.44,Sub,,0,0,0,,How can we make this happen?
+Dialogue: 0,0:03:37.44,0:03:47.64,Sub,,0,0,0,,How can we do all of this at speed and scale and at the same time, in a way that it's reliable and safe and
+Dialogue: 0,0:03:47.64,0:03:54.88,Sub,,0,0,0,,hallucination is not acceptable when AI is deployed in the industrial world?
+Dialogue: 0,0:03:54.88,0:04:01.01,Sub,,0,0,0,,Today we are making it easy for you to scale industrial AI in the real world
+Dialogue: 0,0:04:01.01,0:04:03.92,Sub,,0,0,0,,systems to create real world impact.
+Dialogue: 0,0:04:03.92,0:04:14.16,Sub,,0,0,0,,We are bringing together AI powered technologies, industrial domain know how and the right partners.
+Dialogue: 0,0:04:14.16,0:04:22.32,Sub,,0,0,0,,And the whole thing is connected by data, valuable industrial data and all in one place.
+Dialogue: 0,0:04:22.32,0:04:26.24,Sub,,0,0,0,,In our Siemens Xcelerator marketplace.
+Dialogue: 0,0:04:26.24,0:04:29.68,Sub,,0,0,0,,So let's have a look at these elements one by one.
+Dialogue: 0,0:04:29.68,0:04:32.88,Sub,,0,0,0,,And let's start first with the right technologies.
+Dialogue: 0,0:04:32.88,0:04:41.92,Sub,,0,0,0,,It is about software hardware compute highly performant compute with GPUs.
+Dialogue: 0,0:04:41.92,0:04:46.32,Sub,,0,0,0,,And of course it is about data.
+Dialogue: 0,0:04:46.32,0:04:48.00,Sub,,0,0,0,,Here comes the good news.
+Dialogue: 0,0:04:48.00,0:04:57.12,Sub,,0,0,0,,Many companies have already some important elements in place, but this does not make them AI ready yet.
+Dialogue: 0,0:04:57.12,0:05:02.08,Sub,,0,0,0,,Digital twins can simulate and software can solve problems,
+Dialogue: 0,0:05:02.08,0:05:07.12,Sub,,0,0,0,,but they do not recommend what to do next in the real world.
+Dialogue: 0,0:05:07.12,0:05:16.01,Sub,,0,0,0,,Compute is CPU based with AI needs GPUs to deploy its full power and speed,
+Dialogue: 0,0:05:16.01,0:05:23.36,Sub,,0,0,0,,and too often data is fragmented, trapped in silos and unused.
+Dialogue: 0,0:05:23.36,0:05:33.52,Sub,,0,0,0,,That's why it is so important to have an end to end AI industrial stack to make impact in the real world.
+Dialogue: 0,0:05:33.52,0:05:39.98,Sub,,0,0,0,,And at Siemens, we are able to build this because we have been working with AI
+Dialogue: 0,0:05:39.98,0:05:42.96,Sub,,0,0,0,,for industry for more than 50 years.
+Dialogue: 0,0:05:42.96,0:05:46.46,Sub,,0,0,0,,Today, Siemens has more than 1,500 AI experts,
+Dialogue: 0,0:05:46.46,0:05:52.48,Sub,,0,0,0,,and all our engineers live in both worlds in the digital and in the real world.
+Dialogue: 0,0:05:53.20,0:06:04.32,Sub,,0,0,0,,And all our colleagues, over 250,000 of them, bring deep domain knowhow in our 30 industrial verticals.
+Dialogue: 0,0:06:04.32,0:06:11.52,Sub,,0,0,0,,And that's because for decades, Siemens has been helping customers in the United States and all over
+Dialogue: 0,0:06:11.52,0:06:15.92,Sub,,0,0,0,,the world to automate manufacturing, to run railway networks,
+Dialogue: 0,0:06:15.92,0:06:20.96,Sub,,0,0,0,,to design and operate grids, or to operate buildings more efficiently.
+Dialogue: 0,0:06:20.96,0:06:31.36,Sub,,0,0,0,,In fact, today, in one out of three manufacturing machines worldwide runs a Siemens controller.
+Dialogue: 0,0:06:31.36,0:06:37.21,Sub,,0,0,0,,With our software, you can build the most comprehensive digital twin of products and
+Dialogue: 0,0:06:37.21,0:06:39.92,Sub,,0,0,0,,the cost of a whole manufacturing site.
+Dialogue: 0,0:06:39.92,0:06:51.91,Sub,,0,0,0,,And now we are adding AI Decades of experience in software, hardware and AI And this experience means we have the
+Dialogue: 0,0:06:51.91,0:06:59.12,Sub,,0,0,0,,domain know how to identify which data matter and how to cluster it.
+Dialogue: 0,0:06:59.12,0:07:06.24,Sub,,0,0,0,,Which AI applications make sense and which decisions should be left to humans.
+Dialogue: 0,0:07:06.24,0:07:08.96,Sub,,0,0,0,,And finally.
+Dialogue: 0,0:07:08.96,0:07:16.72,Sub,,0,0,0,,Our partners for industrial AI to make use of all of this industrial design, manufacturing and operating data.
+Dialogue: 0,0:07:16.72,0:07:19.96,Sub,,0,0,0,,You need a huge amount of compute.
+Dialogue: 0,0:07:19.96,0:07:28.32,Sub,,0,0,0,,Gigantic centralized AI factories that are run by our partners like AWS or Microsoft,
+Dialogue: 0,0:07:28.32,0:07:35.60,Sub,,0,0,0,,but also at the edge, very close to your machines, to your infrastructure.
+Dialogue: 0,0:07:37.28,0:07:45.65,Sub,,0,0,0,,With this massive GPU process powered compute digital twins no longer explore just thousands
+Dialogue: 0,0:07:45.65,0:07:49.84,Sub,,0,0,0,,of options, but hundreds of thousands of them.
+Dialogue: 0,0:07:49.84,0:07:58.00,Sub,,0,0,0,,Complex industrial foundation models can get trained on unprecedented amounts of industrial data.
+Dialogue: 0,0:07:58.00,0:08:03.92,Sub,,0,0,0,,And a digital twin can control a whole plant in real time.
+Dialogue: 0,0:08:03.92,0:08:11.20,Sub,,0,0,0,,When these things come together, the right technologies, industry domain knowhow, and the right partners.
+Dialogue: 0,0:08:11.20,0:08:16.96,Sub,,0,0,0,,That's when we stop just reporting issues and start anticipating them.
+Dialogue: 0,0:08:16.96,0:08:24.24,Sub,,0,0,0,,That's when humans stop reacting to errors because machines have started to act and adjust autonomously.
+Dialogue: 0,0:08:24.24,0:08:32.88,Sub,,0,0,0,,That's when companies can turn ideas into real world impact with speed, quality and efficiency.
+Dialogue: 0,0:08:33.92,0:08:40.88,Sub,,0,0,0,,It's the industrial AI revolution.
+Dialogue: 0,0:08:40.88,0:08:45.92,Sub,,0,0,0,,Now, I mentioned partners, the right partners, the best partners.
+Dialogue: 0,0:08:45.92,0:08:50.64,Sub,,0,0,0,,And including a very special friend of mine.
+Dialogue: 0,0:08:50.64,0:08:53.28,Sub,,0,0,0,,And we hit it off immediately.
+Dialogue: 0,0:08:53.28,0:08:56.72,Sub,,0,0,0,,He has a visionary engineering mindset.
+Dialogue: 0,0:08:56.72,0:09:01.12,Sub,,0,0,0,,He thinks through problems from first principles.
+Dialogue: 0,0:09:01.12,0:09:06.40,Sub,,0,0,0,,He anticipates the next development step of AI technology.
+Dialogue: 0,0:09:06.40,0:09:14.00,Sub,,0,0,0,,And he has both bold vision and the ability to make things happen.
+Dialogue: 0,0:09:14.00,0:09:17.93,Sub,,0,0,0,,Please welcome Jensen Huang.
+Dialogue: 0,0:09:28.38,0:09:31.19,Sub,,0,0,0,,Roland! Happy new year!
+Dialogue: 0,0:09:31.39,0:09:44.90,Sub,,0,0,0,,Happy new year! Happy new year! Please 200 years old. You've seen a few of these Industrial revolutions.
+Dialogue: 0,0:09:45.28,0:09:48.64,Sub,,0,0,0,,We are not quite 200 years, but we are heading for 175.
+Dialogue: 0,0:09:48.64,0:09:50.24,Sub,,0,0,0,,Exactly, exactly.
+Dialogue: 0,0:09:50.24,0:09:53.20,Sub,,0,0,0,,And we came a long way with our partnership too, right?
+Dialogue: 0,0:09:53.20,0:09:56.24,Sub,,0,0,0,,I mean, we kicked it off a couple of years ago.
+Dialogue: 0,0:09:56.24,0:09:57.92,Sub,,0,0,0,,I remember that very well.
+Dialogue: 0,0:09:57.92,0:10:02.21,Sub,,0,0,0,,Have the same vision, industrial AI operating system that we want to build,
+Dialogue: 0,0:10:02.21,0:10:04.32,Sub,,0,0,0,,huge opportunities for our customers.
+Dialogue: 0,0:10:04.32,0:10:06.24,Sub,,0,0,0,,So what's with you?
+Dialogue: 0,0:10:06.24,0:10:07.36,Sub,,0,0,0,,Where are we on this journey?
+Dialogue: 0,0:10:07.36,0:10:09.36,Sub,,0,0,0,,You know? Yeah, it's it's an incredible thing.
+Dialogue: 0,0:10:09.36,0:10:15.28,Sub,,0,0,0,,So we, we did a press conference at Siemens headquarters in Munich.
+Dialogue: 0,0:10:15.28,0:10:17.44,Sub,,0,0,0,,How many? Yeah. How many years ago was that?
+Dialogue: 0,0:10:17.44,0:10:19.76,Sub,,0,0,0,,2022. It was only 2022. Okay.
+Dialogue: 0,0:10:19.76,0:10:21.44,Sub,,0,0,0,,Yeah, it was three years ago.
+Dialogue: 0,0:10:21.44,0:10:24.48,Sub,,0,0,0,,And we spoke about this moment in fact.
+Dialogue: 0,0:10:24.48,0:10:30.77,Sub,,0,0,0,,And Siemens is is unquestionably at the foundation of every industry that we
+Dialogue: 0,0:10:30.77,0:10:34.16,Sub,,0,0,0,,participate in, that the world builds on.
+Dialogue: 0,0:10:34.16,0:10:42.22,Sub,,0,0,0,,And, we had a vision that that, Siemens and this was your vision to turn Siemens into a software defined company in a
+Dialogue: 0,0:10:42.22,0:10:47.04,Sub,,0,0,0,,lot of ways, described it in a way very similar to a computer company.
+Dialogue: 0,0:10:47.04,0:10:52.25,Sub,,0,0,0,,And it would it would, of course, have the underlying infrastructure of computing,
+Dialogue: 0,0:10:52.25,0:10:56.88,Sub,,0,0,0,,but mostly on top, your infrastructure software, artificial intelligence.
+Dialogue: 0,0:10:56.88,0:11:03.68,Sub,,0,0,0,,And it's going to revolutionize the way things are designed, simulated, planned and operated.
+Dialogue: 0,0:11:03.68,0:11:05.68,Sub,,0,0,0,,And that was the vision you described.
+Dialogue: 0,0:11:05.68,0:11:07.92,Sub,,0,0,0,,And we spoke about three years ago.
+Dialogue: 0,0:11:07.92,0:11:08.88,Sub,,0,0,0,,And here we are.
+Dialogue: 0,0:11:08.88,0:11:11.68,Sub,,0,0,0,,You know, here we are at the beginning of that journey.
+Dialogue: 0,0:11:11.68,0:11:14.40,Sub,,0,0,0,,And, all the pieces are now finally coming together.
+Dialogue: 0,0:11:14.40,0:11:15.44,Sub,,0,0,0,,It seems to.
+Dialogue: 0,0:11:15.44,0:11:17.20,Sub,,0,0,0,,And talking about what you achieved.
+Dialogue: 0,0:11:17.20,0:11:22.48,Sub,,0,0,0,,I brought an example, you know, that HD Hyundai. I mean, they built ships.
+Dialogue: 0,0:11:22.48,0:11:26.08,Sub,,0,0,0,,huge ships, and and shipyards, by the way.
+Dialogue: 0,0:11:26.08,0:11:28.16,Sub,,0,0,0,,And they use our technology.
+Dialogue: 0,0:11:28.16,0:11:28.48,Sub,,0,0,0,,That's right.
+Dialogue: 0,0:11:28.48,0:11:29.60,Sub,,0,0,0,,You're sitting on Nvidia.
+Dialogue: 0,0:11:29.60,0:11:31.76,Sub,,0,0,0,,This is a digital twin of an entire ship.
+Dialogue: 0,0:11:31.76,0:11:35.28,Sub,,0,0,0,,Every nut and bolt is in there is incredible.
+Dialogue: 0,0:11:35.28,0:11:39.36,Sub,,0,0,0,,I mean, this is the full CAD of the ship visiting the pavilion.
+Dialogue: 0,0:11:39.36,0:11:41.60,Sub,,0,0,0,,Precise digital twin.
+Dialogue: 0,0:11:41.60,0:11:44.96,Sub,,0,0,0,,And, and you see also the the the people working on the ships.
+Dialogue: 0,0:11:44.96,0:11:45.84,Sub,,0,0,0,,You simulate everything.
+Dialogue: 0,0:11:45.84,0:11:48.40,Sub,,0,0,0,,By the way, these ships are they look alike.
+Dialogue: 0,0:11:48.40,0:11:52.00,Sub,,0,0,0,,So the body is the same, but each of them is individual.
+Dialogue: 0,0:11:52.00,0:11:56.69,Sub,,0,0,0,,So you really have to be very, very clear how you design that you optimize in the
+Dialogue: 0,0:11:56.69,0:11:59.36,Sub,,0,0,0,,digital world and then you build it, for that.
+Dialogue: 0,0:11:59.36,0:12:01.68,Sub,,0,0,0,,And that's where our whole stack comes together.
+Dialogue: 0,0:12:01.68,0:12:03.36,Sub,,0,0,0,,Complimentary technology.
+Dialogue: 0,0:12:03.36,0:12:07.72,Sub,,0,0,0,,And for the photorealistic, representation we use Omniverse.
+Dialogue: 0,0:12:07.72,0:12:10.08,Sub,,0,0,0,,And this was really quite a perfect. Yeah.
+Dialogue: 0,0:12:10.08,0:12:17.26,Sub,,0,0,0,,This is quite a perfect example of the type of work that we do together in this realization of this digital
+Dialogue: 0,0:12:17.26,0:12:21.36,Sub,,0,0,0,,twin idea that you would design, every aspect of engineering.
+Dialogue: 0,0:12:21.36,0:12:30.34,Sub,,0,0,0,,It's not just the not just the CAD, but the computing, the electronics, all of it would be integrated and then and built into a
+Dialogue: 0,0:12:30.34,0:12:35.92,Sub,,0,0,0,,digital twin, it would, of course, run all of the software in the digital twin.
+Dialogue: 0,0:12:35.92,0:12:39.28,Sub,,0,0,0,,And in the future, I hope that's the ship.
+Dialogue: 0,0:12:39.28,0:12:43.38,Sub,,0,0,0,,The digital twin of a ship will actually put it in the ocean,
+Dialogue: 0,0:12:43.38,0:12:47.68,Sub,,0,0,0,,a virtual simulation of the ocean and see it completely operate.
+Dialogue: 0,0:12:47.68,0:12:48.56,Sub,,0,0,0,,Exactly. Yeah.
+Dialogue: 0,0:12:48.56,0:12:51.36,Sub,,0,0,0,,And you have only one option to get it onto water.
+Dialogue: 0,0:12:51.36,0:12:54.24,Sub,,0,0,0,,If then you have a problem, by the way. So.
+Dialogue: 0,0:12:54.24,0:12:59.28,Sub,,0,0,0,,Well, we talked about bringing our partners up to the next level.
+Dialogue: 0,0:12:59.28,0:13:04.40,Sub,,0,0,0,,And, the whole idea is obviously to take these examples and scale them even faster.
+Dialogue: 0,0:13:04.40,0:13:11.84,Sub,,0,0,0,,And of course, to make it AI enabled, I'm talking about industrially, I would really it's the real world.
+Dialogue: 0,0:13:11.84,0:13:15.60,Sub,,0,0,0,,And we picked five areas of collaboration where we want to intensify.
+Dialogue: 0,0:13:15.60,0:13:18.96,Sub,,0,0,0,,And, and that's, good news for our customers too, I guess.
+Dialogue: 0,0:13:18.96,0:13:20.08,Sub,,0,0,0,,Let me start with the first one.
+Dialogue: 0,0:13:20.08,0:13:21.60,Sub,,0,0,0,,Take them off one by one.
+Dialogue: 0,0:13:21.60,0:13:25.44,Sub,,0,0,0,,The first one is AI native chip design.
+Dialogue: 0,0:13:25.44,0:13:28.56,Sub,,0,0,0,,So, if it comes to chip design, I don't need to tell you something.
+Dialogue: 0,0:13:28.56,0:13:31.12,Sub,,0,0,0,,Obviously, you're with each next generation.
+Dialogue: 0,0:13:31.12,0:13:33.92,Sub,,0,0,0,,You're getting closer to the physical limits.
+Dialogue: 0,0:13:33.92,0:13:36.72,Sub,,0,0,0,,So tell me what what the challenges are and what can we do.
+Dialogue: 0,0:13:36.72,0:13:42.57,Sub,,0,0,0,,Well, let's use let's use, our latest generation that we just announced yesterday as an example,
+Dialogue: 0,0:13:42.57,0:13:48.96,Sub,,0,0,0,,Vera Rubin, Vera Rubin, in order to build the latest generation GPU, people think that our GPU is a chip.
+Dialogue: 0,0:13:48.96,0:13:49.92,Sub,,0,0,0,,It is a chip.
+Dialogue: 0,0:13:49.92,0:13:57.31,Sub,,0,0,0,,It consists of a chip, but ultimately, in order for these GPUs to scale up to process the level of AI
+Dialogue: 0,0:13:57.31,0:14:02.88,Sub,,0,0,0,,that's necessary at the frontier, these GPUs are essentially one giant rack,
+Dialogue: 0,0:14:02.88,0:14:07.12,Sub,,0,0,0,,and this entire rack is, in the case of Vera Rubin, 240kW.
+Dialogue: 0,0:14:08.64,0:14:13.04,Sub,,0,0,0,,It consists of altogether 220 trillion transistors.
+Dialogue: 0,0:14:13.04,0:14:20.88,Sub,,0,0,0,,We had to design six different unique chips CPU, GPU, networking, multiple types of networking switches.
+Dialogue: 0,0:14:20.88,0:14:23.99,Sub,,0,0,0,,One is for scale up, one is for scale out,
+Dialogue: 0,0:14:23.99,0:14:29.68,Sub,,0,0,0,,and a smart net and a data processor for storage all for AI memory basically.
+Dialogue: 0,0:14:29.68,0:14:34.62,Sub,,0,0,0,,All of this stuff came together is 220 trillion transistors,
+Dialogue: 0,0:14:34.62,0:14:43.60,Sub,,0,0,0,,is two tons and 150,000 engineering years came together to build this one system that we announced yesterday.
+Dialogue: 0,0:14:43.60,0:14:50.77,Sub,,0,0,0,,And in order to do this perfectly at a rhythm that our company runs at the level of chip design,
+Dialogue: 0,0:14:50.77,0:14:56.00,Sub,,0,0,0,,system design, system integration, thermals, electricals, all of that.
+Dialogue: 0,0:14:56.00,0:15:04.50,Sub,,0,0,0,,In a lot of ways, our GPUs, it's a little bit like that HD Hyundai ship and, and what we are hoping for and the reason why we're
+Dialogue: 0,0:15:04.50,0:15:11.48,Sub,,0,0,0,,partnering so closely together is so that we could build that Vera Rubin in the future as a digital twin,
+Dialogue: 0,0:15:11.48,0:15:17.06,Sub,,0,0,0,,the entire system as a digital twin, not just the chips, but the systems, the chips,
+Dialogue: 0,0:15:17.06,0:15:24.56,Sub,,0,0,0,,everything together, cooling thermals and run the thermal simulation directly through it as it is a digital twin.
+Dialogue: 0,0:15:24.56,0:15:25.92,Sub,,0,0,0,,And that's our that's our vision.
+Dialogue: 0,0:15:25.92,0:15:29.76,Sub,,0,0,0,,And so we're accelerating the first part of our project together.
+Dialogue: 0,0:15:29.76,0:15:38.64,Sub,,0,0,0,,Our partnership is to accelerate with Siemens EDA, Siemens Simcenter accelerate everything we can with GPUs.
+Dialogue: 0,0:15:38.64,0:15:43.01,Sub,,0,0,0,,And this way we could scale up the simulations that we do and achieve the
+Dialogue: 0,0:15:43.01,0:15:45.28,Sub,,0,0,0,,virtual digital twin that we hope for.
+Dialogue: 0,0:15:45.28,0:15:49.77,Sub,,0,0,0,,So and, what are we going to do is we will use, your CUDA software to,
+Dialogue: 0,0:15:49.77,0:15:54.00,Sub,,0,0,0,,we will rewrite our EDA software so it can take advantage of GPUs.
+Dialogue: 0,0:15:54.00,0:15:54.40,Sub,,0,0,0,,That's right.
+Dialogue: 0,0:15:54.40,0:15:57.20,Sub,,0,0,0,,So working with GPUs and designing GPUs.
+Dialogue: 0,0:15:57.20,0:16:00.08,Sub,,0,0,0,,Imagine EDA software being 100 times faster.
+Dialogue: 0,0:16:00.08,0:16:00.48,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:16:00.48,0:16:03.28,Sub,,0,0,0,,Being able to scale up a million times more.
+Dialogue: 0,0:16:03.28,0:16:05.76,Sub,,0,0,0,,Right. That's our that's our hope and dreams.
+Dialogue: 0,0:16:05.76,0:16:07.36,Sub,,0,0,0,,But we don't stop there.
+Dialogue: 0,0:16:07.36,0:16:12.08,Sub,,0,0,0,,Still, we talk about AI, native chip design, what we want to do it now.
+Dialogue: 0,0:16:12.08,0:16:18.65,Sub,,0,0,0,,We want to train our our technology, our models on a massive amount of data so that it's not only about
+Dialogue: 0,0:16:18.65,0:16:23.44,Sub,,0,0,0,,validation of design, but really making a proposal of new designs and idea.
+Dialogue: 0,0:16:23.44,0:16:26.56,Sub,,0,0,0,,This is right through all of the things that was never done before.
+Dialogue: 0,0:16:26.56,0:16:28.24,Sub,,0,0,0,,That's what we are we are aiming for.
+Dialogue: 0,0:16:28.24,0:16:32.24,Sub,,0,0,0,,The goal of an engineer is not to write Verilog.
+Dialogue: 0,0:16:32.24,0:16:33.68,Sub,,0,0,0,,That's not the goal of the engineer.
+Dialogue: 0,0:16:33.68,0:16:36.48,Sub,,0,0,0,,The goal of an engineer, of course, is to solve problems.
+Dialogue: 0,0:16:36.48,0:16:38.08,Sub,,0,0,0,,Imagine great solutions.
+Dialogue: 0,0:16:38.08,0:16:38.80,Sub,,0,0,0,,And it would be.
+Dialogue: 0,0:16:38.80,0:16:39.76,Sub,,0,0,0,,It would be incredible.
+Dialogue: 0,0:16:39.76,0:16:46.32,Sub,,0,0,0,,One day there would be agentic Siemens EDA designers that are sitting with our designers.
+Dialogue: 0,0:16:46.32,0:16:46.72,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:16:46.72,0:16:53.44,Sub,,0,0,0,,And they're exploring ideas together, trying iterations and exploring boundaries.
+Dialogue: 0,0:16:53.44,0:16:58.96,Sub,,0,0,0,,Number two, we talk about same thing here, AI native simulation.
+Dialogue: 0,0:16:58.96,0:17:03.60,Sub,,0,0,0,,So when it comes to simulation, obviously this is a lot of number crunching.
+Dialogue: 0,0:17:03.60,0:17:06.88,Sub,,0,0,0,,And it's very often still runs on CPUs.
+Dialogue: 0,0:17:06.88,0:17:07.84,Sub,,0,0,0,,This is the first step.
+Dialogue: 0,0:17:07.84,0:17:13.92,Sub,,0,0,0,,We want to bring this technology, the heavy number crunching elements of our simulation to GPUs.
+Dialogue: 0,0:17:13.92,0:17:18.72,Sub,,0,0,0,,That again accelerates X times hundred times a thousand times.
+Dialogue: 0,0:17:18.72,0:17:21.44,Sub,,0,0,0,,And if you can I mean, there's an example.
+Dialogue: 0,0:17:21.44,0:17:23.04,Sub,,0,0,0,,This is a cost simulation, by the way.
+Dialogue: 0,0:17:23.04,0:17:26.96,Sub,,0,0,0,,It goes back to to when we started off our partners, it was from BMW.
+Dialogue: 0,0:17:26.96,0:17:30.00,Sub,,0,0,0,,That we simulate the airflow, the aerodynamics.
+Dialogue: 0,0:17:30.00,0:17:34.40,Sub,,0,0,0,,And it's a lot of, consumption of and it takes a lot of time.
+Dialogue: 0,0:17:34.40,0:17:38.72,Sub,,0,0,0,,So if you speed it up a thousand times, you can do much, much more iterations.
+Dialogue: 0,0:17:38.72,0:17:41.04,Sub,,0,0,0,,Again, we do not stop there.
+Dialogue: 0,0:17:41.04,0:17:45.52,Sub,,0,0,0,,We want to have simulation not only to validate but to create.
+Dialogue: 0,0:17:45.52,0:17:47.60,Sub,,0,0,0,,That's right. Again, you need a lot of data.
+Dialogue: 0,0:17:47.60,0:17:49.20,Sub,,0,0,0,,You need our technologies.
+Dialogue: 0,0:17:49.20,0:17:50.96,Sub,,0,0,0,,And that's where Nvidia has...
+Dialogue: 0,0:17:50.96,0:17:52.88,Sub,,0,0,0,,This is our technology running in real time.
+Dialogue: 0,0:17:52.88,0:17:55.12,Sub,,0,0,0,,Our technology together isn't it?
+Dialogue: 0,0:17:55.12,0:17:57.60,Sub,,0,0,0,,You know, simulations. Physics is beautiful.
+Dialogue: 0,0:17:57.60,0:17:59.76,Sub,,0,0,0,,That's just the bottom line.
+Dialogue: 0,0:17:59.76,0:18:01.44,Sub,,0,0,0,,Numbers are beautiful.
+Dialogue: 0,0:18:01.44,0:18:05.76,Sub,,0,0,0,,We do then.
+Dialogue: 0,0:18:05.76,0:18:11.12,Sub,,0,0,0,,Only an engineer would say the numbers are just so beautiful.
+Dialogue: 0,0:18:11.12,0:18:12.56,Sub,,0,0,0,,And we do that for trains.
+Dialogue: 0,0:18:12.56,0:18:20.46,Sub,,0,0,0,,And, and again we will be using physics enabled from Nvidia and the full Siemens simulation stack,
+Dialogue: 0,0:18:20.46,0:18:27.64,Sub,,0,0,0,,with ours, Siemens has has the world's leading suite for, for industrial simulations and,
+Dialogue: 0,0:18:27.64,0:18:33.52,Sub,,0,0,0,,and simcenter and all of the suites of, of, of, of, solvers in Simcenter.
+Dialogue: 0,0:18:33.52,0:18:36.96,Sub,,0,0,0,,We're going to accelerate completely using CUDA and CUDA X .
+Dialogue: 0,0:18:36.96,0:18:44.22,Sub,,0,0,0,,We are also going to work together to create AI physics, to teach AI the laws of physics so that it could
+Dialogue: 0,0:18:44.22,0:18:48.58,Sub,,0,0,0,,emulate physics, not to simulate physics from first principles,
+Dialogue: 0,0:18:48.58,0:18:55.84,Sub,,0,0,0,,but emulate the outcome of physics, essentially guessing where the physical properties are going to go at
+Dialogue: 0,0:18:55.84,0:18:59.92,Sub,,0,0,0,,the next nanosecond, the next microsecond, the next second.
+Dialogue: 0,0:18:59.92,0:19:07.96,Sub,,0,0,0,,And by doing so, we could speed up physics simulations, physics, experimentations, if you will,
+Dialogue: 0,0:19:07.96,0:19:16.00,Sub,,0,0,0,,10,000 times, 100,000 times, and essentially create a real life digital twin of a, wind tunnel.
+Dialogue: 0,0:19:16.00,0:19:19.60,Sub,,0,0,0,,We essentially put a real design into it, right?
+Dialogue: 0,0:19:19.60,0:19:24.00,Sub,,0,0,0,,Real digital twin design into a digital twin of a wind tunnel and see it work.
+Dialogue: 0,0:19:24.00,0:19:30.00,Sub,,0,0,0,,And so the the opportunity to do all of these experimentation in real time is really exciting.
+Dialogue: 0,0:19:30.00,0:19:33.92,Sub,,0,0,0,,Which brings me talking about physics, the real world, physical AI.
+Dialogue: 0,0:19:33.92,0:19:42.08,Sub,,0,0,0,,Which brings me to the third area, step up, which is AI driven adaptive manufacturing.
+Dialogue: 0,0:19:42.08,0:19:46.12,Sub,,0,0,0,,So and this always reminds me when we talk about our technology stack,
+Dialogue: 0,0:19:46.12,0:19:50.16,Sub,,0,0,0,,what we want to bring to the plans was reminds me what you always say.
+Dialogue: 0,0:19:50.16,0:19:53.44,Sub,,0,0,0,,I mean, actually applying this is almost like a robot, isn't it?
+Dialogue: 0,0:19:53.44,0:19:57.58,Sub,,0,0,0,,It's a big robot. So cycling or a car, you know,
+Dialogue: 0,0:19:57.58,0:20:04.40,Sub,,0,0,0,,if you look at look at a car today, it's it's, sensors connected to a computer.
+Dialogue: 0,0:20:04.40,0:20:06.08,Sub,,0,0,0,,The computer is running software.
+Dialogue: 0,0:20:06.08,0:20:07.28,Sub,,0,0,0,,Software defined.
+Dialogue: 0,0:20:07.28,0:20:11.28,Sub,,0,0,0,,And today the software that we run on top of it is largely AI.
+Dialogue: 0,0:20:11.28,0:20:19.07,Sub,,0,0,0,,Well, that car is going to be made inside a factory that has sensors running computers,
+Dialogue: 0,0:20:19.07,0:20:27.66,Sub,,0,0,0,,Siemens software, stock and operating systems, and all the AI that you'll have running on top of
+Dialogue: 0,0:20:27.66,0:20:33.12,Sub,,0,0,0,,that in a lot of ways, that factory the car isn't inside out.
+Dialogue: 0,0:20:33.12,0:20:36.87,Sub,,0,0,0,,AI the factory is an outside in AI, and it's going to look at,
+Dialogue: 0,0:20:36.87,0:20:41.28,Sub,,0,0,0,,the cars that it's going to build and it's going to build it robotically.
+Dialogue: 0,0:20:41.28,0:20:44.64,Sub,,0,0,0,,So the entire factory is going to be one giant robot.
+Dialogue: 0,0:20:44.64,0:20:49.39,Sub,,0,0,0,,It's going to orchestrate a whole bunch of robots that themselves are robotic,
+Dialogue: 0,0:20:49.39,0:20:54.32,Sub,,0,0,0,,and they're going to make products like cars that are software defined in robots.
+Dialogue: 0,0:20:54.32,0:21:00.00,Sub,,0,0,0,,So it's going to be robots orchestrating robots, building robots, you know, in the future.
+Dialogue: 0,0:21:00.00,0:21:06.08,Sub,,0,0,0,,And so this, this level of integration of technology has never been achieved before.
+Dialogue: 0,0:21:06.08,0:21:06.56,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:21:06.56,0:21:12.88,Sub,,0,0,0,,And so it's really the reason why we have to build the foundation of future manufacturing from the ground up.
+Dialogue: 0,0:21:12.88,0:21:16.95,Sub,,0,0,0,,And nobody could do a better than Siemens because you're already the operating system of
+Dialogue: 0,0:21:16.95,0:21:18.80,Sub,,0,0,0,,manufacturing plants all over the world.
+Dialogue: 0,0:21:18.80,0:21:25.25,Sub,,0,0,0,,And so from that baseline, we're going to number one, make it software defined and then to make it AI driven and
+Dialogue: 0,0:21:25.25,0:21:29.28,Sub,,0,0,0,,all of that, you know, it's so great to see see you drive that vision.
+Dialogue: 0,0:21:29.28,0:21:32.88,Sub,,0,0,0,,And for Siemens to to really make that possible for the world.
+Dialogue: 0,0:21:32.88,0:21:36.24,Sub,,0,0,0,,And we want to use it ourselves. Exactly. Exactly.
+Dialogue: 0,0:21:36.24,0:21:43.12,Sub,,0,0,0,,We're going to start, in Germany in 2026, a first fully AI driven adaptive manufacturing site.
+Dialogue: 0,0:21:43.68,0:21:49.62,Sub,,0,0,0,,We bring an AI brain on top of our software defined automation and our operations software,
+Dialogue: 0,0:21:49.62,0:21:55.04,Sub,,0,0,0,,which basically consumes that what a digital twin produces when it comes to beauty.
+Dialogue: 0,0:21:55.04,0:21:57.20,Sub,,0,0,0,,We do that in real time.
+Dialogue: 0,0:21:57.20,0:21:58.64,Sub,,0,0,0,,That's right. In real time.
+Dialogue: 0,0:21:58.64,0:22:00.56,Sub,,0,0,0,,So you can really control the manufacturing.
+Dialogue: 0,0:22:00.56,0:22:05.44,Sub,,0,0,0,,So our partnership we work together and run Siemens factories.
+Dialogue: 0,0:22:05.44,0:22:09.58,Sub,,0,0,0,,Meanwhile, we have our partner Foxconn working with us,
+Dialogue: 0,0:22:09.58,0:22:14.56,Sub,,0,0,0,,United States to run the factories for building AI supercomputers.
+Dialogue: 0,0:22:14.56,0:22:16.88,Sub,,0,0,0,,And so this this partnership is really incredible.
+Dialogue: 0,0:22:16.88,0:22:19.12,Sub,,0,0,0,,We've talked about design. We talked about simulation.
+Dialogue: 0,0:22:19.12,0:22:22.94,Sub,,0,0,0,,Now we're talking about manufacturing all powered by GPUs,
+Dialogue: 0,0:22:22.94,0:22:28.08,Sub,,0,0,0,,all powered by CUDA, all powered by Siemens, and, you know, all powered by AI.
+Dialogue: 0,0:22:28.08,0:22:32.96,Sub,,0,0,0,,To see an example of how Foxconn is using the technology already.
+Dialogue: 0,0:22:32.96,0:22:38.82,Sub,,0,0,0,,And again, the AI layer on top, the AI brain which connects to the real world data and
+Dialogue: 0,0:22:38.82,0:22:41.68,Sub,,0,0,0,,real time data makes and it looks so real.
+Dialogue: 0,0:22:41.68,0:22:44.72,Sub,,0,0,0,,But, you know, this is a digital twin. It's a digital twin.
+Dialogue: 0,0:22:44.72,0:22:46.16,Sub,,0,0,0,,This looks so incredibly real.
+Dialogue: 0,0:22:46.16,0:22:48.96,Sub,,0,0,0,,And that's that's really the whole purpose of the digital twin.
+Dialogue: 0,0:22:48.96,0:22:55.28,Sub,,0,0,0,,It has to it has to in every physically important way and operationally important way.
+Dialogue: 0,0:22:55.28,0:23:03.76,Sub,,0,0,0,,It has to be a perfect representation. And so, the ideal is that the digital twin and the real version of it — there
+Dialogue: 0,0:23:03.76,0:23:07.70,Sub,,0,0,0,,is no ability for the computer to know the difference,
+Dialogue: 0,0:23:07.70,0:23:15.52,Sub,,0,0,0,,to the extent that our AIs can't tell whether they're inside the digital twin or inside the physical world.
+Dialogue: 0,0:23:15.52,0:23:18.56,Sub,,0,0,0,,That's our goal. Exactly. Yeah.
+Dialogue: 0,0:23:18.56,0:23:20.72,Sub,,0,0,0,,There are other factories too.
+Dialogue: 0,0:23:20.72,0:23:22.24,Sub,,0,0,0,,They produce intelligence.
+Dialogue: 0,0:23:22.24,0:23:24.56,Sub,,0,0,0,,We call it AI factories.
+Dialogue: 0,0:23:24.56,0:23:26.88,Sub,,0,0,0,,So that's the next area of collaboration.
+Dialogue: 0,0:23:26.88,0:23:33.36,Sub,,0,0,0,,And I know that when you talk about Vera Rubin, you need obviously new AI factories.
+Dialogue: 0,0:23:33.36,0:23:37.64,Sub,,0,0,0,,They have to be designed differently and you're building one on your own, as we speak,
+Dialogue: 0,0:23:37.64,0:23:42.08,Sub,,0,0,0,,you know, so we might want to share about the challenges with what needs to be different.
+Dialogue: 0,0:23:42.08,0:23:49.42,Sub,,0,0,0,,Well, if you take a look at look at the, the the reason why I don't call it a data center,
+Dialogue: 0,0:23:49.42,0:23:55.79,Sub,,0,0,0,,a data center is, a place where, where people store data, these, these plants,
+Dialogue: 0,0:23:55.79,0:24:02.64,Sub,,0,0,0,,in the case of a one gigawatt data center or one gigawatt factory, it's $50 billion.
+Dialogue: 0,0:24:02.64,0:24:06.56,Sub,,0,0,0,,The investment level is unheard of of any type of factory.
+Dialogue: 0,0:24:06.56,0:24:07.20,Sub,,0,0,0,,Ever, ever.
+Dialogue: 0,0:24:07.20,0:24:10.80,Sub,,0,0,0,,The world's ever built the amount of technology and size is incredible.
+Dialogue: 0,0:24:10.80,0:24:14.55,Sub,,0,0,0,,And so if you're building something that costs $50 billion,
+Dialogue: 0,0:24:14.55,0:24:18.56,Sub,,0,0,0,,you want to make sure there is absolutely zero scheduled delay.
+Dialogue: 0,0:24:18.56,0:24:21.28,Sub,,0,0,0,,You're not going to be able to tolerate design changes.
+Dialogue: 0,0:24:21.28,0:24:24.08,Sub,,0,0,0,,You're going to have to make sure that we create the digital twin.
+Dialogue: 0,0:24:24.08,0:24:25.20,Sub,,0,0,0,,We plan it upfront.
+Dialogue: 0,0:24:25.20,0:24:27.44,Sub,,0,0,0,,We simulate everything upfront.
+Dialogue: 0,0:24:27.44,0:24:29.92,Sub,,0,0,0,,We're pushing the the power.
+Dialogue: 0,0:24:29.92,0:24:31.12,Sub,,0,0,0,,We're pushing electricity.
+Dialogue: 0,0:24:31.12,0:24:33.68,Sub,,0,0,0,,We're we're going to push cooling all the way to the limit.
+Dialogue: 0,0:24:33.68,0:24:40.40,Sub,,0,0,0,,And so we don't simulate this entire digital, this factory in a digital twin, we have no chance of success.
+Dialogue: 0,0:24:40.40,0:24:46.38,Sub,,0,0,0,,And then, of course, once you operate it, managing, all of these computers, these AI supercomputers,
+Dialogue: 0,0:24:46.38,0:24:51.52,Sub,,0,0,0,,the networking, the storage and running it all at the precision, we need to run it at.
+Dialogue: 0,0:24:51.52,0:24:53.92,Sub,,0,0,0,,The control of it is incredible.
+Dialogue: 0,0:24:53.92,0:24:57.36,Sub,,0,0,0,,So you're controlling, of course, the management of the systems.
+Dialogue: 0,0:24:57.36,0:25:00.00,Sub,,0,0,0,,You're controlling the power. You're controlling the cooling.
+Dialogue: 0,0:25:00.00,0:25:05.44,Sub,,0,0,0,,And this entire system is essentially one giant factory, and it's running all the time.
+Dialogue: 0,0:25:05.44,0:25:09.76,Sub,,0,0,0,,And so when you put that much, it puts that much capital at work.
+Dialogue: 0,0:25:09.76,0:25:13.84,Sub,,0,0,0,,You better make sure that the uptime is perfect and always.
+Dialogue: 0,0:25:13.84,0:25:17.76,Sub,,0,0,0,,And then you're going to make sure that that your scheduled delay is basically zero.
+Dialogue: 0,0:25:17.76,0:25:23.58,Sub,,0,0,0,,And, and without us working together and building these together in a digital twin,
+Dialogue: 0,0:25:23.58,0:25:26.32,Sub,,0,0,0,,the chance of success is extremely low.
+Dialogue: 0,0:25:26.32,0:25:28.24,Sub,,0,0,0,,Exactly. Yeah. We can build them faster.
+Dialogue: 0,0:25:28.24,0:25:29.20,Sub,,0,0,0,,This is no different.
+Dialogue: 0,0:25:29.20,0:25:31.52,Sub,,0,0,0,,You know, Roland, this is no different than NVIDIA today.
+Dialogue: 0,0:25:31.52,0:25:36.88,Sub,,0,0,0,,The idea that we would design chips without software is completely illogical, right?
+Dialogue: 0,0:25:36.88,0:25:40.95,Sub,,0,0,0,,The idea that you would design these electronic systems without design software and
+Dialogue: 0,0:25:40.95,0:25:42.72,Sub,,0,0,0,,verification software in simulation.
+Dialogue: 0,0:25:42.72,0:25:44.32,Sub,,0,0,0,,So come on, forget it.
+Dialogue: 0,0:25:44.32,0:25:50.30,Sub,,0,0,0,,And so so the the in the future the idea that we would build plants, manufacturing plants,
+Dialogue: 0,0:25:50.30,0:25:54.56,Sub,,0,0,0,,whether it's a car plant or a chip plant or an AI factory plant,
+Dialogue: 0,0:25:54.56,0:26:02.00,Sub,,0,0,0,,the idea that we would build any of them without first doing it in the digital twin is completely inconceivable.
+Dialogue: 0,0:26:02.00,0:26:06.74,Sub,,0,0,0,,And the idea that we would be able to operate these incredibly complex systems without
+Dialogue: 0,0:26:06.74,0:26:09.44,Sub,,0,0,0,,artificial intelligence completely inconceivable.
+Dialogue: 0,0:26:09.44,0:26:15.52,Sub,,0,0,0,,And so, so I think that we know that future is here, and we know that the stakes are incredibly high,
+Dialogue: 0,0:26:15.52,0:26:20.16,Sub,,0,0,0,,and that's the reason why our partnership with Siemens is so important to me.
+Dialogue: 0,0:26:20.16,0:26:22.80,Sub,,0,0,0,,We built this, blueprint designs for our factories.
+Dialogue: 0,0:26:22.80,0:26:23.28,Sub,,0,0,0,,Together.
+Dialogue: 0,0:26:23.28,0:26:26.64,Sub,,0,0,0,,We have automation technology, which is much faster.
+Dialogue: 0,0:26:26.64,0:26:31.86,Sub,,0,0,0,,It's industrial automation technology because the demand pattern of AI factories is so fluctuating,
+Dialogue: 0,0:26:31.86,0:26:35.76,Sub,,0,0,0,,we know how to connect them to grids because we know how to operate grids.
+Dialogue: 0,0:26:35.76,0:26:38.40,Sub,,0,0,0,,But, you know, you've been doing it for 175 years.
+Dialogue: 0,0:26:38.40,0:26:39.44,Sub,,0,0,0,,Exactly. We do that.
+Dialogue: 0,0:26:39.44,0:26:44.48,Sub,,0,0,0,,We know how to do it After 175 years you’re going to get good at something.
+Dialogue: 0,0:26:44.48,0:26:49.92,Sub,,0,0,0,,Well, and what we also do for more than 175 years using our own technology.
+Dialogue: 0,0:26:49.92,0:26:50.32,Sub,,0,0,0,,That's right.
+Dialogue: 0,0:26:50.32,0:26:54.64,Sub,,0,0,0,,You know, which is the last area we want, I mean actually the people said,
+Dialogue: 0,0:26:54.64,0:26:57.44,Sub,,0,0,0,,don't use the saying we drink our own champagne.
+Dialogue: 0,0:26:57.44,0:27:00.40,Sub,,0,0,0,,So now we modify them to drink our own beer or whatever.
+Dialogue: 0,0:27:00.40,0:27:02.32,Sub,,0,0,0,,That's right. German company.
+Dialogue: 0,0:27:02.32,0:27:06.32,Sub,,0,0,0,,But we actually we, we use each other technologies, we look deeper into it.
+Dialogue: 0,0:27:06.32,0:27:07.92,Sub,,0,0,0,,What can we do more and better.
+Dialogue: 0,0:27:07.92,0:27:10.80,Sub,,0,0,0,,And it starts, for example, with the plan in Germany.
+Dialogue: 0,0:27:10.80,0:27:12.32,Sub,,0,0,0,,I was talking about it's talk.
+Dialogue: 0,0:27:12.32,0:27:17.34,Sub,,0,0,0,,We talk about EDA software simulation and bringing that to the next level to speed
+Dialogue: 0,0:27:17.34,0:27:19.36,Sub,,0,0,0,,up our, each other's development.
+Dialogue: 0,0:27:19.36,0:27:20.24,Sub,,0,0,0,,It's incredible.
+Dialogue: 0,0:27:20.24,0:27:24.80,Sub,,0,0,0,,We're going to we're going to work together to accelerate all of your EDA software,
+Dialogue: 0,0:27:24.80,0:27:30.40,Sub,,0,0,0,,which we can then use to design our chips faster so that we could accelerate your EDA software faster.
+Dialogue: 0,0:27:30.40,0:27:36.99,Sub,,0,0,0,,We're going to we're going to we're going to use we're going to accelerate all of your Simcenter software
+Dialogue: 0,0:27:36.99,0:27:41.70,Sub,,0,0,0,,so that we could use it to design and simulate our our AI factories faster,
+Dialogue: 0,0:27:41.70,0:27:45.84,Sub,,0,0,0,,so that we could create AIs that makes AI, makes simcenter faster.
+Dialogue: 0,0:27:45.84,0:27:51.47,Sub,,0,0,0,,And and if you look at this and we're going to we're going to, we're going to use,
+Dialogue: 0,0:27:51.47,0:27:58.82,Sub,,0,0,0,,Siemens so that we could automate our factories to build, even more amazing supercomputers so that we could
+Dialogue: 0,0:27:58.82,0:28:02.80,Sub,,0,0,0,,create AIs to make your AI factories even more productive.
+Dialogue: 0,0:28:02.80,0:28:09.20,Sub,,0,0,0,,Doesn't that sound like the perfect partnership of two companies coming together?
+Dialogue: 0,0:28:09.20,0:28:21.28,Sub,,0,0,0,,Yeah. And that's why that's why whenever Roland reaches out and he needs a bug fix, I fix it right away.
+Dialogue: 0,0:28:21.28,0:28:26.24,Sub,,0,0,0,,Because I fix his bug, which directly comes back to my company, my engineers go faster.
+Dialogue: 0,0:28:26.24,0:28:28.56,Sub,,0,0,0,,And I tell you this works both ways.
+Dialogue: 0,0:28:28.56,0:28:32.64,Sub,,0,0,0,,So that’s, You have a call. So Jensen.
+Dialogue: 0,0:28:32.64,0:28:35.52,Sub,,0,0,0,,Thank you very much for the partnership. Thank you, The best is ahead of us.
+Dialogue: 0,0:28:36.40,0:28:44.32,Sub,,0,0,0,,This is a, we are at the beginning of a new industrial revolution and and what what perfect company for all of that capability
+Dialogue: 0,0:28:44.32,0:28:49.28,Sub,,0,0,0,,to come together than the company at the center of every industrial revolution.
+Dialogue: 0,0:28:49.28,0:28:52.32,Sub,,0,0,0,,And so it's a great privilege to partner with Siemens.
+Dialogue: 0,0:28:52.32,0:28:59.91,Sub,,0,0,0,,And it's incredible to be friends with you and and to see your, your vision of Siemens come together and,
+Dialogue: 0,0:28:59.91,0:29:06.64,Sub,,0,0,0,,for our journey of, you know, reinventing industry, to, achieve this milestone is incredible.
+Dialogue: 0,0:29:06.64,0:29:07.36,Sub,,0,0,0,,So thank you.
+Dialogue: 0,0:29:07.36,0:29:18.45,Sub,,0,0,0,,Siemens and Nvidia operating the industrial production system Well. When I last spoke at CES,
+Dialogue: 0,0:29:18.45,0:29:32.40,Sub,,0,0,0,,I shared a vision of the industrial metaverse, a vision for a virtual world that helps us make the real world better.
+Dialogue: 0,0:29:32.40,0:29:36.32,Sub,,0,0,0,,Today, we are making this vision a reality.
+Dialogue: 0,0:29:36.32,0:29:42.24,Sub,,0,0,0,,We are excited to launch our Digital Twin Composer.
+Dialogue: 0,0:29:42.24,0:29:49.64,Sub,,0,0,0,,With a Digital Twin Composer, you can create a virtual 3D model of any product, any plant,
+Dialogue: 0,0:29:49.64,0:29:56.88,Sub,,0,0,0,,any process, bring it to life in a photorealistic scene that you built and in real time.
+Dialogue: 0,0:29:56.88,0:30:06.97,Sub,,0,0,0,,The Digital Twin Composer is so powerful because you can connect the digital twin to the real world and to real time data,
+Dialogue: 0,0:30:06.97,0:30:14.16,Sub,,0,0,0,,from engineering data to weather data, even time series data coming from your machines.
+Dialogue: 0,0:30:14.16,0:30:20.40,Sub,,0,0,0,,And when something worked well or something went wrong, you can go back in time and you find out why.
+Dialogue: 0,0:30:20.40,0:30:25.84,Sub,,0,0,0,,Or you can jump to the future to simulate the scenario before you build it in the real world.
+Dialogue: 0,0:30:26.96,0:30:32.88,Sub,,0,0,0,,And if you want to unlock the full benefits of the Digital Twin Composer,
+Dialogue: 0,0:30:32.88,0:30:38.16,Sub,,0,0,0,,you connect it to our operations software and our hardware stack.
+Dialogue: 0,0:30:38.16,0:30:44.80,Sub,,0,0,0,,That when you can make real world changes from the virtual environment, optimize machine speed,
+Dialogue: 0,0:30:44.80,0:30:51.44,Sub,,0,0,0,,temperature, pressure, or any parameter that determines the quality in the yield of your plant.
+Dialogue: 0,0:30:52.16,0:30:57.28,Sub,,0,0,0,,This is how we combine the real and the digital worlds.
+Dialogue: 0,0:30:57.28,0:31:08.16,Sub,,0,0,0,,This Digital Twin Composer will be available on our Siemens Xcelerator marketplace in just a few moments.
+Dialogue: 0,0:31:08.16,0:31:14.64,Sub,,0,0,0,,PepsiCo PepsiCo is among the first companies to use it.
+Dialogue: 0,0:31:14.64,0:31:24.12,Sub,,0,0,0,,And this brings me to our next guest who is leading the way when it comes to the digitalization of PepsiCo,
+Dialogue: 0,0:31:24.12,0:31:31.20,Sub,,0,0,0,,making the company smarter, more efficient, more sustainable with industrial AI.
+Dialogue: 0,0:31:31.20,0:31:39.20,Sub,,0,0,0,,Please welcome Athina Kanioura.
+Dialogue: 0,0:31:47.76,0:31:49.12,Sub,,0,0,0,,It's a great year.
+Dialogue: 0,0:31:49.12,0:31:50.80,Sub,,0,0,0,,Your year, great year!
+Dialogue: 0,0:31:50.80,0:31:53.60,Sub,,0,0,0,,It is, it is. Yeah.
+Dialogue: 0,0:31:53.60,0:31:58.96,Sub,,0,0,0,,So tell us about the challenge PepsiCo's is navigating through.
+Dialogue: 0,0:31:58.96,0:32:04.48,Sub,,0,0,0,,And these challenges are very much alike to both the whole food and beverage industry.
+Dialogue: 0,0:32:05.28,0:32:06.16,Sub,,0,0,0,,Yeah of course.
+Dialogue: 0,0:32:06.16,0:32:11.26,Sub,,0,0,0,,And as Roland said I'm very privileged to be on stage with Roland and, you know,
+Dialogue: 0,0:32:11.26,0:32:15.92,Sub,,0,0,0,,PepsiCo has been pioneering some of these innovation with you and Nvidia.
+Dialogue: 0,0:32:15.92,0:32:22.10,Sub,,0,0,0,,So but from farm to shelf, PepsiCo, has been operating in a very extraordinary and very complex
+Dialogue: 0,0:32:22.10,0:32:25.36,Sub,,0,0,0,,environment because we have operations everywhere.
+Dialogue: 0,0:32:25.36,0:32:27.60,Sub,,0,0,0,,We serve billions of consumers.
+Dialogue: 0,0:32:27.60,0:32:29.84,Sub,,0,0,0,,We have billions of touch points per day.
+Dialogue: 0,0:32:29.84,0:32:35.68,Sub,,0,0,0,,So consumers expect the products to be everywhere every time.
+Dialogue: 0,0:32:35.68,0:32:37.04,Sub,,0,0,0,,In real time.
+Dialogue: 0,0:32:37.04,0:32:40.16,Sub,,0,0,0,,And we want to be able to fulfill the supply.
+Dialogue: 0,0:32:40.16,0:32:45.68,Sub,,0,0,0,,So imagine a world where you have demand spikes, where you have unusual events.
+Dialogue: 0,0:32:45.68,0:32:51.52,Sub,,0,0,0,,When you have tornadoes, you have to be able to fulfill this demand in a very digital way,
+Dialogue: 0,0:32:51.52,0:32:54.96,Sub,,0,0,0,,where the physical footprint cannot be a showstopper.
+Dialogue: 0,0:32:54.96,0:32:59.92,Sub,,0,0,0,,Right. So a ton of a supply chain and delivering.
+Dialogue: 0,0:32:59.92,0:33:03.20,Sub,,0,0,0,,Let's take a look at your existing warehouses.
+Dialogue: 0,0:33:03.20,0:33:08.92,Sub,,0,0,0,,Yeah. So I mean, many of you know, especially the ones that come from the manufacturing world,
+Dialogue: 0,0:33:08.92,0:33:14.88,Sub,,0,0,0,,we have great warehouses that are fully modernized, but we also have warehouses that are very old.
+Dialogue: 0,0:33:14.88,0:33:19.52,Sub,,0,0,0,,So in this specific case, this warehouse is half a century old.
+Dialogue: 0,0:33:19.52,0:33:24.48,Sub,,0,0,0,,And that means in the current state, it really cannot serve and deliver the demand.
+Dialogue: 0,0:33:24.48,0:33:28.08,Sub,,0,0,0,,That might change depending on the events.
+Dialogue: 0,0:33:28.08,0:33:29.36,Sub,,0,0,0,,So what is the answer?
+Dialogue: 0,0:33:29.36,0:33:30.48,Sub,,0,0,0,,And the answer cannot.
+Dialogue: 0,0:33:30.48,0:33:33.84,Sub,,0,0,0,,These cannot be I will just build more capacity.
+Dialogue: 0,0:33:33.84,0:33:39.56,Sub,,0,0,0,,The answer must be I need to find a way to maximize the capacity that I have to drive more
+Dialogue: 0,0:33:39.56,0:33:43.44,Sub,,0,0,0,,operational efficiency and therefore increase the throughput.
+Dialogue: 0,0:33:43.44,0:33:52.16,Sub,,0,0,0,,So what we wanted to do is adopt a digital first design approach, and that means to leverage the digital twins and
+Dialogue: 0,0:33:52.16,0:33:59.12,Sub,,0,0,0,,adopting AI at scale in all the parts of the operations where we were able to co-design and
+Dialogue: 0,0:33:59.12,0:34:04.40,Sub,,0,0,0,,simulate and optimize the layout before any physical building begins.
+Dialogue: 0,0:34:04.40,0:34:08.56,Sub,,0,0,0,,So and to do that, you decided to use our Digital Twin Composer.
+Dialogue: 0,0:34:09.84,0:34:11.52,Sub,,0,0,0,,Share your experience. Yes.
+Dialogue: 0,0:34:11.52,0:34:13.52,Sub,,0,0,0,,First of all, thank you.
+Dialogue: 0,0:34:14.16,0:34:15.44,Sub,,0,0,0,,Thank you for the partnership.
+Dialogue: 0,0:34:15.44,0:34:16.64,Sub,,0,0,0,,Thank you for the investment.
+Dialogue: 0,0:34:16.64,0:34:20.00,Sub,,0,0,0,,Thank you for taking our feedback into product innovation.
+Dialogue: 0,0:34:20.00,0:34:22.80,Sub,,0,0,0,,And today we just had a press release. Yes.
+Dialogue: 0,0:34:22.80,0:34:27.60,Sub,,0,0,0,,We are very excited to help save this technology in partnership with Nvidia.
+Dialogue: 0,0:34:27.60,0:34:31.84,Sub,,0,0,0,,And of course, Siemens this is the first of its kind for the industry.
+Dialogue: 0,0:34:31.84,0:34:38.32,Sub,,0,0,0,,It is how we build AI and digital twins into our operations across the board globally.
+Dialogue: 0,0:34:38.32,0:34:42.54,Sub,,0,0,0,,When we say operations, that is manufacturing, warehousing,
+Dialogue: 0,0:34:42.54,0:34:47.20,Sub,,0,0,0,,distribution centers, mixing centers and every part of logistics.
+Dialogue: 0,0:34:47.20,0:34:52.30,Sub,,0,0,0,,So the Digital Twin Composer allows us to do everything in the virtual world,
+Dialogue: 0,0:34:52.30,0:34:58.53,Sub,,0,0,0,,being able to simulate everything in a way where we don't have to spend a single dollar on the
+Dialogue: 0,0:34:58.53,0:35:02.64,Sub,,0,0,0,,physical plant before we know that design is the final design.
+Dialogue: 0,0:35:02.64,0:35:08.27,Sub,,0,0,0,,So therefore we are able to pull now massive amounts of data that we are able to
+Dialogue: 0,0:35:08.27,0:35:11.44,Sub,,0,0,0,,simulate in a unified, immersive environment.
+Dialogue: 0,0:35:11.44,0:35:17.76,Sub,,0,0,0,,That means we can create a beautiful, photorealistic way, which you saw before in the discussion.
+Dialogue: 0,0:35:17.76,0:35:19.92,Sub,,0,0,0,,And with the AI powered simulation.
+Dialogue: 0,0:35:19.92,0:35:27.04,Sub,,0,0,0,,Now we can explore hundreds or thousands of potential layouts to find the most efficient options.
+Dialogue: 0,0:35:27.04,0:35:34.32,Sub,,0,0,0,,Therefore, with a digital twin, this type of task that would have normally taken months now takes days.
+Dialogue: 0,0:35:34.32,0:35:41.20,Sub,,0,0,0,,Well, and the question would be then what does that do to your customers?
+Dialogue: 0,0:35:41.20,0:35:48.22,Sub,,0,0,0,,Yeah. Well obviously for us, making sure we serve our customers in the most efficient way where we provide the inventory
+Dialogue: 0,0:35:48.22,0:35:51.61,Sub,,0,0,0,,and we have the intelligent network where both the plants,
+Dialogue: 0,0:35:51.61,0:35:58.16,Sub,,0,0,0,,the warehouses and the network is able to anticipate the demand and fine tune operations in real time is a must.
+Dialogue: 0,0:35:58.16,0:36:02.72,Sub,,0,0,0,,So therefore, we have had significant impact even in the first three months.
+Dialogue: 0,0:36:02.72,0:36:08.24,Sub,,0,0,0,,So one good example is in the Gatorade plant in the US we use the Digital Twin Composer.
+Dialogue: 0,0:36:08.24,0:36:11.52,Sub,,0,0,0,,We were able to drive two very meaningful results.
+Dialogue: 0,0:36:11.52,0:36:16.08,Sub,,0,0,0,,One is to increase efficiency 20% just in three months.
+Dialogue: 0,0:36:16.08,0:36:21.28,Sub,,0,0,0,,And obviously if we were to look at we have estimated how this capabilities will benefit the company.
+Dialogue: 0,0:36:21.28,0:36:26.48,Sub,,0,0,0,,We estimate the CapEx reduction of 10 to 15% across all the operations.
+Dialogue: 0,0:36:26.48,0:36:28.72,Sub,,0,0,0,,So for us, this is just the beginning.
+Dialogue: 0,0:36:28.72,0:36:33.11,Sub,,0,0,0,,We are very hopeful about what this technology can do when it comes to serving our
+Dialogue: 0,0:36:33.11,0:36:34.88,Sub,,0,0,0,,customers, serving our consumers.
+Dialogue: 0,0:36:34.88,0:36:37.36,Sub,,0,0,0,,And I would really to thank you for the great partnership.
+Dialogue: 0,0:36:37.36,0:36:38.72,Sub,,0,0,0,,Thank you for the partnership.
+Dialogue: 0,0:36:38.72,0:36:40.64,Sub,,0,0,0,,And, this is just the start.
+Dialogue: 0,0:36:40.64,0:36:52.96,Sub,,0,0,0,,We want to see more and we will see more. Athina, Thank you very much. Thank you so much. Thank you.
+Dialogue: 0,0:36:52.96,0:36:59.12,Sub,,0,0,0,,You have seen the great impacts that the Digital Twin Composer is having on PepsiCo facilities.
+Dialogue: 0,0:36:59.12,0:37:03.63,Sub,,0,0,0,,Using this technology, even in the design phase of new plants matters,
+Dialogue: 0,0:37:03.63,0:37:10.65,Sub,,0,0,0,,especially in the United States, because it accelerates the ramp up of new manufacturing sites and allows our
+Dialogue: 0,0:37:10.65,0:37:14.52,Sub,,0,0,0,,customers to make them more productive and energy efficient.
+Dialogue: 0,0:37:14.52,0:37:18.80,Sub,,0,0,0,,KION uses our technology to transform warehouses entire supply chains too.
+Dialogue: 0,0:37:18.80,0:37:20.24,Sub,,0,0,0,,Let's have a look.
+Dialogue: 0,0:37:20.24,0:37:29.06,Sub,,0,0,0,,KION the supply chain solutions company is scaling up physical AI and automation solutions to orchestrate customer supply
+Dialogue: 0,0:37:29.06,0:37:35.26,Sub,,0,0,0,,chains inside the four walls and up and down the supply chain with AI, digital twins,
+Dialogue: 0,0:37:35.26,0:37:42.40,Sub,,0,0,0,,a new supply chain solution begins as a digital twin compressing solutioning from years to months.
+Dialogue: 0,0:37:43.12,0:37:48.00,Sub,,0,0,0,,You can learn more about the Digital Composer at our booth.
+Dialogue: 0,0:37:48.00,0:37:57.52,Sub,,0,0,0,,Also on this CES show floor when you will meet the team from PAVE 360.
+Dialogue: 0,0:37:57.52,0:38:04.92,Sub,,0,0,0,,PAVE 360 automotive is our digital twin for autonomous driving system,
+Dialogue: 0,0:38:04.92,0:38:09.36,Sub,,0,0,0,,and it's ready to use right off the shelf.
+Dialogue: 0,0:38:09.36,0:38:13.92,Sub,,0,0,0,,It replicates real vehicle hardware in the digital world.
+Dialogue: 0,0:38:13.92,0:38:18.32,Sub,,0,0,0,,Developers can simulate real world driving conditions.
+Dialogue: 0,0:38:18.32,0:38:25.36,Sub,,0,0,0,,They can test the autonomous system before a car even exists, and this accelerates the development.
+Dialogue: 0,0:38:25.36,0:38:31.81,Sub,,0,0,0,,PAVE 360 automotive also replicates how the software in the car behaves,
+Dialogue: 0,0:38:31.81,0:38:41.30,Sub,,0,0,0,,and better yet, it integrates the latest automotive IP from our partner ARM for advanced driver assistance
+Dialogue: 0,0:38:41.30,0:38:46.40,Sub,,0,0,0,,systems, infotainment and the AI driven cockpit features.
+Dialogue: 0,0:38:46.40,0:38:54.08,Sub,,0,0,0,,It's a solution that will scale autonomous driving faster with the power of industrial AI.
+Dialogue: 0,0:38:56.88,0:39:05.28,Sub,,0,0,0,,Now imagine what happens when we apply industrial AI to something more personal, even more complex.
+Dialogue: 0,0:39:05.28,0:39:09.44,Sub,,0,0,0,,Your body, your health.
+Dialogue: 0,0:39:09.44,0:39:12.08,Sub,,0,0,0,,Life sciences.
+Dialogue: 0,0:39:12.08,0:39:17.12,Sub,,0,0,0,,Bringing new medicines to the market costs a lot of time and money.
+Dialogue: 0,0:39:17.12,0:39:21.84,Sub,,0,0,0,,Over the last 50 years, these costs have risen dramatically.
+Dialogue: 0,0:39:21.84,0:39:29.60,Sub,,0,0,0,,It often takes more than ten years and costs are up to $2 billion.
+Dialogue: 0,0:39:29.60,0:39:34.56,Sub,,0,0,0,,Patients and pharmaceutical companies obviously want to have faster innovations.
+Dialogue: 0,0:39:34.56,0:39:42.00,Sub,,0,0,0,,That means tackling every step in the chain from early research to manufacturing.
+Dialogue: 0,0:39:42.00,0:39:46.48,Sub,,0,0,0,,And we bring AI to all these steps.
+Dialogue: 0,0:39:46.48,0:39:49.92,Sub,,0,0,0,,Let's take the example of a new cancer drug.
+Dialogue: 0,0:39:49.92,0:39:53.36,Sub,,0,0,0,,In research lab scientists create billions of data points.
+Dialogue: 0,0:39:53.36,0:40:00.65,Sub,,0,0,0,,Today, this data is scattered across industries and instruments and files and around the world
+Dialogue: 0,0:40:00.65,0:40:06.54,Sub,,0,0,0,,through our platform, Luma scientists use AI to bring this data together and
+Dialogue: 0,0:40:06.54,0:40:11.04,Sub,,0,0,0,,structure it so you can ask questions in natural language.
+Dialogue: 0,0:40:11.04,0:40:19.82,Sub,,0,0,0,,Next step, scientists identify the most promising molecular structure of the cancer drug with AI powered
+Dialogue: 0,0:40:19.82,0:40:24.80,Sub,,0,0,0,,simulations that can simulate the behavior of the molecule.
+Dialogue: 0,0:40:24.80,0:40:31.36,Sub,,0,0,0,,2.5 million times more efficiently than ever before.
+Dialogue: 0,0:40:31.36,0:40:39.20,Sub,,0,0,0,,And this includes how molecules move and flex, how they interact with each other, or how stable they are.
+Dialogue: 0,0:40:39.20,0:40:40.08,Sub,,0,0,0,,Over time.
+Dialogue: 0,0:40:42.08,0:40:50.05,Sub,,0,0,0,,But then, when you need to go from making a small batch in the lab to producing at scale without the
+Dialogue: 0,0:40:50.05,0:40:55.46,Sub,,0,0,0,,slightest deviation in the recipe, and with exactly the same result,
+Dialogue: 0,0:40:55.46,0:41:01.60,Sub,,0,0,0,,even for world class production experts, this means a lot of trial and error.
+Dialogue: 0,0:41:01.60,0:41:07.44,Sub,,0,0,0,,A lot of experiments in a bioreactor, and our digital twin of a bioreactor.
+Dialogue: 0,0:41:07.44,0:41:11.20,Sub,,0,0,0,,You can run these experiments in the digital world, first.
+Dialogue: 0,0:41:11.20,0:41:14.88,Sub,,0,0,0,,You simulate until you have the highest quality and the highest output.
+Dialogue: 0,0:41:14.88,0:41:20.56,Sub,,0,0,0,,And only then and only then you start the production.
+Dialogue: 0,0:41:20.56,0:41:27.12,Sub,,0,0,0,,Siemens technology accelerates all steps from discovery to manufacturing.
+Dialogue: 0,0:41:27.12,0:41:34.70,Sub,,0,0,0,,Life saving therapies can make it to the market as much as 50% faster,
+Dialogue: 0,0:41:34.70,0:41:39.04,Sub,,0,0,0,,and at every stage, AI speeds things up.
+Dialogue: 0,0:41:39.04,0:41:45.04,Sub,,0,0,0,,This requires powerful AI infrastructure too.
+Dialogue: 0,0:41:45.04,0:41:50.38,Sub,,0,0,0,,The GPUs used in the AI factories I talked about with Jensen,
+Dialogue: 0,0:41:50.38,0:41:57.20,Sub,,0,0,0,,but also the cloud infrastructure we get from partners like Microsoft on that.
+Dialogue: 0,0:41:57.20,0:42:01.12,Sub,,0,0,0,,Let's hear from my friend Satya Nadella.
+Dialogue: 0,0:42:02.16,0:42:03.52,Sub,,0,0,0,,Thanks so much, Roland.
+Dialogue: 0,0:42:03.52,0:42:06.96,Sub,,0,0,0,,It's fantastic to join all of you at CES.
+Dialogue: 0,0:42:06.96,0:42:14.32,Sub,,0,0,0,,In the industrial sector we have an incredible opportunity to bring together digital intelligence with physical
+Dialogue: 0,0:42:14.32,0:42:19.76,Sub,,0,0,0,,operations, to reinvent things that are designed, built and run in this era of AI.
+Dialogue: 0,0:42:19.76,0:42:25.92,Sub,,0,0,0,,And we're already seeing the industrial AI drive better outcomes in both productivity as well as in safety.
+Dialogue: 0,0:42:25.92,0:42:30.40,Sub,,0,0,0,,That's why our partnership with Siemens is so important to us at Microsoft.
+Dialogue: 0,0:42:30.40,0:42:35.70,Sub,,0,0,0,,By combining your deep domain expertise with our trusted cloud and AI capabilities,
+Dialogue: 0,0:42:35.70,0:42:40.61,Sub,,0,0,0,,we are helping our customers tackle some of today's most pressing challenges,
+Dialogue: 0,0:42:40.61,0:42:45.84,Sub,,0,0,0,,from sustainable energy and transportation to smart cities and precision medicine.
+Dialogue: 0,0:42:45.84,0:42:51.90,Sub,,0,0,0,,I'm especially excited about the core engineering work our teams are driving to build custom models and
+Dialogue: 0,0:42:51.90,0:42:55.20,Sub,,0,0,0,,agents that get trained with real world industrial data.
+Dialogue: 0,0:42:55.20,0:42:57.52,Sub,,0,0,0,,And of course, we're just getting started.
+Dialogue: 0,0:42:57.52,0:43:01.68,Sub,,0,0,0,,I could not be more optimistic about what we do together and achieve together.
+Dialogue: 0,0:43:01.68,0:43:03.76,Sub,,0,0,0,,Thank you all so very much.
+Dialogue: 0,0:43:03.76,0:43:07.92,Sub,,0,0,0,,Thank you Satya.
+Dialogue: 0,0:43:07.92,0:43:13.68,Sub,,0,0,0,,So, custom models, agents and of course Copilots.
+Dialogue: 0,0:43:13.68,0:43:21.36,Sub,,0,0,0,,Let's talk more about it with Jay Parikh.
+Dialogue: 0,0:43:28.24,0:43:35.68,Sub,,0,0,0,,Hi Nice seeing you So Jay, you are leading Microsoft's core AI team.
+Dialogue: 0,0:43:35.68,0:43:41.11,Sub,,0,0,0,,You put all AI experts together which tells me again this is a foundational technology
+Dialogue: 0,0:43:41.11,0:43:43.44,Sub,,0,0,0,,with skills across the whole company.
+Dialogue: 0,0:43:43.44,0:43:50.88,Sub,,0,0,0,,So, where are you in the step of really making this AI, journey creating impact for your customers?
+Dialogue: 0,0:43:50.88,0:43:53.36,Sub,,0,0,0,,Yeah. Well, first of all, thank you for the partnership.
+Dialogue: 0,0:43:53.36,0:43:57.44,Sub,,0,0,0,,Excited about what we're working on today and also going forward.
+Dialogue: 0,0:43:57.44,0:44:03.60,Sub,,0,0,0,,So as what we're seeing today is really three waves with more waves coming in terms of AI,
+Dialogue: 0,0:44:03.60,0:44:07.84,Sub,,0,0,0,,the first wave was really folks using AI as a chat bot, right?
+Dialogue: 0,0:44:07.84,0:44:11.04,Sub,,0,0,0,,Ask it simple questions, maybe do code completions.
+Dialogue: 0,0:44:11.04,0:44:16.01,Sub,,0,0,0,,The second wave is much more focused on delegating a specific task to AI,
+Dialogue: 0,0:44:16.01,0:44:21.11,Sub,,0,0,0,,may be giving it a task to do and come up with a market strategy, document,
+Dialogue: 0,0:44:21.11,0:44:26.08,Sub,,0,0,0,,or proposal to do these longer running, kind of more sophisticated tasks.
+Dialogue: 0,0:44:26.08,0:44:34.25,Sub,,0,0,0,,Now, what we're seeing emerging in this third wave is this set of agents working with and orchestrating a set of different
+Dialogue: 0,0:44:34.25,0:44:39.68,Sub,,0,0,0,,agents to be able to do asynchronous work, but much more complicated work, right?
+Dialogue: 0,0:44:39.68,0:44:41.36,Sub,,0,0,0,,Longer running tasks.
+Dialogue: 0,0:44:41.36,0:44:47.84,Sub,,0,0,0,,And it is this third wave that we're focused on building because you need multiple models.
+Dialogue: 0,0:44:47.84,0:44:49.84,Sub,,0,0,0,,You need to be able to train your own models, right?
+Dialogue: 0,0:44:49.84,0:44:52.24,Sub,,0,0,0,,You need to be able to bring in your enterprise data.
+Dialogue: 0,0:44:52.24,0:44:58.80,Sub,,0,0,0,,You need to be able to orchestrate these agents, but you also need to do it with security,
+Dialogue: 0,0:44:58.80,0:45:05.36,Sub,,0,0,0,,with observability, with compliance with all of that scale, enterprise ready abstractions.
+Dialogue: 0,0:45:05.36,0:45:11.68,Sub,,0,0,0,,Right. And it is this area in this third wave that I'm most excited for us to be working together,
+Dialogue: 0,0:45:11.68,0:45:17.68,Sub,,0,0,0,,because this third wave is how we bring this technology to specific use cases and industries.
+Dialogue: 0,0:45:17.68,0:45:24.48,Sub,,0,0,0,,But Roland, I'm really curious is like this third wave, how does this show up as you lead industrials with AI?
+Dialogue: 0,0:45:24.48,0:45:28.96,Sub,,0,0,0,,How is this manifesting with your customers? And, I mean, there are many examples.
+Dialogue: 0,0:45:28.96,0:45:32.08,Sub,,0,0,0,,I brought one, it's just a very exciting one.
+Dialogue: 0,0:45:32.08,0:45:37.44,Sub,,0,0,0,,We talk about Rolls Royce they do turbines for airplanes.
+Dialogue: 0,0:45:37.44,0:45:42.56,Sub,,0,0,0,,And I mean, obviously you want to have these turbines to to work hundred percent reliable.
+Dialogue: 0,0:45:42.56,0:45:45.04,Sub,,0,0,0,,And of course fuel efficient.
+Dialogue: 0,0:45:45.04,0:45:49.10,Sub,,0,0,0,,And within these turbines they have alot of design parts coming,
+Dialogue: 0,0:45:49.10,0:45:53.60,Sub,,0,0,0,,these are designed with Siemens software and technology from Microsoft.
+Dialogue: 0,0:45:53.60,0:45:56.40,Sub,,0,0,0,,And there's a particular one which is a hydraulic pump.
+Dialogue: 0,0:45:56.40,0:45:59.04,Sub,,0,0,0,,And that makes this machine turning.
+Dialogue: 0,0:45:59.04,0:46:03.17,Sub,,0,0,0,,So this pump has now a digital twin of the pump itself,
+Dialogue: 0,0:46:03.17,0:46:07.60,Sub,,0,0,0,,but it also is a digital twin of the machines machining it.
+Dialogue: 0,0:46:07.60,0:46:10.32,Sub,,0,0,0,,And we simulate the whole process.
+Dialogue: 0,0:46:10.32,0:46:11.44,Sub,,0,0,0,,In programing it.
+Dialogue: 0,0:46:11.44,0:46:17.36,Sub,,0,0,0,,And we use your technologies together with ours and simulated with amazing outcomes.
+Dialogue: 0,0:46:17.36,0:46:20.64,Sub,,0,0,0,,These pumps are much stiffer and lighter.
+Dialogue: 0,0:46:20.64,0:46:24.88,Sub,,0,0,0,,But we use Microsoft as well here and AI technologies for.
+Dialogue: 0,0:46:24.88,0:46:29.60,Sub,,0,0,0,,Yeah. And excited about the other things that we're working on with these joint AI copilots.
+Dialogue: 0,0:46:29.60,0:46:34.80,Sub,,0,0,0,,Right. We're able to help reduce the programing time for can by 80%.
+Dialogue: 0,0:46:34.80,0:46:38.56,Sub,,0,0,0,,Drove drove up productivity in the factory by 30%.
+Dialogue: 0,0:46:38.56,0:46:44.48,Sub,,0,0,0,,And then also excited to work with your team to bring the GitHub platform to all of the developers to
+Dialogue: 0,0:46:44.48,0:46:48.00,Sub,,0,0,0,,drive that innovation, that value for your customers faster.
+Dialogue: 0,0:46:48.00,0:46:52.00,Sub,,0,0,0,,Again, all built together on Microsoft's cloud and AI.
+Dialogue: 0,0:46:52.00,0:46:54.64,Sub,,0,0,0,,Exactly. And there are many more examples.
+Dialogue: 0,0:46:54.64,0:46:55.92,Sub,,0,0,0,,The demand is huge.
+Dialogue: 0,0:46:55.92,0:47:03.12,Sub,,0,0,0,,And the benefits of not only shortening the development time, but also the production time is amazing.
+Dialogue: 0,0:47:03.12,0:47:06.96,Sub,,0,0,0,,We talked about technology, but you cannot stop there.
+Dialogue: 0,0:47:06.96,0:47:10.59,Sub,,0,0,0,,And we know that you're very passionate about also the the other part,
+Dialogue: 0,0:47:10.59,0:47:14.16,Sub,,0,0,0,,the cultural, the way how you transform the you have seen the people.
+Dialogue: 0,0:47:14.16,0:47:14.64,Sub,,0,0,0,,It's hard.
+Dialogue: 0,0:47:14.64,0:47:15.52,Sub,,0,0,0,,It's it's hard.
+Dialogue: 0,0:47:15.52,0:47:18.40,Sub,,0,0,0,,I know that's the let's talk about it. Yeah.
+Dialogue: 0,0:47:18.40,0:47:24.32,Sub,,0,0,0,,So you know, I spent probably last year talking to about 2 or 300 customers.
+Dialogue: 0,0:47:24.32,0:47:32.60,Sub,,0,0,0,,And it was fascinating because somewhere between probably 70 and 80% of my conversations with customers started or ended or was
+Dialogue: 0,0:47:32.60,0:47:38.08,Sub,,0,0,0,,dominated by this topic of change, about culture, about people, about organizations.
+Dialogue: 0,0:47:38.08,0:47:40.88,Sub,,0,0,0,,And it was such an interesting set of conversations.
+Dialogue: 0,0:47:40.88,0:47:45.61,Sub,,0,0,0,,And my kind of three current takeaways from those conversations were, one is like,
+Dialogue: 0,0:47:45.61,0:47:51.04,Sub,,0,0,0,,we're all learning together, and we're sharing openly about what's happening in organizations,
+Dialogue: 0,0:47:51.04,0:47:56.00,Sub,,0,0,0,,small startups to, you know, companies that are much, much, much bigger multinational.
+Dialogue: 0,0:47:56.00,0:48:00.40,Sub,,0,0,0,,So this culture of change is something that we have to share openly and work together on.
+Dialogue: 0,0:48:00.40,0:48:05.68,Sub,,0,0,0,,The second thing that I noticed and comes up in conversations is actually many of the employees.
+Dialogue: 0,0:48:05.68,0:48:09.52,Sub,,0,0,0,,Many of the workers are using this technology in their personal lives, right?
+Dialogue: 0,0:48:09.52,0:48:10.48,Sub,,0,0,0,,They're using it.
+Dialogue: 0,0:48:10.48,0:48:16.32,Sub,,0,0,0,,They're actually really sophisticated with it for family, for personal growth, etc.
+Dialogue: 0,0:48:16.32,0:48:22.56,Sub,,0,0,0,,but there are institutional headwinds to adopting it, using it inside the company, whether it be compliance,
+Dialogue: 0,0:48:22.56,0:48:28.80,Sub,,0,0,0,,whether it be risk, whether it be security, whether it be finance, whether it be just misaligned incentives.
+Dialogue: 0,0:48:28.80,0:48:34.10,Sub,,0,0,0,,Right. And then so it is our job to try to work and try to unlock and this value of
+Dialogue: 0,0:48:34.10,0:48:36.40,Sub,,0,0,0,,this creativity, this collaboration.
+Dialogue: 0,0:48:36.40,0:48:42.88,Sub,,0,0,0,,And then third thing that I always encourage folks to do is really the potential intelligence of these models.
+Dialogue: 0,0:48:42.88,0:48:48.18,Sub,,0,0,0,,The capabilities of the platforms that we're building here at Microsoft are so much
+Dialogue: 0,0:48:48.18,0:48:50.80,Sub,,0,0,0,,more capable than what we realized today.
+Dialogue: 0,0:48:50.80,0:48:58.35,Sub,,0,0,0,,So my biggest encouragement to myself, to my teams, to our partners, is to really raise our level of ambition,
+Dialogue: 0,0:48:58.35,0:49:03.84,Sub,,0,0,0,,of what we can do with AI to drive the world forward and to deliver more impact.
+Dialogue: 0,0:49:03.84,0:49:06.40,Sub,,0,0,0,,And I tell you I can say it from my perspective.
+Dialogue: 0,0:49:06.40,0:49:11.12,Sub,,0,0,0,,We see a lot of this changes also in working with you, working with our customers, but also with you.
+Dialogue: 0,0:49:11.12,0:49:12.72,Sub,,0,0,0,,You come from a different environment,
+Dialogue: 0,0:49:12.72,0:49:16.16,Sub,,0,0,0,,but we bring that together to our customers and they do appreciate it, I tell you.
+Dialogue: 0,0:49:16.16,0:49:18.00,Sub,,0,0,0,,Thank you very much for doing that.
+Dialogue: 0,0:49:18.00,0:49:20.64,Sub,,0,0,0,,And, this is just the start. Yes. Thank you.
+Dialogue: 0,0:49:20.64,0:49:27.60,Sub,,0,0,0,,Thank you for the partnership. Thank you.
+Dialogue: 0,0:49:27.60,0:49:33.92,Sub,,0,0,0,,So more powerful industrial copilots and now new Copilots.
+Dialogue: 0,0:49:33.92,0:49:42.32,Sub,,0,0,0,,Today at CES, we are launching nine additional AI powered Siemens Industrial Copilots.
+Dialogue: 0,0:49:42.32,0:49:50.16,Sub,,0,0,0,,They bring intelligence along the entire industrial value chain, transforming how we design,
+Dialogue: 0,0:49:50.16,0:49:57.84,Sub,,0,0,0,,engineer and operate and well to help everyone access this kind of technology more easily.
+Dialogue: 0,0:49:57.84,0:50:04.56,Sub,,0,0,0,,We are now putting it in the hands of our Shopfloor colleagues.
+Dialogue: 0,0:50:04.56,0:50:11.36,Sub,,0,0,0,,Or to be more precise, on their faces. Together with META.
+Dialogue: 0,0:50:11.36,0:50:15.68,Sub,,0,0,0,,We are making Rayban META glasses for industrial AI.
+Dialogue: 0,0:50:15.68,0:50:19.52,Sub,,0,0,0,,I actually we do not use the tinted ones.
+Dialogue: 0,0:50:19.52,0:50:20.48,Sub,,0,0,0,,As you can imagine.
+Dialogue: 0,0:50:20.48,0:50:22.32,Sub,,0,0,0,,Maybe if the sun is shining.
+Dialogue: 0,0:50:22.32,0:50:25.52,Sub,,0,0,0,,But, there are also, natural ones.
+Dialogue: 0,0:50:25.52,0:50:31.14,Sub,,0,0,0,,And, they tell our colleagues to get real time audio guidance through the glasses,
+Dialogue: 0,0:50:31.14,0:50:34.56,Sub,,0,0,0,,which button to press, which parameters to change.
+Dialogue: 0,0:50:34.56,0:50:41.68,Sub,,0,0,0,,Let's take a look at one of our factories, where these glasses will turn colleagues into connected
+Dialogue: 0,0:50:41.68,0:50:45.68,Sub,,0,0,0,,experts so they can have more impact in the real world.
+Dialogue: 0,0:50:45.68,0:50:47.44,Sub,,0,0,0,,Handsfree.
+Dialogue: 0,0:50:47.44,0:50:52.24,Sub,,0,0,0,,Hi, I'm Sarah, I just started working at this factory.
+Dialogue: 0,0:50:52.24,0:50:54.64,Sub,,0,0,0,,Honestly, there's a ton to learn.
+Dialogue: 0,0:50:54.64,0:50:58.96,Sub,,0,0,0,,It's great having AI from Siemens to help me get familiar with everything.
+Dialogue: 0,0:50:58.96,0:51:00.08,Sub,,0,0,0,,Good morning Sarah.
+Dialogue: 0,0:51:00.08,0:51:04.56,Sub,,0,0,0,,Let's take a quick look at how the last shift went and what's coming up.
+Dialogue: 0,0:51:04.56,0:51:10.32,Sub,,0,0,0,,Today, you'll be operating the robotic assembly line.
+Dialogue: 0,0:51:10.32,0:51:15.76,Sub,,0,0,0,,I've noticed an issue with some sensors at cell four that could lead to assembly faults later.
+Dialogue: 0,0:51:15.76,0:51:19.28,Sub,,0,0,0,,A reset now can prevent that.
+Dialogue: 0,0:51:19.28,0:51:21.60,Sub,,0,0,0,,Should I guide you through the process?
+Dialogue: 0,0:51:21.60,0:51:25.20,Sub,,0,0,0,,What I love about my AI is how easy it is to use.
+Dialogue: 0,0:51:25.20,0:51:32.46,Sub,,0,0,0,,It brings together live machine data, knowledge from my colleagues and all of our standard operating
+Dialogue: 0,0:51:32.46,0:51:38.20,Sub,,0,0,0,,procedures, and explains everything in a way that makes sense to me at my pace,
+Dialogue: 0,0:51:38.20,0:51:42.56,Sub,,0,0,0,,in my language, and now select restart with AI from Siemens.
+Dialogue: 0,0:51:42.56,0:51:50.88,Sub,,0,0,0,,I can solve problems efficiently, quickly, confidently.
+Dialogue: 0,0:51:50.88,0:51:57.52,Sub,,0,0,0,,The first test show that colleagues are more confident in their work, and they're also more productive.
+Dialogue: 0,0:51:57.52,0:51:59.68,Sub,,0,0,0,,That's impact in the real world.
+Dialogue: 0,0:51:59.68,0:52:03.20,Sub,,0,0,0,,By scaling industrial AI.
+Dialogue: 0,0:52:05.44,0:52:15.51,Sub,,0,0,0,,But we're heading for another huge bottleneck power electric power AI factories and
+Dialogue: 0,0:52:15.51,0:52:20.48,Sub,,0,0,0,,data require gigawatts of electric power.
+Dialogue: 0,0:52:20.48,0:52:31.84,Sub,,0,0,0,,Now, what if what if you had an energy source that was clean, safe, affordable, and practically limitless?
+Dialogue: 0,0:52:31.84,0:52:36.08,Sub,,0,0,0,,That's the promise of fusion power.
+Dialogue: 0,0:52:36.08,0:52:39.28,Sub,,0,0,0,,Which brings me to my next guest.
+Dialogue: 0,0:52:39.28,0:52:47.60,Sub,,0,0,0,,Commonwealth Fusion Systems is working on the world's first commercially viable machine to make fusion real.
+Dialogue: 0,0:52:47.60,0:52:58.24,Sub,,0,0,0,,Please welcome Bob Mumgaard.
+Dialogue: 0,0:52:58.24,0:53:05.28,Sub,,0,0,0,,Hello, Hi, Bob So, for the starters, what is fusion?
+Dialogue: 0,0:53:05.28,0:53:06.72,Sub,,0,0,0,,That's a good question. So?
+Dialogue: 0,0:53:06.72,0:53:08.56,Sub,,0,0,0,,So fusion is the power of the universe.
+Dialogue: 0,0:53:08.56,0:53:10.24,Sub,,0,0,0,,It's the power of the stars.
+Dialogue: 0,0:53:10.24,0:53:15.04,Sub,,0,0,0,,And what we want to do is build machines here on Earth that create that power, that harness it.
+Dialogue: 0,0:53:15.04,0:53:20.00,Sub,,0,0,0,,And that would mean that we would go from an energy system that is about natural resource
+Dialogue: 0,0:53:20.00,0:53:23.12,Sub,,0,0,0,,consumption to an energy system that's about technology.
+Dialogue: 0,0:53:23.12,0:53:24.72,Sub,,0,0,0,,Can you build these machines?
+Dialogue: 0,0:53:24.72,0:53:27.20,Sub,,0,0,0,,How fast can you build them? How well do they run?
+Dialogue: 0,0:53:27.20,0:53:33.44,Sub,,0,0,0,,And we work on a type of machine called a tokamak, basically a bottle that holds a star inside of it.
+Dialogue: 0,0:53:33.44,0:53:36.40,Sub,,0,0,0,,So these are massive machines.
+Dialogue: 0,0:53:36.40,0:53:41.76,Sub,,0,0,0,,And there are for decades researchers, engineers trying to make it.
+Dialogue: 0,0:53:41.76,0:53:44.80,Sub,,0,0,0,,So tell us why should it work now. Right.
+Dialogue: 0,0:53:44.80,0:53:52.24,Sub,,0,0,0,,So we're at CES where many of the technologies we see, you know, were ideas even just five years ago.
+Dialogue: 0,0:53:52.24,0:53:56.23,Sub,,0,0,0,,But the technical stack that has been developed from simulation tools,
+Dialogue: 0,0:53:56.23,0:54:00.40,Sub,,0,0,0,,from the physical understanding, has enabled a lot of these technologies.
+Dialogue: 0,0:54:00.40,0:54:01.92,Sub,,0,0,0,,And fusion is no different.
+Dialogue: 0,0:54:01.92,0:54:07.52,Sub,,0,0,0,,We have very large simulations where we understand the underlying physics of the process.
+Dialogue: 0,0:54:07.52,0:54:12.45,Sub,,0,0,0,,We can layer that into manufacturing these machines that are complex,
+Dialogue: 0,0:54:12.45,0:54:15.60,Sub,,0,0,0,,that perform these very delicate procedures.
+Dialogue: 0,0:54:15.60,0:54:20.00,Sub,,0,0,0,,And we can build all that up into a plant that makes makes energy.
+Dialogue: 0,0:54:20.00,0:54:24.72,Sub,,0,0,0,,And that's that whole stacks enabling this entire industry.
+Dialogue: 0,0:54:24.72,0:54:28.29,Sub,,0,0,0,,So let's go a little bit deeper into these challenges, because I mean,
+Dialogue: 0,0:54:28.29,0:54:34.16,Sub,,0,0,0,,putting a complex machine together is obviously very complicated, but you also have to produce it at the same time.
+Dialogue: 0,0:54:34.16,0:54:37.52,Sub,,0,0,0,,So you have to design and manufacture and that's what you do.
+Dialogue: 0,0:54:37.52,0:54:39.76,Sub,,0,0,0,,Also with the software from Siemens.
+Dialogue: 0,0:54:39.76,0:54:41.36,Sub,,0,0,0,,So that that's right.
+Dialogue: 0,0:54:41.36,0:54:44.72,Sub,,0,0,0,,This infusion, we're developing an entire new industry.
+Dialogue: 0,0:54:44.72,0:54:50.00,Sub,,0,0,0,,You can't just go and buy a fusion plant or a fusion part.
+Dialogue: 0,0:54:50.00,0:54:55.44,Sub,,0,0,0,,We actually have to take it from, you know, the first principles of how do these magnets work?
+Dialogue: 0,0:54:55.44,0:55:01.88,Sub,,0,0,0,,How do you manufacture them in a factory that can take new designs really quickly, that can iterate really quickly,
+Dialogue: 0,0:55:01.88,0:55:06.64,Sub,,0,0,0,,they can compare test results, the simulation tools and see where there's a mismatch.
+Dialogue: 0,0:55:06.64,0:55:08.00,Sub,,0,0,0,,What we don't understand.
+Dialogue: 0,0:55:08.00,0:55:10.40,Sub,,0,0,0,,And this produces a huge amount of data.
+Dialogue: 0,0:55:10.40,0:55:12.80,Sub,,0,0,0,,It produces a huge amount of insight.
+Dialogue: 0,0:55:12.80,0:55:14.24,Sub,,0,0,0,,Now how do you harness that.
+Dialogue: 0,0:55:14.24,0:55:20.28,Sub,,0,0,0,,And that's where we use Siemens technology from the design of the actual parts to how the factory runs,
+Dialogue: 0,0:55:20.28,0:55:23.15,Sub,,0,0,0,,to how the plant itself is controlling, you know,
+Dialogue: 0,0:55:23.15,0:55:28.48,Sub,,0,0,0,,very large amounts of current and cooling to, you know, hold this star inside of it. Right.
+Dialogue: 0,0:55:28.48,0:55:34.95,Sub,,0,0,0,,Actually, I was walking, one of your plants where you built SPARC, which is your first demonstrator,
+Dialogue: 0,0:55:34.95,0:55:41.68,Sub,,0,0,0,,where you really create more energy than you put in, which is make a viability check of your technology.
+Dialogue: 0,0:55:41.68,0:55:43.84,Sub,,0,0,0,,And, and it's amazing what you do.
+Dialogue: 0,0:55:43.84,0:55:47.28,Sub,,0,0,0,,And, imagine that the next one is even two times bigger.
+Dialogue: 0,0:55:47.28,0:55:48.48,Sub,,0,0,0,,It's hard to believe.
+Dialogue: 0,0:55:48.48,0:55:54.64,Sub,,0,0,0,,So tell me a little bit more about how Siemens technology played in, in that in designing it.
+Dialogue: 0,0:55:54.64,0:55:57.60,Sub,,0,0,0,,And of course, in supporting the manufacturing as well.
+Dialogue: 0,0:55:57.60,0:56:00.88,Sub,,0,0,0,,Right. So we're building a plant in Massachusetts.
+Dialogue: 0,0:56:00.88,0:56:04.00,Sub,,0,0,0,,There is a, machine that will make more power out from fusion.
+Dialogue: 0,0:56:04.00,0:56:06.29,Sub,,0,0,0,,That takes the heat it up and to do that,
+Dialogue: 0,0:56:06.29,0:56:10.64,Sub,,0,0,0,,Siemens was there from the beginning of how do we actually do the design work?
+Dialogue: 0,0:56:10.64,0:56:13.92,Sub,,0,0,0,,They're there in the factory with the PLCs that automate the factory.
+Dialogue: 0,0:56:13.92,0:56:18.90,Sub,,0,0,0,,And this is the factory that, you know, has engineers standing right next to the equipment that's
+Dialogue: 0,0:56:18.90,0:56:21.36,Sub,,0,0,0,,running, that's being reconfigured all the time.
+Dialogue: 0,0:56:21.36,0:56:27.61,Sub,,0,0,0,,And then in the actual SPARC facility, the the brains that are actually running all the different processes,
+Dialogue: 0,0:56:27.61,0:56:32.24,Sub,,0,0,0,,it has to all come together to make the right conditions of a star inside of it.
+Dialogue: 0,0:56:32.24,0:56:39.80,Sub,,0,0,0,,Those machines are our Siemens machines, and they're running, software that has been checked out and large
+Dialogue: 0,0:56:39.80,0:56:44.72,Sub,,0,0,0,,computer simulations accelerated by Nvidia, computation and DeepMind.
+Dialogue: 0,0:56:44.72,0:56:50.08,Sub,,0,0,0,,It's it's a very big, stack all the way from idea to a plant.
+Dialogue: 0,0:56:50.08,0:56:56.88,Sub,,0,0,0,,So now here comes the key question when we'll see we will see real world impact.
+Dialogue: 0,0:56:56.88,0:56:59.44,Sub,,0,0,0,,When will that commercially be viable.
+Dialogue: 0,0:56:59.44,0:57:01.60,Sub,,0,0,0,,So it's a great question.
+Dialogue: 0,0:57:01.60,0:57:02.56,Sub,,0,0,0,,A question I always get.
+Dialogue: 0,0:57:02.56,0:57:05.92,Sub,,0,0,0,,And the key part is that you can start to see things today.
+Dialogue: 0,0:57:05.92,0:57:09.52,Sub,,0,0,0,,So we have the plant in Massachusetts factory running.
+Dialogue: 0,0:57:09.52,0:57:14.63,Sub,,0,0,0,,But the the SPARC facility is being put together and in fact at CES we have pieces of it that we've
+Dialogue: 0,0:57:14.63,0:57:17.36,Sub,,0,0,0,,brought and there's Siemens booth. Go check them out.
+Dialogue: 0,0:57:17.36,0:57:22.88,Sub,,0,0,0,,But we also announced yesterday that we've put the first big magnet into place for SPARC.
+Dialogue: 0,0:57:22.88,0:57:25.60,Sub,,0,0,0,,So you can see it coming together.
+Dialogue: 0,0:57:25.60,0:57:29.60,Sub,,0,0,0,,That's setting up for the next machine, which is going to be in Virginia.
+Dialogue: 0,0:57:29.60,0:57:30.80,Sub,,0,0,0,,That's we call ARC.
+Dialogue: 0,0:57:30.80,0:57:35.47,Sub,,0,0,0,,That's a commercial machine that will make about 400MW of fusion power,
+Dialogue: 0,0:57:35.47,0:57:38.16,Sub,,0,0,0,,electricity that can power a data center.
+Dialogue: 0,0:57:38.16,0:57:41.92,Sub,,0,0,0,,In fact, that Google has agreed to buy the power from ARC.
+Dialogue: 0,0:57:41.92,0:57:43.44,Sub,,0,0,0,,That is getting started here soon.
+Dialogue: 0,0:57:43.44,0:57:46.97,Sub,,0,0,0,,And so we can see out here on this technical stack,
+Dialogue: 0,0:57:46.97,0:57:52.24,Sub,,0,0,0,,going from science all the way to energy, we can see a new age of abundance.
+Dialogue: 0,0:57:52.24,0:57:53.44,Sub,,0,0,0,,So, Bob, thank you very much.
+Dialogue: 0,0:57:53.44,0:57:57.68,Sub,,0,0,0,,We have a lot of customers counting on you to make that work, and we are here to support.
+Dialogue: 0,0:57:57.68,0:57:59.35,Sub,,0,0,0,,Thanks for the partnership.
+Dialogue: 0,0:57:59.35,0:58:04.56,Sub,,0,0,0,,Thank you. Thank you.
+Dialogue: 0,0:58:04.56,0:58:09.20,Sub,,0,0,0,,Well, but but even if we have abundant clean energy,
+Dialogue: 0,0:58:09.20,0:58:15.36,Sub,,0,0,0,,there's another huge bottleneck grid availability and grid stability.
+Dialogue: 0,0:58:15.36,0:58:19.60,Sub,,0,0,0,,Today, many electricity grids are on the verge of collapse,
+Dialogue: 0,0:58:19.60,0:58:25.84,Sub,,0,0,0,,and intermittent energy sources like solar wind are increasing the stress on our grids.
+Dialogue: 0,0:58:25.84,0:58:31.68,Sub,,0,0,0,,We need to predict loads better and stabilize the grid, and that's in real time.
+Dialogue: 0,0:58:31.68,0:58:40.40,Sub,,0,0,0,,Our industrially AI enabled technologies can do this even for huge grids and autonomously.
+Dialogue: 0,0:58:40.40,0:58:45.76,Sub,,0,0,0,,We can simulate the impact of adding 10,000 electric vehicles to the neighborhood.
+Dialogue: 0,0:58:45.76,0:58:51.30,Sub,,0,0,0,,Buildings all over the city can act together and coordinate energy consumption,
+Dialogue: 0,0:58:51.30,0:58:58.24,Sub,,0,0,0,,so they could turn down their air conditioning for just half a minute to help stabilizing the grid.
+Dialogue: 0,0:58:58.24,0:59:09.04,Sub,,0,0,0,,And already today, we are using AI to maximize existing grid capacity by 20% without new infrastructure.
+Dialogue: 0,0:59:09.04,0:59:17.60,Sub,,0,0,0,,This is industrial AI creating impact in the real world.
+Dialogue: 0,0:59:17.60,0:59:22.08,Sub,,0,0,0,,So what does this all mean for you?
+Dialogue: 0,0:59:22.08,0:59:28.94,Sub,,0,0,0,,No matter whether you design, engineer, or operate or all of the the three,
+Dialogue: 0,0:59:28.94,0:59:38.36,Sub,,0,0,0,,no matter what you make food, cars, medicine, energy, no matter what type of infrastructure you manage,
+Dialogue: 0,0:59:38.36,0:59:43.12,Sub,,0,0,0,,the water supply, a transportation system or a grid.
+Dialogue: 0,0:59:43.12,0:59:50.46,Sub,,0,0,0,,We have the technology, domain knowhow and the partners to help you do what you do,
+Dialogue: 0,0:59:50.46,0:59:54.88,Sub,,0,0,0,,but faster, more efficiently and more sustainably.
+Dialogue: 0,0:59:54.88,1:00:02.32,Sub,,0,0,0,,By scaling industrial AI in the real world.
+Dialogue: 0,1:00:02.32,1:00:04.88,Sub,,0,0,0,,Electricity.
+Dialogue: 0,1:00:04.88,1:00:10.40,Sub,,0,0,0,,Today, for those of us in this room barely think about it.
+Dialogue: 0,1:00:10.40,1:00:14.96,Sub,,0,0,0,,Our lights turn on, our coffee machines run, our computers charge.
+Dialogue: 0,1:00:14.96,1:00:19.44,Sub,,0,0,0,,Electricity is a fact of life.
+Dialogue: 0,1:00:19.44,1:00:25.92,Sub,,0,0,0,,Soon industrial AI will become a fact of life.
+Dialogue: 0,1:00:26.56,1:00:33.36,Sub,,0,0,0,,We will produce only what's needed, exactly what's needed, where it's needed.
+Dialogue: 0,1:00:33.36,1:00:37.04,Sub,,0,0,0,,Equipment failures and outages will be rare, unpredicted ones.
+Dialogue: 0,1:00:37.04,1:00:45.44,Sub,,0,0,0,,Even rarer medicine tailored to your unique biology will just be standard health care.
+Dialogue: 0,1:00:45.44,1:00:53.17,Sub,,0,0,0,,Autonomous vehicles will move with 100% reliability and zero emissions,
+Dialogue: 0,1:00:53.17,1:01:02.64,Sub,,0,0,0,,and knowledge will transfer through generations as naturally as current through a wire.
+Dialogue: 0,1:01:02.64,1:01:13.09,Sub,,0,0,0,,Energy will flow cleanly, abundantly to infrastructure that repairs and optimizes itself and serves a
+Dialogue: 0,1:01:13.09,1:01:18.88,Sub,,0,0,0,,world so defined by AI that we hardly notice it anymore.
+Dialogue: 0,1:01:18.88,1:01:26.92,Sub,,0,0,0,,When a breakthrough innovation becomes a real world essential and a general purpose technology
+Dialogue: 0,1:01:26.92,1:01:30.52,Sub,,0,0,0,,becomes the invisible fabric of our lives,
+Dialogue: 0,1:01:30.52,1:01:38.56,Sub,,0,0,0,,that's when we will know that we have scaled AI in the real world and realized its potentials.
+Dialogue: 0,1:01:38.56,1:01:46.88,Sub,,0,0,0,,And together with our customers, with our partners, with you, transformed the everyday for everyone.
+Dialogue: 0,1:01:46.88,1:01:47.76,Sub,,0,0,0,,Thank you.

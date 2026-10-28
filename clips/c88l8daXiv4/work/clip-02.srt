@@ -1,0 +1,249 @@
+1
+00:00:00,000 --> 00:00:01,215
+Like it's it's not just that.
+不只是这样。
+
+2
+00:00:01,265 --> 00:00:02,046
+It's like,
+就像是，
+
+3
+00:00:02,096 --> 00:00:06,329
+oh actually the model is committing many times or it's like trying to
+哦，实际上模型在反复提交代码，或者是在尝试
+
+4
+00:00:06,379 --> 00:00:09,760
+compile many times or it's trying to do unit tests throughout its agentic process.
+频繁编译，或者它在代理式流程中不断尝试单元测试。
+
+5
+00:00:09,810 --> 00:00:16,073
+Okay, now that's that's increasing the frequency in which the generator, i.e. the model, is sending to the verifier.
+现在，这相当于提高了生成器，也就是模型，向验证器发送的频率。
+
+6
+00:00:16,123 --> 00:00:18,716
+Um and that loop gets tighter and tighter and tighter.
+而且这个循环变得越来越紧密。
+
+7
+00:00:18,766 --> 00:00:26,273
+And as we as we continue to move to more complex RL, it's like the model will actually uh be verifying its output constantly, right?
+随着我们不断迈向更复杂的强化学习，模型实际上会持续验证其输出，对吧？
+
+8
+00:00:26,323 --> 00:00:30,758
+Like if you imagine um let's say models that are training over the next year or two is
+就像你想象一下，假设未来一两年内模型正在训练
+
+9
+00:00:30,808 --> 00:00:35,262
+is let's say a robot model that's verifying and that's that's in in a like a world model,
+比如一个正在验证的机器人模型，它处于类似世界模型的环境中。
+
+10
+00:00:35,312 --> 00:00:35,829
+right?
+对吧？
+
+11
+00:00:35,879 --> 00:00:40,617
+So uh VLM is is navigating across the world trying to pick up things, put them down.
+嗯，VLM 在虚拟世界里移动，试图捡起东西、放下东西。
+
+12
+00:00:40,667 --> 00:00:45,451
+Every single action needs to be verified against the physics model that is sitting on some CPUs.
+每一项操作都必须与运行在某些 CPU 上的物理模型进行核对。
+
+13
+00:00:45,501 --> 00:00:53,829
+And so that's that's insanely way more CPUs than you need for say doing unit tests or running a math proof, right?
+所以，这比做单元测试或运行数学证明所需的 CPU 多出太多了，对吧？
+
+14
+00:00:53,879 --> 00:00:56,849
+And when we look at like o1, that's like all it could do was math, right?
+当我们看 o1 的时候，它能做的就只有数学运算，对吧？
+
+15
+00:00:56,899 --> 00:01:04,636
+Um and as we look at like you know, sort of uh GPT-5.4 or Opus 4.6, like it's okay agentic software,
+嗯，像 GPT-5.4 或 Opus 4.6，它们作为代理式软件已经算可以了，
+
+16
+00:01:04,686 --> 00:01:08,509
+but like as we move forward to the next stage of, you know, whatever's coming,
+但随着我们迈向下一个阶段，也就是接下来可能出现的任何事物，
+
+17
+00:01:08,559 --> 00:01:14,215
+it's going to be models that can understand, oh, I need to tie my shoe and like when I tie it,
+它会理解：哦，我需要系鞋带，而系的时候要用多大力量，
+
+18
+00:01:14,265 --> 00:01:16,679
+what's the strength strength, yeah. like what's the tensile strength?
+强度是多少？比如抗拉强度？
+
+19
+00:01:16,729 --> 00:01:22,035
+All these things like as to the the has to be calculated cuz the verifier is just generating, you know, what's the next step.
+所有这些都必须被计算，因为验证器只是在生成下一步该做什么。
+
+20
+00:01:22,085 --> 00:01:28,854
+Um but every step needs to be checked way more often and the intensity of that calculation for checking the step it goes up a time.
+但每一步都需要更频繁地检查，而检查这一步的计算强度也会随之增加。
+
+21
+00:01:28,904 --> 00:01:29,196
+Yeah.
+嗯。
+
+22
+00:01:29,226 --> 00:01:35,149
+But there's also another thing and you probably know better than I is like the the the level
+但还有另一件事，你可能比我更清楚，就是那个程度
+
+23
+00:01:35,199 --> 00:01:41,839
+of the the the strength of the GPUs can handle in parallel a certain amount of CPUs boxes.
+GPU 的算力可以并行处理多少台 CPU 服务器。
+
+24
+00:01:41,889 --> 00:01:44,929
+And so as we get next generations of GPUs,
+因此，当我们迎来下一代 GPU 时，
+
+25
+00:01:44,979 --> 00:01:54,655
+I feel that they will be able to spin up manage or work on more CPUs than they do now which is another stressor on CPUs now.
+我觉得他们将能够启动、管理或处理比现在更多的 CPU，这也会给 CPU 带来新的压力。
+
+26
+00:01:54,705 --> 00:01:56,560
+Yeah, I mean that's that's certainly the case, right?
+是的，那确实如此，对吧？
+
+27
+00:01:56,610 --> 00:02:00,213
+GPU Well, GPUs are also just like getting way higher power, right?
+GPU，其实 GPU 的功耗也在大幅上升，对吧？
+
+28
+00:02:00,263 --> 00:02:04,895
+So one GPU will equal many many more CPUs over time, right?
+所以随着时间推移，一块GPU将相当于众多CPU，对吧？
+
+29
+00:02:04,945 --> 00:02:10,991
+Um and GPUs are getting more expensive gen on gen on gen, whereas vCPUs are flat, slightly down.
+而且 GPU 一代比一代贵，而 vCPU 的价格持平甚至略有下降。
+
+30
+00:02:11,041 --> 00:02:11,510
+Yeah.
+嗯。
+
+31
+00:02:11,560 --> 00:02:14,575
+Um and so certainly it's a different scale, right?
+嗯，所以这确实是一个不同的规模，对吧？
+
+32
+00:02:14,625 --> 00:02:18,412
+Like one Blackwell versus one Rubin, performance is up X.
+一块 Blackwell 对比一块 Rubin，性能提升了 X 倍。
+
+33
+00:02:18,462 --> 00:02:19,895
+Price is also up X.
+价格也上涨了 X。
+
+34
+00:02:19,945 --> 00:02:28,750
+Um whereas, you know, you may buy last generation CPU, new generation CPU and there's 192 vCPUs in this gen and last gen was like 96, right?
+嗯，比如说，你可能买上一代的CPU，或者新一代的CPU，这一代有192个vCPU，上一代大概是96个，对吧？
+
+35
+00:02:28,800 --> 00:02:34,532
+So now you've got way more CPUs, but the the price increase is equivalent to what you got in additional vCPUs.
+现在你的CPU数量多了很多，但价格涨幅相当于你获得的额外vCPU所带来的成本增加。
+
+36
+00:02:34,582 --> 00:02:39,023
+So it's like sort of yeah, the the ratio will grow in the favor of vCPUs,
+所以比例会向 vCPU 倾斜，
+
+37
+00:02:39,073 --> 00:02:44,628
+but the cost will be sort of also probably in the direction of CPUs, but not sure how much.
+但成本可能也会向 CPU 方向上升，不过不确定会升多少。
+
+38
+00:02:44,678 --> 00:02:44,985
+Yeah.
+嗯。
+
+39
+00:02:45,015 --> 00:02:51,385
+And and also the other stressor on that and we've seen this with with larger customers when they have
+而且另一个压力源也存在，我们之前在大客户身上就看到过这种情况。
+
+40
+00:02:51,435 --> 00:02:56,178
+like they don't they have like a time allotment for GPUs and they don't want their GPUs to be idle.
+他们好像有分配给 GPU 的时间配额，不希望 GPU 处于空闲状态。
+
+41
+00:02:56,228 --> 00:03:04,514
+So they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot.
+所以他们宁愿为持续运行的热池CPU付费，这样当GPU有任务过来时，CPU就已经处于就绪状态。
+
+42
+00:03:04,564 --> 00:03:06,291
+They're essentially working, right?
+CPU 实际上已经在工作了，对吧？
+
+43
+00:03:06,341 --> 00:03:10,693
+So they'll we we I say we cuz we do mostly CPUs are certainly the cheap resource.
+所以我们会说，因为我们主要做 CPU，这显然是成本较低的资源。
+
+44
+00:03:10,743 --> 00:03:13,032
+I don't know if we're cheap, but cheap resource for this.
+我不知道我们是不是便宜，但这个资源确实很便宜。
+
+45
+00:03:13,082 --> 00:03:20,814
+And so that spends more GPUs actually just because the cost of having an idle GPU is to is way more expensive, right?
+所以实际上会用更多GPU，因为让GPU闲置的成本要高得多，对吧？
+
+46
+00:03:20,864 --> 00:03:22,748
+Yeah, it's actually like a really interesting point, right?
+是的，这实际上是个非常有趣的观点，对吧？
+
+47
+00:03:22,798 --> 00:03:26,743
+The business model is like no one does I mean sure, there's on demand GPUs,
+这个商业模式——我是说，确实有按需 GPU，
+
+48
+00:03:26,793 --> 00:03:32,445
+but like Lambda has like 50,000 plus GPUs and only 4,000 of them are on demand, right?
+但就像 Lambda 有超过 5 万块 GPU，其中只有 4000 块是按需可用的，对吧？
+
+49
+00:03:32,495 --> 00:03:33,620
+And they're always sold out.
+而且总是卖光。
+
+50
+00:03:33,670 --> 00:03:35,880
+So like no one really has on demand GPUs.
+所以其实没人真的拥有按需 GPU。

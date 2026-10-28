@@ -1,0 +1,2469 @@
+1
+00:00:00,000 --> 00:00:03,630
+The meta problem in robotics is to be able to solve a humanoid robot.
+机器人领域的元问题是：能不能把一台人形机器人做出来。
+
+2
+00:00:03,680 --> 00:00:06,222
+If you can solve this, it'll build the biggest business in the world by a large factor.
+如果你能解决这个问题，将建立起世界上规模最大的业务，规模远超其他行业。
+
+3
+00:00:06,272 --> 00:00:08,070
+We'll own over half the world's GDP as human labor.
+我们将拥有超过全球一半的GDP，因为人类劳动力将被取代。
+
+4
+00:00:08,120 --> 00:00:13,482
+You recently went viral for comments on your OpenAI partnership with Figure.
+人类劳动占全球 GDP 的一半以上。
+
+5
+00:00:13,532 --> 00:00:14,670
+What happened there?
+那是怎么回事？
+
+6
+00:00:14,720 --> 00:00:18,137
+So, OpenAI led our Series B a couple years ago.
+几年前，OpenAI主导了我们的B轮融资。
+
+7
+00:00:18,187 --> 00:00:19,849
+They brought in Satya and Microsoft.
+他们带来了萨蒂亚和微软。
+
+8
+00:00:19,899 --> 00:00:24,038
+It got to the point where our team internally that was designing these models were running circles around OpenAI.
+到了后期，我们内部负责设计这些模型的团队，已经远远领先于OpenAI。
+
+9
+00:00:24,088 --> 00:00:26,037
+We were just way better at this, so I fired them.
+我们在这方面明显更优秀，所以我解雇了他们。
+
+10
+00:00:26,087 --> 00:00:27,634
+I self-funded the whole company up front.
+我最初完全自费投入了整个公司。
+
+11
+00:00:27,684 --> 00:00:29,750
+You know, we got to a million a month of burn in 4 months.
+你知道，我们仅用4个月就达到了每月烧钱一百万美元的水平。
+
+12
+00:00:29,800 --> 00:00:32,590
+Getting the robots to do the things we showed you today has almost killed me.
+让机器人完成今天向你们展示的那些任务，几乎让我累垮了。
+
+13
+00:00:32,640 --> 00:00:35,639
+We had record production in March, and we're going to try to 3x that by May.
+我们在三月份实现了创纪录的产量，我们计划到五月份将产量提升至三倍。
+
+14
+00:00:35,689 --> 00:00:37,550
+We want to be able to get to a million units a year.
+我们希望做到每年 100 万台。
+
+15
+00:00:37,600 --> 00:00:43,774
+You've raised nearly $2 billion publicly stated at $39 billion.
+你已经公开募集了近20亿美元，估值达到390亿美元。
+
+16
+00:00:43,824 --> 00:00:48,470
+Do you see capital as a risk or a constraint or the valuation as a risk?
+你认为资本是风险，还是制约因素，或者估值才是风险？
+
+17
+00:00:48,520 --> 00:00:51,817
+We'll just build like enormous of tens of trillions of revenue.
+我们将构建一个年收入达数万亿的庞大业务。
+
+18
+00:00:51,867 --> 00:00:53,089
+We'll build something massive.
+我们将打造一个巨大的项目。
+
+19
+00:00:53,139 --> 00:00:54,496
+I mean, what do most companies trade at?
+事实上，大多数公司估值是多少？
+
+20
+00:00:54,546 --> 00:00:56,092
+Tech companies trade at 10 or 20 times revenue.
+科技公司的估值通常是收入的10到20倍。
+
+21
+00:00:56,142 --> 00:01:00,489
+You're in like $10 trillion or, you know, whatever, $100 billion to $20 million in revs.
+你处在10万亿美元，或者比如说是1000亿到2000万美元的收入区间。
+
+22
+00:01:00,539 --> 00:01:00,839
+Like,
+就是说，
+
+23
+00:01:00,754 --> 00:01:04,851
+this is going to
+这将会
+
+24
+00:01:04,901 --> 00:01:13,430
+be a huge business.
+成为一项巨大的生意。
+
+25
+00:01:13,480 --> 00:01:15,350
+Brett, welcome to Sourcery.
+布雷特，欢迎来到Sourcery。
+
+26
+00:01:15,400 --> 00:01:16,430
+Thanks for having me.
+谢谢邀请我。
+
+27
+00:01:16,480 --> 00:01:20,150
+I don't know if this is going to be part one or part two, but this is a series now.
+我不知道这会是第一部分还是第二部分，但现在已经变成一个系列了。
+
+28
+00:01:20,200 --> 00:01:21,295
+Okay.
+好的。
+
+29
+00:01:21,345 --> 00:01:22,630
+Great.
+太好了。
+
+30
+00:01:22,680 --> 00:01:27,014
+We did the entire tour, and now we're going to do a sit-down interview.
+我们已经完成了全程参观，现在开始进行面对面的访谈。
+
+31
+00:01:27,064 --> 00:01:32,470
+I figured uh we recently went viral for a lot of these hot takes at Hill and Valley.
+我想，我们最近因为在希尔与山谷的那些热门观点而走红。
+
+32
+00:01:32,520 --> 00:01:35,630
+And so, I think it would be great if we just start there.
+所以，我觉得我们不妨就从那里开始。
+
+33
+00:01:35,680 --> 00:01:37,790
+So, what is your hottest take right now?
+那么，你现在最热门的观点是什么？
+
+34
+00:01:37,840 --> 00:01:39,150
+On in robotics?
+在机器人领域吗？
+
+35
+00:01:39,200 --> 00:01:41,510
+Yeah.
+对。
+
+36
+00:01:41,560 --> 00:01:43,915
+My hot take.
+我的观点是。
+
+37
+00:01:43,965 --> 00:01:50,270
+Um I think one thing that we spend a lot of time on is doing things with like fully autonomous and end-to-end.
+嗯，我觉得我们花了很多时间在完全自主和端到端的项目上。
+
+38
+00:01:50,320 --> 00:01:55,310
+And you asked us a few questions uh here when we walked in of like, "Is this like teleoperated?"
+你刚进来时问了我们几个问题，比如“这像是遥操作的吗？”
+
+39
+00:01:55,360 --> 00:01:57,270
+We're not teleoperating this stuff.
+我们并不是在遥操作这些设备。
+
+40
+00:01:57,320 --> 00:02:01,125
+I think our hot take for robotics is just it's like it's kind of really difficult
+我觉得我们对机器人领域的看法是，这其实相当困难，
+
+41
+00:02:01,175 --> 00:02:06,093
+to see what's really happening in the space without coming on site and really seeing stuff.
+没有亲临现场，真的很难看清这个领域到底发生了什么。
+
+42
+00:02:06,143 --> 00:02:10,110
+So, I hope I I hope you had a good experience here today seeing everything we're doing.
+所以，我希望你今天在这里看到我们所做的所有事情，体验很棒。
+
+43
+00:02:10,160 --> 00:02:18,310
+Um I think my and I think the hottest take I have is like we just want humanoid robots to work and like they're working now.
+嗯，我觉得我最激进的看法是，我们就是希望人形机器人能正常工作，而它们现在确实正在工作。
+
+44
+00:02:18,360 --> 00:02:19,243
+And it's pretty simple.
+而且这其实很简单。
+
+45
+00:02:19,293 --> 00:02:25,200
+Like we're seeing robots um to do everyday things like we saw it clean up a living room, do commercial work.
+我们看到机器人在做日常事务，比如清理客厅、完成商业任务。
+
+46
+00:02:25,250 --> 00:02:26,443
+Like it's just it's cool to see it.
+看到这些真的很酷。
+
+47
+00:02:26,493 --> 00:02:30,270
+Like it's cool to see that this going to happen next few years.
+看到这些在接下来几年内就会实现，真的很酷。
+
+48
+00:02:30,320 --> 00:02:37,530
+This is a very hotly contested space and it's becoming more and more competitive as It was funny
+这是一个非常激烈的竞争领域，而且随着发展，竞争越来越激烈，这还挺有趣的。
+
+49
+00:02:37,580 --> 00:02:44,216
+cuz we did this interview with Skydio and he was talking about Adam was talking about the drone cycles.
+因为我们之前采访了 Skydio，他谈到亚当在讲无人机的周期。
+
+50
+00:02:44,266 --> 00:02:47,645
+There are drone cycles where there's hype cycles and that kind of thing.
+无人机周期中存在 hype 周期之类的情况。
+
+51
+00:02:47,695 --> 00:02:54,445
+But humanoid robots are certainly at a different scale and pace than before.
+但人形机器人显然已经达到了与以往不同的规模和速度。
+
+52
+00:02:54,495 --> 00:02:59,110
+So, how does this feel with the competition?
+那么，面对竞争，这种感觉如何？
+
+53
+00:02:59,160 --> 00:03:08,950
+Um I think like the Listen, our internal goal is like how do we get these things to do real stuff and get paid for it?
+嗯，我认为我们的内部目标是，如何让这些机器人真正完成有意义的工作，并因此获得报酬？
+
+54
+00:03:09,000 --> 00:03:13,510
+And um so, we got we think a lot about how do we do autonomous useful work?
+而且，我们一直在思考，如何实现自主且有用的工作？
+
+55
+00:03:13,560 --> 00:03:14,670
+That's our bar.
+这就是我们的标准。
+
+56
+00:03:14,720 --> 00:03:19,485
+And um we need to do that with like AI models really well and we need to do it on good good hardware.
+而且我们需要用非常优秀的 AI 模型，同时依赖性能良好的硬件来实现。
+
+57
+00:03:19,535 --> 00:03:23,844
+It's like, you know, cost-effective, we can make a lot of it, we make a lot of robots.
+就像，成本效益高，我们可以大量制造，生产大量机器人。
+
+58
+00:03:23,894 --> 00:03:30,890
+Um you know, we think probably at this point a few years ahead of every big everybody globally doing this at this level,
+嗯，我们觉得，可能在几年内，我们已经领先全球所有主要玩家在这个层面的进展。
+
+59
+00:03:30,940 --> 00:03:35,909
+which is like um we're kind of early in the humanoid, you know, book.
+也就是说，我们在人形机器人领域，还处于早期阶段。
+
+60
+00:03:35,959 --> 00:03:39,993
+And um hopefully the next step is like how do we get more robots out at scale?
+希望下一步是，如何大规模地推出更多机器人？
+
+61
+00:03:40,043 --> 00:03:42,168
+And I we want to be first to be able to do that.
+而且我们希望率先实现这一点。
+
+62
+00:03:42,218 --> 00:03:48,310
+How do we get, you know, hundreds and thousands and tens of thousands of robots in the world that run every day?
+我们该如何让成百上千甚至数以万计的机器人每天都能运行？
+
+63
+00:03:48,360 --> 00:03:49,984
+And the the space is just early.
+而这个领域才刚刚起步。
+
+64
+00:03:50,034 --> 00:03:56,521
+There's a lot of uh we're just like we're like in the first chapter of humanoids coming into society at scale.
+我们现在就像处在人形机器人大规模进入社会的第一章。
+
+65
+00:03:56,571 --> 00:04:00,150
+And um yeah, I mean we're we're we're we're pumped about here internally as it's working.
+而且是的，我内部也充满干劲，因为现在正在取得进展。
+
+66
+00:04:00,200 --> 00:04:02,070
+And it's just chapter one.
+这还只是第一章。
+
+67
+00:04:02,120 --> 00:04:05,640
+Chapter two is like get more out the door and get them working even like uh bigger scale.
+第二章就是加快推出更多机器人，并让它们在更大规模上运行。
+
+68
+00:04:05,690 --> 00:04:09,150
+And at some point we want to really be able to generalize to do everything a human can.
+有一天，我们真正希望实现通用性，做到人类能做的一切。
+
+69
+00:04:09,200 --> 00:04:12,430
+How much do you want to produce a year?
+你一年想生产多少？
+
+70
+00:04:12,480 --> 00:04:13,230
+What's the goal?
+目标是什么？
+
+71
+00:04:13,280 --> 00:04:21,550
+Uh we'll make thousands of robots over the like here like basically as fast as we can this year.
+我们今年会尽可能快地在这里制造数千台机器人。
+
+72
+00:04:21,600 --> 00:04:25,568
+Uh so we're ramping BotQ lines up as fast as we can.
+所以我们正在尽可能快地提升 BotQ 生产线的产能。
+
+73
+00:04:25,618 --> 00:04:29,910
+We had record production in March and we're going to 3x that by May.
+三月份我们实现了创纪录的产量，到五月份将提升至三倍。
+
+74
+00:04:29,960 --> 00:04:32,950
+And uh we'll build thousands of robots.
+我们将制造数千台机器人。
+
+75
+00:04:33,000 --> 00:04:38,030
+Um we basically have we already have the parts in house to do this and we're ramping up production.
+基本上我们内部已有所有所需部件，正在加速生产。
+
+76
+00:04:38,080 --> 00:04:41,551
+And then you know, from there we want to build tens of thousands and hundreds of thousands.
+然后我们希望达到数万乃至数十万台的规模。
+
+77
+00:04:41,601 --> 00:04:44,566
+And we we are you know, we want to be able to get to a million units a year.
+我们的目标是实现每年一百万单位的产量。
+
+78
+00:04:44,616 --> 00:04:47,697
+And then we need the commercial progress to also to match that.
+同时，商业进展也需要跟上这一速度。
+
+79
+00:04:47,747 --> 00:04:54,724
+We have like so much commercial demand it's like it's hard to it we have like just overwhelmingly amount of we could I think I
+我们面临的商业需求如此之多，简直难以置信，我们手头的订单量大得惊人。
+
+80
+00:04:54,774 --> 00:05:02,012
+could like put uh you know so I could put uh so so many robots into commercial customers today if they were were all ready.
+如果机器人今天全部准备就绪，我甚至可以立刻向商业客户部署大量机器人。
+
+81
+00:05:02,062 --> 00:05:07,110
+So the big gap is here is like getting the robots ready to do uh scale autonomous operations.
+当前最大的瓶颈在于让机器人具备规模化自主运行的能力。
+
+82
+00:05:07,160 --> 00:05:16,151
+So the bottleneck right now for commercializing them is it's having enough of them and making them run to a level of human performance at scale.
+目前商业化的主要障碍是数量不足，以及让它们在大规模运行中达到人类水平的表现。
+
+83
+00:05:16,201 --> 00:05:18,910
+Like what what we don't want to do is like we don't want to put like
+我们不想做的是，比如
+
+84
+00:05:18,960 --> 00:05:22,510
+a thousand robots out the market and have like a thousand problems every single like hour.
+把一千台机器人投放市场，结果每小时都出现一千个问题。
+
+85
+00:05:22,560 --> 00:05:22,860
+Yeah.
+嗯。
+
+86
+00:05:22,880 --> 00:05:24,465
+Uh that's like that's not good for any of us.
+嗯，这对咱们所有人都不好。
+
+87
+00:05:24,515 --> 00:05:29,873
+Uh so we had a small batch of robots that went out to BMW last year and did work every day.
+嗯，去年我们有一小批机器人送往宝马，每天都在工作。
+
+88
+00:05:29,923 --> 00:05:32,110
+We ran for six months every single day.
+我们连续每天运行了六个月。
+
+89
+00:05:32,160 --> 00:05:32,610
+It was phenomenal.
+非常了不起。
+
+90
+00:05:32,660 --> 00:05:34,230
+We learned we learned a ton.
+我们学到了很多。
+
+91
+00:05:34,280 --> 00:05:39,426
+Uh we refactored our whole approach to how to commercialize the software and AI systems after that.
+从那以后，我们重新调整了整个商业化软件和AI系统的思路。
+
+92
+00:05:39,476 --> 00:05:46,790
+And that kind of led us to Helix 2 which is our like second generation uh AI model internally that we like we launched a couple months ago.
+这也促使我们推出了内部的第二代AI模型——Helix 2，几个月前我们刚刚发布。
+
+93
+00:05:46,840 --> 00:05:50,722
+and um uh now it's like uh uh you know,
+现在呢，嗯，你知道，
+
+94
+00:05:50,772 --> 00:05:55,292
+how do we like put these robots into many different customers that we'll we'll probably announce a lot of this
+我们该如何把这些机器人部署到众多客户中？我们可能在接下来的90天内宣布大量进展，
+
+95
+00:05:55,342 --> 00:06:01,384
+in the next like 90 days and put them out into those groups uh at like decent scale like this year.
+并在今年以相当规模将它们投入这些客户群体。
+
+96
+00:06:01,434 --> 00:06:05,148
+And assuming that goes well, we'll just keep we'll just keep compounding that.
+假设进展顺利，我们就会持续不断地推进下去。
+
+97
+00:06:05,198 --> 00:06:09,430
+Um so we, you know, we had robots there last year, that went well, we learned a lot,
+所以去年我们那里有机器人，效果不错，我们学到了很多，
+
+98
+00:06:09,480 --> 00:06:13,960
+we'll have like a much larger amount of robots going into many different customers this year.
+今年我们将有更多数量的机器人进入众多不同的客户。
+
+99
+00:06:14,010 --> 00:06:17,190
+And then six to nine months goes well, we'll just we'll keep like scaling like crazy.
+然后六到九个月后进展顺利，我们就会疯狂地持续扩展。
+
+100
+00:06:17,240 --> 00:06:19,550
+Are you worried about Optimus?
+你担心奥特曼吗？
+
+101
+00:06:19,600 --> 00:06:21,448
+In my mind, this is not a manufacturing problem.
+在我看来，这并不是一个制造问题。
+
+102
+00:06:21,498 --> 00:06:24,670
+This is an intelligence problem.
+这是一个智能问题。
+
+103
+00:06:24,720 --> 00:06:26,533
+You're almost four years old.
+你几乎快四岁了。
+
+104
+00:06:26,583 --> 00:06:28,146
+How did you scale up this fast?
+你是怎么这么快实现规模扩大的？
+
+105
+00:06:28,196 --> 00:06:30,030
+What was the process like?
+这个过程是怎样的？
+
+106
+00:06:30,080 --> 00:06:35,176
+Um yeah, I've been building companies for like about 20 years now.
+嗯，我现在已经大概有20年创业经验了。
+
+107
+00:06:35,226 --> 00:06:42,590
+Uh scaled a software company up pretty fast, sold it, scaled Archer up pretty fast, took it public.
+我曾快速把一家软件公司做大并出售，之后又快速扩大 Archer 的规模并推动其上市。
+
+108
+00:06:42,640 --> 00:06:48,202
+And so um you know, every time you know, I'm scale I'm doing I'm in this phase,
+所以嗯，你知道，每次当我做规模扩张时，我都会进入这个阶段，
+
+109
+00:06:48,252 --> 00:06:53,030
+I get to I get to sit back and say like how do what did I learn from the past experiences and how do I do it better?
+我可以坐下来思考，从过往经验中我学到了什么，以及如何做得更好？
+
+110
+00:06:53,080 --> 00:07:00,150
+And um you know, I figure we took a a very differentiated approach to basically vertically design everything.
+而且你知道，我觉得我们采取了一种非常差异化的策略，基本上对所有东西都进行了垂直整合。
+
+111
+00:07:00,200 --> 00:07:07,818
+I I don't think there's any group in the world that I wouldn't think on the robotics side that makes it designs more parts than we do on the robot.
+我认为世界上没有哪个团队在机器人领域，会像我们这样制造更多的零部件。
+
+112
+00:07:07,868 --> 00:07:12,710
+We design the motors, basically every part within there, the rotor, stator, everything.
+我们设计电机，基本上内部的每一个部件，包括转子、定子等所有部分。
+
+113
+00:07:12,760 --> 00:07:21,730
+Um the sensors, the structure, the kinematics, the joints, uh we do like this, you know, the batteries that you saw today, the battery packs.
+传感器、结构、运动学、关节，我们都是自己做的，比如今天看到的电池，还有电池组。
+
+114
+00:07:21,780 --> 00:07:24,490
+That that I think has really enabled us to like control our destiny.
+我觉得这真正让我们能够掌控自己的命运。
+
+115
+00:07:24,540 --> 00:07:26,830
+We get to like build our own supply chain.
+我们可以自己建立供应链。
+
+116
+00:07:26,880 --> 00:07:32,758
+And uh without that, you're like left at the mercy of like some vendor and then if that has an issue, like what how are you going to go solve it?
+如果没有这一点，你就只能任由某个供应商摆布，一旦他们出问题，你该怎么办？
+
+117
+00:07:32,808 --> 00:07:34,518
+If it's got a code problem, do you understand it?
+如果出现代码问题，你理解它吗？
+
+118
+00:07:34,568 --> 00:07:35,164
+Can you QA it?
+你能进行质量检测吗？
+
+119
+00:07:35,214 --> 00:07:35,882
+Can you fix it?
+你能修复它吗？
+
+120
+00:07:35,932 --> 00:07:36,858
+Can you patch it?
+你能打补丁吗？
+
+121
+00:07:36,908 --> 00:07:40,872
+Um so we understand the whole stack from top to bottom.
+所以我们从上到下完全理解了整个技术栈。
+
+122
+00:07:40,922 --> 00:07:43,880
+It was an enormous lift up front to get the right people here that could do that.
+最初要找到合适的人才团队，这是一项巨大的挑战。
+
+123
+00:07:43,930 --> 00:07:46,442
+And then we've now been iterating through as you can see behind us to
+然后我们一直在不断迭代，正如你们在身后看到的那样，
+
+124
+00:07:46,492 --> 00:07:51,800
+point where we like have like decently reliable systems now that run really well.
+目前我们已经拥有了相当可靠、运行良好的系统。
+
+125
+00:07:51,850 --> 00:07:55,381
+Um but you know head on I self-funded the whole company up front.
+嗯，坦白说，我最初是自掏腰包，全额投入了公司。
+
+126
+00:07:55,431 --> 00:07:57,817
+We got to you know got to a million a month of burn in four months.
+我们在四个月内就达到了每月烧钱一百万美元的水平。
+
+127
+00:07:57,867 --> 00:07:58,681
+It was like a no joke.
+这可不是开玩笑的。
+
+128
+00:07:58,731 --> 00:08:01,070
+We had like a 40-person team in four or five months.
+我们在四到五个月内就组建了一支四十人的团队。
+
+129
+00:08:01,120 --> 00:08:02,572
+They were like very good.
+他们非常优秀。
+
+130
+00:08:02,622 --> 00:08:07,470
+And um and then just here you know 100 hours a week just trying to make it work with the team.
+嗯，然后就是每周工作一百小时，和团队一起努力让一切运转起来。
+
+131
+00:08:07,520 --> 00:08:11,045
+And um we you know we made a we've made some mistakes.
+嗯，我们确实犯过一些错误。
+
+132
+00:08:11,095 --> 00:08:12,747
+We've learned a lot.
+但我们学到了很多。
+
+133
+00:08:12,797 --> 00:08:15,550
+We done some things well and just recursively getting better.
+我们已经做了一些事情，并且在不断递归地变得更好。
+
+134
+00:08:15,600 --> 00:08:17,710
+Why did you leave Archer?
+你为什么离开Archer？
+
+135
+00:08:17,760 --> 00:08:20,934
+The the meta problem in robotics is be able to solve a humanoid robot.
+机器人领域的根本问题在于能否解决人形机器人。
+
+136
+00:08:20,984 --> 00:08:24,910
+It's if you can solve this it'll build the biggest business in the world by like a large factor.
+如果你能解决这个问题，它将建立起世界上规模最大的业务，规模大得多。
+
+137
+00:08:24,960 --> 00:08:28,190
+Half the world's GDP like a little under half the world's GDP is human labor.
+世界一半的GDP，差不多接近一半的世界GDP，来自人类劳动。
+
+138
+00:08:28,240 --> 00:08:33,429
+I wanted to go work on building this like this holy grail of robotics.
+我想投身于打造机器人领域的这个圣杯。
+
+139
+00:08:33,479 --> 00:08:38,669
+Um at Archer I you know I led design for every aircraft we have there.
+在Archer，我负责了我们所有飞机的设计。
+
+140
+00:08:38,719 --> 00:08:47,350
+Uh and I feel um I feel like this is now the decade we're going to bring humanoid robots to the masses.
+我觉得现在正是我们把人形机器人推向大众的十年。
+
+141
+00:08:47,400 --> 00:08:53,030
+It's the the probably the most important maybe one of the most important businesses of our lifetime.
+这可能是我们这一生中最重要的业务，也许是最重要的之一。
+
+142
+00:08:53,080 --> 00:08:58,888
+And um so while I'm like a you know uh yeah so I basically get I get to I get to spend time I get
+所以，虽然我……你知道……是的，我基本上能花时间，能真正投入工作。
+
+143
+00:08:58,938 --> 00:09:04,310
+to you know get to work now on like what I think is probably the one of the more important areas of my whole career.
+现在我能专注于我认为是我整个职业生涯中最重要的领域之一。
+
+144
+00:09:04,360 --> 00:09:07,668
+Um at Archer I built the you know I built the whole team up.
+在Archer，我组建了整个团队。
+
+145
+00:09:07,718 --> 00:09:13,682
+Built like uh all the led all engineering design for all the aircraft and led the company through public offering like uh so
+像所有飞机的工程设计一样，他负责了公司的上市过程。
+
+146
+00:09:13,732 --> 00:09:20,030
+we we're we were in a good we're now in a good spot to certify the aircraft in in inner like federal airspace.
+我们现在处于一个有利位置，可以对飞机进行认证，使其进入联邦空域。
+
+147
+00:09:20,080 --> 00:09:25,510
+And uh and Figure is also in a good spot here to really scale up like physical intelligence the world.
+而且 Figure 现在也处于有利位置，可以真正把物理智能推广到全世界。
+
+148
+00:09:25,560 --> 00:09:31,297
+I recently had Michelle Dell Buono from a16z perennial on.
+我最近邀请了 a16z 的常驻合伙人米歇尔·德尔·布诺。
+
+149
+00:09:31,347 --> 00:09:34,458
+It's Mark and Ben's multi-family office.
+这是马克和本的家族办公室。
+
+150
+00:09:34,508 --> 00:09:42,494
+And we were talking through liquidity events and what you do as a founder for your first liquidity event or second or third.
+我们讨论了流动性事件，以及作为创始人如何应对第一次、第二次或第三次流动性事件。
+
+151
+00:09:42,544 --> 00:09:46,790
+Why did you decide after the IPO to start another company?
+为什么在 IPO 之后你决定再创办一家公司？
+
+152
+00:09:46,840 --> 00:09:47,140
+Yeah.
+是的。
+
+153
+00:09:47,160 --> 00:09:48,030
+And fund it.
+并且为它提供资金。
+
+154
+00:09:48,080 --> 00:09:49,310
+Yeah.
+是的。
+
+155
+00:09:49,360 --> 00:09:53,550
+Um I started a few other companies actually since then as well.
+其实从那以后我也创办了其他几家公司。
+
+156
+00:09:53,600 --> 00:10:01,028
+Um I think the short story is I feel that I've been watching the humanoid space for like a couple decades.
+我觉得简短来说，我其实已经观察人形机器人领域长达几十年了。
+
+157
+00:10:01,078 --> 00:10:03,316
+Like these we've been like seeing humanoids for a long time.
+就像我们长期以来一直在关注人形机器人一样。
+
+158
+00:10:03,366 --> 00:10:05,991
+They've just been like the wrong we're on the wrong vector.
+但之前的方向似乎错了，我们走偏了。
+
+159
+00:10:06,041 --> 00:10:11,338
+Like we were building the wrong stuff or we're doing it in a hobbyist grade or you know,
+就像我们一直在造错的东西，或者只是以业余爱好者的方式在做，你知道的，
+
+160
+00:10:11,388 --> 00:10:14,444
+um the engineering decisions were like I think we're not maybe correct.
+嗯，我觉得工程决策可能并不正确。
+
+161
+00:10:14,494 --> 00:10:19,830
+And I just I felt there was a need to uh advance the space much more rapidly.
+我只是觉得有必要让这个领域更快地向前推进。
+
+162
+00:10:19,880 --> 00:10:21,340
+And I'm doing the same with Hark and Cover.
+我对 Hark 和 Cover 也是同样的做法。
+
+163
+00:10:21,390 --> 00:10:26,120
+I have a couple other companies I'm doing where I also feel it's a similar situation there where I feel like
+我还有其他几家公司也在做，我也觉得那里的处境类似，我感觉如果让世界自行发展，
+
+164
+00:10:26,170 --> 00:10:32,510
+if uh left to the the world to go do it I'm unclear if like we would head to the right direction.
+我不确定我们是否能走上正确的方向。
+
+165
+00:10:32,560 --> 00:10:39,151
+And I think for humanoids like, you know, the best we had 4 years ago was like a you know, Boston Dynamics had a hydraulic humanoid called Atlas.
+我认为对于人形机器人来说，四年前我们最好的成果就是波士顿动力的液压人形机器人 Atlas。
+
+166
+00:10:39,201 --> 00:10:41,545
+It like dripped oils everywhere, lasted like 20 minutes.
+它到处漏油，只能运行大约20分钟。
+
+167
+00:10:41,595 --> 00:10:43,372
+It was like very big, it very unsafe.
+它非常庞大，而且很不安全。
+
+168
+00:10:43,422 --> 00:10:45,670
+You could never put it next to humans.
+你根本不可能把它放在人类旁边。
+
+169
+00:10:45,720 --> 00:10:48,750
+Uh classical controls methodology there.
+呃，那种经典控制方法论。
+
+170
+00:10:48,800 --> 00:10:54,310
+And it was just like, man, you need to like it's like a and you know, Boston Dynamics is really a large heritage around research.
+而且我当时就想，天啊，你得喜欢它，就像你知道的，波士顿动力在研究领域有着深厚的积淀。
+
+171
+00:10:54,360 --> 00:10:56,430
+You know, not commercialization.
+但并不注重商业化。
+
+172
+00:10:56,480 --> 00:10:57,960
+Or not as much commercialization.
+或者说商业化程度没那么高。
+
+173
+00:10:58,010 --> 00:11:05,550
+So, I just felt that there was a need for a group to come in to really like send this thing to the masses.
+所以我觉得，需要有一支团队进来，真正把这件事推向大众。
+
+174
+00:11:05,600 --> 00:11:10,231
+And I felt without my intervention in the space it I don't I don't know if we would have gotten there.
+而我认为，如果没有我的介入，这个领域我们可能根本到不了这一步。
+
+175
+00:11:10,281 --> 00:11:11,119
+Or maybe we will.
+也许我们能做到。
+
+176
+00:11:11,169 --> 00:11:12,330
+We'll we'll find out.
+我们会知道的。
+
+177
+00:11:12,380 --> 00:11:15,825
+But I think Figure has really shown that we've been able to kind of push the timelines
+但我觉得，Figure 真的证明了我们已经能够大幅缩短时间线。
+
+178
+00:11:15,875 --> 00:11:21,488
+left now in this chapter book to get to to get to get into the real world.
+现在，我们终于可以真正进入现实世界了。
+
+179
+00:11:21,538 --> 00:11:24,230
+And um and like I said, I think it's a significant business.
+而且，正如我所说，这是一笔重大的生意。
+
+180
+00:11:24,280 --> 00:11:26,950
+How do you have time to also work on Hark and Cover?
+你是怎么抽出时间同时开发 Hark 和 Cover 的？
+
+181
+00:11:27,000 --> 00:11:28,590
+The trick is just not sleep.
+关键就是不睡觉。
+
+182
+00:11:28,640 --> 00:11:29,870
+Okay.
+好的。
+
+183
+00:11:29,920 --> 00:11:31,710
+Do you have an eight sleeve or you just don't sleep?
+你是真的八小时睡眠，还是干脆不睡觉？
+
+184
+00:11:31,760 --> 00:11:33,857
+You just don't sleep.
+你就是不睡觉。
+
+185
+00:11:33,907 --> 00:11:35,992
+Um Uh uh the trick I Here, listen.
+呃，呃，关键在于，听好了。
+
+186
+00:11:36,042 --> 00:11:39,790
+I I like um Also, explain what those companies do for people.
+我，呃……另外，请说明一下这些公司分别为人们做了什么。
+
+187
+00:11:39,840 --> 00:11:40,565
+Okay.
+好的。
+
+188
+00:11:40,615 --> 00:11:47,190
+So, um So, Cover is basically designing uh like detection systems for K-12 schools.
+所以，呃，Cover 基本上是在为 K-12 学校设计类似检测系统。
+
+189
+00:11:47,240 --> 00:11:51,670
+So, school shootings in the US have gone up 10x last 10 years.
+过去十年里，美国校园枪击事件增加了10倍。
+
+190
+00:11:51,720 --> 00:11:55,550
+And just like this is like actual like a weapon's been fired.
+就像真的有武器开火了一样。
+
+191
+00:11:55,600 --> 00:11:58,923
+And um it's like it's just like basically got fully out of hand.
+而且感觉就是完全失控了。
+
+192
+00:11:58,973 --> 00:12:00,871
+Uh, my view is that it's a perception problem.
+我的看法是，这本质上是个认知问题。
+
+193
+00:12:00,921 --> 00:12:05,542
+We need to see if people have guns like kids or students have guns on them when they're entering schools.
+我们需要检查进入学校时，人们是否携带枪支，比如学生是否随身带枪。
+
+194
+00:12:05,592 --> 00:12:08,030
+If they do, like kids get them off the students.
+如果有，就从学生身上把枪取下来。
+
+195
+00:12:08,080 --> 00:12:10,230
+If they don't, let those students go in.
+如果没有，就让学生进去。
+
+196
+00:12:10,280 --> 00:12:15,070
+There's a technology that was designed at NASA Jet Propulsion Lab about a decade ago
+有一种技术是大约十年前在NASA喷气推进实验室研发的。
+
+197
+00:12:15,120 --> 00:12:19,852
+that it can detect weapons underneath clothes and in backpacks and bags from like uh,
+它能够探测到衣物下、背包和包里的武器，
+
+198
+00:12:19,902 --> 00:12:23,550
+10 20 you know, 5 10 20 m away.
+距离大约 10 到 20 米，甚至 5 到 20 米开外。
+
+199
+00:12:23,600 --> 00:12:30,162
+And they built it for the Iraq Afghanistan war to find like bomb vests and other explosives and stuff on folks from a standoff distance.
+他们开发这项技术，是为了在伊拉克和阿富汗战争中，从安全距离外发现人员身上的炸弹背心和其他爆炸物。
+
+200
+00:12:30,212 --> 00:12:35,230
+So think about this like a like technology similar to like the L3 uh,
+所以可以这样理解：这项技术类似 L3 那种——
+
+201
+00:12:35,280 --> 00:12:38,071
+like scanning systems at a airport, but you can only do that from a few feet away.
+就像机场的扫描系统一样，但你只能在几英尺远的距离内使用。
+
+202
+00:12:38,121 --> 00:12:43,030
+But if you can do that 10x further away, you could just basically scan everybody as they're as they're coming in schools.
+但如果你能将距离扩大十倍，就可以在人们进入学校时基本完成全员扫描。
+
+203
+00:12:43,080 --> 00:12:43,925
+And it's not just a school thing.
+这不仅仅适用于学校。
+
+204
+00:12:43,975 --> 00:12:46,310
+You could use it every public venue in the world.
+你可以将其应用于全球每一个公共场所。
+
+205
+00:12:46,360 --> 00:12:48,882
+And um, it's been on my passion pro-
+而且，这一直是我热衷的项目——
+
+206
+00:12:48,932 --> 00:12:56,310
+I've been like following the space in here like this is like a the the the nerdy topic here is called terahertz imaging radar.
+我一直关注这个领域，这里一个非常小众的话题叫做太赫兹成像雷达。
+
+207
+00:12:56,360 --> 00:12:58,030
+And that's what we do here at Cover.
+这正是我们在 Cover 公司所做的事情。
+
+208
+00:12:58,080 --> 00:13:01,923
+And so I have a team, uh, most of which are from NASA Jet Propulsion Lab.
+我有一个团队，其中大部分成员来自 NASA 喷气推进实验室。
+
+209
+00:13:01,973 --> 00:13:04,169
+So I one is I own the IP from NASA Jet Propulsion Lab.
+我拥有来自 NASA 喷气推进实验室的知识产权。
+
+210
+00:13:04,219 --> 00:13:06,470
+I spun it out 2 years ago and I'm funding this project.
+两年前我将其独立出来，并正在资助这个项目。
+
+211
+00:13:06,520 --> 00:13:06,990
+Oh.
+哦。
+
+212
+00:13:07,040 --> 00:13:07,340
+Yeah.
+对。
+
+213
+00:13:07,320 --> 00:13:08,910
+How did you get it? it.
+你是怎么得到它的？它。
+
+214
+00:13:08,960 --> 00:13:09,510
+Oh.
+哦。
+
+215
+00:13:09,560 --> 00:13:11,230
+They they'll sell it to you.
+他们会卖给你。
+
+216
+00:13:11,280 --> 00:13:11,657
+Yeah.
+嗯。
+
+217
+00:13:11,687 --> 00:13:13,470
+Uh, so they sold it to me.
+嗯，他们卖给了我。
+
+218
+00:13:13,520 --> 00:13:15,070
+100% you own it 100%?
+100% 你拥有它 100% 吗？
+
+219
+00:13:15,120 --> 00:13:15,590
+Yeah.
+嗯。
+
+220
+00:13:15,640 --> 00:13:16,040
+Okay.
+好的。
+
+221
+00:13:16,080 --> 00:13:23,670
+And then uh, and Caltech which is like you know, NASA basically JPL uh, has a small uh, very small minority interest in the business.
+然后还有加州理工，基本上就是 NASA 的喷气推进实验室，对这个业务有少量、非常小的少数股权。
+
+222
+00:13:23,720 --> 00:13:24,020
+Yeah.
+嗯。
+
+223
+00:13:24,036 --> 00:13:28,790
+And then a lot of the core team that did that is on my team now at Cover.
+然后当初做这个的核心团队，现在都在我这边的 Cover 团队里。
+
+224
+00:13:28,840 --> 00:13:29,440
+And it's awesome.
+这太棒了。
+
+225
+00:13:29,490 --> 00:13:32,285
+Like the images we get it's like it's like a it's like a hardware and AI problem.
+就像我们获得的图像一样，这其实是一个硬件和AI的问题。
+
+226
+00:13:32,335 --> 00:13:35,150
+It's like a vision problem that you have to solve with AI.
+这就像一个视觉问题，需要用AI来解决。
+
+227
+00:13:35,200 --> 00:13:38,308
+And we have prototypes now in in in like that are running now.
+现在我们已经有了原型，正在运行中。
+
+228
+00:13:38,358 --> 00:13:43,030
+Um, and we will deploy hopefully to our first schools in beta by end of year.
+嗯，我们希望能在今年底前在首批学校进行内测部署。
+
+229
+00:13:43,080 --> 00:13:45,577
+And we wanted to deploy there's 130,000 K-12 schools.
+我们想部署的地方有13万所K-12学校。
+
+230
+00:13:45,627 --> 00:13:48,710
+There's like a huge amount we have to manufacture and get out the door.
+我们需要制造的数量非常大，必须尽快推向市场。
+
+231
+00:13:48,760 --> 00:13:50,447
+So I've been self-funding that company for 2 years.
+所以我已自费支持这家公司两年了。
+
+232
+00:13:50,497 --> 00:13:53,230
+Uh, we're making incredible progress.
+嗯，我们取得了惊人的进展。
+
+233
+00:13:53,280 --> 00:13:57,390
+And uh I have a team in Pasadena, right next to Jet Propulsion Lab in LA.
+我在帕萨迪纳有一支团队，就在洛杉矶喷气推进实验室旁边。
+
+234
+00:13:57,440 --> 00:13:58,840
+And they're funding that.
+他们正在资助这家公司。
+
+235
+00:13:58,890 --> 00:14:01,430
+So, um and then I have a separate company called Hark.
+所以，嗯，然后我还有一个独立的公司，叫Hark。
+
+236
+00:14:01,480 --> 00:14:03,261
+It's an AI lab I started about 7-8 months ago.
+这是我大约七到八个月前创办的一个AI实验室。
+
+237
+00:14:03,311 --> 00:14:07,430
+It's trying to design like really highly personalized and uh intelligence.
+它正试图设计出高度个性化且智能的系统。
+
+238
+00:14:07,480 --> 00:14:14,230
+So, we're designing next generation AI models and also um the next generation of AI devices uh to interact with AI.
+因此，我们正在设计下一代AI模型，同时也设计下一代与AI交互的AI设备。
+
+239
+00:14:14,280 --> 00:14:20,310
+Like right now we interact with AI through like 20-year-old computers, like phones and MacBooks and stuff like that.
+目前我们通过二十岁左右的电脑、手机和MacBook等设备与AI互动。
+
+240
+00:14:20,360 --> 00:14:24,670
+And they're just they're not the ideal like intermediary and interface to AI.
+但这些设备并不是与AI交互的理想中介和界面。
+
+241
+00:14:24,720 --> 00:14:28,390
+So, um so we just came out of stealth like 2 weeks ago.
+所以，我们大约两周前才刚结束秘密状态正式亮相。
+
+242
+00:14:28,440 --> 00:14:29,910
+We have a team of like 50.
+我们有一个大约五十人的团队。
+
+243
+00:14:29,960 --> 00:14:36,710
+And we're building like we're building really awesome, magical AI models and we're building really magical hardware.
+我们正在打造非常出色、神奇的AI模型，同时也在打造神奇的硬件。
+
+244
+00:14:36,760 --> 00:14:42,990
+You recently went viral for comments on your OpenAI partnership with Figure.
+你最近因对与Figure公司合作的OpenAI相关言论而走红。
+
+245
+00:14:43,040 --> 00:14:44,230
+What happened there?
+那是怎么回事？
+
+246
+00:14:44,280 --> 00:14:45,643
+Yeah.
+是的。
+
+247
+00:14:45,693 --> 00:14:50,683
+Um so OpenAI led our led my Series B a couple years ago.
+几年前，OpenAI主导了我们的B轮融资。
+
+248
+00:14:50,733 --> 00:14:56,150
+Um and as a part of that we did a collaboration agreement to work on like next generation AI models together.
+作为其中一部分，我们签署了一份合作协议，共同开发下一代AI模型。
+
+249
+00:14:56,200 --> 00:14:58,203
+Uh and uh you know, it's great.
+嗯，你知道的，这真是太棒了。
+
+250
+00:14:58,253 --> 00:15:01,414
+Like something like uh got to know the team really well over there.
+就像，得真正了解那边的团队才行。
+
+251
+00:15:01,464 --> 00:15:04,305
+Sam and the rest of group and you know, they led our round.
+萨姆和团队的其他人，你知道，他们主导了我们的融资轮次。
+
+252
+00:15:04,355 --> 00:15:07,144
+They brought in Satya and Microsoft.
+他们引入了萨蒂亚和微软。
+
+253
+00:15:07,194 --> 00:15:08,706
+They co-led it.
+他们共同主导了这次投资。
+
+254
+00:15:08,756 --> 00:15:14,203
+And um and then we spent a basically a year like collaborating together on like how do we get AI models to work like on a humanoid?
+然后我们基本上花了一年时间，一起合作探讨如何让AI模型在人形机器人上运行。
+
+255
+00:15:14,253 --> 00:15:17,150
+Or how do we get like language models to work on a humanoid?
+或者说，如何让语言模型在人形机器人上运行。
+
+256
+00:15:17,200 --> 00:15:22,350
+And um they were very interested in robotics and uh we were very interested in like
+他们对机器人技术非常感兴趣，而我们则非常关注如何更好地理解
+
+257
+00:15:22,400 --> 00:15:27,041
+understanding uh better about how do we get like language like like language models on robots?
+如何让语言模型在机器人上运行。
+
+258
+00:15:27,091 --> 00:15:30,990
+Like what what what part they play or do they play a part in robotics?
+比如说，它们在机器人领域扮演什么角色？它们是否真的能发挥作用？
+
+259
+00:15:31,040 --> 00:15:32,910
+And so we spent a year working with them.
+所以我们花了一年时间与他们合作。
+
+260
+00:15:32,960 --> 00:15:40,349
+Um like ni- nice folks, like um you know, I was in the I was like working with them for you know,
+嗯，这些人挺不错的，你知道，我那时一直在和他们合作，
+
+261
+00:15:40,399 --> 00:15:43,949
+almost every like every day every week and it it got to a point where we
+几乎每天、每周都是如此，最后我们到了一个地步，
+
+262
+00:15:43,999 --> 00:15:48,830
+were just like our team internally that was designing these models were were running circles around OpenAI.
+内部负责设计这些模型的团队，已经远远甩开了 OpenAI。
+
+263
+00:15:48,880 --> 00:15:50,950
+We were just way better at this.
+我们在这方面要强得多。
+
+264
+00:15:51,000 --> 00:15:56,669
+And um we were better about testing on the robots, training the models, like all all of it.
+而且我们在机器人测试、模型训练等方面也更出色，所有环节都是如此。
+
+265
+00:15:56,719 --> 00:16:01,070
+My team had come from robot learning backgrounds for over a decade.
+我的团队成员来自机器人学习领域，超过十年的经验。
+
+266
+00:16:01,120 --> 00:16:07,670
+And um and I think there was also like some interest as OpenAI was watching us getting into robotics.
+而且我觉得 OpenAI 也在关注我们进入机器人领域，似乎有些兴趣。
+
+267
+00:16:07,720 --> 00:16:09,990
+And so I fired him.
+所以我解雇了他。
+
+268
+00:16:10,040 --> 00:16:13,030
+Why did you let them invest in the first place?
+你当初为什么允许他们投资？
+
+269
+00:16:13,080 --> 00:16:20,879
+Um I got to know Sam well and the team and I thought there could be like a lot of potential strategic interests from from from both of us,
+我和萨姆以及团队相处得很熟，我觉得双方在战略上有很多潜在的合作空间，
+
+270
+00:16:20,929 --> 00:16:24,150
+like of how to develop some of these systems and learn from each other.
+比如如何开发这些系统，以及互相学习。
+
+271
+00:16:24,200 --> 00:16:29,630
+And um it turned out I was kind of wrong on that.
+但后来我发现，我在这方面判断错了。
+
+272
+00:16:29,680 --> 00:16:30,390
+Yeah.
+是啊。
+
+273
+00:16:30,440 --> 00:16:35,310
+Is that when or even before that when you started to become more secure here?
+是在那个时候，甚至更早之前，你就开始在这里感觉更安全了吗？
+
+274
+00:16:35,360 --> 00:16:43,856
+Cuz even coming in, my phone is covered, you know, there's restricted areas, it's very close on IP, like what is Yeah.
+因为即使刚进来，我的手机都被罩着，你知道的，有禁区，IP 管得特别严，比如到底是什么。
+
+275
+00:16:43,906 --> 00:16:45,615
+Oh, and so we've always been pretty secure.
+哦，所以我们一直都很安全。
+
+276
+00:16:45,665 --> 00:16:49,049
+Uh I think what we're doing is like a very high IP risk.
+我觉得我们正在做的，风险非常高。
+
+277
+00:16:49,099 --> 00:16:52,630
+Um so we really think about carefully about our like engineering CAD and software,
+我们真的会非常仔细地考虑我们的工程 CAD 和软件。
+
+278
+00:16:52,680 --> 00:16:57,399
+like making sure it's like very secure from a you know, cybersecurity perspective and internal security perspective.
+比如确保从网络安全和内部安全的角度来看都足够安全。
+
+279
+00:16:57,449 --> 00:16:58,998
+And then our office is like really open.
+然后我们的办公室非常开放。
+
+280
+00:16:59,048 --> 00:17:01,150
+You can like see a lot of stuff from your computer.
+你从电脑上能看到很多东西。
+
+281
+00:17:01,200 --> 00:17:03,670
+Yeah, so we used to have people come in and just like snap photos randomly.
+是的，我们过去常有人进来，随便就拍照。
+
+282
+00:17:03,720 --> 00:17:05,036
+You're like, "Whoa, that's like not okay."
+你会觉得：“哇，这可不行。”
+
+283
+00:17:05,086 --> 00:17:08,399
+Like I don't like, you know, like I like hardware or something in front of the person.
+我不喜欢有人在面前，看到硬件之类的东西。
+
+284
+00:17:08,449 --> 00:17:13,510
+And so we like in the Bay Area and there's a lot of honey pots, spies.
+所以我们在湾区，到处都是诱饵和间谍。
+
+285
+00:17:13,560 --> 00:17:17,146
+One day we're like uh looking up and we're like uh it was in this office and I we
+有一天我们抬头一看，发现那个办公室里有个无人机，就停在那儿，正往办公室里看，
+
+286
+00:17:17,196 --> 00:17:21,000
+look at the corner of the window at the top there's like a drone sitting there looking in the office,
+就在窗户顶部那个角落，就在那儿，
+
+287
+00:17:21,050 --> 00:17:22,350
+like right over here.
+就在这儿。
+
+288
+00:17:22,400 --> 00:17:22,730
+Believe it.
+信不信由你。
+
+289
+00:17:22,760 --> 00:17:23,220
+Main area, yeah.
+主要区域，对。
+
+290
+00:17:23,270 --> 00:17:25,350
+We're like, "Oh my gosh, we got to like change some things here."
+我们当时就想：“天啊，得赶紧改点什么了。”
+
+291
+00:17:25,400 --> 00:17:26,750
+Did you find out who that was?
+你查出来是谁干的了吗？
+
+292
+00:17:26,800 --> 00:17:33,590
+find out who it was, but we like we tinted all the all the glass, like we have like we have a really strict security, both physical and digital now.
+没查出来是谁，但我们把所有玻璃都贴了膜，现在安保措施非常严格，无论是物理还是数字层面。
+
+293
+00:17:33,640 --> 00:17:38,870
+Um I mean, we're designing some crazy stuff, so we want to protect it at all all costs uh here.
+嗯，我们正在设计一些疯狂的东西，所以无论如何都要保护好。
+
+294
+00:17:38,920 --> 00:17:42,310
+Um but no, we've we've we've kind of always been like this.
+嗯，不过我们一直就是这样。
+
+295
+00:17:42,360 --> 00:17:45,230
+A little a little paranoid, which always helps.
+有点 paranoid，但这总是有帮助的。
+
+296
+00:17:45,280 --> 00:17:46,590
+Typical founder trait, right?
+典型的创始人特质，对吧？
+
+297
+00:17:46,640 --> 00:17:48,070
+Yeah, exactly.
+是的，完全正确。
+
+298
+00:17:48,120 --> 00:17:54,590
+Speaking of that, so one of our sponsors is Brex and they're about performance, spending smarter, moving faster.
+说到这个，我们的一位赞助商是 Brex，他们专注于绩效、更聪明地支出、更快地行动。
+
+299
+00:17:54,640 --> 00:18:06,550
+I'm curious from your standpoint as a leader, how do you maintain your performance whether it's like mental or like team leadership-wise?
+从你作为领导者的角度来看，你是如何保持自己的表现的，无论是心理层面还是团队领导方面？
+
+300
+00:18:06,600 --> 00:18:10,140
+Yeah, you asked before like how do I have time to do all this stuff?
+是的，你之前问过，我是怎么抽出时间做所有这些事情的？
+
+301
+00:18:10,190 --> 00:18:13,110
+Um You know, I think like I always had like these three buckets of time in my life.
+嗯，我觉得我一直把生活分成这三个时间范畴。
+
+302
+00:18:13,160 --> 00:18:18,670
+I feel like I have like my family, I have like work, and I have like, you know, you have like things you do with like friends and people you know.
+我觉得我的生活有家庭、工作，还有和朋友、熟人一起做的事。
+
+303
+00:18:18,720 --> 00:18:24,020
+Whatever, annual trip with friends or golf or whatever else it is from college.
+比如和朋友每年一次的旅行，或者打高尔夫，或者其他大学时期的老习惯。
+
+304
+00:18:24,070 --> 00:18:30,190
+Um about like, you know, when I was at Archer, I I got to the point where I was like man, I I don't really have time to do all three anymore.
+嗯，记得在 Archer 的时候，我一度觉得，天啊，我真的没时间兼顾这三件事了。
+
+305
+00:18:30,240 --> 00:18:34,710
+So, I decided like 5 years ago to like stop doing like the annual golf trip.
+所以，我五年前决定，不再参加每年的高尔夫旅行。
+
+306
+00:18:34,760 --> 00:18:37,766
+And stop doing like this person's in town I haven't seen in 10 years, we need to go out to dinner.
+也不再安排那些十年没见、现在刚好在城里的人，我们得出去吃顿饭。
+
+307
+00:18:37,816 --> 00:18:39,510
+I I I just don't do that anymore.
+我现在都不再做这些事了。
+
+308
+00:18:39,560 --> 00:18:42,947
+It's been all my time with family or on my companies.
+我现在所有的时间都给了家人或我的公司。
+
+309
+00:18:42,997 --> 00:18:44,110
+That's all I do.
+我就做这些事。
+
+310
+00:18:44,160 --> 00:18:45,815
+Um and it's it's kind of nice.
+嗯，感觉还挺不错的。
+
+311
+00:18:45,865 --> 00:18:50,310
+So, it's it's like the stuff I really care about and I get to kind of go all in on it and do a really good job.
+所以说，这正是我真正关心的事情，我能全身心投入，把工作做到很好。
+
+312
+00:18:50,360 --> 00:18:56,150
+Uh so, here I'm like you I was at the office last night till like midnight, but like I I come home every night to have dinner with my kids.
+嗯，就像你一样，我昨晚在办公室待到快午夜，但每天晚上我都会回家，和孩子们一起吃晚饭。
+
+313
+00:18:56,200 --> 00:19:01,847
+Um so, I'm at home by 6:00 and I do dinner and do bedtime and then come back in if I need to or stay home depending on what's going on,
+嗯，我通常六点前到家，做晚饭、陪孩子睡觉，之后如果需要就再回来工作，或者视情况留在家里。
+
+314
+00:19:01,897 --> 00:19:03,154
+but usually it's back to work.
+但通常我还是得回去工作。
+
+315
+00:19:03,204 --> 00:19:10,190
+Um and just make sure I get the like make sure I unblock the most pernicious problems at these companies and help help scale.
+嗯，总之，我得确保自己能解决这些公司里最棘手的问题，帮助它们实现规模化。
+
+316
+00:19:10,240 --> 00:19:17,855
+Um so, anyway, I think from a time perspective, uh yeah, I kind of have to be very thoughtful about about about what I what I do.
+嗯，总之，从时间角度看，我得非常谨慎地考虑自己该做什么。
+
+317
+00:19:17,905 --> 00:19:22,108
+When I'm even in the office now, I got to be really thoughtful about I spend my time on.
+现在我即使在办公室，也得认真思考自己该如何分配时间。
+
+318
+00:19:22,158 --> 00:19:25,498
+So, what I've learned over the time, you asked when you when you came here is like,
+所以，我这些年学到的经验是，你刚来的时候问过我，
+
+319
+00:19:25,548 --> 00:19:29,510
+do you have like the corner office or do you have like a you're in the you know, the bullpen.
+你是有角落办公室，还是像在开放式办公区那样？
+
+320
+00:19:29,560 --> 00:19:31,460
+The bullpen.
+开放式办公区。
+
+321
+00:19:31,510 --> 00:19:39,081
+Um man, I have like a So, I you know, one day after we took Archer public, I woke up one day and I was like,
+哦天啊，我感觉就像这样，我们把Archer上市后的一天，我醒来突然意识到，
+
+322
+00:19:39,131 --> 00:19:45,950
+I feel like I was in this Groundhog movie where I was like in this conference room with all my C-suite and was in there like every day.
+我感觉自己就像在《土拨鼠之日》电影里一样，每天都在会议室里，和我的高管团队待在一起。
+
+323
+00:19:46,000 --> 00:19:52,749
+And, you know, usually I'm like on the floor of product engineering helping to build build aircraft design and I was just like stuck.
+通常我都在产品工程的地板上，亲自参与飞机设计的开发，但当时我却完全被困住了。
+
+324
+00:19:52,799 --> 00:19:59,860
+I was stuck in like two day a quarter board meetings and analyst callbacks and talking about, you know,
+我被困在每季度的董事会会议、分析师电话会议里，整天都在谈论，
+
+325
+00:19:59,910 --> 00:20:05,230
+my CHRO or GC and all these different things and I was like, this is just something's wrong here.
+人力资源总监或总法律顾问，以及其他各种事务，我突然觉得，这肯定哪里不对劲。
+
+326
+00:20:05,280 --> 00:20:11,830
+I mean, it's like a lead office over here like looking down on everybody, like not doing real work on the ground.
+这就像一个主管办公室，高高在上地看着所有人，却根本没在一线做实际工作。
+
+327
+00:20:11,880 --> 00:20:13,863
+And, um, you know,
+而且，你知道，
+
+328
+00:20:13,913 --> 00:20:20,310
+I made a decision kind of around that time to like just basically remove everything on my plate just spend time on like product engineering.
+那段时间我做了一个决定，干脆把所有事情都从我的日程上移除，专心投入产品工程。
+
+329
+00:20:20,360 --> 00:20:25,230
+So, I do a few things like you're like the uh you're the first person that's actually seen the whole office like this.
+所以，你可能是第一个真正看到整个办公室这样状态的人。
+
+330
+00:20:25,280 --> 00:20:25,610
+Wow.
+哇。
+
+331
+00:20:25,640 --> 00:20:26,107
+Which is cool.
+这挺酷的。
+
+332
+00:20:26,157 --> 00:20:28,311
+We don't do a lot of these and I uh I love your show,
+我们很少做这种事，而且我真的喜欢你的节目，
+
+333
+00:20:28,361 --> 00:20:31,750
+so it's like great to have you here and kind of give a sneak peek to the world on like what we're doing.
+所以很高兴你在这里，能给大家提前透露一下我们正在做的事情。
+
+334
+00:20:31,800 --> 00:20:32,200
+Cute.
+真可爱。
+
+335
+00:20:32,240 --> 00:20:32,540
+Yeah.
+对。
+
+336
+00:20:32,535 --> 00:20:36,353
+And, um, and then the rest of my time's on like how do I like work on product engineering?
+然后，嗯，接下来我的时间主要在思考如何开展产品工程工作。
+
+337
+00:20:36,403 --> 00:20:38,822
+How do I advance the humanoid to do better things?
+如何让人形机器人做得更好？
+
+338
+00:20:38,872 --> 00:20:41,718
+Or how do I make covers system out to the world?
+或者如何把 Cover 系统推向世界？
+
+339
+00:20:41,768 --> 00:20:43,450
+We need to start testing it and getting feedback.
+我们需要开始测试并收集反馈。
+
+340
+00:20:43,500 --> 00:20:46,407
+And how do we get heart models and devices out to the world to scale?
+我们该如何让心脏模型和设备走向世界并实现规模化？
+
+341
+00:20:46,457 --> 00:20:48,590
+Like those are the things I think really matter.
+我认为这些才是真正重要的事。
+
+342
+00:20:48,640 --> 00:20:51,311
+Matters less about like doing traditional PR and event, you know,
+相比于传统的公关和活动，这些事重要得多，你知道，
+
+343
+00:20:51,361 --> 00:20:57,929
+like going to like trade shows and, you know, um, sitting on like these like panels and stuff.
+比如参加展会，或者坐在各种论坛 panel 上聊天之类的。
+
+344
+00:20:57,979 --> 00:20:58,870
+None of this matters.
+这些都不重要。
+
+345
+00:20:58,920 --> 00:20:59,320
+Yeah.
+是的。
+
+346
+00:20:59,360 --> 00:21:00,225
+It's not real.
+这不是真的。
+
+347
+00:21:00,275 --> 00:21:00,575
+So,
+所以，
+
+348
+00:21:00,519 --> 00:21:04,218
+uh so I try to spend my time in the bullpen and then I try to like
+嗯，所以我尽量把时间花在休息区，然后试着在办公室内外都
+
+349
+00:21:04,268 --> 00:21:08,150
+maximize my time both when I'm in or out of the office on things that are important.
+把时间最大化，用在重要的事情上。
+
+350
+00:21:08,200 --> 00:21:16,793
+You mentioned a bit of inspiration on ideas around coming from Shopify, but on the leadership standpoint,
+你提到在灵感方面受到 Shopify 的一些启发，但从领导力角度来看，
+
+351
+00:21:16,843 --> 00:21:23,710
+like who are people that you admire or have looked up to that like help carry you forward and keep you motivated?
+有哪些你敬佩或曾仰望过的人，能帮助你前进并保持动力？
+
+352
+00:21:23,760 --> 00:21:29,058
+Yeah, I was I I mean, kind of like a generation behind like Steve Jobs and that whole, you know, uh crew, like Jeff Bezos,
+嗯，我算是比史蒂夫·乔布斯那一代人晚一辈，比如杰夫·贝索斯，
+
+353
+00:21:29,108 --> 00:21:35,030
+which is a big investor for us at Figure, and you know, I get I get to basically have access to and talk with.
+他也是我们公司 Figure 的重要投资人，我基本上能接触到他并和他交流。
+
+354
+00:21:35,080 --> 00:21:39,906
+And um you know, for me, like I want to play the game like 11 out of 10.
+对我来说，我想把这场游戏打得满分 11 分。
+
+355
+00:21:39,956 --> 00:21:41,885
+I want to go really hard at this.
+我想全力以赴。
+
+356
+00:21:41,935 --> 00:21:43,270
+Like so we're really serious.
+所以我们真的非常认真。
+
+357
+00:21:43,320 --> 00:21:44,691
+I'm pretty competitive person.
+我是个相当有竞争心的人。
+
+358
+00:21:44,741 --> 00:21:50,365
+So if I'm going to do this and like sacrifice my life to do this and my time, I I I just want to nail it.
+所以如果我要做这件事，甚至愿意牺牲我的生命和时间，那我就必须全力以赴。
+
+359
+00:21:50,415 --> 00:21:55,842
+I want to win and I want to do uh I want to do everything to the most hardcore level possible.
+我想要赢，也想要做到极致，尽一切可能达到最顶尖的水平。
+
+360
+00:21:55,892 --> 00:22:00,134
+And um so I think the folks I looked up to in the world are the folks that have done that, have been successful,
+我觉得在世界上让我敬佩的人，正是那些做到这一点、取得成功的人，
+
+361
+00:22:00,184 --> 00:22:05,750
+but have like really devoted their time to being um kind of best athlete in those situations.
+而且真正把时间投入进去，成为那种情境下的顶尖运动员。
+
+362
+00:22:05,800 --> 00:22:09,217
+Um So uh yeah, and I'm looking at myself here.
+嗯，是的，我现在就在审视自己。
+
+363
+00:22:09,267 --> 00:22:10,575
+Like how do I make these companies work?
+我该如何让这些公司运转起来？
+
+364
+00:22:10,625 --> 00:22:16,350
+There's just nothing worse than like 10, 15, 20 years from now these things not working.
+想象一下，十年、十五年、二十年后这些事却没做成，那简直太糟糕了。
+
+365
+00:22:16,400 --> 00:22:18,685
+Like what I I should I like I missed all my golf trips.
+比如说，我错过了所有的高尔夫行程。
+
+366
+00:22:18,735 --> 00:22:19,588
+You know what I mean?
+你明白我的意思吧？
+
+367
+00:22:19,638 --> 00:22:21,309
+I missed like time with the family.
+我错过了和家人在一起的时光。
+
+368
+00:22:21,359 --> 00:22:23,670
+It's just like I just missed all this stuff in my life.
+就是说，我错过了生活中所有这些重要的东西。
+
+369
+00:22:23,720 --> 00:22:25,707
+And I at this point I have plenty of money.
+而且此时此刻，我已经有足够的钱了。
+
+370
+00:22:25,757 --> 00:22:27,441
+So it's like I'm doing this because I love it.
+所以我做这件事，是因为我热爱它。
+
+371
+00:22:27,491 --> 00:22:29,683
+And I better be getting better at it.
+我必须在这件事上不断进步。
+
+372
+00:22:29,733 --> 00:22:32,563
+And you know, recursively improving.
+而且是不断递归地提升自己。
+
+373
+00:22:32,613 --> 00:22:36,102
+And I think I look up to the folks like that that have done that through their time.
+我觉得我非常敬佩那些人，他们通过时间做到了这一点。
+
+374
+00:22:36,152 --> 00:22:42,079
+If you look at like Steve and Jeff and some of these group groups are kind of a generation above me.
+如果你看看史蒂夫和杰夫，以及一些比我大一辈的人。
+
+375
+00:22:42,129 --> 00:22:45,430
+They they've been good at many things in their life across many different areas.
+他们在人生中涉足过许多不同领域，都做得非常出色。
+
+376
+00:22:45,480 --> 00:22:51,150
+And um they've also too devoted their life to doing this and have been like a good source of inspiration.
+而且他们也把一生都奉献给了这件事，一直是很好的灵感来源。
+
+377
+00:22:51,200 --> 00:22:54,270
+Um and it's been hard and they've done it over decades.
+这过程很艰难，他们坚持了数十年。
+
+378
+00:22:54,320 --> 00:22:57,550
+This stuff is like not This stuff doesn't happen overnight.
+这些事不会一夜之间发生。
+
+379
+00:22:57,600 --> 00:23:02,630
+I've been work I've been doing like 20 years now doing all this stuff and I feel like I'm just starting.
+我已经做了二十年的这些事，但感觉才刚刚开始。
+
+380
+00:23:02,680 --> 00:23:05,750
+What are the biggest risks to the business?
+对企业来说，最大的风险是什么？
+
+381
+00:23:05,800 --> 00:23:08,070
+The humanoid thing is just so hard.
+人形机器人这件事实在太难了。
+
+382
+00:23:08,120 --> 00:23:11,790
+Um I can't like even explain it very well.
+嗯，我甚至都很难很好地解释清楚。
+
+383
+00:23:11,840 --> 00:23:18,710
+It's uh getting the robots to do the things we showed you today has been like it has almost killed me.
+让机器人完成今天我们展示的那些任务，简直快把我累垮了。
+
+384
+00:23:18,760 --> 00:23:21,393
+And we have such an uphill battle to go do that.
+而且我们还有这么艰难的路要走。
+
+385
+00:23:21,443 --> 00:23:22,359
+Same with Archer.
+Archer也是同样。
+
+386
+00:23:22,409 --> 00:23:27,333
+We have to fly aircraft every day above cities and make it really safe.
+我们每天都要在城市上空飞行飞机，必须确保绝对安全。
+
+387
+00:23:27,383 --> 00:23:30,470
+And it's like one of the safest forms of transportation you have.
+而且这几乎是所有交通方式中最安全的一种。
+
+388
+00:23:30,520 --> 00:23:38,306
+So this this stuff I'm working through is just like um like if you look at the odds of it of of these things,
+所以我正在处理的这些事，你只要看看它们成功的概率，
+
+389
+00:23:38,356 --> 00:23:41,070
+you know, working they're like super low.
+就会发现这些可能性低得惊人。
+
+390
+00:23:41,120 --> 00:23:43,630
+And I think that's probably pretty accurate.
+我觉得这可能相当准确。
+
+391
+00:23:43,680 --> 00:23:51,350
+So, um I basically have like a I basically have a funnel of the hardest, most pernicious problems I have to go solve every day.
+所以，嗯，我每天面对的其实是一个漏斗，里面装着最困难、最棘手的问题。
+
+392
+00:23:51,400 --> 00:23:54,320
+And they're like they're really really tough.
+它们真的非常非常难。
+
+393
+00:23:54,370 --> 00:24:02,030
+I am So, like my biggest risk, there's like a list of risk list like s- a very long list of risks.
+我觉得，最大的风险就是，有一长串风险列表，真的非常长。
+
+394
+00:24:02,080 --> 00:24:04,750
+And things that could hurt like things that could like make us to not make it.
+就是那些可能造成伤害的事情，可能让我们无法成功的事情。
+
+395
+00:24:04,800 --> 00:24:13,750
+Um the figure, the most important thing is to be able to do end-to-end useful work over a long time horizon.
+嗯，最重要的事是，能够在很长的时间跨度内，完成端到端的有用工作。
+
+396
+00:24:13,800 --> 00:24:21,070
+I want to be able to put a robot into a home and be able to do like 7 to 10 hours of work successfully without failures.
+我希望能把一个机器人放进家里，成功完成7到10小时的工作，且不出现故障。
+
+397
+00:24:21,120 --> 00:24:25,910
+With to know with no human intervention and then do that every day forever.
+无需任何人工干预，然后每天都能重复这个过程，永远持续下去。
+
+398
+00:24:25,960 --> 00:24:27,119
+It's just like a hard problem.
+这就是一个很难的问题。
+
+399
+00:24:27,169 --> 00:24:29,150
+Nobody's ever shown that.
+从来没有人展示过能做到这一点。
+
+400
+00:24:29,200 --> 00:24:30,110
+The robot's very complicated.
+机器人非常复杂。
+
+401
+00:24:30,160 --> 00:24:33,270
+It's like designing like a turbofan or a rocket.
+就像设计一个涡扇发动机或火箭一样。
+
+402
+00:24:33,320 --> 00:24:35,670
+Like an aircraft from scratch.
+就像从零开始设计一架飞机。
+
+403
+00:24:35,720 --> 00:24:39,534
+It's just like a very difficult thing that we've also designed the entire supply chain from scratch.
+这不仅很难，我们还从零开始设计了整个供应链。
+
+404
+00:24:39,584 --> 00:24:41,201
+So, it's like it's got a ton of problems.
+所以，这确实存在一大堆问题。
+
+405
+00:24:41,251 --> 00:24:43,630
+You know, it doesn't work the first time.
+你知道，第一次并不管用。
+
+406
+00:24:43,680 --> 00:24:44,781
+We're working those problems out.
+我们正在解决这些问题。
+
+407
+00:24:44,831 --> 00:24:51,230
+Like we used to run that robot here, Figure 01, and man that robot could like run for like an hour.
+就像我们以前运行这里的 Figure 01 机器人那样，那机器人能连续跑一个小时左右。
+
+408
+00:24:51,280 --> 00:24:52,710
+And it would like fault.
+然后它就会出现故障。
+
+409
+00:24:52,760 --> 00:24:54,870
+We know all the reasons why it would fall.
+我们知道它为什么会倒下的所有原因。
+
+410
+00:24:54,920 --> 00:24:57,270
+Or it would like, you know, lose power.
+或者它会突然失去动力。
+
+411
+00:24:57,320 --> 00:24:59,056
+And you know, we moved to Figure 02.
+然后我们换到了 Figure 02。
+
+412
+00:24:59,106 --> 00:25:02,830
+I think we probably like maybe we saw that like once a day.
+我想我们大概每天能看到一次这种情况。
+
+413
+00:25:02,880 --> 00:25:07,950
+And now Figure 03 like I think, you know, everywhere here they're all running all all day.
+现在 Figure 03 呢，我觉得这里所有的机器人几乎全天都在运行。
+
+414
+00:25:08,000 --> 00:25:11,510
+And we see faults we'll see faults every week.
+我们每周都会看到故障。
+
+415
+00:25:11,560 --> 00:25:13,750
+Not on every single robot, but we'll see faults.
+不是每台机器人都会出问题，但我们确实会看到故障。
+
+416
+00:25:13,800 --> 00:25:15,953
+And we have a list of those and we're working those down.
+我们列出了这些故障，并正在逐一解决。
+
+417
+00:25:16,003 --> 00:25:18,230
+Um but it's really hard.
+但真的很难。
+
+418
+00:25:18,280 --> 00:25:22,710
+And as we're growing the fleet, the absolute number of faults are rising and we got to go figure out how to solve those.
+随着我们车队规模的扩大，故障的绝对数量也在上升，我们必须找出解决这些问题的方法。
+
+419
+00:25:22,760 --> 00:25:25,586
+Cuz like you said before like the amount of states the robot can be in is so high.
+正如你之前所说，机器人可能处于的状态数量极其庞大。
+
+420
+00:25:25,636 --> 00:25:32,310
+So, you can't really reasonably predict what the robot's going to like look like at every single time stamp everywhere in the world.
+所以你根本无法合理预测机器人在世界任何时间、任何地点的具体样子。
+
+421
+00:25:32,360 --> 00:25:33,682
+You kind of can for a car.
+你对汽车可以做到这一点。
+
+422
+00:25:33,732 --> 00:25:36,430
+It's like kind of you can just drive on roads.
+你基本上只需在道路上行驶即可。
+
+423
+00:25:36,480 --> 00:25:37,938
+You It's a hard problem, too.
+这也是一个难题。
+
+424
+00:25:37,988 --> 00:25:42,363
+So, like um anyway, I think what I'm trying to say is like we have like a funhouse of problems,
+所以，总之，我想说的是，我们面临的是一个充满各种难题的迷宫，
+
+425
+00:25:42,413 --> 00:25:46,970
+and it's like never-ending problem city for the company.
+对公司而言，这简直是一个永无止境的问题之城。
+
+426
+00:25:47,020 --> 00:25:48,993
+Um we have to be able to manufacture unprecedented rates.
+我们必须能够以前所未有的速度进行制造。
+
+427
+00:25:49,043 --> 00:25:52,438
+We have to get humanoid robots to work autonomously without human intervention.
+我们必须让人形机器人实现自主运行，无需人工干预。
+
+428
+00:25:52,488 --> 00:25:53,307
+Nobody's ever shown that.
+从来没有人展示过这一点。
+
+429
+00:25:53,357 --> 00:25:55,990
+We have to make it work with like a AI policies.
+我们必须让AI政策与之兼容。
+
+430
+00:25:56,040 --> 00:25:56,865
+The hardware can't fail.
+硬件绝不能出问题。
+
+431
+00:25:56,915 --> 00:25:57,975
+It's got to be really affordable.
+它必须非常实惠。
+
+432
+00:25:58,025 --> 00:26:01,430
+We've got to make a lot of them.
+我们必须生产大量这样的产品。
+
+433
+00:26:01,480 --> 00:26:03,590
+And we've got to get consumers to want them.
+我们还必须让消费者愿意购买。
+
+434
+00:26:03,640 --> 00:26:04,710
+That's a lot.
+这任务很重。
+
+435
+00:26:04,760 --> 00:26:07,585
+And you've raised nearly $2 billion.
+你已经筹集了近20亿美元。
+
+436
+00:26:07,635 --> 00:26:12,767
+I think most recently publicly stated at $39 billion.
+我认为最近公开提到的估值是390亿美元。
+
+437
+00:26:12,817 --> 00:26:21,455
+Do you see capital as a risk or a constraint or the valuation as a risk or This will build like the biggest business in the world.
+你认为资本是风险还是制约因素？估值是风险吗？这将可能成为全球最大的企业。
+
+438
+00:26:21,505 --> 00:26:24,460
+Like half of like little under half of GDP is human labor in the commercial market.
+在商业市场中，大约一半甚至略低于一半的GDP来自人力劳动。
+
+439
+00:26:24,510 --> 00:26:26,538
+Like they pay wages for humans.
+他们支付人类的工资。
+
+440
+00:26:26,588 --> 00:26:28,390
+We We do human work.
+我们在做人类的工作。
+
+441
+00:26:28,440 --> 00:26:35,110
+So, you're looking at we will have the ability to ship, if the robots work well, billions of robots in the commercial workforce.
+所以，如果机器人工作顺利，我们将有能力将数十亿台机器人投入商业劳动力市场。
+
+442
+00:26:35,160 --> 00:26:37,584
+Uh you'll produce you know,
+嗯，你会生产出你知道的，
+
+443
+00:26:37,634 --> 00:26:47,150
+there's like 30 trillion 40 trillion of wages paid to this like every year to that to like to to for to folks that'd be doing that work.
+每年有大约30万亿到40万亿美元的工资支付给那些从事这类工作的人。
+
+444
+00:26:47,200 --> 00:26:52,229
+We'll be able to expand that work, automate more like a lot of it, and to continue to scale it up.
+我们将能够扩展这项工作，自动化其中的大部分，并持续扩大规模。
+
+445
+00:26:52,279 --> 00:27:01,110
+I think like that, plus the stuff we're seeing in the home, will just build like enormous of tens of trillions of revenue.
+我认为，再加上我们在家庭领域看到的进展，将创造出数十万亿级别的巨大收入。
+
+446
+00:27:01,160 --> 00:27:03,310
+You'll build something massive.
+你会打造出一件了不起的大事业。
+
+447
+00:27:03,360 --> 00:27:05,110
+I mean, what do most companies trade at?
+你知道，大多数公司估值是多少？
+
+448
+00:27:05,160 --> 00:27:06,810
+Tech companies trade at 10 or 20 times revenue.
+科技公司的估值通常是收入的10到20倍。
+
+449
+00:27:06,860 --> 00:27:13,471
+You're in like 10 trillion dollars or you know, whatever, 100 billion dollars to trillion dollars of revs.
+你已经处于10万亿美元左右，或者说是1000亿到1万亿美元的收入规模。
+
+450
+00:27:13,521 --> 00:27:15,870
+Like this is going to be a huge business.
+这将是一个巨大的生意。
+
+451
+00:27:15,920 --> 00:27:18,590
+Do you have plans for the moon or Mars?
+你有去月球或火星的计划吗？
+
+452
+00:27:18,640 --> 00:27:21,990
+We'd love to send robots into space.
+我们非常希望能把机器人送入太空。
+
+453
+00:27:22,040 --> 00:27:23,350
+Yeah.
+嗯。
+
+454
+00:27:23,400 --> 00:27:25,150
+Let's get them out there.
+我们把它们送出去吧。
+
+455
+00:27:25,200 --> 00:27:25,830
+Okay.
+好的。
+
+456
+00:27:25,880 --> 00:27:26,910
+I have a gift for you.
+我有件礼物送给你。
+
+457
+00:27:26,960 --> 00:27:27,430
+You do?
+真的吗？
+
+458
+00:27:27,480 --> 00:27:28,350
+I do. it?
+真的。要吗？
+
+459
+00:27:28,400 --> 00:27:29,590
+I have some Figure robot?
+我有一些 Figure 机器人？
+
+460
+00:27:29,640 --> 00:27:31,430
+I have some Figure swag.
+我有一些 Figure 周边。
+
+461
+00:27:31,480 --> 00:27:34,630
+Um, so yeah, some hats, shirts.
+嗯，就是一些帽子、T恤。
+
+462
+00:27:34,680 --> 00:27:37,990
+So you can rep the Figure brand here. is a lot of merch. of merch.
+这样你就能在这里展示 Figure 品牌了。这可真有不少周边。
+
+463
+00:27:38,040 --> 00:27:42,030
+Wow, I'm going to have to get a new closet.
+哇，我得买个新衣柜了。
+
+464
+00:27:42,080 --> 00:27:42,484
+This is great.
+这太棒了。
+
+465
+00:27:42,534 --> 00:27:47,470
+It was funny, I don't think they caught this when we were recording the the the tour,
+有点好笑，我想我们录tour的时候他们没注意到这个，
+
+466
+00:27:47,520 --> 00:27:54,190
+but I asked you how you made the logo and you said it was uh the robot steps.
+但我问你logo是怎么做的，你说是机器人迈步。
+
+467
+00:27:54,240 --> 00:27:56,013
+Yeah, it basically the robot takes footsteps like this.
+对，基本上机器人就是这样迈步的。
+
+468
+00:27:56,063 --> 00:27:58,430
+Even in simulation they look like little squares.
+即使在模拟中，看起来也像小方块。
+
+469
+00:27:58,480 --> 00:28:04,270
+Uh so you have like a little uh like kind of a walk a walk and then you also have a little a kind of an F abstract F.
+嗯，所以你有一个小小的、类似走路的动作，然后还有一个小小的、抽象的F。
+
+470
+00:28:04,320 --> 00:28:08,030
+It's not really.
+其实不是这样。
+
+471
+00:28:08,080 --> 00:28:09,510
+Okay, we'll keep the walk.
+好的，我们保留走路的动作。
+
+472
+00:28:09,560 --> 00:28:09,960
+Okay.
+好的。
+
+473
+00:28:09,992 --> 00:28:15,190
+Well, as we wrap up, what are you most looking forward to for this next year?
+那么，快结束时，你最期待明年什么？
+
+474
+00:28:15,240 --> 00:28:21,300
+Um Uh for this year I want to ship robots at scale out to the world and second thing I want to solve
+嗯，今年我想大规模地把机器人推向世界，第二件事我想解决的是，
+
+475
+00:28:21,350 --> 00:28:26,750
+is I want to solve There's like um we have like an extreme focus here to solve like what I call general robotics.
+我想解决的是……我们在这里极度专注于解决我所说的通用机器人。
+
+476
+00:28:26,800 --> 00:28:28,201
+Like a robot that can do everything a human can.
+就是能像人一样做任何事情的机器人。
+
+477
+00:28:28,251 --> 00:28:31,040
+And you have like almost like a feeling of like a human in a body suit.
+你甚至会感觉就像有一个穿着机械外骨骼的人类。
+
+478
+00:28:31,090 --> 00:28:33,441
+You can talk to, can look at you, reason,
+它能与你对话，能看着你，能进行推理，
+
+479
+00:28:33,491 --> 00:28:40,110
+visual understanding and you can drop into any place and like kind of just like look around, reason and understand.
+具备视觉理解能力，你还能进入任何地方，环顾四周，进行推理并理解环境。
+
+480
+00:28:40,160 --> 00:28:41,750
+Uh we want to solve that problem.
+嗯，我们想解决这个问题。
+
+481
+00:28:41,800 --> 00:28:44,057
+And that's a huge that's a Helix problem for us.
+这对我们来说是一个巨大的 Helix 问题。
+
+482
+00:28:44,107 --> 00:28:48,126
+And um so we have a huge focus to get robots out the door.
+因此，我们非常专注于让机器人走出实验室。
+
+483
+00:28:48,176 --> 00:28:50,958
+We have a huge focus to solve general robotics here.
+我们非常专注于解决通用机器人这一难题。
+
+484
+00:28:51,008 --> 00:28:56,710
+I want this to be the first place where we see um see AGI in the physical world.
+我希望 Figure 成为第一个在物理世界中实现 AGI 的地方。
+
+485
+00:28:56,760 --> 00:29:05,630
+And uh we think we have the recipe and uh we think we have like the right um training processes in place to do this.
+我们认为我们已经掌握了正确的配方，也认为我们已具备合适的训练流程来实现这一点。
+
+486
+00:29:05,680 --> 00:29:11,070
+We uh and this will be an important this year and next will be important to see if we can crack this.
+嗯，今年和明年都将非常重要，我们要看看能否攻克这一难题。
+
+487
+00:29:11,120 --> 00:29:11,817
+Exciting.
+非常令人兴奋。
+
+488
+00:29:11,867 --> 00:29:18,681
+Well, thank you so much for the full day here, the entire tour of the whole campus and the thoughtful discussion.
+非常感谢您今天全程的接待，整个园区的参观以及深入的交流讨论。
+
+489
+00:29:18,731 --> 00:29:20,110
+I really It It was great to have you.
+我真的非常高兴能和你见面。
+
+490
+00:29:20,160 --> 00:29:20,990
+Hey, it's Molly.
+嗨，我是莫莉。
+
+491
+00:29:21,040 --> 00:29:22,261
+If you enjoy our interviews,
+如果你喜欢我们的访谈，
+
+492
+00:29:22,311 --> 00:29:31,590
+check out our newsletter sourcery.vc where we deliver a once-a-week top deals and tech headlines email and also go deeper on our podcast interviews.
+请查看我们的通讯订阅源，sourcery.vc，每周我们会发送一次精选交易和科技新闻邮件，并深入探讨我们的播客访谈内容。
+
+493
+00:29:31,640 --> 00:29:38,775
+Subscribe to Sourcery today and don't forget to subscribe to the podcast on YouTube, Spotify, Apple, or wherever you listen.
+立即订阅 Sourcery，别忘了在 YouTube、Spotify、Apple 或你常听播客的任何平台订阅我们的播客。
+
+494
+00:29:38,825 --> 00:29:42,800
+Link in description to sign up.
+描述中链接可注册。

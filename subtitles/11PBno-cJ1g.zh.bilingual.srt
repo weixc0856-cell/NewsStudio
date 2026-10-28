@@ -1,0 +1,4819 @@
+1
+00:02:09,580 --> 00:02:16,560
+Please welcome to the stage CEO of Google Cloud, Thomas Kurian.
+欢迎谷歌云首席执行官托马斯·库里安登台。
+
+2
+00:02:34,785 --> 00:02:35,660
+Hello.
+大家好。
+
+3
+00:02:43,900 --> 00:02:46,900
+Welcome everyone to Google Cloud Next.
+欢迎各位参加谷歌云 Next 大会。
+
+4
+00:02:46,900 --> 00:02:53,580
+Just one year ago, we stood on this same stage and promised a new future for AI.
+就在一年前，我们站在这同一舞台上，承诺了人工智能的新未来。
+
+5
+00:02:53,580 --> 00:03:00,940
+Today, that future is running in production at a scale that the world has never seen.
+如今，这一未来已以全球前所未有的规模投入生产运行。
+
+6
+00:03:00,940 --> 00:03:05,060
+Over the last year, we didn't just see adoption.
+在过去一年里，我们看到的不仅仅是采用。
+
+7
+00:03:05,060 --> 00:03:07,660
+We saw transformation.
+我们看到的是变革。
+
+8
+00:03:07,660 --> 00:03:15,180
+Nearly 75% of Google Cloud customers now leverage our AI products to power their businesses.
+现在，近 75% 的谷歌云客户正在使用我们的 AI 产品来驱动业务。
+
+9
+00:03:15,180 --> 00:03:20,260
+We have thousands of agents and services across every industry,
+我们在各个行业部署了成千上万的智能体和服务，
+
+10
+00:03:20,260 --> 00:03:25,460
+reaching billions of people through the global scale of our partner network.
+通过我们合作伙伴网络的全球规模，触达数十亿人。
+
+11
+00:03:25,460 --> 00:03:28,860
+You have moved beyond the pilot.
+你们已经超越了试点阶段。
+
+12
+00:03:28,860 --> 00:03:31,660
+The experimenting phase is behind us.
+试验阶段已成为过去。
+
+13
+00:03:31,660 --> 00:03:34,460
+And now, the real challenge begins.
+现在，真正的挑战开始了。
+
+14
+00:03:34,460 --> 00:03:40,860
+How do you move AI into production across your entire enterprise?
+如何将人工智能部署到整个企业中？
+
+15
+00:03:40,860 --> 00:03:43,340
+The answer is a unified stack.
+答案是一个统一的架构。
+
+16
+00:03:43,340 --> 00:03:51,380
+You cannot deliver AI by piecing together a puzzle piece of fragmented silicon and disconnected models.
+你无法通过拼凑零散的芯片和孤立的模型来实现人工智能。
+
+17
+00:03:51,380 --> 00:03:58,930
+To drive real value, you need an architecture where chips are designed for the models,
+要创造真正的价值，你需要一种架构，其中芯片是为模型而设计的，
+
+18
+00:03:58,930 --> 00:04:09,130
+models are grounded in your data, agents and applications are built with models and secured by the infrastructure.
+模型基于你的数据，智能体和应用程序基于模型构建，并由基础设施保障安全。
+
+19
+00:04:09,130 --> 00:04:23,290
+Google uses this exact same OpenStack to reimagine how we serve users using our AI tools across Search, YouTube, Chrome, and Android.
+谷歌正是使用这一相同的 OpenStack 架构，重新构想我们如何利用 AI 工具在搜索、YouTube、Chrome 和 Android 上服务用户。
+
+20
+00:04:23,290 --> 00:04:28,290
+To take you inside that journey, let's hear from Sundar Pichai.
+为了带您深入了解这一历程，让我们听听皮查伊的分享。
+
+21
+00:04:32,210 --> 00:04:34,730
+Thanks, Thomas, and hello, everyone.
+谢谢托马斯，大家好。
+
+22
+00:04:34,730 --> 00:04:37,010
+We are so glad you are here.
+我们非常高兴您能来到这里。
+
+23
+00:04:37,010 --> 00:04:44,890
+The pace of technological change has been faster than I've ever seen, and I've been around technology for a while.
+技术变革的速度比我以往所见都要快，而我早已在科技行业多年。
+
+24
+00:04:44,890 --> 00:04:52,080
+In fact, this Sunday, I'm celebrating my Googleversary-- 22 years, and I'm still feeling lucky.
+事实上，这个星期天，我要庆祝我的谷歌周年纪念——22年了，我依然感到幸运。
+
+25
+00:04:52,080 --> 00:04:56,280
+And I hope that luck extends to all of you in Vegas this week.
+我希望这份好运也能延续到本周在拉斯维加斯的你们所有人身上。
+
+26
+00:04:56,280 --> 00:05:00,960
+I was drawn to Google all those years ago because of its ambitious mission.
+当年我被谷歌吸引，正是因为它雄心勃勃的使命。
+
+27
+00:05:00,960 --> 00:05:09,000
+From the web to mobile to AI, every platform shift has given us new opportunities to advance our mission
+从网络到移动再到人工智能，每一次平台的变革都为我们带来了推进使命的新机遇。
+
+28
+00:05:09,000 --> 00:05:13,840
+and to help our customers and partners achieve yours.
+也帮助我们的客户和合作伙伴实现他们的目标。
+
+29
+00:05:13,840 --> 00:05:18,480
+As we move into the agentic era, we are taking this to the next level.
+当我们步入代理式时代，我们将把这一切提升到新高度。
+
+30
+00:05:18,480 --> 00:05:22,560
+We are making big investments now and for the future.
+我们现在正在投入大量资金，并为未来持续投资。
+
+31
+00:05:22,560 --> 00:05:27,280
+In 2022, we were investing $31 billion in CapEx.
+2022年，我们的资本支出投资为310亿美元。
+
+32
+00:05:27,280 --> 00:05:38,360
+This year, we plan to invest between $175 to $185 billion in total CapEx, a nearly 6x increase in just four years.
+今年，我们计划总投资在1750亿至1850亿美元之间，短短四年间增长近六倍。
+
+33
+00:05:38,360 --> 00:05:47,880
+And for 2026, just over half of our machine learning compute is expected to go towards the cloud business, so it will greatly benefit all of you.
+到2026年，我们机器学习算力的超过一半将用于云业务，这将极大地惠及在座各位。
+
+34
+00:05:47,880 --> 00:05:55,510
+These investments are how we continue to stay at the frontier and ensure you're at the cutting edge as well.
+这些投资让我们始终处于前沿，也确保你们能始终站在技术最尖端。
+
+35
+00:05:55,510 --> 00:06:03,150
+A big focus for us is to always be customer 0 for our own technologies, so we can be a better partner to all of you.
+我们的一个重点是始终将自己作为自身技术的首个客户，以便更好地成为你们所有人的合作伙伴。
+
+36
+00:06:03,150 --> 00:06:08,870
+Let me share a few examples of how we are rewiring our work with AI.
+让我分享几个我们如何用人工智能重新设计工作方式的例子。
+
+37
+00:06:08,870 --> 00:06:14,830
+First, coding-- we've been using AI to generate code internally at Google for a while.
+首先，编码——我们已经在谷歌内部使用AI生成代码一段时间了。
+
+38
+00:06:14,830 --> 00:06:23,910
+Today, nearly 75% of all new code at Google is AI-generated and approved by engineers, up from 50% last fall.
+如今，谷歌新代码中近75%由AI生成并经工程师审批，较去年秋天的50%显著提升。
+
+39
+00:06:23,910 --> 00:06:27,830
+We are now shifting to truly agentic workflows.
+我们现在正转向真正的代理式工作流程。
+
+40
+00:06:27,830 --> 00:06:37,590
+Our engineers are orchestrating fully autonomous digital task forces, firing off agents, and accomplishing incredible things.
+我们的工程师正在协调完全自主的数字任务组，启动智能体，完成令人惊叹的成果。
+
+41
+00:06:37,590 --> 00:06:45,350
+As one example of how we are using agents, we recently executed a particularly complex code migration.
+作为我们使用智能体的一个例子，我们最近完成了一次特别复杂的代码迁移。
+
+42
+00:06:45,350 --> 00:06:50,020
+Anyone familiar knows these migrations can take a while to get done.
+熟悉这一过程的人都知道，这类迁移通常需要很长时间才能完成。
+
+43
+00:06:50,020 --> 00:06:58,220
+We created a system of agents taking on three different types of roles-- planners, orchestrators, and coders.
+我们创建了一个智能体系统，承担三种不同角色——规划者、协调者和编码者。
+
+44
+00:06:58,220 --> 00:07:04,980
+Working together with engineers, we completed the migration 6x faster than we could have a year ago.
+在工程师的协作下，我们比一年前快了6倍完成了这次迁移。
+
+45
+00:07:04,980 --> 00:07:13,140
+And now we are applying that approach across our entire development cycle, from experimentation to testing to evals.
+现在，我们正将这一方法应用到整个开发周期中，从实验到测试再到评估。
+
+46
+00:07:13,140 --> 00:07:17,660
+It's not just developers who are infusing AI into their workflows.
+不只是开发者在将AI融入自己的工作流程。
+
+47
+00:07:17,660 --> 00:07:23,340
+Our marketing teams are fundamentally rethinking the creative process from concept to launch.
+我们的营销团队正在从根本上重新思考从概念到上线的整个创作流程。
+
+48
+00:07:23,340 --> 00:07:28,500
+Historically, adapting a campaign for every audience, channel, and country took weeks.
+以往，为每个受众、渠道和国家调整一个营销活动需要数周时间。
+
+49
+00:07:28,500 --> 00:07:37,300
+For the recent launch of Gemini and Chrome, teams used our models to rapidly generate thousands of variations of our creative assets.
+在最近推出的 Gemini 和 Chrome 项目中，团队利用我们的模型快速生成了数千种创意资产的变体。
+
+50
+00:07:37,300 --> 00:07:41,180
+This enabled personalization at a massive scale.
+这使得大规模个性化成为可能。
+
+51
+00:07:41,180 --> 00:07:47,020
+It also led to 70% faster turnaround and a 20% increase in conversion.
+同时，处理速度提升了 70%，转化率也提高了 20%。
+
+52
+00:07:47,020 --> 00:07:49,420
+We are not only getting to market faster.
+我们不仅上市速度更快了。
+
+53
+00:07:49,420 --> 00:07:52,820
+We are also doing it more effectively with AI.
+我们还借助 AI 更高效地完成了这一过程。
+
+54
+00:07:52,820 --> 00:07:57,100
+Our security teams are also seeing significant gains with AI.
+我们的安全部门也在 AI 的帮助下取得了显著进展。
+
+55
+00:07:57,100 --> 00:08:07,100
+Each month, our teams receive unstructured threat reports at a scale that would take thousands of hours to review-- a nearly impossible task.
+每月，我们的团队都会收到大量非结构化的威胁报告，其规模需要数千小时才能审阅——这几乎是一项不可能完成的任务。
+
+56
+00:08:07,100 --> 00:08:15,940
+Today, our Security Operations Center agents automatically triage tens of thousands of unstructured threat reports each month.
+如今，我们的安全运营中心智能体每月能自动处理数万份非结构化的威胁报告。
+
+57
+00:08:15,940 --> 00:08:24,980
+By accelerating the extraction of critical intelligence and filtering out the noise, it's reduced threat mitigation time by over 90%
+通过加速关键情报的提取并过滤掉噪音，威胁应对时间减少了超过 90%。
+
+58
+00:08:24,980 --> 00:08:28,540
+We are more on the front foot than ever before.
+我们比以往任何时候都更具主动性。
+
+59
+00:08:28,540 --> 00:08:31,980
+Those are just a few examples of what we are trying at Google.
+这些只是我们在谷歌尝试的一些例子。
+
+60
+00:08:31,980 --> 00:08:35,260
+We are moving in a bold and responsible way.
+我们正以大胆而负责任的方式前进。
+
+61
+00:08:35,260 --> 00:08:37,220
+There's a lot of change happening.
+正在发生许多变化。
+
+62
+00:08:37,220 --> 00:08:40,980
+And it can feel like we are in the messy part of the innovation cycle.
+这可能让人感觉我们正处于创新周期的混乱阶段。
+
+63
+00:08:40,980 --> 00:08:48,050
+But we are starting to see the foundational building blocks coming together, unlocking a new wave of innovation.
+但我们现在开始看到基础构建模块逐渐汇聚，释放出新一轮创新的潜力。
+
+64
+00:08:48,050 --> 00:08:53,730
+One thing that is super clear-- we are firmly in the agentic Gemini era.
+有一件事非常明确——我们已坚定地进入代理式 Gemini 时代。
+
+65
+00:08:53,730 --> 00:09:00,410
+Last fall, we introduced Gemini Enterprise as a front door to agentic AI in the workplace.
+去年秋天，我们推出了 Gemini 企业版，作为职场中代理式 AI 的入口。
+
+66
+00:09:00,410 --> 00:09:08,050
+What we have seen in just a few months since launch is how every employee in every organization can become a builder.
+自发布以来短短几个月，我们已看到每个组织中的每位员工都能成为构建者。
+
+67
+00:09:08,050 --> 00:09:10,290
+This is an incredible shift.
+这是一次惊人的转变。
+
+68
+00:09:10,290 --> 00:09:15,730
+We are accomplishing bigger things faster, but this comes with complexity.
+我们正在更快地完成更大规模的成就，但这也带来了复杂性。
+
+69
+00:09:15,730 --> 00:09:22,370
+The conversation has gone from can we build an agent to how do we manage thousands of them?
+对话已从“我们能否构建一个智能体”转变为“我们如何管理成千上万的智能体？”
+
+70
+00:09:22,370 --> 00:09:28,370
+Today, I'm excited to announce our new Gemini Enterprise Agent Platform.
+今天，我非常激动地宣布推出我们的全新 Gemini 企业智能体平台。
+
+71
+00:09:28,370 --> 00:09:38,970
+It provides the secure, full-stack connective tissue you need to build, scale, govern, and optimize your agents with confidence.
+它提供了安全、全栈的连接纽带，让您能够自信地构建、扩展、治理和优化您的智能体。
+
+72
+00:09:38,970 --> 00:09:48,240
+Think of it as mission control for the agentic enterprise to help move your organization into the next phase of the agentic era.
+可以将其视为代理式企业的指挥中心，帮助您的组织迈入代理式时代的下一阶段。
+
+73
+00:09:48,240 --> 00:09:51,240
+I'm going to turn it back over to Thomas to share more.
+我现在把话筒交还给托马斯，让他分享更多内容。
+
+74
+00:09:51,240 --> 00:09:54,440
+But first, thanks again for being here.
+但首先，再次感谢大家的到来。
+
+75
+00:09:54,440 --> 00:10:01,840
+Together, we are building a blueprint for true business transformation, and I'm excited to see where it takes us next.
+我们正在共同打造真正的业务转型蓝图，我非常期待看到它接下来将带我们走向何方。
+
+76
+00:10:01,840 --> 00:10:05,212
+Thomas, back to you.
+托马斯，交给你了。
+
+77
+00:10:20,280 --> 00:10:22,000
+Thank you, Sundar.
+谢谢，皮查伊。
+
+78
+00:10:22,000 --> 00:10:29,040
+Today, we're taking the next step in bringing Google AI to every employee and every workflow.
+今天，我们正在迈出下一步，将谷歌 AI 带入每一位员工和每一个工作流程。
+
+79
+00:10:29,040 --> 00:10:38,640
+Gemini Enterprise is now the end-to-end system for the agentic era, the connective tissue between your data, your people, and your goals.
+Gemini 企业版现在已成为代理式时代的端到端系统，是连接您的数据、人员与目标的纽带。
+
+80
+00:10:38,640 --> 00:10:43,550
+It transforms disconnected processes into a single intelligent flow.
+它将原本孤立的流程转变为单一的智能工作流。
+
+81
+00:10:43,550 --> 00:10:47,590
+This is our blueprint for the agentic enterprise.
+这就是我们为代理式企业打造的蓝图。
+
+82
+00:10:47,590 --> 00:10:51,470
+It's also the answer to that fundamental question.
+它也是对那个根本问题的答案。
+
+83
+00:10:51,470 --> 00:10:56,590
+Intelligence plus automation must deliver value.
+智能加上自动化，必须创造价值。
+
+84
+00:10:56,590 --> 00:11:01,350
+To make this work, you need context and action.
+要实现这一点，你需要上下文和行动。
+
+85
+00:11:01,350 --> 00:11:04,030
+Intelligence comes from your data.
+智能源于你的数据。
+
+86
+00:11:04,030 --> 00:11:06,870
+Automation is driven by agents.
+自动化由智能体驱动。
+
+87
+00:11:06,870 --> 00:11:13,030
+To solve this equation at scale, you need a complete integrated system.
+要大规模解决这一方程，你需要一个完整的集成系统。
+
+88
+00:11:13,030 --> 00:11:23,710
+Today, we will show you the layers of that system and all the innovations we're introducing at every layer, starting with the AI Hypercomputer,
+今天，我们将向您展示该系统的各个层面，以及我们在每一层所引入的所有创新，从AI超算机开始，
+
+89
+00:11:23,710 --> 00:11:29,790
+the purpose-built foundation optimized for the physics of the agentic era;
+专为代理式时代物理特性打造的优化基础架构；
+
+90
+00:11:29,790 --> 00:11:40,340
+the Agentic Data Cloud, the engine that provides agents with trusted business context; Agentic Defense, the autonomous
+代理式数据云，为智能体提供可信业务上下文的引擎；代理式防御，自主的
+
+91
+00:11:40,340 --> 00:11:45,060
+protection that secures your entire AI lifecycle;
+保护您的整个AI生命周期；
+
+92
+00:11:45,060 --> 00:11:53,340
+the Agentic Platform, the system to build, deploy, and manage agents; and finally, the Agentic Task
+代理式平台，用于构建、部署和管理智能体；最后是代理式任务
+
+93
+00:11:53,340 --> 00:12:02,100
+Force, the pre-built specialized agents that we offer that are ready to transform your business.
+力，即我们提供的预构建专用智能体，可立即助力您的业务转型。
+
+94
+00:12:02,100 --> 00:12:03,980
+Let's dive in.
+我们开始吧。
+
+95
+00:12:03,980 --> 00:12:14,180
+Now, the Gemini Enterprise Agent platform is the environment where your business logic, your data, and your models converge to drive autonomous action.
+现在，Gemini 企业智能体平台是您的业务逻辑、数据和模型汇聚并驱动自主行动的环境。
+
+96
+00:12:14,180 --> 00:12:22,180
+It expands on the previous capabilities of Vertex AI and brings new capabilities to enable your teams
+它拓展了 Vertex AI 之前的各项功能，并带来了全新能力，助力您的团队
+
+97
+00:12:22,180 --> 00:12:32,620
+to build, scale, govern, and optimize agents with the same architectural rigor you apply to your most mission-critical systems.
+以与您对待最关键系统时相同的架构严谨性，构建、扩展、治理和优化智能体。
+
+98
+00:12:32,620 --> 00:12:37,820
+At its core, we build on our support for state-of-the-art models.
+核心在于，我们基于对最先进模型的支持进行构建。
+
+99
+00:12:37,820 --> 00:12:42,980
+Our most advanced reasoning model, Gemini 3.1 Pro, is available in preview.
+我们最先进的推理模型 Gemini 3.1 Pro 目前处于预览阶段。
+
+100
+00:12:42,980 --> 00:12:46,300
+It's optimized for complex workflow orchestration.
+它专为复杂工作流编排而优化。
+
+101
+00:12:46,300 --> 00:12:54,340
+It bridges the gap between strategy and autonomous execution, interacting with your APIs and systems with minimal tuning.
+它弥合了战略与自主执行之间的差距，与您的 API 和系统交互时几乎无需调优。
+
+102
+00:12:54,340 --> 00:13:01,700
+Industry leaders, including Databricks, JetBrains, and Replit, have chosen Gemini 3.1 Pro.
+包括 Databricks、JetBrains 和 Replit 在内的行业领军企业已选择 Gemini 3.1 Pro。
+
+103
+00:13:01,700 --> 00:13:06,060
+We're also announcing Gemini 3.1 Flash Image,
+我们还宣布推出 Gemini 3.1 Flash Image，
+
+104
+00:13:06,060 --> 00:13:11,380
+also known as Nano Banana 2, for high-fidelity visual assets;
+也称为 Nano Banana 2，适用于高保真视觉资产；
+
+105
+00:13:11,380 --> 00:13:16,940
+Veo 3.1 Lite, our most cost-effective video model,
+Veo 3.1 Lite，我们最经济高效的视频模型，
+
+106
+00:13:16,940 --> 00:13:20,340
+designed to build high-volume video applications;
+专为构建高吞吐量视频应用而设计；
+
+107
+00:13:20,340 --> 00:13:30,380
+and Lyria 3 Pro, a state-of-the-art model for enterprise and professional-grade audio and music.
+以及 Lyria 3 Pro，面向企业级和专业级音频与音乐的最先进模型。
+
+108
+00:13:30,380 --> 00:13:33,740
+All of these models are available in preview.
+所有这些模型目前均处于预览阶段。
+
+109
+00:13:33,740 --> 00:13:41,570
+Finally, we support all the leading models from Anthropic, including Claude Opus, Sonnet, and Haiku.
+最后，我们支持 Anthropic 的所有主流模型，包括 Claude Opus、Sonnet 和 Haiku。
+
+110
+00:13:41,570 --> 00:13:47,690
+And today, we're adding support for Anthropic's Claude Opus 4.7.
+今天，我们新增对 Anthropic 的 Claude Opus 4.7 的支持。
+
+111
+00:13:47,690 --> 00:13:59,090
+While all of these models represent a massive leap in intelligence, their true value is realized when they're operationalized to solve mission-critical problems.
+尽管这些模型代表了智能的巨大飞跃，但它们真正的价值只有在被实际部署以解决关键任务问题时才能体现。
+
+112
+00:13:59,090 --> 00:14:07,330
+Earlier this year, we announced a monumental partnership with one of the world's most iconic brands,
+今年早些时候，我们宣布与全球最具标志性的品牌之一达成一项重大合作，
+
+113
+00:14:07,330 --> 00:14:12,130
+that will bring the power of our technology to users everywhere around the world.
+这将使我们的技术力量惠及全球各地的用户。
+
+114
+00:14:12,130 --> 00:14:22,290
+We're collaborating with Apple as their preferred cloud provider to develop the next generation of Apple foundation models based on Gemini technology.
+我们正与苹果合作，作为其首选云服务提供商，基于 Gemini 技术开发下一代苹果基础模型。
+
+115
+00:14:22,290 --> 00:14:33,930
+These models will help power future Apple Intelligence features, including a more personalized Siri coming later this year.
+这些模型将为未来的苹果智能功能提供支持，包括今年晚些时候推出的更个性化的 Siri。
+
+116
+00:14:33,930 --> 00:14:38,680
+Leading organizations aren't just using Gemini Enterprise to work faster.
+领先企业不仅使用 Gemini 企业版来提升工作效率。
+
+117
+00:14:38,680 --> 00:14:43,080
+They're using it to redefine what their businesses can do.
+他们正利用它重新定义企业所能实现的边界。
+
+118
+00:14:43,080 --> 00:14:47,440
+Citi Wealth, in partnership with Google Cloud and DeepMind,
+花旗财富与谷歌云及 DeepMind 合作，
+
+119
+00:14:47,440 --> 00:14:56,800
+today unveiled Citi Sky, an always-on AI-powered member of the Citi Wealth team that brings
+今日正式推出 Citi Sky，这是花旗财富团队中一位始终在线的 AI 成员，
+
+120
+00:14:56,800 --> 00:15:03,080
+Citi's global intelligence to clients' fingertips.
+将花旗的全球智能能力直接送到客户指尖。
+
+121
+00:15:03,080 --> 00:15:06,240
+Citi Sky will provide an exemplary experience,
+市场天空将提供卓越的体验，
+
+122
+00:15:06,240 --> 00:15:15,680
+allowing clients and colleagues to ask more of Citi Wealth whenever they need it, and in multiple languages.
+让客户和同事在需要时，无论使用何种语言，都能随时向花旗财富寻求更多支持。
+
+123
+00:15:15,680 --> 00:15:25,760
+Honeywell generates billions of insights for managing buildings by training digital twins on over a million product specifications.
+霍尼韦尔通过训练数字孪生模型，基于超过一百万项产品规格，生成数十亿条洞察，用于建筑管理。
+
+124
+00:15:25,760 --> 00:15:36,990
+Liverpool is bringing their signature in-store service online, projecting a 10 times return on investment on their new shopping assistant.
+利物浦正将线下门店的特色服务搬到线上，预计其新购物助手的投资回报率将提升十倍。
+
+125
+00:15:36,990 --> 00:15:42,110
+And for a mission that's quite literally out of this world,
+而对于一项真正意义上的星际任务，
+
+126
+00:15:42,110 --> 00:15:45,670
+we were very proud to partner with NASA--
+我们非常自豪地与美国国家航空航天局合作——
+
+127
+00:15:53,950 --> 00:16:03,510
+--to use Gemini Enterprise Agents to power flight readiness and ensure astronaut safety for Artemis II, which
+——利用 Gemini 企业智能体推动阿耳忒弥斯 II 任务的飞行准备，确保宇航员安全，
+
+128
+00:16:03,510 --> 00:16:09,390
+set the human spaceflight record for traveling the furthest distance from Earth.
+该任务创造了人类航天飞行距离地球最远的新纪录。
+
+129
+00:16:09,390 --> 00:16:15,270
+Now, we built the agent platform to manage the entire lifecycle of an agent.
+现在，我们构建了智能体平台，用于管理智能体的全生命周期。
+
+130
+00:16:15,270 --> 00:16:22,870
+The low-code Agent Studio enables every employee to build and deploy agents using natural language.
+低代码智能体工作室让每位员工都能通过自然语言构建和部署智能体。
+
+131
+00:16:22,870 --> 00:16:33,340
+It grounds LLM reasoning in your specific business rules, bringing predictable, autonomous action to every workflow at scale.
+它将大语言模型的推理能力与您特定的业务规则相结合，为每个工作流带来可预测的、自主的规模化行动。
+
+132
+00:16:33,340 --> 00:16:39,740
+To manage these assets, the agent registry provides a single point of control,
+为管理这些资产，智能体注册中心提供了单一控制点，
+
+133
+00:16:39,740 --> 00:16:47,860
+indexing every internal agent and tool across your organization to ensure they're discoverable and governed.
+对组织内所有内部智能体和工具进行索引，以确保它们可被发现并受到管控。
+
+134
+00:16:47,860 --> 00:16:58,020
+Similarly, our Skills and Tools Registry allows you to define modular, reusable packages of instructions, scripts, and resources
+同样，我们的技能与工具注册表允许您定义模块化、可重复使用的指令、脚本和资源包。
+
+135
+00:16:58,020 --> 00:17:04,380
+to teach agents to perform specialized tasks or repeatable workflows.
+用于教会智能体执行专业任务或重复性工作流。
+
+136
+00:17:04,380 --> 00:17:14,180
+We also expose skills for every GCP service and every service in Workspace in our skills registry.
+我们还将所有 GCP 服务以及 Workspace 中的每个服务的技能公开在技能注册表中。
+
+137
+00:17:14,180 --> 00:17:18,460
+All of this is also supported by our Agent Marketplace,
+所有这些功能也由我们的智能体市场支持。
+
+138
+00:17:18,460 --> 00:17:31,920
+allowing you to search and deploy specialized agents from our global partner ecosystem directly in Gemini Enterprise, including Atlassian, Box,
+您可以在 Gemini 企业版中直接搜索并部署来自全球合作伙伴生态系统的专业智能体，包括 Atlassian、Box、
+
+139
+00:17:31,920 --> 00:17:38,460
+Lovable, Oracle, ServiceNow, Workday, and many, many more.
+Lovable、Oracle、ServiceNow、Workday 以及众多其他合作伙伴。
+
+140
+00:17:38,460 --> 00:17:49,700
+Finally, with our native integration of Model Context Protocol, or MCP, you can connect our agent platform to any MCP server.
+最后，通过我们原生集成的模型上下文协议（MCP），您可以将我们的智能体平台连接到任何 MCP 服务器。
+
+141
+00:17:49,700 --> 00:18:01,220
+We're also exposing all of our GCP services as MCP to allow you to interact seamlessly with GCP from any agent.
+我们还将所有 GCP 服务作为 MCP 暴露，以便您能从任何智能体无缝对接 GCP。
+
+142
+00:18:01,220 --> 00:18:11,380
+In addition to developing this agent platform, it also provides the framework to orchestrate and scale your entire agentic workforce.
+除了开发这一智能体平台外，它还提供了编排和扩展整个代理式工作团队的框架。
+
+143
+00:18:11,380 --> 00:18:14,860
+We enable agent-to-agent orchestration,
+我们支持智能体之间的编排。
+
+144
+00:18:14,860 --> 00:18:27,810
+allowing agents to seamlessly delegate tasks from one to another, including support for complex generative and deterministic orchestration patterns.
+使智能体能够无缝地将任务从一个智能体委托给另一个智能体，包括对复杂生成式和确定性编排模式的支持。
+
+145
+00:18:27,810 --> 00:18:34,850
+This helps ensure that for your critical workflows, such as those that need compliance,
+这有助于确保在您关键的工作流程中，例如需要合规性的流程，
+
+146
+00:18:34,850 --> 00:18:44,010
+your agents can follow well-specified paths every single time, guaranteeing predictable outcomes.
+您的智能体每次都能遵循明确规定的路径，从而保证结果的可预测性。
+
+147
+00:18:44,010 --> 00:18:47,610
+Orchestration flows and agents can respond to events.
+编排流程和智能体能够响应事件。
+
+148
+00:18:47,610 --> 00:18:49,730
+These events can be real-time.
+这些事件可以是实时的。
+
+149
+00:18:49,730 --> 00:18:51,890
+They can be schedule-based.
+它们可以基于计划。
+
+150
+00:18:51,890 --> 00:18:56,690
+They can be trigger-based, or they can be batch inference job.
+它们可以基于触发，也可以是批量推理任务。
+
+151
+00:18:56,690 --> 00:19:04,490
+We're bringing zero-trust verification to every agent and every orchestration step.
+我们正在为每个智能体和每个编排步骤引入零信任验证。
+
+152
+00:19:04,490 --> 00:19:15,810
+And now with Agent Identity, every agent has a unique cryptographic ID and well-defined authorization
+现在通过智能体身份，每个智能体都拥有唯一的加密身份和明确的授权策略，
+
+153
+00:19:15,810 --> 00:19:19,290
+policies that are traceable and auditable,
+这些策略可追溯且可审计，
+
+154
+00:19:19,290 --> 00:19:27,680
+ensuring you can track every action in your company and manage all your agents.
+确保您能够追踪公司内每一项操作并管理所有智能体。
+
+155
+00:19:27,680 --> 00:19:38,360
+They're also centrally managed through our Agent Gateway, which provides a single command center for policy enforcement across the organization.
+它们还通过我们的智能体网关进行集中管理，该网关为组织内的策略执行提供单一指挥中心。
+
+156
+00:19:38,360 --> 00:19:42,240
+Paired with Model Armor, you protect your models.
+配合模型防护，您可保护您的模型。
+
+157
+00:19:42,240 --> 00:19:49,040
+You protect your proprietary enterprise data from threats such as sensitive data leakage.
+你可保护专有的企业数据，免受敏感数据泄露等威胁。
+
+158
+00:19:49,040 --> 00:19:57,840
+This integrated approach, from secure sandboxes to a single management console, provides the visibility
+从安全沙箱到单一管理控制台的这种集成方法，提供了所需的可见性和隔离性。
+
+159
+00:19:57,840 --> 00:20:06,320
+and isolation you need to run your most-sensitive workloads with a high degree of confidence.
+使你能够以高度信心运行最敏感的工作负载。
+
+160
+00:20:06,320 --> 00:20:12,400
+Now, optimization and observability are also built into the fabric of the platform.
+现在，优化和可观测性也已融入平台的架构之中。
+
+161
+00:20:12,400 --> 00:20:25,070
+Agent observability delivers granular instrumentation, allowing you to visualize the full execution path of any agent using OTel-compliant telemetry.
+智能体可观测性提供细粒度的监控能力，让你能够通过符合 OTel 标准的遥测数据，可视化任何智能体的完整执行路径。
+
+162
+00:20:25,070 --> 00:20:33,910
+You can retrieve traces, monitor tool use, quickly diagnose reasoning loops with fine-grained logging.
+你可以检索追踪信息，监控工具使用情况，通过细粒度日志快速诊断推理循环问题。
+
+163
+00:20:33,910 --> 00:20:37,470
+All of these capabilities that we've just detailed--
+我们刚才详细介绍的所有功能——
+
+164
+00:20:37,470 --> 00:20:46,430
+the orchestration, zero-trust security, and developer tools-- form the core engine of Gemini Enterprise.
+包括编排、零信任安全和开发者工具——共同构成了 Gemini 企业版的核心引擎。
+
+165
+00:20:46,430 --> 00:20:58,510
+While the agent platform is where your technical teams build and govern agent, the Gemini Enterprise application is the primary environment where your business actually operates.
+虽然智能体平台是技术团队构建和管理智能体的地方，但 Gemini 企业版应用才是你的业务实际运行的主要环境。
+
+166
+00:20:58,510 --> 00:21:10,310
+It's that new front door to AI for all your employees, turning complex agentic capabilities into a simple, new way to work for every employee.
+这是所有员工通往 AI 的全新入口，将复杂的代理式能力转化为每位员工都能轻松使用的全新工作方式。
+
+167
+00:21:10,310 --> 00:21:17,630
+By unifying data across your entire stack, including Google Workspace, coding tools,
+通过统一整个技术栈中的数据，包括 Google Workspace、开发工具和企业系统，
+
+168
+00:21:17,630 --> 00:21:24,740
+and enterprise systems, we've created a single intelligent flow for the entire organization.
+我们为整个组织打造了单一的智能数据流。
+
+169
+00:21:24,740 --> 00:21:32,220
+To give your teams a permanent memory, we're introducing Gemini Enterprise projects.
+为了给您的团队提供持久的记忆，我们推出了 Gemini 企业版项目。
+
+170
+00:21:32,220 --> 00:21:45,020
+Projects give your agents a high-fidelity workspace and the ability to use deep think to solve your most complex business challenges without context pollution.
+项目为您的智能体提供高保真工作空间，并使其能够使用深度思考来解决最复杂的业务挑战，且不会产生上下文污染。
+
+171
+00:21:45,020 --> 00:21:56,460
+We're also adding Microsoft 365 interoperability, allowing you to export the Docs and Slides you've created within Canvas into common Microsoft Office formats.
+我们还新增了 Microsoft 365 互操作性，让您能够将 Canvas 中创建的文档和演示文稿导出为常见的 Microsoft Office 格式。
+
+172
+00:22:02,020 --> 00:22:07,460
+Leading innovators already use this platform to redefine their industries.
+领先的创新者已使用该平台重新定义其所在行业。
+
+173
+00:22:07,460 --> 00:22:11,572
+Let's hear from one of them, Virgin Voyages.
+让我们听听其中一位代表——维珍游轮——的分享。
+
+174
+00:22:15,737 --> 00:22:17,820
+Our people are a secret sauce.
+我们的团队是制胜的关键。
+
+175
+00:22:17,820 --> 00:22:23,420
+So anytime we can use data to make our people more empowered, we're all in.
+因此，只要能通过数据让我们的团队更高效，我们就会全力投入。
+
+176
+00:22:23,420 --> 00:22:30,082
+Gemini Enterprise is a front door for AI in our business, and we're using it to bring natural language intelligence to our crew.
+Gemini 企业版是我们业务中接入 AI 的门户，我们正利用它为船员带来自然语言智能。
+
+177
+00:22:30,082 --> 00:22:33,760
+Gemini Enterprise is helping us bring Project 3D to life.
+Gemini 企业版正帮助我们让 Project 3D 项目变为现实。
+
+178
+00:22:33,760 --> 00:22:38,240
+It's going to allow our crew to feel confident with any question they're asked.
+它将使我们的船员在面对任何问题时都能充满信心。
+
+179
+00:22:38,240 --> 00:22:44,420
+So for sailors, Rovey is a personal concierge to maximize the value they get out of their vacation,
+对于船员而言，Rovey 是一位个人管家，旨在最大化他们度假的体验价值。
+
+180
+00:22:44,420 --> 00:22:50,380
+inspired at home all the way through the last day of their voyage to make sure they have the best time on vacation with us.
+从出发前的准备到航行结束的最后一天，全程贴心陪伴，确保他们在我们这里度过最美好的假期。
+
+181
+00:22:50,380 --> 00:22:55,860
+Our crew are already world-renowned and award-winning for the exceptional service they deliver as humans.
+我们的团队早已因他们作为人类所提供的卓越服务而享誉全球并屡获殊荣。
+
+182
+00:22:55,860 --> 00:23:00,420
+We want Project 3D and Gemini Enterprise to be able to take that even further.
+我们希望 Project 3D 和 Gemini 企业版能够将这一点进一步提升。
+
+183
+00:23:00,420 --> 00:23:05,260
+So you can imagine when you're building something for a cruise ship, there are challenges that pop up.
+你可以想象，当你为一艘游轮打造系统时，会遇到各种突发挑战。
+
+184
+00:23:05,260 --> 00:23:08,500
+There's not exactly a fiber cable running out the back of the ship.
+船尾并没有光纤电缆直接延伸出去。
+
+185
+00:23:08,500 --> 00:23:13,280
+With Google Distributed Cloud Edge, we had data resiliency at the core of the project.
+通过谷歌分布式云边缘，我们把数据韧性置于项目核心。
+
+186
+00:23:13,280 --> 00:23:17,860
+And that means, even when we're offline, our intelligence is still online.
+这意味着，即使离线，我们的智能依然在线。
+
+187
+00:23:17,860 --> 00:23:24,790
+Using our AI stack in Google Cloud has helped us not only reduce our production timeline by up to 60%,
+在谷歌云中使用我们的 AI 技术栈，不仅帮助我们将生产周期缩短了高达 60%，
+
+188
+00:23:24,790 --> 00:23:31,930
+but we have contributed to a 28% increase month on month for a record sales quarter.
+还推动了销售额连续月度增长 28%，创下销售纪录。
+
+189
+00:23:31,930 --> 00:23:41,575
+We could truly see a day where you get on a Virgin Atlantic flight, stay at a Virgin hotel, and end up on a Virgin Voyage, all connected seamlessly by Project Ruby and Gemini Enterprise.
+我们真正看到了这样一天的到来：你登上维珍航空航班，入住维珍酒店，最后踏上维珍邮轮之旅，全程由 Project Ruby 和 Gemini 企业版无缝连接。
+
+190
+00:23:41,575 --> 00:23:44,450
+Google has been a foundational partner for us.
+谷歌一直是我们的基础合作伙伴。
+
+191
+00:23:44,450 --> 00:23:45,510
+The extension of Gemini.
+Gemini 的延伸。
+
+192
+00:23:45,510 --> 00:23:48,230
+Enterprise was the natural way to bring that mission to life.
+企业版是实现这一使命的自然方式。
+
+193
+00:23:58,290 --> 00:24:00,810
+The era of the pilot is over.
+试飞时代已经结束。
+
+194
+00:24:00,810 --> 00:24:03,170
+The era of the agent is here.
+智能体时代已经到来。
+
+195
+00:24:03,170 --> 00:24:07,610
+But the true power comes from how it changes your workflow.
+但真正的力量在于它如何改变你的工作流程。
+
+196
+00:24:07,610 --> 00:24:09,410
+Let's see it in action.
+让我们看看实际操作。
+
+197
+00:24:09,410 --> 00:24:11,890
+Please welcome Erika Chuong.
+请大家欢迎伊丽卡·冲。
+
+198
+00:24:21,920 --> 00:24:23,480
+Thanks, Thomas.
+谢谢，托马斯。
+
+199
+00:24:23,480 --> 00:24:28,600
+Gemini Enterprise is a platform to build, manage, and interact with agents.
+Gemini 企业版是一个用于构建、管理和与智能体交互的平台。
+
+200
+00:24:28,600 --> 00:24:36,560
+I'll demonstrate how it can orchestrate multiple agents across platforms, share context for seamless handoffs, and streamline workflows.
+我将演示它如何在不同平台间协调多个智能体，共享上下文以实现无缝交接，并优化工作流程。
+
+201
+00:24:36,560 --> 00:24:39,720
+Imagine I work for a global furniture retailer.
+想象一下，我为一家全球家具零售商工作。
+
+202
+00:24:39,720 --> 00:24:49,120
+Here's my personalized homepage where I can interact with internal business context and external sources in a single pane of glass.
+这是我的个性化主页，我可以在此与内部业务上下文和外部资源进行单一窗口交互。
+
+203
+00:24:49,120 --> 00:24:55,740
+The agent gallery hosts my approved selection of agents, including built-in ones by Google and my company's agents,
+智能体画廊展示了我批准的智能体选择，包括谷歌提供的内置智能体以及我公司开发的智能体。
+
+204
+00:24:55,740 --> 00:25:03,640
+like this one for price and margin optimization, which autonomously orchestrates across agents, tools, and sources.
+比如这个用于价格和利润率优化的智能体，能够自主地在智能体、工具和数据源之间进行协调。
+
+205
+00:25:03,640 --> 00:25:07,480
+Now, let's see Gemini Enterprise in action.
+现在，让我们看看 Gemini 企业版的实际应用。
+
+206
+00:25:07,480 --> 00:25:14,780
+To bring some less popular product lines back to life, we'll ask our agent to analyze current interior design trends,
+为了重新激活一些不太受欢迎的产品线，我们将让智能体分析当前的室内设计趋势，
+
+207
+00:25:14,780 --> 00:25:20,230
+identify dead stock in our warehouse, and orchestrate a relaunch campaign.
+识别仓库中的滞销库存，并协调一次重新上市活动。
+
+208
+00:25:20,230 --> 00:25:26,430
+With that one prompt, multiple agents complete a series of actions in minutes instead of hours.
+仅凭一个指令，多个智能体在几分钟内就完成了原本需要数小时才能完成的一系列操作。
+
+209
+00:25:26,430 --> 00:25:36,230
+My market research agent, powered by Deep Research, analyzes the latest Google Search information alongside my own sales and CSAT data.
+我的市场研究智能体，基于深度研究，分析了最新的谷歌搜索信息，同时结合我自己的销售和客户满意度数据。
+
+210
+00:25:36,230 --> 00:25:43,230
+My data insights agent is connecting to our global product catalog, regardless of location or format.
+我的数据洞察智能体正在连接我们的全球产品目录，无论位置或格式如何。
+
+211
+00:25:43,230 --> 00:25:51,710
+It knows that dead stock refers to stale inventory, and it uses our Agentic Data Cloud to identify the right data sets.
+它知道“滞销库存”指的是过时的库存，它利用我们的代理式数据云来识别正确的数据集。
+
+212
+00:25:51,710 --> 00:25:55,430
+And my product strategy agent pulls everything together.
+而我的产品策略智能体则将所有信息整合在一起。
+
+213
+00:25:55,430 --> 00:25:57,550
+I'll go ahead and approve this plan.
+我将直接批准这个计划。
+
+214
+00:25:57,550 --> 00:26:00,670
+This can take a few minutes, so we'll fast-forward.
+这可能需要几分钟时间，所以我们快进一下。
+
+215
+00:26:00,670 --> 00:26:03,070
+Here are the highlights.
+这是亮点摘要。
+
+216
+00:26:03,070 --> 00:26:08,710
+Organic Modern is a huge trend, and customers are paying top dollar.
+有机现代风格是一个巨大趋势，客户愿意支付高价。
+
+217
+00:26:08,710 --> 00:26:17,300
+Our Tuscany collection has leftover inventory that actually fits right in, but sales haven't been great.
+我们的托斯卡纳系列还有库存，实际上很适合当前的陈列，但销量一直不理想。
+
+218
+00:26:17,300 --> 00:26:25,060
+The recommendation-- rebrand and reprice it above our current discount but below competitor pricing.
+建议——重新品牌定位并重新定价，价格高于我们当前的折扣，但低于竞争对手。
+
+219
+00:26:25,060 --> 00:26:28,500
+All of that with one simple prompt.
+所有这些只需一个简单的提示即可完成。
+
+220
+00:26:28,500 --> 00:26:33,620
+I can even see the sources that it analyzed to make these recommendations.
+我甚至能看到它用来做出这些建议所分析的来源。
+
+221
+00:26:33,620 --> 00:26:40,580
+Gemini Enterprise is also suggesting a new landing page and new media to put front and center.
+Gemini 企业版还建议设计一个新主页，并将新素材置于显眼位置。
+
+222
+00:26:40,580 --> 00:26:44,280
+I'll ask my product strategy agent to generate some videos.
+我会让我的产品策略智能体生成一些视频。
+
+223
+00:26:47,900 --> 00:26:51,960
+This part can also take a little bit of time, so we'll look at some pre-generated options.
+这部分可能需要一点时间，所以我们先看看预生成的选项。
+
+224
+00:26:56,940 --> 00:26:59,100
+This looks amazing.
+这看起来太棒了。
+
+225
+00:26:59,100 --> 00:27:05,060
+Veo 3.0 placed the exact pieces in a whole new organic living style space.
+Veo 3.0 将这些单品完美地融入了一个全新的有机生活空间中。
+
+226
+00:27:05,060 --> 00:27:08,140
+Now, let's get that website updated.
+现在，让我们更新一下网站。
+
+227
+00:27:08,140 --> 00:27:13,090
+I'll ask my dev agent to coordinate with our engineering team.
+我会让我的开发智能体与我们的工程团队协调。
+
+228
+00:27:13,090 --> 00:27:20,050
+It connects directly with Jira to give a developer full context for a seamless handoff.
+它可直接连接 Jira，为开发者提供完整上下文，实现无缝交接。
+
+229
+00:27:20,050 --> 00:27:28,330
+And on the developer's end, I'll automatically get a notification right here in my Google Chat with that Jira ticket.
+在开发人员这边，我将立即收到一条通知，就在我的 Google Chat 中显示那个 Jira 工单。
+
+230
+00:27:28,330 --> 00:27:29,950
+I'll get this going with CLI.
+我将通过命令行启动这个流程。
+
+231
+00:27:33,010 --> 00:27:37,410
+Here, I'll ask my dev agent to start working on that Jira ticket.
+这里，我让我的开发智能体开始处理那个 Jira 工单。
+
+232
+00:27:37,410 --> 00:27:40,630
+It's going to give me an overview of the strategy,
+它会为我提供一个策略概览，
+
+233
+00:27:40,630 --> 00:27:52,010
+the assets, and how it plans to execute on this web page using all of the context from the previous Gemini Enterprise session, the ticket, and our brand and coding guidelines.
+包括资产信息，以及如何利用之前 Gemini 企业版会话的所有上下文、工单内容，以及我们的品牌和编码规范来执行这个网页的开发。
+
+234
+00:27:52,010 --> 00:27:53,730
+This is really easy.
+这非常简单。
+
+235
+00:27:53,730 --> 00:27:56,970
+Let's go ahead and get this built and deployed.
+我们继续把这玩意儿搭建并部署起来吧。
+
+236
+00:27:56,970 --> 00:28:03,770
+From here, this can take a little bit of time-- I'm sure the devs in the audience know that-- so I gave it a little bit of a head start.
+从这里开始，可能需要一点时间——我相信在座的开发人员都懂——所以我提前让它先跑起来。
+
+237
+00:28:03,770 --> 00:28:07,890
+Let's check out that final product.
+我们来看看最终成果。
+
+238
+00:28:07,890 --> 00:28:10,650
+This looks perfect.
+这看起来完美极了。
+
+239
+00:28:10,650 --> 00:28:16,210
+Now let's head back over to Gemini Enterprise to prepare our stores for the launch.
+现在让我们回到 Gemini 企业版，为发布做准备。
+
+240
+00:28:16,210 --> 00:28:22,410
+Our store operations team would usually handle this piece, so I'm in a brand-new session.
+通常这部分由我们的门店运营团队负责，所以我现在开启了一个全新的会话。
+
+241
+00:28:22,410 --> 00:28:27,450
+I'll ask for a deck to get our regional distributors up to speed.
+我会准备一份演示文稿，让我们的区域经销商快速了解情况。
+
+242
+00:28:27,450 --> 00:28:37,170
+Gemini Enterprise uses my company's context to find exactly what I need to know about that launch, how I've managed these in the past, and my team's sales goals.
+Gemini 企业版利用我公司的背景信息，精准找到我需要了解的关于此次发布的所有内容，包括我过去如何管理这类项目，以及团队的销售目标。
+
+243
+00:28:37,170 --> 00:28:42,690
+Then it works with the Google Workspace agent to create a branded deck in my personal style.
+然后它会与 Google Workspace 智能体协作，按照我的个人风格生成一份带有品牌标识的演示文稿。
+
+244
+00:28:42,690 --> 00:28:47,530
+Again, this can take a minute or two, so we'll look at one I generated ahead of time.
+再次说明，这个过程可能需要一两分钟，所以我们来看一下我提前生成的一份。
+
+245
+00:28:47,530 --> 00:28:48,490
+Get this.
+请看这个。
+
+246
+00:28:48,490 --> 00:28:57,250
+With our brand-new Canvas mode, I can make edits and collaborate in Google Slides without ever having to leave Gemini Enterprise.
+通过我们全新的画布模式，我可以在 Google 演示文稿中直接进行编辑和协作，而无需离开 Gemini 企业版。
+
+247
+00:28:57,250 --> 00:29:05,090
+Overall, I think this looks great, but I actually prefer the word "reimagined" here.
+总体来看，我觉得效果很棒，但我其实更喜欢这里用“重新构想”这个词。
+
+248
+00:29:05,090 --> 00:29:08,100
+Perfect, and I'll go ahead and share this with my team.
+完美，我这就把这份文稿分享给我的团队。
+
+249
+00:29:14,880 --> 00:29:17,640
+And it looks like some of them are already jumping in.
+看起来有些同事已经迫不及待地加入进来了。
+
+250
+00:29:17,640 --> 00:29:18,920
+Let's recap.
+我们来总结一下。
+
+251
+00:29:18,920 --> 00:29:24,400
+We saw Gemini Enterprise orchestrate multiple agents with a single prompt, share context,
+我们看到 Gemini 企业版仅用一条提示就协调了多个智能体，共享上下文，
+
+252
+00:29:24,400 --> 00:29:35,000
+and generate and collaborate content with Google Workspace, all supported by our enterprise-grade governance, which gives organizations the power to manage and secure agents
+并在 Google Workspace 中生成和协作内容，所有操作均由企业级治理支持，使组织能够管理和保护智能体。
+
+253
+00:29:35,000 --> 00:29:39,880
+at scale, all while maintaining control over their business data.
+在保持对业务数据控制的同时，实现规模化。
+
+254
+00:29:39,880 --> 00:29:44,520
+That's the magic of the Gemini Enterprise Agent platform.
+这就是 Gemini 企业智能体平台的魔力所在。
+
+255
+00:30:03,240 --> 00:30:05,040
+Thank you, Erica.
+谢谢你，艾丽卡。
+
+256
+00:30:05,040 --> 00:30:12,110
+Thousands of companies around the world and across industries are choosing Gemini Enterprise to transform their business.
+全球各行各业的成千上万家企业正在选择 Gemini 企业版来重塑业务。
+
+257
+00:30:12,110 --> 00:30:13,990
+We're seeing a profound shift.
+我们正见证一场深刻变革。
+
+258
+00:30:13,990 --> 00:30:16,610
+Companies aren't just redesigning workflows.
+企业不仅仅是重新设计工作流程。
+
+259
+00:30:16,610 --> 00:30:25,150
+They're turning their everyday employees into AI builders, empowering them to solve their own hardest problems.
+他们正在将日常员工转变为 AI 构建者，赋能他们解决自身最棘手的问题。
+
+260
+00:30:25,150 --> 00:30:31,190
+Signal Iduna is redefining insurance in Germany with Gemini Enterprise.
+信号伊杜纳正借助 Gemini 企业版重新定义德国保险业。
+
+261
+00:30:31,190 --> 00:30:37,070
+They hit 80% adoption within weeks, making it their front door for AI.
+他们仅用几周时间就实现了 80% 的采用率，使其成为企业通往 AI 的门户。
+
+262
+00:30:37,070 --> 00:30:41,670
+11,000 employees are now building specialized agents.
+现在已有 11,000 名员工在构建专业智能体。
+
+263
+00:30:41,670 --> 00:30:49,350
+Their health agent automatically verifies coverage against a century of complex policy data,
+他们的健康智能体可自动比对百年来复杂的政策数据以验证保障范围，
+
+264
+00:30:49,350 --> 00:30:57,030
+driving a 400% surge in weekly users and providing answers 37% faster.
+推动周活跃用户增长 400%，并将回答速度提升 37%。
+
+265
+00:30:57,030 --> 00:31:00,870
+Bosch is adopting Gemini Enterprise globally.
+博世正在全球范围内采用 Gemini 企业版。
+
+266
+00:31:00,870 --> 00:31:09,940
+From finance to engineering, employees are deploying custom agents so that they can reclaim time for complex research.
+从财务到工程，员工们正在部署定制智能体，以便他们能腾出时间专注于复杂研究。
+
+267
+00:31:09,940 --> 00:31:17,260
+KPMG reached 90% adoption with over 100 agents in just the first month.
+普华永道在第一个月内就实现了90%的采用率，部署了超过100个智能体。
+
+268
+00:31:17,260 --> 00:31:23,500
+The American Society for Clinical Oncology is now delivering cancer expertise faster.
+美国临床肿瘤学会现在能更快地提供癌症专业知识。
+
+269
+00:31:23,500 --> 00:31:34,180
+Merck is bringing Gemini Enterprise to 75,000 employees to support their purpose to save and improve lives.
+默克公司正将 Gemini 企业版推广至7.5万名员工，以支持其拯救和改善生命的使命。
+
+270
+00:31:34,180 --> 00:31:38,420
+And Walmart is rolling out Gemini Enterprise--
+而沃尔玛正在推出 Gemini 企业版——
+
+271
+00:31:41,180 --> 00:31:47,900
+Walmart is rolling out Gemini Enterprise to help their store leaders spend more time with customers.
+沃尔玛正在推出 Gemini 企业版，帮助其门店负责人将更多时间花在顾客身上。
+
+272
+00:31:47,900 --> 00:31:48,960
+Let's take a look.
+让我们来看一下。
+
+273
+00:31:52,043 --> 00:31:56,040
+At Walmart, we're known for being people-led and tech-powered.
+在沃尔玛，我们以以人为本、技术驱动而闻名。
+
+274
+00:31:56,040 --> 00:32:02,460
+It's how we deliver on our promise to help our customers save money and live better.
+这正是我们兑现承诺的方式，帮助顾客省钱并过上更好的生活。
+
+275
+00:32:02,460 --> 00:32:10,090
+But in a retail landscape that's moving faster than ever, there's one thing that's critical to our success-- trust.
+但在零售业发展速度前所未有的今天，有一件事对我们的成功至关重要——信任。
+
+276
+00:32:10,090 --> 00:32:14,070
+It's the backbone of our relationship with our associates and customers.
+它是我们与员工和顾客关系的基石。
+
+277
+00:32:14,070 --> 00:32:20,890
+And our field leaders build trust by being present on the sales floor, not in their offices at a screen.
+我们的现场领导通过亲临销售一线，而不是坐在办公室盯着屏幕，来建立信任。
+
+278
+00:32:20,890 --> 00:32:31,010
+So we're giving our associates the latest tech and tools at their fingertips so that they can spend more time on the floor with their teams, serving our customers.
+因此我们为员工提供了触手可及的最新技术和工具，让他们能有更多时间在一线与团队并肩作战，更好地服务客户。
+
+279
+00:32:31,010 --> 00:32:40,450
+By combining our data with advanced AI technology, Google Cloud is helping our leaders make better decisions with clearer insights.
+通过将我们的数据与先进的AI技术相结合，谷歌云正帮助我们的领导者做出更明智的决策，获得更清晰的洞察。
+
+280
+00:32:40,450 --> 00:32:49,410
+Gemini Enterprise is helping us take an important step forward, helping our leaders lead and solving problems so we can serve our customers better.
+Gemini 企业版正帮助我们迈出重要一步，助力领导者高效决策并解决问题，从而更好地服务客户。
+
+281
+00:32:49,410 --> 00:32:59,890
+Our store and supply chain leaders now have a Pixel Fold connected to Walmart's enterprise data and giving them the answers they need in seconds, not hours.
+我们的门店和供应链领导者现在通过连接沃尔玛企业数据的Pixel Fold，能在几秒内获取所需答案，而非数小时。
+
+282
+00:32:59,890 --> 00:33:05,410
+By putting people first and taking their hands, we're building a stronger future.
+以人为本，携手同行，我们正在打造一个更强大的未来。
+
+283
+00:33:05,410 --> 00:33:11,130
+Thanks to our partnership with Google Cloud, we continue to transform retail every day.
+感谢与谷歌云的合作，我们持续每天都在重塑零售业。
+
+284
+00:33:11,130 --> 00:33:15,730
+I'm excited for what's next.
+我对接下来的发展充满期待。
+
+285
+00:33:21,490 --> 00:33:30,690
+This winter, ahead of one of the biggest moments in global sports, our world-class engineers collaborated with world-class athletes.
+这个冬天，在全球体育重大时刻来临之前，我们的顶尖工程师与顶尖运动员携手合作。
+
+286
+00:33:30,690 --> 00:33:37,950
+We're incredibly proud of how Google Cloud is helping athletes push the boundaries of their sport with AI.
+我们非常自豪，谷歌云正帮助运动员借助AI突破自身运动的极限。
+
+287
+00:33:41,830 --> 00:33:45,830
+There are sports that have a limited amount of data that's captured.
+有些体育项目所采集的数据量有限。
+
+288
+00:33:45,830 --> 00:33:49,350
+And I think that's a beautifully perfect challenge for a company like Google.
+我认为这对谷歌这样的公司来说，是一个完美而美妙的挑战。
+
+289
+00:33:49,350 --> 00:33:50,838
+Let's roll it.
+开始吧。
+
+290
+00:33:50,838 --> 00:33:58,550
+One of the really cool things that we're partnering with Team USA to do is to help them understand what's that edge that we can possibly give them?
+我们与美国队合作的一项非常酷的事情，是帮助他们理解我们能为他们提供什么样的优势。
+
+291
+00:33:58,550 --> 00:34:01,193
+They understand what's happening in the moment better than anybody.
+他们对当下发生的事情的理解，比任何人都更深入。
+
+292
+00:34:01,193 --> 00:34:06,020
+So to have their input and their say can really help us create something that's of benefit.
+因此，他们的意见和参与能真正帮助我们创造出有益的东西。
+
+293
+00:34:06,020 --> 00:34:08,883
+The side-by-side comparison thing I'm excited for.
+我很期待这个并排对比的功能。
+
+294
+00:34:08,883 --> 00:34:11,300
+Everything is running on Google Cloud.
+所有内容都在谷歌云上运行。
+
+295
+00:34:11,300 --> 00:34:15,060
+The 3D model that we're using is a collaboration with Google DeepMind.
+我们使用的3D模型是与谷歌DeepMind合作的成果。
+
+296
+00:34:15,060 --> 00:34:18,588
+We've moved so far past talking to an LLM with text.
+我们已经远远超越了仅通过文字与大语言模型对话的阶段。
+
+297
+00:34:18,588 --> 00:34:20,380
+It's so clear as day right here.
+这里一目了然。
+
+298
+00:34:20,380 --> 00:34:20,980
+It's amazing.
+太棒了。
+
+299
+00:34:20,980 --> 00:34:22,040
+Whoa. Is that me?
+哇，那是我吗？
+
+300
+00:34:22,040 --> 00:34:23,820
+That's crazy.
+太疯狂了。
+
+301
+00:34:23,820 --> 00:34:28,699
+Operating at the speed of sports is one of the greatest challenges that we could be helping solve.
+以体育的速度运行，是我们能够帮助解决的最具挑战性的问题之一。
+
+302
+00:34:28,699 --> 00:34:36,760
+If we can do that for the Winter Olympics in Milan, we can do that for any industry all over the world.
+如果我们能为米兰冬奥会做到这一点，就能为全球任何行业做到这一点。
+
+303
+00:34:36,760 --> 00:34:44,199
+Please welcome three-time Olympic gold medalist, entrepreneur, and snowboarding legend, Shaun White.
+请大家欢迎三届奥运金牌得主、企业家兼单板滑雪传奇人物肖恩·怀特。
+
+304
+00:34:49,840 --> 00:34:51,780
+What's up, Google Cloud Next?
+嗨，谷歌云Next大会！
+
+305
+00:34:55,320 --> 00:34:56,139
+Oh, wow.
+哦，哇。
+
+306
+00:34:59,310 --> 00:35:02,330
+Man, I love seeing it snow in the desert.
+哇，看到沙漠下雪真让人激动。
+
+307
+00:35:02,330 --> 00:35:03,390
+This is wild.
+这太疯狂了。
+
+308
+00:35:03,390 --> 00:35:04,750
+All right.
+好的。
+
+309
+00:35:04,750 --> 00:35:10,310
+Look, back when I was training, our tools were camcorders and basically guesswork.
+看，我当年训练时，工具只有摄像机，基本上靠猜测。
+
+310
+00:35:10,310 --> 00:35:16,310
+You'd land a trick and watch it back, and you'd be looking at it thinking, how can I make that trick better?
+你完成一个动作后，回放观看，然后会想，我怎样才能让这个动作更完美？
+
+311
+00:35:16,310 --> 00:35:20,130
+Over time, I've seen the tricks get bigger and the walls get higher.
+随着时间推移，我看到动作越来越大，障碍墙越来越高。
+
+312
+00:35:20,130 --> 00:35:23,590
+And now, Google Cloud is bringing AI to the mountain.
+现在，谷歌云正把AI带到山里。
+
+313
+00:35:23,590 --> 00:35:29,070
+This winter, I worked with some crazy-smart Google Cloud engineers on some awesome tech.
+今年冬天，我和一些非常聪明的谷歌云工程师一起开发了一些酷炫的技术。
+
+314
+00:35:29,070 --> 00:35:34,030
+And to show you how rad this is, give it up for Jason Davenport.
+为了让大家感受一下这有多厉害，让我们为杰森·达文波特鼓掌。
+
+315
+00:35:42,190 --> 00:35:43,778
+What's up, Shaun?
+嗨，肖恩。
+
+316
+00:35:43,778 --> 00:35:45,570
+What have we got for everyone?
+我们给大家带来了什么？
+
+317
+00:35:45,570 --> 00:35:46,987
+All right, Shaun.
+好了，肖恩。
+
+318
+00:35:46,987 --> 00:35:48,370
+This is going to be super fun.
+这会非常有趣。
+
+319
+00:35:48,370 --> 00:35:52,510
+Let's unleash the power of Google Cloud AI into the half-pipe.
+让我们把谷歌云 AI 的强大能力释放到半管滑道中。
+
+320
+00:35:52,510 --> 00:35:57,125
+And to do that, we're going to pull up a trick from your 2017 Burton US Open.
+为此，我们要从你2017年伯顿美国公开赛的技巧中汲取灵感。
+
+321
+00:35:57,125 --> 00:35:58,000
+Oh, wow.
+哇哦。
+
+322
+00:35:58,000 --> 00:35:59,240
+I'm sure you remember this one.
+我敢肯定你记得这个动作。
+
+323
+00:35:59,240 --> 00:36:00,040
+It's a throwback.
+这是个怀旧经典。
+
+324
+00:36:00,040 --> 00:36:00,920
+It's a throwback.
+这是个怀旧经典。
+
+325
+00:36:00,920 --> 00:36:03,960
+It is. So let's analyze this clip for the audience.
+是的，那我们来为观众分析一下这段视频。
+
+326
+00:36:03,960 --> 00:36:06,200
+And so they can see all the cool things that AI sees.
+这样他们就能看到AI看到的所有酷炫内容。
+
+327
+00:36:06,200 --> 00:36:06,860
+All right.
+好的。
+
+328
+00:36:06,860 --> 00:36:08,818
+All right, let's start it off.
+好，我们开始吧。
+
+329
+00:36:08,818 --> 00:36:12,180
+First, this trick is over in under three seconds.
+首先，这个技巧不到三秒就完成了。
+
+330
+00:36:12,180 --> 00:36:14,980
+You are literally-- it's a split-second blur.
+你几乎就是——一瞬间的模糊。
+
+331
+00:36:14,980 --> 00:36:17,640
+And for everyone watching, what trick is this?
+对所有观看的人，这个技巧是什么？
+
+332
+00:36:17,640 --> 00:36:20,627
+This is a switch cab double flip 1440.
+这是一个换把双翻1440度。
+
+333
+00:36:20,627 --> 00:36:21,960
+That is insane.
+太疯狂了。
+
+334
+00:36:21,960 --> 00:36:25,620
+But for everyone else, what does that actually mean?
+但对其他人来说，这到底意味着什么？
+
+335
+00:36:25,620 --> 00:36:28,600
+Basically, it's my unnatural way of riding.
+基本上，这就是我非自然的骑行方式。
+
+336
+00:36:28,600 --> 00:36:31,540
+I do four full rotations with two flips in the middle.
+我完成四次完整旋转，中间夹着两次翻转。
+
+337
+00:36:31,540 --> 00:36:35,660
+I tried stopping using the camcorder, and I couldn't do it.
+我试着停止使用摄像机，但我做不到。
+
+338
+00:36:35,660 --> 00:36:37,520
+So let's slow this down.
+那么，让我们放慢速度。
+
+339
+00:36:37,520 --> 00:36:42,820
+And to do this, we need to analyze this frame by frame and see what Google Cloud sees.
+为此，我们需要逐帧分析，看看谷歌云看到了什么。
+
+340
+00:36:42,820 --> 00:36:46,440
+And we're going to do this essentially with every single stop in this.
+我们将用这种方法处理这里的每一个停顿。
+
+341
+00:36:46,440 --> 00:36:49,620
+So first, let's start with your pose.
+那么，首先让我们从你的姿势开始。
+
+342
+00:36:49,620 --> 00:36:51,260
+So this is what's super cool.
+这才是真正酷的地方。
+
+343
+00:36:51,260 --> 00:37:01,230
+We built a model in collaboration with Google DeepMind that can track you spatially, and it creates a three-dimensional, essentially pose of you from a flat, two-dimensional video.
+我们与谷歌深度思维合作开发了一个模型，能够空间追踪你，并从平面的二维视频中生成你的三维姿态。
+
+344
+00:37:01,230 --> 00:37:02,230
+So awesome.
+太棒了。
+
+345
+00:37:02,230 --> 00:37:03,688
+I mean, I love it.
+我真的太喜欢了。
+
+346
+00:37:03,688 --> 00:37:05,150
+I can't even see you here.
+我甚至都看不见你在这里。
+
+347
+00:37:05,150 --> 00:37:06,310
+How does it do it?
+它是怎么做到的？
+
+348
+00:37:06,310 --> 00:37:09,710
+This was my tight pant, leather jacket phase.
+这是我穿紧身裤配皮夹克的阶段。
+
+349
+00:37:09,710 --> 00:37:11,790
+So you got to really punch in on it.
+所以你得真正下功夫去投入。
+
+350
+00:37:11,790 --> 00:37:14,750
+I know. I got some out back, too.
+我知道，我后头也有些。
+
+351
+00:37:14,750 --> 00:37:15,550
+It was a good look.
+这看起来很棒。
+
+352
+00:37:15,550 --> 00:37:17,128
+I know. It's still a good look.
+我知道，现在还是很好看。
+
+353
+00:37:17,128 --> 00:37:17,870
+All right.
+好吧。
+
+354
+00:37:17,870 --> 00:37:19,670
+Let's talk about the next thing.
+我们来谈谈下一件事。
+
+355
+00:37:19,670 --> 00:37:21,890
+These are stats powered by Gemini.
+这些数据由 Gemini 提供支持。
+
+356
+00:37:21,890 --> 00:37:27,092
+Here, we're tracking your flight dynamics, rotational velocity, and even your tuck compression.
+这里，我们正在追踪你的飞行动态、旋转速度，甚至你的收身压缩情况。
+
+357
+00:37:27,092 --> 00:37:28,550
+Yeah, this is amazing.
+是啊，这太棒了。
+
+358
+00:37:28,550 --> 00:37:29,675
+We didn't have this before.
+我们以前没有这个。
+
+359
+00:37:29,675 --> 00:37:31,910
+I can see how much time I've spent in the air.
+我能清楚看到自己在空中花了多少时间。
+
+360
+00:37:31,910 --> 00:37:39,550
+And now take old footage that I've done and compare it with new footage of how much time was I in the air when I landed the trick, and when I didn't land the trick.
+现在把过去的老视频和新视频对比，看看我完成动作时和没完成动作时，空中停留时间的差别。
+
+361
+00:37:39,550 --> 00:37:40,710
+And I can compare the two.
+我可以对两者进行比较。
+
+362
+00:37:40,710 --> 00:37:42,950
+And that data is really going to help me progress.
+这些数据真的会帮助我取得进展。
+
+363
+00:37:42,950 --> 00:37:45,990
+And obviously, the next generation can use these tools too.
+显然，下一代也能使用这些工具。
+
+364
+00:37:45,990 --> 00:37:46,350
+It's true.
+没错。
+
+365
+00:37:46,350 --> 00:37:50,710
+And what I love is I love seeing how quickly your rotational velocity gets up here.
+我最喜欢的是，能看到你的旋转速度迅速提升到这个水平。
+
+366
+00:37:50,710 --> 00:37:52,303
+It's all about how you exit the pipe.
+关键在于你如何从管道中退出。
+
+367
+00:37:52,303 --> 00:37:54,470
+Torque-- exactly, and coming out of it.
+扭矩——没错，就是从里面出来的时候。
+
+368
+00:37:54,470 --> 00:37:54,830
+All right.
+好的。
+
+369
+00:37:54,830 --> 00:37:58,030
+So let's look at one more cool thing that we've done here, which is the ribbon overlay.
+那么我们再来看一个这里做的酷炫功能，就是丝带叠加效果。
+
+370
+00:37:58,030 --> 00:37:58,950
+Oh, I love this.
+哦，我太喜欢这个了。
+
+371
+00:37:58,950 --> 00:38:01,033
+So here's what I love about this.
+我最喜欢的就是这个。
+
+372
+00:38:01,033 --> 00:38:04,030
+We're actually showing your cork here with the whole visualization.
+我们实际上在这里完整展示了你的软木塞的可视化效果。
+
+373
+00:38:04,030 --> 00:38:05,610
+So what happens here?
+那么这里会发生什么？
+
+374
+00:38:05,610 --> 00:38:08,030
+We're moving from blue to green on the thing.
+我们正在把这个从蓝色变为绿色。
+
+375
+00:38:08,030 --> 00:38:08,572
+What is that?
+那是什么？
+
+376
+00:38:08,572 --> 00:38:12,230
+When I was working with the engineers, I was trying to describe this trick.
+当我与工程师合作时，我试图描述这个技巧。
+
+377
+00:38:12,230 --> 00:38:20,850
+And there's a turning point where normally I do one front flip and then come in for the second, but then you have to pause and then go backflip.
+有一个关键转折点，通常我先做一个前空翻，然后接第二个，但这时你必须暂停，再做后空翻。
+
+378
+00:38:20,850 --> 00:38:25,070
+If you miss that turning point in the trick, well, it's not good.
+如果错过了这个转折点，那就不好了。
+
+379
+00:38:25,070 --> 00:38:26,330
+It's not good.
+不太好。
+
+380
+00:38:26,330 --> 00:38:28,470
+But this really pinpoints it exactly.
+但这个确实精准地指出了那个点。
+
+381
+00:38:28,470 --> 00:38:29,710
+It is so cool to watch this.
+看这个真是太酷了。
+
+382
+00:38:29,710 --> 00:38:33,390
+And what I love is that this is making sports more accessible for fans.
+我最喜欢的是，这让粉丝们更容易接触体育运动。
+
+383
+00:38:33,390 --> 00:38:36,990
+We can see all of the craziness that you're putting into this sport.
+我们能清楚看到你为这项运动投入的所有疯狂创意。
+
+384
+00:38:36,990 --> 00:38:37,865
+Exactly.
+没错。
+
+385
+00:38:37,865 --> 00:38:38,990
+All right.
+好的。
+
+386
+00:38:38,990 --> 00:38:41,410
+So let's bring this back and talk a little bit more tech.
+那么让我们回到正题，再多聊一点技术方面。
+
+387
+00:38:41,410 --> 00:38:49,130
+Google Cloud is helping everyone innovate here by creating new use-case specific models, even for things like spatial analysis,
+谷歌云正在通过创建针对特定应用场景的新模型，帮助每个人在这里实现创新，甚至包括空间分析等应用，
+
+388
+00:38:49,130 --> 00:39:02,040
+training these large amounts of data and even models with Google Cloud TPUs, and helping everyone to build a secure data and agent foundation with Gemini Enterprise Agent Platform.
+利用谷歌云 TPU 训练大量数据和模型，并帮助每个人通过 Gemini 企业智能体平台构建安全的数据与智能体基础。
+
+389
+00:39:02,040 --> 00:39:07,695
+Compute, models, and platform-- this is the power of Google Cloud AI.
+计算、模型与平台——这就是谷歌云 AI 的力量。
+
+390
+00:39:07,695 --> 00:39:12,820
+And look, from my personal experience, I can tell you, learning a trick on the mountain is one thing,
+从我个人的经验来看，我告诉你，在山上学会一个技巧是一回事，
+
+391
+00:39:12,820 --> 00:39:16,880
+but actually understanding the physics of a trick is a whole other thing.
+但真正理解一个技巧背后的物理原理则是完全不同的另一回事。
+
+392
+00:39:16,880 --> 00:39:24,780
+And this is really going to help not only the next generation of athletes learn new skills but also help the fans at home understand the sport better.
+这将不仅帮助下一代运动员学习新技能，也能帮助家中的观众更好地理解这项运动。
+
+393
+00:39:24,780 --> 00:39:28,520
+And not just for snowboarding, but I think sports globally.
+这不仅适用于单板滑雪，我认为也适用于全球范围内的体育运动。
+
+394
+00:39:28,520 --> 00:39:30,772
+Look, I'm so stoked to see what's ahead.
+看着未来的发展，我真是无比兴奋。
+
+395
+00:39:30,772 --> 00:39:31,480
+Thank you, Jason.
+谢谢你，杰森。
+
+396
+00:39:31,480 --> 00:39:34,293
+And thank you, Google Cloud Next.
+也谢谢谷歌云 Next。
+
+397
+00:39:39,720 --> 00:39:47,485
+Please welcome SVP and chief technologist, AI and infrastructure, Amin Vahdat.
+请大家欢迎高级副总裁兼首席技术官、AI与基础设施负责人阿明·瓦哈达特。
+
+398
+00:39:59,740 --> 00:40:00,990
+Thank you, Shaun.
+谢谢肖恩。
+
+399
+00:40:00,990 --> 00:40:06,090
+We're taking the exact same technology that empowers athletes and applying it to the enterprise.
+我们正将赋能运动员的同一项技术，应用于企业领域。
+
+400
+00:40:06,090 --> 00:40:11,390
+Because while athletes use data to understand the game, the enterprise needs it to change the game.
+因为运动员利用数据理解比赛，而企业需要数据改变比赛规则。
+
+401
+00:40:11,390 --> 00:40:15,550
+That kind of scale is the ultimate stress test for a unified system.
+这种规模正是对统一系统终极的压力测试。
+
+402
+00:40:15,550 --> 00:40:26,510
+When you process massive video feeds, reaching over decades of historical data, and defend every byte in near real time, you have a foundation built for anything.
+当你处理海量视频流，调用数十年的历史数据，并近乎实时地保护每一字节时，你就拥有了应对任何挑战的基础。
+
+403
+00:40:26,510 --> 00:40:31,070
+But to solve this at a global scale, we first have to solve a physics problem.
+但要在全球规模上解决这个问题，我们首先必须解决一个物理难题。
+
+404
+00:40:31,070 --> 00:40:40,470
+It is a constant struggle against the limits of software architecture, hardware architecture, power, cooling, and even the speed of light.
+这是一场持续不断的斗争，对抗软件架构、硬件架构、功耗、散热，甚至光速的极限。
+
+405
+00:40:40,470 --> 00:40:43,950
+This is the foundation of our AI Hypercomputer.
+这正是我们AI超算的核心基础。
+
+406
+00:40:43,950 --> 00:40:54,020
+We integrate clean energy, massive physical scale, and our purpose-built infrastructure into a single unified engine of efficiency and innovation.
+我们将清洁能源、巨大的物理规模以及专为效率与创新打造的基础设施，整合为一个统一的高效引擎。
+
+407
+00:40:54,020 --> 00:40:57,820
+Because in the agentic era, compute is no longer defined by chip.
+因为在代理式时代，计算不再由芯片定义。
+
+408
+00:40:57,820 --> 00:41:02,140
+Compute is the entire data center.
+计算就是整个数据中心。
+
+409
+00:41:02,140 --> 00:41:07,005
+We give you the ultimate flexibility to pick the right architecture without compromise.
+我们为您提供终极灵活性，让您无需妥协即可选择合适的架构。
+
+410
+00:41:07,005 --> 00:41:11,860
+You can see this in how different industry leaders are innovating on Google Cloud.
+你可以看到，不同行业的领军企业正在谷歌云上不断创新。
+
+411
+00:41:11,860 --> 00:41:21,300
+Axia Energia, Brazil's largest power company, helps prevent power outages for millions of customers by running advanced weather modeling on TPU clusters.
+巴西最大的电力公司Axia Energia通过在TPU集群上运行先进的天气建模，帮助数百万客户避免停电。
+
+412
+00:41:21,300 --> 00:41:28,820
+By forecasting severe weather conditions up to 10 days in advance, the company can proactively plan and execute preventative measures
+通过提前10天预测恶劣天气，该公司能够主动规划并实施预防措施。
+
+413
+00:41:28,820 --> 00:41:35,300
+before storms hit, significantly reducing service interruptions year over year.
+风暴来临前就大幅减少年度服务中断。
+
+414
+00:41:35,300 --> 00:41:43,380
+Thinking Machine Labs shows our NVIDIA-based infrastructure to power Tinker, an open platform for reinforcement learning and fine-tuning
+思维机器实验室展示了基于英伟达的基础设施，用于支持Tinker——一个用于强化学习和微调的开源平台。
+
+415
+00:41:43,380 --> 00:41:47,250
+of frontier models for specialized use cases.
+面向特定应用场景的前沿模型。
+
+416
+00:41:47,250 --> 00:41:54,890
+Woven by Toyota achieved 42% faster training for models that predict complex traffic events.
+丰田编织（Woven by Toyota）在预测复杂交通事件的模型训练上实现了42%的提速。
+
+417
+00:41:54,890 --> 00:42:05,490
+The US Department of Energy is powering AI coscientists across all 17 national labs to accelerate the pace of scientific discovery.
+美国能源部正在为遍布全部17个国家实验室的AI科学家提供支持，以加速科学发现的步伐。
+
+418
+00:42:05,490 --> 00:42:16,450
+And Boston Dynamics is training and safely deploying flexible vision-language models to scale robotics across diverse industrial applications.
+波士顿动力正在训练并安全部署灵活的视觉语言模型，以推动机器人技术在多样化工业应用中的规模化发展。
+
+419
+00:42:16,450 --> 00:42:22,930
+As we enter the agentic era, we see that the demands of training and serving have completely diverged.
+进入代理式时代，我们发现训练和部署的需求已完全分化。
+
+420
+00:42:22,930 --> 00:42:31,680
+To meet the performance needs of these explosive workloads, I am proud to announce our eighth-generation TPUs.
+为满足这些爆发式增长工作负载的性能需求，我自豪地宣布推出第八代TPU。
+
+421
+00:42:51,490 --> 00:42:53,010
+These are things of beauty.
+这些都是美的杰作。
+
+422
+00:42:53,010 --> 00:43:02,050
+For the very first time, we are launching two specialized platforms, each built from the ground up for the distinct demands of training and serving.
+首次，我们推出了两款专用平台，每款均从零开始构建，以满足训练和推理的不同需求。
+
+423
+00:43:02,050 --> 00:43:06,090
+TPU 8t is a powerhouse optimized for training.
+TPU 8t 是专为训练优化的强大算力平台。
+
+424
+00:43:06,090 --> 00:43:13,370
+We have redefined performance capability by moving block scale multiplication directly inside the MXUs.
+我们通过将块级乘法直接移入 MXU 内部，重新定义了性能能力。
+
+425
+00:43:13,370 --> 00:43:22,730
+This native MXU quantization eliminates VPU overhead, delivering nearly three times the compute performance per pod over previous generations.
+这种原生 MXU 量化技术消除了 VPU 的开销，使每个计算单元的算力性能相比前代提升了近三倍。
+
+426
+00:43:22,730 --> 00:43:31,210
+This allows us to push the absolute limits of model flops utilization at a massive scale and reduces the training time of frontier models.
+这使我们能够在大规模下实现模型浮点运算利用率的极限，并显著缩短前沿模型的训练时间。
+
+427
+00:43:31,210 --> 00:43:45,200
+It leverages our breakthrough inter-chip interconnect technology, which now delivers twice the bandwidth compared to Ironwood, scaling up to 9,600 TPUs connected via our 3D torus topology.
+它采用了我们突破性的芯片间互联技术，带宽相比 Ironwood 提升了一倍，可支持高达 9,600 个 TPU 通过我们的 3D 环面拓扑连接。
+
+428
+00:43:45,200 --> 00:43:55,560
+This is a 2.8x improvement over Ironwood to deliver 1.21 exaflops of FP4 compute per pod.
+相比 Ironwood，性能提升了 2.8 倍，每个计算单元可提供 1.21 exaflops 的 FP4 算力。
+
+429
+00:43:55,560 --> 00:44:07,120
+8t provides two petabytes of shared bandwidth memory in a single superpod and utilizes the new TPUDirect storage to enable high-speed data transfers from managed storage.
+8t 在单个超级计算单元中提供两 PB 的共享带宽内存，并采用新型 TPUDirect 存储技术，实现从托管存储的高速数据传输。
+
+430
+00:44:07,120 --> 00:44:18,360
+To put that scale in perspective, two petabytes is enough to hold the entire digital connection of the Library of Congress 100 times over.
+从规模上看，两 PB 的存储容量足以容纳美国国会图书馆全部数字资料的 100 倍。
+
+431
+00:44:18,360 --> 00:44:23,920
+TPU 8i is optimized for the thinking part of the equation-- inference and reinforcement learning.
+TPU 8i 专为方程的“思考”部分优化——即推理和强化学习。
+
+432
+00:44:23,920 --> 00:44:31,520
+At the chip level, we have integrated a specialized collectives acceleration engine, which reduces latency by an additional 5x.
+在芯片层面，我们集成了专用的集体通信加速引擎，使延迟额外降低 5 倍。
+
+433
+00:44:31,520 --> 00:44:38,920
+By hosting the memory cache entirely on silicon, we've finally broken the memory wall that slows down long-context decoding.
+通过将内存缓存完全置于硅芯片上，我们终于打破了阻碍长上下文解码速度的内存墙。
+
+434
+00:44:38,920 --> 00:44:43,150
+We then scaled this on-chip performance through our new board flight topology,
+接着，我们通过全新的板级飞行拓扑结构，实现了芯片内性能的扩展。
+
+435
+00:44:43,150 --> 00:44:52,070
+which deploys 1152 TPUs into a single pod to run millions of concurrent agents with near-zero latency.
+该架构将1152个TPU部署到单个计算单元中，可实现数百万个智能体并发运行，延迟几乎为零。
+
+436
+00:44:52,070 --> 00:45:02,710
+This delivers 11.6 FP8 exaflops for a substantial 9.8x increase in performance over the 256-chip Ironwood pod.
+这带来了11.6 FP8艾浮点每秒的算力，相比256芯片的Ironwood计算单元，性能提升了9.8倍。
+
+437
+00:45:05,990 --> 00:45:12,590
+We are extending our infrastructure leadership to general purpose workloads as well with Google Cloud Axion.
+我们还将基础设施领导力延伸至通用工作负载，推出了谷歌云Axion。
+
+438
+00:45:12,590 --> 00:45:17,890
+Our Google Axion N48 compute instances, powered by a custom-designed ARM CPU,
+由定制设计的ARM CPU驱动的谷歌云Axion N48计算实例，
+
+439
+00:45:17,890 --> 00:45:25,950
+deliver up to twice better price performance and 80% better performance per watt than comparable x86 instances.
+在价格性能比上最高提升一倍，单位功耗性能比同类x86实例提升80%。
+
+440
+00:45:25,950 --> 00:45:36,710
+This provides a sustained, continuous operation designed to eliminate cold starts in logic apps, ensuring your agents are always on and ready to respond.
+这提供了持续稳定的运行能力，旨在消除逻辑应用中的冷启动问题，确保您的智能体始终在线并随时响应。
+
+441
+00:45:36,710 --> 00:45:43,180
+We are the preferred cloud for NVIDIA GPUs by some of the largest scale and most innovative customers in the world.
+我们已成为全球规模最大、最具创新性的客户中一些首选的NVIDIA GPU云服务提供商。
+
+442
+00:45:43,180 --> 00:45:51,614
+Today, I am pleased to announce that Google Cloud will be among the first to offer the NVIDIA Vera Rubin NVL72.
+今天，我很高兴宣布，谷歌云将成为首批提供英伟达Vera Rubin NVL72的云平台之一。
+
+443
+00:45:57,780 --> 00:46:06,900
+Vera Rubin NVL72 on Google Cloud achieves 10 times performance efficiency, optimized for high interactivity and long-context workloads.
+在谷歌云上运行的Vera Rubin NVL72实现了10倍的性能效率，专为高互动性和长上下文工作负载优化。
+
+444
+00:46:06,900 --> 00:46:09,540
+Of course, silicon is only half the battle.
+当然，硅芯片只是战斗的一半。
+
+445
+00:46:09,540 --> 00:46:14,180
+To feed these chips, we've redesigned our entire storage and networking pipeline.
+为了供给这些芯片，我们重新设计了整个存储和网络管道。
+
+446
+00:46:14,180 --> 00:46:21,500
+I am pleased to announce that Managed Lustre now supports throughput up to an industry-leading 10 terabytes per second.
+我很高兴地宣布，托管式 Lustre 现在支持高达行业领先的每秒 10TB 吞吐量。
+
+447
+00:46:21,500 --> 00:46:24,300
+We tied it all together with our new Virgo Network.
+我们通过全新的 Virgo 网络将所有部分整合在一起。
+
+448
+00:46:24,300 --> 00:46:28,820
+Virgo doubles connectivity to scale training beyond the superpod.
+Virgo 将连接能力翻倍，使训练规模突破超级集群的限制。
+
+449
+00:46:28,820 --> 00:46:40,010
+It links 134,000 chips with up to 47pb per second of non-blocking bandwidth to deliver over 1.7 million exaflops of compute.
+它连接了 13.4 万颗芯片，提供最高每秒 47PB 的无阻塞带宽，实现超过 170 万 exaflops 的算力。
+
+450
+00:46:40,010 --> 00:46:49,710
+We can now turn months of training into weeks with the power of a million-plus TPU chips in a single cluster, all orchestrated by Pathways and JAX.
+现在，借助单个集群中百万颗以上 TPU 芯片的算力，配合 Pathways 和 JAX 的协同调度，我们可以将数月的训练时间缩短为数周。
+
+451
+00:46:58,832 --> 00:47:08,610
+With up to four times the bandwidth per accelerator over the previous generation, this combination delivers near-linear scaling, ensuring you get the full power of every chip you pay for.
+相比上一代，每加速器的带宽提升高达四倍，这一组合实现了接近线性的扩展，确保您获得所支付每颗芯片的全部算力。
+
+452
+00:47:08,610 --> 00:47:18,010
+We are also making Virgo available on NVIDIA, Vera Rubin, and NVL72, supporting up to 960,000 GPUs.
+我们还将在英伟达、维拉·鲁宾和 NVL72 上提供 Virgo，支持最多 96 万块 GPU。
+
+453
+00:47:18,010 --> 00:47:24,290
+Leading financial institutions are using this exact combination of silicon networking to gain a massive edge.
+领先的金融机构正使用这一芯片与网络的组合，获得巨大优势。
+
+454
+00:47:24,290 --> 00:47:29,530
+Let's hear from Citadel Securities on how we are innovating together.
+让我们听听 Citadel Securities 如何讲述我们如何共同创新。
+
+455
+00:47:29,530 --> 00:47:32,570
+We trade over half a trillion dollars per day.
+我们每天交易超过五万亿美元。
+
+456
+00:47:32,570 --> 00:47:34,110
+But it's not just about volumes.
+但不仅仅关乎交易量。
+
+457
+00:47:34,110 --> 00:47:35,930
+It's also about speed.
+这也关乎速度。
+
+458
+00:47:35,930 --> 00:47:40,410
+In financial markets, time is measured in nanoseconds.
+在金融市场上，时间以纳秒计算。
+
+459
+00:47:40,410 --> 00:47:42,550
+We connect markets all around the world,
+我们连接全球各地的市场，
+
+460
+00:47:42,550 --> 00:47:49,130
+whether pension funds or somebody doing their first trade as part of their retirement, meet their investment objectives.
+无论是养老基金还是首次参与投资以规划退休的人，都能实现其投资目标。
+
+461
+00:47:49,130 --> 00:47:56,290
+We've partnered with Google Cloud to build what we think is the preeminent scalable, cloud-based research environment.
+我们与谷歌云合作，打造了我们认为最出色的可扩展云研究环境。
+
+462
+00:47:56,290 --> 00:48:06,170
+For instance, we've been working in depth on TPU to ensure that we get the efficiency we need to run our business.
+例如，我们深入研究了TPU，以确保获得运行业务所需的效率。
+
+463
+00:48:06,170 --> 00:48:12,635
+Today, we're able to run workloads two to four times as fast with a 30% lower cost.
+如今，我们能够以30%更低的成本，将工作负载的运行速度提升两到四倍。
+
+464
+00:48:12,635 --> 00:48:17,970
+With TPU Ironwood, we can now run thousands of parallel chips for a single workload.
+有了TPU Ironwood，我们现在可以为单个工作负载并行运行数千个芯片。
+
+465
+00:48:17,970 --> 00:48:27,530
+And what that means for our business is workloads that used to take weeks or days, we can now execute those in hours or even minutes.
+这意味着，过去需要数周或数天的工作负载，我们现在可以在数小时甚至几分钟内完成。
+
+466
+00:48:27,530 --> 00:48:29,470
+Imagine you're a quantitative researcher.
+想象一下，你是一名量化研究员。
+
+467
+00:48:29,470 --> 00:48:32,070
+You have 100 novel ideas that you want to execute.
+你有100个新颖的想法想要实现。
+
+468
+00:48:32,070 --> 00:48:44,040
+Can we empower our researchers to be able to test all of their ideas and really be limited by not the scale of the platform or the economics of the problem, but by their own creativity?
+我们能否赋能研究人员，让他们能够测试所有想法，真正受限的不再是平台规模或问题的经济成本，而是他们自身的创造力？
+
+469
+00:48:44,040 --> 00:48:46,560
+As we like to say, steel sharpens steel.
+正如我们常说的，精钢磨砺精钢。
+
+470
+00:48:46,560 --> 00:48:50,820
+Google Cloud and Citadel Securities' collaboration has been exactly that.
+谷歌云与 Citadel Securities 的合作正是如此。
+
+471
+00:49:00,355 --> 00:49:07,760
+Citadel Securities is just one example of many innovators who are gaining a competitive edge on our foundational AI Hypercomputer.
+Citadel Securities 只是众多创新者中的一个例子，他们正借助我们的基础 AI 超级计算机获得竞争优势。
+
+472
+00:49:07,760 --> 00:49:12,000
+At this scale, you cannot have humans manually troubleshooting configurations.
+在这个规模下，你无法依靠人工手动排查配置问题。
+
+473
+00:49:12,000 --> 00:49:15,400
+You need a cloud that drives itself.
+你需要一个能够自我驱动的云平台。
+
+474
+00:49:15,400 --> 00:49:22,880
+We have used the Model Context Protocol to turn every Google Cloud service into a tool that agents can orchestrate directly.
+我们利用模型上下文协议，将每个谷歌云服务都转变为智能体可直接编排的工具。
+
+475
+00:49:22,880 --> 00:49:29,720
+By integrating Gemini reasoning into our own telemetry, the system now performs autonomous root cause analysis,
+通过将 Gemini 的推理能力集成到我们自身的遥测系统中，该系统现在能够自主进行根本原因分析，
+
+476
+00:49:29,720 --> 00:49:35,270
+identifying and fixing misconfigurations before you even realize there's a problem.
+在你甚至意识到问题存在之前就识别并修复配置错误。
+
+477
+00:49:35,270 --> 00:49:42,230
+This is the AI Hypercomputer-- purpose-built infrastructure to accelerate the entire AI lifecycle.
+这就是 AI 超级计算机——专为加速整个 AI 生命周期而打造的基础架构。
+
+478
+00:49:42,230 --> 00:49:47,640
+To show you how we feed this engine with your data, please welcome Karthik Narain.
+为了向大家展示我们如何用你的数据来喂养这台引擎，请欢迎卡蒂克·纳赖恩。
+
+479
+00:50:01,870 --> 00:50:03,310
+Thank you, Amin.
+谢谢，阿明。
+
+480
+00:50:03,310 --> 00:50:08,030
+Amin just showed you how we built the world's most--powerful reasoning engine.
+阿明刚才向你们展示了我们如何打造全球最强大的推理引擎。
+
+481
+00:50:08,030 --> 00:50:09,670
+But here's the reality.
+但现实是这样的。
+
+482
+00:50:09,670 --> 00:50:13,270
+Reasoning without context is just a guess.
+没有上下文的推理，不过是一种猜测。
+
+483
+00:50:13,270 --> 00:50:20,790
+And when you expect your AI to make decisions and your agents to take actions, you cannot afford to guess.
+当你期望你的AI做出决策，智能体采取行动时，你根本无法承受猜测。
+
+484
+00:50:20,790 --> 00:50:26,030
+Trusted context turns an intelligent guess to a decisive action.
+可信赖的上下文能将智能猜测转化为决定性行动。
+
+485
+00:50:26,030 --> 00:50:29,900
+Today, we are completely rethinking the data platform.
+如今，我们正在彻底重新思考数据平台。
+
+486
+00:50:29,900 --> 00:50:34,420
+We call it the Agenetic Data Cloud.
+我们称之为代理式数据云。
+
+487
+00:50:34,420 --> 00:50:40,100
+To make this real, I'm thrilled to share four foundational innovations.
+为了实现这一点，我很激动地分享四项基础性创新。
+
+488
+00:50:40,100 --> 00:50:43,540
+It all starts with the foundation of truth.
+一切始于真相的基石。
+
+489
+00:50:43,540 --> 00:50:51,020
+Right now, your data is trapped in PDFs, video calls, multiple data stores, and SaaS applications.
+目前，你的数据被困在PDF、视频会议、多个数据存储和SaaS应用中。
+
+490
+00:50:51,020 --> 00:50:54,420
+How do we help AI make sense of it all?
+我们如何帮助AI理解这一切？
+
+491
+00:50:54,420 --> 00:51:01,860
+Today, we are introducing the Knowledge Catalog, a universal context engine for your enterprise.
+今天，我们推出知识目录，这是企业级的通用上下文引擎。
+
+492
+00:51:01,860 --> 00:51:12,460
+Starting with your structured world, the Knowledge Catalog natively integrates with BigQuery, mapping tables and metadata into unified business logic.
+从你的结构化世界开始，知识目录原生集成BigQuery，将表格和元数据映射为统一的业务逻辑。
+
+493
+00:51:12,460 --> 00:51:20,260
+And we are going even further, extending the same capability to the unstructured world as well through Smart Storage.
+我们还将进一步拓展，通过智能存储将相同的能力延伸至非结构化世界。
+
+494
+00:51:20,260 --> 00:51:25,740
+In the past, a file landing in your storage sat passive, waiting for a pipeline.
+过去，文件存入存储后处于被动状态，等待数据管道处理。
+
+495
+00:51:25,740 --> 00:51:30,130
+Now, the second that image or PDF hits Google Cloud Storage,
+现在，图像或PDF文件一进入谷歌云存储，
+
+496
+00:51:30,130 --> 00:51:37,730
+they are instantly tagged, enriched, and made agent-ready-- zero manual data engineering.
+立即被标记、丰富并准备就绪供智能体使用——无需任何手动数据工程。
+
+497
+00:51:37,730 --> 00:51:51,250
+Powered natively by Gemini, the Knowledge Catalog goes even deeper, reading files, autonomously extracting entities, mapping relationships, and learning about your unique business semantics.
+原生由Gemini驱动的知识目录更进一步，能够读取文件，自主提取实体，映射关系，并学习您独特业务的语义。
+
+498
+00:51:51,250 --> 00:51:57,410
+When an agent hears net revenue or risk, it understands the exact meaning.
+当智能体听到“净收入”或“风险”时，能准确理解其含义。
+
+499
+00:51:57,410 --> 00:51:59,410
+Take Virgin Media O2.
+以维珍媒体O2为例。
+
+500
+00:51:59,410 --> 00:52:04,370
+They had over 20,000 data assets, many of which were untapped.
+他们拥有超过2万项数据资产，其中许多尚未被利用。
+
+501
+00:52:04,370 --> 00:52:11,730
+Knowledge Catalog is helping them activate this data to empower their global product teams.
+知识目录正帮助他们激活这些数据，赋能全球产品团队。
+
+502
+00:52:11,730 --> 00:52:22,810
+Now, combined with direct zero-copy access to applications, operating systems, and AI platforms like Palantir, Salesforce, SAP, ServiceNow, and Workday,
+现在，结合对应用、操作系统和AI平台（如Palantir、Salesforce、SAP、ServiceNow和Workday）的直接零拷贝访问，
+
+503
+00:52:22,810 --> 00:52:28,978
+you now have instant context to your entire business.
+您现在可即时获得整个业务的上下文。
+
+504
+00:52:30,930 --> 00:52:33,530
+That's right.
+没错。
+
+505
+00:52:33,530 --> 00:52:39,450
+This trusted context enables agents to act with certainty.
+这种可信的上下文使智能体能够自信地行动。
+
+506
+00:52:39,450 --> 00:52:44,770
+Now imagine this power in the hands of every employee, every day.
+现在想象一下，这种能力每天都在每位员工手中。
+
+507
+00:52:44,770 --> 00:52:50,850
+We've integrated the Knowledge Catalog with Gemini Enterprise's Deep Research Agent.
+我们已将知识目录与 Gemini 企业版的深度研究智能体集成。
+
+508
+00:52:50,850 --> 00:52:58,810
+You can now enable multi-step reasoning across internal and web data for precise cited business answers.
+现在，您可以在内部数据和网络数据之间启用多步推理，以获得精准引用的业务答案。
+
+509
+00:52:58,810 --> 00:53:05,410
+What took weeks of manual effort now happens seamlessly.
+过去需要数周手动完成的工作，如今已能无缝完成。
+
+510
+00:53:05,410 --> 00:53:08,850
+This is the Knowledge Catalog.
+这是知识目录。
+
+511
+00:53:08,850 --> 00:53:22,170
+Second, we are unveiling a Gemini-powered data science authoring experience that fundamentally transforms how data practitioners work with our new Data Agent Kit.
+其次，我们推出了由 Gemini 驱动的数据科学创作体验，借助全新的数据智能体套件，从根本上改变了数据从业者的工作方式。
+
+512
+00:53:22,170 --> 00:53:25,960
+We didn't just want to build another platform you have to learn.
+我们不只是想打造另一个需要你重新学习的平台。
+
+513
+00:53:25,960 --> 00:53:34,760
+Instead, the Data Agent Kit integrates comprehensively with libraries of AI skills and plugins directly
+相反，数据智能体套件可全面集成AI技能和插件库
+
+514
+00:53:34,760 --> 00:53:37,560
+into your workflows that you already use.
+融入你已使用的流程中。
+
+515
+00:53:37,560 --> 00:53:44,240
+Your IDE, your notebook, your terminal, whether you are in VS Code, Cloud Code, or Gemini CLI,
+你的集成开发环境、你的笔记本、你的终端，无论你使用的是 VS Code、Cloud Code 还是 Gemini CLI，
+
+516
+00:53:44,240 --> 00:53:49,800
+we instantly turn your everyday workspace into a native data environment.
+我们可立即将您的日常办公环境转变为原生数据环境。
+
+517
+00:53:49,800 --> 00:53:51,760
+Here's how it works.
+工作原理如下。
+
+518
+00:53:51,760 --> 00:53:59,400
+You just state your intent, predict customer churn, and your environment simply takes over.
+你只需说明意图，比如预测客户流失，环境便会自动接管。
+
+519
+00:53:59,400 --> 00:54:06,360
+It autonomously builds the pipelines and deploys the models right on Google's Agentic Data Cloud.
+它会自主构建数据管道，并将模型直接部署在谷歌的代理式数据云上。
+
+520
+00:54:06,360 --> 00:54:15,360
+It handles all the complex orchestration for you, creating a direct path from your business objective straight to the business outcome.
+它为你处理所有复杂的编排工作，从你的业务目标直达业务成果，实现无缝连接。
+
+521
+00:54:15,360 --> 00:54:21,220
+For researchers at Bayer Crop Science, this eliminates manual data management and analytics,
+对拜耳作物科学的研究人员而言，这消除了手动数据管理和分析的负担，
+
+522
+00:54:21,220 --> 00:54:27,930
+freeing them to focus on pioneering agricultural innovations for a sustainable and productive future.
+让他们能够专注于开创农业领域的创新，为可持续且高产的未来贡献力量。
+
+523
+00:54:30,550 --> 00:54:35,430
+Third, the demand on data is extreme in this agentic era.
+第三，在这个代理式时代，对数据的需求极为巨大。
+
+524
+00:54:35,430 --> 00:54:41,830
+To address the scale challenge, we're unleashing the Lightning Engine for Apache Spark.
+为应对规模挑战，我们推出了 Apache Spark 的闪电引擎。
+
+525
+00:54:41,830 --> 00:54:45,710
+It not only delivers industry-leading performance for Spark.
+它不仅为 Spark 提供业界领先性能。
+
+526
+00:54:45,710 --> 00:54:52,190
+Lightning Engine delivers up to 2x the price performance over the previous market leader.
+闪电引擎的性价比相比上一代市场领导者最高提升两倍。
+
+527
+00:54:57,230 --> 00:55:01,830
+We fundamentally rebuilt this engine for the agentic era,
+我们从根本上重新构建了这一引擎，以适应代理式时代的需求，
+
+528
+00:55:01,830 --> 00:55:12,070
+reasoning with trusted context enables autonomous agents, and with the Lightning Engine, that autonomy operates at massive scale.
+通过基于可信上下文的推理，实现智能体的自主运作，而借助闪电引擎，这种自主性得以在巨大规模下运行。
+
+529
+00:55:12,070 --> 00:55:23,060
+Industry-leading organizations like Flipkart, Lowe's, and Meesho are accelerating their Apache Spark workloads with Lightning Engine.
+像 Flipkart、Lowe's 和 Meesho 这样的行业领先企业正借助 Lightning Engine 加速其 Apache Spark 工作负载。
+
+530
+00:55:23,060 --> 00:55:28,420
+Finally, let's address the biggest and the longest-running debate of all.
+最后，让我们来解决所有问题中最大也最持久的争论。
+
+531
+00:55:28,420 --> 00:55:30,700
+Where should your data reside?
+你的数据应该存放在哪里？
+
+532
+00:55:30,700 --> 00:55:38,620
+The reality is it lives everywhere-- at Google, at AWS, Azure, and across your SaaS applications.
+现实情况是，数据遍布各处——在谷歌云、AWS、Azure 以及你的 SaaS 应用中。
+
+533
+00:55:38,620 --> 00:55:45,940
+Your old lakehouse expected the analytical engine and the data storage to reside in the same cloud.
+你过去的湖仓架构期望分析引擎和数据存储位于同一云平台。
+
+534
+00:55:45,940 --> 00:55:48,420
+This approach is broken.
+这种方式已经失效。
+
+535
+00:55:48,420 --> 00:55:59,400
+Today, we are introducing the Cross-Cloud Lakehouse, where your analytical engine reasons over data in any cloud.
+如今，我们推出了跨云数据湖仓，让你的分析引擎可以在任何云中对数据进行推理。
+
+536
+00:56:04,580 --> 00:56:09,380
+Built on the open Apache Iceberg standard, it is completely borderless.
+基于开放的 Apache Iceberg 标准，它完全无边界。
+
+537
+00:56:09,380 --> 00:56:21,370
+Instead of forcing you to accept complex networking hurdles or massive egress fees, we deliver low-latency direct connectivity to AWS and Azure as if the data sat natively
+我们不再强迫你面对复杂的网络挑战或高昂的出站费用，而是提供低延迟的直接连接，让 AWS 和 Azure 的数据仿佛原生存在于谷歌云中。
+
+538
+00:56:21,370 --> 00:56:29,062
+in Google Cloud-- no more moving data, no more vendor lock in-- just freedom.
+无需再迁移数据，也无需再被厂商锁定——只有自由。
+
+539
+00:56:33,730 --> 00:56:44,810
+No matter where your data lives, from traditional systems to SaaS applications, we provide the trusted context and connectivity your business needs to act upon.
+无论你的数据位于何处，从传统系统到 SaaS 应用，我们都能提供企业所需的可信上下文与连接性，以支持你的业务行动。
+
+540
+00:56:44,810 --> 00:56:50,790
+This is why customers are choosing our Agentic Data Cloud to drive their agentic transformation.
+这就是为何客户选择我们的代理式数据云来推动其代理式转型。
+
+541
+00:56:53,690 --> 00:56:57,170
+One example of this transformation is Vodafone.
+这种转型的一个例子是沃达丰。
+
+542
+00:56:57,170 --> 00:57:04,490
+Vodafone unified their data on BigQuery to build a more resilient global network for their customers.
+沃达丰将数据统一到 BigQuery 上，为客户提供更可靠的全球网络。
+
+543
+00:57:04,490 --> 00:57:12,970
+And with Gemini Enterprise, they are launching hundreds of agents to proactively resolve outages and optimize infrastructure,
+并借助 Gemini 企业版，他们推出了数百个智能体，主动解决网络中断并优化基础设施，
+
+544
+00:57:12,970 --> 00:57:18,290
+scaling network reliability and saving millions every year.
+提升了网络可靠性，每年节省数百万美元。
+
+545
+00:57:18,290 --> 00:57:27,450
+Macquarie Bank's goal was to securely scale AI across their entire operation to deliver more personalized customer experiences.
+澳新银行的目标是安全地在整个运营中扩展人工智能，以提供更个性化的客户体验。
+
+546
+00:57:27,450 --> 00:57:32,530
+They deployed Gemini Enterprise to all staff and supercharged productivity.
+他们将 Gemini 企业版部署到所有员工，并大幅提升了生产力。
+
+547
+00:57:32,530 --> 00:57:42,410
+And for their two million customers, Macquarie's 24 by 7 AI assistant queue autonomously answers banking questions.
+对于他们的两百万客户，澳新银行的 24x7 人工智能助手可自主回答银行相关问题。
+
+548
+00:57:42,410 --> 00:57:48,690
+All of this was made possible by unifying their data on BigQuery and Spanner.
+所有这些都得益于他们将数据统一到 BigQuery 和 Spanner 上。
+
+549
+00:57:48,690 --> 00:57:55,690
+With this foundation, Macquarie has already cut client losses from scams by half.
+借助这一基础，澳新银行已将客户受诈骗损失减少了一半。
+
+550
+00:57:55,690 --> 00:58:00,570
+That's secure, frictionless banking at scale.
+这就是可扩展的、安全且无摩擦的银行服务。
+
+551
+00:58:00,570 --> 00:58:11,930
+American Express is redefining trust by centralizing its core data on Google Cloud to enable faster fraud and risk analysis at global scale.
+美国运通通过将核心数据集中到谷歌云，实现了全球规模的快速欺诈与风险分析，重新定义了信任。
+
+552
+00:58:11,930 --> 00:58:22,560
+Costco leverages BigQuery to accelerate member insights, empowering associates to optimize experience and maximize value for millions of members.
+好市多利用 BigQuery 加速会员洞察，赋能员工优化体验并为数百万会员最大化价值。
+
+553
+00:58:22,560 --> 00:58:25,080
+This is the Agentic Data Cloud.
+这是代理式数据云。
+
+554
+00:58:25,080 --> 00:58:30,800
+You and your AI agents now have a platform that operates with universal context,
+你和你的AI智能体现在拥有了一个具备全域上下文的平台，
+
+555
+00:58:30,800 --> 00:58:40,875
+is defined by your defined intent, and scales autonomously across your borderless data and the applications you already use today.
+由你定义的意图所决定，并能自动扩展至你无边界的数据以及你当前使用的所有应用。
+
+556
+00:58:44,680 --> 00:58:51,606
+To show you how to bring trusted context to your business, please welcome Yasmeen Ahmad.
+为了向大家展示如何为你的业务带来可信的上下文，请欢迎亚斯米恩·阿哈迈德。
+
+557
+00:59:02,800 --> 00:59:07,320
+Karthik gave us the recipe, so now let's see how it all plates up.
+卡蒂克已经给出了配方，现在让我们看看这一切如何呈现。
+
+558
+00:59:07,320 --> 00:59:11,880
+Most companies take five weeks to turn a trend into a decision.
+大多数公司需要五周时间才能将一个趋势转化为决策。
+
+559
+00:59:11,880 --> 00:59:14,390
+We're going to do it in five minutes.
+我们将在五分钟内完成。
+
+560
+00:59:14,390 --> 00:59:17,150
+To get there, we're breaking three barriers--
+为此，我们正在打破三大障碍——
+
+561
+00:59:17,150 --> 00:59:27,190
+dark data with our Knowledge Catalog, data silos with our Cross-Cloud Lakehouse, and manual code with Google's new agentic tools and skills.
+通过知识目录解决暗数据问题，通过跨云数据湖仓解决数据孤岛问题，通过谷歌全新的代理式工具和技能解决手动编码问题。
+
+562
+00:59:27,190 --> 00:59:29,390
+So let's get cooking.
+那么，开始吧。
+
+563
+00:59:29,390 --> 00:59:36,030
+Our new agentic workflow triggers have detected a tasty trend-- Midnight Swirl froyo.
+我们新的代理式工作流触发器已检测到一个有趣的趋势——午夜漩涡冷冻酸奶。
+
+564
+00:59:36,030 --> 00:59:37,430
+Looks delicious.
+看起来非常美味。
+
+565
+00:59:37,430 --> 00:59:41,230
+But with any new flavor, I need to know is it safe?
+但每种新口味，我得先确认是否安全。
+
+566
+00:59:41,230 --> 00:59:43,070
+Are there any hidden allergens?
+有没有隐藏的过敏原？
+
+567
+00:59:43,070 --> 00:59:44,410
+Is there a market?
+有没有市场需求？
+
+568
+00:59:44,410 --> 00:59:46,190
+Where are my hungry customers?
+我的饥饿客户在哪里？
+
+569
+00:59:46,190 --> 00:59:47,610
+And is it worth it?
+值得投入吗？
+
+570
+00:59:47,610 --> 00:59:49,790
+What's the real ROI?
+真实的投资回报率是多少？
+
+571
+00:59:49,790 --> 00:59:52,470
+But first, safety.
+但首先，安全第一。
+
+572
+00:59:52,470 --> 00:59:55,750
+We have thousands of PDF recipes.
+我们有数千份PDF食谱。
+
+573
+00:59:55,750 --> 00:59:57,790
+I'm going to search for soy.
+我要搜索一下大豆。
+
+574
+00:59:57,790 --> 01:00:01,150
+It's a top food allergen, and safety is non-negotiable.
+大豆是主要过敏原，安全不容妥协。
+
+575
+01:00:01,150 --> 01:00:05,350
+Zero results-- looks good so far.
+没有结果——目前看起来不错。
+
+576
+01:00:05,350 --> 01:00:10,390
+But this recipe does contain an ingredient, base 204.
+但这个食谱确实含有一个成分，基础204。
+
+577
+01:00:10,390 --> 01:00:14,620
+Let's check the supplier manual for base 204.
+我们来查看一下204号基础物料的供应商手册。
+
+578
+01:00:14,620 --> 01:00:16,800
+And here it is.
+就在这里。
+
+579
+01:00:16,800 --> 01:00:19,900
+Base 204 actually contains soy.
+204号基础物料实际上含有大豆。
+
+580
+01:00:19,900 --> 01:00:27,380
+A simple GenAI search would miss this connection because the information is trapped across two separate PDFs.
+一个简单的生成式AI搜索会遗漏这个关联，因为信息分散在两个独立的PDF文件中。
+
+581
+01:00:27,380 --> 01:00:32,620
+So how do we digest all of this data to find those hidden connections?
+那么我们该如何处理这些数据，以发现那些隐藏的关联？
+
+582
+01:00:32,620 --> 01:00:40,180
+Well, I need an agent that has the skill to work with my PDF data combined with our Knowledge Catalog.
+我需要一个能够结合我的PDF数据与知识目录进行工作的智能体。
+
+583
+01:00:40,180 --> 01:00:46,900
+Watch. Our agent helps us find hidden allergens in a recipe for Midnight Swirl.
+请看。我们的智能体帮助我们找到了“午夜漩涡”食谱中的隐藏过敏原。
+
+584
+01:00:46,900 --> 01:00:48,380
+And here it is.
+就在这里。
+
+585
+01:00:48,380 --> 01:00:55,980
+Midnight Swirl contains soy, and it's giving me a data citation, a schema called product specs.
+“午夜漩涡”含有大豆，并且提供了数据引用，其模式名为产品规格。
+
+586
+01:00:55,980 --> 01:00:59,200
+Now, this schema was generated by our Knowledge Catalog,
+这个模式是由我们的知识目录生成的，
+
+587
+01:00:59,200 --> 01:01:13,970
+working with Gemini to reason over our supplier and recipe PDFs and extract entities like recipe, ingredient, and allergen and mapping those previously invisible connections between them.
+它结合Gemini对供应商和食谱PDF进行推理，提取出食谱、成分和过敏原等实体，并建立起这些之前不可见的关联。
+
+588
+01:01:13,970 --> 01:01:18,850
+This is trusted context built over dark data.
+这是基于暗数据构建的可信上下文。
+
+589
+01:01:18,850 --> 01:01:27,170
+Next, market size-- to launch this globally, I need a precision list of customers with zero soy allergies.
+接下来是市场规模——要将这款产品推向全球，我需要一份精确的客户名单，其中不包含任何对大豆过敏的人。
+
+590
+01:01:27,170 --> 01:01:30,930
+However, I have two data sets that have never met.
+但我的两组数据从未有过交集。
+
+591
+01:01:30,930 --> 01:01:42,330
+Our allergen schema is here in Google, while my loyalty list with millions of customers and dietary preferences is in AWS S3 Iceberg.
+我们的过敏原数据模型在谷歌，而包含数百万客户及其饮食偏好的忠诚度名单则在 AWS S3 Iceberg 中。
+
+592
+01:01:42,330 --> 01:01:47,810
+Now, usually you'd call your data engineer and wait three days for a migration.
+通常情况下，你会联系数据工程师，然后等待三天才能完成数据迁移。
+
+593
+01:01:47,810 --> 01:01:48,970
+Not today.
+但今天不一样。
+
+594
+01:01:48,970 --> 01:01:51,370
+No more slow churn.
+再也不用忍受缓慢的数据流转。
+
+595
+01:01:51,370 --> 01:01:58,250
+With our cross-cloud Lakehouse, the data stays exactly where it is while we dynamically build the list.
+通过我们的跨云数据湖仓，数据原地不动，我们即可动态构建名单。
+
+596
+01:01:58,250 --> 01:02:07,730
+Before writing a single line of code, Gemini builds a plan using our data engineering tools while respecting my built-in security and permissions.
+在编写任何代码之前，Gemini 已利用我们的数据工程工具制定出计划，同时遵守我内置的安全策略和权限设置。
+
+597
+01:02:07,730 --> 01:02:11,310
+As the data scientist, you're the chef.
+作为数据科学家，你就是主厨。
+
+598
+01:02:11,310 --> 01:02:13,130
+You can review.
+你可以进行审查。
+
+599
+01:02:13,130 --> 01:02:17,810
+Let's accept and see what our agents serve up.
+我们接受并看看智能体为我们呈现了什么。
+
+600
+01:02:17,810 --> 01:02:20,110
+They execute on our Lightning Engine,
+它们在我们的闪电引擎上执行。
+
+601
+01:02:20,110 --> 01:02:32,050
+which is two times more price-performant than the market proprietary alternative, filtering our soy-sensitive customers in mere seconds.
+性能价格比是市场专有替代方案的两倍，可在几秒内筛选出对大豆敏感的客户。
+
+602
+01:02:32,050 --> 01:02:36,970
+AWS and BigQuery sources connected-- zero complexity.
+AWS 和 BigQuery 数据源已连接——零复杂度。
+
+603
+01:02:36,970 --> 01:02:40,730
+It's as smooth as a batch of Midnight Swirl.
+顺滑得如同一勺午夜漩涡。
+
+604
+01:02:40,730 --> 01:02:44,930
+Finally, ROI-- is this worth a global launch?
+终于到了投资回报率——这值得全球发布吗？
+
+605
+01:02:44,930 --> 01:02:48,690
+An annual forecast would help.
+年度预测会有所帮助。
+
+606
+01:02:48,690 --> 01:02:50,530
+Again, our agents don't guess.
+再次强调，我们的智能体不会猜测。
+
+607
+01:02:50,530 --> 01:02:54,250
+Gemini builds a multi-step execution plan.
+Gemini 会构建多步骤执行计划。
+
+608
+01:02:54,250 --> 01:02:55,930
+Can you make changes?
+你能进行修改吗？
+
+609
+01:02:55,930 --> 01:02:57,850
+Yes, Chef.
+可以，主厨。
+
+610
+01:02:57,850 --> 01:03:06,560
+So let's take a look and change the number of simulations from 1,000 to 2,000.
+那我们来看一下，把模拟次数从 1,000 改为 2,000。
+
+611
+01:03:06,560 --> 01:03:10,360
+And we will accept.
+我们将接受。
+
+612
+01:03:10,360 --> 01:03:21,320
+Acting as the orchestrator, Gemini delegates to our specialized data science tools, choosing the right models, and again, executing on our Lightning Engine for Spark.
+作为协调者，Gemini 会将任务委派给我们的专业数据科学工具，选择合适的模型，并再次在我们的 Lightning Engine 上执行 Spark 任务。
+
+613
+01:03:21,320 --> 01:03:24,000
+It's built an entire notebook for me.
+它为我创建了一个完整的笔记本。
+
+614
+01:03:24,000 --> 01:03:29,680
+Now, training usually takes a bit of time, so here's one I ran earlier.
+现在，训练通常需要一点时间，所以这是之前运行的一个。
+
+615
+01:03:29,680 --> 01:03:32,240
+$15 million.
+1500万美元。
+
+616
+01:03:32,240 --> 01:03:37,440
+Even after protecting our soy-sensitive market, the demand is massive.
+即使在保护了我们的大豆敏感市场之后，需求依然巨大。
+
+617
+01:03:37,440 --> 01:03:39,920
+Can we bring back the timer?
+我们能把计时器恢复吗？
+
+618
+01:03:39,920 --> 01:03:41,420
+Look what we accomplished.
+看我们完成了什么。
+
+619
+01:03:41,420 --> 01:03:47,640
+In less than five minutes, we turned a viral trend into a $15 million decision.
+在不到五分钟的时间里，我们将一个病毒式趋势转化为了一个1500万美元的决策。
+
+620
+01:03:47,640 --> 01:03:51,720
+First, Knowledge Catalog found the hidden soy connection.
+首先，知识目录发现了隐藏的大豆关联。
+
+621
+01:03:51,720 --> 01:03:59,320
+Second, Cross-Cloud Lakehouse, powered by the Lightning Engine, connected to AWS with zero complexity.
+其次，由闪电引擎驱动的跨云数据湖仓，以零复杂度连接到了AWS。
+
+622
+01:03:59,320 --> 01:04:05,550
+And third, our agentic skills and tools built the forecast with zero manual code.
+第三，我们的代理式技能和工具以零手动编码完成了预测构建。
+
+623
+01:04:05,550 --> 01:04:08,950
+This is the Agentic Data Cloud.
+这就是代理式数据云。
+
+624
+01:04:17,510 --> 01:04:18,790
+We did it.
+我们做到了。
+
+625
+01:04:18,790 --> 01:04:26,545
+And now, here to share how we're securing your agentic enterprise, please welcome Francis deSouza
+现在，让我们欢迎弗朗西斯·德索萨，他将分享我们如何保障您的代理式企业安全
+
+626
+01:04:40,430 --> 01:04:42,510
+In an agentic enterprise,
+在代理式企业中
+
+627
+01:04:42,510 --> 01:04:51,670
+giving agents the power to act means that security must become an autonomous force, moving faster than the threats themselves.
+赋予智能体行动能力意味着安全必须成为一种自主力量，其响应速度要快于威胁本身
+
+628
+01:04:51,670 --> 01:04:56,750
+Human analysts simply can't keep up with AI-driven attacks.
+人类分析师根本无法跟上人工智能驱动的攻击步伐
+
+629
+01:04:56,750 --> 01:05:06,140
+The mean time to exploit the vulnerability has dropped to minus seven days, meaning that today exploits routinely occur before a patch is
+漏洞被利用的平均时间已降至负七天，这意味着如今攻击往往在补丁发布前就已发生
+
+630
+01:05:06,140 --> 01:05:17,540
+released, and the handoff time between initial access and handover to a secondary threat group has dropped from eight hours to 22 seconds.
+从初始入侵到移交至第二个威胁团伙的交接时间，已从八小时缩短至22秒
+
+631
+01:05:17,540 --> 01:05:21,860
+Your security must operate at machine speed.
+您的安全系统必须以机器的速度运行
+
+632
+01:05:21,860 --> 01:05:30,260
+Now, to do that, we're moving the heavy lifting to a Gemini-native agentic Security Operations Center, or SOC.
+为此，我们正在将核心工作迁移至基于 Gemini 的代理式安全运营中心（SOC）
+
+633
+01:05:30,260 --> 01:05:32,900
+And the results are already here.
+成果已经显现
+
+634
+01:05:32,900 --> 01:05:40,380
+Our triage agents are turning 30-minute investigations into 60-second resolutions.
+我们的初步评估智能体已将30分钟的调查缩短至60秒内解决
+
+635
+01:05:40,380 --> 01:05:51,260
+And our new threat hunting and detection agents proactively sweep your environments for risks at a scale and speed that no human team could match.
+我们新推出的威胁狩猎与检测智能体，能以人类团队无法比拟的规模和速度主动扫描您的环境，排查风险
+
+636
+01:05:51,260 --> 01:05:57,820
+By leveraging Google's unparalleled telemetry, including Mandiant, VirusTotal, and Chrome,
+通过利用谷歌无与伦比的遥测数据，包括 Mandiant、VirusTotal 和 Chrome
+
+637
+01:05:57,820 --> 01:06:02,330
+we are delivering a defense system based on global intelligence.
+我们正在打造一个基于全球情报的防御系统。
+
+638
+01:06:02,330 --> 01:06:11,090
+And now, with our integrated dark web intelligence, we can identify external threats with 98% accuracy.
+现在，借助我们整合的暗网情报，我们能够以98%的准确率识别外部威胁。
+
+639
+01:06:11,090 --> 01:06:16,730
+Customers are already seeing big benefits from Google Cloud's security offerings.
+客户已经从谷歌云的安全产品中看到了显著收益。
+
+640
+01:06:16,730 --> 01:06:30,330
+CME Group depends on a unified stack of Mandiant Security Command Center and Google's SecOps to protect the world's largest derivatives system against novel threats.
+CME集团依赖统一的Mandiant安全指挥中心与谷歌安全运营平台，保护全球最大的衍生品系统免受新型威胁。
+
+641
+01:06:30,330 --> 01:06:37,290
+In an ultra high-stakes environment, Google's security offering is matched by speed.
+在超高风险环境中，谷歌的安全解决方案以其速度见长。
+
+642
+01:06:37,290 --> 01:06:43,850
+CME Group achieves nanosecond precision with Google's ultra low-latency solution,
+CME集团借助谷歌的超低延迟解决方案，实现了纳秒级精度，
+
+643
+01:06:43,850 --> 01:06:50,690
+supporting billions of transactions daily and lowering the barrier of entry for new traders.
+支持每日数十亿笔交易，并降低了新交易者的准入门槛。
+
+644
+01:06:50,690 --> 01:06:53,810
+Now, the biggest threats today aren't just hackers.
+如今，最大的威胁已不仅仅是黑客。
+
+645
+01:06:53,810 --> 01:07:02,890
+It's also shadow AI, unauthorized models and agents that are operating in your enterprise but outside your control.
+还包括影子AI、未经授权的模型和智能体，它们在企业内部运行却脱离了你的控制。
+
+646
+01:07:02,890 --> 01:07:11,250
+And to meet this challenge, we have integrated the industry's deepest security context directly into our AI fabric.
+为应对这一挑战，我们已将业界最深入的安全上下文直接融入我们的AI架构。
+
+647
+01:07:11,250 --> 01:07:17,570
+That is why I am thrilled to officially welcome the Wiz team to Google Cloud.
+正因如此，我非常高兴地正式欢迎Wiz团队加入谷歌云。
+
+648
+01:07:24,010 --> 01:07:29,370
+Together, we are building a new security posture for the agentic enterprise.
+我们正共同构建代理式企业的全新安全态势。
+
+649
+01:07:29,370 --> 01:07:35,870
+While the New agent platform in Gemini Enterprise secures and governs your agents, with Wiz,
+在 Gemini 企业版的新智能体平台保障并管理您的智能体的同时，借助 Wiz，
+
+650
+01:07:35,870 --> 01:07:43,770
+we're now extending that protection to every asset on your premises and across all major clouds.
+我们现在已将这种保护扩展至您所有场所的资产以及所有主要云平台。
+
+651
+01:07:43,770 --> 01:07:51,250
+To explain how we're solving this, I'm excited to introduce to the stage Wiz co-founder Yinon Costica.
+为了说明我们如何解决这一问题，我非常高兴地邀请 Wiz 联合创始人尹诺·科斯蒂卡登台。
+
+652
+01:08:07,600 --> 01:08:09,560
+Thank you, Francis.
+谢谢，弗朗西斯。
+
+653
+01:08:09,560 --> 01:08:17,319
+At Wiz, our mission from day one has been to help customers protect everything they build and run.
+在 Wiz，从第一天起我们的使命就是帮助客户保护他们所构建和运行的一切。
+
+654
+01:08:17,319 --> 01:08:23,680
+Wiz began by unifying code and cloud and runtime context to move at developer speed.
+Wiz 最初通过统一代码、云环境和运行时上下文，实现了与开发者速度同步。
+
+655
+01:08:23,680 --> 01:08:28,160
+But AI has fundamentally changed the environment.
+但人工智能从根本上改变了这一环境。
+
+656
+01:08:28,160 --> 01:08:36,920
+With autonomous products, hyperscale code generation, and AI-weaponized threats, the stakes have never been higher.
+随着自主产品、超大规模代码生成以及被 AI 武装的威胁出现，风险前所未有地升高。
+
+657
+01:08:36,920 --> 01:08:42,520
+To protect this new frontier, security must now move at machine speed.
+为了保护这一新前沿，安全必须现在以机器速度前进。
+
+658
+01:08:42,520 --> 01:08:51,319
+And that is exactly why we built Wiz as the first AI Application Protection Platform, or in short, AI APP.
+这正是我们打造 Wiz 的原因——作为首个 AI 应用保护平台，简称 AI APP。
+
+659
+01:08:51,319 --> 01:08:55,950
+It solves four key security challenges for the AI era--
+它解决了人工智能时代面临的四大关键安全挑战——
+
+660
+01:08:55,950 --> 01:09:00,870
+giving security unparalleled visibility into the AI stack,
+为安全提供了对 AI 架构前所未有的全面可见性，
+
+661
+01:09:00,870 --> 01:09:09,390
+finding and proactively remediating critical risks before attackers can use them, enabling our builders
+在攻击者利用这些关键风险之前，主动发现并修复它们，从而赋能我们的开发者
+
+662
+01:09:09,390 --> 01:09:19,670
+to start secure by design in their AI enabled IDEs, and lastly, arming SecOps teams to stop threats to cloud and AI environments.
+能够在AI赋能的集成开发环境中实现安全设计，最后，为安全运维团队提供防护能力，阻止对云和AI环境的威胁。
+
+663
+01:09:19,670 --> 01:09:26,270
+In order to outpace attackers, Wiz delivers a set of expert AI agents.
+为了超越攻击者，Wiz提供了一组专家级AI智能体。
+
+664
+01:09:26,270 --> 01:09:28,830
+It's a really cool concept.
+这是一个非常酷的概念。
+
+665
+01:09:28,830 --> 01:09:36,470
+Our red, blue, and green agents are named after the teams they help-- red, blue, and green teams.
+我们的红队、蓝队和绿队智能体，以它们所协助的团队命名——红队、蓝队和绿队。
+
+666
+01:09:36,470 --> 01:09:40,350
+They form an AI layer to autonomously identify,
+它们构成了一层AI，能够自主识别、
+
+667
+01:09:40,350 --> 01:09:49,310
+investigate, and then fix critical risks at machine speed, leveraging context from our unique security graph.
+调查并以机器速度修复关键风险，利用我们独有的安全图谱上下文。
+
+668
+01:09:49,310 --> 01:09:52,550
+Security starts with visibility, always.
+安全始于可见性，始终如此。
+
+669
+01:09:52,550 --> 01:09:53,500
+But today.
+但今天。
+
+670
+01:09:53,500 --> 01:09:57,600
+Your AI footprint is an orbit of interconnected tools.
+你的AI足迹是一个由相互连接的工具构成的生态圈。
+
+671
+01:09:57,600 --> 01:10:01,540
+It spins models like Gemini, Claude, OpenAI.
+它运行着如Gemini、Claude、OpenAI等模型。
+
+672
+01:10:01,540 --> 01:10:12,060
+Your teams are using agent studios such as Gemini Enterprise Agent Platform, Lovable, Copilot Studio, Salesforce's Agentforce.
+你的团队正在使用Gemini企业智能体平台、Lovable、Copilot Studio、Salesforce的Agentforce等智能体工作室。
+
+673
+01:10:12,060 --> 01:10:21,860
+And to secure all of these environments, we examine every layer-- the clouds, the data, the models, the agents.
+为了保护所有这些环境，我们会检查每一层——云、数据、模型和智能体。
+
+674
+01:10:21,860 --> 01:10:28,460
+And we continuously correlate these risks to find and fix the attack path that matter most.
+我们持续关联这些风险，以发现并修复最关键的安全攻击路径。
+
+675
+01:10:28,460 --> 01:10:31,547
+Now let's see it in action.
+现在让我们看看实际运行效果。
+
+676
+01:10:40,000 --> 01:10:42,180
+So this is Wiz.
+这就是 Wiz。
+
+677
+01:10:42,180 --> 01:10:50,780
+Wiz basically starts by automatically building a dynamic inventory from your code and cloud, completely agentlessly.
+Wiz 基本上会自动从代码和云环境中构建动态资产清单，完全无需智能体。
+
+678
+01:10:50,780 --> 01:11:02,010
+This means that you can see every visibility into the environment, into everything that your teams are building using AI, without any friction.
+这意味着你可以毫无障碍地查看环境中的一切，包括你的团队使用 AI 构建的所有内容。
+
+679
+01:11:02,010 --> 01:11:05,130
+Wiz then builds the security graph.
+接着，Wiz 会构建安全图谱。
+
+680
+01:11:05,130 --> 01:11:13,130
+The security graph-- think of it as a living map that explains the architecture and the logic of any AI application it sees.
+安全图谱——可以把它想象成一张动态地图，解释它所看到的任何 AI 应用的架构和逻辑。
+
+681
+01:11:13,130 --> 01:11:18,370
+Here we see an example of an agent that is actually running on cloud.
+这里我们看到一个实际在云上运行的智能体示例。
+
+682
+01:11:18,370 --> 01:11:22,770
+It has tools to query a database and even execute code.
+它具备查询数据库甚至执行代码的工具。
+
+683
+01:11:22,770 --> 01:11:29,290
+And you can see that Wiz actually flags that this agent is internet-exposed.
+你可以看到，Wiz 实际上标记出该智能体暴露在互联网上。
+
+684
+01:11:29,290 --> 01:11:33,410
+And also, it has access to sensitive customer data.
+而且，它还拥有访问敏感客户数据的权限。
+
+685
+01:11:33,410 --> 01:11:38,050
+Now, this is security moving at the speed of AI.
+现在，安全正以AI的速度前进。
+
+686
+01:11:38,050 --> 01:11:41,130
+You don't need any reviews with your development teams.
+你无需再对开发团队进行任何审查。
+
+687
+01:11:41,130 --> 01:11:43,650
+It just works.
+它能直接运行。
+
+688
+01:11:43,650 --> 01:11:56,810
+And in the AI era, the best defense is to continuously use AI against ourselves in order to give the defenders the first-mover advantage over the attackers.
+在AI时代，最好的防御方式是持续使用AI来对抗自身，从而让防御者在攻击者之前获得先发优势。
+
+689
+01:11:56,810 --> 01:12:00,610
+And this is exactly what the Wiz Red Agent does.
+这正是Wiz红队智能体所做的事情。
+
+690
+01:12:00,610 --> 01:12:04,850
+It validates every single exposure that Wiz identified.
+它验证了Wiz所识别出的每一项暴露风险。
+
+691
+01:12:04,850 --> 01:12:12,970
+And you can think of it as a friendly hacker that continuously scans your outside like an elite red team.
+你可以把它想象成一个友好的黑客，像精英红队一样持续扫描你的外部系统。
+
+692
+01:12:12,970 --> 01:12:20,330
+And look, this is a finding that the Red Agent actually found-- an authentication bypass vulnerability.
+看，这是红队智能体实际发现的一个漏洞——身份验证绕过漏洞。
+
+693
+01:12:20,330 --> 01:12:32,210
+This means that it enables an attacker to gain access to that agent but also to that sensitive database behind it to exfiltrate sensitive information.
+这意味着攻击者不仅能访问该智能体，还能访问其背后的敏感数据库，窃取敏感信息。
+
+694
+01:12:32,210 --> 01:12:35,450
+Now, it's not a potential risk anymore.
+现在，这已不再是潜在风险。
+
+695
+01:12:35,450 --> 01:12:37,850
+This is a validated risk.
+这是一个已验证的风险。
+
+696
+01:12:37,850 --> 01:12:44,650
+And this gives our developers the prioritization and the confidence in fixing it immediately.
+这为我们开发人员提供了优先处理的依据和立即修复的信心。
+
+697
+01:12:44,650 --> 01:12:51,560
+Now, in the past, triage used to mean very, very long meetings and waiting and spreadsheets.
+过去，优先级划分意味着冗长的会议、漫长的等待和繁琐的电子表格。
+
+698
+01:12:51,560 --> 01:12:57,300
+And you don't need that anymore because we have the Wiz Green Agent.
+现在你不再需要这些，因为我们有 Wiz 绿色智能体。
+
+699
+01:12:57,300 --> 01:13:06,640
+The Wiz Green Agent automates the entire triage process from identifying the owner, suggesting the fix,
+Wiz 绿色智能体可自动完成整个优先级划分流程，包括识别负责人、建议修复方案，
+
+700
+01:13:06,640 --> 01:13:14,300
+identifying the exact line of code that caused the risk in the first place-- all automated-- no phone tag, no friction.
+精确定位导致风险的代码行——全部自动化，无需电话沟通，无任何摩擦。
+
+701
+01:13:14,300 --> 01:13:15,980
+And from here, you have a choice.
+从这里开始，你有选择。
+
+702
+01:13:15,980 --> 01:13:26,760
+You can send it to the developers as a PR, or maybe better, send it to a coding agent like CodeMender to execute the final fix at the source automatically.
+你可以将其作为拉取请求发送给开发人员，或者更好的是，发送给像 CodeMender 这样的编码智能体，自动在源代码中执行最终修复。
+
+703
+01:13:26,760 --> 01:13:36,280
+And this is how we can move from a validated risk to a verified fix, end-to-end visibility, control, and full confidence.
+这就是我们如何实现从验证风险到确认修复的全流程可视性、控制力和完全信心。
+
+704
+01:13:36,280 --> 01:13:48,510
+So to summarize, whenever you have an AI team that ships a new product or even someone in finance that then codes a new agent, now, within minutes, security
+总结一下，每当你的 AI 团队发布新产品，甚至财务部门的人员编写了一个新智能体，现在只需几分钟，安全团队
+
+705
+01:13:48,510 --> 01:13:53,270
+is able to, one, identify the agent and its architecture, two,
+就能，第一，识别该智能体及其架构，第二，
+
+706
+01:13:53,270 --> 01:14:03,870
+automatically conduct a security review to find and validate the risks, and three, automatically suggest the fix, send it to the dev teams in their own native tools.
+自动开展安全审查，发现并验证风险，第三，自动提出修复建议，并通过开发团队的原生工具发送给团队。
+
+707
+01:14:03,870 --> 01:14:11,750
+Ta-da. This is how AI agents unlock secure innovation with AI at scale.
+好了。这就是 AI 智能体如何实现规模化 AI 驱动的安全创新。
+
+708
+01:14:11,750 --> 01:14:12,650
+Thank you, all.
+谢谢大家。
+
+709
+01:14:12,650 --> 01:14:14,841
+Back to you, Francis.
+交给你了，弗朗西斯。
+
+710
+01:14:23,123 --> 01:14:35,670
+The unique combination of Google's agentic SOC and Wiz's deep cloud context gives customers the confidence to build and deploy generative AI everywhere safely.
+谷歌的代理式安全运营中心与威兹的深度云上下文相结合，使客户能够安全地在任何地方构建和部署生成式AI。
+
+711
+01:14:35,670 --> 01:14:43,270
+We're helping the Los Angeles Department of Water and Power secure critical infrastructure ahead of the LA 28 games,
+我们正在帮助洛杉矶水电局在2028年奥运会之前保障关键基础设施的安全，
+
+712
+01:14:43,270 --> 01:14:50,260
+while Singapore's CSIT enables proactive defense against advanced digital threats.
+同时，新加坡的CSIT能够主动防御高级数字威胁。
+
+713
+01:14:50,260 --> 01:14:56,540
+DBS strengthens security by embedding Google Cloud's protection directly into their architecture,
+DBS通过将谷歌云的防护能力直接嵌入其架构，加强了安全性，
+
+714
+01:14:56,540 --> 01:15:02,780
+enabling real-time threat detection and response, reinforcing customer trust.
+实现了实时威胁检测与响应，进一步增强了客户信任。
+
+715
+01:15:02,780 --> 01:15:12,700
+Morgan Stanley chose Wiz as a key component of its cloud security strategy and is expanding visibility and control across its cloud environments.
+摩根士丹利选择威兹作为其云安全策略的关键组成部分，并正在扩大其在云环境中的可见性与控制力。
+
+716
+01:15:12,700 --> 01:15:21,500
+Now, as part of this strategy, the firm is deploying Google Cloud Security capabilities to support its evolving cloud platforms.
+如今，作为该策略的一部分，该公司正在部署谷歌云安全功能，以支持其不断演进的云平台。
+
+717
+01:15:21,500 --> 01:15:34,820
+And trusted global icons from Nestlé to LVMH, from BMW to Shell, rely on Wiz and Google Cloud Security to ensure their AI-driven future is secure by design.
+从雀巢到LVMH，从宝马到壳牌，众多全球知名品牌都依赖威兹和谷歌云安全，确保其由AI驱动的未来从设计之初就安全可靠。
+
+718
+01:15:34,820 --> 01:15:38,980
+We have closed the loop between the defender and the builder.
+我们已实现防御者与建设者之间的闭环。
+
+719
+01:15:38,980 --> 01:15:47,690
+Google and Wiz provide a unified agentic defense that is secure by design and autonomous by nature.
+谷歌与威兹提供统一的代理式防御，从设计上就安全，本质上自主。
+
+720
+01:15:47,690 --> 01:15:56,810
+Together, we are redefining cybersecurity for the AI era so security teams can protect their organizations at machine
+我们共同重新定义了AI时代下的网络安全，让安全团队能够以机器的速度保护其组织。
+
+721
+01:15:56,810 --> 01:16:04,701
+speed. To share more about how our agents are helping your customers, please welcome Carrie Tharp.
+速度。要了解更多我们的智能体如何帮助您的客户，请欢迎卡莉·萨尔普登场。
+
+722
+01:16:20,930 --> 01:16:22,570
+Thank you, Francis.
+谢谢，弗朗西斯。
+
+723
+01:16:22,570 --> 01:16:26,690
+A secure foundation gives you the confidence to innovate.
+安全的基石能让你有信心进行创新。
+
+724
+01:16:26,690 --> 01:16:31,570
+At Google, we are using that foundation to solve two of your biggest challenges--
+在谷歌，我们正利用这一基石来解决您面临的两大挑战——
+
+725
+01:16:31,570 --> 01:16:35,890
+serving your customers and helping your employees work smarter.
+服务您的客户并帮助您的员工更高效地工作。
+
+726
+01:16:35,890 --> 01:16:47,440
+We do this by deploying a coordinated agentic task force, specialized agents that don't just assist your team-- they operate alongside them.
+我们通过部署协同的代理式特遣队来实现，这些专业智能体不仅协助您的团队，更与之并肩协作。
+
+727
+01:16:47,440 --> 01:16:52,000
+In the agentic era, an agent is no longer just a tool.
+在代理式时代，智能体不再仅仅是一个工具。
+
+728
+01:16:52,000 --> 01:17:02,560
+It's a strategic extension of your business, built to expand your reach, deepen engagement, and personalized service at scale.
+它是您业务的战略延伸，旨在拓展您的覆盖范围，深化用户互动，并实现规模化个性化服务。
+
+729
+01:17:02,560 --> 01:17:11,840
+Earlier this year, we launched Gemini Enterprise for Customer Experience, a suite designed to enhance the entire customer journey
+今年早些时候，我们推出了 Gemini 企业版客户体验，这是一套旨在提升整个客户旅程的解决方案。
+
+730
+01:17:11,840 --> 01:17:17,240
+from the first moment of discovery to ongoing service interactions.
+从最初的发现时刻到持续的服务互动。
+
+731
+01:17:17,240 --> 01:17:20,480
+Central to this is agentic commerce.
+这其中的核心是代理式商业。
+
+732
+01:17:20,480 --> 01:17:31,760
+We have introduced pre-built shopping and food ordering agents that handle everything from discovery to checkout entirely through natural language.
+我们推出了预构建的购物和订餐智能体，可完全通过自然语言完成从发现到结账的全部流程。
+
+733
+01:17:31,760 --> 01:17:36,340
+By pairing these agents with our customer engagement agents,
+通过将这些智能体与我们的客户互动智能体相结合，
+
+734
+01:17:36,340 --> 01:17:45,760
+we've created a seamless journey from search to service, turning every interaction into revenue and retention opportunities.
+我们打造了从搜索到服务的无缝旅程，让每一次互动都转化为收入和用户留存的机会。
+
+735
+01:17:45,760 --> 01:17:48,660
+For example, with the food ordering agent,
+例如，使用食物订购智能体时，
+
+736
+01:17:48,660 --> 01:17:58,720
+Papa John's is building a hyper-personalized system that remembers customer preferences to get the food to your door faster.
+必胜客正在构建一个高度个性化系统，能够记住顾客的偏好，让食物更快送到您家门口。
+
+737
+01:17:58,720 --> 01:18:08,600
+During live interactions, Agent Assist coaches employees to deliver fast and more accurate answers to customer questions.
+在实时互动中，智能体助手会指导员工快速且准确地回答客户问题。
+
+738
+01:18:08,600 --> 01:18:13,760
+For example, Best Buy is guiding shoppers through those complex tech specs,
+例如，百思买正在帮助消费者理清那些复杂的科技参数，
+
+739
+01:18:13,760 --> 01:18:19,160
+issue resolution, and appointment scheduling, all autonomously.
+问题解决和预约安排，全部实现自主化。
+
+740
+01:18:19,160 --> 01:18:26,000
+And our new omnichannel gateway helps ensure your agents maintain contacts across every surface--
+我们的全新全渠道网关有助于确保您的智能体在每个界面都保持联系。
+
+741
+01:18:26,000 --> 01:18:33,440
+web, mobile, voice-- while preserving universal consumer context.
+网页、移动设备、语音——同时保持通用的消费者情境。
+
+742
+01:18:33,440 --> 01:18:37,280
+If a customer moves from a text chat to a phone call,
+如果客户从文字聊天转到电话通话，
+
+743
+01:18:37,280 --> 01:18:41,790
+the agent seamlessly remembers exactly where they left off,
+智能体能无缝记住他们之前中断的位置，
+
+744
+01:18:41,790 --> 01:18:48,830
+and this scales globally, conversing with human-like voice capabilities in multiple languages.
+并且可实现全球扩展，支持多种语言的类人语音交互。
+
+745
+01:18:48,830 --> 01:18:58,630
+Gemini Enterprise for Customer Experience is the technology powering the Home Depot's Magic Apron Assistant to reach customers across every channel.
+企业版 Gemini 为客户体验提供技术支持，使家得宝的魔法围裙助手能够通过所有渠道触达客户。
+
+746
+01:18:58,630 --> 01:19:00,442
+Let's hear from the Home Depot.
+让我们听听家得宝的说法。
+
+747
+01:19:00,442 --> 01:19:07,610
+There's a customer journey that often starts with inspiration, goes into research, and then into shopping and buying and then into doing.
+客户旅程通常始于灵感，接着进入研究阶段，然后是购物和购买，最后进入实际使用阶段。
+
+748
+01:19:07,610 --> 01:19:11,650
+And Magic Apron is really a digital agent to help through that whole journey,
+而魔法围裙实际上是一个数字智能体，帮助客户完成整个旅程。
+
+749
+01:19:11,650 --> 01:19:23,550
+and it is really there to provide that orange apron experience for help and customer service, the same way that as you come into a store, you're used to that great customer service.
+它真正的作用是提供那种橙色围裙般的帮助与客户服务体验，就像您走进一家门店时，习惯于享受到的优质客户服务一样。
+
+750
+01:19:23,550 --> 01:19:31,270
+So we've had a partnership with Google for quite some time, and the latest things that they're bringing to market are incredibly exciting to us.
+我们与谷歌的合作已经持续了相当长一段时间，他们最新推向市场的产品让我们感到非常振奋。
+
+751
+01:19:31,270 --> 01:19:36,200
+We're really excited about Magic Apron Shopping Assistant.
+我们对魔法围裙购物助手感到非常兴奋。
+
+752
+01:19:36,200 --> 01:19:40,480
+Our relationship with Google has really made this possible in a variety of different ways.
+我们与谷歌的关系在多个方面真正促成了这一成果的实现。
+
+753
+01:19:40,480 --> 01:19:49,220
+If you just focus for a second on Gemini Enterprise and you think about how it's the bedrock of what we are doing with Magic Apron, it gives us the power
+如果你稍微关注一下企业版 Gemini，再想想它作为我们打造魔法围裙项目的基础，它赋予了我们所需的力量和速度。
+
+754
+01:19:49,220 --> 01:19:54,928
+and the speed in which we need in order to power these great technologies.
+正是凭借企业版 Gemini，我们才具备了驱动这些卓越技术所需的动力和速度。
+
+755
+01:19:54,928 --> 01:20:01,080
+Now, with Gemini Enterprise, we think that we can blend those channels because we'll have an agentic back end.
+现在，借助企业版 Gemini，我们认为可以融合这些渠道，因为我们拥有一个代理式后端。
+
+756
+01:20:01,080 --> 01:20:08,220
+Maybe most importantly, we see a higher conversion rate when they leverage the tool versus when they don't.
+也许最重要的是，我们发现当客户使用该工具时，转化率明显高于未使用时。
+
+757
+01:20:08,220 --> 01:20:12,592
+When customers come into the store and they use Magic Apron, typically it's about wayfinding.
+当顾客走进商店并使用魔法围裙时，通常是为了导航指引。
+
+758
+01:20:12,592 --> 01:20:13,800
+It's about product knowledge.
+这关乎产品知识。
+
+759
+01:20:13,800 --> 01:20:15,340
+It's about compatibility.
+这关乎兼容性。
+
+760
+01:20:15,340 --> 01:20:17,760
+But they also use it at home on our website.
+他们也在家中通过我们的网站使用它。
+
+761
+01:20:17,760 --> 01:20:26,122
+Those experiences should all get better-- easier to be inspired, easier to find what I need, easier to order it and get it, easier to get support after the fact.
+这些体验都应该变得更好——更轻松地获得灵感，更轻松地找到所需商品，更轻松地下单并收货，更轻松地获得售后支持。
+
+762
+01:20:26,122 --> 01:20:32,560
+The partnership really keeps us at the forefront of building great experiences for our customers and our associates.
+这项合作真正让我们始终处于为顾客和员工打造卓越体验的前沿。
+
+763
+01:20:41,370 --> 01:20:47,250
+The same agentic approach is also reshaping digital-first industries.
+相同的代理式方法也在重塑以数字为先的行业。
+
+764
+01:20:47,250 --> 01:20:49,930
+One example of this is Reliance.
+一个例子就是信实集团。
+
+765
+01:20:49,930 --> 01:20:55,210
+Reliance is transforming retail for millions in India with a shopping agent.
+信实集团正通过购物智能体，为印度数百万用户重塑零售体验。
+
+766
+01:20:55,210 --> 01:21:06,690
+Customers can simply type "plan a birthday party," and the agent guides their journey across categories and assembles their cart, which drives more revenue per visit.
+顾客只需输入“策划一场生日派对”，智能体便会引导他们跨品类完成购物旅程，并自动整理购物车，从而提升每次访问的营收。
+
+767
+01:21:06,690 --> 01:21:15,090
+Gemini-powered catalog enrichment supports this, analyzing millions of images in minutes instead of months.
+Gemini 驱动的目录增强功能支持这一过程，可在几分钟内分析数百万张图片，而非耗时数月。
+
+768
+01:21:15,090 --> 01:21:22,850
+Gemini Enterprise for Customer Experience is hard at work across many industries and enterprises.
+Gemini 企业版客户体验正在多个行业和企业中全力运作。
+
+769
+01:21:22,850 --> 01:21:30,570
+Internally, teams at Google, including Google Store, Google Photos, Google One, and YouTube,
+内部团队，包括 Google Store、Google Photos、Google One 和 YouTube，
+
+770
+01:21:30,570 --> 01:21:35,880
+are partnering with us to power our own scaled customer experiences.
+正与我们合作，以打造我们自己的规模化客户体验。
+
+771
+01:21:35,880 --> 01:21:40,520
+Let's take a look at how one of our first internal customers is doing this.
+让我们来看看我们首批内部客户之一是如何做到这一点的。
+
+772
+01:21:40,520 --> 01:21:42,360
+Over to you, Patrick.
+交给你了，帕特里克。
+
+773
+01:21:51,337 --> 01:21:52,420
+All right.
+好的。
+
+774
+01:21:52,420 --> 01:21:53,480
+Thanks, Carrie.
+谢谢，卡莉。
+
+775
+01:21:53,480 --> 01:21:54,100
+Hey, y'all.
+嗨，大家。
+
+776
+01:21:54,100 --> 01:21:57,760
+I'm Patrick Marlow, a senior product manager here at Google Cloud.
+我是帕特里克·马洛，谷歌云的高级产品经理。
+
+777
+01:21:57,760 --> 01:22:05,600
+YouTube TV customer support recently launched a voice agent to help users with NFL Sunday Ticket and YouTube TV plan subscriptions.
+YouTube TV 客户支持最近推出了一款语音智能体，帮助用户处理 NFL 周日票和 YouTube TV 订阅计划的问题。
+
+778
+01:22:05,600 --> 01:22:09,338
+It's currently live in production, serving 100% of their users.
+目前该智能体已上线生产环境，服务 100% 的用户。
+
+779
+01:22:09,338 --> 01:22:11,380
+We're going to take a look at it in action today.
+今天我们将现场演示它的运行情况。
+
+780
+01:22:11,380 --> 01:22:13,088
+I'm going to call the support number now.
+我现在就拨打支持电话。
+
+781
+01:22:18,120 --> 01:22:22,420
+Thanks for calling the YouTube TV and NFL Sunday Ticket Support Line.
+感谢您致电 YouTube TV 和 NFL 周日票支持热线。
+
+782
+01:22:22,420 --> 01:22:24,460
+So tell me, how can I help you today?
+请问今天有什么我可以帮您的吗？
+
+783
+01:22:24,460 --> 01:22:28,268
+Hey yeah, I've got a bunch of my friends coming over tomorrow night for the NFL draft.
+嗨，明天晚上我有几个朋友要来，我想看 NFL 选秀。
+
+784
+01:22:28,268 --> 01:22:29,060
+I don't have cable.
+我没有有线电视。
+
+785
+01:22:29,060 --> 01:22:31,300
+And to be honest, I really only watch sports.
+说实话，我只看体育节目。
+
+786
+01:22:31,300 --> 01:22:33,500
+Does YouTube TV have a plan that's just for that?
+YouTube TV 有没有专门针对体育的套餐？
+
+787
+01:22:37,120 --> 01:22:38,240
+Yes, we do.
+有的，我们有。
+
+788
+01:22:38,240 --> 01:22:45,380
+The YouTube TV Sports Plan has exactly what you're looking for, plus over 30 other sports channels.
+YouTube TV 体育套餐正好符合您的需求，还包含超过 30 个体育频道。
+
+789
+01:22:45,380 --> 01:22:48,600
+It's $18 less per month than the base plan.
+比基础套餐每月便宜 18 美元。
+
+790
+01:22:48,600 --> 01:22:53,620
+Would you like me to text you a link to the number you're calling from that will take you directly-- Yeah, go ahead and send me a link.
+需要我发个链接到您拨打的号码，直接带您进入页面吗？——对，发给我吧。
+
+791
+01:22:53,620 --> 01:22:54,660
+I'll take a look at it.
+我会看一下。
+
+792
+01:23:00,120 --> 01:23:02,840
+Great, I just sent the link to your mobile phone.
+好的，我已经把链接发到您的手机上了。
+
+793
+01:23:02,840 --> 01:23:05,282
+Is there anything else I can help with today?
+今天还有其他我可以帮您的吗？
+
+794
+01:23:05,282 --> 01:23:07,740
+Yeah, I'm going to take a look at this now.
+好的，我现在就看一下这个。
+
+795
+01:23:07,740 --> 01:23:10,282
+Actually, my father-in-law is hanging out with me here today.
+其实，我岳父今天也和我在一起。
+
+796
+01:23:10,282 --> 01:23:13,460
+He's been thinking about getting the sports plan for his account as well.
+他也在考虑为自己的账户办理体育套餐。
+
+797
+01:23:13,460 --> 01:23:15,418
+I just wanted to see what he thinks about this.
+我只是想看看他对此有什么看法。
+
+798
+01:23:19,000 --> 01:23:22,580
+Actually, could you just quickly summarize this plan for him in Spanish?
+其实，你能用西班牙语快速给他总结一下这个计划吗？
+
+799
+01:23:22,580 --> 01:23:28,104
+I think he just wants to know that he can get both football e football.
+我觉得他只是想知道，他能不能同时看足球和橄榄球。
+
+800
+01:23:42,702 --> 01:23:44,410
+Look, one other question.
+听着，还有一个问题。
+
+801
+01:23:44,410 --> 01:23:49,450
+I was planning on setting up multiple TVs throughout the house, like one in the living room, one over on the patio.
+我原本计划在屋子里设置多台电视，比如客厅一台，露台一台。
+
+802
+01:23:49,450 --> 01:23:53,270
+Would that be OK with this plan?
+这个套餐允许这样吗？
+
+803
+01:23:53,270 --> 01:23:58,730
+Definitely, with the Sports Plan, you can stream on up to three screens at the same time.
+当然可以，体育套餐支持同时在三块屏幕上播放。
+
+804
+01:23:58,730 --> 01:23:59,688
+Is there anything else?
+还有其他事吗？
+
+805
+01:23:59,688 --> 01:24:00,688
+Awesome.
+太棒了。
+
+806
+01:24:00,688 --> 01:24:06,470
+No, look, I'm actually in the middle of a stadium full of people right now, and I think there's millions watching me on the live stream.
+不，你看，我现在正处在一座满是人的体育场里，我觉得有数百万观众正在实时观看我。
+
+807
+01:24:06,470 --> 01:24:07,610
+So I kind of got to run.
+所以我得赶紧走了。
+
+808
+01:24:07,610 --> 01:24:07,930
+All right.
+好的。
+
+809
+01:24:07,930 --> 01:24:08,763
+You've been helpful.
+你帮了大忙。
+
+810
+01:24:08,763 --> 01:24:11,070
+Later.
+待会儿见。
+
+811
+01:24:16,070 --> 01:24:17,230
+All right.
+好的。
+
+812
+01:24:17,230 --> 01:24:19,070
+Now, that was pretty easy.
+现在，这事儿还挺简单的。
+
+813
+01:24:19,070 --> 01:24:23,830
+The agent was able to handle complex product logic and seamlessly pivoted languages.
+智能体能够处理复杂的产品逻辑，并且无缝切换语言。
+
+814
+01:24:23,830 --> 01:24:26,430
+But what happens if the team wants to make a change?
+但如果团队想做更改呢？
+
+815
+01:24:26,430 --> 01:24:30,500
+They don't need a bunch of software engineers updating endless lines of code.
+他们不需要一堆软件工程师不断修改无穷无尽的代码。
+
+816
+01:24:30,500 --> 01:24:33,540
+They just need CX Agent Studio.
+他们只需要 CX 智能体工作室。
+
+817
+01:24:33,540 --> 01:24:42,603
+Here, we have our Visual Builder, inside of CX Agent Studio, which is designed to give you complete transparency and control over your entire agent-building experience.
+这里是我们位于 CX 智能体工作室内的可视化构建工具，旨在为您提供整个智能体构建体验的完全透明度和控制权。
+
+818
+01:24:42,603 --> 01:24:47,300
+This is the behind-the-scenes look at the actual YouTube TV's agent that they put in production.
+这是 YouTube TV 实际投入生产的智能体的幕后运作情况。
+
+819
+01:24:47,300 --> 01:24:54,260
+The orchestration is managed across multiple specialized agents, which can handle even the most complex requests.
+协调工作由多个专业智能体共同管理，能够处理最复杂的请求。
+
+820
+01:24:54,260 --> 01:24:56,720
+And with our built-in test interface,
+并且通过我们内置的测试界面，
+
+821
+01:24:56,720 --> 01:25:05,260
+you can ensure that every answer is grounded, factual, and pulled directly from a knowledge base, like the Agents Price Finder tool here.
+您可以确保每个回答都有据可依、事实准确，并直接来自知识库，例如这里的智能体价格查找工具。
+
+822
+01:25:05,260 --> 01:25:06,940
+And the best part?
+最棒的是？
+
+823
+01:25:06,940 --> 01:25:13,500
+YouTube TV customer support built and deployed this entire experience in just six weeks.
+YouTube TV 客户支持团队仅用六周就完成了整个体验的构建和部署。
+
+824
+01:25:13,500 --> 01:25:16,420
+Now, let's say that the team wants to run a promotion.
+现在假设团队想要开展一项促销活动。
+
+825
+01:25:16,420 --> 01:25:19,980
+It's really simple for me to add a new subagent here.
+我在这里添加一个新子智能体非常简单。
+
+826
+01:25:19,980 --> 01:25:21,820
+Click Add a New Subagent.
+点击“添加新子智能体”。
+
+827
+01:25:21,820 --> 01:25:26,130
+And I will make this our new promotions agent.
+我将把这个设为我们的新促销智能体。
+
+828
+01:25:26,130 --> 01:25:28,490
+Say promotions.
+说“促销”。
+
+829
+01:25:28,490 --> 01:25:29,730
+I'll hit Save.
+我点击保存。
+
+830
+01:25:29,730 --> 01:25:37,930
+And then I'm going to quickly add a set of business logic via instructions in natural language to our agent.
+然后我将通过自然语言指令快速为智能体添加一组业务逻辑。
+
+831
+01:25:37,930 --> 01:25:39,850
+I'll hit Create.
+我点击创建。
+
+832
+01:25:39,850 --> 01:25:45,290
+And just like that, our multi-agent system has instantly adapted to this new specialized agent.
+就这样，我们的多智能体系统立即适应了这个新的专业智能体。
+
+833
+01:25:45,290 --> 01:25:47,730
+It's really that simple.
+真的就这么简单。
+
+834
+01:25:47,730 --> 01:25:55,450
+Finally, with conversational insights, the YouTube TV team can instantly see how these calls are performing, all within the same platform.
+最后，借助对话洞察功能，YouTube TV 团队可以立即看到这些通话的表现，所有操作都在同一平台内完成。
+
+835
+01:25:55,450 --> 01:25:58,210
+Here's one of my test calls from earlier this morning.
+这是我今早早些时候的一次测试通话。
+
+836
+01:25:58,210 --> 01:26:00,170
+Now, let's recap.
+现在，我们来总结一下。
+
+837
+01:26:00,170 --> 01:26:08,210
+We just turned a routine support call into a multilingual upgrade and a globally deployed promotion, all in under four minutes.
+我们刚刚在不到四分钟内，将一次常规支持通话升级为多语言支持和全球推广。
+
+838
+01:26:08,210 --> 01:26:12,430
+This is the power of Gemini Enterprise for Customer Experience.
+这就是 Gemini 企业版在客户体验中的强大之处。
+
+839
+01:26:12,430 --> 01:26:21,290
+It gives you enterprise-grade reasoning, deep tool integration, a powerful Visual Builder, and insights to iterate at the speed of your business.
+它为你提供企业级推理能力、深度工具集成、强大的可视化构建工具，以及推动业务快速迭代的洞察。
+
+840
+01:26:21,290 --> 01:26:25,000
+We can't wait to see what you will build next.
+我们迫不及待想看看你接下来会打造出什么。
+
+841
+01:26:25,000 --> 01:26:26,240
+Thank you.
+谢谢。
+
+842
+01:26:30,120 --> 01:26:36,320
+Please welcome VP of product, Google Workspace, Yulie Kwon Kim.
+请大家欢迎谷歌工作区产品副总裁金有丽。
+
+843
+01:26:50,480 --> 01:26:54,960
+Google Workspace is the world's most popular productivity tool.
+谷歌工作区是全球最受欢迎的生产力工具。
+
+844
+01:26:54,960 --> 01:27:01,760
+But even with the best tools at our fingertips, work can still feel incredibly fragmented.
+但即使手头拥有最优秀的工具，工作仍可能感觉极其零散。
+
+845
+01:27:01,760 --> 01:27:03,060
+We've all been there.
+我们都经历过这种情况。
+
+846
+01:27:03,060 --> 01:27:09,280
+You're trying to answer one simple question, and 10 minutes later, you have 15 tabs open.
+你只是想回答一个简单问题，10分钟后却打开了15个标签页。
+
+847
+01:27:09,280 --> 01:27:18,320
+You're jumping from a stale email to a slide deck that's being edited as you watch and digging through a spreadsheet just to find a quick answer.
+你从一封过时的邮件跳到一个正在实时编辑的幻灯片，又在电子表格里翻找，只为找到一个快速答案。
+
+848
+01:27:18,320 --> 01:27:25,480
+We all spend half our day finding information and the other half figuring out what to do with it.
+我们每天花一半时间找信息，另一半时间思考如何处理这些信息。
+
+849
+01:27:25,480 --> 01:27:29,440
+What if you could skip both?
+如果你能跳过这两步呢？
+
+850
+01:27:29,440 --> 01:27:33,840
+Today, we're introducing Workspace Intelligence.
+今天，我们推出工作区智能。
+
+851
+01:27:37,760 --> 01:27:42,520
+With the advanced reasoning capabilities of Gemini and state-of-the-art embedding models,
+借助 Gemini 的先进推理能力和顶尖的嵌入模型，
+
+852
+01:27:42,520 --> 01:27:48,000
+we're eliminating context fragmentation across the Workspace suite.
+我们正在消除工作区套件中的上下文碎片化问题。
+
+853
+01:27:48,000 --> 01:27:53,600
+Think of it as a unified intelligence layer that lives inside every Workspace app.
+可以把它看作一个统一的智能层，存在于每个 Workspace 应用中。
+
+854
+01:27:53,600 --> 01:27:57,720
+It connects the dots and lets AI do the heavy lifting.
+它能连接各个要点，让 AI 承担繁重的工作。
+
+855
+01:27:57,720 --> 01:28:00,130
+Let's see it in action.
+我们来看一下实际演示。
+
+856
+01:28:10,440 --> 01:28:14,480
+So remember that furniture rebrand you saw earlier?
+还记得之前看到的那个家具品牌重塑吗？
+
+857
+01:28:14,480 --> 01:28:19,080
+Let's say I'm the regional distributor, and here I am in Google Chat.
+假设我是区域经销商，现在我正在 Google Chat 中。
+
+858
+01:28:19,080 --> 01:28:24,110
+This is where I collaborate with my colleagues and now my agents, all in one place.
+这里我与同事以及我的智能体协同工作，所有内容都集中在一个地方。
+
+859
+01:28:24,110 --> 01:28:27,550
+I'm here in the Regional Managers chat space.
+我现在在区域经理的聊天空间里。
+
+860
+01:28:27,550 --> 01:28:28,990
+And look at this.
+看这个。
+
+861
+01:28:28,990 --> 01:28:38,470
+The Regional Operations Agent, which we built in Gemini Enterprise, just alerted the team that our new display kits are arriving early.
+我们在 Gemini 企业版中构建的区域运营智能体刚刚提醒团队，我们的新展示套装将提前到达。
+
+862
+01:28:38,470 --> 01:28:44,070
+And as you can see, I have multiple chats blowing up.
+如你所见，我有多个聊天窗口同时弹出消息。
+
+863
+01:28:44,070 --> 01:28:46,990
+What do I need to do next?
+接下来我需要做什么？
+
+864
+01:28:46,990 --> 01:28:53,030
+With Ask Gemini, Google Chat becomes my Command Center.
+有了 Ask Gemini，Google Chat 就成了我的指挥中心。
+
+865
+01:28:53,030 --> 01:28:54,310
+Look here.
+看这里。
+
+866
+01:28:54,310 --> 01:28:58,510
+Gemini tells me exactly what matters right now.
+Gemini 告诉我此刻真正重要的事情。
+
+867
+01:28:58,510 --> 01:29:02,990
+See? It surfaced an urgent task.
+看？它已经找出了一项紧急任务。
+
+868
+01:29:02,990 --> 01:29:09,630
+It linked the pitch deck that I need to localize, and it flagged my 4:00 PM deadline for the regional plan.
+它关联了我需要本地化的演示文稿，并标出了我区域计划的下午4点截止时间。
+
+869
+01:29:09,630 --> 01:29:10,850
+The gathering is done.
+收集工作已完成。
+
+870
+01:29:10,850 --> 01:29:14,310
+And I haven't opened a single extra tab.
+而我一个额外的标签页都没打开。
+
+871
+01:29:14,310 --> 01:29:23,660
+Now, to build this plan, I remember we had a great chart that showed regional sales last quarter-- somewhere.
+现在要制定这个计划，我记得我们有一张很棒的图表，展示了上个季度的区域销售情况——就在某个地方。
+
+872
+01:29:23,660 --> 01:29:26,560
+Normally, this is where the hunt begins.
+通常，这时候搜索才真正开始。
+
+873
+01:29:26,560 --> 01:29:30,620
+I jump into a folder and stare at dozens of files.
+我跳进一个文件夹，盯着几十个文件发呆。
+
+874
+01:29:30,620 --> 01:29:34,020
+Instead, I'll ask Gemini.
+而现在，我会直接问 Gemini。
+
+875
+01:29:34,020 --> 01:29:41,540
+Find the merchandising playbook from last quarter, the one with the chart showing regional sales.
+找到上个季度的营销手册，就是那张有区域销售图表的那份。
+
+876
+01:29:41,540 --> 01:29:43,620
+This isn't just keyword matching.
+这不仅仅是关键词匹配。
+
+877
+01:29:43,620 --> 01:29:50,140
+Workspace Intelligence understands the context of my meetings and the content inside my files.
+工作区智能理解我会议的上下文以及我文件中的内容。
+
+878
+01:29:50,140 --> 01:29:51,420
+Here it is.
+就在这里。
+
+879
+01:29:51,420 --> 01:30:00,340
+It pointed me directly to the dock with the exact graph I need-- a needle in a haystack, solved in seconds.
+它直接带我找到了我需要的精确图表——如同大海捞针，几秒钟就解决了。
+
+880
+01:30:00,340 --> 01:30:05,100
+Now I need to turn this scattered data into a regional plan.
+现在我需要把这些零散的数据整合成一份区域计划。
+
+881
+01:30:05,100 --> 01:30:12,500
+I have a standard format for briefing store managers, and with Ask Gemini, I basically say just do it for me.
+我有标准的店长简报格式，而使用 Ask Gemini，我基本上只需说一句“帮我搞定”。
+
+882
+01:30:12,500 --> 01:30:15,260
+Watch this.
+请看。
+
+883
+01:30:15,260 --> 01:30:25,250
+Let's see, use the regional campaign skill to-- oops,
+让我们试试，使用区域活动技能来——哎呀，
+
+884
+01:30:25,250 --> 01:30:29,770
+create a deck with a plan for organic living.
+创建一份关于有机生活的计划演示文稿。
+
+885
+01:30:29,770 --> 01:30:34,450
+By tagging that specific skill, Workspace Intelligence goes to work.
+通过标记这一特定技能，工作区智能开始工作。
+
+886
+01:30:34,450 --> 01:30:38,090
+It cross-references my emails, my chats, my other docs.
+它交叉参考我的邮件、聊天记录和其他文档。
+
+887
+01:30:38,090 --> 01:30:40,690
+It pulls live HubSpot win-loss data.
+它调取了实时的 HubSpot 赢/输数据。
+
+888
+01:30:40,690 --> 01:30:46,890
+It uses our corporate branding, all to generate a new Google slide deck.
+它运用了我们的企业品牌规范，生成了一份全新的 Google 演示文稿。
+
+889
+01:30:46,890 --> 01:30:49,190
+It's hard at work pulling that deck together.
+正在努力整理这份演示文稿。
+
+890
+01:30:49,190 --> 01:30:51,370
+And here it is.
+就在这里。
+
+891
+01:30:51,370 --> 01:31:03,250
+And in the citations up here, you can see all the sources Workspace Intelligence pulled in without me having to ask-- the emails, the chats, the other files.
+你看上面的引用，所有 Workspace Intelligence 自动收集的资料都列出来了，我根本不用提问——邮件、聊天记录、其他文件。
+
+892
+01:31:03,250 --> 01:31:06,650
+Should we take a look?
+我们看看吗？
+
+893
+01:31:06,650 --> 01:31:09,290
+Yeah, look at this.
+嗯，看看这个。
+
+894
+01:31:09,290 --> 01:31:11,170
+It's beautiful.
+太棒了。
+
+895
+01:31:11,170 --> 01:31:17,920
+It matches my brand, and it's consistent with how I've structured all of my regional plan decks in the past.
+完全符合我的品牌风格，也和我过去所有区域计划演示文稿的结构一致。
+
+896
+01:31:17,920 --> 01:31:23,520
+And it looks like it was designed by a creative pro, not a terminal.
+看起来像是专业创意人员设计的，而不是终端设备生成的。
+
+897
+01:31:23,520 --> 01:31:26,520
+I'm ready to brief my team.
+我已经准备好向团队汇报了。
+
+898
+01:31:26,520 --> 01:31:30,600
+Workspace Intelligence is the end of the context tax.
+Workspace Intelligence 终结了上下文成本。
+
+899
+01:31:30,600 --> 01:31:36,600
+It transforms how you work by turning fragmented information into a clear path forward.
+它通过将零散的信息转化为清晰的前进路径，彻底改变了你的工作方式。
+
+900
+01:31:36,600 --> 01:31:38,200
+No complicated setup.
+无需复杂设置。
+
+901
+01:31:38,200 --> 01:31:39,340
+It's secure.
+安全可靠。
+
+902
+01:31:39,340 --> 01:31:40,480
+It's integrated.
+无缝集成。
+
+903
+01:31:40,480 --> 01:31:43,240
+It just works.
+即插即用。
+
+904
+01:31:43,240 --> 01:31:53,200
+By moving from simple automation to full-scale AI orchestration, industry leaders are using Workspace to fundamentally redefine global productivity.
+通过从简单自动化转向全面的AI编排，行业领袖正利用Workspace从根本上重塑全球生产力。
+
+905
+01:31:53,200 --> 01:32:00,440
+For example, customers like Colgate-Palmolive rolled out Google Workspace to 34,000 employees.
+例如，像高露洁-棕榄这样的客户已将谷歌Workspace推广至34,000名员工。
+
+906
+01:32:00,440 --> 01:32:09,120
+AI agents built on Gemini helped their teams drive innovation, turning data into new product concepts in minutes, not months.
+基于Gemini构建的智能体帮助他们的团队推动创新，将数据转化为新产品概念的时间从数月缩短至数分钟。
+
+907
+01:32:09,120 --> 01:32:20,120
+And they drive business growth by unlocking actionable insights from decades of sales history, empowering their teams to help brighten millions of smiles every morning.
+他们通过挖掘数十年销售历史中的可操作洞察，推动业务增长，赋能团队每天为数百万张笑脸带来光明。
+
+908
+01:32:20,120 --> 01:32:28,720
+At Natura, custom agents are accelerating data-driven reporting by 10x, while at Korean Air,
+在Natura，定制智能体使数据驱动的报告速度提升了10倍，而在韩亚航空，
+
+909
+01:32:28,720 --> 01:32:36,920
+over 22,000 global employees use AI agents and tools to accelerate high-impact operational and care tasks.
+超过22,000名全球员工正使用AI智能体和工具，加速高影响力的运营与关怀任务。
+
+910
+01:32:36,920 --> 01:32:45,720
+And at Compass Real Estate, Gemini is managing tasks for employees so they can focus on valuable client relationships.
+在Compass房地产，Gemini正在管理员工的任务，使他们能够专注于有价值的客户关系。
+
+911
+01:32:45,720 --> 01:32:52,640
+We know many companies want to make the shift to Workspace but worry about the complexity of migration.
+我们知道许多公司希望转向Workspace，但担心迁移的复杂性。
+
+912
+01:32:52,640 --> 01:33:03,640
+I'm thrilled to announce that migrating your entire organization, including complex and finance teams from Microsoft 365 to Google Workspace,
+我很高兴宣布，将您整个组织，包括复杂的财务团队，从Microsoft 365迁移至谷歌Workspace，
+
+913
+01:33:03,640 --> 01:33:12,070
+is now up to five times faster, thanks to our new migration and interoperability enhancements.
+由于我们推出了新的迁移和互操作性增强功能，现在速度提升了五倍。
+
+914
+01:33:12,070 --> 01:33:19,150
+Today, you've seen what it looks like to fundamentally change how your employees operate.
+今天，你们已经看到了彻底改变员工工作方式的面貌。
+
+915
+01:33:19,150 --> 01:33:22,410
+Go ahead, close those 15 tabs.
+去吧，关闭那15个标签页。
+
+916
+01:33:22,410 --> 01:33:27,710
+Workspace Intelligence is now ready to do the heavy lifting for you.
+Workspace Intelligence 现在已准备好为你们承担繁重的工作。
+
+917
+01:33:27,710 --> 01:33:29,550
+Thomas, over to you.
+托马斯，交给你了。
+
+918
+01:33:43,910 --> 01:33:45,590
+Wasn't that amazing?
+难道不令人惊叹吗？
+
+919
+01:33:50,550 --> 01:33:52,270
+Thank you, Yulie.
+谢谢，玉丽。
+
+920
+01:33:52,270 --> 01:33:57,630
+Before we close, let's take a look at one of the most respected brands in the world.
+在结束之前，让我们来看看世界上最具声望的品牌之一。
+
+921
+01:33:57,630 --> 01:34:01,470
+Serving 3.7 billion people around the world,
+为全球37亿人提供服务，
+
+922
+01:34:01,470 --> 01:34:06,630
+Unilever chose Google Cloud to build and deploy agents at scale.
+联合利华选择谷歌云来大规模构建和部署智能体。
+
+923
+01:34:06,630 --> 01:34:10,380
+Let's hear their story.
+让我们听听他们的故事。
+
+924
+01:34:10,380 --> 01:34:15,620
+At Unilever, we serve 3.7 billion people every day with our products.
+在联合利华，我们每天用产品服务全球37亿人。
+
+925
+01:34:15,620 --> 01:34:23,660
+We need to understand these individuals at a unique level, and that's what the partnership with Google Cloud allows us to do.
+我们需要以一种独特的方式理解这些个体，而这正是与谷歌云合作所赋予我们的能力。
+
+926
+01:34:23,660 --> 01:34:29,720
+It's about personalization at scale, desire at scale, and that's very unique.
+这是规模化个性化的体现，也是规模化欲望的体现，非常独特。
+
+927
+01:34:29,720 --> 01:34:33,300
+And it's at the core of our strategy.
+它是我们战略的核心。
+
+928
+01:34:33,300 --> 01:34:38,980
+We are connecting our business end-to-end for faster AI deployment across the enterprise.
+我们正在实现业务端到端连接，以加快企业内部的AI部署速度。
+
+929
+01:34:38,980 --> 01:34:45,360
+This means using AI to supercharge demand generation, get early access to advanced AI and large language models,
+这意味着利用人工智能来大幅提升需求生成效率，提前获取先进的人工智能和大型语言模型。
+
+930
+01:34:45,360 --> 01:34:50,840
+and build even stronger partnerships with retailers, connecting data in smarter ways so we can grow together.
+并与零售商建立更紧密的合作关系，以更智能的方式连接数据，实现共同成长。
+
+931
+01:34:50,840 --> 01:34:57,580
+Underpinning all of this is a strong digital backbone powered by Google Cloud.
+这一切的背后，是一个由谷歌云提供支持的强大数字基础架构。
+
+932
+01:34:57,580 --> 01:35:08,010
+So my role is to operationalize this really exciting vision, co-creating that with Google to deliver our agentic foundations so that our agents can be architected for performance,
+因此我的职责是将这一令人振奋的愿景落地，与谷歌共同打造我们的代理式基础架构，确保我们的智能体能够以性能为导向进行设计。
+
+933
+01:35:08,010 --> 01:35:12,650
+scale, security, and observability right from the outset.
+从一开始就实现规模化、安全性和可观测性。
+
+934
+01:35:12,650 --> 01:35:16,950
+The competitive buying multiagentic solution, co-created with our Horizon3 Labs,
+由我们与Horizon3实验室共同开发的、具有竞争力的多智能体采购解决方案
+
+935
+01:35:16,950 --> 01:35:25,090
+is leveraging core Google Cloud technologies such as Gemini Enterprise and ADK, your Agent Development Kit, and the underlying Gemini models.
+正在利用谷歌云的核心技术，例如 Gemini 企业版和您的智能体开发工具包（ADK），以及底层的 Gemini 模型。
+
+936
+01:35:25,090 --> 01:35:30,970
+So this solution orchestrates a multitude of agents together through one single user interface.
+因此，该解决方案通过单一用户界面协同管理众多智能体。
+
+937
+01:35:30,970 --> 01:35:36,410
+This helps my procurement colleagues make analysis and decisions in minutes instead of days.
+这让我负责采购的同事能在几分钟内完成分析和决策，而不是几天。
+
+938
+01:35:36,410 --> 01:35:40,190
+This solution has enabled us to make smarter sourcing decisions.
+这个解决方案使我们能够做出更明智的采购决策。
+
+939
+01:35:40,190 --> 01:35:44,070
+With Google Cloud, we are turning intelligence into a growth engine.
+借助谷歌云，我们将智能转化为增长引擎。
+
+940
+01:35:53,218 --> 01:35:56,770
+There's one final difference in how we work with you.
+我们与您合作的方式还有一个最终区别。
+
+941
+01:35:56,770 --> 01:36:00,290
+We believe the future of AI must be open.
+我们相信人工智能的未来必须是开放的。
+
+942
+01:36:00,290 --> 01:36:06,400
+While others want to lock you into a wall garden that owns your models, your data, and your agents,
+当其他公司试图将您锁定在一个封闭的生态中，掌控您的模型、数据和智能体时，
+
+943
+01:36:06,400 --> 01:36:13,680
+we offer you an integrated stack, but the freedom to choose the world's best chips and models,
+我们为您提供一个集成的系统，同时赋予您选择全球最佳芯片和模型的自由，
+
+944
+01:36:13,680 --> 01:36:21,920
+the freedom to run AI wherever your data may live, the freedom to control your own destiny with deep governance features.
+赋予您在数据所在任何地方运行人工智能的自由，赋予您通过深度治理功能掌控自身命运的自由。
+
+945
+01:36:21,920 --> 01:36:25,440
+We scale this mission through our partners,
+我们通过合作伙伴来推进这一使命，
+
+946
+01:36:25,440 --> 01:36:33,180
+with whom we're building a broad and deep network of forward-deployed engineers, including Accenture, BCG,
+与包括埃森哲、波士顿咨询、德勤和麦肯锡在内的合作伙伴共同构建了一个广泛而深入的前线工程师网络，他们已宣布大幅扩展其谷歌 Gemini AI 业务。
+
+947
+01:36:33,180 --> 01:36:40,880
+Deloitte, and McKinsey, who've announced major expansion of their Google Gemini AI practices.
+与 Quantium、Distil 和 Tribe.AI 等以人工智能驱动的服务合作伙伴携手，我们正在帮助独立软件供应商
+
+948
+01:36:40,880 --> 01:36:49,560
+Along with AI-led service partners like Quantium, Distil and Tribe.AI, we're helping independent software vendors
+实现业务增长
+
+949
+01:36:49,560 --> 01:36:55,880
+and SaaS companies transform their solutions with Gemini Enterprise Agent Platform.
+SaaS 公司正借助 Gemini 企业智能体平台重塑其解决方案。
+
+950
+01:36:55,880 --> 01:37:04,360
+And we're bringing AI to small to medium-sized businesses by helping them adopt Gemini Enterprise and our AI
+我们将通过帮助中小企业采用 Gemini 企业版和我们的 AI，将 AI 带入中小型企业
+
+951
+01:37:04,360 --> 01:37:09,120
+advances in Workspace that work so seamlessly together now.
+Workspaces 的各项进展如今已实现无缝协作。
+
+952
+01:37:09,120 --> 01:37:11,520
+We've covered a lot of ground today.
+今天我们谈了很多内容。
+
+953
+01:37:11,520 --> 01:37:18,040
+We've introduced our agentic blueprint as a foundation for agents to transform your companies--
+我们已推出代理式蓝图，作为智能体变革您企业的基础——
+
+954
+01:37:18,040 --> 01:37:26,220
+first, the AI Hypercomputer, the purpose-built foundation optimized for the physics of the agentic era; second,
+首先，是专为代理式时代物理特性优化的AI超算，其次
+
+955
+01:37:26,220 --> 01:37:34,720
+the Agentic Data Cloud, the engine that provides agents with trusted business context; Agentic Defense,
+代理式数据云，为智能体提供可信业务背景的引擎；代理式防御；
+
+956
+01:37:34,720 --> 01:37:43,600
+the autonomous protection that secures your entire AI lifecycle; fourth, the Gemini Enterprise Agent Platform,
+自动防护，保护您整个AI生命周期；第四，Gemini企业智能体平台；
+
+957
+01:37:43,600 --> 01:37:50,300
+a new agentic platform with state-of-the-art models to build, deploy, and manage agents; and finally,
+一个全新的代理式平台，配备最先进模型，用于构建、部署和管理智能体；最后，
+
+958
+01:37:50,300 --> 01:38:05,390
+the Agentic Task Force, the specialized agents that are already transforming customer experience and employee productivity and transforming workflows all served up to users to the Gemini Enterprise Application.
+代理式任务小组，这些专业智能体正正在重塑客户体验和员工生产力，并优化工作流程，全部通过 Gemini 企业应用呈现在用户面前。
+
+959
+01:38:05,390 --> 01:38:14,390
+To each of our customers and partners, thank you, each of you, for being on this amazing journey with us.
+感谢每一位客户和合作伙伴，感谢你们与我们共同踏上这段非凡的旅程。
+
+960
+01:38:14,390 --> 01:38:24,950
+Our teams have worked so hard this last year to prepare this amazing technology for you, and we're all so proud of the work they've done.
+我们的团队在过去一年里为准备这项令人惊叹的技术付出了巨大努力，我们所有人都为他们所取得的成果感到自豪。
+
+961
+01:38:24,950 --> 01:38:27,390
+This platform is ready.
+该平台已准备就绪。
+
+962
+01:38:27,390 --> 01:38:30,390
+So what will each of you build?
+那么你们每个人将构建什么？
+
+963
+01:38:30,390 --> 01:38:38,670
+We have three fantastic days planned for you, and a great set of sessions and spotlights still to come.
+我们为你们安排了三天精彩的活动，还有众多精彩环节和亮点内容即将揭晓。
+
+964
+01:38:38,670 --> 01:38:42,170
+Thank you and have an amazing Cloud Next.
+谢谢大家，祝大家在本次 Cloud Next 会议中收获非凡。

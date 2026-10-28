@@ -1,0 +1,807 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:01.35,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:00:01.40,0:00:03.11,Sub,,0,0,0,,Welcome to the Bipartisan Policy Center.
+Dialogue: 0,0:00:03.16,0:00:09.38,Sub,,0,0,0,,I'm Leslie John Taras Semay and together with my colleague Anne Fishman, we lead the energy program here at BPC.
+Dialogue: 0,0:00:09.43,0:00:13.15,Sub,,0,0,0,,And we're so glad that you're here to cap off a really big week this week.
+Dialogue: 0,0:00:13.20,0:00:15.74,Sub,,0,0,0,,It was national clean it energy week.
+Dialogue: 0,0:00:15.79,0:00:22.49,Sub,,0,0,0,,It was New York climate week and really the future of energy in America has never been so much in the spotlight.
+Dialogue: 0,0:00:22.54,0:00:26.79,Sub,,0,0,0,,We're really excited to continue that conversation here today with all of you.
+Dialogue: 0,0:00:26.84,0:00:30.93,Sub,,0,0,0,,The BPC energy program has been a driving force in federal policy for over 16 years and
+Dialogue: 0,0:00:30.98,0:00:37.57,Sub,,0,0,0,,we're really leading the way on building a strong bipartisan foundation of support for technology and innovation,
+Dialogue: 0,0:00:37.62,0:00:43.19,Sub,,0,0,0,,for decarbonization, permitting reform, critical minerals, carbon management, so much more.
+Dialogue: 0,0:00:43.24,0:00:49.63,Sub,,0,0,0,,And these are just pieces of a larger puzzle of how to ensure that all Americans have access to energy that is secure,
+Dialogue: 0,0:00:49.68,0:00:52.27,Sub,,0,0,0,,reliable, affordable, and clean.
+Dialogue: 0,0:00:52.32,0:01:00.48,Sub,,0,0,0,,And so we're here today that because the growth of AI is a new puzzle piece that we didn't even know that we needed to account for until recently.
+Dialogue: 0,0:01:00.53,0:01:01.98,Sub,,0,0,0,,So, you know, where where do we put it?
+Dialogue: 0,0:01:02.03,0:01:03.82,Sub,,0,0,0,,Where does AI go in all of this?
+Dialogue: 0,0:01:03.87,0:01:09.94,Sub,,0,0,0,,And so we're going to dig into these questions and more as part of a new BPC project that we're launching today on
+Dialogue: 0,0:01:09.99,0:01:21.44,Sub,,0,0,0,,AI and energy and I'm so excited to invite my colleague Tanya Das to the stage here to tell you more about it.
+Dialogue: 0,0:01:21.49,0:01:24.67,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:01:24.72,0:01:25.85,Sub,,0,0,0,,Hello everyone.
+Dialogue: 0,0:01:25.90,0:01:26.52,Sub,,0,0,0,,Welcome.
+Dialogue: 0,0:01:26.57,0:01:35.39,Sub,,0,0,0,,I'm Tanya Das, a director with the energy program at BPC and we are thrilled today to launch a new project on AI and energy.
+Dialogue: 0,0:01:35.44,0:01:39.39,Sub,,0,0,0,,But I want to take a step back to reflect on how we got here.
+Dialogue: 0,0:01:39.44,0:01:47.43,Sub,,0,0,0,,Back in 2019, I was working with colleagues in Congress to develop a bill called the National AI Initiative Act.
+Dialogue: 0,0:01:47.48,0:01:54.71,Sub,,0,0,0,,This was the first bill signed into law that set forth a national AI strategy across our scientific enterprise.
+Dialogue: 0,0:01:54.76,0:02:01.27,Sub,,0,0,0,,The bill contained foundational but modest investments across the federal government on AI R&D.
+Dialogue: 0,0:02:01.32,0:02:07.03,Sub,,0,0,0,,At the time, we didn't have tools like chat GPT, Dolly, or Google AI overviews.
+Dialogue: 0,0:02:07.08,0:02:11.95,Sub,,0,0,0,,AI was very much in our lives already but in more of a quiet way.
+Dialogue: 0,0:02:12.00,0:02:16.35,Sub,,0,0,0,,I had no idea how important of a topic AI would become just 5 years later.
+Dialogue: 0,0:02:16.40,0:02:24.11,Sub,,0,0,0,,Today, we have several billion-dollar bipartisan AI proposals being considered in the House and the Senate.
+Dialogue: 0,0:02:24.16,0:02:31.78,Sub,,0,0,0,,Members of both sides of the aisle want to double down on using AI to advance science, security, and technology.
+Dialogue: 0,0:02:31.83,0:02:40.95,Sub,,0,0,0,,And the supercomputers at the Department of Energy are oversubscribed with users eager to try their AI algorithms to accelerate innovation.
+Dialogue: 0,0:02:41.00,0:02:47.31,Sub,,0,0,0,,And at the center of it all is our energy system that's powering AI and our growing economy.
+Dialogue: 0,0:02:47.36,0:02:51.47,Sub,,0,0,0,,We are seeing electricity load growth for the first time in a decade and
+Dialogue: 0,0:02:51.52,0:02:56.79,Sub,,0,0,0,,that's occurring at the same time that we're taking serious steps to decarbonize our economy.
+Dialogue: 0,0:02:56.84,0:03:05.75,Sub,,0,0,0,,And we know AI can be a critical tool to modernize our electric grid, develop new energy technologies, and improve climate resilience.
+Dialogue: 0,0:03:05.80,0:03:10.95,Sub,,0,0,0,,And this is why we're launching a new project on the intersection of AI and energy.
+Dialogue: 0,0:03:11.00,0:03:15.71,Sub,,0,0,0,,We are going to help policy makers identify how to leverage AI to improve our
+Dialogue: 0,0:03:15.76,0:03:22.15,Sub,,0,0,0,,energy system while meeting the growing power needs for data centers and other emerging electricity loads.
+Dialogue: 0,0:03:22.20,0:03:23.06,Sub,,0,0,0,,As a first step,
+Dialogue: 0,0:03:23.11,0:03:27.96,Sub,,0,0,0,,today we're releasing a report on the pivotal role that the Department of Energy played in
+Dialogue: 0,0:03:28.01,0:03:33.91,Sub,,0,0,0,,securing US leadership on AI and ideas for how the agency can lead in the future.
+Dialogue: 0,0:03:33.96,0:03:40.12,Sub,,0,0,0,,This is a critical moment for both our AI and energy systems and we need to make sure that we get this right.
+Dialogue: 0,0:03:40.17,0:03:45.39,Sub,,0,0,0,,And I can't think of two better people to tell us how to do that than our featured speakers today.
+Dialogue: 0,0:03:45.44,0:03:51.33,Sub,,0,0,0,,Please join me in welcoming to the stage my fabulous boss, president and CEO of the Bipartisan Policy Center,
+Dialogue: 0,0:03:51.38,0:03:53.65,Sub,,0,0,0,,Margaret Spellings and the co-founder,
+Dialogue: 0,0:03:53.70,0:04:01.69,Sub,,0,0,0,,president and CEO of Nvidia,
+Dialogue: 0,0:04:01.74,0:04:07.15,Sub,,0,0,0,,Jensen Huang.
+Dialogue: 0,0:04:07.20,0:04:12.49,Sub,,0,0,0,,All right, thank you to my fabulous colleague Tanya for that warm welcome and introduction.
+Dialogue: 0,0:04:12.54,0:04:14.01,Sub,,0,0,0,,Wow, what a great crowd.
+Dialogue: 0,0:04:14.06,0:04:18.87,Sub,,0,0,0,,Thank you all for being here this morning and what a treat it is, Jensen, to be with you.
+Dialogue: 0,0:04:18.92,0:04:20.99,Sub,,0,0,0,,I'm delighted to be I mean, we're thrilled that you're here.
+Dialogue: 0,0:04:21.04,0:04:22.27,Sub,,0,0,0,,I was teasing with Jensen, you know,
+Dialogue: 0,0:04:22.32,0:04:30.23,Sub,,0,0,0,,who's known for his famous black leather jacket outfit and I wanted to be in solidarity with him today and he shows up in a suit.
+Dialogue: 0,0:04:30.28,0:04:36.43,Sub,,0,0,0,,The only one he has, by the way, but anyway, um It's the truth.
+Dialogue: 0,0:04:36.48,0:04:38.67,Sub,,0,0,0,,I'm not ashamed of it.
+Dialogue: 0,0:04:38.72,0:04:40.18,Sub,,0,0,0,,It's a good look.
+Dialogue: 0,0:04:40.23,0:04:41.88,Sub,,0,0,0,,So, as you know,
+Dialogue: 0,0:04:41.93,0:04:45.94,Sub,,0,0,0,,we at BPC are proud of the role that we play as a place to bring people
+Dialogue: 0,0:04:45.99,0:04:52.33,Sub,,0,0,0,,together to find common ground and to drive towards solutions and there's no thing that needs more thinking,
+Dialogue: 0,0:04:52.38,0:04:57.63,Sub,,0,0,0,,good thinking around that than AI and energy and so we're thrilled to welcome you here today.
+Dialogue: 0,0:04:57.68,0:04:59.04,Sub,,0,0,0,,Thank you, Margaret.
+Dialogue: 0,0:04:59.09,0:05:03.81,Sub,,0,0,0,,And so, as everybody in the room already knows, but maybe out in TV land they don't,
+Dialogue: 0,0:05:03.86,0:05:11.03,Sub,,0,0,0,,Jensen is the founder and of Nvidia, a $30 company with about 30,000 employees.
+Dialogue: 0,0:05:11.08,0:05:12.41,Sub,,0,0,0,,Not quite 30 yet.
+Dialogue: 0,0:05:12.46,0:05:13.49,Sub,,0,0,0,,Not quite 30?
+Dialogue: 0,0:05:13.54,0:05:15.87,Sub,,0,0,0,,That's what I'm I'm sorry, three.
+Dialogue: 0,0:05:15.92,0:05:17.16,Sub,,0,0,0,,You know, what's a zero?
+Dialogue: 0,0:05:17.21,0:05:21.63,Sub,,0,0,0,,Well, a zero is a lot in computers but anyway, we'll get into that.
+Dialogue: 0,0:05:21.68,0:05:25.31,Sub,,0,0,0,,Anyway, Jensen We're we're working on Yeah, welcome, welcome.
+Dialogue: 0,0:05:25.36,0:05:28.47,Sub,,0,0,0,,Sorry, I just I'm so impressed with you.
+Dialogue: 0,0:05:28.52,0:05:31.07,Sub,,0,0,0,,Anyway, why don't you tell us about how you got started?
+Dialogue: 0,0:05:31.12,0:05:38.27,Sub,,0,0,0,,Give us your kind of so-called origin story and how it is that you came to be sitting with me here today.
+Dialogue: 0,0:05:38.32,0:05:40.75,Sub,,0,0,0,,My gosh.
+Dialogue: 0,0:05:40.80,0:05:42.67,Sub,,0,0,0,,From where from zero?
+Dialogue: 0,0:05:42.72,0:05:48.07,Sub,,0,0,0,,No, from you know, what the tell us the story of Nvidia, Nvidia and you and Uh we were in Silicon Valley,
+Dialogue: 0,0:05:48.12,0:05:54.47,Sub,,0,0,0,,engineers in Silicon Valley designing computers and we observed that there was a better way of designing computers.
+Dialogue: 0,0:05:54.52,0:06:00.91,Sub,,0,0,0,,Uh if you if you um the current computer that we use, it's called general purpose computers.
+Dialogue: 0,0:06:00.96,0:06:06.18,Sub,,0,0,0,,It was invented the year after my birth, 1964 by IBM.
+Dialogue: 0,0:06:06.23,0:06:08.23,Sub,,0,0,0,,It's called the IBM System 360.
+Dialogue: 0,0:06:08.28,0:06:08.70,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:06:08.75,0:06:14.47,Sub,,0,0,0,,And it described a central processing unit, CPU, uh multitasking,
+Dialogue: 0,0:06:14.52,0:06:23.35,Sub,,0,0,0,,separation of operating system separation of hardware and software by this layer called operating system, IO subsystems, things like that.
+Dialogue: 0,0:06:23.40,0:06:27.16,Sub,,0,0,0,,And those basic technologies are used today.
+Dialogue: 0,0:06:27.21,0:06:31.27,Sub,,0,0,0,,It's a lot better, a lot faster, but the basic architecture of it is the same.
+Dialogue: 0,0:06:31.32,0:06:33.90,Sub,,0,0,0,,It's a general purpose computer that can do anything.
+Dialogue: 0,0:06:33.95,0:06:36.65,Sub,,0,0,0,,Now, we observed 30 years ago, that was 1993,
+Dialogue: 0,0:06:36.70,0:06:44.83,Sub,,0,0,0,,we observed that that there are problems that are quite specialized where a general purpose approach is not necessarily the best.
+Dialogue: 0,0:06:44.88,0:06:49.95,Sub,,0,0,0,,You know, and and it's no different than if you have generalists do something.
+Dialogue: 0,0:06:50.00,0:06:54.69,Sub,,0,0,0,,And it turns out that software is kind of the same way and there's
+Dialogue: 0,0:06:54.74,0:07:00.95,Sub,,0,0,0,,a field of software called simulations and physics simulations and data processing and computer graphics.
+Dialogue: 0,0:07:01.00,0:07:10.71,Sub,,0,0,0,,These problems, image processing, these problems have algorithms inside that are very computationally intensive.
+Dialogue: 0,0:07:10.76,0:07:17.63,Sub,,0,0,0,,And if we could take that and run it on a specialized processor, on a specialized computer,
+Dialogue: 0,0:07:17.68,0:07:25.64,Sub,,0,0,0,,we could add a chip to the computer that makes it go 100 times faster.
+Dialogue: 0,0:07:25.69,0:07:30.67,Sub,,0,0,0,,How is it possible to add one chip to another chip and all of a sudden it's 100 times faster?
+Dialogue: 0,0:07:30.72,0:07:37.79,Sub,,0,0,0,,Well, the reason for that is of course each chip can focus each computer can focus on what it does best.
+Dialogue: 0,0:07:37.84,0:07:42.47,Sub,,0,0,0,,And we offload and accelerate this thing and we call it accelerated computing.
+Dialogue: 0,0:07:42.52,0:07:51.39,Sub,,0,0,0,,Now, uh the amazing part of it of course is that the domains that we've been able to use it for has been expanding over time.
+Dialogue: 0,0:07:51.44,0:07:58.41,Sub,,0,0,0,,And uh it's not it's very routine that we'll accelerate an application 10, 20, 50 times.
+Dialogue: 0,0:07:58.46,0:08:05.56,Sub,,0,0,0,,Um and when you do that, even though you accelerate it by 50 times, since you only added one more chip,
+Dialogue: 0,0:08:05.61,0:08:14.32,Sub,,0,0,0,,you reduce the amount of power by 25 25 times, the amount of energy by 25 times, the amount by 25 times.
+Dialogue: 0,0:08:14.37,0:08:20.92,Sub,,0,0,0,,And so so that this this approach has led to um solving all kinds of interesting problems.
+Dialogue: 0,0:08:20.97,0:08:27.94,Sub,,0,0,0,,The first application we used it for in scientific in in in commercial use was for video games.
+Dialogue: 0,0:08:27.99,0:08:28.59,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:08:28.64,0:08:32.71,Sub,,0,0,0,,You know, for a lot of people, Nvidia is still the video game company.
+Dialogue: 0,0:08:32.76,0:08:36.42,Sub,,0,0,0,,We build we build more computers for video games than than any company in the world.
+Dialogue: 0,0:08:36.47,0:08:40.55,Sub,,0,0,0,,When you have when you play PC games, it's probably Nvidia inside.
+Dialogue: 0,0:08:40.60,0:08:42.75,Sub,,0,0,0,,When you play the Nintendo, it's Nvidia inside.
+Dialogue: 0,0:08:42.80,0:08:45.10,Sub,,0,0,0,,And so so we're well known for that.
+Dialogue: 0,0:08:45.15,0:08:52.67,Sub,,0,0,0,,Um but some of our industrial applications, the first one was molecular dynamic simulation for virtual screening, Mhm.
+Dialogue: 0,0:08:52.72,0:08:56.20,Sub,,0,0,0,,uh seismic processing for energy discovery.
+Dialogue: 0,0:08:56.25,0:09:06.17,Sub,,0,0,0,,And then, you know, fluid dynamics, weather simulation, and then one day artificial intelligence found us and and so um accelerated computing,
+Dialogue: 0,0:09:06.22,0:09:10.52,Sub,,0,0,0,,that was was an observation about the future computing and it turned out to be right.
+Dialogue: 0,0:09:10.57,0:09:18.19,Sub,,0,0,0,,And so when you extend that into what you call sustainable computing, this is where you get into this savings of energy and being more efficient.
+Dialogue: 0,0:09:18.24,0:09:25.97,Sub,,0,0,0,,that we made is is that a general purpose approach to solving every problem is energy inefficient.
+Dialogue: 0,0:09:26.02,0:09:26.47,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:09:26.52,0:09:28.23,Sub,,0,0,0,,You're inefficiently doing something.
+Dialogue: 0,0:09:28.28,0:09:29.80,Sub,,0,0,0,,It's a little bit like this.
+Dialogue: 0,0:09:29.85,0:09:34.95,Sub,,0,0,0,,Suppose suppose you made a factory for building a car.
+Dialogue: 0,0:09:35.00,0:09:41.63,Sub,,0,0,0,,And the assumption that you make is that every single car that you make will be different.
+Dialogue: 0,0:09:41.68,0:09:46.58,Sub,,0,0,0,,And so you have a generalist team of people that, okay, build me a van.
+Dialogue: 0,0:09:46.63,0:09:48.50,Sub,,0,0,0,,Okay, now build me a sports car.
+Dialogue: 0,0:09:48.55,0:09:50.43,Sub,,0,0,0,,Okay, now build me a truck.
+Dialogue: 0,0:09:50.48,0:09:56.15,Sub,,0,0,0,,And and so because every single one is intended to be different and you want to be generalists,
+Dialogue: 0,0:09:56.20,0:10:01.56,Sub,,0,0,0,,you would have a different type of setup than if you all of a sudden
+Dialogue: 0,0:10:01.61,0:10:07.91,Sub,,0,0,0,,said to yourself for the next 1 million cars they're going to be exactly the same.
+Dialogue: 0,0:10:07.96,0:10:11.88,Sub,,0,0,0,,The efficiency by which you could build that 1 million cars compared to
+Dialogue: 0,0:10:11.93,0:10:18.35,Sub,,0,0,0,,a generalist that would build it one at it's like manufacturing versus crafting.
+Dialogue: 0,0:10:18.40,0:10:22.03,Sub,,0,0,0,,The amount of energy you use is going to be substantially lower and so we've
+Dialogue: 0,0:10:22.08,0:10:26.51,Sub,,0,0,0,,come to the conclusion we came to the conclusion some 32 years ago that there
+Dialogue: 0,0:10:26.56,0:10:34.83,Sub,,0,0,0,,are some parts of the job that needs generalist and you need to do it sequentially to step by step by step you have to reason about it step by step.
+Dialogue: 0,0:10:34.88,0:10:42.35,Sub,,0,0,0,,However, there are some parts of the job where you're maybe calculating physics and you're just trying to figure out how molecules move around.
+Dialogue: 0,0:10:42.40,0:10:49.19,Sub,,0,0,0,,You know, you're trying to figure out how artificial intelligent neural network is predicting the next token the next word.
+Dialogue: 0,0:10:49.24,0:10:58.43,Sub,,0,0,0,,In those type of applications you could have just a mound of processing done at the same time and so this doesn't make sense to you but I'm
+Dialogue: 0,0:10:58.48,0:11:07.31,Sub,,0,0,0,,just going to I'm going to say it anyways that the execution of programs called a thread a thread of execution and just follow the follow that thread.
+Dialogue: 0,0:11:07.36,0:11:12.39,Sub,,0,0,0,,A CPU can compute one or two threads at one time.
+Dialogue: 0,0:11:12.44,0:11:19.09,Sub,,0,0,0,,We can compute tens of thousands of threads at the same time and so for for work that you can
+Dialogue: 0,0:11:19.14,0:11:24.70,Sub,,0,0,0,,break up into a whole bunch of little threads we could get it done a lot faster and you know,
+Dialogue: 0,0:11:24.75,0:11:26.70,Sub,,0,0,0,,as a result much more energy efficient.
+Dialogue: 0,0:11:26.75,0:11:29.68,Sub,,0,0,0,,So so let's talk more about AI and energy.
+Dialogue: 0,0:11:29.73,0:11:34.04,Sub,,0,0,0,,I mean there's a lot of kind of hysteria going on right now about oh my God this
+Dialogue: 0,0:11:34.09,0:11:40.00,Sub,,0,0,0,,this industry this innovation is going to swamp our demand and we're going to have blackouts and you know,
+Dialogue: 0,0:11:40.05,0:11:41.75,Sub,,0,0,0,,this those sorts of things.
+Dialogue: 0,0:11:41.80,0:11:43.95,Sub,,0,0,0,,Obviously energy abundance is a you know,
+Dialogue: 0,0:11:44.00,0:11:49.43,Sub,,0,0,0,,a key issue for all of us here in the United States especially I'm from Texas so we talk about that a lot
+Dialogue: 0,0:11:49.48,0:11:58.13,Sub,,0,0,0,,but give us your thinking on AI and and energy at an Nvidia and more and more broadly how you think about that.
+Dialogue: 0,0:11:58.18,0:11:59.58,Sub,,0,0,0,,Well, AI does take energy.
+Dialogue: 0,0:11:59.63,0:11:59.95,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:11:59.98,0:12:05.99,Sub,,0,0,0,,And so the first thing to realize that before you can use AI you have to teach an AI.
+Dialogue: 0,0:12:06.04,0:12:14.76,Sub,,0,0,0,,This is no different than a when you before you can use an actual intelligence you have to teach the actual intelligence.
+Dialogue: 0,0:12:14.81,0:12:20.50,Sub,,0,0,0,,And so the teaching process consumes a lot of energy and and the reason why it consumes a lot
+Dialogue: 0,0:12:20.55,0:12:28.07,Sub,,0,0,0,,of energy is that the artificial intelligence network through trial and error is trying to figure out how to
+Dialogue: 0,0:12:28.12,0:12:36.14,Sub,,0,0,0,,predict something and it's recognizing patterns and relationship among tons and tons of information and from all of that
+Dialogue: 0,0:12:36.19,0:12:43.61,Sub,,0,0,0,,data it finds out what's the relationship and the pattern such that it can learn a knowledge out of it.
+Dialogue: 0,0:12:43.66,0:12:45.71,Sub,,0,0,0,,We call it representations.
+Dialogue: 0,0:12:45.76,0:12:50.14,Sub,,0,0,0,,And so you're trying to discover knowledge out of data and just
+Dialogue: 0,0:12:50.19,0:12:56.23,Sub,,0,0,0,,you're just swimming in it processing it repeatedly looking for that pattern relationships.
+Dialogue: 0,0:12:56.28,0:13:03.85,Sub,,0,0,0,,Eventually you can you can you've learned you learned the knowledge that's embedded inside you've learned all these different
+Dialogue: 0,0:13:03.90,0:13:11.65,Sub,,0,0,0,,relationships that when you are presented with some future patterns you could understand it you could even predict it.
+Dialogue: 0,0:13:11.70,0:13:14.13,Sub,,0,0,0,,And so so that that's the goal.
+Dialogue: 0,0:13:14.18,0:13:19.75,Sub,,0,0,0,,These data centers could consume today maybe 100 megawatts.
+Dialogue: 0,0:13:19.80,0:13:26.47,Sub,,0,0,0,,And in the future it'll probably be several you know, 10 times 20 times more than that.
+Dialogue: 0,0:13:26.52,0:13:30.26,Sub,,0,0,0,,It doesn't have to necessarily be be built in one place but the amount of data
+Dialogue: 0,0:13:30.31,0:13:35.14,Sub,,0,0,0,,that we're going to train it with and these AI models are going to use synthetic data
+Dialogue: 0,0:13:35.19,0:13:38.74,Sub,,0,0,0,,for example two AI models are going to be talking to each other just like the
+Dialogue: 0,0:13:38.79,0:13:44.07,Sub,,0,0,0,,two of us are and just through conversation through Q&A we're going to make each other smarter.
+Dialogue: 0,0:13:44.12,0:13:50.31,Sub,,0,0,0,,And so future future AI models are going to rely on other AI models to learn and
+Dialogue: 0,0:13:50.36,0:13:56.52,Sub,,0,0,0,,you could you could use AI models to curate the data so that future AI use AI
+Dialogue: 0,0:13:56.57,0:14:00.82,Sub,,0,0,0,,to teach another AI and so there's a lot of a lot of different ways that that
+Dialogue: 0,0:14:00.87,0:14:05.67,Sub,,0,0,0,,AI will will will learn in the future but nonetheless it's going to take energy to do so.
+Dialogue: 0,0:14:05.72,0:14:12.69,Sub,,0,0,0,,The important thing to realize about AI is that it doesn't it doesn't necessarily care where it learns.
+Dialogue: 0,0:14:12.74,0:14:15.23,Sub,,0,0,0,,It doesn't care where it goes to school.
+Dialogue: 0,0:14:15.28,0:14:19.27,Sub,,0,0,0,,And so there are places in the world where we have excess energy.
+Dialogue: 0,0:14:19.32,0:14:27.20,Sub,,0,0,0,,It's not necessarily connected to the grid it's hard to transport that energy to population but we can transport the data center too.
+Dialogue: 0,0:14:27.25,0:14:32.23,Sub,,0,0,0,,We can build a data center near where there's excess energy and use the energy there.
+Dialogue: 0,0:14:32.28,0:14:40.95,Sub,,0,0,0,,The other the other the big idea about about AI however is the goal of AI is to do things more productively.
+Dialogue: 0,0:14:41.00,0:14:45.83,Sub,,0,0,0,,With a lot less energy and there are a whole bunch of examples of this where
+Dialogue: 0,0:14:45.88,0:14:51.15,Sub,,0,0,0,,we're using AI one of one of my favorite examples is is using AI to predict weather.
+Dialogue: 0,0:14:51.20,0:14:57.35,Sub,,0,0,0,,By training an AI model the physics of weather prediction.
+Dialogue: 0,0:14:57.40,0:15:01.23,Sub,,0,0,0,,In the case of weather prediction is mostly atmospheric physics and long
+Dialogue: 0,0:15:01.28,0:15:07.43,Sub,,0,0,0,,range weather prediction requires you to understand ocean physics land physics cloud
+Dialogue: 0,0:15:07.48,0:15:15.95,Sub,,0,0,0,,physics radiation reflection absorption conduction convection right thermodynamics right fluid dynamics all
+Dialogue: 0,0:15:16.00,0:15:22.00,Sub,,0,0,0,,of those forms of physics comes together to to affect the future climate.
+Dialogue: 0,0:15:22.05,0:15:29.55,Sub,,0,0,0,,Well, we can teach an AI how to do that through previous observed data and we're starting to make great progress there.
+Dialogue: 0,0:15:29.60,0:15:41.19,Sub,,0,0,0,,That AI model can predict weather and predict climate thousands of times tens of thousands of times more energy efficiently.
+Dialogue: 0,0:15:41.24,0:15:51.47,Sub,,0,0,0,,And so the the thing to remember you teach the AI model a few times but you use it continuously everywhere around the world.
+Dialogue: 0,0:15:51.52,0:15:59.95,Sub,,0,0,0,,And so the benefits of using AI to predict weather instead of using supercomputers to predict weather as we do now can save a ton of energy.
+Dialogue: 0,0:16:00.00,0:16:00.30,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:16:00.31,0:16:03.71,Sub,,0,0,0,,So that's one simple example but the the examples just go on and on.
+Dialogue: 0,0:16:03.76,0:16:04.11,Sub,,0,0,0,,Right.
+Dialogue: 0,0:16:04.14,0:16:08.71,Sub,,0,0,0,,So it's part of the solution as we think about climate not so much part of the problem.
+Dialogue: 0,0:16:08.76,0:16:10.17,Sub,,0,0,0,,I mean It really it really is.
+Dialogue: 0,0:16:10.22,0:16:15.86,Sub,,0,0,0,,I mean if you there are there are other examples Margaret is for example that's that's
+Dialogue: 0,0:16:15.91,0:16:25.03,Sub,,0,0,0,,one using artificial intelligence to solve problems will consume less energy than using calculation to solve problems.
+Dialogue: 0,0:16:25.08,0:16:26.12,Sub,,0,0,0,,Right.
+Dialogue: 0,0:16:26.17,0:16:28.91,Sub,,0,0,0,,Okay and so that's number one.
+Dialogue: 0,0:16:28.96,0:16:32.50,Sub,,0,0,0,,Number two we use artificial intelligence now in the smart grid.
+Dialogue: 0,0:16:32.55,0:16:33.14,Sub,,0,0,0,,You know,
+Dialogue: 0,0:16:33.19,0:16:39.10,Sub,,0,0,0,,our power grid is not smart but we can make it smart and so we work with a company called Yuli
+Dialogue: 0,0:16:39.15,0:16:48.83,Sub,,0,0,0,,data and PG&E to do a to create a an AI computer and we put it integrated into the smart grid.
+Dialogue: 0,0:16:48.88,0:16:58.13,Sub,,0,0,0,,The goal is with AI with intelligence in a grid you could figure out how to for example integrate sustainable energy into it.
+Dialogue: 0,0:16:58.18,0:17:06.34,Sub,,0,0,0,,That sustainable energy could be from solar it could be the battery sitting in your car during power surges at outages it could
+Dialogue: 0,0:17:06.39,0:17:14.71,Sub,,0,0,0,,recognize that there's a weakness in the grid and figure out where the various distributed energy sources are to keep the grid going.
+Dialogue: 0,0:17:14.76,0:17:25.17,Sub,,0,0,0,,Maybe you could predict very subtle signals of when the grid is about to fail and send people out to for predictive maintenance.
+Dialogue: 0,0:17:25.22,0:17:25.52,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:17:25.51,0:17:33.71,Sub,,0,0,0,,You could also do a better job predicting the surges the power surges that's about to happen so you could redirect energy accordingly.
+Dialogue: 0,0:17:33.76,0:17:42.19,Sub,,0,0,0,,So smart grids smart grids I think is going to make sure help us not over provision in the grid.
+Dialogue: 0,0:17:42.24,0:17:47.21,Sub,,0,0,0,,You know, today as we know the grid has the ability to handle a lot more power delivery.
+Dialogue: 0,0:17:47.26,0:17:53.83,Sub,,0,0,0,,It's just that the promise that we made to society is that you're going to get power all the time.
+Dialogue: 0,0:17:53.88,0:17:55.07,Sub,,0,0,0,,Well,
+Dialogue: 0,0:17:55.12,0:18:06.75,Sub,,0,0,0,,unfortunately the power use in population surges extraordinarily could be a factor of two during just a few days of the year.
+Dialogue: 0,0:18:06.80,0:18:09.88,Sub,,0,0,0,,The rest of the time it's kind of a lot lower.
+Dialogue: 0,0:18:09.93,0:18:18.02,Sub,,0,0,0,,But you have to provision for those days because people need the power need the energy need the heat or cooling to stay alive.
+Dialogue: 0,0:18:18.07,0:18:25.52,Sub,,0,0,0,,And so so we could we could redirect if the grid was smart we could redirect
+Dialogue: 0,0:18:25.57,0:18:30.51,Sub,,0,0,0,,the energy in a smarter way and so there's a there's lots and lots of examples.
+Dialogue: 0,0:18:30.56,0:18:32.43,Sub,,0,0,0,,You're a really good teacher.
+Dialogue: 0,0:18:32.48,0:18:36.05,Sub,,0,0,0,,So here we are in Washington and obviously we're all about federal policy.
+Dialogue: 0,0:18:36.10,0:18:43.26,Sub,,0,0,0,,The federal government has been an important partner on innovating on some of the things that you're talking about.
+Dialogue: 0,0:18:43.31,0:18:50.27,Sub,,0,0,0,,How do you see that that history your work with with the US Department of Energy and then where we ought to go next?
+Dialogue: 0,0:18:50.32,0:18:55.99,Sub,,0,0,0,,I mean just give your sense of you know, if you were if you're running the Department of Energy and had a checkbook you know,
+Dialogue: 0,0:18:56.04,0:19:02.11,Sub,,0,0,0,,how do you see those investments being deployed in the smartest ways?
+Dialogue: 0,0:19:02.16,0:19:06.11,Sub,,0,0,0,,It's a big checkbook too.
+Dialogue: 0,0:19:06.16,0:19:08.99,Sub,,0,0,0,,Well, you did mention 30 trillion dollars.
+Dialogue: 0,0:19:09.04,0:19:10.82,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:19:10.87,0:19:13.45,Sub,,0,0,0,,I'm for you.
+Dialogue: 0,0:19:13.50,0:19:14.67,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:19:14.72,0:19:24.43,Sub,,0,0,0,,The the thing I recommend most for for every employee Nvidia every company CEO that I meet
+Dialogue: 0,0:19:24.48,0:19:31.75,Sub,,0,0,0,,every leader that I meet is engage artificial intelligence try to have a tactical feel for it.
+Dialogue: 0,0:19:31.80,0:19:36.95,Sub,,0,0,0,,Um this mystical thing is not so mystical.
+Dialogue: 0,0:19:37.00,0:19:43.51,Sub,,0,0,0,,In its extreme of course it's as mystical as you and I sitting here having conversations with each
+Dialogue: 0,0:19:43.56,0:19:50.19,Sub,,0,0,0,,other and it turns out there's there are several things that we should observe about about artificial intelligence today.
+Dialogue: 0,0:19:50.24,0:19:58.71,Sub,,0,0,0,,We we have through invention of technology the most advanced computing technology ever created.
+Dialogue: 0,0:19:58.76,0:20:03.07,Sub,,0,0,0,,We have made the computer easier to use than ever.
+Dialogue: 0,0:20:03.12,0:20:08.27,Sub,,0,0,0,,To the point where almost anybody can talk to the computer, prompt it for something,
+Dialogue: 0,0:20:08.32,0:20:15.39,Sub,,0,0,0,,ask it to do something for you, including write software for you, and it will write software for you.
+Dialogue: 0,0:20:15.44,0:20:20.19,Sub,,0,0,0,,And it could make drawings for you, could create schematics for you, could make charts and graphs.
+Dialogue: 0,0:20:20.24,0:20:25.70,Sub,,0,0,0,,It could read something for you, translate something for you, summarize something for you, solve problems for you.
+Dialogue: 0,0:20:25.75,0:20:30.17,Sub,,0,0,0,,And so this incredible thing, this computer, is is now democratized.
+Dialogue: 0,0:20:30.22,0:20:33.95,Sub,,0,0,0,,For the very first time in history, this incredible system,
+Dialogue: 0,0:20:34.00,0:20:41.23,Sub,,0,0,0,,this incredible technology is available to just a small percentage of the of the world, is now available to everybody to use.
+Dialogue: 0,0:20:41.28,0:20:47.99,Sub,,0,0,0,,And the the first thing to do is is to try to understand how how you could take advantage of this technology yourself.
+Dialogue: 0,0:20:48.04,0:20:50.76,Sub,,0,0,0,,Now, of course, once you you go down that journey,
+Dialogue: 0,0:20:50.81,0:20:54.05,Sub,,0,0,0,,you'll discover all the same things that that scientists and engineers and all
+Dialogue: 0,0:20:54.10,0:20:58.24,Sub,,0,0,0,,of us are starting to discover that not only is it more energy efficient,
+Dialogue: 0,0:20:58.29,0:21:03.86,Sub,,0,0,0,,um we can use our energy better, we could be more energy sustainable.
+Dialogue: 0,0:21:03.91,0:21:09.79,Sub,,0,0,0,,It could create new materials so that we could we could create sustainable energy more efficiently effectively.
+Dialogue: 0,0:21:09.84,0:21:12.30,Sub,,0,0,0,,Some of the important work that we're doing in carbon capture,
+Dialogue: 0,0:21:12.35,0:21:20.91,Sub,,0,0,0,,just trying to figure out in a reservoir how much pressure can we pump into carbon into this reservoir,
+Dialogue: 0,0:21:20.96,0:21:26.49,Sub,,0,0,0,,and how much how much this reservoir has already been saturated with carbon.
+Dialogue: 0,0:21:26.54,0:21:31.88,Sub,,0,0,0,,And so we could select the best injection wells for carbon capture.
+Dialogue: 0,0:21:31.93,0:21:38.11,Sub,,0,0,0,,And this simulation takes supercomputers just an enormous amount of calculation.
+Dialogue: 0,0:21:38.16,0:21:43.74,Sub,,0,0,0,,We've taught an AI how to go help us select these sites with nearly a million times less energy.
+Dialogue: 0,0:21:43.79,0:21:48.95,Sub,,0,0,0,,And so there's a lot of different ways that we can use artificial intelligence to to help.
+Dialogue: 0,0:21:49.00,0:21:53.73,Sub,,0,0,0,,Being inspired by those ideas, I think would really help um DOE.
+Dialogue: 0,0:21:53.78,0:21:59.11,Sub,,0,0,0,,And And of course, some of the things that that I would recommend is invest in using it yourself.
+Dialogue: 0,0:21:59.16,0:22:08.71,Sub,,0,0,0,,You know, one of the things that that I would really love to see the United States do is for the government to to become a practitioner of AI.
+Dialogue: 0,0:22:08.76,0:22:11.95,Sub,,0,0,0,,Don't just be a governor of AI, be a practitioner of AI.
+Dialogue: 0,0:22:12.00,0:22:16.51,Sub,,0,0,0,,Um the DOE, the DOD, you know, every single department, be a practitioner.
+Dialogue: 0,0:22:16.56,0:22:21.24,Sub,,0,0,0,,And and build an AI supercomputer.
+Dialogue: 0,0:22:21.29,0:22:29.34,Sub,,0,0,0,,Uh the scientists would be more than happy to jump on it and create new AI algorithms, you know, to advance our country.
+Dialogue: 0,0:22:29.39,0:22:30.41,Sub,,0,0,0,,Yeah, fabulous.
+Dialogue: 0,0:22:30.46,0:22:36.43,Sub,,0,0,0,,So, obviously you were, you know, a startup innovator many moons ago,
+Dialogue: 0,0:22:36.48,0:22:42.18,Sub,,0,0,0,,but you all have affinity for that as a company through your inception partnership network.
+Dialogue: 0,0:22:42.23,0:22:47.75,Sub,,0,0,0,,Talk about that and how you see that ecosystem of of innovators.
+Dialogue: 0,0:22:47.80,0:22:50.15,Sub,,0,0,0,,Well, we know a lot about this technology.
+Dialogue: 0,0:22:50.20,0:22:53.23,Sub,,0,0,0,,Um we have a lot of scale and resources.
+Dialogue: 0,0:22:53.28,0:22:56.92,Sub,,0,0,0,,And we have we have abilities.
+Dialogue: 0,0:22:56.97,0:23:05.35,Sub,,0,0,0,,And so So, when we see companies around the world that are trying to apply AI for some particular domain,
+Dialogue: 0,0:23:05.40,0:23:07.39,Sub,,0,0,0,,it could be a domain like, for example, Uli data.
+Dialogue: 0,0:23:07.44,0:23:09.50,Sub,,0,0,0,,I'm just really love that company.
+Dialogue: 0,0:23:09.55,0:23:16.21,Sub,,0,0,0,,They're They're a company that wanted to build a smart grid, but they didn't understand artificial intelligence that well.
+Dialogue: 0,0:23:16.26,0:23:22.07,Sub,,0,0,0,,And so working together, we became an expert in artificial intelligence and the application for smart grids.
+Dialogue: 0,0:23:22.12,0:23:28.63,Sub,,0,0,0,,Uh we work uh uh with a company that's that has satellites out in space.
+Dialogue: 0,0:23:28.68,0:23:37.87,Sub,,0,0,0,,And and that's where satellites go where satellites I mean, even I knew that.
+Dialogue: 0,0:23:37.92,0:23:40.79,Sub,,0,0,0,,It takes It takes a CEO to tell you those things.
+Dialogue: 0,0:23:40.84,0:23:47.70,Sub,,0,0,0,,And and uh and and these are these are they take images of the
+Dialogue: 0,0:23:47.75,0:23:54.03,Sub,,0,0,0,,earth and and at a at a at a spectrum that is beyond cameras.
+Dialogue: 0,0:23:54.08,0:24:01.71,Sub,,0,0,0,,And so that we could we could use that that hyperspectral imaging system and teach an artificial intelligence how to see.
+Dialogue: 0,0:24:01.76,0:24:03.55,Sub,,0,0,0,,You know, we can't see anything from it.
+Dialogue: 0,0:24:03.60,0:24:05.57,Sub,,0,0,0,,We teach an AI how to see something from it.
+Dialogue: 0,0:24:05.62,0:24:09.84,Sub,,0,0,0,,And discovers gas leaks and and reservoir leaks and such.
+Dialogue: 0,0:24:09.89,0:24:17.39,Sub,,0,0,0,,I mean, we could we could there are all kinds of things we could these companies have imaginations to do and we could, you know,
+Dialogue: 0,0:24:17.44,0:24:23.22,Sub,,0,0,0,,help them with our AI capabilities and so we're working with thousands of startups come And
+Dialogue: 0,0:24:23.27,0:24:26.67,Sub,,0,0,0,,do they find them or do you find you find them or do they find you?
+Dialogue: 0,0:24:26.72,0:24:27.92,Sub,,0,0,0,,Sometimes we find them.
+Dialogue: 0,0:24:27.97,0:24:29.90,Sub,,0,0,0,,Sometimes we find them, they find us.
+Dialogue: 0,0:24:29.95,0:24:31.37,Sub,,0,0,0,,Often times I even find them.
+Dialogue: 0,0:24:31.42,0:24:35.95,Sub,,0,0,0,,So, yeah, but I read about them and here's a company that's doing some really interesting things.
+Dialogue: 0,0:24:36.00,0:24:43.80,Sub,,0,0,0,,You know, the the company that's, you know, watching out for for keeping birds safe in the middle of a wind farm.
+Dialogue: 0,0:24:43.85,0:24:46.23,Sub,,0,0,0,,And so yeah, all kinds of great ideas.
+Dialogue: 0,0:24:46.28,0:24:49.75,Sub,,0,0,0,,Uh you won't be surprised to that I'm going to ask you about workforce.
+Dialogue: 0,0:24:49.80,0:24:57.62,Sub,,0,0,0,,There's a lot of obviously implications to the good and a lot of fear around what is the meaning of AI for our American workforce
+Dialogue: 0,0:24:57.67,0:25:05.26,Sub,,0,0,0,,or our workforce globally obviously and how you think about that as your own human capital asset as a company and how you develop and grow,
+Dialogue: 0,0:25:05.31,0:25:13.79,Sub,,0,0,0,,but also, you know, the broader implications for the workforce first in the US, but but in the world.
+Dialogue: 0,0:25:13.84,0:25:18.59,Sub,,0,0,0,,The first thing we need to do is demystify this technology for people.
+Dialogue: 0,0:25:18.64,0:25:21.79,Sub,,0,0,0,,And the reason for that is because it's useful to them.
+Dialogue: 0,0:25:21.84,0:25:24.15,Sub,,0,0,0,,It can empower them.
+Dialogue: 0,0:25:24.20,0:25:26.39,Sub,,0,0,0,,But not if they don't understand it.
+Dialogue: 0,0:25:26.44,0:25:30.23,Sub,,0,0,0,,And as it turns out, it's actually relatively easy to understand.
+Dialogue: 0,0:25:30.28,0:25:33.99,Sub,,0,0,0,,Very few people in the world know how to program a computer.
+Dialogue: 0,0:25:34.04,0:25:39.31,Sub,,0,0,0,,But everyone knows that knows how to ask someone else to do something for them.
+Dialogue: 0,0:25:39.36,0:25:41.15,Sub,,0,0,0,,And it's as simple as that.
+Dialogue: 0,0:25:41.20,0:25:44.99,Sub,,0,0,0,,It's as simple as walking up to computer and tell it, you know, what you want.
+Dialogue: 0,0:25:45.04,0:25:48.31,Sub,,0,0,0,,And for the first time it might even give you a reasonable answer back.
+Dialogue: 0,0:25:48.36,0:25:50.55,Sub,,0,0,0,,And you don't even need complete sentences.
+Dialogue: 0,0:25:50.60,0:25:52.14,Sub,,0,0,0,,You can be grammatically incorrect.
+Dialogue: 0,0:25:52.19,0:25:54.01,Sub,,0,0,0,,You just, you know, and start.
+Dialogue: 0,0:25:54.06,0:25:59.70,Sub,,0,0,0,,And if it doesn't understand uh what you mean, it'll actually ask you back what you mean.
+Dialogue: 0,0:25:59.75,0:26:04.59,Sub,,0,0,0,,And just go back and forth until it figures out what you want and it does it for you.
+Dialogue: 0,0:26:04.64,0:26:05.02,Sub,,0,0,0,,Now,
+Dialogue: 0,0:26:05.05,0:26:12.35,Sub,,0,0,0,,we have demystified we we need to demystify artificial intelligence so we can empower the population to take
+Dialogue: 0,0:26:12.40,0:26:17.92,Sub,,0,0,0,,advantage of this amazing technology that's only been available for a few percentage of the world in the past.
+Dialogue: 0,0:26:17.97,0:26:20.67,Sub,,0,0,0,,And so we could close the technology divide.
+Dialogue: 0,0:26:20.72,0:26:22.76,Sub,,0,0,0,,We could enable everybody to take advantage of it.
+Dialogue: 0,0:26:22.81,0:26:27.42,Sub,,0,0,0,,And so the first thing that we've done is we've we teach a class called Deep Learning Institute.
+Dialogue: 0,0:26:27.47,0:26:37.01,Sub,,0,0,0,,And we go around the world and we we're doing we're doing a very large campaign in California in school in community colleges
+Dialogue: 0,0:26:37.06,0:26:44.79,Sub,,0,0,0,,and high schools and such and and and anybody who would like to learn to teach them about about the capabilities of artificial intelligence.
+Dialogue: 0,0:26:44.84,0:26:47.11,Sub,,0,0,0,,We should do that all over the country.
+Dialogue: 0,0:26:47.16,0:26:50.70,Sub,,0,0,0,,We should be teaching everybody um exposing people to this technology.
+Dialogue: 0,0:26:50.75,0:26:53.95,Sub,,0,0,0,,And I think it's easy to use, it's fun to use, inspiring to use.
+Dialogue: 0,0:26:54.00,0:26:59.63,Sub,,0,0,0,,You could ask it to help you draw something, give you a recipe, you know, help you write a business plan.
+Dialogue: 0,0:26:59.68,0:27:02.07,Sub,,0,0,0,,You know, all kinds of things.
+Dialogue: 0,0:27:02.12,0:27:07.36,Sub,,0,0,0,,But obviously there's no substitute for the ability to to read and and cipher and compute.
+Dialogue: 0,0:27:07.41,0:27:12.62,Sub,,0,0,0,,And I know you all have been involved in in education programs at your alma maters and so forth.
+Dialogue: 0,0:27:12.67,0:27:18.18,Sub,,0,0,0,,But how do you think about your own human capital and what do you look for in your in your people and your leaders?
+Dialogue: 0,0:27:18.23,0:27:23.67,Sub,,0,0,0,,Is it Is it you know, given all the promise that AI has for the workforce, you know,
+Dialogue: 0,0:27:23.72,0:27:29.87,Sub,,0,0,0,,what are you looking for as you look for and recruit leaders and people to join you in building Nvidia?
+Dialogue: 0,0:27:29.92,0:27:32.11,Sub,,0,0,0,,All the same things I look for in the past.
+Dialogue: 0,0:27:32.16,0:27:33.31,Sub,,0,0,0,,Um nothing's going to change.
+Dialogue: 0,0:27:33.36,0:27:38.01,Sub,,0,0,0,,The one thing that's going to change is is the amount of software programming that we do.
+Dialogue: 0,0:27:38.06,0:27:40.54,Sub,,0,0,0,,The actual programming that we do will reduce.
+Dialogue: 0,0:27:40.59,0:27:44.46,Sub,,0,0,0,,Or another way of saying it is the way we program computers will change.
+Dialogue: 0,0:27:44.51,0:27:46.51,Sub,,0,0,0,,Because you're just going to ask the computer to do it.
+Dialogue: 0,0:27:46.56,0:27:47.55,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:27:47.60,0:27:48.08,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:27:48.13,0:27:53.82,Sub,,0,0,0,,We're going to describe very clearly what we want the computer to help us do, and the computer will do it for us.
+Dialogue: 0,0:27:53.87,0:28:00.91,Sub,,0,0,0,,And so the way that we would design chips in the future will be describing probably the specifications of the chip.
+Dialogue: 0,0:28:00.96,0:28:06.83,Sub,,0,0,0,,Which is telling somebody what you want is is often times where the genius is.
+Dialogue: 0,0:28:06.88,0:28:07.18,Sub,,0,0,0,,Right.
+Dialogue: 0,0:28:07.19,0:28:07.49,Sub,,0,0,0,,Right.
+Dialogue: 0,0:28:07.49,0:28:08.63,Sub,,0,0,0,,Yeah, where the genius is.
+Dialogue: 0,0:28:08.68,0:28:17.69,Sub,,0,0,0,,Yeah, doing it doing doing the actual skill, of course, there's great craft and and great dedication and um but, you know,
+Dialogue: 0,0:28:17.74,0:28:27.83,Sub,,0,0,0,,to to to be able to explain a future that you would like to create and have have AIs that that help you go do that is is pretty terrific.
+Dialogue: 0,0:28:27.88,0:28:31.85,Sub,,0,0,0,,And so my prediction is is that the first thing the first thing
+Dialogue: 0,0:28:31.90,0:28:36.74,Sub,,0,0,0,,companies like ourselves would do is use artificial intelligence to improve our productivity.
+Dialogue: 0,0:28:36.79,0:28:38.16,Sub,,0,0,0,,That's what we've done.
+Dialogue: 0,0:28:38.21,0:28:45.79,Sub,,0,0,0,,We've got AIs all over our companies designing our chips, writing our software, helping us debug things, help us do verification.
+Dialogue: 0,0:28:45.84,0:28:50.67,Sub,,0,0,0,,We're starting to work on using it for marketing and customer support and things like that.
+Dialogue: 0,0:28:50.72,0:28:53.88,Sub,,0,0,0,,And so so number one, help us be more productive.
+Dialogue: 0,0:28:53.93,0:28:57.69,Sub,,0,0,0,,When a company becomes more productive, they make more money.
+Dialogue: 0,0:28:57.74,0:29:00.71,Sub,,0,0,0,,When they make more money, they hire more people.
+Dialogue: 0,0:29:00.76,0:29:04.03,Sub,,0,0,0,,And the reason for that is because we have more ideas we'd like to go pursue.
+Dialogue: 0,0:29:04.08,0:29:07.57,Sub,,0,0,0,,And so I would love for the United States to be more productive.
+Dialogue: 0,0:29:07.62,0:29:09.22,Sub,,0,0,0,,Because we'll have more money.
+Dialogue: 0,0:29:09.27,0:29:13.31,Sub,,0,0,0,,And then we'll because we have abundance of ideas, we'll be more prosperous.
+Dialogue: 0,0:29:13.36,0:29:21.47,Sub,,0,0,0,,And so So, I I think the the the idea the idea that that it's it's human versus AI is not quite right.
+Dialogue: 0,0:29:21.52,0:29:23.23,Sub,,0,0,0,,It's humans using AI.
+Dialogue: 0,0:29:23.28,0:29:31.94,Sub,,0,0,0,,And with respect to anybody who who is concerned about an AI taking their job, you should probably worry about someone who uses AI taking your job.
+Dialogue: 0,0:29:31.99,0:29:32.35,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:29:32.38,0:29:42.58,Sub,,0,0,0,,And so So, that that reminds you to to get going and to go learn this learn this new tool and to make this new tool, you know, your advantage.
+Dialogue: 0,0:29:42.63,0:29:45.17,Sub,,0,0,0,,And surely as a company we're going to do that.
+Dialogue: 0,0:29:45.22,0:29:46.96,Sub,,0,0,0,,Yeah. a country we should do that.
+Dialogue: 0,0:29:47.01,0:29:52.55,Sub,,0,0,0,,And and obviously what are those skills that are necessary to be able to be precise and
+Dialogue: 0,0:29:52.60,0:29:56.91,Sub,,0,0,0,,you know at at the telling what to do That's right. part of the the AI equation.
+Dialogue: 0,0:29:56.96,0:29:57.91,Sub,,0,0,0,,That's right.
+Dialogue: 0,0:29:57.96,0:29:58.33,Sub,,0,0,0,,Wow.
+Dialogue: 0,0:29:58.36,0:30:00.31,Sub,,0,0,0,,Okay, national security.
+Dialogue: 0,0:30:00.36,0:30:00.76,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:30:00.80,0:30:07.64,Sub,,0,0,0,,Obviously, you know, a huge you know nexus between our nation's security and and these issues.
+Dialogue: 0,0:30:07.69,0:30:13.52,Sub,,0,0,0,,Talk about that how you see the world and and the national security implications for this technology.
+Dialogue: 0,0:30:13.58,0:30:24.77,Sub,,0,0,0,,Taking a step back, um countries are starting to awaken to the importance of artificial intelligence to their country.
+Dialogue: 0,0:30:24.82,0:30:25.12,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:30:25.08,0:30:28.77,Sub,,0,0,0,,On first principles, it is apparent.
+Dialogue: 0,0:30:28.82,0:30:30.86,Sub,,0,0,0,,And the reason for that is simple.
+Dialogue: 0,0:30:30.91,0:30:38.09,Sub,,0,0,0,,No country in the world would say uh we should outsource our intelligence to anybody else.
+Dialogue: 0,0:30:38.14,0:30:42.95,Sub,,0,0,0,,No country in the world should say would say, "We have an abundance of intelligence.
+Dialogue: 0,0:30:43.00,0:30:44.45,Sub,,0,0,0,,This is good enough."
+Dialogue: 0,0:30:44.50,0:30:44.81,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:30:44.84,0:30:47.75,Sub,,0,0,0,,Let's put a lid on this one.
+Dialogue: 0,0:30:47.80,0:30:53.03,Sub,,0,0,0,,Let's wean ourself off of this.
+Dialogue: 0,0:30:53.08,0:31:02.27,Sub,,0,0,0,,And so so I think I think it's it's now very clear that the that artificial intelligence is about the the accelerated production of intelligence.
+Dialogue: 0,0:31:02.32,0:31:03.03,Sub,,0,0,0,,Hey.
+Dialogue: 0,0:31:03.08,0:31:08.99,Sub,,0,0,0,,Please remind me to to talk about artificial intelligence as an industry and the production of it.
+Dialogue: 0,0:31:09.04,0:31:12.33,Sub,,0,0,0,,I just want to because for energy is so important.
+Dialogue: 0,0:31:12.38,0:31:20.30,Sub,,0,0,0,,Um and countries are also starting to realize that the land they're on is part of their natural resource and sovereign resource,
+Dialogue: 0,0:31:20.35,0:31:29.59,Sub,,0,0,0,,but their language, culture, people, their way of thinking Right. is part of their natural resource.
+Dialogue: 0,0:31:29.64,0:31:33.15,Sub,,0,0,0,,And it's that is codified in data.
+Dialogue: 0,0:31:33.20,0:31:33.68,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:31:33.73,0:31:43.51,Sub,,0,0,0,,And so to to allow other countries to come in and scrape your data, harvest your data, harvest your natural resource, Exactly.
+Dialogue: 0,0:31:43.56,0:31:49.19,Sub,,0,0,0,,refine it and then import it back to you as artificial intelligence is unacceptable.
+Dialogue: 0,0:31:49.24,0:31:50.47,Sub,,0,0,0,,And happening.
+Dialogue: 0,0:31:50.52,0:31:51.49,Sub,,0,0,0,,Yeah, that's right.
+Dialogue: 0,0:31:51.54,0:31:58.07,Sub,,0,0,0,,And so so countries are starting to realize that they have to take control of their own artificial intelligence production.
+Dialogue: 0,0:31:58.12,0:32:03.31,Sub,,0,0,0,,And this is where the word sovereign AI, if you will, is starting to float around.
+Dialogue: 0,0:32:03.36,0:32:13.11,Sub,,0,0,0,,Countries in the in the west, countries in the east are quite concerned and quite motivated to secure their AI infrastructure.
+Dialogue: 0,0:32:13.16,0:32:21.12,Sub,,0,0,0,,Just like they secured their their telecommunications, their power grids, their nuclear assets, their their nuclear assets.
+Dialogue: 0,0:32:21.17,0:32:24.86,Sub,,0,0,0,,They want to really secure their artificial intelligence infrastructure.
+Dialogue: 0,0:32:24.91,0:32:30.23,Sub,,0,0,0,,And so that's that's really one of the the major dynamics that's happening around the world
+Dialogue: 0,0:32:30.28,0:32:38.19,Sub,,0,0,0,,that that they realize now the incredible potential of this technology to accelerate their uh climbing,
+Dialogue: 0,0:32:38.24,0:32:45.48,Sub,,0,0,0,,if you will, you know, in the world's um various social ladders.
+Dialogue: 0,0:32:45.53,0:32:51.27,Sub,,0,0,0,,And so this is a a great tool for them to propel their national prosperity.
+Dialogue: 0,0:32:51.32,0:33:00.40,Sub,,0,0,0,,And and I so I think on on first principles people now understand the incredible importance of artificial intelligence for their national security,
+Dialogue: 0,0:33:00.45,0:33:03.83,Sub,,0,0,0,,national prosperity, and national development.
+Dialogue: 0,0:33:03.88,0:33:04.18,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:33:04.04,0:33:08.30,Sub,,0,0,0,,And so so I think I think every country is starting to to realize that.
+Dialogue: 0,0:33:08.35,0:33:15.03,Sub,,0,0,0,,Now, from our United States, we need to realize that this technology is is indigenous to us, is was created here.
+Dialogue: 0,0:33:15.08,0:33:16.19,Sub,,0,0,0,,Congratulations.
+Dialogue: 0,0:33:16.24,0:33:16.67,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:33:16.72,0:33:24.19,Sub,,0,0,0,,And and we're proud to be an American company and uh if not for United States and and all of the resource that that was that was made available,
+Dialogue: 0,0:33:24.24,0:33:27.07,Sub,,0,0,0,,uh Nvidia wouldn't be prob- wouldn't be possible.
+Dialogue: 0,0:33:27.12,0:33:38.77,Sub,,0,0,0,,And so I I think the the the um uh uh the the country's desire uh to uh number one,
+Dialogue: 0,0:33:38.82,0:33:43.83,Sub,,0,0,0,,protect this technology uh for our own benefit, uh it is fantastic.
+Dialogue: 0,0:33:43.88,0:33:49.23,Sub,,0,0,0,,And we want to use this technology, of course, to accelerate and propel the United States further.
+Dialogue: 0,0:33:49.28,0:33:53.99,Sub,,0,0,0,,The important thing is to realize also that to balance that with the idea
+Dialogue: 0,0:33:54.04,0:33:59.63,Sub,,0,0,0,,that that American technology around the world sets American standards all around the world.
+Dialogue: 0,0:33:59.68,0:34:01.10,Sub,,0,0,0,,Right, exactly.
+Dialogue: 0,0:34:01.15,0:34:05.37,Sub,,0,0,0,,We would like we It's fantastic that the world speaks English.
+Dialogue: 0,0:34:05.42,0:34:11.31,Sub,,0,0,0,,It's fantastic that that the world is is powered by American technology.
+Dialogue: 0,0:34:11.36,0:34:19.36,Sub,,0,0,0,,And we would like, of course, Nvidia tech- technology to also be used all over the world to set the pace for the world,
+Dialogue: 0,0:34:19.41,0:34:25.55,Sub,,0,0,0,,um to make sure that the American technologies are used to build other nations and other industries around the world.
+Dialogue: 0,0:34:25.60,0:34:32.98,Sub,,0,0,0,,And so we want to find a balance between national security and, of course, prosperity for American companies around the world.
+Dialogue: 0,0:34:33.03,0:34:40.59,Sub,,0,0,0,,And so that balance is hard to strike and but whatever whatever the administration does, of course, is something we'll support.
+Dialogue: 0,0:34:40.64,0:34:40.95,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:34:40.98,0:34:47.75,Sub,,0,0,0,,I want to ask you about regulation and and the role in that, but you were going to say for a second about AI production.
+Dialogue: 0,0:34:47.80,0:34:50.91,Sub,,0,0,0,,This is the big observation from an energy perspective.
+Dialogue: 0,0:34:50.96,0:34:52.79,Sub,,0,0,0,,This is really important to know.
+Dialogue: 0,0:34:52.84,0:34:59.67,Sub,,0,0,0,,Um for the very first time a computer is a tool, but it's also a factory.
+Dialogue: 0,0:34:59.72,0:35:00.05,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:35:00.08,0:35:04.27,Sub,,0,0,0,,It used to be a data center where data stored.
+Dialogue: 0,0:35:04.32,0:35:13.27,Sub,,0,0,0,,But in the future, these computers that we build um will be used in a way that's very different than the past.
+Dialogue: 0,0:35:13.32,0:35:15.99,Sub,,0,0,0,,These computers, for example, I have a I have a phone in my pocket right now.
+Dialogue: 0,0:35:16.04,0:35:17.39,Sub,,0,0,0,,It's a computer.
+Dialogue: 0,0:35:17.44,0:35:18.98,Sub,,0,0,0,,And it's a tool of mine.
+Dialogue: 0,0:35:19.03,0:35:23.05,Sub,,0,0,0,,Just like a Cuisinart, just a lawnmower, just like anything else.
+Dialogue: 0,0:35:23.10,0:35:23.71,Sub,,0,0,0,,Any other tool.
+Dialogue: 0,0:35:23.76,0:35:24.60,Sub,,0,0,0,,My phone's a tool.
+Dialogue: 0,0:35:24.65,0:35:26.23,Sub,,0,0,0,,When you're using it, you're using it.
+Dialogue: 0,0:35:26.28,0:35:27.95,Sub,,0,0,0,,When you're not using it, it's sitting idle.
+Dialogue: 0,0:35:28.00,0:35:30.11,Sub,,0,0,0,,My phone's sitting idle right now.
+Dialogue: 0,0:35:30.16,0:35:37.79,Sub,,0,0,0,,However, in the world of artificial intelligence, there will be systems, there will be AIs that are doing things for us all the time.
+Dialogue: 0,0:35:37.84,0:35:40.47,Sub,,0,0,0,,We ask it to go do something and it does it all the time.
+Dialogue: 0,0:35:40.52,0:35:44.47,Sub,,0,0,0,,Just like we ask one of our employees to do something, it does it all the time.
+Dialogue: 0,0:35:44.52,0:35:55.07,Sub,,0,0,0,,And and uh we like it to be human in the loop, but as autonomous as as autonomous as possible, as governed as necessary.
+Dialogue: 0,0:35:55.12,0:36:03.53,Sub,,0,0,0,,And so these computers are off working on things, designing chips, writing software, optimizing things, going through plans,
+Dialogue: 0,0:36:03.58,0:36:09.88,Sub,,0,0,0,,evaluating all the various plans that we have and trying to figure out which one is the best to come back and recommend it to us.
+Dialogue: 0,0:36:09.93,0:36:12.35,Sub,,0,0,0,,And so the exploration of the design space,
+Dialogue: 0,0:36:12.40,0:36:23.00,Sub,,0,0,0,,exploration of the the the optimization space is really really large and we want these AIs to go explore to go look for new scientific discovery,
+Dialogue: 0,0:36:23.05,0:36:23.81,Sub,,0,0,0,,for example.
+Dialogue: 0,0:36:23.86,0:36:27.92,Sub,,0,0,0,,And so so it's off in the in these machines and it's running all the time.
+Dialogue: 0,0:36:27.97,0:36:32.27,Sub,,0,0,0,,In a lot of ways, these computers in the future will be an AI factory.
+Dialogue: 0,0:36:32.32,0:36:32.80,Sub,,0,0,0,,Right.
+Dialogue: 0,0:36:32.85,0:36:36.61,Sub,,0,0,0,,And there's a new factory that is being created right now.
+Dialogue: 0,0:36:36.66,0:36:40.11,Sub,,0,0,0,,There's a new industry that's that's being created right now.
+Dialogue: 0,0:36:40.16,0:36:41.15,Sub,,0,0,0,,It's called AI.
+Dialogue: 0,0:36:41.20,0:36:41.61,Sub,,0,0,0,,Right.
+Dialogue: 0,0:36:41.66,0:36:45.53,Sub,,0,0,0,,And remember, a new industry requires energy.
+Dialogue: 0,0:36:45.58,0:36:48.75,Sub,,0,0,0,,And this is a new addition to the past.
+Dialogue: 0,0:36:48.80,0:36:57.53,Sub,,0,0,0,,And so while accelerated computing what Nvidia does, um allows us to save a lot of energy in the way that we use the compute.
+Dialogue: 0,0:36:57.58,0:37:02.72,Sub,,0,0,0,,So every every every software that can be accelerated should be accelerated.
+Dialogue: 0,0:37:02.77,0:37:11.68,Sub,,0,0,0,,Um we should modernize old data centers with a new type of computing models that are accelerated and we'll save a lot of energy in doing that.
+Dialogue: 0,0:37:11.73,0:37:13.30,Sub,,0,0,0,,And that's a classical data center.
+Dialogue: 0,0:37:13.35,0:37:14.81,Sub,,0,0,0,,That what that's what we used to build.
+Dialogue: 0,0:37:14.86,0:37:19.52,Sub,,0,0,0,,But there's a new thing that's called AI factories and that's going to consume energy,
+Dialogue: 0,0:37:19.57,0:37:24.91,Sub,,0,0,0,,but what of course comes out of it is artificial intelligence that will help us save energy somewhere else.
+Dialogue: 0,0:37:24.96,0:37:25.35,Sub,,0,0,0,,Right.
+Dialogue: 0,0:37:25.38,0:37:29.27,Sub,,0,0,0,,And so this is a this is a, if you will, an industrial revolution.
+Dialogue: 0,0:37:29.32,0:37:33.20,Sub,,0,0,0,,assembly line, a new you you used your car analogy a bit ago.
+Dialogue: 0,0:37:33.25,0:37:34.19,Sub,,0,0,0,,A new factory.
+Dialogue: 0,0:37:34.24,0:37:43.47,Sub,,0,0,0,,So regulations and guardrails and policy making, you know, there's a lot of energy on the hill and and rightly about how do we think about, you know,
+Dialogue: 0,0:37:43.52,0:37:48.97,Sub,,0,0,0,,preserving innovation while protecting national security, our children, you know,
+Dialogue: 0,0:37:49.02,0:37:53.88,Sub,,0,0,0,,fill in the blank, and our role in the world vis-a-vis the Europeans or others.
+Dialogue: 0,0:37:53.93,0:37:57.68,Sub,,0,0,0,,Yeah, how do you think about those issues as, you know,
+Dialogue: 0,0:37:57.73,0:38:04.26,Sub,,0,0,0,,members of the Congress down the street here start to put pen to paper on the way forward for your industry?
+Dialogue: 0,0:38:04.31,0:38:12.79,Sub,,0,0,0,,Well, first to help them understand the technology, all of the potential incredible good that it can do around the world,
+Dialogue: 0,0:38:12.84,0:38:18.27,Sub,,0,0,0,,recognizing the the the threats and the danger of this this technology, of course.
+Dialogue: 0,0:38:18.32,0:38:28.49,Sub,,0,0,0,,Um The technology is fundamentally intelligence and intelligence could be used in a lot of different ways for for great and for peril.
+Dialogue: 0,0:38:28.54,0:38:32.96,Sub,,0,0,0,,And so and so we we one, help them understand the state of the technology.
+Dialogue: 0,0:38:33.01,0:38:34.63,Sub,,0,0,0,,Where are we today?
+Dialogue: 0,0:38:34.68,0:38:38.11,Sub,,0,0,0,,Um where would it be in some reasonable time?
+Dialogue: 0,0:38:38.16,0:38:46.11,Sub,,0,0,0,,And how to how to think about the technology more practically instead of theoretically Mhm. sci- science fiction wise.
+Dialogue: 0,0:38:46.16,0:38:46.77,Sub,,0,0,0,,Right.
+Dialogue: 0,0:38:46.82,0:38:51.58,Sub,,0,0,0,,And so without without us demystifying it, it's hard for people to understand this technology.
+Dialogue: 0,0:38:51.63,0:38:54.44,Sub,,0,0,0,,And so one, help people understand the technology.
+Dialogue: 0,0:38:54.49,0:38:59.14,Sub,,0,0,0,,Um help people understand the the the very very good use that's already coming out of it.
+Dialogue: 0,0:38:59.19,0:39:04.14,Sub,,0,0,0,,Um and in various fields of science where there's in health care or
+Dialogue: 0,0:39:04.19,0:39:09.19,Sub,,0,0,0,,um climate science or education education or everybody should have their own tutor.
+Dialogue: 0,0:39:09.24,0:39:12.06,Sub,,0,0,0,,Um and so I have my own tutor today.
+Dialogue: 0,0:39:12.11,0:39:13.96,Sub,,0,0,0,,And my tutor is Perplexity.
+Dialogue: 0,0:39:14.01,0:39:15.23,Sub,,0,0,0,,I I use it almost every day.
+Dialogue: 0,0:39:15.28,0:39:16.87,Sub,,0,0,0,,What what is this tutor?
+Dialogue: 0,0:39:16.92,0:39:17.51,Sub,,0,0,0,,Perplexity.
+Dialogue: 0,0:39:17.56,0:39:18.16,Sub,,0,0,0,,Perplexity.
+Dialogue: 0,0:39:18.21,0:39:18.80,Sub,,0,0,0,,Perplexity.
+Dialogue: 0,0:39:18.85,0:39:21.50,Sub,,0,0,0,,It's a great It's a great great great resource.
+Dialogue: 0,0:39:21.55,0:39:31.53,Sub,,0,0,0,,Um it's an AI and calls upon other AIs and and um uh you could ask it all kinds of questions and it's really really really helpful.
+Dialogue: 0,0:39:31.58,0:39:38.31,Sub,,0,0,0,,Anyways, it's taught me a lot about about about digital biology and so it's really great.
+Dialogue: 0,0:39:38.36,0:39:40.77,Sub,,0,0,0,,So you're obviously a half half full guy.
+Dialogue: 0,0:39:40.82,0:39:41.85,Sub,,0,0,0,,So one, one,
+Dialogue: 0,0:39:41.90,0:39:47.10,Sub,,0,0,0,,make sure that that that we educate them about about the opportunities around
+Dialogue: 0,0:39:47.15,0:39:54.55,Sub,,0,0,0,,the world so that they understand that exporting American technology is winning abroad.
+Dialogue: 0,0:39:54.60,0:39:55.97,Sub,,0,0,0,,And we want to win here.
+Dialogue: 0,0:39:56.02,0:39:57.35,Sub,,0,0,0,,We want to win abroad.
+Dialogue: 0,0:39:57.40,0:40:03.80,Sub,,0,0,0,,We want to win everywhere and and all of the policy makers I've met wants America to win and that's great.
+Dialogue: 0,0:40:03.85,0:40:05.31,Sub,,0,0,0,,That's great.
+Dialogue: 0,0:40:05.36,0:40:07.87,Sub,,0,0,0,,But there is the you know the other side of the coin.
+Dialogue: 0,0:40:07.92,0:40:12.97,Sub,,0,0,0,,We hosted Brad Smith from Microsoft I don't know a few weeks ago and they released
+Dialogue: 0,0:40:13.02,0:40:18.06,Sub,,0,0,0,,a report on on AI generated content the implications for kids and others and so forth.
+Dialogue: 0,0:40:18.11,0:40:23.06,Sub,,0,0,0,,So you know what do you what about that you know keeps you up at night piece of it the darker side of AI.
+Dialogue: 0,0:40:23.11,0:40:24.82,Sub,,0,0,0,,How do you think of that?
+Dialogue: 0,0:40:24.87,0:40:33.79,Sub,,0,0,0,,Well it's I it's going to take AI to catch darker side of AI and and the reason for that is is pretty clear.
+Dialogue: 0,0:40:33.84,0:40:43.92,Sub,,0,0,0,,They AI is going to be producing fake fake data and and false information at very high speeds
+Dialogue: 0,0:40:43.97,0:40:50.40,Sub,,0,0,0,,and so you have to take somebody with very high speeds to detect that and to shut it down.
+Dialogue: 0,0:40:50.45,0:40:51.51,Sub,,0,0,0,,Higher speeds.
+Dialogue: 0,0:40:51.56,0:40:52.35,Sub,,0,0,0,,Higher speeds.
+Dialogue: 0,0:40:52.40,0:40:53.13,Sub,,0,0,0,,That's right.
+Dialogue: 0,0:40:53.18,0:40:53.63,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:40:53.68,0:41:00.08,Sub,,0,0,0,,And so so so I think this is this is very similar to cyber cyber security.
+Dialogue: 0,0:41:00.13,0:41:08.93,Sub,,0,0,0,,It it you're almost every single company and every single country is being hacked hacked and you know attacked at almost all times and so it's
+Dialogue: 0,0:41:08.98,0:41:17.63,Sub,,0,0,0,,going to take even better cyber security to defend ourselves and so I think the um we just have to make sure that we stay ahead.
+Dialogue: 0,0:41:17.68,0:41:19.14,Sub,,0,0,0,,And AI will help us do that.
+Dialogue: 0,0:41:19.19,0:41:21.19,Sub,,0,0,0,,It's going to take AI to help us stay ahead.
+Dialogue: 0,0:41:21.24,0:41:21.54,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:41:21.56,0:41:21.86,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:41:21.89,0:41:28.55,Sub,,0,0,0,,So before we get to questions I want to ask you about obviously you're wildly successful about to be admitted to the National
+Dialogue: 0,0:41:28.60,0:41:37.13,Sub,,0,0,0,,Academies and so on and and how do you think about your you know responsibility as a citizen as a philanthropist supporting education.
+Dialogue: 0,0:41:37.18,0:41:40.54,Sub,,0,0,0,,I mean just you know kind of own that piece of your remit now.
+Dialogue: 0,0:41:40.59,0:41:42.47,Sub,,0,0,0,,How do you think about that?
+Dialogue: 0,0:41:42.52,0:41:48.12,Sub,,0,0,0,,Well the most the the first thing that that um be a good father.
+Dialogue: 0,0:41:48.17,0:41:51.75,Sub,,0,0,0,,That's number one be a good father and husband.
+Dialogue: 0,0:41:51.80,0:41:56.97,Sub,,0,0,0,,Number two you were going to get that in there that husband pays cuz there she is right there.
+Dialogue: 0,0:41:57.02,0:42:00.31,Sub,,0,0,0,,Yeah. husband brought my wife Yeah.
+Dialogue: 0,0:42:00.36,0:42:12.23,Sub,,0,0,0,,um the first thing building Nvidia is probably the single best thing that that any of our employees any one of us has ever done.
+Dialogue: 0,0:42:12.28,0:42:20.34,Sub,,0,0,0,,We we've built what what is what is recognized one of the most consequential technology companies in history.
+Dialogue: 0,0:42:20.39,0:42:21.25,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:42:21.30,0:42:29.55,Sub,,0,0,0,,I and our technology is used in groundbreaking work in so many different fields of science and industries.
+Dialogue: 0,0:42:29.60,0:42:37.67,Sub,,0,0,0,,We've um of course I invented invented
+Dialogue: 0,0:42:37.72,0:42:41.88,Sub,,0,0,0,,technologies over the course of three decades.
+Dialogue: 0,0:42:41.93,0:42:42.59,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:42:42.64,0:42:48.62,Sub,,0,0,0,,And that that um I nobody nobody could imagine.
+Dialogue: 0,0:42:48.67,0:42:49.34,Sub,,0,0,0,,Right.
+Dialogue: 0,0:42:49.39,0:42:52.00,Sub,,0,0,0,,And and um that's why I'm proud of that.
+Dialogue: 0,0:42:52.05,0:43:02.48,Sub,,0,0,0,,That's probably our most important work and applying this technology and advancing it further for some of the most challenging and pressing
+Dialogue: 0,0:43:02.53,0:43:08.03,Sub,,0,0,0,,issues of our time whether it's digital biology or health care
+Dialogue: 0,0:43:08.08,0:43:14.83,Sub,,0,0,0,,is is some of our some of our um uh best futures.
+Dialogue: 0,0:43:14.88,0:43:23.58,Sub,,0,0,0,,I I can't imagine what we're going to be like in 10 years frankly and when we apply artificial intelligence
+Dialogue: 0,0:43:23.63,0:43:33.91,Sub,,0,0,0,,to the field of biology and to for us to not to move beyond calling it life sciences to life engineering.
+Dialogue: 0,0:43:33.96,0:43:41.29,Sub,,0,0,0,,Just like we do and for us to be able to understand biology the way we understand many other fields of science
+Dialogue: 0,0:43:41.34,0:43:51.33,Sub,,0,0,0,,would be incredible and so so I think that that's probably our single greatest potential of helping and and working on it.
+Dialogue: 0,0:43:51.38,0:43:51.68,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:43:51.67,0:44:00.80,Sub,,0,0,0,,Well congratulations you obviously have built something incredibly powerful and fascinating and you're well learner every day I can tell already.
+Dialogue: 0,0:44:00.85,0:44:07.19,Sub,,0,0,0,,So all right we're going to have questions from the audience and I think there's some out in the ether.
+Dialogue: 0,0:44:07.24,0:44:11.08,Sub,,0,0,0,,We have several hundred people online that are that are watching as well.
+Dialogue: 0,0:44:11.13,0:44:13.67,Sub,,0,0,0,,So hands popping up everywhere.
+Dialogue: 0,0:44:13.72,0:44:15.95,Sub,,0,0,0,,If we could get some microphones around.
+Dialogue: 0,0:44:16.00,0:44:17.19,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:44:17.24,0:44:18.53,Sub,,0,0,0,,Hi my name's Chris Barnard.
+Dialogue: 0,0:44:18.58,0:44:20.98,Sub,,0,0,0,,First of all thank you for everything you do.
+Dialogue: 0,0:44:21.03,0:44:23.79,Sub,,0,0,0,,As an investor from 2017 a personal thank you as well.
+Dialogue: 0,0:44:23.84,0:44:26.75,Sub,,0,0,0,,Yeah the stock's been doing very well.
+Dialogue: 0,0:44:26.80,0:44:31.58,Sub,,0,0,0,,Obviously saw some very exciting news last week with Microsoft helping Constellation reopen
+Dialogue: 0,0:44:31.63,0:44:35.77,Sub,,0,0,0,,Three Mile Island and the power of nuclear to potentially help this AI future.
+Dialogue: 0,0:44:35.82,0:44:40.42,Sub,,0,0,0,,I wonder if you have any thoughts on how nuclear can be an integral part of this.
+Dialogue: 0,0:44:40.47,0:44:41.03,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:44:41.08,0:44:46.09,Sub,,0,0,0,,Nuclear nuclear is going to be a vital integral part of this.
+Dialogue: 0,0:44:46.14,0:44:50.94,Sub,,0,0,0,,No one no one energy source will be sufficient for the world.
+Dialogue: 0,0:44:50.99,0:44:51.33,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:44:51.36,0:44:54.23,Sub,,0,0,0,,And so we'll have to find that balance.
+Dialogue: 0,0:44:54.28,0:45:05.47,Sub,,0,0,0,,It's it's not one particular way versus others but but there are a lot of good ways and and but there's no better way than to not waste energy.
+Dialogue: 0,0:45:05.52,0:45:10.18,Sub,,0,0,0,,And and there there are a couple of ways that that we can contribute to doing that.
+Dialogue: 0,0:45:10.23,0:45:12.59,Sub,,0,0,0,,Accelerated computing is one way.
+Dialogue: 0,0:45:12.64,0:45:20.62,Sub,,0,0,0,,And the reason why we become so successful is because the computational energy necessary to get
+Dialogue: 0,0:45:20.67,0:45:27.71,Sub,,0,0,0,,the work done using the Nvidia approach is orders of magnitude less than using general purpose computing.
+Dialogue: 0,0:45:27.76,0:45:34.47,Sub,,0,0,0,,And not wasting energy not wasting money not wasting time is probably the single best thing we can do.
+Dialogue: 0,0:45:34.52,0:45:38.71,Sub,,0,0,0,,There's a whole bunch of other ways that we could not waste energy.
+Dialogue: 0,0:45:38.76,0:45:42.47,Sub,,0,0,0,,I would really love to see our power grid all be smart.
+Dialogue: 0,0:45:42.52,0:45:50.31,Sub,,0,0,0,,You know to today our nation's power grid was built a long time ago because we're one of the earliest countries to become prosperous.
+Dialogue: 0,0:45:50.36,0:45:58.65,Sub,,0,0,0,,And and that power grid could benefit from the insertion of artificial intelligence and smart technology into it.
+Dialogue: 0,0:45:58.70,0:46:05.72,Sub,,0,0,0,,And that smart grid that grid when become smart will help us properly provision technology
+Dialogue: 0,0:46:05.77,0:46:11.35,Sub,,0,0,0,,to the right places and you know connect the right sources and sinks like we connect
+Dialogue: 0,0:46:11.40,0:46:23.01,Sub,,0,0,0,,the right drivers and writers you know and so in order for Uber to work you need a smart grid and and we could we can go create that smart grid.
+Dialogue: 0,0:46:23.06,0:46:24.18,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:46:24.23,0:46:25.23,Sub,,0,0,0,,Others.
+Dialogue: 0,0:46:25.28,0:46:28.21,Sub,,0,0,0,,Colin McCormick from Georgetown University and Carbon Direct.
+Dialogue: 0,0:46:28.26,0:46:32.15,Sub,,0,0,0,,One of the huge challenges with renewable energy today is the interconnection queue.
+Dialogue: 0,0:46:32.20,0:46:39.75,Sub,,0,0,0,,We have thousands of gigawatts of solar wind and batteries waiting to connect sometimes for years for studies to be completed.
+Dialogue: 0,0:46:39.80,0:46:48.79,Sub,,0,0,0,,What can tech companies like Nvidia do to speed up the interconnection queue and get that renewable energy generating faster than it is today?
+Dialogue: 0,0:46:48.84,0:46:49.99,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:46:50.04,0:47:00.23,Sub,,0,0,0,,You you know the reason why fossil fuel is so effective is because time mother nature compressed it into a transportable form form for us.
+Dialogue: 0,0:47:00.28,0:47:04.19,Sub,,0,0,0,,And we can take it anywhere and refine it from anywhere.
+Dialogue: 0,0:47:04.24,0:47:14.87,Sub,,0,0,0,,And the challenge of course with electric energy is the battery costs a lot of money and and solar and sun is only out for about half of the day.
+Dialogue: 0,0:47:14.92,0:47:19.79,Sub,,0,0,0,,And and so there there are a variety of of challenges of sustainable energy in that way.
+Dialogue: 0,0:47:19.84,0:47:25.01,Sub,,0,0,0,,One way that I described earlier is instead of transporting the energy to
+Dialogue: 0,0:47:25.06,0:47:31.31,Sub,,0,0,0,,where we need it let's transport the data center to where there's energy source.
+Dialogue: 0,0:47:31.36,0:47:34.27,Sub,,0,0,0,,And we put that data we can build a data center anywhere.
+Dialogue: 0,0:47:34.32,0:47:38.87,Sub,,0,0,0,,The computer the AI doesn't care where it goes to school.
+Dialogue: 0,0:47:38.92,0:47:45.35,Sub,,0,0,0,,And and you know although we would like the AI to be trained as continuously as
+Dialogue: 0,0:47:45.40,0:47:50.79,Sub,,0,0,0,,possible taking a nap for a couple of hours while the sun is down it's it's okay.
+Dialogue: 0,0:47:50.84,0:47:56.21,Sub,,0,0,0,,You know we can live with that and and so so long as the energy is is abundant and
+Dialogue: 0,0:47:56.26,0:48:01.71,Sub,,0,0,0,,and there's going to be excess anyways I I think that is a great way to do it and
+Dialogue: 0,0:48:01.76,0:48:07.87,Sub,,0,0,0,,we can then take that AI compress it that energy compress it into this little tiny thing called large
+Dialogue: 0,0:48:07.92,0:48:13.73,Sub,,0,0,0,,language model and then we can transport that anywhere we like to use it and so Others up here.
+Dialogue: 0,0:48:13.78,0:48:14.38,Sub,,0,0,0,,Let's see.
+Dialogue: 0,0:48:14.43,0:48:15.15,Sub,,0,0,0,,There we go.
+Dialogue: 0,0:48:15.20,0:48:15.87,Sub,,0,0,0,,You're next.
+Dialogue: 0,0:48:15.92,0:48:17.80,Sub,,0,0,0,,Hi Katie Ott with Constellation Energy.
+Dialogue: 0,0:48:17.85,0:48:22.88,Sub,,0,0,0,,We actually made that announcement last week about bringing the nuclear plant back to Congratulations.
+Dialogue: 0,0:48:22.93,0:48:23.36,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:48:23.41,0:48:23.83,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:48:23.88,0:48:25.27,Sub,,0,0,0,,It was very exciting.
+Dialogue: 0,0:48:25.32,0:48:31.48,Sub,,0,0,0,,But kind of pulling off of what you were just saying we have heard uh we have lots more to offer right?
+Dialogue: 0,0:48:31.53,0:48:38.03,Sub,,0,0,0,,We have lots more nuclear energy in this country that can be used to serve data centers AI factories.
+Dialogue: 0,0:48:38.08,0:48:44.99,Sub,,0,0,0,,um But we've heard about some proposals that would require what they say is additionality for AI and this idea
+Dialogue: 0,0:48:45.04,0:48:49.60,Sub,,0,0,0,,that if you're going to build an AI factory you have to build commensurate energy to go along with it.
+Dialogue: 0,0:48:49.65,0:48:55.49,Sub,,0,0,0,,And I'm just curious your thoughts on the feasibility of that and whether that's going to allow us to really win the race
+Dialogue: 0,0:48:55.54,0:49:03.67,Sub,,0,0,0,,on AI or if there needs to be some other policies to consider about how we can use both existing and new resources.
+Dialogue: 0,0:49:03.72,0:49:11.40,Sub,,0,0,0,,I was I was a I was here a couple weeks ago and the administration was very clear that
+Dialogue: 0,0:49:11.46,0:49:21.87,Sub,,0,0,0,,that um they would like American companies to have as much opportunity to build data centers here in America.
+Dialogue: 0,0:49:21.92,0:49:30.40,Sub,,0,0,0,,And and the administration recognizes that that um permitting and getting access
+Dialogue: 0,0:49:30.45,0:49:35.11,Sub,,0,0,0,,to the power in various various places around the country could be difficult.
+Dialogue: 0,0:49:35.16,0:49:45.91,Sub,,0,0,0,,And that they would like to be an ally to help um, uh, with with, uh, uh, accelerating that process.
+Dialogue: 0,0:49:45.96,0:49:51.20,Sub,,0,0,0,,So, that the American companies don't have to look offshore and outside our country to do so.
+Dialogue: 0,0:49:51.25,0:49:59.11,Sub,,0,0,0,,And so, I I think this is one building the AI infrastructure of our country is a vital national interest.
+Dialogue: 0,0:49:59.16,0:50:07.51,Sub,,0,0,0,,And and although although uh, it consumes energy uh, to train the models,
+Dialogue: 0,0:50:07.56,0:50:14.63,Sub,,0,0,0,,the models that are created will do the work much more energy efficiently.
+Dialogue: 0,0:50:14.68,0:50:19.58,Sub,,0,0,0,,And so, when you think about the longitudinal the life the lifespan of an AI, um,
+Dialogue: 0,0:50:19.63,0:50:24.44,Sub,,0,0,0,,the energy efficiency and the productivity gains that we'll get from it from an
+Dialogue: 0,0:50:24.49,0:50:29.85,Sub,,0,0,0,,industry from from from our society is going to be is going to be incredible.
+Dialogue: 0,0:50:29.90,0:50:35.04,Sub,,0,0,0,,And, um, uh, and so, we've we spent some time to help people understand the big pictures of AI,
+Dialogue: 0,0:50:35.09,0:50:39.68,Sub,,0,0,0,,uh, the challenges of of, um, provisioning energy to AI,
+Dialogue: 0,0:50:39.73,0:50:43.07,Sub,,0,0,0,,but also some of the some of the things to to, uh,
+Dialogue: 0,0:50:43.12,0:50:50.23,Sub,,0,0,0,,realize that the AI is running an AI factory and training an AI doesn't have to be like running a hospital.
+Dialogue: 0,0:50:50.28,0:50:54.93,Sub,,0,0,0,,It doesn't need to have 99.999999% uptime.
+Dialogue: 0,0:50:54.98,0:50:55.29,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:50:55.32,0:51:03.67,Sub,,0,0,0,,You know, if it's down if it's down a couple of percent, you know, 5% from time to time, it's okay.
+Dialogue: 0,0:51:03.72,0:51:04.14,Sub,,0,0,0,,It's okay.
+Dialogue: 0,0:51:04.19,0:51:09.07,Sub,,0,0,0,,You know, it just stops studying for a few hours, you know, and you'll pick up where you left off.
+Dialogue: 0,0:51:09.12,0:51:11.73,Sub,,0,0,0,,And so, it's actually called checkpoint and restart.
+Dialogue: 0,0:51:11.78,0:51:14.64,Sub,,0,0,0,,You know, take a break and we'll pick up where you left off.
+Dialogue: 0,0:51:14.69,0:51:22.01,Sub,,0,0,0,,And so, so, I I think, um, we should understand the the the challenges, but also the differences.
+Dialogue: 0,0:51:22.06,0:51:27.31,Sub,,0,0,0,,The challenges and the differences of provisioning, uh, energy to artificial intelligence.
+Dialogue: 0,0:51:27.36,0:51:29.13,Sub,,0,0,0,,That's like this question on the screen here.
+Dialogue: 0,0:51:29.18,0:51:33.84,Sub,,0,0,0,,Will AI really save energy or we just use it the efficiencies to power other tasks?
+Dialogue: 0,0:51:33.89,0:51:40.68,Sub,,0,0,0,,So, you've answered that in part, but is there any way to say like how much or what our target might be?
+Dialogue: 0,0:51:40.73,0:51:42.63,Sub,,0,0,0,,Well, we have many examples.
+Dialogue: 0,0:51:42.68,0:51:47.83,Sub,,0,0,0,,Uh, one example one example is, uh, the example I was giving about weather simulation.
+Dialogue: 0,0:51:47.88,0:51:48.18,Sub,,0,0,0,,Right.
+Dialogue: 0,0:51:48.20,0:51:48.50,Sub,,0,0,0,,Right.
+Dialogue: 0,0:51:48.52,0:51:48.86,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:51:48.89,0:51:54.66,Sub,,0,0,0,,We we, uh, predict the weather 3,000 times less energy than a supercomputer.
+Dialogue: 0,0:51:54.70,0:51:55.20,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:51:55.25,0:52:00.05,Sub,,0,0,0,,Um, uh, the the number of examples are are quite abundant, um,
+Dialogue: 0,0:52:00.10,0:52:07.03,Sub,,0,0,0,,but it doesn't change the fact that this question is the other side of it is probably right.
+Dialogue: 0,0:52:07.08,0:52:09.95,Sub,,0,0,0,,That we'll end up saving energy, Mhm.
+Dialogue: 0,0:52:10.00,0:52:14.23,Sub,,0,0,0,,but society will then apply the energy saved to go do something else.
+Dialogue: 0,0:52:14.28,0:52:14.82,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:52:14.87,0:52:15.40,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:52:15.45,0:52:18.68,Sub,,0,0,0,,And and, um, uh, we call that prosperity.
+Dialogue: 0,0:52:18.73,0:52:19.12,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:52:19.15,0:52:20.19,Sub,,0,0,0,,In Economic growth.
+Dialogue: 0,0:52:20.24,0:52:20.56,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:52:20.59,0:52:21.53,Sub,,0,0,0,,Economic growth.
+Dialogue: 0,0:52:21.58,0:52:25.54,Sub,,0,0,0,,Uh, the improvement in quality of life, which we want to see.
+Dialogue: 0,0:52:25.59,0:52:31.03,Sub,,0,0,0,,The fact of the matter is on an absolute basis,
+Dialogue: 0,0:52:31.08,0:52:41.67,Sub,,0,0,0,,I hope that we all hope that the population of Earth consumes more energy someday.
+Dialogue: 0,0:52:41.72,0:52:45.25,Sub,,0,0,0,,Because it's directly related to quality of life.
+Dialogue: 0,0:52:45.30,0:52:47.59,Sub,,0,0,0,,It's directly related to prosperity.
+Dialogue: 0,0:52:47.64,0:52:51.44,Sub,,0,0,0,,We we want every everyone to enjoy this quality of life.
+Dialogue: 0,0:52:51.49,0:52:51.79,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:52:51.82,0:52:53.47,Sub,,0,0,0,,And so, Absolutely.
+Dialogue: 0,0:52:53.52,0:52:54.03,Sub,,0,0,0,,Amen.
+Dialogue: 0,0:52:54.08,0:52:55.41,Sub,,0,0,0,,All right, over here.
+Dialogue: 0,0:52:55.46,0:52:58.07,Sub,,0,0,0,,Yes, there's a microphone.
+Dialogue: 0,0:52:58.12,0:52:58.97,Sub,,0,0,0,,Where are we?
+Dialogue: 0,0:52:59.02,0:53:01.76,Sub,,0,0,0,,We Okay, over here, but please microphone come over here.
+Dialogue: 0,0:53:01.81,0:53:02.87,Sub,,0,0,0,,Oh, you've got one.
+Dialogue: 0,0:53:02.92,0:53:03.95,Sub,,0,0,0,,Okay, yes, ma'am.
+Dialogue: 0,0:53:04.00,0:53:05.22,Sub,,0,0,0,,Okay, thank you so much.
+Dialogue: 0,0:53:05.28,0:53:06.33,Sub,,0,0,0,,Thank you, Mr. Jensen.
+Dialogue: 0,0:53:06.38,0:53:10.86,Sub,,0,0,0,,Really appreciate your commentary today and I want to touch on one of your critical points,
+Dialogue: 0,0:53:10.91,0:53:16.14,Sub,,0,0,0,,which is the importance of educating policy makers on the realities of AI.
+Dialogue: 0,0:53:16.19,0:53:17.61,Sub,,0,0,0,,So, my name is Amit Elazari.
+Dialogue: 0,0:53:17.66,0:53:22.95,Sub,,0,0,0,,I come from the tech policy profession previously at Intel and today I'm a startup founder,
+Dialogue: 0,0:53:23.00,0:53:27.79,Sub,,0,0,0,,co-founder of a company called Open Policy and we use AI and work with some of the best unicorns
+Dialogue: 0,0:53:27.84,0:53:33.19,Sub,,0,0,0,,in the world to better connect them to what's coming from policy and be able to scale policy engagement,
+Dialogue: 0,0:53:33.24,0:53:38.87,Sub,,0,0,0,,a profession that has, uh, you know, some special expertise that requires that translation.
+Dialogue: 0,0:53:38.92,0:53:44.10,Sub,,0,0,0,,And I want to ask your opinion on how AI can be used to scale, uh, think tank work,
+Dialogue: 0,0:53:44.15,0:53:49.03,Sub,,0,0,0,,that this connection between innovation and policy making and just liberate a lot of this
+Dialogue: 0,0:53:49.08,0:53:55.71,Sub,,0,0,0,,information that is here in DC about what's coming and bring it to Silicon Valley.
+Dialogue: 0,0:53:55.76,0:53:58.09,Sub,,0,0,0,,You said it so fast.
+Dialogue: 0,0:53:58.14,0:54:04.39,Sub,,0,0,0,,I think my data rate is about 80% of yours.
+Dialogue: 0,0:54:04.44,0:54:10.86,Sub,,0,0,0,,So, And it's uh, I I think I think I I under I I think I understand.
+Dialogue: 0,0:54:10.91,0:54:16.79,Sub,,0,0,0,,If I answered the wrong question, uh, let me apologize in advance.
+Dialogue: 0,0:54:16.84,0:54:27.67,Sub,,0,0,0,,The um, AI has a wonderful ability to teach, to explain very complicated concepts.
+Dialogue: 0,0:54:27.72,0:54:35.95,Sub,,0,0,0,,And I use AI today to as I was mentioning to Margaret that I use it literally every day.
+Dialogue: 0,0:54:36.00,0:54:41.79,Sub,,0,0,0,,I literally use AI every single day and I use it to explain things to me.
+Dialogue: 0,0:54:41.84,0:54:48.91,Sub,,0,0,0,,And when when, uh, it's a new concept, uh, I might ask it to explain it as simply as possible.
+Dialogue: 0,0:54:48.96,0:54:53.96,Sub,,0,0,0,,And then I can dig further and further and further and and, uh, delve further into it.
+Dialogue: 0,0:54:54.01,0:54:59.95,Sub,,0,0,0,,And and I love the fact that it could explain it as a fifth grader.
+Dialogue: 0,0:55:00.00,0:55:03.95,Sub,,0,0,0,,I love the fact that that, um, uh, it can give me more depth.
+Dialogue: 0,0:55:04.00,0:55:09.49,Sub,,0,0,0,,And and I can then ask it, you know, explain it to me now from the first principles of science.
+Dialogue: 0,0:55:09.54,0:55:16.11,Sub,,0,0,0,,And and, um, uh, uh, now explain it with analogies.
+Dialogue: 0,0:55:16.16,0:55:19.19,Sub,,0,0,0,,Now break it down step by step.
+Dialogue: 0,0:55:19.24,0:55:25.77,Sub,,0,0,0,,You know, all these different ways of learning because, you know, when we engage new ideas, we need to engage at different levels and ideally,
+Dialogue: 0,0:55:25.82,0:55:33.14,Sub,,0,0,0,,you know, at the highest possible level and break down the information, you know, into its elemental parts over time.
+Dialogue: 0,0:55:33.19,0:55:40.27,Sub,,0,0,0,,And so, I I I do think that that uh, the work that you're doing using AI, um,
+Dialogue: 0,0:55:40.32,0:55:47.35,Sub,,0,0,0,,to expose the technologies to policy makers uh, would be a wonderful benefit to them.
+Dialogue: 0,0:55:47.40,0:55:51.56,Sub,,0,0,0,,Now, in the future, hopefully they'll just use it themselves, you know, just it's on the phone.
+Dialogue: 0,0:55:51.61,0:55:53.68,Sub,,0,0,0,,Just, you know, which is the way I use it.
+Dialogue: 0,0:55:53.73,0:55:57.91,Sub,,0,0,0,,And and so, it's like my my phone now is is super smart.
+Dialogue: 0,0:55:57.96,0:55:58.44,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:55:58.49,0:56:06.73,Sub,,0,0,0,,But the ability to query in a intelligent and useful way is certainly a skill that you obviously have.
+Dialogue: 0,0:56:06.78,0:56:07.19,Sub,,0,0,0,,Sir.
+Dialogue: 0,0:56:07.24,0:56:08.38,Sub,,0,0,0,,Agent and thanks for coming here.
+Dialogue: 0,0:56:08.43,0:56:09.81,Sub,,0,0,0,,Mike Chan from Deep Ventures.
+Dialogue: 0,0:56:09.86,0:56:14.83,Sub,,0,0,0,,Um, first of all, you and my wife share a last name, so we should talk about that sometime.
+Dialogue: 0,0:56:14.88,0:56:16.07,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:56:16.12,0:56:25.39,Sub,,0,0,0,,Uh, second of all, I invest in I owe you money, Check my IOUs.
+Dialogue: 0,0:56:25.44,0:56:27.47,Sub,,0,0,0,,Um, I'm just kidding.
+Dialogue: 0,0:56:27.52,0:56:30.67,Sub,,0,0,0,,Uh, so, I, uh, invest Humor is allowed in DC, isn't Yeah.
+Dialogue: 0,0:56:30.72,0:56:32.27,Sub,,0,0,0,,Yeah, absolutely.
+Dialogue: 0,0:56:32.32,0:56:34.39,Sub,,0,0,0,,This is my first meeting.
+Dialogue: 0,0:56:34.44,0:56:36.71,Sub,,0,0,0,,I got to close correct immediately.
+Dialogue: 0,0:56:36.76,0:56:37.51,Sub,,0,0,0,,Um, so,
+Dialogue: 0,0:56:37.56,0:56:43.81,Sub,,0,0,0,,I invest in crypto startups and our industry would kind of like to thank your industry for taking
+Dialogue: 0,0:56:43.86,0:56:49.84,Sub,,0,0,0,,a little bit of the heat off of the negative PR of Bitcoin mining and and all that.
+Dialogue: 0,0:56:49.89,0:56:55.57,Sub,,0,0,0,,But but that that being said, um, you know, a lot of power producers, energy producers, um,
+Dialogue: 0,0:56:55.62,0:57:01.59,Sub,,0,0,0,,the excess energy they allocate that to Bitcoin mining because there's a very clear market there.
+Dialogue: 0,0:57:01.64,0:57:03.58,Sub,,0,0,0,,Um, kind of one-to-one financial market there.
+Dialogue: 0,0:57:03.63,0:57:09.27,Sub,,0,0,0,,Do you see something like that possible in terms of like a smart grid or like having those companies be able
+Dialogue: 0,0:57:09.32,0:57:19.09,Sub,,0,0,0,,to dedicate some of that excess energy to training models and like and providing that power to You just gave um,
+Dialogue: 0,0:57:19.14,0:57:29.83,Sub,,0,0,0,,uh, a an a current example of excess energy being used to convert and to store that energy.
+Dialogue: 0,0:57:29.88,0:57:36.47,Sub,,0,0,0,,Essentially, what Bitcoin is doing is taking excess energy, storing it into a new form.
+Dialogue: 0,0:57:36.52,0:57:36.82,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:57:36.80,0:57:38.00,Sub,,0,0,0,,It's called currency.
+Dialogue: 0,0:57:38.05,0:57:38.42,Sub,,0,0,0,,Right.
+Dialogue: 0,0:57:38.45,0:57:41.71,Sub,,0,0,0,,And you take that currency and you take it wherever you like.
+Dialogue: 0,0:57:41.76,0:57:46.63,Sub,,0,0,0,,And so, you took energy from one place and now you've transported everywhere.
+Dialogue: 0,0:57:46.68,0:57:49.35,Sub,,0,0,0,,Now, of course, that's just Bitcoin.
+Dialogue: 0,0:57:49.40,0:57:57.03,Sub,,0,0,0,,Imagine a much more universal currency called intelligence.
+Dialogue: 0,0:57:57.08,0:58:00.55,Sub,,0,0,0,,Using exactly all the same concept that you described.
+Dialogue: 0,0:58:00.60,0:58:03.79,Sub,,0,0,0,,You you find places with excess energy.
+Dialogue: 0,0:58:03.84,0:58:06.55,Sub,,0,0,0,,Go put a data center there.
+Dialogue: 0,0:58:06.60,0:58:09.01,Sub,,0,0,0,,Trans transfer that energy.
+Dialogue: 0,0:58:09.06,0:58:12.51,Sub,,0,0,0,,Compress it into an artificial intelligence model.
+Dialogue: 0,0:58:12.56,0:58:15.09,Sub,,0,0,0,,Take that model all over the place to use it.
+Dialogue: 0,0:58:15.14,0:58:16.08,Sub,,0,0,0,,Make sense?
+Dialogue: 0,0:58:16.13,0:58:16.99,Sub,,0,0,0,,Same idea.
+Dialogue: 0,0:58:17.04,0:58:17.83,Sub,,0,0,0,,Excellent.
+Dialogue: 0,0:58:17.88,0:58:20.27,Sub,,0,0,0,,Okay, we're going to ask this question and then one more.
+Dialogue: 0,0:58:20.32,0:58:26.64,Sub,,0,0,0,,It says, can you discuss the difference in requirements for hydrogen production with AI versus without?
+Dialogue: 0,0:58:26.69,0:58:27.95,Sub,,0,0,0,,I have no idea.
+Dialogue: 0,0:58:28.00,0:58:29.04,Sub,,0,0,0,,I was going to say.
+Dialogue: 0,0:58:29.09,0:58:32.17,Sub,,0,0,0,,I mean, ask ask your phone to answer this this question.
+Dialogue: 0,0:58:32.22,0:58:32.83,Sub,,0,0,0,,All right.
+Dialogue: 0,0:58:32.88,0:58:34.07,Sub,,0,0,0,,Thank you for that, though.
+Dialogue: 0,0:58:34.12,0:58:34.87,Sub,,0,0,0,,Okay, all right.
+Dialogue: 0,0:58:34.92,0:58:35.96,Sub,,0,0,0,,Okay, last question.
+Dialogue: 0,0:58:36.01,0:58:37.95,Sub,,0,0,0,,Yeah, hello, Jensen.
+Dialogue: 0,0:58:38.00,0:58:40.04,Sub,,0,0,0,,I'm a lawyer from South Korea.
+Dialogue: 0,0:58:40.09,0:58:46.64,Sub,,0,0,0,,I have observed how Nvidia's AI technology are revolutionizing various industries.
+Dialogue: 0,0:58:46.69,0:58:53.99,Sub,,0,0,0,,In the legal sector, the adoption of AI is accelerating particularly in area like document analysis,
+Dialogue: 0,0:58:54.04,0:59:00.51,Sub,,0,0,0,,automation and the regulatory compliance monitoring, which hold significant potential.
+Dialogue: 0,0:59:00.56,0:59:02.16,Sub,,0,0,0,,From your perspective,
+Dialogue: 0,0:59:02.21,0:59:09.05,Sub,,0,0,0,,how do you envision AI technology being utilized in the legal and regulatory industries
+Dialogue: 0,0:59:09.10,0:59:15.75,Sub,,0,0,0,,in the future and what innovations might we expect to see in these fields?
+Dialogue: 0,0:59:15.80,0:59:16.10,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:59:16.12,0:59:20.87,Sub,,0,0,0,,Regulatory implications of AI.
+Dialogue: 0,0:59:20.92,0:59:24.47,Sub,,0,0,0,,Regulatory implications of AI.
+Dialogue: 0,0:59:24.52,0:59:30.77,Sub,,0,0,0,,Um, there will be no task done.
+Dialogue: 0,0:59:30.82,0:59:37.97,Sub,,0,0,0,,No knowledge task done in any industry by anyone that
+Dialogue: 0,0:59:38.02,0:59:44.15,Sub,,0,0,0,,will not involve AI in the loop in the near future.
+Dialogue: 0,0:59:44.20,0:59:51.11,Sub,,0,0,0,,Any information knowledge worker It could be information about an engineer
+Dialogue: 0,0:59:51.16,0:59:59.23,Sub,,0,0,0,,um legal documents and software code reads similarly if well written.
+Dialogue: 0,0:59:59.28,1:00:05.99,Sub,,0,0,0,,And uh AI contributes to to software coding significantly today.
+Dialogue: 0,1:00:06.04,1:00:09.67,Sub,,0,0,0,,We use AI to code, write our software inside our company.
+Dialogue: 0,1:00:09.72,1:00:13.40,Sub,,0,0,0,,We use AI to debug our software, which is to find the flaws in it.
+Dialogue: 0,1:00:13.45,1:00:16.78,Sub,,0,0,0,,You will use AI to produce legal documents.
+Dialogue: 0,1:00:16.83,1:00:19.28,Sub,,0,0,0,,You will use AI to analyze documents.
+Dialogue: 0,1:00:19.33,1:00:23.07,Sub,,0,0,0,,You will use AI to enhance the legal documents.
+Dialogue: 0,1:00:23.12,1:00:30.15,Sub,,0,0,0,,And so uh every aspect of of information knowledge will involve that.
+Dialogue: 0,1:00:30.20,1:00:35.44,Sub,,0,0,0,,Therefore all policy will involve AI in the future.
+Dialogue: 0,1:00:35.49,1:00:39.15,Sub,,0,0,0,,And the reason for that is policy is code.
+Dialogue: 0,1:00:39.20,1:00:41.95,Sub,,0,0,0,,It's code for uh for appropriate behavior.
+Dialogue: 0,1:00:42.00,1:00:42.89,Sub,,0,0,0,,Mhm.
+Dialogue: 0,1:00:42.94,1:00:52.75,Sub,,0,0,0,,And code um uh if if written well um uh doesn't contradict itself.
+Dialogue: 0,1:00:52.80,1:00:59.35,Sub,,0,0,0,,And and um uh achieves the mission the the goal of of uh the policy.
+Dialogue: 0,1:00:59.40,1:01:04.32,Sub,,0,0,0,,And so uh policy like code will also be enhanced with AI.
+Dialogue: 0,1:01:04.37,1:01:10.63,Sub,,0,0,0,,Uh almost everything that we do in the future will have AI in the loop and and human in the loop,
+Dialogue: 0,1:01:10.68,1:01:14.10,Sub,,0,0,0,,you know, we'll be collaborating uh to to do everything.
+Dialogue: 0,1:01:14.15,1:01:17.33,Sub,,0,0,0,,That is the perfect note to end on, Jensen, I think.
+Dialogue: 0,1:01:17.38,1:01:20.99,Sub,,0,0,0,,So, let join me in thanking this fantastic Thank you.
+Dialogue: 0,1:01:21.04,1:01:22.59,Sub,,0,0,0,,Thank you for the answer.
+Dialogue: 0,1:01:22.64,1:01:23.87,Sub,,0,0,0,,Thank you.
+Dialogue: 0,1:01:23.92,1:01:25.20,Sub,,0,0,0,,Thank you.

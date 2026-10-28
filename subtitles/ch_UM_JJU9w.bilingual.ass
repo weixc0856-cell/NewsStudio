@@ -1,0 +1,1391 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:01.01,Sub,,0,0,0,,Uh, welcome to Figure.
+Dialogue: 0,0:00:01.06,0:00:02.39,Sub,,0,0,0,,We make humanoid robots here.
+Dialogue: 0,0:00:02.44,0:00:04.80,Sub,,0,0,0,,We design them, we build them, we test them all.
+Dialogue: 0,0:00:04.85,0:00:07.14,Sub,,0,0,0,,Here, this is a secret room that nobody's allowed to come in.
+Dialogue: 0,0:00:07.19,0:00:09.14,Sub,,0,0,0,,I'm going to show you every robot we've ever built.
+Dialogue: 0,0:00:09.19,0:00:11.04,Sub,,0,0,0,,So, here we lost like a left knee.
+Dialogue: 0,0:00:11.09,0:00:14.82,Sub,,0,0,0,,And you can see the robot's kind of like hobbling on the left leg.
+Dialogue: 0,0:00:14.87,0:00:17.57,Sub,,0,0,0,,So, we have a robot doing burpees here.
+Dialogue: 0,0:00:17.62,0:00:20.59,Sub,,0,0,0,,This is where we manufacture figure 3 robots.
+Dialogue: 0,0:00:20.64,0:00:21.01,Sub,,0,0,0,,Wow.
+Dialogue: 0,0:00:21.04,0:00:25.41,Sub,,0,0,0,,And this was the first car in the world built by a humanoid robot that we're aware of.
+Dialogue: 0,0:00:25.46,0:00:28.62,Sub,,0,0,0,,We have a robot here that is designed to tidy the house.
+Dialogue: 0,0:00:28.67,0:00:33.42,Sub,,0,0,0,,These robots are running purely autonomously from a onboard AI policy called Helix.
+Dialogue: 0,0:00:33.47,0:00:34.43,Sub,,0,0,0,,Give it a push.
+Dialogue: 0,0:00:34.48,0:00:39.04,Sub,,0,0,0,,Oh gosh.
+Dialogue: 0,0:00:39.09,0:00:42.12,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:00:42.17,0:00:48.27,Sub,,0,0,0,,I feel bad.
+Dialogue: 0,0:00:48.32,0:00:49.07,Sub,,0,0,0,,Welcome.
+Dialogue: 0,0:00:49.12,0:00:49.55,Sub,,0,0,0,,Hi.
+Dialogue: 0,0:00:49.60,0:00:50.35,Sub,,0,0,0,,How you doing?
+Dialogue: 0,0:00:50.40,0:00:50.70,Sub,,0,0,0,,Good.
+Dialogue: 0,0:00:50.63,0:00:51.07,Sub,,0,0,0,,How are you?
+Dialogue: 0,0:00:51.12,0:00:52.51,Sub,,0,0,0,,Good to see you.
+Dialogue: 0,0:00:52.56,0:00:53.39,Sub,,0,0,0,,I'm excited.
+Dialogue: 0,0:00:53.44,0:00:53.95,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:00:54.00,0:00:56.11,Sub,,0,0,0,,Uh, welcome to Figure.
+Dialogue: 0,0:00:56.16,0:00:56.61,Sub,,0,0,0,,Thanks.
+Dialogue: 0,0:00:56.66,0:00:58.28,Sub,,0,0,0,,So where are we right now?
+Dialogue: 0,0:00:58.33,0:00:58.88,Sub,,0,0,0,,What is this?
+Dialogue: 0,0:00:58.93,0:00:59.71,Sub,,0,0,0,,This is the headquarters.
+Dialogue: 0,0:00:59.76,0:01:01.15,Sub,,0,0,0,,This is a robot campus.
+Dialogue: 0,0:01:01.20,0:01:01.95,Sub,,0,0,0,,Robot campus.
+Dialogue: 0,0:01:02.00,0:01:02.65,Sub,,0,0,0,,Robot campus.
+Dialogue: 0,0:01:02.70,0:01:03.71,Sub,,0,0,0,,We make robots here.
+Dialogue: 0,0:01:03.76,0:01:04.19,Sub,,0,0,0,,Robots.
+Dialogue: 0,0:01:04.24,0:01:05.87,Sub,,0,0,0,,We make humanoid robots here.
+Dialogue: 0,0:01:05.92,0:01:06.29,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:01:06.32,0:01:09.55,Sub,,0,0,0,,We design them and we build them and we test them all here.
+Dialogue: 0,0:01:09.60,0:01:16.99,Sub,,0,0,0,,So for people who don't know what a humanoid robot you will see in a second cuz this is kind of freaky, but can you explain what they are?
+Dialogue: 0,0:01:17.04,0:01:17.53,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:01:17.58,0:01:24.40,Sub,,0,0,0,,Um our goal is to build advanced AI that we can put into a general purpose uh humanoid body.
+Dialogue: 0,0:01:24.45,0:01:27.82,Sub,,0,0,0,,Um, a humanoid is basically just like a robot with a human form.
+Dialogue: 0,0:01:27.87,0:01:31.24,Sub,,0,0,0,,So, we have uh arms, hands, head, feet, legs.
+Dialogue: 0,0:01:31.29,0:01:36.10,Sub,,0,0,0,,We can basically do everything a human can in the world with one piece of hardware.
+Dialogue: 0,0:01:36.15,0:01:37.31,Sub,,0,0,0,,Uh, so um yeah,
+Dialogue: 0,0:01:37.36,0:01:44.83,Sub,,0,0,0,,our goal is to be able to go out and basically design and ship humanoid robots in the world that can do everything from housework to dishes,
+Dialogue: 0,0:01:44.88,0:01:52.93,Sub,,0,0,0,,laundry, uh to manufacturing, healthcare, just basically as much things in the world as possible that we can go out and ship robots to.
+Dialogue: 0,0:01:52.98,0:01:55.47,Sub,,0,0,0,,Oh, we see this on the screen.
+Dialogue: 0,0:01:55.52,0:01:56.11,Sub,,0,0,0,,Oh, yeah.
+Dialogue: 0,0:01:56.16,0:01:59.03,Sub,,0,0,0,,That's our uh that's our This is your hype machine.
+Dialogue: 0,0:01:59.08,0:01:59.38,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:01:59.37,0:01:59.73,Sub,,0,0,0,,Screen.
+Dialogue: 0,0:01:59.76,0:02:00.88,Sub,,0,0,0,,Yeah, exactly.
+Dialogue: 0,0:02:00.93,0:02:04.42,Sub,,0,0,0,,Uh that's our latest generation robot figure three.
+Dialogue: 0,0:02:04.47,0:02:07.31,Sub,,0,0,0,,Doing a little like uh concier's job.
+Dialogue: 0,0:02:07.36,0:02:07.66,Sub,,0,0,0,,Cool.
+Dialogue: 0,0:02:07.64,0:02:07.94,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:02:07.92,0:02:09.58,Sub,,0,0,0,,So, what are we going to see today?
+Dialogue: 0,0:02:09.63,0:02:10.43,Sub,,0,0,0,,What's the plan?
+Dialogue: 0,0:02:10.48,0:02:11.01,Sub,,0,0,0,,Okay, come on in.
+Dialogue: 0,0:02:11.06,0:02:12.59,Sub,,0,0,0,,I want to show you some of my robots.
+Dialogue: 0,0:02:12.64,0:02:13.07,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:02:13.12,0:02:22.39,Sub,,0,0,0,,Um I think first here is we have uh we have some robots that we basically have constantly running uh around the office 247 talking to humans.
+Dialogue: 0,0:02:22.44,0:02:27.30,Sub,,0,0,0,,uh greeting people just uh you know basically doing useful work.
+Dialogue: 0,0:02:27.35,0:02:34.58,Sub,,0,0,0,,Um these robots uh basically can run fully autonomously without any humans and they can automatically dock themselves
+Dialogue: 0,0:02:34.63,0:02:39.85,Sub,,0,0,0,,and charge and then um once they're fully charged basically come off and be able to do useful work.
+Dialogue: 0,0:02:39.90,0:02:44.07,Sub,,0,0,0,,So these robots that are docking here um are charging through the feet.
+Dialogue: 0,0:02:44.12,0:02:48.12,Sub,,0,0,0,,So we have a wireless charging stand like similar how you would charge a phone like inductively.
+Dialogue: 0,0:02:48.17,0:02:48.47,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:02:48.46,0:02:51.79,Sub,,0,0,0,,Uh the robots can charge to their feet at two kilowatts.
+Dialogue: 0,0:02:51.84,0:02:59.39,Sub,,0,0,0,,So basically like um the the battery lasts about um about four to five hours and we can charge basically for an hour and go back and do work again.
+Dialogue: 0,0:02:59.44,0:03:00.84,Sub,,0,0,0,,So the robots we don't need to do anything.
+Dialogue: 0,0:03:00.89,0:03:01.87,Sub,,0,0,0,,We don't need to plug them in.
+Dialogue: 0,0:03:01.92,0:03:06.03,Sub,,0,0,0,,Uh they can basically autocharge themselves and just do 247 operations.
+Dialogue: 0,0:03:06.08,0:03:09.84,Sub,,0,0,0,,Is the role for this one right here just for the docking exercise?
+Dialogue: 0,0:03:09.89,0:03:11.15,Sub,,0,0,0,,Do these ones roam around?
+Dialogue: 0,0:03:11.20,0:03:12.11,Sub,,0,0,0,,These ones roam around.
+Dialogue: 0,0:03:12.16,0:03:12.46,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:03:12.48,0:03:12.78,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:03:12.71,0:03:13.01,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:03:12.93,0:03:17.31,Sub,,0,0,0,,They're just docking here just to charge and then they'll be out doing doing useful work all day.
+Dialogue: 0,0:03:17.36,0:03:17.91,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:03:17.96,0:03:20.93,Sub,,0,0,0,,And I saw these ones as well.
+Dialogue: 0,0:03:20.98,0:03:22.91,Sub,,0,0,0,,Is one of these special?
+Dialogue: 0,0:03:22.96,0:03:29.63,Sub,,0,0,0,,Yeah, the So this robot right here, the one uh the American flag was actually at the White House last week.
+Dialogue: 0,0:03:29.68,0:03:30.75,Sub,,0,0,0,,How did that happen?
+Dialogue: 0,0:03:30.80,0:03:39.55,Sub,,0,0,0,,We got a call uh asking to be basically the first humanoid group uh basically ever uh to put robots in the White House.
+Dialogue: 0,0:03:39.60,0:03:49.35,Sub,,0,0,0,,And uh so last week we basically had the you know first robots in humanoid robots in history there uh doing stuff talking greeting folks.
+Dialogue: 0,0:03:49.40,0:03:54.67,Sub,,0,0,0,,Um we were basically at a very special event with the first lady and um it it went really well.
+Dialogue: 0,0:03:54.72,0:03:55.55,Sub,,0,0,0,,It's exciting.
+Dialogue: 0,0:03:55.60,0:03:56.01,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:03:56.06,0:03:58.89,Sub,,0,0,0,,So this is our uh corporate headquarters.
+Dialogue: 0,0:03:58.94,0:04:01.05,Sub,,0,0,0,,We have uh four buildings on campus.
+Dialogue: 0,0:04:01.10,0:04:05.15,Sub,,0,0,0,,Uh so here we do uh a lot of basically engineering design work.
+Dialogue: 0,0:04:05.20,0:04:06.67,Sub,,0,0,0,,How many people work out here?
+Dialogue: 0,0:04:06.72,0:04:08.89,Sub,,0,0,0,,We have about 500 a little over 500 people.
+Dialogue: 0,0:04:08.94,0:04:10.83,Sub,,0,0,0,,How many are in the total company?
+Dialogue: 0,0:04:10.88,0:04:11.83,Sub,,0,0,0,,Um five Oh, sorry.
+Dialogue: 0,0:04:11.88,0:04:16.27,Sub,,0,0,0,,There's about there's about 250 300 people here and we have 500 in the company.
+Dialogue: 0,0:04:16.32,0:04:16.91,Sub,,0,0,0,,Oh wow.
+Dialogue: 0,0:04:16.96,0:04:17.26,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:04:17.29,0:04:17.59,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:04:17.61,0:04:21.92,Sub,,0,0,0,,I would say most all of it's engineering and then we've been growing out manufacturing uh
+Dialogue: 0,0:04:21.97,0:04:26.43,Sub,,0,0,0,,supply chain some of the areas to basically how do we make more robots pretty aggressively.
+Dialogue: 0,0:04:26.48,0:04:28.27,Sub,,0,0,0,,And how many robots do you have here?
+Dialogue: 0,0:04:28.32,0:04:29.39,Sub,,0,0,0,,How many there?
+Dialogue: 0,0:04:29.44,0:04:30.59,Sub,,0,0,0,,A few hundred right now.
+Dialogue: 0,0:04:30.64,0:04:30.97,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:04:31.00,0:04:38.14,Sub,,0,0,0,,Are they outpacing the humans or uh there's slow my my goal for the for this building is I want more robots humanoid robots than humans.
+Dialogue: 0,0:04:38.19,0:04:38.49,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:04:38.48,0:04:40.78,Sub,,0,0,0,,Uh, walking around and they don't necessarily need to walk.
+Dialogue: 0,0:04:40.83,0:04:44.51,Sub,,0,0,0,,They could be sitting or talking.
+Dialogue: 0,0:04:44.56,0:04:46.27,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:04:46.32,0:04:52.59,Sub,,0,0,0,,So, basically we have uh we basically do a lot of uh basically hardware and software validation testing here.
+Dialogue: 0,0:04:52.64,0:04:53.07,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:04:53.12,0:05:04.75,Sub,,0,0,0,,Um, so like testing for burn-in uh durability um bas basically like uh any new software hardware gets validated through this through this facility.
+Dialogue: 0,0:05:04.80,0:05:05.11,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:05:05.14,0:05:08.99,Sub,,0,0,0,,Uh so you have robots doing all kinds of crazy stuff here.
+Dialogue: 0,0:05:09.04,0:05:11.63,Sub,,0,0,0,,That is that is definitely some yoga.
+Dialogue: 0,0:05:11.68,0:05:13.98,Sub,,0,0,0,,Robot getting on the ground and getting back up again.
+Dialogue: 0,0:05:14.03,0:05:18.99,Sub,,0,0,0,,Um we're basically trying to stress test the robots to try to any trying to find any potential failures.
+Dialogue: 0,0:05:19.04,0:05:19.41,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:05:19.44,0:05:21.95,Sub,,0,0,0,,Before like any new hardware software could get released.
+Dialogue: 0,0:05:22.00,0:05:29.63,Sub,,0,0,0,,So if we have a new camera um uh new type of like uh say structure or anything else, we'll we'll test it here before it goes out.
+Dialogue: 0,0:05:29.68,0:05:32.81,Sub,,0,0,0,,How many potential body movements can they do?
+Dialogue: 0,0:05:32.86,0:05:33.77,Sub,,0,0,0,,Uh, okay.
+Dialogue: 0,0:05:33.82,0:05:36.11,Sub,,0,0,0,,So, this is kind of a crazy.
+Dialogue: 0,0:05:36.16,0:05:39.47,Sub,,0,0,0,,So, the the robot's basically made up of about 40 like motors.
+Dialogue: 0,0:05:39.52,0:05:39.89,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:05:39.92,0:05:43.47,Sub,,0,0,0,,Every motor can spin like 360 degrees like all the way around.
+Dialogue: 0,0:05:43.52,0:05:47.63,Sub,,0,0,0,,So, the the mathematically like how many states it could be in like body positions.
+Dialogue: 0,0:05:47.68,0:05:48.19,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:05:48.24,0:05:50.59,Sub,,0,0,0,,Is 360 to the power of 40.
+Dialogue: 0,0:05:50.64,0:05:51.07,Sub,,0,0,0,,What?
+Dialogue: 0,0:05:51.12,0:05:51.42,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:05:51.44,0:05:56.51,Sub,,0,0,0,,It's uh more body positions than atoms in the universe, which is crazy.
+Dialogue: 0,0:05:56.56,0:05:57.15,Sub,,0,0,0,,Potentially.
+Dialogue: 0,0:05:57.20,0:05:57.96,Sub,,0,0,0,,Yeah, I've done the math.
+Dialogue: 0,0:05:58.01,0:05:58.43,Sub,,0,0,0,,It's for sure.
+Dialogue: 0,0:05:58.48,0:05:59.29,Sub,,0,0,0,,You've done the math?
+Dialogue: 0,0:05:59.34,0:05:59.87,Sub,,0,0,0,,Yes, for sure.
+Dialogue: 0,0:05:59.92,0:06:00.34,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:06:00.39,0:06:05.55,Sub,,0,0,0,,Um, so we uh, so it's basically like the the difficulty here is like how do you control it?
+Dialogue: 0,0:06:05.60,0:06:07.31,Sub,,0,0,0,,You can't write code to make this work.
+Dialogue: 0,0:06:07.36,0:06:10.63,Sub,,0,0,0,,Uh, so all of our robots here run on a neural network we call Helix.
+Dialogue: 0,0:06:10.68,0:06:11.15,Sub,,0,0,0,,It's um,
+Dialogue: 0,0:06:11.20,0:06:15.45,Sub,,0,0,0,,it's a vision language action model we designed here internally to to tell the robot
+Dialogue: 0,0:06:15.50,0:06:19.36,Sub,,0,0,0,,what to go do to stay balanced like how to move its joints basically uh,
+Dialogue: 0,0:06:19.41,0:06:21.23,Sub,,0,0,0,,from pixels from from camera space.
+Dialogue: 0,0:06:21.28,0:06:23.87,Sub,,0,0,0,,And so that team that works on Helix is in the same building.
+Dialogue: 0,0:06:23.92,0:06:25.47,Sub,,0,0,0,,They're in the same building right here.
+Dialogue: 0,0:06:25.52,0:06:27.40,Sub,,0,0,0,,Yeah, they're uh, they're phenomenal.
+Dialogue: 0,0:06:27.45,0:06:30.47,Sub,,0,0,0,,We basically have a large scale data collection efforts that's going on and then we
+Dialogue: 0,0:06:30.52,0:06:34.22,Sub,,0,0,0,,train our own models here internally and then we test them all all here as well.
+Dialogue: 0,0:06:34.27,0:06:38.11,Sub,,0,0,0,,Uh that's it's not just like um it's not just like for like for
+Dialogue: 0,0:06:38.16,0:06:42.04,Sub,,0,0,0,,balancing and being able to have stability which we need to have like humanlike stability.
+Dialogue: 0,0:06:42.09,0:06:44.52,Sub,,0,0,0,,It's for how do we um how do we know what to go do?
+Dialogue: 0,0:06:44.57,0:06:49.69,Sub,,0,0,0,,How do we take in prompts from humans and say um like vision from the cameras and how do we
+Dialogue: 0,0:06:49.74,0:06:55.04,Sub,,0,0,0,,output every single joint including where the body's positioned and feet and hands to do stuff like it could be
+Dialogue: 0,0:06:55.09,0:06:59.79,Sub,,0,0,0,,folding laundry doing manufacturing and logistics that you'll see here later today and we have to do that like a
+Dialogue: 0,0:06:59.84,0:07:06.19,Sub,,0,0,0,,few hundred times a second from camera images and uh on a neural network that runs on board the robot.
+Dialogue: 0,0:07:06.24,0:07:08.43,Sub,,0,0,0,,So it's um it's a really hard project.
+Dialogue: 0,0:07:08.48,0:07:08.91,Sub,,0,0,0,,Wow.
+Dialogue: 0,0:07:08.96,0:07:09.36,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:07:09.40,0:07:17.23,Sub,,0,0,0,,Um, so yeah, all the bays here are running some sort of test uh for for durability or reliability testing.
+Dialogue: 0,0:07:17.28,0:07:20.35,Sub,,0,0,0,,Um, why do some have different suits?
+Dialogue: 0,0:07:20.40,0:07:21.87,Sub,,0,0,0,,Oh, we are we outfit them.
+Dialogue: 0,0:07:21.92,0:07:22.22,Sub,,0,0,0,,You do?
+Dialogue: 0,0:07:22.24,0:07:27.36,Sub,,0,0,0,,They have uh all the outfits are uh fabric like a human like clothes.
+Dialogue: 0,0:07:27.41,0:07:27.73,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:07:27.76,0:07:29.47,Sub,,0,0,0,,And they all have different clothes.
+Dialogue: 0,0:07:29.52,0:07:34.80,Sub,,0,0,0,,Um which is cool because we can like um you can accessorize the robots the how you want it.
+Dialogue: 0,0:07:34.85,0:07:39.38,Sub,,0,0,0,,Um, our clients can have different like outfits that show like the client logos and the colors.
+Dialogue: 0,0:07:39.43,0:07:39.73,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:07:39.76,0:07:41.07,Sub,,0,0,0,,This is a new level of merch.
+Dialogue: 0,0:07:41.12,0:07:42.49,Sub,,0,0,0,,Yeah, it's a new level of merch.
+Dialogue: 0,0:07:42.54,0:07:42.84,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:07:42.80,0:07:48.59,Sub,,0,0,0,,Um, it's also nice because if like things get dirty or they rip or whatever, we can basically easily replace it without a technician.
+Dialogue: 0,0:07:48.64,0:07:49.01,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:07:49.04,0:07:49.34,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:07:49.30,0:07:51.37,Sub,,0,0,0,,All the robots have a little zipper on the back.
+Dialogue: 0,0:07:51.42,0:07:52.14,Sub,,0,0,0,,I'm sure you see.
+Dialogue: 0,0:07:52.19,0:07:55.95,Sub,,0,0,0,,We can basically just unzip it and basically take it off and put something new on.
+Dialogue: 0,0:07:56.00,0:07:56.43,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:07:56.48,0:07:56.82,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:07:56.85,0:07:58.59,Sub,,0,0,0,,Also, it's just really cool.
+Dialogue: 0,0:07:58.64,0:07:59.44,Sub,,0,0,0,,It is pretty cool.
+Dialogue: 0,0:07:59.49,0:08:01.23,Sub,,0,0,0,,Their shoes look like real sneakers.
+Dialogue: 0,0:08:01.28,0:08:02.19,Sub,,0,0,0,,They're high tops.
+Dialogue: 0,0:08:02.24,0:08:02.82,Sub,,0,0,0,,They're high tops.
+Dialogue: 0,0:08:02.87,0:08:04.29,Sub,,0,0,0,,They're hightop sneakers.
+Dialogue: 0,0:08:04.34,0:08:08.03,Sub,,0,0,0,,Um and uh yeah, they look they don't they look awesome.
+Dialogue: 0,0:08:08.08,0:08:11.71,Sub,,0,0,0,,Yeah, I mean they look like human bodies.
+Dialogue: 0,0:08:11.76,0:08:18.67,Sub,,0,0,0,,But getting the lab to this level of like um like infrastructure to be able to run them like this every single day is like actually quite difficult.
+Dialogue: 0,0:08:18.72,0:08:22.02,Sub,,0,0,0,,Uh and then we need to be very diligent about when we find issues like how to track them,
+Dialogue: 0,0:08:22.07,0:08:24.99,Sub,,0,0,0,,how to do fault analysis really quickly and then how to solve them and then how
+Dialogue: 0,0:08:25.04,0:08:28.85,Sub,,0,0,0,,to solve them across the global fleet or basically our whole fleet where wherever they're at.
+Dialogue: 0,0:08:28.90,0:08:34.30,Sub,,0,0,0,,How many are you in development testing all at the same time?
+Dialogue: 0,0:08:34.35,0:08:37.96,Sub,,0,0,0,,Like what is the typical is it these bays are always active?
+Dialogue: 0,0:08:38.01,0:08:39.12,Sub,,0,0,0,,How does it work?
+Dialogue: 0,0:08:39.17,0:08:39.54,Sub,,0,0,0,,Yeah,
+Dialogue: 0,0:08:39.57,0:08:44.99,Sub,,0,0,0,,we basically uh so the goal of this lab is to basically do final uh final checks for
+Dialogue: 0,0:08:45.04,0:08:50.13,Sub,,0,0,0,,all software that could be like that could be embedded software could be like a neural network like Helix,
+Dialogue: 0,0:08:50.18,0:08:53.74,Sub,,0,0,0,,it could be firmware on the robot and then any new hardware changes we have.
+Dialogue: 0,0:08:53.79,0:08:58.57,Sub,,0,0,0,,We need to make sure like they're those those changes are bulletproof before they head out of here because there it's going to
+Dialogue: 0,0:08:58.62,0:09:03.40,Sub,,0,0,0,,cause a lot of problems if like we're trying to run a use case for logistics or home and the robots are messing up.
+Dialogue: 0,0:09:03.45,0:09:04.58,Sub,,0,0,0,,We're not sure why it's messing up.
+Dialogue: 0,0:09:04.63,0:09:05.53,Sub,,0,0,0,,That's not great for us.
+Dialogue: 0,0:09:05.58,0:09:07.92,Sub,,0,0,0,,So basically here we're basically doing a ton of testing.
+Dialogue: 0,0:09:07.97,0:09:09.97,Sub,,0,0,0,,We have like test plans laid out every single morning.
+Dialogue: 0,0:09:10.02,0:09:13.12,Sub,,0,0,0,,We're running those down and we see any potential falls, we have to go solve it.
+Dialogue: 0,0:09:13.17,0:09:14.82,Sub,,0,0,0,,Then we have to retest those plans.
+Dialogue: 0,0:09:14.87,0:09:20.59,Sub,,0,0,0,,Uh so these these robots running here like all day uh every single week and we run them really hard.
+Dialogue: 0,0:09:20.64,0:09:20.94,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:09:20.96,0:09:25.23,Sub,,0,0,0,,And the goal is like the goal is we don't want to be finding like failures upstream out of this lab.
+Dialogue: 0,0:09:25.28,0:09:25.58,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:09:25.59,0:09:30.27,Sub,,0,0,0,,So this is like the the banner on here on system integration tests is trust but verify.
+Dialogue: 0,0:09:30.32,0:09:30.68,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:09:30.71,0:09:38.02,Sub,,0,0,0,,So, um, yeah, we basically have to make sure we run down, uh, every potential thing that could go wrong before leaving here.
+Dialogue: 0,0:09:38.07,0:09:40.03,Sub,,0,0,0,,This is this is like, um, this is a hard thing.
+Dialogue: 0,0:09:40.08,0:09:43.23,Sub,,0,0,0,,Like, the robot has 40 plus moving joints.
+Dialogue: 0,0:09:43.28,0:09:46.20,Sub,,0,0,0,,Um, it's like a walking cell phone self-driving car.
+Dialogue: 0,0:09:46.25,0:09:48.20,Sub,,0,0,0,,Uh, all the supply chain is basically new.
+Dialogue: 0,0:09:48.25,0:09:50.01,Sub,,0,0,0,,We've designed almost all of it.
+Dialogue: 0,0:09:50.06,0:09:51.78,Sub,,0,0,0,,And so, it's um, it's hard.
+Dialogue: 0,0:09:51.83,0:09:53.80,Sub,,0,0,0,,It's hard to get the system to be really reliable.
+Dialogue: 0,0:09:53.85,0:10:00.49,Sub,,0,0,0,,And it's not like if we lose power like you know we're not like like uh like we're not like statically uh stable.
+Dialogue: 0,0:10:00.54,0:10:02.35,Sub,,0,0,0,,So like if we lose power the robot falls.
+Dialogue: 0,0:10:02.40,0:10:03.94,Sub,,0,0,0,,So we can like never lose power.
+Dialogue: 0,0:10:03.99,0:10:05.07,Sub,,0,0,0,,We can never lose calms.
+Dialogue: 0,0:10:05.12,0:10:09.27,Sub,,0,0,0,,And then we need to be able to balance at all times everywhere we're going even if we're moving the body like your pelvis and
+Dialogue: 0,0:10:09.32,0:10:14.64,Sub,,0,0,0,,hips and everything are moving uh in relation to your like you know as it relates to your hand moving and things like this and head.
+Dialogue: 0,0:10:14.69,0:10:17.07,Sub,,0,0,0,,So it's a it's a quite a difficult problem.
+Dialogue: 0,0:10:17.12,0:10:20.62,Sub,,0,0,0,,And so that's why you dock them at 15 minutes or 15%.
+Dialogue: 0,0:10:20.67,0:10:26.19,Sub,,0,0,0,,We dock like yeah around 10 to 15% they'll go to dock and then if we need another robot in we'll sub them
+Dialogue: 0,0:10:26.24,0:10:32.42,Sub,,0,0,0,,in off the dock and you'll see here later in like logistics and other use cases that need like constant like 247 uh attention.
+Dialogue: 0,0:10:32.47,0:10:37.12,Sub,,0,0,0,,The robot will undock right before the other robot needs to go like leave and the robot will
+Dialogue: 0,0:10:37.17,0:10:41.57,Sub,,0,0,0,,then uh basically do a quick swap and like within like you know 30 seconds it's now doing work.
+Dialogue: 0,0:10:41.62,0:10:46.93,Sub,,0,0,0,,Another robot will go into dock and we'll just run that every four or five hours on repeat 247.
+Dialogue: 0,0:10:46.98,0:10:50.99,Sub,,0,0,0,,What's the most common error that they make?
+Dialogue: 0,0:10:51.04,0:10:52.51,Sub,,0,0,0,,We most is software at this point.
+Dialogue: 0,0:10:52.56,0:10:52.99,Sub,,0,0,0,,Software.
+Dialogue: 0,0:10:53.04,0:10:53.34,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:10:53.23,0:10:53.53,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:10:53.41,0:10:54.58,Sub,,0,0,0,,The hardware has gotten really robust.
+Dialogue: 0,0:10:54.63,0:10:56.33,Sub,,0,0,0,,I mean, the hardware here is like is is great.
+Dialogue: 0,0:10:56.38,0:10:58.99,Sub,,0,0,0,,We just like basically it's basically a software issue.
+Dialogue: 0,0:10:59.04,0:11:03.79,Sub,,0,0,0,,And then in terms of hardware, you're manufacturing also on campus.
+Dialogue: 0,0:11:03.84,0:11:06.43,Sub,,0,0,0,,Um yeah, we manufacture here at Bakyu next door.
+Dialogue: 0,0:11:06.48,0:11:06.85,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:11:06.88,0:11:07.18,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:11:07.06,0:11:08.35,Sub,,0,0,0,,We're going to show you that today.
+Dialogue: 0,0:11:08.40,0:11:08.83,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:11:08.88,0:11:09.28,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:11:09.32,0:11:09.72,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:11:09.76,0:11:13.45,Sub,,0,0,0,,So, we have a basically a robot doing burpees here.
+Dialogue: 0,0:11:13.50,0:11:16.81,Sub,,0,0,0,,Uh we want to be able to safely for any event get down to the ground.
+Dialogue: 0,0:11:16.86,0:11:19.07,Sub,,0,0,0,,Um and then we want to be able to safely get up.
+Dialogue: 0,0:11:19.12,0:11:19.42,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:11:19.44,0:11:21.98,Sub,,0,0,0,,Uh it's like important in case we're like uh not sure what to do.
+Dialogue: 0,0:11:22.03,0:11:26.30,Sub,,0,0,0,,We could be on like a very low battery and we might need to be like safely get down.
+Dialogue: 0,0:11:26.35,0:11:34.67,Sub,,0,0,0,,Um we could we could have like um and then we then we want to be able to be be able to get off up off the ground really easily.
+Dialogue: 0,0:11:34.72,0:11:35.77,Sub,,0,0,0,,It's also quite hard.
+Dialogue: 0,0:11:35.82,0:11:42.35,Sub,,0,0,0,,You need a kind a ton of like uh like range of motion in the legs and the hips to be able to do this kind of maneuver.
+Dialogue: 0,0:11:42.40,0:11:44.35,Sub,,0,0,0,,Yeah, he's going to need some knee pads.
+Dialogue: 0,0:11:44.40,0:11:48.03,Sub,,0,0,0,,Is there a reason why the joints are hard and not you don't have soft tissue?
+Dialogue: 0,0:11:48.08,0:11:51.47,Sub,,0,0,0,,Um, yeah, the most of the upper body torso is all soft.
+Dialogue: 0,0:11:51.52,0:11:51.89,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:11:51.92,0:11:56.67,Sub,,0,0,0,,And then we have some uh soft foam underneath the legs and uh and arms right now.
+Dialogue: 0,0:11:56.72,0:11:57.71,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:11:57.76,0:12:02.35,Sub,,0,0,0,,Obviously like the more um the more patty and more soft I think is is great.
+Dialogue: 0,0:12:02.40,0:12:03.76,Sub,,0,0,0,,It just adds like a different level.
+Dialogue: 0,0:12:03.81,0:12:05.63,Sub,,0,0,0,,It adds more volume and mass to the robot.
+Dialogue: 0,0:12:05.68,0:12:06.05,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:12:06.08,0:12:06.38,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:12:06.34,0:12:08.59,Sub,,0,0,0,,It makes the robot look bigger basically.
+Dialogue: 0,0:12:08.64,0:12:10.35,Sub,,0,0,0,,Some thick robots.
+Dialogue: 0,0:12:10.40,0:12:12.83,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:12:12.88,0:12:13.31,Sub,,0,0,0,,Cool.
+Dialogue: 0,0:12:13.36,0:12:13.66,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:12:13.68,0:12:13.99,Sub,,0,0,0,,All right.
+Dialogue: 0,0:12:14.02,0:12:14.32,Sub,,0,0,0,,Let's go.
+Dialogue: 0,0:12:14.32,0:12:15.31,Sub,,0,0,0,,Cool.
+Dialogue: 0,0:12:15.36,0:12:19.18,Sub,,0,0,0,,So, how often do you come into the office every day and you check in on them?
+Dialogue: 0,0:12:19.23,0:12:21.36,Sub,,0,0,0,,Like, how do you do they feel like your babies?
+Dialogue: 0,0:12:21.41,0:12:23.31,Sub,,0,0,0,,Like, do you feel like they're for sure babies?
+Dialogue: 0,0:12:23.36,0:12:25.15,Sub,,0,0,0,,Parasocial relationship with them.
+Dialogue: 0,0:12:25.20,0:12:30.52,Sub,,0,0,0,,They're like we we like made these like they're little kids and we have to like get them to do useful things now.
+Dialogue: 0,0:12:30.57,0:12:35.47,Sub,,0,0,0,,Um, I think the good news is like we're at a point where the hardware has gotten like pretty like almost like like very robust.
+Dialogue: 0,0:12:35.52,0:12:35.82,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:12:35.84,0:12:38.46,Sub,,0,0,0,,Like the we can run them all day every day.
+Dialogue: 0,0:12:38.51,0:12:43.72,Sub,,0,0,0,,like uh we still we see we still see like hardware failures but it it's very few and far between.
+Dialogue: 0,0:12:43.77,0:12:49.96,Sub,,0,0,0,,Most of our problems now are like uh like as we think about this this baby growing up are like software problems or AI problems.
+Dialogue: 0,0:12:50.01,0:12:56.27,Sub,,0,0,0,,How do we get the software incredibly stable and how do we get the neural networks to be able to actually do useful things 247 without failures.
+Dialogue: 0,0:12:56.32,0:13:00.18,Sub,,0,0,0,,Like most of our failures today are uh kind of in software land.
+Dialogue: 0,0:13:00.23,0:13:06.19,Sub,,0,0,0,,Um and speaking of software uh Mort's uh like one of our favorite things to do is like push robots around.
+Dialogue: 0,0:13:06.24,0:13:06.57,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:13:06.60,0:13:06.93,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:13:06.96,0:13:13.63,Sub,,0,0,0,,And so Mortz here uh is one of our leads on the basically helix controls team and is going to maybe you can give him a quick give her a quick
+Dialogue: 0,0:13:13.68,0:13:20.75,Sub,,0,0,0,,101 of uh kind of the S0 controller we have here and then uh we would love we would love for you to push the robot as hard as you can.
+Dialogue: 0,0:13:20.80,0:13:21.10,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:13:21.09,0:13:26.76,Sub,,0,0,0,,So I I think what we did recently switched fully to RL from a model stacked on this is
+Dialogue: 0,0:13:26.81,0:13:32.66,Sub,,0,0,0,,that that we have all this variation that we can give to the robot when we train it in sin.
+Dialogue: 0,0:13:32.71,0:13:37.53,Sub,,0,0,0,,So all edge cases are now known to the controller and gets robust to it.
+Dialogue: 0,0:13:37.58,0:13:42.73,Sub,,0,0,0,,So what this means for example before a modern based robot stack goes freaked out um
+Dialogue: 0,0:13:42.78,0:13:49.34,Sub,,0,0,0,,you have this very robust uh to external services we push it around uh go ahead to
+Dialogue: 0,0:13:49.39,0:13:54.54,Sub,,0,0,0,,convince yourself really I think this really nicely showcases how robust our stack is give it
+Dialogue: 0,0:13:54.59,0:14:00.35,Sub,,0,0,0,,a push oh gosh okay I feel bad
+Dialogue: 0,0:14:00.40,0:14:06.71,Sub,,0,0,0,,that's a little harder okay so they don't No,
+Dialogue: 0,0:14:06.76,0:14:09.60,Sub,,0,0,0,,they like what do they do if they get attacked?
+Dialogue: 0,0:14:09.65,0:14:12.03,Sub,,0,0,0,,You know how like Whimos get attacked?
+Dialogue: 0,0:14:12.08,0:14:14.11,Sub,,0,0,0,,People were attacking bird scooters.
+Dialogue: 0,0:14:14.16,0:14:14.67,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:14.72,0:14:15.02,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:15.04,0:14:16.35,Sub,,0,0,0,,Do they have a defense mechanism?
+Dialogue: 0,0:14:16.40,0:14:17.47,Sub,,0,0,0,,No defense mechanism.
+Dialogue: 0,0:14:17.52,0:14:17.89,Sub,,0,0,0,,None.
+Dialogue: 0,0:14:17.92,0:14:19.25,Sub,,0,0,0,,No, it's not trained into them.
+Dialogue: 0,0:14:19.30,0:14:20.50,Sub,,0,0,0,,They don't see the internet.
+Dialogue: 0,0:14:20.55,0:14:21.71,Sub,,0,0,0,,And no harm to humans.
+Dialogue: 0,0:14:21.76,0:14:22.75,Sub,,0,0,0,,No harm to humans.
+Dialogue: 0,0:14:22.80,0:14:25.55,Sub,,0,0,0,,No. No. Uh they're here just to help.
+Dialogue: 0,0:14:25.60,0:14:25.97,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:14:26.00,0:14:26.30,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:26.25,0:14:31.07,Sub,,0,0,0,,They're here to take a take a push, too, if you need to.
+Dialogue: 0,0:14:31.12,0:14:31.42,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:31.34,0:14:33.55,Sub,,0,0,0,,You want You want to get another one in?
+Dialogue: 0,0:14:33.60,0:14:34.03,Sub,,0,0,0,,Sure.
+Dialogue: 0,0:14:34.08,0:14:36.83,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:36.88,0:14:38.43,Sub,,0,0,0,,It feels really heavy.
+Dialogue: 0,0:14:38.48,0:14:38.78,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:38.79,0:14:39.09,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:39.10,0:14:46.99,Sub,,0,0,0,,It's uh it's like 135 pounds, but it's like it's it's actually really um it's got like, you know, human level like stability.
+Dialogue: 0,0:14:47.04,0:14:52.02,Sub,,0,0,0,,And um as Mor mentioned, like we're we're learning that coverage in a simulator.
+Dialogue: 0,0:14:52.07,0:15:00.49,Sub,,0,0,0,,So, the whole controller like learns uh how to stay stable like this in like synthetically like in a sim like in a basically like a video game.
+Dialogue: 0,0:15:00.54,0:15:04.56,Sub,,0,0,0,,And uh from there uh the robot learns how to stay balanced uh how to basically
+Dialogue: 0,0:15:04.61,0:15:09.29,Sub,,0,0,0,,like uh how to basically not fall whenever there's certain c certain forces and we basically can
+Dialogue: 0,0:15:09.34,0:15:12.47,Sub,,0,0,0,,zero shot it onto this robot meaning like we can just put it right on load it
+Dialogue: 0,0:15:12.52,0:15:17.87,Sub,,0,0,0,,to the computer and we can basically uh and get this level of performance in the controller.
+Dialogue: 0,0:15:17.92,0:15:21.98,Sub,,0,0,0,,What are like again like what are the most common tweaks within that in
+Dialogue: 0,0:15:22.03,0:15:26.88,Sub,,0,0,0,,the software like what are you you're obviously balancing a lot of physical issues there.
+Dialogue: 0,0:15:26.93,0:15:30.11,Sub,,0,0,0,,So how do you tweak that in the models?
+Dialogue: 0,0:15:30.16,0:15:34.99,Sub,,0,0,0,,Mortz, how do we how do we uh how do we get the models to be able to perform like this?
+Dialogue: 0,0:15:35.04,0:15:35.34,Sub,,0,0,0,,Um,
+Dialogue: 0,0:15:35.29,0:15:39.59,Sub,,0,0,0,,basically I think we spend a lot of time thinking what are all the things that
+Dialogue: 0,0:15:39.64,0:15:44.35,Sub,,0,0,0,,can happen to the robot in the real world and then make them happen in simulation.
+Dialogue: 0,0:15:44.40,0:15:47.70,Sub,,0,0,0,,I think that's the we basically have like it's like a physics simulator.
+Dialogue: 0,0:15:47.75,0:15:50.59,Sub,,0,0,0,,So it has like gravity has like friction coefficients.
+Dialogue: 0,0:15:50.64,0:15:54.44,Sub,,0,0,0,,Uh we want to try to mirror like what forces robots seeing here so we can run them in sim.
+Dialogue: 0,0:15:54.49,0:15:58.75,Sub,,0,0,0,,And if they can run in sim well what we've seen is we basically have a really great sim tore transfer.
+Dialogue: 0,0:15:58.80,0:16:02.98,Sub,,0,0,0,,So we can get it from a simulator that shows like you'll see it like in a simulator like video game.
+Dialogue: 0,0:16:03.03,0:16:05.61,Sub,,0,0,0,,It can like as it can like stay stable with these forces.
+Dialogue: 0,0:16:05.66,0:16:12.19,Sub,,0,0,0,,Then we load load to the robot and we see the same in the real world and we have like a basically a very high transfer rate.
+Dialogue: 0,0:16:12.24,0:16:13.41,Sub,,0,0,0,,It's interesting.
+Dialogue: 0,0:16:13.46,0:16:21.25,Sub,,0,0,0,,I feel like um I feel like it would be it would be interesting to hear your perspective or differentiation on your robot
+Dialogue: 0,0:16:21.30,0:16:27.44,Sub,,0,0,0,,versus the other humanoid robots and like where this physicality and essentially
+Dialogue: 0,0:16:27.49,0:16:32.58,Sub,,0,0,0,,like the behavioral mechanisms change is some might be more commercially focused.
+Dialogue: 0,0:16:32.63,0:16:35.95,Sub,,0,0,0,,These ones are clearly as humanoid as I've seen.
+Dialogue: 0,0:16:36.00,0:16:37.45,Sub,,0,0,0,,Yeah, we're a pure play humanoid.
+Dialogue: 0,0:16:37.50,0:16:37.80,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:16:37.76,0:16:38.24,Sub,,0,0,0,,Uh yeah.
+Dialogue: 0,0:16:38.29,0:16:40.11,Sub,,0,0,0,,No. Uh I think uh a few things.
+Dialogue: 0,0:16:40.16,0:16:44.34,Sub,,0,0,0,,Uh, one is like we need to get the hardware in a really good spot that can do like a lot of what humans can do.
+Dialogue: 0,0:16:44.39,0:16:48.02,Sub,,0,0,0,,You really want this um you kind of want this like iPhone moment where like
+Dialogue: 0,0:16:48.07,0:16:50.69,Sub,,0,0,0,,my iPhone has a bunch of different apps and if I wanted to learn something new,
+Dialogue: 0,0:16:50.74,0:16:52.13,Sub,,0,0,0,,I just download another app.
+Dialogue: 0,0:16:52.18,0:16:53.45,Sub,,0,0,0,,The same thing for humanoids.
+Dialogue: 0,0:16:53.50,0:16:58.82,Sub,,0,0,0,,Want the same humanoid to be able to do like dishes and laundry but also do some like package logistics and healthcare and other stuff.
+Dialogue: 0,0:16:58.87,0:17:00.05,Sub,,0,0,0,,That's what humans can do, right?
+Dialogue: 0,0:17:00.10,0:17:02.11,Sub,,0,0,0,,We're all fairly general purpose.
+Dialogue: 0,0:17:02.16,0:17:06.47,Sub,,0,0,0,,And uh so we want one set of hardware that we can advertise over like a lot of different use cases.
+Dialogue: 0,0:17:06.52,0:17:12.74,Sub,,0,0,0,,Uh, so the goal is to get the hardware like robust enough to do like most things a human can in terms like range of motion, be able to get down,
+Dialogue: 0,0:17:12.79,0:17:17.73,Sub,,0,0,0,,get off the ground, be able to reach up high, be able to reach inside of sink, like all these different like things we need to do.
+Dialogue: 0,0:17:17.78,0:17:21.72,Sub,,0,0,0,,We also need to carry a decent amount of payloads and we operate at decently fast speeds.
+Dialogue: 0,0:17:21.77,0:17:23.72,Sub,,0,0,0,,So we've designed the hardware to be able to do that.
+Dialogue: 0,0:17:23.77,0:17:25.95,Sub,,0,0,0,,And then separately on the software on the AI side,
+Dialogue: 0,0:17:26.00,0:17:30.95,Sub,,0,0,0,,you really want to be able to design the neural nets so that it can basically take a take a task uh
+Dialogue: 0,0:17:31.00,0:17:37.25,Sub,,0,0,0,,and then reason through pixel space like take camera videos of like what's happening and then output what the body should be doing.
+Dialogue: 0,0:17:37.30,0:17:44.67,Sub,,0,0,0,,Um the the you know the math we were doing before um on like how many states the robot could be in is just it's so high.
+Dialogue: 0,0:17:44.72,0:17:45.02,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:17:45.04,0:17:47.43,Sub,,0,0,0,,Um that like the problem just kind of runs away.
+Dialogue: 0,0:17:47.48,0:17:49.72,Sub,,0,0,0,,It's um it's like a curse of dimiality.
+Dialogue: 0,0:17:49.77,0:17:51.07,Sub,,0,0,0,,It's like it's just too hard.
+Dialogue: 0,0:17:51.12,0:17:56.35,Sub,,0,0,0,,So you can't solve it with like writing like like lines of code like attritionally like in robotics and uh
+Dialogue: 0,0:17:56.40,0:18:00.56,Sub,,0,0,0,,even like three or four years ago here a figure like we would solve the same controller here in code.
+Dialogue: 0,0:18:00.61,0:18:04.32,Sub,,0,0,0,,We'd have like hundreds of thousands of lines of C++ to figure out how
+Dialogue: 0,0:18:04.37,0:18:08.97,Sub,,0,0,0,,to solve this like inverted pendulum math of how to like like stay balanced here.
+Dialogue: 0,0:18:09.02,0:18:11.74,Sub,,0,0,0,,Um and what we found is it just doesn't scale doesn't work.
+Dialogue: 0,0:18:11.79,0:18:15.87,Sub,,0,0,0,,You can't like really um in your head as humans uh work across many different humans
+Dialogue: 0,0:18:15.92,0:18:18.47,Sub,,0,0,0,,to code all the stuff into the robot that you think it could encounter in the world.
+Dialogue: 0,0:18:18.52,0:18:19.49,Sub,,0,0,0,,It's just too difficult.
+Dialogue: 0,0:18:19.54,0:18:25.31,Sub,,0,0,0,,Uh so we transitioned only like purely to neural networks uh with Helix our neural network arch uh model.
+Dialogue: 0,0:18:25.36,0:18:31.93,Sub,,0,0,0,,For those I I know you mentioned this a couple times but this will be like a general audience for those that don't know what a neural network is.
+Dialogue: 0,0:18:31.98,0:18:33.55,Sub,,0,0,0,,Can you just explain that a little bit further?
+Dialogue: 0,0:18:33.60,0:18:37.31,Sub,,0,0,0,,Yeah, we basically use like an AI policy that we've trained here with like data.
+Dialogue: 0,0:18:37.36,0:18:42.51,Sub,,0,0,0,,We trained like a transformer transformer policy to basically output uh a certain type of action space.
+Dialogue: 0,0:18:42.56,0:18:47.55,Sub,,0,0,0,,Basically we train an AI policy to do this work of what COD used to do and learn this.
+Dialogue: 0,0:18:47.60,0:18:53.62,Sub,,0,0,0,,Uh so now uh now basically we we run inference on board the robot across a policy that we call helix.
+Dialogue: 0,0:18:53.67,0:18:58.43,Sub,,0,0,0,,It's a AI it's an AI model that we designed here internally and that policy is outputting what the robot
+Dialogue: 0,0:18:58.48,0:19:02.72,Sub,,0,0,0,,should go do similar to how you'll talk to like an LLM and you'll ask it what to go do.
+Dialogue: 0,0:19:02.77,0:19:08.03,Sub,,0,0,0,,Uh it'll just it'll it'll do inference and output like basically like a next token prediction for words.
+Dialogue: 0,0:19:08.08,0:19:13.07,Sub,,0,0,0,,Uh we do the same thing here but for uh like a physical physical physical humanoid.
+Dialogue: 0,0:19:13.12,0:19:20.19,Sub,,0,0,0,,And we'll output things like where to put the wrist, head, uh torso, every joint will get an output from the neural network like what to go do.
+Dialogue: 0,0:19:20.24,0:19:23.22,Sub,,0,0,0,,And we'll do that anywhere between 50 and 100 like 200 milliseconds.
+Dialogue: 0,0:19:23.27,0:19:30.03,Sub,,0,0,0,,Uh so basically like 50 to 200 times a second, the neural network uh computer is then telling all the joints like what to go what to go do.
+Dialogue: 0,0:19:30.08,0:19:37.23,Sub,,0,0,0,,And then every joint level, our motor controllers are outputting torque on on where to send basically uh like like where to position the motors.
+Dialogue: 0,0:19:37.28,0:19:37.58,Sub,,0,0,0,,Wow.
+Dialogue: 0,0:19:37.60,0:19:37.91,Sub,,0,0,0,,So yeah.
+Dialogue: 0,0:19:37.94,0:19:43.88,Sub,,0,0,0,,So like basically like you basically we like uh you can have like two pass here like two two you basically can code your way out of
+Dialogue: 0,0:19:43.93,0:19:49.93,Sub,,0,0,0,,this and I think that's a full dead end or you can run an AI first strategy in a market and that's what we do here at figure.
+Dialogue: 0,0:19:49.98,0:19:54.63,Sub,,0,0,0,,Uh so I think what differentiates us is like from a hardware perspective I think we probably have I think this is probably the best humanoid
+Dialogue: 0,0:19:54.68,0:20:01.47,Sub,,0,0,0,,hardware in the world to do general purpose work and secondly all the work that we're doing is all like neural network based or AI based.
+Dialogue: 0,0:20:01.52,0:20:03.39,Sub,,0,0,0,,We don't code any of this work anymore.
+Dialogue: 0,0:20:03.44,0:20:07.31,Sub,,0,0,0,,Uh so like you'll see some use cases today that we do both for the home and
+Dialogue: 0,0:20:07.36,0:20:11.52,Sub,,0,0,0,,for uh in like like cases of like commercial market those are all run by our helix nal
+Dialogue: 0,0:20:11.57,0:20:16.43,Sub,,0,0,0,,network which is hard like we have to we have to kind of tell the whole body
+Dialogue: 0,0:20:16.48,0:20:22.64,Sub,,0,0,0,,uh how to reason over like camera frames and then how to like position itself fast and dynamic.
+Dialogue: 0,0:20:22.69,0:20:28.46,Sub,,0,0,0,,So you'll see in cases like logistics these packages are like moving they're moving while we're grabbing them because they're plastic.
+Dialogue: 0,0:20:28.51,0:20:32.33,Sub,,0,0,0,,We have to reason over all of that in real time and be able to do like you know
+Dialogue: 0,0:20:32.38,0:20:36.42,Sub,,0,0,0,,if we like uh if things move in real time we have to basically like closed loop react to it.
+Dialogue: 0,0:20:36.47,0:20:37.51,Sub,,0,0,0,,That's like really hard.
+Dialogue: 0,0:20:37.56,0:20:40.78,Sub,,0,0,0,,We've been spending like the greater of like last two years trying to solve this problem.
+Dialogue: 0,0:20:40.83,0:20:45.15,Sub,,0,0,0,,And I think uh I think we probably have like some of the best AI policies for humanoids in the planet today.
+Dialogue: 0,0:20:45.20,0:20:54.28,Sub,,0,0,0,,Sorcery is brought to you by Brex the financial stack trusted by more than 30,000 companies including one in three ventureback startups in the US.
+Dialogue: 0,0:20:54.33,0:20:58.11,Sub,,0,0,0,,Nearly 40% of startups fail because they run out of cash.
+Dialogue: 0,0:20:58.16,0:21:00.89,Sub,,0,0,0,,Rex is literally built to help founders avoid that.
+Dialogue: 0,0:21:00.94,0:21:08.96,Sub,,0,0,0,,Unlike traditional banks that let your money sit idle, chipping away at it with fees, Rex is designed to help you spend smarter and move faster.
+Dialogue: 0,0:21:09.01,0:21:15.94,Sub,,0,0,0,,Their all-in-one solution combines checking, treasury, and FDIC protection into one powerful account.
+Dialogue: 0,0:21:15.99,0:21:19.50,Sub,,0,0,0,,You can send and receive money globally at lightning speeds.
+Dialogue: 0,0:21:19.55,0:21:28.22,Sub,,0,0,0,,Get 20 times the standard FDIC coverage through their partner banks and even high yield from day one with same day and even same hour liquidity.
+Dialogue: 0,0:21:28.27,0:21:30.51,Sub,,0,0,0,,Access your funds anytime.
+Dialogue: 0,0:21:30.56,0:21:37.79,Sub,,0,0,0,,Companies like Scale AAI, Door Dash, Service Titan, HIMS, Anthropic, Flexport, Robin Hood, and Plaid.
+Dialogue: 0,0:21:37.84,0:21:39.09,Sub,,0,0,0,,Trust and use BRs.
+Dialogue: 0,0:21:39.14,0:21:42.67,Sub,,0,0,0,,Start today at brex.com/sourcy.
+Dialogue: 0,0:21:42.72,0:21:46.99,Sub,,0,0,0,,That's brx.com/sourcy.
+Dialogue: 0,0:21:47.04,0:21:53.15,Sub,,0,0,0,,Touring is training the next generation of AI with tasks that require real expertise and realworld judgment.
+Dialogue: 0,0:21:53.20,0:21:59.52,Sub,,0,0,0,,That's why companies like Nvidia, Anthropic, Salesforce, and Gemini partner with Turing.
+Dialogue: 0,0:21:59.57,0:22:05.96,Sub,,0,0,0,,Turing builds realistic reinforcement learning environments and data systems based on real operational traces.
+Dialogue: 0,0:22:06.01,0:22:11.76,Sub,,0,0,0,,The kind of infrastructure frontier labs need to train super intelligence.
+Dialogue: 0,0:22:11.81,0:22:14.91,Sub,,0,0,0,,Visit turring.comsur y.
+Dialogue: 0,0:22:14.96,0:22:21.16,Sub,,0,0,0,,Another thing I want to show you is um uh this is like um you know we just walked out of system integration and test the lab.
+Dialogue: 0,0:22:21.21,0:22:23.39,Sub,,0,0,0,,We're trying to find all these different failure cases.
+Dialogue: 0,0:22:23.44,0:22:23.81,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:22:23.84,0:22:26.62,Sub,,0,0,0,,One of our failure cases is for a humanoid like we we we're balancing.
+Dialogue: 0,0:22:26.67,0:22:29.63,Sub,,0,0,0,,So if we lose power uh like the robot falls.
+Dialogue: 0,0:22:29.68,0:22:33.23,Sub,,0,0,0,,Uh it's the same for like losing power or like losing a motor in the leg.
+Dialogue: 0,0:22:33.28,0:22:35.39,Sub,,0,0,0,,Do they need to be connected to Wi-Fi too?
+Dialogue: 0,0:22:35.44,0:22:38.23,Sub,,0,0,0,,Uh what are the what are all the integrations?
+Dialogue: 0,0:22:38.28,0:22:40.75,Sub,,0,0,0,,These these robots have 5G and Wi-Fi and Bluetooth.
+Dialogue: 0,0:22:40.80,0:22:42.95,Sub,,0,0,0,,Uh but we do not need to be connected to Wi-Fi to do work.
+Dialogue: 0,0:22:43.00,0:22:47.40,Sub,,0,0,0,,Like these robots out here, if they lost like internet connection or network, they can basically continue to do work.
+Dialogue: 0,0:22:47.45,0:22:48.53,Sub,,0,0,0,,We run Helix on board.
+Dialogue: 0,0:22:48.58,0:22:53.86,Sub,,0,0,0,,Uh so they're actually loaded into uh GPUs on board in memory and we run inference on board.
+Dialogue: 0,0:22:53.91,0:22:59.55,Sub,,0,0,0,,Meaning if we uh if we lose internet connection, we can still do housework and logistics like like humans are.
+Dialogue: 0,0:22:59.60,0:22:59.90,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:22:59.84,0:23:04.99,Sub,,0,0,0,,I mean maybe I have a hard time like doing work when I like lo connection, but most humans can do most work.
+Dialogue: 0,0:23:05.04,0:23:12.30,Sub,,0,0,0,,Um, so, uh, so another thing that we, um, we like we're working on solving that I'm excited to show you here is, um,
+Dialogue: 0,0:23:12.35,0:23:17.92,Sub,,0,0,0,,what if you lose like what if you lose communications with like all any of the 40 joints or what if you lose power?
+Dialogue: 0,0:23:17.97,0:23:23.59,Sub,,0,0,0,,And upper body is kind of fine if you lose a wrist or elbow like it's like you're not you're not going to fall at the very least.
+Dialogue: 0,0:23:23.64,0:23:26.44,Sub,,0,0,0,,Um, but falling is like a it's terrible event for us.
+Dialogue: 0,0:23:26.49,0:23:27.52,Sub,,0,0,0,,We don't ever want to fall.
+Dialogue: 0,0:23:27.57,0:23:30.51,Sub,,0,0,0,,We actually have an initiative internally called never fall.
+Dialogue: 0,0:23:30.56,0:23:32.67,Sub,,0,0,0,,It's like we never ever want to fall even.
+Dialogue: 0,0:23:32.72,0:23:35.98,Sub,,0,0,0,,Uh and you know we will fall but we don't ever want to tolerate it.
+Dialogue: 0,0:23:36.03,0:23:41.63,Sub,,0,0,0,,Um the hardest problem here uh for the controller is like what if we lose like a like a like an ankle, a knee or hip?
+Dialogue: 0,0:23:41.68,0:23:45.67,Sub,,0,0,0,,What if you just like lost a knee like right um you know normally for humanoids you
+Dialogue: 0,0:23:45.72,0:23:49.33,Sub,,0,0,0,,just like you just literally fall over like you can't really balance if you like lose a knee.
+Dialogue: 0,0:23:49.38,0:23:54.51,Sub,,0,0,0,,Uh we've uh we've been working on a project we call uh Vulcan here internally um that basically
+Dialogue: 0,0:23:54.56,0:23:59.29,Sub,,0,0,0,,allows us to lose uh a single or even multiple joints in the legs and still not fall.
+Dialogue: 0,0:23:59.34,0:24:04.21,Sub,,0,0,0,,So, what we're going to do here is Morort, can you show her what would happen if we lost like a left knee?
+Dialogue: 0,0:24:04.26,0:24:08.83,Sub,,0,0,0,,So, here we have um a view of like all the different joints on the robot.
+Dialogue: 0,0:24:08.88,0:24:14.66,Sub,,0,0,0,,Green means like we have comms and power to him and the robot's like uh can basically communicate and it's fine.
+Dialogue: 0,0:24:14.71,0:24:17.71,Sub,,0,0,0,,And red here will mean we'll lose certain communications with the robot.
+Dialogue: 0,0:24:17.76,0:24:23.38,Sub,,0,0,0,,So, here we lost like a left knee and you can see the robot's kind of like hobbling on the left leg.
+Dialogue: 0,0:24:23.43,0:24:23.73,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:24:23.76,0:24:28.42,Sub,,0,0,0,,So, right now the knee is basically we lost we lost we lost power communications now to the knee.
+Dialogue: 0,0:24:28.47,0:24:29.40,Sub,,0,0,0,,The knee's locked.
+Dialogue: 0,0:24:29.45,0:24:30.43,Sub,,0,0,0,,Got a locked knee.
+Dialogue: 0,0:24:30.48,0:24:34.43,Sub,,0,0,0,,So, so we velocity locked the knee and we can basically hobble around.
+Dialogue: 0,0:24:34.48,0:24:36.36,Sub,,0,0,0,,I thought it was going to be a little bit more dramatic.
+Dialogue: 0,0:24:36.41,0:24:37.87,Sub,,0,0,0,,Honestly, it's not bad, right?
+Dialogue: 0,0:24:37.92,0:24:38.91,Sub,,0,0,0,,It's not that bad.
+Dialogue: 0,0:24:38.96,0:24:41.73,Sub,,0,0,0,,What's unbelievable uh that we can even do this kind of work.
+Dialogue: 0,0:24:41.78,0:24:46.83,Sub,,0,0,0,,We're doing this also into in inside of a reinforcement learned neural net controller.
+Dialogue: 0,0:24:46.88,0:24:49.62,Sub,,0,0,0,,So, the same stuff that Morris talked about earlier of us learning in simulation,
+Dialogue: 0,0:24:49.67,0:24:55.50,Sub,,0,0,0,,the robot learned in simulation how to move the body here uh to extend it lost different joints.
+Dialogue: 0,0:24:55.55,0:24:57.93,Sub,,0,0,0,,Uh this is uh I watched the robot like a few weeks ago.
+Dialogue: 0,0:24:57.98,0:25:05.46,Sub,,0,0,0,,We were doing like work on this like um basically logistics use case and it's like u you know like months ago we like lose a knee.
+Dialogue: 0,0:25:05.51,0:25:06.87,Sub,,0,0,0,,The robot would just fall.
+Dialogue: 0,0:25:06.92,0:25:08.13,Sub,,0,0,0,,Now the robot loses a knee.
+Dialogue: 0,0:25:08.18,0:25:11.35,Sub,,0,0,0,,It can either continue to do work or can just like hobble off and another Yeah.
+Dialogue: 0,0:25:11.40,0:25:14.85,Sub,,0,0,0,,I can basically ask this buddy in the back say I need another robot to come fill in.
+Dialogue: 0,0:25:14.90,0:25:20.99,Sub,,0,0,0,,And the robot comes in and fills in and continues to do work and we basically don't lose any time.
+Dialogue: 0,0:25:21.04,0:25:21.95,Sub,,0,0,0,,It's pretty impressive.
+Dialogue: 0,0:25:22.00,0:25:23.01,Sub,,0,0,0,,Yeah, it's it's really impressive.
+Dialogue: 0,0:25:23.06,0:25:25.58,Sub,,0,0,0,,I think um this is kudos to the uh controls team.
+Dialogue: 0,0:25:25.63,0:25:28.51,Sub,,0,0,0,,I think we have like one of the best controls team in the world.
+Dialogue: 0,0:25:28.56,0:25:33.48,Sub,,0,0,0,,About a year ago, we made a strong pivot away from code into neural networks.
+Dialogue: 0,0:25:33.53,0:25:40.27,Sub,,0,0,0,,Um and I think the team has probably shown like I think some of the best neural networks for control uh in the world on on humanoids.
+Dialogue: 0,0:25:40.32,0:25:44.03,Sub,,0,0,0,,What happens if it loses its knee while it's bent?
+Dialogue: 0,0:25:44.08,0:25:49.26,Sub,,0,0,0,,Uh it'll just it'll basically do a velocity lock on that knee and uh should be able to hobble around it.
+Dialogue: 0,0:25:49.31,0:25:51.68,Sub,,0,0,0,,Obviously depends where if we're like in a full squad down.
+Dialogue: 0,0:25:51.73,0:25:53.24,Sub,,0,0,0,,Yeah, that might be really tough.
+Dialogue: 0,0:25:53.29,0:25:59.63,Sub,,0,0,0,,It depends where what state it's in, but like in most cases uh we can basically recover from this at this point and uh survive.
+Dialogue: 0,0:25:59.68,0:26:03.23,Sub,,0,0,0,,You want to build a real-time operating system that is basically like fault-free.
+Dialogue: 0,0:26:03.28,0:26:09.20,Sub,,0,0,0,,So this team here is all focused on trying to figure out all of the potential faults and risks.
+Dialogue: 0,0:26:09.25,0:26:14.00,Sub,,0,0,0,,This team here is responsible for building our controller which is responsible for how do we move the
+Dialogue: 0,0:26:14.05,0:26:19.23,Sub,,0,0,0,,entire like the like all the joints on the robot keep balance and ultimately end up doing tasks.
+Dialogue: 0,0:26:19.28,0:26:25.87,Sub,,0,0,0,,How many different teams are in the company and like how do you portion out who works on what and who gets integrated?
+Dialogue: 0,0:26:25.92,0:26:27.20,Sub,,0,0,0,,So this is our part of our AI team.
+Dialogue: 0,0:26:27.25,0:26:29.00,Sub,,0,0,0,,It's one of our biggest teams here.
+Dialogue: 0,0:26:29.05,0:26:31.81,Sub,,0,0,0,,Uh we have like multiple different groups inside the AI AI division.
+Dialogue: 0,0:26:31.86,0:26:33.44,Sub,,0,0,0,,We also have a team that does hardware.
+Dialogue: 0,0:26:33.49,0:26:39.88,Sub,,0,0,0,,So they design motors, batteries, wire harness, structure, joints, kinematics, like basically a wide range of stuff.
+Dialogue: 0,0:26:39.93,0:26:44.30,Sub,,0,0,0,,Uh we have a platform software team that does all of our embedded software, uh firmware.
+Dialogue: 0,0:26:44.35,0:26:50.59,Sub,,0,0,0,,Uh we also have electronics team that basically builds like all the PCBs and electronics work that we do here internally.
+Dialogue: 0,0:26:50.64,0:26:55.57,Sub,,0,0,0,,We design almost uh there's over 100 PCBs that we design here on the robot that we do on that team.
+Dialogue: 0,0:26:55.62,0:26:58.70,Sub,,0,0,0,,Uh things like our motor controllers, all this different type of work.
+Dialogue: 0,0:26:58.75,0:27:04.87,Sub,,0,0,0,,Uh we have a system integration test team that you saw today that helps basically make sure we ship like really good robots out to the world.
+Dialogue: 0,0:27:04.92,0:27:10.69,Sub,,0,0,0,,Uh we also have a team that does uh like basically design like industrial design which we're going to show you towards the end of this uh tour.
+Dialogue: 0,0:27:10.74,0:27:17.75,Sub,,0,0,0,,Uh how do we design something that's like how do we design something that's like um like people really want and I
+Dialogue: 0,0:27:17.80,0:27:23.22,Sub,,0,0,0,,think we have we we have a pretty high design standard here of designing something that is a really delightful piece of technology.
+Dialogue: 0,0:27:23.27,0:27:26.99,Sub,,0,0,0,,Uh we also have a teams that also work on system design and thermals.
+Dialogue: 0,0:27:27.04,0:27:31.22,Sub,,0,0,0,,uh the robot produces a lot of heat while it's moving around and how do we get that heat out of the robot and how do we
+Dialogue: 0,0:27:31.27,0:27:35.57,Sub,,0,0,0,,design for it here we also have fabrication teams that like make fabrication prototypes
+Dialogue: 0,0:27:35.62,0:27:41.61,Sub,,0,0,0,,we have a bachue team for manufacturing supply chain team um facilities uh and
+Dialogue: 0,0:27:41.66,0:27:50.28,Sub,,0,0,0,,then we have like all of our business operations side so maybe like a dozen teams here internally that are needed to do this um it's basically the
+Dialogue: 0,0:27:50.33,0:27:57.65,Sub,,0,0,0,,same teams that you need to build robots so like any kind of robots like when I um you know uh at archer when I was building aircraft.
+Dialogue: 0,0:27:57.70,0:27:58.85,Sub,,0,0,0,,We have like it's like a flying robot.
+Dialogue: 0,0:27:58.90,0:28:00.05,Sub,,0,0,0,,So you have like the same type of stuff.
+Dialogue: 0,0:28:00.10,0:28:04.59,Sub,,0,0,0,,You have like electric motors, batteries, control software, embedded systems and sensors.
+Dialogue: 0,0:28:04.64,0:28:06.31,Sub,,0,0,0,,So we have basically teams around all that.
+Dialogue: 0,0:28:06.36,0:28:09.64,Sub,,0,0,0,,And then uh and then obviously on the AI side is a big focus here internally.
+Dialogue: 0,0:28:09.69,0:28:11.63,Sub,,0,0,0,,Uh do you want to see some stuff in the home?
+Dialogue: 0,0:28:11.68,0:28:12.35,Sub,,0,0,0,,Yeah, let's go.
+Dialogue: 0,0:28:12.40,0:28:13.52,Sub,,0,0,0,,All right, let's go.
+Dialogue: 0,0:28:13.57,0:28:14.35,Sub,,0,0,0,,Thanks, Mortz.
+Dialogue: 0,0:28:14.40,0:28:18.03,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:28:18.08,0:28:21.63,Sub,,0,0,0,,All right, so I was hoping it would be more dramatic, but lose the knee.
+Dialogue: 0,0:28:21.68,0:28:22.91,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:28:22.96,0:28:23.33,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:28:23.36,0:28:29.95,Sub,,0,0,0,,It's uh it's like honestly it's a really hard engineering problem that we're we're so proud of internally.
+Dialogue: 0,0:28:30.00,0:28:33.46,Sub,,0,0,0,,Uh we have a large initiative like one of the teams that we have here here is like
+Dialogue: 0,0:28:33.51,0:28:39.15,Sub,,0,0,0,,a never fall team and it's a team that basically predict any potential faults and design around him.
+Dialogue: 0,0:28:39.20,0:28:45.71,Sub,,0,0,0,,This is a case where like I think you're always going to have this a period of time where you're going to lose a lower body like motor or actuator.
+Dialogue: 0,0:28:45.76,0:28:47.39,Sub,,0,0,0,,Then how do we survive this?
+Dialogue: 0,0:28:47.44,0:28:47.81,Sub,,0,0,0,,Right.
+Dialogue: 0,0:28:47.84,0:28:48.14,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:28:48.13,0:28:51.30,Sub,,0,0,0,,Outside of stuff we're doing on the um commercial market,
+Dialogue: 0,0:28:51.35,0:28:56.15,Sub,,0,0,0,,one of our big focuses here is how do we ship a general purpose robot to do things like in the home.
+Dialogue: 0,0:28:56.20,0:28:58.01,Sub,,0,0,0,,So, all right, come over here.
+Dialogue: 0,0:28:58.06,0:29:03.02,Sub,,0,0,0,,Um we have a robot here that uh is designed to tidy the house.
+Dialogue: 0,0:29:03.07,0:29:09.87,Sub,,0,0,0,,Um so, clean up any um uh clean up the table, like basically like uh put away all the different cups,
+Dialogue: 0,0:29:09.92,0:29:16.81,Sub,,0,0,0,,uh clean the toys up, uh tidy tidy the couch, um like you know, things in my house is kind of chaos.
+Dialogue: 0,0:29:16.86,0:29:19.39,Sub,,0,0,0,,It's spraying and cleaning the table.
+Dialogue: 0,0:29:19.44,0:29:20.67,Sub,,0,0,0,,Oh, yeah.
+Dialogue: 0,0:29:20.72,0:29:22.51,Sub,,0,0,0,,Don't you want We all We all need this.
+Dialogue: 0,0:29:22.56,0:29:25.95,Sub,,0,0,0,,It's like uh that was a little sassy.
+Dialogue: 0,0:29:26.00,0:29:27.75,Sub,,0,0,0,,It was um So,
+Dialogue: 0,0:29:27.80,0:29:38.46,Sub,,0,0,0,,what's cool here is the robot is running um an onboard Helix 2 neural network to be able to uh uh do to do all this work,
+Dialogue: 0,0:29:38.51,0:29:40.04,Sub,,0,0,0,,to be able to do all this cleaning.
+Dialogue: 0,0:29:40.09,0:29:43.36,Sub,,0,0,0,,So um so it's basically just taking a prompt which is like clean the clean
+Dialogue: 0,0:29:43.41,0:29:47.24,Sub,,0,0,0,,the living room and it's basically reasoning through what to do from its cameras and it's
+Dialogue: 0,0:29:47.29,0:29:50.91,Sub,,0,0,0,,ultimately telling the whole body what to what to do from a neural network from from
+Dialogue: 0,0:29:50.96,0:29:56.28,Sub,,0,0,0,,how many hours has this been trained on doesn't it take millions of hours to train?
+Dialogue: 0,0:29:56.33,0:30:04.19,Sub,,0,0,0,,We've probably had um in Helix like the like the like in in like kind of base pre and mid-training uh helix
+Dialogue: 0,0:30:04.24,0:30:11.39,Sub,,0,0,0,,models that we're working on now have um maybe like maybe like uh a little under a million hours of total data.
+Dialogue: 0,0:30:11.44,0:30:16.75,Sub,,0,0,0,,Um and then uh we also do uh from mid-training and pre-training we do post-training uh here
+Dialogue: 0,0:30:16.80,0:30:22.57,Sub,,0,0,0,,which probably is uh I would say low like basically thousands of hours okay that are running here.
+Dialogue: 0,0:30:22.62,0:30:27.54,Sub,,0,0,0,,Uh the goal for us is design uh a single kind of neural network uh platform
+Dialogue: 0,0:30:27.59,0:30:31.79,Sub,,0,0,0,,that can basically do things like tidy tidy this living room but also do things like logistics.
+Dialogue: 0,0:30:31.84,0:30:33.71,Sub,,0,0,0,,And this isn't tea operated.
+Dialogue: 0,0:30:33.76,0:30:34.91,Sub,,0,0,0,,This is not teleyoperated.
+Dialogue: 0,0:30:34.96,0:30:36.83,Sub,,0,0,0,,There are rumors that these are tea operated.
+Dialogue: 0,0:30:36.88,0:30:37.79,Sub,,0,0,0,,For sure not teleyoperated.
+Dialogue: 0,0:30:37.84,0:30:39.71,Sub,,0,0,0,,You don't have a secret room back here.
+Dialogue: 0,0:30:39.76,0:30:41.15,Sub,,0,0,0,,Who's in there?
+Dialogue: 0,0:30:41.20,0:30:42.43,Sub,,0,0,0,,No secret room.
+Dialogue: 0,0:30:42.48,0:30:50.35,Sub,,0,0,0,,Uh these robots are running purely autonomously from a onboard uh AI policy called Helix running on board the robot in the torso.
+Dialogue: 0,0:30:50.40,0:30:53.39,Sub,,0,0,0,,And so this robot's job is to clean this room up.
+Dialogue: 0,0:30:53.44,0:30:57.19,Sub,,0,0,0,,And does this robot do this over and over again each day or do they take turns?
+Dialogue: 0,0:30:57.24,0:31:00.51,Sub,,0,0,0,,Like how do you any robot in the fleet can do any of this work here?
+Dialogue: 0,0:31:00.56,0:31:00.92,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:31:00.95,0:31:02.19,Sub,,0,0,0,,So it all connects.
+Dialogue: 0,0:31:02.24,0:31:03.51,Sub,,0,0,0,,Yeah, it all connects.
+Dialogue: 0,0:31:03.56,0:31:06.94,Sub,,0,0,0,,We run a single uh neural network that can basically run it's the goal.
+Dialogue: 0,0:31:06.99,0:31:08.62,Sub,,0,0,0,,It's the reason why humanoid is so great.
+Dialogue: 0,0:31:08.67,0:31:15.76,Sub,,0,0,0,,It's like a this same humanoid can go over and do like logistics and healthcare and manufacturing uh or do like do dishes like just like we can,
+Dialogue: 0,0:31:15.81,0:31:16.19,Sub,,0,0,0,,right?
+Dialogue: 0,0:31:16.22,0:31:16.52,Sub,,0,0,0,,Um,
+Dialogue: 0,0:31:16.45,0:31:19.60,Sub,,0,0,0,,so we like our our uh our platform here is to basically run a single
+Dialogue: 0,0:31:19.65,0:31:24.03,Sub,,0,0,0,,neural network that we call Helix on board the robot that can multitask between different things.
+Dialogue: 0,0:31:24.08,0:31:33.23,Sub,,0,0,0,,When they're in people's homes, will that data still be trained and will it stay local or will it be spread throughout the network?
+Dialogue: 0,0:31:33.28,0:31:33.70,Sub,,0,0,0,,Yeah,
+Dialogue: 0,0:31:33.75,0:31:38.02,Sub,,0,0,0,,we basically at uh we need data like basically the biggest blocker for us now
+Dialogue: 0,0:31:38.07,0:31:42.07,Sub,,0,0,0,,of going from where we're at today to like like large scale deployment is data.
+Dialogue: 0,0:31:42.12,0:31:44.37,Sub,,0,0,0,,We need like an enormous amount of data.
+Dialogue: 0,0:31:44.42,0:31:48.77,Sub,,0,0,0,,uh we need to pull a lot of our resources further into pre-training for the Helix
+Dialogue: 0,0:31:48.82,0:31:53.07,Sub,,0,0,0,,team and we just need a lot of diverse really high quality data across the world.
+Dialogue: 0,0:31:53.12,0:31:56.37,Sub,,0,0,0,,This means like data in the home means maybe data more in the commercial market.
+Dialogue: 0,0:31:56.42,0:31:58.11,Sub,,0,0,0,,So we have like two efforts going on here.
+Dialogue: 0,0:31:58.16,0:32:01.92,Sub,,0,0,0,,One is like basically a large scale data collection effort that we're doing now at the company and two
+Dialogue: 0,0:32:01.97,0:32:05.53,Sub,,0,0,0,,is when we deploy robots we do want to be collecting data and we do want to be training
+Dialogue: 0,0:32:05.58,0:32:10.03,Sub,,0,0,0,,on that and we do want to be sending that out up training on it into a central training
+Dialogue: 0,0:32:10.08,0:32:14.19,Sub,,0,0,0,,training jobs and then we want to be software updating the robots with the latest neural network uh weights.
+Dialogue: 0,0:32:14.24,0:32:15.39,Sub,,0,0,0,,Does it get anonymized?
+Dialogue: 0,0:32:15.44,0:32:17.15,Sub,,0,0,0,,How do you deal with the privacy off?
+Dialogue: 0,0:32:17.20,0:32:19.43,Sub,,0,0,0,,Oh yeah, we like fully want to anonymize all of it.
+Dialogue: 0,0:32:19.48,0:32:21.67,Sub,,0,0,0,,Uh there's a lot of data we really don't care about.
+Dialogue: 0,0:32:21.72,0:32:27.06,Sub,,0,0,0,,Most of the data we care about is like what what do we uh what's the robot from a state perspective like uh like scene
+Dialogue: 0,0:32:27.11,0:32:33.31,Sub,,0,0,0,,and how do we use that to basically train the robot to uh be more like to generalize better in the future at those different areas.
+Dialogue: 0,0:32:33.36,0:32:39.72,Sub,,0,0,0,,Are you sticking mostly to the US now because if you go to Europe there's obviously most of all of our work today is in the US.
+Dialogue: 0,0:32:39.78,0:32:40.13,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:32:40.16,0:32:40.46,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:32:40.41,0:32:41.71,Sub,,0,0,0,,We do want to be global though.
+Dialogue: 0,0:32:41.76,0:32:42.06,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:32:41.98,0:32:42.91,Sub,,0,0,0,,Europe's a little tricky.
+Dialogue: 0,0:32:42.96,0:32:43.26,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:32:43.23,0:32:43.53,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:32:43.49,0:32:44.59,Sub,,0,0,0,,What what are your plans?
+Dialogue: 0,0:32:44.64,0:32:46.51,Sub,,0,0,0,,Like how do you skirt around their data privacy?
+Dialogue: 0,0:32:46.56,0:32:49.29,Sub,,0,0,0,,Uh you basically we we got to play by the rules in Europe.
+Dialogue: 0,0:32:49.34,0:32:49.70,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:32:49.73,0:32:54.47,Sub,,0,0,0,,I I think um our hypothesis here is that we're we're missing a certain set of data that
+Dialogue: 0,0:32:54.52,0:32:59.12,Sub,,0,0,0,,we're like we're collecting now that will allow the robot to generalize in almost every condition it sees.
+Dialogue: 0,0:32:59.17,0:33:01.35,Sub,,0,0,0,,Like we're kind of going off and doing the same things every day.
+Dialogue: 0,0:33:01.40,0:33:04.21,Sub,,0,0,0,,We're doing dishes and laundry and tidying the home.
+Dialogue: 0,0:33:04.26,0:33:05.42,Sub,,0,0,0,,Like the same stuff we're seeing.
+Dialogue: 0,0:33:05.47,0:33:10.53,Sub,,0,0,0,,We're kind of doing the same movements like grabbing something off the ground, putting away or pulling a like the like the dishwasher open.
+Dialogue: 0,0:33:10.58,0:33:12.17,Sub,,0,0,0,,Like it's kind of the same stuff.
+Dialogue: 0,0:33:12.22,0:33:16.02,Sub,,0,0,0,,uh our hypothesis now is that we will see enormous amount of positive transfer from the
+Dialogue: 0,0:33:16.06,0:33:21.62,Sub,,0,0,0,,data collection efforts we're doing now into pre-training across like basically any environment in the world.
+Dialogue: 0,0:33:21.67,0:33:30.12,Sub,,0,0,0,,Um I mean that'll be like it'll be somewhat um you know we we'll we'll approach that somewhat like um it'll take I would say over time a large
+Dialogue: 0,0:33:30.17,0:33:33.74,Sub,,0,0,0,,amount of data to to find every out of distribution like basically be able to
+Dialogue: 0,0:33:33.79,0:33:36.50,Sub,,0,0,0,,do everything possible in the world but we think there's a path to do this.
+Dialogue: 0,0:33:36.55,0:33:42.03,Sub,,0,0,0,,And what is the price point differentiation for the inhome robot versus commercial?
+Dialogue: 0,0:33:42.08,0:33:45.85,Sub,,0,0,0,,Uh the inhome like we we have we're not selling right now to the home.
+Dialogue: 0,0:33:45.90,0:33:49.96,Sub,,0,0,0,,We want we want to sell here uh like in the near term and we want to sell
+Dialogue: 0,0:33:50.01,0:33:55.31,Sub,,0,0,0,,the robot like for like hundreds of dollars a month and as a like somewhere like a car lease.
+Dialogue: 0,0:33:55.36,0:33:57.95,Sub,,0,0,0,,Um maybe like four, five, six hundred bucks a month.
+Dialogue: 0,0:33:58.00,0:33:59.60,Sub,,0,0,0,,How are you thinking of deploying them in homes?
+Dialogue: 0,0:33:59.65,0:34:03.37,Sub,,0,0,0,,Like do you have to see if people have enough room like in New York City?
+Dialogue: 0,0:34:03.42,0:34:05.39,Sub,,0,0,0,,Yeah, I can't imagine these little apartments.
+Dialogue: 0,0:34:05.44,0:34:06.94,Sub,,0,0,0,,Uh they just takes a dock.
+Dialogue: 0,0:34:06.99,0:34:08.62,Sub,,0,0,0,,It's like 2 feet by 2 feet.
+Dialogue: 0,0:34:08.67,0:34:10.74,Sub,,0,0,0,,Uh you can plug it in a wall outlet.
+Dialogue: 0,0:34:10.79,0:34:12.23,Sub,,0,0,0,,It'll go to its dock and charge.
+Dialogue: 0,0:34:12.28,0:34:14.50,Sub,,0,0,0,,And then throughout the day, it'll just go off and do work.
+Dialogue: 0,0:34:14.55,0:34:14.85,Sub,,0,0,0,,What?
+Dialogue: 0,0:34:14.80,0:34:16.43,Sub,,0,0,0,,Whatever you want to go want it to do.
+Dialogue: 0,0:34:16.48,0:34:23.39,Sub,,0,0,0,,Like for me, I wanted to do like the laundry probably almost every day, dishes every day, and tidy the house multiple times a day.
+Dialogue: 0,0:34:23.44,0:34:24.81,Sub,,0,0,0,,Do they have a distinctive diet?
+Dialogue: 0,0:34:24.86,0:34:25.63,Sub,,0,0,0,,What do they eat?
+Dialogue: 0,0:34:25.68,0:34:27.23,Sub,,0,0,0,,They eat nothing.
+Dialogue: 0,0:34:27.28,0:34:27.79,Sub,,0,0,0,,They're keto.
+Dialogue: 0,0:34:27.84,0:34:28.99,Sub,,0,0,0,,They just work 247.
+Dialogue: 0,0:34:29.04,0:34:30.60,Sub,,0,0,0,,They're just constantly intermittent fasting.
+Dialogue: 0,0:34:30.65,0:34:36.51,Sub,,0,0,0,,They're in this like they're in this like uh they're in this like purgatory state of just working 24/7 for us their lives.
+Dialogue: 0,0:34:36.56,0:34:37.31,Sub,,0,0,0,,Wow.
+Dialogue: 0,0:34:37.36,0:34:37.95,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:34:38.00,0:34:38.67,Sub,,0,0,0,,Fun.
+Dialogue: 0,0:34:38.72,0:34:39.10,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:34:39.13,0:34:39.50,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:34:39.53,0:34:43.31,Sub,,0,0,0,,I want to next go show you how we make them over at Baku.
+Dialogue: 0,0:34:43.36,0:34:43.66,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:34:43.62,0:34:43.92,Sub,,0,0,0,,Great.
+Dialogue: 0,0:34:43.92,0:34:44.99,Sub,,0,0,0,,Let's go.
+Dialogue: 0,0:34:45.04,0:34:48.43,Sub,,0,0,0,,It's uh you know like kind of like HQ but Baku.
+Dialogue: 0,0:34:48.48,0:34:50.11,Sub,,0,0,0,,I don't HQ for bots.
+Dialogue: 0,0:34:50.16,0:34:51.31,Sub,,0,0,0,,Oh, it's bot.
+Dialogue: 0,0:34:51.36,0:34:51.68,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:34:51.71,0:34:52.01,Sub,,0,0,0,,Bot.
+Dialogue: 0,0:34:52.00,0:34:53.63,Sub,,0,0,0,,I thought you were saying Baku.
+Dialogue: 0,0:34:53.68,0:34:55.79,Sub,,0,0,0,,No. Isn't BQ.
+Dialogue: 0,0:34:55.84,0:34:56.43,Sub,,0,0,0,,Botchi.
+Dialogue: 0,0:34:56.48,0:34:58.63,Sub,,0,0,0,,No. Anyways, this is robot Q.
+Dialogue: 0,0:34:58.68,0:35:00.27,Sub,,0,0,0,,This is robot quarters.
+Dialogue: 0,0:35:00.32,0:35:00.62,Sub,,0,0,0,,Um,
+Dialogue: 0,0:35:00.54,0:35:07.14,Sub,,0,0,0,,one thing that's really cool is on the way is uh we we we uh we work at BMW and last
+Dialogue: 0,0:35:07.19,0:35:13.39,Sub,,0,0,0,,year we h we deployed uh for six months robots on the uh basically body shop factory line to build cars.
+Dialogue: 0,0:35:13.44,0:35:13.95,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:35:14.00,0:35:16.91,Sub,,0,0,0,,Uh and this was the first you built this entire car.
+Dialogue: 0,0:35:16.96,0:35:19.66,Sub,,0,0,0,,No, not the entire thing, but we helped build this car.
+Dialogue: 0,0:35:19.71,0:35:20.11,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:35:20.14,0:35:26.00,Sub,,0,0,0,,Uh this is an X3 uh that we helped basically uh like we basically helped the robot helped assemble it and this was
+Dialogue: 0,0:35:26.05,0:35:31.79,Sub,,0,0,0,,the first car in the world built by a humanoid robot that we that we're aware of and straight off the assembly line.
+Dialogue: 0,0:35:31.84,0:35:33.95,Sub,,0,0,0,,Straight off as I actually I bought the first four.
+Dialogue: 0,0:35:34.00,0:35:34.37,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:35:34.40,0:35:36.91,Sub,,0,0,0,,We have three here on campus and I have one at my house.
+Dialogue: 0,0:35:36.96,0:35:40.51,Sub,,0,0,0,,And uh yeah, it's like a collector's item now.
+Dialogue: 0,0:35:40.56,0:35:41.15,Sub,,0,0,0,,That's exciting.
+Dialogue: 0,0:35:41.20,0:35:42.99,Sub,,0,0,0,,Yeah, it's pretty pretty interesting.
+Dialogue: 0,0:35:43.04,0:35:45.13,Sub,,0,0,0,,All right.
+Dialogue: 0,0:35:45.18,0:35:49.26,Sub,,0,0,0,,Um so we have uh this is kind of our our campus here.
+Dialogue: 0,0:35:49.31,0:35:51.22,Sub,,0,0,0,,We have four buildings.
+Dialogue: 0,0:35:51.27,0:35:55.23,Sub,,0,0,0,,Um we're going to go through our manufacturing site which is bot Q.
+Dialogue: 0,0:35:55.28,0:36:00.43,Sub,,0,0,0,,And then we also have a site uh up here that I'll show you uh called the grid.
+Dialogue: 0,0:36:00.48,0:36:00.78,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:36:00.80,0:36:05.93,Sub,,0,0,0,,And the goal of that facility is to run robots like just like we would at our client sites.
+Dialogue: 0,0:36:05.98,0:36:10.43,Sub,,0,0,0,,Could be in the home and also in the commercial side and 247 operations.
+Dialogue: 0,0:36:10.48,0:36:11.55,Sub,,0,0,0,,Why is it called the grid?
+Dialogue: 0,0:36:11.60,0:36:15.08,Sub,,0,0,0,,Um it's a kind of a nod to like a sci-fi movie.
+Dialogue: 0,0:36:15.13,0:36:17.06,Sub,,0,0,0,,Uh and um I don't know.
+Dialogue: 0,0:36:17.11,0:36:19.95,Sub,,0,0,0,,Do you have a lot of inspiration from sci-fi movies?
+Dialogue: 0,0:36:20.00,0:36:21.55,Sub,,0,0,0,,Are you a sci-fi geek?
+Dialogue: 0,0:36:21.60,0:36:22.59,Sub,,0,0,0,,Total sci-fi geek.
+Dialogue: 0,0:36:22.64,0:36:24.43,Sub,,0,0,0,,I've seen every sci-fi movie.
+Dialogue: 0,0:36:24.48,0:36:25.55,Sub,,0,0,0,,What's your favorite?
+Dialogue: 0,0:36:25.60,0:36:27.93,Sub,,0,0,0,,Um, probably Contact.
+Dialogue: 0,0:36:27.98,0:36:30.59,Sub,,0,0,0,,Jodyie Foster, the alien thing.
+Dialogue: 0,0:36:30.64,0:36:30.94,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:36:30.88,0:36:33.31,Sub,,0,0,0,,It's kind of embarrassing to say, but why?
+Dialogue: 0,0:36:33.36,0:36:34.40,Sub,,0,0,0,,Uh, I don't know.
+Dialogue: 0,0:36:34.45,0:36:36.19,Sub,,0,0,0,,I just I The contact's amazing.
+Dialogue: 0,0:36:36.24,0:36:37.55,Sub,,0,0,0,,If you like it, don't be embarrassed.
+Dialogue: 0,0:36:37.60,0:36:37.92,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:36:37.95,0:36:40.69,Sub,,0,0,0,,Um, but like I'll just I'll watch I'm a sci-fi junkie.
+Dialogue: 0,0:36:40.74,0:36:42.42,Sub,,0,0,0,,I'll watch any kind of sci-fi.
+Dialogue: 0,0:36:42.47,0:36:43.28,Sub,,0,0,0,,Um, yeah.
+Dialogue: 0,0:36:43.33,0:36:46.16,Sub,,0,0,0,,So, uh, so that's the grid up here.
+Dialogue: 0,0:36:46.21,0:36:50.91,Sub,,0,0,0,,Um, and we we'll run robots in that facility 247.
+Dialogue: 0,0:36:50.96,0:36:57.23,Sub,,0,0,0,,And the goal of that is, uh, last line of defense before we send out any code to our customers.
+Dialogue: 0,0:36:57.28,0:37:01.57,Sub,,0,0,0,,So, you don't want robots, uh, you know, you don't want you don't want like robots having any problems.
+Dialogue: 0,0:37:01.62,0:37:06.00,Sub,,0,0,0,,We want to run them close enough to like heavy operations that we would see out in the real world.
+Dialogue: 0,0:37:06.05,0:37:11.04,Sub,,0,0,0,,And so, we have a whole facility dedicated to basically running robots as hard as possible, 247.
+Dialogue: 0,0:37:11.09,0:37:14.91,Sub,,0,0,0,,We we run on holidays, weekends, 2 to three in the morning.
+Dialogue: 0,0:37:14.96,0:37:16.11,Sub,,0,0,0,,And they just run all day every day.
+Dialogue: 0,0:37:16.16,0:37:17.39,Sub,,0,0,0,,Have any escaped?
+Dialogue: 0,0:37:17.44,0:37:23.07,Sub,,0,0,0,,No, we've we've had one almost escaped and we really No, nothing's nothing's escaped.
+Dialogue: 0,0:37:23.12,0:37:25.67,Sub,,0,0,0,,Do they Do you geo fence them within properties?
+Dialogue: 0,0:37:25.72,0:37:27.55,Sub,,0,0,0,,Like do you do that when you set them up?
+Dialogue: 0,0:37:27.60,0:37:28.21,Sub,,0,0,0,,We we track them.
+Dialogue: 0,0:37:28.26,0:37:32.03,Sub,,0,0,0,,Obviously, this is like for us right now it's like a these are like high IP, right?
+Dialogue: 0,0:37:32.08,0:37:33.59,Sub,,0,0,0,,Uh like very complicated hardware.
+Dialogue: 0,0:37:33.64,0:37:35.95,Sub,,0,0,0,,We don't want to get stolen or out in the wrong hands.
+Dialogue: 0,0:37:36.00,0:37:37.47,Sub,,0,0,0,,So, uh so we track it.
+Dialogue: 0,0:37:37.52,0:37:38.54,Sub,,0,0,0,,Has that happened before?
+Dialogue: 0,0:37:38.59,0:37:40.11,Sub,,0,0,0,,Are people stealing your IP?
+Dialogue: 0,0:37:40.16,0:37:43.49,Sub,,0,0,0,,Um we do a lot of work on security internally here.
+Dialogue: 0,0:37:43.54,0:37:47.55,Sub,,0,0,0,,Um, so we haven't had any known IP thefts at the company.
+Dialogue: 0,0:37:47.60,0:37:47.97,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:37:48.00,0:37:48.53,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:37:48.58,0:37:49.59,Sub,,0,0,0,,All right.
+Dialogue: 0,0:37:49.64,0:37:51.23,Sub,,0,0,0,,Welcome to Baku.
+Dialogue: 0,0:37:51.28,0:37:52.11,Sub,,0,0,0,,All right.
+Dialogue: 0,0:37:52.16,0:37:53.23,Sub,,0,0,0,,Now, oh my god.
+Dialogue: 0,0:37:53.28,0:37:55.39,Sub,,0,0,0,,Now, welcome to Baku.
+Dialogue: 0,0:37:55.44,0:38:01.15,Sub,,0,0,0,,Um, so this is where we uh this is where we manufacture uh figure 3 robots.
+Dialogue: 0,0:38:01.20,0:38:01.71,Sub,,0,0,0,,Wow.
+Dialogue: 0,0:38:01.76,0:38:09.91,Sub,,0,0,0,,Um, so we uh we do everything from build heads, batteries, legs, arms, fingers, thumbs, hands.
+Dialogue: 0,0:38:09.96,0:38:14.99,Sub,,0,0,0,,Uh, and we basically do all testing here before we box the robots out or they walk next door.
+Dialogue: 0,0:38:15.04,0:38:16.11,Sub,,0,0,0,,What does a box look like?
+Dialogue: 0,0:38:16.16,0:38:16.46,Sub,,0,0,0,,A box?
+Dialogue: 0,0:38:16.46,0:38:16.76,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:38:16.72,0:38:17.53,Sub,,0,0,0,,Um, we'll show you.
+Dialogue: 0,0:38:17.58,0:38:19.15,Sub,,0,0,0,,We have one over there in in a minute.
+Dialogue: 0,0:38:19.20,0:38:19.57,Sub,,0,0,0,,Really?
+Dialogue: 0,0:38:19.60,0:38:23.47,Sub,,0,0,0,,Um, and right now we basically if we need them at headquarters or the grid, they basically just walk over.
+Dialogue: 0,0:38:23.52,0:38:24.67,Sub,,0,0,0,,Where do you store them?
+Dialogue: 0,0:38:24.72,0:38:27.87,Sub,,0,0,0,,Um, at the at the office or client sites.
+Dialogue: 0,0:38:27.92,0:38:28.22,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:38:28.24,0:38:28.54,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:38:28.55,0:38:29.61,Sub,,0,0,0,,Uh, on on the docks.
+Dialogue: 0,0:38:29.66,0:38:33.04,Sub,,0,0,0,,They basically dock at nighttime or when they're not not needed.
+Dialogue: 0,0:38:33.09,0:38:33.56,Sub,,0,0,0,,Um, okay.
+Dialogue: 0,0:38:33.61,0:38:36.07,Sub,,0,0,0,,We're going to show you some of the manufacturing lines.
+Dialogue: 0,0:38:36.12,0:38:45.95,Sub,,0,0,0,,So we start first uh with basically head and uh and battery uh and we do some electronics uh like basically quality and EOL checking.
+Dialogue: 0,0:38:46.00,0:38:46.93,Sub,,0,0,0,,EOL is end of line.
+Dialogue: 0,0:38:46.98,0:38:51.33,Sub,,0,0,0,,So we make sure we want every single subsystem to go through a bit pretty like pretty crazy test.
+Dialogue: 0,0:38:51.38,0:38:53.15,Sub,,0,0,0,,Here's our here's our headline.
+Dialogue: 0,0:38:53.20,0:38:53.95,Sub,,0,0,0,,A rack of heads.
+Dialogue: 0,0:38:54.00,0:38:55.58,Sub,,0,0,0,,Uh rack of heads.
+Dialogue: 0,0:38:55.63,0:38:58.32,Sub,,0,0,0,,So um here here's a head.
+Dialogue: 0,0:38:58.37,0:39:05.09,Sub,,0,0,0,,Our heads have um basically uh Bluetooth like Wi-Fi 5G.
+Dialogue: 0,0:39:05.14,0:39:07.77,Sub,,0,0,0,,They have camera systems on on board.
+Dialogue: 0,0:39:07.82,0:39:09.03,Sub,,0,0,0,,Uh we have lights.
+Dialogue: 0,0:39:09.08,0:39:10.87,Sub,,0,0,0,,Uh we have thermal systems.
+Dialogue: 0,0:39:10.92,0:39:11.76,Sub,,0,0,0,,Uh we have an IMU.
+Dialogue: 0,0:39:11.81,0:39:15.95,Sub,,0,0,0,,So basically the head is like basically a lot of sensors in here.
+Dialogue: 0,0:39:16.00,0:39:26.23,Sub,,0,0,0,,Um the heads go through a pretty uh like a rigorous test uh here um uh that we've designed uh internally for end of line testing.
+Dialogue: 0,0:39:26.28,0:39:32.88,Sub,,0,0,0,,So heads here go through a well first is we basically are are flashing software here under the head for the first time.
+Dialogue: 0,0:39:32.93,0:39:36.88,Sub,,0,0,0,,Uh all the firmware it's going through a calibration process for the cameras.
+Dialogue: 0,0:39:36.93,0:39:41.73,Sub,,0,0,0,,Uh and then we're basically making sure their head is in a nominal state to basically put onto a robot.
+Dialogue: 0,0:39:41.78,0:39:43.71,Sub,,0,0,0,,So does it getting are we getting signals out of it?
+Dialogue: 0,0:39:43.76,0:39:46.78,Sub,,0,0,0,,Uh does it have any does it have any issues at all or any errors?
+Dialogue: 0,0:39:46.83,0:39:48.32,Sub,,0,0,0,,If it does we'll try to triage it.
+Dialogue: 0,0:39:48.37,0:39:50.99,Sub,,0,0,0,,If it doesn't we'll end up putting on a robot.
+Dialogue: 0,0:39:51.04,0:39:53.39,Sub,,0,0,0,,This is like when it's first born.
+Dialogue: 0,0:39:53.44,0:39:53.74,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:39:53.74,0:39:57.14,Sub,,0,0,0,,It's like uh it's kind of just like just raw hardware and it goes in here and
+Dialogue: 0,0:39:57.19,0:40:00.91,Sub,,0,0,0,,it comes out with software and comes out with all the checks that we can use it with.
+Dialogue: 0,0:40:00.96,0:40:01.47,Sub,,0,0,0,,Wow.
+Dialogue: 0,0:40:01.52,0:40:03.47,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:40:03.52,0:40:06.99,Sub,,0,0,0,,All right.
+Dialogue: 0,0:40:07.04,0:40:10.33,Sub,,0,0,0,,How often do you walk through every part of the campus?
+Dialogue: 0,0:40:10.38,0:40:11.39,Sub,,0,0,0,,Like uh every day.
+Dialogue: 0,0:40:11.44,0:40:12.03,Sub,,0,0,0,,Every day.
+Dialogue: 0,0:40:12.08,0:40:12.86,Sub,,0,0,0,,Every day.
+Dialogue: 0,0:40:12.91,0:40:15.74,Sub,,0,0,0,,Um so here is uh here's our battery line.
+Dialogue: 0,0:40:15.79,0:40:23.68,Sub,,0,0,0,,So we have battery cells that come in uh and then we basically do uh cell testing and uh like basically voltage balancing.
+Dialogue: 0,0:40:23.73,0:40:31.02,Sub,,0,0,0,,So here we're basically checking every single cell against the data sheet and we're also checking voltage and we're balancing out the packs.
+Dialogue: 0,0:40:31.07,0:40:34.39,Sub,,0,0,0,,So if there's any um like kind of voltage differential.
+Dialogue: 0,0:40:34.44,0:40:38.75,Sub,,0,0,0,,We're basically uh making sure that all the packs basically have somewhat of a somewhat balanced voltage.
+Dialogue: 0,0:40:38.80,0:40:40.75,Sub,,0,0,0,,Where do you get this machine from?
+Dialogue: 0,0:40:40.80,0:40:41.79,Sub,,0,0,0,,We designed this machine.
+Dialogue: 0,0:40:41.84,0:40:42.69,Sub,,0,0,0,,Oh yeah.
+Dialogue: 0,0:40:42.74,0:40:53.79,Sub,,0,0,0,,This was custom designed uh for uh for figure here for battery and then uh we go through a process for uh for potting um uh like wire bonding and
+Dialogue: 0,0:40:53.84,0:40:57.81,Sub,,0,0,0,,there's some polyurethane we put inside the battery pack for thermal runaway and then at
+Dialogue: 0,0:40:57.86,0:41:04.59,Sub,,0,0,0,,the end pops out uh basically a pretty heavy uh 2.25 kilowatt hour battery pack.
+Dialogue: 0,0:41:04.64,0:41:04.94,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:41:04.85,0:41:05.70,Sub,,0,0,0,,I don't even want to try.
+Dialogue: 0,0:41:05.75,0:41:07.15,Sub,,0,0,0,,It's really quite heavy.
+Dialogue: 0,0:41:07.20,0:41:08.51,Sub,,0,0,0,,Oh yeah.
+Dialogue: 0,0:41:08.56,0:41:11.23,Sub,,0,0,0,,No, I I don't think it's Wait, let me try.
+Dialogue: 0,0:41:11.28,0:41:13.19,Sub,,0,0,0,,Oh, no. That is actually really heavy.
+Dialogue: 0,0:41:13.24,0:41:18.11,Sub,,0,0,0,,So, this uh so this battery uh will basically go right into the torso.
+Dialogue: 0,0:41:18.16,0:41:20.51,Sub,,0,0,0,,It's one of the heaviest components we have.
+Dialogue: 0,0:41:20.56,0:41:21.15,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:41:21.20,0:41:29.15,Sub,,0,0,0,,How do you I mean I know all this is stabilized, but like is it better that it's one piece in the torso versus distributed across the body?
+Dialogue: 0,0:41:29.20,0:41:30.93,Sub,,0,0,0,,Yeah, it's way better one piece.
+Dialogue: 0,0:41:30.98,0:41:34.19,Sub,,0,0,0,,The battery pack has um just even for safety,
+Dialogue: 0,0:41:34.24,0:41:38.14,Sub,,0,0,0,,we have like a lot of thermal runaway um properties inside the pack that
+Dialogue: 0,0:41:38.19,0:41:42.39,Sub,,0,0,0,,we've designed here internally to make sure um in the worst case you basically want
+Dialogue: 0,0:41:42.44,0:41:48.91,Sub,,0,0,0,,uh to say like okay if the battery if a cell or battery cell is going to thermal runaway you never want that to ever propagate outside the pack.
+Dialogue: 0,0:41:48.96,0:41:51.08,Sub,,0,0,0,,So you wanted to contain it to the battery system itself.
+Dialogue: 0,0:41:51.13,0:41:55.15,Sub,,0,0,0,,So we have a basically a structural uh system and also basically a thermway
+Dialogue: 0,0:41:55.20,0:41:59.26,Sub,,0,0,0,,venting process we've designed internally to basically allow for the battery to be extremely safe.
+Dialogue: 0,0:41:59.31,0:42:02.66,Sub,,0,0,0,,Like the the requirement is like you want no flame to never exit the pack.
+Dialogue: 0,0:42:02.71,0:42:06.05,Sub,,0,0,0,,You don't want a robot like on fire or something like that out in the world.
+Dialogue: 0,0:42:06.10,0:42:08.59,Sub,,0,0,0,,Uh so we've designed the right safety system.
+Dialogue: 0,0:42:08.64,0:42:11.23,Sub,,0,0,0,,We we've never had a robot ever have catch fire.
+Dialogue: 0,0:42:11.28,0:42:17.31,Sub,,0,0,0,,No. No. And then our all of our figure 3s are designed in a way that basically will prevent the robot from ever catching fire.
+Dialogue: 0,0:42:17.36,0:42:17.74,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:42:17.77,0:42:23.15,Sub,,0,0,0,,Um so that that actually was a cra pretty crazy hard engineering feat that we've designed here internally.
+Dialogue: 0,0:42:23.20,0:42:26.69,Sub,,0,0,0,,Um also the the the pack is structural take loads.
+Dialogue: 0,0:42:26.74,0:42:32.57,Sub,,0,0,0,,So in case we fall even on like sharp objects or corners and things like this like we can never propagate inside the pack uh
+Dialogue: 0,0:42:32.62,0:42:40.27,Sub,,0,0,0,,the cells itself meaning you don't want anything to uh kind of like uh kind of like send the battery cells itself into thermal away conditions.
+Dialogue: 0,0:42:40.32,0:42:44.92,Sub,,0,0,0,,Have you had any supply chain risks whether it's with China or other countries?
+Dialogue: 0,0:42:44.97,0:42:46.33,Sub,,0,0,0,,Is that why you do everything here?
+Dialogue: 0,0:42:46.38,0:42:50.48,Sub,,0,0,0,,We do most of the manufacturing here because the product is so new and it needs to
+Dialogue: 0,0:42:50.53,0:42:54.96,Sub,,0,0,0,,be really controlled and we also need uh we also think about IP as really important here.
+Dialogue: 0,0:42:55.01,0:42:57.15,Sub,,0,0,0,,Uh we don't want any of the technologies to be stolen.
+Dialogue: 0,0:42:57.20,0:42:57.50,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:42:57.44,0:43:01.91,Sub,,0,0,0,,Um and I think this is just hard too like um we be able to put this thing together through a basically
+Dialogue: 0,0:43:01.96,0:43:05.73,Sub,,0,0,0,,a brand new supply chain that we had to design and get it in and make it work is like it's non-trivial.
+Dialogue: 0,0:43:05.78,0:43:08.51,Sub,,0,0,0,,Like you see how much testing we do at headquarters for all this work.
+Dialogue: 0,0:43:08.56,0:43:10.27,Sub,,0,0,0,,Uh testing we do at the grid.
+Dialogue: 0,0:43:10.32,0:43:12.23,Sub,,0,0,0,,We'll do a ton of testing we'll show you here today.
+Dialogue: 0,0:43:12.28,0:43:18.71,Sub,,0,0,0,,It's uh it's enormous and the product is um we're kind of like early in the humanoid kind of like chapter book.
+Dialogue: 0,0:43:18.76,0:43:21.55,Sub,,0,0,0,,Uh so like uh car has been around for over a century.
+Dialogue: 0,0:43:21.60,0:43:23.90,Sub,,0,0,0,,We kind of the company has been around for four years.
+Dialogue: 0,0:43:23.95,0:43:24.55,Sub,,0,0,0,,No. Yeah.
+Dialogue: 0,0:43:24.60,0:43:26.03,Sub,,0,0,0,,Not even four years yet.
+Dialogue: 0,0:43:26.08,0:43:26.83,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:43:26.88,0:43:31.15,Sub,,0,0,0,,And then humanoids are like really uh like really early in that whole process.
+Dialogue: 0,0:43:31.20,0:43:34.44,Sub,,0,0,0,,How did you We'll talk about this more in the long form,
+Dialogue: 0,0:43:34.49,0:43:40.35,Sub,,0,0,0,,but like in terms of getting this up to scale so fast like you have now created a humanoid robot.
+Dialogue: 0,0:43:40.40,0:43:46.90,Sub,,0,0,0,,This is one of the most complex robot like I don't know engineering problems ever.
+Dialogue: 0,0:43:46.95,0:43:50.11,Sub,,0,0,0,,So like how did you get up to speed so fast?
+Dialogue: 0,0:43:50.16,0:43:55.02,Sub,,0,0,0,,Um my company before this designed like flying robots at Archer and it's got the same properties.
+Dialogue: 0,0:43:55.07,0:44:00.26,Sub,,0,0,0,,We have a battery pack but instead of like uh 2 kilowatt hours, it's 160 kilowatt hours and it's distributed.
+Dialogue: 0,0:44:00.31,0:44:04.55,Sub,,0,0,0,,Uh we have electric motors, we have control software, we have embedded systems and sensors.
+Dialogue: 0,0:44:04.60,0:44:05.51,Sub,,0,0,0,,That's a robot.
+Dialogue: 0,0:44:05.56,0:44:11.31,Sub,,0,0,0,,And like Archer's aircrafts, uh like my aircrafts there at like say midnight are like highly overactuated.
+Dialogue: 0,0:44:11.36,0:44:14.19,Sub,,0,0,0,,All the propellers uh at variable pitch.
+Dialogue: 0,0:44:14.24,0:44:17.49,Sub,,0,0,0,,Uh the front leading edge actuators tilt 90 degrees.
+Dialogue: 0,0:44:17.54,0:44:20.83,Sub,,0,0,0,,You have uh the flaps uh on the wings and tail all move.
+Dialogue: 0,0:44:20.88,0:44:22.75,Sub,,0,0,0,,You have like basically 24 degrees of freedom.
+Dialogue: 0,0:44:22.80,0:44:25.52,Sub,,0,0,0,,You have about over a little over 40 here on the robot.
+Dialogue: 0,0:44:25.57,0:44:31.04,Sub,,0,0,0,,So um so in some way it's like um like similar enough systems here.
+Dialogue: 0,0:44:31.09,0:44:38.35,Sub,,0,0,0,,Um and then you know when I started figure we we were like uh we have a very crisp and clear vision for the how to think about the product and
+Dialogue: 0,0:44:38.40,0:44:42.55,Sub,,0,0,0,,engineering roadmap and we just like went like went really hard building a team to
+Dialogue: 0,0:44:42.60,0:44:46.04,Sub,,0,0,0,,40 and uh putting the right resources in place for us to design stuff really fast.
+Dialogue: 0,0:44:46.09,0:44:49.97,Sub,,0,0,0,,We had the we we'll show you here next visit but we have our figure one robot.
+Dialogue: 0,0:44:50.02,0:44:51.21,Sub,,0,0,0,,It it's kind of gnarly.
+Dialogue: 0,0:44:51.26,0:44:52.24,Sub,,0,0,0,,It's got wires everywhere.
+Dialogue: 0,0:44:52.29,0:44:53.57,Sub,,0,0,0,,It's our first generation.
+Dialogue: 0,0:44:53.62,0:44:58.47,Sub,,0,0,0,,We had that walking before we were uh a year old and we think it's probably one of the fastest times in human history.
+Dialogue: 0,0:44:58.52,0:45:02.99,Sub,,0,0,0,,So it was just like a you know we were like laser focused pedal to the metal trying to get this thing to work.
+Dialogue: 0,0:45:03.04,0:45:03.47,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:45:03.52,0:45:03.82,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:45:03.77,0:45:04.07,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:45:04.02,0:45:05.54,Sub,,0,0,0,,Let me show you some more stuff.
+Dialogue: 0,0:45:05.59,0:45:13.89,Sub,,0,0,0,,So we have uh we have a a bunch of different lines here that helps build pelvises install battery compute uh arms legs.
+Dialogue: 0,0:45:13.94,0:45:17.07,Sub,,0,0,0,,Uh here we're installing the lower leg on top.
+Dialogue: 0,0:45:17.12,0:45:19.83,Sub,,0,0,0,,Is there a reason there are humans installing the leg?
+Dialogue: 0,0:45:19.88,0:45:23.63,Sub,,0,0,0,,Um, at some point we will have robots doing all of this work.
+Dialogue: 0,0:45:23.68,0:45:25.15,Sub,,0,0,0,,Don't let them hear that.
+Dialogue: 0,0:45:25.20,0:45:25.51,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:45:25.54,0:45:29.20,Sub,,0,0,0,,Uh, and we're putting more and more automation in the lines now.
+Dialogue: 0,0:45:29.25,0:45:34.43,Sub,,0,0,0,,We're we will be shipping robots human our humanoid robots into the production lines here uh this year.
+Dialogue: 0,0:45:34.48,0:45:38.32,Sub,,0,0,0,,And um, and yeah, now now we're doing like the lower leg assembly for this robot.
+Dialogue: 0,0:45:38.37,0:45:40.77,Sub,,0,0,0,,And at some point today, it will go through some testing.
+Dialogue: 0,0:45:40.82,0:45:41.59,Sub,,0,0,0,,We'll show you in a minute.
+Dialogue: 0,0:45:41.64,0:45:45.74,Sub,,0,0,0,,and we'll basically walk over to headquarters and start basically uh helping us either
+Dialogue: 0,0:45:45.79,0:45:52.51,Sub,,0,0,0,,do uh like AI development or doing uh use case testing for our customers.
+Dialogue: 0,0:45:52.56,0:45:53.31,Sub,,0,0,0,,Pretty cool, huh?
+Dialogue: 0,0:45:53.36,0:45:54.63,Sub,,0,0,0,,It's pretty cool.
+Dialogue: 0,0:45:54.68,0:45:55.08,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:45:55.12,0:45:55.55,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:45:55.60,0:45:59.47,Sub,,0,0,0,,So crazy seeing them get assembled.
+Dialogue: 0,0:45:59.52,0:46:02.43,Sub,,0,0,0,,Are you worried they're going to become sentient?
+Dialogue: 0,0:46:02.48,0:46:09.63,Sub,,0,0,0,,Um I I think we'll I think we'll be okay.
+Dialogue: 0,0:46:09.68,0:46:15.38,Sub,,0,0,0,,um these things will get really smart like they're they're able to like do what humans can physically and I
+Dialogue: 0,0:46:15.43,0:46:21.39,Sub,,0,0,0,,think the neural network uh technologies we're designing are we're trying to give like human common sense to all the robots.
+Dialogue: 0,0:46:21.44,0:46:27.51,Sub,,0,0,0,,Um so in some way uh I think we'll get to add or even beyond human level intelligence in these systems.
+Dialogue: 0,0:46:27.56,0:46:32.75,Sub,,0,0,0,,It actually might be the case that we we get to artificial general intelligence first in these embodiment.
+Dialogue: 0,0:46:32.80,0:46:33.39,Sub,,0,0,0,,Really?
+Dialogue: 0,0:46:33.44,0:46:33.87,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:46:33.92,0:46:34.22,Sub,,0,0,0,,Why?
+Dialogue: 0,0:46:34.14,0:46:37.80,Sub,,0,0,0,,because we're able to like this interaction data of like touching the world um and
+Dialogue: 0,0:46:37.85,0:46:43.49,Sub,,0,0,0,,seeing what happens through trial and error is like um it basically uh mo most of
+Dialogue: 0,0:46:43.54,0:46:47.91,Sub,,0,0,0,,human intelligence uh is built this way and I think this is like the last
+Dialogue: 0,0:46:47.96,0:46:54.67,Sub,,0,0,0,,missing piece to get to true AGI is this like real world interaction with our environments.
+Dialogue: 0,0:46:54.72,0:46:55.72,Sub,,0,0,0,,Okay, come with me over here.
+Dialogue: 0,0:46:55.77,0:46:57.54,Sub,,0,0,0,,I'm g show you some of the testing work.
+Dialogue: 0,0:46:57.59,0:47:04.03,Sub,,0,0,0,,So the robots are basically built uh starting with the pelvis uh torso, head, arms, uh legs and hands.
+Dialogue: 0,0:47:04.08,0:47:07.37,Sub,,0,0,0,,And then we basically want to we want to go through like a basically a very
+Dialogue: 0,0:47:07.42,0:47:11.95,Sub,,0,0,0,,uh strenuous testing process to make sure everything is like working nominally before we send it out.
+Dialogue: 0,0:47:12.00,0:47:17.18,Sub,,0,0,0,,So we don't want any like loose cables or bad parts or bad communication.
+Dialogue: 0,0:47:17.23,0:47:21.32,Sub,,0,0,0,,So we send the robot through what we call a final EOL test or end of line test.
+Dialogue: 0,0:47:21.37,0:47:27.47,Sub,,0,0,0,,This is where the robots go through all the final checks and they basically go through also a burn-in on on these lines.
+Dialogue: 0,0:47:27.52,0:47:28.59,Sub,,0,0,0,,What do you mean by burnin?
+Dialogue: 0,0:47:28.64,0:47:30.19,Sub,,0,0,0,,They'll they'll run for several hours.
+Dialogue: 0,0:47:30.24,0:47:30.54,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:47:30.56,0:47:33.98,Sub,,0,0,0,,And we'll basically make sure there's nothing that basically uh no no issues pop
+Dialogue: 0,0:47:34.03,0:47:37.63,Sub,,0,0,0,,up over those few hours before we before we send the send the robots out.
+Dialogue: 0,0:47:37.68,0:47:43.20,Sub,,0,0,0,,So uh so here we have um these bays that are running a combination
+Dialogue: 0,0:47:43.25,0:47:47.67,Sub,,0,0,0,,of burn-in testing and uh and end ofline checks that we've designed here internally.
+Dialogue: 0,0:47:47.72,0:47:53.75,Sub,,0,0,0,,So we basically go through a process where the robot's basically self like trying to understand itself like do is anything seem wrong.
+Dialogue: 0,0:47:53.80,0:47:55.86,Sub,,0,0,0,,If it is we will uh we'll flag it.
+Dialogue: 0,0:47:55.91,0:47:59.33,Sub,,0,0,0,,If it's not basically we go through a process where we basically do like basically
+Dialogue: 0,0:47:59.38,0:48:03.39,Sub,,0,0,0,,a bunch of checks and burn in make sure the robot's in good good condition.
+Dialogue: 0,0:48:03.44,0:48:10.27,Sub,,0,0,0,,Um if they pass here we basically uh we'll we'll walk over to headquarters and if they fail here we need to go fix it and understand why.
+Dialogue: 0,0:48:10.32,0:48:12.91,Sub,,0,0,0,,Why do these ones have vests on them?
+Dialogue: 0,0:48:12.96,0:48:15.16,Sub,,0,0,0,,Um, when the robots are getting brought up,
+Dialogue: 0,0:48:15.21,0:48:24.27,Sub,,0,0,0,,we basically uh we I think we hold it through a gantry system on the back and they have their vests on for that system.
+Dialogue: 0,0:48:24.32,0:48:27.23,Sub,,0,0,0,,It's basically like the robots are like just been born and they're waking up.
+Dialogue: 0,0:48:27.28,0:48:30.10,Sub,,0,0,0,,They're saying, you know, they look at they look at their hands,
+Dialogue: 0,0:48:30.15,0:48:37.47,Sub,,0,0,0,,they start calibrating itself visually and um try trying to make sure everything's in a healthy state of this campus.
+Dialogue: 0,0:48:37.52,0:48:42.27,Sub,,0,0,0,,What is your favorite part?
+Dialogue: 0,0:48:42.32,0:48:44.42,Sub,,0,0,0,,I think Baku is one of my favorite parts here.
+Dialogue: 0,0:48:44.47,0:48:46.59,Sub,,0,0,0,,Like being able to build robots.
+Dialogue: 0,0:48:46.64,0:48:51.83,Sub,,0,0,0,,Um in March we had record um you know we we we had record manufacturing.
+Dialogue: 0,0:48:51.88,0:48:57.26,Sub,,0,0,0,,We we we we made more robots in March than we had ever in our entire lifetime combined.
+Dialogue: 0,0:48:57.31,0:49:00.75,Sub,,0,0,0,,Um it's just cool to see us being able to do this and then get them out the door.
+Dialogue: 0,0:49:00.80,0:49:05.61,Sub,,0,0,0,,Um so I would say um this is probably one of my favorite places in the in the campus.
+Dialogue: 0,0:49:05.66,0:49:09.76,Sub,,0,0,0,,I think maybe my other favorite place that we'll show um some point here is like
+Dialogue: 0,0:49:09.81,0:49:15.72,Sub,,0,0,0,,the robots doing real useful work 247 um on our either commercial customers or in the home.
+Dialogue: 0,0:49:15.77,0:49:20.72,Sub,,0,0,0,,Uh that stuff is just amazing because what we're here to do is we're here to like basically build like uh humanlike
+Dialogue: 0,0:49:20.77,0:49:26.42,Sub,,0,0,0,,intelligence in the world and to see robots working 247 being able to do things like humans can is like so special.
+Dialogue: 0,0:49:26.47,0:49:27.63,Sub,,0,0,0,,It's like such a hard thing to do.
+Dialogue: 0,0:49:27.68,0:49:27.98,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:49:27.93,0:49:32.26,Sub,,0,0,0,,And be able to see us doing it like uh at these levels of reliability is like it's awesome.
+Dialogue: 0,0:49:32.31,0:49:35.47,Sub,,0,0,0,,Um, so I think it's probably a couple of my favorite places on campus.
+Dialogue: 0,0:49:35.52,0:49:39.87,Sub,,0,0,0,,If you didn't have your job, what job would you want here?
+Dialogue: 0,0:49:39.92,0:49:45.52,Sub,,0,0,0,,Yeah, I think um I think there's a few things I really like.
+Dialogue: 0,0:49:45.57,0:49:51.74,Sub,,0,0,0,,I like the engineering design process of how do you think about clean sheet improving the system to be like more reliable,
+Dialogue: 0,0:49:51.79,0:49:58.48,Sub,,0,0,0,,cheaper, lower in mass and um overall a better functioning robot that can do more of what humans can with less complexity.
+Dialogue: 0,0:49:58.53,0:50:05.97,Sub,,0,0,0,,I think that that job across the hardware like engineering and software engineering design or is like I I spent a lot of time
+Dialogue: 0,0:50:06.02,0:50:12.78,Sub,,0,0,0,,in that uh like leading engineering here and it's just like a uh yeah it's just a really fun and I think very hard problem.
+Dialogue: 0,0:50:12.83,0:50:17.17,Sub,,0,0,0,,Uh everything you try every choice you make to try to make the robot better for thermals or
+Dialogue: 0,0:50:17.22,0:50:22.21,Sub,,0,0,0,,better like lower lower mass or like lower weight makes the something else on the other side worse.
+Dialogue: 0,0:50:22.26,0:50:27.70,Sub,,0,0,0,,Like if you're trying to make the robot like lighter it means it probably can't like hold as much weight. then can't hold as much weight.
+Dialogue: 0,0:50:27.75,0:50:32.97,Sub,,0,0,0,,The customers are like, "Well, if you can't carry 30 pound boxes around, I I can't use you on this assembly line."
+Dialogue: 0,0:50:33.02,0:50:38.03,Sub,,0,0,0,,Uh, so there's just like um I think there's a lot of just interesting, very hard problems to solve there.
+Dialogue: 0,0:50:38.08,0:50:44.43,Sub,,0,0,0,,I think second is like how do we get neural networks to run on robots and generalize at scale on the Helix team
+Dialogue: 0,0:50:44.48,0:50:51.38,Sub,,0,0,0,,and that for uh really is like a um at this point a data and generalization issue and that's a really hard fun problem.
+Dialogue: 0,0:50:51.43,0:50:54.91,Sub,,0,0,0,,Uh manufacturing is another one of how do we like how do we manufacture robots at scale?
+Dialogue: 0,0:50:54.96,0:50:57.97,Sub,,0,0,0,,How do we continue to get robots in the manufacturing process to build themselves?
+Dialogue: 0,0:50:58.02,0:51:01.95,Sub,,0,0,0,,And how do we get them to off the lines into the real world as fast as possible?
+Dialogue: 0,0:51:02.00,0:51:06.75,Sub,,0,0,0,,At some point here, it'll just be like a it'll just be full lights out manufacturing.
+Dialogue: 0,0:51:06.80,0:51:09.51,Sub,,0,0,0,,Uh we'll have like robots only building robots and sending out to the world.
+Dialogue: 0,0:51:09.56,0:51:11.26,Sub,,0,0,0,,The robots will be getting into boxes themselves.
+Dialogue: 0,0:51:11.31,0:51:15.39,Sub,,0,0,0,,Other robots will be boxing them up and we'll be shipping them out to customers.
+Dialogue: 0,0:51:15.44,0:51:15.87,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:51:15.92,0:51:17.79,Sub,,0,0,0,,Sounds a bit sentient.
+Dialogue: 0,0:51:17.84,0:51:18.72,Sub,,0,0,0,,It's a bit sentient.
+Dialogue: 0,0:51:18.77,0:51:19.07,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:51:19.04,0:51:23.23,Sub,,0,0,0,,And uh so that's another area where I'm just like um it's extremely interesting.
+Dialogue: 0,0:51:23.28,0:51:27.23,Sub,,0,0,0,,And I think the last piece is uh um we have a whole commercial operations team
+Dialogue: 0,0:51:27.28,0:51:30.49,Sub,,0,0,0,,that's trying to get robots out to the world at scale and make them really useful.
+Dialogue: 0,0:51:30.54,0:51:35.71,Sub,,0,0,0,,Uh we did this uh with BMW last year and we're doing it with more customers this year for figure three.
+Dialogue: 0,0:51:35.76,0:51:40.75,Sub,,0,0,0,,And it's um it's a really cool problem because it's really hard like robots need to get in the environment needs to get safely.
+Dialogue: 0,0:51:40.80,0:51:44.23,Sub,,0,0,0,,They never like basically can almost never fault and when they do fault they need to understand
+Dialogue: 0,0:51:44.28,0:51:48.53,Sub,,0,0,0,,that and self-correct and then we need to be able to do useful human work at human performance.
+Dialogue: 0,0:51:48.58,0:51:54.54,Sub,,0,0,0,,So our our comparison is like what does a human do today in terms of speeds inaccuracies um and then reliability.
+Dialogue: 0,0:51:54.59,0:51:56.21,Sub,,0,0,0,,So like that's a hard bar to hit.
+Dialogue: 0,0:51:56.26,0:52:04.75,Sub,,0,0,0,,So uh those are all like um kind of like gigantic problems to go solve that I think I if I was you know here I'd want to spend all my time on those.
+Dialogue: 0,0:52:04.80,0:52:05.23,Sub,,0,0,0,,Cool.
+Dialogue: 0,0:52:05.28,0:52:05.59,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:52:05.62,0:52:06.08,Sub,,0,0,0,,Awesome.
+Dialogue: 0,0:52:06.13,0:52:06.44,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:52:06.47,0:52:08.43,Sub,,0,0,0,,You want to see the design studio?
+Dialogue: 0,0:52:08.48,0:52:08.78,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:52:08.72,0:52:09.09,Sub,,0,0,0,,Let's go.
+Dialogue: 0,0:52:09.12,0:52:12.99,Sub,,0,0,0,,Let's go.
+Dialogue: 0,0:52:13.04,0:52:14.27,Sub,,0,0,0,,What do you think of this?
+Dialogue: 0,0:52:14.32,0:52:15.43,Sub,,0,0,0,,It's really fun.
+Dialogue: 0,0:52:15.48,0:52:16.59,Sub,,0,0,0,,It's really fun.
+Dialogue: 0,0:52:16.64,0:52:20.27,Sub,,0,0,0,,I have the coolest job because I just get to visit people's factories all day.
+Dialogue: 0,0:52:20.32,0:52:20.62,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:52:20.64,0:52:22.38,Sub,,0,0,0,,And everybody's building something different.
+Dialogue: 0,0:52:22.43,0:52:25.19,Sub,,0,0,0,,I was at Applied Intuition earlier uh this week.
+Dialogue: 0,0:52:25.24,0:52:27.01,Sub,,0,0,0,,I was then at Skyio.
+Dialogue: 0,0:52:27.06,0:52:29.47,Sub,,0,0,0,,I've been to Archer.
+Dialogue: 0,0:52:29.52,0:52:33.31,Sub,,0,0,0,,I've been to um Anderoll.
+Dialogue: 0,0:52:33.36,0:52:37.07,Sub,,0,0,0,,We have just been looking through every door.
+Dialogue: 0,0:52:37.12,0:52:40.15,Sub,,0,0,0,,That's awesome.
+Dialogue: 0,0:52:40.20,0:52:41.31,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:52:41.36,0:52:49.26,Sub,,0,0,0,,VCX by Fundrise, the public ticker for private tech, allowing investors of all sizes to invest in venture capital.
+Dialogue: 0,0:52:49.31,0:52:52.91,Sub,,0,0,0,,View the portfolio at getvcx.com.
+Dialogue: 0,0:52:52.96,0:52:55.87,Sub,,0,0,0,,That's getvcx.com.
+Dialogue: 0,0:52:55.92,0:53:01.26,Sub,,0,0,0,,Some of you may not have heard this yet, but our sponsor Public just launched something called Generated Assets,
+Dialogue: 0,0:53:01.31,0:53:05.05,Sub,,0,0,0,,and it brings AI into investing in a way I've honestly never seen before.
+Dialogue: 0,0:53:05.10,0:53:06.11,Sub,,0,0,0,,Here's how it works.
+Dialogue: 0,0:53:06.16,0:53:09.79,Sub,,0,0,0,,You type in an idea like AI powered supply chain companies with
+Dialogue: 0,0:53:09.84,0:53:15.54,Sub,,0,0,0,,positive free cash flow or defense tech companies growing revenue over 25% year-over-year.
+Dialogue: 0,0:53:15.59,0:53:23.40,Sub,,0,0,0,,Publix AI then dispatches a swarm of agents that scan every single US stock, evaluates them, and instantly builds a custom index around your thesis.
+Dialogue: 0,0:53:23.45,0:53:26.97,Sub,,0,0,0,,What really stands out is how clearly it explains why each stock is included.
+Dialogue: 0,0:53:27.02,0:53:34.83,Sub,,0,0,0,,And before you invest, you can even back test your idea against the S&P 500, so you're making decisions with real context, not just guessing.
+Dialogue: 0,0:53:34.88,0:53:41.02,Sub,,0,0,0,,And beyond generated assets, Public lets you invest in stocks, bonds, options, crypto, all in one place.
+Dialogue: 0,0:53:41.06,0:53:46.37,Sub,,0,0,0,,They'll even give you an uncapped 1% match when you transfer your investments over from another platform.
+Dialogue: 0,0:53:46.42,0:53:53.37,Sub,,0,0,0,,If you want to build a portfolio that actually reflects your thesis, visit public.com/sourcy, paid for by public investing.
+Dialogue: 0,0:53:53.42,0:53:55.63,Sub,,0,0,0,,Full disclosures in the description.
+Dialogue: 0,0:53:55.68,0:54:02.49,Sub,,0,0,0,,Enterprise AI runs on Merge, the AI infra platform for integrations, agent tooling, and model orchestration.
+Dialogue: 0,0:54:02.54,0:54:05.07,Sub,,0,0,0,,So your teams ship product, not plumbing.
+Dialogue: 0,0:54:05.12,0:54:09.11,Sub,,0,0,0,,Mistral, Dropbox, and Drada already trust merge in production.
+Dialogue: 0,0:54:09.16,0:54:11.47,Sub,,0,0,0,,Start building at merge.dev.
+Dialogue: 0,0:54:11.52,0:54:13.36,Sub,,0,0,0,,Founders scale faster on deal.
+Dialogue: 0,0:54:13.41,0:54:15.90,Sub,,0,0,0,,Set up payroll for any country in minutes.
+Dialogue: 0,0:54:15.95,0:54:17.28,Sub,,0,0,0,,Hire anyone anywhere.
+Dialogue: 0,0:54:17.33,0:54:20.31,Sub,,0,0,0,,Get visas handled fast and get back to building.
+Dialogue: 0,0:54:20.36,0:54:23.15,Sub,,0,0,0,,Visit deal.com/sourcy.
+Dialogue: 0,0:54:23.20,0:54:27.39,Sub,,0,0,0,,That's deeal.com/sourcy.
+Dialogue: 0,0:54:27.44,0:54:31.11,Sub,,0,0,0,,5 years ago when I took Arch Republic, um, I saw this campus.
+Dialogue: 0,0:54:31.16,0:54:33.31,Sub,,0,0,0,,It was all empty and I was like, I got to be here.
+Dialogue: 0,0:54:33.36,0:54:33.66,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:54:33.68,0:54:35.75,Sub,,0,0,0,,Like the the build the buildings are like really big.
+Dialogue: 0,0:54:35.80,0:54:37.75,Sub,,0,0,0,,Uh like it's just like they're all open.
+Dialogue: 0,0:54:37.80,0:54:41.21,Sub,,0,0,0,,It's just like it's just like and you multiple buildings on campus and they're all
+Dialogue: 0,0:54:41.26,0:54:44.11,Sub,,0,0,0,,close and it's it's hard to find space like that where you can build hardware in,
+Dialogue: 0,0:54:44.16,0:54:46.99,Sub,,0,0,0,,make loud noises, but also close where everybody lives in the Bay Area.
+Dialogue: 0,0:54:47.04,0:54:49.15,Sub,,0,0,0,,Are you worried it's too nice?
+Dialogue: 0,0:54:49.20,0:54:50.56,Sub,,0,0,0,,Uh no, not at all.
+Dialogue: 0,0:54:50.61,0:54:58.63,Sub,,0,0,0,,Like uh we're like we like it looks like we're uh we're manufacturing in here and running robots, so it's it's uh No, it's fine for us.
+Dialogue: 0,0:54:58.68,0:55:02.36,Sub,,0,0,0,,and like you it it has like like some industrial grit here, you know what I mean?
+Dialogue: 0,0:55:02.41,0:55:05.23,Sub,,0,0,0,,It feels uh like we're like we're kind of like builders and makers.
+Dialogue: 0,0:55:05.28,0:55:06.68,Sub,,0,0,0,,So, it's uh it's kind of nice.
+Dialogue: 0,0:55:06.73,0:55:12.79,Sub,,0,0,0,,It's kind of like reflects a lot about like kind of who we are uh on the team and it's just like my happy place.
+Dialogue: 0,0:55:12.84,0:55:13.14,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:55:13.12,0:55:19.44,Sub,,0,0,0,,Been been looking at this for five years and we finally we finally got it and uh it's great and I can just walk to manufacturing.
+Dialogue: 0,0:55:19.49,0:55:20.43,Sub,,0,0,0,,I can walk to the grid.
+Dialogue: 0,0:55:20.48,0:55:21.93,Sub,,0,0,0,,I can walk to building four.
+Dialogue: 0,0:55:21.98,0:55:25.52,Sub,,0,0,0,,I can walk here to headquarters and I can just be here with my team and pop
+Dialogue: 0,0:55:25.57,0:55:30.27,Sub,,0,0,0,,in where I need uh to solve like any like whatever the biggest problem of the day is.
+Dialogue: 0,0:55:30.32,0:55:33.87,Sub,,0,0,0,,Is most of your talent down in South Bay or do they all commute?
+Dialogue: 0,0:55:33.92,0:55:37.74,Sub,,0,0,0,,Um most of the talent is here and then we have a shuttle for folks in the city that want to come down.
+Dialogue: 0,0:55:37.79,0:55:43.53,Sub,,0,0,0,,So maybe like I don't know five or 10% of the of of you know folks here work in like live in the city and commute
+Dialogue: 0,0:55:43.58,0:55:49.15,Sub,,0,0,0,,down and then I think maybe most majority of the rest all live kind of pretty local within like 20 or 30 minutes from the office.
+Dialogue: 0,0:55:49.20,0:55:49.50,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:55:49.48,0:55:51.30,Sub,,0,0,0,,Luckily the weather is nice here today.
+Dialogue: 0,0:55:51.35,0:55:54.51,Sub,,0,0,0,,I mean the weather is just freezing and cold and rainy yesterday.
+Dialogue: 0,0:55:54.56,0:55:54.86,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:55:54.81,0:55:55.11,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:55:55.05,0:55:58.51,Sub,,0,0,0,,The weather is pretty much the same here every day.
+Dialogue: 0,0:55:58.56,0:56:00.43,Sub,,0,0,0,,Okay, let's Oh my god, we're back.
+Dialogue: 0,0:56:00.48,0:56:04.43,Sub,,0,0,0,,We're back so fast.
+Dialogue: 0,0:56:04.48,0:56:06.48,Sub,,0,0,0,,How did you come up with the logo?
+Dialogue: 0,0:56:06.53,0:56:06.85,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:56:06.88,0:56:10.19,Sub,,0,0,0,,Logo is uh got a couple uh things that are cool here.
+Dialogue: 0,0:56:10.24,0:56:16.91,Sub,,0,0,0,,It's like one is like uh it kind of like looks like um like basically how the robot steps and tracking its steps and feet.
+Dialogue: 0,0:56:16.96,0:56:17.33,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:56:17.36,0:56:22.27,Sub,,0,0,0,,And then two, it's like a little F for figure.
+Dialogue: 0,0:56:22.32,0:56:24.43,Sub,,0,0,0,,So, this is the fancy secret room now.
+Dialogue: 0,0:56:24.48,0:56:26.43,Sub,,0,0,0,,This is a secret room that nobody's allowed to come in.
+Dialogue: 0,0:56:26.48,0:56:27.23,Sub,,0,0,0,,Oh.
+Dialogue: 0,0:56:27.28,0:56:29.82,Sub,,0,0,0,,Uh this is our design studio.
+Dialogue: 0,0:56:29.87,0:56:32.91,Sub,,0,0,0,,So, I'm going to show you every robot we've ever built.
+Dialogue: 0,0:56:32.96,0:56:33.47,Sub,,0,0,0,,Wow.
+Dialogue: 0,0:56:33.52,0:56:34.30,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:56:34.35,0:56:43.55,Sub,,0,0,0,,Um so we started in 2022 and uh the goal was like how do we get humanoid robots to our AI and software team as fast as possible.
+Dialogue: 0,0:56:43.60,0:56:45.51,Sub,,0,0,0,,Uh so we designed figure one here.
+Dialogue: 0,0:56:45.56,0:56:49.36,Sub,,0,0,0,,This is our first generation robot.
+Dialogue: 0,0:56:49.41,0:56:51.55,Sub,,0,0,0,,Uh pretty cyberpunk.
+Dialogue: 0,0:56:51.60,0:56:58.03,Sub,,0,0,0,,And how much did this one cost to make and develop going down the line?
+Dialogue: 0,0:56:58.08,0:56:58.82,Sub,,0,0,0,,Oh wow.
+Dialogue: 0,0:56:58.87,0:57:06.78,Sub,,0,0,0,,Um, this one was like uh built to be expensive and move extremely fast uh in terms of building it.
+Dialogue: 0,0:57:06.83,0:57:09.39,Sub,,0,0,0,,So, this was like hundreds of thousands of dollars.
+Dialogue: 0,0:57:09.44,0:57:16.35,Sub,,0,0,0,,Uh, and the robots we have now are are like uh uh you know, well under $100,000 each.
+Dialogue: 0,0:57:16.40,0:57:24.48,Sub,,0,0,0,,Um, and uh so yeah, this was very expensive, mostly expensive because we CNC manufactured the entire thing.
+Dialogue: 0,0:57:24.53,0:57:31.72,Sub,,0,0,0,,Uh like basically the way we made all the metal parts was like extremely high precision like think like Formula 1 race car type type type stuff.
+Dialogue: 0,0:57:31.77,0:57:35.01,Sub,,0,0,0,,Um we had this walk-in within the first year.
+Dialogue: 0,0:57:35.06,0:57:39.06,Sub,,0,0,0,,Uh and we did we did a lot of the early AI stuff here that we kind of proved out the company.
+Dialogue: 0,0:57:39.11,0:57:40.15,Sub,,0,0,0,,It was it was great.
+Dialogue: 0,0:57:40.20,0:57:43.31,Sub,,0,0,0,,Um and then we moved on to figure two which is which is here.
+Dialogue: 0,0:57:43.36,0:57:49.15,Sub,,0,0,0,,Uh some improvements we did is we moved the battery uh that was on a backpack into the torso.
+Dialogue: 0,0:57:49.20,0:57:49.57,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:57:49.60,0:57:53.29,Sub,,0,0,0,,And then this one had like a basically relatively small computer compared to this.
+Dialogue: 0,0:57:53.34,0:57:54.99,Sub,,0,0,0,,We basically tripled the compute.
+Dialogue: 0,0:57:55.04,0:57:58.10,Sub,,0,0,0,,So we basically doubled the battery pack, tripled the compute.
+Dialogue: 0,0:57:58.15,0:58:02.06,Sub,,0,0,0,,Uh we have new camera sensors in the head and pelvis in the back.
+Dialogue: 0,0:58:02.11,0:58:07.94,Sub,,0,0,0,,Uh we had our next generation hands and uh we basically wired the whole robot internally.
+Dialogue: 0,0:58:07.99,0:58:11.96,Sub,,0,0,0,,Um and we also designed uh designed the structure similar to air.
+Dialogue: 0,0:58:12.02,0:58:14.86,Sub,,0,0,0,,Air aircrafts take loads to the aircraft skin.
+Dialogue: 0,0:58:14.91,0:58:19.12,Sub,,0,0,0,,And so we designed the basically the structure is an exoskeleton.
+Dialogue: 0,0:58:19.17,0:58:24.83,Sub,,0,0,0,,So all the load pass uh for the structures is is exterior of the exterior surface.
+Dialogue: 0,0:58:24.88,0:58:32.91,Sub,,0,0,0,,Um we made about I think like 50 of these and uh we just recently we're just we're just we just recently retired in about a month or two.
+Dialogue: 0,0:58:32.96,0:58:35.60,Sub,,0,0,0,,Uh and then we've moved now to generation three.
+Dialogue: 0,0:58:35.65,0:58:37.67,Sub,,0,0,0,,Uh this is our figure 3 robot.
+Dialogue: 0,0:58:37.72,0:58:40.59,Sub,,0,0,0,,Those are all three the same with different outfits.
+Dialogue: 0,0:58:40.64,0:58:44.31,Sub,,0,0,0,,And um the robot here we like reduced we reduced the weight.
+Dialogue: 0,0:58:44.36,0:58:47.17,Sub,,0,0,0,,We made it skinnier but also keep the same power and torques.
+Dialogue: 0,0:58:47.22,0:58:48.33,Sub,,0,0,0,,It's got Oic speeds.
+Dialogue: 0,0:58:48.38,0:58:49.73,Sub,,0,0,0,,It's got Ozimpic.
+Dialogue: 0,0:58:49.78,0:58:51.23,Sub,,0,0,0,,Yeah, exactly.
+Dialogue: 0,0:58:51.28,0:58:52.47,Sub,,0,0,0,,Uh I think it looks better.
+Dialogue: 0,0:58:52.52,0:58:56.13,Sub,,0,0,0,,Like this will look a little too like uh kind of too roboty.
+Dialogue: 0,0:58:56.18,0:58:57.19,Sub,,0,0,0,,It's much robot.
+Dialogue: 0,0:58:57.24,0:58:57.94,Sub,,0,0,0,,Less robot.
+Dialogue: 0,0:58:57.99,0:58:59.07,Sub,,0,0,0,,Too much robot.
+Dialogue: 0,0:58:59.12,0:58:59.52,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:58:59.56,0:59:01.47,Sub,,0,0,0,,Like uh so we slimmed everything down.
+Dialogue: 0,0:59:01.52,0:59:02.51,Sub,,0,0,0,,We soft wrapped it.
+Dialogue: 0,0:59:02.56,0:59:05.74,Sub,,0,0,0,,It's got a layer of foam like on the shoulders and to the chest.
+Dialogue: 0,0:59:05.79,0:59:06.56,Sub,,0,0,0,,So it's soft.
+Dialogue: 0,0:59:06.61,0:59:12.12,Sub,,0,0,0,,We have our next we have our newest generation hands on this which have camera tactile sensors.
+Dialogue: 0,0:59:12.17,0:59:15.45,Sub,,0,0,0,,Uh is basically able to grasp items much much easier.
+Dialogue: 0,0:59:15.50,0:59:19.15,Sub,,0,0,0,,Um we reduced the cost by about 90% between these two.
+Dialogue: 0,0:59:19.20,0:59:19.71,Sub,,0,0,0,,Really?
+Dialogue: 0,0:59:19.76,0:59:20.09,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:59:20.12,0:59:20.42,Sub,,0,0,0,,Ex.
+Dialogue: 0,0:59:20.36,0:59:20.69,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:59:20.72,0:59:22.19,Sub,,0,0,0,,What was the major cost there?
+Dialogue: 0,0:59:22.24,0:59:27.71,Sub,,0,0,0,,Um we didn't care like we've optimized these first few generations for speed.
+Dialogue: 0,0:59:27.76,0:59:29.23,Sub,,0,0,0,,We didn't care as much about cost.
+Dialogue: 0,0:59:29.28,0:59:34.35,Sub,,0,0,0,,So that was like the biggest misconception of designing it initially with speed.
+Dialogue: 0,0:59:34.40,0:59:34.70,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:59:34.72,0:59:36.89,Sub,,0,0,0,,Like I we were sitting here in 2022.
+Dialogue: 0,0:59:36.94,0:59:43.91,Sub,,0,0,0,,We're like um our software folks need a humanoid to do testing and do AI work or whatever it is on it.
+Dialogue: 0,0:59:43.96,0:59:49.77,Sub,,0,0,0,,And so and there's like there wasn't at the time uh still really isn't a good humanoid robot to go by to help us speed us up.
+Dialogue: 0,0:59:49.82,0:59:50.89,Sub,,0,0,0,,So we had to go build it.
+Dialogue: 0,0:59:50.94,0:59:53.68,Sub,,0,0,0,,So it's like even if it's expensive like let's get stuff to the team as fast
+Dialogue: 0,0:59:53.73,0:59:58.43,Sub,,0,0,0,,as possible to start getting like the basically start like working on the development process for commercialization.
+Dialogue: 0,0:59:58.48,1:00:04.19,Sub,,0,0,0,,And the same with figure 2 the goal was like um we had a lot of problems with reliability here that we needed to clean up.
+Dialogue: 0,1:00:04.24,1:00:07.87,Sub,,0,0,0,,We had like wires poking out and all kinds of issues here with this robot.
+Dialogue: 0,1:00:07.92,1:00:10.98,Sub,,0,0,0,,Um it was kind of it was kind of falting every few hours.
+Dialogue: 0,1:00:11.03,1:00:11.33,Sub,,0,0,0,,Uh,
+Dialogue: 0,1:00:11.29,1:00:16.85,Sub,,0,0,0,,so we just had a ton of reliability issues we needed to clean up because we're kind of known though because we're moving really really really fast.
+Dialogue: 0,1:00:16.90,1:00:21.45,Sub,,0,0,0,,So figure two was just like way too expensive, like too hard to manufacture at scale.
+Dialogue: 0,1:00:21.50,1:00:25.14,Sub,,0,0,0,,So figure three was like how do we like reduce the cost by like almost an order of magnitude?
+Dialogue: 0,1:00:25.19,1:00:26.43,Sub,,0,0,0,,How do we make a lot of them?
+Dialogue: 0,1:00:26.48,1:00:30.43,Sub,,0,0,0,,How do we make it like closer to what we think the ideal outcome is for like every robot in the world?
+Dialogue: 0,1:00:30.48,1:00:34.49,Sub,,0,0,0,,Um, so these robots uh basically have the ability to take these clothes on and off.
+Dialogue: 0,1:00:34.54,1:00:39.95,Sub,,0,0,0,,So we have different like different different types of um accessories we can put on them.
+Dialogue: 0,1:00:40.00,1:00:44.83,Sub,,0,0,0,,uh shoes, gloves, uh like yeah, fabrics.
+Dialogue: 0,1:00:44.88,1:00:47.49,Sub,,0,0,0,,How often are you thinking about the next version?
+Dialogue: 0,1:00:47.54,1:00:50.26,Sub,,0,0,0,,Like what do you want the next version to be?
+Dialogue: 0,1:00:50.31,1:00:53.83,Sub,,0,0,0,,And like do you start thinking about it while you're building this one or after it?
+Dialogue: 0,1:00:53.88,1:00:57.61,Sub,,0,0,0,,Like at what point of the production stage do you start the next iteration?
+Dialogue: 0,1:00:57.66,1:01:03.60,Sub,,0,0,0,,We we are now building a new robot almost every year and uh we'll have uh you know we
+Dialogue: 0,1:01:03.65,1:01:09.90,Sub,,0,0,0,,we were like we're like late stage now in the design process for figure 4 and um there are
+Dialogue: 0,1:01:09.95,1:01:13.87,Sub,,0,0,0,,some changes that we like we want to put into the iterate this is like a it's like this
+Dialogue: 0,1:01:13.92,1:01:18.78,Sub,,0,0,0,,is like iPhone like iPhones you know what I mean like everyone's getting better yeah exactly uh so every
+Dialogue: 0,1:01:18.83,1:01:22.54,Sub,,0,0,0,,word we're trying to get better so there there are some things we just didn't get to and have
+Dialogue: 0,1:01:22.59,1:01:26.73,Sub,,0,0,0,,enough time to work on on figure three that we want to derisk we put into four uh And
+Dialogue: 0,1:01:26.78,1:01:30.25,Sub,,0,0,0,,there are also some things we've learned from like operating figure three now that we're like man this is
+Dialogue: 0,1:01:30.30,1:01:33.55,Sub,,0,0,0,,like could be way better if we did this for that that we're putting into figure four as well.
+Dialogue: 0,1:01:33.60,1:01:37.93,Sub,,0,0,0,,And then we want to keep reducing costs and making it easier to manufacture at every step.
+Dialogue: 0,1:01:37.98,1:01:41.11,Sub,,0,0,0,,So we're looking at figure four and we're like uh figure three we're like oh
+Dialogue: 0,1:01:41.16,1:01:44.61,Sub,,0,0,0,,man like some of these things are like kind of hard to manufacture at BCube.
+Dialogue: 0,1:01:44.66,1:01:49.84,Sub,,0,0,0,,Um or like how are we going to get it out of a box or how are we going to get it like a new user in a home like really easily.
+Dialogue: 0,1:01:49.89,1:01:54.66,Sub,,0,0,0,,So like taking all those collective like learnings and we're putting them into the engineering design efforts and
+Dialogue: 0,1:01:54.71,1:01:59.15,Sub,,0,0,0,,we go through many different like basically gating processes for that for like starting with like an architecture
+Dialogue: 0,1:01:59.20,1:02:03.33,Sub,,0,0,0,,review of what what the system should look like and high level like you know like level zero
+Dialogue: 0,1:02:03.38,1:02:08.05,Sub,,0,0,0,,requirements all the way through to detail design which we're we're now in for figure uh figure four.
+Dialogue: 0,1:02:08.10,1:02:15.12,Sub,,0,0,0,,What's kind of crazy here is um I thought at some point we like we would saturate out like an you know iPhone like doesn't really change much anymore.
+Dialogue: 0,1:02:15.17,1:02:18.59,Sub,,0,0,0,,I thought like figure three at this point was like this is like a this is like our best human
+Dialogue: 0,1:02:18.64,1:02:22.34,Sub,,0,0,0,,robot in the world and is every robot's going to be like it's going to be better but not by much.
+Dialogue: 0,1:02:22.39,1:02:26.23,Sub,,0,0,0,,What's going to happen here is you're going to have figure one kind of a you know
+Dialogue: 0,1:02:26.28,1:02:29.65,Sub,,0,0,0,,to figure two like a step up and figure two to figure three at a step up.
+Dialogue: 0,1:02:29.70,1:02:33.23,Sub,,0,0,0,,Figure four will be the biggest step up we've ever made by far.
+Dialogue: 0,1:02:33.28,1:02:38.30,Sub,,0,0,0,,We'll have it out here at one point and you'll be like oh my gosh it's just like radically different.
+Dialogue: 0,1:02:38.35,1:02:40.61,Sub,,0,0,0,,And um so we obviously can't talk too much.
+Dialogue: 0,1:02:40.66,1:02:43.39,Sub,,0,0,0,,We can't talk about anything basically on on what we're doing there.
+Dialogue: 0,1:02:43.44,1:02:45.05,Sub,,0,0,0,,But like uh we are just so early.
+Dialogue: 0,1:02:45.10,1:02:49.14,Sub,,0,0,0,,We're like almost in like flip phones and now we're entering like iPhone one moment.
+Dialogue: 0,1:02:49.19,1:02:53.17,Sub,,0,0,0,,I think maybe figure 4 will be our first like iPhone one moment for this where it's just like
+Dialogue: 0,1:02:53.22,1:03:00.19,Sub,,0,0,0,,radically different and probably like for me I think it's like almost the perfect humanoid robot I can think of.
+Dialogue: 0,1:03:00.24,1:03:03.66,Sub,,0,0,0,,I'm sure there's things on five and six as we iterate through it'll be even better.
+Dialogue: 0,1:03:03.71,1:03:05.71,Sub,,0,0,0,,Um but we've learned a lot.
+Dialogue: 0,1:03:05.76,1:03:08.29,Sub,,0,0,0,,Here's a couple examples we have.
+Dialogue: 0,1:03:08.34,1:03:13.15,Sub,,0,0,0,,Um, here's some parts we have on the table for uh this is our generation of hands.
+Dialogue: 0,1:03:13.20,1:03:16.83,Sub,,0,0,0,,Starting with our first generation hand to our current generation hand today.
+Dialogue: 0,1:03:16.88,1:03:22.59,Sub,,0,0,0,,We've gone through like five uh versions of this kind of well they're kind of like same size as my hands.
+Dialogue: 0,1:03:22.64,1:03:23.31,Sub,,0,0,0,,Yeah, that one.
+Dialogue: 0,1:03:23.36,1:03:26.19,Sub,,0,0,0,,Uh, one thing we have never shown is our first generation hand.
+Dialogue: 0,1:03:26.24,1:03:26.67,Sub,,0,0,0,,Really?
+Dialogue: 0,1:03:26.72,1:03:27.09,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:03:27.12,1:03:27.71,Sub,,0,0,0,,Why?
+Dialogue: 0,1:03:27.76,1:03:32.19,Sub,,0,0,0,,Um, was really difficult from an IP perspective and engineering perspective to go build.
+Dialogue: 0,1:03:32.24,1:03:37.70,Sub,,0,0,0,,Um and two is we think um we learned a lot about it and we learned like things like what are good and good and bad.
+Dialogue: 0,1:03:37.75,1:03:43.46,Sub,,0,0,0,,In this case we felt like we had um uh learned a lot about the hand of like why it's probably not the right direction.
+Dialogue: 0,1:03:43.52,1:03:47.07,Sub,,0,0,0,,So our first generation hand you can see here is a tendon driven hand.
+Dialogue: 0,1:03:47.12,1:03:52.42,Sub,,0,0,0,,Yeah we designed all the motors and actuators here ourselves uh even the gearboxes.
+Dialogue: 0,1:03:52.47,1:03:55.52,Sub,,0,0,0,,Uh basically the the rationale here is that a human hands like this.
+Dialogue: 0,1:03:55.57,1:04:01.15,Sub,,0,0,0,,Our most of our motors are on our forearm and they're basically we're like uh little like uh tendons basically driving all the
+Dialogue: 0,1:04:01.20,1:04:07.47,Sub,,0,0,0,,fingers and um so our first generation hand is like how do we get a really dextrous hand built which is like really
+Dialogue: 0,1:04:07.52,1:04:13.08,Sub,,0,0,0,,good for intelligence and AI and uh and then uh ultimately that can do a lot of things that human can and how
+Dialogue: 0,1:04:13.13,1:04:19.32,Sub,,0,0,0,,do we mimic the biological kind of architecture of a human and um so I was like this is going to be great.
+Dialogue: 0,1:04:19.37,1:04:20.41,Sub,,0,0,0,,We're going to put motors in here.
+Dialogue: 0,1:04:20.46,1:04:21.50,Sub,,0,0,0,,They're going to be really powerful.
+Dialogue: 0,1:04:21.55,1:04:25.96,Sub,,0,0,0,,are going to drive a really high degree of freedom hand and ended up becoming uh ended
+Dialogue: 0,1:04:26.01,1:04:31.31,Sub,,0,0,0,,up becoming like the wrong engineering choice and we end up pivoting away from it really early.
+Dialogue: 0,1:04:31.36,1:04:34.43,Sub,,0,0,0,,Uh most of the wrist motors are also in here.
+Dialogue: 0,1:04:34.48,1:04:37.58,Sub,,0,0,0,,So on figure one, I don't know if you noticed, but the wrists look crazy.
+Dialogue: 0,1:04:37.63,1:04:42.43,Sub,,0,0,0,,And the reason for this is that we pivoted away really early away from this tendon driven hand, right?
+Dialogue: 0,1:04:42.48,1:04:45.64,Sub,,0,0,0,,We had to figure out a way to get like new motors in for the wrist.
+Dialogue: 0,1:04:45.69,1:04:52.27,Sub,,0,0,0,,So, uh, instead of waiting like four months to redesign those from scratch, um, I took the the motors from the feet.
+Dialogue: 0,1:04:52.32,1:04:59.33,Sub,,0,0,0,,So, we have three foot motors here in the forearm, and it's just like this Frankenstein forearm, and it like it bends like in mid like,
+Dialogue: 0,1:04:59.38,1:05:05.08,Sub,,0,0,0,,you know, the the instead of bending here at the wrist, it bends like halfway through the forearm, which is just like really weird.
+Dialogue: 0,1:05:05.13,1:05:06.60,Sub,,0,0,0,,And I was like, uh, I was so ashamed.
+Dialogue: 0,1:05:06.65,1:05:07.71,Sub,,0,0,0,,I'm like, we're gonna get this thing out.
+Dialogue: 0,1:05:07.76,1:05:10.51,Sub,,0,0,0,,It's like, you know, at the time I was like, this is incredible.
+Dialogue: 0,1:05:10.56,1:05:11.47,Sub,,0,0,0,,Did you sell any of these?
+Dialogue: 0,1:05:11.52,1:05:12.07,Sub,,0,0,0,,We didn't sell them.
+Dialogue: 0,1:05:12.12,1:05:13.21,Sub,,0,0,0,,We just used them internally.
+Dialogue: 0,1:05:13.26,1:05:16.01,Sub,,0,0,0,,But we showed it and it was like this big like forearm.
+Dialogue: 0,1:05:16.06,1:05:18.02,Sub,,0,0,0,,I was like, "Everybody's going to notice this big forearm.
+Dialogue: 0,1:05:18.07,1:05:18.99,Sub,,0,0,0,,It's going to be so weird."
+Dialogue: 0,1:05:19.04,1:05:19.34,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:05:19.36,1:05:25.15,Sub,,0,0,0,,And I don't think I've ever had a single person in like three years ask why the form looks like this.
+Dialogue: 0,1:05:25.20,1:05:25.66,Sub,,0,0,0,,Really?
+Dialogue: 0,1:05:25.71,1:05:27.87,Sub,,0,0,0,,Everyone was like, "It's a robot."
+Dialogue: 0,1:05:27.92,1:05:29.35,Sub,,0,0,0,,Not a single one.
+Dialogue: 0,1:05:29.40,1:05:29.84,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:05:29.89,1:05:36.51,Sub,,0,0,0,,So, we uh so we end up pivoting away from like the tendon driven hand to our current generations of hands.
+Dialogue: 0,1:05:36.56,1:05:44.18,Sub,,0,0,0,,And um I we we've learned a lot, but like I um yeah, we ultimately I think are building like some of the best hand technology in the world.
+Dialogue: 0,1:05:44.23,1:05:52.79,Sub,,0,0,0,,We recently unveiled our um high degree of freedom uh hand as a teaser, our next generation hand uh about a month ago.
+Dialogue: 0,1:05:52.84,1:06:00.29,Sub,,0,0,0,,This hand has uh basically a human level dexterity like as many joints in the hand as a human.
+Dialogue: 0,1:06:00.34,1:06:06.11,Sub,,0,0,0,,Um, and this is really important not just for like being able to dextrous tasks, but we need to be able to learn passively from humans at scale.
+Dialogue: 0,1:06:06.16,1:06:12.43,Sub,,0,0,0,,And uh, if humans can move hands in all these different crazy way, we we need to be able to map to this uh, at test time on the robot.
+Dialogue: 0,1:06:12.48,1:06:17.22,Sub,,0,0,0,,So, we have um, I think this is extremely important to get if we want to solve like uh, uh,
+Dialogue: 0,1:06:17.27,1:06:23.07,Sub,,0,0,0,,AGI and get to like human intelligence in the physical world, like it's all going to start here with the hands for us.
+Dialogue: 0,1:06:23.12,1:06:24.47,Sub,,0,0,0,,Yeah, it's intense.
+Dialogue: 0,1:06:24.52,1:06:25.45,Sub,,0,0,0,,It's complex.
+Dialogue: 0,1:06:25.50,1:06:30.99,Sub,,0,0,0,,I did see a couple people walking around the campus in spandex outfits.
+Dialogue: 0,1:06:31.04,1:06:35.31,Sub,,0,0,0,,Yeah, it's a mandatory outfit at work.
+Dialogue: 0,1:06:35.36,1:06:38.66,Sub,,0,0,0,,Yeah, like you just got to be in spandex so you can't come.
+Dialogue: 0,1:06:38.71,1:06:45.47,Sub,,0,0,0,,Um yeah so we basically are doing a lot of data collection here where we're trying to I basically do like joint level tracking uh and
+Dialogue: 0,1:06:45.52,1:06:51.47,Sub,,0,0,0,,different type of uh data collection efforts like learning from humans like our our training set is like how do we like we're a humanoid like we
+Dialogue: 0,1:06:51.52,1:06:54.25,Sub,,0,0,0,,need to learn from humans at scale and so we're trying to learn
+Dialogue: 0,1:06:54.30,1:06:59.47,Sub,,0,0,0,,as much as possible about human movements and like image conditioning these policies uh
+Dialogue: 0,1:06:59.52,1:07:08.44,Sub,,0,0,0,,here at figure is that the oddest job um what is that called um what is the oddest job in the office is you think That's odd.
+Dialogue: 0,1:07:08.49,1:07:09.47,Sub,,0,0,0,,I think it's kind of cool.
+Dialogue: 0,1:07:09.52,1:07:10.35,Sub,,0,0,0,,It's uncommon.
+Dialogue: 0,1:07:10.40,1:07:13.04,Sub,,0,0,0,,Yeah, it's uncommon.
+Dialogue: 0,1:07:13.09,1:07:15.55,Sub,,0,0,0,,Um, probably the oddest job we have there.
+Dialogue: 0,1:07:15.60,1:07:16.51,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:07:16.56,1:07:17.95,Sub,,0,0,0,,How does one apply?
+Dialogue: 0,1:07:18.00,1:07:19.05,Sub,,0,0,0,,You apply on the site.
+Dialogue: 0,1:07:19.10,1:07:20.34,Sub,,0,0,0,,You apply on the website.
+Dialogue: 0,1:07:20.39,1:07:20.69,Sub,,0,0,0,,Uh,
+Dialogue: 0,1:07:20.59,1:07:24.69,Sub,,0,0,0,,we do like we basically have like data collection folks that we basically are here
+Dialogue: 0,1:07:24.74,1:07:28.03,Sub,,0,0,0,,that we have both here and out in the world doing data collection for Helix.
+Dialogue: 0,1:07:28.08,1:07:28.59,Sub,,0,0,0,,That's cool.
+Dialogue: 0,1:07:28.64,1:07:28.97,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:07:29.00,1:07:29.33,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:07:29.36,1:07:29.69,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:07:29.72,1:07:31.71,Sub,,0,0,0,,It's I actually think it's a really cool job.
+Dialogue: 0,1:07:31.76,1:07:32.51,Sub,,0,0,0,,Have you ever tried it?
+Dialogue: 0,1:07:32.56,1:07:33.42,Sub,,0,0,0,,Uh, full spandex.
+Dialogue: 0,1:07:33.47,1:07:33.77,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:07:33.77,1:07:37.47,Sub,,0,0,0,,Uh, I haven't tried the full spandex, but I've done every other type of data collection effort here.
+Dialogue: 0,1:07:37.52,1:07:38.75,Sub,,0,0,0,,Maybe that'll be your next job.
+Dialogue: 0,1:07:38.80,1:07:39.27,Sub,,0,0,0,,Maybe we should.
+Dialogue: 0,1:07:39.32,1:07:43.31,Sub,,0,0,0,,Yeah, I'm going to go get in some spandex later and I'll test it out.
+Dialogue: 0,1:07:43.36,1:07:45.79,Sub,,0,0,0,,Okay, so we saw the generation of hands.
+Dialogue: 0,1:07:45.84,1:07:47.40,Sub,,0,0,0,,Okay, so generation hands.
+Dialogue: 0,1:07:47.45,1:07:50.53,Sub,,0,0,0,,Uh, we also have some um some mockups for the head and feet.
+Dialogue: 0,1:07:50.58,1:07:52.58,Sub,,0,0,0,,I think the feet are actually really interesting here.
+Dialogue: 0,1:07:52.63,1:07:54.82,Sub,,0,0,0,,Uh, this is kind of our first prototype for Figure 3.
+Dialogue: 0,1:07:54.87,1:07:59.31,Sub,,0,0,0,,Um, it's like basically like we really wanted to get a toe in the robot,
+Dialogue: 0,1:07:59.36,1:08:04.11,Sub,,0,0,0,,which is important both for like a natural looking gate like as you walk, but also like getting off off the ground.
+Dialogue: 0,1:08:04.16,1:08:04.46,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:08:04.48,1:08:05.21,Sub,,0,0,0,,Is really important.
+Dialogue: 0,1:08:05.26,1:08:06.10,Sub,,0,0,0,,Or even squatting down.
+Dialogue: 0,1:08:06.15,1:08:08.35,Sub,,0,0,0,,When we squat down, we're like on our toe box.
+Dialogue: 0,1:08:08.40,1:08:10.59,Sub,,0,0,0,,Um, and it's really difficult with a flat foot.
+Dialogue: 0,1:08:10.64,1:08:14.00,Sub,,0,0,0,,Um, and then basically this is our this is our figure two like foot.
+Dialogue: 0,1:08:14.05,1:08:17.15,Sub,,0,0,0,,It's basically just a a fixed piece of metal.
+Dialogue: 0,1:08:17.20,1:08:19.73,Sub,,0,0,0,,Uh, nothing too crazy impressive.
+Dialogue: 0,1:08:19.78,1:08:24.67,Sub,,0,0,0,,And then this is our current generation of feet is for figure three.
+Dialogue: 0,1:08:24.72,1:08:26.35,Sub,,0,0,0,,We basically have a toe.
+Dialogue: 0,1:08:26.40,1:08:29.09,Sub,,0,0,0,,We have this um opening here in the foot.
+Dialogue: 0,1:08:29.14,1:08:30.83,Sub,,0,0,0,,Um some people ask about this.
+Dialogue: 0,1:08:30.88,1:08:34.43,Sub,,0,0,0,,This is basically for like thermal venting as we're charging.
+Dialogue: 0,1:08:34.48,1:08:37.95,Sub,,0,0,0,,We're pushing air through the calf and the shin uh through through the foot
+Dialogue: 0,1:08:38.00,1:08:42.03,Sub,,0,0,0,,to cool it down as it's charging because it's got inductive coils on the bottom.
+Dialogue: 0,1:08:42.08,1:08:47.00,Sub,,0,0,0,,So these feet are basically uh basically stepping onto uh this basically the charger.
+Dialogue: 0,1:08:47.05,1:08:52.59,Sub,,0,0,0,,Uh we we then initiate charge like a wirelessly and the the robot can charge at two kilowatts.
+Dialogue: 0,1:08:52.64,1:08:56.11,Sub,,0,0,0,,So basically we can charge for an hour by standing there.
+Dialogue: 0,1:08:56.16,1:08:57.07,Sub,,0,0,0,,That's really cool.
+Dialogue: 0,1:08:57.12,1:08:57.79,Sub,,0,0,0,,That's really cool.
+Dialogue: 0,1:08:57.84,1:08:58.14,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:08:58.08,1:09:00.30,Sub,,0,0,0,,We can charge like at client sites like this.
+Dialogue: 0,1:09:00.35,1:09:03.17,Sub,,0,0,0,,We can walk over uh we can dock to it.
+Dialogue: 0,1:09:03.22,1:09:04.87,Sub,,0,0,0,,We can just stand on it.
+Dialogue: 0,1:09:04.92,1:09:10.31,Sub,,0,0,0,,Um over time we're going to get these uh systems uh even smaller and uh be able to put
+Dialogue: 0,1:09:10.36,1:09:14.67,Sub,,0,0,0,,them basically be able to put it anywhere and you can plug this into a normal wall outlet for charging.
+Dialogue: 0,1:09:14.72,1:09:16.67,Sub,,0,0,0,,Are you going to do any brand deals?
+Dialogue: 0,1:09:16.72,1:09:18.57,Sub,,0,0,0,,Um like foot brand like foot deals.
+Dialogue: 0,1:09:18.62,1:09:21.23,Sub,,0,0,0,,Uh I would love to do maybe not foot but sneaker deals.
+Dialogue: 0,1:09:21.28,1:09:24.86,Sub,,0,0,0,,Sneaker deals if like if Nikey's watching like be our next uh Yeah.
+Dialogue: 0,1:09:24.91,1:09:26.11,Sub,,0,0,0,,Nike sneaker shoe dealer.
+Dialogue: 0,1:09:26.16,1:09:26.47,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:09:26.50,1:09:28.64,Sub,,0,0,0,,I really wanted a high top for figure three.
+Dialogue: 0,1:09:28.69,1:09:29.71,Sub,,0,0,0,,I think it's just like so cool.
+Dialogue: 0,1:09:29.76,1:09:30.06,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:09:29.92,1:09:30.35,Sub,,0,0,0,,It's pretty cool.
+Dialogue: 0,1:09:30.40,1:09:33.87,Sub,,0,0,0,,Um like our figure two looks like a like a penny loafer and just like you know what I mean?
+Dialogue: 0,1:09:33.92,1:09:34.68,Sub,,0,0,0,,Can't be having that.
+Dialogue: 0,1:09:34.73,1:09:36.03,Sub,,0,0,0,,No. We can't have a penny loafer out here.
+Dialogue: 0,1:09:36.08,1:09:38.35,Sub,,0,0,0,,It's like this high top's like kind of made to doing work.
+Dialogue: 0,1:09:38.40,1:09:42.20,Sub,,0,0,0,,So of the designs here like you have quite a sleek design.
+Dialogue: 0,1:09:42.26,1:09:44.02,Sub,,0,0,0,,It's very futuristic.
+Dialogue: 0,1:09:44.07,1:09:48.19,Sub,,0,0,0,,How did how did like how did you get to this point?
+Dialogue: 0,1:09:48.24,1:09:48.54,Sub,,0,0,0,,Yeah,
+Dialogue: 0,1:09:48.56,1:09:55.67,Sub,,0,0,0,,we have a design we have a industrial design team here internally run by uh David uh who you just met and we we have a team that
+Dialogue: 0,1:09:55.72,1:10:06.40,Sub,,0,0,0,,are obsessed with trying to create like uh yeah trying to create like the um we we want to create something that uh is really delightful to be around.
+Dialogue: 0,1:10:06.45,1:10:11.11,Sub,,0,0,0,,And um it's it's not just like the way the robot looks or the size of it.
+Dialogue: 0,1:10:11.16,1:10:16.20,Sub,,0,0,0,,It's how it walks and interacts and how it's body language and how the human machine interaction.
+Dialogue: 0,1:10:16.25,1:10:18.58,Sub,,0,0,0,,Is it does it look at you while it's while it's talking?
+Dialogue: 0,1:10:18.63,1:10:20.19,Sub,,0,0,0,,Uh how do we deal with speech?
+Dialogue: 0,1:10:20.24,1:10:22.51,Sub,,0,0,0,,What do we do with like we have like three screens in the head?
+Dialogue: 0,1:10:22.56,1:10:23.45,Sub,,0,0,0,,Like what do we show there?
+Dialogue: 0,1:10:23.50,1:10:26.27,Sub,,0,0,0,,How do they make us like really pleasant to be around?
+Dialogue: 0,1:10:26.32,1:10:28.43,Sub,,0,0,0,,Are there any I mean you love sci-fi.
+Dialogue: 0,1:10:28.48,1:10:31.95,Sub,,0,0,0,,Were there any sci-fi movies where you wanted Oh yeah, like the robot movies.
+Dialogue: 0,1:10:32.00,1:10:33.39,Sub,,0,0,0,,Iroot X Machina.
+Dialogue: 0,1:10:33.44,1:10:34.83,Sub,,0,0,0,,Like which ones?
+Dialogue: 0,1:10:34.88,1:10:38.07,Sub,,0,0,0,,I think a thing we always talk about here is like there's like two roads for humanoids.
+Dialogue: 0,1:10:38.12,1:10:43.79,Sub,,0,0,0,,There's like a road to head like down like the robotic road which is like I robot and there's a road to head down for like Westworld.
+Dialogue: 0,1:10:43.84,1:10:44.14,Sub,,0,0,0,,Okay.
+Dialogue: 0,1:10:44.16,1:10:45.07,Sub,,0,0,0,,It's also humanoid.
+Dialogue: 0,1:10:45.12,1:10:45.49,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:10:45.52,1:10:48.11,Sub,,0,0,0,,Uh where do we go?
+Dialogue: 0,1:10:48.16,1:10:49.87,Sub,,0,0,0,,What do you think?
+Dialogue: 0,1:10:49.92,1:10:53.07,Sub,,0,0,0,,Um I mean I'm a big fan of XM.
+Dialogue: 0,1:10:53.12,1:10:53.45,Sub,,0,0,0,,Okay.
+Dialogue: 0,1:10:53.48,1:10:54.83,Sub,,0,0,0,,So we go to Westworld.
+Dialogue: 0,1:10:54.88,1:10:55.31,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:10:55.36,1:10:55.77,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:10:55.82,1:10:56.23,Sub,,0,0,0,,Okay.
+Dialogue: 0,1:10:56.28,1:10:57.23,Sub,,0,0,0,,Let's do it.
+Dialogue: 0,1:10:57.28,1:10:58.03,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:10:58.08,1:11:01.79,Sub,,0,0,0,,We're heading to Westworld.
+Dialogue: 0,1:11:01.84,1:11:07.11,Sub,,0,0,0,,Um I think lastly is we're like super proud to be on the cover of Time magazine this past year which is really cool.
+Dialogue: 0,1:11:07.16,1:11:11.39,Sub,,0,0,0,,Uh we had a robot in in uh in a home basically doing like full
+Dialogue: 0,1:11:11.44,1:11:16.99,Sub,,0,0,0,,like you know like doing housework with Helix um AI system that we designed here internally.
+Dialogue: 0,1:11:17.04,1:11:19.87,Sub,,0,0,0,,Um what's with the dead mouth five record?
+Dialogue: 0,1:11:19.92,1:11:26.74,Sub,,0,0,0,,Oh yeah we had uh we had dead mouse at our holiday party two years ago and he was like this is insane.
+Dialogue: 0,1:11:26.79,1:11:32.06,Sub,,0,0,0,,We had robots on stage like I got to get you guys out to concerts with me and we got to be like dancing on stage.
+Dialogue: 0,1:11:32.11,1:11:32.41,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:11:32.40,1:11:36.20,Sub,,0,0,0,,So we opened for him at Red Rock uh end of last year uh in Colorado.
+Dialogue: 0,1:11:36.25,1:11:38.51,Sub,,0,0,0,,I don't know if you've been to the uh concert.
+Dialogue: 0,1:11:38.56,1:11:39.21,Sub,,0,0,0,,I flew in for it.
+Dialogue: 0,1:11:39.26,1:11:39.84,Sub,,0,0,0,,It was amazing.
+Dialogue: 0,1:11:39.89,1:11:44.64,Sub,,0,0,0,,Just like amazing venue and we had multiple robots on stage just dancing and they're all tuned in
+Dialogue: 0,1:11:44.69,1:11:48.89,Sub,,0,0,0,,to the music and um and they kind of danced with it and it was just it was awesome.
+Dialogue: 0,1:11:48.94,1:11:51.93,Sub,,0,0,0,,And we had him also here at our last holiday party in December.
+Dialogue: 0,1:11:51.98,1:11:55.87,Sub,,0,0,0,,Um and uh I don't know just we just we just raged with Dead Mouse.
+Dialogue: 0,1:11:55.92,1:11:56.73,Sub,,0,0,0,,Hey, it's Molly.
+Dialogue: 0,1:11:56.78,1:11:58.11,Sub,,0,0,0,,If you enjoy our interviews,
+Dialogue: 0,1:11:58.16,1:12:07.12,Sub,,0,0,0,,check out our newsletter sorcery.bc VC where we deliver a once a week top deals and tech headlines email and also go deeper on our podcast interviews.
+Dialogue: 0,1:12:07.17,1:12:14.58,Sub,,0,0,0,,Subscribe to Sorcery today and don't forget to subscribe to the podcast on YouTube, Spotify, Apple or wherever you listen.
+Dialogue: 0,1:12:14.63,1:12:19.08,Sub,,0,0,0,,Link in description to sign up.

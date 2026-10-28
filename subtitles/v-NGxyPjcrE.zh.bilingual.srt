@@ -1,0 +1,5109 @@
+1
+00:00:09,440 --> 00:00:14,670
+This is how intelligence is made.
+这就是智能的诞生方式。
+
+2
+00:00:14,720 --> 00:00:26,030
+A new kind of factory, generator of tokens, the building blocks of AI.
+一种新型工厂，生成词元，构成人工智能的基本单元。
+
+3
+00:00:26,080 --> 00:00:29,190
+Tokens have opened a new frontier,
+词元开启了新的疆域，
+
+4
+00:00:29,240 --> 00:00:38,830
+turning data into knowledge, and knowledge into action.
+将数据转化为知识，并将知识转化为行动。
+
+5
+00:00:38,880 --> 00:00:48,750
+They decipher nature's code to reveal hidden cures,
+它们破译自然的密码，揭示隐藏的疗法，
+
+6
+00:00:48,800 --> 00:00:57,310
+mirror our cities,
+模拟我们的城市，
+
+7
+00:00:57,360 --> 00:01:06,670
+and tirelessly navigate our world to keep us moving.
+持续不断地导航我们的世界，确保我们前行。
+
+8
+00:01:06,720 --> 00:01:18,390
+Tokens learn from the way we move,
+词元学习我们行动的方式，
+
+9
+00:01:18,440 --> 00:01:24,830
+deliver the care we need,
+提供我们所需的关怀，
+
+10
+00:01:24,880 --> 00:01:34,270
+and walk into danger to protect the ones we love.
+走进危险，保护我们所爱之人。
+
+11
+00:01:34,320 --> 00:01:41,670
+They see what we cannot,
+它们看见我们看不见的，
+
+12
+00:01:41,720 --> 00:01:48,190
+so the steadiest hands never work alone.
+所以最稳健的手从不独自工作。
+
+13
+00:01:48,240 --> 00:01:56,070
+Every idea tokens spark, every success they share,
+每一个由词元激发的想法，每一次共享的成功，
+
+14
+00:01:56,120 --> 00:02:00,158
+puts what
+都让真正重要的事物触手可及。
+
+15
+00:02:00,208 --> 00:02:09,150
+matters within reach.
+词元正帮助我们以前所未有的规模开拓新领域。
+
+16
+00:02:09,200 --> 00:02:14,368
+Tokens are helping us break new
+因此，
+
+17
+00:02:14,418 --> 00:02:24,070
+ground on a scale never seen before.
+我们能够触碰天空，乃至更远。
+
+18
+00:02:24,120 --> 00:02:25,209
+So,
+一起，
+
+19
+00:02:25,259 --> 00:02:29,683
+we can reach for
+我们迈向
+
+20
+00:02:29,733 --> 00:02:40,790
+the sky and beyond.
+下一个伟大的飞跃。
+
+21
+00:02:40,840 --> 00:02:41,445
+Together,
+一起，
+
+22
+00:02:41,495 --> 00:02:45,150
+we take the next great leap into
+我们迈向
+
+23
+00:02:45,200 --> 00:02:48,190
+a bright new future
+一个光明的新未来，
+
+24
+00:02:48,240 --> 00:02:58,430
+built for all mankind.
+为全人类而建。
+
+25
+00:02:58,480 --> 00:03:01,955
+And here is
+这里就是
+
+26
+00:03:02,005 --> 00:03:07,610
+where it
+一切开始的地方。
+
+27
+00:03:07,660 --> 00:03:15,150
+all begins.
+欢迎登台，
+
+28
+00:03:15,200 --> 00:03:16,438
+Welcome to the stage,
+英伟达创始人兼首席执行官黄仁勋。
+
+29
+00:03:16,488 --> 00:03:28,310
+NVIDIA founder and CEO, Jensen Huang.
+大家好，柏林！
+
+30
+00:03:28,360 --> 00:03:31,830
+Hello, Berlin!
+大家好，柏林！
+
+31
+00:03:31,880 --> 00:03:37,189
+Hello, Berlin!
+欢迎来到 GTC。
+
+32
+00:03:37,239 --> 00:03:38,830
+Welcome to GTC.
+能来到这里真是太棒了。
+
+33
+00:03:38,880 --> 00:03:41,189
+It's great to be here.
+在开始之前，
+
+34
+00:03:41,239 --> 00:03:43,070
+Before we start,
+让我们为我们的
+
+35
+00:03:43,120 --> 00:03:45,189
+let's give it up
+送上热烈的掌声，
+
+36
+00:03:45,239 --> 00:03:48,764
+for our
+以及
+
+37
+00:03:48,814 --> 00:03:58,150
+pre-game show hosts.
+赛前节目主持人
+
+38
+00:03:58,200 --> 00:03:59,950
+Smart and adorable.
+聪明又可爱
+
+39
+00:04:00,000 --> 00:04:01,750
+Smart and adorable.
+聪明又可爱
+
+40
+00:04:01,800 --> 00:04:09,103
+They spoke about AI infrastructure, sovereign AI, AI safety, and physical AI.
+他们讨论了人工智能基础设施、主权人工智能、人工智能安全以及物理人工智能
+
+41
+00:04:09,153 --> 00:04:15,909
+They covered enormous amount of ground this morning, and we are going to take it one step further.
+今天上午他们覆盖了大量内容，接下来我们将更进一步
+
+42
+00:04:15,959 --> 00:04:21,790
+It's really interesting what do L'Oreal, Revolut, Spotify,
+很有意思的是，欧莱雅、Revolut、Spotify
+
+43
+00:04:21,840 --> 00:04:32,110
+Merck, Vodafone, Zara, Porsche, Nestlé, and HSBC have in common.
+默克、沃达丰、扎拉、保时捷、雀巢和汇丰银行有什么共同点
+
+44
+00:04:32,160 --> 00:04:39,430
+Well, they're all European companies, and they're all working with Nvidia on AI.
+哦，它们都是欧洲公司，而且都在与英伟达合作人工智能
+
+45
+00:04:39,480 --> 00:04:50,070
+Everybody everybody here is all activated on the AI ecosystem and working towards the AI economy.
+这里每个人都对人工智能生态系统充满热情，正共同推动人工智能经济的发展
+
+46
+00:04:50,120 --> 00:04:53,508
+We've been working here in Europe now for 33 years.
+我们在欧洲已经工作了33年
+
+47
+00:04:53,558 --> 00:05:04,146
+You probably don't realize that NV1, Nvidia's first chip, NV2, and NV3, which became Riva 128,
+你可能没意识到，英伟达的第一颗芯片NV1、NV2和NV3，也就是后来的Riva 128
+
+48
+00:05:04,196 --> 00:05:11,350
+the chip that saved our company really and launched our company, were all built in Europe.
+那颗拯救了我们公司并启动我们公司发展的芯片，全部都是在欧洲制造的
+
+49
+00:05:11,400 --> 00:05:13,929
+Our first partner was SGS Thomson.
+我们的第一个合作伙伴是SGS汤姆森。
+
+50
+00:05:13,979 --> 00:05:21,070
+We manufactured a chip in Crolles, France, assembled it in Malta, and shipped it around the world.
+我们在法国克罗勒斯制造芯片，在马耳他组装，然后运往世界各地。
+
+51
+00:05:21,120 --> 00:05:32,198
+Our first largest customer, the largest customer of GeForce days in the in the in the beginning, was a company called MediaMarkt.
+我们最早的大型客户，也是GeForce初期最大的客户，是一家名为MediaMarkt的公司。
+
+52
+00:05:32,248 --> 00:05:35,030
+Do you know them?
+你们认识这家公司吗？
+
+53
+00:05:35,080 --> 00:05:44,950
+Media MediaMarkt had a spectacular idea about building PCs, as you remember, and they were our largest customer.
+正如你们所记得的，MediaMarkt曾有一个关于组装电脑的惊人想法，他们也是我们最大的客户。
+
+54
+00:05:45,000 --> 00:05:51,830
+It was Elsa, a German company, that brought Nvidia into the workstation industry in the year 2000.
+是德国公司Elsa在2000年将英伟达带入了工作站行业。
+
+55
+00:05:51,880 --> 00:05:57,950
+Now, Nvidia is in every single workstation all over Europe designing cars.
+如今，英伟达已进入欧洲每一台工作站，用于汽车设计。
+
+56
+00:05:58,000 --> 00:06:06,660
+Everything from styling, design, engineering, simulation all the way through to even inside the car,
+从造型、设计、工程、仿真，一直到汽车内部，
+
+57
+00:06:06,710 --> 00:06:12,830
+which a European company brought us into, Audi, in the year 2005.
+这一领域是由欧洲公司奥迪在2005年带我们进入的。
+
+58
+00:06:12,880 --> 00:06:18,830
+Then in year 2020 we started working on autonomous vehicles with Mercedes.
+2020年，我们开始与梅赛德斯合作开发自动驾驶汽车。
+
+59
+00:06:18,880 --> 00:06:26,869
+As you can see Nvidia's life journey, the entire 33 years, I've spent a lot of time in Germany.
+如你们所见，英伟达的整个发展历程，这33年里，我花了大量时间在德国。
+
+60
+00:06:26,919 --> 00:06:31,904
+So, I'm delighted to be back.
+因此，我非常高兴能再次回到这里。
+
+61
+00:06:31,954 --> 00:06:33,750
+Thank you.
+谢谢。
+
+62
+00:06:33,800 --> 00:06:36,510
+I'm delighted to do GTC here.
+很高兴在这里举办 GTC。
+
+63
+00:06:36,560 --> 00:06:43,755
+This year, this last year, we started the new journey to building a new industry here in Europe.
+今年，也就是去年，我们开启了在欧洲建设新产业的新征程。
+
+64
+00:06:43,805 --> 00:06:46,388
+The beginnings of the AI economy.
+人工智能经济的开端。
+
+65
+00:06:46,438 --> 00:06:53,954
+In the last year alone, we've invested nearly 10 billion dollars in Europe across startups,
+仅在过去一年，我们在欧洲的初创企业中投入了近 100 亿美元，
+
+66
+00:06:54,004 --> 00:06:58,741
+big partnerships, small partnerships all over all over Europe.
+涉及大型合作、小型合作，遍布整个欧洲。
+
+67
+00:06:58,791 --> 00:07:07,975
+This last week alone as I journeyed from France and UK to Sweden and now here in Berlin,
+就在上周，当我从法国、英国一路来到瑞典，现在又来到柏林时，
+
+68
+00:07:08,025 --> 00:07:11,990
+we announced the investments of 14 startup companies.
+我们宣布了对 14 家初创公司的投资。
+
+69
+00:07:12,040 --> 00:07:19,522
+Overall since the beginning we now have 12,000 plus partnerships across Europe.
+自此以来，我们已在欧洲建立了超过 12,000 个合作。
+
+70
+00:07:19,572 --> 00:07:24,030
+And we're all working towards one goal now.
+而我们现在都在朝着同一个目标努力。
+
+71
+00:07:24,080 --> 00:07:34,990
+After decades after decades of advancement in the computer industry, we are now at the beginnings of a new industrial revolution.
+经过数十年计算机产业的持续进步，我们如今正处在新一轮工业革命的开端。
+
+72
+00:07:35,040 --> 00:07:37,430
+This image was generated by a computer.
+这幅图像由计算机生成。
+
+73
+00:07:37,480 --> 00:07:39,470
+It was prompted by me.
+这是由我发起的。
+
+74
+00:07:39,520 --> 00:07:46,253
+Nice, simple prompt about AI powering a new industrial revolution generated this.
+一个关于人工智能推动新工业革命的简洁提示，生成了这个结果。
+
+75
+00:07:46,303 --> 00:07:53,428
+I gave it a few partners that I wanted to highlight, companies that we're working with, and this is an extraordinary thing.
+我列出了几个我希望突出的合作伙伴，也就是我们正在合作的公司，这真是非凡的成果。
+
+76
+00:07:53,478 --> 00:08:01,910
+In the mind of the AI, this is what it means to build a new industry, generation of tokens,
+在人工智能的思维中，这就是构建一个新产业、新一代词元的意义。
+
+77
+00:08:01,960 --> 00:08:10,422
+the produce production of intelligence, which integrates into every single industry powering a new industrial revolution.
+智能的生产，融入每一个行业，推动一场新的工业革命。
+
+78
+00:08:10,472 --> 00:08:18,390
+A new industrial revolution happens when the new technology
+新的工业革命发生于新技术
+
+79
+00:08:18,440 --> 00:08:24,670
+affects how we build something and what we can build.
+改变了我们制造事物的方式，以及我们能够制造的事物。
+
+80
+00:08:24,720 --> 00:08:27,318
+How we build something and what we can build.
+我们制造事物的方式，以及我们能够制造的事物。
+
+81
+00:08:27,368 --> 00:08:36,190
+I think in every single way artificial intelligence will affect everything we build and in fact enable us to build new things.
+我认为，人工智能将在每一个方面影响我们所创造的一切，甚至使我们能够创造全新的事物。
+
+82
+00:08:36,240 --> 00:08:46,950
+In this way, because everyone will use it, every company will be powered by it, because it's digital intelligence, the foundation of everything.
+正因为每个人都会使用它，每家公司都将由它驱动，因为它是一种数字智能，是所有事物的基础。
+
+83
+00:08:47,000 --> 00:08:55,270
+Every single person will use it, every company will be powered by it, every industry will be transformed and new ones will be created.
+每个人都会使用它，每家公司都将由它驱动，每个行业都将被重塑，新的行业也将被创造出来。
+
+84
+00:08:55,320 --> 00:09:04,870
+In this way, like the electricity, it is a new industrial revolution and we're at the very beginnings of that.
+正如电力一样，这是一场新的工业革命，而我们正处在其开端。
+
+85
+00:09:04,920 --> 00:09:08,789
+The question is, what is AI?
+问题在于，什么是人工智能？
+
+86
+00:09:08,839 --> 00:09:11,070
+And this is a big deal.
+这是一件大事。
+
+87
+00:09:11,120 --> 00:09:18,750
+If you want to be part of creating this future, understanding what is AI is vitally important.
+如果你想参与创造这个未来，理解什么是人工智能至关重要。
+
+88
+00:09:18,800 --> 00:09:22,070
+And this is really a simple framework.
+这其实是一个非常简单的框架。
+
+89
+00:09:22,120 --> 00:09:27,350
+We were early to observe that in fact AI is a manufacturing industry.
+我们很早就意识到，人工智能实际上是一个制造业。
+
+90
+00:09:27,400 --> 00:09:29,824
+AI is not just software technology.
+人工智能不仅仅是软件技术。
+
+91
+00:09:29,874 --> 00:09:32,670
+It is software technology, but not just.
+它是软件技术，但又不仅仅是软件技术。
+
+92
+00:09:32,720 --> 00:09:39,722
+AI of course runs on a computer, but the way that a computer operates is fundamentally different.
+人工智能当然运行在计算机上，但计算机的运行方式从根本上不同。
+
+93
+00:09:39,772 --> 00:09:47,350
+Rather than a tool that's used by us, it is now part of a machinery, an infrastructure,
+它不再只是我们使用的工具，而是成为了一套机器、基础设施，
+
+94
+00:09:47,400 --> 00:09:56,510
+factories that are producing intelligence that are integrated into every single industry and application.
+为各个行业和应用集成的智能生产工厂。
+
+95
+00:09:56,560 --> 00:10:00,830
+A simple model is to think about as think of AI as a five-layer cake.
+一个简单的模型是把人工智能想象成一个五层蛋糕。
+
+96
+00:10:00,880 --> 00:10:08,836
+Energy powers advanced computers that are part of an AI factory that generates tokens,
+能源驱动着先进的计算机，这些计算机是人工智能工厂的一部分，用于生成词元，
+
+97
+00:10:08,886 --> 00:10:16,110
+digital intelligence, from the models that run on it, that are integrated into every application.
+数字智能，来自运行其上的模型，这些模型已集成到每个应用中。
+
+98
+00:10:16,160 --> 00:10:18,070
+A five-layer cake.
+五层蛋糕。
+
+99
+00:10:18,120 --> 00:10:27,270
+To be part of this AI economy, you don't want to just be consuming the AI, you want to be producing the AI.
+要参与这一AI经济，你不仅不想只是消费AI，更想创造AI。
+
+100
+00:10:27,320 --> 00:10:29,630
+We could do all of that here in Europe.
+我们可以在欧洲这里完成所有这些。
+
+101
+00:10:29,680 --> 00:10:32,070
+And in fact, we've already started.
+事实上，我们已经开始了。
+
+102
+00:10:32,120 --> 00:10:35,910
+Europe is building its AI economy.
+欧洲正在建设自己的AI经济。
+
+103
+00:10:35,960 --> 00:10:38,950
+And it's five-layer cake represented here.
+它正如这里所示的五层蛋糕。
+
+104
+00:10:39,000 --> 00:10:40,027
+We've got great partnerships.
+我们拥有出色的合作伙伴关系。
+
+105
+00:10:40,077 --> 00:10:49,990
+And when you look across this five-layer cake, you could recognize that in fact, it is a new industry because there's growth at every single layer.
+当你纵观这五层蛋糕时，会发现这实际上是一个新兴产业，因为每一层都在增长。
+
+106
+00:10:50,040 --> 00:10:54,510
+We're creating jobs, creating growth at extraordinary rate.
+我们正在以惊人的速度创造就业和增长。
+
+107
+00:10:54,560 --> 00:11:03,670
+Companies here in Europe, Schneider, Siemens Electric, in cred Siemens Energy, in doing incredibly well around the world.
+欧洲的公司，如施耐德、西门子电气、西门子能源，正在全球范围内表现极为出色。
+
+108
+00:11:03,720 --> 00:11:05,390
+We're the computing layer.
+我们是计算层。
+
+109
+00:11:05,440 --> 00:11:10,750
+We integrate into AI factories that are now flourishing all over Europe.
+我们正融入欧洲各地蓬勃发展的AI工厂。
+
+110
+00:11:10,800 --> 00:11:14,203
+Startup companies like Nebia's doing incredibly well.
+像Nebia这样的初创公司发展得非常出色。
+
+111
+00:11:14,253 --> 00:11:21,830
+A new company called Firebird, which is setting up a new cloud in the Central Asia region.
+一家名为Firebird的新公司，正在中亚地区建立新的云服务。
+
+112
+00:11:21,880 --> 00:11:25,510
+And even Cassava in Africa.
+甚至非洲的Cassava也是如此。
+
+113
+00:11:25,560 --> 00:11:31,390
+Every single telco in the future, and I predict this, every single telco in the future,
+我预测，未来的每一家电信公司，
+
+114
+00:11:31,440 --> 00:11:38,811
+with 100,000 sites representing some 100 gigawatts of distributed telco base stations
+拥有十万座站点，代表约100吉瓦的分布式电信基站
+
+115
+00:11:38,861 --> 00:11:45,630
+and data centers will in the future evolve into a distributed AI network.
+和数据中心，未来都将演变为分布式AI网络。
+
+116
+00:11:45,680 --> 00:11:48,403
+So the AI infrastructure layer is being built out.
+因此，AI基础设施正在逐步构建完成。
+
+117
+00:11:48,453 --> 00:11:51,870
+Which is then above that, the AI models.
+在其之上，是AI模型。
+
+118
+00:11:51,920 --> 00:11:58,931
+It's really important to recognize that long before the AI models emerge, the infrastructure has to exist.
+必须认识到，在AI模型出现之前，基础设施必须先存在。
+
+119
+00:11:58,981 --> 00:12:03,000
+Just as before you could have an internet, you have to have the networking.
+就像在互联网出现之前，必须先有网络一样。
+
+120
+00:12:03,050 --> 00:12:12,750
+Just as before you could really enjoy the capabilities of electricity, you have to have electrified houses, electrified power plants.
+就像在真正享受电力能力之前，必须先有通电的房屋和发电厂。
+
+121
+00:12:12,800 --> 00:12:15,710
+And so the models are the next layer.
+因此，模型构成了下一层。
+
+122
+00:12:15,760 --> 00:12:21,298
+It's also interesting to observe that the model layer is not just language models.
+有趣的是，模型层并不仅仅是语言模型。
+
+123
+00:12:21,348 --> 00:12:32,710
+It represents language, biology, chemicals, physics, robotic actions, animation, and it represents models of all sizes.
+它涵盖了语言、生物、化学、物理、机器人动作、动画，以及各种规模的模型。
+
+124
+00:12:32,760 --> 00:12:38,084
+These different industries are going to be powered by different modalities of AI models,
+这些不同行业将由不同模态的AI模型驱动。
+
+125
+00:12:38,134 --> 00:12:44,950
+which then integrate into the AI natives, the startups, and there are so many here in Europe.
+这些模型随后将融入AI原生企业、初创公司，而欧洲这里有很多这样的企业。
+
+126
+00:12:45,000 --> 00:12:50,190
+So the the Europe's AI economy is starting and it's really accelerating.
+因此，欧洲的AI经济正在起步，并且正在加速发展。
+
+127
+00:12:50,240 --> 00:12:52,190
+It's great to see.
+看到这一点非常棒。
+
+128
+00:12:52,240 --> 00:12:58,224
+At the foundation of it, where we contribute, most people think is GPUs.
+在其基础层面，我们所贡献的，大多数人认为是GPU。
+
+129
+00:12:58,274 --> 00:12:59,270
+It is true.
+这确实如此。
+
+130
+00:12:59,320 --> 00:13:06,647
+We started in 1993 building a graphics chip, which emerged into the GPU, the programmable shading GPU.
+我们从1993年开始研发图形芯片，最终演变为GPU，即可编程着色GPU。
+
+131
+00:13:06,697 --> 00:13:17,030
+Over the time over time, we added CUDA acceleration to that, reinvented computing as we know it, which then brought forth artificial intelligence.
+随着时间推移，我们为GPU增加了CUDA加速，重新定义了我们所知的计算方式，从而催生了人工智能。
+
+132
+00:13:17,080 --> 00:13:27,789
+But NVIDIA today is really a full stack, end-to-end, complete AI factory platform.
+但如今的英伟达实际上是一个完整的端到端、全方位的AI工厂平台。
+
+133
+00:13:27,839 --> 00:13:32,342
+The breadth of the technology of our company over the years has really expanded.
+我们公司多年来技术的广度确实得到了极大扩展。
+
+134
+00:13:32,392 --> 00:13:43,150
+Everything from GPU computing, Vera Rubin is our latest generation, to the NVLink switches that connect them into one giant GPU,
+从GPU计算，到我们最新的Vera Rubin系列，再到将它们连接成一个巨大GPU的NVLink交换机，
+
+135
+00:13:43,200 --> 00:13:53,197
+the Vera BlueField 4 compute that we recently introduced, and I'll say a few words about that later, to Spectrum X, which is our Ethernet solution,
+我们最近推出的Vera BlueField 4计算，稍后我会再谈几句，以及Spectrum X，这是我们推出的以太网解决方案，
+
+136
+00:13:53,247 --> 00:13:58,478
+making NVIDIA the largest networking company in the world today, to Grok 3,
+使英伟达成为当今全球最大的网络公司，再到Grok 3，
+
+137
+00:13:58,528 --> 00:14:05,877
+a decode accelerator for generation text for token generation, to Vera 4,
+一种用于生成文本词元的解码加速器，再到Vera 4，
+
+138
+00:14:05,927 --> 00:14:11,552
+Vera BlueField 4 storage acceleration, which I'll say a few words in that in just a second,
+Vera BlueField 4存储加速，我稍后会再谈一下这一点，
+
+139
+00:14:11,602 --> 00:14:15,830
+and then Vera RTX compute, and I'll mention that in just a second.
+以及Vera RTX计算，我稍后也会提到这一点。
+
+140
+00:14:15,880 --> 00:14:24,550
+But, this now represents the breadth of technology necessary to create the AI factory.
+但现在，这已经代表了打造AI工厂所需的技术广度。
+
+141
+00:14:24,600 --> 00:14:29,390
+But, nothing works unless you have software that activates it all.
+但如果没有能激活所有技术的软件，一切都不起作用。
+
+142
+00:14:29,440 --> 00:14:34,270
+The first part is the system software that runs the AI factory.
+第一部分是运行AI工厂的系统软件。
+
+143
+00:14:34,320 --> 00:14:36,710
+These systems are gigantic.
+这些系统规模极其庞大。
+
+144
+00:14:36,760 --> 00:14:43,990
+A 1-gigawatt data center, 1-gigawatt AI factory, costs about $50 billion.
+一个1吉瓦的数据中心，一个1吉瓦的AI工厂，成本约为500亿美元。
+
+145
+00:14:44,040 --> 00:14:49,914
+Land, power, shell, all of the compute, networking, storage, power,
+土地、电力、机壳，所有计算、网络、存储、电力，
+
+146
+00:14:49,964 --> 00:14:56,150
+cooling, all connected together, multiple acres of AI factory.
+冷却系统，全部连接在一起，占地数英亩的AI工厂。
+
+147
+00:14:56,200 --> 00:15:00,167
+Just turning it on and operating it is a marvel in itself.
+仅仅启动并运行它，本身就是一项奇迹。
+
+148
+00:15:00,217 --> 00:15:11,807
+The mag- the magnificent amount of software necessary to energize this factory, to put it to use and produce tokens, is an extraordinary feat.
+激活这座工厂、投入使用并生成词元所需的庞大软件量，堪称非凡壮举。
+
+149
+00:15:11,857 --> 00:15:15,430
+NVIDIA offers the entire full-stack software.
+英伟达提供完整的全栈软件。
+
+150
+00:15:15,480 --> 00:15:20,870
+On top of that, are what we call the CUDA X libraries, the algorithms of our company.
+在此基础上，是我们所谓的CUDA X库，公司内部的算法。
+
+151
+00:15:20,920 --> 00:15:27,350
+What NVIDIA truly is is an algorithm company that designs silicon to accelerate them.
+英伟达真正的本质是一家算法公司，专门设计硅芯片以加速这些算法。
+
+152
+00:15:27,400 --> 00:15:30,372
+Of course, one of them is cuDNN.
+当然，其中之一就是cuDNN。
+
+153
+00:15:30,422 --> 00:15:40,750
+What many researchers recognize as the library that brought forth that started the big bang of modern AI, cuDNN.
+许多研究人员都认为，正是这个库开启了现代AI的大爆炸，即cuDNN。
+
+154
+00:15:40,800 --> 00:15:46,630
+It's cuDNN is to AI what SQL is to the world's database industry.
+对AI而言，cuDNN的重要性堪比SQL之于全球数据库行业。
+
+155
+00:15:46,680 --> 00:15:51,555
+It's a domain-specific language, a domain-specific library.
+它是一种领域专用语言，一种领域专用库。
+
+156
+00:15:51,605 --> 00:16:00,550
+Just as OpenGL and DirectX enabled real-time computer graphics, cuDNN enabled the AI computing industry.
+正如OpenGL和DirectX推动了实时计算机图形的发展，cuDNN推动了AI计算行业的发展。
+
+157
+00:16:00,600 --> 00:16:08,466
+350 other libraries, those libraries are in fact the crown jewels of our company.
+350 多个其他库，这些库实际上是公司的核心资产。
+
+158
+00:16:08,516 --> 00:16:17,140
+Everything from computational lithography to signal processing, image processing, data processing, particles, fluids,
+从计算光刻到信号处理、图像处理、数据处理、粒子模拟、流体模拟，
+
+159
+00:16:17,190 --> 00:16:25,892
+sparse solvers, incredible breadth of libraries that many of you in the audience have connected into your company.
+稀疏求解器，这些库的覆盖面极为广泛，你们在座的许多人已经将它们集成到自己的公司中。
+
+160
+00:16:25,942 --> 00:16:28,193
+This is how we open new markets.
+这就是我们开拓新市场的方式。
+
+161
+00:16:28,243 --> 00:16:37,070
+This is how we connect NVIDIA into algorithms that enable you to do computation at incredible speeds.
+这就是我们让英伟达融入算法，使你们能够以惊人速度进行计算的方式。
+
+162
+00:16:37,120 --> 00:16:44,510
+And then finally, on the right-hand side, on that side, the models.
+然后最后，在右侧，也就是那一侧，是模型。
+
+163
+00:16:44,560 --> 00:16:49,990
+This is the new software, the new engine of new applications.
+这是新的软件，是新应用的新引擎。
+
+164
+00:16:50,040 --> 00:16:53,630
+And it sits on top of and it collaborates with the CUDA-X libraries.
+它建立在 CUDA-X 库之上，并与之协同工作。
+
+165
+00:16:53,680 --> 00:16:57,712
+These models NVIDIA have been working on across multiple domains.
+这些模型是英伟达在多个领域持续投入研发的成果。
+
+166
+00:16:57,762 --> 00:17:03,750
+With these models, it opens up new opportunities, and I have lots to say about that later on.
+通过这些模型，我们打开了新的机遇，稍后我会详细讲述这一点。
+
+167
+00:17:03,800 --> 00:17:10,230
+Well, every single generation, NVIDIA started with Pascal.
+每一代英伟达都始于帕斯卡架构。
+
+168
+00:17:10,280 --> 00:17:18,950
+The AI era started with the Pascal new what is called DGX1 system.
+人工智能时代始于帕斯卡架构，也就是所谓的 DGX1 系统。
+
+169
+00:17:19,000 --> 00:17:24,955
+DGX1 brought to the world the world's first AI supercomputer.
+DGX1 为世界带来了全球首台 AI 超级计算机。
+
+170
+00:17:25,005 --> 00:17:27,613
+I introduced it 10 years ago.
+我十年前推出了它。
+
+171
+00:17:27,663 --> 00:17:31,070
+Delivered the first one to OpenAI.
+我们将第一台交付给了 OpenAI。
+
+172
+00:17:31,120 --> 00:17:34,790
+Started their computation journey.
+由此开启了他们的计算之旅。
+
+173
+00:17:34,840 --> 00:17:43,741
+From Pascal to Volta to Ampere then to many of you who heard about us for the very first time,
+从 Pascal 到 Volta，再到 Ampere，然后是今天在座的许多首次听说我们的朋友，
+
+174
+00:17:43,791 --> 00:17:50,070
+Hopper the current generation Blackwell and then now Vera Rubin in full production.
+Hopper 是当前一代，Blackwell 是下一代，现在 Vera Rubin 已全面投入生产。
+
+175
+00:17:50,120 --> 00:17:53,510
+Notice six generations of architectures.
+请注意，我们已推出六代架构。
+
+176
+00:17:53,560 --> 00:17:58,150
+With each generation we advance the technology.
+每一代我们都推动了技术进步。
+
+177
+00:17:58,200 --> 00:18:04,430
+In the course of that last 10 years, we've improved AI performance by 1 million times.
+在过去十年间，我们的 AI 性能提升了百万倍。
+
+178
+00:18:04,480 --> 00:18:08,825
+If you would take a step back and think about what would Moore's law have done in
+如果你退后一步思考，摩尔定律在十年间会带来什么，
+
+179
+00:18:08,875 --> 00:18:13,749
+10 years time it would have the first 5 years would have improved by factor of 10,
+前五年将提升十倍，
+
+180
+00:18:13,799 --> 00:18:20,870
+the second fact second 5 years by another factor of 10, a 100X improvement in 10 years time.
+后五年再提升十倍，十年间实现百倍提升。
+
+181
+00:18:20,920 --> 00:18:28,695
+In the same period of time because of the way NVIDIA extreme co-designs we're innovating across every single computer,
+在同一时间段内，由于英伟达极致协同设计，我们在每一台计算机上都在不断创新，
+
+182
+00:18:28,745 --> 00:18:36,694
+across every single stack of the software, optimizing new algorithms, creating new algorithms, while creating architectures to accelerate it.
+在每一层软件栈上持续优化新算法，创造新算法，同时构建能够加速这些算法的架构。
+
+183
+00:18:36,744 --> 00:18:39,870
+Working across the entire domain.
+跨越整个技术领域协同工作。
+
+184
+00:18:39,920 --> 00:18:45,245
+What we call extreme co-design, where we're able to accelerate AI by a million times.
+我们称之为极致协同设计，它使人工智能的加速提升了百万倍。
+
+185
+00:18:45,295 --> 00:18:48,790
+And we're going to continue to do so.
+我们将继续这样做。
+
+186
+00:18:48,840 --> 00:18:51,474
+This is what NVIDIA builds today.
+这就是英伟达今天所构建的核心。
+
+187
+00:18:51,524 --> 00:19:00,150
+And this is the foundation by which we can enable Europe to be part of the AI ecosystem, the AI economy.
+这也是我们能够推动欧洲融入人工智能生态系统和人工智能经济的基础。
+
+188
+00:19:00,200 --> 00:19:05,750
+Now, each generation in the beginning Pascal was GPUs.
+每一代产品最初都是基于 GPU，例如帕斯卡（Pascal）时代是 GPU。
+
+189
+00:19:05,800 --> 00:19:07,376
+Volta was GPUs.
+伏特（Volta）时代也是 GPU。
+
+190
+00:19:07,426 --> 00:19:09,104
+Ampere was GPUs.
+安培（Ampere）时代同样是 GPU。
+
+191
+00:19:09,154 --> 00:19:11,190
+And Hopper was GPUs.
+霍珀（Hopper）时代依然是 GPU。
+
+192
+00:19:11,240 --> 00:19:14,870
+We invented the new DGX form factor.
+我们发明了全新的 DGX 产品形态。
+
+193
+00:19:14,920 --> 00:19:22,680
+Then it was Blackwell that introduced to the world the first rack-scale computing, and I'll show you that in just a moment.
+然后是 Blackwell 首次向世界展示了首个机架规模计算，我马上向你们展示这一点。
+
+194
+00:19:22,730 --> 00:19:31,470
+Rack-scale computing turned one entire system into one giant computer, one GPU.
+机架规模计算将整个系统变成了一台巨型计算机，一台 GPU。
+
+195
+00:19:31,520 --> 00:19:41,630
+And now, with Vera Rubin, we're extending it to processing beyond models, beyond large language models, to now processing the entire agent.
+现在，借助 Vera Rubin，我们将这一技术扩展到模型之外，超越大型语言模型，实现对整个智能体的处理。
+
+196
+00:19:41,680 --> 00:19:48,670
+Now, we'll refer back to this slide later, but remember this.
+稍后我们会回到这张幻灯片，但请记住这一点。
+
+197
+00:19:48,720 --> 00:19:52,510
+The agent has to think.
+智能体必须思考。
+
+198
+00:19:52,560 --> 00:19:55,190
+The agent has to think.
+智能体必须思考。
+
+199
+00:19:55,240 --> 00:19:56,910
+And that's where the model comes in.
+这正是模型发挥作用的地方。
+
+200
+00:19:56,960 --> 00:20:02,590
+Perception, reasoning, planning, and using tools.
+感知、推理、规划和使用工具。
+
+201
+00:20:02,640 --> 00:20:07,790
+All of that runs on the large language model, and the models are designed to do that.
+所有这些都运行在大型语言模型上，而模型正是为此设计的。
+
+202
+00:20:07,840 --> 00:20:12,030
+But the agent also has what is called a harness.
+但智能体还拥有一个被称为“ harness”的系统。
+
+203
+00:20:12,080 --> 00:20:16,897
+Basically, this exoskeleton of the digital agent.
+基本上，这是数字智能体的外骨骼。
+
+204
+00:20:16,947 --> 00:20:26,350
+Just as we have the brain, the rest of our body represents our exoskeleton, the agent is the exoskeleton that orchestrates the work,
+正如我们拥有大脑，身体的其余部分构成了我们的外骨骼，智能体就是协调工作的外骨骼。
+
+205
+00:20:26,400 --> 00:20:36,470
+that allows the agent to actually engage memory, active memory, working memory, as well as long-term memory, and activating tools.
+这使得智能体能够真正调用记忆，包括活跃记忆、工作记忆以及长期记忆，并激活工具。
+
+206
+00:20:36,520 --> 00:20:43,236
+Then the third part is a computer that processes knowledge, designed for data processing.
+第三部分是一台用于处理知识的计算机，专为数据处理而设计。
+
+207
+00:20:43,286 --> 00:20:48,430
+And then lastly, a computer dedicated to CUDA-X libraries.
+然后最后，是一台专门运行 CUDA-X 库的计算机。
+
+208
+00:20:48,480 --> 00:20:50,710
+And its job is to run tools.
+它的任务是运行工具。
+
+209
+00:20:50,760 --> 00:20:56,310
+And these computers now represent the entire agentic system.
+如今，这些计算机共同构成了完整的智能体系统。
+
+210
+00:20:56,360 --> 00:21:00,270
+So, Vera Rubin is in full production, and it's nice to kind of see it.
+所以，Vera Rubin 已经全面投入生产，看到它真的令人欣慰。
+
+211
+00:21:00,320 --> 00:21:05,108
+This is the first computer in the world that we've created.
+这是全球首台我们打造的计算机。
+
+212
+00:21:05,158 --> 00:21:12,780
+No cables, no wires, completely 100% liquid cooled, and it's just really delightful.
+无电缆、无电线，完全采用液冷，真的非常令人愉悦。
+
+213
+00:21:12,830 --> 00:21:13,510
+Whoops.
+哎呀。
+
+214
+00:21:13,560 --> 00:21:15,390
+Hang on.
+等一下。
+
+215
+00:21:15,440 --> 00:21:18,550
+Really delightful to be able to pull it out.
+能把它拿出来真的非常令人愉悦。
+
+216
+00:21:18,600 --> 00:21:22,630
+And this is one Vera Rubin computer.
+这是一台 Vera Rubin 计算机。
+
+217
+00:21:22,680 --> 00:21:31,251
+Okay, so this has two GPUs.
+好的，这个设备有两个GPU。
+
+218
+00:21:31,301 --> 00:21:32,790
+Yep.
+没错。
+
+219
+00:21:32,840 --> 00:21:40,883
+What used to take, in the case of Grace Hopper Blackwell, two hours to assemble one node, and when you see it, you'll you'll know what I mean.
+以Grace Hopper Blackwell为例，以前组装一个节点需要两个小时，等你看到实物就会明白我的意思。
+
+220
+00:21:40,933 --> 00:21:42,998
+Cables and wires everywhere.
+电缆和电线到处都是。
+
+221
+00:21:43,048 --> 00:21:44,610
+80% liquid cooled.
+80%采用液冷。
+
+222
+00:21:44,660 --> 00:21:49,465
+Now Vera Rubin is 100% liquid cooled, and it takes less than 5 minutes to assemble it.
+现在Vera Rubin则是100%液冷，组装时间不到5分钟。
+
+223
+00:21:49,515 --> 00:21:52,599
+And so, incredible, incredible achievement.
+所以，这真是令人难以置信的成就。
+
+224
+00:21:52,649 --> 00:22:03,150
+Of course, this translates to higher cycle times in manufacturing, more better much, much better reliability, and of course, a lot better performance.
+当然，这带来了更高的制造循环时间，可靠性大幅提升，性能也显著增强。
+
+225
+00:22:03,200 --> 00:22:11,914
+This is the NVLink switch tray, and what this does is it connects 72 of these GPUs.
+这是NVLink交换托盘，它的作用是连接72个这样的GPU。
+
+226
+00:22:11,964 --> 00:22:14,466
+There are four of them in here right now.
+目前这里装了四个。
+
+227
+00:22:14,516 --> 00:22:19,390
+It connects 72 GPUs into one gigantic GPU.
+它将72个GPU连接成一个巨大的GPU。
+
+228
+00:22:19,440 --> 00:22:29,030
+Okay, so each GPU is 20 petaflops, connecting 72 of them into one gigantic system.
+好的，每个GPU算力为20 petaflops，将72个连接起来就形成一个巨大的系统。
+
+229
+00:22:29,080 --> 00:22:34,030
+And this is our new Vera computer.
+这是我们全新的Vera电脑。
+
+230
+00:22:34,080 --> 00:22:37,051
+So this this auditorium is packed.
+所以这个礼堂座无虚席。
+
+231
+00:22:37,101 --> 00:22:42,070
+We have 100 other watch parties around the world.
+我们在全球还有100个观看派对。
+
+232
+00:22:42,120 --> 00:22:45,797
+100 watch parties, 15,000 people are watching us right now.
+100个观看派对，现在有1万5千人正在观看我们。
+
+233
+00:22:45,847 --> 00:22:47,544
+And so, I'll get through the keynote.
+那么，我来开始演讲稿。
+
+234
+00:22:47,594 --> 00:22:50,900
+There's some really, really fun things I want to show you in the end.
+最后我会展示一些非常有趣的内容。
+
+235
+00:22:50,950 --> 00:22:57,270
+Okay, so you just have to you have to I have to torture you through some education first.
+好吧，你们得先忍受一下教育环节。
+
+236
+00:22:57,320 --> 00:22:59,310
+And then the entertainment is coming.
+然后娱乐环节就来了。
+
+237
+00:22:59,360 --> 00:23:03,750
+This [snorts] this is brand new this is our brand-new Vera computer.
+这[嗤笑]这是全新的，这是我们全新的Vera电脑。
+
+238
+00:23:03,800 --> 00:23:08,144
+Vera CPU is an extraordinary CPU beast.
+Vera CPU是一款非凡的CPU猛兽。
+
+239
+00:23:08,194 --> 00:23:11,230
+Eight instructions per clock.
+每时钟周期八条指令。
+
+240
+00:23:11,280 --> 00:23:17,765
+It has the world's first LPDDR memory subs- memory system so that we can have high performance,
+它拥有世界上首个LPDDR内存子系统，从而实现高性能，
+
+241
+00:23:17,815 --> 00:23:23,670
+very high bandwidth, as well as extremely excellent energy efficient efficiency.
+极高的带宽，以及极其出色的能效。
+
+242
+00:23:23,720 --> 00:23:27,984
+The The on-chip fabric is the fastest of any chip in the world.
+芯片内部的互联结构是全球所有芯片中速度最快的。
+
+243
+00:23:28,034 --> 00:23:31,761
+As a result, data processing is off the charts.
+因此，数据处理能力远超常规水平。
+
+244
+00:23:31,811 --> 00:23:37,060
+Agentic sessions starting and processing is off the charts.
+代理会话的启动和处理能力远超常规水平。
+
+245
+00:23:37,110 --> 00:23:39,698
+And this is designed for doing exactly that.
+这正是为此而设计的。
+
+246
+00:23:39,748 --> 00:23:41,196
+This is our Vera computer.
+这是我们推出的 Vera 计算机。
+
+247
+00:23:41,246 --> 00:23:47,590
+And this computer here This computer here is the Spectrum X.
+而这台计算机是 Spectrum X。
+
+248
+00:23:47,640 --> 00:23:51,489
+This is the world's first co-packaged optics.
+这是全球首款共封装光学器件。
+
+249
+00:23:51,539 --> 00:23:54,270
+And you can see it here.
+你在这里可以看到。
+
+250
+00:23:54,320 --> 00:23:57,470
+I'll show you.
+我来给你们展示一下。
+
+251
+00:23:57,520 --> 00:24:01,203
+Some of this Some of this area falls into the ground.
+这片区域的一部分陷入了地面。
+
+252
+00:24:01,253 --> 00:24:03,891
+And some of this area you can walk on.
+而这片区域你可以正常行走。
+
+253
+00:24:03,941 --> 00:24:09,510
+You I'm just not sure which.
+我只是不确定是哪一个。
+
+254
+00:24:09,560 --> 00:24:10,767
+All right.
+好的。
+
+255
+00:24:10,817 --> 00:24:17,750
+So So if I if I acci- accidentally disappear, you guys know You guys know us.
+所以如果我意外消失了，你们知道我们是谁。
+
+256
+00:24:17,800 --> 00:24:19,136
+It's not a stunt.
+这不是个噱头。
+
+257
+00:24:19,186 --> 00:24:20,522
+It's an accident.
+这是个意外。
+
+258
+00:24:20,572 --> 00:24:26,630
+And so uh you could see here uh these are the lasers.
+你们可以看到，这些是激光。
+
+259
+00:24:26,680 --> 00:24:33,057
+And these lasers come up through optics and it directly connects directly connects to our chip.
+这些激光通过光学元件上行，直接连接到我们的芯片。
+
+260
+00:24:33,107 --> 00:24:38,077
+And it connects using a process technology we invented with TSMC called COOP.
+它们通过我们与台积电共同开发的工艺技术——COOP 连接。
+
+261
+00:24:38,127 --> 00:24:43,898
+And so silicon photonics are directly attached right onto our chip.
+因此硅光子学直接附着在我们的芯片上。
+
+262
+00:24:43,948 --> 00:24:55,180
+Otherwise, what you would see is all of this would be PC board and PC boards' transmission capability is much worse than optical cables.
+否则，你们会看到所有这些都得用印刷电路板，而印刷电路板的传输能力远不如光缆。
+
+263
+00:24:55,230 --> 00:25:02,625
+And so we now have extremely high data rate, extremely high quality data that comes directly onto the chip.
+现在我们实现了极高的数据速率和极高质量的数据，直接传输到芯片上。
+
+264
+00:25:02,675 --> 00:25:09,117
+And this goes directly into otherwise transceivers without without going through without
+这直接进入收发器，无需经过其他环节。
+
+265
+00:25:09,167 --> 00:25:13,270
+going through a PCB and a transceiver goes right into the optics.
+经过印刷电路板，光收发器直接进入光模块。
+
+266
+00:25:13,320 --> 00:25:16,070
+Okay, so this is the world's first CPO.
+好，这就是全球首款CPO。
+
+267
+00:25:16,120 --> 00:25:23,868
+We're in complete volume production and uh 512 port at 200 gigabits per second,
+我们已进入全面量产，512端口，每秒200吉比特。
+
+268
+00:25:23,918 --> 00:25:28,067
+the world's most advanced Ethernet switch and uh we're really proud of it.
+全球最先进的以太网交换机，我们为此感到非常自豪。
+
+269
+00:25:28,117 --> 00:25:35,190
+Thank you.
+谢谢。
+
+270
+00:25:35,240 --> 00:25:44,092
+And so, so what that what that gives us what that gives us is the ability to uh process the thoughts, the large language model,
+因此，这使我们能够处理思维，运行大型语言模型，
+
+271
+00:25:44,142 --> 00:25:54,995
+uh process the agent harness, run data processing for its knowledge, and then run accelerated computing for all of the tools.
+处理智能体框架，运行知识数据处理，并为所有工具运行加速计算。
+
+272
+00:25:55,045 --> 00:26:00,034
+That represents essentially the agent workload and I'll show you more in a second.
+这基本上代表了智能体的工作负载，我稍后会向你们展示更多。
+
+273
+00:26:00,084 --> 00:26:05,030
+While Vera Rubin is in full production and the performance is off the charts.
+Vera Rubin已全面投产，性能表现惊人。
+
+274
+00:26:05,080 --> 00:26:08,691
+Every single generation, as I mentioned, through extreme co-design,
+如我所言，每一世代都通过极致的协同设计，
+
+275
+00:26:08,741 --> 00:26:15,794
+we're able to achieve performances that are well beyond reason, well beyond what Moore's law would have would have dictated.
+我们实现了远超常理的性能，远超摩尔定律所预测的水平。
+
+276
+00:26:15,844 --> 00:26:18,540
+And as you know, Moore's law has really largely ended.
+正如你们所知，摩尔定律实际上已经基本终结。
+
+277
+00:26:18,590 --> 00:26:29,141
+And so, we need these extreme co-design ideas working from chips to systems, systems to system software, to algorithm, to the entire AI factory.
+因此，我们需要从芯片到系统、从系统到系统软件、再到算法，实现整个AI工厂的极致协同设计。
+
+278
+00:26:29,191 --> 00:26:35,310
+Well, Vera Rubin is another giant step on top of Blackwell.
+真·鲁宾是在黑尔威尔基础上的又一重大飞跃。
+
+279
+00:26:35,360 --> 00:26:44,257
+Blackwell was about 30 times faster than Hopper in doing agentic in doing large language model processing.
+黑尔威尔在处理大型语言模型任务时，相比霍珀快了约30倍。
+
+280
+00:26:44,307 --> 00:26:52,030
+And now, Vera Rubin is another 30 times greater than Blackwell in just 2 years' time.
+如今，真·鲁宾仅用两年时间，就比黑尔威尔又快了30倍。
+
+281
+00:26:52,080 --> 00:26:55,002
+Let's take a look at how Vera Rubin turns
+让我们来看看真·鲁宾如何
+
+282
+00:26:55,052 --> 00:27:04,390
+into what is a DSX full stack AI factory.
+转化为完整的DSX全栈AI工厂。
+
+283
+00:27:04,440 --> 00:27:08,720
+AI is creating the largest infrastructure build-out in history.
+AI正在创造历史上规模最大的基础设施建设。
+
+284
+00:27:08,770 --> 00:27:11,030
+The factories are massive.
+这些工厂规模巨大。
+
+285
+00:27:11,080 --> 00:27:13,187
+The investments are significant.
+投资规模十分可观。
+
+286
+00:27:13,237 --> 00:27:15,470
+We have to build it right.
+我们必须把它建对。
+
+287
+00:27:15,520 --> 00:27:19,070
+But great chips alone don't make a great AI factory.
+但仅靠出色的芯片，并不能打造出色的AI工厂。
+
+288
+00:27:19,120 --> 00:27:27,390
+Nvidia DSX is a full stack AI factory reference architecture co-innovated with the world's leading infrastructure companies.
+英伟达DSX是与全球领先的基础设施公司共同创新的全栈AI工厂参考架构。
+
+289
+00:27:27,440 --> 00:27:34,310
+Compute, networking, storage, software, power, and cooling co-designed as one system.
+计算、网络、存储、软件、电力和冷却一体化协同设计。
+
+290
+00:27:34,360 --> 00:27:37,550
+Optimized from design to operation.
+从设计到运行全程优化。
+
+291
+00:27:37,600 --> 00:27:40,430
+DSX starts in a digital twin.
+DSX 从数字孪生开始。
+
+292
+00:27:40,480 --> 00:27:47,190
+Performance, power, water, and scale validated virtually before construction begins.
+在施工前，性能、功耗、用水量和规模均在虚拟环境中完成验证。
+
+293
+00:27:47,240 --> 00:27:51,910
+PTC turns equipment designs into simulation-ready assets.
+PTC 将设备设计转化为可进行仿真的资产。
+
+294
+00:27:51,960 --> 00:27:57,950
+Dassault Systèmes connects rack and facility design through model-based systems engineering.
+达索系统通过基于模型的系统工程连接机架与设施设计。
+
+295
+00:27:58,000 --> 00:28:02,510
+Schneider Electric simulates power distribution and liquid cooling.
+施耐德电气模拟电力分配和液冷系统。
+
+296
+00:28:02,560 --> 00:28:06,910
+Jacobs brings it all together in the Omniverse digital twin.
+Jacobs 在 Omniverse 数字孪生中整合所有环节。
+
+297
+00:28:06,960 --> 00:28:11,870
+Siemens evaluates thermal, acoustic, and grid impacts.
+西门子评估热、声学和电网影响。
+
+298
+00:28:11,920 --> 00:28:15,950
+And Procore supports construction phase planning.
+Procore 支持施工阶段的规划。
+
+299
+00:28:16,000 --> 00:28:19,990
+Power limits how much an AI factory can produce.
+电力限制决定了 AI 工厂的产出能力。
+
+300
+00:28:20,040 --> 00:28:26,921
+DSX Max LPS is an end-to-end control loop that dynamically steers power to match workload demand.
+DSX Max LPS 是一个端到端的控制环，可动态调节电力以匹配工作负载需求。
+
+301
+00:28:26,971 --> 00:28:31,550
+It uses 30% less power for the same output.
+相同输出下功耗降低30%。
+
+302
+00:28:31,600 --> 00:28:34,150
+DSX rethinks cooling.
+DSX 重新思考了散热方案。
+
+303
+00:28:34,200 --> 00:28:42,950
+Nvidia Vera Rubin systems are designed for closed-loop liquid cooling with coolant temperatures up to 45°C.
+英伟达 Vera Rubin 系统专为闭环液冷设计，冷却液温度最高可达45°C。
+
+304
+00:28:43,000 --> 00:28:49,750
+In suitable climates, outdoor dry coolers release heat into the air without evaporating water.
+在适宜气候下，户外干冷器可通过空气散热，无需蒸发水分。
+
+305
+00:28:49,800 --> 00:28:54,965
+At 2 gigawatts, DSX can save 54 million liters of water a day.
+在2吉瓦的规模下，DSX 每天可节省5400万升水。
+
+306
+00:28:55,015 --> 00:29:00,550
+That's the daily water use of 180,000 households.
+相当于18万个家庭的日用水量。
+
+307
+00:29:00,600 --> 00:29:03,699
+But an AI factory can take several months to build.
+但一个AI工厂的建设可能需要数月时间。
+
+308
+00:29:03,749 --> 00:29:08,270
+Until it is operational, it produces no tokens.
+在投入运营前，它无法生成任何词元。
+
+309
+00:29:08,320 --> 00:29:17,310
+Today, we are announcing NVIDIA DSX Pod, bringing this full-stack platform into a factory-built integrated system.
+如今，我们宣布推出英伟达 DSX Pod，将这一全栈平台整合为工厂预制的集成系统。
+
+310
+00:29:17,360 --> 00:29:21,790
+It starts with Vera Rubin NVL72.
+它始于 Vera Rubin NVL72。
+
+311
+00:29:21,840 --> 00:29:30,870
+Seven liquid-cooled compute racks connected with 17 km of Spectrum-X cables form a Vera Rubin DSX Pod.
+七个液冷计算机架通过17公里的 Spectrum-X 电缆连接，构成一个 Vera Rubin DSX Pod。
+
+312
+00:29:30,920 --> 00:29:35,906
+Vera Rubin DSX Pods are integrated, fully cabled, and factory tested.
+Vera Rubin DSX Pod 已完成集成、全线缆连接并经过工厂测试。
+
+313
+00:29:35,956 --> 00:29:39,510
+Then delivered in transportable containers.
+然后通过可运输的集装箱交付。
+
+314
+00:29:39,560 --> 00:29:43,510
+Dry coolers replace traditional evaporative cooling.
+干冷器取代了传统的蒸发冷却。
+
+315
+00:29:43,560 --> 00:29:48,430
+800 V DC connects to the racks for efficient power delivery.
+800 V 直流电连接机架，实现高效供电。
+
+316
+00:29:48,480 --> 00:29:54,870
+Once site utilities are ready, estimated on-site deployment goes from several months to days.
+现场配套设施就绪后，预计现场部署时间从数月缩短至数天。
+
+317
+00:29:54,920 --> 00:30:00,150
+NVIDIA DSX AI factory is responsible by design.
+英伟达 DSX AI 工厂从设计上就具备可靠性。
+
+318
+00:30:00,200 --> 00:30:06,110
+And now with DSX Pod, AI factories can be built at the speed of light.
+如今，借助 DSX Pod，AI 工厂的建设速度可达光速。
+
+319
+00:30:06,160 --> 00:30:08,390
+More intelligence per watt.
+每瓦特算力的智能更高。
+
+320
+00:30:08,440 --> 00:30:16,110
+Less time to first token.
+首个词元生成时间更短。
+
+321
+00:30:16,160 --> 00:30:27,070
+What do you think?
+你们怎么看？
+
+322
+00:30:27,120 --> 00:30:32,691
+So, in 2016, we introduced the world's first AI supercomputer.
+于是，在 2016 年，我们推出了全球首台 AI 超级计算机。
+
+323
+00:30:32,741 --> 00:30:34,270
+It was in one node.
+它仅由一个节点构成。
+
+324
+00:30:34,320 --> 00:30:36,390
+One GPU node.
+一个 GPU 节点。
+
+325
+00:30:36,440 --> 00:30:46,070
+Then 3 years ago, we introduced the Grace Blackwell NVLink-72 rack-scale computer.
+三年前，我们推出了 Grace Blackwell NVLink-72 机架级计算机。
+
+326
+00:30:46,120 --> 00:30:55,710
+Both times we had to reinvent, not just the computer, the software, and how it works, but also the supply chain.
+两次我们都不得不重新发明，不仅是计算机本身、软件以及其工作方式，还包括供应链。
+
+327
+00:30:55,760 --> 00:31:00,735
+In the case of MVLink 72, we took the entire rack,
+以 NVLink 72 为例，我们将整个机架，
+
+328
+00:31:00,785 --> 00:31:08,270
+which would have otherwise been assembled on site, and we assembled it inside the supply chain.
+原本应在现场组装的，改在供应链内部完成组装。
+
+329
+00:31:08,320 --> 00:31:13,510
+We essentially manufactured supercomputers at scale.
+我们实际上实现了超级计算机的大规模制造。
+
+330
+00:31:13,560 --> 00:31:15,970
+It is the reason why we're able to move so fast,
+这正是我们能够如此快速推进的原因，
+
+331
+00:31:16,020 --> 00:31:24,150
+and be able to provide for literally several hundred data center build-outs around the world at the same time.
+也让我们能够同时为全球数百个数据中心建设提供支持。
+
+332
+00:31:24,200 --> 00:31:30,350
+Every single computer manufacturer in the world now manufactures MVLink 72.
+如今，全球每一家计算机制造商都在生产 NVLink 72。
+
+333
+00:31:30,400 --> 00:31:36,870
+The scale at which we are now producing computing is unheard of ever, unimaginable.
+我们目前计算能力的生产规模前所未有，难以想象。
+
+334
+00:31:36,920 --> 00:31:47,650
+Well, even then, when you bring these systems onto your sites, there are still months and months of assembly.
+即便如此，当你把这些系统部署到现场时，仍然需要数月时间进行组装。
+
+335
+00:31:47,700 --> 00:31:59,310
+And you just heard 17,000 km of wiring to connect just Spectrum X for the scale-out computing.
+你刚刚听到的是，仅用于扩展计算的 Spectrum X 就需要 17,000 公里布线。
+
+336
+00:31:59,360 --> 00:32:01,663
+17 km, 17,000 km.
+17 公里，17,000 公里。
+
+337
+00:32:01,713 --> 00:32:04,147
+It's crazy number.
+这个数字太疯狂了。
+
+338
+00:32:04,197 --> 00:32:07,047
+And so, 17 km, incredible numbers.
+所以，17公里，简直难以置信。
+
+339
+00:32:07,097 --> 00:32:11,720
+Now, suppose we were to do that all inside the supply chain.
+现在，假设我们把这一切都放进供应链里。
+
+340
+00:32:11,770 --> 00:32:15,621
+Run everything up, build everything up, make sure that it runs completely,
+把所有东西都运行起来，全部组装好，确保它完全正常运行，
+
+341
+00:32:15,671 --> 00:32:22,270
+get it qualified, burnt in, and by the time we ship it, it is fully functional.
+完成认证和烧机，等到发货时，它已经是完全可用的。
+
+342
+00:32:22,320 --> 00:32:28,150
+The amount of cabling and on-site assembly is going to be greatly reduced.
+电缆数量和现场组装的工作量将大幅减少。
+
+343
+00:32:28,200 --> 00:32:31,870
+But, there's something much, much more.
+但还有更关键的一点。
+
+344
+00:32:31,920 --> 00:32:39,666
+In fact, what's going to happen here is that by moving this into the supply chain, The amount of idle computing,
+实际上，把这一切搬进供应链后，闲置计算资源的数量，
+
+345
+00:32:39,716 --> 00:32:46,600
+the amount of idle computing that's going to be sitting inside at your data centers will reduce dramatically.
+以及你数据中心里闲置的计算资源将大幅减少。
+
+346
+00:32:46,650 --> 00:32:48,150
+Remember this.
+记住这一点。
+
+347
+00:32:48,200 --> 00:32:56,249
+Each gigawatt each gigawatt data center is $50 the revenue
+每个吉瓦的数据中心，收入是5000万美元。
+
+348
+00:32:56,299 --> 00:33:02,790
+generation you expect is tens of billions of dollars per year.
+你预期的收入每年将达到数百亿美元。
+
+349
+00:33:02,840 --> 00:33:12,070
+And so if we just said it's $40 per year of revenue generation that comes out of that infrastructure.
+所以如果我们说，仅从该基础设施中产生的年收入为40美元。
+
+350
+00:33:12,120 --> 00:33:21,113
+$40 if delayed by just 3 months that's $5 excuse me, what is that?
+延迟仅仅3个月，就相当于损失40美元，抱歉，这是多少？
+
+351
+00:33:21,163 --> 00:33:23,390
+$10 worth of revenues.
+价值10美元的收入。
+
+352
+00:33:23,440 --> 00:33:28,350
+$10 worth of revenues will make anybody anxious.
+10美元的收入就足以让任何人感到焦虑。
+
+353
+00:33:28,400 --> 00:33:36,868
+And so by moving this into the supply chain the speed by which we can turn on, go from installation,
+因此，将这一环节纳入供应链后，我们从安装到计算资源到位、再到生成词元的效率将大幅提升，
+
+354
+00:33:36,918 --> 00:33:47,245
+arrival of computing to production of tokens will go from many months we think something along the lines of 4 to 5 months down to about a month.
+从我们预计的4到5个月缩短至约一个月。
+
+355
+00:33:47,295 --> 00:33:47,610
+Okay,
+好的，
+
+356
+00:33:47,640 --> 00:33:53,523
+so this is a complete transformation of the world supply chain and this will change the way that
+这是对全球供应链的彻底变革，这将改变人们安装和建设数据中心的方式，
+
+357
+00:33:53,573 --> 00:34:01,559
+people install and build data centers and hopefully as a result velocity goes up the wasted idle compute,
+从而有望提升速度，减少闲置计算资源的浪费，
+
+358
+00:34:01,609 --> 00:34:08,474
+the wasted idle cap x will reduce and everybody becomes more profitable.
+减少闲置资本支出，让各方都变得更盈利。
+
+359
+00:34:08,524 --> 00:34:17,950
+And so this is NVLink 72 now into a large cabinet system we call it DSX pod.
+这是NVLink 72现在集成到一个大型机柜系统中，我们称之为DSX机柜。
+
+360
+00:34:18,000 --> 00:34:18,375
+Okay,
+好的，
+
+361
+00:34:18,405 --> 00:34:30,190
+so this is the next click of Nvidia computing.
+这就是英伟达计算的下一步。
+
+362
+00:34:30,240 --> 00:34:37,550
+Now what you make and how you make it makes you special.
+你创造什么以及如何创造，让你与众不同。
+
+363
+00:34:37,600 --> 00:34:43,310
+Just as here in Europe, you, the work you know, makes you special.
+就像在欧洲一样，你们所熟知的工作，让你们与众不同。
+
+364
+00:34:43,360 --> 00:34:45,349
+You design machines.
+你们设计机器。
+
+365
+00:34:45,399 --> 00:34:47,670
+You operate factories.
+你们运营工厂。
+
+366
+00:34:47,720 --> 00:34:50,070
+You discover medicine.
+你们发现药物。
+
+367
+00:34:50,120 --> 00:34:53,190
+You have extraordinary craft.
+你们拥有非凡的技艺。
+
+368
+00:34:53,240 --> 00:34:57,230
+That craft, that specialty, makes you special.
+这种技艺，这种专长，让你们与众不同。
+
+369
+00:34:57,280 --> 00:35:01,870
+Well, what makes NVIDIA special are really two things.
+那么让英伟达与众不同的是两件事。
+
+370
+00:35:01,920 --> 00:35:10,190
+The first thing is that our architecture is the only accelerated computing architecture that is general-purpose.
+第一件事是，我们的架构是唯一通用的加速计算架构。
+
+371
+00:35:10,240 --> 00:35:15,390
+We don't specialize on just one one algorithm, for example, transformers.
+我们并不只专注于某一个算法，例如变换器。
+
+372
+00:35:15,440 --> 00:35:19,409
+We specialize across anything that could be paralyzed.
+我们专注于任何可并行化的任务。
+
+373
+00:35:19,459 --> 00:35:21,480
+Could be fluids and particles.
+可能是流体和粒子。
+
+374
+00:35:21,530 --> 00:35:22,873
+It could be quantum.
+可能是量子。
+
+375
+00:35:22,923 --> 00:35:25,430
+It could be quantum chemistry.
+可能是量子化学。
+
+376
+00:35:25,480 --> 00:35:26,826
+Could be image processing.
+可能是图像处理。
+
+377
+00:35:26,876 --> 00:35:28,236
+Could be data processing.
+可能是数据处理。
+
+378
+00:35:28,286 --> 00:35:30,790
+Structured vector data processing.
+结构化向量数据处理。
+
+379
+00:35:30,840 --> 00:35:32,331
+Processing of all kinds.
+各种类型的处理。
+
+380
+00:35:32,381 --> 00:35:40,811
+And because we've been working at it for so long, and because NVIDIA's architecture has remained consistent for literally two and a half decades,
+正因为我们长期致力于此，且英伟达的架构实际上保持了整整二十五年的一致性，
+
+381
+00:35:40,861 --> 00:35:49,406
+the number of algorithms, the number of domains, the number of industries we serve, we accelerate, has grown tremendously.
+算法数量、应用领域数量以及我们所服务和加速的行业数量，都实现了巨大增长。
+
+382
+00:35:49,456 --> 00:35:55,357
+Our installed base, our general-purpose architecture, our dedication to this architecture,
+我们的用户基础、通用架构以及对这一架构的坚持，
+
+383
+00:35:55,407 --> 00:36:02,950
+and our collaboration with all of the world's industries has made NVIDIA's architecture literally everywhere.
+加上与全球各行业合作，使英伟达的架构真正无处不在。
+
+384
+00:36:03,000 --> 00:36:06,414
+The second thing is how we do it.
+第二点是，我们是如何做到的。
+
+385
+00:36:06,464 --> 00:36:16,374
+Of course, we have the architecture that we developed, but we also build it now in a full stack complete AI factory.
+当然，我们拥有自己开发的架构，现在我们还打造了一个完整的全栈AI工厂。
+
+386
+00:36:16,424 --> 00:36:21,630
+There are many companies in the world who want to design their own chips.
+世界上有很多公司都想设计自己的芯片。
+
+387
+00:36:21,680 --> 00:36:29,150
+But most of the companies in the world just wants to deploy the AI infrastructure so that they could run their business on top of it.
+但世界上大多数公司只是希望部署AI基础设施，以便在其上运行自己的业务。
+
+388
+00:36:29,200 --> 00:36:33,550
+The ability to design a chip and build a supercomputer, write all the software,
+能够设计芯片、构建超级计算机并编写全部软件，
+
+389
+00:36:33,600 --> 00:36:38,420
+is really completely out of mind for most of the companies around the world.
+对世界上绝大多数公司来说完全是天方夜谭。
+
+390
+00:36:38,470 --> 00:36:49,910
+And so, we now have the combination of these two ideas, CUDA, full-stack AI factories, and it exposes us to markets that otherwise is impossible.
+因此，我们现在将这两个理念结合在一起：CUDA、全栈AI工厂，这使我们得以进入原本不可能触及的市场。
+
+391
+00:36:49,960 --> 00:36:53,681
+We're able to partner with so many companies here for this very reason.
+正因为这个原因，我们才能与这里这么多公司建立合作。
+
+392
+00:36:53,731 --> 00:37:02,390
+If I were to go around this, starting with CSPs, this is where most people think the vast majority of AI is today.
+如果我从云服务提供商开始说起，这正是大多数人认为当今AI主要所在的地方。
+
+393
+00:37:02,440 --> 00:37:08,430
+But, as you can see in the beginning of our keynote, I mentioned a whole bunch of companies who are not those.
+但正如我们主题演讲开头所提到的，有很多公司并不属于这一类。
+
+394
+00:37:08,480 --> 00:37:13,350
+So, CSPs remain very large businesses for the world's computing.
+云服务提供商依然是全球计算领域非常庞大的业务。
+
+395
+00:37:13,400 --> 00:37:17,415
+But, there are AI natives, companies that are starting all over the world.
+但还有许多AI原生企业，它们正在全球各地崭露头角。
+
+396
+00:37:17,465 --> 00:37:19,830
+There's so many that are here.
+这里就有这么多这样的企业。
+
+397
+00:37:19,880 --> 00:37:25,447
+Neo clouds, because every region wants to participate in the AI economy.
+新云，因为每个地区都希望参与人工智能经济。
+
+398
+00:37:25,497 --> 00:37:34,710
+Every region wants to ensure that the valuable resources that they have, the energy that they have, is dedicated to companies in their region.
+每个地区都希望确保其拥有的宝贵资源，包括能源，都能用于本地区的公司。
+
+399
+00:37:34,760 --> 00:37:40,198
+For example, Mistral here in in Europe, Mistral in France, Nebia is here in Europe.
+例如，欧洲的 Mistral，法国的 Mistral，以及欧洲的 Nebia。
+
+400
+00:37:40,248 --> 00:37:45,470
+So many companies around Europe that are building up neo clouds.
+欧洲有如此多公司正在建设新云。
+
+401
+00:37:45,520 --> 00:37:50,110
+OEMs and ODMs who are building computers for the world's enterprise.
+为全球企业制造计算机的原始设备制造商和原始设计制造商。
+
+402
+00:37:50,160 --> 00:37:51,910
+AI labs.
+人工智能实验室。
+
+403
+00:37:51,960 --> 00:37:57,479
+Of course, we know about last last year, all we spoke about was Open AI.
+当然，去年我们谈论的全是 OpenAI。
+
+404
+00:37:57,529 --> 00:38:08,959
+To- Today, we spoke about we speak about Open AI, Anthropic, but we also talk about the incredible Meta's Muse, Grok, Bot, and of course, Gemini.
+今天，我们谈论 OpenAI、Anthropic，但也谈到了令人惊叹的 Meta Muse、Grok、Bot，当然还有 Gemini。
+
+405
+00:38:09,009 --> 00:38:13,790
+So many different AI labs are now participating at the frontier.
+如此多不同的人工智能实验室如今正参与前沿创新。
+
+406
+00:38:13,840 --> 00:38:20,190
+And then, very importantly, and this is ultimately the most important, for AI to succeed,
+而且，非常重要的是，这最终也是最关键的一点，人工智能要成功，
+
+407
+00:38:20,240 --> 00:38:26,030
+for Europe to benefit from AI and to have really created an AI ecosystem and AI economy,
+欧洲要从人工智能中获益，并真正建立起人工智能生态系统和人工智能经济，
+
+408
+00:38:26,080 --> 00:38:32,067
+you need all of the end markets, the end industries to adopt AI and to succeed with AI.
+你需要所有终端市场和终端行业采用人工智能并借助人工智能取得成功。
+
+409
+00:38:32,117 --> 00:38:36,059
+Whether it's in the automotive industry because we're building self-driving cars,
+无论是汽车工业，因为我们正在打造自动驾驶汽车，
+
+410
+00:38:36,109 --> 00:38:42,310
+or the way you manufacture with robotics, the way you discover new drugs in healthcare,
+还是通过机器人进行制造，或是医疗健康领域中发现新药，
+
+411
+00:38:42,360 --> 00:38:52,024
+your financial services in inst industry, all of these different industries have to become AI companies, every single one of them.
+金融服务业在金融科技领域，所有这些不同行业都必须转型为AI公司，每一个都是如此。
+
+412
+00:38:52,074 --> 00:38:58,957
+Well, we have a unique ability through what I just mentioned about CUDA and the way that we build computers,
+事实上，正如我刚才提到的CUDA以及我们构建计算机的方式，
+
+413
+00:38:59,007 --> 00:39:07,950
+we have a unique ability to serve literally every single segment of AI.
+我们具备独一无二的能力，可以服务于AI的每一个细分领域。
+
+414
+00:39:08,000 --> 00:39:11,790
+And so, one architecture, many markets.
+因此，一套架构，覆盖多个市场。
+
+415
+00:39:11,840 --> 00:39:20,010
+And because these infrastructure are so significant and so expensive, we need to make sure that they're as productive as possible,
+由于这些基础设施极其重要且成本高昂，我们必须确保它们能尽快实现最大生产力，
+
+416
+00:39:20,060 --> 00:39:28,790
+as soon as possible, that they're fungible, that you can use it for every workload from the beginning of your AI journey,
+具备通用性，从你AI旅程的起点开始，就能用于各种工作负载，
+
+417
+00:39:28,840 --> 00:39:36,796
+data processing to training to post-training, inference and agentic processing, every single step of the AI journey,
+从数据处理、训练、训练后处理、推理到代理式处理，AI旅程的每一步，
+
+418
+00:39:36,846 --> 00:39:44,979
+to every type of AI, chemicals and physics to languages to every single industry and the algorithms that they use.
+适用于各类AI，从化学与物理到语言，再到每个行业以及它们所使用的算法。
+
+419
+00:39:45,029 --> 00:39:54,310
+And so, NVIDIA's architecture is fungible and as result of that, continuous innovation, continuous updating of software.
+因此，英伟达的架构具备通用性，从而实现了持续创新和软件的持续更新。
+
+420
+00:39:54,360 --> 00:39:59,156
+Because the installed base is so great, we have such an incredibly rich ecosystem of software,
+正因为已有庞大的部署基础，我们才拥有如此丰富而强大的软件生态系统，
+
+421
+00:39:59,206 --> 00:40:05,110
+then these architectures also durable, fungible, durable, productive.
+那些架构同样具备耐用性、可替代性、持久性和生产力。
+
+422
+00:40:05,160 --> 00:40:08,550
+Well, that lays the foundation.
+这就奠定了基础。
+
+423
+00:40:08,600 --> 00:40:10,134
+That is the infrastructure.
+这就是基础设施。
+
+424
+00:40:10,184 --> 00:40:12,430
+Now, what do we do with it?
+那么，我们接下来该怎么做？
+
+425
+00:40:12,480 --> 00:40:15,369
+This last year, we saw a transition in AI.
+去年，我们见证了人工智能的转型。
+
+426
+00:40:15,419 --> 00:40:24,950
+AI is now productive and it's one of the most important times was in the beginning of the year when we spoke about Open Claw,
+人工智能现在已具备生产力，今年初我们谈到 Open Claw 时，正是最关键的时刻，
+
+427
+00:40:25,000 --> 00:40:32,430
+which introduced the concept of an open-source agent, and it really started what we all see across the world today.
+它引入了开源代理的概念，真正开启了今天我们全球所见的这一趋势。
+
+428
+00:40:32,480 --> 00:40:42,350
+Agents think, reason, iterate, use tools, and as a result, consume an enormous amount of tokens.
+代理能够思考、推理、迭代、使用工具，因此消耗了大量词元。
+
+429
+00:40:42,400 --> 00:40:44,913
+But as a result, they become useful.
+但正因如此，它们变得真正有用。
+
+430
+00:40:44,963 --> 00:40:50,932
+So, more agents are being developed, they're more useful, and they're and therefore they're used by more people,
+因此，更多代理正在被开发，它们更加有用，也因此被更多人使用，
+
+431
+00:40:50,982 --> 00:40:57,381
+and because they have to use a lot of tokens to think, the amount of token consumption has gone through the roof.
+而由于它们需要大量词元来思考，词元消耗量急剧上升。
+
+432
+00:40:57,431 --> 00:41:00,070
+GPU demand has really gone through the roof.
+GPU 需求也急剧上升。
+
+433
+00:41:00,120 --> 00:41:02,275
+Now, what's processing it is this.
+现在，真正处理它的是这个。
+
+434
+00:41:02,325 --> 00:41:04,310
+This is an agent.
+这是一个智能体。
+
+435
+00:41:04,360 --> 00:41:06,550
+These are the five elements of an agent.
+这是智能体的五个要素。
+
+436
+00:41:06,600 --> 00:41:09,910
+The first part are the language models.
+第一部分是语言模型。
+
+437
+00:41:09,960 --> 00:41:19,830
+These are the tokens that are running on top of the GPUs, and they're generating tokens that are consumed by the agent, what I I call the exoskeleton.
+这些是在 GPU 上运行的词元，它们生成的词元由智能体消耗，我称之为“外骨骼”。
+
+438
+00:41:19,880 --> 00:41:27,310
+That Open Claw harness sits inside a sandbox, and that sandbox isolates it from the rest of the system.
+这个开放爪形夹具被置于沙箱中，沙箱将其与系统其余部分隔离。
+
+439
+00:41:27,360 --> 00:41:30,590
+This is a very important concept that we're going to come back to.
+这是一个非常重要的概念，我们稍后会再回来讨论。
+
+440
+00:41:30,640 --> 00:41:31,694
+There are five things.
+有五个要素。
+
+441
+00:41:31,744 --> 00:41:41,870
+There's the model, there's the harness, the sandbox that the harness sits in, and two other things, knowledge and tools.
+有模型，有夹具，夹具所在的沙箱，还有另外两个要素：知识和工具。
+
+442
+00:41:41,920 --> 00:41:46,366
+Models, sandbox, harness, knowledge, and tools.
+模型、沙箱、夹具、知识和工具。
+
+443
+00:41:46,416 --> 00:41:49,925
+These are the five elements of an agent.
+这是智能体的五个要素。
+
+444
+00:41:49,975 --> 00:41:58,350
+Now, before I talk about how to make the agents useful, the most important thing is we have to make sure that the agent is secure.
+现在，在讨论如何让智能体有用之前，最重要的是我们必须确保智能体是安全的。
+
+445
+00:41:58,400 --> 00:41:59,926
+The agent is autonomous.
+该代理是自主的。
+
+446
+00:41:59,976 --> 00:42:06,950
+It's an autonomous system that has access to files, has access to resources, networks, access to tools,
+它是一个自主系统，能够访问文件、资源、网络和工具。
+
+447
+00:42:07,000 --> 00:42:14,830
+and we need to make sure that the privileges that we provide this autonomous system is minimal.
+我们必须确保提供给这个自主系统的权限是最小化的。
+
+448
+00:42:14,880 --> 00:42:17,990
+And that we constantly monitor it.
+并且我们需要持续监控它。
+
+449
+00:42:18,040 --> 00:42:25,270
+We introduced a fantastic new product, a new platform, and it's called Open Shell.
+我们推出了一款非常出色的新产品，一个新平台，名为 Open Shell。
+
+450
+00:42:25,320 --> 00:42:27,340
+Open Shell came just in time.
+Open Shell 正好及时推出。
+
+451
+00:42:27,390 --> 00:42:32,590
+This is a secure runtime that provides for the things that I just mentioned.
+这是一个安全的运行时环境，能够实现我刚才提到的所有功能。
+
+452
+00:42:32,640 --> 00:42:36,853
+And has an additional hardware-based monitor.
+并且还配备了一个基于硬件的监控器。
+
+453
+00:42:36,903 --> 00:42:44,070
+Before I explain it to you, let's watch a video.
+在我向你们解释之前，我们先看一段视频。
+
+454
+00:42:44,120 --> 00:42:47,734
+Enterprises are preparing to deploy billions of AI agents.
+企业正准备部署数十亿个 AI 代理。
+
+455
+00:42:47,784 --> 00:42:54,910
+To be useful, they'll reason, plan, use tools, access data, and work together.
+为了有用，它们将进行推理、规划、使用工具、访问数据并协同工作。
+
+456
+00:42:54,960 --> 00:42:59,901
+Today, the only thing stopping an agent from misusing all that is asking it nicely.
+如今，唯一阻止代理滥用这些能力的，就是礼貌地请求它。
+
+457
+00:42:59,951 --> 00:43:01,965
+Please don't delete anything.
+请不要删除任何内容。
+
+458
+00:43:02,015 --> 00:43:03,950
+Please don't push to main.
+请不要推送到主分支。
+
+459
+00:43:04,000 --> 00:43:06,590
+Please don't touch my SSH keys.
+请不要碰我的 SSH 密钥。
+
+460
+00:43:06,640 --> 00:43:11,190
+That's the please don't approach, but hope isn't security.
+这就是“请不要接近”的态度，但希望不是安全的保障。
+
+461
+00:43:11,240 --> 00:43:13,192
+Safety isn't an aspiration.
+安全不是一种愿望。
+
+462
+00:43:13,242 --> 00:43:15,590
+It's technology and engineering.
+这是技术与工程。
+
+463
+00:43:15,640 --> 00:43:19,830
+Nvidia Open Shell and Sentry put that philosophy into practice.
+英伟达 Open Shell 和 Sentry 将这一理念付诸实践。
+
+464
+00:43:19,880 --> 00:43:30,030
+You write a policy for what each agent can touch, and Open Shell enforces it at the granularity of system calls, file access, and network connections.
+你为每个代理可操作的范围编写策略，Open Shell 会在系统调用、文件访问和网络连接的粒度上强制执行。
+
+465
+00:43:30,080 --> 00:43:34,690
+Formal verification checks every policy change against your permission ceiling.
+形式化验证会将每项策略变更与你的权限上限进行比对。
+
+466
+00:43:34,740 --> 00:43:38,350
+So, agents never gain more access than intended.
+因此，代理永远不会获得超出预期的权限。
+
+467
+00:43:38,400 --> 00:43:40,371
+It's like the early internet.
+就像早期的互联网。
+
+468
+00:43:40,421 --> 00:43:46,870
+Viruses were everywhere until browsers enforced strict limits on what a webpage could do.
+病毒泛滥，直到浏览器对网页能执行的操作施加了严格限制。
+
+469
+00:43:46,920 --> 00:43:49,350
+Open Shell does the same for agents.
+Open Shell 为代理提供了同样的保护。
+
+470
+00:43:49,400 --> 00:43:57,790
+Enforcement happens outside the agent, not just in LLM guardrails, bringing agent native security into your infrastructure.
+安全管控发生在代理之外，而不仅限于大模型防护机制，将原生代理安全融入你的基础设施。
+
+471
+00:43:57,840 --> 00:44:04,150
+Every agent runs inside its own isolated sandbox with no direct route to the network.
+每个代理都在独立的隔离沙箱中运行，无法直接访问网络。
+
+472
+00:44:04,200 --> 00:44:08,798
+Every outbound network request goes through the supervisor outside the sandbox.
+所有出站网络请求均需经过沙箱外的监督者。
+
+473
+00:44:08,848 --> 00:44:11,454
+It checks the action against your policy.
+监督者会将操作与你的策略进行比对。
+
+474
+00:44:11,504 --> 00:44:14,430
+If it's not permitted, it's denied.
+若不符合许可条件，则予以拒绝。
+
+475
+00:44:14,480 --> 00:44:20,143
+Keys stay outside with the supervisor and are added only on the way to an approved endpoint.
+密钥始终保留在监督者处，仅在通往已批准端点时才被添加。
+
+476
+00:44:20,193 --> 00:44:23,790
+A compromised agent can't leak a key it never had.
+即使代理被攻破，也无法泄露它从未拥有的密钥。
+
+477
+00:44:23,840 --> 00:44:26,350
+The gateway is the control plane.
+网关即控制平面。
+
+478
+00:44:26,400 --> 00:44:28,474
+The supervisor makes the decisions.
+监督者负责做出决策。
+
+479
+00:44:28,524 --> 00:44:35,790
+The sandbox holds the agent and the policy prover checks proposed policies against your permission ceilings.
+沙箱容纳代理，策略验证器会将拟议策略与你的权限上限进行核对。
+
+480
+00:44:35,840 --> 00:44:41,070
+Open Shell combines Linux kernel isolation with runtime policy enforcement.
+Open Shell 结合了 Linux 内核隔离与运行时策略强制执行。
+
+481
+00:44:41,120 --> 00:44:48,270
+Nvidia Sentry adds an optional layer of protection outside the host itself, away from the agent.
+英伟达Sentry在主机外部增加了一层可选保护，远离代理本身。
+
+482
+00:44:48,320 --> 00:44:57,070
+Running on Nvidia BlueField 4, Sentry monitors agent activity and enforces security policies in a hardware isolated trust domain.
+在英伟达BlueField 4上运行，Sentry在硬件隔离的信任域中监控代理活动并执行安全策略。
+
+483
+00:44:57,120 --> 00:45:02,874
+Because agent reasoning traffic passes through Sentry, if the agent is planning to do something unintended,
+由于代理推理流量需经过Sentry，若代理计划执行非预期操作，
+
+484
+00:45:02,924 --> 00:45:09,590
+it will update policies immediately and cut the connection to the model, quarantining it in milliseconds.
+系统将立即更新策略并切断与模型的连接，毫秒级隔离该代理。
+
+485
+00:45:09,640 --> 00:45:16,870
+And it keeps tamper evident records that operators can verify for detection, investigation, and response.
+同时保留可被验证的防篡改记录，供操作人员用于检测、调查和响应。
+
+486
+00:45:16,920 --> 00:45:26,070
+Open Shell is open source under Apache 2.0, runs everywhere your agents do, edge to cloud, and takes two commands to adopt.
+Open Shell采用Apache 2.0开源协议，可在代理运行的任何地方运行，从边缘到云，并且只需两条命令即可部署。
+
+487
+00:45:26,120 --> 00:45:30,990
+Install the CLI, create a sandbox, and run your favorite agent.
+安装CLI，创建沙箱，运行你最喜欢的代理。
+
+488
+00:45:31,040 --> 00:45:34,190
+Agents are only as useful as the access you give them.
+代理的实用性取决于你赋予它们的访问权限。
+
+489
+00:45:34,240 --> 00:45:37,710
+Open Shell and Sentry put that access under your control.
+Open Shell和Sentry将这些访问权限置于你的控制之下。
+
+490
+00:45:37,760 --> 00:45:38,961
+That's how we advance
+这就是我们推动
+
+491
+00:45:39,011 --> 00:45:39,870
+AI capabilities
+AI能力
+
+492
+00:45:39,920 --> 00:45:51,630
+and safety together.
+与安全同步发展的途径。
+
+493
+00:45:51,680 --> 00:45:53,283
+Agents are autonomous systems.
+代理是自主系统。
+
+494
+00:45:53,333 --> 00:46:03,550
+We have to create extremely secure technology to make sure that we could develop these agents and deploy these agents safely.
+我们必须创建极其安全的技术，以确保我们能够安全地开发和部署这些代理。
+
+495
+00:46:03,600 --> 00:46:04,656
+Now, it's incredible.
+现在，这简直令人难以置信。
+
+496
+00:46:04,706 --> 00:46:13,390
+After announcing Open Shell, just about every major company in the world, from the frontier labs to the operating system companies,
+在宣布 Open Shell 之后，全球几乎所有主要公司，从前沿实验室到操作系统公司，
+
+497
+00:46:13,440 --> 00:46:18,102
+cybersecurity companies, platform companies have come out to adopt Open Shell.
+网络安全公司和平台公司都纷纷表态采用 Open Shell。
+
+498
+00:46:18,152 --> 00:46:19,793
+It's really fantastic to see.
+看到这一点真是令人振奋。
+
+499
+00:46:19,843 --> 00:46:23,501
+And the reason for that is because this technology has arrived at exactly the right time.
+原因在于，这项技术恰好在最合适的时机到来。
+
+500
+00:46:23,551 --> 00:46:26,429
+At a time when we want to deploy agents all over the world.
+正是我们希望在全球范围内部署代理的时刻。
+
+501
+00:46:26,479 --> 00:46:33,680
+Now, remember, this isn't just about the services using Open Shell as they deploy agents.
+请记住，这不仅仅关乎使用 Open Shell 部署代理的服务。
+
+502
+00:46:33,730 --> 00:46:38,625
+This is really about all of the world's companies also adopting Open Shell so
+这真正关乎全球所有公司也采用 Open Shell，以便
+
+503
+00:46:38,675 --> 00:46:43,522
+that you could receive these agents and have them run autonomously inside your company.
+你能够接收这些代理，并让它们在你的公司内部自主运行。
+
+504
+00:46:43,572 --> 00:46:52,610
+Every single level of capability, every single task that you give the agent, for every person that uses the agent,
+无论代理的每项能力层级，你交给代理的每项任务，以及每位使用代理的人，
+
+505
+00:46:52,660 --> 00:46:59,550
+every one of those combinations requires a different level of privilege that you would provide to the agent.
+每一种组合都需要为代理提供不同级别的权限。
+
+506
+00:46:59,600 --> 00:47:03,950
+And every single time that an agent is launched, the privileges are different.
+每次启动代理时，权限都会不同。
+
+507
+00:47:04,000 --> 00:47:11,584
+And so, privileges, the policy enforcement, the monitoring, all has to be done dynamically.
+因此，权限管理、策略执行和监控都必须动态完成。
+
+508
+00:47:11,634 --> 00:47:14,503
+And so, Open Shell is really revolutionary.
+所以，Open Shell 真正具有革命性。
+
+509
+00:47:14,553 --> 00:47:21,054
+I'm delighted to say that Anthropic and Nvidia are partnering to create Claude Open Shell agents.
+我很高兴地宣布，Anthropic 和英伟达正在合作开发 Claude Open Shell 代理。
+
+510
+00:47:21,104 --> 00:47:22,869
+And so, you can go to the website.
+你可以访问该网站。
+
+511
+00:47:22,919 --> 00:47:25,214
+There's a really great write-up about that.
+网站上有一篇非常详尽的介绍文章。
+
+512
+00:47:25,264 --> 00:47:34,392
+So, the first part the first part is how do you use these harnesses, Open Claw, Hermes, Open Hand.
+所以，第一部分是介绍如何使用这些工具：Open Claw、Hermes、Open Hand。
+
+513
+00:47:34,442 --> 00:47:39,190
+You could create your own own harnesses from LangChain, Deep Agents.
+你可以使用 LangChain、Deep Agents 创建自己的工具包。
+
+514
+00:47:39,240 --> 00:47:41,270
+There's or just write it from Python.
+或者直接用 Python 编写。
+
+515
+00:47:41,320 --> 00:47:50,430
+There's a whole bunch of different ways you could create agent harnesses that sits inside now an Open Shell secure harness.
+现在有多种方式可以创建代理工具包，它们都运行在 Open Shell 安全工具包内部。
+
+516
+00:47:50,480 --> 00:47:50,859
+Okay?
+明白了吗？
+
+517
+00:47:50,889 --> 00:47:55,870
+And that's the sandbox that it sits in, the secure sandbox.
+这就是它所处的沙盒环境，一个安全的沙盒。
+
+518
+00:47:55,920 --> 00:48:00,070
+And then next, let's talk about models.
+接下来，我们来谈谈模型。
+
+519
+00:48:00,120 --> 00:48:02,801
+Uh there you should use uh models of all kinds.
+你应该使用各种类型的模型。
+
+520
+00:48:02,851 --> 00:48:06,710
+In the future, it won't just be one model that we run everything on.
+未来，我们不会只依赖一个模型来运行所有任务。
+
+521
+00:48:06,760 --> 00:48:13,470
+We're going to run We're going to use the best models, whether they're closed, open, or custom.
+我们将使用最佳的模型，无论它们是封闭的、开源的，还是定制的。
+
+522
+00:48:13,520 --> 00:48:16,287
+We're going to use all the models to do your work.
+我们将使用所有模型来完成你的工作。
+
+523
+00:48:16,337 --> 00:48:24,578
+Sometimes, the work that you do is fairly generic, artificial general intelligence is going to do an incredibly good job.
+有时，你所做的工作相当通用，通用人工智能将表现得极为出色。
+
+524
+00:48:24,628 --> 00:48:30,375
+However, sometimes, the work that you want to do captures too much of your proprietary knowledge,
+但有时，你希望完成的工作包含了太多专有的知识，
+
+525
+00:48:30,425 --> 00:48:36,310
+too much of your specialty, and you want to continuously enhance that intelligence.
+太多专业领域的信息，你希望持续增强这种智能。
+
+526
+00:48:36,360 --> 00:48:43,278
+Every company in the future will use both closed models as well as open models you customize.
+未来，每家公司都将同时使用封闭模型和你自行定制的开源模型。
+
+527
+00:48:43,328 --> 00:48:49,710
+By the end of the session, you will see that in fact, building your own AIs is not that hard.
+会话结束时，你会发现，实际上构建属于自己的AI并没有那么难。
+
+528
+00:48:49,760 --> 00:48:52,710
+It starts with, of course, the model.
+这当然要从模型开始。
+
+529
+00:48:52,760 --> 00:49:01,230
+We've been dedicated to advancing open models for to open up new opportunities and enable people to build their own custom AIs.
+我们致力于推动开放模型，以开拓新机遇，让人们能够打造属于自己的定制AI。
+
+530
+00:49:01,280 --> 00:49:04,305
+NeMo-Tron is for languages.
+NeMo-Tron 适用于语言。
+
+531
+00:49:04,355 --> 00:49:07,316
+Cosmos is our world foundation model.
+Cosmos 是我们的世界基础模型。
+
+532
+00:49:07,366 --> 00:49:09,950
+We are the frontier.
+我们处于前沿。
+
+533
+00:49:10,000 --> 00:49:12,028
+GRoot for human and robotics.
+GRoot 用于人类与机器人。
+
+534
+00:49:12,078 --> 00:49:13,910
+We are the frontier.
+我们处于前沿。
+
+535
+00:49:13,960 --> 00:49:16,796
+Alpaca IO for autonomous navigation.
+Alpaca IO 用于自主导航。
+
+536
+00:49:16,846 --> 00:49:18,431
+We are the frontier.
+我们处于前沿。
+
+537
+00:49:18,481 --> 00:49:21,196
+I Sing for quantum classical computing.
+我为量子与经典计算而歌唱。
+
+538
+00:49:21,246 --> 00:49:22,611
+We are the frontier.
+我们处于前沿。
+
+539
+00:49:22,661 --> 00:49:25,268
+And of course, Earth-2 physics AI.
+还有，地球-2 物理AI。
+
+540
+00:49:25,318 --> 00:49:27,150
+We are the frontier.
+我们处于前沿。
+
+541
+00:49:27,200 --> 00:49:33,281
+So, in all of these different areas, we offer you all of the models, and we're continuously working on it.
+因此，在所有这些不同领域，我们向您提供全部模型，而且我们一直在持续改进。
+
+542
+00:49:33,331 --> 00:49:37,185
+We've been working on it for a decade, and we'll continue to work on this forever.
+我们已为此努力了十年，未来也将持续投入。
+
+543
+00:49:37,235 --> 00:49:41,454
+We offer you the model completely open, the data that goes along with it,
+我们向您完全开放模型，以及与之相关的数据，
+
+544
+00:49:41,504 --> 00:49:49,750
+so that you know the provenance of the model that we created, as well as the scripts necessary for you to reproduce it.
+以便您了解我们所创建模型的来源，以及您复现该模型所需的全部脚本。
+
+545
+00:49:49,800 --> 00:49:52,390
+So, not only do you have the open weights,
+因此，您不仅拥有开放的权重，
+
+546
+00:49:52,440 --> 00:50:02,710
+you have from us the entire recipe and the data to recreate the open models so that you could know where it came from and have complete trust into it.
+还能从我们这里获得完整的配方和数据，以重建开放模型，从而知晓其来源，并对其建立完全信任。
+
+547
+00:50:02,760 --> 00:50:11,230
+Well, these models are not necessarily the frontier of frontiers, especially for the language model.
+这些模型未必处于最前沿，尤其在语言模型方面。
+
+548
+00:50:11,280 --> 00:50:19,675
+However, with customization and with partners that the ecosystem that we work with, you could turn these models into frontier.
+但通过定制化以及与我们生态系统中的合作伙伴协作，您可以将这些模型转化为前沿模型。
+
+549
+00:50:19,725 --> 00:50:24,756
+And as a result, turn your proprietary data into sovereign intelligence.
+从而将您的专有数据转化为自主智能。
+
+550
+00:50:24,806 --> 00:50:33,706
+Here's an example of A21 helping Alice turn Neumotron into a model that exceeds frontier capabilities.
+这是一个例子：A21 帮助爱丽丝将 Neumotron 打造成超越前沿能力的模型。
+
+551
+00:50:33,756 --> 00:50:43,575
+Here's Base 10 helping Code Rabbit turning a Neumotron model after fine-tuning on your data turned into frontier capability.
+这是 Base 10 帮助 Code Rabbit，在您的数据上微调 Neumotron 模型后，使其具备前沿能力。
+
+552
+00:50:43,625 --> 00:50:45,144
+Base 10 and Code Rabbit.
+Base 10 和 Code Rabbit。
+
+553
+00:50:45,194 --> 00:50:47,670
+Here's Trajectory and Harvey.
+这里是 Trajectory 和 Harvey。
+
+554
+00:50:47,720 --> 00:50:55,224
+Again, using Neumotron, post-trained it and turned and created their own frontier-level capability.
+再次使用 Neumotron，进行微调并开发出属于他们自己的前沿级能力。
+
+555
+00:50:55,274 --> 00:50:59,254
+Here's Scale working with Skydance, again doing the same thing.
+这里是 Scale 与 Skydance 合作，再次做着同样的事情。
+
+556
+00:50:59,304 --> 00:51:00,845
+It goes on and on and on.
+这种情况不断延续。
+
+557
+00:51:00,895 --> 00:51:07,550
+The point being that you could start with an open model, something that's incredibly good like Neumotron,
+重点是你可以从一个开源模型开始，比如像 Neumotron 这样极为出色的模型，
+
+558
+00:51:07,600 --> 00:51:15,790
+and with your own data, post-train it for your use case and achieve, of course, superintelligence.
+然后利用自己的数据进行微调，以适应你的应用场景，从而实现超级智能。
+
+559
+00:51:15,840 --> 00:51:19,523
+That is a very sensible thing to do and all the technology exists today.
+这是非常明智的做法，而且所有技术如今都已具备。
+
+560
+00:51:19,573 --> 00:51:23,830
+Here's an example of Palantir with Tampa General Hospital.
+这是 Palantir 与坦帕综合医院合作的一个例子。
+
+561
+00:51:23,880 --> 00:51:25,750
+The list goes on and on.
+这样的案例不胜枚举。
+
+562
+00:51:25,800 --> 00:51:28,670
+We have a rich ecosystem of partners that can help you.
+我们拥有丰富的合作伙伴生态系统，可以协助你。
+
+563
+00:51:28,720 --> 00:51:33,765
+And they're incredible companies and they could work with you, you know, from around the world.
+这些都是杰出的公司，他们可以来自世界各地，与你合作。
+
+564
+00:51:33,815 --> 00:51:40,350
+Okay, so I we work it's just anyways, I'll I'll mention one and I'll offend everybody else.
+好吧，那我们就这样吧，我随便提一个，其他人都别介意了。
+
+565
+00:51:40,400 --> 00:51:42,790
+I'll have to sit here and mention all of them.
+我得坐在这里把它们全都提一遍。
+
+566
+00:51:42,840 --> 00:51:45,350
+And I love all I love them all.
+我爱它们，我全都爱。
+
+567
+00:51:45,400 --> 00:51:52,990
+And so, first, Agent Harness running in a secure sandbox open shell.
+首先，Agent Harness 在安全沙箱中运行的开放外壳。
+
+568
+00:51:53,040 --> 00:51:59,270
+Second, Neumotron large language models, the first two components of what you need.
+其次，Neumotron 大语言模型，构成你所需的第一和第二部分。
+
+569
+00:51:59,320 --> 00:52:08,790
+But ultimately, what turns these super agents, these agents into super agents, is that you give them access to your company's knowledge.
+但最终让这些超级代理真正成为超级代理的，是你赋予它们访问公司知识的权限。
+
+570
+00:52:08,840 --> 00:52:11,370
+And this is really special.
+这真的很特别。
+
+571
+00:52:11,420 --> 00:52:15,356
+This is called the agent knowledge foundation that we put together.
+这被称为我们构建的代理知识基础。
+
+572
+00:52:15,406 --> 00:52:18,541
+Libraries of models that are completely world-class.
+一系列完全世界级的模型库。
+
+573
+00:52:18,591 --> 00:52:28,565
+It allows you to turn your company's data The data could be in the assets could be in uh unstructured format in documents,
+它能让你将公司数据转化为可用信息，这些数据可能是资产，也可能是文档中的非结构化格式。
+
+574
+00:52:28,615 --> 00:52:33,608
+so that you need an AI to understand how to read these PDFs and read all these unstructured documents,
+因此你需要 AI 来理解如何读取这些 PDF 文件以及所有这些非结构化文档。
+
+575
+00:52:33,658 --> 00:52:37,190
+or it could be in structured data inside databases.
+或者数据以结构化形式存在于数据库中。
+
+576
+00:52:37,240 --> 00:52:47,030
+We have the libraries and the tools necessary to help you extract meaning and understanding from your company's data.
+我们拥有必要的库和工具，帮助你从公司数据中提取意义和理解。
+
+577
+00:52:47,080 --> 00:52:48,211
+One at a time.
+一个接一个。
+
+578
+00:52:48,261 --> 00:52:52,083
+Neumotron parse, completely world-class, top of leaderboard.
+神经转录器解析，完全达到世界级水平，排名第一。
+
+579
+00:52:52,133 --> 00:52:59,270
+Neumotron embed, taking a query and associating with the knowledge that's in inside the vector database.
+神经转录器嵌入，将查询与向量数据库中的知识关联起来。
+
+580
+00:52:59,320 --> 00:53:00,968
+Top of leaderboard.
+排名第一。
+
+581
+00:53:01,018 --> 00:53:08,455
+Neumotron rerank, it might find many different sources where the query is associated with different pieces of data.
+神经转录器重排序，它可能找到多个不同的来源，其中查询与不同数据片段相关联。
+
+582
+00:53:08,505 --> 00:53:14,390
+It brings it together, ranks ranks them based on which one's the most relevant uh to you.
+它将这些信息整合起来，并根据与你的相关性高低进行排序。
+
+583
+00:53:14,440 --> 00:53:21,866
+Um Kumo, to be able to predict from your structured database what is likely to happen.
+云魔，能够从你的结构化数据库中预测可能发生的情况。
+
+584
+00:53:21,916 --> 00:53:33,414
+And so this is, for example, if you were to receive um I notice that one of your suppliers will be uh short on supply or delay on supply.
+例如，如果你注意到你的某个供应商可能供应不足或出现延迟。
+
+585
+00:53:33,464 --> 00:53:38,160
+That That piece of information is likely uh unstructured data.
+这条信息很可能是非结构化数据。
+
+586
+00:53:38,210 --> 00:53:39,437
+It's a document.
+它是一份文档。
+
+587
+00:53:39,487 --> 00:53:47,719
+The information about the orders in your company are likely inside a structured database, uh your SQL database, for example.
+公司订单的相关信息很可能存在于结构化数据库中，比如你的 SQL 数据库。
+
+588
+00:53:47,769 --> 00:53:53,496
+And in order to predict what to what's going to happen to all of these to orders,
+为了预测这些订单将发生什么情况，
+
+589
+00:53:53,546 --> 00:53:58,990
+who are going to be short, the amount of delay, you use CUDA to make that prediction.
+你将需要预测延迟的长短，这时可以使用 CUDA 来完成预测。
+
+590
+00:53:59,040 --> 00:54:02,603
+And then in order to uh figure out what to replace it with,
+然后为了弄清楚该用什么来替代它，
+
+591
+00:54:02,653 --> 00:54:09,338
+you might use vector database search and go find a engineering document of a replacement component.
+你可以使用向量数据库搜索，找到替代部件的工程文档。
+
+592
+00:54:09,388 --> 00:54:09,790
+Okay?
+好的？
+
+593
+00:54:09,840 --> 00:54:17,904
+So, all of those different uh libraries and data processing capabilities now makes for you your knowledge foundation.
+因此，所有这些不同的库和数据处理能力，现在构成了你的知识基础。
+
+594
+00:54:17,954 --> 00:54:24,270
+You've now armed your AI with proprietary data, proprietary knowledge.
+你现在已经为你的 AI 配备了专有的数据和专有的知识。
+
+595
+00:54:24,320 --> 00:54:28,550
+Now, the last part they'll talk about is ultimately tools.
+现在，他们将要讨论的最后一部分是工具。
+
+596
+00:54:28,600 --> 00:54:30,590
+Tools of the trade.
+行业工具。
+
+597
+00:54:30,640 --> 00:54:35,722
+NVIDIA's been working on CUDA-X, and for most of you, in the last before AI,
+英伟达一直在开发 CUDA-X，对在座的大多数人来说，在 AI 之前，
+
+598
+00:54:35,772 --> 00:54:41,421
+all of our conversations have been about around how do we accelerate simulators and solvers,
+我们所有的讨论都集中在如何加速模拟器和求解器上，
+
+599
+00:54:41,471 --> 00:54:46,150
+data processing engines, domain-specific libraries of all kinds.
+数据处理引擎，以及各种领域专用的库。
+
+600
+00:54:46,200 --> 00:54:51,070
+They're used in scientific discovery, in all the different fields of science.
+它们被应用于科学发现，以及科学的各个不同领域。
+
+601
+00:54:51,120 --> 00:54:58,390
+They're used in engineering, they're used in research, they're used in designing, building, creative arts.
+它们被用于工程、研究、设计、建造以及创意艺术领域。
+
+602
+00:54:58,440 --> 00:55:03,857
+At this core, are CUDA-X libraries, and these CUDA-X libraries are algorithms.
+在核心位置的是 CUDA-X 库，这些 CUDA-X 库包含各种算法。
+
+603
+00:55:03,907 --> 00:55:06,230
+And algorithms, as you know, are beautiful.
+而正如你所知，算法是优美的。
+
+604
+00:55:06,280 --> 00:55:41,092
+Let's
+我们来
+
+605
+00:55:41,142 --> 00:56:10,144
+take
+看看
+
+606
+00:56:10,194 --> 00:56:21,765
+a
+这些
+
+607
+00:56:21,815 --> 00:56:50,817
+look
+算法。
+
+608
+00:56:50,867 --> 00:57:08,248
+at
+这些
+
+609
+00:57:08,298 --> 00:57:43,110
+them.
+算法。
+
+610
+00:57:43,160 --> 00:57:45,170
+Math is beautiful.
+数学是优美的。
+
+611
+00:57:45,220 --> 00:57:47,230
+Math is beautiful.
+数学是优美的。
+
+612
+00:57:47,280 --> 00:57:49,893
+CUDA X libraries, these are the crown jewels of our company.
+CUDA-X 库，正是我们公司的瑰宝。
+
+613
+00:57:49,943 --> 00:57:51,910
+And the reason for that is this.
+背后的原因就在于此。
+
+614
+00:57:51,960 --> 00:57:57,290
+When you're building an AI assistant, it could be a a lab assistant, it could be a research assistant,
+当你在构建一个AI助手时，它可能是实验室助手，也可能是研究助手，
+
+615
+00:57:57,340 --> 00:58:02,910
+it could be a co-designer, a somebody who's co-creator with you, building something with you.
+也可能是你的共同设计者，与你一起共同创造某样东西。
+
+616
+00:58:02,960 --> 00:58:12,910
+Ultimately, what makes those agents useful, what makes them able to do real work, are the tools.
+最终让这些智能体变得有用、能够真正开展工作的，是它们所使用的工具。
+
+617
+00:58:12,960 --> 00:58:22,510
+And so we we now have models that allow these agents to reason, understand information,
+因此我们现在拥有了能够让这些智能体进行推理、理解信息、
+
+618
+00:58:22,560 --> 00:58:28,613
+reason, to be able to plan, and iteratively act and use tools until it can get the job done.
+进行推理、制定计划，并迭代行动、使用工具，直到完成任务的模型。
+
+619
+00:58:28,663 --> 00:58:30,856
+But it still comes down to the tools.
+但归根结底，关键还是在于工具。
+
+620
+00:58:30,906 --> 00:58:34,420
+And these tools we've been working on for so many years.
+这些工具我们已经研发了多年。
+
+621
+00:58:34,470 --> 00:58:39,950
+And there was one particular computer I showed you on the right-hand side that runs every single one of these tools.
+之前我向你们展示的右侧那台计算机，能够运行所有这些工具。
+
+622
+00:58:40,000 --> 00:58:42,337
+And it could be fluid dynamics and particle physics.
+它可以用于流体动力学和粒子物理。
+
+623
+00:58:42,387 --> 00:58:44,050
+It could be quantum chemistry.
+也可以用于量子化学。
+
+624
+00:58:44,100 --> 00:58:45,790
+It could be data processing.
+还可以用于数据处理。
+
+625
+00:58:45,840 --> 00:58:47,870
+It could be ray tracing.
+可能是光线追踪。
+
+626
+00:58:47,920 --> 00:58:51,106
+All of these tools run on that one computer.
+所有这些工具都在那台电脑上运行。
+
+627
+00:58:51,156 --> 00:59:00,950
+And that one computer speeds up the processing of it compared to just running it natively on a CPU by 10, 50, 100 x.
+与直接在 CPU 上原生运行相比，这台电脑能将处理速度提升 10 倍、50 倍甚至 100 倍。
+
+628
+00:59:01,000 --> 00:59:05,664
+And CUDA CUDA X tools is what give the agents the tools of the trade.
+而 CUDA 工具正是赋予智能体专业工具的关键。
+
+629
+00:59:05,714 --> 00:59:06,917
+And it's so cool to see
+看到
+
+630
+00:59:06,967 --> 00:59:18,211
+how other people are using it.
+别人如何使用它，真是太酷了。
+
+631
+00:59:18,261 --> 00:59:29,453
+Let's take
+我们来
+
+632
+00:59:29,503 --> 00:59:37,630
+a look.
+看一看。
+
+633
+00:59:37,680 --> 00:59:45,459
+And so So this is the magic magic behind the agents.
+这就是智能体背后的神奇之处。
+
+634
+00:59:45,509 --> 00:59:47,945
+Ultimately, the agents have to use tools.
+最终，智能体必须使用工具。
+
+635
+00:59:47,995 --> 00:59:55,577
+Now, of course, in one of the first fields of agentic use is software programming and therefore a compiler or Python is all really it needs.
+当然，智能体最早应用的领域之一是软件编程，因此它只需要一个编译器或 Python。
+
+636
+00:59:55,627 --> 01:00:02,484
+But in the future, as we have these tools do more and more more and more useful work, we're going to need to give them more tools.
+但未来，随着这些工具能完成越来越多、越来越有用的工作，我们将需要赋予它们更多工具。
+
+637
+01:00:02,534 --> 01:00:03,727
+And here's some examples.
+这里有一些例子。
+
+638
+01:00:03,777 --> 01:00:04,971
+So here's Luminous Sciences.
+这就是光之科学公司。
+
+639
+01:00:05,021 --> 01:00:11,824
+They're creating a lab assistant and they're using Nvidia's BioNeMo models that are designed
+他们正在开发一款实验室助手，并使用英伟达专为生物领域设计的 BioNeMo 模型
+
+640
+01:00:11,874 --> 01:00:17,483
+for understanding proteins and understanding cells and generating proteins and chemicals in drug discovery.
+用于理解蛋白质和细胞，以及在药物研发中生成蛋白质和化学品。
+
+641
+01:00:17,533 --> 01:00:20,254
+They're using BioNeMo and CUDA-X tools.
+他们正在使用 BioNeMo 和 CUDA-X 工具。
+
+642
+01:00:20,304 --> 01:00:25,081
+This is Siemens factory building a factory agent that uses Nvidia Cosmos,
+这是西门子工厂正在打造一个使用英伟达 Cosmos 的工厂代理，
+
+643
+01:00:25,131 --> 01:00:30,253
+our world foundation model that understands the physical world, and CUDA-X tools.
+我们的世界基础模型能够理解物理世界，并支持 CUDA-X 工具。
+
+644
+01:00:30,303 --> 01:00:39,045
+And here's example of Dassault creating a virtual companion that uses Nvidia's NeMo Triton, our language model, and CUDA-X tools.
+这是达索公司利用英伟达的 NeMo Triton、我们的语言模型以及 CUDA-X 工具创建虚拟助手的实例。
+
+645
+01:00:39,095 --> 01:00:44,790
+Let's see them in use.
+让我们看看它们的实际应用。
+
+646
+01:00:44,840 --> 01:00:48,870
+The most intelligent scientist still needs a laboratory.
+最聪明的科学家仍然需要一个实验室。
+
+647
+01:00:48,920 --> 01:00:52,750
+The best engineer still needs simulators and solvers.
+再优秀的工程师也需要模拟器和求解器。
+
+648
+01:00:52,800 --> 01:00:56,310
+An AI agent is no different.
+AI代理也是一样的。
+
+649
+01:00:56,360 --> 01:00:59,196
+An agent brings together five building blocks.
+一个智能体整合了五个核心组件。
+
+650
+01:00:59,246 --> 01:01:02,910
+The model perceives, reasons, and plans.
+该模型能够感知、推理并规划。
+
+651
+01:01:02,960 --> 01:01:04,746
+The harness coordinates the work.
+协调系统负责统筹各项工作。
+
+652
+01:01:04,796 --> 01:01:11,270
+Knowledge foundation gives the agent context from your company's structured and unstructured data.
+知识基底为智能体提供来自企业结构化与非结构化数据的上下文。
+
+653
+01:01:11,320 --> 01:01:15,390
+Tools let the agent simulate, experiment, and act.
+工具使智能体能够模拟、实验并执行操作。
+
+654
+01:01:15,440 --> 01:01:19,630
+Nvidia Open Shell controls what agents can access and execute.
+英伟达开放外壳控制智能体可访问和执行的内容。
+
+655
+01:01:19,680 --> 01:01:24,110
+Start with a frontier closed model or customize an open model.
+可从前沿封闭模型开始，或定制开放模型。
+
+656
+01:01:24,160 --> 01:01:31,790
+With NVIDIA's agent toolkit, any company can turn its knowledge and expertise into a customized super agent.
+借助英伟达的智能体工具包，任何企业都能将其知识与专长转化为定制化的超级智能体。
+
+657
+01:01:31,840 --> 01:01:34,150
+Let's look at three examples.
+我们来看三个例子。
+
+658
+01:01:34,200 --> 01:01:39,790
+For Lyra Sciences, the goal is to design a therapy for B-cell lymphoma.
+对于Lyra Sciences而言，目标是设计一种针对B细胞淋巴瘤的疗法。
+
+659
+01:01:39,840 --> 01:01:46,350
+The Lyra Iris agent, built on NVIDIA NeMo tron, turns that goal into an experimental plan.
+基于英伟达NeMo tron构建的Lyra Iris智能体，将这一目标转化为实验计划。
+
+660
+01:01:46,400 --> 01:01:55,870
+In the computational dry lab, Lyra agents use NVIDIA BioNeMo agent toolkit to call models for protein design and RNA optimization,
+在计算干实验环境中，Lyra智能体使用英伟达BioNeMo智能体工具包调用模型进行蛋白质设计与RNA优化。
+
+661
+01:01:55,920 --> 01:01:58,630
+running millions of virtual experiments.
+运行数百万次虚拟实验。
+
+662
+01:01:58,680 --> 01:02:03,150
+The most promising candidates move into Lyra's AI science factory,
+最有前景的候选方案将进入丽拉的AI科学工厂，
+
+663
+01:02:03,200 --> 01:02:09,910
+where autonomous robots and instruments, developed with NVIDIA Omniverse and Cosmos, make and test them.
+在那里，借助英伟达Omniverse和Cosmos开发的自主机器人和仪器，完成制造与测试。
+
+664
+01:02:09,960 --> 01:02:14,630
+The results return to Iris, shaping the next designs and experiments.
+结果返回至伊里斯，用于塑造下一阶段的设计与实验。
+
+665
+01:02:14,680 --> 01:02:17,110
+The loop continues.
+该循环持续进行。
+
+666
+01:02:17,160 --> 01:02:22,487
+At Siemens electronic factory Erlangen, the goal is to bring new products into production.
+在西门子埃尔兰根电子工厂，目标是将新产品投入生产。
+
+667
+01:02:22,537 --> 01:02:29,870
+Process preparation X agents use NVIDIA Cosmos to generate virtual prototypes and synthetic data,
+工艺准备X智能体利用英伟达Cosmos生成虚拟原型和合成数据，
+
+668
+01:02:29,920 --> 01:02:34,670
+then train and validate inspection models before production starts.
+在生产开始前训练并验证检测模型。
+
+669
+01:02:34,720 --> 01:02:45,190
+Intelligence center X agents, built with NVIDIA's factory operations blueprint, use orders, supplies, and line setups to recommend production plans.
+智能中心X智能体基于英伟达工厂运营蓝图构建，利用订单、物料和产线配置推荐生产计划。
+
+670
+01:02:45,240 --> 01:02:50,575
+Digital twin composer uses NVIDIA Omniverse libraries to validate those plans with
+数字孪生编排器利用英伟达Omniverse库，通过物理仿真和实时工厂数据验证这些计划，
+
+671
+01:02:50,625 --> 01:02:57,550
+physics simulation and real-time factory data before changes reach the factory floor.
+确保变更在抵达工厂现场前已充分验证。
+
+672
+01:02:57,600 --> 01:03:04,510
+With the Dassault Systèmes platform, an engineer needs to adapt a Volkswagen Golf door design for the Tiguan.
+通过达索系统平台，一名工程师需要将大众高尔夫车门设计适配至Tiguan车型。
+
+673
+01:03:04,560 --> 01:03:10,110
+Aura and Leo use NVIDIA NeMo tron to reason over engineering requirements.
+奥拉和利奥使用英伟达 NeMo tron 来推理工程需求。
+
+674
+01:03:10,160 --> 01:03:17,870
+The harness coordinates the specialized sub-agents and preserves context across planning, design, and simulation.
+电缆组件协调各个专业子代理，并在规划、设计和仿真过程中保持上下文一致。
+
+675
+01:03:17,920 --> 01:03:25,267
+Aura uses Innovia to plan the work around the vehicle's dimensions, weight limits, and other engineering requirements.
+奥拉使用 Innovia 根据车辆的尺寸、重量限制及其他工程要求来规划工作。
+
+676
+01:03:25,317 --> 01:03:33,070
+Leo design agent selects a compatible golf door design and uses CATIA to reshape it for the Tiguan.
+利奥设计代理选择了一个兼容的高尔夫门设计方案，并使用 CATIA 对其进行重塑以适配 Tiguan。
+
+677
+01:03:33,120 --> 01:03:41,790
+Leo simulation agent uses Simulia accelerated by NVIDIA CUDA X libraries to test the variants, revealing a vibration problem.
+利奥仿真代理使用由英伟达 CUDA X 库加速的 Simulia 测试各个变体，发现存在振动问题。
+
+678
+01:03:41,840 --> 01:03:45,190
+The results return to the design agent for refinement.
+结果返回至设计代理进行优化。
+
+679
+01:03:45,240 --> 01:03:50,270
+The engineer reviews the refined designs and selects the final one.
+工程师审查优化后的设计方案并选定最终方案。
+
+680
+01:03:50,320 --> 01:03:55,470
+Different goals, different expertise, the same building blocks.
+不同目标，不同专长，相同的构建模块。
+
+681
+01:03:55,520 --> 01:04:06,630
+Open models, CUDA X accelerated tools, and the open shell secure runtime brought together with the NVIDIA agent toolkit.
+开源模型、CUDA X 加速工具以及开放外壳安全运行时，通过英伟达代理工具包整合在一起。
+
+682
+01:04:06,680 --> 01:04:07,990
+Isn't it great?
+难道不棒吗？
+
+683
+01:04:08,040 --> 01:04:16,588
+So, some people said that AI is here is going to be the end of software.
+有些人说，人工智能的到来将意味着软件的终结。
+
+684
+01:04:16,638 --> 01:04:18,364
+It's going to be end of tools company.
+它将终结工具公司。
+
+685
+01:04:18,414 --> 01:04:20,583
+It's exactly the opposite.
+恰好相反。
+
+686
+01:04:20,633 --> 01:04:27,735
+AI is here, there'll be more users of these tools that we created over time than ever before.
+人工智能已经到来，随着时间推移，使用我们开发的这些工具的用户将比以往任何时候都多。
+
+687
+01:04:27,785 --> 01:04:31,230
+Every single tools company will now become an AI company.
+每一家工具公司现在都将转型为AI公司。
+
+688
+01:04:31,280 --> 01:04:32,707
+They'll be an agents company.
+它们将成为代理公司。
+
+689
+01:04:32,757 --> 01:04:40,830
+Not only will they offer tools, but they'll offer you specially optimized agents that are incredibly good at using their tools.
+它们不仅提供工具，还将提供专为优化而设计的代理，这些代理在使用其工具方面极为出色。
+
+690
+01:04:40,880 --> 01:04:48,407
+Keynes and CrowdStrike and Dassault, IQVIA, and just about every enterprise company out there are all building agents,
+凯恩斯、CrowdStrike、达索、IQVIA，以及几乎所有企业公司都在构建代理，
+
+691
+01:04:48,457 --> 01:04:50,770
+and we're just delighted to be working with them.
+我们非常高兴能与它们合作。
+
+692
+01:04:50,820 --> 01:04:53,470
+Building agents is not that hard.
+构建代理并不难。
+
+693
+01:04:53,520 --> 01:04:55,630
+It's got four compo- five components.
+它包含五个组成部分。
+
+694
+01:04:55,680 --> 01:05:03,284
+It's got the model, the harness, both of them have closed and open versions, the open shell secure runtime,
+包括模型和框架，两者都有封闭和开放版本，开放的外壳安全运行时，
+
+695
+01:05:03,334 --> 01:05:08,749
+and then most importantly, the knowledge and tools, and those knowledge and tools belong to you.
+以及最重要的是，知识和工具，而这些知识和工具属于你。
+
+696
+01:05:08,799 --> 01:05:10,710
+That's your expertise.
+这就是你的专业 expertise。
+
+697
+01:05:10,760 --> 01:05:15,824
+And so, all of this is now possible to do and I'll show you more in just a second.
+因此，现在这一切都变得可能了，我马上就会向你们展示更多内容。
+
+698
+01:05:15,874 --> 01:05:19,505
+But before I do that let's talk about physical AI.
+但在那之前，让我们先谈谈物理 AI。
+
+699
+01:05:19,555 --> 01:05:22,742
+That's really the the next wave of AI.
+这才是真正意义上的下一波 AI 浪潮。
+
+700
+01:05:22,792 --> 01:05:30,710
+AI that understands the physical world, can reason about it because the physical world is diverse, it is complicated,
+能理解物理世界的 AI，能够对其推理，因为物理世界是多样且复杂的，
+
+701
+01:05:30,760 --> 01:05:41,110
+it's got extremely long tails and to reason about it and use a appropriate tools to interact with the physical world.
+它具有极其长尾的特性，需要通过适当的工具来推理并与其互动。
+
+702
+01:05:41,160 --> 01:05:43,945
+Whenever people think about physical worlds, they think robotics.
+当人们想到物理世界时，首先想到的往往是机器人。
+
+703
+01:05:43,995 --> 01:05:51,962
+In fact, one of my favorite physical world applications is the radio cell phone cell towers.
+其实，我最喜欢的物理世界应用之一就是无线电基站。
+
+704
+01:05:52,012 --> 01:05:54,390
+And the reason for that is this.
+原因在于此。
+
+705
+01:05:54,440 --> 01:06:03,870
+It uses instead of cameras instead of speakers and microphones, it uses radio waves to sense the world.
+它不使用摄像头，也不使用扬声器和麦克风，而是利用无线电波来感知世界。
+
+706
+01:06:03,920 --> 01:06:11,255
+And to it reasons about it, it processes information, reasons about it and interacts with the world using beam forming.
+它通过波束成形来处理信息、进行推理，并与世界互动。
+
+707
+01:06:11,305 --> 01:06:19,116
+So in fact, this is an application, a technology that is just perfectly suited for AI.
+因此，这实际上是一种与 AI 完全契合的应用技术。
+
+708
+01:06:19,166 --> 01:06:22,910
+AI will revolutionize the way we do telecommunications.
+AI 将彻底改变我们进行电信的方式。
+
+709
+01:06:22,960 --> 01:06:28,980
+It will enhance our spectrum efficiency tremendously, just as we've done so with ray tracing.
+它将极大地提升我们的频谱效率，正如我们之前在光线追踪技术上所做到的那样。
+
+710
+01:06:29,030 --> 01:06:32,182
+All of the graphics that you've seen completely 100% ray traced,
+你所看到的所有画面，都是百分之百的光线追踪效果。
+
+711
+01:06:32,232 --> 01:06:40,114
+the amount of computation we thought necessary in the past and now that we apply AI to is a million to one difference.
+我们过去认为必要的计算量，与现在应用人工智能所需的计算量相比，相差一百万倍。
+
+712
+01:06:40,164 --> 01:06:47,630
+And so we're going to bring to the telecommunications network an enormous step up in spectrum efficiency.
+因此，我们将使电信网络的频谱效率实现巨大提升。
+
+713
+01:06:47,680 --> 01:06:51,670
+But beyond that, we're also going to revolutionize all of these cell towers.
+但除此之外，我们还将彻底改造所有这些信号基站。
+
+714
+01:06:51,720 --> 01:06:55,481
+There's 100,000 sites around the world, around the western world,
+全球各地，尤其是西方世界，有十万多个站点
+
+715
+01:06:55,531 --> 01:07:04,262
+about 100 gigawatts of distributed data centers that will in the future become a distributed AI infrastructure.
+约100吉瓦的分布式数据中心，未来将演变为分布式AI基础设施。
+
+716
+01:07:04,312 --> 01:07:11,068
+We're delighted to partner with many companies here in Europe and just this last week after working on this
+我们很高兴与欧洲众多企业合作，就在上周，我们在此项目上取得了进展
+
+717
+01:07:11,118 --> 01:07:19,670
+for nearly eight years Nvidia made the first commercial phone call on the on the T-Mobile network with Nokia.
+近八年时间里，英伟达与诺基亚合作，在T-Mobile网络上实现了首个商用手机通话。
+
+718
+01:07:19,720 --> 01:07:24,190
+And so now CUDA makes phone calls the traditional way.
+因此现在，CUDA 以传统方式拨打电话。
+
+719
+01:07:24,240 --> 01:07:27,637
+Then once it can do that, then we can layer AI on top of it.
+然后，一旦它能做到这一点，我们就可以在其上叠加人工智能。
+
+720
+01:07:27,687 --> 01:07:29,921
+And so the revolution is going to begin.
+因此，这场革命即将开始。
+
+721
+01:07:29,971 --> 01:07:32,222
+This is really exciting opportunity for us.
+这对我们来说真的是一个令人兴奋的机会。
+
+722
+01:07:32,272 --> 01:07:40,630
+The other physical AI application that I'm super excited about is essentially robotic radiotherapy.
+我非常期待的另一个物理AI应用，基本上是机器人放射治疗。
+
+723
+01:07:40,680 --> 01:07:50,070
+Your two the tumor is changing in shape the physical body is changing while you're in in therapy the robot this radio adaptive
+你的肿瘤形状在变化，身体也在治疗过程中发生变化，机器人放射自适应
+
+724
+01:07:50,120 --> 01:07:56,542
+radiotherapy system has to perceive the changing environment understand where the tumor
+放射治疗系统必须感知不断变化的环境，准确识别肿瘤
+
+725
+01:07:56,592 --> 01:08:02,689
+is segment it just perfectly and direct precisely direct the radiotherapy accordingly.
+的位置，精确分割，并据此精准地实施放射治疗。
+
+726
+01:08:02,739 --> 01:08:09,065
+Essentially robotic that's right.
+本质上就是机器人，没错。
+
+727
+01:08:09,115 --> 01:08:11,590
+Go ahead.
+请继续。
+
+728
+01:08:11,640 --> 01:08:14,750
+This is a form of robotic surgery.
+这是一种机器人手术形式。
+
+729
+01:08:14,800 --> 01:08:20,521
+Now of course the highest volume the most near-term robotics application or physical AI
+当然，目前应用量最高、近期最被广泛认可的机器人或物理AI
+
+730
+01:08:20,571 --> 01:08:25,470
+application that everyone recognized has been something we've been working on for over a decade.
+应用，是我们十多年以来一直在推进的项目。
+
+731
+01:08:25,520 --> 01:08:35,538
+And now we recognize that every single car company will want to make their cars part of the ride hailing fleet.
+现在我们意识到，每一家汽车公司都希望将其汽车纳入网约车车队。
+
+732
+01:08:35,588 --> 01:08:44,289
+Today we have right right hailing and it's part of Uber and here in in Europe we have uh Bolt and we have Grab and Lyft and
+如今我们有网约车服务，比如Uber，而在欧洲我们还有Bolt、Grab和Lyft。
+
+733
+01:08:44,339 --> 01:08:48,990
+so on so forth and all these different ride hailing services in the future
+以此类推，未来会有各种不同的网约车服务
+
+734
+01:08:49,040 --> 01:08:53,866
+there'll be robo-taxis that will be connected to those ride hailing services as well.
+还会有自动驾驶出租车，同样连接到这些网约车服务
+
+735
+01:08:53,916 --> 01:08:56,584
+But it won't be from just one brand.
+但不会仅来自单一品牌
+
+736
+01:08:56,634 --> 01:09:05,070
+And so we recognize that building these systems are incredibly expensive particularly the software that goes on top of it.
+因此我们认识到，构建这些系统成本极其高昂，尤其是其上的软件
+
+737
+01:09:05,120 --> 01:09:15,590
+We decided to create one standard architecture, 14 different cameras, nine radar systems, three lidars,
+我们决定打造一种统一的标准架构，配备14个摄像头、9个雷达系统、3个激光雷达
+
+738
+01:09:15,640 --> 01:09:27,110
+umteen ultrasonics, this cocoon of a shell of sensors powered by dual Nvidia GPU systems for the AV computing system.
+以及无数超声波传感器，形成一个由双英伟达GPU系统驱动的传感器防护罩，用于自动驾驶计算系统
+
+739
+01:09:27,160 --> 01:09:34,110
+We turned this into an industry standard, and now it's being designed into one car fleet after another.
+我们将其转化为行业标准，如今正被陆续应用到一辆又一辆汽车上
+
+740
+01:09:34,160 --> 01:09:40,281
+On top of it, are AV software companies, and we are in in fact one of them as well,
+在其之上，是自动驾驶软件公司，而我们实际上也是其中之一
+
+741
+01:09:40,331 --> 01:09:48,384
+to build an autonomous robotaxi capability, which then is connected into the ride-hailing services.
+用于构建自动驾驶出租车能力，再接入网约车服务
+
+742
+01:09:48,434 --> 01:09:50,330
+This ecosystem is being built out.
+这个生态系统正在逐步建成
+
+743
+01:09:50,380 --> 01:09:54,183
+The world travels about a trillion miles per year around the world.
+全球每年大约行驶一万亿英里
+
+744
+01:09:54,233 --> 01:10:01,904
+Many of those miles in the future, you know, a dollar or two per mile are going to be on mobile taxis.
+未来，其中许多里程，每英里一两美元，将由移动出租车承担
+
+745
+01:10:01,954 --> 01:10:06,968
+So, this is one giant opportunity, but it's incredibly fragmented.
+所以，这是一个巨大的机遇，但目前却极其分散。
+
+746
+01:10:07,018 --> 01:10:12,230
+And so, creating an industry standard, Hyperion, and working with an entire ecosystem,
+因此，建立行业标准 Hyperion，并与整个生态系统合作，
+
+747
+01:10:12,280 --> 01:10:18,590
+we could create essentially a giant virtual fleet that everybody can connect into.
+我们就能打造一个几乎庞大的虚拟车队，让所有人都能接入。
+
+748
+01:10:18,640 --> 01:10:27,266
+Today, I'm super proud to announce that four more brands, four more cars are going to lines are going to come in.
+今天，我非常自豪地宣布，将有四个新品牌、四款新车加入生产线。
+
+749
+01:10:27,316 --> 01:10:30,812
+The VW van, I just can't imagine anything more iconic.
+大众的货车，我简直无法想象还有什么比这更具有标志性。
+
+750
+01:10:30,862 --> 01:10:37,997
+The JLR brand new car, the Volvo fleet, as well as Mercedes next generation,
+JLR 的全新车型、沃尔沃的车队，以及梅赛德斯下一代车型，
+
+751
+01:10:38,047 --> 01:10:48,504
+are going to be also Hyperion compatible and be part of this network, this ride-hailing network robotaxi fleet.
+都将兼容 Hyperion，并成为这一网约车网络和机器人出租车车队的一部分。
+
+752
+01:10:48,554 --> 01:10:53,870
+So, welcome to Hyperion.
+欢迎加入 Hyperion。
+
+753
+01:10:53,920 --> 01:11:03,580
+The next major industry, the next major industry, the next great industry and this one is likely to be extremely large is human robotics.
+下一个重大产业，下一个重大产业，下一个伟大的产业，很可能是人类机器人。
+
+754
+01:11:03,630 --> 01:11:10,790
+There's a reason why robotics is hard to do because all the different work is rather diverse.
+机器人技术之所以难以实现，是因为各种工作内容差异很大。
+
+755
+01:11:10,840 --> 01:11:17,544
+And so building a special configuration for each one of the diverse tasks segments the
+因此，为每一种不同的任务都打造专属配置，导致
+
+756
+01:11:17,594 --> 01:11:24,470
+robotics industry into all of these different configurations which prevents the technology flywheel to happen.
+机器人产业被分割成各种不同的配置，阻碍了技术飞轮效应的形成。
+
+757
+01:11:24,520 --> 01:11:29,316
+The reason why the cell phone has advanced so quickly, the reason why personal computers have advanced so quickly,
+手机之所以能迅速发展，个人电脑之所以能迅速发展，
+
+758
+01:11:29,366 --> 01:11:38,496
+the reason why Nvidia's NVLink 72 has advanced so quickly is because of those standardized configurations allows many customers to use it,
+英伟达 NVLink 72 能迅速发展的原因，正是由于这些标准化配置使得众多客户都能使用它，
+
+759
+01:11:38,546 --> 01:11:47,767
+the volume to therefore be derived, that volume drives the technology flywheel and it gets faster, better, incredibly fast.
+由此产生的规模效应推动了技术飞轮，使其变得越来越快、越来越好、快得惊人。
+
+760
+01:11:47,817 --> 01:11:54,950
+And so we need a robotics uh configuration that is as standard as possible.
+因此我们需要一种尽可能标准化的机器人配置。
+
+761
+01:11:55,000 --> 01:12:02,858
+Now human robotics obviously has the ability it probably isn't perfect for everything, but it's likely to work for many things.
+现在的人形机器人显然具备这种能力，虽然可能并非适用于所有场景，但很可能适用于许多场景。
+
+762
+01:12:02,908 --> 01:12:08,607
+As a result, this is likely going to be the largest volume robotics configuration.
+因此，这很可能是规模最大的机器人配置。
+
+763
+01:12:08,657 --> 01:12:13,323
+Now if we could just create the AI that allows it to learn very quickly,
+如果我们能创造出一种能让它快速学习的 AI，
+
+764
+01:12:13,373 --> 01:12:23,870
+then for small medium businesses who don't have an entire robotics team to teach and program the robot can now show the robot what needs to be done.
+那么对于那些没有完整机器人团队来教学和编程的小型及中型企业来说，现在只需向机器人展示需要完成的任务即可。
+
+765
+01:12:23,920 --> 01:12:30,750
+The robot because it has general capabilities and general intelligence would be able to learn and adapt quickly.
+由于机器人具备通用能力和通用智能，它将能够快速学习和适应。
+
+766
+01:12:30,800 --> 01:12:36,150
+And so this is likely to be the next major platform, technology platform.
+因此，这很可能是下一个重大的技术平台。
+
+767
+01:12:36,200 --> 01:12:40,269
+We're working with so many different companies you will recognize many of them here in Europe.
+我们正与众多不同公司合作，其中许多你都会在欧洲看到。
+
+768
+01:12:40,319 --> 01:12:43,630
+This is your great opportunity.
+这是你们绝佳的机会。
+
+769
+01:12:43,680 --> 01:12:50,465
+No country, no region has dedicated itself to making mechatronics, electronics,
+没有任何国家或地区像德国这样致力于发展机电一体化和电子技术。
+
+770
+01:12:50,515 --> 01:12:56,409
+mechanical systems at the level of precision and craft as the European region.
+欧洲地区在精密程度和工艺水平上的机械系统。
+
+771
+01:12:56,459 --> 01:12:59,938
+So many companies here are incredibly good at manufacturing.
+这里的许多公司都非常擅长制造。
+
+772
+01:12:59,988 --> 01:13:03,023
+This is going to be the next high volume industry,
+这将成为下一个高产量产业，
+
+773
+01:13:03,073 --> 01:13:06,356
+and you could see there's so many companies that are now part of it,
+你还能看到现在有这么多公司都加入了进来，
+
+774
+01:13:06,406 --> 01:13:17,510
+and we're delighted to to be partnered with you.
+我们非常高兴能与您合作。
+
+775
+01:13:17,560 --> 01:13:25,230
+Now, in order to create in order to create a physical AI system, you need three computers.
+现在，要创建一个物理 AI 系统，你需要三台电脑。
+
+776
+01:13:25,280 --> 01:13:31,070
+The first computer is the one we've been talking about and everybody knows quite well, which is training the AI model.
+第一台计算机就是我们一直在讨论的那台，大家非常熟悉，那就是训练AI模型。
+
+777
+01:13:31,120 --> 01:13:36,870
+The second computer is where we have the AI learn how to do its skills.
+第二台计算机是用来让人工智能学习如何掌握技能的。
+
+778
+01:13:36,920 --> 01:13:43,981
+You can't just have the AI program the AI and have the AI come out into the physical world and try to do whatever it wants to do.
+你不能只是让AI去编程AI，然后让AI进入物理世界，随心所欲地做任何事情。
+
+779
+01:13:44,031 --> 01:13:46,990
+You do it inside a digital twin.
+你可以在数字孪生体内部完成。
+
+780
+01:13:47,040 --> 01:13:49,678
+We create a digital twin called Omniverse.
+我们创建了一个名为Omniverse的数字孪生。
+
+781
+01:13:49,728 --> 01:13:52,922
+You've seen us talk about that repeatedly, and in fact,
+你们已经多次看到我们讨论这一点，事实上，
+
+782
+01:13:52,972 --> 01:13:59,148
+just now when when you saw all the CUDA-X libraries, they're all being done inside a digital twin world.
+就在刚才，当你们看到所有CUDA-X库时，它们都是在数字孪生世界中完成的。
+
+783
+01:13:59,198 --> 01:14:01,929
+That digital twin world is called Omniverse.
+这个数字孪生世界被称为Omniverse。
+
+784
+01:14:01,979 --> 01:14:09,200
+Omniverse is a library that's connected into all kinds of platforms and tools, Siemens and Dassault and Cadence and so on and so forth.
+Omniverse是一个连接到各种平台和工具的库，包括西门子、达索、铿腾等。
+
+785
+01:14:09,250 --> 01:14:13,590
+And so you could see these digital twin systems being created.
+于是你们可以看到这些数字孪生系统正在被创建。
+
+786
+01:14:13,640 --> 01:14:15,350
+The second computer.
+第二台计算机。
+
+787
+01:14:15,400 --> 01:14:19,070
+The third computer is the robotics computer.
+第三台计算机是机器人计算机。
+
+788
+01:14:19,120 --> 01:14:25,750
+That computer integrates, in the case of the self-driving car, the robo-taxi, we call it Hyperion.
+在自动驾驶汽车、无人出租车的情况下，这台计算机被称为Hyperion。
+
+789
+01:14:25,800 --> 01:14:31,812
+Hyperion consists of the computer itself, the functional safety system,
+Hyperion包括计算机本身、功能安全系统，
+
+790
+01:14:31,862 --> 01:14:39,230
+the active safety system, a operating an operating system designed for physical AI safety.
+主动安全系统，以及为物理AI安全设计的操作系统。
+
+791
+01:14:39,280 --> 01:14:42,870
+What we need to do exactly the same for robotics systems.
+我们需要对机器人系统做完全相同的事。
+
+792
+01:14:42,920 --> 01:14:48,306
+So that every single time you start to develop research and start to work on your own robotic systems,
+所以每次你们开始开发研究并着手构建自己的机器人系统时，
+
+793
+01:14:48,356 --> 01:14:56,165
+you don't have to start from scratch to cobble up all of the software and computing systems and the sensors and all the mechanical systems,
+你无需从零开始，费力拼凑所有的软件、计算系统、传感器以及所有机械系统，
+
+794
+01:14:56,215 --> 01:14:59,270
+that alone would take several years.
+仅此一项就需要好几年时间。
+
+795
+01:14:59,320 --> 01:15:02,830
+And so we decided to build a reference robot.
+于是我们决定打造一台参考机器人。
+
+796
+01:15:02,880 --> 01:15:07,886
+This is the NVIDIA Agile One in partnership with Agile Robotics.
+这是英伟达与敏捷机器人公司合作推出的 NVIDIA Agile One。
+
+797
+01:15:07,936 --> 01:15:18,354
+This robot is going This reference robot will be available in the
+这个机器人将问世。这款参考机器人将可供使用。
+
+798
+01:15:18,404 --> 01:15:23,128
+first quarter of next year and it will come pre-assembled with computer inside,
+明年第一季度，它将预装内部计算机上市，
+
+799
+01:15:23,178 --> 01:15:29,270
+software integrated, and it should be able to perform quite well right out of the bat.
+软件已集成，开箱即能表现出色。
+
+800
+01:15:29,320 --> 01:15:35,950
+And so this is a great starting point and it will be the flywheel by which we can accelerate development of robotics.
+因此，这是一个极好的起点，它将成为推动机器人研发加速发展的核心动力。
+
+801
+01:15:36,000 --> 01:15:41,430
+Well, let me start Let me end today's speech from where we started.
+那么，让我从我们开始的地方，结束今天的演讲。
+
+802
+01:15:41,480 --> 01:15:43,909
+NVIDIA started in the PC revolution.
+英伟达始于个人电脑革命。
+
+803
+01:15:43,959 --> 01:15:48,819
+It was in 1993 and the PC revolution was just about to start.
+那是在1993年，个人电脑革命即将开始。
+
+804
+01:15:48,869 --> 01:15:52,630
+Remember Windows 95 kicked it into turbo charge.
+记得当年 Windows 95 让它瞬间提速。
+
+805
+01:15:52,680 --> 01:15:58,993
+We came since then, invented the GPU, programmable shading, real-time real-time ray tracing,
+从那时起，我们发明了GPU，可编程着色，实时光线追踪，
+
+806
+01:15:59,043 --> 01:16:05,830
+we added CUDA to the computing model and helped ignite the modern AI revolution.
+我们将CUDA加入计算模型，推动了现代人工智能革命的兴起。
+
+807
+01:16:05,880 --> 01:16:13,834
+And so four four years ago, we started to think, what can we do to reimagine the personal computer for this new era?
+四年前，我们开始思考，如何为这个新时代重新构想个人电脑？
+
+808
+01:16:13,884 --> 01:16:23,546
+Where the personal computer is not just your tool, your personal computer tool, but your personal agent or your personal assistant.
+在这个时代，个人电脑不仅是你的工具，更是你的个人代理或个人助手。
+
+809
+01:16:23,596 --> 01:16:29,990
+And the way you interact with this computer would be essentially a companion.
+你与这台电脑的互动方式，本质上应像一位伙伴。
+
+810
+01:16:30,040 --> 01:16:33,390
+Somebody who helps you do work.
+一个能帮你完成工作的伙伴。
+
+811
+01:16:33,440 --> 01:16:40,310
+And so this computer needs to have exactly the five things that I mentioned today.
+因此，这台电脑必须具备我今天提到的五个要素。
+
+812
+01:16:40,360 --> 01:16:45,190
+It needs to have model, it could be running locally or it could be running in the cloud.
+它需要具备模型，模型可以在本地运行，也可以在云端运行。
+
+813
+01:16:45,240 --> 01:16:46,910
+It needs a harness.
+它需要一个框架。
+
+814
+01:16:46,960 --> 01:16:50,670
+It needs a secure runtime, open shell.
+它需要一个安全的运行时环境，开放的外壳。
+
+815
+01:16:50,720 --> 01:16:57,710
+And it needs access because it's available on your PC, it needs access to knowledge and tools.
+它还需要访问权限，因为它在你的电脑上可用，必须能访问知识和工具。
+
+816
+01:16:57,760 --> 01:17:03,230
+And the good news is because NVIDIA has been accelerating tools for so long,
+好消息是，由于英伟达长期致力于加速工具的发展，
+
+817
+01:17:03,280 --> 01:17:10,030
+if we could just create a computer that can accelerate OpenGL and DirectX and everything CUDA,
+如果我们能制造出一台能加速 OpenGL、DirectX 和所有 CUDA 的计算机，
+
+818
+01:17:10,080 --> 01:17:14,070
+everything NVIDIA has ever worked on would run on this computer.
+那么英伟达过去所开发的一切都能在这台计算机上运行。
+
+819
+01:17:14,120 --> 01:17:15,062
+And so this is it.
+所以这就是它。
+
+820
+01:17:15,112 --> 01:17:19,801
+After 4 years of partnership with Microsoft, we have created the RTX Spark.
+经过与微软四年合作，我们打造了 RTX Spark。
+
+821
+01:17:19,851 --> 01:17:27,430
+And this is a brand new line of computers this every literally thousands of years thousands of engineering years went into this.
+这是一条全新的计算机产品线，每台设备都凝聚了数以千计的工程年投入。
+
+822
+01:17:27,480 --> 01:17:32,790
+We've been secretly working on it for 4 years, created a chip called the N1X,
+我们秘密研发了四年，打造了一款名为 N1X 的芯片，
+
+823
+01:17:32,840 --> 01:17:38,270
+and then we just recently announced it with the entire PC industry joining forces.
+然后我们最近与整个 PC 行业携手，正式发布了它。
+
+824
+01:17:38,320 --> 01:17:42,718
+We created desktops, laptops, and workstations.
+我们推出了台式机、笔记本和工作站。
+
+825
+01:17:42,768 --> 01:17:45,030
+This is one petaflops.
+这就是一拍字节浮点运算能力。
+
+826
+01:17:45,080 --> 01:17:54,858
+One petaflops, just to put that in perspective, in the year 2016, I delivered one petaflops and 128 GB of memory.
+为了让大家有个直观感受，在 2016 年，我交付了一拍字节浮点运算能力以及 128 GB 内存。
+
+827
+01:17:54,908 --> 01:18:00,990
+One petaflops and 128 GB to a small company called OpenAI.
+那时，我将一拍字节浮点运算能力与 128 GB 内存交付给了一个名为 OpenAI 的小型公司。
+
+828
+01:18:01,040 --> 01:18:05,719
+This is one
+这就是一
+
+829
+01:18:05,769 --> 01:18:14,390
+petaflops and 128 GB.
+每秒千万亿次浮点运算和128GB内存。
+
+830
+01:18:14,440 --> 01:18:21,808
+The The only difference, of course, is that I can hold this like this and DGX-1 took two people to carry upstairs.
+当然，唯一的区别是，我可以这样拿着它，而DGX-1需要两个人才能搬上楼。
+
+831
+01:18:21,858 --> 01:18:25,470
+And so this is the brand new RTX Spark PC.
+这是全新的RTX Spark台式机。
+
+832
+01:18:25,520 --> 01:18:33,843
+And if you would like to have a companion workstation that runs CATIA and everything the cell and everything Autodesk and auto you know,
+如果你想拥有一台能运行CATIA、所有细胞相关软件以及所有Autodesk和Auto软件的配套工作站，
+
+833
+01:18:33,893 --> 01:18:41,950
+Adobe and Cadence and Synopsys, you can always get yourself a DGX Station that runs Windows.
+你可以随时选择一台运行Windows的DGX Station。
+
+834
+01:18:42,000 --> 01:18:48,916
+And this is 20 petaflops and 754 gigabytes of memory.
+这是20千万亿次浮点运算和754GB内存。
+
+835
+01:18:48,966 --> 01:18:50,750
+And so, incredible.
+真是令人难以置信。
+
+836
+01:18:50,800 --> 01:18:53,194
+And of course, there's also the desktop version.
+当然，还有桌面版本。
+
+837
+01:18:53,244 --> 01:18:59,388
+All of these are now these are now available and I think the DGX Station with RTX
+所有这些现在都已上市，我认为搭载RTX Spark的DGX Station，
+
+838
+01:18:59,438 --> 01:19:04,970
+Spark with a DGX Spark DGX Station with Windows will be available at the end of this year.
+搭载Windows的DGX Spark DGX Station将在今年年底上市。
+
+839
+01:19:05,020 --> 01:19:11,390
+Now, the question is so far I just talked about the five components of an agent.
+现在的问题是，到目前为止，我只谈到了智能体的五个组成部分。
+
+840
+01:19:11,440 --> 01:19:14,670
+And now the question is how do you build it?
+现在的问题是，你该如何构建它？
+
+841
+01:19:14,720 --> 01:19:21,670
+How do you build an agent that runs, let's say, on one of those computers or runs in the cloud or runs on prem somewhere?
+你该如何构建一个能在其中一台计算机上运行、或在云端运行、或在本地服务器上运行的智能体？
+
+842
+01:19:21,720 --> 01:19:25,190
+Well, the answer is it's really easy and you do it this way.
+好，答案是这其实非常简单，你可以这样操作。
+
+843
+01:19:25,240 --> 01:19:27,578
+The way you build an agent is you
+构建智能体的方法是
+
+844
+01:19:27,628 --> 01:19:37,830
+ask an agent to build it for you.
+让一个智能体为你来构建它。
+
+845
+01:19:37,880 --> 01:19:46,379
+So, this this is the prompt that is going to run the next application.
+这就是将运行下一个应用的提示。
+
+846
+01:19:46,429 --> 01:19:48,346
+And what's what you're about to see is this.
+你即将看到的正是这个。
+
+847
+01:19:48,396 --> 01:19:51,190
+You're about to see a robotics application.
+你即将看到的是一款机器人应用。
+
+848
+01:19:51,240 --> 01:19:58,590
+And while you're watching this demo, just remember there's an agent running on this personal computer.
+在观看这个演示时，请记住，有一个智能体正在这台个人电脑上运行。
+
+849
+01:19:58,640 --> 01:20:02,190
+This demo runs across three computers.
+这个演示跨越了三台计算机。
+
+850
+01:20:02,240 --> 01:20:04,110
+The first computer is to train.
+第一台计算机用于训练。
+
+851
+01:20:04,160 --> 01:20:07,030
+The second is a digital twin.
+第二台是数字孪生。
+
+852
+01:20:07,080 --> 01:20:13,350
+And the third is to put that AI into the computer itself.
+第三台则是将AI部署到计算机本身。
+
+853
+01:20:13,400 --> 01:20:13,806
+Okay?
+好的吗？
+
+854
+01:20:13,856 --> 01:20:15,630
+So, two very two ideas.
+所以，有两个非常重要的想法。
+
+855
+01:20:15,680 --> 01:20:18,230
+The first idea is agents.
+第一个想法是智能体。
+
+856
+01:20:18,280 --> 01:20:19,830
+How do you build it and run it?
+你如何构建并运行它？
+
+857
+01:20:19,880 --> 01:20:22,630
+And what you can use it to do.
+以及你可以用它来做什么。
+
+858
+01:20:22,680 --> 01:20:28,430
+And the second is physical AI computing model which consists of three computers.
+第二个是物理AI计算模型，由三台计算机组成。
+
+859
+01:20:28,480 --> 01:20:40,150
+Let's take a look.
+我们来看一下。
+
+860
+01:20:40,200 --> 01:20:43,590
+Meet Micro Duck, Hugging Face's robot.
+认识一下 Micro Duck，这是 Hugging Face 的机器人。
+
+861
+01:20:43,640 --> 01:20:49,910
+Let's teach it to see and walk with NVIDIA RTX Spark.
+让我们用英伟达 RTX Spark 教它看和走路。
+
+862
+01:20:49,960 --> 01:20:56,270
+I use Hermes as my agent harness, Nemotron and Open AI's GPT-6 Astra as my models,
+我使用 Hermes 作为我的智能体框架，Nemotron 和 Open AI 的 GPT-6 Astra 作为我的模型，
+
+863
+01:20:56,320 --> 01:21:02,936
+and CUDA-X accelerated tools FreeCAD, Blender, and Isaac Sim, Newton physics engine, and Isaac Lab.
+以及 CUDA-X 加速工具 FreeCAD、Blender、Isaac Sim、Newton 物理引擎和 Isaac Lab。
+
+864
+01:21:02,986 --> 01:21:09,150
+I'll run everything on my RTX Spark, except when I need to burst larger workloads to cloud.
+我将在我的 RTX Spark 上运行所有内容，除非需要将更大的工作负载突发到云端。
+
+865
+01:21:09,200 --> 01:21:13,950
+First, I describe the course and what my Micro Duck needs to learn.
+首先，我介绍一下课程内容，以及我的微型鸭子需要学习什么。
+
+866
+01:21:14,000 --> 01:21:23,670
+On RTX Spark, Hermes and Nemotron plan the course, listing every object required.
+在 RTX Spark 上，赫尔墨斯和尼莫特伦规划课程，列出所需的所有物体。
+
+867
+01:21:23,720 --> 01:21:29,310
+Astra takes it from there, using FreeCAD to model 3D objects,
+接下来由阿斯特拉接手，使用 FreeCAD 建立 3D 物体模型，
+
+868
+01:21:29,360 --> 01:21:37,950
+Blender to apply materials, and Omniverse SimReady libraries to add physical properties.
+使用 Blender 添加材质，并利用 Omniverse SimReady 库添加物理属性。
+
+869
+01:21:38,000 --> 01:21:45,030
+In Isaac Sim, Astra composes the scene.
+在 Isaac Sim 中，阿斯特拉构建场景。
+
+870
+01:21:45,080 --> 01:21:51,630
+Astra rigs Micro Duck's joints, actuators, and links,
+阿斯特拉为微型鸭子的关节、执行器和连接件进行装配，
+
+871
+01:21:51,680 --> 01:21:57,790
+and simulates how Micro Duck moves with Newton physics engine.
+并使用牛顿物理引擎模拟微型鸭子的运动方式。
+
+872
+01:21:57,840 --> 01:22:00,870
+Now, training begins.
+现在，训练开始。
+
+873
+01:22:00,920 --> 01:22:10,710
+In the cloud, thousands of Micro Ducks train in parallel in Isaac Lab.
+在云端，数千只微型鸭子在 Isaac Lab 中并行训练。
+
+874
+01:22:10,760 --> 01:22:19,590
+Every fall, a lesson, improving the policy every time.
+每次跌倒都是一堂课，策略随之不断优化。
+
+875
+01:22:19,640 --> 01:22:25,270
+Omniverse libraries simulate Micro Duck's cameras, teaching it to see.
+Omniverse 库模拟微型鸭子的摄像头，教会它如何“看”。
+
+876
+01:22:25,320 --> 01:22:29,908
+With perception and physics working together, my Micro Duck can avoid obstacles,
+当感知与物理协同工作时，我的微型鸭子就能避开障碍物，
+
+877
+01:22:29,958 --> 01:22:31,409
+navigate tight spaces,
+穿越狭窄空间，
+
+878
+01:22:31,459 --> 01:22:42,310
+and adapt to its surroundings.
+并适应周围环境。
+
+879
+01:22:42,360 --> 01:22:52,112
+I download the policy to RTX Spark and use NeMo and Triton and Isaac Sim to evaluate my Micro Duck with multi-robot orchestration.
+我将策略下载到RTX Spark，使用NeMo、Triton和Isaac Sim，通过多机器人协同来评估我的微型鸭子。
+
+880
+01:22:52,162 --> 01:23:01,855
+[crying and laughter] I deploy the validated policy to the real duck and he's on his way.
+[哭笑] 我将验证后的策略部署到真实的鸭子上，它出发了。
+
+881
+01:23:01,905 --> 01:23:03,350
+Nvidia RTX Spark,
+英伟达RTX Spark，
+
+882
+01:23:03,400 --> 01:23:05,030
+build and run AI agents and
+在你的笔记本电脑上构建并运行AI智能体，
+
+883
+01:23:05,080 --> 01:23:11,510
+their accelerated tools
+以及它们的加速工具，
+
+884
+01:23:11,560 --> 01:23:18,990
+right on your laptop.
+无需任何额外设备。
+
+885
+01:23:19,040 --> 01:23:22,590
+Hey, guys.
+嘿，各位。
+
+886
+01:23:22,640 --> 01:23:24,150
+Oh, yeah?
+哦，真的吗？
+
+887
+01:23:24,200 --> 01:23:25,642
+Okay, come on.
+好吧，来吧。
+
+888
+01:23:25,692 --> 01:23:27,830
+Here, come over here.
+来，到这边来。
+
+889
+01:23:27,880 --> 01:23:31,590
+Show people you can walk.
+让人们看到你能走。
+
+890
+01:23:31,640 --> 01:23:34,990
+And you have a camera?
+你有摄像头吗？
+
+891
+01:23:35,040 --> 01:23:39,310
+Oh, yeah?
+哦，真的吗？
+
+892
+01:23:39,360 --> 01:23:42,150
+Don't trip.
+别摔倒了。
+
+893
+01:23:42,200 --> 01:23:52,310
+Can you guys sit down?
+你们能坐下吗？
+
+894
+01:23:52,360 --> 01:23:54,110
+Okay, stand up.
+好，站起来。
+
+895
+01:23:54,160 --> 01:23:56,150
+Take a nap.
+小睡一会儿。
+
+896
+01:23:56,200 --> 01:23:59,470
+Take a nap.
+小睡一会儿。
+
+897
+01:23:59,520 --> 01:24:02,950
+You need to take a nap.
+你需要小睡一会儿。
+
+898
+01:24:03,000 --> 01:24:05,510
+Okay, stand up.
+好，站起来。
+
+899
+01:24:05,560 --> 01:24:08,670
+Did you know that you were you were created in here?
+你知道你是在这里被创造出来的吗？
+
+900
+01:24:08,720 --> 01:24:11,470
+You were created on RTX Spark.
+你是在 RTX Spark 上被创造出来的。
+
+901
+01:24:11,520 --> 01:24:12,910
+I know.
+我知道。
+
+902
+01:24:12,960 --> 01:24:18,230
+And trained you in the cloud on a whole bunch of Nvidia supercomputers?
+并且在英伟达的超级计算机上，通过云端训练了你？
+
+903
+01:24:18,280 --> 01:24:23,424
+And you learned your skills right here on RTX Spark in a digital twin, the Omniverse digital twin.
+你正是在这里的RTX Spark上，通过Omniverse数字孪生模型，学会了这些技能。
+
+904
+01:24:23,474 --> 01:24:26,190
+Isn't that incredible?
+难道不令人惊叹吗？
+
+905
+01:24:26,240 --> 01:24:27,950
+I know.
+我知道。
+
+906
+01:24:28,000 --> 01:24:29,630
+I know.
+我知道。
+
+907
+01:24:29,680 --> 01:24:31,430
+You guys are so cute.
+你们真是太可爱了。
+
+908
+01:24:31,480 --> 01:24:40,676
+And and uh your your uh your parents are called Pollen, p o l l e n, is that right?
+而且……你们的父母叫Pollen，p-o-l-l-e-n，是这样吗？
+
+909
+01:24:40,726 --> 01:24:41,430
+Uh-huh.
+嗯。
+
+910
+01:24:41,480 --> 01:24:43,390
+Pollen Robotics.
+Pollen Robotics。
+
+911
+01:24:43,440 --> 01:24:50,030
+And apparently everybody loves you guys so much, you're sold out.
+据说大家都特别喜欢你们，产品已经售罄了。
+
+912
+01:24:50,080 --> 01:24:50,380
+I know.
+我知道。
+
+913
+01:24:50,400 --> 01:24:53,750
+So, have you gone to the Pollen website, everybody?
+那么，大家有去 P ollen 官网看过吗？
+
+914
+01:24:53,800 --> 01:24:57,062
+Everybody watching this, you know, there's going to be like 20 million viewers.
+所有正在观看这段视频的人，你们知道的，观众人数可能达到两千多万。
+
+915
+01:24:57,112 --> 01:25:02,510
+Everybody watching this, go to the Pollen website and place an order.
+所有正在观看这段视频的人，请去 P ollen 官网下单购买。
+
+916
+01:25:02,560 --> 01:25:05,573
+The I think this startup company is like 10 people.
+我觉得这个初创公司大概只有十个人。
+
+917
+01:25:05,623 --> 01:25:07,432
+They might blow up.
+他们可能会一飞冲天。
+
+918
+01:25:07,482 --> 01:25:07,990
+Poof.
+噗的一下。
+
+919
+01:25:08,040 --> 01:25:09,870
+It's going to be so exciting.
+这会非常令人兴奋。
+
+920
+01:25:09,920 --> 01:25:11,004
+Everybody should have one.
+每个人都应该拥有一台。
+
+921
+01:25:11,054 --> 01:25:12,063
+You guys are so cute.
+你们真是太可爱了。
+
+922
+01:25:12,113 --> 01:25:15,430
+And so, we'll just have an RTX Park and we'll teach you new skills.
+那么，我们就建一个 RTX 公园，教你们新技能。
+
+923
+01:25:15,480 --> 01:25:17,763
+Isn't that right?
+没错吧？
+
+924
+01:25:17,813 --> 01:25:18,670
+Oi oi.
+哟哟。
+
+925
+01:25:18,720 --> 01:25:19,084
+Oi oi.
+哦哦。
+
+926
+01:25:19,114 --> 01:25:20,076
+Oh, look at that.
+哦，看那个。
+
+927
+01:25:20,126 --> 01:25:21,870
+That's incredible.
+太不可思议了。
+
+928
+01:25:21,920 --> 01:25:33,870
+Can you do a somersault?
+你能翻个跟头吗？
+
+929
+01:25:33,920 --> 01:25:35,910
+That's so good.
+太棒了。
+
+930
+01:25:35,960 --> 01:25:38,590
+That's so good.
+太棒了。
+
+931
+01:25:38,640 --> 01:25:40,110
+Wow.
+哇。
+
+932
+01:25:40,160 --> 01:25:40,686
+Okay.
+好的。
+
+933
+01:25:40,736 --> 01:25:42,414
+Well, guess what?
+好了，猜猜看？
+
+934
+01:25:42,464 --> 01:25:45,750
+Okay, so today, what did we talk about?
+好吧，那么今天，我们聊了什么？
+
+935
+01:25:45,800 --> 01:25:49,814
+We talked about Europe building its AI economy.
+我们聊了欧洲建设自己的AI经济。
+
+936
+01:25:49,864 --> 01:25:51,798
+And it starts with infrastructure.
+而这一切始于基础设施。
+
+937
+01:25:51,848 --> 01:25:56,797
+And we announced a brand new brand new system called DGX Pod.
+我们宣布推出一款全新的系统，名为 DGX Pod。
+
+938
+01:25:56,847 --> 01:25:59,794
+It makes it easy for you to build AI factories.
+它让构建 AI 工厂变得轻而易举。
+
+939
+01:25:59,844 --> 01:26:04,550
+And these AI factories don't just run models anymore.
+这些 AI 工厂不再仅仅运行模型。
+
+940
+01:26:04,600 --> 01:26:06,550
+Pay attention.
+注意听。
+
+941
+01:26:06,600 --> 01:26:07,437
+Stay focused.
+集中注意力。
+
+942
+01:26:07,487 --> 01:26:08,133
+Come here.
+到这边来。
+
+943
+01:26:08,183 --> 01:26:08,830
+Come here.
+到这边来。
+
+944
+01:26:08,880 --> 01:26:09,742
+Come over here.
+到这边来。
+
+945
+01:26:09,792 --> 01:26:10,540
+Stay focused.
+集中注意力。
+
+946
+01:26:10,590 --> 01:26:13,766
+And these AI factories don't just run There you go.
+这些 AI 工厂不再仅仅运行模型。就是这样。
+
+947
+01:26:13,816 --> 01:26:14,606
+Sit down.
+坐下。
+
+948
+01:26:14,656 --> 01:26:15,110
+Yeah.
+对。
+
+949
+01:26:15,160 --> 01:26:18,510
+They they don't just run AI models anymore.
+他们现在不再只是运行AI模型了。
+
+950
+01:26:18,560 --> 01:26:20,670
+They run entire agents.
+他们运行的是完整的智能体。
+
+951
+01:26:20,720 --> 01:26:23,366
+And these agents are consistent of five things.
+这些智能体由五部分组成。
+
+952
+01:26:23,416 --> 01:26:28,190
+There's the large language model that does the perception, reasoning, planning, and acting.
+其中包括一个大型语言模型，负责感知、推理、规划和行动。
+
+953
+01:26:28,240 --> 01:26:34,910
+And it runs in conjunction with a harness that turns it essentially exoskeleton.
+它与一个框架协同运行，这个框架本质上就像一个外骨骼。
+
+954
+01:26:34,960 --> 01:26:44,841
+And it runs that harness that's inside, runs inside a secure runtime we call Open Shell, which has just so many people that have supported it.
+这个框架运行在我们称之为Open Shell的安全运行时环境中，背后有众多支持者。
+
+955
+01:26:44,891 --> 01:26:48,670
+And you give it access to knowledge and tools.
+你为它提供知识和工具访问权限。
+
+956
+01:26:48,720 --> 01:26:59,230
+And this agent runs on top of these computers, but we're also extending into the next generation, which is where you guys come in, physical AI.
+这个智能体运行在这些计算机之上，但我们也在向下一代延伸，也就是你们将要参与的物理AI。
+
+957
+01:26:59,280 --> 01:26:59,862
+So, that's it.
+就是这样。
+
+958
+01:26:59,912 --> 01:27:01,382
+That's what we talked about.
+这就是我们刚才讨论的内容。
+
+959
+01:27:01,432 --> 01:27:03,750
+Everybody can build agents.
+每个人都可以构建智能体。
+
+960
+01:27:03,800 --> 01:27:08,470
+Every company in Europe will come will become an AI company.
+欧洲的每一家公司都将变成AI公司。
+
+961
+01:27:08,520 --> 01:27:11,590
+There's no question everybody will become an AI company.
+毫无疑问，每个人都会成为一家AI公司。
+
+962
+01:27:11,640 --> 01:27:15,964
+And we're going to have a thriving AI economy here in Europe.
+我们将在欧洲迎来一个繁荣的AI经济。
+
+963
+01:27:16,014 --> 01:27:19,395
+So, after 33 years, what an incredible journey.
+所以，经过33年，这是一段令人难以置信的旅程。
+
+964
+01:27:19,445 --> 01:27:22,412
+And we made a really cool video.
+我们制作了一段非常酷的视频。
+
+965
+01:27:22,462 --> 01:27:24,390
+You guys want to watch it together?
+大家想一起看吗？
+
+966
+01:27:24,440 --> 01:27:24,740
+Okay.
+好的。
+
+967
+01:27:24,739 --> 01:27:25,139
+Come on.
+来吧。
+
+968
+01:27:25,186 --> 01:27:25,932
+Come over here.
+到这边来。
+
+969
+01:27:25,982 --> 01:27:27,090
+Just come over here.
+就到这边来。
+
+970
+01:27:27,140 --> 01:27:28,230
+Just a little bit.
+就一点点。
+
+971
+01:27:28,280 --> 01:27:30,816
+We'll get out of the way.
+我们会躲开的。
+
+972
+01:27:30,866 --> 01:27:31,910
+Come here.
+到这边来。
+
+973
+01:27:31,960 --> 01:27:34,770
+Top speed.
+极速体验。
+
+974
+01:27:34,820 --> 01:27:37,630
+Top speed.
+极速体验。
+
+975
+01:27:37,680 --> 01:27:40,710
+How the heck are we supposed to follow that?
+我们怎么可能跟得上这种节奏？
+
+976
+01:27:40,760 --> 01:27:46,270
+Well, there is one thing that can make this crowd go even crazier.
+其实还有一件事能让现场气氛更疯狂。
+
+977
+01:27:46,320 --> 01:27:52,150
+What is it?
+是什么？
+
+978
+01:27:52,200 --> 01:27:54,190
+You won't believe this.
+你绝对想不到。
+
+979
+01:27:54,240 --> 01:28:00,150
+GTC has just gone full Eurovision!
+GTC 现在简直像欧洲歌唱大赛！
+
+980
+01:28:00,200 --> 01:28:05,324
+The keynote starting in Berlin, AI'S NEXT CHAPTER BEGINS.
+柏林开幕，AI 的下一章正式开启。
+
+981
+01:28:05,374 --> 01:28:08,103
+Agents working by your side.
+代理助手在你身边协同工作。
+
+982
+01:28:08,153 --> 01:28:10,589
+Europe's moment has arrived.
+欧洲的时刻终于到来。
+
+983
+01:28:10,639 --> 01:28:16,230
+But if you missed what we said, a GTC will break it down for you.
+如果你错过了我们刚才说的内容，GTC 会为你详细解析。
+
+984
+01:28:16,280 --> 01:28:24,878
+Germany Oh, this is the story all about how the world building new infinal.
+德国，这正是关于全世界正在构建全新基础设施的故事。
+
+985
+01:28:24,928 --> 01:28:29,306
+First power plants let energy scale, then came data center.
+首先，发电厂让能源得以规模化，随后出现了数据中心。
+
+986
+01:28:29,356 --> 01:28:30,670
+Now, we've got mail.
+现在，我们迎来了邮件时代。
+
+987
+01:28:30,720 --> 01:28:33,618
+Now, we're way past turning coal into watts.
+如今，我们早已超越了将煤炭转化为电能的阶段。
+
+988
+01:28:33,668 --> 01:28:36,915
+AI factories turn sand into thoughts.
+AI 工厂将沙子转化为思想。
+
+989
+01:28:36,965 --> 01:28:40,910
+Move over oil, the S&P 2 does something more investable.
+退下吧，石油，标普 2 指数正在做更值得投资的事。
+
+990
+01:28:40,960 --> 01:28:47,648
+Our GPU works like an asset, producing green, looks like a chip, acts like a cash machine.
+我们的 GPU 作用如同资产，持续产出绿色能源，外观像芯片，运行起来却像现金机。
+
+991
+01:28:47,698 --> 01:28:48,830
+They make revenue
+它们创造收入
+
+992
+01:28:48,880 --> 01:28:55,479
+while
+同时
+
+993
+01:28:55,529 --> 01:28:59,912
+you
+你
+
+994
+01:28:59,962 --> 01:29:07,670
+relax.
+可以放松。
+
+995
+01:29:07,720 --> 01:29:10,230
+Agents code and make decisions.
+代理程序自行编写代码并做出决策。
+
+996
+01:29:10,280 --> 01:29:13,041
+Give them freedom, but control their missions.
+给予它们自由，但要控制它们的任务。
+
+997
+01:29:13,091 --> 01:29:16,085
+Open shell on various, checking the list.
+打开多个外壳，检查列表。
+
+998
+01:29:16,135 --> 01:29:18,630
+No credentials, access dismissed.
+无凭证，访问被拒绝。
+
+999
+01:29:18,680 --> 01:29:23,870
+Sentry on Bluefield never clocks off, protecting the sandbox like Hasselhoff.
+Bluefield上的哨兵永不离岗，像哈塞尔霍夫一样守护着沙盒。
+
+1000
+01:29:23,920 --> 01:29:26,902
+We advance AI, but limit risks.
+我们推进AI，同时控制风险。
+
+1001
+01:29:26,952 --> 01:29:29,630
+We're responsibly optimistic.
+我们保持负责任的乐观。
+
+1002
+01:29:29,680 --> 01:29:32,347
+Our TX Spark keeps agents safe and bright.
+我们的TX Spark让代理保持安全且高效。
+
+1003
+01:29:32,397 --> 01:29:35,037
+Our spot rates keep the price just right.
+我们的现货价格保持合理。
+
+1004
+01:29:35,087 --> 01:29:44,889
+We do quantum wrecks as gaming all-in-one, cuz you can't spell fungible AI has got a body,
+我们实现量子崩溃式游戏一体化，因为“可互换的AI”不可能有实体。
+
+1005
+01:29:44,939 --> 01:29:49,074
+now it's learning the rules of gravity, friction, and using real tools.
+现在它正在学习重力、摩擦力的规则，并使用真实工具。
+
+1006
+01:29:49,124 --> 01:29:51,732
+With Isaac Lab and Cosmos, they train on their own.
+通过Isaac Lab和Cosmos，它们可以自主训练。
+
+1007
+01:29:51,782 --> 01:29:54,934
+It's like college for robots without student loans.
+这就像机器人上大学，却不用承担学生贷款。
+
+1008
+01:29:54,984 --> 01:29:57,550
+DSX pods keep AI in sync.
+DSX机柜让AI保持同步。
+
+1009
+01:29:57,600 --> 01:30:00,518
+Less power, more brains, like Legos that think.
+更少的功耗，更多的智能，就像会思考的乐高积木。
+
+1010
+01:30:00,568 --> 01:30:03,110
+QVS name, Aetron, and Comma are here.
+QVS、Aetron 和 Comma 都在这里。
+
+1011
+01:30:03,160 --> 01:30:06,332
+Throwing knowledge faster than a burning cashier.
+传递知识的速度，快过燃烧的收银员。
+
+1012
+01:30:06,382 --> 01:30:09,057
+Your full stack, it's all on its checklist.
+你的完整技术栈，全都在清单上。
+
+1013
+01:30:09,107 --> 01:30:09,407
+AI's
+人工智能
+
+1014
+01:30:09,394 --> 01:30:09,694
+five
+五
+
+1015
+01:30:09,680 --> 01:31:16,030
+layers
+层
+
+1016
+01:31:16,080 --> 01:31:19,350
+Welcome to GTC.
+欢迎参加 GTC。
+
+1017
+01:31:19,400 --> 01:31:20,647
+I want to thank all of you.
+我想感谢在座的每一位。
+
+1018
+01:31:20,697 --> 01:31:23,018
+I want to thank all of you, all the sponsors.
+我想感谢在座的每一位，感谢所有赞助商。
+
+1019
+01:31:23,068 --> 01:31:30,012
+You can see all the names of companies that are here, all the partners we've been working with for 33 years.
+你们可以看到所有到场公司的名字，以及我们过去33年合作的伙伴。
+
+1020
+01:31:30,062 --> 01:31:40,869
+Micro Duck, my new friends, um let's work together to build Europe's AI economy and put AI to work.
+Micro Duck，我的新朋友们，让我们携手共建欧洲的 AI 经济，让 AI 真正发挥作用。
+
+1021
+01:31:40,919 --> 01:31:42,089
+All right, give it away.
+好吧，送出去吧。
+
+1022
+01:31:42,139 --> 01:31:46,703
+Have a great GTC.
+祝你 GTC 顺利。

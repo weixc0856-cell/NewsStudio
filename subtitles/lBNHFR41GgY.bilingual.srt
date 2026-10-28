@@ -1,0 +1,935 @@
+1
+00:00:10,560 --> 00:00:11,310
+Hi everyone.
+
+2
+00:00:11,360 --> 00:00:13,316
+Welcome to the NVIDIA GTC studio.
+
+3
+00:00:13,366 --> 00:00:21,262
+My name's Tiffany Jansen and today I'm joined with Pankaj Sharma who's the executive VP of software and services at Schneider Electric.
+
+4
+00:00:21,312 --> 00:00:22,317
+Pankaj, welcome.
+
+5
+00:00:22,367 --> 00:00:23,577
+Thank you, Tiffany.
+
+6
+00:00:23,627 --> 00:00:25,936
+How's your your GTC been going so far?
+
+7
+00:00:25,986 --> 00:00:26,590
+Excellent.
+
+8
+00:00:26,640 --> 00:00:29,110
+It's been the last two days super busy.
+
+9
+00:00:29,160 --> 00:00:30,990
+A lot of information, but that's really good.
+
+10
+00:00:31,040 --> 00:00:32,110
+That's really good to hear.
+
+11
+00:00:32,160 --> 00:00:34,902
+You know, when I saw that we'd be having a conversation today,
+
+12
+00:00:34,952 --> 00:00:40,670
+I was really looking forward to it because I think what Schneider Electric is working on and some of the challenges that
+
+13
+00:00:40,720 --> 00:00:48,804
+you are solving are some of the biggest challenges we are frankly facing right now when it comes to AI infrastructure and scaling.
+
+14
+00:00:48,854 --> 00:00:52,430
+And on that note, we are seeing incredible momentum around AI factories.
+
+15
+00:00:52,480 --> 00:00:59,468
+We're seeing a ton of them starting to pop up, but in order for them to be successful, they need a ton of power.
+
+16
+00:00:59,518 --> 00:01:04,829
+Can you share with me a little bit about some of the challenges and also opportunities that brings?
+
+17
+00:01:04,879 --> 00:01:09,268
+It it brings first of all a lot of challenges uh and opportunities.
+
+18
+00:01:09,318 --> 00:01:14,390
+So, maybe just take a step back if you heard the keynote when Jensen was sharing the the five-layered cake.
+
+19
+00:01:14,440 --> 00:01:14,792
+Yes.
+
+20
+00:01:14,822 --> 00:01:23,590
+Uh and we we we play at many layers, obviously, but the primary role we play is at the bottom uh where the energy infrastructure has to come in.
+
+21
+00:01:23,640 --> 00:01:30,432
+Now, the challenge at hand is that the utilization and applications of AI are starting to increase dramatically.
+
+22
+00:01:30,482 --> 00:01:32,070
+I mean, we see it in our own lives, right?
+
+23
+00:01:32,120 --> 00:01:38,270
+As consumers or in businesses and and how it is making everything more efficient and so on.
+
+24
+00:01:38,320 --> 00:01:46,126
+But to build all of that, you need the AI factories for which, of course, you need physical infrastructure and also you need available energy.
+
+25
+00:01:46,176 --> 00:01:46,476
+Now,
+
+26
+00:01:46,414 --> 00:01:49,750
+when we think about the overall planet and the amount of energy available and we have
+
+27
+00:01:49,800 --> 00:01:52,582
+to keep in mind that at the end of the day it has to be sustainable,
+
+28
+00:01:52,632 --> 00:01:53,308
+too, right?
+
+29
+00:01:53,358 --> 00:01:57,801
+So, available energy and green energy availability is overall a challenge.
+
+30
+00:01:57,851 --> 00:01:59,937
+And that's why the big push right now.
+
+31
+00:01:59,987 --> 00:02:04,784
+And when Jensen also shares the bottom layer, it's so important for us to be able to solve for that.
+
+32
+00:02:04,834 --> 00:02:07,052
+So, yeah, that's a huge issue at hand.
+
+33
+00:02:07,102 --> 00:02:11,249
+So, it's related to grid infrastructures, it's related to clean generation of energy,
+
+34
+00:02:11,299 --> 00:02:17,298
+it's related to availability of physical infrastructure which is efficient, which is where companies like us come in.
+
+35
+00:02:17,348 --> 00:02:19,262
+So, so that's the overall challenge.
+
+36
+00:02:19,312 --> 00:02:21,573
+But like you said, it's also a huge opportunity.
+
+37
+00:02:21,623 --> 00:02:27,470
+It's a huge opportunity because while you think about availability of energy,
+
+38
+00:02:27,520 --> 00:02:34,150
+you also have to think about how utilizing AI you can make the availability of energy better.
+
+39
+00:02:34,200 --> 00:02:39,206
+So, at Schneider, for example, what we talk about is AI for energy and energy for AI, right?
+
+40
+00:02:39,256 --> 00:02:42,807
+Everybody talks about energy for AI or energy so much of energy needed.
+
+41
+00:02:42,857 --> 00:02:48,150
+But AI can actually enable by simplifying through digital and so on.
+
+42
+00:02:48,200 --> 00:02:50,568
+Isn't that so funny how it works where it's, you know,
+
+43
+00:02:50,618 --> 00:02:57,990
+we need so much energy for AI and AI is going to be the enabler to solve that that challenge at the end of the day.
+
+44
+00:02:58,040 --> 00:03:04,223
+What are some examples of of AI being able to do that that you have seen being able to solve some
+
+45
+00:03:04,273 --> 00:03:10,550
+of these grid challenges because the grid really isn't set up for this level of scaling when it comes to AI?
+
+46
+00:03:10,600 --> 00:03:13,110
+Multiple examples I can give you.
+
+47
+00:03:13,160 --> 00:03:18,874
+So, one of the examples I give you is when you think about uh in a large data center, right?
+
+48
+00:03:18,924 --> 00:03:22,666
+You there's so much of heat getting generation generated because of compute.
+
+49
+00:03:22,716 --> 00:03:28,190
+So, you need to take out the heat, which means you need cooling and you need cooling systems and HVACs and so on.
+
+50
+00:03:28,240 --> 00:03:36,718
+Just by utilizing AI algorithms on how historically the air conditioning system HVAC systems are working,
+
+51
+00:03:36,768 --> 00:03:39,991
+we are able to save almost 10% energy being utilized, right?
+
+52
+00:03:40,041 --> 00:03:44,869
+So, this is when you turn them on, turn them off, etc. So, this is where Agentic comes into play, right?
+
+53
+00:03:44,919 --> 00:03:48,346
+I mean, it automates the whole performance.
+
+54
+00:03:48,396 --> 00:03:54,290
+Other examples of where AI uh can help is uh for example,
+
+55
+00:03:54,340 --> 00:04:00,349
+overall in a in a in a large data center environment, in the on the physical layer, you have compute.
+
+56
+00:04:00,399 --> 00:04:06,204
+So, when you apply AI to think about when is compute needed and when it is not needed,
+
+57
+00:04:06,254 --> 00:04:12,710
+let's say in a large training factory, that can then help utilization of energy and bringing the need for energy down.
+
+58
+00:04:12,760 --> 00:04:16,215
+So, AI for energy actually is a very important tool.
+
+59
+00:04:16,265 --> 00:04:19,861
+And and and I try to say that whenever somebody asks me this question because
+
+60
+00:04:19,911 --> 00:04:23,924
+it's very easy to just get overly and then perplexed by the fact that oh,
+
+61
+00:04:23,974 --> 00:04:27,706
+there's so much of energy needed, but unless we do AI, we can't even solve for that.
+
+62
+00:04:27,756 --> 00:04:32,790
+Of course, we need to generate, but we can't solve for what is available and how much is getting utilized.
+
+63
+00:04:32,840 --> 00:04:33,403
+Absolutely.
+
+64
+00:04:33,453 --> 00:04:40,230
+And I think that's on a personal level, I think to be honest with you, that's where I am currently at in my my research journey, if you will,
+
+65
+00:04:40,280 --> 00:04:48,790
+when it comes to AI and the energy required to to keep on scaling is I'm I'm in that stuck phase where it's,
+
+66
+00:04:48,840 --> 00:04:50,513
+you know, well, how are we going to solve this?
+
+67
+00:04:50,563 --> 00:04:51,269
+Where is it going to go?
+
+68
+00:04:51,319 --> 00:04:59,347
+So, hearing from you of that you those use cases and examples with AI is really exciting, especially that stat 10% for cooling.
+
+69
+00:04:59,397 --> 00:04:59,697
+Yeah.
+
+70
+00:04:59,662 --> 00:05:03,164
+I mean, there there are other examples I'll give you like when you think about software.
+
+71
+00:05:03,214 --> 00:05:08,428
+We have one of our businesses which is called the digital grid business, which is how do you optimize the grid?
+
+72
+00:05:08,478 --> 00:05:17,550
+Just by utilizing software on how the grid is managed, you're able to bring down the technical losses by a few percentage points.
+
+73
+00:05:17,600 --> 00:05:23,573
+Now, that means that much of available energy which can be utilized for all the other things we're trying to do.
+
+74
+00:05:23,623 --> 00:05:26,517
+Now, if you put that in AI, AI helps again, right?
+
+75
+00:05:26,567 --> 00:05:29,470
+So, it's it's almost circular if you think about it.
+
+76
+00:05:29,520 --> 00:05:30,108
+You know,
+
+77
+00:05:30,158 --> 00:05:38,399
+have you at Schneider been working on this with AI for I'm curious because right now I feel like it's a topic of conversation and I'm sure you've,
+
+78
+00:05:38,449 --> 00:05:39,086
+you know,
+
+79
+00:05:39,136 --> 00:05:44,542
+been bombarded with so many questions around this, but have you been working on this way before,
+
+80
+00:05:44,592 --> 00:05:49,127
+I'm sure, that people were even starting to really think about it, like the general public?
+
+81
+00:05:49,177 --> 00:05:57,150
+Yeah, and and and look, the the need for energy is something which has been a challenge for many years.
+
+82
+00:05:57,200 --> 00:05:59,230
+It's not something new, right?
+
+83
+00:05:59,280 --> 00:06:06,967
+The only thing is because now we have stronger LLMs and we have much stronger compute capability,
+
+84
+00:06:07,017 --> 00:06:11,853
+NVIDIA, the the application of AI has become rapidly faster.
+
+85
+00:06:11,903 --> 00:06:19,950
+So, hence the need of energy has gone up dramatically, but the need of energy for data centers has always been a challenge.
+
+86
+00:06:20,000 --> 00:06:23,990
+For a company like us, we look at it from two points of view.
+
+87
+00:06:24,040 --> 00:06:30,070
+First, because we create the physical infrastructure, so our goal always is to make it more and more efficient.
+
+88
+00:06:30,120 --> 00:06:31,809
+And efficiency then helps.
+
+89
+00:06:31,859 --> 00:06:39,350
+Efficiency is through design of the product, but efficiency is also through digital, which is how you manage those products.
+
+90
+00:06:39,400 --> 00:06:42,459
+The entire the entire digital part, the software part of it.
+
+91
+00:06:42,509 --> 00:06:42,809
+So,
+
+92
+00:06:42,743 --> 00:06:48,792
+we've always as a company been been working on bringing out those kind of technologies so that the
+
+93
+00:06:48,842 --> 00:06:53,804
+input energy which is going into a data center and how much is actually getting utilized by compute,
+
+94
+00:06:53,854 --> 00:06:55,832
+you try to reduce that gap dramatically.
+
+95
+00:06:55,882 --> 00:07:00,790
+So, that's been an effort of Schneider Electric for a very long time.
+
+96
+00:07:00,840 --> 00:07:05,643
+We've also been also focused on thinking about how you utilize that in a sustainable fashion.
+
+97
+00:07:05,693 --> 00:07:10,905
+It's just that today, with the demand going up so much, everything needs to be accelerated, right?
+
+98
+00:07:10,955 --> 00:07:16,649
+So, it's not just accelerated compute, it's accelerated generation of energy, it's accelerated infrastructure which is needed,
+
+99
+00:07:16,699 --> 00:07:20,928
+it's accelerated uh digital, which is all softwares which are going to make it easier.
+
+100
+00:07:20,978 --> 00:07:22,716
+So, all of that has to be accelerated.
+
+101
+00:07:22,766 --> 00:07:24,864
+It really can't be done in silos.
+
+102
+00:07:24,914 --> 00:07:27,695
+It has to be a solution all together almost.
+
+103
+00:07:27,745 --> 00:07:28,231
+Exactly.
+
+104
+00:07:28,281 --> 00:07:36,402
+I mean, that's such a good point you're making because when you also think about the entire buildout of a AI factory, the each system,
+
+105
+00:07:36,452 --> 00:07:43,430
+each each component of the system is important because you get the best optimization
+
+106
+00:07:43,480 --> 00:07:47,862
+of both the physical layer and the software when it works as a system.
+
+107
+00:07:47,912 --> 00:07:49,710
+So, the system plays absolutely critical.
+
+108
+00:07:49,760 --> 00:07:50,690
+So, great point.
+
+109
+00:07:50,740 --> 00:07:57,291
+You know, I know Schneider does both, as you mentioned, the physical aspect, like the the physical side of things and then also the software.
+
+110
+00:07:57,341 --> 00:08:01,505
+Are there any scenarios where you are solving a problem,
+
+111
+00:08:01,555 --> 00:08:09,516
+working with a company who already has one or the other and even though both are so important, you have to kind of really adjust based on that?
+
+112
+00:08:09,566 --> 00:08:17,003
+So, maybe it's an existing AI factory or they have pretty archaic software that they're dealing with.
+
+113
+00:08:17,053 --> 00:08:18,338
+Are there any cases of that?
+
+114
+00:08:18,388 --> 00:08:23,496
+So, your your question really is around, let's say, brownfield Yeah. will, right?
+
+115
+00:08:23,546 --> 00:08:26,202
+And uh I mean, there are not many existing AI factories.
+
+116
+00:08:26,252 --> 00:08:26,982
+Yeah, that's true.
+
+117
+00:08:27,032 --> 00:08:28,590
+That's true.
+
+118
+00:08:28,640 --> 00:08:30,684
+But we've we've been building data centers.
+
+119
+00:08:30,734 --> 00:08:34,070
+Some of the world's been building data centers for many decades now, right?
+
+120
+00:08:34,120 --> 00:08:41,830
+The and typical utilization levels in data centers are extremely high right now, as you can imagine, because the demand is so high.
+
+121
+00:08:41,880 --> 00:08:52,830
+But some of the builds which happened in the past have reached a limit of performance simply because they were never built for this level of compute.
+
+122
+00:08:52,880 --> 00:08:58,110
+So, we have those kind of examples and to your point, both on the physical layer and the software which is utilized there.
+
+123
+00:08:58,160 --> 00:09:04,061
+There are times when you can have a brownfield environment and you can apply software and when we say software,
+
+124
+00:09:04,111 --> 00:09:08,995
+we talk about energy intelligence and I'll maybe take a second here to explain to you what that means.
+
+125
+00:09:09,045 --> 00:09:15,293
+Energy intelligence is where when you have performance data of data centers as one
+
+126
+00:09:15,343 --> 00:09:20,056
+example and any other application for that matter for the longest period of time,
+
+127
+00:09:20,106 --> 00:09:27,030
+for decades, you utilize that data and then put AI on top of the data with the help of software,
+
+128
+00:09:27,080 --> 00:09:37,007
+come up with insights which you can either be AI augmented or AI native, more so AI native now when you heard that as a conversation,
+
+129
+00:09:37,057 --> 00:09:43,340
+so that those insights can help improve the performance of the physical layer, right?
+
+130
+00:09:43,390 --> 00:09:49,670
+Now, in a brownfield brownfield environment, sometimes with energy intelligence this can be done.
+
+131
+00:09:49,720 --> 00:09:57,470
+The challenge always is if it is a much older environment, the physical layer is not digital.
+
+132
+00:09:57,520 --> 00:09:57,820
+Yes.
+
+133
+00:09:57,796 --> 00:10:08,790
+So, either you attach something like an appliance on the physical layer to make it digital or you really need to swipe it out.
+
+134
+00:10:08,840 --> 00:10:11,630
+So it's a whole process like as a company we do that for our customer.
+
+135
+00:10:11,680 --> 00:10:17,070
+First of all we have ourselves been building data centers for our customers for many decades now, right?
+
+136
+00:10:17,120 --> 00:10:26,157
+So we work with them to think about their physical layer and do a complete asset analysis etc. Try to bring in digital software etc. to simplify.
+
+137
+00:10:26,207 --> 00:10:33,523
+But if there are times there the physical layer is just not digital at all then all you have to do is you have to swap it out.
+
+138
+00:10:33,573 --> 00:10:35,438
+Absolutely. are those kind of scenarios.
+
+139
+00:10:35,488 --> 00:10:36,920
+That's really interesting.
+
+140
+00:10:36,970 --> 00:10:43,670
+It's it's exciting to me or interesting to me because every scenario is so different and every challenge is is
+
+141
+00:10:43,720 --> 00:10:49,264
+I mean there's a lot of similarities but the way you have to think slightly about each one is different.
+
+142
+00:10:49,314 --> 00:10:52,891
+Yeah, I mean it's different also because it depends on where the data center is located.
+
+143
+00:10:52,941 --> 00:10:57,822
+It depends on the the environment around availability of power.
+
+144
+00:10:57,872 --> 00:11:02,417
+How much more power is needed like for example if you already maxed out on power availability
+
+145
+00:11:02,467 --> 00:11:08,630
+in a certain geographical location even if you can build more it there is no point of that,
+
+146
+00:11:08,680 --> 00:11:08,980
+right?
+
+147
+00:11:08,946 --> 00:11:10,150
+Yeah, I didn't think about that.
+
+148
+00:11:10,200 --> 00:11:11,910
+That's a very good point.
+
+149
+00:11:11,960 --> 00:11:19,597
+Why is it important and we kind of spoke about this earlier but why is it important to manage all of these systems together for AI factories?
+
+150
+00:11:19,647 --> 00:11:21,216
+Can you expand on that a bit more?
+
+151
+00:11:21,266 --> 00:11:26,707
+Yeah, you know when you think about an AI factory and when you think about everything that goes into the physical layer.
+
+152
+00:11:26,757 --> 00:11:32,975
+So first of all you have energy coming in and even in an AI factory which by the way is some
+
+153
+00:11:33,025 --> 00:11:40,614
+of the most let's say well utilized environments also because there's a lot of training which is happening in those AI factories,
+
+154
+00:11:40,664 --> 00:11:40,964
+right?
+
+155
+00:11:40,908 --> 00:11:44,150
+So it's it's kind of similar type of loads, right?
+
+156
+00:11:44,200 --> 00:11:49,317
+Even in those environments there is standard capacity of energy which means if you're getting
+
+157
+00:11:49,367 --> 00:11:54,950
+100 points of energy coming in you're utilizing only 64 as an example for compute.
+
+158
+00:11:55,000 --> 00:11:55,716
+Which is the whole point.
+
+159
+00:11:55,766 --> 00:11:58,367
+Which means you still have 40 which is standard somewhere.
+
+160
+00:11:58,417 --> 00:11:58,789
+Yeah.
+
+161
+00:11:58,819 --> 00:12:00,310
+So that's one example.
+
+162
+00:12:00,360 --> 00:12:03,447
+Then when So what do you do to make it better?
+
+163
+00:12:03,497 --> 00:12:06,792
+So this is where software AI energy intelligence kind of things come into play.
+
+164
+00:12:06,842 --> 00:12:13,360
+The second point is when you think about the physical layer there so you have different parts of physical layer.
+
+165
+00:12:13,410 --> 00:12:16,131
+So you have the power infrastructure, you have the cooling infrastructure,
+
+166
+00:12:16,181 --> 00:12:20,390
+you know you have cabling, you have data, you have all of those things, right?
+
+167
+00:12:20,440 --> 00:12:24,990
+So each one of them individually has to be the most efficient.
+
+168
+00:12:25,040 --> 00:12:29,390
+But collectively is where the handovers happen.
+
+169
+00:12:29,440 --> 00:12:34,795
+So as an example the amount of compute getting generated leads to the utilization of
+
+170
+00:12:34,845 --> 00:12:41,826
+the power infrastructure and when that's linked to the cooling infrastructure that handover is absolutely critical.
+
+171
+00:12:41,876 --> 00:12:45,974
+If that handover is not seamless then you're losing a lot of energy.
+
+172
+00:12:46,024 --> 00:12:49,270
+You talk about the standard capacity that's where you're losing.
+
+173
+00:12:49,320 --> 00:12:58,708
+So that's why the play of the system is absolutely critical even if each one of those individual components are the most efficient components,
+
+174
+00:12:58,758 --> 00:13:00,352
+software defined components.
+
+175
+00:13:00,402 --> 00:13:02,204
+But the system play is absolutely critical.
+
+176
+00:13:02,254 --> 00:13:02,654
+Absolutely.
+
+177
+00:13:02,696 --> 00:13:03,402
+That makes sense.
+
+178
+00:13:03,452 --> 00:13:12,787
+So much energy and heat is lost if it's not for example going back to liquid cooling or or properly system put in place.
+
+179
+00:13:12,837 --> 00:13:13,557
+Exactly.
+
+180
+00:13:13,607 --> 00:13:20,262
+So so liquid cooling now of course I mean for us is is is an integral part of what we do, right?
+
+181
+00:13:20,312 --> 00:13:24,306
+When we uh what two years ago we had Motive Air come in and join our company and they're the
+
+182
+00:13:24,356 --> 00:13:31,219
+number one leader in the world in that space but it's important there not just So back to the system play.
+
+183
+00:13:31,269 --> 00:13:37,851
+It's not just important to have the best liquid cooling technology from an offer standpoint whether the cooling distribution units or the heat
+
+184
+00:13:37,901 --> 00:13:47,750
+exchangers etc. It's also important how the flow of fluid is managed inside the data center and at what temperatures it's getting managed.
+
+185
+00:13:47,800 --> 00:13:49,318
+What's the optimum temperature?
+
+186
+00:13:49,368 --> 00:13:54,950
+Because all of that eventually is leading into the amount of energy we are consuming.
+
+187
+00:13:55,000 --> 00:14:00,778
+And if you're wasting energy when you're consuming it then that's that's something which makes it inefficient and of
+
+188
+00:14:00,828 --> 00:14:04,150
+and and again we are talking about the fact we need more and more and more and more energy,
+
+189
+00:14:04,200 --> 00:14:04,500
+right?
+
+190
+00:14:04,524 --> 00:14:05,030
+Absolutely.
+
+191
+00:14:05,080 --> 00:14:06,427
+That's such a good point.
+
+192
+00:14:06,477 --> 00:14:10,050
+I never thought of it from that perspective especially around with liquid cooling.
+
+193
+00:14:10,100 --> 00:14:16,619
+I'm like oh liquid cooling it's going to solve going to solve so many problems but there's so much more that goes into it even the way it's flowing,
+
+194
+00:14:16,669 --> 00:14:17,504
+the way it's set up.
+
+195
+00:14:17,554 --> 00:14:20,794
+If it's not done properly then wasting energy.
+
+196
+00:14:20,844 --> 00:14:21,789
+Exactly.
+
+197
+00:14:21,839 --> 00:14:27,045
+There is you know throughout our conversation we've addressed that there is a bottleneck
+
+198
+00:14:27,095 --> 00:14:32,190
+when it comes to AI scaling and one of that those bottlenecks is around power.
+
+199
+00:14:32,240 --> 00:14:37,029
+Other than for example liquid cooling, what are some other ways to unlock this?
+
+200
+00:14:37,079 --> 00:14:42,670
+So So liquid cooling is a part of the physical layer, right?
+
+201
+00:14:42,720 --> 00:14:49,590
+So everything on the physical layer whether it's power infrastructure, cooling infrastructure has to become more and more efficient, right?
+
+202
+00:14:49,640 --> 00:14:51,630
+Which is what we spoke about already.
+
+203
+00:14:51,680 --> 00:14:57,654
+On top of that one way to unlock it now is with the energy intelligence.
+
+204
+00:14:57,704 --> 00:14:58,104
+Yes.
+
+205
+00:14:58,148 --> 00:14:58,720
+Right?
+
+206
+00:14:58,770 --> 00:15:05,600
+So with energy intelligence the ability to capture data to be able to design
+
+207
+00:15:05,650 --> 00:15:09,396
+better you know we talk a lot about SimReady in this conference with NVIDIA.
+
+208
+00:15:09,446 --> 00:15:11,200
+There's a reason for that, right?
+
+209
+00:15:11,250 --> 00:15:13,781
+Because everything which you put in if it is simulation ready,
+
+210
+00:15:13,831 --> 00:15:20,804
+SimReady simulation ready then it's able to do the digital twin where even before
+
+211
+00:15:20,854 --> 00:15:25,170
+building the AI factory you have a design which is the most optimum design,
+
+212
+00:15:25,220 --> 00:15:25,610
+right?
+
+213
+00:15:25,640 --> 00:15:29,620
+So that's why this entire energy intelligence layer comes into play.
+
+214
+00:15:29,670 --> 00:15:35,609
+So now what you can do is you can build a digital twin in advance before you make the AI factory
+
+215
+00:15:35,659 --> 00:15:42,110
+but with the intelligence of all the years of data which you have in functioning of each one of those offers,
+
+216
+00:15:42,160 --> 00:15:51,830
+those physical layer offers you create AI algorithms which tells you how to now build so much better than the way you would have built in the past.
+
+217
+00:15:51,880 --> 00:15:58,750
+So to unlock to your point the the utilization of energy it's both on the efficiency of
+
+218
+00:15:58,800 --> 00:16:03,093
+the physical layer but it's also on the energy intelligence which comes which is again AI for energy.
+
+219
+00:16:03,143 --> 00:16:04,040
+I love that.
+
+220
+00:16:04,090 --> 00:16:05,292
+Energy intelligence.
+
+221
+00:16:05,342 --> 00:16:06,670
+Energy intelligence, yes.
+
+222
+00:16:06,720 --> 00:16:13,154
+That's why I learned a lot through this conversation but that was for me that's the take home that I I uh That's what we do.
+
+223
+00:16:13,204 --> 00:16:13,837
+That's what we do.
+
+224
+00:16:13,887 --> 00:16:17,029
+I mean as a company if you think about Schneider Electric again we've been in
+
+225
+00:16:17,079 --> 00:16:21,909
+the not just data center many other businesses but we are an energy management company.
+
+226
+00:16:21,959 --> 00:16:22,532
+Yeah, yeah.
+
+227
+00:16:22,582 --> 00:16:33,245
+But more and more energy needed for AI cannot happen without energy intelligence because of the learning what we have collectively for
+
+228
+00:16:33,295 --> 00:16:39,495
+so many decades on how the performance of energy is and utilization is you have to apply on that and that's energy intelligence.
+
+229
+00:16:39,545 --> 00:16:44,950
+And of course there are other things then you need more grids, you need better grids and there are the many other things we need to do.
+
+230
+00:16:45,000 --> 00:16:46,843
+Pankaj, thank you so much for your time today.
+
+231
+00:16:46,893 --> 00:16:49,180
+This was a really insightful conversation.
+
+232
+00:16:49,230 --> 00:16:49,800
+Thank you.
+
+233
+00:16:49,850 --> 00:16:51,387
+And thank you all for tuning in.
+
+234
+00:16:51,437 --> 00:16:58,591
+Make sure to go check out more sessions on demand in the GTC catalog.

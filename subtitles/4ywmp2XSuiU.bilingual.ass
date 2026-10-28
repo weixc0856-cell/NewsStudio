@@ -1,0 +1,282 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:03.76,0:00:08.69,Sub,,0,0,0,,All right, how many people using the tokens this day and complain about I'm out of tokens.
+Dialogue: 0,0:00:08.74,0:00:09.95,Sub,,0,0,0,,Cannot generate image.
+Dialogue: 0,0:00:10.00,0:00:12.19,Sub,,0,0,0,,Cannot generate my stack.
+Dialogue: 0,0:00:12.24,0:00:15.27,Sub,,0,0,0,,How many people also suffering from slow deployment?
+Dialogue: 0,0:00:15.32,0:00:20.71,Sub,,0,0,0,,Get boss, you know, complaining about the revenues delay, all that stuff.
+Dialogue: 0,0:00:20.76,0:00:26.15,Sub,,0,0,0,,Okay, if that's the case, we are talking about MDC, how we can enable how we can solve those problems.
+Dialogue: 0,0:00:26.20,0:00:28.47,Sub,,0,0,0,,Right, so Jensen give two missions.
+Dialogue: 0,0:00:28.52,0:00:29.23,Sub,,0,0,0,,Simple mission, right?
+Dialogue: 0,0:00:29.28,0:00:30.09,Sub,,0,0,0,,How hard can that be?
+Dialogue: 0,0:00:30.14,0:00:32.47,Sub,,0,0,0,,How we can optimize power for token?
+Dialogue: 0,0:00:32.52,0:00:40.34,Sub,,0,0,0,,Right, as we went through this power crisis, this MDC number one, we are simplified and deliver a more efficient power architect.
+Dialogue: 0,0:00:40.39,0:00:48.59,Sub,,0,0,0,,Right, cutting back the cutting out the conversion stages, right, and quickly pushing a more simplified compact power design.
+Dialogue: 0,0:00:48.64,0:00:55.83,Sub,,0,0,0,,And also we are preparing the next generation of the system architect to support the next generation GPUs.
+Dialogue: 0,0:00:55.88,0:01:02.79,Sub,,0,0,0,,And at the same time we try improve the overall efficiency altogether that drives a lower token cost.
+Dialogue: 0,0:01:02.84,0:01:05.10,Sub,,0,0,0,,Secondly, we try to drive the deployment speed.
+Dialogue: 0,0:01:05.15,0:01:12.03,Sub,,0,0,0,,Right, so deployment speed is critical that day one we we embrace AC DC coexistence.
+Dialogue: 0,0:01:12.08,0:01:18.43,Sub,,0,0,0,,Right, so we can have different user, different stage, but you can deliver different adopt different options.
+Dialogue: 0,0:01:18.48,0:01:20.75,Sub,,0,0,0,,And also the footprint can be reduced.
+Dialogue: 0,0:01:20.80,0:01:26.56,Sub,,0,0,0,,Less copper, more integrated system, we can really save the interior space and exterior spaces.
+Dialogue: 0,0:01:26.61,0:01:28.19,Sub,,0,0,0,,And lastly, the modular, right?
+Dialogue: 0,0:01:28.24,0:01:32.87,Sub,,0,0,0,,Everybody talk about modular data centers, this is a driver to make it work.
+Dialogue: 0,0:01:32.92,0:01:38.23,Sub,,0,0,0,,I'll turn over to Jared to talk about roadmap.
+Dialogue: 0,0:01:38.28,0:01:42.88,Sub,,0,0,0,,So, this graph here, hopefully everyone's seen a variant of it.
+Dialogue: 0,0:01:42.93,0:01:43.51,Sub,,0,0,0,,Uh-oh.
+Dialogue: 0,0:01:43.56,0:01:44.00,Sub,,0,0,0,,There we go.
+Dialogue: 0,0:01:44.05,0:01:45.77,Sub,,0,0,0,,Hopefully everyone's seen a variant of this.
+Dialogue: 0,0:01:45.82,0:01:50.43,Sub,,0,0,0,,This is what's ultimately driving the higher power densities over time.
+Dialogue: 0,0:01:50.48,0:01:53.91,Sub,,0,0,0,,Uh so, we essentially have two things that are going on.
+Dialogue: 0,0:01:53.96,0:01:57.58,Sub,,0,0,0,,One is our GPUs, generation over generation, consume more power,
+Dialogue: 0,0:01:57.63,0:02:02.43,Sub,,0,0,0,,but something that's fundamentally different about GPUs is that they get more efficient the more
+Dialogue: 0,0:02:02.48,0:02:08.19,Sub,,0,0,0,,GPUs we can pack in the same space uh because we can network them over copper,
+Dialogue: 0,0:02:08.24,0:02:10.95,Sub,,0,0,0,,which is gives a better TCO.
+Dialogue: 0,0:02:11.00,0:02:16.74,Sub,,0,0,0,,And so over time, we have power increasing, but then we can very rapidly uh increase power, right?
+Dialogue: 0,0:02:16.79,0:02:18.83,Sub,,0,0,0,,It can very rapidly double.
+Dialogue: 0,0:02:18.88,0:02:25.34,Sub,,0,0,0,,And as power engineers, we don't want to be the bottleneck in the um in all of these AI deployments and all these new systems,
+Dialogue: 0,0:02:25.39,0:02:32.51,Sub,,0,0,0,,so we want to get platforms ready so that when uh the chips are are there, they're ready to land.
+Dialogue: 0,0:02:32.56,0:02:40.27,Sub,,0,0,0,,And so for a Gen 1 power rack, we were capable of 145 kW with our 33 kW power shelves.
+Dialogue: 0,0:02:40.32,0:02:47.55,Sub,,0,0,0,,For a Gen 2 power system, we are 330 W capable with our 110 kW power shelves.
+Dialogue: 0,0:02:47.60,0:02:54.21,Sub,,0,0,0,,And for our Gen 3, we've moved to 100 or we are moving 100% liquid-cooled systems.
+Dialogue: 0,0:02:54.26,0:02:58.85,Sub,,0,0,0,,And this uh makes it so if we use our DC-to-DC power shelves,
+Dialogue: 0,0:02:58.90,0:03:08.91,Sub,,0,0,0,,we can support up to 570 kW in a single rack um with both a 54-V liquid-cooled bus bar as well as liquid-cooled power shelves.
+Dialogue: 0,0:03:08.96,0:03:11.67,Sub,,0,0,0,,Now, as those power levels continue to increase,
+Dialogue: 0,0:03:11.72,0:03:18.42,Sub,,0,0,0,,what we're working on now and what we're not ready to show exactly how it will work is the 800-V native racks, right?
+Dialogue: 0,0:03:18.47,0:03:21.19,Sub,,0,0,0,,So that's that's where we're going long-term.
+Dialogue: 0,0:03:21.24,0:03:28.63,Sub,,0,0,0,,And so then we're building these systems and we want to harmonize them with the data center.
+Dialogue: 0,0:03:28.68,0:03:36.27,Sub,,0,0,0,,And so that that's why we're building 800 V is we want we want to both make the rack capable of 1 MW per position,
+Dialogue: 0,0:03:36.32,0:03:41.33,Sub,,0,0,0,,but we also want to make sure that the data center is optimized to what the rack is doing, right?
+Dialogue: 0,0:03:41.38,0:03:48.43,Sub,,0,0,0,,That includes energy storage, that includes um efficient distribution, and a simple distribution end to end.
+Dialogue: 0,0:03:48.48,0:03:53.56,Sub,,0,0,0,,And in order to do that, we we have um uh three different methods.
+Dialogue: 0,0:03:53.61,0:03:58.87,Sub,,0,0,0,,So, looking at AC distribution today, we take AC all the way into the rack.
+Dialogue: 0,0:03:58.92,0:04:04.75,Sub,,0,0,0,,And that's where these yellow blocks that we're showing in the diagram, that's where we're putting capacitors,
+Dialogue: 0,0:04:04.80,0:04:12.09,Sub,,0,0,0,,electrolytic capacitors for load shaping and dealing with the AI workload fluctuations.
+Dialogue: 0,0:04:12.14,0:04:16.55,Sub,,0,0,0,,And so, today that's put into our 110 kW power shelf.
+Dialogue: 0,0:04:16.60,0:04:22.20,Sub,,0,0,0,,Um then as we move to 800 V DC, that moves into our power rack.
+Dialogue: 0,0:04:22.25,0:04:26.20,Sub,,0,0,0,,So, we have capacitors local there for energy storage.
+Dialogue: 0,0:04:26.25,0:04:29.83,Sub,,0,0,0,,Um for option B, that's an end-of-row solution.
+Dialogue: 0,0:04:29.88,0:04:34.47,Sub,,0,0,0,,And option A and option B, we've we've harmonized into a single solution.
+Dialogue: 0,0:04:34.52,0:04:43.32,Sub,,0,0,0,,Um and then for option C is where we move to solid-state transformers, and we really go from the gray space all the way to the rack with 800 V DC.
+Dialogue: 0,0:04:43.37,0:04:47.51,Sub,,0,0,0,,And so, we'll we'll walk through these each of these options.
+Dialogue: 0,0:04:47.56,0:04:52.57,Sub,,0,0,0,,Um So, this is showing uh just DSX today.
+Dialogue: 0,0:04:52.62,0:04:57.43,Sub,,0,0,0,,This is a full super pod with AC input.
+Dialogue: 0,0:04:57.48,0:05:00.67,Sub,,0,0,0,,And then we'll show our power rack.
+Dialogue: 0,0:05:00.72,0:05:06.15,Sub,,0,0,0,,So, this is our 800 V DC MGX power rack, and it takes AC in.
+Dialogue: 0,0:05:06.20,0:05:11.00,Sub,,0,0,0,,It outputs 800 V DC, and then with cross cables in the back,
+Dialogue: 0,0:05:11.05,0:05:18.23,Sub,,0,0,0,,it goes into 800 to 54 V DC to DC power shelf, and then powers the 54 V bus bar.
+Dialogue: 0,0:05:18.28,0:05:29.63,Sub,,0,0,0,,And so, what this will allow us to do is any rack that's 800 V DC capable, it can then land into an AC data center.
+Dialogue: 0,0:05:29.68,0:05:41.51,Sub,,0,0,0,,And so, this is showing an updated pod then with that with that power rack, and taking in AC, but then powering up 800 V racks.
+Dialogue: 0,0:05:41.56,0:05:49.51,Sub,,0,0,0,,And presently we can support a one power rack to four compute rack ratio, but that will adjust depending on the power.
+Dialogue: 0,0:05:49.56,0:06:00.13,Sub,,0,0,0,,Now, for option B, what we've done is we can essentially take that same power rack and integrate it with a remote power panel or a AC PDU.
+Dialogue: 0,0:06:00.18,0:06:08.68,Sub,,0,0,0,,And so then we take in a large AC feed into the top of the rack and we can then power those same DC to or those same AC
+Dialogue: 0,0:06:08.73,0:06:18.94,Sub,,0,0,0,,to 800 V power shelves and then distribute that and treat it just like a remote power panel and power all of the all of the compute racks that way.
+Dialogue: 0,0:06:18.99,0:06:29.59,Sub,,0,0,0,,And so this is this is something that we would use for like a retrofit situation where you want to retrofit an entire row.
+Dialogue: 0,0:06:29.64,0:06:38.75,Sub,,0,0,0,,Now, the connector that we've developed, the 125 amp continuous rated connector is rated for 125 amp continuous globally.
+Dialogue: 0,0:06:38.80,0:06:42.31,Sub,,0,0,0,,And that's uh at 800 V DC.
+Dialogue: 0,0:06:42.36,0:06:50.51,Sub,,0,0,0,,And so we've designed this so that we can basically use it on our power rack and we go from the power rack over to the compute cabinet.
+Dialogue: 0,0:06:50.56,0:06:54.19,Sub,,0,0,0,,But it's also been designed in mind to be used long-term.
+Dialogue: 0,0:06:54.24,0:06:56.94,Sub,,0,0,0,,So when we have 800 V data center,
+Dialogue: 0,0:06:56.99,0:07:04.99,Sub,,0,0,0,,it can be hardwired directly into a tap box as a drop cord and plug directly into the back of our DC to DC power shelf.
+Dialogue: 0,0:07:05.04,0:07:14.08,Sub,,0,0,0,,Now, we're we are moving to the native 800 V racks, but we believe that these DC to DC power shelves and therefore these connectors,
+Dialogue: 0,0:07:14.13,0:07:18.59,Sub,,0,0,0,,they'll be used long-term for storage racks, networking racks.
+Dialogue: 0,0:07:18.64,0:07:26.95,Sub,,0,0,0,,There's going to be all the other components in the data center that will need this long-term.
+Dialogue: 0,0:07:27.00,0:07:38.71,Sub,,0,0,0,,Now, for that connector and for the the drop cord style tap box, we can we're also our goal is to make this as safe as plugging in an EV, right?
+Dialogue: 0,0:07:38.76,0:07:49.57,Sub,,0,0,0,,Everyone or it's it's very common, right, to to plug in EV vehicles today for charging and that's all that's all high voltage, right, 400, 800 volts.
+Dialogue: 0,0:07:49.62,0:07:55.49,Sub,,0,0,0,,And we're putting in the same interlocks and safety mechanisms that are already common in that industry.
+Dialogue: 0,0:07:55.54,0:08:02.99,Sub,,0,0,0,,So, the cord by default is off and then it needs to plug in and have a high voltage interlock to ensure the system is safe.
+Dialogue: 0,0:08:03.04,0:08:09.95,Sub,,0,0,0,,And we're putting in all of those same mechanisms into the cable and into the the power sources.
+Dialogue: 0,0:08:10.00,0:08:18.11,Sub,,0,0,0,,So, the next Mike will talk about option C, which is where we actually move to SST powering racks.
+Dialogue: 0,0:08:18.16,0:08:18.53,Sub,,0,0,0,,Exactly.
+Dialogue: 0,0:08:18.56,0:08:19.31,Sub,,0,0,0,,Thank you, Jared.
+Dialogue: 0,0:08:19.36,0:08:19.66,Sub,,0,0,0,,Right,
+Dialogue: 0,0:08:19.67,0:08:24.65,Sub,,0,0,0,,so Jared talking about what A and B for quick adoption but that adoption and also
+Dialogue: 0,0:08:24.70,0:08:28.48,Sub,,0,0,0,,for retrofit where option C is where we see it's going to be a North Star,
+Dialogue: 0,0:08:28.53,0:08:28.88,Sub,,0,0,0,,right?
+Dialogue: 0,0:08:28.91,0:08:30.93,Sub,,0,0,0,,We try to really accelerate this space.
+Dialogue: 0,0:08:30.98,0:08:37.13,Sub,,0,0,0,,What we show on the screen here is using 34.5 kV as a medium voltage input with RMU loop, right?
+Dialogue: 0,0:08:37.18,0:08:39.30,Sub,,0,0,0,,So, 600 amp is a standard rating.
+Dialogue: 0,0:08:39.35,0:08:44.33,Sub,,0,0,0,,So, that whole loop has 35 35.9 MW of capacity.
+Dialogue: 0,0:08:44.38,0:08:48.27,Sub,,0,0,0,,So, 6 + 1 the N + 1 is what we try to drive here.
+Dialogue: 0,0:08:48.32,0:08:53.95,Sub,,0,0,0,,So, you can see we are deploying 5 MW power block integrate with ESS as one module.
+Dialogue: 0,0:08:54.00,0:08:59.87,Sub,,0,0,0,,And then we have the bottom feed with a auxiliary 5 MW of AC to be reserved.
+Dialogue: 0,0:08:59.92,0:09:06.25,Sub,,0,0,0,,And you can drive the 6 + 1 compute cluster at 30 MW capacity into the data hall.
+Dialogue: 0,0:09:06.30,0:09:09.60,Sub,,0,0,0,,And you have the reserve loop layer to provide a maintenance access.
+Dialogue: 0,0:09:09.65,0:09:13.83,Sub,,0,0,0,,This can also be further enhanced as auto transfer scheme, right?
+Dialogue: 0,0:09:13.88,0:09:21.04,Sub,,0,0,0,,So, you can see this whole block becomes a UPS function with automatic transfer and maintenance access provided.
+Dialogue: 0,0:09:21.09,0:09:28.55,Sub,,0,0,0,,Then straight shot single-ended into the data hall compute cluster to support fast deployment fast interconnection.
+Dialogue: 0,0:09:28.60,0:09:31.56,Sub,,0,0,0,,This day two can be turned into a power container.
+Dialogue: 0,0:09:31.61,0:09:40.75,Sub,,0,0,0,,Right, so we need normal buildings everything can be fully like a parking lot directly plug and play fast deployment parallel to the Okay.
+Dialogue: 0,0:09:40.80,0:09:43.31,Sub,,0,0,0,,construction from the factories to the field.
+Dialogue: 0,0:09:43.36,0:09:47.31,Sub,,0,0,0,,Uh that's how we see the futures look like looking like.
+Dialogue: 0,0:09:47.36,0:09:48.27,Sub,,0,0,0,,So, talking SST, right?
+Dialogue: 0,0:09:48.32,0:09:50.07,Sub,,0,0,0,,This is just a quick visual.
+Dialogue: 0,0:09:50.12,0:09:52.62,Sub,,0,0,0,,Uh we are promoting outdoor solution as we spoke.
+Dialogue: 0,0:09:52.67,0:09:54.50,Sub,,0,0,0,,Uh it's a 5 MV a target.
+Dialogue: 0,0:09:54.54,0:09:59.28,Sub,,0,0,0,,This has been aligned with Google and Microsoft trends as initial target.
+Dialogue: 0,0:09:59.33,0:10:07.62,Sub,,0,0,0,,Uh in the same time, right, the ESS direct intertie will link the DCTC content converter inside the container to drive the performance.
+Dialogue: 0,0:10:07.67,0:10:13.75,Sub,,0,0,0,,Uh and then the catcher could be optional depends on your service uptime and maintenance plan.
+Dialogue: 0,0:10:13.80,0:10:20.07,Sub,,0,0,0,,This one shows exactly how we migrating from AC to DC to be streamlined and then so be more efficient.
+Dialogue: 0,0:10:20.12,0:10:27.80,Sub,,0,0,0,,Right, from the seven-layer AC solution and moving to just a four-layer from the grid to the chip, right, with single power conversion.
+Dialogue: 0,0:10:27.85,0:10:33.36,Sub,,0,0,0,,Uh that's pretty much where we're going to see the whole thing get very very integrated and compact.
+Dialogue: 0,0:10:33.41,0:10:35.59,Sub,,0,0,0,,Um so, it's not just a voltage change, right?
+Dialogue: 0,0:10:35.64,0:10:41.36,Sub,,0,0,0,,It's really drive the simplification, have less conversion stages, and of course smaller footprint.
+Dialogue: 0,0:10:41.41,0:10:46.35,Sub,,0,0,0,,That's why the containerized module design can be supported.
+Dialogue: 0,0:10:46.40,0:10:49.79,Sub,,0,0,0,,This give you a quick overview about how things can get deployed.
+Dialogue: 0,0:10:49.84,0:10:52.50,Sub,,0,0,0,,Right, so we're showing the RMU to the far left,
+Dialogue: 0,0:10:52.55,0:10:59.15,Sub,,0,0,0,,uh where this is the the one of the the the discipline they can design everything on the medium voltage completion.
+Dialogue: 0,0:10:59.20,0:11:06.50,Sub,,0,0,0,,And then you have the space for the ESS and SST with one OEM control scope for quick interconnections.
+Dialogue: 0,0:11:06.55,0:11:11.48,Sub,,0,0,0,,Where the ESS uh can be sized uh based upon the user definition,
+Dialogue: 0,0:11:11.53,0:11:18.63,Sub,,0,0,0,,but of course the power smoothing that'll be a must-have that Jerry will talk about uh in tomorrow's talk in details.
+Dialogue: 0,0:11:18.68,0:11:20.59,Sub,,0,0,0,,Then the power container, like I explained, right?
+Dialogue: 0,0:11:20.64,0:11:25.97,Sub,,0,0,0,,This is where you have the SST medium voltage section coming in with SST to deliver 800 DC,
+Dialogue: 0,0:11:26.02,0:11:31.39,Sub,,0,0,0,,and your DC switchboard will integrate all the power together from the SST output to
+Dialogue: 0,0:11:31.44,0:11:38.23,Sub,,0,0,0,,the catcher's system and an ESS interconnection and an output feeders directly into the building.
+Dialogue: 0,0:11:38.28,0:11:40.15,Sub,,0,0,0,,Inside building have DCRP, right?
+Dialogue: 0,0:11:40.20,0:11:41.77,Sub,,0,0,0,,This where things can get fungible.
+Dialogue: 0,0:11:41.82,0:11:45.47,Sub,,0,0,0,,Depends on your load requirement, you can design different size RPP.
+Dialogue: 0,0:11:45.52,0:11:52.35,Sub,,0,0,0,,And also this DCRP can be different room or adjacent or directly in the same white space as we show.
+Dialogue: 0,0:11:52.40,0:11:57.23,Sub,,0,0,0,,And then the crack units on the side and we are moving towards fully liquid cool solution for the power shelf.
+Dialogue: 0,0:11:57.28,0:12:05.99,Sub,,0,0,0,,So the whole thermal uh re thermal management rejection will be fully lowered than 2% as a target.
+Dialogue: 0,0:12:06.04,0:12:07.62,Sub,,0,0,0,,Then talk about the ESS.
+Dialogue: 0,0:12:07.67,0:12:13.99,Sub,,0,0,0,,Um so I'll talk about key functions and tomorrow Jerry has a during our end-to-end performance review,
+Dialogue: 0,0:12:14.04,0:12:18.99,Sub,,0,0,0,,we can uh showcase exactly what's the key uh driver in performance of that.
+Dialogue: 0,0:12:19.04,0:12:22.34,Sub,,0,0,0,,Um so you can see this uh ESS is bi-directional device, right?
+Dialogue: 0,0:12:22.39,0:12:25.98,Sub,,0,0,0,,It provides uh number one, it's about full right through, right?
+Dialogue: 0,0:12:26.03,0:12:33.74,Sub,,0,0,0,,This is what today best can be done upstream, but it's full right through is more than just connected to the grid under incident or disturbance.
+Dialogue: 0,0:12:33.79,0:12:40.83,Sub,,0,0,0,,It's more important about how you control the IT curve and power quality to meet the compliance to the rack level.
+Dialogue: 0,0:12:40.88,0:12:42.77,Sub,,0,0,0,,And secondly, the backup power time, right?
+Dialogue: 0,0:12:42.82,0:12:47.32,Sub,,0,0,0,,This is where we have friends have BBUs been used a lot to drive that service up time.
+Dialogue: 0,0:12:47.37,0:12:48.99,Sub,,0,0,0,,You can treat as a UPS, right?
+Dialogue: 0,0:12:49.04,0:12:51.91,Sub,,0,0,0,,Where the backup power time can be directly specified.
+Dialogue: 0,0:12:51.96,0:12:53.34,Sub,,0,0,0,,And importantly, power smoothing.
+Dialogue: 0,0:12:53.39,0:12:59.44,Sub,,0,0,0,,We have a parallel talk uh talk about intelligent power smoothing uh where this is where we uh close
+Dialogue: 0,0:12:59.49,0:13:07.74,Sub,,0,0,0,,to design by Nvidia directly control uh the SOC signal and it directly control the GPU um uh status,
+Dialogue: 0,0:13:07.79,0:13:08.18,Sub,,0,0,0,,right?
+Dialogue: 0,0:13:08.21,0:13:14.43,Sub,,0,0,0,,so it's an active control loop uh to to define and actively tracking the power status.
+Dialogue: 0,0:13:14.48,0:13:17.38,Sub,,0,0,0,,And lastly, importantly is a load averaging function, right?
+Dialogue: 0,0:13:17.43,0:13:20.35,Sub,,0,0,0,,This is very critical because we are driving max IOPs.
+Dialogue: 0,0:13:20.40,0:13:25.64,Sub,,0,0,0,,It's important to use ESS to draw this constant load scenario, right?
+Dialogue: 0,0:13:25.69,0:13:31.99,Sub,,0,0,0,,So number one, your SST is best perform at a fixed percentage, I say 90%, 95%.
+Dialogue: 0,0:13:32.04,0:13:37.64,Sub,,0,0,0,,And secondly, you can utilize your SST much, much higher by subscribing most of the GPUs as you can.
+Dialogue: 0,0:13:37.69,0:13:47.19,Sub,,0,0,0,,Right, so that can be very efficient from the design all the way to the the revenue production using a GPU side.
+Dialogue: 0,0:13:47.24,0:13:50.73,Sub,,0,0,0,,Then most importantly, last part is about the microgrid, right?
+Dialogue: 0,0:13:50.78,0:13:57.21,Sub,,0,0,0,,So as as we design this new architecture, you can start understanding the power container is not just a rectifier.
+Dialogue: 0,0:13:57.26,0:14:00.95,Sub,,0,0,0,,This is where you can really find all the sources tied together,
+Dialogue: 0,0:14:01.00,0:14:07.38,Sub,,0,0,0,,which today is a 5-MW target, and tomorrow is going to be 10 MW and scalable using SST.
+Dialogue: 0,0:14:07.43,0:14:11.12,Sub,,0,0,0,,Right, so starting from utility power to the on-prem generation,
+Dialogue: 0,0:14:11.17,0:14:14.91,Sub,,0,0,0,,all the way to different renewable energy can tie into to drive
+Dialogue: 0,0:14:14.96,0:14:21.71,Sub,,0,0,0,,the optimal uh powers uh sourcing strategy to support environmental and sustainability,
+Dialogue: 0,0:14:21.76,0:14:24.59,Sub,,0,0,0,,and finally, the ESS can be integrated.
+Dialogue: 0,0:14:24.64,0:14:32.21,Sub,,0,0,0,,Right, and this also directly reading exactly what's the current data center uh load requirement from compute, cooling to networking.
+Dialogue: 0,0:14:32.26,0:14:35.70,Sub,,0,0,0,,Right, and then we can we can start training our AI, right?
+Dialogue: 0,0:14:35.75,0:14:47.19,Sub,,0,0,0,,So you can bring back the tokens, and then feed uh support operation by using this smart intelligent uh controller system as a long-term vision.
+Dialogue: 0,0:14:47.24,0:14:48.71,Sub,,0,0,0,,And here's the current road map, right?
+Dialogue: 0,0:14:48.76,0:14:56.70,Sub,,0,0,0,,As Charles uh spoke about, we have our current uh power rack sidecar design completed and ready to roll out to be used.
+Dialogue: 0,0:14:56.75,0:15:02.59,Sub,,0,0,0,,Uh very quickly, Q2 next year, uh we have the power center, the end-to-end solution, right?
+Dialogue: 0,0:15:02.64,0:15:08.91,Sub,,0,0,0,,To support retrofit or even colos to be fungible targeting at a pod level solution.
+Dialogue: 0,0:15:08.96,0:15:14.76,Sub,,0,0,0,,And then the lastly will be the SST transform rectifiers, where we are targeting Q1 20A, right?
+Dialogue: 0,0:15:14.81,0:15:18.75,Sub,,0,0,0,,For the ecosystem to have the full solution ready for deployment.
+Dialogue: 0,0:15:18.80,0:15:20.75,Sub,,0,0,0,,Um and if you look at a journey, right?
+Dialogue: 0,0:15:20.80,0:15:24.63,Sub,,0,0,0,,This is not just like, okay, we get solution done and we we call it a day.
+Dialogue: 0,0:15:24.68,0:15:26.98,Sub,,0,0,0,,It's important to care about grounding protection.
+Dialogue: 0,0:15:27.03,0:15:31.55,Sub,,0,0,0,,We have a separate talk tomorrow with my Microsoft friend Shenyong to discuss exactly
+Dialogue: 0,0:15:31.60,0:15:36.91,Sub,,0,0,0,,how the protection should be planned from the operator side or the asset owner side.
+Dialogue: 0,0:15:36.96,0:15:39.02,Sub,,0,0,0,,Uh then we talk about certification, right?
+Dialogue: 0,0:15:39.07,0:15:46.25,Sub,,0,0,0,,There are lots of things on the SST side, on the SSCB breaker side, all the way to current limiting device, right?
+Dialogue: 0,0:15:46.30,0:15:48.01,Sub,,0,0,0,,Can be certified and proved.
+Dialogue: 0,0:15:48.06,0:15:49.44,Sub,,0,0,0,,Um that's very critical, right?
+Dialogue: 0,0:15:49.49,0:15:52.24,Sub,,0,0,0,,To make sure all from end to end is fully covered.
+Dialogue: 0,0:15:52.29,0:15:56.00,Sub,,0,0,0,,And of course, at the same time, we talk about breakers, right?
+Dialogue: 0,0:15:56.05,0:15:59.55,Sub,,0,0,0,,Um based upon a coordination plan, based upon the full current strategy,
+Dialogue: 0,0:15:59.60,0:16:04.87,Sub,,0,0,0,,the end-to-end system, what's the best solution to select the right protection device.
+Dialogue: 0,0:16:04.92,0:16:08.82,Sub,,0,0,0,,Um then we talk about connection whips that Jerry directly opened up the spec to
+Dialogue: 0,0:16:08.87,0:16:15.24,Sub,,0,0,0,,make sure we're driving this very safe design uh utilizing the EV whips technology with interlock.
+Dialogue: 0,0:16:15.29,0:16:19.92,Sub,,0,0,0,,And finally, it's this high-density power conversion where we start from today's 5 MW,
+Dialogue: 0,0:16:19.97,0:16:27.31,Sub,,0,0,0,,and shooting for 10 MW for day two and in Britain's uh um microgrid design.
+Dialogue: 0,0:16:27.36,0:16:28.77,Sub,,0,0,0,,Here's the last slide, right?
+Dialogue: 0,0:16:28.82,0:16:30.61,Sub,,0,0,0,,So, like I said, it's a journey.
+Dialogue: 0,0:16:30.66,0:16:31.55,Sub,,0,0,0,,It's a roadmap.
+Dialogue: 0,0:16:31.60,0:16:31.90,Sub,,0,0,0,,Right?
+Dialogue: 0,0:16:31.88,0:16:34.25,Sub,,0,0,0,,We're driving very quickly on the engineering side, right?
+Dialogue: 0,0:16:34.30,0:16:41.16,Sub,,0,0,0,,So, as you know, we're starting from the concept to the architecture, and now we'll define exactly the key components that's required.
+Dialogue: 0,0:16:41.21,0:16:43.81,Sub,,0,0,0,,Jerry set out the simulation requirement, right?
+Dialogue: 0,0:16:43.86,0:16:44.16,Sub,,0,0,0,,So,
+Dialogue: 0,0:16:44.04,0:16:48.79,Sub,,0,0,0,,we know on the simulation side how things can be compatible with Nvidia compute and
+Dialogue: 0,0:16:48.84,0:16:54.24,Sub,,0,0,0,,how we drive the system stability and the the overall right uh simulation uh targets,
+Dialogue: 0,0:16:54.29,0:16:54.72,Sub,,0,0,0,,right?
+Dialogue: 0,0:16:54.77,0:16:56.15,Sub,,0,0,0,,To set the criteria.
+Dialogue: 0,0:16:56.20,0:17:00.37,Sub,,0,0,0,,Then, moving forward, we're going to get into the prototyping phase, right?
+Dialogue: 0,0:17:00.42,0:17:06.30,Sub,,0,0,0,,To make sure the system can be validated not just from simulation, but set up from the small scale,
+Dialogue: 0,0:17:06.35,0:17:12.31,Sub,,0,0,0,,maybe one cell, one one one one power shelf, all the way to a large POC being set up.
+Dialogue: 0,0:17:12.36,0:17:21.95,Sub,,0,0,0,,So, everybody from the customer side, from the regulatory side, and then from our team maker side, can all jointly validate the system outcome.
+Dialogue: 0,0:17:22.00,0:17:26.27,Sub,,0,0,0,,Then regulatory will help with compliance and validation.
+Dialogue: 0,0:17:26.32,0:17:30.83,Sub,,0,0,0,,And we'll be ready for production readiness, for mass production, and for final deployment.
+Dialogue: 0,0:17:30.88,0:17:33.36,Sub,,0,0,0,,And like I said, this is the current option C.
+Dialogue: 0,0:17:33.41,0:17:39.23,Sub,,0,0,0,,We are moving fast on this one, and like to invite the industry owners to join this journey.
+Dialogue: 0,0:17:39.28,0:17:41.38,Sub,,0,0,0,,That's our presentation.
+Dialogue: 0,0:17:41.43,0:17:42.75,Sub,,0,0,0,,Thank you guys.
+Dialogue: 0,0:17:42.80,0:17:45.43,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:17:45.48,0:17:47.05,Sub,,0,0,0,,Questions for our presenters.
+Dialogue: 0,0:17:47.10,0:17:55.83,Sub,,0,0,0,,Please line up at the mic.
+Dialogue: 0,0:17:55.88,0:17:59.49,Sub,,0,0,0,,Hey, I'm Sylvia from TE Connectivity.
+Dialogue: 0,0:17:59.54,0:18:01.58,Sub,,0,0,0,,I have three questions.
+Dialogue: 0,0:18:01.63,0:18:08.48,Sub,,0,0,0,,One, will the 1500 V DC distribution become mainstream in data center?
+Dialogue: 0,0:18:08.53,0:18:12.83,Sub,,0,0,0,,And if so, what will be the expected timeline?
+Dialogue: 0,0:18:12.88,0:18:23.87,Sub,,0,0,0,,Second question for the SST, and solid state circuit breaker, do you think when will they expect it become mainstream in terms of timeline?
+Dialogue: 0,0:18:23.92,0:18:31.71,Sub,,0,0,0,,And then the third is the for the CDU roadmap, do you see what is the next generation 5 megawatt unit will come?
+Dialogue: 0,0:18:31.76,0:18:32.79,Sub,,0,0,0,,Yeah, three questions.
+Dialogue: 0,0:18:32.84,0:18:33.72,Sub,,0,0,0,,Yeah, quickly.
+Dialogue: 0,0:18:33.77,0:18:37.69,Sub,,0,0,0,,1500 Let's do one question so that others can also Okay, I'll do it very quickly.
+Dialogue: 0,0:18:37.74,0:18:39.80,Sub,,0,0,0,,1500 V DC is not not in the current roadmap.
+Dialogue: 0,0:18:39.85,0:18:41.95,Sub,,0,0,0,,I'm not sure which data center do 1500 V DC.
+Dialogue: 0,0:18:42.00,0:18:43.08,Sub,,0,0,0,,I'd like to hear about it.
+Dialogue: 0,0:18:43.13,0:18:45.92,Sub,,0,0,0,,800 V DC has been set because our target is for compute 800 V.
+Dialogue: 0,0:18:45.97,0:18:49.04,Sub,,0,0,0,,And we're trying to be streamlined for the efficiency.
+Dialogue: 0,0:18:49.09,0:18:49.45,Sub,,0,0,0,,Okay?
+Dialogue: 0,0:18:49.48,0:18:51.28,Sub,,0,0,0,,And I forgot what's your second one.
+Dialogue: 0,0:18:51.33,0:18:54.35,Sub,,0,0,0,,Is SST the SST and solid state circuit breaker.
+Dialogue: 0,0:18:54.40,0:18:55.22,Sub,,0,0,0,,Yeah, SSTB.
+Dialogue: 0,0:18:55.27,0:18:56.39,Sub,,0,0,0,,Yeah, go ahead.
+Dialogue: 0,0:18:56.44,0:18:58.95,Sub,,0,0,0,,Uh I I just wanted to say for 1500 V,
+Dialogue: 0,0:18:59.00,0:19:06.85,Sub,,0,0,0,,the the bottleneck is actually the PDB on the compute tray when we go from 800 V direct to a 12 V, right, in the compute tray.
+Dialogue: 0,0:19:06.90,0:19:14.62,Sub,,0,0,0,,And so if there are any technologies, right, that can give higher density conversion 1500 V direct to 12 in the compute tray.
+Dialogue: 0,0:19:14.67,0:19:17.37,Sub,,0,0,0,,We're interested, but that's that's the challenge, right?
+Dialogue: 0,0:19:17.42,0:19:25.03,Sub,,0,0,0,,Is we're trying to take the the distribution all the way to the compute tray, and that becomes very difficult at 1500 V.
+Dialogue: 0,0:19:25.08,0:19:27.99,Sub,,0,0,0,,Yeah, SSTB depends on size, 125 amp.
+Dialogue: 0,0:19:28.04,0:19:30.60,Sub,,0,0,0,,I think it's getting very available very fast.
+Dialogue: 0,0:19:30.65,0:19:32.64,Sub,,0,0,0,,We just need certification to be ready.
+Dialogue: 0,0:19:32.69,0:19:35.58,Sub,,0,0,0,,Right, in the CDU, we are promoting 500 DC.
+Dialogue: 0,0:19:35.63,0:19:37.07,Sub,,0,0,0,,It should be 800 DC.
+Dialogue: 0,0:19:37.12,0:19:37.75,Sub,,0,0,0,,It has VFD.
+Dialogue: 0,0:19:37.80,0:19:40.71,Sub,,0,0,0,,It's better to be DC input to drive the efficiency up.
+Dialogue: 0,0:19:40.76,0:19:41.95,Sub,,0,0,0,,Okay, you can go to next.
+Dialogue: 0,0:19:42.00,0:19:43.19,Sub,,0,0,0,,All right.
+Dialogue: 0,0:19:43.24,0:19:45.07,Sub,,0,0,0,,Great presentation, Mike and Jarred.
+Dialogue: 0,0:19:45.12,0:19:54.95,Sub,,0,0,0,,Can you please come on comment on what uh standards and codes the industry should drive together in order to make this vision into a reality?
+Dialogue: 0,0:19:55.00,0:19:55.63,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:19:55.68,0:20:00.94,Sub,,0,0,0,,Yeah, yeah, I think you mentioned SST, UL 2877, right, is the current placeholder.
+Dialogue: 0,0:20:00.99,0:20:06.77,Sub,,0,0,0,,We'd like to hear from all the industry partners, such as a lot to tell us where's the gap, right?
+Dialogue: 0,0:20:06.82,0:20:13.80,Sub,,0,0,0,,And secondly, SSCB, right, also UL 91, be specific, has to help to make sure this can be certified.
+Dialogue: 0,0:20:13.85,0:20:19.42,Sub,,0,0,0,,And I mentioned about current limited approach, right, to make sure that the converter approach,
+Dialogue: 0,0:20:19.47,0:20:28.03,Sub,,0,0,0,,DC-DC converter, as well as galvanic isolation, can be approved as a source limiting methods.
+Dialogue: 0,0:20:28.08,0:20:30.64,Sub,,0,0,0,,Hi, this is Pranesh from Ampsys.
+Dialogue: 0,0:20:30.69,0:20:33.71,Sub,,0,0,0,,Mike, Sorry, we are like at time.
+Dialogue: 0,0:20:33.76,0:20:34.92,Sub,,0,0,0,,Um Quick one.
+Dialogue: 0,0:20:34.97,0:20:36.19,Sub,,0,0,0,,Very quick.
+Dialogue: 0,0:20:36.24,0:20:41.31,Sub,,0,0,0,,I'm sorry, like I have to follow the process like a way but you are free to I will catch up with you later.
+Dialogue: 0,0:20:41.36,0:20:43.55,Sub,,0,0,0,,We have about like two two to three minutes.
+Dialogue: 0,0:20:43.60,0:20:45.76,Sub,,0,0,0,,So, you can follow up with the presenters.
+Dialogue: 0,0:20:45.81,0:20:49.36,Sub,,0,0,0,,So, let's thank our presenters.

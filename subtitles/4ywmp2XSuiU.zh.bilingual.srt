@@ -1,0 +1,1339 @@
+1
+00:00:03,760 --> 00:00:08,691
+All right, how many people using the tokens this day and complain about I'm out of tokens.
+好的，今天有多少人使用词元却抱怨词元用完了。
+
+2
+00:00:08,741 --> 00:00:09,950
+Cannot generate image.
+无法生成图像。
+
+3
+00:00:10,000 --> 00:00:12,190
+Cannot generate my stack.
+无法生成我的堆栈。
+
+4
+00:00:12,240 --> 00:00:15,275
+How many people also suffering from slow deployment?
+有多少人也正受制于部署缓慢的问题？
+
+5
+00:00:15,325 --> 00:00:20,710
+Get boss, you know, complaining about the revenues delay, all that stuff.
+赶紧去见老板，你知道的，他抱怨收入延迟，还有各种事情。
+
+6
+00:00:20,760 --> 00:00:26,150
+Okay, if that's the case, we are talking about MDC, how we can enable how we can solve those problems.
+好的，如果是这种情况，我们正在讨论 MDC，如何实现，如何解决这些问题。
+
+7
+00:00:26,200 --> 00:00:28,470
+Right, so Jensen give two missions.
+对，所以黄仁勋提出了两个任务。
+
+8
+00:00:28,520 --> 00:00:29,233
+Simple mission, right?
+简单任务，对吧？
+
+9
+00:00:29,283 --> 00:00:30,088
+How hard can that be?
+这能有多难？
+
+10
+00:00:30,138 --> 00:00:32,470
+How we can optimize power for token?
+我们如何优化词元的功耗？
+
+11
+00:00:32,520 --> 00:00:40,335
+Right, as we went through this power crisis, this MDC number one, we are simplified and deliver a more efficient power architect.
+对，经历了这次电力危机后，MDC 排第一，我们简化了设计，交付了更高效的电源架构。
+
+12
+00:00:40,385 --> 00:00:48,590
+Right, cutting back the cutting out the conversion stages, right, and quickly pushing a more simplified compact power design.
+对，减少中间的转换环节，快速推出更简化、紧凑的电源设计方案。
+
+13
+00:00:48,640 --> 00:00:55,830
+And also we are preparing the next generation of the system architect to support the next generation GPUs.
+同时，我们正在为下一代系统架构师做准备，以支持下一代GPU。
+
+14
+00:00:55,880 --> 00:01:02,790
+And at the same time we try improve the overall efficiency altogether that drives a lower token cost.
+同时，我们努力提升整体效率，从而降低每个词元的成本。
+
+15
+00:01:02,840 --> 00:01:05,104
+Secondly, we try to drive the deployment speed.
+其次，我们致力于提升部署速度。
+
+16
+00:01:05,154 --> 00:01:12,030
+Right, so deployment speed is critical that day one we we embrace AC DC coexistence.
+是的，部署速度至关重要，第一天我们就需要支持交流电与直流电共存。
+
+17
+00:01:12,080 --> 00:01:18,430
+Right, so we can have different user, different stage, but you can deliver different adopt different options.
+是的，我们可以针对不同用户、不同阶段，提供不同的选择方案。
+
+18
+00:01:18,480 --> 00:01:20,750
+And also the footprint can be reduced.
+此外，占地面积也可以缩小。
+
+19
+00:01:20,800 --> 00:01:26,561
+Less copper, more integrated system, we can really save the interior space and exterior spaces.
+铜材使用更少，系统集成度更高，我们能真正节省内部和外部空间。
+
+20
+00:01:26,611 --> 00:01:28,190
+And lastly, the modular, right?
+最后，是模块化，对吧？
+
+21
+00:01:28,240 --> 00:01:32,870
+Everybody talk about modular data centers, this is a driver to make it work.
+每个人都在谈论模块化数据中心，这正是推动其实现的关键。
+
+22
+00:01:32,920 --> 00:01:38,230
+I'll turn over to Jared to talk about roadmap.
+接下来我将把时间交给贾里德，由他来介绍路线图。
+
+23
+00:01:38,280 --> 00:01:42,880
+So, this graph here, hopefully everyone's seen a variant of it.
+这张图，希望大家都见过类似的版本。
+
+24
+00:01:42,930 --> 00:01:43,510
+Uh-oh.
+哎呀。
+
+25
+00:01:43,560 --> 00:01:44,005
+There we go.
+就是这样。
+
+26
+00:01:44,055 --> 00:01:45,771
+Hopefully everyone's seen a variant of this.
+希望大家见过类似的场景。
+
+27
+00:01:45,821 --> 00:01:50,430
+This is what's ultimately driving the higher power densities over time.
+这才是推动功率密度随时间不断提升的根本原因。
+
+28
+00:01:50,480 --> 00:01:53,908
+Uh so, we essentially have two things that are going on.
+嗯，我们实际上在同时进行两件事。
+
+29
+00:01:53,958 --> 00:01:57,580
+One is our GPUs, generation over generation, consume more power,
+一是我们的GPU，每代产品功耗都在增加，
+
+30
+00:01:57,630 --> 00:02:02,430
+but something that's fundamentally different about GPUs is that they get more efficient the more
+但GPU一个根本性的不同之处在于，我们能在相同空间内塞入更多GPU时，
+
+31
+00:02:02,480 --> 00:02:08,190
+GPUs we can pack in the same space uh because we can network them over copper,
+它们的效率会更高，因为我们可以通过铜线互连，
+
+32
+00:02:08,240 --> 00:02:10,950
+which is gives a better TCO.
+从而带来更低的总体拥有成本。
+
+33
+00:02:11,000 --> 00:02:16,744
+And so over time, we have power increasing, but then we can very rapidly uh increase power, right?
+所以随着时间推移，功耗在上升，但我们可以非常迅速地提升功耗，对吧？
+
+34
+00:02:16,794 --> 00:02:18,830
+It can very rapidly double.
+它可以迅速翻倍。
+
+35
+00:02:18,880 --> 00:02:25,336
+And as power engineers, we don't want to be the bottleneck in the um in all of these AI deployments and all these new systems,
+作为电源工程师，我们不希望成为所有AI部署和新系统中的瓶颈，
+
+36
+00:02:25,386 --> 00:02:32,510
+so we want to get platforms ready so that when uh the chips are are there, they're ready to land.
+所以我们要提前准备好平台，这样当芯片到位时，它们就能立即投入使用。
+
+37
+00:02:32,560 --> 00:02:40,270
+And so for a Gen 1 power rack, we were capable of 145 kW with our 33 kW power shelves.
+因此对于第一代电源机架，我们使用33千瓦的电源货架，实现了145千瓦的功率。
+
+38
+00:02:40,320 --> 00:02:47,550
+For a Gen 2 power system, we are 330 W capable with our 110 kW power shelves.
+对于第二代电源系统，我们使用110千瓦的电源货架，实现了330瓦的功率能力。
+
+39
+00:02:47,600 --> 00:02:54,212
+And for our Gen 3, we've moved to 100 or we are moving 100% liquid-cooled systems.
+而在我们的第三代系统中，我们已转向100%液冷系统。
+
+40
+00:02:54,262 --> 00:02:58,847
+And this uh makes it so if we use our DC-to-DC power shelves,
+这样，如果我们使用直流到直流的电源货架，
+
+41
+00:02:58,897 --> 00:03:08,909
+we can support up to 570 kW in a single rack um with both a 54-V liquid-cooled bus bar as well as liquid-cooled power shelves.
+就能在单个机架中支持高达570千瓦的功率，同时配备54伏液冷母排和液冷电源货架。
+
+42
+00:03:08,959 --> 00:03:11,670
+Now, as those power levels continue to increase,
+随着功率水平持续提升，
+
+43
+00:03:11,720 --> 00:03:18,423
+what we're working on now and what we're not ready to show exactly how it will work is the 800-V native racks, right?
+我们目前正在研发的，也是目前还不准备展示具体实现方式的，就是原生800 VDC机架，对吧？
+
+44
+00:03:18,473 --> 00:03:21,189
+So that's that's where we're going long-term.
+这正是我们长期的发展方向。
+
+45
+00:03:21,239 --> 00:03:28,630
+And so then we're building these systems and we want to harmonize them with the data center.
+因此我们正在构建这些系统，并希望与数据中心实现协同。
+
+46
+00:03:28,680 --> 00:03:36,270
+And so that that's why we're building 800 V is we want we want to both make the rack capable of 1 MW per position,
+正是因为如此，我们才要构建800 VDC系统，以使每个机位都能达到1兆瓦的功率能力，
+
+47
+00:03:36,320 --> 00:03:41,328
+but we also want to make sure that the data center is optimized to what the rack is doing, right?
+同时确保数据中心能针对机架的运行进行优化，对吧？
+
+48
+00:03:41,378 --> 00:03:48,430
+That includes energy storage, that includes um efficient distribution, and a simple distribution end to end.
+这包括储能系统、高效的配电，以及端到端的简单配电。
+
+49
+00:03:48,480 --> 00:03:53,562
+And in order to do that, we we have um uh three different methods.
+为了实现这一点，我们有三种不同的方法。
+
+50
+00:03:53,612 --> 00:03:58,870
+So, looking at AC distribution today, we take AC all the way into the rack.
+因此，从当前的交流电配电来看，我们会将交流电一直传输到机架。
+
+51
+00:03:58,920 --> 00:04:04,750
+And that's where these yellow blocks that we're showing in the diagram, that's where we're putting capacitors,
+这就是图中我们展示的黄色模块所在的位置，我们会在那里安装电容器，
+
+52
+00:04:04,800 --> 00:04:12,095
+electrolytic capacitors for load shaping and dealing with the AI workload fluctuations.
+使用电解电容器来实现负载整形，并应对人工智能工作负载的波动。
+
+53
+00:04:12,145 --> 00:04:16,550
+And so, today that's put into our 110 kW power shelf.
+目前，这些设备被集成到我们的110千瓦电源机架中。
+
+54
+00:04:16,600 --> 00:04:22,202
+Um then as we move to 800 V DC, that moves into our power rack.
+当我们转向800 VDC时，这些设备将被移至电源机架。
+
+55
+00:04:22,252 --> 00:04:26,200
+So, we have capacitors local there for energy storage.
+因此，我们会在当地配置电容器用于能量存储。
+
+56
+00:04:26,250 --> 00:04:29,833
+Um for option B, that's an end-of-row solution.
+对于选项B，这是一种机架末端的解决方案。
+
+57
+00:04:29,883 --> 00:04:34,470
+And option A and option B, we've we've harmonized into a single solution.
+选项A和选项B已经整合为单一解决方案。
+
+58
+00:04:34,520 --> 00:04:43,319
+Um and then for option C is where we move to solid-state transformers, and we really go from the gray space all the way to the rack with 800 V DC.
+而选项C则是转向固态变压器，我们真正实现从基础设施区（灰区）到机架全程使用800 VDC。
+
+59
+00:04:43,369 --> 00:04:47,510
+And so, we'll we'll walk through these each of these options.
+接下来，我们将逐一介绍这些方案。
+
+60
+00:04:47,560 --> 00:04:52,570
+Um So, this is showing uh just DSX today.
+这里展示的是目前的DSX。
+
+61
+00:04:52,620 --> 00:04:57,430
+This is a full super pod with AC input.
+这是一个带有交流输入的完整超级机柜。
+
+62
+00:04:57,480 --> 00:05:00,670
+And then we'll show our power rack.
+然后我们将展示我们的电源机架。
+
+63
+00:05:00,720 --> 00:05:06,148
+So, this is our 800 V DC MGX power rack, and it takes AC in.
+这是我们 800 VDC MGX 电源机架，它接收交流输入。
+
+64
+00:05:06,198 --> 00:05:11,002
+It outputs 800 V DC, and then with cross cables in the back,
+它输出 800 VDC，然后通过背面的交叉电缆，
+
+65
+00:05:11,052 --> 00:05:18,230
+it goes into 800 to 54 V DC to DC power shelf, and then powers the 54 V bus bar.
+转换为 800 VDC到 54 V 直流-直流电源机柜，再为 54 V 母排供电。
+
+66
+00:05:18,280 --> 00:05:29,630
+And so, what this will allow us to do is any rack that's 800 V DC capable, it can then land into an AC data center.
+因此，这使我们能够将任何支持 800 VDC的机柜接入交流数据中心。
+
+67
+00:05:29,680 --> 00:05:41,510
+And so, this is showing an updated pod then with that with that power rack, and taking in AC, but then powering up 800 V racks.
+这展示了配备该电源机架的更新机柜，接收交流电，但为 800 VDC机柜供电。
+
+68
+00:05:41,560 --> 00:05:49,510
+And presently we can support a one power rack to four compute rack ratio, but that will adjust depending on the power.
+目前我们支持 1 个电源机架对应 4 个计算机柜的比例，但具体比例会根据电力需求调整。
+
+69
+00:05:49,560 --> 00:06:00,133
+Now, for option B, what we've done is we can essentially take that same power rack and integrate it with a remote power panel or a AC PDU.
+对于选项 B，我们所做的就是将相同的电源机架与远程电源面板或交流 PDU 集成。
+
+70
+00:06:00,183 --> 00:06:08,678
+And so then we take in a large AC feed into the top of the rack and we can then power those same DC to or those same AC
+然后我们将大容量交流电输入机架顶部，即可为这些直流或交流
+
+71
+00:06:08,728 --> 00:06:18,938
+to 800 V power shelves and then distribute that and treat it just like a remote power panel and power all of the all of the compute racks that way.
+转换为 800 VDC的电源机柜供电，再进行分配，将其当作远程电源面板使用，从而为所有计算机柜供电。
+
+72
+00:06:18,988 --> 00:06:29,590
+And so this is this is something that we would use for like a retrofit situation where you want to retrofit an entire row.
+因此，这适用于需要对整列机柜进行改造的场景。
+
+73
+00:06:29,640 --> 00:06:38,750
+Now, the connector that we've developed, the 125 amp continuous rated connector is rated for 125 amp continuous globally.
+现在，我们开发的这款连接器，额定连续电流为125安培，全球范围内均适用125安培连续电流。
+
+74
+00:06:38,800 --> 00:06:42,310
+And that's uh at 800 V DC.
+这是在800 VDC下实现的。
+
+75
+00:06:42,360 --> 00:06:50,509
+And so we've designed this so that we can basically use it on our power rack and we go from the power rack over to the compute cabinet.
+因此我们设计这款连接器，使其可直接用于我们的电源机架，并从电源机架连接到计算机柜。
+
+76
+00:06:50,559 --> 00:06:54,190
+But it's also been designed in mind to be used long-term.
+但这款连接器也考虑到了长期使用的需求。
+
+77
+00:06:54,240 --> 00:06:56,938
+So when we have 800 V data center,
+因此当我们的数据中心采用800 VDC系统时，
+
+78
+00:06:56,988 --> 00:07:04,990
+it can be hardwired directly into a tap box as a drop cord and plug directly into the back of our DC to DC power shelf.
+它可以直接接入分接箱作为跳线，直接插入我们直流到直流电源架的背面。
+
+79
+00:07:05,040 --> 00:07:14,085
+Now, we're we are moving to the native 800 V racks, but we believe that these DC to DC power shelves and therefore these connectors,
+目前我们正转向原生800 VDC机架，但我们相信这些直流到直流电源架以及相应的连接器，
+
+80
+00:07:14,135 --> 00:07:18,590
+they'll be used long-term for storage racks, networking racks.
+将长期用于存储机架和网络机架。
+
+81
+00:07:18,640 --> 00:07:26,950
+There's going to be all the other components in the data center that will need this long-term.
+数据中心中的其他各类组件也将长期需要这种连接器。
+
+82
+00:07:27,000 --> 00:07:38,710
+Now, for that connector and for the the drop cord style tap box, we can we're also our goal is to make this as safe as plugging in an EV, right?
+对于这款连接器以及跳线式分接箱，我们的目标也是让其安全程度达到像插电电动车一样。
+
+83
+00:07:38,760 --> 00:07:49,568
+Everyone or it's it's very common, right, to to plug in EV vehicles today for charging and that's all that's all high voltage, right, 400, 800 volts.
+如今，人们普遍为电动车充电，这本身就是高电压操作，电压达到400伏或800 VDC。
+
+84
+00:07:49,618 --> 00:07:55,491
+And we're putting in the same interlocks and safety mechanisms that are already common in that industry.
+我们已引入该行业已普遍采用的互锁和安全机制。
+
+85
+00:07:55,541 --> 00:08:02,990
+So, the cord by default is off and then it needs to plug in and have a high voltage interlock to ensure the system is safe.
+因此，电缆默认是断开的，需要插上并具备高压互锁，以确保系统安全。
+
+86
+00:08:03,040 --> 00:08:09,950
+And we're putting in all of those same mechanisms into the cable and into the the power sources.
+我们正在将所有这些机制都集成到电缆和电源中。
+
+87
+00:08:10,000 --> 00:08:18,110
+So, the next Mike will talk about option C, which is where we actually move to SST powering racks.
+接下来由迈克介绍选项C，也就是我们实际转向使用固态变压器为机架供电的情况。
+
+88
+00:08:18,160 --> 00:08:18,529
+Exactly.
+完全正确。
+
+89
+00:08:18,559 --> 00:08:19,307
+Thank you, Jared.
+谢谢，贾里德。
+
+90
+00:08:19,357 --> 00:08:19,657
+Right,
+对。
+
+91
+00:08:19,667 --> 00:08:24,648
+so Jared talking about what A and B for quick adoption but that adoption and also
+所以贾里德在讲A和B选项，便于快速采用，但这种采用以及
+
+92
+00:08:24,698 --> 00:08:28,478
+for retrofit where option C is where we see it's going to be a North Star,
+在改造场景中，选项C才是我们看到的未来方向。
+
+93
+00:08:28,528 --> 00:08:28,880
+right?
+对吧？
+
+94
+00:08:28,910 --> 00:08:30,932
+We try to really accelerate this space.
+我们正努力大力推动这一领域的发展。
+
+95
+00:08:30,982 --> 00:08:37,126
+What we show on the screen here is using 34.5 kV as a medium voltage input with RMU loop, right?
+屏幕上展示的是采用34.5千伏作为中压输入，并搭配RMU环路，对吧？
+
+96
+00:08:37,176 --> 00:08:39,297
+So, 600 amp is a standard rating.
+因此，600安培是一个标准额定值。
+
+97
+00:08:39,347 --> 00:08:44,327
+So, that whole loop has 35 35.9 MW of capacity.
+因此，整个环路的容量为35.9兆瓦。
+
+98
+00:08:44,377 --> 00:08:48,270
+So, 6 + 1 the N + 1 is what we try to drive here.
+所以，我们这里努力实现的是6+1的N+1冗余。
+
+99
+00:08:48,320 --> 00:08:53,953
+So, you can see we are deploying 5 MW power block integrate with ESS as one module.
+你可以看到，我们正在部署一个5兆瓦的电源模块，并与储能系统集成作为一个单元。
+
+100
+00:08:54,003 --> 00:08:59,870
+And then we have the bottom feed with a auxiliary 5 MW of AC to be reserved.
+然后我们还有底部供电，额外预留5兆瓦的交流电。
+
+101
+00:08:59,920 --> 00:09:06,250
+And you can drive the 6 + 1 compute cluster at 30 MW capacity into the data hall.
+你可以将6+1的计算集群以30兆瓦的容量直接接入数据中心机房。
+
+102
+00:09:06,300 --> 00:09:09,600
+And you have the reserve loop layer to provide a maintenance access.
+同时，我们还设置了备用环路层，以提供维护接入。
+
+103
+00:09:09,650 --> 00:09:13,830
+This can also be further enhanced as auto transfer scheme, right?
+这还可以进一步升级为自动切换方案，对吧？
+
+104
+00:09:13,880 --> 00:09:21,037
+So, you can see this whole block becomes a UPS function with automatic transfer and maintenance access provided.
+所以你可以看到，整个模块现在具备了不间断电源功能，支持自动切换和维护接入。
+
+105
+00:09:21,087 --> 00:09:28,550
+Then straight shot single-ended into the data hall compute cluster to support fast deployment fast interconnection.
+然后直接单端接入数据中心计算集群，支持快速部署和快速互联。
+
+106
+00:09:28,600 --> 00:09:31,564
+This day two can be turned into a power container.
+这个单元日可以转变为一个电源集装箱。
+
+107
+00:09:31,614 --> 00:09:40,750
+Right, so we need normal buildings everything can be fully like a parking lot directly plug and play fast deployment parallel to the Okay.
+对，所以我们需要普通建筑，所有设施都能像停车场一样，直接插电即用，实现快速部署，与现场建设并行进行。
+
+108
+00:09:40,800 --> 00:09:43,311
+construction from the factories to the field.
+从工厂到现场的建设。
+
+109
+00:09:43,361 --> 00:09:47,310
+Uh that's how we see the futures look like looking like.
+嗯，这就是我们看到的未来模样。
+
+110
+00:09:47,360 --> 00:09:48,270
+So, talking SST, right?
+所以，说到固态变压器，对吧？
+
+111
+00:09:48,320 --> 00:09:50,070
+This is just a quick visual.
+这只是一个简短的视觉展示。
+
+112
+00:09:50,120 --> 00:09:52,620
+Uh we are promoting outdoor solution as we spoke.
+嗯，正如我们所说，我们正在推广户外解决方案。
+
+113
+00:09:52,670 --> 00:09:54,495
+Uh it's a 5 MV a target.
+嗯，目标是 5 兆伏安。
+
+114
+00:09:54,545 --> 00:09:59,276
+This has been aligned with Google and Microsoft trends as initial target.
+这个目标已与谷歌和微软的趋势对齐，作为初始目标。
+
+115
+00:09:59,326 --> 00:10:07,615
+Uh in the same time, right, the ESS direct intertie will link the DCTC content converter inside the container to drive the performance.
+嗯，与此同时，储能系统直接并网将把集装箱内的 DCTC 电源转换器连接起来，以提升性能。
+
+116
+00:10:07,665 --> 00:10:13,750
+Uh and then the catcher could be optional depends on your service uptime and maintenance plan.
+嗯，那么接收端可能是可选的，具体取决于您的服务可用性和维护计划。
+
+117
+00:10:13,800 --> 00:10:20,074
+This one shows exactly how we migrating from AC to DC to be streamlined and then so be more efficient.
+这个图正好展示了我们如何从交流电转向直流电，实现流程简化，从而更加高效。
+
+118
+00:10:20,124 --> 00:10:27,802
+Right, from the seven-layer AC solution and moving to just a four-layer from the grid to the chip, right, with single power conversion.
+对，从七层交流电解决方案，转变为从电网到芯片仅四层，通过单一电源转换实现。
+
+119
+00:10:27,852 --> 00:10:33,358
+Uh that's pretty much where we're going to see the whole thing get very very integrated and compact.
+嗯，这正是我们看到整个系统将变得高度集成和紧凑的地方。
+
+120
+00:10:33,408 --> 00:10:35,590
+Um so, it's not just a voltage change, right?
+嗯，这可不只是电压变化，对吧？
+
+121
+00:10:35,640 --> 00:10:41,364
+It's really drive the simplification, have less conversion stages, and of course smaller footprint.
+这确实能推动简化，减少转换环节，当然还能缩小占地面积。
+
+122
+00:10:41,414 --> 00:10:46,350
+That's why the containerized module design can be supported.
+这就是为什么可以支持模块化集装箱设计。
+
+123
+00:10:46,400 --> 00:10:49,794
+This give you a quick overview about how things can get deployed.
+这能让你快速了解部署方式。
+
+124
+00:10:49,844 --> 00:10:52,497
+Right, so we're showing the RMU to the far left,
+对，我们展示的是最左侧的RMU，
+
+125
+00:10:52,547 --> 00:10:59,150
+uh where this is the the one of the the the discipline they can design everything on the medium voltage completion.
+这里是中压配电的完整设计，他们可以在此完成所有设计工作。
+
+126
+00:10:59,200 --> 00:11:06,503
+And then you have the space for the ESS and SST with one OEM control scope for quick interconnections.
+然后你有ESS和SST的空间，采用单一OEM控制范围，实现快速连接。
+
+127
+00:11:06,553 --> 00:11:11,483
+Where the ESS uh can be sized uh based upon the user definition,
+ESS的容量可根据用户定义进行配置，
+
+128
+00:11:11,533 --> 00:11:18,630
+but of course the power smoothing that'll be a must-have that Jerry will talk about uh in tomorrow's talk in details.
+但当然，功率平滑功能是必不可少的，杰里将在明天的演讲中详细讲解。
+
+129
+00:11:18,680 --> 00:11:20,595
+Then the power container, like I explained, right?
+然后是电源集装箱，正如我所解释的那样。
+
+130
+00:11:20,645 --> 00:11:25,970
+This is where you have the SST medium voltage section coming in with SST to deliver 800 DC,
+这里是SST中压部分接入，通过SST输出800 VDC，
+
+131
+00:11:26,020 --> 00:11:31,386
+and your DC switchboard will integrate all the power together from the SST output to
+你的直流配电柜将整合SST输出的所有电力，从SST输出端到
+
+132
+00:11:31,436 --> 00:11:38,230
+the catcher's system and an ESS interconnection and an output feeders directly into the building.
+接收系统的连接、ESS连接以及直接接入建筑的输出馈线。
+
+133
+00:11:38,280 --> 00:11:40,148
+Inside building have DCRP, right?
+建筑内有 DCRP，对吧？
+
+134
+00:11:40,198 --> 00:11:41,765
+This where things can get fungible.
+这里就是事物变得可互换的地方。
+
+135
+00:11:41,815 --> 00:11:45,473
+Depends on your load requirement, you can design different size RPP.
+根据您的负载需求，可以设计不同尺寸的 RPP。
+
+136
+00:11:45,523 --> 00:11:52,350
+And also this DCRP can be different room or adjacent or directly in the same white space as we show.
+而且这个 DCRP 可以位于不同房间、相邻房间，或如我们展示的那样，直接在同一白色空间内。
+
+137
+00:11:52,400 --> 00:11:57,229
+And then the crack units on the side and we are moving towards fully liquid cool solution for the power shelf.
+然后是侧面的裂变单元，我们正朝着电源架的全液冷解决方案迈进。
+
+138
+00:11:57,279 --> 00:12:05,990
+So the whole thermal uh re thermal management rejection will be fully lowered than 2% as a target.
+因此，整体热管理的散热目标将完全降低至 2% 以下。
+
+139
+00:12:06,040 --> 00:12:07,624
+Then talk about the ESS.
+接下来谈谈储能系统（ESS）。
+
+140
+00:12:07,674 --> 00:12:13,990
+Um so I'll talk about key functions and tomorrow Jerry has a during our end-to-end performance review,
+嗯，我先讲一下关键功能，明天杰里会在我们端到端性能评审期间进行讲解，
+
+141
+00:12:14,040 --> 00:12:18,990
+we can uh showcase exactly what's the key uh driver in performance of that.
+我们可以准确展示性能的关键驱动因素是什么。
+
+142
+00:12:19,040 --> 00:12:22,335
+Um so you can see this uh ESS is bi-directional device, right?
+嗯，你们可以看到这个 ESS 是一个双向设备，对吧？
+
+143
+00:12:22,385 --> 00:12:25,983
+It provides uh number one, it's about full right through, right?
+它提供第一项功能，就是全程贯通，对吧？
+
+144
+00:12:26,033 --> 00:12:33,737
+This is what today best can be done upstream, but it's full right through is more than just connected to the grid under incident or disturbance.
+这是目前上游能做到的最好水平，但全程贯通不仅仅是发生事故或扰动时连接到电网而已。
+
+145
+00:12:33,787 --> 00:12:40,830
+It's more important about how you control the IT curve and power quality to meet the compliance to the rack level.
+更重要的是如何控制IT曲线和电能质量，以满足机架级别的合规要求。
+
+146
+00:12:40,880 --> 00:12:42,773
+And secondly, the backup power time, right?
+其次，是备用电源的持续时间，对吧？
+
+147
+00:12:42,823 --> 00:12:47,322
+This is where we have friends have BBUs been used a lot to drive that service up time.
+这里，我们的朋友大量使用BBU来提升服务的可用性。
+
+148
+00:12:47,372 --> 00:12:48,987
+You can treat as a UPS, right?
+你可以把它当作不间断电源，对吧？
+
+149
+00:12:49,037 --> 00:12:51,910
+Where the backup power time can be directly specified.
+可直接指定备用电源时间。
+
+150
+00:12:51,960 --> 00:12:53,344
+And importantly, power smoothing.
+更重要的是，电力平滑。
+
+151
+00:12:53,394 --> 00:12:59,443
+We have a parallel talk uh talk about intelligent power smoothing uh where this is where we uh close
+我们还有一个并行讨论，关于智能电源平滑技术，也就是我们所说的……关闭
+
+152
+00:12:59,493 --> 00:13:07,743
+to design by NVIDIA directly control uh the SOC signal and it directly control the GPU um uh status,
+由英伟达直接控制片上系统信号，并直接控制GPU状态。
+
+153
+00:13:07,793 --> 00:13:08,179
+right?
+对吧？
+
+154
+00:13:08,209 --> 00:13:14,430
+so it's an active control loop uh to to define and actively tracking the power status.
+因此这是一个主动控制回路，用于定义并实时跟踪电源状态。
+
+155
+00:13:14,480 --> 00:13:17,379
+And lastly, importantly is a load averaging function, right?
+最后，一个重要的功能是负载平均功能，对吧？
+
+156
+00:13:17,429 --> 00:13:20,352
+This is very critical because we are driving max IOPs.
+这一点至关重要，因为我们正在追求最高的IOPS性能。
+
+157
+00:13:20,402 --> 00:13:25,636
+It's important to use ESS to draw this constant load scenario, right?
+使用储能系统来实现这种恒定负载场景很重要，对吧？
+
+158
+00:13:25,686 --> 00:13:31,990
+So number one, your SST is best perform at a fixed percentage, I say 90%, 95%.
+首先，你的固态变压器在固定百分比下表现最佳，我建议是90%、95%。
+
+159
+00:13:32,040 --> 00:13:37,638
+And secondly, you can utilize your SST much, much higher by subscribing most of the GPUs as you can.
+其次，通过尽可能多地订阅GPU，你可以让固态变压器的利用率大幅提升。
+
+160
+00:13:37,688 --> 00:13:47,190
+Right, so that can be very efficient from the design all the way to the the revenue production using a GPU side.
+对，这样从设计到GPU端的收益生产都能非常高效。
+
+161
+00:13:47,240 --> 00:13:50,726
+Then most importantly, last part is about the microgrid, right?
+然后最重要的是，最后一部分是关于微电网的，对吧？
+
+162
+00:13:50,776 --> 00:13:57,205
+So as as we design this new architecture, you can start understanding the power container is not just a rectifier.
+所以当我们设计这种新架构时，你就能开始理解电源柜不仅仅是整流器。
+
+163
+00:13:57,255 --> 00:14:00,950
+This is where you can really find all the sources tied together,
+这里你可以真正将所有电源整合在一起。
+
+164
+00:14:01,000 --> 00:14:07,385
+which today is a 5-MW target, and tomorrow is going to be 10 MW and scalable using SST.
+目前目标是5兆瓦，而明天会达到10兆瓦，并且可通过固态变压器实现扩展。
+
+165
+00:14:07,435 --> 00:14:11,120
+Right, so starting from utility power to the on-prem generation,
+从市电到本地发电，
+
+166
+00:14:11,170 --> 00:14:14,910
+all the way to different renewable energy can tie into to drive
+一直到各种可再生能源都可以接入，以驱动
+
+167
+00:14:14,960 --> 00:14:21,710
+the optimal uh powers uh sourcing strategy to support environmental and sustainability,
+最优的电源策略，支持环保和可持续发展，
+
+168
+00:14:21,760 --> 00:14:24,590
+and finally, the ESS can be integrated.
+最后，储能系统也可以被整合进来。
+
+169
+00:14:24,640 --> 00:14:32,207
+Right, and this also directly reading exactly what's the current data center uh load requirement from compute, cooling to networking.
+对，这也能直接读取当前数据中心在计算、冷却到网络方面的负载需求。
+
+170
+00:14:32,257 --> 00:14:35,699
+Right, and then we can we can start training our AI, right?
+对，然后我们就可以开始训练我们的AI了，对吧？
+
+171
+00:14:35,749 --> 00:14:47,190
+So you can bring back the tokens, and then feed uh support operation by using this smart intelligent uh controller system as a long-term vision.
+所以你可以重新利用这些词元，然后通过这个智能控制器系统，长期实现支持运营。
+
+172
+00:14:47,240 --> 00:14:48,710
+And here's the current road map, right?
+这里是当前的路线图，对吧？
+
+173
+00:14:48,760 --> 00:14:56,704
+As Charles uh spoke about, we have our current uh power rack sidecar design completed and ready to roll out to be used.
+如查尔斯所说，我们现有的电源机架侧车设计已完成，随时可以推出使用。
+
+174
+00:14:56,754 --> 00:15:02,591
+Uh very quickly, Q2 next year, uh we have the power center, the end-to-end solution, right?
+很快，明年第二季度，我们将推出整列电源中心，提供端到端解决方案，对吧？
+
+175
+00:15:02,641 --> 00:15:08,910
+To support retrofit or even colos to be fungible targeting at a pod level solution.
+以支持改造项目，甚至实现机柜间的互换性，目标是实现机柜级别的解决方案。
+
+176
+00:15:08,960 --> 00:15:14,756
+And then the lastly will be the SST transform rectifiers, where we are targeting Q1 20A, right?
+最后一项将是固态变压器整流器，我们计划在2024年第一季度完成，对吧？
+
+177
+00:15:14,806 --> 00:15:18,750
+For the ecosystem to have the full solution ready for deployment.
+为生态系统提供完整的解决方案，随时可部署。
+
+178
+00:15:18,800 --> 00:15:20,750
+Um and if you look at a journey, right?
+如果你看看整个旅程，对吧？
+
+179
+00:15:20,800 --> 00:15:24,630
+This is not just like, okay, we get solution done and we we call it a day.
+这不仅仅是完成解决方案就结束，然后就宣告大功告成。
+
+180
+00:15:24,680 --> 00:15:26,977
+It's important to care about grounding protection.
+关注接地保护非常重要。
+
+181
+00:15:27,027 --> 00:15:31,550
+We have a separate talk tomorrow with my Microsoft friend Shenyong to discuss exactly
+明天我们将与我的微软朋友沈勇进行一次单独讨论，具体探讨
+
+182
+00:15:31,600 --> 00:15:36,910
+how the protection should be planned from the operator side or the asset owner side.
+从运营商或资产所有者角度出发，保护方案应如何规划。
+
+183
+00:15:36,960 --> 00:15:39,019
+Uh then we talk about certification, right?
+嗯，然后我们讨论认证，对吧？
+
+184
+00:15:39,069 --> 00:15:46,254
+There are lots of things on the SST side, on the SSCB breaker side, all the way to current limiting device, right?
+在固态变压器方面有很多内容，在 SSCB 断路器方面，一直到限流装置，对吧？
+
+185
+00:15:46,304 --> 00:15:48,008
+Can be certified and proved.
+都可以进行认证和验证。
+
+186
+00:15:48,058 --> 00:15:49,444
+Um that's very critical, right?
+嗯，这一点非常关键，对吧？
+
+187
+00:15:49,494 --> 00:15:52,240
+To make sure all from end to end is fully covered.
+确保从端到端的所有环节都得到完全覆盖。
+
+188
+00:15:52,290 --> 00:15:56,004
+And of course, at the same time, we talk about breakers, right?
+当然，与此同时，我们也会讨论断路器，对吧？
+
+189
+00:15:56,054 --> 00:15:59,550
+Um based upon a coordination plan, based upon the full current strategy,
+基于协调计划，基于完整的电流策略，
+
+190
+00:15:59,600 --> 00:16:04,870
+the end-to-end system, what's the best solution to select the right protection device.
+从端到端的系统来看，选择合适的保护装置的最佳方案是什么。
+
+191
+00:16:04,920 --> 00:16:08,824
+Um then we talk about connection whips that Jerry directly opened up the spec to
+嗯，然后我们讨论杰里直接开放了规格的连接软线，
+
+192
+00:16:08,874 --> 00:16:15,239
+make sure we're driving this very safe design uh utilizing the EV whips technology with interlock.
+确保我们采用非常安全的设计，利用电动汽车软线技术并配备互锁装置。
+
+193
+00:16:15,289 --> 00:16:19,923
+And finally, it's this high-density power conversion where we start from today's 5 MW,
+最后，是在高密度电源转换方面，我们从今天的5兆瓦起步，
+
+194
+00:16:19,973 --> 00:16:27,310
+and shooting for 10 MW for day two and in Britain's uh um microgrid design.
+朝着第二天的10兆瓦迈进，适用于英国的微电网设计。
+
+195
+00:16:27,360 --> 00:16:28,773
+Here's the last slide, right?
+这是最后一张幻灯片，对吧？
+
+196
+00:16:28,823 --> 00:16:30,607
+So, like I said, it's a journey.
+所以，正如我所说，这是一段旅程。
+
+197
+00:16:30,657 --> 00:16:31,550
+It's a roadmap.
+这是一张路线图。
+
+198
+00:16:31,600 --> 00:16:31,900
+Right?
+对吧？
+
+199
+00:16:31,880 --> 00:16:34,246
+We're driving very quickly on the engineering side, right?
+我们在工程方面正以极快的速度推进，对吧？
+
+200
+00:16:34,296 --> 00:16:41,155
+So, as you know, we're starting from the concept to the architecture, and now we'll define exactly the key components that's required.
+所以，正如你们所知，我们正从概念走向架构，现在我们将明确所需的关键组件。
+
+201
+00:16:41,205 --> 00:16:43,813
+Jerry set out the simulation requirement, right?
+杰里明确了仿真需求，对吧？
+
+202
+00:16:43,863 --> 00:16:44,163
+So,
+所以，
+
+203
+00:16:44,043 --> 00:16:48,788
+we know on the simulation side how things can be compatible with NVIDIA compute and
+我们知道在仿真方面，系统如何与英伟达计算兼容，
+
+204
+00:16:48,838 --> 00:16:54,243
+how we drive the system stability and the the overall right uh simulation uh targets,
+以及如何实现系统稳定性与整体正确的仿真目标。
+
+205
+00:16:54,293 --> 00:16:54,720
+right?
+对吧？
+
+206
+00:16:54,770 --> 00:16:56,150
+To set the criteria.
+以确定标准。
+
+207
+00:16:56,200 --> 00:17:00,372
+Then, moving forward, we're going to get into the prototyping phase, right?
+接下来，我们将进入原型设计阶段，对吧？
+
+208
+00:17:00,422 --> 00:17:06,299
+To make sure the system can be validated not just from simulation, but set up from the small scale,
+确保系统不仅可以通过仿真验证，还能从小规模开始搭建，
+
+209
+00:17:06,349 --> 00:17:12,315
+maybe one cell, one one one one power shelf, all the way to a large POC being set up.
+从单个电池单元、单个电源架，一直到大规模的试点项目部署。
+
+210
+00:17:12,365 --> 00:17:21,950
+So, everybody from the customer side, from the regulatory side, and then from our team maker side, can all jointly validate the system outcome.
+这样，客户方、监管方以及我们团队的各方都能共同验证系统成果。
+
+211
+00:17:22,000 --> 00:17:26,269
+Then regulatory will help with compliance and validation.
+然后监管方将协助完成合规性和验证工作。
+
+212
+00:17:26,319 --> 00:17:30,830
+And we'll be ready for production readiness, for mass production, and for final deployment.
+我们将为生产准备就绪、大规模生产以及最终部署做好准备。
+
+213
+00:17:30,880 --> 00:17:33,355
+And like I said, this is the current option C.
+正如我所说，这是当前的选项 C。
+
+214
+00:17:33,405 --> 00:17:39,230
+We are moving fast on this one, and like to invite the industry owners to join this journey.
+我们正在快速推进这一项目，也诚挚邀请行业相关方加入这一进程。
+
+215
+00:17:39,280 --> 00:17:41,376
+That's our presentation.
+这就是我们的演示。
+
+216
+00:17:41,426 --> 00:17:42,750
+Thank you guys.
+谢谢大家。
+
+217
+00:17:42,800 --> 00:17:45,430
+Thank you.
+谢谢。
+
+218
+00:17:45,480 --> 00:17:47,052
+Questions for our presenters.
+请问各位演讲者的问题。
+
+219
+00:17:47,102 --> 00:17:55,830
+Please line up at the mic.
+请到麦克风前排队。
+
+220
+00:17:55,880 --> 00:17:59,489
+Hey, I'm Sylvia from TE Connectivity.
+大家好，我是泰科电子的西尔维娅。
+
+221
+00:17:59,539 --> 00:18:01,585
+I have three questions.
+我有三个问题。
+
+222
+00:18:01,635 --> 00:18:08,482
+One, will the 1500 V DC distribution become mainstream in data center?
+第一，1500 V直流配电会成为数据中心的主流吗？
+
+223
+00:18:08,532 --> 00:18:12,830
+And if so, what will be the expected timeline?
+如果会，预计什么时候？
+
+224
+00:18:12,880 --> 00:18:23,870
+Second question for the SST, and solid state circuit breaker, do you think when will they expect it become mainstream in terms of timeline?
+第二个问题是关于固态变压器和固态断路器，您认为它们何时会成为主流？
+
+225
+00:18:23,920 --> 00:18:31,710
+And then the third is the for the CDU roadmap, do you see what is the next generation 5 megawatt unit will come?
+第三个问题是关于CDU路线图，您能看到下一代5兆瓦单元何时推出吗？
+
+226
+00:18:31,760 --> 00:18:32,790
+Yeah, three questions.
+好的，三个问题。
+
+227
+00:18:32,840 --> 00:18:33,720
+Yeah, quickly.
+好的，快一点。
+
+228
+00:18:33,770 --> 00:18:37,691
+1500 Let's do one question so that others can also Okay, I'll do it very quickly.
+1500，我们先解决一个问题，这样其他人也能参与。我来快速回答。
+
+229
+00:18:37,741 --> 00:18:39,801
+1500 V DC is not not in the current roadmap.
+1500 V DC 目前不在规划路线图中。
+
+230
+00:18:39,851 --> 00:18:41,950
+I'm not sure which data center do 1500 V DC.
+我不确定 1500 V DC 适用于哪个数据中心。
+
+231
+00:18:42,000 --> 00:18:43,084
+I'd like to hear about it.
+我想听听这方面的内容。
+
+232
+00:18:43,134 --> 00:18:45,925
+800 V DC has been set because our target is for compute 800 V.
+800 VDC 已经确定，因为我们的目标是计算设备采用 800 VDC。
+
+233
+00:18:45,975 --> 00:18:49,045
+And we're trying to be streamlined for the efficiency.
+我们正努力实现效率的最优化。
+
+234
+00:18:49,095 --> 00:18:49,450
+Okay?
+好的？
+
+235
+00:18:49,480 --> 00:18:51,280
+And I forgot what's your second one.
+我忘了你第二个说的是什么。
+
+236
+00:18:51,330 --> 00:18:54,350
+Is SST the SST and solid state circuit breaker.
+SST 是固态变压器和固态断路器吗？
+
+237
+00:18:54,400 --> 00:18:55,224
+Yeah, SSTB.
+是的，SSTB。
+
+238
+00:18:55,274 --> 00:18:56,390
+Yeah, go ahead.
+是的，继续说。
+
+239
+00:18:56,440 --> 00:18:58,950
+Uh I I just wanted to say for 1500 V,
+嗯，我只是想说关于 1500 V，
+
+240
+00:18:59,000 --> 00:19:06,846
+the the bottleneck is actually the PDB on the compute tray when we go from 800 V direct to a 12 V, right, in the compute tray.
+实际的瓶颈在于计算托盘上的 PDB，当我们从 800 VDC转换到计算托盘内的 12 V 时。
+
+241
+00:19:06,896 --> 00:19:14,624
+And so if there are any technologies, right, that can give higher density conversion 1500 V direct to 12 in the compute tray.
+因此，如果有任何技术能够实现1500伏直流到12伏的高密度转换，放在计算托盘上，那就再好不过了。
+
+242
+00:19:14,674 --> 00:19:17,369
+We're interested, but that's that's the challenge, right?
+我们很感兴趣，但这正是挑战所在，对吧？
+
+243
+00:19:17,419 --> 00:19:25,030
+Is we're trying to take the the distribution all the way to the compute tray, and that becomes very difficult at 1500 V.
+我们正试图将配电一直延伸到计算托盘，但在1500伏电压下，这变得非常困难。
+
+244
+00:19:25,080 --> 00:19:27,990
+Yeah, SSTB depends on size, 125 amp.
+是的，SSTB的尺寸取决于电流，125安培。
+
+245
+00:19:28,040 --> 00:19:30,599
+I think it's getting very available very fast.
+我觉得它正在迅速变得非常普及。
+
+246
+00:19:30,649 --> 00:19:32,640
+We just need certification to be ready.
+我们只需要完成认证即可投入使用。
+
+247
+00:19:32,690 --> 00:19:35,584
+Right, in the CDU, we are promoting 500 DC.
+对，在CDU中，我们正在推广500伏直流。
+
+248
+00:19:35,634 --> 00:19:37,070
+It should be 800 DC.
+应该是800 VDC。
+
+249
+00:19:37,120 --> 00:19:37,747
+It has VFD.
+它带有变频器。
+
+250
+00:19:37,797 --> 00:19:40,714
+It's better to be DC input to drive the efficiency up.
+采用直流输入能更好地提升效率。
+
+251
+00:19:40,764 --> 00:19:41,950
+Okay, you can go to next.
+好的，可以进入下一页了。
+
+252
+00:19:42,000 --> 00:19:43,190
+All right.
+好的。
+
+253
+00:19:43,240 --> 00:19:45,067
+Great presentation, Mike and Jarred.
+演讲非常精彩，迈克和贾里德。
+
+254
+00:19:45,117 --> 00:19:54,948
+Can you please come on comment on what uh standards and codes the industry should drive together in order to make this vision into a reality?
+请问您能否谈谈，行业应共同推动哪些标准和规范，以将这一愿景变为现实？
+
+255
+00:19:54,998 --> 00:19:55,630
+Thank you.
+谢谢。
+
+256
+00:19:55,680 --> 00:20:00,945
+Yeah, yeah, I think you mentioned SST, UL 2877, right, is the current placeholder.
+是的，是的，您提到了固态变压器，UL 2877，目前是临时标准。
+
+257
+00:20:00,995 --> 00:20:06,768
+We'd like to hear from all the industry partners, such as a lot to tell us where's the gap, right?
+我们希望听取所有行业伙伴的意见，告诉我们目前存在哪些差距，对吧？
+
+258
+00:20:06,818 --> 00:20:13,804
+And secondly, SSCB, right, also UL 91, be specific, has to help to make sure this can be certified.
+第二，SSCB，也就是 UL 91，必须明确具体，以确保能够完成认证。
+
+259
+00:20:13,854 --> 00:20:19,422
+And I mentioned about current limited approach, right, to make sure that the converter approach,
+我提到了当前对电流限制方法的局限性，以确保转换器方法，
+
+260
+00:20:19,472 --> 00:20:28,030
+DC-DC converter, as well as galvanic isolation, can be approved as a source limiting methods.
+包括直流-直流转换器以及隔离技术，都能被批准作为限流手段。
+
+261
+00:20:28,080 --> 00:20:30,636
+Hi, this is Pranesh from Ampsys.
+你好，我是来自 Ampsys 的普拉内什。
+
+262
+00:20:30,686 --> 00:20:33,710
+Mike, Sorry, we are like at time.
+迈克，抱歉，我们时间有点紧。
+
+263
+00:20:33,760 --> 00:20:34,917
+Um Quick one.
+呃，快速问一个问题。
+
+264
+00:20:34,967 --> 00:20:36,190
+Very quick.
+非常快。
+
+265
+00:20:36,240 --> 00:20:41,310
+I'm sorry, like I have to follow the process like a way but you are free to I will catch up with you later.
+对不起，我得按流程走，但你可以自由行动，我稍后会找你。
+
+266
+00:20:41,360 --> 00:20:43,552
+We have about like two two to three minutes.
+我们还有大约两到三分钟。
+
+267
+00:20:43,602 --> 00:20:45,762
+So, you can follow up with the presenters.
+所以，你可以跟进各位演讲者。
+
+268
+00:20:45,812 --> 00:20:49,360
+So, let's thank our presenters.
+那么，让我们感谢我们的演讲者。
