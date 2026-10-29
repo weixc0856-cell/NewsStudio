@@ -54,6 +54,9 @@ DEFAULTS: dict[str, Any] = {
     "dup_overlap_ratio": 0.4,
     "overlap_penalty_ms": 15_000,   # >15 s overlap with a kept candidate = strong penalty
     "max_clips": 5,
+    "reel_budget_ms": 330_000,      # whole reel: intro + clips + transitions
+    "intro_budget_ms": 15_000,      # 12-16 s poster intro, conservative estimate
+    "transition_ms": 500,
     "duration_tolerance_ms": 1_500,
     "margin_v": 100,
     "qsv_quality": 19,
@@ -861,12 +864,16 @@ def analyze(cues: list[Cue], cfg: dict[str, Any], video_id: str,
 
     valid, removed = filter_candidates(candidates_raw, window_results, by_id, cfg)
     removed.extend(start_rejects)
-    selected = valid[: cfg["max_clips"]]
+    selected = select_with_budget(valid, cfg)
     if len(selected) > 1:
         ensure_unique_titles(selected, window_results, cues, by_id, cfg)
-    for cand in valid[cfg["max_clips"]:]:
+    for cand in valid[len(selected):]:
         removed.append({"candidate": cand, "stage": "quota",
-                        "reason": f"outside top {cfg['max_clips']} by selection rank"})
+                        "reason": f"outside the {cfg['reel_budget_ms']} ms reel budget "
+                                  f"or the {cfg['max_clips']}-clip cap"})
+    RUN.log(f"selection: {len(selected)} clip(s), reel budget "
+            f"{sum(c['duration_ms'] for c in selected) / 1000:.1f}s clips + "
+            f"{cfg.get('intro_budget_ms', 0) / 1000:.1f}s intro")
 
     window_failures = sum(1 for w in window_results if w["status"] != "OK")
     if not window_results:
@@ -1012,6 +1019,18 @@ def estimate_prefix_ms(prefix: str) -> int:
     """Rough spoken length of a filler: ~400 ms per word, clamped 300-1200 ms."""
     words = max(1, len(prefix.split()))
     return min(1200, max(300, 400 * words))
+
+
+_ZH_FILLER_HEAD = re.compile(r"^(?:是的|对|嗯|呃|那个|我的意思是|所以|然后|就是说|好)[，,、。\s]*")
+
+
+def _strip_zh_filler(text: str) -> str:
+    """Drop the Chinese translation of a trimmed filler at the head of a cue."""
+    previous = None
+    while previous != text:
+        previous = text
+        text = _ZH_FILLER_HEAD.sub("", text, count=1)
+    return text or previous
 
 
 def _strip_prefix_from_text(text: str, prefix: str) -> str:
@@ -1166,6 +1185,27 @@ def rank_key(cand: dict[str, Any], cfg: dict[str, Any],
                   if overlap_ms(cand, prev) > int(cfg.get("overlap_penalty_ms", 30_000)))
     return (penalty, in_prefer, -int(cand.get("boundary_score", 0)),
             abs(dur - midpoint), cand["start_ms"], cand["start_cue_id"])
+
+
+def select_with_budget(valid: list[dict[str, Any]],
+                       cfg: dict[str, Any]) -> list[dict[str, Any]]:
+    """Greedy pick by rank until the reel budget (intro + clips + transitions) is full."""
+    cap = int(cfg["max_clips"])
+    budget = int(cfg.get("reel_budget_ms") or 0)
+    if budget <= 0:
+        return valid[:cap]
+    total = int(cfg.get("intro_budget_ms") or 0)
+    transition = int(cfg.get("transition_ms") or 0)
+    picked: list[dict[str, Any]] = []
+    for cand in valid:
+        if len(picked) >= cap:
+            break
+        nxt = total + int(cand["duration_ms"]) + (transition if picked else 0)
+        if nxt > budget:
+            break
+        picked.append(cand)
+        total = nxt
+    return picked
 
 
 def filter_candidates(candidates: list[dict[str, Any]], windows: list[dict[str, Any]],
@@ -1671,7 +1711,8 @@ def main() -> int:
         if prefix and rows:
             first = rows[0]
             rows[0] = (first[0], first[1],
-                       _strip_prefix_from_text(first[2], prefix), first[3])
+                       _strip_prefix_from_text(first[2], prefix),
+                       _strip_zh_filler(first[3]))
         clip = {
             "index": index,
             "source_window": cand["source_window"],
@@ -1679,6 +1720,7 @@ def main() -> int:
             "end_ms": cand["end_ms"],
             "duration_ms": duration_ms,
             "trim_start_ms": trim_ms,
+            "trim_prefix": cand.get("trim_prefix") if trim_ms else None,
             "title": cand["title"],
             "summary": cand["summary"],
             "subtitle_cues": len(rows),

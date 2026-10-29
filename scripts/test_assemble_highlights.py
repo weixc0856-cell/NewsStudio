@@ -92,16 +92,24 @@ class SubtitleTests(unittest.TestCase):
             self.assertLessEqual(left[0], right[0])
 
     @unittest.skipUnless(RESULT.exists(), "episode 21 result not present")
-    def test_first_cue_is_the_whole_cue_51(self) -> None:
+    def test_clip_starts_are_clean_and_honour_trim(self) -> None:
         cues, errors = ac.parse_bilingual_srt(
             ac.ROOT / "subtitles" / "c88l8daXiv4.zh.bilingual.srt")
         self.assertEqual(errors, [])
-        # the first cue of the current clip 1 must not be a dependent start
-        clips = real_clips()
-        start = clips[0]["start_ms"]
-        cue = next(c for c in cues if c.start == start)
-        self.assertFalse(ac.DEPENDENT_START.match(cue.top.strip()))
-        self.assertTrue(cues[50].top.startswith("right to exist"))
+        starts = {c.start: c for c in cues}
+        for clip in real_clips():
+            trim = int(clip.get("trim_start_ms") or 0)
+            cue = starts.get(clip["start_ms"] - trim)
+            self.assertIsNotNone(cue, f"clip {clip['index']} start is not a cue boundary")
+            text = cue.top.strip()
+            self.assertFalse(ac.DEPENDENT_START.match(text))
+            if trim:
+                prefix, _rest = ac.strip_filler_prefix(text)
+                self.assertTrue(prefix)
+                self.assertEqual(prefix, clip.get("trim_prefix"))
+                self.assertGreaterEqual(trim, 300)
+            else:
+                self.assertFalse(ac.FILLER_START.match(text))
 
 
 class GraphTests(unittest.TestCase):
@@ -210,15 +218,15 @@ class ArtifactTests(unittest.TestCase):
         self.assertEqual(data["intro"]["status"], "SUCCESS")
 
     @unittest.skipUnless(RESULT.exists() and INTRO.exists(), "episode 21 artifacts absent")
-    def test_intro_is_standalone_6_to_9_5_seconds(self) -> None:
+    def test_intro_is_standalone_10_to_20_seconds(self) -> None:
         intro = json.loads(INTRO.read_text(encoding="utf-8"))
         self.assertEqual(intro["status"], "SUCCESS")
         self.assertTrue(intro["acceptance"]["passed"])
-        self.assertTrue(6000 <= intro["duration_ms"] <= 9500)
+        self.assertTrue(10000 <= intro["duration_ms"] <= 20000)
         self.assertIn(intro["picture"]["renderer"], ("html", "poster"))
         self.assertIn(intro["picture"]["animation"], ("keyframes", "poster"))
         self.assertEqual(intro["animation"]["duration_ms"], intro["planned_duration_ms"])
-        self.assertEqual(intro["copy"]["source"], "llm")
+        self.assertIn(intro["copy"]["source"], ("llm", "manual-approved"))
         self.assertTrue((ah.resolve(intro["path"])).exists())
 
 

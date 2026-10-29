@@ -51,8 +51,8 @@ DEFAULTS: dict[str, Any] = {
     "height": 1080,
     "fps": 60,
     "duration_tolerance_ms": 1500,
-    "min_intro_ms": 6000,
-    "max_intro_ms": 9500,
+    "min_intro_ms": 10_000,
+    "max_intro_ms": 20_000,
 }
 
 

@@ -476,6 +476,22 @@ class PrefixTests(unittest.TestCase):
                          (None, "somehow the CPU is the limit"))
 
 
+class BudgetTests(unittest.TestCase):
+    def test_stops_before_exceeding_the_reel_budget(self) -> None:
+        cfg = {**ac.DEFAULTS, "intro_budget_ms": 15_000, "transition_ms": 500,
+               "reel_budget_ms": 330_000}
+        cands = [{"duration_ms": d} for d in (69_640, 61_520, 67_110, 64_530, 65_860)]
+        picked = ac.select_with_budget(cands, cfg)
+        self.assertEqual(len(picked), 4)
+        total = 15_000 + sum(c["duration_ms"] for c in picked) + 500 * (len(picked) - 1)
+        self.assertLessEqual(total, 330_000)
+
+    def test_respects_the_clip_cap(self) -> None:
+        cfg = {**ac.DEFAULTS, "max_clips": 2, "reel_budget_ms": 0}
+        cands = [{"duration_ms": 60_000} for _ in range(5)]
+        self.assertEqual(len(ac.select_with_budget(cands, cfg)), 2)
+
+
 class ClampTests(unittest.TestCase):
     def test_prefers_fifty_to_seventy_seconds(self) -> None:
         cues = {i: ac.Cue(i, (i - 1) * 20_000, i * 20_000, f"Point {i}.", "")

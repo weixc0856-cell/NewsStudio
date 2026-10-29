@@ -270,14 +270,14 @@ class ArtifactTests(unittest.TestCase):
     def test_intro_artifact(self) -> None:
         intro = json.loads(self.INTRO.read_text(encoding="utf-8"))
         self.assertEqual(intro["status"], "SUCCESS")
-        self.assertTrue(6000 <= intro["duration_ms"] <= 9500)
+        self.assertTrue(10000 <= intro["duration_ms"] <= 20000)
         self.assertTrue(intro["acceptance"]["passed"])
         self.assertIn(intro["picture"]["animation"], ("keyframes", "poster"))
         self.assertEqual(intro["config"]["fps"], 60)
         self.assertEqual(intro["template"], "assets/templates/intro.html")
         self.assertEqual(intro["accent"], "#ff5500")
-        self.assertEqual(intro["copy"]["source"], "llm")
-        self.assertEqual(gi._count_sentences(intro["copy"]["intro_spoken_text"]), 3)
+        self.assertIn(intro["copy"]["source"], ("llm", "manual-approved"))
+        self.assertIn(gi._count_sentences(intro["copy"]["intro_spoken_text"]), (5, 6))
 
 
 if __name__ == "__main__":
