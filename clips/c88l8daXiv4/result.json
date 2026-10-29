@@ -1325,8 +1325,8 @@
     "status": "SUCCESS",
     "output": "clips/c88l8daXiv4/final/c88l8daXiv4.highlights-merged.mp4",
     "quarantined": null,
-    "expected_duration_ms": 281432,
-    "actual_duration_ms": 281719,
+    "expected_duration_ms": 280832,
+    "actual_duration_ms": 281328,
     "segments": [
       {
         "kind": "intro",
@@ -1348,12 +1348,10 @@
       },
       {
         "kind": "transition",
-        "label": "转场 04→01",
-        "card_index": 1,
-        "card_title": "CPU瓶颈已成行业常态",
+        "label": "黑场 04→01",
         "offset_ms": 81655,
-        "duration_ms": 500,
-        "end_ms": 82155
+        "duration_ms": 300,
+        "end_ms": 81955
       },
       {
         "kind": "clip",
@@ -1362,18 +1360,16 @@
         "title": "CPU瓶颈已成行业常态",
         "source_start_ms": 602387,
         "source_end_ms": 672030,
-        "offset_ms": 82155,
+        "offset_ms": 81955,
         "duration_ms": 69643,
-        "end_ms": 151798
+        "end_ms": 151598
       },
       {
         "kind": "transition",
-        "label": "转场 01→02",
-        "card_index": 2,
-        "card_title": "CPU市场分化加速",
-        "offset_ms": 151798,
-        "duration_ms": 500,
-        "end_ms": 152298
+        "label": "黑场 01→02",
+        "offset_ms": 151598,
+        "duration_ms": 300,
+        "end_ms": 151898
       },
       {
         "kind": "clip",
@@ -1382,18 +1378,16 @@
         "title": "CPU市场分化加速",
         "source_start_ms": 835800,
         "source_end_ms": 897321,
-        "offset_ms": 152298,
+        "offset_ms": 151898,
         "duration_ms": 61521,
-        "end_ms": 213819
+        "end_ms": 213419
       },
       {
         "kind": "transition",
-        "label": "转场 02→03",
-        "card_index": 3,
-        "card_title": "GPU闲置成本推动CPU预热",
-        "offset_ms": 213819,
-        "duration_ms": 500,
-        "end_ms": 214319
+        "label": "黑场 02→03",
+        "offset_ms": 213419,
+        "duration_ms": 300,
+        "end_ms": 213719
       },
       {
         "kind": "clip",
@@ -1402,9 +1396,9 @@
         "title": "GPU闲置成本推动CPU预热",
         "source_start_ms": 1120803,
         "source_end_ms": 1187916,
-        "offset_ms": 214319,
+        "offset_ms": 213719,
         "duration_ms": 67113,
-        "end_ms": 281432
+        "end_ms": 280832
       }
     ],
     "bed": {
@@ -1415,13 +1409,12 @@
       "fade_out_ms": 400
     },
     "transition": {
-      "type": "html_title_card_fade",
-      "duration_ms": 500,
-      "fade_ms": 200,
-      "renderer": "html",
-      "html": "clips/c88l8daXiv4/work/transition.html",
-      "png": "clips/c88l8daXiv4/work/transition.png",
-      "title": "CPU瓶颈已成行业常态"
+      "type": "dip_to_black",
+      "duration_ms": 300,
+      "video_fade_ms": 150,
+      "audio_fade_ms": 200,
+      "black": true,
+      "title": null
     },
     "intro": {
       "path": "clips/c88l8daXiv4/intro/intro.mp4",
@@ -1444,21 +1437,21 @@
       },
       {
         "clip_index": 1,
-        "offset_ms": 82155,
+        "offset_ms": 81955,
         "cues": 18,
-        "max_end_ms": 151798
+        "max_end_ms": 151598
       },
       {
         "clip_index": 2,
-        "offset_ms": 152298,
+        "offset_ms": 151898,
         "cues": 12,
-        "max_end_ms": 213819
+        "max_end_ms": 213419
       },
       {
         "clip_index": 3,
-        "offset_ms": 214319,
+        "offset_ms": 213719,
         "cues": 19,
-        "max_end_ms": 281432
+        "max_end_ms": 280832
       }
     ],
     "gaps_ms": [
@@ -1468,7 +1461,7 @@
     ],
     "skipped_ms": 606534,
     "skipped_human": "10m07s",
-    "note": "合集非连续剪辑，中间跳过约 10m07s（606534 ms）；片头为本地 Qwen 文案 + HTML 关键帧 + CosyVoice 配音，转场为 500 ms 标题卡",
+    "note": "合集非连续剪辑，中间跳过约 10m07s（606534 ms）；片头为本地 Qwen 文案 + HTML 关键帧 + CosyVoice 配音，转场为 300 ms 标题卡",
     "subtitle_srt": "clips/c88l8daXiv4/work/assembly.srt",
     "subtitle_ass": "clips/c88l8daXiv4/work/assembly.ass",
     "manual_review": false,
@@ -1509,12 +1502,12 @@
         {
           "name": "duration",
           "ok": true,
-          "detail": "actual 281719 ms vs expected 281432 ms (delta +287)"
+          "detail": "actual 281328 ms vs expected 280832 ms (delta +496)"
         },
         {
           "name": "av_duration_equal",
           "ok": true,
-          "detail": "video 281678 ms vs audio 281700 ms (delta 22)"
+          "detail": "video 281287 ms vs audio 281308 ms (delta 21)"
         },
         {
           "name": "fps",
@@ -1532,13 +1525,13 @@
           "detail": "clean"
         }
       ],
-      "actual_duration_ms": 281719,
+      "actual_duration_ms": 281328,
       "video_fps": 60.0,
       "spec": {
         "path": "E:\\YouTube-B\\clips\\c88l8daXiv4\\work\\assembly.tmp.mp4",
         "name": "assembly.tmp.mp4",
         "stream_count": 2,
-        "container_ms": 281719,
+        "container_ms": 281328,
         "video": {
           "codec": "h264",
           "width": 1920,
@@ -1548,13 +1541,13 @@
           "level": 42,
           "fps": 60.0,
           "time_base": "1/15360",
-          "duration_ms": 281678
+          "duration_ms": 281287
         },
         "audio": {
           "codec": "aac",
           "sample_rate": 48000,
           "channels": 2,
-          "duration_ms": 281700
+          "duration_ms": 281308
         }
       }
     },
@@ -1567,44 +1560,74 @@
           "kind": "intro"
         },
         {
-          "kind": "clip",
+          "kind": "clip_body",
+          "clip_index": 4
+        },
+        {
+          "kind": "clip_tail",
           "clip_index": 4
         },
         {
           "kind": "transition"
         },
         {
-          "kind": "clip",
+          "kind": "clip_head",
+          "clip_index": 1
+        },
+        {
+          "kind": "clip_body",
+          "clip_index": 1
+        },
+        {
+          "kind": "clip_tail",
           "clip_index": 1
         },
         {
           "kind": "transition"
         },
         {
-          "kind": "clip",
+          "kind": "clip_head",
+          "clip_index": 2
+        },
+        {
+          "kind": "clip_body",
+          "clip_index": 2
+        },
+        {
+          "kind": "clip_tail",
           "clip_index": 2
         },
         {
           "kind": "transition"
         },
         {
-          "kind": "clip",
+          "kind": "clip_head",
+          "clip_index": 3
+        },
+        {
+          "kind": "clip_body",
           "clip_index": 3
         }
       ],
       "joins_ms": [
         17142,
-        81732,
-        82253,
-        151948,
-        152469,
-        214039,
-        214560
+        81315,
+        81769,
+        82090,
+        86428,
+        150563,
+        151851,
+        152172,
+        156510,
+        212091,
+        213814,
+        214135,
+        218473
       ],
       "list": "clips/c88l8daXiv4/work/concat.txt"
     },
     "ffmpeg_log": "clips/c88l8daXiv4/work/assembly.concat.ffmpeg.log",
-    "generated_at": "2026-10-29T03:33:55+00:00"
+    "generated_at": "2026-10-29T06:35:51+00:00"
   },
   "intro": {
     "schema_version": 2,

@@ -22,52 +22,52 @@ Dialogue: 0,0:00:55.47,0:01:04.25,Sub,,0,0,0,,they had all that drama but then f
 Dialogue: 0,0:01:04.30,0:01:12.41,Sub,,0,0,0,,ages yeah but o1 was the first model sort of there and and we we sort of had a entire flood of models right like before people would do simple\N是的，但 o1 是首个出现的模型，之后我们迎来了大量模型的涌现，就像以前人们只会做简单的事情一样。
 Dialogue: 0,0:01:12.46,0:01:17.91,Sub,,0,0,0,,things like check the output of the model with regex or something simple just to\N比如用正则表达式之类的简单方法检查模型的输出
 Dialogue: 0,0:01:17.96,0:01:21.66,Sub,,0,0,0,,see if it was doing structured properly doing structured outputs you know for function calling\N看看它有没有正确生成结构化输出，比如用于函数调用，
-Dialogue: 0,0:01:22.16,0:01:26.13,Sub,,0,0,0,,We've now launched today we announced our Windows sandbox which runs on a CPU.\N今天我们正式发布：基于 CPU 运行的 Windows 沙箱。
-Dialogue: 0,0:01:26.18,0:01:32.47,Sub,,0,0,0,,So if you need an agent to do like on legacy software which is like all finance, all support, all um that's all there.\N所以如果你需要一个智能体来处理像旧软件这样的任务，比如所有财务、所有支持，这些都在里面。
-Dialogue: 0,0:01:32.52,0:01:37.98,Sub,,0,0,0,,But I'll also to your point like reinforcement learning, we have a bunch of people that usually use like Kubernetes.\N但就你提到的强化学习而言，我们有很多客户通常用 Kubernetes，
-Dialogue: 0,0:01:38.03,0:01:39.03,Sub,,0,0,0,,Now they would use us.\N现在他们会用我们。
-Dialogue: 0,0:01:39.08,0:01:44.82,Sub,,0,0,0,,But the interesting thing is the the size and scale of these loads are insanely large and they're growing insanely large.\N但有趣的是，这些负载的规模和体量大得惊人，而且还在急剧扩大。
-Dialogue: 0,0:01:44.87,0:01:48.52,Sub,,0,0,0,,And we're like the smallest cloud in the world.\N而我们大概是世界上最小的云。
-Dialogue: 0,0:01:48.56,0:01:56.01,Sub,,0,0,0,,So my interest to what in the question is like if we as a very very small company have this much, what does that do at the large scale, right?\N所以，我对这个问题的兴趣在于，如果我们作为一家非常非常小的公司，\N已经能做到这种程度，那么在大规模上会怎样呢，对吧？
-Dialogue: 0,0:01:56.06,0:01:59.62,Sub,,0,0,0,,Like so um and we've had I'm curious if you have any insight on this,\N就像这样，呃，我很好奇，你对这个问题有什么见解吗？
-Dialogue: 0,0:01:59.67,0:02:05.19,Sub,,0,0,0,,but just just RL let alone the long running agents which are on their own, we we see customers coming in.\N但仅仅是强化学习，更不用说那些独立运行的长期智能体，我们已经看到客户纷纷上门。
-Dialogue: 0,0:02:05.24,0:02:09.12,Sub,,0,0,0,,One of them ran a million one single customer yesterday in the span of 6 hours.\N其中一位客户昨天在 6 小时内跑了一百万个这样的 CPU 工作负载。
-Dialogue: 0,0:02:09.17,0:02:10.73,Sub,,0,0,0,,Like 1 million of these CPU workloads.\N像一百万个这样的CPU工作负载。
-Dialogue: 0,0:02:10.78,0:02:11.82,Sub,,0,0,0,,So that's one customer.\N这就是一位客户。
-Dialogue: 0,0:02:11.87,0:02:13.43,Sub,,0,0,0,,And so like how many of these customers are doing RL?\N那么，有多少客户在使用强化学习呢？
-Dialogue: 0,0:02:13.48,0:02:14.41,Sub,,0,0,0,,They're going to need this.\N他们将会需要这个。
-Dialogue: 0,0:02:14.46,0:02:17.28,Sub,,0,0,0,,I I don't know if you have any insights on this, but I'm just curious.\N我不确定你有没有什么见解，只是有点好奇。
-Dialogue: 0,0:02:17.33,0:02:21.51,Sub,,0,0,0,,Um I mean I mean there there there there are some pretty uh shocking metrics.\N呃，我的意思是，有些数据确实相当惊人。
-Dialogue: 0,0:02:21.56,0:02:24.08,Sub,,0,0,0,,Like a million vCPUs sounds insane.\N一百万个 vCPU 听起来太疯狂了。
-Dialogue: 0,0:02:24.13,0:02:31.80,Sub,,0,0,0,,Um but there some of the some of the scale of the workloads and contracts people are signing are are even like more ridiculous than that, right?\N但有些工作负载和合同的规模，人们签下的甚至比那还荒谬，对吧？
-Dialogue: 0,0:02:32.30,0:02:34.36,Sub,,0,0,0,,it's sort of like a very um dynamic market.\N这有点像一个非常动态的市场。
-Dialogue: 0,0:02:34.42,0:02:39.51,Sub,,0,0,0,,And then and then you've got like Microsoft and Google are starting to deploy their CPUs in volumes.\N然后，微软和谷歌也开始大规模部署他们的CPU了。
-Dialogue: 0,0:02:39.56,0:02:46.88,Sub,,0,0,0,,Um ARM is going to launch a CPU in like a few weeks uh that Meta is going to adopt and a few others are going to adopt um like Cloudflare.\N嗯，Arm 几周后将推出一款 CPU，Meta 将采用，\N还有像 Cloudflare 这样的公司也会采用。
-Dialogue: 0,0:02:46.93,0:02:52.00,Sub,,0,0,0,,And so there's going to be a lot more proliferation like Arm standalone rather than like Arm licensing the IP to someone.\N因此会出现更多 Arm 独立芯片，而不是 Arm 把 IP 授权给别人。
-Dialogue: 0,0:02:52.05,0:02:59.00,Sub,,0,0,0,,So there's a lot more um diversification in the market um which which happens when there's a gold rush, right?\N所以市场上有更多的多样化，这在出现淘金热时就会发生，对吧？
-Dialogue: 0,0:02:59.04,0:03:06.20,Sub,,0,0,0,,And then we'll see what actually is the best quality and is left standing as the sort of supply demand gap get closes.\N随后我们将看到，当供需差距逐渐缩小后，究竟哪种质量的产品能够脱颖而出，保持领先。
-Dialogue: 0,0:03:06.26,0:03:06.66,Sub,,0,0,0,,Yeah.\N嗯。
-Dialogue: 0,0:03:06.70,0:03:12.84,Sub,,0,0,0,,But it seems that supply and demand will still grow like at least what I see like one the RL and it it seems like RL is mostly done,\N但看起来供需仍会继续增长。至少从我看到的情况，强化学习大多是在后训练阶段完成，
-Dialogue: 0,0:03:12.89,0:03:21.30,Sub,,0,0,0,,you know, they do post trading on RL, but we have now vendors and companies that are pitching and creating services that do RL in real time.\N你知道，他们确实会用强化学习做后训练，但现在已有供应商在提供实时强化学习服务。
-Dialogue: 0,0:03:21.36,0:03:27.17,Sub,,0,0,0,,And since you have like some agents you have some SaaS that's an agentic in the background and then\N而且因为你们有一些智能体，有些 SaaS 在后台以代理式方式运行。
-Dialogue: 0,0:03:27.22,0:03:32.66,Sub,,0,0,0,,it will do RL at the end of the day basically to like learn against what it has done.\N说到底，它最终会进行强化学习，以根据自身行为进行学习。
-Dialogue: 0,0:03:32.71,0:03:33.82,Sub,,0,0,0,,And so that grows.\N于是它不断增长。
-Dialogue: 0,0:03:34.32,0:03:42.20,Sub,,0,0,0,,they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot.\N他们宁愿为持续运行的热池CPU付费，这样当GPU有任务过来时，CPU就已经处于就绪状态。
-Dialogue: 0,0:03:42.26,0:03:43.98,Sub,,0,0,0,,They're essentially working, right?\NCPU 实际上已经在工作了，对吧？
-Dialogue: 0,0:03:44.03,0:03:48.38,Sub,,0,0,0,,So they'll we we I say we cuz we do mostly CPUs are certainly the cheap resource.\N所以我们会说，因为我们主要做 CPU，这显然是成本较低的资源。
-Dialogue: 0,0:03:48.43,0:03:50.72,Sub,,0,0,0,,I don't know if we're cheap, but cheap resource for this.\N我不知道我们是不是便宜，但这个资源确实很便宜。
-Dialogue: 0,0:03:50.77,0:03:58.50,Sub,,0,0,0,,And so that spends more GPUs actually just because the cost of having an idle GPU is to is way more expensive, right?\N所以实际上会用更多GPU，因为让GPU闲置的成本要高得多，对吧？
-Dialogue: 0,0:03:58.56,0:04:00.44,Sub,,0,0,0,,Yeah, it's actually like a really interesting point, right?\N是的，这实际上是个非常有趣的观点，对吧？
-Dialogue: 0,0:04:00.49,0:04:04.43,Sub,,0,0,0,,The business model is like no one does I mean sure, there's on demand GPUs,\N这个商业模式——我是说，确实有按需 GPU，
-Dialogue: 0,0:04:04.48,0:04:10.14,Sub,,0,0,0,,but like Lambda has like 50,000 plus GPUs and only 4,000 of them are on demand, right?\N但就像 Lambda 有超过 5 万块 GPU，其中只有 4000 块是按需可用的，对吧？
-Dialogue: 0,0:04:10.19,0:04:11.31,Sub,,0,0,0,,And they're always sold out.\N而且总是卖光。
-Dialogue: 0,0:04:11.36,0:04:13.57,Sub,,0,0,0,,So like no one really has on demand GPUs.\N所以其实没人真的拥有按需 GPU。
-Dialogue: 0,0:04:13.62,0:04:21.04,Sub,,0,0,0,,Everyone's signing at minimum like long-term, you know, multi-month contracts, but in most cases multi-year contracts.\N大家都在签至少长期的合同，你知道的，几个月起步，大多数是多年期的合同。
-Dialogue: 0,0:04:21.09,0:04:25.85,Sub,,0,0,0,,Um and so like CPUs have been used to like you can spin them up and down, right?\N嗯，就像 CPU 可以随时启动和关闭一样，对吧？
-Dialogue: 0,0:04:25.90,0:04:28.43,Sub,,0,0,0,,That's why everyone moved to the cloud, right?\N这就是为什么大家都转向了云端，对吧？
-Dialogue: 0,0:04:28.48,0:04:35.55,Sub,,0,0,0,,Um but with these RL workloads, it's like, okay, the GPU: the generator, the model running on a GPU generated a bunch of stuff.\N但这些强化学习工作负载的情况是，好吧，GPU作为生成器，运行在GPU上的模型生成了一大堆内容。
-Dialogue: 0,0:04:35.60,0:04:37.55,Sub,,0,0,0,,It sends it to the verifier.\N它将其发送给验证器。
-Dialogue: 0,0:04:37.60,0:04:39.64,Sub,,0,0,0,,If the verifier is not ready and waiting Then it's idle.\N如果验证器没有提前准备好并等待，GPU 就会空闲。
-Dialogue: 0,0:04:39.69,0:04:40.23,Sub,,0,0,0,,Then it's waiting.\N然后它在等待。
-Dialogue: 0,0:04:40.28,0:04:40.44,Sub,,0,0,0,,Right.\N对。
-Dialogue: 0,0:04:40.47,0:04:41.43,Sub,,0,0,0,,Like the GPU is just sitting there.\N就像 GPU 就那样闲置着。
+Dialogue: 0,0:01:21.96,0:01:25.93,Sub,,0,0,0,,We've now launched today we announced our Windows sandbox which runs on a CPU.\N今天我们正式发布：基于 CPU 运行的 Windows 沙箱。
+Dialogue: 0,0:01:25.98,0:01:32.27,Sub,,0,0,0,,So if you need an agent to do like on legacy software which is like all finance, all support, all um that's all there.\N所以如果你需要一个智能体来处理像旧软件这样的任务，比如所有财务、所有支持，这些都在里面。
+Dialogue: 0,0:01:32.32,0:01:37.78,Sub,,0,0,0,,But I'll also to your point like reinforcement learning, we have a bunch of people that usually use like Kubernetes.\N但就你提到的强化学习而言，我们有很多客户通常用 Kubernetes，
+Dialogue: 0,0:01:37.83,0:01:38.83,Sub,,0,0,0,,Now they would use us.\N现在他们会用我们。
+Dialogue: 0,0:01:38.88,0:01:44.62,Sub,,0,0,0,,But the interesting thing is the the size and scale of these loads are insanely large and they're growing insanely large.\N但有趣的是，这些负载的规模和体量大得惊人，而且还在急剧扩大。
+Dialogue: 0,0:01:44.67,0:01:48.32,Sub,,0,0,0,,And we're like the smallest cloud in the world.\N而我们大概是世界上最小的云。
+Dialogue: 0,0:01:48.36,0:01:55.81,Sub,,0,0,0,,So my interest to what in the question is like if we as a very very small company have this much, what does that do at the large scale, right?\N所以，我对这个问题的兴趣在于，如果我们作为一家非常非常小的公司，\N已经能做到这种程度，那么在大规模上会怎样呢，对吧？
+Dialogue: 0,0:01:55.86,0:01:59.42,Sub,,0,0,0,,Like so um and we've had I'm curious if you have any insight on this,\N就像这样，呃，我很好奇，你对这个问题有什么见解吗？
+Dialogue: 0,0:01:59.47,0:02:04.99,Sub,,0,0,0,,but just just RL let alone the long running agents which are on their own, we we see customers coming in.\N但仅仅是强化学习，更不用说那些独立运行的长期智能体，我们已经看到客户纷纷上门。
+Dialogue: 0,0:02:05.04,0:02:08.92,Sub,,0,0,0,,One of them ran a million one single customer yesterday in the span of 6 hours.\N其中一位客户昨天在 6 小时内跑了一百万个这样的 CPU 工作负载。
+Dialogue: 0,0:02:08.97,0:02:10.53,Sub,,0,0,0,,Like 1 million of these CPU workloads.\N像一百万个这样的CPU工作负载。
+Dialogue: 0,0:02:10.58,0:02:11.62,Sub,,0,0,0,,So that's one customer.\N这就是一位客户。
+Dialogue: 0,0:02:11.67,0:02:13.23,Sub,,0,0,0,,And so like how many of these customers are doing RL?\N那么，有多少客户在使用强化学习呢？
+Dialogue: 0,0:02:13.28,0:02:14.21,Sub,,0,0,0,,They're going to need this.\N他们将会需要这个。
+Dialogue: 0,0:02:14.26,0:02:17.08,Sub,,0,0,0,,I I don't know if you have any insights on this, but I'm just curious.\N我不确定你有没有什么见解，只是有点好奇。
+Dialogue: 0,0:02:17.13,0:02:21.31,Sub,,0,0,0,,Um I mean I mean there there there there are some pretty uh shocking metrics.\N呃，我的意思是，有些数据确实相当惊人。
+Dialogue: 0,0:02:21.36,0:02:23.88,Sub,,0,0,0,,Like a million vCPUs sounds insane.\N一百万个 vCPU 听起来太疯狂了。
+Dialogue: 0,0:02:23.93,0:02:31.60,Sub,,0,0,0,,Um but there some of the some of the scale of the workloads and contracts people are signing are are even like more ridiculous than that, right?\N但有些工作负载和合同的规模，人们签下的甚至比那还荒谬，对吧？
+Dialogue: 0,0:02:31.90,0:02:33.96,Sub,,0,0,0,,it's sort of like a very um dynamic market.\N这有点像一个非常动态的市场。
+Dialogue: 0,0:02:34.01,0:02:39.11,Sub,,0,0,0,,And then and then you've got like Microsoft and Google are starting to deploy their CPUs in volumes.\N然后，微软和谷歌也开始大规模部署他们的CPU了。
+Dialogue: 0,0:02:39.16,0:02:46.48,Sub,,0,0,0,,Um ARM is going to launch a CPU in like a few weeks uh that Meta is going to adopt and a few others are going to adopt um like Cloudflare.\N嗯，Arm 几周后将推出一款 CPU，Meta 将采用，\N还有像 Cloudflare 这样的公司也会采用。
+Dialogue: 0,0:02:46.53,0:02:51.60,Sub,,0,0,0,,And so there's going to be a lot more proliferation like Arm standalone rather than like Arm licensing the IP to someone.\N因此会出现更多 Arm 独立芯片，而不是 Arm 把 IP 授权给别人。
+Dialogue: 0,0:02:51.65,0:02:58.60,Sub,,0,0,0,,So there's a lot more um diversification in the market um which which happens when there's a gold rush, right?\N所以市场上有更多的多样化，这在出现淘金热时就会发生，对吧？
+Dialogue: 0,0:02:58.64,0:03:05.80,Sub,,0,0,0,,And then we'll see what actually is the best quality and is left standing as the sort of supply demand gap get closes.\N随后我们将看到，当供需差距逐渐缩小后，究竟哪种质量的产品能够脱颖而出，保持领先。
+Dialogue: 0,0:03:05.86,0:03:06.26,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:03:06.30,0:03:12.44,Sub,,0,0,0,,But it seems that supply and demand will still grow like at least what I see like one the RL and it it seems like RL is mostly done,\N但看起来供需仍会继续增长。至少从我看到的情况，强化学习大多是在后训练阶段完成，
+Dialogue: 0,0:03:12.49,0:03:20.90,Sub,,0,0,0,,you know, they do post trading on RL, but we have now vendors and companies that are pitching and creating services that do RL in real time.\N你知道，他们确实会用强化学习做后训练，但现在已有供应商在提供实时强化学习服务。
+Dialogue: 0,0:03:20.96,0:03:26.77,Sub,,0,0,0,,And since you have like some agents you have some SaaS that's an agentic in the background and then\N而且因为你们有一些智能体，有些 SaaS 在后台以代理式方式运行。
+Dialogue: 0,0:03:26.82,0:03:32.26,Sub,,0,0,0,,it will do RL at the end of the day basically to like learn against what it has done.\N说到底，它最终会进行强化学习，以根据自身行为进行学习。
+Dialogue: 0,0:03:32.31,0:03:33.42,Sub,,0,0,0,,And so that grows.\N于是它不断增长。
+Dialogue: 0,0:03:33.72,0:03:41.60,Sub,,0,0,0,,they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot.\N他们宁愿为持续运行的热池CPU付费，这样当GPU有任务过来时，CPU就已经处于就绪状态。
+Dialogue: 0,0:03:41.66,0:03:43.38,Sub,,0,0,0,,They're essentially working, right?\NCPU 实际上已经在工作了，对吧？
+Dialogue: 0,0:03:43.43,0:03:47.78,Sub,,0,0,0,,So they'll we we I say we cuz we do mostly CPUs are certainly the cheap resource.\N所以我们会说，因为我们主要做 CPU，这显然是成本较低的资源。
+Dialogue: 0,0:03:47.83,0:03:50.12,Sub,,0,0,0,,I don't know if we're cheap, but cheap resource for this.\N我不知道我们是不是便宜，但这个资源确实很便宜。
+Dialogue: 0,0:03:50.17,0:03:57.90,Sub,,0,0,0,,And so that spends more GPUs actually just because the cost of having an idle GPU is to is way more expensive, right?\N所以实际上会用更多GPU，因为让GPU闲置的成本要高得多，对吧？
+Dialogue: 0,0:03:57.96,0:03:59.84,Sub,,0,0,0,,Yeah, it's actually like a really interesting point, right?\N是的，这实际上是个非常有趣的观点，对吧？
+Dialogue: 0,0:03:59.89,0:04:03.83,Sub,,0,0,0,,The business model is like no one does I mean sure, there's on demand GPUs,\N这个商业模式——我是说，确实有按需 GPU，
+Dialogue: 0,0:04:03.88,0:04:09.54,Sub,,0,0,0,,but like Lambda has like 50,000 plus GPUs and only 4,000 of them are on demand, right?\N但就像 Lambda 有超过 5 万块 GPU，其中只有 4000 块是按需可用的，对吧？
+Dialogue: 0,0:04:09.59,0:04:10.71,Sub,,0,0,0,,And they're always sold out.\N而且总是卖光。
+Dialogue: 0,0:04:10.76,0:04:12.97,Sub,,0,0,0,,So like no one really has on demand GPUs.\N所以其实没人真的拥有按需 GPU。
+Dialogue: 0,0:04:13.02,0:04:20.44,Sub,,0,0,0,,Everyone's signing at minimum like long-term, you know, multi-month contracts, but in most cases multi-year contracts.\N大家都在签至少长期的合同，你知道的，几个月起步，大多数是多年期的合同。
+Dialogue: 0,0:04:20.49,0:04:25.25,Sub,,0,0,0,,Um and so like CPUs have been used to like you can spin them up and down, right?\N嗯，就像 CPU 可以随时启动和关闭一样，对吧？
+Dialogue: 0,0:04:25.30,0:04:27.83,Sub,,0,0,0,,That's why everyone moved to the cloud, right?\N这就是为什么大家都转向了云端，对吧？
+Dialogue: 0,0:04:27.88,0:04:34.95,Sub,,0,0,0,,Um but with these RL workloads, it's like, okay, the GPU: the generator, the model running on a GPU generated a bunch of stuff.\N但这些强化学习工作负载的情况是，好吧，GPU作为生成器，运行在GPU上的模型生成了一大堆内容。
+Dialogue: 0,0:04:35.00,0:04:36.95,Sub,,0,0,0,,It sends it to the verifier.\N它将其发送给验证器。
+Dialogue: 0,0:04:37.00,0:04:39.04,Sub,,0,0,0,,If the verifier is not ready and waiting Then it's idle.\N如果验证器没有提前准备好并等待，GPU 就会空闲。
+Dialogue: 0,0:04:39.09,0:04:39.63,Sub,,0,0,0,,Then it's waiting.\N然后它在等待。
+Dialogue: 0,0:04:39.68,0:04:39.84,Sub,,0,0,0,,Right.\N对。
+Dialogue: 0,0:04:39.87,0:04:40.83,Sub,,0,0,0,,Like the GPU is just sitting there.\N就像 GPU 就那样闲置着。

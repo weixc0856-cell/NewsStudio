@@ -49,246 +49,246 @@ see if it was doing structured properly doing structured outputs you know for fu
 看看它有没有正确生成结构化输出，比如用于函数调用，
 
 11
-00:01:22,155 --> 00:01:26,130
+00:01:21,955 --> 00:01:25,930
 We've now launched today we announced our Windows sandbox which runs on a CPU.
 今天我们正式发布：基于 CPU 运行的 Windows 沙箱。
 
 12
-00:01:26,180 --> 00:01:32,468
+00:01:25,980 --> 00:01:32,268
 So if you need an agent to do like on legacy software which is like all finance, all support, all um that's all there.
 所以如果你需要一个智能体来处理像旧软件这样的任务，比如所有财务、所有支持，这些都在里面。
 
 13
-00:01:32,518 --> 00:01:37,980
+00:01:32,318 --> 00:01:37,780
 But I'll also to your point like reinforcement learning, we have a bunch of people that usually use like Kubernetes.
 但就你提到的强化学习而言，我们有很多客户通常用 Kubernetes，
 
 14
-00:01:38,030 --> 00:01:39,034
+00:01:37,830 --> 00:01:38,834
 Now they would use us.
 现在他们会用我们。
 
 15
-00:01:39,084 --> 00:01:44,816
+00:01:38,884 --> 00:01:44,616
 But the interesting thing is the the size and scale of these loads are insanely large and they're growing insanely large.
 但有趣的是，这些负载的规模和体量大得惊人，而且还在急剧扩大。
 
 16
-00:01:44,866 --> 00:01:48,515
+00:01:44,666 --> 00:01:48,315
 And we're like the smallest cloud in the world.
 而我们大概是世界上最小的云。
 
 17
-00:01:48,565 --> 00:01:56,010
+00:01:48,365 --> 00:01:55,810
 So my interest to what in the question is like if we as a very very small company have this much, what does that do at the large scale, right?
 所以，我对这个问题的兴趣在于，如果我们作为一家非常非常小的公司，已经能做到这种程度，那么在大规模上会怎样呢，对吧？
 
 18
-00:01:56,060 --> 00:01:59,623
+00:01:55,860 --> 00:01:59,423
 Like so um and we've had I'm curious if you have any insight on this,
 就像这样，呃，我很好奇，你对这个问题有什么见解吗？
 
 19
-00:01:59,673 --> 00:02:05,186
+00:01:59,473 --> 00:02:04,986
 but just just RL let alone the long running agents which are on their own, we we see customers coming in.
 但仅仅是强化学习，更不用说那些独立运行的长期智能体，我们已经看到客户纷纷上门。
 
 20
-00:02:05,236 --> 00:02:09,118
+00:02:05,036 --> 00:02:08,918
 One of them ran a million one single customer yesterday in the span of 6 hours.
 其中一位客户昨天在 6 小时内跑了一百万个这样的 CPU 工作负载。
 
 21
-00:02:09,168 --> 00:02:10,734
+00:02:08,968 --> 00:02:10,534
 Like 1 million of these CPU workloads.
 像一百万个这样的CPU工作负载。
 
 22
-00:02:10,784 --> 00:02:11,817
+00:02:10,584 --> 00:02:11,617
 So that's one customer.
 这就是一位客户。
 
 23
-00:02:11,867 --> 00:02:13,428
+00:02:11,667 --> 00:02:13,228
 And so like how many of these customers are doing RL?
 那么，有多少客户在使用强化学习呢？
 
 24
-00:02:13,478 --> 00:02:14,408
+00:02:13,278 --> 00:02:14,208
 They're going to need this.
 他们将会需要这个。
 
 25
-00:02:14,458 --> 00:02:17,278
+00:02:14,258 --> 00:02:17,078
 I I don't know if you have any insights on this, but I'm just curious.
 我不确定你有没有什么见解，只是有点好奇。
 
 26
-00:02:17,328 --> 00:02:21,512
+00:02:17,128 --> 00:02:21,312
 Um I mean I mean there there there there are some pretty uh shocking metrics.
 呃，我的意思是，有些数据确实相当惊人。
 
 27
-00:02:21,562 --> 00:02:24,078
+00:02:21,362 --> 00:02:23,878
 Like a million vCPUs sounds insane.
 一百万个 vCPU 听起来太疯狂了。
 
 28
-00:02:24,128 --> 00:02:31,798
+00:02:23,928 --> 00:02:31,598
 Um but there some of the some of the scale of the workloads and contracts people are signing are are even like more ridiculous than that, right?
 但有些工作负载和合同的规模，人们签下的甚至比那还荒谬，对吧？
 
 29
-00:02:32,298 --> 00:02:34,365
+00:02:31,898 --> 00:02:33,965
 it's sort of like a very um dynamic market.
 这有点像一个非常动态的市场。
 
 30
-00:02:34,415 --> 00:02:39,508
+00:02:34,015 --> 00:02:39,108
 And then and then you've got like Microsoft and Google are starting to deploy their CPUs in volumes.
 然后，微软和谷歌也开始大规模部署他们的CPU了。
 
 31
-00:02:39,558 --> 00:02:46,884
+00:02:39,158 --> 00:02:46,484
 Um ARM is going to launch a CPU in like a few weeks uh that Meta is going to adopt and a few others are going to adopt um like Cloudflare.
 嗯，Arm 几周后将推出一款 CPU，Meta 将采用，还有像 Cloudflare 这样的公司也会采用。
 
 32
-00:02:46,934 --> 00:02:51,997
+00:02:46,534 --> 00:02:51,597
 And so there's going to be a lot more proliferation like Arm standalone rather than like Arm licensing the IP to someone.
 因此会出现更多 Arm 独立芯片，而不是 Arm 把 IP 授权给别人。
 
 33
-00:02:52,047 --> 00:02:58,995
+00:02:51,647 --> 00:02:58,595
 So there's a lot more um diversification in the market um which which happens when there's a gold rush, right?
 所以市场上有更多的多样化，这在出现淘金热时就会发生，对吧？
 
 34
-00:02:59,045 --> 00:03:06,205
+00:02:58,645 --> 00:03:05,805
 And then we'll see what actually is the best quality and is left standing as the sort of supply demand gap get closes.
 随后我们将看到，当供需差距逐渐缩小后，究竟哪种质量的产品能够脱颖而出，保持领先。
 
 35
-00:03:06,255 --> 00:03:06,655
+00:03:05,855 --> 00:03:06,255
 Yeah.
 嗯。
 
 36
-00:03:06,698 --> 00:03:12,844
+00:03:06,298 --> 00:03:12,444
 But it seems that supply and demand will still grow like at least what I see like one the RL and it it seems like RL is mostly done,
 但看起来供需仍会继续增长。至少从我看到的情况，强化学习大多是在后训练阶段完成，
 
 37
-00:03:12,894 --> 00:03:21,305
+00:03:12,494 --> 00:03:20,905
 you know, they do post trading on RL, but we have now vendors and companies that are pitching and creating services that do RL in real time.
 你知道，他们确实会用强化学习做后训练，但现在已有供应商在提供实时强化学习服务。
 
 38
-00:03:21,355 --> 00:03:27,170
+00:03:20,955 --> 00:03:26,770
 And since you have like some agents you have some SaaS that's an agentic in the background and then
 而且因为你们有一些智能体，有些 SaaS 在后台以代理式方式运行。
 
 39
-00:03:27,220 --> 00:03:32,659
+00:03:26,820 --> 00:03:32,259
 it will do RL at the end of the day basically to like learn against what it has done.
 说到底，它最终会进行强化学习，以根据自身行为进行学习。
 
 40
-00:03:32,709 --> 00:03:33,819
+00:03:32,309 --> 00:03:33,419
 And so that grows.
 于是它不断增长。
 
 41
-00:03:34,319 --> 00:03:42,205
+00:03:33,719 --> 00:03:41,605
 they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot.
 他们宁愿为持续运行的热池CPU付费，这样当GPU有任务过来时，CPU就已经处于就绪状态。
 
 42
-00:03:42,255 --> 00:03:43,982
+00:03:41,655 --> 00:03:43,382
 They're essentially working, right?
 CPU 实际上已经在工作了，对吧？
 
 43
-00:03:44,032 --> 00:03:48,384
+00:03:43,432 --> 00:03:47,784
 So they'll we we I say we cuz we do mostly CPUs are certainly the cheap resource.
 所以我们会说，因为我们主要做 CPU，这显然是成本较低的资源。
 
 44
-00:03:48,434 --> 00:03:50,723
+00:03:47,834 --> 00:03:50,123
 I don't know if we're cheap, but cheap resource for this.
 我不知道我们是不是便宜，但这个资源确实很便宜。
 
 45
-00:03:50,773 --> 00:03:58,505
+00:03:50,173 --> 00:03:57,905
 And so that spends more GPUs actually just because the cost of having an idle GPU is to is way more expensive, right?
 所以实际上会用更多GPU，因为让GPU闲置的成本要高得多，对吧？
 
 46
-00:03:58,555 --> 00:04:00,439
+00:03:57,955 --> 00:03:59,839
 Yeah, it's actually like a really interesting point, right?
 是的，这实际上是个非常有趣的观点，对吧？
 
 47
-00:04:00,489 --> 00:04:04,434
+00:03:59,889 --> 00:04:03,834
 The business model is like no one does I mean sure, there's on demand GPUs,
 这个商业模式——我是说，确实有按需 GPU，
 
 48
-00:04:04,484 --> 00:04:10,136
+00:04:03,884 --> 00:04:09,536
 but like Lambda has like 50,000 plus GPUs and only 4,000 of them are on demand, right?
 但就像 Lambda 有超过 5 万块 GPU，其中只有 4000 块是按需可用的，对吧？
 
 49
-00:04:10,186 --> 00:04:11,311
+00:04:09,586 --> 00:04:10,711
 And they're always sold out.
 而且总是卖光。
 
 50
-00:04:11,361 --> 00:04:13,571
+00:04:10,761 --> 00:04:12,971
 So like no one really has on demand GPUs.
 所以其实没人真的拥有按需 GPU。
 
 51
-00:04:13,621 --> 00:04:21,044
+00:04:13,021 --> 00:04:20,444
 Everyone's signing at minimum like long-term, you know, multi-month contracts, but in most cases multi-year contracts.
 大家都在签至少长期的合同，你知道的，几个月起步，大多数是多年期的合同。
 
 52
-00:04:21,094 --> 00:04:25,854
+00:04:20,494 --> 00:04:25,254
 Um and so like CPUs have been used to like you can spin them up and down, right?
 嗯，就像 CPU 可以随时启动和关闭一样，对吧？
 
 53
-00:04:25,904 --> 00:04:28,426
+00:04:25,304 --> 00:04:27,826
 That's why everyone moved to the cloud, right?
 这就是为什么大家都转向了云端，对吧？
 
 54
-00:04:28,476 --> 00:04:35,553
+00:04:27,876 --> 00:04:34,953
 Um but with these RL workloads, it's like, okay, the GPU: the generator, the model running on a GPU generated a bunch of stuff.
 但这些强化学习工作负载的情况是，好吧，GPU作为生成器，运行在GPU上的模型生成了一大堆内容。
 
 55
-00:04:35,603 --> 00:04:37,546
+00:04:35,003 --> 00:04:36,946
 It sends it to the verifier.
 它将其发送给验证器。
 
 56
-00:04:37,596 --> 00:04:39,639
+00:04:36,996 --> 00:04:39,039
 If the verifier is not ready and waiting Then it's idle.
 如果验证器没有提前准备好并等待，GPU 就会空闲。
 
 57
-00:04:39,689 --> 00:04:40,226
+00:04:39,089 --> 00:04:39,626
 Then it's waiting.
 然后它在等待。
 
 58
-00:04:40,276 --> 00:04:40,440
+00:04:39,676 --> 00:04:39,840
 Right.
 对。
 
 59
-00:04:40,470 --> 00:04:41,432
+00:04:39,870 --> 00:04:40,832
 Like the GPU is just sitting there.
 就像 GPU 就那样闲置着。

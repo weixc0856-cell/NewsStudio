@@ -3,7 +3,7 @@ $ ffmpeg -hide_banner -y -f concat -safe 0 -i E:\YouTube-B\clips\c88l8daXiv4\wor
 --- stdout ---
 
 --- stderr ---
-[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022dcd609e40] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9f6fb400] Auto-inserting h264_mp4toannexb bitstream filter
 Input #0, concat, from 'E:\YouTube-B\clips\c88l8daXiv4\work\concat.txt':
   Duration: N/A, start: 0.000000, bitrate: 334 kb/s
   Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], 174 kb/s, 60 fps, 60 tbr, 15360 tbn, start 0.041992
@@ -27,15 +27,21 @@ Output #0, mp4, to 'E:\YouTube-B\clips\c88l8daXiv4\work\assembly.tmp.mp4':
     Metadata:
       handler_name    : SoundHandler
 Press [q] to stop, [?] for help
-[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022dcd68da80] Auto-inserting h264_mp4toannexb bitstream filter
-[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022dcd6425c0] Auto-inserting h264_mp4toannexb bitstream filter
-[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022dcd6415c0] Auto-inserting h264_mp4toannexb bitstream filter
-[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022dcd641880] Auto-inserting h264_mp4toannexb bitstream filter
-[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022dcd641040] Auto-inserting h264_mp4toannexb bitstream filter
-[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022dcd642b40] Auto-inserting h264_mp4toannexb bitstream filter
-[mov,mp4,m4a,3gp,3g2,mj2 @ 0000022dcdb02640] Auto-inserting h264_mp4toannexb bitstream filter
-[mp4 @ 0000022dcd887600] Starting second pass: moving the moov atom to the beginning of the file
-[out#0/mp4 @ 0000022dcd887500] video:131468KiB audio:5498KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.379700%
-frame=16869 fps=0.0 q=-1.0 Lsize=  137486KiB time=00:04:41.68 bitrate=3998.4kbits/s speed= 948x elapsed=0:00:00.29    
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9f8673c0] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9f73b500] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9f73bd00] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9fc48780] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9f73ad80] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9f73bac0] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9f73b580] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9f73c300] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9f809940] Auto-inserting h264_mp4toannexb bitstream filter
+    Last message repeated 1 times
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9f817540] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9f8167c0] Auto-inserting h264_mp4toannexb bitstream filter
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020c9f817ac0] Auto-inserting h264_mp4toannexb bitstream filter
+[mp4 @ 0000020c9fa80240] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000020c9fa80140] video:133033KiB audio:5511KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.372259%
+frame=16845 fps=0.0 q=-1.0 Lsize=  139060KiB time=00:04:41.29 bitrate=4049.8kbits/s speed= 786x elapsed=0:00:00.35    
 
 --- exit 0 ---

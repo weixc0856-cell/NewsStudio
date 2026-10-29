@@ -1,4 +1,4 @@
-$ ffmpeg -hide_banner -y -i E:\YouTube-B\clips\c88l8daXiv4\final\c88l8daXiv4.highlight-03.GPU闲置成本推动CPU预热.mp4 -map 0:v:0 -map 0:a:0 -c:v copy -video_track_timescale 15360 -c:a aac -b:a 160k -ar 48000 -ac 2 -t 67.117 -sn -dn -map_chapters -1 -movflags +faststart -avoid_negative_ts make_zero -af afade=t=in:st=0:d=0.200 E:\YouTube-B\clips\c88l8daXiv4\work\segments\clip-03.seg.mp4
+$ ffmpeg -hide_banner -y -ss 4.304 -i E:\YouTube-B\clips\c88l8daXiv4\final\c88l8daXiv4.highlight-03.GPU闲置成本推动CPU预热.mp4 -t 62.813 -map 0:v:0 -map 0:a:0 -c:v copy -video_track_timescale 15360 -c:a aac -b:a 160k -ar 48000 -ac 2 -sn -dn -map_chapters -1 -movflags +faststart -avoid_negative_ts make_zero E:\YouTube-B\clips\c88l8daXiv4\work\segments\clip-03.body.mp4
 
 --- stdout ---
 
@@ -34,7 +34,7 @@ Stream mapping:
   Stream #0:0 -> #0:0 (copy)
   Stream #0:1 -> #0:1 (aac (native) -> aac (native))
 Press [q] to stop, [?] for help
-Output #0, mp4, to 'E:\YouTube-B\clips\c88l8daXiv4\work\segments\clip-03.seg.mp4':
+Output #0, mp4, to 'E:\YouTube-B\clips\c88l8daXiv4\work\segments\clip-03.body.mp4':
   Metadata:
     major_brand     : isom
     minor_version   : 512
@@ -61,10 +61,10 @@ Output #0, mp4, to 'E:\YouTube-B\clips\c88l8daXiv4\work\segments\clip-03.seg.mp4
     Metadata:
       encoder         : Lavc62.28.100 aac
       handler_name    : SoundHandler
-frame= 1969 fps=0.0 q=-1.0 size=   15616KiB time=00:00:32.46 bitrate=3939.9kbits/s speed=64.4x elapsed=0:00:00.50    
-[mp4 @ 00000238cc8e00c0] Starting second pass: moving the moov atom to the beginning of the file
-[out#0/mp4 @ 00000238cc8df8c0] video:37902KiB audio:1314KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.315816%
-frame= 4023 fps=4001 q=-1.0 Lsize=   39339KiB time=00:01:07.10 bitrate=4802.4kbits/s speed=66.7x elapsed=0:00:01.00    
-[aac @ 00000238ccef9640] Qavg: 827.012
+frame= 1840 fps=0.0 q=-1.0 size=   15104KiB time=00:00:30.27 bitrate=4087.4kbits/s speed=  59x elapsed=0:00:00.51    
+[mp4 @ 00000236267c6b80] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000023626820d80] video:35949KiB audio:1231KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.312375%
+frame= 3767 fps=0.0 q=-1.0 Lsize=   37296KiB time=00:01:02.80 bitrate=4865.1kbits/s speed=62.9x elapsed=0:00:00.99    
+[aac @ 0000023626cee340] Qavg: 1064.379
 
 --- exit 0 ---
