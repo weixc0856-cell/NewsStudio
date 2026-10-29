@@ -1325,15 +1325,15 @@
     "status": "SUCCESS",
     "output": "clips/c88l8daXiv4/final/c88l8daXiv4.highlights-merged.mp4",
     "quarantined": null,
-    "expected_duration_ms": 278299,
-    "actual_duration_ms": 278586,
+    "expected_duration_ms": 281432,
+    "actual_duration_ms": 281719,
     "segments": [
       {
         "kind": "intro",
         "label": "片头",
         "offset_ms": 0,
-        "duration_ms": 13988,
-        "end_ms": 13988
+        "duration_ms": 17121,
+        "end_ms": 17121
       },
       {
         "kind": "clip",
@@ -1342,18 +1342,18 @@
         "title": "CPU成AI新瓶颈",
         "source_start_ms": 318571,
         "source_end_ms": 383105,
-        "offset_ms": 13988,
+        "offset_ms": 17121,
         "duration_ms": 64534,
-        "end_ms": 78522
+        "end_ms": 81655
       },
       {
         "kind": "transition",
         "label": "转场 04→01",
         "card_index": 1,
         "card_title": "CPU瓶颈已成行业常态",
-        "offset_ms": 78522,
+        "offset_ms": 81655,
         "duration_ms": 500,
-        "end_ms": 79022
+        "end_ms": 82155
       },
       {
         "kind": "clip",
@@ -1362,18 +1362,18 @@
         "title": "CPU瓶颈已成行业常态",
         "source_start_ms": 602387,
         "source_end_ms": 672030,
-        "offset_ms": 79022,
+        "offset_ms": 82155,
         "duration_ms": 69643,
-        "end_ms": 148665
+        "end_ms": 151798
       },
       {
         "kind": "transition",
         "label": "转场 01→02",
         "card_index": 2,
         "card_title": "CPU市场分化加速",
-        "offset_ms": 148665,
+        "offset_ms": 151798,
         "duration_ms": 500,
-        "end_ms": 149165
+        "end_ms": 152298
       },
       {
         "kind": "clip",
@@ -1382,18 +1382,18 @@
         "title": "CPU市场分化加速",
         "source_start_ms": 835800,
         "source_end_ms": 897321,
-        "offset_ms": 149165,
+        "offset_ms": 152298,
         "duration_ms": 61521,
-        "end_ms": 210686
+        "end_ms": 213819
       },
       {
         "kind": "transition",
         "label": "转场 02→03",
         "card_index": 3,
         "card_title": "GPU闲置成本推动CPU预热",
-        "offset_ms": 210686,
+        "offset_ms": 213819,
         "duration_ms": 500,
-        "end_ms": 211186
+        "end_ms": 214319
       },
       {
         "kind": "clip",
@@ -1402,15 +1402,15 @@
         "title": "GPU闲置成本推动CPU预热",
         "source_start_ms": 1120803,
         "source_end_ms": 1187916,
-        "offset_ms": 211186,
+        "offset_ms": 214319,
         "duration_ms": 67113,
-        "end_ms": 278299
+        "end_ms": 281432
       }
     ],
     "bed": {
       "enabled": true,
-      "start_ms": 304583,
-      "duration_ms": 13988,
+      "start_ms": 301450,
+      "duration_ms": 17121,
       "volume": 0.15,
       "fade_out_ms": 400
     },
@@ -1425,7 +1425,7 @@
     },
     "intro": {
       "path": "clips/c88l8daXiv4/intro/intro.mp4",
-      "duration_ms": 13988,
+      "duration_ms": 17121,
       "status": "SUCCESS",
       "headline": "CPU 为何成为 AI 新瓶颈",
       "subtitle": "Dylan Patel · SemiAnalysis，2026",
@@ -1438,27 +1438,27 @@
     "subtitle_segments": [
       {
         "clip_index": 4,
-        "offset_ms": 13988,
+        "offset_ms": 17121,
         "cues": 10,
-        "max_end_ms": 78522
+        "max_end_ms": 81655
       },
       {
         "clip_index": 1,
-        "offset_ms": 79022,
+        "offset_ms": 82155,
         "cues": 18,
-        "max_end_ms": 148665
+        "max_end_ms": 151798
       },
       {
         "clip_index": 2,
-        "offset_ms": 149165,
+        "offset_ms": 152298,
         "cues": 12,
-        "max_end_ms": 210686
+        "max_end_ms": 213819
       },
       {
         "clip_index": 3,
-        "offset_ms": 211186,
+        "offset_ms": 214319,
         "cues": 19,
-        "max_end_ms": 278299
+        "max_end_ms": 281432
       }
     ],
     "gaps_ms": [
@@ -1509,12 +1509,12 @@
         {
           "name": "duration",
           "ok": true,
-          "detail": "actual 278586 ms vs expected 278299 ms (delta +287)"
+          "detail": "actual 281719 ms vs expected 281432 ms (delta +287)"
         },
         {
           "name": "av_duration_equal",
           "ok": true,
-          "detail": "video 278545 ms vs audio 278566 ms (delta 21)"
+          "detail": "video 281678 ms vs audio 281700 ms (delta 22)"
         },
         {
           "name": "fps",
@@ -1524,7 +1524,7 @@
         {
           "name": "intro_duration",
           "ok": true,
-          "detail": "13988 ms"
+          "detail": "17121 ms"
         },
         {
           "name": "joins_decode",
@@ -1532,13 +1532,13 @@
           "detail": "clean"
         }
       ],
-      "actual_duration_ms": 278586,
+      "actual_duration_ms": 281719,
       "video_fps": 60.0,
       "spec": {
         "path": "E:\\YouTube-B\\clips\\c88l8daXiv4\\work\\assembly.tmp.mp4",
         "name": "assembly.tmp.mp4",
         "stream_count": 2,
-        "container_ms": 278586,
+        "container_ms": 281719,
         "video": {
           "codec": "h264",
           "width": 1920,
@@ -1548,13 +1548,13 @@
           "level": 42,
           "fps": 60.0,
           "time_base": "1/15360",
-          "duration_ms": 278545
+          "duration_ms": 281678
         },
         "audio": {
           "codec": "aac",
           "sample_rate": 48000,
           "channels": 2,
-          "duration_ms": 278566
+          "duration_ms": 281700
         }
       }
     },
@@ -1593,28 +1593,28 @@
         }
       ],
       "joins_ms": [
-        14009,
-        78599,
-        79120,
-        148815,
-        149336,
-        210906,
-        211427
+        17142,
+        81732,
+        82253,
+        151948,
+        152469,
+        214039,
+        214560
       ],
       "list": "clips/c88l8daXiv4/work/concat.txt"
     },
     "ffmpeg_log": "clips/c88l8daXiv4/work/assembly.concat.ffmpeg.log",
-    "generated_at": "2026-10-29T03:04:35+00:00"
+    "generated_at": "2026-10-29T03:33:55+00:00"
   },
   "intro": {
     "schema_version": 2,
     "video_id": "c88l8daXiv4",
     "status": "SUCCESS",
-    "generated_at": "2026-10-29T03:01:37+00:00",
+    "generated_at": "2026-10-29T03:33:01+00:00",
     "path": "clips/c88l8daXiv4/intro/intro.mp4",
     "quarantined": null,
-    "duration_ms": 13988,
-    "planned_duration_ms": 13969,
+    "duration_ms": 17121,
+    "planned_duration_ms": 17107,
     "manual_review": false,
     "target_platform": "16:9 横屏 (1920x1080@60fps)",
     "accent": "#ff5500",
@@ -1650,7 +1650,7 @@
     "copy_rewrite_prompt": "clips/c88l8daXiv4/intro/copy_rewrite.prompt.txt",
     "copy_rewrite_response": "clips/c88l8daXiv4/intro/copy_rewrite.response.json",
     "animation": {
-      "duration_ms": 13969,
+      "duration_ms": 17107,
       "bar_reveal_ms": 550,
       "title_delay_ms": 150,
       "title_fade_ms": 550,
@@ -1663,11 +1663,56 @@
       "tts_text": "二零二六年，Daytona 现场。Dylan Patel 说，CPU 为什么总不够用？推理模型把训练和验证闭环压紧。GPU 的闲置率反而一路上涨。算力到底卡在哪一步？听听他怎么说，来听原声。",
       "script": "clips/c88l8daXiv4/intro/intro.script.json",
       "raw_path": "clips/c88l8daXiv4/intro/narration.raw.wav",
-      "raw_seconds": 13.119,
+      "raw_seconds": 16.257,
       "path": "clips/c88l8daXiv4/intro/narration.wav",
-      "final_seconds": 13.719,
+      "final_seconds": 16.857,
       "tempo": 1.0,
       "head_silence_ms": 600,
+      "sentence_gap_ms": 400,
+      "sentences": [
+        {
+          "id": 1,
+          "text": "二零二六年，Daytona 现场。",
+          "seconds": 2.009,
+          "gap_after_ms": 400,
+          "start_ms": 0
+        },
+        {
+          "id": 2,
+          "text": "Dylan Patel 说，CPU 为什么总不够用？",
+          "seconds": 2.775,
+          "gap_after_ms": 400,
+          "start_ms": 2409
+        },
+        {
+          "id": 3,
+          "text": "推理模型把训练和验证闭环压紧。",
+          "seconds": 3.216,
+          "gap_after_ms": 400,
+          "start_ms": 5584
+        },
+        {
+          "id": 4,
+          "text": "GPU 的闲置率反而一路上涨。",
+          "seconds": 2.519,
+          "gap_after_ms": 400,
+          "start_ms": 9200
+        },
+        {
+          "id": 5,
+          "text": "算力到底卡在哪一步？",
+          "seconds": 1.579,
+          "gap_after_ms": 400,
+          "start_ms": 12119
+        },
+        {
+          "id": 6,
+          "text": "听听他怎么说，来听原声。",
+          "seconds": 2.159,
+          "gap_after_ms": 0,
+          "start_ms": 14098
+        }
+      ],
       "prompt_wav": "",
       "voice_speaker": "中文女",
       "service": {
@@ -1679,9 +1724,9 @@
       }
     },
     "timeline": {
-      "duration_ms": 13969,
+      "duration_ms": 17107,
       "lead_ms": 0,
-      "voice_ms": 13719,
+      "voice_ms": 16857,
       "tail_ms": 250
     },
     "gain": 1.0351,
@@ -1739,7 +1784,7 @@
         {
           "name": "av_duration_equal",
           "ok": true,
-          "detail": "video 13967 ms vs audio 13988 ms (delta -21, tolerance 60)"
+          "detail": "video 17100 ms vs audio 17121 ms (delta -21, tolerance 60)"
         },
         {
           "name": "audio_starts_at_zero",
@@ -1749,12 +1794,12 @@
         {
           "name": "duration_window",
           "ok": true,
-          "detail": "actual 13988 ms, window [10000, 20000]"
+          "detail": "actual 17121 ms, window [10000, 20000] (advisory)"
         },
         {
           "name": "duration_target",
           "ok": true,
-          "detail": "actual 13988 ms vs planned 13969 ms (delta +19)"
+          "detail": "actual 17121 ms vs planned 17107 ms (delta +14)"
         },
         {
           "name": "resolution",
@@ -1782,7 +1827,7 @@
           "detail": "mean volume -22.7 dB"
         }
       ],
-      "actual_duration_ms": 13988,
+      "actual_duration_ms": 17121,
       "audio_mean_db": -22.7
     },
     "ffmpeg_command": [
@@ -1794,13 +1839,13 @@
       "-framerate",
       "60",
       "-t",
-      "13.967",
+      "17.100",
       "-i",
       "E:\\YouTube-B\\clips\\c88l8daXiv4\\intro\\intro.png",
       "-i",
       "E:\\YouTube-B\\clips\\c88l8daXiv4\\intro\\narration.wav",
       "-filter_complex",
-      "[0:v]fps=60,format=yuv420p,settb=AVTB,trim=duration=13.967,setpts=PTS-STARTPTS[v];[1:a]volume=1.0351,adelay=0|0,apad,atrim=0:13.967,aformat=sample_fmts=fltp:channel_layouts=stereo,alimiter=limit=0.95[a]",
+      "[0:v]fps=60,format=yuv420p,settb=AVTB,trim=duration=17.100,setpts=PTS-STARTPTS[v];[1:a]volume=1.0351,adelay=0|0,apad,atrim=0:17.100,aformat=sample_fmts=fltp:channel_layouts=stereo,alimiter=limit=0.95[a]",
       "-map",
       "[v]",
       "-map",
@@ -1814,7 +1859,7 @@
       "-r",
       "60",
       "-frames:v",
-      "838",
+      "1026",
       "-c:a",
       "aac",
       "-b:a",
@@ -1824,7 +1869,7 @@
       "-ac",
       "2",
       "-t",
-      "13.966667",
+      "17.100000",
       "-shortest",
       "-sn",
       "-dn",

@@ -2,11 +2,11 @@
   "schema_version": 2,
   "video_id": "c88l8daXiv4",
   "status": "SUCCESS",
-  "generated_at": "2026-10-29T03:01:37+00:00",
+  "generated_at": "2026-10-29T03:33:01+00:00",
   "path": "clips/c88l8daXiv4/intro/intro.mp4",
   "quarantined": null,
-  "duration_ms": 13988,
-  "planned_duration_ms": 13969,
+  "duration_ms": 17121,
+  "planned_duration_ms": 17107,
   "manual_review": false,
   "target_platform": "16:9 横屏 (1920x1080@60fps)",
   "accent": "#ff5500",
@@ -42,7 +42,7 @@
   "copy_rewrite_prompt": "clips/c88l8daXiv4/intro/copy_rewrite.prompt.txt",
   "copy_rewrite_response": "clips/c88l8daXiv4/intro/copy_rewrite.response.json",
   "animation": {
-    "duration_ms": 13969,
+    "duration_ms": 17107,
     "bar_reveal_ms": 550,
     "title_delay_ms": 150,
     "title_fade_ms": 550,
@@ -55,11 +55,56 @@
     "tts_text": "二零二六年，Daytona 现场。Dylan Patel 说，CPU 为什么总不够用？推理模型把训练和验证闭环压紧。GPU 的闲置率反而一路上涨。算力到底卡在哪一步？听听他怎么说，来听原声。",
     "script": "clips/c88l8daXiv4/intro/intro.script.json",
     "raw_path": "clips/c88l8daXiv4/intro/narration.raw.wav",
-    "raw_seconds": 13.119,
+    "raw_seconds": 16.257,
     "path": "clips/c88l8daXiv4/intro/narration.wav",
-    "final_seconds": 13.719,
+    "final_seconds": 16.857,
     "tempo": 1.0,
     "head_silence_ms": 600,
+    "sentence_gap_ms": 400,
+    "sentences": [
+      {
+        "id": 1,
+        "text": "二零二六年，Daytona 现场。",
+        "seconds": 2.009,
+        "gap_after_ms": 400,
+        "start_ms": 0
+      },
+      {
+        "id": 2,
+        "text": "Dylan Patel 说，CPU 为什么总不够用？",
+        "seconds": 2.775,
+        "gap_after_ms": 400,
+        "start_ms": 2409
+      },
+      {
+        "id": 3,
+        "text": "推理模型把训练和验证闭环压紧。",
+        "seconds": 3.216,
+        "gap_after_ms": 400,
+        "start_ms": 5584
+      },
+      {
+        "id": 4,
+        "text": "GPU 的闲置率反而一路上涨。",
+        "seconds": 2.519,
+        "gap_after_ms": 400,
+        "start_ms": 9200
+      },
+      {
+        "id": 5,
+        "text": "算力到底卡在哪一步？",
+        "seconds": 1.579,
+        "gap_after_ms": 400,
+        "start_ms": 12119
+      },
+      {
+        "id": 6,
+        "text": "听听他怎么说，来听原声。",
+        "seconds": 2.159,
+        "gap_after_ms": 0,
+        "start_ms": 14098
+      }
+    ],
     "prompt_wav": "",
     "voice_speaker": "中文女",
     "service": {
@@ -71,9 +116,9 @@
     }
   },
   "timeline": {
-    "duration_ms": 13969,
+    "duration_ms": 17107,
     "lead_ms": 0,
-    "voice_ms": 13719,
+    "voice_ms": 16857,
     "tail_ms": 250
   },
   "gain": 1.0351,
@@ -131,7 +176,7 @@
       {
         "name": "av_duration_equal",
         "ok": true,
-        "detail": "video 13967 ms vs audio 13988 ms (delta -21, tolerance 60)"
+        "detail": "video 17100 ms vs audio 17121 ms (delta -21, tolerance 60)"
       },
       {
         "name": "audio_starts_at_zero",
@@ -141,12 +186,12 @@
       {
         "name": "duration_window",
         "ok": true,
-        "detail": "actual 13988 ms, window [10000, 20000]"
+        "detail": "actual 17121 ms, window [10000, 20000] (advisory)"
       },
       {
         "name": "duration_target",
         "ok": true,
-        "detail": "actual 13988 ms vs planned 13969 ms (delta +19)"
+        "detail": "actual 17121 ms vs planned 17107 ms (delta +14)"
       },
       {
         "name": "resolution",
@@ -174,7 +219,7 @@
         "detail": "mean volume -22.7 dB"
       }
     ],
-    "actual_duration_ms": 13988,
+    "actual_duration_ms": 17121,
     "audio_mean_db": -22.7
   },
   "ffmpeg_command": [
@@ -186,13 +231,13 @@
     "-framerate",
     "60",
     "-t",
-    "13.967",
+    "17.100",
     "-i",
     "E:\\YouTube-B\\clips\\c88l8daXiv4\\intro\\intro.png",
     "-i",
     "E:\\YouTube-B\\clips\\c88l8daXiv4\\intro\\narration.wav",
     "-filter_complex",
-    "[0:v]fps=60,format=yuv420p,settb=AVTB,trim=duration=13.967,setpts=PTS-STARTPTS[v];[1:a]volume=1.0351,adelay=0|0,apad,atrim=0:13.967,aformat=sample_fmts=fltp:channel_layouts=stereo,alimiter=limit=0.95[a]",
+    "[0:v]fps=60,format=yuv420p,settb=AVTB,trim=duration=17.100,setpts=PTS-STARTPTS[v];[1:a]volume=1.0351,adelay=0|0,apad,atrim=0:17.100,aformat=sample_fmts=fltp:channel_layouts=stereo,alimiter=limit=0.95[a]",
     "-map",
     "[v]",
     "-map",
@@ -206,7 +251,7 @@
     "-r",
     "60",
     "-frames:v",
-    "838",
+    "1026",
     "-c:a",
     "aac",
     "-b:a",
@@ -216,7 +261,7 @@
     "-ac",
     "2",
     "-t",
-    "13.966667",
+    "17.100000",
     "-shortest",
     "-sn",
     "-dn",

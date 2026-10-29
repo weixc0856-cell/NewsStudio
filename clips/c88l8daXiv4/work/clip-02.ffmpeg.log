@@ -46,21 +46,21 @@ Input #0, matroska,webm, from 'E:\YouTube-B\downloads\Dylan Patel (SemiAnalysis)
   Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)
     Metadata:
       DURATION        : 00:25:04.061000000
-[Parsed_ass_0 @ 000001b5965b6a00] libass API version: 0x1704000
-[Parsed_ass_0 @ 000001b5965b6a00] libass source: commit: 0.17.4-21-gfadc390583f24eb5cf98f16925fd3adee50bca88
-[Parsed_ass_0 @ 000001b5965b6a00] Shaper: FriBidi 1.0.16 (SIMPLE) HarfBuzz-ng 13.1.1 (COMPLEX)
-[Parsed_ass_0 @ 000001b5965b6a00] Using font provider directwrite (with GDI)
-[Parsed_ass_0 @ 000001b5965b6a00] Added subtitle file: 'clips/c88l8daXiv4/work/clip-02.ass' (2 styles, 12 events)
+[Parsed_ass_0 @ 000001e526de8bc0] libass API version: 0x1704000
+[Parsed_ass_0 @ 000001e526de8bc0] libass source: commit: 0.17.4-21-gfadc390583f24eb5cf98f16925fd3adee50bca88
+[Parsed_ass_0 @ 000001e526de8bc0] Shaper: FriBidi 1.0.16 (SIMPLE) HarfBuzz-ng 13.1.1 (COMPLEX)
+[Parsed_ass_0 @ 000001e526de8bc0] Using font provider directwrite (with GDI)
+[Parsed_ass_0 @ 000001e526de8bc0] Added subtitle file: 'clips/c88l8daXiv4/work/clip-02.ass' (2 styles, 12 events)
 Stream mapping:
   Stream #0:0 -> #0:0 (vp9 (native) -> h264 (h264_qsv))
   Stream #0:1 -> #0:1 (opus (native) -> aac (native))
 Press [q] to stop, [?] for help
-[Parsed_ass_0 @ 000001b596965bc0] libass API version: 0x1704000
-[Parsed_ass_0 @ 000001b596965bc0] libass source: commit: 0.17.4-21-gfadc390583f24eb5cf98f16925fd3adee50bca88
-[Parsed_ass_0 @ 000001b596965bc0] Shaper: FriBidi 1.0.16 (SIMPLE) HarfBuzz-ng 13.1.1 (COMPLEX)
-[Parsed_ass_0 @ 000001b596965bc0] Using font provider directwrite (with GDI)
-[Parsed_ass_0 @ 000001b596965bc0] Added subtitle file: 'clips/c88l8daXiv4/work/clip-02.ass' (2 styles, 12 events)
-[Parsed_ass_0 @ 000001b596965bc0] fontselect: (Microsoft YaHei, 400, 0) -> MicrosoftYaHei, 0, MicrosoftYaHei
+[Parsed_ass_0 @ 000001e526e07980] libass API version: 0x1704000
+[Parsed_ass_0 @ 000001e526e07980] libass source: commit: 0.17.4-21-gfadc390583f24eb5cf98f16925fd3adee50bca88
+[Parsed_ass_0 @ 000001e526e07980] Shaper: FriBidi 1.0.16 (SIMPLE) HarfBuzz-ng 13.1.1 (COMPLEX)
+[Parsed_ass_0 @ 000001e526e07980] Using font provider directwrite (with GDI)
+[Parsed_ass_0 @ 000001e526e07980] Added subtitle file: 'clips/c88l8daXiv4/work/clip-02.ass' (2 styles, 12 events)
+[Parsed_ass_0 @ 000001e526e07980] fontselect: (Microsoft YaHei, 400, 0) -> MicrosoftYaHei, 0, MicrosoftYaHei
 Output #0, mp4, to 'E:\YouTube-B\clips\c88l8daXiv4\work\clip-02.tmp.mp4':
   Metadata:
     title           : Dylan Patel (SemiAnalysis): The Datacenter in 2026: CPUs, RL Environments & Agent-Driven Workloads
@@ -88,25 +88,26 @@ Output #0, mp4, to 'E:\YouTube-B\clips\c88l8daXiv4\work\clip-02.tmp.mp4':
     Metadata:
       encoder         : Lavc62.28.100 aac
       DURATION        : 00:25:04.061000000
-frame=  107 fps=105 q=23.0 size=     512KiB time=00:00:01.73 bitrate=2417.6kbits/s speed= 1.7x elapsed=0:00:01.02    
-frame=  362 fps=235 q=20.0 size=    2560KiB time=00:00:05.98 bitrate=3501.6kbits/s speed= 3.9x elapsed=0:00:01.53    
-frame=  576 fps=280 q=26.0 size=    3840KiB time=00:00:09.55 bitrate=3290.7kbits/s speed=4.66x elapsed=0:00:02.05    
-frame=  773 fps=301 q=24.0 size=    5120KiB time=00:00:12.84 bitrate=3265.1kbits/s speed=   5x elapsed=0:00:02.56    
-frame=  994 fps=322 q=20.0 size=    6656KiB time=00:00:16.53 bitrate=3298.0kbits/s speed=5.36x elapsed=0:00:03.08    
-frame= 1240 fps=344 q=27.0 size=   10240KiB time=00:00:20.63 bitrate=4064.8kbits/s speed=5.73x elapsed=0:00:03.60    
-frame= 1495 fps=363 q=23.0 size=   12288KiB time=00:00:24.89 bitrate=4044.1kbits/s speed=6.05x elapsed=0:00:04.11    
-frame= 1731 fps=374 q=22.0 size=   14080KiB time=00:00:28.82 bitrate=4001.0kbits/s speed=6.22x elapsed=0:00:04.63    
-frame= 1950 fps=379 q=20.0 size=   16640KiB time=00:00:32.48 bitrate=4196.6kbits/s speed=6.31x elapsed=0:00:05.14    
-frame= 2175 fps=384 q=22.0 size=   19200KiB time=00:00:36.23 bitrate=4340.6kbits/s speed= 6.4x elapsed=0:00:05.66    
-frame= 2386 fps=386 q=21.0 size=   21248KiB time=00:00:39.75 bitrate=4378.3kbits/s speed=6.43x elapsed=0:00:06.17    
-frame= 2589 fps=387 q=24.0 size=   22528KiB time=00:00:43.14 bitrate=4277.6kbits/s speed=6.45x elapsed=0:00:06.69    
-frame= 2789 fps=387 q=24.0 size=   23296KiB time=00:00:46.47 bitrate=4105.9kbits/s speed=6.45x elapsed=0:00:07.20    
-frame= 3006 fps=389 q=20.0 size=   24576KiB time=00:00:50.10 bitrate=4018.5kbits/s speed=6.49x elapsed=0:00:07.72    
-frame= 3254 fps=395 q=21.0 size=   27392KiB time=00:00:54.23 bitrate=4137.3kbits/s speed=6.58x elapsed=0:00:08.24    
-frame= 3507 fps=401 q=24.0 size=   29696KiB time=00:00:58.45 bitrate=4161.4kbits/s speed=6.68x elapsed=0:00:08.75    
-[mp4 @ 000001b596554280] Starting second pass: moving the moov atom to the beginning of the file
-[out#0/mp4 @ 000001b596554180] video:30035KiB audio:1208KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.328509%
-frame= 3688 fps=404 q=27.0 Lsize=   31346KiB time=00:01:01.47 bitrate=4176.9kbits/s speed=6.73x elapsed=0:00:09.13    
-[aac @ 000001b59697e7c0] Qavg: 1076.801
+frame=  108 fps=105 q=26.0 size=     512KiB time=00:00:01.75 bitrate=2394.6kbits/s speed=1.71x elapsed=0:00:01.02    
+frame=  364 fps=236 q=26.0 size=    2560KiB time=00:00:06.02 bitrate=3482.2kbits/s speed=3.91x elapsed=0:00:01.54    
+frame=  570 fps=277 q=20.0 size=    3840KiB time=00:00:09.45 bitrate=3325.5kbits/s speed= 4.6x elapsed=0:00:02.05    
+frame=  755 fps=294 q=22.0 size=    4864KiB time=00:00:12.54 bitrate=3176.0kbits/s speed=4.88x elapsed=0:00:02.57    
+frame=  961 fps=311 q=25.0 size=    6144KiB time=00:00:15.98 bitrate=3149.2kbits/s speed=5.18x elapsed=0:00:03.08    
+frame= 1182 fps=328 q=20.0 size=    9472KiB time=00:00:19.66 bitrate=3944.9kbits/s speed=5.46x elapsed=0:00:03.60    
+frame= 1427 fps=346 q=23.0 size=   11776KiB time=00:00:23.75 bitrate=4060.7kbits/s speed=5.77x elapsed=0:00:04.11    
+frame= 1664 fps=359 q=28.0 size=   13568KiB time=00:00:27.71 bitrate=4011.0kbits/s speed=5.98x elapsed=0:00:04.63    
+frame= 1871 fps=363 q=23.0 size=   15360KiB time=00:00:31.16 bitrate=4037.6kbits/s speed=6.05x elapsed=0:00:05.15    
+frame= 2084 fps=368 q=27.0 size=   18432KiB time=00:00:34.71 bitrate=4349.2kbits/s speed=6.13x elapsed=0:00:05.66    
+frame= 2282 fps=369 q=20.0 size=   20224KiB time=00:00:38.02 bitrate=4357.4kbits/s speed=6.15x elapsed=0:00:06.18    
+frame= 2481 fps=370 q=24.0 size=   21760KiB time=00:00:41.34 bitrate=4311.9kbits/s speed=6.17x elapsed=0:00:06.69    
+frame= 2672 fps=370 q=27.0 size=   22784KiB time=00:00:44.52 bitrate=4191.7kbits/s speed=6.17x elapsed=0:00:07.21    
+frame= 2855 fps=369 q=22.0 size=   23552KiB time=00:00:47.58 bitrate=4055.0kbits/s speed=6.16x elapsed=0:00:07.72    
+frame= 3080 fps=374 q=27.0 size=   25600KiB time=00:00:51.33 bitrate=4085.3kbits/s speed=6.23x elapsed=0:00:08.24    
+frame= 3320 fps=379 q=27.0 size=   27904KiB time=00:00:55.33 bitrate=4130.7kbits/s speed=6.32x elapsed=0:00:08.75    
+frame= 3573 fps=385 q=24.0 size=   30208KiB time=00:00:59.55 bitrate=4154.9kbits/s speed=6.42x elapsed=0:00:09.27    
+[mp4 @ 000001e526624240] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001e52668ce40] video:30035KiB audio:1208KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.328509%
+frame= 3688 fps=387 q=27.0 Lsize=   31346KiB time=00:01:01.47 bitrate=4176.9kbits/s speed=6.46x elapsed=0:00:09.52    
+[aac @ 000001e52664e0c0] Qavg: 1076.801
 
 --- exit 0 ---
