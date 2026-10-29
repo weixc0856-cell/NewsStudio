@@ -84,9 +84,12 @@ CONTINUATION_END = re.compile(
 )
 TERMINAL_END = re.compile(r'(?<!\.)[.?!][\'"]?\s*$')
 DEPENDENT_START = re.compile(
-    r"^(?:brought|which|that|because|but also|and then|also|however|and |but )\b",
+    r"^(?:brought|which|that|because|but also|and then|also|however|as well as|and |but )\b",
     re.I,
 )
+# Spoken fillers that can be trimmed off the head of a cue instead of dropping
+# the whole candidate.  Longest first so "yeah so" wins over "yeah".
+FILLER_PREFIXES = ("yeah so", "yeah", "i mean", "you know", "um", "uh", "okay", "ok", "so")
 
 
 # --------------------------------------------------------------------------
@@ -395,6 +398,31 @@ def _llm_headers() -> dict[str, str]:
     return {"Authorization": f"Bearer {key}"} if key else {}
 
 
+def build_start_prompt(win: "Window", cues: list[Cue], record: dict[str, Any],
+                       cfg: dict[str, Any]) -> str:
+    """One correction call: the model's start is mid-sentence, pick a clean one."""
+    lines, _ = _window_header(win, cues)
+    start_cue = next((c for c in cues if c.id == record["start_cue_id"]), None)
+    opening = start_cue.top.strip()[:120] if start_cue else ""
+    lines += [
+        "",
+        f"你选取的起点第 {record['start_cue_id']} 条字幕是半句或承接词开头：",
+        f"「{opening}」",
+        "",
+        "请重新给出一组 start_cue_id / end_cue_id：",
+        "1. start 必须是独立完整主谓句的开头，不能是 And / But / Because / Which / That /",
+        "   Also / However / Yeah / Um / I mean 等承接或垫话开头，也不能是半句。",
+        "2. end 必须是句末（句号 / 问号 / 感叹号）。",
+        f"3. 总时长 {cfg['prefer_min_ms'] // 1000}–{cfg['prefer_max_ms'] // 1000} 秒，"
+        f"不得低于 {cfg['min_clip_ms'] // 1000} 秒或超过 {cfg['max_clip_ms'] // 1000} 秒。",
+        "4. start/end 只能使用上面列出的字幕 ID，且 start < end。",
+        "",
+        "只输出一个 JSON 对象，不要代码块、不要解释：",
+        '{"start_cue_id": <整数>, "end_cue_id": <整数>}',
+    ]
+    return "\n".join(lines)
+
+
 def discover_model(base: str, timeout: int = 30) -> str:
     r = requests.get(f"{base}/v1/models", timeout=timeout, headers=_llm_headers())
     r.raise_for_status()
@@ -495,6 +523,57 @@ def _candidate_record(*, candidate: dict[str, Any], start_id: int, end_id: int,
         "boundary_score": b_score,
         "boundary_notes": b_notes,
     }
+
+
+def call_start_model(base: str, model: str, prompt: str, win: "Window",
+                     by_id: dict[int, Cue], cfg: dict[str, Any]
+                     ) -> tuple[tuple[int, int] | None, dict[str, Any]]:
+    payload: dict[str, Any] = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": prompt},
+        ],
+        "temperature": cfg["temperature"],
+        "max_tokens": 80,
+        "stream": False,
+        "response_format": {"type": "json_object"},
+    }
+    record: dict[str, Any] = {"attempt": 1}
+    try:
+        resp = requests.post(f"{base}/v1/chat/completions", json=payload,
+                             timeout=(10, cfg["model_timeout_s"]),
+                             headers=_llm_headers())
+        if resp.status_code == 400 and "response_format" in payload:
+            payload.pop("response_format")
+            resp = requests.post(f"{base}/v1/chat/completions", json=payload,
+                                 timeout=(10, cfg["model_timeout_s"]),
+                                 headers=_llm_headers())
+        resp.raise_for_status()
+        content = resp.json()["choices"][0]["message"]["content"]
+        record["raw"] = content
+        obj = extract_json_object(content)
+        start_id, end_id = obj.get("start_cue_id"), obj.get("end_cue_id")
+        for value in (start_id, end_id):
+            if isinstance(value, bool) or not isinstance(value, int):
+                raise ValueError(f"cue id is not an integer: {value!r}")
+        if start_id not in set(win.cue_ids) or end_id not in set(win.cue_ids):
+            raise ValueError("cue id out of window")
+        if start_id >= end_id:
+            raise ValueError("start_cue_id must be smaller than end_cue_id")
+        text = by_id[start_id].top.strip()
+        if DEPENDENT_START.match(text) or FILLER_START.match(text):
+            raise ValueError(f"repaired start is still a bad opener: {text[:40]}")
+        duration = by_id[end_id].end - by_id[start_id].start
+        if not (cfg["min_clip_ms"] <= duration <= cfg["max_clip_ms"]):
+            raise ValueError(f"repaired duration {duration} ms out of range")
+        record["ok"] = True
+        return (start_id, end_id), record
+    except Exception as exc:
+        record["ok"] = False
+        record["error"] = str(exc)
+        RUN.log(f"window {win.index} start repair failed: {exc}")
+        return None, record
 
 
 def call_extend_model(base: str, model: str, prompt: str, win: Window,
@@ -641,6 +720,7 @@ def analyze(cues: list[Cue], cfg: dict[str, Any], video_id: str,
     by_id = {c.id: c for c in cues}
     window_results: list[dict[str, Any]] = []
     candidates_raw: list[dict[str, Any]] = []
+    start_rejects: list[dict[str, Any]] = []
 
     for win in windows:
         prompt = build_prompt(win, cues, cfg)
@@ -664,8 +744,58 @@ def analyze(cues: list[Cue], cfg: dict[str, Any], video_id: str,
                 record = _candidate_record(
                     candidate=candidate, start_id=candidate["start_cue_id"],
                     end_id=candidate["end_cue_id"], win=win, by_id=by_id)
+                record, snap_reject = snap_start(record, by_id, win, cfg)
+                if record is None:
+                    repair_prompt = build_start_prompt(win, cues, {
+                        "start_cue_id": candidate["start_cue_id"],
+                        "end_cue_id": candidate["end_cue_id"]}, cfg)
+                    if work_dir is not None:
+                        (work_dir / f"window-{win.index:02d}.start.prompt.txt").write_text(
+                            repair_prompt, encoding="utf-8")
+                    pair, repair_attempt = call_start_model(
+                        cfg["base_url"], model, repair_prompt, win, by_id, cfg)
+                    entry["start_repair"] = repair_attempt
+                    if pair is not None:
+                        start_id, end_id = pair
+                        record = _candidate_record(
+                            candidate=candidate, start_id=start_id,
+                            end_id=end_id, win=win, by_id=by_id)
+                        record["start_repaired_from"] = {
+                            "start_cue_id": candidate["start_cue_id"],
+                            "stage": snap_reject["stage"]}
+                        RUN.log(f"window {win.index}: repaired start cue "
+                                f"{start_id} ({record['duration_ms'] / 1000:.1f}s)")
+                    else:
+                        start_rejects.append({
+                            "candidate": {"source_window": win.index,
+                                          "start_cue_id": candidate["start_cue_id"],
+                                          "end_cue_id": candidate["end_cue_id"],
+                                          "title": candidate["title"]},
+                            "stage": snap_reject["stage"],
+                            "reason": snap_reject["reason"],
+                        })
+                        entry.update(status="OK", candidate=None, rejected=snap_reject)
+                if record is not None and record["duration_ms"] > cfg["prefer_max_ms"]:
+                    clamped = clamp_end(record["start_cue_id"], record["end_cue_id"],
+                                        by_id, cfg)
+                    if clamped is not None and clamped != record["end_cue_id"]:
+                        clamped_from = {"end_cue_id": record["end_cue_id"],
+                                        "duration_ms": record["duration_ms"]}
+                        new_record = _candidate_record(
+                            candidate=candidate, start_id=record["start_cue_id"],
+                            end_id=clamped, win=win, by_id=by_id)
+                        if "start_snapped_from" in record:
+                            new_record["start_snapped_from"] = record["start_snapped_from"]
+                        _carry_trim(new_record, record)
+                        new_record["clamped_from"] = clamped_from
+                        new_record["soft_cut"] = not TERMINAL_END.search(
+                            by_id[clamped].top.strip())
+                        record = new_record
+                        RUN.log(f"window {win.index}: clamped end cue {clamped} "
+                                f"({record['duration_ms'] / 1000:.1f}s)")
                 extended = False
-                if (record["duration_ms"] < cfg["min_clip_ms"]
+                if (record is not None
+                        and record["duration_ms"] < cfg["min_clip_ms"]
                         and "hard_reject" not in record["boundary_notes"]):
                     ext_prompt = build_extend_prompt(win, cues, record, cfg)
                     if work_dir is not None:
@@ -688,33 +818,40 @@ def analyze(cues: list[Cue], cfg: dict[str, Any], video_id: str,
                             "end_cue_id": record["end_cue_id"],
                             "duration_ms": record["duration_ms"],
                         }
+                        _carry_trim(extended_record, record)
                         record = extended_record
                         extended = True
                         RUN.log(f"window {win.index}: extended end cue "
                                 f"{new_end} ({record['duration_ms'] / 1000:.1f}s)")
                         if record["duration_ms"] > cfg["prefer_max_ms"]:
-                            clamped = soft_clamp_end(
+                            clamped = clamp_end(
                                 record["start_cue_id"], record["end_cue_id"], by_id, cfg)
                             if clamped is not None and clamped != record["end_cue_id"]:
                                 clamped_from = {
                                     "end_cue_id": record["end_cue_id"],
                                     "duration_ms": record["duration_ms"],
                                 }
+                                previous = record
                                 record = _candidate_record(
                                     candidate=candidate,
                                     start_id=record["start_cue_id"],
                                     end_id=clamped, win=win, by_id=by_id)
                                 record["extended_from"] = extended_record["extended_from"]
                                 record["soft_clamped_from"] = clamped_from
+                                _carry_trim(record, previous)
                                 RUN.log(f"window {win.index}: soft-clamped end cue "
                                         f"{clamped} ({record['duration_ms'] / 1000:.1f}s)")
-                entry.update(status="OK", extended=extended,
-                             soft_clamped="soft_clamped_from" in record,
-                             candidate={"start_cue_id": record["start_cue_id"],
-                                        "end_cue_id": record["end_cue_id"],
-                                        "title": record["title"],
-                                        "summary": record["summary"]})
-                candidates_raw.append(record)
+                if record is not None:
+                    entry.update(status="OK", extended=extended,
+                                 soft_clamped="soft_clamped_from" in record,
+                                 clamped="clamped_from" in record,
+                                 start_snapped=("start_snapped_from" in record
+                                                or "start_repaired_from" in record),
+                                 candidate={"start_cue_id": record["start_cue_id"],
+                                            "end_cue_id": record["end_cue_id"],
+                                            "title": record["title"],
+                                            "summary": record["summary"]})
+                    candidates_raw.append(record)
         if work_dir is not None:
             (work_dir / f"window-{win.index:02d}.response.json").write_text(
                 json.dumps(entry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -723,6 +860,7 @@ def analyze(cues: list[Cue], cfg: dict[str, Any], video_id: str,
         window_results.append(entry)
 
     valid, removed = filter_candidates(candidates_raw, window_results, by_id, cfg)
+    removed.extend(start_rejects)
     selected = valid[: cfg["max_clips"]]
     if len(selected) > 1:
         ensure_unique_titles(selected, window_results, cues, by_id, cfg)
@@ -841,6 +979,182 @@ def soft_clamp_end(start_id: int, end_id: int, by_id: dict[int, Cue],
         if TERMINAL_END.search(cue.top.strip()):
             return cue_id
     return None
+
+
+def strip_filler_prefix(text: str) -> tuple[str | None, str]:
+    """Return (prefix, rest), stripping repeated fillers ("Yeah I mean ...")."""
+    rest = text.strip()
+    consumed: list[str] = []
+    while rest:
+        lowered = rest.lower()
+        match = None
+        for prefix in FILLER_PREFIXES:
+            if not lowered.startswith(prefix):
+                continue
+            end = len(prefix)
+            if end < len(rest) and rest[end].isalpha():
+                continue
+            match = prefix
+            break
+        if match is None:
+            break
+        candidate = rest[len(match):].lstrip(" ,.،、")
+        if len(candidate.split()) < 4 and len(candidate) < 8:
+            break
+        consumed.append(rest[:len(match)])
+        rest = candidate
+    if not consumed:
+        return None, text.strip()
+    return " ".join(consumed), rest
+
+
+def estimate_prefix_ms(prefix: str) -> int:
+    """Rough spoken length of a filler: ~400 ms per word, clamped 300-1200 ms."""
+    words = max(1, len(prefix.split()))
+    return min(1200, max(300, 400 * words))
+
+
+def _strip_prefix_from_text(text: str, prefix: str) -> str:
+    if prefix and text.lower().startswith(prefix.lower()):
+        return text[len(prefix):].lstrip(" ,.،、")
+    return text
+
+
+def _looks_mid_sentence(cue: Cue, prev: Cue | None) -> bool:
+    """Lowercase opener after a cue that did not end a sentence = mid-sentence."""
+    text = cue.top.strip()
+    return bool(text) and text[0].islower() and prev is not None and         not TERMINAL_END.search(prev.top.strip())
+
+
+def _sentence_start(cue: Cue, prev: Cue | None) -> bool:
+    """A cue may open a clip only when it is not a filler and starts a sentence."""
+    text = cue.top.strip()
+    if not text or DEPENDENT_START.match(text) or FILLER_START.match(text):
+        return False
+    return prev is None or bool(TERMINAL_END.search(prev.top.strip()))
+
+
+def _carry_trim(new_record: dict[str, Any], old_record: dict[str, Any]) -> dict[str, Any]:
+    """Copy prefix-trim metadata onto a rebuilt record and shorten its duration."""
+    trim = int(old_record.get("trim_start_ms") or 0)
+    if trim:
+        new_record["trim_start_ms"] = trim
+        new_record["trim_prefix"] = old_record.get("trim_prefix", "")
+        new_record["trimmed_text"] = old_record.get("trimmed_text", "")
+        new_record["duration_ms"] = max(1, int(new_record["duration_ms"]) - trim)
+    return new_record
+
+
+def snap_start(record: dict[str, Any], by_id: dict[int, Cue], win: "Window",
+               cfg: dict[str, Any]) -> tuple[dict[str, Any] | None, dict[str, Any] | None]:
+    """Reject clause openers and repair filler openers by moving the start forward.
+
+    The repair stays inside the producing window and within 30 s of the model's
+    original start, so the candidate still covers the argument the model chose.
+    """
+    start_id = record["start_cue_id"]
+    text = by_id[start_id].top.strip()
+
+    prefix, rest = strip_filler_prefix(text)
+    if prefix:
+        trim_ms = estimate_prefix_ms(prefix)
+        duration = record["end_ms"] - (record["start_ms"] + trim_ms)
+        if not DEPENDENT_START.match(rest) and duration >= cfg["min_clip_ms"]:
+            trimmed = dict(record)
+            trimmed["trim_start_ms"] = trim_ms
+            trimmed["trim_prefix"] = prefix
+            trimmed["trimmed_text"] = rest
+            trimmed["duration_ms"] = duration
+            trimmed["boundary_notes"] = list(record.get("boundary_notes", [])) + [
+                "filler_prefix_trimmed"]
+            return trimmed, None
+        if DEPENDENT_START.match(rest):
+            return None, {"stage": "dependent_start",
+                          "reason": f"clip opens with a clause connector: {rest[:48]}"}
+
+    kind = ("dependent" if DEPENDENT_START.match(text)
+            else "filler" if FILLER_START.match(text) else None)
+    if kind is None:
+        if not _looks_mid_sentence(by_id[start_id], by_id.get(start_id - 1)):
+            return record, None
+        kind = "mid_sentence"
+
+    limit_ms = int(record["start_ms"]) + 30_000
+    for cue_id in win.cue_ids:
+        if cue_id <= start_id:
+            continue
+        cue = by_id.get(cue_id)
+        if cue is None or cue.start > limit_ms:
+            break
+        landing = cue.top.strip()
+        if DEPENDENT_START.match(landing):
+            continue
+        landing_prefix, landing_rest = strip_filler_prefix(landing)
+        if landing_prefix:
+            pass                      # filler head is fine: it gets trimmed below
+        elif not _sentence_start(cue, by_id.get(cue_id - 1)):
+            continue
+        end_id = record["end_cue_id"] if record["end_cue_id"] >= cue_id else None
+        if end_id is not None:
+            duration = by_id[end_id].end - cue.start
+        else:
+            duration = -1
+        if end_id is None or not (cfg["min_clip_ms"] <= duration <= cfg["max_clip_ms"]):
+            end_id = clamp_end(cue_id, win.cue_ids[-1], by_id, cfg)
+            if end_id is None:
+                continue
+            duration = by_id[end_id].end - cue.start
+            if not (cfg["min_clip_ms"] <= duration <= cfg["max_clip_ms"]):
+                continue
+        snapped = dict(record)
+        snapped["start_snapped_from"] = {"start_cue_id": start_id,
+                                         "start_ms": record["start_ms"],
+                                         "kind": kind}
+        snapped["start_cue_id"] = cue_id
+        snapped["end_cue_id"] = end_id
+        snapped["start_ms"] = cue.start
+        snapped["end_ms"] = by_id[end_id].end
+        snapped["duration_ms"] = duration
+        if landing_prefix:
+            trim_ms = estimate_prefix_ms(landing_prefix)
+            if duration - trim_ms < cfg["min_clip_ms"]:
+                continue
+            snapped["trim_start_ms"] = trim_ms
+            snapped["trim_prefix"] = landing_prefix
+            snapped["trimmed_text"] = landing_rest
+            snapped["duration_ms"] = duration - trim_ms
+        score, notes = boundary_score(cue, by_id[end_id], by_id.get(cue_id - 1))
+        snapped["boundary_score"] = score
+        snapped["boundary_notes"] = notes
+        return snapped, None
+    reason = (f"clip opens with a clause connector: {text[:48]}" if kind == "dependent"
+              else "no clean sentence start within 30 s of the model's pick")
+    stage = {"dependent": "dependent_start", "filler": "filler_start",
+             "mid_sentence": "mid_sentence_start"}.get(kind, "filler_start")
+    return None, {"stage": stage, "reason": reason}
+
+
+def clamp_end(start_id: int, end_id: int, by_id: dict[int, Cue],
+              cfg: dict[str, Any]) -> int | None:
+    """Walk back to a terminal cue: prefer 50-70 s, fall back to <= max_clip_ms."""
+    start_ms = by_id[start_id].start
+    fallback: int | None = None
+    soft: int | None = None
+    for cue_id in range(end_id, start_id - 1, -1):
+        cue = by_id.get(cue_id)
+        if cue is None:
+            continue
+        duration = cue.end - start_ms
+        if duration < cfg["min_clip_ms"]:
+            break
+        if TERMINAL_END.search(cue.top.strip()):
+            if cfg["prefer_min_ms"] <= duration <= cfg["prefer_max_ms"]:
+                return cue_id
+            if fallback is None and duration <= cfg["max_clip_ms"]:
+                fallback = cue_id
+        elif soft is None and cfg["prefer_min_ms"] <= duration <= cfg["prefer_max_ms"]:
+            soft = cue_id
+    return fallback if fallback is not None else soft
 
 
 def rank_key(cand: dict[str, Any], cfg: dict[str, Any],
@@ -1346,17 +1660,25 @@ def main() -> int:
 
     clip_records: list[dict[str, Any]] = []
     for index, cand in enumerate(analysis["candidates_selected"], 1):
-        start_ms, duration_ms = cand["start_ms"], cand["duration_ms"]
+        trim_ms = int(cand.get("trim_start_ms") or 0)
+        start_ms, duration_ms = cand["start_ms"] + trim_ms, cand["duration_ms"]
         override = override_plan.get(index)
         if override is not None:
             start_ms, duration_ms = override["applied_ms"], override["duration_ms"]
+            trim_ms = 0
         rows = clamp_cues(cues, start_ms, duration_ms)
+        prefix = cand.get("trim_prefix") if trim_ms else None
+        if prefix and rows:
+            first = rows[0]
+            rows[0] = (first[0], first[1],
+                       _strip_prefix_from_text(first[2], prefix), first[3])
         clip = {
             "index": index,
             "source_window": cand["source_window"],
             "start_ms": start_ms,
             "end_ms": cand["end_ms"],
             "duration_ms": duration_ms,
+            "trim_start_ms": trim_ms,
             "title": cand["title"],
             "summary": cand["summary"],
             "subtitle_cues": len(rows),

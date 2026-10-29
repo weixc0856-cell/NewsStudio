@@ -400,6 +400,95 @@ class AnalyzeSoftClampTests(unittest.TestCase):
 
 
 
+class StartSnapTests(unittest.TestCase):
+    def cues(self) -> dict[int, ac.Cue]:
+        return {
+            1: ac.Cue(1, 0, 10_000, "Yeah so there's a bunch of things.", ""),
+            2: ac.Cue(2, 10_000, 70_000, "We need more cores now.", ""),
+            3: ac.Cue(3, 70_000, 130_000, "That is the constraint.", ""),
+        }
+
+    def record(self, start: int, end: int, cues: dict[int, ac.Cue]) -> dict:
+        return {"start_cue_id": start, "end_cue_id": end,
+                "start_ms": cues[start].start, "end_ms": cues[end].end,
+                "duration_ms": cues[end].end - cues[start].start,
+                "boundary_score": 0, "boundary_notes": []}
+
+    def test_filler_prefix_is_trimmed_instead_of_dropped(self) -> None:
+        cues = self.cues()
+        win = ac.Window(0, cues[1].start, cues[3].end, [1, 2, 3])
+        trimmed, reject = ac.snap_start(self.record(1, 3, cues), cues, win,
+                                        dict(ac.DEFAULTS))
+        self.assertIsNone(reject)
+        self.assertEqual(trimmed["start_cue_id"], 1)
+        self.assertEqual(trimmed["trim_start_ms"], 800)
+        self.assertEqual(trimmed["trim_prefix"], "Yeah so")
+        self.assertEqual(trimmed["duration_ms"], 129_200)
+
+    def test_filler_without_enough_text_snaps_to_next_cue(self) -> None:
+        cues = {1: ac.Cue(1, 0, 10_000, "Yeah.", ""),
+                2: ac.Cue(2, 10_000, 70_000, "We need more cores now.", ""),
+                3: ac.Cue(3, 70_000, 130_000, "That is the constraint.", "")}
+        win = ac.Window(0, 0, 130_000, [1, 2, 3])
+        snapped, reject = ac.snap_start(self.record(1, 3, cues), cues, win,
+                                        dict(ac.DEFAULTS))
+        self.assertIsNone(reject)
+        self.assertEqual(snapped["start_cue_id"], 2)
+        self.assertEqual(snapped["duration_ms"], 60_000)
+
+    def test_dependent_start_is_repaired_when_a_clean_start_exists(self) -> None:
+        cues = {1: ac.Cue(1, 0, 10_000, "And also the other stressor.", ""),
+                2: ac.Cue(2, 10_000, 70_000, "We need more cores.", "")}
+        win = ac.Window(0, cues[1].start, cues[2].end, [1, 2])
+        snapped, reject = ac.snap_start(self.record(1, 2, cues), cues, win,
+                                        dict(ac.DEFAULTS))
+        self.assertIsNone(reject)
+        self.assertEqual(snapped["start_cue_id"], 2)
+
+    def test_dependent_start_is_rejected_without_a_clean_start(self) -> None:
+        cues = {1: ac.Cue(1, 0, 10_000, "And also the other stressor.", ""),
+                2: ac.Cue(2, 10_000, 70_000, "and because of that,", "")}
+        win = ac.Window(0, cues[1].start, cues[2].end, [1, 2])
+        snapped, reject = ac.snap_start(self.record(1, 2, cues), cues, win,
+                                        dict(ac.DEFAULTS))
+        self.assertIsNone(snapped)
+        self.assertEqual(reject["stage"], "dependent_start")
+
+    def test_snap_shorter_than_min_is_rejected(self) -> None:
+        cues = {1: ac.Cue(1, 0, 10_000, "Yeah so there's a lot.", ""),
+                2: ac.Cue(2, 10_000, 40_000, "We need more cores.", "")}
+        win = ac.Window(0, cues[1].start, cues[2].end, [1, 2])
+        snapped, reject = ac.snap_start(self.record(1, 2, cues), cues, win,
+                                        dict(ac.DEFAULTS))
+        self.assertIsNone(snapped)
+        self.assertEqual(reject["stage"], "filler_start")
+
+
+class PrefixTests(unittest.TestCase):
+    def test_strips_common_fillers(self) -> None:
+        self.assertEqual(ac.strip_filler_prefix("Yeah so there's a variety of things."),
+                         ("Yeah so", "there's a variety of things."))
+        self.assertEqual(ac.strip_filler_prefix("So just very close to home for most people"),
+                         ("So", "just very close to home for most people"))
+
+    def test_does_not_strip_inside_words(self) -> None:
+        self.assertEqual(ac.strip_filler_prefix("somehow the CPU is the limit"),
+                         (None, "somehow the CPU is the limit"))
+
+
+class ClampTests(unittest.TestCase):
+    def test_prefers_fifty_to_seventy_seconds(self) -> None:
+        cues = {i: ac.Cue(i, (i - 1) * 20_000, i * 20_000, f"Point {i}.", "")
+                for i in range(1, 8)}
+        self.assertEqual(ac.clamp_end(1, 7, cues, dict(ac.DEFAULTS)), 3)
+
+    def test_falls_back_to_the_ninety_second_ceiling(self) -> None:
+        cues = {1: ac.Cue(1, 0, 10_000, "Start.", ""),
+                2: ac.Cue(2, 10_000, 80_000, "Middle.", ""),
+                3: ac.Cue(3, 80_000, 200_000, "End.", "")}
+        self.assertEqual(ac.clamp_end(1, 3, cues, dict(ac.DEFAULTS)), 2)
+
+
 class DependentStartTests(unittest.TestCase):
     def test_brought_is_a_dependent_start(self) -> None:
         score, notes = ac.boundary_score(
