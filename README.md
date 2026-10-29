@@ -15,7 +15,8 @@ YouTube-B/
 ├── subtitles/                 # 原语种字幕原件与合成结果
 ├── clips/                     # 自动高光切片产物（final/ 为可发布目录）
 ├── scripts/                   # 字幕重建、本地转写、翻译、自动切片等脚本
-├── docs/                      # 策划文档与期数档案（docs/episodes/）
+├── docs/                      # 策划文档与期数档案（docs/episodes/stage1|stage2/）
+├── episodes_registry.json     # 极简查重索引（只读这个，不遍历历史档案）
 └── README.md
 ```
 
@@ -284,9 +285,14 @@ uv run python scripts/translate_local.py "subtitles/<id>.bilingual.srt" `
 ## 期数档案
 
 README 只保留项目通用用法；每一期的选题、三方验证、内容结构、简介模板与制作结果在
-`docs/episodes/`：
+`docs/episodes/`，按阶段存放：
 
-- 单期档案：`docs/episodes/epNN-*.md`（共 30 期）
+- `docs/episodes/stage1/`：第 1–30 期完整档案（已封存），索引见
+  [`stage1/STAGE1_EPISODES.md`](docs/episodes/stage1/STAGE1_EPISODES.md)，
+  复盘见 [`stage1/STAGE1_SUMMARY.md`](docs/episodes/stage1/STAGE1_SUMMARY.md)
+- `docs/episodes/stage2/`：第 31 期起的新档案
+- **查重与校验只读根目录 [`episodes_registry.json`](episodes_registry.json)**：
+  每条记录含 id / title / core_entity / event / url / tags，**不要全文读取历史期数档案**
 - README 迁出的下载/编码/校验细节：`docs/episodes/制作记录-按期归档.md`
 - 专栏整体策划：`docs/专栏策划-AI时代的基建.md`
 

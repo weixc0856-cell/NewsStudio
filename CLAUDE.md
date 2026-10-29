@@ -26,7 +26,20 @@
 
 ## 4. 文档
 
-- 每期在 `docs/episodes/epNN-*.md` 建档（三方验证、章节、简介模板、制作结果），
-  并更新 `docs/episodes/制作记录-按期归档.md`、`docs/专栏策划-AI时代的基建.md`、
-  README 的期数。
+- 新期（ep31 起）只写入 `docs/episodes/stage2/epNN-<slug>.md`
+  （三方验证、章节、简介模板、制作结果），`stage1/` 已封存，不再新增文件。
+- 制作完成后：在 `episodes_registry.json` **追加一条**记录；在
+  `docs/episodes/制作记录-按期归档.md` 追加一段；更新
+  `docs/专栏策划-AI时代的基建.md` 的阶段入口与 README 期数。
 - 提交前跑 `uv run python -m unittest discover -s scripts -p "test_*.py"`。
+
+## 5. 轻量查重与分阶段归档
+
+- **禁止**为查重 / 校验重复而全文读取 `docs/episodes/stage1/*.md` 或 `stage2/*.md`；
+  只允许读取根目录 `episodes_registry.json`（每条含 id、title、core_entity、event、
+  url、tags）。
+- 查重顺序：`url`（源视频 ID）→ `core_entity`（人物/机构）→ `event`（场合+年份）→
+  `tags`（技术标签）。同一实体可再做，但场合与技术标签必须不同。
+- 新增记录格式（一行一个对象，追加到数组末尾，不重排）：
+  `{"id":"ep31","title":"…","core_entity":"…","event":"…","url":"https://www.youtube.com/watch?v=…","tags":["…","…","…"]}`
+- 阶段一边界：ep01–ep30 冻结在 `docs/episodes/stage1/`；阶段二从 ep31 开始。

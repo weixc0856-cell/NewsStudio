@@ -162,7 +162,7 @@ auto_clip: add dependent_start gate, title deduplication, and recut ep21 highlig
 
 ## 5. 按期交付模板
 
-每期跑通后复制填空，放进 `docs/episodes/epXX-*.md` 的「制作结果」或直接发群。
+每期跑通后复制填空，放进 `docs/episodes/stage2/epXX-*.md` 的「制作结果」或直接发群。
 
 ```markdown
 ### 【同步】第 XX 期高光切片与合集交付
