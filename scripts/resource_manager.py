@@ -63,6 +63,9 @@ LLAMA_ALIAS = "Qwen3-30B-A3B-Instruct-2507-Q4_K_M"
 
 COSY_DIR = Path(os.environ.get("COSYVOICE_DIR", r"D:\AI\CosyVoice-Runtime"))
 COSY_PORT = int(os.environ.get("COSY_PORT", "50000"))
+# SFT preset-voice runtime (CosyVoice-300M-SFT). Same port, same API, different model.
+COSY_SFT_CLASS = os.environ.get("COSY_SFT_MODEL_CLASS", "CosyVoice")
+COSY_SFT_DIRNAME = os.environ.get("COSY_SFT_MODEL_DIRNAME", "CosyVoice-300M-SFT")
 
 
 # --------------------------------------------------------------------------
@@ -382,7 +385,8 @@ def llama_spec(*, port: int | None = None, model_path: Path | None = None,
                        startup_timeout_s=900.0, poll_interval_s=1.0)
 
 
-def cosyvoice_spec(*, port: int | None = None, cwd: Path | None = None) -> ServiceSpec:
+def cosyvoice_spec(*, port: int | None = None, cwd: Path | None = None,
+                   preset_voice: bool = False) -> ServiceSpec:
     root = Path(cwd or COSY_DIR)
     sport = int(port or COSY_PORT)
     python = root / "venv" / "Scripts" / "python.exe"
@@ -397,6 +401,10 @@ def cosyvoice_spec(*, port: int | None = None, cwd: Path | None = None) -> Servi
         "PYTHONUNBUFFERED": "1",
         "PYTHONUTF8": "1",
     }
+    if preset_voice:
+        # CosyVoice-300M-SFT: preset speakers, no reference audio needed.
+        env["COSY_MODEL_CLASS"] = COSY_SFT_CLASS
+        env["COSY_MODEL_DIR"] = str(root / "pretrained_models" / COSY_SFT_DIRNAME)
     return ServiceSpec(name="cosyvoice", kind="cosyvoice",
                        cmd=(str(python), str(root / "api_server.py")),
                        port=sport, markers=("api_server.py", "cosyvoice"),
@@ -618,7 +626,7 @@ def llama_server(**kwargs: Any) -> ManagedService:
 
 
 def cosyvoice(**kwargs: Any) -> ManagedService:
-    spec_kwargs = {k: kwargs.pop(k) for k in ("port", "cwd") if k in kwargs}
+    spec_kwargs = {k: kwargs.pop(k) for k in ("port", "cwd", "preset_voice") if k in kwargs}
     return ManagedService(cosyvoice_spec(**spec_kwargs), measure_vram=False, **kwargs)
 
 

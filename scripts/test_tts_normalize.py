@@ -47,11 +47,19 @@ class NormalizeTests(unittest.TestCase):
         self.assertIn("二零二六年", payload["text"])
         self.assertNotIn("2026", payload["text"])
 
+    def test_tts_request_passes_preset_speaker(self) -> None:
+        response = mock.Mock(status_code=200, content=b"RIFF")
+        with mock.patch.object(sd.requests, "post", return_value=response) as post:
+            sd.tts_request("http://x", "你好", None, None, 10, speaker="中文男")
+        payload = post.call_args.kwargs["json"]
+        self.assertEqual(payload["speaker"], "中文男")
+        self.assertNotIn("prompt_wav", payload)
+
 
 class IntroVoiceTests(unittest.TestCase):
     def test_synthesize_voice_sends_and_records_normalized_text(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
-            cfg = {**gi.DEFAULTS}
+            cfg = {**gi.DEFAULTS, "voice_speaker": ""}   # zero-shot path
             with mock.patch.object(sd, "wait_for_service",
                                    return_value={"model_class": "fake"}), \
                  mock.patch.object(sd, "tts_request",
@@ -63,6 +71,22 @@ class IntroVoiceTests(unittest.TestCase):
         self.assertIn("二零二六年", sent)
         self.assertIn("二零二六年", info["tts_text"])
         self.assertEqual(info["text"], "Daytona 2026，现场实录。")
+
+    def test_synthesize_voice_uses_preset_speaker(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            cfg = {**gi.DEFAULTS, "voice_speaker": "中文男"}
+            with mock.patch.object(sd, "wait_for_service",
+                                   return_value={"model_class": "fake"}),                  mock.patch.object(sd, "tts_request",
+                                   return_value=b"RIFF") as tts,                  mock.patch.object(sd, "probe_duration", return_value=8.0):
+                info = gi.synthesize_voice(text="Daytona 2026，现场实录。",
+                                           out_dir=Path(tmp), cfg=cfg)
+        self.assertEqual(tts.call_args.kwargs["speaker"], "中文男")
+        self.assertEqual(tts.call_args.args[2], "")      # no reference audio is sent
+        self.assertEqual(info["voice_speaker"], "中文男")
+        self.assertEqual(info["prompt_wav"], "")
+
+    def test_default_intro_voice_is_the_preset_baritone(self) -> None:
+        self.assertEqual(gi.DEFAULTS["voice_speaker"], "中文男")
 
 
 if __name__ == "__main__":

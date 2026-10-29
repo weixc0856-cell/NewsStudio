@@ -76,6 +76,7 @@ DEFAULTS: dict[str, Any] = {
     "tolerance_ms": 250,
     "base_url": "http://127.0.0.1:50000",
     "prompt_wav": sd.DEFAULTS["prompt_wav"],
+    "voice_speaker": "中文男",   # SFT preset speaker id; when set, prompt_wav is not sent
     "tts_timeout_s": sd.DEFAULTS["tts_timeout_s"],
     "wait_s": sd.DEFAULTS["wait_s"],
     "dub_target_db": dub_mix.DEFAULTS["dub_target_db"],
@@ -898,8 +899,9 @@ def synthesize_voice(*, text: str, out_dir: Path, cfg: dict[str, Any]) -> dict[s
     log(f"service ready: model={health.get('model_class')} device={health.get('device')} "
         f"sample_rate={health.get('sample_rate')}")
 
+    speaker = (cfg.get("voice_speaker") or "").strip()
     prompt_path = resolve(cfg["prompt_wav"])
-    prompt_wav = str(prompt_path)
+    prompt_wav = "" if speaker else str(prompt_path)
     raw_path = out_dir / "narration.raw.wav"
     final_path = out_dir / "narration.wav"
 
@@ -914,7 +916,7 @@ def synthesize_voice(*, text: str, out_dir: Path, cfg: dict[str, Any]) -> dict[s
         json.dumps(script, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     audio = sd.tts_request(cfg["base_url"], tts_text, prompt_wav, None,
-                           int(cfg["tts_timeout_s"]))
+                           int(cfg["tts_timeout_s"]), speaker=speaker or None)
     raw_path.write_bytes(audio)
     raw_s = sd.probe_duration(raw_path)
 
@@ -934,7 +936,8 @@ def synthesize_voice(*, text: str, out_dir: Path, cfg: dict[str, Any]) -> dict[s
         "path": rel(final_path),
         "final_seconds": round(final_s, 3),
         "tempo": round(tempo, 4),
-        "prompt_wav": rel(prompt_path),
+        "prompt_wav": rel(prompt_path) if prompt_wav else "",
+        "voice_speaker": speaker,
         "service": {k: health.get(k) for k in
                     ("model_class", "model_dir", "device", "sample_rate", "text_frontend")},
     }
@@ -1450,6 +1453,7 @@ def build_cfg(args: argparse.Namespace) -> dict[str, Any]:
         **DEFAULTS,
         "base_url": args.base,
         "prompt_wav": args.prompt_wav,
+        "voice_speaker": (getattr(args, "voice_speaker", "") or "").strip(),
         "llm_base": args.llm_base,
         "llm_model": args.llm_model,
         "llm_timeout_s": args.llm_timeout,
@@ -1517,6 +1521,8 @@ def add_intro_arguments(ap: argparse.ArgumentParser) -> None:
     ap.add_argument("--out", default=None, help="default clips/<video_id>/intro")
     ap.add_argument("--base", default=DEFAULTS["base_url"])
     ap.add_argument("--prompt-wav", default=DEFAULTS["prompt_wav"])
+    ap.add_argument("--voice-speaker", default=DEFAULTS["voice_speaker"],
+                    help="SFT preset speaker id (e.g. 中文男); replaces the cloned reference")
     ap.add_argument("--renderer", choices=("auto", "html", "drawtext"), default="auto")
     ap.add_argument("--browser", default=None)
     ap.add_argument("--width", type=int, default=DEFAULTS["width"])
@@ -1614,7 +1620,7 @@ def main(argv: list[str] | None = None) -> int:
             copy, _ = load_copy(out_dir, cfg)
             if args.manage_services:
                 import resource_manager as rm
-                with rm.cosyvoice():
+                with rm.cosyvoice(preset_voice=bool(cfg.get("voice_speaker"))):
                     stage_voice(out_dir=out_dir, cfg=cfg, text=copy["intro_spoken_text"],
                                 voice_wav=args.voice_wav)
             else:

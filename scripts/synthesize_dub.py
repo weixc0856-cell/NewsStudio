@@ -37,6 +37,7 @@ DEFAULTS: dict[str, Any] = {
     "base_url": "http://127.0.0.1:50000",
     "prompt_wav": r"D:\AI\CosyVoice-Runtime\assets\my_voice_5s.wav",
     "prompt_text": "",
+    "speaker": "",              # SFT preset speaker id (e.g. 中文男); overrides prompt_wav
     "min_tempo": 1.05,
     "max_tempo": 1.12,
     "tolerance_s": 0.05,
@@ -149,9 +150,11 @@ def normalize_for_tts(text: str) -> str:
 
 
 def tts_request(base: str, text: str, prompt_wav: str | None, prompt_text: str | None,
-                timeout: int) -> bytes:
+                timeout: int, speaker: str | None = None) -> bytes:
     payload: dict[str, Any] = {"text": normalize_for_tts(text), "speed": 1.0,
                                "text_frontend": True}
+    if speaker:
+        payload["speaker"] = speaker
     if prompt_wav:
         payload["prompt_wav"] = prompt_wav
     if prompt_text:
@@ -196,6 +199,8 @@ def main() -> int:
     ap.add_argument("--base", default=DEFAULTS["base_url"])
     ap.add_argument("--prompt-wav", default=DEFAULTS["prompt_wav"])
     ap.add_argument("--prompt-text", default=DEFAULTS["prompt_text"])
+    ap.add_argument("--speaker", default=DEFAULTS["speaker"],
+                    help="SFT preset speaker id (e.g. 中文男); skips prompt_wav when set")
     ap.add_argument("--min-tempo", type=float, default=DEFAULTS["min_tempo"])
     ap.add_argument("--max-tempo", type=float, default=DEFAULTS["max_tempo"])
     ap.add_argument("--tolerance", type=float, default=DEFAULTS["tolerance_s"],
@@ -222,7 +227,8 @@ def main() -> int:
     log(f"service ready: model={health.get('model_class')} device={health.get('device')} "
         f"sample_rate={health.get('sample_rate')}")
 
-    prompt_wav = str(resolve(args.prompt_wav)) if args.prompt_wav else ""
+    speaker = (args.speaker or "").strip()
+    prompt_wav = str(resolve(args.prompt_wav)) if args.prompt_wav and not speaker else ""
     prompt_text = args.prompt_text or None
 
     items: list[dict[str, Any]] = []
@@ -239,7 +245,8 @@ def main() -> int:
         final_path = out_dir / f"sentence-{sid:02d}.wav"
 
         started = time.time()
-        audio = tts_request(args.base, text, prompt_wav, prompt_text, args.timeout)
+        audio = tts_request(args.base, text, prompt_wav, prompt_text, args.timeout,
+                            speaker=speaker or None)
         raw_path.write_bytes(audio)
         synth_s = time.time() - started
         raw_s = probe_duration(raw_path)
@@ -288,6 +295,7 @@ def main() -> int:
         "script": rel(script_path),
         "base_url": args.base,
         "prompt_wav": rel(Path(prompt_wav)) if prompt_wav else "",
+        "speaker": speaker,
         "service": {k: health.get(k) for k in ("model_class", "model_dir", "device",
                                                "sample_rate", "text_frontend")},
         "over_budget": over_budget,

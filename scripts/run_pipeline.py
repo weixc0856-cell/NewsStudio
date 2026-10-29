@@ -190,7 +190,7 @@ def run_intro_stages(args: argparse.Namespace, cfg: dict[str, Any], intro_dir: P
         while True:
             try:
                 # CosyVoice is the only heavy process alive in this block.
-                with rm.cosyvoice():
+                with rm.cosyvoice(preset_voice=bool(cfg.get("voice_speaker"))):
                     result = gi.stage_voice(out_dir=intro_dir, cfg=cfg,
                                             text=state["copy"]["intro_spoken_text"],
                                             voice_wav=args.voice_wav)

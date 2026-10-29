@@ -25,19 +25,38 @@ YouTube-B（uv / Python 3.12）                独立 AI 服务层
 | 目录 | `D:\AI\CosyVoice-Runtime` |
 | 启动 | `start_cosyvoice.bat`（或直接 `venv\Scripts\python.exe api_server.py`） |
 | 监听 | `http://127.0.0.1:50000` |
-| 模型 | `CosyVoice2-0.5B`（CPU，fp32，12 线程） |
+| 模型 | zero-shot：`CosyVoice2-0.5B`；SFT 预置音色：`CosyVoice-300M-SFT`（均 CPU，fp32，12 线程） |
 | 参考音频 | `assets\my_voice_5s.wav` + 同名 `.txt` 逐字稿（2026-10-28 已换成用户本人录音：3.35s / 24 kHz / 单声道） |
 | 文本归一化 | wetext（本地 FST，见 §7） |
 
 接口：
 
 ```text
-GET  /health   -> 模型状态 / sample_rate / text_frontend / 统计
-POST /tts      -> JSON {"text", "prompt_wav"?, "prompt_text"?, "speed"?} -> audio/wav
-POST /tts/upload -> multipart：text + prompt_wav 文件
+GET  /health    -> 模型状态 / sample_rate / text_frontend / speakers / 统计
+GET  /speakers  -> 预置音色列表（SFT 模型才有）
+POST /tts       -> JSON {"text", "prompt_wav"?, "prompt_text"?, "speaker"?, "speed"?} -> audio/wav
+POST /tts/upload -> multipart：text + prompt_wav 文件（也接受 speaker 字段）
 ```
 
-响应为 24 kHz / 16-bit PCM 单声道 WAV，响应头带 `X-Audio-Seconds`、`X-Synth-Seconds`。
+响应为 16-bit PCM 单声道 WAV（CosyVoice2 为 24 kHz，300M-SFT 为 22.05 kHz），
+响应头带 `X-Audio-Seconds`、`X-Synth-Seconds`。
+
+### 2.1 两种音色模式
+
+| 模式 | 启动脚本 | 模型 | 音色来源 |
+|---|---|---|---|
+| zero-shot 克隆 | `start_cosyvoice.bat` | `CosyVoice2-0.5B` | 参考音频 + 同名 `.txt` 逐字稿 |
+| **SFT 预置音色** | `start_cosyvoice_sft.bat` | `CosyVoice-300M-SFT` | `spk2info.pt` 内置：中文女 / **中文男** / 日语男 / 粤语女 / 英文女 / 英文男 / 韩语女 |
+
+- 两种模式共用 50000 端口，**同一时刻只能起一个**；Resource Manager 通过
+  `rm.cosyvoice(preset_voice=True)` 自动选择 SFT 模型。
+- 请求里带 `speaker` 就走 `inference_sft`，优先于 `prompt_wav`；未知音色返回 400
+  并列出可用列表。
+- **片头默认音色 = 中文男**（`generate_intro.DEFAULTS["voice_speaker"]`）；
+  配音切片（`synthesize_dub.py`）默认仍走 zero-shot 克隆，两者互不影响。
+- 模型只取 CPU 推理必需文件（llm/flow/hift/campplus/speech_tokenizer_v1/spk2info，约 2.2 GB），
+  跳过 jit/trt 的 zip 与 fp32 onnx（完整包 5.36 GB）。
+- SFT 模型慢一档：第 21 期 9.9 s 语音耗时 49.6 s（RTF 5.0，CosyVoice2 约 3.5）。
 
 ## 3. 配音稿契约
 
@@ -118,6 +137,7 @@ uv run python scripts/auto_clip.py --srt ... --video ... --reuse-analysis `
 | 3 时长 | 成片 372.416s vs 原片 372.393s（+23 ms，与无配音渲染一致） |
 | 3 集成 | `auto_clip --dub-dir` 单遍完成烧字幕 + 鸭音：366.170s（目标 366.135s，+35 ms），验收通过；`result.json` = SUCCESS，clip-02 无导读时自动走原链路 |
 | 3 集成电平 | 片头 −23.7 dB、导读结束 16.5s 处 −33.0 dB、60s 处 −32.1 dB（与原片一致） |
+| SFT 片头（2026-10-29） | 中文男：raw 9.892s → tempo 1.15× → 8.605s，窗口 9071ms，增益 ×2.95 归一到 −20 dB，峰值约 −2.1 dB |
 
 回归测试：`test_auto_clip.py`（12）、`test_merge_highlights.py`（6）、`test_dub_mix.py`（8）。
 

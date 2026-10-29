@@ -248,5 +248,18 @@ class CleanupTests(unittest.TestCase):
             self.assertEqual(json.loads(path.read_text())["pid"], os.getpid())
 
 
+class CosyVoiceSpecTests(unittest.TestCase):
+    def test_default_spec_is_zero_shot_cosyvoice2(self) -> None:
+        spec = rm.cosyvoice_spec()
+        self.assertEqual(spec.env["COSY_MODEL_CLASS"], "CosyVoice2")
+        self.assertIn("CosyVoice2-0.5B", spec.env["COSY_MODEL_DIR"])
+
+    def test_preset_voice_spec_switches_to_sft_model(self) -> None:
+        spec = rm.cosyvoice_spec(preset_voice=True)
+        self.assertEqual(spec.env["COSY_MODEL_CLASS"], "CosyVoice")
+        self.assertIn("CosyVoice-300M-SFT", spec.env["COSY_MODEL_DIR"])
+        self.assertEqual(spec.port, 50000)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
