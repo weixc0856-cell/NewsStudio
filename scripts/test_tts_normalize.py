@@ -95,6 +95,29 @@ class IntroVoiceTests(unittest.TestCase):
         self.assertEqual(pad.call_args.args[1], 600)
         self.assertEqual(info["head_silence_ms"], 600)
 
+    def test_synthesize_voice_chunks_sentences_with_gaps(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            cfg = {**gi.DEFAULTS, "voice_speaker": "中文男",
+                   "voice_sentence_gap_ms": 400}
+            with mock.patch.object(sd, "wait_for_service",
+                                   return_value={"model_class": "fake",
+                                                 "sample_rate": 22050}), \
+                 mock.patch.object(sd, "tts_request",
+                                   return_value=b"RIFF") as tts, \
+                 mock.patch.object(sd, "probe_duration", return_value=2.0), \
+                 mock.patch.object(sd, "write_silence_wav") as silence, \
+                 mock.patch.object(sd, "concat_wavs",
+                                    side_effect=lambda parts, out: out.write_bytes(b"RIFF")) as concat, \
+                 mock.patch.object(gi, "pad_head"):
+                info = gi.synthesize_voice(text="第一句。第二句。第三句。",
+                                           out_dir=Path(tmp), cfg=cfg)
+        self.assertEqual(tts.call_count, 3)
+        self.assertEqual(silence.call_count, 2)
+        self.assertEqual(concat.call_count, 1)
+        self.assertEqual(len(info["sentences"]), 3)
+        self.assertEqual(info["sentence_gap_ms"], 400)
+        self.assertEqual(info["tempo"], 1.0)
+
     def test_stage_voice_zeroes_lead_for_padded_audio(self) -> None:
         voice = {"final_seconds": 9.205, "raw_seconds": 8.605, "tempo": 1.15,
                  "head_silence_ms": 600, "path": "narration.wav"}

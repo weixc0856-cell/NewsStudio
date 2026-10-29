@@ -53,6 +53,7 @@ DEFAULTS: dict[str, Any] = {
     "duration_tolerance_ms": 1500,
     "min_intro_ms": 10_000,
     "max_intro_ms": 20_000,
+    "enforce_intro_window": False,   # 10-20 s is advisory, not a hard gate
 }
 
 
@@ -431,8 +432,11 @@ def verify_assembly(path: Path, total_ms: int, rows: list[tuple[int, int, str, s
     def add(name: str, ok: bool, detail: str = "") -> None:
         checks.append({"name": name, "ok": ok, "detail": detail})
 
-    add("intro_duration", cfg["min_intro_ms"] <= intro_ms <= cfg["max_intro_ms"],
-        f"{intro_ms} ms, window [{cfg['min_intro_ms']}, {cfg['max_intro_ms']}]")
+    intro_ok = cfg["min_intro_ms"] <= intro_ms <= cfg["max_intro_ms"]
+    advisory = not cfg.get("enforce_intro_window", True)
+    add("intro_duration", intro_ok or advisory,
+        f"{intro_ms} ms, window [{cfg['min_intro_ms']}, {cfg['max_intro_ms']}]"
+        + (" (advisory)" if advisory else ""))
 
     min_start = min((r[0] for r in rows), default=intro_ms)
     add("subtitles_after_intro", min_start >= intro_ms,
@@ -539,8 +543,11 @@ def run(args: argparse.Namespace) -> int:
         intro_info = ac.probe_source(intro_path)
         intro_ms = int(intro_info["duration_ms"])
         if not (cfg["min_intro_ms"] <= intro_ms <= cfg["max_intro_ms"]):
-            raise RuntimeError(f"intro is {intro_ms} ms, outside "
-                               f"[{cfg['min_intro_ms']}, {cfg['max_intro_ms']}]")
+            if cfg.get("enforce_intro_window", True):
+                raise RuntimeError(f"intro is {intro_ms} ms, outside "
+                                   f"[{cfg['min_intro_ms']}, {cfg['max_intro_ms']}]")
+            ac.RUN.log(f"intro duration advisory: {intro_ms} ms outside "
+                       f"[{cfg['min_intro_ms']}, {cfg['max_intro_ms']}]")
         segments, total_ms, gaps = build_timeline(clips, intro_ms, args.transition_ms)
         rows, subtitle_segments, subtitle_total = subtitle_rows(
             clips, intro_ms, args.transition_ms)

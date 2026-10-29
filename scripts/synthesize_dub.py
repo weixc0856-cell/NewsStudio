@@ -149,6 +149,39 @@ def normalize_for_tts(text: str) -> str:
     return YEAR_RE.sub(_year, text)
 
 
+SENTENCE_RE = re.compile(r"[^。！？!?\n]+[。！？!?]?")
+
+
+def split_spoken_sentences(text: str) -> list[str]:
+    """Split 5W1H copy on sentence-final punctuation / newlines, keeping the mark."""
+    return [part.strip() for part in SENTENCE_RE.findall(text) if part.strip()]
+
+
+def write_silence_wav(path: Path, ms: int, sample_rate: int = 24000) -> None:
+    """Deterministic digital silence (-inf dB) as PCM16 mono."""
+    proc = run_cmd([
+        "ffmpeg", "-hide_banner", "-y", "-f", "lavfi",
+        "-i", f"anullsrc=r={int(sample_rate)}:cl=mono",
+        "-t", f"{int(ms) / 1000:.3f}", "-c:a", "pcm_s16le", str(path),
+    ], timeout=120)
+    if proc.returncode != 0:
+        raise RuntimeError(f"silence generation failed: {proc.stderr.strip()[-300:]}")
+
+
+def concat_wavs(parts: list[Path], out: Path) -> None:
+    """Concatenate same-format PCM WAVs without re-encoding the samples."""
+    listing = out.with_suffix(".concat.txt")
+    listing.write_text(
+        "".join(f"file '{part.resolve().as_posix()}'" + chr(10) for part in parts),
+        encoding="utf-8")
+    proc = run_cmd([
+        "ffmpeg", "-hide_banner", "-y", "-f", "concat", "-safe", "0",
+        "-i", str(listing), "-c:a", "pcm_s16le", str(out),
+    ], timeout=600)
+    if proc.returncode != 0:
+        raise RuntimeError(f"wav concat failed: {proc.stderr.strip()[-400:]}")
+
+
 def tts_request(base: str, text: str, prompt_wav: str | None, prompt_text: str | None,
                 timeout: int, speaker: str | None = None) -> bytes:
     payload: dict[str, Any] = {"text": normalize_for_tts(text), "speed": 1.0,

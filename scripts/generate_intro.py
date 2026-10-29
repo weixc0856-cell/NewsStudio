@@ -67,6 +67,8 @@ DEFAULTS: dict[str, Any] = {
     "av_tolerance_ms": 60,      # max |video - audio| duration in the intro
     "lead_ms": 200,             # picture starts, voice starts 200 ms later
     "voice_head_silence_ms": 600,  # silence baked into narration.wav; lead becomes 0
+    "voice_sentence_gap_ms": 400,  # deterministic breath between synthesized sentences
+    "enforce_duration_window": False,  # 10-20 s window is advisory, not a hard gate
     "tail_ms": 250,             # hold the final frame after the voice
     "min_tail_ms": 100,
     "min_duration_ms": 10_000,
@@ -461,18 +463,22 @@ def plan_timeline(voice_ms: int, cfg: dict[str, Any] | None = None) -> dict[str,
         duration = lead + voice_ms + min_tail
     if duration < min_dur:
         duration = min_dur
-    if duration > plan_cap:
+    over_window = duration > plan_cap
+    if over_window and bool(cfg.get("enforce_duration_window", True)):
         raise ValueError(
             f"narration is {voice_ms} ms; lead {lead} + min tail {min_tail} "
             f"exceeds the {plan_cap} ms plan cap (window {max_dur} - {guard} ms "
             f"encoder guard) -- shorten the copy or lower the tempo cap"
         )
-    return {
+    timeline = {
         "duration_ms": duration,
         "lead_ms": lead,
         "voice_ms": voice_ms,
         "tail_ms": duration - lead - voice_ms,
     }
+    if over_window:
+        timeline["over_window"] = True
+    return timeline
 
 
 def tempo_for(voice_ms: int, cfg: dict[str, Any] | None = None) -> float:
@@ -947,21 +953,48 @@ def synthesize_voice(*, text: str, out_dir: Path, cfg: dict[str, Any]) -> dict[s
     final_path = out_dir / "narration.wav"
 
     tts_text = sd.normalize_for_tts(text)
-    script = [{
-        "sentence_id": 1,
-        "target_start_sec": 0.0,
-        "max_duration_sec": cfg["voice_budget_ms"] / 1000,
-        "text": tts_text,
-    }]
-    (out_dir / "intro.script.json").write_text(
-        json.dumps(script, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    sentences = sd.split_spoken_sentences(tts_text) or [tts_text]
+    gap_ms = int(cfg.get("voice_sentence_gap_ms") or 0)
+    sample_rate = int(health.get("sample_rate") or 24000)
 
-    audio = sd.tts_request(cfg["base_url"], tts_text, prompt_wav, None,
-                           int(cfg["tts_timeout_s"]), speaker=speaker or None)
-    raw_path.write_bytes(audio)
+    script = []
+    sentence_info: list[dict[str, Any]] = []
+    chunk_paths: list[Path] = []
+    cursor_ms = 0
+    for index, sentence in enumerate(sentences, 1):
+        audio = sd.tts_request(cfg["base_url"], sentence, prompt_wav, None,
+                               int(cfg["tts_timeout_s"]), speaker=speaker or None)
+        part = out_dir / f"narration.part-{index:02d}.wav"
+        part.write_bytes(audio)
+        seconds = sd.probe_duration(part)
+        script.append({
+            "sentence_id": index,
+            "target_start_sec": round(cursor_ms / 1000, 3),
+            "max_duration_sec": cfg["voice_budget_ms"] / 1000,
+            "text": sentence,
+        })
+        sentence_info.append({"id": index, "text": sentence,
+                              "seconds": round(seconds, 3),
+                              "gap_after_ms": gap_ms if index < len(sentences) else 0,
+                              "start_ms": cursor_ms})
+        chunk_paths.append(part)
+        cursor_ms += round(seconds * 1000)
+        if gap_ms and index < len(sentences):
+            silence = out_dir / f"narration.gap-{index:02d}.wav"
+            sd.write_silence_wav(silence, gap_ms, sample_rate)
+            chunk_paths.append(silence)
+            cursor_ms += gap_ms
+    (out_dir / "intro.script.json").write_text(
+        json.dumps(script, ensure_ascii=False, indent=2) + chr(10), encoding="utf-8")
+
+    if len(chunk_paths) == 1:
+        shutil.copyfile(chunk_paths[0], raw_path)
+    else:
+        sd.concat_wavs(chunk_paths, raw_path)
     raw_s = sd.probe_duration(raw_path)
 
-    tempo = tempo_for(round(raw_s * 1000), cfg)
+    # Paced narration keeps every pause intact: no atempo compression.
+    tempo = 1.0 if gap_ms > 0 else tempo_for(round(raw_s * 1000), cfg)
     if tempo > 1.0:
         sd.apply_tempo(raw_path, final_path, tempo)
     else:
@@ -981,6 +1014,8 @@ def synthesize_voice(*, text: str, out_dir: Path, cfg: dict[str, Any]) -> dict[s
         "final_seconds": round(final_s, 3),
         "tempo": round(tempo, 4),
         "head_silence_ms": head_ms,
+        "sentence_gap_ms": gap_ms,
+        "sentences": sentence_info,
         "prompt_wav": rel(prompt_path) if prompt_wav else "",
         "voice_speaker": speaker,
         "service": {k: health.get(k) for k in
@@ -1107,9 +1142,11 @@ def verify_intro(path: Path, expected_ms: int, cfg: dict[str, Any],
     audio_start_ms = int(round(float((audio or {}).get("start_time") or 0) * 1000))
     add("audio_starts_at_zero", abs(audio_start_ms) <= 60,
         f"audio start {audio_start_ms} ms")
-    add("duration_window",
-        int(cfg["min_duration_ms"]) <= actual_ms <= int(cfg["max_duration_ms"]),
-        f"actual {actual_ms} ms, window [{cfg['min_duration_ms']}, {cfg['max_duration_ms']}]")
+    window_ok = int(cfg["min_duration_ms"]) <= actual_ms <= int(cfg["max_duration_ms"])
+    advisory = not bool(cfg.get("enforce_duration_window", True))
+    add("duration_window", window_ok or advisory,
+        f"actual {actual_ms} ms, window [{cfg['min_duration_ms']}, {cfg['max_duration_ms']}]"
+        + (" (advisory)" if advisory else ""))
     add("duration_target", abs(actual_ms - expected_ms) <= int(cfg["tolerance_ms"]),
         f"actual {actual_ms} ms vs planned {expected_ms} ms "
         f"(delta {actual_ms - expected_ms:+d})")

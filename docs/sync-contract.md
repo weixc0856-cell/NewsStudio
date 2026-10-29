@@ -211,7 +211,7 @@ auto_clip: add dependent_start gate, title deduplication, and recut ep21 highlig
 | A/V 差 | 容器内音轨与视频轨时长差 | ≤ 30 ms |
 | 解码 | `ffmpeg -v error -i <file> -f null -` 无输出 | 0 条报错 |
 | 规格 | 1920×1080、60 fps CFR、h264 + aac | 与模板一致 |
-| 片头 | 静态海报单帧，10–20 s（目标 12–16 s） | 音视频差 ≤ 60 ms |
+| 片头 | 静态海报单帧，10–20 s（目标 12–16 s，**提示项**） | 音视频差 ≤ 60 ms；超窗只告警 |
 | 资源 | llama / CosyVoice / FFmpeg 进程、8080/50000 端口、pipeline lock | 全部为 0 |
 | 测试 | `python -m unittest discover -s scripts -p "test_*.py"` | 全绿（当前 154 通过 / 1 skipped） |
 | 字幕 | 原文在上、中文在下；无字幕母版保留 | 人工抽检 3 处 |

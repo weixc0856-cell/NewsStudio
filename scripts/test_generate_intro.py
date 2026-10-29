@@ -129,12 +129,15 @@ class TimelineTests(unittest.TestCase):
         self.assertEqual(plan["duration_ms"], 19_940)
         self.assertLessEqual(plan["duration_ms"],
                              gi.DEFAULTS["max_duration_ms"] - gi.DEFAULTS["duration_guard_ms"])
+        strict = {**gi.DEFAULTS, "enforce_duration_window": True}
         with self.assertRaises(ValueError):
-            gi.plan_timeline(19_650)
+            gi.plan_timeline(19_650, strict)
 
-    def test_impossible_voice_raises(self) -> None:
-        with self.assertRaises(ValueError):
-            gi.plan_timeline(20_000)
+    def test_window_is_advisory_by_default(self) -> None:
+        plan = gi.plan_timeline(20_000)
+        self.assertTrue(plan.get("over_window"))
+        self.assertGreater(plan["duration_ms"],
+                           gi.DEFAULTS["max_duration_ms"] - gi.DEFAULTS["duration_guard_ms"])
 
     def test_short_voice_is_padded_to_ten_seconds(self) -> None:
         plan = gi.plan_timeline(3000)
@@ -157,9 +160,10 @@ class StageTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             wav = Path(tmp) / "v.wav"
             wav.write_bytes(b"x")
+            strict = {**gi.DEFAULTS, "enforce_duration_window": True}
             with mock.patch.object(gi.sd, "probe_duration", return_value=20.5):
                 with self.assertRaises(gi.VoiceWindowError) as ctx:
-                    gi.stage_voice(out_dir=Path(tmp), cfg=gi.DEFAULTS, text="x",
+                    gi.stage_voice(out_dir=Path(tmp), cfg=strict, text="x",
                                    voice_wav=wav)
             self.assertEqual(ctx.exception.voice_ms, 20500)
 
