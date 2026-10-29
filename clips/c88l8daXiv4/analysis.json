@@ -2,17 +2,20 @@
   "schema_version": 1,
   "video_id": "c88l8daXiv4",
   "srt": "subtitles/c88l8daXiv4.zh.bilingual.srt",
-  "generated_at": "2026-10-28T23:32:54+00:00",
+  "generated_at": "2026-10-29T02:51:56+00:00",
   "config": {
-    "window_ms": 660000,
-    "overlap_ms": 210000,
-    "min_clip_ms": 180000,
-    "max_clip_ms": 600000,
-    "prefer_min_ms": 240000,
-    "prefer_max_ms": 420000,
+    "window_ms": 300000,
+    "overlap_ms": 60000,
+    "min_clip_ms": 45000,
+    "max_clip_ms": 90000,
+    "prefer_min_ms": 50000,
+    "prefer_max_ms": 70000,
     "dup_overlap_ratio": 0.4,
-    "overlap_penalty_ms": 30000,
-    "max_clips": 2,
+    "overlap_penalty_ms": 15000,
+    "max_clips": 5,
+    "reel_budget_ms": 330000,
+    "intro_budget_ms": 15000,
+    "transition_ms": 500,
     "duration_tolerance_ms": 1500,
     "margin_v": 100,
     "qsv_quality": 19,
@@ -43,10 +46,10 @@
     {
       "index": 0,
       "start_ms": 0,
-      "end_ms": 660000,
+      "end_ms": 300000,
       "min_id": 1,
-      "max_id": 121,
-      "cue_count": 121,
+      "max_id": 52,
+      "cue_count": 52,
       "cue_ids": [
         1,
         2,
@@ -89,6 +92,45 @@
         39,
         40,
         41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "{\"start_cue_id\": 24, \"end_cue_id\": 31, \"title\": \"neocloud差异化核心\", \"summary\": \"neoclouds的差异化体现在GPU健康检测、网络稳定性等底层运维能力，而非仅提供裸金属GPU。\"}",
+          "ok": true
+        }
+      ],
+      "status": "OK",
+      "extended": false,
+      "soft_clamped": false,
+      "clamped": false,
+      "start_snapped": false,
+      "candidate": {
+        "start_cue_id": 24,
+        "end_cue_id": 31,
+        "title": "neocloud差异化核心",
+        "summary": "neoclouds的差异化体现在GPU健康检测、网络稳定性等底层运维能力，而非仅提供裸金属GPU。"
+      }
+    },
+    {
+      "index": 1,
+      "start_ms": 240000,
+      "end_ms": 540000,
+      "min_id": 42,
+      "max_id": 95,
+      "cue_count": 54,
+      "cue_ids": [
         42,
         43,
         44,
@@ -142,65 +184,35 @@
         92,
         93,
         94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100,
-        101,
-        102,
-        103,
-        104,
-        105,
-        106,
-        107,
-        108,
-        109,
-        110,
-        111,
-        112,
-        113,
-        114,
-        115,
-        116,
-        117,
-        118,
-        119,
-        120,
-        121
+        95
       ],
       "attempts": [
         {
           "attempt": 1,
-          "raw": "{\"start_cue_id\": 52, \"end_cue_id\": 121, \"title\": \"CPU成AI新瓶颈\", \"summary\": \"随着AI模型走向复杂化和长期运行，CPU成为制约AI发展的新瓶颈，其需求激增导致云服务普遍出现资源短缺和系统不稳定。\"}",
+          "raw": "{\"start_cue_id\": 55, \"end_cue_id\": 61, \"title\": \"CPU成AI新瓶颈\", \"summary\": \"过去AI依赖GPU，但随着模型具备复杂推理能力，CPU成为新的性能瓶颈。\"}",
           "ok": true
         }
       ],
       "status": "OK",
       "extended": false,
       "soft_clamped": false,
+      "clamped": false,
+      "start_snapped": true,
       "candidate": {
         "start_cue_id": 56,
-        "end_cue_id": 121,
+        "end_cue_id": 65,
         "title": "CPU成AI新瓶颈",
-        "summary": "随着AI模型走向复杂化和长期运行，CPU成为制约AI发展的新瓶颈，其需求激增导致云服务普遍出现资源短缺和系统不稳定。"
+        "summary": "过去AI依赖GPU，但随着模型具备复杂推理能力，CPU成为新的性能瓶颈。"
       }
     },
     {
-      "index": 1,
-      "start_ms": 450000,
-      "end_ms": 1110000,
-      "min_id": 78,
-      "max_id": 238,
-      "cue_count": 161,
+      "index": 2,
+      "start_ms": 480000,
+      "end_ms": 780000,
+      "min_id": 84,
+      "max_id": 156,
+      "cue_count": 73,
       "cue_ids": [
-        78,
-        79,
-        80,
-        81,
-        82,
-        83,
         84,
         85,
         86,
@@ -254,6 +266,54 @@
         134,
         135,
         136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "{\"start_cue_id\": 104, \"end_cue_id\": 112, \"title\": \"CPU瓶颈已成行业常态\", \"summary\": \"小型云服务商 Daytona 的实际负载已暴露出全球CPU资源枯竭的现实，证明CPU已成为AI基础设施的核心瓶颈。\"}",
+          "ok": true
+        }
+      ],
+      "status": "OK",
+      "extended": false,
+      "soft_clamped": false,
+      "clamped": false,
+      "start_snapped": true,
+      "candidate": {
+        "start_cue_id": 106,
+        "end_cue_id": 123,
+        "title": "CPU瓶颈已成行业常态",
+        "summary": "小型云服务商 Daytona 的实际负载已暴露出全球CPU资源枯竭的现实，证明CPU已成为AI基础设施的核心瓶颈。"
+      }
+    },
+    {
+      "index": 3,
+      "start_ms": 720000,
+      "end_ms": 1020000,
+      "min_id": 137,
+      "max_id": 217,
+      "cue_count": 81,
+      "cue_ids": [
         137,
         138,
         139,
@@ -334,75 +394,35 @@
         214,
         215,
         216,
-        217,
-        218,
-        219,
-        220,
-        221,
-        222,
-        223,
-        224,
-        225,
-        226,
-        227,
-        228,
-        229,
-        230,
-        231,
-        232,
-        233,
-        234,
-        235,
-        236,
-        237,
-        238
+        217
       ],
       "attempts": [
         {
           "attempt": 1,
-          "raw": "{\"start_cue_id\": 104, \"end_cue_id\": 130, \"title\": \"CPU短缺的深层原因\", \"summary\": \"当前全球CPU资源紧张，主要因AI训练与智能体工作负载激增，导致云服务商CPU容量被迅速耗尽，形成系统性瓶颈。\"}",
-          "ok": true
-        }
-      ],
-      "extend_attempts": [
-        {
-          "attempt": 1,
-          "raw": "{\"end_cue_id\": 238}",
+          "raw": "{\"start_cue_id\": 176, \"end_cue_id\": 180, \"title\": \"CPU市场分化加速\", \"summary\": \"NVIDIA Vera CPU因产能优势获得大量部署合同，推动CPU市场多元化发展。\"}",
           "ok": true
         }
       ],
       "status": "OK",
-      "extended": true,
-      "soft_clamped": true,
+      "extended": false,
+      "soft_clamped": false,
+      "clamped": false,
+      "start_snapped": true,
       "candidate": {
-        "start_cue_id": 104,
-        "end_cue_id": 213,
-        "title": "CPU短缺的深层原因",
-        "summary": "当前全球CPU资源紧张，主要因AI训练与智能体工作负载激增，导致云服务商CPU容量被迅速耗尽，形成系统性瓶颈。"
+        "start_cue_id": 178,
+        "end_cue_id": 189,
+        "title": "CPU市场分化加速",
+        "summary": "NVIDIA Vera CPU因产能优势获得大量部署合同，推动CPU市场多元化发展。"
       }
     },
     {
-      "index": 2,
-      "start_ms": 900000,
-      "end_ms": 1491920,
-      "min_id": 190,
-      "max_id": 317,
-      "cue_count": 128,
+      "index": 4,
+      "start_ms": 960000,
+      "end_ms": 1260000,
+      "min_id": 204,
+      "max_id": 274,
+      "cue_count": 71,
       "cue_ids": [
-        190,
-        191,
-        192,
-        193,
-        194,
-        195,
-        196,
-        197,
-        198,
-        199,
-        200,
-        201,
-        202,
-        203,
         204,
         205,
         206,
@@ -473,6 +493,48 @@
         271,
         272,
         273,
+        274
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "raw": "{\"start_cue_id\": 238, \"end_cue_id\": 245, \"title\": \"GPU闲置成本推动CPU预热\", \"summary\": \"由于GPU闲置成本远高于CPU，企业为避免浪费而提前预热CPU资源，形成CPU使用压力。\"}",
+          "ok": true
+        }
+      ],
+      "status": "OK",
+      "extended": false,
+      "soft_clamped": false,
+      "clamped": false,
+      "start_snapped": true,
+      "candidate": {
+        "start_cue_id": 240,
+        "end_cue_id": 258,
+        "title": "GPU闲置成本推动CPU预热",
+        "summary": "由于GPU闲置成本远高于CPU，企业为避免浪费而提前预热CPU资源，形成CPU使用压力。"
+      }
+    },
+    {
+      "index": 5,
+      "start_ms": 1200000,
+      "end_ms": 1491920,
+      "min_id": 261,
+      "max_id": 317,
+      "cue_count": 57,
+      "cue_ids": [
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
         274,
         275,
         276,
@@ -521,283 +583,442 @@
       "attempts": [
         {
           "attempt": 1,
-          "raw": "{\"start_cue_id\": 190, \"end_cue_id\": 219, \"title\": \"CPU成AI新瓶颈\", \"summary\": \"随着AI模型复杂度提升，验证环节频繁化导致CPU资源需求激增，成为新的计算瓶颈。\"}",
-          "ok": true
-        }
-      ],
-      "extend_attempts": [
-        {
-          "attempt": 1,
-          "raw": "{\"end_cue_id\": 317}",
+          "raw": "{\"start_cue_id\": 267, \"end_cue_id\": 284, \"title\": \"CPU成新瓶颈\", \"summary\": \"CPU因AI需求激增和供应链挤压，成为继GPU、内存后的新型计算瓶颈。\"}",
           "ok": true
         }
       ],
       "status": "OK",
-      "extended": true,
-      "soft_clamped": true,
+      "extended": false,
+      "soft_clamped": false,
+      "clamped": true,
+      "start_snapped": false,
       "candidate": {
-        "start_cue_id": 204,
-        "end_cue_id": 272,
-        "title": "GPU闲置成本高于CPU",
-        "summary": "随着AI模型复杂度提升，验证环节频繁化导致CPU资源需求激增，成为新的计算瓶颈。"
+        "start_cue_id": 267,
+        "end_cue_id": 278,
+        "title": "CPU成新瓶颈",
+        "summary": "CPU因AI需求激增和供应链挤压，成为继GPU、内存后的新型计算瓶颈。"
       }
     }
   ],
   "candidates_raw": [
     {
       "source_window": 0,
-      "start_cue_id": 56,
-      "end_cue_id": 121,
-      "title": "CPU成AI新瓶颈",
-      "summary": "随着AI模型走向复杂化和长期运行，CPU成为制约AI发展的新瓶颈，其需求激增导致云服务普遍出现资源短缺和系统不稳定。",
-      "start_ms": 317371,
-      "end_ms": 661744,
-      "duration_ms": 344373,
-      "boundary_score": 1,
+      "start_cue_id": 24,
+      "end_cue_id": 31,
+      "title": "neocloud差异化核心",
+      "summary": "neoclouds的差异化体现在GPU健康检测、网络稳定性等底层运维能力，而非仅提供裸金属GPU。",
+      "start_ms": 135591,
+      "end_ms": 182510,
+      "duration_ms": 46119,
+      "boundary_score": -1,
       "boundary_notes": [
         "filler_start",
         "question_boundary",
-        "terminal_end"
+        "non_terminal_end",
+        "filler_prefix_trimmed"
       ],
-      "manual_recut": {
-        "from_start_cue_id": 52,
-        "to_start_cue_id": 56,
-        "from_end_cue_id": 121,
-        "to_end_cue_id": 121,
-        "reason": "remove half-sentence / dependent start"
-      }
+      "trim_start_ms": 800,
+      "trim_prefix": "Yeah so",
+      "trimmed_text": "there's a variety of things that separate them right so we have something called ClusterMAX that"
     },
     {
       "source_window": 1,
-      "start_cue_id": 104,
-      "end_cue_id": 213,
-      "title": "CPU短缺的深层原因",
-      "summary": "当前全球CPU资源紧张，主要因AI训练与智能体工作负载激增，导致云服务商CPU容量被迅速耗尽，形成系统性瓶颈。",
-      "start_ms": 585240,
-      "end_ms": 1001024,
-      "duration_ms": 415784,
+      "start_cue_id": 56,
+      "end_cue_id": 65,
+      "title": "CPU成AI新瓶颈",
+      "summary": "过去AI依赖GPU，但随着模型具备复杂推理能力，CPU成为新的性能瓶颈。",
+      "start_ms": 317371,
+      "end_ms": 383105,
+      "duration_ms": 64534,
+      "boundary_score": -1,
+      "boundary_notes": [
+        "filler_start",
+        "question_boundary",
+        "non_terminal_end"
+      ],
+      "start_snapped_from": {
+        "start_cue_id": 55,
+        "start_ms": 312267,
+        "kind": "mid_sentence"
+      },
+      "trim_start_ms": 1200,
+      "trim_prefix": "Yeah I mean",
+      "trimmed_text": "for the first few years of AI CPU was a real big lagger right sure you used it for some storage used it for some checkpointing"
+    },
+    {
+      "source_window": 2,
+      "start_cue_id": 106,
+      "end_cue_id": 123,
+      "title": "CPU瓶颈已成行业常态",
+      "summary": "小型云服务商 Daytona 的实际负载已暴露出全球CPU资源枯竭的现实，证明CPU已成为AI基础设施的核心瓶颈。",
+      "start_ms": 602387,
+      "end_ms": 672030,
+      "duration_ms": 69643,
       "boundary_score": 4,
       "boundary_notes": [
         "clean_start",
         "terminal_end"
       ],
-      "extended_from": {
-        "end_cue_id": 130,
-        "duration_ms": 110087
-      },
-      "soft_clamped_from": {
-        "end_cue_id": 238,
-        "duration_ms": 530320
+      "start_snapped_from": {
+        "start_cue_id": 104,
+        "start_ms": 585240,
+        "kind": "dependent"
       }
     },
     {
-      "source_window": 2,
-      "start_cue_id": 204,
-      "end_cue_id": 272,
-      "title": "GPU闲置成本高于CPU",
-      "summary": "随着AI模型复杂度提升，验证环节频繁化导致CPU资源需求激增，成为新的计算瓶颈。",
-      "start_ms": 953985,
-      "end_ms": 1254910,
-      "duration_ms": 300925,
+      "source_window": 3,
+      "start_cue_id": 178,
+      "end_cue_id": 189,
+      "title": "CPU市场分化加速",
+      "summary": "NVIDIA Vera CPU因产能优势获得大量部署合同，推动CPU市场多元化发展。",
+      "start_ms": 835400,
+      "end_ms": 897321,
+      "duration_ms": 61521,
       "boundary_score": 0,
       "boundary_notes": [
         "filler_start",
         "terminal_end"
       ],
-      "extended_from": {
-        "end_cue_id": 219,
-        "duration_ms": 135658
+      "start_snapped_from": {
+        "start_cue_id": 176,
+        "start_ms": 825753,
+        "kind": "filler"
       },
-      "soft_clamped_from": {
-        "end_cue_id": 317,
-        "duration_ms": 594549
+      "trim_start_ms": 400,
+      "trim_prefix": "So",
+      "trimmed_text": "it's sort of like a very um dynamic market."
+    },
+    {
+      "source_window": 4,
+      "start_cue_id": 240,
+      "end_cue_id": 258,
+      "title": "GPU闲置成本推动CPU预热",
+      "summary": "由于GPU闲置成本远高于CPU，企业为避免浪费而提前预热CPU资源，形成CPU使用压力。",
+      "start_ms": 1120403,
+      "end_ms": 1187916,
+      "duration_ms": 67113,
+      "boundary_score": 0,
+      "boundary_notes": [
+        "filler_start",
+        "terminal_end"
+      ],
+      "start_snapped_from": {
+        "start_cue_id": 238,
+        "start_ms": 1109190,
+        "kind": "dependent"
       },
-      "manual_recut": {
-        "from_start_cue_id": 190,
-        "to_start_cue_id": 204,
-        "from_end_cue_id": 272,
-        "to_end_cue_id": 272,
-        "reason": "remove half-sentence / dependent start"
-      }
+      "trim_start_ms": 400,
+      "trim_prefix": "So",
+      "trimmed_text": "they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot."
+    },
+    {
+      "source_window": 5,
+      "start_cue_id": 267,
+      "end_cue_id": 278,
+      "title": "CPU成新瓶颈",
+      "summary": "CPU因AI需求激增和供应链挤压，成为继GPU、内存后的新型计算瓶颈。",
+      "start_ms": 1218401,
+      "end_ms": 1284662,
+      "duration_ms": 65861,
+      "boundary_score": -1,
+      "boundary_notes": [
+        "filler_start",
+        "question_boundary",
+        "non_terminal_end"
+      ],
+      "trim_start_ms": 400,
+      "trim_prefix": "So",
+      "trimmed_text": "we skipped over RAM we didn't talk about that where it's like GPU was a bottleneck RAM was a bottleneck and now CPUs.",
+      "clamped_from": {
+        "end_cue_id": 284,
+        "duration_ms": 97463
+      },
+      "soft_cut": true
     }
   ],
   "candidates_valid": [
     {
-      "source_window": 0,
-      "start_cue_id": 56,
-      "end_cue_id": 121,
-      "title": "CPU成AI新瓶颈",
-      "summary": "随着AI模型走向复杂化和长期运行，CPU成为制约AI发展的新瓶颈，其需求激增导致云服务普遍出现资源短缺和系统不稳定。",
-      "start_ms": 317371,
-      "end_ms": 661744,
-      "duration_ms": 344373,
-      "boundary_score": 1,
-      "boundary_notes": [
-        "filler_start",
-        "question_boundary",
-        "terminal_end"
-      ],
-      "manual_recut": {
-        "from_start_cue_id": 52,
-        "to_start_cue_id": 56,
-        "from_end_cue_id": 121,
-        "to_end_cue_id": 121,
-        "reason": "remove half-sentence / dependent start"
-      }
-    },
-    {
       "source_window": 2,
-      "start_cue_id": 204,
-      "end_cue_id": 272,
-      "title": "GPU闲置成本高于CPU",
-      "summary": "随着AI模型复杂度提升，验证环节频繁化导致CPU资源需求激增，成为新的计算瓶颈。",
-      "start_ms": 953985,
-      "end_ms": 1254910,
-      "duration_ms": 300925,
-      "boundary_score": 0,
-      "boundary_notes": [
-        "filler_start",
-        "terminal_end"
-      ],
-      "extended_from": {
-        "end_cue_id": 219,
-        "duration_ms": 135658
-      },
-      "soft_clamped_from": {
-        "end_cue_id": 317,
-        "duration_ms": 594549
-      },
-      "manual_recut": {
-        "from_start_cue_id": 190,
-        "to_start_cue_id": 204,
-        "from_end_cue_id": 272,
-        "to_end_cue_id": 272,
-        "reason": "remove half-sentence / dependent start"
-      }
-    },
-    {
-      "source_window": 1,
-      "start_cue_id": 104,
-      "end_cue_id": 213,
-      "title": "CPU短缺的深层原因",
-      "summary": "当前全球CPU资源紧张，主要因AI训练与智能体工作负载激增，导致云服务商CPU容量被迅速耗尽，形成系统性瓶颈。",
-      "start_ms": 585240,
-      "end_ms": 1001024,
-      "duration_ms": 415784,
+      "start_cue_id": 106,
+      "end_cue_id": 123,
+      "title": "CPU瓶颈已成行业常态",
+      "summary": "小型云服务商 Daytona 的实际负载已暴露出全球CPU资源枯竭的现实，证明CPU已成为AI基础设施的核心瓶颈。",
+      "start_ms": 602387,
+      "end_ms": 672030,
+      "duration_ms": 69643,
       "boundary_score": 4,
       "boundary_notes": [
         "clean_start",
         "terminal_end"
       ],
-      "extended_from": {
-        "end_cue_id": 130,
-        "duration_ms": 110087
-      },
-      "soft_clamped_from": {
-        "end_cue_id": 238,
-        "duration_ms": 530320
-      }
-    }
-  ],
-  "candidates_selected": [
-    {
-      "source_window": 0,
-      "start_cue_id": 56,
-      "end_cue_id": 121,
-      "title": "CPU成AI新瓶颈",
-      "summary": "随着AI模型走向复杂化和长期运行，CPU成为制约AI发展的新瓶颈，其需求激增导致云服务普遍出现资源短缺和系统不稳定。",
-      "start_ms": 317371,
-      "end_ms": 661744,
-      "duration_ms": 344373,
-      "boundary_score": 1,
-      "boundary_notes": [
-        "filler_start",
-        "question_boundary",
-        "terminal_end"
-      ],
-      "manual_recut": {
-        "from_start_cue_id": 52,
-        "to_start_cue_id": 56,
-        "from_end_cue_id": 121,
-        "to_end_cue_id": 121,
-        "reason": "remove half-sentence / dependent start"
+      "start_snapped_from": {
+        "start_cue_id": 104,
+        "start_ms": 585240,
+        "kind": "dependent"
       }
     },
     {
-      "source_window": 2,
-      "start_cue_id": 204,
-      "end_cue_id": 272,
-      "title": "GPU闲置成本高于CPU",
-      "summary": "随着AI模型复杂度提升，验证环节频繁化导致CPU资源需求激增，成为新的计算瓶颈。",
-      "start_ms": 953985,
-      "end_ms": 1254910,
-      "duration_ms": 300925,
+      "source_window": 3,
+      "start_cue_id": 178,
+      "end_cue_id": 189,
+      "title": "CPU市场分化加速",
+      "summary": "NVIDIA Vera CPU因产能优势获得大量部署合同，推动CPU市场多元化发展。",
+      "start_ms": 835400,
+      "end_ms": 897321,
+      "duration_ms": 61521,
       "boundary_score": 0,
       "boundary_notes": [
         "filler_start",
         "terminal_end"
       ],
-      "extended_from": {
-        "end_cue_id": 219,
-        "duration_ms": 135658
+      "start_snapped_from": {
+        "start_cue_id": 176,
+        "start_ms": 825753,
+        "kind": "filler"
       },
-      "soft_clamped_from": {
-        "end_cue_id": 317,
-        "duration_ms": 594549
+      "trim_start_ms": 400,
+      "trim_prefix": "So",
+      "trimmed_text": "it's sort of like a very um dynamic market."
+    },
+    {
+      "source_window": 4,
+      "start_cue_id": 240,
+      "end_cue_id": 258,
+      "title": "GPU闲置成本推动CPU预热",
+      "summary": "由于GPU闲置成本远高于CPU，企业为避免浪费而提前预热CPU资源，形成CPU使用压力。",
+      "start_ms": 1120403,
+      "end_ms": 1187916,
+      "duration_ms": 67113,
+      "boundary_score": 0,
+      "boundary_notes": [
+        "filler_start",
+        "terminal_end"
+      ],
+      "start_snapped_from": {
+        "start_cue_id": 238,
+        "start_ms": 1109190,
+        "kind": "dependent"
       },
-      "manual_recut": {
-        "from_start_cue_id": 190,
-        "to_start_cue_id": 204,
-        "from_end_cue_id": 272,
-        "to_end_cue_id": 272,
-        "reason": "remove half-sentence / dependent start"
+      "trim_start_ms": 400,
+      "trim_prefix": "So",
+      "trimmed_text": "they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot."
+    },
+    {
+      "source_window": 1,
+      "start_cue_id": 56,
+      "end_cue_id": 65,
+      "title": "CPU成AI新瓶颈",
+      "summary": "过去AI依赖GPU，但随着模型具备复杂推理能力，CPU成为新的性能瓶颈。",
+      "start_ms": 317371,
+      "end_ms": 383105,
+      "duration_ms": 64534,
+      "boundary_score": -1,
+      "boundary_notes": [
+        "filler_start",
+        "question_boundary",
+        "non_terminal_end"
+      ],
+      "start_snapped_from": {
+        "start_cue_id": 55,
+        "start_ms": 312267,
+        "kind": "mid_sentence"
+      },
+      "trim_start_ms": 1200,
+      "trim_prefix": "Yeah I mean",
+      "trimmed_text": "for the first few years of AI CPU was a real big lagger right sure you used it for some storage used it for some checkpointing"
+    },
+    {
+      "source_window": 5,
+      "start_cue_id": 267,
+      "end_cue_id": 278,
+      "title": "CPU成新瓶颈",
+      "summary": "CPU因AI需求激增和供应链挤压，成为继GPU、内存后的新型计算瓶颈。",
+      "start_ms": 1218401,
+      "end_ms": 1284662,
+      "duration_ms": 65861,
+      "boundary_score": -1,
+      "boundary_notes": [
+        "filler_start",
+        "question_boundary",
+        "non_terminal_end"
+      ],
+      "trim_start_ms": 400,
+      "trim_prefix": "So",
+      "trimmed_text": "we skipped over RAM we didn't talk about that where it's like GPU was a bottleneck RAM was a bottleneck and now CPUs.",
+      "clamped_from": {
+        "end_cue_id": 284,
+        "duration_ms": 97463
+      },
+      "soft_cut": true
+    },
+    {
+      "source_window": 0,
+      "start_cue_id": 24,
+      "end_cue_id": 31,
+      "title": "neocloud差异化核心",
+      "summary": "neoclouds的差异化体现在GPU健康检测、网络稳定性等底层运维能力，而非仅提供裸金属GPU。",
+      "start_ms": 135591,
+      "end_ms": 182510,
+      "duration_ms": 46119,
+      "boundary_score": -1,
+      "boundary_notes": [
+        "filler_start",
+        "question_boundary",
+        "non_terminal_end",
+        "filler_prefix_trimmed"
+      ],
+      "trim_start_ms": 800,
+      "trim_prefix": "Yeah so",
+      "trimmed_text": "there's a variety of things that separate them right so we have something called ClusterMAX that"
+    }
+  ],
+  "candidates_selected": [
+    {
+      "source_window": 2,
+      "start_cue_id": 106,
+      "end_cue_id": 123,
+      "title": "CPU瓶颈已成行业常态",
+      "summary": "小型云服务商 Daytona 的实际负载已暴露出全球CPU资源枯竭的现实，证明CPU已成为AI基础设施的核心瓶颈。",
+      "start_ms": 602387,
+      "end_ms": 672030,
+      "duration_ms": 69643,
+      "boundary_score": 4,
+      "boundary_notes": [
+        "clean_start",
+        "terminal_end"
+      ],
+      "start_snapped_from": {
+        "start_cue_id": 104,
+        "start_ms": 585240,
+        "kind": "dependent"
       }
+    },
+    {
+      "source_window": 3,
+      "start_cue_id": 178,
+      "end_cue_id": 189,
+      "title": "CPU市场分化加速",
+      "summary": "NVIDIA Vera CPU因产能优势获得大量部署合同，推动CPU市场多元化发展。",
+      "start_ms": 835400,
+      "end_ms": 897321,
+      "duration_ms": 61521,
+      "boundary_score": 0,
+      "boundary_notes": [
+        "filler_start",
+        "terminal_end"
+      ],
+      "start_snapped_from": {
+        "start_cue_id": 176,
+        "start_ms": 825753,
+        "kind": "filler"
+      },
+      "trim_start_ms": 400,
+      "trim_prefix": "So",
+      "trimmed_text": "it's sort of like a very um dynamic market."
+    },
+    {
+      "source_window": 4,
+      "start_cue_id": 240,
+      "end_cue_id": 258,
+      "title": "GPU闲置成本推动CPU预热",
+      "summary": "由于GPU闲置成本远高于CPU，企业为避免浪费而提前预热CPU资源，形成CPU使用压力。",
+      "start_ms": 1120403,
+      "end_ms": 1187916,
+      "duration_ms": 67113,
+      "boundary_score": 0,
+      "boundary_notes": [
+        "filler_start",
+        "terminal_end"
+      ],
+      "start_snapped_from": {
+        "start_cue_id": 238,
+        "start_ms": 1109190,
+        "kind": "dependent"
+      },
+      "trim_start_ms": 400,
+      "trim_prefix": "So",
+      "trimmed_text": "they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot."
+    },
+    {
+      "source_window": 1,
+      "start_cue_id": 56,
+      "end_cue_id": 65,
+      "title": "CPU成AI新瓶颈",
+      "summary": "过去AI依赖GPU，但随着模型具备复杂推理能力，CPU成为新的性能瓶颈。",
+      "start_ms": 317371,
+      "end_ms": 383105,
+      "duration_ms": 64534,
+      "boundary_score": -1,
+      "boundary_notes": [
+        "filler_start",
+        "question_boundary",
+        "non_terminal_end"
+      ],
+      "start_snapped_from": {
+        "start_cue_id": 55,
+        "start_ms": 312267,
+        "kind": "mid_sentence"
+      },
+      "trim_start_ms": 1200,
+      "trim_prefix": "Yeah I mean",
+      "trimmed_text": "for the first few years of AI CPU was a real big lagger right sure you used it for some storage used it for some checkpointing"
     }
   ],
   "candidates_removed": [
     {
       "candidate": {
-        "source_window": 1,
-        "start_cue_id": 104,
-        "end_cue_id": 213,
-        "title": "CPU短缺的深层原因",
-        "summary": "当前全球CPU资源紧张，主要因AI训练与智能体工作负载激增，导致云服务商CPU容量被迅速耗尽，形成系统性瓶颈。",
-        "start_ms": 585240,
-        "end_ms": 1001024,
-        "duration_ms": 415784,
-        "boundary_score": 4,
+        "source_window": 5,
+        "start_cue_id": 267,
+        "end_cue_id": 278,
+        "title": "CPU成新瓶颈",
+        "summary": "CPU因AI需求激增和供应链挤压，成为继GPU、内存后的新型计算瓶颈。",
+        "start_ms": 1218401,
+        "end_ms": 1284662,
+        "duration_ms": 65861,
+        "boundary_score": -1,
         "boundary_notes": [
-          "clean_start",
-          "terminal_end"
+          "filler_start",
+          "question_boundary",
+          "non_terminal_end"
         ],
-        "extended_from": {
-          "end_cue_id": 130,
-          "duration_ms": 110087
+        "trim_start_ms": 400,
+        "trim_prefix": "So",
+        "trimmed_text": "we skipped over RAM we didn't talk about that where it's like GPU was a bottleneck RAM was a bottleneck and now CPUs.",
+        "clamped_from": {
+          "end_cue_id": 284,
+          "duration_ms": 97463
         },
-        "soft_clamped_from": {
-          "end_cue_id": 238,
-          "duration_ms": 530320
-        }
+        "soft_cut": true
       },
       "stage": "quota",
-      "reason": "outside top 2 by start time"
+      "reason": "outside the 330000 ms reel budget or the 5-clip cap"
+    },
+    {
+      "candidate": {
+        "source_window": 0,
+        "start_cue_id": 24,
+        "end_cue_id": 31,
+        "title": "neocloud差异化核心",
+        "summary": "neoclouds的差异化体现在GPU健康检测、网络稳定性等底层运维能力，而非仅提供裸金属GPU。",
+        "start_ms": 135591,
+        "end_ms": 182510,
+        "duration_ms": 46119,
+        "boundary_score": -1,
+        "boundary_notes": [
+          "filler_start",
+          "question_boundary",
+          "non_terminal_end",
+          "filler_prefix_trimmed"
+        ],
+        "trim_start_ms": 800,
+        "trim_prefix": "Yeah so",
+        "trimmed_text": "there's a variety of things that separate them right so we have something called ClusterMAX that"
+      },
+      "stage": "quota",
+      "reason": "outside the 330000 ms reel budget or the 5-clip cap"
     }
   ],
   "errors": [],
   "source": "downloads/Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv",
-  "source_duration_ms": 1504061,
-  "recut": {
-    "generated_at": "2026-10-29",
-    "reason": "semantic opening repair + distinct titles; intro reused",
-    "clip1": {
-      "start_cue_id": 56,
-      "start_ms": 317371,
-      "title": "CPU成AI新瓶颈"
-    },
-    "clip2": {
-      "start_cue_id": 204,
-      "start_ms": 953985,
-      "title": "GPU闲置成本高于CPU"
-    }
-  }
+  "source_duration_ms": 1504061
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "video_id": "c88l8daXiv4",
   "status": "SUCCESS",
-  "started_at": "2026-10-28T23:36:53+00:00",
-  "finished_at": "2026-10-28T23:40:19+00:00",
+  "started_at": "2026-10-29T02:59:33+00:00",
+  "finished_at": "2026-10-29T03:02:33+00:00",
   "error": null,
   "stages": [
     {
@@ -12,20 +12,20 @@
       "title": "文本理解与高光规划（LLM 独占）",
       "status": "SUCCESS",
       "service": "llama-server",
-      "started_at": "2026-10-28T23:36:53+00:00",
-      "finished_at": "2026-10-28T23:37:07+00:00",
-      "seconds": 13.81,
+      "started_at": "2026-10-29T02:59:33+00:00",
+      "finished_at": "2026-10-29T02:59:57+00:00",
+      "seconds": 23.48,
       "detail": {
         "analysis": {
           "status": "REUSED",
           "path": "clips/c88l8daXiv4/analysis.json"
         },
         "copy": {
-          "intro_spoken_text": "Daytona 2026，Dylan Patel 现场实录。他拆解 CPU 算力瓶颈。中英双语，来看原声。",
+          "intro_spoken_text": "二零二六年，Daytona 现场。Dylan Patel 说，CPU 为什么总不够用？推理模型把训练和验证闭环压紧。GPU 的闲置率反而一路上涨。算力到底卡在哪一步？听听他怎么说，来听原声。",
           "screen_title": "CPU 为何成为 AI 新瓶颈",
           "screen_subtitle": "Dylan Patel · SemiAnalysis，2026"
         },
-        "model": "Qwen3-30B-A3B-Instruct-2507-Q4_K_M"
+        "model": null
       },
       "error": null
     },
@@ -35,32 +35,34 @@
       "title": "语音合成与时间审计（TTS 独占）",
       "status": "SUCCESS",
       "service": "cosyvoice",
-      "started_at": "2026-10-28T23:37:07+00:00",
-      "finished_at": "2026-10-28T23:38:16+00:00",
-      "seconds": 69.33,
+      "started_at": "2026-10-29T02:59:57+00:00",
+      "finished_at": "2026-10-29T03:01:33+00:00",
+      "seconds": 96.41,
       "detail": {
         "narration": {
-          "text": "Daytona 2026，Dylan Patel 现场实录。他拆解 CPU 算力瓶颈。中英双语，来看原声。",
-          "tts_text": "Daytona 二零二六年，Dylan Patel 现场实录。他拆解 CPU 算力瓶颈。中英双语，来看原声。",
+          "text": "二零二六年，Daytona 现场。Dylan Patel 说，CPU 为什么总不够用？推理模型把训练和验证闭环压紧。GPU 的闲置率反而一路上涨。算力到底卡在哪一步？听听他怎么说，来听原声。",
+          "tts_text": "二零二六年，Daytona 现场。Dylan Patel 说，CPU 为什么总不够用？推理模型把训练和验证闭环压紧。GPU 的闲置率反而一路上涨。算力到底卡在哪一步？听听他怎么说，来听原声。",
           "script": "clips/c88l8daXiv4/intro/intro.script.json",
           "raw_path": "clips/c88l8daXiv4/intro/narration.raw.wav",
-          "raw_seconds": 9.04,
+          "raw_seconds": 13.119,
           "path": "clips/c88l8daXiv4/intro/narration.wav",
-          "final_seconds": 8.508,
-          "tempo": 1.0635,
-          "prompt_wav": "D:/AI/CosyVoice-Runtime/assets/my_voice_5s.wav",
+          "final_seconds": 13.719,
+          "tempo": 1.0,
+          "head_silence_ms": 600,
+          "prompt_wav": "",
+          "voice_speaker": "中文女",
           "service": {
-            "model_class": "CosyVoice2",
-            "model_dir": "D:\\AI\\CosyVoice-Runtime\\pretrained_models\\CosyVoice2-0.5B",
+            "model_class": "CosyVoice",
+            "model_dir": "D:\\AI\\CosyVoice-Runtime\\pretrained_models\\CosyVoice-300M-SFT",
             "device": "cpu",
-            "sample_rate": 24000,
+            "sample_rate": 22050,
             "text_frontend": "wetext"
           }
         },
         "timeline": {
-          "duration_ms": 8958,
-          "lead_ms": 200,
-          "voice_ms": 8508,
+          "duration_ms": 13969,
+          "lead_ms": 0,
+          "voice_ms": 13719,
           "tail_ms": 250
         },
         "repairs": []
@@ -73,9 +75,9 @@
       "title": "视觉卡片生成（零显存）",
       "status": "SUCCESS",
       "service": "none",
-      "started_at": "2026-10-28T23:38:16+00:00",
-      "finished_at": "2026-10-28T23:38:17+00:00",
-      "seconds": 0.52,
+      "started_at": "2026-10-29T03:01:33+00:00",
+      "finished_at": "2026-10-29T03:01:34+00:00",
+      "seconds": 0.55,
       "detail": {
         "mode": "poster",
         "style": "poster",
@@ -84,7 +86,7 @@
         ],
         "png": "clips/c88l8daXiv4/intro/intro.png",
         "hashes": [
-          "52919a14815aa77869d1cedeb89eed7c11b2e5a9db08167cfe7be4c96cc233c6"
+          "fabf3b4f76e4bde5ec977ae6f3d3cd4768a0a9b86e823da5ab43979ec93cf8c6"
         ],
         "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
         "renderer": "auto"
@@ -97,21 +99,21 @@
       "title": "媒体渲染与成片装配（FFmpeg/QSV 独占）",
       "status": "SUCCESS",
       "service": "ffmpeg/qsv",
-      "started_at": "2026-10-28T23:38:17+00:00",
-      "finished_at": "2026-10-28T23:40:16+00:00",
-      "seconds": 118.94,
+      "started_at": "2026-10-29T03:01:34+00:00",
+      "finished_at": "2026-10-29T03:02:30+00:00",
+      "seconds": 55.72,
       "detail": {
         "intro": {
           "status": "SUCCESS",
           "path": "clips/c88l8daXiv4/intro/intro.mp4",
-          "duration_ms": 8971
+          "duration_ms": 13988
         },
         "media": {
           "clips": "RENDERED",
           "assembly": {
             "status": "SUCCESS",
             "output": "clips/c88l8daXiv4/final/c88l8daXiv4.highlights-merged.mp4",
-            "duration_ms": 733286
+            "duration_ms": 278586
           }
         }
       },

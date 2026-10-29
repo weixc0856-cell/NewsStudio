@@ -12,72 +12,15 @@ Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
-Dialogue: 0,0:00:00.00,0:00:06.26,Sub,,0,0,0,,Okay, now that's that's increasing the frequency in which the generator, i.e. the model, is sending to the verifier.\N现在，这相当于提高了生成器，也就是模型，向验证器发送的频率。
-Dialogue: 0,0:00:06.31,0:00:08.91,Sub,,0,0,0,,Um and that loop gets tighter and tighter and tighter.\N而且这个循环变得越来越紧密。
-Dialogue: 0,0:00:08.96,0:00:16.46,Sub,,0,0,0,,And as we as we continue to move to more complex RL, it's like the model will actually uh be verifying its output constantly, right?\N随着我们不断迈向更复杂的强化学习，模型实际上会持续验证其输出，对吧？
-Dialogue: 0,0:00:16.51,0:00:20.95,Sub,,0,0,0,,Like if you imagine um let's say models that are training over the next year or two is\N就像你想象一下，假设未来一两年内模型正在训练
-Dialogue: 0,0:00:21.00,0:00:25.45,Sub,,0,0,0,,is let's say a robot model that's verifying and that's that's in in a like a world model,\N比如一个正在验证的机器人模型，它处于类似世界模型的环境中。
-Dialogue: 0,0:00:25.50,0:00:26.02,Sub,,0,0,0,,right?\N对吧？
-Dialogue: 0,0:00:26.07,0:00:30.81,Sub,,0,0,0,,So uh VLM is is navigating across the world trying to pick up things, put them down.\N嗯，VLM 在虚拟世界里移动，试图捡起东西、放下东西。
-Dialogue: 0,0:00:30.86,0:00:35.64,Sub,,0,0,0,,Every single action needs to be verified against the physics model that is sitting on some CPUs.\N每一项操作都必须与运行在某些 CPU 上的物理模型进行核对。
-Dialogue: 0,0:00:35.69,0:00:44.02,Sub,,0,0,0,,And so that's that's insanely way more CPUs than you need for say doing unit tests or running a math proof, right?\N所以，这比做单元测试或运行数学证明所需的 CPU 多出太多了，对吧？
-Dialogue: 0,0:00:44.07,0:00:47.04,Sub,,0,0,0,,And when we look at like o1, that's like all it could do was math, right?\N当我们看 o1 的时候，它能做的就只有数学运算，对吧？
-Dialogue: 0,0:00:47.09,0:00:54.83,Sub,,0,0,0,,Um and as we look at like you know, sort of uh GPT-5.4 or Opus 4.6, like it's okay agentic software,\N嗯，像 GPT-5.4 或 Opus 4.6，它们作为代理式软件已经算可以了，
-Dialogue: 0,0:00:54.88,0:00:58.70,Sub,,0,0,0,,but like as we move forward to the next stage of, you know, whatever's coming,\N但随着我们迈向下一个阶段，也就是接下来可能出现的任何事物，
-Dialogue: 0,0:00:58.75,0:01:04.40,Sub,,0,0,0,,it's going to be models that can understand, oh, I need to tie my shoe and like when I tie it,\N它会理解：哦，我需要系鞋带，而系的时候要用多大力量，
-Dialogue: 0,0:01:04.46,0:01:06.87,Sub,,0,0,0,,what's the strength strength, yeah. like what's the tensile strength?\N强度是多少？比如抗拉强度？
-Dialogue: 0,0:01:06.92,0:01:12.22,Sub,,0,0,0,,All these things like as to the the has to be calculated cuz the verifier is just generating, you know, what's the next step.\N所有这些都必须被计算，因为验证器只是在生成下一步该做什么。
-Dialogue: 0,0:01:12.28,0:01:19.04,Sub,,0,0,0,,Um but every step needs to be checked way more often and the intensity of that calculation for checking the step it goes up a time.\N但每一步都需要更频繁地检查，而检查这一步的计算强度也会随之增加。
-Dialogue: 0,0:01:19.09,0:01:19.39,Sub,,0,0,0,,Yeah.\N嗯。
-Dialogue: 0,0:01:19.42,0:01:25.34,Sub,,0,0,0,,But there's also another thing and you probably know better than I is like the the the level\N但还有另一件事，你可能比我更清楚，就是那个程度
-Dialogue: 0,0:01:25.39,0:01:32.03,Sub,,0,0,0,,of the the the strength of the GPUs can handle in parallel a certain amount of CPUs boxes.\NGPU 的算力可以并行处理多少台 CPU 服务器。
-Dialogue: 0,0:01:32.08,0:01:35.12,Sub,,0,0,0,,And so as we get next generations of GPUs,\N因此，当我们迎来下一代 GPU 时，
-Dialogue: 0,0:01:35.17,0:01:44.84,Sub,,0,0,0,,I feel that they will be able to spin up manage or work on more CPUs than they do now which is another stressor on CPUs now.\N我觉得他们将能够启动、管理或处理比现在更多的 CPU，这也会给 CPU 带来新的压力。
-Dialogue: 0,0:01:44.90,0:01:46.75,Sub,,0,0,0,,Yeah, I mean that's that's certainly the case, right?\N是的，那确实如此，对吧？
-Dialogue: 0,0:01:46.80,0:01:50.40,Sub,,0,0,0,,GPU Well, GPUs are also just like getting way higher power, right?\NGPU，其实 GPU 的功耗也在大幅上升，对吧？
-Dialogue: 0,0:01:50.45,0:01:55.08,Sub,,0,0,0,,So one GPU will equal many many more CPUs over time, right?\N所以随着时间推移，一块GPU将相当于众多CPU，对吧？
-Dialogue: 0,0:01:55.14,0:02:01.18,Sub,,0,0,0,,Um and GPUs are getting more expensive gen on gen on gen, whereas vCPUs are flat, slightly down.\N而且 GPU 一代比一代贵，而 vCPU 的价格持平甚至略有下降。
-Dialogue: 0,0:02:01.23,0:02:01.70,Sub,,0,0,0,,Yeah.\N嗯。
-Dialogue: 0,0:02:01.75,0:02:04.76,Sub,,0,0,0,,Um and so certainly it's a different scale, right?\N嗯，所以这确实是一个不同的规模，对吧？
-Dialogue: 0,0:02:04.82,0:02:08.60,Sub,,0,0,0,,Like one Blackwell versus one Rubin, performance is up X.\N一块 Blackwell 对比一块 Rubin，性能提升了 X 倍。
-Dialogue: 0,0:02:08.65,0:02:10.08,Sub,,0,0,0,,Price is also up X.\N价格也上涨了 X。
-Dialogue: 0,0:02:10.14,0:02:18.94,Sub,,0,0,0,,Um whereas, you know, you may buy last generation CPU, new generation CPU and there's 192 vCPUs in this gen and last gen was like 96, right?\N嗯，比如说，你可能买上一代的CPU，或者新一代的CPU，\N这一代有192个vCPU，上一代大概是96个，对吧？
-Dialogue: 0,0:02:18.99,0:02:24.72,Sub,,0,0,0,,So now you've got way more CPUs, but the the price increase is equivalent to what you got in additional vCPUs.\N现在你的CPU数量多了很多，但价格涨幅相当于你获得的额外vCPU所带来的成本增加。
-Dialogue: 0,0:02:24.77,0:02:29.21,Sub,,0,0,0,,So it's like sort of yeah, the the ratio will grow in the favor of vCPUs,\N所以比例会向 vCPU 倾斜，
-Dialogue: 0,0:02:29.26,0:02:34.82,Sub,,0,0,0,,but the cost will be sort of also probably in the direction of CPUs, but not sure how much.\N但成本可能也会向 CPU 方向上升，不过不确定会升多少。
-Dialogue: 0,0:02:34.87,0:02:35.18,Sub,,0,0,0,,Yeah.\N嗯。
-Dialogue: 0,0:02:35.21,0:02:41.57,Sub,,0,0,0,,And and also the other stressor on that and we've seen this with with larger customers when they have\N而且另一个压力源也存在，我们之前在大客户身上就看到过这种情况。
-Dialogue: 0,0:02:41.62,0:02:46.37,Sub,,0,0,0,,like they don't they have like a time allotment for GPUs and they don't want their GPUs to be idle.\N他们好像有分配给 GPU 的时间配额，不希望 GPU 处于空闲状态。
-Dialogue: 0,0:02:46.42,0:02:54.70,Sub,,0,0,0,,So they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot.\N所以他们宁愿为持续运行的热池CPU付费，这样当GPU有任务过来时，CPU就已经处于就绪状态。
-Dialogue: 0,0:02:54.75,0:02:56.48,Sub,,0,0,0,,They're essentially working, right?\NCPU 实际上已经在工作了，对吧？
-Dialogue: 0,0:02:56.53,0:03:00.88,Sub,,0,0,0,,So they'll we we I say we cuz we do mostly CPUs are certainly the cheap resource.\N所以我们会说，因为我们主要做 CPU，这显然是成本较低的资源。
-Dialogue: 0,0:03:00.93,0:03:03.22,Sub,,0,0,0,,I don't know if we're cheap, but cheap resource for this.\N我不知道我们是不是便宜，但这个资源确实很便宜。
-Dialogue: 0,0:03:03.27,0:03:11.00,Sub,,0,0,0,,And so that spends more GPUs actually just because the cost of having an idle GPU is to is way more expensive, right?\N所以实际上会用更多GPU，因为让GPU闲置的成本要高得多，对吧？
-Dialogue: 0,0:03:11.05,0:03:12.94,Sub,,0,0,0,,Yeah, it's actually like a really interesting point, right?\N是的，这实际上是个非常有趣的观点，对吧？
-Dialogue: 0,0:03:12.99,0:03:16.93,Sub,,0,0,0,,The business model is like no one does I mean sure, there's on demand GPUs,\N这个商业模式——我是说，确实有按需 GPU，
-Dialogue: 0,0:03:16.98,0:03:22.64,Sub,,0,0,0,,but like Lambda has like 50,000 plus GPUs and only 4,000 of them are on demand, right?\N但就像 Lambda 有超过 5 万块 GPU，其中只有 4000 块是按需可用的，对吧？
-Dialogue: 0,0:03:22.68,0:03:23.81,Sub,,0,0,0,,And they're always sold out.\N而且总是卖光。
-Dialogue: 0,0:03:23.86,0:03:26.07,Sub,,0,0,0,,So like no one really has on demand GPUs.\N所以其实没人真的拥有按需 GPU。
-Dialogue: 0,0:03:26.12,0:03:33.54,Sub,,0,0,0,,Everyone's signing at minimum like long-term, you know, multi-month contracts, but in most cases multi-year contracts.\N大家都在签至少长期的合同，你知道的，几个月起步，大多数是多年期的合同。
-Dialogue: 0,0:03:33.59,0:03:38.35,Sub,,0,0,0,,Um and so like CPUs have been used to like you can spin them up and down, right?\N嗯，就像 CPU 可以随时启动和关闭一样，对吧？
-Dialogue: 0,0:03:38.40,0:03:40.92,Sub,,0,0,0,,That's why everyone moved to the cloud, right?\N这就是为什么大家都转向了云端，对吧？
-Dialogue: 0,0:03:40.98,0:03:48.05,Sub,,0,0,0,,Um but with these RL workloads, it's like, okay, the GPU: the generator, the model running on a GPU generated a bunch of stuff.\N但这些强化学习工作负载的情况是，好吧，GPU作为生成器，运行在GPU上的模型生成了一大堆内容。
-Dialogue: 0,0:03:48.10,0:03:50.04,Sub,,0,0,0,,It sends it to the verifier.\N它将其发送给验证器。
-Dialogue: 0,0:03:50.10,0:03:52.14,Sub,,0,0,0,,If the verifier is not ready and waiting Then it's idle.\N如果验证器没有提前准备好并等待，GPU 就会空闲。
-Dialogue: 0,0:03:52.19,0:03:52.72,Sub,,0,0,0,,Then it's waiting.\N然后它在等待。
-Dialogue: 0,0:03:52.78,0:03:52.94,Sub,,0,0,0,,Right.\N对。
-Dialogue: 0,0:03:52.97,0:03:53.93,Sub,,0,0,0,,Like the GPU is just sitting there.\N就像 GPU 就那样闲置着。
-Dialogue: 0,0:03:53.98,0:03:57.18,Sub,,0,0,0,,So it's like, okay, well, I've already paid for this.\N反正我已经付过钱了，就这样吧。
-Dialogue: 0,0:03:57.23,0:03:57.68,Sub,,0,0,0,,Yes.\N是的。
-Dialogue: 0,0:03:57.74,0:04:06.24,Sub,,0,0,0,,So if you can't get your instantaneous you know you know resources spun up on the CPU side and in fact you should do it preemptively so it's not\N所以如果你无法立即获得资源，你知道的，就在CPU端预先启动起来，\N事实上你应该提前做好准备，这样就不会耽误了
-Dialogue: 0,0:04:06.29,0:04:11.28,Sub,,0,0,0,,like loading you know the the simulator that you or the generation the environment\N就像加载你所知道的模拟器，或是生成的环境
-Dialogue: 0,0:04:11.33,0:04:14.06,Sub,,0,0,0,,right you you're wasting money so yeah like that that makes a lot of sense.\N没错，你这是在浪费钱，所以这确实很有道理。
-Dialogue: 0,0:04:14.11,0:04:17.20,Sub,,0,0,0,,And not only that then you have that running and then as soon as those are running you're\N这些一跑起来，你又去启动另一个热池，
-Dialogue: 0,0:04:17.26,0:04:22.46,Sub,,0,0,0,,spinning up another warm pool of these so that every new iteration of them are are continually growing.\N启动另一个热池，使它们的每一次迭代都能持续增长。
-Dialogue: 0,0:04:22.51,0:04:24.37,Sub,,0,0,0,,So what does that mean generally?\N那通常意味着什么呢？
-Dialogue: 0,0:04:24.42,0:04:32.05,Sub,,0,0,0,,So we skipped over RAM we didn't talk about that where it's like GPU was a bottleneck RAM was a bottleneck and now CPUs.\N所以我们跳过了内存，没提它，因为之前是GPU成为瓶颈，后来是内存成为瓶颈，现在轮到CPU了。
-Dialogue: 0,0:04:32.10,0:04:38.59,Sub,,0,0,0,,So just very closer to home for most people is that like it's very hard to buy a PC today because it's like super expensive is is that\N对大多数人来说，更贴近生活的是，现在买台电脑非常困难，因为实在太贵了。
-Dialogue: 0,0:04:38.64,0:04:42.50,Sub,,0,0,0,,happening to the CPUs because we just mentioned that they're like they're fairly inexpensive\N这种情况会发生在 CPU 上吗？因为我们刚才提到它们相当便宜，
-Dialogue: 0,0:04:42.55,0:04:47.96,Sub,,0,0,0,,and flat does the market pressure now demand sort of that these prices now increase?\N而如今市场压力是否要求这些价格现在上涨呢？
-Dialogue: 0,0:04:48.02,0:04:54.00,Sub,,0,0,0,,Yeah I mean it's it's pretty much the case for all like PCs laptops building a PC\N是的，其实对所有电脑、笔记本电脑来说都是这样，组装一台电脑
-Dialogue: 0,0:04:54.05,0:05:00.92,Sub,,0,0,0,,that it's hard to get you know Apple is pretty sold out of like Mac minis for example.\N要知道，苹果的Mac mini之类的机型基本上已经售罄了。
+Dialogue: 0,0:00:00.00,0:00:02.07,Sub,,0,0,0,,it's sort of like a very um dynamic market.\N这有点像一个非常动态的市场。
+Dialogue: 0,0:00:02.12,0:00:07.21,Sub,,0,0,0,,And then and then you've got like Microsoft and Google are starting to deploy their CPUs in volumes.\N然后，微软和谷歌也开始大规模部署他们的CPU了。
+Dialogue: 0,0:00:07.26,0:00:14.59,Sub,,0,0,0,,Um ARM is going to launch a CPU in like a few weeks uh that Meta is going to adopt and a few others are going to adopt um like Cloudflare.\N嗯，Arm 几周后将推出一款 CPU，Meta 将采用，\N还有像 Cloudflare 这样的公司也会采用。
+Dialogue: 0,0:00:14.64,0:00:19.70,Sub,,0,0,0,,And so there's going to be a lot more proliferation like Arm standalone rather than like Arm licensing the IP to someone.\N因此会出现更多 Arm 独立芯片，而不是 Arm 把 IP 授权给别人。
+Dialogue: 0,0:00:19.75,0:00:26.70,Sub,,0,0,0,,So there's a lot more um diversification in the market um which which happens when there's a gold rush, right?\N所以市场上有更多的多样化，这在出现淘金热时就会发生，对吧？
+Dialogue: 0,0:00:26.75,0:00:33.91,Sub,,0,0,0,,And then we'll see what actually is the best quality and is left standing as the sort of supply demand gap get closes.\N随后我们将看到，当供需差距逐渐缩小后，究竟哪种质量的产品能够脱颖而出，保持领先。
+Dialogue: 0,0:00:33.96,0:00:34.36,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:00:34.40,0:00:40.55,Sub,,0,0,0,,But it seems that supply and demand will still grow like at least what I see like one the RL and it it seems like RL is mostly done,\N但看起来供需仍会继续增长。至少从我看到的情况，强化学习大多是在后训练阶段完成，
+Dialogue: 0,0:00:40.60,0:00:49.01,Sub,,0,0,0,,you know, they do post trading on RL, but we have now vendors and companies that are pitching and creating services that do RL in real time.\N你知道，他们确实会用强化学习做后训练，但现在已有供应商在提供实时强化学习服务。
+Dialogue: 0,0:00:49.06,0:00:54.87,Sub,,0,0,0,,And since you have like some agents you have some SaaS that's an agentic in the background and then\N而且因为你们有一些智能体，有些 SaaS 在后台以代理式方式运行。
+Dialogue: 0,0:00:54.92,0:01:00.36,Sub,,0,0,0,,it will do RL at the end of the day basically to like learn against what it has done.\N说到底，它最终会进行强化学习，以根据自身行为进行学习。
+Dialogue: 0,0:01:00.41,0:01:01.52,Sub,,0,0,0,,And so that grows.\N于是它不断增长。

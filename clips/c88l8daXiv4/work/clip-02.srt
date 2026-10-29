@@ -1,344 +1,59 @@
 1
-00:00:00,000 --> 00:00:06,263
-Okay, now that's that's increasing the frequency in which the generator, i.e. the model, is sending to the verifier.
-现在，这相当于提高了生成器，也就是模型，向验证器发送的频率。
+00:00:00,000 --> 00:00:02,067
+it's sort of like a very um dynamic market.
+这有点像一个非常动态的市场。
 
 2
-00:00:06,313 --> 00:00:08,906
-Um and that loop gets tighter and tighter and tighter.
-而且这个循环变得越来越紧密。
+00:00:02,117 --> 00:00:07,210
+And then and then you've got like Microsoft and Google are starting to deploy their CPUs in volumes.
+然后，微软和谷歌也开始大规模部署他们的CPU了。
 
 3
-00:00:08,956 --> 00:00:16,463
-And as we as we continue to move to more complex RL, it's like the model will actually uh be verifying its output constantly, right?
-随着我们不断迈向更复杂的强化学习，模型实际上会持续验证其输出，对吧？
+00:00:07,260 --> 00:00:14,586
+Um ARM is going to launch a CPU in like a few weeks uh that Meta is going to adopt and a few others are going to adopt um like Cloudflare.
+嗯，Arm 几周后将推出一款 CPU，Meta 将采用，还有像 Cloudflare 这样的公司也会采用。
 
 4
-00:00:16,513 --> 00:00:20,948
-Like if you imagine um let's say models that are training over the next year or two is
-就像你想象一下，假设未来一两年内模型正在训练
+00:00:14,636 --> 00:00:19,699
+And so there's going to be a lot more proliferation like Arm standalone rather than like Arm licensing the IP to someone.
+因此会出现更多 Arm 独立芯片，而不是 Arm 把 IP 授权给别人。
 
 5
-00:00:20,998 --> 00:00:25,452
-is let's say a robot model that's verifying and that's that's in in a like a world model,
-比如一个正在验证的机器人模型，它处于类似世界模型的环境中。
+00:00:19,749 --> 00:00:26,697
+So there's a lot more um diversification in the market um which which happens when there's a gold rush, right?
+所以市场上有更多的多样化，这在出现淘金热时就会发生，对吧？
 
 6
-00:00:25,502 --> 00:00:26,019
-right?
-对吧？
+00:00:26,747 --> 00:00:33,907
+And then we'll see what actually is the best quality and is left standing as the sort of supply demand gap get closes.
+随后我们将看到，当供需差距逐渐缩小后，究竟哪种质量的产品能够脱颖而出，保持领先。
 
 7
-00:00:26,069 --> 00:00:30,807
-So uh VLM is is navigating across the world trying to pick up things, put them down.
-嗯，VLM 在虚拟世界里移动，试图捡起东西、放下东西。
+00:00:33,957 --> 00:00:34,357
+Yeah.
+嗯。
 
 8
-00:00:30,857 --> 00:00:35,641
-Every single action needs to be verified against the physics model that is sitting on some CPUs.
-每一项操作都必须与运行在某些 CPU 上的物理模型进行核对。
+00:00:34,400 --> 00:00:40,546
+But it seems that supply and demand will still grow like at least what I see like one the RL and it it seems like RL is mostly done,
+但看起来供需仍会继续增长。至少从我看到的情况，强化学习大多是在后训练阶段完成，
 
 9
-00:00:35,691 --> 00:00:44,019
-And so that's that's insanely way more CPUs than you need for say doing unit tests or running a math proof, right?
-所以，这比做单元测试或运行数学证明所需的 CPU 多出太多了，对吧？
+00:00:40,596 --> 00:00:49,007
+you know, they do post trading on RL, but we have now vendors and companies that are pitching and creating services that do RL in real time.
+你知道，他们确实会用强化学习做后训练，但现在已有供应商在提供实时强化学习服务。
 
 10
-00:00:44,069 --> 00:00:47,039
-And when we look at like o1, that's like all it could do was math, right?
-当我们看 o1 的时候，它能做的就只有数学运算，对吧？
+00:00:49,057 --> 00:00:54,872
+And since you have like some agents you have some SaaS that's an agentic in the background and then
+而且因为你们有一些智能体，有些 SaaS 在后台以代理式方式运行。
 
 11
-00:00:47,089 --> 00:00:54,826
-Um and as we look at like you know, sort of uh GPT-5.4 or Opus 4.6, like it's okay agentic software,
-嗯，像 GPT-5.4 或 Opus 4.6，它们作为代理式软件已经算可以了，
+00:00:54,922 --> 00:01:00,361
+it will do RL at the end of the day basically to like learn against what it has done.
+说到底，它最终会进行强化学习，以根据自身行为进行学习。
 
 12
-00:00:54,876 --> 00:00:58,699
-but like as we move forward to the next stage of, you know, whatever's coming,
-但随着我们迈向下一个阶段，也就是接下来可能出现的任何事物，
-
-13
-00:00:58,749 --> 00:01:04,405
-it's going to be models that can understand, oh, I need to tie my shoe and like when I tie it,
-它会理解：哦，我需要系鞋带，而系的时候要用多大力量，
-
-14
-00:01:04,455 --> 00:01:06,869
-what's the strength strength, yeah. like what's the tensile strength?
-强度是多少？比如抗拉强度？
-
-15
-00:01:06,919 --> 00:01:12,225
-All these things like as to the the has to be calculated cuz the verifier is just generating, you know, what's the next step.
-所有这些都必须被计算，因为验证器只是在生成下一步该做什么。
-
-16
-00:01:12,275 --> 00:01:19,044
-Um but every step needs to be checked way more often and the intensity of that calculation for checking the step it goes up a time.
-但每一步都需要更频繁地检查，而检查这一步的计算强度也会随之增加。
-
-17
-00:01:19,094 --> 00:01:19,386
-Yeah.
-嗯。
-
-18
-00:01:19,416 --> 00:01:25,339
-But there's also another thing and you probably know better than I is like the the the level
-但还有另一件事，你可能比我更清楚，就是那个程度
-
-19
-00:01:25,389 --> 00:01:32,029
-of the the the strength of the GPUs can handle in parallel a certain amount of CPUs boxes.
-GPU 的算力可以并行处理多少台 CPU 服务器。
-
-20
-00:01:32,079 --> 00:01:35,119
-And so as we get next generations of GPUs,
-因此，当我们迎来下一代 GPU 时，
-
-21
-00:01:35,169 --> 00:01:44,845
-I feel that they will be able to spin up manage or work on more CPUs than they do now which is another stressor on CPUs now.
-我觉得他们将能够启动、管理或处理比现在更多的 CPU，这也会给 CPU 带来新的压力。
-
-22
-00:01:44,895 --> 00:01:46,750
-Yeah, I mean that's that's certainly the case, right?
-是的，那确实如此，对吧？
-
-23
-00:01:46,800 --> 00:01:50,403
-GPU Well, GPUs are also just like getting way higher power, right?
-GPU，其实 GPU 的功耗也在大幅上升，对吧？
-
-24
-00:01:50,453 --> 00:01:55,085
-So one GPU will equal many many more CPUs over time, right?
-所以随着时间推移，一块GPU将相当于众多CPU，对吧？
-
-25
-00:01:55,135 --> 00:02:01,181
-Um and GPUs are getting more expensive gen on gen on gen, whereas vCPUs are flat, slightly down.
-而且 GPU 一代比一代贵，而 vCPU 的价格持平甚至略有下降。
-
-26
-00:02:01,231 --> 00:02:01,700
-Yeah.
-嗯。
-
-27
-00:02:01,750 --> 00:02:04,765
-Um and so certainly it's a different scale, right?
-嗯，所以这确实是一个不同的规模，对吧？
-
-28
-00:02:04,815 --> 00:02:08,602
-Like one Blackwell versus one Rubin, performance is up X.
-一块 Blackwell 对比一块 Rubin，性能提升了 X 倍。
-
-29
-00:02:08,652 --> 00:02:10,085
-Price is also up X.
-价格也上涨了 X。
-
-30
-00:02:10,135 --> 00:02:18,940
-Um whereas, you know, you may buy last generation CPU, new generation CPU and there's 192 vCPUs in this gen and last gen was like 96, right?
-嗯，比如说，你可能买上一代的CPU，或者新一代的CPU，这一代有192个vCPU，上一代大概是96个，对吧？
-
-31
-00:02:18,990 --> 00:02:24,722
-So now you've got way more CPUs, but the the price increase is equivalent to what you got in additional vCPUs.
-现在你的CPU数量多了很多，但价格涨幅相当于你获得的额外vCPU所带来的成本增加。
-
-32
-00:02:24,772 --> 00:02:29,213
-So it's like sort of yeah, the the ratio will grow in the favor of vCPUs,
-所以比例会向 vCPU 倾斜，
-
-33
-00:02:29,263 --> 00:02:34,818
-but the cost will be sort of also probably in the direction of CPUs, but not sure how much.
-但成本可能也会向 CPU 方向上升，不过不确定会升多少。
-
-34
-00:02:34,868 --> 00:02:35,175
-Yeah.
-嗯。
-
-35
-00:02:35,205 --> 00:02:41,575
-And and also the other stressor on that and we've seen this with with larger customers when they have
-而且另一个压力源也存在，我们之前在大客户身上就看到过这种情况。
-
-36
-00:02:41,625 --> 00:02:46,368
-like they don't they have like a time allotment for GPUs and they don't want their GPUs to be idle.
-他们好像有分配给 GPU 的时间配额，不希望 GPU 处于空闲状态。
-
-37
-00:02:46,418 --> 00:02:54,704
-So they rather pay uh for warm pool running CPUs so that whenever tasks come from the GPU, the CPUs are they're hot.
-所以他们宁愿为持续运行的热池CPU付费，这样当GPU有任务过来时，CPU就已经处于就绪状态。
-
-38
-00:02:54,754 --> 00:02:56,481
-They're essentially working, right?
-CPU 实际上已经在工作了，对吧？
-
-39
-00:02:56,531 --> 00:03:00,883
-So they'll we we I say we cuz we do mostly CPUs are certainly the cheap resource.
-所以我们会说，因为我们主要做 CPU，这显然是成本较低的资源。
-
-40
-00:03:00,933 --> 00:03:03,222
-I don't know if we're cheap, but cheap resource for this.
-我不知道我们是不是便宜，但这个资源确实很便宜。
-
-41
-00:03:03,272 --> 00:03:11,004
-And so that spends more GPUs actually just because the cost of having an idle GPU is to is way more expensive, right?
-所以实际上会用更多GPU，因为让GPU闲置的成本要高得多，对吧？
-
-42
-00:03:11,054 --> 00:03:12,938
-Yeah, it's actually like a really interesting point, right?
-是的，这实际上是个非常有趣的观点，对吧？
-
-43
-00:03:12,988 --> 00:03:16,933
-The business model is like no one does I mean sure, there's on demand GPUs,
-这个商业模式——我是说，确实有按需 GPU，
-
-44
-00:03:16,983 --> 00:03:22,635
-but like Lambda has like 50,000 plus GPUs and only 4,000 of them are on demand, right?
-但就像 Lambda 有超过 5 万块 GPU，其中只有 4000 块是按需可用的，对吧？
-
-45
-00:03:22,685 --> 00:03:23,810
-And they're always sold out.
-而且总是卖光。
-
-46
-00:03:23,860 --> 00:03:26,070
-So like no one really has on demand GPUs.
-所以其实没人真的拥有按需 GPU。
-
-47
-00:03:26,120 --> 00:03:33,543
-Everyone's signing at minimum like long-term, you know, multi-month contracts, but in most cases multi-year contracts.
-大家都在签至少长期的合同，你知道的，几个月起步，大多数是多年期的合同。
-
-48
-00:03:33,593 --> 00:03:38,353
-Um and so like CPUs have been used to like you can spin them up and down, right?
-嗯，就像 CPU 可以随时启动和关闭一样，对吧？
-
-49
-00:03:38,403 --> 00:03:40,925
-That's why everyone moved to the cloud, right?
-这就是为什么大家都转向了云端，对吧？
-
-50
-00:03:40,975 --> 00:03:48,052
-Um but with these RL workloads, it's like, okay, the GPU: the generator, the model running on a GPU generated a bunch of stuff.
-但这些强化学习工作负载的情况是，好吧，GPU作为生成器，运行在GPU上的模型生成了一大堆内容。
-
-51
-00:03:48,102 --> 00:03:50,045
-It sends it to the verifier.
-它将其发送给验证器。
-
-52
-00:03:50,095 --> 00:03:52,138
-If the verifier is not ready and waiting Then it's idle.
-如果验证器没有提前准备好并等待，GPU 就会空闲。
-
-53
-00:03:52,188 --> 00:03:52,725
-Then it's waiting.
-然后它在等待。
-
-54
-00:03:52,775 --> 00:03:52,939
-Right.
-对。
-
-55
-00:03:52,969 --> 00:03:53,931
-Like the GPU is just sitting there.
-就像 GPU 就那样闲置着。
-
-56
-00:03:53,981 --> 00:03:57,178
-So it's like, okay, well, I've already paid for this.
-反正我已经付过钱了，就这样吧。
-
-57
-00:03:57,228 --> 00:03:57,685
-Yes.
-是的。
-
-58
-00:03:57,735 --> 00:04:06,243
-So if you can't get your instantaneous you know you know resources spun up on the CPU side and in fact you should do it preemptively so it's not
-所以如果你无法立即获得资源，你知道的，就在CPU端预先启动起来，事实上你应该提前做好准备，这样就不会耽误了
-
-59
-00:04:06,293 --> 00:04:11,281
-like loading you know the the simulator that you or the generation the environment
-就像加载你所知道的模拟器，或是生成的环境
-
-60
-00:04:11,331 --> 00:04:14,056
-right you you're wasting money so yeah like that that makes a lot of sense.
-没错，你这是在浪费钱，所以这确实很有道理。
-
-61
-00:04:14,106 --> 00:04:17,205
-And not only that then you have that running and then as soon as those are running you're
-这些一跑起来，你又去启动另一个热池，
-
-62
-00:04:17,255 --> 00:04:22,456
-spinning up another warm pool of these so that every new iteration of them are are continually growing.
-启动另一个热池，使它们的每一次迭代都能持续增长。
-
-63
-00:04:22,506 --> 00:04:24,366
-So what does that mean generally?
-那通常意味着什么呢？
-
-64
-00:04:24,416 --> 00:04:32,052
-So we skipped over RAM we didn't talk about that where it's like GPU was a bottleneck RAM was a bottleneck and now CPUs.
-所以我们跳过了内存，没提它，因为之前是GPU成为瓶颈，后来是内存成为瓶颈，现在轮到CPU了。
-
-65
-00:04:32,102 --> 00:04:38,591
-So just very closer to home for most people is that like it's very hard to buy a PC today because it's like super expensive is is that
-对大多数人来说，更贴近生活的是，现在买台电脑非常困难，因为实在太贵了。
-
-66
-00:04:38,641 --> 00:04:42,497
-happening to the CPUs because we just mentioned that they're like they're fairly inexpensive
-这种情况会发生在 CPU 上吗？因为我们刚才提到它们相当便宜，
-
-67
-00:04:42,547 --> 00:04:47,965
-and flat does the market pressure now demand sort of that these prices now increase?
-而如今市场压力是否要求这些价格现在上涨呢？
-
-68
-00:04:48,015 --> 00:04:54,000
-Yeah I mean it's it's pretty much the case for all like PCs laptops building a PC
-是的，其实对所有电脑、笔记本电脑来说都是这样，组装一台电脑
-
-69
-00:04:54,050 --> 00:05:00,925
-that it's hard to get you know Apple is pretty sold out of like Mac minis for example.
-要知道，苹果的Mac mini之类的机型基本上已经售罄了。
+00:01:00,411 --> 00:01:01,521
+And so that grows.
+于是它不断增长。
