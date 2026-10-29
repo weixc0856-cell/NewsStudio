@@ -58,7 +58,6 @@ SCHEMA_VERSION = 2
 TEMPLATE_DIR = ROOT / "assets" / "templates"
 INTRO_TEMPLATE = "intro.html"            # McKinsey poster (production)
 CLASSIC_TEMPLATE = "intro-classic.html"  # previous industrial template (kept for fallback)
-CARD_TEMPLATE = "transition.html"
 
 DEFAULTS: dict[str, Any] = {
     "width": 1920,
@@ -705,19 +704,6 @@ def build_poster_command(*, png: Path, out: Path, duration_ms: int,
     return cmd
 
 
-def build_card_html(*, index: str, title: str, kicker: str = "高光片段",
-                    accent: str = DEFAULTS["accent"], series: str = "") -> str:
-    values = {
-        "ACCENT": accent,
-        "INDEX": html.escape(index),
-        "TITLE": html.escape(title),
-        "KICKER": html.escape(kicker),
-        "SERIES": html.escape(series),
-        "SOURCE": html.escape(series),
-    }
-    return render_template(CARD_TEMPLATE, values)
-
-
 # --------------------------------------------------------------------------
 # picture rendering
 # --------------------------------------------------------------------------
@@ -821,47 +807,6 @@ def render_drawtext_to_png(*, out_path: Path, work_dir: Path,
     proc = run_cmd(cmd, timeout=120)
     if proc.returncode != 0 or not out_path.exists():
         raise RuntimeError("drawtext render failed: " + proc.stderr.strip()[-400:])
-    return {"mode": "drawtext", "browser": None, "png": rel(out_path), "command": cmd}
-
-
-def render_card_drawtext(*, out_path: Path, work_dir: Path, index: str, title: str,
-                         kicker: str, series: str, accent: str,
-                         width: int, height: int) -> dict[str, Any]:
-    """Fallback transition card in the same industrial palette."""
-    font = next((p for p in FONT_CANDIDATES if Path(p).is_file()), None)
-    if not font:
-        raise RuntimeError("no CJK font found for the drawtext fallback")
-    work_dir.mkdir(parents=True, exist_ok=True)
-    parts = {
-        "index": index,
-        "title": _wrap_drawtext(title, 16),
-        "kicker": kicker,
-        "series": series,
-    }
-    for name, text in parts.items():
-        (work_dir / f"card-{name}.txt").write_text(text, encoding="utf-8")
-    font_arg = filter_path(Path(font))
-    d = {k: filter_path(work_dir / f"card-{k}.txt") for k in parts}
-    accent_hex = accent.lstrip("#")
-    draw = ";".join([
-        f"drawbox=x=0:y=0:w=4:h={height}:color=0x{accent_hex}@0.95:t=fill",
-        f"drawtext=fontfile='{font_arg}':textfile='{d['series']}':"
-        "fontcolor=0x93a0b1:fontsize=19:x=120:y=82",
-        f"drawtext=fontfile='{font_arg}':textfile='{d['index']}':"
-        f"fontcolor=0x{accent_hex}:fontsize=170:x=160:y=400",
-        f"drawtext=fontfile='{font_arg}':textfile='{d['kicker']}':"
-        "fontcolor=0x93a0b1:fontsize=21:x=620:y=440",
-        f"drawtext=fontfile='{font_arg}':textfile='{d['title']}':"
-        "fontcolor=0xf2f5f8:fontsize=64:line_spacing=16:x=620:y=500",
-    ])
-    cmd = [
-        "ffmpeg", "-hide_banner", "-y",
-        "-f", "lavfi", "-i", f"color=c=0x0b0e13:s={width}x{height}:d=1",
-        "-vf", draw, "-frames:v", "1", str(out_path),
-    ]
-    proc = run_cmd(cmd, timeout=120)
-    if proc.returncode != 0 or not out_path.exists():
-        raise RuntimeError("card drawtext render failed: " + proc.stderr.strip()[-400:])
     return {"mode": "drawtext", "browser": None, "png": rel(out_path), "command": cmd}
 
 

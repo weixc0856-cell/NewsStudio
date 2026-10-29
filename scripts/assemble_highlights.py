@@ -23,6 +23,7 @@ import argparse
 import json
 import math
 import os
+import shutil
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -32,17 +33,18 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import auto_clip as ac  # noqa: E402
 import concat_assembly as ca  # noqa: E402
-import generate_intro as gi  # noqa: E402
 import resource_manager as rm  # noqa: E402
 
 SCHEMA_VERSION = 1
 
 DEFAULTS: dict[str, Any] = {
-    "transition_ms": 500,
-    "min_transition_ms": 300,
+    "transition_ms": 300,    # pure black gap between clips (no title card)
+    "min_transition_ms": 100,
     "max_transition_ms": 800,
     "fade_ms": 200,          # audio fade at a clip boundary (dip-to-black partner)
-    "card_fade_ms": 100,     # video fade in/out of the 0.5 s dark title card
+    "video_fade_ms": 150,    # clip tail/head fade to/from black
+    "audio_fade_ms": 200,    # audio fade at the same boundary
+    "card_fade_ms": 100,     # legacy: fade inside the black fallback image
     "margin_v": 100,
     "qsv_quality": 19,
     "audio_bitrate": "160k",
@@ -158,9 +160,7 @@ def build_timeline(clips: list[dict[str, Any]], intro_ms: int, transition_ms: in
         if index < len(clips) - 1 and transition_ms > 0:
             segments.append({
                 "kind": "transition",
-                "label": f"转场 {clip['index']:02d}→{clips[index + 1]['index']:02d}",
-                "card_index": clips[index + 1]["index"],
-                "card_title": clips[index + 1].get("title", ""),
+                "label": f"黑场 {clip['index']:02d}→{clips[index + 1]['index']:02d}",
                 "offset_ms": offset,
                 "duration_ms": transition_ms,
                 "end_ms": offset + transition_ms,
@@ -375,49 +375,47 @@ def build_ffmpeg_cmd(*, intro: Path, source: Path, card: Path, out: Path,
 
 
 # --------------------------------------------------------------------------
-# transition card
-# --------------------------------------------------------------------------
-def render_card(*, out_dir: Path, index: int, title: str, cfg: dict[str, Any],
-                browser_arg: str | None, renderer: str,
-                series: str = "", accent: str | None = None) -> dict[str, Any]:
-    accent = accent or gi.DEFAULTS["accent"]
-    html_text = gi.build_card_html(index=f"{index:02d}", title=title,
-                                   kicker="高光片段", series=series, accent=accent)
-    html_path = out_dir / "transition.html"
-    png_path = out_dir / "transition.png"
-    html_path.write_text(html_text, encoding="utf-8")
-    browser = gi.find_browser(browser_arg) if renderer in ("auto", "html") else None
-    if renderer == "drawtext":
-        info = gi.render_card_drawtext(
-            out_path=png_path, work_dir=out_dir, index=f"{index:02d}",
-            title=title, kicker="高光片段", series=series, accent=accent,
-            width=cfg["width"], height=cfg["height"])
-    elif browser is None:
-        if renderer == "html":
-            raise RuntimeError("--renderer html but no Chrome/Edge found")
-        info = gi.render_card_drawtext(
-            out_path=png_path, work_dir=out_dir, index=f"{index:02d}",
-            title=title, kicker="高光片段", series=series, accent=accent,
-            width=cfg["width"], height=cfg["height"])
-    else:
-        try:
-            info = gi.render_html_to_png(
-                html_path, png_path, browser=browser,
-                width=cfg["width"], height=cfg["height"])
-        except Exception as exc:
-            if renderer == "html":
-                raise
-            ac.RUN.log(f"transition html render failed ({exc}); using drawtext")
-            info = gi.render_card_drawtext(
-                out_path=png_path, work_dir=out_dir, index=f"{index:02d}",
-                title=title, kicker="高光片段", series=series, accent=accent,
-                width=cfg["width"], height=cfg["height"])
-    return {"mode": info["mode"], "html": rel(html_path), "png": rel(png_path)}
-
-
-# --------------------------------------------------------------------------
 # acceptance
 # --------------------------------------------------------------------------
+def prune_outputs(out_dir: Path, merged: Path, data: dict[str, Any]) -> list[str]:
+    """After a successful assembly keep only the whitelisted delivery assets."""
+    removed: list[str] = []
+    final_dir = out_dir / "final"
+    keep = {merged.resolve()}
+    for clip in data.get("clips", []):
+        if clip.get("path"):
+            keep.add(resolve(clip["path"]).resolve())
+    for path in final_dir.glob("*.mp4"):
+        if path.resolve() in keep:
+            continue
+        try:
+            path.unlink()
+            removed.append(rel(path))
+        except OSError:
+            pass
+    work = out_dir / "work"
+    segments = work / "segments"
+    if segments.is_dir():
+        shutil.rmtree(segments, ignore_errors=True)
+        removed.append(rel(segments))
+    for pattern in ("*.tmp.mp4", "*.concat.txt"):
+        for path in work.glob(pattern):
+            try:
+                path.unlink()
+                removed.append(rel(path))
+            except OSError:
+                pass
+    for name in ("concat.txt", "black.png", "transition.png"):
+        path = work / name
+        if path.exists():
+            try:
+                path.unlink()
+                removed.append(rel(path))
+            except OSError:
+                pass
+    return removed
+
+
 def verify_assembly(path: Path, total_ms: int, rows: list[tuple[int, int, str, str]],
                     intro_ms: int, cfg: dict[str, Any]) -> dict[str, Any]:
     clip = {"start_ms": 0, "end_ms": total_ms, "duration_ms": total_ms}
@@ -553,7 +551,7 @@ def run(args: argparse.Namespace) -> int:
             clips, intro_ms, args.transition_ms)
         if subtitle_total != total_ms:
             raise RuntimeError(f"subtitle duration {subtitle_total} != timeline {total_ms}")
-        card_seg = next((s for s in segments if s["kind"] == "transition"), None)
+        black_seg = next((s for s in segments if s["kind"] == "transition"), None)
     except Exception as exc:
         ac.RUN.log(f"assembly preparation failed: {exc}")
         return 1
@@ -576,31 +574,17 @@ def run(args: argparse.Namespace) -> int:
     ac.write_ass([(s / 1000, e / 1000, top, bottom) for s, e, top, bottom in rows],
                  ass_path, margin_v=args.margin_v, top_only=False, font="Microsoft YaHei")
 
-    card_info: dict[str, Any] = {"mode": None, "html": None, "png": None}
+    card_info: dict[str, Any] = {"mode": "black", "html": None, "png": None}
     card_path: Path | None = None
-    if card_seg is not None:
-        try:
-            card_info = render_card(
-                out_dir=work_dir, index=card_seg["card_index"],
-                title=card_seg["card_title"], cfg=cfg,
-                browser_arg=args.browser, renderer=args.renderer,
-                series=(intro_meta.get("picture") or {}).get("series", ""),
-                accent=intro_meta.get("accent") or gi.DEFAULTS["accent"])
-            card_path = resolve(card_info["png"])
-        except Exception as exc:
-            ac.RUN.log(f"transition card failed: {exc}")
+    if black_seg is not None:
+        card_path = work_dir / "black.png"
+        black_cmd = ["ffmpeg", "-hide_banner", "-y", "-f", "lavfi",
+                     "-i", f"color=c=black:s={cfg['width']}x{cfg['height']}",
+                     "-frames:v", "1", str(card_path)]
+        proc = ac.run_cmd(black_cmd, timeout=60)
+        if proc.returncode != 0 or not card_path.exists():
+            ac.RUN.log("could not create the black placeholder")
             return 1
-
-    if card_path is None:
-        # single clip: no transition; use a 1x1 black PNG as a placeholder input
-        placeholder = work_dir / "transition-placeholder.png"
-        proc = ac.run_cmd(["ffmpeg", "-hide_banner", "-y", "-f", "lavfi",
-                           "-i", "color=c=black:s=16x16:d=1", "-frames:v", "1",
-                           str(placeholder)], timeout=60)
-        if proc.returncode != 0:
-            ac.RUN.log("could not create the transition placeholder")
-            return 1
-        card_path = placeholder
 
     out_path = Path(args.out) if args.out else out_dir / "final" / (
         f"{data.get('video_id', out_dir.name)}.highlights-merged.mp4")
@@ -627,7 +611,7 @@ def run(args: argparse.Namespace) -> int:
         try:
             concat_info = ca.build_concat_assembly(
                 intro=intro_path, source=source if bed["enabled"] else None,
-                bed=bed, clips=clips, card_png=card_path, intro_ms=intro_ms,
+                bed=bed, clips=clips, intro_ms=intro_ms,
                 transition_ms=args.transition_ms, tmp_out=tmp_path,
                 work_dir=work_dir, cfg=cfg, mode=args.mode, log_path=ffmpeg_log)
             acceptance = concat_info["acceptance"]
@@ -667,6 +651,10 @@ def run(args: argparse.Namespace) -> int:
         status = "FAILED"
     if concat_info is not None and not args.keep_segments:
         ca.cleanup_segments(concat_info)
+    if status == "SUCCESS":
+        pruned = prune_outputs(out_dir, target, data)
+        if pruned:
+            ac.RUN.log(f"pruned {len(pruned)} intermediate file(s)")
 
     skipped = sum(gaps)
     assembly = {
@@ -680,13 +668,12 @@ def run(args: argparse.Namespace) -> int:
         "segments": segments,
         "bed": bed,
         "transition": {
-            "type": "html_title_card_fade" if card_info["mode"] else "none",
+            "type": "dip_to_black" if black_seg else "none",
             "duration_ms": args.transition_ms,
-            "fade_ms": cfg["fade_ms"],
-            "renderer": card_info["mode"],
-            "html": card_info["html"],
-            "png": card_info["png"],
-            "title": card_seg["card_title"] if card_seg else None,
+            "video_fade_ms": cfg["video_fade_ms"],
+            "audio_fade_ms": cfg["audio_fade_ms"],
+            "black": True,
+            "title": None,
         },
         "intro": {
             "path": rel(intro_path),

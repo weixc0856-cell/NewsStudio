@@ -209,7 +209,9 @@ class ArtifactTests(unittest.TestCase):
         self.assertTrue(assembly["bed"]["enabled"])
         self.assertEqual(assembly["bed"]["volume"], 0.15)
         self.assertEqual(assembly["bed"]["fade_out_ms"], 400)
-        self.assertEqual(assembly["transition"]["duration_ms"], 500)
+        self.assertEqual(assembly["transition"]["duration_ms"], 300)
+        self.assertEqual(assembly["transition"]["type"], "dip_to_black")
+        self.assertIsNone(assembly["transition"]["title"])
         self.assertGreaterEqual(assembly["intro"]["duration_ms"],
                                 ah.DEFAULTS["min_intro_ms"])
         self.assertLessEqual(assembly["intro"]["duration_ms"],

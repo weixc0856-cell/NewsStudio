@@ -36,7 +36,7 @@
 
 【变更约束】（必须严格遵守）
 1. 架构约束：单任务串行生命周期（Resource Manager）、静态海报（60fps CFR）、
-   转场 B（0.1s 卡片淡化 + 200ms 音频淡化）。
+   dip-to-black 转场（0.15s 淡出/淡入 + 300ms 黑场 + 200ms 音频淡化）。
 2. 边界约束：dependent_start 独立句门禁、时长 180s~420s、标题去重、不引入新依赖。
 3. 范围约束：只改 [明确列出的文件/模块]，其余生产配置与已验收文件保持不变。
 
@@ -58,8 +58,8 @@
 
 ### 2.2 约束段的固定措辞（建议原样引用）
 
-- **架构约束**：`单任务串行生命周期（Resource Manager）、麦肯锡橙白双栏海报（静态单帧 60fps CFR）、转场 B（0.1s 卡片淡化 + 200ms 音频淡化）`
-- **边界约束**：`dependent_start 独立句门禁、时长 180–420 s（硬上限 600 s，配置见 result.json.config）、标题去重、不引入新依赖`
+- **架构约束**：`单任务串行生命周期（Resource Manager）、麦肯锡橙白双栏海报（静态单帧 60fps CFR）、dip-to-black 转场（0.15s 淡出/淡入 + 300ms 黑场 + 200ms 音频淡化）`
+- **边界约束**：`dependent_start 独立句门禁、切片 45–90 s（优先 50–70 s）、标题去重、不引入新依赖；片头 10–20 s 为提示项`
 - **范围约束**：`只改 <文件列表>，其余生产配置与已验收文件保持不变`
 - **字幕约束**：`原片保留无字幕母版；交付版只烧原文字幕 + 本地 Qwen 翻译中文（原文在上、中文在下）`
 - **广告约束**：`最终字幕版中切除赞助口播，并重新对齐切片/合集字幕时间轴`
@@ -75,13 +75,13 @@
 - 字幕：subtitles/xxxx.zh.bilingual.srt
 
 【变更约束】
-1. 严格复用现有架构：Resource Manager 串行、静态海报、转场 B、TTS 年份归一化、
+1. 严格复用现有架构：Resource Manager 串行、静态海报、dip-to-black 转场、TTS 年份归一化、
    dependent_start + 标题去重。
 2. 不修改 auto_clip 核心选择逻辑以外的代码，不引入新依赖。
 3. 生产路径只写 clips/xxxx/，不触碰第 21 期任何文件。
 
 【期望交付】
-完整跑通后给出：片头时长与验收、两条切片起止与标题、
+完整跑通后给出：片头时长与验收、3–5 条切片起止与标题、
 合集总时长与 A/V 差、资源清理记录。
 ```
 
@@ -97,7 +97,7 @@
 - 已有：clips/c88l8daXiv4/analysis.json、intro/ 已验收片头
 
 【变更约束】
-1. 架构约束：串行生命周期、静态海报 60fps CFR、转场 B。
+1. 架构约束：串行生命周期、静态海报 60fps CFR、dip-to-black 转场。
 2. 边界约束：dependent_start 门禁、时长区间、标题去重、不引入新依赖。
 3. 范围约束：只改 scripts/auto_clip.py、scripts/assemble_highlights.py 与对应测试；
    片头复用，不重做 TTS，不动第 21 期以外的任何期次。
@@ -118,7 +118,7 @@ diff 摘要、离线验证、成片时长差与资源审计、未改动清单。
 | 只改模板不跑片 | 「只更新 `assets/templates/intro.html`，用第 21 期数据离线渲染预览，不接入生产。」 |
 | 只重渲某一期 | 「按当前 HEAD 规则重跑第 XX 期，片头复用已验收版本，只重渲切片+合集。」 |
 | 回滚某次改动 | 「回退到 commit `xxxxx`，生产媒体文件保持不动。」 |
-| 同步新规则给后续期 | 「后续所有期次默认启用：dependent_start 门禁 + 标题去重 + 静态海报 + 转场 B。」 |
+| 同步新规则给后续期 | 「后续所有期次默认启用：dependent_start 门禁 + 标题去重 + 静态海报 + dip-to-black 转场。」 |
 | 只查不改 | 「只做审计：列出当前成片规格、时长差、残留进程，不做任何写入。」 |
 
 ---
@@ -176,7 +176,7 @@ auto_clip: add dependent_start gate, title deduplication, and recut ep21 highlig
 | 片头 | `clips/[ID]/intro/intro.mp4` | X.XX s，60fps，静态海报，读音已归一化 |
 | 切片 01 | `clips/[ID]/final/[ID].highlight-01.[标题].mp4` | XX s，起点为独立主谓句 |
 | 切片 02 | `clips/[ID]/final/[ID].highlight-02.[标题].mp4` | XX s，标题已去重 |
-| 最终合集 | `clips/[ID]/final/[ID].highlights-merged.mp4` | XX s，转场 B，A/V 差 ≤ 30ms |
+| 最终合集 | `clips/[ID]/final/[ID].highlights-merged.mp4` | XX s，dip-to-black，A/V 差 ≤ 30ms |
 
 **关键边界确认**
 - 起点均无 `dependent_start` 语法依赖
@@ -206,7 +206,7 @@ auto_clip: add dependent_start gate, title deduplication, and recut ep21 highlig
 |---|---|---|
 | 切片时长 | `end_ms − start_ms` | 45–90 s（优先 50–70 s）；硬上限 90 s |
 | 单集切片数 | 选中切片数 | 3–5 条 |
-| 合集总长 | 片头 + 切片 + 转场 | 约 5 分钟（4–6 分钟） |
+| 合集总长 | 片头 + 切片 + 转场 | 约 5 分钟（4.5–5.5 分钟） |
 | 合集时长差 | `actual_duration_ms − expected_duration_ms` | ≤ 1500 ms |
 | A/V 差 | 容器内音轨与视频轨时长差 | ≤ 30 ms |
 | 解码 | `ffmpeg -v error -i <file> -f null -` 无输出 | 0 条报错 |

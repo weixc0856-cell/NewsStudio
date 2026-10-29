@@ -177,53 +177,83 @@ def make_intro_segment(*, intro: Path, source: Path | None, bed: dict[str, Any],
     return out
 
 
-def make_clip_segment(*, clip: Path, out: Path, cfg: dict[str, Any],
-                      fade_in: bool, fade_out: bool, duration_ms: int,
-                      log_path: Path) -> Path:
-    """Copy the clip's video packets; re-encode audio only for the joins."""
-    fade = int(cfg["fade_ms"]) / 1000.0
-    dur = duration_ms / 1000.0
-    filters: list[str] = []
-    if fade_in:
-        filters.append(f"afade=t=in:st=0:d={fade:.3f}")
-    if fade_out:
-        filters.append(f"afade=t=out:st={max(dur - fade, 0):.3f}:d={fade:.3f}")
-    cmd = ["ffmpeg", "-hide_banner", "-y", "-i", str(clip),
+def _keyframes(path: Path) -> list[float]:
+    proc = ac.run_cmd(["ffprobe", "-v", "error", "-select_streams", "v:0",
+                       "-skip_frame", "nokey", "-show_entries", "frame=pts_time",
+                       "-of", "csv=p=0", str(path)], timeout=180)
+    times: list[float] = []
+    for line in (proc.stdout or "").splitlines():
+        try:
+            times.append(float(line.strip().rstrip(",")))
+        except ValueError:
+            continue
+    return sorted(t for t in times if t >= 0)
+
+
+def _audio_chain() -> list[str]:
+    return [_audio_format(), "asetpts=PTS-STARTPTS"]
+
+
+def make_copy_piece(*, src: Path, out: Path, start_s: float, duration_s: float,
+                    cfg: dict[str, Any], log_path: Path) -> Path:
+    """Stream-copy a keyframe-aligned slice; only the audio is re-encoded."""
+    cmd = ["ffmpeg", "-hide_banner", "-y",
+           "-ss", f"{start_s:.3f}", "-i", str(src), "-t", f"{duration_s:.3f}",
            "-map", "0:v:0", "-map", "0:a:0",
            "-c:v", "copy", "-video_track_timescale", VIDEO_TIMESCALE,
            "-c:a", "aac", "-b:a", cfg["audio_bitrate"],
            "-ar", str(SAMPLE_RATE), "-ac", str(CHANNELS),
-           "-t", f"{dur:.3f}",
            "-sn", "-dn", "-map_chapters", "-1", "-movflags", "+faststart",
-           "-avoid_negative_ts", "make_zero"]
-    if filters:
-        cmd += ["-af", ",".join(filters)]
-    cmd.append(str(out))
+           "-avoid_negative_ts", "make_zero", str(out)]
     proc = ac.run_cmd(cmd, timeout=1800, log_path=log_path)
     if proc.returncode != 0:
-        raise ConcatFallback(f"clip segment failed: {(proc.stderr or '')[-400:]}")
+        raise ConcatFallback(f"copy piece failed: {(proc.stderr or '')[-400:]}")
     return out
 
 
-def make_card_segment(*, png: Path, out: Path, transition_ms: int,
-                      cfg: dict[str, Any], log_path: Path) -> Path:
-    """Encode the title card as a 60 fps segment with silent AAC."""
+def make_fade_piece(*, src: Path, out: Path, start_s: float, duration_s: float,
+                    video_fade: tuple[str, float, float] | None,
+                    audio_fade: tuple[str, float, float] | None,
+                    cfg: dict[str, Any], log_path: Path) -> Path:
+    """Re-encode a short (keyframe-aligned) piece with dip-to-black fades."""
+    vf = [f"fps={int(cfg['fps'])}", "format=yuv420p"]
+    af = _audio_chain()
+    if video_fade is not None:
+        kind, st, dur = video_fade
+        vf.append(f"fade=t={kind}:st={st:.3f}:d={dur:.3f}")
+    if audio_fade is not None:
+        kind, st, dur = audio_fade
+        af.append(f"afade=t={kind}:st={st:.3f}:d={dur:.3f}")
+    cmd = ["ffmpeg", "-hide_banner", "-y",
+           "-ss", f"{start_s:.3f}", "-i", str(src), "-t", f"{duration_s:.3f}",
+           "-map", "0:v:0", "-map", "0:a:0",
+           "-vf", ",".join(vf), "-af", ",".join(af),
+           "-c:v", "h264_qsv", "-global_quality:v", str(cfg["qsv_quality"]),
+           "-preset", "slow", "-r", str(int(cfg["fps"])),
+           "-video_track_timescale", VIDEO_TIMESCALE,
+           "-c:a", "aac", "-b:a", cfg["audio_bitrate"],
+           "-ar", str(SAMPLE_RATE), "-ac", str(CHANNELS),
+           "-sn", "-dn", "-map_chapters", "-1", "-movflags", "+faststart",
+           "-avoid_negative_ts", "make_zero", str(out)]
+    proc = ac.run_cmd(cmd, timeout=600, log_path=log_path)
+    if proc.returncode != 0:
+        raise ConcatFallback(f"fade piece failed: {(proc.stderr or '')[-400:]}")
+    return out
+
+
+def make_black_segment(*, out: Path, transition_ms: int, cfg: dict[str, Any],
+                       log_path: Path) -> Path:
+    """0.3 s of pure black with digital silence: the dip-to-black gap."""
     fps = int(cfg["fps"])
     dur = transition_ms / 1000.0
     frames = max(1, round(dur * fps))
-    fade = min(int(cfg["card_fade_ms"]) / 1000.0, dur / 2)
-    vf = (f"fps={fps},scale={int(cfg['width'])}:{int(cfg['height'])}:"
-          f"force_original_aspect_ratio=decrease,"
-          f"pad={int(cfg['width'])}:{int(cfg['height'])}:(ow-iw)/2:(oh-ih)/2,"
-          f"setsar=1,format=yuv420p,"
-          f"fade=t=in:st=0:d={fade:.3f},"
-          f"fade=t=out:st={max(dur - fade, 0):.3f}:d={fade:.3f}")
     cmd = ["ffmpeg", "-hide_banner", "-y",
-           "-loop", "1", "-framerate", str(fps), "-t", f"{dur:.3f}", "-i", str(png),
+           "-f", "lavfi", "-t", f"{dur:.3f}",
+           "-i", f"color=c=black:s={int(cfg['width'])}x{int(cfg['height'])}:r={fps}",
            "-f", "lavfi", "-t", f"{dur:.3f}",
            "-i", f"anullsrc=r={SAMPLE_RATE}:cl=stereo",
            "-map", "0:v:0", "-map", "1:a:0",
-           "-vf", vf,
+           "-vf", f"fps={fps},format=yuv420p",
            "-c:v", "h264_qsv", "-global_quality:v", str(cfg["qsv_quality"]),
            "-preset", "slow", "-r", str(fps), "-frames:v", str(frames),
            "-video_track_timescale", VIDEO_TIMESCALE,
@@ -234,7 +264,7 @@ def make_card_segment(*, png: Path, out: Path, transition_ms: int,
            "-avoid_negative_ts", "make_zero", str(out)]
     proc = ac.run_cmd(cmd, timeout=600, log_path=log_path)
     if proc.returncode != 0:
-        raise ConcatFallback(f"card segment failed: {(proc.stderr or '')[-400:]}")
+        raise ConcatFallback(f"black segment failed: {(proc.stderr or '')[-400:]}")
     return out
 
 
@@ -284,8 +314,14 @@ def decode_joins(path: Path, joins_ms: list[int], *, window_s: float = 3.0,
                            "-ss", f"{start:.3f}", "-t", f"{length:.3f}",
                            "-i", str(path), "-f", "null", "-"], timeout=timeout)
         text = (proc.stderr or "").strip()
-        if proc.returncode != 0 or text:
-            errors.append(f"join {join} ms: {text[-300:] or f'exit {proc.returncode}'}")
+        # concat copy legitimately repeats one DTS at each boundary; the muxer
+        # warns about it while the decoded frames stay correct.  Ignore only
+        # that benign line, keep every other error.
+        lines = [line for line in text.splitlines()
+                 if line.strip() and "non monotonically increasing dts" not in line]
+        if proc.returncode != 0 or lines:
+            detail = " | ".join(lines)[-300:] if lines else f"exit {proc.returncode}"
+            errors.append(f"join {join} ms: {detail}")
     return errors
 
 
@@ -335,7 +371,7 @@ def verify_concat_assembly(path: Path, *, expected_ms: int, intro_ms: int,
 # orchestration
 # --------------------------------------------------------------------------
 def build_concat_assembly(*, intro: Path, source: Path | None, bed: dict[str, Any],
-                          clips: list[dict[str, Any]], card_png: Path,
+                          clips: list[dict[str, Any]],
                           intro_ms: int, transition_ms: int, tmp_out: Path,
                           work_dir: Path, cfg: dict[str, Any], mode: str,
                           log_path: Path) -> dict[str, Any]:
@@ -351,21 +387,59 @@ def build_concat_assembly(*, intro: Path, source: Path | None, bed: dict[str, An
     paths: list[Path] = [intro_seg]
     kinds: list[dict[str, Any]] = [{"kind": "intro", "path": intro_seg}]
 
+    video_fade = float(cfg.get("video_fade_ms", 150)) / 1000.0
+    audio_fade = float(cfg.get("audio_fade_ms", 200)) / 1000.0
     for index, clip in enumerate(clips):
         clip_path = resolve_clip(clip)
         spec = probe_segment(clip_path)
-        seg = make_clip_segment(
-            clip=clip_path, out=segments_dir / f"clip-{clip['index']:02d}.seg.mp4",
-            cfg=cfg, fade_in=index > 0, fade_out=index < len(clips) - 1,
-            duration_ms=spec["video"]["duration_ms"], log_path=seg_log)
-        paths.append(seg)
-        kinds.append({"kind": "clip", "clip_index": clip["index"], "path": seg})
-        if index < len(clips) - 1 and transition_ms > 0:
-            card = make_card_segment(
-                png=card_png, out=segments_dir / f"transition-{index + 1:02d}.mp4",
-                transition_ms=transition_ms, cfg=cfg, log_path=seg_log)
-            paths.append(card)
-            kinds.append({"kind": "transition", "path": card})
+        duration_s = spec["video"]["duration_ms"] / 1000.0
+        keyframes = _keyframes(clip_path)
+
+        head_end = 0.0
+        if index > 0:
+            head_end = next((k for k in keyframes if k >= max(0.25, audio_fade + 0.05)),
+                            max(0.4, audio_fade + 0.1))
+            head_end = min(head_end, duration_s / 2)
+            head = make_fade_piece(
+                src=clip_path, out=segments_dir / f"clip-{clip['index']:02d}.head.mp4",
+                start_s=0.0, duration_s=head_end,
+                video_fade=("in", 0.0, min(video_fade, head_end)),
+                audio_fade=("in", 0.0, min(audio_fade, head_end)),
+                cfg=cfg, log_path=seg_log)
+            paths.append(head)
+            kinds.append({"kind": "clip_head", "clip_index": clip["index"], "path": head})
+
+        tail_start = duration_s
+        if index < len(clips) - 1:
+            candidates = [k for k in keyframes if k <= duration_s - max(0.25, video_fade + 0.1)]
+            tail_start = candidates[-1] if candidates else max(duration_s - 0.4, head_end + 0.1)
+            tail_start = max(tail_start, head_end + 0.1)
+
+        body_dur = max(tail_start - head_end, 0.05)
+        body = make_copy_piece(
+            src=clip_path, out=segments_dir / f"clip-{clip['index']:02d}.body.mp4",
+            start_s=head_end, duration_s=body_dur, cfg=cfg, log_path=seg_log)
+        paths.append(body)
+        kinds.append({"kind": "clip_body", "clip_index": clip["index"], "path": body})
+
+        if index < len(clips) - 1:
+            tail_dur = max(duration_s - tail_start, audio_fade)
+            tail = make_fade_piece(
+                src=clip_path, out=segments_dir / f"clip-{clip['index']:02d}.tail.mp4",
+                start_s=tail_start, duration_s=tail_dur,
+                video_fade=("out", max(tail_dur - video_fade, 0.0),
+                            min(video_fade, tail_dur)),
+                audio_fade=("out", max(tail_dur - audio_fade, 0.0),
+                            min(audio_fade, tail_dur)),
+                cfg=cfg, log_path=seg_log)
+            paths.append(tail)
+            kinds.append({"kind": "clip_tail", "clip_index": clip["index"], "path": tail})
+            if transition_ms > 0:
+                black = make_black_segment(
+                    out=segments_dir / f"black-{index + 1:02d}.mp4",
+                    transition_ms=transition_ms, cfg=cfg, log_path=seg_log)
+                paths.append(black)
+                kinds.append({"kind": "transition", "path": black})
 
     specs = [probe_segment(p) for p in paths]
     problems = check_segments(specs, cfg)

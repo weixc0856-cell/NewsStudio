@@ -196,7 +196,6 @@ class PosterConfigTests(unittest.TestCase):
 class TemplateTests(unittest.TestCase):
     def test_templates_exist(self) -> None:
         self.assertTrue((gi.TEMPLATE_DIR / "intro.html").is_file())
-        self.assertTrue((gi.TEMPLATE_DIR / "transition.html").is_file())
 
     def test_state_zero_and_one(self) -> None:
         html0 = gi.build_intro_html(copy=VALID_COPY, chrome=CHROME, state=0)
@@ -215,14 +214,6 @@ class TemplateTests(unittest.TestCase):
     def test_unfilled_placeholder_guard(self) -> None:
         with self.assertRaises(ValueError):
             gi.render_template("intro.html", {"TITLE": "x"})
-
-    def test_card_html(self) -> None:
-        html = gi.build_card_html(index="02", title="AI 推理对硬件资源的冲击",
-                                  series="AI 基建 / 第 21 期")
-        self.assertNotIn("{{", html)
-        self.assertIn("AI 推理对硬件资源的冲击", html)
-        self.assertIn("02", html)
-
 
 class AnimationTests(unittest.TestCase):
     def test_plan_animation(self) -> None:

@@ -108,8 +108,8 @@ ffmpeg -i "downloads/<视频>.mkv" -vf "ass=subtitles/<id>.zh.bilingual.ass" `
 
 ### 自动高光切片与片头合集（2026-10-28 起）
 
-从已完成的**双语 SRT** 与原片中自动切出 3–8 分钟的独立成片片段，再拼成
-「独立片头 → 高光 1 → 短转场 → 高光 2」的 16:9 横屏合集。完整规格见
+从已完成的**双语 SRT** 与原片中自动切出 45–90 秒（优先 50–70 秒）的独立论点片段，再拼成
+「独立片头 → 高光 1 → 短转场 → … → 高光 N」的 16:9 横屏合集（目标约 5 分钟）。完整规格见
 [`docs/自动剪辑-高光切片方案.md`](docs/自动剪辑-高光切片方案.md)；
 片头视觉与 5W1H 文案规范见
 [`docs/片头语与工程化导读规范.md`](docs/片头语与工程化导读规范.md)；
@@ -121,7 +121,7 @@ uv run python scripts/auto_clip.py --srt "subtitles/<id>.zh.bilingual.srt" --ana
 
 # 2) 完整流程：分析 + 字幕钳位 + QSV 渲染 + ffprobe 验收
 uv run python scripts/auto_clip.py --srt "subtitles/<id>.zh.bilingual.srt" `
-  --video "downloads/<视频> [<id>].mkv" --max-clips 2
+  --video "downloads/<视频> [<id>].mkv"
 
 # 3) 只重渲染：复用已有 analysis.json，不再调用模型
 uv run python scripts/auto_clip.py --srt ... --video ... --reuse-analysis
@@ -151,7 +151,7 @@ uv run python scripts/generate_intro.py --video-id <id> `
   --source "SemiAnalysis × Daytona" --stamp "FIELD RECORD / 2026" `
   --stamp-right "2026 / DATACENTER · CPU" --index 021
 
-# 7) 最终合集：片头 → 切片 1 → 0.5 s 标题卡 → 切片 2
+# 7) 最终合集：片头 → 切片 1 → 0.3 s 黑场（dip-to-black）→ 切片 2
 uv run python scripts/assemble_highlights.py --video-id <id>
 ```
 
@@ -177,11 +177,11 @@ uv run python scripts/run_pipeline.py --cleanup    # 杀掉所有模型 / ffmpeg
 
 - `--reanalyze` 强制重跑阶段 1 的高光候选提取；`--render-clips` 在阶段 4
   先渲染切片；`--skip-assembly` 只出片头；`--max-voice-repairs` 控制超窗重写次数。
-- 阶段 2 超窗时只允许 `atempo ≤ 1.15`；仍超则关掉 TTS、重开 LLM 压缩口播、
-  杀掉 LLM、再开 TTS（复用同一套“一次一个进程”规则）。
+- 阶段 2 默认逐句合成 + 句间 400 ms 停顿，超窗只告警；只有显式开启
+  `enforce_duration_window` 时才走 `atempo ≤ 1.15` / Qwen 压缩重写（同一套“一次一个进程”规则）。
 - 阶段 4 开编前会再断言没有模型进程存活；`assemble_highlights.py` 也有同样的门禁。
 - 阶段记录写在 `clips/<id>/pipeline.json`（状态、耗时、服务、错误、资源审计）。
-- **合集拼接**：片头、标题卡、切片先归一化（60 fps CFR / 1920×1080 / yuv420p /
+- **合集拼接**：片头、黑场、切片先归一化（60 fps CFR / 1920×1080 / yuv420p /
   AAC 48k / 统一 video timescale），再用 concat demuxer `-c copy` 流拷贝拼接；
   只有无法流拷贝时才重编码（`--mode filter` 保留旧路径）。
   第 21 期实测：14.7 s、峰值 ffmpeg RSS 236 MB、系统内存 31%，对比旧 filter 路径
@@ -200,27 +200,26 @@ uv run python scripts/run_pipeline.py --cleanup    # 杀掉所有模型 / ffmpeg
 
 - 模型只提候选（两个 cue ID + 标题 + 摘要）；时长门禁、归属、重叠去重、配额、字幕钳位、
   ffprobe 验收全部由 Python 确定性执行，任一淘汰都写入 JSON。
-- 窗口默认 11 分钟、重叠 3.5 分钟；切片 3–8 分钟，优先 4–6 分钟；重叠率 > 0.4 判重；
-  默认最多 2 条，候选不足不强行出片。
+- 窗口默认 5 分钟、重叠 1 分钟；切片 45–90 秒，优先 50–70 秒；重叠率 > 0.4 判重；
+  合集预算 330 秒（片头 + 切片 + 转场），候选不足不强行出片。
 - 渲染 `-ss <起点> -i <原片> -t <时长>`，`h264_qsv` 视频 + AAC 音频；`-map_chapters -1`
   避免 MP4 生成多余的章节文本轨。
 - 合集不直接拼接已烧录字幕的成片（会叠字），而是从源片按同一区间重新取流并只烧一次。
-- **文案本地生成（5W1H）**：本地 Qwen（`llama-server` 8080）低温度写 3 句导读
-  （Who+Where+When / What+Why/How / We did），并给出 12–18 字大标题与出处副标题；
+- **文案本地生成（5W1H）**：本地 Qwen（`llama-server` 8080）低温度写 5–6 句口语导读
+  （60–95 字，5W1H 讲清楚），并给出 12–18 字大标题与出处副标题；
   禁用营销词。`--copy-json` 复用已验收文案，`--copy-only` 只预览，
   `--copy-source args` 改用手写文案。整条链路不调用任何云端模型或视频生成模型。
-- **画面（固定模板 + 确定性动效）**：`assets/templates/intro.html` 固定版式
-  （#0b0e13、4px #ff5500 竖条、左对齐、等宽页眉页脚、80px 网格），Python 只替换
-  占位符；state 0→1 由 FFmpeg 交叉完成「标题上移 15px + 淡入」，竖条用 drawbox
-  自上而下展开，之后 0.05%/s 极轻微 Ken Burns，60 fps CFR。无 Playwright / Remotion /
-  新依赖；缺浏览器时回退 drawtext。
-- **配音与时长**：本地 CosyVoice 克隆音色，硬窗口 6.0–9.5 秒（推荐 7–8 秒）；
-  超过窗口先 atempo ≤1.15，仍超则让 Qwen 压缩口播并重新合成（最多 3 次）。
-  第 21 期复跑片头 9.271 s（60 fps，音视频差 21 ms），可单独播放与验收。
-- **片头床音**：片头期间混入切片 1 之前约 9 秒的原片音频（15%），最后 0.4 秒淡出；
+- **画面（麦肯锡橙白双栏海报）**：`assets/templates/intro.html` 固定版式
+  （纯白底、6px #ff5500 顶条、左栏中英标题、右栏 KEY ENGINEERING INSIGHTS 卡片、
+  底部四列信源矩阵），Python 只替换占位符；静态单帧、60 fps CFR、无动效滤镜。
+  无 Playwright / Remotion / 新依赖。
+- **配音与时长**：CosyVoice 预置「中文女」，按句合成并在句间插入 400 ms 数字静音，
+  前导 600 ms；不做 atempo 压缩。片头 10–20 秒为提示区间（advisory），超出只告警。
+  第 21 期当前片头 17.10 s（60 fps，音视频差 21 ms），可单独播放与验收。
+- **片头床音**：片头期间混入与片头等长（约 17 s）的原片音频（15%），最后 0.4 秒淡出；
   切片 1 以 100% 原声接上，避免片头成为纯静音卡。
-- **转场**：0.5 秒 HTML 标题卡；卡片段静音，前段末尾 250 ms 淡出、后段开头 250 ms 淡入，
-  不做重叠式交叉淡化，避免双字幕残影。
+- **转场**：无字 dip-to-black。前段最后 0.15 s 淡出到纯黑，300 ms 纯黑静音，后段前 0.15 s
+  从黑场淡入；音频在交界处做 200 ms 淡出/淡入。视频仍以流拷贝拼接，只有交界小片重编码。
 - **字幕时间轴**：片头之后才出现第一条字幕；第二段从「片头 + 切片 1 + 转场」重新计时，
   全程相对时间，禁止沿用原视频绝对时间戳。
 - 第 21 期合集非连续：中间跳过 4m43s（282431 ms），`result.json` 的
