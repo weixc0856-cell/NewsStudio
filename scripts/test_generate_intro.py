@@ -17,7 +17,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import generate_intro as gi  # noqa: E402
 
 VALID_COPY = {
-    "intro_spoken_text": "Daytona 2026，Dylan Patel 现场实录。他拆解了 CPU 瓶颈的算力账。中英双语，来看原声。",
+    "intro_spoken_text": "二零二六年，Daytona 现场。Dylan Patel 说，CPU 为什么总不够用？"
+                         "推理模型把训练和验证闭环压紧。GPU 的闲置率反而一路上涨。"
+                         "算力到底卡在哪一步？听听他怎么说，来听原声。",
     "screen_title": "CPU 为何成为 AI 新瓶颈",
     "screen_subtitle": "Dylan Patel · SemiAnalysis，2026",
 }
@@ -39,11 +41,40 @@ class CopyTests(unittest.TestCase):
     def test_normalize_valid(self) -> None:
         copy = gi.normalize_copy(VALID_COPY)
         self.assertEqual(copy["screen_title"], VALID_COPY["screen_title"])
-        self.assertEqual(gi._count_sentences(copy["intro_spoken_text"]), 3)
+        self.assertEqual(gi._count_sentences(copy["intro_spoken_text"]), 6)
+        self.assertEqual(gi._spoken_units(copy["intro_spoken_text"]), 63)
 
-    def test_requires_exactly_three_sentences(self) -> None:
+    def test_rejects_two_sentences(self) -> None:
         with self.assertRaises(ValueError):
             gi.normalize_copy({**VALID_COPY, "intro_spoken_text": "第一句。第二句。"})
+
+    def test_rejects_four_sentences(self) -> None:
+        text = ("二零二六年，Daytona 现场。Dylan Patel 说，CPU 为什么总不够用？"
+                "推理模型把训练和验证闭环压紧，GPU 的闲置率反而一路上涨。"
+                "来听原声。")
+        with self.assertRaises(ValueError):
+            gi.normalize_copy({**VALID_COPY, "intro_spoken_text": text})
+
+    def test_rejects_sentence_over_fourteen_units(self) -> None:
+        text = ("二零二六年，Daytona 现场。Dylan Patel 说，CPU 为什么总不够用？"
+                "推理模型把训练和验证闭环都压紧。GPU 的闲置率反而一路上涨。"
+                "算力到底卡在哪一步？听听他怎么说，来听原声。")
+        with self.assertRaises(ValueError):
+            gi.normalize_copy({**VALID_COPY, "intro_spoken_text": text})
+
+    def test_rejects_arabic_year(self) -> None:
+        text = ("2026 年，Daytona 现场。Dylan Patel 说，CPU 为什么总是觉得不够用？"
+                "推理模型把训练和验证闭环压紧。GPU 的闲置率反而一路上涨。"
+                "算力到底卡在哪个环节呢？听听他怎么说，来听原声。")
+        with self.assertRaises(ValueError):
+            gi.normalize_copy({**VALID_COPY, "intro_spoken_text": text})
+
+    def test_rejects_missing_original_audio_invite(self) -> None:
+        text = ("二零二六年，Daytona 现场。Dylan Patel 说，CPU 为什么总不够用？"
+                "推理模型把训练和验证闭环压紧。GPU 的闲置率反而一路上涨。"
+                "算力到底卡在哪一步？我们下期再说吧。")
+        with self.assertRaises(ValueError):
+            gi.normalize_copy({**VALID_COPY, "intro_spoken_text": text})
 
     def test_rejects_hype_words(self) -> None:
         with self.assertRaises(ValueError):
@@ -64,10 +95,17 @@ class CopyTests(unittest.TestCase):
 
     def test_copy_prompt_has_5w1h_and_examples(self) -> None:
         prompt = gi.build_copy_prompt("节目", "摘要")
-        for token in ("Who + Where + When", "What + Why/How", "We did",
+        for token in ("5–6", "14", "60–95", "二零二六年", "来听原声", "5W1H",
                       "intro_spoken_text", "screen_title", "screen_subtitle",
-                      "反例", "正例", "Daytona 2026"):
+                      "反例", "正例", "Daytona"):
             self.assertIn(token, prompt)
+
+    def test_llm_headers_include_api_key(self) -> None:
+        self.assertEqual(gi._llm_headers({"llm_api_key": "k"}),
+                         {"Authorization": "Bearer k"})
+        with mock.patch.dict("os.environ", {"LLM_API_KEY": "env-key"}, clear=False):
+            self.assertEqual(gi._llm_headers({}),
+                             {"Authorization": "Bearer env-key"})
 
     def test_compress_prompt_keeps_original(self) -> None:
         prompt = gi.build_compress_prompt(VALID_COPY["intro_spoken_text"])
@@ -77,40 +115,40 @@ class CopyTests(unittest.TestCase):
 
 class TimelineTests(unittest.TestCase):
     def test_preferred_tail(self) -> None:
-        plan = gi.plan_timeline(7500)
-        self.assertEqual(plan, {"duration_ms": 7950, "lead_ms": 200,
-                                "voice_ms": 7500, "tail_ms": 250})
+        plan = gi.plan_timeline(12_000)
+        self.assertEqual(plan, {"duration_ms": 12_450, "lead_ms": 200,
+                                "voice_ms": 12_000, "tail_ms": 250})
 
     def test_tail_shrinks_before_cap(self) -> None:
-        plan = gi.plan_timeline(9100)
-        self.assertEqual(plan["duration_ms"], 9400)
+        plan = gi.plan_timeline(19_600)
+        self.assertEqual(plan["duration_ms"], 19_900)
         self.assertEqual(plan["tail_ms"], 100)
 
     def test_plan_leaves_encoder_headroom(self) -> None:
-        plan = gi.plan_timeline(9140)
-        self.assertEqual(plan["duration_ms"], 9440)
+        plan = gi.plan_timeline(19_640)
+        self.assertEqual(plan["duration_ms"], 19_940)
         self.assertLessEqual(plan["duration_ms"],
                              gi.DEFAULTS["max_duration_ms"] - gi.DEFAULTS["duration_guard_ms"])
         with self.assertRaises(ValueError):
-            gi.plan_timeline(9150)
+            gi.plan_timeline(19_650)
 
     def test_impossible_voice_raises(self) -> None:
         with self.assertRaises(ValueError):
-            gi.plan_timeline(9500)
+            gi.plan_timeline(20_000)
 
-    def test_short_voice_is_padded_to_six_seconds(self) -> None:
+    def test_short_voice_is_padded_to_ten_seconds(self) -> None:
         plan = gi.plan_timeline(3000)
-        self.assertEqual(plan["duration_ms"], 6000)
-        self.assertEqual(plan["tail_ms"], 2800)
+        self.assertEqual(plan["duration_ms"], 10_000)
+        self.assertEqual(plan["tail_ms"], 6800)
 
     def test_tempo(self) -> None:
-        self.assertEqual(gi.tempo_for(8800), 1.0)
-        self.assertAlmostEqual(gi.tempo_for(9200), 9200 / 8800)
-        self.assertEqual(gi.tempo_for(12000), gi.DEFAULTS["max_tempo"])
+        self.assertEqual(gi.tempo_for(16_000), 1.0)
+        self.assertAlmostEqual(gi.tempo_for(16_800), 16_800 / 16_000)
+        self.assertEqual(gi.tempo_for(20_000), gi.DEFAULTS["max_tempo"])
 
     def test_window_and_fps(self) -> None:
-        self.assertEqual(gi.DEFAULTS["min_duration_ms"], 6000)
-        self.assertEqual(gi.DEFAULTS["max_duration_ms"], 9500)
+        self.assertEqual(gi.DEFAULTS["min_duration_ms"], 10_000)
+        self.assertEqual(gi.DEFAULTS["max_duration_ms"], 20_000)
         self.assertEqual(gi.DEFAULTS["fps"], 60)
 
 
@@ -119,11 +157,11 @@ class StageTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             wav = Path(tmp) / "v.wav"
             wav.write_bytes(b"x")
-            with mock.patch.object(gi.sd, "probe_duration", return_value=12.0):
+            with mock.patch.object(gi.sd, "probe_duration", return_value=20.5):
                 with self.assertRaises(gi.VoiceWindowError) as ctx:
                     gi.stage_voice(out_dir=Path(tmp), cfg=gi.DEFAULTS, text="x",
                                    voice_wav=wav)
-            self.assertEqual(ctx.exception.voice_ms, 12000)
+            self.assertEqual(ctx.exception.voice_ms, 20500)
 
     def test_voice_stage_writes_narration_json(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -132,7 +170,7 @@ class StageTests(unittest.TestCase):
             with mock.patch.object(gi.sd, "probe_duration", return_value=8.0):
                 result = gi.stage_voice(out_dir=Path(tmp), cfg=gi.DEFAULTS, text="x",
                                         voice_wav=wav)
-            self.assertEqual(result["timeline"]["duration_ms"], 8450)
+            self.assertEqual(result["timeline"]["duration_ms"], 10_000)
             saved = json.loads((Path(tmp) / "narration.json").read_text(encoding="utf-8"))
             self.assertEqual(saved["final_seconds"], 8.0)
 
@@ -141,14 +179,14 @@ class PosterConfigTests(unittest.TestCase):
     def test_poster_voice_budget_targets_seven_to_nine_seconds(self) -> None:
         args = gi.parse_args(["--video-id", "x", "--intro-style", "poster"])
         cfg = gi.build_cfg(args)
-        self.assertEqual(cfg["voice_budget_ms"], 8500)
-        plan = gi.plan_timeline(8500, cfg)
-        self.assertEqual(plan["duration_ms"], 8950)
-        self.assertLessEqual(plan["duration_ms"], 9000)
+        self.assertEqual(cfg["voice_budget_ms"], 16_000)
+        plan = gi.plan_timeline(16_000, cfg)
+        self.assertEqual(plan["duration_ms"], 16_450)
+        self.assertLessEqual(plan["duration_ms"], 20_000)
 
     def test_classic_keeps_the_default_budget(self) -> None:
         args = gi.parse_args(["--video-id", "x", "--intro-style", "classic"])
-        self.assertEqual(gi.build_cfg(args)["voice_budget_ms"], 8800)
+        self.assertEqual(gi.build_cfg(args)["voice_budget_ms"], 16_000)
 
 
 class TemplateTests(unittest.TestCase):

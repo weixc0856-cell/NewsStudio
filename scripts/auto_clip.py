@@ -45,15 +45,15 @@ TEXT_OK = re.compile(r"[\w一-鿿]", re.UNICODE)
 SLUG_BAD = re.compile(r"[^\w一-鿿-]+", re.UNICODE)
 
 DEFAULTS: dict[str, Any] = {
-    "window_ms": 660_000,
-    "overlap_ms": 210_000,
-    "min_clip_ms": 180_000,
-    "max_clip_ms": 600_000,      # 3-10 min hard gate; 8-10 min only when the argument needs it
-    "prefer_min_ms": 240_000,
-    "prefer_max_ms": 420_000,
+    "window_ms": 300_000,
+    "overlap_ms": 60_000,
+    "min_clip_ms": 45_000,
+    "max_clip_ms": 90_000,       # ~1 min clips; 90 s is the emergency ceiling
+    "prefer_min_ms": 50_000,
+    "prefer_max_ms": 70_000,
     "dup_overlap_ratio": 0.4,
-    "overlap_penalty_ms": 30_000,   # >30 s overlap with a kept candidate = strong penalty
-    "max_clips": 2,
+    "overlap_penalty_ms": 15_000,   # >15 s overlap with a kept candidate = strong penalty
+    "max_clips": 5,
     "duration_tolerance_ms": 1_500,
     "margin_v": 100,
     "qsv_quality": 19,
@@ -338,30 +338,29 @@ def build_prompt(win: Window, cues: list[Cue], cfg: dict[str, Any]) -> str:
         f"本窗口共 {len(win_cues)} 条字幕，平均每条约 {avg_cue / 1000:.1f} 秒；"
         f"{cfg['min_clip_ms'] // 1000}–{cfg['max_clip_ms'] // 1000} 秒大约相当于 "
         f"{min_cues}–{max_cues} 条字幕。",
-        "请选出一个能独立成片、论证闭环完整的片段。按顺序判断：",
+        "请选出一个能独立成片、只讲清一个论点的小片段（约 1 分钟），",
+        "而不是大而全的长论证。按顺序判断：",
         "",
-        "1. 问题明确：开头能让观众立刻知道在讨论什么。start 必须是问题或话题的开头，"
-        "不要从半句、承接词或口误开始。",
-        "2. 结论完整：end 必须在论证收束之后；不要停在半句、反问、例子中间，"
-        "也不要在对方还没回答完时结束。",
-        "3. 解释充分：片段内至少包含数据、机制、案例、推理中的两类；"
-        "不要只选金句、结论或情绪化片段。",
-        "4. 可追溯：start/end 只能使用上面列出的字幕 ID，时间以字幕为准。",
+        "1. 独立成句：start 必须是完整主谓句的开头，不能是半句、承接词或从句开头",
+        "（brought / which / that / because / but also 之类一律不要）。",
+        "2. 论点单一：整段只回答一个问题；出现第二个独立论点时，在它之前收尾。",
+        "3. 结论完整：end 必须在论点收束之后；不要停在半句、反问、例子中间。",
+        "4. 信息密度：至少有一个具体数据、机制或案例，不要只选金句或情绪化片段。",
+        "5. 可追溯：start/end 只能使用上面列出的字幕 ID，时间以字幕为准。",
         "",
-        "时长：3–8 分钟优先，优先 4–7 分钟；4 分钟讲清楚就不要扩到 8 分钟；",
-        f"完整论证确实需要时可以到 {cfg['max_clip_ms'] // 60_000} 分钟；"
-        f"低于 {cfg['min_clip_ms'] // 60_000} 分钟或超过 "
-        f"{cfg['max_clip_ms'] // 60_000} 分钟的候选无效。",
+        f"时长：{cfg['prefer_min_ms'] // 1000}–{cfg['prefer_max_ms'] // 1000} 秒最佳；"
+        f"低于 {cfg['min_clip_ms'] // 1000} 秒或超过 {cfg['max_clip_ms'] // 1000} 秒无效。"
+        "一集最终会保留 3–5 条这样彼此独立的小论点。",
         "",
         "边界示例（只看边界，不要照抄内容）：",
         "- 反例 start：「…and I'm like well no because like…」（半句 + 承接词）",
-        "- 正例 start：「…so just give us a high level TLDR why is CPU now bottleneck "
-        "and what do you see?」（完整问题）",
+        "- 正例 start：「…so just give us a high level TLDR why is CPU now bottleneck…？」"
+        "（完整问题）",
         "- 反例 end：「…and that's why…」（话没说完）",
         "- 正例 end：「…so that's the constraint we run into.」（结论句）",
         "- 不选：广告、寒暄、纯过渡、重复口误、没有结论的闲聊。",
         "",
-        "优先级：问题—解释—结论闭环 > 刺激金句。",
+        "优先级：独立完整的问题—解释—结论 > 单条金句。",
         "",
         "只输出一个 JSON 对象，不要代码块、不要解释，字段固定：",
         '{"start_cue_id": <整数>, "end_cue_id": <整数>, '
@@ -373,7 +372,7 @@ def build_prompt(win: Window, cues: list[Cue], cfg: dict[str, Any]) -> str:
 
 def build_extend_prompt(win: Window, cues: list[Cue], record: dict[str, Any],
                        cfg: dict[str, Any]) -> str:
-    """One correction call: ask for a later end when the model picked <3 min."""
+    """One correction call: ask for a later end when the model picked < min_clip_ms."""
     lines, _ = _window_header(win, cues)
     seconds = record["duration_ms"] / 1000
     lines += [
@@ -381,7 +380,7 @@ def build_extend_prompt(win: Window, cues: list[Cue], record: dict[str, Any],
         f"你选取的 {record['start_cue_id']} ~ {record['end_cue_id']} 实测只有 "
         f"{seconds:.1f} 秒，讨论尚未充分展开。",
         "请将结束边界向后延伸，直到该论点推导完毕，使总时长落在 "
-        f"{cfg['min_clip_ms'] // 1000}–{cfg['prefer_max_ms'] // 1000} 秒之间。",
+        f"{cfg['prefer_min_ms'] // 1000}–{cfg['prefer_max_ms'] // 1000} 秒之间。",
         f"start_cue_id 保持 {record['start_cue_id']} 不变；end_cue_id 必须大于 "
         f"{record['end_cue_id']}，且只能使用上面列出的 ID。",
         "",
@@ -391,8 +390,13 @@ def build_extend_prompt(win: Window, cues: list[Cue], record: dict[str, Any],
     return "\n".join(lines)
 
 
+def _llm_headers() -> dict[str, str]:
+    key = os.environ.get("LLM_API_KEY", "").strip()
+    return {"Authorization": f"Bearer {key}"} if key else {}
+
+
 def discover_model(base: str, timeout: int = 30) -> str:
-    r = requests.get(f"{base}/v1/models", timeout=timeout)
+    r = requests.get(f"{base}/v1/models", timeout=timeout, headers=_llm_headers())
     r.raise_for_status()
     return r.json()["data"][0]["id"]
 
@@ -432,12 +436,14 @@ def call_model(base: str, model: str, prompt: str, win: Window,
         record: dict[str, Any] = {"attempt": attempt}
         try:
             resp = requests.post(f"{base}/v1/chat/completions", json=payload,
-                                 timeout=(10, cfg["model_timeout_s"]))
+                                 timeout=(10, cfg["model_timeout_s"]),
+                                 headers=_llm_headers())
             if resp.status_code == 400 and "response_format" in payload:
                 # server without json_object support: degrade once, deterministically
                 payload.pop("response_format")
                 resp = requests.post(f"{base}/v1/chat/completions", json=payload,
-                                     timeout=(10, cfg["model_timeout_s"]))
+                                     timeout=(10, cfg["model_timeout_s"]),
+                                     headers=_llm_headers())
             resp.raise_for_status()
             content = resp.json()["choices"][0]["message"]["content"]
             record["raw"] = content
@@ -496,7 +502,7 @@ def call_extend_model(base: str, model: str, prompt: str, win: Window,
                       ) -> tuple[int | None, list[dict[str, Any]]]:
     """One correction request: return a later end cue, or None.
 
-    Only called when the first candidate is shorter than the 3-minute gate and
+    Only called when the first candidate is shorter than min_clip_ms and
     its boundary is not a hard reject.  Never loops (the caller allows one).
     """
     payload: dict[str, Any] = {
@@ -513,11 +519,13 @@ def call_extend_model(base: str, model: str, prompt: str, win: Window,
     record: dict[str, Any] = {"attempt": 1}
     try:
         resp = requests.post(f"{base}/v1/chat/completions", json=payload,
-                             timeout=(10, cfg["model_timeout_s"]))
+                             timeout=(10, cfg["model_timeout_s"]),
+                             headers=_llm_headers())
         if resp.status_code == 400 and "response_format" in payload:
             payload.pop("response_format")
             resp = requests.post(f"{base}/v1/chat/completions", json=payload,
-                                 timeout=(10, cfg["model_timeout_s"]))
+                                 timeout=(10, cfg["model_timeout_s"]),
+                                 headers=_llm_headers())
         resp.raise_for_status()
         content = resp.json()["choices"][0]["message"]["content"]
         record["raw"] = content
@@ -569,11 +577,13 @@ def call_title_model(base: str, model: str, prompt: str,
     }
     try:
         resp = requests.post(f"{base}/v1/chat/completions", json=payload,
-                             timeout=(10, cfg["model_timeout_s"]))
+                             timeout=(10, cfg["model_timeout_s"]),
+                             headers=_llm_headers())
         if resp.status_code == 400 and "response_format" in payload:
             payload.pop("response_format")
             resp = requests.post(f"{base}/v1/chat/completions", json=payload,
-                                 timeout=(10, cfg["model_timeout_s"]))
+                                 timeout=(10, cfg["model_timeout_s"]),
+                                 headers=_llm_headers())
         resp.raise_for_status()
         content = resp.json()["choices"][0]["message"]["content"]
         title = str(extract_json_object(content).get("title", "")).strip()
@@ -1120,10 +1130,13 @@ def final_status(windows: list[dict[str, Any]], valid: list[dict[str, Any]],
 # --------------------------------------------------------------------------
 def main() -> int:
     ap = argparse.ArgumentParser(description="Auto highlight clipping (bilingual SRT + video)")
-    ap.add_argument("--srt", required=True)
+    ap.add_argument("--srt", default=None,
+                    help="bilingual SRT (default: subtitles/<video-id>.zh.bilingual.srt)")
     ap.add_argument("--video", default=None)
     ap.add_argument("--video-id", default=None)
     ap.add_argument("--out", default=None, help="output dir (default clips/<video_id>)")
+    ap.add_argument("--output-dir", dest="out", default=None,
+                    help="alias for --out (isolated analysis runs)")
     ap.add_argument("--base", default=DEFAULTS["base_url"])
     ap.add_argument("--model", default=None)
     ap.add_argument("--max-clips", type=int, default=DEFAULTS["max_clips"])
@@ -1185,10 +1198,17 @@ def main() -> int:
         print(f"config error: {exc}", file=sys.stderr)
         return 2
 
-    srt_path = Path(args.srt)
+    video_id = args.video_id or (Path(args.srt).name.split(".")[0] if args.srt else "")
+    if not args.srt and not video_id:
+        print("config error: pass --srt or --video-id", file=sys.stderr)
+        return 2
+    srt_path = Path(args.srt) if args.srt else (
+        ROOT / "subtitles" / f"{video_id}.zh.bilingual.srt")
     if not srt_path.is_absolute():
         srt_path = (ROOT / srt_path).resolve()
-    video_id = args.video_id or srt_path.name.split(".")[0]
+    if not srt_path.exists():
+        print(f"config error: SRT not found: {srt_path}", file=sys.stderr)
+        return 2
     out_dir = Path(args.out) if args.out else ROOT / "clips" / video_id
     if not out_dir.is_absolute():
         out_dir = (ROOT / out_dir).resolve()

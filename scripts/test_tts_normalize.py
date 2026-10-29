@@ -61,10 +61,8 @@ class IntroVoiceTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             cfg = {**gi.DEFAULTS, "voice_speaker": ""}   # zero-shot path
             with mock.patch.object(sd, "wait_for_service",
-                                   return_value={"model_class": "fake"}), \
-                 mock.patch.object(sd, "tts_request",
-                                   return_value=b"RIFF") as tts, \
-                 mock.patch.object(sd, "probe_duration", return_value=8.0):
+                                   return_value={"model_class": "fake"}),                  mock.patch.object(sd, "tts_request",
+                                   return_value=b"RIFF") as tts,                  mock.patch.object(sd, "probe_duration", return_value=8.0),                  mock.patch.object(gi, "pad_head"):
                 info = gi.synthesize_voice(text="Daytona 2026，现场实录。",
                                            out_dir=Path(tmp), cfg=cfg)
         sent = tts.call_args.args[1]
@@ -77,7 +75,7 @@ class IntroVoiceTests(unittest.TestCase):
             cfg = {**gi.DEFAULTS, "voice_speaker": "中文男"}
             with mock.patch.object(sd, "wait_for_service",
                                    return_value={"model_class": "fake"}),                  mock.patch.object(sd, "tts_request",
-                                   return_value=b"RIFF") as tts,                  mock.patch.object(sd, "probe_duration", return_value=8.0):
+                                   return_value=b"RIFF") as tts,                  mock.patch.object(sd, "probe_duration", return_value=8.0),                  mock.patch.object(gi, "pad_head"):
                 info = gi.synthesize_voice(text="Daytona 2026，现场实录。",
                                            out_dir=Path(tmp), cfg=cfg)
         self.assertEqual(tts.call_args.kwargs["speaker"], "中文男")
@@ -85,8 +83,27 @@ class IntroVoiceTests(unittest.TestCase):
         self.assertEqual(info["voice_speaker"], "中文男")
         self.assertEqual(info["prompt_wav"], "")
 
-    def test_default_intro_voice_is_the_preset_baritone(self) -> None:
-        self.assertEqual(gi.DEFAULTS["voice_speaker"], "中文男")
+    def test_default_intro_voice_is_the_preset_female(self) -> None:
+        self.assertEqual(gi.DEFAULTS["voice_speaker"], "中文女")
+
+    def test_synthesize_voice_pads_head(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            cfg = {**gi.DEFAULTS, "voice_speaker": "中文男"}
+            with mock.patch.object(sd, "wait_for_service",
+                                   return_value={"model_class": "fake"}),                  mock.patch.object(sd, "tts_request", return_value=b"RIFF"),                  mock.patch.object(sd, "probe_duration", return_value=8.0),                  mock.patch.object(gi, "pad_head") as pad:
+                info = gi.synthesize_voice(text="测试。", out_dir=Path(tmp), cfg=cfg)
+        self.assertEqual(pad.call_args.args[1], 600)
+        self.assertEqual(info["head_silence_ms"], 600)
+
+    def test_stage_voice_zeroes_lead_for_padded_audio(self) -> None:
+        voice = {"final_seconds": 9.205, "raw_seconds": 8.605, "tempo": 1.15,
+                 "head_silence_ms": 600, "path": "narration.wav"}
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch.object(gi, "synthesize_voice", return_value=voice):
+                out = gi.stage_voice(out_dir=Path(tmp), cfg={**gi.DEFAULTS}, text="测试。")
+        self.assertEqual(out["timeline"]["lead_ms"], 0)
+        self.assertEqual(out["timeline"]["voice_ms"], 9205)
+        self.assertEqual(out["timeline"]["duration_ms"], 10_000)
 
 
 if __name__ == "__main__":

@@ -66,17 +66,18 @@ DEFAULTS: dict[str, Any] = {
     "fps": 60,                  # CFR 60: same rate as the highlight clips / reel
     "av_tolerance_ms": 60,      # max |video - audio| duration in the intro
     "lead_ms": 200,             # picture starts, voice starts 200 ms later
+    "voice_head_silence_ms": 600,  # silence baked into narration.wav; lead becomes 0
     "tail_ms": 250,             # hold the final frame after the voice
     "min_tail_ms": 100,
-    "min_duration_ms": 6000,
-    "max_duration_ms": 9500,
+    "min_duration_ms": 10_000,
+    "max_duration_ms": 20_000,
     "duration_guard_ms": 60,    # encoder/packet padding: plan stops this far below the cap
-    "voice_budget_ms": 8800,    # atempo target (hard window still wins)
+    "voice_budget_ms": 16_000,  # atempo target; 12-18 s intros rarely need it
     "max_tempo": 1.15,
     "tolerance_ms": 250,
     "base_url": "http://127.0.0.1:50000",
     "prompt_wav": sd.DEFAULTS["prompt_wav"],
-    "voice_speaker": "中文男",   # SFT preset speaker id; when set, prompt_wav is not sent
+    "voice_speaker": "中文女",   # SFT preset speaker id; when set, prompt_wav is not sent
     "tts_timeout_s": sd.DEFAULTS["tts_timeout_s"],
     "wait_s": sd.DEFAULTS["wait_s"],
     "dub_target_db": dub_mix.DEFAULTS["dub_target_db"],
@@ -90,8 +91,8 @@ DEFAULTS: dict[str, Any] = {
     "llm_timeout_s": 300,
     "llm_retries": 2,
     "llm_temperature": 0.2,
-    "copy_min_chars": 36,
-    "copy_max_chars": 58,
+    "copy_min_chars": 60,       # spoken units: CJK chars + latin word tokens
+    "copy_max_chars": 95,
     "copy_min_title": 12,
     "copy_max_title": 24,
     "copy_min_subtitle": 10,
@@ -109,7 +110,14 @@ DEFAULTS: dict[str, Any] = {
 FORBIDDEN_WORDS = (
     "震撼", "颠覆", "杀疯", "炸裂", "王炸", "封神", "史诗", "狂欢", "重磅", "炸场",
     "逆天", "天花板", "降维打击", "彻底", "疯狂", "爆款", "必看", "速看", "太强", "无敌",
+    # 2026-10-29: 书面/营销腔，女声口语化解说里读出来很假
+    "拆解", "实录", "关键观点解析", "深度解读", "全面分析", "工业级",
 )
+
+_CJK_RE = re.compile("[" + chr(0x4E00) + "-" + chr(0x9FFF) + "]")
+_LATIN_RE = re.compile(r"[A-Za-z]+")
+_YEAR_RE = re.compile(r"(?<!\d)(?:19|20)\d{2}(?!\d)")
+_CLOSING_RE = re.compile(r"(原声|来听|听听)")
 
 BROWSERS = (
     r"C:\Program Files\Google\Chrome\Application\chrome.exe",
@@ -177,48 +185,41 @@ COPY_SYSTEM = (
 
 
 def build_copy_prompt(title: str, summary: str) -> str:
-    return (
-        f"本期节目：{title}\n"
-        f"内容摘要：{summary}\n\n"
-        "请按 5W1H 工程化结构写 3 句片头导读，严格输出 JSON：\n"
-        '{"intro_spoken_text": "...", "screen_title": "...", "screen_subtitle": "..."}\n\n'
-        "规则：\n"
-        "1. intro_spoken_text 必须恰好 3 句，顺序固定，每句 12–18 字，整段 40–52 字：\n"
-        "   第一句（Who + Where + When）：[讲者/机构]，[年份] [场合] 现场实录。\n"
-        "   第二句（What + Why/How）：他/她拆解了 [核心技术矛盾] 的底层边界。\n"
-        "   第三句（We did）：中英双语，来看现场原声。\n"
-        "   不要写成“这是……的一手公开实录”这类长句；不要长定语，不要堆信息。\n"
-        "2. intro_spoken_text 总长 40–52 个汉字（含标点不超过 56 个字符）（英文人名/机构名/缩写各算 1 个词），"
-        "超过 56 个字符视为不合格；口语自然，适合 7–9 秒朗读；不要换行，不要 Markdown，不要引号。\n"
-        "3. screen_title：12–18 个汉字（不含空格），一句冷峻的判断或设问；不够 12 个汉字时加“为何/如何/究竟”补足；例如“CPU 为何成为 AI 新瓶颈”是 12 个汉字。\n"
-        "4. screen_subtitle：15–25 个汉字，交代讲者与机构/出处，例如"
-        "“Dylan Patel · SemiAnalysis，2026”。\n"
-        "5. 禁止使用：震撼、颠覆、杀疯、炸裂、王炸、封神、史诗、狂欢、重磅、炸场、"
-        "逆天、天花板、降维打击、彻底、疯狂、爆款、必看、速看、太强、无敌。\n"
-        "6. 只写事实与可核查的表述，不给结论性夸大；不要出现“本期视频”“记得点赞”等营销语。\n"
-        "7. 只输出 JSON，不要代码块。\n\n"
-        "反例（太长，禁止）：这是 Dylan Patel 在 2026 年 Daytona 大会的一手公开实录。"
-        "面对 AI 推理带来的 CPU 短缺，他详拆了智能体训练与验证的真实算力边界。"
-        "我们整理了完整推演并配齐中英双语，来看现场原声。\n"
-        "正例（照这个长度与节奏写）：Daytona 2026，Dylan Patel 现场实录。"
-        "他拆解了 CPU 瓶颈的算力账。中英双语，来看原声。\n\n"
-        "案例：\n"
-        "- Dylan Patel / SemiAnalysis："
-        '{"intro_spoken_text":"Daytona 2026，Dylan Patel 现场实录。'
-        '他拆解了 CPU 瓶颈的算力账。中英双语，来看原声。",'
+    nl = chr(10)
+    lines = [
+        f"本期节目：{title}",
+        f"内容摘要：{summary}",
+        "",
+        "请写一段 12–18 秒的中文播客片头导读，由女声念出。严格输出 JSON：",
+        '{"intro_spoken_text": "...", "screen_title": "...", "screen_subtitle": "..."}',
+        "",
+        "规则：",
+        "1. 把 5W1H 说清楚：谁、在哪、何时、讲了什么、为什么值得听。"
+        "拆成 5–6 个短句，每句不超过 14 个字（英文单词各算 1 个字），"
+        "整段 60–95 个字。",
+        "2. 像真人主持在说话，不要新闻稿腔、不要 PPT 标题腔；"
+        "可以用“来听、听听、为什么、怎么说、现场”。",
+        "3. 禁止使用：拆解、实录、关键观点解析、深度解读、全面分析、工业级，以及震撼、颠覆、"
+        "杀疯、炸裂、王炸、封神、史诗、狂欢、重磅、炸场、逆天、天花板、降维打击、彻底、疯狂、"
+        "爆款、必看、速看、太强、无敌。",
+        "4. 年份必须写成“二零二六年”，不要写阿拉伯数字。",
+        "5. Daytona、Dylan Patel、CPU、AI 等专有名词保留英文，前后用标点隔开，留出停顿。",
+        "6. 最后一句必须是引导听原声的短句，例如“来听原声。”",
+        "7. screen_title：12–18 个汉字（不含空格）；screen_subtitle：15–25 个汉字。",
+        "8. 只输出 JSON，不要代码块。",
+        "",
+        "正例（照这个节奏写）：",
+        '{"intro_spoken_text":"二零二六年，Daytona 现场。'
+        'Dylan Patel 说，CPU 为什么总不够用？'
+        '推理模型把训练和验证闭环压紧。GPU 的闲置率反而一路上涨。'
+        '算力到底卡在哪一步？听听他怎么说，来听原声。",'
         '"screen_title":"CPU 为何成为 AI 新瓶颈",'
-        '"screen_subtitle":"Dylan Patel · SemiAnalysis，2026"}\n'
-        "- Waymo："
-        '{"intro_spoken_text":"2026 年 Waymo 安全报告现场，首席安全官实录。'
-        '他拆解了接管率与长尾场景的边界。中英双语，来看原声。",'
-        '"screen_title":"无人车的安全边界在哪里",'
-        '"screen_subtitle":"Waymo 安全团队，2026"}\n'
-        "- Figure："
-        '{"intro_spoken_text":"2026 年 Figure 开放日，Brett Adcock 现场实录。'
-        '他拆解了量产与数据闭环的边界。中英双语，来看原声。",'
-        '"screen_title":"人形机器人离量产还有多远",'
-        '"screen_subtitle":"Brett Adcock · Figure，2026"}'
-    )
+        '"screen_subtitle":"Dylan Patel · SemiAnalysis，2026"}',
+        "反例（太长、太书面，禁止）：这是 Dylan Patel 在 2026 年 Daytona 大会的一手公开实录。"
+        "面对 AI 推理带来的 CPU 短缺，他详拆了智能体训练与验证的真实算力边界。"
+        "我们整理了完整推演并配齐中英双语，来看现场原声。",
+    ]
+    return nl.join(lines)
 
 
 def _extract_json_object(text: str) -> dict[str, Any]:
@@ -241,6 +242,37 @@ def _count_sentences(text: str) -> int:
     return sum(1 for ch in text if ch in "。！？!?")
 
 
+def _spoken_sentences(text: str) -> list[str]:
+    return [part.strip() for part in re.split(r"(?<=[。！？!?])", text) if part.strip()]
+
+
+def _spoken_units(text: str) -> int:
+    """CJK characters + latin word tokens; punctuation and digits are ignored."""
+    return len(_CJK_RE.findall(text)) + len(_LATIN_RE.findall(text))
+
+
+def _validate_spoken_text(text: str, cfg: dict[str, Any]) -> str:
+    text = " ".join(text.split())
+    sentences = _spoken_sentences(text)
+    if not 5 <= len(sentences) <= 6:
+        raise ValueError(f"spoken text must be 5-6 sentences, got {len(sentences)}")
+    units = _spoken_units(text)
+    lo, hi = int(cfg["copy_min_chars"]), int(cfg["copy_max_chars"])
+    if not lo <= units <= hi:
+        raise ValueError(f"spoken text is {units} units, cap [{lo}, {hi}]")
+    for sentence in sentences:
+        if _spoken_units(sentence) > 14:
+            raise ValueError(f"sentence is {_spoken_units(sentence)} units (>14): {sentence}")
+    if _YEAR_RE.search(text):
+        raise ValueError("year must be written as 二零二六年, not digits")
+    if not _CLOSING_RE.search(sentences[-1]):
+        raise ValueError("last sentence must invite listening to the original audio")
+    for word in FORBIDDEN_WORDS:
+        if word in text:
+            raise ValueError(f"forbidden word: {word}")
+    return text
+
+
 def _plain_len(text: str) -> int:
     return len(re.sub(r"\s+", "", text))
 
@@ -252,13 +284,7 @@ def normalize_copy(obj: dict[str, Any], cfg: dict[str, Any] | None = None) -> di
     screen_subtitle = " ".join(str(obj.get("screen_subtitle", "")).split())
     if not spoken or not screen_title or not screen_subtitle:
         raise ValueError("copy is missing intro_spoken_text/screen_title/screen_subtitle")
-    if _count_sentences(spoken) != 3:
-        raise ValueError(f"spoken text must be exactly 3 sentences, got "
-                         f"{_count_sentences(spoken)}")
-    length = _plain_len(spoken)
-    if not (int(cfg["copy_min_chars"]) <= length <= int(cfg["copy_max_chars"])):
-        raise ValueError(f"spoken text is {length} chars, cap "
-                         f"[{cfg['copy_min_chars']}, {cfg['copy_max_chars']}]")
+    spoken = _validate_spoken_text(spoken, cfg)
     title_len = _plain_len(screen_title)
     if not (int(cfg["copy_min_title"]) <= title_len <= int(cfg["copy_max_title"])):
         raise ValueError(f"screen_title is {title_len} chars, cap "
@@ -277,13 +303,19 @@ def normalize_copy(obj: dict[str, Any], cfg: dict[str, Any] | None = None) -> di
     }
 
 
+def _llm_headers(cfg: dict[str, Any]) -> dict[str, str]:
+    key = str(cfg.get("llm_api_key") or os.environ.get("LLM_API_KEY") or "").strip()
+    return {"Authorization": f"Bearer {key}"} if key else {}
+
+
 def generate_copy_llm(*, title: str, summary: str,
                       cfg: dict[str, Any]) -> dict[str, Any]:
     """Ask the local llama-server for the 5W1H copy. Local HTTP only."""
     base = str(cfg["llm_base"]).rstrip("/")
+    headers = _llm_headers(cfg)
     model = cfg.get("llm_model")
     if not model:
-        resp = requests.get(f"{base}/v1/models", timeout=30)
+        resp = requests.get(f"{base}/v1/models", timeout=30, headers=headers)
         resp.raise_for_status()
         model = resp.json()["data"][0]["id"]
     prompt = build_copy_prompt(title, summary)
@@ -302,16 +334,16 @@ def generate_copy_llm(*, title: str, summary: str,
         try:
             if attempt > 1:
                 payload["messages"][1]["content"] = (
-                    prompt + "\n\n注意：上次输出过长或不合格。请严格压缩到 40–52 字（含标点不超过 56 个字符），"
-                    "每句 12–18 字，保留 Who/Where/When、What/Why、We did 三个信息点，"
-                    "不要使用长定语。screen_title 至少 12 个汉字（不含空格）。"
+                    prompt + "\n\n注意：上次不合格。必须写够 60–95 个字（英文单词各算 1 个字），"
+                    "5–6 句，每句 10–14 个字，口语化，年份写二零二六年，"
+                    "最后一句必须引导听原声；screen_title 至少 12 个汉字（不含空格）。"
                 )
             resp = requests.post(f"{base}/v1/chat/completions", json=payload,
-                                 timeout=(10, int(cfg["llm_timeout_s"])))
+                                 timeout=(10, int(cfg["llm_timeout_s"])), headers=headers)
             if resp.status_code == 400 and "response_format" in payload:
                 payload.pop("response_format")
                 resp = requests.post(f"{base}/v1/chat/completions", json=payload,
-                                     timeout=(10, int(cfg["llm_timeout_s"])))
+                                     timeout=(10, int(cfg["llm_timeout_s"])), headers=headers)
             resp.raise_for_status()
             content = resp.json()["choices"][0]["message"]["content"]
             record["raw"] = content
@@ -338,10 +370,11 @@ COMPRESS_SYSTEM = "你只输出严格合法的 JSON，不输出解释或 Markdow
 
 def build_compress_prompt(spoken: str) -> str:
     lines = [
-        "下面的片头导读朗读时间过长。请压缩到 36–46 个汉字（含标点不超过 50 个字符），"
-        "严格保持 3 句，保留 Who/Where/When、What/Why、We did 三个信息点；"
-        "不要增加修饰语，不要新增事实，不要用长定语。",
-        "正例：Daytona 2026，Dylan Patel 现场实录。他拆解了 CPU 瓶颈的算力账。中英双语，来看原声。",
+        "下面的片头导读朗读时间过长。请压缩到 60–95 个字（英文单词各算 1 个字），"
+        "保持 5–6 个短句、每句不超过 14 个字；语气仍要像真人在说话，"
+        "最后一句仍要引导听原声；不要新增事实。",
+        "正例：二零二六年，Daytona 现场，AI 算力的账。Dylan Patel 说，CPU 为什么总不够用？"
+        "听听他怎么说，算力到底卡在哪？来听原声。",
         f"原文：{spoken}",
         '只输出 JSON：{"intro_spoken_text":"..."}',
     ]
@@ -349,24 +382,16 @@ def build_compress_prompt(spoken: str) -> str:
 
 
 def _validate_spoken(text: str, cfg: dict[str, Any]) -> str:
-    text = " ".join(text.split())
-    if _count_sentences(text) != 3:
-        raise ValueError(f"rewrite must be exactly 3 sentences, got {_count_sentences(text)}")
-    length = _plain_len(text)
-    if not (34 <= length <= 52):
-        raise ValueError(f"rewrite is {length} chars, cap [34, 52]")
-    for word in FORBIDDEN_WORDS:
-        if word in text:
-            raise ValueError(f"forbidden hype word: {word}")
-    return text
+    return _validate_spoken_text(text, cfg)
 
 
 def rewrite_copy_llm(*, spoken: str, cfg: dict[str, Any]) -> dict[str, Any]:
     """Ask Qwen to compress the spoken line when TTS runs past the window."""
     base = str(cfg["llm_base"]).rstrip("/")
+    headers = _llm_headers(cfg)
     model = cfg.get("llm_model")
     if not model:
-        resp = requests.get(f"{base}/v1/models", timeout=30)
+        resp = requests.get(f"{base}/v1/models", timeout=30, headers=headers)
         resp.raise_for_status()
         model = resp.json()["data"][0]["id"]
     prompt = build_compress_prompt(spoken)
@@ -384,16 +409,16 @@ def rewrite_copy_llm(*, spoken: str, cfg: dict[str, Any]) -> dict[str, Any]:
         record: dict[str, Any] = {"attempt": attempt}
         if attempt > 1:
             payload["messages"][1]["content"] = (
-                prompt + "\n\n注意：上次仍过长。必须压缩到 40 字以内"
-                         "（不超过 46 个汉字），保持 3 句与三个信息点，直接输出 JSON。"
+                prompt + "\n\n注意：上次仍过长。必须压到 35–48 个字"
+                         "（英文单词各算 1 个字），保持 5–6 个短句、每句不超过 14 个字，最后一句仍要引导听原声，直接输出 JSON。"
             )
         try:
             resp = requests.post(f"{base}/v1/chat/completions", json=payload,
-                                 timeout=(10, int(cfg["llm_timeout_s"])))
+                                 timeout=(10, int(cfg["llm_timeout_s"])), headers=headers)
             if resp.status_code == 400 and "response_format" in payload:
                 payload.pop("response_format")
                 resp = requests.post(f"{base}/v1/chat/completions", json=payload,
-                                     timeout=(10, int(cfg["llm_timeout_s"])))
+                                     timeout=(10, int(cfg["llm_timeout_s"])), headers=headers)
             resp.raise_for_status()
             content = resp.json()["choices"][0]["message"]["content"]
             record["raw"] = content
@@ -893,6 +918,22 @@ def render_keyframes(*, out_dir: Path, renderer: str, browser: Path | None,
 # --------------------------------------------------------------------------
 # voice
 # --------------------------------------------------------------------------
+def pad_head(path: Path, ms: int) -> None:
+    """Prepend ``ms`` of silence in place so the intro never speaks on frame zero."""
+    ms = int(ms)
+    if ms <= 0:
+        return
+    tmp = path.with_suffix(".pad" + path.suffix)
+    proc = subprocess.run(
+        ["ffmpeg", "-hide_banner", "-y", "-i", str(path),
+         "-af", f"adelay={ms}:all=1", "-c:a", "pcm_s16le", str(tmp)],
+        capture_output=True, text=True, encoding="utf-8", errors="replace",
+        timeout=300)
+    if proc.returncode != 0:
+        raise StageError(f"head-silence pad failed: {proc.stderr.strip()[-300:]}")
+    tmp.replace(path)
+
+
 def synthesize_voice(*, text: str, out_dir: Path, cfg: dict[str, Any]) -> dict[str, Any]:
     log(f"waiting for CosyVoice at {cfg['base_url']} ...")
     health = sd.wait_for_service(cfg["base_url"], int(cfg["wait_s"]))
@@ -925,8 +966,11 @@ def synthesize_voice(*, text: str, out_dir: Path, cfg: dict[str, Any]) -> dict[s
         sd.apply_tempo(raw_path, final_path, tempo)
     else:
         shutil.copyfile(raw_path, final_path)
+    head_ms = int(cfg.get("voice_head_silence_ms") or 0)
+    pad_head(final_path, head_ms)
     final_s = sd.probe_duration(final_path)
-    log(f"voice: raw {raw_s:.2f}s -> {final_s:.2f}s (tempo {tempo:.2f}x)")
+    log(f"voice: raw {raw_s:.2f}s -> {final_s:.2f}s (tempo {tempo:.2f}x, "
+        f"head silence {head_ms}ms)")
     return {
         "text": text,
         "tts_text": tts_text,
@@ -936,6 +980,7 @@ def synthesize_voice(*, text: str, out_dir: Path, cfg: dict[str, Any]) -> dict[s
         "path": rel(final_path),
         "final_seconds": round(final_s, 3),
         "tempo": round(tempo, 4),
+        "head_silence_ms": head_ms,
         "prompt_wav": rel(prompt_path) if prompt_wav else "",
         "voice_speaker": speaker,
         "service": {k: health.get(k) for k in
@@ -1249,8 +1294,13 @@ def stage_voice(*, out_dir: Path, cfg: dict[str, Any], text: str,
         voice_info = synthesize_voice(text=text, out_dir=out_dir, cfg=cfg)
 
     voice_ms = round(float(voice_info["final_seconds"]) * 1000)
+    # The head silence is baked into narration.wav, so the timeline lead must be
+    # zero; otherwise picture-vs-voice pre-roll becomes 200 + 600 ms.
+    timeline_cfg = cfg
+    if int(voice_info.get("head_silence_ms") or 0) > 0:
+        timeline_cfg = {**cfg, "lead_ms": 0}
     try:
-        timeline = plan_timeline(voice_ms, cfg)
+        timeline = plan_timeline(voice_ms, timeline_cfg)
     except ValueError as exc:
         raise VoiceWindowError(
             str(exc), voice_ms=voice_ms,
@@ -1473,9 +1523,9 @@ def build_cfg(args: argparse.Namespace) -> dict[str, Any]:
         "intro_style": getattr(args, "intro_style", "classic"),
     }
     if cfg["intro_style"] == "poster":
-        # Full poster mode targets 7-9 s (hard cap 9.5 s): keep the voice at
-        # <=8.5 s so lead 200 + tail 250 still lands at 8.95 s.
-        cfg["voice_budget_ms"] = min(int(args.voice_budget_ms), 8500)
+        # Poster mode now targets 12-18 s: keep the voice under 16 s so a long
+        # line still lands inside the 20 s ceiling.
+        cfg["voice_budget_ms"] = min(int(args.voice_budget_ms), 16000)
     return cfg
 
 
@@ -1562,7 +1612,7 @@ def main(argv: list[str] | None = None) -> int:
     if not re.fullmatch(r"#[0-9a-fA-F]{6}", cfg["accent"]):
         print("config error: --accent must be #RRGGBB", file=sys.stderr)
         return 2
-    if cfg["min_duration_ms"] < 1000 or cfg["max_duration_ms"] > 15000:
+    if cfg["min_duration_ms"] < 1000 or cfg["max_duration_ms"] > 30000:
         print("config error: duration window looks wrong", file=sys.stderr)
         return 2
     if cfg["min_duration_ms"] >= cfg["max_duration_ms"]:

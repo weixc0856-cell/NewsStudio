@@ -52,7 +52,7 @@ POST /tts/upload -> multipart：text + prompt_wav 文件（也接受 speaker 字
   `rm.cosyvoice(preset_voice=True)` 自动选择 SFT 模型。
 - 请求里带 `speaker` 就走 `inference_sft`，优先于 `prompt_wav`；未知音色返回 400
   并列出可用列表。
-- **片头默认音色 = 中文男**（`generate_intro.DEFAULTS["voice_speaker"]`）；
+- **片头默认音色 = 中文女**（`generate_intro.DEFAULTS["voice_speaker"]`，2026-10-29 切换）；
   配音切片（`synthesize_dub.py`）默认仍走 zero-shot 克隆，两者互不影响。
 - 模型只取 CPU 推理必需文件（llm/flow/hift/campplus/speech_tokenizer_v1/spk2info，约 2.2 GB），
   跳过 jit/trt 的 zip 与 fp32 onnx（完整包 5.36 GB）。
@@ -138,6 +138,7 @@ uv run python scripts/auto_clip.py --srt ... --video ... --reuse-analysis `
 | 3 集成 | `auto_clip --dub-dir` 单遍完成烧字幕 + 鸭音：366.170s（目标 366.135s，+35 ms），验收通过；`result.json` = SUCCESS，clip-02 无导读时自动走原链路 |
 | 3 集成电平 | 片头 −23.7 dB、导读结束 16.5s 处 −33.0 dB、60s 处 −32.1 dB（与原片一致） |
 | SFT 片头（2026-10-29） | 中文男：raw 9.892s → tempo 1.15× → 8.605s，窗口 9071ms，增益 ×2.95 归一到 −20 dB，峰值约 −2.1 dB |
+| 女声片头（2026-10-29） | 中文女：新文案 raw 8.557s → 加 0.6s 前导 → 9.157s；语音起点 0.58s，首词 −19.4 dB；计划窗口 9407ms |
 
 回归测试：`test_auto_clip.py`（12）、`test_merge_highlights.py`（6）、`test_dub_mix.py`（8）。
 

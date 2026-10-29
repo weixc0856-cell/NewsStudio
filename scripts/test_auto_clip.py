@@ -75,7 +75,9 @@ class FilterTests(unittest.TestCase):
         }
         self.windows = [{"index": 0, "cue_ids": [1, 2]}, {"index": 1, "cue_ids": [3, 4]}]
         self.cfg = dict(ac.DEFAULTS)
-        self.cfg.update(prefer_min_ms=240_000, prefer_max_ms=360_000)
+        # These tests exercise the filter logic, not the 1-minute defaults.
+        self.cfg.update(min_clip_ms=180_000, max_clip_ms=600_000,
+                        prefer_min_ms=240_000, prefer_max_ms=360_000)
 
     def test_ownership_and_timestamp_match(self) -> None:
         bad = {"source_window": 0, "start_cue_id": 1, "end_cue_id": 3,
@@ -210,9 +212,12 @@ class BoundaryTests(unittest.TestCase):
                 "start_ms": 0, "start_cue_id": 1}
         self.assertLess(ac.rank_key(good, cfg), ac.rank_key(weak, cfg))
 
-    def test_defaults_allow_ten_minutes(self) -> None:
-        self.assertEqual(ac.DEFAULTS["max_clip_ms"], 600_000)
-        self.assertEqual(ac.DEFAULTS["prefer_max_ms"], 420_000)
+    def test_defaults_target_one_minute_clips(self) -> None:
+        self.assertEqual(ac.DEFAULTS["min_clip_ms"], 45_000)
+        self.assertEqual(ac.DEFAULTS["max_clip_ms"], 90_000)
+        self.assertEqual(ac.DEFAULTS["prefer_min_ms"], 50_000)
+        self.assertEqual(ac.DEFAULTS["prefer_max_ms"], 70_000)
+        self.assertEqual(ac.DEFAULTS["max_clips"], 5)
 
 
 class PromptTests(unittest.TestCase):
@@ -220,8 +225,8 @@ class PromptTests(unittest.TestCase):
         cues = [ac.Cue(1, 0, 1_000, "hello.", "")]
         win = ac.Window(0, 0, 1_000, [1])
         prompt = ac.build_prompt(win, cues, dict(ac.DEFAULTS))
-        for token in ("问题明确", "结论完整", "解释充分", "可追溯",
-                      "10 分钟", "3 分钟", "闭环", "summary", "优先 4–7 分钟"):
+        for token in ("独立成句", "论点单一", "结论完整", "信息密度", "可追溯",
+                      "1 分钟", "3–5 条", "summary"):
             self.assertIn(token, prompt)
         self.assertIn("start_cue_id", prompt)
 
@@ -235,7 +240,7 @@ class ExtendTests(unittest.TestCase):
         record = {"start_cue_id": 1, "end_cue_id": 2, "duration_ms": 60_000}
         prompt = ac.build_extend_prompt(win, cues, record, dict(ac.DEFAULTS))
         self.assertIn("60.0 秒", prompt)
-        self.assertIn("180–420 秒", prompt)
+        self.assertIn("50–70 秒", prompt)
         self.assertIn('{"end_cue_id"', prompt)
 
     def test_call_extend_model_parses_and_validates(self) -> None:
@@ -280,7 +285,8 @@ class AnalyzeExtendTests(unittest.TestCase):
 
     def test_short_candidate_is_extended_once(self) -> None:
         cfg = {**ac.DEFAULTS, "base_url": "http://x", "model": "fake",
-               "max_clips": 1, "srt_path": ac.ROOT / "subtitles/x.srt"}
+               "max_clips": 1, "srt_path": ac.ROOT / "subtitles/x.srt",
+               "min_clip_ms": 180_000, "max_clip_ms": 600_000}
         short = {"start_cue_id": 1, "end_cue_id": 2,
                  "title": "CPU", "summary": "supply"}
         with mock.patch.object(ac, "call_model",
@@ -289,7 +295,7 @@ class AnalyzeExtendTests(unittest.TestCase):
             analysis = ac.analyze(self.cues(), cfg, "vid", None)
         self.assertTrue(analysis["windows"][0]["extended"])
         self.assertEqual(analysis["candidates_raw"][0]["end_cue_id"], 3)
-        self.assertGreaterEqual(analysis["candidates_raw"][0]["duration_ms"], 180_000)
+        self.assertGreaterEqual(analysis["candidates_raw"][0]["duration_ms"], 45_000)
         self.assertEqual(extend.call_count, 1)
 
     def test_hard_reject_candidate_is_not_extended(self) -> None:
@@ -316,14 +322,16 @@ class SoftClampTests(unittest.TestCase):
         }
 
     def test_clamps_to_nearest_terminal_under_prefer(self) -> None:
-        end = ac.soft_clamp_end(1, 4, self.cues(), dict(ac.DEFAULTS))
+        cfg = {**ac.DEFAULTS, "min_clip_ms": 180_000, "prefer_max_ms": 420_000}
+        end = ac.soft_clamp_end(1, 4, self.cues(), cfg)
         self.assertEqual(end, 2)
 
     def test_returns_none_without_terminal_in_range(self) -> None:
         cues = {1: ac.Cue(1, 0, 120_000, "Question?", ""),
                 2: ac.Cue(2, 120_000, 300_000, "and more...", ""),
                 3: ac.Cue(3, 300_000, 450_000, "still going...", "")}
-        self.assertIsNone(ac.soft_clamp_end(1, 3, cues, dict(ac.DEFAULTS)))
+        cfg = {**ac.DEFAULTS, "min_clip_ms": 180_000, "prefer_max_ms": 420_000}
+        self.assertIsNone(ac.soft_clamp_end(1, 3, cues, cfg))
 
 
 class OverlapTests(unittest.TestCase):
@@ -360,7 +368,9 @@ class OverlapTests(unittest.TestCase):
         c = {"source_window": 2, "start_cue_id": 3, "end_cue_id": 3,
              "start_ms": 944_175, "end_ms": 1_160_060, "duration_ms": 215_885,
              "title": "c", "summary": "c"}
-        kept, removed = ac.filter_candidates([a, b, c], windows, cues, dict(ac.DEFAULTS))
+        cfg = {**ac.DEFAULTS, "min_clip_ms": 180_000, "max_clip_ms": 600_000,
+               "prefer_min_ms": 240_000, "prefer_max_ms": 420_000}
+        kept, removed = ac.filter_candidates([a, b, c], windows, cues, cfg)
         self.assertEqual([cand["start_cue_id"] for cand in kept], [1, 3])
         # the long overlapping candidate loses to the independent topic, then
         # is removed because it overlaps that topic by more than 0.4
@@ -374,7 +384,9 @@ class AnalyzeSoftClampTests(unittest.TestCase):
                 ac.Cue(2, 120_000, 300_000, "Answer.", ""),
                 ac.Cue(3, 300_000, 547_000, "Conclusion.", "")]
         cfg = {**ac.DEFAULTS, "base_url": "http://x", "model": "fake",
-               "max_clips": 1, "srt_path": ac.ROOT / "subtitles/x.srt"}
+               "max_clips": 1, "srt_path": ac.ROOT / "subtitles/x.srt",
+               "min_clip_ms": 180_000, "max_clip_ms": 600_000,
+               "prefer_min_ms": 240_000, "prefer_max_ms": 420_000}
         short = {"start_cue_id": 1, "end_cue_id": 1, "title": "t", "summary": "s"}
         with mock.patch.object(ac, "call_model",
                                return_value=(short, [{"ok": True}])),              mock.patch.object(ac, "call_extend_model",
