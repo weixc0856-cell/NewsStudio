@@ -92,6 +92,7 @@ SRT / ASS 双语字幕、术语表、思维导图、精炼笔记可同步沉淀�
 | Dylan Patel：2026 年的数据中心（Daytona） | 25:04 | 1080p60 | 中英硬字幕，317 条 | 第 21 期正片（CPU / 算力瓶颈） |
 | Waymo：Compute in Motion（Hot Chips 2026） | 1:04:03 | 1080p60 | 中英硬字幕，810 条 | 第 22 期正片（车规算力 / 物理 AI） |
 | ICRA 2026 机器人学习四讲（David Hsu / Tellex / Jaquier / Giordano） | 1:25:30 | 1080p24 | 中英硬字幕，1015 条 | 第 23 期正片（机器人学习 / 物理 AI 理论） |
+| 黄仁勋 × BG2 Pod（AI 收入与资本开支） | 1:39:53 | 1080p30 | 中英硬字幕，1663 条 | 第 24 期正片（算力经济 / 2027 瓶颈） |
 | 十七期对应的无字幕原片 | 33:00 | 4K 2160p30 | 无字幕 | 二次剪辑、切片、重新配字幕 |
 | 双语 SRT / ASS | — | — | 英上中下 | 简介时间戳、网站资料 |
 
@@ -222,6 +223,7 @@ SRT / ASS 双语字幕、术语表、思维导图、精炼笔记可同步沉淀�
 | 第 21 期 | Dylan Patel：2026 年的数据中心（CPU / RL 环境 / 智能体） | [ep21-dylan-patel-datacenter-2026.md](episodes/ep21-dylan-patel-datacenter-2026.md) | 已完成，三方验证通过 |
 | 第 22 期 | Waymo：Compute in Motion（Hot Chips 2026） | [ep22-waymo-hot-chips-2026.md](episodes/ep22-waymo-hot-chips-2026.md) | 已完成，三方验证通过 |
 | 第 23 期 | ICRA 2026 机器人学习四讲（开放世界 / 语言 / 几何 / 鲁棒性） | [ep23-icra2026-robot-learning.md](episodes/ep23-icra2026-robot-learning.md) | 已完成，三方验证通过 |
+| 第 24 期 | 黄仁勋 × BG2 Pod：AI 收入撑得起资本开支吗（2027 瓶颈 / 开源与闭源） | [ep24-jensen-huang-bg2-capex-2026.md](episodes/ep24-jensen-huang-bg2-capex-2026.md) | 已完成，三方验证通过 |
 
 **新增一期的流程**
 
