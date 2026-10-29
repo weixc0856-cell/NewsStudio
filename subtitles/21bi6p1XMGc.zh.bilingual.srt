@@ -1,0 +1,2589 @@
+1
+00:00:00,020 --> 00:00:02,706
+Mark Russinovich: Good afternoon, everybody.
+马克·鲁西诺维奇：下午好，各位。
+
+2
+00:00:02,740 --> 00:00:03,714
+Ion Stoica: Good afternoon.
+伊翁·斯托伊卡：下午好。
+
+3
+00:00:08,000 --> 00:00:10,130
+Mark Russinovich: So it's good to see you all here at Build.
+马克·鲁西诺维奇：很高兴在 Build 大会上见到大家。
+
+4
+00:00:10,130 --> 00:00:11,540
+I'm Mark Russinovich.
+我是马克·鲁西诺维奇。
+
+5
+00:00:11,540 --> 00:00:13,170
+Ion Stoica: And I am Ion Stoica.
+我是伊翁·斯托伊卡。
+
+6
+00:00:13,204 --> 00:00:19,110
+Mark Russinovich: And we've got kind of a fireside chat today, but it's a fireside chat where we don't have a moderator.
+马克·鲁西诺维奇：今天我们有个类似炉边谈话的环节，不过这次没有主持人。
+
+7
+00:00:19,110 --> 00:00:20,340
+We're moderating ourselves.
+我们正在自我监管。
+
+8
+00:00:20,340 --> 00:00:27,360
+So, we're going to be talking through a bunch of questions related to AI, AI infrastructure, models,
+接下来我们将围绕人工智能、AI基础设施、模型以及AI架构等方面展开
+
+9
+00:00:27,360 --> 00:00:32,790
+architectures for AI, and it should be a pretty engaging conversation.
+一系列问题的讨论，这场对话应该会非常引人入胜。
+
+10
+00:00:32,790 --> 00:00:33,270
+Ion Stoica: I hope so.
+伊翁·斯托伊卡：希望如此。
+
+11
+00:00:33,270 --> 00:00:39,960
+Mark Russinovich: Yeah. So, I think we can start by talking a little bit of our background and why we're up here talking about these subjects.
+马克·鲁西诺维奇：是的，我想我们可以先简单聊一下我们的背景，以及我们为什么会上台来讨论这些话题。
+
+12
+00:00:39,960 --> 00:00:49,650
+So, Ion, you've got a background where you've had some amazing impact on the industry in data analytics, in AI, in your role as a professor,
+所以，伊翁，你的背景非常出色，在数据 analytics、人工智能领域，作为教授和初创公司创始人，你对行业产生了深远影响，
+
+13
+00:00:49,650 --> 00:00:56,310
+in your role as a startup founder, Ray, vLLM, Databricks, Spark.
+比如雷、vLLM、Databricks、Spark。
+
+14
+00:00:56,310 --> 00:00:59,880
+Why don't you tell us a little bit about your background?
+你能不能跟我们简单说一下你的背景？
+
+15
+00:00:59,880 --> 00:01:05,520
+Ion Stoica: Yeah, so actually, starting around 15 years ago, at Berkeley,
+伊翁·斯托伊卡：是的，实际上大约从15年前开始，
+
+16
+00:01:05,520 --> 00:01:08,740
+we started to develop a little bit more,
+我们在伯克利
+
+17
+00:01:09,960 --> 00:01:17,880
+quite a bit of systems, a few systems, initially in the space of domain of big data.
+就开始开发一些系统，最初主要集中在大数据领域。
+
+18
+00:01:17,880 --> 00:01:21,450
+And started initially with Mesos and Spark.
+最初从 Mesos 和 Spark 开始。
+
+19
+00:01:21,450 --> 00:01:26,880
+Then after that, Ray, and more recently, vLLM and Golang.
+然后是雷，最近还有 vLLM 和 Golang。
+
+20
+00:01:26,880 --> 00:01:35,160
+And I think, as a high level, we're always looking about, obviously, trying to understand and to figure
+我认为从高层来看，我们始终在关注，显然要理解并弄清楚你试
+
+21
+00:01:35,160 --> 00:01:42,600
+out what is a problem you try to solve; and also, a little bit careful about the trends.
+图解决的问题是什么，同时也对趋势保持一定的谨慎。
+
+22
+00:01:42,600 --> 00:01:50,220
+What I mean by that, a problem you have today, is that problem going to be bigger tomorrow than today?
+我所说的，是指你今天面临的问题，明天会不会比今天更严重？
+
+23
+00:01:50,220 --> 00:01:51,475
+And, you know like,
+而且你知道，
+
+24
+00:01:51,508 --> 00:02:02,220
+things like, obviously, Spark was scaling up data analytics and making more interactive,
+比如，Spark 明显在扩展数据处理能力，让分析更加互动，
+
+25
+00:02:02,220 --> 00:02:09,120
+and much better support iterative kind of patterns like machine learning,
+也大大提升了对机器学习这类迭代模式的支持。
+
+26
+00:02:09,120 --> 00:02:18,750
+then Ray, complex scaling, complex AI workloads like reinforcement learning on heterogeneous hardware back then.
+然后是雷，复杂的扩展，当时在异构硬件上进行强化学习等复杂的人工智能工作负载。
+
+27
+00:02:18,750 --> 00:02:28,900
+And, of course, vLLM is to us is clear that trying to exploit the power limits inherent of the GPUs.
+当然，对我们来说，vLLM 明确地指出了试图突破 GPU 固有算力限制的方向。
+
+28
+00:02:28,934 --> 00:02:32,280
+But then the memory became-- it was a bottleneck.
+但后来内存变成了瓶颈。
+
+29
+00:02:32,280 --> 00:02:35,703
+So, trying to alleviate that bottleneck and things like that.
+所以，试图缓解这种瓶颈以及其他类似问题。
+
+30
+00:02:35,737 --> 00:02:47,610
+The one thing I want to say, because we are at the Microsoft conference here, is that I'm very happy that, actually, some of the things we've done has impact also
+我想说的是，既然我们正在微软的大会上，我很高兴我们的一些工作，实际上也对我们的合作与
+
+31
+00:02:47,644 --> 00:02:51,420
+with our kind of collaboration and partnerships.
+伙伴关系产生了积极影响。
+
+32
+00:02:51,420 --> 00:03:00,007
+As you know, Spark and kind of Databricks, great, fantastic partnerships with Azure Databricks.
+正如大家所知，Spark 和 Databricks 与 Azure Databricks 的合作非常出色，堪称典范。
+
+33
+00:03:00,041 --> 00:03:08,409
+And actually, today, we also announced a partnership between Azure and Anyscale, and Anyscale is around Ray.
+实际上，今天我们也宣布了 Azure 和 Anyscale 之间的合作，而 Anyscale 是围绕 Ray 构建的。
+
+34
+00:03:08,443 --> 00:03:16,590
+So, yes, very happy about that and very much looking forward to this partnership to grow.
+是的，对此非常高兴，也非常期待这一合作能够不断壮大。
+
+35
+00:03:16,590 --> 00:03:17,280
+Mark Russinovich: Likewise, yeah.
+马克·鲁西诺维奇：同样如此，没错。
+
+36
+00:03:17,280 --> 00:03:18,510
+It's been an awesome partnership.
+这是一段非常棒的合作。
+
+37
+00:03:18,544 --> 00:03:20,496
+Ion Stoica: Yeah. So, you know,
+伊翁·斯托伊卡：是的，
+
+38
+00:03:20,530 --> 00:03:32,610
+on my side, you know, you you Mark, you have so much contributions, you know. You ship CC internals, then-- Mark Russinovich: Have you ever used these internals, Ion?
+你知道的，从我这边来说，你，马克，你做出了这么多贡献，你知道的。你负责了CC的内部开发，然后——   马克·鲁西诺维奇：你用过这些内部组件吗，伊翁？
+
+39
+00:03:32,610 --> 00:03:33,899
+I'm putting him on the spot.
+我让他难堪了。
+
+40
+00:03:33,933 --> 00:03:35,002
+How many people have used it?
+有多少人用过它？
+
+41
+00:03:35,036 --> 00:03:42,495
+Ion Stoica: But you architected Azure infrastructures, which I did use.
+伊翁·斯托伊卡：但你们设计了 Azure 的基础设施，我确实用过。
+
+42
+00:03:42,529 --> 00:03:51,402
+And then you are now building and architecting AI infrastructure for Azure, and security are leading.
+现在你正在为 Azure 构建和设计 AI 基础设施，安全是首要考虑。
+
+43
+00:03:51,436 --> 00:03:58,813
+So, one question I have, you've seen all these kind of phases, and you've been in distributed systems for a long time and security.
+所以，我有个问题，你经历了这么多阶段，长期从事分布式系统和安全领域，有什么看法？
+
+44
+00:03:58,847 --> 00:04:02,910
+So, what is new and what is old?
+那么，什么是新的，什么是旧的？
+
+45
+00:04:02,944 --> 00:04:07,714
+What still applies and why is no longer applying?
+仍然适用的是什么？为什么现在不再适用了？
+
+46
+00:04:07,748 --> 00:04:09,622
+Mark Russinovich: Yeah, well, that's a good question.
+马克·鲁西诺维奇：嗯，这是个好问题。
+
+47
+00:04:09,656 --> 00:04:19,672
+I think one of the things that still holds, and this holds, I think, you'll even say for infrastructure and systems, is the fundamentals are still in place.
+我认为有一件事依然成立，这一点无论在基础设施还是系统层面都依然适用，那就是基本要素仍然稳固。
+
+48
+00:04:19,706 --> 00:04:27,010
+I think if you take a look at fundamentally what's changed, it's these non-deterministic systems that are now carrying out workflows that they create on the fly.
+我认为，从根本上说，变化在于这些非确定性系统现在能够实时创建并执行工作流程。
+
+49
+00:04:27,044 --> 00:04:35,907
+And that introduces a bunch of new risk area. You know, we -- In some sense, humans are non-deterministic agents creating workflows on the fly.
+这带来了许多新的风险领域。从某种意义上说，人类是非确定性智能体，会实时创造工作流程。
+
+50
+00:04:35,941 --> 00:04:38,008
+But humans you can hold accountable.
+但人类是可以被追责的。
+
+51
+00:04:38,042 --> 00:04:44,370
+Also, humans, I think in general, are more reliable than the AI systems we have today, and certainly,
+此外，我认为人类总体上比当今的AI系统更可靠，而且在涉及人类时，
+
+52
+00:04:44,370 --> 00:04:49,380
+when it comes to humans, we designed our systems around human speed and scale.
+我们的系统设计始终围绕人类的速度和规模展开。
+
+53
+00:04:49,380 --> 00:04:56,730
+And when you have agents now that are intelligent running around, they can perform lots of damage in a very short period of time.
+现在当智能体四处运行时，它们能在极短时间内造成大量破坏。
+
+54
+00:04:56,730 --> 00:05:04,050
+So I think if we get into it a little bit later, we'll talk about some of the things like prompt injection risks around that,
+所以我认为，如果我们稍后深入探讨一下，会谈到一些相关风险，比如提示注入风险、
+
+55
+00:05:04,050 --> 00:05:13,260
+risks around jailbreaking, risks around hallucination; all of those things can cause workflows to go awry and for the system to not behave as you intend.
+越狱风险以及幻觉问题；所有这些都可能导致工作流出错，使系统无法按你的预期运行。
+
+56
+00:05:13,260 --> 00:05:18,060
+Ion Stoica: Yeah, and what about this kind of-- and you mentioned about the fundamentals still remain,
+伊翁·斯托伊卡：对，那这种——你提到基本原理仍然成立，
+
+57
+00:05:18,060 --> 00:05:23,520
+but again, to be more precise about concepts like consensus,
+但再具体一点说，像共识、一致性，
+
+58
+00:05:23,520 --> 00:05:28,470
+consistency, this kind of distributed scheduling,
+以及这种分布式调度的概念，
+
+59
+00:05:28,470 --> 00:05:37,505
+which of these concepts kind of remain more or less the same, and which are changing and morphing in support to support new orbit.
+这些概念中，哪些基本保持不变，哪些正在发生变化并随之演进以适应新的轨道。
+
+60
+00:05:37,539 --> 00:05:46,140
+Mark Russinovich: Yeah. Well, and I think you know we talk about AI and running these agent workloads, and you talk about the LLMs and hosting the LLMs.
+马克·鲁西诺维奇：对，而且我认为我们谈到了人工智能，以及运行这些智能体工作负载，还有大语言模型，以及部署大语言模型的问题。
+
+61
+00:05:46,140 --> 00:05:53,340
+The things like the consensus around the infrastructure, knowing what is available and online.
+基础设施方面的共识，了解哪些资源可用且在线。
+
+62
+00:05:53,340 --> 00:05:55,200
+Things like load balancing still matters.
+负载均衡之类的问题依然重要。
+
+63
+00:05:55,200 --> 00:05:56,820
+Locality matters still.
+局部性依然重要。
+
+64
+00:05:56,820 --> 00:06:01,814
+So you want to route requests, especially when you talk about KV caches, which is the context.
+所以你想路由请求，尤其是谈到键值缓存时，也就是上下文。
+
+65
+00:06:01,848 --> 00:06:04,860
+You need to make sure that the requests are going back to the same systems.
+你必须确保请求能返回到相同的系统。
+
+66
+00:06:04,860 --> 00:06:09,540
+Otherwise, you're going to be wasting compute and bandwidth as you're moving things around.
+否则，你将白白浪费算力和带宽，因为数据在不断移动。
+
+67
+00:06:09,540 --> 00:06:11,700
+So all of those things still apply.
+因此，所有这些情况依然适用。
+
+68
+00:06:11,700 --> 00:06:17,010
+I think, and this is an interesting question, I think, for you.
+我认为，这是一个有趣的问题，我想问问你。
+
+69
+00:06:17,010 --> 00:06:18,390
+Are these systems stateless?
+这些系统是无状态的吗？
+
+70
+00:06:18,390 --> 00:06:21,250
+Do you consider them stateless or stateful?
+你认为它们是无状态的还是有状态的？
+
+71
+00:06:23,430 --> 00:06:26,117
+Ion Stoica: I think it very much depends.
+伊翁·斯托伊卡：我认为这很大程度上取决于具体情况。
+
+72
+00:06:26,151 --> 00:06:35,670
+Certainly, because I will also, I win as a serverless trend.
+当然，因为我也会顺势而为，成为无服务器趋势的赢家。
+
+73
+00:06:35,670 --> 00:06:42,270
+I think that quite a few systems become more stateful.
+我认为，相当多的系统会变得更加有状态。
+
+74
+00:06:42,270 --> 00:06:55,140
+That is because just the trend of bringing the state in and saving the state if needed for the next operation, in some cases, it's too high.
+这是因为，有时为了在下一次操作中需要，将状态带入并保存状态，这种趋势过高了。
+
+75
+00:06:55,140 --> 00:07:00,810
+And it's not only the state, leading the state and saving the state, it's initializing, right?
+而且不只是状态——加载状态、保存状态——还有初始化，对吧？
+
+76
+00:07:00,810 --> 00:07:07,350
+If you are talking about initializing the GPUs and so forth, it can take a long time.
+如果你在讨论初始化显卡之类的事情，可能需要很长时间。
+
+77
+00:07:07,350 --> 00:07:12,060
+So this forces you to be marked more stateful.
+这迫使你必须具备更强的状态感知能力。
+
+78
+00:07:12,060 --> 00:07:16,680
+The problem with that is that it complicates, like we all know, the fault tolerance.
+问题在于，这会增加容错的复杂性，这一点我们都很清楚。
+
+79
+00:07:16,680 --> 00:07:17,950
+Mark Russinovich: Yeah.
+马克·鲁西诺维奇：是的。
+
+80
+00:07:19,440 --> 00:07:27,240
+So when it comes to these distributed infrastructures for AI, which include the GPUs, high bandwidth interconnections,
+在AI的分布式基础设施方面，包括GPU、高带宽互连和KV缓存，
+
+81
+00:07:27,240 --> 00:07:35,760
+the KV cache, when you look at distributed systems through its evolution, what assumptions change
+当我们审视分布式系统的发展历程时，支撑这类计算的架
+
+82
+00:07:35,760 --> 00:07:39,100
+with an architecture to support this kind of computation?
+构究竟带来了哪些假设上的改变？
+
+83
+00:07:39,100 --> 00:07:44,970
+Ion Stoica: So, I think it very much --great question -- very much depends on where you are coming from.
+伊翁·斯托伊卡：我认为这很大程度上取决于你从什么角度出发。
+
+84
+00:07:44,970 --> 00:07:50,550
+So you're coming from Spark, it's like big data.
+所以你是从 Spark 来的，那玩意儿就是大数据。
+
+85
+00:07:50,550 --> 00:07:53,670
+It's about, it's like, MapReduce plus plus.
+它就像是，MapReduce 的升级版。
+
+86
+00:07:53,670 --> 00:08:00,750
+It's bulk synchronous processing, which is a model, which is a pretty simple model.
+它是批量同步处理，这是一种相当简单的模型。
+
+87
+00:08:00,750 --> 00:08:02,400
+You partition the data.
+你对数据进行划分。
+
+88
+00:08:02,400 --> 00:08:03,960
+You have stages at every stage.
+你在每个阶段都有相应的阶段。
+
+89
+00:08:03,960 --> 00:08:10,140
+You have applied the same task on different partitions and do a shuffle between them.
+你在不同的分区上执行了相同的任务，并在它们之间进行了打乱。
+
+90
+00:08:10,140 --> 00:08:20,190
+What happens with, for instance, you talk about KV cache and inference, things are becoming so much more coupled, tightly coupled.
+比如你提到的键值缓存和推理，这些部分之间的关联变得越来越紧密。
+
+91
+00:08:20,190 --> 00:08:33,840
+If you think about mixture of experts and then you have the KV cache and you need to distribute it across different GPUs on the same node and even across nodes,
+如果你考虑专家混合模型，再加上键值缓存，需要将其分布在同一节点内的不同GPU上，甚至跨节点分布，
+
+92
+00:08:33,840 --> 00:08:43,618
+then it's things are becoming-- everything becoming much more coupled and more difficult because of that.
+那么事情就变得——所有部分之间的耦合度更高，难度也更大了。
+
+93
+00:08:43,652 --> 00:08:49,418
+Now, if you come from maybe HPC, maybe you can say, "I told you so."
+现在，如果你来自高性能计算领域，或许可以说一句：“我就说吧。”
+
+94
+00:08:49,452 --> 00:08:50,190
+Mark Russinovich: Yeah.
+马克·鲁西诺维奇：是的。
+
+95
+00:08:50,190 --> 00:08:58,889
+Ion Stoica: But even there I think that with HPC, it was much more -- you don't have such a . . .
+伊翁·斯托伊卡：但即便如此，我认为在高性能计算领域，情况要明确得多——你不会遇到那种……
+
+96
+00:08:59,295 --> 00:09:03,896
+tightly coupling between the data and, kind of. . .
+数据与……之间紧密耦合
+
+97
+00:09:04,994 --> 00:09:08,760
+-- and the compute.
+以及算力。
+
+98
+00:09:08,760 --> 00:09:17,070
+Because even there, the data was -- you know, you don't have actually-- in traditional HPC, you don't have a lot of data to start with.
+因为即使在那里，数据也——你知道，传统高性能计算中，实际上一开始的数据并不多。
+
+99
+00:09:17,070 --> 00:09:19,080
+Because you do simulations, right?
+因为你做的是仿真，对吧？
+
+100
+00:09:19,080 --> 00:09:20,160
+And things like that, right?
+还有这类事情，对吧？
+
+101
+00:09:20,160 --> 00:09:22,912
+This was kind of the workload.
+这基本上就是工作负载。
+
+102
+00:09:22,946 --> 00:09:24,885
+So I think that's kind of what it is.
+所以我认为大概就是这样。
+
+103
+00:09:24,919 --> 00:09:28,319
+And this creates a lot of challenges.
+这带来了许多挑战。
+
+104
+00:09:28,353 --> 00:09:40,102
+And since even you're talking about load balancing, things are changing so much more quickly if you think about expert parallel load balancing.
+而且既然连你都在讨论负载均衡，那么如果你考虑专家级的并行负载均衡，变化的速度就更快了。
+
+105
+00:09:40,136 --> 00:09:48,301
+Because you can change from layer to layer when you go in the forward pass to do the inference to do serving.
+因为在前向传播进行推理或服务时，你可以逐层切换。
+
+106
+00:09:48,335 --> 00:09:56,655
+And the other thing what happens, I'll probably talk more about that, is that things are evolving so quickly, right?
+还有另一件事，我可能稍后会多讲一些，就是事物发展得实在太快了，对吧？
+
+107
+00:09:56,689 --> 00:09:59,820
+By the time you build something, you have new requirements. It's never ending.
+当你真正开始构建时，需求又发生了变化，永远没有尽头。
+
+108
+00:09:59,820 --> 00:10:01,090
+Mark Russinovich: Yeah.
+马克·鲁西诺维奇：是的。
+
+109
+00:10:02,280 --> 00:10:04,370
+Ion Stoica: Yeah.
+伊翁·斯托伊卡：是的。
+
+110
+00:10:04,370 --> 00:10:08,960
+So, we have this kind of, I remember like it was 15 years,
+我记得大概10到15年前，
+
+111
+00:10:08,960 --> 00:10:19,500
+10, 15 years ago when people started the cloud computing and so forth, and people are saying the data center is a new computer.
+人们刚开始接触云计算之类的技术，当时大家就说，数据中心就是一台全新的计算机。
+
+112
+00:10:19,500 --> 00:10:32,940
+I'm just curious right now, is that kind of abstraction still of actuality because now you can have training spanning different
+我现在只是好奇，这种抽象方式现在还有实际意义吗？因为现在你可以让训练跨越不同的可用区，
+
+113
+00:10:32,940 --> 00:10:35,790
+availability zones and things like that.
+诸如此类。
+
+114
+00:10:35,790 --> 00:10:37,110
+I'm curious about that.
+我很好奇这一点。
+
+115
+00:10:37,110 --> 00:10:41,190
+Mark Russinovich: I mean, I think if you take a look when that statement was made,
+马克·鲁西诺维奇：我的意思是，如果你回顾一下那句话提出时的背景，
+
+116
+00:10:41,190 --> 00:10:47,220
+it was when a data center would hold all the compute that you could imagine in the data centers at that time.
+当时数据中心所能容纳的计算能力，就是那个时代人们所能想象到的全部计算能力了。
+
+117
+00:10:47,220 --> 00:10:57,320
+Even if you take a look at the evolution of Azure as a hyperscaler, the availability zone kind of became a unit of compute, but even in an availability zone,
+即使你看看 Azure 作为超大规模云服务商的演进历程，可用区逐渐成为计算的基本单位，但在一个可用区内，
+
+118
+00:10:57,320 --> 00:10:58,790
+we have multiple data centers typically.
+通常也包含多个数据中心。
+
+119
+00:10:58,790 --> 00:11:01,940
+It's not just one data center per an availability zone.
+一个可用区并不只是一个数据中心。
+
+120
+00:11:01,940 --> 00:11:04,950
+Then you have a region, you have multiple availability zones.
+然后你有一个区域，里面包含多个可用区。
+
+121
+00:11:04,950 --> 00:11:12,210
+So even for traditional IT workloads or serverless computing, your application can be spread across many data centers.
+即使是传统的IT工作负载或无服务器计算，你的应用也能分布在多个数据中心。
+
+122
+00:11:12,210 --> 00:11:20,730
+And now, you mentioned distributed training and AI training, and that's where you run into these AI super factories as we call them,
+现在，你提到了分布式训练和AI训练，这就涉及我们所说的AI超级工厂，
+
+123
+00:11:20,730 --> 00:11:26,940
+where you've got massive datacenters just filled with GPUs specifically to host that training workload.
+那里有巨大的数据中心，专门塞满GPU，用来承载训练任务。
+
+124
+00:11:26,940 --> 00:11:38,220
+And for that, we passed the line several years ago of a single datacenter being enough to hold the scale of the AI supercomputers that we're building now to train these frontier models.
+为此，我们多年前就已经突破了一个界限——单个数据中心已无法容纳当前我们用于训练前沿模型的AI超级计算机的规模。
+
+125
+00:11:38,220 --> 00:11:47,850
+And then over the last couple of years, we've crossed a line of even one region of datacenters is not big enough to train these models.
+而在过去几年里，我们已经跨过了一道界限——单个区域的数据中心已不足以训练这些模型。
+
+126
+00:11:47,850 --> 00:11:54,720
+And now we have these Fairwater systems that we've launched these AI super factories where there are multiple Fairwaters in Wisconsin,
+现在我们推出了Fairwater系统，这些AI超级工厂分布在威斯康星州和亚特兰大，
+
+127
+00:11:54,720 --> 00:12:05,490
+multiple in Atlanta, and they're connected with a dedicated network so that you can have a job that spans the GPUs across both regions with a very direct cable
+两地各有多个Fairwater节点，并通过专用网络连接，使您能够跨两个区域的GPU运行任务，两地之间通过直接电缆实现RDMA，
+
+128
+00:12:05,490 --> 00:12:10,230
+between them doing RDMA across the two regions.
+连接极为高效。
+
+129
+00:12:10,230 --> 00:12:11,580
+Ion Stoica: Yeah, it's fascinating.
+伊翁·斯托伊卡：是的，这非常有趣。
+
+130
+00:12:11,580 --> 00:12:18,210
+Now, going back again, like we discussed a little bit about serverless, right? The serverless-- Mark Russinovich: My favorite services.
+现在，我们再回到之前的话题，就像我们刚才简单讨论过的无服务器架构一样，对吧？无服务器——马克·鲁西诺维奇：我最喜欢的那些服务。
+
+131
+00:12:18,210 --> 00:12:22,579
+Ion Stoica: Yeah. So, what what does it mean in. . .
+伊翁·斯托伊卡：嗯，所以这到底意味着什么呢……
+
+132
+00:12:22,612 --> 00:12:32,790
+this kind of-- when you have today's long-lived agents, which can go hours, sometimes days?
+这种长期运行的智能体，可以持续运行数小时，有时甚至数天，就是这样的。
+
+133
+00:12:32,790 --> 00:12:40,800
+Mark Russinovich: Well, if you talk about serverless, it's kind of people speak about it synonymously with containers.
+马克·鲁西诺维奇：如果你谈论无服务器架构，人们往往把它和容器混为一谈。
+
+134
+00:12:40,800 --> 00:12:42,960
+Serverless equals containers.
+无服务器即容器。
+
+135
+00:12:42,960 --> 00:12:47,970
+And when people think containers, they think the original serverless containers,
+当人们想到容器时，会想到最初的无服务器容器，比如 Lambda
+
+136
+00:12:47,970 --> 00:12:51,840
+which were like Lambda or Azure Functions,
+或 Azure Functions，
+
+137
+00:12:51,840 --> 00:13:00,330
+which are short-lived, and so people conflate serverless with short-lived applications or pieces of code,
+这些容器都是短时运行的，因此人们往往把无服务器等同于短时运行的应用程序或代码片段。
+
+138
+00:13:00,330 --> 00:13:05,580
+when in fact serverless doesn't have an opinion about what code runs in these containers,
+事实上，无服务器架构并不关心这些容器里运行什么代码，
+
+139
+00:13:05,580 --> 00:13:10,810
+and so you could put SQL Server inside of a container, and it can run for years.
+因此你完全可以把 SQL Server 放进容器里，让它运行多年。
+
+140
+00:13:11,850 --> 00:13:13,230
+And it also can be monstrous.
+而且它也可能极其可怕。
+
+141
+00:13:13,230 --> 00:13:15,090
+It can have terabytes of memory.
+它可以拥有数TB的内存。
+
+142
+00:13:15,090 --> 00:13:18,660
+So I think for me, I separate the two.
+我觉得对我来说，这两者是分开的。
+
+143
+00:13:18,660 --> 00:13:23,250
+And I say serverless is you don't worry about the infrastructure, it is containerized for the most part,
+我说的无服务器，就是你不用操心基础设施，基本上是容器化的，尽管我们现在也在
+
+144
+00:13:23,250 --> 00:13:30,270
+although we talk about lightweight containers now and Wasm sandboxes which are also a form of serverless.
+讨论轻量级容器和 WebAssembly沙箱，它们也属于无服务器的一种形式。
+
+145
+00:13:30,270 --> 00:13:38,700
+But that's where I think the whole trend-- if you take a look at Azure's architectural evolution, we're moving everything to serverless.
+但我觉得整个趋势是这样——如果你看看 Azure 架构的演进，我们正在把所有东西都转向无服务器。
+
+146
+00:13:38,700 --> 00:13:50,590
+We're moving the whole infrastructure to containers that are on a serverless infrastructure that is doing the scheduling and placement and for the job, which is expressing constraints.
+我们正将整个基础设施迁移到容器中，这些容器运行在无服务器基础设施上，由该基础设施负责作业的调度与部署，并表达出各项约束条件。
+
+147
+00:13:52,950 --> 00:13:56,100
+Ion Stoica: So now continuing on that note.
+伊翁·斯托伊卡：那么，接下来我们继续这个话题。
+
+148
+00:13:56,100 --> 00:14:07,920
+We have our infra, we build these infrastructures mostly to serve requests initiated by people directly or via BI tools and things like that.
+我们拥有自己的基础设施，这些基础设施主要是为了响应人们直接发起的请求，或是通过商业智能工具等途径发起的请求而构建的。
+
+149
+00:14:07,920 --> 00:14:19,920
+But now we are moving rapidly to an age of agents, to having agent loops instead of just requests as a unit of work.
+但现在我们正迅速进入一个智能体的时代，工作单元将从单纯的请求转变为智能体循环。
+
+150
+00:14:19,920 --> 00:14:25,860
+How does this impact, do you think, about architecture stack?
+这会对架构栈产生什么影响，你认为呢？
+
+151
+00:14:25,860 --> 00:14:33,480
+Mark Russinovich: Well, I think we're still at the early days of this, actually, because just in the last few years, we went from chat
+马克·鲁西诺维奇：实际上，我认为我们仍处于这一领域的早期阶段，因为就在近几年，我们已经从聊天系
+
+152
+00:14:33,480 --> 00:14:42,060
+to now agentic systems, which are this loop where the agents are talking to other systems as part of their computation.
+统发展到了如今的代理式系统，这类系统的特点是智能体在计算过程中会与其他系统进行交互。
+
+153
+00:14:42,060 --> 00:14:43,830
+And they might even be talking to other agents.
+它们甚至可能在与其他智能体交流。
+
+154
+00:14:43,830 --> 00:14:56,610
+And so when it comes to how you define an agentic application that consists of these things, I think we're still in the early days of specifying the application model for these.
+因此，当我们谈到如何定义一个由这些要素组成的代理式应用时，我认为我们仍处于为这类应用明确应用模型的早期阶段。
+
+155
+00:14:56,610 --> 00:14:58,380
+And a lot of it is, I think, still ad hoc.
+而且我觉得其中大部分仍然很随意。
+
+156
+00:14:58,380 --> 00:15:01,980
+But we're getting towards what is an agentic application?
+但我们正逐渐接近什么是代理式应用了。
+
+157
+00:15:01,980 --> 00:15:05,940
+What are the components? How do you place them for efficiency?
+组件有哪些？如何布局才能实现高效？
+
+158
+00:15:05,940 --> 00:15:11,550
+How do you automatically deploy them instead of taking piecemeal and deploying and connecting them together after the fact?
+你如何实现自动部署，而不是事后零散地部署并手动连接它们？
+
+159
+00:15:11,550 --> 00:15:13,860
+So in my opinion, I think that we're still early.
+依我看来，我认为我们仍处于早期阶段。
+
+160
+00:15:13,860 --> 00:15:16,720
+But I'd be curious to hear about what you think?
+但我很好奇，想听听你的看法。
+
+161
+00:15:19,200 --> 00:15:21,960
+Ion Stoica: So, yeah, I think we are early.
+伊翁·斯托伊卡：是的，我认为我们还处于早期阶段。
+
+162
+00:15:21,960 --> 00:15:26,850
+The one thing I see is that constant increase in complexity.
+我看到的唯一一点，就是复杂性持续增加。
+
+163
+00:15:26,850 --> 00:15:27,540
+Mark Russinovich: That's for sure.
+马克·鲁西诺维奇：这一点毫无疑问。
+
+164
+00:15:27,540 --> 00:15:32,850
+Ion Stoica: Even the definition of agents, what is an agent?
+伊翁·斯托伊卡：就连“智能体”的定义本身，什么是智能体，都还存在争议。
+
+165
+00:15:32,850 --> 00:15:36,570
+Well, was an agent an LLM invoking a tool?
+那么，智能体就是调用工具的大型语言模型吗？
+
+166
+00:15:36,570 --> 00:15:39,000
+But now it's much more than that.
+但现在它已经远远不止于此了。
+
+167
+00:15:39,000 --> 00:15:42,570
+You have a tool, you have an entire harnessing, right?
+你有一个工具，还有一个完整的运行框架，对吧？
+
+168
+00:15:42,570 --> 00:15:44,820
+Which can be very complex, right?
+这可能非常复杂，对吧？
+
+169
+00:15:44,820 --> 00:15:52,140
+So now, and then you are talking about some kind of continual learning.
+所以现在，你提到的是一种持续学习。
+
+170
+00:15:52,140 --> 00:15:58,890
+People talk more and more whether this happens in context, continuously evolving the prompt.
+人们越来越频繁地讨论，这种情况是否会在上下文中发生，并持续不断地演化提示。
+
+171
+00:15:58,890 --> 00:16:02,490
+And in some cases even updating the weights, right?
+在某些情况下，甚至需要更新权重，对吧？
+
+172
+00:16:02,490 --> 00:16:05,490
+So kind of like RL.
+有点像强化学习。
+
+173
+00:16:05,490 --> 00:16:16,179
+So, and then you have this kind of, you need something to support very diverse and complex. . .
+所以，你需要某种东西来支撑极其多样且复杂的场景。
+
+174
+00:16:16,212 --> 00:16:19,110
+you know, application.
+你知道，应用。
+
+175
+00:16:19,110 --> 00:16:22,620
+You need to do, for sure, kind of the inference,
+你肯定需要进行推理，
+
+176
+00:16:22,620 --> 00:16:31,620
+then basically arbitrary application-- running arbitrary application because that's part of the harnessing, right?
+然后运行任意应用程序，因为这正是智能体运行框架的一部分，对吧？
+
+177
+00:16:31,620 --> 00:16:38,730
+And then maybe you are going also to do some kind of training if you want to update the policy.
+然后，如果你想更新策略，可能还需要进行某种训练。
+
+178
+00:16:38,730 --> 00:16:40,410
+And so that's kind of things.
+所以，大概就是这些事。
+
+179
+00:16:40,410 --> 00:16:45,660
+And when you have the models, of course, you can have the models which is going to be co-located.
+当你拥有这些模型时，当然也可以拥有就近部署的模型。
+
+180
+00:16:45,660 --> 00:16:50,490
+It has to be co-located because if you want to update it,
+它必须就近部署，因为如果你需要更新它，
+
+181
+00:16:50,490 --> 00:16:55,050
+or it just can be something running outside,
+或者让它在外部运行，
+
+182
+00:16:55,050 --> 00:16:59,790
+it can be like OpenAI or like a new model that's released by Microsoft.
+也可以是像 OpenAI 这样的服务，或者是微软发布的新模型。
+
+183
+00:16:59,790 --> 00:17:02,820
+So that's kind of, it's so complex.
+所以这有点复杂，真的非常复杂。
+
+184
+00:17:02,820 --> 00:17:08,720
+So you need to think-- to have something which is very flexible to support these workloads.
+所以你需要思考——需要一种非常灵活的方案来支撑这些工作负载。
+
+185
+00:17:08,720 --> 00:17:11,360
+And yeah, I think that we'll see.
+是的，我觉得我们将会看到。
+
+186
+00:17:11,360 --> 00:17:16,460
+I assume that in time, things will stabilize one way or another, but we are very early.
+我相信随着时间推移，事情终将稳定下来，但目前我们仍处于非常早期的阶段。
+
+187
+00:17:16,460 --> 00:17:22,579
+Mark Russinovich: Yeah. So one of the things that I'd be really curious to hear your thoughts on,
+马克·鲁西诺维奇：是的。有一件事我非常好奇，想听听你的看法，
+
+188
+00:17:22,612 --> 00:17:25,920
+in the systems that we've designed, they've largely been deterministic.
+我们设计的这些系统，基本上都是确定性的。
+
+189
+00:17:25,920 --> 00:17:29,160
+You design the system, you've got a workload, you optimize for it.
+你设计系统，面对具体工作负载，就针对它进行优化。
+
+190
+00:17:29,160 --> 00:17:31,920
+These systems are inherently non-deterministic, as we talked about.
+这些系统本质上是不确定的，正如我们之前讨论的那样。
+
+191
+00:17:31,920 --> 00:17:32,430
+Ion Stoica: Yep.
+伊翁·斯托伊卡：没错。
+
+192
+00:17:32,430 --> 00:17:36,160
+Mark Russinovich: And so how does that change the way you design a system?
+马克·鲁西诺维奇：那么，这如何改变你设计系统的方式呢？
+
+193
+00:17:38,250 --> 00:17:41,370
+Ion Stoica: That's a great question.
+伊翁·斯托伊卡：这是个很棒的问题。
+
+194
+00:17:41,370 --> 00:17:48,120
+And just to be clear, it's one of the reasons they are non-deterministic because, obviously, the LLMs themselves are non-deterministic.
+顺便说清楚一点，这正是它们具有非确定性的原因之一，因为显然，大语言模型本身就是非确定性的。
+
+195
+00:17:48,120 --> 00:17:53,880
+If you send the same prompt over and over again, you shouldn't expect, or you are not going to expect the same results.
+如果你反复发送相同的提示，就不应该或不会得到相同的结果。
+
+196
+00:17:53,880 --> 00:18:02,220
+Actually, in some cases, you rely on that to get diversity in order to get better solutions.
+实际上，在某些情况下，你需要依赖这一点来实现多样性，从而获得更好的解决方案。
+
+197
+00:18:02,220 --> 00:18:08,190
+So I think it's like there are a few things to consider.
+所以我认为有几点需要考虑。
+
+198
+00:18:08,190 --> 00:18:13,740
+One, first of all, what eventually, what is your output?
+首先，最终你的输出是什么？
+
+199
+00:18:13,740 --> 00:18:21,890
+And in some cases, like with coding and so forth, the artifact can be still deterministic, right?
+在某些情况下，比如编程之类，生成的成果仍然可以是确定性的，对吧？
+
+200
+00:18:21,890 --> 00:18:29,420
+You use this to create, to optimize the system, to synthesize even a system, and that one kind of is deterministic.
+你用它来创建、优化系统，甚至合成整个系统，而这种做法是确定性的。
+
+201
+00:18:29,420 --> 00:18:36,870
+You can have harnessing tests and so forth to check, and then you can have metrics to high hill-climb.
+你可以进行各种测试来验证，然后通过指标来衡量其高难度爬坡能力。
+
+202
+00:18:36,870 --> 00:18:39,810
+If you want to optimize, optimize for throughput, for latency.
+如果你想优化，就应优化吞吐量和延迟。
+
+203
+00:18:39,810 --> 00:18:43,080
+So the output is still kind of deterministic.
+因此，输出仍然具有一定的确定性。
+
+204
+00:18:43,080 --> 00:18:50,900
+I think now this doesn't answer the question about how you debug your kind of evolution systems or agentic system.
+我认为现在这并没有回答如何调试你的演化系统或代理式系统这个问题。
+
+205
+00:18:50,900 --> 00:18:55,430
+And unfortunately, there, it's like, you have to presumably,
+不幸的是，你得先记录下输入、
+
+206
+00:18:55,430 --> 00:19:04,640
+and what you do is, record the inputs and outputs and the traces and then try to replace the traces, right, to find what the problem is if there is a problem.
+输出和运行轨迹，然后尝试替换这些轨迹，以排查问题所在，如果确实存在问题的话。
+
+207
+00:19:04,640 --> 00:19:05,940
+Mark Russinovich: Yeah.
+马克·鲁西诺维奇：是的。
+
+208
+00:19:07,200 --> 00:19:19,830
+So when you talk about an AI stack, you talk about GPUs, network, you talk about different types of accelerators.
+所以当你谈论AI架构时，你是在谈论GPU、网络，以及各种类型的加速器。
+
+209
+00:19:19,830 --> 00:19:25,800
+Where do you see the optimizations happening, the most important ones?
+你认为最重要的优化会出现在哪里？
+
+210
+00:19:25,800 --> 00:19:31,620
+Or have we reached some limit someplace where there's the bottleneck that we need to focus on?
+还是说我们已经达到了某个极限，存在一个需要重点关注的瓶颈？
+
+211
+00:19:31,620 --> 00:19:34,860
+Ion Stoica: I think clearly it will happen.
+伊翁·斯托伊卡：我认为这显然会发生。
+
+212
+00:19:34,860 --> 00:19:40,190
+I think there are three. . .
+我认为有三个。
+
+213
+00:19:40,223 --> 00:19:43,560
+levels of optimizations will happen.
+优化层级将陆续展开。
+
+214
+00:19:43,560 --> 00:19:46,890
+At the top level, there will be many algorithmic optimizations still.
+在最高层级，仍将存在许多算法优化。
+
+215
+00:19:46,890 --> 00:19:55,290
+So I assume that a few orders of magnitude improvement over the next few years will come from the algorithms.
+因此我预计，未来几年内，算法将带来几个数量级的提升。
+
+216
+00:19:55,290 --> 00:20:03,960
+What I mean by algorithms, if you look like, for instance, just inference or training, right now, of course, the workload changes, you have agents.
+我所说的算法，比如你看看，目前的推理或训练，当然工作负载在不断变化，你已经有了智能体。
+
+217
+00:20:03,960 --> 00:20:08,550
+You have much larger prompts or, of course, outputs.
+你的提示词或输出内容要大得多。
+
+218
+00:20:08,550 --> 00:20:11,280
+The context, again, is much larger.
+上下文，再次强调，要大得多。
+
+219
+00:20:11,280 --> 00:20:13,800
+You see a lot of optimizations.
+你看到了很多优化。
+
+220
+00:20:13,800 --> 00:20:21,330
+And architectural optimizations, software architecture, like, for instance, sparse attention, different kinds of attention.
+还有架构优化，比如软件架构中的稀疏注意力、各种类型的注意力机制。
+
+221
+00:20:21,330 --> 00:20:24,000
+You see different layers, different attentions.
+你看，不同的层，不同的注意力机制。
+
+222
+00:20:24,000 --> 00:20:27,090
+And now you see even within the same layer different attentions.
+现在你看到，即使在同一层中，注意力机制也各不相同。
+
+223
+00:20:27,090 --> 00:20:31,110
+Even maybe you'll have per-token learned attentions and things like that.
+甚至你可能还会拥有按词元学习的注意力机制之类的东西。
+
+224
+00:20:31,110 --> 00:20:34,890
+So that's kind of what can give you a big improvement.
+这就是能带来显著提升的关键所在。
+
+225
+00:20:34,890 --> 00:20:38,760
+Of course, this comes with a lot of complexity.
+当然，这会带来大量的复杂性。
+
+226
+00:20:38,760 --> 00:20:51,590
+Then, obviously, you are going to have GPUs, the accelerators, which are going to still make progress, 1.5 or 1.6 every year improvements.
+然后，显然你将拥有GPU，也就是加速器，它们仍将持续进步，每年提升1.5到1.6倍。
+
+227
+00:20:51,590 --> 00:20:57,950
+And that's coming, again, with complexity because it's not like Moore's law used to be, right?
+而且这即将到来，再次伴随着复杂性，因为它不再像过去那样遵循摩尔定律了，对吧？
+
+228
+00:20:57,950 --> 00:21:02,420
+The instructions that architecture is more or less the same.
+架构的指令基本上是一样的。
+
+229
+00:21:02,420 --> 00:21:12,690
+How you get these improvements, a lot of them is by adding new instructions which are targeting particularly new segments of the workload
+这些性能提升的实现方式，很大程度上是通过增加新的指令来达成的，这些指令专门针对工作负载中的新细分领域。
+
+230
+00:21:12,690 --> 00:21:20,580
+like I expect you are going to have more and more instructions in the GPUs to target this kind of sophisticated attentions.
+例如，我预计未来GPU中会加入越来越多的指令，以专门应对这类复杂的注意力机制。
+
+231
+00:21:20,580 --> 00:21:26,100
+And then, from the inherent, this will go a little bit slower.
+然后，从其内在特性来看，这个过程会稍微慢一点。
+
+232
+00:21:26,100 --> 00:21:35,330
+You are still going to have smaller transistors; you are going to still be more power-efficient for the power per flops will improve and things like that.
+你仍然会拥有更小的晶体管，每瓦特浮点运算性能将不断提升，能效比也会持续提高。
+
+233
+00:21:35,330 --> 00:21:37,550
+But these are multiplicative, right?
+但这些是相乘的，对吧？
+
+234
+00:21:37,550 --> 00:21:45,210
+So when you multiply them, you can get massive gains in the next few years.
+因此，当它们相乘时，未来几年你就能获得巨大的收益。
+
+235
+00:21:45,210 --> 00:21:47,370
+Mark Russinovich: Okay, I have another question for you.
+马克·鲁西诺维奇：好吧，我再问你一个问题。
+
+236
+00:21:47,370 --> 00:21:56,850
+Because you've been involved so much with open source in AI infrastructure and analytics, do you see a canonical open source-based stack?
+由于你在 AI 基础设施和分析领域深度参与开源，你是否看到了一个标准的开源技术栈？
+
+237
+00:21:56,850 --> 00:22:01,206
+And do you think it will converge or there will be diversity?
+你觉得它会趋于统一，还是会保持多样性？
+
+238
+00:22:03,099 --> 00:22:11,580
+Ion Stoica: I think that there is some stack which is used by companies.
+伊翁·斯托伊卡：我认为有些技术栈是公司普遍使用的。
+
+239
+00:22:11,580 --> 00:22:20,970
+There is like-- and, you see-- you have at the lower level Kubernetes or Slurm.
+底层有 Kubernetes 或 Slurm。
+
+240
+00:22:20,970 --> 00:22:31,500
+Under the hood, if you want to move, because everyone now has to want to have the freedom to make a move across regions or from region to region, maybe you have something like SkyPilot.
+背后，如果你想移动，因为现在每个人都希望拥有跨区域或在区域间自由移动的自由，你可能需要像 SkyPilot 这样的工具。
+
+241
+00:22:31,500 --> 00:22:39,840
+On top of that, you have to have some framework like Ray or Pathways or something like that, which helps you
+除此之外，你还需要某种框架，比如 Ray 或 Pathways 之类的，
+
+242
+00:22:39,840 --> 00:22:45,150
+to distribute this kind of AI workloads; then obviously you have PyTorch and so forth.
+来帮助你分发这类 AI 工作负载；然后显然还需要 PyTorch 等工具。
+
+243
+00:22:45,150 --> 00:22:53,460
+So I think you can put together this kind of stack, and then you have vLLM, or Golang, whatever, TensorRT-LLM as an inference layer.
+所以我认为你可以搭建这样一个技术栈，然后使用 vLLM 或 Golang，或者用 TensorRT-LLM 作为推理层。
+
+244
+00:22:53,460 --> 00:22:58,260
+And then post-training, you have kind of WELL or SkyRL, and things like that, right?
+然后是后训练阶段，比如 WELL 或 SkyRL 之类的，对吧？
+
+245
+00:22:58,260 --> 00:23:00,540
+So you can create a stack, and you have a stack.
+所以你可以创建一个堆栈，你已经有了一个堆栈。
+
+246
+00:23:00,540 --> 00:23:02,070
+I think a pretty good stack.
+我觉得这是一个相当不错的技术栈。
+
+247
+00:23:02,070 --> 00:23:14,280
+The question is about what will happen and how this kind of stack will evolve because it's like the one thing
+问题是，未来会发生什么，以及这种技术栈将如何演变。因为在我看来，
+
+248
+00:23:14,280 --> 00:23:24,750
+which I see in terms of complexity increasing is that we used to build-- one of the things you teach students,
+复杂性增加的唯一关键点在于，我们过去是如何构建复杂系统的——这正是我们教学生、
+
+249
+00:23:24,750 --> 00:23:29,880
+right, and we learn ourselves that how do you build a complex system?
+也是我们自己学到的东西。
+
+250
+00:23:29,880 --> 00:23:32,730
+You build this kind of in a modular way, right?
+你是以模块化方式来构建这种东西的，对吧？
+
+251
+00:23:32,730 --> 00:23:40,050
+So you have these components with nice abstractions, clean abstractions which abstract away the implementation, right?
+所以你有这些组件，它们具有良好的抽象，清晰的抽象，能够隐藏实现细节，对吧？
+
+252
+00:23:40,050 --> 00:23:45,180
+So then you can evolve each of them independently.
+这样你就可以独立地演化它们每一个。
+
+253
+00:23:45,180 --> 00:23:49,679
+Now, the problem with that-- and this is when we are talking about these layers and all these components,
+现在的问题是，当我们讨论这些层级和所有组件时，这个问题在于，
+
+254
+00:23:49,712 --> 00:23:54,810
+the problem with that is that, as we know, it also comes with some overhead.
+正如我们所知，它也带来了额外的开销。
+
+255
+00:23:54,810 --> 00:24:03,930
+And it used to be perfectly fine to say okay, we are going to spend a few percent, 10% overhead had to have this kind of nice available system, because at the end of the day,
+过去说“我们花个几个百分点，10%的开销，只要系统足够好用就行”，这完全没问题，
+
+256
+00:24:03,930 --> 00:24:10,420
+we can be even faster because we are going to evolve these systems, and the system is going to evolve quickly and quicker.
+因为毕竟我们最终能变得更快，这些系统会不断进化，而且进化得越来越快。
+
+257
+00:24:11,550 --> 00:24:18,210
+But now it's like it's so much breaking the layering, and it's called cross-layer optimizations, right?
+但现在它打破了这种分层，这被称为跨层优化，对吧？
+
+258
+00:24:18,210 --> 00:24:22,560
+It's like, this is what I see, everything, right?
+就像这样，我看到的一切，对吧？
+
+259
+00:24:22,560 --> 00:24:34,710
+I don't know, it's like, in some sense, it's like all these layers are going to get crossed and broken.
+我不知道，从某种意义上说，这些层好像都要被交叉和打破。
+
+260
+00:24:34,710 --> 00:24:39,330
+And I see, you can do maybe in an orderly way, but I don't know where you are stopping.
+而且我看到，你可以以一种有条理的方式进行，但我不知道你会在哪儿停下。
+
+261
+00:24:39,330 --> 00:24:43,530
+Is this collaboration between Ray and Kubernetes, with you guys?
+这是你们和雷神之间的合作吗，和 Kubernetes？
+
+262
+00:24:43,530 --> 00:24:54,720
+But what is the thing here is that something like Kubernetes wants to know more information about the applications from Ray to make more intelligent decisions, something like Ray, which is up there.
+但关键在于，像 Kubernetes 这样的系统希望从 Ray 获取更多关于应用的信息，以便做出更智能的决策，而 Ray 正是运行在上面的系统。
+
+263
+00:24:54,720 --> 00:24:58,620
+They want now to have more control to tell Kubernetes what to do. Right?
+他们现在希望拥有更多控制权，以便告诉 Kubernetes 该做什么。对吧？
+
+264
+00:24:58,620 --> 00:25:00,600
+So you can allow that.
+所以你可以允许这样。
+
+265
+00:25:00,600 --> 00:25:07,500
+But I don't know when you stop because, of course, you are no longer going to have these kind of clean, narrow abstractions.
+但我不知道你什么时候会停下，因为显然，你将不再拥有这种清晰而狭窄的抽象概念了。
+
+266
+00:25:07,500 --> 00:25:11,070
+I think that's very interesting.
+我觉得这非常有趣。
+
+267
+00:25:11,070 --> 00:25:14,670
+Mark Russinovich: So, we've got about five minutes left, I think.
+马克·鲁西诺维奇：所以，我想我们大概还剩五分钟。
+
+268
+00:25:14,670 --> 00:25:18,534
+Ion Stoica: Yeah, so. . .
+伊翁·斯托伊卡：嗯，是这样……
+
+269
+00:25:18,576 --> 00:25:23,874
+So, one question I do have for you,
+那么，我有一个问题想请教您，
+
+270
+00:25:24,992 --> 00:25:33,780
+It's how do you think about-- we are talking about the workflows, agents, and so forth.
+您是如何看待工作流程、智能体等这些概念的？
+
+271
+00:25:33,780 --> 00:25:41,250
+Is that, you think about like a boundary, two different kind of patterns of workloads, or you think are--
+你是指像一个边界，两种不同类型的负载模式，还是说——马克·鲁西诺维奇：
+
+272
+00:25:41,250 --> 00:25:43,080
+Mark Russinovich: For agents and-- Ion Stoica: And workflows.
+对于智能体和——伊翁·斯托伊卡：以及工作流。
+
+273
+00:25:43,080 --> 00:25:43,530
+Mark Russinovich: And workflows.
+马克·鲁西诺维奇：还有工作流程。
+
+274
+00:25:43,530 --> 00:25:44,907
+Ion Stoica: Traditionally, what we call them.
+伊翁·斯托伊卡：传统上，我们称之为……
+
+275
+00:25:44,941 --> 00:25:50,370
+Mark Russinovich: You know, the beauty of agents is that they can make workflows dynamically.
+马克·鲁西诺维奇：你知道，智能体的妙处在于，它们能够动态地构建工作流程。
+
+276
+00:25:50,370 --> 00:25:56,340
+And I think that this is, instead of you having to go and prescribe a workflow and write it out,
+我认为，与其让你去指定工作流程并手动编写，不如直接向AI提出一个问题，
+
+277
+00:25:56,340 --> 00:26:05,310
+you can give AI a problem, and it'll go figure out how to execute that task and come up with a workflow dynamically.
+它就能自动找出执行任务的方法，并动态生成相应的工作流程。
+
+278
+00:26:05,310 --> 00:26:13,530
+When I look at those systems, if you've got anything where the workflow is going to be repeated many times,
+当我看到这些系统时，如果你遇到的工作流程需要反复执行，
+
+279
+00:26:13,530 --> 00:26:20,580
+you want to make that deterministic and not rely on an AI to make it up every time you've got the problem.
+就应该让它变得确定性，而不是每次都依赖AI来临时生成，否则你就会遇到问题。
+
+280
+00:26:20,580 --> 00:26:25,830
+So I think where things are not well-defined,
+所以我认为，当事情本身不够明确、
+
+281
+00:26:25,830 --> 00:26:32,880
+where they're very ad hoc, then AI and agents are great for making up the workflows and solving the problem.
+非常随意时，AI 和智能体就特别适合用来创造工作流程并解决问题。
+
+282
+00:26:32,880 --> 00:26:39,240
+But for anything where you've got a repetitive process, you should go try to make it deterministic,
+但凡遇到重复性流程，就应该设法让它变得确定性，
+
+283
+00:26:39,240 --> 00:26:44,820
+because it's going to be much more efficient, much more reliable, and much cheaper.
+这样会更高效、更可靠，也更便宜。
+
+284
+00:26:44,820 --> 00:26:46,500
+So all of those things are going to be true.
+所有这些都会成为现实。
+
+285
+00:26:46,500 --> 00:26:50,760
+And I think that this is where I see people over-rotate on, oh, I can have an agent go do this thing.
+而且我认为，人们在这里过度乐观了，觉得我可以让一个智能体去完成这件事。
+
+286
+00:26:50,760 --> 00:26:54,300
+When I'm like, I look at it and go, actually you could just write a simple workflow.
+当我看到它的时候，我会想，其实你完全可以写一个简单的流程。
+
+287
+00:26:54,300 --> 00:26:56,640
+Ion Stoica: You can have the agent synthesize that workflow.
+伊翁·斯托伊卡：你可以让智能体来合成这个工作流程。
+
+288
+00:26:56,640 --> 00:26:57,300
+Mark Russinovich: That's right.
+马克·鲁西诺维奇：没错。
+
+289
+00:26:57,300 --> 00:26:57,930
+That's right, yeah.
+没错，就是这么回事。
+
+290
+00:26:57,930 --> 00:27:02,310
+That's the other way to do it is have the agents make the workflow, and then the workflow is deterministic.
+另一种做法是让智能体来创建工作流程，这样工作流程就是确定性的了。
+
+291
+00:27:02,310 --> 00:27:04,440
+Ion Stoica: Yep, that's what I mentioned about.
+伊翁·斯托伊卡：对，这就是我之前提到的。
+
+292
+00:27:04,440 --> 00:27:08,310
+Yeah. So the other thing is that we used to have--
+是的。另一个问题是，
+
+293
+00:27:08,310 --> 00:27:14,010
+you have training, and you have serving separate deployments and things like that.
+过去我们通常将训练和推理分开部署，诸如此类。
+
+294
+00:27:14,010 --> 00:27:19,890
+But now with this kind of post-training,
+但现在通过这种后训练，
+
+295
+00:27:19,890 --> 00:27:24,360
+starting even earlier on from reinforcement learning with human feedback.
+甚至可以从带有人类反馈的强化学习阶段更早开始。
+
+296
+00:27:24,360 --> 00:27:29,070
+And now it's continual learning and things like that.
+现在是持续学习，以及类似的技术。
+
+297
+00:27:29,070 --> 00:27:31,710
+It seems that kind of it's a blur out there.
+看起来外面有点模糊。
+
+298
+00:27:31,710 --> 00:27:41,190
+So what should the platform look like -- Mark Russinovich: This is the -- multi-hundred billion dollar question, isn't it?
+那么这个平台应该是什么样子的呢——马克·鲁西诺维奇：这可是个价值数百亿美元的难题，不是吗？
+
+299
+00:27:41,190 --> 00:27:45,210
+I think because we run into two things.
+我认为是因为我们遇到了两个问题。
+
+300
+00:27:45,210 --> 00:27:46,500
+I mean, you heard about Maia.
+我的天，你听说了吗，Maia。
+
+301
+00:27:46,500 --> 00:27:47,400
+Ion Stoica: Yes, of course.
+伊翁·斯托伊卡：是的，当然。
+
+302
+00:27:47,400 --> 00:27:49,980
+Mark Russinovich: And Maia is optimized for inference.
+马克·鲁西诺维奇：而Maia是针对推理进行优化的。
+
+303
+00:27:49,980 --> 00:27:55,260
+Then you hear about NVIDIA's chips, which are optimized, for the most part, their main line for training.
+然后你听说英伟达的芯片，基本上都是为其主力训练产品优化的。
+
+304
+00:27:55,260 --> 00:28:03,870
+And then you mentioned like GRPO or DPO or any of these post-training things that are happening in the loop with it, where you're doing inference
+然后你提到了像 GRPO 或 DPO 这类在训练循环中进行的后训练操作，
+
+305
+00:28:03,870 --> 00:28:06,510
+at the same time you're doing the training.
+也就是在进行推理的同时也在进行训练。
+
+306
+00:28:06,510 --> 00:28:17,130
+And so whenever you've got a situation where you can optimize for efficiency, obviously, that's going to be what you want
+因此，当你遇到可以优化效率的情况时，显然这就是你想要做的，
+
+307
+00:28:17,130 --> 00:28:21,000
+to do, especially at the scales you're at, where you can save literally tens of millions,
+尤其是在你所处的规模下，通过优化某个特定路径，
+
+308
+00:28:21,000 --> 00:28:25,350
+hundreds of millions of dollars by optimizing for some specific path.
+literally 可以节省数百万甚至数千万美元。
+
+309
+00:28:25,350 --> 00:28:32,430
+But when you optimize for that specific path and then things change, and they're not a good fit, that can be a big problem.
+但当你只为特定路径优化，而之后情况发生变化，不再匹配时，问题就可能变得很大。
+
+310
+00:28:32,430 --> 00:28:38,850
+And so it's this tension now because we haven't even-- like you said, the evolution of these architectures hasn't finished.
+因此现在就产生了这种张力，因为我们甚至还没有完成——正如你所说，这些架构的演进尚未结束。
+
+311
+00:28:38,850 --> 00:28:43,560
+And so if you over-optimize for one workload, you could run into trouble.
+因此，如果你过度优化某一项工作负载，可能会遇到麻烦。
+
+312
+00:28:43,560 --> 00:28:52,410
+So the question is, how general should we be and leave money on the table in the short term?
+那么问题来了，我们究竟应该做到多通用，从而在短期内放弃一部分收益？
+
+313
+00:28:52,410 --> 00:29:02,250
+Because in the long term, we're going to be protected against changes in the architecture or in the application requirements versus taking advantage of optimization now
+因为从长远来看，我们能够抵御架构或应用需求变化带来的影响，而如果现在就追求优化，
+
+314
+00:29:02,250 --> 00:29:04,170
+and potentially being bitten by it later.
+未来可能会因此受到反噬。
+
+315
+00:29:04,170 --> 00:29:06,540
+I think that that's the tension that you see.
+我认为这就是你所看到的矛盾所在。
+
+316
+00:29:06,540 --> 00:29:07,202
+Ion Stoica: Absolutely.
+伊翁·斯托伊卡：绝对可以。
+
+317
+00:29:07,245 --> 00:29:07,698
+Mark Russinovich: Yeah.
+马克·鲁西诺维奇：是的。
+
+318
+00:29:08,568 --> 00:29:08,994
+Ion Stoica: Yeah.
+伊翁·斯托伊卡：是的。
+
+319
+00:29:10,200 --> 00:29:16,101
+Mark Russinovich: All right. So, we're down to a couple of minutes left, according to the clock up here.
+马克·鲁西诺维奇：好的，根据上面的时钟显示，我们还剩几分钟了。
+
+320
+00:29:16,135 --> 00:29:19,200
+So I want to thank you for coming and spending time with us at Build.
+感谢大家来到微软 Build 大会，感谢你们抽出时间与我们共度这段时光。
+
+321
+00:29:19,200 --> 00:29:28,410
+Your impact on the industry is monumental, and it's gracious of you to come and take time out of your day to share your thoughts on the evolution of AI infrastructure.
+你对整个行业的影响是里程碑式的，感谢你抽空前来，分享你对AI基础设施演进的见解。
+
+322
+00:29:28,410 --> 00:29:29,310
+Ion Stoica: Yeah, thank you.
+伊翁·斯托伊卡：是的，谢谢。
+
+323
+00:29:29,310 --> 00:29:32,190
+And we haven't touched on-- Mark Russinovich: On Confidential computing.
+而且我们还没谈到——马克·鲁西诺维奇：关于机密计算。
+
+324
+00:29:32,190 --> 00:29:33,600
+Ion Stoica: On confidential computing.
+伊翁·斯托伊卡：关于可信计算。
+
+325
+00:29:33,600 --> 00:29:38,220
+So before going, I know I know that this is a topic dear to your heart, Mark.
+在走之前，我知道这 topic 对你来说意义非凡，马克。
+
+326
+00:29:38,220 --> 00:29:42,107
+So can you say something about like security governance and so forth?
+那你能说一下关于安全治理之类的问题吗？
+
+327
+00:29:42,140 --> 00:29:47,340
+Mark Russinovich: Well, absolutely. I mean, they're all -- from security governance, we didn't really get time to deep dive on this.
+马克·鲁西诺维奇：当然了，他们都是——从安全治理的角度来说，我们其实没时间深入探讨这一点。
+
+328
+00:29:47,340 --> 00:29:51,690
+But when it comes to jailbreaks and prompt injections, I've been doing a lot of research on this.
+但说到越狱和提示注入，我在这方面做了很多研究。
+
+329
+00:29:51,690 --> 00:29:56,970
+This is, like I mentioned earlier, a big topic of evolution where we haven't bottomed out yet.
+正如我之前提到的，这是一个仍在持续演进的大话题，目前尚未见底。
+
+330
+00:29:56,970 --> 00:30:03,030
+I think I view it as kind of the early days when people were downloading stuff from the internet and just your fingers were crossed.
+我觉得这就像早期人们从互联网下载东西时，只能靠祈祷一样。
+
+331
+00:30:03,030 --> 00:30:11,940
+This is what happens now when you give agents access to your company's private data or your private data or your access tokens is you're kind of crossing your fingers
+现在如果你让智能体访问你公司的私有数据、你的个人数据，或者你的访问凭证，就等于在赌运气，
+
+332
+00:30:11,940 --> 00:30:15,900
+and hoping that things don't go off the rails and you end up with a problem.
+祈祷事情不会失控，否则你可能会遇到麻烦。
+
+333
+00:30:15,900 --> 00:30:21,420
+And we've seen some high-profile examples just in the last few months of people getting burned by prompt injections.
+我们最近几个月已经看到一些高调的案例，有人因提示注入而遭受损失。
+
+334
+00:30:21,420 --> 00:30:26,250
+So I don't think we've come to the reckoning yet on that and people understanding the risk.
+所以我认为我们还没有真正意识到其中的风险，也还没到必须面对后果的时候。
+
+335
+00:30:26,250 --> 00:30:31,800
+And then with confidential computing, that is another layer of-- the clock just reset to five minutes.
+然后通过可信计算，又增加了一层——时钟刚刚重置为五分钟。
+
+336
+00:30:31,800 --> 00:30:33,020
+So we've got another five minutes.
+我们还有五分钟时间。
+
+337
+00:30:34,710 --> 00:30:36,340
+Ion Stoica: So now you can, please.
+伊翁·斯托伊卡：现在你们可以了，请。
+
+338
+00:30:37,406 --> 00:30:40,798
+Mark Russinovich: I think backstage they liked the answer so much they wanted me to continue.
+马克·鲁西诺维奇：我觉得后台他们很喜欢这个回答，都想让我继续讲下去。
+
+339
+00:30:43,500 --> 00:30:51,060
+So I can talk a little bit about confidential computing now, which is it's independent of AI, of course, but related in some ways.
+所以我可以稍微谈一下可信计算，它当然与人工智能无关，但在某些方面又有关联。
+
+340
+00:30:51,060 --> 00:30:56,760
+Because if you think about the sensitivity of the data that people are processing with agentic systems,
+因为如果你考虑到人们使用代理式系统处理的数据的敏感性，
+
+341
+00:30:56,760 --> 00:31:02,730
+if it's in a personal context, you're saying, "Hey, I really want you to help me with my medical advice.
+尤其是在个人情境下，你实际上是在说：“嘿，我真的很希望你能帮我做医疗建议。”
+
+342
+00:31:02,730 --> 00:31:05,550
+I want you to help me with my financials."
+我想让你帮我处理一下财务问题。
+
+343
+00:31:05,550 --> 00:31:12,000
+You're giving these agents so much very personal and very sensitive data about yourself.
+你把这些智能体给了太多关于你个人的、非常敏感的数据。
+
+344
+00:31:12,000 --> 00:31:21,780
+And if you're in an enterprise context, the way you get the value out of these models is giving them access to the sensitive data of your enterprise.
+如果你身处企业环境，从这些模型中获取价值的方式，就是让它们访问企业内部的敏感数据。
+
+345
+00:31:21,780 --> 00:31:28,410
+And especially when you're hosting this in a cloud platform or some hoster that's out of your control,
+尤其是在将系统部署在云平台或第三方托管环境，甚至在自己的环境中时，
+
+346
+00:31:28,410 --> 00:31:34,530
+or even in your own environment, you want to minimize the trusted computing base, the code that has access to that data,
+你应尽可能缩小可信计算基，也就是那些能访问数据的代码范围，
+
+347
+00:31:34,530 --> 00:31:41,400
+to the smallest amount possible where you can have the highest assurance that it's going to behave properly and where bad actors can't get to it.
+将其压缩到最小，这样才能最大程度确保其行为正常，同时防止恶意攻击者接触到它。
+
+348
+00:31:41,434 --> 00:31:44,954
+And confidential computing is -- now we've got another. . .
+而机密计算现在又有了新进展。
+
+349
+00:31:46,170 --> 00:31:46,830
+It reset again.
+它又重置了。
+
+350
+00:31:46,830 --> 00:31:47,280
+I was wondering.
+我在想……
+
+351
+00:31:47,280 --> 00:31:49,320
+I was like, wow, we burned through that time really fast.
+我心想，哇，我们这么快就用掉那段时间了。
+
+352
+00:31:49,320 --> 00:31:51,520
+So now we have 13 minutes left.
+现在我们还剩13分钟。
+
+353
+00:31:54,610 --> 00:31:55,600
+So let me just wrap this up.
+那我来总结一下。
+
+354
+00:31:55,600 --> 00:31:58,810
+And I think there were some more topics that we can discuss.
+我觉得我们还可以讨论一些其他话题。
+
+355
+00:31:58,810 --> 00:32:01,180
+And maybe we can take some questions from the audience.
+也许我们可以回答一下观众的提问。
+
+356
+00:32:01,180 --> 00:32:09,690
+But confidential computing, for those of you that aren't familiar with it, it's hardware-based protection of data while it's in use.
+但对不太了解的人来说，机密计算是指在数据使用过程中，通过硬件来保护数据。
+
+357
+00:32:09,690 --> 00:32:19,080
+So the hardware itself is encrypting memory and creating a privileged boundary around the data such that nothing else on the system can get access
+因此，硬件本身会加密内存，并在数据周围创建一个特权边界，使得系统中其他任何部分都无法访问该安全区域内的数据，
+
+358
+00:32:19,080 --> 00:32:22,650
+to what's inside of that enclave, they're called.
+这种区域被称为“飞地”。
+
+359
+00:32:22,650 --> 00:32:26,370
+And it comes with a cool property the hardware provides, which is an attestation,
+它还具备一个出色的特性，即硬件提供的认证功能。
+
+360
+00:32:26,370 --> 00:32:35,670
+where it can measure what's inside the enclave and then the application in that enclave can offer that attestation to another system that then can look at it
+它可以测量飞地内部的内容，随后该飞地内的应用程序可将这一认证信息提供给另一个系统，
+
+361
+00:32:35,670 --> 00:32:41,970
+and say, oh, your compute inside of an enclave, I trust that enclave, I trust your configuration,
+后者可据此判断：哦，我信任你飞地内的计算，我信任你的配置。
+
+362
+00:32:41,970 --> 00:32:48,030
+I'm going to give you a secret, typically a key, which allows you to go and process that data in the clear.
+我给你一个密钥，让你能明文处理这些数据。
+
+363
+00:32:48,030 --> 00:32:55,772
+And it's protected against so many of the threats that not having this enclave protecting that boundary against. And when it comes to agents,
+而且它能抵御许多威胁，这些威胁若没有这个安全区来保护该边界，就会造成风险。谈到智能体时，
+
+364
+00:32:55,806 --> 00:32:59,060
+having an attestation of what is the agent?
+拥有对智能体身份的验证就显得尤为重要。
+
+365
+00:32:59,094 --> 00:33:00,975
+What is its provenance.?
+它的来源是什么？
+
+366
+00:33:01,009 --> 00:33:06,780
+Do I know that the data that I'm giving to the agent is protected with the highest assurance as possible inside that enclave?
+我知道我提供给智能体的数据，在那个安全区内部是否得到了最高级别的保护保障吗？
+
+367
+00:33:06,780 --> 00:33:13,050
+You're going to see a trend with AI and confidential computing that I think is going to really drive forward confidential computing.
+你会看到人工智能与机密计算之间的一种趋势，我认为这将真正推动机密计算的发展。
+
+368
+00:33:13,050 --> 00:33:22,530
+Confidential GPUs from NVIDIA, for example, confidential GPUs from AMD, and even Microsoft's Maia processor.
+例如，英伟达的保密GPU、AMD的保密GPU，甚至微软的马亚处理器。
+
+369
+00:33:22,530 --> 00:33:25,920
+Ion Stoica: Yeah, that's fascinating.
+伊翁·斯托伊卡：是的，这非常有趣。
+
+370
+00:33:25,920 --> 00:33:31,180
+Mark Russinovich: Since we have more time on the clock now, which is kind of nice.
+马克·鲁西诺维奇：现在我们有更多时间了，这感觉还挺不错的。
+
+371
+00:33:36,090 --> 00:33:40,180
+Let me go back to some questions that we skipped earlier for you.
+让我回到之前跳过的一些问题。
+
+372
+00:33:44,730 --> 00:33:48,450
+And I guess this is something we really haven't talked about is developer experience.
+而且我想，这正是我们之前很少谈到的一点，那就是开发者的体验。
+
+373
+00:33:48,450 --> 00:33:53,430
+We've been talking a lot about infrastructure, but you've got all this complexity.
+我们一直在讨论基础设施，但你却面临如此多的复杂性。
+
+374
+00:33:53,430 --> 00:33:57,330
+When it comes to developer experience, there's so many options out there.
+在开发者体验方面，市面上的选择实在太多了。
+
+375
+00:33:57,330 --> 00:34:08,250
+There's GitHub Copilot CLI there's the SDK, there's OpenClaw, like what -- and there's doing your own loop, calling an LLM directly.
+那里有 GitHub Copilot 命令行工具，有 SDK，有 OpenClaw，还有自己写循环，直接调用大语言模型。
+
+376
+00:34:08,250 --> 00:34:11,520
+We saw Simon Willison doing this with his own application.
+我们看到西蒙·威尔森用他自己的应用做了这件事。
+
+377
+00:34:11,520 --> 00:34:14,100
+He didn't use any harness.
+他没有使用任何运行框架。
+
+378
+00:34:14,100 --> 00:34:16,050
+What's the best approach?
+最好的方法是什么？
+
+379
+00:34:16,050 --> 00:34:21,000
+When do you decide, when do you use one harness versus a custom orchestrator?
+什么时候决定使用一个运行框架，什么时候使用自定义的编排器？
+
+380
+00:34:21,000 --> 00:34:25,020
+How do you code this, and how do you measure what's the best answer?
+你该如何编写这段代码，又该如何衡量哪个答案是最优的？
+
+381
+00:34:25,020 --> 00:34:28,620
+And in fact, I wrestle with this too when I'm approaching code.
+事实上，当我面对代码时，我也常常为此困扰。
+
+382
+00:34:28,620 --> 00:34:29,460
+Ion Stoica: And me as well.
+伊翁·斯托伊卡：我也是。
+
+383
+00:34:29,460 --> 00:34:34,480
+But let me just give. . .
+但让我先说一下……
+
+384
+00:34:34,513 --> 00:34:39,291
+So, I think that. . .
+所以，我认为……
+
+385
+00:34:39,325 --> 00:34:48,570
+Look, my TLDR is that now we have, again, very powerful coding agents and so forth.
+说实话，我的总结是，现在我们又有了非常强大的编码智能体等等。
+
+386
+00:34:48,570 --> 00:34:53,508
+And many of you, I'm sure -- how many of you use coding agents?
+我相信在座的各位中有很多人——有多少人正在使用编码智能体？
+
+387
+00:34:53,542 --> 00:34:55,840
+Everyone, right?
+大家都知道，对吧？
+
+388
+00:34:57,554 --> 00:35:08,157
+I do think that -- actually, the biggest challenge is that -- and this is -- it's about how do you know that. . .
+我认为，实际上最大的挑战是……这关乎你如何判断……
+
+389
+00:35:08,190 --> 00:35:16,187
+the code which is generated is going to work correctly for some kind of definition of correctness, right?
+生成的代码在某种意义上的正确性下，将会正确运行，对吧？
+
+390
+00:35:16,221 --> 00:35:20,640
+Is doing what you hope you want to do, right?
+做着你希望做的事，对吧？
+
+391
+00:35:20,640 --> 00:35:23,097
+I think that's the key, right?
+我觉得这才是关键，对吧？
+
+392
+00:35:23,131 --> 00:35:30,257
+And the more code it generates, the harder it is to do that, right? Because --
+它生成的代码越多，就越难做到这一点，
+
+393
+00:35:30,310 --> 00:35:38,710
+-- and I think this was, you know, this is also, was true before, right?
+对吧？因为——而且我认为，这在之前也是成立的，对吧？
+
+394
+00:35:38,744 --> 00:35:43,590
+Everyone here probably developed a production -- -- system, right?
+在座的各位可能都开发过一个生产系统，对吧？
+
+395
+00:35:43,590 --> 00:35:46,320
+Or, has been involved in developing a production system.
+或者，曾参与开发生产系统。
+
+396
+00:35:46,320 --> 00:35:48,540
+Where do you spend most of the time?
+你大部分时间都在哪里度过？
+
+397
+00:35:48,540 --> 00:35:54,603
+You don't spending the time or most of the time in prototyping or writing the code; you do spend the time in, kind of,
+你花在原型设计或编写代码上的时间并不多，
+
+398
+00:35:54,636 --> 00:35:59,220
+even, you know, in debugging, then maintaining the code.
+反而要花大量时间进行调试和维护代码。
+
+399
+00:35:59,220 --> 00:36:01,800
+It's easily 10 to 1 effort.
+这几乎需要十倍的努力。
+
+400
+00:36:01,800 --> 00:36:09,390
+So, in some sense, what these coding agents are doing are going to commoditize that kind of writing the code.
+从某种意义上说，这些编程智能体正在使编写代码这一过程变得像商品一样。
+
+401
+00:36:09,390 --> 00:36:12,000
+But the bottleneck will be more and more in, kind of, verifying.
+但瓶颈将越来越多地出现在验证环节。
+
+402
+00:36:12,000 --> 00:36:20,400
+And, yes, you can use these agents to say, "Hey you-- ", you know,"check that, is that correct?"
+是的，你可以用这些智能体说：“嘿，你，检查一下，这正确吗？”
+
+403
+00:36:20,400 --> 00:36:21,660
+But it's very hard, you know?
+但真的很难，你知道的。
+
+404
+00:36:21,660 --> 00:36:22,885
+Some agents are lazy.
+有些智能体很懒。
+
+405
+00:36:22,918 --> 00:36:29,040
+So, without you understanding the code, at least at this point today, I don't think --
+所以，如果你不理解这段代码，至少目前来说，
+
+406
+00:36:29,040 --> 00:36:38,790
+and having continuously having testing it and enhancing the test, I don't think you can trust that code that is doing what it's supposed to do.
+我认为——即使持续不断地测试并改进测试，你也无法相信这段代码真的能按预期工作。
+
+407
+00:36:38,790 --> 00:36:44,910
+Because that kind of reward hacking is very different from what you can think about.
+因为这种奖励滥用的情况，和你能想到的任何情况都完全不同。
+
+408
+00:36:44,910 --> 00:36:46,350
+Let me give you just one example.
+让我举一个例子。
+
+409
+00:36:46,350 --> 00:36:49,650
+I have so many examples about that, but I'm giving you the simplest one.
+我有很多例子可以说明，但这里只给你最简单的一个。
+
+410
+00:36:49,650 --> 00:36:51,810
+You mentioned earlier about load balancing.
+你之前提到过负载均衡。
+
+411
+00:36:51,810 --> 00:37:01,380
+So, say you are going to say, okay, I want to develop a load balancer algorithms and, you know, for and -- you know, using the agents.
+比如说，你想开发一个负载均衡算法，利用智能体来实现。
+
+412
+00:37:01,380 --> 00:37:07,590
+And we did that, we have that a few months ago using EPLB, right, Expert Parallelism Load Balancer, of course.
+我们当时就是用 EPLB，也就是专家并行负载均衡器，实现了这一点，就在几个月前。
+
+413
+00:37:07,590 --> 00:37:15,393
+And then what you want to do is the metrics, you want this, the load you are going to handle.
+然后你想要做的就是指标，你要确保能处理的负载。
+
+414
+00:37:15,427 --> 00:37:17,520
+You know, you want to maximize that load.
+你知道，你得让负载最大化。
+
+415
+00:37:17,520 --> 00:37:24,289
+Now, one solution is simply, which we've seen, that because that's a metric --
+现在，一个解决方案就是，我们已经看到的那样，
+
+416
+00:37:24,322 --> 00:37:29,310
+the "hill climbs", the load, is just dropping requests.
+因为这是一个指标——“爬坡”、负载，只是在降低请求。
+
+417
+00:37:29,310 --> 00:37:38,940
+Right? Now, you wouldn't think that when you tell someone, even when you write the PRD about the load balancers, "Hey, you shouldn't drop the request."
+对吧？你可能不会想到，当你告诉别人，甚至在写负载均衡器的PRD时，说“嘿，你不该丢弃请求”，这听起来好像很简单。
+
+418
+00:37:38,940 --> 00:37:41,130
+It's that's kind of understandable, right?
+这倒是能理解，对吧？
+
+419
+00:37:41,130 --> 00:37:48,270
+But these models, they are going to do that because they are going to maximize the things you told them to maximize, right?
+但这些模型会那样做，是因为它们会最大化你告诉它们要最大化的东西，对吧？
+
+420
+00:37:48,270 --> 00:37:50,910
+In the simplest and the easiest way.
+最简单、最直接的方式。
+
+421
+00:37:50,910 --> 00:37:52,830
+So that's kind of why I'm saying it, right?
+所以我说这话，大概就是这个原因，对吧？
+
+422
+00:37:52,830 --> 00:37:56,970
+And there are many things which you can pass all the unit tests and so forth.
+而且有很多事情，你可以通过所有的单元测试等等。
+
+423
+00:37:56,970 --> 00:38:06,840
+And then when you look deeper, there are things which are, in a way, overfit to your test you couldn't imagine, right?
+然后当你深入观察时，会发现一些东西，它们在某种程度上已经过度拟合了你的测试集，这是你根本无法想象的，对吧？
+
+424
+00:38:06,840 --> 00:38:10,770
+It's like that's kind of the things you still need to, I think, at this stage.
+我觉得在这个阶段，你仍然需要这些。
+
+425
+00:38:10,770 --> 00:38:17,130
+I don't know what will happen in a few months, in one year, but right now, you have to be able to specify.
+我不知道几个月后、一年后会发生什么，但此刻，你必须能够明确指定。
+
+426
+00:38:17,130 --> 00:38:24,390
+If you didn't specify something, you can almost guarantee that the systems will find something around it.
+如果你没有明确指定某件事，几乎可以肯定系统会找到某种方式绕过去。
+
+427
+00:38:24,390 --> 00:38:27,510
+And there are three places a specification comes from.
+规范有三个来源。
+
+428
+00:38:27,510 --> 00:38:32,190
+So one is, basically -- Actually, there are only two.
+所以一个是，基本上——其实只有两个。
+
+429
+00:38:32,190 --> 00:38:33,295
+And you know, like. . .
+而且你知道嘛，就像……
+
+430
+00:38:33,328 --> 00:38:35,880
+One is that the training data set.
+一个是训练数据集。
+
+431
+00:38:35,880 --> 00:38:39,990
+The training data set, you kind of train, and some specifications come from here.
+训练数据集，你大致上就是基于这个进行训练，一些规格参数就来自这里。
+
+432
+00:38:39,990 --> 00:38:44,940
+Like, for instance, one year ago, when you generated code, you have a lot of vulnerabilities.
+比如，一年前你生成代码时，会存在大量漏洞。
+
+433
+00:38:44,940 --> 00:38:49,020
+Now, you have fewer vulnerabilities when you generate code with agentic.
+现在，当你使用代理式方法生成代码时，漏洞会更少。
+
+434
+00:38:49,020 --> 00:38:51,540
+Right? And the other one is from the prompt.
+对吧？另一个来自提示。
+
+435
+00:38:51,540 --> 00:38:54,330
+You have to specify what it should do or not.
+你必须明确指定它应该做什么或不应该做什么。
+
+436
+00:38:54,330 --> 00:39:02,040
+If it's not in the prompt or it's not in the training data set, it's going to find a way around.
+如果不在提示词里，也不在训练数据集中，它就会想出办法绕过去。
+
+437
+00:39:02,040 --> 00:39:02,970
+Mark Russinovich: It'll fill in the blanks.
+马克·鲁西诺维奇：它会自动补全空白。
+
+438
+00:39:02,970 --> 00:39:06,450
+Ion Stoica: Yeah, so that's kind of, I think, that's, I think, the main bottleneck.
+伊翁·斯托伊卡：是的，我认为这基本上就是主要瓶颈。
+
+439
+00:39:07,076 --> 00:39:09,969
+Mark Russinovich: All right. So, now we really have six minutes, and I'll give you a question that I --
+马克·鲁西诺维奇：好了，现在我们真正还有六分钟，
+
+440
+00:39:10,002 --> 00:39:16,500
+that I think is the -- the question that I get a lot, and I've got my own opinion about this, but I'm curious about yours.
+我来问大家一个我经常被问到的问题，也是我自己的看法，但我很好奇你们的想法。
+
+441
+00:39:16,500 --> 00:39:17,640
+Ion Stoica: So you'll answer it after I answer it.
+伊翁·斯托伊卡：那等我回答完，你再回答。
+
+442
+00:39:17,640 --> 00:39:19,760
+Mark Russinovich: Yeah, I'll answer it.
+马克·鲁西诺维奇：嗯，我来回答。
+
+443
+00:39:19,760 --> 00:39:27,000
+And this is, I talk to people, and I explain I've got so many war stories of AI going off the rails.
+而且我跟人聊的时候，会讲起我有太多关于AI失控的惊险故事了。
+
+444
+00:39:27,000 --> 00:39:30,480
+I mean, me and Scott, we have got this podcast.
+我的天，我和斯科特有档播客。
+
+445
+00:39:30,480 --> 00:39:33,870
+I talk about how I basically sculpt, which I always have.
+我谈的是我一直以来基本上都是在进行雕塑创作。
+
+446
+00:39:33,870 --> 00:39:36,060
+But even with AI, I'm watching what it's doing.
+但即使有了AI，我也会盯着它在做什么。
+
+447
+00:39:36,060 --> 00:39:38,820
+I'm control seeing it.
+我控制着，看到了。
+
+448
+00:39:38,820 --> 00:39:41,460
+I'm telling it, "That's not what I want you to do."
+我跟它说：“那不是我想要你做的事。”
+
+449
+00:39:41,460 --> 00:39:50,030
+And I see it creating this test or going off in some direction, filling in the blanks with something that is ridiculous or that I don't want.
+我看到它在进行测试，或者偏离了方向，填入一些荒谬或我不想要的内容。
+
+450
+00:39:50,030 --> 00:39:52,130
+And I tell people this and I say,
+我跟人们说，
+
+451
+00:39:52,130 --> 00:40:01,040
+you just can't give it a prompt or a PRD and expect that you're going to get a system that works reliably and efficiently and does all the things
+你不能只给个提示或一份产品需求文档，就指望能获得一个可靠、高效，
+
+452
+00:40:01,040 --> 00:40:03,620
+that you imagine you would want it to do.
+还能实现你所有设想功能的系统。
+
+453
+00:40:03,620 --> 00:40:12,840
+And even if you go and try to specify it, you cannot specify it deeply enough to guarantee that it's not going to do things that you don't want.
+即使你去尝试明确指定，也无法指定得足够深入，以确保它不会做出你不想让它做的事。
+
+454
+00:40:12,840 --> 00:40:24,816
+A lot of what we do is based off of kind of environmental context and just kind of the taste that we've developed.
+我们所做的很多事，都是基于环境背景，以及我们自身逐渐培养出的品味。
+
+455
+00:40:24,850 --> 00:40:33,780
+And so I'm like-- I just don't see a path to this world where You don't need engineers that understand what's going on and don't know how to guide the system when it goes off the rails.
+所以我感觉——我根本看不到这样一个世界，那里不需要懂技术的工程师，也不需要知道如何在系统偏离轨道时引导它的人。
+
+456
+00:40:33,780 --> 00:40:43,680
+And then, I get this pushback of, "No, Mark, you're just--" You know? That's a bet that I would take with you every day because it's going to be solved.
+然后我就会收到这样的反驳：“不，马克，你只是——” 你知道吗？这种赌注我每天都愿意跟你打，因为问题终将解决。
+
+457
+00:40:43,680 --> 00:40:51,420
+Maybe two years from now, maybe five years from now, maybe 10 years from now, the AI will be so good that you won't need that.
+也许两年后，也许五年后，也许十年后，人工智能就会好到你不再需要它了。
+
+458
+00:40:51,420 --> 00:40:54,810
+Your example where you said the load balancer was dropping requests.
+你举的例子中，负载均衡器正在丢弃请求。
+
+459
+00:40:54,810 --> 00:41:00,870
+What if you have an adversarial code reviewer go look at the system and say, "You know what, you shouldn't be dropping a request."
+如果有一个对抗性代码审查员来检查系统，然后说：“你知道吗，你根本不该丢弃这个请求。”
+
+460
+00:41:00,870 --> 00:41:05,970
+And it's, is this system well-behaved? It'll say, "No, it's not." And so you just address that.
+而且这个系统表现得是否良好？它会回答：“不，它不好。” 于是你只需解决这个问题。
+
+461
+00:41:05,970 --> 00:41:07,770
+So where do you lie on this?
+那么，你在这中间处于什么位置？
+
+462
+00:41:07,770 --> 00:41:14,850
+Do you think that-- would you be bold enough to say it's never going to be solved or do you think we'll get to the point where we'll have the ability
+你觉得——你敢不敢说这个问题永远无法解决？还是说，你认为我们终将到达这样一个阶段：只需给出一个规格说明，
+
+463
+00:41:14,850 --> 00:41:21,270
+to give a specification, it'll come out great, and you won't need a human?
+结果就能完美呈现，根本不需要人类参与？
+
+464
+00:41:21,270 --> 00:41:24,340
+Ion Stoica: I think that in theoretical--
+伊翁·斯托伊卡：
+
+465
+00:41:27,450 --> 00:41:34,380
+from the theoretical perspective, it's very hard for me to see how it's going to be ever solved.
+从理论角度来看，我认为这个问题很难被解决。
+
+466
+00:41:34,380 --> 00:41:44,010
+And fundamentally, because we know from Gödel that no axiomatic system can be complete.
+从根本上说，因为我们从哥德尔那里知道，任何公理系统都不可能是完备的。
+
+467
+00:41:44,010 --> 00:41:44,580
+Mark Russinovich: Yeah.
+马克·鲁西诺维奇：是的。
+
+468
+00:41:44,580 --> 00:41:49,560
+Ion Stoica: So in some sense, that kind of tells you something.
+伊翁·斯托伊卡：从某种意义上说，这其实已经告诉了你一些信息。
+
+469
+00:41:49,560 --> 00:41:58,490
+I think that when we look at other techniques to do it, like for instance, assume that you have a formal specification.
+我认为，当我们审视其他实现方法时，比如假设你有一个形式化规范。
+
+470
+00:41:58,490 --> 00:42:02,450
+You can write in Lean, on Coal, and so forth.
+你可以在利安、煤等材料上书写。
+
+471
+00:42:02,450 --> 00:42:13,650
+So from that one, if I have the formal specification, then you can generate the code, and then you can generate the proof that the code satisfies the specification.
+如果我有正式规格说明，就可以生成代码，再生成证明代码满足规格说明的证明。
+
+472
+00:42:13,650 --> 00:42:18,360
+So that kind of is good, and you can see that.
+所以这种感觉还不错，你也能看出来。
+
+473
+00:42:18,360 --> 00:42:25,590
+The problem is that obviously then you need to write that specification, which is kind of not easy.
+问题是，显然你还需要编写那份规格说明，这并不太容易。
+
+474
+00:42:25,590 --> 00:42:34,230
+And even that when you write the specification, it cannot -- you know, it's like, if it's incomplete, right?
+而且即使你写出了规格说明，它也可能不完整，对吧？
+
+475
+00:42:34,230 --> 00:42:37,080
+You don't specify a property because, you know, like, in this case,
+你不需要指定某个属性，因为你知道，比如在这种情况下，
+
+476
+00:42:37,080 --> 00:42:43,740
+I write a specification for load balancers, but I don't write, "Oh, you shouldn't drop the packets," right?
+我写的是负载均衡器的规格，但不会写“哦，你不该丢包”这种话，对吧？
+
+477
+00:42:43,740 --> 00:42:50,070
+So maybe if there is a conservation law there, you can argue that you should put it in.
+所以，如果存在某种守恒定律，你或许可以论证应该将其纳入其中。
+
+478
+00:42:50,070 --> 00:42:51,930
+But there can be assumptions, right?
+但可能存在一些假设，对吧？
+
+479
+00:42:51,930 --> 00:42:56,820
+Because any specification, anything, you have to have some assumptions, right, to make the proof.
+因为任何规格或任何东西，你都必须有一些假设才能完成证明。
+
+480
+00:42:56,820 --> 00:43:00,600
+But you are not going to imagine all of the assumptions, right?
+但你不会去想象所有这些假设，对吧？
+
+481
+00:43:00,600 --> 00:43:02,610
+Mark Russinovich: I got to -- you know what I think?
+马克·鲁西诺维奇：我得说——你知道吗？我觉得……
+
+482
+00:43:02,610 --> 00:43:05,250
+You know what is a full specification?
+你知道什么叫完整规格吗？
+
+483
+00:43:05,250 --> 00:43:07,605
+Actually, programming languages.
+实际上，编程语言。
+
+484
+00:43:07,639 --> 00:43:10,170
+Ion Stoica: Almost, almost. Even that is not.
+伊翁·斯托伊卡：几乎，几乎。甚至连这个都不对。
+
+485
+00:43:10,170 --> 00:43:12,420
+Let me give you an example -- even that is not.
+让我举个例子——甚至这个也不对。
+
+486
+00:43:12,420 --> 00:43:15,073
+Mark Russinovich: Yeah, that's true. But that's -- Ion Stoica: Like, I remember, you know,
+马克·鲁西诺维奇：是的，这确实如此。但这就是—— 伊翁·斯托伊卡：
+
+487
+00:43:15,106 --> 00:43:19,020
+we have this kind of, I'm not sure really, like, this peer-to-peer court system and so forth.
+我记得，我们有这种类似点对点的司法系统，等等。
+
+488
+00:43:19,020 --> 00:43:22,770
+I was young faculty there, still implementing all of these things.
+我当时是那里的年轻教职员工，还在亲自实现所有这些技术。
+
+489
+00:43:22,770 --> 00:43:25,920
+And really, really, I thought it's bulletproof.
+说实话，我真的觉得它坚不可摧。
+
+490
+00:43:25,920 --> 00:43:32,330
+And we are testing it on this -- I don't remember, how many remember about PlanetLab.
+我们正在用这个进行测试——我不记得了，有谁还记得行星实验室吗？
+
+491
+00:43:32,330 --> 00:43:37,520
+Twenty years ago, this Planet Lab, which is kind of an infrastructure, internet infrastructure,
+二十年前，像这样的行星实验室，其实是一种基础设施，
+
+492
+00:43:37,520 --> 00:43:45,390
+or each organization have these servers, and then you deploy at the servers applications, and then you communicate.
+互联网基础设施，每个组织都有自己的服务器，然后在服务器上部署应用，再进行通信。
+
+493
+00:43:45,390 --> 00:43:46,620
+And it breaks.
+而且它碎了。
+
+494
+00:43:46,620 --> 00:43:47,640
+And I don't know how it breaks.
+我不知道它会怎么崩坏。
+
+495
+00:43:47,640 --> 00:43:48,960
+It has to work.
+它必须得行。
+
+496
+00:43:48,960 --> 00:43:57,330
+And when we look about, it was an assumption we missed, and the assumption we've made, implicitly, is a kind of transient connectivity.
+当我们环顾四周时，才发现我们忽略了一个假设，而我们所隐含做出的假设，是一种短暂的连接性。
+
+497
+00:43:57,330 --> 00:43:59,970
+If A communicates with B and B communicates with C,
+如果A能与B通信，B能与C通信，
+
+498
+00:43:59,970 --> 00:44:08,040
+then A should communicate with C. And in the Internet as a whole, right, because it's not behind NATs and so forth, this has to hold.
+那么A也应该能与C通信。在整个互联网中，这一点必须成立，因为互联网并不处于NAT等网络地址转换设备之后。
+
+499
+00:44:08,040 --> 00:44:14,610
+And it should have hold, except that is one university which misconfigured their servers.
+它本应正常运行，除非有一所大学的服务器配置错误。
+
+500
+00:44:14,610 --> 00:44:18,180
+So that blocks some communication, some traffic.
+这样就阻断了一些通信和流量。
+
+501
+00:44:18,180 --> 00:44:20,160
+So that's kind of, I always think about that.
+所以那玩意儿，我总是会想到它。
+
+502
+00:44:20,160 --> 00:44:20,580
+Mark Russinovich: Yeah, good example.
+马克·鲁西诺维奇：是的，很好的例子。
+
+503
+00:44:20,580 --> 00:44:27,480
+Ion Stoica: I couldn't, you know, it's like, I was actually, we were correct about the assumptions.
+伊翁·斯托伊卡：我没法，你知道吗，实际上我们对这些假设的判断是正确的。
+
+504
+00:44:27,480 --> 00:44:33,480
+It should have held, but it didn't because of a mistake in the configuration in the platform.
+它本该正常运行，但由于平台配置错误，结果没有。
+
+505
+00:44:33,480 --> 00:44:35,190
+So that's kind of what I'm trying to say.
+这就是我想表达的意思。
+
+506
+00:44:35,190 --> 00:44:36,240
+It's extremely hard.
+这非常难。
+
+507
+00:44:36,240 --> 00:44:39,870
+Mark Russinovich: Yeah. So, Now we are really, I think, at time.
+马克·鲁西诺维奇：是的，我认为现在我们真的到了一个关键时刻。
+
+508
+00:44:39,870 --> 00:44:42,930
+I haven't seen the clock jump up again.
+我还没看到时钟再次跳升。
+
+509
+00:44:42,930 --> 00:44:45,780
+But it's been a fun conversation, a really fun conversation.
+但这场对话非常有趣，真的非常有趣。
+
+510
+00:44:45,780 --> 00:44:48,540
+And if you like this, this is the experiment.
+如果你喜欢这个，这就是实验。
+
+511
+00:44:48,540 --> 00:44:49,830
+It's the first time we've done something like this.
+这是我们第一次做这样的事。
+
+512
+00:44:49,830 --> 00:44:51,720
+If you like this, let us know.
+如果喜欢，请告诉我们。
+
+513
+00:44:51,720 --> 00:44:53,370
+So we'll try to do it again.
+那我们再试一次。
+
+514
+00:44:53,370 --> 00:44:56,730
+If you find it boring, also let us know.
+如果你觉得无聊，也请告诉我们。
+
+515
+00:44:56,730 --> 00:45:03,120
+And I think the people that thought it was boring probably already left, so I think-- Ion Stoica: We have a biased audience here.
+我觉得觉得无聊的人 probably 已经离开了，所以我觉得——伊翁·斯托伊卡：我们这里的观众有偏见。
+
+516
+00:45:03,120 --> 00:45:05,220
+Mark Russinovich: But thanks very much for coming to Build,
+马克·鲁西诺维奇：非常感谢大家参加 Build 大会，
+
+517
+00:45:05,220 --> 00:45:10,106
+and I hope to see you tomorrow morning in my Azure Innovation Talk, where I'll talk a little bit about some of these things.
+希望明天早上能在我的 Azure 创新演讲中见到大家，届时我将聊一聊其中一些内容。
+
+518
+00:45:10,786 --> 00:45:11,426
+Ion Stoica: Thank you very much.
+伊翁·斯托伊卡：非常感谢。

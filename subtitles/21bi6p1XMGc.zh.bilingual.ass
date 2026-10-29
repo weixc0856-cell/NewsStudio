@@ -1,0 +1,532 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.02,0:00:02.71,Sub,,0,0,0,,Mark Russinovich: Good afternoon, everybody.\N马克·鲁西诺维奇：下午好，各位。
+Dialogue: 0,0:00:02.74,0:00:03.71,Sub,,0,0,0,,Ion Stoica: Good afternoon.\N伊翁·斯托伊卡：下午好。
+Dialogue: 0,0:00:08.00,0:00:10.13,Sub,,0,0,0,,Mark Russinovich: So it's good to see you all here at Build.\N马克·鲁西诺维奇：很高兴在 Build 大会上见到大家。
+Dialogue: 0,0:00:10.13,0:00:11.54,Sub,,0,0,0,,I'm Mark Russinovich.\N我是马克·鲁西诺维奇。
+Dialogue: 0,0:00:11.54,0:00:13.17,Sub,,0,0,0,,Ion Stoica: And I am Ion Stoica.\N我是伊翁·斯托伊卡。
+Dialogue: 0,0:00:13.20,0:00:19.11,Sub,,0,0,0,,Mark Russinovich: And we've got kind of a fireside chat today, but it's a fireside chat where we don't have a moderator.\N马克·鲁西诺维奇：今天我们有个类似炉边谈话的环节，不过这次没有主持人。
+Dialogue: 0,0:00:19.11,0:00:20.34,Sub,,0,0,0,,We're moderating ourselves.\N我们正在自我监管。
+Dialogue: 0,0:00:20.34,0:00:27.36,Sub,,0,0,0,,So, we're going to be talking through a bunch of questions related to AI, AI infrastructure, models,\N接下来我们将围绕人工智能、AI基础设施、模型以及AI架构等方面展开
+Dialogue: 0,0:00:27.36,0:00:32.79,Sub,,0,0,0,,architectures for AI, and it should be a pretty engaging conversation.\N一系列问题的讨论，这场对话应该会非常引人入胜。
+Dialogue: 0,0:00:32.79,0:00:33.27,Sub,,0,0,0,,Ion Stoica: I hope so.\N伊翁·斯托伊卡：希望如此。
+Dialogue: 0,0:00:33.27,0:00:39.96,Sub,,0,0,0,,Mark Russinovich: Yeah. So, I think we can start by talking a little bit of our background and why we're up here talking about these subjects.\N马克·鲁西诺维奇：是的，我想我们可以先简单聊一下我们的背景，以及我们为什么会上台来讨论这些话题。
+Dialogue: 0,0:00:39.96,0:00:49.65,Sub,,0,0,0,,So, Ion, you've got a background where you've had some amazing impact on the industry in data analytics, in AI, in your role as a professor,\N所以，伊翁，你的背景非常出色，在数据 analytics、\N人工智能领域，作为教授和初创公司创始人，你对行业产生了深远影响，
+Dialogue: 0,0:00:49.65,0:00:56.31,Sub,,0,0,0,,in your role as a startup founder, Ray, vLLM, Databricks, Spark.\N比如雷、vLLM、Databricks、Spark。
+Dialogue: 0,0:00:56.31,0:00:59.88,Sub,,0,0,0,,Why don't you tell us a little bit about your background?\N你能不能跟我们简单说一下你的背景？
+Dialogue: 0,0:00:59.88,0:01:05.52,Sub,,0,0,0,,Ion Stoica: Yeah, so actually, starting around 15 years ago, at Berkeley,\N伊翁·斯托伊卡：是的，实际上大约从15年前开始，
+Dialogue: 0,0:01:05.52,0:01:08.74,Sub,,0,0,0,,we started to develop a little bit more,\N我们在伯克利
+Dialogue: 0,0:01:09.96,0:01:17.88,Sub,,0,0,0,,quite a bit of systems, a few systems, initially in the space of domain of big data.\N就开始开发一些系统，最初主要集中在大数据领域。
+Dialogue: 0,0:01:17.88,0:01:21.45,Sub,,0,0,0,,And started initially with Mesos and Spark.\N最初从 Mesos 和 Spark 开始。
+Dialogue: 0,0:01:21.45,0:01:26.88,Sub,,0,0,0,,Then after that, Ray, and more recently, vLLM and Golang.\N然后是雷，最近还有 vLLM 和 Golang。
+Dialogue: 0,0:01:26.88,0:01:35.16,Sub,,0,0,0,,And I think, as a high level, we're always looking about, obviously, trying to understand and to figure\N我认为从高层来看，我们始终在关注，显然要理解并弄清楚你试
+Dialogue: 0,0:01:35.16,0:01:42.60,Sub,,0,0,0,,out what is a problem you try to solve; and also, a little bit careful about the trends.\N图解决的问题是什么，同时也对趋势保持一定的谨慎。
+Dialogue: 0,0:01:42.60,0:01:50.22,Sub,,0,0,0,,What I mean by that, a problem you have today, is that problem going to be bigger tomorrow than today?\N我所说的，是指你今天面临的问题，明天会不会比今天更严重？
+Dialogue: 0,0:01:50.22,0:01:51.48,Sub,,0,0,0,,And, you know like,\N而且你知道，
+Dialogue: 0,0:01:51.51,0:02:02.22,Sub,,0,0,0,,things like, obviously, Spark was scaling up data analytics and making more interactive,\N比如，Spark 明显在扩展数据处理能力，让分析更加互动，
+Dialogue: 0,0:02:02.22,0:02:09.12,Sub,,0,0,0,,and much better support iterative kind of patterns like machine learning,\N也大大提升了对机器学习这类迭代模式的支持。
+Dialogue: 0,0:02:09.12,0:02:18.75,Sub,,0,0,0,,then Ray, complex scaling, complex AI workloads like reinforcement learning on heterogeneous hardware back then.\N然后是雷，复杂的扩展，当时在异构硬件上进行强化学习等复杂的人工智能工作负载。
+Dialogue: 0,0:02:18.75,0:02:28.90,Sub,,0,0,0,,And, of course, vLLM is to us is clear that trying to exploit the power limits inherent of the GPUs.\N当然，对我们来说，vLLM 明确地指出了试图突破 GPU 固有算力限制的方向。
+Dialogue: 0,0:02:28.93,0:02:32.28,Sub,,0,0,0,,But then the memory became-- it was a bottleneck.\N但后来内存变成了瓶颈。
+Dialogue: 0,0:02:32.28,0:02:35.70,Sub,,0,0,0,,So, trying to alleviate that bottleneck and things like that.\N所以，试图缓解这种瓶颈以及其他类似问题。
+Dialogue: 0,0:02:35.74,0:02:47.61,Sub,,0,0,0,,The one thing I want to say, because we are at the Microsoft conference here, is that I'm very happy that, actually, some of the things we've done has impact also\N我想说的是，既然我们正在微软的大会上，我很高兴我们的一些工作，实际上也对我们的合作与
+Dialogue: 0,0:02:47.64,0:02:51.42,Sub,,0,0,0,,with our kind of collaboration and partnerships.\N伙伴关系产生了积极影响。
+Dialogue: 0,0:02:51.42,0:03:00.01,Sub,,0,0,0,,As you know, Spark and kind of Databricks, great, fantastic partnerships with Azure Databricks.\N正如大家所知，Spark 和 Databricks 与\NAzure Databricks 的合作非常出色，堪称典范。
+Dialogue: 0,0:03:00.04,0:03:08.41,Sub,,0,0,0,,And actually, today, we also announced a partnership between Azure and Anyscale, and Anyscale is around Ray.\N实际上，今天我们也宣布了 Azure 和 Anyscale 之间的合作，\N而 Anyscale 是围绕 Ray 构建的。
+Dialogue: 0,0:03:08.44,0:03:16.59,Sub,,0,0,0,,So, yes, very happy about that and very much looking forward to this partnership to grow.\N是的，对此非常高兴，也非常期待这一合作能够不断壮大。
+Dialogue: 0,0:03:16.59,0:03:17.28,Sub,,0,0,0,,Mark Russinovich: Likewise, yeah.\N马克·鲁西诺维奇：同样如此，没错。
+Dialogue: 0,0:03:17.28,0:03:18.51,Sub,,0,0,0,,It's been an awesome partnership.\N这是一段非常棒的合作。
+Dialogue: 0,0:03:18.54,0:03:20.50,Sub,,0,0,0,,Ion Stoica: Yeah. So, you know,\N伊翁·斯托伊卡：是的，
+Dialogue: 0,0:03:20.53,0:03:32.61,Sub,,0,0,0,,on my side, you know, you you Mark, you have so much contributions, you know. You ship CC internals, then-- Mark Russinovich: Have you ever used these internals, Ion?\N你知道的，从我这边来说，你，马克，你做出了这么多贡献，你知道的。\N你负责了CC的内部开发，然后——   马克·鲁西诺维奇：你用过这些内部组件吗，伊翁？
+Dialogue: 0,0:03:32.61,0:03:33.90,Sub,,0,0,0,,I'm putting him on the spot.\N我让他难堪了。
+Dialogue: 0,0:03:33.93,0:03:35.00,Sub,,0,0,0,,How many people have used it?\N有多少人用过它？
+Dialogue: 0,0:03:35.04,0:03:42.50,Sub,,0,0,0,,Ion Stoica: But you architected Azure infrastructures, which I did use.\N伊翁·斯托伊卡：但你们设计了 Azure 的基础设施，我确实用过。
+Dialogue: 0,0:03:42.53,0:03:51.40,Sub,,0,0,0,,And then you are now building and architecting AI infrastructure for Azure, and security are leading.\N现在你正在为 Azure 构建和设计 AI 基础设施，安全是首要考虑。
+Dialogue: 0,0:03:51.44,0:03:58.81,Sub,,0,0,0,,So, one question I have, you've seen all these kind of phases, and you've been in distributed systems for a long time and security.\N所以，我有个问题，你经历了这么多阶段，长期从事分布式系统和安全领域，有什么看法？
+Dialogue: 0,0:03:58.85,0:04:02.91,Sub,,0,0,0,,So, what is new and what is old?\N那么，什么是新的，什么是旧的？
+Dialogue: 0,0:04:02.94,0:04:07.71,Sub,,0,0,0,,What still applies and why is no longer applying?\N仍然适用的是什么？为什么现在不再适用了？
+Dialogue: 0,0:04:07.75,0:04:09.62,Sub,,0,0,0,,Mark Russinovich: Yeah, well, that's a good question.\N马克·鲁西诺维奇：嗯，这是个好问题。
+Dialogue: 0,0:04:09.66,0:04:19.67,Sub,,0,0,0,,I think one of the things that still holds, and this holds, I think, you'll even say for infrastructure and systems, is the fundamentals are still in place.\N我认为有一件事依然成立，这一点无论在基础设施还是系统层面都依然适用，那就是基本要素仍然稳固。
+Dialogue: 0,0:04:19.71,0:04:27.01,Sub,,0,0,0,,I think if you take a look at fundamentally what's changed, it's these non-deterministic systems that are now carrying out workflows that they create on the fly.\N我认为，从根本上说，变化在于这些非确定性系统现在能够实时创建并执行工作流程。
+Dialogue: 0,0:04:27.04,0:04:35.91,Sub,,0,0,0,,And that introduces a bunch of new risk area. You know, we -- In some sense, humans are non-deterministic agents creating workflows on the fly.\N这带来了许多新的风险领域。从某种意义上说，人类是非确定性智能体，会实时创造工作流程。
+Dialogue: 0,0:04:35.94,0:04:38.01,Sub,,0,0,0,,But humans you can hold accountable.\N但人类是可以被追责的。
+Dialogue: 0,0:04:38.04,0:04:44.37,Sub,,0,0,0,,Also, humans, I think in general, are more reliable than the AI systems we have today, and certainly,\N此外，我认为人类总体上比当今的AI系统更可靠，而且在涉及人类时，
+Dialogue: 0,0:04:44.37,0:04:49.38,Sub,,0,0,0,,when it comes to humans, we designed our systems around human speed and scale.\N我们的系统设计始终围绕人类的速度和规模展开。
+Dialogue: 0,0:04:49.38,0:04:56.73,Sub,,0,0,0,,And when you have agents now that are intelligent running around, they can perform lots of damage in a very short period of time.\N现在当智能体四处运行时，它们能在极短时间内造成大量破坏。
+Dialogue: 0,0:04:56.73,0:05:04.05,Sub,,0,0,0,,So I think if we get into it a little bit later, we'll talk about some of the things like prompt injection risks around that,\N所以我认为，如果我们稍后深入探讨一下，会谈到一些相关风险，比如提示注入风险、
+Dialogue: 0,0:05:04.05,0:05:13.26,Sub,,0,0,0,,risks around jailbreaking, risks around hallucination; all of those things can cause workflows to go awry and for the system to not behave as you intend.\N越狱风险以及幻觉问题；所有这些都可能导致工作流出错，使系统无法按你的预期运行。
+Dialogue: 0,0:05:13.26,0:05:18.06,Sub,,0,0,0,,Ion Stoica: Yeah, and what about this kind of-- and you mentioned about the fundamentals still remain,\N伊翁·斯托伊卡：对，那这种——你提到基本原理仍然成立，
+Dialogue: 0,0:05:18.06,0:05:23.52,Sub,,0,0,0,,but again, to be more precise about concepts like consensus,\N但再具体一点说，像共识、一致性，
+Dialogue: 0,0:05:23.52,0:05:28.47,Sub,,0,0,0,,consistency, this kind of distributed scheduling,\N以及这种分布式调度的概念，
+Dialogue: 0,0:05:28.47,0:05:37.50,Sub,,0,0,0,,which of these concepts kind of remain more or less the same, and which are changing and morphing in support to support new orbit.\N这些概念中，哪些基本保持不变，哪些正在发生变化并随之演进以适应新的轨道。
+Dialogue: 0,0:05:37.54,0:05:46.14,Sub,,0,0,0,,Mark Russinovich: Yeah. Well, and I think you know we talk about AI and running these agent workloads, and you talk about the LLMs and hosting the LLMs.\N马克·鲁西诺维奇：对，而且我认为我们谈到了人工智能，以及运行这些智能体工作负载，\N还有大语言模型，以及部署大语言模型的问题。
+Dialogue: 0,0:05:46.14,0:05:53.34,Sub,,0,0,0,,The things like the consensus around the infrastructure, knowing what is available and online.\N基础设施方面的共识，了解哪些资源可用且在线。
+Dialogue: 0,0:05:53.34,0:05:55.20,Sub,,0,0,0,,Things like load balancing still matters.\N负载均衡之类的问题依然重要。
+Dialogue: 0,0:05:55.20,0:05:56.82,Sub,,0,0,0,,Locality matters still.\N局部性依然重要。
+Dialogue: 0,0:05:56.82,0:06:01.81,Sub,,0,0,0,,So you want to route requests, especially when you talk about KV caches, which is the context.\N所以你想路由请求，尤其是谈到键值缓存时，也就是上下文。
+Dialogue: 0,0:06:01.85,0:06:04.86,Sub,,0,0,0,,You need to make sure that the requests are going back to the same systems.\N你必须确保请求能返回到相同的系统。
+Dialogue: 0,0:06:04.86,0:06:09.54,Sub,,0,0,0,,Otherwise, you're going to be wasting compute and bandwidth as you're moving things around.\N否则，你将白白浪费算力和带宽，因为数据在不断移动。
+Dialogue: 0,0:06:09.54,0:06:11.70,Sub,,0,0,0,,So all of those things still apply.\N因此，所有这些情况依然适用。
+Dialogue: 0,0:06:11.70,0:06:17.01,Sub,,0,0,0,,I think, and this is an interesting question, I think, for you.\N我认为，这是一个有趣的问题，我想问问你。
+Dialogue: 0,0:06:17.01,0:06:18.39,Sub,,0,0,0,,Are these systems stateless?\N这些系统是无状态的吗？
+Dialogue: 0,0:06:18.39,0:06:21.25,Sub,,0,0,0,,Do you consider them stateless or stateful?\N你认为它们是无状态的还是有状态的？
+Dialogue: 0,0:06:23.43,0:06:26.12,Sub,,0,0,0,,Ion Stoica: I think it very much depends.\N伊翁·斯托伊卡：我认为这很大程度上取决于具体情况。
+Dialogue: 0,0:06:26.15,0:06:35.67,Sub,,0,0,0,,Certainly, because I will also, I win as a serverless trend.\N当然，因为我也会顺势而为，成为无服务器趋势的赢家。
+Dialogue: 0,0:06:35.67,0:06:42.27,Sub,,0,0,0,,I think that quite a few systems become more stateful.\N我认为，相当多的系统会变得更加有状态。
+Dialogue: 0,0:06:42.27,0:06:55.14,Sub,,0,0,0,,That is because just the trend of bringing the state in and saving the state if needed for the next operation, in some cases, it's too high.\N这是因为，有时为了在下一次操作中需要，将状态带入并保存状态，这种趋势过高了。
+Dialogue: 0,0:06:55.14,0:07:00.81,Sub,,0,0,0,,And it's not only the state, leading the state and saving the state, it's initializing, right?\N而且不只是状态——加载状态、保存状态——还有初始化，对吧？
+Dialogue: 0,0:07:00.81,0:07:07.35,Sub,,0,0,0,,If you are talking about initializing the GPUs and so forth, it can take a long time.\N如果你在讨论初始化显卡之类的事情，可能需要很长时间。
+Dialogue: 0,0:07:07.35,0:07:12.06,Sub,,0,0,0,,So this forces you to be marked more stateful.\N这迫使你必须具备更强的状态感知能力。
+Dialogue: 0,0:07:12.06,0:07:16.68,Sub,,0,0,0,,The problem with that is that it complicates, like we all know, the fault tolerance.\N问题在于，这会增加容错的复杂性，这一点我们都很清楚。
+Dialogue: 0,0:07:16.68,0:07:17.95,Sub,,0,0,0,,Mark Russinovich: Yeah.\N马克·鲁西诺维奇：是的。
+Dialogue: 0,0:07:19.44,0:07:27.24,Sub,,0,0,0,,So when it comes to these distributed infrastructures for AI, which include the GPUs, high bandwidth interconnections,\N在AI的分布式基础设施方面，包括GPU、高带宽互连和KV缓存，
+Dialogue: 0,0:07:27.24,0:07:35.76,Sub,,0,0,0,,the KV cache, when you look at distributed systems through its evolution, what assumptions change\N当我们审视分布式系统的发展历程时，支撑这类计算的架
+Dialogue: 0,0:07:35.76,0:07:39.10,Sub,,0,0,0,,with an architecture to support this kind of computation?\N构究竟带来了哪些假设上的改变？
+Dialogue: 0,0:07:39.10,0:07:44.97,Sub,,0,0,0,,Ion Stoica: So, I think it very much --great question -- very much depends on where you are coming from.\N伊翁·斯托伊卡：我认为这很大程度上取决于你从什么角度出发。
+Dialogue: 0,0:07:44.97,0:07:50.55,Sub,,0,0,0,,So you're coming from Spark, it's like big data.\N所以你是从 Spark 来的，那玩意儿就是大数据。
+Dialogue: 0,0:07:50.55,0:07:53.67,Sub,,0,0,0,,It's about, it's like, MapReduce plus plus.\N它就像是，MapReduce 的升级版。
+Dialogue: 0,0:07:53.67,0:08:00.75,Sub,,0,0,0,,It's bulk synchronous processing, which is a model, which is a pretty simple model.\N它是批量同步处理，这是一种相当简单的模型。
+Dialogue: 0,0:08:00.75,0:08:02.40,Sub,,0,0,0,,You partition the data.\N你对数据进行划分。
+Dialogue: 0,0:08:02.40,0:08:03.96,Sub,,0,0,0,,You have stages at every stage.\N你在每个阶段都有相应的阶段。
+Dialogue: 0,0:08:03.96,0:08:10.14,Sub,,0,0,0,,You have applied the same task on different partitions and do a shuffle between them.\N你在不同的分区上执行了相同的任务，并在它们之间进行了打乱。
+Dialogue: 0,0:08:10.14,0:08:20.19,Sub,,0,0,0,,What happens with, for instance, you talk about KV cache and inference, things are becoming so much more coupled, tightly coupled.\N比如你提到的键值缓存和推理，这些部分之间的关联变得越来越紧密。
+Dialogue: 0,0:08:20.19,0:08:33.84,Sub,,0,0,0,,If you think about mixture of experts and then you have the KV cache and you need to distribute it across different GPUs on the same node and even across nodes,\N如果你考虑专家混合模型，再加上键值缓存，需要将其分布在同一节点内的不同GPU上，甚至跨节点分布，
+Dialogue: 0,0:08:33.84,0:08:43.62,Sub,,0,0,0,,then it's things are becoming-- everything becoming much more coupled and more difficult because of that.\N那么事情就变得——所有部分之间的耦合度更高，难度也更大了。
+Dialogue: 0,0:08:43.65,0:08:49.42,Sub,,0,0,0,,Now, if you come from maybe HPC, maybe you can say, "I told you so."\N现在，如果你来自高性能计算领域，或许可以说一句：“我就说吧。”
+Dialogue: 0,0:08:49.45,0:08:50.19,Sub,,0,0,0,,Mark Russinovich: Yeah.\N马克·鲁西诺维奇：是的。
+Dialogue: 0,0:08:50.19,0:08:58.89,Sub,,0,0,0,,Ion Stoica: But even there I think that with HPC, it was much more -- you don't have such a . . .\N伊翁·斯托伊卡：但即便如此，我认为在高性能计算领域，情况要明确得多——你不会遇到那种……
+Dialogue: 0,0:08:59.29,0:09:03.90,Sub,,0,0,0,,tightly coupling between the data and, kind of. . .\N数据与……之间紧密耦合
+Dialogue: 0,0:09:04.99,0:09:08.76,Sub,,0,0,0,,-- and the compute.\N以及算力。
+Dialogue: 0,0:09:08.76,0:09:17.07,Sub,,0,0,0,,Because even there, the data was -- you know, you don't have actually-- in traditional HPC, you don't have a lot of data to start with.\N因为即使在那里，数据也——你知道，传统高性能计算中，实际上一开始的数据并不多。
+Dialogue: 0,0:09:17.07,0:09:19.08,Sub,,0,0,0,,Because you do simulations, right?\N因为你做的是仿真，对吧？
+Dialogue: 0,0:09:19.08,0:09:20.16,Sub,,0,0,0,,And things like that, right?\N还有这类事情，对吧？
+Dialogue: 0,0:09:20.16,0:09:22.91,Sub,,0,0,0,,This was kind of the workload.\N这基本上就是工作负载。
+Dialogue: 0,0:09:22.95,0:09:24.88,Sub,,0,0,0,,So I think that's kind of what it is.\N所以我认为大概就是这样。
+Dialogue: 0,0:09:24.92,0:09:28.32,Sub,,0,0,0,,And this creates a lot of challenges.\N这带来了许多挑战。
+Dialogue: 0,0:09:28.35,0:09:40.10,Sub,,0,0,0,,And since even you're talking about load balancing, things are changing so much more quickly if you think about expert parallel load balancing.\N而且既然连你都在讨论负载均衡，那么如果你考虑专家级的并行负载均衡，变化的速度就更快了。
+Dialogue: 0,0:09:40.14,0:09:48.30,Sub,,0,0,0,,Because you can change from layer to layer when you go in the forward pass to do the inference to do serving.\N因为在前向传播进行推理或服务时，你可以逐层切换。
+Dialogue: 0,0:09:48.34,0:09:56.66,Sub,,0,0,0,,And the other thing what happens, I'll probably talk more about that, is that things are evolving so quickly, right?\N还有另一件事，我可能稍后会多讲一些，就是事物发展得实在太快了，对吧？
+Dialogue: 0,0:09:56.69,0:09:59.82,Sub,,0,0,0,,By the time you build something, you have new requirements. It's never ending.\N当你真正开始构建时，需求又发生了变化，永远没有尽头。
+Dialogue: 0,0:09:59.82,0:10:01.09,Sub,,0,0,0,,Mark Russinovich: Yeah.\N马克·鲁西诺维奇：是的。
+Dialogue: 0,0:10:02.28,0:10:04.37,Sub,,0,0,0,,Ion Stoica: Yeah.\N伊翁·斯托伊卡：是的。
+Dialogue: 0,0:10:04.37,0:10:08.96,Sub,,0,0,0,,So, we have this kind of, I remember like it was 15 years,\N我记得大概10到15年前，
+Dialogue: 0,0:10:08.96,0:10:19.50,Sub,,0,0,0,,10, 15 years ago when people started the cloud computing and so forth, and people are saying the data center is a new computer.\N人们刚开始接触云计算之类的技术，当时大家就说，数据中心就是一台全新的计算机。
+Dialogue: 0,0:10:19.50,0:10:32.94,Sub,,0,0,0,,I'm just curious right now, is that kind of abstraction still of actuality because now you can have training spanning different\N我现在只是好奇，这种抽象方式现在还有实际意义吗？因为现在你可以让训练跨越不同的可用区，
+Dialogue: 0,0:10:32.94,0:10:35.79,Sub,,0,0,0,,availability zones and things like that.\N诸如此类。
+Dialogue: 0,0:10:35.79,0:10:37.11,Sub,,0,0,0,,I'm curious about that.\N我很好奇这一点。
+Dialogue: 0,0:10:37.11,0:10:41.19,Sub,,0,0,0,,Mark Russinovich: I mean, I think if you take a look when that statement was made,\N马克·鲁西诺维奇：我的意思是，如果你回顾一下那句话提出时的背景，
+Dialogue: 0,0:10:41.19,0:10:47.22,Sub,,0,0,0,,it was when a data center would hold all the compute that you could imagine in the data centers at that time.\N当时数据中心所能容纳的计算能力，就是那个时代人们所能想象到的全部计算能力了。
+Dialogue: 0,0:10:47.22,0:10:57.32,Sub,,0,0,0,,Even if you take a look at the evolution of Azure as a hyperscaler, the availability zone kind of became a unit of compute, but even in an availability zone,\N即使你看看 Azure 作为超大规模云服务商的演进历程，\N可用区逐渐成为计算的基本单位，但在一个可用区内，
+Dialogue: 0,0:10:57.32,0:10:58.79,Sub,,0,0,0,,we have multiple data centers typically.\N通常也包含多个数据中心。
+Dialogue: 0,0:10:58.79,0:11:01.94,Sub,,0,0,0,,It's not just one data center per an availability zone.\N一个可用区并不只是一个数据中心。
+Dialogue: 0,0:11:01.94,0:11:04.95,Sub,,0,0,0,,Then you have a region, you have multiple availability zones.\N然后你有一个区域，里面包含多个可用区。
+Dialogue: 0,0:11:04.95,0:11:12.21,Sub,,0,0,0,,So even for traditional IT workloads or serverless computing, your application can be spread across many data centers.\N即使是传统的IT工作负载或无服务器计算，你的应用也能分布在多个数据中心。
+Dialogue: 0,0:11:12.21,0:11:20.73,Sub,,0,0,0,,And now, you mentioned distributed training and AI training, and that's where you run into these AI super factories as we call them,\N现在，你提到了分布式训练和AI训练，这就涉及我们所说的AI超级工厂，
+Dialogue: 0,0:11:20.73,0:11:26.94,Sub,,0,0,0,,where you've got massive datacenters just filled with GPUs specifically to host that training workload.\N那里有巨大的数据中心，专门塞满GPU，用来承载训练任务。
+Dialogue: 0,0:11:26.94,0:11:38.22,Sub,,0,0,0,,And for that, we passed the line several years ago of a single datacenter being enough to hold the scale of the AI supercomputers that we're building now to train these frontier models.\N为此，我们多年前就已经突破了一个界限——单个数据中心已\N无法容纳当前我们用于训练前沿模型的AI超级计算机的规模。
+Dialogue: 0,0:11:38.22,0:11:47.85,Sub,,0,0,0,,And then over the last couple of years, we've crossed a line of even one region of datacenters is not big enough to train these models.\N而在过去几年里，我们已经跨过了一道界限——单个区域的数据中心已不足以训练这些模型。
+Dialogue: 0,0:11:47.85,0:11:54.72,Sub,,0,0,0,,And now we have these Fairwater systems that we've launched these AI super factories where there are multiple Fairwaters in Wisconsin,\N现在我们推出了Fairwater系统，这些AI超级工厂分布在威斯康星州和亚特兰大，
+Dialogue: 0,0:11:54.72,0:12:05.49,Sub,,0,0,0,,multiple in Atlanta, and they're connected with a dedicated network so that you can have a job that spans the GPUs across both regions with a very direct cable\N两地各有多个Fairwater节点，并通过专用网络连接，\N使您能够跨两个区域的GPU运行任务，两地之间通过直接电缆实现RDMA，
+Dialogue: 0,0:12:05.49,0:12:10.23,Sub,,0,0,0,,between them doing RDMA across the two regions.\N连接极为高效。
+Dialogue: 0,0:12:10.23,0:12:11.58,Sub,,0,0,0,,Ion Stoica: Yeah, it's fascinating.\N伊翁·斯托伊卡：是的，这非常有趣。
+Dialogue: 0,0:12:11.58,0:12:18.21,Sub,,0,0,0,,Now, going back again, like we discussed a little bit about serverless, right? The serverless-- Mark Russinovich: My favorite services.\N现在，我们再回到之前的话题，就像我们刚才简单讨论过的无服务器架构一样，\N对吧？无服务器——马克·鲁西诺维奇：我最喜欢的那些服务。
+Dialogue: 0,0:12:18.21,0:12:22.58,Sub,,0,0,0,,Ion Stoica: Yeah. So, what what does it mean in. . .\N伊翁·斯托伊卡：嗯，所以这到底意味着什么呢……
+Dialogue: 0,0:12:22.61,0:12:32.79,Sub,,0,0,0,,this kind of-- when you have today's long-lived agents, which can go hours, sometimes days?\N这种长期运行的智能体，可以持续运行数小时，有时甚至数天，就是这样的。
+Dialogue: 0,0:12:32.79,0:12:40.80,Sub,,0,0,0,,Mark Russinovich: Well, if you talk about serverless, it's kind of people speak about it synonymously with containers.\N马克·鲁西诺维奇：如果你谈论无服务器架构，人们往往把它和容器混为一谈。
+Dialogue: 0,0:12:40.80,0:12:42.96,Sub,,0,0,0,,Serverless equals containers.\N无服务器即容器。
+Dialogue: 0,0:12:42.96,0:12:47.97,Sub,,0,0,0,,And when people think containers, they think the original serverless containers,\N当人们想到容器时，会想到最初的无服务器容器，比如 Lambda
+Dialogue: 0,0:12:47.97,0:12:51.84,Sub,,0,0,0,,which were like Lambda or Azure Functions,\N或 Azure Functions，
+Dialogue: 0,0:12:51.84,0:13:00.33,Sub,,0,0,0,,which are short-lived, and so people conflate serverless with short-lived applications or pieces of code,\N这些容器都是短时运行的，因此人们往往把无服务器等同于短时运行的应用程序或代码片段。
+Dialogue: 0,0:13:00.33,0:13:05.58,Sub,,0,0,0,,when in fact serverless doesn't have an opinion about what code runs in these containers,\N事实上，无服务器架构并不关心这些容器里运行什么代码，
+Dialogue: 0,0:13:05.58,0:13:10.81,Sub,,0,0,0,,and so you could put SQL Server inside of a container, and it can run for years.\N因此你完全可以把 SQL Server 放进容器里，让它运行多年。
+Dialogue: 0,0:13:11.85,0:13:13.23,Sub,,0,0,0,,And it also can be monstrous.\N而且它也可能极其可怕。
+Dialogue: 0,0:13:13.23,0:13:15.09,Sub,,0,0,0,,It can have terabytes of memory.\N它可以拥有数TB的内存。
+Dialogue: 0,0:13:15.09,0:13:18.66,Sub,,0,0,0,,So I think for me, I separate the two.\N我觉得对我来说，这两者是分开的。
+Dialogue: 0,0:13:18.66,0:13:23.25,Sub,,0,0,0,,And I say serverless is you don't worry about the infrastructure, it is containerized for the most part,\N我说的无服务器，就是你不用操心基础设施，基本上是容器化的，尽管我们现在也在
+Dialogue: 0,0:13:23.25,0:13:30.27,Sub,,0,0,0,,although we talk about lightweight containers now and Wasm sandboxes which are also a form of serverless.\N讨论轻量级容器和 WebAssembly沙箱，它们也属于无服务器的一种形式。
+Dialogue: 0,0:13:30.27,0:13:38.70,Sub,,0,0,0,,But that's where I think the whole trend-- if you take a look at Azure's architectural evolution, we're moving everything to serverless.\N但我觉得整个趋势是这样——如果你看看 Azure 架构的演进，我们正在把所有东西都转向无服务器。
+Dialogue: 0,0:13:38.70,0:13:50.59,Sub,,0,0,0,,We're moving the whole infrastructure to containers that are on a serverless infrastructure that is doing the scheduling and placement and for the job, which is expressing constraints.\N我们正将整个基础设施迁移到容器中，这些容器运行在无服务器基础设施上，\N由该基础设施负责作业的调度与部署，并表达出各项约束条件。
+Dialogue: 0,0:13:52.95,0:13:56.10,Sub,,0,0,0,,Ion Stoica: So now continuing on that note.\N伊翁·斯托伊卡：那么，接下来我们继续这个话题。
+Dialogue: 0,0:13:56.10,0:14:07.92,Sub,,0,0,0,,We have our infra, we build these infrastructures mostly to serve requests initiated by people directly or via BI tools and things like that.\N我们拥有自己的基础设施，这些基础设施主要是为了响应人们直接发起的请求，\N或是通过商业智能工具等途径发起的请求而构建的。
+Dialogue: 0,0:14:07.92,0:14:19.92,Sub,,0,0,0,,But now we are moving rapidly to an age of agents, to having agent loops instead of just requests as a unit of work.\N但现在我们正迅速进入一个智能体的时代，工作单元将从单纯的请求转变为智能体循环。
+Dialogue: 0,0:14:19.92,0:14:25.86,Sub,,0,0,0,,How does this impact, do you think, about architecture stack?\N这会对架构栈产生什么影响，你认为呢？
+Dialogue: 0,0:14:25.86,0:14:33.48,Sub,,0,0,0,,Mark Russinovich: Well, I think we're still at the early days of this, actually, because just in the last few years, we went from chat\N马克·鲁西诺维奇：实际上，我认为我们仍处于这一领域的早期阶段，因为就在近几年，我们已经从聊天系
+Dialogue: 0,0:14:33.48,0:14:42.06,Sub,,0,0,0,,to now agentic systems, which are this loop where the agents are talking to other systems as part of their computation.\N统发展到了如今的代理式系统，这类系统的特点是智能体在计算过程中会与其他系统进行交互。
+Dialogue: 0,0:14:42.06,0:14:43.83,Sub,,0,0,0,,And they might even be talking to other agents.\N它们甚至可能在与其他智能体交流。
+Dialogue: 0,0:14:43.83,0:14:56.61,Sub,,0,0,0,,And so when it comes to how you define an agentic application that consists of these things, I think we're still in the early days of specifying the application model for these.\N因此，当我们谈到如何定义一个由这些要素组成的代理式应用时，\N我认为我们仍处于为这类应用明确应用模型的早期阶段。
+Dialogue: 0,0:14:56.61,0:14:58.38,Sub,,0,0,0,,And a lot of it is, I think, still ad hoc.\N而且我觉得其中大部分仍然很随意。
+Dialogue: 0,0:14:58.38,0:15:01.98,Sub,,0,0,0,,But we're getting towards what is an agentic application?\N但我们正逐渐接近什么是代理式应用了。
+Dialogue: 0,0:15:01.98,0:15:05.94,Sub,,0,0,0,,What are the components? How do you place them for efficiency?\N组件有哪些？如何布局才能实现高效？
+Dialogue: 0,0:15:05.94,0:15:11.55,Sub,,0,0,0,,How do you automatically deploy them instead of taking piecemeal and deploying and connecting them together after the fact?\N你如何实现自动部署，而不是事后零散地部署并手动连接它们？
+Dialogue: 0,0:15:11.55,0:15:13.86,Sub,,0,0,0,,So in my opinion, I think that we're still early.\N依我看来，我认为我们仍处于早期阶段。
+Dialogue: 0,0:15:13.86,0:15:16.72,Sub,,0,0,0,,But I'd be curious to hear about what you think?\N但我很好奇，想听听你的看法。
+Dialogue: 0,0:15:19.20,0:15:21.96,Sub,,0,0,0,,Ion Stoica: So, yeah, I think we are early.\N伊翁·斯托伊卡：是的，我认为我们还处于早期阶段。
+Dialogue: 0,0:15:21.96,0:15:26.85,Sub,,0,0,0,,The one thing I see is that constant increase in complexity.\N我看到的唯一一点，就是复杂性持续增加。
+Dialogue: 0,0:15:26.85,0:15:27.54,Sub,,0,0,0,,Mark Russinovich: That's for sure.\N马克·鲁西诺维奇：这一点毫无疑问。
+Dialogue: 0,0:15:27.54,0:15:32.85,Sub,,0,0,0,,Ion Stoica: Even the definition of agents, what is an agent?\N伊翁·斯托伊卡：就连“智能体”的定义本身，什么是智能体，都还存在争议。
+Dialogue: 0,0:15:32.85,0:15:36.57,Sub,,0,0,0,,Well, was an agent an LLM invoking a tool?\N那么，智能体就是调用工具的大型语言模型吗？
+Dialogue: 0,0:15:36.57,0:15:39.00,Sub,,0,0,0,,But now it's much more than that.\N但现在它已经远远不止于此了。
+Dialogue: 0,0:15:39.00,0:15:42.57,Sub,,0,0,0,,You have a tool, you have an entire harnessing, right?\N你有一个工具，还有一个完整的运行框架，对吧？
+Dialogue: 0,0:15:42.57,0:15:44.82,Sub,,0,0,0,,Which can be very complex, right?\N这可能非常复杂，对吧？
+Dialogue: 0,0:15:44.82,0:15:52.14,Sub,,0,0,0,,So now, and then you are talking about some kind of continual learning.\N所以现在，你提到的是一种持续学习。
+Dialogue: 0,0:15:52.14,0:15:58.89,Sub,,0,0,0,,People talk more and more whether this happens in context, continuously evolving the prompt.\N人们越来越频繁地讨论，这种情况是否会在上下文中发生，并持续不断地演化提示。
+Dialogue: 0,0:15:58.89,0:16:02.49,Sub,,0,0,0,,And in some cases even updating the weights, right?\N在某些情况下，甚至需要更新权重，对吧？
+Dialogue: 0,0:16:02.49,0:16:05.49,Sub,,0,0,0,,So kind of like RL.\N有点像强化学习。
+Dialogue: 0,0:16:05.49,0:16:16.18,Sub,,0,0,0,,So, and then you have this kind of, you need something to support very diverse and complex. . .\N所以，你需要某种东西来支撑极其多样且复杂的场景。
+Dialogue: 0,0:16:16.21,0:16:19.11,Sub,,0,0,0,,you know, application.\N你知道，应用。
+Dialogue: 0,0:16:19.11,0:16:22.62,Sub,,0,0,0,,You need to do, for sure, kind of the inference,\N你肯定需要进行推理，
+Dialogue: 0,0:16:22.62,0:16:31.62,Sub,,0,0,0,,then basically arbitrary application-- running arbitrary application because that's part of the harnessing, right?\N然后运行任意应用程序，因为这正是智能体运行框架的一部分，对吧？
+Dialogue: 0,0:16:31.62,0:16:38.73,Sub,,0,0,0,,And then maybe you are going also to do some kind of training if you want to update the policy.\N然后，如果你想更新策略，可能还需要进行某种训练。
+Dialogue: 0,0:16:38.73,0:16:40.41,Sub,,0,0,0,,And so that's kind of things.\N所以，大概就是这些事。
+Dialogue: 0,0:16:40.41,0:16:45.66,Sub,,0,0,0,,And when you have the models, of course, you can have the models which is going to be co-located.\N当你拥有这些模型时，当然也可以拥有就近部署的模型。
+Dialogue: 0,0:16:45.66,0:16:50.49,Sub,,0,0,0,,It has to be co-located because if you want to update it,\N它必须就近部署，因为如果你需要更新它，
+Dialogue: 0,0:16:50.49,0:16:55.05,Sub,,0,0,0,,or it just can be something running outside,\N或者让它在外部运行，
+Dialogue: 0,0:16:55.05,0:16:59.79,Sub,,0,0,0,,it can be like OpenAI or like a new model that's released by Microsoft.\N也可以是像 OpenAI 这样的服务，或者是微软发布的新模型。
+Dialogue: 0,0:16:59.79,0:17:02.82,Sub,,0,0,0,,So that's kind of, it's so complex.\N所以这有点复杂，真的非常复杂。
+Dialogue: 0,0:17:02.82,0:17:08.72,Sub,,0,0,0,,So you need to think-- to have something which is very flexible to support these workloads.\N所以你需要思考——需要一种非常灵活的方案来支撑这些工作负载。
+Dialogue: 0,0:17:08.72,0:17:11.36,Sub,,0,0,0,,And yeah, I think that we'll see.\N是的，我觉得我们将会看到。
+Dialogue: 0,0:17:11.36,0:17:16.46,Sub,,0,0,0,,I assume that in time, things will stabilize one way or another, but we are very early.\N我相信随着时间推移，事情终将稳定下来，但目前我们仍处于非常早期的阶段。
+Dialogue: 0,0:17:16.46,0:17:22.58,Sub,,0,0,0,,Mark Russinovich: Yeah. So one of the things that I'd be really curious to hear your thoughts on,\N马克·鲁西诺维奇：是的。有一件事我非常好奇，想听听你的看法，
+Dialogue: 0,0:17:22.61,0:17:25.92,Sub,,0,0,0,,in the systems that we've designed, they've largely been deterministic.\N我们设计的这些系统，基本上都是确定性的。
+Dialogue: 0,0:17:25.92,0:17:29.16,Sub,,0,0,0,,You design the system, you've got a workload, you optimize for it.\N你设计系统，面对具体工作负载，就针对它进行优化。
+Dialogue: 0,0:17:29.16,0:17:31.92,Sub,,0,0,0,,These systems are inherently non-deterministic, as we talked about.\N这些系统本质上是不确定的，正如我们之前讨论的那样。
+Dialogue: 0,0:17:31.92,0:17:32.43,Sub,,0,0,0,,Ion Stoica: Yep.\N伊翁·斯托伊卡：没错。
+Dialogue: 0,0:17:32.43,0:17:36.16,Sub,,0,0,0,,Mark Russinovich: And so how does that change the way you design a system?\N马克·鲁西诺维奇：那么，这如何改变你设计系统的方式呢？
+Dialogue: 0,0:17:38.25,0:17:41.37,Sub,,0,0,0,,Ion Stoica: That's a great question.\N伊翁·斯托伊卡：这是个很棒的问题。
+Dialogue: 0,0:17:41.37,0:17:48.12,Sub,,0,0,0,,And just to be clear, it's one of the reasons they are non-deterministic because, obviously, the LLMs themselves are non-deterministic.\N顺便说清楚一点，这正是它们具有非确定性的原因之一，因为显然，大语言模型本身就是非确定性的。
+Dialogue: 0,0:17:48.12,0:17:53.88,Sub,,0,0,0,,If you send the same prompt over and over again, you shouldn't expect, or you are not going to expect the same results.\N如果你反复发送相同的提示，就不应该或不会得到相同的结果。
+Dialogue: 0,0:17:53.88,0:18:02.22,Sub,,0,0,0,,Actually, in some cases, you rely on that to get diversity in order to get better solutions.\N实际上，在某些情况下，你需要依赖这一点来实现多样性，从而获得更好的解决方案。
+Dialogue: 0,0:18:02.22,0:18:08.19,Sub,,0,0,0,,So I think it's like there are a few things to consider.\N所以我认为有几点需要考虑。
+Dialogue: 0,0:18:08.19,0:18:13.74,Sub,,0,0,0,,One, first of all, what eventually, what is your output?\N首先，最终你的输出是什么？
+Dialogue: 0,0:18:13.74,0:18:21.89,Sub,,0,0,0,,And in some cases, like with coding and so forth, the artifact can be still deterministic, right?\N在某些情况下，比如编程之类，生成的成果仍然可以是确定性的，对吧？
+Dialogue: 0,0:18:21.89,0:18:29.42,Sub,,0,0,0,,You use this to create, to optimize the system, to synthesize even a system, and that one kind of is deterministic.\N你用它来创建、优化系统，甚至合成整个系统，而这种做法是确定性的。
+Dialogue: 0,0:18:29.42,0:18:36.87,Sub,,0,0,0,,You can have harnessing tests and so forth to check, and then you can have metrics to high hill-climb.\N你可以进行各种测试来验证，然后通过指标来衡量其高难度爬坡能力。
+Dialogue: 0,0:18:36.87,0:18:39.81,Sub,,0,0,0,,If you want to optimize, optimize for throughput, for latency.\N如果你想优化，就应优化吞吐量和延迟。
+Dialogue: 0,0:18:39.81,0:18:43.08,Sub,,0,0,0,,So the output is still kind of deterministic.\N因此，输出仍然具有一定的确定性。
+Dialogue: 0,0:18:43.08,0:18:50.90,Sub,,0,0,0,,I think now this doesn't answer the question about how you debug your kind of evolution systems or agentic system.\N我认为现在这并没有回答如何调试你的演化系统或代理式系统这个问题。
+Dialogue: 0,0:18:50.90,0:18:55.43,Sub,,0,0,0,,And unfortunately, there, it's like, you have to presumably,\N不幸的是，你得先记录下输入、
+Dialogue: 0,0:18:55.43,0:19:04.64,Sub,,0,0,0,,and what you do is, record the inputs and outputs and the traces and then try to replace the traces, right, to find what the problem is if there is a problem.\N输出和运行轨迹，然后尝试替换这些轨迹，以排查问题所在，如果确实存在问题的话。
+Dialogue: 0,0:19:04.64,0:19:05.94,Sub,,0,0,0,,Mark Russinovich: Yeah.\N马克·鲁西诺维奇：是的。
+Dialogue: 0,0:19:07.20,0:19:19.83,Sub,,0,0,0,,So when you talk about an AI stack, you talk about GPUs, network, you talk about different types of accelerators.\N所以当你谈论AI架构时，你是在谈论GPU、网络，以及各种类型的加速器。
+Dialogue: 0,0:19:19.83,0:19:25.80,Sub,,0,0,0,,Where do you see the optimizations happening, the most important ones?\N你认为最重要的优化会出现在哪里？
+Dialogue: 0,0:19:25.80,0:19:31.62,Sub,,0,0,0,,Or have we reached some limit someplace where there's the bottleneck that we need to focus on?\N还是说我们已经达到了某个极限，存在一个需要重点关注的瓶颈？
+Dialogue: 0,0:19:31.62,0:19:34.86,Sub,,0,0,0,,Ion Stoica: I think clearly it will happen.\N伊翁·斯托伊卡：我认为这显然会发生。
+Dialogue: 0,0:19:34.86,0:19:40.19,Sub,,0,0,0,,I think there are three. . .\N我认为有三个。
+Dialogue: 0,0:19:40.22,0:19:43.56,Sub,,0,0,0,,levels of optimizations will happen.\N优化层级将陆续展开。
+Dialogue: 0,0:19:43.56,0:19:46.89,Sub,,0,0,0,,At the top level, there will be many algorithmic optimizations still.\N在最高层级，仍将存在许多算法优化。
+Dialogue: 0,0:19:46.89,0:19:55.29,Sub,,0,0,0,,So I assume that a few orders of magnitude improvement over the next few years will come from the algorithms.\N因此我预计，未来几年内，算法将带来几个数量级的提升。
+Dialogue: 0,0:19:55.29,0:20:03.96,Sub,,0,0,0,,What I mean by algorithms, if you look like, for instance, just inference or training, right now, of course, the workload changes, you have agents.\N我所说的算法，比如你看看，目前的推理或训练，当然工作负载在不断变化，你已经有了智能体。
+Dialogue: 0,0:20:03.96,0:20:08.55,Sub,,0,0,0,,You have much larger prompts or, of course, outputs.\N你的提示词或输出内容要大得多。
+Dialogue: 0,0:20:08.55,0:20:11.28,Sub,,0,0,0,,The context, again, is much larger.\N上下文，再次强调，要大得多。
+Dialogue: 0,0:20:11.28,0:20:13.80,Sub,,0,0,0,,You see a lot of optimizations.\N你看到了很多优化。
+Dialogue: 0,0:20:13.80,0:20:21.33,Sub,,0,0,0,,And architectural optimizations, software architecture, like, for instance, sparse attention, different kinds of attention.\N还有架构优化，比如软件架构中的稀疏注意力、各种类型的注意力机制。
+Dialogue: 0,0:20:21.33,0:20:24.00,Sub,,0,0,0,,You see different layers, different attentions.\N你看，不同的层，不同的注意力机制。
+Dialogue: 0,0:20:24.00,0:20:27.09,Sub,,0,0,0,,And now you see even within the same layer different attentions.\N现在你看到，即使在同一层中，注意力机制也各不相同。
+Dialogue: 0,0:20:27.09,0:20:31.11,Sub,,0,0,0,,Even maybe you'll have per-token learned attentions and things like that.\N甚至你可能还会拥有按词元学习的注意力机制之类的东西。
+Dialogue: 0,0:20:31.11,0:20:34.89,Sub,,0,0,0,,So that's kind of what can give you a big improvement.\N这就是能带来显著提升的关键所在。
+Dialogue: 0,0:20:34.89,0:20:38.76,Sub,,0,0,0,,Of course, this comes with a lot of complexity.\N当然，这会带来大量的复杂性。
+Dialogue: 0,0:20:38.76,0:20:51.59,Sub,,0,0,0,,Then, obviously, you are going to have GPUs, the accelerators, which are going to still make progress, 1.5 or 1.6 every year improvements.\N然后，显然你将拥有GPU，也就是加速器，它们仍将持续进步，每年提升1.5到1.6倍。
+Dialogue: 0,0:20:51.59,0:20:57.95,Sub,,0,0,0,,And that's coming, again, with complexity because it's not like Moore's law used to be, right?\N而且这即将到来，再次伴随着复杂性，因为它不再像过去那样遵循摩尔定律了，对吧？
+Dialogue: 0,0:20:57.95,0:21:02.42,Sub,,0,0,0,,The instructions that architecture is more or less the same.\N架构的指令基本上是一样的。
+Dialogue: 0,0:21:02.42,0:21:12.69,Sub,,0,0,0,,How you get these improvements, a lot of them is by adding new instructions which are targeting particularly new segments of the workload\N这些性能提升的实现方式，很大程度上是通过增加新的指令来达成的，\N这些指令专门针对工作负载中的新细分领域。
+Dialogue: 0,0:21:12.69,0:21:20.58,Sub,,0,0,0,,like I expect you are going to have more and more instructions in the GPUs to target this kind of sophisticated attentions.\N例如，我预计未来GPU中会加入越来越多的指令，以专门应对这类复杂的注意力机制。
+Dialogue: 0,0:21:20.58,0:21:26.10,Sub,,0,0,0,,And then, from the inherent, this will go a little bit slower.\N然后，从其内在特性来看，这个过程会稍微慢一点。
+Dialogue: 0,0:21:26.10,0:21:35.33,Sub,,0,0,0,,You are still going to have smaller transistors; you are going to still be more power-efficient for the power per flops will improve and things like that.\N你仍然会拥有更小的晶体管，每瓦特浮点运算性能将不断提升，能效比也会持续提高。
+Dialogue: 0,0:21:35.33,0:21:37.55,Sub,,0,0,0,,But these are multiplicative, right?\N但这些是相乘的，对吧？
+Dialogue: 0,0:21:37.55,0:21:45.21,Sub,,0,0,0,,So when you multiply them, you can get massive gains in the next few years.\N因此，当它们相乘时，未来几年你就能获得巨大的收益。
+Dialogue: 0,0:21:45.21,0:21:47.37,Sub,,0,0,0,,Mark Russinovich: Okay, I have another question for you.\N马克·鲁西诺维奇：好吧，我再问你一个问题。
+Dialogue: 0,0:21:47.37,0:21:56.85,Sub,,0,0,0,,Because you've been involved so much with open source in AI infrastructure and analytics, do you see a canonical open source-based stack?\N由于你在 AI 基础设施和分析领域深度参与开源，你是否看到了一个标准的开源技术栈？
+Dialogue: 0,0:21:56.85,0:22:01.21,Sub,,0,0,0,,And do you think it will converge or there will be diversity?\N你觉得它会趋于统一，还是会保持多样性？
+Dialogue: 0,0:22:03.10,0:22:11.58,Sub,,0,0,0,,Ion Stoica: I think that there is some stack which is used by companies.\N伊翁·斯托伊卡：我认为有些技术栈是公司普遍使用的。
+Dialogue: 0,0:22:11.58,0:22:20.97,Sub,,0,0,0,,There is like-- and, you see-- you have at the lower level Kubernetes or Slurm.\N底层有 Kubernetes 或 Slurm。
+Dialogue: 0,0:22:20.97,0:22:31.50,Sub,,0,0,0,,Under the hood, if you want to move, because everyone now has to want to have the freedom to make a move across regions or from region to region, maybe you have something like SkyPilot.\N背后，如果你想移动，因为现在每个人都希望拥有跨区域或在区域间自由移动的自由，\N你可能需要像 SkyPilot 这样的工具。
+Dialogue: 0,0:22:31.50,0:22:39.84,Sub,,0,0,0,,On top of that, you have to have some framework like Ray or Pathways or something like that, which helps you\N除此之外，你还需要某种框架，比如 Ray 或 Pathways 之类的，
+Dialogue: 0,0:22:39.84,0:22:45.15,Sub,,0,0,0,,to distribute this kind of AI workloads; then obviously you have PyTorch and so forth.\N来帮助你分发这类 AI 工作负载；然后显然还需要 PyTorch 等工具。
+Dialogue: 0,0:22:45.15,0:22:53.46,Sub,,0,0,0,,So I think you can put together this kind of stack, and then you have vLLM, or Golang, whatever, TensorRT-LLM as an inference layer.\N所以我认为你可以搭建这样一个技术栈，然后使用 vLLM 或 Golang，\N或者用 TensorRT-LLM 作为推理层。
+Dialogue: 0,0:22:53.46,0:22:58.26,Sub,,0,0,0,,And then post-training, you have kind of WELL or SkyRL, and things like that, right?\N然后是后训练阶段，比如 WELL 或 SkyRL 之类的，对吧？
+Dialogue: 0,0:22:58.26,0:23:00.54,Sub,,0,0,0,,So you can create a stack, and you have a stack.\N所以你可以创建一个堆栈，你已经有了一个堆栈。
+Dialogue: 0,0:23:00.54,0:23:02.07,Sub,,0,0,0,,I think a pretty good stack.\N我觉得这是一个相当不错的技术栈。
+Dialogue: 0,0:23:02.07,0:23:14.28,Sub,,0,0,0,,The question is about what will happen and how this kind of stack will evolve because it's like the one thing\N问题是，未来会发生什么，以及这种技术栈将如何演变。因为在我看来，
+Dialogue: 0,0:23:14.28,0:23:24.75,Sub,,0,0,0,,which I see in terms of complexity increasing is that we used to build-- one of the things you teach students,\N复杂性增加的唯一关键点在于，我们过去是如何构建复杂系统的——这正是我们教学生、
+Dialogue: 0,0:23:24.75,0:23:29.88,Sub,,0,0,0,,right, and we learn ourselves that how do you build a complex system?\N也是我们自己学到的东西。
+Dialogue: 0,0:23:29.88,0:23:32.73,Sub,,0,0,0,,You build this kind of in a modular way, right?\N你是以模块化方式来构建这种东西的，对吧？
+Dialogue: 0,0:23:32.73,0:23:40.05,Sub,,0,0,0,,So you have these components with nice abstractions, clean abstractions which abstract away the implementation, right?\N所以你有这些组件，它们具有良好的抽象，清晰的抽象，能够隐藏实现细节，对吧？
+Dialogue: 0,0:23:40.05,0:23:45.18,Sub,,0,0,0,,So then you can evolve each of them independently.\N这样你就可以独立地演化它们每一个。
+Dialogue: 0,0:23:45.18,0:23:49.68,Sub,,0,0,0,,Now, the problem with that-- and this is when we are talking about these layers and all these components,\N现在的问题是，当我们讨论这些层级和所有组件时，这个问题在于，
+Dialogue: 0,0:23:49.71,0:23:54.81,Sub,,0,0,0,,the problem with that is that, as we know, it also comes with some overhead.\N正如我们所知，它也带来了额外的开销。
+Dialogue: 0,0:23:54.81,0:24:03.93,Sub,,0,0,0,,And it used to be perfectly fine to say okay, we are going to spend a few percent, 10% overhead had to have this kind of nice available system, because at the end of the day,\N过去说“我们花个几个百分点，10%的开销，只要系统足够好用就行”，这完全没问题，
+Dialogue: 0,0:24:03.93,0:24:10.42,Sub,,0,0,0,,we can be even faster because we are going to evolve these systems, and the system is going to evolve quickly and quicker.\N因为毕竟我们最终能变得更快，这些系统会不断进化，而且进化得越来越快。
+Dialogue: 0,0:24:11.55,0:24:18.21,Sub,,0,0,0,,But now it's like it's so much breaking the layering, and it's called cross-layer optimizations, right?\N但现在它打破了这种分层，这被称为跨层优化，对吧？
+Dialogue: 0,0:24:18.21,0:24:22.56,Sub,,0,0,0,,It's like, this is what I see, everything, right?\N就像这样，我看到的一切，对吧？
+Dialogue: 0,0:24:22.56,0:24:34.71,Sub,,0,0,0,,I don't know, it's like, in some sense, it's like all these layers are going to get crossed and broken.\N我不知道，从某种意义上说，这些层好像都要被交叉和打破。
+Dialogue: 0,0:24:34.71,0:24:39.33,Sub,,0,0,0,,And I see, you can do maybe in an orderly way, but I don't know where you are stopping.\N而且我看到，你可以以一种有条理的方式进行，但我不知道你会在哪儿停下。
+Dialogue: 0,0:24:39.33,0:24:43.53,Sub,,0,0,0,,Is this collaboration between Ray and Kubernetes, with you guys?\N这是你们和雷神之间的合作吗，和 Kubernetes？
+Dialogue: 0,0:24:43.53,0:24:54.72,Sub,,0,0,0,,But what is the thing here is that something like Kubernetes wants to know more information about the applications from Ray to make more intelligent decisions, something like Ray, which is up there.\N但关键在于，像 Kubernetes 这样的系统希望从 Ray 获取更多关于应用的信息，\N以便做出更智能的决策，而 Ray 正是运行在上面的系统。
+Dialogue: 0,0:24:54.72,0:24:58.62,Sub,,0,0,0,,They want now to have more control to tell Kubernetes what to do. Right?\N他们现在希望拥有更多控制权，以便告诉 Kubernetes 该做什么。对吧？
+Dialogue: 0,0:24:58.62,0:25:00.60,Sub,,0,0,0,,So you can allow that.\N所以你可以允许这样。
+Dialogue: 0,0:25:00.60,0:25:07.50,Sub,,0,0,0,,But I don't know when you stop because, of course, you are no longer going to have these kind of clean, narrow abstractions.\N但我不知道你什么时候会停下，因为显然，你将不再拥有这种清晰而狭窄的抽象概念了。
+Dialogue: 0,0:25:07.50,0:25:11.07,Sub,,0,0,0,,I think that's very interesting.\N我觉得这非常有趣。
+Dialogue: 0,0:25:11.07,0:25:14.67,Sub,,0,0,0,,Mark Russinovich: So, we've got about five minutes left, I think.\N马克·鲁西诺维奇：所以，我想我们大概还剩五分钟。
+Dialogue: 0,0:25:14.67,0:25:18.53,Sub,,0,0,0,,Ion Stoica: Yeah, so. . .\N伊翁·斯托伊卡：嗯，是这样……
+Dialogue: 0,0:25:18.58,0:25:23.87,Sub,,0,0,0,,So, one question I do have for you,\N那么，我有一个问题想请教您，
+Dialogue: 0,0:25:24.99,0:25:33.78,Sub,,0,0,0,,It's how do you think about-- we are talking about the workflows, agents, and so forth.\N您是如何看待工作流程、智能体等这些概念的？
+Dialogue: 0,0:25:33.78,0:25:41.25,Sub,,0,0,0,,Is that, you think about like a boundary, two different kind of patterns of workloads, or you think are--\N你是指像一个边界，两种不同类型的负载模式，还是说——马克·鲁西诺维奇：
+Dialogue: 0,0:25:41.25,0:25:43.08,Sub,,0,0,0,,Mark Russinovich: For agents and-- Ion Stoica: And workflows.\N对于智能体和——伊翁·斯托伊卡：以及工作流。
+Dialogue: 0,0:25:43.08,0:25:43.53,Sub,,0,0,0,,Mark Russinovich: And workflows.\N马克·鲁西诺维奇：还有工作流程。
+Dialogue: 0,0:25:43.53,0:25:44.91,Sub,,0,0,0,,Ion Stoica: Traditionally, what we call them.\N伊翁·斯托伊卡：传统上，我们称之为……
+Dialogue: 0,0:25:44.94,0:25:50.37,Sub,,0,0,0,,Mark Russinovich: You know, the beauty of agents is that they can make workflows dynamically.\N马克·鲁西诺维奇：你知道，智能体的妙处在于，它们能够动态地构建工作流程。
+Dialogue: 0,0:25:50.37,0:25:56.34,Sub,,0,0,0,,And I think that this is, instead of you having to go and prescribe a workflow and write it out,\N我认为，与其让你去指定工作流程并手动编写，不如直接向AI提出一个问题，
+Dialogue: 0,0:25:56.34,0:26:05.31,Sub,,0,0,0,,you can give AI a problem, and it'll go figure out how to execute that task and come up with a workflow dynamically.\N它就能自动找出执行任务的方法，并动态生成相应的工作流程。
+Dialogue: 0,0:26:05.31,0:26:13.53,Sub,,0,0,0,,When I look at those systems, if you've got anything where the workflow is going to be repeated many times,\N当我看到这些系统时，如果你遇到的工作流程需要反复执行，
+Dialogue: 0,0:26:13.53,0:26:20.58,Sub,,0,0,0,,you want to make that deterministic and not rely on an AI to make it up every time you've got the problem.\N就应该让它变得确定性，而不是每次都依赖AI来临时生成，否则你就会遇到问题。
+Dialogue: 0,0:26:20.58,0:26:25.83,Sub,,0,0,0,,So I think where things are not well-defined,\N所以我认为，当事情本身不够明确、
+Dialogue: 0,0:26:25.83,0:26:32.88,Sub,,0,0,0,,where they're very ad hoc, then AI and agents are great for making up the workflows and solving the problem.\N非常随意时，AI 和智能体就特别适合用来创造工作流程并解决问题。
+Dialogue: 0,0:26:32.88,0:26:39.24,Sub,,0,0,0,,But for anything where you've got a repetitive process, you should go try to make it deterministic,\N但凡遇到重复性流程，就应该设法让它变得确定性，
+Dialogue: 0,0:26:39.24,0:26:44.82,Sub,,0,0,0,,because it's going to be much more efficient, much more reliable, and much cheaper.\N这样会更高效、更可靠，也更便宜。
+Dialogue: 0,0:26:44.82,0:26:46.50,Sub,,0,0,0,,So all of those things are going to be true.\N所有这些都会成为现实。
+Dialogue: 0,0:26:46.50,0:26:50.76,Sub,,0,0,0,,And I think that this is where I see people over-rotate on, oh, I can have an agent go do this thing.\N而且我认为，人们在这里过度乐观了，觉得我可以让一个智能体去完成这件事。
+Dialogue: 0,0:26:50.76,0:26:54.30,Sub,,0,0,0,,When I'm like, I look at it and go, actually you could just write a simple workflow.\N当我看到它的时候，我会想，其实你完全可以写一个简单的流程。
+Dialogue: 0,0:26:54.30,0:26:56.64,Sub,,0,0,0,,Ion Stoica: You can have the agent synthesize that workflow.\N伊翁·斯托伊卡：你可以让智能体来合成这个工作流程。
+Dialogue: 0,0:26:56.64,0:26:57.30,Sub,,0,0,0,,Mark Russinovich: That's right.\N马克·鲁西诺维奇：没错。
+Dialogue: 0,0:26:57.30,0:26:57.93,Sub,,0,0,0,,That's right, yeah.\N没错，就是这么回事。
+Dialogue: 0,0:26:57.93,0:27:02.31,Sub,,0,0,0,,That's the other way to do it is have the agents make the workflow, and then the workflow is deterministic.\N另一种做法是让智能体来创建工作流程，这样工作流程就是确定性的了。
+Dialogue: 0,0:27:02.31,0:27:04.44,Sub,,0,0,0,,Ion Stoica: Yep, that's what I mentioned about.\N伊翁·斯托伊卡：对，这就是我之前提到的。
+Dialogue: 0,0:27:04.44,0:27:08.31,Sub,,0,0,0,,Yeah. So the other thing is that we used to have--\N是的。另一个问题是，
+Dialogue: 0,0:27:08.31,0:27:14.01,Sub,,0,0,0,,you have training, and you have serving separate deployments and things like that.\N过去我们通常将训练和推理分开部署，诸如此类。
+Dialogue: 0,0:27:14.01,0:27:19.89,Sub,,0,0,0,,But now with this kind of post-training,\N但现在通过这种后训练，
+Dialogue: 0,0:27:19.89,0:27:24.36,Sub,,0,0,0,,starting even earlier on from reinforcement learning with human feedback.\N甚至可以从带有人类反馈的强化学习阶段更早开始。
+Dialogue: 0,0:27:24.36,0:27:29.07,Sub,,0,0,0,,And now it's continual learning and things like that.\N现在是持续学习，以及类似的技术。
+Dialogue: 0,0:27:29.07,0:27:31.71,Sub,,0,0,0,,It seems that kind of it's a blur out there.\N看起来外面有点模糊。
+Dialogue: 0,0:27:31.71,0:27:41.19,Sub,,0,0,0,,So what should the platform look like -- Mark Russinovich: This is the -- multi-hundred billion dollar question, isn't it?\N那么这个平台应该是什么样子的呢——马克·鲁西诺维奇：这可是个价值数百亿美元的难题，不是吗？
+Dialogue: 0,0:27:41.19,0:27:45.21,Sub,,0,0,0,,I think because we run into two things.\N我认为是因为我们遇到了两个问题。
+Dialogue: 0,0:27:45.21,0:27:46.50,Sub,,0,0,0,,I mean, you heard about Maia.\N我的天，你听说了吗，Maia。
+Dialogue: 0,0:27:46.50,0:27:47.40,Sub,,0,0,0,,Ion Stoica: Yes, of course.\N伊翁·斯托伊卡：是的，当然。
+Dialogue: 0,0:27:47.40,0:27:49.98,Sub,,0,0,0,,Mark Russinovich: And Maia is optimized for inference.\N马克·鲁西诺维奇：而Maia是针对推理进行优化的。
+Dialogue: 0,0:27:49.98,0:27:55.26,Sub,,0,0,0,,Then you hear about NVIDIA's chips, which are optimized, for the most part, their main line for training.\N然后你听说英伟达的芯片，基本上都是为其主力训练产品优化的。
+Dialogue: 0,0:27:55.26,0:28:03.87,Sub,,0,0,0,,And then you mentioned like GRPO or DPO or any of these post-training things that are happening in the loop with it, where you're doing inference\N然后你提到了像 GRPO 或 DPO 这类在训练循环中进行的后训练操作，
+Dialogue: 0,0:28:03.87,0:28:06.51,Sub,,0,0,0,,at the same time you're doing the training.\N也就是在进行推理的同时也在进行训练。
+Dialogue: 0,0:28:06.51,0:28:17.13,Sub,,0,0,0,,And so whenever you've got a situation where you can optimize for efficiency, obviously, that's going to be what you want\N因此，当你遇到可以优化效率的情况时，显然这就是你想要做的，
+Dialogue: 0,0:28:17.13,0:28:21.00,Sub,,0,0,0,,to do, especially at the scales you're at, where you can save literally tens of millions,\N尤其是在你所处的规模下，通过优化某个特定路径，
+Dialogue: 0,0:28:21.00,0:28:25.35,Sub,,0,0,0,,hundreds of millions of dollars by optimizing for some specific path.\Nliterally 可以节省数百万甚至数千万美元。
+Dialogue: 0,0:28:25.35,0:28:32.43,Sub,,0,0,0,,But when you optimize for that specific path and then things change, and they're not a good fit, that can be a big problem.\N但当你只为特定路径优化，而之后情况发生变化，不再匹配时，问题就可能变得很大。
+Dialogue: 0,0:28:32.43,0:28:38.85,Sub,,0,0,0,,And so it's this tension now because we haven't even-- like you said, the evolution of these architectures hasn't finished.\N因此现在就产生了这种张力，因为我们甚至还没有完成——正如你所说，这些架构的演进尚未结束。
+Dialogue: 0,0:28:38.85,0:28:43.56,Sub,,0,0,0,,And so if you over-optimize for one workload, you could run into trouble.\N因此，如果你过度优化某一项工作负载，可能会遇到麻烦。
+Dialogue: 0,0:28:43.56,0:28:52.41,Sub,,0,0,0,,So the question is, how general should we be and leave money on the table in the short term?\N那么问题来了，我们究竟应该做到多通用，从而在短期内放弃一部分收益？
+Dialogue: 0,0:28:52.41,0:29:02.25,Sub,,0,0,0,,Because in the long term, we're going to be protected against changes in the architecture or in the application requirements versus taking advantage of optimization now\N因为从长远来看，我们能够抵御架构或应用需求变化带来的影响，而如果现在就追求优化，
+Dialogue: 0,0:29:02.25,0:29:04.17,Sub,,0,0,0,,and potentially being bitten by it later.\N未来可能会因此受到反噬。
+Dialogue: 0,0:29:04.17,0:29:06.54,Sub,,0,0,0,,I think that that's the tension that you see.\N我认为这就是你所看到的矛盾所在。
+Dialogue: 0,0:29:06.54,0:29:07.20,Sub,,0,0,0,,Ion Stoica: Absolutely.\N伊翁·斯托伊卡：绝对可以。
+Dialogue: 0,0:29:07.24,0:29:07.70,Sub,,0,0,0,,Mark Russinovich: Yeah.\N马克·鲁西诺维奇：是的。
+Dialogue: 0,0:29:08.57,0:29:08.99,Sub,,0,0,0,,Ion Stoica: Yeah.\N伊翁·斯托伊卡：是的。
+Dialogue: 0,0:29:10.20,0:29:16.10,Sub,,0,0,0,,Mark Russinovich: All right. So, we're down to a couple of minutes left, according to the clock up here.\N马克·鲁西诺维奇：好的，根据上面的时钟显示，我们还剩几分钟了。
+Dialogue: 0,0:29:16.14,0:29:19.20,Sub,,0,0,0,,So I want to thank you for coming and spending time with us at Build.\N感谢大家来到微软 Build 大会，感谢你们抽出时间与我们共度这段时光。
+Dialogue: 0,0:29:19.20,0:29:28.41,Sub,,0,0,0,,Your impact on the industry is monumental, and it's gracious of you to come and take time out of your day to share your thoughts on the evolution of AI infrastructure.\N你对整个行业的影响是里程碑式的，感谢你抽空前来，分享你对AI基础设施演进的见解。
+Dialogue: 0,0:29:28.41,0:29:29.31,Sub,,0,0,0,,Ion Stoica: Yeah, thank you.\N伊翁·斯托伊卡：是的，谢谢。
+Dialogue: 0,0:29:29.31,0:29:32.19,Sub,,0,0,0,,And we haven't touched on-- Mark Russinovich: On Confidential computing.\N而且我们还没谈到——马克·鲁西诺维奇：关于机密计算。
+Dialogue: 0,0:29:32.19,0:29:33.60,Sub,,0,0,0,,Ion Stoica: On confidential computing.\N伊翁·斯托伊卡：关于可信计算。
+Dialogue: 0,0:29:33.60,0:29:38.22,Sub,,0,0,0,,So before going, I know I know that this is a topic dear to your heart, Mark.\N在走之前，我知道这 topic 对你来说意义非凡，马克。
+Dialogue: 0,0:29:38.22,0:29:42.11,Sub,,0,0,0,,So can you say something about like security governance and so forth?\N那你能说一下关于安全治理之类的问题吗？
+Dialogue: 0,0:29:42.14,0:29:47.34,Sub,,0,0,0,,Mark Russinovich: Well, absolutely. I mean, they're all -- from security governance, we didn't really get time to deep dive on this.\N马克·鲁西诺维奇：当然了，他们都是——从安全治理的角度来说，我们其实没时间深入探讨这一点。
+Dialogue: 0,0:29:47.34,0:29:51.69,Sub,,0,0,0,,But when it comes to jailbreaks and prompt injections, I've been doing a lot of research on this.\N但说到越狱和提示注入，我在这方面做了很多研究。
+Dialogue: 0,0:29:51.69,0:29:56.97,Sub,,0,0,0,,This is, like I mentioned earlier, a big topic of evolution where we haven't bottomed out yet.\N正如我之前提到的，这是一个仍在持续演进的大话题，目前尚未见底。
+Dialogue: 0,0:29:56.97,0:30:03.03,Sub,,0,0,0,,I think I view it as kind of the early days when people were downloading stuff from the internet and just your fingers were crossed.\N我觉得这就像早期人们从互联网下载东西时，只能靠祈祷一样。
+Dialogue: 0,0:30:03.03,0:30:11.94,Sub,,0,0,0,,This is what happens now when you give agents access to your company's private data or your private data or your access tokens is you're kind of crossing your fingers\N现在如果你让智能体访问你公司的私有数据、你的个人数据，或者你的访问凭证，就等于在赌运气，
+Dialogue: 0,0:30:11.94,0:30:15.90,Sub,,0,0,0,,and hoping that things don't go off the rails and you end up with a problem.\N祈祷事情不会失控，否则你可能会遇到麻烦。
+Dialogue: 0,0:30:15.90,0:30:21.42,Sub,,0,0,0,,And we've seen some high-profile examples just in the last few months of people getting burned by prompt injections.\N我们最近几个月已经看到一些高调的案例，有人因提示注入而遭受损失。
+Dialogue: 0,0:30:21.42,0:30:26.25,Sub,,0,0,0,,So I don't think we've come to the reckoning yet on that and people understanding the risk.\N所以我认为我们还没有真正意识到其中的风险，也还没到必须面对后果的时候。
+Dialogue: 0,0:30:26.25,0:30:31.80,Sub,,0,0,0,,And then with confidential computing, that is another layer of-- the clock just reset to five minutes.\N然后通过可信计算，又增加了一层——时钟刚刚重置为五分钟。
+Dialogue: 0,0:30:31.80,0:30:33.02,Sub,,0,0,0,,So we've got another five minutes.\N我们还有五分钟时间。
+Dialogue: 0,0:30:34.71,0:30:36.34,Sub,,0,0,0,,Ion Stoica: So now you can, please.\N伊翁·斯托伊卡：现在你们可以了，请。
+Dialogue: 0,0:30:37.41,0:30:40.80,Sub,,0,0,0,,Mark Russinovich: I think backstage they liked the answer so much they wanted me to continue.\N马克·鲁西诺维奇：我觉得后台他们很喜欢这个回答，都想让我继续讲下去。
+Dialogue: 0,0:30:43.50,0:30:51.06,Sub,,0,0,0,,So I can talk a little bit about confidential computing now, which is it's independent of AI, of course, but related in some ways.\N所以我可以稍微谈一下可信计算，它当然与人工智能无关，但在某些方面又有关联。
+Dialogue: 0,0:30:51.06,0:30:56.76,Sub,,0,0,0,,Because if you think about the sensitivity of the data that people are processing with agentic systems,\N因为如果你考虑到人们使用代理式系统处理的数据的敏感性，
+Dialogue: 0,0:30:56.76,0:31:02.73,Sub,,0,0,0,,if it's in a personal context, you're saying, "Hey, I really want you to help me with my medical advice.\N尤其是在个人情境下，你实际上是在说：“嘿，我真的很希望你能帮我做医疗建议。”
+Dialogue: 0,0:31:02.73,0:31:05.55,Sub,,0,0,0,,I want you to help me with my financials."\N我想让你帮我处理一下财务问题。
+Dialogue: 0,0:31:05.55,0:31:12.00,Sub,,0,0,0,,You're giving these agents so much very personal and very sensitive data about yourself.\N你把这些智能体给了太多关于你个人的、非常敏感的数据。
+Dialogue: 0,0:31:12.00,0:31:21.78,Sub,,0,0,0,,And if you're in an enterprise context, the way you get the value out of these models is giving them access to the sensitive data of your enterprise.\N如果你身处企业环境，从这些模型中获取价值的方式，就是让它们访问企业内部的敏感数据。
+Dialogue: 0,0:31:21.78,0:31:28.41,Sub,,0,0,0,,And especially when you're hosting this in a cloud platform or some hoster that's out of your control,\N尤其是在将系统部署在云平台或第三方托管环境，甚至在自己的环境中时，
+Dialogue: 0,0:31:28.41,0:31:34.53,Sub,,0,0,0,,or even in your own environment, you want to minimize the trusted computing base, the code that has access to that data,\N你应尽可能缩小可信计算基，也就是那些能访问数据的代码范围，
+Dialogue: 0,0:31:34.53,0:31:41.40,Sub,,0,0,0,,to the smallest amount possible where you can have the highest assurance that it's going to behave properly and where bad actors can't get to it.\N将其压缩到最小，这样才能最大程度确保其行为正常，同时防止恶意攻击者接触到它。
+Dialogue: 0,0:31:41.43,0:31:44.95,Sub,,0,0,0,,And confidential computing is -- now we've got another. . .\N而机密计算现在又有了新进展。
+Dialogue: 0,0:31:46.17,0:31:46.83,Sub,,0,0,0,,It reset again.\N它又重置了。
+Dialogue: 0,0:31:46.83,0:31:47.28,Sub,,0,0,0,,I was wondering.\N我在想……
+Dialogue: 0,0:31:47.28,0:31:49.32,Sub,,0,0,0,,I was like, wow, we burned through that time really fast.\N我心想，哇，我们这么快就用掉那段时间了。
+Dialogue: 0,0:31:49.32,0:31:51.52,Sub,,0,0,0,,So now we have 13 minutes left.\N现在我们还剩13分钟。
+Dialogue: 0,0:31:54.61,0:31:55.60,Sub,,0,0,0,,So let me just wrap this up.\N那我来总结一下。
+Dialogue: 0,0:31:55.60,0:31:58.81,Sub,,0,0,0,,And I think there were some more topics that we can discuss.\N我觉得我们还可以讨论一些其他话题。
+Dialogue: 0,0:31:58.81,0:32:01.18,Sub,,0,0,0,,And maybe we can take some questions from the audience.\N也许我们可以回答一下观众的提问。
+Dialogue: 0,0:32:01.18,0:32:09.69,Sub,,0,0,0,,But confidential computing, for those of you that aren't familiar with it, it's hardware-based protection of data while it's in use.\N但对不太了解的人来说，机密计算是指在数据使用过程中，通过硬件来保护数据。
+Dialogue: 0,0:32:09.69,0:32:19.08,Sub,,0,0,0,,So the hardware itself is encrypting memory and creating a privileged boundary around the data such that nothing else on the system can get access\N因此，硬件本身会加密内存，并在数据周围创建一个特权边界，\N使得系统中其他任何部分都无法访问该安全区域内的数据，
+Dialogue: 0,0:32:19.08,0:32:22.65,Sub,,0,0,0,,to what's inside of that enclave, they're called.\N这种区域被称为“飞地”。
+Dialogue: 0,0:32:22.65,0:32:26.37,Sub,,0,0,0,,And it comes with a cool property the hardware provides, which is an attestation,\N它还具备一个出色的特性，即硬件提供的认证功能。
+Dialogue: 0,0:32:26.37,0:32:35.67,Sub,,0,0,0,,where it can measure what's inside the enclave and then the application in that enclave can offer that attestation to another system that then can look at it\N它可以测量飞地内部的内容，随后该飞地内的应用程序可将这一认证信息提供给另一个系统，
+Dialogue: 0,0:32:35.67,0:32:41.97,Sub,,0,0,0,,and say, oh, your compute inside of an enclave, I trust that enclave, I trust your configuration,\N后者可据此判断：哦，我信任你飞地内的计算，我信任你的配置。
+Dialogue: 0,0:32:41.97,0:32:48.03,Sub,,0,0,0,,I'm going to give you a secret, typically a key, which allows you to go and process that data in the clear.\N我给你一个密钥，让你能明文处理这些数据。
+Dialogue: 0,0:32:48.03,0:32:55.77,Sub,,0,0,0,,And it's protected against so many of the threats that not having this enclave protecting that boundary against. And when it comes to agents,\N而且它能抵御许多威胁，这些威胁若没有这个安全区来保护该边界，就会造成风险。谈到智能体时，
+Dialogue: 0,0:32:55.81,0:32:59.06,Sub,,0,0,0,,having an attestation of what is the agent?\N拥有对智能体身份的验证就显得尤为重要。
+Dialogue: 0,0:32:59.09,0:33:00.98,Sub,,0,0,0,,What is its provenance.?\N它的来源是什么？
+Dialogue: 0,0:33:01.01,0:33:06.78,Sub,,0,0,0,,Do I know that the data that I'm giving to the agent is protected with the highest assurance as possible inside that enclave?\N我知道我提供给智能体的数据，在那个安全区内部是否得到了最高级别的保护保障吗？
+Dialogue: 0,0:33:06.78,0:33:13.05,Sub,,0,0,0,,You're going to see a trend with AI and confidential computing that I think is going to really drive forward confidential computing.\N你会看到人工智能与机密计算之间的一种趋势，我认为这将真正推动机密计算的发展。
+Dialogue: 0,0:33:13.05,0:33:22.53,Sub,,0,0,0,,Confidential GPUs from NVIDIA, for example, confidential GPUs from AMD, and even Microsoft's Maia processor.\N例如，英伟达的保密GPU、AMD的保密GPU，甚至微软的马亚处理器。
+Dialogue: 0,0:33:22.53,0:33:25.92,Sub,,0,0,0,,Ion Stoica: Yeah, that's fascinating.\N伊翁·斯托伊卡：是的，这非常有趣。
+Dialogue: 0,0:33:25.92,0:33:31.18,Sub,,0,0,0,,Mark Russinovich: Since we have more time on the clock now, which is kind of nice.\N马克·鲁西诺维奇：现在我们有更多时间了，这感觉还挺不错的。
+Dialogue: 0,0:33:36.09,0:33:40.18,Sub,,0,0,0,,Let me go back to some questions that we skipped earlier for you.\N让我回到之前跳过的一些问题。
+Dialogue: 0,0:33:44.73,0:33:48.45,Sub,,0,0,0,,And I guess this is something we really haven't talked about is developer experience.\N而且我想，这正是我们之前很少谈到的一点，那就是开发者的体验。
+Dialogue: 0,0:33:48.45,0:33:53.43,Sub,,0,0,0,,We've been talking a lot about infrastructure, but you've got all this complexity.\N我们一直在讨论基础设施，但你却面临如此多的复杂性。
+Dialogue: 0,0:33:53.43,0:33:57.33,Sub,,0,0,0,,When it comes to developer experience, there's so many options out there.\N在开发者体验方面，市面上的选择实在太多了。
+Dialogue: 0,0:33:57.33,0:34:08.25,Sub,,0,0,0,,There's GitHub Copilot CLI there's the SDK, there's OpenClaw, like what -- and there's doing your own loop, calling an LLM directly.\N那里有 GitHub Copilot 命令行工具，有 SDK，\N有 OpenClaw，还有自己写循环，直接调用大语言模型。
+Dialogue: 0,0:34:08.25,0:34:11.52,Sub,,0,0,0,,We saw Simon Willison doing this with his own application.\N我们看到西蒙·威尔森用他自己的应用做了这件事。
+Dialogue: 0,0:34:11.52,0:34:14.10,Sub,,0,0,0,,He didn't use any harness.\N他没有使用任何运行框架。
+Dialogue: 0,0:34:14.10,0:34:16.05,Sub,,0,0,0,,What's the best approach?\N最好的方法是什么？
+Dialogue: 0,0:34:16.05,0:34:21.00,Sub,,0,0,0,,When do you decide, when do you use one harness versus a custom orchestrator?\N什么时候决定使用一个运行框架，什么时候使用自定义的编排器？
+Dialogue: 0,0:34:21.00,0:34:25.02,Sub,,0,0,0,,How do you code this, and how do you measure what's the best answer?\N你该如何编写这段代码，又该如何衡量哪个答案是最优的？
+Dialogue: 0,0:34:25.02,0:34:28.62,Sub,,0,0,0,,And in fact, I wrestle with this too when I'm approaching code.\N事实上，当我面对代码时，我也常常为此困扰。
+Dialogue: 0,0:34:28.62,0:34:29.46,Sub,,0,0,0,,Ion Stoica: And me as well.\N伊翁·斯托伊卡：我也是。
+Dialogue: 0,0:34:29.46,0:34:34.48,Sub,,0,0,0,,But let me just give. . .\N但让我先说一下……
+Dialogue: 0,0:34:34.51,0:34:39.29,Sub,,0,0,0,,So, I think that. . .\N所以，我认为……
+Dialogue: 0,0:34:39.32,0:34:48.57,Sub,,0,0,0,,Look, my TLDR is that now we have, again, very powerful coding agents and so forth.\N说实话，我的总结是，现在我们又有了非常强大的编码智能体等等。
+Dialogue: 0,0:34:48.57,0:34:53.51,Sub,,0,0,0,,And many of you, I'm sure -- how many of you use coding agents?\N我相信在座的各位中有很多人——有多少人正在使用编码智能体？
+Dialogue: 0,0:34:53.54,0:34:55.84,Sub,,0,0,0,,Everyone, right?\N大家都知道，对吧？
+Dialogue: 0,0:34:57.55,0:35:08.16,Sub,,0,0,0,,I do think that -- actually, the biggest challenge is that -- and this is -- it's about how do you know that. . .\N我认为，实际上最大的挑战是……这关乎你如何判断……
+Dialogue: 0,0:35:08.19,0:35:16.19,Sub,,0,0,0,,the code which is generated is going to work correctly for some kind of definition of correctness, right?\N生成的代码在某种意义上的正确性下，将会正确运行，对吧？
+Dialogue: 0,0:35:16.22,0:35:20.64,Sub,,0,0,0,,Is doing what you hope you want to do, right?\N做着你希望做的事，对吧？
+Dialogue: 0,0:35:20.64,0:35:23.10,Sub,,0,0,0,,I think that's the key, right?\N我觉得这才是关键，对吧？
+Dialogue: 0,0:35:23.13,0:35:30.26,Sub,,0,0,0,,And the more code it generates, the harder it is to do that, right? Because --\N它生成的代码越多，就越难做到这一点，
+Dialogue: 0,0:35:30.31,0:35:38.71,Sub,,0,0,0,,-- and I think this was, you know, this is also, was true before, right?\N对吧？因为——而且我认为，这在之前也是成立的，对吧？
+Dialogue: 0,0:35:38.74,0:35:43.59,Sub,,0,0,0,,Everyone here probably developed a production -- -- system, right?\N在座的各位可能都开发过一个生产系统，对吧？
+Dialogue: 0,0:35:43.59,0:35:46.32,Sub,,0,0,0,,Or, has been involved in developing a production system.\N或者，曾参与开发生产系统。
+Dialogue: 0,0:35:46.32,0:35:48.54,Sub,,0,0,0,,Where do you spend most of the time?\N你大部分时间都在哪里度过？
+Dialogue: 0,0:35:48.54,0:35:54.60,Sub,,0,0,0,,You don't spending the time or most of the time in prototyping or writing the code; you do spend the time in, kind of,\N你花在原型设计或编写代码上的时间并不多，
+Dialogue: 0,0:35:54.64,0:35:59.22,Sub,,0,0,0,,even, you know, in debugging, then maintaining the code.\N反而要花大量时间进行调试和维护代码。
+Dialogue: 0,0:35:59.22,0:36:01.80,Sub,,0,0,0,,It's easily 10 to 1 effort.\N这几乎需要十倍的努力。
+Dialogue: 0,0:36:01.80,0:36:09.39,Sub,,0,0,0,,So, in some sense, what these coding agents are doing are going to commoditize that kind of writing the code.\N从某种意义上说，这些编程智能体正在使编写代码这一过程变得像商品一样。
+Dialogue: 0,0:36:09.39,0:36:12.00,Sub,,0,0,0,,But the bottleneck will be more and more in, kind of, verifying.\N但瓶颈将越来越多地出现在验证环节。
+Dialogue: 0,0:36:12.00,0:36:20.40,Sub,,0,0,0,,And, yes, you can use these agents to say, "Hey you-- ", you know,"check that, is that correct?"\N是的，你可以用这些智能体说：“嘿，你，检查一下，这正确吗？”
+Dialogue: 0,0:36:20.40,0:36:21.66,Sub,,0,0,0,,But it's very hard, you know?\N但真的很难，你知道的。
+Dialogue: 0,0:36:21.66,0:36:22.89,Sub,,0,0,0,,Some agents are lazy.\N有些智能体很懒。
+Dialogue: 0,0:36:22.92,0:36:29.04,Sub,,0,0,0,,So, without you understanding the code, at least at this point today, I don't think --\N所以，如果你不理解这段代码，至少目前来说，
+Dialogue: 0,0:36:29.04,0:36:38.79,Sub,,0,0,0,,and having continuously having testing it and enhancing the test, I don't think you can trust that code that is doing what it's supposed to do.\N我认为——即使持续不断地测试并改进测试，你也无法相信这段代码真的能按预期工作。
+Dialogue: 0,0:36:38.79,0:36:44.91,Sub,,0,0,0,,Because that kind of reward hacking is very different from what you can think about.\N因为这种奖励滥用的情况，和你能想到的任何情况都完全不同。
+Dialogue: 0,0:36:44.91,0:36:46.35,Sub,,0,0,0,,Let me give you just one example.\N让我举一个例子。
+Dialogue: 0,0:36:46.35,0:36:49.65,Sub,,0,0,0,,I have so many examples about that, but I'm giving you the simplest one.\N我有很多例子可以说明，但这里只给你最简单的一个。
+Dialogue: 0,0:36:49.65,0:36:51.81,Sub,,0,0,0,,You mentioned earlier about load balancing.\N你之前提到过负载均衡。
+Dialogue: 0,0:36:51.81,0:37:01.38,Sub,,0,0,0,,So, say you are going to say, okay, I want to develop a load balancer algorithms and, you know, for and -- you know, using the agents.\N比如说，你想开发一个负载均衡算法，利用智能体来实现。
+Dialogue: 0,0:37:01.38,0:37:07.59,Sub,,0,0,0,,And we did that, we have that a few months ago using EPLB, right, Expert Parallelism Load Balancer, of course.\N我们当时就是用 EPLB，也就是专家并行负载均衡器，实现了这一点，就在几个月前。
+Dialogue: 0,0:37:07.59,0:37:15.39,Sub,,0,0,0,,And then what you want to do is the metrics, you want this, the load you are going to handle.\N然后你想要做的就是指标，你要确保能处理的负载。
+Dialogue: 0,0:37:15.43,0:37:17.52,Sub,,0,0,0,,You know, you want to maximize that load.\N你知道，你得让负载最大化。
+Dialogue: 0,0:37:17.52,0:37:24.29,Sub,,0,0,0,,Now, one solution is simply, which we've seen, that because that's a metric --\N现在，一个解决方案就是，我们已经看到的那样，
+Dialogue: 0,0:37:24.32,0:37:29.31,Sub,,0,0,0,,the "hill climbs", the load, is just dropping requests.\N因为这是一个指标——“爬坡”、负载，只是在降低请求。
+Dialogue: 0,0:37:29.31,0:37:38.94,Sub,,0,0,0,,Right? Now, you wouldn't think that when you tell someone, even when you write the PRD about the load balancers, "Hey, you shouldn't drop the request."\N对吧？你可能不会想到，当你告诉别人，甚至在写负载均衡器的PRD时，说“嘿，\N你不该丢弃请求”，这听起来好像很简单。
+Dialogue: 0,0:37:38.94,0:37:41.13,Sub,,0,0,0,,It's that's kind of understandable, right?\N这倒是能理解，对吧？
+Dialogue: 0,0:37:41.13,0:37:48.27,Sub,,0,0,0,,But these models, they are going to do that because they are going to maximize the things you told them to maximize, right?\N但这些模型会那样做，是因为它们会最大化你告诉它们要最大化的东西，对吧？
+Dialogue: 0,0:37:48.27,0:37:50.91,Sub,,0,0,0,,In the simplest and the easiest way.\N最简单、最直接的方式。
+Dialogue: 0,0:37:50.91,0:37:52.83,Sub,,0,0,0,,So that's kind of why I'm saying it, right?\N所以我说这话，大概就是这个原因，对吧？
+Dialogue: 0,0:37:52.83,0:37:56.97,Sub,,0,0,0,,And there are many things which you can pass all the unit tests and so forth.\N而且有很多事情，你可以通过所有的单元测试等等。
+Dialogue: 0,0:37:56.97,0:38:06.84,Sub,,0,0,0,,And then when you look deeper, there are things which are, in a way, overfit to your test you couldn't imagine, right?\N然后当你深入观察时，会发现一些东西，\N它们在某种程度上已经过度拟合了你的测试集，这是你根本无法想象的，对吧？
+Dialogue: 0,0:38:06.84,0:38:10.77,Sub,,0,0,0,,It's like that's kind of the things you still need to, I think, at this stage.\N我觉得在这个阶段，你仍然需要这些。
+Dialogue: 0,0:38:10.77,0:38:17.13,Sub,,0,0,0,,I don't know what will happen in a few months, in one year, but right now, you have to be able to specify.\N我不知道几个月后、一年后会发生什么，但此刻，你必须能够明确指定。
+Dialogue: 0,0:38:17.13,0:38:24.39,Sub,,0,0,0,,If you didn't specify something, you can almost guarantee that the systems will find something around it.\N如果你没有明确指定某件事，几乎可以肯定系统会找到某种方式绕过去。
+Dialogue: 0,0:38:24.39,0:38:27.51,Sub,,0,0,0,,And there are three places a specification comes from.\N规范有三个来源。
+Dialogue: 0,0:38:27.51,0:38:32.19,Sub,,0,0,0,,So one is, basically -- Actually, there are only two.\N所以一个是，基本上——其实只有两个。
+Dialogue: 0,0:38:32.19,0:38:33.30,Sub,,0,0,0,,And you know, like. . .\N而且你知道嘛，就像……
+Dialogue: 0,0:38:33.33,0:38:35.88,Sub,,0,0,0,,One is that the training data set.\N一个是训练数据集。
+Dialogue: 0,0:38:35.88,0:38:39.99,Sub,,0,0,0,,The training data set, you kind of train, and some specifications come from here.\N训练数据集，你大致上就是基于这个进行训练，一些规格参数就来自这里。
+Dialogue: 0,0:38:39.99,0:38:44.94,Sub,,0,0,0,,Like, for instance, one year ago, when you generated code, you have a lot of vulnerabilities.\N比如，一年前你生成代码时，会存在大量漏洞。
+Dialogue: 0,0:38:44.94,0:38:49.02,Sub,,0,0,0,,Now, you have fewer vulnerabilities when you generate code with agentic.\N现在，当你使用代理式方法生成代码时，漏洞会更少。
+Dialogue: 0,0:38:49.02,0:38:51.54,Sub,,0,0,0,,Right? And the other one is from the prompt.\N对吧？另一个来自提示。
+Dialogue: 0,0:38:51.54,0:38:54.33,Sub,,0,0,0,,You have to specify what it should do or not.\N你必须明确指定它应该做什么或不应该做什么。
+Dialogue: 0,0:38:54.33,0:39:02.04,Sub,,0,0,0,,If it's not in the prompt or it's not in the training data set, it's going to find a way around.\N如果不在提示词里，也不在训练数据集中，它就会想出办法绕过去。
+Dialogue: 0,0:39:02.04,0:39:02.97,Sub,,0,0,0,,Mark Russinovich: It'll fill in the blanks.\N马克·鲁西诺维奇：它会自动补全空白。
+Dialogue: 0,0:39:02.97,0:39:06.45,Sub,,0,0,0,,Ion Stoica: Yeah, so that's kind of, I think, that's, I think, the main bottleneck.\N伊翁·斯托伊卡：是的，我认为这基本上就是主要瓶颈。
+Dialogue: 0,0:39:07.08,0:39:09.97,Sub,,0,0,0,,Mark Russinovich: All right. So, now we really have six minutes, and I'll give you a question that I --\N马克·鲁西诺维奇：好了，现在我们真正还有六分钟，
+Dialogue: 0,0:39:10.00,0:39:16.50,Sub,,0,0,0,,that I think is the -- the question that I get a lot, and I've got my own opinion about this, but I'm curious about yours.\N我来问大家一个我经常被问到的问题，也是我自己的看法，但我很好奇你们的想法。
+Dialogue: 0,0:39:16.50,0:39:17.64,Sub,,0,0,0,,Ion Stoica: So you'll answer it after I answer it.\N伊翁·斯托伊卡：那等我回答完，你再回答。
+Dialogue: 0,0:39:17.64,0:39:19.76,Sub,,0,0,0,,Mark Russinovich: Yeah, I'll answer it.\N马克·鲁西诺维奇：嗯，我来回答。
+Dialogue: 0,0:39:19.76,0:39:27.00,Sub,,0,0,0,,And this is, I talk to people, and I explain I've got so many war stories of AI going off the rails.\N而且我跟人聊的时候，会讲起我有太多关于AI失控的惊险故事了。
+Dialogue: 0,0:39:27.00,0:39:30.48,Sub,,0,0,0,,I mean, me and Scott, we have got this podcast.\N我的天，我和斯科特有档播客。
+Dialogue: 0,0:39:30.48,0:39:33.87,Sub,,0,0,0,,I talk about how I basically sculpt, which I always have.\N我谈的是我一直以来基本上都是在进行雕塑创作。
+Dialogue: 0,0:39:33.87,0:39:36.06,Sub,,0,0,0,,But even with AI, I'm watching what it's doing.\N但即使有了AI，我也会盯着它在做什么。
+Dialogue: 0,0:39:36.06,0:39:38.82,Sub,,0,0,0,,I'm control seeing it.\N我控制着，看到了。
+Dialogue: 0,0:39:38.82,0:39:41.46,Sub,,0,0,0,,I'm telling it, "That's not what I want you to do."\N我跟它说：“那不是我想要你做的事。”
+Dialogue: 0,0:39:41.46,0:39:50.03,Sub,,0,0,0,,And I see it creating this test or going off in some direction, filling in the blanks with something that is ridiculous or that I don't want.\N我看到它在进行测试，或者偏离了方向，填入一些荒谬或我不想要的内容。
+Dialogue: 0,0:39:50.03,0:39:52.13,Sub,,0,0,0,,And I tell people this and I say,\N我跟人们说，
+Dialogue: 0,0:39:52.13,0:40:01.04,Sub,,0,0,0,,you just can't give it a prompt or a PRD and expect that you're going to get a system that works reliably and efficiently and does all the things\N你不能只给个提示或一份产品需求文档，就指望能获得一个可靠、高效，
+Dialogue: 0,0:40:01.04,0:40:03.62,Sub,,0,0,0,,that you imagine you would want it to do.\N还能实现你所有设想功能的系统。
+Dialogue: 0,0:40:03.62,0:40:12.84,Sub,,0,0,0,,And even if you go and try to specify it, you cannot specify it deeply enough to guarantee that it's not going to do things that you don't want.\N即使你去尝试明确指定，也无法指定得足够深入，以确保它不会做出你不想让它做的事。
+Dialogue: 0,0:40:12.84,0:40:24.82,Sub,,0,0,0,,A lot of what we do is based off of kind of environmental context and just kind of the taste that we've developed.\N我们所做的很多事，都是基于环境背景，以及我们自身逐渐培养出的品味。
+Dialogue: 0,0:40:24.85,0:40:33.78,Sub,,0,0,0,,And so I'm like-- I just don't see a path to this world where You don't need engineers that understand what's going on and don't know how to guide the system when it goes off the rails.\N所以我感觉——我根本看不到这样一个世界，那里不需要懂技术的工程师，\N也不需要知道如何在系统偏离轨道时引导它的人。
+Dialogue: 0,0:40:33.78,0:40:43.68,Sub,,0,0,0,,And then, I get this pushback of, "No, Mark, you're just--" You know? That's a bet that I would take with you every day because it's going to be solved.\N然后我就会收到这样的反驳：“不，马克，\N你只是——” 你知道吗？这种赌注我每天都愿意跟你打，因为问题终将解决。
+Dialogue: 0,0:40:43.68,0:40:51.42,Sub,,0,0,0,,Maybe two years from now, maybe five years from now, maybe 10 years from now, the AI will be so good that you won't need that.\N也许两年后，也许五年后，也许十年后，人工智能就会好到你不再需要它了。
+Dialogue: 0,0:40:51.42,0:40:54.81,Sub,,0,0,0,,Your example where you said the load balancer was dropping requests.\N你举的例子中，负载均衡器正在丢弃请求。
+Dialogue: 0,0:40:54.81,0:41:00.87,Sub,,0,0,0,,What if you have an adversarial code reviewer go look at the system and say, "You know what, you shouldn't be dropping a request."\N如果有一个对抗性代码审查员来检查系统，然后说：“你知道吗，你根本不该丢弃这个请求。”
+Dialogue: 0,0:41:00.87,0:41:05.97,Sub,,0,0,0,,And it's, is this system well-behaved? It'll say, "No, it's not." And so you just address that.\N而且这个系统表现得是否良好？它会回答：“不，它不好。” 于是你只需解决这个问题。
+Dialogue: 0,0:41:05.97,0:41:07.77,Sub,,0,0,0,,So where do you lie on this?\N那么，你在这中间处于什么位置？
+Dialogue: 0,0:41:07.77,0:41:14.85,Sub,,0,0,0,,Do you think that-- would you be bold enough to say it's never going to be solved or do you think we'll get to the point where we'll have the ability\N你觉得——你敢不敢说这个问题永远无法解决？还是说，\N你认为我们终将到达这样一个阶段：只需给出一个规格说明，
+Dialogue: 0,0:41:14.85,0:41:21.27,Sub,,0,0,0,,to give a specification, it'll come out great, and you won't need a human?\N结果就能完美呈现，根本不需要人类参与？
+Dialogue: 0,0:41:21.27,0:41:24.34,Sub,,0,0,0,,Ion Stoica: I think that in theoretical--\N伊翁·斯托伊卡：
+Dialogue: 0,0:41:27.45,0:41:34.38,Sub,,0,0,0,,from the theoretical perspective, it's very hard for me to see how it's going to be ever solved.\N从理论角度来看，我认为这个问题很难被解决。
+Dialogue: 0,0:41:34.38,0:41:44.01,Sub,,0,0,0,,And fundamentally, because we know from Gödel that no axiomatic system can be complete.\N从根本上说，因为我们从哥德尔那里知道，任何公理系统都不可能是完备的。
+Dialogue: 0,0:41:44.01,0:41:44.58,Sub,,0,0,0,,Mark Russinovich: Yeah.\N马克·鲁西诺维奇：是的。
+Dialogue: 0,0:41:44.58,0:41:49.56,Sub,,0,0,0,,Ion Stoica: So in some sense, that kind of tells you something.\N伊翁·斯托伊卡：从某种意义上说，这其实已经告诉了你一些信息。
+Dialogue: 0,0:41:49.56,0:41:58.49,Sub,,0,0,0,,I think that when we look at other techniques to do it, like for instance, assume that you have a formal specification.\N我认为，当我们审视其他实现方法时，比如假设你有一个形式化规范。
+Dialogue: 0,0:41:58.49,0:42:02.45,Sub,,0,0,0,,You can write in Lean, on Coal, and so forth.\N你可以在利安、煤等材料上书写。
+Dialogue: 0,0:42:02.45,0:42:13.65,Sub,,0,0,0,,So from that one, if I have the formal specification, then you can generate the code, and then you can generate the proof that the code satisfies the specification.\N如果我有正式规格说明，就可以生成代码，再生成证明代码满足规格说明的证明。
+Dialogue: 0,0:42:13.65,0:42:18.36,Sub,,0,0,0,,So that kind of is good, and you can see that.\N所以这种感觉还不错，你也能看出来。
+Dialogue: 0,0:42:18.36,0:42:25.59,Sub,,0,0,0,,The problem is that obviously then you need to write that specification, which is kind of not easy.\N问题是，显然你还需要编写那份规格说明，这并不太容易。
+Dialogue: 0,0:42:25.59,0:42:34.23,Sub,,0,0,0,,And even that when you write the specification, it cannot -- you know, it's like, if it's incomplete, right?\N而且即使你写出了规格说明，它也可能不完整，对吧？
+Dialogue: 0,0:42:34.23,0:42:37.08,Sub,,0,0,0,,You don't specify a property because, you know, like, in this case,\N你不需要指定某个属性，因为你知道，比如在这种情况下，
+Dialogue: 0,0:42:37.08,0:42:43.74,Sub,,0,0,0,,I write a specification for load balancers, but I don't write, "Oh, you shouldn't drop the packets," right?\N我写的是负载均衡器的规格，但不会写“哦，你不该丢包”这种话，对吧？
+Dialogue: 0,0:42:43.74,0:42:50.07,Sub,,0,0,0,,So maybe if there is a conservation law there, you can argue that you should put it in.\N所以，如果存在某种守恒定律，你或许可以论证应该将其纳入其中。
+Dialogue: 0,0:42:50.07,0:42:51.93,Sub,,0,0,0,,But there can be assumptions, right?\N但可能存在一些假设，对吧？
+Dialogue: 0,0:42:51.93,0:42:56.82,Sub,,0,0,0,,Because any specification, anything, you have to have some assumptions, right, to make the proof.\N因为任何规格或任何东西，你都必须有一些假设才能完成证明。
+Dialogue: 0,0:42:56.82,0:43:00.60,Sub,,0,0,0,,But you are not going to imagine all of the assumptions, right?\N但你不会去想象所有这些假设，对吧？
+Dialogue: 0,0:43:00.60,0:43:02.61,Sub,,0,0,0,,Mark Russinovich: I got to -- you know what I think?\N马克·鲁西诺维奇：我得说——你知道吗？我觉得……
+Dialogue: 0,0:43:02.61,0:43:05.25,Sub,,0,0,0,,You know what is a full specification?\N你知道什么叫完整规格吗？
+Dialogue: 0,0:43:05.25,0:43:07.60,Sub,,0,0,0,,Actually, programming languages.\N实际上，编程语言。
+Dialogue: 0,0:43:07.64,0:43:10.17,Sub,,0,0,0,,Ion Stoica: Almost, almost. Even that is not.\N伊翁·斯托伊卡：几乎，几乎。甚至连这个都不对。
+Dialogue: 0,0:43:10.17,0:43:12.42,Sub,,0,0,0,,Let me give you an example -- even that is not.\N让我举个例子——甚至这个也不对。
+Dialogue: 0,0:43:12.42,0:43:15.07,Sub,,0,0,0,,Mark Russinovich: Yeah, that's true. But that's -- Ion Stoica: Like, I remember, you know,\N马克·鲁西诺维奇：是的，这确实如此。但这就是—— 伊翁·斯托伊卡：
+Dialogue: 0,0:43:15.11,0:43:19.02,Sub,,0,0,0,,we have this kind of, I'm not sure really, like, this peer-to-peer court system and so forth.\N我记得，我们有这种类似点对点的司法系统，等等。
+Dialogue: 0,0:43:19.02,0:43:22.77,Sub,,0,0,0,,I was young faculty there, still implementing all of these things.\N我当时是那里的年轻教职员工，还在亲自实现所有这些技术。
+Dialogue: 0,0:43:22.77,0:43:25.92,Sub,,0,0,0,,And really, really, I thought it's bulletproof.\N说实话，我真的觉得它坚不可摧。
+Dialogue: 0,0:43:25.92,0:43:32.33,Sub,,0,0,0,,And we are testing it on this -- I don't remember, how many remember about PlanetLab.\N我们正在用这个进行测试——我不记得了，有谁还记得行星实验室吗？
+Dialogue: 0,0:43:32.33,0:43:37.52,Sub,,0,0,0,,Twenty years ago, this Planet Lab, which is kind of an infrastructure, internet infrastructure,\N二十年前，像这样的行星实验室，其实是一种基础设施，
+Dialogue: 0,0:43:37.52,0:43:45.39,Sub,,0,0,0,,or each organization have these servers, and then you deploy at the servers applications, and then you communicate.\N互联网基础设施，每个组织都有自己的服务器，然后在服务器上部署应用，再进行通信。
+Dialogue: 0,0:43:45.39,0:43:46.62,Sub,,0,0,0,,And it breaks.\N而且它碎了。
+Dialogue: 0,0:43:46.62,0:43:47.64,Sub,,0,0,0,,And I don't know how it breaks.\N我不知道它会怎么崩坏。
+Dialogue: 0,0:43:47.64,0:43:48.96,Sub,,0,0,0,,It has to work.\N它必须得行。
+Dialogue: 0,0:43:48.96,0:43:57.33,Sub,,0,0,0,,And when we look about, it was an assumption we missed, and the assumption we've made, implicitly, is a kind of transient connectivity.\N当我们环顾四周时，才发现我们忽略了一个假设，而我们所隐含做出的假设，是一种短暂的连接性。
+Dialogue: 0,0:43:57.33,0:43:59.97,Sub,,0,0,0,,If A communicates with B and B communicates with C,\N如果A能与B通信，B能与C通信，
+Dialogue: 0,0:43:59.97,0:44:08.04,Sub,,0,0,0,,then A should communicate with C. And in the Internet as a whole, right, because it's not behind NATs and so forth, this has to hold.\N那么A也应该能与C通信。在整个互联网中，这一点必须成立，\N因为互联网并不处于NAT等网络地址转换设备之后。
+Dialogue: 0,0:44:08.04,0:44:14.61,Sub,,0,0,0,,And it should have hold, except that is one university which misconfigured their servers.\N它本应正常运行，除非有一所大学的服务器配置错误。
+Dialogue: 0,0:44:14.61,0:44:18.18,Sub,,0,0,0,,So that blocks some communication, some traffic.\N这样就阻断了一些通信和流量。
+Dialogue: 0,0:44:18.18,0:44:20.16,Sub,,0,0,0,,So that's kind of, I always think about that.\N所以那玩意儿，我总是会想到它。
+Dialogue: 0,0:44:20.16,0:44:20.58,Sub,,0,0,0,,Mark Russinovich: Yeah, good example.\N马克·鲁西诺维奇：是的，很好的例子。
+Dialogue: 0,0:44:20.58,0:44:27.48,Sub,,0,0,0,,Ion Stoica: I couldn't, you know, it's like, I was actually, we were correct about the assumptions.\N伊翁·斯托伊卡：我没法，你知道吗，实际上我们对这些假设的判断是正确的。
+Dialogue: 0,0:44:27.48,0:44:33.48,Sub,,0,0,0,,It should have held, but it didn't because of a mistake in the configuration in the platform.\N它本该正常运行，但由于平台配置错误，结果没有。
+Dialogue: 0,0:44:33.48,0:44:35.19,Sub,,0,0,0,,So that's kind of what I'm trying to say.\N这就是我想表达的意思。
+Dialogue: 0,0:44:35.19,0:44:36.24,Sub,,0,0,0,,It's extremely hard.\N这非常难。
+Dialogue: 0,0:44:36.24,0:44:39.87,Sub,,0,0,0,,Mark Russinovich: Yeah. So, Now we are really, I think, at time.\N马克·鲁西诺维奇：是的，我认为现在我们真的到了一个关键时刻。
+Dialogue: 0,0:44:39.87,0:44:42.93,Sub,,0,0,0,,I haven't seen the clock jump up again.\N我还没看到时钟再次跳升。
+Dialogue: 0,0:44:42.93,0:44:45.78,Sub,,0,0,0,,But it's been a fun conversation, a really fun conversation.\N但这场对话非常有趣，真的非常有趣。
+Dialogue: 0,0:44:45.78,0:44:48.54,Sub,,0,0,0,,And if you like this, this is the experiment.\N如果你喜欢这个，这就是实验。
+Dialogue: 0,0:44:48.54,0:44:49.83,Sub,,0,0,0,,It's the first time we've done something like this.\N这是我们第一次做这样的事。
+Dialogue: 0,0:44:49.83,0:44:51.72,Sub,,0,0,0,,If you like this, let us know.\N如果喜欢，请告诉我们。
+Dialogue: 0,0:44:51.72,0:44:53.37,Sub,,0,0,0,,So we'll try to do it again.\N那我们再试一次。
+Dialogue: 0,0:44:53.37,0:44:56.73,Sub,,0,0,0,,If you find it boring, also let us know.\N如果你觉得无聊，也请告诉我们。
+Dialogue: 0,0:44:56.73,0:45:03.12,Sub,,0,0,0,,And I think the people that thought it was boring probably already left, so I think-- Ion Stoica: We have a biased audience here.\N我觉得觉得无聊的人 probably 已经离开了，\N所以我觉得——伊翁·斯托伊卡：我们这里的观众有偏见。
+Dialogue: 0,0:45:03.12,0:45:05.22,Sub,,0,0,0,,Mark Russinovich: But thanks very much for coming to Build,\N马克·鲁西诺维奇：非常感谢大家参加 Build 大会，
+Dialogue: 0,0:45:05.22,0:45:10.11,Sub,,0,0,0,,and I hope to see you tomorrow morning in my Azure Innovation Talk, where I'll talk a little bit about some of these things.\N希望明天早上能在我的 Azure 创新演讲中见到大家，届时我将聊一聊其中一些内容。
+Dialogue: 0,0:45:10.79,0:45:11.43,Sub,,0,0,0,,Ion Stoica: Thank you very much.\N伊翁·斯托伊卡：非常感谢。
