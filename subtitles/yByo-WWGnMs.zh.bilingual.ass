@@ -1,0 +1,498 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.48,0:00:02.04,Sub,,0,0,0,,Mark Russinovich: Let's try that again.\N马克·鲁西诺维奇：我们再试一次。
+Dialogue: 0,0:00:02.04,0:00:03.07,Sub,,0,0,0,,Good morning, everybody.\N大家早上好。
+Dialogue: 0,0:00:03.09,0:00:04.29,Sub,,0,0,0,,All: Good morning.\N大家：早上好。
+Dialogue: 0,0:00:04.29,0:00:05.79,Sub,,0,0,0,,Mark Russinovich: How's Build going?\N马克·鲁西诺维奇：Build 大会进行得怎么样？
+Dialogue: 0,0:00:05.79,0:00:11.03,Sub,,0,0,0,,Good? Well, welcome to Inside Azure Innovations.\N不错吧？欢迎来到《Azure 创新内幕》。
+Dialogue: 0,0:00:11.06,0:00:12.21,Sub,,0,0,0,,My name is Mark Russinovich.\N我叫马克·鲁西诺维奇。
+Dialogue: 0,0:00:12.21,0:00:14.67,Sub,,0,0,0,,I'm the CTO and Deputy CISO for Azure.\N我是 Azure 的首席技术官兼副首席信息安全官。
+Dialogue: 0,0:00:14.67,0:00:17.89,Sub,,0,0,0,,How many people have been to a previous innovations talk?\N有多少人参加过之前的创新讲座？
+Dialogue: 0,0:00:17.92,0:00:19.11,Sub,,0,0,0,,So, quite a few of you.\N所以，你们当中有不少人。
+Dialogue: 0,0:00:19.11,0:00:20.82,Sub,,0,0,0,,It's great to see you back.\N很高兴再次见到你。
+Dialogue: 0,0:00:20.82,0:00:29.67,Sub,,0,0,0,,For those of you that haven't come, this is a talk where I cover innovations across the spectrum of everything\N对于还没到场的各位，这是一场我将全面介绍 Azure 基础设
+Dialogue: 0,0:00:29.67,0:00:38.07,Sub,,0,0,0,,in the Azure infrastructure, from data centers all the way to cybersecurity and the cyber systems that we've got under development in Azure.\N施各个层面创新的演讲，从数据中心一直延伸到我们正在开发的网络安全和网络系统。
+Dialogue: 0,0:00:38.07,0:00:43.29,Sub,,0,0,0,,One of the notes that I make about this is that I'm showing you things, in some cases,\N我在这里提到的一点是，我向你们展示的一些内容，
+Dialogue: 0,0:00:43.29,0:00:47.64,Sub,,0,0,0,,that haven't shipped yet, some things that we're working on, some things that maybe have just shipped.\N有些尚未发布，有些还在开发中，有些可能刚刚才发布。
+Dialogue: 0,0:00:47.64,0:00:55.15,Sub,,0,0,0,,For things that haven't shipped, they might not necessarily ever ship or ship in the same kind of view that you see me present them at.\N对于那些尚未发布的产品，它们未必真的会发布，或者即使发布，也未必会以我展示给你的那种形态呈现。
+Dialogue: 0,0:00:55.18,0:00:56.66,Sub,,0,0,0,,So that's just a caveat and takeaway.\N所以，这只是个提醒和要点。
+Dialogue: 0,0:00:56.69,0:01:04.41,Sub,,0,0,0,,But I thought it's fun to give you an under-the-hood look at what we're doing and what powers the infrastructure of Azure and Azure innovation.\N但我认为，向大家展示我们正在做的事情，以及支撑 Azure 及其创新的基础设施背后的技术，挺有趣的。
+Dialogue: 0,0:01:04.41,0:01:06.18,Sub,,0,0,0,,So let's start with infrastructure.\N那我们先从基础设施开始。
+Dialogue: 0,0:01:06.18,0:01:12.12,Sub,,0,0,0,,And you've seen these pictures of the Fairwater data centers.\N你见过那些关于Fairwater数据中心的照片。
+Dialogue: 0,0:01:12.12,0:01:16.00,Sub,,0,0,0,,And this kind of sets a framework for a lot of the innovation that I'm going to be showing here,\N这为我接下来展示的众多创新奠定了基础，这些创新聚焦于推
+Dialogue: 0,0:01:16.03,0:01:25.41,Sub,,0,0,0,,which is innovation powering AI, specifically the co-design of AI data centers, the core infrastructure, and the software that runs on top of it.\N动人工智能的发展，特别是人工智能数据中心、核心基础设施以及其上运行的软件的协同设计。
+Dialogue: 0,0:01:25.41,0:01:28.26,Sub,,0,0,0,,I had a really awesome experience in November.\N我十一月时经历了一次非常棒的体验。
+Dialogue: 0,0:01:28.26,0:01:30.87,Sub,,0,0,0,,I got to go visit Fairwater in Atlanta.\N我得去亚特兰大的费尔沃特看看。
+Dialogue: 0,0:01:30.87,0:01:33.42,Sub,,0,0,0,,These are Fairwater in Wisconsin, Fairwater in Atlanta.\N这是威斯康星州的费尔沃特，以及亚特兰大的费尔沃特。
+Dialogue: 0,0:01:33.42,0:01:35.76,Sub,,0,0,0,,The Atlanta site is on the right.\N亚特兰大站点在右侧。
+Dialogue: 0,0:01:35.76,0:01:43.49,Sub,,0,0,0,,And I got to go in to it, and I thought I'd show you a quick video tour of it, just a few seconds of me walking through it.\N而且我有机会进去看看，我想给你们快速展示一下，就几秒钟我走一遍的视频。
+Dialogue: 0,0:01:43.51,0:01:45.03,Sub,,0,0,0,,And I don't know why that didn't play.\N我不知道为什么那段没放出来。
+Dialogue: 0,0:01:45.03,0:01:50.79,Sub,,0,0,0,,Maybe I need to hit the play button up here.\N也许我得点一下这里的播放按钮。
+Dialogue: 0,0:01:50.79,0:01:53.34,Sub,,0,0,0,,So this is me looking like Builder Bob walking through.\N这就是我像建造者鲍勃一样走着的样子。
+Dialogue: 0,0:01:53.34,0:01:55.23,Sub,,0,0,0,,That's because it's under construction.\N因为还在建设中。
+Dialogue: 0,0:01:55.23,0:01:57.24,Sub,,0,0,0,,It's kind of continuously under construction.\N它一直在持续建设中。
+Dialogue: 0,0:01:57.24,0:02:04.98,Sub,,0,0,0,,This is the network cabling that connects the top floor servers and the bottom floor servers that goes up through trunks there, you can see.\N这就是连接顶层服务器和底层服务器的网络布线，从那里穿过竖井向上延伸，你可以看到。
+Dialogue: 0,0:02:04.98,0:02:08.58,Sub,,0,0,0,,There's enough cabling to wrap the earth four times in one of these.\N一个这样的机架里，电缆长度足以绕地球四圈。
+Dialogue: 0,0:02:08.58,0:02:15.24,Sub,,0,0,0,,Those are liquid cooling cables being laid there initially so that servers can be dropped in.\N那些是最初铺设的液冷电缆，以便后续直接放入服务器。
+Dialogue: 0,0:02:15.24,0:02:18.90,Sub,,0,0,0,,And you can see, we got to see one of these servers on the sled being racked.\N你可以看到，我们看到其中一台服务器被安装到了导轨上。
+Dialogue: 0,0:02:18.90,0:02:22.59,Sub,,0,0,0,,These are the cables on the back, the InfiniBand and Ethernet cables.\N这些是背面的线缆，包括 InfiniBand 和以太网线缆。
+Dialogue: 0,0:02:22.59,0:02:25.20,Sub,,0,0,0,,And then you can see this is a brake fix that we got to watch.\N然后你们可以看到，这是一个我们需要关注的刹车故障。
+Dialogue: 0,0:02:25.20,0:02:27.78,Sub,,0,0,0,,This is the liquid cooling into the back of the racks.\N这是液体冷却系统进入机架背面。
+Dialogue: 0,0:02:27.78,0:02:29.28,Sub,,0,0,0,,And then I saw this on the tour.\N然后我在参观时看到了这个。
+Dialogue: 0,0:02:29.28,0:02:31.44,Sub,,0,0,0,,The group had gone ahead of me.\N那群人已经走在我前面了。
+Dialogue: 0,0:02:31.44,0:02:34.65,Sub,,0,0,0,,I saw a plug and I plugged it in.\N我看到一个插头，就插上了。
+Dialogue: 0,0:02:36.28,0:02:37.67,Sub,,0,0,0,,Because it's like, what's this?\N这到底是什么？
+Dialogue: 0,0:02:37.69,0:02:38.95,Sub,,0,0,0,,Shouldn't be hanging like that.\N不该那样挂着。
+Dialogue: 0,0:02:38.98,0:02:46.05,Sub,,0,0,0,,And Scott Guthrie got a text literally a few minutes later saying it looks like we've already powered on Power Cell 3.\N几分钟后，斯科特·古休收到一条短信，说看起来我们已经成功启动了电源单元3。
+Dialogue: 0,0:02:46.05,0:02:48.15,Sub,,0,0,0,,We didn't expect that.\N我们没想到会这样。
+Dialogue: 0,0:02:48.17,0:02:51.71,Sub,,0,0,0,,I wanted to take credit, but I thought maybe I best shouldn't for that.\N我想把功劳揽过来，但转念一想，也许最好还是别这么干。
+Dialogue: 0,0:02:53.70,0:02:56.99,Sub,,0,0,0,,But inside the data centers themselves, we've got the servers, of course.\N但数据中心内部，我们当然有服务器。
+Dialogue: 0,0:02:57.02,0:03:01.08,Sub,,0,0,0,,And one of the innovations that we've been developing in our servers is something called Azure Boost.\N我们服务器中开发的一项创新技术叫做 Azure Boost。
+Dialogue: 0,0:03:01.08,0:03:12.36,Sub,,0,0,0,,Azure Boost is aimed at offloading a lot of the processing of the data paths for storage and networking off the main server CPUs.\NAzure Boost 的目标是将存储和网络数据路径的大量处理任务从主服务器 CPU 上卸载出去。
+Dialogue: 0,0:03:12.36,0:03:14.79,Sub,,0,0,0,,And it does this with an offload card.\N它通过一个卸载卡来实现这一点。
+Dialogue: 0,0:03:14.79,0:03:18.45,Sub,,0,0,0,,We move the data planes off onto that offload card.\N我们将数据平面转移到那个卸载卡上。
+Dialogue: 0,0:03:18.45,0:03:20.55,Sub,,0,0,0,,We power them with DPUs.\N我们通过数据处理单元为它们提供动力。
+Dialogue: 0,0:03:20.55,0:03:24.18,Sub,,0,0,0,,We've got cores on there as well, where we put our agent tree.\N我们也在上面放置了核心，用于部署我们的智能体树。
+Dialogue: 0,0:03:24.18,0:03:32.85,Sub,,0,0,0,,So we get the agents off the server as well, and this lets the workload have most of the control over what's going on on the server.\N因此，我们也将智能体从服务器上移开，这样工作负载就能对服务器上的大部分操作拥有主导权。
+Dialogue: 0,0:03:32.85,0:03:34.50,Sub,,0,0,0,,This Azure Boost card looks like this.\N这张 Azure Boost 卡看起来是这样的。
+Dialogue: 0,0:03:34.50,0:03:38.44,Sub,,0,0,0,,This is the latest generation of Azure Boost card that we've started to deploy in our data centers.\N这是我们已经开始在数据中心部署的最新一代 Azure Boost 卡。
+Dialogue: 0,0:03:38.46,0:03:41.58,Sub,,0,0,0,,Here's an actual version of it right here.\N这就是它的一个真实版本，就在这里。
+Dialogue: 0,0:03:41.58,0:03:46.38,Sub,,0,0,0,,And what you can see there, there's little black squares around the middle are D-RAM.\N你可以看到，中间那些小黑方块是 D-RAM。
+Dialogue: 0,0:03:46.38,0:03:48.42,Sub,,0,0,0,,And then the middle is where the SOC is.\N中间部分就是系统级芯片（SOC）所在的位置。
+Dialogue: 0,0:03:48.42,0:03:53.01,Sub,,0,0,0,,That's where the ARM cores and the DPU and FPGA are located.\N这里就是 ARM 核心、数据处理单元和 FPGA 所在的位置。
+Dialogue: 0,0:03:53.01,0:03:57.21,Sub,,0,0,0,,That's where the data plane gets processed and the agents run.\N数据平面在这里进行处理，智能体也在此运行。
+Dialogue: 0,0:03:57.21,0:04:00.51,Sub,,0,0,0,,Now some of the stats for Azure Boost are pretty staggering.\NAzure Boost 的一些数据表现相当惊人。
+Dialogue: 0,0:04:00.51,0:04:03.81,Sub,,0,0,0,,You can see here, just in last year,\N你可以看到，仅在过去一年里，
+Dialogue: 0,0:04:03.81,0:04:11.70,Sub,,0,0,0,,since the previous generation of Azure Boost that I showed at last Build, we've gone to 20 gigabytes per second of remote storage.\N自去年 Build 大会上我展示上一代 Azure Boost 以来，\N远程存储速度已提升至每秒 20 吉字节。
+Dialogue: 0,0:04:11.70,0:04:15.54,Sub,,0,0,0,,And that's an increase, you can see there, of 1.4.\N可以看到，这增加了1.4。
+Dialogue: 0,0:04:15.54,0:04:21.06,Sub,,0,0,0,,We've gone to 1 million IOPS for remote storage, and on local storage, 36 gigabytes per second,\N我们已实现远程存储每秒100万次输入输出操作，\N本地存储则达到每秒36吉字节，这是针对本地NVMe的性能，
+Dialogue: 0,0:04:21.06,0:04:29.22,Sub,,0,0,0,,this is to local NVMe, and 6.6 million IOPS through Azure Boost NVMe offload storage acceleration.\N而通过Azure Boost NVMe卸载存储加速，可实现每秒660万次输入输出操作。
+Dialogue: 0,0:04:29.25,0:04:33.26,Sub,,0,0,0,,And then for networking, we've gone to 400 gigabits from 200 gigabits.\N而在网络方面，我们已从200吉比特升级到了400吉比特。
+Dialogue: 0,0:04:33.26,0:04:41.91,Sub,,0,0,0,,So those were two network ports that you saw there on the card, 200 gigabits each, and 400k connections per second, it supports.\N所以你看到的这张卡上有两个网络端口，每个端口速率为200吉比特，每秒支持40万次连接。
+Dialogue: 0,0:04:41.91,0:04:50.37,Sub,,0,0,0,,Those two ports mean that they can go to two top-of-rack router switches, so that means that we can service top-of-rack routers, or if one fails,\N这两个端口意味着它们可以连接到两台机架顶部的路由器交换机，\N因此我们可以为机架顶部的路由器提供服务，或者当其中一台出现故障时，
+Dialogue: 0,0:04:50.37,0:04:52.38,Sub,,0,0,0,,we don't lose complete connectivity to the server.\N也不会完全失去与服务器的连接。
+Dialogue: 0,0:04:52.40,0:05:01.47,Sub,,0,0,0,,And it also means that sub-second servicing is possible now on those tours with sub-second impact to the workloads running on those servers.\N这也意味着，现在可以在这些服务器上实现亚秒级的服务响应，\N对运行在这些服务器上的工作负载的影响也控制在亚秒级。
+Dialogue: 0,0:05:01.47,0:05:07.26,Sub,,0,0,0,,We've been deploying this for several years now, and we're over 30% of the fleet is now Azure Boost enabled.\N我们已经部署了这么多年，目前超过30%的车队已启用 Azure Boost。
+Dialogue: 0,0:05:07.26,0:05:09.36,Sub,,0,0,0,,Every single server gets an Azure Boost in it.\N每一台服务器都内置了 Azure 加速功能。
+Dialogue: 0,0:05:09.39,0:05:16.02,Sub,,0,0,0,,And then one of the cool innovations that I'll show you in a little bit is that we support guest virtual machine RDMA.\N接下来我要向大家展示的一个酷炫创新是，我们支持来宾虚拟机的RDMA。
+Dialogue: 0,0:05:16.02,0:05:25.62,Sub,,0,0,0,,So this is basically memory to memory transfers, bypassing the networking stacks, because Azure Boost is facilitating that transport.\N所以这本质上是内存到内存的传输，跳过了网络栈，因为 Azure Boost 正在协助完成这一传输。
+Dialogue: 0,0:05:25.64,0:05:33.42,Sub,,0,0,0,,One of the things that I mentioned is we get the management services off the server, and we put them on the Azure Boost card.\N我提到的一点是，我们将管理服务从服务器上移除，转而放到 Azure Boost 卡上。
+Dialogue: 0,0:05:33.42,0:05:36.90,Sub,,0,0,0,,And that lets us have Bare Metal instances.\N这使我们能够提供裸金属实例。
+Dialogue: 0,0:05:36.90,0:05:46.11,Sub,,0,0,0,,We've introduced Bare Metal instances to unlimited access, specifically for OpenAI and OpenAI's use of that Fairwater data center.\N我们已推出裸金属实例，为 OpenAI 及其使用 \NFairwater 数据中心的场景提供无限访问权限。
+Dialogue: 0,0:05:46.11,0:05:50.79,Sub,,0,0,0,,So the servers in the data center, the GPU servers, are Bare Metal instances.\N因此，数据中心中的服务器，也就是GPU服务器，都是裸金属实例。
+Dialogue: 0,0:05:50.79,0:05:58.71,Sub,,0,0,0,,And I thought I'd show you just a quick demo of Bare Metal instances, which are going to be coming as a general purpose offering sometime in the near future.\N我想给大家快速演示一下裸金属实例，它们将在不久的将来作为通用型产品推出。
+Dialogue: 0,0:05:58.71,0:06:04.44,Sub,,0,0,0,,But here, you can see we've got a metal instance, ND144 v6.\N但在这里，你可以看到我们有一个金属实例，ND144 v6。
+Dialogue: 0,0:06:04.44,0:06:06.81,Sub,,0,0,0,,You can see here we're going to get the IP address,\N可以看到，这里我们会获取IP地址，
+Dialogue: 0,0:06:06.81,0:06:19.05,Sub,,0,0,0,,and then we're going to SSH into it and actually see that it is a Bare Metal server, because we're going to look to see if virtualization services are running, and they're not.\N然后通过SSH连接进去，实际查看它是否为裸金属服务器，\N方法是检查虚拟化服务是否在运行，而实际上它们并未运行。
+Dialogue: 0,0:06:19.05,0:06:23.67,Sub,,0,0,0,,And then we're going to look at the PCI bus using LSPCI.\N然后我们将使用 LSPCI 查看 PCI 总线。
+Dialogue: 0,0:06:23.67,0:06:26.08,Sub,,0,0,0,,And you can see we get lots of devices.\N你可以看到，我们获得了大量设备。
+Dialogue: 0,0:06:26.11,0:06:29.79,Sub,,0,0,0,,We're going to scroll to the top, and you can see there's a PCI bridge,\N我们将滚动到顶部，可以看到一个 PCI 桥接器，
+Dialogue: 0,0:06:29.79,0:06:39.15,Sub,,0,0,0,,and then you can see the eight Ethernet controllers that are connected to the Mellanox RDMA-capable network adapters\N接着可以看到连接到 Mellanox RDMA 兼容网络适配器的八个以太网控制器，
+Dialogue: 0,0:06:39.15,0:06:45.36,Sub,,0,0,0,,that are attached to that for the backend network that those GPUs talk through to each other.\N这些适配器连接到后端网络，供 GPU 之间通信使用。
+Dialogue: 0,0:06:45.36,0:06:46.77,Sub,,0,0,0,,Now what do they talk?\N他们到底在聊什么？
+Dialogue: 0,0:06:46.77,0:06:48.30,Sub,,0,0,0,,What transport do they talk?\N他们说的是什么交通工具？
+Dialogue: 0,0:06:48.30,0:06:53.28,Sub,,0,0,0,,We switched to Ethernet from InfiniBand, actually, in those Fairwater data centers.\N实际上，我们在费尔沃特数据中心改用以太网替代了 InfiniBand。
+Dialogue: 0,0:06:53.28,0:06:58.17,Sub,,0,0,0,,And instead of using RoCE, which is RDMA over converged Ethernet,\N我们没有采用 RoCE（融合以太网上的 RDMA），
+Dialogue: 0,0:06:58.17,0:07:03.84,Sub,,0,0,0,,we've developed, with OpenAI and now a growing consortium of partners that are collaborating with us,\N而是与 OpenAI 以及越来越多的合作伙伴共同开\N发了一种新的网络协议，名为多路径可靠连接（Multi
+Dialogue: 0,0:07:03.84,0:07:09.06,Sub,,0,0,0,,a new networking protocol called Multipath Reliable Connection, or MRC.\Npath Reliable Connection，简称 MRC）。
+Dialogue: 0,0:07:09.06,0:07:16.29,Sub,,0,0,0,,And the reason that we developed MRC is that when you talk about connecting 100,000 GPUs together,\N我们开发 MRC 的原因在于，当谈到将十万块 GPU 连接在一起时，
+Dialogue: 0,0:07:16.29,0:07:23.22,Sub,,0,0,0,,that's an incredible amount of network fabric that those packets are going across from all of those GPUs.\N这些 GPU 之间传输的数据包所经过的网络规模是极其庞大的。
+Dialogue: 0,0:07:23.22,0:07:31.30,Sub,,0,0,0,,If you have any congestion or any failure on a synchronous training job of that size, you're going to lose a ton of work.\N如果你在如此规模的同步训练任务中遇到任何拥塞或故障，你将损失大量工作。
+Dialogue: 0,0:07:31.33,0:07:36.66,Sub,,0,0,0,,You're going to have to go back to a checkpoint, restart the training job from where it left off.\N你得回到一个检查点，从上次中断的地方重新启动训练任务。
+Dialogue: 0,0:07:36.66,0:07:47.70,Sub,,0,0,0,,So MRC is designed to be resilient in the face of these congestion issues or failures because it sprays the packets across independent network domains called planes.\N因此，MRC 被设计为在面对这些拥塞问题或故障时具备韧性，\N因为它会将数据包分散到称为“平面”的独立网络域中。
+Dialogue: 0,0:07:47.70,0:07:56.19,Sub,,0,0,0,,And therefore, when a link gets dropped, the spraying just happens and rebalances to the planes that remain available.\N因此，当某个连接断开时，流量会立即重新分布，并自动均衡到其他可用的平面。
+Dialogue: 0,0:07:56.21,0:08:02.56,Sub,,0,0,0,,And I'll show you a quick demo of that in action by showing you here.\N接下来我将通过一个快速演示向您展示其实际运行效果。
+Dialogue: 0,0:08:04.53,0:08:11.94,Sub,,0,0,0,,What we're going to see is that I've got two servers talking to each other over four switches.\N我们将会看到，我有两台服务器通过四台交换机相互通信。
+Dialogue: 0,0:08:11.94,0:08:17.13,Sub,,0,0,0,,They're sending 4 gigabyte payloads to each other.\N他们正互相发送4吉字节的数据包。
+Dialogue: 0,0:08:17.13,0:08:21.57,Sub,,0,0,0,,These 4 gigabytes are going to be packet sprayed across these.\N这4吉字节的数据将被分包并分散传输到这些设备上。
+Dialogue: 0,0:08:21.57,0:08:30.27,Sub,,0,0,0,,And you can see we're getting roughly 95 gigabytes per second, and that's because we're spraying these across eight planes with 12 gigabits.\N你可以看到，我们的传输速率大约达到了每秒95吉字节，\N这是因为我们将数据分散到八个平面，每个平面的带宽为12吉比特。
+Dialogue: 0,0:08:30.27,0:08:33.66,Sub,,0,0,0,,So that comes out to 12 gigabytes per plane.\N每架飞机对应12吉字节。
+Dialogue: 0,0:08:33.66,0:08:39.08,Sub,,0,0,0,,And this is the aggregate bandwidth that we're seeing, which is 95 gigabytes per second.\N这就是我们看到的总带宽，达到每秒95吉字节。
+Dialogue: 0,0:08:39.10,0:08:47.16,Sub,,0,0,0,,This is what we're going to watch, because we want to maintain 95 gigabits per second there, which is our goal.\N这就是我们要观察的内容，因为我们希望在那里保持每秒95吉比特的速率，这是我们设定的目标。
+Dialogue: 0,0:08:47.16,0:08:48.51,Sub,,0,0,0,,We see four switches.\N我们看到四个开关。
+Dialogue: 0,0:08:48.53,0:08:52.39,Sub,,0,0,0,,You can see how much bandwidth is being spread across the switches.\N你可以看到有多少带宽被分配到了各个交换机上。
+Dialogue: 0,0:08:52.42,0:09:00.57,Sub,,0,0,0,,There's actually two switches at this bandwidth here that you don't see, so this is 12, two 24s, and one 36, adding up to 95.\N实际上在这个带宽上还有两个你没看到的开关，分别是12、两个24和一个36，加起来总共是95。
+Dialogue: 0,0:09:00.57,0:09:03.15,Sub,,0,0,0,,And now we're going to go kill one of those switches.\N现在我们要去把其中一个开关给关掉。
+Dialogue: 0,0:09:03.15,0:09:07.26,Sub,,0,0,0,,We're going to drop it off of the sending server.\N我们将把它从发送服务器上卸下。
+Dialogue: 0,0:09:07.26,0:09:13.29,Sub,,0,0,0,,So what it's going to do is now rebalance the spraying across the remaining three switches.\N它现在会重新分配剩余三个开关之间的喷洒。
+Dialogue: 0,0:09:13.29,0:09:16.53,Sub,,0,0,0,,And our goal is to not see any drop in network bandwidth.\N我们的目标是确保网络带宽不会有任何下降。
+Dialogue: 0,0:09:16.53,0:09:18.78,Sub,,0,0,0,,And, of course, that's exactly what we get.\N当然，这正是我们所得到的。
+Dialogue: 0,0:09:18.78,0:09:22.16,Sub,,0,0,0,,You can see 95-ish gigabits per second.\N你可以看到大约每秒95吉比特。
+Dialogue: 0,0:09:22.18,0:09:27.33,Sub,,0,0,0,,And if we go take a look at the traffic over the switches, you can see that one of them went to zero,\N如果我们查看一下交换机上的流量，可以看到其中一个降到了零，
+Dialogue: 0,0:09:27.33,0:09:31.89,Sub,,0,0,0,,and then the other one went up to 36 gigabits per second to compensate for that.\N另一个则上升到每秒36吉比特，以弥补这一缺口。
+Dialogue: 0,0:09:31.89,0:09:42.68,Sub,,0,0,0,,So MRC is what allows us to run these massive training jobs and has now become the industry standard for large network topologies.\N因此，MRC 让我们能够运行这些大规模的训练任务，如今已成为大型网络拓扑的行业标准。
+Dialogue: 0,0:09:44.68,0:09:48.54,Sub,,0,0,0,,Now I mentioned RDMA a few times.\N刚才我提到了几次 RDMA。
+Dialogue: 0,0:09:48.54,0:09:56.16,Sub,,0,0,0,,And what I was showing you was MRC, which is what Open AI uses for their training jobs.\N我刚才向你们展示的是 MRC，这是 OpenAI 用于训练任务的系统。
+Dialogue: 0,0:09:56.16,0:10:00.57,Sub,,0,0,0,,And they're doing RDMA, of course, between the servers in those training jobs.\N当然，他们在这些训练任务的服务器之间进行 RDMA。
+Dialogue: 0,0:10:00.57,0:10:06.95,Sub,,0,0,0,,But what we want to introduce is to more general-purpose workloads RDMA through virtual machines.\N但我们想介绍的是，通过虚拟机实现更通用的工作负载RDMA。
+Dialogue: 0,0:10:06.95,0:10:16.81,Sub,,0,0,0,,Now when you talk between one VM and another VM through Azure Boost, they could be on different servers, you're going through these networking stacks.\N现在，当你通过 Azure Boost 在两个虚拟机之间通信时，\N它们可能位于不同的服务器上，你需要经过这些网络栈。
+Dialogue: 0,0:10:16.83,0:10:23.46,Sub,,0,0,0,,The application talks to TCP/IP, which talks to our MANA driver, the Microsoft Accelerated Network Adapter driver,\N应用程序通过 TCP/IP 与我们的 MANA 驱动程序通信，\N该驱动程序是微软加速网络适配器驱动程序，
+Dialogue: 0,0:10:23.46,0:10:27.90,Sub,,0,0,0,,which is the Azure Boost network adapter driver, and then it goes back up.\N也就是 Azure Boost 网络适配器驱动程序，然后数据再向上返回。
+Dialogue: 0,0:10:27.90,0:10:33.12,Sub,,0,0,0,,And there's a lot of memory copy operations and a lot of synchronization happening through that.\N而且有大量的内存复制操作，以及大量的同步操作在其中进行。
+Dialogue: 0,0:10:33.12,0:10:35.69,Sub,,0,0,0,,With RDMA, you bypass all that.\N通过 RDMA，你可以绕过所有这些。
+Dialogue: 0,0:10:35.69,0:10:40.22,Sub,,0,0,0,,So the application maps memories basically in the remote system,\N因此，应用程序基本上会将内存映射到远程系统，
+Dialogue: 0,0:10:40.22,0:10:45.56,Sub,,0,0,0,,can drop data right into its own local presentation of that,\N可以直接将数据放入其本地的对应表示中，
+Dialogue: 0,0:10:45.56,0:10:50.46,Sub,,0,0,0,,and Azure Boost takes care of sending that and dropping it in the memory on the other side.\N而 Azure Boost 会负责将数据发送并存入另一端的内存中。
+Dialogue: 0,0:10:50.46,0:11:00.54,Sub,,0,0,0,,And this completely eliminates a lot of that synchronization as well as the memory copies and all that software path that you get through those networking stack.\N这样一来，就完全消除了大量同步操作，以及通过网络栈带来的内存拷贝和所有软件路径。
+Dialogue: 0,0:11:00.54,0:11:07.02,Sub,,0,0,0,,So I'm going to show you a demo of virtual machine to virtual machine RDMA over Azure Boost.\N接下来我将演示一下在 Azure Boost 上，虚拟机到虚拟机的 RDMA。
+Dialogue: 0,0:11:07.02,0:11:12.36,Sub,,0,0,0,,The scenario here is common in AI workloads, where you're doing inference.\N这里的场景在 AI 工作负载中很常见，即进行推理。
+Dialogue: 0,0:11:12.39,0:11:17.01,Sub,,0,0,0,,And inference, you can break up into two parts: prefill and decode.\N推理可以分为两个部分：预填充和解码。
+Dialogue: 0,0:11:17.01,0:11:25.23,Sub,,0,0,0,,Prefill is taking your prompt and then getting the tokens from that prompt and the KV cache populated from that prompt.\N预填充阶段会获取您提示词中的词元，并用该提示词填充键值缓存。
+Dialogue: 0,0:11:25.23,0:11:30.75,Sub,,0,0,0,,And then decode starts to generate new tokens based off of that system of that prompt.\N然后解码开始根据该提示的系统生成新的词元。
+Dialogue: 0,0:11:30.75,0:11:37.32,Sub,,0,0,0,,So it's efficient and now common to split those into different server pools, so one pool for prefill,\N因此，现在高效的做法是将它们分开部署到不同的服务器池中，
+Dialogue: 0,0:11:37.32,0:11:43.98,Sub,,0,0,0,,one pool for decode, because they both have different constraints when it comes to memory and compute.\N一个用于预填充，一个用于解码，因为两者在内存和计算方面有不同的需求。
+Dialogue: 0,0:11:43.98,0:11:53.10,Sub,,0,0,0,,So here, we're going to start this demo of... RDMA.\N那么，现在我们开始这个 RDMA 的演示。
+Dialogue: 0,0:11:53.13,0:11:56.79,Sub,,0,0,0,,So first, we're going to look at the performance over the TCP/IP stack.\N首先，我们将查看 TCP/IP 协议栈上的性能表现。
+Dialogue: 0,0:11:56.79,0:12:01.05,Sub,,0,0,0,,So here's the pre-filler server using TCP/IP.\N这是使用 TCP/IP 的预填充服务器。
+Dialogue: 0,0:12:01.05,0:12:07.05,Sub,,0,0,0,,Here's the decoder server, also using TCP/IP, the way we're launching it.\N这是解码服务器，同样使用 TCP/IP 协议，也是我们启动它的方法。
+Dialogue: 0,0:12:07.05,0:12:15.91,Sub,,0,0,0,,And then we're going to go run this vLLM benchmark that does this prefill decode load between those two servers.\N然后我们将运行这个 vLLM 基准测试，它会在两台服务器之间执行预填充和解码负载。
+Dialogue: 0,0:12:17.25,0:12:20.95,Sub,,0,0,0,,And then we're going to go take a look at our RDMA stats, which is in the bottom right.\N然后我们去看一下 RDMA 统计数据，位于右下角。
+Dialogue: 0,0:12:20.98,0:12:25.44,Sub,,0,0,0,,And you're going to see that they don't change as this workload runs, there's 460 send requests.\N你会看到，在这个工作负载运行过程中，它们不会发生变化，共有460个发送请求。
+Dialogue: 0,0:12:25.44,0:12:27.90,Sub,,0,0,0,,Just keep your eye on that one.\N注意盯着那个就行。
+Dialogue: 0,0:12:27.90,0:12:34.77,Sub,,0,0,0,,But then if you take a look at the performance, the token throughput, which is what we really want, is about 3,400.\N但如果你看一下性能，也就是我们真正关心的词元吞吐量，大约是3400。
+Dialogue: 0,0:12:34.77,0:12:41.58,Sub,,0,0,0,,The median time to first token, which is another important stat for inference, is 123,000.\N首词元时间的中位数为123,000，这也是推理过程中的一个重要指标。
+Dialogue: 0,0:12:41.58,0:12:51.57,Sub,,0,0,0,,But when we switch over to RDMA and use the MANA link for that, you can see there's the F1 Verbs Device Name as MANA 0.\N但当我们切换到 RDMA 并使用 MANA 链路时，\N可以看到 F1 Verbs 设备名称显示为 MANA 0。
+Dialogue: 0,0:12:51.57,0:12:57.36,Sub,,0,0,0,,We do the same thing on the decode server, MANA 0.\N解码服务器上我们也做同样的事情，MANA 0。
+Dialogue: 0,0:12:57.36,0:13:04.26,Sub,,0,0,0,,And then let's go take a look at the stats, and you can see 460, but this is going to change now, because we're running the RDMA test.\N然后我们去看看统计数据，你看到是460，但现在会变了，因为我们正在运行RDMA测试。
+Dialogue: 0,0:13:04.26,0:13:08.67,Sub,,0,0,0,,And it changed to 506 because we've sent a whole lot of packets now over to RDMA.\N而且变成了506，因为我们现在已经通过RDMA发送了大量的数据包。
+Dialogue: 0,0:13:08.67,0:13:12.81,Sub,,0,0,0,,And then we've almost doubled the throughput to 7637.\N然后我们的吞吐量几乎翻了一倍，达到7637。
+Dialogue: 0,0:13:12.81,0:13:19.47,Sub,,0,0,0,,And then you can see our mean time to first token has dropped to just 47,000 milliseconds.\N然后你可以看到，我们的首词元时间已降至仅 47,000 毫秒。
+Dialogue: 0,0:13:19.47,0:13:29.70,Sub,,0,0,0,,So that's the performance benefit of RDMA that we're deploying and using in our inference clusters behind Foundry, powered by Azure Boost.\N这就是我们通过 Azure Boost 驱动的 Foundry \N后端推理集群所部署和使用的 RDMA 所带来的性能优势。
+Dialogue: 0,0:13:29.70,0:13:32.13,Sub,,0,0,0,,Okay, so let's take a look at our core now.\N好，我们来看一下我们的核心。
+Dialogue: 0,0:13:32.13,0:13:36.60,Sub,,0,0,0,,So that's kind of Fairwater infrastructure and some of the networking behind it.\N这就是法沃特的部分基础设施，以及其背后的一些网络架构。
+Dialogue: 0,0:13:36.60,0:13:38.58,Sub,,0,0,0,,Let's go take a look at the core.\N我们去看看核心部分。
+Dialogue: 0,0:13:38.58,0:13:44.40,Sub,,0,0,0,,And this is one of the sections that I get very excited about, because the future is serverless.\N这正是让我非常兴奋的一个部分，因为未来是无服务器的。
+Dialogue: 0,0:13:44.43,0:13:46.17,Sub,,0,0,0,,And I've been saying this for a long time.\N我一直都在这么说。
+Dialogue: 0,0:13:46.17,0:13:52.98,Sub,,0,0,0,,If you've come to previous Inside Azure Innovation talks, even going back 10 years, I've been saying serverless is the future.\N如果你参加过之前历届的“Inside Azure 创新”讲座，\N甚至回溯到十年前，我一直在说，无服务器架构就是未来。
+Dialogue: 0,0:13:53.00,0:14:00.84,Sub,,0,0,0,,Well, serverless as the future is really arriving now with Azure Container Instances, which Azure Container instances,\N实际上，无服务器架构的未来现在正真正到来，比如 Azure 容器实例。
+Dialogue: 0,0:14:00.84,0:14:09.37,Sub,,0,0,0,,the idea here is that we've got -- typically, when it comes to containers, you think about containers the way they started, which is process isolated containers.\N这里的理念是，当我们谈到容器时，通常会想到最初的那种进程隔离容器。
+Dialogue: 0,0:14:09.39,0:14:13.47,Sub,,0,0,0,,So they're using the operating system primitives to try to keep them separate from each other.\N因此，他们正利用操作系统原语来尝试让彼此之间保持隔离。
+Dialogue: 0,0:14:13.47,0:14:15.24,Sub,,0,0,0,,But there's a problem with that.\N但这样做有个问题。
+Dialogue: 0,0:14:15.24,0:14:21.42,Sub,,0,0,0,,We don't consider a process or user mode kernel as a security boundary in Azure.\N在 Azure 中，我们不将进程或用户模式内核视为安全边界。
+Dialogue: 0,0:14:21.42,0:14:33.63,Sub,,0,0,0,,We only consider virtualization with a very tight connection between -- small connection between the server and the host to be a security boundary in Azure.\N在 Azure 中，我们仅将服务器与主机之间连接非常紧密的虚拟化视为安全边界。
+Dialogue: 0,0:14:33.63,0:14:39.18,Sub,,0,0,0,,So with Azure Container Instances, we isolate those containers with Hyper-V.\N因此，使用 Azure 容器实例时，我们会通过 Hyper-V 隔离这些容器。
+Dialogue: 0,0:14:39.18,0:14:45.18,Sub,,0,0,0,,And this is nested hypervisor here inside a virtual machine with the containers on them.\N而这里是在虚拟机内部嵌套的虚拟机管理程序，其上运行着容器。
+Dialogue: 0,0:14:45.20,0:14:49.95,Sub,,0,0,0,,One of the things I'm going to show you in a little bit is where we're going with this, which is direct virtualization.\N稍后我要向大家展示的是，我们在这方面的发展方向，也就是直接虚拟化。
+Dialogue: 0,0:14:49.98,0:14:52.14,Sub,,0,0,0,,So I'll save a description of that.\N我就不赘述那个了。
+Dialogue: 0,0:14:52.14,0:15:00.85,Sub,,0,0,0,,But what I want to show you is we're making a ton of progress in adopting Azure Container Instances throughout all of not just Azure, but Microsoft services.\N但我想要向大家展示的是，我们正在全面推进 Azure 容器实\N例在 Azure 乃至整个微软服务中的应用，取得了巨大进展。
+Dialogue: 0,0:15:00.87,0:15:04.97,Sub,,0,0,0,,I'm sure that if you take a look at this, you can see some service that you've been using,\N我相信只要你看看这个，就能发现你正在使用的某个服务，这意味着你实际上
+Dialogue: 0,0:15:04.99,0:15:12.42,Sub,,0,0,0,,which means you're indirectly using Azure Container Instances, whether, for example, GitHub Actions is now running on Azure Container Instances.\N间接在使用 Azure 容器实例，比如现在\NGitHub Actions 就运行在 Azure 容器实例上。
+Dialogue: 0,0:15:12.42,0:15:16.11,Sub,,0,0,0,,You can see Python and Excel running on Azure Container Instances.\N你可以看到 Python 和 Excel 正在 Azure 容器实例上运行。
+Dialogue: 0,0:15:16.11,0:15:22.80,Sub,,0,0,0,,Horizon DB, which you might have gone to sessions about here at Build, running on Azure Container Instances.\N你可能在 Build 大会上参加过关于 Horizon DB 的相关讲座，\N它现在正在 Azure 容器实例上运行。
+Dialogue: 0,0:15:22.80,0:15:31.41,Sub,,0,0,0,,So one of the things that we've been doing is trying to make Container Instances more efficient and also support more scenarios and make it\N我们正在做的一件事是让容器实例更加高效，同时支持更多场景，
+Dialogue: 0,0:15:31.41,0:15:34.50,Sub,,0,0,0,,so that you never need to do process isolation.\N让你们再也不需要进行进程隔离。
+Dialogue: 0,0:15:34.50,0:15:37.92,Sub,,0,0,0,,One of those is taking out the virtualization overhead.\N其中一个就是消除虚拟化开销。
+Dialogue: 0,0:15:37.92,0:15:48.51,Sub,,0,0,0,,And this is what we call direct virtualization, is putting the containers right on the servers as peers to the management's virtual machine.\N这就是我们所说的直接虚拟化，即把容器直接部署在服务器上，与管理虚拟机并列运行。
+Dialogue: 0,0:15:48.51,0:15:52.98,Sub,,0,0,0,,We call this the parent partition or Layer 1 virtualization host.\N我们称其为父分区或第1层虚拟化主机。
+Dialogue: 0,0:15:52.98,0:16:02.31,Sub,,0,0,0,,And these are Layer 2 virtualization hosts, or child VMs, that are simply hosting individual containers, or pods.\N这些是第2层虚拟化主机，或称子虚拟机，它们仅用于托管单个容器或Pod。
+Dialogue: 0,0:16:02.31,0:16:08.79,Sub,,0,0,0,,And this gives us that strong hostile multi-tenant isolation for container instances.\N这为我们提供了容器实例之间强大的敌对多租户隔离。
+Dialogue: 0,0:16:08.79,0:16:19.14,Sub,,0,0,0,,Now one of the other Azure Container Instances of cells now runs on top of 01 virtualization or direct virtualization,\N现在，另一些 Azure 容器实例的单元现在运行在 01 虚拟化或直接虚拟化之上，
+Dialogue: 0,0:16:19.14,0:16:23.76,Sub,,0,0,0,,where we're migrating our entire fleet over to direct virtualization.\N我们正将整个机群迁移到直接虚拟化。
+Dialogue: 0,0:16:23.76,0:16:32.79,Sub,,0,0,0,,This will probably take a year or two to migrate the whole fleet, but this is something that is going to give us a lot of performance and efficiency benefits.\N这可能需要一到两年时间来完成整个机队的迁移，但这样做将为我们带来显著的性能和效率提升。
+Dialogue: 0,0:16:32.79,0:16:43.41,Sub,,0,0,0,,Now we want to make containers have all of the same capabilities of virtual machines, all of the same abilities to attach network devices and storage devices.\N现在我们希望让容器具备虚拟机的所有功能，能够像虚拟机一样连接网络设备和存储设备。
+Dialogue: 0,0:16:43.41,0:16:52.65,Sub,,0,0,0,,One of the benefits you get out of a virtual machine today on any hyperscaler, including Azure, is minimal downtime when the server needs to be serviced\N如今在任何超大规模云服务商，包括 Azure 上使用虚拟机，\N一个好处就是当服务器需要维护或出现异常时，
+Dialogue: 0,0:16:52.65,0:16:56.94,Sub,,0,0,0,,or the server is going unhealthy, and we recognize that ahead of time.\N停机时间极短，我们能提前预知这些问题。
+Dialogue: 0,0:16:56.94,0:16:59.64,Sub,,0,0,0,,And that is with live migration.\N而且这还是在实时迁移的情况下。
+Dialogue: 0,0:16:59.64,0:17:03.33,Sub,,0,0,0,,What's been missing with containers is support for live migration.\N容器技术一直缺少对实时迁移的支持。
+Dialogue: 0,0:17:03.33,0:17:09.33,Sub,,0,0,0,,So I want to show you the first public demo of Container Live Migration in Azure here,\N我想向大家展示 Azure 上首个公开的容器实时迁移演示，
+Dialogue: 0,0:17:09.33,0:17:16.72,Sub,,0,0,0,,where we can take a bunch of containers and move them from one server over to another server.\N我们可以将一组容器从一台服务器无缝迁移到另一台服务器。
+Dialogue: 0,0:17:20.70,0:17:27.75,Sub,,0,0,0,,So here I've got a container that's running on one pool of servers.\N这里我有一个容器，运行在一组服务器上。
+Dialogue: 0,0:17:27.75,0:17:31.83,Sub,,0,0,0,,And here's another pool of servers over here that we're going to migrate it to.\N这边还有另一组服务器，我们打算把它们迁移到那里。
+Dialogue: 0,0:17:31.83,0:17:35.14,Sub,,0,0,0,,So this is our live migration for container instances.\N这就是我们容器实例的实时迁移。
+Dialogue: 0,0:17:35.16,0:17:41.10,Sub,,0,0,0,,You can see this is still under development, which is why we're using these command lines here.\N你可以看到这 still 在开发中，所以我们才在这里使用这些命令行。
+Dialogue: 0,0:17:41.10,0:17:45.95,Sub,,0,0,0,,And we've got this running over on Dev Box 6, Server Dev 6.\N我们正在 Dev Box 6、Server Dev 6 上运行这个。
+Dialogue: 0,0:17:45.95,0:17:51.08,Sub,,0,0,0,,And we've got this container workload, it's simply spitting out a tick every second.\N我们有一个容器工作负载，它每秒简单地输出一个时间戳。
+Dialogue: 0,0:17:51.08,0:17:53.15,Sub,,0,0,0,,You can see we're up to Tick 695.\N可以看到，我们已经到了第695个时钟周期。
+Dialogue: 0,0:17:53.15,0:18:00.18,Sub,,0,0,0,,And the migration now has kicked in and that container is no longer running on that server, which is why that stopped.\N现在迁移已经启动，那个容器不再运行在那台服务器上，所以它就停止了。
+Dialogue: 0,0:18:00.18,0:18:08.58,Sub,,0,0,0,,Now if we go over and take a look at the other server, it's migrated to, Dev 1, and we look at what's running in it.\N现在我们转过去看看另一台服务器，它已迁移至 Dev 1，我们来看看里面运行着什么。
+Dialogue: 0,0:18:08.58,0:18:11.76,Sub,,0,0,0,,You can see that there's our Hello World there.\N可以看到，那里就是我们的“你好，世界”。
+Dialogue: 0,0:18:11.76,0:18:19.80,Sub,,0,0,0,,And if we go take a look at what's running inside of that, you can see there is the file that it's been dropping those ticks into.\N如果我们看一下里面运行的内容，可以看到它正在把那些时间戳写入的文件。
+Dialogue: 0,0:18:19.80,0:18:21.99,Sub,,0,0,0,,We're already way way up to 755.\N我们已经达到了755的水平。
+Dialogue: 0,0:18:21.99,0:18:28.11,Sub,,0,0,0,,So let's go take a look and make sure that 695 was in there, and we didn't have any kind of gap.\N那我们去看看，确认一下695在里面，没有出现任何缺口。
+Dialogue: 0,0:18:28.11,0:18:31.69,Sub,,0,0,0,,So we're going to go to a CAT, scroll back up.\N所以我们去一个 CAT，往上滚动一下。
+Dialogue: 0,0:18:33.24,0:18:37.02,Sub,,0,0,0,,And there it is, 695 right there.\N就在那儿，695，清清楚楚。
+Dialogue: 0,0:18:37.02,0:18:39.42,Sub,,0,0,0,,So no gap at all.\N所以完全没有差距。
+Dialogue: 0,0:18:39.42,0:18:44.82,Sub,,0,0,0,,So container live migrating from one server to another on top of Azure Container Instance.\N因此，容器可以在 Azure 容器实例之上，从一台服务器实时迁移到另一台服务器。
+Dialogue: 0,0:18:44.82,0:18:46.52,Sub,,0,0,0,,By the way, feel free to clap at any time.\N顺便说一句，大家随时都可以鼓掌。
+Dialogue: 0,0:18:50.92,0:18:52.02,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:18:52.02,0:18:54.93,Sub,,0,0,0,,Let's switch over to talking a little bit about AI.\N我们来聊一聊人工智能。
+Dialogue: 0,0:18:54.93,0:18:59.80,Sub,,0,0,0,,I know that there's AI fatigue, but I think we're doing some cool stuff with AI that I'd like to share with you.\N我知道大家可能对AI有些疲劳了，但我认为我们在AI方面做了一些很酷的事情，想和大家分享一下。
+Dialogue: 0,0:18:59.82,0:19:09.12,Sub,,0,0,0,,And one of those is talking a little bit about what powers all of Microsoft's own inference and own training, and that's a system called Manifold.\N其中一项是关于微软自身推理和训练所依赖的系统，这个系统叫做 Manifold。
+Dialogue: 0,0:19:09.12,0:19:18.51,Sub,,0,0,0,,Manifold's idea is to treat all our pool of GPUs as one pool to do priority-based deployments of workloads\N曼福德的设想是，将我们所有的GPU资源视为一个统一的池，
+Dialogue: 0,0:19:18.51,0:19:27.75,Sub,,0,0,0,,to understand the topologies of AI-based inference and training workloads to most efficiently use that GPU capacity and to also abstract the underlying hardware.\N根据优先级部署工作负载，以理解基于AI的推理和训练工作负载的拓扑结构，\N从而最高效地利用GPU算力，并抽象底层硬件。
+Dialogue: 0,0:19:27.75,0:19:33.15,Sub,,0,0,0,,You can see that it supports ASICS, it supports GPUs, FPGAs, and even CPUs.\N你可以看到，它支持 ASIC、GPU、FPGA，甚至 CPU。
+Dialogue: 0,0:19:33.15,0:19:40.92,Sub,,0,0,0,,And more and more, we have models that consist of CPU portions of the model and GPU portions of the model,\N越来越多的模型由CPU部分和GPU部分组成，
+Dialogue: 0,0:19:40.92,0:19:48.66,Sub,,0,0,0,,including models that actually have mini models inside of them, like they might have an embedding model within them.\N甚至有些模型内部还包含小型子模型，比如可能内嵌一个嵌入模型。
+Dialogue: 0,0:19:48.66,0:19:55.55,Sub,,0,0,0,,They might have a visual large language model embedded within them, if they're a multimodal model.\N它们可能是多模态模型，如果内置了视觉大语言模型。
+Dialogue: 0,0:19:55.58,0:19:59.03,Sub,,0,0,0,,And so these topologies are getting more complicated.\N因此，这些拓扑结构变得越来越复杂。
+Dialogue: 0,0:19:59.03,0:20:08.97,Sub,,0,0,0,,Now what we want to do is bring this power of Azure container instances in this isolation to workloads\N现在我们想做的，是将 Azure 容器实例的这种隔离能力，应用到直接虚拟化
+Dialogue: 0,0:20:08.97,0:20:10.98,Sub,,0,0,0,,like this on top of direct virtualization,\N之上的工作负载中，
+Dialogue: 0,0:20:10.98,0:20:21.21,Sub,,0,0,0,,where we can put CPU containers inside of its own Hyper-V isolated container and the AI model components, those containers,\N例如在独立的 Hyper-V 隔离容器内运行 CPU 容器，同时将 AI 模型组件也以容器形式部署。
+Dialogue: 0,0:20:21.23,0:20:27.77,Sub,,0,0,0,,in their own separate ones too, so they don't interfere with each other, and they get direct access to hardware at the same time.\N它们各自拥有独立的环境，互不干扰，同时也能直接访问硬件。
+Dialogue: 0,0:20:27.77,0:20:34.68,Sub,,0,0,0,,And this is a benefit of direct virtualization is we can assign the GPU to a virtual machine.\N直接虚拟化的好处在于，我们可以将GPU分配给虚拟机。
+Dialogue: 0,0:20:34.68,0:20:44.22,Sub,,0,0,0,,That virtual machine can then create a sub-virtual machine, one of these L2s, and then give the GPUs that it's got over to that container.\N这个虚拟机随后可以创建一个子虚拟机，即其中一个L2，然后将其拥有的GPU分配给该容器。
+Dialogue: 0,0:20:44.22,0:20:47.16,Sub,,0,0,0,,And then it has direct access to that hardware.\N然后它可以直接访问该硬件。
+Dialogue: 0,0:20:47.16,0:20:52.57,Sub,,0,0,0,,So let me show you this demo of Manifold.\N让我给大家演示一下 Manifold。
+Dialogue: 0,0:20:55.67,0:21:05.43,Sub,,0,0,0,,And what we're going to see here is if I get the nodes in this cluster, we're going to go take a look at one of those nodes and get the pods in the node.\N我们接下来会看到，如果我获取这个集群中的节点，就可以查看其中一个节点，并获取该节点上的所有 Pod。
+Dialogue: 0,0:21:05.43,0:21:12.35,Sub,,0,0,0,,And there's one pod in there, which is Llama 4 server.\N里面有一个机柜，是 Llama 4 服务器。
+Dialogue: 0,0:21:12.38,0:21:14.46,Sub,,0,0,0,,And there's another one, which is a metrics server.\N还有一个是指标服务器。
+Dialogue: 0,0:21:14.46,0:21:17.79,Sub,,0,0,0,,One of them is a GPU-based one, one is a CPU-based one.\N其中一个基于GPU，另一个基于CPU。
+Dialogue: 0,0:21:17.79,0:21:27.53,Sub,,0,0,0,,When we go take a look inside the pod that's got the GPU, the Llama model in it, you can see it's got the GPUs visible to it It's got a whole bunch of RAM visible to it.\N当我们查看搭载了GPU和Llama模型的机柜内部时，\N可以看到GPU对它来说是可见的，它还可见大量的RAM。
+Dialogue: 0,0:21:27.53,0:21:30.76,Sub,,0,0,0,,And it's got a whole bunch of processors assigned to it.\N而且它还分配了大量处理器。
+Dialogue: 0,0:21:30.79,0:21:36.98,Sub,,0,0,0,,And you can see the Nvidia SMI command shows us that it actually has those GPUs available to it.\N你可以看到，Nvidia SMI 命令显示，这些 GPU 实际上是可供使用的。
+Dialogue: 0,0:21:36.98,0:21:44.03,Sub,,0,0,0,,When we go take a look at the CPU pod sitting right next to it on the same server, you can see that it's got almost no memory.\N当我们查看紧挨着它、位于同一台服务器上的CPU机架时，可以看到它的内存几乎为零。
+Dialogue: 0,0:21:44.03,0:21:45.89,Sub,,0,0,0,,It's only got two processors.\N它只有两个处理器。
+Dialogue: 0,0:21:45.89,0:21:48.79,Sub,,0,0,0,,And it's got no GPUs attached to it.\N而且它没有连接任何GPU。
+Dialogue: 0,0:21:48.81,0:21:50.19,Sub,,0,0,0,,And just to prove to you it works,\N为了证明它确实有效，
+Dialogue: 0,0:21:50.19,0:22:01.68,Sub,,0,0,0,,we're going to go take a look at this cat video and send this for inference to that GPU pod sitting there with direct access to GPUs, the Llama 4 Maverick model there,\N我们来查看一下这段猫咪视频，将其发送到那台GPU集群进行推理，该集群可直接访问GPU，\N运行的是那里的Llama 4 Maverick模型，
+Dialogue: 0,0:22:01.68,0:22:06.15,Sub,,0,0,0,,and then successfully do an inference there.\N然后成功完成一次推理。
+Dialogue: 0,0:22:06.15,0:22:19.52,Sub,,0,0,0,,The point being proven here that we've got CPU pods completely isolated from GPU pods directly attached to the physical server hardware because of direct virtualization.\N这里要证明的重点是，CPU 计算单元与 GPU 计算单元完全隔离，\N且直接连接到物理服务器硬件，这是由于采用了直接虚拟化技术。
+Dialogue: 0,0:22:24.65,0:22:26.88,Sub,,0,0,0,,Now we're also not just optimizing the compute.\N我们现在不仅仅在优化计算。
+Dialogue: 0,0:22:26.88,0:22:37.89,Sub,,0,0,0,,We're also optimizing the way that inference works in terms of KV caches, which is -- the KV cache is effectively the state of the LLM.\N我们还在优化推理过程中键值缓存的运作方式，而键值缓存实际上就是大语言模型的状态。
+Dialogue: 0,0:22:37.89,0:22:48.03,Sub,,0,0,0,,And you can't do decoding efficiently without having a KV cache which represents the processing of all the previous tokens in the prompt.\N如果没有保存所有先前词元处理结果的键值缓存，你就无法高效地进行解码。
+Dialogue: 0,0:22:48.03,0:22:51.73,Sub,,0,0,0,,When you interact with an LLM, you do so typically using turns.\N当你与大语言模型互动时，通常是以轮次方式进行的。
+Dialogue: 0,0:22:51.75,0:22:54.78,Sub,,0,0,0,,And so you might have Turn 1, where you just have a system prompt.\N因此，你可能会遇到第一轮，此时你只需一个系统提示。
+Dialogue: 0,0:22:54.78,0:22:58.38,Sub,,0,0,0,,Let's say you're doing a PR diff because you're doing development.\N假设你正在做代码变更审查，因为你在进行开发。
+Dialogue: 0,0:22:58.38,0:23:04.38,Sub,,0,0,0,,And you engage in an interaction with Copilot on that PR diff.\N你还会与 Copilot 就该代码变更进行交互。
+Dialogue: 0,0:23:04.38,0:23:11.31,Sub,,0,0,0,,And what that means is that you're extending the prompt effectively, your specific prompt.\N这意味着你实际上是在扩展提示，也就是你的特定提示。
+Dialogue: 0,0:23:11.31,0:23:14.01,Sub,,0,0,0,,In an ideal case, you don't just want to cache the system prompt.\N在理想情况下，你不仅仅想缓存系统提示。
+Dialogue: 0,0:23:14.01,0:23:23.79,Sub,,0,0,0,,And this is what a lot of AI frameworks let you do is they say, hey, cache this for me, and then I'm not going to have to pay the cost for decoding this again or prefilling it.\N这就是许多AI框架允许你做的事：它们会说，嘿，帮我缓存这个，\N这样我就不用再为解码或预填充它而付出成本了。
+Dialogue: 0,0:23:23.79,0:23:26.76,Sub,,0,0,0,,But what you really want is the whole thing to be cached,\N但你真正想要的是整个系统都被缓存，这样当你的工作负载迁移时，
+Dialogue: 0,0:23:26.76,0:23:35.10,Sub,,0,0,0,,so that if your workload moves, your inference moves from one GP to another, one server to another, that you're not repaying this price.\N推理也能从一个 GPU 平滑转移到另一个 GPU，\N从一台服务器转移到另一台服务器，而无需重复支付这笔开销。
+Dialogue: 0,0:23:35.10,0:23:42.81,Sub,,0,0,0,,And we can only do this if we've got a cache that sits all the way behind all of the servers.\N我们只有在拥有一个位于所有服务器背后的缓存时才能实现这一点。
+Dialogue: 0,0:23:42.81,0:23:46.71,Sub,,0,0,0,,So this is something that we've got coming out in preview now called Azure Context Cache.\N这就是我们现在即将推出的预览版功能，名为 Azure 上下文缓存。
+Dialogue: 0,0:23:46.71,0:23:52.26,Sub,,0,0,0,,The idea here is that Azure Context Cache, behind it, has a storage account.\N这里的思路是，Azure 上下文缓存背后有一个存储账户。
+Dialogue: 0,0:23:52.26,0:23:58.86,Sub,,0,0,0,,And that storage account is where we're caching the KV state for all of the inference requests.\N这个存储账户就是我们缓存所有推理请求的键值状态的地方。
+Dialogue: 0,0:23:58.86,0:24:01.50,Sub,,0,0,0,,So regardless of what server they go to,\N无论他们访问哪台服务器，
+Dialogue: 0,0:24:01.50,0:24:13.41,Sub,,0,0,0,,if the prompt is not there, the KV isn't there, we can look it up in the cache and fetch it in and not have to decode that again, saving time and money.\N只要提示词和键值对不在本地，我们就可以从缓存中查找并获取，无需再次解码，从而节省时间和成本。
+Dialogue: 0,0:24:13.41,0:24:17.14,Sub,,0,0,0,,So let's go take a look at that Azure Context Cache in action.\N那我们来看一下 Azure 上下文缓存的实际运行效果。
+Dialogue: 0,0:24:19.62,0:24:28.65,Sub,,0,0,0,,So here, we're sending, concurrency level one, we're sending a bunch of queries into the system, all with the same system prompt.\N这里，我们设置并发级别为1，向系统发送大量查询，所有查询都使用相同的系统提示。
+Dialogue: 0,0:24:28.65,0:24:31.14,Sub,,0,0,0,,And you can see that we had all of those cached.\N你可以看到，我们把所有这些都缓存起来了。
+Dialogue: 0,0:24:31.14,0:24:39.74,Sub,,0,0,0,,The cache hit rate was 81%, because after the first request goes to the server, the next one is likely gonna have that system prompt already cached in it.\N缓存命中率是81%，因为在第一次请求发送到服务器后，下一次请求很可能已经将该系统提示缓存到了其中。
+Dialogue: 0,0:24:39.76,0:24:43.77,Sub,,0,0,0,,But when we do a concurrency level of 10, they're going to get sprayed across servers,\N但当我们设置并发级别为10时，请求会被分散到多个服务器上，
+Dialogue: 0,0:24:43.80,0:24:50.07,Sub,,0,0,0,,and our cache hit rate actually goes down because now sometimes a request is landing on a server without the system prompt.\N导致缓存命中率反而下降，因为有时请求会落在没有系统提示的服务器上。
+Dialogue: 0,0:24:50.07,0:24:57.72,Sub,,0,0,0,,So a lot of systems have you set this cache key unique to try to pin a conversation on a particular server, an endpoint.\N因此，许多系统会要求你设置一个唯一的缓存键，以确保将某个对话固定在特定的服务器或端点上。
+Dialogue: 0,0:24:57.72,0:25:06.42,Sub,,0,0,0,,The hit rate actually drops there because every conversation gets mapped to a different server intentionally where the system prompt might not have already shown up.\N实际上，命中率在那里下降了，因为每次对话都会被有意地映射到不同的服务器，导致系统提示可能尚未出现。
+Dialogue: 0,0:25:06.42,0:25:10.98,Sub,,0,0,0,,So the first hit there is always -- the first query there is always going to be a miss.\N所以第一个命中总是——第一个查询总是会失败。
+Dialogue: 0,0:25:10.98,0:25:21.00,Sub,,0,0,0,,But when we set the prompt cache, you can see that the prompt cache rate, hit rate is going to go up.\N但当我们设置提示词缓存后，就能看到提示词缓存的命中率会随之上升。
+Dialogue: 0,0:25:21.00,0:25:23.40,Sub,,0,0,0,,Where did the demo go here?\N演示去哪儿了？
+Dialogue: 0,0:25:23.40,0:25:28.71,Sub,,0,0,0,,Went up to 96% with the remote cache here; 96.2% is the hit rate here.\N远程缓存启用后，命中率最高达到96%；这里的命中率是96.2%。
+Dialogue: 0,0:25:28.71,0:25:34.14,Sub,,0,0,0,,And that's because no matter which server the query lands on,\N这是因为，无论查询落在哪台服务器上，
+Dialogue: 0,0:25:34.14,0:25:40.74,Sub,,0,0,0,,the prompt is -- the KV cache for that prompt is going to be fetched from remote cache if it wasn't there.\N如果该提示的键值缓存不在本地，都将从远程缓存中获取。
+Dialogue: 0,0:25:40.74,0:25:48.30,Sub,,0,0,0,,So transparently, behind the scenes, this prompt cache using Azure storage to go and spread out the KV cache across the servers,\N如此透明地在后台，通过使用 Azure 存储来实现提示缓存，将 KV 缓存分布到各个服务器上，
+Dialogue: 0,0:25:48.30,0:25:57.21,Sub,,0,0,0,,effectively making the servers have a pool cache rather than individual server-based caches, which is going to improve hit rate, which is going to save money,\N从而让服务器共享一个缓存池，而不是每个服务器各自独立缓存。这将提升缓存命中率，
+Dialogue: 0,0:25:57.21,0:26:03.78,Sub,,0,0,0,,so you're not having to pay for the prefill on those system caches every time you have a miss.\N节省成本，避免每次缓存未命中时都需为系统缓存支付预填充的开销。
+Dialogue: 0,0:26:03.78,0:26:04.95,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:26:04.95,0:26:08.79,Sub,,0,0,0,,So let's take a look at the next cool innovation.\N那么，让我们来看看下一个酷炫的创新。
+Dialogue: 0,0:26:08.79,0:26:15.21,Sub,,0,0,0,,And I've got a -- it's like an ACI-themed talk, because this is one of the cool things about ACI.\N而且我有个——就像一场以ACI为主题的演讲，因为ACI有这么酷的一点。
+Dialogue: 0,0:26:15.21,0:26:19.40,Sub,,0,0,0,,When you talk about containers, you're talking about layers and images.\N提到容器时，实际上就是在说分层和镜像。
+Dialogue: 0,0:26:19.42,0:26:24.75,Sub,,0,0,0,,When you talk about virtual machines, you're talking about full-blown virtual machine images.\N当你谈论虚拟机时，你指的是完整的虚拟机镜像。
+Dialogue: 0,0:26:24.75,0:26:34.38,Sub,,0,0,0,,Now, when you talk about container sandboxes, you're typically talking about something that is very bespoke, kind of a custom image, and it's very small and lightweight.\N现在说到容器沙箱，通常指的是那种高度定制化的镜像，体积非常小且轻量。
+Dialogue: 0,0:26:34.38,0:26:37.14,Sub,,0,0,0,,And this is what you want to be extremely fast.\N而这正是你希望极快完成的。
+Dialogue: 0,0:26:37.14,0:26:46.35,Sub,,0,0,0,,Now one of the ways to get a fast startup for a container image, which you want with these for these agents to be able to say, "I'm going to go write a Python script\N现在，让容器镜像实现快速启动的一种方法是，让启动时间接近瞬时完成，这样智能体才能快速执行操作，
+Dialogue: 0,0:26:46.35,0:26:55.59,Sub,,0,0,0,,and run it, I'm going to go create a little HTML site and iterate on it," is you want the startup to be close to instantaneous.\N比如“我要去写个 Python 脚本并运行它”或“我要创建一个简单的 HTML 网站并快速迭代”。
+Dialogue: 0,0:26:55.59,0:27:02.37,Sub,,0,0,0,,When it comes to containers, you can get startup times in the five, 20-second range, depending on what the OS is.\N在容器方面，启动时间通常在五到二十秒之间，具体取决于操作系统。
+Dialogue: 0,0:27:02.37,0:27:11.55,Sub,,0,0,0,,But we want literally thousands of these things to be able to start simultaneously and to start very quickly off of the same base image.\N但我们希望成千上万的这类东西能够同时启动，并且从同一张基础图像快速启动。
+Dialogue: 0,0:27:11.55,0:27:14.04,Sub,,0,0,0,,The way we do that is with memory snapshotting.\N我们实现这一点的方式是通过内存快照。
+Dialogue: 0,0:27:14.04,0:27:20.34,Sub,,0,0,0,,So we actually start the container, snapshot its memory, and then if you get a request for the same container,\N所以我们实际上会启动容器，对内存进行快照，当再次收到相同容器的请求时，
+Dialogue: 0,0:27:20.34,0:27:26.97,Sub,,0,0,0,,we simply map the memory, and we skip all the initialization and map it right into a running container box.\N我们只需映射内存，跳过所有初始化步骤，直接将其映射到正在运行的容器中。
+Dialogue: 0,0:27:26.97,0:27:30.09,Sub,,0,0,0,,So let me show you one of, I think, my favorite demo of this,\N让我给大家展示一个我最喜欢的演示，
+Dialogue: 0,0:27:30.09,0:27:37.89,Sub,,0,0,0,,which is, how would you like to see 10,000 container sandboxes launch?\N你想看看10,000个容器沙箱同时启动吗？
+Dialogue: 0,0:27:39.54,0:27:44.58,Sub,,0,0,0,,Okay, because if the answer is yes, that's the rest of the session.\N好，因为如果答案是肯定的，那接下来就是整个会话的全部内容了。
+Dialogue: 0,0:27:44.58,0:27:46.63,Sub,,0,0,0,,I'm just kidding, no, I'm just kidding.\N我开玩笑的，别当真。
+Dialogue: 0,0:27:46.65,0:27:51.63,Sub,,0,0,0,,What I'm going to show you is that we can do this incredibly quickly.\N我要向你们展示的是，我们可以非常迅速地完成这件事。
+Dialogue: 0,0:27:51.63,0:27:56.97,Sub,,0,0,0,,So I've got 10 workers launching 1,000 of these container sandboxes each.\N我有10个工人，每人启动1000个容器沙箱。
+Dialogue: 0,0:27:56.97,0:28:02.73,Sub,,0,0,0,,And we've got a little animation to show you the progress of those launches here.\N我们还准备了一段小动画，来展示这些发射任务的进展。
+Dialogue: 0,0:28:02.73,0:28:03.93,Sub,,0,0,0,,So here we go.\N那么，我们开始吧。
+Dialogue: 0,0:28:03.93,0:28:06.31,Sub,,0,0,0,,Create 10 worker pods.\N创建10个工作节点Pod。
+Dialogue: 0,0:28:10.65,0:28:12.96,Sub,,0,0,0,,Here we go.\N开始了。
+Dialogue: 0,0:28:12.96,0:28:15.27,Sub,,0,0,0,,So each one is going to add 1,000.\N所以每个人都会再加一千。
+Dialogue: 0,0:28:15.27,0:28:17.46,Sub,,0,0,0,,This represents 1,000.\N这代表一千。
+Dialogue: 0,0:28:17.46,0:28:18.88,Sub,,0,0,0,,You can see them launching.\N你可以看到它们正在发射。
+Dialogue: 0,0:28:20.70,0:28:23.38,Sub,,0,0,0,,A few down here left.\N这里还剩几个。
+Dialogue: 0,0:28:23.40,0:28:25.17,Sub,,0,0,0,,Boom, done.\N搞定，完成。
+Dialogue: 0,0:28:25.17,0:28:29.46,Sub,,0,0,0,,10,000 container sandboxes.\N1万个集装箱沙箱。
+Dialogue: 0,0:28:31.84,0:28:37.14,Sub,,0,0,0,,Average container sandbox launch time, two seconds.\N平均容器沙箱启动时间，两秒。
+Dialogue: 0,0:28:37.14,0:28:40.41,Sub,,0,0,0,,So not just speed, but scale at the same time.\N不仅是速度，同时还有规模。
+Dialogue: 0,0:28:40.41,0:28:43.38,Sub,,0,0,0,,So this is, like I said, one of the really cool demos.\N所以，正如我所说，这是一个非常酷的演示。
+Dialogue: 0,0:28:43.38,0:28:50.93,Sub,,0,0,0,,And so you're going to see the agent sandboxing land on top of Azure Container Instance.\N因此，你将看到智能体沙箱将部署在 Azure 容器实例之上。
+Dialogue: 0,0:28:50.95,0:28:52.11,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:28:52.13,0:28:58.41,Sub,,0,0,0,,Let's go into our last section now and talk about, or second to last section, and talk a little bit about security.\N现在我们进入最后一部分，或者说是倒数第二部分，简单聊一下安全问题。
+Dialogue: 0,0:28:58.41,0:29:06.82,Sub,,0,0,0,,And one of the exciting things for me about security is the evolution of something called confidential computing.\N让我感到振奋的是，安全领域的一个重要进展是保密计算的演进。
+Dialogue: 0,0:29:06.85,0:29:09.18,Sub,,0,0,0,,How many people have heard of confidential computing?\N有多少人听说过可信计算？
+Dialogue: 0,0:29:09.18,0:29:10.53,Sub,,0,0,0,,So, quite a few of you.\N所以，你们当中有不少人。
+Dialogue: 0,0:29:10.53,0:29:18.57,Sub,,0,0,0,,For those of you that haven't heard of confidential computing, the easiest way to think about it is in the context of how your data gets protected.\N对于还不了解可信计算的朋友们，最简单的理解方式是把它放在数据保护的背景下来看。
+Dialogue: 0,0:29:18.57,0:29:26.22,Sub,,0,0,0,,And for a long time now, everybody encrypts their network traffic.\N长期以来，人们一直都在对网络流量进行加密。
+Dialogue: 0,0:29:26.22,0:29:32.07,Sub,,0,0,0,,Over the last 20 years or so, it went from every now and then you'd run into a site with SSL.\N过去二十年左右的时间里，你偶尔才能遇到一个使用 SSL 的网站。
+Dialogue: 0,0:29:32.07,0:29:37.80,Sub,,0,0,0,,And now every single site, every single network connection has to have TLS on it.\N现在，每一个网站、每一条网络连接都必须启用 TLS。
+Dialogue: 0,0:29:37.80,0:29:42.21,Sub,,0,0,0,,Then, the other part of protecting is while it's at rest.\N然后，另一部分保护则是在它静止时进行的。
+Dialogue: 0,0:29:42.21,0:29:44.58,Sub,,0,0,0,,And this is where it's stored on disk.\N这就是它在磁盘上的存储位置。
+Dialogue: 0,0:29:44.58,0:29:46.08,Sub,,0,0,0,,You want to have that encrypted, too,\N你也希望对它进行加密，
+Dialogue: 0,0:29:46.08,0:29:55.17,Sub,,0,0,0,,so if the storage gets accessed outside of the protection of the logical protections of the workload on top of it, that the data is useless.\N这样即使存储数据在超出其上层工作负载逻辑保护范围的情况下被访问，数据也毫无用处。
+Dialogue: 0,0:29:55.17,0:29:57.57,Sub,,0,0,0,,And we not only have now in cloud.\N而且我们现在不仅在云端拥有。
+Dialogue: 0,0:29:57.57,0:29:59.67,Sub,,0,0,0,,We started with node data encryption at rest.\N我们首先实现了节点数据的静态加密。
+Dialogue: 0,0:29:59.69,0:30:01.47,Sub,,0,0,0,,And now we've got server-side encryption.\N现在我们有了服务器端加密。
+Dialogue: 0,0:30:01.47,0:30:05.98,Sub,,0,0,0,,We also have customer managed key, where you can bring your own encryption and have double layered encryption of data at rest.\N我们还提供客户管理密钥功能，您可使用自己的加密方式，实现数据静态存储时的双重加密。
+Dialogue: 0,0:30:06.00,0:30:16.62,Sub,,0,0,0,,But what's been missing largely is protecting the data while it's in use, because when that data gets decrypted on the server or pulled off the disk in clear text, it's sitting\N但长期以来缺失的是，在数据使用过程中对其进行保护。\N因为当数据在服务器上解密，或以明文形式从磁盘读取时，
+Dialogue: 0,0:30:16.62,0:30:22.86,Sub,,0,0,0,,in there on the server, maybe inside of a virtual machine, but still in the server environment.\N它就处于服务器中，可能位于虚拟机内部，但仍处于服务器环境之中。
+Dialogue: 0,0:30:22.86,0:30:34.14,Sub,,0,0,0,,And what can access that data includes everything from the hypervisor to the admins to the host software to a malicious hacker that might penetrate the infrastructure.\N能够访问该数据的包括从虚拟机监控程序到管理员，再到主机软件，甚至可能渗透到基础设施的恶意黑客。
+Dialogue: 0,0:30:34.14,0:30:36.00,Sub,,0,0,0,,All of those can get access.\N所有这些都能获得访问权限。
+Dialogue: 0,0:30:36.00,0:30:38.31,Sub,,0,0,0,,And even in your own applications,\N甚至在你自己的应用中，
+Dialogue: 0,0:30:38.31,0:30:48.03,Sub,,0,0,0,,you want to keep maybe your own operators away from that data and only have the compute that needs to have access to that data have access to that data.\N你也应该让自己的操作人员远离这些数据，只有真正需要访问数据的计算资源才能获得访问权限。
+Dialogue: 0,0:30:48.03,0:30:49.38,Sub,,0,0,0,,That is confidential computing.\N这就是可信计算。
+Dialogue: 0,0:30:49.38,0:30:57.00,Sub,,0,0,0,,Now one aspect of confidential computing that is not just this protection of that data in a hardware enclave,\N保密计算的一个方面不仅仅是通过硬件飞地保护数据，
+Dialogue: 0,0:30:57.00,0:31:04.38,Sub,,0,0,0,,where none of those things can get inside of it, is that the hardware also can measure what's inside the enclave.\N确保外部无法访问，还在于硬件能够测量飞地内部的内容。
+Dialogue: 0,0:31:04.38,0:31:06.72,Sub,,0,0,0,,And that measurement is called an attestation.\N这种测量被称为认证。
+Dialogue: 0,0:31:06.72,0:31:14.79,Sub,,0,0,0,,And some code inside that enclave can ask the hardware for a quote, which is the attestation, present it to a relying party,\N该安全区域内的某些代码可以向硬件请求一个证明，也就是认证信息，然后将其提供给依赖方，
+Dialogue: 0,0:31:14.79,0:31:24.42,Sub,,0,0,0,,which is typically a key management service that has a policy on it that says only release this key to an enclave of this hardware type\N通常是一个密钥管理服务，该服务会根据策略决定：只有当安全区域的硬件类型、
+Dialogue: 0,0:31:24.42,0:31:29.25,Sub,,0,0,0,,with the security version number on it with this configuration of code.\N安全版本号以及代码配置完全匹配时，才允许释放该密钥。
+Dialogue: 0,0:31:29.25,0:31:31.38,Sub,,0,0,0,,And at that point, the key gets released.\N此时，钥匙被释放。
+Dialogue: 0,0:31:31.38,0:31:34.59,Sub,,0,0,0,,It's encrypted to the enclave, the code in the enclave.\N它被加密到了安全区，加密的是安全区内的代码。
+Dialogue: 0,0:31:34.59,0:31:43.89,Sub,,0,0,0,,The code in the enclave decrypts the key and then can start to process the data in the clear, and everybody knows that it's being protected with that hardware isolation.\N安全区内的代码会解密密钥，然后即可明文处理数据，所有人都知道，数据正通过硬件隔离得到保护。
+Dialogue: 0,0:31:43.89,0:31:45.63,Sub,,0,0,0,,That is confidential computing.\N这就是可信计算。
+Dialogue: 0,0:31:45.63,0:31:54.24,Sub,,0,0,0,,We've been working on enabling confidential computing in Azure for over a decade, starting with Intel SGX servers\N我们在 Azure 上实现可信计算已超过十年，最初是在数据中心使用英特尔 SGX 服务器，
+Dialogue: 0,0:31:54.24,0:32:00.57,Sub,,0,0,0,,in the data center, and now virtual machines from AMD and Intel in the data center.\N如今则是在数据中心使用来自 AMD 和英特尔的虚拟机。
+Dialogue: 0,0:32:00.57,0:32:05.55,Sub,,0,0,0,,And our portfolio is the largest of any hyperscaler when it comes to confidential computing services,\N我们的产品组合在所有超大规模云服务商中，于机密计算服务方面规模最大，
+Dialogue: 0,0:32:05.55,0:32:13.75,Sub,,0,0,0,,confidential computing container offerings like confidential containers on ACI, as well as the hardware infrastructure underneath it.\N包括像 ACI 上的机密容器这类机密计算容器产品，以及其底层的硬件基础设施。
+Dialogue: 0,0:32:16.08,0:32:18.27,Sub,,0,0,0,,I talked before about live migration.\N我之前谈过实时迁移。
+Dialogue: 0,0:32:18.27,0:32:28.53,Sub,,0,0,0,,And live migration is one of those things that allows us to run the fleet efficiently, because we can move workloads around to reduce fragmentation.\N实时迁移是实现车队高效运行的关键技术之一，因为它能让我们灵活调度工作负载，从而减少碎片化。
+Dialogue: 0,0:32:28.53,0:32:34.20,Sub,,0,0,0,,We can also make customer workloads more reliable because we can move them if we see a server is going to fail.\N我们还能让客户的工作负载更可靠，因为一旦发现某台服务器即将出现故障，我们就可以将其迁移。
+Dialogue: 0,0:32:34.20,0:32:38.76,Sub,,0,0,0,,We can also move them around if we need to service a host in an impactful way.\N如果我们需要以有影响力的方式维护某个主机，也可以移动它们。
+Dialogue: 0,0:32:38.76,0:32:44.61,Sub,,0,0,0,,And that means that the customer's workload is not as impacted by that servicing operation.\N这意味着客户的负载在服务操作期间受到的影响更小。
+Dialogue: 0,0:32:44.61,0:32:50.01,Sub,,0,0,0,,It is a fundamental requirement of a hyperscale cloud to have live migration.\N超大规模云平台必须具备实时迁移功能。
+Dialogue: 0,0:32:50.01,0:32:57.39,Sub,,0,0,0,,And this has unfortunately been one of the missing gaps in confidential computing offerings is lack of live migration.\N遗憾的是，目前机密计算解决方案中一直缺少的一个关键功能就是实时迁移。
+Dialogue: 0,0:32:57.39,0:33:03.93,Sub,,0,0,0,,So we've been working deeply with Intel on confidential live migration.\N我们正与英特尔深入合作，推进机密态下的实时迁移技术。
+Dialogue: 0,0:33:03.93,0:33:08.04,Sub,,0,0,0,,And the way that works is you have a confidential virtual machine here on one server.\N工作原理是，你在此服务器上有一个保密的虚拟机。
+Dialogue: 0,0:33:08.04,0:33:14.85,Sub,,0,0,0,,We've got something called a migration TD, which is a partition, effectively.\N我们有一个叫迁移 TD 的东西，本质上就是一个分区。
+Dialogue: 0,0:33:14.85,0:33:24.57,Sub,,0,0,0,,Think of it as a confidential partition that is also measured as part of the virtual machine's measurement and that the receiving side has a policy and the sending side\N将其视为一个机密分区，它也是虚拟机度量的一部分，接收方和发送方都设有策略：发送方策略规定，
+Dialogue: 0,0:33:24.57,0:33:35.43,Sub,,0,0,0,,as a policy that says I will only migrate the contents of this virtual machine to another server with the MigTD that is approved for this virtual machine,\N仅将该虚拟机的内容迁移到已获批准的、配备有对应 MigTD 的服务器上，
+Dialogue: 0,0:33:35.43,0:33:45.06,Sub,,0,0,0,,so effectively extending the confidential trust boundary between two servers, adhering to policy that is being enforced\N从而在两台服务器之间有效扩展机密信任边界，同时遵守所执行的策略。
+Dialogue: 0,0:33:45.06,0:33:46.86,Sub,,0,0,0,,with the confidential computing hardware.\N借助机密计算硬件。
+Dialogue: 0,0:33:46.86,0:33:53.79,Sub,,0,0,0,,I'm going to show you for the first time ever a confidential virtual machine being live migrated from one server to another.\N我将首次向大家展示一个机密虚拟机正在从一台服务器实时迁移至另一台服务器的全过程。
+Dialogue: 0,0:33:53.79,0:33:58.03,Sub,,0,0,0,,This is the first time ever this has been shown publicly.\N这是有史以来第一次公开展示。
+Dialogue: 0,0:34:00.09,0:34:04.62,Sub,,0,0,0,,So here, we have one server here, Hyper-V manager, you can see, a lot of you are familiar with it.\N这里有一台服务器，是 Hyper-V 管理器，你们很多人应该都很熟悉。
+Dialogue: 0,0:34:04.64,0:34:06.03,Sub,,0,0,0,,There's our CVM.\N这就是我们的CVM。
+Dialogue: 0,0:34:06.03,0:34:09.30,Sub,,0,0,0,,Here's the other server manager on the other side.\N这是另一侧的服务器管理器。
+Dialogue: 0,0:34:09.30,0:34:11.22,Sub,,0,0,0,,You can see no virtual machines there.\N你根本看不到虚拟机。
+Dialogue: 0,0:34:11.22,0:34:14.10,Sub,,0,0,0,,You can see there's our MigTD that we have in this virtual machine.\N你可以看到这个虚拟机里有我们部署的 MigTD。
+Dialogue: 0,0:34:14.10,0:34:21.81,Sub,,0,0,0,,And here we're looking at the output of RDP into that virtual machine on Server 1.\N这里我们看到的是 RDP 输出到服务器 1 上虚拟机的结果。
+Dialogue: 0,0:34:21.81,0:34:23.79,Sub,,0,0,0,,And you can see it's pinging every second.\N你可以看到它每秒都在发送探测。
+Dialogue: 0,0:34:23.79,0:34:25.95,Sub,,0,0,0,,That's typical in a live migration demo.\N这在实时迁移演示中很常见。
+Dialogue: 0,0:34:25.95,0:34:28.07,Sub,,0,0,0,,Now we started migrating this virtual machine.\N现在我们开始迁移这个虚拟机。
+Dialogue: 0,0:34:28.07,0:34:36.63,Sub,,0,0,0,,You can see this is going to take a while, so we're going to speed it up a little bit, because this is a large virtual machine with a few gigabytes of RAM.\N你看，这得花点时间，所以我们稍微加快一点，因为这是一个带有几个吉字节内存的大型虚拟机。
+Dialogue: 0,0:34:36.63,0:34:41.08,Sub,,0,0,0,,You can see the TD info attestations that are happening that we've got printed out.\N你可以看到我们打印出来的那些正在发生的TD信息认证。
+Dialogue: 0,0:34:41.10,0:34:44.10,Sub,,0,0,0,,And then boom, the CVM just moved,\N然后砰的一声，
+Dialogue: 0,0:34:44.10,0:34:52.55,Sub,,0,0,0,,and it's on the other side, which is why we saw that RDP connection die, because it's connected to the IP address on that first machine.\NCVM突然移动了，到了另一边，所以我们看到RDP连接断开，因为它连接的是第一台机器的IP地址。
+Dialogue: 0,0:34:52.55,0:35:01.62,Sub,,0,0,0,,But that right there, first time ever, and it's not in production yet, but you can see that we just literally achieved this in the last few weeks,\N但就在刚才，我们首次实现了这一突破，这还是全球范围内首次，\N虽然目前尚未投入生产，但你可以看到，我们仅在最近几周就完成了
+Dialogue: 0,0:35:01.62,0:35:05.52,Sub,,0,0,0,,the first confidential virtual machine line migration anywhere.\N这一目标——这是全球首个实现的保密虚拟机线路迁移。
+Dialogue: 0,0:35:10.46,0:35:16.53,Sub,,0,0,0,,Now the next thing I'm going to show you is something that I also think is really, really cool.\N接下来我要给大家展示的，也是我觉得非常非常酷的一件事。
+Dialogue: 0,0:35:16.53,0:35:19.55,Sub,,0,0,0,,And this is something else that Microsoft has pioneered.\N这又是微软开创的另一项技术。
+Dialogue: 0,0:35:19.58,0:35:24.43,Sub,,0,0,0,,We've been working on hardware-based roots of trust for a while.\N我们一直在致力于基于硬件的信任根。
+Dialogue: 0,0:35:24.46,0:35:27.81,Sub,,0,0,0,,We've got something called Caliptra that we donated to the OpenCUBE project.\N我们有一个叫 Caliptra 的项目，已捐赠给了 OpenCUBE 项目。
+Dialogue: 0,0:35:27.81,0:35:31.80,Sub,,0,0,0,,It is our root of trust that we deploy in every single server.\N这是我们部署在每一台服务器中的信任根基。
+Dialogue: 0,0:35:31.80,0:35:38.69,Sub,,0,0,0,,But when I was working with the architects, hardware security architects in Azure,\N但当我与 Azure 的硬件安全架构师合作时，
+Dialogue: 0,0:35:38.72,0:35:43.32,Sub,,0,0,0,,and thinking, you know what we're missing it's not just a root of trust,\N我意识到我们缺少的不只是信任根，
+Dialogue: 0,0:35:43.32,0:35:54.21,Sub,,0,0,0,,but we need key management inside of our hardware that we put into every server, because what that will allow us to do is keep keys protected\N而是需要在每台服务器的硬件中内置密钥管理，因为这样我们才能真正保护密钥。
+Dialogue: 0,0:35:54.21,0:36:01.50,Sub,,0,0,0,,with hardware throughout their whole life cycle, never have them exit the hardware trust boundary.\N在整个生命周期中始终使用硬件，确保它们 never 离开硬件信任边界。
+Dialogue: 0,0:36:01.50,0:36:05.49,Sub,,0,0,0,,And so we developed something internally called MANA Corp.\N于是我们内部开发了一款名为 MANA Corp 的产品。
+Dialogue: 0,0:36:05.49,0:36:16.37,Sub,,0,0,0,,Publicly, we announced it late last year as Azure Integrated HSM, because it's effectively an HSM sitting there inside of every single server.\N公开场合，我们去年年底宣布了它，名为 Azure 集成 HSM，\N因为它实际上是一个 HSM，位于每台服务器内部。
+Dialogue: 0,0:36:16.37,0:36:21.57,Sub,,0,0,0,,And we've been deploying these now into every single server in Azure.\N我们现在已将这些技术部署到了 Azure 的每一台服务器中。
+Dialogue: 0,0:36:21.57,0:36:29.88,Sub,,0,0,0,,What this allows is a key to be released with policy from an actual HSM.\N这使得能够从实际的硬件安全模块中释放出密钥和策略。
+Dialogue: 0,0:36:29.88,0:36:39.51,Sub,,0,0,0,,So like Azure-managed HSM or Azure Key Vault can have a policy on it that will release the keys into Azure Integrated HSMs.\N例如，Azure 管理的 HSM 或 Azure 密钥保管库可以设置策略，\N将密钥释放到 Azure 集成 HSM 中。
+Dialogue: 0,0:36:39.51,0:36:51.08,Sub,,0,0,0,,And Azure Integrated HSMs are FIPS 140 Level 3, FIPS 140-3, level 3, certified just like the HSMs behind Manage HSM and Azure Key Vault.\NAzure 集成 HSM 通过了 FIPS 140-3 第三级认证，\N与 Manage HSM 和 Azure 密钥保管库所使用的 HSM 一样，均符合该标准。
+Dialogue: 0,0:36:51.08,0:37:00.27,Sub,,0,0,0,,And so that means that the key remains inside of a FIPS 140-3 Level 3 boundary from the HSM to the server.\N因此，密钥始终处于 HSM 到服务器之间的 FIPS 140-3 第 3 级安全边界之内。
+Dialogue: 0,0:37:00.27,0:37:07.88,Sub,,0,0,0,,And then it can be accessed for operations directly from that virtual machine, because we map it, that hardware, into the virtual machine.\N然后就可以直接从该虚拟机访问它，因为我们已将该硬件映射到了虚拟机中。
+Dialogue: 0,0:37:09.35,0:37:23.94,Sub,,0,0,0,,Let's go see a demo of that and the benefits that you get out of that, using a simple scenario, which is I want to sign a bunch of payloads using my AKV key.\N我们来演示一下这个功能，以及它能带来的好处，\N通过一个简单的场景：我想用我的 AKV 密钥签署一批负载。
+Dialogue: 0,0:37:23.94,0:37:31.38,Sub,,0,0,0,,So what I've got here is a policy that allows that key to be transported into Azure Integrated HSM.\N所以我这里有一个策略，允许该密钥传输到 Azure 集成 HSM 中。
+Dialogue: 0,0:37:31.38,0:37:42.41,Sub,,0,0,0,,What I'm going to do first is sign 5,000 times over 32 threads a payload using Azure AKV, where the key never exits the HSM.\N我首先将在 Azure AKV 中，使用从未离开 HSM 的密钥，\N在 32 个线程上对 5000 个负载进行签名。
+Dialogue: 0,0:37:42.44,0:37:49.53,Sub,,0,0,0,,And you can see because we're sending all these operations to the HSM, we get about 640 operations per second.\N你可以看到，由于我们将所有操作发送到HSM，每秒大约能完成640次操作。
+Dialogue: 0,0:37:49.53,0:37:53.91,Sub,,0,0,0,,Now we release that key into the local Azure integrated HSM.\N现在我们将该密钥释放到本地的 Azure 集成 HSM 中。
+Dialogue: 0,0:37:53.91,0:37:56.22,Sub,,0,0,0,,We can perform those operations directly on it.\N我们可以在其上直接执行这些操作。
+Dialogue: 0,0:37:56.22,0:38:02.45,Sub,,0,0,0,,And you can see that our throughput went to 18,800 signing operations per second.\N你可以看到，我们的吞吐量达到了每秒18,800次签名操作。
+Dialogue: 0,0:38:02.45,0:38:06.51,Sub,,0,0,0,,And we lost no security in the process.\N而且在这个过程中，我们并未损失任何安全性。
+Dialogue: 0,0:38:06.51,0:38:13.23,Sub,,0,0,0,,And so this is the future of data center infrastructure and security for keys.\N因此，这就是数据中心基础设施和密钥安全的未来。
+Dialogue: 0,0:38:13.23,0:38:16.80,Sub,,0,0,0,,The future we're moving to is one with confidential computing,\N我们正迈向一个可信计算的未来，
+Dialogue: 0,0:38:16.80,0:38:23.45,Sub,,0,0,0,,where keys, and that's going to end up being keys for everything, keys for any of these services,\N在这个未来中，密钥——包括所有服务的密钥，
+Dialogue: 0,0:38:23.45,0:38:31.55,Sub,,0,0,0,,including the services that agents are talking to, are going to be protected with hardware throughout their entire life cycle so that it can never be stolen.\N以及智能体所连接的服务的密钥——将通过硬件在整个生命周期内得到保护，确保永远不会被窃取。
+Dialogue: 0,0:38:31.55,0:38:33.52,Sub,,0,0,0,,And that's a very exciting future.\N那是一个非常令人兴奋的未来。
+Dialogue: 0,0:38:38.91,0:38:39.99,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:38:39.99,0:38:44.25,Sub,,0,0,0,,We've got one last thing to show, and this is very experimental.\N我们还有一样东西要展示，这个非常具有实验性。
+Dialogue: 0,0:38:44.25,0:38:48.54,Sub,,0,0,0,,But I like to end with, hey, this is where we're looking speculatively.\N但我喜欢以这样一句话结尾：这正是我们目前在进行的前瞻性展望。
+Dialogue: 0,0:38:48.54,0:38:54.84,Sub,,0,0,0,,This is Microsoft Research work that is happening, may or may not be ever productized,\N这是微软研究院正在进行的研究工作，可能永远不会被产品化，
+Dialogue: 0,0:38:54.84,0:39:01.26,Sub,,0,0,0,,but it looks really promising, and it really would be huge if we were able to make this happen.\N但前景看起来非常乐观，如果我们真能实现它，那将意义重大。
+Dialogue: 0,0:39:01.26,0:39:11.91,Sub,,0,0,0,,And the idea here is that if you take a look at network communications, networking inside of a data center, it's typically been over copper.\N这里的核心思想是，如果你观察数据中心内部的网络通信，通常都是通过铜缆实现的。
+Dialogue: 0,0:39:11.91,0:39:16.11,Sub,,0,0,0,,And the problem with copper, it's very lightweight, it's very cheap, it's very reliable,\N铜的问题在于，它很轻、很便宜、很可靠，
+Dialogue: 0,0:39:16.11,0:39:24.63,Sub,,0,0,0,,but the maximum distances you can talk to over copper without loss is about 2 meters.\N但通过铜传输信号且不产生损耗的最大距离只有约2米。
+Dialogue: 0,0:39:24.63,0:39:29.12,Sub,,0,0,0,,And, of course, 2 meters is not much distance in the data center, you really want to connect,\N当然，在数据中心里，2米的距离其实并不算远，但你确实需要高速、
+Dialogue: 0,0:39:29.15,0:39:35.85,Sub,,0,0,0,,especially if you move towards disaggregated devices and computing, where you want GPUs over here and you want servers over here,\N高带宽的连接，尤其是当你转向分离式设备和计算时，比如要把GPU放在一边，服务器放在另一边，
+Dialogue: 0,0:39:35.85,0:39:41.34,Sub,,0,0,0,,is that you want a very high speed, high bandwidth interconnect.\N这时更需要极高的传输速度和带宽连接。
+Dialogue: 0,0:39:41.34,0:39:42.99,Sub,,0,0,0,,And that's typically not copper.\N而且通常不是铜。
+Dialogue: 0,0:39:42.99,0:39:47.64,Sub,,0,0,0,,Now what a lot of people are moving towards is optics, and optics with lasers.\N现在很多人正转向光学技术，以及结合激光的光学技术。
+Dialogue: 0,0:39:47.64,0:39:55.14,Sub,,0,0,0,,The problem with lasers is that they're very high powered, so they generate a lot of heat, which makes them very expensive.\N激光的问题在于功率非常高，会产生大量热量，因此成本十分昂贵。
+Dialogue: 0,0:39:55.14,0:40:01.86,Sub,,0,0,0,,So what we've been exploring is something called Project Mosaic.\N我们一直在探索的，是一个名为“马赛克计划”的项目。
+Dialogue: 0,0:40:01.86,0:40:08.76,Sub,,0,0,0,,Now one of the things with this mechanism that I just showed you is that there's lots of fiber -- there's just a few fibers.\N现在，我刚才展示的这个机制中，有一个特点就是光纤非常多——实际上只有很少几根光纤。
+Dialogue: 0,0:40:08.76,0:40:11.76,Sub,,0,0,0,,They're all very high bandwidth and high speed.\N它们都具有非常高的带宽和高速度。
+Dialogue: 0,0:40:11.76,0:40:17.31,Sub,,0,0,0,,What we're trying is using many channels operating at low speed,\N我们正在尝试使用多个低速通道，
+Dialogue: 0,0:40:17.31,0:40:31.74,Sub,,0,0,0,,using standard LED technology, micro LEDs, the kind of LEDs that are being productized right now for next generation VR glasses, for example, goggles, as well as cameras.\N采用标准LED技术或微LED技术，也就是目前正被用于下一代VR眼镜、\N护目镜以及摄像头等设备的LED技术。
+Dialogue: 0,0:40:31.74,0:40:41.00,Sub,,0,0,0,,These things -- projecting those LED lights over fibers inside of a cable and then having them read\N这些技术——将LED灯光通过电缆内部的光纤投射出来，
+Dialogue: 0,0:40:41.00,0:40:43.89,Sub,,0,0,0,,with standard silicon camera sensor arrays.\N然后用普通的硅基摄像头传感器阵列进行读取。
+Dialogue: 0,0:40:43.89,0:40:53.36,Sub,,0,0,0,,So the beauty of this approach is that these are basically commercial technologies that are scaling because of other economic factors outside\N这种方法的妙处在于，这些技术本质上都是商业化产品，它们的扩展得益于其他经济因素，
+Dialogue: 0,0:40:53.38,0:40:55.32,Sub,,0,0,0,,of what we want to take advantage of it for.\N而这些因素正是我们希望加以利用的。
+Dialogue: 0,0:40:55.32,0:40:59.82,Sub,,0,0,0,,So we can kind of ride on the back of this technology, but deploy it in our data centers.\N因此我们可以借助这项技术，将其部署到我们的数据中心中。
+Dialogue: 0,0:40:59.82,0:41:11.52,Sub,,0,0,0,,So I'm going to show you for the first time ever, with a live feed from our Microsoft Research Cambridge Lab, transmission over one of these LED cables.\N现在我将首次向大家展示，通过来自微软剑桥研究院的实时视频，经由这种LED电缆进行传输的场景。
+Dialogue: 0,0:41:11.52,0:41:13.47,Sub,,0,0,0,,So let's go and switch here...\N那我们来切换一下……
+Dialogue: 0,0:41:17.58,0:41:19.38,Sub,,0,0,0,,to Microsoft Cambridge.\N到微软剑桥研究院。
+Dialogue: 0,0:41:19.38,0:41:22.17,Sub,,0,0,0,,And Katar, good to see you.\N卡塔尔，很高兴见到你。
+Dialogue: 0,0:41:22.20,0:41:23.82,Sub,,0,0,0,,Katar: Hello, Mark, good to see you.\N卡塔尔：你好，马克，很高兴见到你。
+Dialogue: 0,0:41:23.85,0:41:25.77,Sub,,0,0,0,,Hello, everyone, actually, I'm Katar.\N大家好，其实我是卡塔尔。
+Dialogue: 0,0:41:25.77,0:41:28.14,Sub,,0,0,0,,I'm from Microsoft Research, Cambridge.\N我来自微软剑桥研究院。
+Dialogue: 0,0:41:28.14,0:41:33.26,Sub,,0,0,0,,I'm here in the lab, holding one of those cables with micro IDs.\N我此刻在实验室里，手里拿着一根带有微 ID 的电缆。
+Dialogue: 0,0:41:33.26,0:41:42.93,Sub,,0,0,0,,And what I wanted to show you exactly is what is inside and how this is being tested in the lab before it goes into Microsoft data centers.\N我想向大家展示的正是其中的内部结构，以及它在进入微软数据中心之前如何在实验室中进行测试。
+Dialogue: 0,0:41:42.93,0:41:52.95,Sub,,0,0,0,,So if you open this up, this is what we're going to see: a small PCB with the yellow area here, which we call the package.\N如果你打开它，看到的就是这个：一块小型电路板，黄色区域就是我们所说的封装。
+Dialogue: 0,0:41:52.95,0:41:58.98,Sub,,0,0,0,,And on top of that we have a tiny array of micro-LEDs and photo detectors.\N此外，我们还配备了一组微型LED和光电探测器。
+Dialogue: 0,0:41:58.98,0:42:04.62,Sub,,0,0,0,,And underneath, we have the CMOS chip that controls everything.\N而在其下方，是控制一切的 CMOS 芯片。
+Dialogue: 0,0:42:04.62,0:42:12.45,Sub,,0,0,0,,And actually, this small PCB is being tested here in the lab using the evaluation board, the big PCB that we see there.\N实际上，这块小型电路板正在实验室里通过我们看到的那块大型评估板进行测试。
+Dialogue: 0,0:42:12.45,0:42:23.61,Sub,,0,0,0,,And the green light coming up is actually coming from hundreds of micro-LEDs and coupled to this imaging fiber using this optical coupler.\N而那个亮起的绿光实际上来自数百个微型LED，通过这个光学耦合器耦合到成像光纤上。
+Dialogue: 0,0:42:23.61,0:42:32.28,Sub,,0,0,0,,Actually, after tens of meters of transmission over this imaging fiber, here we are at the receiver side.\N实际上，经过这根成像光纤数十米的传输后，我们现在到达了接收端。
+Dialogue: 0,0:42:32.28,0:42:37.50,Sub,,0,0,0,,And the screen here shows the output process of the fiber.\N这里的屏幕展示了光纤的输出过程。
+Dialogue: 0,0:42:37.50,0:42:42.21,Sub,,0,0,0,,And actually, this fiber itself has more than thousands of pores.\N实际上，这种光纤本身就有数千个孔。
+Dialogue: 0,0:42:42.21,0:42:50.58,Sub,,0,0,0,,And each of these micro-LEDs actually is coupled to more than one pore, which makes the alignment much more easier.\N而且每个微LED实际上都连接了多个孔洞，这使得对齐变得更加容易。
+Dialogue: 0,0:42:50.58,0:42:54.18,Sub,,0,0,0,,And, actually, in a real operation mode,\N实际上，在真实运行模式下，
+Dialogue: 0,0:42:54.18,0:43:01.32,Sub,,0,0,0,,all this micro-LED will be armed and flashing at high speed, billion times per second.\N这些微型LED会全部被激活并以每秒数十亿次的高速闪烁。
+Dialogue: 0,0:43:01.32,0:43:05.46,Sub,,0,0,0,,And the human eye will not be able to distinguish this.\N人眼无法分辨出这种差异。
+Dialogue: 0,0:43:05.46,0:43:11.40,Sub,,0,0,0,,So basically, to make it concrete, and to show you that we can individually control each of these micro-LEDS,\N基本上，为了让大家更直观地理解，我来展示一下我们能够单独控制每一个微型LED。
+Dialogue: 0,0:43:11.40,0:43:19.69,Sub,,0,0,0,,I'm going to ask Mark to pick any letter or a number from zero to nine, and I can display it to you.\N现在我请马克从0到9之间任意选择一个数字或字母，我就能把它显示出来。
+Dialogue: 0,0:43:19.72,0:43:21.01,Sub,,0,0,0,,Mark Russinovich: Okay, awesome.\N马克·鲁西诺维奇：好的，太棒了。
+Dialogue: 0,0:43:21.04,0:43:23.15,Sub,,0,0,0,,This kind of proves that it's live -- how about a letter?\N这种程度就足以证明它是实时的了——要不写封信试试？
+Dialogue: 0,0:43:23.17,0:43:24.83,Sub,,0,0,0,,Somebody shout out a letter that we want to see.\N有人喊个字母，我们想看看。
+Dialogue: 0,0:43:24.86,0:43:27.36,Sub,,0,0,0,,Z? Z, all right, let's do Z.\NZ，Z，好，我们来Z。
+Dialogue: 0,0:43:28.36,0:43:30.86,Sub,,0,0,0,,Katar: Z, Okay.\N卡塔尔：Z，好的。
+Dialogue: 0,0:43:32.25,0:43:37.02,Sub,,0,0,0,,Okay, so here, you can see that we are switching off some of the micro-LEDs.\N可以看到，我们正在关闭部分微LED。
+Dialogue: 0,0:43:37.02,0:43:45.27,Sub,,0,0,0,,And each of these flowers here are one micro-LED that can be modulated as gigabit per second.\N这里的每一朵花都是一颗微型LED，每秒可调节至千兆速度。
+Dialogue: 0,0:43:45.27,0:43:49.51,Sub,,0,0,0,,So let's wait for the letter Z to show.\N那我们等字母 Z 出现吧。
+Dialogue: 0,0:43:51.96,0:43:53.31,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:43:55.29,0:43:56.50,Sub,,0,0,0,,Mark Russinovich: Z.\N马克·鲁西诺维奇：Z。
+Dialogue: 0,0:43:59.70,0:44:03.33,Sub,,0,0,0,,Katar: Hope you enjoyed this short demo, And I'm going to hand it back to you, Mark.\N卡塔尔：希望您喜欢这个简短的演示，接下来我将把时间交还给您，马克。
+Dialogue: 0,0:44:03.36,0:44:04.77,Sub,,0,0,0,,Mark Russinovich: All right, thanks, that was awesome.\N马克·鲁西诺维奇：好了，谢谢，太棒了。
+Dialogue: 0,0:44:04.77,0:44:05.85,Sub,,0,0,0,,Thanks, Katar.\N谢谢，卡塔尔。
+Dialogue: 0,0:44:05.85,0:44:07.30,Sub,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,0:44:08.63,0:44:13.74,Sub,,0,0,0,,Mark Russinovich: Okay, well, that brings us to the conclusion of the session.\N马克·鲁西诺维奇：好的，那我们这就进入本场会议的结尾部分。
+Dialogue: 0,0:44:13.74,0:44:24.06,Sub,,0,0,0,,And what I hope you saw was a lot of innovation happening at all layers of the stack, from the hardware to the data centers to the serverless offerings, to GPUs, prompt prefetching,\N我希望你们看到的是，从硬件到数据中心，\N再到无服务器服务、GPU、提示预取、推理，整个技术栈各层面都充满了创新。
+Dialogue: 0,0:44:24.06,0:44:31.59,Sub,,0,0,0,,inference, and then a look at the future and where we might be going with networking inside the data center.\N此外，我们还展望了未来，探讨了数据中心内部网络可能的发展方向。
+Dialogue: 0,0:44:31.59,0:44:34.13,Sub,,0,0,0,,If you like this, please fill out an evaluation form.\N如果你喜欢这个，请填写一份评价表。
+Dialogue: 0,0:44:34.16,0:44:35.21,Sub,,0,0,0,,Let me know.\N告诉我一声。
+Dialogue: 0,0:44:35.24,0:44:37.23,Sub,,0,0,0,,If you didn't, you can go ahead and skip that.\N如果没做的话，你可以直接跳过那一步。
+Dialogue: 0,0:44:37.23,0:44:42.80,Sub,,0,0,0,,I hope you have a great Build, and I hope to see you this afternoon with Scott.\N希望你们的微软 Build 大会过得愉快，希望下午能和斯科特一起见到大家。
+Dialogue: 0,0:44:42.82,0:44:46.89,Sub,,0,0,0,,We're going to have a fun session on the future of software engineering, so I'll see you then.\N我们接下来将开启一场关于软件工程未来的趣味分享，到时候见。

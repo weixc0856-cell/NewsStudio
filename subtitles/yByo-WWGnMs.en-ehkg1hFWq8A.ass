@@ -1,0 +1,498 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Arial,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.48,0:00:02.04,Sub,,0,0,0,,Mark Russinovich: Let's try that again.
+Dialogue: 0,0:00:02.04,0:00:03.07,Sub,,0,0,0,,Good morning, everybody.
+Dialogue: 0,0:00:03.09,0:00:04.29,Sub,,0,0,0,,All: Good morning.
+Dialogue: 0,0:00:04.29,0:00:05.79,Sub,,0,0,0,,Mark Russinovich: How's Build going?
+Dialogue: 0,0:00:05.79,0:00:11.03,Sub,,0,0,0,,Good? Well, welcome to Inside Azure Innovations.
+Dialogue: 0,0:00:11.06,0:00:12.21,Sub,,0,0,0,,My name is Mark Russinovich.
+Dialogue: 0,0:00:12.21,0:00:14.67,Sub,,0,0,0,,I'm the CTO and Deputy CISO for Azure.
+Dialogue: 0,0:00:14.67,0:00:17.89,Sub,,0,0,0,,How many people have been to a previous innovations talk?
+Dialogue: 0,0:00:17.92,0:00:19.11,Sub,,0,0,0,,So, quite a few of you.
+Dialogue: 0,0:00:19.11,0:00:20.82,Sub,,0,0,0,,It's great to see you back.
+Dialogue: 0,0:00:20.82,0:00:29.67,Sub,,0,0,0,,For those of you that haven't come, this is a talk where I cover innovations across the spectrum of everything
+Dialogue: 0,0:00:29.67,0:00:38.07,Sub,,0,0,0,,in the Azure infrastructure, from data centers all the way to cybersecurity and the cyber systems that we've got under development in Azure.
+Dialogue: 0,0:00:38.07,0:00:43.29,Sub,,0,0,0,,One of the notes that I make about this is that I'm showing you things, in some cases,
+Dialogue: 0,0:00:43.29,0:00:47.64,Sub,,0,0,0,,that haven't shipped yet, some things that we're working on, some things that maybe have just shipped.
+Dialogue: 0,0:00:47.64,0:00:55.15,Sub,,0,0,0,,For things that haven't shipped, they might not necessarily ever ship or ship in the same kind of view that you see me present them at.
+Dialogue: 0,0:00:55.18,0:00:56.66,Sub,,0,0,0,,So that's just a caveat and takeaway.
+Dialogue: 0,0:00:56.69,0:01:04.41,Sub,,0,0,0,,But I thought it's fun to give you an under-the-hood look at what we're doing and what powers the infrastructure of Azure and Azure innovation.
+Dialogue: 0,0:01:04.41,0:01:06.18,Sub,,0,0,0,,So let's start with infrastructure.
+Dialogue: 0,0:01:06.18,0:01:12.12,Sub,,0,0,0,,And you've seen these pictures of the Fairwater data centers.
+Dialogue: 0,0:01:12.12,0:01:16.00,Sub,,0,0,0,,And this kind of sets a framework for a lot of the innovation that I'm going to be showing here,
+Dialogue: 0,0:01:16.03,0:01:25.41,Sub,,0,0,0,,which is innovation powering AI, specifically the co-design of AI data centers, the core infrastructure, and the software that runs on top of it.
+Dialogue: 0,0:01:25.41,0:01:28.26,Sub,,0,0,0,,I had a really awesome experience in November.
+Dialogue: 0,0:01:28.26,0:01:30.87,Sub,,0,0,0,,I got to go visit Fairwater in Atlanta.
+Dialogue: 0,0:01:30.87,0:01:33.42,Sub,,0,0,0,,These are Fairwater in Wisconsin, Fairwater in Atlanta.
+Dialogue: 0,0:01:33.42,0:01:35.76,Sub,,0,0,0,,The Atlanta site is on the right.
+Dialogue: 0,0:01:35.76,0:01:43.49,Sub,,0,0,0,,And I got to go in to it, and I thought I'd show you a quick video tour of it, just a few seconds of me walking through it.
+Dialogue: 0,0:01:43.51,0:01:45.03,Sub,,0,0,0,,And I don't know why that didn't play.
+Dialogue: 0,0:01:45.03,0:01:50.79,Sub,,0,0,0,,Maybe I need to hit the play button up here.
+Dialogue: 0,0:01:50.79,0:01:53.34,Sub,,0,0,0,,So this is me looking like Builder Bob walking through.
+Dialogue: 0,0:01:53.34,0:01:55.23,Sub,,0,0,0,,That's because it's under construction.
+Dialogue: 0,0:01:55.23,0:01:57.24,Sub,,0,0,0,,It's kind of continuously under construction.
+Dialogue: 0,0:01:57.24,0:02:04.98,Sub,,0,0,0,,This is the network cabling that connects the top floor servers and the bottom floor servers that goes up through trunks there, you can see.
+Dialogue: 0,0:02:04.98,0:02:08.58,Sub,,0,0,0,,There's enough cabling to wrap the earth four times in one of these.
+Dialogue: 0,0:02:08.58,0:02:15.24,Sub,,0,0,0,,Those are liquid cooling cables being laid there initially so that servers can be dropped in.
+Dialogue: 0,0:02:15.24,0:02:18.90,Sub,,0,0,0,,And you can see, we got to see one of these servers on the sled being racked.
+Dialogue: 0,0:02:18.90,0:02:22.59,Sub,,0,0,0,,These are the cables on the back, the InfiniBand and Ethernet cables.
+Dialogue: 0,0:02:22.59,0:02:25.20,Sub,,0,0,0,,And then you can see this is a brake fix that we got to watch.
+Dialogue: 0,0:02:25.20,0:02:27.78,Sub,,0,0,0,,This is the liquid cooling into the back of the racks.
+Dialogue: 0,0:02:27.78,0:02:29.28,Sub,,0,0,0,,And then I saw this on the tour.
+Dialogue: 0,0:02:29.28,0:02:31.44,Sub,,0,0,0,,The group had gone ahead of me.
+Dialogue: 0,0:02:31.44,0:02:34.65,Sub,,0,0,0,,I saw a plug and I plugged it in.
+Dialogue: 0,0:02:36.28,0:02:37.67,Sub,,0,0,0,,Because it's like, what's this?
+Dialogue: 0,0:02:37.69,0:02:38.95,Sub,,0,0,0,,Shouldn't be hanging like that.
+Dialogue: 0,0:02:38.98,0:02:46.05,Sub,,0,0,0,,And Scott Guthrie got a text literally a few minutes later saying it looks like we've already powered on Power Cell 3.
+Dialogue: 0,0:02:46.05,0:02:48.15,Sub,,0,0,0,,We didn't expect that.
+Dialogue: 0,0:02:48.17,0:02:51.71,Sub,,0,0,0,,I wanted to take credit, but I thought maybe I best shouldn't for that.
+Dialogue: 0,0:02:53.70,0:02:56.99,Sub,,0,0,0,,But inside the data centers themselves, we've got the servers, of course.
+Dialogue: 0,0:02:57.02,0:03:01.08,Sub,,0,0,0,,And one of the innovations that we've been developing in our servers is something called Azure Boost.
+Dialogue: 0,0:03:01.08,0:03:12.36,Sub,,0,0,0,,Azure Boost is aimed at offloading a lot of the processing of the data paths for storage and networking off the main server CPUs.
+Dialogue: 0,0:03:12.36,0:03:14.79,Sub,,0,0,0,,And it does this with an offload card.
+Dialogue: 0,0:03:14.79,0:03:18.45,Sub,,0,0,0,,We move the data planes off onto that offload card.
+Dialogue: 0,0:03:18.45,0:03:20.55,Sub,,0,0,0,,We power them with DPUs.
+Dialogue: 0,0:03:20.55,0:03:24.18,Sub,,0,0,0,,We've got cores on there as well, where we put our agent tree.
+Dialogue: 0,0:03:24.18,0:03:32.85,Sub,,0,0,0,,So we get the agents off the server as well, and this lets the workload have most of the control over what's going on on the server.
+Dialogue: 0,0:03:32.85,0:03:34.50,Sub,,0,0,0,,This Azure Boost card looks like this.
+Dialogue: 0,0:03:34.50,0:03:38.44,Sub,,0,0,0,,This is the latest generation of Azure Boost card that we've started to deploy in our data centers.
+Dialogue: 0,0:03:38.46,0:03:41.58,Sub,,0,0,0,,Here's an actual version of it right here.
+Dialogue: 0,0:03:41.58,0:03:46.38,Sub,,0,0,0,,And what you can see there, there's little black squares around the middle are D-RAM.
+Dialogue: 0,0:03:46.38,0:03:48.42,Sub,,0,0,0,,And then the middle is where the SOC is.
+Dialogue: 0,0:03:48.42,0:03:53.01,Sub,,0,0,0,,That's where the ARM cores and the DPU and FPGA are located.
+Dialogue: 0,0:03:53.01,0:03:57.21,Sub,,0,0,0,,That's where the data plane gets processed and the agents run.
+Dialogue: 0,0:03:57.21,0:04:00.51,Sub,,0,0,0,,Now some of the stats for Azure Boost are pretty staggering.
+Dialogue: 0,0:04:00.51,0:04:03.81,Sub,,0,0,0,,You can see here, just in last year,
+Dialogue: 0,0:04:03.81,0:04:11.70,Sub,,0,0,0,,since the previous generation of Azure Boost that I showed at last Build, we've gone to 20 gigabytes per second of remote storage.
+Dialogue: 0,0:04:11.70,0:04:15.54,Sub,,0,0,0,,And that's an increase, you can see there, of 1.4.
+Dialogue: 0,0:04:15.54,0:04:21.06,Sub,,0,0,0,,We've gone to 1 million IOPS for remote storage, and on local storage, 36 gigabytes per second,
+Dialogue: 0,0:04:21.06,0:04:29.22,Sub,,0,0,0,,this is to local NVMe, and 6.6 million IOPS through Azure Boost NVMe offload storage acceleration.
+Dialogue: 0,0:04:29.25,0:04:33.26,Sub,,0,0,0,,And then for networking, we've gone to 400 gigabits from 200 gigabits.
+Dialogue: 0,0:04:33.26,0:04:41.91,Sub,,0,0,0,,So those were two network ports that you saw there on the card, 200 gigabits each, and 400k connections per second, it supports.
+Dialogue: 0,0:04:41.91,0:04:50.37,Sub,,0,0,0,,Those two ports mean that they can go to two top-of-rack router switches, so that means that we can service top-of-rack routers, or if one fails,
+Dialogue: 0,0:04:50.37,0:04:52.38,Sub,,0,0,0,,we don't lose complete connectivity to the server.
+Dialogue: 0,0:04:52.40,0:05:01.47,Sub,,0,0,0,,And it also means that sub-second servicing is possible now on those tours with sub-second impact to the workloads running on those servers.
+Dialogue: 0,0:05:01.47,0:05:07.26,Sub,,0,0,0,,We've been deploying this for several years now, and we're over 30% of the fleet is now Azure Boost enabled.
+Dialogue: 0,0:05:07.26,0:05:09.36,Sub,,0,0,0,,Every single server gets an Azure Boost in it.
+Dialogue: 0,0:05:09.39,0:05:16.02,Sub,,0,0,0,,And then one of the cool innovations that I'll show you in a little bit is that we support guest virtual machine RDMA.
+Dialogue: 0,0:05:16.02,0:05:25.62,Sub,,0,0,0,,So this is basically memory to memory transfers, bypassing the networking stacks, because Azure Boost is facilitating that transport.
+Dialogue: 0,0:05:25.64,0:05:33.42,Sub,,0,0,0,,One of the things that I mentioned is we get the management services off the server, and we put them on the Azure Boost card.
+Dialogue: 0,0:05:33.42,0:05:36.90,Sub,,0,0,0,,And that lets us have Bare Metal instances.
+Dialogue: 0,0:05:36.90,0:05:46.11,Sub,,0,0,0,,We've introduced Bare Metal instances to unlimited access, specifically for OpenAI and OpenAI's use of that Fairwater data center.
+Dialogue: 0,0:05:46.11,0:05:50.79,Sub,,0,0,0,,So the servers in the data center, the GPU servers, are Bare Metal instances.
+Dialogue: 0,0:05:50.79,0:05:58.71,Sub,,0,0,0,,And I thought I'd show you just a quick demo of Bare Metal instances, which are going to be coming as a general purpose offering sometime in the near future.
+Dialogue: 0,0:05:58.71,0:06:04.44,Sub,,0,0,0,,But here, you can see we've got a metal instance, ND144 v6.
+Dialogue: 0,0:06:04.44,0:06:06.81,Sub,,0,0,0,,You can see here we're going to get the IP address,
+Dialogue: 0,0:06:06.81,0:06:19.05,Sub,,0,0,0,,and then we're going to SSH into it and actually see that it is a Bare Metal server, because we're going to look to see if virtualization services are running, and they're not.
+Dialogue: 0,0:06:19.05,0:06:23.67,Sub,,0,0,0,,And then we're going to look at the PCI bus using LSPCI.
+Dialogue: 0,0:06:23.67,0:06:26.08,Sub,,0,0,0,,And you can see we get lots of devices.
+Dialogue: 0,0:06:26.11,0:06:29.79,Sub,,0,0,0,,We're going to scroll to the top, and you can see there's a PCI bridge,
+Dialogue: 0,0:06:29.79,0:06:39.15,Sub,,0,0,0,,and then you can see the eight Ethernet controllers that are connected to the Mellanox RDMA-capable network adapters
+Dialogue: 0,0:06:39.15,0:06:45.36,Sub,,0,0,0,,that are attached to that for the backend network that those GPUs talk through to each other.
+Dialogue: 0,0:06:45.36,0:06:46.77,Sub,,0,0,0,,Now what do they talk?
+Dialogue: 0,0:06:46.77,0:06:48.30,Sub,,0,0,0,,What transport do they talk?
+Dialogue: 0,0:06:48.30,0:06:53.28,Sub,,0,0,0,,We switched to Ethernet from InfiniBand, actually, in those Fairwater data centers.
+Dialogue: 0,0:06:53.28,0:06:58.17,Sub,,0,0,0,,And instead of using RoCE, which is RDMA over converged Ethernet,
+Dialogue: 0,0:06:58.17,0:07:03.84,Sub,,0,0,0,,we've developed, with OpenAI and now a growing consortium of partners that are collaborating with us,
+Dialogue: 0,0:07:03.84,0:07:09.06,Sub,,0,0,0,,a new networking protocol called Multipath Reliable Connection, or MRC.
+Dialogue: 0,0:07:09.06,0:07:16.29,Sub,,0,0,0,,And the reason that we developed MRC is that when you talk about connecting 100,000 GPUs together,
+Dialogue: 0,0:07:16.29,0:07:23.22,Sub,,0,0,0,,that's an incredible amount of network fabric that those packets are going across from all of those GPUs.
+Dialogue: 0,0:07:23.22,0:07:31.30,Sub,,0,0,0,,If you have any congestion or any failure on a synchronous training job of that size, you're going to lose a ton of work.
+Dialogue: 0,0:07:31.33,0:07:36.66,Sub,,0,0,0,,You're going to have to go back to a checkpoint, restart the training job from where it left off.
+Dialogue: 0,0:07:36.66,0:07:47.70,Sub,,0,0,0,,So MRC is designed to be resilient in the face of these congestion issues or failures because it sprays the packets across independent network domains called planes.
+Dialogue: 0,0:07:47.70,0:07:56.19,Sub,,0,0,0,,And therefore, when a link gets dropped, the spraying just happens and rebalances to the planes that remain available.
+Dialogue: 0,0:07:56.21,0:08:02.56,Sub,,0,0,0,,And I'll show you a quick demo of that in action by showing you here.
+Dialogue: 0,0:08:04.53,0:08:11.94,Sub,,0,0,0,,What we're going to see is that I've got two servers talking to each other over four switches.
+Dialogue: 0,0:08:11.94,0:08:17.13,Sub,,0,0,0,,They're sending 4 gigabyte payloads to each other.
+Dialogue: 0,0:08:17.13,0:08:21.57,Sub,,0,0,0,,These 4 gigabytes are going to be packet sprayed across these.
+Dialogue: 0,0:08:21.57,0:08:30.27,Sub,,0,0,0,,And you can see we're getting roughly 95 gigabytes per second, and that's because we're spraying these across eight planes with 12 gigabits.
+Dialogue: 0,0:08:30.27,0:08:33.66,Sub,,0,0,0,,So that comes out to 12 gigabytes per plane.
+Dialogue: 0,0:08:33.66,0:08:39.08,Sub,,0,0,0,,And this is the aggregate bandwidth that we're seeing, which is 95 gigabytes per second.
+Dialogue: 0,0:08:39.10,0:08:47.16,Sub,,0,0,0,,This is what we're going to watch, because we want to maintain 95 gigabits per second there, which is our goal.
+Dialogue: 0,0:08:47.16,0:08:48.51,Sub,,0,0,0,,We see four switches.
+Dialogue: 0,0:08:48.53,0:08:52.39,Sub,,0,0,0,,You can see how much bandwidth is being spread across the switches.
+Dialogue: 0,0:08:52.42,0:09:00.57,Sub,,0,0,0,,There's actually two switches at this bandwidth here that you don't see, so this is 12, two 24s, and one 36, adding up to 95.
+Dialogue: 0,0:09:00.57,0:09:03.15,Sub,,0,0,0,,And now we're going to go kill one of those switches.
+Dialogue: 0,0:09:03.15,0:09:07.26,Sub,,0,0,0,,We're going to drop it off of the sending server.
+Dialogue: 0,0:09:07.26,0:09:13.29,Sub,,0,0,0,,So what it's going to do is now rebalance the spraying across the remaining three switches.
+Dialogue: 0,0:09:13.29,0:09:16.53,Sub,,0,0,0,,And our goal is to not see any drop in network bandwidth.
+Dialogue: 0,0:09:16.53,0:09:18.78,Sub,,0,0,0,,And, of course, that's exactly what we get.
+Dialogue: 0,0:09:18.78,0:09:22.16,Sub,,0,0,0,,You can see 95-ish gigabits per second.
+Dialogue: 0,0:09:22.18,0:09:27.33,Sub,,0,0,0,,And if we go take a look at the traffic over the switches, you can see that one of them went to zero,
+Dialogue: 0,0:09:27.33,0:09:31.89,Sub,,0,0,0,,and then the other one went up to 36 gigabits per second to compensate for that.
+Dialogue: 0,0:09:31.89,0:09:42.68,Sub,,0,0,0,,So MRC is what allows us to run these massive training jobs and has now become the industry standard for large network topologies.
+Dialogue: 0,0:09:44.68,0:09:48.54,Sub,,0,0,0,,Now I mentioned RDMA a few times.
+Dialogue: 0,0:09:48.54,0:09:56.16,Sub,,0,0,0,,And what I was showing you was MRC, which is what Open AI uses for their training jobs.
+Dialogue: 0,0:09:56.16,0:10:00.57,Sub,,0,0,0,,And they're doing RDMA, of course, between the servers in those training jobs.
+Dialogue: 0,0:10:00.57,0:10:06.95,Sub,,0,0,0,,But what we want to introduce is to more general-purpose workloads RDMA through virtual machines.
+Dialogue: 0,0:10:06.95,0:10:16.81,Sub,,0,0,0,,Now when you talk between one VM and another VM through Azure Boost, they could be on different servers, you're going through these networking stacks.
+Dialogue: 0,0:10:16.83,0:10:23.46,Sub,,0,0,0,,The application talks to TCP/IP, which talks to our MANA driver, the Microsoft Accelerated Network Adapter driver,
+Dialogue: 0,0:10:23.46,0:10:27.90,Sub,,0,0,0,,which is the Azure Boost network adapter driver, and then it goes back up.
+Dialogue: 0,0:10:27.90,0:10:33.12,Sub,,0,0,0,,And there's a lot of memory copy operations and a lot of synchronization happening through that.
+Dialogue: 0,0:10:33.12,0:10:35.69,Sub,,0,0,0,,With RDMA, you bypass all that.
+Dialogue: 0,0:10:35.69,0:10:40.22,Sub,,0,0,0,,So the application maps memories basically in the remote system,
+Dialogue: 0,0:10:40.22,0:10:45.56,Sub,,0,0,0,,can drop data right into its own local presentation of that,
+Dialogue: 0,0:10:45.56,0:10:50.46,Sub,,0,0,0,,and Azure Boost takes care of sending that and dropping it in the memory on the other side.
+Dialogue: 0,0:10:50.46,0:11:00.54,Sub,,0,0,0,,And this completely eliminates a lot of that synchronization as well as the memory copies and all that software path that you get through those networking stack.
+Dialogue: 0,0:11:00.54,0:11:07.02,Sub,,0,0,0,,So I'm going to show you a demo of virtual machine to virtual machine RDMA over Azure Boost.
+Dialogue: 0,0:11:07.02,0:11:12.36,Sub,,0,0,0,,The scenario here is common in AI workloads, where you're doing inference.
+Dialogue: 0,0:11:12.39,0:11:17.01,Sub,,0,0,0,,And inference, you can break up into two parts: prefill and decode.
+Dialogue: 0,0:11:17.01,0:11:25.23,Sub,,0,0,0,,Prefill is taking your prompt and then getting the tokens from that prompt and the KV cache populated from that prompt.
+Dialogue: 0,0:11:25.23,0:11:30.75,Sub,,0,0,0,,And then decode starts to generate new tokens based off of that system of that prompt.
+Dialogue: 0,0:11:30.75,0:11:37.32,Sub,,0,0,0,,So it's efficient and now common to split those into different server pools, so one pool for prefill,
+Dialogue: 0,0:11:37.32,0:11:43.98,Sub,,0,0,0,,one pool for decode, because they both have different constraints when it comes to memory and compute.
+Dialogue: 0,0:11:43.98,0:11:53.10,Sub,,0,0,0,,So here, we're going to start this demo of... RDMA.
+Dialogue: 0,0:11:53.13,0:11:56.79,Sub,,0,0,0,,So first, we're going to look at the performance over the TCP/IP stack.
+Dialogue: 0,0:11:56.79,0:12:01.05,Sub,,0,0,0,,So here's the pre-filler server using TCP/IP.
+Dialogue: 0,0:12:01.05,0:12:07.05,Sub,,0,0,0,,Here's the decoder server, also using TCP/IP, the way we're launching it.
+Dialogue: 0,0:12:07.05,0:12:15.91,Sub,,0,0,0,,And then we're going to go run this vLLM benchmark that does this prefill decode load between those two servers.
+Dialogue: 0,0:12:17.25,0:12:20.95,Sub,,0,0,0,,And then we're going to go take a look at our RDMA stats, which is in the bottom right.
+Dialogue: 0,0:12:20.98,0:12:25.44,Sub,,0,0,0,,And you're going to see that they don't change as this workload runs, there's 460 send requests.
+Dialogue: 0,0:12:25.44,0:12:27.90,Sub,,0,0,0,,Just keep your eye on that one.
+Dialogue: 0,0:12:27.90,0:12:34.77,Sub,,0,0,0,,But then if you take a look at the performance, the token throughput, which is what we really want, is about 3,400.
+Dialogue: 0,0:12:34.77,0:12:41.58,Sub,,0,0,0,,The median time to first token, which is another important stat for inference, is 123,000.
+Dialogue: 0,0:12:41.58,0:12:51.57,Sub,,0,0,0,,But when we switch over to RDMA and use the MANA link for that, you can see there's the F1 Verbs Device Name as MANA 0.
+Dialogue: 0,0:12:51.57,0:12:57.36,Sub,,0,0,0,,We do the same thing on the decode server, MANA 0.
+Dialogue: 0,0:12:57.36,0:13:04.26,Sub,,0,0,0,,And then let's go take a look at the stats, and you can see 460, but this is going to change now, because we're running the RDMA test.
+Dialogue: 0,0:13:04.26,0:13:08.67,Sub,,0,0,0,,And it changed to 506 because we've sent a whole lot of packets now over to RDMA.
+Dialogue: 0,0:13:08.67,0:13:12.81,Sub,,0,0,0,,And then we've almost doubled the throughput to 7637.
+Dialogue: 0,0:13:12.81,0:13:19.47,Sub,,0,0,0,,And then you can see our mean time to first token has dropped to just 47,000 milliseconds.
+Dialogue: 0,0:13:19.47,0:13:29.70,Sub,,0,0,0,,So that's the performance benefit of RDMA that we're deploying and using in our inference clusters behind Foundry, powered by Azure Boost.
+Dialogue: 0,0:13:29.70,0:13:32.13,Sub,,0,0,0,,Okay, so let's take a look at our core now.
+Dialogue: 0,0:13:32.13,0:13:36.60,Sub,,0,0,0,,So that's kind of Fairwater infrastructure and some of the networking behind it.
+Dialogue: 0,0:13:36.60,0:13:38.58,Sub,,0,0,0,,Let's go take a look at the core.
+Dialogue: 0,0:13:38.58,0:13:44.40,Sub,,0,0,0,,And this is one of the sections that I get very excited about, because the future is serverless.
+Dialogue: 0,0:13:44.43,0:13:46.17,Sub,,0,0,0,,And I've been saying this for a long time.
+Dialogue: 0,0:13:46.17,0:13:52.98,Sub,,0,0,0,,If you've come to previous Inside Azure Innovation talks, even going back 10 years, I've been saying serverless is the future.
+Dialogue: 0,0:13:53.00,0:14:00.84,Sub,,0,0,0,,Well, serverless as the future is really arriving now with Azure Container Instances, which Azure Container instances,
+Dialogue: 0,0:14:00.84,0:14:09.37,Sub,,0,0,0,,the idea here is that we've got -- typically, when it comes to containers, you think about containers the way they started, which is process isolated containers.
+Dialogue: 0,0:14:09.39,0:14:13.47,Sub,,0,0,0,,So they're using the operating system primitives to try to keep them separate from each other.
+Dialogue: 0,0:14:13.47,0:14:15.24,Sub,,0,0,0,,But there's a problem with that.
+Dialogue: 0,0:14:15.24,0:14:21.42,Sub,,0,0,0,,We don't consider a process or user mode kernel as a security boundary in Azure.
+Dialogue: 0,0:14:21.42,0:14:33.63,Sub,,0,0,0,,We only consider virtualization with a very tight connection between -- small connection between the server and the host to be a security boundary in Azure.
+Dialogue: 0,0:14:33.63,0:14:39.18,Sub,,0,0,0,,So with Azure Container Instances, we isolate those containers with Hyper-V.
+Dialogue: 0,0:14:39.18,0:14:45.18,Sub,,0,0,0,,And this is nested hypervisor here inside a virtual machine with the containers on them.
+Dialogue: 0,0:14:45.20,0:14:49.95,Sub,,0,0,0,,One of the things I'm going to show you in a little bit is where we're going with this, which is direct virtualization.
+Dialogue: 0,0:14:49.98,0:14:52.14,Sub,,0,0,0,,So I'll save a description of that.
+Dialogue: 0,0:14:52.14,0:15:00.85,Sub,,0,0,0,,But what I want to show you is we're making a ton of progress in adopting Azure Container Instances throughout all of not just Azure, but Microsoft services.
+Dialogue: 0,0:15:00.87,0:15:04.97,Sub,,0,0,0,,I'm sure that if you take a look at this, you can see some service that you've been using,
+Dialogue: 0,0:15:04.99,0:15:12.42,Sub,,0,0,0,,which means you're indirectly using Azure Container Instances, whether, for example, GitHub Actions is now running on Azure Container Instances.
+Dialogue: 0,0:15:12.42,0:15:16.11,Sub,,0,0,0,,You can see Python and Excel running on Azure Container Instances.
+Dialogue: 0,0:15:16.11,0:15:22.80,Sub,,0,0,0,,Horizon DB, which you might have gone to sessions about here at Build, running on Azure Container Instances.
+Dialogue: 0,0:15:22.80,0:15:31.41,Sub,,0,0,0,,So one of the things that we've been doing is trying to make Container Instances more efficient and also support more scenarios and make it
+Dialogue: 0,0:15:31.41,0:15:34.50,Sub,,0,0,0,,so that you never need to do process isolation.
+Dialogue: 0,0:15:34.50,0:15:37.92,Sub,,0,0,0,,One of those is taking out the virtualization overhead.
+Dialogue: 0,0:15:37.92,0:15:48.51,Sub,,0,0,0,,And this is what we call direct virtualization, is putting the containers right on the servers as peers to the management's virtual machine.
+Dialogue: 0,0:15:48.51,0:15:52.98,Sub,,0,0,0,,We call this the parent partition or Layer 1 virtualization host.
+Dialogue: 0,0:15:52.98,0:16:02.31,Sub,,0,0,0,,And these are Layer 2 virtualization hosts, or child VMs, that are simply hosting individual containers, or pods.
+Dialogue: 0,0:16:02.31,0:16:08.79,Sub,,0,0,0,,And this gives us that strong hostile multi-tenant isolation for container instances.
+Dialogue: 0,0:16:08.79,0:16:19.14,Sub,,0,0,0,,Now one of the other Azure Container Instances of cells now runs on top of 01 virtualization or direct virtualization,
+Dialogue: 0,0:16:19.14,0:16:23.76,Sub,,0,0,0,,where we're migrating our entire fleet over to direct virtualization.
+Dialogue: 0,0:16:23.76,0:16:32.79,Sub,,0,0,0,,This will probably take a year or two to migrate the whole fleet, but this is something that is going to give us a lot of performance and efficiency benefits.
+Dialogue: 0,0:16:32.79,0:16:43.41,Sub,,0,0,0,,Now we want to make containers have all of the same capabilities of virtual machines, all of the same abilities to attach network devices and storage devices.
+Dialogue: 0,0:16:43.41,0:16:52.65,Sub,,0,0,0,,One of the benefits you get out of a virtual machine today on any hyperscaler, including Azure, is minimal downtime when the server needs to be serviced
+Dialogue: 0,0:16:52.65,0:16:56.94,Sub,,0,0,0,,or the server is going unhealthy, and we recognize that ahead of time.
+Dialogue: 0,0:16:56.94,0:16:59.64,Sub,,0,0,0,,And that is with live migration.
+Dialogue: 0,0:16:59.64,0:17:03.33,Sub,,0,0,0,,What's been missing with containers is support for live migration.
+Dialogue: 0,0:17:03.33,0:17:09.33,Sub,,0,0,0,,So I want to show you the first public demo of Container Live Migration in Azure here,
+Dialogue: 0,0:17:09.33,0:17:16.72,Sub,,0,0,0,,where we can take a bunch of containers and move them from one server over to another server.
+Dialogue: 0,0:17:20.70,0:17:27.75,Sub,,0,0,0,,So here I've got a container that's running on one pool of servers.
+Dialogue: 0,0:17:27.75,0:17:31.83,Sub,,0,0,0,,And here's another pool of servers over here that we're going to migrate it to.
+Dialogue: 0,0:17:31.83,0:17:35.14,Sub,,0,0,0,,So this is our live migration for container instances.
+Dialogue: 0,0:17:35.16,0:17:41.10,Sub,,0,0,0,,You can see this is still under development, which is why we're using these command lines here.
+Dialogue: 0,0:17:41.10,0:17:45.95,Sub,,0,0,0,,And we've got this running over on Dev Box 6, Server Dev 6.
+Dialogue: 0,0:17:45.95,0:17:51.08,Sub,,0,0,0,,And we've got this container workload, it's simply spitting out a tick every second.
+Dialogue: 0,0:17:51.08,0:17:53.15,Sub,,0,0,0,,You can see we're up to Tick 695.
+Dialogue: 0,0:17:53.15,0:18:00.18,Sub,,0,0,0,,And the migration now has kicked in and that container is no longer running on that server, which is why that stopped.
+Dialogue: 0,0:18:00.18,0:18:08.58,Sub,,0,0,0,,Now if we go over and take a look at the other server, it's migrated to, Dev 1, and we look at what's running in it.
+Dialogue: 0,0:18:08.58,0:18:11.76,Sub,,0,0,0,,You can see that there's our Hello World there.
+Dialogue: 0,0:18:11.76,0:18:19.80,Sub,,0,0,0,,And if we go take a look at what's running inside of that, you can see there is the file that it's been dropping those ticks into.
+Dialogue: 0,0:18:19.80,0:18:21.99,Sub,,0,0,0,,We're already way way up to 755.
+Dialogue: 0,0:18:21.99,0:18:28.11,Sub,,0,0,0,,So let's go take a look and make sure that 695 was in there, and we didn't have any kind of gap.
+Dialogue: 0,0:18:28.11,0:18:31.69,Sub,,0,0,0,,So we're going to go to a CAT, scroll back up.
+Dialogue: 0,0:18:33.24,0:18:37.02,Sub,,0,0,0,,And there it is, 695 right there.
+Dialogue: 0,0:18:37.02,0:18:39.42,Sub,,0,0,0,,So no gap at all.
+Dialogue: 0,0:18:39.42,0:18:44.82,Sub,,0,0,0,,So container live migrating from one server to another on top of Azure Container Instance.
+Dialogue: 0,0:18:44.82,0:18:46.52,Sub,,0,0,0,,By the way, feel free to clap at any time.
+Dialogue: 0,0:18:50.92,0:18:52.02,Sub,,0,0,0,,All right.
+Dialogue: 0,0:18:52.02,0:18:54.93,Sub,,0,0,0,,Let's switch over to talking a little bit about AI.
+Dialogue: 0,0:18:54.93,0:18:59.80,Sub,,0,0,0,,I know that there's AI fatigue, but I think we're doing some cool stuff with AI that I'd like to share with you.
+Dialogue: 0,0:18:59.82,0:19:09.12,Sub,,0,0,0,,And one of those is talking a little bit about what powers all of Microsoft's own inference and own training, and that's a system called Manifold.
+Dialogue: 0,0:19:09.12,0:19:18.51,Sub,,0,0,0,,Manifold's idea is to treat all our pool of GPUs as one pool to do priority-based deployments of workloads
+Dialogue: 0,0:19:18.51,0:19:27.75,Sub,,0,0,0,,to understand the topologies of AI-based inference and training workloads to most efficiently use that GPU capacity and to also abstract the underlying hardware.
+Dialogue: 0,0:19:27.75,0:19:33.15,Sub,,0,0,0,,You can see that it supports ASICS, it supports GPUs, FPGAs, and even CPUs.
+Dialogue: 0,0:19:33.15,0:19:40.92,Sub,,0,0,0,,And more and more, we have models that consist of CPU portions of the model and GPU portions of the model,
+Dialogue: 0,0:19:40.92,0:19:48.66,Sub,,0,0,0,,including models that actually have mini models inside of them, like they might have an embedding model within them.
+Dialogue: 0,0:19:48.66,0:19:55.55,Sub,,0,0,0,,They might have a visual large language model embedded within them, if they're a multimodal model.
+Dialogue: 0,0:19:55.58,0:19:59.03,Sub,,0,0,0,,And so these topologies are getting more complicated.
+Dialogue: 0,0:19:59.03,0:20:08.97,Sub,,0,0,0,,Now what we want to do is bring this power of Azure container instances in this isolation to workloads
+Dialogue: 0,0:20:08.97,0:20:10.98,Sub,,0,0,0,,like this on top of direct virtualization,
+Dialogue: 0,0:20:10.98,0:20:21.21,Sub,,0,0,0,,where we can put CPU containers inside of its own Hyper-V isolated container and the AI model components, those containers,
+Dialogue: 0,0:20:21.23,0:20:27.77,Sub,,0,0,0,,in their own separate ones too, so they don't interfere with each other, and they get direct access to hardware at the same time.
+Dialogue: 0,0:20:27.77,0:20:34.68,Sub,,0,0,0,,And this is a benefit of direct virtualization is we can assign the GPU to a virtual machine.
+Dialogue: 0,0:20:34.68,0:20:44.22,Sub,,0,0,0,,That virtual machine can then create a sub-virtual machine, one of these L2s, and then give the GPUs that it's got over to that container.
+Dialogue: 0,0:20:44.22,0:20:47.16,Sub,,0,0,0,,And then it has direct access to that hardware.
+Dialogue: 0,0:20:47.16,0:20:52.57,Sub,,0,0,0,,So let me show you this demo of Manifold.
+Dialogue: 0,0:20:55.67,0:21:05.43,Sub,,0,0,0,,And what we're going to see here is if I get the nodes in this cluster, we're going to go take a look at one of those nodes and get the pods in the node.
+Dialogue: 0,0:21:05.43,0:21:12.35,Sub,,0,0,0,,And there's one pod in there, which is Llama 4 server.
+Dialogue: 0,0:21:12.38,0:21:14.46,Sub,,0,0,0,,And there's another one, which is a metrics server.
+Dialogue: 0,0:21:14.46,0:21:17.79,Sub,,0,0,0,,One of them is a GPU-based one, one is a CPU-based one.
+Dialogue: 0,0:21:17.79,0:21:27.53,Sub,,0,0,0,,When we go take a look inside the pod that's got the GPU, the Llama model in it, you can see it's got the GPUs visible to it It's got a whole bunch of RAM visible to it.
+Dialogue: 0,0:21:27.53,0:21:30.76,Sub,,0,0,0,,And it's got a whole bunch of processors assigned to it.
+Dialogue: 0,0:21:30.79,0:21:36.98,Sub,,0,0,0,,And you can see the Nvidia SMI command shows us that it actually has those GPUs available to it.
+Dialogue: 0,0:21:36.98,0:21:44.03,Sub,,0,0,0,,When we go take a look at the CPU pod sitting right next to it on the same server, you can see that it's got almost no memory.
+Dialogue: 0,0:21:44.03,0:21:45.89,Sub,,0,0,0,,It's only got two processors.
+Dialogue: 0,0:21:45.89,0:21:48.79,Sub,,0,0,0,,And it's got no GPUs attached to it.
+Dialogue: 0,0:21:48.81,0:21:50.19,Sub,,0,0,0,,And just to prove to you it works,
+Dialogue: 0,0:21:50.19,0:22:01.68,Sub,,0,0,0,,we're going to go take a look at this cat video and send this for inference to that GPU pod sitting there with direct access to GPUs, the Llama 4 Maverick model there,
+Dialogue: 0,0:22:01.68,0:22:06.15,Sub,,0,0,0,,and then successfully do an inference there.
+Dialogue: 0,0:22:06.15,0:22:19.52,Sub,,0,0,0,,The point being proven here that we've got CPU pods completely isolated from GPU pods directly attached to the physical server hardware because of direct virtualization.
+Dialogue: 0,0:22:24.65,0:22:26.88,Sub,,0,0,0,,Now we're also not just optimizing the compute.
+Dialogue: 0,0:22:26.88,0:22:37.89,Sub,,0,0,0,,We're also optimizing the way that inference works in terms of KV caches, which is -- the KV cache is effectively the state of the LLM.
+Dialogue: 0,0:22:37.89,0:22:48.03,Sub,,0,0,0,,And you can't do decoding efficiently without having a KV cache which represents the processing of all the previous tokens in the prompt.
+Dialogue: 0,0:22:48.03,0:22:51.73,Sub,,0,0,0,,When you interact with an LLM, you do so typically using turns.
+Dialogue: 0,0:22:51.75,0:22:54.78,Sub,,0,0,0,,And so you might have Turn 1, where you just have a system prompt.
+Dialogue: 0,0:22:54.78,0:22:58.38,Sub,,0,0,0,,Let's say you're doing a PR diff because you're doing development.
+Dialogue: 0,0:22:58.38,0:23:04.38,Sub,,0,0,0,,And you engage in an interaction with Copilot on that PR diff.
+Dialogue: 0,0:23:04.38,0:23:11.31,Sub,,0,0,0,,And what that means is that you're extending the prompt effectively, your specific prompt.
+Dialogue: 0,0:23:11.31,0:23:14.01,Sub,,0,0,0,,In an ideal case, you don't just want to cache the system prompt.
+Dialogue: 0,0:23:14.01,0:23:23.79,Sub,,0,0,0,,And this is what a lot of AI frameworks let you do is they say, hey, cache this for me, and then I'm not going to have to pay the cost for decoding this again or prefilling it.
+Dialogue: 0,0:23:23.79,0:23:26.76,Sub,,0,0,0,,But what you really want is the whole thing to be cached,
+Dialogue: 0,0:23:26.76,0:23:35.10,Sub,,0,0,0,,so that if your workload moves, your inference moves from one GP to another, one server to another, that you're not repaying this price.
+Dialogue: 0,0:23:35.10,0:23:42.81,Sub,,0,0,0,,And we can only do this if we've got a cache that sits all the way behind all of the servers.
+Dialogue: 0,0:23:42.81,0:23:46.71,Sub,,0,0,0,,So this is something that we've got coming out in preview now called Azure Context Cache.
+Dialogue: 0,0:23:46.71,0:23:52.26,Sub,,0,0,0,,The idea here is that Azure Context Cache, behind it, has a storage account.
+Dialogue: 0,0:23:52.26,0:23:58.86,Sub,,0,0,0,,And that storage account is where we're caching the KV state for all of the inference requests.
+Dialogue: 0,0:23:58.86,0:24:01.50,Sub,,0,0,0,,So regardless of what server they go to,
+Dialogue: 0,0:24:01.50,0:24:13.41,Sub,,0,0,0,,if the prompt is not there, the KV isn't there, we can look it up in the cache and fetch it in and not have to decode that again, saving time and money.
+Dialogue: 0,0:24:13.41,0:24:17.14,Sub,,0,0,0,,So let's go take a look at that Azure Context Cache in action.
+Dialogue: 0,0:24:19.62,0:24:28.65,Sub,,0,0,0,,So here, we're sending, concurrency level one, we're sending a bunch of queries into the system, all with the same system prompt.
+Dialogue: 0,0:24:28.65,0:24:31.14,Sub,,0,0,0,,And you can see that we had all of those cached.
+Dialogue: 0,0:24:31.14,0:24:39.74,Sub,,0,0,0,,The cache hit rate was 81%, because after the first request goes to the server, the next one is likely gonna have that system prompt already cached in it.
+Dialogue: 0,0:24:39.76,0:24:43.77,Sub,,0,0,0,,But when we do a concurrency level of 10, they're going to get sprayed across servers,
+Dialogue: 0,0:24:43.80,0:24:50.07,Sub,,0,0,0,,and our cache hit rate actually goes down because now sometimes a request is landing on a server without the system prompt.
+Dialogue: 0,0:24:50.07,0:24:57.72,Sub,,0,0,0,,So a lot of systems have you set this cache key unique to try to pin a conversation on a particular server, an endpoint.
+Dialogue: 0,0:24:57.72,0:25:06.42,Sub,,0,0,0,,The hit rate actually drops there because every conversation gets mapped to a different server intentionally where the system prompt might not have already shown up.
+Dialogue: 0,0:25:06.42,0:25:10.98,Sub,,0,0,0,,So the first hit there is always -- the first query there is always going to be a miss.
+Dialogue: 0,0:25:10.98,0:25:21.00,Sub,,0,0,0,,But when we set the prompt cache, you can see that the prompt cache rate, hit rate is going to go up.
+Dialogue: 0,0:25:21.00,0:25:23.40,Sub,,0,0,0,,Where did the demo go here?
+Dialogue: 0,0:25:23.40,0:25:28.71,Sub,,0,0,0,,Went up to 96% with the remote cache here; 96.2% is the hit rate here.
+Dialogue: 0,0:25:28.71,0:25:34.14,Sub,,0,0,0,,And that's because no matter which server the query lands on,
+Dialogue: 0,0:25:34.14,0:25:40.74,Sub,,0,0,0,,the prompt is -- the KV cache for that prompt is going to be fetched from remote cache if it wasn't there.
+Dialogue: 0,0:25:40.74,0:25:48.30,Sub,,0,0,0,,So transparently, behind the scenes, this prompt cache using Azure storage to go and spread out the KV cache across the servers,
+Dialogue: 0,0:25:48.30,0:25:57.21,Sub,,0,0,0,,effectively making the servers have a pool cache rather than individual server-based caches, which is going to improve hit rate, which is going to save money,
+Dialogue: 0,0:25:57.21,0:26:03.78,Sub,,0,0,0,,so you're not having to pay for the prefill on those system caches every time you have a miss.
+Dialogue: 0,0:26:03.78,0:26:04.95,Sub,,0,0,0,,All right.
+Dialogue: 0,0:26:04.95,0:26:08.79,Sub,,0,0,0,,So let's take a look at the next cool innovation.
+Dialogue: 0,0:26:08.79,0:26:15.21,Sub,,0,0,0,,And I've got a -- it's like an ACI-themed talk, because this is one of the cool things about ACI.
+Dialogue: 0,0:26:15.21,0:26:19.40,Sub,,0,0,0,,When you talk about containers, you're talking about layers and images.
+Dialogue: 0,0:26:19.42,0:26:24.75,Sub,,0,0,0,,When you talk about virtual machines, you're talking about full-blown virtual machine images.
+Dialogue: 0,0:26:24.75,0:26:34.38,Sub,,0,0,0,,Now, when you talk about container sandboxes, you're typically talking about something that is very bespoke, kind of a custom image, and it's very small and lightweight.
+Dialogue: 0,0:26:34.38,0:26:37.14,Sub,,0,0,0,,And this is what you want to be extremely fast.
+Dialogue: 0,0:26:37.14,0:26:46.35,Sub,,0,0,0,,Now one of the ways to get a fast startup for a container image, which you want with these for these agents to be able to say, "I'm going to go write a Python script
+Dialogue: 0,0:26:46.35,0:26:55.59,Sub,,0,0,0,,and run it, I'm going to go create a little HTML site and iterate on it," is you want the startup to be close to instantaneous.
+Dialogue: 0,0:26:55.59,0:27:02.37,Sub,,0,0,0,,When it comes to containers, you can get startup times in the five, 20-second range, depending on what the OS is.
+Dialogue: 0,0:27:02.37,0:27:11.55,Sub,,0,0,0,,But we want literally thousands of these things to be able to start simultaneously and to start very quickly off of the same base image.
+Dialogue: 0,0:27:11.55,0:27:14.04,Sub,,0,0,0,,The way we do that is with memory snapshotting.
+Dialogue: 0,0:27:14.04,0:27:20.34,Sub,,0,0,0,,So we actually start the container, snapshot its memory, and then if you get a request for the same container,
+Dialogue: 0,0:27:20.34,0:27:26.97,Sub,,0,0,0,,we simply map the memory, and we skip all the initialization and map it right into a running container box.
+Dialogue: 0,0:27:26.97,0:27:30.09,Sub,,0,0,0,,So let me show you one of, I think, my favorite demo of this,
+Dialogue: 0,0:27:30.09,0:27:37.89,Sub,,0,0,0,,which is, how would you like to see 10,000 container sandboxes launch?
+Dialogue: 0,0:27:39.54,0:27:44.58,Sub,,0,0,0,,Okay, because if the answer is yes, that's the rest of the session.
+Dialogue: 0,0:27:44.58,0:27:46.63,Sub,,0,0,0,,I'm just kidding, no, I'm just kidding.
+Dialogue: 0,0:27:46.65,0:27:51.63,Sub,,0,0,0,,What I'm going to show you is that we can do this incredibly quickly.
+Dialogue: 0,0:27:51.63,0:27:56.97,Sub,,0,0,0,,So I've got 10 workers launching 1,000 of these container sandboxes each.
+Dialogue: 0,0:27:56.97,0:28:02.73,Sub,,0,0,0,,And we've got a little animation to show you the progress of those launches here.
+Dialogue: 0,0:28:02.73,0:28:03.93,Sub,,0,0,0,,So here we go.
+Dialogue: 0,0:28:03.93,0:28:06.31,Sub,,0,0,0,,Create 10 worker pods.
+Dialogue: 0,0:28:10.65,0:28:12.96,Sub,,0,0,0,,Here we go.
+Dialogue: 0,0:28:12.96,0:28:15.27,Sub,,0,0,0,,So each one is going to add 1,000.
+Dialogue: 0,0:28:15.27,0:28:17.46,Sub,,0,0,0,,This represents 1,000.
+Dialogue: 0,0:28:17.46,0:28:18.88,Sub,,0,0,0,,You can see them launching.
+Dialogue: 0,0:28:20.70,0:28:23.38,Sub,,0,0,0,,A few down here left.
+Dialogue: 0,0:28:23.40,0:28:25.17,Sub,,0,0,0,,Boom, done.
+Dialogue: 0,0:28:25.17,0:28:29.46,Sub,,0,0,0,,10,000 container sandboxes.
+Dialogue: 0,0:28:31.84,0:28:37.14,Sub,,0,0,0,,Average container sandbox launch time, two seconds.
+Dialogue: 0,0:28:37.14,0:28:40.41,Sub,,0,0,0,,So not just speed, but scale at the same time.
+Dialogue: 0,0:28:40.41,0:28:43.38,Sub,,0,0,0,,So this is, like I said, one of the really cool demos.
+Dialogue: 0,0:28:43.38,0:28:50.93,Sub,,0,0,0,,And so you're going to see the agent sandboxing land on top of Azure Container Instance.
+Dialogue: 0,0:28:50.95,0:28:52.11,Sub,,0,0,0,,All right.
+Dialogue: 0,0:28:52.13,0:28:58.41,Sub,,0,0,0,,Let's go into our last section now and talk about, or second to last section, and talk a little bit about security.
+Dialogue: 0,0:28:58.41,0:29:06.82,Sub,,0,0,0,,And one of the exciting things for me about security is the evolution of something called confidential computing.
+Dialogue: 0,0:29:06.85,0:29:09.18,Sub,,0,0,0,,How many people have heard of confidential computing?
+Dialogue: 0,0:29:09.18,0:29:10.53,Sub,,0,0,0,,So, quite a few of you.
+Dialogue: 0,0:29:10.53,0:29:18.57,Sub,,0,0,0,,For those of you that haven't heard of confidential computing, the easiest way to think about it is in the context of how your data gets protected.
+Dialogue: 0,0:29:18.57,0:29:26.22,Sub,,0,0,0,,And for a long time now, everybody encrypts their network traffic.
+Dialogue: 0,0:29:26.22,0:29:32.07,Sub,,0,0,0,,Over the last 20 years or so, it went from every now and then you'd run into a site with SSL.
+Dialogue: 0,0:29:32.07,0:29:37.80,Sub,,0,0,0,,And now every single site, every single network connection has to have TLS on it.
+Dialogue: 0,0:29:37.80,0:29:42.21,Sub,,0,0,0,,Then, the other part of protecting is while it's at rest.
+Dialogue: 0,0:29:42.21,0:29:44.58,Sub,,0,0,0,,And this is where it's stored on disk.
+Dialogue: 0,0:29:44.58,0:29:46.08,Sub,,0,0,0,,You want to have that encrypted, too,
+Dialogue: 0,0:29:46.08,0:29:55.17,Sub,,0,0,0,,so if the storage gets accessed outside of the protection of the logical protections of the workload on top of it, that the data is useless.
+Dialogue: 0,0:29:55.17,0:29:57.57,Sub,,0,0,0,,And we not only have now in cloud.
+Dialogue: 0,0:29:57.57,0:29:59.67,Sub,,0,0,0,,We started with node data encryption at rest.
+Dialogue: 0,0:29:59.69,0:30:01.47,Sub,,0,0,0,,And now we've got server-side encryption.
+Dialogue: 0,0:30:01.47,0:30:05.98,Sub,,0,0,0,,We also have customer managed key, where you can bring your own encryption and have double layered encryption of data at rest.
+Dialogue: 0,0:30:06.00,0:30:16.62,Sub,,0,0,0,,But what's been missing largely is protecting the data while it's in use, because when that data gets decrypted on the server or pulled off the disk in clear text, it's sitting
+Dialogue: 0,0:30:16.62,0:30:22.86,Sub,,0,0,0,,in there on the server, maybe inside of a virtual machine, but still in the server environment.
+Dialogue: 0,0:30:22.86,0:30:34.14,Sub,,0,0,0,,And what can access that data includes everything from the hypervisor to the admins to the host software to a malicious hacker that might penetrate the infrastructure.
+Dialogue: 0,0:30:34.14,0:30:36.00,Sub,,0,0,0,,All of those can get access.
+Dialogue: 0,0:30:36.00,0:30:38.31,Sub,,0,0,0,,And even in your own applications,
+Dialogue: 0,0:30:38.31,0:30:48.03,Sub,,0,0,0,,you want to keep maybe your own operators away from that data and only have the compute that needs to have access to that data have access to that data.
+Dialogue: 0,0:30:48.03,0:30:49.38,Sub,,0,0,0,,That is confidential computing.
+Dialogue: 0,0:30:49.38,0:30:57.00,Sub,,0,0,0,,Now one aspect of confidential computing that is not just this protection of that data in a hardware enclave,
+Dialogue: 0,0:30:57.00,0:31:04.38,Sub,,0,0,0,,where none of those things can get inside of it, is that the hardware also can measure what's inside the enclave.
+Dialogue: 0,0:31:04.38,0:31:06.72,Sub,,0,0,0,,And that measurement is called an attestation.
+Dialogue: 0,0:31:06.72,0:31:14.79,Sub,,0,0,0,,And some code inside that enclave can ask the hardware for a quote, which is the attestation, present it to a relying party,
+Dialogue: 0,0:31:14.79,0:31:24.42,Sub,,0,0,0,,which is typically a key management service that has a policy on it that says only release this key to an enclave of this hardware type
+Dialogue: 0,0:31:24.42,0:31:29.25,Sub,,0,0,0,,with the security version number on it with this configuration of code.
+Dialogue: 0,0:31:29.25,0:31:31.38,Sub,,0,0,0,,And at that point, the key gets released.
+Dialogue: 0,0:31:31.38,0:31:34.59,Sub,,0,0,0,,It's encrypted to the enclave, the code in the enclave.
+Dialogue: 0,0:31:34.59,0:31:43.89,Sub,,0,0,0,,The code in the enclave decrypts the key and then can start to process the data in the clear, and everybody knows that it's being protected with that hardware isolation.
+Dialogue: 0,0:31:43.89,0:31:45.63,Sub,,0,0,0,,That is confidential computing.
+Dialogue: 0,0:31:45.63,0:31:54.24,Sub,,0,0,0,,We've been working on enabling confidential computing in Azure for over a decade, starting with Intel SGX servers
+Dialogue: 0,0:31:54.24,0:32:00.57,Sub,,0,0,0,,in the data center, and now virtual machines from AMD and Intel in the data center.
+Dialogue: 0,0:32:00.57,0:32:05.55,Sub,,0,0,0,,And our portfolio is the largest of any hyperscaler when it comes to confidential computing services,
+Dialogue: 0,0:32:05.55,0:32:13.75,Sub,,0,0,0,,confidential computing container offerings like confidential containers on ACI, as well as the hardware infrastructure underneath it.
+Dialogue: 0,0:32:16.08,0:32:18.27,Sub,,0,0,0,,I talked before about live migration.
+Dialogue: 0,0:32:18.27,0:32:28.53,Sub,,0,0,0,,And live migration is one of those things that allows us to run the fleet efficiently, because we can move workloads around to reduce fragmentation.
+Dialogue: 0,0:32:28.53,0:32:34.20,Sub,,0,0,0,,We can also make customer workloads more reliable because we can move them if we see a server is going to fail.
+Dialogue: 0,0:32:34.20,0:32:38.76,Sub,,0,0,0,,We can also move them around if we need to service a host in an impactful way.
+Dialogue: 0,0:32:38.76,0:32:44.61,Sub,,0,0,0,,And that means that the customer's workload is not as impacted by that servicing operation.
+Dialogue: 0,0:32:44.61,0:32:50.01,Sub,,0,0,0,,It is a fundamental requirement of a hyperscale cloud to have live migration.
+Dialogue: 0,0:32:50.01,0:32:57.39,Sub,,0,0,0,,And this has unfortunately been one of the missing gaps in confidential computing offerings is lack of live migration.
+Dialogue: 0,0:32:57.39,0:33:03.93,Sub,,0,0,0,,So we've been working deeply with Intel on confidential live migration.
+Dialogue: 0,0:33:03.93,0:33:08.04,Sub,,0,0,0,,And the way that works is you have a confidential virtual machine here on one server.
+Dialogue: 0,0:33:08.04,0:33:14.85,Sub,,0,0,0,,We've got something called a migration TD, which is a partition, effectively.
+Dialogue: 0,0:33:14.85,0:33:24.57,Sub,,0,0,0,,Think of it as a confidential partition that is also measured as part of the virtual machine's measurement and that the receiving side has a policy and the sending side
+Dialogue: 0,0:33:24.57,0:33:35.43,Sub,,0,0,0,,as a policy that says I will only migrate the contents of this virtual machine to another server with the MigTD that is approved for this virtual machine,
+Dialogue: 0,0:33:35.43,0:33:45.06,Sub,,0,0,0,,so effectively extending the confidential trust boundary between two servers, adhering to policy that is being enforced
+Dialogue: 0,0:33:45.06,0:33:46.86,Sub,,0,0,0,,with the confidential computing hardware.
+Dialogue: 0,0:33:46.86,0:33:53.79,Sub,,0,0,0,,I'm going to show you for the first time ever a confidential virtual machine being live migrated from one server to another.
+Dialogue: 0,0:33:53.79,0:33:58.03,Sub,,0,0,0,,This is the first time ever this has been shown publicly.
+Dialogue: 0,0:34:00.09,0:34:04.62,Sub,,0,0,0,,So here, we have one server here, Hyper-V manager, you can see, a lot of you are familiar with it.
+Dialogue: 0,0:34:04.64,0:34:06.03,Sub,,0,0,0,,There's our CVM.
+Dialogue: 0,0:34:06.03,0:34:09.30,Sub,,0,0,0,,Here's the other server manager on the other side.
+Dialogue: 0,0:34:09.30,0:34:11.22,Sub,,0,0,0,,You can see no virtual machines there.
+Dialogue: 0,0:34:11.22,0:34:14.10,Sub,,0,0,0,,You can see there's our MigTD that we have in this virtual machine.
+Dialogue: 0,0:34:14.10,0:34:21.81,Sub,,0,0,0,,And here we're looking at the output of RDP into that virtual machine on Server 1.
+Dialogue: 0,0:34:21.81,0:34:23.79,Sub,,0,0,0,,And you can see it's pinging every second.
+Dialogue: 0,0:34:23.79,0:34:25.95,Sub,,0,0,0,,That's typical in a live migration demo.
+Dialogue: 0,0:34:25.95,0:34:28.07,Sub,,0,0,0,,Now we started migrating this virtual machine.
+Dialogue: 0,0:34:28.07,0:34:36.63,Sub,,0,0,0,,You can see this is going to take a while, so we're going to speed it up a little bit, because this is a large virtual machine with a few gigabytes of RAM.
+Dialogue: 0,0:34:36.63,0:34:41.08,Sub,,0,0,0,,You can see the TD info attestations that are happening that we've got printed out.
+Dialogue: 0,0:34:41.10,0:34:44.10,Sub,,0,0,0,,And then boom, the CVM just moved,
+Dialogue: 0,0:34:44.10,0:34:52.55,Sub,,0,0,0,,and it's on the other side, which is why we saw that RDP connection die, because it's connected to the IP address on that first machine.
+Dialogue: 0,0:34:52.55,0:35:01.62,Sub,,0,0,0,,But that right there, first time ever, and it's not in production yet, but you can see that we just literally achieved this in the last few weeks,
+Dialogue: 0,0:35:01.62,0:35:05.52,Sub,,0,0,0,,the first confidential virtual machine line migration anywhere.
+Dialogue: 0,0:35:10.46,0:35:16.53,Sub,,0,0,0,,Now the next thing I'm going to show you is something that I also think is really, really cool.
+Dialogue: 0,0:35:16.53,0:35:19.55,Sub,,0,0,0,,And this is something else that Microsoft has pioneered.
+Dialogue: 0,0:35:19.58,0:35:24.43,Sub,,0,0,0,,We've been working on hardware-based roots of trust for a while.
+Dialogue: 0,0:35:24.46,0:35:27.81,Sub,,0,0,0,,We've got something called Caliptra that we donated to the OpenCUBE project.
+Dialogue: 0,0:35:27.81,0:35:31.80,Sub,,0,0,0,,It is our root of trust that we deploy in every single server.
+Dialogue: 0,0:35:31.80,0:35:38.69,Sub,,0,0,0,,But when I was working with the architects, hardware security architects in Azure,
+Dialogue: 0,0:35:38.72,0:35:43.32,Sub,,0,0,0,,and thinking, you know what we're missing it's not just a root of trust,
+Dialogue: 0,0:35:43.32,0:35:54.21,Sub,,0,0,0,,but we need key management inside of our hardware that we put into every server, because what that will allow us to do is keep keys protected
+Dialogue: 0,0:35:54.21,0:36:01.50,Sub,,0,0,0,,with hardware throughout their whole life cycle, never have them exit the hardware trust boundary.
+Dialogue: 0,0:36:01.50,0:36:05.49,Sub,,0,0,0,,And so we developed something internally called MANA Corp.
+Dialogue: 0,0:36:05.49,0:36:16.37,Sub,,0,0,0,,Publicly, we announced it late last year as Azure Integrated HSM, because it's effectively an HSM sitting there inside of every single server.
+Dialogue: 0,0:36:16.37,0:36:21.57,Sub,,0,0,0,,And we've been deploying these now into every single server in Azure.
+Dialogue: 0,0:36:21.57,0:36:29.88,Sub,,0,0,0,,What this allows is a key to be released with policy from an actual HSM.
+Dialogue: 0,0:36:29.88,0:36:39.51,Sub,,0,0,0,,So like Azure-managed HSM or Azure Key Vault can have a policy on it that will release the keys into Azure Integrated HSMs.
+Dialogue: 0,0:36:39.51,0:36:51.08,Sub,,0,0,0,,And Azure Integrated HSMs are FIPS 140 Level 3, FIPS 140-3, level 3, certified just like the HSMs behind Manage HSM and Azure Key Vault.
+Dialogue: 0,0:36:51.08,0:37:00.27,Sub,,0,0,0,,And so that means that the key remains inside of a FIPS 140-3 Level 3 boundary from the HSM to the server.
+Dialogue: 0,0:37:00.27,0:37:07.88,Sub,,0,0,0,,And then it can be accessed for operations directly from that virtual machine, because we map it, that hardware, into the virtual machine.
+Dialogue: 0,0:37:09.35,0:37:23.94,Sub,,0,0,0,,Let's go see a demo of that and the benefits that you get out of that, using a simple scenario, which is I want to sign a bunch of payloads using my AKV key.
+Dialogue: 0,0:37:23.94,0:37:31.38,Sub,,0,0,0,,So what I've got here is a policy that allows that key to be transported into Azure Integrated HSM.
+Dialogue: 0,0:37:31.38,0:37:42.41,Sub,,0,0,0,,What I'm going to do first is sign 5,000 times over 32 threads a payload using Azure AKV, where the key never exits the HSM.
+Dialogue: 0,0:37:42.44,0:37:49.53,Sub,,0,0,0,,And you can see because we're sending all these operations to the HSM, we get about 640 operations per second.
+Dialogue: 0,0:37:49.53,0:37:53.91,Sub,,0,0,0,,Now we release that key into the local Azure integrated HSM.
+Dialogue: 0,0:37:53.91,0:37:56.22,Sub,,0,0,0,,We can perform those operations directly on it.
+Dialogue: 0,0:37:56.22,0:38:02.45,Sub,,0,0,0,,And you can see that our throughput went to 18,800 signing operations per second.
+Dialogue: 0,0:38:02.45,0:38:06.51,Sub,,0,0,0,,And we lost no security in the process.
+Dialogue: 0,0:38:06.51,0:38:13.23,Sub,,0,0,0,,And so this is the future of data center infrastructure and security for keys.
+Dialogue: 0,0:38:13.23,0:38:16.80,Sub,,0,0,0,,The future we're moving to is one with confidential computing,
+Dialogue: 0,0:38:16.80,0:38:23.45,Sub,,0,0,0,,where keys, and that's going to end up being keys for everything, keys for any of these services,
+Dialogue: 0,0:38:23.45,0:38:31.55,Sub,,0,0,0,,including the services that agents are talking to, are going to be protected with hardware throughout their entire life cycle so that it can never be stolen.
+Dialogue: 0,0:38:31.55,0:38:33.52,Sub,,0,0,0,,And that's a very exciting future.
+Dialogue: 0,0:38:38.91,0:38:39.99,Sub,,0,0,0,,All right.
+Dialogue: 0,0:38:39.99,0:38:44.25,Sub,,0,0,0,,We've got one last thing to show, and this is very experimental.
+Dialogue: 0,0:38:44.25,0:38:48.54,Sub,,0,0,0,,But I like to end with, hey, this is where we're looking speculatively.
+Dialogue: 0,0:38:48.54,0:38:54.84,Sub,,0,0,0,,This is Microsoft Research work that is happening, may or may not be ever productized,
+Dialogue: 0,0:38:54.84,0:39:01.26,Sub,,0,0,0,,but it looks really promising, and it really would be huge if we were able to make this happen.
+Dialogue: 0,0:39:01.26,0:39:11.91,Sub,,0,0,0,,And the idea here is that if you take a look at network communications, networking inside of a data center, it's typically been over copper.
+Dialogue: 0,0:39:11.91,0:39:16.11,Sub,,0,0,0,,And the problem with copper, it's very lightweight, it's very cheap, it's very reliable,
+Dialogue: 0,0:39:16.11,0:39:24.63,Sub,,0,0,0,,but the maximum distances you can talk to over copper without loss is about 2 meters.
+Dialogue: 0,0:39:24.63,0:39:29.12,Sub,,0,0,0,,And, of course, 2 meters is not much distance in the data center, you really want to connect,
+Dialogue: 0,0:39:29.15,0:39:35.85,Sub,,0,0,0,,especially if you move towards disaggregated devices and computing, where you want GPUs over here and you want servers over here,
+Dialogue: 0,0:39:35.85,0:39:41.34,Sub,,0,0,0,,is that you want a very high speed, high bandwidth interconnect.
+Dialogue: 0,0:39:41.34,0:39:42.99,Sub,,0,0,0,,And that's typically not copper.
+Dialogue: 0,0:39:42.99,0:39:47.64,Sub,,0,0,0,,Now what a lot of people are moving towards is optics, and optics with lasers.
+Dialogue: 0,0:39:47.64,0:39:55.14,Sub,,0,0,0,,The problem with lasers is that they're very high powered, so they generate a lot of heat, which makes them very expensive.
+Dialogue: 0,0:39:55.14,0:40:01.86,Sub,,0,0,0,,So what we've been exploring is something called Project Mosaic.
+Dialogue: 0,0:40:01.86,0:40:08.76,Sub,,0,0,0,,Now one of the things with this mechanism that I just showed you is that there's lots of fiber -- there's just a few fibers.
+Dialogue: 0,0:40:08.76,0:40:11.76,Sub,,0,0,0,,They're all very high bandwidth and high speed.
+Dialogue: 0,0:40:11.76,0:40:17.31,Sub,,0,0,0,,What we're trying is using many channels operating at low speed,
+Dialogue: 0,0:40:17.31,0:40:31.74,Sub,,0,0,0,,using standard LED technology, micro LEDs, the kind of LEDs that are being productized right now for next generation VR glasses, for example, goggles, as well as cameras.
+Dialogue: 0,0:40:31.74,0:40:41.00,Sub,,0,0,0,,These things -- projecting those LED lights over fibers inside of a cable and then having them read
+Dialogue: 0,0:40:41.00,0:40:43.89,Sub,,0,0,0,,with standard silicon camera sensor arrays.
+Dialogue: 0,0:40:43.89,0:40:53.36,Sub,,0,0,0,,So the beauty of this approach is that these are basically commercial technologies that are scaling because of other economic factors outside
+Dialogue: 0,0:40:53.38,0:40:55.32,Sub,,0,0,0,,of what we want to take advantage of it for.
+Dialogue: 0,0:40:55.32,0:40:59.82,Sub,,0,0,0,,So we can kind of ride on the back of this technology, but deploy it in our data centers.
+Dialogue: 0,0:40:59.82,0:41:11.52,Sub,,0,0,0,,So I'm going to show you for the first time ever, with a live feed from our Microsoft Research Cambridge Lab, transmission over one of these LED cables.
+Dialogue: 0,0:41:11.52,0:41:13.47,Sub,,0,0,0,,So let's go and switch here...
+Dialogue: 0,0:41:17.58,0:41:19.38,Sub,,0,0,0,,to Microsoft Cambridge.
+Dialogue: 0,0:41:19.38,0:41:22.17,Sub,,0,0,0,,And Katar, good to see you.
+Dialogue: 0,0:41:22.20,0:41:23.82,Sub,,0,0,0,,Katar: Hello, Mark, good to see you.
+Dialogue: 0,0:41:23.85,0:41:25.77,Sub,,0,0,0,,Hello, everyone, actually, I'm Katar.
+Dialogue: 0,0:41:25.77,0:41:28.14,Sub,,0,0,0,,I'm from Microsoft Research, Cambridge.
+Dialogue: 0,0:41:28.14,0:41:33.26,Sub,,0,0,0,,I'm here in the lab, holding one of those cables with micro IDs.
+Dialogue: 0,0:41:33.26,0:41:42.93,Sub,,0,0,0,,And what I wanted to show you exactly is what is inside and how this is being tested in the lab before it goes into Microsoft data centers.
+Dialogue: 0,0:41:42.93,0:41:52.95,Sub,,0,0,0,,So if you open this up, this is what we're going to see: a small PCB with the yellow area here, which we call the package.
+Dialogue: 0,0:41:52.95,0:41:58.98,Sub,,0,0,0,,And on top of that we have a tiny array of micro-LEDs and photo detectors.
+Dialogue: 0,0:41:58.98,0:42:04.62,Sub,,0,0,0,,And underneath, we have the CMOS chip that controls everything.
+Dialogue: 0,0:42:04.62,0:42:12.45,Sub,,0,0,0,,And actually, this small PCB is being tested here in the lab using the evaluation board, the big PCB that we see there.
+Dialogue: 0,0:42:12.45,0:42:23.61,Sub,,0,0,0,,And the green light coming up is actually coming from hundreds of micro-LEDs and coupled to this imaging fiber using this optical coupler.
+Dialogue: 0,0:42:23.61,0:42:32.28,Sub,,0,0,0,,Actually, after tens of meters of transmission over this imaging fiber, here we are at the receiver side.
+Dialogue: 0,0:42:32.28,0:42:37.50,Sub,,0,0,0,,And the screen here shows the output process of the fiber.
+Dialogue: 0,0:42:37.50,0:42:42.21,Sub,,0,0,0,,And actually, this fiber itself has more than thousands of pores.
+Dialogue: 0,0:42:42.21,0:42:50.58,Sub,,0,0,0,,And each of these micro-LEDs actually is coupled to more than one pore, which makes the alignment much more easier.
+Dialogue: 0,0:42:50.58,0:42:54.18,Sub,,0,0,0,,And, actually, in a real operation mode,
+Dialogue: 0,0:42:54.18,0:43:01.32,Sub,,0,0,0,,all this micro-LED will be armed and flashing at high speed, billion times per second.
+Dialogue: 0,0:43:01.32,0:43:05.46,Sub,,0,0,0,,And the human eye will not be able to distinguish this.
+Dialogue: 0,0:43:05.46,0:43:11.40,Sub,,0,0,0,,So basically, to make it concrete, and to show you that we can individually control each of these micro-LEDS,
+Dialogue: 0,0:43:11.40,0:43:19.69,Sub,,0,0,0,,I'm going to ask Mark to pick any letter or a number from zero to nine, and I can display it to you.
+Dialogue: 0,0:43:19.72,0:43:21.01,Sub,,0,0,0,,Mark Russinovich: Okay, awesome.
+Dialogue: 0,0:43:21.04,0:43:23.15,Sub,,0,0,0,,This kind of proves that it's live -- how about a letter?
+Dialogue: 0,0:43:23.17,0:43:24.83,Sub,,0,0,0,,Somebody shout out a letter that we want to see.
+Dialogue: 0,0:43:24.86,0:43:27.36,Sub,,0,0,0,,Z? Z, all right, let's do Z.
+Dialogue: 0,0:43:28.36,0:43:30.86,Sub,,0,0,0,,Katar: Z, Okay.
+Dialogue: 0,0:43:32.25,0:43:37.02,Sub,,0,0,0,,Okay, so here, you can see that we are switching off some of the micro-LEDs.
+Dialogue: 0,0:43:37.02,0:43:45.27,Sub,,0,0,0,,And each of these flowers here are one micro-LED that can be modulated as gigabit per second.
+Dialogue: 0,0:43:45.27,0:43:49.51,Sub,,0,0,0,,So let's wait for the letter Z to show.
+Dialogue: 0,0:43:51.96,0:43:53.31,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:43:55.29,0:43:56.50,Sub,,0,0,0,,Mark Russinovich: Z.
+Dialogue: 0,0:43:59.70,0:44:03.33,Sub,,0,0,0,,Katar: Hope you enjoyed this short demo, And I'm going to hand it back to you, Mark.
+Dialogue: 0,0:44:03.36,0:44:04.77,Sub,,0,0,0,,Mark Russinovich: All right, thanks, that was awesome.
+Dialogue: 0,0:44:04.77,0:44:05.85,Sub,,0,0,0,,Thanks, Katar.
+Dialogue: 0,0:44:05.85,0:44:07.30,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:44:08.63,0:44:13.74,Sub,,0,0,0,,Mark Russinovich: Okay, well, that brings us to the conclusion of the session.
+Dialogue: 0,0:44:13.74,0:44:24.06,Sub,,0,0,0,,And what I hope you saw was a lot of innovation happening at all layers of the stack, from the hardware to the data centers to the serverless offerings, to GPUs, prompt prefetching,
+Dialogue: 0,0:44:24.06,0:44:31.59,Sub,,0,0,0,,inference, and then a look at the future and where we might be going with networking inside the data center.
+Dialogue: 0,0:44:31.59,0:44:34.13,Sub,,0,0,0,,If you like this, please fill out an evaluation form.
+Dialogue: 0,0:44:34.16,0:44:35.21,Sub,,0,0,0,,Let me know.
+Dialogue: 0,0:44:35.24,0:44:37.23,Sub,,0,0,0,,If you didn't, you can go ahead and skip that.
+Dialogue: 0,0:44:37.23,0:44:42.80,Sub,,0,0,0,,I hope you have a great Build, and I hope to see you this afternoon with Scott.
+Dialogue: 0,0:44:42.82,0:44:46.89,Sub,,0,0,0,,We're going to have a fun session on the future of software engineering, so I'll see you then.

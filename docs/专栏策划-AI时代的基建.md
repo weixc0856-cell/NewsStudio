@@ -95,6 +95,7 @@ SRT / ASS 双语字幕、术语表、思维导图、精炼笔记可同步沉淀�
 | 黄仁勋 × BG2 Pod（AI 收入与资本开支） | 1:39:53 | 1080p30 | 中英硬字幕，1663 条 | 第 24 期正片（算力经济 / 2027 瓶颈） |
 | NVIDIA GTC Taipei 2026 主题演讲（黄仁勋） | 1:57:53 | 1080p60 | 中英硬字幕，1439 条 | 第 25 期正片（AI 工厂 / PC / 物理 AI） |
 | 马斯克 × 黄仁勋 × 汤姆·布朗圆桌（America.gov 活动） | 26:37 | 1080p60 | 中英硬字幕，354 条 | 第 26 期正片（超级智能 / 能源 / 治理） |
+| Mark Russinovich：Inside Azure innovations（Build 2026 BRK226） | 44:53 | 1080p30 | 中英硬字幕，484 条（人工英文） | 第 27 期正片（Azure 基础设施 / 机密计算） |
 | 十七期对应的无字幕原片 | 33:00 | 4K 2160p30 | 无字幕 | 二次剪辑、切片、重新配字幕 |
 | 双语 SRT / ASS | — | — | 英上中下 | 简介时间戳、网站资料 |
 
@@ -228,6 +229,7 @@ SRT / ASS 双语字幕、术语表、思维导图、精炼笔记可同步沉淀�
 | 第 24 期 | 黄仁勋 × BG2 Pod：AI 收入撑得起资本开支吗（2027 瓶颈 / 开源与闭源） | [ep24-jensen-huang-bg2-capex-2026.md](episodes/ep24-jensen-huang-bg2-capex-2026.md) | 已完成，三方验证通过 |
 | 第 25 期 | NVIDIA GTC Taipei 2026：黄仁勋为智能体重造计算机（Vera Rubin / Vera CPU / RTX Spark） | [ep25-nvidia-gtc-taipei-2026.md](episodes/ep25-nvidia-gtc-taipei-2026.md) | 已完成，三方验证通过 |
 | 第 26 期 | 马斯克 × 黄仁勋 × 汤姆·布朗：超级智能、能源与美国的下一个十年 | [ep26-musk-huang-brown-si-panel-2026.md](episodes/ep26-musk-huang-brown-si-panel-2026.md) | 已完成，三方验证通过 |
+| 第 27 期 | Mark Russinovich：Azure 基础设施的内部创新（Azure Boost / MRC / 机密计算） | [ep27-azure-innovations-brk226.md](episodes/ep27-azure-innovations-brk226.md) | 已完成，三方验证通过 |
 
 **新增一期的流程**
 

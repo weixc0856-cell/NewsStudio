@@ -1,0 +1,1935 @@
+1
+00:00:00,485 --> 00:00:02,040
+Mark Russinovich: Let's try that again.
+
+2
+00:00:02,040 --> 00:00:03,067
+Good morning, everybody.
+
+3
+00:00:03,092 --> 00:00:04,290
+All: Good morning.
+
+4
+00:00:04,290 --> 00:00:05,790
+Mark Russinovich: How's Build going?
+
+5
+00:00:05,790 --> 00:00:11,033
+Good? Well, welcome to Inside Azure Innovations.
+
+6
+00:00:11,058 --> 00:00:12,210
+My name is Mark Russinovich.
+
+7
+00:00:12,210 --> 00:00:14,670
+I'm the CTO and Deputy CISO for Azure.
+
+8
+00:00:14,670 --> 00:00:17,890
+How many people have been to a previous innovations talk?
+
+9
+00:00:17,915 --> 00:00:19,110
+So, quite a few of you.
+
+10
+00:00:19,110 --> 00:00:20,820
+It's great to see you back.
+
+11
+00:00:20,820 --> 00:00:29,670
+For those of you that haven't come, this is a talk where I cover innovations across the spectrum of everything
+
+12
+00:00:29,670 --> 00:00:38,070
+in the Azure infrastructure, from data centers all the way to cybersecurity and the cyber systems that we've got under development in Azure.
+
+13
+00:00:38,070 --> 00:00:43,290
+One of the notes that I make about this is that I'm showing you things, in some cases,
+
+14
+00:00:43,290 --> 00:00:47,640
+that haven't shipped yet, some things that we're working on, some things that maybe have just shipped.
+
+15
+00:00:47,640 --> 00:00:55,150
+For things that haven't shipped, they might not necessarily ever ship or ship in the same kind of view that you see me present them at.
+
+16
+00:00:55,175 --> 00:00:56,661
+So that's just a caveat and takeaway.
+
+17
+00:00:56,686 --> 00:01:04,410
+But I thought it's fun to give you an under-the-hood look at what we're doing and what powers the infrastructure of Azure and Azure innovation.
+
+18
+00:01:04,410 --> 00:01:06,180
+So let's start with infrastructure.
+
+19
+00:01:06,180 --> 00:01:12,120
+And you've seen these pictures of the Fairwater data centers.
+
+20
+00:01:12,120 --> 00:01:16,005
+And this kind of sets a framework for a lot of the innovation that I'm going to be showing here,
+
+21
+00:01:16,029 --> 00:01:25,410
+which is innovation powering AI, specifically the co-design of AI data centers, the core infrastructure, and the software that runs on top of it.
+
+22
+00:01:25,410 --> 00:01:28,260
+I had a really awesome experience in November.
+
+23
+00:01:28,260 --> 00:01:30,870
+I got to go visit Fairwater in Atlanta.
+
+24
+00:01:30,870 --> 00:01:33,420
+These are Fairwater in Wisconsin, Fairwater in Atlanta.
+
+25
+00:01:33,420 --> 00:01:35,760
+The Atlanta site is on the right.
+
+26
+00:01:35,760 --> 00:01:43,486
+And I got to go in to it, and I thought I'd show you a quick video tour of it, just a few seconds of me walking through it.
+
+27
+00:01:43,511 --> 00:01:45,030
+And I don't know why that didn't play.
+
+28
+00:01:45,030 --> 00:01:50,790
+Maybe I need to hit the play button up here.
+
+29
+00:01:50,790 --> 00:01:53,340
+So this is me looking like Builder Bob walking through.
+
+30
+00:01:53,340 --> 00:01:55,230
+That's because it's under construction.
+
+31
+00:01:55,230 --> 00:01:57,240
+It's kind of continuously under construction.
+
+32
+00:01:57,240 --> 00:02:04,980
+This is the network cabling that connects the top floor servers and the bottom floor servers that goes up through trunks there, you can see.
+
+33
+00:02:04,980 --> 00:02:08,580
+There's enough cabling to wrap the earth four times in one of these.
+
+34
+00:02:08,580 --> 00:02:15,240
+Those are liquid cooling cables being laid there initially so that servers can be dropped in.
+
+35
+00:02:15,240 --> 00:02:18,900
+And you can see, we got to see one of these servers on the sled being racked.
+
+36
+00:02:18,900 --> 00:02:22,590
+These are the cables on the back, the InfiniBand and Ethernet cables.
+
+37
+00:02:22,590 --> 00:02:25,200
+And then you can see this is a brake fix that we got to watch.
+
+38
+00:02:25,200 --> 00:02:27,780
+This is the liquid cooling into the back of the racks.
+
+39
+00:02:27,780 --> 00:02:29,280
+And then I saw this on the tour.
+
+40
+00:02:29,280 --> 00:02:31,440
+The group had gone ahead of me.
+
+41
+00:02:31,440 --> 00:02:34,647
+I saw a plug and I plugged it in.
+
+42
+00:02:36,277 --> 00:02:37,669
+Because it's like, what's this?
+
+43
+00:02:37,694 --> 00:02:38,952
+Shouldn't be hanging like that.
+
+44
+00:02:38,977 --> 00:02:46,050
+And Scott Guthrie got a text literally a few minutes later saying it looks like we've already powered on Power Cell 3.
+
+45
+00:02:46,050 --> 00:02:48,146
+We didn't expect that.
+
+46
+00:02:48,171 --> 00:02:51,706
+I wanted to take credit, but I thought maybe I best shouldn't for that.
+
+47
+00:02:53,702 --> 00:02:56,994
+But inside the data centers themselves, we've got the servers, of course.
+
+48
+00:02:57,019 --> 00:03:01,080
+And one of the innovations that we've been developing in our servers is something called Azure Boost.
+
+49
+00:03:01,080 --> 00:03:12,360
+Azure Boost is aimed at offloading a lot of the processing of the data paths for storage and networking off the main server CPUs.
+
+50
+00:03:12,360 --> 00:03:14,790
+And it does this with an offload card.
+
+51
+00:03:14,790 --> 00:03:18,450
+We move the data planes off onto that offload card.
+
+52
+00:03:18,450 --> 00:03:20,550
+We power them with DPUs.
+
+53
+00:03:20,550 --> 00:03:24,180
+We've got cores on there as well, where we put our agent tree.
+
+54
+00:03:24,180 --> 00:03:32,850
+So we get the agents off the server as well, and this lets the workload have most of the control over what's going on on the server.
+
+55
+00:03:32,850 --> 00:03:34,500
+This Azure Boost card looks like this.
+
+56
+00:03:34,500 --> 00:03:38,440
+This is the latest generation of Azure Boost card that we've started to deploy in our data centers.
+
+57
+00:03:38,465 --> 00:03:41,580
+Here's an actual version of it right here.
+
+58
+00:03:41,580 --> 00:03:46,380
+And what you can see there, there's little black squares around the middle are D-RAM.
+
+59
+00:03:46,380 --> 00:03:48,420
+And then the middle is where the SOC is.
+
+60
+00:03:48,420 --> 00:03:53,010
+That's where the ARM cores and the DPU and FPGA are located.
+
+61
+00:03:53,010 --> 00:03:57,210
+That's where the data plane gets processed and the agents run.
+
+62
+00:03:57,210 --> 00:04:00,510
+Now some of the stats for Azure Boost are pretty staggering.
+
+63
+00:04:00,510 --> 00:04:03,810
+You can see here, just in last year,
+
+64
+00:04:03,810 --> 00:04:11,700
+since the previous generation of Azure Boost that I showed at last Build, we've gone to 20 gigabytes per second of remote storage.
+
+65
+00:04:11,700 --> 00:04:15,540
+And that's an increase, you can see there, of 1.4.
+
+66
+00:04:15,540 --> 00:04:21,060
+We've gone to 1 million IOPS for remote storage, and on local storage, 36 gigabytes per second,
+
+67
+00:04:21,060 --> 00:04:29,224
+this is to local NVMe, and 6.6 million IOPS through Azure Boost NVMe offload storage acceleration.
+
+68
+00:04:29,248 --> 00:04:33,260
+And then for networking, we've gone to 400 gigabits from 200 gigabits.
+
+69
+00:04:33,260 --> 00:04:41,910
+So those were two network ports that you saw there on the card, 200 gigabits each, and 400k connections per second, it supports.
+
+70
+00:04:41,910 --> 00:04:50,370
+Those two ports mean that they can go to two top-of-rack router switches, so that means that we can service top-of-rack routers, or if one fails,
+
+71
+00:04:50,370 --> 00:04:52,375
+we don't lose complete connectivity to the server.
+
+72
+00:04:52,400 --> 00:05:01,470
+And it also means that sub-second servicing is possible now on those tours with sub-second impact to the workloads running on those servers.
+
+73
+00:05:01,470 --> 00:05:07,260
+We've been deploying this for several years now, and we're over 30% of the fleet is now Azure Boost enabled.
+
+74
+00:05:07,260 --> 00:05:09,362
+Every single server gets an Azure Boost in it.
+
+75
+00:05:09,387 --> 00:05:16,020
+And then one of the cool innovations that I'll show you in a little bit is that we support guest virtual machine RDMA.
+
+76
+00:05:16,020 --> 00:05:25,616
+So this is basically memory to memory transfers, bypassing the networking stacks, because Azure Boost is facilitating that transport.
+
+77
+00:05:25,640 --> 00:05:33,420
+One of the things that I mentioned is we get the management services off the server, and we put them on the Azure Boost card.
+
+78
+00:05:33,420 --> 00:05:36,900
+And that lets us have Bare Metal instances.
+
+79
+00:05:36,900 --> 00:05:46,110
+We've introduced Bare Metal instances to unlimited access, specifically for OpenAI and OpenAI's use of that Fairwater data center.
+
+80
+00:05:46,110 --> 00:05:50,790
+So the servers in the data center, the GPU servers, are Bare Metal instances.
+
+81
+00:05:50,790 --> 00:05:58,710
+And I thought I'd show you just a quick demo of Bare Metal instances, which are going to be coming as a general purpose offering sometime in the near future.
+
+82
+00:05:58,710 --> 00:06:04,440
+But here, you can see we've got a metal instance, ND144 v6.
+
+83
+00:06:04,440 --> 00:06:06,810
+You can see here we're going to get the IP address,
+
+84
+00:06:06,810 --> 00:06:19,050
+and then we're going to SSH into it and actually see that it is a Bare Metal server, because we're going to look to see if virtualization services are running, and they're not.
+
+85
+00:06:19,050 --> 00:06:23,670
+And then we're going to look at the PCI bus using LSPCI.
+
+86
+00:06:23,670 --> 00:06:26,081
+And you can see we get lots of devices.
+
+87
+00:06:26,106 --> 00:06:29,790
+We're going to scroll to the top, and you can see there's a PCI bridge,
+
+88
+00:06:29,790 --> 00:06:39,150
+and then you can see the eight Ethernet controllers that are connected to the Mellanox RDMA-capable network adapters
+
+89
+00:06:39,150 --> 00:06:45,360
+that are attached to that for the backend network that those GPUs talk through to each other.
+
+90
+00:06:45,360 --> 00:06:46,770
+Now what do they talk?
+
+91
+00:06:46,770 --> 00:06:48,300
+What transport do they talk?
+
+92
+00:06:48,300 --> 00:06:53,280
+We switched to Ethernet from InfiniBand, actually, in those Fairwater data centers.
+
+93
+00:06:53,280 --> 00:06:58,170
+And instead of using RoCE, which is RDMA over converged Ethernet,
+
+94
+00:06:58,170 --> 00:07:03,840
+we've developed, with OpenAI and now a growing consortium of partners that are collaborating with us,
+
+95
+00:07:03,840 --> 00:07:09,060
+a new networking protocol called Multipath Reliable Connection, or MRC.
+
+96
+00:07:09,060 --> 00:07:16,290
+And the reason that we developed MRC is that when you talk about connecting 100,000 GPUs together,
+
+97
+00:07:16,290 --> 00:07:23,220
+that's an incredible amount of network fabric that those packets are going across from all of those GPUs.
+
+98
+00:07:23,220 --> 00:07:31,305
+If you have any congestion or any failure on a synchronous training job of that size, you're going to lose a ton of work.
+
+99
+00:07:31,330 --> 00:07:36,660
+You're going to have to go back to a checkpoint, restart the training job from where it left off.
+
+100
+00:07:36,660 --> 00:07:47,700
+So MRC is designed to be resilient in the face of these congestion issues or failures because it sprays the packets across independent network domains called planes.
+
+101
+00:07:47,700 --> 00:07:56,186
+And therefore, when a link gets dropped, the spraying just happens and rebalances to the planes that remain available.
+
+102
+00:07:56,211 --> 00:08:02,560
+And I'll show you a quick demo of that in action by showing you here.
+
+103
+00:08:04,530 --> 00:08:11,940
+What we're going to see is that I've got two servers talking to each other over four switches.
+
+104
+00:08:11,940 --> 00:08:17,130
+They're sending 4 gigabyte payloads to each other.
+
+105
+00:08:17,130 --> 00:08:21,570
+These 4 gigabytes are going to be packet sprayed across these.
+
+106
+00:08:21,570 --> 00:08:30,270
+And you can see we're getting roughly 95 gigabytes per second, and that's because we're spraying these across eight planes with 12 gigabits.
+
+107
+00:08:30,270 --> 00:08:33,660
+So that comes out to 12 gigabytes per plane.
+
+108
+00:08:33,660 --> 00:08:39,076
+And this is the aggregate bandwidth that we're seeing, which is 95 gigabytes per second.
+
+109
+00:08:39,101 --> 00:08:47,160
+This is what we're going to watch, because we want to maintain 95 gigabits per second there, which is our goal.
+
+110
+00:08:47,160 --> 00:08:48,510
+We see four switches.
+
+111
+00:08:48,534 --> 00:08:52,391
+You can see how much bandwidth is being spread across the switches.
+
+112
+00:08:52,416 --> 00:09:00,570
+There's actually two switches at this bandwidth here that you don't see, so this is 12, two 24s, and one 36, adding up to 95.
+
+113
+00:09:00,570 --> 00:09:03,150
+And now we're going to go kill one of those switches.
+
+114
+00:09:03,150 --> 00:09:07,260
+We're going to drop it off of the sending server.
+
+115
+00:09:07,260 --> 00:09:13,290
+So what it's going to do is now rebalance the spraying across the remaining three switches.
+
+116
+00:09:13,290 --> 00:09:16,530
+And our goal is to not see any drop in network bandwidth.
+
+117
+00:09:16,530 --> 00:09:18,780
+And, of course, that's exactly what we get.
+
+118
+00:09:18,780 --> 00:09:22,156
+You can see 95-ish gigabits per second.
+
+119
+00:09:22,180 --> 00:09:27,330
+And if we go take a look at the traffic over the switches, you can see that one of them went to zero,
+
+120
+00:09:27,330 --> 00:09:31,890
+and then the other one went up to 36 gigabits per second to compensate for that.
+
+121
+00:09:31,890 --> 00:09:42,678
+So MRC is what allows us to run these massive training jobs and has now become the industry standard for large network topologies.
+
+122
+00:09:44,680 --> 00:09:48,540
+Now I mentioned RDMA a few times.
+
+123
+00:09:48,540 --> 00:09:56,160
+And what I was showing you was MRC, which is what Open AI uses for their training jobs.
+
+124
+00:09:56,160 --> 00:10:00,570
+And they're doing RDMA, of course, between the servers in those training jobs.
+
+125
+00:10:00,570 --> 00:10:06,950
+But what we want to introduce is to more general-purpose workloads RDMA through virtual machines.
+
+126
+00:10:06,950 --> 00:10:16,806
+Now when you talk between one VM and another VM through Azure Boost, they could be on different servers, you're going through these networking stacks.
+
+127
+00:10:16,830 --> 00:10:23,460
+The application talks to TCP/IP, which talks to our MANA driver, the Microsoft Accelerated Network Adapter driver,
+
+128
+00:10:23,460 --> 00:10:27,900
+which is the Azure Boost network adapter driver, and then it goes back up.
+
+129
+00:10:27,900 --> 00:10:33,120
+And there's a lot of memory copy operations and a lot of synchronization happening through that.
+
+130
+00:10:33,120 --> 00:10:35,690
+With RDMA, you bypass all that.
+
+131
+00:10:35,690 --> 00:10:40,220
+So the application maps memories basically in the remote system,
+
+132
+00:10:40,220 --> 00:10:45,560
+can drop data right into its own local presentation of that,
+
+133
+00:10:45,560 --> 00:10:50,460
+and Azure Boost takes care of sending that and dropping it in the memory on the other side.
+
+134
+00:10:50,460 --> 00:11:00,540
+And this completely eliminates a lot of that synchronization as well as the memory copies and all that software path that you get through those networking stack.
+
+135
+00:11:00,540 --> 00:11:07,020
+So I'm going to show you a demo of virtual machine to virtual machine RDMA over Azure Boost.
+
+136
+00:11:07,020 --> 00:11:12,363
+The scenario here is common in AI workloads, where you're doing inference.
+
+137
+00:11:12,388 --> 00:11:17,010
+And inference, you can break up into two parts: prefill and decode.
+
+138
+00:11:17,010 --> 00:11:25,230
+Prefill is taking your prompt and then getting the tokens from that prompt and the KV cache populated from that prompt.
+
+139
+00:11:25,230 --> 00:11:30,750
+And then decode starts to generate new tokens based off of that system of that prompt.
+
+140
+00:11:30,750 --> 00:11:37,320
+So it's efficient and now common to split those into different server pools, so one pool for prefill,
+
+141
+00:11:37,320 --> 00:11:43,980
+one pool for decode, because they both have different constraints when it comes to memory and compute.
+
+142
+00:11:43,980 --> 00:11:53,105
+So here, we're going to start this demo of... RDMA.
+
+143
+00:11:53,130 --> 00:11:56,790
+So first, we're going to look at the performance over the TCP/IP stack.
+
+144
+00:11:56,790 --> 00:12:01,050
+So here's the pre-filler server using TCP/IP.
+
+145
+00:12:01,050 --> 00:12:07,050
+Here's the decoder server, also using TCP/IP, the way we're launching it.
+
+146
+00:12:07,050 --> 00:12:15,910
+And then we're going to go run this vLLM benchmark that does this prefill decode load between those two servers.
+
+147
+00:12:17,250 --> 00:12:20,952
+And then we're going to go take a look at our RDMA stats, which is in the bottom right.
+
+148
+00:12:20,977 --> 00:12:25,440
+And you're going to see that they don't change as this workload runs, there's 460 send requests.
+
+149
+00:12:25,440 --> 00:12:27,900
+Just keep your eye on that one.
+
+150
+00:12:27,900 --> 00:12:34,770
+But then if you take a look at the performance, the token throughput, which is what we really want, is about 3,400.
+
+151
+00:12:34,770 --> 00:12:41,580
+The median time to first token, which is another important stat for inference, is 123,000.
+
+152
+00:12:41,580 --> 00:12:51,570
+But when we switch over to RDMA and use the MANA link for that, you can see there's the F1 Verbs Device Name as MANA 0.
+
+153
+00:12:51,570 --> 00:12:57,360
+We do the same thing on the decode server, MANA 0.
+
+154
+00:12:57,360 --> 00:13:04,260
+And then let's go take a look at the stats, and you can see 460, but this is going to change now, because we're running the RDMA test.
+
+155
+00:13:04,260 --> 00:13:08,670
+And it changed to 506 because we've sent a whole lot of packets now over to RDMA.
+
+156
+00:13:08,670 --> 00:13:12,810
+And then we've almost doubled the throughput to 7637.
+
+157
+00:13:12,810 --> 00:13:19,470
+And then you can see our mean time to first token has dropped to just 47,000 milliseconds.
+
+158
+00:13:19,470 --> 00:13:29,700
+So that's the performance benefit of RDMA that we're deploying and using in our inference clusters behind Foundry, powered by Azure Boost.
+
+159
+00:13:29,700 --> 00:13:32,130
+Okay, so let's take a look at our core now.
+
+160
+00:13:32,130 --> 00:13:36,600
+So that's kind of Fairwater infrastructure and some of the networking behind it.
+
+161
+00:13:36,600 --> 00:13:38,580
+Let's go take a look at the core.
+
+162
+00:13:38,580 --> 00:13:44,405
+And this is one of the sections that I get very excited about, because the future is serverless.
+
+163
+00:13:44,430 --> 00:13:46,170
+And I've been saying this for a long time.
+
+164
+00:13:46,170 --> 00:13:52,979
+If you've come to previous Inside Azure Innovation talks, even going back 10 years, I've been saying serverless is the future.
+
+165
+00:13:53,004 --> 00:14:00,840
+Well, serverless as the future is really arriving now with Azure Container Instances, which Azure Container instances,
+
+166
+00:14:00,840 --> 00:14:09,367
+the idea here is that we've got -- typically, when it comes to containers, you think about containers the way they started, which is process isolated containers.
+
+167
+00:14:09,392 --> 00:14:13,470
+So they're using the operating system primitives to try to keep them separate from each other.
+
+168
+00:14:13,470 --> 00:14:15,240
+But there's a problem with that.
+
+169
+00:14:15,240 --> 00:14:21,420
+We don't consider a process or user mode kernel as a security boundary in Azure.
+
+170
+00:14:21,420 --> 00:14:33,630
+We only consider virtualization with a very tight connection between -- small connection between the server and the host to be a security boundary in Azure.
+
+171
+00:14:33,630 --> 00:14:39,180
+So with Azure Container Instances, we isolate those containers with Hyper-V.
+
+172
+00:14:39,180 --> 00:14:45,180
+And this is nested hypervisor here inside a virtual machine with the containers on them.
+
+173
+00:14:45,205 --> 00:14:49,954
+One of the things I'm going to show you in a little bit is where we're going with this, which is direct virtualization.
+
+174
+00:14:49,980 --> 00:14:52,140
+So I'll save a description of that.
+
+175
+00:14:52,140 --> 00:15:00,849
+But what I want to show you is we're making a ton of progress in adopting Azure Container Instances throughout all of not just Azure, but Microsoft services.
+
+176
+00:15:00,874 --> 00:15:04,970
+I'm sure that if you take a look at this, you can see some service that you've been using,
+
+177
+00:15:04,994 --> 00:15:12,420
+which means you're indirectly using Azure Container Instances, whether, for example, GitHub Actions is now running on Azure Container Instances.
+
+178
+00:15:12,420 --> 00:15:16,110
+You can see Python and Excel running on Azure Container Instances.
+
+179
+00:15:16,110 --> 00:15:22,800
+Horizon DB, which you might have gone to sessions about here at Build, running on Azure Container Instances.
+
+180
+00:15:22,800 --> 00:15:31,410
+So one of the things that we've been doing is trying to make Container Instances more efficient and also support more scenarios and make it
+
+181
+00:15:31,410 --> 00:15:34,500
+so that you never need to do process isolation.
+
+182
+00:15:34,500 --> 00:15:37,920
+One of those is taking out the virtualization overhead.
+
+183
+00:15:37,920 --> 00:15:48,510
+And this is what we call direct virtualization, is putting the containers right on the servers as peers to the management's virtual machine.
+
+184
+00:15:48,510 --> 00:15:52,980
+We call this the parent partition or Layer 1 virtualization host.
+
+185
+00:15:52,980 --> 00:16:02,310
+And these are Layer 2 virtualization hosts, or child VMs, that are simply hosting individual containers, or pods.
+
+186
+00:16:02,310 --> 00:16:08,790
+And this gives us that strong hostile multi-tenant isolation for container instances.
+
+187
+00:16:08,790 --> 00:16:19,140
+Now one of the other Azure Container Instances of cells now runs on top of 01 virtualization or direct virtualization,
+
+188
+00:16:19,140 --> 00:16:23,760
+where we're migrating our entire fleet over to direct virtualization.
+
+189
+00:16:23,760 --> 00:16:32,790
+This will probably take a year or two to migrate the whole fleet, but this is something that is going to give us a lot of performance and efficiency benefits.
+
+190
+00:16:32,790 --> 00:16:43,410
+Now we want to make containers have all of the same capabilities of virtual machines, all of the same abilities to attach network devices and storage devices.
+
+191
+00:16:43,410 --> 00:16:52,650
+One of the benefits you get out of a virtual machine today on any hyperscaler, including Azure, is minimal downtime when the server needs to be serviced
+
+192
+00:16:52,650 --> 00:16:56,940
+or the server is going unhealthy, and we recognize that ahead of time.
+
+193
+00:16:56,940 --> 00:16:59,640
+And that is with live migration.
+
+194
+00:16:59,640 --> 00:17:03,330
+What's been missing with containers is support for live migration.
+
+195
+00:17:03,330 --> 00:17:09,330
+So I want to show you the first public demo of Container Live Migration in Azure here,
+
+196
+00:17:09,330 --> 00:17:16,720
+where we can take a bunch of containers and move them from one server over to another server.
+
+197
+00:17:20,700 --> 00:17:27,750
+So here I've got a container that's running on one pool of servers.
+
+198
+00:17:27,750 --> 00:17:31,830
+And here's another pool of servers over here that we're going to migrate it to.
+
+199
+00:17:31,830 --> 00:17:35,136
+So this is our live migration for container instances.
+
+200
+00:17:35,161 --> 00:17:41,100
+You can see this is still under development, which is why we're using these command lines here.
+
+201
+00:17:41,100 --> 00:17:45,950
+And we've got this running over on Dev Box 6, Server Dev 6.
+
+202
+00:17:45,950 --> 00:17:51,080
+And we've got this container workload, it's simply spitting out a tick every second.
+
+203
+00:17:51,080 --> 00:17:53,150
+You can see we're up to Tick 695.
+
+204
+00:17:53,150 --> 00:18:00,180
+And the migration now has kicked in and that container is no longer running on that server, which is why that stopped.
+
+205
+00:18:00,180 --> 00:18:08,580
+Now if we go over and take a look at the other server, it's migrated to, Dev 1, and we look at what's running in it.
+
+206
+00:18:08,580 --> 00:18:11,760
+You can see that there's our Hello World there.
+
+207
+00:18:11,760 --> 00:18:19,800
+And if we go take a look at what's running inside of that, you can see there is the file that it's been dropping those ticks into.
+
+208
+00:18:19,800 --> 00:18:21,990
+We're already way way up to 755.
+
+209
+00:18:21,990 --> 00:18:28,110
+So let's go take a look and make sure that 695 was in there, and we didn't have any kind of gap.
+
+210
+00:18:28,110 --> 00:18:31,690
+So we're going to go to a CAT, scroll back up.
+
+211
+00:18:33,240 --> 00:18:37,020
+And there it is, 695 right there.
+
+212
+00:18:37,020 --> 00:18:39,420
+So no gap at all.
+
+213
+00:18:39,420 --> 00:18:44,820
+So container live migrating from one server to another on top of Azure Container Instance.
+
+214
+00:18:44,820 --> 00:18:46,520
+By the way, feel free to clap at any time.
+
+215
+00:18:50,924 --> 00:18:52,020
+All right.
+
+216
+00:18:52,020 --> 00:18:54,930
+Let's switch over to talking a little bit about AI.
+
+217
+00:18:54,930 --> 00:18:59,799
+I know that there's AI fatigue, but I think we're doing some cool stuff with AI that I'd like to share with you.
+
+218
+00:18:59,824 --> 00:19:09,120
+And one of those is talking a little bit about what powers all of Microsoft's own inference and own training, and that's a system called Manifold.
+
+219
+00:19:09,120 --> 00:19:18,510
+Manifold's idea is to treat all our pool of GPUs as one pool to do priority-based deployments of workloads
+
+220
+00:19:18,510 --> 00:19:27,750
+to understand the topologies of AI-based inference and training workloads to most efficiently use that GPU capacity and to also abstract the underlying hardware.
+
+221
+00:19:27,750 --> 00:19:33,150
+You can see that it supports ASICS, it supports GPUs, FPGAs, and even CPUs.
+
+222
+00:19:33,150 --> 00:19:40,920
+And more and more, we have models that consist of CPU portions of the model and GPU portions of the model,
+
+223
+00:19:40,920 --> 00:19:48,660
+including models that actually have mini models inside of them, like they might have an embedding model within them.
+
+224
+00:19:48,660 --> 00:19:55,552
+They might have a visual large language model embedded within them, if they're a multimodal model.
+
+225
+00:19:55,577 --> 00:19:59,030
+And so these topologies are getting more complicated.
+
+226
+00:19:59,030 --> 00:20:08,970
+Now what we want to do is bring this power of Azure container instances in this isolation to workloads
+
+227
+00:20:08,970 --> 00:20:10,980
+like this on top of direct virtualization,
+
+228
+00:20:10,980 --> 00:20:21,210
+where we can put CPU containers inside of its own Hyper-V isolated container and the AI model components, those containers,
+
+229
+00:20:21,235 --> 00:20:27,770
+in their own separate ones too, so they don't interfere with each other, and they get direct access to hardware at the same time.
+
+230
+00:20:27,770 --> 00:20:34,680
+And this is a benefit of direct virtualization is we can assign the GPU to a virtual machine.
+
+231
+00:20:34,680 --> 00:20:44,220
+That virtual machine can then create a sub-virtual machine, one of these L2s, and then give the GPUs that it's got over to that container.
+
+232
+00:20:44,220 --> 00:20:47,160
+And then it has direct access to that hardware.
+
+233
+00:20:47,160 --> 00:20:52,570
+So let me show you this demo of Manifold.
+
+234
+00:20:55,670 --> 00:21:05,430
+And what we're going to see here is if I get the nodes in this cluster, we're going to go take a look at one of those nodes and get the pods in the node.
+
+235
+00:21:05,430 --> 00:21:12,353
+And there's one pod in there, which is Llama 4 server.
+
+236
+00:21:12,378 --> 00:21:14,460
+And there's another one, which is a metrics server.
+
+237
+00:21:14,460 --> 00:21:17,790
+One of them is a GPU-based one, one is a CPU-based one.
+
+238
+00:21:17,790 --> 00:21:27,530
+When we go take a look inside the pod that's got the GPU, the Llama model in it, you can see it's got the GPUs visible to it It's got a whole bunch of RAM visible to it.
+
+239
+00:21:27,530 --> 00:21:30,760
+And it's got a whole bunch of processors assigned to it.
+
+240
+00:21:30,785 --> 00:21:36,980
+And you can see the Nvidia SMI command shows us that it actually has those GPUs available to it.
+
+241
+00:21:36,980 --> 00:21:44,030
+When we go take a look at the CPU pod sitting right next to it on the same server, you can see that it's got almost no memory.
+
+242
+00:21:44,030 --> 00:21:45,890
+It's only got two processors.
+
+243
+00:21:45,890 --> 00:21:48,786
+And it's got no GPUs attached to it.
+
+244
+00:21:48,811 --> 00:21:50,190
+And just to prove to you it works,
+
+245
+00:21:50,190 --> 00:22:01,680
+we're going to go take a look at this cat video and send this for inference to that GPU pod sitting there with direct access to GPUs, the Llama 4 Maverick model there,
+
+246
+00:22:01,680 --> 00:22:06,150
+and then successfully do an inference there.
+
+247
+00:22:06,150 --> 00:22:19,520
+The point being proven here that we've got CPU pods completely isolated from GPU pods directly attached to the physical server hardware because of direct virtualization.
+
+248
+00:22:24,653 --> 00:22:26,880
+Now we're also not just optimizing the compute.
+
+249
+00:22:26,880 --> 00:22:37,890
+We're also optimizing the way that inference works in terms of KV caches, which is -- the KV cache is effectively the state of the LLM.
+
+250
+00:22:37,890 --> 00:22:48,030
+And you can't do decoding efficiently without having a KV cache which represents the processing of all the previous tokens in the prompt.
+
+251
+00:22:48,030 --> 00:22:51,728
+When you interact with an LLM, you do so typically using turns.
+
+252
+00:22:51,753 --> 00:22:54,780
+And so you might have Turn 1, where you just have a system prompt.
+
+253
+00:22:54,780 --> 00:22:58,380
+Let's say you're doing a PR diff because you're doing development.
+
+254
+00:22:58,380 --> 00:23:04,380
+And you engage in an interaction with Copilot on that PR diff.
+
+255
+00:23:04,380 --> 00:23:11,310
+And what that means is that you're extending the prompt effectively, your specific prompt.
+
+256
+00:23:11,310 --> 00:23:14,010
+In an ideal case, you don't just want to cache the system prompt.
+
+257
+00:23:14,010 --> 00:23:23,790
+And this is what a lot of AI frameworks let you do is they say, hey, cache this for me, and then I'm not going to have to pay the cost for decoding this again or prefilling it.
+
+258
+00:23:23,790 --> 00:23:26,760
+But what you really want is the whole thing to be cached,
+
+259
+00:23:26,760 --> 00:23:35,100
+so that if your workload moves, your inference moves from one GP to another, one server to another, that you're not repaying this price.
+
+260
+00:23:35,100 --> 00:23:42,810
+And we can only do this if we've got a cache that sits all the way behind all of the servers.
+
+261
+00:23:42,810 --> 00:23:46,710
+So this is something that we've got coming out in preview now called Azure Context Cache.
+
+262
+00:23:46,710 --> 00:23:52,260
+The idea here is that Azure Context Cache, behind it, has a storage account.
+
+263
+00:23:52,260 --> 00:23:58,860
+And that storage account is where we're caching the KV state for all of the inference requests.
+
+264
+00:23:58,860 --> 00:24:01,500
+So regardless of what server they go to,
+
+265
+00:24:01,500 --> 00:24:13,410
+if the prompt is not there, the KV isn't there, we can look it up in the cache and fetch it in and not have to decode that again, saving time and money.
+
+266
+00:24:13,410 --> 00:24:17,140
+So let's go take a look at that Azure Context Cache in action.
+
+267
+00:24:19,620 --> 00:24:28,650
+So here, we're sending, concurrency level one, we're sending a bunch of queries into the system, all with the same system prompt.
+
+268
+00:24:28,650 --> 00:24:31,140
+And you can see that we had all of those cached.
+
+269
+00:24:31,140 --> 00:24:39,736
+The cache hit rate was 81%, because after the first request goes to the server, the next one is likely gonna have that system prompt already cached in it.
+
+270
+00:24:39,761 --> 00:24:43,773
+But when we do a concurrency level of 10, they're going to get sprayed across servers,
+
+271
+00:24:43,797 --> 00:24:50,070
+and our cache hit rate actually goes down because now sometimes a request is landing on a server without the system prompt.
+
+272
+00:24:50,070 --> 00:24:57,720
+So a lot of systems have you set this cache key unique to try to pin a conversation on a particular server, an endpoint.
+
+273
+00:24:57,720 --> 00:25:06,420
+The hit rate actually drops there because every conversation gets mapped to a different server intentionally where the system prompt might not have already shown up.
+
+274
+00:25:06,420 --> 00:25:10,980
+So the first hit there is always -- the first query there is always going to be a miss.
+
+275
+00:25:10,980 --> 00:25:21,000
+But when we set the prompt cache, you can see that the prompt cache rate, hit rate is going to go up.
+
+276
+00:25:21,000 --> 00:25:23,400
+Where did the demo go here?
+
+277
+00:25:23,400 --> 00:25:28,710
+Went up to 96% with the remote cache here; 96.2% is the hit rate here.
+
+278
+00:25:28,710 --> 00:25:34,140
+And that's because no matter which server the query lands on,
+
+279
+00:25:34,140 --> 00:25:40,740
+the prompt is -- the KV cache for that prompt is going to be fetched from remote cache if it wasn't there.
+
+280
+00:25:40,740 --> 00:25:48,300
+So transparently, behind the scenes, this prompt cache using Azure storage to go and spread out the KV cache across the servers,
+
+281
+00:25:48,300 --> 00:25:57,210
+effectively making the servers have a pool cache rather than individual server-based caches, which is going to improve hit rate, which is going to save money,
+
+282
+00:25:57,210 --> 00:26:03,780
+so you're not having to pay for the prefill on those system caches every time you have a miss.
+
+283
+00:26:03,780 --> 00:26:04,950
+All right.
+
+284
+00:26:04,950 --> 00:26:08,790
+So let's take a look at the next cool innovation.
+
+285
+00:26:08,790 --> 00:26:15,210
+And I've got a -- it's like an ACI-themed talk, because this is one of the cool things about ACI.
+
+286
+00:26:15,210 --> 00:26:19,399
+When you talk about containers, you're talking about layers and images.
+
+287
+00:26:19,424 --> 00:26:24,750
+When you talk about virtual machines, you're talking about full-blown virtual machine images.
+
+288
+00:26:24,750 --> 00:26:34,380
+Now, when you talk about container sandboxes, you're typically talking about something that is very bespoke, kind of a custom image, and it's very small and lightweight.
+
+289
+00:26:34,380 --> 00:26:37,140
+And this is what you want to be extremely fast.
+
+290
+00:26:37,140 --> 00:26:46,350
+Now one of the ways to get a fast startup for a container image, which you want with these for these agents to be able to say, "I'm going to go write a Python script
+
+291
+00:26:46,350 --> 00:26:55,590
+and run it, I'm going to go create a little HTML site and iterate on it," is you want the startup to be close to instantaneous.
+
+292
+00:26:55,590 --> 00:27:02,370
+When it comes to containers, you can get startup times in the five, 20-second range, depending on what the OS is.
+
+293
+00:27:02,370 --> 00:27:11,550
+But we want literally thousands of these things to be able to start simultaneously and to start very quickly off of the same base image.
+
+294
+00:27:11,550 --> 00:27:14,040
+The way we do that is with memory snapshotting.
+
+295
+00:27:14,040 --> 00:27:20,340
+So we actually start the container, snapshot its memory, and then if you get a request for the same container,
+
+296
+00:27:20,340 --> 00:27:26,970
+we simply map the memory, and we skip all the initialization and map it right into a running container box.
+
+297
+00:27:26,970 --> 00:27:30,090
+So let me show you one of, I think, my favorite demo of this,
+
+298
+00:27:30,090 --> 00:27:37,886
+which is, how would you like to see 10,000 container sandboxes launch?
+
+299
+00:27:39,540 --> 00:27:44,580
+Okay, because if the answer is yes, that's the rest of the session.
+
+300
+00:27:44,580 --> 00:27:46,626
+I'm just kidding, no, I'm just kidding.
+
+301
+00:27:46,651 --> 00:27:51,630
+What I'm going to show you is that we can do this incredibly quickly.
+
+302
+00:27:51,630 --> 00:27:56,970
+So I've got 10 workers launching 1,000 of these container sandboxes each.
+
+303
+00:27:56,970 --> 00:28:02,730
+And we've got a little animation to show you the progress of those launches here.
+
+304
+00:28:02,730 --> 00:28:03,930
+So here we go.
+
+305
+00:28:03,930 --> 00:28:06,310
+Create 10 worker pods.
+
+306
+00:28:10,650 --> 00:28:12,960
+Here we go.
+
+307
+00:28:12,960 --> 00:28:15,270
+So each one is going to add 1,000.
+
+308
+00:28:15,270 --> 00:28:17,460
+This represents 1,000.
+
+309
+00:28:17,460 --> 00:28:18,876
+You can see them launching.
+
+310
+00:28:20,705 --> 00:28:23,376
+A few down here left.
+
+311
+00:28:23,400 --> 00:28:25,170
+Boom, done.
+
+312
+00:28:25,170 --> 00:28:29,460
+10,000 container sandboxes.
+
+313
+00:28:31,840 --> 00:28:37,140
+Average container sandbox launch time, two seconds.
+
+314
+00:28:37,140 --> 00:28:40,410
+So not just speed, but scale at the same time.
+
+315
+00:28:40,410 --> 00:28:43,380
+So this is, like I said, one of the really cool demos.
+
+316
+00:28:43,380 --> 00:28:50,926
+And so you're going to see the agent sandboxing land on top of Azure Container Instance.
+
+317
+00:28:50,951 --> 00:28:52,108
+All right.
+
+318
+00:28:52,133 --> 00:28:58,410
+Let's go into our last section now and talk about, or second to last section, and talk a little bit about security.
+
+319
+00:28:58,410 --> 00:29:06,823
+And one of the exciting things for me about security is the evolution of something called confidential computing.
+
+320
+00:29:06,848 --> 00:29:09,180
+How many people have heard of confidential computing?
+
+321
+00:29:09,180 --> 00:29:10,530
+So, quite a few of you.
+
+322
+00:29:10,530 --> 00:29:18,570
+For those of you that haven't heard of confidential computing, the easiest way to think about it is in the context of how your data gets protected.
+
+323
+00:29:18,570 --> 00:29:26,220
+And for a long time now, everybody encrypts their network traffic.
+
+324
+00:29:26,220 --> 00:29:32,070
+Over the last 20 years or so, it went from every now and then you'd run into a site with SSL.
+
+325
+00:29:32,070 --> 00:29:37,800
+And now every single site, every single network connection has to have TLS on it.
+
+326
+00:29:37,800 --> 00:29:42,210
+Then, the other part of protecting is while it's at rest.
+
+327
+00:29:42,210 --> 00:29:44,580
+And this is where it's stored on disk.
+
+328
+00:29:44,580 --> 00:29:46,080
+You want to have that encrypted, too,
+
+329
+00:29:46,080 --> 00:29:55,170
+so if the storage gets accessed outside of the protection of the logical protections of the workload on top of it, that the data is useless.
+
+330
+00:29:55,170 --> 00:29:57,570
+And we not only have now in cloud.
+
+331
+00:29:57,570 --> 00:29:59,669
+We started with node data encryption at rest.
+
+332
+00:29:59,694 --> 00:30:01,470
+And now we've got server-side encryption.
+
+333
+00:30:01,470 --> 00:30:05,975
+We also have customer managed key, where you can bring your own encryption and have double layered encryption of data at rest.
+
+334
+00:30:06,000 --> 00:30:16,620
+But what's been missing largely is protecting the data while it's in use, because when that data gets decrypted on the server or pulled off the disk in clear text, it's sitting
+
+335
+00:30:16,620 --> 00:30:22,860
+in there on the server, maybe inside of a virtual machine, but still in the server environment.
+
+336
+00:30:22,860 --> 00:30:34,140
+And what can access that data includes everything from the hypervisor to the admins to the host software to a malicious hacker that might penetrate the infrastructure.
+
+337
+00:30:34,140 --> 00:30:36,000
+All of those can get access.
+
+338
+00:30:36,000 --> 00:30:38,310
+And even in your own applications,
+
+339
+00:30:38,310 --> 00:30:48,030
+you want to keep maybe your own operators away from that data and only have the compute that needs to have access to that data have access to that data.
+
+340
+00:30:48,030 --> 00:30:49,380
+That is confidential computing.
+
+341
+00:30:49,380 --> 00:30:57,000
+Now one aspect of confidential computing that is not just this protection of that data in a hardware enclave,
+
+342
+00:30:57,000 --> 00:31:04,380
+where none of those things can get inside of it, is that the hardware also can measure what's inside the enclave.
+
+343
+00:31:04,380 --> 00:31:06,720
+And that measurement is called an attestation.
+
+344
+00:31:06,720 --> 00:31:14,790
+And some code inside that enclave can ask the hardware for a quote, which is the attestation, present it to a relying party,
+
+345
+00:31:14,790 --> 00:31:24,420
+which is typically a key management service that has a policy on it that says only release this key to an enclave of this hardware type
+
+346
+00:31:24,420 --> 00:31:29,250
+with the security version number on it with this configuration of code.
+
+347
+00:31:29,250 --> 00:31:31,380
+And at that point, the key gets released.
+
+348
+00:31:31,380 --> 00:31:34,590
+It's encrypted to the enclave, the code in the enclave.
+
+349
+00:31:34,590 --> 00:31:43,890
+The code in the enclave decrypts the key and then can start to process the data in the clear, and everybody knows that it's being protected with that hardware isolation.
+
+350
+00:31:43,890 --> 00:31:45,630
+That is confidential computing.
+
+351
+00:31:45,630 --> 00:31:54,240
+We've been working on enabling confidential computing in Azure for over a decade, starting with Intel SGX servers
+
+352
+00:31:54,240 --> 00:32:00,570
+in the data center, and now virtual machines from AMD and Intel in the data center.
+
+353
+00:32:00,570 --> 00:32:05,550
+And our portfolio is the largest of any hyperscaler when it comes to confidential computing services,
+
+354
+00:32:05,550 --> 00:32:13,753
+confidential computing container offerings like confidential containers on ACI, as well as the hardware infrastructure underneath it.
+
+355
+00:32:16,080 --> 00:32:18,270
+I talked before about live migration.
+
+356
+00:32:18,270 --> 00:32:28,530
+And live migration is one of those things that allows us to run the fleet efficiently, because we can move workloads around to reduce fragmentation.
+
+357
+00:32:28,530 --> 00:32:34,200
+We can also make customer workloads more reliable because we can move them if we see a server is going to fail.
+
+358
+00:32:34,200 --> 00:32:38,760
+We can also move them around if we need to service a host in an impactful way.
+
+359
+00:32:38,760 --> 00:32:44,610
+And that means that the customer's workload is not as impacted by that servicing operation.
+
+360
+00:32:44,610 --> 00:32:50,010
+It is a fundamental requirement of a hyperscale cloud to have live migration.
+
+361
+00:32:50,010 --> 00:32:57,390
+And this has unfortunately been one of the missing gaps in confidential computing offerings is lack of live migration.
+
+362
+00:32:57,390 --> 00:33:03,930
+So we've been working deeply with Intel on confidential live migration.
+
+363
+00:33:03,930 --> 00:33:08,040
+And the way that works is you have a confidential virtual machine here on one server.
+
+364
+00:33:08,040 --> 00:33:14,850
+We've got something called a migration TD, which is a partition, effectively.
+
+365
+00:33:14,850 --> 00:33:24,570
+Think of it as a confidential partition that is also measured as part of the virtual machine's measurement and that the receiving side has a policy and the sending side
+
+366
+00:33:24,570 --> 00:33:35,430
+as a policy that says I will only migrate the contents of this virtual machine to another server with the MigTD that is approved for this virtual machine,
+
+367
+00:33:35,430 --> 00:33:45,060
+so effectively extending the confidential trust boundary between two servers, adhering to policy that is being enforced
+
+368
+00:33:45,060 --> 00:33:46,860
+with the confidential computing hardware.
+
+369
+00:33:46,860 --> 00:33:53,790
+I'm going to show you for the first time ever a confidential virtual machine being live migrated from one server to another.
+
+370
+00:33:53,790 --> 00:33:58,030
+This is the first time ever this has been shown publicly.
+
+371
+00:34:00,090 --> 00:34:04,615
+So here, we have one server here, Hyper-V manager, you can see, a lot of you are familiar with it.
+
+372
+00:34:04,640 --> 00:34:06,030
+There's our CVM.
+
+373
+00:34:06,030 --> 00:34:09,300
+Here's the other server manager on the other side.
+
+374
+00:34:09,300 --> 00:34:11,220
+You can see no virtual machines there.
+
+375
+00:34:11,220 --> 00:34:14,100
+You can see there's our MigTD that we have in this virtual machine.
+
+376
+00:34:14,100 --> 00:34:21,810
+And here we're looking at the output of RDP into that virtual machine on Server 1.
+
+377
+00:34:21,810 --> 00:34:23,790
+And you can see it's pinging every second.
+
+378
+00:34:23,790 --> 00:34:25,950
+That's typical in a live migration demo.
+
+379
+00:34:25,950 --> 00:34:28,070
+Now we started migrating this virtual machine.
+
+380
+00:34:28,070 --> 00:34:36,630
+You can see this is going to take a while, so we're going to speed it up a little bit, because this is a large virtual machine with a few gigabytes of RAM.
+
+381
+00:34:36,630 --> 00:34:41,078
+You can see the TD info attestations that are happening that we've got printed out.
+
+382
+00:34:41,103 --> 00:34:44,100
+And then boom, the CVM just moved,
+
+383
+00:34:44,100 --> 00:34:52,550
+and it's on the other side, which is why we saw that RDP connection die, because it's connected to the IP address on that first machine.
+
+384
+00:34:52,550 --> 00:35:01,620
+But that right there, first time ever, and it's not in production yet, but you can see that we just literally achieved this in the last few weeks,
+
+385
+00:35:01,620 --> 00:35:05,520
+the first confidential virtual machine line migration anywhere.
+
+386
+00:35:10,458 --> 00:35:16,530
+Now the next thing I'm going to show you is something that I also think is really, really cool.
+
+387
+00:35:16,530 --> 00:35:19,553
+And this is something else that Microsoft has pioneered.
+
+388
+00:35:19,578 --> 00:35:24,430
+We've been working on hardware-based roots of trust for a while.
+
+389
+00:35:24,455 --> 00:35:27,810
+We've got something called Caliptra that we donated to the OpenCUBE project.
+
+390
+00:35:27,810 --> 00:35:31,800
+It is our root of trust that we deploy in every single server.
+
+391
+00:35:31,800 --> 00:35:38,693
+But when I was working with the architects, hardware security architects in Azure,
+
+392
+00:35:38,718 --> 00:35:43,320
+and thinking, you know what we're missing it's not just a root of trust,
+
+393
+00:35:43,320 --> 00:35:54,210
+but we need key management inside of our hardware that we put into every server, because what that will allow us to do is keep keys protected
+
+394
+00:35:54,210 --> 00:36:01,500
+with hardware throughout their whole life cycle, never have them exit the hardware trust boundary.
+
+395
+00:36:01,500 --> 00:36:05,490
+And so we developed something internally called MANA Corp.
+
+396
+00:36:05,490 --> 00:36:16,370
+Publicly, we announced it late last year as Azure Integrated HSM, because it's effectively an HSM sitting there inside of every single server.
+
+397
+00:36:16,370 --> 00:36:21,570
+And we've been deploying these now into every single server in Azure.
+
+398
+00:36:21,570 --> 00:36:29,880
+What this allows is a key to be released with policy from an actual HSM.
+
+399
+00:36:29,880 --> 00:36:39,510
+So like Azure-managed HSM or Azure Key Vault can have a policy on it that will release the keys into Azure Integrated HSMs.
+
+400
+00:36:39,510 --> 00:36:51,080
+And Azure Integrated HSMs are FIPS 140 Level 3, FIPS 140-3, level 3, certified just like the HSMs behind Manage HSM and Azure Key Vault.
+
+401
+00:36:51,080 --> 00:37:00,270
+And so that means that the key remains inside of a FIPS 140-3 Level 3 boundary from the HSM to the server.
+
+402
+00:37:00,270 --> 00:37:07,883
+And then it can be accessed for operations directly from that virtual machine, because we map it, that hardware, into the virtual machine.
+
+403
+00:37:09,350 --> 00:37:23,940
+Let's go see a demo of that and the benefits that you get out of that, using a simple scenario, which is I want to sign a bunch of payloads using my AKV key.
+
+404
+00:37:23,940 --> 00:37:31,380
+So what I've got here is a policy that allows that key to be transported into Azure Integrated HSM.
+
+405
+00:37:31,380 --> 00:37:42,410
+What I'm going to do first is sign 5,000 times over 32 threads a payload using Azure AKV, where the key never exits the HSM.
+
+406
+00:37:42,435 --> 00:37:49,530
+And you can see because we're sending all these operations to the HSM, we get about 640 operations per second.
+
+407
+00:37:49,530 --> 00:37:53,910
+Now we release that key into the local Azure integrated HSM.
+
+408
+00:37:53,910 --> 00:37:56,220
+We can perform those operations directly on it.
+
+409
+00:37:56,220 --> 00:38:02,450
+And you can see that our throughput went to 18,800 signing operations per second.
+
+410
+00:38:02,450 --> 00:38:06,510
+And we lost no security in the process.
+
+411
+00:38:06,510 --> 00:38:13,230
+And so this is the future of data center infrastructure and security for keys.
+
+412
+00:38:13,230 --> 00:38:16,800
+The future we're moving to is one with confidential computing,
+
+413
+00:38:16,800 --> 00:38:23,450
+where keys, and that's going to end up being keys for everything, keys for any of these services,
+
+414
+00:38:23,450 --> 00:38:31,550
+including the services that agents are talking to, are going to be protected with hardware throughout their entire life cycle so that it can never be stolen.
+
+415
+00:38:31,550 --> 00:38:33,520
+And that's a very exciting future.
+
+416
+00:38:38,905 --> 00:38:39,990
+All right.
+
+417
+00:38:39,990 --> 00:38:44,250
+We've got one last thing to show, and this is very experimental.
+
+418
+00:38:44,250 --> 00:38:48,540
+But I like to end with, hey, this is where we're looking speculatively.
+
+419
+00:38:48,540 --> 00:38:54,840
+This is Microsoft Research work that is happening, may or may not be ever productized,
+
+420
+00:38:54,840 --> 00:39:01,260
+but it looks really promising, and it really would be huge if we were able to make this happen.
+
+421
+00:39:01,260 --> 00:39:11,910
+And the idea here is that if you take a look at network communications, networking inside of a data center, it's typically been over copper.
+
+422
+00:39:11,910 --> 00:39:16,110
+And the problem with copper, it's very lightweight, it's very cheap, it's very reliable,
+
+423
+00:39:16,110 --> 00:39:24,630
+but the maximum distances you can talk to over copper without loss is about 2 meters.
+
+424
+00:39:24,630 --> 00:39:29,121
+And, of course, 2 meters is not much distance in the data center, you really want to connect,
+
+425
+00:39:29,146 --> 00:39:35,850
+especially if you move towards disaggregated devices and computing, where you want GPUs over here and you want servers over here,
+
+426
+00:39:35,850 --> 00:39:41,340
+is that you want a very high speed, high bandwidth interconnect.
+
+427
+00:39:41,340 --> 00:39:42,990
+And that's typically not copper.
+
+428
+00:39:42,990 --> 00:39:47,640
+Now what a lot of people are moving towards is optics, and optics with lasers.
+
+429
+00:39:47,640 --> 00:39:55,140
+The problem with lasers is that they're very high powered, so they generate a lot of heat, which makes them very expensive.
+
+430
+00:39:55,140 --> 00:40:01,860
+So what we've been exploring is something called Project Mosaic.
+
+431
+00:40:01,860 --> 00:40:08,760
+Now one of the things with this mechanism that I just showed you is that there's lots of fiber -- there's just a few fibers.
+
+432
+00:40:08,760 --> 00:40:11,760
+They're all very high bandwidth and high speed.
+
+433
+00:40:11,760 --> 00:40:17,310
+What we're trying is using many channels operating at low speed,
+
+434
+00:40:17,310 --> 00:40:31,740
+using standard LED technology, micro LEDs, the kind of LEDs that are being productized right now for next generation VR glasses, for example, goggles, as well as cameras.
+
+435
+00:40:31,740 --> 00:40:41,000
+These things -- projecting those LED lights over fibers inside of a cable and then having them read
+
+436
+00:40:41,000 --> 00:40:43,890
+with standard silicon camera sensor arrays.
+
+437
+00:40:43,890 --> 00:40:53,356
+So the beauty of this approach is that these are basically commercial technologies that are scaling because of other economic factors outside
+
+438
+00:40:53,381 --> 00:40:55,320
+of what we want to take advantage of it for.
+
+439
+00:40:55,320 --> 00:40:59,820
+So we can kind of ride on the back of this technology, but deploy it in our data centers.
+
+440
+00:40:59,820 --> 00:41:11,520
+So I'm going to show you for the first time ever, with a live feed from our Microsoft Research Cambridge Lab, transmission over one of these LED cables.
+
+441
+00:41:11,520 --> 00:41:13,470
+So let's go and switch here...
+
+442
+00:41:17,583 --> 00:41:19,380
+to Microsoft Cambridge.
+
+443
+00:41:19,380 --> 00:41:22,170
+And Katar, good to see you.
+
+444
+00:41:22,195 --> 00:41:23,823
+Katar: Hello, Mark, good to see you.
+
+445
+00:41:23,848 --> 00:41:25,770
+Hello, everyone, actually, I'm Katar.
+
+446
+00:41:25,770 --> 00:41:28,140
+I'm from Microsoft Research, Cambridge.
+
+447
+00:41:28,140 --> 00:41:33,260
+I'm here in the lab, holding one of those cables with micro IDs.
+
+448
+00:41:33,260 --> 00:41:42,930
+And what I wanted to show you exactly is what is inside and how this is being tested in the lab before it goes into Microsoft data centers.
+
+449
+00:41:42,930 --> 00:41:52,950
+So if you open this up, this is what we're going to see: a small PCB with the yellow area here, which we call the package.
+
+450
+00:41:52,950 --> 00:41:58,980
+And on top of that we have a tiny array of micro-LEDs and photo detectors.
+
+451
+00:41:58,980 --> 00:42:04,620
+And underneath, we have the CMOS chip that controls everything.
+
+452
+00:42:04,620 --> 00:42:12,450
+And actually, this small PCB is being tested here in the lab using the evaluation board, the big PCB that we see there.
+
+453
+00:42:12,450 --> 00:42:23,610
+And the green light coming up is actually coming from hundreds of micro-LEDs and coupled to this imaging fiber using this optical coupler.
+
+454
+00:42:23,610 --> 00:42:32,280
+Actually, after tens of meters of transmission over this imaging fiber, here we are at the receiver side.
+
+455
+00:42:32,280 --> 00:42:37,500
+And the screen here shows the output process of the fiber.
+
+456
+00:42:37,500 --> 00:42:42,210
+And actually, this fiber itself has more than thousands of pores.
+
+457
+00:42:42,210 --> 00:42:50,580
+And each of these micro-LEDs actually is coupled to more than one pore, which makes the alignment much more easier.
+
+458
+00:42:50,580 --> 00:42:54,180
+And, actually, in a real operation mode,
+
+459
+00:42:54,180 --> 00:43:01,320
+all this micro-LED will be armed and flashing at high speed, billion times per second.
+
+460
+00:43:01,320 --> 00:43:05,460
+And the human eye will not be able to distinguish this.
+
+461
+00:43:05,460 --> 00:43:11,400
+So basically, to make it concrete, and to show you that we can individually control each of these micro-LEDS,
+
+462
+00:43:11,400 --> 00:43:19,693
+I'm going to ask Mark to pick any letter or a number from zero to nine, and I can display it to you.
+
+463
+00:43:19,718 --> 00:43:21,013
+Mark Russinovich: Okay, awesome.
+
+464
+00:43:21,038 --> 00:43:23,148
+This kind of proves that it's live -- how about a letter?
+
+465
+00:43:23,173 --> 00:43:24,834
+Somebody shout out a letter that we want to see.
+
+466
+00:43:24,859 --> 00:43:27,360
+Z? Z, all right, let's do Z.
+
+467
+00:43:28,359 --> 00:43:30,863
+Katar: Z, Okay.
+
+468
+00:43:32,250 --> 00:43:37,020
+Okay, so here, you can see that we are switching off some of the micro-LEDs.
+
+469
+00:43:37,020 --> 00:43:45,270
+And each of these flowers here are one micro-LED that can be modulated as gigabit per second.
+
+470
+00:43:45,270 --> 00:43:49,510
+So let's wait for the letter Z to show.
+
+471
+00:43:51,963 --> 00:43:53,306
+Yeah.
+
+472
+00:43:55,289 --> 00:43:56,496
+Mark Russinovich: Z.
+
+473
+00:43:59,698 --> 00:44:03,333
+Katar: Hope you enjoyed this short demo, And I'm going to hand it back to you, Mark.
+
+474
+00:44:03,358 --> 00:44:04,770
+Mark Russinovich: All right, thanks, that was awesome.
+
+475
+00:44:04,770 --> 00:44:05,850
+Thanks, Katar.
+
+476
+00:44:05,850 --> 00:44:07,300
+Thank you.
+
+477
+00:44:08,633 --> 00:44:13,740
+Mark Russinovich: Okay, well, that brings us to the conclusion of the session.
+
+478
+00:44:13,740 --> 00:44:24,060
+And what I hope you saw was a lot of innovation happening at all layers of the stack, from the hardware to the data centers to the serverless offerings, to GPUs, prompt prefetching,
+
+479
+00:44:24,060 --> 00:44:31,590
+inference, and then a look at the future and where we might be going with networking inside the data center.
+
+480
+00:44:31,590 --> 00:44:34,133
+If you like this, please fill out an evaluation form.
+
+481
+00:44:34,158 --> 00:44:35,211
+Let me know.
+
+482
+00:44:35,236 --> 00:44:37,230
+If you didn't, you can go ahead and skip that.
+
+483
+00:44:37,230 --> 00:44:42,798
+I hope you have a great Build, and I hope to see you this afternoon with Scott.
+
+484
+00:44:42,823 --> 00:44:46,886
+We're going to have a fun session on the future of software engineering, so I'll see you then.
