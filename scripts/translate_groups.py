@@ -12,6 +12,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import sys
 import time
@@ -24,7 +25,7 @@ SUB_DIR = ROOT / "subtitles"
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from build_subs import write_ass, write_srt  # noqa: E402
-from translate_local import SYSTEM, model_id  # noqa: E402
+from translate_local import SYSTEM, _headers, model_id  # noqa: E402
 
 CUE_RE = re.compile(
     r"(\d{2}:\d{2}:\d{2})[,.](\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2})[,.](\d{3})[^\n]*\n(.*?)(?=\n\s*\n|\Z)",
@@ -52,7 +53,8 @@ def translate(base: str, model: str, text: str) -> str:
     }
     for attempt in range(4):
         try:
-            r = requests.post(f"{base}/v1/chat/completions", json=payload, timeout=300)
+            r = requests.post(f"{base}/v1/chat/completions", json=payload,
+                                headers=_headers(), timeout=300)
             r.raise_for_status()
             out = r.json()["choices"][0]["message"]["content"].strip()
             out = re.sub(r"^\s*\d+\s*[.、)．]\s*", "", out)
