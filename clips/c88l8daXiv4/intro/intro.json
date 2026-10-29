@@ -2,11 +2,11 @@
   "schema_version": 2,
   "video_id": "c88l8daXiv4",
   "status": "SUCCESS",
-  "generated_at": "2026-10-28T23:38:19+00:00",
+  "generated_at": "2026-10-29T01:16:40+00:00",
   "path": "clips/c88l8daXiv4/intro/intro.mp4",
   "quarantined": null,
-  "duration_ms": 8971,
-  "planned_duration_ms": 8958,
+  "duration_ms": 9071,
+  "planned_duration_ms": 9055,
   "manual_review": false,
   "target_platform": "16:9 横屏 (1920x1080@60fps)",
   "accent": "#ff5500",
@@ -22,11 +22,11 @@
     ],
     "headline": "CPU 为何成为 AI 新瓶颈",
     "subline": "Dylan Patel · SemiAnalysis，2026",
-    "series": "AI 基建 / 第 21 期",
-    "speaker": "DYLAN PATEL / SEMIANALYSIS",
-    "source": "SemiAnalysis × Daytona",
-    "stamp": "FIELD RECORD / 2026",
-    "index": "021"
+    "series": "AI 基建",
+    "speaker": "",
+    "source": "",
+    "stamp": "",
+    "index": ""
   },
   "copy": {
     "source": "llm",
@@ -41,7 +41,7 @@
   "copy_rewrite_prompt": "clips/c88l8daXiv4/intro/copy_rewrite.prompt.txt",
   "copy_rewrite_response": "clips/c88l8daXiv4/intro/copy_rewrite.response.json",
   "animation": {
-    "duration_ms": 8958,
+    "duration_ms": 9055,
     "bar_reveal_ms": 550,
     "title_delay_ms": 150,
     "title_fade_ms": 550,
@@ -54,26 +54,27 @@
     "tts_text": "Daytona 二零二六年，Dylan Patel 现场实录。他拆解 CPU 算力瓶颈。中英双语，来看原声。",
     "script": "clips/c88l8daXiv4/intro/intro.script.json",
     "raw_path": "clips/c88l8daXiv4/intro/narration.raw.wav",
-    "raw_seconds": 9.04,
+    "raw_seconds": 9.892,
     "path": "clips/c88l8daXiv4/intro/narration.wav",
-    "final_seconds": 8.508,
-    "tempo": 1.0635,
-    "prompt_wav": "D:/AI/CosyVoice-Runtime/assets/my_voice_5s.wav",
+    "final_seconds": 8.605,
+    "tempo": 1.15,
+    "prompt_wav": "",
+    "voice_speaker": "中文男",
     "service": {
-      "model_class": "CosyVoice2",
-      "model_dir": "D:\\AI\\CosyVoice-Runtime\\pretrained_models\\CosyVoice2-0.5B",
+      "model_class": "CosyVoice",
+      "model_dir": "D:\\AI\\CosyVoice-Runtime\\pretrained_models\\CosyVoice-300M-SFT",
       "device": "cpu",
-      "sample_rate": 24000,
+      "sample_rate": 22050,
       "text_frontend": "wetext"
     }
   },
   "timeline": {
-    "duration_ms": 8958,
+    "duration_ms": 9055,
     "lead_ms": 200,
-    "voice_ms": 8508,
+    "voice_ms": 8605,
     "tail_ms": 250
   },
-  "gain": 0.7244,
+  "gain": 2.9512,
   "config": {
     "width": 1920,
     "height": 1080,
@@ -128,7 +129,7 @@
       {
         "name": "av_duration_equal",
         "ok": true,
-        "detail": "video 8950 ms vs audio 8971 ms (delta -21, tolerance 60)"
+        "detail": "video 9050 ms vs audio 9071 ms (delta -21, tolerance 60)"
       },
       {
         "name": "audio_starts_at_zero",
@@ -138,12 +139,12 @@
       {
         "name": "duration_window",
         "ok": true,
-        "detail": "actual 8971 ms, window [6000, 9500]"
+        "detail": "actual 9071 ms, window [6000, 9500]"
       },
       {
         "name": "duration_target",
         "ok": true,
-        "detail": "actual 8971 ms vs planned 8958 ms (delta +13)"
+        "detail": "actual 9071 ms vs planned 9055 ms (delta +16)"
       },
       {
         "name": "resolution",
@@ -171,7 +172,7 @@
         "detail": "mean volume -22.8 dB"
       }
     ],
-    "actual_duration_ms": 8971,
+    "actual_duration_ms": 9071,
     "audio_mean_db": -22.8
   },
   "ffmpeg_command": [
@@ -183,13 +184,13 @@
     "-framerate",
     "60",
     "-t",
-    "8.950",
+    "9.050",
     "-i",
     "E:\\YouTube-B\\clips\\c88l8daXiv4\\intro\\intro.png",
     "-i",
     "E:\\YouTube-B\\clips\\c88l8daXiv4\\intro\\narration.wav",
     "-filter_complex",
-    "[0:v]fps=60,format=yuv420p,settb=AVTB,trim=duration=8.950,setpts=PTS-STARTPTS[v];[1:a]volume=0.7244,adelay=200|200,apad,atrim=0:8.950,aformat=sample_fmts=fltp:channel_layouts=stereo,alimiter=limit=0.95[a]",
+    "[0:v]fps=60,format=yuv420p,settb=AVTB,trim=duration=9.050,setpts=PTS-STARTPTS[v];[1:a]volume=2.9512,adelay=200|200,apad,atrim=0:9.050,aformat=sample_fmts=fltp:channel_layouts=stereo,alimiter=limit=0.95[a]",
     "-map",
     "[v]",
     "-map",
@@ -203,7 +204,7 @@
     "-r",
     "60",
     "-frames:v",
-    "537",
+    "543",
     "-c:a",
     "aac",
     "-b:a",
@@ -213,7 +214,7 @@
     "-ac",
     "2",
     "-t",
-    "8.950000",
+    "9.050000",
     "-shortest",
     "-sn",
     "-dn",
