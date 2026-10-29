@@ -1,0 +1,1139 @@
+1
+00:00:03,760 --> 00:00:08,190
+All right, good afternoon everyone.
+
+2
+00:00:08,240 --> 00:00:12,070
+How is everyone doing?
+
+3
+00:00:12,120 --> 00:00:16,350
+I have heard that this is the place to be.
+
+4
+00:00:16,400 --> 00:00:25,744
+Uh Actually, this is uh AMD has been a long-standing supporter of OCP, but this is actually my first time at the OCP um Global Summit,
+
+5
+00:00:25,794 --> 00:00:30,470
+and I have to say I'm just blown away by the scale of what uh we have here.
+
+6
+00:00:30,520 --> 00:00:41,668
+So, I want to congratulate George and really the entire organizing committee for putting together just a fantastic event.
+
+7
+00:00:41,718 --> 00:00:49,574
+So, So, today what I'd like to do is maybe talk a little bit about what we see at AMD in terms of what's happening in the market.
+
+8
+00:00:49,624 --> 00:00:54,490
+Um I can say for sure it's the fastest-moving market that I've ever seen.
+
+9
+00:00:54,540 --> 00:00:59,510
+Um so much uh change, so much innovation, so much collaboration.
+
+10
+00:00:59,560 --> 00:01:04,633
+And maybe from an overarching standpoint, I would say, you know, for all of us at AMD,
+
+11
+00:01:04,683 --> 00:01:11,150
+we wake up every day thinking that our job is to really push the boundaries of high-performance
+
+12
+00:01:11,200 --> 00:01:17,092
+computing so that we can solve some of the most important challenges and problems in the world.
+
+13
+00:01:17,142 --> 00:01:27,669
+And to do this actually requires intense collaboration because I'm a big believer in there is no one company that has every answer to every solution.
+
+14
+00:01:27,719 --> 00:01:35,177
+And frankly, the more we can bring the best of our companies together, the better we're going to do as an industry.
+
+15
+00:01:35,227 --> 00:01:39,194
+And so, AMD has opened as a foundation of our principles.
+
+16
+00:01:39,244 --> 00:01:42,382
+It's one of the things that we think about when we develop technology.
+
+17
+00:01:42,432 --> 00:01:45,722
+It's one of the things that we think about when we develop our road map.
+
+18
+00:01:45,772 --> 00:01:51,480
+And when you look at the last 15 years of what OCP has really done,
+
+19
+00:01:51,530 --> 00:01:57,590
+it's really been a huge part of our development road map going first going forward.
+
+20
+00:01:57,640 --> 00:02:05,590
+First on our open server platforms, from our very first platform that we did with Naples back in 2017,
+
+21
+00:02:05,640 --> 00:02:11,364
+that was a very close collaboration with our partner Microsoft, but together we brought it to OCP.
+
+22
+00:02:11,414 --> 00:02:20,110
+When you look at, you know, over the last few years, a lot of work has come together on the networking side with the Ultra Ethernet Consortium,
+
+23
+00:02:20,160 --> 00:02:23,168
+with the work that we're doing around, you know, UALink and ESUN.
+
+24
+00:02:23,218 --> 00:02:27,265
+All of those are really important things for interoperability.
+
+25
+00:02:27,315 --> 00:02:28,990
+I'm excited to talk about Helios.
+
+26
+00:02:29,040 --> 00:02:38,758
+So, we're going to talk a little bit about Helios today and the progress on that rack scale solution, which is again based on OCP standards.
+
+27
+00:02:38,808 --> 00:02:44,660
+And then looking forward, I think we have lots more opportunities to collaborate together and these also become,
+
+28
+00:02:44,710 --> 00:02:52,590
+whether you're talking about MRC or Oak, these are also areas where there's just a tremendous opportunity for us to come together as an ecosystem.
+
+29
+00:02:52,640 --> 00:02:56,579
+And with the notion of when we come together as an open ecosystem,
+
+30
+00:02:56,629 --> 00:03:04,870
+we will actually accelerate the pace of innovation and get better solutions for our joint customers.
+
+31
+00:03:04,920 --> 00:03:14,158
+So, a little bit about the market, I think you guys know very well the AI market is truly transforming every part of the world,
+
+32
+00:03:14,208 --> 00:03:20,196
+every industry that we're in, whether you're talking about healthcare or manufacturing or science.
+
+33
+00:03:20,246 --> 00:03:23,920
+We're seeing much, much more capability come across.
+
+34
+00:03:23,970 --> 00:03:28,877
+I like to say that we're in a world where computing equates to intelligence.
+
+35
+00:03:28,927 --> 00:03:34,893
+And if you have the chance to be more intelligent, why wouldn't you try to get more capability?
+
+36
+00:03:34,943 --> 00:03:39,957
+And that's really what we're trying to do in terms of bringing all of that into the ecosystem.
+
+37
+00:03:40,007 --> 00:03:50,230
+And just a few of the demand numbers that you see, every time I look at these charts, they tend to keep going up into the right.
+
+38
+00:03:50,280 --> 00:03:57,756
+And people are always asking, well, you know, are we sure that we're doing productive work with all of the AI compute that we're putting on board?
+
+39
+00:03:57,806 --> 00:03:59,892
+And the answer is absolutely yes.
+
+40
+00:03:59,942 --> 00:04:02,990
+I mean, we are doing a tremendous amount of work.
+
+41
+00:04:03,040 --> 00:04:04,989
+We're getting more and more productive each time.
+
+42
+00:04:05,039 --> 00:04:14,547
+Yeah, you kind of look at some of these demand numbers and you see like a 95 x increase in tokens per month over the past 2 years.
+
+43
+00:04:14,597 --> 00:04:20,448
+We're now at some number like almost 40 quadrillion inference tokens a month.
+
+44
+00:04:20,498 --> 00:04:26,857
+Um when you think about what that means in terms of useful AI, we get a lot of different data,
+
+45
+00:04:26,907 --> 00:04:34,060
+but I think the data that's most important to me is what do I see when I talk to customers and when I spend time with the largest users.
+
+46
+00:04:34,110 --> 00:04:35,057
+Um you know,
+
+47
+00:04:35,107 --> 00:04:40,134
+clearly training continues to be extremely important and we're going to continue to need the largest
+
+48
+00:04:40,184 --> 00:04:44,882
+training clusters in the world and we're going to continue to push the envelope on capability.
+
+49
+00:04:44,932 --> 00:04:51,936
+Let's call it, you know, 5 x increase every year since 2020 and that doesn't look like that's going to change.
+
+50
+00:04:51,986 --> 00:04:54,045
+That's going to continue going on.
+
+51
+00:04:54,095 --> 00:05:01,807
+Um but we've always thought that where AI really pays off is when inference overtakes training.
+
+52
+00:05:01,857 --> 00:05:11,204
+And when you look at the numbers over the last few years, especially this year in 2026, this year is really the year of inference.
+
+53
+00:05:11,254 --> 00:05:18,550
+This is the year where we believe inference is now about 60% of the market going forward.
+
+54
+00:05:18,600 --> 00:05:25,150
+And it's not just inference, it's really the agentic workloads that have really taken off.
+
+55
+00:05:25,200 --> 00:05:27,486
+So, you look at some of these numbers.
+
+56
+00:05:27,536 --> 00:05:33,345
+This is some new data from Open Router which routes requests across many models
+
+57
+00:05:33,395 --> 00:05:39,350
+and what you see is that the amount of human traffic has gone up steadily,
+
+58
+00:05:39,400 --> 00:05:44,744
+but what's really grown is the amount of agentic traffic and we're seeing a 14
+
+59
+00:05:44,794 --> 00:05:50,430
+x growth just this year in the amount of agentic traffic that is going through.
+
+60
+00:05:50,480 --> 00:05:54,979
+And that kind of tells you the power of the of AI working.
+
+61
+00:05:55,029 --> 00:05:57,670
+It is we're training better models.
+
+62
+00:05:57,720 --> 00:06:03,258
+We now have the opportunity not just to do inference, but we have the opportunity to solve problems.
+
+63
+00:06:03,308 --> 00:06:12,470
+And with that we're seeing a lot more opportunity for growth and you know, really productive growth going forward.
+
+64
+00:06:12,520 --> 00:06:19,010
+Now, George showed some numbers about the TAM as it relates to the infrastructure.
+
+65
+00:06:19,060 --> 00:06:28,310
+This is some information on the the TAM as it relates to the silicon and the systems which the silicon the core which is what you know,
+
+66
+00:06:28,360 --> 00:06:29,670
+we're focused on.
+
+67
+00:06:29,720 --> 00:06:31,150
+And we're seeing a couple things, right?
+
+68
+00:06:31,200 --> 00:06:40,590
+First of all, we're seeing the data center AI accelerator TAM grow to close to 1 and 1/2 trillion by the time we get to 2030,
+
+69
+00:06:40,640 --> 00:06:42,869
+which is a fantastically large number.
+
+70
+00:06:42,919 --> 00:06:48,590
+That's why there's so much excitement and innovation in this area.
+
+71
+00:06:48,640 --> 00:06:57,385
+But we've also seen that with agentic workloads, we've seen a very significant increase in what was known as the traditional CPU TAM.
+
+72
+00:06:57,435 --> 00:07:03,519
+If you were to look at this number, you know, let's call it even a year ago, you know, people would have said, "Hey,
+
+73
+00:07:03,569 --> 00:07:11,406
+the CPU market is probably a 20 billion-dollar market growing you know, single digits over the next few years."
+
+74
+00:07:11,456 --> 00:07:23,379
+And we have actually raised the TAM on this three times in the last nine months because we've seen that much growth in the overall CPU demand,
+
+75
+00:07:23,429 --> 00:07:29,521
+which we now believe will grow at approximately 50% CAGR over the next four or
+
+76
+00:07:29,571 --> 00:07:34,528
+five years to over a 200 billion-dollar TAM by the time you get to 2030.
+
+77
+00:07:34,578 --> 00:07:39,630
+And that has implications on how you want to build systems.
+
+78
+00:07:39,680 --> 00:07:44,830
+The fact is, you know, there's no one size fits all when it comes to compute.
+
+79
+00:07:44,880 --> 00:07:54,830
+You actually need the right compute for the right workload, and that's across CPUs and GPUs and ASICs and FPGAs and all of the mix in between.
+
+80
+00:07:54,880 --> 00:07:59,910
+And that's the foundation of how we have, you know, really focused at AMD.
+
+81
+00:07:59,960 --> 00:08:07,845
+So, when you think about, you know, the three things that we think are most important, um the first and foremost is we're a compute company.
+
+82
+00:08:07,895 --> 00:08:09,333
+Compute equals intelligence.
+
+83
+00:08:09,383 --> 00:08:11,214
+We need to have compute leadership.
+
+84
+00:08:11,264 --> 00:08:18,099
+And that compute leadership is across, um every aspect of that, you know, CPU, GPU,
+
+85
+00:08:18,149 --> 00:08:23,590
+ASIC, all of those capabilities because we need the right compute for each application.
+
+86
+00:08:23,640 --> 00:08:26,870
+Um we also believe that you're going to see AI everywhere.
+
+87
+00:08:26,920 --> 00:08:35,590
+So, we're going to spend a lot of time over the next few days probably talking about the big iron, um in the cloud, hyperscale, and enterprise.
+
+88
+00:08:35,640 --> 00:08:44,432
+We're big believer in the fact that you're going to see AI infused through every aspect of the edge as well as the client in the ecosystem.
+
+89
+00:08:44,482 --> 00:08:53,161
+And the more that we can get the standards across those, uh those different form factors to be the same, the more that we can get the software,
+
+90
+00:08:53,211 --> 00:09:03,789
+uh to work across all of those systems, the better off we're going to be to provide productivity to the end users of, um these systems.
+
+91
+00:09:03,839 --> 00:09:07,910
+And then the middle point is the point that's most relevant for today.
+
+92
+00:09:07,960 --> 00:09:11,910
+Open is a foundation of what we do at AMD.
+
+93
+00:09:11,960 --> 00:09:19,601
+We are big, big believers, as I said, in the idea that open platforms enable collaboration.
+
+94
+00:09:19,651 --> 00:09:26,897
+Collaboration enables the best of each company to bring to the table so that we have better overall solutions.
+
+95
+00:09:26,947 --> 00:09:31,211
+And the fact is, you know, AI at scale is a team sport.
+
+96
+00:09:31,261 --> 00:09:37,742
+It is a an area where we want to bring, uh the the of the industry, uh together.
+
+97
+00:09:37,792 --> 00:09:46,966
+So, I'll talk a little bit today about the work that we're doing on rack-scale innovation because it's uh been a very, very exciting uh year for us.
+
+98
+00:09:47,016 --> 00:09:52,670
+Um and then a little bit about what we see going forward in terms of the agentic infrastructure.
+
+99
+00:09:52,720 --> 00:09:57,644
+So, you know, first and foremost, I think all all of you guys know this, but you know,
+
+100
+00:09:57,694 --> 00:10:04,870
+this has been a principle um frontier AI has higher and higher demands on what all of us do.
+
+101
+00:10:04,920 --> 00:10:15,403
+You know, our job is to bring a solution to the market that allows our end users to use the technology as fast as possible,
+
+102
+00:10:15,453 --> 00:10:24,585
+as efficiently as possible, with as little friction as possible to get the best tokens for dollar, to get the best tokens for outcome.
+
+103
+00:10:24,635 --> 00:10:26,990
+And to do that, you need all of these pieces.
+
+104
+00:10:27,040 --> 00:10:28,974
+You need to have leadership compute.
+
+105
+00:10:29,024 --> 00:10:31,150
+You need to have an open rack architecture.
+
+106
+00:10:31,200 --> 00:10:37,630
+You need to have um a fabric that allows you to scale uh across um the uh systems.
+
+107
+00:10:37,680 --> 00:10:44,844
+Um we also need to care about things like efficiency and serviceability, um as well as, you know, overall turnkey solutions.
+
+108
+00:10:44,894 --> 00:10:46,941
+So, you need all of these things.
+
+109
+00:10:46,991 --> 00:10:55,950
+And I have to say um all of these things were critical when we decided to uh bring out the Helios uh architecture.
+
+110
+00:10:56,000 --> 00:11:00,350
+We launched Helios in July of this year, just a couple of months ago.
+
+111
+00:11:00,400 --> 00:11:07,590
+Um I will say, you know, our view is that this is the highest performance AI rack in the industry.
+
+112
+00:11:07,640 --> 00:11:11,710
+72 GPUs working together as a single accelerator.
+
+113
+00:11:11,760 --> 00:11:14,910
+More than 18,000 GPU compute units.
+
+114
+00:11:14,960 --> 00:11:17,950
+4,600 Zen 6 cores.
+
+115
+00:11:18,000 --> 00:11:24,789
+Each compute tray is just a little bit heavy um at uh 160 lb.
+
+116
+00:11:24,839 --> 00:11:28,270
+Um and the total rack is nearly 7,000 lb.
+
+117
+00:11:28,320 --> 00:11:33,350
+So, um it's a little bit of a machine.
+
+118
+00:11:33,400 --> 00:11:41,870
+I think George said something like everyone gets a little wider as the years pass.
+
+119
+00:11:41,920 --> 00:11:44,442
+Um I don't want to say that about our racks,
+
+120
+00:11:44,492 --> 00:11:56,041
+but I would say we made a very deliberate choice with Helios uh to use the um OCP um open rack wide standard.
+
+121
+00:11:56,091 --> 00:12:03,400
+Um it is uh one of the most ambitious engineering feats that I've ever had a chance to be part of in my career.
+
+122
+00:12:03,450 --> 00:12:06,268
+Uh this was co-engineered with Meta, um our partner.
+
+123
+00:12:06,318 --> 00:12:09,254
+I know you're going to hear from Santosh a little bit later on.
+
+124
+00:12:09,304 --> 00:12:12,759
+Um I have to say it has been a tremendous partnership.
+
+125
+00:12:12,809 --> 00:12:18,358
+And you know, we started with the notion of look, there going to be a lot of accelerators out there.
+
+126
+00:12:18,408 --> 00:12:20,590
+Um it is not one-size-fits-all.
+
+127
+00:12:20,640 --> 00:12:23,950
+It's not you know, one company has all the best parts.
+
+128
+00:12:24,000 --> 00:12:29,697
+What we want to do is make it really easy for a heterogeneous data center environment.
+
+129
+00:12:29,747 --> 00:12:38,310
+Cuz there's a firm belief in that you're going to need a mix of CPUs, GPUs, uh purpose-built ASICs.
+
+130
+00:12:38,360 --> 00:12:41,212
+They're going to want to be in a similar data center environment.
+
+131
+00:12:41,262 --> 00:12:45,517
+You're not going to want to switch out every component every time you change an accelerator.
+
+132
+00:12:45,567 --> 00:12:55,350
+You're really going to try to to standardize as much as you can so that you are differentiating on the things that make the most difference.
+
+133
+00:12:55,400 --> 00:13:00,292
+And that's exactly what we've done with um the Helios platform together with Meta.
+
+134
+00:13:00,342 --> 00:13:06,970
+Um I think what we see here is um a tremendous opportunity to bring the ecosystem together.
+
+135
+00:13:07,020 --> 00:13:16,539
+So, lots and lots of partners are needed to make Helios happen, but it includes um the uh open architecture on the rack standpoint,
+
+136
+00:13:16,589 --> 00:13:21,936
+um open uh power shelves, open networking, and the overall management system.
+
+137
+00:13:21,986 --> 00:13:26,451
+So, we're very uh happy with how Helios uh uh has come along.
+
+138
+00:13:26,501 --> 00:13:31,036
+Um as part of this, uh networking is a huge piece of this ecosystem.
+
+139
+00:13:31,086 --> 00:13:35,536
+I would say that we've spent um quite a bit of time internally, you know, for us,
+
+140
+00:13:35,586 --> 00:13:42,257
+uh Norrod who runs the data center solutions for us, in terms of architecting this thing, um whole thing coming together.
+
+141
+00:13:42,307 --> 00:13:46,128
+But, our principle is we wanted to use the best solution that was available.
+
+142
+00:13:46,178 --> 00:13:52,495
+And the best solution that would be was available would mean bringing in uh the leading networking partners in the world.
+
+143
+00:13:52,545 --> 00:13:57,302
+We're doing tremendous work with Broadcom, Cisco, Arista, HPE, DriveNets.
+
+144
+00:13:57,352 --> 00:14:05,257
+And the idea is to have leading front-end solution, um leading scale-up solution with uh UALink over Ethernet,
+
+145
+00:14:05,307 --> 00:14:11,376
+as well as ESUN, and then leading scale-out solutions, um as well, that are uh ahead of the industry.
+
+146
+00:14:11,426 --> 00:14:16,030
+And all of this is delivered through the OCP open ecosystem.
+
+147
+00:14:16,080 --> 00:14:21,070
+And all of this um openness extends to software, as well.
+
+148
+00:14:21,120 --> 00:14:32,115
+So, the idea of software is, you know, we need to make for that it's super easy for our customers to bring new workloads onto our accelerators.
+
+149
+00:14:32,165 --> 00:14:37,579
+And to do that, you want to have, let's call it, the leading open communities running natively.
+
+150
+00:14:37,629 --> 00:14:42,891
+Uh we have the top 15 open AI communities that are supporting AI AMD natively.
+
+151
+00:14:42,941 --> 00:14:45,580
+Uh we have seen uh significant benefit.
+
+152
+00:14:45,630 --> 00:14:49,670
+Perhaps this is one of the largest benefits that we've seen of AI.
+
+153
+00:14:49,720 --> 00:14:58,585
+Uh this is a case where, you know, agentic AI can actually continue to make the performance of the hardware um better over time.
+
+154
+00:14:58,635 --> 00:15:05,430
+Uh just to give you one uh statistic, um Hyperloom is our agentic AI solution,
+
+155
+00:15:05,480 --> 00:15:10,390
+and we've had it running continuously running for uh the Hugging Face models.
+
+156
+00:15:10,440 --> 00:15:20,646
+So, over 14,000 models on Hugging Face with no humans in the loop, we've seen almost a 40% improvement in performance just having the agentic AI run.
+
+157
+00:15:20,696 --> 00:15:30,712
+So, the key is open ecosystems on hardware, software bringing the opportunity to get significant performance uh capability to our end users.
+
+158
+00:15:30,762 --> 00:15:35,390
+So, if you take a look at all of those pieces, what does that mean to the end user?
+
+159
+00:15:35,440 --> 00:15:42,281
+The Helios rack delivers um the highest compute in the industry, the highest memory uh capacity,
+
+160
+00:15:42,331 --> 00:15:49,904
+the highest memory bandwidth, and the highest networking uh capacity or capability across um the industry.
+
+161
+00:15:49,954 --> 00:16:01,390
+And to give you some idea of the numbers, uh we believe that uh we're translating into 30% more tokens per dollar using uh the Helios uh solution.
+
+162
+00:16:01,440 --> 00:16:04,306
+Now, all the PowerPoint sounds great.
+
+163
+00:16:04,356 --> 00:16:07,030
+It's probably better to see a few pictures.
+
+164
+00:16:07,080 --> 00:16:07,383
+So,
+
+165
+00:16:07,413 --> 00:16:08,613
+um let me show
+
+166
+00:16:08,663 --> 00:16:09,113
+you a
+
+167
+00:16:09,163 --> 00:16:09,697
+little
+
+168
+00:16:09,747 --> 00:16:10,050
+bit
+
+169
+00:16:10,080 --> 00:16:45,470
+here.
+
+170
+00:16:45,520 --> 00:16:50,052
+People told me that rack-scale solutions would be the hardest thing that we've ever done.
+
+171
+00:16:50,102 --> 00:16:52,799
+Um I think they were absolutely right.
+
+172
+00:16:52,849 --> 00:17:01,236
+Helios is absolutely uh the most uh sophisticated and complex system that we have built um at AMD together with our partners.
+
+173
+00:17:01,286 --> 00:17:05,229
+Uh but I'm very happy to say that Helios is in production today.
+
+174
+00:17:05,279 --> 00:17:08,310
+Uh we started shipping production in September.
+
+175
+00:17:08,360 --> 00:17:16,950
+The first systems are installed at our leading customers, OpenAI, Meta, Micro System uh Microsoft, um Oracle,
+
+176
+00:17:17,000 --> 00:17:25,743
+Anthropic, and we continue to see just tremendous learnings when we bring all of these these pieces together.
+
+177
+00:17:25,793 --> 00:17:31,302
+So, our production will continue to ramp through the fourth quarter into the first half of next year, but what we did is,
+
+178
+00:17:31,352 --> 00:17:39,150
+you know, with the OCP standard working together with our partners was just fantastic engineering overall.
+
+179
+00:17:39,200 --> 00:17:44,637
+I'm happy to say there's significant growing adoption of Helios, not only the largest model companies,
+
+180
+00:17:44,687 --> 00:17:50,596
+but in addition a number of AI native companies, a number of the overall ecosystem ODMs, OEMs.
+
+181
+00:17:50,646 --> 00:17:53,619
+I know a bunch of you are in the audience today.
+
+182
+00:17:53,669 --> 00:17:55,310
+Neoclouds, thank you.
+
+183
+00:17:55,360 --> 00:17:57,563
+Thank you for all of the collaboration on Helios.
+
+184
+00:17:57,613 --> 00:18:05,270
+We're going to continue to broaden this going forward as we, you know, think about, you know, the next next few quarters.
+
+185
+00:18:05,320 --> 00:18:11,590
+So, with that, maybe I'll transition a little bit to agentic infrastructure.
+
+186
+00:18:11,640 --> 00:18:21,112
+And I would say that this is probably the place where that has been the most activity over the last let's call it 6 months or so.
+
+187
+00:18:21,162 --> 00:18:23,256
+There's been a lot of talk about agents.
+
+188
+00:18:23,306 --> 00:18:25,101
+I would say the excitement is real.
+
+189
+00:18:25,151 --> 00:18:31,445
+I think we've all seen just tremendous productivity whether in personal use cases or
+
+190
+00:18:31,495 --> 00:18:37,382
+in the in enterprise use cases and it's moving much faster than we thought.
+
+191
+00:18:37,432 --> 00:18:41,230
+So, kind of some of the examples out there that are pretty interesting.
+
+192
+00:18:41,280 --> 00:18:49,036
+You know, Muse has kind of recaptured the imagination as to what AI can do for the consumer.
+
+193
+00:18:49,086 --> 00:18:54,530
+This number of 5 million downloads of Meta Muse was as of the end of September.
+
+194
+00:18:54,580 --> 00:18:57,149
+So, that was like the first, you know, couple weeks.
+
+195
+00:18:57,199 --> 00:18:59,232
+I'm sure Santosh will talk about it more.
+
+196
+00:18:59,282 --> 00:19:09,950
+I think I read this morning in the Wall Street Journal that they're down to now up to 9 million downloads of Meta Muse in just the first month or so.
+
+197
+00:19:10,000 --> 00:19:16,825
+You know, OpenAI has talked about using um, 10,000 agents to solve some of the most difficult math problems um,
+
+198
+00:19:16,875 --> 00:19:20,716
+in uh, history that haven't, you know, really seen the full uh, solution.
+
+199
+00:19:20,766 --> 00:19:26,234
+Anthropic talks about using R&D agents to uh, really get a quad working.
+
+200
+00:19:26,284 --> 00:19:29,234
+All of these say that agentic usage is real.
+
+201
+00:19:29,284 --> 00:19:37,243
+I can tell you within AMD, we're actively using agents both on our silicon development as well as on our software development.
+
+202
+00:19:37,293 --> 00:19:39,978
+I gave you the example of Hyperloom.
+
+203
+00:19:40,028 --> 00:19:47,139
+So, you say, "Okay, everyone talks about agents, but what do you actually need uh, for agents?"
+
+204
+00:19:47,189 --> 00:19:53,648
+And I think the most important thing to realize is that agents actually are not one thing.
+
+205
+00:19:53,698 --> 00:19:57,356
+You know, agents, like people, there are lots of different types of agents.
+
+206
+00:19:57,406 --> 00:20:01,270
+You need the right agents for the right um, application.
+
+207
+00:20:01,320 --> 00:20:04,159
+And for that, you actually need the right compute.
+
+208
+00:20:04,209 --> 00:20:09,585
+So, when you're talking about personal agents, you probably want the densest agents possible.
+
+209
+00:20:09,635 --> 00:20:14,618
+These are simpler tasks, and you want them to be uh, you know, very efficient.
+
+210
+00:20:14,668 --> 00:20:19,589
+You want them to be maximum number of agents per watt, so you are uh, saving your power correctly.
+
+211
+00:20:19,639 --> 00:20:21,913
+Um, you know, that's one class of agents.
+
+212
+00:20:21,963 --> 00:20:28,034
+Uh, you talk about enterprise agents, where you're doing a lot of different types of activities, and so you want them to be pretty balanced.
+
+213
+00:20:28,084 --> 00:20:33,710
+Or you're talking about some of the hardest compute problems out there, these technical compute agents.
+
+214
+00:20:33,760 --> 00:20:38,643
+You're going You're going to want them to be bleeding-edge performance, kind of the the best of the best.
+
+215
+00:20:38,693 --> 00:20:42,490
+And so, each of these agents needs a different type of compute.
+
+216
+00:20:42,540 --> 00:20:48,064
+And what we believe is each of these agents also need the right type of rack.
+
+217
+00:20:48,114 --> 00:20:57,630
+And that means you're going to see a certain type of rack in hyperscale environments, where you might have disaggregated CPU and GPU racks.
+
+218
+00:20:57,680 --> 00:21:03,310
+Whereas in enterprise, you might want to see more all-in-one racks uh, going forward.
+
+219
+00:21:03,360 --> 00:21:09,051
+So, I'm happy to say this morning, we announced um, the AMD Helion Agentic AI Rack.
+
+220
+00:21:09,101 --> 00:21:12,150
+Helion is the cousin to Helios.
+
+221
+00:21:12,200 --> 00:21:19,160
+And uh it's really focused on the Agentic AI compute um aspect of it.
+
+222
+00:21:19,210 --> 00:21:26,451
+Uh what we're trying to do here is frankly do what is easiest in terms of bringing all of the
+
+223
+00:21:26,501 --> 00:21:34,144
+pieces of the Open Compute um infrastructure together so that we can get the most efficient uh CPU uh racks.
+
+224
+00:21:34,194 --> 00:21:40,110
+So, that is you can use the you can use a combination of CPUs and GPUs.
+
+225
+00:21:40,160 --> 00:21:43,623
+They're also um we're also integrating it with a token router.
+
+226
+00:21:43,673 --> 00:21:51,224
+Um I think everyone is talking about how can you most efficiently uh route your um overall AI usage.
+
+227
+00:21:51,274 --> 00:21:59,082
+I know that within our own IT infrastructure, uh the idea is you don't need the same model for every question.
+
+228
+00:21:59,132 --> 00:22:01,610
+You don't need the same compute for every question.
+
+229
+00:22:01,660 --> 00:22:08,043
+You want to be able to route uh the right model and the right compute for the right um application.
+
+230
+00:22:08,093 --> 00:22:13,590
+And that's a key piece of this as well as the overall um open environment.
+
+231
+00:22:13,640 --> 00:22:22,190
+So, a few of the things about our Helion um Agentic AI Rack, um the nice thing about Helion is we've used uh you know,
+
+232
+00:22:22,240 --> 00:22:31,224
+practically everything that we could through um OCP's OCP specs uh with the idea of it's a standard 21-inch rack.
+
+233
+00:22:31,274 --> 00:22:33,677
+It can be liquid or air cooled.
+
+234
+00:22:33,727 --> 00:22:42,710
+It is up to 32,000 plus Zen 6 cores, which is 40% more than the other competitive racks.
+
+235
+00:22:42,760 --> 00:22:45,618
+Um it's the highest compute density in the industry.
+
+236
+00:22:45,668 --> 00:22:55,697
+It also can hold up to uh 32 um Instinct MI350P uh GPUs, um as well as a tremendous amount of networking capability.
+
+237
+00:22:55,747 --> 00:23:01,306
+So, it's all coming together in a um open uh compute uh standard.
+
+238
+00:23:01,356 --> 00:23:08,870
+And when you look at how we expect these to be used, when you start in a hyperscale configuration,
+
+239
+00:23:08,920 --> 00:23:15,912
+given the density of compute in hyperscale, you would imagine that you would have significant, you know,
+
+240
+00:23:15,962 --> 00:23:24,718
+GPU racks in one, you know, portion of the data center or one part of the deployment, but you can have your Agentic CPU racks,
+
+241
+00:23:24,768 --> 00:23:31,402
+you know, really sitting side by side and you can mix and match the type of CPU nodes in it.
+
+242
+00:23:31,452 --> 00:23:36,428
+So, whether you're looking at personal agents or enterprise agents or technical agents,
+
+243
+00:23:36,478 --> 00:23:41,958
+you can pick the right compute for the right the right workload.
+
+244
+00:23:42,008 --> 00:23:49,874
+And in the enterprise configuration, you can actually add another piece of this, which is, you know, a lot of enterprises are probably,
+
+245
+00:23:49,924 --> 00:23:56,110
+you know, not running the most advanced foundational model, at least when they're running them on prem.
+
+246
+00:23:56,160 --> 00:24:06,388
+They could be actually wanting to have the ability to have both CPUs and GPUs in the same rack optimized for their particular workload.
+
+247
+00:24:06,438 --> 00:24:10,302
+And so, that is what we can do with the Helion rack.
+
+248
+00:24:10,352 --> 00:24:19,547
+And I'm happy to say that there's been tremendously positive response to the to our Agentic rack.
+
+249
+00:24:19,597 --> 00:24:20,853
+So, you know, two pieces.
+
+250
+00:24:20,903 --> 00:24:30,731
+One is we have a rich ecosystem that are offering the Helion rack starting November 26th and all of this is going to be contributed to OCP.
+
+251
+00:24:30,781 --> 00:24:40,630
+So, you know, very excited for that.
+
+252
+00:24:40,680 --> 00:24:46,390
+Okay, so in the final few minutes, I thought I would just give you an update on our silicon.
+
+253
+00:24:46,440 --> 00:24:50,670
+We are always pushing the bleeding edge of silicon, as I said.
+
+254
+00:24:50,720 --> 00:24:51,480
+In July,
+
+255
+00:24:51,530 --> 00:24:59,935
+we talked about our Venice portfolio and our our uh We believe these are the the best server portfolio
+
+256
+00:24:59,985 --> 00:25:05,537
+for a gigantic racks because we have the ability uh to really mix and match for the right workload.
+
+257
+00:25:05,587 --> 00:25:12,344
+Uh we talked about the various flavors of Venice including our workhorse um for gigantic CPU servers,
+
+258
+00:25:12,394 --> 00:25:21,533
+the Venice 256 core, our general purpose CPU servers as well as our CPUs for host nodes, the Venice um high frequency.
+
+259
+00:25:21,583 --> 00:25:32,296
+And all of that is great, but I have uh when I saw you in July, I showed you four pieces of silicon and uh we have some new silicon to show you today.
+
+260
+00:25:32,346 --> 00:25:36,670
+So, let me show you.
+
+261
+00:25:36,720 --> 00:25:37,617
+Here we go.
+
+262
+00:25:37,667 --> 00:25:47,837
+This is our new EPYC uh Verona with uh Verona
+
+263
+00:25:47,887 --> 00:25:52,322
+is based on uh the Venice family of CPU cores.
+
+264
+00:25:52,372 --> 00:25:56,319
+Uh this guy is actually optimized for the lowest system power,
+
+265
+00:25:56,369 --> 00:26:05,196
+so it actually has uh six uh CCDs or six CPU core dies um that uh have 32 cores each up to 192 cores.
+
+266
+00:26:05,246 --> 00:26:14,411
+And with that, we've also updated the uh CPU to GPU bandwidth, which makes it um exceptionally good for uh head node solutions as well.
+
+267
+00:26:14,461 --> 00:26:16,192
+So, uh Verona looks fantastic.
+
+268
+00:26:16,242 --> 00:26:26,750
+Uh there's a lot of excitement about Verona as well as the rest of the Venice family and uh we will be in production in uh the first half of 2027.
+
+269
+00:26:26,800 --> 00:26:31,312
+Um so, with that, um let me conclude and say, "Look, we love OCP.
+
+270
+00:26:31,362 --> 00:26:33,678
+We love the open ecosystem.
+
+271
+00:26:33,728 --> 00:26:38,057
+Um open is a foundation for what we care about at AMD.
+
+272
+00:26:38,107 --> 00:26:40,038
+Um it is uh open on every level.
+
+273
+00:26:40,088 --> 00:26:42,105
+It's open on the hardware level.
+
+274
+00:26:42,155 --> 00:26:43,910
+Uh it's open with specs.
+
+275
+00:26:43,960 --> 00:26:45,328
+It's working with our partners.
+
+276
+00:26:45,378 --> 00:26:50,030
+It's open on the software level working with um all of the software uh vendors to
+
+277
+00:26:50,080 --> 00:26:55,868
+ensure that we are uh bringing that together and it's open on the ecosystem side as well.
+
+278
+00:26:55,918 --> 00:27:00,717
+So, I'm very happy to say a lot of our partners are here at OCP this week.
+
+279
+00:27:00,767 --> 00:27:08,020
+Um I think it's fantastic all of the work that's coming together and all of the learnings that we will get from bringing um the teams together.
+
+280
+00:27:08,070 --> 00:27:15,788
+So, again, I want to say a big thank you to OCP for really bringing together this what I would call collaboration at scale.
+
+281
+00:27:15,838 --> 00:27:21,855
+It's an opportunity for each of us to innovate on the things that we're best at and also for each of us
+
+282
+00:27:21,905 --> 00:27:28,924
+to bring together all of the components um across the industry so that we can get solutions to the market uh faster.
+
+283
+00:27:28,974 --> 00:27:30,857
+So, with that, thank you very much.
+
+284
+00:27:30,907 --> 00:27:34,710
+Have a great OCP.
+
+285
+00:27:34,760 --> 00:27:36,960
+Please
