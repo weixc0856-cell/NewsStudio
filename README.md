@@ -134,7 +134,7 @@ uv run python scripts/auto_clip.py --srt ... --video ... --reuse-analysis `
 # 5) 旧版硬切合集（不含片头；保留用于对比与回归）
 uv run python scripts/merge_highlights.py --result clips/<id>/result.json
 
-# 6) 独立片头：本地 Qwen 5W1H 文案 + 固定工业模板 + CosyVoice（6–9.5 秒）
+# 6) 独立片头：本地 Qwen 5W1H 文案 + 麦肯锡橙白双栏海报 + CosyVoice（10–20 秒，目标 12–18）
 uv run python scripts/generate_intro.py --video-id <id> `
   --title "CPU 成为新瓶颈：2026 年的数据中心（Dylan Patel / SemiAnalysis）" `
   --summary "AI 推理把 CPU 推成瓶颈……" `

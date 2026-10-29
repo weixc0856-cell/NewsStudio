@@ -58,7 +58,7 @@
 
 ### 2.2 约束段的固定措辞（建议原样引用）
 
-- **架构约束**：`单任务串行生命周期（Resource Manager）、静态海报 60fps CFR、转场 B（0.1s 卡片淡化 + 200ms 音频淡化）`
+- **架构约束**：`单任务串行生命周期（Resource Manager）、麦肯锡橙白双栏海报（静态单帧 60fps CFR）、转场 B（0.1s 卡片淡化 + 200ms 音频淡化）`
 - **边界约束**：`dependent_start 独立句门禁、时长 180–420 s（硬上限 600 s，配置见 result.json.config）、标题去重、不引入新依赖`
 - **范围约束**：`只改 <文件列表>，其余生产配置与已验收文件保持不变`
 - **字幕约束**：`原片保留无字幕母版；交付版只烧原文字幕 + 本地 Qwen 翻译中文（原文在上、中文在下）`
@@ -211,6 +211,7 @@ auto_clip: add dependent_start gate, title deduplication, and recut ep21 highlig
 | A/V 差 | 容器内音轨与视频轨时长差 | ≤ 30 ms |
 | 解码 | `ffmpeg -v error -i <file> -f null -` 无输出 | 0 条报错 |
 | 规格 | 1920×1080、60 fps CFR、h264 + aac | 与模板一致 |
+| 片头 | 静态海报单帧，10–20 s（目标 12–16 s） | 音视频差 ≤ 60 ms |
 | 资源 | llama / CosyVoice / FFmpeg 进程、8080/50000 端口、pipeline lock | 全部为 0 |
 | 测试 | `python -m unittest discover -s scripts -p "test_*.py"` | 全绿（当前 154 通过 / 1 skipped） |
 | 字幕 | 原文在上、中文在下；无字幕母版保留 | 人工抽检 3 处 |
