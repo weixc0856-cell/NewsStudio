@@ -1,0 +1,4055 @@
+1
+00:00:30,600 --> 00:02:42,099
+Ready?
+
+2
+00:02:42,149 --> 00:03:57,270
+Go.
+
+3
+00:03:57,320 --> 00:03:58,579
+Welcome to the stage,
+
+4
+00:03:58,629 --> 00:04:10,550
+NVIDIA founder and CEO, Jensen Huang.
+
+5
+00:04:10,600 --> 00:04:13,910
+Hello, Las Vegas.
+
+6
+00:04:13,960 --> 00:04:16,189
+Happy New Year.
+
+7
+00:04:16,239 --> 00:04:18,950
+Welcome to CES.
+
+8
+00:04:19,000 --> 00:04:24,030
+Well, we have about 15 keynotes worth of material to pack in here.
+
+9
+00:04:24,080 --> 00:04:25,246
+I'm so happy to see all of you.
+
+10
+00:04:25,296 --> 00:04:27,128
+You got 3,000 people in this auditorium.
+
+11
+00:04:27,178 --> 00:04:29,914
+There's 2,000 people in the courtyard watching us.
+
+12
+00:04:29,964 --> 00:04:35,329
+There's another thousand people apparently in the fourth floor where there were supposed to be NVIDIA show floors,
+
+13
+00:04:35,379 --> 00:04:42,910
+all watching this keynote, and of course, millions around the world are going to be watching this to kick off this new year.
+
+14
+00:04:42,960 --> 00:04:48,950
+Well, every 10 to 15 years, the computer industry resets.
+
+15
+00:04:49,000 --> 00:04:52,590
+A new platform shift happens.
+
+16
+00:04:52,640 --> 00:04:57,910
+From mainframe to PC, PC to internet, internet to cloud, cloud to mobile.
+
+17
+00:04:57,960 --> 00:05:03,682
+Each time, the world of applications target a new platform.
+
+18
+00:05:03,732 --> 00:05:05,649
+That's why it's called a platform shift.
+
+19
+00:05:05,699 --> 00:05:09,910
+You write new applications for a new computer.
+
+20
+00:05:09,960 --> 00:05:18,750
+Except this time, there are two simultaneous platform shifts in fact happening at the same time.
+
+21
+00:05:18,800 --> 00:05:25,310
+While we now move to AI, applications are now going to be built on top of AI.
+
+22
+00:05:25,360 --> 00:05:34,070
+At first, people thought AIs are applications, and in fact, AIs are applications, but you're going to build applications on top of AIs.
+
+23
+00:05:34,120 --> 00:05:44,110
+But, in addition to that, how you run the software, how you develop the software fundamentally changed.
+
+24
+00:05:44,160 --> 00:05:49,590
+The entire five-layer stack of the computer industry is being reinvented.
+
+25
+00:05:49,640 --> 00:05:54,430
+You no longer program the software, you train the software.
+
+26
+00:05:54,480 --> 00:05:58,870
+You don't run it on CPUs, you run it on GPUs.
+
+27
+00:05:58,920 --> 00:06:06,670
+And whereas applications were pre-recorded, pre-compiled, and run on your device,
+
+28
+00:06:06,720 --> 00:06:17,070
+now applications understand the context and generate every single pixel, every single token, completely from scratch every single time.
+
+29
+00:06:17,120 --> 00:06:23,732
+Computing has been fundamentally reshaped as result of accelerated computing, as result of artificial intelligence.
+
+30
+00:06:23,782 --> 00:06:29,470
+Every single layer of that five-layer cake is now being reinvented.
+
+31
+00:06:29,520 --> 00:06:39,386
+Well, what that means is some 10 trillion dollars or so of the last decade of computing is now being modernized to this new way of doing computing.
+
+32
+00:06:39,436 --> 00:06:46,099
+What that means is hundreds of billions of dollars, a couple hundred billion dollars in VC funding each year,
+
+33
+00:06:46,149 --> 00:06:49,506
+is going into modernizing and inventing this new world.
+
+34
+00:06:49,556 --> 00:07:00,030
+And what it means is a hundred trillion dollars of industry, several percent of which is R&D budget, is shifting over to artificial intelligence.
+
+35
+00:07:00,080 --> 00:07:02,232
+People ask, "Where is the money coming from?"
+
+36
+00:07:02,282 --> 00:07:04,790
+That's where the money is coming from.
+
+37
+00:07:04,840 --> 00:07:13,689
+The modernization of AI to AI, the shifting of R&D budgets from classical methods to now artificial intelligence methods.
+
+38
+00:07:13,739 --> 00:07:19,286
+Enormous amounts of investments coming into this industry, which explains why we're so busy.
+
+39
+00:07:19,336 --> 00:07:21,790
+And this last year was no difference.
+
+40
+00:07:21,840 --> 00:07:24,350
+This last year was incredible.
+
+41
+00:07:24,400 --> 00:07:28,350
+This last year, there's a slide coming.
+
+42
+00:07:28,400 --> 00:07:30,870
+This is what happens when you don't practice.
+
+43
+00:07:30,920 --> 00:07:34,870
+2025 was an incredible year.
+
+44
+00:07:34,920 --> 00:07:39,990
+It's just see It seems like everything was happening all at the same time, and in fact, it probably was.
+
+45
+00:07:40,040 --> 00:07:43,910
+The first thing, of course, is scaling laws.
+
+46
+00:07:43,960 --> 00:07:51,819
+In 20 15, the first language model that I thought was really going to make a difference made a huge difference.
+
+47
+00:07:51,869 --> 00:07:53,093
+It was called BERT.
+
+48
+00:07:53,143 --> 00:07:56,190
+2017, transformers came.
+
+49
+00:07:56,240 --> 00:08:06,030
+It wasn't until 5 years later, 2022, that ChatGPT moment happened, and it awakened the world to the possibilities of artificial intelligence.
+
+50
+00:08:06,080 --> 00:08:10,510
+Something very important happened a year after that.
+
+51
+00:08:10,560 --> 00:08:16,310
+The first 01 model from ChatGPT, the first reasoning model, completely revolutionary,
+
+52
+00:08:16,360 --> 00:08:21,842
+invented this idea called test time scaling, which is very common sense common sensical thing.
+
+53
+00:08:21,892 --> 00:08:29,430
+Not only do we pre-train a model to learn, we post-train it with our reinforcement learning so that it could learn skills.
+
+54
+00:08:29,480 --> 00:08:33,750
+And now we also have test time scaling, which is another way of saying thinking.
+
+55
+00:08:33,800 --> 00:08:35,429
+You think in real time.
+
+56
+00:08:35,479 --> 00:08:41,109
+Each one of these phases of artificial intelligence requires enormous amount of compute.
+
+57
+00:08:41,159 --> 00:08:43,011
+And the computing law continued to scale.
+
+58
+00:08:43,061 --> 00:08:46,190
+Large language models continued to get better.
+
+59
+00:08:46,240 --> 00:08:48,376
+Meanwhile, another breakthrough happened.
+
+60
+00:08:48,426 --> 00:08:52,270
+And this breakthrough happened in 2024.
+
+61
+00:08:52,320 --> 00:09:00,310
+Agentic systems starting to emerge, and 2025, it started to pervade to to proliferate just about everywhere.
+
+62
+00:09:00,360 --> 00:09:08,750
+Agentic models that have the ability to reason, look up information, do research, use tools,
+
+63
+00:09:08,800 --> 00:09:15,144
+plan futures, simulate outcomes, all of a sudden started to solve very, very important problems.
+
+64
+00:09:15,194 --> 00:09:22,667
+One of my favorite agentic models is called Cursor, which revolutionized the way we do software programming at NVIDIA.
+
+65
+00:09:22,717 --> 00:09:26,590
+Agentic systems are going to really take off from here.
+
+66
+00:09:26,640 --> 00:09:28,510
+Of course, there were other types of AI.
+
+67
+00:09:28,560 --> 00:09:31,676
+We know that large language models isn't the only type of information.
+
+68
+00:09:31,726 --> 00:09:39,450
+Wherever the universe has information, wherever the universe has structure, we could teach a large language model,
+
+69
+00:09:39,500 --> 00:09:48,028
+a form of language model, to go understand that information, to understand its representation, and to turn that into an AI.
+
+70
+00:09:48,078 --> 00:09:55,630
+One of the biggest, most important one is physical AI, AIs that understand the laws of nature.
+
+71
+00:09:55,680 --> 00:10:00,510
+And then, of course, physical AIs is about AIs interacting with the world.
+
+72
+00:10:00,560 --> 00:10:06,062
+But, the world itself has information encoded information, and that's called AI physics.
+
+73
+00:10:06,112 --> 00:10:11,270
+AI that in the case of physical AI, you have AI that interacts with the physical world,
+
+74
+00:10:11,320 --> 00:10:16,025
+and you have AI physics, AI that understands the laws of physics.
+
+75
+00:10:16,075 --> 00:10:23,110
+And then, lastly, one of the most important things that happened last year, the advancement of open models.
+
+76
+00:10:23,160 --> 00:10:30,043
+We can now know that AI is going to proliferate everywhere when open source, when open innovation,
+
+77
+00:10:30,093 --> 00:10:35,933
+when innovation across every single company and every industry around the world is activated at the same time.
+
+78
+00:10:35,983 --> 00:10:39,502
+Open models really took off last year.
+
+79
+00:10:39,552 --> 00:10:50,670
+In fact, last year, we saw the advance of DeepSeek R1, the first open model that's a reasoning system.
+
+80
+00:10:50,720 --> 00:10:57,922
+It caught the world by surprise, and it activated literally this entire movement.
+
+81
+00:10:57,972 --> 00:10:59,799
+Really, really exciting work.
+
+82
+00:10:59,849 --> 00:11:01,350
+We're so happy with it.
+
+83
+00:11:01,400 --> 00:11:10,718
+Now, we have openings open model systems all over the world of all different kinds, and we now know that open models have also reached the frontier.
+
+84
+00:11:10,768 --> 00:11:14,789
+Still solidly is 6 months behind the frontier models,
+
+85
+00:11:14,839 --> 00:11:22,070
+but every single 6 months a new model is emerging, and these models are getting smarter and smarter.
+
+86
+00:11:22,120 --> 00:11:27,789
+Because of that, you could see the number of downloads has exploded.
+
+87
+00:11:27,839 --> 00:11:34,258
+The number of downloads is growing so fast because startups want to participate in the AI revolution,
+
+88
+00:11:34,308 --> 00:11:40,550
+large companies want to, researchers want to, students want to, just about every single country wants to.
+
+89
+00:11:40,600 --> 00:11:46,700
+How is it possible that intelligence, the digital form of intelligence, will leave anyone behind?
+
+90
+00:11:46,750 --> 00:11:52,544
+And so, open models has really revolutionized artificial intelligence last year.
+
+91
+00:11:52,594 --> 00:11:56,105
+This entire industry is going to be reshaped as a result of that.
+
+92
+00:11:56,155 --> 00:11:59,190
+Now, we had this inkling some time ago.
+
+93
+00:11:59,240 --> 00:12:05,755
+You might have heard that several years ago, we just started to build and operate our own AI supercomputers.
+
+94
+00:12:05,805 --> 00:12:07,739
+We call them DGX Clouds.
+
+95
+00:12:07,789 --> 00:12:11,959
+A lot of people asked, "Are you going to going into the cloud business?"
+
+96
+00:12:12,009 --> 00:12:16,419
+The answer is no. We're building these DGX supercomputers for our own use.
+
+97
+00:12:16,469 --> 00:12:24,654
+Well, it turns out we have billions of dollars of supercomputers in operation, so that we could develop our open models.
+
+98
+00:12:24,704 --> 00:12:28,110
+I am so pleased with the work that we're doing.
+
+99
+00:12:28,160 --> 00:12:31,685
+It is starting to attract attention all over the world and all over the industries,
+
+100
+00:12:31,735 --> 00:12:37,670
+because we are doing frontier AI model work in so many different domains.
+
+101
+00:12:37,720 --> 00:12:44,030
+The work that we did in proteins, in digital biology, La Proteina, to be able to synthesize and generate proteins.
+
+102
+00:12:44,080 --> 00:12:49,550
+OpenFold 3 to understand the understand the structure of proteins.
+
+103
+00:12:49,600 --> 00:12:59,623
+Evo 2, how to understand and generate multiple proteins, otherwise the beginnings of cellular cellular representation.
+
+104
+00:12:59,673 --> 00:13:02,907
+Earth 2, AI that understands the laws of physics.
+
+105
+00:13:02,957 --> 00:13:10,990
+The work that we did with FourCastNet, the work that we did with CorrDiff, really revolutionized the way that people are doing weather prediction.
+
+106
+00:13:11,040 --> 00:13:15,077
+NeMo-Megatron, we've now doing groundbreaking work there.
+
+107
+00:13:15,127 --> 00:13:23,142
+The first hybrid transformer SSM model that's incredibly fast and therefore can think for a very long time,
+
+108
+00:13:23,192 --> 00:13:29,780
+or can think very quickly with that for not a very long time, and produce very very smart intelligent answers.
+
+109
+00:13:29,830 --> 00:13:36,830
+NeMo-Megatron 3 is groundbreaking work, and you can expect us to deliver other versions of NeMo-Megatron 3 in the near future.
+
+110
+00:13:36,880 --> 00:13:45,750
+Cosmos, a frontier open world foundation model, one that understand how the world works.
+
+111
+00:13:45,800 --> 00:13:52,546
+GR00T, a humanoid robotic system, articulation, mobility, locomotion, these models,
+
+112
+00:13:52,596 --> 00:13:59,056
+these technologies are now being integrated, and in the each one of these cases open to the world.
+
+113
+00:13:59,106 --> 00:14:01,767
+Frontier humanoid robotics models open to the world.
+
+114
+00:14:01,817 --> 00:14:07,397
+And then, today, we're going to talk a little bit about Alpamayo, the work that we've been doing in self-driving cars.
+
+115
+00:14:07,447 --> 00:14:15,550
+Not only do we open source the models, we also open source the data that we used to train those models.
+
+116
+00:14:15,600 --> 00:14:22,270
+Because that in that way, only in that way can you truly trust how the models came to be.
+
+117
+00:14:22,320 --> 00:14:23,892
+We open source all the models.
+
+118
+00:14:23,942 --> 00:14:26,006
+We help you make derivatives from them.
+
+119
+00:14:26,056 --> 00:14:27,932
+We have a whole suite of libraries.
+
+120
+00:14:27,982 --> 00:14:34,002
+We call them NeMo libraries, physics NeMo libraries, and the Clara NeMo libraries, each bio NeMo libraries.
+
+121
+00:14:34,052 --> 00:14:41,049
+Each one of these libraries are life cycle management systems of AIs, so that you could process the data, you could generate data,
+
+122
+00:14:41,099 --> 00:14:47,630
+you could train the model, you could create the model, evaluate the model, guardrail the model, all the way to deploying the model.
+
+123
+00:14:47,680 --> 00:14:52,990
+Each one of these libraries are incredibly complex, and all of it is open sourced.
+
+124
+00:14:53,040 --> 00:15:02,670
+And so, now, on top of this platform, NVIDIA is a frontier AI model builder, and we build it in a very special way.
+
+125
+00:15:02,720 --> 00:15:11,359
+We build it completely in the open, so that we can enable every company, every industry, every country to be part of this AI revolution.
+
+126
+00:15:11,409 --> 00:15:14,036
+I'm incredibly proud of the work that we're doing there.
+
+127
+00:15:14,086 --> 00:15:22,558
+In fact, if you notice the the charts, the chart shows that our contribution to this industry is bar none,
+
+128
+00:15:22,608 --> 00:15:26,590
+and you're going to see us, in fact, continue to do that, if not accelerate.
+
+129
+00:15:26,640 --> 00:15:28,708
+These models are also world-class.
+
+130
+00:15:28,758 --> 00:15:31,919
+Not only are they open, they're also top the leaderboards.
+
+131
+00:15:31,969 --> 00:15:33,848
+This is an area where we're very proud.
+
+132
+00:15:33,898 --> 00:15:36,467
+They top leaderboards in intelligence.
+
+133
+00:15:36,517 --> 00:15:43,469
+Uh we have uh important models that are understand multi-modality documents, otherwise known as PDFs.
+
+134
+00:15:43,519 --> 00:15:47,650
+The most valuable content in the world are captured in PDFs.
+
+135
+00:15:47,700 --> 00:15:54,440
+But, they're it takes artificial intelligence to find out what's inside, interpret what's inside, and help you read it.
+
+136
+00:15:54,490 --> 00:15:59,750
+And so, our PDF retrievers, our PDF parsers, are world-class.
+
+137
+00:15:59,800 --> 00:16:02,992
+Our speech recognition models, absolutely world-class.
+
+138
+00:16:03,042 --> 00:16:12,207
+Our retrieval models, basically search semantic search AI search, the database engine of the modern AI era, world-class.
+
+139
+00:16:12,257 --> 00:16:15,134
+So, we're on top of leaderboards constantly.
+
+140
+00:16:15,184 --> 00:16:17,350
+This is an area we're very proud of.
+
+141
+00:16:17,400 --> 00:16:24,230
+And all of that is in service of your ability to build AI agents.
+
+142
+00:16:24,280 --> 00:16:26,956
+This is really a groundbreaking area of development.
+
+143
+00:16:27,006 --> 00:16:31,084
+You know, I first when people when ChatGPT came out, people said, you know,
+
+144
+00:16:31,134 --> 00:16:36,070
+uh gosh, it it it produced really interesting results, but it hallucinated greatly.
+
+145
+00:16:36,120 --> 00:16:40,645
+And the reason why it hallucinated, of course, it could memorize everything um in the past,
+
+146
+00:16:40,695 --> 00:16:43,470
+but it can't memorize everything in the future in the current.
+
+147
+00:16:43,520 --> 00:16:45,761
+And so, it needs to be grounded in research.
+
+148
+00:16:45,811 --> 00:16:49,990
+It has to do fundamental research before it answers a question.
+
+149
+00:16:50,040 --> 00:16:52,918
+The ability to reason about, do I have to do research?
+
+150
+00:16:52,968 --> 00:16:53,950
+Do I have to use tools?
+
+151
+00:16:54,000 --> 00:16:56,830
+How do I break up a problem into steps.
+
+152
+00:16:56,880 --> 00:17:01,630
+Each one of these steps something that that the AI model knows how to do,
+
+153
+00:17:01,680 --> 00:17:09,470
+and together it is able to compose it into a sequence of steps to perform something it's never done before, it's never been trained to do.
+
+154
+00:17:09,520 --> 00:17:11,638
+This is the wonderful capability of reasoning.
+
+155
+00:17:11,688 --> 00:17:16,217
+We could we could be we can encounter a circumstance we've never seen before,
+
+156
+00:17:16,267 --> 00:17:24,722
+and break it down into circumstances and knowledge or rules that we know how to do, because we've experienced it in past.
+
+157
+00:17:24,772 --> 00:17:30,150
+And so, the ability for AI models now to be able to reason incredibly powerful.
+
+158
+00:17:30,200 --> 00:17:34,693
+The reasoning capability of agents opened the doors to all of these different applications.
+
+159
+00:17:34,743 --> 00:17:39,280
+We no longer have to train an AI model to know everything on day one.
+
+160
+00:17:39,330 --> 00:17:42,590
+Just as we don't have to know everything on day one.
+
+161
+00:17:42,640 --> 00:17:47,910
+That we should be able to in every circumstance reason about how to solve that problem.
+
+162
+00:17:47,960 --> 00:17:51,420
+Large language models has now made this fundamental leap.
+
+163
+00:17:51,470 --> 00:17:55,343
+The ability to use reinforcement learning and chain of thoughts and you know,
+
+164
+00:17:55,393 --> 00:18:02,550
+search and planning and all these different techniques and reinforcement learning has made it possible for us to have this basic capability,
+
+165
+00:18:02,600 --> 00:18:05,405
+and it's also now completely open sourced.
+
+166
+00:18:05,455 --> 00:18:09,750
+But, the thing that's really terrific is another breakthrough that happened.
+
+167
+00:18:09,800 --> 00:18:19,230
+And the first time I saw it was with Eran's Perplexity, Perplexity, the search company, the AI search company, really really innovative company.
+
+168
+00:18:19,280 --> 00:18:25,172
+And the first time I realized they were using multiple models at the same time, I thought it was completely genius.
+
+169
+00:18:25,222 --> 00:18:27,150
+Of course, we would do that.
+
+170
+00:18:27,200 --> 00:18:37,295
+Of course, an AI would also call upon all of the world's great AIs to solve the problem it wants to solve at any part of the reasoning chain.
+
+171
+00:18:37,345 --> 00:18:43,193
+And this is the reason why AIs are really multi- modal,
+
+172
+00:18:43,243 --> 00:18:51,618
+meaning they understand speech and images and text and videos and 3D graphics and proteins.
+
+173
+00:18:51,668 --> 00:18:52,830
+It's multi-modal.
+
+174
+00:18:52,880 --> 00:19:02,070
+It's also multi-model, meaning that it should be able to use any model that best fits the task.
+
+175
+00:19:02,120 --> 00:19:10,631
+It is multi-cloud by definition, therefore, because these AI models are sitting in all these different places, and it also is hybrid cloud.
+
+176
+00:19:10,681 --> 00:19:20,227
+Because if you're an enterprise company, or you built a robot, or whatever that device is, sometimes it's at the edge, sometimes a radio cell tower,
+
+177
+00:19:20,277 --> 00:19:29,047
+maybe sometimes it's in an enterprise, or maybe it's a place where a hospital where you need to have the the data in real time right next to you.
+
+178
+00:19:29,097 --> 00:19:36,190
+Whatever those applications are, we know now this is what an AI application looks like in the future.
+
+179
+00:19:36,240 --> 00:19:46,670
+Or another way to think about that, because future applications are built on AIs, this is the basic framework of future applications.
+
+180
+00:19:46,720 --> 00:19:53,815
+This basic framework, this basic structure of agentic AIs that could do the things that I'm talking about.
+
+181
+00:19:53,865 --> 00:20:01,350
+That is multi-model has now turbocharged AI startups of all kinds.
+
+182
+00:20:01,400 --> 00:20:06,612
+And now you can also because of the all of the open models and all the tools that we've provided you,
+
+183
+00:20:06,662 --> 00:20:13,351
+you could also customize your AIs to teach your AI skills that nobody else is teaching.
+
+184
+00:20:13,401 --> 00:20:18,002
+Nobody else is causing their AI to become intelligent or smart in that way.
+
+185
+00:20:18,052 --> 00:20:19,678
+You could do it for yourself.
+
+186
+00:20:19,728 --> 00:20:26,546
+And that's the work that we do with Nemotron, Nemo, and all of the things that we do with open models is intended to do.
+
+187
+00:20:26,596 --> 00:20:33,376
+You put a smart router in front of it and that router is essentially a manager that decides which one of the task,
+
+188
+00:20:33,426 --> 00:20:41,710
+based on the intention of the prompts that you give it, which one of the models is best fit for that application, for that solving that problem.
+
+189
+00:20:41,760 --> 00:20:42,559
+Okay?
+
+190
+00:20:42,609 --> 00:20:47,710
+So now when you think about this architecture, what do you have?
+
+191
+00:20:47,760 --> 00:20:55,150
+When you think about this architecture, all of a sudden you have an AI that's on the one hand completely customizable by you.
+
+192
+00:20:55,200 --> 00:21:00,070
+Something that you could teach to do your own very skills for your company.
+
+193
+00:21:00,120 --> 00:21:02,350
+Something that's domain secret.
+
+194
+00:21:02,400 --> 00:21:04,543
+Something where you have deep domain expertise.
+
+195
+00:21:04,593 --> 00:21:08,971
+Maybe you've got all of the data that you need to train that AI model.
+
+196
+00:21:09,021 --> 00:21:15,670
+On the other hand, your AI is always at the frontier by definition.
+
+197
+00:21:15,720 --> 00:21:21,434
+You're always at the frontier on the one hand, you're always customized on the other hand, and it should just run.
+
+198
+00:21:21,484 --> 00:21:26,670
+And so we thought we would make the simplest of examples to make it available to you.
+
+199
+00:21:26,720 --> 00:21:29,870
+This entire framework we call a blueprint.
+
+200
+00:21:29,920 --> 00:21:36,577
+And we have blueprints that are integrated into enterprise SaaS platforms all over the world and we're really pleased with the progress.
+
+201
+00:21:36,627 --> 00:21:44,310
+But what we do is show you a a short example of something that anybody can do.
+
+202
+00:21:44,360 --> 00:21:46,870
+Let's build a personal assistant.
+
+203
+00:21:46,920 --> 00:21:52,630
+I want it to help me with my calendar, emails, to-do lists, and even keep an eye on my home.
+
+204
+00:21:52,680 --> 00:21:56,710
+I use Brev to turn my DGX Spark into a personal cloud.
+
+205
+00:21:56,760 --> 00:22:01,710
+So I can use the same interface whether I'm using a cloud GPU or a DGX Spark.
+
+206
+00:22:01,760 --> 00:22:08,110
+I use a frontier model API to easily get started.
+
+207
+00:22:08,160 --> 00:22:13,510
+I want it to help me with my emails, so I create an email tool for my agent to call.
+
+208
+00:22:13,560 --> 00:22:21,310
+I want my emails to stay private, so I'll add an open model that's running locally on the Spark.
+
+209
+00:22:21,360 --> 00:22:30,070
+Now for any job, I want the agent to use the right model for the right task, so I'll use an intent-based model router.
+
+210
+00:22:30,120 --> 00:22:36,910
+This way, prompts that need email will stay on my Spark and everything else can call the frontier model.
+
+211
+00:22:36,960 --> 00:22:43,190
+I want my assistant to interact with my world, so I'll hook it up to Hugging Face's Reachy mini robot.
+
+212
+00:22:43,240 --> 00:22:48,110
+My agent controls the head, ears, and camera of the Reachy with tool calls.
+
+213
+00:22:48,160 --> 00:22:52,910
+I want to give Reachy a voice and I really like 11 Labs, so I'll hook up their API.
+
+214
+00:22:52,960 --> 00:22:56,110
+Hi, I'm Reachy, running on DGX Spark.
+
+215
+00:22:56,160 --> 00:22:59,150
+Hey Reachy, what's on my to-do list today?
+
+216
+00:22:59,200 --> 00:23:01,950
+Your to-do list today.
+
+217
+00:23:02,000 --> 00:23:07,230
+Grab groceries, eggs, milk, butter, and send Jensen the new script.
+
+218
+00:23:07,280 --> 00:23:09,190
+Okay, let's send Jensen that update.
+
+219
+00:23:09,240 --> 00:23:11,790
+Tell him we'll have it for him by the end of day.
+
+220
+00:23:11,840 --> 00:23:12,362
+Will do.
+
+221
+00:23:12,412 --> 00:23:14,270
+Reachy, there's a sketch too.
+
+222
+00:23:14,320 --> 00:23:17,710
+Can you turn it into an architectural rendering?
+
+223
+00:23:17,760 --> 00:23:26,470
+Sure.
+
+224
+00:23:26,520 --> 00:23:26,833
+Nice.
+
+225
+00:23:26,863 --> 00:23:31,550
+Now make a video and show me around the room.
+
+226
+00:23:31,600 --> 00:23:33,110
+Here you go.
+
+227
+00:23:33,160 --> 00:23:35,790
+That's great.
+
+228
+00:23:35,840 --> 00:23:42,270
+With Brev, I can share access to my Spark and Reachy, so I'm going to share it with Anna.
+
+229
+00:23:42,320 --> 00:23:45,510
+Hey Reachy, what's Potato up to?
+
+230
+00:23:45,560 --> 00:23:47,629
+He's on the couch.
+
+231
+00:23:47,679 --> 00:23:49,221
+I remember you don't like this.
+
+232
+00:23:49,271 --> 00:23:51,014
+I'll tell him to get off.
+
+233
+00:23:51,064 --> 00:23:54,310
+Potato, off the couch.
+
+234
+00:23:54,360 --> 00:23:58,270
+With all the progress in open source, it's incredible to see what you can build.
+
+235
+00:23:58,320 --> 00:24:04,430
+I'd love to see what you create.
+
+236
+00:24:04,480 --> 00:24:06,870
+Isn't that incredible?
+
+237
+00:24:06,920 --> 00:24:11,870
+Now the amazing thing is that is utterly trivial now.
+
+238
+00:24:11,920 --> 00:24:14,472
+That is utterly trivial now.
+
+239
+00:24:14,522 --> 00:24:20,092
+And yet just a couple years ago all of that would have been impossible, absolutely unimaginable.
+
+240
+00:24:20,142 --> 00:24:21,737
+Well, this basic framework,
+
+241
+00:24:21,787 --> 00:24:30,910
+this basic way of building applications using language models that are pretrained and they're proprietary, they're frontier,
+
+242
+00:24:30,960 --> 00:24:35,653
+combine it with customized language models into a agentic framework,
+
+243
+00:24:35,703 --> 00:24:43,670
+a reasoning framework that allows you to access tools and files and maybe even connect to other agents.
+
+244
+00:24:43,720 --> 00:24:51,510
+This is basically the architecture of AI applications or applications in the modern age.
+
+245
+00:24:51,560 --> 00:24:55,331
+And the ability for us to create these applications are incredibly fast.
+
+246
+00:24:55,381 --> 00:25:03,192
+And notice if you give it this application um information that it's never seen
+
+247
+00:25:03,242 --> 00:25:09,910
+before or in a structure that has is not represented exactly as you thought,
+
+248
+00:25:09,960 --> 00:25:18,310
+it can still reason through it and make its best effort to reason through the data, the information to try to understand how to solve the problem.
+
+249
+00:25:18,360 --> 00:25:19,592
+Artificial intelligence.
+
+250
+00:25:19,642 --> 00:25:23,815
+Okay, so this basic framework is now being integrated and and everything that I just described,
+
+251
+00:25:23,865 --> 00:25:28,796
+we have the benefit of working with some of the world's leading enterprise platform companies.
+
+252
+00:25:28,846 --> 00:25:31,586
+Uh Palantir, for example.
+
+253
+00:25:31,636 --> 00:25:38,510
+I um their their entire AI and data processing platform is being integrated and accelerated by NVIDIA today.
+
+254
+00:25:38,560 --> 00:25:44,142
+ServiceNow, the world's leading customer service and um employee service platform.
+
+255
+00:25:44,192 --> 00:25:48,594
+Snowflake, the world's top data platform in the cloud.
+
+256
+00:25:48,644 --> 00:25:51,688
+Uh incredible work that that uh is being done there.
+
+257
+00:25:51,738 --> 00:25:52,726
+Uh Code Rabbit.
+
+258
+00:25:52,776 --> 00:25:55,336
+Uh we're using Code Rabbit all over NVIDIA.
+
+259
+00:25:55,386 --> 00:26:00,662
+Uh CrowdStrike creating AIs to detect, define AI threats.
+
+260
+00:26:00,712 --> 00:26:10,270
+Uh NetApp, their AI their data platform now has NVIDIA semantic AI on top of it and agentic systems on top of it for them to do customer service.
+
+261
+00:26:10,320 --> 00:26:18,915
+But the important thing is this, not only is this the way that you develop applications now, this is going to be the user interface of your platform.
+
+262
+00:26:18,965 --> 00:26:29,230
+So whether it's Palantir or ServiceNow or Snowflake and many other companies that we're working with, the agentic system is the interface.
+
+263
+00:26:29,280 --> 00:26:35,042
+It's no longer Excel with a bunch of, you know, squares that you enter enter information into.
+
+264
+00:26:35,092 --> 00:26:38,120
+Maybe it's no longer could just command line.
+
+265
+00:26:38,170 --> 00:26:47,184
+The any all of that multimodality information is now possible and the way you interact with your platform is much more well,
+
+266
+00:26:47,234 --> 00:26:50,430
+if you will, simple, like you're interacting with people.
+
+267
+00:26:50,480 --> 00:26:55,771
+And so that's enterprise AI being revolutionized by agentic systems.
+
+268
+00:26:55,821 --> 00:26:57,804
+The next thing is physical AI.
+
+269
+00:26:57,854 --> 00:27:00,864
+This is an area that you've seen me talk about for several years.
+
+270
+00:27:00,914 --> 00:27:03,670
+In fact, we've been working on this for eight years.
+
+271
+00:27:03,720 --> 00:27:04,762
+The question is,
+
+272
+00:27:04,812 --> 00:27:10,555
+how do you take something that is intelligent inside a computer and interacts
+
+273
+00:27:10,605 --> 00:27:17,047
+with you with screens and speakers to something that can interact with the world,
+
+274
+00:27:17,097 --> 00:27:22,070
+meaning it can understand the common sense of how the world works.
+
+275
+00:27:22,120 --> 00:27:23,039
+Object permanence.
+
+276
+00:27:23,089 --> 00:27:27,110
+If I look away and I look back, that object is still there.
+
+277
+00:27:27,160 --> 00:27:28,059
+Um causality.
+
+278
+00:27:28,109 --> 00:27:29,882
+If I push it, it tips over.
+
+279
+00:27:29,932 --> 00:27:32,240
+It understands friction and gravity.
+
+280
+00:27:32,290 --> 00:27:34,400
+It understands inertia.
+
+281
+00:27:34,450 --> 00:27:39,969
+That a heavy truck rolling down the road is going to need a little bit more time to stop.
+
+282
+00:27:40,019 --> 00:27:43,629
+That a ball is going to keep on rolling.
+
+283
+00:27:43,679 --> 00:27:49,925
+These ideas are common sense to even a little child, but for AI, it's completely unknown.
+
+284
+00:27:49,975 --> 00:27:57,228
+And so we have to create a system that allows AIs to learn the the common sense of the physical world,
+
+285
+00:27:57,278 --> 00:28:02,987
+learn its laws, but also to be able to, of course,
+
+286
+00:28:03,037 --> 00:28:13,072
+learn from data and the data is quite scarce, and to be able to evaluate whether that AI is working, meaning it has to simulate in an environment.
+
+287
+00:28:13,122 --> 00:28:18,945
+How does an AI know that the the actions that it's performing is consistent with what it should
+
+288
+00:28:18,995 --> 00:28:24,455
+do if it doesn't have the ability to simulate the response of the physical world back on its actions?
+
+289
+00:28:24,505 --> 00:28:31,070
+The response of its actions is really important to simulate, otherwise there's no way to evaluate it, it's different every time.
+
+290
+00:28:31,120 --> 00:28:35,990
+And so this basic system requires three computers.
+
+291
+00:28:36,040 --> 00:28:41,869
+One computer, of course, the one that we know that NVIDIA builds for training the AI models.
+
+292
+00:28:41,919 --> 00:28:46,422
+Another computer that we know is to inference the compute inference the models.
+
+293
+00:28:46,472 --> 00:28:55,390
+Inferencing the model is essentially a robotics computer that runs in the car or runs in a robot or runs in a factory, runs anywhere at the edge.
+
+294
+00:28:55,440 --> 00:28:59,114
+But there has to be another computer that's designed for simulation.
+
+295
+00:28:59,164 --> 00:29:03,046
+And simulation is at the heart of almost everything NVIDIA does.
+
+296
+00:29:03,096 --> 00:29:06,550
+This is This is where we are most comfortable.
+
+297
+00:29:06,600 --> 00:29:12,079
+And simulation was really the foundations of almost everything that we've done with physical AI.
+
+298
+00:29:12,129 --> 00:29:18,758
+So we have three computers and multiple stacks that run on these computers, these libraries to make them useful.
+
+299
+00:29:18,808 --> 00:29:24,190
+Omniverse is our digital twin physically based simulation world.
+
+300
+00:29:24,240 --> 00:29:32,590
+Cosmos, as I mentioned earlier, is our foundation model, not a foundation model for language, but a foundation model of the world.
+
+301
+00:29:32,640 --> 00:29:35,310
+And it's also aligned with language.
+
+302
+00:29:35,360 --> 00:29:37,977
+You could say something like, you know, what's happening to the ball?
+
+303
+00:29:38,027 --> 00:29:40,588
+And they'll tell you the ball's rolling down the street.
+
+304
+00:29:40,638 --> 00:29:44,665
+And so a world foundation model and then, of course, the robotics models.
+
+305
+00:29:44,715 --> 00:29:46,017
+We have two of them.
+
+306
+00:29:46,067 --> 00:29:48,390
+One of them is called GR00T.
+
+307
+00:29:48,440 --> 00:29:51,230
+The other one's called Alpamayo that I'm going to tell you about.
+
+308
+00:29:51,280 --> 00:29:57,555
+Now, the one of the most important things that we have to do with physical AI is to create the data to train the AI in the first place.
+
+309
+00:29:57,605 --> 00:29:59,710
+Where does that data come from?
+
+310
+00:29:59,760 --> 00:30:09,550
+Rather than instead of having languages because we created a bunch of text that are what we consider ground truth that the AI can learn from,
+
+311
+00:30:09,600 --> 00:30:12,276
+how do we teach an AI the ground truth of physics?
+
+312
+00:30:12,326 --> 00:30:21,430
+There are lots and lots of videos, lots and lots of videos, but hardly enough to capture the diversity and the type of interactions that we need.
+
+313
+00:30:21,480 --> 00:30:31,870
+And so, this is where great minds came together and transformed what used to be compute into data.
+
+314
+00:30:31,920 --> 00:30:38,981
+Now, using synthetic data generation that is grounded and conditioned by the laws of physics,
+
+315
+00:30:39,031 --> 00:30:49,542
+grounded and conditioned by ground truth, we can now selectively cleverly generate data that we can then use to train the AI.
+
+316
+00:30:49,592 --> 00:31:01,190
+So, for example, what comes into this AI, this Cosmos AI world model on the left on over here, is the output of a traffic simulator.
+
+317
+00:31:01,240 --> 00:31:06,630
+Now, this traffic simulator is hardly enough for an AI to learn from.
+
+318
+00:31:06,680 --> 00:31:11,390
+We can take this, put it into a Cosmos Foundation model,
+
+319
+00:31:11,440 --> 00:31:19,898
+and generate surround video that is physically based and physically plausible that the AI can now learn from.
+
+320
+00:31:19,948 --> 00:31:22,072
+And there are so many examples of this.
+
+321
+00:31:22,122 --> 00:31:28,110
+Let me show you what Cosmos can do.
+
+322
+00:31:28,160 --> 00:31:32,750
+The Chat GPT moment for physical AI is nearly here.
+
+323
+00:31:32,800 --> 00:31:34,416
+But the challenge is clear.
+
+324
+00:31:34,466 --> 00:31:39,070
+The physical world is diverse and unpredictable.
+
+325
+00:31:39,120 --> 00:31:45,110
+Collecting real-world training data is slow and costly, and it's never enough.
+
+326
+00:31:45,160 --> 00:31:48,550
+The answer is synthetic data.
+
+327
+00:31:48,600 --> 00:31:56,710
+It starts with NVIDIA Cosmos, an open frontier world foundation model for physical AI.
+
+328
+00:31:56,760 --> 00:32:04,790
+Pre-trained on internet-scale video, real driving and robotics data, and 3D simulation.
+
+329
+00:32:04,840 --> 00:32:13,830
+Cosmos learned a unified representation of the world, able to align language, images, 3D, and action.
+
+330
+00:32:13,880 --> 00:32:21,150
+It performs physical AI skills like generation, reasoning, and trajectory prediction.
+
+331
+00:32:21,200 --> 00:32:27,350
+From a single image, Cosmos generates realistic video.
+
+332
+00:32:27,400 --> 00:32:33,590
+From 3D scene descriptions, physically coherent motion.
+
+333
+00:32:33,640 --> 00:32:39,710
+From driving telemetry and sensor logs, surround video.
+
+334
+00:32:39,760 --> 00:32:45,350
+From planning simulators, multi-camera environments.
+
+335
+00:32:45,400 --> 00:32:51,150
+Or from scenario prompts, it brings edge cases to life.
+
+336
+00:32:51,200 --> 00:32:55,870
+Developers can run interactive closed-loop simulations in Cosmos.
+
+337
+00:32:55,920 --> 00:33:00,910
+When actions are made, the world responds.
+
+338
+00:33:00,960 --> 00:33:03,510
+Cosmos reasons.
+
+339
+00:33:03,560 --> 00:33:13,790
+It analyzes edge scenarios, breaks them down into familiar physical interactions, and reasons about what could happen next.
+
+340
+00:33:13,840 --> 00:33:19,270
+Cosmos turns compute into data, training AVs for the long tail,
+
+341
+00:33:19,320 --> 00:33:30,990
+and robots how to adapt for every scenario.
+
+342
+00:33:31,040 --> 00:33:33,990
+I know, it's incredible.
+
+343
+00:33:34,040 --> 00:33:39,246
+Cosmos is the world's leading foundation model, world foundation model.
+
+344
+00:33:39,296 --> 00:33:43,390
+It's been downloaded millions of times, used all over the world.
+
+345
+00:33:43,440 --> 00:33:47,321
+Getting world getting the world ready for this new era of physical AI.
+
+346
+00:33:47,371 --> 00:33:49,670
+We use it ourselves as well.
+
+347
+00:33:49,720 --> 00:33:54,990
+We use it ourselves to create our self-driving car.
+
+348
+00:33:55,040 --> 00:34:00,230
+Using it for scenario generation and using it for evaluation,
+
+349
+00:34:00,280 --> 00:34:10,109
+we could have something that allows us to effectively travel billions, trillions of miles, but doing it inside a computer.
+
+350
+00:34:10,159 --> 00:34:12,199
+And we've made enormous progress.
+
+351
+00:34:12,249 --> 00:34:23,710
+Today, we're announcing Alpamayo, the world's first thinking, reasoning autonomous vehicle AI.
+
+352
+00:34:23,760 --> 00:34:31,030
+Alpamayo is trained end to end, literally from camera in to actuation out.
+
+353
+00:34:31,080 --> 00:34:37,430
+The camera in, lots and lots of miles that are driven by itself using human demonstration,
+
+354
+00:34:37,480 --> 00:34:41,550
+and we have lots and lots of miles that are generated by Cosmos.
+
+355
+00:34:41,600 --> 00:34:50,536
+In addition to that, hundreds of thousands of examples are labeled very, very carefully so that we could teach the car how to drive.
+
+356
+00:34:50,586 --> 00:34:53,910
+Alpamayo does something that's really special.
+
+357
+00:34:53,960 --> 00:35:00,417
+Not only does it take sensor input and activates steering wheel, brakes,
+
+358
+00:35:00,467 --> 00:35:07,696
+and and acceleration, it also reasons about what action it's about to take.
+
+359
+00:35:07,746 --> 00:35:15,830
+It tells you what action it's going to take, the reasons by which it came about that action, and then of course the trajectory.
+
+360
+00:35:15,880 --> 00:35:27,230
+All of these are coupled directly and trained very specifically by a large combination of human trained and as well as Cosmos generated data.
+
+361
+00:35:27,280 --> 00:35:29,951
+The result of it is just really incredible.
+
+362
+00:35:30,001 --> 00:35:38,590
+Not only does your car drive as you would expect it to drive, and it drives so naturally because it learned directly from human demonstrators,
+
+363
+00:35:38,640 --> 00:35:42,869
+but in every single scenario when it comes up to the scenario, it reasons about it,
+
+364
+00:35:42,919 --> 00:35:46,790
+tells you what it's going to do, and it reasons about what it's what it's about to do.
+
+365
+00:35:46,840 --> 00:35:51,790
+Now, the reason why this is so important is because of the long tail of driving.
+
+366
+00:35:51,840 --> 00:35:59,176
+There it's impossible for us to simply collect every single possible scenario for everything that could ever happen
+
+367
+00:35:59,226 --> 00:36:06,070
+in every single country and every single circumstance that's possibly ever going to happen for all of population.
+
+368
+00:36:06,120 --> 00:36:11,834
+However, it is very unlikely it's very likely that every scenario,
+
+369
+00:36:11,884 --> 00:36:18,773
+if decomposed into a whole bunch of other smaller scenarios, are quite normal for you to understand.
+
+370
+00:36:18,823 --> 00:36:25,734
+And so, these long tails will be decomposed into quite normal circumstances that the car knows how to deal with.
+
+371
+00:36:25,784 --> 00:36:27,296
+It just needs to reason about it.
+
+372
+00:36:27,346 --> 00:36:28,550
+And so, let's take a look.
+
+373
+00:36:28,600 --> 00:36:31,230
+Everything you're about to see is one shot.
+
+374
+00:36:31,280 --> 00:36:37,630
+It's a no hands.
+
+375
+00:36:37,680 --> 00:36:40,309
+Routing to your destination.
+
+376
+00:36:40,359 --> 00:38:17,011
+Buckle
+
+377
+00:38:17,061 --> 00:39:12,270
+up.
+
+378
+00:39:12,320 --> 00:39:15,754
+You
+
+379
+00:39:15,804 --> 00:39:20,110
+have
+
+380
+00:39:20,160 --> 00:39:27,950
+arrived.
+
+381
+00:39:28,000 --> 00:39:30,191
+We started working on self-driving cars 8 years ago,
+
+382
+00:39:30,241 --> 00:39:38,670
+and the reason for that is because we reasoned early on that deep learning and artificial intelligence was going to reinvent the entire
+
+383
+00:39:38,720 --> 00:39:48,350
+computing And if we were ever going to understand how to navigate ourselves and how to guide the industry towards this new future,
+
+384
+00:39:48,400 --> 00:39:51,270
+we have to get good at building the entire stack.
+
+385
+00:39:51,320 --> 00:39:56,190
+Well, as I mentioned earlier, AI is a five-layered cake.
+
+386
+00:39:56,240 --> 00:39:58,590
+The lowest layer is land, power, and shell.
+
+387
+00:39:58,640 --> 00:40:01,590
+In the case of robotics, the lowest layer is the car.
+
+388
+00:40:01,640 --> 00:40:03,910
+The next layer above it is chips.
+
+389
+00:40:03,960 --> 00:40:07,154
+GPUs, networking chips, CPUs, all that kind of stuff.
+
+390
+00:40:07,204 --> 00:40:11,310
+The next layer above that is the infrastructure.
+
+391
+00:40:11,360 --> 00:40:18,790
+That infrastructure, in this particular case, as I mentioned with physical AI, is Omniverse and Cosmos.
+
+392
+00:40:18,840 --> 00:40:21,830
+And then above that are the models.
+
+393
+00:40:21,880 --> 00:40:31,470
+And in the case of the models above that I just shown you, the model here is called Alpha Miao.
+
+394
+00:40:31,520 --> 00:40:34,473
+And Alpha Miao today is open-sourced.
+
+395
+00:40:34,523 --> 00:40:39,425
+We This incredible body of work, it took several thousand people.
+
+396
+00:40:39,475 --> 00:40:41,355
+Our AV team is several thousand people.
+
+397
+00:40:41,405 --> 00:40:48,030
+Just to put in perspective, our partner uh Ola, I think Ola is here in the audience somewhere.
+
+398
+00:40:48,080 --> 00:40:54,757
+Uh Mercedes agreed to partner with us 5 years ago to go make all of this possible.
+
+399
+00:40:54,807 --> 00:40:59,570
+We imagine that someday a billion cars on the road will all be autonomous.
+
+400
+00:40:59,620 --> 00:41:05,919
+You could either have it be a robo-taxi that you're you're you're orchestrating and and renting from somebody,
+
+401
+00:41:05,969 --> 00:41:10,790
+or you could own it and it's driving for you driving by itself, or you could decide to drive for yourself.
+
+402
+00:41:10,840 --> 00:41:14,171
+And so, but every single car will have autonomous vehicle capability.
+
+403
+00:41:14,221 --> 00:41:16,470
+Every single car will be AI-powered.
+
+404
+00:41:16,520 --> 00:41:23,910
+And so, the the the model layer in this case is Alpha Miao, and the application above that is the Mercedes-Benz.
+
+405
+00:41:23,960 --> 00:41:24,516
+Okay?
+
+406
+00:41:24,566 --> 00:41:31,350
+And so, so this entire stack is our first NVIDIA first entire stack endeavor.
+
+407
+00:41:31,400 --> 00:41:40,636
+And we've been working on it for this entire time, and we're so happy that the first AV car from NVIDIA is going to be on the road in Q1,
+
+408
+00:41:40,686 --> 00:41:48,507
+and then it goes Europe in Q2 here in the United States in Q1, then Europe in Q2, and I think it's Asia in Q3 and Q4.
+
+409
+00:41:48,557 --> 00:41:55,790
+And the powerful thing is that we're going to keep on updating it with next next versions of Alpha Miao and versions after that.
+
+410
+00:41:55,840 --> 00:42:03,088
+There's no question in my mind now that this is going to be one of the largest robotics industries, and I'm so happy that we worked on it.
+
+411
+00:42:03,138 --> 00:42:09,590
+And it taught us enormous amount about how to help the rest of the world build robotic systems.
+
+412
+00:42:09,640 --> 00:42:14,728
+That deep understanding and knowing how to build it ourselves, building the entire infrastructure ourselves,
+
+413
+00:42:14,778 --> 00:42:18,645
+and knowing what kind of chips a robotic system would would need.
+
+414
+00:42:18,695 --> 00:42:24,506
+In this particular particular case, dual Orions, the next generation dual Thors,
+
+415
+00:42:24,556 --> 00:42:32,408
+these processors are designed for robotic systems, and was designed for the safe highest level of safety capability.
+
+416
+00:42:32,458 --> 00:42:38,390
+This car just got rated it just went to production.
+
+417
+00:42:38,440 --> 00:42:41,733
+The Mercedes-Benz CLA was just rated
+
+418
+00:42:41,783 --> 00:42:50,550
+by NCAP the world's safest car.
+
+419
+00:42:50,600 --> 00:42:59,624
+It is the only system that I know that has every single line of code, the chip, the system, every line of code safety certified.
+
+420
+00:42:59,674 --> 00:43:08,230
+The entire model system is based on a sensors are diverse and redundant, and so is the self-driving car stack.
+
+421
+00:43:08,280 --> 00:43:13,270
+The Alpha Miao stack is trained end to end and has incredible skills.
+
+422
+00:43:13,320 --> 00:43:19,230
+However, nobody knows until you drive it forever that it's going to be perfectly safe.
+
+423
+00:43:19,280 --> 00:43:26,350
+And so, the we the way we guardrail that is with another software stack, an entire AV stack underneath.
+
+424
+00:43:26,400 --> 00:43:32,376
+That entire AV stack is built to be fully traceable, and it's taken us some 5 years to build that,
+
+425
+00:43:32,426 --> 00:43:35,590
+some 6 7 years actually, to build that second stack.
+
+426
+00:43:35,640 --> 00:43:42,311
+These two software stacks are mirroring each other, and then we have a policy and safety evaluated decide,
+
+427
+00:43:42,361 --> 00:43:47,215
+is this something that I'm very confident and can reason about driving very safely?
+
+428
+00:43:47,265 --> 00:43:49,150
+If so, I'm going to have Alpha Miao do it.
+
+429
+00:43:49,200 --> 00:43:53,515
+If it's a circumstance that I'm not very confident in and the safety um
+
+430
+00:43:53,565 --> 00:43:58,161
+policy evaluator decide that we're going to go back to what's a very a simpler,
+
+431
+00:43:58,211 --> 00:44:02,230
+safer guardrail system, then it goes back to the classical AV stack.
+
+432
+00:44:02,280 --> 00:44:09,309
+We're the only car in the world with both of these AV stacks running, and all safety systems should have diversity and redundancy.
+
+433
+00:44:09,359 --> 00:44:16,067
+Well, our vision is that someday every single car, every single truck will be autonomous, and we've been working towards that future.
+
+434
+00:44:16,117 --> 00:44:20,790
+This entire stack is vertically integrated, of course, in the case of Mercedes-Benz.
+
+435
+00:44:20,840 --> 00:44:22,350
+We built the entire stack together.
+
+436
+00:44:22,400 --> 00:44:23,188
+We're going to deploy the car.
+
+437
+00:44:23,238 --> 00:44:24,162
+We're going to operate the stack.
+
+438
+00:44:24,212 --> 00:44:26,990
+We're going to maintain the stack for as long as we shall live.
+
+439
+00:44:27,040 --> 00:44:36,190
+However, like everything else we do as a company, we build the entire stack, but the entire stack is open for the ecosystem.
+
+440
+00:44:36,240 --> 00:44:44,750
+And these the ecosystem working with us to build L4 and robo-taxis is expanding and it's going everywhere.
+
+441
+00:44:44,800 --> 00:44:48,294
+I fully expect this to be Well, this is already a giant business for us.
+
+442
+00:44:48,344 --> 00:44:54,312
+It's a giant business for us because they use it for training our training data, processing data, and training their models.
+
+443
+00:44:54,362 --> 00:44:56,670
+They use it for synthetic data generation.
+
+444
+00:44:56,720 --> 00:45:04,396
+In some cases, in some car in some companies, they build pretty much just build the computers, the chips that are inside the car.
+
+445
+00:45:04,446 --> 00:45:06,300
+And some companies work with us full stack.
+
+446
+00:45:06,350 --> 00:45:09,371
+Some companies work with us some partial part of that.
+
+447
+00:45:09,421 --> 00:45:09,838
+Okay?
+
+448
+00:45:09,888 --> 00:45:12,807
+So, it doesn't matter how much you decide to use.
+
+449
+00:45:12,857 --> 00:45:16,593
+You know, my only request is you use a little bit of video wherever you can.
+
+450
+00:45:16,643 --> 00:45:19,470
+And the entire thing is open.
+
+451
+00:45:19,520 --> 00:45:27,753
+Now, this is going to be the first large-scale mainstream um AI physical AI market.
+
+452
+00:45:27,803 --> 00:45:31,407
+And this is now, I think we can all agree, fully here.
+
+453
+00:45:31,457 --> 00:45:40,150
+And this inflection point of going from not autonomous vehicles to autonomous vehicles is probably happening right about this time.
+
+454
+00:45:40,200 --> 00:45:48,790
+In in the next 10 years, I'm fairly certain a very, very large percentage of the world's cars will be autonomous or highly autonomous.
+
+455
+00:45:48,840 --> 00:45:53,302
+But this is this basic technique that I just described in using the three computers,
+
+456
+00:45:53,352 --> 00:45:59,601
+using the synthetic data generation and simulation, applies to every form of robotic systems.
+
+457
+00:45:59,651 --> 00:46:03,350
+It could be a robot that is just an articulator, a manipulator.
+
+458
+00:46:03,400 --> 00:46:04,894
+Maybe it's a mobile robot.
+
+459
+00:46:04,944 --> 00:46:07,509
+Maybe it's a fully humanoid robot.
+
+460
+00:46:07,559 --> 00:46:15,424
+And so, the next journey the next era for robotic systems is going to be, you know, robots.
+
+461
+00:46:15,474 --> 00:46:18,239
+And these robots are going to come in all kinds of different sizes.
+
+462
+00:46:18,289 --> 00:46:21,030
+And And I invited some friends.
+
+463
+00:46:21,080 --> 00:46:23,550
+Hey guys.
+
+464
+00:46:23,600 --> 00:46:24,710
+Hurry up.
+
+465
+00:46:24,760 --> 00:46:27,950
+Did you tell R2-D2 you're going to be here?
+
+466
+00:46:28,000 --> 00:46:30,470
+Did you?
+
+467
+00:46:30,520 --> 00:46:33,550
+And C-3PO?
+
+468
+00:46:33,600 --> 00:46:33,948
+Okay.
+
+469
+00:46:33,978 --> 00:46:35,314
+All right, come here.
+
+470
+00:46:35,364 --> 00:46:38,958
+Before Now, one of the things that one of the things that's really You have Jetsons.
+
+471
+00:46:39,008 --> 00:46:42,110
+They have little Jetson computers inside them.
+
+472
+00:46:42,160 --> 00:46:44,830
+They're trained inside Omniverse.
+
+473
+00:46:44,880 --> 00:46:46,235
+And how about this?
+
+474
+00:46:46,285 --> 00:46:51,947
+Let's show everybody the simulator that you were that you guys learn how to how to be robots in.
+
+475
+00:46:51,997 --> 00:46:54,150
+You want You guys want to look at that?
+
+476
+00:46:54,200 --> 00:46:55,190
+Okay, let's look at that.
+
+477
+00:46:55,240 --> 00:46:55,540
+Run it,
+
+478
+00:46:55,560 --> 00:47:57,750
+please.
+
+479
+00:47:57,800 --> 00:48:02,350
+Isn't that amazing?
+
+480
+00:48:02,400 --> 00:48:04,402
+That's how you learn to be a robot.
+
+481
+00:48:04,452 --> 00:48:06,830
+You did it all inside Omniverse.
+
+482
+00:48:06,880 --> 00:48:09,670
+And the robot simulator is called Isaac.
+
+483
+00:48:09,720 --> 00:48:11,109
+Isaac Sim and Isaac Lab.
+
+484
+00:48:11,159 --> 00:48:17,350
+And anybody who wants to build a robot, you know, nobody could Nobody's going to be as cute as you.
+
+485
+00:48:17,400 --> 00:48:22,528
+But now we have all Look at all these Look at all these friends that we have building robots.
+
+486
+00:48:22,578 --> 00:48:23,888
+We have We're building big ones.
+
+487
+00:48:23,938 --> 00:48:30,710
+No Like I said, nobody's as cute as you guys are, but we have Neurobot, and we have Agibot over there.
+
+488
+00:48:30,760 --> 00:48:32,732
+You know, we have LG over here.
+
+489
+00:48:32,782 --> 00:48:35,309
+They just announced a new robot.
+
+490
+00:48:35,359 --> 00:48:38,510
+Caterpillar, they've got the largest robots ever.
+
+491
+00:48:38,560 --> 00:48:41,170
+That one delivers food to your house.
+
+492
+00:48:41,220 --> 00:48:42,811
+That's connected to Uber Eats.
+
+493
+00:48:42,861 --> 00:48:45,590
+And that Surf robot, I love those guys.
+
+494
+00:48:45,640 --> 00:48:49,848
+Agility, Boston Dynamics, incredible.
+
+495
+00:48:49,898 --> 00:48:51,384
+You got surgical robots.
+
+496
+00:48:51,434 --> 00:48:55,190
+You got manipulator robots from Franka.
+
+497
+00:48:55,240 --> 00:48:59,470
+You got Universal Robotics robot, incredible number of different robots.
+
+498
+00:48:59,520 --> 00:49:01,680
+And so, this is the next chapter.
+
+499
+00:49:01,730 --> 00:49:07,374
+We're going to talk a lot more about robotics in the future, but it's not just about the robots in the end.
+
+500
+00:49:07,424 --> 00:49:09,160
+I know everything's about you guys.
+
+501
+00:49:09,210 --> 00:49:10,530
+It's about getting there.
+
+502
+00:49:10,580 --> 00:49:14,700
+And one of the one of the most important industries in the world that will
+
+503
+00:49:14,750 --> 00:49:22,590
+be revolutionized by physical AI and AI physics is the industry that started all of us.
+
+504
+00:49:22,640 --> 00:49:27,370
+At NVIDIA, it wouldn't be possible if not for the companies that I'm about to talk to.
+
+505
+00:49:27,420 --> 00:49:31,246
+And I'm so happy that all of them, starting with Cadence,
+
+506
+00:49:31,296 --> 00:49:37,419
+is going to accelerate everything Cadence CUDA X integrated into all of their simulations and solvers.
+
+507
+00:49:37,469 --> 00:49:45,670
+They've got NVIDIA physical physical AIs that they're going to use for for different physical plants and plant simulations.
+
+508
+00:49:45,720 --> 00:49:49,196
+You got AI physics being integrated into these systems.
+
+509
+00:49:49,246 --> 00:49:59,750
+So, whether it's an EDA or SDA and in the future robotic systems, we're going to have basically the same technology that made you guys possible.
+
+510
+00:49:59,800 --> 00:50:02,685
+Now completely revolutionize these design stacks.
+
+511
+00:50:02,735 --> 00:50:11,864
+Synopsys, without Synopsys You know, Synopsys and Cadence are completely completely indispensable in the world of chip design.
+
+512
+00:50:11,914 --> 00:50:18,443
+Uh Synopsys is uh leads in uh in logic design and and IP.
+
+513
+00:50:18,493 --> 00:50:25,110
+Uh in the case of Cadence, they lead physical design, the place and route, uh and emulation and verification.
+
+514
+00:50:25,160 --> 00:50:27,662
+Cadence is incredible at emulation and verification.
+
+515
+00:50:27,712 --> 00:50:32,536
+Both of them are moving into the world of system design and system simulation.
+
+516
+00:50:32,586 --> 00:50:38,789
+And so, in the future we're going to design your chips inside Cadence and inside Synopsys.
+
+517
+00:50:38,839 --> 00:50:45,050
+We're going to design your systems and emulate the whole thing and simulate everything inside these tools.
+
+518
+00:50:45,100 --> 00:50:46,190
+That's your future.
+
+519
+00:50:46,240 --> 00:50:50,817
+We're going to give Yeah, you're going to be born inside these inside these platforms.
+
+520
+00:50:50,867 --> 00:50:52,464
+Pretty amazing, right?
+
+521
+00:50:52,514 --> 00:50:55,857
+And so, we're so happy that we're working with these these industries.
+
+522
+00:50:55,907 --> 00:51:00,062
+Just as we've integrated NVIDIA into Palantir and ServiceNow,
+
+523
+00:51:00,112 --> 00:51:08,107
+we're integrating NVIDIA into the most computationally intensive simulation industries, Synopsys and Cadence.
+
+524
+00:51:08,157 --> 00:51:12,150
+And today we're announcing that Siemens is also doing the same thing.
+
+525
+00:51:12,200 --> 00:51:21,200
+We're going to integrate CUDA X physical AI, agentic AI, Nemo, Nemotron deeply integrated into the world of Siemens.
+
+526
+00:51:21,250 --> 00:51:23,950
+And the reason for that is this.
+
+527
+00:51:24,000 --> 00:51:29,390
+First, we design the chips and all of it in the future will be accelerated NVIDIA.
+
+528
+00:51:29,440 --> 00:51:31,143
+You're going to be very happy about that.
+
+529
+00:51:31,193 --> 00:51:36,676
+We're going to have agentic chip designers and system designers working with us,
+
+530
+00:51:36,726 --> 00:51:42,890
+helping us do design just as we have agentic software engineers helping our software engineers code today.
+
+531
+00:51:42,940 --> 00:51:46,472
+And so, we'll have agentic chip designers and system designers.
+
+532
+00:51:46,522 --> 00:51:49,670
+We're going to create you inside this.
+
+533
+00:51:49,720 --> 00:51:52,350
+But then, we have to build you.
+
+534
+00:51:52,400 --> 00:51:57,550
+We have to build the plants, the factories that make manufacture you.
+
+535
+00:51:57,600 --> 00:52:02,430
+We have to design the manufacturing lines that assemble all of you.
+
+536
+00:52:02,480 --> 00:52:08,030
+And these manufacturing plants are going to be essentially gigantic robots.
+
+537
+00:52:08,080 --> 00:52:10,590
+Incredible, isn't that right?
+
+538
+00:52:10,640 --> 00:52:11,590
+I know.
+
+539
+00:52:11,640 --> 00:52:12,590
+I know.
+
+540
+00:52:12,640 --> 00:52:15,510
+And so, you're going to be designed in a computer.
+
+541
+00:52:15,560 --> 00:52:17,830
+You're going to be made in a computer.
+
+542
+00:52:17,880 --> 00:52:26,790
+You're going to be tested and evaluated in a computer long before long before you have to spend any time dealing with gravity.
+
+543
+00:52:26,840 --> 00:52:28,990
+I know.
+
+544
+00:52:29,040 --> 00:52:31,630
+Do you know how to deal with gravity?
+
+545
+00:52:31,680 --> 00:52:34,190
+Can you jump?
+
+546
+00:52:34,240 --> 00:52:46,150
+Can you jump?
+
+547
+00:52:46,200 --> 00:52:46,585
+Okay.
+
+548
+00:52:46,615 --> 00:52:47,325
+All right.
+
+549
+00:52:47,375 --> 00:52:48,430
+Don't show off.
+
+550
+00:52:48,480 --> 00:52:49,252
+Okay.
+
+551
+00:52:49,302 --> 00:52:51,442
+So, so this So,
+
+552
+00:52:51,492 --> 00:52:58,776
+now the industry the industry that made NVIDIA possible where I'm just so happy that the now the technology
+
+553
+00:52:58,826 --> 00:53:05,634
+that we're creating is at a level of sophistication and capability that we can now help them revolutionize their industry.
+
+554
+00:53:05,684 --> 00:53:12,646
+And so, what started with with with them, we now have the opportunity to go back and and help them revolutionize theirs.
+
+555
+00:53:12,696 --> 00:53:16,630
+Let's take a look at the stuff that we're going to do with Siemens.
+
+556
+00:53:16,680 --> 00:53:18,470
+Come on.
+
+557
+00:53:18,520 --> 00:53:26,790
+Breakthroughs in physical AI are letting AI move from screens to our physical world.
+
+558
+00:53:26,840 --> 00:53:36,150
+And just in time as the world builds factories of every kind for chips, computers, life-saving drugs, and AI.
+
+559
+00:53:36,200 --> 00:53:45,590
+As the global labor shortage worsens, we need automation powered by physical AI and robotics more than ever.
+
+560
+00:53:45,640 --> 00:53:53,270
+This, where AI meets the world's largest physical industries, is the foundation of NVIDIA and Siemens partnership.
+
+561
+00:53:53,320 --> 00:53:58,470
+For nearly two centuries, Siemens has built the world's industries.
+
+562
+00:53:58,520 --> 00:54:03,309
+And now, it is reinventing it for the age of AI.
+
+563
+00:54:03,359 --> 00:54:10,910
+Siemens is integrating NVIDIA CUDA X libraries AI models and Omniverse
+
+564
+00:54:10,960 --> 00:54:21,110
+into its portfolio of EDA CAE and digital twin tools and platforms.
+
+565
+00:54:21,160 --> 00:54:27,190
+Together, we're bringing physical AI to the full industrial life cycle.
+
+566
+00:54:27,240 --> 00:54:36,150
+From design and simulation to production and operations.
+
+567
+00:54:36,200 --> 00:54:39,910
+We stand at the beginning of a new industrial revolution.
+
+568
+00:54:39,960 --> 00:54:50,430
+The age of physical AI built by NVIDIA and Siemens for the next age of industries.
+
+569
+00:54:50,480 --> 00:54:54,390
+Incredible, right, guys?
+
+570
+00:54:54,440 --> 00:54:55,870
+What do you think?
+
+571
+00:54:55,920 --> 00:54:56,276
+All right.
+
+572
+00:54:56,306 --> 00:54:56,958
+I'll hang on tight.
+
+573
+00:54:57,008 --> 00:54:58,109
+Just hang on tight.
+
+574
+00:54:58,159 --> 00:55:08,870
+And so, so this is you know, if you look at look at the world's models there's no question OpenAI is the the leading token generator today.
+
+575
+00:55:08,920 --> 00:55:12,612
+More to more OpenAI tokens are generated than just about anything else.
+
+576
+00:55:12,662 --> 00:55:16,841
+The second largest group the second largest probably open models.
+
+577
+00:55:16,891 --> 00:55:21,319
+And my guess is that over time, because there are so many companies, so many researchers,
+
+578
+00:55:21,369 --> 00:55:27,510
+so many different types of domains and modalities that open source models will be by far the largest.
+
+579
+00:55:27,560 --> 00:55:29,630
+Let's talk about somebody really special.
+
+580
+00:55:29,680 --> 00:55:31,710
+You guys want to do that?
+
+581
+00:55:31,760 --> 00:55:34,230
+Let's talk about Vera Rubin.
+
+582
+00:55:34,280 --> 00:55:36,510
+Vera Rubin Yeah, go ahead.
+
+583
+00:55:36,560 --> 00:55:39,550
+She's an American astronomer.
+
+584
+00:55:39,600 --> 00:55:50,030
+She was the first to observe She noticed that the tails of the galaxies were moving about as fast as the center of the galaxies.
+
+585
+00:55:50,080 --> 00:55:52,468
+Well, I know it makes no sense.
+
+586
+00:55:52,518 --> 00:55:53,526
+It makes no sense.
+
+587
+00:55:53,576 --> 00:55:56,901
+Newtonian physics would say, just like the solar system,
+
+588
+00:55:56,951 --> 00:56:04,470
+the planets further away from the sun is circling the sun slower than the planets closer to the sun.
+
+589
+00:56:04,520 --> 00:56:10,958
+And therefore, it makes no sense that this happens unless there's invisible bodies,
+
+590
+00:56:11,008 --> 00:56:18,876
+we call them she discovered dark body dark matter, um that occupies space even though we don't see it.
+
+591
+00:56:18,926 --> 00:56:25,110
+And so, Vera Rubin is the person that we named our next computer after.
+
+592
+00:56:25,160 --> 00:56:27,430
+Isn't that a good idea?
+
+593
+00:56:27,480 --> 00:56:31,110
+I know.
+
+594
+00:56:31,160 --> 00:56:31,514
+Okay.
+
+595
+00:56:31,544 --> 00:56:35,830
+Vera Rubin is designed to address this fundamental challenge that we have.
+
+596
+00:56:35,880 --> 00:56:39,750
+The amount of computation necessary for AI is skyrocketing.
+
+597
+00:56:39,800 --> 00:56:43,424
+The demand for NVIDIA GPUs is skyrocketing.
+
+598
+00:56:43,474 --> 00:56:51,470
+It's skyrocketing because models are increasing by a factor of 10 an order of a magnitude every single year.
+
+599
+00:56:51,520 --> 00:56:56,870
+And not to mention, as I mentioned, 01's introduction was an inflection point for AI.
+
+600
+00:56:56,920 --> 00:57:03,010
+Instead of a one-shot answer, inference is now a thinking process.
+
+601
+00:57:03,060 --> 00:57:12,546
+And in order to teach the AI how to think, reinforcement learning and very significant computation was introduced into post-training.
+
+602
+00:57:12,596 --> 00:57:21,190
+It wasn't no long It's no longer supervised fine-tuning or otherwise known as imitation learning or supervision training.
+
+603
+00:57:21,240 --> 00:57:29,456
+You now have reinforcement learning, essentially the computer trial trying different iterations itself, learning how to perform a task.
+
+604
+00:57:29,506 --> 00:57:38,337
+The amount of computation for pre pre-training, for post-training, for test time scaling has exploded as a result of that.
+
+605
+00:57:38,387 --> 00:57:45,822
+And now every single inference that we do, instead of just one shot, the number of tokens you could just see the AIs think, which we appreciate.
+
+606
+00:57:45,872 --> 00:57:48,664
+The longer it thinks, often times it produces a better answer.
+
+607
+00:57:48,714 --> 00:57:55,595
+And so, test time scaling causes the number of tokens to be generated increase by 5x every single year.
+
+608
+00:57:55,645 --> 00:58:01,030
+Not to mention meanwhile, the race is on for AI.
+
+609
+00:58:01,080 --> 00:58:02,774
+Everybody's trying to get to the next level.
+
+610
+00:58:02,824 --> 00:58:04,568
+Everybody's trying to get to the next frontier.
+
+611
+00:58:04,618 --> 00:58:15,344
+And every time they get to the next frontier the last generation AI tokens, the cost starts to starts to decline about a factor of 10x every year.
+
+612
+00:58:15,394 --> 00:58:18,977
+The 10x decline every year is actually telling you something different.
+
+613
+00:58:19,027 --> 00:58:21,391
+It's saying that the race is so intense.
+
+614
+00:58:21,441 --> 00:58:26,606
+Everybody's trying to get to the next level and somebody is getting to the next level.
+
+615
+00:58:26,656 --> 00:58:29,735
+And so, therefore all of it is a computing problem.
+
+616
+00:58:29,785 --> 00:58:34,230
+The faster you compute, the sooner you can get to the next level of the next frontier.
+
+617
+00:58:34,280 --> 00:58:37,729
+All of these things are simultaneously happening at the same time.
+
+618
+00:58:37,779 --> 00:58:46,051
+And so, we decided that we have to advance the state of the art of computation every single year.
+
+619
+00:58:46,101 --> 00:58:48,219
+Not one year left behind.
+
+620
+00:58:48,269 --> 00:58:53,717
+And now, we've been shipping GB200s year and a half ago.
+
+621
+00:58:53,767 --> 00:58:58,710
+Right now, we're in full-scale manufacturing of GB300.
+
+622
+00:58:58,760 --> 00:59:05,719
+And if Vera Rubin is going to be in time for this year, it must be in production by now.
+
+623
+00:59:05,769 --> 00:59:15,790
+And so, today I can tell you that Vera Rubin is in full production.
+
+624
+00:59:15,840 --> 00:59:17,723
+You guys want to take a look at Vera Rubin?
+
+625
+00:59:17,773 --> 00:59:18,750
+All right.
+
+626
+00:59:18,800 --> 00:59:19,590
+Come on.
+
+627
+00:59:19,640 --> 00:59:24,110
+Play it, please.
+
+628
+00:59:24,160 --> 00:59:29,710
+Vera Rubin arrives just in time for the next frontier of AI.
+
+629
+00:59:29,760 --> 00:59:32,510
+This This the story of how we built it.
+
+630
+00:59:32,560 --> 00:59:39,550
+The architecture, a system of six chips engineered to work as one, born from extreme co-design.
+
+631
+00:59:39,600 --> 00:59:45,390
+It begins with Vera, a custom-designed CPU, double the performance of the previous generation.
+
+632
+00:59:45,440 --> 00:59:46,830
+And the Rubin GPU.
+
+633
+00:59:46,880 --> 00:59:56,190
+Vera and Rubin are co-designed from the start to bidirectionally and coherently share data faster and with lower latency.
+
+634
+00:59:56,240 --> 01:00:04,230
+Then, 17,000 components come together on a Vera Rubin compute board.
+
+635
+01:00:04,280 --> 01:00:14,070
+High-speed robots place components with micron precision before the Vera CPU and two Rubin GPUs complete the assembly.
+
+636
+01:00:14,120 --> 01:00:21,830
+Capable of delivering 100 petaflops of AI, five times that of its predecessor.
+
+637
+01:00:21,880 --> 01:00:24,990
+AI needs data fast.
+
+638
+01:00:25,040 --> 01:00:33,590
+ConnectX-9 delivers 1.6 terabits per second of scale-out bandwidth to each GPU.
+
+639
+01:00:33,640 --> 01:00:41,350
+BlueField-4 DPU offloads storage and security, so compute stays fully focused on AI.
+
+640
+01:00:41,400 --> 01:00:48,230
+The Vera Rubin compute tray, completely redesigned with no cables, hoses, or fans.
+
+641
+01:00:48,280 --> 01:00:57,430
+Featuring a BlueField-4 DPU, eight ConnectX-9 NICs, two Vera CPUs, and four Rubin GPUs.
+
+642
+01:00:57,480 --> 01:01:02,150
+The compute building block of the Vera Rubin AI supercomputer.
+
+643
+01:01:02,200 --> 01:01:07,110
+Next, the sixth-generation NVLink switch.
+
+644
+01:01:07,160 --> 01:01:18,390
+Moving more data than the global internet, connecting 18 compute nodes, scaling up to 72 Rubin GPUs operating as one.
+
+645
+01:01:18,440 --> 01:01:24,110
+Then, Spectrum-X Ethernet photonics.
+
+646
+01:01:24,160 --> 01:01:30,030
+The world's first Ethernet switch with 512 lanes and 200 gigabit capable co-
+
+647
+01:01:30,080 --> 01:01:36,350
+packaged optics scale out thousands of racks into an AI factory.
+
+648
+01:01:36,400 --> 01:01:45,070
+15,000 engineer years since design began, the first Vera Rubin NVL72 rack comes online.
+
+649
+01:01:45,120 --> 01:01:51,216
+Six breakthrough chips, 18 compute trays, nine NVLink switch trays,
+
+650
+01:01:51,266 --> 01:01:57,990
+220 trillion transistors, weighing nearly two tons.
+
+651
+01:01:58,040 --> 01:02:02,950
+One giant leap to the next frontier of AI.
+
+652
+01:02:03,000 --> 01:02:09,790
+Rubin is here.
+
+653
+01:02:09,840 --> 01:02:14,590
+What do you guys think?
+
+654
+01:02:14,640 --> 01:02:17,630
+This is a Rubin pod.
+
+655
+01:02:17,680 --> 01:02:22,950
+1,152 GPUs in 16 racks.
+
+656
+01:02:23,000 --> 01:02:27,741
+Each one of the racks, as you know, has uh 72 Rubins.
+
+657
+01:02:27,791 --> 01:02:33,504
+Each one of the Rubins is two actual GPU dies connected together.
+
+658
+01:02:33,554 --> 01:02:35,110
+I'm going to show it to you.
+
+659
+01:02:35,160 --> 01:02:42,350
+But, there are several things that, well, I'll tell you later.
+
+660
+01:02:42,400 --> 01:02:44,350
+Well, we designed six different chips.
+
+661
+01:02:44,400 --> 01:02:48,190
+First of all, we have a rule inside our company, and it's a good rule.
+
+662
+01:02:48,240 --> 01:02:53,430
+No new generation should have more than one or two chips change.
+
+663
+01:02:53,480 --> 01:02:55,350
+But, the problem is this.
+
+664
+01:02:55,400 --> 01:03:01,172
+As you could see, we were describing the total number of transistors in each one of the chips that were being described,
+
+665
+01:03:01,222 --> 01:03:04,024
+and we know that Moore's law has largely slowed.
+
+666
+01:03:04,074 --> 01:03:13,907
+And so, the number of transistors we can get year after year after year can't possibly keep up with the 10 times larger models.
+
+667
+01:03:13,957 --> 01:03:19,086
+It can't possibly keep up with five times per year more tokens generated.
+
+668
+01:03:19,136 --> 01:03:26,350
+It can't possibly keep up with the fact that cost decline of the tokens are going to be so aggressive.
+
+669
+01:03:26,400 --> 01:03:34,850
+It is impossible to keep up with those kind of rates for the industry to continue to advance unless we deployed aggressive,
+
+670
+01:03:34,900 --> 01:03:42,870
+extreme co-design, basically innovating across all of the chips, across the entire stack, all at the same time.
+
+671
+01:03:42,920 --> 01:03:49,382
+Which is the reason why we decided that this generation, we had no choice but to design every chip over again.
+
+672
+01:03:49,432 --> 01:03:54,668
+Now, every single chip that we were describing just now can be a press conference in all in itself,
+
+673
+01:03:54,718 --> 01:03:59,390
+and there's an entire company whose product dedicated to doing that back in the old days.
+
+674
+01:03:59,440 --> 01:04:04,830
+Each one of them are completely revolutionary and the best of its kind.
+
+675
+01:04:04,880 --> 01:04:07,201
+The Vera CPU, I'm so proud of it.
+
+676
+01:04:07,251 --> 01:04:15,340
+In a power-constrained world, Grace CPU is two times the performance in a power-constrained world.
+
+677
+01:04:15,390 --> 01:04:20,510
+It's twice the performance per watt of the world's most advanced CPUs.
+
+678
+01:04:20,560 --> 01:04:22,266
+Its data rate is insane.
+
+679
+01:04:22,316 --> 01:04:28,786
+It was designed to process supercomputers, and Grace was an incredible CPU.
+
+680
+01:04:28,836 --> 01:04:36,994
+Now, Vera increases the single-threaded performance, increases the capacity of the memory, increases everything just dramatically.
+
+681
+01:04:37,044 --> 01:04:38,663
+It's a giant chip.
+
+682
+01:04:38,713 --> 01:04:41,070
+This is the Vera CPU.
+
+683
+01:04:41,120 --> 01:04:43,590
+This is one CPU.
+
+684
+01:04:43,640 --> 01:04:50,350
+And this is connected to the Rubin GPU.
+
+685
+01:04:50,400 --> 01:04:53,190
+Look at that thing.
+
+686
+01:04:53,240 --> 01:04:54,135
+It's a giant chip.
+
+687
+01:04:54,185 --> 01:04:58,347
+Now, the thing that's really special, and I'll I'll go through these.
+
+688
+01:04:58,397 --> 01:05:02,070
+It's going to take three hands, I think, four hands to do this.
+
+689
+01:05:02,120 --> 01:05:03,830
+Okay, so this is the Vera the Vera CPU.
+
+690
+01:05:03,880 --> 01:05:08,554
+It's got 88 CPU cores, and the CPU cores are designed to be multithreaded.
+
+691
+01:05:08,604 --> 01:05:18,015
+But, the multithreaded nature of of Vera was designed so that each one of the 176 threads could get its full full performance.
+
+692
+01:05:18,065 --> 01:05:22,700
+So, it's essentially as if there's 176 cores, but only 88 physical cores.
+
+693
+01:05:22,750 --> 01:05:28,217
+So, these cores were designed in in using a technology called spatial multithreading.
+
+694
+01:05:28,267 --> 01:05:30,221
+But, the IO performance is incredible.
+
+695
+01:05:30,271 --> 01:05:31,903
+This is the Rubin GPU.
+
+696
+01:05:31,953 --> 01:05:35,408
+It's 5x Blackwell in floating performance.
+
+697
+01:05:35,458 --> 01:05:37,672
+But, the important thing is go to the bottom line.
+
+698
+01:05:37,722 --> 01:05:41,576
+The bottom line, it's only 1.6 times the number of transistors of Blackwell.
+
+699
+01:05:41,626 --> 01:05:46,670
+That kind of tells you something about the the levels of semiconductor physics today.
+
+700
+01:05:46,720 --> 01:05:54,270
+If we don't do extreme co-design at the level of basically every single chip across the entire system,
+
+701
+01:05:54,320 --> 01:06:02,309
+how is it possible we deliver performance levels that is, you know, at best 1.6 times each year?
+
+702
+01:06:02,359 --> 01:06:04,478
+Because that's the total number of transistors you have.
+
+703
+01:06:04,528 --> 01:06:09,990
+And even if you were to have a little bit more um performance per transistor, say 25%,
+
+704
+01:06:10,040 --> 01:06:14,159
+you're this impossible to get 100% yield out of the number of transistors you get.
+
+705
+01:06:14,209 --> 01:06:23,350
+And so, 1.6x kind of puts a ceiling on how far performance can go each year unless you do something extreme, and we call it extreme co-design.
+
+706
+01:06:23,400 --> 01:06:30,350
+Well, one of the things that one of the things that we did, and it was a great invention, is called NVFP4 Tensor Core.
+
+707
+01:06:30,400 --> 01:06:37,415
+The transformer engine inside our chip is not just a four-bit floating-point number somehow that we put into the data path.
+
+708
+01:06:37,465 --> 01:06:45,742
+It is an entire processor, a processing unit that understands how to dynamically, adaptively,
+
+709
+01:06:45,792 --> 01:06:52,998
+adjust its precision and structure to deal with different levels of the transformer so that you can achieve higher
+
+710
+01:06:53,048 --> 01:07:00,590
+throughput wherever it's possible to lose precision and to go back to the highest possible precision wherever you need to.
+
+711
+01:07:00,640 --> 01:07:07,896
+That ability to dynamically do that, you can't do this in software because, obviously, it's just running too fast.
+
+712
+01:07:07,946 --> 01:07:12,427
+And so, you have to be able to do it adaptively inside the processor.
+
+713
+01:07:12,477 --> 01:07:18,358
+That's what an NVFP4 When somebody says FP4 or FP8, it almost means nothing to us.
+
+714
+01:07:18,408 --> 01:07:24,417
+And the reason for that is because it's the Tensor Core structure and all of the algorithms that makes makes it work.
+
+715
+01:07:24,467 --> 01:07:26,925
+NVFP4, we've published papers on this already.
+
+716
+01:07:26,975 --> 01:07:33,019
+The precision that the the level of throughput and precision is able to retain is in com- and completely incredible.
+
+717
+01:07:33,069 --> 01:07:34,830
+This is groundbreaking work.
+
+718
+01:07:34,880 --> 01:07:41,212
+I would not be surprised if the industry would like us to make this format and this structure an industry standard in the future.
+
+719
+01:07:41,262 --> 01:07:43,045
+This is completely revolutionary.
+
+720
+01:07:43,095 --> 01:07:52,910
+This is how we were able to deliver such a gigantic step up in performance even though we only have 1.6 times the number of transistors.
+
+721
+01:07:52,960 --> 01:07:58,510
+And now, once you have a great processing node, and this is the processor node,
+
+722
+01:07:58,560 --> 01:08:07,070
+and inside, so this is this is, for example, here, let me do this.
+
+723
+01:08:07,120 --> 01:08:11,110
+This is This is wow, super heavy.
+
+724
+01:08:11,160 --> 01:08:17,390
+You have to be a CEO in really good shape to do this job.
+
+725
+01:08:17,440 --> 01:08:18,005
+Okay.
+
+726
+01:08:18,055 --> 01:08:19,132
+All right.
+
+727
+01:08:19,182 --> 01:08:24,430
+So, this thing is I'm going to guess this is probably,
+
+728
+01:08:24,480 --> 01:08:31,990
+I don't know, couple of hundred pounds.
+
+729
+01:08:32,040 --> 01:08:34,910
+I thought that was funny too.
+
+730
+01:08:34,960 --> 01:08:35,903
+Come on.
+
+731
+01:08:35,953 --> 01:08:38,110
+It could have been.
+
+732
+01:08:38,160 --> 01:08:41,230
+Everybody's going, "No, I don't think so."
+
+733
+01:08:41,280 --> 01:08:41,956
+All right.
+
+734
+01:08:42,006 --> 01:08:43,342
+So, so look at this.
+
+735
+01:08:43,392 --> 01:08:44,757
+This is the last one.
+
+736
+01:08:44,807 --> 01:08:49,390
+We revolutionized the entire MGX chassis.
+
+737
+01:08:49,440 --> 01:08:53,590
+This node, 43 cables.
+
+738
+01:08:53,640 --> 01:08:55,309
+Zero cables.
+
+739
+01:08:55,359 --> 01:08:59,110
+Six tubes.
+
+740
+01:08:59,160 --> 01:09:01,470
+Z- Just two of them here.
+
+741
+01:09:01,520 --> 01:09:05,950
+It takes two hours to assemble this.
+
+742
+01:09:06,000 --> 01:09:08,669
+If you're lucky, it takes two hours.
+
+743
+01:09:08,719 --> 01:09:10,600
+And of course, you're probably going to assemble it wrong.
+
+744
+01:09:10,650 --> 01:09:13,709
+You're going to have to retest it, test it, reassemble it.
+
+745
+01:09:13,759 --> 01:09:21,990
+So, the assembly process is incredibly complicated, and it it was understandable as one of our first supercomputers that's deconstructed in this way.
+
+746
+01:09:22,040 --> 01:09:31,470
+This, from two hours to five minutes.
+
+747
+01:09:31,520 --> 01:09:33,950
+80% liquid cooled.
+
+748
+01:09:34,000 --> 01:09:36,990
+100% liquid cooled.
+
+749
+01:09:37,040 --> 01:09:40,630
+Yeah, really, really a breakthrough.
+
+750
+01:09:40,680 --> 01:09:49,187
+Okay, so so this is the new compute chassis and what connects all of these to the top of rack switches,
+
+751
+01:09:49,237 --> 01:09:52,060
+the east-west traffic, is called a Spectrum-X NIC.
+
+752
+01:09:52,110 --> 01:09:54,790
+This is the world's best NIC.
+
+753
+01:09:54,840 --> 01:10:00,354
+Unquestionably NVIDIA's Mellanox, the acquisition Mellanox that joined us a long time ago now.
+
+754
+01:10:00,404 --> 01:10:05,630
+Um this their networking technology for high-performance computing is the world's best bar none.
+
+755
+01:10:05,680 --> 01:10:11,110
+The algorithms, the chip design, all of the interconnects, all the software stacks that we're running on top of it,
+
+756
+01:10:11,160 --> 01:10:15,132
+their RDMA, absolutely, absolutely bar none, the world's best.
+
+757
+01:10:15,182 --> 01:10:20,796
+And now it has the ability to do programmable RDMA and data path accelerator so that our partners
+
+758
+01:10:20,846 --> 01:10:25,950
+like AI labs could create their own algorithms for how they want to move data around the system.
+
+759
+01:10:26,000 --> 01:10:29,350
+But this is completely world world class ConnectX.
+
+760
+01:10:29,400 --> 01:10:35,861
+ConnectX-9 and the Vera CPU were co-designed and we never revealed it not never never released
+
+761
+01:10:35,911 --> 01:10:43,350
+it until CX-9 came along because we we co-designed it for a new type of processor.
+
+762
+01:10:43,400 --> 01:10:52,270
+You know, ConnectX-9 or CX-8 and Spectrum-X revolutionized how Ethernet was done for artificial intelligence.
+
+763
+01:10:52,320 --> 01:10:57,644
+Ethernet traffic for AI is much, much more intense, requires much lower latency.
+
+764
+01:10:57,694 --> 01:11:07,910
+The the instantaneous surge of traffic is unlike anything Ethernet sees and so we created Spectrum-X which is AI Ethernet.
+
+765
+01:11:07,960 --> 01:11:10,750
+2 years ago we announced Spectrum-X.
+
+766
+01:11:10,800 --> 01:11:15,310
+NVIDIA today is the largest networking company the world has ever seen.
+
+767
+01:11:15,360 --> 01:11:19,968
+So it's been so successful and used in so many different installations.
+
+768
+01:11:20,018 --> 01:11:22,981
+It is just sweeping the AI landscape.
+
+769
+01:11:23,031 --> 01:11:31,126
+The performance is incredible, especially when you have a 200 megawatt data center or if you have a gigawatt data center,
+
+770
+01:11:31,176 --> 01:11:32,590
+these are billions of dollars.
+
+771
+01:11:32,640 --> 01:11:35,864
+Let's say a gigawatt data center is 50 billion dollars.
+
+772
+01:11:35,914 --> 01:11:42,950
+If the networking performance allows you to deliver an extra 10%
+
+773
+01:11:43,000 --> 01:11:48,112
+in the case of Spectrum-X delivering 25% higher throughput is not uncommon.
+
+774
+01:11:48,162 --> 01:11:52,001
+If it were to just deliver 10%, that's worth 5 billion dollars.
+
+775
+01:11:52,051 --> 01:11:54,710
+The networking is completely free.
+
+776
+01:11:54,760 --> 01:11:58,950
+Which is the reason why well everybody uses Spectrum-X.
+
+777
+01:11:59,000 --> 01:12:00,611
+It's just an incredible thing.
+
+778
+01:12:00,661 --> 01:12:06,390
+And now we're going to invent a new type a new type of data processing.
+
+779
+01:12:06,440 --> 01:12:09,830
+And so Spectrum-X is for east-west traffic.
+
+780
+01:12:09,880 --> 01:12:12,318
+We now have a new processor called BlueField-4.
+
+781
+01:12:12,368 --> 01:12:17,539
+BlueField-4 allows us to take a large large very large data center isolate
+
+782
+01:12:17,589 --> 01:12:21,043
+different parts of it so that different users could use different parts of it,
+
+783
+01:12:21,093 --> 01:12:24,510
+make sure that everything could be virtualized if they decide to be virtualized.
+
+784
+01:12:24,560 --> 01:12:32,895
+So you offload a lot of the virtualization software, the security software, the networking software for your north-south traffic.
+
+785
+01:12:32,945 --> 01:12:37,790
+And so BlueField-4 comes standard with every single one of these compute nodes.
+
+786
+01:12:37,840 --> 01:12:42,110
+BlueField-4 has a second application I'm going to talk about in just a second.
+
+787
+01:12:42,160 --> 01:12:45,124
+This is a revolutionary processor and I'm so excited about it.
+
+788
+01:12:45,174 --> 01:12:52,590
+This is the NVLink 6 switch and it's right here.
+
+789
+01:12:52,640 --> 01:13:00,190
+This is the this switch this switch here, there's four of them inside the NVLink switch here.
+
+790
+01:13:00,240 --> 01:13:04,510
+Each one of these switch chips has the fastest 30s in history.
+
+791
+01:13:04,560 --> 01:13:07,179
+The world is barely getting to 200 gigabits.
+
+792
+01:13:07,229 --> 01:13:11,110
+This is 400 gigabits per second switch.
+
+793
+01:13:11,160 --> 01:13:18,830
+The reason why this is so important is so that we could have every single GPU talk to every other GPU at exactly the same time.
+
+794
+01:13:18,880 --> 01:13:25,913
+This switch this switch on the backplane of one of these racks enables
+
+795
+01:13:25,963 --> 01:13:33,070
+us to move the equivalent of twice the amount of the global internet data.
+
+796
+01:13:33,120 --> 01:13:37,030
+All of the world's internet data at twice the speed.
+
+797
+01:13:37,080 --> 01:13:43,542
+You take the cross-sectional bandwidth of the entire planet's internet, it's about 100 terabytes per second.
+
+798
+01:13:43,592 --> 01:13:45,897
+This is 240 terabytes per second.
+
+799
+01:13:45,947 --> 01:13:47,887
+So that puts it in perspective.
+
+800
+01:13:47,937 --> 01:13:53,350
+This is so that every single GPU can work with every single other GPU at exactly the same time.
+
+801
+01:13:53,400 --> 01:13:54,393
+Okay?
+
+802
+01:13:54,443 --> 01:13:58,545
+Then on top of that on top of that.
+
+803
+01:13:58,595 --> 01:14:00,430
+Okay, so this is one rack.
+
+804
+01:14:00,480 --> 01:14:01,290
+This is one rack.
+
+805
+01:14:01,340 --> 01:14:03,290
+Each one of the racks, as you could see,
+
+806
+01:14:03,340 --> 01:14:14,526
+the number of transistors in this one rack is 1.7 times Yeah, could you do this for me?
+
+807
+01:14:14,576 --> 01:14:20,550
+So this is it's usually about 2 tons but today is 2 and 1/2 tons
+
+808
+01:14:20,600 --> 01:14:26,950
+because um when they shipped it they forgot to drain the water out of it.
+
+809
+01:14:27,000 --> 01:14:33,590
+So we we shipped a lot of water from California.
+
+810
+01:14:33,640 --> 01:14:35,790
+Can you hear it squealing?
+
+811
+01:14:35,840 --> 01:14:41,367
+You know, when you're rotating 2 and 1/2 tons you're going to squeal a little.
+
+812
+01:14:41,417 --> 01:14:46,590
+So behind behind this are the NVLink spines.
+
+813
+01:14:46,640 --> 01:14:49,550
+Basically 2 miles of copper cables.
+
+814
+01:14:49,600 --> 01:14:53,590
+Copper is the best conductor we know and these are all shielded copper cables,
+
+815
+01:14:53,640 --> 01:14:58,910
+structured copper cables, the most the world's ever used in computing systems ever.
+
+816
+01:14:58,960 --> 01:15:08,670
+And and our 30s drive the copper cables from the top of the rack all the way to the bottom of the rack at 400 gigabits per second.
+
+817
+01:15:08,720 --> 01:15:09,964
+It's incredible.
+
+818
+01:15:10,014 --> 01:15:14,731
+And so this has 2 miles of total copper cables, 5,000 copper cables.
+
+819
+01:15:14,781 --> 01:15:18,972
+And this makes the NVLink spine possible.
+
+820
+01:15:19,022 --> 01:15:22,950
+This is the revolution that that really started the MGX system.
+
+821
+01:15:23,000 --> 01:15:29,990
+Now we we decided that we would create an industry standard system so that the entire ecosystem,
+
+822
+01:15:30,040 --> 01:15:34,436
+all of our supply chain could standardize on these components.
+
+823
+01:15:34,486 --> 01:15:45,195
+There's some 80 thousand different components that make up this these MGX systems and it's a total waste if we were to change it every single year.
+
+824
+01:15:45,245 --> 01:15:49,763
+Every single major computer company from Foxconn to Quanta to Wistron, you know,
+
+825
+01:15:49,813 --> 01:15:56,092
+the list goes on and on and on to HP and Dell and Lenovo, everybody knows how to build these systems.
+
+826
+01:15:56,142 --> 01:16:02,967
+And so the fact that we could squeeze Reuben Vera Reuben into this even though the
+
+827
+01:16:03,017 --> 01:16:09,150
+performance is so much so much higher and very importantly the power is twice as high.
+
+828
+01:16:09,200 --> 01:16:13,656
+The power Vera Reuben is twice as high as Grace Hopper.
+
+829
+01:16:13,706 --> 01:16:21,910
+And yet and this is the miracle the air that goes into it, the the air flow is about the same.
+
+830
+01:16:21,960 --> 01:16:27,350
+And very importantly the water that goes into it is the same temperature, 45°C.
+
+831
+01:16:27,400 --> 01:16:33,470
+With 45°C no water chillers are necessary for data centers.
+
+832
+01:16:33,520 --> 01:16:38,270
+We're basically cooling this supercomputer with hot water.
+
+833
+01:16:38,320 --> 01:16:41,546
+It's so incredibly efficient.
+
+834
+01:16:41,596 --> 01:16:46,040
+And so this is this is the new the new rack.
+
+835
+01:16:46,090 --> 01:16:57,350
+1.7 times more transistors but five times more peak inference performance, three and a half times more peak um uh uh training performance.
+
+836
+01:16:57,400 --> 01:17:02,426
+They're connected on top using Spectrum-X.
+
+837
+01:17:02,476 --> 01:17:06,870
+Oh, thank you.
+
+838
+01:17:06,920 --> 01:17:16,506
+This is this is the world's first manufacturing chip using uh TSMC's new process that we co-innovated called Co-op.
+
+839
+01:17:16,556 --> 01:17:21,350
+It's a silicon photonics integrated silicon photonics process technology.
+
+840
+01:17:21,400 --> 01:17:26,270
+And this allows us to take silicon photonics directly right to the chip.
+
+841
+01:17:26,320 --> 01:17:31,510
+And this is 512 ports at 200 gigabits per second.
+
+842
+01:17:31,560 --> 01:17:36,778
+And this is the new Ethernet AI switch, the Spectrum-X Ethernet switch.
+
+843
+01:17:36,828 --> 01:17:38,344
+And look at this giant chip.
+
+844
+01:17:38,394 --> 01:17:42,750
+But what's really amazing it's got silicon photonics directly connected to it.
+
+845
+01:17:42,800 --> 01:17:48,070
+And lasers come in.
+
+846
+01:17:48,120 --> 01:17:49,768
+Lasers come in through here.
+
+847
+01:17:49,818 --> 01:17:51,710
+Lasers come in through here.
+
+848
+01:17:51,760 --> 01:17:56,990
+The optics are here and they connect out to the rest of the data data center.
+
+849
+01:17:57,040 --> 01:18:06,515
+This I'll show you in a second but this is on top of the rack and this is the new Spectrum-X silicon photonics switch.
+
+850
+01:18:06,565 --> 01:18:07,430
+Okay?
+
+851
+01:18:07,480 --> 01:18:10,093
+And we have something new I want to tell you about.
+
+852
+01:18:10,143 --> 01:18:19,230
+So just as I mentioned a couple years ago we introduced Spectrum-X so that we could reinvent the way that networking is done.
+
+853
+01:18:19,280 --> 01:18:26,131
+Um Ethernet is really easy to manage and everybody has an Ethernet stack and every data center in the world knows how to deal with Ethernet.
+
+854
+01:18:26,181 --> 01:18:32,525
+Um and the only thing that we were we were using at the time was called InfiniBand which is used for supercomputers.
+
+855
+01:18:32,575 --> 01:18:37,555
+InfiniBand is very low latency um but of course the software stack,
+
+856
+01:18:37,605 --> 01:18:42,151
+the entire manageability of InfiniBand is very alien to the people who use Ethernet.
+
+857
+01:18:42,201 --> 01:18:46,732
+So we decided to enter the Ethernet switch market for the very first time.
+
+858
+01:18:46,782 --> 01:18:52,701
+Spectrum-X that just took off and it made us the largest networking company in the world as I mentioned.
+
+859
+01:18:52,751 --> 01:18:57,110
+This this next generation Spectrum-X is going to carry on that tradition.
+
+860
+01:18:57,160 --> 01:19:01,750
+But just as I said earlier, AI has reinvented the whole computing stack.
+
+861
+01:19:01,800 --> 01:19:08,590
+Every layer of the computing stack, it stands to reason that when AI starts to get deployed in the world's enterprises,
+
+862
+01:19:08,640 --> 01:19:11,710
+it's going to also reinvent the way storage is done.
+
+863
+01:19:11,760 --> 01:19:13,506
+Well, AI doesn't use SQL.
+
+864
+01:19:13,556 --> 01:19:16,590
+AI use semantics information.
+
+865
+01:19:16,640 --> 01:19:24,510
+And when AI is being used, it creates this temporary knowledge, temporary temporary memory called KV cache.
+
+866
+01:19:24,560 --> 01:19:27,011
+Key value combination, but it's a KV cache.
+
+867
+01:19:27,061 --> 01:19:30,910
+Basically, the cache of the AI, the working memory of the AI.
+
+868
+01:19:30,960 --> 01:19:35,070
+And the working memory of the AI is stored in the HBM memory.
+
+869
+01:19:35,120 --> 01:19:43,804
+Every single token for every single token the GPU reads in the model, the entire model.
+
+870
+01:19:43,854 --> 01:19:49,990
+It reads in the entire working memory and it produces one token.
+
+871
+01:19:50,040 --> 01:19:52,559
+And it stores that one token back into the KV cache.
+
+872
+01:19:52,609 --> 01:19:57,285
+And then the next the next time it does that, it reads in the entire memory,
+
+873
+01:19:57,335 --> 01:20:02,286
+reads it and it streams it through our GPU and then generates another token.
+
+874
+01:20:02,336 --> 01:20:06,381
+Well, it does this repeatedly token after token after token and obviously,
+
+875
+01:20:06,431 --> 01:20:12,534
+if you have a long conversation with that AI, over time that memory, that context memory is going to grow tremendously.
+
+876
+01:20:12,584 --> 01:20:17,754
+Not to mention the models are growing, the number of turns that we're using the AIs are are are increasing.
+
+877
+01:20:17,804 --> 01:20:23,990
+We would like to have this AI stay with us our entire life and remember every single conversation we've ever had with it.
+
+878
+01:20:24,040 --> 01:20:24,340
+Right?
+
+879
+01:20:24,290 --> 01:20:26,726
+Every single lick of research that I've asked it for.
+
+880
+01:20:26,776 --> 01:20:31,516
+Of course, with the number of people that will be sharing the supercomputer is going to continue to grow.
+
+881
+01:20:31,566 --> 01:20:38,435
+And so, this context memory which started out fitting inside an HBM is no longer large enough.
+
+882
+01:20:38,485 --> 01:20:46,726
+Last year, we created Grace Blackwell's very fast memory we called fast context memory.
+
+883
+01:20:46,776 --> 01:20:50,791
+In That's the reason why we connected Grace directly to Hopper.
+
+884
+01:20:50,841 --> 01:20:56,398
+That's why we connected Grace directly to Blackwell so that we can expand the context memory.
+
+885
+01:20:56,448 --> 01:20:57,996
+But even that is not enough.
+
+886
+01:20:58,046 --> 01:21:06,870
+And so, the next solution, of course, is to go off onto the network, the north-south network off to the storage of the company.
+
+887
+01:21:06,920 --> 01:21:12,990
+But if you have a whole lot of AIs running at the same time, that network is no longer going to be fast enough.
+
+888
+01:21:13,040 --> 01:21:16,603
+So, the answer is very clearly to do it different.
+
+889
+01:21:16,653 --> 01:21:28,430
+And so, we we created BlueField 4 so that we could essentially have a very fast KV cache context memory store right in the rack.
+
+890
+01:21:28,480 --> 01:21:30,950
+And so, I'll show you in just 1 second,
+
+891
+01:21:31,000 --> 01:21:36,677
+but there's a whole new category of storage systems and the industry is so excited because
+
+892
+01:21:36,727 --> 01:21:41,718
+this is a pain point for just about everybody who does a lot of token generation today,
+
+893
+01:21:41,768 --> 01:21:44,380
+the AI labs, the cloud service providers.
+
+894
+01:21:44,430 --> 01:21:51,176
+They're really suffering from the amount of network traffic that's causing being caused by KV cache moving around.
+
+895
+01:21:51,226 --> 01:21:53,988
+And so, the idea that we would create a new platform,
+
+896
+01:21:54,038 --> 01:22:01,955
+a new processor to run the entire Dynamo KV cache context memory management system
+
+897
+01:22:02,005 --> 01:22:06,784
+and to put it very close to the rest of the rack is completely revolutionary.
+
+898
+01:22:06,834 --> 01:22:08,228
+So, this is it.
+
+899
+01:22:08,278 --> 01:22:11,390
+This is it sits right here.
+
+900
+01:22:11,440 --> 01:22:14,990
+So, this this is all the compute nodes.
+
+901
+01:22:15,040 --> 01:22:17,990
+Each one of these is NVLink 72.
+
+902
+01:22:18,040 --> 01:22:21,430
+So, this is Vera Rubin NVLink 72.
+
+903
+01:22:21,480 --> 01:22:24,630
+144 Rubin GPUs.
+
+904
+01:22:24,680 --> 01:22:27,082
+This is the context memory that's stored here.
+
+905
+01:22:27,132 --> 01:22:30,150
+Behind each one of these are four BlueFields.
+
+906
+01:22:30,200 --> 01:22:35,630
+Behind each BlueField is 150 terabytes of memory context memory.
+
+907
+01:22:35,680 --> 01:22:43,310
+And for each GPU, once you allocate it across, each GPU will get an additional 16 terabytes.
+
+908
+01:22:43,360 --> 01:22:50,030
+Now, inside this node, each GPU essentially has 1 terabyte.
+
+909
+01:22:50,080 --> 01:22:58,072
+And now, with this backing store here directly on the same east-west traffic at exactly the same data rate,
+
+910
+01:22:58,122 --> 01:23:08,270
+200 gigabits per second across literally the entire fabric of this compute node, you're going to get an additional 16 terabytes of memory.
+
+911
+01:23:08,320 --> 01:23:08,726
+Okay?
+
+912
+01:23:08,776 --> 01:23:11,310
+And this is the management plane.
+
+913
+01:23:11,360 --> 01:23:22,350
+These are these are the Spectrum-X switches that connects all of them together.
+
+914
+01:23:22,400 --> 01:23:29,630
+And over here these switches at the end connects them to the rest of the data center.
+
+915
+01:23:29,680 --> 01:23:30,110
+Okay?
+
+916
+01:23:30,160 --> 01:23:32,670
+And so, this is the Vera Rubin.
+
+917
+01:23:32,720 --> 01:23:35,790
+Now, there's several things that's really incredible about it.
+
+918
+01:23:35,840 --> 01:23:44,541
+So, the first thing that I mentioned is that the this entire system is twice the energy efficiency,
+
+919
+01:23:44,591 --> 01:23:51,501
+essentially the the the temperature performance in the sense that that even though the power is twice as high,
+
+920
+01:23:51,551 --> 01:24:01,350
+the amount of energy used is twice as high, the amount of computation is many times higher than that, but the liquid that goes into it still 45°C.
+
+921
+01:24:01,400 --> 01:24:05,753
+That enables us to save about 6% of the world's data center power.
+
+922
+01:24:05,803 --> 01:24:07,995
+So, that's a very big deal.
+
+923
+01:24:08,045 --> 01:24:14,662
+The second very big deal is that this entire system is now confidential computing safe.
+
+924
+01:24:14,712 --> 01:24:19,550
+Meaning, everything is encoded in transit, at rest and during compute.
+
+925
+01:24:19,600 --> 01:24:23,390
+And every single bus is now encrypted.
+
+926
+01:24:23,440 --> 01:24:34,350
+Every PCI Express, every NVLink, every you know, NVLink between CPU and GPU, between GPU to GPU, everything is now encrypted.
+
+927
+01:24:34,400 --> 01:24:37,350
+And so, it's confidential computing safe.
+
+928
+01:24:37,400 --> 01:24:46,430
+This allows companies to feel safe that their models are being deployed by somebody else, but it will never be seen by anybody else.
+
+929
+01:24:46,480 --> 01:24:46,876
+Okay?
+
+930
+01:24:46,906 --> 01:24:55,230
+And so, this particular system is not only incredibly energy efficient, but there's one other thing that's incredible.
+
+931
+01:24:55,280 --> 01:25:04,350
+Because of the nature of the workload of AI, it spikes instantaneously with this computation layer called all reduce.
+
+932
+01:25:04,400 --> 01:25:09,828
+The amount of current, the amount of energy that is used simultaneously is really off the charts.
+
+933
+01:25:09,878 --> 01:25:12,870
+Often times, they'll spike up 25%.
+
+934
+01:25:12,920 --> 01:25:23,087
+We now have power smoothing across the entire system so that you don't have to over provision by 25 times or if you over provision by 25 times,
+
+935
+01:25:23,137 --> 01:25:29,224
+you don't have to leave 25% of the energy um squandered or unused.
+
+936
+01:25:29,274 --> 01:25:35,750
+And so now, you could fill up the entire power budget and you don't have to provision beyond that.
+
+937
+01:25:35,800 --> 01:25:38,430
+And then the last thing, of course, is performance.
+
+938
+01:25:38,480 --> 01:25:40,240
+So, let's take a look at the performance of this.
+
+939
+01:25:40,290 --> 01:25:44,298
+These are only charts that people who build AI supercomputers would love.
+
+940
+01:25:44,348 --> 01:25:46,618
+It took every single one of these chips,
+
+941
+01:25:46,668 --> 01:25:52,830
+complete redesign of every single one of the systems and rewriting the entire stack for us to make this possible.
+
+942
+01:25:52,880 --> 01:25:57,230
+Basically, this is training the AI model, this first column.
+
+943
+01:25:57,280 --> 01:26:02,267
+The faster you train AI models the faster you can get the next frontier out to the world.
+
+944
+01:26:02,317 --> 01:26:03,601
+This is your time to market.
+
+945
+01:26:03,651 --> 01:26:05,350
+This is technology leadership.
+
+946
+01:26:05,400 --> 01:26:07,790
+This is your pricing power.
+
+947
+01:26:07,840 --> 01:26:14,479
+And so, in the case of the green, this is essentially a 10 trillion parameter model.
+
+948
+01:26:14,529 --> 01:26:16,350
+We scaled it up from Deep Seek.
+
+949
+01:26:16,400 --> 01:26:18,731
+Deep Seek That's why we call it Deep Seek plus plus.
+
+950
+01:26:18,781 --> 01:26:24,710
+A training a 10 trillion parameter model on 100 trillion tokens.
+
+951
+01:26:24,760 --> 01:26:25,160
+Okay?
+
+952
+01:26:25,192 --> 01:26:31,161
+And that's this is our simulation projection of what it would take for us to build the next frontier model.
+
+953
+01:26:31,211 --> 01:26:37,550
+The next frontier model uh Elon's already mentioned that the next version of Grok, Grok 5, I think is 7 trillion parameters.
+
+954
+01:26:37,600 --> 01:26:38,510
+So, this is 10.
+
+955
+01:26:38,560 --> 01:26:41,590
+And and and the green is Blackwell.
+
+956
+01:26:41,640 --> 01:26:50,302
+And here, in the case of um uh Rubin, notice the throughput is so much higher and therefore,
+
+957
+01:26:50,352 --> 01:26:59,630
+it only takes 1/4 as many of these systems in order to train the model in the time that we gave it here, which is 1 month.
+
+958
+01:26:59,680 --> 01:27:00,572
+Okay?
+
+959
+01:27:00,622 --> 01:27:03,790
+And so time time is the same for everybody.
+
+960
+01:27:03,840 --> 01:27:09,942
+Now, how much how fast you can train that model and how large a model you can train is how you're going to get to the frontier first.
+
+961
+01:27:09,992 --> 01:27:13,550
+The second part is your factory throughput.
+
+962
+01:27:13,600 --> 01:27:22,523
+Blackwell is green again and factory throughput is important because your factory is in the case of a gigawatt is $50 billion.
+
+963
+01:27:22,573 --> 01:27:29,510
+A $50 billion data center can only consume 1 gigawatt of power.
+
+964
+01:27:29,560 --> 01:27:41,070
+And so, if your performance your throughput per watt is very good versus quite poor, that directly translates to your revenues.
+
+965
+01:27:41,120 --> 01:27:46,879
+Your revenues of your data center is directly related to the second second column.
+
+966
+01:27:46,929 --> 01:27:51,359
+And in the case of Blackwell, it was about 10 times over Hopper.
+
+967
+01:27:51,409 --> 01:27:55,430
+In the case of Rubin, it's going to be about 10 times higher again.
+
+968
+01:27:55,480 --> 01:27:56,101
+Okay?
+
+969
+01:27:56,151 --> 01:28:06,983
+And in the case of now, the um the cost of the tokens, how cost-effectively it is to generate the token this is Rubin about 1/10.
+
+970
+01:28:07,033 --> 01:28:15,630
+Just as in the case of Yep.
+
+971
+01:28:15,680 --> 01:28:24,150
+So, that's how This is how we're going to get everybody to the next frontier to um push AI to the next level.
+
+972
+01:28:24,200 --> 01:28:30,430
+And of course, to build these data centers energy efficiently and cost efficiently.
+
+973
+01:28:30,480 --> 01:28:31,750
+So, this is it.
+
+974
+01:28:31,800 --> 01:28:33,032
+This is NVIDIA today.
+
+975
+01:28:33,082 --> 01:28:40,550
+You know, we mentioned that we build chips, but as you know, NVIDIA builds entire systems now.
+
+976
+01:28:40,600 --> 01:28:43,590
+And AI is a full stack.
+
+977
+01:28:43,640 --> 01:28:50,784
+We we're reinventing AI across everything from chips to infrastructure to models to applications.
+
+978
+01:28:50,834 --> 01:28:58,173
+And our job is to create the entire stack so that all of you could create incredible applications uh for the rest of the world.
+
+979
+01:28:58,223 --> 01:28:59,447
+Thank you all for coming.
+
+980
+01:28:59,497 --> 01:29:01,910
+Have a great CES.
+
+981
+01:29:01,960 --> 01:29:10,424
+Now Before Before I Before I let you guys go, uh there were a whole bunch of slides we have to we have to leave on the cutting floor.
+
+982
+01:29:10,474 --> 01:29:11,930
+And so, we have some outtakes here.
+
+983
+01:29:11,980 --> 01:29:14,120
+I think it'll be fun for you.
+
+984
+01:29:14,170 --> 01:29:20,310
+Have a great CES, guys.
+
+985
+01:29:20,360 --> 01:29:24,750
+And cut.
+
+986
+01:29:24,800 --> 01:29:27,845
+NVIDIA live at CES take four.
+
+987
+01:29:27,895 --> 01:29:28,670
+Marker.
+
+988
+01:29:28,720 --> 01:29:30,670
+Boom mic.
+
+989
+01:29:30,720 --> 01:29:33,790
+Action.
+
+990
+01:29:33,840 --> 01:29:36,481
+Sorry guys.
+
+991
+01:29:36,531 --> 01:29:41,190
+Platform shift, huh?
+
+992
+01:29:41,240 --> 01:29:42,550
+That should do it.
+
+993
+01:29:42,600 --> 01:29:46,630
+And let's roll camera.
+
+994
+01:29:46,680 --> 01:29:49,150
+A shade of green.
+
+995
+01:29:49,200 --> 01:29:51,470
+A bright happy green.
+
+996
+01:29:51,520 --> 01:30:01,350
+World's most powerful AI supercomputer you can plug into the wall next to my toaster.
+
+997
+01:30:01,400 --> 01:30:02,786
+Hey guys, I'm I'm stuck again.
+
+998
+01:30:02,836 --> 01:30:03,710
+I'm so sorry.
+
+999
+01:30:03,760 --> 01:30:04,837
+This slide is never going to work.
+
+1000
+01:30:04,887 --> 01:30:06,512
+Let's just cut it.
+
+1001
+01:30:06,562 --> 01:30:07,310
+Hello?
+
+1002
+01:30:07,360 --> 01:30:11,230
+Can you hear me?
+
+1003
+01:30:11,280 --> 01:30:17,470
+So like I was saying, the router because not every problem needs the biggest, smartest model.
+
+1004
+01:30:17,520 --> 01:30:19,870
+Just the right one.
+
+1005
+01:30:19,920 --> 01:30:23,150
+No. No. Don't lose any of them.
+
+1006
+01:30:23,200 --> 01:30:30,310
+This new six-chip Rubin platform makes one amazing AI supercomputer.
+
+1007
+01:30:30,360 --> 01:30:32,110
+There you go, little guy.
+
+1008
+01:30:32,160 --> 01:30:35,310
+Oh, no. No, not the scaling laws.
+
+1009
+01:30:35,360 --> 01:30:36,933
+There is a squirrel on the car.
+
+1010
+01:30:36,983 --> 01:30:39,095
+Be ready to make the squirrel go away.
+
+1011
+01:30:39,145 --> 01:30:41,790
+Ask the squirrel gently to move away.
+
+1012
+01:30:41,840 --> 01:30:48,550
+Did you know the best models today are all mixture of experts?
+
+1013
+01:30:48,600 --> 01:31:00,110
+Hey.
+
+1014
+01:31:00,160 --> 01:31:03,080
+Where'd everybody go?

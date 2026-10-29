@@ -98,6 +98,7 @@ SRT / ASS 双语字幕、术语表、思维导图、精炼笔记可同步沉淀�
 | Mark Russinovich：Inside Azure innovations（Build 2026 BRK226） | 44:53 | 1080p30 | 中英硬字幕，484 条（人工英文） | 第 27 期正片（Azure 基础设施 / 机密计算） |
 | Russinovich × Stoica：Distributed systems to AI platforms（BRK227） | 45:12 | 1080p30 | 中英硬字幕，518 条（人工英文） | 第 28 期正片（分布式系统 / AI 平台） |
 | 苏姿丰：Building the Next Era of AI Infrastructure（OCP 2026） | 27:38 | 1080p60 | 中英硬字幕，285 条 | 第 29 期正片（AMD 机架 / 智能体基础设施） |
+| 黄仁勋：NVIDIA Live at CES 2026 | 1:31:40 | 1080p60 | 中英硬字幕，1014 条 | 第 30 期正片（Vera Rubin / Alpamayo / 物理 AI） |
 | 十七期对应的无字幕原片 | 33:00 | 4K 2160p30 | 无字幕 | 二次剪辑、切片、重新配字幕 |
 | 双语 SRT / ASS | — | — | 英上中下 | 简介时间戳、网站资料 |
 
@@ -234,6 +235,7 @@ SRT / ASS 双语字幕、术语表、思维导图、精炼笔记可同步沉淀�
 | 第 27 期 | Mark Russinovich：Azure 基础设施的内部创新（Azure Boost / MRC / 机密计算） | [ep27-azure-innovations-brk226.md](episodes/ep27-azure-innovations-brk226.md) | 已完成，三方验证通过 |
 | 第 28 期 | Russinovich × Stoica：从分布式系统到 AI 平台（智能体架构 / 开源栈 / 验证） | [ep28-distributed-systems-ai-platforms-brk227.md](episodes/ep28-distributed-systems-ai-platforms-brk227.md) | 已完成，三方验证通过 |
 | 第 29 期 | 苏姿丰 OCP 2026：为智能体重建基础设施（Helios / Helion / EPYC Verano） | [ep29-amd-ocp-2026-lisa-su.md](episodes/ep29-amd-ocp-2026-lisa-su.md) | 已完成，三方验证通过 |
+| 第 30 期 | 黄仁勋 CES 2026：两次平台转移与 Vera Rubin 全面量产 | [ep30-nvidia-ces-2026-keynote.md](episodes/ep30-nvidia-ces-2026-keynote.md) | 已完成，三方验证通过 |
 
 **新增一期的流程**
 

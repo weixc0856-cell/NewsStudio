@@ -286,7 +286,7 @@ uv run python scripts/translate_local.py "subtitles/<id>.bilingual.srt" `
 README 只保留项目通用用法；每一期的选题、三方验证、内容结构、简介模板与制作结果在
 `docs/episodes/`：
 
-- 单期档案：`docs/episodes/epNN-*.md`（共 29 期）
+- 单期档案：`docs/episodes/epNN-*.md`（共 30 期）
 - README 迁出的下载/编码/校验细节：`docs/episodes/制作记录-按期归档.md`
 - 专栏整体策划：`docs/专栏策划-AI时代的基建.md`
 
