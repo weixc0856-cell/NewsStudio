@@ -10,6 +10,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import sys
 import time
@@ -235,12 +236,43 @@ SYSTEM = (
     "uncertainty 译作“不确定性”；Jacobian 译作“雅可比”；closed-loop 译作“闭环”；"
     "dissipative 译作“耗散”；null space 译作“零空间”；hybrid system 译作“混合系统”；"
     "switched system 译作“切换系统”；ApBot 保持 ApBot；LLM、VLM 保持英文。"
+    "BG2 Pod 保持 BG2 Pod；Brad Gerstner 或 Brad 译作“布拉德·格斯特纳”或“布拉德”；"
+    "Bill Gurley 或 Bill 译作“比尔·格利”或“比尔”；Jensen Huang 或 Jensen 译作“黄仁勋”或“黄”；"
+    "Dario Amodei 或 Dario 译作“达里奥·阿莫代”；Demis Hassabis 或 Demis 译作“德米斯·哈萨比斯”；"
+    "Elon Musk 或 Elon 译作“埃隆·马斯克”；Sam Altman 或 Sam 译作“萨姆·奥尔特曼”；"
+    "National Medal of Science 译作“国家科学奖章”；White House 译作“白宫”；"
+    "White House Accord on Superintelligence 译作“白宫超级智能协议”；"
+    "frontier model review 译作“前沿模型审查”；three-legged stool 译作“三足鼎立框架”；"
+    "Navier-Stokes 译作“纳维-斯托克斯方程”；Jevons paradox 译作“杰文斯悖论”；Keynes 译作“凯恩斯”；"
+    "singularity 译作“奇点”；superintelligence 译作“超级智能”；cost of intelligence 译作“智能成本”；"
+    "physical AI 译作“物理 AI”；Jetson、Omniverse、CUDA、NVLink、Nemotron、Grace Hopper、Hopper、"
+    "Vera Rubin、Rubin、Blackwell、Groq、Grok、Grokbot、Gemini、Meta Muse、Mythos、Astra、"
+    "Open Shell、Prometheus、Colossus、Starship、Starlink、TSMC、CoreWeave、Nebius 保持英文；"
+    "Neocloud 或 neocloud 译作“新云厂商”；CSP 译作“云服务商”；NCP 保持 NCP；"
+    "gigawatt 译作“吉瓦”；megawatt 译作“兆瓦”；GW 保持 GW；land power shell 译作“土地、电力与厂房”；"
+    "capex 或 CapEx 译作“资本开支”；ARR 保持 ARR；TCO 译作“总拥有成本”；"
+    "fungible 译作“可通用、可互换的”；fungibility 译作“通用性”；rentability 译作“可租赁性”；"
+    "substrate 译作“基板”；silicon photonics 译作“硅光”；warpage 译作“翘曲”；"
+    "airbag 译作“安全气囊”；containment 译作“围栏隔离”；out-of-band monitoring 译作“带外监控”；"
+    "zero trust 译作“零信任”；red team 译作“红队”；guardrail 译作“护栏”；"
+    "agentic 译作“代理式”；agent 译作“智能体”；harness 译作“运行框架”；"
+    "reinforcement learning 译作“强化学习”；inference 译作“推理”；post-training 译作“后训练”；"
+    "FSD 保持 FSD；robotaxi 译作“自动驾驶出租车”；humanoid 译作“人形机器人”；"
+    "open model 译作“开源模型”；closed model 译作“闭源模型”；frontier lab 译作“前沿实验室”；"
+    "Permitting 译作“审批许可”；moratorium 译作“暂停令”；grid 译作“电网”；"
+    "share buyback 译作“股票回购”；free cash flow 译作“自由现金流”；"
+    "buy-side、sell-side 保持英文；consensus 译作“一致预期”；估值语境下 earnings 译作“盈利”。"
 )
 NUM_RE = re.compile(r"^\s*(\d+)\s*[.、)．]\s*(.*)$")
 
 
+def _headers() -> dict[str, str]:
+    key = os.environ.get("LLM_API_KEY", "").strip()
+    return {"Authorization": f"Bearer {key}"} if key else {}
+
+
 def model_id(base: str) -> str:
-    r = requests.get(f"{base}/v1/models", timeout=30)
+    r = requests.get(f"{base}/v1/models", headers=_headers(), timeout=30)
     r.raise_for_status()
     return r.json()["data"][0]["id"]
 
@@ -267,7 +299,8 @@ def request_translation(base: str, model: str, texts: list[str], retries: int = 
     last_error = None
     for attempt in range(retries):
         try:
-            r = requests.post(f"{base}/v1/chat/completions", json=payload, timeout=600)
+            r = requests.post(f"{base}/v1/chat/completions", json=payload,
+                                headers=_headers(), timeout=600)
             r.raise_for_status()
             content = r.json()["choices"][0]["message"]["content"].strip()
             lines = [ln.strip() for ln in content.splitlines() if ln.strip()]
