@@ -31,7 +31,14 @@ clips/**/*.mkv
 clips/**/*.webm
 clips/**/*.tmp.mp4
 
+# Runtime state: pipeline lock, service logs, per-run scratch
+.runtime/
+
 # OS / editor noise
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Dub renders: keep scripts/manifests, ignore audio and video artifacts
+dub/**/*.wav
+dub/**/*.mp4

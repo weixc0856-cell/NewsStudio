@@ -21,6 +21,10 @@ def values(**overrides: str) -> dict[str, str]:
         title_zh="CPU 为何成为 AI 新瓶颈",
         speaker="Dylan Patel", event="Daytona 2026",
         organization="SemiAnalysis", verification="3-source cross-check",
+        summary_zh="强化学习与代码智能体把闭环压紧后，传统 x86 资源全面告罄。",
+        insight_1="代码 Agent 吞吐提升 14 倍，执行编译吃空集群算力",
+        insight_2="微软等云厂商备用 CPU 售罄，供电与网络拓扑重构",
+        insight_3="数据中心重心从单纯 GPU 扩展转向异构协同调度",
         index="021", series="AI 基建 / 第 21 期")
     base.update(overrides)
     return base
@@ -34,6 +38,9 @@ class TemplateTests(unittest.TestCase):
         for label in ("Speaker", "Source Event", "Organization", "Verification"):
             self.assertIn(label, html)
         self.assertIn("TECHNICAL HIGHLIGHTS", html)
+        self.assertIn("KEY ENGINEERING INSIGHTS", html)
+        self.assertIn("代码 Agent 吞吐提升 14 倍", html)
+        self.assertIn("AI 基建 / 第 21 期", html)
         self.assertNotIn("{{", html)
         self.assertNotIn("CONTEXT", html)
         self.assertNotIn("FIELD RECORD", html)

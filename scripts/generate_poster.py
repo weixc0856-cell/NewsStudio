@@ -56,6 +56,10 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--event", default="")
     ap.add_argument("--organization", default="")
     ap.add_argument("--verification", default="")
+    ap.add_argument("--summary-zh", default="")
+    ap.add_argument("--insight-1", default="")
+    ap.add_argument("--insight-2", default="")
+    ap.add_argument("--insight-3", default="")
     ap.add_argument("--kicker", default="TECHNICAL HIGHLIGHTS")
     ap.add_argument("--index", default="")
     ap.add_argument("--series", default="")
@@ -74,7 +78,9 @@ def main(argv: list[str] | None = None) -> int:
         values = gi.poster_values(
             title_en=args.title_en, title_zh=args.title_zh, speaker=args.speaker,
             event=args.event, organization=args.organization,
-            verification=args.verification, kicker=args.kicker, index=args.index,
+            verification=args.verification, summary_zh=args.summary_zh,
+            insight_1=args.insight_1, insight_2=args.insight_2,
+            insight_3=args.insight_3, kicker=args.kicker, index=args.index,
             series=args.series, accent=args.accent)
     except ValueError as exc:
         print(f"config error: {exc}", file=sys.stderr)

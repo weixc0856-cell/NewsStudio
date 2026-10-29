@@ -83,6 +83,10 @@ CONTINUATION_END = re.compile(
     re.I,
 )
 TERMINAL_END = re.compile(r'(?<!\.)[.?!][\'"]?\s*$')
+DEPENDENT_START = re.compile(
+    r"^(?:brought|which|that|because|but also|and then|also|however|and |but )\b",
+    re.I,
+)
 
 
 # --------------------------------------------------------------------------
@@ -534,6 +538,80 @@ def call_extend_model(base: str, model: str, prompt: str, win: Window,
         return None, [record]
 
 
+def build_title_prompt(*, win: Window, cues: list[Cue], record: dict[str, Any],
+                       existing_titles: list[str], cfg: dict[str, Any]) -> str:
+    """Ask for a title that is explicitly different from the already-picked ones."""
+    lines, _ = _window_header(win, cues)
+    lines += [
+        "",
+        f"候选片段：{record['start_cue_id']} ~ {record['end_cue_id']}",
+        f"候选摘要：{record['summary']}",
+        f"已有标题：{'；'.join(existing_titles) if existing_titles else '无'}",
+        "请为这个候选生成一个与已有标题明显不同的中文标题，突出它与其它候选"
+        "不同的核心矛盾，不超过 20 个字，不要营销词。",
+        '只输出 JSON：{"title": "<标题>"}',
+    ]
+    return "\n".join(lines)
+
+
+def call_title_model(base: str, model: str, prompt: str,
+                     cfg: dict[str, Any]) -> str | None:
+    payload: dict[str, Any] = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": prompt},
+        ],
+        "temperature": cfg["temperature"],
+        "max_tokens": 80,
+        "stream": False,
+        "response_format": {"type": "json_object"},
+    }
+    try:
+        resp = requests.post(f"{base}/v1/chat/completions", json=payload,
+                             timeout=(10, cfg["model_timeout_s"]))
+        if resp.status_code == 400 and "response_format" in payload:
+            payload.pop("response_format")
+            resp = requests.post(f"{base}/v1/chat/completions", json=payload,
+                                 timeout=(10, cfg["model_timeout_s"]))
+        resp.raise_for_status()
+        content = resp.json()["choices"][0]["message"]["content"]
+        title = str(extract_json_object(content).get("title", "")).strip()
+        if not title or len(title) > 20:
+            raise ValueError(f"invalid title: {title!r}")
+        return title
+    except Exception as exc:
+        RUN.log(f"title repair failed: {exc}")
+        return None
+
+
+def ensure_unique_titles(selected: list[dict[str, Any]],
+                         window_results: list[dict[str, Any]],
+                         cues: list[Cue], by_id: dict[int, Cue],
+                         cfg: dict[str, Any]) -> None:
+    if not selected:
+        return
+    window_by_index = {w["index"]: w for w in window_results}
+    used: set[str] = set()
+    for cand in selected:
+        if cand["title"] in used:
+            data = window_by_index.get(cand["source_window"])
+            win = Window(index=data["index"], start=data["start_ms"],
+                         end=data["end_ms"], cue_ids=data["cue_ids"])
+            prompt = build_title_prompt(win=win, cues=cues, record=cand,
+                                        existing_titles=sorted(used), cfg=cfg)
+            new_title = call_title_model(cfg["base_url"], cfg["model"], prompt, cfg)
+            if not new_title or new_title in used:
+                fallback = (cand.get("summary") or "").split("，")[0][:20]
+                fallback = fallback.strip("。；，, ")
+                if not fallback or fallback in used:
+                    fallback = f"{cand['title']}（{cand['start_cue_id']}）"[:20]
+                new_title = fallback
+            RUN.log(f"title repair: {cand['title']} -> {new_title}")
+            cand["title"] = new_title
+        used.add(cand["title"])
+
+
 def analyze(cues: list[Cue], cfg: dict[str, Any], video_id: str,
             work_dir: Path | None = None) -> dict[str, Any]:
     windows = build_windows(cues, cfg["window_ms"], cfg["overlap_ms"], cfg["min_clip_ms"])
@@ -636,6 +714,8 @@ def analyze(cues: list[Cue], cfg: dict[str, Any], video_id: str,
 
     valid, removed = filter_candidates(candidates_raw, window_results, by_id, cfg)
     selected = valid[: cfg["max_clips"]]
+    if len(selected) > 1:
+        ensure_unique_titles(selected, window_results, cues, by_id, cfg)
     for cand in valid[cfg["max_clips"]:]:
         removed.append({"candidate": cand, "stage": "quota",
                         "reason": f"outside top {cfg['max_clips']} by selection rank"})
@@ -696,7 +776,10 @@ def boundary_score(start: Cue, end: Cue,
     start_text = start.top.strip()
     end_text = end.top.strip()
 
-    if FILLER_START.match(start_text):
+    if DEPENDENT_START.match(start_text):
+        score -= 2
+        notes.append("dependent_start")
+    elif FILLER_START.match(start_text):
         score -= 2
         notes.append("filler_start")
     else:

@@ -718,6 +718,11 @@ def run(args: argparse.Namespace) -> int:
         "generated_at": now_iso(),
     }
     data["assembly"] = assembly
+    if "intro" not in data and intro_meta:
+        # auto_clip rewrites result.json when it renders clips; restore the
+        # intro block so the final metadata still points at the standalone card.
+        data["intro"] = {**intro_meta, "manual_review": False,
+                         "target_platform": assembly["target_platform"]}
     data["manual_review"] = False
     for clip in data.get("clips", []):
         clip.setdefault("video_id", data.get("video_id", out_dir.name))

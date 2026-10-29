@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "video_id": "c88l8daXiv4",
+  "status": "SUCCESS",
+  "started_at": "2026-10-28T23:36:53+00:00",
+  "finished_at": "2026-10-28T23:40:19+00:00",
+  "error": null,
+  "stages": [
+    {
+      "index": 1,
+      "key": "LLM",
+      "title": "文本理解与高光规划（LLM 独占）",
+      "status": "SUCCESS",
+      "service": "llama-server",
+      "started_at": "2026-10-28T23:36:53+00:00",
+      "finished_at": "2026-10-28T23:37:07+00:00",
+      "seconds": 13.81,
+      "detail": {
+        "analysis": {
+          "status": "REUSED",
+          "path": "clips/c88l8daXiv4/analysis.json"
+        },
+        "copy": {
+          "intro_spoken_text": "Daytona 2026，Dylan Patel 现场实录。他拆解 CPU 算力瓶颈。中英双语，来看原声。",
+          "screen_title": "CPU 为何成为 AI 新瓶颈",
+          "screen_subtitle": "Dylan Patel · SemiAnalysis，2026"
+        },
+        "model": "Qwen3-30B-A3B-Instruct-2507-Q4_K_M"
+      },
+      "error": null
+    },
+    {
+      "index": 2,
+      "key": "TTS",
+      "title": "语音合成与时间审计（TTS 独占）",
+      "status": "SUCCESS",
+      "service": "cosyvoice",
+      "started_at": "2026-10-28T23:37:07+00:00",
+      "finished_at": "2026-10-28T23:38:16+00:00",
+      "seconds": 69.33,
+      "detail": {
+        "narration": {
+          "text": "Daytona 2026，Dylan Patel 现场实录。他拆解 CPU 算力瓶颈。中英双语，来看原声。",
+          "tts_text": "Daytona 二零二六年，Dylan Patel 现场实录。他拆解 CPU 算力瓶颈。中英双语，来看原声。",
+          "script": "clips/c88l8daXiv4/intro/intro.script.json",
+          "raw_path": "clips/c88l8daXiv4/intro/narration.raw.wav",
+          "raw_seconds": 9.04,
+          "path": "clips/c88l8daXiv4/intro/narration.wav",
+          "final_seconds": 8.508,
+          "tempo": 1.0635,
+          "prompt_wav": "D:/AI/CosyVoice-Runtime/assets/my_voice_5s.wav",
+          "service": {
+            "model_class": "CosyVoice2",
+            "model_dir": "D:\\AI\\CosyVoice-Runtime\\pretrained_models\\CosyVoice2-0.5B",
+            "device": "cpu",
+            "sample_rate": 24000,
+            "text_frontend": "wetext"
+          }
+        },
+        "timeline": {
+          "duration_ms": 8958,
+          "lead_ms": 200,
+          "voice_ms": 8508,
+          "tail_ms": 250
+        },
+        "repairs": []
+      },
+      "error": null
+    },
+    {
+      "index": 3,
+      "key": "PICTURE",
+      "title": "视觉卡片生成（零显存）",
+      "status": "SUCCESS",
+      "service": "none",
+      "started_at": "2026-10-28T23:38:16+00:00",
+      "finished_at": "2026-10-28T23:38:17+00:00",
+      "seconds": 0.52,
+      "detail": {
+        "mode": "poster",
+        "style": "poster",
+        "frames": [
+          "clips/c88l8daXiv4/intro/intro.png"
+        ],
+        "png": "clips/c88l8daXiv4/intro/intro.png",
+        "hashes": [
+          "52919a14815aa77869d1cedeb89eed7c11b2e5a9db08167cfe7be4c96cc233c6"
+        ],
+        "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "renderer": "auto"
+      },
+      "error": null
+    },
+    {
+      "index": 4,
+      "key": "MEDIA",
+      "title": "媒体渲染与成片装配（FFmpeg/QSV 独占）",
+      "status": "SUCCESS",
+      "service": "ffmpeg/qsv",
+      "started_at": "2026-10-28T23:38:17+00:00",
+      "finished_at": "2026-10-28T23:40:16+00:00",
+      "seconds": 118.94,
+      "detail": {
+        "intro": {
+          "status": "SUCCESS",
+          "path": "clips/c88l8daXiv4/intro/intro.mp4",
+          "duration_ms": 8971
+        },
+        "media": {
+          "clips": "RENDERED",
+          "assembly": {
+            "status": "SUCCESS",
+            "output": "clips/c88l8daXiv4/final/c88l8daXiv4.highlights-merged.mp4",
+            "duration_ms": 733286
+          }
+        }
+      },
+      "error": null
+    }
+  ],
+  "resource_audit": {
+    "heavy": [],
+    "ffmpeg": [],
+    "ports": {
+      "8080": null,
+      "50000": null
+    }
+  }
+}

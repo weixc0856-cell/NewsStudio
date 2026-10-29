@@ -1,0 +1,77 @@
+$ ffmpeg -hide_banner -y -i E:\YouTube-B\clips\c88l8daXiv4\final\c88l8daXiv4.highlight-02.GPU闲置成本高于CPU.mp4 -map 0:v:0 -map 0:a:0 -c:v copy -video_track_timescale 15360 -c:a aac -b:a 160k -ar 48000 -ac 2 -t 300.934 -sn -dn -map_chapters -1 -movflags +faststart -avoid_negative_ts make_zero -af afade=t=in:st=0:d=0.200 E:\YouTube-B\clips\c88l8daXiv4\work\segments\clip-02.seg.mp4
+
+--- stdout ---
+
+--- stderr ---
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'E:\YouTube-B\clips\c88l8daXiv4\final\c88l8daXiv4.highlight-02.GPU闲置成本高于CPU.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Dylan Patel (SemiAnalysis): The Datacenter in 2026: CPUs, RL Environments & Agent-Driven Workloads
+    artist          : Daytona, SemiAnalysis
+    date            : 20260407
+    encoder         : Lavf62.12.100
+    comment         : https://www.youtube.com/watch?v=c88l8daXiv4
+    genre           : Education
+    description     : Dylan Patel (SemiAnalysis) & Ivan Burazin (Daytona)
+                    : Live from Daytona Compute Conference, Chase Center SF, March 9, 2026
+                    : 
+                    : As AI systems move beyond static inference into reinforcement learning and autonomous execution, datacenter architecture is entering a new phase. Training loops require massive parallel CPU environments, agents need persistent execution layers, and verifi
+    synopsis        : Dylan Patel (SemiAnalysis) & Ivan Burazin (Daytona)
+                    : Live from Daytona Compute Conference, Chase Center SF, March 9, 2026
+                    : 
+                    : As AI systems move beyond static inference into reinforcement learning and autonomous execution, datacenter architecture is entering a new phase. Training loops require massive parallel CPU environments, agents need persistent execution layers, and verifi
+  Duration: 00:05:00.95, start: 0.012000, bitrate: 4641 kb/s
+  Stream #0:0[0x1](eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 4468 kb/s, 59.94 fps, 59.94 tbr, 19001 tbn, start 0.032998 (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc62.28.100 h264_qsv
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 160 kb/s, start 0.012000 (default)
+    Metadata:
+      handler_name    : SoundHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, mp4, to 'E:\YouTube-B\clips\c88l8daXiv4\work\segments\clip-02.seg.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Dylan Patel (SemiAnalysis): The Datacenter in 2026: CPUs, RL Environments & Agent-Driven Workloads
+    artist          : Daytona, SemiAnalysis
+    date            : 20260407
+    synopsis        : Dylan Patel (SemiAnalysis) & Ivan Burazin (Daytona)
+                    : Live from Daytona Compute Conference, Chase Center SF, March 9, 2026
+                    : 
+                    : As AI systems move beyond static inference into reinforcement learning and autonomous execution, datacenter architecture is entering a new phase. Training loops require massive parallel CPU environments, agents need persistent execution layers, and verifi
+    comment         : https://www.youtube.com/watch?v=c88l8daXiv4
+    genre           : Education
+    description     : Dylan Patel (SemiAnalysis) & Ivan Burazin (Daytona)
+                    : Live from Daytona Compute Conference, Chase Center SF, March 9, 2026
+                    : 
+                    : As AI systems move beyond static inference into reinforcement learning and autonomous execution, datacenter architecture is entering a new phase. Training loops require massive parallel CPU environments, agents need persistent execution layers, and verifi
+    encoder         : Lavf62.12.100
+  Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 4468 kb/s, 59.94 fps, 59.94 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc62.28.100 h264_qsv
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 160 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.28.100 aac
+      handler_name    : SoundHandler
+frame= 1785 fps=0.0 q=-1.0 size=   18688KiB time=00:00:29.39 bitrate=5207.7kbits/s speed=57.9x elapsed=0:00:00.50    
+frame= 3805 fps=3713 q=-1.0 size=   40704KiB time=00:01:03.10 bitrate=5284.1kbits/s speed=61.6x elapsed=0:00:01.02    
+frame= 5856 fps=3801 q=-1.0 size=   61440KiB time=00:01:37.32 bitrate=5171.6kbits/s speed=63.2x elapsed=0:00:01.54    
+frame= 7814 fps=3801 q=-1.0 size=   77056KiB time=00:02:09.98 bitrate=4856.3kbits/s speed=63.2x elapsed=0:00:02.05    
+frame= 9822 fps=3820 q=-1.0 size=   97536KiB time=00:02:43.47 bitrate=4887.6kbits/s speed=63.6x elapsed=0:00:02.57    
+frame=11915 fps=3860 q=-1.0 size=  114688KiB time=00:03:18.40 bitrate=4735.5kbits/s speed=64.3x elapsed=0:00:03.08    
+frame=13924 fps=3865 q=-1.0 size=  137472KiB time=00:03:51.91 bitrate=4856.0kbits/s speed=64.4x elapsed=0:00:03.60    
+frame=16076 fps=3904 q=-1.0 size=  157952KiB time=00:04:27.81 bitrate=4831.4kbits/s speed=  65x elapsed=0:00:04.11    
+[mp4 @ 00000152d43ab2c0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 00000152d43ab180] video:164158KiB audio:5896KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.320119%
+frame=18038 fps=3867 q=-1.0 Lsize=  170598KiB time=00:05:00.92 bitrate=4644.2kbits/s speed=64.5x elapsed=0:00:04.66    
+[aac @ 00000152d43aa780] Qavg: 699.520
+
+--- exit 0 ---

@@ -387,5 +387,75 @@ class AnalyzeSoftClampTests(unittest.TestCase):
         self.assertTrue(analysis["windows"][0]["soft_clamped"])
 
 
+
+class DependentStartTests(unittest.TestCase):
+    def test_brought_is_a_dependent_start(self) -> None:
+        score, notes = ac.boundary_score(
+            ac.Cue(1, 0, 1_000, "brought this up which is directionally...", ""),
+            ac.Cue(2, 1_000, 2_000, "We need more cores.", ""))
+        self.assertIn("dependent_start", notes)
+        self.assertNotIn("hard_reject", notes)
+
+    def test_but_also_is_a_dependent_start(self) -> None:
+        _, notes = ac.boundary_score(
+            ac.Cue(1, 0, 1_000, "But also these long running agents...", ""),
+            ac.Cue(2, 1_000, 2_000, "That is the constraint.", ""))
+        self.assertIn("dependent_start", notes)
+
+
+class TitleTests(unittest.TestCase):
+    def cues(self) -> list[ac.Cue]:
+        return [ac.Cue(1, 0, 1_000, "First.", ""),
+                ac.Cue(2, 1_000, 2_000, "Second.", ""),
+                ac.Cue(3, 2_000, 3_000, "Third.", "")]
+
+    def test_prompt_includes_existing_titles(self) -> None:
+        cues = self.cues()
+        win = ac.Window(0, 0, 3_000, [1, 2, 3])
+        record = {"start_cue_id": 1, "end_cue_id": 2,
+                  "summary": "Agent 验证频繁，CPU 资源激增。"}
+        prompt = ac.build_title_prompt(
+            win=win, cues=cues, record=record,
+            existing_titles=["CPU成AI新瓶颈"], cfg=dict(ac.DEFAULTS))
+        self.assertIn("CPU成AI新瓶颈", prompt)
+        self.assertIn("Agent 验证频繁", prompt)
+        self.assertIn('"title"', prompt)
+
+    def test_duplicate_title_is_replaced(self) -> None:
+        cues = self.cues()
+        by_id = {c.id: c for c in cues}
+        selected = [
+            {"title": "CPU成AI新瓶颈", "summary": "a", "source_window": 0,
+             "start_cue_id": 1, "end_cue_id": 2},
+            {"title": "CPU成AI新瓶颈", "summary": "Agent 验证频繁，CPU 资源激增。",
+             "source_window": 0, "start_cue_id": 3, "end_cue_id": 3},
+        ]
+        windows = [{"index": 0, "start_ms": 0, "end_ms": 3_000, "cue_ids": [1, 2, 3]}]
+        cfg = {**ac.DEFAULTS, "base_url": "http://x", "model": "m",
+               "srt_path": ac.ROOT / "subtitles/x.srt"}
+        with mock.patch.object(ac, "call_title_model",
+                               return_value="Agent 验证正在吃光算力"):
+            ac.ensure_unique_titles(selected, windows, cues, by_id, cfg)
+        self.assertEqual(selected[0]["title"], "CPU成AI新瓶颈")
+        self.assertEqual(selected[1]["title"], "Agent 验证正在吃光算力")
+
+    def test_fallback_when_title_model_fails(self) -> None:
+        cues = self.cues()
+        by_id = {c.id: c for c in cues}
+        selected = [
+            {"title": "CPU成AI新瓶颈", "summary": "a", "source_window": 0,
+             "start_cue_id": 1, "end_cue_id": 2},
+            {"title": "CPU成AI新瓶颈", "summary": "Agent 验证频繁，CPU 资源激增。",
+             "source_window": 0, "start_cue_id": 3, "end_cue_id": 3},
+        ]
+        windows = [{"index": 0, "start_ms": 0, "end_ms": 3_000, "cue_ids": [1, 2, 3]}]
+        cfg = {**ac.DEFAULTS, "base_url": "http://x", "model": "m",
+               "srt_path": ac.ROOT / "subtitles/x.srt"}
+        with mock.patch.object(ac, "call_title_model", return_value=None):
+            ac.ensure_unique_titles(selected, windows, cues, by_id, cfg)
+        self.assertNotEqual(selected[0]["title"], selected[1]["title"])
+        self.assertTrue(selected[1]["title"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

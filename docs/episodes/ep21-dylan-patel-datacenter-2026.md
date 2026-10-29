@@ -135,11 +135,13 @@ GitHub 不稳、OpenAI 把代码栈迁到 Arm，都是同一个结构性变化�
 - **成片**（`clips/c88l8daXiv4/final/`，均已通过 ffprobe 验收）：
   - `c88l8daXiv4.highlight-01.CPU成AI新瓶颈.mp4`：00:04:49.375–00:11:01.744，
     372.369s（6:12），177,675,378 B，71 条字幕，时长偏差 +24 ms
-    （起点由人工从模型候选的 04:55.609 覆盖到 cue 51；`--override-start 1=00:04:49.375`）
+    （起点由人工从模型候选的 04:55.609 覆盖到 cue 51；
+    `--override-start 1=00:04:49.375`，或简写 `--fix-start 04:49.375`）
   - `c88l8daXiv4.highlight-02.AI推理对硬件资源的冲击.mp4`：00:15:44.175–00:19:20.055，
     215.880s（3:36），129,610,881 B，50 条字幕，时长偏差 +23 ms
-- **合集**：`clips/c88l8daXiv4/final/highlights-merged.mp4`，307,384,318 B（293.1 MiB），
-  588.290s（9:48.29，预计 588.249s，+41 ms），2 段硬切，121 条字幕重映射后烧录一次。
+- **旧版硬切合集**：`clips/c88l8daXiv4/final/highlights-merged.mp4`，307,384,318 B（293.1 MiB），
+  588.290s（9:48.29，预计 588.249s，+41 ms），2 段硬切，121 条字幕重映射后烧录一次
+  （不含片头；新版带片头合集见下一节，最终交付以 `<id>.highlights-merged.mp4` 为准）。
   **合集非连续剪辑，中间跳过约 4m43s（282,431 ms；精确 4:42.431）**，
   记录在 `result.json` 的 `merge.note` / `merge.skipped_ms`。拼接脚本为独立的
   `scripts/merge_highlights.py`，不参与候选筛选与单切片渲染。
@@ -150,6 +152,41 @@ GitHub 不稳、OpenAI 把代码栈迁到 Arm，都是同一个结构性变化�
 - **人工抽检备注**：切片 1 起点已按人工要求前移到 cue 51（04:49.375），开篇为
   “right to exist they had because…”；切片 2 开头为 “Like it's it's not just that.”。
   两处仍是自动字幕的句子碎片（原 SRT 本身在此处断句），语义可理解；片段末尾均落在完整句子上。
+
+## 片头与最终合集（2026-10-28 晚）
+
+- **规范**：`docs/片头语与工程化导读规范.md`；脚本 `scripts/generate_intro.py`；
+  模板 `assets/templates/intro.html`、`assets/templates/transition.html`。
+- **文案（本地 Qwen 5W1H）**：`Qwen3-30B-A3B-Instruct-2507-Q4_K_M`，0.2 温度。
+  首次生成的口播 10.76s 超出 9.5s 窗口，脚本自动让 Qwen 压缩为 49 字：
+  「Daytona 2026，Dylan Patel 现场实录。他拆解CPU瓶颈算力账。中英双语，原声呈现。」
+  画面标题「CPU 为何成为 AI 新瓶颈」、副标题「Dylan Patel · SemiAnalysis，2026」。
+  `copy.json` / `copy.prompt.txt` / `copy.response.json` / `copy_rewrite.*` 留档。
+- **视觉（模板 2，Bloomberg / FT / Swiss 风）**：深灰黑 #0b0e13、左侧 4px #ff5500
+  工程竖条、左对齐 104px/800 主标题、33px 灰色副标题 + 2px 竖线、等宽页眉页脚、
+  80px 网格；state 0→1 由 FFmpeg `xfade` 在 150–700ms 完成「标题上移 15px + 淡入」，
+  `drawbox` 竖条 0–550ms 自上而下展开，之后 0.05%/s Ken Burns；全程 **30 fps**。
+  headless Chrome 截图，无 Playwright / Remotion / 新视频库。
+- **配音**：CosyVoice2（`127.0.0.1:50000`，固定参考音色）9.08s → 8.81s（tempo 1.03），
+  音量归一化到 −20 dBFS 目标。
+- **片头成片**：`clips/c88l8daXiv4/intro/intro.mp4`，**9.277 s**（计划 9256ms，+21ms），
+  640,265 B，h264 1920×1080@30 + aac 48k 立体声；15 项验收（6.0–9.5s 窗口、30 fps、
+  双关键帧互异、文案 3 句等）全部通过。
+- **最终合集**：`clips/c88l8daXiv4/final/c88l8daXiv4.highlights-merged.mp4`，
+  322,086,608 B（307.2 MiB），**598.058 s**（9:58.06；预计 598.026 s，+32 ms）；
+  h264 1920×1080@60 + aac 48k 立体声；13 项验收全部通过。
+- **结构**：片头 9277 ms → 切片 1 372369 ms → 标题卡 500 ms → 切片 2 215880 ms。
+- **字幕**：`work/assembly.srt/.ass`，121 条；第一条从 9.277 s（片头结束）开始，
+  第二段第一条从 382.146 s（片头 + 切片 1 + 转场）开始，末条 598.026 s；
+  全部为相对时间轴，无原视频绝对时间戳。
+- **片头床音**：片头期间混入切片 1 之前 9.277 s 的原片音频（15%），最后 0.4 s 淡出；
+  切片 1 以 100% 原声接上。
+- **转场**：同色板 HTML 标题卡「02 · AI 推理对硬件资源的冲击」，500 ms；
+  卡内 150 ms 淡入/淡出，卡片段静音；切片 1 末尾 250 ms 淡出、切片 2 开头 250 ms 淡入。
+- **非连续标注**：中间跳过 282,431 ms（4m43s），写入 `assembly.skipped_human` / `assembly.note`；
+  `manual_review=false`，`target_platform="16:9 横屏 (1920x1080@60fps)"`。
+- **回归**：五套测试共 63 项通过（`test_auto_clip` 12、`test_merge_highlights` 6、
+  `test_dub_mix` 8、`test_generate_intro` 23、`test_assemble_highlights` 14）。
 
 ## 备注
 

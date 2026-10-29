@@ -2,15 +2,16 @@
   "schema_version": 1,
   "video_id": "c88l8daXiv4",
   "srt": "subtitles/c88l8daXiv4.zh.bilingual.srt",
-  "generated_at": "2026-10-28T08:31:42+00:00",
+  "generated_at": "2026-10-28T23:32:54+00:00",
   "config": {
     "window_ms": 660000,
     "overlap_ms": 210000,
     "min_clip_ms": 180000,
-    "max_clip_ms": 480000,
+    "max_clip_ms": 600000,
     "prefer_min_ms": 240000,
-    "prefer_max_ms": 360000,
+    "prefer_max_ms": 420000,
     "dup_overlap_ratio": 0.4,
+    "overlap_penalty_ms": 30000,
     "max_clips": 2,
     "duration_tolerance_ms": 1500,
     "margin_v": 100,
@@ -23,7 +24,15 @@
     "model_retries": 2,
     "temperature": 0.1,
     "model": "Qwen3-30B-A3B-Instruct-2507-Q4_K_M",
-    "cfr": "auto"
+    "cfr": "auto",
+    "duck_threshold": null,
+    "duck_target_db": -19.5,
+    "dub_target_db": -20.0,
+    "duck_ratio": 20.0,
+    "attack_ms": 15,
+    "release_ms": 400,
+    "dub_gain": null,
+    "sample_rate": 48000
   },
   "cue_count": 317,
   "source_span_ms": 1481880,
@@ -164,16 +173,18 @@
       "attempts": [
         {
           "attempt": 1,
-          "raw": "{\"start_cue_id\": 52, \"end_cue_id\": 121, \"title\": \"CPU成AI新瓶颈\", \"summary\": \"AI发展导致CPU成为新瓶颈，推理与训练负载激增，全球CPU资源紧张。\"}",
+          "raw": "{\"start_cue_id\": 52, \"end_cue_id\": 121, \"title\": \"CPU成AI新瓶颈\", \"summary\": \"随着AI模型走向复杂化和长期运行，CPU成为制约AI发展的新瓶颈，其需求激增导致云服务普遍出现资源短缺和系统不稳定。\"}",
           "ok": true
         }
       ],
       "status": "OK",
+      "extended": false,
+      "soft_clamped": false,
       "candidate": {
-        "start_cue_id": 52,
+        "start_cue_id": 56,
         "end_cue_id": 121,
         "title": "CPU成AI新瓶颈",
-        "summary": "AI发展导致CPU成为新瓶颈，推理与训练负载激增，全球CPU资源紧张。"
+        "summary": "随着AI模型走向复杂化和长期运行，CPU成为制约AI发展的新瓶颈，其需求激增导致云服务普遍出现资源短缺和系统不稳定。"
       }
     },
     {
@@ -349,16 +360,25 @@
       "attempts": [
         {
           "attempt": 1,
-          "raw": "{\"start_cue_id\": 84, \"end_cue_id\": 130, \"title\": \"CPU短缺危机\", \"summary\": \"全球云服务因AI模型训练和代理系统爆发式增长，导致CPU资源严重短缺，各大厂商争相抢购，市场陷入供应危机。\"}",
+          "raw": "{\"start_cue_id\": 104, \"end_cue_id\": 130, \"title\": \"CPU短缺的深层原因\", \"summary\": \"当前全球CPU资源紧张，主要因AI训练与智能体工作负载激增，导致云服务商CPU容量被迅速耗尽，形成系统性瓶颈。\"}",
+          "ok": true
+        }
+      ],
+      "extend_attempts": [
+        {
+          "attempt": 1,
+          "raw": "{\"end_cue_id\": 238}",
           "ok": true
         }
       ],
       "status": "OK",
+      "extended": true,
+      "soft_clamped": true,
       "candidate": {
-        "start_cue_id": 84,
-        "end_cue_id": 130,
-        "title": "CPU短缺危机",
-        "summary": "全球云服务因AI模型训练和代理系统爆发式增长，导致CPU资源严重短缺，各大厂商争相抢购，市场陷入供应危机。"
+        "start_cue_id": 104,
+        "end_cue_id": 213,
+        "title": "CPU短缺的深层原因",
+        "summary": "当前全球CPU资源紧张，主要因AI训练与智能体工作负载激增，导致云服务商CPU容量被迅速耗尽，形成系统性瓶颈。"
       }
     },
     {
@@ -501,117 +521,283 @@
       "attempts": [
         {
           "attempt": 1,
-          "raw": "{\"start_cue_id\": 200, \"end_cue_id\": 249, \"title\": \"AI推理对硬件资源的冲击\", \"summary\": \"随着AI模型复杂度提升，推理过程对CPU、GPU、内存和存储的资源需求急剧增加，导致硬件成本和供应紧张。\"}",
+          "raw": "{\"start_cue_id\": 190, \"end_cue_id\": 219, \"title\": \"CPU成AI新瓶颈\", \"summary\": \"随着AI模型复杂度提升，验证环节频繁化导致CPU资源需求激增，成为新的计算瓶颈。\"}",
+          "ok": true
+        }
+      ],
+      "extend_attempts": [
+        {
+          "attempt": 1,
+          "raw": "{\"end_cue_id\": 317}",
           "ok": true
         }
       ],
       "status": "OK",
+      "extended": true,
+      "soft_clamped": true,
       "candidate": {
-        "start_cue_id": 200,
-        "end_cue_id": 249,
-        "title": "AI推理对硬件资源的冲击",
-        "summary": "随着AI模型复杂度提升，推理过程对CPU、GPU、内存和存储的资源需求急剧增加，导致硬件成本和供应紧张。"
+        "start_cue_id": 204,
+        "end_cue_id": 272,
+        "title": "GPU闲置成本高于CPU",
+        "summary": "随着AI模型复杂度提升，验证环节频繁化导致CPU资源需求激增，成为新的计算瓶颈。"
       }
     }
   ],
   "candidates_raw": [
     {
       "source_window": 0,
-      "start_cue_id": 52,
+      "start_cue_id": 56,
       "end_cue_id": 121,
       "title": "CPU成AI新瓶颈",
-      "summary": "AI发展导致CPU成为新瓶颈，推理与训练负载激增，全球CPU资源紧张。",
-      "start_ms": 295609,
+      "summary": "随着AI模型走向复杂化和长期运行，CPU成为制约AI发展的新瓶颈，其需求激增导致云服务普遍出现资源短缺和系统不稳定。",
+      "start_ms": 317371,
       "end_ms": 661744,
-      "duration_ms": 366135
+      "duration_ms": 344373,
+      "boundary_score": 1,
+      "boundary_notes": [
+        "filler_start",
+        "question_boundary",
+        "terminal_end"
+      ],
+      "manual_recut": {
+        "from_start_cue_id": 52,
+        "to_start_cue_id": 56,
+        "from_end_cue_id": 121,
+        "to_end_cue_id": 121,
+        "reason": "remove half-sentence / dependent start"
+      }
     },
     {
       "source_window": 1,
-      "start_cue_id": 84,
-      "end_cue_id": 130,
-      "title": "CPU短缺危机",
-      "summary": "全球云服务因AI模型训练和代理系统爆发式增长，导致CPU资源严重短缺，各大厂商争相抢购，市场陷入供应危机。",
-      "start_ms": 477180,
-      "end_ms": 695327,
-      "duration_ms": 218147
+      "start_cue_id": 104,
+      "end_cue_id": 213,
+      "title": "CPU短缺的深层原因",
+      "summary": "当前全球CPU资源紧张，主要因AI训练与智能体工作负载激增，导致云服务商CPU容量被迅速耗尽，形成系统性瓶颈。",
+      "start_ms": 585240,
+      "end_ms": 1001024,
+      "duration_ms": 415784,
+      "boundary_score": 4,
+      "boundary_notes": [
+        "clean_start",
+        "terminal_end"
+      ],
+      "extended_from": {
+        "end_cue_id": 130,
+        "duration_ms": 110087
+      },
+      "soft_clamped_from": {
+        "end_cue_id": 238,
+        "duration_ms": 530320
+      }
     },
     {
       "source_window": 2,
-      "start_cue_id": 200,
-      "end_cue_id": 249,
-      "title": "AI推理对硬件资源的冲击",
-      "summary": "随着AI模型复杂度提升，推理过程对CPU、GPU、内存和存储的资源需求急剧增加，导致硬件成本和供应紧张。",
-      "start_ms": 944175,
-      "end_ms": 1160055,
-      "duration_ms": 215880
+      "start_cue_id": 204,
+      "end_cue_id": 272,
+      "title": "GPU闲置成本高于CPU",
+      "summary": "随着AI模型复杂度提升，验证环节频繁化导致CPU资源需求激增，成为新的计算瓶颈。",
+      "start_ms": 953985,
+      "end_ms": 1254910,
+      "duration_ms": 300925,
+      "boundary_score": 0,
+      "boundary_notes": [
+        "filler_start",
+        "terminal_end"
+      ],
+      "extended_from": {
+        "end_cue_id": 219,
+        "duration_ms": 135658
+      },
+      "soft_clamped_from": {
+        "end_cue_id": 317,
+        "duration_ms": 594549
+      },
+      "manual_recut": {
+        "from_start_cue_id": 190,
+        "to_start_cue_id": 204,
+        "from_end_cue_id": 272,
+        "to_end_cue_id": 272,
+        "reason": "remove half-sentence / dependent start"
+      }
     }
   ],
   "candidates_valid": [
     {
       "source_window": 0,
-      "start_cue_id": 52,
+      "start_cue_id": 56,
       "end_cue_id": 121,
       "title": "CPU成AI新瓶颈",
-      "summary": "AI发展导致CPU成为新瓶颈，推理与训练负载激增，全球CPU资源紧张。",
-      "start_ms": 295609,
+      "summary": "随着AI模型走向复杂化和长期运行，CPU成为制约AI发展的新瓶颈，其需求激增导致云服务普遍出现资源短缺和系统不稳定。",
+      "start_ms": 317371,
       "end_ms": 661744,
-      "duration_ms": 366135
+      "duration_ms": 344373,
+      "boundary_score": 1,
+      "boundary_notes": [
+        "filler_start",
+        "question_boundary",
+        "terminal_end"
+      ],
+      "manual_recut": {
+        "from_start_cue_id": 52,
+        "to_start_cue_id": 56,
+        "from_end_cue_id": 121,
+        "to_end_cue_id": 121,
+        "reason": "remove half-sentence / dependent start"
+      }
     },
     {
       "source_window": 2,
-      "start_cue_id": 200,
-      "end_cue_id": 249,
-      "title": "AI推理对硬件资源的冲击",
-      "summary": "随着AI模型复杂度提升，推理过程对CPU、GPU、内存和存储的资源需求急剧增加，导致硬件成本和供应紧张。",
-      "start_ms": 944175,
-      "end_ms": 1160055,
-      "duration_ms": 215880
+      "start_cue_id": 204,
+      "end_cue_id": 272,
+      "title": "GPU闲置成本高于CPU",
+      "summary": "随着AI模型复杂度提升，验证环节频繁化导致CPU资源需求激增，成为新的计算瓶颈。",
+      "start_ms": 953985,
+      "end_ms": 1254910,
+      "duration_ms": 300925,
+      "boundary_score": 0,
+      "boundary_notes": [
+        "filler_start",
+        "terminal_end"
+      ],
+      "extended_from": {
+        "end_cue_id": 219,
+        "duration_ms": 135658
+      },
+      "soft_clamped_from": {
+        "end_cue_id": 317,
+        "duration_ms": 594549
+      },
+      "manual_recut": {
+        "from_start_cue_id": 190,
+        "to_start_cue_id": 204,
+        "from_end_cue_id": 272,
+        "to_end_cue_id": 272,
+        "reason": "remove half-sentence / dependent start"
+      }
+    },
+    {
+      "source_window": 1,
+      "start_cue_id": 104,
+      "end_cue_id": 213,
+      "title": "CPU短缺的深层原因",
+      "summary": "当前全球CPU资源紧张，主要因AI训练与智能体工作负载激增，导致云服务商CPU容量被迅速耗尽，形成系统性瓶颈。",
+      "start_ms": 585240,
+      "end_ms": 1001024,
+      "duration_ms": 415784,
+      "boundary_score": 4,
+      "boundary_notes": [
+        "clean_start",
+        "terminal_end"
+      ],
+      "extended_from": {
+        "end_cue_id": 130,
+        "duration_ms": 110087
+      },
+      "soft_clamped_from": {
+        "end_cue_id": 238,
+        "duration_ms": 530320
+      }
     }
   ],
   "candidates_selected": [
     {
       "source_window": 0,
-      "start_cue_id": 52,
+      "start_cue_id": 56,
       "end_cue_id": 121,
       "title": "CPU成AI新瓶颈",
-      "summary": "AI发展导致CPU成为新瓶颈，推理与训练负载激增，全球CPU资源紧张。",
-      "start_ms": 295609,
+      "summary": "随着AI模型走向复杂化和长期运行，CPU成为制约AI发展的新瓶颈，其需求激增导致云服务普遍出现资源短缺和系统不稳定。",
+      "start_ms": 317371,
       "end_ms": 661744,
-      "duration_ms": 366135
+      "duration_ms": 344373,
+      "boundary_score": 1,
+      "boundary_notes": [
+        "filler_start",
+        "question_boundary",
+        "terminal_end"
+      ],
+      "manual_recut": {
+        "from_start_cue_id": 52,
+        "to_start_cue_id": 56,
+        "from_end_cue_id": 121,
+        "to_end_cue_id": 121,
+        "reason": "remove half-sentence / dependent start"
+      }
     },
     {
       "source_window": 2,
-      "start_cue_id": 200,
-      "end_cue_id": 249,
-      "title": "AI推理对硬件资源的冲击",
-      "summary": "随着AI模型复杂度提升，推理过程对CPU、GPU、内存和存储的资源需求急剧增加，导致硬件成本和供应紧张。",
-      "start_ms": 944175,
-      "end_ms": 1160055,
-      "duration_ms": 215880
+      "start_cue_id": 204,
+      "end_cue_id": 272,
+      "title": "GPU闲置成本高于CPU",
+      "summary": "随着AI模型复杂度提升，验证环节频繁化导致CPU资源需求激增，成为新的计算瓶颈。",
+      "start_ms": 953985,
+      "end_ms": 1254910,
+      "duration_ms": 300925,
+      "boundary_score": 0,
+      "boundary_notes": [
+        "filler_start",
+        "terminal_end"
+      ],
+      "extended_from": {
+        "end_cue_id": 219,
+        "duration_ms": 135658
+      },
+      "soft_clamped_from": {
+        "end_cue_id": 317,
+        "duration_ms": 594549
+      },
+      "manual_recut": {
+        "from_start_cue_id": 190,
+        "to_start_cue_id": 204,
+        "from_end_cue_id": 272,
+        "to_end_cue_id": 272,
+        "reason": "remove half-sentence / dependent start"
+      }
     }
   ],
   "candidates_removed": [
     {
       "candidate": {
         "source_window": 1,
-        "start_cue_id": 84,
-        "end_cue_id": 130,
-        "title": "CPU短缺危机",
-        "summary": "全球云服务因AI模型训练和代理系统爆发式增长，导致CPU资源严重短缺，各大厂商争相抢购，市场陷入供应危机。",
-        "start_ms": 477180,
-        "end_ms": 695327,
-        "duration_ms": 218147
+        "start_cue_id": 104,
+        "end_cue_id": 213,
+        "title": "CPU短缺的深层原因",
+        "summary": "当前全球CPU资源紧张，主要因AI训练与智能体工作负载激增，导致云服务商CPU容量被迅速耗尽，形成系统性瓶颈。",
+        "start_ms": 585240,
+        "end_ms": 1001024,
+        "duration_ms": 415784,
+        "boundary_score": 4,
+        "boundary_notes": [
+          "clean_start",
+          "terminal_end"
+        ],
+        "extended_from": {
+          "end_cue_id": 130,
+          "duration_ms": 110087
+        },
+        "soft_clamped_from": {
+          "end_cue_id": 238,
+          "duration_ms": 530320
+        }
       },
-      "stage": "duplicate",
-      "reason": "overlap ratio 0.85 > 0.4 with window 0 candidate",
-      "duplicate_of": {
-        "source_window": 0,
-        "start_cue_id": 52,
-        "end_cue_id": 121
-      }
+      "stage": "quota",
+      "reason": "outside top 2 by start time"
     }
   ],
   "errors": [],
+  "source": "downloads/Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv",
   "source_duration_ms": 1504061,
-  "source": "downloads/Dylan Patel (SemiAnalysis)： The Datacenter in 2026： CPUs, RL Environments & Agent-Driven Workloads [c88l8daXiv4].mkv"
+  "recut": {
+    "generated_at": "2026-10-29",
+    "reason": "semantic opening repair + distinct titles; intro reused",
+    "clip1": {
+      "start_cue_id": 56,
+      "start_ms": 317371,
+      "title": "CPU成AI新瓶颈"
+    },
+    "clip2": {
+      "start_cue_id": 204,
+      "start_ms": 953985,
+      "title": "GPU闲置成本高于CPU"
+    }
+  }
 }

@@ -539,6 +539,8 @@ POSTER_DEFAULTS: dict[str, Any] = {
 
 def poster_values(*, title_en: str, title_zh: str, speaker: str, event: str,
                   organization: str, verification: str,
+                  summary_zh: str = "", insight_1: str = "",
+                  insight_2: str = "", insight_3: str = "",
                   kicker: str = "TECHNICAL HIGHLIGHTS", index: str = "",
                   series: str = "", accent: str = "#ff5500") -> dict[str, str]:
     def esc(value: str) -> str:
@@ -547,6 +549,10 @@ def poster_values(*, title_en: str, title_zh: str, speaker: str, event: str,
     values = {
         "TITLE_EN": esc(title_en.strip()),
         "TITLE_ZH": esc(title_zh.strip()),
+        "SUMMARY_ZH": esc(summary_zh.strip() or "—"),
+        "INSIGHT_1": esc(insight_1.strip() or "—"),
+        "INSIGHT_2": esc(insight_2.strip() or "—"),
+        "INSIGHT_3": esc(insight_3.strip() or "—"),
         "SPEAKER": esc(speaker.strip() or "—"),
         "SOURCE_EVENT": esc(event.strip() or "—"),
         "ORGANIZATION": esc(organization.strip() or "—"),
@@ -554,6 +560,7 @@ def poster_values(*, title_en: str, title_zh: str, speaker: str, event: str,
         "KICKER": esc(kicker.strip() or "TECHNICAL HIGHLIGHTS"),
         "INDEX": esc(index.strip()),
         "SERIES": esc(series.strip()),
+        "SERIES_NAME": esc(series.strip()),
         "ACCENT": accent,
     }
     if not values["TITLE_EN"] or not values["TITLE_ZH"]:
@@ -602,6 +609,10 @@ def build_poster_html(*, copy: dict[str, str], chrome: dict[str, str]) -> str:
     values = poster_values(
         title_en=chrome.get("title_en") or copy["screen_title"],
         title_zh=copy["screen_title"],
+        summary_zh=chrome.get("summary_zh", ""),
+        insight_1=chrome.get("insight_1", ""),
+        insight_2=chrome.get("insight_2", ""),
+        insight_3=chrome.get("insight_3", ""),
         speaker=chrome.get("speaker", ""),
         event=(chrome.get("event") or chrome.get("source") or chrome.get("stamp", "")),
         organization=chrome.get("organization", ""),
@@ -1306,6 +1317,10 @@ def chrome_block(args: argparse.Namespace, cfg: dict[str, Any]) -> dict[str, str
         "event": getattr(args, "event", ""),
         "organization": getattr(args, "organization", ""),
         "verification": getattr(args, "verification", ""),
+        "summary_zh": getattr(args, "summary_zh", ""),
+        "insight_1": getattr(args, "insight_1", ""),
+        "insight_2": getattr(args, "insight_2", ""),
+        "insight_3": getattr(args, "insight_3", ""),
     }
 
 
@@ -1495,6 +1510,10 @@ def add_intro_arguments(ap: argparse.ArgumentParser) -> None:
     ap.add_argument("--event", default="", help="poster source event, e.g. Daytona 2026")
     ap.add_argument("--organization", default="", help="poster organization")
     ap.add_argument("--verification", default="", help="poster verification line")
+    ap.add_argument("--summary-zh", default="", help="poster one-line engineering summary")
+    ap.add_argument("--insight-1", default="", help="poster insight 1")
+    ap.add_argument("--insight-2", default="", help="poster insight 2")
+    ap.add_argument("--insight-3", default="", help="poster insight 3")
     ap.add_argument("--out", default=None, help="default clips/<video_id>/intro")
     ap.add_argument("--base", default=DEFAULTS["base_url"])
     ap.add_argument("--prompt-wav", default=DEFAULTS["prompt_wav"])

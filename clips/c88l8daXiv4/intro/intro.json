@@ -1,0 +1,226 @@
+{
+  "schema_version": 2,
+  "video_id": "c88l8daXiv4",
+  "status": "SUCCESS",
+  "generated_at": "2026-10-28T23:38:19+00:00",
+  "path": "clips/c88l8daXiv4/intro/intro.mp4",
+  "quarantined": null,
+  "duration_ms": 8971,
+  "planned_duration_ms": 8958,
+  "manual_review": false,
+  "target_platform": "16:9 横屏 (1920x1080@60fps)",
+  "accent": "#ff5500",
+  "template": "assets/templates/intro.html",
+  "picture": {
+    "renderer": "poster",
+    "animation": "poster",
+    "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "html": "clips/c88l8daXiv4/intro/intro.html",
+    "png": "clips/c88l8daXiv4/intro/intro.png",
+    "keyframes": [
+      "clips/c88l8daXiv4/intro/intro.png"
+    ],
+    "headline": "CPU 为何成为 AI 新瓶颈",
+    "subline": "Dylan Patel · SemiAnalysis，2026",
+    "series": "AI 基建 / 第 21 期",
+    "speaker": "DYLAN PATEL / SEMIANALYSIS",
+    "source": "SemiAnalysis × Daytona",
+    "stamp": "FIELD RECORD / 2026",
+    "index": "021"
+  },
+  "copy": {
+    "source": "llm",
+    "model": "Qwen3-30B-A3B-Instruct-2507-Q4_K_M",
+    "base_url": "http://127.0.0.1:8080",
+    "intro_spoken_text": "Daytona 2026，Dylan Patel 现场实录。他拆解 CPU 算力瓶颈。中英双语，来看原声。",
+    "screen_title": "CPU 为何成为 AI 新瓶颈",
+    "screen_subtitle": "Dylan Patel · SemiAnalysis，2026"
+  },
+  "copy_prompt": "clips/c88l8daXiv4/intro/copy.prompt.txt",
+  "copy_response": "clips/c88l8daXiv4/intro/copy.response.json",
+  "copy_rewrite_prompt": "clips/c88l8daXiv4/intro/copy_rewrite.prompt.txt",
+  "copy_rewrite_response": "clips/c88l8daXiv4/intro/copy_rewrite.response.json",
+  "animation": {
+    "duration_ms": 8958,
+    "bar_reveal_ms": 550,
+    "title_delay_ms": 150,
+    "title_fade_ms": 550,
+    "fade_in_ms": 200,
+    "fade_out_ms": 250,
+    "ken_burns_per_sec": 0.0005
+  },
+  "narration": {
+    "text": "Daytona 2026，Dylan Patel 现场实录。他拆解 CPU 算力瓶颈。中英双语，来看原声。",
+    "tts_text": "Daytona 二零二六年，Dylan Patel 现场实录。他拆解 CPU 算力瓶颈。中英双语，来看原声。",
+    "script": "clips/c88l8daXiv4/intro/intro.script.json",
+    "raw_path": "clips/c88l8daXiv4/intro/narration.raw.wav",
+    "raw_seconds": 9.04,
+    "path": "clips/c88l8daXiv4/intro/narration.wav",
+    "final_seconds": 8.508,
+    "tempo": 1.0635,
+    "prompt_wav": "D:/AI/CosyVoice-Runtime/assets/my_voice_5s.wav",
+    "service": {
+      "model_class": "CosyVoice2",
+      "model_dir": "D:\\AI\\CosyVoice-Runtime\\pretrained_models\\CosyVoice2-0.5B",
+      "device": "cpu",
+      "sample_rate": 24000,
+      "text_frontend": "wetext"
+    }
+  },
+  "timeline": {
+    "duration_ms": 8958,
+    "lead_ms": 200,
+    "voice_ms": 8508,
+    "tail_ms": 250
+  },
+  "gain": 0.7244,
+  "config": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "lead_ms": 200,
+    "tail_ms": 250,
+    "min_duration_ms": 6000,
+    "max_duration_ms": 9500,
+    "voice_budget_ms": 8500,
+    "max_tempo": 1.15,
+    "qsv_quality": 19,
+    "audio_bitrate": "160k"
+  },
+  "acceptance": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "file_exists",
+        "ok": true,
+        "detail": "clips/c88l8daXiv4/intro/intro.tmp.mp4"
+      },
+      {
+        "name": "probe",
+        "ok": true,
+        "detail": "ffprobe parsed"
+      },
+      {
+        "name": "has_video",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "has_audio",
+        "ok": true,
+        "detail": "aac"
+      },
+      {
+        "name": "video_codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "audio_codec",
+        "ok": true,
+        "detail": "aac"
+      },
+      {
+        "name": "only_av_streams",
+        "ok": true,
+        "detail": "video + audio only"
+      },
+      {
+        "name": "av_duration_equal",
+        "ok": true,
+        "detail": "video 8950 ms vs audio 8971 ms (delta -21, tolerance 60)"
+      },
+      {
+        "name": "audio_starts_at_zero",
+        "ok": true,
+        "detail": "audio start 12 ms"
+      },
+      {
+        "name": "duration_window",
+        "ok": true,
+        "detail": "actual 8971 ms, window [6000, 9500]"
+      },
+      {
+        "name": "duration_target",
+        "ok": true,
+        "detail": "actual 8971 ms vs planned 8958 ms (delta +13)"
+      },
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "60/1 (60.00 fps), expected 60"
+      },
+      {
+        "name": "keyframes_exist",
+        "ok": true,
+        "detail": "1 frame(s): clips/c88l8daXiv4/intro/intro.png"
+      },
+      {
+        "name": "copy_structure",
+        "ok": true,
+        "detail": "3 sentences, 48 chars, no hype words"
+      },
+      {
+        "name": "voice_audible",
+        "ok": true,
+        "detail": "mean volume -22.8 dB"
+      }
+    ],
+    "actual_duration_ms": 8971,
+    "audio_mean_db": -22.8
+  },
+  "ffmpeg_command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-y",
+    "-loop",
+    "1",
+    "-framerate",
+    "60",
+    "-t",
+    "8.950",
+    "-i",
+    "E:\\YouTube-B\\clips\\c88l8daXiv4\\intro\\intro.png",
+    "-i",
+    "E:\\YouTube-B\\clips\\c88l8daXiv4\\intro\\narration.wav",
+    "-filter_complex",
+    "[0:v]fps=60,format=yuv420p,settb=AVTB,trim=duration=8.950,setpts=PTS-STARTPTS[v];[1:a]volume=0.7244,adelay=200|200,apad,atrim=0:8.950,aformat=sample_fmts=fltp:channel_layouts=stereo,alimiter=limit=0.95[a]",
+    "-map",
+    "[v]",
+    "-map",
+    "[a]",
+    "-c:v",
+    "h264_qsv",
+    "-global_quality:v",
+    "19",
+    "-preset",
+    "slow",
+    "-r",
+    "60",
+    "-frames:v",
+    "537",
+    "-c:a",
+    "aac",
+    "-b:a",
+    "160k",
+    "-ar",
+    "48000",
+    "-ac",
+    "2",
+    "-t",
+    "8.950000",
+    "-shortest",
+    "-sn",
+    "-dn",
+    "-movflags",
+    "+faststart",
+    "-avoid_negative_ts",
+    "make_zero",
+    "E:\\YouTube-B\\clips\\c88l8daXiv4\\intro\\intro.tmp.mp4"
+  ]
+}

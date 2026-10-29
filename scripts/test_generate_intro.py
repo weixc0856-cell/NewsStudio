@@ -234,7 +234,7 @@ class ArtifactTests(unittest.TestCase):
         self.assertEqual(intro["status"], "SUCCESS")
         self.assertTrue(6000 <= intro["duration_ms"] <= 9500)
         self.assertTrue(intro["acceptance"]["passed"])
-        self.assertEqual(intro["picture"]["animation"], "keyframes")
+        self.assertIn(intro["picture"]["animation"], ("keyframes", "poster"))
         self.assertEqual(intro["config"]["fps"], 60)
         self.assertEqual(intro["template"], "assets/templates/intro.html")
         self.assertEqual(intro["accent"], "#ff5500")
