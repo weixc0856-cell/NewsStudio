@@ -32,6 +32,8 @@ import requests
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+sys.path.insert(0, str(ROOT))
+import env_file  # noqa: E402,F401  # 载入仓库根 .env（本机路径/密钥不进 Git）
 
 from build_subs import clean, write_ass, write_srt  # noqa: E402
 import dub_mix  # noqa: E402

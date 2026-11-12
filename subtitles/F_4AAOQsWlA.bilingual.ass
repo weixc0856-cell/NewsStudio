@@ -1,0 +1,214 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.08,0:00:03.50,Sub,,0,0,0,,Okay, so let's talk about the session.
+Dialogue: 0,0:00:04.02,0:00:11.23,Sub,,0,0,0,,It's my great pleasure to introduce Dr. Jim Fan, who is the director of robotics and the distinguished scientist at NVIDIA.
+Dialogue: 0,0:00:11.28,0:00:11.85,Sub,,0,0,0,,Take it away.
+Dialogue: 0,0:00:11.90,0:00:12.54,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:00:21.89,0:00:26.28,Sub,,0,0,0,,About two months ago was happy Thursday, September the 3rd.
+Dialogue: 0,0:00:26.33,0:00:31.59,Sub,,0,0,0,,The robots were partying, GPUs were spinning, life as a roboticist was good.
+Dialogue: 0,0:00:32.19,0:00:34.12,Sub,,0,0,0,,And that's the day Astra dropped.
+Dialogue: 0,0:00:34.17,0:00:40.18,Sub,,0,0,0,,I have never seen a paper in human history that shattered so many dreams.
+Dialogue: 0,0:00:40.66,0:00:42.01,Sub,,0,0,0,,Yeah, I made it.
+Dialogue: 0,0:00:42.06,0:00:44.04,Sub,,0,0,0,,I can hear the sound of your hearts breaking.
+Dialogue: 0,0:00:45.17,0:00:49.13,Sub,,0,0,0,,Then we did what any respectable scientific community would do.
+Dialogue: 0,0:00:49.45,0:00:51.95,Sub,,0,0,0,,We went through five stages of grief.
+Dialogue: 0,0:00:53.26,0:00:53.84,Sub,,0,0,0,,Denial.
+Dialogue: 0,0:00:54.38,0:00:55.23,Sub,,0,0,0,,This is fake news.
+Dialogue: 0,0:00:55.28,0:00:56.14,Sub,,0,0,0,,These are cherry-picked.
+Dialogue: 0,0:00:57.00,0:00:57.46,Sub,,0,0,0,,Anger.
+Dialogue: 0,0:00:57.72,0:01:00.34,Sub,,0,0,0,,How dare they call themselves roboticists now?
+Dialogue: 0,0:01:00.88,0:01:01.39,Sub,,0,0,0,,Bargaining.
+Dialogue: 0,0:01:01.44,0:01:03.30,Sub,,0,0,0,,They still need my motion planner, right?
+Dialogue: 0,0:01:03.66,0:01:04.06,Sub,,0,0,0,,Right?
+Dialogue: 0,0:01:04.62,0:01:08.94,Sub,,0,0,0,,Depression with a wine bottle, my PhD is now a joke in the system prompt.
+Dialogue: 0,0:01:09.44,0:01:12.80,Sub,,0,0,0,,And finally, acceptance, yeah, it's all over.
+Dialogue: 0,0:01:13.94,0:01:18.54,Sub,,0,0,0,,Or as a friend summarized with dead eyes, winter is coming.
+Dialogue: 0,0:01:20.23,0:01:27.51,Sub,,0,0,0,,Yet when we think that Astra is going to rule us all, this guy Diogo, he came along with Jeff, a new System 1 model.
+Dialogue: 0,0:01:27.79,0:01:31.23,Sub,,0,0,0,,It's fast, reactive, and suddenly everyone's excited again.
+Dialogue: 0,0:01:31.28,0:01:38.87,Sub,,0,0,0,,So I argue that you can't possibly be excited about a System 1 for language models and hold a funeral for robotics,
+Dialogue: 0,0:01:38.92,0:01:43.24,Sub,,0,0,0,,which needs to be faster, more reactive, and more local.
+Dialogue: 0,0:01:43.87,0:01:48.67,Sub,,0,0,0,,So is System 1 still needed is the wrong question to begin with.
+Dialogue: 0,0:01:49.47,0:01:53.41,Sub,,0,0,0,,Because everything is going to be a skill, including System 1.
+Dialogue: 0,0:01:53.92,0:01:56.28,Sub,,0,0,0,,The right question is, what makes a good skill?
+Dialogue: 0,0:01:56.98,0:02:02.22,Sub,,0,0,0,,Can you easily teach it by showing? can we easily steer it by reasoning?
+Dialogue: 0,0:02:03.83,0:02:05.49,Sub,,0,0,0,,And that's how we think about GR00T 2.
+Dialogue: 0,0:02:05.89,0:02:09.95,Sub,,0,0,0,,From a full stack perspective, adaptable and steerable.
+Dialogue: 0,0:02:11.12,0:02:20.11,Sub,,0,0,0,,On a core model side of GR00T, it is a two billion parameter world action model that takes as input language, multi view, camera and state.
+Dialogue: 0,0:02:21.24,0:02:24.68,Sub,,0,0,0,,And here, what you see, not a single pixel is real.
+Dialogue: 0,0:02:25.20,0:02:27.28,Sub,,0,0,0,,You're watching the robot dreaming.
+Dialogue: 0,0:02:27.72,0:02:33.90,Sub,,0,0,0,,It's predicting the next few frames in the pixel space, and then acting upon that dream.
+Dialogue: 0,0:02:35.22,0:02:40.90,Sub,,0,0,0,,And the model jointly decodes the action along with the predicted future frames in one diffusion pass.
+Dialogue: 0,0:02:42.32,0:02:46.48,Sub,,0,0,0,,We also designed GR00T 2 Turbo, optimized for efficient edge compute.
+Dialogue: 0,0:02:47.14,0:02:54.48,Sub,,0,0,0,,It uses four times fewer spatial video tokens, so it runs much faster while keeping the same two billion parameters.
+Dialogue: 0,0:02:55.69,0:03:02.91,Sub,,0,0,0,,And we trained GR00T 2 on a huge corpus of well-annotated multi-view data that can be retargeted to the robot.
+Dialogue: 0,0:03:04.22,0:03:06.32,Sub,,0,0,0,,So let's see GR00T 2 in action.
+Dialogue: 0,0:03:07.28,0:03:11.12,Sub,,0,0,0,,This is the first clip, fully autonomous, no speed up and cut.
+Dialogue: 0,0:03:11.70,0:03:18.27,Sub,,0,0,0,,The robot carefully takes the memory stick out of GB300 and replaces it.
+Dialogue: 0,0:03:18.62,0:03:22.52,Sub,,0,0,0,,So basically GR00T is maintaining the data center that is used to train GR00T.
+Dialogue: 0,0:03:23.33,0:03:28.72,Sub,,0,0,0,,I hear that these days it's called recursive self-improvement, RSI.
+Dialogue: 0,0:03:28.77,0:03:31.87,Sub,,0,0,0,,Maybe this is the first spark of physical RSI.
+Dialogue: 0,0:03:33.49,0:03:36.37,Sub,,0,0,0,,And here's a UPS store scenario.
+Dialogue: 0,0:03:37.28,0:03:40.82,Sub,,0,0,0,,This demo is fine-tuned with only one hour of demonstration.
+Dialogue: 0,0:03:41.82,0:03:46.60,Sub,,0,0,0,,The robot picks up the scissors, it carefully wraps it around the fingers and it cuts the labels.
+Dialogue: 0,0:03:47.40,0:03:55.33,Sub,,0,0,0,,So some parts here, I have to speed up to fit the talk but I will keep the interesting bits at 1X real time.
+Dialogue: 0,0:03:55.38,0:04:03.16,Sub,,0,0,0,,So, you can see it here, carefully peeling that label, this real time autonomous,
+Dialogue: 0,0:04:04.32,0:04:10.26,Sub,,0,0,0,,and then it will apply that label on the NVIDIA package, and it's gonna scan it.
+Dialogue: 0,0:04:11.21,0:04:15.49,Sub,,0,0,0,,And you can see that indicator whenever I speed up on the lower left corner.
+Dialogue: 0,0:04:17.01,0:04:22.58,Sub,,0,0,0,,And here we take a page out of the high school chemistry lab, so this is crude salt filtering.
+Dialogue: 0,0:04:23.06,0:04:32.67,Sub,,0,0,0,,Basically the robot will scoop some salt into the beaker and it will start to dissolve it, and then it's gonna place that beaker onto that machine.
+Dialogue: 0,0:04:34.26,0:04:38.56,Sub,,0,0,0,,So I have to speed this up because in GR00T 2, we're going all in on long horizon,
+Dialogue: 0,0:04:38.80,0:04:44.02,Sub,,0,0,0,,that's what manipulation, that pushes routinely beyond three minutes and even five minutes.
+Dialogue: 0,0:04:44.38,0:04:51.88,Sub,,0,0,0,,That consists of 20 more steps, and every step has cascading error, so end-to-end is very difficult without a good model.
+Dialogue: 0,0:04:52.86,0:04:59.00,Sub,,0,0,0,,And here is my favorite part, we teach the robot to clean up after itself, so we can spend less time resetting the scene.
+Dialogue: 0,0:05:02.11,0:05:10.55,Sub,,0,0,0,,And compared to baseline techniques, GR00T 2 and Turbo push the frontier into double digit gains over the prior state of the art.
+Dialogue: 0,0:05:12.64,0:05:19.88,Sub,,0,0,0,,A good System 1 skill must be easy to teach, so we introduce an emergent feature called X-Adapt.
+Dialogue: 0,0:05:20.64,0:05:21.90,Sub,,0,0,0,,And the idea is very simple.
+Dialogue: 0,0:05:22.42,0:05:30.32,Sub,,0,0,0,,You collect data in an easy domain, like human wearables or simulation, and then you transfer those skills zero-shot onto the real robot.
+Dialogue: 0,0:05:30.96,0:05:32.24,Sub,,0,0,0,,And let me give you some examples.
+Dialogue: 0,0:05:33.02,0:05:38.50,Sub,,0,0,0,,This is a human wearing UMI grippers and collect the data on a long horizon assembly task.
+Dialogue: 0,0:05:39.27,0:05:44.06,Sub,,0,0,0,,Then we fine tune GR00T 2 checkpoint on only the data from humans and zero
+Dialogue: 0,0:05:44.11,0:05:48.93,Sub,,0,0,0,,shot transfer it to these yam grippers that actually look quite different from the UMI grippers.
+Dialogue: 0,0:05:49.47,0:05:53.39,Sub,,0,0,0,,And the robot is able to complete this assembly task from end to end.
+Dialogue: 0,0:05:54.12,0:05:55.13,Sub,,0,0,0,,And this one is even harder.
+Dialogue: 0,0:05:55.18,0:05:58.50,Sub,,0,0,0,,We captured the data in human mocap gloves.
+Dialogue: 0,0:05:59.74,0:06:06.31,Sub,,0,0,0,,So the part that you saw from crude salt filtering where the robot carefully places the filter and then it wets it
+Dialogue: 0,0:06:06.36,0:06:16.06,Sub,,0,0,0,,and pour the salt water through that part can be entirely zero-shot adapted from the human mocap data with zero teleop.
+Dialogue: 0,0:06:17.42,0:06:21.75,Sub,,0,0,0,,And with these devices, we can do these highly dynamic motions like tossing.
+Dialogue: 0,0:06:21.80,0:06:23.28,Sub,,0,0,0,,That's very hard to teleop.
+Dialogue: 0,0:06:23.60,0:06:27.64,Sub,,0,0,0,,And you can mix and match different types of robots on our warehouse line.
+Dialogue: 0,0:06:28.41,0:06:31.08,Sub,,0,0,0,,And at our lab, we just have so many random stuff to throw.
+Dialogue: 0,0:06:31.13,0:06:33.49,Sub,,0,0,0,,So it's fun to see them just throwing stuff all day.
+Dialogue: 0,0:06:35.42,0:06:44.52,Sub,,0,0,0,,And to push X-Adapt even further, we designed these exoskeleton devices called DexUMI that has a one-to-one mechanical mapping to robot hands.
+Dialogue: 0,0:06:45.66,0:06:51.80,Sub,,0,0,0,,And we use those exoskeleton to collect the data and we fine-tune GR00T only on that data.
+Dialogue: 0,0:06:52.20,0:06:54.18,Sub,,0,0,0,,So this is fully autonomous.
+Dialogue: 0,0:06:55.20,0:06:58.94,Sub,,0,0,0,,And yes, we do trust the robot with the knife.
+Dialogue: 0,0:07:01.31,0:07:08.17,Sub,,0,0,0,,And actually, after these experiments, our whole lab now smells like banana, because it's more than what we can humanly consume.
+Dialogue: 0,0:07:09.69,0:07:14.29,Sub,,0,0,0,,So here the exoskeleton and the robot hand actually look very different from the video.
+Dialogue: 0,0:07:15.20,0:07:20.42,Sub,,0,0,0,,So WAM's video pre-training helps bridge this visual gap zero-shot.
+Dialogue: 0,0:07:20.98,0:07:22.22,Sub,,0,0,0,,And here comes my favorite.
+Dialogue: 0,0:07:22.60,0:07:24.92,Sub,,0,0,0,,You see how natural this twisting motion is?
+Dialogue: 0,0:07:25.14,0:07:27.78,Sub,,0,0,0,,You can't get that subtlety through teleop.
+Dialogue: 0,0:07:28.86,0:07:32.62,Sub,,0,0,0,,Because the mechanics of DexUMI is closely matched with the hand,
+Dialogue: 0,0:07:32.89,0:07:38.15,Sub,,0,0,0,,we're able to capture these fine details of human dexterity directly onto the robot.
+Dialogue: 0,0:07:39.98,0:07:43.02,Sub,,0,0,0,,And then simulation is another very easy source of data.
+Dialogue: 0,0:07:43.20,0:07:47.40,Sub,,0,0,0,,So we can train reinforcement learning in simulation, Isaac Lab,
+Dialogue: 0,0:07:47.92,0:07:56.21,Sub,,0,0,0,,and then we can generate synthetic data through domain randomization, and we fine-tune GR00T only on the same trajectories.
+Dialogue: 0,0:07:56.26,0:07:59.28,Sub,,0,0,0,,and with zero-shot X-Adapted into the real.
+Dialogue: 0,0:07:59.50,0:08:03.92,Sub,,0,0,0,,So this part is real autonomous 1X, directly from the sim.
+Dialogue: 0,0:08:04.76,0:08:08.26,Sub,,0,0,0,,And this also applies to whole body local manipulation.
+Dialogue: 0,0:08:08.72,0:08:14.50,Sub,,0,0,0,,This part is same in Isaac Lab, and this is zero-shot transferring to real at our kitchen.
+Dialogue: 0,0:08:16.94,0:08:23.82,Sub,,0,0,0,,And with X-Adapt meet grew to turbo paired with Sonic, the whole body controller that we introduced last year.
+Dialogue: 0,0:08:24.94,0:08:30.36,Sub,,0,0,0,,So here are our researchers drop coffee a lot at 2 a.m. when the human brains fail.
+Dialogue: 0,0:08:31.24,0:08:34.18,Sub,,0,0,0,,So we train our robot to clean up after us.
+Dialogue: 0,0:08:39.57,0:08:41.21,Sub,,0,0,0,,After a while, it doesn't smell very good.
+Dialogue: 0,0:08:42.50,0:08:45.10,Sub,,0,0,0,,There's a whole basket of dirty towels.
+Dialogue: 0,0:08:46.94,0:08:49.56,Sub,,0,0,0,,And then we also gave the robot a shift at Videsque Cafe.
+Dialogue: 0,0:08:49.94,0:08:53.76,Sub,,0,0,0,,Here's our researcher expressing approval of the robot's cleaning job.
+Dialogue: 0,0:08:54.66,0:08:56.80,Sub,,0,0,0,,So the robot here is carrying two chips.
+Dialogue: 0,0:08:57.32,0:09:08.84,Sub,,0,0,0,,The GR00T 2 Turbo runs on the Jetson AGX Thor at 80 motion tokens a second, And Sonic runs on Jetson Orin and that's running at 50 Hertz whole body control.
+Dialogue: 0,0:09:09.88,0:09:14.50,Sub,,0,0,0,,So here is a party night at our lab and the robot serving popcorns.
+Dialogue: 0,0:09:16.51,0:09:21.45,Sub,,0,0,0,,And actually we charge cash and we sell the popcorns.
+Dialogue: 0,0:09:21.83,0:09:26.39,Sub,,0,0,0,,As far as I know, I think that's the only revenue that our team makes for the company.
+Dialogue: 0,0:09:27.53,0:09:30.60,Sub,,0,0,0,,So the ARR is about $20 per night.
+Dialogue: 0,0:09:30.65,0:09:35.44,Sub,,0,0,0,,Yeah, very diligent, working around the clock, selling popcorn.
+Dialogue: 0,0:09:38.91,0:09:44.75,Sub,,0,0,0,,On our X-Adapt benchmark, GR00T 2 shows much stronger emergent transfer than baselines.
+Dialogue: 0,0:09:46.18,0:09:49.52,Sub,,0,0,0,,And next, GR00T 2 is more than a single model checkpoint.
+Dialogue: 0,0:09:49.92,0:09:55.14,Sub,,0,0,0,,We blur the boundary of System 1 and 2 in what we call unified cognition.
+Dialogue: 0,0:09:56.33,0:09:58.59,Sub,,0,0,0,,Here's an example instruction.
+Dialogue: 0,0:09:59.11,0:10:02.86,Sub,,0,0,0,,You saw the trash by recycling and food waste and these complex criterion.
+Dialogue: 0,0:10:02.91,0:10:09.97,Sub,,0,0,0,,and Astra figures out the semantics of the scene and paints the guidance directly onto the pixels.
+Dialogue: 0,0:10:10.59,0:10:12.99,Sub,,0,0,0,,So we call this new interface, WAM API.
+Dialogue: 0,0:10:14.07,0:10:16.87,Sub,,0,0,0,,And GR00T 2 natively supports this type of visual steering.
+Dialogue: 0,0:10:17.33,0:10:20.85,Sub,,0,0,0,,And in this way, we factor out reasoning from physics.
+Dialogue: 0,0:10:22.10,0:10:28.50,Sub,,0,0,0,,And with visual steering, Astra and GR00T 2 can go hand in hand to solve the Tower of Hanoi, Zero Shot.
+Dialogue: 0,0:10:29.68,0:10:32.47,Sub,,0,0,0,,This is executing a physical recursion algorithm.
+Dialogue: 0,0:10:32.52,0:10:38.48,Sub,,0,0,0,,You know, it will be completely unnecessary for a two billion model to be able to write a recursive code.
+Dialogue: 0,0:10:39.23,0:10:47.13,Sub,,0,0,0,,So, WAM API allows GR00T 2 to offload cognition upstream and focus on what it does best.
+Dialogue: 0,0:10:48.12,0:10:52.04,Sub,,0,0,0,,And the whole system is able to recover from failure and verify success.
+Dialogue: 0,0:10:53.77,0:10:56.51,Sub,,0,0,0,,Here's a second way to interface that we call WAM Edit.
+Dialogue: 0,0:10:57.54,0:11:04.82,Sub,,0,0,0,,So, Astra watches the camera feed, monitors the proprioception, and intervenes on the action execution directly.
+Dialogue: 0,0:11:05.76,0:11:11.34,Sub,,0,0,0,,And GR00T 2 still handles the vast majority of the motion, and Astra only applies a delta when necessary.
+Dialogue: 0,0:11:12.99,0:11:15.11,Sub,,0,0,0,,And let me take you back to our chemistry lab.
+Dialogue: 0,0:11:15.73,0:11:17.91,Sub,,0,0,0,,Here's an end-to-end uncut scene.
+Dialogue: 0,0:11:18.58,0:11:24.48,Sub,,0,0,0,,The task is to take some substance here, put it on a tray, and watch it under the microscope.
+Dialogue: 0,0:11:25.22,0:11:30.02,Sub,,0,0,0,,You know, for the System 1 model, sometimes it loses track of the repetitive motions,
+Dialogue: 0,0:11:30.22,0:11:38.50,Sub,,0,0,0,,and here Astra correctly intervenes on the proprioception and stops the dip at two dips specified by our system prompt.
+Dialogue: 0,0:11:39.65,0:11:42.49,Sub,,0,0,0,,And then we also connect Astra to the microscope view.
+Dialogue: 0,0:11:43.47,0:11:47.30,Sub,,0,0,0,,Then it's able to, here, here it comes.
+Dialogue: 0,0:11:47.54,0:11:50.86,Sub,,0,0,0,,It turns on the microscope, Astra is connected to the microscope,
+Dialogue: 0,0:11:51.57,0:12:00.40,Sub,,0,0,0,,and it instructs the robot hand to rotate just the right degree of angle so it comes in sharp focus.
+Dialogue: 0,0:12:00.45,0:12:03.05,Sub,,0,0,0,,It's all real-time and cut autonomous.
+Dialogue: 0,0:12:05.02,0:12:11.42,Sub,,0,0,0,,And the third way is through an agentic harness we developed in-house called Aspire that combines GR00T 2,
+Dialogue: 0,0:12:11.60,0:12:15.58,Sub,,0,0,0,,native GR00T 2, with code-based skills authored by trial and error.
+Dialogue: 0,0:12:16.10,0:12:24.06,Sub,,0,0,0,,And Aspire can switch seamlessly from GR00T 2 to code as policy for error recovery or monitor safety like a guardian angel.
+Dialogue: 0,0:12:25.50,0:12:26.36,Sub,,0,0,0,,Here's how it works.
+Dialogue: 0,0:12:26.84,0:12:30.65,Sub,,0,0,0,,We first construct a sim environment and have Astra explore with it.
+Dialogue: 0,0:12:30.70,0:12:37.26,Sub,,0,0,0,,You can think of it as fine-tuning or priming Astra in code space without gradient descent.
+Dialogue: 0,0:12:38.02,0:12:38.96,Sub,,0,0,0,,So this is still insane.
+Dialogue: 0,0:12:39.36,0:12:42.74,Sub,,0,0,0,,And we can transfer this type of skills directly to the real world.
+Dialogue: 0,0:12:44.58,0:12:46.48,Sub,,0,0,0,,And GR00T 2 is part of the skill library.
+Dialogue: 0,0:12:47.40,0:12:49.18,Sub,,0,0,0,,And here GR00T actually makes a mistake.
+Dialogue: 0,0:12:49.72,0:12:53.48,Sub,,0,0,0,,It got the upper side of the wing upside down.
+Dialogue: 0,0:12:54.02,0:13:02.54,Sub,,0,0,0,,And Aspire executes a recovery poke that actually allows GR00T to resume control and install the upper wing correctly.
+Dialogue: 0,0:13:07.78,0:13:14.66,Sub,,0,0,0,,And then we can just have a human dump the parts in any ways you want, and it just keeps assembling.
+Dialogue: 0,0:13:15.24,0:13:18.42,Sub,,0,0,0,,It's so good that we basically turns reality into Minecraft.
+Dialogue: 0,0:13:20.35,0:13:30.99,Sub,,0,0,0,,The robot just keeps working through the night and filling our Minecraft inventory day and night at essentially 100 % robustness.
+Dialogue: 0,0:13:32.93,0:13:37.33,Sub,,0,0,0,,So being able to do this before 2027 is beyond my wildest imagination.
+Dialogue: 0,0:13:37.99,0:13:40.97,Sub,,0,0,0,,Neither Astra nor GR00T can do this alone.
+Dialogue: 0,0:13:41.29,0:13:42.29,Sub,,0,0,0,,And you need both.
+Dialogue: 0,0:13:44.03,0:13:45.41,Sub,,0,0,0,,Remember these sad kittens?
+Dialogue: 0,0:13:46.34,0:13:49.77,Sub,,0,0,0,,Turns out that we're one stage beyond celebration.
+Dialogue: 0,0:13:50.77,0:13:56.59,Sub,,0,0,0,,Astra didn't shatter our dreams, but it shattered our walls.
+Dialogue: 0,0:13:57.37,0:14:02.05,Sub,,0,0,0,,Frontier LLMs lower the barrier of entry and raises the ceiling for robotics.
+Dialogue: 0,0:14:02.49,0:14:09.93,Sub,,0,0,0,,And we as a community just have to admit that robotics is no longer an elitist sport anymore.
+Dialogue: 0,0:14:10.70,0:14:14.20,Sub,,0,0,0,,The mission is too important to leave anybody out.
+Dialogue: 0,0:14:14.90,0:14:16.68,Sub,,0,0,0,,So GR00T is opening the gates.
+Dialogue: 0,0:14:17.77,0:14:24.55,Sub,,0,0,0,,I'm excited to announce that both GR00T 2 and Turbo Weights and a X-Adapt recipe will be open source in December.
+Dialogue: 0,0:14:25.32,0:14:27.42,Sub,,0,0,0,,You need to own System 1 untethered.
+Dialogue: 0,0:14:34.94,0:14:41.38,Sub,,0,0,0,,You need to own System 1 untethered and free of the tyranny of conference wifi.
+Dialogue: 0,0:14:43.91,0:14:45.43,Sub,,0,0,0,,And we're going more than that.
+Dialogue: 0,0:14:45.89,0:14:47.71,Sub,,0,0,0,,We're open sourcing our simulation engine.
+Dialogue: 0,0:14:48.19,0:14:52.51,Sub,,0,0,0,,This is Sim Foundry, our real-to-sim pipeline with physical validation.
+Dialogue: 0,0:14:53.32,0:14:57.80,Sub,,0,0,0,,It supports features like particle physics, articulated objects, and so on.
+Dialogue: 0,0:14:58.53,0:15:01.97,Sub,,0,0,0,,And with Astra, you can easily build sim at scale.
+Dialogue: 0,0:15:02.64,0:15:07.74,Sub,,0,0,0,,Sim Foundry 1.0 is available today and 2.0 coming in early 2027.
+Dialogue: 0,0:15:09.10,0:15:11.34,Sub,,0,0,0,,We're open sourcing our agentic harness.
+Dialogue: 0,0:15:12.02,0:15:13.01,Sub,,0,0,0,,This is Aspire,
+Dialogue: 0,0:15:13.06,0:15:21.86,Sub,,0,0,0,,our agent framework that learns a skill library that compounds over time and enables a new type of continual learning without gradient descent.
+Dialogue: 0,0:15:23.30,0:15:25.02,Sub,,0,0,0,,We're open sourcing our annotation engine.
+Dialogue: 0,0:15:25.80,0:15:30.68,Sub,,0,0,0,,This is Flora, our open model suite for massive scale data curation.
+Dialogue: 0,0:15:30.96,0:15:36.34,Sub,,0,0,0,,It gives you these accurate curations, captions, auto evolves and reward functions.
+Dialogue: 0,0:15:36.98,0:15:46.98,Sub,,0,0,0,,And if you host Flora locally, it's 125 times cheaper than Astra at the same performance We're open sourcing our training data.
+Dialogue: 0,0:15:47.98,0:15:54.50,Sub,,0,0,0,,This initiative called Human One Million is our high quality in-house training data.
+Dialogue: 0,0:15:55.04,0:15:59.02,Sub,,0,0,0,,And we are open sourcing the first 100,000 hours today.
+Dialogue: 0,0:16:00.00,0:16:04.16,Sub,,0,0,0,,And last but not least, we're even open sourcing our hardware design.
+Dialogue: 0,0:16:04.87,0:16:11.12,Sub,,0,0,0,,So for all these devices you saw, the UMI, DexUMI, and the Flexible Neck, now you can build it in your own garage.
+Dialogue: 0,0:16:11.17,0:16:12.76,Sub,,0,0,0,,We're giving you all the blueprints.
+Dialogue: 0,0:16:12.81,0:16:15.67,Sub,,0,0,0,,So it's really a leap of faith.
+Dialogue: 0,0:16:15.85,0:16:17.63,Sub,,0,0,0,,Take as much as you want.
+Dialogue: 0,0:16:18.24,0:16:28.83,Sub,,0,0,0,,We're building an open ecosystem and sending an open invitation because we would like people from all disciplines, all walks of life,
+Dialogue: 0,0:16:28.88,0:16:33.95,Sub,,0,0,0,,to build robots, to experience physical AGI firsthand,
+Dialogue: 0,0:16:34.29,0:16:41.82,Sub,,0,0,0,,and to own a piece together in this greatest step function change that humanity has ever seen.
+Dialogue: 0,0:16:43.41,0:16:49.43,Sub,,0,0,0,,And GR00T has brought to you, with so many sleepless nights and so much love from NVIDIA, Team Green.
+Dialogue: 0,0:16:51.26,0:16:52.16,Sub,,0,0,0,,And one more thing.
+Dialogue: 0,0:16:53.47,0:16:57.23,Sub,,0,0,0,,I'd like to show you a task that is impossible to teleop.
+Dialogue: 0,0:16:57.93,0:17:01.23,Sub,,0,0,0,,That must be run at high inference rate locally.
+Dialogue: 0,0:17:02.33,0:17:07.45,Sub,,0,0,0,,Autonomous, uncut, 1x speed, real time.
+Dialogue: 0,0:17:15.26,0:17:17.37,Sub,,0,0,0,,And don't worry, we're good friends without fire marshal.
+Dialogue: 0,0:17:17.42,0:17:21.84,Sub,,0,0,0,,That right there is the flame of hope.
+Dialogue: 0,0:17:22.96,0:17:30.33,Sub,,0,0,0,,From now on, anyone could become a roboticist and everything that moves will be autonomous.
+Dialogue: 0,0:17:31.11,0:17:33.85,Sub,,0,0,0,,And in that flame, summer is coming.
+Dialogue: 0,0:17:34.64,0:17:35.04,Sub,,0,0,0,,Thanks.
+Dialogue: 0,0:17:38.60,0:17:39.30,Sub,,0,0,0,,Thank you, Jim.

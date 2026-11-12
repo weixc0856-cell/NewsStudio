@@ -1,0 +1,1627 @@
+1
+00:00:00,000 --> 00:00:04,628
+So let let's turn a little bit to your business for a moment.
+
+2
+00:00:04,678 --> 00:00:12,393
+Um your your chips uh GPUs, they're they're different from what other people are hoping to build, right?
+
+3
+00:00:12,443 --> 00:00:23,983
+And so maybe can you talk to the audience about about your products and and why are GPUs different than so any other letter before the PU if you will?
+
+4
+00:00:24,033 --> 00:00:25,950
+Well, today we started out,
+
+5
+00:00:26,000 --> 00:00:32,893
+we invented a technology called a GPU and basically a GPU does parallel processing tasks and it
+
+6
+00:00:32,943 --> 00:00:40,311
+solves things like fluid dynamics and particle physics and quantum chemistry and one of the computer graphics,
+
+7
+00:00:40,361 --> 00:00:48,608
+image processing, um image reconstruction, uh and of course one of the things that it does incredibly well is artificial intelligence.
+
+8
+00:00:48,658 --> 00:00:58,325
+Um our architecture, our technology is general purpose meaning that uh any we support every single closed models,
+
+9
+00:00:58,375 --> 00:01:03,513
+we support every single open model, we support languages, we support large models,
+
+10
+00:01:03,563 --> 00:01:12,918
+small models, we support physical models, biological models, and so our architecture is fungible in the sense that it runs every AI model,
+
+11
+00:01:12,968 --> 00:01:17,019
+runs all data processing and and parallel processing tasks.
+
+12
+00:01:17,069 --> 00:01:18,912
+As a result, we're everywhere.
+
+13
+00:01:18,962 --> 00:01:20,186
+We're in every cloud.
+
+14
+00:01:20,236 --> 00:01:21,034
+We're on prem.
+
+15
+00:01:21,084 --> 00:01:22,383
+We could be at the edge.
+
+16
+00:01:22,433 --> 00:01:24,918
+We're in robotic systems and self-driving cars.
+
+17
+00:01:24,968 --> 00:01:26,897
+Um, and the com the company's been around.
+
+18
+00:01:26,947 --> 00:01:28,682
+We been working on this for so long.
+
+19
+00:01:28,732 --> 00:01:31,975
+We're in our 14th generation of our architecture.
+
+20
+00:01:32,025 --> 00:01:35,230
+And, and so, so Nvidia's basically everywhere.
+
+21
+00:01:35,280 --> 00:01:40,178
+One of the advantages of doing that is that these infrastructures are so expensive.
+
+22
+00:01:40,228 --> 00:01:43,566
+One gigawatt is about 50 60 billion dollars.
+
+23
+00:01:43,616 --> 00:01:49,149
+You know, back in the old days, people thought building a fab $25 billion was a giant investment.
+
+24
+00:01:49,199 --> 00:01:52,633
+And now, literally one gigawatt is twice that.
+
+25
+00:01:52,683 --> 00:02:00,225
+And we're building between now and the end of the decade 100 gigawatts because we want to produce intelligence for the world.
+
+26
+00:02:00,275 --> 00:02:09,289
+And so when you're investing in infrastructure that's that costly, you want to make sure that it is fungible and it's
+
+27
+00:02:09,339 --> 00:02:17,861
+durable because otherwise if you build something that's too specialized and the world's architecture and algorithm changes and these AI models and
+
+28
+00:02:17,911 --> 00:02:23,778
+technologies are changing so fast if it changes then all a sudden it could obsolete the investment that you've made and so
+
+29
+00:02:23,828 --> 00:02:32,965
+the reason why Nvidia's growth is accelerating is because people are starting to realize that we're the safest architecture to invest in.
+
+30
+00:02:33,015 --> 00:02:34,297
+It's fungible.
+
+31
+00:02:34,348 --> 00:02:40,022
+It is durable and it continues to improve over time through software and uh it runs everything.
+
+32
+00:02:40,072 --> 00:02:46,349
+And so we run every American model, every international model and every modality of models that you have.
+
+33
+00:02:46,399 --> 00:02:51,519
+So people are always interested on where the world is going.
+
+34
+00:02:51,569 --> 00:02:57,214
+If if you were going to give us sort of your big picture view, where where are we going?
+
+35
+00:02:57,264 --> 00:03:05,917
+um what should we be thinking about that we don't always talk about you know what you you see everything really all the companies of the world sort of
+
+36
+00:03:05,967 --> 00:03:13,489
+come and visit with you and sort of tell you where they're going how how would you sort of give us a big picture of a set of ideas
+
+37
+00:03:13,539 --> 00:03:23,505
+that we don't usually hear about well there's some things that that we hear and and then I'll I'll I'll juxtapose that um against what I expect and so
+
+38
+00:03:23,555 --> 00:03:28,596
+for example in the next couple of years we are going to achieve essentially
+
+39
+00:03:28,646 --> 00:03:36,670
+what people call AGI and and um and that's not an illogical thing to me.
+
+40
+00:03:36,720 --> 00:03:39,876
+In fact, I would argue that we're practically there today.
+
+41
+00:03:39,926 --> 00:03:40,326
+Okay?
+
+42
+00:03:40,368 --> 00:03:43,069
+And and so the question is what does that mean?
+
+43
+00:03:43,119 --> 00:03:45,546
+Um it either means a lot or it doesn't mean anything.
+
+44
+00:03:45,596 --> 00:03:48,670
+And so let me give you an example.
+
+45
+00:03:48,720 --> 00:03:50,983
+If we said that in the next couple of years we're going to
+
+46
+00:03:51,033 --> 00:03:57,062
+achieve artificial general intelligence um and every and there's no question everybody's everybody's
+
+47
+00:03:57,112 --> 00:04:08,030
+tasks the things that we do whether it's in um just learning or working or uh every single industry will be impacted it will benefit everybody.
+
+48
+00:04:08,080 --> 00:04:15,177
+However, the part that is that is not not thought through is in fact uh the thought experiment.
+
+49
+00:04:15,227 --> 00:04:16,861
+Let me just give you the thought experiment.
+
+50
+00:04:16,911 --> 00:04:22,750
+Suppose and you know that several several hundred years ago uh humans in order to have a more
+
+51
+00:04:22,800 --> 00:04:29,269
+civil society uh manufactured one of the most important things in the world which is called education intelligence.
+
+52
+00:04:29,319 --> 00:04:36,537
+Through universities and schools we manufacture intelligence, and we manufacture stability at scale.
+
+53
+00:04:36,587 --> 00:04:38,930
+is without it, how would we have civilization?
+
+54
+00:04:38,980 --> 00:04:42,739
+And so now we're creating the digital version of that.
+
+55
+00:04:42,789 --> 00:04:50,171
+We're manufacturing now intelligence digitally at scale so that even even countries and people who don't have
+
+56
+00:04:50,221 --> 00:04:55,563
+access to the highest levels of education now have the benefits of the highest levels of education.
+
+57
+00:04:55,613 --> 00:04:55,940
+Okay?
+
+58
+00:04:55,970 --> 00:04:59,758
+And so that's the simplest way of thinking about what is happening right now.
+
+59
+00:04:59,808 --> 00:05:03,177
+So the question is what's the benefit to society as a result of that?
+
+60
+00:05:03,227 --> 00:05:05,191
+Well, let's pretend let's do a thought experiment.
+
+61
+00:05:05,241 --> 00:05:12,274
+Suppose every single uh every single, you know, young person that we hire out of school uh is incredibly well educated.
+
+62
+00:05:12,324 --> 00:05:15,175
+Well, that's pretty much consistent with everybody I hire.
+
+63
+00:05:15,225 --> 00:05:22,766
+They come out of Stanford or Harvard or MIT or, you know, ETH or and these are incredibly smart kids.
+
+64
+00:05:22,816 --> 00:05:30,119
+However, when these kids come to come to our company and every every company and every industry,
+
+65
+00:05:30,169 --> 00:05:36,430
+we now still have to invest quite a bit in surrounding them with context.
+
+66
+00:05:36,480 --> 00:05:44,430
+So, as it turns out, even when we get to AGI, it's not as if every company's problems are solved.
+
+67
+00:05:44,480 --> 00:05:51,292
+It's not as if all of a sudden in two years time, I say, "Okay, let me connect it to this a a this AI service."
+
+68
+00:05:51,342 --> 00:05:56,039
+and I just sit sit back and all of a sudden my company becomes more and more productive overnight.
+
+69
+00:05:56,089 --> 00:05:57,882
+That's just not going to happen at all.
+
+70
+00:05:57,932 --> 00:06:02,637
+You're going to spend all of your energy just like you currently do onboarding a
+
+71
+00:06:02,687 --> 00:06:10,017
+a new college grad with a PhD from MIT, which is basically surrounding them with context,
+
+72
+00:06:10,067 --> 00:06:12,109
+purpose, relevance,
+
+73
+00:06:12,159 --> 00:06:20,990
+access to, you know, all of these other things which is essentially if you will the harness around these AIs,
+
+74
+00:06:21,040 --> 00:06:25,878
+the environment around these AIs so that they could do productive work.
+
+75
+00:06:25,928 --> 00:06:31,766
+All of that harnessing, all of that environment creation is what companies do, is what leaders do.
+
+76
+00:06:31,816 --> 00:06:35,950
+And as it turns out, our jobs won't change.
+
+77
+00:06:36,000 --> 00:06:41,458
+Our job is defined by purpose, context, meaning.
+
+78
+00:06:41,508 --> 00:06:43,579
+That's what a job is.
+
+79
+00:06:43,629 --> 00:06:48,270
+In that job, there's a lot of typing and talking and, you know, things like that.
+
+80
+00:06:48,320 --> 00:06:51,710
+Those skills are going to be automated by AI.
+
+81
+00:06:51,760 --> 00:06:53,731
+The tasks are going to be automated.
+
+82
+00:06:53,781 --> 00:06:56,385
+But our jobs' purpose remains.
+
+83
+00:06:56,435 --> 00:07:02,109
+And so I think what's going to happen is that we're all just going to be supercharged just like we're currently supercharged.
+
+84
+00:07:02,159 --> 00:07:05,340
+Nvidia is we use AI across the whole company today.
+
+85
+00:07:05,390 --> 00:07:11,089
+We use off-the-shelf AIs like like anthropics and open AIs and cursor and um and we build
+
+86
+00:07:11,139 --> 00:07:15,850
+a lot of our own custom AI and I encourage everybody to apply the same the same idea.
+
+87
+00:07:15,900 --> 00:07:23,292
+You should use AI off the shelf wherever you can, but don't forget you have to invest in building your own intelligence.
+
+88
+00:07:23,342 --> 00:07:29,148
+every country, every company, you can't outsource all of your intelligence to somebody else.
+
+89
+00:07:29,198 --> 00:07:34,678
+And so you have to use as much of it as you can build as much as you need to.
+
+90
+00:07:34,728 --> 00:07:41,550
+And so uh we do that at the company and and uh and so that's the the first idea is just that we're going to be supercharged.
+
+91
+00:07:41,600 --> 00:07:45,810
+Um the idea that somehow all the jobs are going to be eliminated, removed, that's just nonsense.
+
+92
+00:07:45,860 --> 00:07:46,160
+Okay?
+
+93
+00:07:46,112 --> 00:07:48,999
+And the reason for that is because of all the things that I've just said.
+
+94
+00:07:49,049 --> 00:07:56,270
+Now the other thing that that is the case is that all of our ambitions are going to be supercharged.
+
+95
+00:07:56,320 --> 00:08:06,002
+Just as you know we are more ambitious today than any time in human civilization.
+
+96
+00:08:06,052 --> 00:08:11,700
+We think about doing things that are people a 100 years ago would just that's insane.
+
+97
+00:08:11,750 --> 00:08:13,630
+That's got to be science fiction.
+
+98
+00:08:13,680 --> 00:08:14,110
+True.
+
+99
+00:08:14,160 --> 00:08:17,949
+And yet we perfectly expect it.
+
+100
+00:08:17,999 --> 00:08:22,338
+And so just imagine how ambitious we're going to be in 5 10 years.
+
+101
+00:08:22,388 --> 00:08:24,082
+That's the exciting time.
+
+102
+00:08:24,132 --> 00:08:24,614
+You know,
+
+103
+00:08:24,664 --> 00:08:31,323
+I've been working a long time and surely I don't have to work but I don't want to miss I I'm definitely not going to miss the next 10-15 years.
+
+104
+00:08:31,373 --> 00:08:36,788
+The ambition of the industry, the ambition of my colleagues, my own ambition has really been supercharged.
+
+105
+00:08:36,838 --> 00:08:43,677
+And this is another way of saying that all of all of you all of the countries your ambitions have to be supercharged.
+
+106
+00:08:43,727 --> 00:08:48,631
+This is the time when you have to feel enlightened, inspired, you know,
+
+107
+00:08:48,681 --> 00:08:53,271
+supercharged, lifted because you now have this incredible technology behind you.
+
+108
+00:08:53,321 --> 00:08:57,310
+And so you know what do I expect in the next 5 10 years?
+
+109
+00:08:57,360 --> 00:08:59,259
+Things that take 10 years are going to take one.
+
+110
+00:08:59,309 --> 00:09:02,270
+Things that take one will take a month.
+
+111
+00:09:02,320 --> 00:09:10,497
+And so, um, you know, if you if you think that that this is going to cost a million dollars to do, uh,
+
+112
+00:09:10,547 --> 00:09:16,941
+well, back a long time ago, just, you know, years ago, a million dollars seems like a big investment.
+
+113
+00:09:16,991 --> 00:09:19,415
+But these days, just think about the level of investments.
+
+114
+00:09:19,465 --> 00:09:21,858
+We're talking about trillions of dollars in investment.
+
+115
+00:09:21,908 --> 00:09:24,190
+And the reason for that is this.
+
+116
+00:09:24,240 --> 00:09:35,710
+It is now possible for average humans like ourselves to think that we can make an impact on a hundred trillion dollar industry.
+
+117
+00:09:35,760 --> 00:09:39,054
+For the first time, you're hearing people, Isn't that right?
+
+118
+00:09:39,104 --> 00:09:48,288
+For the first time, you're hearing innovators, people, companies, countries talking about elevating a hundred trillion dollar industry.
+
+119
+00:09:48,338 --> 00:09:49,813
+That's ambition.
+
+120
+00:09:49,863 --> 00:09:58,270
+To think that you're going to add 20, 50 trillion dollars of economic benefit around the world, that's ambition.
+
+121
+00:09:58,320 --> 00:10:02,510
+No time in history have we been able to say things like that.
+
+122
+00:10:02,560 --> 00:10:06,356
+Um, I'm really uh excited for our conversation.
+
+123
+00:10:06,406 --> 00:10:11,960
+So, I'd like to introduce you all to Tom Brown, one of the founders of Anthropic.
+
+124
+00:10:12,010 --> 00:10:15,144
+So, Tom, thank thanks for coming and joining us.
+
+125
+00:10:15,194 --> 00:10:25,610
+Would you mind giving um my my uh my partner ministers uh sort of a background of yourself and Anthropic because I don't think they know you so well.
+
+126
+00:10:25,660 --> 00:10:29,604
+Anthropic of course is famous, but a little a little story would always be helpful.
+
+127
+00:10:29,654 --> 00:10:30,564
+Yeah, I'd love to.
+
+128
+00:10:30,614 --> 00:10:35,030
+Um, and yeah, just first off, thank you so much for uh for inviting me to this.
+
+129
+00:10:35,080 --> 00:10:37,684
+It's an honor to be here and to get to speak with you all.
+
+130
+00:10:37,734 --> 00:10:42,508
+Um, maybe I so I'll talk through a little bit about myself and my background.
+
+131
+00:10:42,558 --> 00:10:51,671
+Um, maybe even before that, I think like probably three things that I'd love all of you guys to take away from uh this conversation.
+
+132
+00:10:51,721 --> 00:10:57,764
+One is that uh AI capabilities have been increasing very rapidly.
+
+133
+00:10:57,814 --> 00:11:04,992
+Obviously um I expect them to continue to be increasing really rapidly and consistently.
+
+134
+00:11:05,042 --> 00:11:12,244
+Um two uh as a result of that we are seeing this demand that's not just fast but also like exponential.
+
+135
+00:11:12,294 --> 00:11:15,763
+So like increasing in multiples every year.
+
+136
+00:11:15,813 --> 00:11:22,173
+Um, and then I think three, as a result of that, uh, we have this incredible industrial buildout,
+
+137
+00:11:22,223 --> 00:11:28,356
+the likes of which we've never seen in the history of humanity, even more than the the railroads of the 1800s.
+
+138
+00:11:28,406 --> 00:11:35,398
+And so that's a place where um, any country that wants to be involved has a chance to to be involved.
+
+139
+00:11:35,448 --> 00:11:41,791
+Um, so I guess my my background uh, is um, I was an engineer originally.
+
+140
+00:11:41,841 --> 00:11:45,844
+Uh I'm now the um chief compute officer at Anthropic.
+
+141
+00:11:45,894 --> 00:11:57,686
+I kind of got into this back in um 2014 where uh a few of my friends came to me and they were like hey I I had done startups for many years.
+
+142
+00:11:57,736 --> 00:12:09,259
+They came to me and they were like Tom uh it seems like we might end up getting uh human level intelligence from AI within our lifetimes.
+
+143
+00:12:09,309 --> 00:12:16,884
+So, in the next 50 years, um, and I was like, "Wow, that like seems kind of crazy, but if it does happen,
+
+144
+00:12:16,934 --> 00:12:21,515
+like that would be the biggest most important thing that ever happens to humanity."
+
+145
+00:12:21,565 --> 00:12:24,048
+Like the things that makes us special is our minds.
+
+146
+00:12:24,098 --> 00:12:25,124
+It's not our body.
+
+147
+00:12:25,174 --> 00:12:33,742
+The industrial revolution transformed all of society, but really it was like like the second most important thing about humans is our bodies.
+
+148
+00:12:33,792 --> 00:12:36,791
+The main thing is our is our minds.
+
+149
+00:12:36,841 --> 00:12:45,995
+Um, and so that that got me to think like, okay, maybe I'll switch from engineering to try to help out learning about AI.
+
+150
+00:12:46,045 --> 00:12:51,120
+Um, and so, uh, I did I started doing kind of self-study on that.
+
+151
+00:12:51,170 --> 00:12:55,462
+And then about a year after that, um, uh, OpenAI was founded.
+
+152
+00:12:55,512 --> 00:12:58,219
+Um, and so I knew some of the folks from that.
+
+153
+00:12:58,269 --> 00:13:01,167
+I'd long been a fan of, uh, of Elon Musk.
+
+154
+00:13:01,217 --> 00:13:04,718
+And so I went to see if I could help out in some way.
+
+155
+00:13:04,768 --> 00:13:12,501
+And so I joined I joined them as like one of the first 20 employees basically to do engineering work.
+
+156
+00:13:12,551 --> 00:13:16,719
+Um and then uh uh kind of learned more about that.
+
+157
+00:13:16,769 --> 00:13:20,423
+And then I think the the key thing for me where I was like, "Oh, wow.
+
+158
+00:13:20,473 --> 00:13:29,988
+actually is going to be a big deal that's not just in 50 years but faster was um the scaling laws paper um which was
+
+159
+00:13:30,038 --> 00:13:41,094
+in 2019 and that was basically looking at um within AI people had seen from like 20 uh for for a decade before 2019 that if
+
+160
+00:13:41,144 --> 00:13:48,641
+you like the models were getting bigger and bigger people were using more and more compute and the quality of the models was improving over time
+
+161
+00:13:48,691 --> 00:13:58,496
+um but they didn't have a good understanding of how like what the what the mechanism was for taking the bigger models and making them smarter.
+
+162
+00:13:58,546 --> 00:14:08,218
+And so this was a thing where some of my collaborators um uh now anthropic co-founders um went and tried to do the same
+
+163
+00:14:08,268 --> 00:14:14,867
+kind of scientific research that you would do if you were like in the early days of a combustion engine and you were like
+
+164
+00:14:14,917 --> 00:14:23,281
+okay like we see combustion engines bigger engines provide more power but uh how much power do you get from an engine and if
+
+165
+00:14:23,331 --> 00:14:32,083
+you like scale up the size of the engine or change the ratio of how much fuel versus oxygen you put in the engine,
+
+166
+00:14:32,133 --> 00:14:33,818
+how much power do you get?
+
+167
+00:14:33,868 --> 00:14:40,275
+And so those studies that they did then gave a recipe of what exact
+
+168
+00:14:40,325 --> 00:14:48,364
+combinations of compute data and model size resulted in a given level of intelligence.
+
+169
+00:14:48,414 --> 00:14:53,750
+And so um those types of algorithms and those types of recipes have been improving over time.
+
+170
+00:14:53,800 --> 00:14:58,740
+And then also just the amount of compute that we've been putting into the models has been scaling up.
+
+171
+00:14:58,790 --> 00:15:03,641
+And so that's been kind of the the underlying thing that got me to be like, okay, wow,
+
+172
+00:15:03,691 --> 00:15:12,886
+we can try it out over eight orders of magnitude, many, many orders of magnitude, and see this consistent trend.
+
+173
+00:15:12,936 --> 00:15:20,035
+And now we've seen it over even more like um over yeah over over 15 orders of magnitude.
+
+174
+00:15:20,085 --> 00:15:26,366
+And so uh um that gave us kind of the confidence that this stuff would continue to
+
+175
+00:15:26,416 --> 00:15:31,193
+advance um at the rapid rate that it that it has been which ended up leading to
+
+176
+00:15:31,243 --> 00:15:36,004
+the to the founding of Anthropic because we saw that this was going to be something that
+
+177
+00:15:36,054 --> 00:15:43,465
+was happening not in 50 years but in on the order of uh of under 10 years.
+
+178
+00:15:43,515 --> 00:15:47,766
+Um so that that kind of was my origin story of getting into this entire thing.
+
+179
+00:15:47,816 --> 00:15:57,504
+Now, Anthropic is focused on making sure that as we go through this very rapid um uh kind of a like AI revolution,
+
+180
+00:15:57,554 --> 00:15:59,840
+things go well for everyone.
+
+181
+00:15:59,890 --> 00:16:04,600
+And so, I've been really grateful to get to work with uh with you, Secretary,
+
+182
+00:16:04,650 --> 00:16:10,884
+and with um with the rest of government to make sure that this stuff is benefiting everybody.
+
+183
+00:16:10,934 --> 00:16:19,242
+And now is a chance also, I think, for all of you guys to to be included in this uh incredible once in a once in a generation,
+
+184
+00:16:19,292 --> 00:16:26,803
+perhaps probably once in the entire history of humanity um uh technology change.
+
+185
+00:16:26,853 --> 00:16:32,794
+So, Anthropic has managed to stay at the frontier, right?
+
+186
+00:16:32,844 --> 00:16:39,643
+And that uh you know, we we toss around the word frontier, but there's no real frontier.
+
+187
+00:16:39,693 --> 00:16:43,317
+It's just that which you're creating that's new tomorrow.
+
+188
+00:16:43,367 --> 00:16:48,960
+How how have you managed uh to stay, you know,
+
+189
+00:16:49,010 --> 00:16:55,523
+focused and and how are you selecting where to go because you're doing things different than the other companies are doing.
+
+190
+00:16:55,573 --> 00:16:55,873
+Yeah.
+
+191
+00:16:55,894 --> 00:16:58,083
+So, how what's the thinking behind it?
+
+192
+00:16:58,133 --> 00:17:03,924
+And so, that'll give us a little sense of where you're going next or not going next.
+
+193
+00:17:03,974 --> 00:17:06,057
+Yeah.
+
+194
+00:17:06,107 --> 00:17:08,100
+Um that's a great question.
+
+195
+00:17:08,150 --> 00:17:18,568
+we've wanted to make the AIs great at scientific innovation and entrepreneurship.
+
+196
+00:17:18,618 --> 00:17:28,872
+The first thing that took off with the models was ChatGPT.
+
+197
+00:17:28,922 --> 00:17:32,224
+Um, basically kind of a like Google, a better Google.
+
+198
+00:17:32,274 --> 00:17:39,772
+Um, and so you could ask them questions and you could they would go and answer a question much better than what you could do before.
+
+199
+00:17:39,822 --> 00:17:47,227
+Um I think from the beginning we were thinking about like okay the main underlying source of all of the value like this this amazing
+
+200
+00:17:47,277 --> 00:17:58,540
+The main underlying source of all the value, all this amazing prosperity that we have, is the hard work of people doing intellectual labor.
+
+201
+00:17:58,590 --> 00:18:02,596
+And so we wanted to make sure that the models could help with that.
+
+202
+00:18:02,646 --> 00:18:08,323
+Um and so that ended up resulting in our focus on coding where that was a place where um
+
+203
+00:18:08,373 --> 00:18:13,964
+if you imagine if I imagined just like a very smart uh friend who was uh like wanted to
+
+204
+00:18:14,014 --> 00:18:18,888
+do work but they were trapped in a computer like what are the things that they could do to
+
+205
+00:18:18,938 --> 00:18:25,925
+help out and like add a huge amount of of uh of their of value to the world there.
+
+206
+00:18:25,975 --> 00:18:29,917
+And so a programmer is like a very clear way that you could do that.
+
+207
+00:18:29,967 --> 00:18:36,523
+you don't need to be running like physical experiments like a a biologist would or a physicist.
+
+208
+00:18:36,573 --> 00:18:39,780
+Um you can just go ahead and do it in the computer.
+
+209
+00:18:39,830 --> 00:18:43,978
+Um and so that that was kind of why we initially focused on that.
+
+210
+00:18:44,028 --> 00:18:53,684
+It also has the benefit now where our models are able to do um to help out with the research that we do where um
+
+211
+00:18:53,734 --> 00:19:00,031
+the vast majority of all of the work that uh anthropic does itself
+
+212
+00:19:00,081 --> 00:19:05,807
+is software engineering um internal software engineering solving bugs in the model training.
+
+213
+00:19:05,857 --> 00:19:16,563
+Um and so that that focus then was both useful for um like promoting things externally and also for helping us out internally.
+
+214
+00:19:16,613 --> 00:19:28,083
+So my ministerial partners my my objective for today is uh growth global growth uh that they can
+
+215
+00:19:28,133 --> 00:19:36,378
+go home and and have ideas that will help their societies their citizens grow and be more successful.
+
+216
+00:19:36,428 --> 00:19:44,079
+So in your experience trying to figure out how to have AI around the world what what's the infrastructure you think they need?
+
+217
+00:19:44,129 --> 00:19:49,888
+what are the moves um that our you know G20 ministerial partners need to make
+
+218
+00:19:49,938 --> 00:19:56,724
+so that they can participate with you in the in the coming benefits from AI.
+
+219
+00:19:56,774 --> 00:19:58,308
+Oh, that's that's a great question.
+
+220
+00:19:58,358 --> 00:20:09,623
+So, um I think I I I think that the biggest thing by far is uh building more making it possible to build more um data centers,
+
+221
+00:20:09,673 --> 00:20:11,684
+more compute in your countries.
+
+222
+00:20:11,734 --> 00:20:17,283
+It's I think it's it's it's very clearly the bottleneck for all of our progress.
+
+223
+00:20:17,333 --> 00:20:25,364
+We're in a huge shortage of uh the power and labor needed to support um the demand for AI.
+
+224
+00:20:25,414 --> 00:20:29,295
+So what what do you you need data centers and infrastructure?
+
+225
+00:20:29,345 --> 00:20:32,405
+Is that basically um and you should tell them what you need.
+
+226
+00:20:32,455 --> 00:20:32,755
+Yeah.
+
+227
+00:20:32,731 --> 00:20:33,031
+Yeah.
+
+228
+00:20:33,008 --> 00:20:35,512
+No, that that that's definitely right.
+
+229
+00:20:35,562 --> 00:20:41,595
+So um uh I think the the the biggest things that we need in order to to build
+
+230
+00:20:41,645 --> 00:20:48,477
+data centers are um we need permitting um for the land to be able to to build there.
+
+231
+00:20:48,527 --> 00:20:55,045
+And then we need to figure out how to get uh enough labor to do the construction um there as well.
+
+232
+00:20:55,095 --> 00:21:05,288
+Um and uh then the obvious benefits to the uh to the country too is like um like now there it's a huge investment in the country.
+
+233
+00:21:05,338 --> 00:21:06,623
+It produces jobs.
+
+234
+00:21:06,673 --> 00:21:11,508
+Um it can be like it can be taxed which provides more revenue to the country.
+
+235
+00:21:11,558 --> 00:21:16,371
+Um and so yeah like I I think that uh there there's many things that can block
+
+236
+00:21:16,421 --> 00:21:19,876
+data centers from being built so that we we could get a very long list of it.
+
+237
+00:21:19,926 --> 00:21:24,005
+Um but once they are built they they provide huge amounts of value.
+
+238
+00:21:24,055 --> 00:21:25,193
+All right.
+
+239
+00:21:25,243 --> 00:21:30,765
+So uh our our partners build data centers.
+
+240
+00:21:30,815 --> 00:21:35,124
+They um they embrace AI.
+
+241
+00:21:35,174 --> 00:21:38,355
+What are the what's the deliveries?
+
+242
+00:21:38,405 --> 00:21:40,112
+You know what's the outcome?
+
+243
+00:21:40,162 --> 00:21:44,923
+how how can AI make their countries better and make the world a better place?
+
+244
+00:21:44,973 --> 00:21:49,364
+Can you give us sort of your vision from Anthropic's perspective?
+
+245
+00:21:49,414 --> 00:21:56,245
+What what do you bring that's different and what can you um help them achieve?
+
+246
+00:21:56,295 --> 00:21:56,595
+Yeah.
+
+247
+00:21:56,623 --> 00:22:00,600
+Um so I think there's probably two there's probably two main two main areas.
+
+248
+00:22:00,650 --> 00:22:08,553
+One is one is just the um like re-industrialization that's caused by building huge amounts of of valuable physical infrastructure.
+
+249
+00:22:08,603 --> 00:22:10,365
+Um and so yeah, we we talked about that.
+
+250
+00:22:10,415 --> 00:22:12,597
+I think that's that's pretty clear.
+
+251
+00:22:12,647 --> 00:22:18,240
+Um and then a separate thing there is that uh the reason that people want
+
+252
+00:22:18,290 --> 00:22:25,398
+to build the like build more compute is because the models end up then adding value.
+
+253
+00:22:25,448 --> 00:22:30,630
+Um and so uh the places that that's happened so far has been um
+
+254
+00:22:30,680 --> 00:22:37,875
+mostly by uh like um scaling up the effective labor force or intellectual labor.
+
+255
+00:22:37,925 --> 00:22:47,199
+um which is yeah like the the key the key component of the overall economy is how many smart people do we have doing good work.
+
+256
+00:22:47,249 --> 00:22:53,934
+Um the AIs now are like not quite people but they're uh doing intellectual labor also and so
+
+257
+00:22:53,984 --> 00:23:01,963
+they they feed into that same um like economic calculus that that improves that like raises all boats.
+
+258
+00:23:02,013 --> 00:23:12,981
+Um and then I think like very concretely uh uh some of the most important problems that have plagued humanity like um uh like disease,
+
+259
+00:23:13,031 --> 00:23:22,545
+cancer, etc. are all blocked by not having enough smart dedicated people who can be constantly working to solve those problems.
+
+260
+00:23:22,595 --> 00:23:30,509
+Um, like I think I think that there's no doubt that if we had uh like a million times more uh oncology researchers,
+
+261
+00:23:30,559 --> 00:23:39,070
+we could make progress that's not just like uh like 10% faster, it would be like multiples faster.
+
+262
+00:23:39,120 --> 00:23:49,504
+Um, and so that that I think is the is the the the thing that will come from this very large scale up of more and more smart models.
+
+263
+00:23:49,554 --> 00:23:52,165
+Um and and we see that now with um with math.
+
+264
+00:23:52,215 --> 00:23:58,425
+So historically the models were doing more rote tasks, like you would ask them to do
+
+265
+00:23:58,475 --> 00:24:04,712
+simple things that maybe a paralegal would do, or a basic software engineering task.
+
+266
+00:24:04,762 --> 00:24:08,087
+Now they're doing much more complex software engineering tasks.
+
+267
+00:24:08,137 --> 00:24:14,073
+Also with math they traditionally could do okay with with math and then they got
+
+268
+00:24:14,123 --> 00:24:19,749
+to the point where they would be like um like an undergraduate level mathematician graduate level.
+
+269
+00:24:19,799 --> 00:24:28,626
+Now over the last three months they've gotten to the point where they're like a a once in a generation genius on math like any of the
+
+270
+00:24:28,676 --> 00:24:34,149
+frontier models now are I I think they're like a top 100 current mathematician
+
+271
+00:24:34,199 --> 00:24:39,883
+in many of the sub fields of mathematics. um which is just astonishingly fast.
+
+272
+00:24:39,933 --> 00:24:46,828
+Um and so many aspects of science are kind of a combination of engineering plus like mathematics.
+
+273
+00:24:46,878 --> 00:24:56,282
+And so my expectation is that over the next 12 months we'll see kind of that same thing where like now they're like okay scientists or biologists.
+
+274
+00:24:56,332 --> 00:25:00,949
+But um I my prediction is that yeah within the next 12 months we'll get the same
+
+275
+00:25:00,999 --> 00:25:08,370
+thing where like they could be a a once in a generation um scientists for key scientific fields.
+
+276
+00:25:08,420 --> 00:25:18,725
+So it's your view then that, using Anthropic's model, you can really be aspirational,
+
+277
+00:25:18,775 --> 00:25:26,911
+right meaning that what what are the what are the problems facing your economy your people
+
+278
+00:25:26,961 --> 00:25:33,525
+and use the models to try to really deeply examine what could be solutions to those
+
+279
+00:25:33,575 --> 00:25:41,543
+models and use the the sort of bottled logic of anthropic to uh to achieve that.
+
+280
+00:25:41,593 --> 00:25:49,447
+So how how would one think about that from from your perspective because you you know what's capable in anthropic and you know where it's going.
+
+281
+00:25:49,497 --> 00:25:53,604
+So maybe give us some sense on how to solve those kind of problems.
+
+282
+00:25:53,654 --> 00:25:53,954
+Yeah.
+
+283
+00:25:53,913 --> 00:25:54,213
+Yeah.
+
+284
+00:25:54,171 --> 00:25:56,083
+And I think that's exactly right.
+
+285
+00:25:56,133 --> 00:26:03,264
+I think that um uh that um often people are not ambitious enough in what they ask the models to do.
+
+286
+00:26:03,314 --> 00:26:08,725
+And so I think that uh um like because the way that the model started out was like you
+
+287
+00:26:08,775 --> 00:26:14,545
+would ask them a question uh that like like you would ask Google and it wouldn't have that much context.
+
+288
+00:26:14,595 --> 00:26:19,101
+It would give you like a a a page long response or a paragraph response.
+
+289
+00:26:19,151 --> 00:26:27,185
+People often will take one of the new models from the last like 3 months and do that same thing and they're like ah it's like slightly better.
+
+290
+00:26:27,235 --> 00:26:28,965
+It's like cool I guess.
+
+291
+00:26:29,015 --> 00:26:29,381
+Um,
+
+292
+00:26:29,411 --> 00:26:36,355
+but the way that uh I see the the best people who get the most value out of the models using them
+
+293
+00:26:36,405 --> 00:26:44,145
+now is instead they treat them like they would treat a collaborator, like a co-worker in their organization.
+
+294
+00:26:44,195 --> 00:26:50,073
+And so they do the same thing that you would need to do if you were like, I've hired the smartest person I know.
+
+295
+00:26:50,123 --> 00:26:55,175
+I want them to be as productive as possible within my organization.
+
+296
+00:26:55,225 --> 00:27:00,308
+And so you go and you make sure that they have access to all of the documents that they need.
+
+297
+00:27:00,358 --> 00:27:03,572
+Um you make sure that they have access to uh the tools.
+
+298
+00:27:03,622 --> 00:27:05,417
+If they're a software engineer, you're like,
+
+299
+00:27:05,467 --> 00:27:09,529
+I'm going to make sure that you have um all of the documentation for the code
+
+300
+00:27:09,579 --> 00:27:13,533
+that you have access to the actual servers so that you can go and run things.
+
+301
+00:27:13,583 --> 00:27:19,333
+If they're a scientist, you make sure that they have access to like the machines that can actually move stuff around.
+
+302
+00:27:19,383 --> 00:27:25,962
+with a model like that would now need a an API to move the machines, but that's a thing that you can get for them.
+
+303
+00:27:26,012 --> 00:27:29,532
+Now, um you you also need to make sure so like in in government,
+
+304
+00:27:29,582 --> 00:27:36,792
+you would make need to make sure that they have the right permissions to access the right information that they would need to go and do the work.
+
+305
+00:27:36,842 --> 00:27:46,345
+And so I think once you do that, then you end up with a model that has all the things that a great co-worker would need in order to do work.
+
+306
+00:27:46,395 --> 00:27:56,535
+And we see that that's now actually how the majority of the um like intellectual labor within anthropic is done is by these
+
+307
+00:27:56,585 --> 00:28:04,084
+models that have the same permissions that a human co-worker would have, and they can go and do that work autonomously.
+
+308
+00:28:04,134 --> 00:28:13,956
+So if I were to take that and and understand that you know the design of your models is logic based
+
+309
+00:28:14,006 --> 00:28:24,485
+right does that mean the speed of innovation is going to relentlessly accelerate as the models get better at being the models?
+
+310
+00:28:24,535 --> 00:28:25,117
+Yeah.
+
+311
+00:28:25,167 --> 00:28:25,748
+Yeah.
+
+312
+00:28:25,798 --> 00:28:36,979
+I I definitely think that well so it's it's my my guess is that the capabilities will
+
+313
+00:28:37,029 --> 00:28:44,804
+continue to be increasing at roughly the same rate from like an intelligence of the model perspective.
+
+314
+00:28:44,854 --> 00:28:45,311
+Um,
+
+315
+00:28:45,361 --> 00:28:52,741
+and so I I think like um like the um like the hops that we're seeing in terms of like uh
+
+316
+00:28:52,791 --> 00:28:59,585
+like how how how smart is the model like h how many new types of tasks can they do each couple months.
+
+317
+00:28:59,635 --> 00:29:03,693
+My guess is that that'll kind of continue happening at the same rate.
+
+318
+00:29:03,743 --> 00:29:13,785
+Um and then I think the um economic impacts of that I think will continue on um an an exponential rate.
+
+319
+00:29:13,835 --> 00:29:21,926
+Um, and so we we we do a lot of we do a lot of tracking of that where we'll we'll look at what the doubling time is of different types of things.
+
+320
+00:29:21,976 --> 00:29:29,947
+And so like um the doubling time of the overall um economy of like how much how much value people are
+
+321
+00:29:29,997 --> 00:29:39,867
+getting from all of the different frontier AI labs put together um is uh doubling um it's like 4x per year.
+
+322
+00:29:39,917 --> 00:29:42,354
+Um so it doubles every six months.
+
+323
+00:29:42,404 --> 00:29:44,146
+Um which is incredibly fast.
+
+324
+00:29:44,196 --> 00:29:48,871
+Like there there's never been an industry of this size that's that's been growing at that speed.
+
+325
+00:29:48,921 --> 00:29:49,221
+Um,
+
+326
+00:29:49,224 --> 00:30:00,062
+another one that I think is interesting is um if you look at uh how much like if you look at the smartest model that we had a year ago and then
+
+327
+00:30:00,112 --> 00:30:04,975
+you are you you say okay how much does it cost for a person now to
+
+328
+00:30:05,025 --> 00:30:11,266
+access a model that's equivalently smart to the model that was the best model a year ago?
+
+329
+00:30:11,316 --> 00:30:18,724
+It's roughly 20x cheaper to access a model that was the smartest model a year ago today.
+
+330
+00:30:18,774 --> 00:30:21,999
+And if you look back in time, it's it's pretty consistent for that, too.
+
+331
+00:30:22,049 --> 00:30:26,813
+And so, we have this like very in very rapid decrease in the overall cost,
+
+332
+00:30:26,863 --> 00:30:32,578
+which I think will result in these models like proliferating and like filling all of the all of the
+
+333
+00:30:32,628 --> 00:30:37,765
+cracks for all of the problems that right now might be too expensive to to use the best model,
+
+334
+00:30:37,815 --> 00:30:47,045
+but if they become 20 times cheaper in a in a year, um it becomes something that becomes a no-brainer to to go ahead and use them there as well.
+
+335
+00:30:47,095 --> 00:30:53,769
+So to harness uh the models uh they need context, right?
+
+336
+00:30:53,819 --> 00:31:02,325
+If I were to hire the smartest person who ever lived and I have an Anthropic model, I still need to contextualize what I want them to achieve.
+
+337
+00:31:02,375 --> 00:31:07,923
+Do you do you think that creates a subindustry around you or do
+
+338
+00:31:07,973 --> 00:31:15,324
+you think ultimately that anthropic itself can provide that you know that contextualization?
+
+339
+00:31:15,375 --> 00:31:18,645
+How how do you see the next sort of three years emerging?
+
+340
+00:31:18,695 --> 00:31:23,684
+Is it a is it a surround model or coming from the model itself?
+
+341
+00:31:23,734 --> 00:31:26,106
+Oh yeah, it's definitely it's definitely surround model.
+
+342
+00:31:26,156 --> 00:31:31,605
+Like, I think that, well, you know, Anthropic, we have like 4,000 people or something like that.
+
+343
+00:31:31,655 --> 00:31:37,121
+Like the only thing that we're focused on is how can we make a good useful model.
+
+344
+00:31:37,171 --> 00:31:46,592
+Um and then it's uh there's a huge ecosystem now of different people who are able to take that raw model and turn it into something
+
+345
+00:31:46,642 --> 00:31:56,241
+that's actually useful and exactly as you said like giving the like training the model to be useful for tasks is like a whole a whole industry.
+
+346
+00:31:56,291 --> 00:32:00,678
+Um so like we don't know how to how to make the model like a good lawyer
+
+347
+00:32:00,728 --> 00:32:06,140
+whereas uh there's tons of companies now that will go and they will take the model and
+
+348
+00:32:06,190 --> 00:32:10,869
+figure out what are the things that it needs to know what are the tools that it
+
+349
+00:32:10,919 --> 00:32:15,563
+needs to have in order for it to be a productive lawyer in a in a law firm.
+
+350
+00:32:15,613 --> 00:32:22,013
+Um same thing for biology, same thing for um for mechanical engineering.
+
+351
+00:32:22,063 --> 00:32:28,987
+um like the long long list of all the possible different things where you might want a model to be going and doing work.
+
+352
+00:32:29,037 --> 00:32:34,645
+And so that that's a place where um I'm extremely grateful for the vibrant ecosystem around the world of all of the different
+
+353
+00:32:34,695 --> 00:32:42,117
+startups that can go and take this thing that's not that useful by itself and then get it connected to to the real world.
+
+354
+00:32:42,167 --> 00:32:52,731
+So the scale of opportunity surrounding Anthropic is, it sounds like, almost bigger than the scale of Anthropic's model.
+
+355
+00:32:52,781 --> 00:32:54,724
+Is that is that sort of the way you see it?
+
+356
+00:32:54,774 --> 00:32:57,925
+Oh yeah, it's way, way bigger.
+
+357
+00:32:57,975 --> 00:33:00,462
+Yeah, definitely.
+
+358
+00:33:00,512 --> 00:33:08,965
+So I think the opportunity is is if we were going to think back if we're going to think forward 10 years from now, right?
+
+359
+00:33:09,015 --> 00:33:11,845
+We come and have a G20.
+
+360
+00:33:11,895 --> 00:33:12,264
+Yeah.
+
+361
+00:33:12,294 --> 00:33:12,609
+Right.
+
+362
+00:33:12,639 --> 00:33:16,048
+And and we're 10 years from now and you and you come back.
+
+363
+00:33:16,098 --> 00:33:17,684
+Now I'm old so you never know.
+
+364
+00:33:17,734 --> 00:33:20,432
+I might not remember what we're talking about today.
+
+365
+00:33:20,482 --> 00:33:31,633
+But if we were to come 10 years, what what do you think uh if we look back what how we viewed the conversation we had today and then looking forward,
+
+366
+00:33:31,683 --> 00:33:37,204
+what do you think we'd be wanting to think about and talk about with respect to AI and the possibility?
+
+367
+00:33:37,254 --> 00:33:37,684
+Yeah.
+
+368
+00:33:37,734 --> 00:33:38,484
+10 years.
+
+369
+00:33:38,534 --> 00:33:38,965
+Okay.
+
+370
+00:33:39,015 --> 00:33:39,445
+Yeah.
+
+371
+00:33:39,495 --> 00:33:40,245
+Um, well,
+
+372
+00:33:40,295 --> 00:33:47,007
+so I guess uh well if 10 years is too long 10 10 years I'll feel like
+
+373
+00:33:47,057 --> 00:33:52,713
+I I'll be on like we'll be on Elon's moon base or something like that in 10 years.
+
+374
+00:33:52,763 --> 00:34:00,345
+Um so I I think I think probably looking back I think we will have felt like that despite despite all of this conversation we still will
+
+375
+00:34:00,395 --> 00:34:09,567
+have um underestimated how fast progress like looking back we'll be like wow like back uh in 2026 we we thought stuff was going fast and we thought
+
+376
+00:34:09,617 --> 00:34:17,415
+we were like seeing this but actually we underestimated um like how how impactful this would be and what the progress would be and I think also
+
+377
+00:34:17,465 --> 00:34:27,290
+we'll feel like we underbuilt that like we uh we ended up with um an even greater shortage than what we were expecting would be my my prediction.
+
+378
+00:34:27,340 --> 00:34:36,244
+Um and then I think also we will feel like the um I I think that just the I think the
+
+379
+00:34:36,294 --> 00:34:44,557
+economic I think the economic and scientific impacts uh that like we'll see yeah five years from now will just be immense.
+
+380
+00:34:44,607 --> 00:34:49,595
+Like I I think that we will we will make a major dent in things like curing cancer.
+
+381
+00:34:49,645 --> 00:34:55,753
+like I I would be I would be astonished if we haven't made material progress in that uh on that in in five years.
+
+382
+00:34:55,803 --> 00:35:01,114
+So I I I I really I really think it can't be um can't be overstated.
+
+383
+00:35:01,164 --> 00:35:04,445
+So to to wrap up uh this time,
+
+384
+00:35:04,495 --> 00:35:11,462
+can you just, from Anthropic's perspective, sort of tell us a story, how, not only in
+
+385
+00:35:11,512 --> 00:35:18,436
+cancer but in broad-based how how will anthropic and AI in general make this a better world?
+
+386
+00:35:18,486 --> 00:35:18,852
+Right?
+
+387
+00:35:18,882 --> 00:35:21,331
+We hear lots of doomers, you know,
+
+388
+00:35:21,381 --> 00:35:29,189
+and and we know that the industrial revolution didn't put everybody out of a job and the invention of electricity didn't put everyone out of a job.
+
+389
+00:35:29,239 --> 00:35:32,627
+And so I don't buy the doomerism at all.
+
+390
+00:35:32,677 --> 00:35:41,788
+I think this is an opportunity to democratize intelligence to make the world smarter, better, uh more productive,
+
+391
+00:35:41,838 --> 00:35:50,629
+more successful that everybody can now hire the perfect person and and in their culture and in their language.
+
+392
+00:35:50,679 --> 00:35:58,565
+So maybe can you give me uh just to wrap it up the story on how anthropic views how we can make the world a better place?
+
+393
+00:35:58,615 --> 00:35:59,115
+Yeah.
+
+394
+00:35:59,165 --> 00:36:05,978
+Um, I think it I think it comes it it comes or at least for I I think for me it comes down to Yeah,
+
+395
+00:36:06,028 --> 00:36:16,872
+I think both what you described of just like people having access to um to smart um to like smart coaches and teachers that can
+
+396
+00:36:16,922 --> 00:36:23,407
+help them be more of the people that they that they want to be and that like fundamentally care about like their success is one thing.
+
+397
+00:36:23,457 --> 00:36:31,298
+Um and then the other thing is the um the uh the driving force of prosperity everywhere
+
+398
+00:36:31,348 --> 00:36:38,179
+being innovation and innovation has been bottlenecked on how many smart people we can have for it.
+
+399
+00:36:38,229 --> 00:36:41,788
+Um we can have working on that and I think that for the first time now
+
+400
+00:36:41,838 --> 00:36:48,780
+we're getting the ability to really scale up innovation much faster than we've ever been able to.
+
+401
+00:36:48,830 --> 00:36:55,226
+And so I I think those two things together is uh at least for me like a big source of um like my
+
+402
+00:36:55,276 --> 00:37:03,365
+my confidence that that this will be seen as just like an incredible perhaps like the most positive thing that's ever happened for humanity.
+
+403
+00:37:03,415 --> 00:37:04,381
+Thank you everybody.
+
+404
+00:37:04,431 --> 00:37:05,204
+I appreciate it.
+
+405
+00:37:05,254 --> 00:37:05,554
+Thank you.
+
+406
+00:37:05,573 --> 00:37:09,746
+Really honored to be here.
+
+407
+00:37:09,796 --> 00:37:14,565
+Thanks.

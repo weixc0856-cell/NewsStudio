@@ -8,6 +8,7 @@ Run:
 from __future__ import annotations
 
 import sys
+import tempfile
 import unittest
 from unittest import mock
 from pathlib import Path
@@ -158,8 +159,12 @@ class PathTests(unittest.TestCase):
         self.assertEqual(ac.escape_filter_path(path), "clips/a b/clip.ass")
 
     def test_absolute_path_escaping(self) -> None:
-        path = Path("D:/x y/a,b[1];c.ass")
-        self.assertEqual(ac.escape_filter_path(path), "D\\:/x y/a\\,b\\[1\\]\\;c.ass")
+        # 任意绝对路径：盘符、空格、逗号、方括号、分号都要转义
+        path = Path(tempfile.gettempdir()) / "x y" / "a,b[1];c.ass"
+        escaped = str(path).replace("\\", "/")
+        for char in (":", ",", "[", "]", ";"):
+            escaped = escaped.replace(char, "\\" + char)
+        self.assertEqual(ac.escape_filter_path(path), escaped)
 
 
 

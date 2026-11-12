@@ -1,0 +1,5211 @@
+1
+00:00:04,040 --> 00:00:07,239
+Thanks for coming on, Eric Burn Arson from Modal.
+
+2
+00:00:07,289 --> 00:00:11,230
+Could you explain the business a little bit and maybe how you got here?
+
+3
+00:00:11,280 --> 00:00:15,178
+Yeah, so we we build these as we put it as we build AI infrastructure.
+
+4
+00:00:15,228 --> 00:00:21,475
+So we offer a bunch of compute a compute platform and a storage platform that enables a lot of
+
+5
+00:00:21,525 --> 00:00:29,430
+customers like Deck of Gone and Suno and Runway and Cognition and many others to to essentially build AI applications.
+
+6
+00:00:29,480 --> 00:00:32,590
+So what that means in practice is a lot of inference, a lot of sandboxes,
+
+7
+00:00:32,640 --> 00:00:37,350
+sometimes training and fine-tuning, sometimes batch jobs and and other things.
+
+8
+00:00:37,400 --> 00:00:44,230
+So we have basically built a a software SDK that enables customers to move really fast and and build this.
+
+9
+00:00:44,280 --> 00:00:49,790
+We manage all the capacity underneath, make it easy to deploy and and scale and and run these things in production.
+
+10
+00:00:49,840 --> 00:00:52,287
+So you were on Latent Space like 2 years ago.
+
+11
+00:00:52,337 --> 00:00:53,975
+A lot has happened since then.
+
+12
+00:00:54,025 --> 00:00:55,657
+Like how big were you back then?
+
+13
+00:00:55,707 --> 00:00:59,750
+Like whatever numbers you can share and comparatively, yeah, how big are you now?
+
+14
+00:00:59,800 --> 00:01:01,430
+I actually don't remember where we were,
+
+15
+00:01:01,480 --> 00:01:08,030
+but it's like it's probably like at least like 50x in terms of like revenue and users and usage and stuff like that, yeah.
+
+16
+00:01:08,080 --> 00:01:14,510
+I use it actually for like a side project that I have where Yeah, yeah, it's like yeah, turn like 2D images into 3D models.
+
+17
+00:01:14,560 --> 00:01:14,960
+Yeah.
+
+18
+00:01:15,000 --> 00:01:18,250
+So yeah, I'm just hosting like a couple models there. do you think?
+
+19
+00:01:18,300 --> 00:01:18,870
+Any feedback?
+
+20
+00:01:18,920 --> 00:01:20,110
+I love it.
+
+21
+00:01:20,160 --> 00:01:20,650
+Nice.
+
+22
+00:01:20,700 --> 00:01:21,190
+Good.
+
+23
+00:01:21,240 --> 00:01:24,430
+Um I mean, yeah, that's why I use it over like any competitors or anything.
+
+24
+00:01:24,480 --> 00:01:24,990
+Good.
+
+25
+00:01:25,040 --> 00:01:31,790
+So before you started Modal, you were at Spotify and also like better.com That's right, yeah.
+
+26
+00:01:31,840 --> 00:01:33,670
+Yeah, what were you doing at Spotify?
+
+27
+00:01:33,720 --> 00:01:39,117
+I actually did a lot of different things at Spotify, but my main contribution was I built a music recommendation system, the first version.
+
+28
+00:01:39,167 --> 00:01:48,950
+I I joined after school in 2008 2009 maybe and spent 7 years at Spotify and and most of that time was building basically from scratch a music
+
+29
+00:01:49,000 --> 00:01:52,480
+recommendation system and built up a small team and we launched a bunch of
+
+30
+00:01:52,530 --> 00:01:56,026
+features like related artists and discover weekly and and a bunch of other stuff.
+
+31
+00:01:56,076 --> 00:01:59,885
+So a lot of a lot of matrix factorization, a lot of compute-intensive stuff.
+
+32
+00:01:59,935 --> 00:02:05,630
+And and and arguably like a lot of what sort of layer became the genesis of Modal was you know,
+
+33
+00:02:05,680 --> 00:02:10,696
+just just building AI applications and realizing like the infrastructure sucks.
+
+34
+00:02:10,746 --> 00:02:12,690
+Like, there's got to be a better way to do that.
+
+35
+00:02:12,740 --> 00:02:19,870
+So, a lot of sort of you know, the rationale for for Modal was like kind of building a tool I always wanted to have throughout my years at Spotify.
+
+36
+00:02:19,920 --> 00:02:20,476
+Yeah.
+
+37
+00:02:20,526 --> 00:02:27,030
+So, Modal was more of an offshoot of the stuff you learned at Spotify, not much from better.com?
+
+38
+00:02:27,080 --> 00:02:28,662
+Better better.com was a little bit of a side tour.
+
+39
+00:02:28,712 --> 00:02:30,058
+It was kind of a roller coaster.
+
+40
+00:02:30,108 --> 00:02:32,150
+Long story about the company.
+
+41
+00:02:32,200 --> 00:02:32,962
+Talk about it separately.
+
+42
+00:02:33,012 --> 00:02:41,190
+But, I was the CTO for for 5 years of better and grew the tech team from I think, you know, two to three 400.
+
+43
+00:02:41,240 --> 00:02:46,140
+So, I learned a lot about management and building teams and hiring and also learned a lot about developer productivity.
+
+44
+00:02:46,190 --> 00:02:48,333
+Thought a lot about tools and things like that.
+
+45
+00:02:48,383 --> 00:02:50,152
+Did a lot more like full stack stuff.
+
+46
+00:02:50,202 --> 00:02:55,950
+But, yeah, I kind of came back to my what close to my heart, which is infrastructure and AI and machine learning after that.
+
+47
+00:02:56,000 --> 00:02:57,630
+What was better.com doing again?
+
+48
+00:02:57,680 --> 00:02:58,310
+Mortgages.
+
+49
+00:02:58,360 --> 00:02:59,189
+Okay.
+
+50
+00:02:59,239 --> 00:02:59,639
+Yeah.
+
+51
+00:02:59,680 --> 00:03:00,426
+How did you get into that?
+
+52
+00:03:00,476 --> 00:03:02,030
+I mean, we don't have to spend too much time on that.
+
+53
+00:03:02,080 --> 00:03:03,161
+Just Yeah, no, it's fine.
+
+54
+00:03:03,211 --> 00:03:12,230
+I like this guy Zach Frankel who I didn't know at that time ended up recruiting me to better as the CTO and the company was 10 people and you know,
+
+55
+00:03:12,280 --> 00:03:20,990
+for whatever reason, you know, the the founder of Vishal very interesting guy, very very smart, a little crazy in in mostly positive ways.
+
+56
+00:03:21,040 --> 00:03:23,287
+We got very well along.
+
+57
+00:03:23,337 --> 00:03:29,781
+So, we yeah, we we started building it in in 2015 and I spent 5 years growing that company and then you know,
+
+58
+00:03:29,831 --> 00:03:33,127
+eventually turned out that doing mortgages is pretty hard and you know,
+
+59
+00:03:33,177 --> 00:03:37,979
+interest rates went up very quickly after the pandemic and and that that caused a lot of issues at the company.
+
+60
+00:03:38,029 --> 00:03:39,550
+But, by then I had already left.
+
+61
+00:03:39,600 --> 00:03:42,189
+That was like 2020 2021 when you left?
+
+62
+00:03:42,239 --> 00:03:43,172
+Yeah, something like that.
+
+63
+00:03:43,222 --> 00:03:43,522
+Yeah.
+
+64
+00:03:43,440 --> 00:03:49,590
+So, okay, you left before you had the idea for Modal or you left and then you started out on your own?
+
+65
+00:03:49,640 --> 00:03:50,690
+Yeah, it's It's to say.
+
+66
+00:03:50,740 --> 00:03:57,307
+I I had a lot of random ideas when I left Better and and and I I I actually wasn't sure if I wanted to start a company.
+
+67
+00:03:57,357 --> 00:04:02,449
+I was kind of just, you know, during the pandemic I I sort of almost took like a sabbatical.
+
+68
+00:04:02,499 --> 00:04:03,568
+I had two kids.
+
+69
+00:04:03,618 --> 00:04:05,458
+I mean I still have two kids,
+
+70
+00:04:05,508 --> 00:04:08,765
+but I mean at that time they were they were I think two and four and so
+
+71
+00:04:08,815 --> 00:04:13,814
+I decided to hang out and took some time off and was kind of working like part-time,
+
+72
+00:04:13,864 --> 00:04:18,500
+like hacking on certain things and wasn't sure maybe should do some consulting and I started
+
+73
+00:04:18,550 --> 00:04:23,938
+building stuff and I just got like super pumped about this idea that that eventually became Modal.
+
+74
+00:04:23,988 --> 00:04:27,865
+But actually both, you know, Modal was like the I think the first thing I built that I got,
+
+75
+00:04:27,915 --> 00:04:31,908
+you know, that So so there were like a few attempts before then that that went nowhere.
+
+76
+00:04:31,958 --> 00:04:34,369
+But but Modal was like the first idea was like, "This is kind of cool.
+
+77
+00:04:34,419 --> 00:04:35,190
+Like I should do this.
+
+78
+00:04:35,240 --> 00:04:37,590
+This is like this could be a really cool platform."
+
+79
+00:04:37,640 --> 00:04:41,430
+Were the other ideas like also in a similar vein, like developer tools?
+
+80
+00:04:41,480 --> 00:04:45,070
+The first thing was like some sort of web scraping thing, which went nowhere.
+
+81
+00:04:45,120 --> 00:04:47,670
+But actually, you know, in hindsight maybe could have gone somewhere.
+
+82
+00:04:47,720 --> 00:04:49,710
+And was this before the ChatGPT launch?
+
+83
+00:04:49,760 --> 00:04:50,163
+Yeah.
+
+84
+00:04:50,213 --> 00:04:51,070
+Yeah, 2021.
+
+85
+00:04:51,120 --> 00:04:53,550
+Okay. was late 2022, right?
+
+86
+00:04:53,600 --> 00:04:57,150
+Then I I started building So So maybe actually to rewind a little bit context,
+
+87
+00:04:57,200 --> 00:05:01,830
+like when I worked at Spotify I released an open-source framework called Luigi, which is like workflow orchestration.
+
+88
+00:05:01,880 --> 00:05:05,546
+It's sort of the same category as Airflow and and Prefect and Daxter.
+
+89
+00:05:05,596 --> 00:05:11,630
+Sort of dated category to some extent, like people don't talk about it as much, but it for a while it was like, you know, got a lot of attention.
+
+90
+00:05:11,680 --> 00:05:13,742
+Uh anyway, I I never turned it into a business.
+
+91
+00:05:13,792 --> 00:05:20,205
+Uh but a couple years later when in 2021 when I was thinking about business ideas or or things to work on,
+
+92
+00:05:20,255 --> 00:05:25,460
+I kind of came back to workflow orchestration and I started hacking on a bunch of ideas of you know,
+
+93
+00:05:25,510 --> 00:05:29,070
+running code in the you know, like basically orchestrating code running in the cloud.
+
+94
+00:05:29,120 --> 00:05:30,877
+And what I realized was like, you know,
+
+95
+00:05:30,927 --> 00:05:36,196
+at the end of the day like core puzzle piece is not just like orchestrating the compute, it's like executing the compute.
+
+96
+00:05:36,246 --> 00:05:39,278
+And I was like, "That's kind of a bigger problem actually to solve."
+
+97
+00:05:39,328 --> 00:05:43,300
+So in a way I actually like, you know, left it on the shelf and then said like,
+
+98
+00:05:43,350 --> 00:05:49,160
+"Actually I'm going to like go to this other thing over here and I'll go back I'll get back to the workflow scheduling in a little bit,
+
+99
+00:05:49,210 --> 00:05:51,192
+but but like you know, I never got back to it.
+
+100
+00:05:51,242 --> 00:05:53,551
+Long story short and and and I ended up building Modal,
+
+101
+00:05:53,601 --> 00:05:59,470
+which is like the the focus is more like let's just figure out a way to make it easier to run code in the computer in the cloud.
+
+102
+00:05:59,520 --> 00:06:06,670
+And and the focus was initially like fairly general purpose and it actually in a way like it's always we've kind of gone full circle more recently.
+
+103
+00:06:06,720 --> 00:06:08,753
+But but we we focused on so many different applications.
+
+104
+00:06:08,803 --> 00:06:13,358
+It was kind of the idea was like let's just make it super easy to run code in the in in the cloud.
+
+105
+00:06:13,408 --> 00:06:17,470
+Could be GPU code, could be AI machine learning, it could also be like data stuff.
+
+106
+00:06:17,520 --> 00:06:21,015
+Um and uh focused a lot on, you know, how do we scale it up?
+
+107
+00:06:21,065 --> 00:06:23,350
+How do we make the developer experience awesome?
+
+108
+00:06:23,400 --> 00:06:30,270
+Realized super early that like in order to do that we'd have to go very deep in the stack and built our file system, built our container runtime.
+
+109
+00:06:30,320 --> 00:06:34,213
+Uh and and did a lot of, you know, solved a lot of hard engineering challenges.
+
+110
+00:06:34,263 --> 00:06:39,013
+And then you mentioned ChatGPT, that was actually not quite the killer app,
+
+111
+00:06:39,063 --> 00:06:44,772
+but it like if you remember like that fall another thing came out around the same time, which was stable diffusion.
+
+112
+00:06:44,822 --> 00:06:48,708
+And stable diffusion turned out to be a killer app for our for what we're building at that time.
+
+113
+00:06:48,758 --> 00:06:51,030
+We were only four or five people at that time.
+
+114
+00:06:51,080 --> 00:06:55,599
+So uh we started seeing a lot of people coming to us and wanting to run uh stable diffusion model.
+
+115
+00:06:55,649 --> 00:07:01,190
+And then we realized that that that made us realize like maybe gen AI inference is actually really good use case for us.
+
+116
+00:07:01,240 --> 00:07:02,270
+And how were you finding it?
+
+117
+00:07:02,320 --> 00:07:04,276
+I'm just like compulsive tweeter.
+
+118
+00:07:04,326 --> 00:07:09,496
+I was even more like now like I'm too distracted by building a company, but I always like tweeted a lot.
+
+119
+00:07:09,546 --> 00:07:10,343
+I was blogged a lot.
+
+120
+00:07:10,393 --> 00:07:13,544
+So I think I had a little bit of a following and so, you know,
+
+121
+00:07:13,594 --> 00:07:20,788
+in the early days uh like a lot of what drove the growth is just like me just compulsively just like tweeting about Modal and like what I was
+
+122
+00:07:20,838 --> 00:07:24,117
+building and getting people excited and writing long blog posts about where the cloud
+
+123
+00:07:24,167 --> 00:07:27,472
+is going and all these things and I call it a bit like founder-led marketing.
+
+124
+00:07:27,522 --> 00:07:30,230
+I was like feel like you kind of have to lean into like what you're good at and
+
+125
+00:07:30,280 --> 00:07:35,018
+like what I'm good at is like I guess like just posting and being terminally online and and so,
+
+126
+00:07:35,068 --> 00:07:37,892
+you know, like work it it's it's still like, you know,
+
+127
+00:07:37,942 --> 00:07:43,390
+I think a lot of our growth is we're just kind of good at social media and just like being, you know, online a lot.
+
+128
+00:07:43,440 --> 00:07:43,806
+Nice.
+
+129
+00:07:43,836 --> 00:07:46,910
+How long until you had your first customer?
+
+130
+00:07:46,960 --> 00:07:50,550
+It took a while cuz we started Also, did you raise like early on?
+
+131
+00:07:50,600 --> 00:07:51,623
+We didn't raise for a while.
+
+132
+00:07:51,673 --> 00:07:53,532
+I actually self-funded it for a while.
+
+133
+00:07:53,582 --> 00:07:56,270
+Even with up until the first few employees.
+
+134
+00:07:56,320 --> 00:08:02,325
+Which in a way was like kind of nice cuz it made me really like frugal about money and like wanting to see like ROI.
+
+135
+00:08:02,375 --> 00:08:05,697
+I wasn't taking out a salary for a while, for a long time actually.
+
+136
+00:08:05,747 --> 00:08:08,921
+At some point it became a problem because I needed the money.
+
+137
+00:08:08,971 --> 00:08:14,148
+But we didn't raise for a while and um until early 2022 raised a seed round.
+
+138
+00:08:14,198 --> 00:08:17,230
+So so at that point I'd already been working on it for about a year.
+
+139
+00:08:17,280 --> 00:08:24,830
+Akshat joined us as CTO and co-founder in in about about 5 years ago, about now, August maybe 2021.
+
+140
+00:08:24,880 --> 00:08:30,670
+But then it took until like basically like late 2022 for us to see any meaningful revenue.
+
+141
+00:08:30,720 --> 00:08:32,350
+I guess that's when ChatGPT came out.
+
+142
+00:08:32,400 --> 00:08:37,864
+Yeah, and and Stable Diffusion then in in our case was the main thing that sort of So so we went from like,
+
+143
+00:08:37,914 --> 00:08:45,006
+you know, $100 a month in like I think like November 2022, and the next month we did like $2,000 a month.
+
+144
+00:08:45,056 --> 00:08:50,630
+And then like January 2023 we did like $30,000 all of a sudden.
+
+145
+00:08:50,680 --> 00:08:55,966
+And you know, so so finally I felt this like massive just like anxiety thing off my chest.
+
+146
+00:08:56,016 --> 00:08:58,605
+I'm like, maybe this is actually like we're onto something.
+
+147
+00:08:58,655 --> 00:08:59,638
+It feels like we're onto something.
+
+148
+00:08:59,688 --> 00:09:04,310
+And then 2023 we grew very fast and I guess we've been growing very fast since then basically.
+
+149
+00:09:04,360 --> 00:09:10,670
+That 30K a month moment, was that just like a couple big customers or was it like very like diverse?
+
+150
+00:09:10,720 --> 00:09:16,759
+It's just one and I don't I don't know if I ever talked about like who that was and if they even know it, but I think they suspect it.
+
+151
+00:09:16,809 --> 00:09:18,546
+It was a company in New York called Mage.
+
+152
+00:09:18,596 --> 00:09:21,004
+They're doing like a Stable Diffusion company.
+
+153
+00:09:21,054 --> 00:09:29,883
+So at some point, you know, in in in the first I think first quarter of of 2020 three, I think they were like 80-90% of our revenue.
+
+154
+00:09:29,933 --> 00:09:35,867
+But but then after that, you know, it started diversifying a little bit and late 2023 we we got Suno as a big customer.
+
+155
+00:09:35,917 --> 00:09:38,003
+They were a big chunk of our revenue for a while, too.
+
+156
+00:09:38,053 --> 00:09:42,670
+But then, you know, it's over time like we actually have really good revenue diversification now.
+
+157
+00:09:42,720 --> 00:09:43,150
+Yeah.
+
+158
+00:09:43,200 --> 00:09:47,819
+For the stable diffusion stuff, I remember using it for like comfy UI.
+
+159
+00:09:47,869 --> 00:09:51,870
+I'm assuming a lot of people you were using comfy UI, like running comfy UI workflows on it.
+
+160
+00:09:51,920 --> 00:09:56,990
+Some people were, but but I I think the people that were using Modal, they tended to be more like low-level stuff.
+
+161
+00:09:57,040 --> 00:09:58,310
+Like they did like complicated stuff.
+
+162
+00:09:58,360 --> 00:10:00,590
+What they like with Modal is like it's always been pretty hackable.
+
+163
+00:10:00,640 --> 00:10:01,310
+Mhm.
+
+164
+00:10:01,360 --> 00:10:01,660
+So,
+
+165
+00:10:01,568 --> 00:10:08,842
+they they deployed their own custom workflows with adapters and custom in friends and and a lot of optimizations and and all the all the
+
+166
+00:10:08,892 --> 00:10:15,670
+stuff we had done in order to get the developer experience to be really good turned out to be really good for also running production workloads.
+
+167
+00:10:15,720 --> 00:10:18,667
+Uh cuz auto scaling turns out to be actually a very similar problem.
+
+168
+00:10:18,717 --> 00:10:21,670
+Like you want to scale up containers up and down very fast.
+
+169
+00:10:21,720 --> 00:10:26,030
+Uh so, we we just happened to be like very well positioned to to capture a lot of those workloads in the early days.
+
+170
+00:10:26,080 --> 00:10:28,531
+Did tools for auto scaling like not exist?
+
+171
+00:10:28,581 --> 00:10:30,550
+Like why did you have to build those yourself?
+
+172
+00:10:30,600 --> 00:10:39,543
+In general, like my thesis is like, you know, every new sort of era of like, you know, technology kind of runs up against limitations of of tools.
+
+173
+00:10:39,593 --> 00:10:46,958
+Uh you know, whether that's you look back, you know, like the web or the cloud or, you know, mobile or PCs or or, you know, AI or whatever.
+
+174
+00:10:47,008 --> 00:10:50,672
+So, so I I I think, you know, it's of often the case that tools exist.
+
+175
+00:10:50,722 --> 00:10:53,816
+But but they're often not like particularly good.
+
+176
+00:10:53,866 --> 00:10:58,163
+And and and often you you kind of need to rethink a lot of those tools in order to reap the benefits of,
+
+177
+00:10:58,213 --> 00:11:02,014
+you know, and and really, you know, turbocharge and start building for this new world.
+
+178
+00:11:02,064 --> 00:11:06,296
+And then you saw this with cloud, you know, we had to invent things like Kubernetes and Docker and things like that.
+
+179
+00:11:06,346 --> 00:11:14,002
+And then in in in a similar way, you know, like with with gen AI, you could build these things on the sort of prior generation of tools.
+
+180
+00:11:14,052 --> 00:11:18,308
+Like you you can't you can build these things on top of Kubernetes and Docker and and these things.
+
+181
+00:11:18,358 --> 00:11:21,168
+But but but those technologies are built for a very different type of workload.
+
+182
+00:11:21,218 --> 00:11:24,463
+They're built for a very sort of steady work steady back-end workloads.
+
+183
+00:11:24,513 --> 00:11:31,491
+They have an even, you know, steady number of requests, like running at a pretty low utilization cuz CPUs are normally pretty cheap.
+
+184
+00:11:31,541 --> 00:11:31,902
+And so,
+
+185
+00:11:31,932 --> 00:11:35,773
+people don't really worry so much about cost and but now you're entering this new world and
+
+186
+00:11:35,823 --> 00:11:41,440
+you have you know very expensive GPUs you want to manage capacity and and utilization you have very
+
+187
+00:11:41,490 --> 00:11:46,806
+large models that you need to load over network into CPU into GPU and and it it turns
+
+188
+00:11:46,856 --> 00:11:50,797
+out like a lot of these tools like you know like they're they're just not built for that.
+
+189
+00:11:50,847 --> 00:11:56,986
+So so we felt that you know we we had to rebuild a lot of that you know building our own I mentioned the file system but we also spent
+
+190
+00:11:57,036 --> 00:11:59,910
+a lot of time over the last few years like building you know some really
+
+191
+00:11:59,960 --> 00:12:04,704
+cool stuff around like CPU snapshotting GPU snapshotting and auto we built our own auto
+
+192
+00:12:04,754 --> 00:12:08,708
+scaler and scheduler and and and and all kinds of capacity management tools and we
+
+193
+00:12:08,758 --> 00:12:12,336
+kind of feel like you have to do that because like you can't build you
+
+194
+00:12:12,386 --> 00:12:19,079
+know for this new generation of of software on top of you can't build like a wrapper on top of the old stuff in order to to do the new stuff.
+
+195
+00:12:19,129 --> 00:12:21,670
+You kind of need to start over a little bit from scratch.
+
+196
+00:12:21,720 --> 00:12:26,790
+So I guess like the auto scaling stuff like did you did you see any like um
+
+197
+00:12:26,840 --> 00:12:32,390
+weird behaviors on the platform like was there anything that like broke while you guys were scaling?
+
+198
+00:12:32,440 --> 00:12:35,653
+I mean capacity is always from time to time been been a challenge like how do you
+
+199
+00:12:35,703 --> 00:12:41,255
+get like you know hundreds and thousands and tens of thousands of GPUs so that's that's always challenging.
+
+200
+00:12:41,305 --> 00:12:47,741
+We had to go multi-region very early so I think that was like kind of a fateful decision in hindsight like doing that and kind of just biting
+
+201
+00:12:47,791 --> 00:12:53,710
+the bullet and building it like we always thought of like our our capacity management is like one big pool like it's like one big pool of it
+
+202
+00:12:53,760 --> 00:12:59,660
+over the the entire world like we don't think of it as like separate clusters running in each region and so that that was like one of the
+
+203
+00:12:59,710 --> 00:13:06,261
+like very consequential decisions we made early to kind of think about it that way so I don't know if there's like been like you know specific issues.
+
+204
+00:13:06,311 --> 00:13:13,928
+I mean we've obviously had bugs and you know outages and I hate you know as much as I you know would love for Modal to be 100% uptime you know
+
+205
+00:13:13,978 --> 00:13:17,584
+and and I think recently we've basically hit four or five nines but throughout the history
+
+206
+00:13:17,634 --> 00:13:21,230
+of Modal of course we've had you know run up against scaling issues things like that.
+
+207
+00:13:21,280 --> 00:13:25,097
+The GPU market and well actually before that.
+
+208
+00:13:25,147 --> 00:13:30,648
+So So, guys use AWS like GCP, like all these cloud providers underneath?
+
+209
+00:13:30,698 --> 00:13:33,590
+Like, do you also buy any infrastructure or no?
+
+210
+00:13:33,640 --> 00:13:36,550
+Let's talk a bit about like cloud capacity because I think it's actually changed a lot.
+
+211
+00:13:36,600 --> 00:13:44,180
+Like, in in the first few years, we did we got almost all the capacity pretty much from from the hyperscalers, spot and on-demand capacity,
+
+212
+00:13:44,230 --> 00:13:52,670
+mostly spot capacity, running in all the different regions, you know, using uh initially AWS, but also GCP and and over time Azure.
+
+213
+00:13:52,720 --> 00:14:01,470
+Uh we we started renting some capacity from Oracle pretty early cuz we wanted um 8 tons and 8 100s, and we got really good rates on those.
+
+214
+00:14:01,520 --> 00:14:05,190
+Uh and and over time we added a couple more clouds like doing reservations,
+
+215
+00:14:05,240 --> 00:14:13,590
+but but like still up until like actually end of last year, like most of our capacity was either spot or or 1-year reservations.
+
+216
+00:14:13,640 --> 00:14:16,660
+Spot means you're just like renting it right there and then Exactly.
+
+217
+00:14:16,710 --> 00:14:19,110
+Yeah, and it's also preemptible, which we had to deal with.
+
+218
+00:14:19,160 --> 00:14:25,430
+Um but but it sort of works in aggregate cuz you can sort of just, you know, aggregate capacity from many, you know, hundreds of regions, basically.
+
+219
+00:14:25,480 --> 00:14:28,790
+So, that that that model worked really well until we started running up again.
+
+220
+00:14:28,840 --> 00:14:33,008
+I mean, first of all, like Modal started growing like very fast, and so we needed more capacity.
+
+221
+00:14:33,058 --> 00:14:36,325
+But fundamentally, also like the cloud market started changing a lot.
+
+222
+00:14:36,375 --> 00:14:44,301
+Um so, in the last year, basically, now in order to get the capacity we need, we have to work with a much larger set of clouds.
+
+223
+00:14:44,351 --> 00:14:47,630
+We actually work with almost 25 clouds at this point.
+
+224
+00:14:47,680 --> 00:14:52,960
+And in many cases, um in order to get the capacity we want, like we we have to go and do,
+
+225
+00:14:53,010 --> 00:14:58,056
+you know, 3-plus year deals, and you have to pay a meaningful amount of money up front.
+
+226
+00:14:58,106 --> 00:15:00,869
+Uh and and you're locking in pricing on on a 3-year term, right?
+
+227
+00:15:00,919 --> 00:15:08,717
+So, you know, like and and and so we have to spend the entire, you know, last 6 to 9 months, like, you know, kind of rethinking how we get capacity.
+
+228
+00:15:08,767 --> 00:15:13,350
+We had to build a whole procurement like desk, like we have like four guys working full-time, basically.
+
+229
+00:15:13,400 --> 00:15:19,081
+All they're doing is like procuring capacity, calling the clouds, you know, doing deals, vetting the capacity.
+
+230
+00:15:19,131 --> 00:15:24,879
+We had to build a whole engineering team basically you have people just like managing like bare metal capacity from all
+
+231
+00:15:24,929 --> 00:15:31,896
+over the world and dealing with network issues and bad drives and GPUs falling off the bus and and all these things.
+
+232
+00:15:31,946 --> 00:15:33,350
+We don't own capacity.
+
+233
+00:15:33,400 --> 00:15:33,950
+Mhm.
+
+234
+00:15:34,000 --> 00:15:38,502
+We rent all the capacity so far, um you know, on on on typically these 3-year deals.
+
+235
+00:15:38,552 --> 00:15:40,110
+And that's like a big decision.
+
+236
+00:15:40,160 --> 00:15:40,851
+Like should we buy?
+
+237
+00:15:40,901 --> 00:15:43,688
+Should Should we you know, you know, or should we keep renting?
+
+238
+00:15:43,738 --> 00:15:46,708
+I I'm actually like not like mega dogmatic about it.
+
+239
+00:15:46,758 --> 00:15:50,586
+I I think renting is nice because there's a certain amount of capital efficiency to it.
+
+240
+00:15:50,636 --> 00:15:56,670
+If you're buying, you know, like I mean, first of all, there's an obvious like operational complexity of it.
+
+241
+00:15:56,720 --> 00:16:04,270
+Like you have to, you know, deal with vendors and suppliers and and, you know, power and and and cables and and all kinds of stuff.
+
+242
+00:16:04,320 --> 00:16:06,372
+But there's also, you know, financial complexity to it.
+
+243
+00:16:06,422 --> 00:16:07,354
+Like how do you fund it?
+
+244
+00:16:07,404 --> 00:16:12,670
+Like should you raise equity, you know, and and you can raise a billion dollars and and go buy hardware for it.
+
+245
+00:16:12,720 --> 00:16:14,959
+That's a very diluted way to do it.
+
+246
+00:16:15,009 --> 00:16:17,706
+Um you can raise debt, but you know, if you raise debt, you know,
+
+247
+00:16:17,756 --> 00:16:22,807
+you you typically want to have like locked-in long-term revenue to to to pay the interest rates.
+
+248
+00:16:22,857 --> 00:16:25,230
+So that's also not trivial.
+
+249
+00:16:25,280 --> 00:16:31,485
+But, you know, like we look at the economics, we look at the the the operational complexity, we look at the risks.
+
+250
+00:16:31,535 --> 00:16:35,150
+Uh it's a complex trade-off and and we're open to to to to buying.
+
+251
+00:16:35,200 --> 00:16:37,955
+We we're we're sort of There's all other constructs, too.
+
+252
+00:16:38,005 --> 00:16:44,046
+Like we're it's To get the capacity we need for for 2027, it's going to take a lot of work on on,
+
+253
+00:16:44,096 --> 00:16:47,390
+you know, going a lot of different avenues to to to lock it up.
+
+254
+00:16:47,440 --> 00:16:51,990
+So, do you have to hire a lot of like finance people to do all this stuff or not really?
+
+255
+00:16:52,040 --> 00:16:56,738
+You know, I've had to spend a lot of time on this and we we've had to to to spend a lot of time on this.
+
+256
+00:16:56,788 --> 00:17:03,105
+And I I do think over time, I mean, there there is a lot of, you know, these are very expensive assets, uh the hardware.
+
+257
+00:17:03,155 --> 00:17:05,905
+And, you know, I think I mean, it's kind of staggering.
+
+258
+00:17:05,955 --> 00:17:12,637
+You're starting to see like AI investment starting to become like several percentage points of of of GDP of the US and you know,
+
+259
+00:17:12,687 --> 00:17:17,313
+starting to see like interest rates in in America shooting up in the last few weeks.
+
+260
+00:17:17,363 --> 00:17:18,041
+And I I mean,
+
+261
+00:17:18,091 --> 00:17:25,188
+I like at this stage like you know and then you go and look at the neoclass like these are very very sophisticated financial engineering companies and
+
+262
+00:17:25,238 --> 00:17:31,750
+so yeah we we look at that and you know we look at all the options and and it's possible we might have to do similar things ourselves.
+
+263
+00:17:31,800 --> 00:17:40,438
+I wouldn't want to like I would rather focus on being you know like a very lean software company like doing the things we're good at.
+
+264
+00:17:40,488 --> 00:17:46,838
+I don't think it's good in general for software companies to own hard assets you know in the same way as
+
+265
+00:17:46,888 --> 00:17:53,574
+like should you own your office like I I don't think that's necessarily the right uh solution for for most companies.
+
+266
+00:17:53,624 --> 00:17:57,270
+But of course like in order to get the capacity we want like you know everything is on the table.
+
+267
+00:17:57,320 --> 00:18:02,990
+Yeah and I guess the supply is going to be constrained for a while so you kind of have to do that.
+
+268
+00:18:03,040 --> 00:18:06,310
+Like do you do you agree with that or do you think this is just like a moment in time?
+
+269
+00:18:06,360 --> 00:18:07,600
+I don't necessarily agree with that.
+
+270
+00:18:07,650 --> 00:18:14,136
+I mean like Nvidia's delivering you know several hundred thousand black walls you know a month right and and I I I don't want to say like
+
+271
+00:18:14,186 --> 00:18:23,150
+the market is like 100% efficient but like you know in general like if you're willing to pay a high price uh you can get GPU capacity right?
+
+272
+00:18:23,200 --> 00:18:29,167
+Like if you're willing to pay more than everyone else and and of course Anthropic and Open AI is buying up as much as they can
+
+273
+00:18:29,217 --> 00:18:33,181
+and but fundamentally like there's constantly supply coming on the market and and
+
+274
+00:18:33,231 --> 00:18:37,710
+so I don't I don't necessarily think it's like a fully cornered resource.
+
+275
+00:18:37,760 --> 00:18:39,550
+Prices are going up.
+
+276
+00:18:39,600 --> 00:18:42,710
+And and I do think it's worth kind of reflecting on that as like the normal
+
+277
+00:18:42,760 --> 00:18:47,185
+state of hardware is like it's like out of gravity like eventually hardware prices always go down.
+
+278
+00:18:47,235 --> 00:18:52,110
+So we're a little bit in like a weird sort of period of time where like hardware prices are going up.
+
+279
+00:18:52,160 --> 00:18:56,090
+And you know it it it's hard to say you know how how long is this going to last you know could be
+
+280
+00:18:56,140 --> 00:19:02,200
+another 6 months could be another 36 months like it's really hard to to to know how how how long and but but I
+
+281
+00:19:02,250 --> 00:19:07,750
+I fundamentally don't know if like it's it's true to say like you know you need to buy capacity in order to to
+
+282
+00:19:07,800 --> 00:19:14,205
+to me that's a little bit the sort of almost like the uh great toilet paper shortage of you know the pandemic or whatever,
+
+283
+00:19:14,255 --> 00:19:14,555
+right?
+
+284
+00:19:14,520 --> 00:19:17,870
+Like, you know, at least this like, you know, run on the bank type situations.
+
+285
+00:19:17,920 --> 00:19:21,607
+And but that being said, like, you know, capacity is going to be tight for a while.
+
+286
+00:19:21,657 --> 00:19:23,099
+And and, you know, prices are going up.
+
+287
+00:19:23,149 --> 00:19:28,977
+And, you know, luckily, I think you know, it's not even necessarily bad for us if prices go up cuz cuz,
+
+288
+00:19:29,027 --> 00:19:31,955
+you know, scarcity also means like we can charge more from our customers.
+
+289
+00:19:32,005 --> 00:19:37,399
+And and, you know, and the fact that we have a lot of reservations locked in at a rate means like to some extent,
+
+290
+00:19:37,449 --> 00:19:40,750
+we effectively like long GPU prices already.
+
+291
+00:19:40,800 --> 00:19:45,554
+Um, so, um, I I don't necessarily worry too much about prices going up.
+
+292
+00:19:45,604 --> 00:19:47,596
+I do worry more about actually prices collapsing.
+
+293
+00:19:47,646 --> 00:19:50,166
+I don't think that's going to happen anytime soon.
+
+294
+00:19:50,216 --> 00:19:53,950
+Uh, but I think that would be a quite bad thing for a lot of the players in the market.
+
+295
+00:19:54,000 --> 00:19:55,110
+Why would that be bad?
+
+296
+00:19:55,160 --> 00:20:00,510
+I think it would be bad for if for anyone who's locked in a lot of supply.
+
+297
+00:20:00,560 --> 00:20:02,544
+Yeah, cuz they paid way too much in They paid too much.
+
+298
+00:20:02,594 --> 00:20:05,026
+You know, the so there's a risk of buying at the top, right?
+
+299
+00:20:05,076 --> 00:20:07,533
+And and again, like I I don't worry about that that much.
+
+300
+00:20:07,583 --> 00:20:11,366
+Like I don't I don't think it's going to be like, you know, it's going to happen anytime soon.
+
+301
+00:20:11,416 --> 00:20:15,926
+But like, you know, like I said, like hardware prices in the very long run, they tend to go down.
+
+302
+00:20:15,976 --> 00:20:18,657
+And so, it's it's worth, you know, reflecting on that, right?
+
+303
+00:20:18,707 --> 00:20:23,793
+Right right like right now, I think I think your your capacity is constrained.
+
+304
+00:20:23,843 --> 00:20:28,430
+And and that leads to sort of, you know, in economic terms, there's a scarcity rent, right?
+
+305
+00:20:28,480 --> 00:20:30,748
+Like, who captured the scarcity rent?
+
+306
+00:20:30,798 --> 00:20:32,630
+I I think it primarily goes to two places.
+
+307
+00:20:32,680 --> 00:20:36,171
+Mostly Nvidia, but of course, but also to some extent, Neo Clouds.
+
+308
+00:20:36,221 --> 00:20:42,366
+Like, Neo Clouds and in general, like, you know, anyone owning capacity has better economics.
+
+309
+00:20:42,416 --> 00:20:47,910
+Like, that's undeniably true today with capacity being constrained.
+
+310
+00:20:47,960 --> 00:20:51,939
+Long term, you know, in the very long run, I don't think that's necessarily entirely true, right?
+
+311
+00:20:51,989 --> 00:20:55,630
+Like, there's always going to be a little bit of a premium you can get from owning GPUs.
+
+312
+00:20:55,680 --> 00:21:01,904
+But is it worth the risk, you know, is it worth the risk like holding these like very expensive assets on your balance sheet?
+
+313
+00:21:01,954 --> 00:21:02,850
+I'm not so sure.
+
+314
+00:21:02,900 --> 00:21:04,165
+But, you know, we're going to see.
+
+315
+00:21:04,215 --> 00:21:06,027
+Like, it's going to take a a years to get through this.
+
+316
+00:21:06,077 --> 00:21:09,877
+And and and in the long run, you know, we might own some, we might rent some,
+
+317
+00:21:09,927 --> 00:21:14,510
+maybe a combination, maybe do some other crazy stuff, joint ventures, who knows.
+
+318
+00:21:14,560 --> 00:21:17,655
+Maybe some complex SPVs or whatever.
+
+319
+00:21:17,705 --> 00:21:19,270
+Um everything is on the table.
+
+320
+00:21:19,320 --> 00:21:22,455
+How do you compete with OpenAI and Anthropic in buying GPU capacity?
+
+321
+00:21:22,505 --> 00:21:25,990
+I'm assuming they'd want to like buy up literally everything that's available.
+
+322
+00:21:26,040 --> 00:21:32,419
+They are and and I and I think what you're seeing is um you know, a lot of the the the price is going up is a reflection of that.
+
+323
+00:21:32,469 --> 00:21:35,979
+That being said, you know, Nvidia is shipping a lot of stuff.
+
+324
+00:21:36,029 --> 00:21:40,990
+I think also like to some extent like Nvidia's like kind of prefer a little bit of a diversification.
+
+325
+00:21:41,040 --> 00:21:44,135
+Like they don't want like, you know, small amount of large buyers.
+
+326
+00:21:44,185 --> 00:21:49,311
+In much in the same way as you see, you know, hyperscalers getting a little bit of a constrained allocation.
+
+327
+00:21:49,361 --> 00:21:55,958
+Uh I I think, you know, also Nvidia prefers to see, you know, a lot of new clouds and a lot of alternative clouds like getting more allocation.
+
+328
+00:21:56,008 --> 00:22:03,334
+And I think a little bit what we see in the market is also this is more speculation, but I but I think we see,
+
+329
+00:22:03,384 --> 00:22:10,652
+you know, smaller clouds that are a little bit more sort of risky to work with being more of an opportunity for us.
+
+330
+00:22:10,702 --> 00:22:13,734
+Like where, you know, maybe Nvidia is all right,
+
+331
+00:22:13,784 --> 00:22:20,116
+Anthropic and OpenAI my feeling is like they prefer to buy from like the the tried and
+
+332
+00:22:20,166 --> 00:22:23,053
+true Uh and part of it is also because they had to do a lot of training runs,
+
+333
+00:22:23,103 --> 00:22:24,771
+so they need to have like very large blocks.
+
+334
+00:22:24,821 --> 00:22:32,318
+But there's plenty of capacity out there, you know, you can get 32 nodes in Armenia, you can get 128 nodes in Indonesia.
+
+335
+00:22:32,368 --> 00:22:37,321
+Like, you know, like we love that kind of Like, you know, so so we can go out there and like get a lot of,
+
+336
+00:22:37,371 --> 00:22:41,110
+you know, smaller capacity all over the world pretty good prices.
+
+337
+00:22:41,160 --> 00:22:46,036
+Is it pretty much just like if someone offers you like a certain number of GPUs, like that's all you care about?
+
+338
+00:22:46,086 --> 00:22:52,950
+Is there nothing like, oh, you care about like how reliable it is, you know, is it just some like janky warehouse that someone has these in?
+
+339
+00:22:53,000 --> 00:22:55,169
+I mean, sometimes it's kind of a janky warehouse.
+
+340
+00:22:55,219 --> 00:22:58,955
+It feels like, you know, but but like we do have like a spec sheet basically.
+
+341
+00:22:59,005 --> 00:23:01,855
+Like when we talk to vendors, the first thing we do is we send them a spec sheet.
+
+342
+00:23:01,905 --> 00:23:04,029
+We say, "We need this number of IOPS.
+
+343
+00:23:04,079 --> 00:23:08,586
+We need, you know, like the CPU needs to be at least at least, you know,
+
+344
+00:23:08,636 --> 00:23:11,965
+have have this many, you know, whatever the pass mark scores or whatever it is.
+
+345
+00:23:12,015 --> 00:23:19,310
+We need to see like, you know, minimum, you know, north north south bandwidth egress and and ingress."
+
+346
+00:23:19,360 --> 00:23:22,030
+Uh so so we do have a list of requirements.
+
+347
+00:23:22,080 --> 00:23:26,972
+Often we try to do like an acceptance testing period where we get like one node and then run some tests.
+
+348
+00:23:27,022 --> 00:23:31,265
+Over time, you know, like to some extent it also involves a little bit of a leap of faith.
+
+349
+00:23:31,315 --> 00:23:35,719
+You know, sometimes we sign very big commitments, you know, tens or hundreds of millions of dollars,
+
+350
+00:23:35,769 --> 00:23:39,280
+and we start working with the vendor that we still don't fully know.
+
+351
+00:23:39,330 --> 00:23:42,144
+And, you know, over time like you know, we'll see.
+
+352
+00:23:42,194 --> 00:23:46,775
+You know, and and and I think over like a little bit of like is there's a little bit of sort of just,
+
+353
+00:23:46,825 --> 00:23:52,290
+you know, our own sort of like, you know, how like semi-analysis has like a cluster max.
+
+354
+00:23:52,340 --> 00:23:56,390
+I kind of feel like we almost like have our own like modal max score internally.
+
+355
+00:23:56,440 --> 00:23:59,386
+Like I know which vendors I like more than others, you know,
+
+356
+00:23:59,436 --> 00:24:05,394
+like and and and we sort of prefer to do additional deals with the vendors that we've seen, you know, very good reliability.
+
+357
+00:24:05,444 --> 00:24:10,570
+Not just that also, like it it's not just reliability, it's also are they very responsive when when we have,
+
+358
+00:24:10,620 --> 00:24:15,037
+you know, support issues, do they fix the issues we ask for, the turnaround time.
+
+359
+00:24:15,087 --> 00:24:18,390
+If things go down, you know, how quickly do they fix it, like things like that.
+
+360
+00:24:18,440 --> 00:24:23,474
+Do you agree that the demand for intelligence is basically infinite?
+
+361
+00:24:23,524 --> 00:24:28,210
+And if so, like why wouldn't you just buy up as much as you as much capacity as possible?
+
+362
+00:24:28,260 --> 00:24:31,150
+And then like if you overbuy, you can just like sell it to somebody else.
+
+363
+00:24:31,200 --> 00:24:36,907
+I think it's very easy to say when there's like a scarce resource, like let's just buy as much as you can.
+
+364
+00:24:36,957 --> 00:24:41,115
+But I think, you know, first of all, like if we bought it today, we couldn't utilize all of it.
+
+365
+00:24:41,165 --> 00:24:43,230
+Like we could use utilize a lot of it, right?
+
+366
+00:24:43,280 --> 00:24:46,190
+But like We can sell it off to somebody else who wants to use it, right?
+
+367
+00:24:46,240 --> 00:24:53,515
+I think the challenge is like if there was like something in the market that happens, there are a lot of correlations that happen at the same time.
+
+368
+00:24:53,565 --> 00:25:04,358
+If, you know, price is going down and utilization going down and the market for reselling capacity goes vanishes at the kind of the same time.
+
+369
+00:25:04,408 --> 00:25:09,517
+I'm sitting here and like I'm I'm extremely aggressive like buying capacity every day and like raising money to buy,
+
+370
+00:25:09,567 --> 00:25:11,732
+you know, so overall I'm I'm very bullish,
+
+371
+00:25:11,782 --> 00:25:19,470
+but like I do want to point out and like, you know, like there are tail risks here and and when those tail risks happen like it could be get very bad.
+
+372
+00:25:19,520 --> 00:25:20,990
+Part of it is like maybe I'm, you know,
+
+373
+00:25:21,040 --> 00:25:24,738
+I'm just old and I've seen this in the past like I was actually had my first job in 1999
+
+374
+00:25:24,788 --> 00:25:30,150
+so I saw the dot com crisis and I've seen the great financial crisis and things like that and you know,
+
+375
+00:25:30,200 --> 00:25:35,471
+like I want to build a company that that is around for like 20 to 30 50 more years, right?
+
+376
+00:25:35,521 --> 00:25:42,430
+Like and and so, you know, I I think we can certainly go out and like buy an insane amount of capacity right now and try to just corner the market.
+
+377
+00:25:42,480 --> 00:25:44,503
+But you know, do you know about the Hunt brothers?
+
+378
+00:25:44,553 --> 00:25:46,932
+It's like a legendary story in trading.
+
+379
+00:25:46,982 --> 00:25:49,270
+They try to corner the silver market.
+
+380
+00:25:49,320 --> 00:25:50,604
+It fell spectacularly.
+
+381
+00:25:50,654 --> 00:25:57,270
+Um, you know, so it's a cornering the market I I think in general like it can be um not not so good idea.
+
+382
+00:25:57,320 --> 00:26:00,461
+Um, and but but we are in general very very aggressive.
+
+383
+00:26:00,511 --> 00:26:02,982
+But but we're we're ramping up, you know,
+
+384
+00:26:03,032 --> 00:26:07,990
+like at an at an aggressive plan that basically matches our demand growth and matches where we want to
+
+385
+00:26:08,040 --> 00:26:13,190
+try to get to at the end of next year in terms of run runway or run rate I mean.
+
+386
+00:26:13,240 --> 00:26:17,229
+Are you only buying up Nvidia stuff or also like, you know,
+
+387
+00:26:17,279 --> 00:26:22,510
+maybe a capacity from other types of companies like are you guys looking at Cerebrium and We're we're looking at it.
+
+388
+00:26:22,560 --> 00:26:26,055
+I I I think the alternative accelerators are starting to get very interesting.
+
+389
+00:26:26,105 --> 00:26:31,441
+It's you know, ironically like every every year in the last five maybe even 10 years I've been saying, you know,
+
+390
+00:26:31,491 --> 00:26:35,863
+like next year it's going to be the year of like non Nvidia accelerators and and then I'm always wrong.
+
+391
+00:26:35,913 --> 00:26:40,227
+But but I do think 2027 might be the year of non Nvidia accelerators finally.
+
+392
+00:26:40,277 --> 00:26:46,282
+So we'll we'll see if I'm wrong this year, too, but so I I you know, AMDs are starting to get like really good scores on certain things.
+
+393
+00:26:46,332 --> 00:26:51,545
+I I think, you know, TPUs are are obviously used very, you know, widely internally at Google.
+
+394
+00:26:51,595 --> 00:26:52,819
+They seem to work really well.
+
+395
+00:26:52,869 --> 00:26:54,090
+I I don't know much about Tranium.
+
+396
+00:26:54,140 --> 00:26:57,386
+I I don't feel like I see quite as But, you know, the the team is very good.
+
+397
+00:26:57,436 --> 00:27:00,430
+I know they're working on a lot of the software stuff.
+
+398
+00:27:00,480 --> 00:27:02,118
+You know, hardware is hard in a in a certain way.
+
+399
+00:27:02,168 --> 00:27:03,136
+Like, software is like easier.
+
+400
+00:27:03,186 --> 00:27:07,030
+And that makes me feel like, you know, if we just fix the sort of software layer for these accelerators,
+
+401
+00:27:07,080 --> 00:27:09,039
+like I think there's going to be a lot of demand for them.
+
+402
+00:27:09,089 --> 00:27:16,590
+And And I think fundamentally, you know, with Nvidia being such a bottleneck, like we'll probably see, you know, more alternative accelerators.
+
+403
+00:27:16,640 --> 00:27:18,761
+That being said, you know, there's bottlenecks further down the pipe.
+
+404
+00:27:18,811 --> 00:27:21,320
+I mean, you know, there's like TSMC and ASML.
+
+405
+00:27:21,370 --> 00:27:24,579
+Maybe like a deeper bottleneck to all of this anyway.
+
+406
+00:27:24,629 --> 00:27:29,750
+Uh but, you know, long term, I think monopolies don't always last.
+
+407
+00:27:29,800 --> 00:27:33,310
+And so, I I'm I think it'd be healthy for the market to have more alternative.
+
+408
+00:27:33,360 --> 00:27:35,489
+As much as I love Nvidia, like to make that clear.
+
+409
+00:27:35,539 --> 00:27:38,581
+Like, I mean, they're obviously an amazing company and with an amazing product.
+
+410
+00:27:38,631 --> 00:27:42,581
+Um I I do expect to see a little bit more divers- diversity in in the market.
+
+411
+00:27:42,631 --> 00:27:46,230
+I also also thinks, you know, like Cerebras and Groq and these things.
+
+412
+00:27:46,280 --> 00:27:49,670
+Yeah, what are your thoughts on like some of those uh providers?
+
+413
+00:27:49,720 --> 00:27:50,712
+I think they're pretty exciting.
+
+414
+00:27:50,762 --> 00:27:54,110
+And, you know, and and you see them doing really well on on certain workloads.
+
+415
+00:27:54,160 --> 00:27:59,630
+And, you know, there there's some interesting, you know, people doing these like hybrid, you know, disaggregated inference where they run,
+
+416
+00:27:59,680 --> 00:28:04,630
+you know, Nvidia for the prefill and and Cerebras for the decode and and things like that. heard of that, actually.
+
+417
+00:28:04,680 --> 00:28:05,843
+Yeah, and, you know, Groq, too.
+
+418
+00:28:05,893 --> 00:28:10,135
+Like, cuz a lot of these things, you know, certain things are compute bound, certain things are memory bound.
+
+419
+00:28:10,185 --> 00:28:11,920
+So, you can sort of mix and match.
+
+420
+00:28:11,970 --> 00:28:13,830
+Uh and I think that's quite exciting.
+
+421
+00:28:13,880 --> 00:28:17,470
+It It starts to get very complex when you're deploying these things in practice.
+
+422
+00:28:17,520 --> 00:28:24,910
+Uh but but I I I do think there's a lot of There's a lot of, you know, opportunity in in in in these sort of, you know, more complex hardware setups.
+
+423
+00:28:24,960 --> 00:28:29,933
+Are there any learnings that you get from uh some of these neo clouds, like I don't know,
+
+424
+00:28:29,983 --> 00:28:34,430
+like Nebius or whatever, and like the way that they're doing things versus like what you're doing?
+
+425
+00:28:34,480 --> 00:28:40,350
+I think one of the things that, you know, is very interesting with with neo clouds is like how can they expand so quickly?
+
+426
+00:28:40,400 --> 00:28:45,708
+I I think actually the most crazy example is like Nscale, which went from like nowhere to like, you know, having like,
+
+427
+00:28:45,758 --> 00:28:51,550
+you know, whatever, hundreds of billions of dollars in in the pipeline despite barely having any capacity.
+
+428
+00:28:51,600 --> 00:28:53,128
+How can neo clouds grow so fast?
+
+429
+00:28:53,178 --> 00:28:56,030
+I mean, there's like an you know, and and and basically the answer is like, you know,
+
+430
+00:28:56,080 --> 00:28:59,805
+and and this might be obvious, but like what they do is like they go out to like,
+
+431
+00:28:59,855 --> 00:29:09,390
+you know, Anthropic or or or or OpenAI or some some big buyer or whatever and they basically say like, "Hey, do you want to buy like 5 years of chips?
+
+432
+00:29:09,440 --> 00:29:11,234
+You know, sign this contract, we give you a good rate."
+
+433
+00:29:11,284 --> 00:29:14,969
+And then they take that contract and then they go to, you know, Wall Street and say, "Look,
+
+434
+00:29:15,019 --> 00:29:21,230
+we got this like, you know, big buyer, you know, they they committed to $10 billion worth of chips.
+
+435
+00:29:21,280 --> 00:29:22,670
+Uh we just need the money right now."
+
+436
+00:29:22,720 --> 00:29:23,910
+And then they go on to raise the money.
+
+437
+00:29:23,960 --> 00:29:29,408
+And then they like, you know, go to like Supermicro and Dell or whatever and Nvidia and like get the hardware and then they install it.
+
+438
+00:29:29,458 --> 00:29:32,790
+And then, you know, now they have like, you know, deliver it to the customer, right?
+
+439
+00:29:32,840 --> 00:29:40,039
+So so you have this like very nice sort of financial construct where you can basically sort of pre-sell things that you haven't even bought.
+
+440
+00:29:40,089 --> 00:29:43,246
+And and that means, you know, you can scale up extremely fast.
+
+441
+00:29:43,296 --> 00:29:47,791
+And so that's what we've seen with these neo clouds is is is they can scale very, very well.
+
+442
+00:29:47,841 --> 00:29:53,368
+I think Modal, because we've always had a little bit more of a PLG focus and and and not the sort of, you know,
+
+443
+00:29:53,418 --> 00:29:59,657
+ability to lock in long-term contracts in the same way, it it's a little bit more challenging from a financial perspective to scale that fast.
+
+444
+00:29:59,707 --> 00:30:04,070
+Uh even though I think, you know, in the long run, like we'll get to the same point.
+
+445
+00:30:04,120 --> 00:30:10,003
+But I think that's been kind of a fascinating thing to see with these neo clouds and especially like CoreWeave and and those big ones,
+
+446
+00:30:10,053 --> 00:30:11,176
+um they've been very,
+
+447
+00:30:11,226 --> 00:30:18,390
+very savvy with, you know, how they raise money and you know, how to, you know, think about GPU as collateral for loans and all these things.
+
+448
+00:30:18,440 --> 00:30:24,059
+What's the relevance of like I I forget who it was, but like some like financial company was like,
+
+449
+00:30:24,109 --> 00:30:26,190
+"Oh, we're going to make" Oh, I think it was Nvidia, actually.
+
+450
+00:30:26,240 --> 00:30:30,814
+They were they were like, "We are going to turn GPUs into an asset class."
+
+451
+00:30:30,864 --> 00:30:35,163
+Is that just cuz like they need to raise money and they're like trying to figure out where to get the money from?
+
+452
+00:30:35,213 --> 00:30:36,950
+Like, what's the relevance of that?
+
+453
+00:30:37,000 --> 00:30:39,457
+I mean, there's a bunch of startups, I don't know if you're thinking about that.
+
+454
+00:30:39,507 --> 00:30:43,332
+There's like Silicon Data and Computer Exchange and like Orin and and and a
+
+455
+00:30:43,382 --> 00:30:47,343
+few other ones that are like basically like trying to get to like you know,
+
+456
+00:30:47,393 --> 00:30:52,673
+creating price indices and indexes and and and trading derivatives and things like that.
+
+457
+00:30:52,723 --> 00:30:53,868
+I think it's interesting.
+
+458
+00:30:53,918 --> 00:30:59,111
+Like I I think with compute like it does there are a number of challenges with compute as an asset class.
+
+459
+00:30:59,161 --> 00:31:02,910
+Like it it's definitely not as homogeneous as other asset classes.
+
+460
+00:31:02,960 --> 00:31:11,188
+Uh you have different network and different locations and and and different disks and and CPUs and all kinds of stuff and reliability.
+
+461
+00:31:11,238 --> 00:31:15,057
+I mean that being said like you can say the same thing about oil and like we kind of created like you know,
+
+462
+00:31:15,107 --> 00:31:18,226
+relatively commoditized, you know, tradeable assets out of oil.
+
+463
+00:31:18,276 --> 00:31:19,445
+It remains to be seen.
+
+464
+00:31:19,495 --> 00:31:20,783
+Like I do think, you know,
+
+465
+00:31:20,833 --> 00:31:26,539
+at the scale where we are with the sort of AI like data center GPU deployments like we do need to
+
+466
+00:31:26,589 --> 00:31:31,950
+be a little bit smarter with like risk hedging and and and and how we share risks and and and you know,
+
+467
+00:31:32,000 --> 00:31:35,642
+having more like sort of insurance and and things like that.
+
+468
+00:31:35,692 --> 00:31:39,786
+So, I I I I I I'm I'm very happy that people are thinking a lot about this.
+
+469
+00:31:39,836 --> 00:31:45,950
+That being said like I'm I'm I'm not entirely sure if we're going to see, you know, GPUs becoming sort of, you know,
+
+470
+00:31:46,000 --> 00:31:53,990
+whatever the sort of Henry Hub like, you know, Brent crude type like, you know, super commoditized like tradeable asset.
+
+471
+00:31:54,040 --> 00:31:54,476
+Yeah.
+
+472
+00:31:54,526 --> 00:31:58,910
+I want to shift the conversation to Modal Sandboxes.
+
+473
+00:31:58,960 --> 00:31:59,470
+Yeah.
+
+474
+00:31:59,520 --> 00:32:03,190
+I guess like before we do that, what are the different products that Modal has?
+
+475
+00:32:03,240 --> 00:32:07,650
+It's I guess like the main product obviously is like the the GPUs.
+
+476
+00:32:07,700 --> 00:32:09,066
+Then you have Modal Sandboxes.
+
+477
+00:32:09,116 --> 00:32:10,390
+Is there anything else?
+
+478
+00:32:10,440 --> 00:32:16,870
+I think of the like the two big products that we have is basically number one is Modal Functions and number two is Modal Sandboxes.
+
+479
+00:32:16,920 --> 00:32:20,950
+So, so with Modal Functions we we launched that, you know, back in 2021.
+
+480
+00:32:21,000 --> 00:32:27,310
+It was the idea of like serverless functions that are very very easy to deploy and very easy to scale and we manage all the capacity.
+
+481
+00:32:27,360 --> 00:32:33,271
+That turned out to be really really good for inference and it turned out to be really good for managing GPUs and and running on things like that.
+
+482
+00:32:33,321 --> 00:32:38,054
+But we actually never had like, you know, dedicated like inference product or like a GPU product per se.
+
+483
+00:32:38,104 --> 00:32:40,806
+Like we we we never thought of Modal as like a Neo Cloud and and I
+
+484
+00:32:40,856 --> 00:32:44,786
+think there's like a risk of like getting sucked in that direction and becoming a Neo Cloud.
+
+485
+00:32:44,836 --> 00:32:47,894
+Like just selling, you know, sort of what I think was like rectangular.
+
+486
+00:32:47,944 --> 00:32:51,150
+Like here's like a 3-year, you get this many GPUs.
+
+487
+00:32:51,200 --> 00:32:56,809
+Modal's always been very good at like you deploy something, you can kind of scale it up, you have this like very cyclical or like bursty stuff.
+
+488
+00:32:56,859 --> 00:32:58,098
+Like we manage all the capacity.
+
+489
+00:32:58,148 --> 00:33:04,403
+And the beautiful thing is like cuz we have many, many thousands of customers, we can sort of aggregate that capacity and get very smooth workloads.
+
+490
+00:33:04,453 --> 00:33:08,678
+You know, very smooth aggregate demand, which we can manage very, very efficiently.
+
+491
+00:33:08,728 --> 00:33:11,590
+So Modal Functions was the the the core.
+
+492
+00:33:11,640 --> 00:33:13,430
+We launched that in 2021.
+
+493
+00:33:13,480 --> 00:33:16,016
+Like I mentioned, we started seeing product market fit in 2023.
+
+494
+00:33:16,066 --> 00:33:20,150
+And now, you know, it's about 2/3 of our revenue and and and empowering a lot of, you know,
+
+495
+00:33:20,200 --> 00:33:23,847
+in practice it's mostly inference, but but you can use it for all kinds of other stuff.
+
+496
+00:33:23,897 --> 00:33:26,651
+Modal Sandboxes, we launched that in 2023.
+
+497
+00:33:26,701 --> 00:33:31,650
+And it's actually kind of, you know, took a while to see product market fit, similar to functions.
+
+498
+00:33:31,700 --> 00:33:32,970
+Why did we launch it?
+
+499
+00:33:33,020 --> 00:33:37,078
+We realized a lot of people we talked to were using LLMs to output code.
+
+500
+00:33:37,128 --> 00:33:39,378
+This is like me and Akshat talking over lunch one day.
+
+501
+00:33:39,428 --> 00:33:42,221
+We're like, maybe they need a place to run that code.
+
+502
+00:33:42,271 --> 00:33:46,230
+And and and we realized like actually we kind of have like a lot of the infrastructure already
+
+503
+00:33:46,280 --> 00:33:51,561
+to just take code and run it cuz we've already built the primitives for like managing containers and isolation.
+
+504
+00:33:51,611 --> 00:33:56,510
+We already had, you know, gVisor as an isolation primitive and and and things like that.
+
+505
+00:33:56,560 --> 00:34:04,110
+So we got kind of excited about that idea and and and Akshat wrote a prototype and launched it in basically 1 day or 2 days or something like that.
+
+506
+00:34:04,160 --> 00:34:06,663
+Zero like we We saw like very little like growth.
+
+507
+00:34:06,713 --> 00:34:08,412
+I don't want to like trivialize it.
+
+508
+00:34:08,462 --> 00:34:09,470
+We did see some growth.
+
+509
+00:34:09,520 --> 00:34:13,349
+Like there were like some sort of, you know, growth. so.
+
+510
+00:34:13,399 --> 00:34:16,710
+Yeah, it was it was 2023 and like, you know, like some people picked it up.
+
+511
+00:34:16,760 --> 00:34:20,602
+Like we had some early users who kind of enjoyed it for for certain things.
+
+512
+00:34:20,652 --> 00:34:27,642
+But but like overall like it was like a pretty insignificant source of revenue into going into the summer of 2023.
+
+513
+00:34:27,692 --> 00:34:31,168
+So 2 years later, we even discussed like Do we even need this product?
+
+514
+00:34:31,218 --> 00:34:32,829
+Like should we shut it down?
+
+515
+00:34:32,879 --> 00:34:34,703
+Then it just started exploding.
+
+516
+00:34:34,753 --> 00:34:41,669
+So, 2023 I And And I think what what really happened in 2023 was like LLMs got really good at generating code.
+
+517
+00:34:41,719 --> 00:34:42,845
+In 2023?
+
+518
+00:34:42,895 --> 00:34:43,629
+2023?
+
+519
+00:34:43,679 --> 00:34:44,710
+I mean, it was like around that time.
+
+520
+00:34:44,760 --> 00:34:45,060
+Like,
+
+521
+00:34:44,975 --> 00:34:52,682
+I I feel like that was like when they went from like being able to like refactor functions and like write snippets to like generating like full apps,
+
+522
+00:34:52,732 --> 00:34:53,132
+right?
+
+523
+00:34:53,166 --> 00:34:59,950
+And and And so, we started seeing a lot of growth coming from like vibe coding, you know, companies like Lava Ball and and other ones.
+
+524
+00:35:00,000 --> 00:35:04,430
+Uh and and then, you know, companies like Ramp started using Modal for background agents.
+
+525
+00:35:04,480 --> 00:35:11,273
+And then we see started seeing tremendous growth coming from a number of Neo Labs doing things like reinforcement learning on Modal Sandboxes.
+
+526
+00:35:11,323 --> 00:35:14,571
+So, Sandboxes is now about a third of our revenue.
+
+527
+00:35:14,621 --> 00:35:17,401
+You know, we we consider it like basically like our our second product.
+
+528
+00:35:17,451 --> 00:35:21,466
+And And to me, it's like really exciting cuz like even back in the early days of Modal,
+
+529
+00:35:21,516 --> 00:35:25,950
+I always knew that Modal, you know, is about like creating a whole toolkit of products.
+
+530
+00:35:26,000 --> 00:35:31,723
+Like, we always wanted to be almost like a cloud, you know, you have the storage and the compute and a bunch of different ways to work with it.
+
+531
+00:35:31,773 --> 00:35:37,139
+We always wanted to be a multi-product vendor, but that wasn't necessarily true in practice until like now,
+
+532
+00:35:37,189 --> 00:35:39,851
+where like I think now it's like kind of clear.
+
+533
+00:35:39,901 --> 00:35:40,606
+We have functions.
+
+534
+00:35:40,656 --> 00:35:41,323
+We have Sandboxes.
+
+535
+00:35:41,373 --> 00:35:42,630
+We're working on a bunch of other stuff, too.
+
+536
+00:35:42,680 --> 00:35:46,590
+Working on training, working on batch, working on a bunch of other stuff.
+
+537
+00:35:46,640 --> 00:35:49,805
+So, so to me, that sort of evolution into becoming like a multi-product company,
+
+538
+00:35:49,855 --> 00:35:56,110
+I think it's been amazing cuz that was that was always so core to the vision, even in the very early decks.
+
+539
+00:35:56,160 --> 00:35:57,978
+I I had a bunch of slides on this.
+
+540
+00:35:58,028 --> 00:36:02,710
+Uh but but it wasn't necessarily true to the external world uh until recently.
+
+541
+00:36:02,760 --> 00:36:06,862
+Do you have anything in the works that, you know, you think it's going to be like that next product?
+
+542
+00:36:06,912 --> 00:36:08,767
+Any predictions maybe about the market?
+
+543
+00:36:08,817 --> 00:36:09,950
+Anything like that?
+
+544
+00:36:10,000 --> 00:36:11,710
+I mean, I'm I'm very bullish on training.
+
+545
+00:36:11,760 --> 00:36:14,057
+I think training is like kind of an underserved market.
+
+546
+00:36:14,107 --> 00:36:18,471
+I Obviously, there's like a lot of focus on like very large, you know, training runs.
+
+547
+00:36:18,521 --> 00:36:23,199
+Uh but we actually see a lot of demand in the sort of smaller and and mid-size training segment.
+
+548
+00:36:23,249 --> 00:36:26,070
+So, I'll I'll be talking a little bit about that later this week.
+
+549
+00:36:26,120 --> 00:36:26,520
+Mhm.
+
+550
+00:36:26,560 --> 00:36:28,184
+We're organizing a conference.
+
+551
+00:36:28,234 --> 00:36:30,408
+Batch is I think like a really interesting market.
+
+552
+00:36:30,458 --> 00:36:35,803
+I I think we see a lot of demand for sort of, you know, customers that need a you know,
+
+553
+00:36:35,853 --> 00:36:38,814
+we had a customer the other day that needed to transcribe, you know, 5,000 years of audio.
+
+554
+00:36:38,864 --> 00:36:42,691
+They had like, you know, millions and millions of audio files and and we we had a lot of capacity.
+
+555
+00:36:42,741 --> 00:36:45,790
+So, we we let them do that, you know, and took a few days.
+
+556
+00:36:45,840 --> 00:36:48,430
+I I think there's some really interesting use cases there.
+
+557
+00:36:48,480 --> 00:36:50,470
+Very bullish on like low latency stuff.
+
+558
+00:36:50,520 --> 00:36:56,711
+I think there's going to be a lot of, you know, once we sort of get the audio like the speech to speech models working like the voice models.
+
+559
+00:36:56,761 --> 00:37:00,000
+I sort of expect that to be very interesting market.
+
+560
+00:37:00,050 --> 00:37:02,430
+Then of course like all this like agentic stuff, right?
+
+561
+00:37:02,480 --> 00:37:06,239
+And in a way like I I have like mixed feelings about like the word agentic
+
+562
+00:37:06,289 --> 00:37:12,110
+cuz I feel like in in certain ways like I think all software will become agentic.
+
+563
+00:37:12,160 --> 00:37:14,954
+So, it's almost like to me like what does it mean to be agentic?
+
+564
+00:37:15,004 --> 00:37:19,645
+Like I think I think all software in a certain way like will become like AI-powered over over time.
+
+565
+00:37:19,695 --> 00:37:23,062
+But but like clearly there's like a set of like building blocks of like, you know,
+
+566
+00:37:23,112 --> 00:37:30,830
+doing more sort of LM-powered software that seems to be sort of, you know, common across all the different use cases.
+
+567
+00:37:30,880 --> 00:37:34,630
+We're like, you know, the way I think about models like we're in the business of building building blocks.
+
+568
+00:37:34,680 --> 00:37:43,373
+You know, we we want to give you like amazing, generalizable, battle-tested, you know, general-purpose uh composable building blocks.
+
+569
+00:37:43,423 --> 00:37:48,510
+And and I think there's some really interesting things stuff also like, you know, with the with the agent use cases.
+
+570
+00:37:48,560 --> 00:37:52,724
+That's interesting you bring up training cuz I think in another podcast, maybe like a year ago,
+
+571
+00:37:52,774 --> 00:37:57,430
+maybe like 2 years ago, you said that like training you were not focused on like specifically.
+
+572
+00:37:57,480 --> 00:37:59,350
+Like what changed in the market?
+
+573
+00:37:59,400 --> 00:38:02,097
+I mean we we've been building a training product for multiple years.
+
+574
+00:38:02,147 --> 00:38:03,313
+So, you know, on and off.
+
+575
+00:38:03,363 --> 00:38:06,427
+So, so we we I I wouldn't say we're like we've never been focused on it.
+
+576
+00:38:06,477 --> 00:38:10,786
+But it's like it's like one of those things where like I mean now we're like 150 engineers,
+
+577
+00:38:10,836 --> 00:38:15,959
+but you know, a year or two ago we were much smaller number of engineers and so but just virtue of,
+
+578
+00:38:16,009 --> 00:38:22,470
+you know, being smaller we had to focus a little bit more and so inference became like our sole focus and it was our sole focus for many years,
+
+579
+00:38:22,520 --> 00:38:23,350
+but we're bigger now.
+
+580
+00:38:23,400 --> 00:38:28,297
+Like we we we do have opportunities to also place bets in in other markets.
+
+581
+00:38:28,347 --> 00:38:34,906
+I'm also really interested in, you know, kind of continuing that that that the list of things post-training reinforcement learning.
+
+582
+00:38:34,956 --> 00:38:37,700
+I think there's some really exciting stuff around that.
+
+583
+00:38:37,750 --> 00:38:43,265
+Um I I think there's also many other like stuff around like storage and building data warehousing
+
+584
+00:38:43,315 --> 00:38:48,598
+and feature stores and real-time streaming pipelines and and and all kinds of like I don't know.
+
+585
+00:38:48,648 --> 00:38:55,092
+I I I think the long-term view of of Modal is like basically like you want to build some cool AI Like, you know, we got you covered.
+
+586
+00:38:55,142 --> 00:38:56,590
+Like, you know, we got all the building blocks.
+
+587
+00:38:56,640 --> 00:38:59,814
+Like come to us and like we'll help you, you know, take all these building blocks and compose them.
+
+588
+00:38:59,864 --> 00:39:04,266
+And that's the beauty of software is like you you can, you know, build almost anything if you have the right building blocks.
+
+589
+00:39:04,316 --> 00:39:07,550
+It's That that's very much the sort of company and the product that we want to build.
+
+590
+00:39:07,600 --> 00:39:13,142
+When you say training, are you focused on more of like the bigger enterprises doing huge training runs?
+
+591
+00:39:13,192 --> 00:39:13,870
+Are you Okay.
+
+592
+00:39:13,920 --> 00:39:17,580
+They're going to go and like, you know, do these like, you know,
+
+593
+00:39:17,630 --> 00:39:24,947
+big hyperscale or or rather neo neo cloud mega deals and get, you know, 100,000 GPUs or whatever.
+
+594
+00:39:24,997 --> 00:39:29,470
+But but but there is like a little bit of an underserved market of like, in my opinion,
+
+595
+00:39:29,520 --> 00:39:34,270
+you know, like researchers iterating or like people training smaller models.
+
+596
+00:39:34,320 --> 00:39:36,673
+There's, you know, text to speech and speech to text models.
+
+597
+00:39:36,723 --> 00:39:39,860
+Computational biotech is actually a market that we see a lot of demand from.
+
+598
+00:39:39,910 --> 00:39:44,660
+We have a lot of customers in that space training relatively, you know, modest models.
+
+599
+00:39:44,710 --> 00:39:47,350
+You can train on 64 GPUs or whatever.
+
+600
+00:39:47,400 --> 00:39:48,247
+Recommendation system.
+
+601
+00:39:48,297 --> 00:39:53,470
+A lot of sort of traditional machine learning There's a lot of things like you don't need a, you know, 100,000 GPUs.
+
+602
+00:39:53,520 --> 00:39:56,214
+That market I think is like we're we're not going to like focus on that for a while.
+
+603
+00:39:56,264 --> 00:40:02,617
+But but I think there's a lot of stuff in the, you know, slightly smaller markets that that that are relatively underserved.
+
+604
+00:40:02,667 --> 00:40:04,950
+It's very hard to set up training clusters.
+
+605
+00:40:05,000 --> 00:40:05,423
+Yeah.
+
+606
+00:40:05,473 --> 00:40:13,682
+Have you noticed like since I don't know like GLM 5.2 or like can you say three or maybe like can you 2.5?
+
+607
+00:40:13,732 --> 00:40:17,070
+Uh that, you know, a A of people are using those in like fine-tuning them?
+
+608
+00:40:17,120 --> 00:40:20,216
+If anything, I've actually seen the other direction.
+
+609
+00:40:20,266 --> 00:40:24,404
+I feel like fine-tuning the value prop a couple years ago was like, "Yeah,
+
+610
+00:40:24,454 --> 00:40:30,010
+you know, open-source models, they're not quite as good, but you know, if you take,
+
+611
+00:40:30,060 --> 00:40:38,470
+you know, a small model and you fine-tune it on your specific domain, you can actually reach the frontier in terms of, you know, quality and cost."
+
+612
+00:40:38,520 --> 00:40:45,518
+Uh today, I would say like the open-source models are so good that like you can basically just like swap them out and just run,
+
+613
+00:40:45,568 --> 00:40:53,180
+you know, instead of, you know, the the frontier ones, you can run, you know, Kimiko 3 or or or or whatever, DeepSeek 4.1 or GLM 5.3.
+
+614
+00:40:53,230 --> 00:40:57,156
+And they're like basically almost as good as like the frontier model at a much lower cost.
+
+615
+00:40:57,206 --> 00:41:02,950
+So, we still see a lot of demand of uh for for post-training, and I do think it's a really interesting space.
+
+616
+00:41:03,000 --> 00:41:09,654
+We're working on some some products in that space, you know, both sort of SFT and and but also reinforcement learning and things like that.
+
+617
+00:41:09,704 --> 00:41:15,070
+I would also say, you know, fine-tuning is no longer the thing that you kind of have to do.
+
+618
+00:41:15,120 --> 00:41:16,737
+Like it it's it's very optional.
+
+619
+00:41:16,787 --> 00:41:21,550
+Like you you can open-source models like work really well just off the shelf, too.
+
+620
+00:41:21,600 --> 00:41:24,436
+Back to sandboxes, actually, I forgot to ask you.
+
+621
+00:41:24,486 --> 00:41:34,790
+So, like what did you have to update about the sandboxes that you guys um were offering uh that like existing sandboxes did not uh did not allow for?
+
+622
+00:41:34,840 --> 00:41:35,503
+Not a whole lot.
+
+623
+00:41:35,553 --> 00:41:37,694
+I think the thing we've always been very, very good at.
+
+624
+00:41:37,744 --> 00:41:38,946
+I mean, we're infra geeks, right?
+
+625
+00:41:38,996 --> 00:41:43,238
+Like we're very good at like, you know, scaling and reliability and and doing a lot of stuff.
+
+626
+00:41:43,288 --> 00:41:48,170
+And I think that's why that explains to a large extent like why we have, you know, in in my opinion,
+
+627
+00:41:48,220 --> 00:41:51,576
+I don't have numbers, but like I think we have by far the largest market share in the space.
+
+628
+00:41:51,626 --> 00:41:55,830
+Like we're just very good at running, you know, hundreds of thousands or even millions of sandboxes.
+
+629
+00:41:55,880 --> 00:41:56,470
+Yeah.
+
+630
+00:41:56,520 --> 00:42:00,830
+I will say we'll have to We had to rewrite our systems, you know, a bunch of times in order to handle that scale.
+
+631
+00:42:00,880 --> 00:42:03,510
+So, so but we were always like very good at it.
+
+632
+00:42:03,560 --> 00:42:05,146
+There are other things like over time.
+
+633
+00:42:05,196 --> 00:42:08,099
+I mean, the sandbox space in in general like, you know,
+
+634
+00:42:08,149 --> 00:42:12,350
+like it's like not the most like differentiated space, but you know, we're working on some really cool stuff.
+
+635
+00:42:12,400 --> 00:42:16,990
+Like over time like we've had to add support for VMs, like virtual machines.
+
+636
+00:42:17,040 --> 00:42:23,106
+So we we we previously built our our sandbox product on on G Visor, but now we offer full virtualized machines as well.
+
+637
+00:42:23,156 --> 00:42:28,590
+Turns out a lot of for for certain use cases you kind of need full Linux compatibility.
+
+638
+00:42:28,640 --> 00:42:33,310
+There are other things we've had to build, you know, better primitives for like more interactive,
+
+639
+00:42:33,360 --> 00:42:37,974
+you know, piping data back and forth between sandboxes, working with file system.
+
+640
+00:42:38,024 --> 00:42:40,196
+We've had to spend a lot of time on snapshotting.
+
+641
+00:42:40,246 --> 00:42:45,699
+I think a lot of the things that over in the long run will differentiate will be like, you know,
+
+642
+00:42:45,749 --> 00:42:52,430
+really cool things like, you know, forking sandboxes, snapshotting, resuming snap like live migrations.
+
+643
+00:42:52,480 --> 00:42:57,515
+In general like I I think sandboxes the novelty of sandboxes was always, you know, this sort of ephemerality.
+
+644
+00:42:57,565 --> 00:43:02,930
+Like you can spin up sandboxes for a few seconds and and and that's something I like that's a string I I want to pull more in.
+
+645
+00:43:02,980 --> 00:43:08,005
+I I think there's a lot of really cool stuff you can do, you know, kind of decoupling the agent and and the harness,
+
+646
+00:43:08,055 --> 00:43:11,523
+decoupling it from sandboxes, having agents control many sandboxes,
+
+647
+00:43:11,573 --> 00:43:15,609
+forking sandboxes, you know, snapshotting things like, you know,
+
+648
+00:43:15,659 --> 00:43:20,598
+like running basically like very short-lived may maybe one per command, like things like that.
+
+649
+00:43:20,648 --> 00:43:22,270
+So I I think there's a lot of cool stuff there.
+
+650
+00:43:22,320 --> 00:43:25,457
+We've already been spending a lot of time doing that, you know, around snapshots.
+
+651
+00:43:25,507 --> 00:43:29,550
+But But I think there's a lot of cool stuff to be to be built there as well.
+
+652
+00:43:29,600 --> 00:43:31,425
+You brought up snapshotting a couple times.
+
+653
+00:43:31,475 --> 00:43:34,486
+Like what do you see as like the use case for snapshotting?
+
+654
+00:43:34,536 --> 00:43:37,470
+Like Like what would that give us that we don't get right now?
+
+655
+00:43:37,520 --> 00:43:44,475
+I think the the big thing for me is like today a lot of sandbox workloads are kind of like lift and shift.
+
+656
+00:43:44,525 --> 00:43:48,549
+Like people think a lot about sandboxes almost like, you know, I have my dev box.
+
+657
+00:43:48,599 --> 00:43:50,021
+Now I'm going to shove it in the cloud.
+
+658
+00:43:50,071 --> 00:43:51,891
+I'm going to have an agent control it.
+
+659
+00:43:51,941 --> 00:43:54,590
+Maybe I'll run the harness inside the sandbox.
+
+660
+00:43:54,640 --> 00:44:00,432
+I don't know if like long-term that's like the right way to think about, you know, on like compute for agents.
+
+661
+00:44:00,482 --> 00:44:06,178
+I I think a much better model would be if you're going to have this like very long-running agents,
+
+662
+00:44:06,228 --> 00:44:10,821
+which almost like to me are like kind of durable execution workflows.
+
+663
+00:44:10,871 --> 00:44:13,230
+Like they're going to run, you know, 24/7.
+
+664
+00:44:13,280 --> 00:44:18,490
+You know, every once in a while they're going to run commands and and you know, having the ability to like spin up a sandbox in,
+
+665
+00:44:18,540 --> 00:44:24,326
+you know, 100 ms, run a few commands, and then like shut it down and like snapshot it.
+
+666
+00:44:24,376 --> 00:44:29,033
+I think the faster you can get that like, you know, wake up, you know, go to sleep cycle,
+
+667
+00:44:29,083 --> 00:44:33,470
+the more you can sort of create sandboxes that only run for like a very brief period.
+
+668
+00:44:33,520 --> 00:44:35,452
+And and that will make compute much more efficient.
+
+669
+00:44:35,502 --> 00:44:40,133
+And it will also enable you to to to to do some really cool things, you know,
+
+670
+00:44:40,183 --> 00:44:45,799
+like forking and and moving things around and and and you know, having like imagine, you know,
+
+671
+00:44:45,849 --> 00:44:50,510
+like cloud code instead of you know, having sort of a very linear flow, like sequential flow,
+
+672
+00:44:50,560 --> 00:44:54,328
+like kind of branching and you know, running hundreds of agents at the same time, right?
+
+673
+00:44:54,378 --> 00:44:57,373
+I think a lot of like CI is like another like illustrative example.
+
+674
+00:44:57,423 --> 00:45:02,295
+Like for most of the the history of CI, uh you know, I talk about like GitHub actions and things like that.
+
+675
+00:45:02,345 --> 00:45:03,823
+Like you had a very sequential flow.
+
+676
+00:45:03,873 --> 00:45:10,590
+Like you you you know, you slowly install all your stuff, then you run the test suite, and then you know, generate some reports or whatever.
+
+677
+00:45:10,640 --> 00:45:14,190
+And it's like you can break it up into shards, but it's kind of annoying.
+
+678
+00:45:14,240 --> 00:45:19,912
+Like what I would love to do is like take your entire test suite and just run every single test in its own sandbox, right?
+
+679
+00:45:19,962 --> 00:45:21,754
+Like and just parallelize the out of that.
+
+680
+00:45:21,804 --> 00:45:23,727
+Run like a thousand sandboxes.
+
+681
+00:45:23,777 --> 00:45:25,336
+Why can't that be done?
+
+682
+00:45:25,386 --> 00:45:31,024
+I mean, the problem is like there's too much there's too much overhead around like, you know, starting and stopping sandboxes.
+
+683
+00:45:31,074 --> 00:45:35,996
+So I think the more like you you create like, you know, frictionless like starting and stopping,
+
+684
+00:45:36,046 --> 00:45:44,030
+the more you can enter a world where like you can do this like extremely bursty like large-scale like run as much as you think want in parallel.
+
+685
+00:45:44,080 --> 00:45:46,808
+So so I you know, I'm an infra geek like I said.
+
+686
+00:45:46,858 --> 00:45:49,270
+Like I I I get very excited about these things.
+
+687
+00:45:49,320 --> 00:45:52,580
+You know, once we figure out all these primitives and the right building blocks,
+
+688
+00:45:52,630 --> 00:45:57,482
+I think it's going to unlock a lot of really cool stuff that, you know, we we previously could not do with with software.
+
+689
+00:45:57,532 --> 00:45:59,175
+Why hasn't that already been built?
+
+690
+00:45:59,225 --> 00:46:04,870
+I would assume even previously people would would want to parallelize as much of of their CI as possible.
+
+691
+00:46:04,920 --> 00:46:08,633
+You can, but the overhead is like Amdahl's law whatever, right?
+
+692
+00:46:08,683 --> 00:46:13,589
+Like the overhead of parallelization right now is very high cuz like right now like you can get up actions for instance.
+
+693
+00:46:13,639 --> 00:46:16,947
+Like we we parallelize in in the modal test suite, right?
+
+694
+00:46:16,997 --> 00:46:22,590
+But like what that basically means is like now if you take your test suite and you split it up in two,
+
+695
+00:46:22,640 --> 00:46:27,131
+like now each of those shards both need to do all the installs and and the test setup.
+
+696
+00:46:27,181 --> 00:46:28,335
+And that takes a long time.
+
+697
+00:46:28,385 --> 00:46:29,712
+Like it it can take minutes.
+
+698
+00:46:29,762 --> 00:46:33,053
+But let's say you can do the test setup once and then you snapshot the
+
+699
+00:46:33,103 --> 00:46:37,253
+container and now you clone it and now you can run the test suites independently.
+
+700
+00:46:37,303 --> 00:46:42,210
+I think a lot of a lot of the the benefits cannot be uh you can't
+
+701
+00:46:42,260 --> 00:46:46,790
+materialize those benefits on on until you get the the friction and and the overhead down.
+
+702
+00:46:46,840 --> 00:46:47,140
+Mhm.
+
+703
+00:46:47,080 --> 00:46:48,270
+The transaction cost.
+
+704
+00:46:48,320 --> 00:46:53,188
+I think you guys have a partnership with Anthropic and they're using sandboxes for something.
+
+705
+00:46:53,238 --> 00:46:54,710
+Like modal sandboxes.
+
+706
+00:46:54,760 --> 00:47:01,364
+Yeah, I mean the the managed agents with with Anthropic this is sort of a bring your own sandbox integration.
+
+707
+00:47:01,414 --> 00:47:03,870
+So you can you can use modal for those, yeah.
+
+708
+00:47:03,920 --> 00:47:04,367
+Oh, cool.
+
+709
+00:47:04,417 --> 00:47:05,461
+How did that come up?
+
+710
+00:47:05,511 --> 00:47:06,550
+Like come to be?
+
+711
+00:47:06,600 --> 00:47:08,759
+I think Anthropic is like trying to create, you know,
+
+712
+00:47:08,809 --> 00:47:13,876
+like a thriving ecosystem and community and and so I think, you know, they make money from inference, right?
+
+713
+00:47:13,926 --> 00:47:16,923
+Like so I I I think it's very much in their interest to promote, you know,
+
+714
+00:47:16,973 --> 00:47:21,030
+like a for everything else, you know, as much of, you know, of an ecosystem as possible.
+
+715
+00:47:21,080 --> 00:47:25,019
+They want to have the largest possible surface area as long as you use Anthropic for inference.
+
+716
+00:47:25,069 --> 00:47:30,110
+So I I think it makes like very rational sense for them to to to partner with with us as a sandbox provider.
+
+717
+00:47:30,160 --> 00:47:34,011
+Also, I feel like we have to bring up the Hugging Face incident.
+
+718
+00:47:34,061 --> 00:47:35,350
+Are you okay talking about that?
+
+719
+00:47:35,400 --> 00:47:35,700
+Yeah.
+
+720
+00:47:35,654 --> 00:47:36,830
+Yeah, I mean it's all there.
+
+721
+00:47:36,880 --> 00:47:37,417
+Yeah, yeah.
+
+722
+00:47:37,467 --> 00:47:42,107
+So yeah, could you just briefly describe like what happened and I think they were using the modal sandbox,
+
+723
+00:47:42,157 --> 00:47:45,470
+but it wasn't your, you know, it wasn't like a fault of the sandbox.
+
+724
+00:47:45,520 --> 00:47:46,190
+Yeah, exactly.
+
+725
+00:47:46,240 --> 00:47:51,710
+I I I don't I forget the all the details of of the exploit, but I mean, you know,
+
+726
+00:47:51,760 --> 00:47:54,895
+I think what you're referring to is the fact that like modal was involved.
+
+727
+00:47:54,945 --> 00:47:55,269
+Yeah.
+
+728
+00:47:55,299 --> 00:47:57,735
+And so, you know, just to comment on that.
+
+729
+00:47:57,785 --> 00:48:02,178
+Like basically the the the agents running inside, you know,
+
+730
+00:48:02,228 --> 00:48:09,190
+that that that exploited hugging face they discovered a a vulnerability in an app that was deployed on Modal.
+
+731
+00:48:09,240 --> 00:48:09,640
+Mhm.
+
+732
+00:48:09,680 --> 00:48:16,070
+And they used that to sort of as almost like a springboard for for getting access, getting full internet access is my understanding.
+
+733
+00:48:16,120 --> 00:48:17,299
+I don't remember the full details.
+
+734
+00:48:17,349 --> 00:48:21,242
+To be clear this is an app running on Modal that was hacked.
+
+735
+00:48:21,292 --> 00:48:22,590
+Like it was not Modal that was hacked.
+
+736
+00:48:22,640 --> 00:48:22,940
+Yeah.
+
+737
+00:48:22,880 --> 00:48:28,000
+So it's like AWS a lot of people run stuff on AWS, occasionally those app get hacked.
+
+738
+00:48:28,050 --> 00:48:29,407
+Does that mean AWS got hacked?
+
+739
+00:48:29,457 --> 00:48:31,014
+Like no, of course not, right?
+
+740
+00:48:31,064 --> 00:48:35,110
+And and so there's a lot of people running apps on Modal and you know, one of those apps got hacked.
+
+741
+00:48:35,160 --> 00:48:37,477
+And I I say but but like there are some lessons we can learn.
+
+742
+00:48:37,527 --> 00:48:46,068
+And and and I think one of the things we've been reflecting on is like could we have more sensible, you know, security restrictions by default.
+
+743
+00:48:46,118 --> 00:48:53,214
+I think to use the AWS analogy in the as just just as another analogy you know, S3 used to be this like,
+
+744
+00:48:53,264 --> 00:48:59,041
+you know, it used to be very easy to to accidentally make an S3 bucket public and AWS realized like,
+
+745
+00:48:59,091 --> 00:49:02,284
+you know, it doesn't necessarily cause that you know,
+
+746
+00:49:02,334 --> 00:49:09,308
+pose a security problem for AWS per se but a lot of their customers accidentally would, you know, like leak data.
+
+747
+00:49:09,358 --> 00:49:13,203
+And so S3 it's much harder now to make S3 buckets public.
+
+748
+00:49:13,253 --> 00:49:15,656
+And so in a similar way it's like we're exploring like, you know,
+
+749
+00:49:15,706 --> 00:49:22,359
+can't we make security a little bit more restricted by default without necessarily, you know, destroying the magic that make that makes Modal good.
+
+750
+00:49:22,409 --> 00:49:28,731
+And I think this also, you know, it's a kind of a separate side track is like agents are getting really good at cyber security.
+
+751
+00:49:28,781 --> 00:49:32,762
+So we've actually also as a sort of, you know, separate sort of learning from this incident.
+
+752
+00:49:32,812 --> 00:49:36,977
+Like we started using agents internally quite a lot to to to try to find vulnerabilities.
+
+753
+00:49:37,027 --> 00:49:38,380
+So far hasn't found anything,
+
+754
+00:49:38,430 --> 00:49:42,849
+but like they're very good at like probing into like very deep parts of the
+
+755
+00:49:42,899 --> 00:49:48,830
+system and exploiting trying to exploit things and trying to escalate and get out of sandboxes.
+
+756
+00:49:48,880 --> 00:49:52,950
+Um so, you know, it's it's it's something we're exploring very actively right now.
+
+757
+00:49:53,000 --> 00:49:55,818
+How exactly do you get the agents to like run through the code base?
+
+758
+00:49:55,868 --> 00:49:58,670
+You're just like, "Hey, like find security vulner- vulnerabilities?"
+
+759
+00:49:58,720 --> 00:50:02,670
+Well, no, you just like you just put them in a sandbox and and tell them like, "Can you try to escape?"
+
+760
+00:50:02,720 --> 00:50:05,439
+Just run through the Can you just try to escape from the sandbox?
+
+761
+00:50:05,489 --> 00:50:08,510
+It's like escape the room, but for agents.
+
+762
+00:50:08,560 --> 00:50:08,860
+Cool.
+
+763
+00:50:08,871 --> 00:50:10,430
+When did you start doing that?
+
+764
+00:50:10,480 --> 00:50:12,870
+We started doing it a a few months ago.
+
+765
+00:50:12,920 --> 00:50:13,830
+And it's pretty exciting.
+
+766
+00:50:13,880 --> 00:50:15,030
+Like when stable, I guess, came out.
+
+767
+00:50:15,080 --> 00:50:16,510
+Yeah, roughly around the same time.
+
+768
+00:50:16,560 --> 00:50:17,030
+Okay.
+
+769
+00:50:17,080 --> 00:50:23,598
+I mean, my my view on like cybersecurity is that, you know, I actually think they're very good at finding vulnerabilities,
+
+770
+00:50:23,648 --> 00:50:26,852
+but I think you can also use them defensively well very well.
+
+771
+00:50:26,902 --> 00:50:31,326
+So, I I I think, you know, companies like Model and many other companies right now, like I think, you know,
+
+772
+00:50:31,376 --> 00:50:36,238
+if if you go to talk to like pretty much every CISO, I'm sure they're all thinking about the same thing.
+
+773
+00:50:36,288 --> 00:50:41,013
+Like, how do we use agents defensively to to to, you know, fix all our vulnerabilities?
+
+774
+00:50:41,063 --> 00:50:43,812
+So, over time, actually, in a way, like I'm not that nervous.
+
+775
+00:50:43,862 --> 00:50:51,590
+I think if if anything, like agents and and cybersecurity, all the breakthroughs in cybersecurity, will will make the world safer, if anything.
+
+776
+00:50:51,640 --> 00:50:56,609
+Do you think that like all of the cybersecurity the big cybersecurity companies are just cooked?
+
+777
+00:50:56,659 --> 00:51:04,712
+I don't know if that's true because I mean, you're asking something that's like very far outside of my like core expertise.
+
+778
+00:51:04,762 --> 00:51:10,251
+But when I think about like cybersecurity, a lot of what you're selling is effectively fear,
+
+779
+00:51:10,301 --> 00:51:16,572
+and that's almost like a branding and like marketing strategy, as much as, you know, obviously, the core products.
+
+780
+00:51:16,622 --> 00:51:22,395
+But I think, you know, brand and things like that are actually like arguably like more valuable in the era of AI.
+
+781
+00:51:22,445 --> 00:51:26,399
+So, I I I wouldn't necessarily jump to the conclusion that they're cooked.
+
+782
+00:51:26,449 --> 00:51:31,708
+I think they have, you know, deep relationships with the enterprise customers, and they have, you know,
+
+783
+00:51:31,758 --> 00:51:36,605
+big sales teams who are very good at telling, you know, spooky stories and and things like that.
+
+784
+00:51:36,655 --> 00:51:39,003
+And And I think they're going to continue to be very good at that.
+
+785
+00:51:39,053 --> 00:51:41,080
+I just asked cuz like Yeah, you're doing it yourself.
+
+786
+00:51:41,130 --> 00:51:44,207
+You're not going to one of like the Palo Alto Networks or whatever.
+
+787
+00:51:44,257 --> 00:51:47,381
+But I guess like it's only like giant enterprises that care about that.
+
+788
+00:51:47,431 --> 00:51:49,944
+Also, they can blame somebody if something goes wrong. true.
+
+789
+00:51:49,994 --> 00:51:55,879
+Yeah, yeah, you kind of want to hire in many cases just like a established vendor uh in order to blame them.
+
+790
+00:51:55,929 --> 00:52:02,872
+I I I mean, to some extent, it it does reduce a little bit the need for us to do to bring in pen testers like human pen testers,
+
+791
+00:52:02,922 --> 00:52:05,786
+which most startups like do on a regular cycle.
+
+792
+00:52:05,836 --> 00:52:09,638
+So, maybe previously, you know, we would do it I actually don't know what the cycle was,
+
+793
+00:52:09,688 --> 00:52:12,533
+but but I think we used to do it like once every 6 months roughly.
+
+794
+00:52:12,583 --> 00:52:15,506
+Maybe now we only need to do it once every year.
+
+795
+00:52:15,556 --> 00:52:16,910
+I I don't know.
+
+796
+00:52:16,960 --> 00:52:21,910
+But but like I think with all of these things, you know, humans can also use them to get more efficiently.
+
+797
+00:52:21,960 --> 00:52:23,602
+So, like, you know, like I I I I don't know.
+
+798
+00:52:23,652 --> 00:52:27,989
+I'm I'm kind of a believer also that like humans with AI is even more powerful now.
+
+799
+00:52:28,039 --> 00:52:34,030
+So, like, maybe there's an argument that like we can bring in pen testers who are really good at using agents and,
+
+800
+00:52:34,080 --> 00:52:35,574
+you know, find vulnerability even faster.
+
+801
+00:52:35,624 --> 00:52:36,262
+I I don't know.
+
+802
+00:52:36,312 --> 00:52:38,560
+I I'm not that, you know, I'm an optimist.
+
+803
+00:52:38,610 --> 00:52:42,498
+I started a company, so like, you know, I'm I'm generally like optimistic about everything,
+
+804
+00:52:42,548 --> 00:52:46,046
+but like I I certainly don't think humans are cooked or companies are cooked.
+
+805
+00:52:46,096 --> 00:52:51,150
+Like, I I think in the era of AI, a lot of companies are going to figure out, you know, how to use AI to be even more efficient.
+
+806
+00:52:51,200 --> 00:52:51,710
+Mhm.
+
+807
+00:52:51,760 --> 00:52:58,750
+I want to transition a little bit to like developer experience cuz like early on I mean, even now, like you guys focus a lot on that.
+
+808
+00:52:58,800 --> 00:53:00,266
+And you've talked a lot about that.
+
+809
+00:53:00,316 --> 00:53:02,830
+Does developer experience even matter anymore?
+
+810
+00:53:02,880 --> 00:53:04,276
+I think it still matters.
+
+811
+00:53:04,326 --> 00:53:06,590
+And and then I think you're you're sort of, you know,
+
+812
+00:53:06,640 --> 00:53:11,675
+like the context I think you're fish like the thing you're talking about is like now with agents, right?
+
+813
+00:53:11,725 --> 00:53:14,661
+Like does developer experience Like the docs are already there.
+
+814
+00:53:14,711 --> 00:53:17,190
+The agents are going to look at the docs, like all that stuff.
+
+815
+00:53:17,240 --> 00:53:24,550
+To that point though, like almost all the things that make developer experience good also makes the agent experience good.
+
+816
+00:53:24,600 --> 00:53:28,789
+Is kind of what we've seen in practice, which is like things like having good docs,
+
+817
+00:53:28,839 --> 00:53:33,835
+having descriptive error messages, having fast feedback loops, right?
+
+818
+00:53:33,885 --> 00:53:36,515
+Like I do think there's certain things have changed.
+
+819
+00:53:36,565 --> 00:53:42,959
+The other day I was like setting something up with Cloudflare, and it's like I find Cloudflare like notoriously annoying to work with sometimes.
+
+820
+00:53:43,009 --> 00:53:49,485
+and and I throw an agent at it and it was able to like just configure a bunch of like you know things and and balloon me for me.
+
+821
+00:53:49,535 --> 00:53:53,910
+And you know and and so I will say like agents does they do make it a
+
+822
+00:53:53,960 --> 00:53:57,651
+little bit easier to work with things that are like harder to work with in the past,
+
+823
+00:53:57,701 --> 00:53:58,221
+you know,
+
+824
+00:53:58,271 --> 00:54:02,795
+like the sort of human toll of dealing with the animal has arguably gone down a
+
+825
+00:54:02,845 --> 00:54:06,110
+little bit cuz you can just like you know tell your agent to deal with it.
+
+826
+00:54:06,160 --> 00:54:12,194
+But but for the most part I think you know the things that make developer experience good also make agent experience good.
+
+827
+00:54:12,244 --> 00:54:19,346
+I think to some extent also like infrastructure over time anyway becomes and needs to be more programmatic.
+
+828
+00:54:19,396 --> 00:54:23,230
+I think that's always been the thesis about sandboxes is that you know like
+
+829
+00:54:23,280 --> 00:54:26,687
+things that you previously had to configure using YAML that should just be an SDK.
+
+830
+00:54:26,737 --> 00:54:30,685
+That should be more like imperative like launch a sandbox like do stuff with it.
+
+831
+00:54:30,735 --> 00:54:32,065
+Tear the sandbox down, right?
+
+832
+00:54:32,115 --> 00:54:36,117
+Like rather than sort of declarative using using you know some sort of DSL.
+
+833
+00:54:36,167 --> 00:54:41,113
+It also pushes like a little bit of a different interface that maybe previously didn't exist.
+
+834
+00:54:41,163 --> 00:54:48,350
+I think in either way like SDKs are as relevant as they were as they always were if not more.
+
+835
+00:54:48,400 --> 00:54:53,830
+Is there anything you changed in your product just because like you know most people are just running agents on on it?
+
+836
+00:54:53,880 --> 00:54:54,327
+We do.
+
+837
+00:54:54,377 --> 00:54:58,941
+I mean we we also we actually do run a lot of internal tests where we have agents.
+
+838
+00:54:58,991 --> 00:55:04,779
+We tell agents to like build a modal app and run it and I mean a very concrete thing that is
+
+839
+00:55:04,829 --> 00:55:11,830
+kind of funny is that we actually seen that like because of agent training data it's very hard to deprecate things now.
+
+840
+00:55:11,880 --> 00:55:20,785
+We see that like agents often like love using you know old versions of modal syntax and and it's kind of hard to nudge them away from that.
+
+841
+00:55:20,835 --> 00:55:24,199
+So so we've actually had to be a little bit more conservative going forward like
+
+842
+00:55:24,249 --> 00:55:28,492
+you know over the last year or so with with how we deprecate and remove features.
+
+843
+00:55:28,542 --> 00:55:32,990
+It takes we have to be very careful to update every single example that's out there online.
+
+844
+00:55:33,040 --> 00:55:33,370
+Yeah.
+
+845
+00:55:33,400 --> 00:55:35,070
+And and and you know Yeah, skills, right?
+
+846
+00:55:35,120 --> 00:55:36,078
+Yeah, there's like stuff like that.
+
+847
+00:55:36,128 --> 00:55:41,914
+But but like there's also an insane amount of like modal code that's now like online too that goes into the training data.
+
+848
+00:55:41,964 --> 00:55:47,990
+I've seen like that to be like kind of an you know a little bit of like an interesting example where like another thing by the way
+
+849
+00:55:48,040 --> 00:55:51,691
+too is like there's obviously like to sort of similar to like search
+
+850
+00:55:51,741 --> 00:55:57,070
+engine optimization there's like agent engine you know whatever people call it agent optimization.
+
+851
+00:55:57,120 --> 00:56:04,963
+We often like run internal benchmarks where like ask a an agent like hey like can you deploy stable diffusion for us?
+
+852
+00:56:05,013 --> 00:56:09,500
+Use whatever tool you want and and we see if it recommends modal or not and those things are very useful for
+
+853
+00:56:09,550 --> 00:56:15,619
+us as it attract over time or like hey spin up some sandboxes or like hey like rank all the sandbox vendors.
+
+854
+00:56:15,669 --> 00:56:18,833
+So so we we spend a lot of time like doing doing those things to to to make sure.
+
+855
+00:56:18,883 --> 00:56:20,183
+I mean what do you do about that?
+
+856
+00:56:20,233 --> 00:56:23,906
+Yeah you say hey like you know build this stable diffusion thing does it recommend modal or not?
+
+857
+00:56:23,956 --> 00:56:25,457
+Like what yeah what do you do about that?
+
+858
+00:56:25,507 --> 00:56:30,240
+Yeah I I think that's harder as I think you know it's like search engine optimization I
+
+859
+00:56:30,290 --> 00:56:35,123
+think it's primarily through content is like you just have to put out a lot of content.
+
+860
+00:56:35,173 --> 00:56:43,546
+You can also to some extent like sort of see the perception I think a little bit more like you can ask an agent like you know how
+
+861
+00:56:43,596 --> 00:56:52,771
+does you know rank all the sandbox vendors by reliability or rank all the sandbox vendors by price and and sort of see and it does feel like agents
+
+862
+00:56:52,821 --> 00:57:01,265
+are a little bit more prone to like mis understanding pricing and and you know things like that so we also spend a lot of time like just
+
+863
+00:57:01,315 --> 00:57:05,870
+making content more clear and more like you know understandable for agents cuz we
+
+864
+00:57:05,920 --> 00:57:09,470
+know they're all indexing like everything that's out there and and that's talking about modal.
+
+865
+00:57:09,520 --> 00:57:16,296
+Have you thought about just like making a bunch of GitHub repos and having the agents like write a bunch of modal code in there?
+
+866
+00:57:16,346 --> 00:57:17,190
+Have you tried that?
+
+867
+00:57:17,240 --> 00:57:23,369
+Slop cannon I think the truth is like that is probably something you can do.
+
+868
+00:57:23,419 --> 00:57:30,990
+My guess is like LM training data today is probably quite insensitive to like what's like AI output
+
+869
+00:57:31,040 --> 00:57:35,590
+in the first place and you can probably like create a lot of slop like we thought about
+
+870
+00:57:35,640 --> 00:57:39,227
+it like I don't love that idea but like in theory like much like you know SEO in
+
+871
+00:57:39,277 --> 00:57:43,945
+the early days and still to some extent like auto generated content is like a very effective strategy.
+
+872
+00:57:43,995 --> 00:57:47,397
+I think it's possible like you know you could you can do those things too.
+
+873
+00:57:47,447 --> 00:57:48,030
+Yeah.
+
+874
+00:57:48,080 --> 00:57:50,034
+I want to switch to FDEs.
+
+875
+00:57:50,084 --> 00:57:54,510
+Apparently you guys hire like forward deployed engineers like what do they do?
+
+876
+00:57:54,560 --> 00:58:00,568
+We're in a new era of like building applications and and and you know things that we couldn't build you know just
+
+877
+00:58:00,618 --> 00:58:08,119
+a few years ago and we see a lot of companies that you know they need a little bit of help right?
+
+878
+00:58:08,169 --> 00:58:15,206
+Like you know and so we started investing in FDEs a couple years ago but it but it's really been this year we've kind of scaled it up a lot.
+
+879
+00:58:15,256 --> 00:58:19,656
+I think we started this year having like four FDEs now we I think we have like 24 or something like that.
+
+880
+00:58:19,706 --> 00:58:25,206
+So we've grown a lot and they do a you know it's more it's not exactly the pounder model but they do a
+
+881
+00:58:25,256 --> 00:58:31,443
+lot of like heavy you know sort of customer engagement like they work with a lot of customers on performance tuning especially with LLMs.
+
+882
+00:58:31,493 --> 00:58:35,113
+We we see it out there's so much benefit from like you know sitting down with
+
+883
+00:58:35,163 --> 00:58:41,742
+customers and tuning draft models and tweaking uh you know the parameters in DLM and SULang.
+
+884
+00:58:41,792 --> 00:58:47,147
+Um they often you know fix bugs or or not fix bugs but like you know when customers
+
+885
+00:58:47,197 --> 00:58:50,910
+run into issues like they often work with customers trying to figure out like how do we work around
+
+886
+00:58:50,960 --> 00:58:56,270
+that or uh another thing we we've used FDEs a lot for is like just kind of proactively you
+
+887
+00:58:56,320 --> 00:59:02,510
+know if if we see certain customers you know over provisioning with model like customers requesting too much CPU
+
+888
+00:59:02,560 --> 00:59:06,070
+or too much memory for instance like that's kind of expensive and like we we try to catch
+
+889
+00:59:06,120 --> 00:59:09,519
+those things and we try to sit down with those customers like yo like you're spending a lot of
+
+890
+00:59:09,569 --> 00:59:13,776
+money on model right now we can actually help you save money and then of course like with with
+
+891
+00:59:13,826 --> 00:59:19,853
+sort of active deals you know we we help them migrate code from other platforms uh things like that.
+
+892
+00:59:19,903 --> 00:59:26,704
+Um I think you know we we we never have the intention of becoming like a service heavy business.
+
+893
+00:59:26,754 --> 00:59:34,350
+I I think the the goal for FDEs is like, you know, A is to be part of you know, the the sort of sales process and like closing deals.
+
+894
+00:59:34,400 --> 00:59:38,529
+B is to serve customers and and do some like, you know, customer support.
+
+895
+00:59:38,579 --> 00:59:41,554
+But like I actually think that like the most important thing is like C is
+
+896
+00:59:41,604 --> 00:59:47,790
+like bridging gaps in the product that we later want to turn into like real features.
+
+897
+00:59:47,840 --> 00:59:52,548
+So I I think to a large extent, you know, anything an FDE does, you know,
+
+898
+00:59:52,598 --> 00:59:57,990
+my question is always like long-term, how do we turn this into products so we don't need an FDE for this?
+
+899
+00:59:58,040 --> 00:59:58,444
+Yeah.
+
+900
+00:59:58,494 --> 01:00:00,110
+Do you guys hire PMs?
+
+901
+01:00:00,160 --> 01:00:00,990
+Product managers?
+
+902
+01:00:01,040 --> 01:00:01,340
+Yeah.
+
+903
+01:00:01,360 --> 01:00:06,830
+No. Would you say these FDEs are kind of like pseudo-ish PMs?
+
+904
+01:00:06,880 --> 01:00:08,118
+It's a little bit of a different function.
+
+905
+01:00:08,168 --> 01:00:13,549
+Like I I think certainly on the more like, you know, customer-facing side they are, but there's like, you know, on the more like inward,
+
+906
+01:00:13,599 --> 01:00:19,142
+you know, internal side like there's a sort of separate part of like product management which is more like, what are the next building blocks?
+
+907
+01:00:19,192 --> 01:00:20,231
+What else should I invest in?
+
+908
+01:00:20,281 --> 01:00:24,090
+And like, you know, and then there's like something in in in between like, you know,
+
+909
+01:00:24,140 --> 01:00:29,910
+looking at like maybe 10 20 different customers that are all asking for like slightly different things, but maybe what are the patterns?
+
+910
+01:00:29,960 --> 01:00:31,590
+Like how do we turn this into product?
+
+911
+01:00:31,640 --> 01:00:35,910
+We do have people doing product with us and and it's sort of evolved, you know,
+
+912
+01:00:35,960 --> 01:00:42,394
+we've had people basically like become product managers after previously being either dev rel or engineers
+
+913
+01:00:42,444 --> 01:00:48,002
+and they're showing strong aptitude on on doing thinking very strategically about what we have to build.
+
+914
+01:00:48,052 --> 01:00:51,022
+So I'm actually not like anti-product management.
+
+915
+01:00:51,072 --> 01:00:59,196
+I do think that a lot of companies in the past hired product management product managers too eagerly and and
+
+916
+01:00:59,246 --> 01:01:03,630
+I think there's a risk that you you kind of I can sort of see it in a lot of products.
+
+917
+01:01:03,680 --> 01:01:08,430
+Like certain products like you can tell like there's just like eager product managers
+
+918
+01:01:08,480 --> 01:01:12,175
+that have just thought of like kind of like widgety things and just shipped them.
+
+919
+01:01:12,225 --> 01:01:19,039
+I think doing product management at an infra company really well is very very hard cuz I think it takes like a very deep,
+
+920
+01:01:19,089 --> 01:01:23,940
+you know, level of strategic thinking, thinking about like what are the foundational building blocks?
+
+921
+01:01:23,990 --> 01:01:25,952
+Where do we want to be in 1 to 2 years?
+
+922
+01:01:26,002 --> 01:01:27,969
+Cuz the truth is building infrastructure is very hard.
+
+923
+01:01:28,019 --> 01:01:34,326
+And how do we make sure we don't end up with like 35 features that are like kind of similar-looking,
+
+924
+01:01:34,376 --> 01:01:37,390
+but all do like a little bit slightly different things?
+
+925
+01:01:37,440 --> 01:01:41,682
+That's sort of level of thinking is something that, you know, is very rare to find.
+
+926
+01:01:41,732 --> 01:01:45,430
+And then for that reason, we haven't aggressively tried to build up a product management team yet.
+
+927
+01:01:45,480 --> 01:01:46,466
+Yeah, that makes sense.
+
+928
+01:01:46,516 --> 01:01:51,010
+How would you say your teams have been evolving maybe like since Gen AI?
+
+929
+01:01:51,060 --> 01:01:54,166
+Cuz I would assume Yeah, I mean, you obviously worked at like Spotify.
+
+930
+01:01:54,216 --> 01:01:56,119
+You had like a certain team structure.
+
+931
+01:01:56,169 --> 01:02:00,750
+Um have your team structures like evolved a lot now that, you know, we have coding agents?
+
+932
+01:02:00,800 --> 01:02:02,083
+In a funny way, like yes.
+
+933
+01:02:02,133 --> 01:02:07,264
+I I do think team structures have changed a lot, but I'm actually not convinced it was like Gen AI driving that.
+
+934
+01:02:07,314 --> 01:02:12,297
+I think in particular, like one thing I've seen a lot is that there's been sort of a focus,
+
+935
+01:02:12,347 --> 01:02:18,830
+like a swing back towards being an IC, that I actually think is very, very positive for the space as a whole.
+
+936
+01:02:18,880 --> 01:02:23,430
+I think, you know, if you look back at the space like 10 years ago, 20 years ago,
+
+937
+01:02:23,480 --> 01:02:29,969
+everyone wanted to be in management cuz that was the way you you would get more money and more, you know, more recognition and more prestige.
+
+938
+01:02:30,019 --> 01:02:36,450
+I think that shift actually started even before Gen AI, but I do think it's like heavily accelerated with AI.
+
+939
+01:02:36,500 --> 01:02:44,373
+Like, you know, we we we make it very clear to everyone at Model that like manager or IC, it's like there's no difference in prestige.
+
+940
+01:02:44,423 --> 01:02:47,230
+Like everyone is just a member of technical staff.
+
+941
+01:02:47,280 --> 01:02:51,756
+You know, it's about ultimately your contributions and we see a lot of ex-managers,
+
+942
+01:02:51,806 --> 01:02:55,599
+you know, becoming ICs and and cuz they want to go back and build code.
+
+943
+01:02:55,649 --> 01:03:01,215
+And so and you know, and there's been there's been sort of shift away from like, you know, non-technical managers.
+
+944
+01:03:01,265 --> 01:03:02,753
+Everyone pretty including me.
+
+945
+01:03:02,803 --> 01:03:08,153
+I I still write a lot of code at Model and and actually too and and pretty much everyone in in the tech team.
+
+946
+01:03:08,203 --> 01:03:11,470
+And a lot of people who are not in the tech team still write code.
+
+947
+01:03:11,520 --> 01:03:13,830
+So that to me is like, you know, a recent phenomenon.
+
+948
+01:03:13,880 --> 01:03:17,592
+But but I actually don't know if it's like necessarily caused by Gen AI,
+
+949
+01:03:17,642 --> 01:03:24,990
+but I think GenAI has like greatly accelerated it cuz it it made it even lower the cost of like writing code is even easier.
+
+950
+01:03:25,040 --> 01:03:30,206
+So if you have like non-technical people like committing code, like how do you how do you review that?
+
+951
+01:03:30,256 --> 01:03:32,430
+Like how do you guys do code reviews?
+
+952
+01:03:32,480 --> 01:03:36,037
+We do code reviews, but it's we we think of it as optional.
+
+953
+01:03:36,087 --> 01:03:41,512
+I mean for most my view is like code reviews in in large part is like people
+
+954
+01:03:41,562 --> 01:03:47,695
+in many cases trying to just escape the the accountability of like you know merging things into production.
+
+955
+01:03:47,745 --> 01:03:55,021
+And and if you have that like, you know, if you have that culture like then to me that's a sign that you need to invest way more in,
+
+956
+01:03:55,071 --> 01:04:02,209
+you know, CD and and CI and and and things like that is CI in particular, but also CD continuous integration continuous deployment.
+
+957
+01:04:02,259 --> 01:04:05,725
+We do code reviews like I mean like when I write code like occasionally like I'm
+
+958
+01:04:05,775 --> 01:04:09,877
+I'm asking you know authors like is this in line with how you think about things?
+
+959
+01:04:09,927 --> 01:04:12,991
+I hope I'm not changing the architecture fundamentally.
+
+960
+01:04:13,041 --> 01:04:16,951
+But we also make it clear internally that like code reviews are are quite optional.
+
+961
+01:04:17,001 --> 01:04:20,093
+And you know, if you're just changing docs, if you're just doing, you know,
+
+962
+01:04:20,143 --> 01:04:24,351
+some basic stuff like don't wait for a human to look at it especially in the era of AI.
+
+963
+01:04:24,401 --> 01:04:26,807
+Why do you need a human to look at every piece of code?
+
+964
+01:04:26,857 --> 01:04:27,773
+You don't have to.
+
+965
+01:04:27,823 --> 01:04:34,350
+But that does require you to have, you know, very good controls, you know, internally around, you know, testing things.
+
+966
+01:04:34,400 --> 01:04:40,590
+Yeah, and exactly like, you know, in for companies like we we need one more nine than the average startup, right?
+
+967
+01:04:40,640 --> 01:04:41,610
+In terms of uptime.
+
+968
+01:04:41,660 --> 01:04:44,566
+But like, you know, these are investments you just have to make.
+
+969
+01:04:44,616 --> 01:04:50,394
+Like you have to build systems that are very resilient to like, you know, you have to have rate limits everywhere.
+
+970
+01:04:50,444 --> 01:04:51,767
+You have to decouple systems.
+
+971
+01:04:51,817 --> 01:04:55,310
+You have to make sure that like nothing is a single point of failure.
+
+972
+01:04:55,360 --> 01:04:57,790
+You have to have extremely good test coverage.
+
+973
+01:04:57,840 --> 01:05:00,430
+Agents are actually really good at writing tests these days which was like,
+
+974
+01:05:00,480 --> 01:05:03,534
+you know, a few years ago I thought like one of the major things missing in agents.
+
+975
+01:05:03,584 --> 01:05:08,928
+Now they're actually quite good at like cuz I think it takes a little bit of like sort of kind of like need to
+
+976
+01:05:08,978 --> 01:05:14,230
+step out of what you're trying to do for a second and be almost a little bit like devil's advocate to write good tests.
+
+977
+01:05:14,280 --> 01:05:16,030
+But now they're actually quite good at writing tests, too.
+
+978
+01:05:16,080 --> 01:05:18,150
+So, I think I think all these things help.
+
+979
+01:05:18,200 --> 01:05:23,990
+Do you guys use like frontier models for coding or do you guys have you guys experimented with uh like open-source ones?
+
+980
+01:05:24,040 --> 01:05:25,079
+We experiment with everything.
+
+981
+01:05:25,129 --> 01:05:31,004
+But yeah, I mean, you know, initially it was a lot of cursor then, you know, of course Claude and Codex and and now a lot of people are using,
+
+982
+01:05:31,054 --> 01:05:34,550
+you know, night shift and and all these open-source stuff or or other stocks.
+
+983
+01:05:34,600 --> 01:05:36,947
+So, I don't necessarily have like a strong point of view.
+
+984
+01:05:36,997 --> 01:05:39,150
+Like I want people to experiment and try different things.
+
+985
+01:05:39,200 --> 01:05:42,095
+Like we, you know, use frontier models, use open-source models.
+
+986
+01:05:42,145 --> 01:05:45,130
+We try to do a little bit more dog fooding internally now that we're actually
+
+987
+01:05:45,180 --> 01:05:48,910
+running inference for a lot of the open-source models like at a very large scale.
+
+988
+01:05:48,960 --> 01:05:53,870
+I think it's also helpful to like use our internal endpoints for a lot of agentic development.
+
+989
+01:05:53,920 --> 01:05:55,790
+Uh so, we try to promote that a little bit.
+
+990
+01:05:55,840 --> 01:05:56,670
+Mhm.
+
+991
+01:05:56,720 --> 01:06:00,567
+Something I read maybe like, I don't know, a year ago, maybe like 2 years ago,
+
+992
+01:06:00,617 --> 01:06:05,950
+you were saying that you didn't think that there was going to be like a big on-prem business for you guys.
+
+993
+01:06:06,000 --> 01:06:09,670
+Um have you maybe like changed your opinion on that?
+
+994
+01:06:09,720 --> 01:06:12,120
+No, I have not changed my opinion.
+
+995
+01:06:12,170 --> 01:06:15,839
+Um I think more or less to me, I'm a cloud maximalist.
+
+996
+01:06:15,889 --> 01:06:24,615
+And maybe to take a step back, like when when the cloud came in 2008, 2009, or whatever, my first reaction was like, "That's crazy.
+
+997
+01:06:24,665 --> 01:06:28,255
+Like why would I want to take my code and run it on someone else's computer?
+
+998
+01:06:28,305 --> 01:06:29,670
+That's like insane."
+
+999
+01:06:29,720 --> 01:06:31,258
+And then like 6 months later I was doing it.
+
+1000
+01:06:31,308 --> 01:06:34,928
+And I think, you know, like took me 6 months to change my mind.
+
+1001
+01:06:34,978 --> 01:06:38,179
+It took probably enterprises like another 15 to 20 years.
+
+1002
+01:06:38,229 --> 01:06:43,003
+But like you look at, you know, vendors like Snowflake or I mean AWS and like you know,
+
+1003
+01:06:43,053 --> 01:06:48,805
+I I think there's many examples of DataDog, etc. Like the cloud is clearly winning, right?
+
+1004
+01:06:48,855 --> 01:06:52,550
+Like and and the multi-tenant systems are clearly winning.
+
+1005
+01:06:52,600 --> 01:06:59,790
+And, you know, to me on-prem looks increasingly like sort of a legacy business model.
+
+1006
+01:06:59,840 --> 01:07:07,043
+And and I actually think, you know, BYOC, you know, sort of VPC peering, like all of these things, you know,
+
+1007
+01:07:07,093 --> 01:07:14,859
+like to me they they reflect sort of an outdated security model of like we need to protect everything inside our own network, right?
+
+1008
+01:07:14,909 --> 01:07:17,430
+Like using the network as a moat.
+
+1009
+01:07:17,480 --> 01:07:20,227
+And that I don't think is true anything in anymore, right?
+
+1010
+01:07:20,277 --> 01:07:28,128
+Like you we've sort of moved on to more like actually robust security paradigms like, you know, zero trust and things like that.
+
+1011
+01:07:28,178 --> 01:07:34,990
+And so to me BYOC and those things like they they look increasingly as like outdated, at least from a security perspective.
+
+1012
+01:07:35,040 --> 01:07:40,926
+From our perspective also like the fact that we have full control over our entire infrastructure stack, we rent all the hardware,
+
+1013
+01:07:40,976 --> 01:07:49,230
+we deploy, we manage all the infrastructure, we deploy and like manage health and observe, you know, all the metrics on all the hosts.
+
+1014
+01:07:49,280 --> 01:07:52,202
+It means we can iterate very fast and build a greater product.
+
+1015
+01:07:52,252 --> 01:07:54,837
+And I think that's very very valuable versus, you know,
+
+1016
+01:07:54,887 --> 01:07:59,563
+customers in the past who had enterprise editions that they had to deploy on customers environment.
+
+1017
+01:07:59,613 --> 01:08:00,762
+They had to be very, you know,
+
+1018
+01:08:00,812 --> 01:08:07,110
+they had to think very carefully about release management and and having depend like like we don't care like if we want to introduce a new database,
+
+1019
+01:08:07,160 --> 01:08:09,867
+like we can introduce a new database cuz we have control over it.
+
+1020
+01:08:09,917 --> 01:08:12,750
+Like we don't need to think about what customers have access to.
+
+1021
+01:08:12,800 --> 01:08:17,510
+So to me multi-tenancy is is it has so many different benefits.
+
+1022
+01:08:17,560 --> 01:08:20,990
+I mean, that being said like, you know, if we were to work with like, you know,
+
+1023
+01:08:21,040 --> 01:08:28,796
+some very large Fortune 500 customer in the future and, you know, they ask for BYOC, you know, we've done this in the past.
+
+1024
+01:08:28,846 --> 01:08:30,630
+We'll give them a number.
+
+1025
+01:08:30,680 --> 01:08:35,365
+Like, you know, that number is very high and no one said yes to it so far, but like who knows?
+
+1026
+01:08:35,415 --> 01:08:38,349
+Like, you know, I at the right price I I I would still build it.
+
+1027
+01:08:38,399 --> 01:08:43,114
+And and I think there's like maybe separately like another thing which I think is interesting which is
+
+1028
+01:08:43,164 --> 01:08:48,470
+like in theory BYOC might also be a way to work with and and get capacity in certain ways.
+
+1029
+01:08:48,520 --> 01:08:54,806
+Like we we sometimes work with Neo Labs and those Neo Labs have already have very large capacity reservations.
+
+1030
+01:08:54,856 --> 01:08:59,600
+And, you know, the question is like, you know, how how do we how do we get them to run Modal when they already have capacity?
+
+1031
+01:08:59,650 --> 01:09:01,309
+And BYOC might be a solution.
+
+1032
+01:09:01,359 --> 01:09:04,335
+We can still keep the control plane in in our environment.
+
+1033
+01:09:04,385 --> 01:09:09,162
+And the other flip side of that is like we could maybe even run like other people's stuff on that capacity.
+
+1034
+01:09:09,212 --> 01:09:12,310
+So so there's some like kind of fun stuff you can do in theory where like
+
+1035
+01:09:12,360 --> 01:09:16,287
+you can sort of you know like kind of aggregate all that capacity into one big pool.
+
+1036
+01:09:16,337 --> 01:09:18,286
+So we're excited about some of those ideas.
+
+1037
+01:09:18,336 --> 01:09:21,323
+But in general like I feel like on prem I don't know if we're ever going to do.
+
+1038
+01:09:21,373 --> 01:09:22,271
+But BYOC like maybe.
+
+1039
+01:09:22,321 --> 01:09:23,302
+Bring your own cloud.
+
+1040
+01:09:23,352 --> 01:09:24,176
+I keep saying BYOC.
+
+1041
+01:09:24,226 --> 01:09:26,630
+I should explain I should explain the acronyms.
+
+1042
+01:09:26,680 --> 01:09:32,872
+Um let's say hypothetically you are going to raise a a ton more money like soon.
+
+1043
+01:09:32,922 --> 01:09:35,229
+What would you use that money for?
+
+1044
+01:09:35,279 --> 01:09:39,590
+I mean like I mentioned like in in this capacity situation the a lot of the
+
+1045
+01:09:39,640 --> 01:09:45,123
+money a lot of the cash flow I should say that's required is is capacity prepayments,
+
+1046
+01:09:45,173 --> 01:09:45,647
+right?
+
+1047
+01:09:45,697 --> 01:09:50,047
+And and so that to me represents the best use of of of cash today.
+
+1048
+01:09:50,097 --> 01:09:53,950
+Uh we're ramping up capacity the capacity very aggressively.
+
+1049
+01:09:54,000 --> 01:09:58,733
+Maybe we move into you know other types of deployment models in the future, ownership or whatever.
+
+1050
+01:09:58,783 --> 01:10:03,933
+But I think there's always going to be a cash component of that, like some sort of down payment or prepayment or some sort of that.
+
+1051
+01:10:03,983 --> 01:10:07,470
+So that to me is is the the greatest use of cash right now.
+
+1052
+01:10:07,520 --> 01:10:11,667
+There's of course other things like you know salaries and office spaces and stuff like that.
+
+1053
+01:10:11,717 --> 01:10:17,390
+But that actually in the grand scheme of like our our financials like it's is basically a rounding error, right?
+
+1054
+01:10:17,440 --> 01:10:18,150
+Yeah, interesting.
+
+1055
+01:10:18,200 --> 01:10:20,110
+Do you think that's going to change?
+
+1056
+01:10:20,160 --> 01:10:25,385
+No. I I think you know the the sort of operating leverage that we have in this business is kind of insane.
+
+1057
+01:10:25,435 --> 01:10:27,189
+Like you know, we have 200 employees.
+
+1058
+01:10:27,239 --> 01:10:33,230
+You know, they cost a lot of money, but you know, the the the GPUs cost a lot more money.
+
+1059
+01:10:33,280 --> 01:10:40,282
+If you had to say like what are the top like I don't know like three things that are your biggest focus or the business's biggest focus right now?
+
+1060
+01:10:40,332 --> 01:10:41,830
+Like what would you say those are?
+
+1061
+01:10:41,880 --> 01:10:47,856
+Capacity and the sort of financial complexity and you know, in general like how do we how do we think about that space?
+
+1062
+01:10:47,906 --> 01:10:49,673
+How do we think about pricing and packaging?
+
+1063
+01:10:49,723 --> 01:10:53,441
+How do we think about the sort of tension between ownership and renting?
+
+1064
+01:10:53,491 --> 01:10:56,230
+Should we be going in a more neo cloud direction?
+
+1065
+01:10:56,280 --> 01:10:57,870
+Should we go in the opposite direction?
+
+1066
+01:10:57,920 --> 01:10:59,150
+This sort of counter precision?
+
+1067
+01:10:59,200 --> 01:11:01,483
+Like that's probably the biggest thing that I think a lot about.
+
+1068
+01:11:01,533 --> 01:11:06,550
+Uh the second biggest thing I think a lot about is um probably around like more like product strategy.
+
+1069
+01:11:06,600 --> 01:11:09,036
+Like I think a lot about like what is the next building blocks?
+
+1070
+01:11:09,086 --> 01:11:13,287
+Like if if we you know do more like agentic stuff, like what are the things we need?
+
+1071
+01:11:13,337 --> 01:11:13,825
+You know,
+
+1072
+01:11:13,875 --> 01:11:19,244
+are there certain storage primitives or compute primitives or in general like what is the thing
+
+1073
+01:11:19,294 --> 01:11:22,953
+that the world is going to wake up and realize they need over the next few years?
+
+1074
+01:11:23,003 --> 01:11:25,150
+And and ideally we have that at that point.
+
+1075
+01:11:25,200 --> 01:11:28,510
+We've been pretty good in general at like you know anticipating demand and
+
+1076
+01:11:28,560 --> 01:11:31,901
+building products in advance of it with the serverless functions in the sandboxes.
+
+1077
+01:11:31,951 --> 01:11:33,110
+So what's the next thing?
+
+1078
+01:11:33,160 --> 01:11:38,588
+Then I would say like actually the third thing I think a lot about is like more around like culture and company building and stuff like that.
+
+1079
+01:11:38,638 --> 01:11:40,190
+I mean we recently crossed 200 people.
+
+1080
+01:11:40,240 --> 01:11:42,235
+We're we're growing extremely fast.
+
+1081
+01:11:42,285 --> 01:11:44,542
+We'll probably hit 250 by the end of the year.
+
+1082
+01:11:44,592 --> 01:11:46,471
+Like when you're growing very fast,
+
+1083
+01:11:46,521 --> 01:11:51,340
+you have 250 people that are all trying to figure out how they can add
+
+1084
+01:11:51,390 --> 01:11:54,705
+the most value to Modal and you know making sure that they have the right context,
+
+1085
+01:11:54,755 --> 01:11:56,521
+that they have the right motivation,
+
+1086
+01:11:56,571 --> 01:12:04,381
+that they're excited to come into work every day cuz they get to build something incredibly cool and they know you know what makes Modal successful,
+
+1087
+01:12:04,431 --> 01:12:05,507
+what they can do,
+
+1088
+01:12:05,557 --> 01:12:11,451
+aligning the incentives and and making sure that you know we we we people have like a
+
+1089
+01:12:11,501 --> 01:12:15,931
+very positive culture where they have this sort of implicit trust to do a lot of stuff,
+
+1090
+01:12:15,981 --> 01:12:22,386
+but also the accountability to like you know deliver the best things and you know and and be held accountable to like if they're not doing it.
+
+1091
+01:12:22,436 --> 01:12:25,939
+To me those are like you know super critical things around this scale.
+
+1092
+01:12:25,989 --> 01:12:29,148
+Like when when you're like 10, 20, 30 people,
+
+1093
+01:12:29,198 --> 01:12:34,445
+you can all just like kind of sit in a room and like it's all kind of implicit and you kind of just like feel it.
+
+1094
+01:12:34,495 --> 01:12:36,270
+People can sort of read read me.
+
+1095
+01:12:36,320 --> 01:12:38,444
+Like they can tell me when I get a little bit annoyed.
+
+1096
+01:12:38,494 --> 01:12:39,942
+They can tell when I'm happy.
+
+1097
+01:12:39,992 --> 01:12:45,722
+But like now we're 250 people and like people don't necessarily see it and you know of course there's like a lot of new people.
+
+1098
+01:12:45,772 --> 01:12:49,172
+They're like maybe a little bit nervous to like talk to the CEO or like all this stuff.
+
+1099
+01:12:49,222 --> 01:12:53,382
+So like you know how do I remain approachable and how do I like it's it's there's
+
+1100
+01:12:53,432 --> 01:12:57,567
+like the Dunbar number which I think is like more sort of you know fake than than anything
+
+1101
+01:12:57,617 --> 01:13:01,470
+like at least like the story behind it but like it is actually kind of real still
+
+1102
+01:13:01,520 --> 01:13:07,030
+like there's something around like 150-200 where like laying the foundation of the culture is very very important.
+
+1103
+01:13:07,080 --> 01:13:09,870
+How many people are you guys trying to hire over the next year?
+
+1104
+01:13:09,920 --> 01:13:13,577
+We've grown about 4x on an annualized basis in the last 12 months.
+
+1105
+01:13:13,627 --> 01:13:17,684
+I think that's like an unsustainable growth rate on a relative basis.
+
+1106
+01:13:17,734 --> 01:13:25,153
+I've seen that you know you can double the team every year and that's not super hard to do but
+
+1107
+01:13:25,203 --> 01:13:30,915
+4x what you start to see is you know cultural drift you start to see islands of different working styles.
+
+1108
+01:13:30,965 --> 01:13:36,185
+You start to see people doing like very speculative things like that that's something I always watch out for in the engineering team.
+
+1109
+01:13:36,235 --> 01:13:40,190
+You go and talk to the engine an engineer and I'm like what are you working on and and it turns
+
+1110
+01:13:40,240 --> 01:13:45,349
+out they're like building something like kind of like fringe and like is this really what you should spend time on?
+
+1111
+01:13:45,399 --> 01:13:49,550
+So growing very fast has that cost and you know has the cost of ramping people up.
+
+1112
+01:13:49,600 --> 01:13:50,101
+So I I don't know.
+
+1113
+01:13:50,151 --> 01:13:54,642
+I I think by the end of the year maybe 250 by the end of the next year you know but but like you know we're going
+
+1114
+01:13:54,692 --> 01:14:00,670
+to keep growing like maybe two and a half 3x so so it's very likely we'll end up like next year like 700 people or something like that.
+
+1115
+01:14:00,720 --> 01:14:02,510
+And I'm going to assume most of those are engineers.
+
+1116
+01:14:02,560 --> 01:14:03,430
+Most of the engineers.
+
+1117
+01:14:03,480 --> 01:14:05,510
+We're ramping up sales a lot too.
+
+1118
+01:14:05,560 --> 01:14:06,044
+Okay.
+
+1119
+01:14:06,094 --> 01:14:08,270
+What kinds of engineers?
+
+1120
+01:14:08,320 --> 01:14:09,796
+It's primarily systems engineers.
+
+1121
+01:14:09,846 --> 01:14:13,386
+I mean we've always been like very deep into sort of you know Linux and
+
+1122
+01:14:13,436 --> 01:14:19,487
+file systems and scalable systems and networking and and cloud and and stuff like that.
+
+1123
+01:14:19,537 --> 01:14:23,870
+So so that's that's that's the core of what we're looking for like people are really good at those things.
+
+1124
+01:14:23,920 --> 01:14:30,530
+We're also looking a lot at like you know more like cuz we moved up in the stack a little bit like we're doing a lot of work in the LM infra space.
+
+1125
+01:14:30,580 --> 01:14:41,190
+So now we're dealing with a separate set of concerns around you know CUDA and like GPUs and and and and MFU you know like maxing out the tokens that
+
+1126
+01:14:41,240 --> 01:14:49,263
+you can get per GPU and and and a lot of that things and you know even though I actually like will say a lot of the work in that space,
+
+1127
+01:14:49,313 --> 01:14:50,106
+in my opinion,
+
+1128
+01:14:50,156 --> 01:14:57,911
+turns out it's like more systems-driven still cuz it turns out like KV caching and routing is actually like is still like very like systems-like,
+
+1129
+01:14:57,961 --> 01:15:00,883
+like like these are very like systems-heavy problems.
+
+1130
+01:15:00,933 --> 01:15:04,076
+But yeah, a little bit more like sort of GPU performance, that kind of stuff.
+
+1131
+01:15:04,126 --> 01:15:06,110
+We're starting to build up a research team.
+
+1132
+01:15:06,160 --> 01:15:10,411
+We're very excited about, you know, moving into stuff around like, you know,
+
+1133
+01:15:10,461 --> 01:15:17,710
+post training and and distillation and and better methods for for quantization and things like that. or for internally?
+
+1134
+01:15:17,760 --> 01:15:18,060
+Both.
+
+1135
+01:15:17,975 --> 01:15:26,070
+I I think it's like a little bit like with the FTEs, like I I I think we initially will do a lot of stuff with our customers to optimize their models,
+
+1136
+01:15:26,120 --> 01:15:29,943
+but over time figure out how do we turn those into products.
+
+1137
+01:15:29,993 --> 01:15:37,030
+I think we'll sort of arguably fail in a certain way if every time a customer needs to optimize a model,
+
+1138
+01:15:37,080 --> 01:15:43,135
+we have to go and work with them and, you know, long-term it has to be turned into products.
+
+1139
+01:15:43,185 --> 01:15:49,242
+And and so with the FTEs and with the research team, initially you're going to have to do a lot of work with the customers, and we are at that.
+
+1140
+01:15:49,292 --> 01:15:55,430
+But over time we're also building a lot of internal tooling and a lot of overtime internal products that are fully self-serve.
+
+1141
+01:15:55,480 --> 01:16:00,990
+Uh so we're working a lot of stuff right now in in the post training space, but also in in the GPU performance space.
+
+1142
+01:16:01,040 --> 01:16:03,390
+So a lot of cool stuff, a lot of cool stuff.
+
+1143
+01:16:03,440 --> 01:16:07,205
+Back to the product strategy stuff that you were talking about.
+
+1144
+01:16:07,255 --> 01:16:08,914
+Um yeah, like what are your thoughts?
+
+1145
+01:16:08,964 --> 01:16:11,750
+Like what do we need over the next year, 2 years?
+
+1146
+01:16:11,800 --> 01:16:13,374
+I think it's incredibly hard to say.
+
+1147
+01:16:13,424 --> 01:16:19,670
+And and if I said like I know exactly what we need to build, like I I think I would would be like delusional.
+
+1148
+01:16:19,720 --> 01:16:22,246
+I think what what I've what we've seen so far, you know,
+
+1149
+01:16:22,296 --> 01:16:26,990
+and and what I kind of believe in on a more general level is like we need better building blocks.
+
+1150
+01:16:27,040 --> 01:16:35,470
+Like this is a new era of of software, and we're unlocking a whole new type of applications that could not be built a few years ago.
+
+1151
+01:16:35,520 --> 01:16:44,819
+You know, doing, you know, all the GenAI stuff, code that, you know, LLMs that output code that, you know, it needs to run like in an isolated way.
+
+1152
+01:16:44,869 --> 01:16:49,195
+Like, there's so many like new primitives that are needed to to work with GPUs and work with LLMs.
+
+1153
+01:16:49,245 --> 01:16:53,557
+And, you know, we built some building blocks so far and and, you know, that's unlocked, you know,
+
+1154
+01:16:53,607 --> 01:16:58,515
+a bunch of applications that that that the world, you know, has seen over the last few years, not just us, of course.
+
+1155
+01:16:58,565 --> 01:17:01,773
+But, I think over the next few years, like, there's going to be so many more cool things.
+
+1156
+01:17:01,823 --> 01:17:03,074
+And so, I I I mentioned some stuff.
+
+1157
+01:17:03,124 --> 01:17:04,577
+Like, I'm very bullish on training.
+
+1158
+01:17:04,627 --> 01:17:06,498
+I'm very bullish on fast jobs.
+
+1159
+01:17:06,548 --> 01:17:12,084
+I'm very bullish on, you know, certain things around like agents and and low latency and and things like that.
+
+1160
+01:17:12,134 --> 01:17:16,399
+But but like, in the end, we consider ourselves like an infrastructure shop, right?
+
+1161
+01:17:16,449 --> 01:17:19,470
+Like, we we're not trying to build, you know, very narrow things.
+
+1162
+01:17:19,520 --> 01:17:23,251
+Like, we try to build like very general-purpose building blocks and put them in front of customers.
+
+1163
+01:17:23,301 --> 01:17:30,910
+And then, those customers will combine those building blocks and build some incredible applications that we could have never anticipated.
+
+1164
+01:17:30,960 --> 01:17:32,295
+I want to go through some of your tweets.
+
+1165
+01:17:32,345 --> 01:17:33,870
+This will be the last part of it.
+
+1166
+01:17:33,920 --> 01:17:34,320
+Okay.
+
+1167
+01:17:34,360 --> 01:17:37,097
+and we can just like maybe you want to double-click on anything.
+
+1168
+01:17:37,147 --> 01:17:40,059
+A lot of long-running persistent sandbox stuff right now.
+
+1169
+01:17:40,109 --> 01:17:41,732
+Uh today feels lift and shift.
+
+1170
+01:17:41,782 --> 01:17:45,870
+I suspect sandboxes will evolve from dev boxes in the cloud to something more ephemeral.
+
+1171
+01:17:45,920 --> 01:17:50,830
+Uh one environment for every command and snapshotting in between, so you can pause, resume, clone.
+
+1172
+01:17:50,880 --> 01:17:52,430
+Yeah, I mean, we talked about this a lot.
+
+1173
+01:17:52,480 --> 01:17:53,750
+Yeah, we talked a bit about it, right?
+
+1174
+01:17:53,800 --> 01:18:01,338
+Like, I I I'm fully I I think it's I think the median sandbox in Modal today is like 8 seconds long or something like that.
+
+1175
+01:18:01,388 --> 01:18:03,472
+Like, which is kind of incredible when you think about it.
+
+1176
+01:18:03,522 --> 01:18:05,870
+And and over time, I think it might get even shorter.
+
+1177
+01:18:05,920 --> 01:18:07,694
+We want to support long-running sandboxes, too.
+
+1178
+01:18:07,744 --> 01:18:12,073
+Like, I think there are some like very valid use cases around long-running sandboxes.
+
+1179
+01:18:12,123 --> 01:18:16,070
+But like, my vision is like, you know, the world needs also we need to figure out this.
+
+1180
+01:18:16,120 --> 01:18:21,910
+Like, how can how can we just massively parallelize things and reducing the overhead of starting and stopping sandboxes.
+
+1181
+01:18:21,960 --> 01:18:29,190
+I don't know if I ran an IPO-ready startup engaged in capex arms race with a competitor, it would be nice to coordinate and pace the arms race a bit.
+
+1182
+01:18:29,240 --> 01:18:31,710
+No comment.
+
+1183
+01:18:31,760 --> 01:18:35,446
+The biggest downside of GPU scarcity is not that it's hard to get GPUs,
+
+1184
+01:18:35,496 --> 01:18:41,335
+but that almost all capacity is sold as 3 years as a 3-year rectangle starting 3 to 6 months in the future.
+
+1185
+01:18:41,385 --> 01:18:43,037
+That's not what demand looks like for most users.
+
+1186
+01:18:43,087 --> 01:18:44,670
+I think we talked about that a little bit as well.
+
+1187
+01:18:44,720 --> 01:18:47,361
+Yeah, and you know, maybe just uh go a little bit deeper now.
+
+1188
+01:18:47,411 --> 01:18:52,313
+Like one thing I think Modal has always been very, very good at is fully on-demand capacity, right?
+
+1189
+01:18:52,363 --> 01:18:56,718
+Like if a customer comes to us and needs 100 GPUs, like we can typically give them that like immediately.
+
+1190
+01:18:56,768 --> 01:18:58,360
+You don't even have to talk to sales person.
+
+1191
+01:18:58,410 --> 01:19:03,532
+And a lot of workloads in in in real life, like they don't look like these like flat, you know, rectangular workloads.
+
+1192
+01:19:03,582 --> 01:19:06,124
+Like they scale up and down throughout the 24-hour cycle.
+
+1193
+01:19:06,174 --> 01:19:07,260
+They maybe grow over time.
+
+1194
+01:19:07,310 --> 01:19:09,790
+They maybe have certain burst periods.
+
+1195
+01:19:09,840 --> 01:19:12,998
+And to me, that is the challenge with a lot of customers today.
+
+1196
+01:19:13,048 --> 01:19:16,507
+Like the And And I do think it's a legit problem for for the space.
+
+1197
+01:19:16,557 --> 01:19:20,954
+It's like the only the prime way to get capacity is to to buy these rectangular blocks.
+
+1198
+01:19:21,004 --> 01:19:21,982
+It's not great.
+
+1199
+01:19:22,032 --> 01:19:23,301
+I think the world needs to evolve.
+
+1200
+01:19:23,351 --> 01:19:29,729
+And And that's fundamentally, I mean, I'm I'm I'm very biased, but like that's why I think Modal can play a very large role in in that sort of,
+
+1201
+01:19:29,779 --> 01:19:35,174
+you know, whatever you want to call it, sort of duration transformation of offering more flexible capacity.
+
+1202
+01:19:35,224 --> 01:19:41,015
+And we can do that because because we can aggregate many, many thousands of customers and the demand gets very smooth in aggregate.
+
+1203
+01:19:41,065 --> 01:19:44,030
+So, that's a lot of the value prop of Modal is exactly that.
+
+1204
+01:19:44,080 --> 01:19:45,390
+Would you say that's a differentiator?
+
+1205
+01:19:45,440 --> 01:19:46,350
+Like I think so.
+
+1206
+01:19:46,400 --> 01:19:46,883
+Oh, really?
+
+1207
+01:19:46,933 --> 01:19:47,233
+Okay.
+
+1208
+01:19:47,200 --> 01:19:48,500
+Yeah, massive differentiator.
+
+1209
+01:19:48,550 --> 01:19:52,790
+I actually, in fact, like I think Modal's like, if you want to be like very sort of reductive,
+
+1210
+01:19:52,840 --> 01:19:55,586
+like you can break down Modal's value prop into two things.
+
+1211
+01:19:55,636 --> 01:20:00,710
+One is a developer experience, the ability like iterate and like build things and not have to think about infrastructure.
+
+1212
+01:20:00,760 --> 01:20:02,390
+The other thing is the capacity stuff.
+
+1213
+01:20:02,440 --> 01:20:02,740
+Yeah.
+
+1214
+01:20:02,680 --> 01:20:07,030
+The more and more I think about Modal and like where we're going in in the long run is like we're building like
+
+1215
+01:20:07,080 --> 01:20:14,112
+we're aggregating the world's compute capacity and we're very good at slicing it out like very granularly cuz we built all this work around,
+
+1216
+01:20:14,162 --> 01:20:18,070
+you know, scaling up and down extremely fast, you know, all the stuff around GPU snapshotting.
+
+1217
+01:20:18,120 --> 01:20:21,150
+We're working on some some ways to make it much, much faster.
+
+1218
+01:20:21,200 --> 01:20:26,110
+And that model works at very large scale, like really, really well cuz you can aggregate lots of customers.
+
+1219
+01:20:26,160 --> 01:20:31,110
+Every month I keep saying our same max revenue might apply to it, but it keeps going up 30% every month.
+
+1220
+01:20:31,160 --> 01:20:32,030
+It's kind of nuts.
+
+1221
+01:20:32,080 --> 01:20:37,980
+Like I don't under you know, like every month I'm like, "What well, you know, Sound boxes grew a lot, but like clearly they kind of plateau.
+
+1222
+01:20:38,030 --> 01:20:39,895
+And then they keep growing even more.
+
+1223
+01:20:39,945 --> 01:20:41,565
+So so I I I I don't know.
+
+1224
+01:20:41,615 --> 01:20:45,978
+And a lot of VCs like they're like how did you know Sound boxes was going to be big?
+
+1225
+01:20:46,028 --> 01:20:48,460
+Like and and the truth is like I didn't.
+
+1226
+01:20:48,510 --> 01:20:52,461
+Like like I I thought it was going to be bigger than it was in 2023 for sure,
+
+1227
+01:20:52,511 --> 01:20:56,989
+but like the fact that Sound boxes is a third of our revenue today, it's it's insane.
+
+1228
+01:20:57,039 --> 01:20:59,116
+And you know, we're obviously very happy about it.
+
+1229
+01:20:59,166 --> 01:21:01,563
+We we have like a very large team investing in Sound boxes.
+
+1230
+01:21:01,613 --> 01:21:03,510
+You know, I don't want to like trivialize it.
+
+1231
+01:21:03,560 --> 01:21:11,262
+Like we obviously I do want to give ourselves like a lot of credit for for seeing Sound boxes for what it is today a little bit back in even 2023.
+
+1232
+01:21:11,312 --> 01:21:15,604
+But I I I think you know, if like I probably would have never, you know,
+
+1233
+01:21:15,654 --> 01:21:20,790
+taken a bet that revenue would be this large for Sound boxes and the market demand would be so much.
+
+1234
+01:21:20,840 --> 01:21:25,390
+There is an interesting structural reason why inference providers should exist separately from model builders.
+
+1235
+01:21:25,440 --> 01:21:26,630
+The best model keeps changing a lot.
+
+1236
+01:21:26,680 --> 01:21:31,950
+Inference providers keep can easily reallocate resources between models since overall demand is quite smooth.
+
+1237
+01:21:32,000 --> 01:21:37,295
+So I mean, if you think about all the Chinese labs and you know, in the future hopefully more US labs too,
+
+1238
+01:21:37,345 --> 01:21:42,401
+every time a new lab releases, you know, the latest and greatest open-source models.
+
+1239
+01:21:42,451 --> 01:21:46,478
+Like you see big shifts in demand, you know, for for these models.
+
+1240
+01:21:46,528 --> 01:21:52,710
+And and so I think a challenge with, you know, if all these labs independently like held capacity,
+
+1241
+01:21:52,760 --> 01:21:55,787
+they would see when they launch a new model, demand would go up a lot.
+
+1242
+01:21:55,837 --> 01:21:59,430
+And then another lab launches a better model and then the demand goes down, you know,
+
+1243
+01:21:59,480 --> 01:22:01,857
+but but of course like in the background they're working on the next version.
+
+1244
+01:22:01,907 --> 01:22:02,991
+So like I think you know,
+
+1245
+01:22:03,041 --> 01:22:06,837
+there's like a structural reason like I said like why you're going to start
+
+1246
+01:22:06,887 --> 01:22:10,885
+you're seeing demand kind of shifting to like the latest and greatest Chinese lab model.
+
+1247
+01:22:10,935 --> 01:22:12,990
+I mean, not like it's not like you know,
+
+1248
+01:22:13,040 --> 01:22:17,548
+this is like everything just moves overnight cuz cuz a lot of models and prompts and stuff
+
+1249
+01:22:17,598 --> 01:22:21,630
+like like a lot of things that get sort of there's like a certain stickiness to it.
+
+1250
+01:22:21,680 --> 01:22:26,521
+But I I do think you know, there's an argument that it's very easy for model to like, you know, right?
+
+1251
+01:22:26,571 --> 01:22:33,835
+Today we're running, you know, X number of thousand GPUs for one model, tomorrow we need a shift like, you know, 50% of that to another model.
+
+1252
+01:22:33,885 --> 01:22:36,582
+Sure, that's just like that's what the system was built to handle.
+
+1253
+01:22:36,632 --> 01:22:38,407
+No one even needs to tell us to do that.
+
+1254
+01:22:38,457 --> 01:22:39,750
+It just magically does that.
+
+1255
+01:22:39,800 --> 01:22:44,190
+So, you agree that basically the LLMs are commodities?
+
+1256
+01:22:44,240 --> 01:22:49,870
+And if you agree, then where do you think the business for the big labs is going to be?
+
+1257
+01:22:49,920 --> 01:22:52,133
+I'm not sure if that's necessarily true, right?
+
+1258
+01:22:52,183 --> 01:22:54,190
+Like is Taylor Swift a commodity?
+
+1259
+01:22:54,240 --> 01:22:58,350
+Like should we release this a big album and goes in a tour and makes a lot of money and then, you know,
+
+1260
+01:22:58,400 --> 01:23:02,368
+then there's like a down year when she goes and like records, I don't know if this is best analogy.
+
+1261
+01:23:02,418 --> 01:23:04,489
+And then she releases a new album, you know.
+
+1262
+01:23:04,539 --> 01:23:05,550
+So, I I I don't know.
+
+1263
+01:23:05,600 --> 01:23:09,826
+Like she still has like a lot of brand and there's a lot of, you know, power and like makes a lot of margin.
+
+1264
+01:23:09,876 --> 01:23:10,176
+So,
+
+1265
+01:23:10,056 --> 01:23:16,377
+like as long as the the labs like repeatedly can launch new models and as long as the margin that they have
+
+1266
+01:23:16,427 --> 01:23:22,054
+on those models are such that they they can sort of pay off amortize like that the cost of training those models,
+
+1267
+01:23:22,104 --> 01:23:24,750
+it could still be like a decent business, I think.
+
+1268
+01:23:24,800 --> 01:23:27,790
+So, you don't think that the intelligence is like plateauing?
+
+1269
+01:23:27,840 --> 01:23:29,560
+No, I don't I don't think so.
+
+1270
+01:23:29,610 --> 01:23:31,510
+I mean, I I think it remains to be seen, right?
+
+1271
+01:23:31,560 --> 01:23:40,070
+Like models that today are like very good at like doing things that can be trained very efficiently, you know, using reinforcement learning.
+
+1272
+01:23:40,120 --> 01:23:44,581
+So, so we've seen that initially with, you know, coding and writing simple snippets.
+
+1273
+01:23:44,631 --> 01:23:47,981
+Over time it's gotten really good at also writing production line level code.
+
+1274
+01:23:48,031 --> 01:23:49,954
+It's gotten really good at math.
+
+1275
+01:23:50,004 --> 01:23:53,110
+It's gotten really good at cybersecurity.
+
+1276
+01:23:53,160 --> 01:23:55,550
+Like these are all like very quite verifiable things.
+
+1277
+01:23:55,600 --> 01:24:03,772
+I I still think it remains to be seen, you know, are models going to be really good at whatever, cooking food or I I I don't know.
+
+1278
+01:24:03,822 --> 01:24:08,510
+Like things that have like more like diffuse targets that maybe longer feedback loops or whatever.
+
+1279
+01:24:08,560 --> 01:24:16,696
+I think humans probably like my feeling is like we'll be quite good and quite competitive with with models for a long time in those domains.
+
+1280
+01:24:16,746 --> 01:24:20,855
+But, you know, certainly you know, AI models they're they're getting there.
+
+1281
+01:24:20,905 --> 01:24:21,596
+They're very good.
+
+1282
+01:24:21,646 --> 01:24:23,270
+As as I'm sure everyone can agree with.
+
+1283
+01:24:23,320 --> 01:24:25,999
+Yeah, so obviously like the models are getting really good at coding.
+
+1284
+01:24:26,049 --> 01:24:27,958
+They're already really good at coding.
+
+1285
+01:24:28,008 --> 01:24:33,710
+What other applications do you think maybe that aren't as big right now are going to become huge over the next few years?
+
+1286
+01:24:33,760 --> 01:24:34,510
+For the LLMs?
+
+1287
+01:24:34,560 --> 01:24:39,877
+I I don't know, but I think anything that has like kind of a verifiable A computational bio I think you mentioned Yeah,
+
+1288
+01:24:39,927 --> 01:24:43,864
+computational bio as I think those are like not exactly verifiable,
+
+1289
+01:24:43,914 --> 01:24:49,201
+but there's like certain ways you can sort of run simu like you can use an LLM to output predictions,
+
+1290
+01:24:49,251 --> 01:24:56,070
+then you can do like a computational like like methods to like simulate the molecular dynamics and get like kind of feedback loops.
+
+1291
+01:24:56,120 --> 01:25:02,230
+I mean like I think like material science is like maybe another area where like you have a little bit of that loop where you can sort of, you know,
+
+1292
+01:25:02,280 --> 01:25:08,879
+synthetically manufacture certain materials and measure the properties and you just kind of put an agent in the loop and like, you know, do things.
+
+1293
+01:25:08,929 --> 01:25:12,270
+So so you know, I have a physics background I'm pretty excited about that.
+
+1294
+01:25:12,320 --> 01:25:14,368
+So drugs, materials, what else?
+
+1295
+01:25:14,418 --> 01:25:16,630
+I'm drawing a blank, but I'm sure there's many other things.
+
+1296
+01:25:16,680 --> 01:25:16,980
+Cool.
+
+1297
+01:25:16,908 --> 01:25:18,647
+I mean those are all the questions that I had.
+
+1298
+01:25:18,697 --> 01:25:21,350
+Is there anything you wanted to talk about that I haven't?
+
+1299
+01:25:21,400 --> 01:25:21,760
+I'm good.
+
+1300
+01:25:21,790 --> 01:25:22,324
+This is great.
+
+1301
+01:25:22,374 --> 01:25:23,550
+This is a lot of fun.
+
+1302
+01:25:23,600 --> 01:25:25,579
+Awesome.
+
+1303
+01:25:25,629 --> 01:25:28,109
+Thank you.

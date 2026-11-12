@@ -138,14 +138,18 @@
   Noémie Jaquier、Paolo Robuffo Giordano、PDDL、Grounding DINO、CLIPort、OpenVLA、
   Lagrangian、Riemannian、SE(3)、MPPI 等）
 - **成片**：`ICRA 2026 Keynote 5 - Robot Learning & Models [a9f2rqxACHQ] [中英字幕].mkv`，
-  1,190,197,453 字节（1.11 GiB），H.264（QSV `-global_quality:v 19`）1920×1080 23.976fps CFR
-  + Opus 48kHz 立体声（原音轨直接复制），5130.141s（1:25:30），整体码率 1.86 Mbps，
-  **硬字幕**（英上中下，1015 条，`MarginV=230`，避开底部 IEEE RAS 红色页脚），QSV 烧录 5 分 06 秒
+  1,175,642,439 字节（1.09 GiB），H.264（QSV `-global_quality:v 19`）1920×1080 23.976fps CFR
+  + Opus 48kHz 立体声（原音轨直接复制），5130.141s（1:25:30），整体码率 1.83 Mbps，
+  **硬字幕**（英上中下，1015 条，`MarginV=36`，落在底部 IEEE RAS 红色页脚带内），QSV 烧录 4 分 35 秒
 - **字幕文件**：`subtitles/a9f2rqxACHQ.zh.bilingual.srt` / `.ass`（英上中下，1015 条，
-  `MarginV=230`，避开底部 IEEE RAS 页脚）、`subtitles/a9f2rqxACHQ.en.ass`（英文单语）
+  `MarginV=36`，落在红色页脚带内）、`subtitles/a9f2rqxACHQ.en.ass`（英文单语）
 - **校验**：成片 5130.141s，与原片完全一致（未剪辑）；head 60s / tail 30s 解码无报错；
   音轨 MD5 与原片一致（`fe4d7eb5a618ac2734c3ba9ff49b1760`），确认直接复制、无音画偏移；
-  抽帧 01:00 / 05:00 / 30:00 / 1:23:20，确认双语字幕位于 IEEE RAS 红色页脚上方、无裁切
+  抽帧 01:00 / 05:00 / 1:00:00 / 1:23:20，确认双语字幕落在红色页脚带内（y≈876–1052，
+  页脚带 y=894–1079）：两行 cue 完整在带内，四行 cue（约 2%）上沿高出带顶约 18 px
+- **重烧记录（2026-11-04）**：首版用 `MarginV=230`，字幕块 y≈820–902，主体压在幻灯片底部，
+  盖住讲稿内容；按“把字幕放进底部红色页脚带”的要求改为 `MarginV=36` 并整片重烧，
+  字幕文件 `zh.bilingual.ass` / `en.ass` 同步改为该值
 
 ## 备注
 
@@ -156,6 +160,7 @@
   `Ursia → IRISA`、`lrenchian → Lagrangian`、`ukidian → Euclidean`、`endeector → end-effector`、
   `Taurus → torus`、`PDDDL → PDDL`、`induction hooker → induction cooker` 等）
 - 全片为四场连续主题报告 + 每场 Q&A，无赞助口播、无广告段，成片时间轴与原片一致，无需删段
-- 画面为幻灯片与讲者，无硬字幕；幻灯片底部有 IEEE RAS 红色页脚，双语字幕用 `MarginV=230` 抬到页脚上方
+- 画面为幻灯片与讲者，无硬字幕；幻灯片底部有 IEEE RAS 红色页脚（1080p 下 y=894–1079），
+  双语字幕用 `MarginV=36` 直接落在红色页脚带内，不再压住幻灯片
 - 四位讲者的题目以 ICRA 2026 官方日程为准；Stefanie Tellex 的官方拼写为 Stefanie（非 Stephanie）
 - 与第 17、20 期 Figure 和第 22 期 Waymo 形成“物理 AI 工程实现 → 机器人学习理论”的对照

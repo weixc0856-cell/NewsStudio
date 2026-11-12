@@ -1,0 +1,1456 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:58.32,0:00:59.63,Sub,,0,0,0,,Hi everyone, welcome to Munro Live.\N大家好，欢迎来到蒙罗直播。
+Dialogue: 0,0:00:59.68,0:01:03.97,Sub,,0,0,0,,We've got an exciting series or episode that we're going to stitch together here.\N我们将在这里串联起一段令人兴奋的系列内容或节目。
+Dialogue: 0,0:01:04.02,0:01:08.28,Sub,,0,0,0,,I'm with Lars, Eric, and Hector all from the Tesla team.\N我身边是来自特斯拉团队的Lars、Eric和Hector。
+Dialogue: 0,0:01:08.33,0:01:09.88,Sub,,0,0,0,,I'm sure you know these guys.\N我相信你们都认识这几位。
+Dialogue: 0,0:01:09.93,0:01:13.11,Sub,,0,0,0,,Behind us obviously we've got the the Cybercab.\N在我们身后，显然就是 Cybercab。
+Dialogue: 0,0:01:13.16,0:01:15.92,Sub,,0,0,0,,So we're going to dive into the unboxing.\N所以我们要开始拆箱环节了。
+Dialogue: 0,0:01:15.97,0:01:17.46,Sub,,0,0,0,,We're going to walk a bit of the line.\N我们会稍微走一下这条线。
+Dialogue: 0,0:01:17.51,0:01:20.53,Sub,,0,0,0,,We're going to look at batteries, but it's going to be exciting.\N我们会看看电池，但会很精彩。
+Dialogue: 0,0:01:20.58,0:01:23.50,Sub,,0,0,0,,I don't know if it's going to be more exciting than the Roadster video from last night.\N我不知道这会不会比昨晚的 Roadster 视频更精彩。
+Dialogue: 0,0:01:23.55,0:01:25.69,Sub,,0,0,0,,Yeah, yeah, yeah.\N是的，是的，是的。
+Dialogue: 0,0:01:25.74,0:01:30.74,Sub,,0,0,0,,We got to but So I mean let's let's dive into what we're seeing on the floor here.\N我们得开始看看这里展示的东西了。
+Dialogue: 0,0:01:30.79,0:01:33.71,Sub,,0,0,0,,Like what was what was the design intent?\N比如说，设计初衷是什么？
+Dialogue: 0,0:01:33.76,0:01:37.39,Sub,,0,0,0,,Like the the whole unboxing discussion came out a while ago.\N就像之前关于开箱讨论的那件事，已经过去一段时间了。
+Dialogue: 0,0:01:37.44,0:01:37.85,Sub,,0,0,0,,It did.\N确实如此。
+Dialogue: 0,0:01:37.90,0:01:41.80,Sub,,0,0,0,,I think it we first kind of is that it was probably like five or six years ago.\N我觉得那大概是在五到六年之前。
+Dialogue: 0,0:01:41.85,0:01:45.99,Sub,,0,0,0,,We were working on like automating our lines more and more and more.\N当时我们正越来越多地尝试自动化生产线。
+Dialogue: 0,0:01:46.04,0:01:52.69,Sub,,0,0,0,,And we kind of hit a wall where like the problem wasn't the automation, the problem was the design.\N但后来我们遇到了瓶颈，问题不在于自动化，而在于设计。
+Dialogue: 0,0:01:52.74,0:01:59.39,Sub,,0,0,0,,And you know my team is responsible for not just the design of the vehicle, not just the test of the vehicle,\N你知道，我的团队不仅负责车辆的设计和测试，
+Dialogue: 0,0:01:59.44,0:02:06.06,Sub,,0,0,0,,but also the manufacturing and even the automation groups that we have within our our team, they're all in one engineering org.\N还负责制造，甚至我们团队内部的自动化小组，也都属于同一个工程部门。
+Dialogue: 0,0:02:06.11,0:02:09.35,Sub,,0,0,0,,So, we got a few of us together and we're like, "How are we going to break this?"\N于是我们几个人聚在一起，问自己：“我们该如何突破这个困境？”
+Dialogue: 0,0:02:09.40,0:02:11.22,Sub,,0,0,0,,And like that was the answer.\N那就是答案。
+Dialogue: 0,0:02:11.27,0:02:14.08,Sub,,0,0,0,,You got to break it apart.\N你必须把它拆开。
+Dialogue: 0,0:02:14.13,0:02:18.37,Sub,,0,0,0,,And um you know, Eric at that time was in charge of our integration team.\N当时Eric负责我们的集成团队。
+Dialogue: 0,0:02:18.42,0:02:23.07,Sub,,0,0,0,,And that was a big task of like 100 years of building cars one way.\N这是一项相当于用一种方式造了整整一百年汽车的庞大任务。
+Dialogue: 0,0:02:23.12,0:02:24.97,Sub,,0,0,0,,Uh how do you break it apart?\N嗯，你该怎么把它拆开呢？
+Dialogue: 0,0:02:25.02,0:02:29.19,Sub,,0,0,0,,And so, we kind of looked at a car and realized it was a box.\N于是我们看了看一辆车，意识到它其实就是一个盒子。
+Dialogue: 0,0:02:29.24,0:02:32.87,Sub,,0,0,0,,You know, there's like a bottom and top, left and right, and front and back.\N你知道，有底面和顶面，左面和右面，前面和后面。
+Dialogue: 0,0:02:32.92,0:02:34.62,Sub,,0,0,0,,And then we came up with the idea to unbox it.\N然后我们想到了一个拆解它的想法。
+Dialogue: 0,0:02:34.67,0:02:37.39,Sub,,0,0,0,,And really that did two things for us.\N这实际上为我们做了两件事。
+Dialogue: 0,0:02:37.44,0:02:41.50,Sub,,0,0,0,,Uh fundamentally, one, it gave us smaller pieces to work with.\N从根本上说，第一，它让我们有了更小的部件可以操作。
+Dialogue: 0,0:02:41.55,0:02:46.14,Sub,,0,0,0,,So, we could get robots in tighter and walk through each bit um a little bit.\N这样我们就能让机器人更灵活地进入，逐个走遍每个部分。
+Dialogue: 0,0:02:46.19,0:02:52.23,Sub,,0,0,0,,And then two, it also allowed us to break the line apart and go to more like a tributary and main flow.\N第二，它也让我们能将生产线拆开，变成类似支流和主干的结构。
+Dialogue: 0,0:02:52.28,0:02:57.99,Sub,,0,0,0,,And so, you know, the manufacturing guys that like Hector works with, they're able to make final line.\N所以，像Hector合作的制造团队，现在能够完成最终装配线。
+Dialogue: 0,0:02:58.04,0:02:59.22,Sub,,0,0,0,,How many stations is it?\N有多少个工位？
+Dialogue: 0,0:02:59.27,0:02:59.91,Sub,,0,0,0,,25 stations?\N25个工位？
+Dialogue: 0,0:02:59.96,0:03:01.83,Sub,,0,0,0,,25 stations, fully automated.\N25个工位，完全自动化。
+Dialogue: 0,0:03:01.88,0:03:04.79,Sub,,0,0,0,,Like final GA, when the whole thing comes together is 25?\N就像最终的 GA 一样，当所有部分整合在一起时，是 25 吗？
+Dialogue: 0,0:03:04.84,0:03:05.27,Sub,,0,0,0,,Wow.\N哇。
+Dialogue: 0,0:03:05.32,0:03:10.39,Sub,,0,0,0,,And like a normal Model Y was probably like 5 10X that.\N而普通 Model Y 大概是它的 5 到 10 倍。
+Dialogue: 0,0:03:10.44,0:03:10.74,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:03:10.72,0:03:12.92,Sub,,0,0,0,,Depending on which factory and how much you're running.\N取决于是哪个工厂以及运行量有多大。
+Dialogue: 0,0:03:12.97,0:03:14.33,Sub,,0,0,0,,So, those are the two big things.\N所以，这就是两个关键点。
+Dialogue: 0,0:03:14.38,0:03:16.00,Sub,,0,0,0,,But why don't we start like piece by piece?\N但为什么不从一块一块开始呢？
+Dialogue: 0,0:03:16.05,0:03:19.79,Sub,,0,0,0,,Eric and I can give you a quick review and then Hector will just tell you how we put it all together.\NEric和我可以快速做个回顾，然后Hector会告诉你我们是怎么把所有部分整合在一起的。
+Dialogue: 0,0:03:19.84,0:03:20.14,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:03:20.14,0:03:23.79,Sub,,0,0,0,,Yeah, great. we start up front, Eric?\N好，那我们从前面开始，Eric？
+Dialogue: 0,0:03:23.84,0:03:31.35,Sub,,0,0,0,,So, the front Yeah, the front is one of the more uh obviously dense and integrated modules that we have.\N前部，嗯，前部是我们最明显、最密集和最集成的模块之一。
+Dialogue: 0,0:03:31.40,0:03:32.43,Sub,,0,0,0,,This is the business unit.\N这是业务单元。
+Dialogue: 0,0:03:32.48,0:03:33.37,Sub,,0,0,0,,This is Yeah, exactly.\N这就是，没错。
+Dialogue: 0,0:03:33.42,0:03:38.10,Sub,,0,0,0,,This is basically where you know, 50%of the parts and the content really is at.\N这基本上就是你知道的，50%的零部件和内容所在的位置。
+Dialogue: 0,0:03:38.15,0:03:39.46,Sub,,0,0,0,,And we did that on purpose.\N我们是故意这么做的。
+Dialogue: 0,0:03:39.51,0:03:45.04,Sub,,0,0,0,,We wanted to have everything isolated to one area for efficiency of low voltage distribution.\N我们希望将所有东西集中在一个区域，以实现低压配电的高效性。
+Dialogue: 0,0:03:45.09,0:03:50.51,Sub,,0,0,0,,We put all of the end points, all the electronics, where the control systems are.\N我们把所有终端点、所有电子设备，都放在控制系统的所在位置。
+Dialogue: 0,0:03:50.56,0:03:51.90,Sub,,0,0,0,,And so, that's kind of what we've done here.\N所以，我们在这里就是这么做的。
+Dialogue: 0,0:03:51.95,0:03:56.58,Sub,,0,0,0,,And we've also revolutionized, which we'll talk about a little bit later, how we do thermal system management,\N我们还彻底革新了——稍后我们会详细讲到——我们如何管理热系统，
+Dialogue: 0,0:03:56.63,0:04:02.02,Sub,,0,0,0,,moving, you know, another step uh from our super manifold of previous products.\N相比之前的产品，又向前迈进了一步。
+Dialogue: 0,0:04:02.07,0:04:05.27,Sub,,0,0,0,,We've got a 48-V low-voltage battery.\N我们配备了一个48伏低压电池。
+Dialogue: 0,0:04:05.32,0:04:10.47,Sub,,0,0,0,,Uh and then on top of that, we've got the drive unit, which is basically right in here in the center.\N然后在上面，我们有驱动单元，基本上就在这里的中心位置。
+Dialogue: 0,0:04:10.52,0:04:15.79,Sub,,0,0,0,,And one thing that we heard a lot from our service teams really early on in this project,\N有一件事，我们从项目初期就从服务团队那里听到很多，
+Dialogue: 0,0:04:15.84,0:04:20.99,Sub,,0,0,0,,we want to make the drive inverter serviceable without having to basically tear the car from the underside out.\N我们希望让驱动逆变器可维护，而无需从车底彻底拆下整个部件。
+Dialogue: 0,0:04:21.04,0:04:21.47,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,0:04:21.52,0:04:25.32,Sub,,0,0,0,,And so, what we've been able to do is allow this assembly to be very simple to remove.\N因此，我们能够做到的是让这个组件非常容易拆卸。
+Dialogue: 0,0:04:25.37,0:04:27.94,Sub,,0,0,0,,Obviously, washer valve is very simple to remove.\N显然，这个垫圈阀也非常容易拆卸。
+Dialogue: 0,0:04:27.99,0:04:35.23,Sub,,0,0,0,,It allows you access to the inverter, so we don't even need to raise the car, tear the suspension, tear the drive unit out to service the inverter.\N它让你可以接触到逆变器，因此我们甚至不需要举升车辆，也不用拆卸悬挂系统或驱动单元就能维修逆变器。
+Dialogue: 0,0:04:35.28,0:04:40.79,Sub,,0,0,0,,And so, the fundamental aspect of integration here is is is is principally insane.\N所以这里集成的核心要点本质上是极其疯狂的。
+Dialogue: 0,0:04:40.84,0:04:41.35,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,0:04:41.40,0:04:42.47,Sub,,0,0,0,,Like, it it really is.\N确实如此。
+Dialogue: 0,0:04:42.52,0:04:49.03,Sub,,0,0,0,,And you can't like do that without thinking at the beginning, cuz Eric just very casually said, "Oh, we just take out the thermal system."\N你必须从一开始就这样思考，因为Eric只是随意地说了一句：“哦，我们直接把热管理系统拆掉就行。”
+Dialogue: 0,0:04:49.08,0:04:50.83,Sub,,0,0,0,,But it's a refrigerant system, right?\N但它是一个制冷剂系统，对吧？
+Dialogue: 0,0:04:50.88,0:04:52.15,Sub,,0,0,0,,You can't break refrigerant lines.\N你不能破坏制冷剂管路。
+Dialogue: 0,0:04:52.20,0:04:53.55,Sub,,0,0,0,,Right.\N对。
+Dialogue: 0,0:04:53.60,0:04:55.03,Sub,,0,0,0,,We got rid of those. flipped it.\N我们把那些都去掉了，然后翻了个面。
+Dialogue: 0,0:04:55.08,0:04:59.47,Sub,,0,0,0,,It's a coolant-based system for heat exchange, and the refrigerant system is completely closed.\N这是一个基于冷却液的散热系统，而制冷剂系统是完全封闭的。
+Dialogue: 0,0:04:59.52,0:05:04.39,Sub,,0,0,0,,It's a closed-loop system within the Which you couldn't worry about after the fact, to your point.\N这是一个闭环系统，正如你所说，一旦出现问题就无法事后补救。
+Dialogue: 0,0:05:04.44,0:05:05.83,Sub,,0,0,0,,Yeah, you had to do it at the beginning.\N是的，你必须从一开始就做好。
+Dialogue: 0,0:05:05.88,0:05:08.69,Sub,,0,0,0,,And so, like, it went all the way back to the beginning of design.\N所以，整个设计过程都必须从最初的阶段就开始考虑。
+Dialogue: 0,0:05:08.74,0:05:12.59,Sub,,0,0,0,,And then, you know, the to to drain and purge a coolant system is actually pretty easy.\N而且，你知道，排空和吹扫冷却系统其实相当简单。
+Dialogue: 0,0:05:12.64,0:05:13.01,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:05:13.04,0:05:18.03,Sub,,0,0,0,,And we even on that, we actually made a through loop, so you can push and pull and do it faster.\N我们甚至为此设计了一个完整的循环回路，可以推拉操作，从而加快效率。
+Dialogue: 0,0:05:18.08,0:05:18.79,Sub,,0,0,0,,Uh that's brilliant.\N这太棒了。
+Dialogue: 0,0:05:18.84,0:05:19.35,Sub,,0,0,0,,Suck it up.\N拿下它。
+Dialogue: 0,0:05:19.40,0:05:24.15,Sub,,0,0,0,,The the things that really stand out to me, I mean, we've obviously torn down a bunch of the other Teslas,\N真正让我印象深刻的是，我们显然拆解了多辆其他特斯拉，
+Dialogue: 0,0:05:24.20,0:05:28.26,Sub,,0,0,0,,it's it's the packaging and how tight the the drive unit is in Z.\N就是它的布局设计，以及驱动单元在Z轴方向上的紧凑程度。
+Dialogue: 0,0:05:28.31,0:05:32.11,Sub,,0,0,0,,Like, it's way higher in Z relative to the super beam.\N就像，它在Z轴方向上的高度远高于超级梁。
+Dialogue: 0,0:05:32.16,0:05:35.32,Sub,,0,0,0,,And actually, you know, is So, what is mounted here?\N实际上，你知道吗，这里装的是什么？
+Dialogue: 0,0:05:35.37,0:05:37.47,Sub,,0,0,0,,Is this the EAC compressor? the AC compressor.\N这是EAC压缩机吗？就是空调压缩机。
+Dialogue: 0,0:05:37.52,0:05:44.52,Sub,,0,0,0,,Yeah, the compressor and basically the the the coolant manifold and the coolant controller are all one assembly.\N对，压缩机以及冷却液分配管路和冷却液控制器都集成在一个组件里。
+Dialogue: 0,0:05:44.56,0:05:46.03,Sub,,0,0,0,,It's all integrated together.\N它们全部集成在一起。
+Dialogue: 0,0:05:46.08,0:05:48.02,Sub,,0,0,0,,goes back to the principle of integration and test.\N这又回到了集成与测试的原则。
+Dialogue: 0,0:05:48.07,0:05:49.47,Sub,,0,0,0,,We talked about that tributary flow.\N我们之前谈到了分支流。
+Dialogue: 0,0:05:49.52,0:05:52.03,Sub,,0,0,0,,Everything is self-tested before it goes in.\N每个部件在进入装配前都经过自检。
+Dialogue: 0,0:05:52.08,0:05:54.55,Sub,,0,0,0,,So, when Hector's building it, he knows he has a good part.\N所以，当Hector在组装时，他知道他拿到的是一个合格的零件。
+Dialogue: 0,0:05:54.60,0:05:54.90,Sub,,0,0,0,,Right.\N没错。
+Dialogue: 0,0:05:54.76,0:06:02.33,Sub,,0,0,0,,And so, we have a you know, a module line that builds the integrated thermal or the indirect thermal system, and that's then self-tested on the line.\N我们有一条模块化生产线，用于制造集成式热管理系统或间接式热管理系统，该系统在生产线上完成自检。
+Dialogue: 0,0:06:02.38,0:06:04.11,Sub,,0,0,0,,So, we know we have a good part coming in.\N所以我们知道进来的都是合格的部件。
+Dialogue: 0,0:06:04.16,0:06:06.47,Sub,,0,0,0,,And you'll kind of see this like every part comes together.\N你大概会看到，每个零件都是这样逐步组装起来的。
+Dialogue: 0,0:06:06.52,0:06:07.52,Sub,,0,0,0,,Same with the drive unit.\N驱动单元也是一样。
+Dialogue: 0,0:06:07.57,0:06:13.10,Sub,,0,0,0,,And then by the time we get here, you have the full front end that Eric was describing with all of this.\N等我们做到这里时，你就能看到Eric描述过的完整前部组件，包括所有这些部分。
+Dialogue: 0,0:06:13.15,0:06:15.34,Sub,,0,0,0,,We actually know the car is ready to drive and go.\N我们实际上知道这辆车已经准备好可以驾驶了。
+Dialogue: 0,0:06:15.39,0:06:19.98,Sub,,0,0,0,,And all the all of the computers are hooked up when the front end uh front comes to line.\N当前部组件到达生产线时，所有计算机都已连接完毕。
+Dialogue: 0,0:06:20.03,0:06:20.83,Sub,,0,0,0,,So, it's pretty cool.\N所以这真的很酷。
+Dialogue: 0,0:06:20.88,0:06:30.50,Sub,,0,0,0,,We really took a lot of the principle of moving moving complexity out and building modules that bring assembly upstream so we can\N我们确实把很多移动复杂性的原则去掉了，并构建了模块，将装配流程前置，这样我们就能
+Dialogue: 0,0:06:30.55,0:06:40.91,Sub,,0,0,0,,self-test more and larger modules as well as uh in in in sub-subassemblies in a much higher percentage than anything we've ever done before.\N更多地进行自检，对更大模块以及子子组件的测试比例也远高于我们以往任何一次。
+Dialogue: 0,0:06:40.96,0:06:48.15,Sub,,0,0,0,,The other thing I I guess I'll say on the integration side, which I know you're you're keen on, is Like this has been the core team on it, seriously.\N另外，关于集成方面，我想说一句，我知道你很关注这一点，这个核心团队真的投入了全部精力。
+Dialogue: 0,0:06:48.20,0:06:50.23,Sub,,0,0,0,,I'm keen on it as well.\N我也同样关注这一点。
+Dialogue: 0,0:06:50.28,0:06:52.38,Sub,,0,0,0,,I mean, this is the core of Tesla, right?\N毕竟，这正是特斯拉的核心所在，对吧？
+Dialogue: 0,0:06:52.43,0:06:57.11,Sub,,0,0,0,,Is an organizational structure of engineering that works really well together.\N这是一种工程组织结构，真正能够高效协同工作。
+Dialogue: 0,0:06:57.16,0:07:03.11,Sub,,0,0,0,,There is no there's no like veil, there's no wall between teams, and that's kind of what you see here. ego, either.\N团队之间没有隔阂，没有壁垒，你在这里看到的正是如此。也没有个人主义。
+Dialogue: 0,0:07:03.16,0:07:04.11,Sub,,0,0,0,,There's no ego, either.\N也没有什么自我意识。
+Dialogue: 0,0:07:04.16,0:07:07.31,Sub,,0,0,0,,Well, I think Lars and I were actually, you know, talking on the ride over here.\N嗯，我觉得 Lars 和我刚才在来这里的路上其实一直在聊。
+Dialogue: 0,0:07:07.36,0:07:12.48,Sub,,0,0,0,,We were talking about the patents, the designs, you know, what what is the secret sauce to Tesla?\N我们聊到了专利、设计，你知道的，特斯拉的秘密配方到底是什么？
+Dialogue: 0,0:07:12.53,0:07:16.13,Sub,,0,0,0,,And I think you said something like, well, it's actually not that secret.\N而你说过类似这样的话：其实也没那么神秘。
+Dialogue: 0,0:07:16.18,0:07:17.41,Sub,,0,0,0,,A lot of it's pretty public.\N其实很多东西都挺公开的。
+Dialogue: 0,0:07:17.46,0:07:19.54,Sub,,0,0,0,,And I'm like, I think the secret's the culture.\N我当时就感觉，秘密其实在文化。
+Dialogue: 0,0:07:19.59,0:07:20.90,Sub,,0,0,0,,I think it's what you just touched on.\N我觉得你刚才提到的就是关键。
+Dialogue: 0,0:07:20.95,0:07:24.59,Sub,,0,0,0,,I think it's this mindset that yeah, it's not super hierarchical.\N我觉得这是一种心态：是的，它不是特别层级化。
+Dialogue: 0,0:07:24.64,0:07:25.63,Sub,,0,0,0,,It's our problem.\N这是我们的事。
+Dialogue: 0,0:07:25.68,0:07:26.93,Sub,,0,0,0,,It's it's it's our problem.\N这是我们的事。
+Dialogue: 0,0:07:26.98,0:07:31.39,Sub,,0,0,0,,It's not your problem cuz you're the thermal guy, or you're the chassis guy, or whatever.\N不是你的事，因为你只是负责热管理，或者负责底盘，或者其他什么。
+Dialogue: 0,0:07:31.44,0:07:33.39,Sub,,0,0,0,,And and this is the net result.\N而这就是最终的结果。
+Dialogue: 0,0:07:33.44,0:07:41.58,Sub,,0,0,0,,And by the way, I think this is the first example that I've seen from Tesla where the EAC compressor is PIA, a part of the assembly.\N顺便说一句，我认为这是特斯拉首次出现EAC压缩机成为装配体一部分的情况，这真是个麻烦。
+Dialogue: 0,0:07:41.63,0:07:43.91,Sub,,0,0,0,,No separate bracket, you know.\N没有单独的支架，你知道的。
+Dialogue: 0,0:07:43.96,0:07:46.35,Sub,,0,0,0,,Sometimes on unintended consequences.\N有时是 unintended consequences。
+Dialogue: 0,0:07:46.40,0:07:46.80,Sub,,0,0,0,,Yeah, yeah.\N对，对。
+Dialogue: 0,0:07:46.84,0:07:50.21,Sub,,0,0,0,,Like we actually you know, we put it all together like, oh man,\N就像我们真的，你知道的，我们把它全都凑在一起，天哪，
+Dialogue: 0,0:07:50.26,0:07:58.44,Sub,,0,0,0,,this this is way more like heavier than we anticipated and we had to like re-figure out how to isolate it because it actually added to the you know,\N这比我们预想的要重得多，我们不得不重新考虑如何将其隔离，因为它实际上增加了……
+Dialogue: 0,0:07:58.49,0:07:59.75,Sub,,0,0,0,,the the modal mapping in the front.\N前部的模态映射。
+Dialogue: 0,0:07:59.80,0:08:03.91,Sub,,0,0,0,,Where normally when it's sort of just a tiny little compressor, it's not that big of a deal.\N通常情况下，如果只是个小小的压缩机，那问题也不大。
+Dialogue: 0,0:08:03.96,0:08:07.83,Sub,,0,0,0,,it's this big Well, there there's there's some like really cool stuff here, right?\N这么大。嗯，这里有些非常酷的东西，对吧？
+Dialogue: 0,0:08:07.88,0:08:12.76,Sub,,0,0,0,,Like are no longer running high voltage distribution from the battery pack to the system.\N如今已不再从电池组向系统高压配电。
+Dialogue: 0,0:08:12.81,0:08:17.71,Sub,,0,0,0,,We basically do a junction off of the drive inverter to power That's right.\N我们基本上是从驱动逆变器引出一个连接点来供电。没错。
+Dialogue: 0,0:08:17.76,0:08:18.59,Sub,,0,0,0,,Ah.\N啊。
+Dialogue: 0,0:08:18.64,0:08:20.67,Sub,,0,0,0,,There's another Conway law break, right?\N还有另一个康威定律的突破，对吧？
+Dialogue: 0,0:08:20.72,0:08:28.66,Sub,,0,0,0,,Like So now the inverter team is working to make the cost of the high voltage system and the uh the thermal system less.\N现在逆变器团队正在努力降低高压系统和热管理系统的成本。
+Dialogue: 0,0:08:28.71,0:08:31.23,Sub,,0,0,0,,It means less parts, less complexity.\N这意味着更少的零件，更低的复杂度。
+Dialogue: 0,0:08:31.28,0:08:34.39,Sub,,0,0,0,,Uh Uh you can ask questions that and then I'll go to the next one.\N你可以提问，然后我再讲下一条。
+Dialogue: 0,0:08:34.44,0:08:38.86,Sub,,0,0,0,,So so the inverter kind of became like this little substation for you. distribution Exactly.\N所以逆变器某种程度上就像为你提供的一个小型变电站，用于配电，完全正确。
+Dialogue: 0,0:08:38.91,0:08:41.36,Sub,,0,0,0,,It's a PDC to go and power everything else.\N它是一个直流配电中心，用来为其他所有设备供电。
+Dialogue: 0,0:08:41.41,0:08:44.39,Sub,,0,0,0,,So you're not running dedicated circuits all the way from the battery.\N你不需要从电池一路铺设专用电路。
+Dialogue: 0,0:08:44.44,0:08:46.86,Sub,,0,0,0,,And that is that is like 100%the core of this car.\N这正是这辆车的核心所在。
+Dialogue: 0,0:08:46.91,0:08:50.71,Sub,,0,0,0,,Is like do not waste a gram, do not waste anything.\N就是不要浪费一克重量，不要浪费任何东西。
+Dialogue: 0,0:08:50.76,0:08:51.15,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:08:51.18,0:08:52.39,Sub,,0,0,0,,Yeah, yeah, yeah.\N对，对，对。
+Dialogue: 0,0:08:52.44,0:08:53.26,Sub,,0,0,0,,Oh, it's amazing.\N哦，太棒了。
+Dialogue: 0,0:08:53.31,0:08:53.61,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:08:53.60,0:08:58.95,Sub,,0,0,0,,Come around here like let's look at the suspension real quick cuz we got a lot to talk about.\N来这边看看，我们快速看一下悬挂系统，因为还有很多东西要讨论。
+Dialogue: 0,0:08:59.00,0:09:04.65,Sub,,0,0,0,,So it's a it's a strut suspension which you wouldn't think with the low hood.\N这是支柱式悬挂，你可能不会想到在低引擎盖的情况下还能实现。
+Dialogue: 0,0:09:04.70,0:09:10.47,Sub,,0,0,0,,So we had to offset the you know, the the kingpins to be in front of the um you know,\N所以我们必须把主销位置前移，使其位于车轮中心的前方，这一点我们稍后还会再详细讨论。
+Dialogue: 0,0:09:10.52,0:09:17.35,Sub,,0,0,0,,the the center of the wheel there and we'll talk about this a little bit more later too, but it's also our first brake by wire system.\N这也是我们首次采用线控刹车系统。
+Dialogue: 0,0:09:17.40,0:09:22.59,Sub,,0,0,0,,And again, that was done because it was almost a necessity for breaking it apart.\N再次强调，这是因为在拆解车辆时几乎是必须的。
+Dialogue: 0,0:09:22.64,0:09:27.87,Sub,,0,0,0,,It's you can't have a closed hydraulic system for breaking if you're going to split the\N如果你要把车分成几部分，就无法再使用封闭的液压系统来实现刹车。
+Dialogue: 0,0:09:27.92,0:09:32.35,Sub,,0,0,0,,car in into pieces and so we can self-test the front brakes and the rear brakes separately.\N因此我们可以分别对前后刹车系统进行自检。
+Dialogue: 0,0:09:32.40,0:09:33.40,Sub,,0,0,0,,Well, this is beautiful, right?\N这样设计真的很棒，对吧？
+Dialogue: 0,0:09:33.46,0:09:40.91,Sub,,0,0,0,,Because we no longer need hydraulics running from the back to the front from a from a booster or from some kind of junction.\N因为我们不再需要从后部通过助力器或某种接头向车头输送液压油。
+Dialogue: 0,0:09:40.96,0:09:44.87,Sub,,0,0,0,,It's basically everything is isolated to the module that it's in.\N基本上所有部件都只在各自的模块内独立运行。
+Dialogue: 0,0:09:44.92,0:09:52.70,Sub,,0,0,0,,And it just again allows for us to to take cost out of the distribution of whether it's conductor material or fluids or whatever it is.\N这样又让我们能降低在布线材料或流体传输等方面的成本。
+Dialogue: 0,0:09:52.75,0:09:55.71,Sub,,0,0,0,,It allows us to simplify manufacturing substantially.\N它让我们能够大幅简化制造流程。
+Dialogue: 0,0:09:55.76,0:10:02.06,Sub,,0,0,0,,So so it's allowing you, if I heard what you said correctly, you're doing testing like on the thermal management system by itself.\N所以，如果我理解正确的话，你们是在单独对热管理系统进行测试。
+Dialogue: 0,0:10:02.11,0:10:08.55,Sub,,0,0,0,,And then you're able to plug all these components, brakes, drive unit, all that into the the module, this unboxed chunk,\N然后你们可以把所有这些部件——刹车、驱动单元等等——全部接入这个模块，也就是这个 Unboxed 模块。
+Dialogue: 0,0:10:08.60,0:10:14.79,Sub,,0,0,0,,and then you can test it in this state to ensure before it gets bolted to the rest of the modules that this is ready to go.\N接着可以在这种状态下进行测试，确保在将其固定到其他模块之前，这个模块已经准备就绪。
+Dialogue: 0,0:10:14.84,0:10:15.39,Sub,,0,0,0,,Exactly.\N完全正确。
+Dialogue: 0,0:10:15.44,0:10:15.84,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:10:15.88,0:10:16.35,Sub,,0,0,0,,Exactly.\N完全正确。
+Dialogue: 0,0:10:16.40,0:10:16.76,Sub,,0,0,0,,Got it.\N明白了。
+Dialogue: 0,0:10:16.79,0:10:20.19,Sub,,0,0,0,,You're buying down risk at multiple steps, every step of the way.\N你们在每一步都降低了风险。
+Dialogue: 0,0:10:20.24,0:10:23.02,Sub,,0,0,0,,Well, I line it What's our full percentage?\N嗯，我们整体的百分比是多少？
+Dialogue: 0,0:10:23.07,0:10:23.71,Sub,,0,0,0,,85 90?\N85 到 90？
+Dialogue: 0,0:10:23.76,0:10:25.75,Sub,,0,0,0,,They are The full line, all all of it.\N就是整条生产线，全部都是。
+Dialogue: 0,0:10:25.80,0:10:29.23,Sub,,0,0,0,,It's about 78%automation.\N自动化程度大约为78%。
+Dialogue: 0,0:10:29.28,0:10:31.47,Sub,,0,0,0,,We're working on the path to to the 100.\N我们正在朝着100%的目标前进。
+Dialogue: 0,0:10:31.52,0:10:33.38,Sub,,0,0,0,,80 I'm sticking You round up just a little bit.\N80，我稍微往上调整一点。
+Dialogue: 0,0:10:33.42,0:10:33.92,Sub,,0,0,0,,That's okay.\N没问题。
+Dialogue: 0,0:10:33.97,0:10:34.59,Sub,,0,0,0,,Yeah, okay.\N好的，可以。
+Dialogue: 0,0:10:34.64,0:10:39.83,Sub,,0,0,0,,But to do that like you have to have super high OEE, which means all the parts going in have to be perfect.\N但要做到这一点，你必须拥有极高的设备综合效率，这意味着所有进入的零部件都必须完美无缺。
+Dialogue: 0,0:10:39.88,0:10:40.18,Sub,,0,0,0,,Right.\N没错。
+Dialogue: 0,0:10:40.00,0:10:41.21,Sub,,0,0,0,,And so we test it here.\N所以我们在这里进行测试。
+Dialogue: 0,0:10:41.26,0:10:43.68,Sub,,0,0,0,,But even like I'll let Hector point this out.\N甚至我可以请Hector来指出这一点。
+Dialogue: 0,0:10:43.73,0:10:47.12,Sub,,0,0,0,,Even like the thought process of how we were going to put it on the pallet,\N甚至我们如何将它放置在托盘上的思考过程，
+Dialogue: 0,0:10:47.17,0:10:51.07,Sub,,0,0,0,,you want to point out some of the features underneath them and how we how we put the the subframe in.\N你想要指出它们下方的一些特征，以及我们是如何安装副车架的。
+Dialogue: 0,0:10:51.12,0:10:51.74,Sub,,0,0,0,,Exactly.\N完全正确。
+Dialogue: 0,0:10:51.79,0:10:54.84,Sub,,0,0,0,,They were also creative ways to assemble these.\N他们还采用了非常巧妙的方式来组装这些部件。
+Dialogue: 0,0:10:54.89,0:11:01.89,Sub,,0,0,0,,As you know, the car is pretty pretty low to the floor, so this the springs are actually angled.\N如你所知，这辆车离地非常低，因此弹簧实际上是倾斜安装的。
+Dialogue: 0,0:11:01.94,0:11:08.75,Sub,,0,0,0,,So we we're trying to find a way to install it in in a like a sandwich mode.\N所以我们正在寻找一种类似夹心结构的方式来安装它。
+Dialogue: 0,0:11:08.80,0:11:18.40,Sub,,0,0,0,,The the geo pallet actually sets the subframe in position and all the all the components in previously.\N地理托盘实际上将副车架定位，并固定了所有先前的组件。
+Dialogue: 0,0:11:18.44,0:11:26.18,Sub,,0,0,0,,Um and on the other side we get the casing with with the dash and instrument panel preassembled.\N嗯，另一侧我们则得到了带有仪表盘和仪表板的外壳，这些部件已预先组装好。
+Dialogue: 0,0:11:26.22,0:11:27.93,Sub,,0,0,0,,And we sandwich it in.\N然后我们将它夹在中间。
+Dialogue: 0,0:11:27.98,0:11:34.51,Sub,,0,0,0,,The the creative thing here is that we were automating how to basically\N这里有趣的地方在于，我们正在自动化地实现
+Dialogue: 0,0:11:34.56,0:11:40.87,Sub,,0,0,0,,align the the springs to the to the casting with a full full automation.\N如何完全自动地将弹簧与铸件对齐。
+Dialogue: 0,0:11:40.92,0:11:47.72,Sub,,0,0,0,,Well, and and what's fairly unique here at a very high level, most every unibody application out there,\N嗯，从非常高的层面来看，这里相当独特，市面上大多数一体式车身结构，
+Dialogue: 0,0:11:47.77,0:11:52.72,Sub,,0,0,0,,they're decking the the drive unit and or a cradle subframe Yeah. to the body.\N都是将驱动单元或支架副车架固定在车身之上。
+Dialogue: 0,0:11:52.77,0:11:56.31,Sub,,0,0,0,,This is inverted, meaning the body comes over this.\N而这里是倒置的，意味着车身是覆盖在它上面的。
+Dialogue: 0,0:11:56.36,0:11:56.66,Sub,,0,0,0,,Exactly.\N完全正确。
+Dialogue: 0,0:11:56.52,0:12:00.43,Sub,,0,0,0,,And so, that you're saying that was part of the enablement to run do this.\N所以，你是说这正是实现运行该系统的前提条件。
+Dialogue: 0,0:12:00.48,0:12:06.15,Sub,,0,0,0,,pretty amazing because you basically most of this system of thermal, drive unit,\N非常惊人，因为这个系统几乎所有的热管理、驱动单元、
+Dialogue: 0,0:12:06.20,0:12:10.34,Sub,,0,0,0,,suspension, it sits on a pallet and we literally drop the body on top of it.\N悬挂系统都安装在一个托盘上，我们只需把车身直接放上去。
+Dialogue: 0,0:12:10.38,0:12:13.11,Sub,,0,0,0,,It's one of the coolest stations we have.\N这是我们最酷的工位之一。
+Dialogue: 0,0:12:13.16,0:12:17.96,Sub,,0,0,0,,Again, you kind of have to bend your mind when you're doing it, and it's very early on when you're in the design that the, like,\N再次强调，当你在做这件事时，必须转换思维方式，尤其是在设计初期，
+Dialogue: 0,0:12:18.01,0:12:23.32,Sub,,0,0,0,,the guys that are building the equipment Hector seen, they have to come in and say, "No, no, no, no, no, we're not going to go this way."\N那些负责制造设备的团队，比如Hector，必须进来指出：“不行，不行，不行，我们不能这么走。”
+Dialogue: 0,0:12:23.37,0:12:26.71,Sub,,0,0,0,,We're going to come top down."And that means like you got to change bolt directions,\N我们要从上往下设计。这意味着你必须改变螺栓方向，
+Dialogue: 0,0:12:26.76,0:12:31.03,Sub,,0,0,0,,you got to change sequences and like that's way at the beginning of design.\N调整装配顺序，而这些都发生在设计的最初阶段。
+Dialogue: 0,0:12:31.08,0:12:35.42,Sub,,0,0,0,,They're not they don't get an over the wall design to manufacture and in fact in this\N他们不会拿到一个“一蹴而就”的设计去制造，事实上在这个
+Dialogue: 0,0:12:35.47,0:12:40.43,Sub,,0,0,0,,program I say you guys were telling the design engineers more of of what they needed to change.\N项目中，我反而是在告诉设计工程师们，他们需要做哪些调整。
+Dialogue: 0,0:12:40.48,0:12:44.79,Sub,,0,0,0,,Yeah, there's a lot of a lot of conversations, daily conversations,\N是的，每天都有大量沟通和讨论，
+Dialogue: 0,0:12:44.84,0:12:49.99,Sub,,0,0,0,,just to go back and forth and how how it's the best way to actually manufacture the the vehicle.\N只为来回探讨，如何才能最有效地制造这辆汽车。
+Dialogue: 0,0:12:50.04,0:12:53.00,Sub,,0,0,0,,One One of the coolest things is I remember 3 years ago,\N最酷的一点是，我记得三年前，
+Dialogue: 0,0:12:53.05,0:13:03.27,Sub,,0,0,0,,we we basically rented out a space and every engineer associated with this project went and stayed there for 3 weeks and white boarded all this out.\N我们基本上租下了一间房，所有参与这个项目的工程师都住在那里，连续三周，把所有内容都画在白板上。
+Dialogue: 0,0:13:03.32,0:13:08.75,Sub,,0,0,0,,It's manufacturing, it's software, it's every vehicle system, everything.\N这涉及制造、软件、每一辆车的系统，所有的一切。
+Dialogue: 0,0:13:08.80,0:13:12.47,Sub,,0,0,0,,Just like literally in a room, you can't leave, you're going to figure this out,\N就像真的在一间屋子里，你不能离开，必须把问题解决，
+Dialogue: 0,0:13:12.52,0:13:16.11,Sub,,0,0,0,,you're going to basically break the constraints that have ever existed.\N你必须彻底打破过去所有的限制。
+Dialogue: 0,0:13:16.16,0:13:16.46,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:13:16.44,0:13:17.95,Sub,,0,0,0,,And that's kind of what came out of it.\N这就是最终的结果。
+Dialogue: 0,0:13:18.00,0:13:19.27,Sub,,0,0,0,,It's only paradigm shifts.\N这完全是范式转变。
+Dialogue: 0,0:13:19.32,0:13:19.87,Sub,,0,0,0,,Exactly.\N完全正确。
+Dialogue: 0,0:13:19.92,0:13:20.78,Sub,,0,0,0,,You put everyone together.\N把所有人聚在一起。
+Dialogue: 0,0:13:20.82,0:13:22.79,Sub,,0,0,0,,Just keep going on the rest of it cuz we got a lot to get through.\N继续往下讲吧，我们还有很多内容要讲。
+Dialogue: 0,0:13:22.84,0:13:23.31,Sub,,0,0,0,,Sure.\N好的。
+Dialogue: 0,0:13:23.36,0:13:27.91,Sub,,0,0,0,,This So, every every module in my mind has like some kind of super function.\N这样，我脑海里的每个模块都像是具备某种超级功能。
+Dialogue: 0,0:13:27.96,0:13:30.70,Sub,,0,0,0,,Um these are the side modules left and right.\N呃，这些是左右两侧的模块。
+Dialogue: 0,0:13:30.75,0:13:33.93,Sub,,0,0,0,,They're almost a mirror but not quite cuz there's some distribution.\N它们几乎是对称的，但又不完全对称，因为存在一些分布差异。
+Dialogue: 0,0:13:33.98,0:13:37.63,Sub,,0,0,0,,But this is like for me this is the safety module, right?\N但对我来说，这相当于安全模块，对吧？
+Dialogue: 0,0:13:37.68,0:13:44.87,Sub,,0,0,0,,Um obviously frontal crash is important but in an autonomous world hopefully that never happens uh because we'll stop before you run into anything.\N呃，显然正面碰撞很重要，但在自动驾驶的世界里，希望这种情况永远不会发生，\N因为我们会在撞上任何东西前就停下来。
+Dialogue: 0,0:13:44.92,0:13:47.67,Sub,,0,0,0,,But side crash is something that's very very difficult to get out of the way.\N但侧面碰撞却是非常难以避开的。
+Dialogue: 0,0:13:47.72,0:13:48.02,Sub,,0,0,0,,Yep.\N没错。
+Dialogue: 0,0:13:47.96,0:13:52.90,Sub,,0,0,0,,And so this is actually a sandwiched uh set of boron steel door rings.\N所以这实际上是一组夹在中间的硼钢门环。
+Dialogue: 0,0:13:52.95,0:13:55.15,Sub,,0,0,0,,It's a single piece inner and a single piece outer.\N内层和外层都是单体结构。
+Dialogue: 0,0:13:55.20,0:14:00.55,Sub,,0,0,0,,And it's its main function is just to stop things from hitting it both the battery down here Yep.\N它的主要功能就是阻止东西撞击它，无论是下方的电池，还是这里明显的乘员舱空间。
+Dialogue: 0,0:14:00.60,0:14:04.47,Sub,,0,0,0,,and then you know obviously the occupant space here integrated with the door.\N并且它与车门是集成在一起的。
+Dialogue: 0,0:14:04.52,0:14:07.15,Sub,,0,0,0,,Um this is also put together, you know,\N呃，这个也是这样组装起来的，你知道的。
+Dialogue: 0,0:14:07.20,0:14:12.70,Sub,,0,0,0,,automatically but it it's a great thing uh we can do is like you know when you normally have to put all\N自动完成，但这是件很棒的事，你知道，通常你需要把所有东西组装在一起时，总是要向上和向左操作。
+Dialogue: 0,0:14:12.75,0:14:17.79,Sub,,0,0,0,,this stuff together it's kind of always up and left but like because it was its own piece you can build it flat.\N这些部件通常都是向上和向左的，但因为它是独立的一块，所以你可以平放着组装。
+Dialogue: 0,0:14:17.84,0:14:18.14,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:14:18.16,0:14:18.46,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:14:18.48,0:14:25.43,Sub,,0,0,0,,A lot of other sublines have these chairs that people sit in because it's ergonomically insane to get into a car and assemble all this.\N很多其他部件都有供人坐的椅子，因为要钻进车里组装这些东西，从人体工学角度看实在太荒谬了。
+Dialogue: 0,0:14:25.48,0:14:28.88,Sub,,0,0,0,,Well and I think the same is true with your that's exactly what we were looking at, right?\N是的，我认为你的想法也一样，这正是我们当时在考虑的，对吧？
+Dialogue: 0,0:14:28.93,0:14:34.23,Sub,,0,0,0,,When we looked at the header coming in and you look at the overhead console all being part of that module.\N当我们看顶棚模块进来时，你会发现整个头顶控制台都是这个模块的一部分。
+Dialogue: 0,0:14:34.28,0:14:40.23,Sub,,0,0,0,,I'm like how much better is it to work on it when it's on a bench at this height versus trying to reach into the center line.\N我在想，把它放在这个高度的台子上工作，和要伸手去中间位置相比，效率要高多少。
+Dialogue: 0,0:14:40.28,0:14:42.24,Sub,,0,0,0,,It's so like It's just two things.\N就是两件事而已。
+Dialogue: 0,0:14:42.29,0:14:46.23,Sub,,0,0,0,,It improves like operator efficiency when we're using them but also reduces mistakes.\N这样不仅提升了操作员的工作效率，也减少了出错。
+Dialogue: 0,0:14:46.28,0:14:47.11,Sub,,0,0,0,,Sure.\N当然。
+Dialogue: 0,0:14:47.16,0:14:48.74,Sub,,0,0,0,,It's absolutely.\N绝对是的。
+Dialogue: 0,0:14:48.79,0:14:51.63,Sub,,0,0,0,,So And it's great for humans and it's great for automation.\N所以这对人类来说很好，对自动化来说也很好。
+Dialogue: 0,0:14:51.68,0:14:55.95,Sub,,0,0,0,,Turns out whatever is good for human is actually makes it easier to automate.\N结果发现，对人类有益的东西，实际上也更容易实现自动化。
+Dialogue: 0,0:14:56.00,0:14:56.82,Sub,,0,0,0,,Exactly right.\N完全正确。
+Dialogue: 0,0:14:56.88,0:14:59.84,Sub,,0,0,0,,We there there's this thing at Monroe it's called Bob the one-armed builder.\N我们那里有个叫莫罗恩的设备，叫鲍勃——那个独臂建造者。
+Dialogue: 0,0:14:59.89,0:15:05.15,Sub,,0,0,0,,He's like blindfolded one-armed whatever and we're like irrespective of what your process is if\N他就像蒙着眼睛、只有一只手，不管你的流程是什么，
+Dialogue: 0,0:15:05.20,0:15:09.84,Sub,,0,0,0,,it's good for Bob it's good for everything and that cascades down. speaks yeah Yeah yeah.\N只要对鲍勃好，就对所有事情都好，这种优势会层层传递下去。说得对，没错，没错。
+Dialogue: 0,0:15:09.88,0:15:14.87,Sub,,0,0,0,,So so I'm curious from as we're going through the rest of this unboxing one of the nagging questions I've\N所以我很好奇，在我们继续拆箱的过程中，有一个一直困扰我的问题，
+Dialogue: 0,0:15:14.92,0:15:22.34,Sub,,0,0,0,,got there's statements out there it's like hey 60%part count reduction and clearly there's a throughput benefit there's an OEE benefit,\N外面有说法称，零件数量减少了60%，显然这带来了吞吐量提升，OEE也提高了，
+Dialogue: 0,0:15:22.39,0:15:24.27,Sub,,0,0,0,,there's all these things.\N还有各种各样的好处。
+Dialogue: 0,0:15:24.32,0:15:28.22,Sub,,0,0,0,,But is it actually a net reduction of overall floor space?\N但事实上，整体占地面积是否真的减少了？
+Dialogue: 0,0:15:28.27,0:15:29.39,Sub,,0,0,0,,Have you found that?\N你们有发现吗？
+Dialogue: 0,0:15:29.44,0:15:34.27,Sub,,0,0,0,,It's about 50% compared like per unit out.\N每单位面积大约减少了50%。
+Dialogue: 0,0:15:34.32,0:15:34.72,Sub,,0,0,0,,Wow.\N哇。
+Dialogue: 0,0:15:34.76,0:15:42.55,Sub,,0,0,0,,The reason Yeah, the way to think of this is like a car that is full-size, just think of the space that requires per station for a full-size car.\N原因是，你可以把这看作一辆全尺寸汽车，想想全尺寸汽车每站所需的空间。
+Dialogue: 0,0:15:42.60,0:15:43.39,Sub,,0,0,0,,What's the pitch length?\N节距长度是多少？
+Dialogue: 0,0:15:43.44,0:15:43.74,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:15:43.72,0:15:46.27,Sub,,0,0,0,,What's the pitch length on on the front module line?\N前模块线的节距长度是多少？
+Dialogue: 0,0:15:46.32,0:15:48.55,Sub,,0,0,0,,On the front module is about 2 m.\N前模块线的节距大约是2米。
+Dialogue: 0,0:15:48.60,0:15:57.16,Sub,,0,0,0,,So we we basically use every space around the the the front module as tight as possible to work on it.\N所以我们基本上把前模块周围的每一寸空间都利用到极致，以高效作业。
+Dialogue: 0,0:15:57.21,0:16:01.75,Sub,,0,0,0,,So that's what what these enable automation, fully automation.\N这就是实现完全自动化的原因。
+Dialogue: 0,0:16:01.80,0:16:05.03,Sub,,0,0,0,,Can reach from different sides of the of the of the assembly.\N可以从装配线的不同侧面进行操作。
+Dialogue: 0,0:16:05.08,0:16:10.91,Sub,,0,0,0,,So that's that's what really unlocked a lot of the And this floor space reduction is something that like from day one,\N这才是真正实现大幅节省占地面积的关键，从第一天起，
+Dialogue: 0,0:16:10.96,0:16:14.39,Sub,,0,0,0,,the whiteboard session, you're like this is going to enable this.\N在白板会上，你就觉得这能带来这样的效果。
+Dialogue: 0,0:16:14.44,0:16:17.25,Sub,,0,0,0,,Well, it was actually it was a one of the main targets.\N其实这正是主要目标之一。
+Dialogue: 0,0:16:17.30,0:16:22.19,Sub,,0,0,0,,We need We like we're not going to Like we want to build thousands and thousands and thousands of these a week.\N我们需要，我们喜欢，我们不会像这样，我们想每周建造成千上万的这些。
+Dialogue: 0,0:16:22.24,0:16:23.55,Sub,,0,0,0,,That's right.\N没错。
+Dialogue: 0,0:16:23.60,0:16:28.53,Sub,,0,0,0,,We can't build a giant building at the scale that you know, like we need to to get the output.\N我们无法像那样建造一个巨大的建筑，就像我们需要的那样，以获得所需的产出。
+Dialogue: 0,0:16:28.58,0:16:30.69,Sub,,0,0,0,,And so like we're like this is the space we have.\N所以，就像我们目前拥有的这个空间。
+Dialogue: 0,0:16:30.74,0:16:34.89,Sub,,0,0,0,,It's we're going to need to get at least a 50% improvement in a in a Got it.\N我们至少需要实现50%的提升，明白了吗？
+Dialogue: 0,0:16:34.94,0:16:35.51,Sub,,0,0,0,,Got it.\N明白了。
+Dialogue: 0,0:16:35.56,0:16:38.60,Sub,,0,0,0,,So seats on pack, you can see it here, but like we'll talk about the pack later.\N所以电池包的座位布局，你们可以在这里看到，但稍后我们会再讨论电池包。
+Dialogue: 0,0:16:38.65,0:16:40.01,Sub,,0,0,0,,We actually did this already.\N其实我们早就这么做了。
+Dialogue: 0,0:16:40.06,0:16:42.59,Sub,,0,0,0,,We did it with Y S P, we did it with Cybertruck.\N我们已经用过 YSP，也用过 Cybertruck。
+Dialogue: 0,0:16:42.64,0:16:47.18,Sub,,0,0,0,,And that's why I think when people are like,"Oh, it's so revolutionary."I'm like,"Actually, you guys haven't been paying attention.\N这就是为什么我觉得，当人们说“这太革命性了”的时候，\N我会想：“其实你们根本没注意，我们一直在逐步推进。”
+Dialogue: 0,0:16:47.24,0:16:49.43,Sub,,0,0,0,,We've been doing it all along incrementally."\N我们一直都在逐步推进。
+Dialogue: 0,0:16:49.48,0:16:49.85,Sub,,0,0,0,,Yes.\N没错。
+Dialogue: 0,0:16:49.88,0:16:57.01,Sub,,0,0,0,,Um it's hard to change something overnight, but that, you know, the seats go on there, the carpet goes on there, it all comes up together.\N呃，一夜之间改变某件事很难，但你知道，座椅装在那里，地毯铺在那里，所有东西都一起到位了。
+Dialogue: 0,0:16:57.06,0:16:59.77,Sub,,0,0,0,,And um you know, we kind of this is our third iteration.\N呃，你知道，这是我们第三次迭代了。
+Dialogue: 0,0:16:59.82,0:17:01.31,Sub,,0,0,0,,So That's probably the most complete.\N所以这可能是最完整的版本。
+Dialogue: 0,0:17:01.36,0:17:03.31,Sub,,0,0,0,,At this point it's a relatively simple assembly.\N到目前为止，这已经是一个相对简单的组装过程。
+Dialogue: 0,0:17:03.36,0:17:07.77,Sub,,0,0,0,,Like we've gotten it to that point at this at this stage, but it's still like a lot of part deletion.\N就像我们已经做到了这一步，但仍然有很多部件需要删除。
+Dialogue: 0,0:17:07.82,0:17:12.51,Sub,,0,0,0,,It's a very It's very simple, but there's not that many parts on it cuz we've we've generally deleted everything we can.\N它非常简单，但上面的零件不多，因为我们已经尽可能删掉了所有能删的部件。
+Dialogue: 0,0:17:12.56,0:17:14.35,Sub,,0,0,0,,Most of the work This is another thing.\N大部分工作，这是另一件事。
+Dialogue: 0,0:17:14.40,0:17:17.05,Sub,,0,0,0,,It's like Most of the work was on the battery pack line.\N大部分工作集中在电池包产线上。
+Dialogue: 0,0:17:17.10,0:17:20.34,Sub,,0,0,0,,And then we had the seats line, and then I remember just deciding,"Okay,\N然后我们有座椅产线，我记得当时就决定：“好吧，
+Dialogue: 0,0:17:20.40,0:17:24.91,Sub,,0,0,0,,who's going to do the center module?"Cuz it's like,"Which which line will we extend?\N谁来负责中央模块？”因为这就像在问，“我们要延伸哪条产线？”
+Dialogue: 0,0:17:24.96,0:17:28.63,Sub,,0,0,0,,Will the battery come to the seat line, or will the seat come to the battery line?"\N是电池去座椅产线，还是座椅去电池产线？
+Dialogue: 0,0:17:28.68,0:17:29.25,Sub,,0,0,0,,Yeah, yeah.\N对，对。
+Dialogue: 0,0:17:29.30,0:17:29.68,Sub,,0,0,0,,Anyway.\N无论如何。
+Dialogue: 0,0:17:29.71,0:17:32.03,Sub,,0,0,0,,And then the rear end, it's pretty simple, actually.\N然后是后部，实际上非常简单。
+Dialogue: 0,0:17:32.08,0:17:38.73,Sub,,0,0,0,,One of the things I want to point out that like I don't think a lot of people notice is we're actually not coating the front and rear modules.\N我想指出的一点是，很多人可能没注意到，我们实际上并没有对前后模块进行涂层处理。
+Dialogue: 0,0:17:38.79,0:17:40.43,Sub,,0,0,0,,Only the sides coated.\N只有侧面进行了涂层。
+Dialogue: 0,0:17:40.48,0:17:43.48,Sub,,0,0,0,,Yeah, so I was going to ask exactly that when we were up front,\N是的，我本来想在前面就问这个问题的，
+Dialogue: 0,0:17:43.53,0:17:47.35,Sub,,0,0,0,,because if you look at the Model Y or the Cybertruck, they're all at e-coated, yeah, right?\N因为如果你看 Model Y 或 Cybertruck，它们都是全车电泳涂层的，对吧？
+Dialogue: 0,0:17:47.40,0:17:53.03,Sub,,0,0,0,,So, what Is it because it's a robo-taxi, or is it just like,"Hey, we actually don't need to do it."\N那是因为它是自动驾驶出租车，还是说“嘿，其实我们根本没必要做”？
+Dialogue: 0,0:17:53.08,0:17:53.92,Sub,,0,0,0,,We don't need to do it.\N我们根本没必要做。
+Dialogue: 0,0:17:53.97,0:17:56.08,Sub,,0,0,0,,And like it was also a point at the beginning.\N而且这在一开始就已经提到了。
+Dialogue: 0,0:17:56.13,0:17:59.07,Sub,,0,0,0,,One of the most expensive parts of a factory is the paint line.\N工厂中最昂贵的部分之一就是喷漆线。
+Dialogue: 0,0:17:59.12,0:17:59.67,Sub,,0,0,0,,Of course.\N当然。
+Dialogue: 0,0:17:59.72,0:18:04.07,Sub,,0,0,0,,You know, few hundred million dollars, million man hours to build one, yeah.\N你知道，建造一条喷漆线要花几百万美元，耗费数百万工时，对吧？
+Dialogue: 0,0:18:04.12,0:18:05.84,Sub,,0,0,0,,Horrible DOCs.\N糟糕的油漆工艺。
+Dialogue: 0,0:18:05.89,0:18:09.60,Sub,,0,0,0,,So like rule number one at Tesla, question the requirements.\N就像特斯拉的第一条规则一样，要质疑需求。
+Dialogue: 0,0:18:09.64,0:18:11.51,Sub,,0,0,0,,Why do you need paint?\N你为什么需要喷漆？
+Dialogue: 0,0:18:11.56,0:18:13.19,Sub,,0,0,0,,Yeah, so we started here, basically.\N对，所以我们从这里开始，基本上是这样。
+Dialogue: 0,0:18:13.24,0:18:19.13,Sub,,0,0,0,,And then we went,"Why do you need e-coat?"And it turns out aluminum and the Our materials seemed to do a great job with this, but like,\N然后我们又问：“你为什么需要电泳漆？”结果发现，铝和我们的材料在这方面表现很好，但，
+Dialogue: 0,0:18:19.18,0:18:28.37,Sub,,0,0,0,,you know, the the alloys we use in the castings, like they don't oxidize like and and uh reduce strength over time as quickly as other aluminum.\N你知道，我们使用的铸件合金，不像其他铝那样容易氧化，而且随时间强度下降得也慢。
+Dialogue: 0,0:18:28.42,0:18:35.47,Sub,,0,0,0,,You know, most 356 materials like on the chassis parts, actually after you age them to T6, they continue to gain strength.\N你知道，大多数356材料，比如车架部件，实际上在经过T6时效处理后，强度还会继续提升。
+Dialogue: 0,0:18:35.52,0:18:40.60,Sub,,0,0,0,,And then we had to pick, you know, carefully our sheet our sheet aluminum and the joining methods,\N然后我们必须仔细选择板材铝和连接工艺，
+Dialogue: 0,0:18:40.64,0:18:44.43,Sub,,0,0,0,,but you know, that part of that reduction in force base was like we got to delete paint shop.\N但你知道，这部分强度降低的原因是，我们终于可以取消喷漆车间了。
+Dialogue: 0,0:18:44.48,0:18:47.69,Sub,,0,0,0,,Well, in fact, it may actually help with some of the bonding if it's not coated, right?\N事实上，如果表面没有涂层，可能反而有助于某些粘接，对吧？
+Dialogue: 0,0:18:47.74,0:18:48.73,Sub,,0,0,0,,You don't have to worry about that.\N你就不必担心这个问题了。
+Dialogue: 0,0:18:48.79,0:18:53.47,Sub,,0,0,0,,Now, is this something that you view as backwards compatible with a Model Y or a Cybertruck?\N现在，这种方案是否能与Model Y或Cybertruck实现向后兼容？
+Dialogue: 0,0:18:53.52,0:18:57.59,Sub,,0,0,0,,mean again, I think it had to come up front, but like certainly like as we move forward,\N重申一下，我认为这必须提前考虑，但随着我们继续推进，
+Dialogue: 0,0:18:57.64,0:19:01.57,Sub,,0,0,0,,we're going to try and put that in because it's part of the mission is like a sustainable future,\N我们会努力将其纳入，因为这正是我们使命的一部分，即实现可持续的未来，
+Dialogue: 0,0:19:01.62,0:19:07.59,Sub,,0,0,0,,and so like the less you know, we can put into the product that is bad, the the better we'll be on the back end.\N所以，我们越少把不良内容放进产品，后期就会越好。
+Dialogue: 0,0:19:07.64,0:19:10.65,Sub,,0,0,0,,And this is all with doubling the useful life at a minimum of the car.\N这意味着汽车的使用寿命至少翻倍。
+Dialogue: 0,0:19:10.70,0:19:14.57,Sub,,0,0,0,,Like the car is going to run half a million miles at least. mean, you think about a robo-taxi.\N汽车至少要行驶五十万公里。想想一辆自动驾驶出租车。
+Dialogue: 0,0:19:14.62,0:19:17.19,Sub,,0,0,0,,It's going to go more utilization every day.\N它每天的利用率会更高。
+Dialogue: 0,0:19:17.24,0:19:17.72,Sub,,0,0,0,,Totally.\N完全同意。
+Dialogue: 0,0:19:17.77,0:19:18.19,Sub,,0,0,0,,Uptime.\N开机率。
+Dialogue: 0,0:19:18.24,0:19:19.23,Sub,,0,0,0,,Um All right.\N好的。
+Dialogue: 0,0:19:19.28,0:19:19.94,Sub,,0,0,0,,Are you running, Hector?\NHector，你在跑吗？
+Dialogue: 0,0:19:19.99,0:19:22.74,Sub,,0,0,0,,Can we go up and take a look? we're running framing line.\N我们能上去看看吗？我们正在运行框架线。
+Dialogue: 0,0:19:22.79,0:19:25.63,Sub,,0,0,0,,Um so, I can explain you a little bit of what we do here.\N嗯，我可以简单跟你说说我们在这里做什么。
+Dialogue: 0,0:19:25.68,0:19:27.79,Sub,,0,0,0,,Sure.\N当然可以。
+Dialogue: 0,0:19:27.84,0:19:30.42,Sub,,0,0,0,,So, uh while we're walking here, I just want to get this on the record.\N嗯，我们边走边说，我想把这点记录下来。
+Dialogue: 0,0:19:30.47,0:19:37.58,Sub,,0,0,0,,We're actually we don't run every day because the line can run so fast, it's currently outpacing our our deployments.\N其实我们并不是每天都运行，因为生产线速度太快，目前已经超过了我们的部署速度。
+Dialogue: 0,0:19:37.63,0:19:41.00,Sub,,0,0,0,,So, it's a bit of a race right now who's going to go faster.\N所以现在有点像在赛跑，看谁跑得更快。
+Dialogue: 0,0:19:41.05,0:19:43.85,Sub,,0,0,0,,Um right now, the you know, the manufacturing line's ahead.\N嗯，目前生产线领先。
+Dialogue: 0,0:19:43.90,0:19:49.20,Sub,,0,0,0,,So, um that's why you don't see everyone all busy here, but Well, there's a lot of lines that wish they could say that.\N所以你不会看到这里每个人都忙得不可开交，不过有很多生产线都羡慕我们能这么说。
+Dialogue: 0,0:19:49.25,0:19:49.67,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:19:49.72,0:19:51.63,Sub,,0,0,0,,Yeah, there are a lot of people that wish that was the problem.\N是的，有很多人希望自己的问题就是这个。
+Dialogue: 0,0:19:51.68,0:19:52.27,Sub,,0,0,0,,Totally.\N完全理解。
+Dialogue: 0,0:19:52.32,0:19:55.84,Sub,,0,0,0,,Yeah, so uh as we just saw, the product is already pretty cool.\N是的，正如我们刚才看到的，产品已经非常酷了。
+Dialogue: 0,0:19:55.89,0:19:59.64,Sub,,0,0,0,,And obviously, the line has to be as cool or uh or even better.\N而且生产线也必须同样酷，甚至更酷才行。
+Dialogue: 0,0:19:59.68,0:20:02.79,Sub,,0,0,0,,Uh so, we were looking on creative ways to build the car.\N嗯，所以我们正在寻找创意十足的方式来打造这辆车。
+Dialogue: 0,0:20:02.84,0:20:07.90,Sub,,0,0,0,,Obviously, as as as Lars mentioned, we're doing a unboxed architecture.\N显然，正如Lars提到的，我们采用的是 Unboxed 架构。
+Dialogue: 0,0:20:07.95,0:20:11.34,Sub,,0,0,0,,So, that definitely enabled a lot of the automation that we have.\N这无疑使我们实现了大量自动化。
+Dialogue: 0,0:20:11.39,0:20:15.55,Sub,,0,0,0,,This line, which is the framing line, is fully automated, 100%automated.\N这条生产线，也就是框架生产线，实现了完全自动化，100%自动化。
+Dialogue: 0,0:20:15.60,0:20:20.89,Sub,,0,0,0,,Even part feeding uh to the line is fully automated uh with AMRs.\N甚至零部件上料到生产线也是完全自动化的，由自主移动机器人完成。
+Dialogue: 0,0:20:20.94,0:20:24.19,Sub,,0,0,0,,And uh basically, what we do is automated mobile robot.\N简而言之，我们使用的是自动化移动机器人。
+Dialogue: 0,0:20:24.24,0:20:24.57,Sub,,0,0,0,,Yes.\N是的。
+Dialogue: 0,0:20:24.60,0:20:32.59,Sub,,0,0,0,,Um it's it's a trolley that goes underneath all of our our uh material storage um pallets and can move them around um on its own.\N它是一个小车，可以滑到我们所有物料存储托盘的下方，能够自行移动这些托盘。
+Dialogue: 0,0:20:32.64,0:20:35.19,Sub,,0,0,0,,The viewers are really going to appreciate that you just explained that.\N观众们一定会非常欣赏你刚才的解释。
+Dialogue: 0,0:20:35.24,0:20:36.51,Sub,,0,0,0,,No, for sure.\N绝对是的。
+Dialogue: 0,0:20:36.56,0:20:39.99,Sub,,0,0,0,,I don't know if you can like even more so for, you know, not us.\N我不知道你是否更能体会到这一点，尤其是对你们来说。
+Dialogue: 0,0:20:40.04,0:20:41.43,Sub,,0,0,0,,Yeah, yeah.\N是的，是的。
+Dialogue: 0,0:20:41.48,0:20:50.80,Sub,,0,0,0,,Basically, what we do here is uh what other or like what regular vehicle manufacturing does is framing the car, putting the car together.\N我们在这里做的，基本上就是其他普通汽车制造厂所做的：组装车身框架，把汽车拼装起来。
+Dialogue: 0,0:20:50.85,0:20:54.79,Sub,,0,0,0,,Uh this is where where actually the car looks more like a car.\N嗯，这里实际上汽车看起来更像一辆汽车了。
+Dialogue: 0,0:20:54.84,0:21:01.93,Sub,,0,0,0,,Um but uh in this case, we have all the all the components, trims, uh harnesses, hoses, uh everything on,\N嗯，但在这个情况下，我们已经把所有部件、饰条、线束、软管等等都装好了，
+Dialogue: 0,0:21:01.98,0:21:08.31,Sub,,0,0,0,,which uh obviously makes makes the the things a lot easier later for for uh for our final assembly.\N这显然让后期的最终装配变得容易得多。
+Dialogue: 0,0:21:08.36,0:21:08.66,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:21:08.64,0:21:13.99,Sub,,0,0,0,,Uh so we're basically building from inside out uh and and enabling obviously as we\N嗯，我们基本上是从内到外进行构建，同时正如我们多次提到的那样，
+Dialogue: 0,0:21:14.04,0:21:17.34,Sub,,0,0,0,,said multiple times So when we look at all these modules and all these sub-assemblies,\N当我们观察所有这些模块和子组件时，
+Dialogue: 0,0:21:17.39,0:21:24.75,Sub,,0,0,0,,this unboxed process, from a GD&T locating schema, gap and flush, is it a net improvement?\N这种 Unboxed 装配流程，从GD&T定位方案、间隙和贴合度来看，是否带来了实质性的改进？
+Dialogue: 0,0:21:24.80,0:21:26.11,Sub,,0,0,0,,What what were the challenges with that?\N那么，当时面临的主要挑战是什么？
+Dialogue: 0,0:21:26.16,0:21:28.39,Sub,,0,0,0,,at the beginning, we all were like super afraid.\N最开始，我们都超级害怕。
+Dialogue: 0,0:21:28.44,0:21:29.03,Sub,,0,0,0,,Super worried, yeah.\N非常担心，没错。
+Dialogue: 0,0:21:29.08,0:21:29.87,Sub,,0,0,0,,Like super worried.\N真的非常担心。
+Dialogue: 0,0:21:29.92,0:21:32.83,Sub,,0,0,0,,GD&T is geometric dimensioning and tolerancing.\NGD&T是几何尺寸与公差。
+Dialogue: 0,0:21:32.88,0:21:34.27,Sub,,0,0,0,,There you go.\N就是这样。
+Dialogue: 0,0:21:34.32,0:21:39.72,Sub,,0,0,0,,Um because like it hadn't been done before, but when you back it up to like what's the first principles,\N因为之前从未做过，但当你追溯到最基本的原理时，
+Dialogue: 0,0:21:39.77,0:21:44.45,Sub,,0,0,0,,actually it is a benefit because we're we're building to net nominal, right?\N实际上这反而是个优势，因为我们是按净尺寸来制造的，对吧？
+Dialogue: 0,0:21:44.50,0:21:50.40,Sub,,0,0,0,,Like so by the time we get here, whatever variation has gone into the side module and the the great front and rear modules,\N所以当我们做到这里时，无论侧边模块以及前后模块之间产生了什么偏差，
+Dialogue: 0,0:21:50.45,0:21:55.41,Sub,,0,0,0,,it's like when you frame it, you put it to like the perfect position, and then your gap and flush is actually better.\N就像你把它装到框架上时，能精准定位，最终的间隙和齐平度反而更好。
+Dialogue: 0,0:21:55.46,0:22:00.03,Sub,,0,0,0,,Because like you don't get the sag that might occur in a in a oven when you e-coat it.\N因为不会出现像在电泳涂装时烤箱里可能产生的下垂。
+Dialogue: 0,0:22:00.08,0:22:00.38,Sub,,0,0,0,,Right.\N对。
+Dialogue: 0,0:22:00.28,0:22:04.91,Sub,,0,0,0,,And then you don't have to worry about adding parts on and then like having each of those fall out of tolerance.\N而且你不用再担心加装零件后，每个零件都可能超出公差。
+Dialogue: 0,0:22:04.96,0:22:08.83,Sub,,0,0,0,,It's like you build the module right, when you put it together, you frame it right,\N就是说你把模块组装好，装到框架上时就对了，
+Dialogue: 0,0:22:08.88,0:22:16.04,Sub,,0,0,0,,and then the last 25 stations are dealing with a much much more accurate assembly than you would have if you kept adding it together.\N那么最后的25个工位处理的装配精度，远高于你不断叠加组装时的精度。
+Dialogue: 0,0:22:16.09,0:22:20.09,Sub,,0,0,0,,One of the like primary examples I can give of this is like Boeing, you know,\N我能举的一个典型例子就是波音公司，你知道，
+Dialogue: 0,0:22:20.14,0:22:26.12,Sub,,0,0,0,,they do a a stack tolerance where they build the fuselages in sections, but each or I shouldn't call out Boeing.\N他们采用堆叠公差的方式，把机身分段制造，但我不该点名波音。
+Dialogue: 0,0:22:26.17,0:22:26.70,Sub,,0,0,0,,Most aerospace.\N大多数航空航天领域。
+Dialogue: 0,0:22:26.75,0:22:28.87,Sub,,0,0,0,,I don't want to like badmouth Boeing.\N我不想贬低波音公司。
+Dialogue: 0,0:22:28.92,0:22:36.23,Sub,,0,0,0,,But each section has a tolerance, and so the actual, like, variance of a plane is upwards of feet by the time they get to the end,\N但每个部件都有公差，所以当飞机制造到后期时，实际的偏差可能达到几英尺。
+Dialogue: 0,0:22:36.28,0:22:44.83,Sub,,0,0,0,,when you're just talking about, like, maybe plus or minus a quarter inch; but if you have, you know, 30 of, 30 of those, it adds up over time.\N你只是在讨论可能正负四分之一英寸的误差；但如果这样的误差有30个，时间一长就会累积。
+Dialogue: 0,0:22:44.88,0:22:45.26,Sub,,0,0,0,,Yeah, totally.\N是的，完全理解。
+Dialogue: 0,0:22:45.28,0:22:45.72,Sub,,0,0,0,,That makes sense.\N这有道理。
+Dialogue: 0,0:22:45.77,0:22:51.65,Sub,,0,0,0,,You're just You're essentially you're localizing all the GD&T on a module where it's in a better ergonomic position.\N你本质上是将所有GD&T（几何尺寸与公差）集中在某个模块上，使其处于更符合人体工学的位置。
+Dialogue: 0,0:22:51.70,0:22:53.15,Sub,,0,0,0,,You can fixture better.\N你可以更好地进行夹具定位。
+Dialogue: 0,0:22:53.20,0:22:59.45,Sub,,0,0,0,,Everything is superior, but then the interface points on the final line are fractional of what they would be typically.\N所有方面都更优，但最终生产线上的接口点误差仅为通常情况下的分数之一。
+Dialogue: 0,0:22:59.50,0:22:59.85,Sub,,0,0,0,,Okay.\N明白了。
+Dialogue: 0,0:22:59.88,0:23:02.75,Sub,,0,0,0,,The meaning, years, And and we I mean we validated this.\N这个意义，多年以来，我们确实验证过这一点。
+Dialogue: 0,0:23:02.80,0:23:04.34,Sub,,0,0,0,,We didn't just throw it on the line.\N我们并不是随便就把这个方案直接投入生产线。
+Dialogue: 0,0:23:04.39,0:23:08.87,Sub,,0,0,0,,Like, we we actually, this is crazy, no one knows this, but we actually tried this.\N说实话，我们真的试过这个，这太疯狂了，没人知道，但我们真的试过了。
+Dialogue: 0,0:23:08.92,0:23:11.19,Sub,,0,0,0,,We actually started working on this on Cybertruck.\N我们实际上是在 Cybertruck 上开始着手这项工作的。
+Dialogue: 0,0:23:11.24,0:23:11.79,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:23:11.84,0:23:15.43,Sub,,0,0,0,,Long, many years ago, we started actually validating this on Cybertruck.\N很多年前，我们就开始在 Cybertruck 上实际验证这个想法。
+Dialogue: 0,0:23:15.48,0:23:18.83,Sub,,0,0,0,,Now, it didn't make it to production because it was a it was kind of after the fact.\N现在它没能进入量产，因为当时已经有点太晚了。
+Dialogue: 0,0:23:18.88,0:23:22.50,Sub,,0,0,0,,We used Cybertruck as a platform to really learn, many, many years ago,\N很多年前，我们用 Cybertruck 作为平台，真正地去学习，
+Dialogue: 0,0:23:22.55,0:23:28.11,Sub,,0,0,0,,how to get this right because the architecture of Cybertruck actually pretty similar on a body structure perspective.\N如何把这件事做对，因为 Cybertruck 的车身结构实际上和我们后来的设计非常相似。
+Dialogue: 0,0:23:28.16,0:23:37.67,Sub,,0,0,0,,So, we we actually, like, in this is the power of Tesla, our automation groups um started working with you guys before the design was done.\N所以，我们真的，这正是特斯拉的强项，我们的自动化团队在设计完成前就已开始和你们合作。
+Dialogue: 0,0:23:37.72,0:23:38.78,Sub,,0,0,0,,Like, we built framers.\N我们搭建了框架。
+Dialogue: 0,0:23:38.83,0:23:41.42,Sub,,0,0,0,,We built these machines to like put it together.\N我们制造了这些机器来组装它。
+Dialogue: 0,0:23:41.47,0:23:42.89,Sub,,0,0,0,,We built We used Cybertruck.\N我们使用了 Cybertruck。
+Dialogue: 0,0:23:42.94,0:23:43.91,Sub,,0,0,0,,We used Model Ys.\N我们也使用了 Model Y。
+Dialogue: 0,0:23:43.96,0:23:52.11,Sub,,0,0,0,,We used a early designs of of the Cybercab to like figure out what the the tolerancing needed to be to make it all go together.\N我们使用了 Cybercab 的早期设计，以确定各部件配合所需的公差，确保所有部件能顺利组装。
+Dialogue: 0,0:23:52.16,0:23:57.56,Sub,,0,0,0,,If you come over here, it's actually kind of elegant cuz this part um you can see some of the sciving,\N如果你走到这边来看，其实还挺优雅的，因为这个部分，你还能看到一些切削痕迹，
+Dialogue: 0,0:23:57.61,0:24:03.40,Sub,,0,0,0,,but like the seal flange here is like it's not perfectly flat, but it's planar.\N但这里的密封法兰并不是完全平整的，而是平面的。
+Dialogue: 0,0:24:03.45,0:24:06.74,Sub,,0,0,0,,So, when we put it up to the casting, we have a nice solid seal.\N所以当我们把它贴合到铸件上时，就能形成一个稳固的密封。
+Dialogue: 0,0:24:06.79,0:24:09.96,Sub,,0,0,0,,And the same is true on the bottom to the battery pack, but it goes this way.\N底部与电池包的连接也是如此，只是方向朝下。
+Dialogue: 0,0:24:10.01,0:24:12.53,Sub,,0,0,0,,And then in the back to the rear module, it goes that way.\N然后在后部连接到后模块时，方向是朝后的。
+Dialogue: 0,0:24:12.58,0:24:16.62,Sub,,0,0,0,,And that's like again, you have to do that at the beginning.\N这再次说明，你必须在一开始就把这些细节考虑好。
+Dialogue: 0,0:24:16.68,0:24:21.23,Sub,,0,0,0,,Um otherwise, you're never going to get that single axis sealing or as much as possible, anyway.\N否则，你永远无法实现单轴密封，或者至少无法做到尽可能严密。
+Dialogue: 0,0:24:21.28,0:24:21.58,Sub,,0,0,0,,Right.\N没错。
+Dialogue: 0,0:24:21.54,0:24:24.59,Sub,,0,0,0,,And then from a locating perspective, you just bring in this in with the header.\N从定位角度来看，你只需通过顶盖将这个部件装入即可。
+Dialogue: 0,0:24:24.64,0:24:27.02,Sub,,0,0,0,,You've really just got two main interface points.\N你实际上只需要处理两个主要的接口点。
+Dialogue: 0,0:24:27.07,0:24:29.23,Sub,,0,0,0,,And that's going to set up very planar.\N这样就能确保整体非常平整。
+Dialogue: 0,0:24:29.28,0:24:31.84,Sub,,0,0,0,,You know, you always worry about Boeing and like in the top boxing.\N你知道，你总是担心波音公司，就像担心拳击赛的顶尖选手一样。
+Dialogue: 0,0:24:31.89,0:24:34.31,Sub,,0,0,0,,It's just like put it here, bolt it down.\N就像把它放在这里，用螺栓固定住。
+Dialogue: 0,0:24:34.36,0:24:38.60,Sub,,0,0,0,,And that's actually what we learned from the Cybertruck is where we had to clamp the the assembly to\N这正是我们从 Cybertruck 项目中学到的，那就是我们必须用夹具把装配件夹紧。
+Dialogue: 0,0:24:38.64,0:24:43.31,Sub,,0,0,0,,get You really think of like framer today in a body is doing the same thing that this is doing,\N你真的会想到，现在的车身框架在车身上的作用，其实和这个夹具在做的是一样的。
+Dialogue: 0,0:24:43.36,0:24:43.66,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:24:43.64,0:24:49.31,Sub,,0,0,0,,You're just moving framer into this area of GA with general assembly with all these parts on it.\N你只是把车身框架移动到这个 GA 区域，上面带着所有这些零件进行总装。
+Dialogue: 0,0:24:49.36,0:24:53.45,Sub,,0,0,0,,So, what we had to learn was where to where to clamp, where to grip, where to hold the assembly,\N所以，我们必须学习的是，应该在哪些位置夹紧、哪些位置抓取、哪些位置支撑装配件。
+Dialogue: 0,0:24:53.50,0:24:58.03,Sub,,0,0,0,,where to datum the assembly in that process to make sure it all is automated.\N以及在该工艺中如何对装配件进行基准定位，以确保整个过程都能自动化。
+Dialogue: 0,0:24:58.08,0:25:02.71,Sub,,0,0,0,,Even this whole like clamp design and how it's pushing from the inside out was it was thought out from the beginning.\N即使是这个夹具的设计，以及它从内向外施压的方式，从一开始就经过了深思熟虑。
+Dialogue: 0,0:25:02.76,0:25:03.06,Sub,,0,0,0,,Yeah,\N没错，
+Dialogue: 0,0:25:03.01,0:25:06.28,Sub,,0,0,0,,I mean one thing that was very apparent when we got the Model Y and of course\N有一点非常清楚，当我们拿到 Model Y 之后，当然还有后来的 Cybertruck，
+Dialogue: 0,0:25:06.33,0:25:11.28,Sub,,0,0,0,,then the Cybertruck when we're looking at the castings is most body in whites have slip cross car,\N在观察铸件时，我们发现大多数白车身都有跨车滑移的问题。
+Dialogue: 0,0:25:11.33,0:25:11.76,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:25:11.81,0:25:14.86,Sub,,0,0,0,,Cuz it's a section over a section and it allows you to adjust.\N因为它是分段叠加的，可以进行调节。
+Dialogue: 0,0:25:14.92,0:25:19.99,Sub,,0,0,0,,But it's locking everything net in the Y axis, right? in precision first.\N但它在 Y 轴方向上锁定了所有部件，对吧？首先保证精度。
+Dialogue: 0,0:25:20.04,0:25:20.67,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:25:20.72,0:25:21.09,Sub,,0,0,0,,Makes sense.\N有道理。
+Dialogue: 0,0:25:21.12,0:25:24.07,Sub,,0,0,0,,we go talk to some of the guys about the components that we put together?\N我们去跟那些负责组装部件的同事聊聊吧？
+Dialogue: 0,0:25:24.12,0:25:24.66,Sub,,0,0,0,,All right, everyone.\N好，各位。
+Dialogue: 0,0:25:24.71,0:25:27.35,Sub,,0,0,0,,Now we're going to get to the battery pack of the Cybercab.\N现在我们来看看 Cybercab 的电池组。
+Dialogue: 0,0:25:27.40,0:25:28.91,Sub,,0,0,0,,So it's going to be super interesting.\N这会非常有趣。
+Dialogue: 0,0:25:28.96,0:25:29.72,Sub,,0,0,0,,I'm with Robbie.\N我和罗比意见一致。
+Dialogue: 0,0:25:29.76,0:25:32.77,Sub,,0,0,0,,He's the director of all things battery here at Tesla.\N他是特斯拉这里所有电池相关事务的负责人。
+Dialogue: 0,0:25:32.82,0:25:34.52,Sub,,0,0,0,,So Robbie, thanks for being here.\N罗比，感谢你今天到场。
+Dialogue: 0,0:25:34.57,0:25:38.54,Sub,,0,0,0,,What what is new and or carryover about the Cybercabin?\NCybercabin 有哪些新变化或延续之处？
+Dialogue: 0,0:25:38.59,0:25:41.49,Sub,,0,0,0,,Like let's talk about from a it's use case, right?\N比如说，我们来聊聊它的应用场景，对吧？
+Dialogue: 0,0:25:41.54,0:25:43.40,Sub,,0,0,0,,It's not a it's not a consumer vehicle.\N这不是一款消费级车辆。
+Dialogue: 0,0:25:43.45,0:25:45.78,Sub,,0,0,0,,So what did that influence in terms of the design?\N那么这在设计上产生了什么影响？
+Dialogue: 0,0:25:45.84,0:25:47.35,Sub,,0,0,0,,What are we looking at?\N我们看到的是什么？
+Dialogue: 0,0:25:47.40,0:25:49.97,Sub,,0,0,0,,Yeah, so Lars probably already told you about our focus on scale.\N是的，Lars probably 已经跟你们说过我们对规模的关注了。
+Dialogue: 0,0:25:50.02,0:25:55.47,Sub,,0,0,0,,First thing I'll say is the 100%automation in 10 second cycle time target drove a really\N首先我想说的是，10秒周期时间内实现100%自动化的目标，推动了非常大的进展。
+Dialogue: 0,0:25:55.52,0:26:01.31,Sub,,0,0,0,,intense focus on the simplification which I'm going to talk you through some of these things.\N专注于简化，我将向大家介绍其中一些内容。
+Dialogue: 0,0:26:01.36,0:26:05.07,Sub,,0,0,0,,We deleted a lot of parts and we integrated a lot of the remaining things to get two for one.\N我们删掉了很多部件，又整合了剩下的很多部分，实现了两倍于一的效果。
+Dialogue: 0,0:26:05.12,0:26:05.63,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:26:05.68,0:26:11.57,Sub,,0,0,0,,And that also helps us with reliability, huge goal, and ultimately like total cost of ownership.\N这也有助于我们提升可靠性、实现巨大目标，并最终降低总体拥有成本。
+Dialogue: 0,0:26:11.62,0:26:17.39,Sub,,0,0,0,,So battery cell and non-cell is often quarter to a third of the cost of the of the entire vehicle.\N因此，电池电芯和非电芯部分的成本通常占整车成本的四分之一到三分之一。
+Dialogue: 0,0:26:17.44,0:26:17.81,Sub,,0,0,0,,Yep.\N嗯。
+Dialogue: 0,0:26:17.84,0:26:23.15,Sub,,0,0,0,,Then you add reliability like service cost, replace the pack, super expensive, plus the labor to do it.\N然后你还要考虑可靠性，比如服务成本，更换电池包非常昂贵，再加上人工费用。
+Dialogue: 0,0:26:23.20,0:26:24.95,Sub,,0,0,0,,Plus the downtime in this application.\N加上这个应用中的停机时间。
+Dialogue: 0,0:26:25.00,0:26:25.57,Sub,,0,0,0,,Downtime.\N停机时间。
+Dialogue: 0,0:26:25.62,0:26:30.00,Sub,,0,0,0,,And then, you know, cost of mass, this thing is super heavy, that impacts CCO.\N而且，你知道，质量带来的成本，这个东西非常重，这会影响总拥有成本。
+Dialogue: 0,0:26:30.05,0:26:31.94,Sub,,0,0,0,,You have fast charging.\N你有快速充电。
+Dialogue: 0,0:26:32.00,0:26:36.79,Sub,,0,0,0,,The faster you charge it, the more uptime you get, the fewer posts you need to put out in the field for infrastructure.\N充电越快，可用时间就越长，你就越少需要在野外部署充电桩。
+Dialogue: 0,0:26:36.84,0:26:37.47,Sub,,0,0,0,,Yep.\N嗯。
+Dialogue: 0,0:26:37.52,0:26:43.85,Sub,,0,0,0,,And ultimately that all just leads to lowest cost of ownership that we've had an intense focus on with this.\N最终，这一切都带来了我们高度关注的最低拥有成本。
+Dialogue: 0,0:26:43.90,0:26:50.11,Sub,,0,0,0,,Um So probably one of the first things you notice with the architecture is we went we took the ancillaries and put them in line.\N嗯，可能你最先注意到的是架构，我们把辅助设备都整合到了一条线上。
+Dialogue: 0,0:26:50.16,0:26:50.62,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:26:50.67,0:26:53.83,Sub,,0,0,0,,So you have a flat vehicle pack you can see over here.\N所以你看到这边有一个扁平的电池包。
+Dialogue: 0,0:26:53.88,0:26:54.51,Sub,,0,0,0,,Yep.\N好的。
+Dialogue: 0,0:26:54.56,0:26:58.11,Sub,,0,0,0,,We kept the pack top cover as the body floor.\N我们把电池包顶盖作为车身底板。
+Dialogue: 0,0:26:58.16,0:26:58.59,Sub,,0,0,0,,Yep.\N好的。
+Dialogue: 0,0:26:58.64,0:27:03.47,Sub,,0,0,0,,So we can do seats on pack here, seat cross members directly welded to the top cover.\N这样我们就能在电池包上直接安装座椅，座椅横梁直接焊接在顶盖上。
+Dialogue: 0,0:27:03.52,0:27:04.83,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:27:04.88,0:27:12.78,Sub,,0,0,0,,And then you put this in line so that you don't have this bulge up here on the pack, which going to gets in the way of the seats as they recline.\N然后你把这根结构件排布好，这样电池包顶部就不会有凸起，避免影响座椅向后倾斜时的空间。
+Dialogue: 0,0:27:12.84,0:27:16.12,Sub,,0,0,0,,And as we're thinking about future vehicles in a common architecture,\N当我们考虑未来采用统一架构的车型时，
+Dialogue: 0,0:27:16.17,0:27:22.35,Sub,,0,0,0,,you can have sort of the length of the pack vary and have it not impact your feet positions if there's a second or third row.\N电池包长度可以调整，但不会影响第二排或第三排乘客的脚部位置。
+Dialogue: 0,0:27:22.40,0:27:28.31,Sub,,0,0,0,,This is something we've kind of like started to push back in like the model the model Y L has a flatter pack for the seats and so on.\N这是我们已经开始推动的一个方向，比如 Model Y L 版本的电池包更扁平，以优化座椅布局等。
+Dialogue: 0,0:27:28.36,0:27:30.55,Sub,,0,0,0,,You know, it's a little more space for the third row feet there.\N这样第三排乘客的脚部空间会多一些。
+Dialogue: 0,0:27:30.60,0:27:38.39,Sub,,0,0,0,,But one of the things that like you may not see at first but notice is like typically we've sort of looked at the pack as like a top-down assembly.\N有一点你可能一开始没注意到，但后来会发现：我们通常把电池包看作是从上往下组装的部件。
+Dialogue: 0,0:27:38.44,0:27:46.12,Sub,,0,0,0,,And in this scenario when we put the top cover on, this is part the the ancillaries are sealed at the top and actually service from the bottom.\N而在这个方案中，当我们装上顶盖后，这些辅助部件就从顶部密封，实际维护则从底部进行。
+Dialogue: 0,0:27:46.16,0:27:51.87,Sub,,0,0,0,,And that was because when we looked at all our service data, the pack itself the back the modules and and the cells,\N这是因为当我们查看所有服务数据时，电池包本身、背面、模块和电芯，
+Dialogue: 0,0:27:51.92,0:27:56.63,Sub,,0,0,0,,they're actually much more reliable than the electronics and stuff behind it.\N其可靠性实际上远高于其背后的电子元件和其他部件。
+Dialogue: 0,0:27:56.68,0:27:56.98,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:27:56.91,0:28:01.31,Sub,,0,0,0,,So if there's anything that we need to service, just like we talked about the thermal management,\N所以如果需要进行任何维护，就像我们之前讨论的热管理一样，
+Dialogue: 0,0:28:01.36,0:28:04.57,Sub,,0,0,0,,you purposefully change that orientation. of it as a platter.\N你可以特意改变它的安装方向，就像托盘那样。
+Dialogue: 0,0:28:04.62,0:28:07.68,Sub,,0,0,0,,Literally there's a mounting structure on the bottom, you pull it down,\N底部确实有一个安装结构，你只需将其向下拉，
+Dialogue: 0,0:28:07.73,0:28:12.54,Sub,,0,0,0,,it pulls all the ancillaries down and you have a sort of you get up up close with the ancillaries in a second.\N所有辅助部件都会随之下降，你就能立刻近距离接触到这些辅助部件。
+Dialogue: 0,0:28:12.59,0:28:18.30,Sub,,0,0,0,,One of the nice things about this too is top cover the ancillaries, it's part of the same stamping here.\N这个设计还有一个优点是，顶部盖板与辅助部件是一体成型的。
+Dialogue: 0,0:28:18.36,0:28:19.28,Sub,,0,0,0,,Yeah, all one piece.\N没错，整个结构是一体的。
+Dialogue: 0,0:28:19.33,0:28:22.63,Sub,,0,0,0,,In in three Y there's a wall and a top cover, those are both gone.\N在三号版本中，原本的隔板和顶盖都已取消。
+Dialogue: 0,0:28:22.68,0:28:26.78,Sub,,0,0,0,,And a seal and a bunch of uh you know, bolts to put it together.\N以及密封件和一堆用来组装的螺栓。
+Dialogue: 0,0:28:26.83,0:28:29.96,Sub,,0,0,0,,Yeah, it's I'm also not seeing unless I'm missing it, you know,\N没错，我也没看到，除非我漏掉了什么，你知道。
+Dialogue: 0,0:28:30.02,0:28:35.51,Sub,,0,0,0,,on the Model Y there was a bunch of tailor welded blanks like lay- laser seams on that top panel.\N在 Model Y 上，顶部面板有许多激光焊接的板材，就像那些激光焊缝一样。
+Dialogue: 0,0:28:35.56,0:28:36.67,Sub,,0,0,0,,I don't see those here.\N我在这里看不到这些。
+Dialogue: 0,0:28:36.72,0:28:41.68,Sub,,0,0,0,,Yeah, that was those were the So it was up here, that was the wall for the top cover to create this volume there.\N对，那些就是。所以这里原本是顶部盖板的侧壁，用来形成那个空间的体积。
+Dialogue: 0,0:28:41.72,0:28:43.55,Sub,,0,0,0,,So that's that's gone now.\N所以现在这些都消失了。
+Dialogue: 0,0:28:43.60,0:28:46.31,Sub,,0,0,0,,You'll notice too it's steel top cover, we always do that.\N你也会注意到，这是钢制的顶盖，我们一直这么做。
+Dialogue: 0,0:28:46.36,0:28:48.24,Sub,,0,0,0,,It's a steel enclosure base.\N这是一个钢制的外壳底座。
+Dialogue: 0,0:28:48.29,0:28:54.55,Sub,,0,0,0,,That's something that is a first on this program and there's a couple advantages to it.\N这是该车型首次采用，而且有几项优势。
+Dialogue: 0,0:28:54.60,0:28:56.57,Sub,,0,0,0,,One is just cost, right?\N一个是成本，对吧？
+Dialogue: 0,0:28:56.62,0:29:00.28,Sub,,0,0,0,,Steel $1.90 per kilogram versus 5 to 8 dollars a kilogram.\N钢材每公斤 1.90 美元，而其他材料每公斤 5 到 8 美元。
+Dialogue: 0,0:29:00.33,0:29:05.26,Sub,,0,0,0,,There's a cost of mass, too, where you lose on steel, but it still nets out.\N重量方面也有成本，钢在重量上吃亏，但总体上仍然划算。
+Dialogue: 0,0:29:05.30,0:29:12.69,Sub,,0,0,0,,And then um one of the things that you'll notice, it may not be super obvious, though, there's actually more parts on the enclosure.\N然后，你可能会注意到一点，虽然可能不太明显，但外壳的零件实际上更多了。
+Dialogue: 0,0:29:12.74,0:29:15.92,Sub,,0,0,0,,It's one of the to to drive this thickness down to 1.2 mm,\N这是实现将厚度降至 1.2 毫米的关键之一。
+Dialogue: 0,0:29:15.97,0:29:20.67,Sub,,0,0,0,,you needed to localize some You needed to add a bunch of local features and strengthening around it.\N你需要对某些部位进行局部化处理，需要添加大量局部特征并加强周围结构。
+Dialogue: 0,0:29:20.72,0:29:28.07,Sub,,0,0,0,,Yeah, We're still learning whether we think this in the end was the right call, but it has its advantages of being lower cost and mass.\N是的，我们仍在评估最终这是否是正确的决策，但它具有成本更低、更易量产的优势。
+Dialogue: 0,0:29:28.12,0:29:30.96,Sub,,0,0,0,,How much from a cross section perspective on the pack?\N从横截面角度看，电池包的结构强度如何？
+Dialogue: 0,0:29:31.00,0:29:39.56,Sub,,0,0,0,,Like the Model Y, at least in three dimensions, was structural to the the surface of the pack, but on the bottom it was open, the fore after was up.\N就像 Model Y 一样，至少在三维空间中，电池包的表面是结构化的，\N但在底部是开放的，前部是向上延伸的。
+Dialogue: 0,0:29:39.61,0:29:42.27,Sub,,0,0,0,,That structural foam didn't actually go to the outer bound.\N那种结构泡沫实际上并未延伸到外边缘。
+Dialogue: 0,0:29:42.32,0:29:49.03,Sub,,0,0,0,,So, from a structure's perspective, how much structural work is the pack doing on this versus like a Model Y?\N从结构角度看，这个电池包承担的结构作用与 Model Y 相比如何？
+Dialogue: 0,0:29:49.08,0:29:52.95,Sub,,0,0,0,,Yeah, so in that particular better over here, but yeah.\N是的，这个位置确实更好一些，没错。
+Dialogue: 0,0:29:53.00,0:29:55.34,Sub,,0,0,0,,You have durability, front crash, side pole.\N你需要考虑耐久性、前部碰撞、侧柱碰撞。
+Dialogue: 0,0:29:55.39,0:29:56.72,Sub,,0,0,0,,Those are your three big ones, right?\N这三个是最重要的，对吧？
+Dialogue: 0,0:29:56.78,0:29:58.55,Sub,,0,0,0,,You were talking about side pole.\N你刚才提到了侧柱碰撞。
+Dialogue: 0,0:29:58.60,0:29:59.31,Sub,,0,0,0,,Side pole.\N侧柱碰撞。
+Dialogue: 0,0:29:59.36,0:30:02.34,Sub,,0,0,0,,So, what the pack does, you you don't want the cells to absorb energy,\N电池包的作用是，你并不希望电池单体吸收能量。
+Dialogue: 0,0:30:02.39,0:30:07.99,Sub,,0,0,0,,you want them to be stiff back up structure to help the main absorption structure stay put, right?\N你希望它们作为刚性支撑结构，帮助主吸能结构保持稳定，对吧？
+Dialogue: 0,0:30:08.04,0:30:08.37,Sub,,0,0,0,,Sure.\N没错。
+Dialogue: 0,0:30:08.40,0:30:13.87,Sub,,0,0,0,,So, in side pole, in a structural pack, that top cover that the cross member is mounted to,\N所以在侧边立柱、结构包中，横梁安装在顶部盖板上，
+Dialogue: 0,0:30:13.92,0:30:18.76,Sub,,0,0,0,,yep, that giant surface area of adhesive really helps stabilize it.\N对，那巨大的粘接面积确实大大增强了稳定性。
+Dialogue: 0,0:30:18.81,0:30:24.27,Sub,,0,0,0,,Here, that top cover actually fastens into the main enclosure through these longitudinals.\N这里，顶部盖板实际上通过这些纵向构件固定在主外壳上。
+Dialogue: 0,0:30:24.32,0:30:26.11,Sub,,0,0,0,,You can see the through holes here.\N你可以看到这里的通孔。
+Dialogue: 0,0:30:26.16,0:30:29.83,Sub,,0,0,0,,And so, you're not sending load directly into this adhesive cell plane,\N因此，你不会将载荷直接传递到这个粘接平面，
+Dialogue: 0,0:30:29.88,0:30:34.19,Sub,,0,0,0,,and I can The energy's skipping over to the beam and then going to the next one over.\N能量会跳过并传递到梁，再传到下一个梁。
+Dialogue: 0,0:30:34.24,0:30:39.61,Sub,,0,0,0,,But something cool we were able to do with this is when that longitudinal comes through here,\N但通过这个设计，我们还能实现一个很酷的功能：当纵向构件从这里穿过时，
+Dialogue: 0,0:30:39.66,0:30:48.95,Sub,,0,0,0,,the second module on the strut side can actually resist the motion of that longitudinal contributing to the backup structure and stiffening that.\N支撑侧的第二个模块实际上能抵抗纵向构件的运动，从而增强支撑结构的刚性。
+Dialogue: 0,0:30:49.00,0:30:53.75,Sub,,0,0,0,,And so we basically have shear planes between each of the the center channels using the module.\N因此，我们实际上在每个中心通道之间通过模块形成了剪切平面。
+Dialogue: 0,0:30:53.80,0:30:56.19,Sub,,0,0,0,,And it doesn't crush the cells cuz it's so distributed.\N而且它不会压溃这些单元，因为载荷分布得非常均匀。
+Dialogue: 0,0:30:56.24,0:31:02.43,Sub,,0,0,0,,And so the module is like a stiff you know, element there that's adding strength and we call it so it's kind of semi-structural in that regard.\N所以这个模块就像一个刚性元件，能增加强度，我们称之为半结构件，从这个角度来说是这样。
+Dialogue: 0,0:31:02.48,0:31:03.07,Sub,,0,0,0,,Semi-structural.\N半结构件。
+Dialogue: 0,0:31:03.12,0:31:03.53,Sub,,0,0,0,,Yeah, yeah.\N对，没错。
+Dialogue: 0,0:31:03.58,0:31:07.87,Sub,,0,0,0,,And when you're dispersing it out over such a big area, it can actually do a lot I would imagine.\N当你把它分散到这么大的区域时，我想它实际上能承担很多工作。
+Dialogue: 0,0:31:07.92,0:31:10.31,Sub,,0,0,0,,And then I'll do frontal crash.\N然后我来做正面碰撞测试。
+Dialogue: 0,0:31:10.36,0:31:12.79,Sub,,0,0,0,,Um but the you know, so how do we carry the loads through there?\N嗯，但问题是，我们如何让载荷通过这里？
+Dialogue: 0,0:31:12.84,0:31:14.19,Sub,,0,0,0,,The casting comes through here.\N铸件从这里穿过。
+Dialogue: 0,0:31:14.24,0:31:19.37,Sub,,0,0,0,,It has a triangular piece that bolts up to the front here and then you see these three big loops here.\N它有一个三角形部件，固定在前面，然后你看到这里三个大环。
+Dialogue: 0,0:31:19.42,0:31:25.05,Sub,,0,0,0,,Um those are like our main sort of uh load pass as they come through.\N嗯，这些就是我们主要的载荷传递路径，它们从这里穿过。
+Dialogue: 0,0:31:25.10,0:31:29.02,Sub,,0,0,0,,So the casting will distribute it and kind of put it in the five longitudinals.\N所以铸件会将载荷分散，并将其传递到五个纵向构件上。
+Dialogue: 0,0:31:29.06,0:31:31.30,Sub,,0,0,0,,The two side cells, one, two, three in the middle.\N两侧各两个，中间一个，总共三个。
+Dialogue: 0,0:31:31.35,0:31:32.52,Sub,,0,0,0,,So you get five overall.\N所以总共是五个。
+Dialogue: 0,0:31:32.57,0:31:38.91,Sub,,0,0,0,,Then we kind of net it out and carry it the same way through the pack to the back without damaging the cells.\N然后我们将其整体打包，像之前一样从电池包后部取出，同时不损坏电池。
+Dialogue: 0,0:31:38.96,0:31:47.83,Sub,,0,0,0,,Now, is this Is this from a from an impact perspective like the furthest outbound outboard either fore or after, side to side that we could get them?\N现在，从撞击角度看，这是否是我们能实现的最远外侧位置，无论是前后还是左右方向？
+Dialogue: 0,0:31:47.88,0:31:50.11,Sub,,0,0,0,,Meaning we needed this for free crush space?\N意思是我们需要自由溃缩空间？
+Dialogue: 0,0:31:50.16,0:31:57.95,Sub,,0,0,0,,Uh no, we uh We were way more efficient than uh Yeah. we thought we would be. many batteries as we thought we did.\N不，我们实际效率远高于预期，比我们预想的要高效得多，能容纳的电池数量也远超预期。
+Dialogue: 0,0:31:58.00,0:31:58.65,Sub,,0,0,0,,That's right.\N没错。
+Dialogue: 0,0:31:58.70,0:32:04.84,Sub,,0,0,0,,That's So So this Yeah, if we want to get into that, this is an 88S 6P battery pack.\N对，所以如果我们深入探讨，这是一个 88S 6P 电池包。
+Dialogue: 0,0:32:04.89,0:32:08.09,Sub,,0,0,0,,We have room to add a few more cells as you can see there.\N如你所见，我们还有空间再加几块电池。
+Dialogue: 0,0:32:08.14,0:32:12.63,Sub,,0,0,0,,And the other thing you can't really see is there's space There's more space than we need below these modules.\N另外你不太看得出来的是，这些模组下方的空间比我们需要的还要多。
+Dialogue: 0,0:32:12.68,0:32:12.98,Sub,,0,0,0,,Sure.\N明白。
+Dialogue: 0,0:32:13.00,0:32:16.96,Sub,,0,0,0,,So we protected this pack to go to an even lower energy dense chemistry as we scale\N因此我们保护了这个电池包，以便在扩展时采用更低能量密度的化学体系。
+Dialogue: 0,0:32:17.01,0:32:21.79,Sub,,0,0,0,,and and need to bring LFP into the platform and and whatever we do. down and out.\N并且在需要将 LFP 引入平台时，无论我们如何调整，都能实现向下和向外的布局。
+Dialogue: 0,0:32:21.84,0:32:23.61,Sub,,0,0,0,,Yeah, the cells vent down and out.\N对，电池会向下和向外排气。
+Dialogue: 0,0:32:23.66,0:32:23.96,Sub,,0,0,0,,Yep.\N嗯。
+Dialogue: 0,0:32:23.92,0:32:33.66,Sub,,0,0,0,,So So I got to ask the the foam and the potting question cuz we tore apart the Model Y and we had to use a dry ice blaster We We ripped like,\N所以我想问一下关于泡沫和灌封的问题，因为我们拆解了 Model Y，\N不得不使用干冰喷射器，我们就像这样，
+Dialogue: 0,0:32:33.71,0:32:37.74,Sub,,0,0,0,,you know, ratchet straps off holding tables trying to peel that steel back.\N比如说，把固定桌子的扳手带拆下来，试图把那层钢皮剥开。
+Dialogue: 0,0:32:37.78,0:32:39.23,Sub,,0,0,0,,The steel was ripping.\N那层钢皮都在撕裂。
+Dialogue: 0,0:32:39.28,0:32:43.08,Sub,,0,0,0,,This is a pretty big change where you're just potting locally in the module. soluble.\N这是一个相当大的改变，你只是在模块内部局部灌封。可溶的。
+Dialogue: 0,0:32:43.13,0:32:45.59,Sub,,0,0,0,,It's just It's It's not No, I'm kidding.\N就是说，其实不是，我在开玩笑。
+Dialogue: 0,0:32:45.64,0:32:49.91,Sub,,0,0,0,,No, it's it's Yeah, it's the same potting, but we we're doing modules instead of packs.\N不，其实是一样的灌封材料，但我们现在做的是模块，而不是电池包。
+Dialogue: 0,0:32:49.96,0:32:50.33,Sub,,0,0,0,,Okay.\N明白了。
+Dialogue: 0,0:32:50.36,0:32:51.47,Sub,,0,0,0,,You probably want to know why.\N你 probably 想知道原因。
+Dialogue: 0,0:32:51.52,0:32:53.11,Sub,,0,0,0,,I do want to know why, for sure.\N我当然想知道原因。
+Dialogue: 0,0:32:53.16,0:32:55.53,Sub,,0,0,0,,All right, so it's it's good to be self-critical.\N好，保持自我批判是件好事。
+Dialogue: 0,0:32:55.58,0:32:59.07,Sub,,0,0,0,,It's one of our One of our I think we would say unique attributes here.\N这是我们这里独特的优势之一。
+Dialogue: 0,0:32:59.12,0:33:01.07,Sub,,0,0,0,,okay to look at yourself and I I didn't do a good job.\N好吧，看看自己，我确实没做好。
+Dialogue: 0,0:33:01.12,0:33:03.83,Sub,,0,0,0,,I'm going to give our Model Y structural battery a grade D.\N我要给我们的 Model Y 结构电池打个 D。
+Dialogue: 0,0:33:03.88,0:33:04.75,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:33:04.80,0:33:10.39,Sub,,0,0,0,,To the customer, it was an awesome product, but internally, just sort of the like how hard it was to build and how much it cost.\N对客户来说，这是一款很棒的产品，但内部来看，就是建造有多难，成本有多高。
+Dialogue: 0,0:33:10.44,0:33:11.39,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:33:11.44,0:33:15.39,Sub,,0,0,0,,Cybertruck structural pack, we we made some big changes.\NCybertruck 的结构电池包，我们做了不少大改动。
+Dialogue: 0,0:33:15.44,0:33:17.51,Sub,,0,0,0,,I'd call it a maybe a B minus.\N我会说大概是个 B 减。
+Dialogue: 0,0:33:17.56,0:33:20.15,Sub,,0,0,0,,I was going to give you a C plus, but okay.\N我本来想给你打个 C 加，但好吧。
+Dialogue: 0,0:33:20.20,0:33:24.06,Sub,,0,0,0,,It's like You We made some big It was for sure passing. grade.\N就像我们做了不少大改动，这绝对是及格了。
+Dialogue: 0,0:33:24.11,0:33:25.84,Sub,,0,0,0,,You've seen the pack, you've seen the line.\N你看过电池包，也看过生产线。
+Dialogue: 0,0:33:25.88,0:33:27.39,Sub,,0,0,0,,Like I'm proud of that.\N我为此感到自豪。
+Dialogue: 0,0:33:27.44,0:33:32.27,Sub,,0,0,0,,What we started to realize is like in the limit, the grade A structural pack Yeah.\N我们开始意识到，在极限情况下，A 级结构电池是可能的。
+Dialogue: 0,0:33:32.32,0:33:35.87,Sub,,0,0,0,,and the grade A, we'll call this non-structural semi-structural pack.\N而A级电池，我们称之为非结构化半结构化电池包。
+Dialogue: 0,0:33:35.92,0:33:39.79,Sub,,0,0,0,,Everything we could tell is like pretty equivalent cost for You're going to get\N我们能判断的是，你获得的性能与成本基本相当。
+Dialogue: 0,0:33:39.84,0:33:44.23,Sub,,0,0,0,,maybe 10%more volume for cells in a structural pack when you delete the structure.\N但当你移除结构后，电池包的体积可增加约10%。
+Dialogue: 0,0:33:44.28,0:33:49.31,Sub,,0,0,0,,But you're going to save a little cost as a result, but the the issue is the service cost.\N但这样会节省一些成本，问题在于维修成本。
+Dialogue: 0,0:33:49.36,0:33:49.79,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:33:49.84,0:33:50.82,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:33:50.87,0:34:01.47,Sub,,0,0,0,,And like you have to get just infinitely low cell reliabilities to win on structural packs because we get to salvage three of these modules.\N你必须让电池的可靠性无限降低，才能在结构化电池包上胜出，因为我们能回收其中三个模块。
+Dialogue: 0,0:34:01.52,0:34:04.27,Sub,,0,0,0,,Like if this were working at 1,500 bucks a piece.\N比如说每个模块价值1500美元。
+Dialogue: 0,0:34:04.32,0:34:08.31,Sub,,0,0,0,,If if one goes down On a Model Y, you're replacing the entire thing.\N如果Model Y上有一个模块损坏，你就要更换整个电池包。
+Dialogue: 0,0:34:08.36,0:34:13.92,Sub,,0,0,0,,So like in a thought experiment a mega pack at three and a half to five megawatt hours, you're never going to pot that whole thing.\N所以在设想中，一个3.5到5兆瓦时的超大电池包，你永远不会把整个电池包报废。
+Dialogue: 0,0:34:13.97,0:34:16.15,Sub,,0,0,0,,If one cell goes down, you don't want to lose that asset.\N如果一个电池单元损坏，你不想失去整个资产。
+Dialogue: 0,0:34:16.20,0:34:18.52,Sub,,0,0,0,,An Optimus battery, it's it's one module.\N一个Optimus电池，它只有一个模块。
+Dialogue: 0,0:34:18.57,0:34:19.71,Sub,,0,0,0,,It's two and a half kilowatt hours.\N两千瓦时。
+Dialogue: 0,0:34:19.76,0:34:21.43,Sub,,0,0,0,,Great, you know, it's That's kind of okay.\N很好，你知道，这还算可以。
+Dialogue: 0,0:34:21.48,0:34:26.35,Sub,,0,0,0,,It turns out in that in that product it's actually not the largest cost at all.\N结果发现，在这款产品中，这实际上根本不是最大的成本。
+Dialogue: 0,0:34:26.40,0:34:27.05,Sub,,0,0,0,,And that, too.\N这一点也是如此。
+Dialogue: 0,0:34:27.10,0:34:27.75,Sub,,0,0,0,,Yeah, exactly.\N没错，正是如此。
+Dialogue: 0,0:34:27.80,0:34:33.05,Sub,,0,0,0,,So we found that it was going to be too too engineering drag to maintain two architectures in parallel.\N所以我们发现，同时维护两种架构带来的工程负担太大了。
+Dialogue: 0,0:34:33.10,0:34:35.63,Sub,,0,0,0,,Let's just like go all in on making this the best it can be.\N我们不如全力以赴，把它做到最好。
+Dialogue: 0,0:34:35.68,0:34:35.98,Sub,,0,0,0,,Yeah,\N没错。
+Dialogue: 0,0:34:35.87,0:34:41.50,Sub,,0,0,0,,so whether it's on the engineering design and development side or and or I would say the economics of\N无论是工程设计与开发方面，还是经济性方面，
+Dialogue: 0,0:34:41.55,0:34:46.11,Sub,,0,0,0,,service and getting to it and is are we are we scrapping a whole pack or just a module?\N服务和获取的难度，是我们要报废整个电池包，还是只换一个模组？
+Dialogue: 0,0:34:46.16,0:34:47.67,Sub,,0,0,0,,So that's really what drove us here.\N这才是我们走到这一步的根本原因。
+Dialogue: 0,0:34:47.72,0:34:48.35,Sub,,0,0,0,,Exactly.\N完全正确。
+Dialogue: 0,0:34:48.40,0:34:49.86,Sub,,0,0,0,,So what So what grade is this one?\N那么，这一款的评分是多少？
+Dialogue: 0,0:34:49.91,0:34:52.03,Sub,,0,0,0,,If this I got to know the grade of this one.\N如果我能知道这一款的等级就好了。
+Dialogue: 0,0:34:52.08,0:34:53.55,Sub,,0,0,0,,I'm feeling pretty good about this one.\N我对这一款感觉相当不错。
+Dialogue: 0,0:34:53.60,0:35:03.83,Sub,,0,0,0,,I would actually think this is uh probably in the whole battery seem like most elegant we best design pack most integrated in the vehicle.\N我实际上觉得这一款在电池组中，可能是最优雅、集成度最高、与车辆结合最紧密的设计。
+Dialogue: 0,0:35:03.88,0:35:07.23,Sub,,0,0,0,,I can't ever say you like perfect but I'd give it an A minus.\N我没法说它完美，但我会给它 A 减分。
+Dialogue: 0,0:35:07.28,0:35:07.65,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:35:07.68,0:35:08.87,Sub,,0,0,0,,Always a little room to improve.\N总还是有改进空间的。
+Dialogue: 0,0:35:08.92,0:35:09.47,Sub,,0,0,0,,I'll take it.\N我要了。
+Dialogue: 0,0:35:09.52,0:35:12.28,Sub,,0,0,0,,Yeah, I mean that's that's a that's a good grade from where I sit.\N是的，从我的角度看，这已经是个不错的分数了。
+Dialogue: 0,0:35:12.33,0:35:20.47,Sub,,0,0,0,,So It's also worth noting when you think of TCOs we've talked about replacing an entire pack before half a million miles is a killer on cost.\N还有一点值得注意，当我们考虑总拥有成本时，之前提到过，\N车辆行驶不到五十万公里就要更换整个电池包，这在成本上是难以承受的。
+Dialogue: 0,0:35:20.52,0:35:22.49,Sub,,0,0,0,,So we have to think of reman.\N所以我们必须考虑翻新。
+Dialogue: 0,0:35:22.54,0:35:24.53,Sub,,0,0,0,,We have to think of like pack serviceability.\N我们还必须考虑电池包的可服务性。
+Dialogue: 0,0:35:24.58,0:35:28.15,Sub,,0,0,0,,I think of all those things that actually get us to our cost target for the product.\N我认为所有这些实际因素都能帮助我们达成产品的成本目标。
+Dialogue: 0,0:35:28.20,0:35:30.64,Sub,,0,0,0,,Even maybe the insurance side of it I would imagine.\N甚至可能还包括保险方面，我想应该是这样。
+Dialogue: 0,0:35:30.69,0:35:31.02,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:35:31.05,0:35:37.71,Sub,,0,0,0,,If you're If you're going to insure a product like this and Tesla self insures and does all sorts of things that's got to be a benefit.\N如果你要为这种产品投保，而特斯拉是自保的，还做了各种各样的事情，那肯定是有好处的。
+Dialogue: 0,0:35:37.76,0:35:38.59,Sub,,0,0,0,,Anything else you want to see in this?\N还有其他你想看的吗？
+Dialogue: 0,0:35:38.64,0:35:39.22,Sub,,0,0,0,,No, this is great.\N不，这已经很棒了。
+Dialogue: 0,0:35:39.27,0:35:40.27,Sub,,0,0,0,,Thank you for taking us through it.\N谢谢你带我们过一遍。
+Dialogue: 0,0:35:40.32,0:35:41.75,Sub,,0,0,0,,Can I show you just a couple more things?\N我能再给你展示几样东西吗？
+Dialogue: 0,0:35:41.80,0:35:42.37,Sub,,0,0,0,,Yes, you can.\N可以，你可以。
+Dialogue: 0,0:35:42.42,0:35:42.90,Sub,,0,0,0,,Absolutely.\N当然可以。
+Dialogue: 0,0:35:42.95,0:35:44.43,Sub,,0,0,0,,Anything you want.\N你想看什么都可以。
+Dialogue: 0,0:35:44.48,0:35:47.14,Sub,,0,0,0,,Okay, there's some stuff in here I'm really excited about that I think you'll like.\N好的，这里面有些东西我真的很兴奋，我觉得你会喜欢的。
+Dialogue: 0,0:35:47.19,0:35:51.31,Sub,,0,0,0,,So one thing you'll notice is there's no harness Yep. from the BMBs.\N你注意到了一点，这里没有线束，对吧？
+Dialogue: 0,0:35:51.36,0:35:54.43,Sub,,0,0,0,,Yep, it's all bat-battery management board.\N对，全部都是电池管理板。
+Dialogue: 0,0:35:54.48,0:35:58.51,Sub,,0,0,0,,To the to the penthouse that what we call the uh inline ancillaries.\N通往顶层，我们称之为内置辅助设备。
+Dialogue: 0,0:35:58.56,0:36:03.71,Sub,,0,0,0,,This is we weren't the first to play around with wireless but we implemented wireless communications in here.\N我们不是第一个尝试无线技术的，但我们在内部实现了无线通信。
+Dialogue: 0,0:36:03.76,0:36:04.23,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:36:04.28,0:36:05.37,Sub,,0,0,0,,And it's just it's been huge.\N效果非常显著。
+Dialogue: 0,0:36:05.42,0:36:12.39,Sub,,0,0,0,,It allowed us to delete harnesses which are super messy to automate So you're doing an intra pack intra pack wireless communication.\N这让我们可以去掉线束，而线束在自动化时非常杂乱，现在我们实现了电池包内部的无线通信。
+Dialogue: 0,0:36:12.44,0:36:19.43,Sub,,0,0,0,,Yeah, so normally this is a dumb circuit board that sends data to the HVC to the BMS through a harness.\N对，通常这是一块简单的电路板，通过线束将数据传给HVC和BMS。
+Dialogue: 0,0:36:19.48,0:36:20.87,Sub,,0,0,0,,BMS battery management system.\NBMS，即电池管理系统。
+Dialogue: 0,0:36:20.92,0:36:23.11,Sub,,0,0,0,,You have to package pay for it it fails.\N你得为它打包、支付成本，而且它还容易出故障。
+Dialogue: 0,0:36:23.16,0:36:24.66,Sub,,0,0,0,,So now we have an RF chip on here.\N现在我们在这里加了一颗射频芯片。
+Dialogue: 0,0:36:24.71,0:36:27.51,Sub,,0,0,0,,It drives the cost up a little of this circuit board.\N这让这块电路板的成本略有上升。
+Dialogue: 0,0:36:27.56,0:36:27.93,Sub,,0,0,0,,Sure.\N当然可以。
+Dialogue: 0,0:36:27.96,0:36:32.02,Sub,,0,0,0,,But now we get, you know, to delete that harness and and now we have edge compute here.\N但现在我们可以删除这个线束，这里就有了边缘计算。
+Dialogue: 0,0:36:32.07,0:36:34.67,Sub,,0,0,0,,So we can do local things like runaway detection.\N我们可以执行本地任务，比如失控检测。
+Dialogue: 0,0:36:34.72,0:36:41.02,Sub,,0,0,0,,redundancy um within the like cuz each each board is, you know, not you know, singularly powered.\N冗余设计，因为每块板卡都不是单一供电的。
+Dialogue: 0,0:36:41.07,0:36:45.04,Sub,,0,0,0,,But also like when you when you think about cost as I said as a whole vehicle,\N但同时，当你考虑整车成本时，正如我所说，
+Dialogue: 0,0:36:45.09,0:36:51.40,Sub,,0,0,0,,even if your board cost went up 20 or 30 cents for the communication chip, we deleted a harness that might have been a dollar.\N即使你的板卡成本因通信芯片上涨了20或30美分，我们却省下了可能价值一美元的线束。
+Dialogue: 0,0:36:51.45,0:36:56.79,Sub,,0,0,0,,You deleted the assembly of the harness might have been 50 cents and on a system level it's cheaper.\N你还省去了线束组装的成本，可能有50美分，从系统层面看更便宜了。
+Dialogue: 0,0:36:56.84,0:37:01.84,Sub,,0,0,0,,My my overarching takeaway when I look at this pack, you know, when I actually stared at it for a second,\N我看这个模块时最深刻的感受是，我盯着它看了几秒后，
+Dialogue: 0,0:37:01.89,0:37:08.63,Sub,,0,0,0,,my question when we were walking up to it that I didn't ask, I'm like are all the pieces in here or not?\N我在走近它时本该问却没问的问题是：这里面的所有部件都在吗？
+Dialogue: 0,0:37:08.68,0:37:08.98,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:37:08.93,0:37:10.03,Sub,,0,0,0,,And that's a good grade, right?\N这是个好成绩，对吧？
+Dialogue: 0,0:37:10.08,0:37:13.47,Sub,,0,0,0,,That's why we're getting a good grade cuz it looks it looks like it's missing something.\N正是因为它看起来好像缺了点什么，所以我们才得了高分。
+Dialogue: 0,0:37:13.52,0:37:15.27,Sub,,0,0,0,,And that's a good sign. over here.\N这是个好迹象。就在那边。
+Dialogue: 0,0:37:15.32,0:37:17.54,Sub,,0,0,0,,Yeah, so you can see our our 4680s.\N对，你可以看到我们的4680电池。
+Dialogue: 0,0:37:17.59,0:37:20.19,Sub,,0,0,0,,And then let's take a look at the ancillary's back here.\N然后我们来看看这里的辅助部件。
+Dialogue: 0,0:37:20.24,0:37:21.35,Sub,,0,0,0,,We got another one.\N我们还有另一个。
+Dialogue: 0,0:37:21.40,0:37:27.47,Sub,,0,0,0,,So I'll try and get you some more room, Jeff, but the brakes are on that.\N我会尽量给你多腾点空间，杰夫，但刹车是卡住的。
+Dialogue: 0,0:37:27.52,0:37:29.64,Sub,,0,0,0,,open up a three Cybertruck ancillary is pretty good.\N打开一个三电机Cybertruck的辅助部件，效果相当不错。
+Dialogue: 0,0:37:29.68,0:37:33.36,Sub,,0,0,0,,When you look at the three Y ancillary's it's kind of a rat's nest.\N当你看到这三个Y型辅助部件时，简直像一团乱麻。
+Dialogue: 0,0:37:33.41,0:37:34.57,Sub,,0,0,0,,I'm being self-critical.\N我在自我批评。
+Dialogue: 0,0:37:34.62,0:37:35.55,Sub,,0,0,0,,I worked on that.\N我负责过那个。
+Dialogue: 0,0:37:35.60,0:37:36.55,Sub,,0,0,0,,This is super clean.\N这非常整洁。
+Dialogue: 0,0:37:36.60,0:37:42.83,Sub,,0,0,0,,So we took the approach of a single casting where you can get all the mounting features and build into it.\N我们采用了单次铸造的方案，所有安装结构都能集成进去。
+Dialogue: 0,0:37:42.88,0:37:44.15,Sub,,0,0,0,,Hey.\N嘿。
+Dialogue: 0,0:37:44.20,0:37:45.25,Sub,,0,0,0,,I know, yeah, a casting.\N我知道，对，是铸件。
+Dialogue: 0,0:37:45.30,0:37:46.75,Sub,,0,0,0,,Is that the new word? next door.\N那是新词吗？隔壁。
+Dialogue: 0,0:37:46.80,0:37:47.27,Sub,,0,0,0,,Yeah, yeah.\N对，对。
+Dialogue: 0,0:37:47.32,0:37:50.02,Sub,,0,0,0,,So first things I I want to point out that are pretty cool here.\N首先我想指出这里一些很酷的地方。
+Dialogue: 0,0:37:50.07,0:37:54.97,Sub,,0,0,0,,The um the shrouds for the connectors you just integrate them into the casting here, right?\N就是这些连接器的护罩，你直接把它们集成到铸件里，对吧？
+Dialogue: 0,0:37:55.02,0:37:55.32,Sub,,0,0,0,,Here.\N这里。
+Dialogue: 0,0:37:55.31,0:37:57.15,Sub,,0,0,0,,Like this is our front drive unit.\N就像这是我们的前驱动单元。
+Dialogue: 0,0:37:57.20,0:38:00.23,Sub,,0,0,0,,This is our the connectors to go down in cost, I would imagine.\N这些连接器应该是为了降低成本，我想。
+Dialogue: 0,0:38:00.28,0:38:01.09,Sub,,0,0,0,,Exactly.\N没错。
+Dialogue: 0,0:38:01.14,0:38:09.15,Sub,,0,0,0,,So the the part basically what we do here are we call it um instead of doing panel mount and jumper,\N所以我们在这里做的，我们称之为，不再使用面板安装和跳线，
+Dialogue: 0,0:38:09.20,0:38:13.44,Sub,,0,0,0,,we're doing direct pass-through on all of these things, right?\N而是让所有这些部件都直接贯通，对吧？
+Dialogue: 0,0:38:13.48,0:38:18.52,Sub,,0,0,0,,So these three components plus this coolant connection, those are actually like this part,\N所以这三个部件加上这个冷却液连接，实际上就是这个部件。
+Dialogue: 0,0:38:18.56,0:38:21.71,Sub,,0,0,0,,this part, this part, and then that that's the inside of the cold plate.\N这部分，这部分，然后那里就是冷板的内侧。
+Dialogue: 0,0:38:21.76,0:38:26.75,Sub,,0,0,0,,So, rather than have panel mount and the jumper, we just pass through right here.\N所以我们不需要安装面板和跳线，直接从这里穿过去就行。
+Dialogue: 0,0:38:26.80,0:38:28.35,Sub,,0,0,0,,All the intermediates go away.\N所有中间部件都消失了。
+Dialogue: 0,0:38:28.40,0:38:28.70,Sub,,0,0,0,,Exactly.\N完全正确。
+Dialogue: 0,0:38:28.64,0:38:30.55,Sub,,0,0,0,,And you're And you're putting a fork through a grid.\N你就像把叉子穿过网格一样。
+Dialogue: 0,0:38:30.60,0:38:31.05,Sub,,0,0,0,,Exactly.\N完全正确。
+Dialogue: 0,0:38:31.10,0:38:31.71,Sub,,0,0,0,,Yeah, okay.\N好的，明白了。
+Dialogue: 0,0:38:31.76,0:38:32.62,Sub,,0,0,0,,Yeah, exactly.\N对，完全正确。
+Dialogue: 0,0:38:32.67,0:38:38.11,Sub,,0,0,0,,Um and then we did some cool things you can't really see here, but the You want me to hold it up?\N嗯，然后我们做了一些这里看不到的酷操作，但你要我举起来给你看吗？
+Dialogue: 0,0:38:38.16,0:38:38.59,Sub,,0,0,0,,You got it.\N没问题。
+Dialogue: 0,0:38:38.64,0:38:43.15,Sub,,0,0,0,,You can't see it because this we call this the BCU is is already installed.\N你看不到，因为这个我们叫 BCU 的部件已经装好了。
+Dialogue: 0,0:38:43.20,0:38:45.07,Sub,,0,0,0,,But the Battery control unit?\N但电池控制单元呢？
+Dialogue: 0,0:38:45.12,0:38:50.87,Sub,,0,0,0,,Yeah, so we deleted a lot of harnesses by directly mounting the contactors to the board.\N是的，我们通过直接将接触器安装在电路板上，删除了大量线束。
+Dialogue: 0,0:38:50.92,0:38:53.77,Sub,,0,0,0,,You know, you got sense, signal, and power.\N你知道，有信号、传感和电源。
+Dialogue: 0,0:38:53.82,0:38:56.09,Sub,,0,0,0,,All those connectors are gone.\N所有那些连接器都消失了。
+Dialogue: 0,0:38:56.14,0:38:59.75,Sub,,0,0,0,,The the BMS just mounts directly to those devices.\N电池管理系统直接安装在这些设备上。
+Dialogue: 0,0:38:59.80,0:39:01.64,Sub,,0,0,0,,And the interrupting contactors, we had to check.\N而那些用于切断的接触器，我们不得不进行检查。
+Dialogue: 0,0:39:01.69,0:39:03.23,Sub,,0,0,0,,This is out in the world.\N这东西已经投入实际应用了。
+Dialogue: 0,0:39:03.28,0:39:05.63,Sub,,0,0,0,,We filed a patent application for it. say it.\N我们为此提交了专利申请。
+Dialogue: 0,0:39:05.68,0:39:09.23,Sub,,0,0,0,,The um we were able to delete the pyro.\N我们成功去除了爆炸保险丝。
+Dialogue: 0,0:39:09.28,0:39:10.27,Sub,,0,0,0,,The active fuse.\N主动式熔断器。
+Dialogue: 0,0:39:10.32,0:39:10.75,Sub,,0,0,0,,Really?\N真的吗？
+Dialogue: 0,0:39:10.80,0:39:17.19,Sub,,0,0,0,,Because these interrupting contactors now have the speed to to There's no latency to it, yeah.\N因为现在这些切断接触器具备了足够快的响应速度，没有延迟，是的。
+Dialogue: 0,0:39:17.24,0:39:18.59,Sub,,0,0,0,,It's no longer relays.\N它已不再是继电器。
+Dialogue: 0,0:39:18.64,0:39:19.95,Sub,,0,0,0,,Now it's fast enough.\N现在它已经足够快了。
+Dialogue: 0,0:39:20.00,0:39:20.47,Sub,,0,0,0,,Interesting.\N很有意思。
+Dialogue: 0,0:39:20.52,0:39:23.19,Sub,,0,0,0,,And not only that, they can open under load a few times and keep working.\N而且不仅如此，它们还能在负载下多次开启并持续工作。
+Dialogue: 0,0:39:23.24,0:39:23.75,Sub,,0,0,0,,Mhm.\N嗯。
+Dialogue: 0,0:39:23.80,0:39:25.39,Sub,,0,0,0,,So, often times you'll get like a redundant system.\N所以，通常你会得到一个冗余系统。
+Dialogue: 0,0:39:25.44,0:39:25.74,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:39:25.62,0:39:26.11,Sub,,0,0,0,,Yeah, yeah, yeah.\N对，对，对。
+Dialogue: 0,0:39:26.16,0:39:31.83,Sub,,0,0,0,,Huge fraction of pyro fires are from like low-speed crashes where the HV system is actually healthy.\N大部分由低速碰撞引发的起火事故中，高压系统实际上仍是完好的。
+Dialogue: 0,0:39:31.88,0:39:32.25,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:39:32.28,0:39:35.07,Sub,,0,0,0,,And then you don't need to you don't want to have to service the pack.\N那么你就不用也不需要去维护电池包。
+Dialogue: 0,0:39:35.12,0:39:35.52,Sub,,0,0,0,,Sure.\N当然。
+Dialogue: 0,0:39:35.56,0:39:38.91,Sub,,0,0,0,,And so we can just But with a with a one pyro, you have to.\N所以我们只需用一个爆炸装置即可，但用单个爆炸装置的话，你就不得不这么做。
+Dialogue: 0,0:39:38.96,0:39:39.26,Sub,,0,0,0,,Exactly.\N正确。
+Dialogue: 0,0:39:39.28,0:39:40.24,Sub,,0,0,0,,Yeah, game over.\N是的，游戏结束。
+Dialogue: 0,0:39:40.29,0:39:44.97,Sub,,0,0,0,,So, as from a cooling plate perspective, is it the same circuit as the battery?\N从冷却板的角度来看，它和电池的电路是一样的吗？
+Dialogue: 0,0:39:45.02,0:39:46.99,Sub,,0,0,0,,Is it a dedicated circuit?\N是专用电路吗？
+Dialogue: 0,0:39:47.04,0:39:49.91,Sub,,0,0,0,,They're not in series, but they come off the same vehicle.\N它们不是串联的，但都来自同一辆车辆。
+Dialogue: 0,0:39:49.96,0:39:50.72,Sub,,0,0,0,,So, it's in parallel.\N所以是并联的。
+Dialogue: 0,0:39:50.77,0:39:51.75,Sub,,0,0,0,,It comes Yeah, okay.\N它来自，嗯，好的。
+Dialogue: 0,0:39:51.80,0:39:52.39,Sub,,0,0,0,,Got it.\N明白了。
+Dialogue: 0,0:39:52.44,0:39:55.42,Sub,,0,0,0,,the last couple things on this, set of bolts to the module terminals.\N这部分最后几件事，是连接模块端子的螺栓。
+Dialogue: 0,0:39:55.47,0:39:57.99,Sub,,0,0,0,,We have these HV power blind mates.\N我们有这些高压电源盲配对连接器。
+Dialogue: 0,0:39:58.04,0:40:05.15,Sub,,0,0,0,,So, when you install this into this structure here, that's the first thing to engage after the alignment pins.\N所以当你把这个装入这里的结构时，这在对齐销之后是第一个接触的部分。
+Dialogue: 0,0:40:05.20,0:40:06.83,Sub,,0,0,0,,Two pins of alignment here and here.\N这里和这里有两个对齐销。
+Dialogue: 0,0:40:06.88,0:40:09.63,Sub,,0,0,0,,And then when you take it out, everything de-energizes.\N然后当你把它拿出来时，所有部件都会断电。
+Dialogue: 0,0:40:09.68,0:40:12.39,Sub,,0,0,0,,So, we've gotten rid of a lot of these like touch safety insulators as well.\N所以我们也去除了许多类似触碰安全绝缘体的部件。
+Dialogue: 0,0:40:12.44,0:40:13.87,Sub,,0,0,0,,Yeah, so all your interlocks.\N对，所有你的联锁装置。
+Dialogue: 0,0:40:13.92,0:40:20.94,Sub,,0,0,0,,Which you decreases our service time because now they don't have to like worry about the the high voltage and loops and all that stuff.\N这样我们减少了服务时间，因为现在他们不必再担心高压和回路之类的问题。
+Dialogue: 0,0:40:20.99,0:40:22.54,Sub,,0,0,0,,And are these So are these barbs?\N那些是钩状结构吗？
+Dialogue: 0,0:40:22.58,0:40:27.55,Sub,,0,0,0,,So they're like connector positive assurance, all CPAs effectively?\N它们就像是连接器的正向保证，所有CPA实际上都是这样吗？
+Dialogue: 0,0:40:27.60,0:40:30.06,Sub,,0,0,0,,It's It's a little harder to see these things.\N这些东西有点难看清。
+Dialogue: 0,0:40:30.11,0:40:31.69,Sub,,0,0,0,,There's like no snap fit or something.\N就好像没有卡扣或类似结构。
+Dialogue: 0,0:40:31.74,0:40:36.93,Sub,,0,0,0,,So, you know, you can monitor the sort of force installation distance curve and know that you've made a good connection.\N所以你知道，你可以监测安装力与距离的曲线，从而确认连接良好。
+Dialogue: 0,0:40:36.98,0:40:38.59,Sub,,0,0,0,,Kind of like torque run down on a bolt.\N就像拧螺栓时的扭矩下降过程。
+Dialogue: 0,0:40:38.64,0:40:39.51,Sub,,0,0,0,,That's what I was going to ask, right?\N这正是我打算问的，对吧？
+Dialogue: 0,0:40:39.56,0:40:43.03,Sub,,0,0,0,,If there's no visual way to do it, you're measuring the insertion force.\N如果没有视觉方式确认，你就得测量插入力。
+Dialogue: 0,0:40:43.08,0:40:46.19,Sub,,0,0,0,,This has been uh some new territory to like figure out how to do reliably, yeah.\N这确实是一片全新的领域，需要摸索出可靠的方法，是的。
+Dialogue: 0,0:40:46.24,0:40:48.19,Sub,,0,0,0,,This goes back to the integration with the manufacturing teams.\N这要追溯到与制造团队的整合。
+Dialogue: 0,0:40:48.24,0:40:51.49,Sub,,0,0,0,,It's like when Robbie has that idea, we have to know we have to control it.\N就像罗比有了那个想法时，我们必须知道必须控制它。
+Dialogue: 0,0:40:51.54,0:40:57.59,Sub,,0,0,0,,And so, he's got to work with Frank and the our battery team that's putting this together to like be like,"Okay,\N所以他得和弗兰克以及我们的电池团队合作，一起确认：“好的，
+Dialogue: 0,0:40:57.64,0:40:59.60,Sub,,0,0,0,,I'm going to need to control force and distance.\N我需要控制力和距离。
+Dialogue: 0,0:40:59.65,0:41:01.27,Sub,,0,0,0,,Let's make sure that's in the equipment."\N一定要确保设备里包含这些。”
+Dialogue: 0,0:41:01.32,0:41:01.62,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,0:41:01.60,0:41:03.00,Sub,,0,0,0,,Because that's the only way we know we seat it.\N因为只有这样我们才能确保它安装到位。
+Dialogue: 0,0:41:03.05,0:41:07.87,Sub,,0,0,0,,And it's totally fine cuz you like you said, it's just like a bolt where you torque and angle window.\N完全没问题，就像你说的，就像拧螺栓一样，有扭矩和角度窗口。
+Dialogue: 0,0:41:07.92,0:41:10.47,Sub,,0,0,0,,It's a sensitive electrical connection, but that's actually the best feedback.\N这是一个敏感的电气连接，但恰恰是这种反馈最好。
+Dialogue: 0,0:41:10.52,0:41:16.79,Sub,,0,0,0,,I would I would imagine the difficulty is making sure that through the design and the GD&T, which we already talked about earlier,\N我想困难之处在于，确保通过设计和GD&T（几何尺寸与公差），我们之前已经谈过这一点，
+Dialogue: 0,0:41:16.84,0:41:19.28,Sub,,0,0,0,,it it's making sure that there's no other interferences,\N确保没有其他干扰。
+Dialogue: 0,0:41:19.33,0:41:23.67,Sub,,0,0,0,,so you're not getting a false positive that something else is driving resistance in the insertion.\N所以你不会得到一个错误的阳性结果，误以为是其他东西导致了插入阻力。
+Dialogue: 0,0:41:23.72,0:41:24.40,Sub,,0,0,0,,That's right.\N没错。
+Dialogue: 0,0:41:24.45,0:41:30.91,Sub,,0,0,0,,And And then, by the time the seal starts to engage and load up the installation fixture, you've already made it the contacts.\N等到密封件开始接触并加载安装夹具时，你已经完成了接触点的连接。
+Dialogue: 0,0:41:30.96,0:41:31.53,Sub,,0,0,0,,Right.\N对。
+Dialogue: 0,0:41:31.58,0:41:32.07,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:41:32.12,0:41:32.42,Sub,,0,0,0,,And then,\N然后，
+Dialogue: 0,0:41:32.39,0:41:37.04,Sub,,0,0,0,,we couldn't get rid of every harness with a direct like I love when you said that there\N我们无法去掉每一个带有直接连接的线束，就像你说的那样，我特别喜欢你那句话。
+Dialogue: 0,0:41:37.09,0:41:41.23,Sub,,0,0,0,,was like There was a little bit There was like a little bit of failure in your voice.\N你的声音里有点小失误，有点小瑕疵。
+Dialogue: 0,0:41:41.28,0:41:41.99,Sub,,0,0,0,,Like,"Oh."\N哦。
+Dialogue: 0,0:41:42.04,0:41:47.71,Sub,,0,0,0,,So, we learned how to make rigid jumpers, so our manufacturing partners can automate pick and place these things.\N于是我们学会了如何制造刚性跳线，这样我们的制造合作伙伴就能自动完成这些部件的拾取和放置。
+Dialogue: 0,0:41:47.76,0:41:48.56,Sub,,0,0,0,,That's brilliant.\N太棒了。
+Dialogue: 0,0:41:48.61,0:41:49.01,Sub,,0,0,0,,Love it.\N太喜欢了。
+Dialogue: 0,0:41:49.04,0:41:51.53,Sub,,0,0,0,,So, my favorite Like, I just I like to point this out.\N所以，我最喜欢的，就是想特别指出这一点。
+Dialogue: 0,0:41:51.58,0:41:52.81,Sub,,0,0,0,,My I can do it on camera, too.\N我也可以在镜头前做到。
+Dialogue: 0,0:41:52.86,0:41:55.63,Sub,,0,0,0,,But my favorite Nick story, we were down in Hawthorne.\N但我最喜欢的尼克故事，是我们当时在霍桑的时候。
+Dialogue: 0,0:41:55.68,0:41:58.75,Sub,,0,0,0,,Um we both came from Honda from different parts of Honda.\N我们俩都来自本田，来自本田的不同部门。
+Dialogue: 0,0:41:58.80,0:42:05.24,Sub,,0,0,0,,And there was this intern, and he was talking to us in the break room about all this motor design he had done and how great it was.\N还有个实习生，他在休息室跟我们聊起他设计的电机，说有多么出色。
+Dialogue: 0,0:42:05.29,0:42:11.89,Sub,,0,0,0,,And we were just kind of over in the corner, and he like goes to introduce himself to Nick, and Nick goes,"I am Nick.\N我们 just 在角落里，他走过去跟尼克自我介绍，尼克说：“我是尼克。”
+Dialogue: 0,0:42:11.94,0:42:20.43,Sub,,0,0,0,,I used to design motors, too, for F1."And then just walked away.\N我以前也设计过F1赛车的电机，后来就直接放弃了。
+Dialogue: 0,0:42:20.48,0:42:22.19,Sub,,0,0,0,,Anyway, We had good snacks.\N反正我们有不错的点心。
+Dialogue: 0,0:42:22.24,0:42:22.86,Sub,,0,0,0,,Well, we did.\N嗯，我们做到了。
+Dialogue: 0,0:42:22.91,0:42:23.87,Sub,,0,0,0,,We had great snacks.\N我们有很棒的零食。
+Dialogue: 0,0:42:23.92,0:42:25.77,Sub,,0,0,0,,Anyway, I mean, I'll do this.\N反正，我是会这么做的。
+Dialogue: 0,0:42:25.82,0:42:26.79,Sub,,0,0,0,,This is Nick Verzani.\N这是尼克·维尔扎尼。
+Dialogue: 0,0:42:26.84,0:42:27.83,Sub,,0,0,0,,He's our head of drive unit.\N他是我们驱动单元的负责人。
+Dialogue: 0,0:42:27.88,0:42:29.08,Sub,,0,0,0,,And this is Brian Dorlag.\N这位是布莱恩·多拉格。
+Dialogue: 0,0:42:29.13,0:42:36.54,Sub,,0,0,0,,He's head of chassis, suspension, thermal, and a bunch of other of our uh Europe and China teams.\N他负责底盘、悬挂、散热，以及我们欧洲和中国团队的其他多个项目。
+Dialogue: 0,0:42:36.59,0:42:41.08,Sub,,0,0,0,,So, I wanted them to come here and just talk about our indirect thermal system.\N所以我想让他们过来，简单聊聊我们的间接散热系统。
+Dialogue: 0,0:42:41.13,0:42:41.70,Sub,,0,0,0,,It's pretty cool.\N这真的很酷。
+Dialogue: 0,0:42:41.75,0:42:43.69,Sub,,0,0,0,,And our drive unit, which is also pretty cool.\N还有我们的驱动单元，同样也很酷。
+Dialogue: 0,0:42:43.74,0:42:51.03,Sub,,0,0,0,,These are two main components in Cybercab that make it the most efficient um uh uh EV that we've ever built.\N这两个是 Cybercab 的核心组件，让这款车成为我们迄今为止打造的最高效的电动车。
+Dialogue: 0,0:42:51.08,0:42:58.59,Sub,,0,0,0,,Yeah, I mean, before we get going, like for for the audience as well, the these two sets of systems and everything,\N是的，不过在开始之前，也想对在场的观众说明一下，这两套系统以及所有相关部分，
+Dialogue: 0,0:42:58.64,0:43:06.15,Sub,,0,0,0,,this this is arguably, you guys can correct me if I'm wrong, this is some of the most engineering-intense elements of Tesla, period.\N说句公道话，你们可以纠正我如果我说错了，这可以说是特斯拉工程强度最高的部分了。
+Dialogue: 0,0:43:06.20,0:43:06.50,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:43:06.52,0:43:06.82,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:43:06.81,0:43:10.93,Sub,,0,0,0,,There's a lot, obviously, in gigacastings and body structures, but the number of components,\N当然，巨型压铸件和车身结构方面也有很多复杂之处，但就组件数量而言，
+Dialogue: 0,0:43:10.98,0:43:14.99,Sub,,0,0,0,,the complexity, and then the impact to the efficiency of the vehicle is enormous here.\N复杂性，以及对车辆效率的影响在这里非常巨大。
+Dialogue: 0,0:43:15.04,0:43:17.83,Sub,,0,0,0,,Yeah, there's definitely a good reason we insource all that.\N是的，我们内部生产这些确实有充分的理由。
+Dialogue: 0,0:43:17.88,0:43:18.21,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,0:43:18.24,0:43:18.91,Sub,,0,0,0,,Yeah, yeah.\N是的，没错。
+Dialogue: 0,0:43:18.96,0:43:26.06,Sub,,0,0,0,,Yeah, the I think the the top the top contributors to electric vehicle consumption are the tire is usually number one.\N是的，我认为影响电动汽车能耗的最主要因素是轮胎，通常排在第一位。
+Dialogue: 0,0:43:26.11,0:43:31.51,Sub,,0,0,0,,Aerodynamic drag is usually number two, although those can flip depending on your speed.\N空气动力学阻力通常排在第二位，不过根据速度不同，排名可能会互换。
+Dialogue: 0,0:43:31.56,0:43:36.55,Sub,,0,0,0,,And then the thermal system and the HVAC loading and and the rest of the thermal loads on the vehicle are number three.\N然后是热管理系统、HVAC负载以及车辆上的其他热负荷，排在第三位。
+Dialogue: 0,0:43:36.60,0:43:40.07,Sub,,0,0,0,,So, Brian's responsible for all of that, so it's all his fault.\N所以，这些都由布莱恩负责，因此全是他的责任。
+Dialogue: 0,0:43:40.12,0:43:42.63,Sub,,0,0,0,,Nick's made the drive unit too efficient, so he's off the hook.\N尼克把驱动单元做得太高效了，所以他可以免责。
+Dialogue: 0,0:43:42.68,0:43:43.39,Sub,,0,0,0,,Yeah, yeah.\N是的，没错。
+Dialogue: 0,0:43:43.44,0:43:45.19,Sub,,0,0,0,,Yeah, it's never too efficient.\N是的，再高效也不为过。
+Dialogue: 0,0:43:45.24,0:43:49.95,Sub,,0,0,0,,So, so as we look at this, this is the first we were talking about it when we were in vehicle.\N所以，当我们审视这个问题时，这是我们之前在车辆上讨论过的第一个话题。
+Dialogue: 0,0:43:50.00,0:43:55.83,Sub,,0,0,0,,Not only have we changed from refrigerant to an ethylene glycol base so that can be serviceable,\N我们不仅将制冷剂更换为乙二醇基底，使其更易于维护，
+Dialogue: 0,0:43:55.88,0:43:58.74,Sub,,0,0,0,,we we can we can flush it, we can prime it, we can seal it.\N还可以冲洗、加压和密封。
+Dialogue: 0,0:43:58.79,0:44:00.95,Sub,,0,0,0,,But now we integrated the EAC unit.\N但现在我们已将EAC单元集成进来。
+Dialogue: 0,0:44:01.00,0:44:09.71,Sub,,0,0,0,,Like, what what are the what are the pros and cons that you guys observed by making those two changes, ethylene and then the PIA EAC compressor.\N你们观察到的这两项改动——使用乙二醇和P1A EAC压缩机——各自的优缺点是什么？
+Dialogue: 0,0:44:09.76,0:44:10.20,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,0:44:10.25,0:44:14.45,Sub,,0,0,0,,So so the I'll cover the the ethylene glycol one first.\N那我先讲乙二醇的部分。
+Dialogue: 0,0:44:14.50,0:44:16.60,Sub,,0,0,0,,So we we did a deep dive on our system.\N我们对系统进行了深入分析。
+Dialogue: 0,0:44:16.64,0:44:18.60,Sub,,0,0,0,,This is our third gen heat pump.\N这是我们的第三代热泵。
+Dialogue: 0,0:44:18.65,0:44:24.08,Sub,,0,0,0,,So we have we have 9 million vehicles and like 100 billion miles of heat pump experience.\N我们已有900万辆车，累计超过1000亿英里的热泵使用经验。
+Dialogue: 0,0:44:24.14,0:44:29.44,Sub,,0,0,0,,So we we did a deep dive you know and and try to learn as much as we could from that and that\N我们深入研究，尽可能从这些数据中汲取经验，
+Dialogue: 0,0:44:29.49,0:44:39.40,Sub,,0,0,0,,we found that so much of the the difficulty and efficiency and the reliability challenges was on the refrigerant side of the system.\N结果发现，系统中大部分的困难、效率问题和可靠性挑战都出在制冷剂一侧。
+Dialogue: 0,0:44:39.46,0:44:45.56,Sub,,0,0,0,,And the coolant ethylene glycol system generally was a lot less a lot less finicky.\N而乙二醇冷却系统通常要稳定得多，也少出问题。
+Dialogue: 0,0:44:45.61,0:44:46.91,Sub,,0,0,0,,There was a lot less at stake.\N涉及的利益要少得多。
+Dialogue: 0,0:44:46.96,0:44:52.95,Sub,,0,0,0,,You know the the multiple factors on the efficiencies of every every little win and loss were much lower.\N你知道，每个微小得失的效率受多种因素影响，这些因素的权重都低得多。
+Dialogue: 0,0:44:53.00,0:44:53.30,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:44:53.28,0:44:53.95,Sub,,0,0,0,,So the team,\N所以团队，
+Dialogue: 0,0:44:54.00,0:44:58.23,Sub,,0,0,0,,the team had the great idea to move as much of the complexity to the coolant side\N团队提出了一个绝佳的主意，就是把尽可能多的复杂性转移到冷却液一侧，
+Dialogue: 0,0:44:58.28,0:45:02.55,Sub,,0,0,0,,of the system and move a lot of the complexity out of the refrigerant side of the system,\N并将大量复杂性从制冷剂一侧移除，
+Dialogue: 0,0:45:02.60,0:45:08.11,Sub,,0,0,0,,which then allowed us to hyper optimize the refrigerant side of the system,\N这样我们就能对制冷剂一侧进行极致优化，
+Dialogue: 0,0:45:08.16,0:45:12.93,Sub,,0,0,0,,where we were able to really, really expand how much heat we're able to absorb, you know,\N从而大幅提高我们吸收热量的能力，你知道，
+Dialogue: 0,0:45:12.98,0:45:18.18,Sub,,0,0,0,,when you're when you're trying to cool things down, how much heat you're able to dump when you're trying to warm things up.\N当你试图降温时，能排出多少热量；当你试图升温时，又能吸收多少热量。
+Dialogue: 0,0:45:18.23,0:45:22.98,Sub,,0,0,0,,We were able to to reduce a lot of the inefficient heat leaks.\N我们成功减少了大量低效的热量泄漏。
+Dialogue: 0,0:45:23.03,0:45:28.58,Sub,,0,0,0,,Where you have hot parts of the system and cold parts of the system and any heat that leaks between them makes it really bad.\N当系统中存在高温部分和低温部分时，任何热量在两者之间泄漏都会造成严重影响。
+Dialogue: 0,0:45:28.63,0:45:28.93,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:45:28.92,0:45:29.22,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:45:29.08,0:45:29.38,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:45:29.24,0:45:29.54,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:45:29.40,0:45:31.94,Sub,,0,0,0,,So by simplifying the system we were able to optimize that.\N通过简化系统，我们实现了优化。
+Dialogue: 0,0:45:31.99,0:45:38.51,Sub,,0,0,0,,We were able to get the compressor to be in a much happier operation state in terms of the pressures and temperatures it was seeing.\N我们让压缩机在压力和温度方面进入了更理想的工作状态。
+Dialogue: 0,0:45:38.56,0:45:41.81,Sub,,0,0,0,,And when you put it right next to like the refrigerant system you get rid of all the hoses.\N当把它直接安装在制冷系统旁边时，所有软管都可以去掉。
+Dialogue: 0,0:45:41.86,0:45:46.07,Sub,,0,0,0,,You get rid of those losses. no no refrigerant hoses on the system.\N你就能消除这些损耗，系统里不再有制冷剂软管。
+Dialogue: 0,0:45:46.12,0:45:49.16,Sub,,0,0,0,,So we have a pentapore on our on our other vehicles.\N我们在其他车型上已经配备了五孔阀。
+Dialogue: 0,0:45:49.22,0:45:53.61,Sub,,0,0,0,,That's a that's a great system very well engineered but even better if we can\N这是一个非常出色的系统，设计得非常好，但如果能
+Dialogue: 0,0:45:53.66,0:45:58.39,Sub,,0,0,0,,just directly mount the compressor to the refrigerant manifold and skip skip the whole mess.\N直接把压缩机安装到制冷剂歧管上，省去整个复杂连接，那就更好了。
+Dialogue: 0,0:45:58.44,0:46:00.74,Sub,,0,0,0,,It, it reduces the, you know, it,\N它能减少，你知道的，它，
+Dialogue: 0,0:46:00.78,0:46:09.96,Sub,,0,0,0,,it it makes everything better from pressure drop to component and bomb count to our ability to automate the manufacturability of it to you know,\N从压降、部件数量和爆炸风险，到我们实现自动化制造的能力，方方面面都变得更好了。
+Dialogue: 0,0:46:10.01,0:46:17.92,Sub,,0,0,0,,really really everything that we care about and and we're showing it on a manufacturing build pallet here not just because it makes a\N我们真正关心的一切，这里都在制造用的托盘上展示了，不仅是因为这样方便，而且……
+Dialogue: 0,0:46:17.98,0:46:26.51,Sub,,0,0,0,,good prop to to hold it up but because the system was designed from the start to be very highly automatable in its assembly.\N很好的设计，可以轻松持握，而且该系统从一开始就设计得高度可自动化组装。
+Dialogue: 0,0:46:26.56,0:46:30.63,Sub,,0,0,0,,So right now it's a pretty manual process to connect most of the major\N目前，连接大多数主要组件仍是一个相当手动的过程。
+Dialogue: 0,0:46:30.68,0:46:35.05,Sub,,0,0,0,,modules of the heat pump system whereas this is more or less a self-contained unit.\N热泵系统的模块，而这个则基本上是一个自包含单元。
+Dialogue: 0,0:46:35.10,0:46:42.00,Sub,,0,0,0,,We're able to build it robotically, fill the refrigerant side of it, run a run a full system test, check it for leaks,\N我们可以用机器人完成组装，填充制冷剂，进行整机测试，并检查是否存在泄漏。
+Dialogue: 0,0:46:42.06,0:46:46.19,Sub,,0,0,0,,check it for major performance parameters all before it goes into the vehicle and then you\N在它装入车辆前，先检查其主要性能参数
+Dialogue: 0,0:46:46.24,0:46:52.10,Sub,,0,0,0,,just plug in the coolant the coolant hoses which are also batched to reduce the manufacturing count.\N只需连接冷却液管，这些管路也已批量集成，以减少制造数量。
+Dialogue: 0,0:46:52.15,0:46:58.27,Sub,,0,0,0,,So we have multi-connector here, multi-connector here and you're basically done assembling the system into the vehicle.\N这里有多接口，这里也有多个接口，你基本上就完成将系统组装到车辆上的工作了。
+Dialogue: 0,0:46:58.32,0:47:03.62,Sub,,0,0,0,,all like perfectly in axis so you've got locate and retention here and We tried\N全部都完全对齐在轴线上，所以这里你有定位和保持功能，我们尝试过
+Dialogue: 0,0:47:03.67,0:47:06.51,Sub,,0,0,0,,as much as possible like you were talking about earlier if it's good for Bob,\N尽可能像你刚才提到的那样，如果对鲍勃有好处的话。
+Dialogue: 0,0:47:06.56,0:47:12.68,Sub,,0,0,0,,it's good for for for automation but you know, 2D automation is simpler but it's also faster.\N自动化方面很有用，不过你知道，二维自动化更简单，也更快。
+Dialogue: 0,0:47:12.73,0:47:15.52,Sub,,0,0,0,,You know, when you don't have to like position things in 3D.\N你知道，当你不用费心去在三维空间中摆放物体时。
+Dialogue: 0,0:47:15.57,0:47:18.59,Sub,,0,0,0,,So we do a lot of planar installations where it makes sense,\N因此我们做了很多平面安装，这样更合理，
+Dialogue: 0,0:47:18.64,0:47:22.62,Sub,,0,0,0,,so that you can see all the pumps and the PT sensors, and everything are in this single plane;\N以便你能看到所有的泵和PT传感器，所有部件都处于同一平面；
+Dialogue: 0,0:47:22.67,0:47:29.51,Sub,,0,0,0,,and then, you know, we'll put it together maybe one time with the complexity of 3D, so that we don't have to to come back to it.\N然后，你明白的，我们会在3D复杂度下组装一次，这样就不必再回头处理了。
+Dialogue: 0,0:47:29.56,0:47:31.77,Sub,,0,0,0,,Um Nick, you got a lot of inverters over here.\N嗯，尼克，你这边有很多逆变器。
+Dialogue: 0,0:47:31.82,0:47:33.55,Sub,,0,0,0,,You want to go over here and talk about these?\N你想过来聊聊这些吗？
+Dialogue: 0,0:47:33.60,0:47:37.14,Sub,,0,0,0,,Yeah, so what we have our 5DUs that's the driving unit that's in this car right here.\N对，我们这里有5DUs，也就是这辆车里的驱动单元。
+Dialogue: 0,0:47:37.18,0:47:39.72,Sub,,0,0,0,,I dropped by some of the old generation as well.\N我也顺道看了看一些旧一代的部件。
+Dialogue: 0,0:47:39.77,0:47:43.87,Sub,,0,0,0,,So this is the 4DI inverter that's shipping right now in 3-in-1.\N这是目前正出货的3合14DI逆变器。
+Dialogue: 0,0:47:43.92,0:47:47.50,Sub,,0,0,0,,Wanted to highlight how much you can get kind of visually see how\N想强调一下，你能直观看到我们简化了多少，
+Dialogue: 0,0:47:47.55,0:47:53.79,Sub,,0,0,0,,much we simplified wherever we had redundancies that weren't really earning their complexity.\N在那些冗余且并未真正带来价值的地方。
+Dialogue: 0,0:47:53.84,0:47:56.39,Sub,,0,0,0,,We removed a whole bunch of parts.\N我们去除了大量部件。
+Dialogue: 0,0:47:56.44,0:48:01.39,Sub,,0,0,0,,A a percentage of in parts if you look at all the different components on the PCBA.\N如果你看看PCBA上所有不同组件，这些部件所占比例相当可观。
+Dialogue: 0,0:48:01.44,0:48:06.65,Sub,,0,0,0,,Um, one of the great thing of the 5 DI that doesn't get enough glory is the supply chain stability.\N嗯，5 DI 的一大优点是供应链稳定性，但这一点却很少得到应有的赞誉。
+Dialogue: 0,0:48:06.70,0:48:10.98,Sub,,0,0,0,,Every single one of these components is a bill is ready to be dual sourced.\N这些组件中的每一个，都已准备好实现双源供应。
+Dialogue: 0,0:48:11.03,0:48:15.13,Sub,,0,0,0,,As the the volumes we're going to, we have to be able to stay flexible.\N随着我们产量的提升，我们必须保持足够的灵活性。
+Dialogue: 0,0:48:15.18,0:48:22.23,Sub,,0,0,0,,Um, and then wherever it looks like we haven't populated parts, it's cuz we want to be ready to go with supplier A or supplier B.\N嗯，如果某些地方看起来我们还没填满零部件，那是因为我们想随时准备好采用供应商 A 或供应商 B。
+Dialogue: 0,0:48:22.28,0:48:29.79,Sub,,0,0,0,,Um, and really be able to go the world's getting a little bit more complicated with AI um, having a super high demand for chips.\N嗯，随着世界在 AI 方面变得越来越复杂，对芯片的需求也变得极高。
+Dialogue: 0,0:48:29.84,0:48:31.27,Sub,,0,0,0,,Um, and we're totally ready.\N嗯，我们完全准备好了。
+Dialogue: 0,0:48:31.32,0:48:35.57,Sub,,0,0,0,,The electrical engineers have done the work so that we can be multi-sourced on every one of these components.\N电气工程师已经完成了工作，使我们能够在每个组件上实现多源供应。
+Dialogue: 0,0:48:35.62,0:48:40.59,Sub,,0,0,0,,As one of those things that doesn't look that great from the outside, it's but it's it's so much work and it's so impactful.\N这些事从外表看可能并不显眼，但背后付出了大量努力，影响却非常深远。
+Dialogue: 0,0:48:40.64,0:48:42.01,Sub,,0,0,0,,speaks to the culture you're talking about.\N这正体现了你所谈到的文化。
+Dialogue: 0,0:48:42.06,0:48:44.59,Sub,,0,0,0,,We talked about the integration of manufacturing and design and test,\N我们谈到了制造、设计和测试的整合，
+Dialogue: 0,0:48:44.64,0:48:49.04,Sub,,0,0,0,,but like our supply chain teams, you know, Roshan and Karan's teams, they're like in it with us, too.\N但我们的供应链团队，比如罗尚和卡兰的团队，也和我们并肩作战。
+Dialogue: 0,0:48:49.09,0:48:51.43,Sub,,0,0,0,,Because like you can't build it if you can't buy it.\N因为如果你买不到，就根本无法造出来。
+Dialogue: 0,0:48:51.48,0:48:56.19,Sub,,0,0,0,,And if you can't buy it or we can't make it, then we're And you got to be able to buy the other one or be Yeah,\N如果买不到，或者我们做不了，那我们就得能买到另一个。你得能买得起另一个，对吧，
+Dialogue: 0,0:48:56.24,0:48:58.08,Sub,,0,0,0,,it actually negates it negates the engineering.\N这实际上抵消了工程的意义。
+Dialogue: 0,0:48:58.13,0:48:59.83,Sub,,0,0,0,,If you can't if you can't get the parts.\N如果你搞不到零件的话。
+Dialogue: 0,0:48:59.88,0:49:03.41,Sub,,0,0,0,,So we try as much as possible to dual source, sometimes triple source.\N所以我们尽可能实现双重供应，有时甚至三重供应。
+Dialogue: 0,0:49:03.46,0:49:03.76,Sub,,0,0,0,,So.\N所以。
+Dialogue: 0,0:49:03.72,0:49:05.98,Sub,,0,0,0,,So are there I got to ask, are there Easter eggs on here?\N我得问一下，这里面有彩蛋吗？
+Dialogue: 0,0:49:06.04,0:49:09.83,Sub,,0,0,0,,Are we going to find Monroe printed on the board anywhere?\N我们会不会在板子上某处发现“门罗”的字样？
+Dialogue: 0,0:49:09.88,0:49:12.98,Sub,,0,0,0,,I I have an internal debate with Easter eggs.\N我对彩蛋其实内心有矛盾。
+Dialogue: 0,0:49:13.03,0:49:13.33,Sub,,0,0,0,,Um,\N呃，
+Dialogue: 0,0:49:13.34,0:49:20.66,Sub,,0,0,0,,while I love the like cordial nature of it of this vision of this like die builder\N虽然我很喜欢这种亲切感，喜欢这种“芯片制造者”的愿景，
+Dialogue: 0,0:49:20.70,0:49:25.19,Sub,,0,0,0,,who's like grinding a little thing that he doesn't have to do to make a little logo.\N喜欢那种明明没必要，却还特意打磨一个小logo的执着。
+Dialogue: 0,0:49:25.24,0:49:29.43,Sub,,0,0,0,,Uh Nick is uh very thorough with costs and if it adds a penny, it's too much, you know.\N呃，尼克在成本上非常严谨，只要多一分钱，就是多得太多了，你知道的。
+Dialogue: 0,0:49:29.48,0:49:30.29,Sub,,0,0,0,,It's too much.\N太多了。
+Dialogue: 0,0:49:30.34,0:49:31.15,Sub,,0,0,0,,It's too much.\N太多了。
+Dialogue: 0,0:49:31.20,0:49:34.89,Sub,,0,0,0,,If you were building a die and you see some little logo in it, Oh, yeah.\N如果你在制造芯片，看到里面有个小标志，哦，对。
+Dialogue: 0,0:49:34.94,0:49:36.91,Sub,,0,0,0,,Oh, yeah. do that extra work?\N哦，对，做额外的工作？
+Dialogue: 0,0:49:36.96,0:49:42.81,Sub,,0,0,0,,So one of the things uh Jordan noticed when we were in there, Nick, you could probably talk about here, is like the vertical nature of the drive unit.\N我们在那儿的时候，乔丹注意到的一件事，尼克，你可能可以谈谈，就是驱动单元的垂直特性。
+Dialogue: 0,0:49:42.86,0:49:46.39,Sub,,0,0,0,,You want to walk through like where the motor is, gear reduction, and how do we get to the ground?\N你想 walkthrough 一下电机的位置、齿轮减速，以及我们如何到达地面吗？
+Dialogue: 0,0:49:46.44,0:49:48.95,Sub,,0,0,0,,Um, so we chose to go front-wheel drive.\N嗯，我们选择采用前轮驱动。
+Dialogue: 0,0:49:49.00,0:49:50.54,Sub,,0,0,0,,Um, we packaged the drive unit in the front.\N嗯，我们将驱动单元布置在前部。
+Dialogue: 0,0:49:50.59,0:49:54.63,Sub,,0,0,0,,It's very upright cuz we have a lot of neighbors we want to stay away from.\N它非常直立，因为我们有很多邻居，不想靠近。
+Dialogue: 0,0:49:54.68,0:49:57.44,Sub,,0,0,0,,Um from the car this way,\N从车的这个方向看，
+Dialogue: 0,0:49:57.49,0:50:03.40,Sub,,0,0,0,,uh this particular inverter orientation gives us great radiated noise performance as\N这种特定的逆变器朝向，让我们在辐射噪声性能上表现优异，
+Dialogue: 0,0:50:03.45,0:50:08.00,Sub,,0,0,0,,we big flat surfaces are pretty efficient to transform vibration into noise,\N因为我们有大面积的平面，能高效地将振动转化为噪声。
+Dialogue: 0,0:50:08.05,0:50:11.43,Sub,,0,0,0,,and we're pointing that away from the driver for the best possible experience.\N并且我们将其朝向远离驾驶员的方向，以实现最佳体验。
+Dialogue: 0,0:50:11.48,0:50:13.71,Sub,,0,0,0,,Contributes to that service thing Eric was talking about earlier.\N这有助于Eric之前提到的服务功能。
+Dialogue: 0,0:50:13.76,0:50:15.19,Sub,,0,0,0,,Yeah, no, totally.\N是的，完全没问题。
+Dialogue: 0,0:50:15.24,0:50:19.47,Sub,,0,0,0,,So, and you can see we stayed quite common on the chassis.\N所以，我们可以看到在底盘上保持了相当程度的通用性。
+Dialogue: 0,0:50:19.52,0:50:25.07,Sub,,0,0,0,,This is our first inverter that's actually the PCBA is 12 and 48 volt compatible.\N这是我们首款实际支持12伏和48伏的逆变器，PCBA也兼容这两种电压。
+Dialogue: 0,0:50:25.12,0:50:26.76,Sub,,0,0,0,,It doesn't care, we can do either or.\N它并不在意，我们可以任选其一。
+Dialogue: 0,0:50:26.81,0:50:34.47,Sub,,0,0,0,,Um and we were able to really be very CAPEX efficient just going from 40i and 5i run on the exact same line upstairs over here.\N嗯，我们能够非常高效地控制资本开支，仅通过同一生产线就实现了40i和5i的切换。
+Dialogue: 0,0:50:34.52,0:50:41.55,Sub,,0,0,0,,And like we were talking about at the front of the vehicle, this is the component that is servicing this from a voltage perspective.\N就像我们之前在车辆前端讨论的那样，这个部件从电压角度为该系统提供支持。
+Dialogue: 0,0:50:41.60,0:50:47.07,Sub,,0,0,0,,we added um we added a small little junction box.\N我们增加了一个小型接线盒。
+Dialogue: 0,0:50:47.12,0:50:52.04,Sub,,0,0,0,,We have an extra connector and fuse that will power the one we already have a box with AG unit.\N我们多了一个连接器和保险丝，用来为已有AG单元的盒子供电。
+Dialogue: 0,0:50:52.09,0:50:59.63,Sub,,0,0,0,,Why go make a different box with HP connection somewhere else in the car when we didn't Yeah, yeah, that's the It's amazing.\N为什么还要在车里其他地方专门做一个带HP接口的盒子呢？没必要，这真的很棒。
+Dialogue: 0,0:50:59.68,0:51:05.63,Sub,,0,0,0,,It's just a a bit of extra work, and we managed to do that without breaking the production line that was making the 40i as well.\N只是多了一点额外工作，但我们成功实现了这一点，同时没有影响正在生产40i的产线。
+Dialogue: 0,0:51:05.68,0:51:09.67,Sub,,0,0,0,,So, we can be super flexible, use the same line to make either version.\N所以我们可以非常灵活，用同一条生产线生产任一版本。
+Dialogue: 0,0:51:09.72,0:51:19.63,Sub,,0,0,0,,Now, from from a actual traction motor and gearbox perspective, with a Cybertruck cab application, you don't need to do 140 miles an hour.\N从实际牵引电机和齿轮箱的角度来看，在 Cybertruck 驾驶室应用中，\N你不需要达到每小时140英里的速度。
+Dialogue: 0,0:51:19.68,0:51:21.19,Sub,,0,0,0,,You're going to limit the vehicle speed.\N你会限制车辆的最高速度。
+Dialogue: 0,0:51:21.24,0:51:25.59,Sub,,0,0,0,,As a result, I'm just like quick visual, I'm trying to crunch the the gear math.\N因此，我大致快速地估算一下齿轮的计算。
+Dialogue: 0,0:51:25.64,0:51:26.91,Sub,,0,0,0,,What Yeah, yeah.\N对，没错。
+Dialogue: 0,0:51:26.96,0:51:27.72,Sub,,0,0,0,,How many do you count?\N你数了多少个？
+Dialogue: 0,0:51:27.76,0:51:28.31,Sub,,0,0,0,,I can check you.\N我可以帮你核对一下。
+Dialogue: 0,0:51:28.36,0:51:31.99,Sub,,0,0,0,,How how much of a change on the gear ratio was there?\N齿轮比的变化有多大？
+Dialogue: 0,0:51:32.04,0:51:34.39,Sub,,0,0,0,,And how did you dial that in? to 11.\N你是怎么调到11的？
+Dialogue: 0,0:51:34.44,0:51:34.99,Sub,,0,0,0,,You went to 11?\N你调到11了？
+Dialogue: 0,0:51:35.04,0:51:39.51,Sub,,0,0,0,,Yes, that's actually Yeah, so I most of our cars are gear ratio of nine.\N是的，实际上，我们大多数车型的齿轮比是9。
+Dialogue: 0,0:51:39.56,0:51:39.96,Sub,,0,0,0,,Nine, yeah.\N9，对。
+Dialogue: 0,0:51:40.00,0:51:42.95,Sub,,0,0,0,,Um we didn't need that top speed.\N嗯，我们其实不需要那么高的最高速度。
+Dialogue: 0,0:51:43.00,0:51:45.46,Sub,,0,0,0,,We went to 11 for the gear ratio.\N我们把齿轮比调到了11。
+Dialogue: 0,0:51:45.50,0:51:48.99,Sub,,0,0,0,,The motor would actually be a little happier on efficiency a little bit further,\N电机在效率上稍微再高一点时会更舒适，
+Dialogue: 0,0:51:49.04,0:51:53.81,Sub,,0,0,0,,but as gear ratio is not free on efficiency, so we pick the best optimum.\N但由于齿轮比在效率上并非免费，所以我们选择了最佳的平衡点。
+Dialogue: 0,0:51:53.86,0:52:01.51,Sub,,0,0,0,,If we could make a 14:1 be as efficient as 11:1, we would probably want to go a little bit higher and it's something that we'll be working on.\N如果我们能让14:1的效率达到11:1的水平，\N我们可能就会选择更高的齿轮比，这正是我们接下来要努力的方向。
+Dialogue: 0,0:52:01.56,0:52:07.89,Sub,,0,0,0,,So So you're saying like theoretically, if you want a slightly higher gear ratio without adding losses without adding losses,\N所以你是说，理论上，如果你想要稍高的齿轮比，又不想增加损耗，也不增加损失，
+Dialogue: 0,0:52:07.94,0:52:10.55,Sub,,0,0,0,,you may actually be able to get more mileage?\N你实际上可能获得更远的续航里程？
+Dialogue: 0,0:52:10.60,0:52:11.07,Sub,,0,0,0,,Yes.\N是的。
+Dialogue: 0,0:52:11.12,0:52:11.45,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:52:11.48,0:52:11.78,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,0:52:11.69,0:52:12.09,Sub,,0,0,0,,Little bit.\N有一点点。
+Dialogue: 0,0:52:12.12,0:52:14.92,Sub,,0,0,0,,Yeah, so So But we're getting more mileage in multitude of ways.\N对，所以我们通过多种方式实现了续航的提升。
+Dialogue: 0,0:52:14.96,0:52:16.72,Sub,,0,0,0,,We design our own lubricants.\N我们自行设计润滑剂。
+Dialogue: 0,0:52:16.77,0:52:22.62,Sub,,0,0,0,,We're going to add We're dropping gear mesh losses by 7%later this year with\N今年晚些时候，我们通过更换润滑剂，将齿轮啮合损耗降低7%。
+Dialogue: 0,0:52:22.67,0:52:26.04,Sub,,0,0,0,,just a lubricant change that's very smooth for Not to mention the more windings.\N这种变化非常平顺，而且绕组也更多了。
+Dialogue: 0,0:52:26.09,0:52:27.15,Sub,,0,0,0,,You get a little bit there, too.\N你也能感受到一点改善。
+Dialogue: 0,0:52:27.20,0:52:27.99,Sub,,0,0,0,,Yep.\N没错。
+Dialogue: 0,0:52:28.04,0:52:39.35,Sub,,0,0,0,,So we have our um latest generation in-house design production line bar wound 15 turns five bars in a slot copper conductors Um on the stator,\N我们最新的自研生产线采用内嵌式绕线设计，每槽五根铜导体，共15匝，位于定子上。
+Dialogue: 0,0:52:39.40,0:52:44.19,Sub,,0,0,0,,you'll notice a little bit of a difference like the outside structure is quite different than what we typically have.\N你可能会注意到一些不同，比如外部结构与我们以往的设计有很大差异。
+Dialogue: 0,0:52:44.24,0:52:44.64,Sub,,0,0,0,,Yep.\N没错。
+Dialogue: 0,0:52:44.68,0:52:49.61,Sub,,0,0,0,,Um we went away from having the cooling channels in the electrical steel, which is a fairly expensive material,\N我们不再在电气钢中设置冷却通道，这种材料成本较高。
+Dialogue: 0,0:52:49.66,0:52:55.83,Sub,,0,0,0,,to having the cooling channels built in within the much cheaper material of the diecast aluminum.\N而是将冷却通道集成到成本低得多的压铸铝材料中。
+Dialogue: 0,0:52:55.88,0:52:59.24,Sub,,0,0,0,,So no So you can see you can see the package the passages here.\N所以你看，这个封装内部的通道结构清晰可见。
+Dialogue: 0,0:52:59.29,0:53:00.91,Sub,,0,0,0,,Still oil cooled.\N依然采用油冷。
+Dialogue: 0,0:53:00.96,0:53:04.20,Sub,,0,0,0,,Um but instead of having to do a bunch of If you've seen a Tesla motor,\N但不用像特斯拉电机那样，你见过特斯拉电机的吧，
+Dialogue: 0,0:53:04.24,0:53:12.14,Sub,,0,0,0,,you're familiar with all the holes on the on the periphery um with the lower thermal We don't have to get as hot um and we just hold it.\N你熟悉转子外围那些孔洞，由于热传导较低，我们不需要那么高的温度，只需固定住即可。
+Dialogue: 0,0:53:12.19,0:53:14.47,Sub,,0,0,0,,We still can hold it with um shrink fit.\N我们仍然可以用过盈配合来固定。
+Dialogue: 0,0:53:14.52,0:53:20.55,Sub,,0,0,0,,And no ethylene glycol you see all the extra structure on the outside to hold to hold it in place. it in place.\N而且不需要乙二醇，你看外部那些额外结构，都是用来固定它的。
+Dialogue: 0,0:53:20.60,0:53:24.12,Sub,,0,0,0,,And no ethylene glycol don't going down like center of the rotor or anything like that.\N而且不需要乙二醇，也不用像中心转子那样往下延伸。
+Dialogue: 0,0:53:24.17,0:53:26.27,Sub,,0,0,0,,It's all oil. none of that in Model S and Model S.\N全部用油冷却，Model S 和 Model S 都没有这些。
+Dialogue: 0,0:53:26.32,0:53:34.11,Sub,,0,0,0,,I mean, the only thing cooled on this is You have the inverter that's cooled with Yeah, so the The inverter is on the glycol circuit.\N我的意思是，这里唯一需要冷却的是逆变器，它通过乙二醇回路冷却。
+Dialogue: 0,0:53:34.16,0:53:34.46,Sub,,0,0,0,,Yep.\N没错。
+Dialogue: 0,0:53:34.40,0:53:37.67,Sub,,0,0,0,,And we have a heat exchanger as well on this side.\N我们这边还有个热交换器。
+Dialogue: 0,0:53:37.72,0:53:47.63,Sub,,0,0,0,,So when we did some fluid to fluid like oil oil And And you'll notice that we keep very common connectors uh throughout.\N所以我们做了液-液换热，油对油，你会发现我们一直使用非常通用的连接器。
+Dialogue: 0,0:53:47.68,0:53:50.08,Sub,,0,0,0,,Yeah, why why redo it when you can just carry it over?\N既然可以复用，为什么还要重新设计呢？
+Dialogue: 0,0:53:50.14,0:53:50.44,Sub,,0,0,0,,Now,\N现在，
+Dialogue: 0,0:53:50.41,0:53:54.28,Sub,,0,0,0,,are we still doing the same thing from a thermal management perspective where we're\N从热管理的角度来看，我们还在做同样的事情吗，就是把热量积聚起来，然后在低温条件下输送到电池？
+Dialogue: 0,0:53:54.33,0:53:58.87,Sub,,0,0,0,,we're stalling the heat up and then plumb that to battery in cold conditions?\N是的，我们会在需要时把热量储存起来，再输送到电池？
+Dialogue: 0,0:53:58.92,0:54:00.83,Sub,,0,0,0,,One Yes.\N是的。
+Dialogue: 0,0:54:00.88,0:54:05.19,Sub,,0,0,0,,Always like whenever we have heat, why put it out the radiator if the battery needs it?\N每当有热量时，为什么不直接通过散热器释放，而要留给电池使用呢？
+Dialogue: 0,0:54:05.24,0:54:06.99,Sub,,0,0,0,,Yeah, we're we're very greedy with all heat.\N是的，我们对所有热量都特别“贪心”。
+Dialogue: 0,0:54:07.04,0:54:09.99,Sub,,0,0,0,,Uh almost almost all the time it's usable.\N几乎在所有情况下，这些热量都是可用的。
+Dialogue: 0,0:54:10.04,0:54:16.04,Sub,,0,0,0,,So I I like to think of heat as like a like a lot of people think of it being like hotter or colder than the air temperature,\N所以我喜欢把热量看作这样：很多人认为热量是比空气温度更高或更低，\N但其实从绝对零度开始，每上升一度都可以被利用。
+Dialogue: 0,0:54:16.10,0:54:19.79,Sub,,0,0,0,,but it's like there's absolute zero and every degree above that can be used somewhere.\N是的，绝对零度以上，每一个温度点都可以被利用。
+Dialogue: 0,0:54:19.84,0:54:20.14,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,0:54:20.07,0:54:20.49,Sub,,0,0,0,,Yeah, yeah.\N是的，是的。
+Dialogue: 0,0:54:20.54,0:54:22.27,Sub,,0,0,0,,That's a good way to look at it.\N这是个很好的看待方式。
+Dialogue: 0,0:54:22.32,0:54:25.42,Sub,,0,0,0,,Um for simplification and because we didn't need it,\N为了简化问题，也因为我们不需要它，
+Dialogue: 0,0:54:25.48,0:54:30.54,Sub,,0,0,0,,we have a mechanical oil pump where we typically have uh electrical oil pump in all our other cars.\N我们使用的是机械式机油泵，而我们其他车型通常采用的是电动机油泵。
+Dialogue: 0,0:54:30.58,0:54:35.63,Sub,,0,0,0,,So, we're a little bit more dependent on rotation to turn the pump.\N因此，我们对旋转的依赖程度稍高一些。
+Dialogue: 0,0:54:35.68,0:54:38.98,Sub,,0,0,0,,Um but we crunched all the math and we're still the it was the ideal thing to do.\N但经过全面计算，我们仍然认为这是最理想的选择。
+Dialogue: 0,0:54:39.03,0:54:45.31,Sub,,0,0,0,,It removes a whole bunch of electrical circuit, pump firmware, uh and the mechanical pump is just such a cheap,\N它省去了大量电气电路、泵的固件，而机械泵本身成本极低，
+Dialogue: 0,0:54:45.36,0:54:49.07,Sub,,0,0,0,,small, like very cost-efficient object compared to the electric pump.\N体积小巧，相比电动泵具有极高的成本效益。
+Dialogue: 0,0:54:49.12,0:54:50.32,Sub,,0,0,0,,So, I've got to I've got to ask.\N我必须问一下。
+Dialogue: 0,0:54:50.38,0:54:57.84,Sub,,0,0,0,,When we did some back of the napkin math, when we looked at the CD, mass of the vehicle, and then we looked at the kilowatt hours in the range,\N当我们粗略计算时，对比了车辆的整备质量以及续航的千瓦时数，
+Dialogue: 0,0:54:57.89,0:55:01.17,Sub,,0,0,0,,if we dropped a Chevy Bolt powertrain I'm not picking on Chevy,\N如果我们换上一辆雪佛兰Bolt的动力总成，我并不是针对雪佛兰，
+Dialogue: 0,0:55:01.22,0:55:09.28,Sub,,0,0,0,,but if we grab that motor and then that gear ratio and we plugged it into the vehicle we'd get 30 or 40 mi less range than this.\N但如果我们采用那台电机和传动比，并将其应用到这款车上，续航里程会减少30到40英里。
+Dialogue: 0,0:55:09.33,0:55:11.43,Sub,,0,0,0,,This is pretty significant.\N这影响相当显著。
+Dialogue: 0,0:55:11.48,0:55:18.01,Sub,,0,0,0,,So, for this powertrain because of it being that efficient, is there any intent to go and say,"Hey, you know what?\N因此，鉴于这套动力总成的高效性，是否有计划未来将它应用到Model Y的前电机上？
+Dialogue: 0,0:55:18.06,0:55:22.15,Sub,,0,0,0,,The front motor on the Model Y, we're going to plug this in eventually because of that."\N毕竟，考虑到效率，我们最终会说：“嘿，你知道吗？Model Y的前电机，我们打算用这个。”
+Dialogue: 0,0:55:22.20,0:55:23.64,Sub,,0,0,0,,mean, I'll take the high-level answer in this.\N我的意思是，我会给出一个高层次的回答。
+Dialogue: 0,0:55:23.69,0:55:28.93,Sub,,0,0,0,,We always think about everything we're doing about like is it making not just the product better, but the portfolio better?\N我们总是会思考我们所做的每一件事，是否不仅让产品变得更好，也让整个产品组合变得更好。
+Dialogue: 0,0:55:28.98,0:55:29.29,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,0:55:29.32,0:55:31.33,Sub,,0,0,0,,And like, you know, our drive units,\N就像我们的驱动单元，
+Dialogue: 0,0:55:31.38,0:55:37.57,Sub,,0,0,0,,like many of them are are quite modular in their application and we share rotors and stators across different platforms,\N很多都具有高度的模块化设计，我们在不同平台之间共享转子和定子，
+Dialogue: 0,0:55:37.62,0:55:40.73,Sub,,0,0,0,,but for sure when the team did like the the 5D you hear,\N但毫无疑问，当团队开发5D时，
+Dialogue: 0,0:55:40.78,0:55:43.31,Sub,,0,0,0,,it was a thought of of like,"Okay, for autonomous vehicles,\N我们的想法是：“好吧，针对自动驾驶车辆，
+Dialogue: 0,0:55:43.36,0:55:49.91,Sub,,0,0,0,,let's make the best thing we can."And then as we move more and more towards autonomy, that'll probably evolve into to other vehicles.\N我们就做出能做到的最好产品。”随着我们越来越向自动驾驶迈进，这个产品很可能会演变为适用于其他车型。
+Dialogue: 0,0:55:49.96,0:55:50.47,Sub,,0,0,0,,Got it.\N明白了。
+Dialogue: 0,0:55:50.52,0:55:54.51,Sub,,0,0,0,,The electrical improvements at the inverter level?\N逆变器层面的电气改进？
+Dialogue: 0,0:55:54.56,0:55:56.07,Sub,,0,0,0,,As you can see, we kept it common.\N如你所见，我们保持了通用性。
+Dialogue: 0,0:55:56.12,0:56:02.99,Sub,,0,0,0,,Another reason is that we can Is this You could just put this PCB and power stage will ship in Fremont this year.\N另一个原因是，你只需更换这块PCB，电源模块今年就能从弗里蒙特发货。
+Dialogue: 0,0:56:03.04,0:56:07.23,Sub,,0,0,0,,Yeah, so you're saying the overall footprint, the geometry, even if it's different population,\N是的，你是说整体占地面积、几何结构，即使人口分布不同，
+Dialogue: 0,0:56:07.28,0:56:12.19,Sub,,0,0,0,,you can still maintain that housing and Well, I think it's the power stage, the PCB and everything.\N你仍然可以保持住房布局，嗯，我认为是电源模块、PCB 以及所有其他部分。
+Dialogue: 0,0:56:12.24,0:56:15.43,Sub,,0,0,0,,You can You can just swap this into a Model Y drive unit.\N你可以直接把这个换到 Model Y 的驱动单元里。
+Dialogue: 0,0:56:15.48,0:56:16.43,Sub,,0,0,0,,Oh, the entire thing.\N哦，整个系统。
+Dialogue: 0,0:56:16.48,0:56:16.78,Sub,,0,0,0,,Yep.\N没错。
+Dialogue: 0,0:56:16.67,0:56:18.28,Sub,,0,0,0,,Yeah, we kept we kept the entire interface.\N是的，我们保留了整个接口。
+Dialogue: 0,0:56:18.34,0:56:21.11,Sub,,0,0,0,,I mean, it works, it's robust, it performed really well in the field.\N我的意思是，它能正常工作，很可靠，在实际应用中表现非常出色。
+Dialogue: 0,0:56:21.16,0:56:24.55,Sub,,0,0,0,,So, are we Are we going to put it in a Model Y or not?\N那么，我们到底要不要把它用在 Model Y 上？
+Dialogue: 0,0:56:24.60,0:56:25.75,Sub,,0,0,0,,I plead I plead the fifth.\N我申请行使第五修正案权利。
+Dialogue: 0,0:56:25.80,0:56:27.71,Sub,,0,0,0,,Okay.\N好吧。
+Dialogue: 0,0:56:27.76,0:56:32.14,Sub,,0,0,0,,We always We're always opportunistic with how we how we take an advancement from one\N我们总是抓住机会，把一个项目中的技术进步，
+Dialogue: 0,0:56:32.19,0:56:36.04,Sub,,0,0,0,,project and try to expand it to others or build upon it for the next project.\N应用到其他项目中，或为下一个项目打下基础。
+Dialogue: 0,0:56:36.09,0:56:40.00,Sub,,0,0,0,,Like, for instance, this this is the same unit that goes in the Semi, believe it or not.\N例如，这个单元和用于半自动设备的完全一样，你敢信吗。
+Dialogue: 0,0:56:40.05,0:56:47.83,Sub,,0,0,0,,So, our smallest vehicle and our largest vehicle are using not only the same technology, but in a lot of cases exactly the same assemblies.\N我们的最小车型和最大车型不仅使用相同技术，很多情况下还完全相同的组件。
+Dialogue: 0,0:56:47.88,0:56:48.47,Sub,,0,0,0,,Wow.\N哇。
+Dialogue: 0,0:56:48.52,0:56:54.17,Sub,,0,0,0,,Anyway, uh we wanted to stop here um and check out our plastic shop.\N无论如何，我们想在这里停一下，去看看我们的塑料车间。
+Dialogue: 0,0:56:54.22,0:56:56.03,Sub,,0,0,0,,Um you have Jud Snow over here.\N你这边有朱德·斯诺。
+Dialogue: 0,0:56:56.08,0:57:02.30,Sub,,0,0,0,,She's our uh head of plastics, uh small sub-assemblies, windshields, seats, and a whole bunch of other manufacturing components.\N她是我们塑料部门的负责人，负责小型子组件、挡风玻璃、座椅以及大量其他制造部件。
+Dialogue: 0,0:57:02.35,0:57:03.75,Sub,,0,0,0,,She's been here a long time.\N她在这里待了很长时间。
+Dialogue: 0,0:57:03.80,0:57:04.10,Sub,,0,0,0,,Yeah.\N是啊。
+Dialogue: 0,0:57:04.12,0:57:05.71,Sub,,0,0,0,,Um but we're going to talk plastics.\N嗯，我们接下来聊聊塑料。
+Dialogue: 0,0:57:05.76,0:57:07.82,Sub,,0,0,0,,We talked earlier about how we got rid of the paint shop.\N我们之前提到过，我们已经取消了喷漆车间。
+Dialogue: 0,0:57:07.87,0:57:10.11,Sub,,0,0,0,,Um this is our paint shop.\N这就是我们的喷漆车间。
+Dialogue: 0,0:57:10.16,0:57:10.79,Sub,,0,0,0,,Wow.\N哇。
+Dialogue: 0,0:57:10.84,0:57:11.39,Sub,,0,0,0,,I think yeah.\N我觉得是的。
+Dialogue: 0,0:57:11.44,0:57:14.43,Sub,,0,0,0,,So, when First of all, it's nice to meet you.\N首先，很高兴见到你。
+Dialogue: 0,0:57:14.48,0:57:16.06,Sub,,0,0,0,,I'm very excited to talk to you.\N我非常期待能和你交谈。
+Dialogue: 0,0:57:16.11,0:57:22.44,Sub,,0,0,0,,So, when we look at the injection molded panels, like talk us through like when that conversation started, why is that?\N那么，当我们看注塑成型的面板时，能跟我们讲讲这个讨论是从什么时候开始的吗？为什么是这样？
+Dialogue: 0,0:57:22.49,0:57:26.83,Sub,,0,0,0,,Cuz there's other vehicles, like you look at the BMW X5, injection molded front fender.\N毕竟其他车型也有类似情况，比如你看宝马 X5，前翼子板就是注塑成型的。
+Dialogue: 0,0:57:26.88,0:57:28.96,Sub,,0,0,0,,Saturn, way back in the day, right?\N早在土星汽车时代，对吧？
+Dialogue: 0,0:57:29.02,0:57:30.31,Sub,,0,0,0,,They had plastic panels.\N他们就用过塑料面板。
+Dialogue: 0,0:57:30.36,0:57:32.12,Sub,,0,0,0,,What was the rationale behind this?\N当时的考虑是什么？
+Dialogue: 0,0:57:32.18,0:57:34.41,Sub,,0,0,0,,Obviously, paint booth is a big thing, but Yes.\N显然，喷漆车间是个大问题，但没错。
+Dialogue: 0,0:57:34.46,0:57:41.03,Sub,,0,0,0,,So the deletion of the paint was a first motivator, but then you've already discussed the unboxed architecture.\N去除喷漆工序是最初的动因，但你之前已经谈到了 Unboxed 架构。
+Dialogue: 0,0:57:41.08,0:57:45.11,Sub,,0,0,0,,So when we were firstly talking unboxed and how do we get the panels to GA,\N所以当我们最初讨论 Unboxed 架构时，如何让这些面板实现量产？
+Dialogue: 0,0:57:45.16,0:57:52.34,Sub,,0,0,0,,the biggest challenge if we had a paint shop was we had to box it back in together to ensure it goes through paint and comes out.\N如果我们保留喷漆车间，最大的挑战在于，必须把它们重新装回箱体，才能确保通过喷漆流程并顺利出来。
+Dialogue: 0,0:57:52.38,0:57:57.41,Sub,,0,0,0,,So then we said what else could we do to eliminate those processes and make the panel in\N于是我们想，还有什么方法可以消除这些工序，实现一次成型制作面板？
+Dialogue: 0,0:57:57.46,0:58:03.21,Sub,,0,0,0,,one shot and then we started discussing multiple options of how can we get color on the panel.\N然后我们开始讨论多种方案，探讨如何在面板上实现彩色效果。
+Dialogue: 0,0:58:03.26,0:58:07.39,Sub,,0,0,0,,And that's how Yeah, we actually this isn't the only idea we had.\N也就是说，是的，这并不是我们唯一的想法。
+Dialogue: 0,0:58:07.44,0:58:10.45,Sub,,0,0,0,,We you know we talked a lot about a lot of the work we were doing.\N你知道，我们讨论了很多我们正在做的工作。
+Dialogue: 0,0:58:10.50,0:58:16.07,Sub,,0,0,0,,We had like in mold lamination which we actually use on semi now where we put like a film\N我们有模内贴膜工艺，现在我们已经在半成品上使用了这种技术，就是把一层薄膜，
+Dialogue: 0,0:58:16.12,0:58:20.83,Sub,,0,0,0,,like vinyl film with PUR on it and then put it inside the mold and mold into the film.\N比如聚氨酯涂层的乙烯基薄膜，放进模具里，然后在模具中将薄膜成型。
+Dialogue: 0,0:58:20.88,0:58:21.72,Sub,,0,0,0,,Like IML IML.\N就像模内贴膜，IML，IML。
+Dialogue: 0,0:58:21.77,0:58:22.87,Sub,,0,0,0,,Yeah, yeah, okay.\N对，对，好的。
+Dialogue: 0,0:58:22.92,0:58:30.09,Sub,,0,0,0,,And then we had we also had film over panel where we actually put the paint onto a stamped panel and stamped it.\N另外我们还有膜覆面板方案，就是先把油漆涂在冲压好的面板上，再进行冲压。
+Dialogue: 0,0:58:30.14,0:58:37.17,Sub,,0,0,0,,So like a film on like adhesive with you know just just pressure and then when we stamped it and then we would hem it over the edge.\N就像一层带胶的膜，靠压力贴合，然后冲压成型，再把边缘折边包覆。
+Dialogue: 0,0:58:37.22,0:58:40.63,Sub,,0,0,0,,And so we actually got pretty far on all of those. those technologies, yes.\N所以我们实际上在所有这些技术上都取得了相当大的进展，是的。
+Dialogue: 0,0:58:40.68,0:58:43.11,Sub,,0,0,0,,Um and I think it's never a competition.\N嗯，我认为这从来不是一场竞争。
+Dialogue: 0,0:58:43.16,0:58:48.03,Sub,,0,0,0,,No, I don't think and I think we are I can we can probably say we've done both the technologies now.\N不，我认为我们现在已经完成了这两项技术。
+Dialogue: 0,0:58:48.08,0:58:57.96,Sub,,0,0,0,,We have IML and semi, and but then when it came to Cybercabin, the need to do it fast but at the same time cost effective,\N我们有IML和半透明工艺，但到了Cybercabin阶段，需要快速推进同时保持成本效益，
+Dialogue: 0,0:58:58.00,0:59:02.88,Sub,,0,0,0,,this was what was the best way to approach for all the multiple panels,\N这就是应对多个面板的最佳方式，
+Dialogue: 0,0:59:02.93,0:59:12.31,Sub,,0,0,0,,different geometries because that, because it is just we still had to injection mold and this is just adding another layer within the machine.\N因为不同的几何形状，毕竟我们仍需注塑成型，这相当于在机器中增加了一层。
+Dialogue: 0,0:59:12.36,0:59:13.91,Sub,,0,0,0,,So we get no orange peel.\N所以我们不会出现橘皮效应。
+Dialogue: 0,0:59:13.96,0:59:16.95,Sub,,0,0,0,,You know, we don't get like the defects inside of it.\N你知道，内部不会出现类似缺陷。
+Dialogue: 0,0:59:17.00,0:59:21.56,Sub,,0,0,0,,I mean we still have issues with dirt and dust, but that means it's a cleaner panel to begin with.\N我们仍会遇到灰尘和污垢问题，但这意味着面板本身更干净。
+Dialogue: 0,0:59:21.62,0:59:25.10,Sub,,0,0,0,,And if you do scratch it, you can repair it just like you would normal paint shop.\N如果刮花了，也可以像普通喷漆车间那样修复。
+Dialogue: 0,0:59:25.15,0:59:28.71,Sub,,0,0,0,,And then the plastic underneath is similar to any fascia you've ever used.\N然后下面的塑料和你用过的任何饰板都类似。
+Dialogue: 0,0:59:28.76,0:59:29.64,Sub,,0,0,0,,It's like a TPO.\N就像TPO一样。
+Dialogue: 0,0:59:29.69,0:59:30.30,Sub,,0,0,0,,Yeah, yeah.\N对，没错。
+Dialogue: 0,0:59:30.35,0:59:30.65,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:59:30.68,0:59:33.18,Sub,,0,0,0,,They're different by panel just from like the upper ones.\N它们之间的差异仅在于面板，比如上部的那些。
+Dialogue: 0,0:59:33.22,0:59:37.83,Sub,,0,0,0,,The roof has slightly different requirements, but yeah.\N屋顶的要求略有不同，但没错。
+Dialogue: 0,0:59:37.88,0:59:42.07,Sub,,0,0,0,,So So, you're taking So, you're taking a sheet like a PUR sheet.\N所以，你拿的是一张像PUR这样的板材。
+Dialogue: 0,0:59:42.12,0:59:44.06,Sub,,0,0,0,,It's injected.\N它是被注入的。
+Dialogue: 0,0:59:44.11,0:59:46.79,Sub,,0,0,0,,So, Oh, it's not a sheet at all. a sheet at all.\N所以，根本就不是板材。根本就不是。
+Dialogue: 0,0:59:46.84,0:59:53.59,Sub,,0,0,0,,It's isopoly in color as separate pieces that are mixed at the mixing head at the machine.\N它是不同颜色的异氰酸酯，作为独立部件进入，在机器的混合头处混合。
+Dialogue: 0,0:59:53.64,0:59:58.43,Sub,,0,0,0,,So, they're coming in the hopper, getting heated, mixed, and injected at the machine.\N所以，它们从料斗进入，被加热、混合，然后在机器中注入。
+Dialogue: 0,0:59:58.48,1:00:00.83,Sub,,0,0,0,,at that when we are injecting is when we mix it.\N正是在我们注入的时候，才进行混合。
+Dialogue: 0,1:00:00.88,1:00:06.07,Sub,,0,0,0,,That's why it's a reaction injection molding because the reaction happens just before the injection.\N这就是为什么叫反应注射成型，因为反应发生在注入之前。
+Dialogue: 0,1:00:06.12,1:00:07.09,Sub,,0,0,0,,That's what RIM means.\N这就是RIM的含义。
+Dialogue: 0,1:00:07.14,1:00:09.27,Sub,,0,0,0,,Reaction Wait, they Wait, they did not use an acronym.\N反应，等等，他们并没有使用缩写词。
+Dialogue: 0,1:00:09.32,1:00:11.38,Sub,,0,0,0,,Yeah, you can nail it.\N是的，你可以搞定。
+Dialogue: 0,1:00:11.43,1:00:12.75,Sub,,0,0,0,,The first one.\N第一个。
+Dialogue: 0,1:00:12.80,1:00:18.26,Sub,,0,0,0,,So, from a from a post-processing perspective, like how how much Oh, it's right here.\N从后期处理的角度来看，比如这里，有多少……哦，就在这里。
+Dialogue: 0,1:00:18.31,1:00:18.61,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:00:18.60,1:00:20.91,Sub,,0,0,0,,So, all of this is trimmed out.\N所有这些都已经被修剪掉了。
+Dialogue: 0,1:00:20.96,1:00:21.61,Sub,,0,0,0,,Wait, yeah.\N等等，对。
+Dialogue: 0,1:00:21.66,1:00:22.35,Sub,,0,0,0,,You can wash it.\N你可以清洗它。
+Dialogue: 0,1:00:22.40,1:00:23.83,Sub,,0,0,0,,But, it's all robotically done.\N但这一切都是机器人自动完成的。
+Dialogue: 0,1:00:23.88,1:00:24.67,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,1:00:24.72,1:00:28.14,Sub,,0,0,0,,But, why were we not able to do it without the trimming?\N但为什么我们不修剪就无法做到呢？
+Dialogue: 0,1:00:28.19,1:00:33.79,Sub,,0,0,0,,Why did we have to get to a So, you needed an because all our panels are A class A surface.\N为什么我们必须做到这一点？因为你需要，因为我们的所有面板都是A级表面。
+Dialogue: 0,1:00:33.84,1:00:40.15,Sub,,0,0,0,,If I did a direct drop of injection or this, that would You'd have a lot of read through.\N如果我直接注塑或这样处理，就会出现大量缺陷。
+Dialogue: 0,1:00:40.20,1:00:43.03,Sub,,0,0,0,,through sink marks, read through, flow lines, all of that.\N比如凹陷痕迹、穿透、流痕，所有这些问题。
+Dialogue: 0,1:00:43.08,1:00:49.75,Sub,,0,0,0,,So, we needed to keep the A surface clean, and the only way to do it is by creating the additional flow.\N所以，我们需要保持A面清洁，唯一的方法就是制造额外的气流。
+Dialogue: 0,1:00:49.80,1:00:53.03,Sub,,0,0,0,,And even for us when we inject, Right, right, right.\N就连我们注入时也是这样，对，对，对。
+Dialogue: 0,1:00:53.08,1:01:00.35,Sub,,0,0,0,,And those are the overflows that we have to send the PUR out, and all the air pushes out for us to get this clean surface.\N这些溢流就是我们必须将净化空气排出的地方，所有空气都被推出去，才能实现表面清洁。
+Dialogue: 0,1:01:00.40,1:01:03.61,Sub,,0,0,0,,So, it's read through, and specifically because it's A surface,\N所以，它是被读取的，特别是因为这是A面，
+Dialogue: 0,1:01:03.66,1:01:07.92,Sub,,0,0,0,,that that really drove the need to route out cuz you're bringing all those drops outboard.\N这才真正推动了必须将气流导出的需求，因为你得把所有液滴都引到外侧。
+Dialogue: 0,1:01:07.97,1:01:08.74,Sub,,0,0,0,,Yeah, got it.\N好的，明白了。
+Dialogue: 0,1:01:08.79,1:01:09.43,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,1:01:09.48,1:01:11.86,Sub,,0,0,0,,So, we're here on the final assembly line.\N我们现在在最终装配线上。
+Dialogue: 0,1:01:11.91,1:01:15.31,Sub,,0,0,0,,So, this is where all those unboxed modules come together.\N这里是所有 Unboxed 模块汇聚在一起的地方。
+Dialogue: 0,1:01:15.36,1:01:19.55,Sub,,0,0,0,,And Lars, you were saying just before we jumped on camera, these things are actually moving backwards.\N之前你提到，我们还没开摄像头时，这些部件实际上是在倒着移动的。
+Dialogue: 0,1:01:19.60,1:01:21.55,Sub,,0,0,0,,Yeah, so upstairs, they go backwards this way.\N对，上面的部件是朝这个方向倒着走的。
+Dialogue: 0,1:01:21.60,1:01:24.94,Sub,,0,0,0,,We drop them over here and then we pull the line moving forward this way.\N我们从这里把它们放下来，然后让生产线朝这个方向向前移动。
+Dialogue: 0,1:01:24.99,1:01:27.68,Sub,,0,0,0,,You know, Hector upstairs, he said there's only about 25 stations.\N你知道，楼上那个Hector说，总共只有大约25个站点。
+Dialogue: 0,1:01:27.73,1:01:30.35,Sub,,0,0,0,,We literally can see them all in our view here.\N我们实际上能在这儿的视图里看到所有站点。
+Dialogue: 0,1:01:30.40,1:01:37.35,Sub,,0,0,0,,Um and they really it is just like kind of the final closing up and and and buttoning up the vehicle.\N嗯，这确实就像是最后的收尾和车辆的最终装配。
+Dialogue: 0,1:01:37.40,1:01:40.58,Sub,,0,0,0,,So, when we when this is like a unique view, right?\N所以，当我们看到这种独特的视角时，对吧？
+Dialogue: 0,1:01:40.63,1:01:42.99,Sub,,0,0,0,,So, you can start seeing all these modules pull together.\N你就能开始看到所有这些模块逐渐组合在一起。
+Dialogue: 0,1:01:43.04,1:01:49.47,Sub,,0,0,0,,When we're in a different area, we talked about the fact that actually from a architecture and a build-up perspective,\N当我们处于不同区域时，我们谈到从架构和构建角度来看，
+Dialogue: 0,1:01:49.52,1:01:51.27,Sub,,0,0,0,,it shares a lot with the Cybertruck.\N它和 Cybertruck 有很多相似之处。
+Dialogue: 0,1:01:51.32,1:01:51.62,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,1:01:51.44,1:01:59.19,Sub,,0,0,0,,I think these these stampings supporting the fender, the hood, um all those touchdowns interfacing with the castings are an example of that.\N我认为这些用于支撑翼子板和引擎盖的冲压件，以及所有与铸件对接的接触点，就是很好的例子。
+Dialogue: 0,1:01:59.24,1:02:01.75,Sub,,0,0,0,,Um it's good for repairability, right?\N这对可维修性很有帮助，对吧？
+Dialogue: 0,1:02:01.80,1:02:05.84,Sub,,0,0,0,,It's it's a good way to interface with the castings, but then we started talking about the door.\N这是一种很好的与铸件对接的方式，但接着我们开始讨论车门。
+Dialogue: 0,1:02:05.89,1:02:10.80,Sub,,0,0,0,,And I asked, "Well, why did we go with the gullwings?"Cuz they can be expensive to service.\N我就问：“那为什么我们选择了鸥翼门？毕竟它们维修起来可能很贵。”
+Dialogue: 0,1:02:10.85,1:02:14.67,Sub,,0,0,0,,It's got it, you know, drives this big casting for the pivot point.\N它确实做到了，你知道，为枢轴点驱动了这个大型铸件。
+Dialogue: 0,1:02:14.72,1:02:19.90,Sub,,0,0,0,,And you guys provided what I thought was the best answer, which was there was no technical reason.\N而你们提供的答案，我认为是最好的，那就是没有技术上的原因。
+Dialogue: 0,1:02:19.95,1:02:21.55,Sub,,0,0,0,,It was just because it's cool.\N只是因为它很酷。
+Dialogue: 0,1:02:21.60,1:02:21.90,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,1:02:21.92,1:02:25.96,Sub,,0,0,0,,Which if we can't do that in our jobs, then our jobs get a little dull.\N如果我们在工作中无法做到这一点，那工作就会变得有点乏味。
+Dialogue: 0,1:02:26.01,1:02:27.41,Sub,,0,0,0,,So, um that's a great answer.\N所以，嗯，这是一个很棒的答案。
+Dialogue: 0,1:02:27.46,1:02:28.47,Sub,,0,0,0,,I I appreciate that.\N我很欣赏这一点。
+Dialogue: 0,1:02:28.52,1:02:33.83,Sub,,0,0,0,,And I And I will say as well, the like the door opening is ergonomically better.\N而且我也想说，车门开启方式在人体工学上也更优。
+Dialogue: 0,1:02:33.88,1:02:34.18,Sub,,0,0,0,,Yes.\N没错。
+Dialogue: 0,1:02:34.12,1:02:41.00,Sub,,0,0,0,,Like you can get in a somebody who's in a wheelchair and they can get into the car because the seat is the same height as a standard wheelchair.\N比如说，坐轮椅的人也能轻松进入车内，因为座椅高度与标准轮椅一致。
+Dialogue: 0,1:02:41.06,1:02:42.34,Sub,,0,0,0,,The even somebody getting out,\N甚至在下车时，
+Dialogue: 0,1:02:42.39,1:02:46.45,Sub,,0,0,0,,the fact that the door pulls the underside out further first means you have a lot\N车门先向外拉出底部，这意味着你有更大的空间
+Dialogue: 0,1:02:46.50,1:02:49.51,Sub,,0,0,0,,more room to sweep your feet out of the car if you're in a tight space.\N如果你在狭小空间内，有更多空间可以把脚从车里移出来。
+Dialogue: 0,1:02:49.56,1:02:52.31,Sub,,0,0,0,,The the step in ingress egress is lower.\N进出车门的台阶高度更低。
+Dialogue: 0,1:02:52.36,1:02:53.96,Sub,,0,0,0,,And there's a little bit of rain protection.\N车内还有一点防雨保护。
+Dialogue: 0,1:02:54.01,1:02:59.71,Sub,,0,0,0,,So, there's like some benefits and maybe we talked ourselves into those, but the fundamental reason was cuz it's cool.\N所以，有一些好处，也许我们自己说服了自己，但根本原因是因为它很酷。
+Dialogue: 0,1:02:59.76,1:03:00.99,Sub,,0,0,0,,Well, sometimes you got to take the win.\N有时候你得接受这个胜利。
+Dialogue: 0,1:03:01.04,1:03:01.70,Sub,,0,0,0,,That's okay.\N没问题。
+Dialogue: 0,1:03:01.76,1:03:02.31,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,1:03:02.36,1:03:07.11,Sub,,0,0,0,,walk down here and then I want to show you just a couple of like the last the first time the car gets put on its wheels.\N走到这里，我想给你看看汽车第一次装上车轮时的几个细节。
+Dialogue: 0,1:03:07.16,1:03:12.24,Sub,,0,0,0,,All\N全部
+Dialogue: 0,1:03:12.29,1:03:21.23,Sub,,0,0,0,,right.\N好的。
+Dialogue: 0,1:03:21.28,1:03:29.83,Sub,,0,0,0,,So Jordan, in normal assembly line um the wheels are put on somewhere in the middle of the process and then you roll it out on the final line.\N乔丹，正常装配线上，车轮是在流程中间某个位置安装的，然后推到最终工位。
+Dialogue: 0,1:03:29.88,1:03:32.43,Sub,,0,0,0,,Um this is our final station here.\N这里就是我们的最终工位。
+Dialogue: 0,1:03:32.48,1:03:35.15,Sub,,0,0,0,,Um we call that robot Hulk Hogan.\N嗯，我们管它叫机器人浩克·霍根。
+Dialogue: 0,1:03:35.20,1:03:38.86,Sub,,0,0,0,,Uh it got installed when the you know, the legend passed away.\N嗯，是在那位传奇人物去世后安装的。
+Dialogue: 0,1:03:38.91,1:03:47.14,Sub,,0,0,0,,So we wrapped it in gold and red and gave it a little Hulkamania look, but we installed the wheels on the second to last station in the vehicle.\N所以我们把它包成了金色和红色，加了点浩克狂热的风格，但车轮是装在车辆倒数第二站的。
+Dialogue: 0,1:03:47.19,1:03:51.87,Sub,,0,0,0,,So the first time a Cybercab is ever put down on its wheels is when it rolls off the line.\N所以，Cybercab第一次真正落地，就是从生产线上开下来的时候。
+Dialogue: 0,1:03:51.92,1:03:58.38,Sub,,0,0,0,,We just wrapped up an incredible tour of the facility taking a look at all the not just the I would say the engineering side of it,\N我们刚刚结束了一场精彩的工厂巡游，全面了解了这里的工程与制造工程。
+Dialogue: 0,1:03:58.43,1:04:03.27,Sub,,0,0,0,,but the manufacturing engineering side of it and how those two are really well blended together.\N以及这两者是如何真正完美融合在一起的。
+Dialogue: 0,1:04:03.32,1:04:08.27,Sub,,0,0,0,,When when I think about the Cybercab now, I'm obviously going to think about it a bit differently, which is exciting.\N现在我想到Cybercab时，显然会以一种全新的方式去思考，这非常令人兴奋。
+Dialogue: 0,1:04:08.32,1:04:11.68,Sub,,0,0,0,,But when we look at the economics of of the Cybercab,\N但当我们审视Cybercab的经济性时，
+Dialogue: 0,1:04:11.73,1:04:17.53,Sub,,0,0,0,,it's obviously the first vehicle coming out of Tesla that is not a consumer vehicle that's going to sit in their garage,\N它显然是特斯拉首款不是面向消费者、不会停在车库里的车型，
+Dialogue: 0,1:04:17.58,1:04:19.55,Sub,,0,0,0,,totally different application.\N应用场景完全不同。
+Dialogue: 0,1:04:19.60,1:04:28.07,Sub,,0,0,0,,How do you see the the landscape of the sort of Cybercab ride-hail environment going because we're obviously capacitized?\N你如何看待这种Cybercab共享出行环境的发展前景？毕竟我们已经具备了足够的产能。
+Dialogue: 0,1:04:28.12,1:04:30.70,Sub,,0,0,0,,You know, you're capable of making way more than we are.\N你知道，你有能力制造的数量远超我们。
+Dialogue: 0,1:04:30.75,1:04:32.67,Sub,,0,0,0,,Where do you see those volumes going?\N你认为这些规模会走向何方？
+Dialogue: 0,1:04:32.72,1:04:34.63,Sub,,0,0,0,,I mean I maybe I'll start, you finish.\N我的意思是我先开始，你来收尾。
+Dialogue: 0,1:04:34.68,1:04:45.55,Sub,,0,0,0,,Um I think when we thought about like where we are in the journey of transportation for the last like since human existence Right.\N嗯，我觉得当我们思考交通运输旅程的现状时，从人类存在以来的历程来看。
+Dialogue: 0,1:04:45.60,1:04:45.90,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,1:04:45.82,1:04:48.07,Sub,,0,0,0,,There's been a few major shifts over time.\N一段时间以来，已经发生了几次重大转变。
+Dialogue: 0,1:04:48.12,1:04:53.46,Sub,,0,0,0,,You know, Elon will often call out like horse and buggy to car and how that overlap happened,\N你知道，埃隆经常提到从马车到汽车的转变，以及这种过渡是如何发生的。
+Dialogue: 0,1:04:53.51,1:04:59.75,Sub,,0,0,0,,you know, in the early 1900s and like you know, some people still have horses, but not very many.\N比如在20世纪初，有些人仍然养马，但数量已经很少了。
+Dialogue: 0,1:04:59.80,1:05:00.31,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,1:05:00.36,1:05:06.19,Sub,,0,0,0,,And I think we're in a maybe kind of a similar time shift where we're going to go from you know,\N我觉得我们现在可能正处于一种类似的转变时期，我们将从有驾驶员的车辆转向无人驾驶车辆。
+Dialogue: 0,1:05:06.24,1:05:13.07,Sub,,0,0,0,,drivered vehicles to driverless vehicles and that shift will really like change a lot of things.\N这一转变将真正改变很多事情。
+Dialogue: 0,1:05:13.12,1:05:24.07,Sub,,0,0,0,,It will change how people buy cars, how people get from point A to point B, um what even car culture is, you know, and I I grew up with that.\N它将改变人们购买汽车的方式，改变人们从A点到B点的出行方式，\N甚至改变汽车文化的本质，你知道的，我就是在这样的文化中长大的。
+Dialogue: 0,1:05:24.12,1:05:25.57,Sub,,0,0,0,,Like I'm a big car culture guy.\N就像我是个汽车文化的重度爱好者。
+Dialogue: 0,1:05:25.62,1:05:26.90,Sub,,0,0,0,,Like I I love cars.\N我喜欢汽车。
+Dialogue: 0,1:05:26.95,1:05:28.22,Sub,,0,0,0,,I collect cars.\N我收藏汽车。
+Dialogue: 0,1:05:28.27,1:05:33.96,Sub,,0,0,0,,Um I work on cars and like as a hobby, you know, and maybe maybe that's how it ends up for the most part,\N我工作上接触汽车，平时也当爱好，大概就是这样，大部分情况都是如此。
+Dialogue: 0,1:05:34.01,1:05:36.79,Sub,,0,0,0,,much like, you know, people who ride horses as a hobby.\N就像那些把骑马当作爱好的人一样。
+Dialogue: 0,1:05:36.84,1:05:43.61,Sub,,0,0,0,,But I think the first step is getting people comfortable with it, and that's why we rolled out FSD in all of our purchase vehicles.\N但我觉得第一步是让人对它感到自在，所以我们才在所有购买的车辆上推出了FSD。
+Dialogue: 0,1:05:43.66,1:05:51.27,Sub,,0,0,0,,Like if you have it in a car that you own, and like, you know, my kids as an example, like I make it like a personal goal that they never drive a car.\N比如说，如果你拥有一辆装有FSD的车，就像我孩子那样，\N我甚至把它当作一个个人目标，就是让他们永远不必开车。
+Dialogue: 0,1:05:51.32,1:05:54.31,Sub,,0,0,0,,Because I remember how bad of a driver I was when I was 16.\N因为我记得我16岁时开车有多糟糕。
+Dialogue: 0,1:05:54.36,1:05:54.69,Sub,,0,0,0,,Sure.\N当然。
+Dialogue: 0,1:05:54.72,1:06:02.43,Sub,,0,0,0,,You know, and I think that the safety aspect that provides is what will influence the transition, you know, from what we have now to where we go.\N我认为它带来的安全性能，才是推动我们从现在走向未来的真正关键。
+Dialogue: 0,1:06:02.48,1:06:06.28,Sub,,0,0,0,,And I mean, I think you can you talk about it a lot.\N我的意思是，你可以谈很多这方面的话题。
+Dialogue: 0,1:06:06.33,1:06:11.27,Sub,,0,0,0,,Um What how we're going to get there, the stages of of adoption that that we're kind of looking at.\N我们将如何实现，以及我们正在观察的采用过程中的各个阶段。
+Dialogue: 0,1:06:11.32,1:06:15.73,Sub,,0,0,0,,Yeah, first and foremost, people don't really want to drive anymore.\N是的，首先，人们其实已经不想开车了。
+Dialogue: 0,1:06:15.78,1:06:16.31,Sub,,0,0,0,,It's very clear.\N非常清楚。
+Dialogue: 0,1:06:16.36,1:06:18.83,Sub,,0,0,0,,You go down the road everyone's not looking forward.\N你走的是大家都不太看好的那条路。
+Dialogue: 0,1:06:18.88,1:06:22.51,Sub,,0,0,0,,Um and that's a scarily uh that is a huge safety risk.\N嗯，这非常可怕，这存在巨大的安全隐患。
+Dialogue: 0,1:06:22.56,1:06:24.68,Sub,,0,0,0,,You can see it in the stats.\N你从数据中就能看出来。
+Dialogue: 0,1:06:24.73,1:06:26.41,Sub,,0,0,0,,Um people want to relax.\N嗯，人们想要放松。
+Dialogue: 0,1:06:26.46,1:06:30.82,Sub,,0,0,0,,They want to be in something that's taking them, not necessarily driving them.\N他们希望待在一辆能带他们走、而不是非要他们自己驾驶的车里。
+Dialogue: 0,1:06:30.87,1:06:39.46,Sub,,0,0,0,,Um and so we know that if you can put a compelling beautiful vehicle out there that serves this amazing purpose and also brings safety,\N嗯，所以我们知道，如果你能推出一辆引人入胜、美观的车，既能实现如此重要的功能，又能带来安全，
+Dialogue: 0,1:06:39.52,1:06:42.25,Sub,,0,0,0,,people want to get into it.\N人们就愿意坐进去。
+Dialogue: 0,1:06:42.30,1:06:46.26,Sub,,0,0,0,,Um And so when we talk about adoption, of course right now it's going to be heavily around,\N嗯，所以当我们谈论普及时，当然目前主要集中在，
+Dialogue: 0,1:06:46.31,1:06:49.27,Sub,,0,0,0,,you know, ride hailing ride services and things of that nature.\N比如网约车服务这类应用。
+Dialogue: 0,1:06:49.32,1:06:52.86,Sub,,0,0,0,,But the the reality is this car is designed for everyone to really just feel\N但现实是，这辆车的设计初衷是让每个人真正感觉
+Dialogue: 0,1:06:52.91,1:06:59.00,Sub,,0,0,0,,like they're moving from their favorite couch or seat into this vehicle and it's no difference.\N就像是从自己最喜欢的沙发或座位上，直接转移到这辆车里，毫无差别。
+Dialogue: 0,1:06:59.05,1:07:04.23,Sub,,0,0,0,,They have entertainment, they have productivity, they have comfort, uh they have convenience.\N它们提供娱乐，提供生产力，提供舒适，还有便利。
+Dialogue: 0,1:07:04.28,1:07:08.24,Sub,,0,0,0,,And so for us to be able to kind of create that haven for a person,\N所以对我们来说，能够为一个人创造这样一个避风港。
+Dialogue: 0,1:07:08.29,1:07:14.02,Sub,,0,0,0,,like that's I think where we start to see, you know, commuters start to come into play and adopt.\N我想这就是我们开始看到通勤者逐渐参与进来并采纳的原因。
+Dialogue: 0,1:07:14.07,1:07:20.69,Sub,,0,0,0,,We start to see uh the the family trips, especially when we start talking about Model Ys with autonomy.\N我们开始看到家庭出行，尤其是当我们谈到具备自动驾驶功能的 Model Y 时。
+Dialogue: 0,1:07:20.74,1:07:25.90,Sub,,0,0,0,,Um and then with cab, you talk about deliveries and autonomy within the delivery space.\N而在网约车领域，你还会谈到配送和配送空间内的自动驾驶。
+Dialogue: 0,1:07:25.94,1:07:34.44,Sub,,0,0,0,,It's a perfect car given how dense it'll be to support like incredibly fast delivery capability at an incredibly low cost.\N这是一辆完美的汽车，因为它能以极低的成本实现极其快速的配送能力。
+Dialogue: 0,1:07:34.49,1:07:42.95,Sub,,0,0,0,,And so, you know, as we move forward, the the core part of it is, you know, safety, experience, and uh really it's low cost and convenience.\N所以，随着我们不断前进，核心所在是安全、体验，而真正关键的是低成本和便利。
+Dialogue: 0,1:07:43.00,1:07:45.71,Sub,,0,0,0,,Like those are the core principles we we live on.\N这些就是我们赖以生存的核心原则。
+Dialogue: 0,1:07:45.76,1:07:52.99,Sub,,0,0,0,,And that's kind of hopefully what you've seen today is it's been hardcore put throughout the the product and it's something we focus on every day.\N希望你今天看到的正是这一点：这些理念已深度融入产品之中，是我们每天专注的核心。
+Dialogue: 0,1:07:53.04,1:07:55.82,Sub,,0,0,0,,Not just on the car, but everything that's happening out there.\N不仅体现在汽车上，也体现在所有外部发生的事务中。
+Dialogue: 0,1:07:55.88,1:07:58.79,Sub,,0,0,0,,And so, this is the cool part of Tesla, right?\N所以，这就是特斯拉最酷的地方，对吧？
+Dialogue: 0,1:07:58.84,1:08:03.23,Sub,,0,0,0,,We've always had this vertical integration of the car and the firmware.\N我们一直保持着汽车与固件之间的垂直整合。
+Dialogue: 0,1:08:03.28,1:08:03.99,Sub,,0,0,0,,And the charging.\N还有充电功能。
+Dialogue: 0,1:08:04.04,1:08:08.93,Sub,,0,0,0,,And the charging We now have this crazy cool opportunity to integrate the entire business\N现在我们有了一个疯狂酷炫的机会，可以将整个业务完全整合。
+Dialogue: 0,1:08:08.98,1:08:13.74,Sub,,0,0,0,,from what the customer sees uh on a day-to-day basis all the way into design.\N从客户日常所见，一直到设计环节，全部打通。
+Dialogue: 0,1:08:13.79,1:08:17.43,Sub,,0,0,0,,And it's really closed-loop fast iteration to make the product awesome.\N这真正实现了闭环的快速迭代，让产品变得卓越。
+Dialogue: 0,1:08:17.48,1:08:18.68,Sub,,0,0,0,,Yeah, like to double down on that.\N是的，我完全同意这一点。
+Dialogue: 0,1:08:18.73,1:08:24.53,Sub,,0,0,0,,I mean, when you get into like the I think the people take ride share a lot now, right?\N你知道，现在很多人经常使用共享出行，对吧？
+Dialogue: 0,1:08:24.58,1:08:27.47,Sub,,0,0,0,,The Tubers and whatever, but you don't always know what you're getting.\N无论是网约车还是其他方式，但你并不总是清楚自己会得到什么。
+Dialogue: 0,1:08:27.52,1:08:27.82,Sub,,0,0,0,,Sure.\N明白。
+Dialogue: 0,1:08:27.84,1:08:34.06,Sub,,0,0,0,,You know, maybe you can select what kind of car, like a you know, if you want an XL or you know, a black or whatever.\N也许你可以选择车型，比如你要 XL 版本，或者黑色的，或者其他颜色。
+Dialogue: 0,1:08:34.11,1:08:39.75,Sub,,0,0,0,,But when you get into a Cybercab, when you get into a Tesla, you know, robo-taxi, it is your car.\N但当你坐进 Cybercab，或者特斯拉，或者自动驾驶出租车时，它就是你的车。
+Dialogue: 0,1:08:39.80,1:08:40.10,Sub,,0,0,0,,Yeah.\N没错。
+Dialogue: 0,1:08:40.00,1:08:42.25,Sub,,0,0,0,,And it moves to what you want.\N它会按照你的需求移动。
+Dialogue: 0,1:08:42.30,1:08:49.51,Sub,,0,0,0,,You know, we set the cabin temp, we pull up your playlists, your podcasts, we move the seat to where you want it. earlier.\N你知道，我们设定好车厢温度，调出你的播放列表和播客，把座椅调到你想要的位置，之前就是这样。
+Dialogue: 0,1:08:49.56,1:08:50.95,Sub,,0,0,0,,Yeah, we did Netflix earlier, right?\N是啊，我们之前看了Netflix，对吧？
+Dialogue: 0,1:08:51.00,1:08:55.00,Sub,,0,0,0,,Like I mean, it's so it it but it it, you know, much like your TV has all of your, you know,\N我的意思是，就像你的电视保存了你所有喜欢的内容一样，
+Dialogue: 0,1:08:55.05,1:09:02.11,Sub,,0,0,0,,your streaming services have all of things you're watching, it's there for you and whichever car you get into, it's the same.\N你的流媒体服务也记录了你正在看的所有内容，无论你开哪辆车，一切都会为你准备好。
+Dialogue: 0,1:09:02.16,1:09:02.46,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,1:09:02.44,1:09:10.06,Sub,,0,0,0,,And I think when you can bring that level of personalization to a shared, you know, uh like CapEx unit,\N我觉得当你能把这种个性化体验带到共享的、比如资本支出单位这样的东西上，
+Dialogue: 0,1:09:10.12,1:09:15.86,Sub,,0,0,0,,you know, like a a car, um it's going to provide an experience I don't think people quite fully comprehend.\N比如一辆车，它将带来一种人们可能还无法完全理解的体验。
+Dialogue: 0,1:09:15.91,1:09:22.25,Sub,,0,0,0,,You know, you guys took some rides here in Austin, um, where we have it, you know, deployed now, and I think you're starting to see it.\N你们之前在奥斯汀试乘过，我们现在已经部署了这套系统，我觉得你们已经开始感受到它的效果了。
+Dialogue: 0,1:09:22.30,1:09:25.07,Sub,,0,0,0,,And when I walk around town and I hear people talking about it,\N当我在街上走，听到人们在谈论它的时候，
+Dialogue: 0,1:09:25.12,1:09:30.72,Sub,,0,0,0,,but there is going to be a cultural shift when, you know, maybe people stop buying their second car.\N人们可能不再购买第二辆车，那时就会出现一种文化上的转变。
+Dialogue: 0,1:09:30.77,1:09:33.15,Sub,,0,0,0,,Maybe eventually they don't buy any cars.\N也许最终，他们干脆不再买车。
+Dialogue: 0,1:09:33.20,1:09:33.50,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,1:09:33.43,1:09:35.33,Sub,,0,0,0,,Well, we start to see that in major cities today.\N事实上，我们现在已经在主要城市看到了这种趋势。
+Dialogue: 0,1:09:35.38,1:09:36.75,Sub,,0,0,0,,People just don't buy cars.\N人们就是不再买车了。
+Dialogue: 0,1:09:36.80,1:09:40.39,Sub,,0,0,0,,and stuff, then people don't have And we see we talked a little bit off off camera.\N然后人们也不再拥有汽车，我们之前在镜头外稍微提过这一点。
+Dialogue: 0,1:09:40.44,1:09:48.18,Sub,,0,0,0,,It's like people are deciding not to get their driver's license, like younger individuals, or delaying the the the concept to get in their license.\N就好像年轻人正在决定不考驾照，或者推迟获得驾照的念头。
+Dialogue: 0,1:09:48.23,1:09:56.31,Sub,,0,0,0,,And so, this idea that a driver's license is freedom is not really becoming this this standard like it's been for last century.\N因此，驾照等于自由这一观念，已经不像上个世纪那样成为普遍标准了。
+Dialogue: 0,1:09:56.36,1:09:56.87,Sub,,0,0,0,,Sure.\N当然。
+Dialogue: 0,1:09:56.92,1:09:57.46,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,1:09:57.51,1:10:02.49,Sub,,0,0,0,,And so, the more it becomes the autonomy is freedom, which is really the core, right?\N所以，自动驾驶带来的自由，才是核心所在，对吧？
+Dialogue: 0,1:10:02.54,1:10:06.91,Sub,,0,0,0,,It's freedom for everybody, not just those who have a driver's license or could get it,\N这是属于每个人的自由，而不仅仅是那些有驾照或能考到驾照的人。
+Dialogue: 0,1:10:06.96,1:10:10.99,Sub,,0,0,0,,but it's the accessible community that don't have freedom of transportation today.\N而是那些今天无法获得交通自由的群体。
+Dialogue: 0,1:10:11.04,1:10:12.75,Sub,,0,0,0,,They now have it.\N他们现在也拥有了这种自由。
+Dialogue: 0,1:10:12.80,1:10:15.87,Sub,,0,0,0,,It's it's it's everybody, and that's the cool part about it.\N这是属于每个人的自由，这才是最酷的地方。
+Dialogue: 0,1:10:15.92,1:10:21.27,Sub,,0,0,0,,Yeah, that I'll add like one last thought and I'll let you do the question like a lot of people will ask me like,\N是的，我想再补充一个想法，然后就由你来提问了，很多人会问我，你知道，
+Dialogue: 0,1:10:21.32,1:10:25.37,Sub,,0,0,0,,you know, why do you love working at Tesla or like, you know, what's the best part?\N为什么我喜欢在特斯拉工作，或者，你知道，最棒的部分是什么？
+Dialogue: 0,1:10:25.42,1:10:28.55,Sub,,0,0,0,,And we talked a lot about the culture and the integration, but I, I think, you know,\N我们已经谈了很多关于文化和整合的话题，但我认为，你知道，
+Dialogue: 0,1:10:28.60,1:10:33.72,Sub,,0,0,0,,when Eric says like,"We're going to provide freedom of transportation to people who don't have it,"it's like, you're at Tesla,\N当Eric说“我们将为那些没有交通自由的人提供出行自由”时，你就明白在特斯拉，
+Dialogue: 0,1:10:33.77,1:10:36.83,Sub,,0,0,0,,we've always tried to do the right thing to make society a little bit better,\N我们始终努力做正确的事，让社会变得更好一点，
+Dialogue: 0,1:10:36.88,1:10:43.99,Sub,,0,0,0,,and that's kind of our driving force in like every step of the missions we've gone along the way, and this just feels like the next big opportunity.\N这正是我们一路走来每个阶段的核心驱动力，而这件事看起来就像是下一个重大机遇。
+Dialogue: 0,1:10:44.04,1:10:46.75,Sub,,0,0,0,,Yeah, it seems that way, you know, from the outside looking in and, you know,\N是的，从外面看确实是这样，你知道，
+Dialogue: 0,1:10:46.80,1:10:53.02,Sub,,0,0,0,,now spending some time with the team here, there's always like this this broader purpose behind the what, you know?\N现在和这里的团队共事了一段时间，你总能感受到背后那个更宏大的目标，你知道吗？
+Dialogue: 0,1:10:53.07,1:10:56.79,Sub,,0,0,0,,And and I think that's pretty clear for most of the product lines.\N我认为这对大多数产品线来说都很清楚。
+Dialogue: 0,1:10:56.84,1:11:00.03,Sub,,0,0,0,,Even every time Elon says something like,"Yeah, we're going to go to Mars."\N即使埃隆每次说“是的，我们要去火星”时，
+Dialogue: 0,1:11:00.08,1:11:01.73,Sub,,0,0,0,,He's got this sort of There's conviction.\N他都有一种坚定的信念。
+Dialogue: 0,1:11:01.78,1:11:03.54,Sub,,0,0,0,,There's conviction behind it, right?\N这种信念是真实存在的，对吧？
+Dialogue: 0,1:11:03.59,1:11:06.00,Sub,,0,0,0,,And and that conviction means leadership.\N而这种信念意味着领导力。
+Dialogue: 0,1:11:06.04,1:11:11.86,Sub,,0,0,0,,The leadership means culture and and the way that the culture is, it's enabling a product like we see behind us.\N领导力意味着文化，而这种文化正是让像我们身后这样的产品得以实现的关键。
+Dialogue: 0,1:11:11.91,1:11:18.16,Sub,,0,0,0,,You know, I I'm curious when the the original Teslas came out, the the Model S came out,\N你知道，我很好奇当初最初的特斯拉车型推出时，Model S 发布的时候，
+Dialogue: 0,1:11:18.21,1:11:23.80,Sub,,0,0,0,,even the Roadster a little bit before that, but then it like broke the rating system in Consumer Reports cuz it was so good.\N甚至在那之前推出的 Roadster，\N但后来它在《消费者报告》的评测体系中打破了常规，因为它实在太出色了。
+Dialogue: 0,1:11:23.85,1:11:27.13,Sub,,0,0,0,,And like all these things happened very quickly.\N而所有这些事情都发生得非常迅速。
+Dialogue: 0,1:11:27.18,1:11:34.04,Sub,,0,0,0,,All the OEMs when BAVs became around, you know, as a benchmarking services company, they're like,"What's Tesla doing?\N当 BAV 出现后，所有原始设备制造商都开始关注，作为一家基准评测公司，\N我们当时都在想：“特斯拉在做什么？”
+Dialogue: 0,1:11:34.09,1:11:41.87,Sub,,0,0,0,,What's It was like on every slide we needed to have like a Tesla answer box."You know, so that we could try to explain what what Tesla did.\N每一页幻灯片上我们都得加上一个“特斯拉解答框”，以便尝试解释特斯拉到底做了什么。
+Dialogue: 0,1:11:41.92,1:11:47.15,Sub,,0,0,0,,Um I think this could be the same way, you know, for the the ride-hail space,\N我觉得现在对网约车领域来说可能也是同样的情况，
+Dialogue: 0,1:11:47.20,1:11:55.49,Sub,,0,0,0,,for the AV space because I I'm I struggle with the like the unit economics of You know, and Waymo's going to go public and they're huge company.\N对自动驾驶领域也是如此，因为我在思考其单位经济模型时感到困扰，\N而 Waymo 即将上市，它本身已是巨头公司。
+Dialogue: 0,1:11:55.54,1:11:58.08,Sub,,0,0,0,,I think that's a big enough machine, it's going to keep moving.\N我认为这已经是一台足够庞大的机器，它会持续前进。
+Dialogue: 0,1:11:58.13,1:12:03.65,Sub,,0,0,0,,You know, but folks like Zoox Zoox or Lucid and the the neural relationship,\N但像 Zoox、Lucid 以及它们背后的神经关系，
+Dialogue: 0,1:12:03.70,1:12:09.60,Sub,,0,0,0,,I struggle to see how those economics are going to compete with something like this when it's so efficient.\N我很难想象这些企业的经济模型如何能与如此高效的系统竞争。
+Dialogue: 0,1:12:09.65,1:12:11.26,Sub,,0,0,0,,You mentioned some quick stats.\N你提到了一些快速统计数据。
+Dialogue: 0,1:12:11.30,1:12:14.89,Sub,,0,0,0,,I think 50%ish reduction in the floor space.\N我认为地板空间减少了大约50%。
+Dialogue: 0,1:12:14.94,1:12:19.76,Sub,,0,0,0,,You're You're not even having to run every day because the line's so efficient.\N你甚至不用每天运行，因为生产线效率太高了。
+Dialogue: 0,1:12:19.81,1:12:22.61,Sub,,0,0,0,,35 main stations, 60%part count reduction.\N35个主要工位，零部件数量减少60%。
+Dialogue: 0,1:12:22.66,1:12:25.07,Sub,,0,0,0,,Like these are formidable statistics.\N这些数据相当惊人。
+Dialogue: 0,1:12:25.12,1:12:28.31,Sub,,0,0,0,,Yeah, it's a it's not a it's not a like incremental change.\N是的，这并不是一种渐进式的改变。
+Dialogue: 0,1:12:28.36,1:12:30.43,Sub,,0,0,0,,No, no, no, it's a step level change.\N不，不，这是一次跃升式的变革。
+Dialogue: 0,1:12:30.48,1:12:35.64,Sub,,0,0,0,,And obviously the Cybertruck was sort of a step level change in the off factor, like,"Oh my god,\N显然，Cybertruck在车身材料上也是一次跃升式的改变，比如“天啊，全是不锈钢。”
+Dialogue: 0,1:12:35.69,1:12:43.27,Sub,,0,0,0,,it's all stainless steel."This is a step level change and I would argue the efficiency, the cost efficiency, the throughput efficiency side of it.\N这也是一次跃升式的变革，我甚至认为在效率、成本效益和吞吐效率方面都是如此。
+Dialogue: 0,1:12:43.32,1:12:49.67,Sub,,0,0,0,,I think that there's going to be a lot of attention on this from other OEMs and or Waymos of the world.\N我认为其他原始设备制造商或像Waymo这样的公司会对此高度关注。
+Dialogue: 0,1:12:49.72,1:12:53.87,Sub,,0,0,0,,Yeah, I mean, And think I think when I think I have those thoughts going through my head,\N是的，我的意思是，当我想到这些时，
+Dialogue: 0,1:12:53.92,1:13:00.23,Sub,,0,0,0,,what I'll say is you know Eric pointed out like we own literally in some cases the raw material.\N我想说的是，你知道，Eric指出过，我们在某些情况下甚至拥有原材料。
+Dialogue: 0,1:13:00.28,1:13:04.43,Sub,,0,0,0,,Like we have you know our lithium refineries and like the cathode manufacturing and all.\N就像我们有锂精炼厂，还有正极材料制造等。
+Dialogue: 0,1:13:04.48,1:13:07.80,Sub,,0,0,0,,And the we talked about the recycled aluminum and plastic.\N我们还谈到了回收利用的铝和塑料。
+Dialogue: 0,1:13:07.84,1:13:14.51,Sub,,0,0,0,,So we we start there and then we own it all the way to the consumer experience on the phone and the infrastructure all the way in between.\N所以我们从那里起步，然后一路掌控到手机上的消费者体验，以及其间所有的基础设施。
+Dialogue: 0,1:13:14.56,1:13:23.44,Sub,,0,0,0,,When I think about why we're the only one that is really going to be able to do this is you know we build the car service the car,\N当我思考为什么只有我们真正能够做到这一点时，你知道，我们打造了汽车，也打造了汽车服务。
+Dialogue: 0,1:13:23.49,1:13:27.27,Sub,,0,0,0,,we have the charging, we have the infrastructure that like no one else has.\N我们拥有充电设施，以及无人能及的基础设施。
+Dialogue: 0,1:13:27.32,1:13:33.71,Sub,,0,0,0,,And so it's going to be really hard to to compete with that and ultimately for the consumer it's just going to come down to the cost per mile.\N因此，要与之竞争将非常困难，最终对消费者而言，只取决于每英里的成本。
+Dialogue: 0,1:13:33.76,1:13:34.19,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,1:13:34.24,1:13:41.91,Sub,,0,0,0,,And like if you can give give them a better service like at a lower cost per mile it's it's really going to\N而且如果你能以更低的每英里成本提供更优质的服务，那就真的会非常有竞争力。
+Dialogue: 0,1:13:41.96,1:13:49.11,Sub,,0,0,0,,be difficult to beat us and I think we've been do like we've been you know playing this game for a long time.\N很难打败我们，我觉得我们一直都在玩这个游戏，已经很久了。
+Dialogue: 0,1:13:49.16,1:13:50.56,Sub,,0,0,0,,We've been getting ready for a long time.\N我们已经为此准备了很长时间。
+Dialogue: 0,1:13:50.61,1:13:55.58,Sub,,0,0,0,,It's not like we just showed up today and said okay here's a here's a I have an idea.\N并不是我们今天突然出现，说好了，这里有想法，我有个主意。
+Dialogue: 0,1:13:55.63,1:13:56.05,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,1:13:56.10,1:13:59.87,Sub,,0,0,0,,Um we've been building we have the largest charging network in the world.\N我们一直在建设，我们拥有全球最大的充电网络。
+Dialogue: 0,1:13:59.92,1:14:06.94,Sub,,0,0,0,,We have, you know, service centers and collision centers all over the place ready to, you know, change over.\N我们在各地都有服务中心和碰撞维修中心，随时可以进行更换。
+Dialogue: 0,1:14:07.00,1:14:11.67,Sub,,0,0,0,,And I think it's going to be a real hard point for the rest of the automotive industry and and for anyone else trying to compete.\N我认为这将给整个汽车行业的其他企业，以及任何试图竞争的对手带来巨大挑战。
+Dialogue: 0,1:14:11.72,1:14:15.61,Sub,,0,0,0,,But, you know, I do like, we've always wanted everyone to succeed in the EV space.\N但说实话，我们一直希望电动汽车领域的所有人都能成功。
+Dialogue: 0,1:14:15.66,1:14:19.58,Sub,,0,0,0,,We all you know we want people to succeed in the AV space cuz it's a safer world.\N我们当然也希望自动驾驶领域的人们都能成功，因为这会让世界更安全。
+Dialogue: 0,1:14:19.63,1:14:29.07,Sub,,0,0,0,,Um you know with more AVs out there and so I I I mean I wish them all the well well to get there but uh it's going to be a tough battle.\N随着更多自动驾驶车辆上路，我真心希望他们都能顺利实现目标，但这条路注定充满挑战。
+Dialogue: 0,1:14:29.12,1:14:30.14,Sub,,0,0,0,,It's going to be very tough.\N这将非常艰难。
+Dialogue: 0,1:14:30.19,1:14:31.51,Sub,,0,0,0,,I I feel certain about that.\N我对此深信不疑。
+Dialogue: 0,1:14:31.56,1:14:33.55,Sub,,0,0,0,,Yeah I I think just a couple things to add.\N是的，我想补充几点。
+Dialogue: 0,1:14:33.60,1:14:40.42,Sub,,0,0,0,,The the culture of Tesla's one in which we can move so fast and that means when we look at the\N特斯拉的文化就是我们能以极快的速度推进，这意味着当我们审视产品本身时，
+Dialogue: 0,1:14:40.47,1:14:47.83,Sub,,0,0,0,,product itself we are improving things week over week not just on the software side which is uh you know changing Theoretically,\N我们每周都在进步，不仅是在软件层面——理论上每周都能更新，
+Dialogue: 0,1:14:47.88,1:14:55.74,Sub,,0,0,0,,possible to change of week over week, but like we're also doing things on the hardware side that manufacturing side and the manufacturing side uh,\N而且我们在硬件、制造以及制造流程方面也在不断改进。
+Dialogue: 0,1:14:55.79,1:14:59.94,Sub,,0,0,0,,and and generally on the orchestration the customer side, like making the product better.\N而且在编排方面，客户侧通常会通过改进产品来提升体验。
+Dialogue: 0,1:14:59.99,1:15:07.23,Sub,,0,0,0,,The vertical integration gives us so much capability and as Lars said, we basically been preparing for this moment for the last two decades, right?\N垂直整合赋予了我们巨大的能力，正如Lars所说，我们实际上已经为这一刻准备了整整二十年，对吧？
+Dialogue: 0,1:15:07.28,1:15:13.99,Sub,,0,0,0,,The charging infrastructure, the service infrastructure, the engineering design uh, all of that got us to this point. chain?\N充电基础设施、服务基础设施、工程设计等，都让我们走到了今天这一步。链条？
+Dialogue: 0,1:15:14.04,1:15:21.57,Sub,,0,0,0,,The supply chain uh, and so that that foundation a lot of people just think we just got into this game of autonomous vehicles.\N供应链啊，所以这个基础，很多人只是觉得我们才刚进入自动驾驶这局游戏。
+Dialogue: 0,1:15:21.62,1:15:26.35,Sub,,0,0,0,,It's like, no, we started this many many years ago and it's all contributing to that.\N不，我们多年前就已开始，这一切都在为此贡献力量。
+Dialogue: 0,1:15:26.40,1:15:30.20,Sub,,0,0,0,,Uh, and so we're just excited because the response we've gotten in Austin is insane.\N嗯，我们真的很兴奋，因为我们在奥斯汀收到的反馈简直太疯狂了。
+Dialogue: 0,1:15:30.24,1:15:34.30,Sub,,0,0,0,,Like if you go walk around downtown you literally will see four cabs in a\N比如你去 downtown 散步， literally 就会看到四辆出租车
+Dialogue: 0,1:15:34.35,1:15:38.74,Sub,,0,0,0,,matter of 30 seconds no matter what direction you look and we expect that to be,\N无论朝哪个方向看，都只需30秒，我们预计情况会如此。
+Dialogue: 0,1:15:38.79,1:15:40.11,Sub,,0,0,0,,you know, just the start.\N你知道的，这才刚开始。
+Dialogue: 0,1:15:40.16,1:15:41.71,Sub,,0,0,0,,It'll get far more dense than that.\N会密集得多。
+Dialogue: 0,1:15:41.76,1:15:43.15,Sub,,0,0,0,,From a charging perspective,\N从充电角度来看，
+Dialogue: 0,1:15:43.20,1:15:50.91,Sub,,0,0,0,,the infrastructure is clear and Tesla started with that and has been the leader in the charging infrastructure since its origin.\N基础设施已经明确，特斯拉从一开始就以此为基础，自创立以来一直是充电基础设施的领导者。
+Dialogue: 0,1:15:50.96,1:15:55.67,Sub,,0,0,0,,What do you what do you view as the opportunity or the hurdle from a charging perspective?\N从充电的角度来看，您认为机会或障碍是什么？
+Dialogue: 0,1:15:55.72,1:15:59.03,Sub,,0,0,0,,Like did you consider inductive charging to pull over?\N您有没有考虑过采用感应充电的方式靠边停车？
+Dialogue: 0,1:15:59.08,1:16:05.03,Sub,,0,0,0,,You know, I mean there's a huge inefficiency from a physics perspective there, but there could be a benefit in terms of the utility.\N从物理效率角度看，那里存在巨大的效率损失，但从实用性角度来看，可能有好处。
+Dialogue: 0,1:16:05.08,1:16:05.56,Sub,,0,0,0,,For sure.\N当然。
+Dialogue: 0,1:16:05.61,1:16:12.10,Sub,,0,0,0,,I I think, you know, we're always looking at ways to improve, but one of the things you mentioned is like we have this infrastructure.\N我觉得，我们一直在寻找改进的方法，但您提到的一点是，我们已有这样的基础设施。
+Dialogue: 0,1:16:12.15,1:16:13.73,Sub,,0,0,0,,Like we we have to utilize it.\N我们必须加以利用。
+Dialogue: 0,1:16:13.78,1:16:19.47,Sub,,0,0,0,,It's hard to change over like to a new um, automated way,\N要转向新的自动化方式很难。
+Dialogue: 0,1:16:19.52,1:16:24.50,Sub,,0,0,0,,but like we have a charge port cuz we know we're going to need to use the the infrastructure we have.\N但我们仍保留充电接口，因为我们知道必须使用现有的基础设施。
+Dialogue: 0,1:16:24.55,1:16:26.99,Sub,,0,0,0,,Hopefully Optimus will help us with that shortly.\N希望Optimus能很快帮我们解决这个问题。
+Dialogue: 0,1:16:27.04,1:16:28.30,Sub,,0,0,0,,Um, but then, you know,\N但与此同时，您知道，
+Dialogue: 0,1:16:28.34,1:16:35.15,Sub,,0,0,0,,we are looking at more automated ways with our expansion of infrastructure that if the car the cab is like pre-built and ready for.\N我们正在扩展基础设施，探索更自动化的方案，比如当汽车或出租车已经预先装配好并准备就绪时。
+Dialogue: 0,1:16:35.20,1:16:43.87,Sub,,0,0,0,,Um, and I think that that that will you know, be the step change to not requiring uh, you know, a human or or or Optimus to to plug it in.\N我认为，这将是一次质的飞跃，不再需要人类或Optimus来插拔充电。
+Dialogue: 0,1:16:43.92,1:16:52.77,Sub,,0,0,0,,So So do you feel that humanoids, um, as one of their many possible use cases, Optimus is an example, will be an enabler for this fleet.\N所以，你认为人形机器人，比如 Optimus 就是一个例子，\N作为其众多可能的应用场景之一，将成为这一车队的推动者。
+Dialogue: 0,1:16:52.82,1:16:53.88,Sub,,0,0,0,,It'll be like hand in glove.\N就像天衣无缝一样。
+Dialogue: 0,1:16:53.93,1:16:54.90,Sub,,0,0,0,,They'll be plugging these in.\N他们会把这些设备插上。
+Dialogue: 0,1:16:54.95,1:16:57.47,Sub,,0,0,0,,Optimus is going to go and service the car.\NOptimus 将去为汽车提供服务。
+Dialogue: 0,1:16:57.52,1:17:01.50,Sub,,0,0,0,,Yeah, you know, might service the car, might add in the delivery space, you know,\N是的，可能为汽车提供服务，也可能拓展到配送领域，你知道，
+Dialogue: 0,1:17:01.56,1:17:07.43,Sub,,0,0,0,,like we we Well, I mean, the whole physical AI world is going to come upon us very, very quick.\N就像我们所想的那样，整个物理 AI 世界将非常迅速地到来。
+Dialogue: 0,1:17:07.48,1:17:07.78,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,1:17:07.72,1:17:11.75,Sub,,0,0,0,,And, you know, you think of Cybercab, Optimus, and Robovan.\N你想想 Cybercab、Optimus 和 Robovan。
+Dialogue: 0,1:17:11.80,1:17:14.11,Sub,,0,0,0,,Like that trifecta will be incredible.\N那个三合一组合将令人惊叹。
+Dialogue: 0,1:17:14.16,1:17:17.01,Sub,,0,0,0,,Well, then you add semi to it for like trip and like long distance.\N然后再加上半挂车，用于长途运输之类的。
+Dialogue: 0,1:17:17.06,1:17:17.92,Sub,,0,0,0,,What is Tesla becoming?\N特斯拉正在变成什么？
+Dialogue: 0,1:17:17.98,1:17:19.79,Sub,,0,0,0,,Maybe we're a transportation company.\N也许我们就是一家交通公司。
+Dialogue: 0,1:17:19.84,1:17:20.31,Sub,,0,0,0,,Uh-huh.\N嗯嗯。
+Dialogue: 0,1:17:20.36,1:17:24.07,Sub,,0,0,0,,Maybe, you know, it's it's a in redefining how that everyone thinks of that.\N也许，你知道，这重新定义了人们对此的看法。
+Dialogue: 0,1:17:24.12,1:17:27.51,Sub,,0,0,0,,Do everyone Everyone likes to talk about AI.\N每个人都喜欢谈论人工智能。
+Dialogue: 0,1:17:27.56,1:17:31.47,Sub,,0,0,0,,Physical AI is now becoming, you know, I think the new buzz term.\N物理 AI 现在正逐渐成为，你知道的，新的热门术语。
+Dialogue: 0,1:17:31.52,1:17:33.01,Sub,,0,0,0,,It's right there.\N就在那里。
+Dialogue: 0,1:17:33.06,1:17:33.95,Sub,,0,0,0,,It's here.\N它已经来了。
+Dialogue: 0,1:17:34.00,1:17:37.22,Sub,,0,0,0,,What do you think, you know, there's all these unintended consequences,\N你觉得呢，这些意想不到的后果，
+Dialogue: 0,1:17:37.27,1:17:42.79,Sub,,0,0,0,,good or bad, some of which are sitting behind us, um, on the good side for sure.\N有好有坏，其中一些已经出现在我们身后，当然，好的方面是肯定的。
+Dialogue: 0,1:17:42.84,1:17:47.97,Sub,,0,0,0,,What do you What do you think is going to like be the plateau point for this physical AI AI thing?\N你觉得这个物理 AI 的发展会达到一个怎样的稳定阶段？
+Dialogue: 0,1:17:48.02,1:17:57.11,Sub,,0,0,0,,Like what If you were to fast forward 10 years, I mean, is it a Tesla semi-truck autonomously driven dropping these off in a city,\N比如说，如果你把时间快进 10 年，一辆特斯拉半挂卡车自主驾驶，把货物送到城市里，
+Dialogue: 0,1:17:57.16,1:18:00.51,Sub,,0,0,0,,them autonomously getting out with a bunch of Optimus It's very Optimus.\N然后它们自主下车，一群 Optimus 出来，非常像 Optimus。
+Dialogue: 0,1:18:00.56,1:18:04.59,Sub,,0,0,0,,them, and then they all deliver your food from a automated restaurant.\N然后它们一起从一家自动化餐厅为你配送食物。
+Dialogue: 0,1:18:04.64,1:18:09.95,Sub,,0,0,0,,mean, like yeah, I mean, yeah, I think I think the limitation to to that kind of effort is scale.\N意思是，是的，我的意思是，是的，我认为那种努力的局限性在于规模。
+Dialogue: 0,1:18:10.00,1:18:10.30,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,1:18:10.32,1:18:15.91,Sub,,0,0,0,,You know, I think one of the you know, we talked about some of the other people in the space in the autonomous vehicle space.\N你知道，我觉得其中一个，我们之前谈到了自动驾驶领域里的其他一些人。
+Dialogue: 0,1:18:15.96,1:18:18.80,Sub,,0,0,0,,Like we have a scale they can't even possibly imagine yet.\N就是说，我们的规模是他们甚至都无法想象的。
+Dialogue: 0,1:18:18.85,1:18:28.35,Sub,,0,0,0,,And it took us, you know, 20 years to to get here, and we've probably grown in the scale faster than most companies in in the history.\N而我们花了大约20年才走到这一步，而且我们的规模增长速度可能比历史上大多数公司都要快。
+Dialogue: 0,1:18:28.40,1:18:35.47,Sub,,0,0,0,,Like I think I saw a plot one time ago, um, when you look at like the our production of EVs over time,\N我记得以前看过一张图，当你看我们电动车的生产量随时间的变化时，
+Dialogue: 0,1:18:35.52,1:18:38.99,Sub,,0,0,0,,like the only thing that went faster was the iPhone.\N唯一增长更快的只有iPhone。
+Dialogue: 0,1:18:39.04,1:18:42.75,Sub,,0,0,0,,You know, like just and it's like well, jeez, that's you know, only this big.\N你知道，就是说，好吧，这其实也就这么大而已。
+Dialogue: 0,1:18:42.80,1:18:49.81,Sub,,0,0,0,,Um and so I think I think the the limiting factor will be at some level the\N所以我认为，某种程度上，限制因素会是整个链条中
+Dialogue: 0,1:18:49.86,1:18:54.26,Sub,,0,0,0,,least lucky part of the entire chain and like I mean part could be a physical component.\N最不幸运的一环，而这一环可能是某个物理组件。
+Dialogue: 0,1:18:54.31,1:18:56.11,Sub,,0,0,0,,We showed you all our vertical integration.\N我们向你们展示了我们所有的垂直整合。
+Dialogue: 0,1:18:56.16,1:18:58.71,Sub,,0,0,0,,We try to cut that off wherever we can, but, like,\N我们会尽可能地切断这些环节，但就像，
+Dialogue: 0,1:18:58.76,1:19:06.60,Sub,,0,0,0,,everyone's going to run into either a part or infrastructure limit, or a uh, you know, parking spot limit.\N每个人都会遇到零部件或基础设施的限制，或者像停车位那样的限制。
+Dialogue: 0,1:19:06.65,1:19:15.90,Sub,,0,0,0,,And so, I think whoever has the advantage of scale will will be the leader in that space.\N因此，我认为谁在规模上占据优势，谁就将在该领域成为领导者。
+Dialogue: 0,1:19:15.95,1:19:22.62,Sub,,0,0,0,,And then, you know, it's I think the limiter will be different city by city and location by location because they all have their own,\N然后你知道，我认为限制因素会因城市和地点的不同而有所差异，因为每个地方都有自己的情况。
+Dialogue: 0,1:19:22.67,1:19:25.35,Sub,,0,0,0,,you know, infrastructure type limits.\N你知道，基础设施类型有其限制。
+Dialogue: 0,1:19:25.40,1:19:28.10,Sub,,0,0,0,,I also think just to add one real quick thing.\N我还想快速补充一点。
+Dialogue: 0,1:19:28.15,1:19:30.67,Sub,,0,0,0,,I think energy At some point energy will be a limiter.\N我认为，能源在某个阶段终将成为瓶颈。
+Dialogue: 0,1:19:30.72,1:19:36.39,Sub,,0,0,0,,Energy is energy is I think a very important aspect of the future in this physical AI world.\N能源就是能源，我认为在这一物理AI世界中，能源是未来一个非常重要的方面。
+Dialogue: 0,1:19:36.44,1:19:37.91,Sub,,0,0,0,,Even even data center energy, right?\N即使是数据中心的能耗，对吧？
+Dialogue: 0,1:19:37.96,1:19:38.34,Sub,,0,0,0,,Like Yeah,\N嗯，对啊，
+Dialogue: 0,1:19:38.36,1:19:42.60,Sub,,0,0,0,,even you look at what data centers are doing today and you think of the scale of of of really\N甚至你看看如今数据中心在做什么，再想想它们的规模，真的非常惊人。
+Dialogue: 0,1:19:42.65,1:19:50.56,Sub,,0,0,0,,the the physical AI being run from data centers and then being charged and recharged every day to be productive,\N从数据中心运行的物理 AI 每天被充电、放电，以保持高效运作。
+Dialogue: 0,1:19:50.62,1:19:52.51,Sub,,0,0,0,,maximize productivity.\N最大化生产力。
+Dialogue: 0,1:19:52.56,1:19:55.33,Sub,,0,0,0,,I mean we as a country need to really think about energy.\N我的意思是，作为一个国家，我们必须认真思考能源问题。
+Dialogue: 0,1:19:55.38,1:19:56.23,Sub,,0,0,0,,Like solar's huge.\N比如太阳能非常巨大。
+Dialogue: 0,1:19:56.28,1:19:57.99,Sub,,0,0,0,,Why are we investing so much in solar?\N为什么我们如此大力投资太阳能？
+Dialogue: 0,1:19:58.04,1:20:00.46,Sub,,0,0,0,,Because same reason, it's energy.\N因为同样的原因，它就是能源。
+Dialogue: 0,1:20:00.52,1:20:08.51,Sub,,0,0,0,,Like energy is the key to that physical AI future that creates this mass increase in overall productivity.\N能源正是实现物理 AI 未来的关键，而这一未来将带来整体生产力的大幅增长。
+Dialogue: 0,1:20:08.56,1:20:15.06,Sub,,0,0,0,,And the more efficient you are like this vehicle or like even the compute on this vehicle is more efficient than, you know,\N你越高效，比如这辆车辆，或者车辆上的计算效率越高，你知道，
+Dialogue: 0,1:20:15.12,1:20:21.83,Sub,,0,0,0,,other AVs out there like what they're doing in the back of the Which at scale relate to how much it needs to consume from the grid.\N比其他自动驾驶车辆更高效，它们在后端的规模化运作，直接关系到从电网获取多少能源。
+Dialogue: 0,1:20:21.88,1:20:22.18,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,1:20:22.12,1:20:23.27,Sub,,0,0,0,,It's own range.\N它自身的续航能力。
+Dialogue: 0,1:20:23.32,1:20:24.19,Sub,,0,0,0,,Yeah, it's own range, right?\N对，它自身的续航能力，没错。
+Dialogue: 0,1:20:24.24,1:20:25.32,Sub,,0,0,0,,It's other feature.\N这是它的另一项特性。
+Dialogue: 0,1:20:25.37,1:20:33.22,Sub,,0,0,0,,I mean it the ripple effect as we as we say in like the the if you're a brake guy and you make rotors and calipers, weight begets weight.\N我的意思是，就像我们常说的，如果你是做刹车系统的，生产刹车盘和卡钳，重量会带来更多的重量。
+Dialogue: 0,1:20:33.27,1:20:35.39,Sub,,0,0,0,,You know, a heavier vehicle means a heavier caliper.\N你知道，车辆越重，卡钳也就越重。
+Dialogue: 0,1:20:35.44,1:20:37.68,Sub,,0,0,0,,I mean what this is one of the things that I love weight.\N我的意思是，这正是我热爱重量的原因之一。
+Dialogue: 0,1:20:37.73,1:20:39.46,Sub,,0,0,0,,I love talking about mass.\N我喜欢聊质量。
+Dialogue: 0,1:20:39.51,1:20:44.67,Sub,,0,0,0,,But like it takes a intense conviction on mass Yeah.\N但确实需要一种对大众的强烈信念。
+Dialogue: 0,1:20:44.72,1:20:47.80,Sub,,0,0,0,,to not end up with a vehicle that weighs too much.\N以免车辆重量过重。
+Dialogue: 0,1:20:47.84,1:20:54.56,Sub,,0,0,0,,You have to have everyone believe that the vehicle's going to weigh 1,600 kilos, you know, and say it's 1,600.\N你得让所有人都相信这辆车重1600公斤，就说它是1600公斤。
+Dialogue: 0,1:20:54.61,1:20:59.08,Sub,,0,0,0,,And the crash team doesn't add their 20% margin and the brakes team doesn't add their 20%margin.\N而碰撞团队不会加上他们的20%利润，制动团队也不会加上他们的20%利润。
+Dialogue: 0,1:20:59.13,1:21:03.52,Sub,,0,0,0,,It's like,"No, it's 1,600."Like I actually remember when we did this, you probably did too.\N就像说：“不，是1600。” 我真的记得我们当时做这个的时候，你 probably 也记得。
+Dialogue: 0,1:21:03.57,1:21:08.23,Sub,,0,0,0,,I was like,"If it doesn't break between 95% and 100%of the spec, you failed."\N我当时就想：“如果在95%到100%规格范围内都没出问题，那你就是失败了。”
+Dialogue: 0,1:21:08.28,1:21:08.58,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,1:21:08.56,1:21:11.07,Sub,,0,0,0,,Cuz it's easy to get from 95%to 103%, Right.\N因为从95%提升到103%很容易，对吧。
+Dialogue: 0,1:21:11.12,1:21:14.39,Sub,,0,0,0,,The envelope will never be pushed if no one says it's okay to push.\N如果没人说可以突破，就永远不会有突破。
+Dialogue: 0,1:21:14.44,1:21:14.84,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,1:21:14.88,1:21:15.18,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,1:21:15.15,1:21:16.35,Sub,,0,0,0,,It's It's got to be encouraged.\N必须鼓励这种做法。
+Dialogue: 0,1:21:16.40,1:21:21.39,Sub,,0,0,0,,You know, I we've been more than I've ever seen before at Monroe.\N你知道，我在莫罗恩的所见所闻，比以往任何时候都多。
+Dialogue: 0,1:21:21.44,1:21:26.50,Sub,,0,0,0,,Ask,"Hey, intense cost pressure, China this, uh supply chain,\N问一句：“嘿，成本压力很大，中国这边，供应链那边，
+Dialogue: 0,1:21:26.55,1:21:34.24,Sub,,0,0,0,,etc. etc."and I don't think we're going to compete with the Chinese on cost if we don't have mass innovation.\N等等，等等。” 我认为，如果我们没有大规模创新，就无法在成本上与中国竞争。
+Dialogue: 0,1:21:34.29,1:21:39.99,Sub,,0,0,0,,You know, I I look People I think think of Monroe and they're like,"What you're a teardown company, you're a cost company."\N你知道，人们一提到莫罗恩，就会说：“你们是拆解公司，是成本控制公司。”
+Dialogue: 0,1:21:40.04,1:21:46.91,Sub,,0,0,0,,I I would argue and submit that we're an innovation company as much as the next cuz innovation that that's innovation.\N我认为并主张，我们和任何其他公司一样，都是创新公司，因为创新就是创新。
+Dialogue: 0,1:21:46.96,1:21:47.77,Sub,,0,0,0,,That's how you get there.\N这才是实现目标的方式。
+Dialogue: 0,1:21:47.82,1:21:51.47,Sub,,0,0,0,,Like we we've been able to compete on cost globally because we've done all of these things.\N正因为我们做了这些事，才能在全球范围内以成本优势竞争。
+Dialogue: 0,1:21:51.52,1:21:52.11,Sub,,0,0,0,,Because you've innovated.\N因为你们进行了创新。
+Dialogue: 0,1:21:52.16,1:21:56.87,Sub,,0,0,0,,And and like you know, we we still have a massive market share in China with all those people that,\N而且你知道，尽管有那么多人，我们在中国的市场份额依然巨大。
+Dialogue: 0,1:21:56.92,1:21:58.98,Sub,,0,0,0,,you know, are you're you're mentioning the car companies.\N你知道，你提到了汽车公司。
+Dialogue: 0,1:21:59.03,1:22:00.35,Sub,,0,0,0,,And it's like, how do you do that?\N而且这就像，你该如何做到这一点？
+Dialogue: 0,1:22:00.40,1:22:07.00,Sub,,0,0,0,,Well, you make the product as efficient as it can be from manufacturing process all the way to the the end consumer.\N嗯，你要让产品从制造流程到最终消费者，尽可能高效。
+Dialogue: 0,1:22:07.05,1:22:10.07,Sub,,0,0,0,,And like then it's just like, okay, labor rates are different in different countries.\N然后就是，不同国家的劳动力成本不一样。
+Dialogue: 0,1:22:10.12,1:22:15.35,Sub,,0,0,0,,But like you there you know, we we are heavily automated even in China.\N但就像我们，你知道，即使在中国，我们也高度自动化。
+Dialogue: 0,1:22:15.40,1:22:15.83,Sub,,0,0,0,,Right.\N对。
+Dialogue: 0,1:22:15.88,1:22:19.21,Sub,,0,0,0,,it's not like we're we're we're playing the man hours game there.\N我们并不是在玩人力工时的游戏。
+Dialogue: 0,1:22:19.26,1:22:25.47,Sub,,0,0,0,,And I think that that you know, for the rest of not just automotive, but other industries to keep going and growing,\N我认为，对于汽车行业以外的其他行业，要持续发展和增长，
+Dialogue: 0,1:22:25.52,1:22:32.47,Sub,,0,0,0,,they have to keep chipping away at the innovative ideas that reduce the bomb cost and increase efficiency.\N他们必须不断推进那些能降低制造成本、提升效率的创新想法。
+Dialogue: 0,1:22:32.52,1:22:35.07,Sub,,0,0,0,,Like our prices have gone down every year.\N就像我们的价格每年都下降。
+Dialogue: 0,1:22:35.12,1:22:35.59,Sub,,0,0,0,,Right.\N对。
+Dialogue: 0,1:22:35.64,1:22:37.31,Sub,,0,0,0,,Despite all the things you mentioned.\N尽管你提到了所有这些因素。
+Dialogue: 0,1:22:37.36,1:22:43.03,Sub,,0,0,0,,Right, which I think your OEM friends in the world are like really upset about that.\N对，我觉得你们全球的OEM朋友对此非常不满。
+Dialogue: 0,1:22:43.08,1:22:45.55,Sub,,0,0,0,,So, I've got three three last questions.\N那么，我还有三个最后的问题。
+Dialogue: 0,1:22:45.60,1:22:54.28,Sub,,0,0,0,,So, one is um if you're talking to a startup out there and obviously Tesla was at one point a startup and it's very difficult.\N比如说，如果你在跟一家初创公司交谈，显然特斯拉曾经也是一家初创公司，而这件事非常困难。
+Dialogue: 0,1:22:54.33,1:22:58.81,Sub,,0,0,0,,You said 20 years this is scale road map and now I mean look at the facility we're in.\N你说的是20年的发展路线图，现在看看我们所在的这个设施。
+Dialogue: 0,1:22:58.86,1:22:59.58,Sub,,0,0,0,,It's obvious.\N这很明显。
+Dialogue: 0,1:22:59.63,1:23:05.23,Sub,,0,0,0,,What are what are the recommendations that you would give someone if they were a startup in today's environment\N你对今天环境下的初创公司有什么建议？
+Dialogue: 0,1:23:05.28,1:23:12.51,Sub,,0,0,0,,and they wanted to go and build their version of a BEV vehicle cuz we've supported a hundred since 2020.\N如果他们想打造自己的BEV车型，因为我们自2020年以来已经支持了上百家企业。
+Dialogue: 0,1:23:12.56,1:23:13.39,Sub,,0,0,0,,It's a difficult space.\N这是一个艰难的领域。
+Dialogue: 0,1:23:13.44,1:23:15.15,Sub,,0,0,0,,It's a very difficult space.\N这是一个非常艰难的领域。
+Dialogue: 0,1:23:15.20,1:23:20.34,Sub,,0,0,0,,I think you know with any startup there has to be some my opinion is like you have to have\N我认为，任何初创公司都必须有某种程度的信念，我的看法是，\N你必须对要做的事有坚定的信念，并且这种信念必须贯穿到你雇佣的每一个人身上。
+Dialogue: 0,1:23:20.39,1:23:24.54,Sub,,0,0,0,,like certain level of conviction in what you're going to do and it has to permeate through everyone you hire.\N你必须在早期就达到这种规模，每个人都必须百分之百投入，你知道的，如果他们不是，那就离开。
+Dialogue: 0,1:23:24.60,1:23:34.62,Sub,,0,0,0,,And like you have to be at that scale at that early stage, everyone's got to be 195%bought in, you know, like and if they're not they're out.\N你必须在早期就达到这种规模，每个人都必须百分之百投入，你知道的，如果他们不是，那就离开。
+Dialogue: 0,1:23:34.67,1:23:42.77,Sub,,0,0,0,,And like, it was early days at Tesla it was like; it was I don't want to call it a bloodbath, but it was like: if you're not in, you're out.\N而且那时候特斯拉还处于早期，感觉就像：如果你不在其中，那你就不在。
+Dialogue: 0,1:23:42.82,1:23:45.24,Sub,,0,0,0,,And there's no like in between; there's no middle gray.\N而且中间没有灰色地带，没有折中选项。
+Dialogue: 0,1:23:45.29,1:23:53.03,Sub,,0,0,0,,And so, like, I think if I was advising a startup, it's like: be ruthless about the idea you have,\N所以啊，如果我要给一家初创公司提建议，我会说：对你自己的想法一定要毫不留情。
+Dialogue: 0,1:23:53.08,1:23:57.23,Sub,,0,0,0,,the concept and the vision you're going for, and the people you're employing to try and make it real.\N你所追求的概念与愿景，以及你所聘用的那些致力于将其变为现实的人。
+Dialogue: 0,1:23:57.28,1:23:57.61,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,1:23:57.64,1:23:58.61,Sub,,0,0,0,,And about all of it.\N还有所有这些。
+Dialogue: 0,1:23:58.66,1:24:06.86,Sub,,0,0,0,,Be ruthless ruthless about cost and like you have to kind of be all in on that respect and then you know, whether it's a BEV or or or you know,\N在成本上要毫不留情，你必须在这一点上全力以赴，然后不管它是纯电车型还是其他类型。
+Dialogue: 0,1:24:06.91,1:24:12.25,Sub,,0,0,0,,an AV or or a humanoid robot or whatever, that that ruthless mentality has to be there and I don't mean be mean.\N无论是自动驾驶汽车，还是人形机器人，或者其他任何东西，\N那种冷酷的进取心都必须存在，我的意思不是要变得刻薄。
+Dialogue: 0,1:24:12.30,1:24:15.35,Sub,,0,0,0,,You don't have to be mean about it, but like you have to be kind of cutthroat.\N你不必咄咄逼人，但得有点狠劲。
+Dialogue: 0,1:24:15.40,1:24:17.92,Sub,,0,0,0,,And the other thing is like there's always an element of luck.\N还有就是，总归会有一些运气的成分。
+Dialogue: 0,1:24:17.97,1:24:23.75,Sub,,0,0,0,,You know, we came in you know, right at the time that the automotive industry was kind of on a downturn,\N你知道，我们进来的时候，正好赶上汽车行业开始走下坡路。
+Dialogue: 0,1:24:23.80,1:24:30.95,Sub,,0,0,0,,you know, there was a availability of talent, you know, that might not have have been there.\N你知道，人才的可获得性，可能原本并不存在。
+Dialogue: 0,1:24:31.00,1:24:35.47,Sub,,0,0,0,,Equipment, we got, you know, new me from Toyota pretty cheap.\N设备方面，我们从丰田买到了一台新机器，价格相当便宜。
+Dialogue: 0,1:24:35.52,1:24:38.27,Sub,,0,0,0,,You know, and so sometimes you need some luck.\N你知道，有时候你得靠点运气。
+Dialogue: 0,1:24:38.32,1:24:38.62,Sub,,0,0,0,,Yeah.\N对。
+Dialogue: 0,1:24:38.56,1:24:45.62,Sub,,0,0,0,,You know, and like you can't create luck, but um you know, luck is opportunity and preparation um meeting together.\N你知道，你无法创造运气，但运气其实就是机会与准备的结合。
+Dialogue: 0,1:24:45.66,1:24:50.15,Sub,,0,0,0,,And so if you're prepared and you're ruthless and the opportunity arises, you'll make your own luck.\N所以如果你准备好了，又足够果断，机会一旦出现，你就能自己创造好运。
+Dialogue: 0,1:24:50.20,1:24:52.90,Sub,,0,0,0,,Yeah, and I I'd like to say focus as well.\N对，我还想说专注也很重要。
+Dialogue: 0,1:24:52.95,1:24:53.26,Sub,,0,0,0,,Sure.\N当然。
+Dialogue: 0,1:24:53.29,1:25:00.02,Sub,,0,0,0,,I I think you add those things and then you tell cuz I've we've worked with startups and companies trying to do stuff and if they're not focused,\N我觉得把这些要素结合起来，你就会明白，因为我们和很多初创公司、想做事的企业合作过，如果他们不专注，
+Dialogue: 0,1:25:00.07,1:25:04.07,Sub,,0,0,0,,they can be ruthless, but if they're trying to do 10 things at once, they're to do one thing good.\N即便再果断，如果同时想做十件事，最终也做不好一件事。
+Dialogue: 0,1:25:04.12,1:25:05.15,Sub,,0,0,0,,You got to do one thing well.\N你必须把一件事做到极致。
+Dialogue: 0,1:25:05.20,1:25:06.28,Sub,,0,0,0,,Yeah, uh it's great.\N对，这很棒。
+Dialogue: 0,1:25:06.33,1:25:07.91,Sub,,0,0,0,,So, last two questions.\N那么，最后两个问题。
+Dialogue: 0,1:25:07.96,1:25:15.35,Sub,,0,0,0,,Feel like I know the answer I'm going to get, but when can we get a Cybercab and when can we get an Optimus to go and tear down?\N我感觉我知道自己会得到什么答案，但什么时候能推出 Cybercab，\N什么时候能推出 Optimus 去拆掉那些东西？
+Dialogue: 0,1:25:15.40,1:25:18.19,Sub,,0,0,0,,Uh not yet.\N嗯，还没到那个时候。
+Dialogue: 0,1:25:18.24,1:25:18.54,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,1:25:18.56,1:25:21.29,Sub,,0,0,0,,Um yeah, I mean the Cybercab we're going to keep that one close.\N嗯，是的，我们的 Cybercab 会保持高度保密。
+Dialogue: 0,1:25:21.34,1:25:26.75,Sub,,0,0,0,,We Yeah, we hope that you guys coming out here you saw some of this saw the stuff we're doing inside and uh Yeah.\N是的，我们希望你们过来这里，看到了一些东西，也看到了我们内部在做的工作，嗯，是的。
+Dialogue: 0,1:25:26.80,1:25:29.52,Sub,,0,0,0,,and uh Optimus is uh even tighter than that.\N而 Optimus 的保密程度甚至更高。
+Dialogue: 0,1:25:29.57,1:25:29.87,Sub,,0,0,0,,So.\N所以。
+Dialogue: 0,1:25:29.72,1:25:34.18,Sub,,0,0,0,,It's It's worth noting on cab and Optimus will be the same way you can tell already with the V3 kind of\N值得注意的是，无论是 Cybercab 还是 Optimus，\N情况都是一样的，从 V3 的概念上你已经能看出来，
+Dialogue: 0,1:25:34.23,1:25:41.38,Sub,,0,0,0,,concept is like this car is going to be progressively improved at a rapid rate and we're taking customer feedback every day.\N这辆车将会以极快的速度持续迭代改进，我们每天都在收集客户反馈。
+Dialogue: 0,1:25:41.43,1:25:50.59,Sub,,0,0,0,,We're working that back into like what do we want to do to to make it make it that car that will satisfy 80%of miles driven every year.\N我们会把这些反馈不断融入到产品中，目标是打造一辆能覆盖每年 80% 行驶里程的车。
+Dialogue: 0,1:25:50.64,1:25:51.11,Sub,,0,0,0,,Yeah.\N是的。
+Dialogue: 0,1:25:51.16,1:25:57.87,Sub,,0,0,0,,And so to do that, we have to be very critical of ourselves and make sure both on the software, firmware, and on the hardware side.\N为了实现这一点，我们必须对自己保持高度严格，确保在软件、固件和硬件方面都做到位。
+Dialogue: 0,1:25:57.92,1:25:58.22,Sub,,0,0,0,,Yes.\N是的。
+Dialogue: 0,1:25:58.17,1:26:05.31,Sub,,0,0,0,,Yes, and on the on the hardware side that we're listening to people every day that are coming in cuz like we beg for feedback from people.\N是的，而且在硬件方面，我们每天都在倾听来自各方的反馈，因为我们会主动请求大家提供意见。
+Dialogue: 0,1:26:05.36,1:26:07.87,Sub,,0,0,0,,Like tell us what you want us to do.\N告诉我们你们希望我们做什么。
+Dialogue: 0,1:26:07.92,1:26:14.83,Sub,,0,0,0,,I met so many people the other last night and they were like,"I rode in Cybercab it was awesome."I was like, "What was wrong?"\N昨晚我见了很多人，他们都说：“我坐过 Cybercab，太棒了。” 我就问：“有什么问题吗？”
+Dialogue: 0,1:26:14.88,1:26:16.16,Sub,,0,0,0,,Don't tell me all the things that are wrong.\N别告诉我所有出问题的地方。
+Dialogue: 0,1:26:16.21,1:26:17.17,Sub,,0,0,0,,Yeah, no I got it.\N是的，我明白了。
+Dialogue: 0,1:26:17.22,1:26:20.91,Sub,,0,0,0,,Well, there's a lot of boring things like flying cars going on at Tesla.\N其实特斯拉还有很多无聊的事情在做，比如飞行汽车。
+Dialogue: 0,1:26:20.96,1:26:24.26,Sub,,0,0,0,,So, it's it's been a joy to walk through the the plant.\N所以，参观工厂真的是一种享受。
+Dialogue: 0,1:26:24.31,1:26:28.55,Sub,,0,0,0,,Thank you for spending the time and wish you nothing but the luck.\N谢谢你们花时间，祝你们一切顺利。
+Dialogue: 0,1:26:28.60,1:26:29.13,Sub,,0,0,0,,Thank you very much.\N非常感谢。
+Dialogue: 0,1:26:29.18,1:26:29.84,Sub,,0,0,0,,Appreciate it, guys.\N谢谢大家。
+Dialogue: 0,1:26:29.89,1:26:31.11,Sub,,0,0,0,,Thank you for being here.\N感谢各位的到来。
+Dialogue: 0,1:26:31.16,1:26:32.12,Sub,,0,0,0,,Take care.\N保重。
+Dialogue: 0,1:26:32.17,1:26:34.60,Sub,,0,0,0,,See you everybody.\N大家再见。

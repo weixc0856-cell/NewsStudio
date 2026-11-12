@@ -1,0 +1,631 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:03.63,Sub,,0,0,0,,Nvidia's obviously like the 800-pound gorilla in the room.
+Dialogue: 0,0:00:03.68,0:00:06.11,Sub,,0,0,0,,Why don't they Why didn't they make a supercomputer?
+Dialogue: 0,0:00:06.16,0:00:10.59,Sub,,0,0,0,,So our impression is that Nvidia can't make it, but benefits tremendously from it existing.
+Dialogue: 0,0:00:10.64,0:00:12.72,Sub,,0,0,0,,The reason why they can't make it is because they would
+Dialogue: 0,0:00:12.77,0:00:14.34,Sub,,0,0,0,,then not be independent enough
+Dialogue: 0,0:00:14.39,0:00:25.43,Sub,,0,0,0,,for people to trade on it.
+Dialogue: 0,0:00:25.48,0:00:27.99,Sub,,0,0,0,,Anyway, Evan, welcome back to Latent Space.
+Dialogue: 0,0:00:28.04,0:00:28.93,Sub,,0,0,0,,Welcome back to AIE.
+Dialogue: 0,0:00:28.98,0:00:30.23,Sub,,0,0,0,,Actually, first time at A I E?
+Dialogue: 0,0:00:30.28,0:00:31.15,Sub,,0,0,0,,I think so, yeah.
+Dialogue: 0,0:00:31.20,0:00:39.39,Sub,,0,0,0,,This is very special one because I feel like you have been working on compute trading and compute markets for a while.
+Dialogue: 0,0:00:39.44,0:00:42.11,Sub,,0,0,0,,Now it's like feeling of the moment.
+Dialogue: 0,0:00:42.16,0:00:42.63,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:00:42.68,0:00:49.30,Sub,,0,0,0,,Jump basically announced that they are getting into compute markets, which is why I'm excited to sort of cluster people.
+Dialogue: 0,0:00:49.34,0:00:53.79,Sub,,0,0,0,,You met Oliver from SemiAnalysis, who is basically initiating coverage on compute markets.
+Dialogue: 0,0:00:53.84,0:00:57.35,Sub,,0,0,0,,This is This is my read on this.
+Dialogue: 0,0:00:57.40,0:01:00.39,Sub,,0,0,0,,So people are going to watch your talk.
+Dialogue: 0,0:01:00.44,0:01:07.39,Sub,,0,0,0,,I think it's very good explanation of like both your origin story and why you need to exist and what the hard problems you work on.
+Dialogue: 0,0:01:07.44,0:01:07.87,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:01:07.92,0:01:10.63,Sub,,0,0,0,,Done in a very simple engaging manner.
+Dialogue: 0,0:01:10.68,0:01:15.17,Sub,,0,0,0,,I'm very jealous of your writing skills cuz you showed the flyer for that you showed at NeurIPS.
+Dialogue: 0,0:01:15.22,0:01:15.52,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:01:15.44,0:01:19.19,Sub,,0,0,0,,It was like it's pretty straightforward and like simple and like it's it's good.
+Dialogue: 0,0:01:19.24,0:01:19.57,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:01:19.60,0:01:20.43,Sub,,0,0,0,,So anyway, congrats.
+Dialogue: 0,0:01:20.48,0:01:21.12,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:01:21.17,0:01:22.31,Sub,,0,0,0,,I appreciate that.
+Dialogue: 0,0:01:22.36,0:01:23.43,Sub,,0,0,0,,And also congrats on A I E.
+Dialogue: 0,0:01:23.48,0:01:26.27,Sub,,0,0,0,,It seems to me y'all are rolling.
+Dialogue: 0,0:01:26.32,0:01:26.78,Sub,,0,0,0,,We're rolling.
+Dialogue: 0,0:01:26.83,0:01:29.52,Sub,,0,0,0,,I just came back from the site tour for next year's A I E.
+Dialogue: 0,0:01:29.58,0:01:31.63,Sub,,0,0,0,,And then for Give me like a hint.
+Dialogue: 0,0:01:31.68,0:01:32.44,Sub,,0,0,0,,At Javits Center.
+Dialogue: 0,0:01:32.50,0:01:34.11,Sub,,0,0,0,,It's the same place they do Comic-Con.
+Dialogue: 0,0:01:34.16,0:01:34.75,Sub,,0,0,0,,Okay, wow.
+Dialogue: 0,0:01:34.80,0:01:36.39,Sub,,0,0,0,,Which Wow.
+Dialogue: 0,0:01:36.44,0:01:37.19,Sub,,0,0,0,,Wow.
+Dialogue: 0,0:01:37.24,0:01:38.15,Sub,,0,0,0,,Damn.
+Dialogue: 0,0:01:38.20,0:01:41.15,Sub,,0,0,0,,But I think the finance focus is really hitting for folks.
+Dialogue: 0,0:01:41.20,0:01:41.50,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:01:41.48,0:01:46.51,Sub,,0,0,0,,So we're going to try to split up like this is Here we just lump everything in finance.
+Dialogue: 0,0:01:46.56,0:01:49.12,Sub,,0,0,0,,Like your finance, their finance, like insurance is finance.
+Dialogue: 0,0:01:49.17,0:01:50.63,Sub,,0,0,0,,But like they're all super different.
+Dialogue: 0,0:01:50.68,0:01:51.15,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:01:51.20,0:01:57.20,Sub,,0,0,0,,So we'll probably break out things more minutely in in future because people want
+Dialogue: 0,0:01:57.26,0:02:00.96,Sub,,0,0,0,,to go deep on hedge fund stuff or banking or personal wealth or Yeah,
+Dialogue: 0,0:02:01.01,0:02:02.99,Sub,,0,0,0,,especially in in New York.
+Dialogue: 0,0:02:03.04,0:02:06.63,Sub,,0,0,0,,Yeah, like Anthropic was like, yeah, we're all about RIAs right now.
+Dialogue: 0,0:02:06.68,0:02:08.63,Sub,,0,0,0,,RIAs like registered investment advisors.
+Dialogue: 0,0:02:08.68,0:02:08.98,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:02:09.00,0:02:10.43,Sub,,0,0,0,,Like so different from you.
+Dialogue: 0,0:02:10.48,0:02:13.27,Sub,,0,0,0,,Yeah, no, no, I'm uh I'm aware of this.
+Dialogue: 0,0:02:13.32,0:02:14.35,Sub,,0,0,0,,Yeah, yeah, yeah.
+Dialogue: 0,0:02:14.40,0:02:21.71,Sub,,0,0,0,,Um okay, so for listeners who don't know, uh we did a podcast 2 years ago where you talked about your your uh you know, where where SF Compute was.
+Dialogue: 0,0:02:21.76,0:02:22.16,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:02:22.20,0:02:26.12,Sub,,0,0,0,,Um today you're you're much more in this sort of physical settlements.
+Dialogue: 0,0:02:26.16,0:02:29.27,Sub,,0,0,0,,You talk about your backplane or what do you call it?
+Dialogue: 0,0:02:29.32,0:02:30.11,Sub,,0,0,0,,Uh the backplane.
+Dialogue: 0,0:02:30.16,0:02:33.28,Sub,,0,0,0,,Backplane, which uh obviously like like takes a lot of hardcore engineering stuff.
+Dialogue: 0,0:02:33.33,0:02:40.87,Sub,,0,0,0,,Um can you give a status update on like where is SF Compute versus listeners who last heard you on a podcast 2 years ago?
+Dialogue: 0,0:02:40.92,0:02:46.72,Sub,,0,0,0,,So when we started, we were this company called Junark, and then we were just trying to sublease our cluster.
+Dialogue: 0,0:02:46.77,0:02:49.83,Sub,,0,0,0,,Um and we started there in the technical stack.
+Dialogue: 0,0:02:49.88,0:02:54.96,Sub,,0,0,0,,Um and a way to think about it is it's like you're in a hotel and you're trying to sell that hotel room.
+Dialogue: 0,0:02:55.01,0:02:58.60,Sub,,0,0,0,,And then somebody asks you, "Hey, like are you going to clean my room?"
+Dialogue: 0,0:02:58.65,0:03:04.92,Sub,,0,0,0,,And then you say, "Oh, I guess I probably also need the hotel room as well or like I need the um the cleaning closet."
+Dialogue: 0,0:03:04.97,0:03:07.35,Sub,,0,0,0,,And so you go get access to the cleaning closet.
+Dialogue: 0,0:03:07.40,0:03:10.02,Sub,,0,0,0,,And then they want room service, and so you get access to the kitchen.
+Dialogue: 0,0:03:10.06,0:03:15.45,Sub,,0,0,0,,And then, you know, they want um security, and so you get access to the security closet, and you get this, and you do that, and you do this.
+Dialogue: 0,0:03:15.50,0:03:17.67,Sub,,0,0,0,,And at a certain point, you're just running the whole hotel.
+Dialogue: 0,0:03:17.72,0:03:21.98,Sub,,0,0,0,,Um and the moment you're running the whole hotel, you say, "Oh, wait a second.
+Dialogue: 0,0:03:22.03,0:03:32.42,Sub,,0,0,0,,Um instead, my supplier on this market um is somebody that looks closer to a fund um or a cloud that has access in our case,
+Dialogue: 0,0:03:32.47,0:03:35.26,Sub,,0,0,0,,a cloud that has access to the data center, and we're going to level up.
+Dialogue: 0,0:03:35.32,0:03:40.24,Sub,,0,0,0,,And so what we spent the last several years doing is building the entire operating capacity of a
+Dialogue: 0,0:03:40.30,0:03:47.47,Sub,,0,0,0,,cloud um in order to offer in order to actually deliver um the compute at a reliable level.
+Dialogue: 0,0:03:47.52,0:03:49.44,Sub,,0,0,0,,Um we call that physical settlement.
+Dialogue: 0,0:03:49.50,0:03:54.58,Sub,,0,0,0,,We're taking a term from the futures market futures markets, from other markets.
+Dialogue: 0,0:03:54.63,0:04:02.47,Sub,,0,0,0,,Um where in, you know, oil or soybeans or something, physical settlement means you get delivered the oil and the soybeans.
+Dialogue: 0,0:04:02.52,0:04:02.92,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:04:02.96,0:04:12.30,Sub,,0,0,0,,Um but um in some markets, um like in oil and also in power, um there's like a delivery network.
+Dialogue: 0,0:04:12.35,0:04:14.31,Sub,,0,0,0,,In oil, you have to have pipelines.
+Dialogue: 0,0:04:14.36,0:04:18.91,Sub,,0,0,0,,If you would like the oil to be delivered to you, there has to be a way for it to get to you.
+Dialogue: 0,0:04:18.96,0:04:19.26,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:04:19.28,0:04:23.36,Sub,,0,0,0,,Um And and and for people interested in financial history, during COVID,
+Dialogue: 0,0:04:23.42,0:04:32.71,Sub,,0,0,0,,oil went negative because uh so like I will pay you to take oil from me because it is sitting there in the the port and like I can't pay for this.
+Dialogue: 0,0:04:32.76,0:04:33.06,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:04:33.04,0:04:34.75,Sub,,0,0,0,,And so I will pay you to take my oil.
+Dialogue: 0,0:04:34.80,0:04:35.45,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:04:35.50,0:04:38.47,Sub,,0,0,0,,Um That that is like the weirdness of physical settlement.
+Dialogue: 0,0:04:38.52,0:04:38.82,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:04:38.75,0:04:42.42,Sub,,0,0,0,,There's a bunch of weirdnesses like this in other markets as well.
+Dialogue: 0,0:04:42.47,0:04:47.95,Sub,,0,0,0,,So in the power markets and the grid, um there's parts of the orders that you fill out,
+Dialogue: 0,0:04:48.00,0:04:54.97,Sub,,0,0,0,,the buyers and sellers, that um are there because the boiler takes a while to cool off.
+Dialogue: 0,0:04:55.02,0:04:56.88,Sub,,0,0,0,,Um and you can, you know,
+Dialogue: 0,0:04:56.93,0:05:03.55,Sub,,0,0,0,,stop the boiler and then it will you can start it back up again within some period of time and so that has to get factored into the order book.
+Dialogue: 0,0:05:03.60,0:05:06.95,Sub,,0,0,0,,Um this same thing happens in compute markets.
+Dialogue: 0,0:05:07.00,0:05:11.30,Sub,,0,0,0,,So we co-designed physical settlement and the order book at the same time
+Dialogue: 0,0:05:11.36,0:05:15.60,Sub,,0,0,0,,and that meant that we get to actually handle the real constraints of compute,
+Dialogue: 0,0:05:15.65,0:05:19.39,Sub,,0,0,0,,which might include something like, "Oh, I'm okay with being interrupted,
+Dialogue: 0,0:05:19.44,0:05:24.48,Sub,,0,0,0,,but only if there's like storage on the thing that I can recover from really quickly."
+Dialogue: 0,0:05:24.53,0:05:25.95,Sub,,0,0,0,,Um very similar types of problems.
+Dialogue: 0,0:05:26.00,0:05:26.30,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:05:26.30,0:05:30.11,Sub,,0,0,0,,So uh people can refer to your talk and you've done a couple other podcasts already.
+Dialogue: 0,0:05:30.16,0:05:35.24,Sub,,0,0,0,,Um so I want to be like the sort of 201 level instead of the 101 level short uh and also because I
+Dialogue: 0,0:05:35.29,0:05:40.55,Sub,,0,0,0,,I am I have been a derivatives trader so I can give people a bit more detail that you normally don't get into.
+Dialogue: 0,0:05:40.60,0:05:41.15,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:05:41.20,0:05:46.07,Sub,,0,0,0,,Um so for example, well, how mature or deep or liquid is the compute market today?
+Dialogue: 0,0:05:46.12,0:05:48.52,Sub,,0,0,0,,Uh not very mature or deep or liquid.
+Dialogue: 0,0:05:48.57,0:05:54.53,Sub,,0,0,0,,Um so, what we've been doing is first we had to we had to go get a bunch of supply online in the first place,
+Dialogue: 0,0:05:54.58,0:05:58.70,Sub,,0,0,0,,which just takes a while, and then we had to build the entire platform in order to do this.
+Dialogue: 0,0:05:58.76,0:06:06.76,Sub,,0,0,0,,Um and we just now got that working, and so now we move um capacity over onto the order book, um which makes it liquid.
+Dialogue: 0,0:06:06.80,0:06:11.92,Sub,,0,0,0,,Um and so, 5% of our total capacity is on the order book, and we're consistently moving more and more,
+Dialogue: 0,0:06:11.97,0:06:14.62,Sub,,0,0,0,,and then we're bringing on more capacity that's all on the order book.
+Dialogue: 0,0:06:14.68,0:06:20.65,Sub,,0,0,0,,Um the nice part is that um maybe I should have said the the volume on the actual order book is small,
+Dialogue: 0,0:06:20.70,0:06:23.35,Sub,,0,0,0,,but the um the liquidity on the order book is high.
+Dialogue: 0,0:06:23.40,0:06:29.87,Sub,,0,0,0,,So, for that small amount of capacity that you have, um you have um like very concentrated liquidity.
+Dialogue: 0,0:06:29.92,0:06:36.56,Sub,,0,0,0,,So, um a sort of standard metric I would say for someone who is using this is a customer who buys capacity from us,
+Dialogue: 0,0:06:36.61,0:06:43.35,Sub,,0,0,0,,and they spend $100 to buy that capacity, will make back $25 on average from selling it back to somebody else.
+Dialogue: 0,0:06:43.40,0:06:46.42,Sub,,0,0,0,,Um and that's the number that we or this is one of the metrics that we
+Dialogue: 0,0:06:46.47,0:06:51.69,Sub,,0,0,0,,try to track because um we want the liquidity to be useful to the commercial participant,
+Dialogue: 0,0:06:51.74,0:06:53.78,Sub,,0,0,0,,and you can measure liquidity in a bunch of different ways.
+Dialogue: 0,0:06:53.83,0:06:56.31,Sub,,0,0,0,,You can say like, "Oh, I just want tons of makers or something."
+Dialogue: 0,0:06:56.36,0:06:58.09,Sub,,0,0,0,,Um and you can measure it in like high-minded ways.
+Dialogue: 0,0:06:58.14,0:07:03.83,Sub,,0,0,0,,We try to measure it by like, "Is this solving the problem um for the customer?"
+Dialogue: 0,0:07:03.88,0:07:05.46,Sub,,0,0,0,,Yeah, got it.
+Dialogue: 0,0:07:05.51,0:07:11.66,Sub,,0,0,0,,And so, uh last time we talked as well, there was a lot of contract uh conversation about standardizing the contracts.
+Dialogue: 0,0:07:11.71,0:07:12.07,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:07:12.10,0:07:17.19,Sub,,0,0,0,,Um talking with like uh the CFTC or whatever, like what's the status on those things?
+Dialogue: 0,0:07:17.24,0:07:21.31,Sub,,0,0,0,,Um so, I think standardizing the contracts in general is still pretty far away.
+Dialogue: 0,0:07:21.36,0:07:28.46,Sub,,0,0,0,,Um and the what we were trying to do at the time was um or basically,
+Dialogue: 0,0:07:28.51,0:07:34.04,Sub,,0,0,0,,what we learned over the last several years was we just needed to operate the whole thing, otherwise you cannot standardize the thing.
+Dialogue: 0,0:07:34.09,0:07:39.87,Sub,,0,0,0,,And so, to get closer to something that can be standardized, you first need to make all the operations of the thing the same.
+Dialogue: 0,0:07:39.92,0:07:40.31,Sub,,0,0,0,,Right.
+Dialogue: 0,0:07:40.34,0:07:47.40,Sub,,0,0,0,,To give an example of what can go be different is a single operator can offer two different types of virtual machines.
+Dialogue: 0,0:07:47.45,0:07:54.75,Sub,,0,0,0,,One type of virtual machine might have a 40% performance degradation versus another types of virtual machine.
+Dialogue: 0,0:07:54.80,0:07:56.15,Sub,,0,0,0,,And 40% is a lot.
+Dialogue: 0,0:07:56.20,0:08:01.79,Sub,,0,0,0,,When you say performance degradation, are you talking like MFU type things or like amount of burning that you've experienced or what?
+Dialogue: 0,0:08:01.84,0:08:07.05,Sub,,0,0,0,,It will affect So, in this particular case, I'm talking about GPU kernel launches and how long it takes for that to happen,
+Dialogue: 0,0:08:07.10,0:08:11.31,Sub,,0,0,0,,which is a process that happens quite frequently when you're doing sort of either training or inference.
+Dialogue: 0,0:08:11.36,0:08:11.69,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:08:11.72,0:08:22.47,Sub,,0,0,0,,Um the um uh that will basically the end result is that you get a worse MFU, but um like Is the intermediate level intermediate level, basically.
+Dialogue: 0,0:08:22.52,0:08:22.88,Sub,,0,0,0,,Yeah, yeah.
+Dialogue: 0,0:08:22.91,0:08:27.79,Sub,,0,0,0,,So, so what I'm trying to So, for anyone who's traded commodities before, there's different grades of commodity, yes, right?
+Dialogue: 0,0:08:27.84,0:08:33.31,Sub,,0,0,0,,There's like It's not oil, it's light sweet crude versus like whatever exactly the opposite of light sweet crude is or it's like,
+Dialogue: 0,0:08:33.36,0:08:36.95,Sub,,0,0,0,,you know, uh corn level A or corn B or whatever.
+Dialogue: 0,0:08:37.00,0:08:40.87,Sub,,0,0,0,,Uh and so like people are trying to Well, you have to establish the equivalents equivalents of those things.
+Dialogue: 0,0:08:40.92,0:08:41.27,Sub,,0,0,0,,Right, yes.
+Dialogue: 0,0:08:41.30,0:08:42.95,Sub,,0,0,0,,And I'm wondering if they they have been established.
+Dialogue: 0,0:08:43.00,0:08:47.22,Sub,,0,0,0,,So, what we did instead um was we created an order book that had multiple different constraints,
+Dialogue: 0,0:08:47.27,0:08:51.38,Sub,,0,0,0,,and you can say, "I want to have um you know, something that's between this and that.
+Dialogue: 0,0:08:51.43,0:08:53.39,Sub,,0,0,0,,Um it runs from this time to this time.
+Dialogue: 0,0:08:53.44,0:08:55.05,Sub,,0,0,0,,Um it's like uh X to Y."
+Dialogue: 0,0:08:55.10,0:08:57.95,Sub,,0,0,0,,It's a bunch of different properties that you can attach your order,
+Dialogue: 0,0:08:58.00,0:09:02.39,Sub,,0,0,0,,and then we match that against sell orders that have those properties um in a big matching engine.
+Dialogue: 0,0:09:02.44,0:09:05.19,Sub,,0,0,0,,Um and the reason why we did it this way is it allows us
+Dialogue: 0,0:09:05.24,0:09:09.90,Sub,,0,0,0,,to generate liquidity without having to standardize before you know what the technology can do.
+Dialogue: 0,0:09:09.95,0:09:15.38,Sub,,0,0,0,,Um and because the technology was shifting so quickly, um we wanted to basically be able to do that.
+Dialogue: 0,0:09:15.43,0:09:18.34,Sub,,0,0,0,,The trade-off of this is that you have less concentrated liquidity,
+Dialogue: 0,0:09:18.39,0:09:23.19,Sub,,0,0,0,,and so the prices are um going to have There's going to be more spreads between the the buy and the sell.
+Dialogue: 0,0:09:23.24,0:09:23.64,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:09:23.68,0:09:24.59,Sub,,0,0,0,,Um It It sucks.
+Dialogue: 0,0:09:24.64,0:09:24.94,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:09:24.96,0:09:29.86,Sub,,0,0,0,,But, on the other hand, it means there's lots of arbitrage to make um if you can do that correctly.
+Dialogue: 0,0:09:29.90,0:09:33.99,Sub,,0,0,0,,So, if you have a product that can use lots of different types of capacity,
+Dialogue: 0,0:09:34.04,0:09:40.11,Sub,,0,0,0,,um then you might really like SF compute because you will be able to use lots of different types of capacity and you'll make more money.
+Dialogue: 0,0:09:40.16,0:09:41.95,Sub,,0,0,0,,Um you can take the the spread.
+Dialogue: 0,0:09:42.00,0:09:42.35,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:09:42.38,0:09:45.39,Sub,,0,0,0,,What dimensions matter in this grid of things?
+Dialogue: 0,0:09:45.44,0:09:49.48,Sub,,0,0,0,,Um so a bunch of different things.
+Dialogue: 0,0:09:49.53,0:09:55.76,Sub,,0,0,0,,Um one is dimensions categories that I will say is like is there a workload running on it right now or is it capacity in the future?
+Dialogue: 0,0:09:55.81,0:09:58.40,Sub,,0,0,0,,So is it capacity right now?
+Dialogue: 0,0:09:58.45,0:10:03.16,Sub,,0,0,0,,Um capacity right now in order for you to sell that um you have to interrupt your current workload.
+Dialogue: 0,0:10:03.22,0:10:07.13,Sub,,0,0,0,,So you have to think do I care if my current workload is interrupted or not?
+Dialogue: 0,0:10:07.18,0:10:11.50,Sub,,0,0,0,,Capacity that's sold that's starting a month from now um you can buy and sell that all the time.
+Dialogue: 0,0:10:11.55,0:10:14.04,Sub,,0,0,0,,And so you get um liquidity on that really easily.
+Dialogue: 0,0:10:14.09,0:10:19.53,Sub,,0,0,0,,Um there is some concern like oh no will I have capacity next month but it's very different than if you're interrupting a workload right now.
+Dialogue: 0,0:10:19.58,0:10:21.79,Sub,,0,0,0,,Um the way that the interruption happens matters.
+Dialogue: 0,0:10:21.84,0:10:27.83,Sub,,0,0,0,,So an example is if you're on a cluster and the cluster doesn't have as amazing storage as you want it to have.
+Dialogue: 0,0:10:27.88,0:10:31.75,Sub,,0,0,0,,Um so an example is like do you have a WEKA or VAST system under the hood?
+Dialogue: 0,0:10:31.80,0:10:34.74,Sub,,0,0,0,,Um and do you offer that and like what's the size of that?
+Dialogue: 0,0:10:34.79,0:10:40.94,Sub,,0,0,0,,Um uh this changes how you respond to um being preempted or removed off the cluster.
+Dialogue: 0,0:10:40.99,0:10:44.05,Sub,,0,0,0,,Um meanwhile the location of that storage matters.
+Dialogue: 0,0:10:44.10,0:10:49.22,Sub,,0,0,0,,So um if you're able to move that data from one cluster to another
+Dialogue: 0,0:10:49.27,0:10:53.57,Sub,,0,0,0,,um quickly then maybe you might be able to spread across multiple different clusters.
+Dialogue: 0,0:10:53.62,0:10:56.91,Sub,,0,0,0,,Um and you can be interrupted over here and then pop back up over there.
+Dialogue: 0,0:10:56.96,0:11:03.16,Sub,,0,0,0,,Um to make that work you also need um like a a fast transit path between one cluster and another.
+Dialogue: 0,0:11:03.21,0:11:08.87,Sub,,0,0,0,,Typically this is implemented with a WAN but most of these clusters don't necessarily have um a wide area network.
+Dialogue: 0,0:11:08.92,0:11:10.17,Sub,,0,0,0,,Yeah a wide area network.
+Dialogue: 0,0:11:10.22,0:11:12.32,Sub,,0,0,0,,So um basically cables that connect the clusters together.
+Dialogue: 0,0:11:12.37,0:11:14.75,Sub,,0,0,0,,A private internet is another way to think about it.
+Dialogue: 0,0:11:14.80,0:11:18.42,Sub,,0,0,0,,Um uh lot of clusters that are being spun up today are like they're not
+Dialogue: 0,0:11:18.47,0:11:27.11,Sub,,0,0,0,,attached to um traditional CPU clusters were um next to the customer for latency reasons.
+Dialogue: 0,0:11:27.16,0:11:29.68,Sub,,0,0,0,,In GPUs they're next to the power.
+Dialogue: 0,0:11:29.73,0:11:35.63,Sub,,0,0,0,,Um wherever the like you know you put the data center next to the power rather than next to the customer.
+Dialogue: 0,0:11:35.68,0:11:41.81,Sub,,0,0,0,,Um, this means that a lot of stuff is getting put in places that previously they weren't expecting data centers there.
+Dialogue: 0,0:11:41.86,0:11:46.91,Sub,,0,0,0,,And so, you may not have um, as um, excellent of a transit path um, from one to the other.
+Dialogue: 0,0:11:46.96,0:11:48.48,Sub,,0,0,0,,So, this this starts to matter.
+Dialogue: 0,0:11:48.53,0:11:56.55,Sub,,0,0,0,,Um, other examples are um, weird where we theoretically support but don't actually um,
+Dialogue: 0,0:11:56.60,0:12:01.40,Sub,,0,0,0,,uh, like, this is a thing that we're thinking about but haven't done basically.
+Dialogue: 0,0:12:01.44,0:12:04.50,Sub,,0,0,0,,Um, the early GB200s broke.
+Dialogue: 0,0:12:04.55,0:12:06.59,Sub,,0,0,0,,The early H100s broke.
+Dialogue: 0,0:12:06.64,0:12:09.93,Sub,,0,0,0,,Um, and so, if you were buying H100s or you were buying GB200s,
+Dialogue: 0,0:12:09.98,0:12:16.06,Sub,,0,0,0,,you might really want the ones that were deployed after a certain time because you're not getting the first GD1s off the rack.
+Dialogue: 0,0:12:16.11,0:12:20.49,Sub,,0,0,0,,And so, if you're a super sophisticated customer, you may be willing to pay more um, because for that Oh,
+Dialogue: 0,0:12:20.54,0:12:26.79,Sub,,0,0,0,,so it's it's about like what cohort they were they were produced and they get better over time?
+Dialogue: 0,0:12:26.84,0:12:30.79,Sub,,0,0,0,,So, like uh, the first ones off the rack maybe had some faults or some problem.
+Dialogue: 0,0:12:30.84,0:12:31.14,Sub,,0,0,0,,Right.
+Dialogue: 0,0:12:31.10,0:12:35.45,Sub,,0,0,0,,And so, if you were the ones who got the first ones um, or you know, first ones from um,
+Dialogue: 0,0:12:35.50,0:12:41.23,Sub,,0,0,0,,the the first shipment of them, um, then yeah, they would they would be broken or um, in some way.
+Dialogue: 0,0:12:41.28,0:12:44.59,Sub,,0,0,0,,I assume that sort of process is like, look, there's the defects everywhere.
+Dialogue: 0,0:12:44.64,0:12:46.27,Sub,,0,0,0,,Like, it's it just happens, right?
+Dialogue: 0,0:12:46.32,0:12:46.62,Sub,,0,0,0,,Totally.
+Dialogue: 0,0:12:46.44,0:12:52.71,Sub,,0,0,0,,And so, like, you get it you get a new shipment off of from TSMC whatever and you just kind of run your tests and like,
+Dialogue: 0,0:12:52.76,0:12:55.38,Sub,,0,0,0,,you you figure out which ones which ones are bad and you throw them out.
+Dialogue: 0,0:12:55.42,0:12:56.91,Sub,,0,0,0,,And isn't that how it works?
+Dialogue: 0,0:12:56.96,0:13:07.47,Sub,,0,0,0,,And I I I didn't know about this element of cohorting where like, let's say Q4 2026 uh, B300s are way worse than 2027 B300s.
+Dialogue: 0,0:13:07.52,0:13:10.25,Sub,,0,0,0,,Yeah, so um, I'll I'll give an example.
+Dialogue: 0,0:13:10.30,0:13:11.95,Sub,,0,0,0,,Um, you're describing burn-in.
+Dialogue: 0,0:13:12.00,0:13:12.30,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:13:12.31,0:13:21.04,Sub,,0,0,0,,Um, so, when you get a cluster, um, a good cloud, what it does is it tries to kill all the GPUs um, before they ever get in the hands of the customer.
+Dialogue: 0,0:13:21.09,0:13:25.66,Sub,,0,0,0,,Um, and then um, the GPUs that are broken or the nodes that are broken, um, you get RMAd.
+Dialogue: 0,0:13:25.71,0:13:27.23,Sub,,0,0,0,,You basically go and replace them.
+Dialogue: 0,0:13:27.28,0:13:27.58,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:13:27.54,0:13:32.77,Sub,,0,0,0,,You return it and you get a new one and there's a lead time to that, but whatever, you'll get Yeah. you'll get some back.
+Dialogue: 0,0:13:32.82,0:13:35.51,Sub,,0,0,0,,Um and then the customer never has to experience this.
+Dialogue: 0,0:13:35.56,0:13:42.35,Sub,,0,0,0,,Um the um thing I'm referring to is that um like in early H100s,
+Dialogue: 0,0:13:42.40,0:13:49.03,Sub,,0,0,0,,there were like firmware bugs that may not even be related to the specific like they may not be Nvidia.
+Dialogue: 0,0:13:49.08,0:13:54.98,Sub,,0,0,0,,They might be like Supermicro has a firmware bug in the um in the box that you bought.
+Dialogue: 0,0:13:55.03,0:13:57.24,Sub,,0,0,0,,Um and it applies to all of them.
+Dialogue: 0,0:13:57.29,0:14:02.66,Sub,,0,0,0,,And it doesn't matter like um the solution to that was you need to get them to
+Dialogue: 0,0:14:02.71,0:14:07.27,Sub,,0,0,0,,update their firmware um or they need to ship a new thing um in every new box.
+Dialogue: 0,0:14:07.32,0:14:07.62,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:14:07.61,0:14:11.04,Sub,,0,0,0,,Or Cornelis had this for like the the B200s that that that we got.
+Dialogue: 0,0:14:11.10,0:14:13.43,Sub,,0,0,0,,Um and then like you had to use DevCloud to go fix it.
+Dialogue: 0,0:14:13.48,0:14:14.07,Sub,,0,0,0,,Yes, correct.
+Dialogue: 0,0:14:14.12,0:14:16.75,Sub,,0,0,0,,So like different types of problems like this can happen.
+Dialogue: 0,0:14:16.80,0:14:17.66,Sub,,0,0,0,,Interesting.
+Dialogue: 0,0:14:17.71,0:14:18.10,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:14:18.14,0:14:20.63,Sub,,0,0,0,,So I'm okay, that seems small compared to the overall.
+Dialogue: 0,0:14:20.68,0:14:23.64,Sub,,0,0,0,,Like I just want to like I want people to understand that the shape of this market.
+Dialogue: 0,0:14:23.69,0:14:30.68,Sub,,0,0,0,,Um you mentioned like preemption you know and and you know we talked about spot instances and how how that the analogy is.
+Dialogue: 0,0:14:30.73,0:14:33.38,Sub,,0,0,0,,And then there's also, you know, booking a month out.
+Dialogue: 0,0:14:33.43,0:14:44.23,Sub,,0,0,0,,How far out do these markets go, and is real-time or sort of preemption more interesting to you versus further out?
+Dialogue: 0,0:14:44.28,0:14:46.78,Sub,,0,0,0,,Um to answer your first question, um 3 to 5 years.
+Dialogue: 0,0:14:46.83,0:14:47.91,Sub,,0,0,0,,Um Wow.
+Dialogue: 0,0:14:47.96,0:14:51.11,Sub,,0,0,0,,We're starting to see month by month or quarter by quarter or how's this?
+Dialogue: 0,0:14:51.16,0:14:52.39,Sub,,0,0,0,,Are you asking what how the cash flow works?
+Dialogue: 0,0:14:52.44,0:14:53.33,Sub,,0,0,0,,The the the the contracts.
+Dialogue: 0,0:14:53.38,0:14:55.25,Sub,,0,0,0,,Like the few the futures contracts, right?
+Dialogue: 0,0:14:55.30,0:14:57.87,Sub,,0,0,0,,Again like I'm a former contracts derivatives trader.
+Dialogue: 0,0:14:57.92,0:15:01.67,Sub,,0,0,0,,In the in the market itself Yeah. um like is in the broader market.
+Dialogue: 0,0:15:01.72,0:15:02.02,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:15:01.88,0:15:03.71,Sub,,0,0,0,,Um clusters are financed 3 to 5 years.
+Dialogue: 0,0:15:03.76,0:15:04.06,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:15:03.92,0:15:07.87,Sub,,0,0,0,,Um so the the The payments are over that period of time.
+Dialogue: 0,0:15:07.92,0:15:08.22,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:15:08.16,0:15:14.39,Sub,,0,0,0,,Um there's also like blocks of capacity is in our order book um which can extend any arbitrary time.
+Dialogue: 0,0:15:14.44,0:15:14.74,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:15:14.72,0:15:18.37,Sub,,0,0,0,,Um there's some stuff that we have to do um for um the cash flow on that.
+Dialogue: 0,0:15:18.42,0:15:22.14,Sub,,0,0,0,,Right now what we do is we just ask people to pay entirely up front for a block.
+Dialogue: 0,0:15:22.19,0:15:25.13,Sub,,0,0,0,,Um we don't ask them to do that for a lease, for a longer-term contract.
+Dialogue: 0,0:15:25.18,0:15:28.23,Sub,,0,0,0,,This gets into something that I definitely need a whiteboard to explain.
+Dialogue: 0,0:15:28.28,0:15:34.36,Sub,,0,0,0,,Um, but, um, you had another question I was about to answer, I forgot what it Uh, do you want real-time or do you want Like,
+Dialogue: 0,0:15:34.41,0:15:38.23,Sub,,0,0,0,,do you want more, uh, what's more interesting to you, real-time or long longer out?
+Dialogue: 0,0:15:38.28,0:15:43.67,Sub,,0,0,0,,So, we care more about longer out because we're trying to build a forwards curve that has a lot of liquidity on it.
+Dialogue: 0,0:15:43.72,0:15:51.47,Sub,,0,0,0,,Um, the, um, these are kind of the same thing and kind of not.
+Dialogue: 0,0:15:51.52,0:15:58.42,Sub,,0,0,0,,Um, so, what we do is we since say you can buy an hour out, you can buy right now to the next hour.
+Dialogue: 0,0:15:58.48,0:16:02.19,Sub,,0,0,0,,Or you can buy right now to the next 3 years and anywhere in between.
+Dialogue: 0,0:16:02.24,0:16:02.79,Sub,,0,0,0,,That's wild.
+Dialogue: 0,0:16:02.84,0:16:03.54,Sub,,0,0,0,,I know.
+Dialogue: 0,0:16:03.60,0:16:07.96,Sub,,0,0,0,,Um, and so, the, um, you know, or finer technically.
+Dialogue: 0,0:16:08.01,0:16:14.39,Sub,,0,0,0,,Um, the, there's a certain difference that happens that's dependent for each customer.
+Dialogue: 0,0:16:14.44,0:16:21.33,Sub,,0,0,0,,Basically, like, if I have a workload that is, um, uh, that's batch inference,
+Dialogue: 0,0:16:21.38,0:16:25.71,Sub,,0,0,0,,basically, where I can be interrupted at any point, I don't really care.
+Dialogue: 0,0:16:25.76,0:16:37.60,Sub,,0,0,0,,Um, then, my ability to be cut off, um, is probably like, I need an hour of time to know, um, that I'm going to be cut off and then I'm good.
+Dialogue: 0,0:16:37.65,0:16:41.37,Sub,,0,0,0,,Or I can even be notified in, you know, a minute or two.
+Dialogue: 0,0:16:41.42,0:16:50.11,Sub,,0,0,0,,Um, but if I have, um, live inference customers who are expecting me to be online, um, then, you can interrupt me, but in a month.
+Dialogue: 0,0:16:50.16,0:16:51.65,Sub,,0,0,0,,Maybe 2 months, maybe 3 months.
+Dialogue: 0,0:16:51.70,0:16:55.40,Sub,,0,0,0,,Um, and then I can adapt to that um, capacity over that period of time.
+Dialogue: 0,0:16:55.45,0:16:58.30,Sub,,0,0,0,,Um, but you cannot interrupt me in a minute.
+Dialogue: 0,0:16:58.35,0:17:07.08,Sub,,0,0,0,,Um, and so, those two things are priced differently and the reason why they're priced differently is because what is the price you would pay,
+Dialogue: 0,0:17:07.13,0:17:09.29,Sub,,0,0,0,,um, in order to interrupt your batch job?
+Dialogue: 0,0:17:09.34,0:17:12.96,Sub,,0,0,0,,It's very different than the price you would pay to interrupt your, um, live job.
+Dialogue: 0,0:17:13.01,0:17:18.64,Sub,,0,0,0,,If you have a live job, you're you are probably paying an SLA when you break for your customer.
+Dialogue: 0,0:17:18.69,0:17:20.03,Sub,,0,0,0,,Um, does that make sense?
+Dialogue: 0,0:17:20.08,0:17:20.63,Sub,,0,0,0,,Yeah, I see.
+Dialogue: 0,0:17:20.68,0:17:23.19,Sub,,0,0,0,,So, it's This is actually the market for breaking leases.
+Dialogue: 0,0:17:23.24,0:17:25.11,Sub,,0,0,0,,These are the market for breaking leases, basically. god.
+Dialogue: 0,0:17:25.16,0:17:31.04,Sub,,0,0,0,,And then there's also the market for future leases, or like for leases that are um Oh, I thought this was like a subletting situation.
+Dialogue: 0,0:17:31.09,0:17:33.15,Sub,,0,0,0,,It's This is like Oh, the lease break.
+Dialogue: 0,0:17:33.20,0:17:38.44,Sub,,0,0,0,,So, one way to think about it is in power markets, there's actually two markets.
+Dialogue: 0,0:17:38.49,0:17:41.34,Sub,,0,0,0,,Um, there's like the day-ahead market, and there's the live market.
+Dialogue: 0,0:17:41.39,0:17:46.89,Sub,,0,0,0,,Compute kind of has the same thing, um, where it has capacity that is coming online, um,
+Dialogue: 0,0:17:46.94,0:17:53.02,Sub,,0,0,0,,or capacity that's about to um, arrive to you, um, and then capacity that is currently in use.
+Dialogue: 0,0:17:53.07,0:17:55.87,Sub,,0,0,0,,And these have different price dynamics.
+Dialogue: 0,0:17:55.92,0:17:57.18,Sub,,0,0,0,,Okay, interesting.
+Dialogue: 0,0:17:57.23,0:18:00.15,Sub,,0,0,0,,Um, backwardation or contango?
+Dialogue: 0,0:18:00.20,0:18:01.31,Sub,,0,0,0,,Backwardation or contango?
+Dialogue: 0,0:18:01.36,0:18:07.47,Sub,,0,0,0,,Do uh, so do uh, is compute further out priced higher than spot, or lower than spot?
+Dialogue: 0,0:18:07.52,0:18:11.27,Sub,,0,0,0,,Um, is compute further out priced Does it Does it go like this,
+Dialogue: 0,0:18:11.32,0:18:16.23,Sub,,0,0,0,,or does it go like that over, uh, you know, it over, like, 1-year 1-year out 2-year out?
+Dialogue: 0,0:18:16.28,0:18:20.55,Sub,,0,0,0,,Do Oh, this is an ex- Both at different I I I It's I find it fascinating that you don't know.
+Dialogue: 0,0:18:20.60,0:18:22.74,Sub,,0,0,0,,Yeah, I mean, both it depends on who you are.
+Dialogue: 0,0:18:22.79,0:18:30.75,Sub,,0,0,0,,Um, so, uh, I'll make the case Um, wait, so you're asking is compute sold right now unit of compute today,
+Dialogue: 0,0:18:30.80,0:18:35.83,Sub,,0,0,0,,uh, maybe not today, maybe a month out versus 1-year out versus 2-year out.
+Dialogue: 0,0:18:35.88,0:18:37.63,Sub,,0,0,0,,Is that Is that curve going up or going down?
+Dialogue: 0,0:18:37.68,0:18:39.47,Sub,,0,0,0,,We see a like a hump.
+Dialogue: 0,0:18:39.52,0:18:40.11,Sub,,0,0,0,,Oh my god.
+Dialogue: 0,0:18:40.16,0:18:41.83,Sub,,0,0,0,,Um, okay, so Explain.
+Dialogue: 0,0:18:41.88,0:18:44.05,Sub,,0,0,0,,Um, like I think this will make intuitive sense.
+Dialogue: 0,0:18:44.10,0:18:48.51,Sub,,0,0,0,,It's basically like, if I have milk, and it is about to expire, I will lower the price on it.
+Dialogue: 0,0:18:48.56,0:18:48.89,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:18:48.92,0:18:52.03,Sub,,0,0,0,,Um, and so, that's basically what we see.
+Dialogue: 0,0:18:52.08,0:18:54.27,Sub,,0,0,0,,So, it's the end of life of the lease cycle, basically, right?
+Dialogue: 0,0:18:54.32,0:18:58.22,Sub,,0,0,0,,Uh, well, we're more saying like, if there's a block of compute, and it's approaching now, um,
+Dialogue: 0,0:18:58.27,0:19:03.83,Sub,,0,0,0,,it can't be sold in the past, and so it has to drop its price in order to clear at some price.
+Dialogue: 0,0:19:03.88,0:19:07.64,Sub,,0,0,0,,And so, it Initially, you see this like drop, where, um, stuff that's sold right now,
+Dialogue: 0,0:19:07.68,0:19:13.03,Sub,,0,0,0,,anything that's on the market right now, um, is something that hasn't been sold, and so therefore the price will drop.
+Dialogue: 0,0:19:13.08,0:19:13.38,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:19:13.24,0:19:16.11,Sub,,0,0,0,,Um and then it goes up um to where it wants to be.
+Dialogue: 0,0:19:16.16,0:19:16.46,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:19:16.44,0:19:22.42,Sub,,0,0,0,,Um and then maybe compute in the future is worth less um because people don't want like people would like the compute now,
+Dialogue: 0,0:19:22.47,0:19:25.38,Sub,,0,0,0,,and so they're sort of paying for the shorter lead time.
+Dialogue: 0,0:19:25.43,0:19:28.14,Sub,,0,0,0,,Um and they pay less for the compute that's off in the future.
+Dialogue: 0,0:19:28.19,0:19:31.23,Sub,,0,0,0,,This is what I think a normal healthy curve looks like.
+Dialogue: 0,0:19:31.28,0:19:31.95,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:19:32.00,0:19:33.96,Sub,,0,0,0,,The place where I'm like, "Oh man, no shit."
+Dialogue: 0,0:19:34.01,0:19:41.24,Sub,,0,0,0,,Um is that um right now if you took a B300 and you tried to run an inference on it,
+Dialogue: 0,0:19:41.29,0:19:46.35,Sub,,0,0,0,,um you can make $40 an hour or so um selling that Any model?
+Dialogue: 0,0:19:46.40,0:19:48.00,Sub,,0,0,0,,Any model, basically.
+Dialogue: 0,0:19:48.05,0:19:53.95,Sub,,0,0,0,,Um and so that's if you use it at 100%, and maybe if you only have like 50% utilization or something, so like $25 an hour.
+Dialogue: 0,0:19:54.00,0:19:54.47,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:19:54.52,0:19:55.39,Sub,,0,0,0,,So, $25 an hour.
+Dialogue: 0,0:19:55.44,0:19:59.11,Sub,,0,0,0,,Meanwhile, you can buy B300s at like $5 to $6 an hour.
+Dialogue: 0,0:19:59.16,0:20:00.99,Sub,,0,0,0,,One of these numbers has to change.
+Dialogue: 0,0:20:01.04,0:20:01.34,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:20:01.31,0:20:02.35,Sub,,0,0,0,,It's a huge overcharge.
+Dialogue: 0,0:20:02.40,0:20:03.19,Sub,,0,0,0,,It's a huge overcharge.
+Dialogue: 0,0:20:03.24,0:20:04.39,Sub,,0,0,0,,You mentioned this in your your talks a lot.
+Dialogue: 0,0:20:04.44,0:20:05.22,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:20:05.27,0:20:11.38,Sub,,0,0,0,,So, um a bunch of people are basically looking at this and thinking um if I think prices are going to go up,
+Dialogue: 0,0:20:11.43,0:20:16.02,Sub,,0,0,0,,I might be willing to pay more than what I previously thought in the future um because I might think,
+Dialogue: 0,0:20:16.06,0:20:18.97,Sub,,0,0,0,,"Okay, I can buy a five right now, but if I can't buy any more,
+Dialogue: 0,0:20:19.03,0:20:23.74,Sub,,0,0,0,,then maybe I will be willing to buy even more in the future just to lock it in if it's going to come online later."
+Dialogue: 0,0:20:23.79,0:20:26.31,Sub,,0,0,0,,So, we see the other side as well.
+Dialogue: 0,0:20:26.36,0:20:28.39,Sub,,0,0,0,,Um kind of depends on who you are.
+Dialogue: 0,0:20:28.44,0:20:28.89,Sub,,0,0,0,,Cool.
+Dialogue: 0,0:20:28.94,0:20:33.30,Sub,,0,0,0,,So, um is it Okay, and and I just I just really want to make super clear on this.
+Dialogue: 0,0:20:33.35,0:20:33.70,Sub,,0,0,0,,Of course.
+Dialogue: 0,0:20:33.73,0:20:40.47,Sub,,0,0,0,,Do you care about the different generations of chips and or do you just care about overall flops and you spread them among whatever chips you want?
+Dialogue: 0,0:20:40.52,0:20:43.30,Sub,,0,0,0,,Uh we care about different generations of chips because You care.
+Dialogue: 0,0:20:43.35,0:20:45.67,Sub,,0,0,0,,I think like I I only I guess do your customers care?
+Dialogue: 0,0:20:45.72,0:20:46.15,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:20:46.20,0:20:46.50,Sub,,0,0,0,,Right.
+Dialogue: 0,0:20:46.52,0:20:46.93,Sub,,0,0,0,,Oh, wait.
+Dialogue: 0,0:20:46.98,0:20:50.60,Sub,,0,0,0,,When you say uh different generation chips, do you mean like So, like B300 generation.
+Dialogue: 0,0:20:50.65,0:20:51.39,Sub,,0,0,0,,Yeah, exactly.
+Dialogue: 0,0:20:51.44,0:20:51.74,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:20:51.72,0:20:53.83,Sub,,0,0,0,,Or like even AMD or whatever, right?
+Dialogue: 0,0:20:53.88,0:20:56.61,Sub,,0,0,0,,Uh yes, I think people totally care about the generation of chips.
+Dialogue: 0,0:20:56.66,0:20:58.76,Sub,,0,0,0,,Um uh I think part of this is because of things like VRAM.
+Dialogue: 0,0:20:58.81,0:21:03.95,Sub,,0,0,0,,Um and part of this is because of like um uh larger NVLink domains.
+Dialogue: 0,0:21:04.00,0:21:04.30,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:21:04.28,0:21:04.68,Sub,,0,0,0,,And things like that.
+Dialogue: 0,0:21:04.72,0:21:11.59,Sub,,0,0,0,,So, there's just no way to abstract all this to like some generalized unit of compute that you can sort of mush around and whatever you like.
+Dialogue: 0,0:21:11.64,0:21:14.13,Sub,,0,0,0,,I think like you when you were saying oil, even oil isn't oil.
+Dialogue: 0,0:21:14.18,0:21:16.31,Sub,,0,0,0,,Oil is actually just like a bunch of different types of oil.
+Dialogue: 0,0:21:16.36,0:21:18.43,Sub,,0,0,0,,Yeah, like jet fuel or car fuel or whatever.
+Dialogue: 0,0:21:18.48,0:21:19.50,Sub,,0,0,0,,I think it's the same thing.
+Dialogue: 0,0:21:19.55,0:21:21.30,Sub,,0,0,0,,Um you're going to get a bunch of different types of It is,
+Dialogue: 0,0:21:21.36,0:21:27.87,Sub,,0,0,0,,but you have oil refineries that you can effectively a black boxes you can put oil in and get it like whatever out.
+Dialogue: 0,0:21:27.92,0:21:35.46,Sub,,0,0,0,,If compute it is so heterogeneous, I guess it's the it's the word is that you just have to expose the underlying complexity to your end customer,
+Dialogue: 0,0:21:35.51,0:21:38.79,Sub,,0,0,0,,which is bad for you as a market maker.
+Dialogue: 0,0:21:38.84,0:21:39.83,Sub,,0,0,0,,Maybe.
+Dialogue: 0,0:21:39.88,0:21:47.41,Sub,,0,0,0,,Like you want to identify the one like choke point or like, I don't know what the better word for choke point is, like Schelling point
+Dialogue: 0,0:21:47.46,0:21:50.77,Sub,,0,0,0,,where everyone agrees like okay like this is kind of the standard and
+Dialogue: 0,0:21:50.82,0:21:55.03,Sub,,0,0,0,,we'll we'll all agree to this standard and you know it'll be somewhat inefficient.
+Dialogue: 0,0:21:55.08,0:21:55.99,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:21:56.04,0:22:02.03,Sub,,0,0,0,,So we've been able to reduce the the the problems to a certain level.
+Dialogue: 0,0:22:02.08,0:22:05.03,Sub,,0,0,0,,Yeah, it's like your job is like dimensional reduction or all that.
+Dialogue: 0,0:22:05.08,0:22:08.27,Sub,,0,0,0,,We reduce a lot of the dimensions but nonetheless there are still dimensions.
+Dialogue: 0,0:22:08.32,0:22:09.51,Sub,,0,0,0,,They can still going to exist.
+Dialogue: 0,0:22:09.56,0:22:12.07,Sub,,0,0,0,,Do you do you know how many SKUs you have?
+Dialogue: 0,0:22:12.12,0:22:19.57,Sub,,0,0,0,,So Um Like 5 * 100 * like 5,000 that equals I don't know.
+Dialogue: 0,0:22:19.62,0:22:28.59,Sub,,0,0,0,,Like what's We actually made SKUs like a a concept that and the goal is to make it so that somebody else can make their own SKU.
+Dialogue: 0,0:22:28.64,0:22:35.07,Sub,,0,0,0,,So if I want to buy Blackwells, I can say I'm willing to buy Blackwells at $6 an hour or less.
+Dialogue: 0,0:22:35.12,0:22:35.42,Sub,,0,0,0,,Uh-huh.
+Dialogue: 0,0:22:35.40,0:22:43.29,Sub,,0,0,0,,And you can match me against GB300s or you can match me against B300s and I don't care which Blackwell as long as it's less than $6 an hour.
+Dialogue: 0,0:22:43.34,0:22:45.43,Sub,,0,0,0,,Um But you just said you care about memory and other stuff.
+Dialogue: 0,0:22:45.48,0:22:46.95,Sub,,0,0,0,,Totally, but not every customer does.
+Dialogue: 0,0:22:47.00,0:22:50.00,Sub,,0,0,0,,So some customers like just can work on Blackwells whatever it is.
+Dialogue: 0,0:22:50.05,0:22:52.75,Sub,,0,0,0,,Some customers are super hyper specific and they need this exact thing and they're
+Dialogue: 0,0:22:52.80,0:22:54.87,Sub,,0,0,0,,going to pay more for that because the market's going to charge them more.
+Dialogue: 0,0:22:54.92,0:22:55.47,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:22:55.52,0:22:56.87,Sub,,0,0,0,,Um and that's what we do.
+Dialogue: 0,0:22:56.92,0:23:02.34,Sub,,0,0,0,,So and so people use your APIs to programmatically define what they want and then if match
+Dialogue: 0,0:23:02.38,0:23:08.15,Sub,,0,0,0,,that with whatever composition of sellers uh they might they might they might be able to fulfill.
+Dialogue: 0,0:23:08.20,0:23:08.54,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:23:08.57,0:23:13.79,Sub,,0,0,0,,Um with the caveat that having a named query is a new thing we're doing.
+Dialogue: 0,0:23:13.84,0:23:17.11,Sub,,0,0,0,,Um but the query system as a concept is how the order book works right now.
+Dialogue: 0,0:23:17.16,0:23:17.66,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:23:17.71,0:23:18.86,Sub,,0,0,0,,Interesting.
+Dialogue: 0,0:23:18.91,0:23:20.16,Sub,,0,0,0,,Um all right.
+Dialogue: 0,0:23:20.21,0:23:23.79,Sub,,0,0,0,,So uh you know, I I think that's like a lot of like I guess nitty-gritty.
+Dialogue: 0,0:23:23.84,0:23:28.84,Sub,,0,0,0,,Have you have you Is there anything about like I guess that you want to educate people on whether it's financial people
+Dialogue: 0,0:23:28.89,0:23:36.99,Sub,,0,0,0,,or engineers about the state of the compute trading market as as you've developed it because effectively you're you guys are defining it.
+Dialogue: 0,0:23:37.04,0:23:40.32,Sub,,0,0,0,,Um mainly just the requirement for physical settlement.
+Dialogue: 0,0:23:40.37,0:23:46.07,Sub,,0,0,0,,Um we think that if you we we spent 3 years learning why you need physical settlement.
+Dialogue: 0,0:23:46.12,0:23:53.01,Sub,,0,0,0,,And um our entire conversation today is um that it is these things are not as fungible as you think.
+Dialogue: 0,0:23:53.06,0:23:54.47,Sub,,0,0,0,,We're going to try and make them fungible.
+Dialogue: 0,0:23:54.52,0:23:56.57,Sub,,0,0,0,,That's the industry's job to do that.
+Dialogue: 0,0:23:56.62,0:24:00.77,Sub,,0,0,0,,Um but without that you run a lot of risks.
+Dialogue: 0,0:24:00.82,0:24:10.12,Sub,,0,0,0,,Um if you try to build um too much financialization before you've the industry has had time to build out the um the physical settlement,
+Dialogue: 0,0:24:10.17,0:24:17.43,Sub,,0,0,0,,then I think what you have is you have um a market that's very easy to manipulate and a market that has a lot
+Dialogue: 0,0:24:17.48,0:24:24.91,Sub,,0,0,0,,of basis risk where um the price you may be hedging against actually has nothing to do with the price that um the market Yeah.
+Dialogue: 0,0:24:24.96,0:24:25.26,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:24:25.18,0:24:25.48,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:24:25.40,0:24:26.79,Sub,,0,0,0,,You can actually buy the capacity for.
+Dialogue: 0,0:24:26.84,0:24:27.14,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:24:27.16,0:24:30.19,Sub,,0,0,0,,So for for listeners uh we we talked about this briefly last time,
+Dialogue: 0,0:24:30.24,0:24:38.63,Sub,,0,0,0,,but um people are often shocked to find out that let's say the market for credit default swaps is 12 times the the size of the bonds that they insure.
+Dialogue: 0,0:24:38.68,0:24:38.98,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:24:38.96,0:24:43.64,Sub,,0,0,0,,Uh something like that or like uh the the markets for mortgage um sort
+Dialogue: 0,0:24:43.69,0:24:48.49,Sub,,0,0,0,,of reinsurance or uh all that it is is larger than the underlying physical settlement.
+Dialogue: 0,0:24:48.54,0:24:50.35,Sub,,0,0,0,,So that's why physical versus cash settled.
+Dialogue: 0,0:24:50.40,0:24:50.76,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:24:50.79,0:24:57.95,Sub,,0,0,0,,And and like basically cash settlements are like exactly the kind of uh the side bet that you see in The Big Short Mhm.
+Dialogue: 0,0:24:58.00,0:25:00.24,Sub,,0,0,0,,um, where, uh, they they may, uh,
+Dialogue: 0,0:25:00.29,0:25:05.87,Sub,,0,0,0,,may or may not have anything to do with the underlying thing itself and it may may be used as a proxy for overall other stuff.
+Dialogue: 0,0:25:05.92,0:25:08.63,Sub,,0,0,0,,That and you don't want it to that to go out of control.
+Dialogue: 0,0:25:08.68,0:25:09.03,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:25:09.06,0:25:09.48,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:25:09.52,0:25:14.28,Sub,,0,0,0,,So, to be clear, we think, um, cash settlement as a future concept is a great idea.
+Dialogue: 0,0:25:14.32,0:25:17.12,Sub,,0,0,0,,Um, we just think it should be derived from physical settlement.
+Dialogue: 0,0:25:17.18,0:25:20.15,Sub,,0,0,0,,Um, because, as you said, it's a side bet, um,
+Dialogue: 0,0:25:20.20,0:25:27.07,Sub,,0,0,0,,and it would be kind of like if you I mean be kind of like if you made a cash settlement future before you made physical settlement.
+Dialogue: 0,0:25:27.12,0:25:30.35,Sub,,0,0,0,,Um it which I think people are kind of doing already.
+Dialogue: 0,0:25:30.40,0:25:30.94,Sub,,0,0,0,,Not yet, totally.
+Dialogue: 0,0:25:30.99,0:25:33.47,Sub,,0,0,0,,People are trying to make cash settlement before you make the physical settlement.
+Dialogue: 0,0:25:33.52,0:25:36.15,Sub,,0,0,0,,do that for all sorts of things, including startup stock.
+Dialogue: 0,0:25:36.20,0:25:36.57,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:25:36.60,0:25:36.93,Sub,,0,0,0,,Right?
+Dialogue: 0,0:25:36.96,0:25:41.75,Sub,,0,0,0,,Like you can buy and sell a sh- a made-up share of OpenAI, but it's nothing to do with the actual share.
+Dialogue: 0,0:25:41.80,0:25:42.51,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:25:42.56,0:25:45.67,Sub,,0,0,0,,Um, and lots of those go very poorly.
+Dialogue: 0,0:25:45.72,0:25:52.15,Sub,,0,0,0,,Um, like it would be kind of bad if you made a, um, it would be bad if you started selling,
+Dialogue: 0,0:25:52.20,0:25:56.76,Sub,,0,0,0,,um, the the the derivative on a stock that doesn't exist yet.
+Dialogue: 0,0:25:56.82,0:25:57.43,Sub,,0,0,0,,Um Yeah.
+Dialogue: 0,0:25:57.48,0:25:57.78,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:25:57.68,0:26:00.98,Sub,,0,0,0,,Well, so, I mean, one thing that we do, uh, so I used to be a currency trader, right?
+Dialogue: 0,0:26:01.03,0:26:02.75,Sub,,0,0,0,,And and interest rates as well.
+Dialogue: 0,0:26:02.80,0:26:08.62,Sub,,0,0,0,,And what one thing we do is you have a board that gets together and says like this is the London Interbank Offered Rate,
+Dialogue: 0,0:26:08.67,0:26:13.59,Sub,,0,0,0,,LIBOR, and we all agree like this is the the the monthly fixing and we all trade to that fixing.
+Dialogue: 0,0:26:13.64,0:26:14.01,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:26:14.04,0:26:18.51,Sub,,0,0,0,,Uh, is that even meaningful at some point in 3 years from now?
+Dialogue: 0,0:26:18.56,0:26:20.63,Sub,,0,0,0,,So, critically, LIBOR was manipulated.
+Dialogue: 0,0:26:20.68,0:26:21.01,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:26:21.04,0:26:23.86,Sub,,0,0,0,,Um, our concern at the moment is 12 banks.
+Dialogue: 0,0:26:23.91,0:26:24.31,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:26:24.36,0:26:24.76,Sub,,0,0,0,,Yes.
+Dialogue: 0,0:26:24.80,0:26:29.85,Sub,,0,0,0,,Um Well, our concern is there's a very similar problem, um, where you can manipulate an index.
+Dialogue: 0,0:26:29.90,0:26:39.00,Sub,,0,0,0,,Um, our impression is why you can manipulate that index is because a lot of the indexes are based on a very small amount of data that has um uh,
+Dialogue: 0,0:26:39.06,0:26:44.24,Sub,,0,0,0,,not a lot of correlation with the actual price of buying a new reserve contract.
+Dialogue: 0,0:26:44.29,0:26:46.47,Sub,,0,0,0,,Um that's what we're concerned about.
+Dialogue: 0,0:26:46.52,0:26:46.89,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:26:46.92,0:26:47.73,Sub,,0,0,0,,Interesting.
+Dialogue: 0,0:26:47.78,0:26:48.72,Sub,,0,0,0,,Um, all right.
+Dialogue: 0,0:26:48.78,0:26:51.66,Sub,,0,0,0,,I I think I think that's the the the rough state of things.
+Dialogue: 0,0:26:51.71,0:26:52.20,Sub,,0,0,0,,Uh-huh.
+Dialogue: 0,0:26:52.25,0:26:58.63,Sub,,0,0,0,,Uh, um, I think the other part of just just today is you you you talked with Oliver,
+Dialogue: 0,0:26:58.68,0:27:02.51,Sub,,0,0,0,,and you're doing an event with Jump, and you're friends with Silicon Data.
+Dialogue: 0,0:27:02.56,0:27:04.19,Sub,,0,0,0,,What are you learning from all these other players?
+Dialogue: 0,0:27:04.24,0:27:08.67,Sub,,0,0,0,,Like who are the major players that you would want to call out as like doing interesting things?
+Dialogue: 0,0:27:08.72,0:27:09.79,Sub,,0,0,0,,Ooh.
+Dialogue: 0,0:27:09.84,0:27:13.64,Sub,,0,0,0,,Um Uh so, we're big fans of Silicon Data and Compute Exchange.
+Dialogue: 0,0:27:13.69,0:27:15.92,Sub,,0,0,0,,I think they were also very early to this,
+Dialogue: 0,0:27:15.96,0:27:23.87,Sub,,0,0,0,,and I think they are doing like a reasonable shot at the A path that we think that we'll likely end up being partners with.
+Dialogue: 0,0:27:23.92,0:27:26.63,Sub,,0,0,0,,And can you distinguish like your your different paths?
+Dialogue: 0,0:27:26.68,0:27:30.51,Sub,,0,0,0,,So, the general gist is they're doing cash settlement, we're doing physical settlement.
+Dialogue: 0,0:27:30.56,0:27:36.15,Sub,,0,0,0,,We think both can exist and should exist, and that they're sort of mutually beneficial to each other.
+Dialogue: 0,0:27:36.20,0:27:37.48,Sub,,0,0,0,,And so, totally fine.
+Dialogue: 0,0:27:37.53,0:27:39.69,Sub,,0,0,0,,So, I think they are one of the earliest in the space,
+Dialogue: 0,0:27:39.74,0:27:45.91,Sub,,0,0,0,,and I think they are very clearly took the bet well before anybody else did, and I think that's like very honorable to do.
+Dialogue: 0,0:27:45.96,0:27:50.34,Sub,,0,0,0,,Um you mentioned Jon, SemiAnalysis says Jump.
+Dialogue: 0,0:27:50.38,0:27:55.07,Sub,,0,0,0,,Like are these other players emerging like as far like you were my first introduction to this,
+Dialogue: 0,0:27:55.12,0:27:59.22,Sub,,0,0,0,,and then I and I see all these other guys coming in, and I'm like, "Okay, like it's something's happening here."
+Dialogue: 0,0:27:59.27,0:28:00.99,Sub,,0,0,0,,I don't know the landscape as clearly as you do.
+Dialogue: 0,0:28:01.04,0:28:06.71,Sub,,0,0,0,,Yeah, so the categories of folks that we've seen is there's folks that are trying to set better standards.
+Dialogue: 0,0:28:06.76,0:28:10.07,Sub,,0,0,0,,So, SemiAnalysis I think is working to try and create better standards.
+Dialogue: 0,0:28:10.12,0:28:14.79,Sub,,0,0,0,,There's folks that are trying to do residual value insurance and so on.
+Dialogue: 0,0:28:14.84,0:28:16.40,Sub,,0,0,0,,There's a number of different companies in the space.
+Dialogue: 0,0:28:16.45,0:28:20.99,Sub,,0,0,0,,I don't know that any of them super well, but I know know this is a concept, and I think that's important.
+Dialogue: 0,0:28:21.04,0:28:29.40,Sub,,0,0,0,,There are folks that are trying to do a deposit lending where like they'll front your credit risk for the cloud.
+Dialogue: 0,0:28:29.45,0:28:36.47,Sub,,0,0,0,,There's an ecosystem of companies that are forming around how do we resolve the financial bottlenecks of compute, and it is cool to see.
+Dialogue: 0,0:28:36.52,0:28:42.58,Sub,,0,0,0,,I think effectively what you want in this ecosystem is buyers and sellers, you want an analyst,
+Dialogue: 0,0:28:42.64,0:28:46.71,Sub,,0,0,0,,you want we said insurance or what what's the Uh residual value insurance.
+Dialogue: 0,0:28:46.76,0:28:51.47,Sub,,0,0,0,,Residual Um, and you we want this like healthy ecosystem out there.
+Dialogue: 0,0:28:51.52,0:28:51.82,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:28:51.80,0:28:57.42,Sub,,0,0,0,,Um, but you obviously you guys are owning the problem of physical settlement, which which is really interesting.
+Dialogue: 0,0:28:57.47,0:29:04.66,Sub,,0,0,0,,Um, Okay, so I mean, we can go into like the the hard tech side because obviously you are also hiring Yeah. uh, for extremely cracked engineers.
+Dialogue: 0,0:29:04.71,0:29:06.11,Sub,,0,0,0,,Uh, describe your stack.
+Dialogue: 0,0:29:06.16,0:29:11.33,Sub,,0,0,0,,Um, we do all the things the cloud does without being the cloud.
+Dialogue: 0,0:29:11.38,0:29:13.22,Sub,,0,0,0,,Um, as in we don't own the hardware.
+Dialogue: 0,0:29:13.26,0:29:19.41,Sub,,0,0,0,,Um, the reason why we don't own the hardware is because if we did, we would be able to manipulate the forwards market.
+Dialogue: 0,0:29:19.46,0:29:25.16,Sub,,0,0,0,,So, we have to be Switzerland, we have to be independent, um, which creates a lot of sort of strange things about the company,
+Dialogue: 0,0:29:25.22,0:29:29.95,Sub,,0,0,0,,um, but in order to do physical settlement, you have to do site visits.
+Dialogue: 0,0:29:30.00,0:29:31.39,Sub,,0,0,0,,You have to visit the data center.
+Dialogue: 0,0:29:31.44,0:29:41.45,Sub,,0,0,0,,Um, you have to um, you have to design the bill of materials and ensure that um, you have to basically do like supply chain consulting,
+Dialogue: 0,0:29:41.50,0:29:47.38,Sub,,0,0,0,,um, where you have relationships with different OEMs that Um, ensure that things get delivered on time.
+Dialogue: 0,0:29:47.43,0:29:55.35,Sub,,0,0,0,,Um, then you have to um, do cluster architecture, um, uh, so you're sort of designing the cluster itself.
+Dialogue: 0,0:29:55.40,0:30:00.55,Sub,,0,0,0,,Um, then you're um, rolling out racks or you're working with partners to roll out racks and then supervising that.
+Dialogue: 0,0:30:00.60,0:30:07.22,Sub,,0,0,0,,Um, then you're doing uh, backplane management, so you're taking over the um, PDUs and the switches and the DPUs and um,
+Dialogue: 0,0:30:07.26,0:30:15.27,Sub,,0,0,0,,UFM and BMC and to your operating um, harness around the nodes that you're settling. you as an SF Compute employees?
+Dialogue: 0,0:30:15.32,0:30:15.79,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:30:15.84,0:30:16.43,Sub,,0,0,0,,Wow.
+Dialogue: 0,0:30:16.48,0:30:17.49,Sub,,0,0,0,,All right.
+Dialogue: 0,0:30:17.54,0:30:24.54,Sub,,0,0,0,,Um, so uh, when you buy a node from a cloud, um, there's the bare metal, but there's all this around the bare metal.
+Dialogue: 0,0:30:24.59,0:30:30.91,Sub,,0,0,0,,Um, and in order to make that bare metal node work, you have to operate everything else.
+Dialogue: 0,0:30:30.96,0:30:36.95,Sub,,0,0,0,,Then we Because I just like traditionally the job of the data center is to extract some some of this away from you.
+Dialogue: 0,0:30:37.00,0:30:38.35,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:30:38.40,0:30:39.23,Sub,,0,0,0,,We're we're the ones that do that.
+Dialogue: 0,0:30:39.28,0:30:39.68,Sub,,0,0,0,,Yeah, yeah.
+Dialogue: 0,0:30:39.72,0:30:40.49,Sub,,0,0,0,,Okay, all right.
+Dialogue: 0,0:30:40.54,0:30:42.75,Sub,,0,0,0,,Um, but you're not you're not in the data center business.
+Dialogue: 0,0:30:42.80,0:30:44.99,Sub,,0,0,0,,You're not the Equinixes of the world.
+Dialogue: 0,0:30:45.04,0:30:48.29,Sub,,0,0,0,,We're we're not in the data center business, sort of.
+Dialogue: 0,0:30:48.34,0:30:53.61,Sub,,0,0,0,,Um, what we do work with is So, we offer supercomputing as a service.
+Dialogue: 0,0:30:53.66,0:31:03.66,Sub,,0,0,0,,Um, and what this means is folks come to us and say, you know, I've got X, where X is I've got, you know, X megawatts here,
+Dialogue: 0,0:31:03.71,0:31:10.19,Sub,,0,0,0,,and maybe sometimes they mean, I've got a data center um that's like I would like to turn into a GPU cluster.
+Dialogue: 0,0:31:10.24,0:31:15.71,Sub,,0,0,0,,Like my options are I could sell the GPU cluster or I could sell the data center to somebody or I could become the cloud.
+Dialogue: 0,0:31:15.76,0:31:20.99,Sub,,0,0,0,,And then we go to them and say, great, um we will turn you into the cloud, we're the supercomputing part, you're the data center cloud.
+Dialogue: 0,0:31:21.04,0:31:24.69,Sub,,0,0,0,,Let's partner together and then we will sell and all make money.
+Dialogue: 0,0:31:24.74,0:31:29.75,Sub,,0,0,0,,Um sometimes it's people who have something that could turn into a data center,
+Dialogue: 0,0:31:29.80,0:31:33.71,Sub,,0,0,0,,in which case we're going to basically project manage that up to the layer,
+Dialogue: 0,0:31:33.76,0:31:38.11,Sub,,0,0,0,,um and then we will work with those far we'll work with those folks to turn
+Dialogue: 0,0:31:38.16,0:31:44.16,Sub,,0,0,0,,their powered land um or whatever they have um into a data center by working with partners,
+Dialogue: 0,0:31:44.22,0:31:46.82,Sub,,0,0,0,,um and then we take over at the supercomputing part.
+Dialogue: 0,0:31:46.86,0:31:53.74,Sub,,0,0,0,,This requires us to have some sort of data center expertise in-house, but we don't self-perform builds.
+Dialogue: 0,0:31:53.79,0:31:55.27,Sub,,0,0,0,,Um, so yeah.
+Dialogue: 0,0:31:55.32,0:32:00.27,Sub,,0,0,0,,Yeah, so it's somewhat modular because you have different scenarios you need to deploy under.
+Dialogue: 0,0:32:00.32,0:32:00.62,Sub,,0,0,0,,Yeah,
+Dialogue: 0,0:32:00.61,0:32:08.59,Sub,,0,0,0,,someone once described us as like um uh like Palantir for compute um because it's like these each time
+Dialogue: 0,0:32:08.64,0:32:14.99,Sub,,0,0,0,,it's this new rodeo um uh but and we like we we deeply partner with folks on both sides.
+Dialogue: 0,0:32:15.04,0:32:15.57,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:32:15.62,0:32:17.99,Sub,,0,0,0,,Uh and primarily the US?
+Dialogue: 0,0:32:18.04,0:32:20.71,Sub,,0,0,0,,Primarily the US, but we operate around the world.
+Dialogue: 0,0:32:20.76,0:32:21.06,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:32:21.03,0:32:23.67,Sub,,0,0,0,,At some point does SF Compute become a misnomer?
+Dialogue: 0,0:32:23.72,0:32:28.68,Sub,,0,0,0,,Uh so, when so, we're deploying clusters all around the world, and when we do that,
+Dialogue: 0,0:32:28.73,0:32:32.49,Sub,,0,0,0,,we're working with people who themselves are trying to be clouds all around the world.
+Dialogue: 0,0:32:32.54,0:32:34.51,Sub,,0,0,0,,Um they look like sovereign compute players.
+Dialogue: 0,0:32:34.56,0:32:38.06,Sub,,0,0,0,,Um and our pitch to sovereign compute is amazing.
+Dialogue: 0,0:32:38.11,0:32:43.29,Sub,,0,0,0,,Let's help you set up a cloud in your own country and we will bring the San Francisco off-take.
+Dialogue: 0,0:32:43.34,0:32:45.30,Sub,,0,0,0,,We'll bring the San Francisco expertise.
+Dialogue: 0,0:32:45.35,0:32:47.15,Sub,,0,0,0,,We'll set up the clusters.
+Dialogue: 0,0:32:47.20,0:32:48.03,Sub,,0,0,0,,That's our whole business.
+Dialogue: 0,0:32:48.08,0:32:48.63,Sub,,0,0,0,,Ah.
+Dialogue: 0,0:32:48.68,0:32:49.83,Sub,,0,0,0,,We're going to make it financeable.
+Dialogue: 0,0:32:49.88,0:32:53.19,Sub,,0,0,0,,who are your main your biggest announced partners that you can name?
+Dialogue: 0,0:32:53.24,0:32:56.94,Sub,,0,0,0,,Um Nobody I can name basically.
+Dialogue: 0,0:32:56.99,0:33:02.87,Sub,,0,0,0,,We will have some announcements in a week or two that we expect to come on.
+Dialogue: 0,0:33:02.92,0:33:03.51,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:33:03.56,0:33:05.79,Sub,,0,0,0,,All things sort of uh Sure, sure.
+Dialogue: 0,0:33:05.84,0:33:06.42,Sub,,0,0,0,,Good luck.
+Dialogue: 0,0:33:06.47,0:33:06.78,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:33:06.81,0:33:07.11,Sub,,0,0,0,,No,
+Dialogue: 0,0:33:07.04,0:33:13.87,Sub,,0,0,0,,I mean I I think this is really interesting for every country to like who's who's like investing in sovereign AI to figure this
+Dialogue: 0,0:33:13.92,0:33:20.83,Sub,,0,0,0,,out and it's interesting that like SF is is still sort of like that brand name and that that is that is very marketable.
+Dialogue: 0,0:33:20.88,0:33:25.07,Sub,,0,0,0,,So I think one of the interesting things is just thinking through this market.
+Dialogue: 0,0:33:25.12,0:33:26.27,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:33:26.32,0:33:29.91,Sub,,0,0,0,,Nvidia is obviously like the 800-lb gorilla in the room.
+Dialogue: 0,0:33:29.96,0:33:32.31,Sub,,0,0,0,,Why don't they Why didn't they make SF Compute?
+Dialogue: 0,0:33:32.36,0:33:38.47,Sub,,0,0,0,,And again like I I you know, the answer's going to be market manipulation but like let's just really get into the incentives of the multiple players.
+Dialogue: 0,0:33:38.52,0:33:44.14,Sub,,0,0,0,,Yeah, so our impression is that Nvidia can't make it but benefits tremendously from it existing.
+Dialogue: 0,0:33:44.18,0:33:49.52,Sub,,0,0,0,,The reason why they can't make it is because they would then not be independent enough for people to trade on it.
+Dialogue: 0,0:33:49.57,0:33:55.61,Sub,,0,0,0,,If you don't trade on it, then you don't have enough liquidity for lenders to finance against the forwards market.
+Dialogue: 0,0:33:55.66,0:34:00.55,Sub,,0,0,0,,This is also why Crusoe and Coreweave and Lambda why the hyperscalers can't make it,
+Dialogue: 0,0:34:00.60,0:34:04.99,Sub,,0,0,0,,why Baseten and Fireworks and Modal can't make it cuz they have too much demand on that side.
+Dialogue: 0,0:34:05.04,0:34:12.12,Sub,,0,0,0,,Um this is the thing that benefits the entire industry because it makes the financing costs go down.
+Dialogue: 0,0:34:12.17,0:34:19.71,Sub,,0,0,0,,But nobody can make it unless they give up the ability to do all the big inference money and all the big cloud deals.
+Dialogue: 0,0:34:19.76,0:34:21.83,Sub,,0,0,0,,You have to kill your business in order to make this.
+Dialogue: 0,0:34:21.88,0:34:22.18,Sub,,0,0,0,,Mhm.
+Dialogue: 0,0:34:22.11,0:34:23.32,Sub,,0,0,0,,That's why nobody does it.
+Dialogue: 0,0:34:23.37,0:34:25.64,Sub,,0,0,0,,It's like structurally they're not set up to do that.
+Dialogue: 0,0:34:25.69,0:34:30.43,Sub,,0,0,0,,And you're you're make you're basically reducing friction and that's all your revenue.
+Dialogue: 0,0:34:30.48,0:34:33.36,Sub,,0,0,0,,You've announced some benchmark uh, some milestones.
+Dialogue: 0,0:34:33.41,0:34:35.66,Sub,,0,0,0,,Actually, I forgot to s- say that up front.
+Dialogue: 0,0:34:35.71,0:34:39.99,Sub,,0,0,0,,Uh, can you repeat what they are and uh, you know, just take a victory lap a little bit?
+Dialogue: 0,0:34:40.04,0:34:44.21,Sub,,0,0,0,,Uh, we closed several hundred million dollars of volume.
+Dialogue: 0,0:34:44.26,0:34:48.25,Sub,,0,0,0,,Um, we have a significant number of new clusters on the way.
+Dialogue: 0,0:34:48.30,0:34:55.47,Sub,,0,0,0,,Um, and then the things that I think I'm most excited about um, is we've um,
+Dialogue: 0,0:34:55.52,0:35:02.48,Sub,,0,0,0,,shipped a whole bunch of new features um, that make SF Compute very viable for platform as a service companies.
+Dialogue: 0,0:35:02.53,0:35:10.42,Sub,,0,0,0,,Um, an example is um, we allow customers to subdivide their InfiniBand fabric um, without having to ask us.
+Dialogue: 0,0:35:10.47,0:35:14.48,Sub,,0,0,0,,So, many clouds when you go to buy them, they will give you one InfiniBand fabric.
+Dialogue: 0,0:35:14.53,0:35:23.65,Sub,,0,0,0,,Um and then if you want to redraw the lines of that InfiniBand fabric, uh, you need to contact them and they will then do something for you.
+Dialogue: 0,0:35:23.70,0:35:31.01,Sub,,0,0,0,,Um, we now can do that on the fly for customers um, which I think is really great um, because it interfaces with the market really well um,
+Dialogue: 0,0:35:31.06,0:35:35.31,Sub,,0,0,0,,where you want to be able to redraw things in order to scale up and down your clusters.
+Dialogue: 0,0:35:35.36,0:35:39.39,Sub,,0,0,0,,Um, would you describe this as like you're virtualizing the data center and making it programmable?
+Dialogue: 0,0:35:39.44,0:35:41.58,Sub,,0,0,0,,Yeah, we're virtualizing data center and making it programmable.
+Dialogue: 0,0:35:41.63,0:35:49.31,Sub,,0,0,0,,So, all the stuff that you would have gotten if you had owned the hardware, we're trying to virtualize that um, which I think is um, exciting to us.
+Dialogue: 0,0:35:49.36,0:35:53.03,Sub,,0,0,0,,It's funny like the last time this happened was like the cloud.
+Dialogue: 0,0:35:53.08,0:35:54.17,Sub,,0,0,0,,Like the Yeah.
+Dialogue: 0,0:35:54.22,0:35:56.15,Sub,,0,0,0,,Uh, which is which is really cool.
+Dialogue: 0,0:35:56.20,0:36:02.85,Sub,,0,0,0,,Uh, and then uh, uh, finally I you know, I think uh, what is your call to action for for people um, you know, is it is it engineers?
+Dialogue: 0,0:36:02.90,0:36:04.15,Sub,,0,0,0,,Is it like give me your supply?
+Dialogue: 0,0:36:04.20,0:36:05.23,Sub,,0,0,0,,Like what what is it?
+Dialogue: 0,0:36:05.28,0:36:08.82,Sub,,0,0,0,,Um, if you would like to own a GPU cluster and you want the residual value from it,
+Dialogue: 0,0:36:08.87,0:36:13.96,Sub,,0,0,0,,you want to have it for your portfolio, um, we would love to work with you in order to build that GPU cluster.
+Dialogue: 0,0:36:14.01,0:36:19.27,Sub,,0,0,0,,We will take over and we will uh, do the supercomputing portions of that and ensure the things go right.
+Dialogue: 0,0:36:19.32,0:36:20.09,Sub,,0,0,0,,We own the SLA.
+Dialogue: 0,0:36:20.14,0:36:23.63,Sub,,0,0,0,,And then if it turns out that that was a bad idea, that you need out of that cluster,
+Dialogue: 0,0:36:23.68,0:36:27.63,Sub,,0,0,0,,we can immediately sell that cluster to someone else so it doesn't hit your balance sheet.
+Dialogue: 0,0:36:27.68,0:36:28.35,Sub,,0,0,0,,Very simple pitch.
+Dialogue: 0,0:36:28.40,0:36:29.75,Sub,,0,0,0,,Well, thank you so much for your time.
+Dialogue: 0,0:36:29.80,0:36:33.63,Sub,,0,0,0,,You're You're doing a great service to the industry and I just am happy to be your friend.
+Dialogue: 0,0:36:33.68,0:36:35.27,Sub,,0,0,0,,I appreciate it.
+Dialogue: 0,0:36:35.32,0:36:36.55,Sub,,0,0,0,,All right.
+Dialogue: 0,0:36:36.60,0:36:37.88,Sub,,0,0,0,,That's it.

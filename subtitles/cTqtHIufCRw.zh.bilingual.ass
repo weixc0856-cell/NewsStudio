@@ -1,0 +1,421 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:04.63,Sub,,0,0,0,,So let let's turn a little bit to your business for a moment.\N那么，让我们暂时把话题转回到你的业务上。
+Dialogue: 0,0:00:04.68,0:00:12.39,Sub,,0,0,0,,Um your your chips uh GPUs, they're they're different from what other people are hoping to build, right?\N嗯，你们的芯片，也就是GPU，和其他人想打造的不一样，对吧？
+Dialogue: 0,0:00:12.44,0:00:23.98,Sub,,0,0,0,,And so maybe can you talk to the audience about about your products and and why are GPUs different than so any other letter before the PU if you will?\N那么，您能跟观众聊聊你们的产品吗？为什么GPU和其他任何在PU之前的字母组合都不一样呢？
+Dialogue: 0,0:00:24.03,0:00:25.95,Sub,,0,0,0,,Well, today we started out,\N嗯，今天一开始我们
+Dialogue: 0,0:00:26.00,0:00:32.89,Sub,,0,0,0,,we invented a technology called a GPU and basically a GPU does parallel processing tasks and it\N我们发明了一种名为 GPU 的技术，本质上 GPU 能够执行并行处理任务。
+Dialogue: 0,0:00:32.94,0:00:40.31,Sub,,0,0,0,,solves things like fluid dynamics and particle physics and quantum chemistry and one of the computer graphics,\N解决流体动力学、粒子物理、量子化学以及计算机图形学等领域的问题
+Dialogue: 0,0:00:40.36,0:00:48.61,Sub,,0,0,0,,image processing, um image reconstruction, uh and of course one of the things that it does incredibly well is artificial intelligence.\N图像处理、图像重建，当然还有它非常擅长的人工智能。
+Dialogue: 0,0:00:48.66,0:00:58.32,Sub,,0,0,0,,Um our architecture, our technology is general purpose meaning that uh any we support every single closed models,\N我们的架构和技术是通用的，意味着我们支持每一个闭源模型。
+Dialogue: 0,0:00:58.38,0:01:03.51,Sub,,0,0,0,,we support every single open model, we support languages, we support large models,\N我们支持每一个开源模型，支持各种语言，支持大型模型。
+Dialogue: 0,0:01:03.56,0:01:12.92,Sub,,0,0,0,,small models, we support physical models, biological models, and so our architecture is fungible in the sense that it runs every AI model,\N小型模型，我们支持物理模型、生物模型，因此我们的架构具有通用性，能够运行各类 AI 模型。
+Dialogue: 0,0:01:12.97,0:01:17.02,Sub,,0,0,0,,runs all data processing and and parallel processing tasks.\N运行所有数据处理和并行处理任务。
+Dialogue: 0,0:01:17.07,0:01:18.91,Sub,,0,0,0,,As a result, we're everywhere.\N因此，我们无处不在。
+Dialogue: 0,0:01:18.96,0:01:20.19,Sub,,0,0,0,,We're in every cloud.\N我们遍布每一朵云。
+Dialogue: 0,0:01:20.24,0:01:21.03,Sub,,0,0,0,,We're on prem.\N我们部署在本地。
+Dialogue: 0,0:01:21.08,0:01:22.38,Sub,,0,0,0,,We could be at the edge.\N我们可能正处在边缘。
+Dialogue: 0,0:01:22.43,0:01:24.92,Sub,,0,0,0,,We're in robotic systems and self-driving cars.\N我们正处在机器人系统和自动驾驶汽车领域。
+Dialogue: 0,0:01:24.97,0:01:26.90,Sub,,0,0,0,,Um, and the com the company's been around.\N嗯，这家公司已经存在很久了。
+Dialogue: 0,0:01:26.95,0:01:28.68,Sub,,0,0,0,,We been working on this for so long.\N我们为此努力了这么久。
+Dialogue: 0,0:01:28.73,0:01:31.98,Sub,,0,0,0,,We're in our 14th generation of our architecture.\N我们已经进入了第14代架构。
+Dialogue: 0,0:01:32.02,0:01:35.23,Sub,,0,0,0,,And, and so, so Nvidia's basically everywhere.\N而且，总而言之，英伟达几乎无处不在。
+Dialogue: 0,0:01:35.28,0:01:40.18,Sub,,0,0,0,,One of the advantages of doing that is that these infrastructures are so expensive.\N这样做的一个优势是，这些基础设施非常昂贵。
+Dialogue: 0,0:01:40.23,0:01:43.57,Sub,,0,0,0,,One gigawatt is about 50 60 billion dollars.\N1吉瓦大约需要500亿到600亿美元。
+Dialogue: 0,0:01:43.62,0:01:49.15,Sub,,0,0,0,,You know, back in the old days, people thought building a fab $25 billion was a giant investment.\N你知道，以前人们觉得建一个耗资250亿美元的晶圆厂已经是巨大的投资了。
+Dialogue: 0,0:01:49.20,0:01:52.63,Sub,,0,0,0,,And now, literally one gigawatt is twice that.\N现在， literally 一吉瓦是这个数字的两倍。
+Dialogue: 0,0:01:52.68,0:02:00.22,Sub,,0,0,0,,And we're building between now and the end of the decade 100 gigawatts because we want to produce intelligence for the world.\N我们正致力于在当下至本十年末之间，建设100吉瓦的算力，因为我们希望为世界生产智能。
+Dialogue: 0,0:02:00.28,0:02:09.29,Sub,,0,0,0,,And so when you're investing in infrastructure that's that costly, you want to make sure that it is fungible and it's\N因此，当你投资如此昂贵的基础设施时，你必须确保它是可通用的。
+Dialogue: 0,0:02:09.34,0:02:17.86,Sub,,0,0,0,,durable because otherwise if you build something that's too specialized and the world's architecture and algorithm changes and these AI models and\N耐用，否则如果你打造的东西过于专用，而世界架构和算法发生变化，这些AI模型也会随之改变。
+Dialogue: 0,0:02:17.91,0:02:23.78,Sub,,0,0,0,,technologies are changing so fast if it changes then all a sudden it could obsolete the investment that you've made and so\N技术更新如此迅速，一旦发生变化，你的投资可能瞬间就过时了。
+Dialogue: 0,0:02:23.83,0:02:32.96,Sub,,0,0,0,,the reason why Nvidia's growth is accelerating is because people are starting to realize that we're the safest architecture to invest in.\N英伟达增长加速的原因在于，人们开始意识到，我们是投资最安全的架构。
+Dialogue: 0,0:02:33.01,0:02:34.30,Sub,,0,0,0,,It's fungible.\N它是可互换的。
+Dialogue: 0,0:02:34.35,0:02:40.02,Sub,,0,0,0,,It is durable and it continues to improve over time through software and uh it runs everything.\N它经久耐用，还能通过软件持续升级，运行一切。
+Dialogue: 0,0:02:40.07,0:02:46.35,Sub,,0,0,0,,And so we run every American model, every international model and every modality of models that you have.\N因此我们运行每一个美国模型、每一个国际模型，以及你所拥有的所有模态的模型。
+Dialogue: 0,0:02:46.40,0:02:51.52,Sub,,0,0,0,,So people are always interested on where the world is going.\N人们总是关心世界将走向何方。
+Dialogue: 0,0:02:51.57,0:02:57.21,Sub,,0,0,0,,If if you were going to give us sort of your big picture view, where where are we going?\N如果你要给我们一个宏观视角，我们现在正走向何方？
+Dialogue: 0,0:02:57.26,0:03:05.92,Sub,,0,0,0,,um what should we be thinking about that we don't always talk about you know what you you see everything really all the companies of the world sort of\N嗯，我们平时不太会讨论的，到底该关注些什么呢？你看看，全世界所有公司好像都在这样。
+Dialogue: 0,0:03:05.97,0:03:13.49,Sub,,0,0,0,,come and visit with you and sort of tell you where they're going how how would you sort of give us a big picture of a set of ideas\N来和我们聊聊吧，大致告诉我们他们未来的方向，你能不能给我们一个整体的、宏观的想法？
+Dialogue: 0,0:03:13.54,0:03:23.50,Sub,,0,0,0,,that we don't usually hear about well there's some things that that we hear and and then I'll I'll I'll juxtapose that um against what I expect and so\N我们通常听不到这些事，不过有些事情我们确实听说过，接下来我会把它们和我的预期做个对比。
+Dialogue: 0,0:03:23.56,0:03:28.60,Sub,,0,0,0,,for example in the next couple of years we are going to achieve essentially\N例如，在接下来的几年里，我们将基本实现
+Dialogue: 0,0:03:28.65,0:03:36.67,Sub,,0,0,0,,what people call AGI and and um and that's not an illogical thing to me.\N人们所说的通用人工智能，对我来说并不是什么不合逻辑的事。
+Dialogue: 0,0:03:36.72,0:03:39.88,Sub,,0,0,0,,In fact, I would argue that we're practically there today.\N事实上，我认为我们今天实际上已经做到了。
+Dialogue: 0,0:03:39.93,0:03:40.33,Sub,,0,0,0,,Okay?\N好，明白了吗？
+Dialogue: 0,0:03:40.37,0:03:43.07,Sub,,0,0,0,,And and so the question is what does that mean?\N那么问题来了，这到底意味着什么？
+Dialogue: 0,0:03:43.12,0:03:45.55,Sub,,0,0,0,,Um it either means a lot or it doesn't mean anything.\N嗯，要么意义重大，要么就毫无意义。
+Dialogue: 0,0:03:45.60,0:03:48.67,Sub,,0,0,0,,And so let me give you an example.\N那么，让我举个例子。
+Dialogue: 0,0:03:48.72,0:03:50.98,Sub,,0,0,0,,If we said that in the next couple of years we're going to\N如果我们说在未来几年内，我们将要
+Dialogue: 0,0:03:51.03,0:03:57.06,Sub,,0,0,0,,achieve artificial general intelligence um and every and there's no question everybody's everybody's\N实现通用人工智能，毫无疑问，每个人都在为此努力
+Dialogue: 0,0:03:57.11,0:04:08.03,Sub,,0,0,0,,tasks the things that we do whether it's in um just learning or working or uh every single industry will be impacted it will benefit everybody.\N无论是学习、工作还是各个行业，我们所从事的每项任务都将受到影响，最终惠及所有人。
+Dialogue: 0,0:04:08.08,0:04:15.18,Sub,,0,0,0,,However, the part that is that is not not thought through is in fact uh the thought experiment.\N然而，人们没有考虑到的部分，实际上正是这个思想实验本身。
+Dialogue: 0,0:04:15.23,0:04:16.86,Sub,,0,0,0,,Let me just give you the thought experiment.\N让我给你做个思想实验。
+Dialogue: 0,0:04:16.91,0:04:22.75,Sub,,0,0,0,,Suppose and you know that several several hundred years ago uh humans in order to have a more\N假设你了解，大约几百年前，人类为了获得更多的
+Dialogue: 0,0:04:22.80,0:04:29.27,Sub,,0,0,0,,civil society uh manufactured one of the most important things in the world which is called education intelligence.\N民间社会制造了世界上最重要的东西之一，那就是教育智能。
+Dialogue: 0,0:04:29.32,0:04:36.54,Sub,,0,0,0,,Through universities and schools we manufacture intelligence, and we manufacture stability at scale.\N通过大学和学校，我们规模化地制造智能与稳定。
+Dialogue: 0,0:04:36.59,0:04:38.93,Sub,,0,0,0,,is without it, how would we have civilization?\N没有它，我们如何能有文明？
+Dialogue: 0,0:04:38.98,0:04:42.74,Sub,,0,0,0,,And so now we're creating the digital version of that.\N因此我们现在正在创建它的数字版本。
+Dialogue: 0,0:04:42.79,0:04:50.17,Sub,,0,0,0,,We're manufacturing now intelligence digitally at scale so that even even countries and people who don't have\N我们现在正以规模化的方式数字化制造智能，使得即使是没有资源的国家和个人也能受益。
+Dialogue: 0,0:04:50.22,0:04:55.56,Sub,,0,0,0,,access to the highest levels of education now have the benefits of the highest levels of education.\N如今，人们能够接触到最高水平的教育，也享受到了最高水平教育带来的好处。
+Dialogue: 0,0:04:55.61,0:04:55.94,Sub,,0,0,0,,Okay?\N好，明白了？
+Dialogue: 0,0:04:55.97,0:04:59.76,Sub,,0,0,0,,And so that's the simplest way of thinking about what is happening right now.\N所以，这就是理解当前正在发生的事情最简单的方式。
+Dialogue: 0,0:04:59.81,0:05:03.18,Sub,,0,0,0,,So the question is what's the benefit to society as a result of that?\N那么问题来了，这对社会有什么好处？
+Dialogue: 0,0:05:03.23,0:05:05.19,Sub,,0,0,0,,Well, let's pretend let's do a thought experiment.\N好吧，我们来做个思想实验。
+Dialogue: 0,0:05:05.24,0:05:12.27,Sub,,0,0,0,,Suppose every single uh every single, you know, young person that we hire out of school uh is incredibly well educated.\N假设我们从学校招聘的每一位年轻人，都受过极为良好的教育。
+Dialogue: 0,0:05:12.32,0:05:15.18,Sub,,0,0,0,,Well, that's pretty much consistent with everybody I hire.\N嗯，这和我雇用的每个人都很一致。
+Dialogue: 0,0:05:15.23,0:05:22.77,Sub,,0,0,0,,They come out of Stanford or Harvard or MIT or, you know, ETH or and these are incredibly smart kids.\N他们来自斯坦福、哈佛、麻省理工，或者像苏黎世联邦理工学院这样的顶尖学府，都是些极其聪明的孩子。
+Dialogue: 0,0:05:22.82,0:05:30.12,Sub,,0,0,0,,However, when these kids come to come to our company and every every company and every industry,\N然而，当这些孩子来到我们的公司，以及每一家公司、每一个行业时，
+Dialogue: 0,0:05:30.17,0:05:36.43,Sub,,0,0,0,,we now still have to invest quite a bit in surrounding them with context.\N我们现在仍需投入大量精力，为它们营造上下文环境。
+Dialogue: 0,0:05:36.48,0:05:44.43,Sub,,0,0,0,,So, as it turns out, even when we get to AGI, it's not as if every company's problems are solved.\N事实上，即使我们实现了通用人工智能，也并不意味着每个公司的问题都会迎刃而解。
+Dialogue: 0,0:05:44.48,0:05:51.29,Sub,,0,0,0,,It's not as if all of a sudden in two years time, I say, "Okay, let me connect it to this a a this AI service."\N并不是说两年之内突然间我就想好了，“好吧，让我把它连到这个AI服务上去。”
+Dialogue: 0,0:05:51.34,0:05:56.04,Sub,,0,0,0,,and I just sit sit back and all of a sudden my company becomes more and more productive overnight.\N我只需坐享其成，突然间，我的公司 productivity 就一夜之间不断提升。
+Dialogue: 0,0:05:56.09,0:05:57.88,Sub,,0,0,0,,That's just not going to happen at all.\N那根本不可能发生。
+Dialogue: 0,0:05:57.93,0:06:02.64,Sub,,0,0,0,,You're going to spend all of your energy just like you currently do onboarding a\N你将把全部精力都花在入职培训上，就像现在这样。
+Dialogue: 0,0:06:02.69,0:06:10.02,Sub,,0,0,0,,a new college grad with a PhD from MIT, which is basically surrounding them with context,\N一位刚毕业的博士，来自麻省理工学院，这几乎意味着他们周围都是背景信息。
+Dialogue: 0,0:06:10.07,0:06:12.11,Sub,,0,0,0,,purpose, relevance,\N目的，相关性，
+Dialogue: 0,0:06:12.16,0:06:20.99,Sub,,0,0,0,,access to, you know, all of these other things which is essentially if you will the harness around these AIs,\N对这些其他事物的访问，说白了，就是围绕这些人工智能的运行框架。
+Dialogue: 0,0:06:21.04,0:06:25.88,Sub,,0,0,0,,the environment around these AIs so that they could do productive work.\N让这些AI处于合适的环境中，从而能够开展高效工作。
+Dialogue: 0,0:06:25.93,0:06:31.77,Sub,,0,0,0,,All of that harnessing, all of that environment creation is what companies do, is what leaders do.\N所有这些能力的整合与环境的构建，正是企业所为，正是领导者所为。
+Dialogue: 0,0:06:31.82,0:06:35.95,Sub,,0,0,0,,And as it turns out, our jobs won't change.\N事实证明，我们的工作不会改变。
+Dialogue: 0,0:06:36.00,0:06:41.46,Sub,,0,0,0,,Our job is defined by purpose, context, meaning.\N我们的工作由目标、情境和意义所定义。
+Dialogue: 0,0:06:41.51,0:06:43.58,Sub,,0,0,0,,That's what a job is.\N这就是工作的意义所在。
+Dialogue: 0,0:06:43.63,0:06:48.27,Sub,,0,0,0,,In that job, there's a lot of typing and talking and, you know, things like that.\N那份工作里有很多打字和说话，诸如此类的事情。
+Dialogue: 0,0:06:48.32,0:06:51.71,Sub,,0,0,0,,Those skills are going to be automated by AI.\N这些技能将被人工智能自动化。
+Dialogue: 0,0:06:51.76,0:06:53.73,Sub,,0,0,0,,The tasks are going to be automated.\N这些任务将实现自动化。
+Dialogue: 0,0:06:53.78,0:06:56.38,Sub,,0,0,0,,But our jobs' purpose remains.\N但我们的工作目的依然明确。
+Dialogue: 0,0:06:56.44,0:07:02.11,Sub,,0,0,0,,And so I think what's going to happen is that we're all just going to be supercharged just like we're currently supercharged.\N所以我认为接下来发生的事就是，我们都会像现在一样被彻底赋能。
+Dialogue: 0,0:07:02.16,0:07:05.34,Sub,,0,0,0,,Nvidia is we use AI across the whole company today.\N英伟达如今正将人工智能应用到公司的方方面面。
+Dialogue: 0,0:07:05.39,0:07:11.09,Sub,,0,0,0,,We use off-the-shelf AIs like like anthropics and open AIs and cursor and um and we build\N我们使用现成的 AI，比如 Anthropic 和 OpenAI，\N还有 Cursor，然后我们进行开发。
+Dialogue: 0,0:07:11.14,0:07:15.85,Sub,,0,0,0,,a lot of our own custom AI and I encourage everybody to apply the same the same idea.\N我们自己开发了许多定制化的AI，我鼓励大家也应用同样的理念。
+Dialogue: 0,0:07:15.90,0:07:23.29,Sub,,0,0,0,,You should use AI off the shelf wherever you can, but don't forget you have to invest in building your own intelligence.\N你应尽可能使用现成的AI，但别忘了必须投入资源打造属于自己的智能。
+Dialogue: 0,0:07:23.34,0:07:29.15,Sub,,0,0,0,,every country, every company, you can't outsource all of your intelligence to somebody else.\N每个国家、每家公司，都不可能把所有智能都外包给他人。
+Dialogue: 0,0:07:29.20,0:07:34.68,Sub,,0,0,0,,And so you have to use as much of it as you can build as much as you need to.\N因此，你必须尽可能多地使用它，只要能建造多少就建多少。
+Dialogue: 0,0:07:34.73,0:07:41.55,Sub,,0,0,0,,And so uh we do that at the company and and uh and so that's the the first idea is just that we're going to be supercharged.\N所以我们公司在这么做，第一个想法就是，我们将获得巨大动力。
+Dialogue: 0,0:07:41.60,0:07:45.81,Sub,,0,0,0,,Um the idea that somehow all the jobs are going to be eliminated, removed, that's just nonsense.\N说所有工作都会被消除或取代，这根本就是无稽之谈。
+Dialogue: 0,0:07:45.86,0:07:46.11,Sub,,0,0,0,,Okay?\N好嘞？
+Dialogue: 0,0:07:46.11,0:07:49.00,Sub,,0,0,0,,And the reason for that is because of all the things that I've just said.\N原因就在于我刚才提到的所有事情。
+Dialogue: 0,0:07:49.05,0:07:56.27,Sub,,0,0,0,,Now the other thing that that is the case is that all of our ambitions are going to be supercharged.\N现在另一点是，我们所有的雄心都将被极大激发。
+Dialogue: 0,0:07:56.32,0:08:06.00,Sub,,0,0,0,,Just as you know we are more ambitious today than any time in human civilization.\N正如你所知，我们今天的雄心壮志，是人类文明史上前所未有的。
+Dialogue: 0,0:08:06.05,0:08:11.70,Sub,,0,0,0,,We think about doing things that are people a 100 years ago would just that's insane.\N我们想想那些一百年前人们根本不敢想象的事，简直太疯狂了。
+Dialogue: 0,0:08:11.75,0:08:13.63,Sub,,0,0,0,,That's got to be science fiction.\N那一定是科幻小说了。
+Dialogue: 0,0:08:13.68,0:08:14.11,Sub,,0,0,0,,True.\N没错。
+Dialogue: 0,0:08:14.16,0:08:17.95,Sub,,0,0,0,,And yet we perfectly expect it.\N但我们却完全能接受。
+Dialogue: 0,0:08:18.00,0:08:22.34,Sub,,0,0,0,,And so just imagine how ambitious we're going to be in 5 10 years.\N所以，想象一下我们五年、十年后将有多么雄心勃勃。
+Dialogue: 0,0:08:22.39,0:08:24.08,Sub,,0,0,0,,That's the exciting time.\N那正是令人兴奋的时刻。
+Dialogue: 0,0:08:24.13,0:08:24.61,Sub,,0,0,0,,You know,\N你知道吗，
+Dialogue: 0,0:08:24.66,0:08:31.32,Sub,,0,0,0,,I've been working a long time and surely I don't have to work but I don't want to miss I I'm definitely not going to miss the next 10-15 years.\N我一直在努力工作，当然我并不非得继续工作，但我绝不想错过接下来的10到15年。
+Dialogue: 0,0:08:31.37,0:08:36.79,Sub,,0,0,0,,The ambition of the industry, the ambition of my colleagues, my own ambition has really been supercharged.\N整个行业的雄心，我同事们的雄心，以及我自己的雄心，都真正被极大地激发了。
+Dialogue: 0,0:08:36.84,0:08:43.68,Sub,,0,0,0,,And this is another way of saying that all of all of you all of the countries your ambitions have to be supercharged.\N换句话说，你们所有国家、所有人的雄心都必须被极大激发。
+Dialogue: 0,0:08:43.73,0:08:48.63,Sub,,0,0,0,,This is the time when you have to feel enlightened, inspired, you know,\N现在正是你需要感到顿悟、受到启发的时候。
+Dialogue: 0,0:08:48.68,0:08:53.27,Sub,,0,0,0,,supercharged, lifted because you now have this incredible technology behind you.\N让你的性能得到极大提升，只因你身后有了这项令人惊叹的技术。
+Dialogue: 0,0:08:53.32,0:08:57.31,Sub,,0,0,0,,And so you know what do I expect in the next 5 10 years?\N那么，未来5到10年，我期待会怎样呢？
+Dialogue: 0,0:08:57.36,0:08:59.26,Sub,,0,0,0,,Things that take 10 years are going to take one.\N原本需要十年的事情，将只需一年。
+Dialogue: 0,0:08:59.31,0:09:02.27,Sub,,0,0,0,,Things that take one will take a month.\N一件小事若耗时一天，那件事情就可能要花一个月。
+Dialogue: 0,0:09:02.32,0:09:10.50,Sub,,0,0,0,,And so, um, you know, if you if you think that that this is going to cost a million dollars to do, uh,\N所以啊，你知道的，如果你觉得做这件事要花一百万美元，呃，
+Dialogue: 0,0:09:10.55,0:09:16.94,Sub,,0,0,0,,well, back a long time ago, just, you know, years ago, a million dollars seems like a big investment.\N说实在的，很久以前，也就是几年前，一百万美元看起来还是一笔很大的投资。
+Dialogue: 0,0:09:16.99,0:09:19.42,Sub,,0,0,0,,But these days, just think about the level of investments.\N但如今，只需想想投资的规模即可。
+Dialogue: 0,0:09:19.46,0:09:21.86,Sub,,0,0,0,,We're talking about trillions of dollars in investment.\N我们谈论的是数万亿美元的投资。
+Dialogue: 0,0:09:21.91,0:09:24.19,Sub,,0,0,0,,And the reason for that is this.\N原因就在于此。
+Dialogue: 0,0:09:24.24,0:09:35.71,Sub,,0,0,0,,It is now possible for average humans like ourselves to think that we can make an impact on a hundred trillion dollar industry.\N现在，像我们这样的普通人也可以认为，自己能够对一个价值十万亿美元的产业产生影响。
+Dialogue: 0,0:09:35.76,0:09:39.05,Sub,,0,0,0,,For the first time, you're hearing people, Isn't that right?\N第一次听到人们这么说，对吧？
+Dialogue: 0,0:09:39.10,0:09:48.29,Sub,,0,0,0,,For the first time, you're hearing innovators, people, companies, countries talking about elevating a hundred trillion dollar industry.\N这是首次，你听到创新者、个人、公司和国家在谈论提升一个价值十万亿的产业。
+Dialogue: 0,0:09:48.34,0:09:49.81,Sub,,0,0,0,,That's ambition.\N那是雄心。
+Dialogue: 0,0:09:49.86,0:09:58.27,Sub,,0,0,0,,To think that you're going to add 20, 50 trillion dollars of economic benefit around the world, that's ambition.\N全球增加20万亿、50万亿美元的经济收益，这正是雄心所在。
+Dialogue: 0,0:09:58.32,0:10:02.51,Sub,,0,0,0,,No time in history have we been able to say things like that.\N历史上任何时期，我们都无法说出这样的话。
+Dialogue: 0,0:10:02.56,0:10:06.36,Sub,,0,0,0,,Um, I'm really uh excited for our conversation.\N呃，我真的很期待我们的对话。
+Dialogue: 0,0:10:06.41,0:10:11.96,Sub,,0,0,0,,So, I'd like to introduce you all to Tom Brown, one of the founders of Anthropic.\N那么，我来向大家介绍一下汤姆·布朗，他是 Anthropic 的联合创始人之一。
+Dialogue: 0,0:10:12.01,0:10:15.14,Sub,,0,0,0,,So, Tom, thank thanks for coming and joining us.\N所以，汤姆，感谢你过来，加入我们。
+Dialogue: 0,0:10:15.19,0:10:25.61,Sub,,0,0,0,,Would you mind giving um my my uh my partner ministers uh sort of a background of yourself and Anthropic because I don't think they know you so well.\N您能简单介绍一下您自己和 Anthropic 吗？我感觉他们对您不太了解。
+Dialogue: 0,0:10:25.66,0:10:29.60,Sub,,0,0,0,,Anthropic of course is famous, but a little a little story would always be helpful.\N当然，Anthropic 众所周知，但讲个小故事总会更有帮助。
+Dialogue: 0,0:10:29.65,0:10:30.56,Sub,,0,0,0,,Yeah, I'd love to.\N是的，我很乐意。
+Dialogue: 0,0:10:30.61,0:10:35.03,Sub,,0,0,0,,Um, and yeah, just first off, thank you so much for uh for inviting me to this.\N呃，首先，非常感谢您邀请我参加这次活动。
+Dialogue: 0,0:10:35.08,0:10:37.68,Sub,,0,0,0,,It's an honor to be here and to get to speak with you all.\N很荣幸能来到这里，与大家交流。
+Dialogue: 0,0:10:37.73,0:10:42.51,Sub,,0,0,0,,Um, maybe I so I'll talk through a little bit about myself and my background.\N嗯，也许我先简单介绍一下自己和我的背景。
+Dialogue: 0,0:10:42.56,0:10:51.67,Sub,,0,0,0,,Um, maybe even before that, I think like probably three things that I'd love all of you guys to take away from uh this conversation.\N嗯，也许在那之前，我想请大家记住三件事。
+Dialogue: 0,0:10:51.72,0:10:57.76,Sub,,0,0,0,,One is that uh AI capabilities have been increasing very rapidly.\N一是人工智能能力正迅速提升。
+Dialogue: 0,0:10:57.81,0:11:04.99,Sub,,0,0,0,,Obviously um I expect them to continue to be increasing really rapidly and consistently.\N显然，我预计它们会继续快速且持续地增长。
+Dialogue: 0,0:11:05.04,0:11:12.24,Sub,,0,0,0,,Um two uh as a result of that we are seeing this demand that's not just fast but also like exponential.\N嗯，由于这一原因，我们看到的需求不仅迅速增长，而且呈指数级上升。
+Dialogue: 0,0:11:12.29,0:11:15.76,Sub,,0,0,0,,So like increasing in multiples every year.\N就像每年以倍数增长一样。
+Dialogue: 0,0:11:15.81,0:11:22.17,Sub,,0,0,0,,Um, and then I think three, as a result of that, uh, we have this incredible industrial buildout,\N嗯，然后我认为，由此带来的结果是，我们迎来了令人难以置信的工业建设热潮，
+Dialogue: 0,0:11:22.22,0:11:28.36,Sub,,0,0,0,,the likes of which we've never seen in the history of humanity, even more than the the railroads of the 1800s.\N人类历史上从未见过如此规模的变革，甚至超过了19世纪的铁路时代。
+Dialogue: 0,0:11:28.41,0:11:35.40,Sub,,0,0,0,,And so that's a place where um, any country that wants to be involved has a chance to to be involved.\N因此，任何希望参与的国家都有机会参与进来。
+Dialogue: 0,0:11:35.45,0:11:41.79,Sub,,0,0,0,,Um, so I guess my my background uh, is um, I was an engineer originally.\N呃，我的背景是，我最初是一名工程师。
+Dialogue: 0,0:11:41.84,0:11:45.84,Sub,,0,0,0,,Uh I'm now the um chief compute officer at Anthropic.\N我现在是 Anthropic 的首席算力官。
+Dialogue: 0,0:11:45.89,0:11:57.69,Sub,,0,0,0,,I kind of got into this back in um 2014 where uh a few of my friends came to me and they were like hey I I had done startups for many years.\N我大概是从2014年开始接触这个的，当时有几个朋友找到我，说：“嘿，我做创业公司很多年了。”
+Dialogue: 0,0:11:57.74,0:12:09.26,Sub,,0,0,0,,They came to me and they were like Tom uh it seems like we might end up getting uh human level intelligence from AI within our lifetimes.\N他们来找我，说汤姆，好像我们这一辈子就有望看到人工智能达到人类水平的智能了。
+Dialogue: 0,0:12:09.31,0:12:16.88,Sub,,0,0,0,,So, in the next 50 years, um, and I was like, "Wow, that like seems kind of crazy, but if it does happen,\N所以，未来50年里，我当时心想，哇，这听起来有点疯狂，但如果真的发生了呢，
+Dialogue: 0,0:12:16.93,0:12:21.52,Sub,,0,0,0,,like that would be the biggest most important thing that ever happens to humanity."\N那将是人类历史上最重要、最重大的事情。
+Dialogue: 0,0:12:21.56,0:12:24.05,Sub,,0,0,0,,Like the things that makes us special is our minds.\N让我们与众不同的是我们的思想。
+Dialogue: 0,0:12:24.10,0:12:25.12,Sub,,0,0,0,,It's not our body.\N这不是我们的身体。
+Dialogue: 0,0:12:25.17,0:12:33.74,Sub,,0,0,0,,The industrial revolution transformed all of society, but really it was like like the second most important thing about humans is our bodies.\N工业革命改变了整个社会，但真正重要的是，人类的躯体几乎仅次于第二重要的事物。
+Dialogue: 0,0:12:33.79,0:12:36.79,Sub,,0,0,0,,The main thing is our is our minds.\N最重要的是我们的思维。
+Dialogue: 0,0:12:36.84,0:12:46.00,Sub,,0,0,0,,Um, and so that that got me to think like, okay, maybe I'll switch from engineering to try to help out learning about AI.\N嗯，这让我开始思考，也许我该从工程转行，试着去学习和了解人工智能。
+Dialogue: 0,0:12:46.04,0:12:51.12,Sub,,0,0,0,,Um, and so, uh, I did I started doing kind of self-study on that.\N嗯，所以，我开始自己琢磨那方面的东西。
+Dialogue: 0,0:12:51.17,0:12:55.46,Sub,,0,0,0,,And then about a year after that, um, uh, OpenAI was founded.\N然后大约一年后，OpenAI 成立了。
+Dialogue: 0,0:12:55.51,0:12:58.22,Sub,,0,0,0,,Um, and so I knew some of the folks from that.\N嗯，所以我认识其中一些人。
+Dialogue: 0,0:12:58.27,0:13:01.17,Sub,,0,0,0,,I'd long been a fan of, uh, of Elon Musk.\N我一直很欣赏埃隆·马斯克。
+Dialogue: 0,0:13:01.22,0:13:04.72,Sub,,0,0,0,,And so I went to see if I could help out in some way.\N于是我就去看了看，能否以某种方式提供帮助。
+Dialogue: 0,0:13:04.77,0:13:12.50,Sub,,0,0,0,,And so I joined I joined them as like one of the first 20 employees basically to do engineering work.\N于是，我加入了他们，基本上作为前20名员工之一，从事工程工作。
+Dialogue: 0,0:13:12.55,0:13:16.72,Sub,,0,0,0,,Um and then uh uh kind of learned more about that.\N嗯，然后呢，大概了解得更多了。
+Dialogue: 0,0:13:16.77,0:13:20.42,Sub,,0,0,0,,And then I think the the key thing for me where I was like, "Oh, wow.\N然后我觉得对我而言最关键的是，我突然意识到：“哦，天哪。”
+Dialogue: 0,0:13:20.47,0:13:29.99,Sub,,0,0,0,,actually is going to be a big deal that's not just in 50 years but faster was um the scaling laws paper um which was\N实际上这将是一件大事，不仅仅是在50年后，而是会更快，比如那篇关于缩放定律的论文。
+Dialogue: 0,0:13:30.04,0:13:41.09,Sub,,0,0,0,,in 2019 and that was basically looking at um within AI people had seen from like 20 uh for for a decade before 2019 that if\N2019年，当时人们基本上是在AI领域内观察到，\N早在2019年之前的十年里，AI领域就已显现出一些趋势。
+Dialogue: 0,0:13:41.14,0:13:48.64,Sub,,0,0,0,,you like the models were getting bigger and bigger people were using more and more compute and the quality of the models was improving over time\N大家发现模型越来越大，计算资源的使用量也与日俱增，而模型的质量随着时间推移不断提升。
+Dialogue: 0,0:13:48.69,0:13:58.50,Sub,,0,0,0,,um but they didn't have a good understanding of how like what the what the mechanism was for taking the bigger models and making them smarter.\N但他们并不太清楚，究竟是什么机制能让更大的模型变得更聪明。
+Dialogue: 0,0:13:58.55,0:14:08.22,Sub,,0,0,0,,And so this was a thing where some of my collaborators um uh now anthropic co-founders um went and tried to do the same\N于是，我一些同事，也就是现在的 Anthropic 联合创始人，去尝试做了同样的事。
+Dialogue: 0,0:14:08.27,0:14:14.87,Sub,,0,0,0,,kind of scientific research that you would do if you were like in the early days of a combustion engine and you were like\N就像在内燃机发展的早期阶段所做的那种科学研发
+Dialogue: 0,0:14:14.92,0:14:23.28,Sub,,0,0,0,,okay like we see combustion engines bigger engines provide more power but uh how much power do you get from an engine and if\N好的，就像我们看到的，燃烧发动机越大，提供的动力就越多，但发动机到底能提供多少动力呢？
+Dialogue: 0,0:14:23.33,0:14:32.08,Sub,,0,0,0,,you like scale up the size of the engine or change the ratio of how much fuel versus oxygen you put in the engine,\N你喜欢增大发动机的尺寸，或者改变发动机中燃料与氧气的比例。
+Dialogue: 0,0:14:32.13,0:14:33.82,Sub,,0,0,0,,how much power do you get?\N你能获得多少电力？
+Dialogue: 0,0:14:33.87,0:14:40.28,Sub,,0,0,0,,And so those studies that they did then gave a recipe of what exact\N因此，他们所做的那些研究提供了一份确切的配方
+Dialogue: 0,0:14:40.32,0:14:48.36,Sub,,0,0,0,,combinations of compute data and model size resulted in a given level of intelligence.\N计算、数据和模型规模的组合，带来了特定水平的智能。
+Dialogue: 0,0:14:48.41,0:14:53.75,Sub,,0,0,0,,And so um those types of algorithms and those types of recipes have been improving over time.\N因此，这类算法和这类方法随着时间推移不断得到改进。
+Dialogue: 0,0:14:53.80,0:14:58.74,Sub,,0,0,0,,And then also just the amount of compute that we've been putting into the models has been scaling up.\N此外，我们投入模型的算力规模也在持续扩大。
+Dialogue: 0,0:14:58.79,0:15:03.64,Sub,,0,0,0,,And so that's been kind of the the underlying thing that got me to be like, okay, wow,\N所以这一直是我内心深处的驱动力，让我觉得：天啊，真的太棒了。
+Dialogue: 0,0:15:03.69,0:15:12.89,Sub,,0,0,0,,we can try it out over eight orders of magnitude, many, many orders of magnitude, and see this consistent trend.\N我们可以跨越八个数量级，甚至更多数量级进行测试，观察到这一一致的趋势。
+Dialogue: 0,0:15:12.94,0:15:20.04,Sub,,0,0,0,,And now we've seen it over even more like um over yeah over over 15 orders of magnitude.\N而现在，我们已经看到了超过甚至超过15个数量级的情况。
+Dialogue: 0,0:15:20.08,0:15:26.37,Sub,,0,0,0,,And so uh um that gave us kind of the confidence that this stuff would continue to\N于是呃，那个让我们多少有了点信心，觉得这些事情会持续下去
+Dialogue: 0,0:15:26.42,0:15:31.19,Sub,,0,0,0,,advance um at the rapid rate that it that it has been which ended up leading to\N以如此迅速的速度推进，最终导致了
+Dialogue: 0,0:15:31.24,0:15:36.00,Sub,,0,0,0,,the to the founding of Anthropic because we saw that this was going to be something that\N因为我们都意识到，这将是一件意义重大的事情，所以才创立了 Anthropic。
+Dialogue: 0,0:15:36.05,0:15:43.46,Sub,,0,0,0,,was happening not in 50 years but in on the order of uh of under 10 years.\N不是50年以后，而是在不到10年的时间里就会发生。
+Dialogue: 0,0:15:43.52,0:15:47.77,Sub,,0,0,0,,Um so that that kind of was my origin story of getting into this entire thing.\N所以，这大概就是我进入这个领域的起源故事。
+Dialogue: 0,0:15:47.82,0:15:57.50,Sub,,0,0,0,,Now, Anthropic is focused on making sure that as we go through this very rapid um uh kind of a like AI revolution,\N现在，Anthropic 的重点是确保在我们经历这场非常迅速的AI革命过程中，一切都能稳妥推进。
+Dialogue: 0,0:15:57.55,0:15:59.84,Sub,,0,0,0,,things go well for everyone.\N一切顺利，人人受益。
+Dialogue: 0,0:15:59.89,0:16:04.60,Sub,,0,0,0,,And so, I've been really grateful to get to work with uh with you, Secretary,\N因此，我非常感激能有机会与您，部长，共事。
+Dialogue: 0,0:16:04.65,0:16:10.88,Sub,,0,0,0,,and with um with the rest of government to make sure that this stuff is benefiting everybody.\N并与政府其他部门协作，确保这些技术惠及所有人。
+Dialogue: 0,0:16:10.93,0:16:19.24,Sub,,0,0,0,,And now is a chance also, I think, for all of you guys to to be included in this uh incredible once in a once in a generation,\N现在，我想对在座各位来说，也是个绝佳机会，能够参与到这场百年一遇的非凡变革中。
+Dialogue: 0,0:16:19.29,0:16:26.80,Sub,,0,0,0,,perhaps probably once in the entire history of humanity um uh technology change.\N也许，在人类整个历史上，技术变革可能只发生过一次。
+Dialogue: 0,0:16:26.85,0:16:32.79,Sub,,0,0,0,,So, Anthropic has managed to stay at the frontier, right?\N所以，Anthropic 成功地保持在了前沿，对吧？
+Dialogue: 0,0:16:32.84,0:16:39.64,Sub,,0,0,0,,And that uh you know, we we toss around the word frontier, but there's no real frontier.\N而且你知道吗，我们总在说“前沿”这个词，但实际上并不存在真正的前沿。
+Dialogue: 0,0:16:39.69,0:16:43.32,Sub,,0,0,0,,It's just that which you're creating that's new tomorrow.\N你明天所创造的，才是全新的。
+Dialogue: 0,0:16:43.37,0:16:48.96,Sub,,0,0,0,,How how have you managed uh to stay, you know,\N你是怎么做到一直保持这样的状态的，你知道的
+Dialogue: 0,0:16:49.01,0:16:55.52,Sub,,0,0,0,,focused and and how are you selecting where to go because you're doing things different than the other companies are doing.\N专注，而且你是如何决定去向的？因为你做的事情和其他公司不一样。
+Dialogue: 0,0:16:55.57,0:16:55.87,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:16:55.89,0:16:58.08,Sub,,0,0,0,,So, how what's the thinking behind it?\N那么，背后的考虑是什么？
+Dialogue: 0,0:16:58.13,0:17:03.92,Sub,,0,0,0,,And so, that'll give us a little sense of where you're going next or not going next.\N这样我们就能大致了解你接下来是继续前进，还是不再前进了。
+Dialogue: 0,0:17:03.97,0:17:06.06,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:17:06.11,0:17:08.10,Sub,,0,0,0,,Um that's a great question.\N嗯，这是个很好的问题。
+Dialogue: 0,0:17:08.15,0:17:18.57,Sub,,0,0,0,,we've wanted to make the AIs great at scientific innovation and entrepreneurship.\N我们一直希望让人工智能在科学创新和创业方面表现出色。
+Dialogue: 0,0:17:18.62,0:17:28.87,Sub,,0,0,0,,The first thing that took off with the models was ChatGPT.\N最早引爆的模型是 ChatGPT。
+Dialogue: 0,0:17:28.92,0:17:32.22,Sub,,0,0,0,,Um, basically kind of a like Google, a better Google.\N嗯，基本上就是个更强大的谷歌。
+Dialogue: 0,0:17:32.27,0:17:39.77,Sub,,0,0,0,,Um, and so you could ask them questions and you could they would go and answer a question much better than what you could do before.\N嗯，你可以向他们提问，他们回答问题的能力会比你之前自己做要好得多。
+Dialogue: 0,0:17:39.82,0:17:47.23,Sub,,0,0,0,,Um I think from the beginning we were thinking about like okay the main underlying source of all of the value like this this amazing\N嗯，我想从一开始我们就一直在思考，所有价值的根本来源是什么，就是这个惊人的
+Dialogue: 0,0:17:47.28,0:17:58.54,Sub,,0,0,0,,The main underlying source of all the value, all this amazing prosperity that we have, is the hard work of people doing intellectual labor.\N所有价值以及我们所拥有的惊人繁荣，其根本来源都是人们从事智力劳动的辛勤付出。
+Dialogue: 0,0:17:58.59,0:18:02.60,Sub,,0,0,0,,And so we wanted to make sure that the models could help with that.\N因此我们希望确保这些模型能在这方面提供帮助。
+Dialogue: 0,0:18:02.65,0:18:08.32,Sub,,0,0,0,,Um and so that ended up resulting in our focus on coding where that was a place where um\N于是，这最终让我们把重点放在了编程上，因为那里是一个……
+Dialogue: 0,0:18:08.37,0:18:13.96,Sub,,0,0,0,,if you imagine if I imagined just like a very smart uh friend who was uh like wanted to\N如果你想象一下，就像有个非常聪明的朋友，总是想……
+Dialogue: 0,0:18:14.01,0:18:18.89,Sub,,0,0,0,,do work but they were trapped in a computer like what are the things that they could do to\N工作，但他们被困在电脑里，他们能做什么呢
+Dialogue: 0,0:18:18.94,0:18:25.92,Sub,,0,0,0,,help out and like add a huge amount of of uh of their of value to the world there.\N帮忙并增添大量价值到这个世界中。
+Dialogue: 0,0:18:25.97,0:18:29.92,Sub,,0,0,0,,And so a programmer is like a very clear way that you could do that.\N因此，程序员就像一种非常清晰的方式来实现这一点。
+Dialogue: 0,0:18:29.97,0:18:36.52,Sub,,0,0,0,,you don't need to be running like physical experiments like a a biologist would or a physicist.\N你不需要像生物学家或物理学家那样进行物理实验。
+Dialogue: 0,0:18:36.57,0:18:39.78,Sub,,0,0,0,,Um you can just go ahead and do it in the computer.\N你直接在电脑上操作就行了。
+Dialogue: 0,0:18:39.83,0:18:43.98,Sub,,0,0,0,,Um and so that that was kind of why we initially focused on that.\N嗯，所以这正是我们最初专注于它的原因。
+Dialogue: 0,0:18:44.03,0:18:53.68,Sub,,0,0,0,,It also has the benefit now where our models are able to do um to help out with the research that we do where um\N现在我们的模型还能帮助我们开展研究，这带来了很大好处。
+Dialogue: 0,0:18:53.73,0:19:00.03,Sub,,0,0,0,,the vast majority of all of the work that uh anthropic does itself\N人工智能公司（Anthropic）自身完成的绝大部分工作
+Dialogue: 0,0:19:00.08,0:19:05.81,Sub,,0,0,0,,is software engineering um internal software engineering solving bugs in the model training.\N软件工程，嗯，内部软件工程，就是解决模型训练中的bug。
+Dialogue: 0,0:19:05.86,0:19:16.56,Sub,,0,0,0,,Um and so that that focus then was both useful for um like promoting things externally and also for helping us out internally.\N因此，这种专注对外有助于推广，对内也帮助了我们自身。
+Dialogue: 0,0:19:16.61,0:19:28.08,Sub,,0,0,0,,So my ministerial partners my my objective for today is uh growth global growth uh that they can\N因此，我今天的目标是，与我的各位部长同事共同推动全球增长。
+Dialogue: 0,0:19:28.13,0:19:36.38,Sub,,0,0,0,,go home and and have ideas that will help their societies their citizens grow and be more successful.\N回家去，产生能帮助其社会、公民成长并更加成功的创意。
+Dialogue: 0,0:19:36.43,0:19:44.08,Sub,,0,0,0,,So in your experience trying to figure out how to have AI around the world what what's the infrastructure you think they need?\N根据你的经验，想在全球范围内部署人工智能，你觉得它们需要什么样的基础设施？
+Dialogue: 0,0:19:44.13,0:19:49.89,Sub,,0,0,0,,what are the moves um that our you know G20 ministerial partners need to make\N我们的 G20 部长级合作伙伴需要采取哪些举措呢
+Dialogue: 0,0:19:49.94,0:19:56.72,Sub,,0,0,0,,so that they can participate with you in the in the coming benefits from AI.\N让他们也能参与到人工智能带来的未来红利中。
+Dialogue: 0,0:19:56.77,0:19:58.31,Sub,,0,0,0,,Oh, that's that's a great question.\N哦，这是个很棒的问题。
+Dialogue: 0,0:19:58.36,0:20:09.62,Sub,,0,0,0,,So, um I think I I I think that the biggest thing by far is uh building more making it possible to build more um data centers,\N所以啊，我认为目前最重要的事情，远超其他，就是让建设更多数据中心成为可能。
+Dialogue: 0,0:20:09.67,0:20:11.68,Sub,,0,0,0,,more compute in your countries.\N更多算力留在你们的国家。
+Dialogue: 0,0:20:11.73,0:20:17.28,Sub,,0,0,0,,It's I think it's it's it's very clearly the bottleneck for all of our progress.\N我认为这显然是我们所有进展的瓶颈。
+Dialogue: 0,0:20:17.33,0:20:25.36,Sub,,0,0,0,,We're in a huge shortage of uh the power and labor needed to support um the demand for AI.\N我们正面临支持人工智能需求所需电力和人力的巨大短缺。
+Dialogue: 0,0:20:25.41,0:20:29.30,Sub,,0,0,0,,So what what do you you need data centers and infrastructure?\N那你到底需要数据中心和基础设施做什么？
+Dialogue: 0,0:20:29.34,0:20:32.40,Sub,,0,0,0,,Is that basically um and you should tell them what you need.\N基本上就是，你应该告诉他们你需要什么。
+Dialogue: 0,0:20:32.46,0:20:32.73,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:20:32.73,0:20:33.01,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:20:33.01,0:20:35.51,Sub,,0,0,0,,No, that that that's definitely right.\N不，那绝对是正确的。
+Dialogue: 0,0:20:35.56,0:20:41.60,Sub,,0,0,0,,So um uh I think the the the biggest things that we need in order to to build\N嗯，我觉得我们目前最需要的是……
+Dialogue: 0,0:20:41.64,0:20:48.48,Sub,,0,0,0,,data centers are um we need permitting um for the land to be able to to build there.\N数据中心需要获得土地审批，才能在那里建设。
+Dialogue: 0,0:20:48.53,0:20:55.04,Sub,,0,0,0,,And then we need to figure out how to get uh enough labor to do the construction um there as well.\N然后我们还得想办法，弄到足够的人手来完成那里的建设。
+Dialogue: 0,0:20:55.10,0:21:05.29,Sub,,0,0,0,,Um and uh then the obvious benefits to the uh to the country too is like um like now there it's a huge investment in the country.\N此外，对国家而言，显然的好处是，现在对国家的投资巨大。
+Dialogue: 0,0:21:05.34,0:21:06.62,Sub,,0,0,0,,It produces jobs.\N它创造了就业机会。
+Dialogue: 0,0:21:06.67,0:21:11.51,Sub,,0,0,0,,Um it can be like it can be taxed which provides more revenue to the country.\N嗯，它可以被征税，从而为国家带来更多收入。
+Dialogue: 0,0:21:11.56,0:21:16.37,Sub,,0,0,0,,Um and so yeah like I I think that uh there there's many things that can block\N嗯，我觉得有很多事情可能会造成阻碍。
+Dialogue: 0,0:21:16.42,0:21:19.88,Sub,,0,0,0,,data centers from being built so that we we could get a very long list of it.\N数据中心无法建成，导致我们无法列出一个很长的清单。
+Dialogue: 0,0:21:19.93,0:21:24.01,Sub,,0,0,0,,Um but once they are built they they provide huge amounts of value.\N但一旦建成，它们就能创造巨大的价值。
+Dialogue: 0,0:21:24.06,0:21:25.19,Sub,,0,0,0,,All right.\N好的。
+Dialogue: 0,0:21:25.24,0:21:30.77,Sub,,0,0,0,,So uh our our partners build data centers.\N嗯，我们的合作伙伴在建设数据中心。
+Dialogue: 0,0:21:30.82,0:21:35.12,Sub,,0,0,0,,They um they embrace AI.\N他们啊，拥抱人工智能。
+Dialogue: 0,0:21:35.17,0:21:38.36,Sub,,0,0,0,,What are the what's the deliveries?\N交付的是什么？
+Dialogue: 0,0:21:38.40,0:21:40.11,Sub,,0,0,0,,You know what's the outcome?\N你知道结果是什么吗？
+Dialogue: 0,0:21:40.16,0:21:44.92,Sub,,0,0,0,,how how can AI make their countries better and make the world a better place?\N人工智能如何让各国变得更好，让世界变得更美好？
+Dialogue: 0,0:21:44.97,0:21:49.36,Sub,,0,0,0,,Can you give us sort of your vision from Anthropic's perspective?\N从 Anthropic 的角度来看，你能给我们谈谈你的愿景吗？
+Dialogue: 0,0:21:49.41,0:21:56.24,Sub,,0,0,0,,What what do you bring that's different and what can you um help them achieve?\N你带来了什么不同的东西？你能帮他们实现什么目标？
+Dialogue: 0,0:21:56.30,0:21:56.60,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:21:56.62,0:22:00.60,Sub,,0,0,0,,Um so I think there's probably two there's probably two main two main areas.\N所以我认为大概有两个主要方面。
+Dialogue: 0,0:22:00.65,0:22:08.55,Sub,,0,0,0,,One is one is just the um like re-industrialization that's caused by building huge amounts of of valuable physical infrastructure.\N一个是由于建设大量有价值的实体基础设施所引发的再工业化。
+Dialogue: 0,0:22:08.60,0:22:10.36,Sub,,0,0,0,,Um and so yeah, we we talked about that.\N嗯，是的，我们刚才讨论过这个。
+Dialogue: 0,0:22:10.42,0:22:12.60,Sub,,0,0,0,,I think that's that's pretty clear.\N我觉得这已经很明确了。
+Dialogue: 0,0:22:12.65,0:22:18.24,Sub,,0,0,0,,Um and then a separate thing there is that uh the reason that people want\N还有就是，人们之所以想要的原因是另一个独立的问题。
+Dialogue: 0,0:22:18.29,0:22:25.40,Sub,,0,0,0,,to build the like build more compute is because the models end up then adding value.\N要构建更多算力，是因为模型最终会带来价值。
+Dialogue: 0,0:22:25.45,0:22:30.63,Sub,,0,0,0,,Um and so uh the places that that's happened so far has been um\N嗯，所以到目前为止发生这种情况的地方是……
+Dialogue: 0,0:22:30.68,0:22:37.88,Sub,,0,0,0,,mostly by uh like um scaling up the effective labor force or intellectual labor.\N主要是通过扩大有效劳动力或智力劳动规模来实现。
+Dialogue: 0,0:22:37.92,0:22:47.20,Sub,,0,0,0,,um which is yeah like the the key the key component of the overall economy is how many smart people do we have doing good work.\N嗯，也就是说，整个经济的关键在于我们有多少聪明人正在从事优质的工作。
+Dialogue: 0,0:22:47.25,0:22:53.93,Sub,,0,0,0,,Um the AIs now are like not quite people but they're uh doing intellectual labor also and so\N嗯，现在的AI还不完全是人，但它们也在从事智力劳动了。
+Dialogue: 0,0:22:53.98,0:23:01.96,Sub,,0,0,0,,they they feed into that same um like economic calculus that that improves that like raises all boats.\N它们会融入那种类似的经济算计中，从而提升整体水平，让所有船只都受益。
+Dialogue: 0,0:23:02.01,0:23:12.98,Sub,,0,0,0,,Um and then I think like very concretely uh uh some of the most important problems that have plagued humanity like um uh like disease,\N然后我觉得，具体来说，困扰人类的一些最重要问题，比如疾病，
+Dialogue: 0,0:23:13.03,0:23:22.54,Sub,,0,0,0,,cancer, etc. are all blocked by not having enough smart dedicated people who can be constantly working to solve those problems.\N癌症等难题都因缺乏足够聪明且专注的人才，无法持续投入解决而受阻。
+Dialogue: 0,0:23:22.60,0:23:30.51,Sub,,0,0,0,,Um, like I think I think that there's no doubt that if we had uh like a million times more uh oncology researchers,\N嗯，我觉得可以肯定的是，如果我们有百万倍多的肿瘤学研究人员，
+Dialogue: 0,0:23:30.56,0:23:39.07,Sub,,0,0,0,,we could make progress that's not just like uh like 10% faster, it would be like multiples faster.\N我们取得的进步将不仅仅是快10%，而是快好几倍。
+Dialogue: 0,0:23:39.12,0:23:49.50,Sub,,0,0,0,,Um, and so that that I think is the is the the the thing that will come from this very large scale up of more and more smart models.\N嗯，我认为，随着越来越多智能模型的规模不断增大，最终带来的就是这一点。
+Dialogue: 0,0:23:49.55,0:23:52.16,Sub,,0,0,0,,Um and and we see that now with um with math.\N嗯，我们现在看到数学方面也是这样。
+Dialogue: 0,0:23:52.22,0:23:58.42,Sub,,0,0,0,,So historically the models were doing more rote tasks, like you would ask them to do\N从历史上看，这些模型主要处理的是重复性任务，比如你让它们执行一些机械性的工作。
+Dialogue: 0,0:23:58.48,0:24:04.71,Sub,,0,0,0,,simple things that maybe a paralegal would do, or a basic software engineering task.\N一些可能由律师助理或基础软件工程任务完成的简单工作。
+Dialogue: 0,0:24:04.76,0:24:08.09,Sub,,0,0,0,,Now they're doing much more complex software engineering tasks.\N现在他们正在执行更加复杂的软件工程任务。
+Dialogue: 0,0:24:08.14,0:24:14.07,Sub,,0,0,0,,Also with math they traditionally could do okay with with math and then they got\N而且在数学方面，他们过去在数学上表现还行，后来就……
+Dialogue: 0,0:24:14.12,0:24:19.75,Sub,,0,0,0,,to the point where they would be like um like an undergraduate level mathematician graduate level.\N达到相当于本科数学水平，甚至接近研究生水平的程度。
+Dialogue: 0,0:24:19.80,0:24:28.63,Sub,,0,0,0,,Now over the last three months they've gotten to the point where they're like a a once in a generation genius on math like any of the\N过去三个月里，他们已经达到了数学天才的水平，堪称百年一遇。
+Dialogue: 0,0:24:28.68,0:24:34.15,Sub,,0,0,0,,frontier models now are I I think they're like a top 100 current mathematician\N前沿模型现在在我看来，相当于顶尖的100名数学家之一
+Dialogue: 0,0:24:34.20,0:24:39.88,Sub,,0,0,0,,in many of the sub fields of mathematics. um which is just astonishingly fast.\N在数学的许多子领域中，这速度简直令人惊叹。
+Dialogue: 0,0:24:39.93,0:24:46.83,Sub,,0,0,0,,Um and so many aspects of science are kind of a combination of engineering plus like mathematics.\N嗯，科学的很多方面其实都是工程和数学的结合。
+Dialogue: 0,0:24:46.88,0:24:56.28,Sub,,0,0,0,,And so my expectation is that over the next 12 months we'll see kind of that same thing where like now they're like okay scientists or biologists.\N因此，我预计在未来12个月内，我们会看到类似的情况，现在他们就像在说：好吧，科学家们或生物学家们。
+Dialogue: 0,0:24:56.33,0:25:00.95,Sub,,0,0,0,,But um I my prediction is that yeah within the next 12 months we'll get the same\N不过，我预测，未来12个月内我们就能实现同样的进展。
+Dialogue: 0,0:25:01.00,0:25:08.37,Sub,,0,0,0,,thing where like they could be a a once in a generation um scientists for key scientific fields.\N那种可能是某个关键科学领域百年一遇的科学家的人。
+Dialogue: 0,0:25:08.42,0:25:18.72,Sub,,0,0,0,,So it's your view then that, using Anthropic's model, you can really be aspirational,\N所以你的观点是，使用 Anthropic 的模型，你真的可以志存高远，
+Dialogue: 0,0:25:18.78,0:25:26.91,Sub,,0,0,0,,right meaning that what what are the what are the problems facing your economy your people\N也就是说，你们经济和人民面临的问题到底是什么？
+Dialogue: 0,0:25:26.96,0:25:33.52,Sub,,0,0,0,,and use the models to try to really deeply examine what could be solutions to those\N并利用这些模型深入探究可能的解决方案
+Dialogue: 0,0:25:33.58,0:25:41.54,Sub,,0,0,0,,models and use the the sort of bottled logic of anthropic to uh to achieve that.\N利用类似 Anthropic 的封闭逻辑，来实现这一点。
+Dialogue: 0,0:25:41.59,0:25:49.45,Sub,,0,0,0,,So how how would one think about that from from your perspective because you you know what's capable in anthropic and you know where it's going.\N那么从你的角度来看，该如何思考这个问题呢？毕竟你最清楚\NAnthropic 目前的能力边界以及未来的发展方向。
+Dialogue: 0,0:25:49.50,0:25:53.60,Sub,,0,0,0,,So maybe give us some sense on how to solve those kind of problems.\N所以，也许给我们一些解决这类问题的思路。
+Dialogue: 0,0:25:53.65,0:25:53.91,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:25:53.91,0:25:54.17,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:25:54.17,0:25:56.08,Sub,,0,0,0,,And I think that's exactly right.\N我认为这完全正确。
+Dialogue: 0,0:25:56.13,0:26:03.26,Sub,,0,0,0,,I think that um uh that um often people are not ambitious enough in what they ask the models to do.\N我认为，很多时候人们在要求模型完成任务时，野心还不够大。
+Dialogue: 0,0:26:03.31,0:26:08.72,Sub,,0,0,0,,And so I think that uh um like because the way that the model started out was like you\N所以我觉得，因为这个模型一开始是这样的，就像你
+Dialogue: 0,0:26:08.78,0:26:14.54,Sub,,0,0,0,,would ask them a question uh that like like you would ask Google and it wouldn't have that much context.\N会问他们一个问题，就像你向谷歌提问一样，但它不会有那么多上下文。
+Dialogue: 0,0:26:14.60,0:26:19.10,Sub,,0,0,0,,It would give you like a a a page long response or a paragraph response.\N它会给你一个长达一页或一段文字的回复。
+Dialogue: 0,0:26:19.15,0:26:27.18,Sub,,0,0,0,,People often will take one of the new models from the last like 3 months and do that same thing and they're like ah it's like slightly better.\N人们经常拿最近三个月内新出的模型做同样的事，然后说，嗯，好像稍微好一点。
+Dialogue: 0,0:26:27.24,0:26:28.96,Sub,,0,0,0,,It's like cool I guess.\N好像挺 cool 的，大概吧。
+Dialogue: 0,0:26:29.02,0:26:29.38,Sub,,0,0,0,,Um,\N嗯，
+Dialogue: 0,0:26:29.41,0:26:36.36,Sub,,0,0,0,,but the way that uh I see the the best people who get the most value out of the models using them\N但在我看来，那些能从模型中获得最大价值的人，都是这样使用它们的
+Dialogue: 0,0:26:36.40,0:26:44.14,Sub,,0,0,0,,now is instead they treat them like they would treat a collaborator, like a co-worker in their organization.\N现在，他们反而把它们当作合作者，就像组织里的同事一样对待。
+Dialogue: 0,0:26:44.20,0:26:50.07,Sub,,0,0,0,,And so they do the same thing that you would need to do if you were like, I've hired the smartest person I know.\N所以他们做的，正是当你雇佣了你认识的最聪明的人时，你本该做的事。
+Dialogue: 0,0:26:50.12,0:26:55.18,Sub,,0,0,0,,I want them to be as productive as possible within my organization.\N我希望他们在我的组织内尽可能高效地工作。
+Dialogue: 0,0:26:55.22,0:27:00.31,Sub,,0,0,0,,And so you go and you make sure that they have access to all of the documents that they need.\N于是你去确保他们能获取所需的所有文件。
+Dialogue: 0,0:27:00.36,0:27:03.57,Sub,,0,0,0,,Um you make sure that they have access to uh the tools.\N你得确保他们能用上这些工具。
+Dialogue: 0,0:27:03.62,0:27:05.42,Sub,,0,0,0,,If they're a software engineer, you're like,\N如果是软件工程师，你会觉得
+Dialogue: 0,0:27:05.47,0:27:09.53,Sub,,0,0,0,,I'm going to make sure that you have um all of the documentation for the code\N我会确保你拥有代码的所有文档。
+Dialogue: 0,0:27:09.58,0:27:13.53,Sub,,0,0,0,,that you have access to the actual servers so that you can go and run things.\N你可以直接访问实际的服务器，从而去运行各种任务。
+Dialogue: 0,0:27:13.58,0:27:19.33,Sub,,0,0,0,,If they're a scientist, you make sure that they have access to like the machines that can actually move stuff around.\N如果是科学家，你就得确保他们能接触到真正能搬动东西的机器。
+Dialogue: 0,0:27:19.38,0:27:25.96,Sub,,0,0,0,,with a model like that would now need a an API to move the machines, but that's a thing that you can get for them.\N有了这样的模型，现在就需要一个API来操控机器，但这个你可以为他们提供。
+Dialogue: 0,0:27:26.01,0:27:29.53,Sub,,0,0,0,,Now, um you you also need to make sure so like in in government,\N现在啊，你还需要确保，比如说在政府工作中，
+Dialogue: 0,0:27:29.58,0:27:36.79,Sub,,0,0,0,,you would make need to make sure that they have the right permissions to access the right information that they would need to go and do the work.\N你需要确保他们拥有访问所需信息的正确权限，以便开展工作。
+Dialogue: 0,0:27:36.84,0:27:46.34,Sub,,0,0,0,,And so I think once you do that, then you end up with a model that has all the things that a great co-worker would need in order to do work.\N所以我认为，一旦你做到这一点，就会得到一个具备优秀同事所需所有特质的模型，能够胜任工作。
+Dialogue: 0,0:27:46.40,0:27:56.54,Sub,,0,0,0,,And we see that that's now actually how the majority of the um like intellectual labor within anthropic is done is by these\N我们发现，如今人工智障公司内部大多数智力劳动实际上都是由这些智能体完成的。
+Dialogue: 0,0:27:56.58,0:28:04.08,Sub,,0,0,0,,models that have the same permissions that a human co-worker would have, and they can go and do that work autonomously.\N具备与人类同事相同权限的模型，能够自主地去完成这项工作。
+Dialogue: 0,0:28:04.13,0:28:13.96,Sub,,0,0,0,,So if I were to take that and and understand that you know the design of your models is logic based\N所以如果我要理解你的模型设计是基于逻辑的
+Dialogue: 0,0:28:14.01,0:28:24.48,Sub,,0,0,0,,right does that mean the speed of innovation is going to relentlessly accelerate as the models get better at being the models?\N这是否意味着，随着模型越来越擅长成为模型，创新速度将不断加速？
+Dialogue: 0,0:28:24.54,0:28:25.12,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:28:25.17,0:28:25.75,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:28:25.80,0:28:36.98,Sub,,0,0,0,,I I definitely think that well so it's it's my my guess is that the capabilities will\N我确实认为，我的猜测是，这些能力将会
+Dialogue: 0,0:28:37.03,0:28:44.80,Sub,,0,0,0,,continue to be increasing at roughly the same rate from like an intelligence of the model perspective.\N从模型的智能角度来看，其增长速度仍大致保持不变。
+Dialogue: 0,0:28:44.85,0:28:45.31,Sub,,0,0,0,,Um,\N嗯，
+Dialogue: 0,0:28:45.36,0:28:52.74,Sub,,0,0,0,,and so I I think like um like the um like the hops that we're seeing in terms of like uh\N所以我觉得，就像我们现在看到的那些飞跃一样，嗯……
+Dialogue: 0,0:28:52.79,0:28:59.58,Sub,,0,0,0,,like how how how smart is the model like h how many new types of tasks can they do each couple months.\N比如模型有多聪明，每隔几个月能新增多少种新任务。
+Dialogue: 0,0:28:59.64,0:29:03.69,Sub,,0,0,0,,My guess is that that'll kind of continue happening at the same rate.\N我的猜测是，这种情况会以相同的速度持续下去。
+Dialogue: 0,0:29:03.74,0:29:13.78,Sub,,0,0,0,,Um and then I think the um economic impacts of that I think will continue on um an an exponential rate.\N嗯，我认为这种经济影响将持续以指数级速度增长。
+Dialogue: 0,0:29:13.84,0:29:21.93,Sub,,0,0,0,,Um, and so we we we do a lot of we do a lot of tracking of that where we'll we'll look at what the doubling time is of different types of things.\N嗯，所以我们确实会大量追踪这些数据，比如我们会查看不同事物的翻倍时间。
+Dialogue: 0,0:29:21.98,0:29:29.95,Sub,,0,0,0,,And so like um the doubling time of the overall um economy of like how much how much value people are\N所以，就像……整体经济的翻倍时间，也就是人们创造的价值增长速度……
+Dialogue: 0,0:29:30.00,0:29:39.87,Sub,,0,0,0,,getting from all of the different frontier AI labs put together um is uh doubling um it's like 4x per year.\N整体经济价值的翻倍速度，大约是每年增长 4 倍。
+Dialogue: 0,0:29:39.92,0:29:42.35,Sub,,0,0,0,,Um so it doubles every six months.\N所以每六个月就翻一番。
+Dialogue: 0,0:29:42.40,0:29:44.15,Sub,,0,0,0,,Um which is incredibly fast.\N嗯，这快得惊人。
+Dialogue: 0,0:29:44.20,0:29:48.87,Sub,,0,0,0,,Like there there's never been an industry of this size that's that's been growing at that speed.\N像这样规模的产业，以前从未有过以如此速度增长的。
+Dialogue: 0,0:29:48.92,0:29:49.22,Sub,,0,0,0,,Um,\N嗯，
+Dialogue: 0,0:29:49.22,0:30:00.06,Sub,,0,0,0,,another one that I think is interesting is um if you look at uh how much like if you look at the smartest model that we had a year ago and then\N另一个我觉得有趣的是，如果你看看我们去年最聪明的模型，然后
+Dialogue: 0,0:30:00.11,0:30:04.98,Sub,,0,0,0,,you are you you say okay how much does it cost for a person now to\N你是你，你说，好吧，现在一个人要花多少钱？
+Dialogue: 0,0:30:05.02,0:30:11.27,Sub,,0,0,0,,access a model that's equivalently smart to the model that was the best model a year ago?\N能否访问到相当于一年前最先进模型的智能模型？
+Dialogue: 0,0:30:11.32,0:30:18.72,Sub,,0,0,0,,It's roughly 20x cheaper to access a model that was the smartest model a year ago today.\N访问一年前最聪明的模型，成本大约低了20倍。
+Dialogue: 0,0:30:18.77,0:30:22.00,Sub,,0,0,0,,And if you look back in time, it's it's pretty consistent for that, too.\N如果你回顾过去，这一点也同样非常一致。
+Dialogue: 0,0:30:22.05,0:30:26.81,Sub,,0,0,0,,And so, we have this like very in very rapid decrease in the overall cost,\N因此，我们看到整体成本正以极快的速度大幅下降。
+Dialogue: 0,0:30:26.86,0:30:32.58,Sub,,0,0,0,,which I think will result in these models like proliferating and like filling all of the all of the\N我认为这将导致这些模型迅速普及，并充斥于各个领域。
+Dialogue: 0,0:30:32.63,0:30:37.76,Sub,,0,0,0,,cracks for all of the problems that right now might be too expensive to to use the best model,\N为目前可能因成本过高而无法使用最佳模型的所有问题提供了突破口。
+Dialogue: 0,0:30:37.82,0:30:47.04,Sub,,0,0,0,,but if they become 20 times cheaper in a in a year, um it becomes something that becomes a no-brainer to to go ahead and use them there as well.\N但如果它们一年内便宜了20倍，那使用它们就变得理所当然了。
+Dialogue: 0,0:30:47.10,0:30:53.77,Sub,,0,0,0,,So to harness uh the models uh they need context, right?\N所以要发挥这些模型的作用，它们需要上下文，对吧？
+Dialogue: 0,0:30:53.82,0:31:02.32,Sub,,0,0,0,,If I were to hire the smartest person who ever lived and I have an Anthropic model, I still need to contextualize what I want them to achieve.\N即使我要雇佣有史以来最聪明的人，而且我拥有一个 Anthropic 模型，\N我仍然需要明确我期望他们达成的目标。
+Dialogue: 0,0:31:02.38,0:31:07.92,Sub,,0,0,0,,Do you do you think that creates a subindustry around you or do\N你觉得这会在你周围催生出一个子行业吗，还是不会？
+Dialogue: 0,0:31:07.97,0:31:15.32,Sub,,0,0,0,,you think ultimately that anthropic itself can provide that you know that contextualization?\N你认为最终，Anthropic 本身能够提供那种上下文理解吗？
+Dialogue: 0,0:31:15.38,0:31:18.64,Sub,,0,0,0,,How how do you see the next sort of three years emerging?\N你认为未来三年会如何发展？
+Dialogue: 0,0:31:18.70,0:31:23.68,Sub,,0,0,0,,Is it a is it a surround model or coming from the model itself?\N它是环绕模型，还是模型本身产生的？
+Dialogue: 0,0:31:23.73,0:31:26.11,Sub,,0,0,0,,Oh yeah, it's definitely it's definitely surround model.\N哦，没错，这绝对是环绕模型。
+Dialogue: 0,0:31:26.16,0:31:31.60,Sub,,0,0,0,,Like, I think that, well, you know, Anthropic, we have like 4,000 people or something like that.\N比如说，我觉得，你知道，Anthropic，我们大概有四千人左右。
+Dialogue: 0,0:31:31.66,0:31:37.12,Sub,,0,0,0,,Like the only thing that we're focused on is how can we make a good useful model.\N我们唯一关注的是如何打造一个好用的模型。
+Dialogue: 0,0:31:37.17,0:31:46.59,Sub,,0,0,0,,Um and then it's uh there's a huge ecosystem now of different people who are able to take that raw model and turn it into something\N嗯，现在有一个庞大的生态系统，有很多人能够把原始模型转化为实际可用的东西。
+Dialogue: 0,0:31:46.64,0:31:56.24,Sub,,0,0,0,,that's actually useful and exactly as you said like giving the like training the model to be useful for tasks is like a whole a whole industry.\N这实际上非常有用，正如你所说，让模型学会完成有用的任务，这本身就是整个产业。
+Dialogue: 0,0:31:56.29,0:32:00.68,Sub,,0,0,0,,Um so like we don't know how to how to make the model like a good lawyer\N所以我们也不知道该如何让这个模型像一名好律师那样工作
+Dialogue: 0,0:32:00.73,0:32:06.14,Sub,,0,0,0,,whereas uh there's tons of companies now that will go and they will take the model and\N而如今有很多公司会去拿这个模型
+Dialogue: 0,0:32:06.19,0:32:10.87,Sub,,0,0,0,,figure out what are the things that it needs to know what are the tools that it\N弄清楚它需要知道什么，以及需要哪些工具
+Dialogue: 0,0:32:10.92,0:32:15.56,Sub,,0,0,0,,needs to have in order for it to be a productive lawyer in a in a law firm.\N才能成为律师事务所中高效能的律师。
+Dialogue: 0,0:32:15.61,0:32:22.01,Sub,,0,0,0,,Um same thing for biology, same thing for um for mechanical engineering.\N生物学也是一样，机械工程也是一样。
+Dialogue: 0,0:32:22.06,0:32:28.99,Sub,,0,0,0,,um like the long long list of all the possible different things where you might want a model to be going and doing work.\N嗯，就是所有你可能希望模型去执行的各种任务的漫长列表。
+Dialogue: 0,0:32:29.04,0:32:34.64,Sub,,0,0,0,,And so that that's a place where um I'm extremely grateful for the vibrant ecosystem around the world of all of the different\N因此，对于全球各地丰富多彩的生态系统，我深感感激。
+Dialogue: 0,0:32:34.70,0:32:42.12,Sub,,0,0,0,,startups that can go and take this thing that's not that useful by itself and then get it connected to to the real world.\N能够将本身用处不大的东西带出去，并连接到现实世界中的初创公司。
+Dialogue: 0,0:32:42.17,0:32:52.73,Sub,,0,0,0,,So the scale of opportunity surrounding Anthropic is, it sounds like, almost bigger than the scale of Anthropic's model.\N因此，围绕 Anthropic 的机遇规模，听起来几乎比 Anthropic 模型本身的规模还要大。
+Dialogue: 0,0:32:52.78,0:32:54.72,Sub,,0,0,0,,Is that is that sort of the way you see it?\N是这样吗？你是这么看的吗？
+Dialogue: 0,0:32:54.77,0:32:57.92,Sub,,0,0,0,,Oh yeah, it's way, way bigger.\N哦，当然，要大得多。
+Dialogue: 0,0:32:57.98,0:33:00.46,Sub,,0,0,0,,Yeah, definitely.\N是的，当然。
+Dialogue: 0,0:33:00.51,0:33:08.96,Sub,,0,0,0,,So I think the opportunity is is if we were going to think back if we're going to think forward 10 years from now, right?\N所以我认为，机会在于，如果我们回望过去，或者展望未来十年，会发现这一点。
+Dialogue: 0,0:33:09.02,0:33:11.84,Sub,,0,0,0,,We come and have a G20.\N我们来参加一次 G20 会议。
+Dialogue: 0,0:33:11.90,0:33:12.26,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:33:12.29,0:33:12.61,Sub,,0,0,0,,Right.\N对。
+Dialogue: 0,0:33:12.64,0:33:16.05,Sub,,0,0,0,,And and we're 10 years from now and you and you come back.\N而且再过十年，你再回来。
+Dialogue: 0,0:33:16.10,0:33:17.68,Sub,,0,0,0,,Now I'm old so you never know.\N我现在年纪大了，所以谁也说不准。
+Dialogue: 0,0:33:17.73,0:33:20.43,Sub,,0,0,0,,I might not remember what we're talking about today.\N我可能记不住我们今天在聊什么了。
+Dialogue: 0,0:33:20.48,0:33:31.63,Sub,,0,0,0,,But if we were to come 10 years, what what do you think uh if we look back what how we viewed the conversation we had today and then looking forward,\N但如果十年后我们回过头来看，你觉得我们今天这场对话，会如何被看待？又会怎样展望未来？
+Dialogue: 0,0:33:31.68,0:33:37.20,Sub,,0,0,0,,what do you think we'd be wanting to think about and talk about with respect to AI and the possibility?\N你觉得我们在讨论人工智能及其可能性时，最应该关注和探讨的是什么？
+Dialogue: 0,0:33:37.25,0:33:37.68,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:33:37.73,0:33:38.48,Sub,,0,0,0,,10 years.\N十年。
+Dialogue: 0,0:33:38.53,0:33:38.96,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:33:39.02,0:33:39.44,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:33:39.50,0:33:40.24,Sub,,0,0,0,,Um, well,\N嗯，那个，
+Dialogue: 0,0:33:40.30,0:33:47.01,Sub,,0,0,0,,so I guess uh well if 10 years is too long 10 10 years I'll feel like\N所以我想啊，如果10年太长的话，10年我感觉也还行
+Dialogue: 0,0:33:47.06,0:33:52.71,Sub,,0,0,0,,I I'll be on like we'll be on Elon's moon base or something like that in 10 years.\N十年后，我估计我们会在埃隆的月球基地之类的地方了。
+Dialogue: 0,0:33:52.76,0:34:00.34,Sub,,0,0,0,,Um so I I think I think probably looking back I think we will have felt like that despite despite all of this conversation we still will\N所以，我想，回顾一下，尽管有这么多讨论，我们可能还是会感觉那样。
+Dialogue: 0,0:34:00.40,0:34:09.57,Sub,,0,0,0,,have um underestimated how fast progress like looking back we'll be like wow like back uh in 2026 we we thought stuff was going fast and we thought\N我们之前低估了进展的速度，回头看看，\N2026年时我们还以为事情已经很快了，可现在看来，那会儿根本不算什么。
+Dialogue: 0,0:34:09.62,0:34:17.42,Sub,,0,0,0,,we were like seeing this but actually we underestimated um like how how impactful this would be and what the progress would be and I think also\N我们当时看到这个情况，但实际上低估了它带来的影响以及进展的速度，我认为这一点也很关键。
+Dialogue: 0,0:34:17.46,0:34:27.29,Sub,,0,0,0,,we'll feel like we underbuilt that like we uh we ended up with um an even greater shortage than what we were expecting would be my my prediction.\N我们会感觉我们当初建得不够，好像最终出现的短缺比预期的还要严重，这是我个人的预测。
+Dialogue: 0,0:34:27.34,0:34:36.24,Sub,,0,0,0,,Um and then I think also we will feel like the um I I think that just the I think the\N嗯，我觉得我们还会感觉，就是说，我觉得，就是那种
+Dialogue: 0,0:34:36.29,0:34:44.56,Sub,,0,0,0,,economic I think the economic and scientific impacts uh that like we'll see yeah five years from now will just be immense.\N我认为五年后，我们所看到的经济和科学影响将极为深远。
+Dialogue: 0,0:34:44.61,0:34:49.59,Sub,,0,0,0,,Like I I think that we will we will make a major dent in things like curing cancer.\N我认为我们在攻克癌症等方面将取得重大进展。
+Dialogue: 0,0:34:49.64,0:34:55.75,Sub,,0,0,0,,like I I would be I would be astonished if we haven't made material progress in that uh on that in in five years.\N如果五年内我们在那方面没有取得实质性进展，我会感到非常惊讶。
+Dialogue: 0,0:34:55.80,0:35:01.11,Sub,,0,0,0,,So I I I I really I really think it can't be um can't be overstated.\N所以我真的觉得这一点再怎么强调都不为过。
+Dialogue: 0,0:35:01.16,0:35:04.45,Sub,,0,0,0,,So to to wrap up uh this time,\N那么，总结一下，这次就到这里。
+Dialogue: 0,0:35:04.50,0:35:11.46,Sub,,0,0,0,,can you just, from Anthropic's perspective, sort of tell us a story, how, not only in\N从 Anthropic 的视角，能不能给我们讲个故事，说说不仅在
+Dialogue: 0,0:35:11.51,0:35:18.44,Sub,,0,0,0,,cancer but in broad-based how how will anthropic and AI in general make this a better world?\N癌症，但更广泛地说，Anthropic 和人工智能总体上将如何让这个世界变得更好？
+Dialogue: 0,0:35:18.49,0:35:18.85,Sub,,0,0,0,,Right?\N对吧？
+Dialogue: 0,0:35:18.88,0:35:21.33,Sub,,0,0,0,,We hear lots of doomers, you know,\N我们总听到一大堆悲观论者，你知道的，
+Dialogue: 0,0:35:21.38,0:35:29.19,Sub,,0,0,0,,and and we know that the industrial revolution didn't put everybody out of a job and the invention of electricity didn't put everyone out of a job.\N而且我们知道，工业革命并没有让所有人都失业，电力的发明也没有让所有人失业。
+Dialogue: 0,0:35:29.24,0:35:32.63,Sub,,0,0,0,,And so I don't buy the doomerism at all.\N所以我完全不认同那种悲观论调。
+Dialogue: 0,0:35:32.68,0:35:41.79,Sub,,0,0,0,,I think this is an opportunity to democratize intelligence to make the world smarter, better, uh more productive,\N我认为这是一次机会，可以普及智能，让世界变得更聪明、更美好、更具生产力。
+Dialogue: 0,0:35:41.84,0:35:50.63,Sub,,0,0,0,,more successful that everybody can now hire the perfect person and and in their culture and in their language.\N现在每个人都能雇佣到符合自己文化与语言的完美人选，这将更加成功。
+Dialogue: 0,0:35:50.68,0:35:58.56,Sub,,0,0,0,,So maybe can you give me uh just to wrap it up the story on how anthropic views how we can make the world a better place?\N那么，能不能请您简单总结一下，Anthropic 是如何看待我们如何让世界变得更美好的？
+Dialogue: 0,0:35:58.61,0:35:59.11,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:35:59.16,0:36:05.98,Sub,,0,0,0,,Um, I think it I think it comes it it comes or at least for I I think for me it comes down to Yeah,\N嗯，我觉得，对我来说，关键在于，嗯，
+Dialogue: 0,0:36:06.03,0:36:16.87,Sub,,0,0,0,,I think both what you described of just like people having access to um to smart um to like smart coaches and teachers that can\N我认为，正如你所描述的，人们能够接触到智能教练和智能教师，这非常有意义。
+Dialogue: 0,0:36:16.92,0:36:23.41,Sub,,0,0,0,,help them be more of the people that they that they want to be and that like fundamentally care about like their success is one thing.\N帮助他们成为更真实的自己，成为真正关心自身成功的人。
+Dialogue: 0,0:36:23.46,0:36:31.30,Sub,,0,0,0,,Um and then the other thing is the um the uh the driving force of prosperity everywhere\N还有就是，推动各地繁荣的另一个关键因素
+Dialogue: 0,0:36:31.35,0:36:38.18,Sub,,0,0,0,,being innovation and innovation has been bottlenecked on how many smart people we can have for it.\N创新本身已被瓶颈制约，瓶颈在于我们能拥有的聪明人才数量。
+Dialogue: 0,0:36:38.23,0:36:41.79,Sub,,0,0,0,,Um we can have working on that and I think that for the first time now\N嗯，我们可以着手做这个，我觉得现在是第一次
+Dialogue: 0,0:36:41.84,0:36:48.78,Sub,,0,0,0,,we're getting the ability to really scale up innovation much faster than we've ever been able to.\N我们正获得前所未有的能力，能够以远超以往的速度大规模推动创新。
+Dialogue: 0,0:36:48.83,0:36:55.23,Sub,,0,0,0,,And so I I think those two things together is uh at least for me like a big source of um like my\N所以我认为这两点结合起来，至少对我来说，是很大的动力来源。
+Dialogue: 0,0:36:55.28,0:37:03.36,Sub,,0,0,0,,my confidence that that this will be seen as just like an incredible perhaps like the most positive thing that's ever happened for humanity.\N我坚信，这将被视为一件非凡的、或许是有史以来对人类最积极的事情。
+Dialogue: 0,0:37:03.42,0:37:04.38,Sub,,0,0,0,,Thank you everybody.\N谢谢大家。
+Dialogue: 0,0:37:04.43,0:37:05.20,Sub,,0,0,0,,I appreciate it.\N谢谢了。
+Dialogue: 0,0:37:05.25,0:37:05.55,Sub,,0,0,0,,Thank you.\N谢谢。
+Dialogue: 0,0:37:05.57,0:37:09.75,Sub,,0,0,0,,Really honored to be here.\N非常荣幸能来到这里。
+Dialogue: 0,0:37:09.80,0:37:14.56,Sub,,0,0,0,,Thanks.\N谢谢。

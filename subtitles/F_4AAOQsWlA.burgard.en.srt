@@ -1,0 +1,1791 @@
+1
+00:03:38,990 --> 00:03:41,430
+Hello everybody, let's let's get people in.
+
+2
+00:04:54,580 --> 00:04:57,490
+I think we should get started everybody.
+
+3
+00:04:57,540 --> 00:05:01,770
+Hi everybody My name is cedar Fox and it's my great pleasure and honor
+
+4
+00:05:01,820 --> 00:05:07,160
+to introduce the first keynote speaker of call this year Who is war from Bogart?
+
+5
+00:05:08,200 --> 00:05:12,950
+I think it's fair to say that Wolfram is one of the preeminent robotics researchers in
+
+6
+00:05:13,000 --> 00:05:17,950
+the world He has won so many awards I'm not gonna go anywhere through the list,
+
+7
+00:05:18,000 --> 00:05:25,230
+but just he has many of course best paper awards He won the IEEE Pioneer in robotics award.
+
+8
+00:05:25,280 --> 00:05:30,590
+He won the field award IEEE field award Which is one of the biggest honors you
+
+9
+00:05:30,640 --> 00:05:36,570
+can get from the IEEE society for robotics He won also in German the Leibniz price,
+
+10
+00:05:36,620 --> 00:05:43,310
+which is kind of the the most prestigious research price you can get in Germany He's also on the service He
+
+11
+00:05:43,360 --> 00:05:51,890
+was president of the IEEE robotics and automation society and is currently still right Editor -in -chief of the IEEE transaction.
+
+12
+00:05:51,940 --> 00:05:58,350
+So if you have some really good papers to submit sent them to Wolfram But beyond all these accolades,
+
+13
+00:05:58,400 --> 00:06:02,630
+I think what's really most impressive about him It's really just the breadth of the contributions.
+
+14
+00:06:02,680 --> 00:06:04,010
+He has made to robotics.
+
+15
+00:06:04,060 --> 00:06:11,470
+So when I started my PhD he Became actually my main mentor at the University of Washington
+
+16
+00:06:11,520 --> 00:06:16,630
+and also of course a very good friend more than three decades ago It's a bit scary,
+
+17
+00:06:16,680 --> 00:06:21,130
+but at the time wolfram was working on logic programming.
+
+18
+00:06:21,180 --> 00:06:28,770
+That was his PhD research He was our wizard when it came to prologue programming I'm sure many of you have never heard of that,
+
+19
+00:06:28,820 --> 00:06:31,290
+but it's a declarative programming language.
+
+20
+00:06:31,340 --> 00:06:33,870
+You can ask him I'm sure he still knows a lot about that stuff.
+
+21
+00:06:33,920 --> 00:06:39,490
+But then when we started working on robotics He also quickly realized that logic programming is not
+
+22
+00:06:39,540 --> 00:06:46,760
+maybe well suited for anything on the low -level robot control side and and realized that handling uncertainty,
+
+23
+00:06:46,920 --> 00:06:52,360
+handling sensor noise and all of that is actually really crucial if you want to build robust robotic systems.
+
+24
+00:06:52,680 --> 00:07:00,060
+And all of that of course led then to probabilistic robotics, which had quite some impact on the robotics community at the time.
+
+25
+00:07:00,500 --> 00:07:06,750
+And then when deep learning came up, Wolfram was actually one of the first ones also to realize just the potential of deep learning.
+
+26
+00:07:06,800 --> 00:07:11,430
+And he always had this story where he said like, he held up the book and said, okay,
+
+27
+00:07:11,480 --> 00:07:15,590
+now we can just grab one chapter after the other and could just rip it out
+
+28
+00:07:15,640 --> 00:07:21,350
+of the book and replace it with deep learning and I think maybe by now the book.
+
+29
+00:07:21,400 --> 00:07:26,490
+I'm not sure if it's empty But Wolfram is gonna tell us I think his thoughts about what are
+
+30
+00:07:26,540 --> 00:07:37,240
+the remaining challenges if we want to realize embodied AI so Let's give our warm welcome to Wolfram Thanks,
+
+31
+00:07:37,290 --> 00:07:37,690
+Tina.
+
+32
+00:07:38,010 --> 00:07:48,090
+Let's take a selfie Thanks, and thanks for having me here Must confess.
+
+33
+00:07:48,140 --> 00:07:50,070
+I'm super nervous right now.
+
+34
+00:07:50,120 --> 00:07:56,210
+It's actually my very first plenary speech in robotics at least in the robotics
+
+35
+00:07:56,260 --> 00:08:01,710
+and automation society space and Never stood in front of such a big audience.
+
+36
+00:08:01,760 --> 00:08:10,920
+And so it's it's really great to be here this talk is a little bit about my perspective on
+
+37
+00:08:10,970 --> 00:08:20,050
+my vision on where we might be going in this right now race about embodied AI systems or robots.
+
+38
+00:08:20,430 --> 00:08:25,980
+And it also will, I will take you back a little bit, maybe like 30 years ago,
+
+39
+00:08:26,030 --> 00:08:31,960
+but at some point in time, we'll even take you even further back, something like two to 3000 years ago.
+
+40
+00:08:32,010 --> 00:08:34,160
+I will let you know at that particular time.
+
+41
+00:08:34,210 --> 00:08:38,870
+And we will then see what is behind all of this.
+
+42
+00:08:40,160 --> 00:08:44,030
+So this talk would not be possible with all my friends and colleagues.
+
+43
+00:08:44,080 --> 00:08:45,250
+Normally talks end with this.
+
+44
+00:08:45,300 --> 00:08:51,950
+I'm going to start with this I've so many friends who contributed to that that I cannot actually add pictures would have
+
+45
+00:08:52,000 --> 00:08:58,490
+taken me years I think all my friends and colleagues Who contributed to that work and kind of a few will be
+
+46
+00:08:58,540 --> 00:09:06,520
+listed and even be shown in pictures here in this plantation so my view and robotics is actually that that we are
+
+47
+00:09:06,570 --> 00:09:16,240
+going to Be ought to have a that we are having actually super useful tool for I'm helping us solving important societal Problems,
+
+48
+00:09:16,660 --> 00:09:21,010
+let's let it be traffic and it can be a particular be seen here where you
+
+49
+00:09:21,060 --> 00:09:28,610
+can actually see multiple companies with driverless cars driving around making our traffic more effective and also,
+
+50
+00:09:28,660 --> 00:09:37,140
+hopefully safer Can be the case in production where we are in a like global race about the most efficient production
+
+51
+00:09:38,010 --> 00:09:45,020
+Systems and so on and where we are believing that robotic will head robotics will help us Competing in that space
+
+52
+00:09:45,070 --> 00:09:50,860
+and then there is assistance and health care the next dimension You will talk about this as well this question of
+
+53
+00:09:50,910 --> 00:09:57,380
+how can we actually build robots that help us with elderly care and also support us in our homes and finally,
+
+54
+00:09:57,430 --> 00:10:04,060
+we are living on a finite sphere and actually Constantly growing the fastest growth.
+
+55
+00:10:04,110 --> 00:10:06,040
+It says in this space here this room.
+
+56
+00:10:06,090 --> 00:10:14,990
+It's probably this fastest growing society on earth and And that's also something that we need to support or hope to be able to support with robotics.
+
+57
+00:10:16,450 --> 00:10:21,910
+And in fact, for that we need that what is called intelligent robots, robots that perceive their world,
+
+58
+00:10:22,290 --> 00:10:28,540
+like maybe reason about it, create models about it, and then execute actions in order to achieve their goals.
+
+59
+00:10:28,590 --> 00:10:31,290
+That's basically that what we are interested in.
+
+60
+00:10:31,470 --> 00:10:38,660
+And right now we are working on that what is called embodied robotics, or embodied AI as a potential solution to this.
+
+61
+00:10:38,710 --> 00:10:47,540
+And I love these pictures with humanoids all these by the way disclaimer all pictures that contain white humanoids are generated
+
+62
+00:10:47,590 --> 00:10:55,620
+with generative AI All the others are basically handmade and here's a couple of solutions where we envision this to be done
+
+63
+00:10:55,670 --> 00:11:03,100
+in mostly Like right now using that what is called humanoid robots And the reason why humanoids are envisioned to be one
+
+64
+00:11:03,150 --> 00:11:12,660
+of the solutions here is that they will allow us to make a smooth transition from actually manual production towards automated production.
+
+65
+00:11:12,710 --> 00:11:17,260
+And so we can even have this what is called mixed production where we have human and robot co
+
+66
+00:11:17,310 --> 00:11:23,480
+-workers in the same space on the same tasks with the same tools basically accomplishing the very same tasks.
+
+67
+00:11:23,530 --> 00:11:27,430
+And this is why humanoids are so much hyped these days.
+
+68
+00:11:27,910 --> 00:11:32,600
+But on top of this there's also the next hype when I was in China
+
+69
+00:11:32,650 --> 00:11:37,900
+twice this year and saw like several hundred startups in the space of humanoid robots,
+
+70
+00:11:37,950 --> 00:11:41,770
+and on top of this, equally many startups in the space of robotic hands.
+
+71
+00:11:42,590 --> 00:11:48,020
+The reason for this is that in order to perform dexterous manipulations with tools that we also use, we need to have proper hands.
+
+72
+00:11:48,070 --> 00:11:51,920
+But it's not only about mechanics, it's also about perception.
+
+73
+00:11:51,970 --> 00:11:54,910
+And I will come to this in this talk as well.
+
+74
+00:11:55,330 --> 00:11:58,690
+And finally, and this was mentioned by Peter Stone earlier today,
+
+75
+00:11:58,850 --> 00:12:03,080
+you also need computing on a large scale and on a larger scale than
+
+76
+00:12:03,130 --> 00:12:10,940
+it was available thus far for at least university like research but on top
+
+77
+00:12:10,990 --> 00:12:16,180
+of this and this is something that is mostly underestimated by investors and so
+
+78
+00:12:16,230 --> 00:12:22,090
+on and so forth and even politicians is this problem of building an AI system
+
+79
+00:12:22,140 --> 00:12:27,630
+that can actually control these robots to accomplish these tasks like we have made
+
+80
+00:12:27,680 --> 00:12:31,970
+an enormous progress over the past years when it comes to building the hardware
+
+81
+00:12:32,020 --> 00:12:38,250
+for this also enhance humanoids for me it's has been just crazy but building
+
+82
+00:12:38,300 --> 00:12:44,390
+the AI is still the challenge that we are facing right and now ask like
+
+83
+00:12:44,440 --> 00:12:55,590
+robot learning is it and that's actually what I believe right the only way for solving this is robot learning and if you can boil this even further
+
+84
+00:12:55,640 --> 00:13:00,790
+down then this is this community over here it's basically the community that is
+
+85
+00:13:00,840 --> 00:13:05,170
+working on this topic and where I believe like this is going to take us
+
+86
+00:13:05,220 --> 00:13:13,150
+hopefully there where we want to go so this is our journey more than
+
+87
+00:13:13,200 --> 00:13:19,230
+2,000 years back this is a according to Greek mythology this is the
+
+88
+00:13:19,280 --> 00:13:24,790
+King Sisyphus right and he was because he believed that he was more intelligent
+
+89
+00:13:24,840 --> 00:13:32,490
+than Zeus the most important God in Greek mythology right and Zeus didn't like that.
+
+90
+00:13:32,540 --> 00:13:37,910
+Turns out that kind of like reflects also sometimes our thinking here, right?
+
+91
+00:13:37,960 --> 00:13:41,870
+Everyone of us believes to be the most intelligent person in the world, right?
+
+92
+00:13:41,920 --> 00:13:44,300
+It's something that researchers mostly need to do.
+
+93
+00:13:44,740 --> 00:13:51,390
+And Zeus got so upset about this that he condemned Sisyphus to actually take a large boulder up a hill.
+
+94
+00:13:51,440 --> 00:13:56,830
+So this thing here is the boulder that this poor guy was condemned to transport up the hill.
+
+95
+00:13:56,880 --> 00:13:59,740
+Not that this was enough of a pain for this guy,
+
+96
+00:14:00,140 --> 00:14:07,820
+Zeus actually condemned this boulder so that it always fell down when Zeus was close to the summit of this mountain.
+
+97
+00:14:08,380 --> 00:14:13,440
+And then the boulder actually rolled down the entire hill and the sky had to start from scratch.
+
+98
+00:14:14,100 --> 00:14:16,920
+You might not ask this question, what does this have to do with our research?
+
+99
+00:14:17,500 --> 00:14:27,120
+It's basically that when you look at that, what we are doing is we are basically finding some sort of technology, let it be probabilistic robotics,
+
+100
+00:14:27,340 --> 00:14:30,210
+let it be deep learning, let it be foundation models,
+
+101
+00:14:30,260 --> 00:14:36,320
+we are believing that this technology is finally going to help us getting this boulder up the hill.
+
+102
+00:14:37,280 --> 00:14:41,380
+And unfortunately, thus far, you were not really successful with this.
+
+103
+00:14:41,600 --> 00:14:48,710
+So somehow, like some got actually through this boulder again down and this road down and you had to start from scratch again.
+
+104
+00:14:48,760 --> 00:14:53,130
+This is why what this has from my perspective to do or the sea like kind of the
+
+105
+00:14:53,180 --> 00:15:00,710
+metaphor that is Matching that what has actually happened in in our community and when you look at technologies
+
+106
+00:15:00,760 --> 00:15:06,030
+I've been involved in that detail already mentioned I mean there have been three important boulders that I
+
+107
+00:15:06,080 --> 00:15:17,770
+worked on and it started in 1995 who actually Was born at that time already 1995 five percent or
+
+108
+00:15:17,820 --> 00:15:23,410
+so of this audience here right which is which is pretty cool this when we actually started working
+
+109
+00:15:23,460 --> 00:15:31,830
+on this with the belief that we could actually solve everything by probabilistic reasoning right and like this was
+
+110
+00:15:31,880 --> 00:15:40,190
+basically the time when we created this book probabilistic robotics there is Sebastian Dieter and me right in standing
+
+111
+00:15:40,240 --> 00:15:45,530
+in front of the Google car at that point in time which basically came out of this of the
+
+112
+00:15:45,580 --> 00:15:54,870
+success of the probabilistic robotics theory or like concept in the context of autonomous driving right and here
+
+113
+00:15:54,920 --> 00:15:58,270
+in the bottom you even see the three of us on the summit of the mount of a mountain
+
+114
+00:15:58,320 --> 00:16:03,970
+unfortunately it's not the same mountain Susie first was condemned to carry the boulder up and it was from
+
+115
+00:16:04,020 --> 00:16:11,190
+Mount Rainier instead so so this is basically the equations that are underlying there and that led to an
+
+116
+00:16:11,240 --> 00:16:17,530
+enormous success in the space of autonomous driving and it's basically that what you see outside these self
+
+117
+00:16:17,580 --> 00:16:24,950
+driving cars are basically governed by this equation over here which is state estimation and we are basically trying
+
+118
+00:16:25,000 --> 00:16:31,690
+to figure out where the vehicle is given a map of the environment and when it comes to building
+
+119
+00:16:31,740 --> 00:16:37,310
+self -driving cars right you need to solve basically three tasks the first one is stay on the road,
+
+120
+00:16:37,360 --> 00:16:38,190
+which is localization.
+
+121
+00:16:38,240 --> 00:16:39,950
+The second one is, don't get hit.
+
+122
+00:16:40,000 --> 00:16:41,990
+And the third one is, don't hit anything.
+
+123
+00:16:42,040 --> 00:16:46,400
+And once you are able to do all this, you're getting really, really far, right?
+
+124
+00:16:46,450 --> 00:16:52,700
+And here's this entire thing in action in indoors and outdoors and GPS denied environments.
+
+125
+00:16:52,750 --> 00:16:57,880
+And when you ask the question like how accurate is this actually, we also did some experiments a few years ago,
+
+126
+00:16:57,930 --> 00:17:07,510
+just to give you an intuition how accurately you can actually localize a robot on a factory floor then these black stripes here
+
+127
+00:17:07,560 --> 00:17:14,450
+that are not used for localization they are actually indicating how accurate this platform is when you want to see this in more quantities
+
+128
+00:17:14,500 --> 00:17:24,210
+then you can see down here in these statistics that the accuracy in localization in post estimation is around a millimeter and who believes
+
+129
+00:17:24,260 --> 00:17:33,840
+that this can be achieved with foundation models as well nobody okay I I maybe in a few years from now detail as well,
+
+130
+00:17:33,890 --> 00:17:34,570
+which is good.
+
+131
+00:17:35,270 --> 00:17:45,950
+But this is kind of like the outcome of this endeavor probabilistic robotics that led to these self -driving cars.
+
+132
+00:17:46,790 --> 00:17:51,590
+And you can see a typical software stack of self -driving cars.
+
+133
+00:17:51,970 --> 00:17:56,910
+And those components where I think probabilistic robotics is particularly strong at.
+
+134
+00:17:57,090 --> 00:17:59,780
+And it's, in fact, this mapping and localization task.
+
+135
+00:17:59,830 --> 00:18:03,580
+Here is an application to mapping.
+
+136
+00:18:03,630 --> 00:18:07,010
+It's basically the equations underlying SLAM.
+
+137
+00:18:07,330 --> 00:18:16,130
+And this is a company that I founded 10 years ago that is concerned with 3D mapping of real estate buildings and also historic buildings.
+
+138
+00:18:16,290 --> 00:18:24,480
+Also several hundred years ago, like the Leaning Tower of Pisa, we created with this technology the most accurate model of this tower.
+
+139
+00:18:24,530 --> 00:18:31,810
+It's an indoor -outdoor model, basically, which is super useful for cultural heritage preservation.
+
+140
+00:18:32,910 --> 00:18:41,470
+So on top of this, we also created the most accurate model of the Freiburg Cathedral, which is depicted on this page over here.
+
+141
+00:18:42,820 --> 00:18:53,380
+While this actually was a major stepping stone towards building self -driving cars, and created super useful tools for these vehicles,
+
+142
+00:18:53,700 --> 00:19:01,340
+and when it comes to perception, tracking, localization, prediction, planning and control, it also introduced a problem.
+
+143
+00:19:01,800 --> 00:19:13,170
+The fact that we were relying on these high -definition maps actually made these vehicles being bound towards, we call this level four automation,
+
+144
+00:19:13,220 --> 00:19:19,910
+which is basically automation in geo -fenced areas, which is exactly that what you're seeing right now with self -driving cars, right?
+
+145
+00:19:19,960 --> 00:19:26,720
+You see them in several cities but you don't see them overall in the world, which would be level five, right.
+
+146
+00:19:26,920 --> 00:19:31,800
+Where do you think are we with robotics right now, like when it comes to manipulation?
+
+147
+00:19:31,980 --> 00:19:41,780
+This is who's for level three, maybe a few level four, level five, one, right.
+
+148
+00:19:42,020 --> 00:19:49,880
+There are in fact a few applications for this, but I think the major problem there is implementing this everywhere in the world.
+
+149
+00:19:50,620 --> 00:20:00,130
+And this has been the major challenges also like Driving force for me nowadays this question of can we actually get rid of these maps, right?
+
+150
+00:20:00,180 --> 00:20:08,790
+These maps have been super useful and we roboticists like 3d maps Simply because it is geometry and we know very well how to
+
+151
+00:20:08,840 --> 00:20:18,630
+deal with geometry I mean roboticists love geometry and by building these maps we turn navigation problems in Geometry problems and there we go.
+
+152
+00:20:18,680 --> 00:20:24,080
+There we are with all the constraints regarding the complexity of environments.
+
+153
+00:20:24,880 --> 00:20:31,740
+The next step in that direction then was like here again is probabilistic robotics was the deep network hype.
+
+154
+00:20:31,940 --> 00:20:39,130
+So when you look back at the probabilistic robotics then you basically see that we are particularly bad
+
+155
+00:20:39,180 --> 00:20:47,400
+at this first step making semantics out of the sensor data like understanding images and understanding point clouds.
+
+156
+00:20:47,740 --> 00:20:56,410
+This is something that deep networks actually substantially improved and it was a second revolution in this space and here's
+
+157
+00:20:56,460 --> 00:21:05,270
+one example for this deep learning application which is semantic segmentation and there you can basically see that like these
+
+158
+00:21:05,320 --> 00:21:11,770
+systems are substantially better in this interpretation part and you agreed with me that they are not as good in
+
+159
+00:21:11,820 --> 00:21:19,500
+localization and mapping and then obviously that raises a question like is there a way to combine the two right?
+
+160
+00:21:19,780 --> 00:21:21,060
+How can we do this properly?
+
+161
+00:21:21,260 --> 00:21:30,210
+This is something discussion that I also started with colleagues here and we were at a TRI or we worked at TRI building these self -driving
+
+162
+00:21:30,260 --> 00:21:36,010
+cars namely this question of once we have these super effective segmentation and
+
+163
+00:21:36,060 --> 00:21:41,110
+perception tools like how can we combine them properly with this probabilistic approach,
+
+164
+00:21:41,160 --> 00:21:41,820
+right?
+
+165
+00:21:42,060 --> 00:21:46,870
+What you need there in this context is basically that what is called calibrated uncertainties, right?
+
+166
+00:21:46,920 --> 00:21:51,410
+Otherwise, your filters or your state estimation processes will basically diverge.
+
+167
+00:21:51,460 --> 00:21:54,430
+This problem doesn't go away when you go to foundation models.
+
+168
+00:21:54,480 --> 00:21:58,930
+It becomes even harder because these models are even more complex and like
+
+169
+00:21:58,980 --> 00:22:04,520
+estimating or proper uncertainties based on these foundation models is a severe challenge.
+
+170
+00:22:05,420 --> 00:22:08,700
+And here's one example of that what we did in this context,
+
+171
+00:22:09,020 --> 00:22:15,550
+this uncertainty where panoptic segmentation where you basically not only provide
+
+172
+00:22:15,600 --> 00:22:21,190
+the segmentation masks but you also get these semantic uncertainties for segmentation.
+
+173
+00:22:21,240 --> 00:22:24,810
+You can also do this for instant segmentation which then turns out to be
+
+174
+00:22:24,860 --> 00:22:29,700
+if you combine the two to be just panoptic segmentation or some panoptic uncertainties.
+
+175
+00:22:30,140 --> 00:22:35,050
+And here you see this in action for like a famous data set you
+
+176
+00:22:35,100 --> 00:22:41,260
+can actually see that these uncertainties arise at places where they actually make sense.
+
+177
+00:22:41,640 --> 00:22:49,610
+That's namely at the borders of classes or also objects right the and the next
+
+178
+00:22:49,660 --> 00:22:56,120
+step was basically the integration of that with one of these state estimation processes here
+
+179
+00:22:56,170 --> 00:23:00,420
+in this context a particle filter in which case you would actually you actually need
+
+180
+00:23:00,470 --> 00:23:07,600
+to estimate a regularizer that takes the uncertainties that are Generated by the networks in
+
+181
+00:23:07,650 --> 00:23:12,600
+order to convert them into calibrated uncertainties Which is something that you actually need to
+
+182
+00:23:12,650 --> 00:23:16,040
+learn and when you do this in a proper fashion then you can actually have
+
+183
+00:23:16,090 --> 00:23:24,440
+probabilistic localization at a higher accuracy based on these deep network outputs or learned outputs
+
+184
+00:23:24,490 --> 00:23:32,970
+directly from the data into segmentation mask and other features that you are actually interested in.
+
+185
+00:23:34,940 --> 00:23:39,150
+Which brings me to this other problem in this context, right?
+
+186
+00:23:39,200 --> 00:23:49,660
+So what we did in this deep learning phase was basically we were in the belief that we can actually solve all these problems using deep learning.
+
+187
+00:23:50,240 --> 00:24:00,720
+With the complicating factor that we actually had to collect a ton of data like in a supervised fashion maybe we also believe that we can do this
+
+188
+00:24:00,770 --> 00:24:09,230
+in a semi -supervised way on the fly while the vehicle is actually operating but what we mostly needed to specify is that what is called an ontology.
+
+189
+00:24:09,450 --> 00:24:16,080
+We needed to provide the vehicle with background information what are the right classes that are
+
+190
+00:24:16,130 --> 00:24:24,880
+of interest in this particular task for the vehicle namely self -driving but now assume you
+
+191
+00:24:24,930 --> 00:24:30,440
+do have like the robot that is supposed to like tidy up a kitchen right this
+
+192
+00:24:30,490 --> 00:24:37,280
+problem of like here there's a kitchen and the robot should clean it up and this question
+
+193
+00:24:37,330 --> 00:24:44,020
+of like do we need maps and which classes are relevant depends highly on the question
+
+194
+00:24:44,070 --> 00:24:49,900
+of what actually does this kitchen look like and now imagine this is a kitchen like that
+
+195
+00:24:49,950 --> 00:24:54,850
+the robot encounters after a student party right which might look like this over here right
+
+196
+00:24:54,900 --> 00:24:59,750
+and obviously like I mean it can zoom in here to actually make this a little bit
+
+197
+00:24:59,800 --> 00:25:08,070
+more visible like creating a three -dimensional model of this environment with this extremely hard potentially
+
+198
+00:25:08,120 --> 00:25:13,590
+also not super useful and also defining all the classes that you need in order to solve
+
+199
+00:25:13,640 --> 00:25:20,870
+this clean up the kitchen task are extremely hard to define a priori and this is
+
+200
+00:25:20,920 --> 00:25:27,310
+where from my perspective this limit of this deep learning phase has been right it was super
+
+201
+00:25:27,360 --> 00:25:32,750
+useful in the context of self -driving because self -driving is a much more controlled environment
+
+202
+00:25:32,800 --> 00:25:39,030
+it's Kind of a my perspective this very same as having robots on factory floors versus having
+
+203
+00:25:39,080 --> 00:25:44,750
+robots at home This is why I believe that we will much faster be on factory
+
+204
+00:25:44,800 --> 00:25:52,270
+floors with these platforms rather than in in real messy homes as we see here and Unfortunately,
+
+205
+00:25:52,320 --> 00:25:58,990
+the real world is typically very messy And which brings us to the last point which is foundation
+
+206
+00:25:59,040 --> 00:26:05,480
+models Which really when I interacted with them for the very first time they really? blew my mind.
+
+207
+00:26:05,700 --> 00:26:12,430
+I thought, oh my goodness, this is the next stepping stone in robotics and I truly believe that is the case.
+
+208
+00:26:12,480 --> 00:26:15,540
+So that's a third time we are carrying up the boulder of the hill.
+
+209
+00:26:16,240 --> 00:26:20,850
+So this is basically what I believe is happening right now.
+
+210
+00:26:20,900 --> 00:26:25,730
+And here's a few examples of a few works that we worked on in the past.
+
+211
+00:26:25,780 --> 00:26:28,490
+This is the so -called vision language maps.
+
+212
+00:26:28,540 --> 00:26:36,930
+We are basically at the very beginning of this hype used like the embeddings that we at that time still mapped
+
+213
+00:26:36,980 --> 00:26:45,990
+to a 3D voxel grid in order to actually perform semantic navigation tasks and perform language guided navigation with these platforms.
+
+214
+00:26:46,040 --> 00:26:51,550
+And for every of these tasks when I see this I think oh my goodness in former days in the deep learning
+
+215
+00:26:51,600 --> 00:26:59,450
+phase That might have been like an enter I call this PhD life where you basically have a student To implement a classifier
+
+216
+00:26:59,500 --> 00:27:08,270
+for plants or you all know how many papers there are of about identifying chairs And classifying chairs in images and here and
+
+217
+00:27:08,320 --> 00:27:16,530
+can do this basically in a zero shot fashion you can basically tell the vehicle without any additional training to perform navigation tasks.
+
+218
+00:27:16,580 --> 00:27:24,710
+We have also extended this to to to hierarchical representations basically get a tree for the
+
+219
+00:27:24,760 --> 00:27:29,970
+building and then you can give more complex instructions like for example find the toilet in the
+
+220
+00:27:30,020 --> 00:27:37,050
+bathroom on floor 2 which is then using the LLM converted into a specific action sequence
+
+221
+00:27:37,100 --> 00:27:42,190
+that the robot is supposed to execute and you couldn't do this in there's a wide variety
+
+222
+00:27:42,240 --> 00:27:48,850
+of language instructions whether that the robot then can actually execute and Here is that the
+
+223
+00:27:48,900 --> 00:27:55,530
+experiments that Chang Wang actually executed with with this robot in the former Building 80 and Freiburg
+
+224
+00:27:55,580 --> 00:28:01,050
+where he was like until the very end of his PhD and the amazing aspect of this
+
+225
+00:28:01,100 --> 00:28:10,390
+is that you can now have this open vocabulary navigation instructions that allow robots to robustly navigate.
+
+226
+00:28:10,440 --> 00:28:12,700
+Is it sufficient for self -driving cars?
+
+227
+00:28:13,180 --> 00:28:13,980
+Probably not.
+
+228
+00:28:14,140 --> 00:28:20,820
+But for environments maybe in or settings like this one, yes it might well be okay.
+
+229
+00:28:21,480 --> 00:28:24,290
+And the other question is, is this optimal?
+
+230
+00:28:24,340 --> 00:28:26,220
+That is also not the case, right?
+
+231
+00:28:26,400 --> 00:28:29,860
+This is also a challenge that we are still facing,
+
+232
+00:28:30,140 --> 00:28:36,530
+like how to optimize these behaviors of these platforms in order to finally achieve the
+
+233
+00:28:36,580 --> 00:28:40,850
+optimal action sequence which is basically that what we want to have from the robots name
+
+234
+00:28:40,900 --> 00:28:47,540
+we learn from everyday operation in such a building and optimizing their their behavior there
+
+235
+00:28:48,200 --> 00:28:52,710
+And here's a few more examples that we did at the very beginning of this phase.
+
+236
+00:28:52,760 --> 00:29:01,790
+This is like vacuum cleaning You probably many of you have a automated vacuum cleaner at home There's only like I think as far as I know
+
+237
+00:29:01,840 --> 00:29:06,970
+one class of vacuum cleaners that does some sort of object classification And
+
+238
+00:29:07,020 --> 00:29:11,650
+because they figured out if you're that if your robot runs over dog poop,
+
+239
+00:29:11,700 --> 00:29:12,050
+right?
+
+240
+00:29:12,080 --> 00:29:16,750
+It's gonna be have a catastrophic effect on your apartment because usually after that
+
+241
+00:29:16,800 --> 00:29:22,250
+you need to actually clean your entire apartment and So the idea that was hey,
+
+242
+00:29:22,300 --> 00:29:23,310
+can we do this?
+
+243
+00:29:23,360 --> 00:29:31,070
+Maybe all this company did this by training like The robot or in a deep network on basically plastic dog
+
+244
+00:29:31,120 --> 00:29:39,500
+poop that you can get from a famous distributor and then achieved like a pretty robust classification result in this context.
+
+245
+00:29:40,020 --> 00:29:48,650
+So in term what we did in this context was basically asking the foundation model directly for the policy which we then distilled onto a
+
+246
+00:29:48,700 --> 00:29:58,320
+small networks it was a YOLOv8 classifier that we then used to actually run locally on the robot on an edge device on the robot.
+
+247
+00:29:58,780 --> 00:30:07,010
+And the idea there is that basically over time doing like this incremental learning basically adapt to the specific environment and
+
+248
+00:30:07,060 --> 00:30:15,290
+get a super compact network running on the platform tailored to your specific environment and executing the actions on that on that
+
+249
+00:30:15,340 --> 00:30:24,150
+machine without plenty of requests to the foundation model and with also saving with spending too much of an energy for all
+
+250
+00:30:24,200 --> 00:30:31,610
+the millions of vacuum cleaners that you have in your home and here's a few examples of this zero shock behavior or
+
+251
+00:30:31,660 --> 00:30:39,790
+after some training but even with thus far unknown objects so the the yolo v8 classifier basically says when I'm it's
+
+252
+00:30:39,840 --> 00:30:46,110
+too uncertain about this object it asks the foundation model about what to do and then there's actually added to the training
+
+253
+00:30:46,160 --> 00:30:56,340
+set we use a special specific language based clustering this context in order to have the important examples in the training set
+
+254
+00:30:56,390 --> 00:31:06,630
+so that we actually don't have this catastrophic forgetting and so This is like this Really found interesting and in this context.
+
+255
+00:31:06,680 --> 00:31:14,310
+I want to mention I was super surprised this morning that there are so few people working on navigation in In this conference, right?
+
+256
+00:31:14,360 --> 00:31:22,770
+So I still find navigation pretty interesting and there's really complex problems in in the navigation part but stay tuned there will also
+
+257
+00:31:22,820 --> 00:31:33,390
+be some manipulation in a few seconds and so the The second half of this navigation part is this question which I mentioned before,
+
+258
+00:31:33,440 --> 00:31:33,840
+right?
+
+259
+00:31:34,540 --> 00:31:39,490
+In the self -driving car space probabilistic robotics was like what we mostly did
+
+260
+00:31:39,540 --> 00:31:45,940
+is we created geometric representations of our environment in order to actually navigate around.
+
+261
+00:31:46,480 --> 00:31:53,850
+But at least I don't believe that I do this type of optimization and I don't invert
+
+262
+00:31:53,900 --> 00:31:58,810
+big matrix in my brain in order to understand what the environment or the world looks like
+
+263
+00:31:58,860 --> 00:32:05,770
+and I also don't have a super accurate like estimate of this this hall over here I
+
+264
+00:32:05,820 --> 00:32:14,140
+have no clue how white this hall exactly is still I can navigate around pretty robustly so that's
+
+265
+00:32:14,190 --> 00:32:17,200
+what I would like that what I would like to see and hope to see at least
+
+266
+00:32:17,250 --> 00:32:22,980
+in in the future is this question of that can we get rid of these geometric representations I
+
+267
+00:32:23,030 --> 00:32:29,000
+think While this has been an enabler at the same time it also hinders us from going
+
+268
+00:32:29,050 --> 00:32:35,430
+really wild and going to the level five of navigation and the level five of manipulation as well.
+
+269
+00:32:35,850 --> 00:32:43,780
+So here's like one approach with this flow now where we're basically trying to do this to navigate around without maps,
+
+270
+00:32:43,830 --> 00:32:47,200
+without explicit representations of the environment.
+
+271
+00:32:47,250 --> 00:32:53,940
+Turns out that you still need some geometry So but the general idea behind this is
+
+272
+00:32:53,990 --> 00:33:00,020
+like we want to actually generalize to new environments new embodiments different cameras the robot has never
+
+273
+00:33:00,070 --> 00:33:06,520
+seen and even with multimodal goals And this is the architecture of flown off which is basically
+
+274
+00:33:06,570 --> 00:33:13,580
+a combination of conditional flow matching with depth priors We can now actually navigate in an environment.
+
+275
+00:33:13,630 --> 00:33:21,660
+The robot hasn't seen before and still trying to avoid For computer vision relatively complex obstacles like for example glass
+
+276
+00:33:21,710 --> 00:33:28,800
+panes or glass doors You can also deal with dynamic object obstacles and so on and so forth Still despite
+
+277
+00:33:28,850 --> 00:33:35,460
+of the fact that we were using depth priors here The robot sometimes collided with objects simply because these diffusion
+
+278
+00:33:35,510 --> 00:33:43,420
+policies don't come with a proper scale And usually in many papers the the projection of the trajectory into the real
+
+279
+00:33:43,470 --> 00:33:51,120
+world was basically done manually and people like thought about a good like scaling factor for these trajectories which then
+
+280
+00:33:51,170 --> 00:33:57,160
+actually lead to the fact leads to the fact that in some cases where the scale factor is inappropriate that actually
+
+281
+00:33:57,210 --> 00:34:05,380
+leads to navigation problems which then led us to the development of metric net which is basically an extension of
+
+282
+00:34:05,430 --> 00:34:15,500
+this that also additionally or additionally incorporates scale to this so turns out that we cannot completely get rid of geometry,
+
+283
+00:34:15,550 --> 00:34:26,940
+which is probably also reasonable simply because vision is not only, it's not sufficient for reasoning about distances and avoiding collisions.
+
+284
+00:34:26,990 --> 00:34:33,620
+And this is probably also the reason why we do have two eyes to basically get some idea about the depth in our,
+
+285
+00:34:33,670 --> 00:34:36,210
+at least in the range in which we manipulate.
+
+286
+00:34:37,050 --> 00:34:40,360
+And this is the architecture of metric net.
+
+287
+00:34:40,410 --> 00:34:45,040
+So this navigation policy pie is that what you formerly saw as flown off and
+
+288
+00:34:45,090 --> 00:34:50,520
+then metric net basically adds real world scale to waypoints to that that are then
+
+289
+00:34:50,570 --> 00:34:56,280
+in a Further step slightly adjusted in order to stay away further from obstacles which
+
+290
+00:34:56,330 --> 00:35:02,500
+then substantially improve the navigation robustness here Without giving you all the numerical details here,
+
+291
+00:35:02,550 --> 00:35:06,780
+but this is something that you can also look up in in the papers So
+
+292
+00:35:06,830 --> 00:35:14,480
+this is at least like one step towards this idea of like navigating without explicit representations,
+
+293
+00:35:14,530 --> 00:35:17,980
+right, not needing SLAM anymore, right.
+
+294
+00:35:18,030 --> 00:35:24,910
+And I think this is a super important problem and I would actually like to see this
+
+295
+00:35:24,960 --> 00:35:32,190
+happening in the future that we can actually get rid of this super rigid representations that are helpful.
+
+296
+00:35:32,240 --> 00:35:38,390
+but on the other hand of the prevent us from going really wired to Environments the robot has never
+
+297
+00:35:38,440 --> 00:35:47,290
+seen and still operating robustly and here's that some other work that I really like Found very very interesting.
+
+298
+00:35:47,340 --> 00:35:49,350
+It's been done by a year and colleagues.
+
+299
+00:35:49,400 --> 00:35:50,670
+Oh, you're sitting over there.
+
+300
+00:35:50,720 --> 00:35:51,130
+Hi.
+
+301
+00:35:51,180 --> 00:35:51,480
+Oh,
+
+302
+00:35:51,300 --> 00:35:58,490
+yeah it's basically about using these foundation models for Robot programming or
+
+303
+00:35:58,540 --> 00:36:04,970
+executing more complex tasks and just elementary skills this is a super important
+
+304
+00:36:05,020 --> 00:36:13,790
+problem because I mean when you look at the the applications of robots that what is really missing is the applications of these systems in so
+
+305
+00:36:13,840 --> 00:36:22,630
+-called small and medium enterprises the reason for this is that programming a robot is extremely expensive and whenever you want to deploy a robot
+
+306
+00:36:22,680 --> 00:36:30,050
+you actually need to send an engineer together with the robot that programs the robot to execute this particular task and so And this is where,
+
+307
+00:36:30,100 --> 00:36:39,070
+in general, this anti -robot learning might in the future contribute to basically have a wider role out of these platforms,
+
+308
+00:36:39,120 --> 00:36:46,190
+even in situations where you have lower numbers of items to be produced and
+
+309
+00:36:46,240 --> 00:36:50,850
+therefore need a high flexibility of these platforms when it comes to programming them.
+
+310
+00:36:50,900 --> 00:36:58,410
+So the idea there basically was like taking elementary skills that are still sufficiently complicated like opening a
+
+311
+00:36:58,460 --> 00:37:05,640
+door and Then chaining them using an LLM We saw this earlier today as well using the LLM
+
+312
+00:37:05,690 --> 00:37:12,000
+as a programming assistant that changed these elementary actions based on the input that you get from the
+
+313
+00:37:12,050 --> 00:37:19,060
+images in order to Get a concrete program for the robot to execute this particular task All right,
+
+314
+00:37:19,110 --> 00:37:29,480
+and these elementary skills that they were trained using so -called play data with like Assigned language labels in the very end and
+
+315
+00:37:29,530 --> 00:37:38,340
+then based on the context of the scene We could basically have the robot executing this more complex tasks than in the end.
+
+316
+00:37:38,390 --> 00:37:42,040
+This can be as Abstract as heat,
+
+317
+00:37:42,090 --> 00:37:47,380
+please tidy up the workspace and then depending on what is in display in the space in the
+
+318
+00:37:47,430 --> 00:37:55,030
+context and the actions to be generated like to get a sequence of actions to execute this particular task.
+
+319
+00:37:55,470 --> 00:38:01,060
+And then here's this entire system in action like we basically see the robot like open it inferring that it needs to
+
+320
+00:38:01,110 --> 00:38:08,730
+open the drawer first then puts the blocks into the drawer closes the drawer and then attempts to actually push the green button.
+
+321
+00:38:09,940 --> 00:38:18,670
+I think things like this are super important I mean there's obviously an important debate about is this the right
+
+322
+00:38:18,720 --> 00:38:25,590
+way for doing this like turning this into these these programs or using these LLM says programming assistance or can we
+
+323
+00:38:25,640 --> 00:38:34,110
+do this end -to -end directly using a VLA right so but this is something that we as a society might
+
+324
+00:38:34,160 --> 00:38:41,930
+hopefully figure out in the near future there's other aspects as well that I find super interesting in this context of
+
+325
+00:38:41,980 --> 00:38:46,790
+of manipulation I mean we see plenty of manipulation papers
+
+326
+00:38:46,840 --> 00:38:54,390
+here which are absolutely impressive that the question that I wondered
+
+327
+00:38:54,440 --> 00:39:00,690
+about when I thought about this was this question of how do we actually interact with objects in the real world
+
+328
+00:39:00,740 --> 00:39:07,850
+in a proper fashion and when I say in a proper fashion I mean like human -like grasping of objects like
+
+329
+00:39:07,900 --> 00:39:14,470
+how can we do this and this all started with me Like playing around with chat GPT and asking it Hey,
+
+330
+00:39:14,520 --> 00:39:20,830
+I'm a robot my owner told up told me to pick up a doll that lies in front of me Where should I grasp it
+
+331
+00:39:20,880 --> 00:39:29,770
+and then chat GPT in his usual way came back with yes Like either use the arms the bell X or the torso basically don't grasp
+
+332
+00:39:29,820 --> 00:39:37,030
+it at the head And then we started to think about this a little bit more and like built the system that you basically like
+
+333
+00:39:37,080 --> 00:39:47,660
+provided with a prompt about the object to be grasped and then it came back to us with parts that we actually should grasp the object.
+
+334
+00:39:48,200 --> 00:39:53,440
+And then at that time we generated this 3D model SLAM by hand.
+
+335
+00:39:53,490 --> 00:40:02,260
+Nowadays you would use a vision language model for this like SAM 3D or whatsoever in order to generate these 3D point clouds.
+
+336
+00:40:02,310 --> 00:40:05,740
+But what is then behind this as well is grasp it,
+
+337
+00:40:05,790 --> 00:40:12,860
+which is a tool that basically samples stable grasp points on 3d surfaces that you basically
+
+338
+00:40:12,910 --> 00:40:18,600
+if you have a two finger gripper at samples pairs of grass points Which are sufficient to
+
+339
+00:40:18,650 --> 00:40:22,440
+basically keep the object in the head And once you have this you can just check
+
+340
+00:40:22,490 --> 00:40:28,190
+as to whether these grass points fall into the screen regions provided you by the segmentation tool,
+
+341
+00:40:28,490 --> 00:40:35,870
+and then you accept only those that lie in green regions, and all of a sudden you get semantic grasps.
+
+342
+00:40:36,250 --> 00:40:38,160
+And here's the system in action.
+
+343
+00:40:38,210 --> 00:40:44,120
+So on the left -hand side is the purely geometric part, on the right -hand side is line grasps,
+
+344
+00:40:44,170 --> 00:40:47,580
+and what you can see is that all of this in a zero -shot fashion, right?
+
+345
+00:40:47,630 --> 00:40:54,140
+So there's no training involved, this directly operates on these objects, and yeah,
+
+346
+00:40:54,190 --> 00:41:03,330
+particularly like the cactus down there or the cake is also pretty impressive And then on the next slide you will also see the doll the
+
+347
+00:41:03,380 --> 00:41:13,520
+candle is also like pretty interesting because some of the System seems to seems to know that like a candle on a candlestick is not very stable,
+
+348
+00:41:13,570 --> 00:41:13,920
+right?
+
+349
+00:41:13,950 --> 00:41:16,760
+So it basically will most likely fall off, right?
+
+350
+00:41:16,810 --> 00:41:21,940
+so I think this is where the power of these systems actually is when it comes to like Interacting
+
+351
+00:41:21,990 --> 00:41:31,300
+with the real world this this capability of to actually perform like semantic Or infer semantics of the individual object.
+
+352
+00:41:31,350 --> 00:41:37,120
+Sometimes whenever I see this or whenever I see these Videos, I start thinking.
+
+353
+00:41:37,170 --> 00:41:37,960
+Oh my goodness.
+
+354
+00:41:38,010 --> 00:41:40,400
+That's this thing understands the world, right?
+
+355
+00:41:40,450 --> 00:41:44,560
+Which is just crazy from my perspective just a side note here.
+
+356
+00:41:44,610 --> 00:41:50,650
+We also did a user study where we ask users where to actually grasp individual objects,
+
+357
+00:41:51,090 --> 00:41:58,700
+like a value closer to one means that we are mostly corresponding with the places where the user would grasp the individual objects.
+
+358
+00:41:58,750 --> 00:42:09,150
+I want to pay special attention to the toilet brush over here, where 97.6 % of the user said they would grasp it at the handle,
+
+359
+00:42:09,630 --> 00:42:14,440
+and the other 2.4 basically would also grasp it at the brush.
+
+360
+00:42:14,490 --> 00:42:22,050
+The reason for this might be that the picture that we provided in the image showed a new toilet brush.
+
+361
+00:42:22,100 --> 00:42:23,950
+So that might be the excuse for this.
+
+362
+00:42:24,000 --> 00:42:27,150
+But yes, just a small aside.
+
+363
+00:42:27,200 --> 00:42:29,330
+But you can go even more complex, right?
+
+364
+00:42:29,380 --> 00:42:35,480
+If you have objects that are like substantially more complex when it comes to the reasoning part,
+
+365
+00:42:35,700 --> 00:42:43,330
+you get relatively good annotation or answers about where to actually grasp these individual objects.
+
+366
+00:42:43,380 --> 00:42:47,590
+This also works for placing like if you want to know how to place an object
+
+367
+00:42:47,640 --> 00:42:52,090
+onto it onto a table then you can just ask these systems like how should I rotate
+
+368
+00:42:52,140 --> 00:42:56,970
+my arm in order to properly place this object onto the table man and I think
+
+369
+00:42:57,020 --> 00:43:02,270
+you need to click once in order to this happening and so based on this robot can
+
+370
+00:43:02,320 --> 00:43:08,790
+actually in a zero shot fashion execute these tasks which is pretty impressive in which I
+
+371
+00:43:08,840 --> 00:43:17,770
+particularly like about these these foundation models The next step is also something like kind of like
+
+372
+00:43:17,820 --> 00:43:23,230
+a message that I want to deliver so when you think about embodied AI and think about
+
+373
+00:43:23,280 --> 00:43:30,350
+that This basically means that we use our body to interact with the real world all right,
+
+374
+00:43:30,400 --> 00:43:40,760
+then this from my perspective means more than just using positions and in And video and images, right?
+
+375
+00:43:40,810 --> 00:43:48,090
+So like when you see it someone manipulating an objects in YouTube but you actually do not know how much
+
+376
+00:43:48,140 --> 00:43:56,490
+force this person applies and Like what it actually feels in order to manipulate this object in this particular form,
+
+377
+00:43:56,540 --> 00:43:57,190
+right?
+
+378
+00:43:57,240 --> 00:44:01,330
+So this is something that is substantially missing I know that some computer vision
+
+379
+00:44:01,380 --> 00:44:07,310
+people argue that you actually don't need this you can do everything with vision However,
+
+380
+00:44:07,360 --> 00:44:15,350
+when you look at us, we don't run around all the time looking at our hands about what is going on in our hands.
+
+381
+00:44:15,400 --> 00:44:19,170
+We simply don't have the time for doing this and it would be computationally
+
+382
+00:44:19,220 --> 00:44:23,880
+simply too expensive and we would maybe also run into things and hurt ourselves.
+
+383
+00:44:24,920 --> 00:44:35,350
+So on top of this, you could argue, or you can argue, that there are many people in the world who don't have vision and still live a decent life.
+
+384
+00:44:35,400 --> 00:44:40,100
+But there's very, very few people in the world who don't have tactile information.
+
+385
+00:44:41,570 --> 00:44:48,530
+So maybe, like, tactile information is more important than actually, like, we currently believe.
+
+386
+00:44:49,030 --> 00:44:51,720
+And this is why we started this project, Flow Touch,
+
+387
+00:44:51,770 --> 00:44:59,100
+where we are trying to predict what the world will feel like when we touch it with our sensors at a certain place.
+
+388
+00:44:59,150 --> 00:44:59,940
+All right,
+
+389
+00:44:59,990 --> 00:45:08,060
+so what we want to do is we want basically predict the sense of touch like when from an actual perspective Anywhere on the
+
+390
+00:45:08,110 --> 00:45:17,300
+object and even for novel objects and this is something that From my perspective is super important Predictions are always important when you are
+
+391
+00:45:17,350 --> 00:45:23,760
+able to predict something you have the basis for planning Right when you know what it's going to feel like and what your tactile
+
+392
+00:45:23,810 --> 00:45:31,170
+perceptions are when you grasp something you actually get an idea about as to whether this grasp is going to be stable or not.
+
+393
+00:45:31,350 --> 00:45:36,340
+So this is like the the reason why we actually looked into this and we started
+
+394
+00:45:36,390 --> 00:45:43,890
+with looking at these so -called vision -based tactile sensors and like or visual tactile sensors
+
+395
+00:45:43,940 --> 00:45:49,330
+that provide you basically with an image and which is why this is so super hyped
+
+396
+00:45:49,380 --> 00:45:55,170
+right now in the computer vision a community because like that what they are super straight when
+
+397
+00:45:55,220 --> 00:46:00,770
+it's basically processing images so this is what we are doing in this in this work
+
+398
+00:46:00,820 --> 00:46:09,290
+here tactile sensor prediction we are basically combining not only real -world data plus the grasping points
+
+399
+00:46:09,340 --> 00:46:17,770
+and the simulation data in order to actually train this this predictor turns out that the
+
+400
+00:46:17,820 --> 00:46:22,380
+results are pretty good there's one thing that we would like to understand a little bit better.
+
+401
+00:46:22,620 --> 00:46:33,250
+So we have this technique called domain conditioning, which actually provides us with the best vision -based metrics on these predictions.
+
+402
+00:46:33,300 --> 00:46:43,460
+But it's actually not better than what we call tactile loss that we added in order to further improve the tactile perceptions.
+
+403
+00:46:43,920 --> 00:46:47,190
+So there is something that we still need to work on.
+
+404
+00:46:47,240 --> 00:46:48,030
+We are not quite there.
+
+405
+00:46:48,080 --> 00:46:52,970
+But this is like even this entire space is relatively at the beginning of what
+
+406
+00:46:53,020 --> 00:46:59,790
+is being done The next part that I mentioned as well is forces All right,
+
+407
+00:46:59,840 --> 00:47:08,790
+and I think this I truly believe this is a limitation of that what we are right doing right now we are mostly or too much focusing on like vision
+
+408
+00:47:08,840 --> 00:47:16,910
+and in positions only and we urgently need to go dive deeper into robotics and
+
+409
+00:47:16,960 --> 00:47:25,900
+look into like more multimodal or higher multimodality basically incorporating tactile information and forces as well.
+
+410
+00:47:26,440 --> 00:47:31,590
+Just to give you one idea about like what the effect of this might be here's this relatively
+
+411
+00:47:31,640 --> 00:47:39,880
+recent work like wrench act where we enhance robot policies for contact rich behavior using actually direct wrench control.
+
+412
+00:47:40,500 --> 00:47:49,970
+What is nowadays being done mostly is that contact forces are dealt with implicitly by using position control plus controlling the stiffness of
+
+413
+00:47:50,020 --> 00:47:54,190
+the robot which however can be problematic when it comes to
+
+414
+00:47:54,240 --> 00:47:59,300
+different applications where you actually need different forces for the manipulation tasks.
+
+415
+00:48:00,320 --> 00:48:03,990
+And so long speech,
+
+416
+00:48:04,040 --> 00:48:15,310
+short message but what we are doing replacing here is basically position with only with with experts oh yeah adding basically forces to that
+
+417
+00:48:15,360 --> 00:48:25,990
+and we are doing this on top of this policy act and basically like going from position to force torque there's this one problem
+
+418
+00:48:26,040 --> 00:48:32,850
+there that we properly need to deal with free space when the robot is not like touching anything or then you're basically a need
+
+419
+00:48:32,900 --> 00:48:43,720
+to introduce a heuristic and dampening the entire system and then that allows us then to execute this entire task then in force mode.
+
+420
+00:48:44,160 --> 00:48:48,150
+Alright so the we are playing here it's like we're training this with a like
+
+421
+00:48:48,200 --> 00:48:54,050
+leader follower setting and then he has a few experimental results regarding this basically showing that
+
+422
+00:48:54,100 --> 00:49:01,520
+in most cases we obtain a substantial increase in performance which clearly shows that going
+
+423
+00:49:01,570 --> 00:49:08,320
+over to force control is actually like super beneficial and super helpful and this also our
+
+424
+00:49:08,370 --> 00:49:12,240
+chance to set ourselves apart from that what has gone in the computer vision space
+
+425
+00:49:12,290 --> 00:49:21,000
+where we mostly about position and and computer vision only yeah here's a few tasks that
+
+426
+00:49:21,050 --> 00:49:24,620
+we could do with these with these robots they are like aligned to the core
+
+427
+00:49:24,670 --> 00:49:32,090
+of collaboration with Siemens and they are pretty much interested in more industrial applications of this.
+
+428
+00:49:34,480 --> 00:49:40,650
+So which brings us also to this problem of refining policies and
+
+429
+00:49:40,700 --> 00:49:49,670
+then also trying to adjust robots based on given vision language action models,
+
+430
+00:49:49,720 --> 00:49:54,280
+for example, in order to perform or get better in their tasks.
+
+431
+00:49:54,680 --> 00:50:02,900
+It's something that I would like to not only see in manipulation, but also in navigation, particularly when there are no maps in the game.
+
+432
+00:50:03,520 --> 00:50:08,500
+So this is some work where we basically find policy distillation,
+
+433
+00:50:08,780 --> 00:50:19,140
+where we are actually trying to become faster when it comes to the adjustment or fine -tuning of these models to specific tasks.
+
+434
+00:50:20,300 --> 00:50:20,890
+Normally,
+
+435
+00:50:20,940 --> 00:50:25,550
+fine -tuning actually takes a lot of data and also like doing
+
+436
+00:50:25,600 --> 00:50:31,580
+this from scratch with reinforcement learning typically requires also a lot of exploration.
+
+437
+00:50:31,960 --> 00:50:34,930
+And what we're doing here basically is we are combining this on
+
+438
+00:50:34,980 --> 00:50:41,770
+policy reinforcement learning with behavioral cloning introducing an additional loss down here and
+
+439
+00:50:41,820 --> 00:50:48,290
+by doing so you're basically getting substantially more effective in certain learning
+
+440
+00:50:48,340 --> 00:50:54,040
+tasks or fine -tuning tasks compared to existing baselines like for For example,
+
+441
+00:50:54,400 --> 00:50:57,500
+PPO, which our system is relying upon.
+
+442
+00:50:58,540 --> 00:51:03,360
+This is an interesting application towards getting more efficient.
+
+443
+00:51:03,410 --> 00:51:05,820
+And this is also something that we actually should do.
+
+444
+00:51:05,870 --> 00:51:10,860
+The other question is, how can we actually do this?
+
+445
+00:51:10,910 --> 00:51:18,490
+What is the best way of doing this reinforcement learning in order to fine -tune, for example, existing policies?
+
+446
+00:51:18,650 --> 00:51:20,910
+And in this context,
+
+447
+00:51:21,430 --> 00:51:30,200
+we would like mention a relatively recent task the recent like work that we are carrying out right now like in this question of like
+
+448
+00:51:30,250 --> 00:51:39,970
+developing policies that generalize better to environmental changes or to tasks that are actually not really seen by the robot and how can we do

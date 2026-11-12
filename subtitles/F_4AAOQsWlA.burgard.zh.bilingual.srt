@@ -1,0 +1,2684 @@
+1
+00:00:00,000 --> 00:00:00,590
+And I think maybe by now the book, I'm not sure if it's empty, but Wolfram is going to tell us,
+而且我认为现在这本书，我不确定是不是空的，但沃尔弗拉姆会告诉我们。
+
+2
+00:00:00,640 --> 00:00:06,190
+I think, his thoughts about what are the remaining challenges if we want to realize embodied AI.
+我认为，他思考的是，如果我们想实现具身AI，还面临哪些未解决的挑战。
+
+3
+00:00:06,240 --> 00:00:09,400
+So let's give a warm welcome to Wolfram.
+让我们热烈欢迎沃尔弗拉姆。
+
+4
+00:00:12,480 --> 00:00:13,060
+Thanks, Dieter.
+谢谢，迪特。
+
+5
+00:00:13,640 --> 00:00:14,700
+Let's take a selfie.
+来拍张自拍吧。
+
+6
+00:00:18,310 --> 00:00:19,700
+Thanks.
+谢谢。
+
+7
+00:00:19,750 --> 00:00:22,050
+And thanks for having me here.
+谢谢你们邀请我来这里。
+
+8
+00:00:22,330 --> 00:00:25,780
+I must confess, I'm super nervous right now.
+我得承认，我现在超级紧张。
+
+9
+00:00:25,830 --> 00:00:30,380
+It's actually my very first plenary speech in robotics,
+这实际上是我在机器人领域发表的首次全体会议演讲。
+
+10
+00:00:30,430 --> 00:00:37,250
+at least in the robotics and automation society space, and never stood in front of such a big audience.
+至少在机器人与自动化协会的领域里，从未站在如此庞大的观众面前。
+
+11
+00:00:37,750 --> 00:00:40,830
+And so it's really great to be here.
+所以能在这里真的非常高兴。
+
+12
+00:00:41,810 --> 00:00:47,440
+This talk is a little bit about my perspective or my vision on where
+这次演讲，我想分享一下我对未来的看法或愿景。
+
+13
+00:00:47,490 --> 00:00:54,990
+we might be going in this right now race about embodied AI systems or robots.
+我们可能正处在人形机器人或具身AI系统竞赛的途中。
+
+14
+00:00:55,910 --> 00:01:01,480
+And it also will, I will take you back a little bit, maybe like 30 years ago.
+而且我还要带你们回到过去，大概30年前的样子。
+
+15
+00:01:01,530 --> 00:01:07,440
+But at some point in time, we'll even take you even further back, something like two to 3000 years ago.
+但总有一天，我们会带你回到更久远的过去，比如两千到三千年前。
+
+16
+00:01:07,490 --> 00:01:09,440
+I will let you know at that particular time.
+到时候我会告诉你的。
+
+17
+00:01:09,490 --> 00:01:14,370
+and we will then see what is behind all of this.
+然后我们就能看到这一切背后的真相。
+
+18
+00:01:15,480 --> 00:01:20,960
+So this talk would not be possible with all my friends and colleagues, normally talks end with this.
+所以这次演讲能顺利完成，离不开我所有朋友和同事的支持，通常演讲都会以这个结尾。
+
+19
+00:01:21,120 --> 00:01:22,540
+I'm going to start with this.
+我先从这个开始。
+
+20
+00:01:22,700 --> 00:01:28,420
+I have so many friends who contributed to that that I cannot actually add pictures, would have taken me years.
+我有很多朋友都为此做出了贡献，我实在没法一一配上图片，那得花上好几年时间。
+
+21
+00:01:29,180 --> 00:01:37,280
+I thank all my friends and colleagues who contributed to that work, and a few will be listed and even be shown in pictures here in this presentation.
+我要感谢所有为此项工作做出贡献的朋友和同事，其中几位将在本次演示中被列出，甚至还会在图片中出现。
+
+22
+00:01:37,330 --> 00:01:44,110
+So my view in robotics is actually that that we are going to be or to
+所以我在机器人领域的看法是，我们将会或正在
+
+23
+00:01:44,160 --> 00:01:51,490
+have a that we are having actually super useful tool for helping us solving important societal problems.
+我们实际上拥有一个非常有用的工具，能帮助我们解决重要的社会问题。
+
+24
+00:01:51,540 --> 00:01:57,330
+Let it be traffic and it can be particularly seen here where you can actually see
+让它成为交通，这里尤其明显，你可以清楚看到
+
+25
+00:01:57,380 --> 00:02:05,440
+multiple companies with driverless cars driving around making our traffic more effective and also hopefully safer.
+多家公司正在运营无人驾驶汽车，让交通更加高效，也希望能更安全。
+
+26
+00:02:05,620 --> 00:02:11,250
+It can be the case in production where we are in a global race about the most efficient
+在实际生产中，我们正面临一场全球范围内的效率竞赛。
+
+27
+00:02:11,300 --> 00:02:20,730
+production systems and so on and where we are believing that robotics will help us competing in that space.
+生产系统等，我们认为机器人将帮助我们在这一领域保持竞争力。
+
+28
+00:02:21,010 --> 00:02:25,760
+And then there is assistance and healthcare, the next dimension, we will talk about this as well,
+然后是医疗和健康辅助，这是下一个维度，我们也会谈到这一点。
+
+29
+00:02:25,810 --> 00:02:32,190
+this question of how can we actually build robots that help us with elderly care and also support us in our homes.
+如何真正打造能帮助老年人护理并支持我们居家生活的机器人。
+
+30
+00:02:32,390 --> 00:02:39,760
+And finally we are living on a finite sphere and actually constantly growing the fastest growth is
+最后，我们生活在一个有限的球体上，而实际上，我们正不断增长，增长最快的时候正是现在。
+
+31
+00:02:39,810 --> 00:02:46,580
+in this space here this room it's probably this fastest growing society on earth and that's also something
+这个空间，这个房间，可能是地球上发展最快的社群，这一点同样值得关注。
+
+32
+00:02:46,630 --> 00:02:53,150
+that we need to support or hoped to be able to support with robotics and in fact for
+我们需要通过机器人来支持，事实上也希望能借助机器人实现支持。
+
+33
+00:02:53,200 --> 00:02:59,070
+that we need that what is called intelligent robots robots that perceive their world like maybe reason about
+我们需要的是所谓的智能机器人，能够像人类一样感知世界并进行推理。
+
+34
+00:02:59,120 --> 00:03:04,710
+it create models about it and then execute actions in order to achieve their goals That's basically
+它会创建关于自身的模型，然后执行行动以实现目标。这基本上就是
+
+35
+00:03:04,760 --> 00:03:10,030
+that what we are interested in and right now we are working on that what is called embodied
+这正是我们关注的，目前我们正在研究所谓的具身化。
+
+36
+00:03:10,080 --> 00:03:17,850
+robotics and or embodied AI as a potential solution to this and I love these Pictures with humanoids
+机器人学或具身AI可能是解决这一问题的潜在方案，我非常喜欢这些具身机器人的图片。
+
+37
+00:03:17,900 --> 00:03:25,470
+all these, by the way, disclaimer: all pictures that contain white humanoids are generated with generative AI, right?
+顺便说一下，免责声明：所有包含白色人形机器人的图片都是用生成式AI生成的，对吧？
+
+38
+00:03:25,520 --> 00:03:29,770
+all the others are basically handmade and And here are a couple of solutions where we
+其他所有产品基本上都是手工制作的，而这里有几个解决方案，我们
+
+39
+00:03:29,820 --> 00:03:35,380
+envision this to be done in mostly like right now using that what is called humanoid robots.
+设想现在就用这类人形机器人来完成这项任务。
+
+40
+00:03:35,700 --> 00:03:40,290
+The reason why humanoids are envisioned to be one of the solutions here is that
+之所以认为人形机器人是这里的一个解决方案，是因为
+
+41
+00:03:40,340 --> 00:03:47,930
+they will allow us to make a smooth transition from actually manual production towards automated production.
+它们将帮助我们顺利实现从人工生产向自动化生产的过渡。
+
+42
+00:03:47,980 --> 00:03:50,770
+So we can even have this what is called mixed production,
+因此我们甚至可以实现所谓的混合生产，
+
+43
+00:03:50,820 --> 00:03:59,130
+where we have human and robot co-workers in the same space on the same tasks with the same tools, basically accomplishing the very same tasks.
+我们让人类和机器人在同一空间内，使用相同的工具，共同完成几乎完全相同的工作。
+
+44
+00:03:59,180 --> 00:04:02,780
+And this is why humanoids are so much hyped these days.
+这就是为什么人形机器人如今如此受追捧。
+
+45
+00:04:03,460 --> 00:04:06,670
+But on top of this, there's also the next hype.
+但除此之外，还有下一个热潮。
+
+46
+00:04:06,720 --> 00:04:13,340
+I was in China twice this year and saw like several hundred startups in the space of humanoid robots.
+今年我两次到中国，短短时间内就看到了几百家专注于人形机器人领域的初创公司。
+
+47
+00:04:13,540 --> 00:04:17,010
+And on top of this, equally many startups in the space of robotic hands.
+此外，还有数量相当的初创企业专注于机器人手领域。
+
+48
+00:04:17,060 --> 00:04:24,270
+And the reason for this is that in order to perform dexterous manipulations with tools that we also use we need to have proper hands But it's not
+之所以如此，是因为要像我们一样使用工具进行灵巧操作，就必须拥有合适的手。但事实并非如此。
+
+49
+00:04:24,320 --> 00:04:29,230
+only about mechanics It's also about perception and now we'll come to this in
+仅仅关于机械还远远不够，它还关乎感知，接下来我们将深入探讨这一点。
+
+50
+00:04:29,280 --> 00:04:33,950
+this talk as well And finally and this was mentioned by Peter stone earlier today.
+本次演讲也涉及这一点，最后，这正如彼得·斯通今天早些时候提到的。
+
+51
+00:04:34,000 --> 00:04:45,580
+You also need Computing on a large scale and on a larger scale than it was available thus far for at least university-like research.
+你还需要大规模的计算能力，而且规模要大于迄今为止所能提供的，至少要达到大学级研究的需求。
+
+52
+00:04:46,060 --> 00:04:53,560
+But on top of this, and this is something that is mostly underestimated by investors and so on and so forth and even politicians,
+但除此之外，这一点往往被投资者、政界人士等低估了。
+
+53
+00:04:53,940 --> 00:05:02,480
+is this problem of building an AI system that can actually control these robots to accomplish these tasks.
+这个问题在于，如何构建一个AI系统，使其真正能够控制这些机器人完成各项任务。
+
+54
+00:05:02,720 --> 00:05:08,260
+We have made an enormous progress over the past years when it comes to building the hardware for this,
+在构建这一硬件方面，我们过去几年取得了巨大进展。
+
+55
+00:05:08,580 --> 00:05:17,090
+also enhance humanoids for me it's has been just crazy but building the AI is still the challenge that we are
+还让我感到惊讶的是，人形机器人也变得非常疯狂，但构建AI仍然是我们面临的挑战。
+
+56
+00:05:17,140 --> 00:05:24,670
+facing right and now ask like robot learning is it right and that's actually what I believe right the only way
+朝右面对着，现在像机器人学习一样问：对吗？这恰恰就是我的信念，唯一的途径
+
+57
+00:05:24,720 --> 00:05:33,510
+for solving this is right robot learning and if you boil this even further down then this is this community over
+解决这个问题的关键在于机器人学习，而进一步简化来看，这正是这个社区的核心所在。
+
+58
+00:05:33,560 --> 00:05:40,610
+here it's basically the core community that is working on this topic and where I believe this is going to take us,
+这里基本上是专注于这一议题的核心社群，我认为它将引领我们走向未来。
+
+59
+00:05:40,660 --> 00:05:43,500
+hopefully, there where we want to go.
+希望我们能到达那个地方。
+
+60
+00:05:46,390 --> 00:05:49,970
+So this is our journey more than 2,000 years back.
+这就是我们追溯两千多年的历史旅程。
+
+61
+00:05:50,370 --> 00:05:55,990
+This is, according to Greek mythology, this is the King Sisyphus.
+根据希腊神话，这就是国王西西弗斯。
+
+62
+00:05:56,410 --> 00:06:07,340
+And he was, because he believed that he was more intelligent than Zeus, the most important god in Greek mythology, and Zeus didn't really like that.
+因为他相信自己比希腊神话中最重要的神宙斯还要聪明，而宙斯并不太喜欢这一点。
+
+63
+00:06:07,390 --> 00:06:13,450
+Turns out that kind of like reflects also sometimes our thinking here, right?
+原来这种想法也反映了我们有时的思维方式，对吧？
+
+64
+00:06:13,500 --> 00:06:17,430
+Everyone of us believes to be the most intelligent person in the world, right?
+我们每个人都觉得自己是世界上最聪明的人，对吧？
+
+65
+00:06:17,480 --> 00:06:19,820
+It's something that researchers mostly need to do.
+这主要是研究人员需要完成的事情。
+
+66
+00:06:20,240 --> 00:06:26,930
+And Zeus got so upset about this that he condemned Sisyphus to actually take a large boulder up a hill.
+宙斯对此极为愤怒，于是下令让西西弗斯将一块巨大的石头推上山顶。
+
+67
+00:06:26,980 --> 00:06:32,240
+So this thing here is the boulder that this poor guy was condemned to transport up the hill.
+所以这个东西就是那个可怜人被判处要推上山的巨石。
+
+68
+00:06:32,400 --> 00:06:35,220
+Not that this was enough of a for this guy,
+但这对这家伙来说还不够。
+
+69
+00:06:35,660 --> 00:06:43,890
+Zeus actually condemned this Boulder so that it always fell down when Sisyphus was close to the summit of this mountain And
+宙斯实际上诅咒了这块石头，使得当西西弗斯快要到达山顶时，石头总是会滚落下去。
+
+70
+00:06:43,940 --> 00:06:50,590
+then the boulder actually rolled down the entire hill and this guy had to start from scratch You might not ask this question.
+然后巨石真的滚下了整座山，这家伙不得不从头开始。你可能不会问这个问题。
+
+71
+00:06:50,640 --> 00:06:52,440
+What does this have to do with our research?
+这跟我们的研究有什么关系？
+
+72
+00:06:52,900 --> 00:07:00,520
+It's basically that like when you look at that what we are doing is we are basically Finding some sort of technology.
+本质上，当我们看那个时，我们所做的就是寻找某种技术。
+
+73
+00:07:00,570 --> 00:07:02,580
+Let it be Probabilistic Robotics.
+就叫它概率机器人学吧。
+
+74
+00:07:02,630 --> 00:07:05,960
+Let it be deep learning Let it be foundation models, right?
+让它成为深度学习，让它成为基础模型，对吧？
+
+75
+00:07:06,010 --> 00:07:10,920
+We are believing that this technology is finally going to help us getting this boulder
+我们相信，这项技术终于能帮我们搬走这块巨石。
+
+76
+00:07:10,970 --> 00:07:16,600
+up the hill and Unfortunately so far right you were not really successful with this,
+uphill, and unfortunately so far, you haven't really succeeded with this.
+
+77
+00:07:16,650 --> 00:07:17,100
+right?
+对吧？
+
+78
+00:07:17,150 --> 00:07:25,260
+So somehow like some God actually through this boulder again down and this road down and yet to start from scratch again This is why what
+所以不知怎的，仿佛有位神明又把这块巨石推了下来，这条路又得从头开始。这正是为何……
+
+79
+00:07:25,310 --> 00:07:33,260
+this has from my perspective to do or this see like kind of the metaphor that is matching that what has actually happened in in our
+从我的角度来看，这似乎正是与我们实际经历的情况相匹配的隐喻。
+
+80
+00:07:33,310 --> 00:07:37,840
+community and when you look at technologies I've been involved in the detail
+社区，当你审视我曾参与过的技术细节时
+
+81
+00:07:37,890 --> 00:07:41,740
+already mentioned I mean there have been three important boulders that I worked
+我之前已经提到过，我参与过的三个重要项目。
+
+82
+00:07:41,790 --> 00:07:47,280
+on and it started in 1995 who actually was born at that time
+而且它始于1995年，当时实际上有人出生了
+
+83
+00:07:47,330 --> 00:07:55,710
+already 1995 five percent or so of this audience here right which is which
+早在1995年，这里在座的观众中就有大约5%的人了。
+
+84
+00:07:55,760 --> 00:08:00,070
+is pretty cool this when we actually started working on this with the
+这真的很酷，当我们真正开始着手这项工作时
+
+85
+00:08:00,120 --> 00:08:06,150
+belief that we could actually solve everything by probabilistic reasoning right and like
+相信我们实际上可以通过概率推理解决所有问题，就是这样
+
+86
+00:08:06,200 --> 00:08:17,430
+this was basically the time when we created this book, Probabilistic Robotics; there is Sebastian, Dieter and me right in
+这基本上是我们创作《概率机器人学》这本书的时期，旁边是塞巴斯蒂安、迪特尔和我。
+
+87
+00:08:17,480 --> 00:08:28,070
+car at that point in time which basically came out of this of the success of the Probabilistic Robotics theory or like concept in the context
+那个时刻的汽车，基本上源于概率机器人学理论或概念的成功。
+
+88
+00:08:28,120 --> 00:08:34,490
+of Autonomous driving right and to here in the bottom you even see the three of us on the summit of the mount of a mountain Unfortunately,
+自动驾驶的右边，下方你甚至能看到我们三个人站在山顶上。可惜的是，
+
+89
+00:08:34,540 --> 00:08:38,690
+it's not the same mountains to the first force condemned to carry the boulder up.
+那不是同一座山，对第一个被迫背负巨石攀登的人来说。
+
+90
+00:08:38,740 --> 00:08:48,190
+It was from Mount Rainier instead so so this is basically the equations that are underlying there and that led to an enormous success in the space
+它来自雷尼尔山，因此这基本上是支撑其背后的方程，也正是这些方程带来了太空领域的巨大成功。
+
+91
+00:08:48,240 --> 00:08:53,010
+of Autonomous driving and it's basically that what you see outside these self
+自动驾驶，基本上就是你看到的这些车外面的自主驾驶
+
+92
+00:08:53,060 --> 00:08:59,190
+-driving cars are basically governed by this equation over here which is state estimation.
+自动驾驶汽车基本上由这处的方程所控制，也就是状态估计。
+
+93
+00:08:59,240 --> 00:09:04,920
+And we are basically trying to figure out where the vehicle is given a map of the environment.
+我们基本上是在尝试根据环境地图确定车辆的位置。
+
+94
+00:09:05,560 --> 00:09:10,730
+And when it comes to building self-driving cars, you need to solve basically three tasks.
+说到打造自动驾驶汽车，你基本上需要解决三个任务。
+
+95
+00:09:10,780 --> 00:09:13,610
+The first one is stay on the road, which is localization.
+第一个是保持在道路上，也就是定位。
+
+96
+00:09:13,660 --> 00:09:15,490
+The second one is don't get hit.
+第二个是别被击中。
+
+97
+00:09:15,540 --> 00:09:17,250
+And the third one is don't hit anything.
+第三，别碰到任何东西。
+
+98
+00:09:17,300 --> 00:09:21,080
+And once you are able to do all this, you're getting really, really far.
+一旦你能够做到这一切，你就真正走得很远了。
+
+99
+00:09:21,900 --> 00:09:29,010
+And here's this entire thing in action in indoors and outdoors and GPS denied environments and then you ask
+而且这是整个系统在室内、室外以及无GPS环境下的实际运行效果，然后你提问
+
+100
+00:09:29,060 --> 00:09:34,230
+the question like how accurate is this actually we also did some experiments a few years ago just to give
+这个问题，比如这个准确度到底有多高，我们几年前也做过一些实验，就是为了给个参考
+
+101
+00:09:34,280 --> 00:09:42,990
+you an intuition how accurately you can actually localize a robot on a factory floor then these black stripes here
+你大概能直观地感受到，你实际上能在工厂地板上多准确地定位一个机器人，然后看这里的黑条纹
+
+102
+00:09:43,040 --> 00:09:48,650
+that are not used for localization they are actually indicating how accurate this platform is when you want to see
+那些未用于定位的，实际上反映了该平台在你想要查看时的准确性。
+
+103
+00:09:48,700 --> 00:09:55,570
+this in more quantities then you can see down here in these statistics that the accuracy in localization in post
+这里的定位准确率，比你在此处统计数据中看到的要高得多。
+
+104
+00:09:55,620 --> 00:10:05,960
+estimation is around a millimeter and who believes that this can be achieved with foundation models as well nobody okay
+估计误差约为一毫米，还有人相信基础模型也能实现这一点，好吧
+
+105
+00:10:06,010 --> 00:10:13,060
+I maybe in a few years from now detail as well which is good so but this is kind of
+也许几年后我也会详细说明，这很好，但情况大致如此。
+
+106
+00:10:13,110 --> 00:10:23,400
+like the the outcome of this endeavor Probabilistic Robotics and that led to these self driving cars and you can
+就像这一努力的成果——概率机器人学，它催生了自动驾驶汽车。
+
+107
+00:10:23,450 --> 00:10:31,220
+see a typical software stack of self-driving cars and those components where I think Probabilistic Robotics is particularly
+看看自动驾驶汽车的典型软件栈，以及我认为概率机器人学特别重要的那些组件
+
+108
+00:10:31,270 --> 00:10:40,020
+strong and it's in fact this mapping and localization task here is an application to to mapping it's basically the
+强大，事实上，这里的地图构建与定位任务正是地图应用的体现，本质上就是地图构建。
+
+109
+00:10:40,070 --> 00:10:47,540
+equations underlying slam and this is a company that I found a ten years ago that is like concerned with
+SLAM 的基本方程，这是一家我十年前创立的公司，专注于相关领域
+
+110
+00:10:47,590 --> 00:10:54,840
+3d mapping of real estate buildings and also historic buildings also several hundred years ago like the Leaning Tower of
+房地产建筑以及历史建筑的三维地图，甚至包括数百年前的建筑，比如比萨斜塔
+
+111
+00:10:54,890 --> 00:11:01,740
+Pisa we created with this technology the most accurate model of this of this tower it's an indoor outdoor model
+我们用这项技术打造了这座塔最精确的模型，它是一个室内外一体化的模型。
+
+112
+00:11:01,790 --> 00:11:10,680
+basically which is super useful for cultural heritage preservation so on top of this we also created the most accurate
+这在文化遗产保护方面非常有用，此外我们还打造了迄今为止最精准的模型。
+
+113
+00:11:10,730 --> 00:11:21,020
+model of the Freiburg Cathedral that was depicted on this page over here why this actually was a major stepping
+弗莱堡大教堂的模型，就在这页上所描绘的那样，这实际上是一个重要的跨越
+
+114
+00:11:21,070 --> 00:11:30,620
+stone towards building self-driving cars and created super useful tools for these vehicles and when it comes to perception,
+致力于打造自动驾驶汽车，并为这些车辆开发了极为实用的工具，而在感知方面，
+
+115
+00:11:30,670 --> 00:11:36,830
+tracking, localization, prediction, planning and control, it also introduced the problem.
+跟踪、定位、预测、规划和控制，同时也提出了这一问题。
+
+116
+00:11:37,210 --> 00:11:48,680
+The fact that we were relying on these high definition maps actually made these vehicles being bound towards, we call this level 4 automation,
+我们依赖高清地图的事实，实际上让这些车辆被限定在所谓的四级自动化范围内。
+
+117
+00:11:48,730 --> 00:11:55,360
+which is basically automation in geofenced areas, which is exactly what you're seeing right now with self-driving cars.
+这本质上就是地理围栏区域内的自动化，正是你现在看到的自动驾驶汽车所实现的。
+
+118
+00:11:55,410 --> 00:12:01,310
+You see them in several cities, but you don't see them overall in the world, which would be level 5.
+你在几个城市能看到它们，但你不会在全球范围内看到它们，那才是第五级。
+
+119
+00:12:02,210 --> 00:12:07,250
+Where do you think are we with robotics right now when it comes to manipulation?
+在操作能力方面，你认为我们目前的机器人技术处于什么水平？
+
+120
+00:12:07,450 --> 00:12:08,950
+This is who's for level 3?
+这是谁要达到三级水平？
+
+121
+00:12:10,920 --> 00:12:12,800
+Maybe a few level 4?
+也许有几个四级？
+
+122
+00:12:14,160 --> 00:12:14,960
+Level 5?
+Level 5？
+
+123
+00:12:16,040 --> 00:12:16,560
+One.
+一。
+
+124
+00:12:17,180 --> 00:12:25,360
+There are in fact a few applications for this, but I think the major problem there is implementing this everywhere in the world.
+事实上，这类应用确实存在一些，但我认为主要问题在于如何在全球范围内实现普及。
+
+125
+00:12:26,350 --> 00:12:35,070
+And this has been the major challenge, it's also like a driving force for me nowadays, this question of can we actually get rid of these maps.
+这一直是我当前面临的主要挑战，同时也是推动我的核心动力——我们是否真的能摆脱这些地图。
+
+126
+00:12:35,590 --> 00:12:45,330
+These maps have been super useful and we roboticists like 3D maps simply because it is geometry and we know very well how to deal with geometry.
+这些地图非常有用，我们机器人工程师特别喜欢3D地图，因为它们是几何结构，而我们非常熟悉如何处理几何问题。
+
+127
+00:12:45,910 --> 00:12:52,820
+roboticists love geometry and by building these maps we turn navigation problems in geometry problems
+机器人学家热爱几何学，通过构建这些地图，我们将导航问题转化为几何问题。
+
+128
+00:12:52,870 --> 00:12:59,570
+and there we go there we are with all the constraints regarding the complexity of environments.
+好了，我们完成了，所有关于环境复杂性的约束都已考虑在内。
+
+129
+00:13:00,340 --> 00:13:05,610
+The next step in that direction then was like here again is Probabilistic Robotics was
+那么朝着这个方向的下一步就是，再次出现概率机器人学
+
+130
+00:13:05,660 --> 00:13:09,970
+the deep network hype right so when you look back at at the give me
+深度网络的炒作热潮，所以当你回过头来看
+
+131
+00:13:10,020 --> 00:13:15,070
+a second Probabilistic Robotics then you basically see that we are particularly bad at this
+第二个概率机器人学，你就会发现我们在这一点上表现特别差
+
+132
+00:13:15,120 --> 00:13:22,860
+first step making semantics out of the sensor data like understanding images and understanding point clouds.
+第一步是从传感器数据中提取语义，例如理解图像和点云。
+
+133
+00:13:23,040 --> 00:13:31,080
+This is something that deep networks actually substantially improved and it was a second revolution in this space.
+这是深度网络真正带来显著提升的领域，也是该领域的第二次革命。
+
+134
+00:13:31,660 --> 00:13:38,530
+And here's one example for this deep learning application which is semantic segmentation and there
+这里有一个深度学习应用的例子，即语义分割。
+
+135
+00:13:38,580 --> 00:13:44,510
+you can basically see that like these systems are substantially better in this interpretation part.
+你可以明显看出，这些系统在理解部分的表现要好得多。
+
+136
+00:13:44,560 --> 00:13:49,180
+And you agreed with me that they are not as good in localization and mapping.
+而且你同意我的看法，它们在定位和地图构建方面并不那么出色。
+
+137
+00:13:50,020 --> 00:13:55,150
+And then obviously that raises a question like is there a way to combine the two, right?
+然后显然会引出一个问题：有没有办法把两者结合起来呢？
+
+138
+00:13:55,200 --> 00:13:56,520
+How can we do this properly?
+我们该如何正确地做到这一点？
+
+139
+00:13:56,720 --> 00:14:06,230
+This is something, a discussion that I also started with colleagues here and we were at a TRI or we worked at TRI building these self-driving cars,
+这是个话题，我也和这里的同事讨论过。当时我们在 TRI，或者我们在 TRI 工作，正在打造这些自动驾驶汽车。
+
+140
+00:14:06,280 --> 00:14:11,510
+namely this question of once we have these super effective segmentation and
+也就是说，一旦我们有了这种极为高效的分割能力，
+
+141
+00:14:11,560 --> 00:14:16,800
+Perception tools like how can we combine them properly with this probabilistic approach?
+感知工具，比如我们该如何将它们与这种概率方法恰当地结合？
+
+142
+00:14:17,160 --> 00:14:23,890
+But you need there in this context is basically that what is called Calibrated uncertainties and otherwise your filters
+但在这个语境下，你真正需要的是所谓的校准不确定性，否则你的滤波器就会失效。
+
+143
+00:14:23,940 --> 00:14:29,690
+or your state estimation processes will basically diverge This problem doesn't go away when you go to foundation models
+否则你的状态估计过程将基本发散。这个问题在转向基础模型后依然存在。
+
+144
+00:14:29,740 --> 00:14:37,890
+It becomes even harder because these models are even more complex and like estimating or proper Uncertainties based on
+这变得更加困难，因为这些模型更加复杂，且基于不确定性进行准确估计也更加困难。
+
+145
+00:14:37,940 --> 00:14:43,910
+these foundation models is a severe change And here's one example of that what we did in this context,
+这些基座模型带来了重大变革，以下是在这一背景下我们所做的一项示例。
+
+146
+00:14:43,960 --> 00:14:50,980
+this uncertainty where panoptic segmentation where you basically not only provide
+这种不确定性体现在全景分割中，你不仅需要提供分割结果
+
+147
+00:14:51,030 --> 00:14:56,660
+the segmentation masks but you also get these semantic uncertainties for segmentation.
+分割掩码的同时，你还能获得分割的语义不确定性。
+
+148
+00:14:56,710 --> 00:15:00,280
+You can also do this for instant segmentation which then turns out to be
+你也可以对实时分割执行此操作，结果发现
+
+149
+00:15:00,330 --> 00:15:05,190
+if you combine the two to be just panoptic segmentation or some panoptic uncertainties.
+如果你将两者结合，就变成了全景分割或某种全景不确定性。
+
+150
+00:15:05,610 --> 00:15:12,460
+And here you see this in action for like famous data set you can actually see that these
+在这里，你可以看到它在著名数据集上的实际应用，你甚至能清楚地看到这些
+
+151
+00:15:12,510 --> 00:15:21,570
+uncertainties arise at places where they actually make sense that's namely at the borders of classes or also objects
+不确定性出现在它们实际上有意义的地方，也就是类别或物体的边界处。
+
+152
+00:15:22,040 --> 00:15:31,290
+right the and the next step was basically the integration of that with one of these state estimation processes
+然后下一步基本上就是将其与其中一种状态估计算法进行集成。
+
+153
+00:15:31,340 --> 00:15:37,030
+you see in this context a particle filter in which case you would actually you actually need to estimate
+在这种情况下，你看到的是一个粒子滤波器，这时你实际上需要进行估计
+
+154
+00:15:37,080 --> 00:15:44,650
+a regularizer that takes the uncertainties that are generated by the networks in order to convert them into
+一种正则化方法，利用网络生成的不确定性将其转化为
+
+155
+00:15:44,700 --> 00:15:49,390
+calibrated uncertainties which is something that you actually need to learn and when you do this in a proper
+校准后的不确定性，这是你需要真正去学习的东西，当你以正确的方式进行时
+
+156
+00:15:49,440 --> 00:15:59,110
+fashion then you can actually have probabilistic localization at a higher accuracy based on these deep network outputs or
+时尚领域，你实际上可以根据这些深度网络的输出，实现更高精度的概率定位。
+
+157
+00:15:59,160 --> 00:16:08,360
+learned outputs from directly from the data into segmentation mask and other features that you are actually interested in.
+直接从数据中学习输出，生成你真正感兴趣的分割掩码及其他特征。
+
+158
+00:16:10,720 --> 00:16:20,240
+Which brings me to this this other problem in this context right so what we did in this deep learning phase was basically we were in the
+这让我想到在这种背景下另一个问题。在深度学习阶段，我们实际上处于
+
+159
+00:16:20,290 --> 00:16:26,070
+belief that we can actually solve all these problems using deep learning with
+相信我们实际上可以通过深度学习解决所有这些问题
+
+160
+00:16:26,120 --> 00:16:33,030
+the complicating factor that we actually had to collect a ton of data like
+我们实际上不得不收集大量数据，这是其中的一个复杂因素。
+
+161
+00:16:33,080 --> 00:16:40,310
+in a supervised fashion maybe We also believe that we can do this in a semi-supervised way on the fly while the vehicle is actually operating
+以监督方式或许可行，我们还相信，可以在车辆实际运行时，实时地以半监督的方式实现这一点。
+
+162
+00:16:40,360 --> 00:16:43,910
+But what we mostly needed to specify is that what is called an
+但我们需要明确的是，所谓的
+
+163
+00:16:43,960 --> 00:16:50,060
+ontology we needed to provide the vehicle with background information What are the right?
+我们需要为车辆提供背景信息，即什么是正确的？
+
+164
+00:16:50,600 --> 00:16:57,820
+classes that are of interest in this particular task for The vehicle namely self-driving
+在此特定任务中，车辆自动驾驶所关注的类别
+
+165
+00:16:58,390 --> 00:17:04,660
+but now assume you do have like a robot that is supposed to Like tidy up
+但现在假设你确实有一个机器人，它应该负责整理收拾
+
+166
+00:17:04,710 --> 00:17:10,840
+a kitchen right this problem of like here There's a kitchen and the robot should clean
+一个厨房，这里的问题是，有一个厨房，机器人应该去清理。
+
+167
+00:17:10,890 --> 00:17:17,430
+it up And this question of like do we need maps in which classes are relevant?
+这问题在于，我们是否需要地图来确定哪些类别是相关的？
+
+168
+00:17:18,150 --> 00:17:22,700
+Depends highly on the question of what actually does this kitchen look like and
+这很大程度上取决于这个厨房实际上长什么样。
+
+169
+00:17:22,750 --> 00:17:27,800
+now imagine This is a kitchen like that the robot encounters after a student party,
+现在想象一下，这是一间学生派对过后，机器人遇到的厨房。
+
+170
+00:17:27,850 --> 00:17:30,450
+right which might look like this over here, right?
+对，可能看起来就像这里这样，对吧？
+
+171
+00:17:30,500 --> 00:17:32,270
+And obviously like I mean,
+显然，我的意思是，
+
+172
+00:17:32,320 --> 00:17:37,710
+I can zoom in here to actually make this a little bit more visible Like creating a three
+我可以在这里放大，让这个看起来更清晰一点，比如创建一个三维效果。
+
+173
+00:17:37,760 --> 00:17:46,570
+-dimensional model of this environment with is extremely hard Potentially also not super useful and also defining all the
+对这个环境的三维模型进行构建极其困难，可能也并非特别有用，而且定义所有细节也十分繁琐。
+
+174
+00:17:46,620 --> 00:17:53,810
+classes that you need in order to solve this Clean up the kitchen tasks are extremely hard to
+你需要的课程才能解决这个清理厨房的任务非常难以掌握。
+
+175
+00:17:53,860 --> 00:18:01,930
+define a priori And this is where from my perspective this limit of this deep learning phase has been.
+预先定义。从我的角度来看，这就是深度学习阶段的局限所在。
+
+176
+00:18:01,980 --> 00:18:08,440
+It was super useful in the context of self-driving because self-driving is a much more controlled environment.
+在自动驾驶的背景下非常有用，因为自动驾驶是一个更加受控的环境。
+
+177
+00:18:08,940 --> 00:18:15,620
+It's kind of, from my perspective, this very same as having robots on factory floors versus having robots at home.
+从我的角度来看，这和工厂里的机器人与家里的机器人没什么区别。
+
+178
+00:18:16,370 --> 00:18:26,800
+This is why I believe that we will much faster be on factory floors with these platforms rather than in real messy homes as we see here.
+这就是为什么我认为，我们将会更快地在工厂车间部署这些平台，而不是像这里看到的那样在真实杂乱的家中应用。
+
+179
+00:18:26,850 --> 00:18:31,090
+And unfortunately, the real world is typically very messy.
+遗憾的是，现实世界通常非常混乱。
+
+180
+00:18:31,680 --> 00:18:35,950
+Which brings us to the last point, which is foundation models, which really,
+这就引出了最后一个观点，即基础模型，这实际上
+
+181
+00:18:36,000 --> 00:18:40,970
+when I interacted with them for the very first time, they really blew my mind.
+第一次和他们互动时，他们真的让我大开眼界。
+
+182
+00:18:41,020 --> 00:18:45,350
+I thought, oh my goodness, this is the next stepping stone in robotics.
+我想，天哪，这将是机器人技术的下一个飞跃。
+
+183
+00:18:45,400 --> 00:18:47,730
+And I truly believe that is the case.
+我真心相信情况确实如此。
+
+184
+00:18:47,780 --> 00:18:51,020
+So that's the third time we are carrying up the boulder of the hill.
+所以我们第三次把石头推上山了。
+
+185
+00:18:51,720 --> 00:18:56,130
+So this is basically what I believe is happening right now.
+所以这基本上就是我认为现在正在发生的事情。
+
+186
+00:18:56,180 --> 00:19:04,070
+And here's a few examples of a few works that we worked on in the past This is the so-called vision language maps.
+这里有几个我们过去完成的作品示例，这是所谓的视觉语言地图。
+
+187
+00:19:04,120 --> 00:19:10,550
+We have you basically at the very beginning of this hype Used like the embeddings that we
+我们基本上正处于这场热潮的起点，就像我们使用的嵌入向量一样
+
+188
+00:19:10,600 --> 00:19:17,710
+at that time Still mapped to a 3d voxel grid in order to actually perform semantic navigation tasks
+当时仍映射到三维体素网格，以执行语义导航任务
+
+189
+00:19:17,760 --> 00:19:23,930
+and perform Language guided navigation with these platforms and for every of these tasks when I see this
+并利用这些平台执行语言引导的导航，对于每一项任务，当我看到这个时
+
+190
+00:19:23,980 --> 00:19:29,150
+I think oh my goodness In former days in the deep learning phase that might have been like
+我觉得天哪，以前在深度学习阶段，这可能就像是
+
+191
+00:19:29,200 --> 00:19:35,250
+an enter I call this PhD life where you basically have a student To implement a classifier for
+我管这叫博士生活，基本上就是有个学生要实现一个分类器。
+
+192
+00:19:35,300 --> 00:19:42,230
+plants or you all know how many papers there are of about identifying chairs And classifying chairs in
+你们都知道，关于识别椅子和分类椅子的论文有多少篇了
+
+193
+00:19:42,280 --> 00:19:47,530
+images and here and can do this basically in a zero shot fashion You can basically tell the
+图像和这里，基本上可以零样本方式完成。你基本上可以说出来就能做到。
+
+194
+00:19:47,580 --> 00:19:57,080
+vehicle without any additional training to perform navigation tasks we have also extended this to to hierarchical representations,
+无需任何额外训练即可完成导航任务，我们还将其扩展到了分层表示。
+
+195
+00:19:57,320 --> 00:20:03,650
+basically get a kind of like a tree for the building and then you can give more complex instructions like,
+基本上就是为建筑生成一棵类似树的结构，然后你可以给出更复杂的指令，比如，
+
+196
+00:20:03,700 --> 00:20:09,470
+for example, find the toilet in the bathroom on floor two, which is then using the LLM,
+例如，找到二楼浴室里的厕所，这之后会使用大语言模型，
+
+197
+00:20:09,520 --> 00:20:14,660
+convert it into a specific action sequence that the robot is supposed to execute,
+将其转换为机器人应执行的特定动作序列。
+
+198
+00:20:14,860 --> 00:20:21,770
+and you couldn't do this in a wide variety of language instructions that the robot then can actually execute.
+而且你无法用多种语言指令来实现这一点，让机器人真正执行。
+
+199
+00:20:21,820 --> 00:20:27,470
+And here is that the experiments that Chang Wang actually executed with with this
+这就是张旺实际执行的那些实验
+
+200
+00:20:27,520 --> 00:20:32,750
+robot in the former building 80 and Freiburg where he was like until the
+位于前80号建筑和弗莱堡的机器人，他一直待在那里
+
+201
+00:20:32,800 --> 00:20:37,710
+very end of his PhD and the amazing aspect of this is that you
+他博士生涯的最后阶段，而最令人惊叹的是这一点
+
+202
+00:20:37,760 --> 00:20:45,870
+can now have this open vocabulary navigation instructions that allow robots to Robustly navigate.
+现在可以实现开放词汇导航指令，使机器人能够稳健地导航。
+
+203
+00:20:45,920 --> 00:20:48,200
+Is it sufficient for self-driving cars?
+自动驾驶汽车足够吗？
+
+204
+00:20:48,660 --> 00:20:59,870
+probably not but for environments maybe in settings like this one yes it might well be okay and the other question is is this optimal that
+可能不行，但在某些环境，像这种场景下，或许可以接受。另一个问题是，这是否最优？
+
+205
+00:20:59,920 --> 00:21:09,490
+is also not the case right the this is also a challenge that we had simply still facing like how to optimize these behaviors of these platforms
+这同样不是事实，这也是我们至今仍在面临的挑战，即如何优化这些平台的行为。
+
+206
+00:21:09,540 --> 00:21:17,770
+in order to finally achieve the optimal action sequence which is basically that what we want to have from the robots name we learn from everyday
+为了最终获得最优的动作序列，这基本上正是我们希望机器人实现的目标，我们每天都在从中学习。
+
+207
+00:21:17,820 --> 00:21:28,150
+operation in such a building and optimizing their their behavior there And here's a few more examples that we did at the very beginning of this phase.
+在这样的建筑中开展运营并优化其内部行为。这里还有我们在这一阶段初期完成的几个示例。
+
+208
+00:21:28,200 --> 00:21:37,130
+This is like vacuum cleaning You probably many of you have a automated vacuum cleaner at home There's only like I think as far as I
+这就像用吸尘器打扫，你们很多人家里可能都有自动吸尘器，但我觉得，就目前而言
+
+209
+00:21:37,180 --> 00:21:41,850
+know one class of vacuum cleaners that does some sort of object classification
+知道有一类吸尘器能进行某种物体分类
+
+210
+00:21:41,900 --> 00:21:47,110
+Because they figured out if you're that if your robot runs over dog poop,
+因为他们发现，如果你的机器人踩到狗屎，
+
+211
+00:21:47,160 --> 00:21:47,430
+right?
+对吧？
+
+212
+00:21:47,460 --> 00:21:52,250
+It's going to be have a catastrophic effect on your apartment because usually after that
+这将对你的公寓造成灾难性的影响，因为通常在那之后
+
+213
+00:21:52,300 --> 00:21:57,630
+you need to actually clean your entire apartment and So the idea that was hey,
+你得真正把整个公寓都打扫干净，所以这个想法是，嘿，
+
+214
+00:21:57,680 --> 00:21:58,770
+can we do this?
+我们能做到吗？
+
+215
+00:21:58,820 --> 00:22:06,790
+Maybe all this company did this by training like The robot or in a deep network on basically plastic dog poop
+也许这家公司只是通过像机器人一样在深度网络上训练，处理基本的塑料狗粪而已
+
+216
+00:22:06,840 --> 00:22:15,450
+that you can get from a famous distributor and then Chief to like the pretty robust classification result in this context so
+你可以从一家知名经销商那里获得，然后由首席专家在这一背景下得出相当可靠的分类结果。
+
+217
+00:22:15,500 --> 00:22:23,010
+in term what we did in this context was basically asking the foundation model directly for the policy which we then
+在这个情境下，我们所做的基本上是直接向基座模型询问策略，然后
+
+218
+00:22:23,060 --> 00:22:31,150
+distilled onto a small networks it was a yolo v8 classifier that we then used to actually run locally on on the
+蒸馏到小型网络后，它是一个 YOLO v8 分类器，我们随后在本地实际运行了它。
+
+219
+00:22:31,200 --> 00:22:37,550
+robot on an edge device on on the robot and the idea there is that you basically over time doing like
+机器人部署在边缘设备上，而其核心理念是，随着时间推移，你将逐步实现类似的功能。
+
+220
+00:22:37,600 --> 00:22:46,150
+this incremental learning basically adapt to the specific environment and get a super compact network running on the platform tailored to your
+这种增量学习能够适应特定环境，从而在平台上运行一个高度紧凑、专为您的需求定制的网络。
+
+221
+00:22:46,200 --> 00:22:55,830
+specific environment and executing the actions on that on that machine without plenty of requests to the foundation model and with
+在特定环境中执行操作，无需频繁调用基础模型
+
+222
+00:22:55,880 --> 00:23:03,170
+also saving with spending too much of an energy for all the millions of vacuum cleaners that you have in your home.
+而且还能省电，不用为家里成千上万的吸尘器消耗过多能源。
+
+223
+00:23:03,220 --> 00:23:10,270
+And here's a few examples of this zero shock behavior or after some training but even with thus far
+这里有几个零冲击行为的例子，即使经过训练后依然如此。
+
+224
+00:23:10,320 --> 00:23:17,990
+unknown objects so the the YOLO classifier basically says when I'm it's too uncertain about this object it asks the
+未知物体，所以 YOLO 分类器基本上会说，当我对这个物体不确定时，它会询问
+
+225
+00:23:18,040 --> 00:23:23,590
+foundation model about what to do and then there's actually added to the training set we use a special specific
+基础模型关于该做什么，然后我们还会将特定内容加入训练集
+
+226
+00:23:23,640 --> 00:23:32,770
+language based clustering this context in order to have the important examples in the training set so that we actually
+基于语言的聚类，将此上下文中的重要样本保留在训练集中，以便我们真正实现
+
+227
+00:23:32,820 --> 00:23:41,850
+don't have this catastrophic forgetting and so this is like this which I really found interesting and in this
+不会出现这种灾难性遗忘，这一点让我觉得非常有趣
+
+228
+00:23:41,900 --> 00:23:47,510
+context I want mentioned I was super surprised this morning that there are so few people working on navigation in
+上下文，我想提一下，我今天早上非常惊讶，竟然这么少人从事导航相关的工作
+
+229
+00:23:47,560 --> 00:23:56,130
+in this conference so I still find navigation pretty interesting and there's really complex problems in in the navigation part
+在这次会议上，我仍然觉得导航非常有趣，导航部分确实存在很多复杂问题。
+
+230
+00:23:56,180 --> 00:24:04,890
+but stay tuned there will also be some manipulation in a few seconds and so the second half of this
+但请继续关注，几秒钟后还会有操作，所以这是下半部分
+
+231
+00:24:04,940 --> 00:24:12,530
+navigation part is this question which I mentioned it before right and in these self-driving car space probabilistic
+导航部分就是我之前提到的这个问题，也就是在自动驾驶汽车领域中的概率性问题。
+
+232
+00:24:12,580 --> 00:24:20,830
+robotics was like what we mostly did is we created geometric representations of our environment in order to actually navigate
+机器人技术方面，我们主要做的就是创建环境的几何表示，以便真正实现导航。
+
+233
+00:24:20,880 --> 00:24:29,490
+around but like at least I don't believe that I do this type of optimization and I don't invert a
+但至少我相信自己不会做这种优化，也不会反过来做
+
+234
+00:24:29,540 --> 00:24:35,990
+big matrix in my brain in order to understand what the environment or the world looks like and I also
+我大脑里有一个巨大的矩阵，用来理解环境或世界的样子，同时我也
+
+235
+00:24:36,040 --> 00:24:42,590
+don't have a super accurate like estimate of this this hall over here I have no clue how white
+我对这边这个厅的精确面积没有一个准确的估计，我完全不知道有多宽。
+
+236
+00:24:42,640 --> 00:24:50,680
+this hall exactly is still I can navigate around pretty robustly so that's what I would like that what I
+这个大厅我还能相当稳健地导航，这正是我想要的。
+
+237
+00:24:50,730 --> 00:24:55,460
+would like to see and hope to see at least in in the future is this question of like can
+我希望看到，也希望未来能看到这样一个问题：比如，能否
+
+238
+00:24:55,510 --> 00:25:02,190
+we get rid of these geometric representations I think And while this has been an enabler at the same time,
+我们摒弃了这些几何表示，我认为这虽然同时起到了推动作用，
+
+239
+00:25:02,370 --> 00:25:10,870
+it also hinders us from going really wild and going to the level five of navigation and the level five of manipulation as well.
+这也阻碍了我们真正大胆地探索，无法实现导航和操作的第五级水平。
+
+240
+00:25:11,330 --> 00:25:16,610
+So here's like one approach with this flow now where we're basically trying to do this,
+所以现在有一种方法，我们基本上是在尝试这样做。
+
+241
+00:25:17,490 --> 00:25:22,910
+to navigate around without maps, without explicit representations of the environment.
+无需地图，也无需对环境进行显式表征来导航。
+
+242
+00:25:23,130 --> 00:25:26,320
+Turns out that you still need some geometry, right?
+原来你还是需要一些几何知识，对吧？
+
+243
+00:25:26,370 --> 00:25:34,860
+So but the general idea behind this is like we want to actually generalize to new Environments new embodiments different cameras.
+但其核心思想是，我们希望真正实现对新环境、新具身形态以及不同摄像头的泛化。
+
+244
+00:25:34,910 --> 00:25:41,560
+The robot has never seen and even with multimodal goals And this is the architecture of flown off which
+机器人从未见过，即使面对多模态目标，这也是飞控架构的实现方式
+
+245
+00:25:41,610 --> 00:25:49,060
+is basically a combination of conditional flow matching with depth priors We can now actually navigate in an environment.
+本质上是将条件流匹配与深度先验相结合，我们现在实际上可以在环境中进行导航。
+
+246
+00:25:49,110 --> 00:25:56,580
+The robot hasn't seen before and still trying to avoid for computer vision relatively complex obstacles like for example
+机器人之前没见过，仍在尝试避开计算机视觉中相对复杂的障碍物，比如例如
+
+247
+00:25:56,630 --> 00:26:03,450
+glass panes or glass doors you can also deal with dynamic object obstacles and so on and so forth.
+玻璃窗或玻璃门，你还能应对动态障碍物等各类情况。
+
+248
+00:26:03,710 --> 00:26:08,180
+Still despite of the fact that we were using depth priors here the robot sometimes
+尽管我们在这里使用了深度先验，机器人有时还是会
+
+249
+00:26:08,230 --> 00:26:14,200
+collided with objects simply because these diffusion policies don't come with a proper scale and usually
+仅仅因为这些扩散策略缺乏合适的尺度，通常会导致与物体发生碰撞
+
+250
+00:26:14,250 --> 00:26:20,120
+in many papers the the projection of the trajectory into the real world was basically done
+在许多论文中，将轨迹投影到现实世界中的方法基本上是这样做的
+
+251
+00:26:20,170 --> 00:26:26,600
+Manually and people like thought about a good like scaling factor for these trajectories Which then
+人工地，人们曾思考过这些轨迹的合适缩放因子
+
+252
+00:26:26,650 --> 00:26:30,480
+actually lead to the fact leads to the fact that in some cases where the
+实际上导致了这样一个事实，即在某些情况下，这会导致
+
+253
+00:26:30,530 --> 00:26:37,320
+scale factor is inappropriate That actually leads to navigation problems Which then led us to the
+比例因子不合适，这实际上会导致导航问题，进而促使我们找到了解决方案。
+
+254
+00:26:37,370 --> 00:26:44,740
+development of metric net which is basically an extension of this That also additionally or additionally
+度量网络的开发，基本上是对此的扩展，此外或另外
+
+255
+00:26:44,790 --> 00:26:50,900
+incorporates scale to this So it turns out that we cannot completely get rid of geometry,
+将规模融入其中，因此我们发现，完全摆脱几何学是不可能的。
+
+256
+00:26:50,950 --> 00:27:02,480
+which is probably also reasonable simply because vision is not sufficient for reasoning about distances and avoiding collisions.
+这可能也是合理的，因为仅靠视觉不足以进行距离判断和避障推理。
+
+257
+00:27:02,530 --> 00:27:05,860
+And this is probably also the reason why we do have two eyes, right,
+这可能也是我们有两只眼睛的原因，对吧？
+
+258
+00:27:05,910 --> 00:27:11,440
+to basically get some idea about the depth in our, at least in the range in which we manipulate.
+大致了解我们在操作范围内，至少在该范围内的深度情况。
+
+259
+00:27:11,490 --> 00:27:19,280
+And this is the the architecture of metric net so this navigation policy pie is that what you formerly saw
+这就是 Metric Net 的架构，这个导航策略模块就是你们之前看到的那样。
+
+260
+00:27:19,330 --> 00:27:27,060
+is flown off and then metric net basically adds real-world scale to waypoints to that that are then in a
+被释放后，度量网络会为航点添加真实世界尺度，使其处于实际空间中
+
+261
+00:27:27,110 --> 00:27:35,760
+further step slightly adjusted in order to stay away further from obstacles which then substantially improve the navigation robustness here without
+进一步调整步伐，以更远离障碍物，从而显著提升此处的导航鲁棒性。
+
+262
+00:27:35,810 --> 00:27:41,430
+giving you all the numerical details here but this is something that you can also look up in in the papers.
+这里给出了所有的数值细节，但你也可以在论文中查到这些信息。
+
+263
+00:27:42,110 --> 00:27:50,580
+So this is at least like one step towards this idea of like navigating without explicit representations, right?
+所以这至少是朝着无需显式表示就能导航这一理念迈出的一步，对吧？
+
+264
+00:27:50,630 --> 00:27:53,420
+Not needing SLAM anymore, right?
+不再需要 SLAM 了，对吧？
+
+265
+00:27:53,470 --> 00:28:01,090
+And I think this is a super important problem and I would actually like to see this happening
+我认为这是一个非常重要的问题，我真心希望看到这种情况发生。
+
+266
+00:28:01,140 --> 00:28:08,330
+in the future that we can actually get rid of this super rigid representations that are helpful but
+在未来，我们实际上可以摆脱这些虽有帮助却过于僵化的表述方式。
+
+267
+00:28:08,380 --> 00:28:13,870
+on the other hand of the prevent us from going really wild to Environments the robot has never
+另一方面，阻止我们让机器人真正放飞自我的，是它从未经历过的环境。
+
+268
+00:28:13,920 --> 00:28:22,930
+seen and still operating robustly and here's that some other work that I really like Found very very interesting.
+已看到，仍在稳健运行，还有些我非常喜欢的其他工作，非常有趣。
+
+269
+00:28:22,980 --> 00:28:24,830
+It's been done by a year and colleagues.
+这是一年多来同事们的共同努力成果。
+
+270
+00:28:24,880 --> 00:28:26,230
+Oh, you're sitting over there.
+哦，你坐在那边。
+
+271
+00:28:26,280 --> 00:28:26,650
+Hi.
+你好。
+
+272
+00:28:26,680 --> 00:28:26,880
+Oh,
+哦，
+
+273
+00:28:26,760 --> 00:28:35,290
+yeah it's basically about using these foundation models for robot programming or executing more
+是的，本质上就是利用这些基础模型来编程或执行机器人任务。
+
+274
+00:28:35,340 --> 00:28:42,050
+complex tasks and just elementary skills and And this is a super important problem because
+复杂任务仅依赖基础技能，而这是一个极其重要的问题，因为
+
+275
+00:28:42,100 --> 00:28:46,230
+I mean when you look at the the applications of robots that what is
+我的意思是，当你看到机器人的应用时，真正重要的是什么
+
+276
+00:28:46,280 --> 00:28:51,160
+really missing is the applications of these systems in so-called small and medium enterprises.
+真正缺失的是这些系统在所谓中小企业中的应用。
+
+277
+00:28:51,820 --> 00:28:58,110
+The reason for this is that programming a robot is extremely expensive and whenever you want to deploy a robot
+原因是编程机器人非常昂贵，而且每次你想部署机器人时都会面临高昂的成本。
+
+278
+00:28:58,160 --> 00:29:03,890
+you actually need to send an engineer together with the robot that programs the robot to execute this particular task.
+你实际上需要派一名工程师和机器人一同前往，由工程师来编程，让机器人执行这一特定任务。
+
+279
+00:29:03,940 --> 00:29:11,890
+And so and this is where in general this enter robot learning Might in the future contribute to
+因此，一般来说，未来机器人学习可能会在这方面有所贡献
+
+280
+00:29:11,940 --> 00:29:19,810
+basically have a wider roll out of these platforms even in situations where you have like lower Numbers of
+基本上，这些平台的部署范围更广，即使在用户数量较少的情况下也是如此。
+
+281
+00:29:19,860 --> 00:29:26,010
+items to be produced and therefore need a high flexibility of these platforms when it comes to programming
+需要生产的物品，因此在编程方面，这些平台需要具备高度灵活性。
+
+282
+00:29:26,060 --> 00:29:33,890
+them So the idea there basically was like taking elementary skills that are still sufficiently complicated like opening a
+所以那个想法本质上是，选取一些仍然足够复杂的初级技能，比如开门。
+
+283
+00:29:33,940 --> 00:29:41,130
+drawer and Then chaining them using an LLM You saw this earlier today as well using the LLM
+抽屉，然后使用大语言模型将它们串联起来。你今天早些时候也见过这种用法。
+
+284
+00:29:41,180 --> 00:29:47,790
+as a programming assistant that changed these elementary actions based on the input that you get from the images
+作为编程助手，它会根据你从图像中获取的输入，动态调整这些基础操作
+
+285
+00:29:47,840 --> 00:29:55,910
+in order to Get a concrete program for the robot to execute this particular task Right and these elementary
+为了使机器人执行这一特定任务，必须提供一个具体的程序。
+
+286
+00:29:55,960 --> 00:30:04,370
+skills that they were trained using so-called play data with like assigned language labels in the very end
+他们所掌握的技能，是通过所谓的游戏数据训练得来的，最后才被赋予了语言标签。
+
+287
+00:30:04,420 --> 00:30:11,950
+and then based on the context of the scene we could basically have the robot executing this more
+然后根据场景的上下文，我们可以让机器人基本执行这个操作。
+
+288
+00:30:12,000 --> 00:30:19,880
+complex tasks then in the end this can be as abstract as heat please tidy up the workspace and
+复杂任务，最后甚至可以抽象到“请整理工作区”这样的指令。
+
+289
+00:30:19,930 --> 00:30:25,220
+then depending on what is in display in the space in the context and the actions to be generated
+然后根据上下文中的显示内容和需要生成的动作而定
+
+290
+00:30:25,270 --> 00:30:32,260
+like to get a sequence of actions to execute this particular task and then here's this entire system in
+想要获得一连串动作来执行这个特定任务，然后这里就是整个系统
+
+291
+00:30:32,310 --> 00:30:37,140
+action like we basically see the robot like open it inferring that it needs to open the drawer
+动作就像我们看到机器人在推断需要打开抽屉，于是打开了它
+
+292
+00:30:37,190 --> 00:30:43,580
+first then puts the blocks into the drawer closes the drawer and then attempts to actually push the green
+然后把积木放进抽屉，关上抽屉，再尝试真正推动绿色的物体。
+
+293
+00:30:43,630 --> 00:30:53,770
+button I think things like this are super important I mean there's obviously an important debate about is this
+按钮，我认为这类事情非常重要，毕竟关于这是否重要，显然存在一场重要的讨论。
+
+294
+00:30:53,820 --> 00:31:00,200
+the right way for doing this like turning this into these programs or using these LLMs as programming assistants,
+正确的方法是将这些程序化，或把大型语言模型用作编程助手。
+
+295
+00:31:00,400 --> 00:31:05,870
+or can we do this end-to-end directly using a VLA, right?
+或者我们能否直接使用视觉-语言-动作模型端到端完成，对吧？
+
+296
+00:31:05,920 --> 00:31:11,480
+But this is something that we as a society might hopefully figure out in the near future.
+但这是我们社会有望在不久的将来共同解决的问题。
+
+297
+00:31:13,180 --> 00:31:19,130
+There's other aspects as well that I find super interesting in this context of manipulation.
+在操作这个语境下，还有其他一些方面让我觉得非常有趣。
+
+298
+00:31:19,180 --> 00:31:26,600
+I mean, we see plenty of manipulation papers here, which are absolutely impressive.
+我的意思是，这里有很多操纵相关的论文，都非常令人印象深刻。
+
+299
+00:31:26,650 --> 00:31:34,760
+that the question that I wondered about when I thought about this was this question of how do we actually interact with objects
+当我思考这个问题时，我一直在想，我们究竟该如何与物体进行交互。
+
+300
+00:31:34,810 --> 00:31:42,620
+in the real world in a proper fashion and when I say in a proper fashion I mean like human-like grasping of
+在现实世界中以恰当的方式，所谓恰当的方式，指的是类似人类般的抓取方式
+
+301
+00:31:42,670 --> 00:31:49,920
+objects like how can we do this and this all started with me like playing around with Chet GPT and asking it hey
+像这样我们该怎么实现呢？这一切都始于我玩弄着Chet GPT，然后问它：嘿
+
+302
+00:31:49,970 --> 00:31:56,620
+I'm a robot my owner told me to pick up a doll that lies in front of me where should I grasp it?
+我是个机器人，主人让我捡起面前的一个洋娃娃，我该从哪里抓它？
+
+303
+00:31:56,670 --> 00:32:04,180
+And then Chachupati in his usual way came back with, yes, like either use the arms, the bellacks, or the torso.
+然后查丘帕蒂一如既往地回来，说：“是的，要么用胳膊，要么用腰，要么用躯干。”
+
+304
+00:32:04,230 --> 00:32:06,150
+Basically don't grasp it at the head.
+基本上别从头上抓。
+
+305
+00:32:06,310 --> 00:32:10,620
+And then we started to think about this a little bit more and like built the system
+然后我们开始更深入地思考这个问题，并着手构建了这个系统。
+
+306
+00:32:10,670 --> 00:32:17,620
+that you basically like provided with a prompt about the object to be grasped and then it came
+基本上你只需提供一个关于要抓取物体的提示，然后它就会执行
+
+307
+00:32:17,670 --> 00:32:23,850
+back to us with like parts that we actually should maybe should grasp the object and then
+回到我们这边，拿那些我们实际上应该抓住物体的部件。
+
+308
+00:32:23,900 --> 00:32:30,660
+now at that time we generated this 3D model SLAM by hand nowadays you would use a lot
+那时我们是手动构建这个3D模型的SLAM，如今你会用大量自动化工具。
+
+309
+00:32:30,710 --> 00:32:37,120
+of vision language model for this like Sam 3D or whatsoever in order to generate these 3D
+用于生成这些3D内容的视觉语言模型，比如Sam 3D或其他类似模型
+
+310
+00:32:37,170 --> 00:32:42,420
+point clouds but what is then behind this as well is grasp it which is a tool that
+点云，但其背后更重要的则是抓取，这是一款工具
+
+311
+00:32:42,470 --> 00:32:49,400
+basically samples stable grasp points on 3D surfaces right you basically if you have a two finger
+基本上是在三维表面上采样稳定的抓取点，如果你有两个手指
+
+312
+00:32:49,450 --> 00:32:56,090
+gripper it samples pairs of grasp points which are sufficient to basically keep the object in the hand.
+夹爪会采样一对抓取点，足以基本将物体固定在手中。
+
+313
+00:32:56,490 --> 00:33:02,080
+And once you have this you can just check as to whether these grasp points fall into these green regions provided you by
+一旦你有了这些信息，只需检查这些抓取点是否落在所提供的绿色区域之内即可。
+
+314
+00:33:02,130 --> 00:33:11,430
+the segmentation tool and then you accept only those that lie in green regions and all of a sudden you get semantic grasps.
+然后你只接受位于绿色区域内的分割结果，突然之间，你就得到了语义抓取。
+
+315
+00:33:11,740 --> 00:33:13,730
+And here's the system in action.
+这就是系统运行的实况。
+
+316
+00:33:13,780 --> 00:33:17,550
+So on the left-hand side is the purely geometric part,
+左边是纯粹的几何部分，
+
+317
+00:33:17,600 --> 00:33:23,090
+on the right-hand side is line grasp and You can see is that all of this in a zero-shot fashion, right?
+右侧是零样本抓取，可以看到所有操作都是以零样本方式完成的，对吧？
+
+318
+00:33:23,140 --> 00:33:29,810
+so there's no training involved as directly operates on these on these objects and Yeah,
+因此，它无需训练，可直接作用于这些对象，是的。
+
+319
+00:33:29,860 --> 00:33:35,710
+particularly like the cactus down there or the cake is also pretty impressive And then on
+特别喜欢下面的仙人掌，或者蛋糕也相当令人印象深刻。然后在
+
+320
+00:33:35,760 --> 00:33:42,290
+the next slide you will also see the doll the candle is also like pretty interesting because
+下一页幻灯片中，你们还会看到这个玩偶，蜡烛也很有意思。
+
+321
+00:33:42,340 --> 00:33:47,240
+some of the the system seems to seems to know that like a candle on a
+系统似乎知道，就像蜡烛放在上面一样
+
+322
+00:33:47,290 --> 00:33:52,660
+candlestick is not very stable right so it basically will most likely fall off right so I
+蜡烛台不太稳，所以它很可能会掉下来。
+
+323
+00:33:52,710 --> 00:33:56,880
+think this is where the power of these systems actually is when it comes to like
+这才是这些系统真正强大之处，尤其是在这方面。
+
+324
+00:33:56,930 --> 00:34:05,380
+interacting with the real world this this capability of to actually perform like semantic or infer semantics
+与真实世界互动，这种能够实际执行并推断语义的能力
+
+325
+00:34:05,430 --> 00:34:12,100
+of the individual objects sometimes whenever I see this or whenever I see these videos I start
+有时当我看到这些物体，或者看到这些视频时，我就会开始
+
+326
+00:34:12,150 --> 00:34:18,370
+thinking oh my goodness that's this thing understands the world which is just crazy from my perspective.
+天啊，这东西竟然理解世界，从我的角度看简直太疯狂了。
+
+327
+00:34:19,110 --> 00:34:26,610
+Just a side note here we also did a user study we asked users where to actually grasp individual objects like
+顺便提一下，我们还做了一项用户研究，询问用户实际抓取单个物体时应该从哪里下手。
+
+328
+00:34:26,660 --> 00:34:34,170
+a value closer to one means that we are mostly corresponding with the places where the user would grasp the individual objects.
+越接近1的值意味着我们主要对应的是用户能够抓取单个物体的位置。
+
+329
+00:34:34,220 --> 00:34:41,810
+I want to pay a special attention to the toilet brush over here right and 97.6 %
+我想特别关注一下这里的马桶刷，它的使用率高达97.6%。
+
+330
+00:34:41,860 --> 00:34:48,190
+of the User said they would grasp it at the handle and the other two points for it.
+用户说他们会握住把手，另外两个点用来固定。
+
+331
+00:34:48,240 --> 00:34:53,710
+Basically would also grasp it at the brush The reason for this might be that the picture that
+基本上也会在刷子处抓住它，原因可能是图片
+
+332
+00:34:53,760 --> 00:34:59,130
+we provided in the image showed a new toilet brush So that might be the excuse for this.
+图片中展示了一款新型马桶刷，这或许就是理由。
+
+333
+00:34:59,180 --> 00:35:04,870
+But yes Just a small sight but you can go even more complex, right?
+但没错，虽然只是很小的一步，但你还能走得更复杂，对吧？
+
+334
+00:35:04,920 --> 00:35:10,290
+If you have objects that are like substantially more complex when it comes to the reasoning
+如果你处理的对象在推理方面复杂得多
+
+335
+00:35:10,340 --> 00:35:19,080
+part you get relatively good annotation or answers about where to actually grasp these individual objects.
+你获得相对较好的标注或答案，了解如何实际抓取这些独立物体。
+
+336
+00:35:19,260 --> 00:35:23,050
+This also works for placing like if you want to know how to place an object
+这同样适用于物体摆放，比如你想知道如何放置一个物体
+
+337
+00:35:23,100 --> 00:35:27,590
+onto it onto a table then you can just ask these systems like how should I rotate
+把它放到桌子上，然后你就可以问这些系统：我该怎么旋转？
+
+338
+00:35:27,640 --> 00:35:32,550
+my arm in order to properly place this object onto the table and I think you
+我的手臂，以正确地将这个物体放到桌子上，我觉得你
+
+339
+00:35:32,600 --> 00:35:37,990
+need to click once in order to this happening and so based on this robot can actually
+需要点击一次才能触发，因此机器人可以据此实际执行
+
+340
+00:35:38,040 --> 00:35:45,030
+in a zero shot fashion execute these tasks which is pretty impressive in which I particularly
+以零样本方式执行这些任务，这非常令人印象深刻，尤其是这一点
+
+341
+00:35:45,080 --> 00:35:53,230
+like about these these foundation models right the next step is also something like kind of like
+就像这些基础模型一样，下一步也类似这样
+
+342
+00:35:53,280 --> 00:35:58,670
+a message that I want to deliver so when you think about embodied AI and think about
+我想传达的一条信息是，当你思考具身AI时，请记住
+
+343
+00:35:58,720 --> 00:36:06,970
+that this basically means that we use our body to interact with the real world Then this,
+这意味着我们通过身体与现实世界进行交互。
+
+344
+00:36:07,020 --> 00:36:15,790
+from my perspective, means more than just using positions and video and images.
+从我的角度来看，这远不止是使用位置、视频和图像那么简单。
+
+345
+00:36:16,250 --> 00:36:21,310
+So when you see someone manipulating an object in YouTube,
+所以当你看到有人在 YouTube 上操作某个物体时，
+
+346
+00:36:21,710 --> 00:36:32,250
+you actually do not know how much force this person applies and what it actually feels in order to manipulate this object in this particular form.
+你实际上并不知道这个人施加了多大的力，以及在这种特定形态下操作这个物体时的真实感受。
+
+347
+00:36:32,630 --> 00:36:34,720
+So this is something that is substantially missing.
+所以这正是目前严重缺失的部分。
+
+348
+00:36:34,770 --> 00:36:39,940
+I know that some computer vision people argue that you actually don't need this.
+我知道有些计算机视觉领域的研究者认为，其实你根本不需要这个。
+
+349
+00:36:39,990 --> 00:36:41,690
+You can do everything with vision.
+你可以用视觉完成一切。
+
+350
+00:36:42,230 --> 00:36:50,830
+However, when you look at us, we don't run around all the time looking at our hands about what is going on in our hands.
+然而，当你观察我们时，我们并不会一直低头看手，去关注手上的事情。
+
+351
+00:36:51,010 --> 00:36:53,320
+We simply don't have the time for doing this.
+我们根本没有时间来做这件事。
+
+352
+00:36:53,370 --> 00:36:59,100
+And it would be computationally simply too expensive and we would maybe also run into things and hurt ourselves.
+而且计算上会过于昂贵，我们还可能撞到东西，伤到自己。
+
+353
+00:36:59,150 --> 00:37:10,920
+So on top of this, you could argue, or you can argue, that there are many people in the world who don't have vision and still live a decent life.
+此外，你可以说，世界上有很多人虽然没有视力，却依然能过上体面的生活。
+
+354
+00:37:10,970 --> 00:37:15,570
+But there's very, very few people in the world who don't have tactile information.
+但世界上几乎没有人缺乏触觉信息。
+
+355
+00:37:17,010 --> 00:37:23,780
+So maybe, like, tactile information is more important than actually, like, we currently believe.
+所以，也许触觉信息的重要性，比我们目前认为的还要大。
+
+356
+00:37:23,830 --> 00:37:27,200
+This is why we started this project, Flow Touch,
+这就是我们启动这个项目“流触”的原因。
+
+357
+00:37:27,250 --> 00:37:34,850
+where we are trying to predict what the world will feel like when we touch it with our sensors at a certain place.
+我们正试图预测，当我们在某个位置用传感器触碰世界时，世界会是什么感觉。
+
+358
+00:37:35,310 --> 00:37:39,580
+Alright, so what we want to do is we want to basically predict the sense of touch,
+好吧，我们想做的就是基本预测触觉感知。
+
+359
+00:37:39,630 --> 00:37:45,680
+like when, from an actual perspective, anywhere on the object and even for novel objects.
+比如从物体的实际视角来看，无论是在物体的哪个位置，甚至对于新物体也是如此。
+
+360
+00:37:45,730 --> 00:37:50,130
+And this is something that, from my perspective, is super important.
+从我的角度来看，这一点非常重要。
+
+361
+00:37:50,430 --> 00:37:52,080
+Predictions are always important.
+预测始终非常重要。
+
+362
+00:37:52,130 --> 00:37:55,910
+When you are able to predict something, you have the basis for planning.
+当你能够预测某件事时，你就有了规划的基础。
+
+363
+00:37:56,710 --> 00:38:00,200
+When you know what it's going to feel like and what your tactile perceptions are,
+当你知道它会带来怎样的感受以及你的触觉感知时，
+
+364
+00:38:00,250 --> 00:38:06,630
+when you grasp something, you actually get an idea as to whether this grasp is going to be stable or not.
+当你抓住某物时，实际上就能判断这个抓握是否稳定。
+
+365
+00:38:07,090 --> 00:38:10,620
+So this is the reason why we actually looked into this.
+所以这就是我们实际上研究这个问题的原因。
+
+366
+00:38:10,670 --> 00:38:19,610
+and we started with looking at the so-called vision-based tactile sensors and like all visual tactile sensors that
+我们一开始研究的是所谓的视觉触觉传感器，就像所有视觉触觉传感器一样
+
+367
+00:38:19,660 --> 00:38:25,910
+provide you basically with an image and which is why this is so super hyped right now in the computer
+基本上给你一张图像，这就是为什么现在计算机领域对此如此热捧的原因。
+
+368
+00:38:25,960 --> 00:38:34,470
+vision a community because like that what they are super straight when is basically processing images so this is what
+视觉化一个社区，因为它们本质上就是处理图像的，所以这就是……
+
+369
+00:38:34,520 --> 00:38:42,950
+we are doing in this in this work here tactile sensor prediction we are basically combining not only real world data
+我们在此项工作中，通过触觉传感器预测，基本上结合了真实世界的数据
+
+370
+00:38:43,000 --> 00:38:53,240
+plus the grasping points and the simulation data in order to actually train this this predictor turns out that the
+再加上抓取点和仿真数据，才能真正训练出这个预测模型。
+
+371
+00:38:53,290 --> 00:38:58,420
+results are pretty good there's one thing that we would like to understand a little bit better so we have
+结果相当不错，不过我们还想更深入地理解一件事，那就是我们
+
+372
+00:38:58,470 --> 00:39:09,450
+this technique called domain conditioning which actually provides us with the best vision based metrics on these predictions but it's
+这种技术称为领域调节，实际上为我们提供了这些预测中最优的基于视觉的指标
+
+373
+00:39:09,500 --> 00:39:18,970
+actually not better than that what we call tactile loss that we added in order to further improve the tactile perceptions.
+实际上，这并不比我们为进一步提升触觉感知而引入的触觉损失更好。
+
+374
+00:39:19,370 --> 00:39:23,900
+So there is something that we still need to work on we are not quite there but
+所以我们还有些事情需要继续努力，目前还没到理想状态。
+
+375
+00:39:23,950 --> 00:39:29,590
+this is like even this entire space is relatively at the beginning of what is being done.
+这个领域整体上还处于起步阶段。
+
+376
+00:39:30,840 --> 00:39:38,210
+The next part that I mentioned as well is forces right and I think this Truly believe this is
+我提到的下一部分是力量，我认为这确实至关重要。
+
+377
+00:39:38,260 --> 00:39:43,810
+a limitation of that what we are right doing right now we are mostly or too much focusing on like
+我们目前所做事情的一个局限是，我们大多或过于专注于
+
+378
+00:39:43,860 --> 00:39:53,530
+vision and in positions only and we urgently need to go dive deeper into robotics and look into like
+视觉和位置信息，我们迫切需要深入探索机器人技术，深入研究类似
+
+379
+00:39:53,580 --> 00:40:03,610
+More multimodal or higher multimodality basically incorporating tactile information and forces as well Just to give you one idea about,
+更多模态或更高程度的多模态，基本上还包括触觉信息和受力情况，仅举一个例子供你参考，
+
+380
+00:40:03,660 --> 00:40:08,920
+like, what the effect of this might be, here's this relatively recent work, like RANCH Act,
+比如，这种影响可能是什么样的，这里有一项相对较新的研究，比如RANCH法案，
+
+381
+00:40:09,280 --> 00:40:15,340
+where we enhance robot policies for contact-rich behavior using actually direct RANCH control.
+我们通过实际的直接RANCH控制，增强机器人在高接触场景下的策略。
+
+382
+00:40:15,860 --> 00:40:21,170
+What is nowadays being done mostly is that contact forces are dealt
+如今大多是在处理接触力方面。
+
+383
+00:40:21,220 --> 00:40:26,190
+with implicitly by using position control plus controlling the stiffness of the robot,
+通过使用位置控制并调节机器人的刚度来隐式实现，
+
+384
+00:40:26,240 --> 00:40:26,950
+which, however,
+然而，这
+
+385
+00:40:27,000 --> 00:40:31,830
+can be problematic when it comes to different applications where you actually need different
+在涉及不同应用时可能存在问题，因为实际上你需要不同的解决方案。
+
+386
+00:40:31,880 --> 00:40:41,210
+forces for the manipulation tasks and so long speech short message but what we are
+用于操作任务的力，以及长时间的语音，简短的信息，但我们正在
+
+387
+00:40:41,260 --> 00:40:48,530
+doing replacing here is basically position with only with with with expertise oh yeah adding
+这里替换基本上是仅凭经验来操作，没错，就是加进去。
+
+388
+00:40:48,580 --> 00:40:54,810
+basically forces to that, and we are doing this on top of this policy ACT
+本质上是强制执行这一政策，而我们正在此基础上推进。
+
+389
+00:40:54,860 --> 00:41:01,900
+and basically like going from position to force torque there's this one problem there that
+基本上从位置到力矩的转换存在一个问题
+
+390
+00:41:01,950 --> 00:41:05,500
+we properly need to deal with free space when the robot is not like touching
+当机器人并未接触时，我们必须正确处理自由空间问题。
+
+391
+00:41:05,550 --> 00:41:12,960
+anything or then you basically need to introduce a heuristic and dampening the entire system
+否则你基本上就得引入一个启发式方法，并对整个系统进行阻尼处理
+
+392
+00:41:13,010 --> 00:41:19,210
+and then that allows us then to execute this entire task then in force mode.
+然后我们就能以力控模式执行整个任务。
+
+393
+00:41:19,630 --> 00:41:26,260
+Alright so the we are playing here it's like we're training this with a like leader follower setting and then he has
+好的，我们这里玩的是类似领导-跟随的训练模式，然后他有
+
+394
+00:41:26,310 --> 00:41:36,000
+a few experimental results regarding this basically showing that in most cases we obtain a substantial increase in performance which clearly shows
+一些实验结果基本表明，在大多数情况下，我们都能显著提升性能，这显然得到了证实。
+
+395
+00:41:36,050 --> 00:41:45,080
+that going over to force control is actually like super beneficial and super helpful and this also our chance to set ourselves
+转向力控实际上非常有益，也极为有帮助，这同样也是我们确立自身定位的绝佳机会。
+
+396
+00:41:45,130 --> 00:41:53,330
+apart from that what has gone in the computer vision space where we are mostly about position and and computer vision only.
+除此之外，计算机视觉领域还发生了什么？我们主要关注的是位置和计算机视觉本身。
+
+397
+00:41:55,100 --> 00:42:01,070
+Yeah here's a few tasks that we could do with these with these robots they are like aligned to the Collaboration with
+是的，我们可以让这些机器人完成一些任务，它们与协作非常契合。
+
+398
+00:42:01,120 --> 00:42:12,280
+Siemens and they are pretty much interested in more industrial applications of of this So which brings us also to this form
+西门子也对这类技术在工业领域的更多应用很感兴趣，这也让我们关注到这种形态。
+
+399
+00:42:12,330 --> 00:42:20,280
+of like refining policies and and and then also like Trying
+比如优化策略，还有尝试
+
+400
+00:42:20,330 --> 00:42:25,360
+to adjust robots based on given Vision language action models for
+根据给定的视觉-语言-动作模型调整机器人
+
+401
+00:42:25,410 --> 00:42:33,120
+example in order to perform or get better in their tasks It's something that I would like to not only see in manipulation,
+例如，为了更好地完成或提升任务表现，这正是我希望不仅在操作中看到的。
+
+402
+00:42:33,170 --> 00:42:42,220
+but also in navigation Particularly when there are no maps in the game So this is some work where we basically which is called refined
+而是在导航方面，尤其是在游戏中没有地图的情况下。这是一些我们称之为精细化的工作。
+
+403
+00:42:42,270 --> 00:42:50,010
+policy distillation where we are actually trying to like become faster when it
+策略蒸馏，我们实际上是在尝试变得更快
+
+404
+00:42:50,060 --> 00:42:54,350
+comes to the adjustment or fine-tuning of these models to specific tasks,
+在将这些模型调整或微调以适应特定任务时，
+
+405
+00:42:54,400 --> 00:43:00,310
+right which normally fine-tuning actually takes a lot of data and also
+这通常需要大量数据，而微调恰恰也是如此。
+
+406
+00:43:00,360 --> 00:43:07,060
+doing this from scratch with reinforcement learning typically requires also a lot of exploration.
+通过强化学习从零开始实现，通常还需要大量的探索。
+
+407
+00:43:07,440 --> 00:43:13,800
+And what we're doing here basically is we are combining this on policy reinforcement learning with behavioral cloning,
+我们在这里所做的，本质上是将策略上的强化学习与行为克隆相结合。
+
+408
+00:43:13,980 --> 00:43:21,070
+introducing an additional loss down here and by doing so we are basically getting substantially more
+在这里增加一个额外的损失项，这样我们基本上能获得显著更多的效果
+
+409
+00:43:21,120 --> 00:43:30,590
+effective in certain learning tasks or fine-tuning tasks compared to existing baselines like for example PPO,
+在某些学习任务或微调任务中，相较于现有的基线方法（例如 PPO），表现更有效。
+
+410
+00:43:30,640 --> 00:43:32,980
+which our system is relying upon.
+我们的系统所依赖的。
+
+411
+00:43:34,010 --> 00:43:41,270
+This is an interesting application towards like getting more efficient and this is also something that we actually should do.
+这是一个很有意义的应用，有助于提高效率，同时也确实是我们应该去做的事情。
+
+412
+00:43:41,320 --> 00:43:48,040
+The other question is like, how can we actually do this, what is the best way of doing this,
+另一个问题是，我们到底该如何实现这一点，什么方法才是最佳方案？
+
+413
+00:43:48,090 --> 00:43:54,010
+this reinforcement learning in order to fine-tune, in, for example, existing policies.
+通过强化学习来微调现有策略，例如。
+
+414
+00:43:54,230 --> 00:44:03,560
+And in this context, we would like to mention a relatively recent task, recent work that we are carrying out right now,
+在这种背景下，我想提一下一项相对较新的任务，也就是我们目前正在开展的一项研究工作。
+
+415
+00:44:03,610 --> 00:44:09,080
+like in this question of developing policies that generalize better to environmental
+就像在制定那些能更好地泛化到环境中的政策时一样
+
+416
+00:44:09,130 --> 00:44:14,700
+changes or to tasks that are actually not really seen by the robot.
+或对机器人实际上并未观察到的任务进行更改。
+
+417
+00:44:14,750 --> 00:44:19,420
+And how can we do this more quickly with a few user demonstrations only?
+我们该如何仅通过少量用户演示就更快地实现这一点？
+
+418
+00:44:19,470 --> 00:44:24,540
+And the idea there is that to basically predict the reward signal, right,
+核心思想是，基本上预测奖励信号，对吧，
+
+419
+00:44:24,590 --> 00:44:31,140
+in order to actually better understand what the individual task is with the underline
+为了真正更好地理解每个任务的具体内容，需要弄清楚下划线部分的含义
+
+420
+00:44:31,190 --> 00:44:36,840
+hypothesis there is that learning the reward is simpler than actually learning the entire control.
+有一种假设认为，学习奖励比学习完整的控制要简单。
+
+421
+00:44:36,890 --> 00:44:44,260
+and it's so and what we are using for this purpose is basically human demonstrations and the basic idea
+而且我们为此所使用的方法基本上是人类示范，其基本理念是
+
+422
+00:44:44,310 --> 00:44:52,060
+is as with a longer task demonstrated by a human right the further you go along this this task execution
+就像人类完成一项较长任务时所展示的那样，任务执行得越深入，表现就越明显。
+
+423
+00:44:52,110 --> 00:44:59,140
+the higher the performance of the the agent actually is in the case where this is successful which we
+代理的实际性能越高，这种情况成功时的表现就越出色
+
+424
+00:44:59,190 --> 00:45:04,820
+would assume in most of the demonstrations so it's what this allows you to is basically to get kind of
+在大多数演示中都会默认，这实际上让你基本上能够获得一种类似的效果。
+
+425
+00:45:04,870 --> 00:45:11,680
+like binary values or a pair of values where the later one is typically higher than the former one
+类似于二进制值，或一对数值，其中后者通常高于前者
+
+426
+00:45:11,730 --> 00:45:18,660
+and if you learn a reward function from this you can actually execute a task and at the same time
+如果你从这些数据中学习到一个奖励函数，实际上就可以执行任务，同时
+
+427
+00:45:18,710 --> 00:45:27,000
+estimate the reward signal that the agent would get through this image substantially helps performing reinforcement learning and the
+通过这张图像估算智能体可能获得的奖励信号，能显著提升强化学习的效果。
+
+428
+00:45:27,050 --> 00:45:37,100
+nice aspect of this is that the current S implementation runs super efficiently on actually a low performance laptop computer.
+这一点很出色，当前的 S 实现能在实际的低性能笔记本电脑上运行得非常高效。
+
+429
+00:45:39,540 --> 00:45:46,080
+Let's talk about the recent news and I think this is a super important problem that we are right now facing.
+我们来谈谈最近的新闻，我认为这是我们目前正面临的一个极其重要的问题。
+
+430
+00:45:46,720 --> 00:45:56,210
+So to be honest I was a little bit shocked over the past few weeks and whenever you read the news then I let it get a little bit
+说实话，过去几周我有点震惊，每当看到新闻时，我都会忍不住多想一点。
+
+431
+00:45:56,260 --> 00:46:05,890
+scared about like where this is all going right so we right now see a little bit of a headwind right and that and we are also facing the risk
+担心这一切会走向何方，所以目前我们看到一点逆风，而且我们也面临着风险
+
+432
+00:46:05,940 --> 00:46:16,650
+that maybe our societies will not really be happy with that what is help going on in this space of of AI it's all using a lot of energy
+也许我们的社会并不会真正对这种情况感到满意，因为AI领域正在消耗大量能源。
+
+433
+00:46:16,700 --> 00:46:22,370
+and then there's also some companies who let their interns go wild with their with
+还有些公司会让实习生自由发挥，尽情尝试。
+
+434
+00:46:22,420 --> 00:46:27,420
+their with their agents and producing all kind of things that we don't really like.
+它们通过自己的智能体制造出各种我们并不喜欢的东西。
+
+435
+00:46:28,100 --> 00:46:38,290
+And so this is something that we maybe as like researchers also put should put more attention not only being more reasonable with
+因此，作为研究人员，我们也应该更加关注这一点，而不仅仅是在合理性上有所提升。
+
+436
+00:46:38,340 --> 00:46:45,980
+our tools but also looking into what is actually going on there and how can we understand these agents in a better fashion.
+我们的工具，还深入探究那里实际发生的情况，以及如何更好地理解这些智能体。
+
+437
+00:46:46,420 --> 00:46:50,650
+And this is some work that there's some work that we recently did in this space basically
+这是一些我们最近在这个领域完成的工作，基本上是这样
+
+438
+00:46:50,700 --> 00:46:57,760
+trying to understand what these agents actually learned and what they're actually focusing on in their work.
+试图弄清楚这些智能体究竟学到了什么，以及它们在工作中真正关注的是什么。
+
+439
+00:46:58,160 --> 00:47:08,980
+So this is a work that we're basically trying to, for these vision language navigation models, to figure out what they're actually focusing on.
+所以我们正在做的这项工作，本质上是想弄清楚这些视觉语言导航模型实际关注的是什么。
+
+440
+00:47:09,160 --> 00:47:12,640
+So what are the parameters that are important for these models?
+那么，这些模型中重要的参数有哪些？
+
+441
+00:47:13,160 --> 00:47:19,410
+And so for those who don't know vision language navigation systems, they're basically taking multimodal input,
+因此，对于不了解视觉语言导航系统的人来说，它们本质上是接收多模态输入。
+
+442
+00:47:19,460 --> 00:47:25,230
+in many cases the current observation plus history, and then a language instruction,
+在许多情况下，当前观测值加上历史信息，再结合语言指令，
+
+443
+00:47:25,280 --> 00:47:30,560
+which can be turned right at the door, very simple or go through the corridor,
+可以在门口直接右转，非常简单，或者穿过走廊。
+
+444
+00:47:30,610 --> 00:47:35,590
+enter the kitchen, go past the table in the kitchen and stop in front of the fridge.
+进入厨房，绕过厨房里的桌子，停在冰箱前面。
+
+445
+00:47:35,910 --> 00:47:38,750
+It could be a little bit more complicated actually.
+实际上可能稍微复杂一点。
+
+446
+00:47:39,130 --> 00:47:45,160
+And the question then is, what actually drives these navigation decisions?
+那么问题来了，究竟是什么真正驱动了这些导航决策？
+
+447
+00:47:45,210 --> 00:47:47,000
+What do these systems rely on?
+这些系统依赖于什么？
+
+448
+00:47:47,050 --> 00:47:52,270
+And there we used partially standard techniques to analyze this in our study.
+在我们的研究中，我们采用了部分标准化技术来分析这一点。
+
+449
+00:47:52,590 --> 00:48:00,120
+So we basically looked at, for example, the visual focus and try to understand what do these systems actually look at.
+所以我们基本上分析了视觉焦点，试图弄清楚这些系统实际上在关注什么。
+
+450
+00:48:00,170 --> 00:48:06,380
+So given this observation here what you can basically do is like blur individual areas of these
+基于这一观察，你基本上可以对这些区域进行局部模糊处理
+
+451
+00:48:06,430 --> 00:48:14,550
+images and then try to figure out under which in which cases the agent actually changes its decisions.
+然后尝试弄清楚在哪些情况下，智能体实际上改变了它的决策。
+
+452
+00:48:14,790 --> 00:48:20,330
+Which basically would mean that this corresponding area and the image would be relevant for generating that decision.
+这基本上意味着，该对应区域和图像将与生成该决策相关。
+
+453
+00:48:20,990 --> 00:48:23,460
+That's one thing that you could do.
+这是一件你可以做到的事。
+
+454
+00:48:23,510 --> 00:48:28,920
+You can do this is the same with the textual focus you can just remove individual words from the
+你也可以用同样的方法对文本焦点进行操作，只需删除个别词语即可。
+
+455
+00:48:28,970 --> 00:48:37,250
+text description or tokens and then get an idea about which token slash words are relevant for the navigation task.
+文本描述或词元，然后了解哪些词元或词语与导航任务相关。
+
+456
+00:48:37,850 --> 00:48:45,820
+What we did on top of this is what we added a human mask where we basically like annotated in the image what we think
+我们在此基础上所做的，是添加了一个人脸掩码，基本上就是在图像中标注出我们认为的关键区域。
+
+457
+00:48:45,870 --> 00:48:55,490
+are the areas that are relevant for the navigation task but that we would maybe focus our attention on when we perform this navigation task.
+这些是与导航任务相关，但在执行导航任务时我们可能会集中注意力的区域。
+
+458
+00:48:55,950 --> 00:48:58,650
+And the output of this was pretty interesting.
+而这一结果相当有趣。
+
+459
+00:48:59,110 --> 00:49:08,320
+So turns out that the precision on visual and textual heat maps is less than 70 % on these state-of-the-art models,
+结果发现，这些最前沿模型在视觉和文本热图上的精度低于70%。
+
+460
+00:49:08,370 --> 00:49:13,610
+which basically these models, to a large extent, focus on things that we find irrelevant.
+这些模型在很大程度上关注的，恰恰是我们认为无关紧要的事情。
+
+461
+00:49:15,590 --> 00:49:20,640
+So that's kind of like something that we would actually need to understand a little bit better.
+所以这有点像是我们需要更好地理解的东西。
+
+462
+00:49:20,690 --> 00:49:28,420
+And you can do this for images and text as well And then you can also look at the history and basically ask
+你也可以对图像和文本进行同样的操作，然后查看历史记录，基本上可以提问
+
+463
+00:49:28,470 --> 00:49:36,690
+yourself What which parts of the history or how much does the history actually influence the decisions of these of these agents and?
+你自己，历史的哪些部分，或者历史在多大程度上实际上影响了这些智能体的决策？
+
+464
+00:49:37,330 --> 00:49:44,100
+like it's an increasing amount like blur the all the past images to figure out under which like Like how
+就像逐渐增多一样，模糊所有过去的图像，以弄清楚在什么情况下……
+
+465
+00:49:44,150 --> 00:49:49,320
+many images you need to blur to actually of the history to actually make Confuse the agent and make it take
+你需要模糊大量图像，才能真正混淆智能体，让它出错。
+
+466
+00:49:49,370 --> 00:49:57,760
+false decisions Right and it turns out that all agents are actually sensitive to a visual memory correct corruption Which is
+错误的决策，而且事实证明，所有智能体实际上都对视觉记忆的错误篡改敏感。
+
+467
+00:49:57,810 --> 00:50:07,590
+good because we now see that they actually need history to actually make their decisions Although this is on different scales,
+很好，因为我们现在发现，他们实际上需要历史数据才能做出决策。尽管这涉及不同的尺度。
+
+468
+00:50:07,640 --> 00:50:12,760
+but what we also found is that while they are sensitive to history changes
+但我们还发现，它们对历史变化也十分敏感
+
+469
+00:50:13,320 --> 00:50:19,110
+There are situations in there basically pretty robust to blurring all images so the
+其中有一些情况，基本上对图像模糊具有很强的鲁棒性。
+
+470
+00:50:19,160 --> 00:50:29,130
+decline like it's not very much so I would at least have expected a little bit more which is also kind of like impressive so from my perspective
+下降得并不明显，所以我至少期望能多一些，这其实也挺令人印象深刻的，至少从我的角度来看是这样。
+
+471
+00:50:29,180 --> 00:50:33,310
+that clearly shows that we need to understand more like we need to understand
+这清楚地表明，我们需要更深入地理解，就像我们需要更深入地理解一样
+
+472
+00:50:33,360 --> 00:50:37,750
+better what is actually going on in these models in order to actually also
+更好地理解这些模型内部实际发生的情况，从而真正实现突破
+
+473
+00:50:37,800 --> 00:50:42,230
+better explain them to our society to better explain what is what is actually
+更好地向我们的社会解释它们，以更清楚地说明实际情况是什么。
+
+474
+00:50:42,280 --> 00:50:46,940
+going on there and maybe also to explain what these models are basically doing.
+继续进行，也许还能解释一下这些模型本质上在做什么。
+
+475
+00:50:47,460 --> 00:50:56,140
+There's also another aspect that we looked into this context which is called activation steering where with this specific
+我们还研究了这一情境下的另一个方面，称为激活控制，通过这种特定方法可以实现对模型激活的调节。
+
+476
+00:50:56,600 --> 00:51:04,920
+aware VLN and so the idea there is or some of these models can perform that what is called reasoning.
+意识到视觉语言导航，因此这些模型中的一些能够执行所谓的推理。
+
+477
+00:51:05,140 --> 00:51:13,730
+They basically instead of like generating these navigation actions they then generate a sentence like I'm confused
+他们基本上不是生成这些导航动作，而是生成一句“我有点困惑”的话。
+
+478
+00:51:13,780 --> 00:51:19,830
+which then in a multi-agent setting might lead to actually additional reasoning and like basically going
+在多智能体环境下，这可能会带来额外的推理，本质上相当于进一步深入思考。
+
+479
+00:51:19,880 --> 00:51:25,150
+back to this type of free planning and this question that the problem that we figured out
+回到这种自由规划，以及我们所发现的这个问题
+
+480
+00:51:25,200 --> 00:51:32,010
+is when These training and deployment distributions were too different than the agent actually never generated reasoning,
+当训练和部署的分布差异过大时，智能体实际上从未生成过推理过程。
+
+481
+00:51:32,060 --> 00:51:42,210
+which is kind of like crazy and so the what we experimented with is like can we actually like enforce this
+这听起来有点疯狂，所以我们尝试了一下，看看能不能真的强制执行这一点。
+
+482
+00:51:42,260 --> 00:51:51,150
+type of like reasoning and this actually like that was we found out like with these latent vector steering that we could
+一种类似推理的方式，实际上我们发现，通过这些潜在向量的引导，我们可以做到这一点
+
+483
+00:51:51,200 --> 00:52:00,890
+actually correct this and make this agent generate like reasoning in order to basically replant its actions which is also kind
+实际上，纠正这一点，让这个智能体在生成时进行推理，从而从根本上重新规划其行为。
+
+484
+00:52:00,940 --> 00:52:11,020
+of like an interesting technique for like revising false decisions of these agents okay in general like we found that modality helps,
+一种有趣的技巧，用于修正这些智能体的错误决策。总的来说，我们发现模态有助于提升效果。
+
+485
+00:52:11,760 --> 00:52:21,160
+some of them are steerable and then they not always behave like humans, what concerns at least me a little bit.
+其中一些是可以操控的，但它们的行为并不总是像人类一样，这至少让我有点担心。
+
+486
+00:52:22,140 --> 00:52:27,100
+Finally I want to talk a little bit about infrastructures in the last three or four minutes.
+最后，我想在接下来三到四分钟里简单谈一下基础设施。
+
+487
+00:52:27,460 --> 00:52:35,770
+So there's we are also working on building infrastructure for like improving robot development in the future.
+因此，我们也在致力于构建基础设施，以促进未来机器人开发的提升。
+
+488
+00:52:35,820 --> 00:52:43,450
+One system is the so-called robot control stack for learning over robot learning at scale
+一个系统是所谓的机器人控制栈，用于在大规模机器人学习中实现学习。
+
+489
+00:52:43,500 --> 00:52:51,550
+it is actually designed to support like different sensors actuators robots switching between sim and real tail
+它实际上被设计用于支持不同传感器、执行器和机器人在仿真与现实之间的切换。
+
+490
+00:52:51,600 --> 00:52:59,370
+operation and data collection and also policy deployment and it runs on different types of hardware we
+运行和数据收集，以及策略部署，可在不同类型的硬件上运行。
+
+491
+00:52:59,420 --> 00:53:06,620
+also provide the corresponding simulations to this and it's also like it's been used in different applications,
+同时提供相应的仿真，并且它也被应用于不同场景。
+
+492
+00:53:06,980 --> 00:53:16,080
+teleoperated and scripted data collection, training, reinforcement learning, and VLA inferences in different settings.
+在不同场景下的遥操作与脚本化数据采集、训练、强化学习以及视觉-语言-动作模型推理。
+
+493
+00:53:16,850 --> 00:53:24,000
+And recently, it has also been applied to Dieter Foxen's Toy Blocks World, which was published last year.
+最近，它还被应用于去年发表的迪特·福肯的积木世界。
+
+494
+00:53:24,050 --> 00:53:29,150
+And I'm mentioning this here as a homage to my dear friend Dieter.
+我在这里提到这一点，是向我亲爱的朋友迪特尔致敬。
+
+495
+00:53:29,690 --> 00:53:32,660
+And by the way, tomorrow will be his 60th birthday.
+顺便说一下，明天就是他60岁的生日了。
+
+496
+00:53:32,710 --> 00:53:42,360
+So don't miss to congratulate him tomorrow and thank you Dieter and all the best for tomorrow I hope you will get many best wishes and yeah,
+所以别忘了明天向他表示祝贺，谢谢迪特尔，祝你明天一切顺利，希望你能收到许多美好的祝福，是的。
+
+497
+00:53:42,410 --> 00:53:47,280
+thank you for all your hard work also in robotics and Then the other one is this dual
+感谢大家在机器人领域的辛勤付出，还有这个双模态的
+
+498
+00:53:47,330 --> 00:53:55,840
+bench benchmark that we recently developed the benchmark that goes beyond just single arm benchmarks we have we actually
+我们最近开发的基准测试，超越了单一机械臂测试，实际上我们已经实现了
+
+499
+00:53:55,890 --> 00:54:03,480
+also looked into a different like success rate for a failure analysis where we actually not only looked
+还研究了另一种失败分析的成功率，我们不仅进行了分析
+
+500
+00:54:03,530 --> 00:54:11,440
+at the final The final task completion but also intermediate stages that the robots were supposed to execute Yes,
+最终任务的完成，还包括机器人应执行的中间阶段。是的，
+
+501
+00:54:11,490 --> 00:54:12,500
+the the setup.
+设置好了。
+
+502
+00:54:12,550 --> 00:54:18,040
+So this is running in simulation But also in in the real world and these assets
+所以这在仿真中运行，也在现实世界中运行，这些资产
+
+503
+00:54:18,090 --> 00:54:23,320
+that you see there are all 3d printable so you can actually Download the specifications and
+你看到的都是可3D打印的，你可以实际下载其规格。
+
+504
+00:54:23,370 --> 00:54:29,820
+generate these setups on the the robots that you do have at home And we're supporting
+在你家现有的机器人上生成这些设置，我们正在提供支持。
+
+505
+00:54:29,870 --> 00:54:36,590
+different types of tasks over here which are all listed on this on this Slide here.
+这里列出了各种不同类型的任务，都在这张幻灯片上。
+
+506
+00:54:36,640 --> 00:54:44,360
+All right, and some results are also provided turns out that Like low data fine-tuning is problematic.
+好的，一些结果也已提供，结果表明，低数据微调存在问题。
+
+507
+00:54:44,540 --> 00:54:49,590
+That's what we find and grasping and early stages are bottlenecked Potentially because
+这就是我们发现的情况，而早期阶段的掌握和理解可能因某些原因受阻。
+
+508
+00:54:49,640 --> 00:54:52,590
+in later stages all the robot has to do is to drop objects which
+在后期阶段，机器人只需将物体放下即可。
+
+509
+00:54:52,640 --> 00:54:57,470
+is much easier than grasping them and manipulating things but there's something that we
+比抓取和操作物体要容易得多，但其中有些东西是我们
+
+510
+00:54:57,520 --> 00:55:04,450
+would like to look into even further good let's skip this here another task
+我想进一步探讨一下，好吧，我们跳过这个，来看另一个任务。
+
+511
+00:55:04,500 --> 00:55:07,250
+that I've been doing other thing that I've been doing over the past years
+这些年我一直在做其他事情
+
+512
+00:55:07,300 --> 00:55:14,230
+is actually improving computing infrastructure in Bavaria this is a project that I've done
+实际上，我正在改善巴伐利亚的计算基础设施，这是一个我参与的项目。
+
+513
+00:55:14,280 --> 00:55:19,810
+together with Björn Ommer, this is a so-called Bavarian foundation model project that
+与比约恩·奥默共同推进的，是一个所谓的巴伐利亚基础模型项目
+
+514
+00:55:19,860 --> 00:55:28,710
+machine that you see here is 400 B100 GPUs that was bought by the
+你看到的这台机器，是英伟达购买的400块B100 GPU。
+
+515
+00:55:28,760 --> 00:55:33,690
+state of Bavaria and right now we are getting an additional number of thousand
+巴伐利亚州目前正额外增加数千名人员
+
+516
+00:55:33,740 --> 00:55:39,170
+GB 200 GPUs delivered which is Peter Stone mentioned this earlier this morning like
+已交付的 GB 200 GPU，正如彼得·斯通今早早些时候提到的那样
+
+517
+00:55:39,220 --> 00:55:42,190
+about the infrastructure that they have and we are going to have probably one
+关于他们所拥有的基础设施，以及我们可能将要拥有的
+
+518
+00:55:42,240 --> 00:55:51,070
+of the largest compute infrastructures on the university scale in in Germany and Which
+德国规模最大的大学级计算基础设施之一
+
+519
+00:55:51,120 --> 00:55:58,490
+brings me to the end of this talk I truly believe that we need to actually join forces as a society in At this discussion last night about
+让我讲到结尾，我真心认为，我们作为社会成员，必须真正携手，共同参与昨晚关于这一议题的讨论。
+
+520
+00:55:58,540 --> 00:56:06,760
+how we can actually keep up with everything that is going on in in the industry And where is robot learning going to be in like for academic?
+我们该如何真正跟上行业内的所有进展？在学术领域，机器人学习又将走向何方？
+
+521
+00:56:07,000 --> 00:56:10,710
+Robot learning research going to be and there are so many companies in this
+机器人学习研究将大有可为，而且这一领域已有众多公司涉足。
+
+522
+00:56:10,760 --> 00:56:15,770
+space that have large teams and can carry out large-scale projects instead of and
+拥有大型团队并能开展大规模项目的地方，而不是其他地方。
+
+523
+00:56:15,820 --> 00:56:20,190
+while we are having to deal with actually these type of PhD type projects
+而我们却不得不应对这类博士级别的项目
+
+524
+00:56:20,240 --> 00:56:27,370
+that are way more challenging and not on this big scale as the big Developments,
+这些挑战要大得多，而且不像那些大型开发项目那样规模庞大。
+
+525
+00:56:27,420 --> 00:56:28,970
+right and in a few words,
+对，简单来说就是
+
+526
+00:56:29,020 --> 00:56:36,390
+I think we again need to create a robotics foundation model including forces and sense
+我认为我们再次需要创建一个包含力和感知的机器人基础模型
+
+527
+00:56:36,440 --> 00:56:41,640
+of touch I used to say we need a son of robotics and and like
+触觉方面，我过去常说，我们需要一个机器人之子，就像这样
+
+528
+00:56:41,690 --> 00:56:46,520
+building something like this again these open max embodiment project which I really really liked
+再次打造这样的东西，比如这个我非常喜欢的开源最大具身项目
+
+529
+00:56:46,570 --> 00:56:50,320
+and I think the only way to actually keep up with that what is going
+我认为唯一能真正跟上这种发展的方法是
+
+530
+00:56:50,370 --> 00:56:56,420
+on industry is doing further projects like this and maybe also publishing this in the
+在产业界，正开展更多类似项目，或许还会将其发表出来。
+
+531
+00:56:56,470 --> 00:57:02,820
+transactions on robotic and not only in a small conference and if all of this
+机器人领域的交易，而不仅仅是在一个小规模的会议上
+
+532
+00:57:02,870 --> 00:57:11,480
+is going to be successful, then at least this is my hope: in the end we are going to be done with Probabilistic Robotics
+如果一切顺利，至少这是我所希望的：最终我们将告别概率机器人学。
+
+533
+00:57:11,530 --> 00:57:19,420
+That is one of the favorite animations for students and I let this book basically explode here and that
+这是学生们最喜欢的一个动画，我让这本书在这里基本炸开了。
+
+534
+00:57:19,470 --> 00:57:24,940
+what we hopefully get out of this community is that this boulder is on top of the hill and
+我们希望从这个社区得到的是，这块巨石正位于山顶之上。
+
+535
+00:57:24,990 --> 00:57:33,260
+with the robotics being solved and what I particularly like about this AI generated picture is this UTN symbol
+随着机器人技术的突破，我特别喜欢这张AI生成的图片，其中的UTN标志非常醒目。
+
+536
+00:57:33,310 --> 00:57:41,600
+here which I didn't ask technology in Nuremberg research is so important that it needs to be on this robot.
+这里我想说的是，纽伦堡的研究技术如此重要，必须搭载在这台机器人上。
+
+537
+00:57:41,650 --> 00:57:42,550
+Thank you for listening.
+谢谢聆听。

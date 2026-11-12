@@ -1,0 +1,1317 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:04.04,0:00:07.24,Sub,,0,0,0,,Thanks for coming on, Erik Bernhardsson from Modal.\N感谢您来到节目，埃里克·伯恩哈德松，来自 Modal。
+Dialogue: 0,0:00:07.29,0:00:11.23,Sub,,0,0,0,,Could you explain the business a little bit and maybe how you got here?\N你能简单介绍一下你的业务，以及你是怎么走到这一步的吗？
+Dialogue: 0,0:00:11.28,0:00:15.18,Sub,,0,0,0,,Yeah, so we we build these as we put it as we build AI infrastructure.\N是的，我们正在构建AI基础设施。
+Dialogue: 0,0:00:15.23,0:00:21.48,Sub,,0,0,0,,So we offer a bunch of compute a compute platform and a storage platform that enables a lot of\N因此，我们提供一系列计算平台和存储平台，能够实现大量计算需求。
+Dialogue: 0,0:00:21.52,0:00:29.43,Sub,,0,0,0,,customers like Decagon and Suno and Runway and Cognition and many others to essentially build AI applications.\N像 Decagon、Suno、Runway、\NCognition 等众多客户，正致力于构建 AI 应用。
+Dialogue: 0,0:00:29.48,0:00:32.59,Sub,,0,0,0,,So what that means in practice is a lot of inference, a lot of sandboxes,\N这意味着实际操作中需要大量推理和大量沙箱环境。
+Dialogue: 0,0:00:32.64,0:00:37.35,Sub,,0,0,0,,sometimes training and fine-tuning, sometimes batch jobs and and other things.\N有时是训练和微调，有时是批量任务和其他事情。
+Dialogue: 0,0:00:37.40,0:00:44.23,Sub,,0,0,0,,So we have basically built a a software SDK that enables customers to move really fast and and build this.\N所以我们基本上打造了一个软件开发工具包，让客户能够快速推进并完成这项工作。
+Dialogue: 0,0:00:44.28,0:00:49.79,Sub,,0,0,0,,We manage all the capacity underneath, make it easy to deploy and and scale and and run these things in production.\N我们管理底层的所有算力，让部署、扩展和生产环境运行这些系统变得简单。
+Dialogue: 0,0:00:49.84,0:00:52.29,Sub,,0,0,0,,So you were on Latent Space like 2 years ago.\N所以两年前你就在潜空间了。
+Dialogue: 0,0:00:52.34,0:00:53.98,Sub,,0,0,0,,A lot has happened since then.\N那之后发生了许多事。
+Dialogue: 0,0:00:54.02,0:00:55.66,Sub,,0,0,0,,Like how big were you back then?\N那时候你有多大？
+Dialogue: 0,0:00:55.71,0:00:59.75,Sub,,0,0,0,,Like whatever numbers you can share and comparatively, yeah, how big are you now?\N就是能分享的数字随便说说，从对比来看，你现在有多大了？
+Dialogue: 0,0:00:59.80,0:01:01.43,Sub,,0,0,0,,I actually don't remember where we were,\N我其实记不清我们之前在哪儿了，
+Dialogue: 0,0:01:01.48,0:01:08.03,Sub,,0,0,0,,but it's like it's probably like at least like 50x in terms of like revenue and users and usage and stuff like that, yeah.\N但就收入、用户数和使用量这些方面来看，可能至少有50倍的差距，没错。
+Dialogue: 0,0:01:08.08,0:01:14.51,Sub,,0,0,0,,I use it actually for like a side project that I have where Yeah, yeah, it's like yeah, turn like 2D images into 3D models.\N我实际上用它来做个小项目，就是把2D图像转成3D模型。
+Dialogue: 0,0:01:14.56,0:01:14.96,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:01:15.00,0:01:18.25,Sub,,0,0,0,,So yeah, I'm just hosting like a couple models there. do you think?\N是的，我就是在那里运行几个模型，你觉得呢？
+Dialogue: 0,0:01:18.30,0:01:18.87,Sub,,0,0,0,,Any feedback?\N有反馈吗？
+Dialogue: 0,0:01:18.92,0:01:20.11,Sub,,0,0,0,,I love it.\N我喜欢。
+Dialogue: 0,0:01:20.16,0:01:20.65,Sub,,0,0,0,,Nice.\N不错。
+Dialogue: 0,0:01:20.70,0:01:21.19,Sub,,0,0,0,,Good.\N好。
+Dialogue: 0,0:01:21.24,0:01:24.43,Sub,,0,0,0,,Um I mean, yeah, that's why I use it over like any competitors or anything.\N嗯，我是说，这就是为什么我用它，而不是任何竞争对手的产品。
+Dialogue: 0,0:01:24.48,0:01:24.99,Sub,,0,0,0,,Good.\N好。
+Dialogue: 0,0:01:25.04,0:01:31.79,Sub,,0,0,0,,So before you started Modal, you were at Spotify and also like better.com That's right, yeah.\N在你创办 Modal 之前，你曾在 Spotify 工作，还做过 better.com。没错，是的。
+Dialogue: 0,0:01:31.84,0:01:33.67,Sub,,0,0,0,,Yeah, what were you doing at Spotify?\N嗯，你在 Spotify 时在忙什么？
+Dialogue: 0,0:01:33.72,0:01:39.12,Sub,,0,0,0,,I actually did a lot of different things at Spotify, but my main contribution was I built a music recommendation system, the first version.\N我在 Spotify 时做过很多不同的事情，但我的主要贡献是开发了第一个版本的音乐推荐系统。
+Dialogue: 0,0:01:39.17,0:01:48.95,Sub,,0,0,0,,I I joined after school in 2008 2009 maybe and spent 7 years at Spotify and and most of that time was building basically from scratch a music\N我大概在2008、2009年放学后加入，之后在Spotify待了七年，\N其中大部分时间都是从零开始打造音乐平台。
+Dialogue: 0,0:01:49.00,0:01:52.48,Sub,,0,0,0,,recommendation system and built up a small team and we launched a bunch of\N推荐系统，并组建了一个小团队，推出了不少产品。
+Dialogue: 0,0:01:52.53,0:01:56.03,Sub,,0,0,0,,features like related artists and discover weekly and and a bunch of other stuff.\N类似推荐艺术家、每周推荐等众多功能。
+Dialogue: 0,0:01:56.08,0:01:59.88,Sub,,0,0,0,,So a lot of a lot of matrix factorization, a lot of compute-intensive stuff.\N所以有很多矩阵分解，以及大量计算密集型的任务。
+Dialogue: 0,0:01:59.94,0:02:05.63,Sub,,0,0,0,,And and and arguably like a lot of what sort of layer became the genesis of Modal was you know,\N而且可以说，模态的诞生很大程度上源于你所知道的那些东西。
+Dialogue: 0,0:02:05.68,0:02:10.70,Sub,,0,0,0,,just just building AI applications and realizing like the infrastructure sucks.\N只是在搭建AI应用时才意识到，基础设施太差了。
+Dialogue: 0,0:02:10.75,0:02:12.69,Sub,,0,0,0,,Like, there's got to be a better way to do that.\N嗯，肯定有更棒的方法来做这件事。
+Dialogue: 0,0:02:12.74,0:02:19.87,Sub,,0,0,0,,So, a lot of sort of you know, the rationale for for Modal was like kind of building a tool I always wanted to have throughout my years at Spotify.\N所以，Modal 的创立动机很大程度上是，\N我想打造一个在 Spotify 工作多年期间一直想要的工具。
+Dialogue: 0,0:02:19.92,0:02:20.48,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:02:20.53,0:02:27.03,Sub,,0,0,0,,So, Modal was more of an offshoot of the stuff you learned at Spotify, not much from better.com?\N所以，Modal 更像是你在 Spotify 学到的东西的延伸，而不是来自 better.com？
+Dialogue: 0,0:02:27.08,0:02:28.66,Sub,,0,0,0,,better.com was a little bit of a side tour.\Nbetter.com 只是一次小小的副业。
+Dialogue: 0,0:02:28.71,0:02:30.06,Sub,,0,0,0,,It was kind of a roller coaster.\N感觉就像坐过山车一样。
+Dialogue: 0,0:02:30.11,0:02:32.15,Sub,,0,0,0,,Long story about the company.\N关于这家公司的长篇故事。
+Dialogue: 0,0:02:32.20,0:02:32.96,Sub,,0,0,0,,Talk about it separately.\N单独谈这件事。
+Dialogue: 0,0:02:33.01,0:02:41.19,Sub,,0,0,0,,But, I was the CTO for for 5 years of better and grew the tech team from I think, you know, two to three 400.\N但我担任首席技术官五年，把技术团队从大概两三人发展到了四百人。
+Dialogue: 0,0:02:41.24,0:02:46.14,Sub,,0,0,0,,So, I learned a lot about management and building teams and hiring and also learned a lot about developer productivity.\N因此，我学到了很多关于管理、组建团队、招聘以及开发者生产力的知识。
+Dialogue: 0,0:02:46.19,0:02:48.33,Sub,,0,0,0,,Thought a lot about tools and things like that.\N认真思考过工具之类的东西。
+Dialogue: 0,0:02:48.38,0:02:50.15,Sub,,0,0,0,,Did a lot more like full stack stuff.\N做了更多全栈方面的工作。
+Dialogue: 0,0:02:50.20,0:02:55.95,Sub,,0,0,0,,But, yeah, I kind of came back to my what close to my heart, which is infrastructure and AI and machine learning after that.\N不过，是的，我后来又回到了我内心深处最关心的领域，那就是基础设施、人工智能和机器学习。
+Dialogue: 0,0:02:56.00,0:02:57.63,Sub,,0,0,0,,What was better.com doing again?\Nbetter.com 到底在做什么？
+Dialogue: 0,0:02:57.68,0:02:58.31,Sub,,0,0,0,,Mortgages.\N房贷
+Dialogue: 0,0:02:58.36,0:02:59.19,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:02:59.24,0:02:59.64,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:02:59.68,0:03:00.43,Sub,,0,0,0,,How did you get into that?\N你是怎么做到的？
+Dialogue: 0,0:03:00.48,0:03:02.03,Sub,,0,0,0,,I mean, we don't have to spend too much time on that.\N我的意思是，我们没必要在那上面花太多时间。
+Dialogue: 0,0:03:02.08,0:03:03.16,Sub,,0,0,0,,Just Yeah, no, it's fine.\N就是，不，没关系。
+Dialogue: 0,0:03:03.21,0:03:12.23,Sub,,0,0,0,,I like this guy Zach Frankel who I didn't know at that time ended up recruiting me to better as the CTO and the company was 10 people and you know,\N我喜欢那个当时我还不认识的扎克·弗兰克尔，他最终招募我加入，\N担任首席技术官，那时公司只有十个人，你知道的，
+Dialogue: 0,0:03:12.28,0:03:20.99,Sub,,0,0,0,,for whatever reason, you know, the the founder of Vishal very interesting guy, very very smart, a little crazy in in mostly positive ways.\N不知什么原因，你知道，Vishal的创始人是个非常有趣的人，非常聪明，有点疯狂，但大多是积极的方面。
+Dialogue: 0,0:03:21.04,0:03:23.29,Sub,,0,0,0,,We got very well along.\N我们相处得很好。
+Dialogue: 0,0:03:23.34,0:03:29.78,Sub,,0,0,0,,So, we yeah, we we started building it in in 2015 and I spent 5 years growing that company and then you know,\N所以我们啊，确实从2015年开始搭建它，我花了五年时间发展这家公司，然后你知道，
+Dialogue: 0,0:03:29.83,0:03:33.13,Sub,,0,0,0,,eventually turned out that doing mortgages is pretty hard and you know,\N最终发现，做抵押贷款其实相当困难，你知道的，
+Dialogue: 0,0:03:33.18,0:03:37.98,Sub,,0,0,0,,interest rates went up very quickly after the pandemic and and that that caused a lot of issues at the company.\N疫情后利率迅速上升，给公司带来了诸多问题。
+Dialogue: 0,0:03:38.03,0:03:39.55,Sub,,0,0,0,,But, by then I had already left.\N但那时我已经离开了。
+Dialogue: 0,0:03:39.60,0:03:42.19,Sub,,0,0,0,,That was like 2020 2021 when you left?\N那是你离开时的2020到2021年吗？
+Dialogue: 0,0:03:42.24,0:03:43.17,Sub,,0,0,0,,Yeah, something like that.\N嗯，大概就是这样。
+Dialogue: 0,0:03:43.22,0:03:43.44,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:03:43.44,0:03:49.59,Sub,,0,0,0,,So, okay, you left before you had the idea for Modal or you left and then you started out on your own?\N所以，好吧，你是在想到 Modal 之前离开的，还是你离开之后才自己开始的？
+Dialogue: 0,0:03:49.64,0:03:50.69,Sub,,0,0,0,,Yeah, it's It's to say.\N是的，就是想说。
+Dialogue: 0,0:03:50.74,0:03:57.31,Sub,,0,0,0,,I I had a lot of random ideas when I left Better and and and I I I actually wasn't sure if I wanted to start a company.\N我离开Better后，脑子里冒出很多奇思妙想，其实我都不确定自己到底要不要创业。
+Dialogue: 0,0:03:57.36,0:04:02.45,Sub,,0,0,0,,I was kind of just, you know, during the pandemic I I sort of almost took like a sabbatical.\N疫情期间，我差不多就像休了个假似的。
+Dialogue: 0,0:04:02.50,0:04:03.57,Sub,,0,0,0,,I had two kids.\N我有两个孩子。
+Dialogue: 0,0:04:03.62,0:04:05.46,Sub,,0,0,0,,I mean I still have two kids,\N我还有两个孩子呢，
+Dialogue: 0,0:04:05.51,0:04:08.76,Sub,,0,0,0,,but I mean at that time they were they were I think two and four and so\N但我的意思是，那时候他们应该是两岁和四岁。
+Dialogue: 0,0:04:08.82,0:04:13.81,Sub,,0,0,0,,I decided to hang out and took some time off and was kind of working like part-time,\N我决定放松一下，休了段时间假，工作也变成了兼职模式。
+Dialogue: 0,0:04:13.86,0:04:18.50,Sub,,0,0,0,,like hacking on certain things and wasn't sure maybe should do some consulting and I started\N就像在某些事情上搞开发，又不确定要不要做点咨询，于是我就开始了
+Dialogue: 0,0:04:18.55,0:04:23.94,Sub,,0,0,0,,building stuff and I just got like super pumped about this idea that that eventually became Modal.\N在打造东西的过程中，我对这个想法激动不已，它最终变成了模态（Modal）。
+Dialogue: 0,0:04:23.99,0:04:27.86,Sub,,0,0,0,,But actually both, you know, Modal was like the I think the first thing I built that I got,\N但实际上，两者都让我想起，我想起来我最早做出来的东西就是模态。
+Dialogue: 0,0:04:27.92,0:04:31.91,Sub,,0,0,0,,you know, that So so there were like a few attempts before then that that went nowhere.\N你知道，之前其实有过几次尝试，但都无疾而终了。
+Dialogue: 0,0:04:31.96,0:04:34.37,Sub,,0,0,0,,But but Modal was like the first idea was like, "This is kind of cool.\N但模态当时的想法是，这玩意儿还挺酷的。
+Dialogue: 0,0:04:34.42,0:04:35.19,Sub,,0,0,0,,Like I should do this.\N就像我应该这么做一样。
+Dialogue: 0,0:04:35.24,0:04:37.59,Sub,,0,0,0,,This is like this could be a really cool platform."\N这简直可能成为一个超酷的平台。
+Dialogue: 0,0:04:37.64,0:04:41.43,Sub,,0,0,0,,Were the other ideas like also in a similar vein, like developer tools?\N其他想法也类似吗？比如开发者工具？
+Dialogue: 0,0:04:41.48,0:04:45.07,Sub,,0,0,0,,The first thing was like some sort of web scraping thing, which went nowhere.\N一开始是某种网络爬取，结果什么也没搞成。
+Dialogue: 0,0:04:45.12,0:04:47.67,Sub,,0,0,0,,But actually, you know, in hindsight maybe could have gone somewhere.\N但实际上，事后看来，也许本可以去别的地方。
+Dialogue: 0,0:04:47.72,0:04:49.71,Sub,,0,0,0,,And was this before the ChatGPT launch?\N这在 ChatGPT 发布之前吗？
+Dialogue: 0,0:04:49.76,0:04:50.16,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:04:50.21,0:04:51.07,Sub,,0,0,0,,Yeah, 2021.\N是的，2021年。
+Dialogue: 0,0:04:51.12,0:04:53.55,Sub,,0,0,0,,Okay. was late 2022, right?\N好的，是2022年底，对吧？
+Dialogue: 0,0:04:53.60,0:04:57.15,Sub,,0,0,0,,Then I I started building So So maybe actually to rewind a little bit context,\N然后我开始着手搭建，也许先稍微倒回一下背景。
+Dialogue: 0,0:04:57.20,0:05:01.83,Sub,,0,0,0,,like when I worked at Spotify I released an open-source framework called Luigi, which is like workflow orchestration.\N就像我在 Spotify 工作时，我发布了一个开源框架叫 Luigi，它类似于工作流编排。
+Dialogue: 0,0:05:01.88,0:05:05.55,Sub,,0,0,0,,It's sort of the same category as Airflow and Prefect and Dagster.\N它和 Airflow、Prefect 以及 Dagster 属于同一类别。
+Dialogue: 0,0:05:05.60,0:05:11.63,Sub,,0,0,0,,Sort of dated category to some extent, like people don't talk about it as much, but it for a while it was like, you know, got a lot of attention.\N某种程度上有点过时了，现在人们不太提它，但之前一度很受关注。
+Dialogue: 0,0:05:11.68,0:05:13.74,Sub,,0,0,0,,Uh anyway, I I never turned it into a business.\N反正吧，我从来没把它变成一个生意。
+Dialogue: 0,0:05:13.79,0:05:20.20,Sub,,0,0,0,,Uh but a couple years later when in 2021 when I was thinking about business ideas or or things to work on,\N但过了几年，到了2021年，当我思考商业想法或想投入的工作时，
+Dialogue: 0,0:05:20.26,0:05:25.46,Sub,,0,0,0,,I kind of came back to workflow orchestration and I started hacking on a bunch of ideas of you know,\N我重新回到了工作流编排，开始着手尝试各种想法，你知道的，
+Dialogue: 0,0:05:25.51,0:05:29.07,Sub,,0,0,0,,running code in the you know, like basically orchestrating code running in the cloud.\N在云端运行代码，基本上就是协调代码在云端的执行。
+Dialogue: 0,0:05:29.12,0:05:30.88,Sub,,0,0,0,,And what I realized was like, you know,\N而我意识到的是，你知道，
+Dialogue: 0,0:05:30.93,0:05:36.20,Sub,,0,0,0,,at the end of the day like core puzzle piece is not just like orchestrating the compute, it's like executing the compute.\N归根结底，核心拼图不仅仅是协调算力，更是执行算力。
+Dialogue: 0,0:05:36.25,0:05:39.28,Sub,,0,0,0,,And I was like, "That's kind of a bigger problem actually to solve."\N我当时就想，这实际上是个更大的问题需要解决。
+Dialogue: 0,0:05:39.33,0:05:43.30,Sub,,0,0,0,,So in a way I actually like, you know, left it on the shelf and then said like,\N某种程度上，我其实挺喜欢的，你知道，把它放在架子上，然后就说……
+Dialogue: 0,0:05:43.35,0:05:49.16,Sub,,0,0,0,,"Actually I'm going to like go to this other thing over here and I'll go back I'll get back to the workflow scheduling in a little bit,\N其实我先去那边看看，稍后再回来处理工作流调度。
+Dialogue: 0,0:05:49.21,0:05:51.19,Sub,,0,0,0,,but but like you know, I never got back to it.\N但你知道的，我后来也没再回去做。
+Dialogue: 0,0:05:51.24,0:05:53.55,Sub,,0,0,0,,Long story short and and and I ended up building Modal,\N长话短说，最后我建了 Modal，
+Dialogue: 0,0:05:53.60,0:05:59.47,Sub,,0,0,0,,which is like the the focus is more like let's just figure out a way to make it easier to run code in the computer in the cloud.\N重点更像是想办法让在云端的计算机上运行代码变得更简单。
+Dialogue: 0,0:05:59.52,0:06:06.67,Sub,,0,0,0,,And and the focus was initially like fairly general purpose and it actually in a way like it's always we've kind of gone full circle more recently.\N最初的重点是相当通用的，实际上从某种意义上说，我们最近又回到了原点。
+Dialogue: 0,0:06:06.72,0:06:08.75,Sub,,0,0,0,,But but we we focused on so many different applications.\N但我们关注了太多不同的应用。
+Dialogue: 0,0:06:08.80,0:06:13.36,Sub,,0,0,0,,It was kind of the idea was like let's just make it super easy to run code in the in in the cloud.\N它的想法就是，让我们把在云端运行代码变得超级简单。
+Dialogue: 0,0:06:13.41,0:06:17.47,Sub,,0,0,0,,Could be GPU code, could be AI machine learning, it could also be like data stuff.\N可能是GPU代码，也可能是AI机器学习，还可能是数据相关的内容。
+Dialogue: 0,0:06:17.52,0:06:21.02,Sub,,0,0,0,,Um and uh focused a lot on, you know, how do we scale it up?\N嗯，就是特别关注，你知道的，我们该怎么把它扩大规模？
+Dialogue: 0,0:06:21.06,0:06:23.35,Sub,,0,0,0,,How do we make the developer experience awesome?\N我们该如何让开发者体验变得惊艳？
+Dialogue: 0,0:06:23.40,0:06:30.27,Sub,,0,0,0,,Realized super early that like in order to do that we'd have to go very deep in the stack and built our file system, built our container runtime.\N我们很早就意识到，要实现这一点，必须深入技术栈底层，自己开发文件系统和容器运行时。
+Dialogue: 0,0:06:30.32,0:06:34.21,Sub,,0,0,0,,Uh and and did a lot of, you know, solved a lot of hard engineering challenges.\N还有，解决了许多棘手的工程难题。
+Dialogue: 0,0:06:34.26,0:06:39.01,Sub,,0,0,0,,And then you mentioned ChatGPT, that was actually not quite the killer app,\N然后你提到了 ChatGPT，但实际上它并不是那个杀手级应用。
+Dialogue: 0,0:06:39.06,0:06:44.77,Sub,,0,0,0,,but it like if you remember like that fall another thing came out around the same time, which was stable diffusion.\N但你要是记得，那年秋天还有一件事同期出现，就是稳定扩散。
+Dialogue: 0,0:06:44.82,0:06:48.71,Sub,,0,0,0,,And stable diffusion turned out to be a killer app for our for what we're building at that time.\N而稳定扩散最终成为了我们当时所构建项目的杀手级应用。
+Dialogue: 0,0:06:48.76,0:06:51.03,Sub,,0,0,0,,We were only four or five people at that time.\N当时我们只有四到五个人。
+Dialogue: 0,0:06:51.08,0:06:55.60,Sub,,0,0,0,,So uh we started seeing a lot of people coming to us and wanting to run uh stable diffusion model.\N嗯，我们开始看到很多人来找我们，想运行稳定扩散模型。
+Dialogue: 0,0:06:55.65,0:07:01.19,Sub,,0,0,0,,And then we realized that that that made us realize like maybe gen AI inference is actually really good use case for us.\N然后我们意识到，这让我们明白，也许生成式AI推理实际上正是我们的一个绝佳应用场景。
+Dialogue: 0,0:07:01.24,0:07:02.27,Sub,,0,0,0,,And how were you finding it?\N你觉得怎么样？
+Dialogue: 0,0:07:02.32,0:07:04.28,Sub,,0,0,0,,I'm just like compulsive tweeter.\N我就像一个强迫性发推的人。
+Dialogue: 0,0:07:04.33,0:07:09.50,Sub,,0,0,0,,I was even more like now like I'm too distracted by building a company, but I always like tweeted a lot.\N我现在更觉得，我太专注于创业了，分心了，但我一直很喜欢发推文。
+Dialogue: 0,0:07:09.55,0:07:10.34,Sub,,0,0,0,,I was blogged a lot.\N我被大量博客提及了。
+Dialogue: 0,0:07:10.39,0:07:13.54,Sub,,0,0,0,,So I think I had a little bit of a following and so, you know,\N所以我觉得我有点小名气，你知道的。
+Dialogue: 0,0:07:13.59,0:07:20.79,Sub,,0,0,0,,in the early days uh like a lot of what drove the growth is just like me just compulsively just like tweeting about Modal and like what I was\N早期的时候，推动增长的很多原因就是我忍不住地不断发推特，\N分享关于 Modal 的事情，还有我自己的动态。
+Dialogue: 0,0:07:20.84,0:07:24.12,Sub,,0,0,0,,building and getting people excited and writing long blog posts about where the cloud\N构建并激发人们的热情，撰写长篇博客文章讨论云计算的未来
+Dialogue: 0,0:07:24.17,0:07:27.47,Sub,,0,0,0,,is going and all these things and I call it a bit like founder-led marketing.\N正在推进这些事情，我称之为有点像创始人驱动的营销。
+Dialogue: 0,0:07:27.52,0:07:30.23,Sub,,0,0,0,,I was like feel like you kind of have to lean into like what you're good at and\N我觉得你得往自己擅长的方向多倾斜一点
+Dialogue: 0,0:07:30.28,0:07:35.02,Sub,,0,0,0,,like what I'm good at is like I guess like just posting and being terminally online and and so,\N比如我擅长的，大概就是不停地发帖，一直在线吧，
+Dialogue: 0,0:07:35.07,0:07:37.89,Sub,,0,0,0,,you know, like work it it's it's still like, you know,\N你知道的，就像工作一样，它还是那样，你知道的
+Dialogue: 0,0:07:37.94,0:07:43.39,Sub,,0,0,0,,I think a lot of our growth is we're just kind of good at social media and just like being, you know, online a lot.\N我觉得我们增长很快，很大程度上是因为我们很擅长社交媒体，也习惯于长时间在线。
+Dialogue: 0,0:07:43.44,0:07:43.81,Sub,,0,0,0,,Nice.\N不错。
+Dialogue: 0,0:07:43.84,0:07:46.91,Sub,,0,0,0,,How long until you had your first customer?\N你多久才有了第一个客户？
+Dialogue: 0,0:07:46.96,0:07:50.55,Sub,,0,0,0,,It took a while cuz we started Also, did you raise like early on?\N花了一段时间，因为我们一开始也……另外，你之前有提过吗？
+Dialogue: 0,0:07:50.60,0:07:51.62,Sub,,0,0,0,,We didn't raise for a while.\N我们有一段时间没融资了。
+Dialogue: 0,0:07:51.67,0:07:53.53,Sub,,0,0,0,,I actually self-funded it for a while.\N我实际上自己掏钱支撑了一段时间。
+Dialogue: 0,0:07:53.58,0:07:56.27,Sub,,0,0,0,,Even with up until the first few employees.\N即使直到最初几名员工加入为止。
+Dialogue: 0,0:07:56.32,0:08:02.32,Sub,,0,0,0,,Which in a way was like kind of nice cuz it made me really like frugal about money and like wanting to see like ROI.\N某种程度上这还挺好的，让我对金钱变得特别节俭，也更想看到投资回报。
+Dialogue: 0,0:08:02.38,0:08:05.70,Sub,,0,0,0,,I wasn't taking out a salary for a while, for a long time actually.\N我有一段时间没拿工资了，实际上很长一段时间都没拿。
+Dialogue: 0,0:08:05.75,0:08:08.92,Sub,,0,0,0,,At some point it became a problem because I needed the money.\N后来这成了问题，因为我需要钱。
+Dialogue: 0,0:08:08.97,0:08:14.15,Sub,,0,0,0,,But we didn't raise for a while and um until early 2022 raised a seed round.\N但我们有一段时间没融资了，直到2022年初才完成了种子轮。
+Dialogue: 0,0:08:14.20,0:08:17.23,Sub,,0,0,0,,So so at that point I'd already been working on it for about a year.\N那时候我差不多已经干了一年了。
+Dialogue: 0,0:08:17.28,0:08:24.83,Sub,,0,0,0,,Akshat joined us as CTO and co-founder in in about about 5 years ago, about now, August maybe 2021.\N阿克沙特大约五年前，也就是2021年8月左右，加入我们担任首席技术官兼联合创始人。
+Dialogue: 0,0:08:24.88,0:08:30.67,Sub,,0,0,0,,But then it took until like basically like late 2022 for us to see any meaningful revenue.\N但直到2022年底，我们才看到任何有意义的收入。
+Dialogue: 0,0:08:30.72,0:08:32.35,Sub,,0,0,0,,I guess that's when ChatGPT came out.\N我想那就是ChatGPT推出的时候。
+Dialogue: 0,0:08:32.40,0:08:37.86,Sub,,0,0,0,,Yeah, and and Stable Diffusion then in in our case was the main thing that sort of So so we went from like,\N是的，对我们来说，稳定扩散（Stable Diffusion\N）是当时最重要的东西，所以我们从那时候开始……
+Dialogue: 0,0:08:37.91,0:08:45.01,Sub,,0,0,0,,you know, $100 a month in like I think like November 2022, and the next month we did like $2,000 a month.\N你知道，100美元一个月，大概在2022年11月左右，下个月我们就做到了每月2000美元。
+Dialogue: 0,0:08:45.06,0:08:50.63,Sub,,0,0,0,,And then like January 2023 we did like $30,000 all of a sudden.\N然后就像2023年1月，我们突然就做到了3万美元。
+Dialogue: 0,0:08:50.68,0:08:55.97,Sub,,0,0,0,,And you know, so so finally I felt this like massive just like anxiety thing off my chest.\N你知道，最后我终于感觉心头那块大石头落地了，那种巨大的焦虑感一下子消失了。
+Dialogue: 0,0:08:56.02,0:08:58.60,Sub,,0,0,0,,I'm like, maybe this is actually like we're onto something.\N我觉得，这说不定真让我们抓住了什么关键点。
+Dialogue: 0,0:08:58.66,0:08:59.64,Sub,,0,0,0,,It feels like we're onto something.\N感觉我们抓住了什么重要的东西。
+Dialogue: 0,0:08:59.69,0:09:04.31,Sub,,0,0,0,,And then 2023 we grew very fast and I guess we've been growing very fast since then basically.\N然后到了2023年，我们增长非常迅速，从那以后基本上一直保持高速成长。
+Dialogue: 0,0:09:04.36,0:09:10.67,Sub,,0,0,0,,That 30K a month moment, was that just like a couple big customers or was it like very like diverse?\N那个每月3万的时刻，是几个大客户带来的，还是来自很多不同客户？
+Dialogue: 0,0:09:10.72,0:09:16.76,Sub,,0,0,0,,It's just one and I don't I don't know if I ever talked about like who that was and if they even know it, but I think they suspect it.\N就一个而已，我不确定我有没有提过那是谁，他们自己知不知道，但我猜他们大概有怀疑。
+Dialogue: 0,0:09:16.81,0:09:18.55,Sub,,0,0,0,,It was a company in New York called Mage.\N这是一家位于纽约的公司，名叫 Mage。
+Dialogue: 0,0:09:18.60,0:09:21.00,Sub,,0,0,0,,They're doing like a Stable Diffusion company.\N他们正像稳定扩散公司那样在做。
+Dialogue: 0,0:09:21.05,0:09:29.88,Sub,,0,0,0,,So at some point, you know, in in in the first I think first quarter of of 2020 three, I think they were like 80-90% of our revenue.\N所以大概在2020年第一季度左右，他们占了我们营收的80%到90%。
+Dialogue: 0,0:09:29.93,0:09:35.87,Sub,,0,0,0,,But but then after that, you know, it started diversifying a little bit and late 2023 we we got Suno as a big customer.\N但后来，它开始稍微多元化一些，到了2023年底，我们迎来了Suno这个大客户。
+Dialogue: 0,0:09:35.92,0:09:38.00,Sub,,0,0,0,,They were a big chunk of our revenue for a while, too.\N他们也曾是我们收入的一大块。
+Dialogue: 0,0:09:38.05,0:09:42.67,Sub,,0,0,0,,But then, you know, it's over time like we actually have really good revenue diversification now.\N但随着时间推移，我们实际上已经实现了非常良好的收入多元化。
+Dialogue: 0,0:09:42.72,0:09:43.15,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:09:43.20,0:09:47.82,Sub,,0,0,0,,For the stable diffusion stuff, I remember using it for like ComfyUI.\N关于稳定扩散，我记得曾用它搭配 ComfyUI。
+Dialogue: 0,0:09:47.87,0:09:51.87,Sub,,0,0,0,,I'm assuming a lot of people were using ComfyUI, like running ComfyUI workflows on it.\N我猜你们很多人在用 ComfyUI，比如在上面运行 ComfyUI 工作流。
+Dialogue: 0,0:09:51.92,0:09:56.99,Sub,,0,0,0,,Some people were, but but I I think the people that were using Modal, they tended to be more like low-level stuff.\N有些人用过，但我认为用 Modal 的人，更多是做底层的东西。
+Dialogue: 0,0:09:57.04,0:09:58.31,Sub,,0,0,0,,Like they did like complicated stuff.\N就像他们之前做过的那些复杂的事情一样。
+Dialogue: 0,0:09:58.36,0:10:00.59,Sub,,0,0,0,,What they like with Modal is like it's always been pretty hackable.\N他们喜欢 Modal 的地方在于，它一直都很易于改造。
+Dialogue: 0,0:10:00.64,0:10:01.31,Sub,,0,0,0,,Mhm.\N嗯。
+Dialogue: 0,0:10:01.36,0:10:01.57,Sub,,0,0,0,,So,\N所以，
+Dialogue: 0,0:10:01.57,0:10:08.84,Sub,,0,0,0,,they they deployed their own custom workflows with adapters and custom in friends and and a lot of optimizations and and all the all the\N他们部署了自定义的工作流，使用了适配器、自定义朋友以及大量优化，所有一切。
+Dialogue: 0,0:10:08.89,0:10:15.67,Sub,,0,0,0,,stuff we had done in order to get the developer experience to be really good turned out to be really good for also running production workloads.\N我们为提升开发者体验所做的努力，也意外地大大改善了生产环境工作负载的运行效果。
+Dialogue: 0,0:10:15.72,0:10:18.67,Sub,,0,0,0,,Uh cuz auto scaling turns out to be actually a very similar problem.\N因为自动扩展实际上是一个非常相似的问题。
+Dialogue: 0,0:10:18.72,0:10:21.67,Sub,,0,0,0,,Like you want to scale up containers up and down very fast.\N就像你希望快速地扩缩容器一样。
+Dialogue: 0,0:10:21.72,0:10:26.03,Sub,,0,0,0,,Uh so, we we just happened to be like very well positioned to to capture a lot of those workloads in the early days.\N所以我们恰好在早期阶段处于非常有利的位置，抓住了大量这类工作负载。
+Dialogue: 0,0:10:26.08,0:10:28.53,Sub,,0,0,0,,Did tools for auto scaling like not exist?\N自动扩展工具难道不存在吗？
+Dialogue: 0,0:10:28.58,0:10:30.55,Sub,,0,0,0,,Like why did you have to build those yourself?\N为什么非得自己造那些东西？
+Dialogue: 0,0:10:30.60,0:10:39.54,Sub,,0,0,0,,In general, like my thesis is like, you know, every new sort of era of like, you know, technology kind of runs up against limitations of of tools.\N总的来说，就像我的论文所说，每一种新技术时代的到来，都会遇到工具本身的局限性。
+Dialogue: 0,0:10:39.59,0:10:46.96,Sub,,0,0,0,,Uh you know, whether that's you look back, you know, like the web or the cloud or, you know, mobile or PCs or or, you know, AI or whatever.\N你知道，无论是回望网络、云计算、移动设备、个人电脑，还是人工智能，或者其他什么。
+Dialogue: 0,0:10:47.01,0:10:50.67,Sub,,0,0,0,,So, so I I I think, you know, it's of often the case that tools exist.\N所以，我觉得通常情况下，工具是存在的。
+Dialogue: 0,0:10:50.72,0:10:53.82,Sub,,0,0,0,,But but they're often not like particularly good.\N但它们通常并不特别好。
+Dialogue: 0,0:10:53.87,0:10:58.16,Sub,,0,0,0,,And and and often you you kind of need to rethink a lot of those tools in order to reap the benefits of,\N而且很多时候，你都需要重新思考一下这些工具，才能真正获得它们带来的好处。
+Dialogue: 0,0:10:58.21,0:11:02.01,Sub,,0,0,0,,you know, and and really, you know, turbocharge and start building for this new world.\N你知道，真正地加速，开始为这个新世界打造基础。
+Dialogue: 0,0:11:02.06,0:11:06.30,Sub,,0,0,0,,And then you saw this with cloud, you know, we had to invent things like Kubernetes and Docker and things like that.\N然后在云计算领域，我们不得不发明像 Kubernetes 和 Docker 这样的东西。
+Dialogue: 0,0:11:06.35,0:11:14.00,Sub,,0,0,0,,And then in in in a similar way, you know, like with with gen AI, you could build these things on the sort of prior generation of tools.\N然后，类似地，就像使用生成式AI一样，你可以在前一代工具的基础上构建这些技术。
+Dialogue: 0,0:11:14.05,0:11:18.31,Sub,,0,0,0,,Like you you can't you can build these things on top of Kubernetes and Docker and and these things.\N就像你一样，你可以在 Kubernetes 和 Docker 等基础上构建这些技术。
+Dialogue: 0,0:11:18.36,0:11:21.17,Sub,,0,0,0,,But but but those technologies are built for a very different type of workload.\N但那些技术是为完全不同的工作负载设计的。
+Dialogue: 0,0:11:21.22,0:11:24.46,Sub,,0,0,0,,They're built for a very sort of steady work steady back-end workloads.\N它们专为非常稳定、持续的后端工作负载而设计。
+Dialogue: 0,0:11:24.51,0:11:31.49,Sub,,0,0,0,,They have an even, you know, steady number of requests, like running at a pretty low utilization cuz CPUs are normally pretty cheap.\N他们的请求量很平稳，就像CPU通常价格便宜，所以运行时利用率也一直很低。
+Dialogue: 0,0:11:31.54,0:11:31.90,Sub,,0,0,0,,And so,\N因此，
+Dialogue: 0,0:11:31.93,0:11:35.77,Sub,,0,0,0,,people don't really worry so much about cost and but now you're entering this new world and\N人们其实不太担心成本问题，但现在你正进入一个全新的世界。
+Dialogue: 0,0:11:35.82,0:11:41.44,Sub,,0,0,0,,you have you know very expensive GPUs you want to manage capacity and and utilization you have very\N你有非常昂贵的GPU，想要管理算力和利用率，你有非常
+Dialogue: 0,0:11:41.49,0:11:46.81,Sub,,0,0,0,,large models that you need to load over network into CPU into GPU and and it it turns\N需要通过网络加载到 CPU 再到 GPU 的大型模型，它会变得非常慢
+Dialogue: 0,0:11:46.86,0:11:50.80,Sub,,0,0,0,,out like a lot of these tools like you know like they're they're just not built for that.\N像很多这类工具一样，它们根本不是为此设计的。
+Dialogue: 0,0:11:50.85,0:11:56.99,Sub,,0,0,0,,So so we felt that you know we we had to rebuild a lot of that you know building our own I mentioned the file system but we also spent\N所以我们觉得，毕竟得重新搭建很多东西，比如我提到的文件系统，我们还投入了大量精力
+Dialogue: 0,0:11:57.04,0:11:59.91,Sub,,0,0,0,,a lot of time over the last few years like building you know some really\N这几年来，花了很多时间，比如构建一些你所知道的非常厉害的东西
+Dialogue: 0,0:11:59.96,0:12:04.70,Sub,,0,0,0,,cool stuff around like CPU snapshotting GPU snapshotting and auto we built our own auto\N一些很酷的功能，比如 CPU 快照、GPU 快照，还有我们自己开发的自动功能
+Dialogue: 0,0:12:04.75,0:12:08.71,Sub,,0,0,0,,scaler and scheduler and and and and all kinds of capacity management tools and we\N扩展器、调度器，以及各种容量管理工具，还有我们
+Dialogue: 0,0:12:08.76,0:12:12.34,Sub,,0,0,0,,kind of feel like you have to do that because like you can't build you\N感觉你非得这么做，好像不这么做就不行似的
+Dialogue: 0,0:12:12.39,0:12:19.08,Sub,,0,0,0,,know for this new generation of of software on top of you can't build like a wrapper on top of the old stuff in order to to do the new stuff.\N要知道，这一代新软件不能像过去那样，在旧系统上加个封装层来实现新功能。
+Dialogue: 0,0:12:19.13,0:12:21.67,Sub,,0,0,0,,You kind of need to start over a little bit from scratch.\N你得从头开始，稍微重新来过。
+Dialogue: 0,0:12:21.72,0:12:26.79,Sub,,0,0,0,,So I guess like the auto scaling stuff like did you did you see any like um\N所以我想，自动扩展那些东西，你有看到什么吗，呃
+Dialogue: 0,0:12:26.84,0:12:32.39,Sub,,0,0,0,,weird behaviors on the platform like was there anything that like broke while you guys were scaling?\N平台上一些奇怪的行为，比如你们在扩展时有没有遇到什么异常情况？
+Dialogue: 0,0:12:32.44,0:12:35.65,Sub,,0,0,0,,I mean capacity is always from time to time been been a challenge like how do you\N产能始终是个挑战，比如你该如何应对。
+Dialogue: 0,0:12:35.70,0:12:41.26,Sub,,0,0,0,,get like you know hundreds and thousands and tens of thousands of GPUs so that's that's always challenging.\N像你所知的，拥有成百上千甚至数万块GPU，这始终是个挑战。
+Dialogue: 0,0:12:41.30,0:12:47.74,Sub,,0,0,0,,We had to go multi-region very early so I think that was like kind of a fateful decision in hindsight like doing that and kind of just biting\N我们不得不很早就转向多区域布局，现在回头看，这似乎是个关键性的决定，相当于咬紧牙关硬着头皮上。
+Dialogue: 0,0:12:47.79,0:12:53.71,Sub,,0,0,0,,the bullet and building it like we always thought of like our our capacity management is like one big pool like it's like one big pool of it\N子弹和构建方式，就像我们一直设想的那样，我们的容量管理就像一个大池子，就像一个大的资源池。
+Dialogue: 0,0:12:53.76,0:12:59.66,Sub,,0,0,0,,over the the entire world like we don't think of it as like separate clusters running in each region and so that that was like one of the\N在全球范围内，我们并不将其视为各自独立、分布在不同区域运行的集群，这一点正是其中之一。
+Dialogue: 0,0:12:59.71,0:13:06.26,Sub,,0,0,0,,like very consequential decisions we made early to kind of think about it that way so I don't know if there's like been like you know specific issues.\N就像我们早期做出的一些非常关键的决策，当时就以这种思路去考虑，\N所以我不太知道是否真的存在像你所说的那些具体问题。
+Dialogue: 0,0:13:06.31,0:13:13.93,Sub,,0,0,0,,I mean we've obviously had bugs and you know outages and I hate you know as much as I you know would love for Modal to be 100% uptime you know\N我的意思是，我们当然遇到过漏洞和宕机，虽然我也和大家一样，\N希望 Modal 能做到 100% 不中断运行。
+Dialogue: 0,0:13:13.98,0:13:17.58,Sub,,0,0,0,,and and I think recently we've basically hit four or five nines but throughout the history\N而且我认为最近我们基本上已经达到了四到五个九，但纵观整个历史
+Dialogue: 0,0:13:17.63,0:13:21.23,Sub,,0,0,0,,of Modal of course we've had you know run up against scaling issues things like that.\N当然，我们之前也遇到过扩展性问题之类的。
+Dialogue: 0,0:13:21.28,0:13:25.10,Sub,,0,0,0,,The GPU market and well actually before that.\NGPU 市场，实际上在那之前就已经存在了。
+Dialogue: 0,0:13:25.15,0:13:30.65,Sub,,0,0,0,,So So, guys use AWS like GCP, like all these cloud providers underneath?\N所以，各位，你们用 AWS 时，是不是也像用 GCP 以及其他云服务商那样？
+Dialogue: 0,0:13:30.70,0:13:33.59,Sub,,0,0,0,,Like, do you also buy any infrastructure or no?\N你也会买一些基础设施吗？还是不会？
+Dialogue: 0,0:13:33.64,0:13:36.55,Sub,,0,0,0,,Let's talk a bit about like cloud capacity because I think it's actually changed a lot.\N我们来聊聊云容量，因为我觉得它实际上已经发生了很大变化。
+Dialogue: 0,0:13:36.60,0:13:44.18,Sub,,0,0,0,,Like, in in the first few years, we did we got almost all the capacity pretty much from from the hyperscalers, spot and on-demand capacity,\N比如在最初的几年里，我们几乎所有的算力都来自超大规模云厂商的按需和竞价算力。
+Dialogue: 0,0:13:44.23,0:13:52.67,Sub,,0,0,0,,mostly spot capacity, running in all the different regions, you know, using uh initially AWS, but also GCP and and over time Azure.\N主要使用现货容量，覆盖所有不同区域，最初使用 AWS，后来也用 GCP 和 Azure。
+Dialogue: 0,0:13:52.72,0:14:01.47,Sub,,0,0,0,,Uh we we started renting some capacity from Oracle pretty early cuz we wanted um 8 tons and 8 100s, and we got really good rates on those.\N我们很早就开始向甲骨文租用算力，因为我们想要8台800系列的设备，而且当时拿到的费率非常优惠。
+Dialogue: 0,0:14:01.52,0:14:05.19,Sub,,0,0,0,,Uh and and over time we added a couple more clouds like doing reservations,\N还有，随着时间推移，我们又增加了几个云服务，比如预订功能，
+Dialogue: 0,0:14:05.24,0:14:13.59,Sub,,0,0,0,,but but like still up until like actually end of last year, like most of our capacity was either spot or or 1-year reservations.\N但直到去年年底，我们的大部分算力仍处于按需或一年期预订的状态。
+Dialogue: 0,0:14:13.64,0:14:16.66,Sub,,0,0,0,,Spot means you're just like renting it right there and then Exactly.\N“租用”意味着你就在那一刻直接租到了。没错。
+Dialogue: 0,0:14:16.71,0:14:19.11,Sub,,0,0,0,,Yeah, and it's also preemptible, which we had to deal with.\N是的，它还具有可抢占性，这正是我们需要应对的问题。
+Dialogue: 0,0:14:19.16,0:14:25.43,Sub,,0,0,0,,Um but but it sort of works in aggregate cuz you can sort of just, you know, aggregate capacity from many, you know, hundreds of regions, basically.\N但总体上它还是能起作用的，因为你基本上可以从数百个区域汇聚算力。
+Dialogue: 0,0:14:25.48,0:14:28.79,Sub,,0,0,0,,So, that that that model worked really well until we started running up again.\N所以，那个模型之前运行得非常好，直到我们再次开始运行时。
+Dialogue: 0,0:14:28.84,0:14:33.01,Sub,,0,0,0,,I mean, first of all, like Modal started growing like very fast, and so we needed more capacity.\N我的意思是，首先，Modal 的增长非常迅速，所以我们需要更多的算力。
+Dialogue: 0,0:14:33.06,0:14:36.32,Sub,,0,0,0,,But fundamentally, also like the cloud market started changing a lot.\N但从根本上说，也像云计算市场一样发生了巨大变化。
+Dialogue: 0,0:14:36.38,0:14:44.30,Sub,,0,0,0,,Um so, in the last year, basically, now in order to get the capacity we need, we have to work with a much larger set of clouds.\N所以，过去一年里，为了获得所需的算力，我们必须与更多云服务商合作。
+Dialogue: 0,0:14:44.35,0:14:47.63,Sub,,0,0,0,,We actually work with almost 25 clouds at this point.\N我们目前实际上已经与近25个云平台合作。
+Dialogue: 0,0:14:47.68,0:14:52.96,Sub,,0,0,0,,And in many cases, um in order to get the capacity we want, like we we have to go and do,\N在很多情况下，为了获得我们想要的算力，我们不得不去这么做。
+Dialogue: 0,0:14:53.01,0:14:58.06,Sub,,0,0,0,,you know, 3-plus year deals, and you have to pay a meaningful amount of money up front.\N你知道，三年以上的合同，你得提前支付一笔可观的费用。
+Dialogue: 0,0:14:58.11,0:15:00.87,Sub,,0,0,0,,Uh and and you're locking in pricing on on a 3-year term, right?\N而且您是在锁定三年期的价格，对吧？
+Dialogue: 0,0:15:00.92,0:15:08.72,Sub,,0,0,0,,So, you know, like and and and so we have to spend the entire, you know, last 6 to 9 months, like, you know, kind of rethinking how we get capacity.\N所以，你知道，我们得花掉最后6到9个月，重新思考如何获取算力。
+Dialogue: 0,0:15:08.77,0:15:13.35,Sub,,0,0,0,,We had to build a whole procurement like desk, like we have like four guys working full-time, basically.\N我们得建一个完整的采购团队，就像我们有四个人全职在做这件事一样。
+Dialogue: 0,0:15:13.40,0:15:19.08,Sub,,0,0,0,,All they're doing is like procuring capacity, calling the clouds, you know, doing deals, vetting the capacity.\N他们做的不过是采购算力，联系云服务商，谈合作，评估算力资源。
+Dialogue: 0,0:15:19.13,0:15:24.88,Sub,,0,0,0,,We had to build a whole engineering team basically you have people just like managing like bare metal capacity from all\N我们不得不组建一个完整的工程团队，基本上就是有人专门负责管理来自各方的裸金属资源。
+Dialogue: 0,0:15:24.93,0:15:31.90,Sub,,0,0,0,,over the world and dealing with network issues and bad drives and GPUs falling off the bus and and all these things.\N全球范围内应对网络问题、硬盘故障、GPU掉线等各种问题。
+Dialogue: 0,0:15:31.95,0:15:33.35,Sub,,0,0,0,,We don't own capacity.\N我们并不拥有算力资源。
+Dialogue: 0,0:15:33.40,0:15:33.95,Sub,,0,0,0,,Mhm.\N嗯嗯。
+Dialogue: 0,0:15:34.00,0:15:38.50,Sub,,0,0,0,,We rent all the capacity so far, um you know, on on on typically these 3-year deals.\N到目前为止，我们租用了所有算力，通常都是三年期的合同。
+Dialogue: 0,0:15:38.55,0:15:40.11,Sub,,0,0,0,,And that's like a big decision.\N这可是一个重大决定。
+Dialogue: 0,0:15:40.16,0:15:40.85,Sub,,0,0,0,,Like should we buy?\N那我们应该买吗？
+Dialogue: 0,0:15:40.90,0:15:43.69,Sub,,0,0,0,,Should Should we you know, you know, or should we keep renting?\N我们是该继续租，还是该买了呢？
+Dialogue: 0,0:15:43.74,0:15:46.71,Sub,,0,0,0,,I I'm actually like not like mega dogmatic about it.\N其实我对这个事并不那么教条。
+Dialogue: 0,0:15:46.76,0:15:50.59,Sub,,0,0,0,,I I think renting is nice because there's a certain amount of capital efficiency to it.\N我觉得租赁挺好，因为其中有一定的资本效率。
+Dialogue: 0,0:15:50.64,0:15:56.67,Sub,,0,0,0,,If you're buying, you know, like I mean, first of all, there's an obvious like operational complexity of it.\N如果你在购买，比如说，首先，这其中显然存在明显的运营复杂性。
+Dialogue: 0,0:15:56.72,0:16:04.27,Sub,,0,0,0,,Like you have to, you know, deal with vendors and suppliers and and, you know, power and and and cables and and all kinds of stuff.\N你得应付供应商、供货商，还有电力、电缆等各种杂事。
+Dialogue: 0,0:16:04.32,0:16:06.37,Sub,,0,0,0,,But there's also, you know, financial complexity to it.\N但其中也存在财务上的复杂性。
+Dialogue: 0,0:16:06.42,0:16:07.35,Sub,,0,0,0,,Like how do you fund it?\N那资金从哪儿来呢？
+Dialogue: 0,0:16:07.40,0:16:12.67,Sub,,0,0,0,,Like should you raise equity, you know, and and you can raise a billion dollars and and go buy hardware for it.\N比如你要是筹集股权，你知道的，能筹到十亿美元，然后拿去购买硬件。
+Dialogue: 0,0:16:12.72,0:16:14.96,Sub,,0,0,0,,That's a very diluted way to do it.\N这样做未免太稀释了。
+Dialogue: 0,0:16:15.01,0:16:17.71,Sub,,0,0,0,,Um you can raise debt, but you know, if you raise debt, you know,\N嗯，你可以借债，但你知道，如果你借债的话，你知道，
+Dialogue: 0,0:16:17.76,0:16:22.81,Sub,,0,0,0,,you you typically want to have like locked-in long-term revenue to to to pay the interest rates.\N你通常希望拥有长期锁定的收入，以支付利息。
+Dialogue: 0,0:16:22.86,0:16:25.23,Sub,,0,0,0,,So that's also not trivial.\N所以这也不简单。
+Dialogue: 0,0:16:25.28,0:16:31.48,Sub,,0,0,0,,But, you know, like we look at the economics, we look at the the the operational complexity, we look at the risks.\N但你知道，我们得看看经济性，看看运营复杂性，还得看看风险。
+Dialogue: 0,0:16:31.54,0:16:35.15,Sub,,0,0,0,,Uh it's a complex trade-off and and we're open to to to to buying.\N嗯，这是一个复杂的权衡，我们愿意考虑购买。
+Dialogue: 0,0:16:35.20,0:16:37.96,Sub,,0,0,0,,We we're we're sort of There's all other constructs, too.\N我们其实也在考虑其他各种构想。
+Dialogue: 0,0:16:38.00,0:16:44.05,Sub,,0,0,0,,Like we're it's To get the capacity we need for for 2027, it's going to take a lot of work on on,\N为了在2027年达到所需的产能，我们需要付出大量努力。
+Dialogue: 0,0:16:44.10,0:16:47.39,Sub,,0,0,0,,you know, going a lot of different avenues to to to lock it up.\N你知道，我尝试了各种不同的途径来搞定它。
+Dialogue: 0,0:16:47.44,0:16:51.99,Sub,,0,0,0,,So, do you have to hire a lot of like finance people to do all this stuff or not really?\N所以，做这些事情必须雇很多财务人员吗？其实不用。
+Dialogue: 0,0:16:52.04,0:16:56.74,Sub,,0,0,0,,You know, I've had to spend a lot of time on this and we we've had to to to spend a lot of time on this.\N你知道，我得花很多时间在这上面，我们确实也得花很多时间在这上面。
+Dialogue: 0,0:16:56.79,0:17:03.10,Sub,,0,0,0,,And I I do think over time, I mean, there there is a lot of, you know, these are very expensive assets, uh the hardware.\N而且我认为，随着时间推移，这些硬件确实非常昂贵，你知道的。
+Dialogue: 0,0:17:03.16,0:17:05.90,Sub,,0,0,0,,And, you know, I think I mean, it's kind of staggering.\N而且你知道吗，我觉得这简直令人震惊。
+Dialogue: 0,0:17:05.96,0:17:12.64,Sub,,0,0,0,,You're starting to see like AI investment starting to become like several percentage points of of of GDP of the US and you know,\N你开始看到，AI投资正逐渐占到美国GDP的几个百分点。
+Dialogue: 0,0:17:12.69,0:17:17.31,Sub,,0,0,0,,starting to see like interest rates in in America shooting up in the last few weeks.\N最近几周，开始看到美国的利率在急剧上升。
+Dialogue: 0,0:17:17.36,0:17:18.04,Sub,,0,0,0,,And I I mean,\N而且我是说，
+Dialogue: 0,0:17:18.09,0:17:25.19,Sub,,0,0,0,,I like at this stage like you know and then you go and look at the neoclass like these are very very sophisticated financial engineering companies and\N这个时候我挺喜欢的，你知道的，然后你去看那些新云厂商，它们都是极其复杂的金融工程公司。
+Dialogue: 0,0:17:25.24,0:17:31.75,Sub,,0,0,0,,so yeah we we look at that and you know we look at all the options and and it's possible we might have to do similar things ourselves.\N所以，是的，我们会看看这些情况，了解所有选项，也许我们最终也得自己做类似的事。
+Dialogue: 0,0:17:31.80,0:17:40.44,Sub,,0,0,0,,I wouldn't want to like I would rather focus on being you know like a very lean software company like doing the things we're good at.\N我不希望变成那样，我更愿意专注于做一家精干的软件公司，专注于我们擅长的事情。
+Dialogue: 0,0:17:40.49,0:17:46.84,Sub,,0,0,0,,I don't think it's good in general for software companies to own hard assets you know in the same way as\N我认为软件公司拥有硬件资产并不太好，就像
+Dialogue: 0,0:17:46.89,0:17:53.57,Sub,,0,0,0,,like should you own your office like I I don't think that's necessarily the right uh solution for for most companies.\N就像你该拥有自己的办公室吗？我觉得这对大多数公司来说未必是正确的解决方案。
+Dialogue: 0,0:17:53.62,0:17:57.27,Sub,,0,0,0,,But of course like in order to get the capacity we want like you know everything is on the table.\N但当然，为了获得我们想要的产能，所有选项都在考虑范围内。
+Dialogue: 0,0:17:57.32,0:18:02.99,Sub,,0,0,0,,Yeah and I guess the supply is going to be constrained for a while so you kind of have to do that.\N是的，我猜供应在一段时间内仍会受限，所以你不得不这么做。
+Dialogue: 0,0:18:03.04,0:18:06.31,Sub,,0,0,0,,Like do you do you agree with that or do you think this is just like a moment in time?\N你是同意这个观点，还是觉得这只是个暂时的现象？
+Dialogue: 0,0:18:06.36,0:18:07.60,Sub,,0,0,0,,I don't necessarily agree with that.\N我并不完全同意这一点。
+Dialogue: 0,0:18:07.65,0:18:14.14,Sub,,0,0,0,,I mean like Nvidia's delivering you know several hundred thousand black walls you know a month right and and I I I don't want to say like\N我的意思是，英伟达每月交付几万台黑墙，你知道的，而我，我不想说……
+Dialogue: 0,0:18:14.19,0:18:23.15,Sub,,0,0,0,,the market is like 100% efficient but like you know in general like if you're willing to pay a high price uh you can get GPU capacity right?\N市场效率几乎达到100%，但总的来说，如果你愿意支付高价，确实能拿到GPU算力，对吧？
+Dialogue: 0,0:18:23.20,0:18:29.17,Sub,,0,0,0,,Like if you're willing to pay more than everyone else and and of course Anthropic and Open AI is buying up as much as they can\N如果你愿意出价高于所有人，当然，Anthropic 和 OpenAI 也在尽可能地收购
+Dialogue: 0,0:18:29.22,0:18:33.18,Sub,,0,0,0,,and but fundamentally like there's constantly supply coming on the market and and\N但从根本上说，市场上始终有源源不断的供应出现。
+Dialogue: 0,0:18:33.23,0:18:37.71,Sub,,0,0,0,,so I don't I don't necessarily think it's like a fully cornered resource.\N所以我认为它并不一定是一种被完全垄断的资源。
+Dialogue: 0,0:18:37.76,0:18:39.55,Sub,,0,0,0,,Prices are going up.\N价格正在上涨。
+Dialogue: 0,0:18:39.60,0:18:42.71,Sub,,0,0,0,,And and I do think it's worth kind of reflecting on that as like the normal\N而且我认为值得认真思考一下，这就像平常一样
+Dialogue: 0,0:18:42.76,0:18:47.18,Sub,,0,0,0,,state of hardware is like it's like out of gravity like eventually hardware prices always go down.\N硬件状态就像脱离了重力，最终硬件价格总会下降。
+Dialogue: 0,0:18:47.23,0:18:52.11,Sub,,0,0,0,,So we're a little bit in like a weird sort of period of time where like hardware prices are going up.\N所以我们正处在一个有点奇怪的时期，硬件价格正在上涨。
+Dialogue: 0,0:18:52.16,0:18:56.09,Sub,,0,0,0,,And you know it it it's hard to say you know how how long is this going to last you know could be\N你知道，很难说这到底能持续多久，谁知道呢。
+Dialogue: 0,0:18:56.14,0:19:02.20,Sub,,0,0,0,,another 6 months could be another 36 months like it's really hard to to to know how how how long and but but I\N再过六个月，可能就又得花36个月，真的很难判断到底要多久。
+Dialogue: 0,0:19:02.25,0:19:07.75,Sub,,0,0,0,,I fundamentally don't know if like it's it's true to say like you know you need to buy capacity in order to to\N我根本不确定，是否真如人们所说，你必须购买算力才能实现。
+Dialogue: 0,0:19:07.80,0:19:14.20,Sub,,0,0,0,,to me that's a little bit the sort of almost like the uh great toilet paper shortage of you know the pandemic or whatever,\N对我来说，这有点像是疫情期间那种“卫生纸短缺”的感觉，或者说是类似的情况。
+Dialogue: 0,0:19:14.26,0:19:14.52,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:19:14.52,0:19:17.87,Sub,,0,0,0,,Like, you know, at least this like, you know, run on the bank type situations.\N就像，你知道的，至少这种类似银行类的情况，还能跑起来。
+Dialogue: 0,0:19:17.92,0:19:21.61,Sub,,0,0,0,,And but that being said, like, you know, capacity is going to be tight for a while.\N不过话说回来，你知道的，产能在一段时间内还是会很紧张。
+Dialogue: 0,0:19:21.66,0:19:23.10,Sub,,0,0,0,,And and, you know, prices are going up.\N而且，你知道的，价格在上涨。
+Dialogue: 0,0:19:23.15,0:19:28.98,Sub,,0,0,0,,And, you know, luckily, I think you know, it's not even necessarily bad for us if prices go up cuz cuz,\N而且你知道吗，幸运的是，我觉得价格涨了对我们来说也不一定是坏事，毕竟……
+Dialogue: 0,0:19:29.03,0:19:31.96,Sub,,0,0,0,,you know, scarcity also means like we can charge more from our customers.\N你知道，稀缺性也意味着我们可以向客户收取更高的价格。
+Dialogue: 0,0:19:32.01,0:19:37.40,Sub,,0,0,0,,And and, you know, and the fact that we have a lot of reservations locked in at a rate means like to some extent,\N而且你知道，我们有很多预订已经锁定在某个价格，从某种程度上来说，
+Dialogue: 0,0:19:37.45,0:19:40.75,Sub,,0,0,0,,we effectively like long GPU prices already.\N我们实际上已经提前享受到了长期的GPU价格。
+Dialogue: 0,0:19:40.80,0:19:45.55,Sub,,0,0,0,,Um, so, um, I I don't necessarily worry too much about prices going up.\N呃，呃，我其实不太担心价格会上涨。
+Dialogue: 0,0:19:45.60,0:19:47.60,Sub,,0,0,0,,I do worry more about actually prices collapsing.\N我更担心实际价格会崩溃。
+Dialogue: 0,0:19:47.65,0:19:50.17,Sub,,0,0,0,,I don't think that's going to happen anytime soon.\N我认为那不会很快发生。
+Dialogue: 0,0:19:50.22,0:19:53.95,Sub,,0,0,0,,Uh, but I think that would be a quite bad thing for a lot of the players in the market.\N嗯，但我认为这对市场上的很多参与者来说会是一件非常糟糕的事。
+Dialogue: 0,0:19:54.00,0:19:55.11,Sub,,0,0,0,,Why would that be bad?\N那有什么不好的？
+Dialogue: 0,0:19:55.16,0:20:00.51,Sub,,0,0,0,,I think it would be bad for if for anyone who's locked in a lot of supply.\N我认为，如果任何人被锁定在大量供应中，那将是个糟糕的局面。
+Dialogue: 0,0:20:00.56,0:20:02.54,Sub,,0,0,0,,Yeah, cuz they paid way too much in They paid too much.\N是啊，因为他们付得太多了，确实付得太多了。
+Dialogue: 0,0:20:02.59,0:20:05.03,Sub,,0,0,0,,You know, the so there's a risk of buying at the top, right?\N你知道，买在最高点是有风险的，对吧？
+Dialogue: 0,0:20:05.08,0:20:07.53,Sub,,0,0,0,,And and again, like I I don't worry about that that much.\N而且再说一遍，就像我说的，我并不太担心那个。
+Dialogue: 0,0:20:07.58,0:20:11.37,Sub,,0,0,0,,Like I don't I don't think it's going to be like, you know, it's going to happen anytime soon.\N我觉得不会像你说的那样，很快就会发生。
+Dialogue: 0,0:20:11.42,0:20:15.93,Sub,,0,0,0,,But like, you know, like I said, like hardware prices in the very long run, they tend to go down.\N但就像我说的，从长远来看，硬件价格通常会下降。
+Dialogue: 0,0:20:15.98,0:20:18.66,Sub,,0,0,0,,And so, it's it's worth, you know, reflecting on that, right?\N所以，值得好好想想这一点，对吧？
+Dialogue: 0,0:20:18.71,0:20:23.79,Sub,,0,0,0,,Right right like right now, I think I think your your capacity is constrained.\N没错，就像现在，我觉得你的能力是受限制的。
+Dialogue: 0,0:20:23.84,0:20:28.43,Sub,,0,0,0,,And and that leads to sort of, you know, in economic terms, there's a scarcity rent, right?\N而且这导致了某种经济上的情况，你知道的，存在稀缺性租金，对吧？
+Dialogue: 0,0:20:28.48,0:20:30.75,Sub,,0,0,0,,Like, who captured the scarcity rent?\N比如，谁攫取了稀缺性租金？
+Dialogue: 0,0:20:30.80,0:20:32.63,Sub,,0,0,0,,I I think it primarily goes to two places.\N我认为主要流向两个地方。
+Dialogue: 0,0:20:32.68,0:20:36.17,Sub,,0,0,0,,Mostly Nvidia, but of course, but also to some extent, Neo Clouds.\N主要是英伟达，当然也包括一定程度上的新云厂商。
+Dialogue: 0,0:20:36.22,0:20:42.37,Sub,,0,0,0,,Like, Neo Clouds and in general, like, you know, anyone owning capacity has better economics.\N比如，新云厂商，总的来说，任何拥有算力资源的公司，经济性都会更好。
+Dialogue: 0,0:20:42.42,0:20:47.91,Sub,,0,0,0,,Like, that's undeniably true today with capacity being constrained.\N就像现在，产能受限，这一点毋庸置疑。
+Dialogue: 0,0:20:47.96,0:20:51.94,Sub,,0,0,0,,Long term, you know, in the very long run, I don't think that's necessarily entirely true, right?\N从长远来看，我知道，非常长远的未来，我认为这未必完全正确，对吧？
+Dialogue: 0,0:20:51.99,0:20:55.63,Sub,,0,0,0,,Like, there's always going to be a little bit of a premium you can get from owning GPUs.\N比如，拥有GPU总能带来一点溢价。
+Dialogue: 0,0:20:55.68,0:21:01.90,Sub,,0,0,0,,But is it worth the risk, you know, is it worth the risk like holding these like very expensive assets on your balance sheet?\N但值得冒这个风险吗？你知道，把这类非常昂贵的资产放在资产负债表上，值得吗？
+Dialogue: 0,0:21:01.95,0:21:02.85,Sub,,0,0,0,,I'm not so sure.\N我不太确定。
+Dialogue: 0,0:21:02.90,0:21:04.16,Sub,,0,0,0,,But, you know, we're going to see.\N不过，谁知道呢，我们拭目以待。
+Dialogue: 0,0:21:04.21,0:21:06.03,Sub,,0,0,0,,Like, it's going to take a a years to get through this.\N这得花好几年才能搞定。
+Dialogue: 0,0:21:06.08,0:21:09.88,Sub,,0,0,0,,And and and in the long run, you know, we might own some, we might rent some,\N而且长远来看，我们或许会拥有部分，也会租赁部分。
+Dialogue: 0,0:21:09.93,0:21:14.51,Sub,,0,0,0,,maybe a combination, maybe do some other crazy stuff, joint ventures, who knows.\N也许是一种组合，也许再搞点别的疯狂操作，比如合资企业，谁知道呢。
+Dialogue: 0,0:21:14.56,0:21:17.66,Sub,,0,0,0,,Maybe some complex SPVs or whatever.\N也许是一些复杂的特殊目的实体之类的。
+Dialogue: 0,0:21:17.70,0:21:19.27,Sub,,0,0,0,,Um everything is on the table.\N所有事情都在讨论范围内。
+Dialogue: 0,0:21:19.32,0:21:22.46,Sub,,0,0,0,,How do you compete with OpenAI and Anthropic in buying GPU capacity?\N你如何在购买GPU算力方面与OpenAI和Anthropic竞争？
+Dialogue: 0,0:21:22.51,0:21:25.99,Sub,,0,0,0,,I'm assuming they'd want to like buy up literally everything that's available.\N我猜他们恐怕想把所有能买到的东西都买下来。
+Dialogue: 0,0:21:26.04,0:21:32.42,Sub,,0,0,0,,They are and and I and I think what you're seeing is um you know, a lot of the the the price is going up is a reflection of that.\N他们确实如此，我认为你看到的，就是价格上升，很大程度上反映了这一点。
+Dialogue: 0,0:21:32.47,0:21:35.98,Sub,,0,0,0,,That being said, you know, Nvidia is shipping a lot of stuff.\N话虽如此，你知道的，英伟达正在出货大量产品。
+Dialogue: 0,0:21:36.03,0:21:40.99,Sub,,0,0,0,,I think also like to some extent like Nvidia's like kind of prefer a little bit of a diversification.\N我认为，某种程度上，英伟达也倾向于适度的多元化。
+Dialogue: 0,0:21:41.04,0:21:44.14,Sub,,0,0,0,,Like they don't want like, you know, small amount of large buyers.\N他们好像并不想要那种少量的大买家。
+Dialogue: 0,0:21:44.18,0:21:49.31,Sub,,0,0,0,,In much in the same way as you see, you know, hyperscalers getting a little bit of a constrained allocation.\N正如你所见，超大规模云厂商也面临资源分配略显受限的情况。
+Dialogue: 0,0:21:49.36,0:21:55.96,Sub,,0,0,0,,Uh I I think, you know, also Nvidia prefers to see, you know, a lot of new clouds and a lot of alternative clouds like getting more allocation.\N嗯，我觉得英伟达也希望看到，比如更多的新云服务商，以及更多替代性云服务商，从而获得更多的资源分配。
+Dialogue: 0,0:21:56.01,0:22:03.33,Sub,,0,0,0,,And I think a little bit what we see in the market is also this is more speculation, but I but I think we see,\N我认为市场上看到的一些现象，某种程度上更多是投机，但我认为我们确实看到了。
+Dialogue: 0,0:22:03.38,0:22:10.65,Sub,,0,0,0,,you know, smaller clouds that are a little bit more sort of risky to work with being more of an opportunity for us.\N你知道，那些规模较小、风险稍高一点的云，反而对我们来说是更大的机会。
+Dialogue: 0,0:22:10.70,0:22:13.73,Sub,,0,0,0,,Like where, you know, maybe Nvidia is all right,\N就像，你知道的，也许英伟达也没问题，
+Dialogue: 0,0:22:13.78,0:22:20.12,Sub,,0,0,0,,Anthropic and OpenAI my feeling is like they prefer to buy from like the the tried and\N我觉得Anthropic和OpenAI更倾向于从那些经过验证的供应商那里采购。
+Dialogue: 0,0:22:20.17,0:22:23.05,Sub,,0,0,0,,true Uh and part of it is also because they had to do a lot of training runs,\N确实，部分原因也在于他们不得不进行大量训练运行。
+Dialogue: 0,0:22:23.10,0:22:24.77,Sub,,0,0,0,,so they need to have like very large blocks.\N所以他们需要有非常大的区块。
+Dialogue: 0,0:22:24.82,0:22:32.32,Sub,,0,0,0,,But there's plenty of capacity out there, you know, you can get 32 nodes in Armenia, you can get 128 nodes in Indonesia.\N但外面有很多可用的算力，你知道的，你可以在亚美尼亚部署32个节点，\N也可以在印度尼西亚部署128个节点。
+Dialogue: 0,0:22:32.37,0:22:37.32,Sub,,0,0,0,,Like, you know, like we love that kind of Like, you know, so so we can go out there and like get a lot of,\N就像，你知道的，我们特别喜欢这种，所以我们可以出去，获得大量……
+Dialogue: 0,0:22:37.37,0:22:41.11,Sub,,0,0,0,,you know, smaller capacity all over the world pretty good prices.\N你知道，全球各地的小容量产品价格都挺不错的。
+Dialogue: 0,0:22:41.16,0:22:46.04,Sub,,0,0,0,,Is it pretty much just like if someone offers you like a certain number of GPUs, like that's all you care about?\N是不是基本上只要有人给你提供一定数量的GPU，你就只关心这个？
+Dialogue: 0,0:22:46.09,0:22:52.95,Sub,,0,0,0,,Is there nothing like, oh, you care about like how reliable it is, you know, is it just some like janky warehouse that someone has these in?\N难道就没有人关心它到底有多可靠吗？你知道的，这不会只是某个杂乱无章的仓库，随便放着这些设备吧？
+Dialogue: 0,0:22:53.00,0:22:55.17,Sub,,0,0,0,,I mean, sometimes it's kind of a janky warehouse.\N我的意思是，有时候那地方简直像个简陋的仓库。
+Dialogue: 0,0:22:55.22,0:22:58.96,Sub,,0,0,0,,It feels like, you know, but but like we do have like a spec sheet basically.\N感觉就像，你知道的，虽然我们确实有一份基本的规格表。
+Dialogue: 0,0:22:59.00,0:23:01.86,Sub,,0,0,0,,Like when we talk to vendors, the first thing we do is we send them a spec sheet.\N跟供应商沟通时，我们首先做的就是把规格书发给他们。
+Dialogue: 0,0:23:01.90,0:23:04.03,Sub,,0,0,0,,We say, "We need this number of IOPS.\N我们说：“我们需要这么多 IOPS。”
+Dialogue: 0,0:23:04.08,0:23:08.59,Sub,,0,0,0,,We need, you know, like the CPU needs to be at least at least, you know,\N我们需要的，你知道，就像CPU至少得达到，你知道，
+Dialogue: 0,0:23:08.64,0:23:11.96,Sub,,0,0,0,,have have this many, you know, whatever the pass mark scores or whatever it is.\N你有多少分，反正就是及格线分数之类的，不管怎样。
+Dialogue: 0,0:23:12.02,0:23:19.31,Sub,,0,0,0,,We need to see like, you know, minimum, you know, north north south bandwidth egress and and ingress."\N我们需要看到，比如，最低限度，南北向的带宽出口和入口。
+Dialogue: 0,0:23:19.36,0:23:22.03,Sub,,0,0,0,,Uh so so we do have a list of requirements.\N呃，所以我们确实有一份需求清单。
+Dialogue: 0,0:23:22.08,0:23:26.97,Sub,,0,0,0,,Often we try to do like an acceptance testing period where we get like one node and then run some tests.\N通常我们会进行一次接受测试，比如拿一个节点运行一些测试。
+Dialogue: 0,0:23:27.02,0:23:31.26,Sub,,0,0,0,,Over time, you know, like to some extent it also involves a little bit of a leap of faith.\N随着时间推移，某种程度上，这也需要一点信念的飞跃。
+Dialogue: 0,0:23:31.32,0:23:35.72,Sub,,0,0,0,,You know, sometimes we sign very big commitments, you know, tens or hundreds of millions of dollars,\N你知道，有时候我们会签下非常大的承诺，比如数千万甚至上亿美元的合同。
+Dialogue: 0,0:23:35.77,0:23:39.28,Sub,,0,0,0,,and we start working with the vendor that we still don't fully know.\N我们开始与那个我们还不完全了解的供应商合作。
+Dialogue: 0,0:23:39.33,0:23:42.14,Sub,,0,0,0,,And, you know, over time like you know, we'll see.\N反正随着时间推移，我们就会知道了。
+Dialogue: 0,0:23:42.19,0:23:46.78,Sub,,0,0,0,,You know, and and and I think over like a little bit of like is there's a little bit of sort of just,\N你知道，我觉得稍微想一下，其实里面有一点点，就是说……
+Dialogue: 0,0:23:46.82,0:23:52.29,Sub,,0,0,0,,you know, our own sort of like, you know, how SemiAnalysis has a ClusterMAX.\N你知道，就像 SemiAnalysis 有 ClusterMAX 一样，我们也有自己的类似产品。
+Dialogue: 0,0:23:52.34,0:23:56.39,Sub,,0,0,0,,I kind of feel like we almost like have our own like modal max score internally.\N我感觉我们内部几乎已经有了自己的模态最大得分。
+Dialogue: 0,0:23:56.44,0:23:59.39,Sub,,0,0,0,,Like I know which vendors I like more than others, you know,\N就像我知道哪些供应商比其他供应商更合我心意一样，你知道的。
+Dialogue: 0,0:23:59.44,0:24:05.39,Sub,,0,0,0,,like and and and we sort of prefer to do additional deals with the vendors that we've seen, you know, very good reliability.\N而且我们更倾向于跟那些我们见过、可靠性非常好的供应商做更多合作。
+Dialogue: 0,0:24:05.44,0:24:10.57,Sub,,0,0,0,,Not just that also, like it it's not just reliability, it's also are they very responsive when when we have,\N不仅如此，它不仅可靠，而且在我们遇到问题时，他们也反应非常迅速。
+Dialogue: 0,0:24:10.62,0:24:15.04,Sub,,0,0,0,,you know, support issues, do they fix the issues we ask for, the turnaround time.\N你知道的，支持问题，他们会不会解决我们提出的问题，响应时间是多久。
+Dialogue: 0,0:24:15.09,0:24:18.39,Sub,,0,0,0,,If things go down, you know, how quickly do they fix it, like things like that.\N如果出问题了，你知道，他们能多快修好，类似这样的事。
+Dialogue: 0,0:24:18.44,0:24:23.47,Sub,,0,0,0,,Do you agree that the demand for intelligence is basically infinite?\N你同意智能的需求基本上是无限的吗？
+Dialogue: 0,0:24:23.52,0:24:28.21,Sub,,0,0,0,,And if so, like why wouldn't you just buy up as much as you as much capacity as possible?\N如果是这样，那为什么不尽可能多地购买算力呢？
+Dialogue: 0,0:24:28.26,0:24:31.15,Sub,,0,0,0,,And then like if you overbuy, you can just like sell it to somebody else.\N然后如果你买多了，就可以直接转卖给别人。
+Dialogue: 0,0:24:31.20,0:24:36.91,Sub,,0,0,0,,I think it's very easy to say when there's like a scarce resource, like let's just buy as much as you can.\N我觉得当某种资源稀缺时，说“那就尽可能多买”很容易。
+Dialogue: 0,0:24:36.96,0:24:41.12,Sub,,0,0,0,,But I think, you know, first of all, like if we bought it today, we couldn't utilize all of it.\N但我觉得，首先，如果我们今天买了，也用不了全部。
+Dialogue: 0,0:24:41.16,0:24:43.23,Sub,,0,0,0,,Like we could use utilize a lot of it, right?\N就像我们可以利用其中很多一样，对吧？
+Dialogue: 0,0:24:43.28,0:24:46.19,Sub,,0,0,0,,But like We can sell it off to somebody else who wants to use it, right?\N但我们可以把它卖给其他想要使用它的人，对吧？
+Dialogue: 0,0:24:46.24,0:24:53.52,Sub,,0,0,0,,I think the challenge is like if there was like something in the market that happens, there are a lot of correlations that happen at the same time.\N我认为挑战在于，如果市场上发生什么事，往往会有大量相关性同时出现。
+Dialogue: 0,0:24:53.56,0:25:04.36,Sub,,0,0,0,,If, you know, price is going down and utilization going down and the market for reselling capacity goes vanishes at the kind of the same time.\N如果价格下降、利用率下降，而转售算力的市场又在同一时间消失的话。
+Dialogue: 0,0:25:04.41,0:25:09.52,Sub,,0,0,0,,I'm sitting here and like I'm I'm extremely aggressive like buying capacity every day and like raising money to buy,\N我坐在这儿，每天都在极度激进地购买算力，同时也在不断募资，只为买更多算力。
+Dialogue: 0,0:25:09.57,0:25:11.73,Sub,,0,0,0,,you know, so overall I'm I'm very bullish,\N你知道，总的来说，我非常乐观。
+Dialogue: 0,0:25:11.78,0:25:19.47,Sub,,0,0,0,,but like I do want to point out and like, you know, like there are tail risks here and and when those tail risks happen like it could be get very bad.\N但我想指出的是，这里确实存在一些尾部风险，一旦这些风险发生，情况可能会非常严重。
+Dialogue: 0,0:25:19.52,0:25:20.99,Sub,,0,0,0,,Part of it is like maybe I'm, you know,\N其中一部分是，也许我，你知道，
+Dialogue: 0,0:25:21.04,0:25:24.74,Sub,,0,0,0,,I'm just old and I've seen this in the past like I was actually had my first job in 1999\N我年纪大了，过去见过类似情况，我实际上1999年就参加工作了
+Dialogue: 0,0:25:24.79,0:25:30.15,Sub,,0,0,0,,so I saw the dot com crisis and I've seen the great financial crisis and things like that and you know,\N所以我经历过互联网泡沫危机，也经历过全球金融危机，类似这样的事情，你知道的，
+Dialogue: 0,0:25:30.20,0:25:35.47,Sub,,0,0,0,,like I want to build a company that that is around for like 20 to 30 50 more years, right?\N我想创办一家能再持续20到30年，甚至50年的公司，对吧？
+Dialogue: 0,0:25:35.52,0:25:42.43,Sub,,0,0,0,,Like and and so, you know, I I think we can certainly go out and like buy an insane amount of capacity right now and try to just corner the market.\N点赞，所以你知道吗，我觉得我们现在完全可以大手笔购买大量算力，试图垄断市场。
+Dialogue: 0,0:25:42.48,0:25:44.50,Sub,,0,0,0,,But you know, do you know about the Hunt brothers?\N不过你知道霍恩兄弟吗？
+Dialogue: 0,0:25:44.55,0:25:46.93,Sub,,0,0,0,,It's like a legendary story in trading.\N这就像交易界的一个传奇故事。
+Dialogue: 0,0:25:46.98,0:25:49.27,Sub,,0,0,0,,They try to corner the silver market.\N他们试图垄断白银市场。
+Dialogue: 0,0:25:49.32,0:25:50.60,Sub,,0,0,0,,It fell spectacularly.\N它惨败了。
+Dialogue: 0,0:25:50.65,0:25:57.27,Sub,,0,0,0,,Um, you know, so it's a cornering the market I I think in general like it can be um not not so good idea.\N嗯，你知道，垄断市场这种做法，一般来说可能不是个好主意。
+Dialogue: 0,0:25:57.32,0:26:00.46,Sub,,0,0,0,,Um, and but but we are in general very very aggressive.\N嗯，不过我们总体上非常激进。
+Dialogue: 0,0:26:00.51,0:26:02.98,Sub,,0,0,0,,But but we're we're ramping up, you know,\N但我们正在加紧推进，你知道的。
+Dialogue: 0,0:26:03.03,0:26:07.99,Sub,,0,0,0,,like at an at an aggressive plan that basically matches our demand growth and matches where we want to\N一个激进的计划，基本能匹配我们的需求增长，也符合我们想要的发展方向。
+Dialogue: 0,0:26:08.04,0:26:13.19,Sub,,0,0,0,,try to get to at the end of next year in terms of run runway or run rate I mean.\N争取到明年年底实现跑道或运行速率的突破。
+Dialogue: 0,0:26:13.24,0:26:17.23,Sub,,0,0,0,,Are you only buying up Nvidia stuff or also like, you know,\N你只是在买英伟达的产品，还是也买点别的东西？
+Dialogue: 0,0:26:17.28,0:26:22.51,Sub,,0,0,0,,maybe a capacity from other types of companies like are you guys looking at Cerebrium and We're we're looking at it.\N也许来自其他类型公司的产能，比如你们在关注Cerebrium吗？我们确实在关注。
+Dialogue: 0,0:26:22.56,0:26:26.06,Sub,,0,0,0,,I I I think the alternative accelerators are starting to get very interesting.\N我觉得替代性加速器正变得越来越有意思。
+Dialogue: 0,0:26:26.10,0:26:31.44,Sub,,0,0,0,,It's you know, ironically like every every year in the last five maybe even 10 years I've been saying, you know,\N说来讽刺，过去五年，甚至可能十年里，我每年都在说，你知道……
+Dialogue: 0,0:26:31.49,0:26:35.86,Sub,,0,0,0,,like next year it's going to be the year of like non Nvidia accelerators and and then I'm always wrong.\N明年大概会是不依赖英伟达加速器的一年，但我总是猜错。
+Dialogue: 0,0:26:35.91,0:26:40.23,Sub,,0,0,0,,But but I do think 2027 might be the year of non Nvidia accelerators finally.\N但我确实认为，2027 年可能才是非英伟达加速器真正崛起的一年。
+Dialogue: 0,0:26:40.28,0:26:46.28,Sub,,0,0,0,,So we'll we'll see if I'm wrong this year, too, but so I I you know, AMDs are starting to get like really good scores on certain things.\N所以今年我是不是也会错，不过我知道，AMD在某些方面开始表现得非常出色了。
+Dialogue: 0,0:26:46.33,0:26:51.54,Sub,,0,0,0,,I I think, you know, TPUs are are obviously used very, you know, widely internally at Google.\N我知道，TPU 在谷歌内部被广泛使用，这一点显而易见。
+Dialogue: 0,0:26:51.60,0:26:52.82,Sub,,0,0,0,,They seem to work really well.\N它们似乎效果非常好。
+Dialogue: 0,0:26:52.87,0:26:54.09,Sub,,0,0,0,,I I don't know much about Tranium.\N我对特里尼姆了解不多。
+Dialogue: 0,0:26:54.14,0:26:57.39,Sub,,0,0,0,,I I don't feel like I see quite as But, you know, the the team is very good.\N我不觉得我看到的那么明显，不过你知道的，团队非常棒。
+Dialogue: 0,0:26:57.44,0:27:00.43,Sub,,0,0,0,,I know they're working on a lot of the software stuff.\N我知道他们正在开发很多软件方面的东西。
+Dialogue: 0,0:27:00.48,0:27:02.12,Sub,,0,0,0,,You know, hardware is hard in a in a certain way.\N你知道，硬件在某种程度上确实很难。
+Dialogue: 0,0:27:02.17,0:27:03.14,Sub,,0,0,0,,Like, software is like easier.\N软件方面要简单一些。
+Dialogue: 0,0:27:03.19,0:27:07.03,Sub,,0,0,0,,And that makes me feel like, you know, if we just fix the sort of software layer for these accelerators,\N这让我觉得，如果我们能搞定这些加速器的软件层，那就太好了。
+Dialogue: 0,0:27:07.08,0:27:09.04,Sub,,0,0,0,,like I think there's going to be a lot of demand for them.\N我觉得它们的需求会很大。
+Dialogue: 0,0:27:09.09,0:27:16.59,Sub,,0,0,0,,And And I think fundamentally, you know, with Nvidia being such a bottleneck, like we'll probably see, you know, more alternative accelerators.\N而且我认为，从根本上说，由于英伟达已成为一个瓶颈，我们可能会看到更多替代性加速器的出现。
+Dialogue: 0,0:27:16.64,0:27:18.76,Sub,,0,0,0,,That being said, you know, there's bottlenecks further down the pipe.\N话虽如此，但管道更深处仍存在瓶颈。
+Dialogue: 0,0:27:18.81,0:27:21.32,Sub,,0,0,0,,I mean, you know, there's like TSMC and ASML.\N我的意思是，你知道的，像台积电和阿斯麦这样的公司。
+Dialogue: 0,0:27:21.37,0:27:24.58,Sub,,0,0,0,,Maybe like a deeper bottleneck to all of this anyway.\N也许这背后存在一个更深层次的瓶颈。
+Dialogue: 0,0:27:24.63,0:27:29.75,Sub,,0,0,0,,Uh but, you know, long term, I think monopolies don't always last.\N不过，长远来看，我认为垄断并不总是能持久。
+Dialogue: 0,0:27:29.80,0:27:33.31,Sub,,0,0,0,,And so, I I'm I think it'd be healthy for the market to have more alternative.\N因此，我认为市场拥有更多替代选择会更有益。
+Dialogue: 0,0:27:33.36,0:27:35.49,Sub,,0,0,0,,As much as I love Nvidia, like to make that clear.\N尽管我很喜欢英伟达，但我想把这一点说清楚。
+Dialogue: 0,0:27:35.54,0:27:38.58,Sub,,0,0,0,,Like, I mean, they're obviously an amazing company and with an amazing product.\N比如说，他们显然是一家了不起的公司，产品也极其出色。
+Dialogue: 0,0:27:38.63,0:27:42.58,Sub,,0,0,0,,Um I I do expect to see a little bit more divers- diversity in in the market.\N嗯，我确实预期市场会稍微多一些多样性。
+Dialogue: 0,0:27:42.63,0:27:46.23,Sub,,0,0,0,,I also also thinks, you know, like Cerebras and Groq and these things.\N我还觉得，你知道，像 Cerebras 和 Groq 这些公司。
+Dialogue: 0,0:27:46.28,0:27:49.67,Sub,,0,0,0,,Yeah, what are your thoughts on like some of those uh providers?\N嗯，你对那些供应商有什么看法吗？
+Dialogue: 0,0:27:49.72,0:27:50.71,Sub,,0,0,0,,I think they're pretty exciting.\N我觉得它们非常令人兴奋。
+Dialogue: 0,0:27:50.76,0:27:54.11,Sub,,0,0,0,,And, you know, and and you see them doing really well on on certain workloads.\N而且你知道，你也会看到它们在某些工作负载上表现得非常出色。
+Dialogue: 0,0:27:54.16,0:27:59.63,Sub,,0,0,0,,And, you know, there there's some interesting, you know, people doing these like hybrid, you know, disaggregated inference where they run,\N而且你知道，有些有趣的人正在做这种混合的、解耦的推理，他们把推理过程拆开运行，
+Dialogue: 0,0:27:59.68,0:28:04.63,Sub,,0,0,0,,you know, Nvidia for the prefill and and Cerebras for the decode and and things like that. heard of that, actually.\N你知道吗，预填充用英伟达，解码用 Cerebras，类似这样的情况，我确实听说过。
+Dialogue: 0,0:28:04.68,0:28:05.84,Sub,,0,0,0,,Yeah, and, you know, Groq, too.\N对，还有 Groq 也一样。
+Dialogue: 0,0:28:05.89,0:28:10.14,Sub,,0,0,0,,Like, cuz a lot of these things, you know, certain things are compute bound, certain things are memory bound.\N比如，很多情况是算力受限，有些则是内存受限。
+Dialogue: 0,0:28:10.18,0:28:11.92,Sub,,0,0,0,,So, you can sort of mix and match.\N所以，你可以随意组合搭配。
+Dialogue: 0,0:28:11.97,0:28:13.83,Sub,,0,0,0,,Uh and I think that's quite exciting.\N嗯，我觉得这非常令人兴奋。
+Dialogue: 0,0:28:13.88,0:28:17.47,Sub,,0,0,0,,It It starts to get very complex when you're deploying these things in practice.\N实际部署这些技术时，复杂性会迅速增加。
+Dialogue: 0,0:28:17.52,0:28:24.91,Sub,,0,0,0,,Uh but but I I I do think there's a lot of There's a lot of, you know, opportunity in in in in these sort of, you know, more complex hardware setups.\N但我觉得，在这些更复杂的硬件配置中，机会还是很多的。
+Dialogue: 0,0:28:24.96,0:28:29.93,Sub,,0,0,0,,Are there any learnings that you get from uh some of these neo clouds, like I don't know,\N从这些新云厂商身上，你们有没有学到什么经验？比如我不太知道……
+Dialogue: 0,0:28:29.98,0:28:34.43,Sub,,0,0,0,,like Nebius or whatever, and like the way that they're doing things versus like what you're doing?\N比如尼比斯之类的，还有他们做事的方式，跟你们的方式相比如何？
+Dialogue: 0,0:28:34.48,0:28:40.35,Sub,,0,0,0,,I think one of the things that, you know, is very interesting with with neo clouds is like how can they expand so quickly?\N我觉得新云厂商一个非常有趣的地方在于，它们是如何实现如此快速扩张的？
+Dialogue: 0,0:28:40.40,0:28:45.71,Sub,,0,0,0,,I I think actually the most crazy example is like Nscale, which went from like nowhere to like, you know, having like,\N实际上最离谱的例子是 Nscale，它从无到有，突然就做到了那种程度。
+Dialogue: 0,0:28:45.76,0:28:51.55,Sub,,0,0,0,,you know, whatever, hundreds of billions of dollars in in the pipeline despite barely having any capacity.\N你知道的，尽管产能几乎为零，但已有数千亿美元的资金在推进中。
+Dialogue: 0,0:28:51.60,0:28:53.13,Sub,,0,0,0,,How can neo clouds grow so fast?\N新云厂商如何能如此快速地发展？
+Dialogue: 0,0:28:53.18,0:28:56.03,Sub,,0,0,0,,I mean, there's like an you know, and and and basically the answer is like, you know,\N我的意思是，你知道的，基本上答案就是，你知道的，
+Dialogue: 0,0:28:56.08,0:28:59.80,Sub,,0,0,0,,and and this might be obvious, but like what they do is like they go out to like,\N而且这可能显而易见，他们做的就是出去，比如，
+Dialogue: 0,0:28:59.86,0:29:09.39,Sub,,0,0,0,,you know, Anthropic or or or or OpenAI or some some big buyer or whatever and they basically say like, "Hey, do you want to buy like 5 years of chips?\N你知道，像 Anthropic 或 OpenAI 这样的大买家，或者别的什么大客户，\N他们基本上会说：“嘿，你想买五年份的芯片吗？”
+Dialogue: 0,0:29:09.44,0:29:11.23,Sub,,0,0,0,,You know, sign this contract, we give you a good rate."\N你知道的，签了这份合同，我们给你一个好价钱。
+Dialogue: 0,0:29:11.28,0:29:14.97,Sub,,0,0,0,,And then they take that contract and then they go to, you know, Wall Street and say, "Look,\N然后他们拿着这份合同，去找华尔街，说：“你们看，
+Dialogue: 0,0:29:15.02,0:29:21.23,Sub,,0,0,0,,we got this like, you know, big buyer, you know, they they committed to $10 billion worth of chips.\N我们有个大买家，他们承诺采购价值100亿美元的芯片。
+Dialogue: 0,0:29:21.28,0:29:22.67,Sub,,0,0,0,,Uh we just need the money right now."\N嗯，我们现在只是需要钱。
+Dialogue: 0,0:29:22.72,0:29:23.91,Sub,,0,0,0,,And then they go on to raise the money.\N然后他们继续募集资金。
+Dialogue: 0,0:29:23.96,0:29:29.41,Sub,,0,0,0,,And then they like, you know, go to like Supermicro and Dell or whatever and Nvidia and like get the hardware and then they install it.\N然后他们就像，你知道的，去超微、戴尔之类的，或者英伟达，买硬件，再装起来。
+Dialogue: 0,0:29:29.46,0:29:32.79,Sub,,0,0,0,,And then, you know, now they have like, you know, deliver it to the customer, right?\N然后，你知道的，现在他们得把东西送到客户手里，对吧？
+Dialogue: 0,0:29:32.84,0:29:40.04,Sub,,0,0,0,,So so you have this like very nice sort of financial construct where you can basically sort of pre-sell things that you haven't even bought.\N所以啊，你实际上构建了一个非常不错的金融结构，可以提前出售那些你甚至还没买下的东西。
+Dialogue: 0,0:29:40.09,0:29:43.25,Sub,,0,0,0,,And and that means, you know, you can scale up extremely fast.\N而且这意味着，你知道，你可以实现极快的扩展。
+Dialogue: 0,0:29:43.30,0:29:47.79,Sub,,0,0,0,,And so that's what we've seen with these neo clouds is is is they can scale very, very well.\N因此我们看到这些新云厂商的扩展能力非常出色。
+Dialogue: 0,0:29:47.84,0:29:53.37,Sub,,0,0,0,,I think Modal, because we've always had a little bit more of a PLG focus and and and not the sort of, you know,\N我认为是 Modal，因为我们一直更注重产品驱动增长，而不是那种传统的销售模式。
+Dialogue: 0,0:29:53.42,0:29:59.66,Sub,,0,0,0,,ability to lock in long-term contracts in the same way, it it's a little bit more challenging from a financial perspective to scale that fast.\N以同样的方式锁定长期合同的能力，但从财务角度来看，如此快速地扩展会更具挑战性。
+Dialogue: 0,0:29:59.71,0:30:04.07,Sub,,0,0,0,,Uh even though I think, you know, in the long run, like we'll get to the same point.\N嗯，虽然我觉得从长远来看，我们最终还是会达到同一个结论。
+Dialogue: 0,0:30:04.12,0:30:10.00,Sub,,0,0,0,,But I think that's been kind of a fascinating thing to see with these neo clouds and especially like CoreWeave and and those big ones,\N但我觉得观察这些新云厂商，尤其是 CoreWeave 以及那些大型云服务商，非常有趣。
+Dialogue: 0,0:30:10.05,0:30:11.18,Sub,,0,0,0,,um they've been very,\N呃，他们一直非常……
+Dialogue: 0,0:30:11.23,0:30:18.39,Sub,,0,0,0,,very savvy with, you know, how they raise money and you know, how to, you know, think about GPU as collateral for loans and all these things.\N非常懂行，知道他们是怎么融资的，也知道怎么把GPU当作贷款抵押品来考虑，诸如此类的事。
+Dialogue: 0,0:30:18.44,0:30:24.06,Sub,,0,0,0,,What's the relevance of like I I forget who it was, but like some like financial company was like,\N就像我忘了是谁，但好像有家金融公司曾说，
+Dialogue: 0,0:30:24.11,0:30:26.19,Sub,,0,0,0,,"Oh, we're going to make" Oh, I think it was Nvidia, actually.\N哦，我们要做的是，哦，我觉得其实是英伟达。
+Dialogue: 0,0:30:26.24,0:30:30.81,Sub,,0,0,0,,They were they were like, "We are going to turn GPUs into an asset class."\N他们当时就像在说：“我们要把GPU变成一个资产类别。”
+Dialogue: 0,0:30:30.86,0:30:35.16,Sub,,0,0,0,,Is that just cuz like they need to raise money and they're like trying to figure out where to get the money from?\N是不是因为他们需要融资，正在想办法从哪弄钱？
+Dialogue: 0,0:30:35.21,0:30:36.95,Sub,,0,0,0,,Like, what's the relevance of that?\N那个有什么关联性？
+Dialogue: 0,0:30:37.00,0:30:39.46,Sub,,0,0,0,,I mean, there's a bunch of startups, I don't know if you're thinking about that.\N我的意思是，有很多初创公司，我不知道你有没有考虑过。
+Dialogue: 0,0:30:39.51,0:30:43.33,Sub,,0,0,0,,There's like Silicon Data and Computer Exchange and like Orin and and and a\N有硅数据和计算机交易所，还有奥林等等。
+Dialogue: 0,0:30:43.38,0:30:47.34,Sub,,0,0,0,,few other ones that are like basically like trying to get to like you know,\N还有几个基本上就是想达到你所说的那种感觉
+Dialogue: 0,0:30:47.39,0:30:52.67,Sub,,0,0,0,,creating price indices and indexes and and and trading derivatives and things like that.\N创建价格指数和指标，以及交易衍生品等事物。
+Dialogue: 0,0:30:52.72,0:30:53.87,Sub,,0,0,0,,I think it's interesting.\N我觉得挺有意思的。
+Dialogue: 0,0:30:53.92,0:30:59.11,Sub,,0,0,0,,Like I I think with compute like it does there are a number of challenges with compute as an asset class.\N就像计算能力一样，作为资产类别，计算能力也面临诸多挑战。
+Dialogue: 0,0:30:59.16,0:31:02.91,Sub,,0,0,0,,Like it it's definitely not as homogeneous as other asset classes.\N就像它显然不像其他资产类别那样同质化。
+Dialogue: 0,0:31:02.96,0:31:11.19,Sub,,0,0,0,,Uh you have different network and different locations and and and different disks and and CPUs and all kinds of stuff and reliability.\N你有不同网络、不同位置、不同硬盘、不同CPU，还有各种各样的东西和可靠性问题。
+Dialogue: 0,0:31:11.24,0:31:15.06,Sub,,0,0,0,,I mean that being said like you can say the same thing about oil and like we kind of created like you know,\N我的意思是，你可以说石油也一样，我们其实也创造出了类似的情况，你知道的。
+Dialogue: 0,0:31:15.11,0:31:18.23,Sub,,0,0,0,,relatively commoditized, you know, tradeable assets out of oil.\N相对标准化的，就像石油这类可交易资产。
+Dialogue: 0,0:31:18.28,0:31:19.44,Sub,,0,0,0,,It remains to be seen.\N尚待观察。
+Dialogue: 0,0:31:19.50,0:31:20.78,Sub,,0,0,0,,Like I do think, you know,\N就像我确实觉得，你知道，
+Dialogue: 0,0:31:20.83,0:31:26.54,Sub,,0,0,0,,at the scale where we are with the sort of AI like data center GPU deployments like we do need to\N在我们当前AI数据中心GPU部署的规模下，我们确实需要
+Dialogue: 0,0:31:26.59,0:31:31.95,Sub,,0,0,0,,be a little bit smarter with like risk hedging and and and and how we share risks and and and you know,\N在风险对冲以及我们如何分担风险方面，稍微聪明一点，你知道的。
+Dialogue: 0,0:31:32.00,0:31:35.64,Sub,,0,0,0,,having more like sort of insurance and and things like that.\N多一些类似保险之类的保障和措施。
+Dialogue: 0,0:31:35.69,0:31:39.79,Sub,,0,0,0,,So, I I I I I I'm I'm very happy that people are thinking a lot about this.\N所以，我很高兴大家对此进行了深入思考。
+Dialogue: 0,0:31:39.84,0:31:45.95,Sub,,0,0,0,,That being said like I'm I'm I'm not entirely sure if we're going to see, you know, GPUs becoming sort of, you know,\N话虽如此，说实话我也不太确定，我们会不会看到，你知道的，GPU逐渐变成那种，你知道的，
+Dialogue: 0,0:31:46.00,0:31:53.99,Sub,,0,0,0,,whatever the sort of Henry Hub like, you know, Brent crude type like, you know, super commoditized like tradeable asset.\N不管是什么样的亨利港价格，就像布伦特原油那样，高度标准化、可交易的资产。
+Dialogue: 0,0:31:54.04,0:31:54.48,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:31:54.53,0:31:58.91,Sub,,0,0,0,,I want to shift the conversation to Modal Sandboxes.\N我想把话题转到 Modal沙箱上。
+Dialogue: 0,0:31:58.96,0:31:59.47,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:31:59.52,0:32:03.19,Sub,,0,0,0,,I guess like before we do that, what are the different products that Modal has?\N我想在那之前，先了解一下 Modal 都有哪些不同的产品？
+Dialogue: 0,0:32:03.24,0:32:07.65,Sub,,0,0,0,,It's I guess like the main product obviously is like the the GPUs.\N我觉得主要产品显然就是显卡。
+Dialogue: 0,0:32:07.70,0:32:09.07,Sub,,0,0,0,,Then you have Modal Sandboxes.\N然后是 Modal 沙箱。
+Dialogue: 0,0:32:09.12,0:32:10.39,Sub,,0,0,0,,Is there anything else?\N还有别的吗？
+Dialogue: 0,0:32:10.44,0:32:16.87,Sub,,0,0,0,,I think of the like the two big products that we have is basically number one is Modal Functions and number two is Modal Sandboxes.\N我认为我们两大核心产品，一是模态功能，二是模态沙盒。
+Dialogue: 0,0:32:16.92,0:32:20.95,Sub,,0,0,0,,So, so with Modal Functions we we launched that, you know, back in 2021.\N所以，模态功能我们是在2021年左右推出的。
+Dialogue: 0,0:32:21.00,0:32:27.31,Sub,,0,0,0,,It was the idea of like serverless functions that are very very easy to deploy and very easy to scale and we manage all the capacity.\N它的理念是类似无服务器函数，部署和扩展都非常简单，我们负责管理所有容量。
+Dialogue: 0,0:32:27.36,0:32:33.27,Sub,,0,0,0,,That turned out to be really really good for inference and it turned out to be really good for managing GPUs and and running on things like that.\N这在推理方面效果非常好，同时也非常有助于管理GPU，并在类似场景下运行。
+Dialogue: 0,0:32:33.32,0:32:38.05,Sub,,0,0,0,,But we actually never had like, you know, dedicated like inference product or like a GPU product per se.\N但实际上我们从未有过专门的推理产品，或者纯粹意义上的GPU产品。
+Dialogue: 0,0:32:38.10,0:32:40.81,Sub,,0,0,0,,Like we we we never thought of Modal as like a Neo Cloud and and I\N就像我们之前从未想过模态会像新云厂商一样，而且
+Dialogue: 0,0:32:40.86,0:32:44.79,Sub,,0,0,0,,think there's like a risk of like getting sucked in that direction and becoming a Neo Cloud.\N我觉得有陷入那个方向、变成新云厂商的风险。
+Dialogue: 0,0:32:44.84,0:32:47.89,Sub,,0,0,0,,Like just selling, you know, sort of what I think was like rectangular.\N就像卖东西一样，你知道，大概就是我感觉像那种矩形的。
+Dialogue: 0,0:32:47.94,0:32:51.15,Sub,,0,0,0,,Like here's like a 3-year, you get this many GPUs.\N比如三年内，你能获得这么多GPU。
+Dialogue: 0,0:32:51.20,0:32:56.81,Sub,,0,0,0,,Modal's always been very good at like you deploy something, you can kind of scale it up, you have this like very cyclical or like bursty stuff.\N模态一直都很擅长，比如你部署一个东西后，可以轻松地进行扩展，应对那种周期性或突发性的负载。
+Dialogue: 0,0:32:56.86,0:32:58.10,Sub,,0,0,0,,Like we manage all the capacity.\N就像我们管理所有的算力一样。
+Dialogue: 0,0:32:58.15,0:33:04.40,Sub,,0,0,0,,And the beautiful thing is like cuz we have many, many thousands of customers, we can sort of aggregate that capacity and get very smooth workloads.\N最棒的是，由于我们有成千上万的客户，可以将这些算力资源聚合起来，从而实现非常平稳的工作负载。
+Dialogue: 0,0:33:04.45,0:33:08.68,Sub,,0,0,0,,You know, very smooth aggregate demand, which we can manage very, very efficiently.\N你知道，总需求非常平稳，我们可以非常高效地进行管理。
+Dialogue: 0,0:33:08.73,0:33:11.59,Sub,,0,0,0,,So Modal Functions was the the the core.\N因此，模态函数是核心。
+Dialogue: 0,0:33:11.64,0:33:13.43,Sub,,0,0,0,,We launched that in 2021.\N我们于2021年推出了该产品。
+Dialogue: 0,0:33:13.48,0:33:16.02,Sub,,0,0,0,,Like I mentioned, we started seeing product market fit in 2023.\N正如我之前提到的，我们从2023年开始看到产品与市场的契合。
+Dialogue: 0,0:33:16.07,0:33:20.15,Sub,,0,0,0,,And now, you know, it's about 2/3 of our revenue and and and empowering a lot of, you know,\N现在，这部分收入约占我们总收入的三分之二，同时也在赋能众多领域。
+Dialogue: 0,0:33:20.20,0:33:23.85,Sub,,0,0,0,,in practice it's mostly inference, but but you can use it for all kinds of other stuff.\N实际上，它主要用于推理，但你也可以用它来做各种其他事情。
+Dialogue: 0,0:33:23.90,0:33:26.65,Sub,,0,0,0,,Modal Sandboxes, we launched that in 2023.\N模态沙盒，我们于2023年推出。
+Dialogue: 0,0:33:26.70,0:33:31.65,Sub,,0,0,0,,And it's actually kind of, you know, took a while to see product market fit, similar to functions.\N实际上，找到产品与市场的契合点花了相当长的时间，这和功能的匹配情况类似。
+Dialogue: 0,0:33:31.70,0:33:32.97,Sub,,0,0,0,,Why did we launch it?\N我们为什么要推出它？
+Dialogue: 0,0:33:33.02,0:33:37.08,Sub,,0,0,0,,We realized a lot of people we talked to were using LLMs to output code.\N我们发现，和我们交谈的很多人正在用大语言模型生成代码。
+Dialogue: 0,0:33:37.13,0:33:39.38,Sub,,0,0,0,,This is like me and Akshat talking over lunch one day.\N就像我和阿克夏特某天一起吃午饭时聊天那样。
+Dialogue: 0,0:33:39.43,0:33:42.22,Sub,,0,0,0,,We're like, maybe they need a place to run that code.\N我们想，也许他们需要一个运行代码的地方。
+Dialogue: 0,0:33:42.27,0:33:46.23,Sub,,0,0,0,,And and and we realized like actually we kind of have like a lot of the infrastructure already\N而且我们意识到，实际上我们已经具备了相当多的基础设施。
+Dialogue: 0,0:33:46.28,0:33:51.56,Sub,,0,0,0,,to just take code and run it cuz we've already built the primitives for like managing containers and isolation.\N直接拿代码跑就行，因为我们已经构建好了管理容器和隔离的基础组件。
+Dialogue: 0,0:33:51.61,0:33:56.51,Sub,,0,0,0,,We already had, you know, gVisor as an isolation primitive and and and things like that.\N我们之前就已经有了 gVisor 这类隔离原语，等等。
+Dialogue: 0,0:33:56.56,0:34:04.11,Sub,,0,0,0,,So we got kind of excited about that idea and and and Akshat wrote a prototype and launched it in basically 1 day or 2 days or something like that.\N所以我们对这个想法非常兴奋，阿克夏特很快就写了个原型，差不多一两天就上线了。
+Dialogue: 0,0:34:04.16,0:34:06.66,Sub,,0,0,0,,Zero like we We saw like very little like growth.\N几乎看不到增长，就像零一样。
+Dialogue: 0,0:34:06.71,0:34:08.41,Sub,,0,0,0,,I don't want to like trivialize it.\N我不想把它说得太简单了。
+Dialogue: 0,0:34:08.46,0:34:09.47,Sub,,0,0,0,,We did see some growth.\N我们确实看到了一些增长。
+Dialogue: 0,0:34:09.52,0:34:13.35,Sub,,0,0,0,,Like there were like some sort of, you know, growth. so.\N好像有点增长，你知道的。所以。
+Dialogue: 0,0:34:13.40,0:34:16.71,Sub,,0,0,0,,Yeah, it was it was 2023 and like, you know, like some people picked it up.\N是的，那是2023年，有些人开始关注了。
+Dialogue: 0,0:34:16.76,0:34:20.60,Sub,,0,0,0,,Like we had some early users who kind of enjoyed it for for certain things.\N就像我们有一些早期用户，对某些事情特别喜欢。
+Dialogue: 0,0:34:20.65,0:34:27.64,Sub,,0,0,0,,But but like overall like it was like a pretty insignificant source of revenue into going into the summer of 2023.\N但总的来说，进入2023年夏季时，它带来的收入几乎可以忽略不计。
+Dialogue: 0,0:34:27.69,0:34:31.17,Sub,,0,0,0,,So 2 years later, we even discussed like Do we even need this product?\N两年后，我们甚至讨论过，我们真的还需要这个产品吗？
+Dialogue: 0,0:34:31.22,0:34:32.83,Sub,,0,0,0,,Like should we shut it down?\N我们该把它关掉吗？
+Dialogue: 0,0:34:32.88,0:34:34.70,Sub,,0,0,0,,Then it just started exploding.\N然后它突然开始爆炸了。
+Dialogue: 0,0:34:34.75,0:34:41.67,Sub,,0,0,0,,So, 2023 I And And I think what what really happened in 2023 was like LLMs got really good at generating code.\N所以，2023年，我认为2023年真正发生的事情是，大语言模型在生成代码方面变得非常出色。
+Dialogue: 0,0:34:41.72,0:34:42.84,Sub,,0,0,0,,In 2023?\N2023年？
+Dialogue: 0,0:34:42.90,0:34:43.63,Sub,,0,0,0,,2023?\N2023年？
+Dialogue: 0,0:34:43.68,0:34:44.71,Sub,,0,0,0,,I mean, it was like around that time.\N我的意思是，大概就是那时候。
+Dialogue: 0,0:34:44.76,0:34:44.98,Sub,,0,0,0,,Like,\N就像，
+Dialogue: 0,0:34:44.98,0:34:52.68,Sub,,0,0,0,,I I feel like that was like when they went from like being able to like refactor functions and like write snippets to like generating like full apps,\N我觉得那种感觉，就像从能够重构函数和编写代码片段，一下子跃升到能生成完整应用程序一样。
+Dialogue: 0,0:34:52.73,0:34:53.13,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,0:34:53.17,0:34:59.95,Sub,,0,0,0,,And and And so, we started seeing a lot of growth coming from like vibe coding, you know, companies like Lava Ball and and other ones.\N于是，我们开始看到大量增长来自“氛围编程”，比如 Lava Ball 这类公司，以及其他一些公司。
+Dialogue: 0,0:35:00.00,0:35:04.43,Sub,,0,0,0,,Uh and and then, you know, companies like Ramp started using Modal for background agents.\N还有，像Ramp这样的公司开始使用Modal来运行后台智能体。
+Dialogue: 0,0:35:04.48,0:35:11.27,Sub,,0,0,0,,And then we see started seeing tremendous growth coming from a number of Neo Labs doing things like reinforcement learning on Modal Sandboxes.\N随后，我们开始看到，许多新实验室在 Modal 沙箱中开展强化学习等项目，带来了显著增长。
+Dialogue: 0,0:35:11.32,0:35:14.57,Sub,,0,0,0,,So, Sandboxes is now about a third of our revenue.\N因此，沙箱业务目前占我们收入的约三分之一。
+Dialogue: 0,0:35:14.62,0:35:17.40,Sub,,0,0,0,,You know, we we consider it like basically like our our second product.\N你知道，我们基本上把它当作我们的第二款产品。
+Dialogue: 0,0:35:17.45,0:35:21.47,Sub,,0,0,0,,And And to me, it's like really exciting cuz like even back in the early days of Modal,\N而且对我来说，这真的非常令人兴奋，因为即使在 Modal 早期，
+Dialogue: 0,0:35:21.52,0:35:25.95,Sub,,0,0,0,,I always knew that Modal, you know, is about like creating a whole toolkit of products.\N我一直知道，Modal 本质上是打造一整套产品工具箱。
+Dialogue: 0,0:35:26.00,0:35:31.72,Sub,,0,0,0,,Like, we always wanted to be almost like a cloud, you know, you have the storage and the compute and a bunch of different ways to work with it.\N就像我们一直希望的那样，几乎就像一个云一样，你有存储、计算，还有各种不同的使用方式。
+Dialogue: 0,0:35:31.77,0:35:37.14,Sub,,0,0,0,,We always wanted to be a multi-product vendor, but that wasn't necessarily true in practice until like now,\N我们一直希望成为一家多产品供应商，但直到现在，这在实践中才真正成为可能。
+Dialogue: 0,0:35:37.19,0:35:39.85,Sub,,0,0,0,,where like I think now it's like kind of clear.\N就像我现在觉得，已经相当明确了。
+Dialogue: 0,0:35:39.90,0:35:40.61,Sub,,0,0,0,,We have functions.\N我们有函数。
+Dialogue: 0,0:35:40.66,0:35:41.32,Sub,,0,0,0,,We have Sandboxes.\N我们有沙箱。
+Dialogue: 0,0:35:41.37,0:35:42.63,Sub,,0,0,0,,We're working on a bunch of other stuff, too.\N我们也在做其他很多事情。
+Dialogue: 0,0:35:42.68,0:35:46.59,Sub,,0,0,0,,Working on training, working on batch, working on a bunch of other stuff.\N正在训练，正在处理批次，还在忙其他一堆事情。
+Dialogue: 0,0:35:46.64,0:35:49.80,Sub,,0,0,0,,So, so to me, that sort of evolution into becoming like a multi-product company,\N所以在我看来，这种向多产品公司的演变，
+Dialogue: 0,0:35:49.86,0:35:56.11,Sub,,0,0,0,,I think it's been amazing cuz that was that was always so core to the vision, even in the very early decks.\N我觉得太棒了，因为这一直是愿景的核心，甚至在早期的演示文稿中就如此。
+Dialogue: 0,0:35:56.16,0:35:57.98,Sub,,0,0,0,,I I had a bunch of slides on this.\N我之前准备了不少关于这个的幻灯片。
+Dialogue: 0,0:35:58.03,0:36:02.71,Sub,,0,0,0,,Uh but but it wasn't necessarily true to the external world uh until recently.\N但直到最近，它才真正符合外部世界。
+Dialogue: 0,0:36:02.76,0:36:06.86,Sub,,0,0,0,,Do you have anything in the works that, you know, you think it's going to be like that next product?\N你有什么正在研发的项目，是你觉得可能会成为下一个重磅产品的吗？
+Dialogue: 0,0:36:06.91,0:36:08.77,Sub,,0,0,0,,Any predictions maybe about the market?\N对市场有什么预测吗？
+Dialogue: 0,0:36:08.82,0:36:09.95,Sub,,0,0,0,,Anything like that?\N有类似的情况吗？
+Dialogue: 0,0:36:10.00,0:36:11.71,Sub,,0,0,0,,I mean, I'm I'm very bullish on training.\N我的意思是，我对训练非常乐观。
+Dialogue: 0,0:36:11.76,0:36:14.06,Sub,,0,0,0,,I think training is like kind of an underserved market.\N我认为训练就像是一个被忽视的市场。
+Dialogue: 0,0:36:14.11,0:36:18.47,Sub,,0,0,0,,I Obviously, there's like a lot of focus on like very large, you know, training runs.\N显然，大家非常关注非常大规模的训练运行。
+Dialogue: 0,0:36:18.52,0:36:23.20,Sub,,0,0,0,,Uh but we actually see a lot of demand in the sort of smaller and and mid-size training segment.\N但我们实际上看到，在较小和中等规模的训练领域需求很大。
+Dialogue: 0,0:36:23.25,0:36:26.07,Sub,,0,0,0,,So, I'll I'll be talking a little bit about that later this week.\N所以，我将在本周晚些时候谈谈这方面内容。
+Dialogue: 0,0:36:26.12,0:36:26.52,Sub,,0,0,0,,Mhm.\N嗯。
+Dialogue: 0,0:36:26.56,0:36:28.18,Sub,,0,0,0,,We're organizing a conference.\N我们正在组织一场会议。
+Dialogue: 0,0:36:28.23,0:36:30.41,Sub,,0,0,0,,Batch is I think like a really interesting market.\N批量处理我认为是一个非常有趣的市场。
+Dialogue: 0,0:36:30.46,0:36:35.80,Sub,,0,0,0,,I I think we see a lot of demand for sort of, you know, customers that need a you know,\N我觉得我们看到很多需求，比如那些需要某种特定解决方案的客户。
+Dialogue: 0,0:36:35.85,0:36:38.81,Sub,,0,0,0,,we had a customer the other day that needed to transcribe, you know, 5,000 years of audio.\N前几天有位客户，需要转录长达5000年的音频。
+Dialogue: 0,0:36:38.86,0:36:42.69,Sub,,0,0,0,,They had like, you know, millions and millions of audio files and and we we had a lot of capacity.\N他们有数以百万计的音频文件，而我们也有很强的处理能力。
+Dialogue: 0,0:36:42.74,0:36:45.79,Sub,,0,0,0,,So, we we let them do that, you know, and took a few days.\N所以，我们就让他们去做了，你知道的，花了几天时间。
+Dialogue: 0,0:36:45.84,0:36:48.43,Sub,,0,0,0,,I I think there's some really interesting use cases there.\N我觉得那里有一些非常有趣的应用场景。
+Dialogue: 0,0:36:48.48,0:36:50.47,Sub,,0,0,0,,Very bullish on like low latency stuff.\N对低延迟领域非常看涨。
+Dialogue: 0,0:36:50.52,0:36:56.71,Sub,,0,0,0,,I think there's going to be a lot of, you know, once we sort of get the audio like the speech to speech models working like the voice models.\N我觉得等我们把语音到语音的模型，比如语音模型搞明白后，就会有很多进展。
+Dialogue: 0,0:36:56.76,0:37:00.00,Sub,,0,0,0,,I sort of expect that to be very interesting market.\N我倒是觉得那会是一个非常有趣的市场。
+Dialogue: 0,0:37:00.05,0:37:02.43,Sub,,0,0,0,,Then of course like all this like agentic stuff, right?\N然后当然，就像所有这些代理式的东西一样，对吧？
+Dialogue: 0,0:37:02.48,0:37:06.24,Sub,,0,0,0,,And in a way like I I have like mixed feelings about like the word agentic\N说实在的，我对“代理式”这个词，感觉有点复杂，说不清是好是坏。
+Dialogue: 0,0:37:06.29,0:37:12.11,Sub,,0,0,0,,cuz I feel like in in certain ways like I think all software will become agentic.\N因为我觉得在某些方面，我认为所有软件都会变成代理式。
+Dialogue: 0,0:37:12.16,0:37:14.95,Sub,,0,0,0,,So, it's almost like to me like what does it mean to be agentic?\N所以，对我来说，什么是“代理式”的意义呢？
+Dialogue: 0,0:37:15.00,0:37:19.64,Sub,,0,0,0,,Like I think I think all software in a certain way like will become like AI-powered over over time.\N我觉得从某种角度看，所有软件迟早都会逐渐变成AI驱动的。
+Dialogue: 0,0:37:19.70,0:37:23.06,Sub,,0,0,0,,But but like clearly there's like a set of like building blocks of like, you know,\N但很明显，有一套类似的基础模块，你知道的，就像……
+Dialogue: 0,0:37:23.11,0:37:30.83,Sub,,0,0,0,,doing more sort of LM-powered software that seems to be sort of, you know, common across all the different use cases.\N开发更多由语言模型驱动的软件，似乎在各种不同应用场景中都变得越来越普遍。
+Dialogue: 0,0:37:30.88,0:37:34.63,Sub,,0,0,0,,We're like, you know, the way I think about models like we're in the business of building building blocks.\N我们觉得，就像我理解的那样，我们其实是在做积木块的生意。
+Dialogue: 0,0:37:34.68,0:37:43.37,Sub,,0,0,0,,You know, we we want to give you like amazing, generalizable, battle-tested, you know, general-purpose uh composable building blocks.\N你知道，我们想给你那些令人惊叹、可通用、经过实战检验、通用且可组合的构建模块。
+Dialogue: 0,0:37:43.42,0:37:48.51,Sub,,0,0,0,,And and I think there's some really interesting things stuff also like, you know, with the with the agent use cases.\N而且我觉得在智能体的应用场景方面，还有一些非常有趣的事情。
+Dialogue: 0,0:37:48.56,0:37:52.72,Sub,,0,0,0,,That's interesting you bring up training cuz I think in another podcast, maybe like a year ago,\N有趣的是你提到了训练，因为我记得在另一期播客里，大概是去年吧，
+Dialogue: 0,0:37:52.77,0:37:57.43,Sub,,0,0,0,,maybe like 2 years ago, you said that like training you were not focused on like specifically.\N大概两年前，你说过，训练时你并不专注于具体某一方面。
+Dialogue: 0,0:37:57.48,0:37:59.35,Sub,,0,0,0,,Like what changed in the market?\N市场变化在哪里？
+Dialogue: 0,0:37:59.40,0:38:02.10,Sub,,0,0,0,,I mean we we've been building a training product for multiple years.\N我的意思是，我们已经为这个训练产品持续开发了多年。
+Dialogue: 0,0:38:02.15,0:38:03.31,Sub,,0,0,0,,So, you know, on and off.\N嗯，就是断断续续的。
+Dialogue: 0,0:38:03.36,0:38:06.43,Sub,,0,0,0,,So, so we we I I wouldn't say we're like we've never been focused on it.\N所以，我们并不是说从未关注过它。
+Dialogue: 0,0:38:06.48,0:38:10.79,Sub,,0,0,0,,But it's like it's like one of those things where like I mean now we're like 150 engineers,\N但现在我们有150名工程师，感觉就像那种事一样，
+Dialogue: 0,0:38:10.84,0:38:15.96,Sub,,0,0,0,,but you know, a year or two ago we were much smaller number of engineers and so but just virtue of,\N但你知道，一两年前我们的工程师人数要少得多，所以仅仅因为规模原因，
+Dialogue: 0,0:38:16.01,0:38:22.47,Sub,,0,0,0,,you know, being smaller we had to focus a little bit more and so inference became like our sole focus and it was our sole focus for many years,\N你知道，因为我们规模较小，不得不更加专注，所以推理就成了我们的唯一重点，而且这一专注持续了很多年。
+Dialogue: 0,0:38:22.52,0:38:23.35,Sub,,0,0,0,,but we're bigger now.\N但现在我们更大了。
+Dialogue: 0,0:38:23.40,0:38:28.30,Sub,,0,0,0,,Like we we we do have opportunities to also place bets in in other markets.\N就像我们确实有机会在其他市场也下注一样。
+Dialogue: 0,0:38:28.35,0:38:34.91,Sub,,0,0,0,,I'm also really interested in, you know, kind of continuing that that that the list of things post-training reinforcement learning.\N我也非常感兴趣，继续探讨一下后训练强化学习的那些事项。
+Dialogue: 0,0:38:34.96,0:38:37.70,Sub,,0,0,0,,I think there's some really exciting stuff around that.\N我觉得这方面的前景非常令人兴奋。
+Dialogue: 0,0:38:37.75,0:38:43.26,Sub,,0,0,0,,Um I I think there's also many other like stuff around like storage and building data warehousing\N嗯，我觉得还有许多其他相关的东西，比如存储和构建数据仓库。
+Dialogue: 0,0:38:43.32,0:38:48.60,Sub,,0,0,0,,and feature stores and real-time streaming pipelines and and and all kinds of like I don't know.\N还有特征存储、实时流处理管道，以及各种我也不太清楚的东西。
+Dialogue: 0,0:38:48.65,0:38:55.09,Sub,,0,0,0,,I I I think the long-term view of of Modal is like basically like you want to build some cool AI Like, you know, we got you covered.\N我认为模态的长期愿景基本上就是，你想打造一些酷炫的AI，放心，我们全包了。
+Dialogue: 0,0:38:55.14,0:38:56.59,Sub,,0,0,0,,Like, you know, we got all the building blocks.\N就像，你知道的，我们已经有了所有基础组件。
+Dialogue: 0,0:38:56.64,0:38:59.81,Sub,,0,0,0,,Like come to us and like we'll help you, you know, take all these building blocks and compose them.\N来我们这儿，我们可以帮你把这些积木块组合起来。
+Dialogue: 0,0:38:59.86,0:39:04.27,Sub,,0,0,0,,And that's the beauty of software is like you you can, you know, build almost anything if you have the right building blocks.\N软件的美妙之处就在于，只要你拥有合适的构建模块，几乎就能创造出任何东西。
+Dialogue: 0,0:39:04.32,0:39:07.55,Sub,,0,0,0,,It's That that's very much the sort of company and the product that we want to build.\N这正是我们想要打造的公司和产品类型。
+Dialogue: 0,0:39:07.60,0:39:13.14,Sub,,0,0,0,,When you say training, are you focused on more of like the bigger enterprises doing huge training runs?\N你说的训练，是指更偏向于大型企业进行的大规模训练吗？
+Dialogue: 0,0:39:13.19,0:39:13.87,Sub,,0,0,0,,Are you Okay.\N你还好吗？
+Dialogue: 0,0:39:13.92,0:39:17.58,Sub,,0,0,0,,They're going to go and like, you know, do these like, you know,\N他们要去干些事，你知道的，就像那样，你知道的
+Dialogue: 0,0:39:17.63,0:39:24.95,Sub,,0,0,0,,big hyperscale or or rather neo neo cloud mega deals and get, you know, 100,000 GPUs or whatever.\N大型超大规模云厂商或新云厂商的巨额订单，比如拿到十万块GPU之类的。
+Dialogue: 0,0:39:25.00,0:39:29.47,Sub,,0,0,0,,But but but there is like a little bit of an underserved market of like, in my opinion,\N但在我看来，其实存在一个被忽视的小众市场
+Dialogue: 0,0:39:29.52,0:39:34.27,Sub,,0,0,0,,you know, like researchers iterating or like people training smaller models.\N你知道，就像研究人员在不断迭代，或者人们在训练更小的模型。
+Dialogue: 0,0:39:34.32,0:39:36.67,Sub,,0,0,0,,There's, you know, text to speech and speech to text models.\N你知道的，有文本转语音和语音转文本模型。
+Dialogue: 0,0:39:36.72,0:39:39.86,Sub,,0,0,0,,Computational biotech is actually a market that we see a lot of demand from.\N计算生物学实际上是一个我们看到大量需求的市场。
+Dialogue: 0,0:39:39.91,0:39:44.66,Sub,,0,0,0,,We have a lot of customers in that space training relatively, you know, modest models.\N我们在那个领域有很多客户，正在训练规模相对中等的模型。
+Dialogue: 0,0:39:44.71,0:39:47.35,Sub,,0,0,0,,You can train on 64 GPUs or whatever.\N你可以在64块GPU上训练，或者用任意数量的GPU。
+Dialogue: 0,0:39:47.40,0:39:48.25,Sub,,0,0,0,,Recommendation system.\N推荐系统
+Dialogue: 0,0:39:48.30,0:39:53.47,Sub,,0,0,0,,A lot of sort of traditional machine learning There's a lot of things like you don't need a, you know, 100,000 GPUs.\N很多传统的机器学习方法，比如你根本不需要像10万块GPU这样的配置。
+Dialogue: 0,0:39:53.52,0:39:56.21,Sub,,0,0,0,,That market I think is like we're we're not going to like focus on that for a while.\N我觉得那个市场，我们暂时不会去关注。
+Dialogue: 0,0:39:56.26,0:40:02.62,Sub,,0,0,0,,But but I think there's a lot of stuff in the, you know, slightly smaller markets that that that are relatively underserved.\N但我觉得在一些稍小的市场里，有很多相对未被充分服务的领域。
+Dialogue: 0,0:40:02.67,0:40:04.95,Sub,,0,0,0,,It's very hard to set up training clusters.\N搭建训练集群非常困难。
+Dialogue: 0,0:40:05.00,0:40:05.42,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:40:05.47,0:40:13.68,Sub,,0,0,0,,Have you noticed like since I don't know like GLM 5.2 or like can you say three or maybe like can you 2.5?\N你有没有注意到，自从我不太确定是 GLM 5.2 还是像你说的三，或者 maybe 2.5？
+Dialogue: 0,0:40:13.73,0:40:17.07,Sub,,0,0,0,,Uh that, you know, a A of people are using those in like fine-tuning them?\N嗯，你知道的，有很多人正在用这些进行微调吗？
+Dialogue: 0,0:40:17.12,0:40:20.22,Sub,,0,0,0,,If anything, I've actually seen the other direction.\N相反，我反而看到了相反的情况。
+Dialogue: 0,0:40:20.27,0:40:24.40,Sub,,0,0,0,,I feel like fine-tuning the value prop a couple years ago was like, "Yeah,\N我觉得几年前做价值主张的微调时，感觉就像是，“对，
+Dialogue: 0,0:40:24.45,0:40:30.01,Sub,,0,0,0,,you know, open-source models, they're not quite as good, but you know, if you take,\N你知道，开源模型还没那么好，但如果你拿……
+Dialogue: 0,0:40:30.06,0:40:38.47,Sub,,0,0,0,,you know, a small model and you fine-tune it on your specific domain, you can actually reach the frontier in terms of, you know, quality and cost."\N你知道，一个小型模型，只要在你的特定领域上进行微调，实际上就能在质量与成本上达到前沿水平。
+Dialogue: 0,0:40:38.52,0:40:45.52,Sub,,0,0,0,,Uh today, I would say like the open-source models are so good that like you can basically just like swap them out and just run,\N说实话，现在开源模型已经好到你可以直接替换使用，基本不用怎么调整就能跑起来。
+Dialogue: 0,0:40:45.57,0:40:53.18,Sub,,0,0,0,,you know, instead of, you know, the the frontier ones, you can run, you know, Kimiko 3 or or or or whatever, DeepSeek 4.1 or GLM 5.3.\N你知道，与其用那些前沿模型，不如运行 Kimiko 3，\N或者 DeepSeek 4.1，或者 GLM 5.3 之类的。
+Dialogue: 0,0:40:53.23,0:40:57.16,Sub,,0,0,0,,And they're like basically almost as good as like the frontier model at a much lower cost.\N它们几乎和前沿模型一样好，但成本低得多。
+Dialogue: 0,0:40:57.21,0:41:02.95,Sub,,0,0,0,,So, we still see a lot of demand of uh for for post-training, and I do think it's a really interesting space.\N所以，我们仍然看到大量对后训练的需求，我认为这确实是一个非常有趣的领域。
+Dialogue: 0,0:41:03.00,0:41:09.65,Sub,,0,0,0,,We're working on some some products in that space, you know, both sort of SFT and and but also reinforcement learning and things like that.\N我们正在那个领域开发一些产品，比如监督微调，还有强化学习之类的东西。
+Dialogue: 0,0:41:09.70,0:41:15.07,Sub,,0,0,0,,I would also say, you know, fine-tuning is no longer the thing that you kind of have to do.\N我还要说，微调已经不再是那种你非做不可的事情了。
+Dialogue: 0,0:41:15.12,0:41:16.74,Sub,,0,0,0,,Like it it's it's very optional.\N就像它，其实可有可无。
+Dialogue: 0,0:41:16.79,0:41:21.55,Sub,,0,0,0,,Like you you can open-source models like work really well just off the shelf, too.\N就像你可以直接开箱即用的开源模型一样，效果也非常好。
+Dialogue: 0,0:41:21.60,0:41:24.44,Sub,,0,0,0,,Back to sandboxes, actually, I forgot to ask you.\N其实说到沙箱，我忘了问你了。
+Dialogue: 0,0:41:24.49,0:41:34.79,Sub,,0,0,0,,So, like what did you have to update about the sandboxes that you guys um were offering uh that like existing sandboxes did not uh did not allow for?\N所以，你们之前提供的沙箱有什么需要更新的？那些现有的沙箱做不到的？
+Dialogue: 0,0:41:34.84,0:41:35.50,Sub,,0,0,0,,Not a whole lot.\N没多少。
+Dialogue: 0,0:41:35.55,0:41:37.69,Sub,,0,0,0,,I think the thing we've always been very, very good at.\N我一直觉得，我们最擅长的，就是这一点。
+Dialogue: 0,0:41:37.74,0:41:38.95,Sub,,0,0,0,,I mean, we're infra geeks, right?\N我是说，我们可是基础设施极客，对吧？
+Dialogue: 0,0:41:39.00,0:41:43.24,Sub,,0,0,0,,Like we're very good at like, you know, scaling and reliability and and doing a lot of stuff.\N我们非常擅长扩展性、可靠性，以及完成大量工作。
+Dialogue: 0,0:41:43.29,0:41:48.17,Sub,,0,0,0,,And I think that's why that explains to a large extent like why we have, you know, in in my opinion,\N我认为这在很大程度上解释了，为什么在我看来，我们会有这样的情况。
+Dialogue: 0,0:41:48.22,0:41:51.58,Sub,,0,0,0,,I don't have numbers, but like I think we have by far the largest market share in the space.\N我没有具体数据，但我认为我们在该领域的市场份额绝对是最大的。
+Dialogue: 0,0:41:51.63,0:41:55.83,Sub,,0,0,0,,Like we're just very good at running, you know, hundreds of thousands or even millions of sandboxes.\N就像我们非常擅长运行成千上万甚至数百万个沙箱一样。
+Dialogue: 0,0:41:55.88,0:41:56.47,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:41:56.52,0:42:00.83,Sub,,0,0,0,,I will say we'll have to We had to rewrite our systems, you know, a bunch of times in order to handle that scale.\N我得说，为了应对这种规模，我们不得不多次重写系统。
+Dialogue: 0,0:42:00.88,0:42:03.51,Sub,,0,0,0,,So, so but we were always like very good at it.\N所以，我们一直在这方面都很擅长。
+Dialogue: 0,0:42:03.56,0:42:05.15,Sub,,0,0,0,,There are other things like over time.\N还有其他一些事情，随着时间推移。
+Dialogue: 0,0:42:05.20,0:42:08.10,Sub,,0,0,0,,I mean, the sandbox space in in general like, you know,\N我的意思是，沙箱空间一般来说，你知道的，
+Dialogue: 0,0:42:08.15,0:42:12.35,Sub,,0,0,0,,like it's like not the most like differentiated space, but you know, we're working on some really cool stuff.\N虽然这个领域不算特别有差异化，但反正我们正在做些非常酷的东西。
+Dialogue: 0,0:42:12.40,0:42:16.99,Sub,,0,0,0,,Like over time like we've had to add support for VMs, like virtual machines.\N随着时间推移，我们不得不增加对虚拟机的支持。
+Dialogue: 0,0:42:17.04,0:42:23.11,Sub,,0,0,0,,So we we we previously built our our sandbox product on on G Visor, but now we offer full virtualized machines as well.\N因此，我们之前是在 G Visor 上构建了我们的沙盒产品，但现在我们还提供了完整的虚拟机。
+Dialogue: 0,0:42:23.16,0:42:28.59,Sub,,0,0,0,,Turns out a lot of for for certain use cases you kind of need full Linux compatibility.\N原来对于某些特定用途，你实际上需要完整的 Linux 兼容性。
+Dialogue: 0,0:42:28.64,0:42:33.31,Sub,,0,0,0,,There are other things we've had to build, you know, better primitives for like more interactive,\N我们还不得不构建其他东西，比如更高效的底层工具，使其更具交互性。
+Dialogue: 0,0:42:33.36,0:42:37.97,Sub,,0,0,0,,you know, piping data back and forth between sandboxes, working with file system.\N你知道，数据在沙箱之间来回传输，还要处理文件系统。
+Dialogue: 0,0:42:38.02,0:42:40.20,Sub,,0,0,0,,We've had to spend a lot of time on snapshotting.\N我们不得不花大量时间处理快照。
+Dialogue: 0,0:42:40.25,0:42:45.70,Sub,,0,0,0,,I think a lot of the things that over in the long run will differentiate will be like, you know,\N我认为长远来看，真正能区分彼此的，很多都是些你知道的那些方面。
+Dialogue: 0,0:42:45.75,0:42:52.43,Sub,,0,0,0,,really cool things like, you know, forking sandboxes, snapshotting, resuming snap like live migrations.\N像分叉沙箱、快照、恢复快照，以及类似实时迁移的功能，真的很酷。
+Dialogue: 0,0:42:52.48,0:42:57.52,Sub,,0,0,0,,In general like I I think sandboxes the novelty of sandboxes was always, you know, this sort of ephemerality.\N一般来说，我觉得沙盒的特别之处始终在于它的那种短暂性。
+Dialogue: 0,0:42:57.56,0:43:02.93,Sub,,0,0,0,,Like you can spin up sandboxes for a few seconds and and and that's something I like that's a string I I want to pull more in.\N就像你可以几秒钟就启动一个沙箱，这点我很喜欢，这是我想要更多引入的特性。
+Dialogue: 0,0:43:02.98,0:43:08.00,Sub,,0,0,0,,I I think there's a lot of really cool stuff you can do, you know, kind of decoupling the agent and and the harness,\N我觉得你可以做很多很酷的事情，比如把智能体和运行框架解耦。
+Dialogue: 0,0:43:08.05,0:43:11.52,Sub,,0,0,0,,decoupling it from sandboxes, having agents control many sandboxes,\N将其与沙箱解耦，让智能体控制多个沙箱，
+Dialogue: 0,0:43:11.57,0:43:15.61,Sub,,0,0,0,,forking sandboxes, you know, snapshotting things like, you know,\N分叉沙箱，你知道的，像快照这些，你知道的
+Dialogue: 0,0:43:15.66,0:43:20.60,Sub,,0,0,0,,like running basically like very short-lived may maybe one per command, like things like that.\N就像运行一样，基本上是瞬时的，可能每条命令只持续一次，类似这样的情况。
+Dialogue: 0,0:43:20.65,0:43:22.27,Sub,,0,0,0,,So I I think there's a lot of cool stuff there.\N我觉得那里有很多酷炫的东西。
+Dialogue: 0,0:43:22.32,0:43:25.46,Sub,,0,0,0,,We've already been spending a lot of time doing that, you know, around snapshots.\N我们之前已经花了很多时间在快照相关的事情上了。
+Dialogue: 0,0:43:25.51,0:43:29.55,Sub,,0,0,0,,But But I think there's a lot of cool stuff to be to be built there as well.\N但我觉得那里也有很多酷炫的东西可以打造。
+Dialogue: 0,0:43:29.60,0:43:31.43,Sub,,0,0,0,,You brought up snapshotting a couple times.\N你刚才提到了几次快照。
+Dialogue: 0,0:43:31.48,0:43:34.49,Sub,,0,0,0,,Like what do you see as like the use case for snapshotting?\N你认为快照功能的使用场景是什么？
+Dialogue: 0,0:43:34.54,0:43:37.47,Sub,,0,0,0,,Like Like what would that give us that we don't get right now?\N就像这样，那会给我们带来什么呢？我们目前得不到的。
+Dialogue: 0,0:43:37.52,0:43:44.48,Sub,,0,0,0,,I think the the big thing for me is like today a lot of sandbox workloads are kind of like lift and shift.\N对我来说，最重要的是，如今许多沙箱工作负载基本上都是简单的“lift and shift”模式。
+Dialogue: 0,0:43:44.52,0:43:48.55,Sub,,0,0,0,,Like people think a lot about sandboxes almost like, you know, I have my dev box.\N就像人们会想到沙盒一样，你知道的，我有我的开发机。
+Dialogue: 0,0:43:48.60,0:43:50.02,Sub,,0,0,0,,Now I'm going to shove it in the cloud.\N现在我要把它塞进云端。
+Dialogue: 0,0:43:50.07,0:43:51.89,Sub,,0,0,0,,I'm going to have an agent control it.\N我将让一个智能体来控制它。
+Dialogue: 0,0:43:51.94,0:43:54.59,Sub,,0,0,0,,Maybe I'll run the harness inside the sandbox.\N也许我会在沙箱里运行这个运行框架。
+Dialogue: 0,0:43:54.64,0:44:00.43,Sub,,0,0,0,,I don't know if like long-term that's like the right way to think about, you know, on like compute for agents.\N我不确定从长远来看，这样思考智能体的算力问题是否正确。
+Dialogue: 0,0:44:00.48,0:44:06.18,Sub,,0,0,0,,I I think a much better model would be if you're going to have this like very long-running agents,\N我认为，如果你要运行这种长期持续的智能体，更好的模型应该是……
+Dialogue: 0,0:44:06.23,0:44:10.82,Sub,,0,0,0,,which almost like to me are like kind of durable execution workflows.\N这几乎对我来说就像是持久的执行工作流。
+Dialogue: 0,0:44:10.87,0:44:13.23,Sub,,0,0,0,,Like they're going to run, you know, 24/7.\N就像他们会24小时不间断运行一样。
+Dialogue: 0,0:44:13.28,0:44:18.49,Sub,,0,0,0,,You know, every once in a while they're going to run commands and and you know, having the ability to like spin up a sandbox in,\N你知道，偶尔他们需要运行一些命令，能随时启动一个沙箱环境，这很方便。
+Dialogue: 0,0:44:18.54,0:44:24.33,Sub,,0,0,0,,you know, 100 ms, run a few commands, and then like shut it down and like snapshot it.\N你知道，100毫秒，运行几个命令，然后关掉，再快照一下。
+Dialogue: 0,0:44:24.38,0:44:29.03,Sub,,0,0,0,,I think the faster you can get that like, you know, wake up, you know, go to sleep cycle,\N我觉得你越快进入那种，你知道的，醒来、睡觉的循环，就越好
+Dialogue: 0,0:44:29.08,0:44:33.47,Sub,,0,0,0,,the more you can sort of create sandboxes that only run for like a very brief period.\N你越能创建一些仅运行极短时间的沙箱。
+Dialogue: 0,0:44:33.52,0:44:35.45,Sub,,0,0,0,,And and that will make compute much more efficient.\N这将使计算效率大大提高。
+Dialogue: 0,0:44:35.50,0:44:40.13,Sub,,0,0,0,,And it will also enable you to to to to do some really cool things, you know,\N它还能让你做一些非常酷的事情，你知道的。
+Dialogue: 0,0:44:40.18,0:44:45.80,Sub,,0,0,0,,like forking and and moving things around and and and you know, having like imagine, you know,\N比如分叉、移动东西，还有想象一下，你知道的，
+Dialogue: 0,0:44:45.85,0:44:50.51,Sub,,0,0,0,,like cloud code instead of you know, having sort of a very linear flow, like sequential flow,\N就像使用云代码，而不是那种非常线性的、顺序的流程。
+Dialogue: 0,0:44:50.56,0:44:54.33,Sub,,0,0,0,,like kind of branching and you know, running hundreds of agents at the same time, right?\N就像分支一样，你知道的，同时运行数百个智能体，对吧？
+Dialogue: 0,0:44:54.38,0:44:57.37,Sub,,0,0,0,,I think a lot of like CI is like another like illustrative example.\N我觉得很多情况下，CI就像是另一个说明性的例子。
+Dialogue: 0,0:44:57.42,0:45:02.30,Sub,,0,0,0,,Like for most of the the history of CI, uh you know, I talk about like GitHub actions and things like that.\N就像在人工智能发展的大部分历史中一样，我说的是像 GitHub Actions 这类东西。
+Dialogue: 0,0:45:02.34,0:45:03.82,Sub,,0,0,0,,Like you had a very sequential flow.\N就像你有一个非常连贯的流程。
+Dialogue: 0,0:45:03.87,0:45:10.59,Sub,,0,0,0,,Like you you you know, you slowly install all your stuff, then you run the test suite, and then you know, generate some reports or whatever.\N就像你慢慢把所有东西都装好，然后运行测试套件，再生成一些报告之类的。
+Dialogue: 0,0:45:10.64,0:45:14.19,Sub,,0,0,0,,And it's like you can break it up into shards, but it's kind of annoying.\N就像你可以把它拆分成碎片，但有点麻烦。
+Dialogue: 0,0:45:14.24,0:45:19.91,Sub,,0,0,0,,Like what I would love to do is like take your entire test suite and just run every single test in its own sandbox, right?\N我特别想做的是，把你的整个测试套件拿过来，然后在各自的沙箱里运行每一个测试，对吧？
+Dialogue: 0,0:45:19.96,0:45:21.75,Sub,,0,0,0,,Like and just parallelize the out of that.\N点赞并直接并行化它。
+Dialogue: 0,0:45:21.80,0:45:23.73,Sub,,0,0,0,,Run like a thousand sandboxes.\N像一千个沙箱一样运行。
+Dialogue: 0,0:45:23.78,0:45:25.34,Sub,,0,0,0,,Why can't that be done?\N为什么做不到呢？
+Dialogue: 0,0:45:25.39,0:45:31.02,Sub,,0,0,0,,I mean, the problem is like there's too much there's too much overhead around like, you know, starting and stopping sandboxes.\N我的意思是，问题在于，启动和停止沙箱时，开销太大了。
+Dialogue: 0,0:45:31.07,0:45:36.00,Sub,,0,0,0,,So I think the more like you you create like, you know, frictionless like starting and stopping,\N所以我认为，你越能创造出顺畅的开始和停止体验，就越理想。
+Dialogue: 0,0:45:36.05,0:45:44.03,Sub,,0,0,0,,the more you can enter a world where like you can do this like extremely bursty like large-scale like run as much as you think want in parallel.\N你所能进入的世界是，可以像这样以极高的突发性、大规模地并行运行，想跑多少就跑多少。
+Dialogue: 0,0:45:44.08,0:45:46.81,Sub,,0,0,0,,So so I you know, I'm an infra geek like I said.\N所以，我跟你说，我就是个基础设施极客，这个我之前说过。
+Dialogue: 0,0:45:46.86,0:45:49.27,Sub,,0,0,0,,Like I I I get very excited about these things.\N就像我，我，我，对这些事情非常激动。
+Dialogue: 0,0:45:49.32,0:45:52.58,Sub,,0,0,0,,You know, once we figure out all these primitives and the right building blocks,\N你知道，一旦我们弄清楚了所有这些基础组件和合适的构建模块，
+Dialogue: 0,0:45:52.63,0:45:57.48,Sub,,0,0,0,,I think it's going to unlock a lot of really cool stuff that, you know, we we previously could not do with with software.\N我认为这将解锁许多以前用软件无法实现的酷炫功能。
+Dialogue: 0,0:45:57.53,0:45:59.18,Sub,,0,0,0,,Why hasn't that already been built?\N为什么那个还没建好呢？
+Dialogue: 0,0:45:59.22,0:46:04.87,Sub,,0,0,0,,I would assume even previously people would would want to parallelize as much of of their CI as possible.\N我猜，即使在以前，人们也希望能尽可能地并行化他们的持续集成流程。
+Dialogue: 0,0:46:04.92,0:46:08.63,Sub,,0,0,0,,You can, but the overhead is like Amdahl's law whatever, right?\N你可以这么做，但开销就像阿姆达尔定律说的那样，不管怎样，对吧？
+Dialogue: 0,0:46:08.68,0:46:13.59,Sub,,0,0,0,,Like the overhead of parallelization right now is very high cuz like right now like you can get up actions for instance.\N就像现在并行化的开销非常高，因为目前你甚至可以获取到一些动作。
+Dialogue: 0,0:46:13.64,0:46:16.95,Sub,,0,0,0,,Like we we parallelize in in the modal test suite, right?\N就像我们在模态测试套件中并行化一样，对吧？
+Dialogue: 0,0:46:17.00,0:46:22.59,Sub,,0,0,0,,But like what that basically means is like now if you take your test suite and you split it up in two,\N但本质上这意味着，现在如果你把测试套件分成两部分，
+Dialogue: 0,0:46:22.64,0:46:27.13,Sub,,0,0,0,,like now each of those shards both need to do all the installs and and the test setup.\N现在，每个分片都需要完成所有的安装和测试设置。
+Dialogue: 0,0:46:27.18,0:46:28.34,Sub,,0,0,0,,And that takes a long time.\N这需要很长时间。
+Dialogue: 0,0:46:28.38,0:46:29.71,Sub,,0,0,0,,Like it it can take minutes.\N就像它可能需要几分钟一样。
+Dialogue: 0,0:46:29.76,0:46:33.05,Sub,,0,0,0,,But let's say you can do the test setup once and then you snapshot the\N但假设你只需设置一次测试，然后进行快照即可
+Dialogue: 0,0:46:33.10,0:46:37.25,Sub,,0,0,0,,container and now you clone it and now you can run the test suites independently.\N容器，现在你复制它，就可以独立运行测试套件了。
+Dialogue: 0,0:46:37.30,0:46:42.21,Sub,,0,0,0,,I think a lot of a lot of the the benefits cannot be uh you can't\N我认为很多好处是无法用言语表达的。
+Dialogue: 0,0:46:42.26,0:46:46.79,Sub,,0,0,0,,materialize those benefits on on until you get the the friction and and the overhead down.\N把这些好处真正实现出来，直到摩擦和开销降到最低。
+Dialogue: 0,0:46:46.84,0:46:47.08,Sub,,0,0,0,,Mhm.\N嗯。
+Dialogue: 0,0:46:47.08,0:46:48.27,Sub,,0,0,0,,The transaction cost.\N交易成本。
+Dialogue: 0,0:46:48.32,0:46:53.19,Sub,,0,0,0,,I think you guys have a partnership with Anthropic and they're using sandboxes for something.\N我觉得你们和 Anthropic 有合作，他们正在用沙箱做点什么。
+Dialogue: 0,0:46:53.24,0:46:54.71,Sub,,0,0,0,,Like modal sandboxes.\N就像模态沙盒一样。
+Dialogue: 0,0:46:54.76,0:47:01.36,Sub,,0,0,0,,Yeah, I mean the the managed agents with with Anthropic this is sort of a bring your own sandbox integration.\N是的，我指的是与 Anthropic 配合使用的托管智能体，这本质上是一种“自带沙箱”集成。
+Dialogue: 0,0:47:01.41,0:47:03.87,Sub,,0,0,0,,So you can you can use modal for those, yeah.\N所以你可以用模式来处理这些，没错。
+Dialogue: 0,0:47:03.92,0:47:04.37,Sub,,0,0,0,,Oh, cool.\N哦，酷。
+Dialogue: 0,0:47:04.42,0:47:05.46,Sub,,0,0,0,,How did that come up?\N这到底是怎么冒出来的？
+Dialogue: 0,0:47:05.51,0:47:06.55,Sub,,0,0,0,,Like come to be?\N怎么变成这样的？
+Dialogue: 0,0:47:06.60,0:47:08.76,Sub,,0,0,0,,I think Anthropic is like trying to create, you know,\N我认为 Anthropic 正在努力打造某种东西，你知道的，
+Dialogue: 0,0:47:08.81,0:47:13.88,Sub,,0,0,0,,like a thriving ecosystem and community and and so I think, you know, they make money from inference, right?\N就像一个繁荣的生态系统和社区，所以我认为，他们靠推理赚钱，对吧？
+Dialogue: 0,0:47:13.93,0:47:16.92,Sub,,0,0,0,,Like so I I I think it's very much in their interest to promote, you know,\N就像这样，我觉得他们非常有动力去推广，你知道的，
+Dialogue: 0,0:47:16.97,0:47:21.03,Sub,,0,0,0,,like a for everything else, you know, as much of, you know, of an ecosystem as possible.\N就像其他一切一样，尽可能打造一个完整的生态系统。
+Dialogue: 0,0:47:21.08,0:47:25.02,Sub,,0,0,0,,They want to have the largest possible surface area as long as you use Anthropic for inference.\N只要使用 Anthropic 进行推理，他们就希望拥有尽可能大的表面积。
+Dialogue: 0,0:47:25.07,0:47:30.11,Sub,,0,0,0,,So I I think it makes like very rational sense for them to to to partner with with us as a sandbox provider.\N所以我认为，他们与我们作为沙箱提供商合作，是非常理性的选择。
+Dialogue: 0,0:47:30.16,0:47:34.01,Sub,,0,0,0,,Also, I feel like we have to bring up the Hugging Face incident.\N另外，我觉得我们必须提一下 Hugging Face 的事件。
+Dialogue: 0,0:47:34.06,0:47:35.35,Sub,,0,0,0,,Are you okay talking about that?\N你介意聊一下那个话题吗？
+Dialogue: 0,0:47:35.40,0:47:35.65,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:47:35.65,0:47:36.83,Sub,,0,0,0,,Yeah, I mean it's all there.\N是的，所有内容都在那儿。
+Dialogue: 0,0:47:36.88,0:47:37.42,Sub,,0,0,0,,Yeah, yeah.\N对，对。
+Dialogue: 0,0:47:37.47,0:47:42.11,Sub,,0,0,0,,So yeah, could you just briefly describe like what happened and I think they were using the modal sandbox,\N嗯，你能简单描述一下发生了什么吗？我觉得他们当时在用模态沙盒。
+Dialogue: 0,0:47:42.16,0:47:45.47,Sub,,0,0,0,,but it wasn't your, you know, it wasn't like a fault of the sandbox.\N但那不是你的问题，你知道的，那不是沙盒本身的故障。
+Dialogue: 0,0:47:45.52,0:47:46.19,Sub,,0,0,0,,Yeah, exactly.\N对，没错。
+Dialogue: 0,0:47:46.24,0:47:51.71,Sub,,0,0,0,,I I I don't I forget the all the details of of the exploit, but I mean, you know,\N我记不清漏洞利用的所有细节了，但总之，你知道的……
+Dialogue: 0,0:47:51.76,0:47:54.90,Sub,,0,0,0,,I think what you're referring to is the fact that like modal was involved.\N我想你指的是模态确实参与其中这件事。
+Dialogue: 0,0:47:54.94,0:47:55.27,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:47:55.30,0:47:57.74,Sub,,0,0,0,,And so, you know, just to comment on that.\N所以，我想就此评论一下。
+Dialogue: 0,0:47:57.78,0:48:02.18,Sub,,0,0,0,,Like basically the the the agents running inside, you know,\N基本上就是那些在内部运行的智能体，你知道的
+Dialogue: 0,0:48:02.23,0:48:09.19,Sub,,0,0,0,,that that that exploited hugging face they discovered a a vulnerability in an app that was deployed on Modal.\N他们利用了 Hugging Face，发现了一个部署在 Modal 上的应用程序存在漏洞。
+Dialogue: 0,0:48:09.24,0:48:09.64,Sub,,0,0,0,,Mhm.\N嗯嗯。
+Dialogue: 0,0:48:09.68,0:48:16.07,Sub,,0,0,0,,And they used that to sort of as almost like a springboard for for getting access, getting full internet access is my understanding.\N他们利用这一点，几乎像跳板一样，获得了访问权限，据我所知，就是实现了全面的互联网接入。
+Dialogue: 0,0:48:16.12,0:48:17.30,Sub,,0,0,0,,I don't remember the full details.\N我不记得全部细节了。
+Dialogue: 0,0:48:17.35,0:48:21.24,Sub,,0,0,0,,To be clear this is an app running on Modal that was hacked.\N清楚地说，这是一个在 Modal 上运行的被入侵的应用程序。
+Dialogue: 0,0:48:21.29,0:48:22.59,Sub,,0,0,0,,Like it was not Modal that was hacked.\N就像不是模态被黑客攻击了一样。
+Dialogue: 0,0:48:22.64,0:48:22.88,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:48:22.88,0:48:28.00,Sub,,0,0,0,,So it's like AWS a lot of people run stuff on AWS, occasionally those app get hacked.\N所以就像 AWS，很多人在 AWS 上运行应用，偶尔这些应用会被黑客入侵。
+Dialogue: 0,0:48:28.05,0:48:29.41,Sub,,0,0,0,,Does that mean AWS got hacked?\N那是不是意味着 AWS 被黑了？
+Dialogue: 0,0:48:29.46,0:48:31.01,Sub,,0,0,0,,Like no, of course not, right?\N不像吧，当然不是，对吧？
+Dialogue: 0,0:48:31.06,0:48:35.11,Sub,,0,0,0,,And and so there's a lot of people running apps on Modal and you know, one of those apps got hacked.\N有很多人在 Modal 上运行应用，你知道的，其中一个应用被黑了。
+Dialogue: 0,0:48:35.16,0:48:37.48,Sub,,0,0,0,,And I I say but but like there are some lessons we can learn.\N而且我想说的是，我们确实能吸取一些教训。
+Dialogue: 0,0:48:37.53,0:48:46.07,Sub,,0,0,0,,And and and I think one of the things we've been reflecting on is like could we have more sensible, you know, security restrictions by default.\N而且我觉得我们一直在思考，是否可以默认设置更合理的安全限制。
+Dialogue: 0,0:48:46.12,0:48:53.21,Sub,,0,0,0,,I think to use the AWS analogy in the as just just as another analogy you know, S3 used to be this like,\N我觉得用 AWS 的类比来说明，就像另一个类比一样，S3 以前就像是……
+Dialogue: 0,0:48:53.26,0:48:59.04,Sub,,0,0,0,,you know, it used to be very easy to to accidentally make an S3 bucket public and AWS realized like,\N你知道，以前不小心把 S3 存储桶设为公开非常容易，亚马逊后来意识到这一点，
+Dialogue: 0,0:48:59.09,0:49:02.28,Sub,,0,0,0,,you know, it doesn't necessarily cause that you know,\N你知道，这并不一定意味着你知道
+Dialogue: 0,0:49:02.33,0:49:09.31,Sub,,0,0,0,,pose a security problem for AWS per se but a lot of their customers accidentally would, you know, like leak data.\N对 AWS 本身来说并不是安全问题，但很多客户会不小心泄露数据。
+Dialogue: 0,0:49:09.36,0:49:13.20,Sub,,0,0,0,,And so S3 it's much harder now to make S3 buckets public.\N因此，现在将 S3 存储桶设为公开要困难得多。
+Dialogue: 0,0:49:13.25,0:49:15.66,Sub,,0,0,0,,And so in a similar way it's like we're exploring like, you know,\N所以，某种程度上，我们就像在探索，你知道的，
+Dialogue: 0,0:49:15.71,0:49:22.36,Sub,,0,0,0,,can't we make security a little bit more restricted by default without necessarily, you know, destroying the magic that make that makes Modal good.\N我们能不能默认把安全限制得更严格一点，又不至于破坏让 Modal 优秀的那种魔力。
+Dialogue: 0,0:49:22.41,0:49:28.73,Sub,,0,0,0,,And I think this also, you know, it's a kind of a separate side track is like agents are getting really good at cyber security.\N而且我认为，这其实也是另一个独立的发展方向，智能体在网络安全方面变得非常出色。
+Dialogue: 0,0:49:28.78,0:49:32.76,Sub,,0,0,0,,So we've actually also as a sort of, you know, separate sort of learning from this incident.\N因此，我们实际上也从这次事件中获得了某种独立的、类似学习的经验。
+Dialogue: 0,0:49:32.81,0:49:36.98,Sub,,0,0,0,,Like we started using agents internally quite a lot to to to try to find vulnerabilities.\N就像我们内部大量使用智能体来尝试发现漏洞一样。
+Dialogue: 0,0:49:37.03,0:49:38.38,Sub,,0,0,0,,So far hasn't found anything,\N到目前为止还没发现什么。
+Dialogue: 0,0:49:38.43,0:49:42.85,Sub,,0,0,0,,but like they're very good at like probing into like very deep parts of the\N但他们非常擅长深入探究非常深的层面
+Dialogue: 0,0:49:42.90,0:49:48.83,Sub,,0,0,0,,system and exploiting trying to exploit things and trying to escalate and get out of sandboxes.\N系统正在尝试利用漏洞，试图突破限制并逃出沙箱。
+Dialogue: 0,0:49:48.88,0:49:52.95,Sub,,0,0,0,,Um so, you know, it's it's it's something we're exploring very actively right now.\N嗯，你知道的，这正是我们目前正在积极探讨的事情。
+Dialogue: 0,0:49:53.00,0:49:55.82,Sub,,0,0,0,,How exactly do you get the agents to like run through the code base?\N你到底怎么让智能体喜欢去遍历代码库的？
+Dialogue: 0,0:49:55.87,0:49:58.67,Sub,,0,0,0,,You're just like, "Hey, like find security vulner- vulnerabilities?"\N你就在那说：“嘿，找找安全漏洞？”
+Dialogue: 0,0:49:58.72,0:50:02.67,Sub,,0,0,0,,Well, no, you just like you just put them in a sandbox and and tell them like, "Can you try to escape?"\N不，你就是把它们放进沙盒里，然后跟它们说：“你能试着逃出来吗？”
+Dialogue: 0,0:50:02.72,0:50:05.44,Sub,,0,0,0,,Just run through the Can you just try to escape from the sandbox?\N就试试看能不能从沙箱里逃出去？
+Dialogue: 0,0:50:05.49,0:50:08.51,Sub,,0,0,0,,It's like escape the room, but for agents.\N就像密室逃脱，但针对的是智能体。
+Dialogue: 0,0:50:08.56,0:50:08.86,Sub,,0,0,0,,Cool.\N酷。
+Dialogue: 0,0:50:08.87,0:50:10.43,Sub,,0,0,0,,When did you start doing that?\N你是什么时候开始这么做的？
+Dialogue: 0,0:50:10.48,0:50:12.87,Sub,,0,0,0,,We started doing it a a few months ago.\N我们几个月前就开始这么做了。
+Dialogue: 0,0:50:12.92,0:50:13.83,Sub,,0,0,0,,And it's pretty exciting.\N这真是太令人兴奋了。
+Dialogue: 0,0:50:13.88,0:50:15.03,Sub,,0,0,0,,Like when stable, I guess, came out.\N就像稳定版发布时那样，我想。
+Dialogue: 0,0:50:15.08,0:50:16.51,Sub,,0,0,0,,Yeah, roughly around the same time.\N是的，大概在同一时间。
+Dialogue: 0,0:50:16.56,0:50:17.03,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,0:50:17.08,0:50:23.60,Sub,,0,0,0,,I mean, my my view on like cybersecurity is that, you know, I actually think they're very good at finding vulnerabilities,\N我的看法是，网络安全方面，他们实际上非常擅长发现漏洞。
+Dialogue: 0,0:50:23.65,0:50:26.85,Sub,,0,0,0,,but I think you can also use them defensively well very well.\N但我觉得你也可以很好地用它们进行防御。
+Dialogue: 0,0:50:26.90,0:50:31.33,Sub,,0,0,0,,So, I I I think, you know, companies like Model and many other companies right now, like I think, you know,\N所以，我认为，像 Model 这样的公司，以及现在许多其他公司，我觉得，你知道，
+Dialogue: 0,0:50:31.38,0:50:36.24,Sub,,0,0,0,,if if you go to talk to like pretty much every CISO, I'm sure they're all thinking about the same thing.\N如果你去跟几乎所有首席信息安全官聊聊，我敢肯定他们都在想同样的事情。
+Dialogue: 0,0:50:36.29,0:50:41.01,Sub,,0,0,0,,Like, how do we use agents defensively to to to, you know, fix all our vulnerabilities?\N比如，我们该如何用智能体进行防御性应用，来修复我们所有的安全漏洞？
+Dialogue: 0,0:50:41.06,0:50:43.81,Sub,,0,0,0,,So, over time, actually, in a way, like I'm not that nervous.\N所以，随着时间推移，实际上，某种程度上，我并不太紧张。
+Dialogue: 0,0:50:43.86,0:50:51.59,Sub,,0,0,0,,I think if if anything, like agents and and cybersecurity, all the breakthroughs in cybersecurity, will will make the world safer, if anything.\N我认为，如果有什么影响的话，像智能体和网络安全领域的所有突破，反而会让世界变得更安全。
+Dialogue: 0,0:50:51.64,0:50:56.61,Sub,,0,0,0,,Do you think that like all of the cybersecurity the big cybersecurity companies are just cooked?\N你觉得那些大型网络安全公司，是不是全都被颠覆了？
+Dialogue: 0,0:50:56.66,0:51:04.71,Sub,,0,0,0,,I don't know if that's true because I mean, you're asking something that's like very far outside of my like core expertise.\N我不确定这是否属实，因为你说的这个问题已经远远超出了我核心专业领域的范围。
+Dialogue: 0,0:51:04.76,0:51:10.25,Sub,,0,0,0,,But when I think about like cybersecurity, a lot of what you're selling is effectively fear,\N但当我想到网络安全时，你们所销售的很多东西本质上就是制造恐惧。
+Dialogue: 0,0:51:10.30,0:51:16.57,Sub,,0,0,0,,and that's almost like a branding and like marketing strategy, as much as, you know, obviously, the core products.\N这几乎就像一种品牌和营销策略，和核心产品一样重要。
+Dialogue: 0,0:51:16.62,0:51:22.40,Sub,,0,0,0,,But I think, you know, brand and things like that are actually like arguably like more valuable in the era of AI.\N但我觉得，你知道，品牌之类的东西在AI时代实际上可能更具价值。
+Dialogue: 0,0:51:22.44,0:51:26.40,Sub,,0,0,0,,So, I I I wouldn't necessarily jump to the conclusion that they're cooked.\N所以，我并不一定会得出他们完蛋了的结论。
+Dialogue: 0,0:51:26.45,0:51:31.71,Sub,,0,0,0,,I think they have, you know, deep relationships with the enterprise customers, and they have, you know,\N我认为他们与企业客户有着深厚的关系，而且他们确实……
+Dialogue: 0,0:51:31.76,0:51:36.60,Sub,,0,0,0,,big sales teams who are very good at telling, you know, spooky stories and and things like that.\N那些销售团队非常擅长讲述各种吓人的故事之类的事情。
+Dialogue: 0,0:51:36.66,0:51:39.00,Sub,,0,0,0,,And And I think they're going to continue to be very good at that.\N而且我认为他们将继续在这方面表现出色。
+Dialogue: 0,0:51:39.05,0:51:41.08,Sub,,0,0,0,,I just asked cuz like Yeah, you're doing it yourself.\N我问一下只是因为，嗯，你这是自己在做啊。
+Dialogue: 0,0:51:41.13,0:51:44.21,Sub,,0,0,0,,You're not going to one of like the Palo Alto Networks or whatever.\N你不会去那种帕洛阿尔托网络之类的公司吧。
+Dialogue: 0,0:51:44.26,0:51:47.38,Sub,,0,0,0,,But I guess like it's only like giant enterprises that care about that.\N但我想，大概只有大型企业才会在意这些吧。
+Dialogue: 0,0:51:47.43,0:51:49.94,Sub,,0,0,0,,Also, they can blame somebody if something goes wrong. true.\N而且如果出问题了，他们还能找个替罪羊。没错。
+Dialogue: 0,0:51:49.99,0:51:55.88,Sub,,0,0,0,,Yeah, yeah, you kind of want to hire in many cases just like a established vendor uh in order to blame them.\N是的，很多时候你其实就想雇一个成熟的供应商，这样出了问题就能怪他们。
+Dialogue: 0,0:51:55.93,0:52:02.87,Sub,,0,0,0,,I I I mean, to some extent, it it does reduce a little bit the need for us to do to bring in pen testers like human pen testers,\N我的意思是，从某种程度上说，这确实减少了我们聘请人类渗透测试员的必要性。
+Dialogue: 0,0:52:02.92,0:52:05.79,Sub,,0,0,0,,which most startups like do on a regular cycle.\N大多数初创公司都会定期这样做。
+Dialogue: 0,0:52:05.84,0:52:09.64,Sub,,0,0,0,,So, maybe previously, you know, we would do it I actually don't know what the cycle was,\N所以，也许以前，我们这么做，其实我不太清楚具体周期是怎样的，
+Dialogue: 0,0:52:09.69,0:52:12.53,Sub,,0,0,0,,but but I think we used to do it like once every 6 months roughly.\N但我觉得我们以前大概每六个月做一次。
+Dialogue: 0,0:52:12.58,0:52:15.51,Sub,,0,0,0,,Maybe now we only need to do it once every year.\N也许现在我们只需每年做一次就够了。
+Dialogue: 0,0:52:15.56,0:52:16.91,Sub,,0,0,0,,I I don't know.\N我不知道。
+Dialogue: 0,0:52:16.96,0:52:21.91,Sub,,0,0,0,,But but like I think with all of these things, you know, humans can also use them to get more efficiently.\N但我觉得，这些技术其实也能帮助人类更高效地工作。
+Dialogue: 0,0:52:21.96,0:52:23.60,Sub,,0,0,0,,So, like, you know, like I I I I don't know.\N所以呢，就是，你知道的，就是，我，我，我，我不知道。
+Dialogue: 0,0:52:23.65,0:52:27.99,Sub,,0,0,0,,I'm I'm kind of a believer also that like humans with AI is even more powerful now.\N我也相信，人类与AI结合，现在威力更强大了。
+Dialogue: 0,0:52:28.04,0:52:34.03,Sub,,0,0,0,,So, like, maybe there's an argument that like we can bring in pen testers who are really good at using agents and,\N所以，也许可以论证，我们可以引进那些擅长使用智能体的渗透测试人员，
+Dialogue: 0,0:52:34.08,0:52:35.57,Sub,,0,0,0,,you know, find vulnerability even faster.\N你知道，甚至能更快地发现漏洞。
+Dialogue: 0,0:52:35.62,0:52:36.26,Sub,,0,0,0,,I I don't know.\N我不知道。
+Dialogue: 0,0:52:36.31,0:52:38.56,Sub,,0,0,0,,I I'm not that, you know, I'm an optimist.\N我不是那种人，你知道的，我是个乐观主义者。
+Dialogue: 0,0:52:38.61,0:52:42.50,Sub,,0,0,0,,I started a company, so like, you know, I'm I'm generally like optimistic about everything,\N我创办了一家公司，所以总的来说，我对一切都很乐观。
+Dialogue: 0,0:52:42.55,0:52:46.05,Sub,,0,0,0,,but like I I certainly don't think humans are cooked or companies are cooked.\N但我觉得人类和公司显然都没到山穷水尽的地步。
+Dialogue: 0,0:52:46.10,0:52:51.15,Sub,,0,0,0,,Like, I I think in the era of AI, a lot of companies are going to figure out, you know, how to use AI to be even more efficient.\N我觉得在AI时代，很多公司都会意识到，如何利用AI让自身变得更高效。
+Dialogue: 0,0:52:51.20,0:52:51.71,Sub,,0,0,0,,Mhm.\N嗯。
+Dialogue: 0,0:52:51.76,0:52:58.75,Sub,,0,0,0,,I want to transition a little bit to like developer experience cuz like early on I mean, even now, like you guys focus a lot on that.\N我想稍微转到开发者体验上来，因为早期到现在，你们都特别关注这一点。
+Dialogue: 0,0:52:58.80,0:53:00.27,Sub,,0,0,0,,And you've talked a lot about that.\N你已经谈了很多这方面的事。
+Dialogue: 0,0:53:00.32,0:53:02.83,Sub,,0,0,0,,Does developer experience even matter anymore?\N开发者体验还重要吗？
+Dialogue: 0,0:53:02.88,0:53:04.28,Sub,,0,0,0,,I think it still matters.\N我认为这仍然很重要。
+Dialogue: 0,0:53:04.33,0:53:06.59,Sub,,0,0,0,,And and then I think you're you're sort of, you know,\N而且我觉得你某种程度上，你知道，
+Dialogue: 0,0:53:06.64,0:53:11.68,Sub,,0,0,0,,like the context I think you're fish like the thing you're talking about is like now with agents, right?\N就像上下文里说的，我觉得你提到的东西现在跟智能体有关，对吧？
+Dialogue: 0,0:53:11.72,0:53:14.66,Sub,,0,0,0,,Like does developer experience Like the docs are already there.\N开发者体验如何？文档 already 都在了。
+Dialogue: 0,0:53:14.71,0:53:17.19,Sub,,0,0,0,,The agents are going to look at the docs, like all that stuff.\N智能体将查看这些文档，就像所有这些内容一样。
+Dialogue: 0,0:53:17.24,0:53:24.55,Sub,,0,0,0,,To that point though, like almost all the things that make developer experience good also makes the agent experience good.\N不过说到这一点，几乎所有让开发者体验良好的因素，也同样能提升智能体的体验。
+Dialogue: 0,0:53:24.60,0:53:28.79,Sub,,0,0,0,,Is kind of what we've seen in practice, which is like things like having good docs,\N这正是我们实践中看到的情况，比如拥有良好的文档。
+Dialogue: 0,0:53:28.84,0:53:33.84,Sub,,0,0,0,,having descriptive error messages, having fast feedback loops, right?\N拥有描述性的错误提示，拥有快速的反馈循环，对吧？
+Dialogue: 0,0:53:33.88,0:53:36.52,Sub,,0,0,0,,Like I do think there's certain things have changed.\N我觉得有些事情确实已经改变了。
+Dialogue: 0,0:53:36.56,0:53:42.96,Sub,,0,0,0,,The other day I was like setting something up with Cloudflare, and it's like I find Cloudflare like notoriously annoying to work with sometimes.\N前几天我正想用 Cloudflare 搭建点东西，结果发现这玩意儿有时候真让人头疼。
+Dialogue: 0,0:53:43.01,0:53:49.48,Sub,,0,0,0,,and and I throw an agent at it and it was able to like just configure a bunch of like you know things and and balloon me for me.\N然后我扔了个智能体过去，它就能自动配置一堆东西，还帮我把预算给放大了。
+Dialogue: 0,0:53:49.54,0:53:53.91,Sub,,0,0,0,,And you know and and so I will say like agents does they do make it a\N而且你知道，所以我想说，智能体确实能实现这一点
+Dialogue: 0,0:53:53.96,0:53:57.65,Sub,,0,0,0,,little bit easier to work with things that are like harder to work with in the past,\N现在处理一些过去较难操作的事物要容易多了。
+Dialogue: 0,0:53:57.70,0:53:58.22,Sub,,0,0,0,,you know,\N你知道的，
+Dialogue: 0,0:53:58.27,0:54:02.80,Sub,,0,0,0,,like the sort of human toll of dealing with the animal has arguably gone down a\N处理动物所带来的人员伤亡，可以说已经下降了不少。
+Dialogue: 0,0:54:02.84,0:54:06.11,Sub,,0,0,0,,little bit cuz you can just like you know tell your agent to deal with it.\N因为你可以直接让智能体去处理它。
+Dialogue: 0,0:54:06.16,0:54:12.19,Sub,,0,0,0,,But but for the most part I think you know the things that make developer experience good also make agent experience good.\N但总的来说，我认为让开发者体验良好的那些因素，同样也能让智能体体验良好。
+Dialogue: 0,0:54:12.24,0:54:19.35,Sub,,0,0,0,,I think to some extent also like infrastructure over time anyway becomes and needs to be more programmatic.\N我认为，从某种程度上说，基础设施随着时间推移，也必须变得更加程序化。
+Dialogue: 0,0:54:19.40,0:54:23.23,Sub,,0,0,0,,I think that's always been the thesis about sandboxes is that you know like\N我认为沙盒的核心观点始终是，你知道，
+Dialogue: 0,0:54:23.28,0:54:26.69,Sub,,0,0,0,,things that you previously had to configure using YAML that should just be an SDK.\N之前需要用 YAML 配置的事项，现在应该直接通过 SDK 完成。
+Dialogue: 0,0:54:26.74,0:54:30.68,Sub,,0,0,0,,That should be more like imperative like launch a sandbox like do stuff with it.\N那应该更像命令式操作，比如启动一个沙箱，然后在里面做点事情。
+Dialogue: 0,0:54:30.74,0:54:32.06,Sub,,0,0,0,,Tear the sandbox down, right?\N把沙箱拆了，对吧？
+Dialogue: 0,0:54:32.12,0:54:36.12,Sub,,0,0,0,,Like rather than sort of declarative using using you know some sort of DSL.\N与其用某种类似声明式的、你知道的领域特定语言，不如直接用类似自然语言的方式。
+Dialogue: 0,0:54:36.17,0:54:41.11,Sub,,0,0,0,,It also pushes like a little bit of a different interface that maybe previously didn't exist.\N它还带来了一种此前可能不存在的、略有不同的交互方式。
+Dialogue: 0,0:54:41.16,0:54:48.35,Sub,,0,0,0,,I think in either way like SDKs are as relevant as they were as they always were if not more.\N我认为，无论哪种情况，SDK 的重要性都和过去一样，甚至可能更重要。
+Dialogue: 0,0:54:48.40,0:54:53.83,Sub,,0,0,0,,Is there anything you changed in your product just because like you know most people are just running agents on on it?\N你们有没有因为大多数人只是在上面运行智能体，就对产品做过什么改动？
+Dialogue: 0,0:54:53.88,0:54:54.33,Sub,,0,0,0,,We do.\N我们确实如此。
+Dialogue: 0,0:54:54.38,0:54:58.94,Sub,,0,0,0,,I mean we we also we actually do run a lot of internal tests where we have agents.\N我的意思是，我们实际上也进行了大量内部测试，其中涉及智能体。
+Dialogue: 0,0:54:58.99,0:55:04.78,Sub,,0,0,0,,We tell agents to like build a modal app and run it and I mean a very concrete thing that is\N我们告诉智能体去构建一个模态应用并运行它，意思是非常具体的事情。
+Dialogue: 0,0:55:04.83,0:55:11.83,Sub,,0,0,0,,kind of funny is that we actually seen that like because of agent training data it's very hard to deprecate things now.\N有趣的是，我们发现由于智能体训练数据的存在，现在很难淘汰旧东西了。
+Dialogue: 0,0:55:11.88,0:55:20.78,Sub,,0,0,0,,We see that like agents often like love using you know old versions of modal syntax and and it's kind of hard to nudge them away from that.\N我们发现，智能体往往喜欢使用旧版的模型语法，想让他们改变确实很难。
+Dialogue: 0,0:55:20.84,0:55:24.20,Sub,,0,0,0,,So so we've actually had to be a little bit more conservative going forward like\N所以我们实际上不得不在今后稍微保守一些。
+Dialogue: 0,0:55:24.25,0:55:28.49,Sub,,0,0,0,,you know over the last year or so with with how we deprecate and remove features.\N你知道，过去一年左右，我们淘汰并移除功能的过程中。
+Dialogue: 0,0:55:28.54,0:55:32.99,Sub,,0,0,0,,It takes we have to be very careful to update every single example that's out there online.\N我们必须非常小心，更新网上每一个现有的例子。
+Dialogue: 0,0:55:33.04,0:55:33.37,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:55:33.40,0:55:35.07,Sub,,0,0,0,,And and and you know Yeah, skills, right?\N还有还有，你知道的，对吧？技能，对吧？
+Dialogue: 0,0:55:35.12,0:55:36.08,Sub,,0,0,0,,Yeah, there's like stuff like that.\N嗯，就是那种东西。
+Dialogue: 0,0:55:36.13,0:55:41.91,Sub,,0,0,0,,But but like there's also an insane amount of like modal code that's now like online too that goes into the training data.\N但还有大量疯狂的模态代码现在也在线上，进入了训练数据。
+Dialogue: 0,0:55:41.96,0:55:47.99,Sub,,0,0,0,,I've seen like that to be like kind of an you know a little bit of like an interesting example where like another thing by the way\N我见过类似的情况，有点像一个有趣的例子，顺便说一下
+Dialogue: 0,0:55:48.04,0:55:51.69,Sub,,0,0,0,,too is like there's obviously like to sort of similar to like search\N也类似，显然有点像搜索一样
+Dialogue: 0,0:55:51.74,0:55:57.07,Sub,,0,0,0,,engine optimization there's like agent engine you know whatever people call it agent optimization.\N引擎优化，就是所谓的智能体引擎优化，不管大家怎么称呼它。
+Dialogue: 0,0:55:57.12,0:56:04.96,Sub,,0,0,0,,We often like run internal benchmarks where like ask a an agent like hey like can you deploy stable diffusion for us?\N我们经常运行内部基准测试，比如让一个智能体帮忙：嘿，\N你能帮我们部署一下 Stable Diffusion 吗？
+Dialogue: 0,0:56:05.01,0:56:09.50,Sub,,0,0,0,,Use whatever tool you want and and we see if it recommends modal or not and those things are very useful for\N用你想要的任何工具，看看它是否会推荐模态，这些功能非常有用。
+Dialogue: 0,0:56:09.55,0:56:15.62,Sub,,0,0,0,,us as it attract over time or like hey spin up some sandboxes or like hey like rank all the sandbox vendors.\N随着时间推移，我们吸引的用户越来越多，比如，嘿，启动一些沙箱，或者，嘿，把所有沙箱供应商排个名。
+Dialogue: 0,0:56:15.67,0:56:18.83,Sub,,0,0,0,,So so we we spend a lot of time like doing doing those things to to to make sure.\N所以我们花了很多时间去做这些事，以确保万无一失。
+Dialogue: 0,0:56:18.88,0:56:20.18,Sub,,0,0,0,,I mean what do you do about that?\N我的意思是，你对此有什么办法吗？
+Dialogue: 0,0:56:20.23,0:56:23.91,Sub,,0,0,0,,Yeah you say hey like you know build this stable diffusion thing does it recommend modal or not?\N你说，嘿，你知道的，像构建这个稳定扩散的东西，它推荐用模态吗？
+Dialogue: 0,0:56:23.96,0:56:25.46,Sub,,0,0,0,,Like what yeah what do you do about that?\N就像这样，是啊，你打算怎么应对这个问题？
+Dialogue: 0,0:56:25.51,0:56:30.24,Sub,,0,0,0,,Yeah I I think that's harder as I think you know it's like search engine optimization I\N是的，我觉得这更难，因为你知道，这就像搜索引擎优化一样。
+Dialogue: 0,0:56:30.29,0:56:35.12,Sub,,0,0,0,,think it's primarily through content is like you just have to put out a lot of content.\N我认为主要是通过内容，就是你必须持续输出大量内容。
+Dialogue: 0,0:56:35.17,0:56:43.55,Sub,,0,0,0,,You can also to some extent like sort of see the perception I think a little bit more like you can ask an agent like you know how\N你也可以在某种程度上，像这样看到感知，我觉得稍微更清晰一点，你可以让一个智能体回答，你知道……
+Dialogue: 0,0:56:43.60,0:56:52.77,Sub,,0,0,0,,does you know rank all the sandbox vendors by reliability or rank all the sandbox vendors by price and and sort of see and it does feel like agents\N你有按可靠性排序所有沙箱厂商，或者按价格排序并看看结果吗？感觉就像智能体在发挥作用
+Dialogue: 0,0:56:52.82,0:57:01.26,Sub,,0,0,0,,are a little bit more prone to like mis understanding pricing and and you know things like that so we also spend a lot of time like just\N对价格理解容易出现偏差，类似的情况也比较多，所以我们花了很多时间去处理这些问题。
+Dialogue: 0,0:57:01.32,0:57:05.87,Sub,,0,0,0,,making content more clear and more like you know understandable for agents cuz we\N让内容更清晰，也更易于智能体理解
+Dialogue: 0,0:57:05.92,0:57:09.47,Sub,,0,0,0,,know they're all indexing like everything that's out there and and that's talking about modal.\N他们都知道，所有外部内容都在被索引，这谈到了模型。
+Dialogue: 0,0:57:09.52,0:57:16.30,Sub,,0,0,0,,Have you thought about just like making a bunch of GitHub repos and having the agents like write a bunch of modal code in there?\N你有没有想过，直接创建一堆 GitHub 仓库，让智能体在里面写一大堆模式代码？
+Dialogue: 0,0:57:16.35,0:57:17.19,Sub,,0,0,0,,Have you tried that?\N你试过那个吗？
+Dialogue: 0,0:57:17.24,0:57:23.37,Sub,,0,0,0,,Slop cannon I think the truth is like that is probably something you can do.\N我觉得“懒人炮”这个说法，真相可能就是你真的能这么做。
+Dialogue: 0,0:57:23.42,0:57:30.99,Sub,,0,0,0,,My guess is like LM training data today is probably quite insensitive to like what's like AI output\N我的猜测是，如今的语言模型训练数据可能对AI输出并不太敏感。
+Dialogue: 0,0:57:31.04,0:57:35.59,Sub,,0,0,0,,in the first place and you can probably like create a lot of slop like we thought about\N本来就不该这么做，你可能会弄出一大堆垃圾，就像我们之前想的那样
+Dialogue: 0,0:57:35.64,0:57:39.23,Sub,,0,0,0,,it like I don't love that idea but like in theory like much like you know SEO in\N说实话，我不太喜欢这个想法，但理论上来说，就像你知道的搜索引擎优化一样
+Dialogue: 0,0:57:39.28,0:57:43.94,Sub,,0,0,0,,the early days and still to some extent like auto generated content is like a very effective strategy.\N早期阶段，甚至在某种程度上，自动生成内容仍是一种非常有效的策略。
+Dialogue: 0,0:57:44.00,0:57:47.40,Sub,,0,0,0,,I think it's possible like you know you could you can do those things too.\N我觉得有可能，你知道的，你也可以做到那些事。
+Dialogue: 0,0:57:47.45,0:57:48.03,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:57:48.08,0:57:50.03,Sub,,0,0,0,,I want to switch to FDEs.\N我想切换到FDE。
+Dialogue: 0,0:57:50.08,0:57:54.51,Sub,,0,0,0,,Apparently you guys hire like forward deployed engineers like what do they do?\N显然你们会招聘像前线部署工程师这样的人，他们具体都做些什么呢？
+Dialogue: 0,0:57:54.56,0:58:00.57,Sub,,0,0,0,,We're in a new era of like building applications and and and you know things that we couldn't build you know just\N我们正处在一个全新的时代，能够构建以前无法实现的应用，你知道的，那些曾经无法实现的东西。
+Dialogue: 0,0:58:00.62,0:58:08.12,Sub,,0,0,0,,a few years ago and we see a lot of companies that you know they need a little bit of help right?\N几年前，我们看到很多公司，你知道的，它们需要一点帮助，对吧？
+Dialogue: 0,0:58:08.17,0:58:15.21,Sub,,0,0,0,,Like you know and so we started investing in FDEs a couple years ago but it but it's really been this year we've kind of scaled it up a lot.\N就像你们知道的，我们几年前就开始投资FDE了，但真正大规模扩展是在今年。
+Dialogue: 0,0:58:15.26,0:58:19.66,Sub,,0,0,0,,I think we started this year having like four FDEs now we I think we have like 24 or something like that.\N我觉得今年我们刚开始时只有四个FDE，现在我觉得大概有二十四个左右。
+Dialogue: 0,0:58:19.71,0:58:25.21,Sub,,0,0,0,,So we've grown a lot and they do a you know it's more it's not exactly the pounder model but they do a\N所以我们成长了很多，他们做的东西，你知道，虽然不是完全一样的“锤子模型”，但确实也差不多。
+Dialogue: 0,0:58:25.26,0:58:31.44,Sub,,0,0,0,,lot of like heavy you know sort of customer engagement like they work with a lot of customers on performance tuning especially with LLMs.\N很多客户参与度很高，他们尤其擅长与客户合作进行性能调优，特别是针对大语言模型。
+Dialogue: 0,0:58:31.49,0:58:35.11,Sub,,0,0,0,,We we see it out there's so much benefit from like you know sitting down with\N我们看到，像这样坐下来交流，能带来如此多的好处。
+Dialogue: 0,0:58:35.16,0:58:41.74,Sub,,0,0,0,,customers and tuning draft models and tweaking uh you know the parameters in DLM and SULang.\N客户和调优模型，还有调整 DLM 和 SULang 中的参数。
+Dialogue: 0,0:58:41.79,0:58:47.15,Sub,,0,0,0,,Um they often you know fix bugs or or not fix bugs but like you know when customers\N嗯，他们通常会修复一些漏洞，或者不修复，但你知道的，客户那边……
+Dialogue: 0,0:58:47.20,0:58:50.91,Sub,,0,0,0,,run into issues like they often work with customers trying to figure out like how do we work around\N遇到问题，比如他们经常与客户合作，试图找出如何绕过障碍的方法
+Dialogue: 0,0:58:50.96,0:58:56.27,Sub,,0,0,0,,that or uh another thing we we've used FDEs a lot for is like just kind of proactively you\N或者，我们还经常用 FDE 来主动地做一些事情
+Dialogue: 0,0:58:56.32,0:59:02.51,Sub,,0,0,0,,know if if we see certain customers you know over provisioning with model like customers requesting too much CPU\N知道吗，如果我们看到某些客户，比如像客户请求的CPU过多，出现过度配置的情况
+Dialogue: 0,0:59:02.56,0:59:06.07,Sub,,0,0,0,,or too much memory for instance like that's kind of expensive and like we we try to catch\N或者内存太多，比如这样就比较贵，我们尽量去避免这种情况
+Dialogue: 0,0:59:06.12,0:59:09.52,Sub,,0,0,0,,those things and we try to sit down with those customers like yo like you're spending a lot of\N那些事情，我们都会跟这些客户坐下来谈，就像你投入了很多一样
+Dialogue: 0,0:59:09.57,0:59:13.78,Sub,,0,0,0,,money on model right now we can actually help you save money and then of course like with with\N现在投入模型，我们实际上能帮你省钱，当然，就像这样
+Dialogue: 0,0:59:13.83,0:59:19.85,Sub,,0,0,0,,sort of active deals you know we we help them migrate code from other platforms uh things like that.\N类似主动的项目，比如帮助他们把代码从其他平台迁移过来之类的。
+Dialogue: 0,0:59:19.90,0:59:26.70,Sub,,0,0,0,,Um I think you know we we we never have the intention of becoming like a service heavy business.\N呃，我想你们知道，我们从来就没打算把公司变成一个服务型重资产模式。
+Dialogue: 0,0:59:26.75,0:59:34.35,Sub,,0,0,0,,I I think the the goal for FDEs is like, you know, A is to be part of you know, the the sort of sales process and like closing deals.\N我认为FDE的目标是，你知道的，成为销售流程的一部分，帮助促成交易。
+Dialogue: 0,0:59:34.40,0:59:38.53,Sub,,0,0,0,,B is to serve customers and and do some like, you know, customer support.\NB 的职责是服务客户，比如提供客户支持。
+Dialogue: 0,0:59:38.58,0:59:41.55,Sub,,0,0,0,,But like I actually think that like the most important thing is like C is\N但说实话，我认为最重要的是C。
+Dialogue: 0,0:59:41.60,0:59:47.79,Sub,,0,0,0,,like bridging gaps in the product that we later want to turn into like real features.\N就像填补产品中的空白，以便后续将其转化为真正的功能。
+Dialogue: 0,0:59:47.84,0:59:52.55,Sub,,0,0,0,,So I I think to a large extent, you know, anything an FDE does, you know,\N所以我认为在很大程度上，你知道，FDE 做的任何事情，你知道，
+Dialogue: 0,0:59:52.60,0:59:57.99,Sub,,0,0,0,,my question is always like long-term, how do we turn this into products so we don't need an FDE for this?\N我的问题总是着眼于长期：我们该如何将其转化为产品，从而不再需要FDE？
+Dialogue: 0,0:59:58.04,0:59:58.44,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:59:58.49,1:00:00.11,Sub,,0,0,0,,Do you guys hire PMs?\N你们会招聘项目经理吗？
+Dialogue: 0,1:00:00.16,1:00:00.99,Sub,,0,0,0,,Product managers?\N产品经理？
+Dialogue: 0,1:00:01.04,1:00:01.34,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,1:00:01.36,1:00:06.83,Sub,,0,0,0,,No. Would you say these FDEs are kind of like pseudo-ish PMs?\N不，你会不会觉得这些FDEs有点像伪PM？
+Dialogue: 0,1:00:06.88,1:00:08.12,Sub,,0,0,0,,It's a little bit of a different function.\N它的功能有点不一样。
+Dialogue: 0,1:00:08.17,1:00:13.55,Sub,,0,0,0,,Like I I think certainly on the more like, you know, customer-facing side they are, but there's like, you know, on the more like inward,\N就像我所想的，当然在更贴近客户的一侧，他们确实如此，但另一方面，在更内部的层面，也存在类似的情况。
+Dialogue: 0,1:00:13.60,1:00:19.14,Sub,,0,0,0,,you know, internal side like there's a sort of separate part of like product management which is more like, what are the next building blocks?\N你知道，内部还有这么一个部分，更像是在思考：接下来的构建模块是什么？
+Dialogue: 0,1:00:19.19,1:00:20.23,Sub,,0,0,0,,What else should I invest in?\N我还该投资什么？
+Dialogue: 0,1:00:20.28,1:00:24.09,Sub,,0,0,0,,And like, you know, and then there's like something in in in between like, you know,\N而且，你知道，中间好像还有点什么，就是那种，你知道的。
+Dialogue: 0,1:00:24.14,1:00:29.91,Sub,,0,0,0,,looking at like maybe 10 20 different customers that are all asking for like slightly different things, but maybe what are the patterns?\N看看大约10到20个客户，他们都在提出略有不同的需求，但背后可能有什么共同的模式呢？
+Dialogue: 0,1:00:29.96,1:00:31.59,Sub,,0,0,0,,Like how do we turn this into product?\N我们该怎么把它变成产品呢？
+Dialogue: 0,1:00:31.64,1:00:35.91,Sub,,0,0,0,,We do have people doing product with us and and it's sort of evolved, you know,\N我们确实有人在和我们共同开发产品，这个过程也逐渐演变，你知道的。
+Dialogue: 0,1:00:35.96,1:00:42.39,Sub,,0,0,0,,we've had people basically like become product managers after previously being either dev rel or engineers\N我们之前见过一些人，原本是开发者关系或工程师，后来直接转成了产品经理。
+Dialogue: 0,1:00:42.44,1:00:48.00,Sub,,0,0,0,,and they're showing strong aptitude on on doing thinking very strategically about what we have to build.\N他们在思考我们必须构建什么方面展现出很强的策略性能力。
+Dialogue: 0,1:00:48.05,1:00:51.02,Sub,,0,0,0,,So I'm actually not like anti-product management.\N所以我其实并不反对产品管理。
+Dialogue: 0,1:00:51.07,1:00:59.20,Sub,,0,0,0,,I do think that a lot of companies in the past hired product management product managers too eagerly and and\N我认为过去很多公司招聘产品经理时都过于急切了。
+Dialogue: 0,1:00:59.25,1:01:03.63,Sub,,0,0,0,,I think there's a risk that you you kind of I can sort of see it in a lot of products.\N我觉得存在一种风险，你在很多产品里都能看出来。
+Dialogue: 0,1:01:03.68,1:01:08.43,Sub,,0,0,0,,Like certain products like you can tell like there's just like eager product managers\N就像某些产品一样，你一眼就能看出来，那些产品经理显然很急切
+Dialogue: 0,1:01:08.48,1:01:12.18,Sub,,0,0,0,,that have just thought of like kind of like widgety things and just shipped them.\N那些刚想到的、类似小部件的东西，直接就发布了。
+Dialogue: 0,1:01:12.22,1:01:19.04,Sub,,0,0,0,,I think doing product management at an infra company really well is very very hard cuz I think it takes like a very deep,\N我认为在基础设施公司做好产品管理非常非常困难，因为这需要极其深入的理解。
+Dialogue: 0,1:01:19.09,1:01:23.94,Sub,,0,0,0,,you know, level of strategic thinking, thinking about like what are the foundational building blocks?\N你知道，战略思维的层次，比如思考哪些是基础性的构建模块？
+Dialogue: 0,1:01:23.99,1:01:25.95,Sub,,0,0,0,,Where do we want to be in 1 to 2 years?\N我们希望一到两年后达到什么目标？
+Dialogue: 0,1:01:26.00,1:01:27.97,Sub,,0,0,0,,Cuz the truth is building infrastructure is very hard.\N因为事实是，建设基础设施非常困难。
+Dialogue: 0,1:01:28.02,1:01:34.33,Sub,,0,0,0,,And how do we make sure we don't end up with like 35 features that are like kind of similar-looking,\N我们该如何确保不会最终得到35个看起来差不多的特征呢？
+Dialogue: 0,1:01:34.38,1:01:37.39,Sub,,0,0,0,,but all do like a little bit slightly different things?\N但它们都做些略有不同的事情？
+Dialogue: 0,1:01:37.44,1:01:41.68,Sub,,0,0,0,,That's sort of level of thinking is something that, you know, is very rare to find.\N这种思维方式，说实话，非常罕见。
+Dialogue: 0,1:01:41.73,1:01:45.43,Sub,,0,0,0,,And then for that reason, we haven't aggressively tried to build up a product management team yet.\N因此，出于这个原因，我们还没有积极地去组建产品管理团队。
+Dialogue: 0,1:01:45.48,1:01:46.47,Sub,,0,0,0,,Yeah, that makes sense.\N嗯，这有道理。
+Dialogue: 0,1:01:46.52,1:01:51.01,Sub,,0,0,0,,How would you say your teams have been evolving maybe like since Gen AI?\N你认为自生成式AI出现以来，你们团队的发展变化如何？
+Dialogue: 0,1:01:51.06,1:01:54.17,Sub,,0,0,0,,Cuz I would assume Yeah, I mean, you obviously worked at like Spotify.\N毕竟我猜你肯定在Spotify工作过，对吧？
+Dialogue: 0,1:01:54.22,1:01:56.12,Sub,,0,0,0,,You had like a certain team structure.\N你当时有某种特定的团队结构。
+Dialogue: 0,1:01:56.17,1:02:00.75,Sub,,0,0,0,,Um have your team structures like evolved a lot now that, you know, we have coding agents?\N嗯，现在有了编程智能体，你们的团队结构应该也演化了很多吧？
+Dialogue: 0,1:02:00.80,1:02:02.08,Sub,,0,0,0,,In a funny way, like yes.\N说来有趣，没错，就是这么回事。
+Dialogue: 0,1:02:02.13,1:02:07.26,Sub,,0,0,0,,I I do think team structures have changed a lot, but I'm actually not convinced it was like Gen AI driving that.\N我认为团队结构确实发生了很大变化，但我实际上并不认为这是由生成式AI推动的。
+Dialogue: 0,1:02:07.31,1:02:12.30,Sub,,0,0,0,,I think in particular, like one thing I've seen a lot is that there's been sort of a focus,\N特别是我注意到，有一个明显的趋势，
+Dialogue: 0,1:02:12.35,1:02:18.83,Sub,,0,0,0,,like a swing back towards being an IC, that I actually think is very, very positive for the space as a whole.\N就像一次回归集成电路领域的反弹，我认为这对整个行业来说非常非常积极。
+Dialogue: 0,1:02:18.88,1:02:23.43,Sub,,0,0,0,,I think, you know, if you look back at the space like 10 years ago, 20 years ago,\N我想，你明白的，如果你回望一下十年前、二十年前的那片领域，
+Dialogue: 0,1:02:23.48,1:02:29.97,Sub,,0,0,0,,everyone wanted to be in management cuz that was the way you you would get more money and more, you know, more recognition and more prestige.\N大家都想进管理层，因为那是赚更多钱、获得更多认可和更高地位的途径。
+Dialogue: 0,1:02:30.02,1:02:36.45,Sub,,0,0,0,,I think that shift actually started even before Gen AI, but I do think it's like heavily accelerated with AI.\N我认为这种转变实际上在生成式AI出现之前就已经开始了，但我确实觉得AI极大地加速了这一进程。
+Dialogue: 0,1:02:36.50,1:02:44.37,Sub,,0,0,0,,Like, you know, we we we make it very clear to everyone at Model that like manager or IC, it's like there's no difference in prestige.\N就像我们跟模型团队的每个人说的那样，无论是经理还是普通员工，大家在地位上没有任何差别。
+Dialogue: 0,1:02:44.42,1:02:47.23,Sub,,0,0,0,,Like everyone is just a member of technical staff.\N就像每个人都是技术人员的一员。
+Dialogue: 0,1:02:47.28,1:02:51.76,Sub,,0,0,0,,You know, it's about ultimately your contributions and we see a lot of ex-managers,\N你知道，归根结底还是看你的贡献，我们看到很多前经理。
+Dialogue: 0,1:02:51.81,1:02:55.60,Sub,,0,0,0,,you know, becoming ICs and and cuz they want to go back and build code.\N你知道，他们想成为IC，因为他们想回去写代码。
+Dialogue: 0,1:02:55.65,1:03:01.22,Sub,,0,0,0,,And so and you know, and there's been there's been sort of shift away from like, you know, non-technical managers.\N所以，你知道的，现在有一种趋势，逐渐远离那些非技术背景的管理者。
+Dialogue: 0,1:03:01.26,1:03:02.75,Sub,,0,0,0,,Everyone pretty including me.\N每个人，包括我自己，都挺喜欢的。
+Dialogue: 0,1:03:02.80,1:03:08.15,Sub,,0,0,0,,I I still write a lot of code at Model and and actually too and and pretty much everyone in in the tech team.\N我仍然在写很多代码，模型团队里也一样，实际上技术团队里的每个人基本上都是这样。
+Dialogue: 0,1:03:08.20,1:03:11.47,Sub,,0,0,0,,And a lot of people who are not in the tech team still write code.\N还有很多不在技术团队的人也在写代码。
+Dialogue: 0,1:03:11.52,1:03:13.83,Sub,,0,0,0,,So that to me is like, you know, a recent phenomenon.\N对我来说，这就像最近才出现的现象。
+Dialogue: 0,1:03:13.88,1:03:17.59,Sub,,0,0,0,,But but I actually don't know if it's like necessarily caused by Gen AI,\N但其实我不确定这是否必然由生成式AI引起。
+Dialogue: 0,1:03:17.64,1:03:24.99,Sub,,0,0,0,,but I think GenAI has like greatly accelerated it cuz it it made it even lower the cost of like writing code is even easier.\N但我觉得生成式AI大大加速了这一进程，因为它让写代码的成本更低，甚至更容易了。
+Dialogue: 0,1:03:25.04,1:03:30.21,Sub,,0,0,0,,So if you have like non-technical people like committing code, like how do you how do you review that?\N所以如果你有像非技术人员这样提交代码的情况，那你怎么审查呢？
+Dialogue: 0,1:03:30.26,1:03:32.43,Sub,,0,0,0,,Like how do you guys do code reviews?\N你们是怎么进行代码审查的？
+Dialogue: 0,1:03:32.48,1:03:36.04,Sub,,0,0,0,,We do code reviews, but it's we we think of it as optional.\N我们做代码审查，但我们认为那是可选的。
+Dialogue: 0,1:03:36.09,1:03:41.51,Sub,,0,0,0,,I mean for most my view is like code reviews in in large part is like people\N我的看法是，大多数情况下，代码审查本质上就是人
+Dialogue: 0,1:03:41.56,1:03:47.70,Sub,,0,0,0,,in many cases trying to just escape the the accountability of like you know merging things into production.\N在很多情况下，试图逃避像将事物合并到生产环境中的责任。
+Dialogue: 0,1:03:47.74,1:03:55.02,Sub,,0,0,0,,And and if you have that like, you know, if you have that culture like then to me that's a sign that you need to invest way more in,\N而且如果你有那种文化，对我来说，这就说明你更需要加大投资。
+Dialogue: 0,1:03:55.07,1:04:02.21,Sub,,0,0,0,,you know, CD and and CI and and and things like that is CI in particular, but also CD continuous integration continuous deployment.\N你知道，CI 和 CD 之类的，特别是 CI，还有持续集成、持续部署。
+Dialogue: 0,1:04:02.26,1:04:05.72,Sub,,0,0,0,,We do code reviews like I mean like when I write code like occasionally like I'm\N我写代码时会进行代码审查，偶尔会这样。
+Dialogue: 0,1:04:05.78,1:04:09.88,Sub,,0,0,0,,I'm asking you know authors like is this in line with how you think about things?\N我在问你们，像你们这样的作者，这符合你们对事物的看法吗？
+Dialogue: 0,1:04:09.93,1:04:12.99,Sub,,0,0,0,,I hope I'm not changing the architecture fundamentally.\N我希望我没有从根本上改变架构。
+Dialogue: 0,1:04:13.04,1:04:16.95,Sub,,0,0,0,,But we also make it clear internally that like code reviews are are quite optional.\N但我们也在内部明确，代码审查其实相当可选。
+Dialogue: 0,1:04:17.00,1:04:20.09,Sub,,0,0,0,,And you know, if you're just changing docs, if you're just doing, you know,\N而且你知道，如果你只是在改文档，只是在做些事情，你知道，
+Dialogue: 0,1:04:20.14,1:04:24.35,Sub,,0,0,0,,some basic stuff like don't wait for a human to look at it especially in the era of AI.\N一些基本常识，比如别等着人类去查看，尤其是在人工智能时代。
+Dialogue: 0,1:04:24.40,1:04:26.81,Sub,,0,0,0,,Why do you need a human to look at every piece of code?\N为什么你需要让人去查看每一行代码？
+Dialogue: 0,1:04:26.86,1:04:27.77,Sub,,0,0,0,,You don't have to.\N你不必非得这样。
+Dialogue: 0,1:04:27.82,1:04:34.35,Sub,,0,0,0,,But that does require you to have, you know, very good controls, you know, internally around, you know, testing things.\N但这确实需要你内部有非常完善的控制机制，比如对测试环节的严格管理。
+Dialogue: 0,1:04:34.40,1:04:40.59,Sub,,0,0,0,,Yeah, and exactly like, you know, in for companies like we we need one more nine than the average startup, right?\N是的，就像我们之前说的，像我们这样的公司，需要的九位数比普通初创企业多一位，对吧？
+Dialogue: 0,1:04:40.64,1:04:41.61,Sub,,0,0,0,,In terms of uptime.\N就开机率而言。
+Dialogue: 0,1:04:41.66,1:04:44.57,Sub,,0,0,0,,But like, you know, these are investments you just have to make.\N但你知道，这些投资你不得不做。
+Dialogue: 0,1:04:44.62,1:04:50.39,Sub,,0,0,0,,Like you have to build systems that are very resilient to like, you know, you have to have rate limits everywhere.\N你得构建非常有韧性的系统，比如到处都要设置速率限制。
+Dialogue: 0,1:04:50.44,1:04:51.77,Sub,,0,0,0,,You have to decouple systems.\N你必须将系统解耦。
+Dialogue: 0,1:04:51.82,1:04:55.31,Sub,,0,0,0,,You have to make sure that like nothing is a single point of failure.\N你必须确保没有任何单一故障点。
+Dialogue: 0,1:04:55.36,1:04:57.79,Sub,,0,0,0,,You have to have extremely good test coverage.\N你必须拥有极高的测试覆盖率。
+Dialogue: 0,1:04:57.84,1:05:00.43,Sub,,0,0,0,,Agents are actually really good at writing tests these days which was like,\N如今，智能体写测试的能力实际上非常出色，这在过去是难以想象的。
+Dialogue: 0,1:05:00.48,1:05:03.53,Sub,,0,0,0,,you know, a few years ago I thought like one of the major things missing in agents.\N你知道吗，几年前我还觉得，智能体最缺的几个关键点之一是……
+Dialogue: 0,1:05:03.58,1:05:08.93,Sub,,0,0,0,,Now they're actually quite good at like cuz I think it takes a little bit of like sort of kind of like need to\N现在他们实际上挺厉害的，我觉得这需要一点点类似、差不多的技巧。
+Dialogue: 0,1:05:08.98,1:05:14.23,Sub,,0,0,0,,step out of what you're trying to do for a second and be almost a little bit like devil's advocate to write good tests.\N先暂停一下你正在做的事，稍微扮演一下反方角色，这样才能写出好的测试。
+Dialogue: 0,1:05:14.28,1:05:16.03,Sub,,0,0,0,,But now they're actually quite good at writing tests, too.\N但现在他们写测试也相当厉害了。
+Dialogue: 0,1:05:16.08,1:05:18.15,Sub,,0,0,0,,So, I think I think all these things help.\N所以，我认为所有这些都有帮助。
+Dialogue: 0,1:05:18.20,1:05:23.99,Sub,,0,0,0,,Do you guys use like frontier models for coding or do you guys have you guys experimented with uh like open-source ones?\N你们是用前沿模型来编程，还是试过开源模型？
+Dialogue: 0,1:05:24.04,1:05:25.08,Sub,,0,0,0,,We experiment with everything.\N我们尝试一切可能。
+Dialogue: 0,1:05:25.13,1:05:31.00,Sub,,0,0,0,,But yeah, I mean, you know, initially it was a lot of cursor then, you know, of course Claude and Codex and and now a lot of people are using,\N但说实话，一开始用得最多的是光标，后来当然有 Claude 和 Codex，现在很多人用的都是这些。
+Dialogue: 0,1:05:31.05,1:05:34.55,Sub,,0,0,0,,you know, night shift and and all these open-source stuff or or other stocks.\N你知道，夜班，还有这些开源的东西，或者其他股票。
+Dialogue: 0,1:05:34.60,1:05:36.95,Sub,,0,0,0,,So, I don't necessarily have like a strong point of view.\N所以，我并不一定非得有什么强烈的观点。
+Dialogue: 0,1:05:37.00,1:05:39.15,Sub,,0,0,0,,Like I want people to experiment and try different things.\N我希望人们能去尝试和实验各种不同的东西。
+Dialogue: 0,1:05:39.20,1:05:42.10,Sub,,0,0,0,,Like we, you know, use frontier models, use open-source models.\N就像我们使用前沿模型一样，也使用开源模型。
+Dialogue: 0,1:05:42.14,1:05:45.13,Sub,,0,0,0,,We try to do a little bit more dog fooding internally now that we're actually\N现在我们实际上已经开始在内部多做一些“自食其粮”的实践了。
+Dialogue: 0,1:05:45.18,1:05:48.91,Sub,,0,0,0,,running inference for a lot of the open-source models like at a very large scale.\N大规模运行许多开源模型的推理。
+Dialogue: 0,1:05:48.96,1:05:53.87,Sub,,0,0,0,,I think it's also helpful to like use our internal endpoints for a lot of agentic development.\N我觉得在进行大量代理式开发时，使用我们内部的端点也很有帮助。
+Dialogue: 0,1:05:53.92,1:05:55.79,Sub,,0,0,0,,Uh so, we try to promote that a little bit.\N嗯，我们试着稍微推广一下。
+Dialogue: 0,1:05:55.84,1:05:56.67,Sub,,0,0,0,,Mhm.\N嗯嗯。
+Dialogue: 0,1:05:56.72,1:06:00.57,Sub,,0,0,0,,Something I read maybe like, I don't know, a year ago, maybe like 2 years ago,\N我好像在一年前，或者两年前读到过类似的内容，
+Dialogue: 0,1:06:00.62,1:06:05.95,Sub,,0,0,0,,you were saying that you didn't think that there was going to be like a big on-prem business for you guys.\N你刚才说，你们并不认为会有大规模的本地部署业务。
+Dialogue: 0,1:06:06.00,1:06:09.67,Sub,,0,0,0,,Um have you maybe like changed your opinion on that?\N呃，你是不是对那件事看法变了？
+Dialogue: 0,1:06:09.72,1:06:12.12,Sub,,0,0,0,,No, I have not changed my opinion.\N不，我的看法没有改变。
+Dialogue: 0,1:06:12.17,1:06:15.84,Sub,,0,0,0,,Um I think more or less to me, I'm a cloud maximalist.\N嗯，对我来说，我基本上是个云服务极端推崇者。
+Dialogue: 0,1:06:15.89,1:06:24.62,Sub,,0,0,0,,And maybe to take a step back, like when when the cloud came in 2008, 2009, or whatever, my first reaction was like, "That's crazy.\N也许可以退一步想想，就像2008年、2009年云计算出现时，我第一反应是：“这太疯狂了。”
+Dialogue: 0,1:06:24.66,1:06:28.26,Sub,,0,0,0,,Like why would I want to take my code and run it on someone else's computer?\N为什么我要把自己的代码拿去别人的电脑上运行呢？
+Dialogue: 0,1:06:28.30,1:06:29.67,Sub,,0,0,0,,That's like insane."\N那简直疯狂。
+Dialogue: 0,1:06:29.72,1:06:31.26,Sub,,0,0,0,,And then like 6 months later I was doing it.\N然后大约六个月后，我就真的做到了。
+Dialogue: 0,1:06:31.31,1:06:34.93,Sub,,0,0,0,,And I think, you know, like took me 6 months to change my mind.\N说实话，改变我的想法花了我六个月时间。
+Dialogue: 0,1:06:34.98,1:06:38.18,Sub,,0,0,0,,It took probably enterprises like another 15 to 20 years.\N大概还需要企业再花15到20年。
+Dialogue: 0,1:06:38.23,1:06:43.00,Sub,,0,0,0,,But like you look at, you know, vendors like Snowflake or I mean AWS and like you know,\N但你看，像 Snowflake 或 AWS 这类供应商，你知道的，
+Dialogue: 0,1:06:43.05,1:06:48.80,Sub,,0,0,0,,I I think there's many examples of DataDog, etc. Like the cloud is clearly winning, right?\N我觉得像 Datadog 这样的例子有很多，云显然已经胜出了，对吧？
+Dialogue: 0,1:06:48.86,1:06:52.55,Sub,,0,0,0,,Like and and the multi-tenant systems are clearly winning.\N点赞，多租户系统显然已胜出。
+Dialogue: 0,1:06:52.60,1:06:59.79,Sub,,0,0,0,,And, you know, to me on-prem looks increasingly like sort of a legacy business model.\N而且你知道吗，对我来说，本地部署越来越像是一个过时的商业模式。
+Dialogue: 0,1:06:59.84,1:07:07.04,Sub,,0,0,0,,And and I actually think, you know, BYOC, you know, sort of VPC peering, like all of these things, you know,\N而且我认为，你知道的，自带设备接入，还有虚拟私有云对等连接之类的，所有这些事情，你知道的
+Dialogue: 0,1:07:07.09,1:07:14.86,Sub,,0,0,0,,like to me they they reflect sort of an outdated security model of like we need to protect everything inside our own network, right?\N我觉得它们反映了一种过时的安全理念，就是我们得保护自己网络里的所有东西，对吧？
+Dialogue: 0,1:07:14.91,1:07:17.43,Sub,,0,0,0,,Like using the network as a moat.\N就像把网络当作护城河一样。
+Dialogue: 0,1:07:17.48,1:07:20.23,Sub,,0,0,0,,And that I don't think is true anything in anymore, right?\N而且我认为现在这种情况已经不存在了，对吧？
+Dialogue: 0,1:07:20.28,1:07:28.13,Sub,,0,0,0,,Like you we've sort of moved on to more like actually robust security paradigms like, you know, zero trust and things like that.\N和你们一样，我们也逐渐转向了更可靠的安全部署模式，比如零信任等。
+Dialogue: 0,1:07:28.18,1:07:34.99,Sub,,0,0,0,,And so to me BYOC and those things like they they look increasingly as like outdated, at least from a security perspective.\N所以在我看来，BYOC 以及类似的东西，从安全角度来看，显得越来越过时了。
+Dialogue: 0,1:07:35.04,1:07:40.93,Sub,,0,0,0,,From our perspective also like the fact that we have full control over our entire infrastructure stack, we rent all the hardware,\N从我们的角度来看，还有一点让我们感到欣慰的是，\N我们对整个基础设施栈拥有完全的控制权，我们租用了所有的硬件。
+Dialogue: 0,1:07:40.98,1:07:49.23,Sub,,0,0,0,,we deploy, we manage all the infrastructure, we deploy and like manage health and observe, you know, all the metrics on all the hosts.\N我们负责部署和管理所有基础设施，部署后监控健康状况，观察所有主机的各项指标。
+Dialogue: 0,1:07:49.28,1:07:52.20,Sub,,0,0,0,,It means we can iterate very fast and build a greater product.\N这意味着我们可以快速迭代，打造出更优秀的产品。
+Dialogue: 0,1:07:52.25,1:07:54.84,Sub,,0,0,0,,And I think that's very very valuable versus, you know,\N而且我认为这非常有价值，比起你们知道的那些来说。
+Dialogue: 0,1:07:54.89,1:07:59.56,Sub,,0,0,0,,customers in the past who had enterprise editions that they had to deploy on customers environment.\N过去那些需要在客户环境中部署企业版的客户。
+Dialogue: 0,1:07:59.61,1:08:00.76,Sub,,0,0,0,,They had to be very, you know,\N他们必须非常，你知道的
+Dialogue: 0,1:08:00.81,1:08:07.11,Sub,,0,0,0,,they had to think very carefully about release management and and having depend like like we don't care like if we want to introduce a new database,\N他们必须非常谨慎地考虑发布管理，以及依赖关系，就像我们不在乎一样——如果我们想引入一个新数据库，
+Dialogue: 0,1:08:07.16,1:08:09.87,Sub,,0,0,0,,like we can introduce a new database cuz we have control over it.\N就像我们可以引入一个新数据库，因为我们对其有控制权。
+Dialogue: 0,1:08:09.92,1:08:12.75,Sub,,0,0,0,,Like we don't need to think about what customers have access to.\N就像我们不必考虑客户能访问什么一样。
+Dialogue: 0,1:08:12.80,1:08:17.51,Sub,,0,0,0,,So to me multi-tenancy is is it has so many different benefits.\N在我看来，多租户具有诸多好处。
+Dialogue: 0,1:08:17.56,1:08:20.99,Sub,,0,0,0,,I mean, that being said like, you know, if we were to work with like, you know,\N我的意思是，如果我们要跟那些人合作的话，你知道的，
+Dialogue: 0,1:08:21.04,1:08:28.80,Sub,,0,0,0,,some very large Fortune 500 customer in the future and, you know, they ask for BYOC, you know, we've done this in the past.\N未来一些大型财富500强客户可能会提出自带云（BYOC）的需求，这我们过去也做过。
+Dialogue: 0,1:08:28.85,1:08:30.63,Sub,,0,0,0,,We'll give them a number.\N我们会给他们一个号码。
+Dialogue: 0,1:08:30.68,1:08:35.36,Sub,,0,0,0,,Like, you know, that number is very high and no one said yes to it so far, but like who knows?\N那个数字确实很高，到目前为止还没人答应，但谁知道呢？
+Dialogue: 0,1:08:35.42,1:08:38.35,Sub,,0,0,0,,Like, you know, I at the right price I I I would still build it.\N就像，你知道的，只要价格合适，我仍然会建它。
+Dialogue: 0,1:08:38.40,1:08:43.11,Sub,,0,0,0,,And and I think there's like maybe separately like another thing which I think is interesting which is\N而且我觉得，可能还有另一件事也挺有意思
+Dialogue: 0,1:08:43.16,1:08:48.47,Sub,,0,0,0,,like in theory BYOC might also be a way to work with and and get capacity in certain ways.\N理论上，BYOC 也许也能作为一种方式，以特定方式获取和利用算力。
+Dialogue: 0,1:08:48.52,1:08:54.81,Sub,,0,0,0,,Like we we sometimes work with Neo Labs and those Neo Labs have already have very large capacity reservations.\N就像我们有时会与新云实验室合作，那些新云实验室已经预订了非常大的容量。
+Dialogue: 0,1:08:54.86,1:08:59.60,Sub,,0,0,0,,And, you know, the question is like, you know, how how do we how do we get them to run Modal when they already have capacity?\N而且你知道，问题是，他们已经有容量了，我们怎么才能让他们用 Modal 呢？
+Dialogue: 0,1:08:59.65,1:09:01.31,Sub,,0,0,0,,And BYOC might be a solution.\N自带设备可能是一个解决方案。
+Dialogue: 0,1:09:01.36,1:09:04.34,Sub,,0,0,0,,We can still keep the control plane in in our environment.\N我们仍然可以将控制平面保留在我们的环境中。
+Dialogue: 0,1:09:04.38,1:09:09.16,Sub,,0,0,0,,And the other flip side of that is like we could maybe even run like other people's stuff on that capacity.\N另一方面，我们甚至可能利用这部分算力来运行别人的应用。
+Dialogue: 0,1:09:09.21,1:09:12.31,Sub,,0,0,0,,So so there's some like kind of fun stuff you can do in theory where like\N所以理论上有些挺有趣的东西你可以尝试一下，比如
+Dialogue: 0,1:09:12.36,1:09:16.29,Sub,,0,0,0,,you can sort of you know like kind of aggregate all that capacity into one big pool.\N你可以把所有这些算力资源汇聚成一个巨大的算力池。
+Dialogue: 0,1:09:16.34,1:09:18.29,Sub,,0,0,0,,So we're excited about some of those ideas.\N所以我们对其中一些想法感到非常兴奋。
+Dialogue: 0,1:09:18.34,1:09:21.32,Sub,,0,0,0,,But in general like I feel like on prem I don't know if we're ever going to do.\N但总的来说，我觉得本地部署这块，我们到底会不会做，我也不确定。
+Dialogue: 0,1:09:21.37,1:09:22.27,Sub,,0,0,0,,But BYOC like maybe.\N但自带设备可能也可以。
+Dialogue: 0,1:09:22.32,1:09:23.30,Sub,,0,0,0,,Bring your own cloud.\N自带云。
+Dialogue: 0,1:09:23.35,1:09:24.18,Sub,,0,0,0,,I keep saying BYOC.\N我一直说自带算力。
+Dialogue: 0,1:09:24.23,1:09:26.63,Sub,,0,0,0,,I should explain I should explain the acronyms.\N我来解释一下这些缩写。
+Dialogue: 0,1:09:26.68,1:09:32.87,Sub,,0,0,0,,Um let's say hypothetically you are going to raise a a ton more money like soon.\N嗯，假设你很快就要融到更多钱，比如大量资金。
+Dialogue: 0,1:09:32.92,1:09:35.23,Sub,,0,0,0,,What would you use that money for?\N你会用那笔钱做什么？
+Dialogue: 0,1:09:35.28,1:09:39.59,Sub,,0,0,0,,I mean like I mentioned like in in this capacity situation the a lot of the\N我的意思是，就像我刚才提到的，在这种情况下，有很多
+Dialogue: 0,1:09:39.64,1:09:45.12,Sub,,0,0,0,,money a lot of the cash flow I should say that's required is is capacity prepayments,\N我应该说的是，所需资金中很大一部分是用于产能的预付款。
+Dialogue: 0,1:09:45.17,1:09:45.65,Sub,,0,0,0,,right?\N对吧？
+Dialogue: 0,1:09:45.70,1:09:50.05,Sub,,0,0,0,,And and so that to me represents the best use of of of cash today.\N因此，这在我看来是现金目前最好的用途。
+Dialogue: 0,1:09:50.10,1:09:53.95,Sub,,0,0,0,,Uh we're ramping up capacity the capacity very aggressively.\N我们正在非常积极地提升产能。
+Dialogue: 0,1:09:54.00,1:09:58.73,Sub,,0,0,0,,Maybe we move into you know other types of deployment models in the future, ownership or whatever.\N也许未来我们会转向其他类型的部署模式，比如所有权之类的。
+Dialogue: 0,1:09:58.78,1:10:03.93,Sub,,0,0,0,,But I think there's always going to be a cash component of that, like some sort of down payment or prepayment or some sort of that.\N但我认为其中总会有现金部分，比如某种形式的首付或预付款。
+Dialogue: 0,1:10:03.98,1:10:07.47,Sub,,0,0,0,,So that to me is is the the greatest use of cash right now.\N所以对我来说，现在现金最大的用途就是这个。
+Dialogue: 0,1:10:07.52,1:10:11.67,Sub,,0,0,0,,There's of course other things like you know salaries and office spaces and stuff like that.\N当然，还有其他 things，比如薪资、办公空间之类的。
+Dialogue: 0,1:10:11.72,1:10:17.39,Sub,,0,0,0,,But that actually in the grand scheme of like our our financials like it's is basically a rounding error, right?\N但从我们整体财务状况来看，这实际上几乎就是个四舍五入的误差，对吧？
+Dialogue: 0,1:10:17.44,1:10:18.15,Sub,,0,0,0,,Yeah, interesting.\N是的，挺有趣的。
+Dialogue: 0,1:10:18.20,1:10:20.11,Sub,,0,0,0,,Do you think that's going to change?\N你觉得这会改变吗？
+Dialogue: 0,1:10:20.16,1:10:25.38,Sub,,0,0,0,,No. I I think you know the the sort of operating leverage that we have in this business is kind of insane.\N不，我觉得你明白我们这个业务的运营杠杆效应有多离谱。
+Dialogue: 0,1:10:25.44,1:10:27.19,Sub,,0,0,0,,Like you know, we have 200 employees.\N就像你们知道的，我们有200名员工。
+Dialogue: 0,1:10:27.24,1:10:33.23,Sub,,0,0,0,,You know, they cost a lot of money, but you know, the the the GPUs cost a lot more money.\N你知道，它们花很多钱，但GPU花的钱更多。
+Dialogue: 0,1:10:33.28,1:10:40.28,Sub,,0,0,0,,If you had to say like what are the top like I don't know like three things that are your biggest focus or the business's biggest focus right now?\N如果你非得说说，现在你或公司最关注的三件事是什么？
+Dialogue: 0,1:10:40.33,1:10:41.83,Sub,,0,0,0,,Like what would you say those are?\N你认为那些是什么？
+Dialogue: 0,1:10:41.88,1:10:47.86,Sub,,0,0,0,,Capacity and the sort of financial complexity and you know, in general like how do we how do we think about that space?\N容量以及相关的财务复杂性，总的来说，我们该如何思考这个领域？
+Dialogue: 0,1:10:47.91,1:10:49.67,Sub,,0,0,0,,How do we think about pricing and packaging?\N我们该如何思考定价和包装策略？
+Dialogue: 0,1:10:49.72,1:10:53.44,Sub,,0,0,0,,How do we think about the sort of tension between ownership and renting?\N我们该如何看待所有权与租赁之间的这种矛盾？
+Dialogue: 0,1:10:53.49,1:10:56.23,Sub,,0,0,0,,Should we be going in a more neo cloud direction?\N我们是否应该更多地朝新云厂商方向发展？
+Dialogue: 0,1:10:56.28,1:10:57.87,Sub,,0,0,0,,Should we go in the opposite direction?\N我们是不是该走相反的方向？
+Dialogue: 0,1:10:57.92,1:10:59.15,Sub,,0,0,0,,This sort of counter precision?\N这种反精度？
+Dialogue: 0,1:10:59.20,1:11:01.48,Sub,,0,0,0,,Like that's probably the biggest thing that I think a lot about.\N那大概是我最常思考的事情了。
+Dialogue: 0,1:11:01.53,1:11:06.55,Sub,,0,0,0,,Uh the second biggest thing I think a lot about is um probably around like more like product strategy.\N我觉得第二件经常思考的事情，大概更接近于产品策略。
+Dialogue: 0,1:11:06.60,1:11:09.04,Sub,,0,0,0,,Like I think a lot about like what is the next building blocks?\N就像我经常在想，下一个基础模块到底是什么？
+Dialogue: 0,1:11:09.09,1:11:13.29,Sub,,0,0,0,,Like if if we you know do more like agentic stuff, like what are the things we need?\N如果你们想做更多代理式的事情，比如我们需要哪些东西？
+Dialogue: 0,1:11:13.34,1:11:13.82,Sub,,0,0,0,,You know,\N你知道吗，
+Dialogue: 0,1:11:13.88,1:11:19.24,Sub,,0,0,0,,are there certain storage primitives or compute primitives or in general like what is the thing\N是否存在某些特定的存储原语或计算原语，或者说，本质上到底是什么东西
+Dialogue: 0,1:11:19.29,1:11:22.95,Sub,,0,0,0,,that the world is going to wake up and realize they need over the next few years?\N世界将会觉醒，意识到在未来几年里，他们需要什么？
+Dialogue: 0,1:11:23.00,1:11:25.15,Sub,,0,0,0,,And and ideally we have that at that point.\N而且理想情况下，我们那时就拥有了。
+Dialogue: 0,1:11:25.20,1:11:28.51,Sub,,0,0,0,,We've been pretty good in general at like you know anticipating demand and\N总体上，我们对需求的预判还算不错。
+Dialogue: 0,1:11:28.56,1:11:31.90,Sub,,0,0,0,,building products in advance of it with the serverless functions in the sandboxes.\N在沙箱中提前构建产品，利用无服务器函数。
+Dialogue: 0,1:11:31.95,1:11:33.11,Sub,,0,0,0,,So what's the next thing?\N那接下来呢？
+Dialogue: 0,1:11:33.16,1:11:38.59,Sub,,0,0,0,,Then I would say like actually the third thing I think a lot about is like more around like culture and company building and stuff like that.\N然后我想说的是，实际上我最常思考的第三件事，更多是关于文化和公司建设这类事情。
+Dialogue: 0,1:11:38.64,1:11:40.19,Sub,,0,0,0,,I mean we recently crossed 200 people.\N我的意思是，我们最近人数突破了200人。
+Dialogue: 0,1:11:40.24,1:11:42.23,Sub,,0,0,0,,We're we're growing extremely fast.\N我们正以极快的速度增长。
+Dialogue: 0,1:11:42.28,1:11:44.54,Sub,,0,0,0,,We'll probably hit 250 by the end of the year.\N我们可能在年底之前就能达到250。
+Dialogue: 0,1:11:44.59,1:11:46.47,Sub,,0,0,0,,Like when you're growing very fast,\N就像你成长得非常迅速的时候，
+Dialogue: 0,1:11:46.52,1:11:51.34,Sub,,0,0,0,,you have 250 people that are all trying to figure out how they can add\N你有250个人都在努力思考如何为自己增添价值
+Dialogue: 0,1:11:51.39,1:11:54.70,Sub,,0,0,0,,the most value to Modal and you know making sure that they have the right context,\N对 Modal 来说，最重要的价值在于确保他们拥有正确的上下文。
+Dialogue: 0,1:11:54.76,1:11:56.52,Sub,,0,0,0,,that they have the right motivation,\N他们有正确的动机，
+Dialogue: 0,1:11:56.57,1:12:04.38,Sub,,0,0,0,,that they're excited to come into work every day cuz they get to build something incredibly cool and they know you know what makes Modal successful,\N他们每天都很期待来上班，因为能打造一些非常酷的东西，而且他们知道，正是这些让 Modal 走向成功。
+Dialogue: 0,1:12:04.43,1:12:05.51,Sub,,0,0,0,,what they can do,\N他们能做的事情
+Dialogue: 0,1:12:05.56,1:12:11.45,Sub,,0,0,0,,aligning the incentives and and making sure that you know we we we people have like a\N对齐各方利益，确保大家都知道我们人类有着类似的动机
+Dialogue: 0,1:12:11.50,1:12:15.93,Sub,,0,0,0,,very positive culture where they have this sort of implicit trust to do a lot of stuff,\N一种非常积极的文化，他们之间存在着一种无需明言的信任，可以放手去做很多事情。
+Dialogue: 0,1:12:15.98,1:12:22.39,Sub,,0,0,0,,but also the accountability to like you know deliver the best things and you know and and be held accountable to like if they're not doing it.\N而且还要对交付最优质成果负责，如果他们没有做到，就必须被问责。
+Dialogue: 0,1:12:22.44,1:12:25.94,Sub,,0,0,0,,To me those are like you know super critical things around this scale.\N对我来说，这些都关乎这个规模下至关重要的事情。
+Dialogue: 0,1:12:25.99,1:12:29.15,Sub,,0,0,0,,Like when when you're like 10, 20, 30 people,\N就像你团队只有10、20、30人的时候
+Dialogue: 0,1:12:29.20,1:12:34.44,Sub,,0,0,0,,you can all just like kind of sit in a room and like it's all kind of implicit and you kind of just like feel it.\N你们可以都像待在房间里一样，感觉一切都很自然，心照不宣，仿佛自然而然就懂了。
+Dialogue: 0,1:12:34.50,1:12:36.27,Sub,,0,0,0,,People can sort of read read me.\N人们大概能看懂我。
+Dialogue: 0,1:12:36.32,1:12:38.44,Sub,,0,0,0,,Like they can tell me when I get a little bit annoyed.\N就像他们能察觉到我有点不耐烦的时候一样。
+Dialogue: 0,1:12:38.49,1:12:39.94,Sub,,0,0,0,,They can tell when I'm happy.\N它们能察觉到我是否开心。
+Dialogue: 0,1:12:39.99,1:12:45.72,Sub,,0,0,0,,But like now we're 250 people and like people don't necessarily see it and you know of course there's like a lot of new people.\N但现在我们有250人了，有些人可能没注意到，当然也来了很多新人。
+Dialogue: 0,1:12:45.77,1:12:49.17,Sub,,0,0,0,,They're like maybe a little bit nervous to like talk to the CEO or like all this stuff.\N他们好像有点紧张，不太敢跟首席执行官说话，或者做这些事。
+Dialogue: 0,1:12:49.22,1:12:53.38,Sub,,0,0,0,,So like you know how do I remain approachable and how do I like it's it's there's\N所以，你知道的，我该怎么保持平易近人呢？又该怎么去喜欢它呢？其实……
+Dialogue: 0,1:12:53.43,1:12:57.57,Sub,,0,0,0,,like the Dunbar number which I think is like more sort of you know fake than than anything\N就像邓巴数，我觉得它更像是某种虚假的东西，而不是真实存在的东西
+Dialogue: 0,1:12:57.62,1:13:01.47,Sub,,0,0,0,,like at least like the story behind it but like it is actually kind of real still\N至少是背后的故事，但说实话，它现在还挺真实的
+Dialogue: 0,1:13:01.52,1:13:07.03,Sub,,0,0,0,,like there's something around like 150-200 where like laying the foundation of the culture is very very important.\N就像在150到200之间，建立文化基础非常非常重要。
+Dialogue: 0,1:13:07.08,1:13:09.87,Sub,,0,0,0,,How many people are you guys trying to hire over the next year?\N你们接下来一年打算招多少人？
+Dialogue: 0,1:13:09.92,1:13:13.58,Sub,,0,0,0,,We've grown about 4x on an annualized basis in the last 12 months.\N过去12个月，我们的年化增长约为4倍。
+Dialogue: 0,1:13:13.63,1:13:17.68,Sub,,0,0,0,,I think that's like an unsustainable growth rate on a relative basis.\N我认为从相对角度来看，这种增长速度是不可持续的。
+Dialogue: 0,1:13:17.73,1:13:25.15,Sub,,0,0,0,,I've seen that you know you can double the team every year and that's not super hard to do but\N我看到你明白，每年团队规模翻倍并不难做到。
+Dialogue: 0,1:13:25.20,1:13:30.92,Sub,,0,0,0,,4x what you start to see is you know cultural drift you start to see islands of different working styles.\N你开始看到的是文化漂移，不同工作方式的孤岛逐渐显现。
+Dialogue: 0,1:13:30.96,1:13:36.19,Sub,,0,0,0,,You start to see people doing like very speculative things like that that's something I always watch out for in the engineering team.\N你开始看到有人做些非常投机的事情，这是我一直关注工程团队的点。
+Dialogue: 0,1:13:36.23,1:13:40.19,Sub,,0,0,0,,You go and talk to the engine an engineer and I'm like what are you working on and and it turns\N你去跟那个工程师聊聊，我心想，你到底在搞什么项目呢
+Dialogue: 0,1:13:40.24,1:13:45.35,Sub,,0,0,0,,out they're like building something like kind of like fringe and like is this really what you should spend time on?\N他们觉得，这就像在做些边缘化的东西，这真的值得你花时间吗？
+Dialogue: 0,1:13:45.40,1:13:49.55,Sub,,0,0,0,,So growing very fast has that cost and you know has the cost of ramping people up.\N所以增长非常快，这带来了成本，也带来了人员快速上手的成本。
+Dialogue: 0,1:13:49.60,1:13:50.10,Sub,,0,0,0,,So I I don't know.\N所以，我不知道。
+Dialogue: 0,1:13:50.15,1:13:54.64,Sub,,0,0,0,,I I think by the end of the year maybe 250 by the end of the next year you know but but like you know we're going\N我觉得到今年年底可能达到250，明年年底应该会更多，总之我们正朝着这个方向前进。
+Dialogue: 0,1:13:54.69,1:14:00.67,Sub,,0,0,0,,to keep growing like maybe two and a half 3x so so it's very likely we'll end up like next year like 700 people or something like that.\N像现在这样保持两倍半到三倍的增长，所以明年我们人数达到700人左右的可能性非常大。
+Dialogue: 0,1:14:00.72,1:14:02.51,Sub,,0,0,0,,And I'm going to assume most of those are engineers.\N我猜大多数都是工程师。
+Dialogue: 0,1:14:02.56,1:14:03.43,Sub,,0,0,0,,Most of the engineers.\N大多数工程师。
+Dialogue: 0,1:14:03.48,1:14:05.51,Sub,,0,0,0,,We're ramping up sales a lot too.\N我们也在大力提升销售。
+Dialogue: 0,1:14:05.56,1:14:06.04,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:14:06.09,1:14:08.27,Sub,,0,0,0,,What kinds of engineers?\N什么类型的工程师？
+Dialogue: 0,1:14:08.32,1:14:09.80,Sub,,0,0,0,,It's primarily systems engineers.\N主要是系统工程师。
+Dialogue: 0,1:14:09.85,1:14:13.39,Sub,,0,0,0,,I mean we've always been like very deep into sort of you know Linux and\N我的意思是，我们一直非常深入地钻研Linux，你知道的。
+Dialogue: 0,1:14:13.44,1:14:19.49,Sub,,0,0,0,,file systems and scalable systems and networking and and cloud and and stuff like that.\N文件系统、可扩展系统、网络以及云服务之类的。
+Dialogue: 0,1:14:19.54,1:14:23.87,Sub,,0,0,0,,So so that's that's that's the core of what we're looking for like people are really good at those things.\N所以，这正是我们所寻找的核心，人们在这些方面非常擅长。
+Dialogue: 0,1:14:23.92,1:14:30.53,Sub,,0,0,0,,We're also looking a lot at like you know more like cuz we moved up in the stack a little bit like we're doing a lot of work in the LM infra space.\N我们也在重点关注语言模型基础设施领域，毕竟我们的技术栈往上移了一点，现在正大力投入这一领域。
+Dialogue: 0,1:14:30.58,1:14:41.19,Sub,,0,0,0,,So now we're dealing with a separate set of concerns around you know CUDA and like GPUs and and and and MFU you know like maxing out the tokens that\N现在我们面临的是关于 CUDA、\NGPU 以及 MFU 的一系列新问题，比如如何最大化每秒处理的词元数。
+Dialogue: 0,1:14:41.24,1:14:49.26,Sub,,0,0,0,,you can get per GPU and and and a lot of that things and you know even though I actually like will say a lot of the work in that space,\N你可以获取每张GPU的性能，以及很多其他相关数据，虽然实际上我得说，那个领域里有很多工作。
+Dialogue: 0,1:14:49.31,1:14:50.11,Sub,,0,0,0,,in my opinion,\N在我看来
+Dialogue: 0,1:14:50.16,1:14:57.91,Sub,,0,0,0,,turns out it's like more systems-driven still cuz it turns out like KV caching and routing is actually like is still like very like systems-like,\N结果发现它仍然更偏向系统层面，因为实际上键值缓存和路由仍然非常系统化。
+Dialogue: 0,1:14:57.96,1:15:00.88,Sub,,0,0,0,,like like these are very like systems-heavy problems.\N这类问题非常偏向系统性难题。
+Dialogue: 0,1:15:00.93,1:15:04.08,Sub,,0,0,0,,But yeah, a little bit more like sort of GPU performance, that kind of stuff.\N不过，确实更偏向于GPU性能之类的方面。
+Dialogue: 0,1:15:04.13,1:15:06.11,Sub,,0,0,0,,We're starting to build up a research team.\N我们正开始组建研究团队。
+Dialogue: 0,1:15:06.16,1:15:10.41,Sub,,0,0,0,,We're very excited about, you know, moving into stuff around like, you know,\N我们非常期待，就是说，进入一些像这样的领域，你知道的，
+Dialogue: 0,1:15:10.46,1:15:17.71,Sub,,0,0,0,,post training and and distillation and and better methods for for quantization and things like that. or for internally?\N后训练、蒸馏，以及量化等技术的改进，或者内部的？
+Dialogue: 0,1:15:17.76,1:15:17.98,Sub,,0,0,0,,Both.\N两者都是。
+Dialogue: 0,1:15:17.98,1:15:26.07,Sub,,0,0,0,,I I think it's like a little bit like with the FTEs, like I I I think we initially will do a lot of stuff with our customers to optimize their models,\N我觉得这有点像FTEs，我认为我们最初会和客户合作，大量优化他们的模型。
+Dialogue: 0,1:15:26.12,1:15:29.94,Sub,,0,0,0,,but over time figure out how do we turn those into products.\N但随着时间推移，弄清楚如何将它们转化为产品。
+Dialogue: 0,1:15:29.99,1:15:37.03,Sub,,0,0,0,,I think we'll sort of arguably fail in a certain way if every time a customer needs to optimize a model,\N我认为，如果每次客户都需要优化模型，我们某种程度上就失败了。
+Dialogue: 0,1:15:37.08,1:15:43.14,Sub,,0,0,0,,we have to go and work with them and, you know, long-term it has to be turned into products.\N我们必须去跟他们合作，从长远来看，最终得转化为产品。
+Dialogue: 0,1:15:43.19,1:15:49.24,Sub,,0,0,0,,And and so with the FTEs and with the research team, initially you're going to have to do a lot of work with the customers, and we are at that.\N而且对于全职员工和研究团队来说，一开始你必须花大量时间与客户打交道，我们目前正处在这一阶段。
+Dialogue: 0,1:15:49.29,1:15:55.43,Sub,,0,0,0,,But over time we're also building a lot of internal tooling and a lot of overtime internal products that are fully self-serve.\N但随着时间推移，我们也在打造大量内部工具和完全自助的内部产品。
+Dialogue: 0,1:15:55.48,1:16:00.99,Sub,,0,0,0,,Uh so we're working a lot of stuff right now in in the post training space, but also in in the GPU performance space.\N我们现在正在后训练领域投入大量工作，同时也关注GPU性能领域。
+Dialogue: 0,1:16:01.04,1:16:03.39,Sub,,0,0,0,,So a lot of cool stuff, a lot of cool stuff.\N好多酷炫的东西，好多酷炫的东西。
+Dialogue: 0,1:16:03.44,1:16:07.20,Sub,,0,0,0,,Back to the product strategy stuff that you were talking about.\N回到你刚才谈到的产品策略问题。
+Dialogue: 0,1:16:07.26,1:16:08.91,Sub,,0,0,0,,Um yeah, like what are your thoughts?\N嗯，你的想法呢？
+Dialogue: 0,1:16:08.96,1:16:11.75,Sub,,0,0,0,,Like what do we need over the next year, 2 years?\N未来一年、两年我们需要什么？
+Dialogue: 0,1:16:11.80,1:16:13.37,Sub,,0,0,0,,I think it's incredibly hard to say.\N我觉得很难说。
+Dialogue: 0,1:16:13.42,1:16:19.67,Sub,,0,0,0,,And and if I said like I know exactly what we need to build, like I I think I would would be like delusional.\N如果我说我 exactly 知道我们需要建造什么，那我恐怕就太自以为是了。
+Dialogue: 0,1:16:19.72,1:16:22.25,Sub,,0,0,0,,I think what what I've what we've seen so far, you know,\N我觉得到目前为止，我们所看到的，你知道，
+Dialogue: 0,1:16:22.30,1:16:26.99,Sub,,0,0,0,,and and what I kind of believe in on a more general level is like we need better building blocks.\N从更普遍的角度来看，我认为我们需要更好的基础组件。
+Dialogue: 0,1:16:27.04,1:16:35.47,Sub,,0,0,0,,Like this is a new era of of software, and we're unlocking a whole new type of applications that could not be built a few years ago.\N这标志着软件新时代的到来，我们正开启一类全新应用，这些应用几年前还无法实现。
+Dialogue: 0,1:16:35.52,1:16:44.82,Sub,,0,0,0,,You know, doing, you know, all the GenAI stuff, code that, you know, LLMs that output code that, you know, it needs to run like in an isolated way.\N你知道，做这些生成式 AI 的事，写代码，还有那些输出代码的大型语言模型，它们需要以隔离的方式运行。
+Dialogue: 0,1:16:44.87,1:16:49.20,Sub,,0,0,0,,Like, there's so many like new primitives that are needed to to work with GPUs and work with LLMs.\N比如，要使用 GPU 和大语言模型，需要掌握许多全新的基础技术。
+Dialogue: 0,1:16:49.24,1:16:53.56,Sub,,0,0,0,,And, you know, we built some building blocks so far and and, you know, that's unlocked, you know,\N而且，你知道，我们到目前为止已经搭建了一些基础模块，这些模块已经解锁了，你知道的。
+Dialogue: 0,1:16:53.61,1:16:58.52,Sub,,0,0,0,,a bunch of applications that that that the world, you know, has seen over the last few years, not just us, of course.\N世界上过去几年里出现的众多应用，当然不仅限于我们。
+Dialogue: 0,1:16:58.56,1:17:01.77,Sub,,0,0,0,,But, I think over the next few years, like, there's going to be so many more cool things.\N但我觉得，未来几年里，会有更多酷炫的东西出现。
+Dialogue: 0,1:17:01.82,1:17:03.07,Sub,,0,0,0,,And so, I I I mentioned some stuff.\N所以，我刚才提到了一些内容。
+Dialogue: 0,1:17:03.12,1:17:04.58,Sub,,0,0,0,,Like, I'm very bullish on training.\N我觉得训练前景非常乐观。
+Dialogue: 0,1:17:04.63,1:17:06.50,Sub,,0,0,0,,I'm very bullish on fast jobs.\N我对快速工作非常乐观。
+Dialogue: 0,1:17:06.55,1:17:12.08,Sub,,0,0,0,,I'm very bullish on, you know, certain things around like agents and and low latency and and things like that.\N我对智能体、低延迟之类的东西非常看好。
+Dialogue: 0,1:17:12.13,1:17:16.40,Sub,,0,0,0,,But but like, in the end, we consider ourselves like an infrastructure shop, right?\N但说到底，我们觉得自己更像是一家基础设施公司，对吧？
+Dialogue: 0,1:17:16.45,1:17:19.47,Sub,,0,0,0,,Like, we we're not trying to build, you know, very narrow things.\N我们并不是想打造那种非常狭隘的东西。
+Dialogue: 0,1:17:19.52,1:17:23.25,Sub,,0,0,0,,Like, we try to build like very general-purpose building blocks and put them in front of customers.\N我们试图打造一些非常通用的模块化组件，然后直接提供给客户。
+Dialogue: 0,1:17:23.30,1:17:30.91,Sub,,0,0,0,,And then, those customers will combine those building blocks and build some incredible applications that we could have never anticipated.\N然后，这些客户将把这些积木式组件组合起来，打造出我们根本无法预想的惊人应用。
+Dialogue: 0,1:17:30.96,1:17:32.30,Sub,,0,0,0,,I want to go through some of your tweets.\N我想看看你的推文。
+Dialogue: 0,1:17:32.34,1:17:33.87,Sub,,0,0,0,,This will be the last part of it.\N这将是它的最后一部分。
+Dialogue: 0,1:17:33.92,1:17:34.32,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:17:34.36,1:17:37.10,Sub,,0,0,0,,and we can just like maybe you want to double-click on anything.\N你可以双击任意项目试试看。
+Dialogue: 0,1:17:37.15,1:17:40.06,Sub,,0,0,0,,A lot of long-running persistent sandbox stuff right now.\N现在有很多长期运行的持久化沙箱任务。
+Dialogue: 0,1:17:40.11,1:17:41.73,Sub,,0,0,0,,Uh today feels lift and shift.\N今天感觉像是轻装上阵。
+Dialogue: 0,1:17:41.78,1:17:45.87,Sub,,0,0,0,,I suspect sandboxes will evolve from dev boxes in the cloud to something more ephemeral.\N我猜测，沙箱将从云端的开发环境演变为更短暂的存在。
+Dialogue: 0,1:17:45.92,1:17:50.83,Sub,,0,0,0,,Uh one environment for every command and snapshotting in between, so you can pause, resume, clone.\N每个命令都有一个独立环境，并支持中途快照，因此你可以随时暂停、恢复或克隆。
+Dialogue: 0,1:17:50.88,1:17:52.43,Sub,,0,0,0,,Yeah, I mean, we talked about this a lot.\N是的，我的意思是，我们之前讨论过很多次了。
+Dialogue: 0,1:17:52.48,1:17:53.75,Sub,,0,0,0,,Yeah, we talked a bit about it, right?\N是的，我们刚才谈了一点，对吧？
+Dialogue: 0,1:17:53.80,1:18:01.34,Sub,,0,0,0,,Like, I I I'm fully I I think it's I think the median sandbox in Modal today is like 8 seconds long or something like that.\N比如，我觉得模态今天平均的沙盒环境大概只有8秒左右。
+Dialogue: 0,1:18:01.39,1:18:03.47,Sub,,0,0,0,,Like, which is kind of incredible when you think about it.\N想想看，这其实相当不可思议。
+Dialogue: 0,1:18:03.52,1:18:05.87,Sub,,0,0,0,,And and over time, I think it might get even shorter.\N而且随着时间推移，我觉得它可能还会变得更短。
+Dialogue: 0,1:18:05.92,1:18:07.69,Sub,,0,0,0,,We want to support long-running sandboxes, too.\N我们也要支持长时间运行的沙箱。
+Dialogue: 0,1:18:07.74,1:18:12.07,Sub,,0,0,0,,Like, I think there are some like very valid use cases around long-running sandboxes.\N比如，我认为在长时间运行的沙箱方面，确实存在一些非常合理的应用场景。
+Dialogue: 0,1:18:12.12,1:18:16.07,Sub,,0,0,0,,But like, my vision is like, you know, the world needs also we need to figure out this.\N但我的想法是，世界也需要，我们得弄清楚这一点。
+Dialogue: 0,1:18:16.12,1:18:21.91,Sub,,0,0,0,,Like, how can how can we just massively parallelize things and reducing the overhead of starting and stopping sandboxes.\N比如，我们怎么能大规模并行化这些事情，同时减少启动和停止沙箱的开销呢。
+Dialogue: 0,1:18:21.96,1:18:29.19,Sub,,0,0,0,,I don't know if I ran an IPO-ready startup engaged in capex arms race with a competitor, it would be nice to coordinate and pace the arms race a bit.\N我不知道，如果我经营一家准备上市的初创公司，正与竞争对手展开资本开支军备竞赛，\N那能稍微协调并控制一下竞赛节奏就好了。
+Dialogue: 0,1:18:29.24,1:18:31.71,Sub,,0,0,0,,No comment.\N无话可说。
+Dialogue: 0,1:18:31.76,1:18:35.45,Sub,,0,0,0,,The biggest downside of GPU scarcity is not that it's hard to get GPUs,\N显卡短缺最大的弊端并不在于难以获得显卡，
+Dialogue: 0,1:18:35.50,1:18:41.34,Sub,,0,0,0,,but that almost all capacity is sold as 3 years as a 3-year rectangle starting 3 to 6 months in the future.\N但几乎所有产能都以三年期的形式售出，即从未来三到六个月开始的三年矩形。
+Dialogue: 0,1:18:41.38,1:18:43.04,Sub,,0,0,0,,That's not what demand looks like for most users.\N对大多数用户来说，这并不是需求的样子。
+Dialogue: 0,1:18:43.09,1:18:44.67,Sub,,0,0,0,,I think we talked about that a little bit as well.\N我想我们之前也稍微提过这一点。
+Dialogue: 0,1:18:44.72,1:18:47.36,Sub,,0,0,0,,Yeah, and you know, maybe just uh go a little bit deeper now.\N是啊，也许现在可以稍微深入一点。
+Dialogue: 0,1:18:47.41,1:18:52.31,Sub,,0,0,0,,Like one thing I think Modal has always been very, very good at is fully on-demand capacity, right?\N我觉得 Modal 一直非常出色的一点，就是实现了真正的按需容量，对吧？
+Dialogue: 0,1:18:52.36,1:18:56.72,Sub,,0,0,0,,Like if a customer comes to us and needs 100 GPUs, like we can typically give them that like immediately.\N如果客户找上门需要100块GPU，我们通常能立即满足。
+Dialogue: 0,1:18:56.77,1:18:58.36,Sub,,0,0,0,,You don't even have to talk to sales person.\N你甚至不用跟销售员说话。
+Dialogue: 0,1:18:58.41,1:19:03.53,Sub,,0,0,0,,And a lot of workloads in in in real life, like they don't look like these like flat, you know, rectangular workloads.\N现实生活中的很多工作负载并不像这些扁平的、矩形的负载，你知道的。
+Dialogue: 0,1:19:03.58,1:19:06.12,Sub,,0,0,0,,Like they scale up and down throughout the 24-hour cycle.\N它们会随着24小时周期不断升降。
+Dialogue: 0,1:19:06.17,1:19:07.26,Sub,,0,0,0,,They maybe grow over time.\N它们可能会随时间增长。
+Dialogue: 0,1:19:07.31,1:19:09.79,Sub,,0,0,0,,They maybe have certain burst periods.\N它们可能有特定的爆发期。
+Dialogue: 0,1:19:09.84,1:19:13.00,Sub,,0,0,0,,And to me, that is the challenge with a lot of customers today.\N在我看来，这就是当今许多客户面临的挑战。
+Dialogue: 0,1:19:13.05,1:19:16.51,Sub,,0,0,0,,Like the And And I do think it's a legit problem for for the space.\N就像那个，我认为这确实是该领域的一个真实问题。
+Dialogue: 0,1:19:16.56,1:19:20.95,Sub,,0,0,0,,It's like the only the prime way to get capacity is to to buy these rectangular blocks.\N好像获得算力的唯一途径，就是购买这些长方形的模块。
+Dialogue: 0,1:19:21.00,1:19:21.98,Sub,,0,0,0,,It's not great.\N不太好。
+Dialogue: 0,1:19:22.03,1:19:23.30,Sub,,0,0,0,,I think the world needs to evolve.\N我认为世界需要进化。
+Dialogue: 0,1:19:23.35,1:19:29.73,Sub,,0,0,0,,And And that's fundamentally, I mean, I'm I'm I'm very biased, but like that's why I think Modal can play a very large role in in that sort of,\N而且从根本上说，我当然很偏袒，但正是这个原因，\N我认为模态（Modal）可以在这一领域发挥非常重要的作用。
+Dialogue: 0,1:19:29.78,1:19:35.17,Sub,,0,0,0,,you know, whatever you want to call it, sort of duration transformation of offering more flexible capacity.\N你知道的，不管你怎么称呼它，本质上是提供更灵活容量的持续性转变。
+Dialogue: 0,1:19:35.22,1:19:41.02,Sub,,0,0,0,,And we can do that because because we can aggregate many, many thousands of customers and the demand gets very smooth in aggregate.\N我们可以做到这一点，因为我们能够聚合成千上万的客户，\Naggregated 的需求整体上会变得非常平滑。
+Dialogue: 0,1:19:41.06,1:19:44.03,Sub,,0,0,0,,So, that's a lot of the value prop of Modal is exactly that.\N因此，Modal 的价值主张正是如此。
+Dialogue: 0,1:19:44.08,1:19:45.39,Sub,,0,0,0,,Would you say that's a differentiator?\N你认为这是个差异化因素吗？
+Dialogue: 0,1:19:45.44,1:19:46.35,Sub,,0,0,0,,Like I think so.\N我觉得是的。
+Dialogue: 0,1:19:46.40,1:19:46.88,Sub,,0,0,0,,Oh, really?\N哦，真的吗？
+Dialogue: 0,1:19:46.93,1:19:47.20,Sub,,0,0,0,,Okay.\N好的。
+Dialogue: 0,1:19:47.20,1:19:48.50,Sub,,0,0,0,,Yeah, massive differentiator.\N是的，这是巨大的差异化优势。
+Dialogue: 0,1:19:48.55,1:19:52.79,Sub,,0,0,0,,I actually, in fact, like I think Modal's like, if you want to be like very sort of reductive,\N实际上，我觉得模态公司，如果你非要简化地说的话，
+Dialogue: 0,1:19:52.84,1:19:55.59,Sub,,0,0,0,,like you can break down Modal's value prop into two things.\N就像你可以把模态的价值主张分解为两个方面。
+Dialogue: 0,1:19:55.64,1:20:00.71,Sub,,0,0,0,,One is a developer experience, the ability like iterate and like build things and not have to think about infrastructure.\N一个是开发体验，能够快速迭代、构建东西，而无需考虑基础设施。
+Dialogue: 0,1:20:00.76,1:20:02.39,Sub,,0,0,0,,The other thing is the capacity stuff.\N还有就是容量方面的问题。
+Dialogue: 0,1:20:02.44,1:20:02.68,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,1:20:02.68,1:20:07.03,Sub,,0,0,0,,The more and more I think about Modal and like where we're going in in the long run is like we're building like\N我越想越觉得，模态以及我们长远的发展方向，其实就像我们在构建一样
+Dialogue: 0,1:20:07.08,1:20:14.11,Sub,,0,0,0,,we're aggregating the world's compute capacity and we're very good at slicing it out like very granularly cuz we built all this work around,\N我们正在汇聚全球的算力资源，并且非常擅长将其精细地切分出来，因为我们围绕这一目标已经完成了大量工作。
+Dialogue: 0,1:20:14.16,1:20:18.07,Sub,,0,0,0,,you know, scaling up and down extremely fast, you know, all the stuff around GPU snapshotting.\N你知道，GPU 快速扩缩容，还有围绕 GPU 快照的所有技术。
+Dialogue: 0,1:20:18.12,1:20:21.15,Sub,,0,0,0,,We're working on some some ways to make it much, much faster.\N我们正在研究一些方法，让它快得多。
+Dialogue: 0,1:20:21.20,1:20:26.11,Sub,,0,0,0,,And that model works at very large scale, like really, really well cuz you can aggregate lots of customers.\N这个模型能大规模运行，效果非常好，因为你可以汇聚大量客户。
+Dialogue: 0,1:20:26.16,1:20:31.11,Sub,,0,0,0,,Every month I keep saying our same max revenue might apply to it, but it keeps going up 30% every month.\N每个月我都在说，我们的最高收入可能就到此为止了，但它却每个月还在增长30%。
+Dialogue: 0,1:20:31.16,1:20:32.03,Sub,,0,0,0,,It's kind of nuts.\N简直疯了。
+Dialogue: 0,1:20:32.08,1:20:37.98,Sub,,0,0,0,,Like I don't under you know, like every month I'm like, "What well, you know, Sound boxes grew a lot, but like clearly they kind of plateau.\N就像，你知道的，每个月我都在想，“嗯，音箱确实增长了不少，但显然已经趋于平稳了。”
+Dialogue: 0,1:20:38.03,1:20:39.90,Sub,,0,0,0,,And then they keep growing even more.\N然后它们继续不断增长。
+Dialogue: 0,1:20:39.94,1:20:41.56,Sub,,0,0,0,,So so I I I I don't know.\N所以，我也不太清楚。
+Dialogue: 0,1:20:41.62,1:20:45.98,Sub,,0,0,0,,And a lot of VCs like they're like how did you know Sound boxes was going to be big?\N还有不少风投人士在问，你们是怎么知道音箱会火的？
+Dialogue: 0,1:20:46.03,1:20:48.46,Sub,,0,0,0,,Like and and the truth is like I didn't.\N点赞，说实话，我其实没点。
+Dialogue: 0,1:20:48.51,1:20:52.46,Sub,,0,0,0,,Like like I I thought it was going to be bigger than it was in 2023 for sure,\N就像我之前想的那样，2023年它肯定要比实际更大。
+Dialogue: 0,1:20:52.51,1:20:56.99,Sub,,0,0,0,,but like the fact that Sound boxes is a third of our revenue today, it's it's insane.\N但事实上，声音盒子目前占我们收入的三分之一，这太疯狂了。
+Dialogue: 0,1:20:57.04,1:20:59.12,Sub,,0,0,0,,And you know, we're obviously very happy about it.\N而且你们知道，我们当然对此非常高兴。
+Dialogue: 0,1:20:59.17,1:21:01.56,Sub,,0,0,0,,We we have like a very large team investing in Sound boxes.\N我们有一个非常庞大的团队在投入研发声音盒子。
+Dialogue: 0,1:21:01.61,1:21:03.51,Sub,,0,0,0,,You know, I don't want to like trivialize it.\N你知道，我不想把它说得太简单了。
+Dialogue: 0,1:21:03.56,1:21:11.26,Sub,,0,0,0,,Like we obviously I do want to give ourselves like a lot of credit for for seeing Sound boxes for what it is today a little bit back in even 2023.\N显然，我们确实应该为自己在2023年甚至更早就能看清声音盒子如今的潜力而感到自豪。
+Dialogue: 0,1:21:11.31,1:21:15.60,Sub,,0,0,0,,But I I I think you know, if like I probably would have never, you know,\N但我想，如果真要说我可能根本不会，你知道，
+Dialogue: 0,1:21:15.65,1:21:20.79,Sub,,0,0,0,,taken a bet that revenue would be this large for Sound boxes and the market demand would be so much.\N押注了Sound Box的收入会如此巨大，市场需求也会如此强劲。
+Dialogue: 0,1:21:20.84,1:21:25.39,Sub,,0,0,0,,There is an interesting structural reason why inference providers should exist separately from model builders.\N推理服务提供商与模型构建者应分开存在的一个有趣结构性原因。
+Dialogue: 0,1:21:25.44,1:21:26.63,Sub,,0,0,0,,The best model keeps changing a lot.\N最好的模型一直在不断变化。
+Dialogue: 0,1:21:26.68,1:21:31.95,Sub,,0,0,0,,Inference providers keep can easily reallocate resources between models since overall demand is quite smooth.\N推理服务提供商可以轻松在不同模型间重新分配资源，因为整体需求相当平稳。
+Dialogue: 0,1:21:32.00,1:21:37.30,Sub,,0,0,0,,So I mean, if you think about all the Chinese labs and you know, in the future hopefully more US labs too,\N我的意思是，你想想看，所有的中国实验室，希望未来还能有更多美国实验室。
+Dialogue: 0,1:21:37.34,1:21:42.40,Sub,,0,0,0,,every time a new lab releases, you know, the latest and greatest open-source models.\N每次有新的实验室发布最新、最棒的开源模型时，你都知道。
+Dialogue: 0,1:21:42.45,1:21:46.48,Sub,,0,0,0,,Like you see big shifts in demand, you know, for for these models.\N就像你看到对这些模型的需求出现了巨大变化。
+Dialogue: 0,1:21:46.53,1:21:52.71,Sub,,0,0,0,,And and so I think a challenge with, you know, if all these labs independently like held capacity,\N而且我认为，如果所有这些实验室都各自独立地保持产能，这本身就是一个挑战。
+Dialogue: 0,1:21:52.76,1:21:55.79,Sub,,0,0,0,,they would see when they launch a new model, demand would go up a lot.\N他们推出新模型时会发现，需求会大幅上升。
+Dialogue: 0,1:21:55.84,1:21:59.43,Sub,,0,0,0,,And then another lab launches a better model and then the demand goes down, you know,\N然后另一个实验室推出更优的模型，需求就会下降，你知道的。
+Dialogue: 0,1:21:59.48,1:22:01.86,Sub,,0,0,0,,but but of course like in the background they're working on the next version.\N但当然了，他们背后一直在研发下一个版本。
+Dialogue: 0,1:22:01.91,1:22:02.99,Sub,,0,0,0,,So like I think you know,\N所以，我觉得你知道，
+Dialogue: 0,1:22:03.04,1:22:06.84,Sub,,0,0,0,,there's like a structural reason like I said like why you're going to start\N之所以会这样，其实有结构性原因，就像我之前说的那样
+Dialogue: 0,1:22:06.89,1:22:10.88,Sub,,0,0,0,,you're seeing demand kind of shifting to like the latest and greatest Chinese lab model.\N你看到的需求正逐渐转向最新的中国实验室模型。
+Dialogue: 0,1:22:10.94,1:22:12.99,Sub,,0,0,0,,I mean, not like it's not like you know,\N我的意思是，不是说你知道的那样
+Dialogue: 0,1:22:13.04,1:22:17.55,Sub,,0,0,0,,this is like everything just moves overnight cuz cuz a lot of models and prompts and stuff\N这感觉就像一切都在一夜之间就变了，因为很多模型和提示词之类的东西都变了。
+Dialogue: 0,1:22:17.60,1:22:21.63,Sub,,0,0,0,,like like a lot of things that get sort of there's like a certain stickiness to it.\N就像很多事物一样，总有一种莫名的黏着感。
+Dialogue: 0,1:22:21.68,1:22:26.52,Sub,,0,0,0,,But I I do think you know, there's an argument that it's very easy for model to like, you know, right?\N但我确实觉得，你明白的，有一种说法是，模型很容易出现这种情况，对吧？
+Dialogue: 0,1:22:26.57,1:22:33.84,Sub,,0,0,0,,Today we're running, you know, X number of thousand GPUs for one model, tomorrow we need a shift like, you know, 50% of that to another model.\N今天我们在运行一个模型时，要用几千块GPU，明天可能就需要把其中50%的算力转给另一个模型。
+Dialogue: 0,1:22:33.88,1:22:36.58,Sub,,0,0,0,,Sure, that's just like that's what the system was built to handle.\N当然，这正是系统设计时就打算处理的情况。
+Dialogue: 0,1:22:36.63,1:22:38.41,Sub,,0,0,0,,No one even needs to tell us to do that.\N根本不需要别人告诉我们该怎么做。
+Dialogue: 0,1:22:38.46,1:22:39.75,Sub,,0,0,0,,It just magically does that.\N它就能自动完成那件事。
+Dialogue: 0,1:22:39.80,1:22:44.19,Sub,,0,0,0,,So, you agree that basically the LLMs are commodities?\N所以，你同意其实大语言模型就是大宗商品了？
+Dialogue: 0,1:22:44.24,1:22:49.87,Sub,,0,0,0,,And if you agree, then where do you think the business for the big labs is going to be?\N如果你同意这一点，那么你认为大型实验室的业务将会在哪里？
+Dialogue: 0,1:22:49.92,1:22:52.13,Sub,,0,0,0,,I'm not sure if that's necessarily true, right?\N我不确定这一定是对的，对吧？
+Dialogue: 0,1:22:52.18,1:22:54.19,Sub,,0,0,0,,Like is Taylor Swift a commodity?\N泰勒·斯威夫特算商品吗？
+Dialogue: 0,1:22:54.24,1:22:58.35,Sub,,0,0,0,,Like should we release this a big album and goes in a tour and makes a lot of money and then, you know,\N要不就发行一张大专辑，然后去巡演，赚很多钱，你知道的，
+Dialogue: 0,1:22:58.40,1:23:02.37,Sub,,0,0,0,,then there's like a down year when she goes and like records, I don't know if this is best analogy.\N然后有一年她去录了点东西，我不知道这算不算最好的类比。
+Dialogue: 0,1:23:02.42,1:23:04.49,Sub,,0,0,0,,And then she releases a new album, you know.\N然后她发行了一张新专辑，你知道的。
+Dialogue: 0,1:23:04.54,1:23:05.55,Sub,,0,0,0,,So, I I I don't know.\N所以，我……我不知道。
+Dialogue: 0,1:23:05.60,1:23:09.83,Sub,,0,0,0,,Like she still has like a lot of brand and there's a lot of, you know, power and like makes a lot of margin.\N就像她仍然拥有大量品牌价值，而且很有影响力，能带来很高的利润。
+Dialogue: 0,1:23:09.88,1:23:10.06,Sub,,0,0,0,,So,\N所以，
+Dialogue: 0,1:23:10.06,1:23:16.38,Sub,,0,0,0,,like as long as the the labs like repeatedly can launch new models and as long as the margin that they have\N只要实验室能持续推出新模型，且他们还能保持盈利空间，
+Dialogue: 0,1:23:16.43,1:23:22.05,Sub,,0,0,0,,on those models are such that they they can sort of pay off amortize like that the cost of training those models,\N这些模型的收益足以覆盖训练成本，实现摊销。
+Dialogue: 0,1:23:22.10,1:23:24.75,Sub,,0,0,0,,it could still be like a decent business, I think.\N我觉得它可能仍然能成为一个像样的生意。
+Dialogue: 0,1:23:24.80,1:23:27.79,Sub,,0,0,0,,So, you don't think that the intelligence is like plateauing?\N所以，你认为智能不会趋于平缓吗？
+Dialogue: 0,1:23:27.84,1:23:29.56,Sub,,0,0,0,,No, I don't I don't think so.\N不，我不这么认为。
+Dialogue: 0,1:23:29.61,1:23:31.51,Sub,,0,0,0,,I mean, I I think it remains to be seen, right?\N我的意思是，这还得再看看，对吧？
+Dialogue: 0,1:23:31.56,1:23:40.07,Sub,,0,0,0,,Like models that today are like very good at like doing things that can be trained very efficiently, you know, using reinforcement learning.\N就像现在那些非常擅长执行可以通过强化学习高效训练的任务的模型一样。
+Dialogue: 0,1:23:40.12,1:23:44.58,Sub,,0,0,0,,So, so we've seen that initially with, you know, coding and writing simple snippets.\N所以，我们最初看到的是，无论是编程还是编写简单的代码片段。
+Dialogue: 0,1:23:44.63,1:23:47.98,Sub,,0,0,0,,Over time it's gotten really good at also writing production line level code.\N随着时间推移，它在编写生产线级别的代码方面也变得非常出色。
+Dialogue: 0,1:23:48.03,1:23:49.95,Sub,,0,0,0,,It's gotten really good at math.\N它在数学方面变得非常出色。
+Dialogue: 0,1:23:50.00,1:23:53.11,Sub,,0,0,0,,It's gotten really good at cybersecurity.\N它在网络安全方面已经变得非常出色。
+Dialogue: 0,1:23:53.16,1:23:55.55,Sub,,0,0,0,,Like these are all like very quite verifiable things.\N这些都是一些非常容易验证的事情。
+Dialogue: 0,1:23:55.60,1:24:03.77,Sub,,0,0,0,,I I still think it remains to be seen, you know, are models going to be really good at whatever, cooking food or I I I don't know.\N我仍然觉得，还得看看，这些模型到底能不能真正擅长某件事，比如做饭，或者别的什么，我也不太清楚。
+Dialogue: 0,1:24:03.82,1:24:08.51,Sub,,0,0,0,,Like things that have like more like diffuse targets that maybe longer feedback loops or whatever.\N比如那些目标比较分散、反馈周期可能更长的东西，或者其他类似的情况。
+Dialogue: 0,1:24:08.56,1:24:16.70,Sub,,0,0,0,,I think humans probably like my feeling is like we'll be quite good and quite competitive with with models for a long time in those domains.\N我认为人类的感觉大概是，在这些领域里，\N我们和模型相比仍会非常出色且具有竞争力，很长一段时间内都是如此。
+Dialogue: 0,1:24:16.75,1:24:20.85,Sub,,0,0,0,,But, you know, certainly you know, AI models they're they're getting there.\N但你知道的，AI 模型确实正在逐步成熟。
+Dialogue: 0,1:24:20.90,1:24:21.60,Sub,,0,0,0,,They're very good.\N他们非常棒。
+Dialogue: 0,1:24:21.65,1:24:23.27,Sub,,0,0,0,,As as I'm sure everyone can agree with.\N正如我相信大家都会认同的那样。
+Dialogue: 0,1:24:23.32,1:24:26.00,Sub,,0,0,0,,Yeah, so obviously like the models are getting really good at coding.\N是的，显然这些模型在编程方面变得非常出色。
+Dialogue: 0,1:24:26.05,1:24:27.96,Sub,,0,0,0,,They're already really good at coding.\N他们编码已经非常厉害了。
+Dialogue: 0,1:24:28.01,1:24:33.71,Sub,,0,0,0,,What other applications do you think maybe that aren't as big right now are going to become huge over the next few years?\N你认为目前规模还不大，但未来几年可能会变得非常巨大的其他应用有哪些？
+Dialogue: 0,1:24:33.76,1:24:34.51,Sub,,0,0,0,,For the LLMs?\N对于大语言模型呢？
+Dialogue: 0,1:24:34.56,1:24:39.88,Sub,,0,0,0,,I I don't know, but I think anything that has like kind of a verifiable A computational bio I think you mentioned Yeah,\N我不太清楚，但我认为任何具有可验证计算生物学特征的东西，你刚才提到的应该就是这个意思，是吧？
+Dialogue: 0,1:24:39.93,1:24:43.86,Sub,,0,0,0,,computational bio as I think those are like not exactly verifiable,\N计算生物学，我觉得那些不太容易验证。
+Dialogue: 0,1:24:43.91,1:24:49.20,Sub,,0,0,0,,but there's like certain ways you can sort of run simu like you can use an LLM to output predictions,\N但你其实可以用一些特定方法运行模拟，比如用大语言模型输出预测。
+Dialogue: 0,1:24:49.25,1:24:56.07,Sub,,0,0,0,,then you can do like a computational like like methods to like simulate the molecular dynamics and get like kind of feedback loops.\N然后你可以采用类似计算方法，模拟分子动力学，获得类似的反馈回路。
+Dialogue: 0,1:24:56.12,1:25:02.23,Sub,,0,0,0,,I mean like I think like material science is like maybe another area where like you have a little bit of that loop where you can sort of, you know,\N我的意思是，我觉得材料科学可能也是另一个存在这种循环的领域，你可以在其中稍微实现一下，你知道的，
+Dialogue: 0,1:25:02.28,1:25:08.88,Sub,,0,0,0,,synthetically manufacture certain materials and measure the properties and you just kind of put an agent in the loop and like, you know, do things.\N合成制造某些材料并测量其特性，然后只需让智能体参与进来，自动完成相关操作。
+Dialogue: 0,1:25:08.93,1:25:12.27,Sub,,0,0,0,,So so you know, I have a physics background I'm pretty excited about that.\N所以，你知道的，我有物理背景，对此我非常兴奋。
+Dialogue: 0,1:25:12.32,1:25:14.37,Sub,,0,0,0,,So drugs, materials, what else?\N药物、材料，还有别的吗？
+Dialogue: 0,1:25:14.42,1:25:16.63,Sub,,0,0,0,,I'm drawing a blank, but I'm sure there's many other things.\N我一时想不起来，但肯定还有其他很多事。
+Dialogue: 0,1:25:16.68,1:25:16.91,Sub,,0,0,0,,Cool.\N酷。
+Dialogue: 0,1:25:16.91,1:25:18.65,Sub,,0,0,0,,I mean those are all the questions that I had.\N我的意思是，这些都是我之前的问题。
+Dialogue: 0,1:25:18.70,1:25:21.35,Sub,,0,0,0,,Is there anything you wanted to talk about that I haven't?\N还有什么事是你想聊但还没提到的吗？
+Dialogue: 0,1:25:21.40,1:25:21.76,Sub,,0,0,0,,I'm good.\N我很好。
+Dialogue: 0,1:25:21.79,1:25:22.32,Sub,,0,0,0,,This is great.\N太好了。
+Dialogue: 0,1:25:22.37,1:25:23.55,Sub,,0,0,0,,This is a lot of fun.\N这非常有趣。
+Dialogue: 0,1:25:23.60,1:25:25.58,Sub,,0,0,0,,Awesome.\N太棒了。
+Dialogue: 0,1:25:25.63,1:25:28.11,Sub,,0,0,0,,Thank you.\N谢谢。

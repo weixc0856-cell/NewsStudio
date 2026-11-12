@@ -1,6 +1,6 @@
 # 《AI时代的基建》B 站专栏策划
 
-> 状态：策划稿 ｜ 更新：2026-10-27
+> 状态：策划稿 ｜ 更新：2026-11-02
 > 定位一句话：不做泛科技资讯，做 AI 时代真金白银的工程底座。
 
 ---
@@ -36,6 +36,51 @@
 | 工业数字化 | 投资人与产业访谈 | Sequoia、a16z 谈 AI 与核能 / 电网 / 供应链重构 | 偏经济学视角，可与技术期交替 |
 
 内容选择原则：**官方一手来源优先**，其次是有工程细节的深度访谈；不追纯情绪新闻。
+
+### 3.1 信源雷达（渠道级分布）
+
+按四条主线构建一手信源雷达。覆盖状态仅标定当前生态完备度（已有 / 部分 / 缺口），具体期数查验 `episodes_registry.json`。
+
+| 主线 | 渠道 | 取用口径 | 覆盖 |
+|---|---|---|---|
+| **算力与能源** | NVIDIA GTC / CES / GTC Taipei | 主题演讲、架构 deep dive | 已有 |
+| | AMD Advancing AI / OCP Summit | Instinct、Helios、ROCm、机柜供电 | 已有 |
+| | Intel ON / Computex | 制程、至强、代工 | 部分 |
+| | TSMC OIP / Technology Symposium | 先进封装、制程路线 | 缺口 |
+| | Hot Chips | 芯片微架构一手披露 | 已有 |
+| | SemiAnalysis（Dylan Patel） | CoWoS/HBM、集群成本、供应链 | 已有 |
+| | bg2（Gurley / Gerstner） | 电力、芯片垄断、hyperscaler 竞争 | 已有 |
+| **系统底层** | Microsoft Build（BRK 系列） | Azure 基础设施、分布式系统 | 已有 |
+| | Dwarkesh Patel | 实验室核心人物、scaling / post-training | 缺口 |
+| | No Priors（Sarah Guo / Elad Gil） | AI Infra 创始人、capex 动向 | 缺口 |
+| | Latent Space | 推理引擎、agent 工程化 | 缺口 |
+| | Stanford MLSys / HAI、BAIR | 分布式训练、显存优化、机器人学习 | 缺口 |
+| | NeurIPS / ICML / ICLR / CVPR keynotes | 仅收录具备工程实测数据的 talk | 缺口 |
+| **物理 AI / 机器人** | Figure / Sourcery、Waymo、ICRA / CoRL | 人形机器人、自动驾驶、端到端学习 | 已有 |
+| **工业数字化** | Siemens、Schneider、Supermicro、Munro Live、PhysicsX/AWS | 工业 AI、数据中心电气、硬件拆解、工业仿真 | 已有 |
+
+> 选源补充：Lex Fridman 等长播客不作为常规全期信源，仅在当期嘉宾为一线芯片、机器人或自动驾驶核心工程师时定向选剪。
+
+### 3.2 待做选题队列（按优先级，2026-11-02）
+
+| 顺位 | 候选 | 链接 | 备注 |
+|---|---|---|---|
+| ep32 | Dwarkesh × Intel 先进制程 | <https://www.youtube.com/watch?v=frYSOKvNiiE> | 已完成 |
+| ep33 | Munro Live × Tesla Semi 工厂 | <https://www.youtube.com/watch?v=qLp-QJYiJCw> | 已完成 |
+| ep34 | G20 创新部长级会议：黄仁勋 × Anthropic 首席算力官 Tom Brown | <https://www.youtube.com/watch?v=cTqtHIufCRw> | 已完成（改选题）；原 100:25 直播中无 Musk/Altman，按 §7 切除政务段后 37:15 |
+| ep35 | 黄仁勋 × Astana Hub：从出口能源到出口智能 | <https://www.youtube.com/watch?v=ncoMBc-oj_8> | 已完成；33:29 → 27:47（按 §7 切除政务/政策段） |
+| ep36 | 黄仁勋 × CSIS：平台五层栈、能源约束与「任务不是工作」 | <https://www.youtube.com/watch?v=OT_9HqGQzhw> | 已完成；51:52 → 15:19（China/Geopolitics/Industrial policy/National security 四章整章切除） |
+| ep37 | Latent Space × Modal：GPU 算力为什么是「长方形」 | <https://www.youtube.com/watch?v=IiZ9yd2Do8I> | 已完成；1:25:33，纯技术无切除 |
+| ep38 | No Priors × Fractile：为前沿模型造前沿芯片 | <https://www.youtube.com/watch?v=OpeCP4wCxkA> | 已完成；35:39，纯技术无切除 |
+| ep39 | Stanford Robotics × Danfei Xu：人类数据与 EgoVerse | <https://www.youtube.com/watch?v=NUtaN10cVDc> | 已完成；1:09:07，纯技术无切除 |
+| ep40 | CoRL 2026 × Jim Fan：GR00T 2 世界动作模型与开源机器人栈 | <https://www.youtube.com/watch?v=F_4AAOQsWlA> | 已完成；17:40（从 8:55:50 官方直播截取演讲段）|
+| ep41 | CoRL 2026 × Hang Zhao：Organizing Physical AI Across Timescales | <https://www.youtube.com/watch?v=F_4AAOQsWlA&t=4910s> | 同一场直播；9:30–10:00 |
+| ep42 | CoRL 2026 × Negar Mehr：How Can Robots Learn to Interact and Coordinate with Others? | <https://www.youtube.com/watch?v=F_4AAOQsWlA&t=21560s> | 同一场直播；约 14:00–14:30 |
+| ep43 | CoRL 2026 × Wolfram Burgard：Challenges to Realize Embodied AI | <https://www.youtube.com/watch?v=F_4AAOQsWlA&t=26000s> | 同一场直播；约 15:15 起 |
+| ep44 | Dwarkesh × Reiner Pope：Chip design from the bottom up | <https://www.youtube.com/watch?v=oIk3R-sMX5o> | 黑板课；1:20 |
+| ep45 | Dwarkesh × Dylan Patel：算力扩展的三大瓶颈 | <https://www.youtube.com/watch?v=mDG_Hx3BSUE> | 2:30；含 China/Taiwan 段，需按 §7 切除 |
+
+> 队列只代表优先级，不锁定期数；每期开始前按 §9.1 重新查重 `episodes_registry.json`，并按 §9.2 做三方验证。
 
 ## 四、标准化流水线打法
 
@@ -80,6 +125,8 @@ SRT / ASS 双语字幕、术语表、思维导图、精炼笔记可同步沉淀�
 
 ## 六、制作流水线（已工程化）
 
+> **执行口径**：日常制作仅执行“无字幕原片下载 → 本地大模型翻译 → QSV 硬件压制与校验”主链路；四阶段切片与合集流水线默认关闭，具体执行参数与异常避坑统一以根目录 `README.md` 与 `CLAUDE.md` 为唯一事实源。
+
 本仓库已把重复劳动固化为脚本，后续每期按同一流程跑：
 
 1. **只下载无字幕原片**：`uv run yt-dlp "URL"`（自动选最高画质，不写内嵌字幕）
@@ -117,11 +164,29 @@ SRT / ASS 双语字幕、术语表、思维导图、精炼笔记可同步沉淀�
 
 ## 九、选品安全守则（The Multi-Publisher Rule）
 
+### 9.1 选题漏斗与准入过滤
+
+候选视频在进入制作前，必须按顺序通过以下 5 级过滤网：
+
+1. **主线匹配**：明确落入四条主线（算力能源、系统底层、物理 AI、工业数字化）之一。纯算法演进或模型理论（如不涉及工程落地的纯 SSM/Mamba 架构）不入库。
+2. **查重检验**：严格只读根目录 `episodes_registry.json`，按 `url → core_entity → event → tags` 顺序核验。同一实体允许再做，但 `event` 与 `tags` 必须与已有记录不同，且应有技术增量。
+3. **三看原则**：
+   - 看**物理与资源瓶颈**：电力供给、机柜液冷、HBM/显存带宽、互联拓扑（NVLink/InfiniBand）、封装工艺；
+   - 看**系统工程与架构突破**：MoE 路由与显存置换、KV cache 优化、vLLM/SGLang 等推理引擎落地实战；
+   - 看**第一手技术拆解**：原厂架构师、芯片设计者对着架构图与工程约束进行的白皮书级讲解。
+4. **三不看原则**：
+   - 不看只有概念或口号、没有架构图、技术路线图或具体参数的通稿（一手原厂 Keynote 具备硬核内容的除外）；
+   - 不看非技术背景主播的纯主观观点输出（能拿到一线工程实物、工厂拆解或核心技术嘉宾访谈的除外）；
+   - 不看缺乏具体工程数字、约束条件与成本参数的商业喊话。
+5. **可操作测试**：能否从标题、简介或初筛片段中指出**至少一个具体数字、架构型号或工程物理约束**？无法指出则直接淘汰；通过后再进入 §9.2 开展三方验证。
+
+### 9.2 三方验证
+
 **核心原则：三方验证。** 选定目标视频前，先在 YouTube 与全网检索该视频的核心关键词，
 确认至少有 **3 家以上不同背景**的媒体、机构或自媒体已公开发布或切片过该内容，
 判断其未被单一机构垄断版权，再溯源下载画质最高的无字幕原版进行中英双语制作。
 
-### 操作清单
+#### 操作清单
 
 1. 提取核心关键词：人物 + 场合 + 主题（例：Jensen Huang / GTC Berlin 2026 / physical AI）
 2. 在 YouTube 与全网检索，记录发布者与形态（完整版 / 切片 / 图文报道）
@@ -130,7 +195,7 @@ SRT / ASS 双语字幕、术语表、思维导图、精炼笔记可同步沉淀�
 5. 溯源原始发布方，优先官方频道，下载画质最高的无字幕原版
 6. 通过后再进入双语制作流水线；未通过则暂缓或更换选题
 
-### 判定与留档
+#### 判定与留档
 
 | 情形 | 处理 |
 |---|---|
@@ -142,7 +207,7 @@ SRT / ASS 双语字幕、术语表、思维导图、精炼笔记可同步沉淀�
 - 每期在发布记录中保留至少 3 条不同来源链接，作为选品依据留档
 - 官方素材仍需在简介标注来源与原链接；三方验证不替代授权与署名
 
-### 本次已通过校验的素材
+#### 本次已通过校验的素材
 
 - GTC Berlin 2026 主题演讲：NVIDIA 官方发布，Yahoo Finance 等多家媒体完整转播 / 切片
 - 默茨 × 黄仁勋对谈：德国联邦经济与能源部官方发布，多家新闻台独立切片
@@ -179,6 +244,19 @@ SRT / ASS 双语字幕、术语表、思维导图、精炼笔记可同步沉淀�
 | 期数 | 主题 | 档案 | 状态 |
 |---|---|---|---|
 | 第 1–30 期 | 阶段一（已封存） | [stage1/STAGE1_EPISODES.md](episodes/stage1/STAGE1_EPISODES.md) | 已完成 |
+| 第 31 期 | 特斯拉 Cybercab 工程拆解：25 个工位造一台无人出租车 | [ep31-tesla-cybercab-munro.md](episodes/stage2/ep31-tesla-cybercab-munro.md) | 已完成 |
+| 第 32 期 | 英特尔 CTO 拆解 2045 年的芯片：GAA、CFET、High-NA EUV 与 AI 产能墙 | [ep32-intel-chips-2045.md](episodes/stage2/ep32-intel-chips-2045.md) | 已完成 |
+| 第 33 期 | 特斯拉 Semi 工厂全流程：Munro 现场拆解电动重卡怎么造 | [ep33-tesla-semi-munro.md](episodes/stage2/ep33-tesla-semi-munro.md) | 已完成 |
+| 第 34 期 | G20 现场：黄仁勋 × Anthropic 首席算力官算的两笔 AI 基建账 | [ep34-g20-ai-infrastructure.md](episodes/stage2/ep34-g20-ai-infrastructure.md) | 已完成 |
+| 第 35 期 | 黄仁勋 × 哈萨克斯坦副总理：从能源到智能，一个国家怎么建 AI 经济 | [ep35-astana-ai-nation.md](episodes/stage2/ep35-astana-ai-nation.md) | 已完成 |
+| 第 36 期 | 黄仁勋 CSIS 对谈：平台五层栈、能源约束与「任务不是工作」 | [ep36-csis-ai-platform.md](episodes/stage2/ep36-csis-ai-platform.md) | 已完成 |
+| 第 37 期 | GPU 算力为什么是「长方形」：Modal CEO 谈推理云 | [ep37-modal-gpu-cloud.md](episodes/stage2/ep37-modal-gpu-cloud.md) | 已完成 |
+| 第 38 期 | 为前沿模型造前沿芯片：Fractile CEO 谈内存带宽赌注 | [ep38-fractile-inference-chips.md](episodes/stage2/ep38-fractile-inference-chips.md) | 已完成 |
+| 第 39 期 | 从人类经验里学机器人：Danfei Xu 谈人类数据与 EgoVerse | [ep39-danfei-xu-human-data.md](episodes/stage2/ep39-danfei-xu-human-data.md) | 已完成 |
+| 第 40 期 | 从「做梦」到「做事」：Jim Fan 在 CoRL 2026 发布 GR00T 2 | [ep40-corl-jim-fan-gr00t2.md](episodes/stage2/ep40-corl-jim-fan-gr00t2.md) | 已完成 |
+| 第 41 期 | 机器人不能等模型：赵行在 CoRL 2026 谈 System 2/1/0 与多时钟架构 | [ep41-corl-hang-zhao-multiclock.md](episodes/stage2/ep41-corl-hang-zhao-multiclock.md) | 已完成 |
+| 第 42 期 | 让机器人学会互相配合：Negar Mehr 在 CoRL 2026 谈多智能体协调与持续学习 | [ep42-corl-negar-mehr-multiagent.md](episodes/stage2/ep42-corl-negar-mehr-multiagent.md) | 已完成 |
+| 第 43 期 | 把西西弗斯的石头推上山：Wolfram Burgard 在 CoRL 2026 谈具身智能的三次尝试 | [ep43-corl-burgard-embodied-ai.md](episodes/stage2/ep43-corl-burgard-embodied-ai.md) | 已完成 |
 | 第 31 期起 | 阶段二（进行中） | [stage2/](episodes/stage2/) | 按 `episodes_registry.json` 增量登记 |
 
 > 查重与三方校验只读根目录 `episodes_registry.json`；阶段一复盘见 [stage1/STAGE1_SUMMARY.md](episodes/stage1/STAGE1_SUMMARY.md)。

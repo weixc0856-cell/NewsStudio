@@ -1,0 +1,596 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.32,0:00:09.76,Sub,,0,0,0,,There’s never been as big a shock to the semiconductor industry as the current surge in demand from AI. AI is driving incredible computing demand.
+Dialogue: 0,0:00:09.76,0:00:13.92,Sub,,0,0,0,,Easily 40-50% above our maximum capacity, which I’ve never seen before.
+Dialogue: 0,0:00:13.92,0:00:17.68,Sub,,0,0,0,,Progress in AI has been driven by exponentially increasing compute.
+Dialogue: 0,0:00:17.68,0:00:26.56,Sub,,0,0,0,,To sustain that progress, foundries like Intel will need to manufacture far more leading-edge compute, both by producing more chips and by improving what each chip can do.
+Dialogue: 0,0:00:26.56,0:00:31.28,Sub,,0,0,0,,But the production of these chips is bottlenecked by tools that Intel buys from their suppliers.
+Dialogue: 0,0:00:31.28,0:00:34.88,Sub,,0,0,0,,Most famously, ASML’s EUV machines. If they don’t have the equipment,
+Dialogue: 0,0:00:34.88,0:00:42.24,Sub,,0,0,0,,they can’t make the chips here. I spent two days touring Intel’s fabs to prepare for these interviews with its leadership. I wanted to understand what it takes to
+Dialogue: 0,0:00:42.24,0:00:47.76,Sub,,0,0,0,,manufacture the world’s most advanced chips and how hardware is shaping the future of AI.
+Dialogue: 0,0:00:47.76,0:00:54.40,Sub,,0,0,0,,I’m joined by Chris Auth, who leads development of all the processes that are currently under manufacturing. The thing I want to understand in more
+Dialogue: 0,0:00:54.40,0:01:00.16,Sub,,0,0,0,,concrete detail is how the development of a new process actually happens.
+Dialogue: 0,0:01:00.16,0:01:03.60,Sub,,0,0,0,,If 14A is going to come out in three years or two years from now,
+Dialogue: 0,0:01:03.60,0:01:12.00,Sub,,0,0,0,,what is happening from now till then? I want you to walk me through as much detail as you can, everything from the level of “how is the yield improving?” to what
+Dialogue: 0,0:01:12.00,0:01:15.44,Sub,,0,0,0,,kind of telemetry you guys look at? What kind of experiments do you guys run?
+Dialogue: 0,0:01:15.44,0:01:20.16,Sub,,0,0,0,,I want to understand what is going to happen over the next two years as concretely as possible.
+Dialogue: 0,0:01:22.80,0:01:32.24,Sub,,0,0,0,,14A has been in development for about three-plus years at this stage, so quite a bit of pre-work has been done to get it to the stage that it’s at right now.
+Dialogue: 0,0:01:32.24,0:01:35.36,Sub,,0,0,0,,Right now, we’re getting very close to where we’re finalizing the process.
+Dialogue: 0,0:01:35.36,0:01:42.48,Sub,,0,0,0,,We’re finalizing the tool sets that it will be manufactured on, and we’re working on the fine-tuning of each of the process steps.
+Dialogue: 0,0:01:42.48,0:01:46.48,Sub,,0,0,0,,There are about 2,000 steps in the factory that you have to go do.
+Dialogue: 0,0:01:46.48,0:01:51.04,Sub,,0,0,0,,You need to do really intricate work at each one of those to make sure it’s fine-tuned,
+Dialogue: 0,0:01:51.04,0:02:00.40,Sub,,0,0,0,,it can go into manufacturing, it can run thousands of wafers a week on this process, and it can be repeatable every single time. Right now, you might have a certain yield.
+Dialogue: 0,0:02:00.40,0:02:03.68,Sub,,0,0,0,,Walk me through how that increases month over month.
+Dialogue: 0,0:02:03.68,0:02:10.96,Sub,,0,0,0,,There’s a line running at 14A. What happens from now till next month that will result in the yield changing? How do you identify where the defects are?
+Dialogue: 0,0:02:10.96,0:02:18.88,Sub,,0,0,0,,How do you fix that? There’s a constant process that we go through in identifying defects. There are two main ways that we’ll identify them.
+Dialogue: 0,0:02:18.88,0:02:26.64,Sub,,0,0,0,,One is we have inline metrology. We have tools that will look at the wafers and say, “Ah, there’s a defect there, there’s a defect there, there’s a defect there.”
+Dialogue: 0,0:02:26.64,0:02:32.48,Sub,,0,0,0,,Then also at the end of line, either electrical test or we sort and see where the fails are.
+Dialogue: 0,0:02:32.48,0:02:36.80,Sub,,0,0,0,,We will identify failures, and then we will get analysis on those failures.
+Dialogue: 0,0:02:36.80,0:02:40.64,Sub,,0,0,0,,We’ll cross-section it. You were in the TEM lab yesterday,
+Dialogue: 0,0:02:40.64,0:02:43.76,Sub,,0,0,0,,and you saw how you can get cross-sections. You’ll get a cross-section of a defect,
+Dialogue: 0,0:02:43.76,0:02:53.04,Sub,,0,0,0,,and from that, you’ll be able to say, “Oh, that defect is between these layers, so it must have come from this section of the flow. Oh, we have inline metrology in that section,
+Dialogue: 0,0:02:53.04,0:02:57.20,Sub,,0,0,0,,which has identified defects. Those are the defects we need to go after.”
+Dialogue: 0,0:02:57.20,0:03:05.92,Sub,,0,0,0,,What we’ve learned is that you don’t want to do too much innovation in one node, because the more innovation that you do, the more complex it becomes.
+Dialogue: 0,0:03:05.92,0:03:14.48,Sub,,0,0,0,,While you’ll be able to get that to work, you need to hit a certain schedule, and that’s the schedule that your customer ultimately wants. Having that predictable schedule is a key piece.
+Dialogue: 0,0:03:14.48,0:03:24.24,Sub,,0,0,0,,You’ve got to figure out how much innovation you can put in in order to meet the customer’s requirements in the timeline that they need it. Intel learned how costly that tradeoff can
+Dialogue: 0,0:03:24.24,0:03:28.88,Sub,,0,0,0,,be with delays to its 10 nanometer node, whose original target launch date was 2016,
+Dialogue: 0,0:03:28.88,0:03:34.88,Sub,,0,0,0,,but which didn’t begin manufacturing until 2018. Usually Intel has been the keeper of Moore’s Law,
+Dialogue: 0,0:03:34.88,0:03:44.32,Sub,,0,0,0,,a new cadence of manufacturing every two years, but their last set of products slipped almost four years. Intel today having its worst day in four months,
+Dialogue: 0,0:03:44.32,0:03:57.20,Sub,,0,0,0,,the stock now down more than 15%. I also want to point out Taiwan Semiconductor up 13% off of Intel’s bad news. Walk me through what lessons you think Intel
+Dialogue: 0,0:03:57.20,0:04:06.56,Sub,,0,0,0,,has learned from 10 nanometer. Ten nanometer was a good example of where we had very aggressive targets. We were doing what was called hyperscaling
+Dialogue: 0,0:04:06.56,0:04:10.64,Sub,,0,0,0,,at the time, so we were scaling much faster than what had been historically done.
+Dialogue: 0,0:04:10.64,0:04:23.04,Sub,,0,0,0,,In order to do that, we came up with all sorts of innovative ideas on how we could achieve that without new tools, because the tools weren’t ready.
+Dialogue: 0,0:04:23.04,0:04:26.56,Sub,,0,0,0,,That put a lot of burden on the process and a lot of burden on the engineers.
+Dialogue: 0,0:04:27.52,0:04:30.48,Sub,,0,0,0,,Now, at the end of the day, 10 nanometer is a great technology.
+Dialogue: 0,0:04:30.48,0:04:38.24,Sub,,0,0,0,,It has world-class yield, it has world-class performance, it has world-class cost, but it took us longer to do that than what we would have liked.
+Dialogue: 0,0:04:38.24,0:04:46.80,Sub,,0,0,0,,So we’ve tried to take that learning into future technology nodes and say, “Hey, we need to limit the amount of innovation we put in there to make sure that we keep it on schedule.”
+Dialogue: 0,0:04:46.80,0:04:52.16,Sub,,0,0,0,,What do you think was the main technology that should’ve been saved for a future version?
+Dialogue: 0,0:04:52.16,0:05:03.20,Sub,,0,0,0,,EUV was probably the big thing. When we started to define 10 nanometer, the conclusion was EUV was not ready. EUV is extreme ultraviolet lithography.
+Dialogue: 0,0:05:03.20,0:05:13.44,Sub,,0,0,0,,It prints chip patterns with light at a wavelength of 13.5 nanometers, about 14 times shorter than that emitted by previous tools that chipmakers had relied on.
+Dialogue: 0,0:05:13.44,0:05:18.00,Sub,,0,0,0,,The shorter the wavelength, the finer the features that a single exposure can print.
+Dialogue: 0,0:05:18.00,0:05:21.76,Sub,,0,0,0,,But Intel decided this technology wasn’t going to be ready in time.
+Dialogue: 0,0:05:21.76,0:05:24.96,Sub,,0,0,0,,TSMC transitioned to EUV much sooner.
+Dialogue: 0,0:05:24.96,0:05:32.48,Sub,,0,0,0,,It put EUV into volume manufacturing in 2019 and ramped it up further on its 5nm node in 2020.
+Dialogue: 0,0:05:32.48,0:05:43.92,Sub,,0,0,0,,Intel’s first EUV process did not reach products until 2023, so TSMC had about four more years of experience with these machines. Yesterday, we were at the research
+Dialogue: 0,0:05:43.92,0:05:50.88,Sub,,0,0,0,,lab getting a preview of 2D materials and CFET and ruthenium interconnects.
+Dialogue: 0,0:05:50.88,0:05:55.52,Sub,,0,0,0,,I’m curious about how you decide whether that technology is mature enough for the next node.
+Dialogue: 0,0:05:55.52,0:06:00.64,Sub,,0,0,0,,One thing that did also come out of 10 nanometer is we started to define a set of maturity metrics.
+Dialogue: 0,0:06:00.64,0:06:10.00,Sub,,0,0,0,,We use those maturity metrics in a process which we call phase gate, where we would say, “To go from pathfinding into development, these are the criteria that we need to go hit.”
+Dialogue: 0,0:06:10.00,0:06:18.00,Sub,,0,0,0,,There are yield criteria, defect criteria, performance criteria, and we need to hit those in order to move to the next set of the flow. If there’s something that doesn’t make that,
+Dialogue: 0,0:06:18.00,0:06:21.20,Sub,,0,0,0,,then it misses that, and it goes on to the next technology.
+Dialogue: 0,0:06:21.20,0:06:31.20,Sub,,0,0,0,,We focus on the items that are ready and we can run and put into a process, because one of the key things is staying on schedule. Staying on schedule is hard partly because new
+Dialogue: 0,0:06:31.20,0:06:41.28,Sub,,0,0,0,,transistor designs take decades to mature. Modern chip transistors evolved from the planar MOS transistor, demonstrated in 1960. The history of transistors since has been
+Dialogue: 0,0:06:41.28,0:06:50.40,Sub,,0,0,0,,the progression from two dimensions into three. Each development that Chris goes on to describe, from FinFET to gate-all-around, is a step in that progression.
+Dialogue: 0,0:06:50.40,0:06:55.52,Sub,,0,0,0,,So it’ll help to first look at a basic transistor and how its parts have changed over time.
+Dialogue: 0,0:06:55.52,0:07:05.36,Sub,,0,0,0,,A transistor is basically a switch. When it’s turned on, it allows current to flow between its two ends, which are called the source and the drain.
+Dialogue: 0,0:07:05.36,0:07:11.28,Sub,,0,0,0,,A piece called a gate sits on top of the silicon between the source and the drain.
+Dialogue: 0,0:07:11.28,0:07:22.08,Sub,,0,0,0,,Applying a positive voltage to the gate turns the switch on, because the positive voltage pulls negatively charged electrons in the silicon beneath up toward the gate.
+Dialogue: 0,0:07:22.08,0:07:25.92,Sub,,0,0,0,,However, a thin layer of insulation stops them from actually reaching the gate.
+Dialogue: 0,0:07:25.92,0:07:36.00,Sub,,0,0,0,,So the electrons collect just beneath that insulation and form a thin conducting path from the source to the drain. This is called the channel.
+Dialogue: 0,0:07:36.00,0:07:41.28,Sub,,0,0,0,,Remove the voltage and the electrons disperse, the channel disappears, and the switch turns off.
+Dialogue: 0,0:07:41.28,0:07:50.24,Sub,,0,0,0,,As transistors shrank, the source and the drain got so close together that current could flow through the channel even when the switch was supposed to be off.
+Dialogue: 0,0:07:50.24,0:07:54.96,Sub,,0,0,0,,We needed a better way to control the channel and prevent current from leaking through.
+Dialogue: 0,0:07:54.96,0:08:00.32,Sub,,0,0,0,,The fix was to give the gate a tighter grip on the channel by touching it from more sides.
+Dialogue: 0,0:08:00.32,0:08:04.88,Sub,,0,0,0,,In the original planar transistor, the gate only touches the channel from the top.
+Dialogue: 0,0:08:04.88,0:08:09.52,Sub,,0,0,0,,The FinFET transistor squeezes the channel into a thin vertical fin of silicon.
+Dialogue: 0,0:08:09.52,0:08:14.48,Sub,,0,0,0,,The gate drapes over the fin, so it controls the channel from three sides.
+Dialogue: 0,0:08:14.48,0:08:22.00,Sub,,0,0,0,,The next progression from there was to cover not only the top and the sides of the channel, but also the bottom. This technology is called gate-all-around, and
+Dialogue: 0,0:08:22.00,0:08:27.44,Sub,,0,0,0,,it slices the channel into thin ribbons, each of which gets completely wrapped around by the gate.
+Dialogue: 0,0:08:27.44,0:08:31.76,Sub,,0,0,0,,But getting gate-all-around to work required new materials and new manufacturing steps.
+Dialogue: 0,0:08:31.76,0:08:42.72,Sub,,0,0,0,,To build these floating ribbons of silicon, you first sandwich them between alternating layers of a temporary placeholder material, which holds the space where the gate will eventually go.
+Dialogue: 0,0:08:42.72,0:08:52.00,Sub,,0,0,0,,We use a placeholder because the materials in the real gate wouldn’t survive the processing that comes after, which involves baking the wafer at around 1,000 degrees Celsius.
+Dialogue: 0,0:08:52.00,0:08:59.60,Sub,,0,0,0,,Once these hot steps are done, chipmakers etch away the placeholder, leaving the ribbons suspended. Then they fill the gaps around every ribbon
+Dialogue: 0,0:08:59.60,0:09:09.04,Sub,,0,0,0,,with a thin coat of a special insulator called a high-k material, whose purpose is to let the gate pull more strongly on the channel. And then on top of this material,
+Dialogue: 0,0:09:09.04,0:09:20.88,Sub,,0,0,0,,they put the metal of the gate itself. FinFET was demonstrated in a lab in 1989 and reached volume production at Intel in 2011. A gate-all-around transistor had been demonstrated
+Dialogue: 0,0:09:20.88,0:09:27.52,Sub,,0,0,0,,a year earlier, in 1988, but Samsung didn’t begin producing gate-all-around chips until 2022.
+Dialogue: 0,0:09:27.52,0:09:32.00,Sub,,0,0,0,,So these ideas, FinFET and gate-all-around, were developed around the same time,
+Dialogue: 0,0:09:32.00,0:09:41.28,Sub,,0,0,0,,but they reached production a decade apart. I wanted to ask Chris why it took so long to get to this current gate-all-around technology. Maybe you can walk me through the process of
+Dialogue: 0,0:09:41.28,0:09:44.64,Sub,,0,0,0,,getting into high-volume manufacturing. I want to understand concretely,
+Dialogue: 0,0:09:44.64,0:09:56.24,Sub,,0,0,0,,once you have an idea that, “Hey, we’re going to make the channel smaller, we’re going to surround it…” All the other problems of material science, figuring out how to not destroy the gate,
+Dialogue: 0,0:09:56.24,0:09:58.80,Sub,,0,0,0,,how do they actually get figured out? Why does it take so long?
+Dialogue: 0,0:09:58.80,0:10:02.08,Sub,,0,0,0,,Gate-all-around’s a good example, because back in the ’90s we knew of this idea.
+Dialogue: 0,0:10:02.08,0:10:08.80,Sub,,0,0,0,,But we knew there were going to be these problems on how you put this into high-volume manufacturing. At the same time, there are other
+Dialogue: 0,0:10:08.80,0:10:13.52,Sub,,0,0,0,,things like high-K metal gate. There’s strained silicon,
+Dialogue: 0,0:10:13.52,0:10:24.88,Sub,,0,0,0,,there’s FinFETs that are out there. It’s a question of when’s the right time to go and tackle those? Well, you don’t want to tackle something before you have to. If you have these other things that can drive
+Dialogue: 0,0:10:24.88,0:10:27.60,Sub,,0,0,0,,performance, you would go and do that. So we went through this path.
+Dialogue: 0,0:10:28.32,0:10:35.44,Sub,,0,0,0,,We did strained silicon, high-K metal gate, we did FinFETs, and then it became, “Well, we need to do things further. How do we get there?”
+Dialogue: 0,0:10:35.44,0:10:38.88,Sub,,0,0,0,,Well, gate-all-around’s really the ultimate transistor out there.
+Dialogue: 0,0:10:38.88,0:10:43.44,Sub,,0,0,0,,Maybe it’s time to go and start tackling some of those issues that you have.
+Dialogue: 0,0:10:43.44,0:10:48.00,Sub,,0,0,0,,You’re right, now you have to look at how do you put high-K metal gate in with gate-all-around.
+Dialogue: 0,0:10:48.00,0:10:52.32,Sub,,0,0,0,,It’s that innovation that takes time. Sometimes you need new materials.
+Dialogue: 0,0:10:52.32,0:11:01.76,Sub,,0,0,0,,Sometimes you need a different tool in order to be able to do some of the things that you need to go do, and that requires invention from the tool vendors.
+Dialogue: 0,0:11:01.76,0:11:04.96,Sub,,0,0,0,,You have to go to the tool vendor and say, “Hey, I need a tool that can do XYZ.
+Dialogue: 0,0:11:04.96,0:11:09.60,Sub,,0,0,0,,I need a gas that can deposit this particular material that goes into that.
+Dialogue: 0,0:11:09.60,0:11:14.24,Sub,,0,0,0,,I need a heating chuck that has this characteristic to it.”
+Dialogue: 0,0:11:14.24,0:11:21.44,Sub,,0,0,0,,All those things take time. Some of it’s iterative, where you have to run a gate-all-around transistor and say, “Oh, well, that didn’t work.
+Dialogue: 0,0:11:21.44,0:11:34.32,Sub,,0,0,0,,Let me figure out what was wrong with my hypothesis and try it again with some different structure.” How has the nature of R&D changed from the era of
+Dialogue: 0,0:11:35.28,0:11:39.44,Sub,,0,0,0,,just making planar transistors smaller and smaller and getting the benefits of Dennard scaling,
+Dialogue: 0,0:11:39.44,0:11:43.84,Sub,,0,0,0,,to the world we’re in today? Is it just a totally different kind of R&D process? Previously it was,
+Dialogue: 0,0:11:43.84,0:11:52.32,Sub,,0,0,0,,“Let’s make things smaller, smaller, smaller.” Now you look at all these other facets of performance at the same time, and improvements in size don’t come as easily.
+Dialogue: 0,0:11:52.32,0:11:55.52,Sub,,0,0,0,,Walk me through whether there was some crucial change in the R&D process at that point.
+Dialogue: 0,0:11:55.52,0:11:59.60,Sub,,0,0,0,,If you look at the ’80s and ’90s, yes, it was driven really by Dennard scaling, lithography.
+Dialogue: 0,0:11:59.60,0:12:03.84,Sub,,0,0,0,,We just made things smaller, transistors got faster, they got more reliable,
+Dialogue: 0,0:12:03.84,0:12:11.92,Sub,,0,0,0,,and it was a very predictable cadence. When we started to hit the 2000s, we saw, “That’s not good enough anymore. We need to do something different.”
+Dialogue: 0,0:12:11.92,0:12:21.04,Sub,,0,0,0,,To me, it became this golden age of innovation. For each technology node, how are you going to provide more scaling? How are you going to provide more performance?
+Dialogue: 0,0:12:21.04,0:12:24.94,Sub,,0,0,0,,It drove things like strained silicon. It drove high-K metal gate.
+Dialogue: 0,0:12:24.94,0:12:29.04,Sub,,0,0,0,,It drove FinFETs. It drove gate-all-around. It drove backside power.
+Dialogue: 0,0:12:29.04,0:12:35.92,Sub,,0,0,0,,These are things that in the ’80s and ’90s you would be like, “Oh no, we’re not touching any of that,” because we just continued to have the same process flow.
+Dialogue: 0,0:12:35.92,0:12:46.08,Sub,,0,0,0,,We just scaled it, scaled it, scaled it. But for somebody like me who’s a transistor junkie, it’s awesome, because now the playbook’s open.
+Dialogue: 0,0:12:46.08,0:12:49.76,Sub,,0,0,0,,You can do all sorts of things out there. You can bring in new materials.
+Dialogue: 0,0:12:49.76,0:12:52.96,Sub,,0,0,0,,Just look at the number of materials we used to use in the ’90s versus the materials today.
+Dialogue: 0,0:12:52.96,0:12:56.48,Sub,,0,0,0,,It’s probably gone up 10X. There’s a lot of innovation.
+Dialogue: 0,0:12:56.48,0:13:01.28,Sub,,0,0,0,,There’s atomic layer deposition. You’re controlling this stuff atom by atom.
+Dialogue: 0,0:13:02.16,0:13:05.20,Sub,,0,0,0,,So it’s changed a lot how you approach the process.
+Dialogue: 0,0:13:06.16,0:13:16.08,Sub,,0,0,0,,Before, it was, “Try to not change anything.” Now it’s, “Take the sledgehammer and start tearing the thing up and come up with some new idea.” For 14A, Intel is using a new kind
+Dialogue: 0,0:13:16.08,0:13:29.28,Sub,,0,0,0,,of lithography machine: High-NA EUV. It uses the same extreme ultraviolet light as today’s EUV machines, but changes the optics. NA, or numerical aperture, is a measure of how
+Dialogue: 0,0:13:29.28,0:13:34.08,Sub,,0,0,0,,wide a cone of light the machine’s mirrors can focus onto the wafer.
+Dialogue: 0,0:13:34.08,0:13:38.88,Sub,,0,0,0,,The wider the cone you can focus, the smaller the spot that your light can carve.
+Dialogue: 0,0:13:38.88,0:13:45.36,Sub,,0,0,0,,Standard EUV machines have an NA of 0.33. High-NA widens it to 0.55.
+Dialogue: 0,0:13:45.36,0:13:51.04,Sub,,0,0,0,,So High-NA can print features about 1.7 times smaller in a single pass.
+Dialogue: 0,0:13:51.04,0:14:00.80,Sub,,0,0,0,,When features are smaller than the lithography machine can print, chipmakers have to split the pattern across several passes, each printing a different set of features.
+Dialogue: 0,0:14:00.80,0:14:06.00,Sub,,0,0,0,,The most tightly packed patterns can require two, three, or even four passes.
+Dialogue: 0,0:14:06.00,0:14:10.96,Sub,,0,0,0,,Each additional pass takes up valuable time on a machine that costs around $200 million,
+Dialogue: 0,0:14:10.96,0:14:19.20,Sub,,0,0,0,,and it introduces another opportunity for defects. High-NA machines cost about twice as much, but they can reduce the number of passes that are needed.
+Dialogue: 0,0:14:19.20,0:14:27.20,Sub,,0,0,0,,So the question which determines whether they justify their higher price is how much more time they save and how much they reduce the risk of defects.
+Dialogue: 0,0:14:27.20,0:14:39.84,Sub,,0,0,0,,Now you guys are using High-NA EUV tools for 14A, whereas TSMC has said that they don’t make economic sense yet for them. How do you decide whether the next litho tool is
+Dialogue: 0,0:14:39.84,0:14:45.20,Sub,,0,0,0,,the one that is ready to adopt or not? High-NA’s a good example of where,
+Dialogue: 0,0:14:45.20,0:14:56.16,Sub,,0,0,0,,because of the architecture of our technology versus TSMC’s, we make different conclusions off of the same tool set. We use backside power.
+Dialogue: 0,0:14:56.16,0:15:01.68,Sub,,0,0,0,,That means that you actually alleviate some of the pitch requirements you have on the front side.
+Dialogue: 0,0:15:01.68,0:15:04.80,Sub,,0,0,0,,That allows you to print that directly with High-NA.
+Dialogue: 0,0:15:04.80,0:15:12.48,Sub,,0,0,0,,TSMC has to run tighter pitches because they don’t have backside power, and they can’t do that with High-NA, so they have to use double patterning EUV.
+Dialogue: 0,0:15:12.48,0:15:16.56,Sub,,0,0,0,,So for them, it’s not very helpful. For us, it is very helpful.
+Dialogue: 0,0:15:16.56,0:15:24.88,Sub,,0,0,0,,Now at 14A, we’ve left it as an option, and it’s something that we’ll have a discussion with the customer on, because there’s some value proposition to it, and there’s some
+Dialogue: 0,0:15:24.88,0:15:31.28,Sub,,0,0,0,,complexity that it adds. Chris is referring to a feature called backside power. A chip has two different kinds of wiring.
+Dialogue: 0,0:15:31.28,0:15:35.44,Sub,,0,0,0,,Power lines deliver electricity to the transistors, and they need to be thick.
+Dialogue: 0,0:15:35.44,0:15:38.32,Sub,,0,0,0,,Signal lines let the transistors talk to each other.
+Dialogue: 0,0:15:38.32,0:15:46.56,Sub,,0,0,0,,They’re much thinner, but they need to be spaced apart so that the signal from one wire doesn’t interfere with the signal from another. In the past, all of these power lines
+Dialogue: 0,0:15:46.56,0:15:50.16,Sub,,0,0,0,,and signal lines had to be crammed together on top of the transistors.
+Dialogue: 0,0:15:50.16,0:15:55.76,Sub,,0,0,0,,Intel’s newest process moves these power lines below the transistors, to the back of the wafer.
+Dialogue: 0,0:15:55.76,0:16:00.16,Sub,,0,0,0,,This frees up space on top, so the signal lines don’t have to be packed as tightly.
+Dialogue: 0,0:16:00.16,0:16:09.44,Sub,,0,0,0,,This change makes High-NA worth it for Intel. Without backside power, the wiring is so tight that it would require multiple passes to print, even with High-NA.
+Dialogue: 0,0:16:09.44,0:16:13.28,Sub,,0,0,0,,With backside power, a single High-NA pass is enough.
+Dialogue: 0,0:16:13.28,0:16:17.68,Sub,,0,0,0,,Outside companies can now commission Intel to manufacture chips that they’ve designed.
+Dialogue: 0,0:16:17.68,0:16:24.00,Sub,,0,0,0,,They follow Intel’s process design kit, or PDK: the menu of what a given process can build,
+Dialogue: 0,0:16:24.00,0:16:30.64,Sub,,0,0,0,,and the rules for building it. Do you need to lock that into your PDK right now for customers who are planning on developing on 14A?
+Dialogue: 0,0:16:30.64,0:16:39.20,Sub,,0,0,0,,It’s an option in the PDK today, and we’re handling it as a customer-by-customer discussion as to whether or not they want to go down that path or not.
+Dialogue: 0,0:16:39.20,0:16:44.00,Sub,,0,0,0,,For 18A, there was public reporting that there were delays in or issues with the PDK,
+Dialogue: 0,0:16:44.00,0:16:51.28,Sub,,0,0,0,,such that some instructions didn’t work, and it was difficult for people to use your foundry to build their chips. Tell me about the process of Intel
+Dialogue: 0,0:16:51.28,0:17:00.16,Sub,,0,0,0,,becoming a foundry and then having a PDK that other customers can use to make whatever chip they’re making as well. There’s definitely a learning curve to
+Dialogue: 0,0:17:00.16,0:17:05.92,Sub,,0,0,0,,how you become a foundry. That’s something that our competitors have gone through as well. PDK is a good example of that.
+Dialogue: 0,0:17:05.92,0:17:12.80,Sub,,0,0,0,,For decades, we’ve been an IDM. We’ve gone to our product teams and shown them our transistor data, and we share that data back and forth, and we haven’t
+Dialogue: 0,0:17:12.80,0:17:22.40,Sub,,0,0,0,,had a formal PDK-type process. So that’s a new process that we’ve had to implement on 18A. 18A started out not having a PDK.
+Dialogue: 0,0:17:23.12,0:17:33.28,Sub,,0,0,0,,There’s definitely a lot of feedback we’ve gotten from the customers as to what they expect for quality and maturity of the PDK and what sort of information they want to see in there.
+Dialogue: 0,0:17:33.28,0:17:40.16,Sub,,0,0,0,,We’ve tried to incorporate that into making sure that we have a PDK that meets our customers’ requirements. That’s where we’ve ended up.
+Dialogue: 0,0:17:40.72,0:17:45.60,Sub,,0,0,0,,We’re starting to get PDKs that have this, and 14A will have that from the get-go.
+Dialogue: 0,0:17:45.60,0:17:56.24,Sub,,0,0,0,,It has very high quality PDKs. Again, there are maturity metrics for what is a PDK 0.5 versus a 0.9 versus a 1.0. We’re constantly going through and taking
+Dialogue: 0,0:17:56.24,0:18:00.88,Sub,,0,0,0,,customer feedback and incorporating that into the quality of our PDK.
+Dialogue: 0,0:18:00.88,0:18:04.96,Sub,,0,0,0,,For most of its history, Intel’s fabs made only Intel’s chips.
+Dialogue: 0,0:18:04.96,0:18:07.68,Sub,,0,0,0,,That could be part of what allowed TSMC to gain an edge.
+Dialogue: 0,0:18:07.68,0:18:12.88,Sub,,0,0,0,,Serving many customers gave TSMC more wafers to learn from, more revenue to reinvest,
+Dialogue: 0,0:18:12.88,0:18:20.40,Sub,,0,0,0,,and more pressure to hit deadlines. Basically, all enterprise customers have a shared set of product requirements that you have to meet if you want to even
+Dialogue: 0,0:18:20.40,0:18:29.84,Sub,,0,0,0,,start talking about doing business with them. These are things like SSO, so employees can log into your app with their company accounts, or directory sync, so that whenever someone leaves,
+Dialogue: 0,0:18:29.84,0:18:37.20,Sub,,0,0,0,,their access gets shut off automatically. These features are harder to get right than you think, and the risk-reward for building them in-house doesn’t really make sense:
+Dialogue: 0,0:18:37.20,0:18:40.72,Sub,,0,0,0,,a slightly better version of SSO probably won’t accelerate your growth,
+Dialogue: 0,0:18:40.72,0:18:51.92,Sub,,0,0,0,,but a broken one will definitely stunt it. WorkOS gives you access to battle-tested versions of all the most common enterprise features—things like SSO, SCIM, RBAC, audit logs, and more.
+Dialogue: 0,0:18:51.92,0:18:59.84,Sub,,0,0,0,,WorkOS also has versions of these features that are purpose-built for agents, so they can log in, grab the right permissions, and take actions within your product.
+Dialogue: 0,0:18:59.84,0:19:08.96,Sub,,0,0,0,,All of these features can be plugged in with just a few lines of code, so you can add them and get started selling to enterprises. OpenAI, Anthropic, and Thinking Machines—as well
+Dialogue: 0,0:19:08.96,0:19:15.44,Sub,,0,0,0,,as more than 3,000 other companies—all rely on WorkOS to meet their enterprise requirements.
+Dialogue: 0,0:19:15.44,0:19:20.00,Sub,,0,0,0,,If you want to join them, go to workos.com and tell them that I sent you.
+Dialogue: 0,0:19:20.00,0:19:28.08,Sub,,0,0,0,,If a butterfly flapped its wings in the ’60s, could you imagine a world where gate-all-around is not even a word people have heard of, an idea people are familiar with, but people are thinking
+Dialogue: 0,0:19:28.08,0:19:35.20,Sub,,0,0,0,,of an extremely different branch of the tech tree? How far down the tech tree do you think things could be totally different? Could it be that we’re not even using copper?
+Dialogue: 0,0:19:35.20,0:19:42.08,Sub,,0,0,0,,If you look at, say, transistors and interconnects, where we’ve gotten to,
+Dialogue: 0,0:19:42.08,0:19:46.64,Sub,,0,0,0,,as far as the transistor and gate-all-around and it being the ideal transistor structure,
+Dialogue: 0,0:19:47.52,0:19:54.08,Sub,,0,0,0,,was somewhat inevitable. As I said, in the ’90s we were already talking about these types of things. Backside power, that one’s pretty out there.
+Dialogue: 0,0:19:54.80,0:20:06.24,Sub,,0,0,0,,Even in the ’90s, the idea that you’re going to strip off the entire silicon substrate and put lines on the backside, that one is probably something that’s a little bit out there.
+Dialogue: 0,0:20:06.88,0:20:14.56,Sub,,0,0,0,,Copper, of course copper wires are the best, so I don’t know how you would end up somewhere else besides copper. But you guys are exploring other—
+Dialogue: 0,0:20:14.56,0:20:20.40,Sub,,0,0,0,,For some of the very tightest pitches, it’s inevitable that you will replace copper.
+Dialogue: 0,0:20:20.40,0:20:24.16,Sub,,0,0,0,,That’s a good example of where you will have another material that will come in there.
+Dialogue: 0,0:20:24.16,0:20:27.36,Sub,,0,0,0,,But for the larger lines, I think copper is about where it’s at.
+Dialogue: 0,0:20:28.16,0:20:36.88,Sub,,0,0,0,,Once you start to do gate-all-around transistors and you do backside power, now you start to enter a very different regime.
+Dialogue: 0,0:20:36.88,0:20:41.84,Sub,,0,0,0,,Now you see it’s not, “Hey, there’s just some substrate and you stack everything on top.”
+Dialogue: 0,0:20:41.84,0:20:50.16,Sub,,0,0,0,,Now you’ve got a transistor which is floating in interconnect, and you’re like, “Okay, well, why don’t I have transistors, interconnect, a little more transistors, more interconnect?”
+Dialogue: 0,0:20:50.16,0:20:55.52,Sub,,0,0,0,,This whole 3D stacking that we now do with just discrete chips that we stack on top of each other.
+Dialogue: 0,0:20:55.52,0:20:59.36,Sub,,0,0,0,,Now you’re like, “Why can’t I just build an entire structure like this?”
+Dialogue: 0,0:20:59.36,0:21:06.32,Sub,,0,0,0,,You see it with memory, NAND, DRAM. They have some incredible 3D structures.
+Dialogue: 0,0:21:06.32,0:21:13.20,Sub,,0,0,0,,NAND already does it, DRAM talks about it, but I think that DRAM inevitably is going to go there too. A lot of people say, “Oh no,
+Dialogue: 0,0:21:13.20,0:21:16.16,Sub,,0,0,0,,we’re not going to do this because we can’t do it in the next five years.”
+Dialogue: 0,0:21:16.16,0:21:18.72,Sub,,0,0,0,,Well, come on, let’s put a larger timescale on this.
+Dialogue: 0,0:21:18.72,0:21:23.28,Sub,,0,0,0,,Let’s put 10 years, 20 years. In 2045, do you think you could do it?
+Dialogue: 0,0:21:23.28,0:21:29.92,Sub,,0,0,0,,Now you start to say, “Oh yeah, I could see us having some pretty exotic structures at that point.” We limit ourselves by what we see
+Dialogue: 0,0:21:29.92,0:21:38.56,Sub,,0,0,0,,as possible in the next four years. As I’ve always said, when people say, “How do you see technology scaling going?”, we have visibility for about four years.
+Dialogue: 0,0:21:38.56,0:21:44.24,Sub,,0,0,0,,Then you get out to the four years, and you go, “Yeah, I think there’s something we can do another four years out of that.” And you get to that four years, and you’re like,
+Dialogue: 0,0:21:44.24,0:21:47.12,Sub,,0,0,0,,“Yeah, I think you can do something.” But if you start to talk about 10 years,
+Dialogue: 0,0:21:47.12,0:21:54.88,Sub,,0,0,0,,it becomes hard to say what it’s going to be. Chris’s idea of building upward could start with the transistors themselves. Chips use two types of transistor,
+Dialogue: 0,0:21:54.88,0:22:00.08,Sub,,0,0,0,,called n-type and p-type, which work the same way, but with the charges reversed.
+Dialogue: 0,0:22:00.08,0:22:06.40,Sub,,0,0,0,,Nearly every circuit is built by pairing them up. Today, chipmakers build them side by side.
+Dialogue: 0,0:22:06.40,0:22:11.04,Sub,,0,0,0,,The next step is to stack them directly on top of each other in order to save space.
+Dialogue: 0,0:22:11.04,0:22:15.20,Sub,,0,0,0,,In principle, that fits twice as many transistors into the same area.
+Dialogue: 0,0:22:15.20,0:22:20.00,Sub,,0,0,0,,This design is called a CFET, short for complementary field-effect transistor.
+Dialogue: 0,0:22:20.00,0:22:31.20,Sub,,0,0,0,,But every extra layer adds manufacturing steps and cost, and also leads to heat building up that doesn’t have a clear way to escape. Because logic consumes more power than memory, you
+Dialogue: 0,0:22:31.20,0:22:38.72,Sub,,0,0,0,,can’t do stacks of DRAM that make HBM or 3D NAND as easily with logic, because of the heat issue.
+Dialogue: 0,0:22:38.72,0:22:48.88,Sub,,0,0,0,,Is that the fundamental issue over the long run? How you— Thermals. There are three things you have when you try to say, “Hey, what limits compute?”
+Dialogue: 0,0:22:49.60,0:22:53.76,Sub,,0,0,0,,It’s how fast can you do the switch, so the frequency of the device.
+Dialogue: 0,0:22:53.76,0:22:58.40,Sub,,0,0,0,,How much power does it take in order to do that switch, so the power efficiency of it.
+Dialogue: 0,0:22:58.40,0:23:02.56,Sub,,0,0,0,,The third one is, how do you dissipate the heat that was generated by doing that switch?
+Dialogue: 0,0:23:02.56,0:23:07.28,Sub,,0,0,0,,That’s the thermals piece of it. These are not new problems.
+Dialogue: 0,0:23:07.28,0:23:10.32,Sub,,0,0,0,,You can go back 20 years and you can see articles on these three things.
+Dialogue: 0,0:23:10.32,0:23:21.28,Sub,,0,0,0,,The question is, thermals… how do you deal with that, particularly when you start to talk about these 3D-type devices? There is a need for that sort of system-level
+Dialogue: 0,0:23:21.28,0:23:31.28,Sub,,0,0,0,,analysis and simulation tools. I think we’re in its infancy because we’ve just started to look at this. It is a limiter, and it will be a limiter, but
+Dialogue: 0,0:23:31.28,0:23:41.36,Sub,,0,0,0,,again, these are problems that we can go solve. The problems respond to work, but engineering time is finite, and so are the wafers for experiments. Deciding where they go across thousands
+Dialogue: 0,0:23:41.36,0:23:45.36,Sub,,0,0,0,,of problems is itself one of the hardest parts of bringing up a node.
+Dialogue: 0,0:23:45.36,0:23:50.40,Sub,,0,0,0,,I sat in on one of Intel’s Hot Topics meetings, where those decisions get made.
+Dialogue: 0,0:23:50.40,0:23:58.80,Sub,,0,0,0,,I’m here with Kevin Fischer, who was laying down the law this morning at the Hot Topics meeting, where you guys were discussing how you’re improving 18A and 18A-P technologies.
+Dialogue: 0,0:23:58.80,0:24:01.04,Sub,,0,0,0,,People would come to you with different experiments they were running,
+Dialogue: 0,0:24:01.04,0:24:11.92,Sub,,0,0,0,,different ideas they had for improving yield and performance, and then you and your integration engineers would tell them what data you needed, how they should proceed,
+Dialogue: 0,0:24:11.92,0:24:20.64,Sub,,0,0,0,,how you think they could move things faster. I want people to have a sense of the culture at these meetings. One thing I found striking is that this
+Dialogue: 0,0:24:20.64,0:24:24.72,Sub,,0,0,0,,is bottlenecking your most advanced node. You want progress to happen fast,
+Dialogue: 0,0:24:24.72,0:24:39.84,Sub,,0,0,0,,so you kind of lay down the hammer. I would say the average engineer doesn’t understand the stakes or the urgency of how this is going to impact Intel’s bottom line,
+Dialogue: 0,0:24:39.84,0:24:45.60,Sub,,0,0,0,,how it’s going to impact our customer. They just have no visibility into those issues.
+Dialogue: 0,0:24:45.60,0:24:52.48,Sub,,0,0,0,,They will typically have a certain set of criteria that they want to go capture.
+Dialogue: 0,0:24:52.48,0:24:59.12,Sub,,0,0,0,,They’ll hit boundaries of, “I asked for something and someone said no, and I’m done.
+Dialogue: 0,0:25:00.56,0:25:10.48,Sub,,0,0,0,,I guess I can’t have this thing that I asked for.” One thing you learn in this industry is that you will never have a complete data set. If you want to wait for a complete data set,
+Dialogue: 0,0:25:10.48,0:25:12.72,Sub,,0,0,0,,you’ve waited too long. It’s already too late.
+Dialogue: 0,0:25:12.72,0:25:23.28,Sub,,0,0,0,,A lot of what I end up doing in those meetings is deciding how much risk we’re going to take on a certain decision or not take on a certain decision.
+Dialogue: 0,0:25:23.28,0:25:27.92,Sub,,0,0,0,,You need to say, “Look, do we go now? Do we start risking production?”
+Dialogue: 0,0:25:27.92,0:25:31.12,Sub,,0,0,0,,Because you’re risking the bottom line. You’re risking revenue.
+Dialogue: 0,0:25:31.12,0:25:39.28,Sub,,0,0,0,,I’m worried you’re going to put me in the light of being an ogre because I’m putting the hammer down on people. That’s a great reputation to have.
+Dialogue: 0,0:25:39.28,0:25:43.20,Sub,,0,0,0,,It’s really conveying urgency. Every day counts.
+Dialogue: 0,0:25:43.20,0:25:47.12,Sub,,0,0,0,,Can you walk me through a particular issue that might come up?
+Dialogue: 0,0:25:47.12,0:25:51.36,Sub,,0,0,0,,One of the examples you saw this morning is epi nodules.
+Dialogue: 0,0:25:51.36,0:25:56.88,Sub,,0,0,0,,Epi is short for epitaxy, which means growing new material on top of an existing one.
+Dialogue: 0,0:25:56.88,0:26:02.48,Sub,,0,0,0,,Chipmakers flow gases over a heated wafer, and the gases leave atoms on its surface.
+Dialogue: 0,0:26:02.48,0:26:06.16,Sub,,0,0,0,,The crystal structure of the material underneath acts as a template.
+Dialogue: 0,0:26:06.16,0:26:11.36,Sub,,0,0,0,,Each new atom lines up with the atoms below it, and the new layer continues the same crystal.
+Dialogue: 0,0:26:11.36,0:26:14.96,Sub,,0,0,0,,Chipmakers use epitaxy at several stages of making a chip.
+Dialogue: 0,0:26:14.96,0:26:23.28,Sub,,0,0,0,,In the step Kevin describes, they use it to grow the source and the drain as small crystals on either side of the gate. During the deposition of our epitaxy,
+Dialogue: 0,0:26:23.28,0:26:26.96,Sub,,0,0,0,,we get abnormal growth, a little thing like a tumor.
+Dialogue: 0,0:26:26.96,0:26:35.84,Sub,,0,0,0,,It’s growing super fast. That causes problems, because one epi will short to the wrong epi and you get transistors not working.
+Dialogue: 0,0:26:35.84,0:26:39.12,Sub,,0,0,0,,Then you’ve got to narrow it down to how you’re going to fix it.
+Dialogue: 0,0:26:39.12,0:26:43.52,Sub,,0,0,0,,For the past decade, Intel’s chips have had this feature called Processor Trace.
+Dialogue: 0,0:26:43.52,0:26:52.16,Sub,,0,0,0,,When you turn it on, it starts recording all the code your program runs, and it captures enough detail that you can go back later and reconstruct every single function call.
+Dialogue: 0,0:26:52.16,0:27:00.08,Sub,,0,0,0,,Most companies don’t need that level of detail. But Jane Street does: they need to investigate specific, fleeting moments in their trading systems—things like
+Dialogue: 0,0:27:00.08,0:27:07.60,Sub,,0,0,0,,a delayed response to a network packet. Those events tend to be too brief for most debugging tools to catch. So when one of Jane Street’s
+Dialogue: 0,0:27:07.60,0:27:11.12,Sub,,0,0,0,,engineers noticed Processor Trace, he started playing around with it.
+Dialogue: 0,0:27:11.12,0:27:16.96,Sub,,0,0,0,,And then he and a summer intern turned that exploration into a new tool called magic-trace.
+Dialogue: 0,0:27:16.96,0:27:25.20,Sub,,0,0,0,,Magic-trace leverages the output from Processor Trace to give Jane Street a history of every function call leading up to a specific moment of interest.
+Dialogue: 0,0:27:25.20,0:27:31.92,Sub,,0,0,0,,This project was completely bottom-up—it started just as something that one engineer thought would be valuable. And now, traders and developers across
+Dialogue: 0,0:27:31.92,0:27:41.28,Sub,,0,0,0,,Jane Street use magic-trace every single day. If you want to work somewhere where you’re trusted to pursue the ideas that you think matter most, Jane Street is hiring researchers and engineers.
+Dialogue: 0,0:27:41.28,0:27:53.20,Sub,,0,0,0,,Go to janestreet.com/dwarkesh to learn more. One of the pieces that you observed this morning was a special clean that we were looking at, which would eliminate the nodule.
+Dialogue: 0,0:27:53.20,0:27:56.16,Sub,,0,0,0,,The nodule would deposit, and then we’d get rid of it.
+Dialogue: 0,0:27:56.16,0:27:59.52,Sub,,0,0,0,,Some of the other discussion was about the source of the nodule.
+Dialogue: 0,0:27:59.52,0:28:07.68,Sub,,0,0,0,,Get rid of the source of the nodule. There’s some issue. How do you decide what the source of it is? For the most part, we work highly parallel.
+Dialogue: 0,0:28:08.32,0:28:15.68,Sub,,0,0,0,,How do you decide? It’s not always evident what the easiest way to fix the problem is, so you work on all the potential fixes.
+Dialogue: 0,0:28:16.48,0:28:27.44,Sub,,0,0,0,,Sometimes it’s not the one you expect first. Once we’ve identified it as a primary problem for the technology, that’s where this Hot Topics meeting gets involved.
+Dialogue: 0,0:28:27.44,0:28:36.32,Sub,,0,0,0,,That’s how we align the resources into those engineering teams so that we can accelerate the work. You said that there’s some
+Dialogue: 0,0:28:36.32,0:28:40.64,Sub,,0,0,0,,fast-track process where wafers can move through faster if they’re bottlenecking some experiment.
+Dialogue: 0,0:28:40.64,0:28:44.24,Sub,,0,0,0,,We have a tiered system of what we call hot boxes in the factory.
+Dialogue: 0,0:28:44.96,0:28:54.88,Sub,,0,0,0,,Every grade of hot box goes a little bit faster. It’s just how the factory prioritizes that particular lot, that block of silicon that’s running through the factory.
+Dialogue: 0,0:28:55.68,0:29:00.48,Sub,,0,0,0,,Our highest grade of hot box, HotBox 1, races through the factory.
+Dialogue: 0,0:29:00.48,0:29:04.80,Sub,,0,0,0,,It gets priority at every single tool, but it’s a drag on the entire factory.
+Dialogue: 0,0:29:04.80,0:29:16.00,Sub,,0,0,0,,If you had a factory person in here, they don’t like playing that card, because you end up using the tools inefficiently so that you can go super fast.
+Dialogue: 0,0:29:16.00,0:29:23.44,Sub,,0,0,0,,Think of it as a highway, and you set aside that one lane for the carpool, which everyone could use, but you’re saying, “Okay, it’s just the carpool.”
+Dialogue: 0,0:29:23.44,0:29:30.72,Sub,,0,0,0,,That’s our HotBox 1. Everyone clear out of that lane except for that one experiment, and that one experiment races down the highway.
+Dialogue: 0,0:29:30.72,0:29:41.28,Sub,,0,0,0,,Kevin’s job is deciding what goes onto the production line now, but the day before, I went to Intel’s research lab with Jack Kavalieros to see ideas that aren’t ready for the node yet.
+Dialogue: 0,0:29:41.28,0:29:50.32,Sub,,0,0,0,,We started with wiring. A transistor is only useful once it’s connected to others, and on a modern chip that takes more than a dozen layers of metal wire stacked
+Dialogue: 0,0:29:50.32,0:30:01.36,Sub,,0,0,0,,above the transistors, called interconnect. Those wires are made of copper, and as they shrink, copper starts to run into trouble. Intel is exploring a replacement: ruthenium.
+Dialogue: 0,0:30:01.36,0:30:05.28,Sub,,0,0,0,,Ruthenium has higher resistivity, so why are you guys exploring ruthenium for the future?
+Dialogue: 0,0:30:05.28,0:30:11.44,Sub,,0,0,0,,Interestingly enough, as you scale the dimensions of those copper wires, you run into challenges.
+Dialogue: 0,0:30:11.44,0:30:17.68,Sub,,0,0,0,,For example, copper typically requires a liner in order to deposit the copper to fill those lines.
+Dialogue: 0,0:30:17.68,0:30:23.68,Sub,,0,0,0,,Ruthenium is very different in that regard because it’s a material that we can actually etch.
+Dialogue: 0,0:30:23.68,0:30:37.60,Sub,,0,0,0,,As such, by etching it, we don’t need that liner. Now you scale those very fine dimensions, and if you can trade off that resistive liner with no liner, ruthenium starts to win.
+Dialogue: 0,0:30:37.60,0:30:46.96,Sub,,0,0,0,,There is a crossover point where ruthenium will have much better conductivity, better resistivity than copper. That’s roughly in the 20-nanometer pitch range,
+Dialogue: 0,0:30:46.96,0:30:55.68,Sub,,0,0,0,,which means, if you can imagine, half of the pitch is your metal line, and the other half is the dielectric that isolates them. So what is the liner?
+Dialogue: 0,0:30:56.96,0:31:05.92,Sub,,0,0,0,,Think of it almost like a glue layer or transition layer that we need in order to deposit the copper and have it stick, and have it make that connection to the copper lines below it.
+Dialogue: 0,0:31:05.92,0:31:10.40,Sub,,0,0,0,,These are all interlocking copper lines that interconnect to each other.
+Dialogue: 0,0:31:10.40,0:31:15.68,Sub,,0,0,0,,But every time you deposit copper, you’ve always had a liner underneath it.
+Dialogue: 0,0:31:15.68,0:31:24.48,Sub,,0,0,0,,In the past, that liner may have been a significant portion of the entirety of that conduction path. But over time, we’ve scaled it, made it thinner,
+Dialogue: 0,0:31:24.48,0:31:35.76,Sub,,0,0,0,,and so copper comes back into play as a contender. One thing I’d be curious to know is how you decide that a technology is mature and ready for high-volume manufacturing.
+Dialogue: 0,0:31:36.32,0:31:40.64,Sub,,0,0,0,,With 10 nanometer, you were mentioning you guys moved on from copper to cobalt,
+Dialogue: 0,0:31:40.64,0:31:48.96,Sub,,0,0,0,,and there were potential issues with that. How do you decide that this technology is going to work at scale? The integration of these materials into such
+Dialogue: 0,0:31:48.96,0:31:54.80,Sub,,0,0,0,,a complex system as the transistor ecosystem involves many, many different components.
+Dialogue: 0,0:31:54.80,0:31:59.44,Sub,,0,0,0,,The scalability is one part, but its ability to integrate is another.
+Dialogue: 0,0:31:59.44,0:32:02.80,Sub,,0,0,0,,At the time we made a decision for cobalt, it was the forerunner.
+Dialogue: 0,0:32:02.80,0:32:07.52,Sub,,0,0,0,,The results were stronger at the time. But as we work with our ecosystem externally,
+Dialogue: 0,0:32:07.52,0:32:20.48,Sub,,0,0,0,,the vendor ecosystem that provides these materials and the tools that we integrate them with, we find solutions down the road that may bring copper back in line as being the stronger of the two.
+Dialogue: 0,0:32:20.48,0:32:24.72,Sub,,0,0,0,,That’s exactly what happens. Every technology that we go through,
+Dialogue: 0,0:32:24.72,0:32:35.76,Sub,,0,0,0,,we will evaluate multiple options. As we get closer to our time horizon for delivering a manufacturing-worthy product, we have to make a decision.
+Dialogue: 0,0:32:35.76,0:32:39.44,Sub,,0,0,0,,The leading option at the time was cobalt. Now it’s copper again,
+Dialogue: 0,0:32:39.44,0:32:50.88,Sub,,0,0,0,,and perhaps in the future it’ll be ruthenium. I’d love to get your thoughts on CFET, basically stacking the transistors on top of each other. What is progress like there?
+Dialogue: 0,0:32:50.88,0:32:53.12,Sub,,0,0,0,,Can you keep making more and more layers? Is it just two?
+Dialogue: 0,0:32:53.12,0:32:55.44,Sub,,0,0,0,,Can you go three, four? How high can you get?
+Dialogue: 0,0:32:55.44,0:33:03.20,Sub,,0,0,0,,That evaluation of CFET is currently underway. Not just by us, by our competition.
+Dialogue: 0,0:33:03.20,0:33:07.60,Sub,,0,0,0,,Labs externally are looking at it. It is the ultimate in stackability.
+Dialogue: 0,0:33:07.60,0:33:15.36,Sub,,0,0,0,,We’re taking transistors that had to be compressed more and more, and we’re relaxing that in some ways because we’re going to stack them on top of each other.
+Dialogue: 0,0:33:15.36,0:33:18.64,Sub,,0,0,0,,But the act of stacking does not mean that they’re not interconnected.
+Dialogue: 0,0:33:18.64,0:33:27.84,Sub,,0,0,0,,What used to be connections on the top or even on the bottom, as we’ve seen from our press release, now has to go vertically in between the transistors.
+Dialogue: 0,0:33:27.84,0:33:37.52,Sub,,0,0,0,,That’s a new challenge because the aspect ratio of creating trenches and filling those trenches becomes more and more difficult. It’s not as straightforward as stacking the
+Dialogue: 0,0:33:37.52,0:33:40.56,Sub,,0,0,0,,transistors, because you still have to think about interconnecting them.
+Dialogue: 0,0:33:40.56,0:33:45.28,Sub,,0,0,0,,Is the issue there the etch to get that deep hole? Aspect ratio for the etches is a big part of it.
+Dialogue: 0,0:33:45.28,0:33:54.48,Sub,,0,0,0,,We’re working with our vendors to evolve on that and to improve that, but it’s also what you fill those very tiny spaces with. Because filling can sometimes leave
+Dialogue: 0,0:33:54.48,0:33:58.96,Sub,,0,0,0,,air gaps or holes that are never really filled, and that’s not ideal.
+Dialogue: 0,0:33:58.96,0:34:02.00,Sub,,0,0,0,,I assume there’s a version of CFET that works inside this lab.
+Dialogue: 0,0:34:02.00,0:34:06.00,Sub,,0,0,0,,What is the kind of wafer or process that is working right now?
+Dialogue: 0,0:34:06.00,0:34:07.65,Sub,,0,0,0,,Then what’s the next step? What’s the next step after that,
+Dialogue: 0,0:34:08.16,0:34:20.72,Sub,,0,0,0,,until it’s inside the full high-volume process? Part of the process of evolving these technologies, especially something more complex like an architecture — not just a basic chemistry
+Dialogue: 0,0:34:20.72,0:34:30.88,Sub,,0,0,0,,or a material, but a full architecture like CFET — is that we have to make short-loop vehicles that can give us faster turnaround. The normal manufacturing process can
+Dialogue: 0,0:34:30.88,0:34:35.68,Sub,,0,0,0,,take a month or longer to complete the thousands of steps that it goes through.
+Dialogue: 0,0:34:35.68,0:34:41.76,Sub,,0,0,0,,Our goal here is to take unit cells of that process and qualify them.
+Dialogue: 0,0:34:41.76,0:34:52.88,Sub,,0,0,0,,We take advantage of short-loop vehicles that can give us electrical parameters, chemical parameters that can resolve some of those challenges, those speed bumps.
+Dialogue: 0,0:34:52.88,0:34:58.80,Sub,,0,0,0,,Once we’ve resolved them, then we combine them into a more complex test vehicle.
+Dialogue: 0,0:34:58.80,0:35:01.76,Sub,,0,0,0,,What you would find in here is something very simple.
+Dialogue: 0,0:35:01.76,0:35:08.72,Sub,,0,0,0,,You might be making a diode, you might be making a capacitor, which are components of the transistor.
+Dialogue: 0,0:35:08.72,0:35:20.80,Sub,,0,0,0,,As those evolve and become stronger, better performing, you combine them to make the next stage, which might be the transistor itself. In the CFET example, you might not choose to
+Dialogue: 0,0:35:20.80,0:35:25.84,Sub,,0,0,0,,do four ribbons on top of four ribbons. You might just choose to do one on one,
+Dialogue: 0,0:35:25.84,0:35:35.36,Sub,,0,0,0,,because naturally the aspect ratio of dealing with something that much taller becomes more and more challenging. So we would have a simplified version of a CFET,
+Dialogue: 0,0:35:35.36,0:35:40.56,Sub,,0,0,0,,which has only one wire for the NMOS and one wire for the PMOS.
+Dialogue: 0,0:35:40.56,0:35:49.52,Sub,,0,0,0,,That simplifies our job, but it still helps us evaluate the stacking of devices and how they will interconnect. But are the feature sizes here as
+Dialogue: 0,0:35:49.52,0:35:52.08,Sub,,0,0,0,,small as they will be eventually? Or are the feature sizes bigger?
+Dialogue: 0,0:35:52.08,0:36:03.84,Sub,,0,0,0,,Oh, absolutely. In some cases, at least as small. For example, you’ve heard of 2D materials, these transition layer dichalcogenides, as they’re called.
+Dialogue: 0,0:36:03.84,0:36:12.32,Sub,,0,0,0,,They’re very, very thin materials. They’re essentially one monolayer of atoms that we deal with. Those depositions can happen in this lab.
+Dialogue: 0,0:36:12.32,0:36:22.40,Sub,,0,0,0,,We can evaluate those films in terms of conductivity, our ability to contact them, our ability to modulate that conductivity, which is what the transistor does.
+Dialogue: 0,0:36:22.40,0:36:30.48,Sub,,0,0,0,,So yes, we do have the ability to not only deposit films that are very small and thin to the
+Dialogue: 0,0:36:30.48,0:36:42.64,Sub,,0,0,0,,atomic scale, but also print very small features. We have EUV technology, or E-beam technology, that can allow us to print very small features similar to what we will eventually make in production.
+Dialogue: 0,0:36:43.28,0:36:51.84,Sub,,0,0,0,,I guess I don’t understand intuitively, lacking the context in this process,
+Dialogue: 0,0:36:51.84,0:36:56.96,Sub,,0,0,0,,if you have the features that are as small for a working CFET right now.
+Dialogue: 0,0:36:57.52,0:37:00.48,Sub,,0,0,0,,Why will it take 10 years for it to be in my phone?
+Dialogue: 0,0:37:01.52,0:37:05.52,Sub,,0,0,0,,I understand that there’s a process, but why is it such a long process?
+Dialogue: 0,0:37:05.52,0:37:14.32,Sub,,0,0,0,,The answer is slightly different when you’re dealing with an architecture like CFET versus a novel material. Materials have, of course, the
+Dialogue: 0,0:37:14.32,0:37:26.40,Sub,,0,0,0,,challenges of being deposited, etched, removed. Their compatibility with other layers above and below, all those things have to be researched first before you put them in a production line.
+Dialogue: 0,0:37:26.40,0:37:34.80,Sub,,0,0,0,,An architecture may seem like a simple evolution. “Oh, you’re making nanoribbon transistors next to each other. What’s wrong with just stacking them?”
+Dialogue: 0,0:37:35.36,0:37:41.68,Sub,,0,0,0,,But the act of stacking them, of course, increases the aspect ratio for etches, depositions, cleans,
+Dialogue: 0,0:37:41.68,0:37:52.56,Sub,,0,0,0,,and the technology may simply not be ready yet. But if you’ve already made it here, there’s a version of the technology that’s ready, right? Correct. We’ve made a simplified version that
+Dialogue: 0,0:37:52.56,0:38:00.16,Sub,,0,0,0,,may not be an advantage over our current side-by-side technology of nanoribbons,
+Dialogue: 0,0:38:00.16,0:38:10.32,Sub,,0,0,0,,but we need to evolve it to make it maybe two nanoribbons, or to add the right type of metals and dielectrics, in order to extract the maximum performance out of that device.
+Dialogue: 0,0:38:10.32,0:38:20.56,Sub,,0,0,0,,Got it. So it’s like a long tail of— There’s a thousand different steps that all have to come together in a very unique way to make the performance compatible or actually
+Dialogue: 0,0:38:20.56,0:38:23.60,Sub,,0,0,0,,supersede the prior technology. Where do the ideas tend to fail?
+Dialogue: 0,0:38:24.48,0:38:37.84,Sub,,0,0,0,,You have 20 ideas like 2D materials. What is the way in which you decide this is actually not worth pursuing further? Sometimes we discover fundamentals about the
+Dialogue: 0,0:38:37.84,0:38:42.80,Sub,,0,0,0,,material that will be incompatible with the rest of the processing that we do.
+Dialogue: 0,0:38:44.32,0:38:48.32,Sub,,0,0,0,,The first level of experiments may simply be very simple depositions.
+Dialogue: 0,0:38:48.32,0:38:53.04,Sub,,0,0,0,,You say, “Okay, I can deposit the film, I can look at it, I can measure it.
+Dialogue: 0,0:38:53.04,0:38:56.72,Sub,,0,0,0,,But the moment I try to make a contact to it, nothing sticks.”
+Dialogue: 0,0:38:56.72,0:39:00.56,Sub,,0,0,0,,It could be something as fundamental as the adhesion.
+Dialogue: 0,0:39:00.56,0:39:06.40,Sub,,0,0,0,,The next step in the process simply has no way to adhere to the material.
+Dialogue: 0,0:39:06.40,0:39:10.32,Sub,,0,0,0,,So you may rule out a material because of something as simple as that.
+Dialogue: 0,0:39:10.88,0:39:23.60,Sub,,0,0,0,,More complex challenges might be that the subsequent processing may have gaseous interactions with downstream steps. For example, I’ve deposited the film, I’ve capped
+Dialogue: 0,0:39:23.60,0:39:34.08,Sub,,0,0,0,,it with other materials, but they’re not hermetic. So my third or fourth or fifth step in the process may actually still interact with it and change its properties.
+Dialogue: 0,0:39:34.08,0:39:40.32,Sub,,0,0,0,,That makes it unstable, and now we have to find better hermetic sealing for that process.
+Dialogue: 0,0:39:40.32,0:39:45.76,Sub,,0,0,0,,If we don’t find a way to control it, then it’s a dead end for us.
+Dialogue: 0,0:39:45.76,0:39:55.20,Sub,,0,0,0,,Stacking transistors is still in the research lab. Stacking whole chips is already in production, and it tackles a different problem: how separate chips communicate with each other.
+Dialogue: 0,0:39:55.20,0:39:59.76,Sub,,0,0,0,,Modern computers are divided into multiple parts, each optimized for a different task.
+Dialogue: 0,0:39:59.76,0:40:10.40,Sub,,0,0,0,,For example, Nvidia’s Blackwell data-center GPU joins two huge processor chips and surrounds them with eight stacks of high-bandwidth memory. These chips have to constantly send
+Dialogue: 0,0:40:10.40,0:40:20.00,Sub,,0,0,0,,data back and forth with each other. And in AI, the speed of that traffic, not the raw computation itself, is often what limits how fast the workload finishes.
+Dialogue: 0,0:40:20.00,0:40:24.00,Sub,,0,0,0,,Imagine two chips side by side, communicating through their facing edges.
+Dialogue: 0,0:40:24.00,0:40:33.52,Sub,,0,0,0,,If you double each chip’s width and length, you’ll have four times the area for circuitry, but only twice the edge length for connections. This is the area-versus-perimeter problem.
+Dialogue: 0,0:40:33.52,0:40:42.16,Sub,,0,0,0,,As transistors become denser, a chip’s ability to do computations increases faster than its ability to move data around. The industry has known about this problem
+Dialogue: 0,0:40:42.16,0:40:45.60,Sub,,0,0,0,,for years, so multiple technologies have been invented to address it.
+Dialogue: 0,0:40:45.60,0:40:51.44,Sub,,0,0,0,,The completed circuits must undergo two last operations: bonding and packaging.
+Dialogue: 0,0:40:51.44,0:40:56.32,Sub,,0,0,0,,Once a chip is made, it still has to be connected to other chips and to the rest of the computer.
+Dialogue: 0,0:40:56.32,0:41:00.24,Sub,,0,0,0,,That step is called packaging, and it has changed a lot in the last few decades.
+Dialogue: 0,0:41:00.24,0:41:04.32,Sub,,0,0,0,,At a high level, you can think of the evolution of packaging like this: initially,
+Dialogue: 0,0:41:04.32,0:41:15.04,Sub,,0,0,0,,chips were laid out side by side. Wires connecting them went out the side of one chip to another. To allow for more communication density, the industry introduced a shared piece of silicon, called an
+Dialogue: 0,0:41:15.04,0:41:25.44,Sub,,0,0,0,,interposer, for multiple chips to sit on. A chip can talk to other chips through the wiring that runs directly through the interposer. This type of packaging is often called “2.5D”.
+Dialogue: 0,0:41:25.44,0:41:30.40,Sub,,0,0,0,,Another way to increase connection density is to bond chips directly to one another.
+Dialogue: 0,0:41:30.40,0:41:41.68,Sub,,0,0,0,,This allows for shorter connections between chips, but the early versions of this idea used solder bumps, which are bulky and increased resistance. It would be better to skip the solder and fuse
+Dialogue: 0,0:41:41.68,0:41:45.52,Sub,,0,0,0,,the signal wire connections of the two chips directly to each other.
+Dialogue: 0,0:41:45.52,0:41:53.60,Sub,,0,0,0,,This is called hybrid bonding, and it is one of the technologies the semiconductor industry is investing in the most. Hybrid bonding works by aligning the copper
+Dialogue: 0,0:41:53.60,0:42:01.28,Sub,,0,0,0,,interconnects of one chip with those of another. Then these chips are pushed together and heated so their interconnects expand and bridge the gap between the chips.
+Dialogue: 0,0:42:01.28,0:42:05.28,Sub,,0,0,0,,This process makes the insulating surfaces around the copper bond as well.
+Dialogue: 0,0:42:05.28,0:42:09.12,Sub,,0,0,0,,And so by removing the solder bumps, you end up with much denser connections.
+Dialogue: 0,0:42:09.12,0:42:16.96,Sub,,0,0,0,,But the reason this technology is only now entering volume manufacturing is because it took a while to iron out the alignment and defect challenges that it introduced.
+Dialogue: 0,0:42:16.96,0:42:25.44,Sub,,0,0,0,,In the packaging lab, I asked Tyler Osborn, a director in Intel’s advanced packaging technology development group, how they put this into practice.
+Dialogue: 0,0:42:25.44,0:42:28.88,Sub,,0,0,0,,Intel has spent over 50 years optimizing its CPUs for speed.
+Dialogue: 0,0:42:28.88,0:42:36.72,Sub,,0,0,0,,But lots of these optimizations—like caching and branch prediction and speculative execution—reduce predictability. The exact same instructions can take four
+Dialogue: 0,0:42:36.72,0:42:45.84,Sub,,0,0,0,,cycles to execute one time and 300 the next. When you stack billions of instructions together and execute them across multiple threads and cores, these non-determinisms compound into
+Dialogue: 0,0:42:45.84,0:42:49.52,Sub,,0,0,0,,all sorts of hard-to-reproduce bugs. If you work on serious systems,
+Dialogue: 0,0:42:49.52,0:43:01.44,Sub,,0,0,0,,you’ve definitely experienced this. Antithesis solved this by doing something a bit crazy: they built a 100% deterministic computer. They identified every single door in Intel’s x86
+Dialogue: 0,0:43:01.44,0:43:05.76,Sub,,0,0,0,,architecture where non-determinism could leak in—network packets, disk reads,
+Dialogue: 0,0:43:05.76,0:43:15.36,Sub,,0,0,0,,temperature sensors, even time itself. And they either welded each of these shut or slotted in a controlled simulation. This deterministic computer is just a foundation.
+Dialogue: 0,0:43:15.36,0:43:22.72,Sub,,0,0,0,,On top of it, Antithesis built a testing platform that compresses years of production hardening into minutes. It runs your software through thousands of
+Dialogue: 0,0:43:22.72,0:43:30.56,Sub,,0,0,0,,parallel worlds, injecting faults and intelligently steering each one towards a one-in-a-billion failure that you’d never be able to test yourself.
+Dialogue: 0,0:43:30.56,0:43:38.08,Sub,,0,0,0,,This determinism is what’s behind all the other insane Antithesis features that I’ve mentioned over the past few episodes. It’s what lets you reproduce any bug
+Dialogue: 0,0:43:38.08,0:43:53.20,Sub,,0,0,0,,and time travel to any point in the test run. Most importantly, it’s what lets you—or your agents—trace every failure back to its root cause. Go to antithesis.com/dwarkesh to learn more.
+Dialogue: 0,0:43:53.20,0:43:58.40,Sub,,0,0,0,,Two different ways you could do hybrid bonding: die to die and die to wafer.
+Dialogue: 0,0:43:59.20,0:44:03.20,Sub,,0,0,0,,Maybe you can talk about the advantages of both and which one actually practically works better.
+Dialogue: 0,0:44:03.20,0:44:07.28,Sub,,0,0,0,,Sure. Around Intel, what I think you’re referring to as die to die,
+Dialogue: 0,0:44:07.28,0:44:14.16,Sub,,0,0,0,,we typically call wafer to wafer. We actually take a full wafer and another wafer and bond them together. That’s an approach that’s really popular
+Dialogue: 0,0:44:14.16,0:44:19.12,Sub,,0,0,0,,right now in the CMOS image sensor industry. In fact, it basically dominates it.
+Dialogue: 0,0:44:19.12,0:44:21.84,Sub,,0,0,0,,It’s being looked at for other things like memory stacking.
+Dialogue: 0,0:44:22.64,0:44:24.64,Sub,,0,0,0,,People have published ideas about all kinds of stuff.
+Dialogue: 0,0:44:24.64,0:44:35.12,Sub,,0,0,0,,One of the challenges with that, though, is that you need dies that perfectly match each other, and are perfectly left-handed and right-handed, so you have to be able to bond exactly one to the other.
+Dialogue: 0,0:44:35.12,0:44:43.04,Sub,,0,0,0,,One-to-one die size is a challenge. If they’re not the exact same design device on top and bottom, that’s a problem. With wafer to wafer, it’s challenging to make
+Dialogue: 0,0:44:43.04,0:44:46.16,Sub,,0,0,0,,sure that you have wafers that match really well in terms of the sort.
+Dialogue: 0,0:44:46.16,0:44:49.28,Sub,,0,0,0,,So sort good array here versus sort good array here.
+Dialogue: 0,0:44:49.28,0:44:57.76,Sub,,0,0,0,,If they match exactly — good die and bad die all match — I can get 100% yield of that operation of the good dies. But the chances of that are very low.
+Dialogue: 0,0:44:57.76,0:45:01.60,Sub,,0,0,0,,There’s going to be some randomization of the two, and whatever that randomization is,
+Dialogue: 0,0:45:01.60,0:45:06.96,Sub,,0,0,0,,will be loss of good bonding to bad. Whereas with chip to wafer,
+Dialogue: 0,0:45:06.96,0:45:16.64,Sub,,0,0,0,,I can dictate the terms. I can singulate and have known good dies that I’ve tested at the chip level, and then only bond known good to a known good base position.
+Dialogue: 0,0:45:16.64,0:45:19.76,Sub,,0,0,0,,Do you think then chip to wafer is the way that you’ll do hybrid bonding in the future?
+Dialogue: 0,0:45:19.76,0:45:23.12,Sub,,0,0,0,,I think we’re going to do both. We definitely have the capability to do both.
+Dialogue: 0,0:45:23.12,0:45:31.20,Sub,,0,0,0,,It’s really customer and architecture driven, but certainly chip to wafer in the logic-to-logic space makes a lot of sense. You were explaining that going from advanced
+Dialogue: 0,0:45:31.20,0:45:34.56,Sub,,0,0,0,,packaging to hybrid bonding, the size of the pitches is decreasing.
+Dialogue: 0,0:45:34.56,0:45:37.36,Sub,,0,0,0,,How much further could that go? That’s a wonderful question.
+Dialogue: 0,0:45:38.00,0:45:46.08,Sub,,0,0,0,,Historically, like we were saying, 15 years ago first-level interconnect was 130-150 micrometer pitch. Today in HVM, we’re doing 25
+Dialogue: 0,0:45:46.08,0:45:50.40,Sub,,0,0,0,,micrometer pitch in Foveros. Here we’re doing sub-10,
+Dialogue: 0,0:45:50.40,0:45:58.40,Sub,,0,0,0,,but there’s already been literature out there. In fact, the biggest conference every year in packaging is the IEEE ECTC conference that happens in May.
+Dialogue: 0,0:45:59.12,0:46:08.80,Sub,,0,0,0,,There was a paper there this year showing reliability data on a 0.45 micron pitch hybrid bonded device. So you can imagine that’s a whole other
+Dialogue: 0,0:46:08.80,0:46:13.44,Sub,,0,0,0,,order of magnitude in density again from where we are right now in HVM.
+Dialogue: 0,0:46:14.16,0:46:18.80,Sub,,0,0,0,,That scalability has already been proven. So I see a long runway there.
+Dialogue: 0,0:46:18.80,0:46:23.28,Sub,,0,0,0,,Within interconnect, within a single wafer, how far separated are they usually?
+Dialogue: 0,0:46:23.28,0:46:35.60,Sub,,0,0,0,,In the back end of the fab, you can imagine the few layers below packaging are typically around one micron to a half micron in size. So if you can push packaging down
+Dialogue: 0,0:46:35.60,0:46:46.16,Sub,,0,0,0,,to 0.5 microns or below, you can almost think about taking layers off the top of the die and connecting a lower layer within the silicon to another lower layer within the silicon.
+Dialogue: 0,0:46:46.72,0:46:49.68,Sub,,0,0,0,,That’s really where the beauty of hybrid bonding happens.
+Dialogue: 0,0:46:49.68,0:46:59.52,Sub,,0,0,0,,You could think someday about even having reduced interconnect layers on both sides that we can bond together and have less total IR drop between the two transistor layers.
+Dialogue: 0,0:46:59.52,0:47:04.16,Sub,,0,0,0,,It’s really cool to think about where that could go once we get into those regimes.
+Dialogue: 0,0:47:04.16,0:47:11.12,Sub,,0,0,0,,Actually, I am very curious about… For AI, it makes sense why hybrid bonding is so powerful, because then you can get higher bandwidth to the memory.
+Dialogue: 0,0:47:11.12,0:47:14.08,Sub,,0,0,0,,But you were saying there are issues with heat and everything.
+Dialogue: 0,0:47:14.08,0:47:17.84,Sub,,0,0,0,,What is the advantage for non-AI applications of hybrid bonding?
+Dialogue: 0,0:47:17.84,0:47:28.08,Sub,,0,0,0,,Excellent question. There are companies out there that are looking at it for non-AI applications, even in client devices. One of the big things I think it can help
+Dialogue: 0,0:47:28.08,0:47:37.92,Sub,,0,0,0,,with there is, number one, obviously the same raw interconnect density, especially between something like a CPU and a GPU. But the other one is around power.
+Dialogue: 0,0:47:37.92,0:47:46.00,Sub,,0,0,0,,Like we talked about before, as you get to finer and finer interconnects, you can reduce the total power consumption, in picojoules per bit, for that interface.
+Dialogue: 0,0:47:46.00,0:47:52.72,Sub,,0,0,0,,With hybrid bonding in those applications, you could think about that as another way that packaging can help reduce the total system power budget.
+Dialogue: 0,0:47:53.68,0:48:02.96,Sub,,0,0,0,,That gives you lots of benefits: lower power, less heat, for the same benefit in terms of actual electrical performance. So far, this has been about making better chips.
+Dialogue: 0,0:48:02.96,0:48:11.04,Sub,,0,0,0,,The other half of the question is how many chips the industry can make if AI labs are willing to pay for far more of them. I’m getting a chance to talk to
+Dialogue: 0,0:48:11.04,0:48:20.40,Sub,,0,0,0,,Pushkar Ranade, who is the CTO of Intel. I’m very interested in understanding how the fact that the entire industry has to rely on the same suppliers bottlenecks
+Dialogue: 0,0:48:20.40,0:48:28.08,Sub,,0,0,0,,your ability to ramp up production. For this EUV tool, ASML produces fewer than 100 of them a year. They don’t plan to produce more
+Dialogue: 0,0:48:28.08,0:48:29.84,Sub,,0,0,0,,than 100 a year, or significantly more, even by the end of the decade.
+Dialogue: 0,0:48:31.36,0:48:40.40,Sub,,0,0,0,,That has to be split between you, between TSMC, between all the memory makers who are ramping up production, like SK Hynix. How does that limit your ability to scale up to all this demand? It is a limiter.
+Dialogue: 0,0:48:42.08,0:48:45.84,Sub,,0,0,0,,We have to make the most of the capacity that we already have installed.
+Dialogue: 0,0:48:45.84,0:48:50.08,Sub,,0,0,0,,We’ll try to increase the output from our existing fleet of tools.
+Dialogue: 0,0:48:50.08,0:49:03.20,Sub,,0,0,0,,But EUV or ASML is not the only bottleneck. It is definitely a bigger bottleneck than some of the other tools, but to a large extent, we’re seeing
+Dialogue: 0,0:49:04.00,0:49:17.68,Sub,,0,0,0,,all equipment seeing tremendous supply shortage. Even though there are multiple providers of other tools, once you lock into a process flow — let’s say 18A, which is a mature process
+Dialogue: 0,0:49:17.68,0:49:27.76,Sub,,0,0,0,,now — we need a specific tool. We can’t just go and get a different tool for the same process. So we’re locked into that one tool,
+Dialogue: 0,0:49:27.76,0:49:36.16,Sub,,0,0,0,,one supplier, and we rely on that. What lessons does this give for 14A in terms of how you structure it? By 2028, it’s going to be such a crazy world.
+Dialogue: 0,0:49:36.16,0:49:39.68,Sub,,0,0,0,,How do you structure things in such a way that you have flexibility in ramping?
+Dialogue: 0,0:49:40.64,0:49:48.96,Sub,,0,0,0,,The way to do it — and we’ve been doing it, and generally everybody does it — is you try to maintain as much fungibility as possible going from one node to the next node.
+Dialogue: 0,0:49:48.96,0:49:54.32,Sub,,0,0,0,,Going from 18A to 14A, maybe you would say 80% of the tool set can be reused.
+Dialogue: 0,0:49:54.32,0:50:01.28,Sub,,0,0,0,,Then, of course, 14A would require some new capabilities because it’s a denser geometry,
+Dialogue: 0,0:50:01.28,0:50:11.12,Sub,,0,0,0,,so it would require some unique tools. Do you have a sense of what the ultimate bottleneck is on how many wafers you guys could produce a month, even if you were to decide
+Dialogue: 0,0:50:11.12,0:50:25.36,Sub,,0,0,0,,to invest infinity money into doing CapEx? Given the existing constraints, let’s say we had to maximize the output from a given footprint of tools, then I think it’s incremental, because the
+Dialogue: 0,0:50:25.36,0:50:38.16,Sub,,0,0,0,,process today is already yielding pretty high. If your yield is already pretty high, getting every 1% extra yield is extremely hard because it’s already a finely tuned process.
+Dialogue: 0,0:50:38.16,0:50:45.28,Sub,,0,0,0,,Are there enough tools in the world so you could 10X the amount of wafers you’re producing at the leading edge? Not 10X, but probably 2X, yes.
+Dialogue: 0,0:50:45.28,0:50:55.28,Sub,,0,0,0,,That’s quite interesting, because the AI industry for a decade has been 3Xing compute year over year. You’re saying that just can’t continue.
+Dialogue: 0,0:50:55.28,0:51:07.20,Sub,,0,0,0,,Unless the entire supply chain — starting from the equipment suppliers, their suppliers, their sub-suppliers — unless everybody produces more, you can’t increase the output.
+Dialogue: 0,0:51:07.92,0:51:18.40,Sub,,0,0,0,,Just to give the audience a sense of how big the AI demand is and how well it monetizes the products you guys are producing: you can crunch the numbers, and the numbers seem to suggest
+Dialogue: 0,0:51:18.40,0:51:30.08,Sub,,0,0,0,,that just a couple billion dollars of CapEx on Intel’s account results in enough chips — or the logic for enough chips — to produce, say, $100 billion of revenue for the AI model companies.
+Dialogue: 0,0:51:30.08,0:51:32.72,Sub,,0,0,0,,Of course, there are so many other players within that stack.
+Dialogue: 0,0:51:32.72,0:51:44.16,Sub,,0,0,0,,There’s also memory and other things. But it’s crazy that a couple billion dollars of CapEx, which can be amortized over many different years, produces $100 billion
+Dialogue: 0,0:51:44.16,0:51:52.40,Sub,,0,0,0,,of revenue every single year. That seems to suggest that at some point that should percolate down. At some point, the AI labs could just say,
+Dialogue: 0,0:51:52.40,0:51:54.80,Sub,,0,0,0,,“We’ll just buy everything. Produce as much as you can.
+Dialogue: 0,0:51:54.80,0:52:04.64,Sub,,0,0,0,,We’ll guarantee future income streams.” There are early signs that could actually be happening already. The demand signals are just so high.
+Dialogue: 0,0:52:04.64,0:52:11.76,Sub,,0,0,0,,But I think you were alluding to how the value is accumulating at the top of the technology stack.
+Dialogue: 0,0:52:13.60,0:52:26.96,Sub,,0,0,0,,What is essentially happening is we moved from a fully vertically integrated industry 30-40 years ago, maybe longer, to a very horizontal industry, where you have foundries, you have
+Dialogue: 0,0:52:26.96,0:52:38.32,Sub,,0,0,0,,equipment makers, you have their suppliers. Today, every hyperscaler is designing their own chips, and the scale of the hyperscalers is so large.
+Dialogue: 0,0:52:38.88,0:52:51.76,Sub,,0,0,0,,Some of the model companies, for example, their demand is so high they could easily consume an entire fab’s worth of silicon on their own, or multiple fabs’ worth,
+Dialogue: 0,0:52:53.04,0:53:01.60,Sub,,0,0,0,,and they definitely have the capital to fund that. So in some sense, we are moving from a horizontal
+Dialogue: 0,0:53:01.60,0:53:10.72,Sub,,0,0,0,,world again to a pseudo-vertical world. It’s not monolithically vertically integrated,
+Dialogue: 0,0:53:10.72,0:53:21.76,Sub,,0,0,0,,but it’s kind of virtually vertically integrated. What is the nature of economies of scale in this business? If you look at how many
+Dialogue: 0,0:53:21.76,0:53:28.00,Sub,,0,0,0,,wafers at the leading edge TSMC versus Intel is shipping, it’s upwards of 3X for TSMC.
+Dialogue: 0,0:53:28.96,0:53:32.64,Sub,,0,0,0,,What kinds of advantages do you get at this point from economies of scale?
+Dialogue: 0,0:53:32.64,0:53:36.48,Sub,,0,0,0,,Or is it that once you reach a certain point, the economies of scale get weaker?
+Dialogue: 0,0:53:36.48,0:53:49.68,Sub,,0,0,0,,That’s a very important question. This entire business just relies on economies of scale. If you look at all the advanced manufacturing
+Dialogue: 0,0:53:49.68,0:53:56.16,Sub,,0,0,0,,companies out there, in semiconductor foundries the scale economics is probably the purest.
+Dialogue: 0,0:53:56.72,0:54:00.72,Sub,,0,0,0,,The reason for that is the fixed cost is just so incredibly high.
+Dialogue: 0,0:54:02.16,0:54:07.20,Sub,,0,0,0,,Once you build a fab, like 80% of your cost structure is fixed.
+Dialogue: 0,0:54:07.20,0:54:16.16,Sub,,0,0,0,,What that means is every extra percentage of utilization is adding far more in revenue.
+Dialogue: 0,0:54:16.16,0:54:25.04,Sub,,0,0,0,,So it’s extremely important. We’ll fight for every extra percent of fab utilization, but also every extra percentage of fab output.
+Dialogue: 0,0:54:25.68,0:54:30.96,Sub,,0,0,0,,Let’s say I’m making some wafers today and the yield is 60%.
+Dialogue: 0,0:54:30.96,0:54:38.96,Sub,,0,0,0,,If I improve the process and the die yield becomes 65% or 70%, it’s not a linear advantage.
+Dialogue: 0,0:54:38.96,0:54:41.76,Sub,,0,0,0,,I’m getting way more output for the given footprint.
+Dialogue: 0,0:54:42.40,0:54:45.92,Sub,,0,0,0,,So there’s always room to improve the economies of scale.
+Dialogue: 0,0:54:45.92,0:54:53.44,Sub,,0,0,0,,That’s one of the reasons why you’re seeing so much consolidation in this business.
+Dialogue: 0,0:54:53.44,0:54:58.32,Sub,,0,0,0,,There are only three foundries left at the advanced node for that exact reason.
+Dialogue: 0,0:54:59.60,0:55:04.00,Sub,,0,0,0,,Along the way, many companies just stopped manufacturing.
+Dialogue: 0,0:55:04.00,0:55:13.84,Sub,,0,0,0,,I don’t know if you’ve seen… There’s a chart where 40 years ago there were like 20 foundries. Over time the number of foundries kept
+Dialogue: 0,0:55:13.84,0:55:21.20,Sub,,0,0,0,,diminishing until today there are only three. What is then the concrete master plan to catch up to TSMC? Even though TSMC is ahead,
+Dialogue: 0,0:55:21.20,0:55:32.64,Sub,,0,0,0,,there’s so much overflow demand at their leading edge, where N3 is now majority AI accelerators and maybe majority Nvidia alone. There’s all this demand for CPUs, for other
+Dialogue: 0,0:55:32.64,0:55:39.36,Sub,,0,0,0,,things, which are also, by the way, needed for AI. There’s this humongous influx in demand for CPUs because of AI. How do you see this opportunity right now,
+Dialogue: 0,0:55:39.36,0:55:44.08,Sub,,0,0,0,,where Intel’s a few years behind, while TSMC is just way oversaturated?
+Dialogue: 0,0:55:44.08,0:55:52.56,Sub,,0,0,0,,Catching up to TSMC has multiple facets. The catch-up that we need to do is in scale.
+Dialogue: 0,0:55:52.56,0:56:07.36,Sub,,0,0,0,,Like you said, they’re just a much larger wafer manufacturer today than we are, and even bigger than what Samsung is. Catching up in scale will be a gradual process.
+Dialogue: 0,0:56:08.88,0:56:18.00,Sub,,0,0,0,,If you meant catching up in terms of just the technology, I think we’re already there.
+Dialogue: 0,0:56:18.56,0:56:27.60,Sub,,0,0,0,,We might be a few percent off on performance or power or area density.
+Dialogue: 0,0:56:28.24,0:56:38.16,Sub,,0,0,0,,But this sort of benchmarking, where one foundry is ahead or one foundry is behind,
+Dialogue: 0,0:56:38.16,0:56:45.20,Sub,,0,0,0,,makes sense when you’re a whole generation behind or two generations behind or ahead.
+Dialogue: 0,0:56:45.20,0:56:57.41,Sub,,0,0,0,,That’s when it makes a meaningful difference in your die output or your die area or functionality like power. But if you’re within a few percent,
+Dialogue: 0,0:56:59.52,0:57:05.60,Sub,,0,0,0,,you’re splitting hairs at that point in time, because it’s not very unidimensional.
+Dialogue: 0,0:57:06.24,0:57:11.04,Sub,,0,0,0,,It’s not just about density, it’s not just about raw performance.
+Dialogue: 0,0:57:11.92,0:57:17.20,Sub,,0,0,0,,Different applications require different vectors. You can be off by a few percent,
+Dialogue: 0,0:57:17.20,0:57:26.40,Sub,,0,0,0,,but you need to be on time. Your execution needs to be such that your yields are very high to support very large and very rapid ramps.
+Dialogue: 0,0:57:27.12,0:57:33.44,Sub,,0,0,0,,That actually is more important than catching up on a few percent in performance or area.
+Dialogue: 0,0:57:33.44,0:57:43.52,Sub,,0,0,0,,I was looking at some SemiAnalysis numbers that seem to suggest that in terms of transistor density, 14A — which will come out in 2028 — would be comparable to N2.
+Dialogue: 0,0:57:43.52,0:57:47.28,Sub,,0,0,0,,First of all, I would dispute your benchmarking.
+Dialogue: 0,0:57:47.28,0:57:56.88,Sub,,0,0,0,,But like I said, it’s important to be generally in the right ballpark and be very predictable.
+Dialogue: 0,0:57:56.88,0:58:07.76,Sub,,0,0,0,,Also, it’s not unidimensional. We don’t build one type of transistor, let’s say 14A or 18A. You build a few different types of transistors.
+Dialogue: 0,0:58:08.40,0:58:13.52,Sub,,0,0,0,,There’s a low-leakage transistor, there’s a high-performance, high drive current transistor.
+Dialogue: 0,0:58:13.52,0:58:18.72,Sub,,0,0,0,,You’re building SRAMs. There’s a high-density SRAM, there’s a high-performance SRAM.
+Dialogue: 0,0:58:18.72,0:58:24.64,Sub,,0,0,0,,There are many other functionalities like analog circuits, RF circuits.
+Dialogue: 0,0:58:24.64,0:58:29.52,Sub,,0,0,0,,It’s the sum of all of those that makes a technology competitive.
+Dialogue: 0,0:58:29.52,0:58:32.40,Sub,,0,0,0,,I guess that makes the CapEx you do right now even more important.
+Dialogue: 0,0:58:34.00,0:58:38.00,Sub,,0,0,0,,TSMC is on track to do around $50 billion in CapEx this year.
+Dialogue: 0,0:58:38.00,0:58:46.80,Sub,,0,0,0,,You’re on track to do around $20 billion. If the tools you’re buying right now will determine who can service all this crazy AI demand that’s coming up, it makes the difference
+Dialogue: 0,0:58:46.80,0:58:52.16,Sub,,0,0,0,,in CapEx right now even more important, or for the US versus other countries.
+Dialogue: 0,0:58:52.16,0:59:05.68,Sub,,0,0,0,,Yes, very much. It’s a little bit of an unfair comparison between us and TSMC today, just because today they’re a foundry for basically everybody and we’re largely a foundry for Intel.
+Dialogue: 0,0:59:05.68,0:59:11.20,Sub,,0,0,0,,We’ll become a foundry for others. In due course, our CapEx will also grow.
+Dialogue: 0,0:59:11.20,0:59:19.52,Sub,,0,0,0,,Intel started as a DRAM business in the late ’60s. You guys were producing DRAM, which you sold off.
+Dialogue: 0,0:59:19.52,0:59:22.16,Sub,,0,0,0,,A couple years ago, you sold off your flash business.
+Dialogue: 0,0:59:25.52,0:59:35.68,Sub,,0,0,0,,Thoughts on that? For context for the audience, these are now multi-trillion-dollar industries because they’ve just exploded as a result of AI demand.
+Dialogue: 0,0:59:36.96,0:59:42.64,Sub,,0,0,0,,Clearly, in hindsight, probably not the smartest time to sell off a flash memory business.
+Dialogue: 0,0:59:42.64,0:59:45.44,Sub,,0,0,0,,There were good reasons why we did that when we did.
+Dialogue: 0,0:59:46.40,1:00:00.56,Sub,,0,0,0,,Clearly, nobody could see this enormous demand. But today, the world will eat up as much compute
+Dialogue: 0,1:00:00.56,1:00:06.00,Sub,,0,0,0,,as can possibly be made, and it’ll eat up as much memory as can possibly be made.
+Dialogue: 0,1:00:06.00,1:00:12.96,Sub,,0,0,0,,I would argue that the supply crunch is larger for memory today than it is for compute.
+Dialogue: 0,1:00:12.96,1:00:16.56,Sub,,0,0,0,,Can I summarize what seems to me the takeaways from your projections?
+Dialogue: 0,1:00:16.56,1:00:17.76,Sub,,0,0,0,,You can tell me if that’s correct.
+Dialogue: 0,1:00:17.76,1:00:27.20,Sub,,0,0,0,,That marginal production can increase actually very fast — on the scale of 12 months — but the amount of increase up till the end of the decade is extremely limited.
+Dialogue: 0,1:00:27.20,1:00:33.04,Sub,,0,0,0,,Production could be higher next year than what people are forecasting, but production in 2030 is not going to be significantly higher than what people are forecasting.
+Dialogue: 0,1:00:33.04,1:00:36.32,Sub,,0,0,0,,Unless the entire supply chain ramps up production very quickly.
+Dialogue: 0,1:00:36.32,1:00:42.56,Sub,,0,0,0,,We’re already in the middle of ’26, so there’s not that many years until the end of the decade.
+Dialogue: 0,1:00:42.56,1:00:52.24,Sub,,0,0,0,,Given the lead times… Let’s say you place an enormous order for tools today, and you’re looking at 18 months to get those tools.
+Dialogue: 0,1:00:52.24,1:01:02.16,Sub,,0,0,0,,You’re already into basically ’28. From that point on, if you have to build a new shell, build a new fab, you’re basically looking at the end of the decade.
+Dialogue: 0,1:01:02.16,1:01:07.76,Sub,,0,0,0,,I think it’ll be interesting to discuss the partnership you guys have with Elon on Terafab.
+Dialogue: 0,1:01:07.76,1:01:19.84,Sub,,0,0,0,,What’s going on there? Well, Elon’s publicly talked about his desire to build a fab. We either build the Terafab or
+Dialogue: 0,1:01:19.84,1:01:25.60,Sub,,0,0,0,,we don’t have the chips. And we need the chips, so we’re going to build the Terafab. Sort of the same thinking.
+Dialogue: 0,1:01:26.32,1:01:34.80,Sub,,0,0,0,,He’s seeing just an enormous increase in demand for silicon, for compute and for memory.
+Dialogue: 0,1:01:34.80,1:01:40.32,Sub,,0,0,0,,I think he came to the conclusion that his own businesses are going to require a lot of silicon.
+Dialogue: 0,1:01:42.48,1:01:46.16,Sub,,0,0,0,,He thought maybe he should just do it all on his own.
+Dialogue: 0,1:01:46.16,1:01:59.44,Sub,,0,0,0,,But unlike building a car, for example, this is such an intricate and complicated process that we thought we could work together to help accelerate his bringing up his fab.
+Dialogue: 0,1:01:59.44,1:02:09.36,Sub,,0,0,0,,But because of the bottleneck at the tool level, it seems like the net amount of silicon in the world won’t increase. It’s just that maybe if somebody were to start
+Dialogue: 0,1:02:09.36,1:02:18.16,Sub,,0,0,0,,a new fab, they would get access to guaranteed supply in a way that they wouldn’t have if they’re working with another person’s foundry. It’s not just tools.
+Dialogue: 0,1:02:18.80,1:02:24.00,Sub,,0,0,0,,A fab does require a lot of power, a lot of water, a lot of consumables.
+Dialogue: 0,1:02:24.00,1:02:34.40,Sub,,0,0,0,,There are many other input variables as well. But those can be scaled in the way that tools cannot. Some more than others, but yes.
+Dialogue: 0,1:02:34.40,1:02:42.64,Sub,,0,0,0,,In one sense, yes, we need a lot more equipment. But it is true, we also just need a lot more raw
+Dialogue: 0,1:02:42.64,1:02:48.48,Sub,,0,0,0,,fab space, raw clean room capacity. If you think of a foundry like Intel,
+Dialogue: 0,1:02:48.48,1:02:59.28,Sub,,0,0,0,,which has to build these expensive facilities and buy expensive tools, I wonder what you think the economics of that fundamentally could look like, whether it could get more economical,
+Dialogue: 0,1:02:59.28,1:03:03.12,Sub,,0,0,0,,whether it could scale faster. Like I described earlier,
+Dialogue: 0,1:03:03.12,1:03:19.52,Sub,,0,0,0,,this is an extremely capital-heavy business. If you just plot how much it costs to build a fab over the last 20, 30, 40 years, I think it’s doubling every 4-5 years.
+Dialogue: 0,1:03:19.52,1:03:31.04,Sub,,0,0,0,,Even inside the fab, if you look at the cost to do lithography, which is the most expensive module — just patterning — that itself is doubling at more than that rate.
+Dialogue: 0,1:03:31.68,1:03:40.56,Sub,,0,0,0,,Today, a High-NA EUV scanner and all its associated equipment costs like $400 million.
+Dialogue: 0,1:03:41.28,1:03:44.56,Sub,,0,0,0,,So what does that mean? If that rate were to continue,
+Dialogue: 0,1:03:44.56,1:03:56.64,Sub,,0,0,0,,if you just draw the line, does that mean four years from now the cost of patterning is going to be like $800 million? It doesn’t really make sense.
+Dialogue: 0,1:03:58.16,1:04:14.16,Sub,,0,0,0,,A very interesting thought exercise is to ask, are there things that could be just very radically different that we could do today that we perhaps couldn’t do 20 years ago?
+Dialogue: 0,1:04:14.16,1:04:19.44,Sub,,0,0,0,,This is a very risk-averse industry for very good reason, for exactly that reason.
+Dialogue: 0,1:04:19.44,1:04:25.20,Sub,,0,0,0,,You put in tens of billions of dollars, and you really don’t want to take any risks.
+Dialogue: 0,1:04:25.20,1:04:29.60,Sub,,0,0,0,,You want to keep doing things the way they’ve been done for literally decades.
+Dialogue: 0,1:04:29.60,1:04:32.96,Sub,,0,0,0,,This is not just true of semiconductors, but everything really.
+Dialogue: 0,1:04:33.76,1:04:40.80,Sub,,0,0,0,,If you’ve just kept on doing that for decade upon decade, you just become indoctrinated.
+Dialogue: 0,1:04:42.08,1:04:53.68,Sub,,0,0,0,,There are engineers who probably work at Intel who are new, who come in and they’re taught, “This is how the fab works, this is the process flow.” They just take that as gospel.
+Dialogue: 0,1:04:53.68,1:05:02.48,Sub,,0,0,0,,That’s just how it is done. But is that really the best way to build a chip today? It’s a really valid question.
+Dialogue: 0,1:05:02.48,1:05:13.36,Sub,,0,0,0,,I’m very curious what you’re hinting at, because it could be anything from figuring out ways to use fewer litho passes and economize on this expensive component, to maybe we need to
+Dialogue: 0,1:05:13.36,1:05:25.04,Sub,,0,0,0,,rethink the transistor. What is the level of— All of the above. Transistor architecture is evolving.
+Dialogue: 0,1:05:25.84,1:05:33.20,Sub,,0,0,0,,Just the silicon transistor has continued to evolve over 30, 40 years, and that will continue.
+Dialogue: 0,1:05:33.20,1:05:44.32,Sub,,0,0,0,,You’ve seen the evolution from the planar transistor to FinFETs to now gate-all-around transistors. There’ll be more. That roadmap exists, it’s pretty
+Dialogue: 0,1:05:44.32,1:05:49.44,Sub,,0,0,0,,well defined, with a lot of people working on it. But there are things like…
+Dialogue: 0,1:05:51.12,1:06:04.00,Sub,,0,0,0,,Do you really need a clean room today? Do you need the infrastructure to be as sophisticated, as complex as it is today? Surely one can run an experiment where you
+Dialogue: 0,1:06:05.52,1:06:11.36,Sub,,0,0,0,,have people eating hamburgers and smoking cigars in the research fab and see what happens to yield.
+Dialogue: 0,1:06:12.88,1:06:25.36,Sub,,0,0,0,,That would be a great experiment to run, but no incumbent — Intel or TSMC or Samsung — would want to willingly do that. That’s what I meant by this.
+Dialogue: 0,1:06:26.16,1:06:35.84,Sub,,0,0,0,,It’s a very risk-averse business, for good reason. Every one day lost in productivity is… I don’t know how many dollars. But you save so much money in
+Dialogue: 0,1:06:35.84,1:06:41.36,Sub,,0,0,0,,not having to build clean rooms in the future. But it’s really the risk, the fear of the unknown.
+Dialogue: 0,1:06:41.36,1:06:49.60,Sub,,0,0,0,,Nobody is going to willingly take that risk. That’s why I think sometimes it’s good to just
+Dialogue: 0,1:06:49.60,1:06:59.44,Sub,,0,0,0,,start with a clean slate and rethink everything. The same thing applies to chip design, by the way.
+Dialogue: 0,1:06:59.44,1:07:06.72,Sub,,0,0,0,,Many of the ways we do CPU design were probably locked in 30 years ago.
+Dialogue: 0,1:07:06.72,1:07:11.36,Sub,,0,0,0,,Does that mean it’s smart to still do it the same way?
+Dialogue: 0,1:07:11.36,1:07:25.12,Sub,,0,0,0,,Probably not. But this is a very complex problem. In chip design, I guess the capacity to take
+Dialogue: 0,1:07:25.12,1:07:29.84,Sub,,0,0,0,,risk is maybe higher. This one, less so.
+Dialogue: 0,1:07:29.84,1:07:35.36,Sub,,0,0,0,,But given where the economics is today, I think it’s a very valid question to ask.
+Dialogue: 0,1:07:36.72,1:07:47.76,Sub,,0,0,0,,Maybe there’s a smarter way to do this. To close out, maybe we’ll start off at the same question we began the interview with, which is, how does Intel respond to this crazy AI
+Dialogue: 0,1:07:47.76,1:07:58.56,Sub,,0,0,0,,demand that’s incoming and has already arrived? It sounds like what Intel ought to do — if the ultimate bottleneck is that you guys already have these foundries, you already have the
+Dialogue: 0,1:07:58.56,1:08:10.48,Sub,,0,0,0,,ability to expand these foundries, but what you will eventually lack is the tools from upstream in the supply chain — is to just raise as much capital as possible right now.
+Dialogue: 0,1:08:10.48,1:08:21.12,Sub,,0,0,0,,The same way that Nvidia has locked down memory and other components for reportedly hundreds of billions of dollars worth of commitments that it’s made, Intel should maybe do the same thing:
+Dialogue: 0,1:08:21.12,1:08:32.72,Sub,,0,0,0,,make all these commitments so that over the coming years, the US is in good position to have the bulk of semiconductor manufacturing at the most advanced levels happening here.
+Dialogue: 0,1:08:32.72,1:08:35.60,Sub,,0,0,0,,You’re suggesting we should be buying a lot more tools, right?
+Dialogue: 0,1:08:35.60,1:08:42.64,Sub,,0,0,0,,Yeah, because it sounds like otherwise in a couple years you’d just be in a position where you’re like, “Oh man, we could be making trillions of dollars right now,
+Dialogue: 0,1:08:42.64,1:08:47.84,Sub,,0,0,0,,but all the tools are in Taiwan.” Yes, that’s a very valid question.
+Dialogue: 0,1:08:47.84,1:08:52.96,Sub,,0,0,0,,Had we known what we know today, we would have invested more like a year ago.
+Dialogue: 0,1:08:52.96,1:08:57.60,Sub,,0,0,0,,Knowing what we know now, I think we’ll be investing more.

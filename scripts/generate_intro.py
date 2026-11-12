@@ -54,6 +54,8 @@ import dub_mix  # noqa: E402
 import synthesize_dub as sd  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+import env_file  # noqa: E402,F401  # 载入仓库根 .env（本机路径/密钥不进 Git）
 SCHEMA_VERSION = 2
 TEMPLATE_DIR = ROOT / "assets" / "templates"
 INTRO_TEMPLATE = "intro.html"            # McKinsey poster (production)
@@ -120,18 +122,25 @@ _LATIN_RE = re.compile(r"[A-Za-z]+")
 _YEAR_RE = re.compile(r"(?<!\d)(?:19|20)\d{2}(?!\d)")
 _CLOSING_RE = re.compile(r"(原声|来听|听听)")
 
-BROWSERS = (
-    r"C:\Program Files\Google\Chrome\Application\chrome.exe",
-    r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
-    r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
-    r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
+def _install_roots() -> tuple[str, ...]:
+    """Program-files roots from the environment (no hardcoded drive letters)."""
+    keys = ("ProgramW6432", "ProgramFiles", "ProgramFiles(x86)", "LOCALAPPDATA")
+    roots = [os.environ.get(k, "").strip() for k in keys]
+    return tuple(r for r in roots if r)
+
+
+BROWSERS = tuple(
+    str(Path(root) / rel)
+    for root in _install_roots()
+    for rel in (r"Google\Chrome\Application\chrome.exe",
+                r"Microsoft\Edge\Application\msedge.exe")
 )
 
-FONT_CANDIDATES = (
-    r"C:\Windows\Fonts\msyh.ttc",
-    r"C:\Windows\Fonts\msyhbd.ttc",
-    r"C:\Windows\Fonts\simhei.ttf",
-)
+_FONT_DIR = (os.environ.get("WINDIR") or os.environ.get("SystemRoot") or "").strip()
+FONT_CANDIDATES = tuple(
+    str(Path(_FONT_DIR) / "Fonts" / name)
+    for name in ("msyh.ttc", "msyhbd.ttc", "simhei.ttf")
+) if _FONT_DIR else ()
 
 
 # --------------------------------------------------------------------------

@@ -1,0 +1,3011 @@
+1
+00:00:11,280 --> 00:00:19,022
+So today um I'm going to talk about uh robot learning from human experience uh and
+
+2
+00:00:19,072 --> 00:00:26,750
+how scale uh is starting to change uh what robots can learn and how they learn.
+
+3
+00:00:26,800 --> 00:00:30,701
+I'll frame the talk around uh three hypotheses.
+
+4
+00:00:30,751 --> 00:00:41,310
+Uh so first robot capabilities can scale with human data and second human data will soon be so abundant that we won't know
+
+5
+00:00:41,360 --> 00:00:51,009
+what to do about it and third progress requires scaling the both the science uh uh and the data.
+
+6
+00:00:51,059 --> 00:00:53,986
+So they are the hypothesis not facts.
+
+7
+00:00:54,036 --> 00:01:01,870
+Uh but I hope this talk will provide some evidence uh that concrete evidence uh that they are becoming true.
+
+8
+00:01:01,920 --> 00:01:08,270
+I hope I have I don't have to convince you that robot learning have made a lot of progress and one of the key factors
+
+9
+00:01:08,320 --> 00:01:15,987
+is that we have rediscovered teleoperation to be a really good way to teach robot how to do really complex tasks like doing laundry,
+
+10
+00:01:16,037 --> 00:01:18,726
+clean bathrooms or doing warehouse tasks.
+
+11
+00:01:18,776 --> 00:01:26,950
+and they're really being deployed in the real world today in factories in laundromats and I mean it's a start — they're starting
+
+12
+00:01:27,000 --> 00:01:34,190
+to be usable but they're not mature yet but we're seeing them in the world in the real world today um so
+
+13
+00:01:34,240 --> 00:01:41,790
+before diving into the technical talk um I I want to step back and ask more fundamental question uh why do we
+
+14
+00:01:41,840 --> 00:01:50,796
+believe uh this whole datadriven uh robotics direction will work at scale for all all of these hundreds of billions of hour uh
+
+15
+00:01:50,846 --> 00:01:58,640
+dollar dollars investments uh in robotics right now on the line belief that we all think is going to work right so
+
+16
+00:01:58,690 --> 00:02:05,952
+I the answer really large is largely based on analogy with the type of AI we're using today at this point a
+
+17
+00:02:06,002 --> 00:02:16,722
+large part of human knowledge is being captured by internet uh that gets downloaded cleaned and absorbed by these large foundational models
+
+18
+00:02:16,772 --> 00:02:22,990
+and uh in other modern AI succeeds because we found a
+
+19
+00:02:23,040 --> 00:02:30,189
+scalable way to transfer our knowledge to these models through the internet.
+
+20
+00:02:30,239 --> 00:02:36,510
+We the robotics researchers are essentially trying to apply the same idea uh to the physical world.
+
+21
+00:02:36,560 --> 00:02:42,457
+Uh instead of semantic knowledge, robots it needs sensor motor knowledge or physical intelligence.
+
+22
+00:02:42,507 --> 00:02:46,647
+Uh so tip appreciation really provides a mechanism to transfer this knowledge.
+
+23
+00:02:46,697 --> 00:02:53,170
+Uh by controlling robots while recording what a robot sees and what actions should be taken.
+
+24
+00:02:53,220 --> 00:03:00,670
+Uh we are building a direct mapping between the perception action or the input and output supervision for the robot's body.
+
+25
+00:03:00,720 --> 00:03:06,430
+In a sense t operation laws to transfer human physical intelligence to the robots.
+
+26
+00:03:06,480 --> 00:03:12,110
+But despite the simplicity of this analogy uh in reality t operation creates a very very
+
+27
+00:03:12,160 --> 00:03:18,083
+tight knowledge transfer bottleneck and I argue there are two major factors to this part bottleneck.
+
+28
+00:03:18,133 --> 00:03:22,982
+The first one should be familiar to some uh is the scal scalability problem.
+
+29
+00:03:23,032 --> 00:03:29,949
+If we you have ever tried teleoperation you know it's very very unintuitive takes a lot of practice to get it right.
+
+30
+00:03:29,999 --> 00:03:33,656
+More importantly teleeration only scales linearly.
+
+31
+00:03:33,706 --> 00:03:39,254
+uh the amount of data we can collect grows only with the number of robots multiply the number of
+
+32
+00:03:39,304 --> 00:03:47,469
+human telepision hours and compared to the internet scale data used to train modern AI systems this is extremely expensive.
+
+33
+00:03:47,519 --> 00:03:51,539
+The second challenge is more subtle which is the fidelity of the data.
+
+34
+00:03:51,589 --> 00:03:57,946
+uh humans are have enormous sensor sensor motor knowledge about the world but teleporation captures
+
+35
+00:03:57,996 --> 00:04:03,733
+this knowledge uh only when a human deliberately acts through a robots uh uh using
+
+36
+00:04:03,783 --> 00:04:09,469
+interface like VR devices and this creates a very indirect feedback uh loop that meddles
+
+37
+00:04:09,519 --> 00:04:16,147
+with our natural behavior as many forms of intelligence are difficult to deliberately demonstrate through teleoperation.
+
+38
+00:04:16,197 --> 00:04:21,581
+Think about subtle behaviors like kneading a doll uh or picking up a card by sliding
+
+39
+00:04:21,631 --> 00:04:25,694
+to the edge of the table and picking it up or when your hands are full.
+
+40
+00:04:25,744 --> 00:04:29,218
+So you kick open a door instead of using hand to open the door.
+
+41
+00:04:29,268 --> 00:04:29,764
+Right?
+
+42
+00:04:29,814 --> 00:04:37,329
+So all of these motions we don't think much we do it as we go about our daily lives and demonstration.
+
+43
+00:04:37,379 --> 00:04:47,310
+uh when we teleoperate we inevitably simplify these behaviors to the point uh where uh the control is much much easier for the robots to carry out.
+
+44
+00:04:47,360 --> 00:04:51,175
+So in other words teleoperation is not just a narrow pipe.
+
+45
+00:04:51,225 --> 00:04:58,990
+It is also a very very lossy one loses a lot of our human knowledge and wastes all of these intelligence.
+
+46
+00:04:59,040 --> 00:05:07,083
+So the question we want to answer is do we trans how do we transfer sensor motor d sensor motor intelligence to robot at scale and
+
+47
+00:05:07,133 --> 00:05:17,355
+without losing the fidelity and our proposal that we've been doing in our lab is to break this bottleneck by doing by going directly to the source.
+
+48
+00:05:17,405 --> 00:05:22,235
+We want to capture the human experience directly with no robots involved.
+
+49
+00:05:22,285 --> 00:05:30,408
+uh and we want to make sure the data contains all the necessary information including sensing action data to supervise robot learning model and
+
+50
+00:05:30,458 --> 00:05:40,650
+such data should not be collected as demonstrations but captured while humans are performing natural behaviors in the real world and this talk uh will
+
+51
+00:05:40,700 --> 00:05:49,114
+be three parts I'll describe some of the work from our lab uh so is I call the science human robot transfer but it's really
+
+52
+00:05:49,164 --> 00:05:55,950
+just the type of re the style of research we've been carrying out There are many many many different ways to do human robot transfer.
+
+53
+00:05:56,000 --> 00:06:03,294
+Um and we we want to examine that uh if we scale up these approach what happens right what happens when we have a
+
+54
+00:06:03,344 --> 00:06:11,569
+lot of human data and finally I want to also talk about the problem that because this is an extremely resources intensive research topic uh
+
+55
+00:06:11,619 --> 00:06:19,853
+can we also scale with the science to allow the community to drive the collective progress of this topic with that this bring us to
+
+56
+00:06:19,903 --> 00:06:23,728
+our first research milestone uh which is called EgoMimic scaling imitation
+
+57
+00:06:23,778 --> 00:06:27,702
+learning via egocentric medios Some of you have might have already seen it.
+
+58
+00:06:27,752 --> 00:06:34,639
+Uh the core of this research topic is really to capture embodied human data from an egocentric view at an eye level.
+
+59
+00:06:34,689 --> 00:06:40,670
+So uh so we want to capture our authentic uh experience through to through visual sensing unlike third person views.
+
+60
+00:06:40,720 --> 00:06:45,030
+Egoententralentric data capture how we naturally perceive the world at an eye level and
+
+61
+00:06:45,080 --> 00:06:50,092
+specifically we use project RA glasses uh to capture this data which uh which
+
+62
+00:06:50,142 --> 00:06:58,970
+essentially capture a lot of multimodal information including uh the uh the where the heads are uh where the hands are we'll talk a bit about why this
+
+63
+00:06:59,020 --> 00:07:07,058
+is good but but but things to take away is that these are just glasses so they don't meddle with our behavior it cap only captures it and
+
+64
+00:07:07,108 --> 00:07:12,739
+our work this specifically is about turning these raw data streams into embed what
+
+65
+00:07:12,789 --> 00:07:18,516
+we call embodied human experience that can be treated as equals with robot data.
+
+66
+00:07:18,566 --> 00:07:23,380
+So our key hypothesis is that humans are just kind of weird type of robot.
+
+67
+00:07:23,430 --> 00:07:26,065
+If you can measure it, if you can put sensor around it,
+
+68
+00:07:26,115 --> 00:07:35,510
+you can treat that as the human data as robot data and want to be able to use that data directly by bridging sensing action and kinematic gaps.
+
+69
+00:07:35,560 --> 00:07:40,589
+And we want also to develop a scalable way to learn from these data.
+
+70
+00:07:40,639 --> 00:07:46,110
+So we want a policy learning uh method that scales with human data.
+
+71
+00:07:46,160 --> 00:07:52,640
+Let's first talk about how to align embodiment and viewpoint uh which is chromatic and visual gap uh between human robots.
+
+72
+00:07:52,690 --> 00:08:00,586
+For embodiment um so we really believe that like in order to better learn from human data the robots should be more humanlike.
+
+73
+00:08:00,636 --> 00:08:03,982
+Uh so you might think the first reaction is yes humanoids but back then
+
+74
+00:08:04,032 --> 00:08:08,768
+when we started this project in early 2023 there weren't that many humanoids around.
+
+75
+00:08:08,818 --> 00:08:12,726
+So what we had to do is to build a robot of our own but it really
+
+76
+00:08:12,776 --> 00:08:17,683
+kind of embodies a lot of our design choices that carried through later in our other works.
+
+77
+00:08:17,733 --> 00:08:20,475
+So it has to be kinematically similar to humans.
+
+78
+00:08:20,525 --> 00:08:22,989
+I mean six off arms are is is pushing it.
+
+79
+00:08:23,039 --> 00:08:31,430
+Uh but we we tried our best and uh another design choice we made is actually we want the hand eye configuration of the robot to be
+
+80
+00:08:31,480 --> 00:08:40,535
+very similar to the human so that we can bridge any uh sort of these uh visual gaps uh and also hand eye configuration gaps between human robots.
+
+81
+00:08:40,585 --> 00:08:45,390
+And what we did was directly mount the glasses that we use to capture human data directly on
+
+82
+00:08:45,440 --> 00:08:51,209
+robots so that we can mitigate any of the sensor uh hardware gaps between human and robot data.
+
+83
+00:08:51,259 --> 00:08:55,810
+Another interesting problems that we have to solve is the hand eye motion.
+
+84
+00:08:55,860 --> 00:09:00,883
+So if you look at this egoentric view data, you know that humans uh move a lot.
+
+85
+00:09:00,933 --> 00:09:05,552
+They they move their heads uh when they look and they have information seeking actions.
+
+86
+00:09:05,602 --> 00:09:07,300
+They move their body a lot.
+
+87
+00:09:07,350 --> 00:09:10,510
+But our robots are kind of stable based.
+
+88
+00:09:10,560 --> 00:09:12,155
+It has a torso but doesn't move.
+
+89
+00:09:12,205 --> 00:09:13,630
+Has a head but doesn't move.
+
+90
+00:09:13,680 --> 00:09:14,023
+Right?
+
+91
+00:09:14,053 --> 00:09:18,910
+So it has the stable coording system between action relative to the camera.
+
+92
+00:09:18,960 --> 00:09:23,481
+But this is how we created this this kind of action supervision for the robot, right?
+
+93
+00:09:23,531 --> 00:09:25,328
+We because the reference frames is the same.
+
+94
+00:09:25,378 --> 00:09:27,585
+So it has the trajectory that we can parse.
+
+95
+00:09:27,635 --> 00:09:29,710
+But humans they move a lot.
+
+96
+00:09:29,760 --> 00:09:34,062
+Uh so the question is how do we actually parse this and convert the data
+
+97
+00:09:34,112 --> 00:09:39,106
+to like a robot like human data to something that we can train robot policy with.
+
+98
+00:09:39,156 --> 00:09:42,590
+Uh so we really need to stabilize the reference frame for the actions and
+
+99
+00:09:42,640 --> 00:09:48,963
+luckily uh meta area glass gave us really really robust visual initial autoometry or slam.
+
+100
+00:09:49,013 --> 00:09:50,530
+They done it through slam.
+
+101
+00:09:50,580 --> 00:09:58,072
+Uh so what we did simp put simply is to transfer the future hand poses into the current observational frame and that
+
+102
+00:09:58,122 --> 00:10:06,283
+allows us to kind of get these kind of a consistent trajectories for action supervision to create uh like visuals like these.
+
+103
+00:10:06,333 --> 00:10:16,430
+So this is this visual is only possible because we have very very stable uh a good quality visual initial odometry for the uh for for the camera.
+
+104
+00:10:16,480 --> 00:10:21,588
+And uh once we align this kinematic and visual gap we play also a lot of other tricks.
+
+105
+00:10:21,638 --> 00:10:25,526
+So initially we kind of just did the simplest thing to make human robot look alike.
+
+106
+00:10:25,576 --> 00:10:31,468
+For example we put masks on the human data to make them look robot robotic and all that kind of things.
+
+107
+00:10:31,518 --> 00:10:33,866
+Uh but the learning architecture is quite s simple.
+
+108
+00:10:33,916 --> 00:10:39,292
+It's just a gigantic transformers where we're uh we randomly sample batches of human robot data
+
+109
+00:10:39,342 --> 00:10:43,070
+uh and we line their input output space and we train this model together and the
+
+110
+00:10:43,120 --> 00:10:48,299
+hope really is that uh this architecture can come up with a representation space that aligns
+
+111
+00:10:48,349 --> 00:10:53,032
+human robot such that uh the performance of the robot policy can scale with human data.
+
+112
+00:10:53,082 --> 00:10:54,147
+That's our hypothesis.
+
+113
+00:10:54,197 --> 00:11:00,750
+We I'm going to show you this is not exactly the case why this policy performed well in the next work.
+
+114
+00:11:00,800 --> 00:11:05,965
+So we tried this on a variety of tasks including like this kind of grocery bagging tasks.
+
+115
+00:11:06,015 --> 00:11:13,542
+Um so like just show that it it works in closed loop uh fast enough so you can see these reactive behaviors.
+
+116
+00:11:13,592 --> 00:11:21,380
+Uh of course we made it both shirts these tiny toddler shirts and we also made robots make coffees for the student.
+
+117
+00:11:21,430 --> 00:11:25,715
+Uh and I mean it doesn't succeed all the time but you get the idea.
+
+118
+00:11:25,765 --> 00:11:32,445
+I mean we really want to show that human data does drive up the performance of of of robot policies.
+
+119
+00:11:32,495 --> 00:11:37,427
+Uh I'll let actually drink the coffee and move forward.
+
+120
+00:11:37,477 --> 00:11:47,502
+So quantitatively what we saw was that uh our hypothesis is that human data will scale robot performance uh with human data.
+
+121
+00:11:47,552 --> 00:11:49,932
+So uh this plots uh is x-
+
+122
+00:11:49,982 --> 00:11:55,469
+axis is the hours of data we spend on data collection and this blue curve is
+
+123
+00:11:55,519 --> 00:12:02,112
+when you only collect robot data through teleoperation and y-axis is the normalized score of the task.
+
+124
+00:12:02,162 --> 00:12:07,923
+So you can see that as we collect more teleoperative data you see a mild scaling curve that performance
+
+125
+00:12:07,973 --> 00:12:15,978
+gets better as expected but when you add uh one hour of human data to this add twohour mark.
+
+126
+00:12:16,028 --> 00:12:22,218
+So when we combine two hours of robot data with one hour human data, you see a dramatic performance jump.
+
+127
+00:12:22,268 --> 00:12:28,615
+And this reason is that we do task a lot faster than robots.
+
+128
+00:12:28,665 --> 00:12:31,692
+Human hands move a lot faster than robot hands.
+
+129
+00:12:31,742 --> 00:12:37,950
+So sometimes we can demonstrate tasks up to 10 times as fast as human as robots.
+
+130
+00:12:38,000 --> 00:12:40,525
+These are like very experienced teleoper, right?
+
+131
+00:12:40,575 --> 00:12:48,490
+students are really good really good at teleporting robots and even that uh humans are a lot faster in their naturalistic speed.
+
+132
+00:12:48,540 --> 00:12:52,734
+Um so we also kind of wheeled robots to different parts of the campus Georgia Tech
+
+133
+00:12:52,784 --> 00:12:56,990
+campus to show that task is the policy is robust and all that kind of thing.
+
+134
+00:12:57,040 --> 00:12:58,407
+There's nothing really new here.
+
+135
+00:12:58,457 --> 00:13:03,390
+is just that we want to to really show that this policy works, right?
+
+136
+00:13:03,440 --> 00:13:13,402
+And uh so right hands lower right the the students basically keep tossing new checkbacks to it just to make it try to see if it fails right.
+
+137
+00:13:13,452 --> 00:13:19,070
+Um so after this project we asked ourselves is this end of the game like is is this it right?
+
+138
+00:13:19,120 --> 00:13:21,739
+Like what have we solved the problem?
+
+139
+00:13:21,789 --> 00:13:25,870
+Um so what we learned is that really scaling human we can scale raw
+
+140
+00:13:25,920 --> 00:13:30,729
+performance with human data that that we have verified repeatedly later in our work.
+
+141
+00:13:30,779 --> 00:13:38,060
+So the same uh recipe works but we what we are now happy with is that if you remember we had to collect
+
+142
+00:13:38,110 --> 00:13:44,539
+both human robot data and in fact we actually had to collect on the exact same task in the same setting and this
+
+143
+00:13:44,589 --> 00:13:52,201
+really kind of defeats the purpose of of having human data right like we don't want humans to be like also collecting data
+
+144
+00:13:52,251 --> 00:14:00,716
+and have robot teleoperation data so what we really really want is to have robot perform the tasks that only exist ing human data.
+
+145
+00:14:00,766 --> 00:14:05,410
+We want to enable this kind of zeroot transfer from human to robots.
+
+146
+00:14:05,460 --> 00:14:08,430
+So, so what is the ideal ca like picture here?
+
+147
+00:14:08,480 --> 00:14:11,253
+What is our mental picture of why this might happen?
+
+148
+00:14:11,303 --> 00:14:15,726
+So, our ideal picture, uh, this is just one specific scientific hypothesis we have, right?
+
+149
+00:14:15,776 --> 00:14:20,857
+There are many other ways to look at this problem is that we want to learn a generalizable embodiment
+
+150
+00:14:20,907 --> 00:14:28,841
+or domain variant policy latent space where let's say we have data from hubos human robot for for folding shirts,
+
+151
+00:14:28,891 --> 00:14:29,216
+right?
+
+152
+00:14:29,246 --> 00:14:37,109
+Like the blue and reds are robot human data and through some magical encoder we bring them to this to latent space.
+
+153
+00:14:37,159 --> 00:14:44,236
+We have a shared decoder which is a policy that decodes action that can kind of control the robot to do the same task.
+
+154
+00:14:44,286 --> 00:14:48,534
+And the nice thing is that if we can do this then maybe we can imagine that giving
+
+155
+00:14:48,584 --> 00:14:55,390
+a new task like a floating shirts uh floating shorts we could also project the student to space and
+
+156
+00:14:55,440 --> 00:15:01,835
+without robot data we can also use the same policy to decode it to action to make the robot
+
+157
+00:15:01,885 --> 00:15:08,001
+do things that's only shown in human right so this is really our ideal picture like what should happen
+
+158
+00:15:08,051 --> 00:15:14,937
+so does simply code train these two sources make that happen the answer is not quite So this is
+
+159
+00:15:14,987 --> 00:15:22,670
+my student Ryan who really kind of dug into latent space of the policies offer code trainee these these
+
+160
+00:15:22,720 --> 00:15:28,046
+two models to to do these two sources we discovered that they actually don't align that well they can
+
+161
+00:15:28,096 --> 00:15:33,771
+you can perfectly distinguish these two sources despite you mix them in a in a in a training set.
+
+162
+00:15:33,821 --> 00:15:43,386
+So the hypothesis that like basically we we just made a hypothes if we can align these two spaces better maybe we can enable better transfer.
+
+163
+00:15:43,436 --> 00:15:48,917
+So this is where the second follow-up work of EgoMimic uh is come from.
+
+164
+00:15:48,967 --> 00:15:50,502
+So it's called eagle bridge.
+
+165
+00:15:50,552 --> 00:15:58,854
+So we really did the simplest thing right we tried to align this two two distribution space through a uh some some distribution alignment objective.
+
+166
+00:15:58,904 --> 00:16:01,392
+In this case we use our joint optimal transport.
+
+167
+00:16:01,442 --> 00:16:07,170
+We basically simultaneous align both the observation so latent space and action space to the same space.
+
+168
+00:16:07,220 --> 00:16:13,950
+And the nice thing about optimal transport uh for those of you who don't know this is that they actually preserve the uh
+
+169
+00:16:14,000 --> 00:16:18,829
+the respective uh marginal distribution of both distribution of both domains so
+
+170
+00:16:18,879 --> 00:16:23,052
+that you don't actually have deformed one distribution to match the other.
+
+171
+00:16:23,102 --> 00:16:31,031
+So you don't actually destroy the performance what would have been the performance of the robot only policy just to align these two spaces.
+
+172
+00:16:31,081 --> 00:16:31,410
+Right?
+
+173
+00:16:31,440 --> 00:16:37,354
+So that's that's the nice thing about joint oper transport and the actual transport is just
+
+174
+00:16:37,404 --> 00:16:42,736
+a differentiable loss function that we put in network when we train the behavior coing loss.
+
+175
+00:16:42,786 --> 00:16:46,208
+Uh the transport map is when you compute per batch.
+
+176
+00:16:46,258 --> 00:16:53,127
+So you try to see which pairs should be mapped together and the cost function is something you define yourself.
+
+177
+00:16:53,177 --> 00:16:58,623
+So uh so these are basically human policy latent and action and robot policy action latent.
+
+178
+00:16:58,673 --> 00:17:03,950
+So you design some latent functions latent uh cost functions in the space so that you think
+
+179
+00:17:04,000 --> 00:17:09,350
+these should be aligned uh in a sort of not a constrained sense but more encouraged sense.
+
+180
+00:17:09,400 --> 00:17:14,005
+So we actually uh tried a few different cost functions and we realized that just matching
+
+181
+00:17:14,055 --> 00:17:19,757
+their uh dynamic time warping distance in spaces actually just works well and but you can extend
+
+182
+00:17:19,807 --> 00:17:24,510
+this cost function to other other things like language description right if you describe have if
+
+183
+00:17:24,560 --> 00:17:30,749
+the two t data points have the same same language description maybe you should map them together.
+
+184
+00:17:30,799 --> 00:17:36,189
+So after training this model and we compare the latent space and we discover that indeed they start to align.
+
+185
+00:17:36,239 --> 00:17:42,828
+So on the left hand side you can see that uh the orange and blue dots are a lot closer and you can see that there are a lot more
+
+186
+00:17:42,878 --> 00:17:50,210
+blue dots because the blue dot like I mean there still is part of the space that the humans will not do right so but you can see that I
+
+187
+00:17:50,260 --> 00:17:57,646
+mean the blue dots are kind of behind the red dots but they're they have a high degree of alignments uh especially in this part of the space right and
+
+188
+00:17:57,696 --> 00:18:01,244
+if you look actually look at the nearest neighbor points in these in this latent
+
+189
+00:18:01,294 --> 00:18:06,490
+space you see that they have very their varied behavior similar in similar stages individual task.
+
+190
+00:18:06,540 --> 00:18:11,441
+So you can see that for this task is just kind of pouring the beans out to the to the
+
+191
+00:18:11,491 --> 00:18:19,390
+to to the cup and quantitatively we show that this indeed works well uh like further improves the code training performance.
+
+192
+00:18:19,440 --> 00:18:21,894
+This still the same setup as EgoMimic.
+
+193
+00:18:21,944 --> 00:18:30,190
+So we had the same tasks same demonstration same task and just does the like it further drives the performance uh for for co-raing setting.
+
+194
+00:18:30,240 --> 00:18:34,350
+But what we were truly curious about is does it enable this sort of like direct
+
+195
+00:18:34,400 --> 00:18:38,438
+transfer from human to robot like a new thing that human does that robot doesn't do.
+
+196
+00:18:38,488 --> 00:18:44,243
+And uh we decided on a task that is slightly contrived but really kind of shows the
+
+197
+00:18:44,293 --> 00:18:51,026
+spirit of zero shot transfer is that we have this like a small cabinet like a like a
+
+198
+00:18:51,076 --> 00:18:57,004
+box of of drawers and then uh we demonstrate a task on the blue region from both
+
+199
+00:18:57,054 --> 00:19:02,258
+human robots and purple region of both human robot and the red region is only demonstrated by human.
+
+200
+00:19:02,308 --> 00:19:08,950
+So our hypothesis is that if you can the h robot can perform tasks in this red region it means that it must have transferred
+
+201
+00:19:09,000 --> 00:19:17,310
+something from the human data only right because we never show this calibration in that region and indeed uh uh this is what robots was
+
+202
+00:19:17,360 --> 00:19:26,097
+able to do not perfectly it has a performance drop in this region and quantitatively we saw that uh but despite that we actually like
+
+203
+00:19:26,147 --> 00:19:30,440
+eagle bridge was able to get non-zero performance compared to any other baseline
+
+204
+00:19:30,490 --> 00:19:34,590
+so all of our pure BC baselines without this kind of realization failed.
+
+205
+00:19:34,640 --> 00:19:43,214
+So we were more confident that this this representation alignment hypothesis is true but we we only verify that at small small scale.
+
+206
+00:19:43,264 --> 00:19:47,070
+So I'm going to talk about what happens at scale later in the talk.
+
+207
+00:19:47,120 --> 00:19:47,706
+Okay.
+
+208
+00:19:47,756 --> 00:19:52,741
+Um so then this is sort of the representation alignment story.
+
+209
+00:19:52,791 --> 00:19:56,346
+We we went on to study other parts of the human robot transfer.
+
+210
+00:19:56,396 --> 00:19:57,194
+For example,
+
+211
+00:19:57,244 --> 00:20:01,550
+we felt that mobile manipulation is a perfect place to study this problem
+
+212
+00:20:01,600 --> 00:20:07,457
+because teleoperating robots for mobile tasks is really really hard.
+
+213
+00:20:07,507 --> 00:20:15,550
+We actually built this uh version of this Aloha station or in a lab and we try to teleport it was very very difficult.
+
+214
+00:20:15,600 --> 00:20:23,803
+So um so it is tedious and expensive costly to collect but human data on the hand we move around all the time.
+
+215
+00:20:23,853 --> 00:20:28,640
+We don't think about we are doing tabletop versus mobile inflation or just navigation.
+
+216
+00:20:28,690 --> 00:20:36,524
+We just do things and uh with these devices like project Arya we really do have information that informs us about uh
+
+217
+00:20:36,574 --> 00:20:43,326
+human uh like how human does things in in the world right for example this is we can get the slime map we
+
+218
+00:20:43,376 --> 00:20:48,619
+can get where the heads are where the hands are in in the spatial sense this is just from a one one
+
+219
+00:20:48,669 --> 00:20:54,672
+task demonstration right all of the information you see in the screen is just from that demonstration wouldn't do any uh like multi-
+
+220
+00:20:54,722 --> 00:21:03,577
+traverse to construct this map or anything so we really have the technology to capture mobile manipulation information from human data.
+
+221
+00:21:03,627 --> 00:21:08,590
+So uh so with that hypothesis or my student Lawrence uh kind of just basically
+
+222
+00:21:08,640 --> 00:21:15,712
+applied the same recipe to to mobileation right so it's called uh egocentric mobile manipulation
+
+223
+00:21:15,762 --> 00:21:24,406
+uh or Emma and uh I'm not going to get too much details because I love to cover the the the really the recipe is that we want we want
+
+224
+00:21:24,456 --> 00:21:30,509
+to build architecture that can learn mobile manipulation including waypoint pass way points everything just
+
+225
+00:21:30,559 --> 00:21:35,967
+so that it can learn the policy And uh the system wise we had to
+
+226
+00:21:36,017 --> 00:21:40,834
+do uh basically magic retargeting to a differential drive because uh differential drive as you
+
+227
+00:21:40,884 --> 00:21:46,634
+know mean they can only move uh you only have a like rotational and linear speed.
+
+228
+00:21:46,684 --> 00:21:48,930
+Uh but humans move holomically right.
+
+229
+00:21:48,980 --> 00:21:53,954
+So we we actually had to do some retargeting to make it work well on the navigation part of the task.
+
+230
+00:21:54,004 --> 00:22:03,516
+And what we showed is that it's actually exciting that we we can show uh for for most of the tasks that are majority just navigation
+
+231
+00:22:03,566 --> 00:22:07,852
+with lib navig manipulation you can do zero shot transfer you don't need
+
+232
+00:22:07,902 --> 00:22:14,004
+robot data for for for navigation navigation just transfer zero shot to robots and
+
+233
+00:22:14,054 --> 00:22:22,781
+with manipulation heavy tasks we had to do a bit of code training but uh there's a performance the per performance gain is lot so from human
+
+234
+00:22:22,831 --> 00:22:30,703
+data And I just want to show some of the more more challenging tasks we've done uh for this task is which is kind of grocery shopping.
+
+235
+00:22:30,753 --> 00:22:32,607
+We're no longer just bagging groceries.
+
+236
+00:22:32,657 --> 00:22:39,608
+We're just kind of putting stuff in the baskets and moving it uh to different parts of the workspace to hand over to people.
+
+237
+00:22:39,658 --> 00:22:40,229
+Right?
+
+238
+00:22:40,279 --> 00:22:42,009
+So uh this is code train.
+
+239
+00:22:42,059 --> 00:22:44,363
+So this manipulation part of this is code train.
+
+240
+00:22:44,413 --> 00:22:48,030
+There's no mobile human there's no mobile tele operation.
+
+241
+00:22:48,080 --> 00:22:53,070
+It's just static uh teleision data plus mobile human data.
+
+242
+00:22:53,120 --> 00:22:56,198
+And when you compare with just pure behavior cloning policy,
+
+243
+00:22:56,248 --> 00:23:02,645
+you see that behavior cloning policy is not is very very uh virt uh fragile when you have long horizon task.
+
+244
+00:23:02,695 --> 00:23:06,242
+What we discover is actually most of the failure comes from navigation stage.
+
+245
+00:23:06,292 --> 00:23:09,230
+So if you actually have more data on the navigation stage,
+
+246
+00:23:09,280 --> 00:23:15,064
+they they're less less likely to drift out of distribution and they're more likely to succeed for longer tasks.
+
+247
+00:23:15,114 --> 00:23:17,610
+So this is where the benefit of human data comes in.
+
+248
+00:23:17,660 --> 00:23:26,674
+And we also showed that for a majority navigation task uh we can scale the performance just by giving the more human data.
+
+249
+00:23:26,724 --> 00:23:31,790
+Uh so this is one of the handover tasks where you have to travel to a different part of room and hand
+
+250
+00:23:31,840 --> 00:23:37,497
+over a wine glass to a person standing at the kind of random part of the room and we saw that uh this
+
+251
+00:23:37,547 --> 00:23:43,692
+this kind of very nice scaling curve and we were pretty sure this is true because the student actually did 50 evals
+
+252
+00:23:43,742 --> 00:23:51,342
+per data point which took a very very long time but we we're fairly sure that this the scaling curve is is correct.
+
+253
+00:23:51,392 --> 00:23:51,961
+Okay.
+
+254
+00:23:52,011 --> 00:23:59,470
+So and after that we are very excited and we started working on uh a lot of more uh more uh uh more direct transfer.
+
+255
+00:23:59,520 --> 00:24:02,247
+For example we started bring up a more humanlike robot.
+
+256
+00:24:02,297 --> 00:24:09,327
+So this is one of the rainbow robots where we started doing a direct retargeting to a full human noise with wheel basease.
+
+257
+00:24:09,377 --> 00:24:11,991
+Uh this is just a replay of the human data.
+
+258
+00:24:12,041 --> 00:24:13,811
+Uh it's not teleoperation right?
+
+259
+00:24:13,861 --> 00:24:22,590
+just human dozen ones retargeted to robots and the magic is actually under for the uh is on the kinematic retargeting sides of things.
+
+260
+00:24:22,640 --> 00:24:30,081
+So we actually put a lot of effort in in retarget the full human post into robots through analytical solver.
+
+261
+00:24:30,131 --> 00:24:40,603
+Uh so it's really fast can run at 2000 hertz uh and we'll also be able to re retarget it to a u mobile task like closing fridge door.
+
+262
+00:24:40,653 --> 00:24:42,327
+So this is ongoing works.
+
+263
+00:24:42,377 --> 00:24:44,349
+We're still trying to improve the system.
+
+264
+00:24:44,399 --> 00:24:48,130
+The controller is still like uh not great yet.
+
+265
+00:24:48,180 --> 00:24:48,558
+Okay.
+
+266
+00:24:48,588 --> 00:24:54,350
+But we're very excited to to bring this to more humanlike robots.
+
+267
+00:24:54,400 --> 00:25:02,367
+So the second part of my talk uh is about what happens if you scale uh human data further.
+
+268
+00:25:02,417 --> 00:25:02,756
+Right?
+
+269
+00:25:02,786 --> 00:25:09,229
+We've shown this in like I don't know like 3 hours 5 hours 10 hours human data and we s saw that
+
+270
+00:25:09,279 --> 00:25:16,859
+something great happens uh but we don't know what happens at scale and we I kept telling that human data scales but
+
+271
+00:25:16,909 --> 00:25:26,093
+does does human data truly scale right so I actually give a talk on very similar topic about year and a half
+
+272
+00:25:26,143 --> 00:25:35,257
+ago so November 2024 this is one of the last slides on my talk I preach that embody human data is robot data
+
+273
+00:25:35,307 --> 00:25:42,653
+in disguise and robots have become more humanlike and whatnot right uh but one thing that I basically said is that uh
+
+274
+00:25:42,703 --> 00:25:50,670
+the data capturing technology is ready is advancing and what I was referring to is that people will start buying these kind
+
+275
+00:25:50,720 --> 00:25:58,449
+of devices from companies like meta and Google that start wearing these air wearables start capturing data maybe in five years we'll
+
+276
+00:25:58,499 --> 00:26:10,270
+have enough data to train these kind of foundation model from But um what happened later was something that we did not expect.
+
+277
+00:26:10,320 --> 00:26:14,359
+You might have seen this news.
+
+278
+00:26:14,409 --> 00:26:18,772
+Maybe why hundreds of people in LA wear cameras while doing their chores.
+
+279
+00:26:18,822 --> 00:26:23,551
+This came out two two weeks ago and there was another CNN news teach you how
+
+280
+00:26:23,601 --> 00:26:29,832
+to make money just by wearing our iPhone and hat uh and uh get money from things,
+
+281
+00:26:29,882 --> 00:26:30,350
+right?
+
+282
+00:26:30,400 --> 00:26:36,500
+So what happened was that uh our research I think part I think contributed
+
+283
+00:26:36,550 --> 00:26:44,777
+to this this broader capital interest in paying people to get data to train robots.
+
+284
+00:26:44,827 --> 00:26:52,128
+So in other words some of our research caused the data to be more abundant than what we had expected
+
+285
+00:26:52,178 --> 00:26:58,854
+and that expedited the progress of research to the point where uh you could actually uh download this app today.
+
+286
+00:26:58,904 --> 00:27:00,510
+It's called task app.
+
+287
+00:27:00,560 --> 00:27:07,822
+It's from Door Dash and wear camera on your hat and you can start collecting data and sell the data to back
+
+288
+00:27:07,872 --> 00:27:16,109
+of Door Dash and Door Dash will sell it to one of the robotics labs and to to train funny models for robotics.
+
+289
+00:27:16,159 --> 00:27:16,577
+Okay.
+
+290
+00:27:16,627 --> 00:27:23,518
+And there are probably about more than a hundred companies started in the past eight months or so or six months or so.
+
+291
+00:27:23,568 --> 00:27:28,590
+Their main goal is to do labor arbitrage.
+
+292
+00:27:28,640 --> 00:27:37,574
+they pay people uh with wage and collect data and wear cameras or devices to to collect data for them.
+
+293
+00:27:37,624 --> 00:27:38,190
+Right?
+
+294
+00:27:38,240 --> 00:27:43,940
+So with I mean all of that is like slightly dystopian and all that but but we but now we can
+
+295
+00:27:43,990 --> 00:27:53,256
+actually answer the question what happens at scale uh for for for these reasons right so uh in collaboration with Nvidia
+
+296
+00:27:53,306 --> 00:28:01,272
+and physical intelligence we we verify these in kind of two different stories uh one is uh is called eagle scale
+
+297
+00:28:01,322 --> 00:28:09,841
+uh where we basically can think of this as scaling EgoMimic uh one 10,000 sometimes bigger uh and see what happens.
+
+298
+00:28:09,891 --> 00:28:14,693
+Uh and the other is a more subtle view about human robot transfer is
+
+299
+00:28:14,743 --> 00:28:21,336
+how do we enable human robot transfer uh emerge without supervising it through aligning data.
+
+300
+00:28:21,386 --> 00:28:27,550
+So it's sort of a emerging behavior human robot transfer through multi-bodyment learning.
+
+301
+00:28:27,600 --> 00:28:33,667
+So Eagle Scale uh the first hypothesis we had is that we just need to scale up human data.
+
+302
+00:28:33,717 --> 00:28:39,742
+So we went in and actually just bought a lot of data uh and Nvidia basically
+
+303
+00:28:39,792 --> 00:28:44,649
+yeah we bought a lot of data so 20,000 hours of data very similar like exact
+
+304
+00:28:44,699 --> 00:28:49,792
+same format as what we used in EgoMimic and the second hypothesis is that uh
+
+305
+00:28:49,842 --> 00:28:56,490
+we uh if we make human robot robots more humanlike the transfer will be a lot easier.
+
+306
+00:28:56,540 --> 00:29:06,748
+So if you recall uh our 2023 robots like this right six off arms grippers and because I guess we wanted to verify the hypothesis we had resource uh
+
+307
+00:29:06,798 --> 00:29:10,722
+we had a seven off two seven off arms with 22 degree from dctor's hands
+
+308
+00:29:10,772 --> 00:29:14,910
+there these are the state-of-the-art robots uh that this this is sort of the best
+
+309
+00:29:14,960 --> 00:29:25,329
+system we can have so the upper body is very very humanlike and uh eagle scale is just a recipe to see how we can leverage these sources data
+
+310
+00:29:25,379 --> 00:29:29,624
+and It's it's a very simple recipe where we kind of this you if you
+
+311
+00:29:29,674 --> 00:29:33,643
+if you know about language model you know there's a pre-training stage there's like post-
+
+312
+00:29:33,693 --> 00:29:35,423
+training stage or fine-tuning stage.
+
+313
+00:29:35,473 --> 00:29:36,788
+So it's very similar.
+
+314
+00:29:36,838 --> 00:29:41,150
+So we have model pre-train on 20k hours human data.
+
+315
+00:29:41,200 --> 00:29:46,026
+We have a mid-training stage that's very similar to what we did in EgoMimic which is that
+
+316
+00:29:46,076 --> 00:29:52,111
+we have aligned human robot data on a variety of tasks to form a foundation for the transfer.
+
+317
+00:29:52,161 --> 00:30:00,216
+So you can think of that as teaching this this model that this task when done by humans looks like this when done by robot looks like that.
+
+318
+00:30:00,266 --> 00:30:00,609
+Right?
+
+319
+00:30:00,639 --> 00:30:08,080
+So we have about 300 or so of the of these mid-training alignment data uh to to to anchor the the transfer
+
+320
+00:30:08,130 --> 00:30:16,666
+and then we showed that it can it can indeed transfer through let's say uh one shot or we actually tried zero shot.
+
+321
+00:30:16,716 --> 00:30:18,146
+It didn't work work quite well.
+
+322
+00:30:18,196 --> 00:30:25,131
+uh but we we really tried to verify that can we train robots with just human data wi with uh train to
+
+323
+00:30:25,181 --> 00:30:33,507
+do thing uh things that only showing human data right and one of the sort of the obvious to me uh conclusion was
+
+324
+00:30:33,557 --> 00:30:40,565
+that scaling still happens uh so we had plotted this uh we didn't expect this to happen like this perfect but we
+
+325
+00:30:40,615 --> 00:30:48,590
+really did just plot a training curve of access speed being a number of human hours uh human data hours for pre-training Okay,
+
+326
+00:30:48,640 --> 00:30:56,202
+this is uh from 1k to 20k and this is lock scale and y-axis is not performance.
+
+327
+00:30:56,252 --> 00:31:00,069
+It is the action prediction error on the validation side. is not success rate.
+
+328
+00:31:00,119 --> 00:31:02,101
+Just make sure this is not success rate.
+
+329
+00:31:02,151 --> 00:31:05,755
+But we what we saw is a log linear scale, right?
+
+330
+00:31:05,805 --> 00:31:09,468
+So, so we really have a further scaling when you have more data.
+
+331
+00:31:09,518 --> 00:31:11,011
+Well, we didn't change the model too much.
+
+332
+00:31:11,061 --> 00:31:16,758
+It's a three billion parameter model, but is able to fit all this data and keep scaling.
+
+333
+00:31:16,808 --> 00:31:22,933
+And it also happened to to be that the the pre-training model which when training more mod with with
+
+334
+00:31:22,983 --> 00:31:29,706
+when training on more hours data uh post train when you post train on a specific task it performs better.
+
+335
+00:31:29,756 --> 00:31:41,613
+So uh I wouldn't call this a scaling law because now I mean it's it's just we we speculate that validation error correlates with performance.
+
+336
+00:31:41,663 --> 00:31:47,629
+I mean if you have worked on calibration behavior cloning before you know that at small scale this is almost never true.
+
+337
+00:31:47,679 --> 00:31:55,049
+Validization error do not correl with success rate but at scale we discover that this is actually pretty reliable predictor of success rate.
+
+338
+00:31:55,099 --> 00:32:03,822
+So the better you are at predicting human behaviors you have never seen the better this model will be at transferring to downstream robot tasks.
+
+339
+00:32:03,872 --> 00:32:06,723
+Again this this is just empirical observation.
+
+340
+00:32:06,773 --> 00:32:10,241
+I'm not making any suggestions that this is the truth right.
+
+341
+00:32:10,291 --> 00:32:13,826
+Um so we kind of post train us on a variety of tasks.
+
+342
+00:32:13,876 --> 00:32:19,784
+One of the more kind of fancy tasks is actually assembling a toy car.
+
+343
+00:32:19,834 --> 00:32:27,089
+Uh so uses tools and has to have a line that's pretty accurately to to be able to sample this car.
+
+344
+00:32:27,139 --> 00:32:36,819
+And we also trying many other tasks right now that looks more realistic like more economically interesting than just sampling cars and it also works.
+
+345
+00:32:36,869 --> 00:32:41,810
+You also have tasks like using syringe um and it just t test
+
+346
+00:32:41,860 --> 00:32:49,070
+the precision of the manipulation and things like manipulating thin shell objects like cords.
+
+347
+00:32:49,120 --> 00:32:53,988
+And we also very interesting answer the questions we started uh a year of a
+
+348
+00:32:54,038 --> 00:32:59,891
+year or two ago which is does scale enable better human robot transfer through mid-raining.
+
+349
+00:32:59,941 --> 00:33:00,341
+Right?
+
+350
+00:33:00,383 --> 00:33:06,346
+So we what we did was again the mid-training stage is about collecting a lot of diverse human robot
+
+351
+00:33:06,396 --> 00:33:15,150
+aligned data and uh see if this enabled uh transferring task that only showing human data to robot policy.
+
+352
+00:33:15,200 --> 00:33:15,590
+Okay.
+
+353
+00:33:15,620 --> 00:33:24,670
+And what we did is that once this model is mid-trained uh we provided one robot demonstration of a new task never seen
+
+354
+00:33:24,720 --> 00:33:31,919
+before and a 100 or so human demonstrations to the robot to the policy and see if the robot can do that task.
+
+355
+00:33:31,969 --> 00:33:33,581
+So it's not zero shot yet.
+
+356
+00:33:33,631 --> 00:33:38,464
+We're trying but one shot pretty reliable.
+
+357
+00:33:38,514 --> 00:33:44,683
+So we for example this is one of the mid-training tasks like rolling shirts and if we have one demonstration
+
+358
+00:33:44,733 --> 00:33:53,491
+of folding shirts plus 100 t demonstrations of a human fold folding shirts it's able to reliably fold the shirts.
+
+359
+00:33:53,541 --> 00:33:58,914
+So what we have achieved is a oneshot transfer not zero shot but it's getting there.
+
+360
+00:33:58,964 --> 00:34:00,595
+We actually tried this on zeroot.
+
+361
+00:34:00,645 --> 00:34:03,442
+it does something reasonable just from human data.
+
+362
+00:34:03,492 --> 00:34:09,134
+Uh but it's not quite able to achieve like a like more than 10% of success rate.
+
+363
+00:34:09,184 --> 00:34:12,361
+So still still still trying this but there's a sign of life here.
+
+364
+00:34:12,411 --> 00:34:13,192
+Very exciting.
+
+365
+00:34:13,242 --> 00:34:20,632
+And also try this on like screwing different bottle caps and everything and quantitatively show that there's a stark difference.
+
+366
+00:34:20,682 --> 00:34:23,728
+So with so the yellow is mid-training only.
+
+367
+00:34:23,778 --> 00:34:27,278
+So there's no pre-training uh uh just mid-training only.
+
+368
+00:34:27,328 --> 00:34:27,640
+Right.
+
+369
+00:34:27,670 --> 00:34:31,445
+So we may train this and then with one uh with one shot plus
+
+370
+00:34:31,495 --> 00:34:37,456
+human data we see that there moderate performance non zero for the less challenging tasks.
+
+371
+00:34:37,506 --> 00:34:44,652
+Uh but then with uh with the mid-training plus pre-training uh we were able to achieve uh very good performance.
+
+372
+00:34:44,702 --> 00:34:47,789
+This is the red red cur the red bar right.
+
+373
+00:34:47,839 --> 00:34:54,961
+So the way to interpret this is that the alignment the mid-training is a way is a bridge between the pre-training and the robot policy.
+
+374
+00:34:55,011 --> 00:35:03,870
+Uh so this is how we bring the vast prior from pre like 20,000 hours human data to the robot performance is by teaching the robot
+
+375
+00:35:03,920 --> 00:35:09,666
+this is how the human looks like when you do this task and this is what a robot looks like when they do the same task.
+
+376
+00:35:09,716 --> 00:35:10,263
+Okay.
+
+377
+00:35:10,313 --> 00:35:14,586
+And also tried to deploy this on a different robot.
+
+378
+00:35:14,636 --> 00:35:16,494
+Uh this is a um a G1 robot.
+
+379
+00:35:16,544 --> 00:35:18,270
+We didn't do much tuning.
+
+380
+00:35:18,320 --> 00:35:20,769
+This was actually done like two days before deadline.
+
+381
+00:35:20,819 --> 00:35:23,743
+Uh and they it just same recipe works pretty well.
+
+382
+00:35:23,793 --> 00:35:27,193
+So we saw decent performance improvement on a variety of tasks.
+
+383
+00:35:27,243 --> 00:35:32,295
+Uh so we can we're fairly confident that this recipe works beyond
+
+384
+00:35:32,345 --> 00:35:39,645
+just like like 22 degree degree freands plus like very capable upper body.
+
+385
+00:35:39,695 --> 00:35:44,630
+So uh it should generalize reasonably well to other environment as well.
+
+386
+00:35:44,680 --> 00:35:45,789
+Okay.
+
+387
+00:35:45,839 --> 00:35:55,789
+So uh then we have a other another question which is that is scaling human data all you need to enable transfer.
+
+388
+00:35:55,839 --> 00:36:03,626
+What we learned from Eagle Scale is that superersizing human data improves robot performance at scale.
+
+389
+00:36:03,676 --> 00:36:04,052
+Right?
+
+390
+00:36:04,082 --> 00:36:07,109
+So scaling plus alignment was a recipe.
+
+391
+00:36:07,159 --> 00:36:17,280
+But we do need aligned data uh for uh for like a variety of tasks to to form this support uh for to enable transfer.
+
+392
+00:36:17,330 --> 00:36:17,770
+Right?
+
+393
+00:36:17,820 --> 00:36:21,723
+So uh this this is what we need like for for a new embodiment we had
+
+394
+00:36:21,773 --> 00:36:27,025
+to collect some mid training data to enable task level transfer and this is kind of tedious.
+
+395
+00:36:27,075 --> 00:36:29,539
+So we we started asking us why is that?
+
+396
+00:36:29,589 --> 00:36:33,432
+Why is this so hard to adapt to a new inbound event?
+
+397
+00:36:33,482 --> 00:36:41,433
+So what we kind of hypothesize is that in effect we're really just manually constructing these alignment set to teach the robot.
+
+398
+00:36:41,483 --> 00:36:49,504
+It's a supervised it's almost like a supervised supervising the transfer from one robot from human to one robots right by constructing
+
+399
+00:36:49,554 --> 00:36:59,310
+these sets and a different perspective is that maybe humanto robot transfer is simply one instance of a broader cross embodiment learning problem.
+
+400
+00:36:59,360 --> 00:37:07,560
+Maybe if we can train the model with a more embodiment like more different kinds of agents that do things in real world
+
+401
+00:37:07,610 --> 00:37:16,592
+maybe this this human to robot transfer is no longer hard right we can form a generalizable transfer from human data to any robots.
+
+402
+00:37:16,642 --> 00:37:24,934
+So luckily uh we do have that data we have over the years the robotics community have collected a lot of data from different kind of robots and one of
+
+403
+00:37:24,984 --> 00:37:29,318
+the the data sets called openx embodiment some you might might heard of it is
+
+404
+00:37:29,368 --> 00:37:36,029
+just like all sorts of different robots doing things um so uh so with that hypothesis
+
+405
+00:37:36,079 --> 00:37:40,029
+I'm going to briefly talk about our collaboration with pi which is led by my
+
+406
+00:37:40,079 --> 00:37:47,406
+students simmer uh that we verify the hypothesis of human transfer is can be an emerging
+
+407
+00:37:47,456 --> 00:37:53,550
+property of if you train on more diverse embodiment and the most important figure is
+
+408
+00:37:53,600 --> 00:37:59,970
+this the x-axxis is the diversity of pre-training set and y axis is the task performance.
+
+409
+00:38:00,020 --> 00:38:07,765
+So if you scale the diversity of robot uh robot just robot demonstration as a so robot pre-training data without having any human data you
+
+410
+00:38:07,815 --> 00:38:16,029
+have a moderate scaling curve but then as you if you add the human data to this different po points on the pre-training set by post-
+
+411
+00:38:16,079 --> 00:38:20,556
+training this model you can see that there's a bigger and bigger jump in performance
+
+412
+00:38:20,606 --> 00:38:26,235
+which means that maybe right this is just still just empirical observation that maybe uh
+
+413
+00:38:26,285 --> 00:38:30,624
+when you train a more embodied pre-train your model this is vision language action model
+
+414
+00:38:30,674 --> 00:38:36,510
+VA val uh you when you pre-train this model on more diverse data it is
+
+415
+00:38:36,560 --> 00:38:42,750
+much is easier to transfer human data to a downstream embodiment and we also verify
+
+416
+00:38:42,800 --> 00:38:47,161
+this in a similar sort of testing plots that we show that uh when you
+
+417
+00:38:47,211 --> 00:38:52,592
+train on more diverse data the distance between human and robot data in the latent
+
+418
+00:38:52,642 --> 00:38:57,630
+space become much closer and closer as you kind of scale the diversity of the data.
+
+419
+00:38:57,680 --> 00:39:05,789
+So this further kind of corroborates our hypothesis that uh this may be an emerging property of diverse training.
+
+420
+00:39:05,839 --> 00:39:11,634
+So the way to think about this is that if you force your model to like cross like
+
+421
+00:39:11,684 --> 00:39:19,578
+learn a lot of different embodiment maybe it will just like abstract everything into a embodimentic latent space.
+
+422
+00:39:19,628 --> 00:39:20,356
+Okay.
+
+423
+00:39:20,406 --> 00:39:25,918
+And I mean um these are some nice videos that uh they made.
+
+424
+00:39:25,968 --> 00:39:27,950
+I'm going to just show you something here.
+
+425
+00:39:28,000 --> 00:39:31,944
+Uh is I mean the the the key idea is still the thing I just told you.
+
+426
+00:39:31,994 --> 00:39:36,763
+uh this is just one thing that showed uh it's the robot became capable just
+
+427
+00:39:36,813 --> 00:39:42,350
+by uh learning from human uh demonstrations and one thing I want to mention is
+
+428
+00:39:42,400 --> 00:39:48,589
+that um this perspective is also saying that uh we need a robot the like
+
+429
+00:39:48,639 --> 00:39:55,309
+more subtle view of this is that ro we need a lot of these primitive
+
+430
+00:39:55,359 --> 00:39:59,754
+actions to present in the v like in the pre-trained vas because as you can
+
+431
+00:39:59,804 --> 00:40:05,470
+if you can imagine that a lot of these uh diverse pre-training robot data is
+
+432
+00:40:05,520 --> 00:40:09,876
+giving the policy the ability to actually do these kind of little primitives attach like
+
+433
+00:40:09,926 --> 00:40:13,745
+picking up nails and putting nails in the in in the in the toolbox and everything.
+
+434
+00:40:13,795 --> 00:40:19,069
+What a human data essentially does is to string these behaviors together to solve a long task.
+
+435
+00:40:19,119 --> 00:40:23,022
+So we don't actually need a lot of human data to make these work.
+
+436
+00:40:23,072 --> 00:40:31,789
+So, so this this kind of brings to actually to two two two perspective of human to robot transfer that happens only at scale.
+
+437
+00:40:31,839 --> 00:40:41,150
+The first perspective is more straightforward is that if you have a lot of human data, if you post train robot data with some align aligned data,
+
+438
+00:40:41,200 --> 00:40:48,270
+uh align human data, robot data and humanlike robots really enable strong human to robot transfer at scale, right?
+
+439
+00:40:48,320 --> 00:40:50,514
+This is just pre-training post- training story.
+
+440
+00:40:50,564 --> 00:40:56,255
+Um but the what the the PI collaboration is saying is that maybe the foundation
+
+441
+00:40:56,305 --> 00:41:01,550
+is not human data is a lot of diverse embodiment that supports the transfer from
+
+442
+00:41:01,600 --> 00:41:08,750
+like more diverse human behavior to to different robots right so it's really diverse diverse
+
+443
+00:41:08,800 --> 00:41:15,297
+embodiment data allows human to transfer uh human to transfer a human robot transfer to emerge
+
+444
+00:41:15,347 --> 00:41:20,003
+and I'm not suggesting if either of this is will be the final picture I'm
+
+445
+00:41:20,053 --> 00:41:25,619
+just saying that at scale uh different things would emerge that don't emer that don't
+
+446
+00:41:25,669 --> 00:41:32,670
+happen when you work on small scale problems and uh depending on what hypothesis you
+
+447
+00:41:32,720 --> 00:41:38,259
+have uh for like how you view human robot transfer problem you might find different things.
+
+448
+00:41:38,309 --> 00:41:49,561
+So there's not a single uh like answer to this human robot transfer problem and there's it's a vast space of exploration to be done in this space.
+
+449
+00:41:49,611 --> 00:41:50,590
+Okay.
+
+450
+00:41:50,640 --> 00:41:58,233
+So on that note, uh I think it's it's it's time to answer the question that if a lot of things happen at scale,
+
+451
+00:41:58,283 --> 00:42:01,344
+uh if academia, what's the real academia, right?
+
+452
+00:42:01,394 --> 00:42:09,923
+Like how can we actually drive drive the science of this like is just a big company or like the fancy frontier lab problem now, right?
+
+453
+00:42:09,973 --> 00:42:19,509
+So, so the final question I want to kind of hint at is maybe there's a way for us to also scale the scientific understanding of human robot transfer.
+
+454
+00:42:19,559 --> 00:42:28,562
+Um, so um so because because I mean the making scientific progress is not really like a company thing is it's it's a collective community thing.
+
+455
+00:42:28,612 --> 00:42:36,769
+If we look at the history AI right we many of the major breakthroughs came were enabled by community scale infrastructure like imagageet MS Koko
+
+456
+00:42:36,819 --> 00:42:41,445
+enabled the the blossom of a lot of the deep learning ar uh
+
+457
+00:42:41,495 --> 00:42:46,278
+deep deep learning techniques and computer vision advancements and detection seation and all
+
+458
+00:42:46,328 --> 00:42:57,147
+those kind of things and uh common crawl sorry games enabled advances in reinforced learning for a while and super glue uh really test stress tested
+
+459
+00:42:57,197 --> 00:43:07,146
+a lot of these language models and common crawl was part of the foundation for a lot of these modern LMS because it's just basically internet.zip,
+
+460
+00:43:07,196 --> 00:43:07,868
+right?
+
+461
+00:43:07,918 --> 00:43:14,230
+And um and the nice thing about human to robot transfer uh despite the fact that it's very costly to
+
+462
+00:43:14,280 --> 00:43:22,517
+collect data and you still have to evaluate on robot is that we can finally agree on a data source data.
+
+463
+00:43:22,567 --> 00:43:22,992
+Right?
+
+464
+00:43:23,042 --> 00:43:28,404
+If you have been in robotics for a while, the m major problem is everybody has different robot.
+
+465
+00:43:28,454 --> 00:43:34,063
+We all study different robots and despite the fact we're still having different robots,
+
+466
+00:43:34,113 --> 00:43:38,594
+if we are studying the human to robot transfer problem, the human part we can all agree on.
+
+467
+00:43:38,644 --> 00:43:48,559
+So we have a there's it's likely that we can have a common foundation for studying this problem and we have more consistent embodiment of robots and
+
+468
+00:43:48,609 --> 00:43:56,467
+that that that allows us to to kind of pull maybe to to get together data to study this problem and uh but we still need a lot
+
+469
+00:43:56,517 --> 00:44:02,430
+of data right we still need a lot of data to study this problem and I kind of did an estimate of what are the usable data
+
+470
+00:44:02,480 --> 00:44:09,475
+open source data on on the internet for human data these days is roughly around 10k uh so there I know there's a lot startups like kind of
+
+471
+00:44:09,525 --> 00:44:16,501
+branding themselves as like oh I'm released a new data set if you look into them is that actually usable as super usable so I did an
+
+472
+00:44:16,551 --> 00:44:27,396
+estimate roughly around 10 hour usable data 10k hours of usable data but I theorized that maybe we need maybe 1 million to 10 million hours of uh
+
+473
+00:44:27,446 --> 00:44:37,735
+uh human data to be able to to see more emerging behavior scale uh so so we really it requires a community effort to actually drive up the
+
+474
+00:44:37,785 --> 00:44:42,645
+data that size and their understanding and the whole ecosystem around this to to
+
+475
+00:44:42,695 --> 00:44:48,990
+make progress uh at least not that that's exists outside of these frontier labs.
+
+476
+00:44:49,040 --> 00:44:53,858
+Uh so this is why we decided to do a project called EgoVerse.
+
+477
+00:44:53,908 --> 00:45:00,715
+Uh this project was actually started um about a year about like 20 late 2024.
+
+478
+00:45:00,765 --> 00:45:03,675
+So it took more than a year to complete.
+
+479
+00:45:03,725 --> 00:45:09,093
+It was a lot of effort to actually pull together a few uh labs and companies to do this kind of things.
+
+480
+00:45:09,143 --> 00:45:14,288
+But I'm just going to show you like a nice one minute uh promotional video to this.
+
+481
+00:45:14,338 --> 00:45:20,830
+Uh so this is this is a group of labs and companies coming together to study like form attempting
+
+482
+00:45:20,880 --> 00:45:26,323
+to form a foundation for for studying human robot transfer right so uh Stanford is actually part of it.
+
+483
+00:45:26,373 --> 00:45:35,648
+So Shiran's lab was a like major collaborator for our efforts and and uh what we kind of I mean the euro story
+
+484
+00:45:35,698 --> 00:45:40,207
+we need a lot of data so we collect a lot of I'm going to talk about data set design and all that so
+
+485
+00:45:40,257 --> 00:45:47,262
+but the number of hours is small but it's it's growing right so this is not a fixed data set we actually are continuing
+
+486
+00:45:47,312 --> 00:45:54,462
+to pull to pull together data from labs from companies uh to to put together a common data source so it's it's increasing as
+
+487
+00:45:54,512 --> 00:46:03,432
+we're speaking Um and we also did cross institute study of a lot of these like basic hypothesis does align data actually matter
+
+488
+00:46:03,482 --> 00:46:14,797
+if you have different robots right um and it it's it's really an ecosystem for uh for studying this problem uh scientifically at scale
+
+489
+00:46:14,847 --> 00:46:21,690
+and it's made of four parts uh one is data set uh the other is uh platform tools so we have different kind of
+
+490
+00:46:21,740 --> 00:46:29,363
+ways to aggregate your data to allow you anyone in your a this audience who have like maybe an iPhone to collect the data.
+
+491
+00:46:29,413 --> 00:46:38,841
+Uh and we have a research study to really solidify some of the hypothesis we had throughout the the journey of studying this problem and we'll have a
+
+492
+00:46:38,891 --> 00:46:45,517
+like consortium made of like labs and uh industry researchers industry startups to to
+
+493
+00:46:45,567 --> 00:46:51,601
+to really come together contributing data insights robots and everything to study this problem.
+
+494
+00:46:51,651 --> 00:46:58,616
+In data set design we did it uh carefully to really uh uh to kind of divide it into two part.
+
+495
+00:46:58,666 --> 00:47:04,589
+One is what we call a flagship task where we have unified task semantics like folding
+
+496
+00:47:04,639 --> 00:47:09,777
+shirts uh uh like classic tasks like cup and saucer which is actually invented by shlab.
+
+497
+00:47:09,827 --> 00:47:12,922
+All of these tasks are standard semantics.
+
+498
+00:47:12,972 --> 00:47:17,190
+We uh we had many people across different labs across companies collect
+
+499
+00:47:17,240 --> 00:47:20,700
+the exact same task on different environment different objects and different everything.
+
+500
+00:47:20,750 --> 00:47:27,835
+So we have a common foundation for study these tasks and there's also a large pool of free form data like in
+
+501
+00:47:27,885 --> 00:47:35,069
+the wild data that has a longtail distribution behaviors collected by the these companies and then they contributed to the data sets.
+
+502
+00:47:35,119 --> 00:47:45,230
+So that makes up the two parts of the data set and uh like before we really care about turning human data into robot-like data.
+
+503
+00:47:45,280 --> 00:47:54,026
+So we actually added a lot of annotations including these nice uh hand pose, head pose and we also added dense language annotation on top.
+
+504
+00:47:54,076 --> 00:47:58,406
+Uh so it's very very expensive to do this and I'm really thankful for the who
+
+505
+00:47:58,456 --> 00:48:04,370
+the company who actually did all of these annotations on these uh 10400 hours of data.
+
+506
+00:48:04,420 --> 00:48:04,750
+Okay.
+
+507
+00:48:04,780 --> 00:48:11,853
+But in moving into future all the data will have this kind of uh of data density and in and one
+
+508
+00:48:11,903 --> 00:48:17,534
+of the most important design decisions for for for eagle verse is that we don't want to just create one data set.
+
+509
+00:48:17,584 --> 00:48:23,788
+We want it to continue to grow because we don't think a 1400 hour data is going to be enough to capture
+
+510
+00:48:23,838 --> 00:48:30,830
+all of the possible human behaviors everywhere because a large pool of behavior that we don't we haven't done is uh I was
+
+511
+00:48:30,880 --> 00:48:35,950
+talking to Mac today is that like we we want we want to study human human interaction right like a lot of these
+
+512
+00:48:36,000 --> 00:48:42,458
+are still not captured in this data set and we want everything to be uh kind of pulled together to this data source.
+
+513
+00:48:42,508 --> 00:48:46,131
+So we actually had uh this thing hosted on a cloud flare.
+
+514
+00:48:46,181 --> 00:48:52,669
+his R1 instance was right now it's about like 10 terabytes of data but it's still growing uh it's 10 terabytes
+
+515
+00:48:52,719 --> 00:48:59,390
+because we did a lot of compression so that it's manageable uh uh and and we also have a nice like SQL
+
+516
+00:48:59,440 --> 00:49:05,710
+tables and data exploration web pages on top and so if you're interested you can go explore eagle burst.ai AI there's a
+
+517
+00:49:05,760 --> 00:49:14,190
+data browser there and uh and we know that not everyone can afford uh this kind of data collection effort at scale.
+
+518
+00:49:14,240 --> 00:49:21,156
+So we uh decided to kind of make available an uh in addition to the project Arya glasses uh
+
+519
+00:49:21,206 --> 00:49:27,338
+which is the the default device we use in iPhone app that's able to allow you to capture this data.
+
+520
+00:49:27,388 --> 00:49:33,069
+So it does uh on the cloud server it does uh data pro postprocessing labeling and everything.
+
+521
+00:49:33,119 --> 00:49:39,193
+uh so that can you also collect data for yourself for your own research or contribute back to eagors.
+
+522
+00:49:39,243 --> 00:49:39,825
+Okay.
+
+523
+00:49:39,875 --> 00:49:40,457
+Okay.
+
+524
+00:49:40,507 --> 00:49:44,152
+So the third part of this is the study.
+
+525
+00:49:44,202 --> 00:49:52,028
+Uh so we cared a lot about like kind of a research debt like if you're familiar with this kind of technical debt for programming.
+
+526
+00:49:52,078 --> 00:49:57,669
+Uh you know like there's a lot of assumptions we made one-off assumptions we made in these papers.
+
+527
+00:49:57,719 --> 00:49:59,265
+It has been pretty consistent.
+
+528
+00:49:59,315 --> 00:50:04,028
+uh but we really want to show that it is true and there are biases in our like
+
+529
+00:50:04,078 --> 00:50:11,390
+in our experiment setup setups different group have different robots and different robot embodiment have different transfer so we
+
+530
+00:50:11,440 --> 00:50:17,855
+really decided that let's just have the same code base same data set different ways to collect teleprint data
+
+531
+00:50:17,905 --> 00:50:22,725
+same way to collect human data and let's see what happens right do we have a consistent finding across
+
+532
+00:50:22,775 --> 00:50:28,120
+different robots um and we found is that it's actually pretty consistent uh so these are kind of
+
+533
+00:50:28,170 --> 00:50:32,905
+tiny to see But the uh what we found is very similar to the conclusion of Eagleverse is that
+
+534
+00:50:32,955 --> 00:50:40,316
+aligned data is very very important to uh to in to leverage diverse human data uh the pre-training diverse
+
+535
+00:50:40,366 --> 00:50:46,518
+human data and uh if you only train on diverse data is not going to give you much gain.
+
+536
+00:50:46,568 --> 00:50:50,701
+So like diverse data plus aligned data is the key to to enable
+
+537
+00:50:50,751 --> 00:50:57,549
+transfer at this scale and we're pretty sure about that across different robots embodiment.
+
+538
+00:50:57,599 --> 00:51:03,950
+Um and one other thing we did was that we had discovered that uh
+
+539
+00:51:04,000 --> 00:51:09,404
+all pre like despite I said that human have a unified embodiment everyone is different.
+
+540
+00:51:09,454 --> 00:51:14,447
+We have different body length we have different habit of doing the same task we have different ways to
+
+541
+00:51:14,497 --> 00:51:20,103
+look at things when have like different habit of like turning our head when I fold shirts and all that.
+
+542
+00:51:20,153 --> 00:51:22,856
+So a lot of these diversity actually exist in human.
+
+543
+00:51:22,906 --> 00:51:28,083
+And what we found is that if you given the same data budget, if you train on more diverse human data,
+
+544
+00:51:28,133 --> 00:51:32,472
+you actually improve the performance of generalizing to a new human embodiment.
+
+545
+00:51:32,522 --> 00:51:40,670
+So there's some consistency to be learned, but you do need diversity in your human data as well to be able to enable uh transfer.
+
+546
+00:51:40,720 --> 00:51:44,873
+So and we also visualized this that uh on the left side this is a
+
+547
+00:51:44,923 --> 00:51:51,060
+testing plot of when you train the model with four different demonstrators versus 12 different demonstrators.
+
+548
+00:51:51,110 --> 00:52:00,089
+So you can see that uh this uh this red outlier when you basically we had a hold out demonstrator and we projected back to the test map.
+
+549
+00:52:00,139 --> 00:52:06,255
+We saw that the outlier is no longer outlier when you have a lot more uh demonstrators.
+
+550
+00:52:06,305 --> 00:52:12,621
+So there it's a lot more mixed in uh when you have when you have more demonstrators.
+
+551
+00:52:12,671 --> 00:52:13,240
+Okay.
+
+552
+00:52:13,290 --> 00:52:16,249
+So those are I mean there are many other things we did in this study.
+
+553
+00:52:16,299 --> 00:52:17,789
+So if you're interested go read the paper.
+
+554
+00:52:17,839 --> 00:52:18,708
+It's quite fun.
+
+555
+00:52:18,758 --> 00:52:22,025
+Uh and also you should contribute if you're interested.
+
+556
+00:52:22,075 --> 00:52:26,344
+And the consortium is made again made up of a few different labs.
+
+557
+00:52:26,394 --> 00:52:36,731
+Uh so GT is led by my student uh uh Ryan Simmer left two students and Stanford is led
+
+558
+00:52:36,781 --> 00:52:43,277
+by Ze UCSD led by Roger and ETH is led by a whole bunch of students with two PIs.
+
+559
+00:52:43,327 --> 00:52:52,348
+So this is kind of a our core uh tour core labs and and this couldn't be possible without the support of uh these companies like Meta,
+
+560
+00:52:52,398 --> 00:52:53,642
+Mecca and Scale.
+
+561
+00:52:53,692 --> 00:53:00,430
+Uh so uh it's really like a marriage of like academic rigor and we really care about solving problem and they really
+
+562
+00:53:00,480 --> 00:53:08,082
+care about trying to see what makes their the data they collect useful so I can sell the data to other companies.
+
+563
+00:53:08,132 --> 00:53:14,282
+So there there's some synergistic relationship in in this consortium and we're continue to expand.
+
+564
+00:53:14,332 --> 00:53:18,365
+Uh so we when we release this data set this this thing I got like
+
+565
+00:53:18,415 --> 00:53:25,101
+right now it's about 80 or so different entities and individuals who are interested in contributing.
+
+566
+00:53:25,151 --> 00:53:29,323
+So we're continually growing new new new new uh new companies.
+
+567
+00:53:29,373 --> 00:53:32,796
+And if you remember I said there's more than 100 companies doing that.
+
+568
+00:53:32,846 --> 00:53:33,159
+Yeah.
+
+569
+00:53:33,189 --> 00:53:39,283
+some of them are interested in really understanding why what makes their data useful.
+
+570
+00:53:39,333 --> 00:53:39,870
+Okay.
+
+571
+00:53:39,920 --> 00:53:40,416
+Um, okay.
+
+572
+00:53:40,466 --> 00:53:42,110
+So, that's that's Eagle Verse.
+
+573
+00:53:42,160 --> 00:53:46,373
+And then there's some other open problems I'm curious I'm personally curious about.
+
+574
+00:53:46,423 --> 00:53:50,527
+My lab's curious about I'm going to briefly talk about I know we're mostly out of time.
+
+575
+00:53:50,577 --> 00:53:52,692
+There are five minutes left.
+
+576
+00:53:52,742 --> 00:53:59,054
+Uh, so so uh what I'm interested in essentially is how to better model human essentially.
+
+577
+00:53:59,104 --> 00:54:06,074
+Uh what we are currently facing is that a lot of our designs are model designs are based on assumption
+
+578
+00:54:06,124 --> 00:54:14,460
+that we are learning from a del demonstr tele demonstration for tabletop task with a highly kind of damped system.
+
+579
+00:54:14,510 --> 00:54:24,838
+Basically it's just like if I summarize that like very slow uh moving at creeping speed uh no viewpoint shifts very short like mid horizon task and
+
+580
+00:54:24,888 --> 00:54:29,764
+like I mean we know the how the demonstrator collected data right but when
+
+581
+00:54:29,814 --> 00:54:33,918
+you're starting to talk about human data things lot become a lot different so
+
+582
+00:54:33,968 --> 00:54:43,129
+what I'm interesting are two parts how do we fully capture the experience of human and how do we model it especially the context of how human
+
+583
+00:54:43,179 --> 00:54:48,358
+made decisions And my first takes is that first person view is not sensory
+
+584
+00:54:48,408 --> 00:54:54,430
+experience is not the decision-m context used to actually decide what to do next.
+
+585
+00:54:54,480 --> 00:55:01,221
+And uh one of the things I'm very curious about is can we measure force or tactile reliably
+
+586
+00:55:01,271 --> 00:55:06,750
+from human and right now most of developments on the visual side these are nice things that the
+
+587
+00:55:06,800 --> 00:55:13,355
+community like the the the the sort of the broader commercial sector have done but the tactile capabilities
+
+588
+00:55:13,405 --> 00:55:19,836
+are quite missing like taco gloves are there but they're not like they're very they're not good yet.
+
+589
+00:55:19,886 --> 00:55:25,710
+uh there are like other technologies like EMGs to measure like uh muscle activations all that as a
+
+590
+00:55:25,760 --> 00:55:30,601
+proxy for force or how much force you exert but they are not also very very noisy so
+
+591
+00:55:30,651 --> 00:55:37,046
+there's a lot of immaturities in the hardware side for really sensorize the entire experience of how you
+
+592
+00:55:37,096 --> 00:55:43,154
+kind of how how you perceive the world and the second part is that the context for decision-
+
+593
+00:55:43,204 --> 00:55:48,452
+making is also more than just your instantaneous observation you didn't make your decision about what
+
+594
+00:55:48,502 --> 00:55:52,408
+you're going to do next By just looking at the picture you have in front of you,
+
+595
+00:55:52,458 --> 00:55:52,758
+right?
+
+596
+00:55:52,731 --> 00:55:54,703
+You have an enormous amount of knowledge.
+
+597
+00:55:54,753 --> 00:55:56,529
+For example, this chef, right?
+
+598
+00:55:56,579 --> 00:56:04,516
+He like this person cooked because uh well they have taken the class or they have been to a culinary school, right?
+
+599
+00:56:04,566 --> 00:56:10,049
+And uh like it's not because they just look at this like image and they decide oh I'm going to cook.
+
+600
+00:56:10,099 --> 00:56:12,965
+I'm going to like like turn on the heat, right?
+
+601
+00:56:13,015 --> 00:56:21,445
+And the person for example turned to different workstations because they remembered that a minute ago they prepared their ingredients in that uh and
+
+602
+00:56:21,495 --> 00:56:28,173
+not on the table and they they had to kind of go back and kind of continue to to to do that kind of thing.
+
+603
+00:56:28,223 --> 00:56:35,234
+So it's it's more than your instantaneous observation and our models right now are terrible at modeling these kind of things.
+
+604
+00:56:35,284 --> 00:56:44,108
+Uh so there's a lot of work to be done to be actually be able to what I call behavior clone a human.
+
+605
+00:56:44,158 --> 00:56:51,505
+So if you really want to predict behavior of any person what they're going to do next there's a lot of
+
+606
+00:56:51,555 --> 00:56:57,230
+research you need to do and as a first step uh we our lab is doing a lot of different explorations.
+
+607
+00:56:57,280 --> 00:57:01,027
+One of the things I'm most excited about is the spatial memory for mobile inflation.
+
+608
+00:57:01,077 --> 00:57:07,762
+So uh it believe it or not we we have the technology to build a lot of these like specially consistent memories right now.
+
+609
+00:57:07,812 --> 00:57:11,563
+So these are uh one of the ongoing works in our lab that we are building a
+
+610
+00:57:11,613 --> 00:57:18,123
+dynamic uh we'll call it dynamic scene graph of object being moved around as you continue demonstrating things.
+
+611
+00:57:18,173 --> 00:57:19,848
+I've never seen these kind of things before.
+
+612
+00:57:19,898 --> 00:57:25,036
+If you have worked on computer division before uh this is actually a new capabilities I've never seen before.
+
+613
+00:57:25,086 --> 00:57:33,549
+uh that you can actually track objects and continuously integrate their point cloud on these object to build better object over time.
+
+614
+00:57:33,599 --> 00:57:40,846
+uh and this is all run in real time right so a lot of these foundation models better devices and better
+
+615
+00:57:40,896 --> 00:57:51,268
+like perception models uh are enableing these kind of technology so I'm quite excited about uh this kind of research so takeaways
+
+616
+00:57:51,318 --> 00:57:59,487
+uh human data is the largest data source of physical intelligence uh human robot transfer is challenging but showing promises uh
+
+617
+00:57:59,537 --> 00:58:09,449
+new capabilities merge with model and data scale And data is in fact scaling faster than our scientific understanding of these problems.
+
+618
+00:58:09,499 --> 00:58:13,290
+And scaling science requires really a community effort.
+
+619
+00:58:13,340 --> 00:58:15,321
+And with that like to thank you all.
+
+620
+00:58:15,371 --> 00:58:24,350
+And these are the sponsors.
+
+621
+00:58:24,400 --> 00:58:27,870
+A minute.
+
+622
+00:58:27,920 --> 00:58:28,315
+Yeah.
+
+623
+00:58:28,345 --> 00:58:35,399
+So the m multimodal that you mentioned at the end is very interesting but as you mentioned it's pretty expensive to collect.
+
+624
+00:58:35,449 --> 00:58:41,781
+So I'm just wondering from your experience with the diverse environments would you expect to have like a little bit of this
+
+625
+00:58:41,831 --> 00:58:49,070
+expensive multimodal data make a big difference so you wouldn't have to collect so much of it to have that's an excellent question.
+
+626
+00:58:49,120 --> 00:58:53,131
+I think uh I expect yes I think we could use these uh
+
+627
+00:58:53,181 --> 00:58:59,977
+expensive sensorized human data as supervision to train models to label broader human experience.
+
+628
+00:59:00,027 --> 00:59:06,749
+I think that should happen but there's there are things that are just inherently not perceivable if you don't have sensors.
+
+629
+00:59:06,799 --> 00:59:09,946
+For example, imagine that you reach in a bag and start to grab things.
+
+630
+00:59:09,996 --> 00:59:12,630
+Without tactile, you won't be able to perceive it, right?
+
+631
+00:59:12,680 --> 00:59:14,066
+You can't guess what you're doing.
+
+632
+00:59:14,116 --> 00:59:16,670
+So these kind of things, not so much.
+
+633
+00:59:16,720 --> 00:59:23,957
+But if you're talking about let's say am I in contact with this cup if I look at from this yes I mean I can perceive this on ego center view.
+
+634
+00:59:24,007 --> 00:59:31,314
+Maybe I could use a lab like model train on tactile visual data to label this visually data, right?
+
+635
+00:59:31,364 --> 00:59:34,590
+So that's definitely possible.
+
+636
+00:59:34,640 --> 00:59:35,390
+Yeah,
+
+637
+00:59:35,440 --> 00:59:43,276
+I the same thing as this mountain model and you think about the the neuroscience neuros and also the
+
+638
+00:59:43,326 --> 00:59:50,153
+the robotics learning reminds me of baby how the baby learn and now your robotics run as a baby,
+
+639
+00:59:50,203 --> 00:59:50,503
+right?
+
+640
+00:59:50,533 --> 00:59:56,910
+It's like baby, you know, how the b how you how the machine learn versus how the baby learn, right?
+
+641
+00:59:56,960 --> 00:59:57,950
+I'm curious to see.
+
+642
+00:59:58,000 --> 00:59:58,300
+Yeah.
+
+643
+00:59:58,234 --> 01:00:02,013
+Well, the neuroscience side of things is uh is quite interesting because I mean,
+
+644
+01:00:02,063 --> 01:00:11,016
+if you're talking about like sort of planting sensors in people's brain, uh yes, this this is the most direct form of human data.
+
+645
+01:00:11,066 --> 01:00:18,533
+So maybe we can actually infer more intent from just like like I don't know the more uh more better sensors.
+
+646
+01:00:18,583 --> 01:00:23,516
+But in terms of the way robots learn as human learners, I think right now it's very different.
+
+647
+01:00:23,566 --> 01:00:28,206
+Uh what we're trying to do is the way like it's sort of like large language model analogy.
+
+648
+01:00:28,256 --> 01:00:34,089
+We're not teaching larger language model by teaching how to speak like grammars and everything, right?
+
+649
+01:00:34,139 --> 01:00:37,630
+We dump internet.zip into a model, right?
+
+650
+01:00:37,680 --> 01:00:44,960
+What we're trying to do is to dump human.zip into a model and see what happens, right?
+
+651
+01:00:45,010 --> 01:00:46,029
+Yeah.
+
+652
+01:00:46,079 --> 01:00:46,412
+Yeah.
+
+653
+01:00:46,442 --> 01:00:52,114
+uh you motivated your talk with uh LSD and how datadriven learning has revolutionized that field.
+
+654
+01:00:52,164 --> 01:00:54,749
+One thing that's been really important is data quality.
+
+655
+01:00:54,799 --> 01:00:55,170
+Yeah.
+
+656
+01:00:55,200 --> 01:00:55,559
+Yeah.
+
+657
+01:00:55,589 --> 01:00:59,361
+And uh you often times when we talk about human data can be really noisy.
+
+658
+01:00:59,411 --> 01:01:07,373
+Uh what are your thoughts on like filtering out bad data or like how do you do quality control uh etc. Excellent question.
+
+659
+01:01:07,423 --> 01:01:11,603
+I think that's the next stage of this like once we have more than let's like like
+
+660
+01:01:11,653 --> 01:01:15,107
+I said we're going to have more data than we know how to do with it right.
+
+661
+01:01:15,157 --> 01:01:23,470
+So uh we could yeah we the data filtering understanding like how to explore the data what data attribution right what data matters in
+
+662
+01:01:23,520 --> 01:01:32,990
+produce that is is the science of pro training is just start starting for for for these kind of models actually wonderful talk really really
+
+663
+01:01:33,040 --> 01:01:36,282
+inspiring and interesting work I'm wondering if you can talk a little
+
+664
+01:01:36,332 --> 01:01:42,269
+bit about what you observe after supervised finetuning so what I understood correct
+
+665
+01:01:42,319 --> 01:01:51,532
+me if I'm wrong in the middle projects where you were pre-training with large data and then um and then uh testing on specific tasks.
+
+666
+01:01:51,582 --> 01:01:54,990
+You were still pre-training and then mid-train and then supervised fine-tuning.
+
+667
+01:01:55,040 --> 01:01:55,789
+Yeah.
+
+668
+01:01:55,839 --> 01:02:00,029
+Do you obtain any degree of generalization after supervised?
+
+669
+01:02:00,079 --> 01:02:00,761
+Great question.
+
+670
+01:02:00,811 --> 01:02:08,231
+Yeah, we we didn't really stress test this but we in the paper but really did a lot of testing.
+
+671
+01:02:08,281 --> 01:02:12,559
+I can't talk too much about this like this is part of the media project um that
+
+672
+01:02:12,609 --> 01:02:16,650
+I can tell you that it does it does have a lot of transfer um from human
+
+673
+01:02:16,700 --> 01:02:22,990
+knowledge not in the form of um mostly um so some in the form of spatial analization
+
+674
+01:02:23,040 --> 01:02:29,666
+objectization but what's most surprising is the language following became much better I I don't know why like
+
+675
+01:02:29,716 --> 01:02:34,136
+we don't have a good hypothesis of why language following became much better when you pre-tr human
+
+676
+01:02:34,186 --> 01:02:41,125
+data um but yeah compared with other frontier models like human train human training data is actually most
+
+677
+01:02:41,175 --> 01:02:46,379
+effective like we can actually do like for example negative steering like we can actually say don't
+
+678
+01:02:46,429 --> 01:02:50,617
+do this and actually like try to avoid that object when it when it's trying to do it.
+
+679
+01:02:50,667 --> 01:02:50,967
+Yeah.
+
+680
+01:02:50,960 --> 01:02:54,590
+Follow up your your human data was also language labelled right.
+
+681
+01:02:54,640 --> 01:02:59,620
+Uh yes yeah yeah that yeah sorry that that that was the reason.
+
+682
+01:02:59,670 --> 01:03:05,240
+Yeah for other applications there's been a push towards synthetic data to amplify the current existing data.
+
+683
+01:03:05,290 --> 01:03:11,309
+Have you also seen that with vision models for robotics or are the general models not there yet?
+
+684
+01:03:11,359 --> 01:03:13,549
+Uh sorry can you rephrase your question?
+
+685
+01:03:13,599 --> 01:03:18,212
+Oh so like synthetic data is really important for other applications like for instance because it's more
+
+686
+01:03:18,262 --> 01:03:25,150
+reliable but then have you seen people using like generative AI images or videos or just simulation?
+
+687
+01:03:25,200 --> 01:03:27,574
+Great question.
+
+688
+01:03:27,624 --> 01:03:34,990
+Um so the thing is that um the synthetic data is useful because you want something scalable,
+
+689
+01:03:35,040 --> 01:03:45,167
+controllable and uh maybe can some characteristics that you want from data that you can manually inject right but for human data right now we can
+
+690
+01:03:45,217 --> 01:03:55,549
+actually like the way that we for example tell our vendors to is we can have the high degree freedom of control over what behaviors they have.
+
+691
+01:03:55,599 --> 01:04:01,123
+So uh for now I think it's okay to not to only rely on like
+
+692
+01:04:01,173 --> 01:04:08,380
+realistic real world data but uh in the future definitely uh synthetic data will be very
+
+693
+01:04:08,430 --> 01:04:16,110
+useful and the one place that where is very very useful is um the last inch
+
+694
+01:04:16,160 --> 01:04:22,455
+of between your hand and object because human hands are still very different from robot hands,
+
+695
+01:04:22,505 --> 01:04:22,858
+right?
+
+696
+01:04:22,888 --> 01:04:30,216
+And then the way that we interact with the object will be subtly but importantly different from how robots should interact with with the object.
+
+697
+01:04:30,266 --> 01:04:37,456
+And this last inch or last newton difference is going to be like we we like basically you want to answer the question if I
+
+698
+01:04:37,506 --> 01:04:45,209
+were a different person or different robot how I should have done this in order to cause the same effect of this what I have demonstrated.
+
+699
+01:04:45,259 --> 01:04:45,559
+Right?
+
+700
+01:04:45,546 --> 01:04:48,908
+So that kind of counterfactual data doesn't exist in the real world.
+
+701
+01:04:48,958 --> 01:04:54,643
+You have to synthesize it. with language models.
+
+702
+01:04:54,693 --> 01:04:58,830
+Uh the big breakthroughs happened first in languages in which a lot of text was
+
+703
+01:04:58,880 --> 01:05:03,590
+already available but then there are also translation models to convert that to other languages.
+
+704
+01:05:03,640 --> 01:05:08,114
+So for parts of the world where neither Ariana or iPhone would be very common.
+
+705
+01:05:08,164 --> 01:05:11,863
+Do you think that the different kinds of scenes or different ways of doing
+
+706
+01:05:11,913 --> 01:05:18,749
+things could still get some translation benefit from training on these kinds of data sets?
+
+707
+01:05:18,799 --> 01:05:24,597
+Are we talking about like cross the bicep stickers or cross very different kinds of objects maybe
+
+708
+01:05:24,647 --> 01:05:31,566
+or different human preferences of how tasks like how like basically do we need like a everybody
+
+709
+01:05:31,616 --> 01:05:37,087
+doing the same task the same way or like diver behavior and diversity right yeah that's a
+
+710
+01:05:37,137 --> 01:05:41,968
+really good question I think um there's this is a I would say there's a paradigm shift
+
+711
+01:05:42,018 --> 01:05:47,063
+how right now as to like how do we design these these models right again like what
+
+712
+01:05:47,113 --> 01:05:51,789
+I said the VA's A lot of these behavior coding models are designed to fit uni uni
+
+713
+01:05:51,839 --> 01:05:56,968
+strategy data and right now you can't really constrain human behavior if if you want to learn
+
+714
+01:05:57,018 --> 01:06:01,470
+from natural human behavior you can't constrain them like that's our goal right so in order to
+
+715
+01:06:01,520 --> 01:06:04,269
+solve this problem we really need a new type of model to be able to fit this
+
+716
+01:06:04,319 --> 01:06:08,749
+kind of data and diversity I would say is is the thing it's a problem not a
+
+717
+01:06:08,799 --> 01:06:16,746
+solution right we want to solve that to in order to leverage more data yeah similar question
+
+718
+01:06:16,796 --> 01:06:21,407
+um what do you think is the future of Tel operation given all this development and do
+
+719
+01:06:21,457 --> 01:06:27,648
+you think how do you think robotic companies will evolve their investment in Telop given how are
+
+720
+01:06:27,698 --> 01:06:37,217
+you a VC uh because I will give a different answer uh so yeah I think my
+
+721
+01:06:37,267 --> 01:06:43,480
+personal goal is to get rid of tail operation because this is just like I said in
+
+722
+01:06:43,530 --> 01:06:49,927
+the beginning it's a lossy pipe like I I really want my human robots to be humanlike.
+
+723
+01:06:49,977 --> 01:06:57,633
+For example, if I throw this water bottle at you, you would either catch it or you flinch, I want my robot to be able to do the same thing.
+
+724
+01:06:57,683 --> 01:07:00,724
+You would not be able to tell our to demonstrate this repeatedly.
+
+725
+01:07:00,774 --> 01:07:03,344
+This is all natural human behaviors, right?
+
+726
+01:07:03,394 --> 01:07:04,501
+I want that to happen.
+
+727
+01:07:04,551 --> 01:07:06,670
+This is my personal goal.
+
+728
+01:07:06,720 --> 01:07:12,590
+Yeah.
+
+729
+01:07:12,640 --> 01:07:13,099
+Oh, sure.
+
+730
+01:07:13,149 --> 01:07:17,950
+What's your opinion on hand important and how much it should match human?
+
+731
+01:07:18,000 --> 01:07:20,549
+Oh, great question.
+
+732
+01:07:20,599 --> 01:07:21,900
+Uh, yeah.
+
+733
+01:07:21,950 --> 01:07:29,302
+So, I mean like I mean I would say yeah like what I said like the last inch gap, right?
+
+734
+01:07:29,352 --> 01:07:33,272
+Like if you if your hands is very hum like if your robot hands very like there's
+
+735
+01:07:33,322 --> 01:07:37,845
+if there's no difference between your robot hands and human hand in terms of kinematics and dynamic capability,
+
+736
+01:07:37,895 --> 01:07:42,251
+you can move really fast, you can move flexibly, you don't need to bridge the gap, right?
+
+737
+01:07:42,301 --> 01:07:44,605
+It's just it just should just work.
+
+738
+01:07:44,655 --> 01:07:48,003
+Uh so but I mean we're not there yet.
+
+739
+01:07:48,053 --> 01:07:55,301
+So the like the less humanlike your robot uh hands or factor or the whole body is the
+
+740
+01:07:55,351 --> 01:08:01,230
+more a bigger a gap you have to bridge and the actual transfer that happens will be different.
+
+741
+01:08:01,280 --> 01:08:02,563
+For example,
+
+742
+01:08:02,613 --> 01:08:11,193
+um like uh like let's say if I have a high higher degree of freedom has than robot than human has then maybe
+
+743
+01:08:11,243 --> 01:08:18,373
+the the thing we want to retarget is not the actual kinematic configuration but contact right I want the contact to happen at
+
+744
+01:08:18,423 --> 01:08:25,710
+this point in time in in this space like here right and if I have uh ways to exert force similar to how
+
+745
+01:08:25,760 --> 01:08:31,866
+human do and can measure force then this is what we should retarget and then the rest of the configuration doesn't really matter Right.
+
+746
+01:08:31,916 --> 01:08:33,280
+You define a task space.
+
+747
+01:08:33,330 --> 01:08:39,709
+The rest you hand over to like a IK or inverse dynamics or learn learn learn solver.
+
+748
+01:08:39,759 --> 01:08:41,709
+Right.
+
+749
+01:08:41,759 --> 01:08:42,059
+Yeah.
+
+750
+01:08:42,087 --> 01:08:50,337
+So the basically the bigger the gap the more work you have to do like to do enable transfer.
+
+751
+01:08:50,387 --> 01:08:51,629
+Yeah.
+
+752
+01:08:51,679 --> 01:08:52,970
+It's a lot of great questions.
+
+753
+01:08:53,020 --> 01:08:57,082
+Thank you.

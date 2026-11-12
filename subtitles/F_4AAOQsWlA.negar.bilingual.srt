@@ -1,0 +1,1083 @@
+1
+00:00:00,000 --> 00:00:02,100
+So please join me in welcoming Negar Mehr.
+
+2
+00:00:05,040 --> 00:00:11,440
+Thank you so much, Ken, for the very kind introduction and thanks to the organizers for bringing us together.
+
+3
+00:00:12,260 --> 00:00:16,690
+So I'm very excited to share with you what my lab has been working on.
+
+4
+00:00:16,740 --> 00:00:21,450
+And in particular, if you're worried that there is not much left for you to do in robotics,
+
+5
+00:00:21,500 --> 00:00:27,370
+I want to encourage you all to think about the next steps and I want to convince you that there are still
+
+6
+00:00:27,420 --> 00:00:36,180
+many more problems and challenges to solve So we are all excited We are seeing performances capabilities and robotics that we couldn't
+
+7
+00:00:36,230 --> 00:00:43,700
+really imagine of a couple of years ago Every time I just open up my Twitter or X I'm impressed by the
+
+8
+00:00:43,750 --> 00:00:51,560
+demos that we see and the exciting capabilities that are being unlocked by the robotic systems But I think as a community,
+
+9
+00:00:51,610 --> 00:00:59,730
+it is now time to think about how can we go one step further and how can we have robots that are integrated into our lives,
+
+10
+00:01:00,270 --> 00:01:08,440
+the same way that autonomous cars were integrated into our lives and they share roads with human driven cars or pedestrians around here in Austin,
+
+11
+00:01:08,490 --> 00:01:11,370
+I see many Waymo cars, which is very exciting.
+
+12
+00:01:12,300 --> 00:01:16,340
+But now that we have all these new capabilities emerging in robotic systems,
+
+13
+00:01:16,720 --> 00:01:22,100
+how about having humanoids, quadrupeds or other robots around in this conference helping us.
+
+14
+00:01:23,040 --> 00:01:26,110
+And obviously we are very far from that point and that is why I had
+
+15
+00:01:26,160 --> 00:01:30,860
+to generate this image using Astra because I couldn't find any real world images of this.
+
+16
+00:01:31,200 --> 00:01:36,530
+But what we are looking at is how can we get robots to interact safely
+
+17
+00:01:36,580 --> 00:01:42,870
+and intelligently with other agents in unstructured environments that are humans around or other robots around.
+
+18
+00:01:42,920 --> 00:01:49,630
+And that's, I think, a very timely question to ask, because maybe five years ago when I posed this question,
+
+19
+00:01:49,680 --> 00:01:54,710
+people would be like, but I don't even have a robot that does things reliably on its own.
+
+20
+00:01:54,760 --> 00:01:56,340
+Why would I worry about this?
+
+21
+00:01:56,600 --> 00:01:58,790
+But I think it's time to think about this.
+
+22
+00:01:58,840 --> 00:02:07,350
+And this is a very hard problem that requires us to think about different aspects of robotic algorithm design and hardware design.
+
+23
+00:02:07,400 --> 00:02:13,960
+On the algorithmic side, my lab has been working on what does planning look like in these domains?
+
+24
+00:02:14,010 --> 00:02:15,620
+What should learning look like?
+
+25
+00:02:15,670 --> 00:02:16,760
+How about perception?
+
+26
+00:02:16,810 --> 00:02:17,830
+How about safety?
+
+27
+00:02:18,470 --> 00:02:25,630
+But we are at conference on robot learning, so I want to share with you in what ways is learning in these domains different,
+
+28
+00:02:25,990 --> 00:02:33,230
+and in what ways some lessons that we have learned from learning in multi-agent domains can actually be useful for learning in single-agent domains.
+
+29
+00:02:33,450 --> 00:02:40,810
+And throughout this talk, to motivate what we do, I'm going to use a very simple running example.
+
+30
+00:02:41,650 --> 00:02:49,070
+Imagine you have two agents, two robots, both of whom want to carry an object like a basket.
+
+31
+00:02:50,230 --> 00:02:57,770
+And what I'm interested in is that I want to learn policies for each one of those robots so that when I pair these policies together,
+
+32
+00:02:57,990 --> 00:03:03,110
+they collectively succeed in this task of collaborating an object on transporting an object.
+
+33
+00:03:04,000 --> 00:03:06,980
+What's hard about this is that I want my policies to be decentralized.
+
+34
+00:03:07,160 --> 00:03:10,910
+I want every robot to make decisions based on its own local observations,
+
+35
+00:03:10,960 --> 00:03:17,080
+but there is some coupling which is implicit that both of them should agree on how to do a task to succeed.
+
+36
+00:03:18,040 --> 00:03:19,510
+What are our approaches?
+
+37
+00:03:19,560 --> 00:03:22,240
+What are the recipes out there for learning these policies?
+
+38
+00:03:22,420 --> 00:03:24,720
+One approach is through imitation learning.
+
+39
+00:03:25,020 --> 00:03:27,160
+One is through reinforcement learning.
+
+40
+00:03:27,440 --> 00:03:33,560
+And what I'm going to do today is first I'm going to talk about what imitation looks like in these domains.
+
+41
+00:03:34,360 --> 00:03:38,580
+Then I'm going to share with you what happens if you try to use RL for solving these tasks.
+
+42
+00:03:39,020 --> 00:03:42,390
+And finally, I'm going to share some recent advances that we've made,
+
+43
+00:03:42,440 --> 00:03:45,990
+which I think are very exciting and tell us how ideas from multi
+
+44
+00:03:46,040 --> 00:03:50,900
+agent learning can actually really help in the context of single-agent continual learning.
+
+45
+00:03:51,400 --> 00:03:53,260
+Let's start by imitating.
+
+46
+00:03:53,520 --> 00:03:58,600
+We've seen a lot of capabilities?
+
+47
+00:03:58,780 --> 00:04:04,680
+What if I just collect some demonstrations from two robots collaboratively lifting an object?
+
+48
+00:04:05,320 --> 00:04:09,310
+And then I can just do behavioral cloning and directly imitate policies.
+
+49
+00:04:09,360 --> 00:04:11,840
+How is it even different from single-agent domains?
+
+50
+00:04:12,530 --> 00:04:17,300
+So we started to think about this problem theoretically first to think about in
+
+51
+00:04:17,350 --> 00:04:23,030
+what ways is directly imitating policies in multi-agent domains different from single-agent domains.
+
+52
+00:04:23,870 --> 00:04:27,670
+And intuitively, at a very high level, the difficulties are following.
+
+53
+00:04:28,150 --> 00:04:33,260
+Let's say I collect some demonstration data, and my object is a heavy object.
+
+54
+00:04:33,310 --> 00:04:36,910
+So no single robot can on its own pick up the object.
+
+55
+00:04:37,800 --> 00:04:40,240
+And then I imitate policies of the two robots.
+
+56
+00:04:41,000 --> 00:04:49,000
+But during execution, if one of the robots slightly deviates from what it did, or what the expert did in its demonstrations,
+
+57
+00:04:49,480 --> 00:04:55,950
+the entire effort fails, and the other robot, no matter how hard it tries, it can't really account for what happened.
+
+58
+00:04:56,000 --> 00:05:01,090
+So the deviations from expert expert policies, which are very common in behavioral cloning,
+
+59
+00:05:01,140 --> 00:05:05,540
+are something that we cannot really tolerate and accommodate in multi-agent domains.
+
+60
+00:05:06,080 --> 00:05:11,050
+So again, we formally characterize this, it turns out that instead of value gap,
+
+61
+00:05:11,100 --> 00:05:17,510
+which is the metric that we typically care about in single-agent imitation learning, in multi-agent behavioral cloning,
+
+62
+00:05:17,560 --> 00:05:22,340
+we have to think about something that we call exploitability of learned policies, which is,
+
+63
+00:05:22,640 --> 00:05:30,360
+if one agent deviates slightly from what they did in the expert demo, how will the other agent react and how bad that can be.
+
+64
+00:05:30,770 --> 00:05:35,950
+And again, very informally, it's very hard to learn low exploitable policies.
+
+65
+00:05:36,110 --> 00:05:41,760
+And we have noticed that what this theoretical results means is that data coverage,
+
+66
+00:05:41,810 --> 00:05:49,780
+covering all possible failure modes and all possible interaction modes matters even more in multi-agent interaction.
+
+67
+00:05:49,830 --> 00:05:52,890
+So you have to scale up your data collection even more.
+
+68
+00:05:53,390 --> 00:06:00,710
+And yet, all this is based on the assumption that there is only one way to coordinate with other agents.
+
+69
+00:06:01,300 --> 00:06:05,060
+And we know that interactions are multimodal.
+
+70
+00:06:05,760 --> 00:06:10,470
+multimodality in multi-agent interactions is even more common than single-agent domains.
+
+71
+00:06:10,520 --> 00:06:17,210
+The same task that I showed, there are two ways for the robots or even more, you could argue there are three ways for the robots to coordinate.
+
+72
+00:06:17,260 --> 00:06:23,740
+But how can you how can they decide on their own which mode the other agent is picking up on?
+
+73
+00:06:24,590 --> 00:06:30,490
+So the moment I talk about multimodalities, I'm sure this audience thinks of diffusion policies,
+
+74
+00:06:30,650 --> 00:06:36,650
+because because we've all seen how amazing diffusion policies have been in capturing multimodalities.
+
+75
+00:06:37,170 --> 00:06:42,780
+So we started to think, maybe that's the recipe, maybe to learn a different coordination mode,
+
+76
+00:06:42,830 --> 00:06:47,540
+what I need to do is to use the multimodal capabilities of diffusion
+
+77
+00:06:47,590 --> 00:06:53,150
+policies and imitate decentralized diffusion policies that can learn to adapt to other agents.
+
+78
+00:06:53,830 --> 00:07:01,580
+So we designed a centralized training, decentralized execution pipeline where we pair policies with one another,
+
+79
+00:07:01,630 --> 00:07:06,970
+train them, but during execution they're just decentralized policies all in a diffusion form.
+
+80
+00:07:07,800 --> 00:07:08,560
+And it works.
+
+81
+00:07:09,360 --> 00:07:15,040
+One of my favorite videos is actually this video that the two robots are making decisions, each one of them is making decisions on its own,
+
+82
+00:07:15,300 --> 00:07:20,950
+but they don't know which way the other robot is going, but they learn to implicitly coordinate with one another.
+
+83
+00:07:21,000 --> 00:07:25,970
+One of them is pulling the basket, the other is pushing, but by just leveraging this to cast this at the end,
+
+84
+00:07:26,020 --> 00:07:30,640
+running this in a receding horizon, they ultimately agree on a one mode of interaction.
+
+85
+00:07:31,610 --> 00:07:32,490
+So this is great.
+
+86
+00:07:33,010 --> 00:07:34,010
+Is it solved?
+
+87
+00:07:34,740 --> 00:07:39,710
+For any of you who has ever teleoperated the bi-manual setup or a multi-agent setup,
+
+88
+00:07:39,760 --> 00:07:45,000
+you kind of know how hard it is to collect data in these interactive domains.
+
+89
+00:07:45,640 --> 00:07:51,940
+So this requires enough demonstration data for each interactive task, which is really hard to achieve.
+
+90
+00:07:52,790 --> 00:07:55,090
+And naturally for all of us in this conference,
+
+91
+00:07:55,450 --> 00:08:03,680
+a very key question to ask is single-agent robots have so much capability that are pre-trained in them these days.
+
+92
+00:08:03,730 --> 00:08:12,170
+How can we build on these pre-trained skills that robots have achieved, to enable robots to have coordination on demand?
+
+93
+00:08:12,790 --> 00:08:17,710
+Instead of training everything from scratch for my robots to learn how to coordinate with one another?
+
+94
+00:08:17,950 --> 00:08:24,780
+What if I just build on the existing capabilities and make the robot coordinate and interact only when it is needed,
+
+95
+00:08:24,830 --> 00:08:28,630
+and not forgetting about things that they could do on on their own?
+
+96
+00:08:29,390 --> 00:08:34,900
+So recently, we've been looking into what if we freeze what the robot already knows,
+
+97
+00:08:34,950 --> 00:08:41,230
+and just learn only the correction that is needed for achieving coordination between pre-trained skills,
+
+98
+00:08:41,470 --> 00:08:46,610
+only using few demonstrations, not as much as training everything from scratch.
+
+99
+00:08:47,240 --> 00:08:52,530
+And the first thing that they've tried is how about we just learn residual denoiser
+
+100
+00:08:52,580 --> 00:08:58,740
+for correcting single-agent policies to get robots to interact and coordinate with one another.
+
+101
+00:08:59,870 --> 00:09:06,950
+So I assume that I have a diffusion policy that has learned certain skills for just one robot, let's say pick in place and wiping.
+
+102
+00:09:07,510 --> 00:09:10,670
+And what I do is just only few demonstration data,
+
+103
+00:09:10,830 --> 00:09:18,330
+I use that to correct my denoising process so that I coordinate the timing of the agents actions with one another.
+
+104
+00:09:19,160 --> 00:09:24,190
+And the way that I do this is that I start from a frozen base policy for just one robot,
+
+105
+00:09:24,240 --> 00:09:28,780
+and collect very few demonstrations of multi-agent interaction,
+
+106
+00:09:29,200 --> 00:09:39,020
+then collect some distilled single-agent demonstrations from my frozen policy, and collectively use these data sets to train a coordination head.
+
+107
+00:09:39,730 --> 00:09:47,330
+And what's nice about this coordination residual that I train is that I can achieve coordination when it is needed.
+
+108
+00:09:47,630 --> 00:09:56,680
+One robot can do part of the job while the other one finishes the job, but also it retains the single-agent source behavior that the robots had.
+
+109
+00:09:56,730 --> 00:10:03,390
+if a task just requires one robot to accomplish a task on its own, I haven't lost those capabilities.
+
+110
+00:10:04,270 --> 00:10:10,420
+But I want to encourage you to think about what we can do by building on these single-agent capabilities,
+
+111
+00:10:10,470 --> 00:10:14,600
+because I think it's an exciting time to think about multi-agent coordination and
+
+112
+00:10:14,650 --> 00:10:20,430
+integrating robots in these type of tasks using the capabilities that they have already built.
+
+113
+00:10:22,270 --> 00:10:24,560
+So, imitation one way.
+
+114
+00:10:24,610 --> 00:10:29,210
+What if I was trying to solve this same task using reinforcement learning.
+
+115
+00:10:30,220 --> 00:10:38,100
+We asked that question, if I use multi-agent reinforcement learning to train my two robots to collaboratively pick up this object,
+
+116
+00:10:38,460 --> 00:10:44,960
+this is the best that we could achieve, no matter how hard of a reward engineering with it.
+
+117
+00:10:46,260 --> 00:10:52,700
+No matter how hard we tried it, this was the best that the robots could do in terms of collaboratively picking up this object.
+
+118
+00:10:53,320 --> 00:10:55,830
+So we started to think, why is that the case?
+
+119
+00:10:55,880 --> 00:10:58,900
+Why is it so hard to use RL to train these policies.
+
+120
+00:10:59,220 --> 00:11:05,350
+Why is it that we as humans are really good at interacting with one another learning to cooperate and interact with our
+
+121
+00:11:05,400 --> 00:11:09,650
+teammates in actually very intricate and complicated forms of interactions like
+
+122
+00:11:09,700 --> 00:11:15,980
+sports and very intricate forms of interactions that people build over time.
+
+123
+00:11:17,170 --> 00:11:20,940
+And for those of you who have watched World Cup over this past summer,
+
+124
+00:11:20,990 --> 00:11:27,920
+you perhaps remember how much everyone was talking about coaches and how all these memes about coaches went viral,
+
+125
+00:11:27,970 --> 00:11:34,370
+and people were arguing about what's the role of a coach and coaches' strategy in a team's performance.
+
+126
+00:11:34,810 --> 00:11:42,130
+So we started to think maybe one of the reasons that we humans can learn to interact with others is that we leverage good coaches.
+
+127
+00:11:42,450 --> 00:11:48,770
+What if I can coach my robot to learn complex tasks like coordination tasks?
+
+128
+00:11:48,960 --> 00:11:56,780
+What if I use my foundation models to act as my coaches for guiding my robot learning loop?
+
+129
+00:11:57,080 --> 00:12:01,530
+Using reasoning, coding, and visual understanding capabilities of these models,
+
+130
+00:12:01,580 --> 00:12:08,380
+I just get to have a coach which is for free and autonomously guiding the learning process of my robot.
+
+131
+00:12:09,190 --> 00:12:16,110
+Let's first see what that looks like in a single-agent setting, and then I bring in the multi-agent coordination aspect of it.
+
+132
+00:12:16,270 --> 00:12:19,070
+Let's say I want to teach a robot to run backwards.
+
+133
+00:12:19,710 --> 00:12:24,140
+And I'm not a locomotion person, so I don't really know what the reward function should be.
+
+134
+00:12:24,190 --> 00:12:26,550
+I have no idea how I should set up the training.
+
+135
+00:12:27,540 --> 00:12:34,840
+So what we did was was like, okay, I feel have a coach, maybe my coach can break down the task into a sequence of simpler tasks.
+
+136
+00:12:35,180 --> 00:12:41,780
+Then my coach also defines what it means means to do each sub task such as, for example, is stabilizing itself.
+
+137
+00:12:42,120 --> 00:12:44,070
+And then my coach provides feedback.
+
+138
+00:12:44,120 --> 00:12:50,930
+and that loop is gonna be enough for me to learn a good enough policy that they can transfer zero-shot to
+
+139
+00:12:50,980 --> 00:12:59,080
+my to my hardware and that way I can learn these skills in reinforcement learning without having to spend so much time figuring out
+
+140
+00:12:59,130 --> 00:13:07,290
+what reward function I should try, and once I learn certain skills, let's say running backwards or some whole-body control with proper
+
+141
+00:13:07,340 --> 00:13:17,980
+coaching I can actually use the existing skills that the robot has learned to accomplish new tasks with no training and no data collection.
+
+142
+00:13:18,820 --> 00:13:25,760
+And inspired by the line of work that actually Ken pioneered on using code as policies or agentic robotics,
+
+143
+00:13:26,120 --> 00:13:31,980
+we started to think what if I use code as a coach for composing the pre-trained robot skills.
+
+144
+00:13:32,560 --> 00:13:39,790
+For example, I have a robot that has its own let's say pre-trained skills such as walking backwards or a whole-body controller.
+
+145
+00:13:39,840 --> 00:13:45,780
+And I just use my coach in terms of a policy code to compose those skills with one another.
+
+146
+00:13:46,020 --> 00:13:49,680
+And what's nice about this is that it doesn't require any retraining.
+
+147
+00:13:49,840 --> 00:13:52,090
+I don't collect any human data.
+
+148
+00:13:52,140 --> 00:13:57,480
+And all it takes is just building on the pre-trained and already learned skills.
+
+149
+00:13:57,760 --> 00:14:00,490
+And that to our surprise turned out to work,
+
+150
+00:14:00,540 --> 00:14:08,050
+we could transfer these policies to the real world humanoid could essentially lift the basket and object from different positions,
+
+151
+00:14:08,100 --> 00:14:10,680
+different initial positions and different goal positions.
+
+152
+00:14:11,540 --> 00:14:14,990
+And what was even more interesting to me is that in other tasks, for example,
+
+153
+00:14:15,040 --> 00:14:20,810
+let's say pushing a button, when we first deployed our policy, we had around 20 % success rate.
+
+154
+00:14:20,860 --> 00:14:28,090
+But by just two rounds of refinement on our coach, coach code, we increase the success rate to 90%.
+
+155
+00:14:28,140 --> 00:14:33,710
+And this is all without any retargeting or human data collection, or anything like that.
+
+156
+00:14:33,760 --> 00:14:38,860
+And this is this was all by the way before Astra, I'm sure the performance is going to even be better now.
+
+157
+00:14:39,790 --> 00:14:40,840
+But this is for single-agent.
+
+158
+00:14:40,890 --> 00:14:45,290
+And I promise to you that this is interesting for coordination and multi-agent systems.
+
+159
+00:14:45,770 --> 00:14:52,190
+Turns out the same recipe actually enables coordination tasks that we couldn't really achieve before.
+
+160
+00:14:52,530 --> 00:14:53,900
+Like, for example,
+
+161
+00:14:53,950 --> 00:15:02,300
+this running example that I had collaboratively lifting an object with a proper coaching using these foundation models is doing a much,
+
+162
+00:15:02,350 --> 00:15:03,090
+much better job.
+
+163
+00:15:03,690 --> 00:15:11,240
+Or I can get my quadrupeds to essentially balance a seesaw so that one of them can climb the seesaw.
+
+164
+00:15:11,290 --> 00:15:16,530
+Whereas if you try to just train multi-agent PPO to get to do this, it's hopeless.
+
+165
+00:15:17,320 --> 00:15:24,990
+Or I can teach quadrupeds to pass through a gate by proper coaching of knowing, well, you should do this,
+
+166
+00:15:25,040 --> 00:15:28,830
+here's how you should do, here's what your reward should be, and here's what each sub task should be.
+
+167
+00:15:28,880 --> 00:15:37,670
+Or I can pair these robots with humans to collaboratively do tasks, such as transporting an object, which was really hard for me to do on my own.
+
+168
+00:15:37,720 --> 00:15:44,360
+But when I actually tried this experiment, I was surprised by how easy it is to actually have a quadruped helping me with transporting heavy objects.
+
+169
+00:15:45,750 --> 00:15:49,330
+So this was very, to our surprise, it was very effective.
+
+170
+00:15:49,830 --> 00:15:52,020
+And we were kind of inspired and encouraged by that.
+
+171
+00:15:52,070 --> 00:15:55,840
+So we started to think, is there anything else that a coach does for a team of agents?
+
+172
+00:15:55,890 --> 00:16:01,200
+And for anyone who has ever taught a class with group projects,
+
+173
+00:16:01,250 --> 00:16:06,660
+I'm sure at the end of a class you've got complaints about I contributed to my team effort,
+
+174
+00:16:06,710 --> 00:16:10,450
+my partners didn't, I should get credit for what I did, others shouldn't.
+
+175
+00:16:10,810 --> 00:16:14,460
+And that's the same thing that makes multi-agent reinforcement learning really hard,
+
+176
+00:16:14,510 --> 00:16:26,210
+which is, as you're looking at how interactions unfold, you need to have a good understanding of who contributed to get credit.
+
+177
+00:16:26,510 --> 00:16:34,020
+Because even if a team effort failed, there might still be some agents who actually contributed to the team effort,
+
+178
+00:16:34,070 --> 00:16:37,970
+and others are the ones who essentially resulted in the team failure.
+
+179
+00:16:38,470 --> 00:16:45,460
+So we're like, maybe I can just make my foundation model and my coach to just be a good credit designer.
+
+180
+00:16:45,510 --> 00:16:49,950
+Maybe that's all I need for getting the robots to learn to coordinate with one another.
+
+181
+00:16:50,390 --> 00:16:52,360
+And again, this was in 2025.
+
+182
+00:16:52,410 --> 00:16:55,180
+Models were not as amazing as they are today.
+
+183
+00:16:55,230 --> 00:17:02,170
+But it turned out by just simply asking the model existing model off the shelf model to play the role of a credit designer,
+
+184
+00:17:02,510 --> 00:17:08,370
+you can outperform a state of the art in terms of a coordination capabilities by orders of magnitude.
+
+185
+00:17:08,790 --> 00:17:14,790
+For example, in a warehouse where robots are moving objects around, and you really want to coordinate that effort,
+
+186
+00:17:15,130 --> 00:17:24,410
+we are doing way better than a baseline such as MAPPO, HAPPO and LIPO, which are very well known baselines in multi-agent reinforcement learning.
+
+187
+00:17:24,870 --> 00:17:26,000
+And again, this was 2025.
+
+188
+00:17:26,050 --> 00:17:28,480
+I'm sure the performance is going to be even better now.
+
+189
+00:17:28,530 --> 00:17:36,160
+But I want to argue that these are actually exciting times for us to think about how we can coach robots to learn to interact with one another,
+
+190
+00:17:36,210 --> 00:17:40,850
+and hopefully down the line, cooperate and coordinate with humans.
+
+191
+00:17:42,170 --> 00:17:45,470
+But now we want to flip the problem a little bit.
+
+192
+00:17:45,930 --> 00:17:51,180
+And I want to argue that there are some lessons that we have learned by studying multi-agent systems,
+
+193
+00:17:51,230 --> 00:17:56,750
+which have actually proven to be really useful and relevant for single-agent learning.
+
+194
+00:17:57,800 --> 00:18:01,200
+And that has been primarily in the context of continual learning.
+
+195
+00:18:02,160 --> 00:18:10,900
+So let's now go back to the world of one agent learning on its own and let's imagine an agent that is continuously learning new tasks.
+
+196
+00:18:11,420 --> 00:18:16,530
+So you start with some task T, then a new task T plus one comes, then another task comes.
+
+197
+00:18:16,580 --> 00:18:20,560
+What happens as a robot is continuously learning?
+
+198
+00:18:21,540 --> 00:18:27,500
+Typically, what happens is that a robot learns a new task, but it forgets about what it had learned in the past.
+
+199
+00:18:28,100 --> 00:18:37,890
+So, for example, I have a policy theta one that has learned to do one task T1, but I fine-tuned my policy on some tasks T2,
+
+200
+00:18:37,940 --> 00:18:46,500
+then what happens is perhaps parameters that were really important for accomplishing task might be overridden by fine-tuning to task T2.
+
+201
+00:18:47,040 --> 00:18:52,080
+Same thing for task T3, as I move on, I may forget about what I had learned before.
+
+202
+00:18:52,680 --> 00:19:01,810
+So we were facing this problem of catastrophic forgetting when you continuously learn new tasks, and we were thinking this is not good.
+
+203
+00:19:01,860 --> 00:19:05,960
+I learned my task T3, but I forget about how I did tasks T1 and T2.
+
+204
+00:19:06,740 --> 00:19:15,010
+So with that multi-agent view of the we started to think what if continuously learning new tasks can be
+
+205
+00:19:15,060 --> 00:19:21,200
+cast as some sort of a consensus between what the robot is learning now and what it had learned before.
+
+206
+00:19:21,700 --> 00:19:28,610
+In a way, what if the robot didn't forget where it came from and it kept remembering who it was,
+
+207
+00:19:28,660 --> 00:19:31,620
+where it came from, very much the same as what a human should do, I think.
+
+208
+00:19:32,240 --> 00:19:32,770
+So,
+
+209
+00:19:32,820 --> 00:19:39,970
+we started thinking about maybe we can cast continual learning as a temporal consensus between what
+
+210
+00:19:40,020 --> 00:19:44,780
+the robot has learned before and what the new policy parameters of the robot should be.
+
+211
+00:19:45,880 --> 00:19:51,050
+And this is nice because with this consensus view of continuous learning,
+
+212
+00:19:51,100 --> 00:19:58,510
+we can enable a replay-free policy update where I don't require to just keep track of data that was used in my pre
+
+213
+00:19:58,560 --> 00:20:05,500
+-training or hope that an industry lab releases the data set to so that we can keep track of what the robot had already learned.
+
+214
+00:20:06,000 --> 00:20:12,250
+So I enforce a consensus in the weight space of my policy parameters.
+
+215
+00:20:12,300 --> 00:20:15,650
+When I'm learning my policy for task T plus 2,
+
+216
+00:20:15,700 --> 00:20:25,340
+I'm like there should be some form of an agreement with policy parameters for task T plus 1 and policy parameters for task T or T plus 1.
+
+217
+00:20:26,150 --> 00:20:32,630
+And at a very high level intuitively what this does is that as I'm fine-tuning my policy to task T two,
+
+218
+00:20:32,950 --> 00:20:41,970
+I kind of memorize and remember what policy parameters were really important for task T1, so I don't change them too much.
+
+219
+00:20:42,170 --> 00:20:49,400
+And as I add these new tasks, I preserve the policy parameters that were really important and relevant to prior tasks,
+
+220
+00:20:49,450 --> 00:20:54,830
+so that ultimately I can remember the prior tasks and adapt and learn the new task.
+
+221
+00:20:55,770 --> 00:20:57,340
+But what does this consensus look like?
+
+222
+00:20:57,390 --> 00:20:58,280
+So,
+
+223
+00:20:58,330 --> 00:21:05,240
+let's say I've learned my policy parameters for task T and then I have a notion of a weight or importance weight
+
+224
+00:21:05,290 --> 00:21:14,100
+for how much each policy parameter matters for task T and I have another task T plus one and the same thing,
+
+225
+00:21:14,150 --> 00:21:19,690
+I have another notion of a weight matrix which is how much each parameter matters for task T plus one.
+
+226
+00:21:20,270 --> 00:21:28,580
+Ideally, I want my policy parameters to be proportional to kind of like a weighted average of these policy parameters.
+
+227
+00:21:28,630 --> 00:21:32,730
+That's what I mean by consensus in the policy parameter space.
+
+228
+00:21:34,100 --> 00:21:41,500
+But these weights depend on policy parameters, and every task may require its own importance, so how do we achieve this?
+
+229
+00:21:42,700 --> 00:21:43,430
+We were actually, again,
+
+230
+00:21:43,480 --> 00:21:47,670
+inspired by the algorithms that are out there in multi-agent world back in the time
+
+231
+00:21:47,720 --> 00:21:54,590
+from 2014 that people have shown that you could actually use methods like a method of multipliers,
+
+232
+00:21:54,640 --> 00:21:55,590
+primal-dual updates.
+
+233
+00:21:55,640 --> 00:21:59,840
+For those of you have background in optimization, there's room for you to contribute to robotics.
+
+234
+00:22:00,020 --> 00:22:02,590
+So we started to think method of multipliers,
+
+235
+00:22:02,640 --> 00:22:08,640
+primal dual updates for reasons that are very well known in the community could actually be super useful for this task.
+
+236
+00:22:09,460 --> 00:22:14,970
+And this results in kind of like an iterative update where you update your policy parameters a little bit,
+
+237
+00:22:15,020 --> 00:22:17,830
+then you kind of move your consensus constraint a little bit.
+
+238
+00:22:17,880 --> 00:22:24,190
+But in a nutshell, that results in kind of having a moving anchor for your memory as you're training your policies.
+
+239
+00:22:24,240 --> 00:22:31,880
+I'm not going to get into the details of how primal dual updates for method of multipliers work, but let me show you how this works in practice.
+
+240
+00:22:32,660 --> 00:22:41,110
+We took π0.5; our pre-training tasks for π0.5 were a bunch of tasks that we ran in the lab, we collected some data from it,
+
+241
+00:22:41,160 --> 00:22:48,260
+but then we had some target tasks such as remove the lid and place the bird in the basket or cake on the cake tray.
+
+242
+00:22:49,440 --> 00:22:58,550
+And we kind of compared the performance of this temporal consensus way of fine-tuning as opposed to baselines and supervised fine-tuning,
+
+243
+00:22:58,600 --> 00:23:00,640
+the vanilla form of supervised fine-tuning.
+
+244
+00:23:01,230 --> 00:23:04,530
+On the target tasks, both methods do well.
+
+245
+00:23:04,950 --> 00:23:08,630
+Both of them learn the target task for which they have been fine-tuned to.
+
+246
+00:23:08,850 --> 00:23:14,290
+But the beauty of temporal consensus view of it becomes clear when you look at the performance on the pre-trained tasks.
+
+247
+00:23:15,510 --> 00:23:24,720
+While SFT forgets about what it had learned before, by just enforcing a simple consensus which is replay free in the policy parameter space,
+
+248
+00:23:24,770 --> 00:23:27,730
+we managed to remember what the robot had learned before.
+
+249
+00:23:28,860 --> 00:23:32,930
+And this is not me just cherry-picking what I really wanted you to see.
+
+250
+00:23:32,980 --> 00:23:42,320
+We have kind of verified this and run a set of comparisons with other baselines out there, including replay or regularization based methods like EWC,
+
+251
+00:23:42,620 --> 00:23:48,540
+but across them we found that this is the best in terms of adaptation while retaining prior skills.
+
+252
+00:23:49,000 --> 00:23:54,830
+And it's not just in the context of fine tuning that we see this method to be actually particularly useful.
+
+253
+00:23:54,880 --> 00:23:57,920
+We see that in the context of mapping an environment as well.
+
+254
+00:23:58,500 --> 00:24:02,460
+Let's say a robot is mapping an environment which is dynamically changing.
+
+255
+00:24:03,100 --> 00:24:08,720
+And let's say some objects like a table has moved around as the robot is moving around and trying to map the environment.
+
+256
+00:24:09,480 --> 00:24:19,740
+If we use a replay based method, our mapping ends up with two copies of the same table because it has seen data of both positions of table.
+
+257
+00:24:20,380 --> 00:24:26,030
+And if we use a regularization based method that the robot fails to see that the table has moved around
+
+258
+00:24:26,080 --> 00:24:33,080
+because it's just so regularized to not depart from what it has learned before that it doesn't learn to adapt.
+
+259
+00:24:33,360 --> 00:24:36,040
+But by just this consensus view of things,
+
+260
+00:24:36,240 --> 00:24:42,300
+we can preserve things that haven't changed from the past and adapt to the parameters and changes in the scene.
+
+261
+00:24:43,170 --> 00:24:52,230
+The same thing we saw in a number of experiments that we ran in the lab with a temporal consensus that my student calls his method TACO,
+
+262
+00:24:52,390 --> 00:25:00,080
+we found that the same thing happens with replay methods, replay based methods, we kind of have the same copy or two copies of the same object.
+
+263
+00:25:00,130 --> 00:25:06,270
+Whereas with regularization based methods, we essentially fail to adapt to the new changes in the environment.
+
+264
+00:25:06,760 --> 00:25:10,650
+So these are just just being very recent results that we found out.
+
+265
+00:25:10,700 --> 00:25:17,710
+But I want to communicate that what we found so far is that this consensus view of continual learning has really
+
+266
+00:25:17,760 --> 00:25:24,920
+been really strong in balancing new skills and learning new skills with retaining what the robot has learned in the past.
+
+267
+00:25:25,200 --> 00:25:29,410
+And just recently we have seen that in the context of reinforcement learning it turns out you can do some really
+
+268
+00:25:29,460 --> 00:25:36,860
+smart things in a within the the RL loop to adapt to changes and it's become super useful in fine-tuning policies.
+
+269
+00:25:38,020 --> 00:25:42,130
+So with that I would like to thank my students who actually did the work that
+
+270
+00:25:42,180 --> 00:25:46,770
+I got to present here today and the funding agencies who actually made this work possible.
+
+271
+00:25:46,820 --> 00:25:48,360
+Thank you all for your attention.

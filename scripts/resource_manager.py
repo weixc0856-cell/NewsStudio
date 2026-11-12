@@ -35,6 +35,7 @@ from __future__ import annotations
 import json
 import os
 import subprocess
+import sys
 import time
 from dataclasses import dataclass
 from datetime import datetime
@@ -45,6 +46,9 @@ import psutil
 import requests
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+import env_file  # noqa: E402,F401  # 载入仓库根 .env（本机路径/密钥不进 Git）
+
 RUNTIME_DIR = ROOT / ".runtime"
 LOCK_PATH = RUNTIME_DIR / "pipeline.lock"
 LOG_DIR = RUNTIME_DIR / "logs"
@@ -55,13 +59,12 @@ DEFAULT_HOST = "127.0.0.1"
 
 FFMPEG_MARKERS = ("ffmpeg", "ffmpeg.exe")
 
-LLAMA_BIN = Path(os.environ.get("LLAMA_SERVER_BIN", r"D:\AI\bin-sycl\llama-server.exe"))
-LLAMA_MODEL = Path(os.environ.get(
-    "LLAMA_MODEL_PATH", r"D:\AI\models\Qwen3-30B-A3B-Instruct-2507-Q4_K_M.gguf"))
+LLAMA_BIN = Path(os.environ.get("LLAMA_SERVER_BIN") or "llama-server")
+LLAMA_MODEL = Path(os.environ.get("LLAMA_MODEL_PATH") or "models/model.gguf")
 LLAMA_PORT = int(os.environ.get("LLAMA_PORT", "8080"))
 LLAMA_ALIAS = "Qwen3-30B-A3B-Instruct-2507-Q4_K_M"
 
-COSY_DIR = Path(os.environ.get("COSYVOICE_DIR", r"D:\AI\CosyVoice-Runtime"))
+COSY_DIR = Path(os.environ.get("COSYVOICE_DIR") or "CosyVoice-Runtime")
 COSY_PORT = int(os.environ.get("COSY_PORT", "50000"))
 # SFT preset-voice runtime (CosyVoice-300M-SFT). Same port, same API, different model.
 COSY_SFT_CLASS = os.environ.get("COSY_SFT_MODEL_CLASS", "CosyVoice")

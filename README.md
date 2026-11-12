@@ -1,24 +1,37 @@
-# YouTube-B
+# NewsStudio（原 YouTube-B）
 
-用 `uv` 管理虚拟环境与依赖的 YouTube 高清下载工作区，核心工具是 `yt-dlp`。
+用 `uv` 管理虚拟环境与依赖的 YouTube 下载、字幕与新闻评论生产线；核心工具是 `yt-dlp` + `ffmpeg`。
 
 ---
 
 ## 目录结构
 
 ```
-YouTube-B/
+<repo-root>/
 ├── pyproject.toml / uv.lock   # uv 依赖定义与锁定
 ├── .venv/                     # 虚拟环境（uv 生成，勿手动改）
+├── .env / .env.example        # 本机配置（.env 不进 Git）/ 环境变量模板
+├── env_file.py                # 读取 .env 的加载器（导入即生效）
 ├── yt-dlp.conf                # 项目级 yt-dlp 默认配置（必须保持 ASCII）
-├── downloads/                 # 下载产物
+├── downloads/                 # 目录联接 → $NEWS_DATA_ROOT（原片与成片）
 ├── subtitles/                 # 原语种字幕原件与合成结果
-├── clips/                     # 自动高光切片产物（final/ 为可发布目录）
+├── clips/                     # 自动高光切片产物（本机运行产物，不进 Git）
+├── news/                      # 英文新闻评论生产线
+├── output/                    # 新闻线媒体产出（不进 Git）
 ├── scripts/                   # 字幕重建、本地转写、翻译、自动切片等脚本
 ├── docs/                      # 策划文档与期数档案（docs/episodes/stage1|stage2/）
 ├── episodes_registry.json     # 极简查重索引（只读这个，不遍历历史档案）
 └── README.md
 ```
+
+## 仓库与数据根
+
+- **仓库根**：本仓库目录本身，代码、文档、测试、配置都在这里，可进远程。
+- **数据根**：`$NEWS_DATA_ROOT`，只放原片与 `[中英字幕].mkv` 成片；不进 Git。
+- `<repo-root>/downloads` 是指向数据根的目录联接，原有 `downloads/` 相对路径不需要改。
+- 新闻线媒体产出默认 `<repo-root>/output`（`NEWS_OUTPUT_ROOT` 可覆盖），不进 Git。
+- **进远程的文件里不允许出现任何本机绝对路径**：真实路径只写 `.env`（已忽略），
+  模板见 `.env.example`；代码通过 `env_file.load_env()` 读取。
 
 ## 环境要求
 
@@ -39,6 +52,63 @@ uv sync
 uv run yt-dlp --version
 ffmpeg -version
 ```
+
+### 本机配置（`.env`）
+
+仓库只保留模板 `.env.example`，任何真实路径与密钥都不进 Git：
+
+```powershell
+Copy-Item .env.example .env   # 然后按本机情况填写
+```
+
+| 变量 | 作用 |
+|---|---|
+| `LLAMA_SERVER_BIN` / `LLAMA_MODEL_PATH` | 本地 llama.cpp 可执行文件与 `.gguf` 权重 |
+| `LLM_API_KEY` / `LLM_BASE_URL` | 本地 OpenAI 兼容端点（8080，任意非空密钥） |
+| `COSYVOICE_DIR` / `COSY_PORT` | CosyVoice 配音微服务目录与端口 |
+| `NEWS_TTS_PROMPT_WAV` / `NEWS_TTS_PROMPT_TEXT` | 零样本音色参考音频/文本 |
+| `NEWS_OUTPUT_ROOT` / `NEWS_DATA_ROOT` | 产出根 / 原片与成片数据根 |
+| `INTRO_BROWSER` / `NEWS_BROWSER` / `NEWS_FLUX_WORKFLOW` / `DOCLING_ROOT` | 可选外部工具 |
+
+脚本启动时 `import env_file` 自动读 `.env`；系统里已存在的同名环境变量优先，
+所以临时覆盖可以直接 `$env:NEWS_OUTPUT_ROOT = "..."; uv run ...`。
+`scripts/test_no_local_paths.py` 会扫描全部待发布文件：出现盘符路径或超过 2 MiB 的文件就报错。
+
+## 知识采集（课程资料）
+
+`scripts/collect_knowledge.py` 把一条 YouTube 讲课提取成课程可用的 Markdown/JSON，写入本机 Docling 资料区：
+
+```powershell
+uv run python scripts/collect_knowledge.py "<URL>" `
+  --docling-root "<DOCLING_ROOT>" --lang auto
+```
+
+- 人工字幕优先，其次自动字幕；两者都没有时才下载音频并用本地 faster-whisper 转写（`--no-whisper` 关闭兜底）。
+- 原始元数据与原语种字幕在 `<DOCLING_ROOT>/input/youtube/<video_id>/`；处理后 `transcript.clean.md`、`transcript.segments.json`、`chapters.json`、`source.json` 在 `output/youtube/<video_id>/`。
+- 只取原语种字幕，不下载 YouTube 中文自动翻译；不覆盖原文，不做 AI 总结。
+- `--force` 覆盖已有资料包；正常的字幕采集不下载整片。
+
+## 新闻视频播客（`news/`）
+
+英文口播、16:9、证据型新闻评论的独立生产线。选题与证据来自 Opportunity Radar，
+配图可走 Local-Drama-Studio 的 ComfyUI/FLUX；**媒体产出不进 Git**，默认写到
+`NEWS_OUTPUT_ROOT`（默认 `<repo-root>/output`）。完整计划见
+[`docs/新闻视频播客-实施计划.md`](docs/新闻视频播客-实施计划.md)。
+
+```powershell
+uv run python -m news or-events --db "<OR_DB>" --min-sources 2
+uv run python -m news or-export --db "<OR_DB>" --event evt-... --out "<episode>/story-pack.json"
+uv run python -m news draft --pack "<episode>/story-pack.json" --episode 2026-11-12-slug
+uv run python -m news narrate --plan "<episode>/plan.json"     # VoxCPM 50000，先启动后停止
+uv run python -m news timeline --plan "<episode>/plan.json"
+uv run python -m news render --timeline "<episode>/timeline.json" --out "<episode>/out/episode.mp4"
+uv run python -m news demo --out "<episode>/out/demo.mp4" # 6 秒渲染自检
+```
+
+- 只读导出 OR 的 `events/evidences/claims`，不改评分与发布门禁。
+- 每个事实段必须带 `evidence_refs`；英文旁白出现中文会直接报错。
+- 截图用 headless Chrome；FLUX 只做插图，画面必须标注 illustration。
+- 测试：`uv run python -m unittest scripts.test_news_core -v`。
 
 ## 下载
 
@@ -243,8 +313,8 @@ uv run python scripts/run_pipeline.py --cleanup    # 杀掉所有模型 / ffmpeg
 在线免费翻译（Google/MyMemory）容易限流且术语不准，仅作备选：
 
 ```powershell
-# 等价于 start_server.bat 选模型 3 + 档位 3（16K），直接启动
-D:\AI\bin-sycl\llama-server.exe -m "D:\AI\models\Qwen3-30B-A3B-Instruct-2507-Q4_K_M.gguf" `
+# 等价于 start_server.bat 选模型 3 + 档位 3（16K），直接启动（路径来自 .env）
+& $env:LLAMA_SERVER_BIN -m $env:LLAMA_MODEL_PATH `
   --host 127.0.0.1 --port 8080 -dev SYCL0 -ngl 99 -c 16384 --parallel 1 `
   -b 256 -ub 128 -fa on --metrics --alias "Qwen3-30B-A3B-Instruct-2507-Q4_K_M,default" `
   --jinja --n-cpu-moe 48
@@ -290,7 +360,7 @@ README 只保留项目通用用法；每一期的选题、三方验证、内容�
 - `docs/episodes/stage1/`：第 1–30 期完整档案（已封存），索引见
   [`stage1/STAGE1_EPISODES.md`](docs/episodes/stage1/STAGE1_EPISODES.md)，
   复盘见 [`stage1/STAGE1_SUMMARY.md`](docs/episodes/stage1/STAGE1_SUMMARY.md)
-- `docs/episodes/stage2/`：第 31 期起的新档案
+- `docs/episodes/stage2/`：第 31 期起的新档案（当前已登记 13 期：ep31–ep43）
 - **查重与校验只读根目录 [`episodes_registry.json`](episodes_registry.json)**：
   每条记录含 id / title / core_entity / event / url / tags，**不要全文读取历史期数档案**
 - README 迁出的下载/编码/校验细节：`docs/episodes/制作记录-按期归档.md`

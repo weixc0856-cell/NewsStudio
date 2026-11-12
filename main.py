@@ -1,5 +1,5 @@
 def main():
-    print("Hello from youtube-b!")
+    print("Hello from NewsStudio!")
 
 
 if __name__ == "__main__":

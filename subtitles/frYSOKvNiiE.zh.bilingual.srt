@@ -1,0 +1,2909 @@
+1
+00:00:00,320 --> 00:00:09,760
+There’s never been as big a shock to the semiconductor industry as the current surge in demand from AI. AI is driving incredible computing demand.
+人工智能带来的需求激增，对半导体行业造成的冲击前所未有。人工智能正在推动着前所未有的计算需求。
+
+2
+00:00:09,760 --> 00:00:13,920
+Easily 40-50% above our maximum capacity, which I’ve never seen before.
+远超我们最大产能的40%到50%，这我还是头一次见到。
+
+3
+00:00:13,920 --> 00:00:17,680
+Progress in AI has been driven by exponentially increasing compute.
+人工智能的进步得益于计算能力的指数级增长。
+
+4
+00:00:17,680 --> 00:00:26,560
+To sustain that progress, foundries like Intel will need to manufacture far more leading-edge compute, both by producing more chips and by improving what each chip can do.
+为了维持这一进展，像英特尔这样的代工厂不仅需要生产更多先进算力芯片，还必须提升每颗芯片的性能。
+
+5
+00:00:26,560 --> 00:00:31,280
+But the production of these chips is bottlenecked by tools that Intel buys from their suppliers.
+但这些芯片的生产受到英特尔从供应商处采购的工具限制。
+
+6
+00:00:31,280 --> 00:00:34,880
+Most famously, ASML’s EUV machines. If they don’t have the equipment,
+最著名的莫过于阿斯麦的 EUV 光刻机。
+
+7
+00:00:34,880 --> 00:00:42,240
+they can’t make the chips here. I spent two days touring Intel’s fabs to prepare for these interviews with its leadership. I wanted to understand what it takes to
+如果没有这些设备，他们就无法在这里制造芯片。为了准备与英特尔高层的访谈，我花了两天时间参观了英特尔的晶圆厂。
+
+8
+00:00:42,240 --> 00:00:47,760
+manufacture the world’s most advanced chips and how hardware is shaping the future of AI.
+我想弄清楚制造全球最先进芯片需要什么，以及硬件如何塑造人工智能的未来。
+
+9
+00:00:47,760 --> 00:00:54,400
+I’m joined by Chris Auth, who leads development of all the processes that are currently under manufacturing. The thing I want to understand in more
+我身边坐着克里斯·奥思，他负责当前所有正在制造中的工艺开发。我想更具体地了解，
+
+10
+00:00:54,400 --> 00:01:00,160
+concrete detail is how the development of a new process actually happens.
+一项新工艺的开发究竟是如何进行的。
+
+11
+00:01:00,160 --> 00:01:03,600
+If 14A is going to come out in three years or two years from now,
+如果14A将在两到三年后推出，
+
+12
+00:01:03,600 --> 00:01:12,000
+what is happening from now till then? I want you to walk me through as much detail as you can, everything from the level of “how is the yield improving?” to what
+那么从现在到那时会发生什么？请尽可能详细地为我梳理一下，从“良率如何提升”这样的细节，
+
+13
+00:01:12,000 --> 00:01:15,440
+kind of telemetry you guys look at? What kind of experiments do you guys run?
+到你们关注的各类遥测数据，以及你们开展的各类实验。
+
+14
+00:01:15,440 --> 00:01:20,160
+I want to understand what is going to happen over the next two years as concretely as possible.
+我想尽可能具体地了解未来两年内会发生什么。
+
+15
+00:01:22,800 --> 00:01:32,240
+14A has been in development for about three-plus years at this stage, so quite a bit of pre-work has been done to get it to the stage that it’s at right now.
+14A 项目目前已开发了三年多，因此在现阶段已完成了大量前期工作。
+
+16
+00:01:32,240 --> 00:01:35,360
+Right now, we’re getting very close to where we’re finalizing the process.
+目前，我们正接近完成流程的最后阶段。
+
+17
+00:01:35,360 --> 00:01:42,480
+We’re finalizing the tool sets that it will be manufactured on, and we’re working on the fine-tuning of each of the process steps.
+我们正在确定制造所用的工具集，并且正在对每个工艺步骤进行微调。
+
+18
+00:01:42,480 --> 00:01:46,480
+There are about 2,000 steps in the factory that you have to go do.
+工厂里大约有两千个步骤需要你亲自去完成。
+
+19
+00:01:46,480 --> 00:01:51,040
+You need to do really intricate work at each one of those to make sure it’s fine-tuned,
+你必须在每一个环节都进行非常精细的工作，确保它经过充分微调，
+
+20
+00:01:51,040 --> 00:02:00,400
+it can go into manufacturing, it can run thousands of wafers a week on this process, and it can be repeatable every single time. Right now, you might have a certain yield.
+能够投入量产，能够在该工艺下每周处理数千片晶圆，并且每次都能稳定重复。目前，你可能只达到了一定的良率。
+
+21
+00:02:00,400 --> 00:02:03,680
+Walk me through how that increases month over month.
+给我讲讲它是如何实现月度增长的。
+
+22
+00:02:03,680 --> 00:02:10,960
+There’s a line running at 14A. What happens from now till next month that will result in the yield changing? How do you identify where the defects are?
+14A产线上有一条生产线正在运行。从现在到下个月，哪些因素会导致良率发生变化？你如何定位缺陷所在？
+
+23
+00:02:10,960 --> 00:02:18,880
+How do you fix that? There’s a constant process that we go through in identifying defects. There are two main ways that we’ll identify them.
+怎么解决这个问题？我们有一个持续的过程来识别缺陷，主要有两种方法。
+
+24
+00:02:18,880 --> 00:02:26,640
+One is we have inline metrology. We have tools that will look at the wafers and say, “Ah, there’s a defect there, there’s a defect there, there’s a defect there.”
+我们有在线量测技术，工具可以检查晶圆，指出“这里有缺陷，这里有缺陷，这里有缺陷”。
+
+25
+00:02:26,640 --> 00:02:32,480
+Then also at the end of line, either electrical test or we sort and see where the fails are.
+最后在产线末端，要么进行电气测试，要么分拣并查看故障出现在哪里。
+
+26
+00:02:32,480 --> 00:02:36,800
+We will identify failures, and then we will get analysis on those failures.
+我们将识别出故障，然后对这些故障进行分析。
+
+27
+00:02:36,800 --> 00:02:40,640
+We’ll cross-section it. You were in the TEM lab yesterday,
+我们会进行截面分析。你昨天在透射电镜实验室里已经看到过，
+
+28
+00:02:40,640 --> 00:02:43,760
+and you saw how you can get cross-sections. You’ll get a cross-section of a defect,
+如何获取截面。你将得到一个缺陷的截面图，
+
+29
+00:02:43,760 --> 00:02:53,040
+and from that, you’ll be able to say, “Oh, that defect is between these layers, so it must have come from this section of the flow. Oh, we have inline metrology in that section,
+从这个截面中，你就能判断：“哦，这个缺陷位于这两层之间，所以它一定来自流程中的这个环节。而这个环节我们已经有在线量测了。”
+
+30
+00:02:53,040 --> 00:02:57,200
+which has identified defects. Those are the defects we need to go after.”
+已经发现了缺陷，这些就是我们需要解决的缺陷。
+
+31
+00:02:57,200 --> 00:03:05,920
+What we’ve learned is that you don’t want to do too much innovation in one node, because the more innovation that you do, the more complex it becomes.
+我们学到的是，不要在一个节点上做过多的创新，因为创新越多，系统就会变得越复杂。
+
+32
+00:03:05,920 --> 00:03:14,480
+While you’ll be able to get that to work, you need to hit a certain schedule, and that’s the schedule that your customer ultimately wants. Having that predictable schedule is a key piece.
+虽然你能让这事运作起来，但你必须达到某个时间表，而这正是客户最终希望的时间表。拥有可预测的时间表是关键。
+
+33
+00:03:14,480 --> 00:03:24,240
+You’ve got to figure out how much innovation you can put in in order to meet the customer’s requirements in the timeline that they need it. Intel learned how costly that tradeoff can
+你必须弄清楚，在客户要求的时间节点内，能投入多少创新来满足他们的需求。英特尔在10纳米制程节点上深刻体会到了这种权衡的代价，
+
+34
+00:03:24,240 --> 00:03:28,880
+be with delays to its 10 nanometer node, whose original target launch date was 2016,
+其最初的目标是2016年发布，
+
+35
+00:03:28,880 --> 00:03:34,880
+but which didn’t begin manufacturing until 2018. Usually Intel has been the keeper of Moore’s Law,
+但实际量产直到2018年才开始。通常来说，英特尔一直是摩尔定律的守护者。
+
+36
+00:03:34,880 --> 00:03:44,320
+a new cadence of manufacturing every two years, but their last set of products slipped almost four years. Intel today having its worst day in four months,
+每两年一次的制造节奏，但上一轮产品发布却推迟了将近四年。英特尔今天遭遇了四个月以来最糟糕的一天，股价已下跌超过15%。
+
+37
+00:03:44,320 --> 00:03:57,200
+the stock now down more than 15%. I also want to point out Taiwan Semiconductor up 13% off of Intel’s bad news. Walk me through what lessons you think Intel
+我还想指出，台积电在英特尔坏消息的背景下上涨了13%。请跟我梳理一下，你认为英特尔从10纳米制程中吸
+
+38
+00:03:57,200 --> 00:04:06,560
+has learned from 10 nanometer. Ten nanometer was a good example of where we had very aggressive targets. We were doing what was called hyperscaling
+取了哪些教训？10纳米是一个非常典型的例子，当时我们的目标极为激进，我们当时所做的被称为超大规模扩展。
+
+39
+00:04:06,560 --> 00:04:10,640
+at the time, so we were scaling much faster than what had been historically done.
+当时，我们的扩展速度远超以往的历史水平。
+
+40
+00:04:10,640 --> 00:04:23,040
+In order to do that, we came up with all sorts of innovative ideas on how we could achieve that without new tools, because the tools weren’t ready.
+为了实现这一点，我们想出了各种创新的点子，探索如何在没有新工具的情况下达成目标，因为那些工具当时还准备就绪。
+
+41
+00:04:23,040 --> 00:04:26,560
+That put a lot of burden on the process and a lot of burden on the engineers.
+这给工艺带来了很大负担，也给工程师带来了很大压力。
+
+42
+00:04:27,520 --> 00:04:30,480
+Now, at the end of the day, 10 nanometer is a great technology.
+说到底，10纳米是一项非常出色的技术。
+
+43
+00:04:30,480 --> 00:04:38,240
+It has world-class yield, it has world-class performance, it has world-class cost, but it took us longer to do that than what we would have liked.
+它具备世界级的良率、世界级的性能和世界级的成本，但实现这一目标所花的时间比我们预期的要长。
+
+44
+00:04:38,240 --> 00:04:46,800
+So we’ve tried to take that learning into future technology nodes and say, “Hey, we need to limit the amount of innovation we put in there to make sure that we keep it on schedule.”
+所以我们试图将这一经验应用到未来的技术节点中，提醒自己：“嘿，我们需要控制创新的投入量，以确保项目按时推进。”
+
+45
+00:04:46,800 --> 00:04:52,160
+What do you think was the main technology that should’ve been saved for a future version?
+你觉得应该留到未来版本的主技术是什么？
+
+46
+00:04:52,160 --> 00:05:03,200
+EUV was probably the big thing. When we started to define 10 nanometer, the conclusion was EUV was not ready. EUV is extreme ultraviolet lithography.
+极紫外光刻可能是最重要的突破。当我们开始定义10纳米制程时，结论是极紫外光刻技术还不成熟。极紫外光刻就是极端紫外光刻。
+
+47
+00:05:03,200 --> 00:05:13,440
+It prints chip patterns with light at a wavelength of 13.5 nanometers, about 14 times shorter than that emitted by previous tools that chipmakers had relied on.
+它使用波长为13.5纳米的光来打印芯片图案，波长仅为之前芯片制造商所依赖工具发出光的约十四分之一。
+
+48
+00:05:13,440 --> 00:05:18,000
+The shorter the wavelength, the finer the features that a single exposure can print.
+波长越短，单次曝光所能印刷的特征就越精细。
+
+49
+00:05:18,000 --> 00:05:21,760
+But Intel decided this technology wasn’t going to be ready in time.
+但英特尔决定，这项技术无法按时完成。
+
+50
+00:05:21,760 --> 00:05:24,960
+TSMC transitioned to EUV much sooner.
+台积电更早地转向了 EUV。
+
+51
+00:05:24,960 --> 00:05:32,480
+It put EUV into volume manufacturing in 2019 and ramped it up further on its 5nm node in 2020.
+它于2019年将极紫外光刻技术投入量产，并在2020年其5纳米制程节点上进一步扩大了应用。
+
+52
+00:05:32,480 --> 00:05:43,920
+Intel’s first EUV process did not reach products until 2023, so TSMC had about four more years of experience with these machines. Yesterday, we were at the research
+英特尔的首款 EUV 制程直到 2023 年才应用于产品，因此台积电在这些设备上的经验多了大约四年。昨天，
+
+53
+00:05:43,920 --> 00:05:50,880
+lab getting a preview of 2D materials and CFET and ruthenium interconnects.
+我们在研究实验室提前看到了二维材料、CFET 以及钌互连的进展。
+
+54
+00:05:50,880 --> 00:05:55,520
+I’m curious about how you decide whether that technology is mature enough for the next node.
+我很好奇你是如何判断这项技术是否已经成熟到可以用于下一个制程节点的。
+
+55
+00:05:55,520 --> 00:06:00,640
+One thing that did also come out of 10 nanometer is we started to define a set of maturity metrics.
+10纳米制程的一个成果，就是我们开始定义了一套成熟度指标。
+
+56
+00:06:00,640 --> 00:06:10,000
+We use those maturity metrics in a process which we call phase gate, where we would say, “To go from pathfinding into development, these are the criteria that we need to go hit.”
+我们使用这些成熟度指标，通过一个称为“阶段门”的流程，来判断“从探索阶段进入开发阶段，我们需要达到哪些标准”。
+
+57
+00:06:10,000 --> 00:06:18,000
+There are yield criteria, defect criteria, performance criteria, and we need to hit those in order to move to the next set of the flow. If there’s something that doesn’t make that,
+有良率标准、缺陷标准和性能标准，我们必须达到这些标准才能进入流程的下一步。如果某项指标未达标，
+
+58
+00:06:18,000 --> 00:06:21,200
+then it misses that, and it goes on to the next technology.
+就会被剔除，然后进入下一项技术。
+
+59
+00:06:21,200 --> 00:06:31,200
+We focus on the items that are ready and we can run and put into a process, because one of the key things is staying on schedule. Staying on schedule is hard partly because new
+我们专注于那些已经准备就绪、可以投入流程运行的项目，因为保持进度准时是关键。保持进度准时之所以困难，部分原因在于新型晶
+
+60
+00:06:31,200 --> 00:06:41,280
+transistor designs take decades to mature. Modern chip transistors evolved from the planar MOS transistor, demonstrated in 1960. The history of transistors since has been
+体管设计需要数十年才能成熟。现代芯片晶体管起源于1960年展示的平面MOS晶体管，此后晶体管的发展历程就是从二维
+
+61
+00:06:41,280 --> 00:06:50,400
+the progression from two dimensions into three. Each development that Chris goes on to describe, from FinFET to gate-all-around, is a step in that progression.
+向三维演进的过程。克里斯接下来所描述的每一项技术进步，从FinFET到环绕栅极，都是这一演进过程中的一步。
+
+62
+00:06:50,400 --> 00:06:55,520
+So it’ll help to first look at a basic transistor and how its parts have changed over time.
+因此，首先了解一个基本晶体管及其各部分随时间的变化会很有帮助。
+
+63
+00:06:55,520 --> 00:07:05,360
+A transistor is basically a switch. When it’s turned on, it allows current to flow between its two ends, which are called the source and the drain.
+晶体管本质上就是一个开关。当它打开时，电流就能在其两个端点之间流动，这两个端点分别称为源极和漏极。
+
+64
+00:07:05,360 --> 00:07:11,280
+A piece called a gate sits on top of the silicon between the source and the drain.
+一个称为栅极的部件位于硅片之上，介于源极和漏极之间。
+
+65
+00:07:11,280 --> 00:07:22,080
+Applying a positive voltage to the gate turns the switch on, because the positive voltage pulls negatively charged electrons in the silicon beneath up toward the gate.
+向栅极施加正电压会使开关导通，因为正电压会将硅层中带负电的电子吸引到栅极下方。
+
+66
+00:07:22,080 --> 00:07:25,920
+However, a thin layer of insulation stops them from actually reaching the gate.
+然而，一层薄薄的绝缘层阻止它们真正接触到栅极。
+
+67
+00:07:25,920 --> 00:07:36,000
+So the electrons collect just beneath that insulation and form a thin conducting path from the source to the drain. This is called the channel.
+因此，电子会聚集在绝缘层下方，形成一条从源极到漏极的细导电通道。这被称为沟道。
+
+68
+00:07:36,000 --> 00:07:41,280
+Remove the voltage and the electrons disperse, the channel disappears, and the switch turns off.
+去掉电压后，电子就会散开，沟道消失，开关也就关闭了。
+
+69
+00:07:41,280 --> 00:07:50,240
+As transistors shrank, the source and the drain got so close together that current could flow through the channel even when the switch was supposed to be off.
+随着晶体管尺寸缩小，源极和漏极之间的距离变得如此之近，以至于即使开关本应处于关闭状态，电流仍能通过沟道流动。
+
+70
+00:07:50,240 --> 00:07:54,960
+We needed a better way to control the channel and prevent current from leaking through.
+我们需要一种更好的方法来控制通道，防止电流泄漏。
+
+71
+00:07:54,960 --> 00:08:00,320
+The fix was to give the gate a tighter grip on the channel by touching it from more sides.
+解决方法是通过从更多侧面接触沟道，让栅极对沟道的夹持更紧。
+
+72
+00:08:00,320 --> 00:08:04,880
+In the original planar transistor, the gate only touches the channel from the top.
+在原始的平面晶体管中，栅极仅从顶部接触沟道。
+
+73
+00:08:04,880 --> 00:08:09,520
+The FinFET transistor squeezes the channel into a thin vertical fin of silicon.
+鳍式晶体管将沟道挤压成一根细长的垂直硅鳍。
+
+74
+00:08:09,520 --> 00:08:14,480
+The gate drapes over the fin, so it controls the channel from three sides.
+栅极覆盖在鳍片上，从而从三个方向控制沟道。
+
+75
+00:08:14,480 --> 00:08:22,000
+The next progression from there was to cover not only the top and the sides of the channel, but also the bottom. This technology is called gate-all-around, and
+接下来的进展是，不仅包裹通道的顶部和侧面，还覆盖了底部。这种技术被称为环绕栅极，
+
+76
+00:08:22,000 --> 00:08:27,440
+it slices the channel into thin ribbons, each of which gets completely wrapped around by the gate.
+它将通道切割成细长的条带，每一条都由栅极完全包裹。
+
+77
+00:08:27,440 --> 00:08:31,760
+But getting gate-all-around to work required new materials and new manufacturing steps.
+但要让环绕栅极技术发挥作用，需要采用新材料和新的制造工艺。
+
+78
+00:08:31,760 --> 00:08:42,720
+To build these floating ribbons of silicon, you first sandwich them between alternating layers of a temporary placeholder material, which holds the space where the gate will eventually go.
+要制造这些悬浮的硅条，首先要将它们夹在交替的临时填充材料层之间，这些材料会占据未来栅极所在的空间。
+
+79
+00:08:42,720 --> 00:08:52,000
+We use a placeholder because the materials in the real gate wouldn’t survive the processing that comes after, which involves baking the wafer at around 1,000 degrees Celsius.
+我们使用占位符，因为实际栅极材料无法经受后续工艺的高温处理，该工艺需要将晶圆烘烤至约1000摄氏度。
+
+80
+00:08:52,000 --> 00:08:59,600
+Once these hot steps are done, chipmakers etch away the placeholder, leaving the ribbons suspended. Then they fill the gaps around every ribbon
+完成这些高温工艺步骤后，芯片制造商蚀刻掉临时结构，使栅极条带悬空。接着在每根条带周围填充
+
+81
+00:08:59,600 --> 00:09:09,040
+with a thin coat of a special insulator called a high-k material, whose purpose is to let the gate pull more strongly on the channel. And then on top of this material,
+一层薄薄的特殊绝缘材料，称为高k材料，其作用是让栅极能更有力地控制沟道。然后在该材料之上，再铺设栅极本身的金属。
+
+82
+00:09:09,040 --> 00:09:20,880
+they put the metal of the gate itself. FinFET was demonstrated in a lab in 1989 and reached volume production at Intel in 2011. A gate-all-around transistor had been demonstrated
+FinFET于1989年在实验室中首次展示，2011年在英特尔实现量产。环绕栅极晶体管也已成功演示
+
+83
+00:09:20,880 --> 00:09:27,520
+a year earlier, in 1988, but Samsung didn’t begin producing gate-all-around chips until 2022.
+早在1988年，但三星直到2022年才开始生产环绕栅极芯片。
+
+84
+00:09:27,520 --> 00:09:32,000
+So these ideas, FinFET and gate-all-around, were developed around the same time,
+这些技术，FinFET 和环绕栅极，
+
+85
+00:09:32,000 --> 00:09:41,280
+but they reached production a decade apart. I wanted to ask Chris why it took so long to get to this current gate-all-around technology. Maybe you can walk me through the process of
+虽然几乎在同一时期开发出来，但进入量产却相隔了十年。我想问问克里斯，为什么这种环绕栅极技术的实现花了这么长时间？你能带我了解一下进
+
+86
+00:09:41,280 --> 00:09:44,640
+getting into high-volume manufacturing. I want to understand concretely,
+入大规模制造的过程吗？我想具体地弄清楚这一点。
+
+87
+00:09:44,640 --> 00:09:56,240
+once you have an idea that, “Hey, we’re going to make the channel smaller, we’re going to surround it…” All the other problems of material science, figuring out how to not destroy the gate,
+一旦有了这样的想法：“嘿，我们要把通道变窄，把它包围起来……” 那么材料科学中的其他问题，比如如何避免损坏栅极，
+
+88
+00:09:56,240 --> 00:09:58,800
+how do they actually get figured out? Why does it take so long?
+这些问题到底是怎么解决的？为什么需要这么长时间？
+
+89
+00:09:58,800 --> 00:10:02,080
+Gate-all-around’s a good example, because back in the ’90s we knew of this idea.
+环绕栅极是一个很好的例子，因为在上世纪90年代，我们就已经了解过这个概念。
+
+90
+00:10:02,080 --> 00:10:08,800
+But we knew there were going to be these problems on how you put this into high-volume manufacturing. At the same time, there are other
+但我们知道，要把这项技术投入大规模制造，必然会遇到这些问题。与此同时，还有其他技术，
+
+91
+00:10:08,800 --> 00:10:13,520
+things like high-K metal gate. There’s strained silicon,
+比如高介电常数金属栅极、应变硅、FinFET等已经存在。
+
+92
+00:10:13,520 --> 00:10:24,880
+there’s FinFETs that are out there. It’s a question of when’s the right time to go and tackle those? Well, you don’t want to tackle something before you have to. If you have these other things that can drive
+关键在于，什么时候才是攻克这些技术的合适时机？你当然不想在还没到必须解决的时候就提前去处理。如果还有其他技术可以推动进展，那就先专注于那些。
+
+93
+00:10:24,880 --> 00:10:27,600
+performance, you would go and do that. So we went through this path.
+性能方面，你就会去这么做。所以我们走过了这条路径。
+
+94
+00:10:28,320 --> 00:10:35,440
+We did strained silicon, high-K metal gate, we did FinFETs, and then it became, “Well, we need to do things further. How do we get there?”
+我们做过应变硅、高K金属栅极，也做过鳍式场效应晶体管，后来就变成“嗯，我们得继续往前走，该怎么做到呢？”
+
+95
+00:10:35,440 --> 00:10:38,880
+Well, gate-all-around’s really the ultimate transistor out there.
+嗯，环绕栅极晶体管才是目前最顶尖的晶体管技术。
+
+96
+00:10:38,880 --> 00:10:43,440
+Maybe it’s time to go and start tackling some of those issues that you have.
+也许该去着手解决你的一些问题了。
+
+97
+00:10:43,440 --> 00:10:48,000
+You’re right, now you have to look at how do you put high-K metal gate in with gate-all-around.
+你说得对，现在你得考虑如何将高K金属栅极与环绕栅极结合起来。
+
+98
+00:10:48,000 --> 00:10:52,320
+It’s that innovation that takes time. Sometimes you need new materials.
+正是这种创新需要时间，有时你需要新的材料。
+
+99
+00:10:52,320 --> 00:11:01,760
+Sometimes you need a different tool in order to be able to do some of the things that you need to go do, and that requires invention from the tool vendors.
+有时候，你需要不同的工具才能完成一些必须做的事，这就要求工具供应商进行创新。
+
+100
+00:11:01,760 --> 00:11:04,960
+You have to go to the tool vendor and say, “Hey, I need a tool that can do XYZ.
+你得去找设备供应商说：“嘿，我需要一台能做 XYZ 的设备。”
+
+101
+00:11:04,960 --> 00:11:09,600
+I need a gas that can deposit this particular material that goes into that.
+我需要一种气体，能将这种特定材料沉积到那个位置。
+
+102
+00:11:09,600 --> 00:11:14,240
+I need a heating chuck that has this characteristic to it.”
+我需要一个具备这种特性的加热夹具。
+
+103
+00:11:14,240 --> 00:11:21,440
+All those things take time. Some of it’s iterative, where you have to run a gate-all-around transistor and say, “Oh, well, that didn’t work.
+所有这些事情都需要时间，有些是反复迭代的，你得运行一个环绕栅极晶体管，然后发现：“哦，不行，这个没成功。”
+
+104
+00:11:21,440 --> 00:11:34,320
+Let me figure out what was wrong with my hypothesis and try it again with some different structure.” How has the nature of R&D changed from the era of
+让我弄清楚我假设中哪里出了问题，然后换一种不同的结构再试一次。从过去单纯把平面晶体管越做越小、
+
+105
+00:11:35,280 --> 00:11:39,440
+just making planar transistors smaller and smaller and getting the benefits of Dennard scaling,
+享受丹纳德缩放效应的时代，到今天这个全新的世界，研发的本质究竟发生
+
+106
+00:11:39,440 --> 00:11:43,840
+to the world we’re in today? Is it just a totally different kind of R&D process? Previously it was,
+了怎样的变化？这难道真的是一种完全不同的研发模式吗？以前并非如此。
+
+107
+00:11:43,840 --> 00:11:52,320
+“Let’s make things smaller, smaller, smaller.” Now you look at all these other facets of performance at the same time, and improvements in size don’t come as easily.
+“让我们把东西做得越来越小，越来越小，越来越小。”但现在你还要同时关注性能的其他各个方面，尺寸的进一步缩小就没那么容易了。
+
+108
+00:11:52,320 --> 00:11:55,520
+Walk me through whether there was some crucial change in the R&D process at that point.
+请跟我梳理一下，当时研发流程是否发生了什么关键性变化。
+
+109
+00:11:55,520 --> 00:11:59,600
+If you look at the ’80s and ’90s, yes, it was driven really by Dennard scaling, lithography.
+如果你看看80年代和90年代，确实主要由登纳德缩放定律和光刻技术推动。
+
+110
+00:11:59,600 --> 00:12:03,840
+We just made things smaller, transistors got faster, they got more reliable,
+我们只是让东西变得更小了，晶体管变得更快、更可靠，
+
+111
+00:12:03,840 --> 00:12:11,920
+and it was a very predictable cadence. When we started to hit the 2000s, we saw, “That’s not good enough anymore. We need to do something different.”
+节奏非常可预测。但进入2000年代后，我们意识到，“这已经不够了，我们必须做点不一样的事。”
+
+112
+00:12:11,920 --> 00:12:21,040
+To me, it became this golden age of innovation. For each technology node, how are you going to provide more scaling? How are you going to provide more performance?
+对我来说，这成了一个创新的黄金时代。每个技术节点，你该如何实现更大的扩展性？又该如何提供更高的性能？
+
+113
+00:12:21,040 --> 00:12:24,942
+It drove things like strained silicon. It drove high-K metal gate.
+它推动了应变硅技术的发展，也推动了高K金属栅极技术的发展。
+
+114
+00:12:24,942 --> 00:12:29,040
+It drove FinFETs. It drove gate-all-around. It drove backside power.
+它推动了鳍式晶体管的发展，推动了环绕栅极技术的演进，也推动了背面供电的实现。
+
+115
+00:12:29,040 --> 00:12:35,920
+These are things that in the ’80s and ’90s you would be like, “Oh no, we’re not touching any of that,” because we just continued to have the same process flow.
+这些东西在80年代和90年代的时候，你会说：“天哪，我们可碰都不碰”，因为那时我们一直沿用着同样的工艺流程。
+
+116
+00:12:35,920 --> 00:12:46,080
+We just scaled it, scaled it, scaled it. But for somebody like me who’s a transistor junkie, it’s awesome, because now the playbook’s open.
+我们刚刚完成了规模的扩展，不断扩展，持续扩展。但对于像我这样痴迷于晶体管的人来说，这太棒了，因为现在整个方案已经完全公开了。
+
+117
+00:12:46,080 --> 00:12:49,760
+You can do all sorts of things out there. You can bring in new materials.
+你可以在那里做各种各样的事情，比如引入新材料。
+
+118
+00:12:49,760 --> 00:12:52,960
+Just look at the number of materials we used to use in the ’90s versus the materials today.
+看看我们上世纪90年代使用的材料数量，再对比一下今天使用的材料数量。
+
+119
+00:12:52,960 --> 00:12:56,480
+It’s probably gone up 10X. There’s a lot of innovation.
+可能已经提升了10倍。创新非常多。
+
+120
+00:12:56,480 --> 00:13:01,280
+There’s atomic layer deposition. You’re controlling this stuff atom by atom.
+有原子层沉积。你是在逐个原子地控制这些材料。
+
+121
+00:13:02,160 --> 00:13:05,200
+So it’s changed a lot how you approach the process.
+所以你处理这个过程的方式已经改变了很多。
+
+122
+00:13:06,160 --> 00:13:16,080
+Before, it was, “Try to not change anything.” Now it’s, “Take the sledgehammer and start tearing the thing up and come up with some new idea.” For 14A, Intel is using a new kind
+以前是“尽量不要改变任何东西”，现在则是“拿起大锤，把旧东西彻底拆掉，想出全新的点子”。对于14A制程，英特尔正在使用一种新型光刻机：
+
+123
+00:13:16,080 --> 00:13:29,280
+of lithography machine: High-NA EUV. It uses the same extreme ultraviolet light as today’s EUV machines, but changes the optics. NA, or numerical aperture, is a measure of how
+高数值孔径极紫外光刻机。它和当前的极紫外光刻机一样，使用相同的极紫外光，但改变了光学系统。NA，即数值孔径，
+
+124
+00:13:29,280 --> 00:13:34,080
+wide a cone of light the machine’s mirrors can focus onto the wafer.
+衡量的是光刻机镜片能聚焦到晶圆上的光锥宽度。
+
+125
+00:13:34,080 --> 00:13:38,880
+The wider the cone you can focus, the smaller the spot that your light can carve.
+你能聚焦的光锥越宽，光线能刻画出的光斑就越小。
+
+126
+00:13:38,880 --> 00:13:45,360
+Standard EUV machines have an NA of 0.33. High-NA widens it to 0.55.
+标准的 EUV 光刻机数值孔径为 0.33，高数值孔径则将其提升至 0.55。
+
+127
+00:13:45,360 --> 00:13:51,040
+So High-NA can print features about 1.7 times smaller in a single pass.
+因此，高数值孔径光刻技术可在一次曝光中实现约1.7倍更小的特征尺寸。
+
+128
+00:13:51,040 --> 00:14:00,800
+When features are smaller than the lithography machine can print, chipmakers have to split the pattern across several passes, each printing a different set of features.
+当特征尺寸小于光刻机的打印能力时，芯片制造商就必须将图案分成多次曝光，每次曝光打印一组不同的特征。
+
+129
+00:14:00,800 --> 00:14:06,000
+The most tightly packed patterns can require two, three, or even four passes.
+最密集的图案可能需要两次、三次，甚至四次曝光。
+
+130
+00:14:06,000 --> 00:14:10,960
+Each additional pass takes up valuable time on a machine that costs around $200 million,
+每次额外的加工都会占用价值约2亿美元的机器的宝贵时间，
+
+131
+00:14:10,960 --> 00:14:19,200
+and it introduces another opportunity for defects. High-NA machines cost about twice as much, but they can reduce the number of passes that are needed.
+同时增加出现缺陷的机会。高数值孔径机器的成本约为其两倍，但能显著减少所需的加工次数。
+
+132
+00:14:19,200 --> 00:14:27,200
+So the question which determines whether they justify their higher price is how much more time they save and how much they reduce the risk of defects.
+决定它们是否物有所值的关键问题是，它们能节省多少时间，以及能将缺陷风险降低多少。
+
+133
+00:14:27,200 --> 00:14:39,840
+Now you guys are using High-NA EUV tools for 14A, whereas TSMC has said that they don’t make economic sense yet for them. How do you decide whether the next litho tool is
+现在你们在14A制程上已经开始使用高数值孔径极紫外光刻工具，而台积电表示，对他们而言这些工具目前还缺乏经济意义。
+
+134
+00:14:39,840 --> 00:14:45,200
+the one that is ready to adopt or not? High-NA’s a good example of where,
+你们如何判断下一台光刻机是否已经具备采用条件？高数值孔径就是一个很好的例子，
+
+135
+00:14:45,200 --> 00:14:56,160
+because of the architecture of our technology versus TSMC’s, we make different conclusions off of the same tool set. We use backside power.
+由于我们的技术架构与台积电不同，面对同一套工具，得出了不同的结论。我们采用了背面供电技术。
+
+136
+00:14:56,160 --> 00:15:01,680
+That means that you actually alleviate some of the pitch requirements you have on the front side.
+这意味着你实际上减轻了正面的间距要求。
+
+137
+00:15:01,680 --> 00:15:04,800
+That allows you to print that directly with High-NA.
+这让你可以直接用高数值孔径光刻技术进行打印。
+
+138
+00:15:04,800 --> 00:15:12,480
+TSMC has to run tighter pitches because they don’t have backside power, and they can’t do that with High-NA, so they have to use double patterning EUV.
+台积电必须采用更紧密的间距，因为他们无法实现背面供电，而且在高数值孔径光刻下也无法做到这一点，因此他们必须采用双重曝光 EUV 工艺。
+
+139
+00:15:12,480 --> 00:15:16,560
+So for them, it’s not very helpful. For us, it is very helpful.
+对他们来说，这没什么帮助。对我们来说，却非常有用。
+
+140
+00:15:16,560 --> 00:15:24,880
+Now at 14A, we’ve left it as an option, and it’s something that we’ll have a discussion with the customer on, because there’s some value proposition to it, and there’s some
+现在在14A制程上，我们把它作为一个可选项，具体是否采用，我们会与客户进行讨论，因为这项技术有其价值主张，
+
+141
+00:15:24,880 --> 00:15:31,280
+complexity that it adds. Chris is referring to a feature called backside power. A chip has two different kinds of wiring.
+同时也带来一定复杂性。克里斯提到的是名为背面供电的功能。芯片有两种不同的布线方式。
+
+142
+00:15:31,280 --> 00:15:35,440
+Power lines deliver electricity to the transistors, and they need to be thick.
+电源线将电力输送至晶体管，它们必须足够粗。
+
+143
+00:15:35,440 --> 00:15:38,320
+Signal lines let the transistors talk to each other.
+信号线让晶体管之间能够相互通信。
+
+144
+00:15:38,320 --> 00:15:46,560
+They’re much thinner, but they need to be spaced apart so that the signal from one wire doesn’t interfere with the signal from another. In the past, all of these power lines
+它们要薄得多，但必须保持间距，以免一根导线的信号干扰到另一根导线。过去，
+
+145
+00:15:46,560 --> 00:15:50,160
+and signal lines had to be crammed together on top of the transistors.
+所有的电源线和信号线都必须挤在晶体管上方。
+
+146
+00:15:50,160 --> 00:15:55,760
+Intel’s newest process moves these power lines below the transistors, to the back of the wafer.
+英特尔最新的制程将这些电源线路移至晶体管下方，位于晶圆背面。
+
+147
+00:15:55,760 --> 00:16:00,160
+This frees up space on top, so the signal lines don’t have to be packed as tightly.
+这腾出了上方空间，因此信号线无需挤得那么紧密。
+
+148
+00:16:00,160 --> 00:16:09,440
+This change makes High-NA worth it for Intel. Without backside power, the wiring is so tight that it would require multiple passes to print, even with High-NA.
+这一改变让英特尔采用高数值孔径光刻成为值得的抉择。若没有背面供电，布线将过于密集，即使使用高数值孔径，也需多次曝光才能完成。
+
+149
+00:16:09,440 --> 00:16:13,280
+With backside power, a single High-NA pass is enough.
+采用背面供电后，仅需一次高数值孔径光刻即可完成。
+
+150
+00:16:13,280 --> 00:16:17,680
+Outside companies can now commission Intel to manufacture chips that they’ve designed.
+现在，外部公司可以委托英特尔代工生产他们设计的芯片。
+
+151
+00:16:17,680 --> 00:16:24,000
+They follow Intel’s process design kit, or PDK: the menu of what a given process can build,
+它们遵循英特尔的工艺设计套件（PDK）：即特定工艺能够实现的结构清单及其构建规则。
+
+152
+00:16:24,000 --> 00:16:30,640
+and the rules for building it. Do you need to lock that into your PDK right now for customers who are planning on developing on 14A?
+对于那些计划在14A工艺上开发的客户，你现在是否需要将这些内容锁定到你的PDK中？
+
+153
+00:16:30,640 --> 00:16:39,200
+It’s an option in the PDK today, and we’re handling it as a customer-by-customer discussion as to whether or not they want to go down that path or not.
+目前PDK中已提供这一选项，至于客户是否选择走这条路，我们正根据每个客户的具体情况分别进行沟通。
+
+154
+00:16:39,200 --> 00:16:44,000
+For 18A, there was public reporting that there were delays in or issues with the PDK,
+对于18A制程，有公开报道指出PDK存在延迟或问题，
+
+155
+00:16:44,000 --> 00:16:51,280
+such that some instructions didn’t work, and it was difficult for people to use your foundry to build their chips. Tell me about the process of Intel
+导致部分指令无法使用，客户很难通过你们的晶圆厂来制造芯片。请谈谈英特尔如何转型成为晶圆代工厂，
+
+156
+00:16:51,280 --> 00:17:00,160
+becoming a foundry and then having a PDK that other customers can use to make whatever chip they’re making as well. There’s definitely a learning curve to
+并开发出可供其他客户使用的PDK，让他们也能顺利制造自己的芯片。这其中确实存在一个学习曲线。
+
+157
+00:17:00,160 --> 00:17:05,920
+how you become a foundry. That’s something that our competitors have gone through as well. PDK is a good example of that.
+你如何成为一家代工厂，这正是我们的竞争对手也经历过的。PDK 就是其中的一个好例子。
+
+158
+00:17:05,920 --> 00:17:12,800
+For decades, we’ve been an IDM. We’ve gone to our product teams and shown them our transistor data, and we share that data back and forth, and we haven’t
+几十年来，我们一直是一家IDM。我们曾向产品团队展示我们的晶体管数据，并在双方之间来回共享这些数据，
+
+159
+00:17:12,800 --> 00:17:22,400
+had a formal PDK-type process. So that’s a new process that we’ve had to implement on 18A. 18A started out not having a PDK.
+但从未有过正式的PDK流程。因此，这是我们为18A制程新建立的流程。18A最初并没有PDK。
+
+160
+00:17:23,120 --> 00:17:33,280
+There’s definitely a lot of feedback we’ve gotten from the customers as to what they expect for quality and maturity of the PDK and what sort of information they want to see in there.
+我们确实收到了大量客户反馈，关于他们对PDK的质量和成熟度的期望，以及他们希望在其中看到哪些信息。
+
+161
+00:17:33,280 --> 00:17:40,160
+We’ve tried to incorporate that into making sure that we have a PDK that meets our customers’ requirements. That’s where we’ve ended up.
+我们已努力将这一点融入其中，确保我们提供的PDK能满足客户的需求。这就是我们最终的成果。
+
+162
+00:17:40,720 --> 00:17:45,600
+We’re starting to get PDKs that have this, and 14A will have that from the get-go.
+我们已经开始获得具备这一特性的PDK，而14A从一开始就将支持该功能。
+
+163
+00:17:45,600 --> 00:17:56,240
+It has very high quality PDKs. Again, there are maturity metrics for what is a PDK 0.5 versus a 0.9 versus a 1.0. We’re constantly going through and taking
+它的PDK质量非常高。再次强调，PDK的成熟度有明确的衡量标准，比如0.5版、0.9版和1.0版之间的区别。
+
+164
+00:17:56,240 --> 00:18:00,880
+customer feedback and incorporating that into the quality of our PDK.
+我们一直在持续收集客户反馈，并将其融入到PDK的质量提升中。
+
+165
+00:18:00,880 --> 00:18:04,960
+For most of its history, Intel’s fabs made only Intel’s chips.
+在大部分历史中，英特尔的晶圆厂只生产英特尔的芯片。
+
+166
+00:18:04,960 --> 00:18:07,680
+That could be part of what allowed TSMC to gain an edge.
+这可能是台积电能够取得优势的部分原因。
+
+167
+00:18:07,680 --> 00:18:12,880
+Serving many customers gave TSMC more wafers to learn from, more revenue to reinvest,
+为众多客户提供服务让台积电获得了更多晶圆用于学习，更多收入用于再投资，
+
+168
+00:18:12,880 --> 00:18:20,400
+and more pressure to hit deadlines. Basically, all enterprise customers have a shared set of product requirements that you have to meet if you want to even
+也面临更大的交付期限压力。基本上，所有企业客户都有一套共同的产品需求，
+
+169
+00:18:20,400 --> 00:18:29,840
+start talking about doing business with them. These are things like SSO, so employees can log into your app with their company accounts, or directory sync, so that whenever someone leaves,
+如果你想要开始与他们谈合作，就必须满足这些要求。比如单点登录，让员工可以用公司账号登录你的应用；或者目录同步，确保有人离职时能及时更新。
+
+170
+00:18:29,840 --> 00:18:37,200
+their access gets shut off automatically. These features are harder to get right than you think, and the risk-reward for building them in-house doesn’t really make sense:
+他们的访问权限会自动被关闭。这些功能的实现比你想象中更难，自己开发的投入产出比并不合理：一个稍好的单点登录版本可能不
+
+171
+00:18:37,200 --> 00:18:40,720
+a slightly better version of SSO probably won’t accelerate your growth,
+会显著加速你的增长，但一个出问题的版本却肯定会严重拖累发展。
+
+172
+00:18:40,720 --> 00:18:51,920
+but a broken one will definitely stunt it. WorkOS gives you access to battle-tested versions of all the most common enterprise features—things like SSO, SCIM, RBAC, audit logs, and more.
+WorkOS 为你提供了经过实战检验的各类常见企业级功能——比如单点登录、SCIM、基于角色的访问控制、审计日志等。
+
+173
+00:18:51,920 --> 00:18:59,840
+WorkOS also has versions of these features that are purpose-built for agents, so they can log in, grab the right permissions, and take actions within your product.
+WorkOS 还提供了专为智能体设计的功能版本，使其能够登录、获取相应的权限，并在您的产品内执行操作。
+
+174
+00:18:59,840 --> 00:19:08,960
+All of these features can be plugged in with just a few lines of code, so you can add them and get started selling to enterprises. OpenAI, Anthropic, and Thinking Machines—as well
+这些功能只需几行代码即可接入，让你轻松添加并开始向企业客户销售。OpenAI、Anthropic 和 Thinking Machines，
+
+175
+00:19:08,960 --> 00:19:15,440
+as more than 3,000 other companies—all rely on WorkOS to meet their enterprise requirements.
+以及超过3000家其他公司，都依赖 WorkOS 来满足其企业需求。
+
+176
+00:19:15,440 --> 00:19:20,000
+If you want to join them, go to workos.com and tell them that I sent you.
+如果你想加入他们，就去 workos.com，告诉他们是我介绍的。
+
+177
+00:19:20,000 --> 00:19:28,080
+If a butterfly flapped its wings in the ’60s, could you imagine a world where gate-all-around is not even a word people have heard of, an idea people are familiar with, but people are thinking
+如果一只蝴蝶在60年代扇动了翅膀，你能想象这样一个世界吗？那里“环绕栅极”甚至不是人们听过的词，一个人们熟悉的概念，
+
+178
+00:19:28,080 --> 00:19:35,200
+of an extremely different branch of the tech tree? How far down the tech tree do you think things could be totally different? Could it be that we’re not even using copper?
+而人们思考的是科技树上一条截然不同的分支？你觉得科技树的分支会走得多远才会完全不同？会不会我们根本就没用铜？
+
+179
+00:19:35,200 --> 00:19:42,080
+If you look at, say, transistors and interconnects, where we’ve gotten to,
+如果你看看晶体管和互连技术，我们目前所达到的水平，
+
+180
+00:19:42,080 --> 00:19:46,640
+as far as the transistor and gate-all-around and it being the ideal transistor structure,
+比如环绕栅极结构，已经接近理想晶体管形态，这在某种程度上是不可避免的。
+
+181
+00:19:47,520 --> 00:19:54,080
+was somewhat inevitable. As I said, in the ’90s we were already talking about these types of things. Backside power, that one’s pretty out there.
+正如我之前提到的，上世纪90年代我们就已经在讨论这类技术了。而背面供电技术，就显得相当超前了。
+
+182
+00:19:54,800 --> 00:20:06,240
+Even in the ’90s, the idea that you’re going to strip off the entire silicon substrate and put lines on the backside, that one is probably something that’s a little bit out there.
+即使在90年代，想到要把整个硅基板剥离，然后在背面布线，这种想法可能还是有点太超前了。
+
+183
+00:20:06,880 --> 00:20:14,560
+Copper, of course copper wires are the best, so I don’t know how you would end up somewhere else besides copper. But you guys are exploring other—
+当然，铜线是最好的，所以我不知道你们怎么还能想到别的材料。不过你们确实也在探索其他方案——
+
+184
+00:20:14,560 --> 00:20:20,400
+For some of the very tightest pitches, it’s inevitable that you will replace copper.
+对于一些极其紧密的间距，用铜线已不可避免地会被替代。
+
+185
+00:20:20,400 --> 00:20:24,160
+That’s a good example of where you will have another material that will come in there.
+这是一个很好的例子，说明届时会有另一种材料被引入。
+
+186
+00:20:24,160 --> 00:20:27,360
+But for the larger lines, I think copper is about where it’s at.
+但对于更大的线路来说，我认为铜已经到顶了。
+
+187
+00:20:28,160 --> 00:20:36,880
+Once you start to do gate-all-around transistors and you do backside power, now you start to enter a very different regime.
+一旦你开始采用环绕栅极晶体管并采用背面供电，你就进入了完全不同的技术阶段。
+
+188
+00:20:36,880 --> 00:20:41,840
+Now you see it’s not, “Hey, there’s just some substrate and you stack everything on top.”
+现在你明白了吧，这可不是“随便找个基板，把所有东西堆上去就行”那么简单。
+
+189
+00:20:41,840 --> 00:20:50,160
+Now you’ve got a transistor which is floating in interconnect, and you’re like, “Okay, well, why don’t I have transistors, interconnect, a little more transistors, more interconnect?”
+现在你有一个悬浮在互连中的晶体管，你会想：“好吧，那我为什么不把晶体管、互连、更多的晶体管、更多的互连组合在一起呢？”
+
+190
+00:20:50,160 --> 00:20:55,520
+This whole 3D stacking that we now do with just discrete chips that we stack on top of each other.
+我们现在所做的这种3D堆叠，就是把独立的芯片一层层堆叠在一起。
+
+191
+00:20:55,520 --> 00:20:59,360
+Now you’re like, “Why can’t I just build an entire structure like this?”
+现在你可能会想：“我为什么不能直接造出这样一个完整的结构呢？”
+
+192
+00:20:59,360 --> 00:21:06,320
+You see it with memory, NAND, DRAM. They have some incredible 3D structures.
+你看内存、NAND 和 DRAM，它们都拥有令人惊叹的三维结构。
+
+193
+00:21:06,320 --> 00:21:13,200
+NAND already does it, DRAM talks about it, but I think that DRAM inevitably is going to go there too. A lot of people say, “Oh no,
+NAND 已经在这么做了，DRAM 也在讨论这件事，但我认为 DRAM 最终也一定会这么做。
+
+194
+00:21:13,200 --> 00:21:16,160
+we’re not going to do this because we can’t do it in the next five years.”
+很多人说：“哦不，我们不会这么做，因为五年内做不到。”
+
+195
+00:21:16,160 --> 00:21:18,720
+Well, come on, let’s put a larger timescale on this.
+好吧，来吧，咱们把时间尺度拉得更大一些。
+
+196
+00:21:18,720 --> 00:21:23,280
+Let’s put 10 years, 20 years. In 2045, do you think you could do it?
+我们来设想一下，十年、二十年后。到2045年，你觉得你能做到吗？
+
+197
+00:21:23,280 --> 00:21:29,920
+Now you start to say, “Oh yeah, I could see us having some pretty exotic structures at that point.” We limit ourselves by what we see
+现在你开始会想：“哦，是的，那时候我们或许能打造出一些相当奇特的结构。” 我们之所以受限，
+
+198
+00:21:29,920 --> 00:21:38,560
+as possible in the next four years. As I’ve always said, when people say, “How do you see technology scaling going?”, we have visibility for about four years.
+是因为我们对接下来四年的可能性有着固定的想象。正如我一直以来所说，当人们问“你怎么看技术的扩展趋势？”时，我们最多只能看到大约四年的未来。
+
+199
+00:21:38,560 --> 00:21:44,240
+Then you get out to the four years, and you go, “Yeah, I think there’s something we can do another four years out of that.” And you get to that four years, and you’re like,
+然后你到了第四年，你会想：“嗯，我觉得我们还能再做四年。”等到第四年真正到来时，你又会说：“嗯，
+
+200
+00:21:44,240 --> 00:21:47,120
+“Yeah, I think you can do something.” But if you start to talk about 10 years,
+我觉得还能做点什么。”但如果你开始谈论十年，
+
+201
+00:21:47,120 --> 00:21:54,880
+it becomes hard to say what it’s going to be. Chris’s idea of building upward could start with the transistors themselves. Chips use two types of transistor,
+就很难说清楚那会是什么样子了。克里斯设想的向上构建，或许可以从晶体管本身开始。芯片使用两种类型的晶体管。
+
+202
+00:21:54,880 --> 00:22:00,080
+called n-type and p-type, which work the same way, but with the charges reversed.
+称为N型和P型，它们的工作原理相同，只是电荷相反。
+
+203
+00:22:00,080 --> 00:22:06,400
+Nearly every circuit is built by pairing them up. Today, chipmakers build them side by side.
+几乎每个电路都是成对构建的。如今，芯片制造商将它们并排制造。
+
+204
+00:22:06,400 --> 00:22:11,040
+The next step is to stack them directly on top of each other in order to save space.
+下一步是将它们直接堆叠在一起，以节省空间。
+
+205
+00:22:11,040 --> 00:22:15,200
+In principle, that fits twice as many transistors into the same area.
+原则上，这能在相同面积内容纳两倍的晶体管。
+
+206
+00:22:15,200 --> 00:22:20,000
+This design is called a CFET, short for complementary field-effect transistor.
+这种设计被称为CFET，即互补型场效应晶体管的缩写。
+
+207
+00:22:20,000 --> 00:22:31,200
+But every extra layer adds manufacturing steps and cost, and also leads to heat building up that doesn’t have a clear way to escape. Because logic consumes more power than memory, you
+但每增加一层都会带来更多的制造步骤和成本，同时也会导致热量积聚，而这些热量难以有效散发。由于逻辑单元比内存消耗更多电力，
+
+208
+00:22:31,200 --> 00:22:38,720
+can’t do stacks of DRAM that make HBM or 3D NAND as easily with logic, because of the heat issue.
+因此受限于散热问题，无法像HBM或3D NAND那样轻松地堆叠DRAM。
+
+209
+00:22:38,720 --> 00:22:48,880
+Is that the fundamental issue over the long run? How you— Thermals. There are three things you have when you try to say, “Hey, what limits compute?”
+这从长远来看是根本问题吗？你得考虑热效应。当你想说“嘿，到底是什么限制了计算能力？”时，有三个因素需要考虑。
+
+210
+00:22:49,600 --> 00:22:53,760
+It’s how fast can you do the switch, so the frequency of the device.
+就是切换有多快，也就是设备的频率。
+
+211
+00:22:53,760 --> 00:22:58,400
+How much power does it take in order to do that switch, so the power efficiency of it.
+完成这种切换需要多少电力，也就是它的能效。
+
+212
+00:22:58,400 --> 00:23:02,560
+The third one is, how do you dissipate the heat that was generated by doing that switch?
+第三个问题是，如何散发出执行这种切换所产生的热量？
+
+213
+00:23:02,560 --> 00:23:07,280
+That’s the thermals piece of it. These are not new problems.
+这就是热管理方面的问题。这些问题并不新鲜。
+
+214
+00:23:07,280 --> 00:23:10,320
+You can go back 20 years and you can see articles on these three things.
+你倒退二十年，就能看到关于这三件事的报道。
+
+215
+00:23:10,320 --> 00:23:21,280
+The question is, thermals… how do you deal with that, particularly when you start to talk about these 3D-type devices? There is a need for that sort of system-level
+问题是热管理……你该如何应对，尤其是谈到这类3D器件时？确实需要这类系统级的分析和仿真工具。
+
+216
+00:23:21,280 --> 00:23:31,280
+analysis and simulation tools. I think we’re in its infancy because we’ve just started to look at this. It is a limiter, and it will be a limiter, but
+我认为我们才刚刚起步，因为才刚开始关注这个问题。这确实是一个瓶颈，而且会持续成为瓶颈，
+
+217
+00:23:31,280 --> 00:23:41,360
+again, these are problems that we can go solve. The problems respond to work, but engineering time is finite, and so are the wafers for experiments. Deciding where they go across thousands
+但这些问题我们终究可以解决。问题会响应努力，但工程时间是有限的，实验用的晶圆也同样有限。决定它们如何分配到成千上万的场景中
+
+218
+00:23:41,360 --> 00:23:45,360
+of problems is itself one of the hardest parts of bringing up a node.
+问题本身，就是部署节点过程中最困难的部分之一。
+
+219
+00:23:45,360 --> 00:23:50,400
+I sat in on one of Intel’s Hot Topics meetings, where those decisions get made.
+我旁听了英特尔一次“热点话题”会议，那些决策就是在会上做出的。
+
+220
+00:23:50,400 --> 00:23:58,800
+I’m here with Kevin Fischer, who was laying down the law this morning at the Hot Topics meeting, where you guys were discussing how you’re improving 18A and 18A-P technologies.
+我身边这位是凯文·费舍尔，他今天上午在热点议题会议上发表讲话，你们刚才讨论的就是如何改进18A和18A-P技术。
+
+221
+00:23:58,800 --> 00:24:01,040
+People would come to you with different experiments they were running,
+人们会带着各自正在进行的实验、
+
+222
+00:24:01,040 --> 00:24:11,920
+different ideas they had for improving yield and performance, and then you and your integration engineers would tell them what data you needed, how they should proceed,
+提升良率和性能的不同想法来找你，然后你和你的集成工程师会告诉他们需要哪些数据，如何推进，以及你认为他们怎样才
+
+223
+00:24:11,920 --> 00:24:20,640
+how you think they could move things faster. I want people to have a sense of the culture at these meetings. One thing I found striking is that this
+能更快地取得进展。我希望人们能感受到这些会议中的文化氛围。其中一点让我印象深刻的是，这
+
+224
+00:24:20,640 --> 00:24:24,720
+is bottlenecking your most advanced node. You want progress to happen fast,
+正在拖慢你最先进的制程节点。你希望进展能快速推进，
+
+225
+00:24:24,720 --> 00:24:39,840
+so you kind of lay down the hammer. I would say the average engineer doesn’t understand the stakes or the urgency of how this is going to impact Intel’s bottom line,
+所以不得不施加压力。我认为普通工程师并不理解其中的利害关系，也不清楚这将如何影响英特尔的业绩，
+
+226
+00:24:39,840 --> 00:24:45,600
+how it’s going to impact our customer. They just have no visibility into those issues.
+如何影响我们的客户。他们根本看不到这些问题的严重性。
+
+227
+00:24:45,600 --> 00:24:52,480
+They will typically have a certain set of criteria that they want to go capture.
+他们通常会有一套特定的标准，需要去捕捉。
+
+228
+00:24:52,480 --> 00:24:59,120
+They’ll hit boundaries of, “I asked for something and someone said no, and I’m done.
+他们会遇到这样的界限：“我提出了一个请求，却得到一个‘不’的答复，于是我就放弃了。”
+
+229
+00:25:00,560 --> 00:25:10,480
+I guess I can’t have this thing that I asked for.” One thing you learn in this industry is that you will never have a complete data set. If you want to wait for a complete data set,
+我想我没法得到我想要的这个东西了。在这个行业里你学到的一件事是，你永远无法获得一个完整的数据集。如果你想等一个完整数据集，
+
+230
+00:25:10,480 --> 00:25:12,720
+you’ve waited too long. It’s already too late.
+那你已经等太久了，现在为时已晚。
+
+231
+00:25:12,720 --> 00:25:23,280
+A lot of what I end up doing in those meetings is deciding how much risk we’re going to take on a certain decision or not take on a certain decision.
+在那些会议中，我做的大部分事情就是判断，对于某个决策，我们该承担多少风险，或者是否应该不承担某个决策的风险。
+
+232
+00:25:23,280 --> 00:25:27,920
+You need to say, “Look, do we go now? Do we start risking production?”
+你得说：“听着，我们现在就启动吗？要不要开始冒生产风险？”
+
+233
+00:25:27,920 --> 00:25:31,120
+Because you’re risking the bottom line. You’re risking revenue.
+因为你正在危及利润底线，危及收入。
+
+234
+00:25:31,120 --> 00:25:39,280
+I’m worried you’re going to put me in the light of being an ogre because I’m putting the hammer down on people. That’s a great reputation to have.
+我担心你会觉得我像个怪物，因为我对人下手太狠了。不过，这种名声倒也不错。
+
+235
+00:25:39,280 --> 00:25:43,200
+It’s really conveying urgency. Every day counts.
+这真正传达出了紧迫感，每一天都至关重要。
+
+236
+00:25:43,200 --> 00:25:47,120
+Can you walk me through a particular issue that might come up?
+你能给我讲讲可能会出现的一个具体问题吗？
+
+237
+00:25:47,120 --> 00:25:51,360
+One of the examples you saw this morning is epi nodules.
+今天上午你们看到的一个例子是表皮结节。
+
+238
+00:25:51,360 --> 00:25:56,880
+Epi is short for epitaxy, which means growing new material on top of an existing one.
+Epi 是外延的缩写，指的是在已有材料之上生长出新的材料。
+
+239
+00:25:56,880 --> 00:26:02,480
+Chipmakers flow gases over a heated wafer, and the gases leave atoms on its surface.
+芯片制造商将气体流过加热的晶圆，气体便会在晶圆表面留下原子。
+
+240
+00:26:02,480 --> 00:26:06,160
+The crystal structure of the material underneath acts as a template.
+材料下方的晶体结构充当了模板。
+
+241
+00:26:06,160 --> 00:26:11,360
+Each new atom lines up with the atoms below it, and the new layer continues the same crystal.
+每个新原子都与下方的原子对齐，新层延续了相同的晶体结构。
+
+242
+00:26:11,360 --> 00:26:14,960
+Chipmakers use epitaxy at several stages of making a chip.
+芯片制造商在制造芯片的多个阶段都会使用外延生长技术。
+
+243
+00:26:14,960 --> 00:26:23,280
+In the step Kevin describes, they use it to grow the source and the drain as small crystals on either side of the gate. During the deposition of our epitaxy,
+在凯文描述的步骤中，他们利用该技术在栅极两侧生长源极和漏极的小晶体。在进行外延沉积时，
+
+244
+00:26:23,280 --> 00:26:26,960
+we get abnormal growth, a little thing like a tumor.
+会出现异常生长，就像长出一个小肿瘤一样。
+
+245
+00:26:26,960 --> 00:26:35,840
+It’s growing super fast. That causes problems, because one epi will short to the wrong epi and you get transistors not working.
+它增长得非常快，这会带来问题，因为一个外延层可能会短路到错误的外延层，导致晶体管无法工作。
+
+246
+00:26:35,840 --> 00:26:39,120
+Then you’ve got to narrow it down to how you’re going to fix it.
+然后你得缩小范围，确定如何解决它。
+
+247
+00:26:39,120 --> 00:26:43,520
+For the past decade, Intel’s chips have had this feature called Processor Trace.
+过去十年里，英特尔的芯片一直具备一种名为处理器追踪的功能。
+
+248
+00:26:43,520 --> 00:26:52,160
+When you turn it on, it starts recording all the code your program runs, and it captures enough detail that you can go back later and reconstruct every single function call.
+打开它后，它会开始记录程序运行的所有代码，并捕获足够详细的信息，让你之后能够回溯并重建每一个函数调用。
+
+249
+00:26:52,160 --> 00:27:00,080
+Most companies don’t need that level of detail. But Jane Street does: they need to investigate specific, fleeting moments in their trading systems—things like
+大多数公司并不需要如此细致的分析，但 Jane Street 需要：他们必须深入调查交易系统中特定且转瞬即逝的时刻，
+
+250
+00:27:00,080 --> 00:27:07,600
+a delayed response to a network packet. Those events tend to be too brief for most debugging tools to catch. So when one of Jane Street’s
+比如网络数据包响应延迟这类问题。这类事件通常过于短暂，大多数调试工具难以捕捉。因此，当 Jane Street
+
+251
+00:27:07,600 --> 00:27:11,120
+engineers noticed Processor Trace, he started playing around with it.
+的一名工程师注意到处理器追踪功能时，便开始尝试使用它。
+
+252
+00:27:11,120 --> 00:27:16,960
+And then he and a summer intern turned that exploration into a new tool called magic-trace.
+随后，他和一名暑期实习生将这次探索转化为一款名为 magic-trace 的新工具。
+
+253
+00:27:16,960 --> 00:27:25,200
+Magic-trace leverages the output from Processor Trace to give Jane Street a history of every function call leading up to a specific moment of interest.
+Magic-trace 利用处理器追踪的输出，为 Jane Street 提供了特定时刻之前所有函数调用的历史记录。
+
+254
+00:27:25,200 --> 00:27:31,920
+This project was completely bottom-up—it started just as something that one engineer thought would be valuable. And now, traders and developers across
+这个项目完全是自下而上发起的，最初只是某位工程师认为有价值的一个想法。如今，Jane Street 的交易员和开发
+
+255
+00:27:31,920 --> 00:27:41,280
+Jane Street use magic-trace every single day. If you want to work somewhere where you’re trusted to pursue the ideas that you think matter most, Jane Street is hiring researchers and engineers.
+人员每天都使用 magic-trace。如果你希望在一个信任你去追求心中最重要的想法的环境中工作，Jane Street 正在招聘研究员和工程师。
+
+256
+00:27:41,280 --> 00:27:53,200
+Go to janestreet.com/dwarkesh to learn more. One of the pieces that you observed this morning was a special clean that we were looking at, which would eliminate the nodule.
+访问 janestreet.com/dwarkesh 了解更多信息。你们今天上午看到的其中一项内容，是我们正在研究的一项特殊清洁工艺，可消除结节。
+
+257
+00:27:53,200 --> 00:27:56,160
+The nodule would deposit, and then we’d get rid of it.
+结节会沉积下来，然后我们就把它清除掉。
+
+258
+00:27:56,160 --> 00:27:59,520
+Some of the other discussion was about the source of the nodule.
+其他讨论还涉及结节的来源。
+
+259
+00:27:59,520 --> 00:28:07,680
+Get rid of the source of the nodule. There’s some issue. How do you decide what the source of it is? For the most part, we work highly parallel.
+把结节的根源去掉。这里有些问题，你如何判断它的根源是什么？大部分情况下，我们采用高度并行的方式工作。
+
+260
+00:28:08,320 --> 00:28:15,680
+How do you decide? It’s not always evident what the easiest way to fix the problem is, so you work on all the potential fixes.
+你怎么决定？问题的最简单解决方法并不总是显而易见，所以你要尝试所有可能的修复方案。
+
+261
+00:28:16,480 --> 00:28:27,440
+Sometimes it’s not the one you expect first. Once we’ve identified it as a primary problem for the technology, that’s where this Hot Topics meeting gets involved.
+有时候，最先遇到的并不是你预期的那个问题。一旦我们确认这是该技术的主要问题，这个热点话题会议就会介入。
+
+262
+00:28:27,440 --> 00:28:36,320
+That’s how we align the resources into those engineering teams so that we can accelerate the work. You said that there’s some
+这就是我们如何将资源调配到工程团队，以加速工作进度。你说过，
+
+263
+00:28:36,320 --> 00:28:40,640
+fast-track process where wafers can move through faster if they’re bottlenecking some experiment.
+如果晶圆在某个实验中成为瓶颈，可以通过快速通道流程更快地流转。
+
+264
+00:28:40,640 --> 00:28:44,240
+We have a tiered system of what we call hot boxes in the factory.
+我们在工厂里有一个所谓的热箱分级系统。
+
+265
+00:28:44,960 --> 00:28:54,880
+Every grade of hot box goes a little bit faster. It’s just how the factory prioritizes that particular lot, that block of silicon that’s running through the factory.
+每个等级的热盒运行速度都会稍快一些，这取决于工厂对特定批次、正在流水线上运行的那块硅片的优先级安排。
+
+266
+00:28:55,680 --> 00:29:00,480
+Our highest grade of hot box, HotBox 1, races through the factory.
+我们最高级别的热箱，HotBox 1，在工厂中飞速运转。
+
+267
+00:29:00,480 --> 00:29:04,800
+It gets priority at every single tool, but it’s a drag on the entire factory.
+它在每个工具上都享有优先权，但却拖累了整个工厂的效率。
+
+268
+00:29:04,800 --> 00:29:16,000
+If you had a factory person in here, they don’t like playing that card, because you end up using the tools inefficiently so that you can go super fast.
+如果你这儿有个工厂人员，他们可不乐意出这张牌，因为那样会导致工具使用效率低下，最终你虽然跑得飞快，却浪费了资源。
+
+269
+00:29:16,000 --> 00:29:23,440
+Think of it as a highway, and you set aside that one lane for the carpool, which everyone could use, but you’re saying, “Okay, it’s just the carpool.”
+把它想象成一条高速公路，你专门划出一条车道给拼车使用，大家都能用，但你强调说：“好，这条车道只供拼车用。”
+
+270
+00:29:23,440 --> 00:29:30,720
+That’s our HotBox 1. Everyone clear out of that lane except for that one experiment, and that one experiment races down the highway.
+这就是我们的热盒1号。除了那一个实验，其他人都离开那个车道，就让那个实验冲上高速公路。
+
+271
+00:29:30,720 --> 00:29:41,280
+Kevin’s job is deciding what goes onto the production line now, but the day before, I went to Intel’s research lab with Jack Kavalieros to see ideas that aren’t ready for the node yet.
+凯文的工作是决定现在哪些产品能上生产线，但前一天，我跟着杰克·卡瓦列罗斯去了英特尔的研究实验室，参观一些还不到上节点阶段的前沿想法。
+
+272
+00:29:41,280 --> 00:29:50,320
+We started with wiring. A transistor is only useful once it’s connected to others, and on a modern chip that takes more than a dozen layers of metal wire stacked
+我们从布线开始。晶体管只有与其他元件连接后才有用，而在现代芯片上，这需要在晶体管上方堆叠超过十层金属导线，
+
+273
+00:29:50,320 --> 00:30:01,360
+above the transistors, called interconnect. Those wires are made of copper, and as they shrink, copper starts to run into trouble. Intel is exploring a replacement: ruthenium.
+称为互连。这些导线由铜制成，但随着尺寸缩小，铜开始出现问题。英特尔正在探索一种替代方案：钌。
+
+274
+00:30:01,360 --> 00:30:05,280
+Ruthenium has higher resistivity, so why are you guys exploring ruthenium for the future?
+钌的电阻率更高，那你们为什么还要探索用钌来打造未来呢？
+
+275
+00:30:05,280 --> 00:30:11,440
+Interestingly enough, as you scale the dimensions of those copper wires, you run into challenges.
+有趣的是，当这些铜线的尺寸不断增大时，你会遇到各种挑战。
+
+276
+00:30:11,440 --> 00:30:17,680
+For example, copper typically requires a liner in order to deposit the copper to fill those lines.
+例如，为了将铜填充到这些线路中，通常需要先铺设一层衬垫。
+
+277
+00:30:17,680 --> 00:30:23,680
+Ruthenium is very different in that regard because it’s a material that we can actually etch.
+钌在这方面非常不同，因为它是一种我们可以实际进行刻蚀的材料。
+
+278
+00:30:23,680 --> 00:30:37,600
+As such, by etching it, we don’t need that liner. Now you scale those very fine dimensions, and if you can trade off that resistive liner with no liner, ruthenium starts to win.
+因此，通过刻蚀，我们就不需要那层阻隔层了。当尺寸缩小到非常精细的程度时，若能用无阻隔层替代有阻隔层，钌的优势就开始显现了。
+
+279
+00:30:37,600 --> 00:30:46,960
+There is a crossover point where ruthenium will have much better conductivity, better resistivity than copper. That’s roughly in the 20-nanometer pitch range,
+当钌的导电性和电阻率优于铜时，就达到了一个交叉点，这大约出现在20纳米的间距范围内。也就是说，
+
+280
+00:30:46,960 --> 00:30:55,680
+which means, if you can imagine, half of the pitch is your metal line, and the other half is the dielectric that isolates them. So what is the liner?
+你可以想象，间距的一半是金属线，另一半是隔离它们的介电材料。那么，这里的“衬层”指的是什么？
+
+281
+00:30:56,960 --> 00:31:05,920
+Think of it almost like a glue layer or transition layer that we need in order to deposit the copper and have it stick, and have it make that connection to the copper lines below it.
+可以把它想象成一种类似粘合层或过渡层，我们需要它来沉积铜，让铜能够附着，并与下方的铜线形成有效连接。
+
+282
+00:31:05,920 --> 00:31:10,400
+These are all interlocking copper lines that interconnect to each other.
+这些都是相互连接的铜线，彼此之间相互连通。
+
+283
+00:31:10,400 --> 00:31:15,680
+But every time you deposit copper, you’ve always had a liner underneath it.
+但每次你沉积铜时，下面始终都有一个衬层。
+
+284
+00:31:15,680 --> 00:31:24,480
+In the past, that liner may have been a significant portion of the entirety of that conduction path. But over time, we’ve scaled it, made it thinner,
+过去，这条导线可能占整个导电路径的相当大一部分。但随着时间推移，我们将其缩小、变薄，
+
+285
+00:31:24,480 --> 00:31:35,760
+and so copper comes back into play as a contender. One thing I’d be curious to know is how you decide that a technology is mature and ready for high-volume manufacturing.
+铜又重新成为有力的竞争者。我很好奇的是，你们是如何判断一项技术已经成熟，可以投入大规模生产的？
+
+286
+00:31:36,320 --> 00:31:40,640
+With 10 nanometer, you were mentioning you guys moved on from copper to cobalt,
+10纳米制程时，你们提到从铜换成了钴，
+
+287
+00:31:40,640 --> 00:31:48,960
+and there were potential issues with that. How do you decide that this technology is going to work at scale? The integration of these materials into such
+但可能存在一些问题。你们是如何判断这项技术能够实现规模化应用的？将这些材料整合进晶体管生
+
+288
+00:31:48,960 --> 00:31:54,800
+a complex system as the transistor ecosystem involves many, many different components.
+态系统这样复杂的系统中，涉及了众多不同的组件。
+
+289
+00:31:54,800 --> 00:31:59,440
+The scalability is one part, but its ability to integrate is another.
+可扩展性是一方面，而其集成能力是另一方面。
+
+290
+00:31:59,440 --> 00:32:02,800
+At the time we made a decision for cobalt, it was the forerunner.
+当时我们决定采用钴时，它还是先行者。
+
+291
+00:32:02,800 --> 00:32:07,520
+The results were stronger at the time. But as we work with our ecosystem externally,
+当时的结果更偏向于铜。但随着我们与外部生态系统合作，
+
+292
+00:32:07,520 --> 00:32:20,480
+the vendor ecosystem that provides these materials and the tools that we integrate them with, we find solutions down the road that may bring copper back in line as being the stronger of the two.
+包括提供这些材料和与我们集成工具的供应商生态，我们发现未来可能会有解决方案，让铜重新成为两者中更强的选项。
+
+293
+00:32:20,480 --> 00:32:24,720
+That’s exactly what happens. Every technology that we go through,
+这正是实际情况。我们每接触一项新技术，
+
+294
+00:32:24,720 --> 00:32:35,760
+we will evaluate multiple options. As we get closer to our time horizon for delivering a manufacturing-worthy product, we have to make a decision.
+都会评估多种选择。当我们越来越接近交付具备量产能力产品的时限时，就必须做出决定。
+
+295
+00:32:35,760 --> 00:32:39,440
+The leading option at the time was cobalt. Now it’s copper again,
+当时主流的选择是钴，现在又回到了铜，
+
+296
+00:32:39,440 --> 00:32:50,880
+and perhaps in the future it’ll be ruthenium. I’d love to get your thoughts on CFET, basically stacking the transistors on top of each other. What is progress like there?
+也许未来会用到钌。我很想听听你对CFET的看法，也就是把晶体管堆叠在一起。那里的进展如何？
+
+297
+00:32:50,880 --> 00:32:53,120
+Can you keep making more and more layers? Is it just two?
+你能一直增加越来越多的层吗？就只有两层吗？
+
+298
+00:32:53,120 --> 00:32:55,440
+Can you go three, four? How high can you get?
+能再往上三、四吗？你能爬多高？
+
+299
+00:32:55,440 --> 00:33:03,200
+That evaluation of CFET is currently underway. Not just by us, by our competition.
+对CFET的评估目前正在展开，不仅是我们，竞争对手也在进行。
+
+300
+00:33:03,200 --> 00:33:07,600
+Labs externally are looking at it. It is the ultimate in stackability.
+外部的实验室正在研究它。它在可堆叠性方面达到了极致。
+
+301
+00:33:07,600 --> 00:33:15,360
+We’re taking transistors that had to be compressed more and more, and we’re relaxing that in some ways because we’re going to stack them on top of each other.
+我们正在处理那些需要不断压缩的晶体管，现在我们会在某些方面放宽这一要求，因为我们将把它们堆叠在一起。
+
+302
+00:33:15,360 --> 00:33:18,640
+But the act of stacking does not mean that they’re not interconnected.
+但堆叠本身并不意味着它们之间没有连接。
+
+303
+00:33:18,640 --> 00:33:27,840
+What used to be connections on the top or even on the bottom, as we’ve seen from our press release, now has to go vertically in between the transistors.
+过去，连接通常位于顶部甚至底部，但根据我们发布的消息，现在这些连接必须垂直穿过晶体管之间。
+
+304
+00:33:27,840 --> 00:33:37,520
+That’s a new challenge because the aspect ratio of creating trenches and filling those trenches becomes more and more difficult. It’s not as straightforward as stacking the
+这带来了新的挑战，因为沟槽的深宽比越来越高，填充沟槽也变得越来越困难。这不像堆叠晶体管那样直接，
+
+305
+00:33:37,520 --> 00:33:40,560
+transistors, because you still have to think about interconnecting them.
+因为你仍需考虑如何连接它们。
+
+306
+00:33:40,560 --> 00:33:45,280
+Is the issue there the etch to get that deep hole? Aspect ratio for the etches is a big part of it.
+问题出在刻蚀上，要实现这么深的孔。刻蚀的深宽比是其中关键因素。
+
+307
+00:33:45,280 --> 00:33:54,480
+We’re working with our vendors to evolve on that and to improve that, but it’s also what you fill those very tiny spaces with. Because filling can sometimes leave
+我们正与供应商合作，推动这方面的发展和改进，但同样重要的是，你如何填充那些极其微小的空间。因为填充时有时会留下气隙或孔洞，
+
+308
+00:33:54,480 --> 00:33:58,960
+air gaps or holes that are never really filled, and that’s not ideal.
+这些地方实际上从未被完全填满，这并不是理想的状态。
+
+309
+00:33:58,960 --> 00:34:02,000
+I assume there’s a version of CFET that works inside this lab.
+我猜这个实验室里应该有一种能工作的 CFET 版本。
+
+310
+00:34:02,000 --> 00:34:06,000
+What is the kind of wafer or process that is working right now?
+现在正在使用的晶圆或制程是什么类型？
+
+311
+00:34:06,000 --> 00:34:07,648
+Then what’s the next step? What’s the next step after that,
+接下来的下一步是什么？在进入全规模量产流程之前，
+
+312
+00:34:08,160 --> 00:34:20,720
+until it’s inside the full high-volume process? Part of the process of evolving these technologies, especially something more complex like an architecture — not just a basic chemistry
+我们还需要走哪些步骤？在推动这些技术演进的过程中，尤其是像CFET这样更复杂的架构——不仅仅是基础的化学或材料，
+
+313
+00:34:20,720 --> 00:34:30,880
+or a material, but a full architecture like CFET — is that we have to make short-loop vehicles that can give us faster turnaround. The normal manufacturing process can
+而是一个完整的架构——我们必须打造能够实现快速迭代的短周期载体。常规的制造流程无法满足这一需求。
+
+314
+00:34:30,880 --> 00:34:35,680
+take a month or longer to complete the thousands of steps that it goes through.
+完成它所经历的数千个步骤可能需要一个月甚至更长时间。
+
+315
+00:34:35,680 --> 00:34:41,760
+Our goal here is to take unit cells of that process and qualify them.
+我们的目标是获取该工艺的单元结构并对其进行验证。
+
+316
+00:34:41,760 --> 00:34:52,880
+We take advantage of short-loop vehicles that can give us electrical parameters, chemical parameters that can resolve some of those challenges, those speed bumps.
+我们利用短循环车辆，获取电气参数和化学参数，从而解决部分挑战和瓶颈问题。
+
+317
+00:34:52,880 --> 00:34:58,800
+Once we’ve resolved them, then we combine them into a more complex test vehicle.
+解决这些问题后，我们再将它们整合到一个更复杂的测试车辆中。
+
+318
+00:34:58,800 --> 00:35:01,760
+What you would find in here is something very simple.
+你在这里会发现一些非常简单的东西。
+
+319
+00:35:01,760 --> 00:35:08,720
+You might be making a diode, you might be making a capacitor, which are components of the transistor.
+你可能在制造二极管，也可能在制造电容器，这些都是晶体管的组成部分。
+
+320
+00:35:08,720 --> 00:35:20,800
+As those evolve and become stronger, better performing, you combine them to make the next stage, which might be the transistor itself. In the CFET example, you might not choose to
+随着这些结构不断演进并变得更强、性能更好，你就可以将它们组合起来，进入下一个阶段，比如晶体管本身。以CFET为例，
+
+321
+00:35:20,800 --> 00:35:25,840
+do four ribbons on top of four ribbons. You might just choose to do one on one,
+你可能不会选择把四条细条叠在四条细条之上，而更可能选择一对一的结构，
+
+322
+00:35:25,840 --> 00:35:35,360
+because naturally the aspect ratio of dealing with something that much taller becomes more and more challenging. So we would have a simplified version of a CFET,
+因为处理这种更高结构时，其长宽比会变得越来越具挑战性。因此，我们会采用一种简化的CFET版本。
+
+323
+00:35:35,360 --> 00:35:40,560
+which has only one wire for the NMOS and one wire for the PMOS.
+这仅有一根NMOS的连线和一根PMOS的连线。
+
+324
+00:35:40,560 --> 00:35:49,520
+That simplifies our job, but it still helps us evaluate the stacking of devices and how they will interconnect. But are the feature sizes here as
+这简化了我们的工作，但仍有助于评估器件的堆叠方式及其互连效果。
+
+325
+00:35:49,520 --> 00:35:52,080
+small as they will be eventually? Or are the feature sizes bigger?
+但这里的特征尺寸最终会更小吗？还是说它们会更大？
+
+326
+00:35:52,080 --> 00:36:03,840
+Oh, absolutely. In some cases, at least as small. For example, you’ve heard of 2D materials, these transition layer dichalcogenides, as they’re called.
+当然，有些情况下甚至更小。比如，你可能听说过二维材料，也就是所谓的过渡层二硫属化合物。
+
+327
+00:36:03,840 --> 00:36:12,320
+They’re very, very thin materials. They’re essentially one monolayer of atoms that we deal with. Those depositions can happen in this lab.
+它们是非常非常薄的材料，本质上就是我们所处理的单层原子。这些沉积过程可以在本实验室完成。
+
+328
+00:36:12,320 --> 00:36:22,400
+We can evaluate those films in terms of conductivity, our ability to contact them, our ability to modulate that conductivity, which is what the transistor does.
+我们可以从导电性、我们与它们接触的能力以及调控这种导电性的能力来评估这些材料，而这正是晶体管所实现的功能。
+
+329
+00:36:22,400 --> 00:36:30,480
+So yes, we do have the ability to not only deposit films that are very small and thin to the
+是的，我们确实具备不仅沉积原子级薄的薄膜，
+
+330
+00:36:30,480 --> 00:36:42,640
+atomic scale, but also print very small features. We have EUV technology, or E-beam technology, that can allow us to print very small features similar to what we will eventually make in production.
+还能打印极小特征的能力。我们拥有 EUV 或电子束技术，能够打印出与最终量产产品相似的微小特征。
+
+331
+00:36:43,280 --> 00:36:51,840
+I guess I don’t understand intuitively, lacking the context in this process,
+我猜我直觉上无法理解，缺乏这个过程的背景知识，
+
+332
+00:36:51,840 --> 00:36:56,960
+if you have the features that are as small for a working CFET right now.
+如果现在要实现一个正常工作的CFET，其特征尺寸已经小到这种程度了。
+
+333
+00:36:57,520 --> 00:37:00,480
+Why will it take 10 years for it to be in my phone?
+为什么得等10年才能放进我的手机里？
+
+334
+00:37:01,520 --> 00:37:05,520
+I understand that there’s a process, but why is it such a long process?
+我明白有个流程，但为什么这么漫长呢？
+
+335
+00:37:05,520 --> 00:37:14,320
+The answer is slightly different when you’re dealing with an architecture like CFET versus a novel material. Materials have, of course, the
+当你面对的是像CFET这样的架构，而不是一种新材料时，答案会略有不同。
+
+336
+00:37:14,320 --> 00:37:26,400
+challenges of being deposited, etched, removed. Their compatibility with other layers above and below, all those things have to be researched first before you put them in a production line.
+材料当然存在沉积、刻蚀、去除等方面的挑战，还需研究其与上下层材料的兼容性等问题，这些都必须在投入生产线之前先行解决。
+
+337
+00:37:26,400 --> 00:37:34,800
+An architecture may seem like a simple evolution. “Oh, you’re making nanoribbon transistors next to each other. What’s wrong with just stacking them?”
+一种架构看起来可能只是简单的演进。“哦，你只是把纳米带晶体管并排排列而已。为什么不直接堆叠呢？”
+
+338
+00:37:35,360 --> 00:37:41,680
+But the act of stacking them, of course, increases the aspect ratio for etches, depositions, cleans,
+但堆叠它们的过程无疑会增加刻蚀、沉积和清洗的深宽比，
+
+339
+00:37:41,680 --> 00:37:52,560
+and the technology may simply not be ready yet. But if you’ve already made it here, there’s a version of the technology that’s ready, right? Correct. We’ve made a simplified version that
+而这项技术可能尚未准备就绪。不过，如果你已经走到这一步，那就说明有某种技术版本已经成熟，对吧？没错。我们已经开发出一种简化版本，
+
+340
+00:37:52,560 --> 00:38:00,160
+may not be an advantage over our current side-by-side technology of nanoribbons,
+它可能在性能上还无法超越当前的纳米带并排技术。
+
+341
+00:38:00,160 --> 00:38:10,320
+but we need to evolve it to make it maybe two nanoribbons, or to add the right type of metals and dielectrics, in order to extract the maximum performance out of that device.
+但我们必须对其进行改进，比如将其变为两条纳米带，或添加合适的金属和电介质，以充分挖掘该器件的性能潜力。
+
+342
+00:38:10,320 --> 00:38:20,560
+Got it. So it’s like a long tail of— There’s a thousand different steps that all have to come together in a very unique way to make the performance compatible or actually
+明白了。这就像一个长尾效应——有上千个不同的步骤，必须以非常独特的方式协同配合，才能让性能达到兼容，
+
+343
+00:38:20,560 --> 00:38:23,600
+supersede the prior technology. Where do the ideas tend to fail?
+甚至超越前代技术。这些想法通常在哪儿会失败？
+
+344
+00:38:24,480 --> 00:38:37,840
+You have 20 ideas like 2D materials. What is the way in which you decide this is actually not worth pursuing further? Sometimes we discover fundamentals about the
+你有二十个类似二维材料的设想，你是如何判断其中哪些其实不值得继续推进的？有时我们会发现材料本身的一些基本特性，
+
+345
+00:38:37,840 --> 00:38:42,800
+material that will be incompatible with the rest of the processing that we do.
+与我们后续的工艺流程不兼容。
+
+346
+00:38:44,320 --> 00:38:48,320
+The first level of experiments may simply be very simple depositions.
+第一阶段的实验可能只是非常简单的沉积。
+
+347
+00:38:48,320 --> 00:38:53,040
+You say, “Okay, I can deposit the film, I can look at it, I can measure it.
+你说：“好，我可以把薄膜沉积上去，可以观察它，可以测量它。”
+
+348
+00:38:53,040 --> 00:38:56,720
+But the moment I try to make a contact to it, nothing sticks.”
+但只要我试图与它接触，就什么也粘不上。
+
+349
+00:38:56,720 --> 00:39:00,560
+It could be something as fundamental as the adhesion.
+它可能像粘附性这样基本的因素。
+
+350
+00:39:00,560 --> 00:39:06,400
+The next step in the process simply has no way to adhere to the material.
+下一步工艺根本无法让材料附着。
+
+351
+00:39:06,400 --> 00:39:10,320
+So you may rule out a material because of something as simple as that.
+所以你可能仅仅因为这么简单的原因就排除某种材料。
+
+352
+00:39:10,880 --> 00:39:23,600
+More complex challenges might be that the subsequent processing may have gaseous interactions with downstream steps. For example, I’ve deposited the film, I’ve capped
+更复杂的问题可能是，后续的工艺步骤可能与下游工序产生气体相互作用。例如，我已经沉积了薄膜，并用其他材料进行了封装，
+
+353
+00:39:23,600 --> 00:39:34,080
+it with other materials, but they’re not hermetic. So my third or fourth or fifth step in the process may actually still interact with it and change its properties.
+但这些封装并不完全密封。因此，我工艺流程中的第三、第四或第五步仍可能与之发生相互作用，从而改变其特性。
+
+354
+00:39:34,080 --> 00:39:40,320
+That makes it unstable, and now we have to find better hermetic sealing for that process.
+这会导致其不稳定，因此我们必须为该工艺找到更优的气密性密封方案。
+
+355
+00:39:40,320 --> 00:39:45,760
+If we don’t find a way to control it, then it’s a dead end for us.
+如果我们找不到控制它的方法，那对我们来说就是一条死路。
+
+356
+00:39:45,760 --> 00:39:55,200
+Stacking transistors is still in the research lab. Stacking whole chips is already in production, and it tackles a different problem: how separate chips communicate with each other.
+堆叠晶体管仍处于实验室研究阶段，而堆叠整个芯片已进入量产，解决的是另一个问题：如何让独立的芯片相互通信。
+
+357
+00:39:55,200 --> 00:39:59,760
+Modern computers are divided into multiple parts, each optimized for a different task.
+现代计算机被划分为多个部分，每个部分都针对不同任务进行了优化。
+
+358
+00:39:59,760 --> 00:40:10,400
+For example, Nvidia’s Blackwell data-center GPU joins two huge processor chips and surrounds them with eight stacks of high-bandwidth memory. These chips have to constantly send
+例如，英伟达的Blackwell数据中心GPU将两颗巨大的处理器芯片连接在一起，并在周围环绕了八堆高带宽内存。
+
+359
+00:40:10,400 --> 00:40:20,000
+data back and forth with each other. And in AI, the speed of that traffic, not the raw computation itself, is often what limits how fast the workload finishes.
+这些芯片必须持续不断地相互传输数据。在AI领域，这种数据传输的速度，而非原始计算能力，往往才是决定任务完成快慢的关键因素。
+
+360
+00:40:20,000 --> 00:40:24,000
+Imagine two chips side by side, communicating through their facing edges.
+想象两块芯片并排放置，通过相对的边缘进行通信。
+
+361
+00:40:24,000 --> 00:40:33,520
+If you double each chip’s width and length, you’ll have four times the area for circuitry, but only twice the edge length for connections. This is the area-versus-perimeter problem.
+如果你将每个芯片的宽度和长度都翻倍，电路布局的面积会变为原来的四倍，但连接的边长仅增加一倍。这就是面积与周长的矛盾问题。
+
+362
+00:40:33,520 --> 00:40:42,160
+As transistors become denser, a chip’s ability to do computations increases faster than its ability to move data around. The industry has known about this problem
+随着晶体管越来越密集，芯片进行计算的能力提升速度，远超其传输数据的能力。这个问题业界已知晓多年，
+
+363
+00:40:42,160 --> 00:40:45,600
+for years, so multiple technologies have been invented to address it.
+因此已发明多种技术来应对。
+
+364
+00:40:45,600 --> 00:40:51,440
+The completed circuits must undergo two last operations: bonding and packaging.
+完成的电路必须经过最后两个工序：键合和封装。
+
+365
+00:40:51,440 --> 00:40:56,320
+Once a chip is made, it still has to be connected to other chips and to the rest of the computer.
+芯片制造完成后，仍需与其他芯片以及计算机的其他部分连接。
+
+366
+00:40:56,320 --> 00:41:00,240
+That step is called packaging, and it has changed a lot in the last few decades.
+这一步叫做封装，过去几十年里它发生了巨大变化。
+
+367
+00:41:00,240 --> 00:41:04,320
+At a high level, you can think of the evolution of packaging like this: initially,
+从宏观层面来看，封装技术的演进可以这样理解：最初，
+
+368
+00:41:04,320 --> 00:41:15,040
+chips were laid out side by side. Wires connecting them went out the side of one chip to another. To allow for more communication density, the industry introduced a shared piece of silicon, called an
+芯片是并排摆放的，连接它们的导线从一个芯片侧面延伸到另一个芯片。为了提升通信密度，业界引入了一块共享的硅片，
+
+369
+00:41:15,040 --> 00:41:25,440
+interposer, for multiple chips to sit on. A chip can talk to other chips through the wiring that runs directly through the interposer. This type of packaging is often called “2.5D”.
+称为中介层，多个芯片可以放置在上面。芯片之间通过贯穿中介层的导线直接通信。这种封装方式通常被称为“2.5D”。
+
+370
+00:41:25,440 --> 00:41:30,400
+Another way to increase connection density is to bond chips directly to one another.
+另一种提高连接密度的方法是将芯片直接彼此键合。
+
+371
+00:41:30,400 --> 00:41:41,680
+This allows for shorter connections between chips, but the early versions of this idea used solder bumps, which are bulky and increased resistance. It would be better to skip the solder and fuse
+这使得芯片之间的连接更短，但早期的这种设计使用了焊锡凸块，体积大且增加了电阻。更好的方法是跳过焊锡，
+
+372
+00:41:41,680 --> 00:41:45,520
+the signal wire connections of the two chips directly to each other.
+直接将两个芯片的信号线连接起来。
+
+373
+00:41:45,520 --> 00:41:53,600
+This is called hybrid bonding, and it is one of the technologies the semiconductor industry is investing in the most. Hybrid bonding works by aligning the copper
+这被称为混合键合，是半导体行业投资最多的技術之一。混合键合通过將一塊晶片的銅互連與另
+
+374
+00:41:53,600 --> 00:42:01,280
+interconnects of one chip with those of another. Then these chips are pushed together and heated so their interconnects expand and bridge the gap between the chips.
+一塊晶片的銅互連對齊，然後將晶片推到一起並加熱，使互連膨脹，從而跨越晶片之間的間隙。
+
+375
+00:42:01,280 --> 00:42:05,280
+This process makes the insulating surfaces around the copper bond as well.
+这一工艺同样会在铜焊点周围形成绝缘表面。
+
+376
+00:42:05,280 --> 00:42:09,120
+And so by removing the solder bumps, you end up with much denser connections.
+因此，通过去除焊点，你能获得更密集的连接。
+
+377
+00:42:09,120 --> 00:42:16,960
+But the reason this technology is only now entering volume manufacturing is because it took a while to iron out the alignment and defect challenges that it introduced.
+但这项技术直到现在才进入批量生产，是因为需要一段时间来解决它带来的对齐和缺陷难题。
+
+378
+00:42:16,960 --> 00:42:25,440
+In the packaging lab, I asked Tyler Osborn, a director in Intel’s advanced packaging technology development group, how they put this into practice.
+在封装实验室，我问了英特尔先进封装技术开发部门的总监泰勒·奥斯本，他们是如何将这一技术付诸实践的。
+
+379
+00:42:25,440 --> 00:42:28,880
+Intel has spent over 50 years optimizing its CPUs for speed.
+英特尔已投入超过50年时间，持续优化其CPU的运行速度。
+
+380
+00:42:28,880 --> 00:42:36,720
+But lots of these optimizations—like caching and branch prediction and speculative execution—reduce predictability. The exact same instructions can take four
+但许多优化手段——比如缓存、分支预测和推测执行——都会降低可预测性。同样的指令，一次可能只需四个周期，
+
+381
+00:42:36,720 --> 00:42:45,840
+cycles to execute one time and 300 the next. When you stack billions of instructions together and execute them across multiple threads and cores, these non-determinisms compound into
+下一次却需要三百个周期。当你将数十亿条指令组合起来，并在多个线程和核心上执行时，这些非确定性因素会叠加，
+
+382
+00:42:45,840 --> 00:42:49,520
+all sorts of hard-to-reproduce bugs. If you work on serious systems,
+产生各种难以复现的错误。如果你从事的是关键系统开发，
+
+383
+00:42:49,520 --> 00:43:01,440
+you’ve definitely experienced this. Antithesis solved this by doing something a bit crazy: they built a 100% deterministic computer. They identified every single door in Intel’s x86
+你肯定经历过这种情况。反题公司通过一个相当疯狂的举措解决了这个问题：他们打造了一台100%确定性的计算机。他们识别出英特尔x86
+
+384
+00:43:01,440 --> 00:43:05,760
+architecture where non-determinism could leak in—network packets, disk reads,
+架构中每一个可能导致非确定性泄露的接口——网络包、
+
+385
+00:43:05,760 --> 00:43:15,360
+temperature sensors, even time itself. And they either welded each of these shut or slotted in a controlled simulation. This deterministic computer is just a foundation.
+磁盘读取、温度传感器，甚至时间本身。然后他们要么把这些接口全部焊死，要么插入可控的模拟器。这台确定性计算机仅仅是一个基础。
+
+386
+00:43:15,360 --> 00:43:22,720
+On top of it, Antithesis built a testing platform that compresses years of production hardening into minutes. It runs your software through thousands of
+此外，反题公司构建了一个测试平台，能将数年的生产强化测试压缩至几分钟内完成。该平台会将你的软件运行在成千上万的并行世界中，
+
+387
+00:43:22,720 --> 00:43:30,560
+parallel worlds, injecting faults and intelligently steering each one towards a one-in-a-billion failure that you’d never be able to test yourself.
+注入故障，并智能引导每个世界走向那种百万分之一概率才会出现的故障，这种故障你根本无法自行测试。
+
+388
+00:43:30,560 --> 00:43:38,080
+This determinism is what’s behind all the other insane Antithesis features that I’ve mentioned over the past few episodes. It’s what lets you reproduce any bug
+这种确定性正是我之前几期节目中提到的所有疯狂反论功能背后的核心。它让你能够复现任何漏洞，并在测试运行中任意时间点进行回溯。
+
+389
+00:43:38,080 --> 00:43:53,200
+and time travel to any point in the test run. Most importantly, it’s what lets you—or your agents—trace every failure back to its root cause. Go to antithesis.com/dwarkesh to learn more.
+最重要的是，它让你或你的智能体能够将每一次失败追溯到根本原因。访问 antithesis.com/dwarkesh 了解更多信息。
+
+390
+00:43:53,200 --> 00:43:58,400
+Two different ways you could do hybrid bonding: die to die and die to wafer.
+实现混合键合的两种不同方式：芯片对芯片和芯片对晶圆。
+
+391
+00:43:59,200 --> 00:44:03,200
+Maybe you can talk about the advantages of both and which one actually practically works better.
+也许你可以谈谈两者的优点，以及哪一个在实际应用中效果更好。
+
+392
+00:44:03,200 --> 00:44:07,280
+Sure. Around Intel, what I think you’re referring to as die to die,
+好的。关于英特尔，您所说的晶粒对晶粒，
+
+393
+00:44:07,280 --> 00:44:14,160
+we typically call wafer to wafer. We actually take a full wafer and another wafer and bond them together. That’s an approach that’s really popular
+我们通常称之为晶圆对晶圆。我们实际上是将整片晶圆与另一片晶圆直接键合在一起。这种方法在CMOS图像传
+
+394
+00:44:14,160 --> 00:44:19,120
+right now in the CMOS image sensor industry. In fact, it basically dominates it.
+感器行业目前非常流行，事实上几乎已经主导了整个领域。
+
+395
+00:44:19,120 --> 00:44:21,840
+It’s being looked at for other things like memory stacking.
+它还被考虑用于其他用途，比如内存堆叠。
+
+396
+00:44:22,640 --> 00:44:24,640
+People have published ideas about all kinds of stuff.
+人们已经发表过各种各样的想法。
+
+397
+00:44:24,640 --> 00:44:35,120
+One of the challenges with that, though, is that you need dies that perfectly match each other, and are perfectly left-handed and right-handed, so you have to be able to bond exactly one to the other.
+不过，其中一个挑战是，你需要晶片完全匹配，且一个为左手型，一个为右手型，必须能够精确地将它们键合在一起。
+
+398
+00:44:35,120 --> 00:44:43,040
+One-to-one die size is a challenge. If they’re not the exact same design device on top and bottom, that’s a problem. With wafer to wafer, it’s challenging to make
+单芯片尺寸匹配是个挑战。如果上下两层芯片的设计不完全一致，就会出现问题。而采用晶圆对晶圆的方式，
+
+399
+00:44:43,040 --> 00:44:46,160
+sure that you have wafers that match really well in terms of the sort.
+要确保晶圆之间的匹配度非常高，难度也很大。
+
+400
+00:44:46,160 --> 00:44:49,280
+So sort good array here versus sort good array here.
+所以这里排序好的数组， versus 这里排序好的数组。
+
+401
+00:44:49,280 --> 00:44:57,760
+If they match exactly — good die and bad die all match — I can get 100% yield of that operation of the good dies. But the chances of that are very low.
+如果完全匹配——良品和坏品都完全一致——我就能实现良品该工序的100%良率。但这种情况发生的概率非常低。
+
+402
+00:44:57,760 --> 00:45:01,600
+There’s going to be some randomization of the two, and whatever that randomization is,
+两者之间会存在一定的随机性，这种随机性会导致良品与良品的结
+
+403
+00:45:01,600 --> 00:45:06,960
+will be loss of good bonding to bad. Whereas with chip to wafer,
+合变成良品与不良品的结合。而采用芯片到晶圆的方案，
+
+404
+00:45:06,960 --> 00:45:16,640
+I can dictate the terms. I can singulate and have known good dies that I’ve tested at the chip level, and then only bond known good to a known good base position.
+我可以掌控一切。我可以进行单个化处理，并使用在芯片级别已经测试过的良品，仅将良品与良品的基底位置进行绑定。
+
+405
+00:45:16,640 --> 00:45:19,760
+Do you think then chip to wafer is the way that you’ll do hybrid bonding in the future?
+你认为未来的混合键合会采用芯片到晶圆的方式吗？
+
+406
+00:45:19,760 --> 00:45:23,120
+I think we’re going to do both. We definitely have the capability to do both.
+我认为我们两者都会做。我们确实具备同时做到这两点的能力。
+
+407
+00:45:23,120 --> 00:45:31,200
+It’s really customer and architecture driven, but certainly chip to wafer in the logic-to-logic space makes a lot of sense. You were explaining that going from advanced
+这实际上是由客户和架构驱动的，但显然在逻辑到逻辑的芯片到晶圆层面，确实很有意义。你刚才提到，
+
+408
+00:45:31,200 --> 00:45:34,560
+packaging to hybrid bonding, the size of the pitches is decreasing.
+从先进封装到混合键合，其间距尺寸正在缩小。
+
+409
+00:45:34,560 --> 00:45:37,360
+How much further could that go? That’s a wonderful question.
+还能走多远？这是个很棒的问题。
+
+410
+00:45:38,000 --> 00:45:46,080
+Historically, like we were saying, 15 years ago first-level interconnect was 130-150 micrometer pitch. Today in HVM, we’re doing 25
+历史上，正如我们所说，15年前的一级互连间距是130到150微米。如今在高产量制造中，我们已经在Fov
+
+411
+00:45:46,080 --> 00:45:50,400
+micrometer pitch in Foveros. Here we’re doing sub-10,
+eros工艺上做到25微米的间距。
+
+412
+00:45:50,400 --> 00:45:58,400
+but there’s already been literature out there. In fact, the biggest conference every year in packaging is the IEEE ECTC conference that happens in May.
+而这里我们已经实现低于10微米，不过相关文献早已出现。事实上，每年包装领域最大的会议就是五月份举行的IEEE ECTC会议。
+
+413
+00:45:59,120 --> 00:46:08,800
+There was a paper there this year showing reliability data on a 0.45 micron pitch hybrid bonded device. So you can imagine that’s a whole other
+今年有一篇论文展示了0.45微米节距的混合键合器件的可靠性数据。你可以想象，
+
+414
+00:46:08,800 --> 00:46:13,440
+order of magnitude in density again from where we are right now in HVM.
+这比我们目前在量产中的密度又提升了一个全新的数量级。
+
+415
+00:46:14,160 --> 00:46:18,800
+That scalability has already been proven. So I see a long runway there.
+这种可扩展性已经得到验证，因此我看到那里有很长的发展空间。
+
+416
+00:46:18,800 --> 00:46:23,280
+Within interconnect, within a single wafer, how far separated are they usually?
+在互连中，在单个晶圆上，它们通常相隔多远？
+
+417
+00:46:23,280 --> 00:46:35,600
+In the back end of the fab, you can imagine the few layers below packaging are typically around one micron to a half micron in size. So if you can push packaging down
+在晶圆厂的后段工艺中，你可以想象封装下方的几层通常尺寸在1微米到0.5微米之间。因此，如果你能把封装工艺推进到0.
+
+418
+00:46:35,600 --> 00:46:46,160
+to 0.5 microns or below, you can almost think about taking layers off the top of the die and connecting a lower layer within the silicon to another lower layer within the silicon.
+5微米甚至更低，就可以几乎相当于把芯片顶部的几层去掉，直接将硅片内部的一个低层连接到另一个低层。
+
+419
+00:46:46,720 --> 00:46:49,680
+That’s really where the beauty of hybrid bonding happens.
+这正是混合键合技术魅力所在。
+
+420
+00:46:49,680 --> 00:46:59,520
+You could think someday about even having reduced interconnect layers on both sides that we can bond together and have less total IR drop between the two transistor layers.
+你可以设想，未来或许能在两侧都减少互连层，将它们键合在一起，从而降低两层晶体管之间的总IR压降。
+
+421
+00:46:59,520 --> 00:47:04,160
+It’s really cool to think about where that could go once we get into those regimes.
+一旦我们进入那些领域，想想它会走向何方，真的很酷。
+
+422
+00:47:04,160 --> 00:47:11,120
+Actually, I am very curious about… For AI, it makes sense why hybrid bonding is so powerful, because then you can get higher bandwidth to the memory.
+实际上，我很好奇……对于AI来说，混合键合之所以如此强大，原因在于它能实现更高的内存带宽。
+
+423
+00:47:11,120 --> 00:47:14,080
+But you were saying there are issues with heat and everything.
+但你说过，散热和其他方面都有问题。
+
+424
+00:47:14,080 --> 00:47:17,840
+What is the advantage for non-AI applications of hybrid bonding?
+混合键合技术对非AI应用有何优势？
+
+425
+00:47:17,840 --> 00:47:28,080
+Excellent question. There are companies out there that are looking at it for non-AI applications, even in client devices. One of the big things I think it can help
+非常好的问题。有一些公司正在探索它在非AI应用中的潜力，甚至在客户端设备中也是如此。我认为其中一个重要优势是，
+
+426
+00:47:28,080 --> 00:47:37,920
+with there is, number one, obviously the same raw interconnect density, especially between something like a CPU and a GPU. But the other one is around power.
+首先，显然它能提供更高的原始互连密度，尤其是在CPU和GPU之间。其次，它在功耗方面也有显著优势。
+
+427
+00:47:37,920 --> 00:47:46,000
+Like we talked about before, as you get to finer and finer interconnects, you can reduce the total power consumption, in picojoules per bit, for that interface.
+正如我们之前讨论的，随着互连越来越精细，你可以降低该接口每比特的总功耗，单位为皮焦耳。
+
+428
+00:47:46,000 --> 00:47:52,720
+With hybrid bonding in those applications, you could think about that as another way that packaging can help reduce the total system power budget.
+在这些应用中采用混合键合技术，可以看作是封装另一种降低系统总功耗的方式。
+
+429
+00:47:53,680 --> 00:48:02,960
+That gives you lots of benefits: lower power, less heat, for the same benefit in terms of actual electrical performance. So far, this has been about making better chips.
+这能带来诸多好处：在保持实际电性能不变的前提下，功耗更低、发热更少。到目前为止，这都是关于如何制造更好的芯片。
+
+430
+00:48:02,960 --> 00:48:11,040
+The other half of the question is how many chips the industry can make if AI labs are willing to pay for far more of them. I’m getting a chance to talk to
+另一个问题是，如果AI实验室愿意支付更高价格，产业能生产多少芯片。我有机会与英特尔首席技术官
+
+431
+00:48:11,040 --> 00:48:20,400
+Pushkar Ranade, who is the CTO of Intel. I’m very interested in understanding how the fact that the entire industry has to rely on the same suppliers bottlenecks
+普什卡尔·拉纳德交谈，非常想了解整个行业依赖相同供应商这一事实，如何制约了你们扩大生产的速度。
+
+432
+00:48:20,400 --> 00:48:28,080
+your ability to ramp up production. For this EUV tool, ASML produces fewer than 100 of them a year. They don’t plan to produce more
+以这款EUV设备为例，阿斯麦每年生产的数量不到100台，他们目前没有计划增加产量。
+
+433
+00:48:28,080 --> 00:48:29,840
+than 100 a year, or significantly more, even by the end of the decade.
+每年超过100，甚至可能多得多，即便到本十年末也是如此。
+
+434
+00:48:31,360 --> 00:48:40,400
+That has to be split between you, between TSMC, between all the memory makers who are ramping up production, like SK Hynix. How does that limit your ability to scale up to all this demand? It is a limiter.
+这必须在你们、台积电以及像SK海力士这样正在扩大生产的内存厂商之间分配。这如何限制了你们满足如此巨大需求的能力？这是一个制约因素。
+
+435
+00:48:42,080 --> 00:48:45,840
+We have to make the most of the capacity that we already have installed.
+我们必须充分利用已安装的产能。
+
+436
+00:48:45,840 --> 00:48:50,080
+We’ll try to increase the output from our existing fleet of tools.
+我们将努力提升现有工具集群的产出。
+
+437
+00:48:50,080 --> 00:49:03,200
+But EUV or ASML is not the only bottleneck. It is definitely a bigger bottleneck than some of the other tools, but to a large extent, we’re seeing
+但极紫外光刻（EUV）或阿斯麦（ASML）并非唯一的瓶颈。尽管它比其他一些设备的瓶颈更严重，但从整体来看，
+
+438
+00:49:04,000 --> 00:49:17,680
+all equipment seeing tremendous supply shortage. Even though there are multiple providers of other tools, once you lock into a process flow — let’s say 18A, which is a mature process
+我们正面临所有设备供应极度短缺的问题。尽管其他设备有多个供应商，但一旦你确定了某个工艺流程——比如如今已成熟的18A工
+
+439
+00:49:17,680 --> 00:49:27,760
+now — we need a specific tool. We can’t just go and get a different tool for the same process. So we’re locked into that one tool,
+艺——就需要特定的设备。你无法随意更换同一流程的其他设备。因此，我们只能依赖这一款设备。
+
+440
+00:49:27,760 --> 00:49:36,160
+one supplier, and we rely on that. What lessons does this give for 14A in terms of how you structure it? By 2028, it’s going to be such a crazy world.
+一个供应商，我们完全依赖它。这给14A的架构设计带来了什么启示？到2028年，世界将变得如此疯狂。
+
+441
+00:49:36,160 --> 00:49:39,680
+How do you structure things in such a way that you have flexibility in ramping?
+你该如何安排，才能在产能爬坡时保持灵活性？
+
+442
+00:49:40,640 --> 00:49:48,960
+The way to do it — and we’ve been doing it, and generally everybody does it — is you try to maintain as much fungibility as possible going from one node to the next node.
+实现这一目标的方法——我们一直在这么做，通常大家也都是这么做的——就是尽可能保持节点之间的可互换性。
+
+443
+00:49:48,960 --> 00:49:54,320
+Going from 18A to 14A, maybe you would say 80% of the tool set can be reused.
+从18A到14A，或许你可以说有80%的设备可以复用。
+
+444
+00:49:54,320 --> 00:50:01,280
+Then, of course, 14A would require some new capabilities because it’s a denser geometry,
+当然，14A工艺需要一些新的能力，因为它采用了更密集的几何结构，
+
+445
+00:50:01,280 --> 00:50:11,120
+so it would require some unique tools. Do you have a sense of what the ultimate bottleneck is on how many wafers you guys could produce a month, even if you were to decide
+因此需要一些独特的工具。你们有没有感觉，即使投入无限资金进行资本开支，你们每月能生产的晶
+
+446
+00:50:11,120 --> 00:50:25,360
+to invest infinity money into doing CapEx? Given the existing constraints, let’s say we had to maximize the output from a given footprint of tools, then I think it’s incremental, because the
+圆数量的最终瓶颈是什么？考虑到现有的限制，假设我们必须在给定的设备占地面积内最大化产出，我认为这只能逐步提升。
+
+447
+00:50:25,360 --> 00:50:38,160
+process today is already yielding pretty high. If your yield is already pretty high, getting every 1% extra yield is extremely hard because it’s already a finely tuned process.
+当前的工艺良率已经相当高了。如果良率本身已经很高，那么再提升1%将非常困难，因为工艺已经调整得非常精细。
+
+448
+00:50:38,160 --> 00:50:45,280
+Are there enough tools in the world so you could 10X the amount of wafers you’re producing at the leading edge? Not 10X, but probably 2X, yes.
+世界上有足够的工具，让你在先进制程下将晶圆产量提升两倍吗？不是十倍，但大概两倍是有的。
+
+449
+00:50:45,280 --> 00:50:55,280
+That’s quite interesting, because the AI industry for a decade has been 3Xing compute year over year. You’re saying that just can’t continue.
+这很有趣，因为过去十年，AI行业每年的算力都在翻三倍。你却说这种情况无法持续下去了。
+
+450
+00:50:55,280 --> 00:51:07,200
+Unless the entire supply chain — starting from the equipment suppliers, their suppliers, their sub-suppliers — unless everybody produces more, you can’t increase the output.
+除非整个供应链——从设备供应商、他们的供应商，再到他们的次级供应商——所有人都增产，否则你无法提高产量。
+
+451
+00:51:07,920 --> 00:51:18,400
+Just to give the audience a sense of how big the AI demand is and how well it monetizes the products you guys are producing: you can crunch the numbers, and the numbers seem to suggest
+仅从观众的角度来看，AI需求有多大，以及你们所生产的产品能带来多高的变现，就能明白：你算一下账就会发现，
+
+452
+00:51:18,400 --> 00:51:30,080
+that just a couple billion dollars of CapEx on Intel’s account results in enough chips — or the logic for enough chips — to produce, say, $100 billion of revenue for the AI model companies.
+英特尔投入的几亿美元资本开支，就能产出足够多的芯片，或具备足够芯片逻辑的产能，足以让AI模型公司实现约1000亿美元的收入。
+
+453
+00:51:30,080 --> 00:51:32,720
+Of course, there are so many other players within that stack.
+当然，这个技术栈中还有许多其他参与者。
+
+454
+00:51:32,720 --> 00:51:44,160
+There’s also memory and other things. But it’s crazy that a couple billion dollars of CapEx, which can be amortized over many different years, produces $100 billion
+还有内存和其他一些东西。但令人震惊的是，几亿美元的资本开支，可以分摊到多年，却能每年带来1000亿美元的收入。
+
+455
+00:51:44,160 --> 00:51:52,400
+of revenue every single year. That seems to suggest that at some point that should percolate down. At some point, the AI labs could just say,
+这似乎说明，总有一天这种效益会传导下去。总有一天，AI实验室只需说一句：
+
+456
+00:51:52,400 --> 00:51:54,800
+“We’ll just buy everything. Produce as much as you can.
+“我们全买下来，能生产多少就生产多少。”
+
+457
+00:51:54,800 --> 00:52:04,640
+We’ll guarantee future income streams.” There are early signs that could actually be happening already. The demand signals are just so high.
+我们将保证未来的收入流。已经有初步迹象表明，这实际上可能已经开始了。需求信号实在太高了。
+
+458
+00:52:04,640 --> 00:52:11,760
+But I think you were alluding to how the value is accumulating at the top of the technology stack.
+但我认为你暗示的是价值正在向技术栈顶端集中。
+
+459
+00:52:13,600 --> 00:52:26,960
+What is essentially happening is we moved from a fully vertically integrated industry 30-40 years ago, maybe longer, to a very horizontal industry, where you have foundries, you have
+本质上，我们从三四十年前，甚至更早，完全垂直整合的产业，转变为如今非常水平化的产业，其中既有代工厂，也有设备制造商及其供应商。
+
+460
+00:52:26,960 --> 00:52:38,320
+equipment makers, you have their suppliers. Today, every hyperscaler is designing their own chips, and the scale of the hyperscalers is so large.
+如今，每个超大规模云厂商都在自行设计芯片，而这些超大规模云厂商的规模之大，前所未有。
+
+461
+00:52:38,880 --> 00:52:51,760
+Some of the model companies, for example, their demand is so high they could easily consume an entire fab’s worth of silicon on their own, or multiple fabs’ worth,
+一些模型公司，比如，它们的需求如此之高，足以独自消耗一个晶圆厂的全部硅产能，甚至多个晶圆厂的产能，
+
+462
+00:52:53,040 --> 00:53:01,600
+and they definitely have the capital to fund that. So in some sense, we are moving from a horizontal
+而且它们确实有资金来支撑这种规模。因此在某种意义上，我们正从一个横向的世界，
+
+463
+00:53:01,600 --> 00:53:10,720
+world again to a pseudo-vertical world. It’s not monolithically vertically integrated,
+重新回到一种准垂直整合的世界。这并非完全一体化的垂直整合。
+
+464
+00:53:10,720 --> 00:53:21,760
+but it’s kind of virtually vertically integrated. What is the nature of economies of scale in this business? If you look at how many
+但它在某种程度上几乎是垂直整合的。这个行业的规模经济究竟如何？如果你看看台积电和英特
+
+465
+00:53:21,760 --> 00:53:28,000
+wafers at the leading edge TSMC versus Intel is shipping, it’s upwards of 3X for TSMC.
+尔在先进制程上出货的晶圆数量，台积电是英特尔的三倍以上。
+
+466
+00:53:28,960 --> 00:53:32,640
+What kinds of advantages do you get at this point from economies of scale?
+此时，规模经济能带来哪些优势？
+
+467
+00:53:32,640 --> 00:53:36,480
+Or is it that once you reach a certain point, the economies of scale get weaker?
+还是说，一旦达到某个临界点，规模经济就会减弱？
+
+468
+00:53:36,480 --> 00:53:49,680
+That’s a very important question. This entire business just relies on economies of scale. If you look at all the advanced manufacturing
+这是一个非常重要的问题。整个业务模式完全依赖于规模经济。如果你看看所有先进的制造企业，
+
+469
+00:53:49,680 --> 00:53:56,160
+companies out there, in semiconductor foundries the scale economics is probably the purest.
+半导体代工厂的规模经济可能是最纯粹的。
+
+470
+00:53:56,720 --> 00:54:00,720
+The reason for that is the fixed cost is just so incredibly high.
+原因是固定成本高得惊人。
+
+471
+00:54:02,160 --> 00:54:07,200
+Once you build a fab, like 80% of your cost structure is fixed.
+一旦建好了晶圆厂，大约80%的成本结构就固定了。
+
+472
+00:54:07,200 --> 00:54:16,160
+What that means is every extra percentage of utilization is adding far more in revenue.
+这意味着，每提高一个百分点的利用率，带来的收入增长要大得多。
+
+473
+00:54:16,160 --> 00:54:25,040
+So it’s extremely important. We’ll fight for every extra percent of fab utilization, but also every extra percentage of fab output.
+所以这至关重要。我们将为每多出1%的晶圆厂利用率而奋斗，也必将为每多出1%的晶圆厂产出而拼搏。
+
+474
+00:54:25,680 --> 00:54:30,960
+Let’s say I’m making some wafers today and the yield is 60%.
+假设我今天在生产晶圆，良率是60%。
+
+475
+00:54:30,960 --> 00:54:38,960
+If I improve the process and the die yield becomes 65% or 70%, it’s not a linear advantage.
+如果我优化了工艺，晶圆良率提升到65%或70%，带来的优势并不是线性的。
+
+476
+00:54:38,960 --> 00:54:41,760
+I’m getting way more output for the given footprint.
+我在相同的占地面积下，获得了远超以往的输出。
+
+477
+00:54:42,400 --> 00:54:45,920
+So there’s always room to improve the economies of scale.
+因此，规模经济始终有提升空间。
+
+478
+00:54:45,920 --> 00:54:53,440
+That’s one of the reasons why you’re seeing so much consolidation in this business.
+这也是为什么你看到这个行业出现如此多整合的原因之一。
+
+479
+00:54:53,440 --> 00:54:58,320
+There are only three foundries left at the advanced node for that exact reason.
+正因为如此，目前只剩下三家晶圆厂还在生产这一先进制程。
+
+480
+00:54:59,600 --> 00:55:04,000
+Along the way, many companies just stopped manufacturing.
+一路上，许多公司干脆停止了生产。
+
+481
+00:55:04,000 --> 00:55:13,840
+I don’t know if you’ve seen… There’s a chart where 40 years ago there were like 20 foundries. Over time the number of foundries kept
+我不知道你们有没有看到过一张图表，40年前全球有大约20家晶圆厂，但随着时间推移，晶圆厂数量不断减少，到现在只剩下三家。
+
+482
+00:55:13,840 --> 00:55:21,200
+diminishing until today there are only three. What is then the concrete master plan to catch up to TSMC? Even though TSMC is ahead,
+那么，面对台积电的领先地位，我们究竟有什么切实可行的追赶计划？尽管台积电目前遥遥领先，但其先进制程的产能已经严重供不应求，
+
+483
+00:55:21,200 --> 00:55:32,640
+there’s so much overflow demand at their leading edge, where N3 is now majority AI accelerators and maybe majority Nvidia alone. There’s all this demand for CPUs, for other
+目前N3制程的大部分产能都被AI加速芯片占据，甚至可以说，仅英伟达的需求就占了很大一部分。而与此同时，对CPU和其他产品的需求依然非常旺盛。
+
+484
+00:55:32,640 --> 00:55:39,360
+things, which are also, by the way, needed for AI. There’s this humongous influx in demand for CPUs because of AI. How do you see this opportunity right now,
+这些也是AI所需的。由于AI的兴起，对CPU的需求急剧增长。如今，英特尔落后了几年，
+
+485
+00:55:39,360 --> 00:55:44,080
+where Intel’s a few years behind, while TSMC is just way oversaturated?
+而台积电却已严重产能饱和，您如何看待这一机遇？
+
+486
+00:55:44,080 --> 00:55:52,560
+Catching up to TSMC has multiple facets. The catch-up that we need to do is in scale.
+追赶台积电涉及多个方面，我们需要追赶的主要是规模。
+
+487
+00:55:52,560 --> 00:56:07,360
+Like you said, they’re just a much larger wafer manufacturer today than we are, and even bigger than what Samsung is. Catching up in scale will be a gradual process.
+正如你所说，他们现在的晶圆制造规模比我们大得多，甚至超过了三星。在规模上追上将是一个渐进的过程。
+
+488
+00:56:08,880 --> 00:56:18,000
+If you meant catching up in terms of just the technology, I think we’re already there.
+如果你指的是在技术层面赶上的话，我认为我们已经做到了。
+
+489
+00:56:18,560 --> 00:56:27,600
+We might be a few percent off on performance or power or area density.
+我们的性能、功耗或面积密度可能有百分之几的偏差。
+
+490
+00:56:28,240 --> 00:56:38,160
+But this sort of benchmarking, where one foundry is ahead or one foundry is behind,
+但当一个代工厂落后或领先整整一代，
+
+491
+00:56:38,160 --> 00:56:45,200
+makes sense when you’re a whole generation behind or two generations behind or ahead.
+甚至两代时，这种对比才更有意义。
+
+492
+00:56:45,200 --> 00:56:57,413
+That’s when it makes a meaningful difference in your die output or your die area or functionality like power. But if you’re within a few percent,
+这时，它对芯片产出、芯片面积或功能（如功耗）才会产生实质性影响。但如果已经相差几个百分点，
+
+493
+00:56:59,520 --> 00:57:05,600
+you’re splitting hairs at that point in time, because it’s not very unidimensional.
+那在当下就只是在吹毛求疵，因为影响因素并非单一维度。
+
+494
+00:57:06,240 --> 00:57:11,040
+It’s not just about density, it’s not just about raw performance.
+这不仅关乎密度，也不仅关乎原始性能。
+
+495
+00:57:11,920 --> 00:57:17,200
+Different applications require different vectors. You can be off by a few percent,
+不同应用需要不同的向量。你可以有百分之几的误差，
+
+496
+00:57:17,200 --> 00:57:26,400
+but you need to be on time. Your execution needs to be such that your yields are very high to support very large and very rapid ramps.
+但必须准时。你的执行必须足够精准，才能实现极高的良率，以支持大规模且快速的产能提升。
+
+497
+00:57:27,120 --> 00:57:33,440
+That actually is more important than catching up on a few percent in performance or area.
+实际上，这比在性能或面积上追上几个百分点更重要。
+
+498
+00:57:33,440 --> 00:57:43,520
+I was looking at some SemiAnalysis numbers that seem to suggest that in terms of transistor density, 14A — which will come out in 2028 — would be comparable to N2.
+我看了下SemiAnalysis的数据，似乎表明在晶体管密度方面，2028年推出的14A工艺将与N2工艺相当。
+
+499
+00:57:43,520 --> 00:57:47,280
+First of all, I would dispute your benchmarking.
+首先，我得质疑一下你们的基准测试。
+
+500
+00:57:47,280 --> 00:57:56,880
+But like I said, it’s important to be generally in the right ballpark and be very predictable.
+但正如我所说，重要的是大致方向要对，而且要非常可预测。
+
+501
+00:57:56,880 --> 00:58:07,760
+Also, it’s not unidimensional. We don’t build one type of transistor, let’s say 14A or 18A. You build a few different types of transistors.
+而且，这并不是单一维度的。我们不会只制造一种晶体管，比如14A或18A。你需要制造几种不同类型的晶体管。
+
+502
+00:58:08,400 --> 00:58:13,520
+There’s a low-leakage transistor, there’s a high-performance, high drive current transistor.
+有一种低漏电晶体管，还有一种高性能、高驱动电流的晶体管。
+
+503
+00:58:13,520 --> 00:58:18,720
+You’re building SRAMs. There’s a high-density SRAM, there’s a high-performance SRAM.
+你在制造静态随机存取存储器。有高密度的 SRAM，也有高性能的 SRAM。
+
+504
+00:58:18,720 --> 00:58:24,640
+There are many other functionalities like analog circuits, RF circuits.
+还有许多其他功能，比如模拟电路、射频电路。
+
+505
+00:58:24,640 --> 00:58:29,520
+It’s the sum of all of those that makes a technology competitive.
+正是所有这些因素的总和，才使得一项技术具备竞争力。
+
+506
+00:58:29,520 --> 00:58:32,400
+I guess that makes the CapEx you do right now even more important.
+我想这使得你现在所做的资本开支更加重要了。
+
+507
+00:58:34,000 --> 00:58:38,000
+TSMC is on track to do around $50 billion in CapEx this year.
+台积电今年的资本开支预计将达到约500亿美元。
+
+508
+00:58:38,000 --> 00:58:46,800
+You’re on track to do around $20 billion. If the tools you’re buying right now will determine who can service all this crazy AI demand that’s coming up, it makes the difference
+你有望实现约200亿美元的营收。如果现在购买的工具将决定谁能满足即将到来的疯狂AI需求，那么当前资本开支的重要性就更加凸显，
+
+509
+00:58:46,800 --> 00:58:52,160
+in CapEx right now even more important, or for the US versus other countries.
+这甚至关系到美国与其他国家之间的竞争。
+
+510
+00:58:52,160 --> 00:59:05,680
+Yes, very much. It’s a little bit of an unfair comparison between us and TSMC today, just because today they’re a foundry for basically everybody and we’re largely a foundry for Intel.
+是的，非常有。今天把我们和台积电做比较其实不太公平，毕竟现在台积电基本上是为所有人提供代工服务，而我们主要还是为英特尔提供代工。
+
+511
+00:59:05,680 --> 00:59:11,200
+We’ll become a foundry for others. In due course, our CapEx will also grow.
+我们将成为他人的代工厂。届时，我们的资本开支也将随之增长。
+
+512
+00:59:11,200 --> 00:59:19,520
+Intel started as a DRAM business in the late ’60s. You guys were producing DRAM, which you sold off.
+英特尔上世纪60年代末起步时是一家动态随机存取存储器公司。你们当时生产DRAM，后来把这项业务卖掉了。
+
+513
+00:59:19,520 --> 00:59:22,160
+A couple years ago, you sold off your flash business.
+几年前，你把闪存业务卖掉了。
+
+514
+00:59:25,520 --> 00:59:35,680
+Thoughts on that? For context for the audience, these are now multi-trillion-dollar industries because they’ve just exploded as a result of AI demand.
+对此有什么看法？给观众一些背景：由于AI需求的爆发，这些产业如今已发展成规模达数万亿美元的行业。
+
+515
+00:59:36,960 --> 00:59:42,640
+Clearly, in hindsight, probably not the smartest time to sell off a flash memory business.
+显然，事后看来，出售闪存业务可能并不是一个明智的决定。
+
+516
+00:59:42,640 --> 00:59:45,440
+There were good reasons why we did that when we did.
+我们当时那样做是有充分理由的。
+
+517
+00:59:46,400 --> 01:00:00,560
+Clearly, nobody could see this enormous demand. But today, the world will eat up as much compute
+显然，没人能预见这种巨大的需求。但如今，全世界能生产的算力
+
+518
+01:00:00,560 --> 01:00:06,000
+as can possibly be made, and it’ll eat up as much memory as can possibly be made.
+将被全部消耗殆尽，能制造出的内存也将被全部用完。
+
+519
+01:00:06,000 --> 01:00:12,960
+I would argue that the supply crunch is larger for memory today than it is for compute.
+我认为，当前内存的供应短缺比计算资源更为严重。
+
+520
+01:00:12,960 --> 01:00:16,560
+Can I summarize what seems to me the takeaways from your projections?
+我可以总结一下您预测中在我看来的要点吗？
+
+521
+01:00:16,560 --> 01:00:17,760
+You can tell me if that’s correct.
+你可以告诉我这是否正确。
+
+522
+01:00:17,760 --> 01:00:27,200
+That marginal production can increase actually very fast — on the scale of 12 months — but the amount of increase up till the end of the decade is extremely limited.
+边际产能的提升实际上可以非常迅速——在12个月的规模内——但到本十年末，其增长幅度将极为有限。
+
+523
+01:00:27,200 --> 01:00:33,040
+Production could be higher next year than what people are forecasting, but production in 2030 is not going to be significantly higher than what people are forecasting.
+明年的产量可能会高于人们的预测，但到2030年，产量不会比当前预测值有显著提升。
+
+524
+01:00:33,040 --> 01:00:36,320
+Unless the entire supply chain ramps up production very quickly.
+除非整个供应链能迅速提升产能。
+
+525
+01:00:36,320 --> 01:00:42,560
+We’re already in the middle of ’26, so there’s not that many years until the end of the decade.
+我们已经进入2026年中，距离本十年结束已没几年了。
+
+526
+01:00:42,560 --> 01:00:52,240
+Given the lead times… Let’s say you place an enormous order for tools today, and you’re looking at 18 months to get those tools.
+考虑到交期……假如你今天下了一个巨大的设备订单，最快也要18个月才能拿到这些设备。
+
+527
+01:00:52,240 --> 01:01:02,160
+You’re already into basically ’28. From that point on, if you have to build a new shell, build a new fab, you’re basically looking at the end of the decade.
+你已经快进入2028年了。从那时起，如果你需要新建一个外壳或一个新的晶圆厂，基本上要到本世纪末才能完成。
+
+528
+01:01:02,160 --> 01:01:07,760
+I think it’ll be interesting to discuss the partnership you guys have with Elon on Terafab.
+我觉得讨论你们与埃隆在Terafab项目上的合作会很有趣。
+
+529
+01:01:07,760 --> 01:01:19,840
+What’s going on there? Well, Elon’s publicly talked about his desire to build a fab. We either build the Terafab or
+那里发生了什么？埃隆公开表示过他想建一座晶圆厂。我们要么建 Terafab，
+
+530
+01:01:19,840 --> 01:01:25,600
+we don’t have the chips. And we need the chips, so we’re going to build the Terafab. Sort of the same thinking.
+要么就造不出芯片。而我们确实需要芯片，所以必须建 Terafab。思路差不多就是这样。
+
+531
+01:01:26,320 --> 01:01:34,800
+He’s seeing just an enormous increase in demand for silicon, for compute and for memory.
+他看到对硅、计算能力和内存的需求急剧增长。
+
+532
+01:01:34,800 --> 01:01:40,320
+I think he came to the conclusion that his own businesses are going to require a lot of silicon.
+我认为他得出的结论是，自己的企业将需要大量硅。
+
+533
+01:01:42,480 --> 01:01:46,160
+He thought maybe he should just do it all on his own.
+他心想，也许他应该自己全部搞定。
+
+534
+01:01:46,160 --> 01:01:59,440
+But unlike building a car, for example, this is such an intricate and complicated process that we thought we could work together to help accelerate his bringing up his fab.
+但与造车这类项目不同，这个过程极其复杂精密，所以我们认为可以携手合作，加快他建设晶圆厂的进程。
+
+535
+01:01:59,440 --> 01:02:09,360
+But because of the bottleneck at the tool level, it seems like the net amount of silicon in the world won’t increase. It’s just that maybe if somebody were to start
+但由于设备层面的瓶颈，全球硅产量似乎不会增加。也许只有当有人新建晶圆厂时，
+
+536
+01:02:09,360 --> 01:02:18,160
+a new fab, they would get access to guaranteed supply in a way that they wouldn’t have if they’re working with another person’s foundry. It’s not just tools.
+才能获得保障的供应，而如果依赖别人的代工厂，则无法做到这一点。这不仅仅是设备的问题。
+
+537
+01:02:18,800 --> 01:02:24,000
+A fab does require a lot of power, a lot of water, a lot of consumables.
+晶圆厂确实需要大量电力、大量水以及大量耗材。
+
+538
+01:02:24,000 --> 01:02:34,400
+There are many other input variables as well. But those can be scaled in the way that tools cannot. Some more than others, but yes.
+还有许多其他输入变量。但这些变量的扩展方式是工具无法实现的，虽然有些比其他变量更难扩展，但确实如此。
+
+539
+01:02:34,400 --> 01:02:42,640
+In one sense, yes, we need a lot more equipment. But it is true, we also just need a lot more raw
+从某种意义上说，是的，我们需要更多的设备。但事实是，我们同样需要更多
+
+540
+01:02:42,640 --> 01:02:48,480
+fab space, raw clean room capacity. If you think of a foundry like Intel,
+的原始晶圆厂空间和原始洁净室产能。如果你想想英特尔这样的代工厂，
+
+541
+01:02:48,480 --> 01:02:59,280
+which has to build these expensive facilities and buy expensive tools, I wonder what you think the economics of that fundamentally could look like, whether it could get more economical,
+它必须建造这些昂贵的设施并购买昂贵的设备，我不禁好奇，这种模式的经济性从根本上可能是什么样子的，它是否有可能变得更经济？
+
+542
+01:02:59,280 --> 01:03:03,120
+whether it could scale faster. Like I described earlier,
+它能否更快地实现规模化。正如我之前所描述的，
+
+543
+01:03:03,120 --> 01:03:19,520
+this is an extremely capital-heavy business. If you just plot how much it costs to build a fab over the last 20, 30, 40 years, I think it’s doubling every 4-5 years.
+这是一项资本极度密集的业务。如果你画出过去20年、30年、40年建设晶圆厂的成本变化，我认为成本每4到5年就会翻一番。
+
+544
+01:03:19,520 --> 01:03:31,040
+Even inside the fab, if you look at the cost to do lithography, which is the most expensive module — just patterning — that itself is doubling at more than that rate.
+即使在晶圆厂内部，如果你看看光刻的成本，它是最昂贵的模块——仅是图案化这一项——其成本增长速度就超过了这个速率。
+
+545
+01:03:31,680 --> 01:03:40,560
+Today, a High-NA EUV scanner and all its associated equipment costs like $400 million.
+如今，一台高数值孔径 EUV 光刻机及其所有相关设备的造价约为 4 亿美元。
+
+546
+01:03:41,280 --> 01:03:44,560
+So what does that mean? If that rate were to continue,
+那意味着什么？如果这个速度持续下去，
+
+547
+01:03:44,560 --> 01:03:56,640
+if you just draw the line, does that mean four years from now the cost of patterning is going to be like $800 million? It doesn’t really make sense.
+你只要画条直线，是不是意味着四年之后光刻成本会达到8亿美元？这显然说不通。
+
+548
+01:03:58,160 --> 01:04:14,160
+A very interesting thought exercise is to ask, are there things that could be just very radically different that we could do today that we perhaps couldn’t do 20 years ago?
+一个非常有趣的思想实验是，思考一下我们今天是否能做些与过去截然不同的事情，而这些事情在20年前我们可能根本无法实现。
+
+549
+01:04:14,160 --> 01:04:19,440
+This is a very risk-averse industry for very good reason, for exactly that reason.
+这是一个非常谨慎的行业，原因非常充分，正是出于这个原因。
+
+550
+01:04:19,440 --> 01:04:25,200
+You put in tens of billions of dollars, and you really don’t want to take any risks.
+你投入了数百亿美元，真的不愿承担任何风险。
+
+551
+01:04:25,200 --> 01:04:29,600
+You want to keep doing things the way they’ve been done for literally decades.
+你却还想继续用几十年来一直沿用的方式做事。
+
+552
+01:04:29,600 --> 01:04:32,960
+This is not just true of semiconductors, but everything really.
+这不仅适用于半导体，实际上对所有事物都成立。
+
+553
+01:04:33,760 --> 01:04:40,800
+If you’ve just kept on doing that for decade upon decade, you just become indoctrinated.
+如果你几十年如一日地一直这么做，就会不知不觉被洗脑。
+
+554
+01:04:42,080 --> 01:04:53,680
+There are engineers who probably work at Intel who are new, who come in and they’re taught, “This is how the fab works, this is the process flow.” They just take that as gospel.
+有些工程师可能刚加入英特尔，他们一进来就会被教导：“晶圆厂是这样运作的，工艺流程是这样的。”他们就把这些当作金科玉律。
+
+555
+01:04:53,680 --> 01:05:02,480
+That’s just how it is done. But is that really the best way to build a chip today? It’s a really valid question.
+这就是目前的做法。但这真的是当今构建芯片的最佳方式吗？这是一个非常合理的问题。
+
+556
+01:05:02,480 --> 01:05:13,360
+I’m very curious what you’re hinting at, because it could be anything from figuring out ways to use fewer litho passes and economize on this expensive component, to maybe we need to
+我很好奇你暗示的是什么，因为这可能涉及减少光刻步骤、节省这个昂贵组件的使用，也可能是我们需要重新思考晶体管的设计。
+
+557
+01:05:13,360 --> 01:05:25,040
+rethink the transistor. What is the level of— All of the above. Transistor architecture is evolving.
+所有这些都有可能。晶体管架构正在不断演进。
+
+558
+01:05:25,840 --> 01:05:33,200
+Just the silicon transistor has continued to evolve over 30, 40 years, and that will continue.
+硅晶体管在过去三四十年间持续演进，这一趋势还将继续。
+
+559
+01:05:33,200 --> 01:05:44,320
+You’ve seen the evolution from the planar transistor to FinFETs to now gate-all-around transistors. There’ll be more. That roadmap exists, it’s pretty
+你已经看到晶体管从平面结构演进到鳍式场效应晶体管，再到如今的环绕栅极晶体管。未来还会有更多进展。
+
+560
+01:05:44,320 --> 01:05:49,440
+well defined, with a lot of people working on it. But there are things like…
+这条技术路线已经明确，有很多人正在为此努力。但有些问题值得思考：
+
+561
+01:05:51,120 --> 01:06:04,000
+Do you really need a clean room today? Do you need the infrastructure to be as sophisticated, as complex as it is today? Surely one can run an experiment where you
+今天真的需要洁净室吗？所需的基础设施是否必须像现在这样复杂？显然，完全可以开展一些实验来验证这一点。
+
+562
+01:06:05,520 --> 01:06:11,360
+have people eating hamburgers and smoking cigars in the research fab and see what happens to yield.
+让一些人在研发晶圆厂里吃汉堡、抽雪茄，看看良率会变成什么样。
+
+563
+01:06:12,880 --> 01:06:25,360
+That would be a great experiment to run, but no incumbent — Intel or TSMC or Samsung — would want to willingly do that. That’s what I meant by this.
+这会是一个很棒的实验，但没有一家现有企业——无论是英特尔、台积电还是三星——会愿意主动去这么做。我刚才说的就是这个意思。
+
+564
+01:06:26,160 --> 01:06:35,840
+It’s a very risk-averse business, for good reason. Every one day lost in productivity is… I don’t know how many dollars. But you save so much money in
+这是一门非常谨慎的生意，原因很充分。每天生产效率的损失……我也不知道具体是多少美元。
+
+565
+01:06:35,840 --> 01:06:41,360
+not having to build clean rooms in the future. But it’s really the risk, the fear of the unknown.
+但未来不用再建洁净室，能省下大量资金。真正关键的是风险，对未知的恐惧。
+
+566
+01:06:41,360 --> 01:06:49,600
+Nobody is going to willingly take that risk. That’s why I think sometimes it’s good to just
+没有人会愿意主动承担这种风险。所以我认为，有时候从一张白纸开始，
+
+567
+01:06:49,600 --> 01:06:59,440
+start with a clean slate and rethink everything. The same thing applies to chip design, by the way.
+重新思考一切，反而是件好事。顺便说一句，芯片设计也是如此。
+
+568
+01:06:59,440 --> 01:07:06,720
+Many of the ways we do CPU design were probably locked in 30 years ago.
+我们进行CPU设计的许多方式，可能早在30年前就已经定型了。
+
+569
+01:07:06,720 --> 01:07:11,360
+Does that mean it’s smart to still do it the same way?
+这意味着仍以相同方式行事是明智的吗？
+
+570
+01:07:11,360 --> 01:07:25,120
+Probably not. But this is a very complex problem. In chip design, I guess the capacity to take
+可能不会。但这个问题非常复杂。在芯片设计中，我猜承担风险的能力可能更高一些，
+
+571
+01:07:25,120 --> 01:07:29,840
+risk is maybe higher. This one, less so.
+而这个则没那么高。
+
+572
+01:07:29,840 --> 01:07:35,360
+But given where the economics is today, I think it’s a very valid question to ask.
+但考虑到当前的经济形势，我认为这是一个非常合理的问题。
+
+573
+01:07:36,720 --> 01:07:47,760
+Maybe there’s a smarter way to do this. To close out, maybe we’ll start off at the same question we began the interview with, which is, how does Intel respond to this crazy AI
+也许有更好的方法来应对这个问题。最后，我们不妨回到采访开始时提出的问题：英特尔将如何应对这股汹涌而至、
+
+574
+01:07:47,760 --> 01:07:58,560
+demand that’s incoming and has already arrived? It sounds like what Intel ought to do — if the ultimate bottleneck is that you guys already have these foundries, you already have the
+已然到来的AI需求？听起来，英特尔真正该做的——如果最终的瓶颈在于你们已经拥有晶圆厂，
+
+575
+01:07:58,560 --> 01:08:10,480
+ability to expand these foundries, but what you will eventually lack is the tools from upstream in the supply chain — is to just raise as much capital as possible right now.
+也具备扩展这些晶圆厂的能力，但未来可能缺乏供应链上游的工具——就是现在就尽可能多地筹集资金。
+
+576
+01:08:10,480 --> 01:08:21,120
+The same way that Nvidia has locked down memory and other components for reportedly hundreds of billions of dollars worth of commitments that it’s made, Intel should maybe do the same thing:
+就像英伟达已为数百亿美元的承诺锁定内存及其他组件一样，英特尔或许也该采取类似做法：做出这些承诺，
+
+577
+01:08:21,120 --> 01:08:32,720
+make all these commitments so that over the coming years, the US is in good position to have the bulk of semiconductor manufacturing at the most advanced levels happening here.
+以便在未来几年内，美国能处于有利地位，使最先进制程的半导体制造大部分发生在这里。
+
+578
+01:08:32,720 --> 01:08:35,600
+You’re suggesting we should be buying a lot more tools, right?
+你是说我们应该多买些工具，对吧？
+
+579
+01:08:35,600 --> 01:08:42,640
+Yeah, because it sounds like otherwise in a couple years you’d just be in a position where you’re like, “Oh man, we could be making trillions of dollars right now,
+是啊，因为听起来再过几年，你就会发现自己处于这种境地：“天哪，我们现在本可以赚取万亿 dollars，
+
+580
+01:08:42,640 --> 01:08:47,840
+but all the tools are in Taiwan.” Yes, that’s a very valid question.
+但所有工具都在台湾。” 是的，这是个非常合理的问题。
+
+581
+01:08:47,840 --> 01:08:52,960
+Had we known what we know today, we would have invested more like a year ago.
+如果我们今天能预知到这些，一年前就会投入更多。
+
+582
+01:08:52,960 --> 01:08:57,600
+Knowing what we know now, I think we’ll be investing more.
+了解了我们现在所知道的情况后，我认为我们会加大投资。

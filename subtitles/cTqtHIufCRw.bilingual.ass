@@ -1,0 +1,775 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.08,0:00:04.55,Sub,,0,0,0,,of the stories I was just reading about recently uh has to do with the the airline industry.
+Dialogue: 0,0:00:04.60,0:00:07.82,Sub,,0,0,0,,There was a time when all of them spent, you know,
+Dialogue: 0,0:00:07.87,0:00:14.10,Sub,,0,0,0,,a lot of their advertising dollars and and marketing campaigns on my plane is safer than everybody else's plane.
+Dialogue: 0,0:00:14.15,0:00:16.54,Sub,,0,0,0,,Turns out nobody wanted to hear about that.
+Dialogue: 0,0:00:16.59,0:00:20.13,Sub,,0,0,0,,They wanted the c they wanted the companies to take care of that.
+Dialogue: 0,0:00:20.18,0:00:27.42,Sub,,0,0,0,,What they wanted to hear was that that the airlines could take them to new places, uh, expand their horizon,
+Dialogue: 0,0:00:27.47,0:00:32.55,Sub,,0,0,0,,make the world smaller so that we could learn about each other's culture, create new economies.
+Dialogue: 0,0:00:32.60,0:00:34.44,Sub,,0,0,0,,That's what they wanted to hear about.
+Dialogue: 0,0:00:34.49,0:00:43.51,Sub,,0,0,0,,They wanted it to be our responsibility to make it safe, not to make it their burden that they think about safety all day all day long.
+Dialogue: 0,0:00:43.56,0:00:47.10,Sub,,0,0,0,,And so I think this is the same thing that's hap it happened in the auto industry.
+Dialogue: 0,0:00:47.15,0:00:49.30,Sub,,0,0,0,,It happens to to the power generation industry.
+Dialogue: 0,0:00:49.35,0:00:54.98,Sub,,0,0,0,,it happened to the airline industry and so I think it's a responsibility for all of our all of the leaders
+Dialogue: 0,0:00:55.03,0:01:03.14,Sub,,0,0,0,,all of us to make sure that we take safety and security and building the technology properly our responsibility and uh working
+Dialogue: 0,0:01:03.19,0:01:11.54,Sub,,0,0,0,,with regulators and of course every single there are so many regulations and so many laws already intelligence is a digital digital
+Dialogue: 0,0:01:11.59,0:01:18.86,Sub,,0,0,0,,version of what we do and so you would think digital version of some task that humans do so in In fact,
+Dialogue: 0,0:01:18.91,0:01:22.75,Sub,,0,0,0,,humans are have regulations across so many different domains already.
+Dialogue: 0,0:01:22.80,0:01:28.86,Sub,,0,0,0,,Whether it's the FDA, FDA or Nitsa or whatever it is, there's so many different agencies that already have regulations.
+Dialogue: 0,0:01:28.91,0:01:32.26,Sub,,0,0,0,,I'm sure there's a way to formulate AI into that.
+Dialogue: 0,0:01:32.31,0:01:41.96,Sub,,0,0,0,,And so, uh, I think the the balance of of precise regulation, uh, don't regulate hypothetical theoretical harm.
+Dialogue: 0,0:01:42.01,0:01:44.97,Sub,,0,0,0,,Regulate actual and pragmatic harm.
+Dialogue: 0,0:01:45.02,0:01:54.60,Sub,,0,0,0,,um and give this technology which is at the at the early stages of the S-curve innovation an opportunity to advance quickly so that it could be safe.
+Dialogue: 0,0:01:54.65,0:01:59.37,Sub,,0,0,0,,And so some of the people uh to if you just go back and think about some of the and
+Dialogue: 0,0:01:59.42,0:02:06.87,Sub,,0,0,0,,remind yourself of some of the ideas of slowing down technology advancement three years ago when it was just being formed.
+Dialogue: 0,0:02:06.92,0:02:09.81,Sub,,0,0,0,,In fact, the advancement is what made it safer.
+Dialogue: 0,0:02:09.86,0:02:14.20,Sub,,0,0,0,,The advancement made it not hallucinate grounded on real truth.
+Dialogue: 0,0:02:14.25,0:02:20.11,Sub,,0,0,0,,um iterate until that the the answer uh is uh uh uh scientifically sound.
+Dialogue: 0,0:02:20.16,0:02:25.11,Sub,,0,0,0,,Um all of those technologies made were made possible through technology advancements.
+Dialogue: 0,0:02:25.16,0:02:29.31,Sub,,0,0,0,,And so we're we're making it safer but advancing it more.
+Dialogue: 0,0:02:29.36,0:02:33.99,Sub,,0,0,0,,So let let's turn a little bit to your business for a moment.
+Dialogue: 0,0:02:34.04,0:02:41.75,Sub,,0,0,0,,Um your your chips uh GPUs, they're they're different from what other people are hoping to build, right?
+Dialogue: 0,0:02:41.80,0:02:53.34,Sub,,0,0,0,,And so maybe can you talk to the audience about about your products and and why are GPUs different than so any other letter before the PU if you will?
+Dialogue: 0,0:02:53.39,0:02:55.31,Sub,,0,0,0,,Well, today we started out,
+Dialogue: 0,0:02:55.36,0:03:02.25,Sub,,0,0,0,,we invented a technology called a GPU and basically a GPU does parallel processing tasks and it
+Dialogue: 0,0:03:02.30,0:03:09.67,Sub,,0,0,0,,solves things like fluid dynamics and particle physics and quantum chemistry and one of the computer graphics,
+Dialogue: 0,0:03:09.72,0:03:17.97,Sub,,0,0,0,,image processing, um image reconstruction, uh and of course one of the things that it does incredibly well is artificial intelligence.
+Dialogue: 0,0:03:18.02,0:03:27.69,Sub,,0,0,0,,Um our architecture, our technology is general purpose meaning that uh any we support every single closed models,
+Dialogue: 0,0:03:27.74,0:03:32.87,Sub,,0,0,0,,we support every single open model, we support languages, we support large models,
+Dialogue: 0,0:03:32.92,0:03:42.28,Sub,,0,0,0,,small models, we support um physical models, biological models and so our architecture is funible in the sense that it runs every AI model,
+Dialogue: 0,0:03:42.33,0:03:46.38,Sub,,0,0,0,,runs all data processing and and parallel processing tasks.
+Dialogue: 0,0:03:46.43,0:03:48.27,Sub,,0,0,0,,As a result, we're everywhere.
+Dialogue: 0,0:03:48.32,0:03:49.55,Sub,,0,0,0,,We're in every cloud.
+Dialogue: 0,0:03:49.60,0:03:50.39,Sub,,0,0,0,,We're on prem.
+Dialogue: 0,0:03:50.44,0:03:51.74,Sub,,0,0,0,,We could be at the edge.
+Dialogue: 0,0:03:51.79,0:03:54.28,Sub,,0,0,0,,We're in robotic systems and self-driving cars.
+Dialogue: 0,0:03:54.33,0:03:56.26,Sub,,0,0,0,,Um, and the com the company's been around.
+Dialogue: 0,0:03:56.31,0:03:58.04,Sub,,0,0,0,,We been working on this for so long.
+Dialogue: 0,0:03:58.09,0:04:01.34,Sub,,0,0,0,,We're in our 14th generation of our architecture.
+Dialogue: 0,0:04:01.39,0:04:04.59,Sub,,0,0,0,,And, and so, so Nvidia's basically everywhere.
+Dialogue: 0,0:04:04.64,0:04:09.54,Sub,,0,0,0,,One of the advantages of doing that is that these infrastructures are so expensive.
+Dialogue: 0,0:04:09.59,0:04:12.93,Sub,,0,0,0,,One gigawatt is about 50 60 billion dollars.
+Dialogue: 0,0:04:12.98,0:04:18.51,Sub,,0,0,0,,You know, back in the old days, people thought building a fab $25 billion was a giant investment.
+Dialogue: 0,0:04:18.56,0:04:21.99,Sub,,0,0,0,,And now, literally one gigawatt is twice that.
+Dialogue: 0,0:04:22.04,0:04:29.58,Sub,,0,0,0,,And we're building between now and the end of the decade 100 gigawatts because we want to produce intelligence for the world.
+Dialogue: 0,0:04:29.63,0:04:38.65,Sub,,0,0,0,,And so when you're building investing in infrastructure that's that costly you want to make sure that it is fungeible and it's
+Dialogue: 0,0:04:38.70,0:04:47.22,Sub,,0,0,0,,durable because otherwise if you build something that's too specialized and the world's architecture and algorithm changes and these AI models and
+Dialogue: 0,0:04:47.27,0:04:53.14,Sub,,0,0,0,,technologies are changing so fast if it changes then all a sudden it could obsolete the investment that you've made and so
+Dialogue: 0,0:04:53.19,0:05:02.32,Sub,,0,0,0,,the reason why Nvidia's uh growth is accelerating is because people are starting to realize that were the safest architecture to invest in.
+Dialogue: 0,0:05:02.38,0:05:03.66,Sub,,0,0,0,,It's fungeable.
+Dialogue: 0,0:05:03.71,0:05:09.38,Sub,,0,0,0,,It is durable and it continues to improve over time through software and uh it runs everything.
+Dialogue: 0,0:05:09.43,0:05:15.71,Sub,,0,0,0,,And so we run every American model, every international model and every modality of models that you have.
+Dialogue: 0,0:05:15.76,0:05:20.88,Sub,,0,0,0,,So people are always interested on where the world is going.
+Dialogue: 0,0:05:20.93,0:05:26.57,Sub,,0,0,0,,If if you were going to give us sort of your big picture view, where where are we going?
+Dialogue: 0,0:05:26.62,0:05:35.28,Sub,,0,0,0,,um what should we be thinking about that we don't always talk about you know what you you see everything really all the companies of the world sort of
+Dialogue: 0,0:05:35.33,0:05:42.85,Sub,,0,0,0,,come and visit with you and sort of tell you where they're going how how would you sort of give us a big picture of a set of ideas
+Dialogue: 0,0:05:42.90,0:05:52.86,Sub,,0,0,0,,that we don't usually hear about well there's some things that that we hear and and then I'll I'll I'll juxtapose that um against what I expect and so
+Dialogue: 0,0:05:52.91,0:05:57.96,Sub,,0,0,0,,for example in the next couple of years we are going to achieve essentially
+Dialogue: 0,0:05:58.01,0:06:06.03,Sub,,0,0,0,,what people call AGI and and um and that's not an illogical thing to me.
+Dialogue: 0,0:06:06.08,0:06:09.24,Sub,,0,0,0,,In fact, I would argue that we're practically there today.
+Dialogue: 0,0:06:09.29,0:06:09.69,Sub,,0,0,0,,Okay?
+Dialogue: 0,0:06:09.73,0:06:12.43,Sub,,0,0,0,,And and so the question is what does that mean?
+Dialogue: 0,0:06:12.48,0:06:14.91,Sub,,0,0,0,,Um it either means a lot or it doesn't mean anything.
+Dialogue: 0,0:06:14.96,0:06:18.03,Sub,,0,0,0,,And so let me give you an example.
+Dialogue: 0,0:06:18.08,0:06:20.34,Sub,,0,0,0,,If we said that in the next couple of years we're going to
+Dialogue: 0,0:06:20.39,0:06:26.42,Sub,,0,0,0,,achieve artificial general intelligence um and every and there's no question everybody's everybody's
+Dialogue: 0,0:06:26.47,0:06:37.39,Sub,,0,0,0,,tasks the things that we do whether it's in um just learning or working or uh every single industry will be impacted it will benefit everybody.
+Dialogue: 0,0:06:37.44,0:06:44.54,Sub,,0,0,0,,However, the part that is that is not not thought through is in fact uh the thought experiment.
+Dialogue: 0,0:06:44.59,0:06:46.22,Sub,,0,0,0,,Let me just give you the thought experiment.
+Dialogue: 0,0:06:46.27,0:06:52.11,Sub,,0,0,0,,Suppose and you know that several several hundred years ago uh humans in order to have a more
+Dialogue: 0,0:06:52.16,0:06:58.63,Sub,,0,0,0,,civil society uh manufactured one of the most important things in the world which is called education intelligence.
+Dialogue: 0,0:06:58.68,0:07:05.90,Sub,,0,0,0,,We manu through universities and schools we manufacture intelligence and we manufacture stability at scale.
+Dialogue: 0,0:07:05.95,0:07:08.29,Sub,,0,0,0,,is without it, how would we have civilization?
+Dialogue: 0,0:07:08.34,0:07:12.10,Sub,,0,0,0,,And so now we're creating the digital version of that.
+Dialogue: 0,0:07:12.15,0:07:19.53,Sub,,0,0,0,,We're manufacturing now intelligence digitally at scale so that even even countries and people who don't have
+Dialogue: 0,0:07:19.58,0:07:24.92,Sub,,0,0,0,,access to the highest levels of education now have the benefits of the highest levels of education.
+Dialogue: 0,0:07:24.97,0:07:25.30,Sub,,0,0,0,,Okay?
+Dialogue: 0,0:07:25.33,0:07:29.12,Sub,,0,0,0,,And so that's the simplest way of thinking about what is happening right now.
+Dialogue: 0,0:07:29.17,0:07:32.54,Sub,,0,0,0,,So the question is what's the benefit to society as a result of that?
+Dialogue: 0,0:07:32.59,0:07:34.55,Sub,,0,0,0,,Well, let's pretend let's do a thought experiment.
+Dialogue: 0,0:07:34.60,0:07:41.63,Sub,,0,0,0,,Suppose every single uh every single, you know, young person that we hire out of school uh is incredibly well educated.
+Dialogue: 0,0:07:41.68,0:07:44.54,Sub,,0,0,0,,Well, that's pretty much consistent with everybody I hire.
+Dialogue: 0,0:07:44.59,0:07:52.13,Sub,,0,0,0,,They come out of Stanford or Harvard or MIT or, you know, ETH or and these are incredibly smart kids.
+Dialogue: 0,0:07:52.18,0:07:59.48,Sub,,0,0,0,,However, when these kids come to come to our company and every every company and every industry,
+Dialogue: 0,0:07:59.53,0:08:05.79,Sub,,0,0,0,,we now still have to invest quite a bit in surrounding them with context.
+Dialogue: 0,0:08:05.84,0:08:13.79,Sub,,0,0,0,,So, as it turns out, even when we get to AGI, it's not as if every company's problems are solved.
+Dialogue: 0,0:08:13.84,0:08:20.65,Sub,,0,0,0,,It's not as if all of a sudden in two years time, I say, "Okay, let me connect it to this a a this AI service."
+Dialogue: 0,0:08:20.70,0:08:25.40,Sub,,0,0,0,,and I just sit sit back and all of a sudden my company becomes more and more productive overnight.
+Dialogue: 0,0:08:25.45,0:08:27.24,Sub,,0,0,0,,That's just not going to happen at all.
+Dialogue: 0,0:08:27.29,0:08:32.00,Sub,,0,0,0,,You're going to spend all of your energy just like you currently do onboarding a
+Dialogue: 0,0:08:32.05,0:08:39.38,Sub,,0,0,0,,new college grad with a PhD from MIT which is pro surrounding them with context,
+Dialogue: 0,0:08:39.43,0:08:41.47,Sub,,0,0,0,,purpose, relevance,
+Dialogue: 0,0:08:41.52,0:08:50.35,Sub,,0,0,0,,access to, you know, all of these other things which is essentially if you will the harness around these AIs,
+Dialogue: 0,0:08:50.40,0:08:55.24,Sub,,0,0,0,,the environment around these AIs so that they could do productive work.
+Dialogue: 0,0:08:55.29,0:09:01.13,Sub,,0,0,0,,All of that harnessing, all of that environment creation is what companies do, is what leaders do.
+Dialogue: 0,0:09:01.18,0:09:05.31,Sub,,0,0,0,,And as it turns out, our jobs won't change.
+Dialogue: 0,0:09:05.36,0:09:10.82,Sub,,0,0,0,,Our jobs is defined by purpose, context, meaning.
+Dialogue: 0,0:09:10.87,0:09:12.94,Sub,,0,0,0,,That's what a job is.
+Dialogue: 0,0:09:12.99,0:09:17.63,Sub,,0,0,0,,In that job, there's a lot of typing and talking and, you know, things like that.
+Dialogue: 0,0:09:17.68,0:09:21.07,Sub,,0,0,0,,Those skills are going to be automated by AI.
+Dialogue: 0,0:09:21.12,0:09:23.09,Sub,,0,0,0,,The tasks are going to be automated.
+Dialogue: 0,0:09:23.14,0:09:25.75,Sub,,0,0,0,,But our our jobs purpose re remain.
+Dialogue: 0,0:09:25.80,0:09:31.47,Sub,,0,0,0,,And so I think what's going to happen is that we're all just going to be supercharged just like we're currently supercharged.
+Dialogue: 0,0:09:31.52,0:09:34.70,Sub,,0,0,0,,Nvidia is we use AI across the whole company today.
+Dialogue: 0,0:09:34.75,0:09:40.45,Sub,,0,0,0,,We use off-the-shelf AIs like like anthropics and open AIs and cursor and um and we build
+Dialogue: 0,0:09:40.50,0:09:45.21,Sub,,0,0,0,,a lot of our own custom AI and I encourage everybody to apply the same the same idea.
+Dialogue: 0,0:09:45.26,0:09:52.65,Sub,,0,0,0,,You should use AI offtheshelf wherever you can but don't forget you have to invest in building your own intelligence.
+Dialogue: 0,0:09:52.70,0:09:58.51,Sub,,0,0,0,,every country, every company, you can't outsource all of your intelligence to somebody else.
+Dialogue: 0,0:09:58.56,0:10:04.04,Sub,,0,0,0,,And so you have to use as much of it as you can build as much as you need to.
+Dialogue: 0,0:10:04.09,0:10:10.91,Sub,,0,0,0,,And so uh we do that at the company and and uh and so that's the the first idea is just that we're going to be supercharged.
+Dialogue: 0,0:10:10.96,0:10:15.17,Sub,,0,0,0,,Um the idea that somehow all the jobs are going to be eliminated, removed, that's just nonsense.
+Dialogue: 0,0:10:15.22,0:10:15.52,Sub,,0,0,0,,Okay?
+Dialogue: 0,0:10:15.47,0:10:18.36,Sub,,0,0,0,,And the reason for that is because of all the things that I've just said.
+Dialogue: 0,0:10:18.41,0:10:25.63,Sub,,0,0,0,,Now the other thing that that is the case is that all of our ambitions are going to be supercharged.
+Dialogue: 0,0:10:25.68,0:10:35.36,Sub,,0,0,0,,Just as you know we are more ambitious today than any time in human civilization.
+Dialogue: 0,0:10:35.41,0:10:41.06,Sub,,0,0,0,,We think about doing things that are people a 100 years ago would just that's insane.
+Dialogue: 0,0:10:41.11,0:10:42.99,Sub,,0,0,0,,That's got to be science fiction.
+Dialogue: 0,0:10:43.04,0:10:43.47,Sub,,0,0,0,,True.
+Dialogue: 0,0:10:43.52,0:10:47.31,Sub,,0,0,0,,And yet we perfectly expla perfectly expect it.
+Dialogue: 0,0:10:47.36,0:10:51.70,Sub,,0,0,0,,And so just imagine how ambitious we're going to be in 5 10 years.
+Dialogue: 0,0:10:51.75,0:10:53.44,Sub,,0,0,0,,That's the exciting time.
+Dialogue: 0,0:10:53.49,0:10:53.97,Sub,,0,0,0,,You know,
+Dialogue: 0,0:10:54.02,0:11:00.68,Sub,,0,0,0,,I've been working a long time and surely I don't have to work but I don't want to miss I I'm definitely not going to miss the next 10-15 years.
+Dialogue: 0,0:11:00.73,0:11:06.15,Sub,,0,0,0,,The ambition of the industry, the ambition of my colleagues, my own ambition has really been supercharged.
+Dialogue: 0,0:11:06.20,0:11:13.04,Sub,,0,0,0,,And this is another way of saying that all of all of you all of the countries your ambitions have to be supercharged.
+Dialogue: 0,0:11:13.09,0:11:17.99,Sub,,0,0,0,,This is the time when you have to feel enlightened, inspired, you know,
+Dialogue: 0,0:11:18.04,0:11:22.63,Sub,,0,0,0,,supercharged, lifted because you now have this incredible technology behind you.
+Dialogue: 0,0:11:22.68,0:11:26.67,Sub,,0,0,0,,And so you know what do I expect in the next 5 10 years?
+Dialogue: 0,0:11:26.72,0:11:28.62,Sub,,0,0,0,,Uh things that takes 10 years going to take one.
+Dialogue: 0,0:11:28.67,0:11:31.63,Sub,,0,0,0,,Things that take one will take a month.
+Dialogue: 0,0:11:31.68,0:11:39.86,Sub,,0,0,0,,And so, um, you know, if you if you think that that this is going to cost a million dollars to do, uh,
+Dialogue: 0,0:11:39.91,0:11:46.30,Sub,,0,0,0,,well, back a long time ago, just, you know, years ago, a million dollars seems like a big investment.
+Dialogue: 0,0:11:46.35,0:11:48.78,Sub,,0,0,0,,But these days, just think about the level of investments.
+Dialogue: 0,0:11:48.83,0:11:51.22,Sub,,0,0,0,,We're talking about trillions of dollars in investment.
+Dialogue: 0,0:11:51.27,0:11:53.55,Sub,,0,0,0,,And the reason for that is this.
+Dialogue: 0,0:11:53.60,0:12:05.07,Sub,,0,0,0,,It is now possible for average humans like ourselves to think that we can make an impact on a hundred trillion dollar industry.
+Dialogue: 0,0:12:05.12,0:12:08.41,Sub,,0,0,0,,For the first time, you're hearing people, Isn't that right?
+Dialogue: 0,0:12:08.46,0:12:17.65,Sub,,0,0,0,,For the first time, you're hearing innovators, people, companies, countries talking about elevating a hundred trillion dollar industry.
+Dialogue: 0,0:12:17.70,0:12:19.17,Sub,,0,0,0,,That's ambition.
+Dialogue: 0,0:12:19.22,0:12:27.63,Sub,,0,0,0,,To think that you're going to add 20, 50 trillion dollars of economic benefit around the world, that's ambition.
+Dialogue: 0,0:12:27.68,0:12:31.87,Sub,,0,0,0,,No time in history have we been able to say things like that.
+Dialogue: 0,0:12:31.92,0:12:38.27,Sub,,0,0,0,,So my goal for today when we're together is growth, right?
+Dialogue: 0,0:12:38.32,0:12:45.33,Sub,,0,0,0,,That's our goal that we can all grow and benefit our countries and benefit society.
+Dialogue: 0,0:12:45.38,0:12:53.31,Sub,,0,0,0,,And I think what you've done uh Jensen, which we really appreciate, I mean, you are an American treasure.
+Dialogue: 0,0:12:53.36,0:12:53.73,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:12:53.76,0:12:54.18,Sub,,0,0,0,,Right.
+Dialogue: 0,0:12:54.23,0:13:00.86,Sub,,0,0,0,,Your company, uh, is leading us in a path that none of us when we were young ever dreamed possible.
+Dialogue: 0,0:13:00.91,0:13:02.68,Sub,,0,0,0,,Maybe we dreamed it a little bit.
+Dialogue: 0,0:13:02.73,0:13:06.27,Sub,,0,0,0,,That's what, you know, sort of sci-fi was about, but now we're there.
+Dialogue: 0,0:13:06.32,0:13:11.19,Sub,,0,0,0,,I think what you've laid out for us is a vision
+Dialogue: 0,0:13:11.24,0:13:18.85,Sub,,0,0,0,,of that harnessing AI to using it both from uh surrounding it,
+Dialogue: 0,0:13:18.90,0:13:23.18,Sub,,0,0,0,,contextualizing it and directing it is how we're going to succeed.
+Dialogue: 0,0:13:23.23,0:13:29.04,Sub,,0,0,0,,That each of the countries here needs to invest in its infrastructure in order to
+Dialogue: 0,0:13:29.09,0:13:34.28,Sub,,0,0,0,,capture that for themselves to make sure that their citizens and their society benefits from it.
+Dialogue: 0,0:13:34.33,0:13:36.91,Sub,,0,0,0,,They've got to make that infrastructure investment.
+Dialogue: 0,0:13:36.96,0:13:38.67,Sub,,0,0,0,,They've got to build the data centers.
+Dialogue: 0,0:13:38.72,0:13:41.47,Sub,,0,0,0,,They've got to harness the AI for themselves.
+Dialogue: 0,0:13:41.52,0:13:41.95,Sub,,0,0,0,,That's right.
+Dialogue: 0,0:13:42.00,0:13:47.15,Sub,,0,0,0,,Because what you've said is that uh education has been democratized.
+Dialogue: 0,0:13:47.20,0:13:49.55,Sub,,0,0,0,,But it's made available for everybody.
+Dialogue: 0,0:13:49.60,0:13:52.59,Sub,,0,0,0,,You now can have a PhD in everything.
+Dialogue: 0,0:13:52.64,0:13:53.23,Sub,,0,0,0,,That's right.
+Dialogue: 0,0:13:53.28,0:14:01.63,Sub,,0,0,0,,At your fingertips and you don't have to find that person because you've helped find them and sort of capture that education in a bot.
+Dialogue: 0,0:14:01.68,0:14:03.74,Sub,,0,0,0,,You are that person now, right?
+Dialogue: 0,0:14:03.79,0:14:05.72,Sub,,0,0,0,,Everybody is that person now.
+Dialogue: 0,0:14:05.77,0:14:13.30,Sub,,0,0,0,,So I think you know our goal is to uh is to have that idea of growth, that ambition for growth.
+Dialogue: 0,0:14:13.35,0:14:18.67,Sub,,0,0,0,,And what you've done is you've laid us out that our dreams need to be higher
+Dialogue: 0,0:14:18.72,0:14:24.51,Sub,,0,0,0,,because they can be higher because if you have all of this intelligence at your fingertips,
+Dialogue: 0,0:14:24.56,0:14:26.35,Sub,,0,0,0,,how could you not dream higher?
+Dialogue: 0,0:14:26.40,0:14:27.30,Sub,,0,0,0,,That's right.
+Dialogue: 0,0:14:27.35,0:14:37.09,Sub,,0,0,0,,And I think really for a company and for a leader of a company to have such a uh such a brilliantly positive vision for where we're going,
+Dialogue: 0,0:14:37.14,0:14:39.81,Sub,,0,0,0,,I think was the exact way to lead off today.
+Dialogue: 0,0:14:39.86,0:14:42.33,Sub,,0,0,0,,So I want to thank you for coming everybody.
+Dialogue: 0,0:14:42.38,0:14:48.75,Sub,,0,0,0,,I would like to thank Jensen W for coming and joining us.
+Dialogue: 0,0:14:48.80,0:14:51.87,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:14:51.92,0:14:55.47,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:14:55.52,0:15:01.09,Sub,,0,0,0,,Thank
+Dialogue: 0,0:15:01.14,0:15:04.84,Sub,,0,0,0,,you
+Dialogue: 0,0:15:04.89,0:15:15.15,Sub,,0,0,0,,everybody.
+Dialogue: 0,0:15:15.20,0:15:17.36,Sub,,0,0,0,,Ladies and gentlemen, that concludes our program.
+Dialogue: 0,0:15:17.41,0:15:21.69,Sub,,0,0,0,,If you are the head of delegation, please proceed to the front lobby to your flag.
+Dialogue: 0,0:15:21.74,0:15:24.70,Sub,,0,0,0,,We will begin the family photo momentarily.
+Dialogue: 0,0:15:24.75,0:15:25.21,Sub,,0,0,0,,Again,
+Dialogue: 0,0:15:25.26,0:15:28.91,Sub,,0,0,0,,please proceed directly to the family photo in
+Dialogue: 0,0:15:28.96,0:16:28.78,Sub,,0,0,0,,front
+Dialogue: 0,0:16:28.83,0:16:58.72,Sub,,0,0,0,,of
+Dialogue: 0,0:16:58.77,0:17:48.61,Sub,,0,0,0,,your
+Dialogue: 0,0:17:48.66,0:18:38.50,Sub,,0,0,0,,flag
+Dialogue: 0,0:18:38.55,0:19:18.42,Sub,,0,0,0,,for
+Dialogue: 0,0:19:18.47,0:19:58.33,Sub,,0,0,0,,the
+Dialogue: 0,0:19:58.38,0:21:08.18,Sub,,0,0,0,,family
+Dialogue: 0,0:21:08.23,0:22:18.03,Sub,,0,0,0,,photo.
+Dialogue: 0,0:22:18.08,0:23:01.87,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:23:01.92,0:23:05.31,Sub,,0,0,0,,Cheers.
+Dialogue: 0,0:23:05.36,0:23:16.89,Sub,,0,0,0,,Uh, two,
+Dialogue: 0,0:23:16.94,0:23:24.61,Sub,,0,0,0,,three
+Dialogue: 0,0:23:24.66,0:23:36.19,Sub,,0,0,0,,minutes.
+Dialogue: 0,0:23:36.24,0:24:05.60,Sub,,0,0,0,,There's
+Dialogue: 0,0:24:05.65,0:24:23.98,Sub,,0,0,0,,four
+Dialogue: 0,0:24:24.03,0:24:38.68,Sub,,0,0,0,,out
+Dialogue: 0,0:24:38.73,0:24:50.68,Sub,,0,0,0,,of Everyone,
+Dialogue: 0,0:24:50.73,0:24:53.23,Sub,,0,0,0,,everyone Hello everyone.
+Dialogue: 0,0:24:53.28,0:24:56.67,Sub,,0,0,0,,It's gorgeous here, isn't it?
+Dialogue: 0,0:24:56.72,0:25:01.71,Sub,,0,0,0,,Red.
+Dialogue: 0,0:25:01.76,0:25:04.35,Sub,,0,0,0,,Sir, you're right here.
+Dialogue: 0,0:25:04.40,0:25:14.90,Sub,,0,0,0,,Just look for
+Dialogue: 0,0:25:14.95,0:25:25.39,Sub,,0,0,0,,your no
+Dialogue: 0,0:25:25.44,0:25:31.07,Sub,,0,0,0,,one second.
+Dialogue: 0,0:25:31.12,0:25:32.96,Sub,,0,0,0,,One
+Dialogue: 0,0:25:33.01,0:25:44.31,Sub,,0,0,0,,second. on
+Dialogue: 0,0:25:44.36,0:25:56.91,Sub,,0,0,0,,your
+Dialogue: 0,0:25:56.96,0:26:09.06,Sub,,0,0,0,,first
+Dialogue: 0,0:26:09.11,0:26:23.23,Sub,,0,0,0,,photo.
+Dialogue: 0,0:26:23.28,0:26:33.15,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:26:33.20,0:26:35.07,Sub,,0,0,0,,Come on.
+Dialogue: 0,0:26:35.12,0:26:41.95,Sub,,0,0,0,,I think
+Dialogue: 0,0:26:42.00,0:26:50.55,Sub,,0,0,0,,everybody
+Dialogue: 0,0:26:50.60,0:26:55.71,Sub,,0,0,0,,pose.
+Dialogue: 0,0:26:55.76,0:27:11.31,Sub,,0,0,0,,Second
+Dialogue: 0,0:27:11.36,0:27:12.01,Sub,,0,0,0,,All right,
+Dialogue: 0,0:27:12.06,0:27:13.41,Sub,,0,0,0,,everyone do the pose.
+Dialogue: 0,0:27:13.46,0:27:19.17,Sub,,0,0,0,,Okay, do the pose.
+Dialogue: 0,0:27:19.22,0:27:23.31,Sub,,0,0,0,,Let's go.
+Dialogue: 0,0:27:23.36,0:27:23.70,Sub,,0,0,0,,Jensen.
+Dialogue: 0,0:27:23.73,0:27:25.57,Sub,,0,0,0,,Jensen, why don't you come on over?
+Dialogue: 0,0:27:25.62,0:27:26.33,Sub,,0,0,0,,Come on.
+Dialogue: 0,0:27:26.38,0:27:26.83,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:27:26.88,0:27:27.65,Sub,,0,0,0,,So, uh,
+Dialogue: 0,0:27:27.70,0:27:36.61,Sub,,0,0,0,,Jensen Wong uh launched our day today by having a very join me very optimistic view of AI going
+Dialogue: 0,0:27:36.66,0:27:45.33,Sub,,0,0,0,,forward that it will harness energy make it available for the world and is really will raise our aspirations.
+Dialogue: 0,0:27:45.38,0:27:49.12,Sub,,0,0,0,,So, it was really a very uplifting uh morning.
+Dialogue: 0,0:27:49.17,0:27:56.95,Sub,,0,0,0,,So, let's have a really great All right.
+Dialogue: 0,0:27:57.00,0:27:57.79,Sub,,0,0,0,,Thank you everybody.
+Dialogue: 0,0:27:57.84,0:27:58.81,Sub,,0,0,0,,Thank you everybody.
+Dialogue: 0,0:27:58.86,0:28:05.87,Sub,,0,0,0,,Minister, secretary, can you follow me this way please?
+Dialogue: 0,0:28:05.92,0:28:14.51,Sub,,0,0,0,,All minister follow
+Dialogue: 0,0:28:14.56,0:28:23.15,Sub,,0,0,0,,me this way please.
+Dialogue: 0,0:28:23.20,0:28:28.38,Sub,,0,0,0,,Oh
+Dialogue: 0,0:28:28.43,0:28:38.83,Sub,,0,0,0,,yeah.
+Dialogue: 0,0:28:38.88,0:28:52.35,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:28:52.40,0:29:12.51,Sub,,0,0,0,,second
+Dialogue: 0,0:29:12.56,0:29:22.59,Sub,,0,0,0,,message.
+Dialogue: 0,0:29:22.64,0:29:25.85,Sub,,0,0,0,,that America is going to lead by building the full staff,
+Dialogue: 0,0:29:25.90,0:29:33.62,Sub,,0,0,0,,but every country should be able to take the parts they need and build their opportunity, their AI economy with them.
+Dialogue: 0,0:29:33.67,0:29:43.32,Sub,,0,0,0,,And um the secretary was uh uh really really uh uh uh quite um supportive
+Dialogue: 0,0:29:43.37,0:29:48.59,Sub,,0,0,0,,of of uh uh building the United States and really proud of uh the American companies
+Dialogue: 0,0:29:48.64,0:29:52.54,Sub,,0,0,0,,building here in the United States and would love to see uh the G20 companies or
+Dialogue: 0,0:29:52.59,0:29:57.55,Sub,,0,0,0,,G20 countries also adopt the technology and be able to build their AI economy from it.
+Dialogue: 0,0:29:57.60,0:29:59.86,Sub,,0,0,0,,Where do you see India plays in the days of AI?
+Dialogue: 0,0:29:59.91,0:30:09.15,Sub,,0,0,0,,Uh well, India is one of the world's leading IT industries and this is the beginning of a new IT platform.
+Dialogue: 0,0:30:09.20,0:30:18.11,Sub,,0,0,0,,If uh and and I had the benefit of seeing Moto G a decade ago talking about AI and I'm I'm really anxious to
+Dialogue: 0,0:30:18.16,0:30:25.87,Sub,,0,0,0,,see and very excited to see uh the local companies and the local startups starting in in India starting to take advantage of the technology,
+Dialogue: 0,0:30:25.92,0:30:29.46,Sub,,0,0,0,,contributing to the technology and then building the local AI economy.
+Dialogue: 0,0:30:29.51,0:30:32.74,Sub,,0,0,0,,want to go to situation to premises the moving for AI.
+Dialogue: 0,0:30:32.79,0:30:36.59,Sub,,0,0,0,,Well, AI is moving fast, so every country has to move faster.
+Dialogue: 0,0:30:36.64,0:30:38.54,Sub,,0,0,0,,There's been talk of more semiconductor tariffs coming.
+Dialogue: 0,0:30:38.59,0:30:39.50,Sub,,0,0,0,,Do you have thoughts on that?
+Dialogue: 0,0:30:39.55,0:30:40.59,Sub,,0,0,0,,Did you speak with the secretary?
+Dialogue: 0,0:30:40.64,0:30:42.35,Sub,,0,0,0,,And how would that impact Nvidia?
+Dialogue: 0,0:30:42.40,0:30:51.92,Sub,,0,0,0,,I I didn't uh have no conversation related to the rules of the road for AI and innovation there yet. the rules on the road.
+Dialogue: 0,0:30:51.97,0:30:52.51,Sub,,0,0,0,,Right now,
+Dialogue: 0,0:30:52.56,0:30:59.66,Sub,,0,0,0,,the technology is in its formative stages and the um the advice that I would have is
+Dialogue: 0,0:30:59.71,0:31:10.83,Sub,,0,0,0,,is um uh to regulate practical and actual harm and not uh uh regulate theoretical and hypothetical harm.
+Dialogue: 0,0:31:10.88,0:31:13.96,Sub,,0,0,0,,And the reason for that is of course the technology is still advancing.
+Dialogue: 0,0:31:14.01,0:31:19.31,Sub,,0,0,0,,We want to make sure that the technology advances in a safe way and and the the more advanced it is,
+Dialogue: 0,0:31:19.36,0:31:22.11,Sub,,0,0,0,,the safer and more practical it could be, more useful could be.
+Dialogue: 0,0:31:22.16,0:31:23.96,Sub,,0,0,0,,Any comment on AI safety?
+Dialogue: 0,0:31:24.01,0:31:31.39,Sub,,0,0,0,,Do do you believe any any the world need any international standard on AI safety?
+Dialogue: 0,0:31:31.44,0:31:34.91,Sub,,0,0,0,,Well, first the first thing we have to do is advance the technology so that it's safe.
+Dialogue: 0,0:31:34.96,0:31:41.88,Sub,,0,0,0,,You know, just as just as cars today are much safer because the technology is better than cars were 100 years ago,
+Dialogue: 0,0:31:41.93,0:31:46.73,Sub,,0,0,0,,we need to make the cars uh the the technology as advanced as possible.
+Dialogue: 0,0:31:46.78,0:31:47.93,Sub,,0,0,0,,In the last couple years,
+Dialogue: 0,0:31:47.98,0:31:58.04,Sub,,0,0,0,,the advancement in the technology has made uh AI hallucinate a lot less be grounded on uh actual truth and be able to solve practical problems.
+Dialogue: 0,0:31:58.09,0:32:00.04,Sub,,0,0,0,,We need to keep moving in that direction.
+Dialogue: 0,0:32:00.09,0:32:04.65,Sub,,0,0,0,,Meanwhile, every single company has to take it upon themselves to develop the technology safely.
+Dialogue: 0,0:32:04.70,0:32:10.00,Sub,,0,0,0,,And these are excellent companies and with excellent technology capabilities and we just have to keep keep
+Dialogue: 0,0:32:10.05,0:32:16.44,Sub,,0,0,0,,reminding everybody that as we raise quickly to make the technology better and more useful and safer,
+Dialogue: 0,0:32:16.49,0:32:17.95,Sub,,0,0,0,,we also build it safer.
+Dialogue: 0,0:32:18.00,0:32:21.23,Sub,,0,0,0,,Would you like to see the other countries here follow the US?
+Dialogue: 0,0:32:21.28,0:32:21.71,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:32:21.76,0:32:22.13,Sub,,0,0,0,,Thank you.
+Dialogue: 0,0:32:22.16,0:32:25.56,Sub,,0,0,0,,Thank you guys.
+Dialogue: 0,0:32:25.61,0:32:35.51,Sub,,0,0,0,,Thank you everyone.
+Dialogue: 0,0:32:35.56,0:32:44.87,Sub,,0,0,0,,Please take
+Dialogue: 0,0:32:44.92,0:32:55.79,Sub,,0,0,0,,a hold. girl.
+Dialogue: 0,0:32:55.84,0:33:04.03,Sub,,0,0,0,,I like
+Dialogue: 0,0:33:04.08,0:33:15.79,Sub,,0,0,0,,this one.
+Dialogue: 0,0:33:15.84,0:33:19.65,Sub,,0,0,0,,Oh,
+Dialogue: 0,0:33:19.70,0:33:27.37,Sub,,0,0,0,,here we
+Dialogue: 0,0:33:27.42,0:33:31.23,Sub,,0,0,0,,go.
+Dialogue: 0,0:33:31.28,0:33:41.31,Sub,,0,0,0,,here.
+Dialogue: 0,0:33:41.36,0:33:49.34,Sub,,0,0,0,,That
+Dialogue: 0,0:33:49.39,0:33:55.76,Sub,,0,0,0,,was
+Dialogue: 0,0:33:55.81,0:34:05.39,Sub,,0,0,0,,nice.
+Dialogue: 0,0:34:05.44,0:34:08.09,Sub,,0,0,0,,Press test.
+Dialogue: 0,0:34:08.14,0:34:10.11,Sub,,0,0,0,,1 2 3 4.
+Dialogue: 0,0:34:10.16,0:34:13.26,Sub,,0,0,0,,Press test.
+Dialogue: 0,0:34:13.31,0:34:15.63,Sub,,0,0,0,,1 2 3 4.
+Dialogue: 0,0:34:15.68,0:34:17.25,Sub,,0,0,0,,Press test.
+Dialogue: 0,0:34:17.30,0:34:20.35,Sub,,0,0,0,,One, two, three, four.
+Dialogue: 0,0:34:20.40,0:34:29.28,Sub,,0,0,0,,Excuse
+Dialogue: 0,0:34:29.33,0:34:34.38,Sub,,0,0,0,,me.
+Dialogue: 0,0:34:34.43,0:34:42.03,Sub,,0,0,0,,Press
+Dialogue: 0,0:34:42.08,0:34:49.68,Sub,,0,0,0,,test.
+Dialogue: 0,0:34:49.73,0:34:56.05,Sub,,0,0,0,,One,
+Dialogue: 0,0:34:56.10,0:35:02.43,Sub,,0,0,0,,two,
+Dialogue: 0,0:35:02.48,0:35:32.87,Sub,,0,0,0,,Oh,
+Dialogue: 0,0:35:32.92,0:36:03.30,Sub,,0,0,0,,no.
+Dialogue: 0,0:36:03.35,0:37:11.79,Sub,,0,0,0,,Anything
+Dialogue: 0,0:37:11.84,0:37:34.61,Sub,,0,0,0,,in
+Dialogue: 0,0:37:34.66,0:38:20.27,Sub,,0,0,0,,here?
+Dialogue: 0,0:38:20.32,0:38:22.40,Sub,,0,0,0,,Ladies and gentlemen, welcome.
+Dialogue: 0,0:38:22.45,0:38:24.48,Sub,,0,0,0,,The program will begin in just a few moments.
+Dialogue: 0,0:38:24.53,0:38:25.55,Sub,,0,0,0,,Thanks for your patience.
+Dialogue: 0,0:38:25.60,0:38:26.49,Sub,,0,0,0,,The program will begin
+Dialogue: 0,0:38:26.54,0:38:26.84,Sub,,0,0,0,,in just
+Dialogue: 0,0:38:26.87,0:38:27.17,Sub,,0,0,0,,a
+Dialogue: 0,0:38:26.95,0:38:27.25,Sub,,0,0,0,,few
+Dialogue: 0,0:38:27.12,0:42:25.21,Sub,,0,0,0,,moments.
+Dialogue: 0,0:42:25.26,0:45:03.97,Sub,,0,0,0,,Thank
+Dialogue: 0,0:45:04.02,0:47:16.27,Sub,,0,0,0,,you.
+Dialogue: 0,0:47:16.32,0:47:17.31,Sub,,0,0,0,,Go see.
+Dialogue: 0,0:47:17.36,0:47:19.79,Sub,,0,0,0,,How have you been?
+Dialogue: 0,0:47:19.84,0:47:22.91,Sub,,0,0,0,,How are you doing?
+Dialogue: 0,0:47:22.96,0:47:25.39,Sub,,0,0,0,,Great.
+Dialogue: 0,0:47:25.44,0:47:26.85,Sub,,0,0,0,,Well, nice to see you all again.
+Dialogue: 0,0:47:26.90,0:47:29.50,Sub,,0,0,0,,It's been moments.
+Dialogue: 0,0:47:29.55,0:47:33.34,Sub,,0,0,0,,Um, I'm really uh excited for our conversation.
+Dialogue: 0,0:47:33.39,0:47:38.95,Sub,,0,0,0,,So, I'd like to introduce you all to Tom Brown, one of the founders of Anthropic.
+Dialogue: 0,0:47:39.00,0:47:42.13,Sub,,0,0,0,,So, Tom, thank thanks for coming and joining us.
+Dialogue: 0,0:47:42.18,0:47:52.60,Sub,,0,0,0,,Would you mind giving um my my uh my partner ministers uh sort of a background of yourself and Anthropic because I don't think they know you so well.
+Dialogue: 0,0:47:52.65,0:47:56.59,Sub,,0,0,0,,Anthropic of course is famous, but a little a little story would always be helpful.
+Dialogue: 0,0:47:56.64,0:47:57.55,Sub,,0,0,0,,Yeah, I'd love to.
+Dialogue: 0,0:47:57.60,0:48:02.02,Sub,,0,0,0,,Um, and yeah, just first off, thank you so much for uh for inviting me to this.
+Dialogue: 0,0:48:02.07,0:48:04.67,Sub,,0,0,0,,It's an honor to be here and to get to speak with you all.
+Dialogue: 0,0:48:04.72,0:48:09.49,Sub,,0,0,0,,Um, maybe I so I'll talk through a little bit about myself and my background.
+Dialogue: 0,0:48:09.54,0:48:18.66,Sub,,0,0,0,,Um, maybe even before that, I think like probably three things that I'd love all of you guys to take away from uh this conversation.
+Dialogue: 0,0:48:18.71,0:48:24.75,Sub,,0,0,0,,One is that uh AI capabilities have been increasing very rapidly.
+Dialogue: 0,0:48:24.80,0:48:31.98,Sub,,0,0,0,,Obviously um I expect them to continue to be increasing really rapidly and consistently.
+Dialogue: 0,0:48:32.03,0:48:39.23,Sub,,0,0,0,,Um two uh as a result of that we are seeing this demand that's not just fast but also like exponential.
+Dialogue: 0,0:48:39.28,0:48:42.75,Sub,,0,0,0,,So like increasing in multiples every year.
+Dialogue: 0,0:48:42.80,0:48:49.16,Sub,,0,0,0,,Um, and then I think three, as a result of that, uh, we have this incredible industrial buildout,
+Dialogue: 0,0:48:49.21,0:48:55.34,Sub,,0,0,0,,the likes of which we've never seen in the history of humanity, even more than the the railroads of the 1800s.
+Dialogue: 0,0:48:55.39,0:49:02.38,Sub,,0,0,0,,And so that's a place where um, any country that wants to be involved has a chance to to be involved.
+Dialogue: 0,0:49:02.43,0:49:08.78,Sub,,0,0,0,,Um, so I guess my my background uh, is um, I was an engineer originally.
+Dialogue: 0,0:49:08.83,0:49:12.83,Sub,,0,0,0,,Uh I'm now the um chief compute officer at Anthropic.
+Dialogue: 0,0:49:12.88,0:49:24.67,Sub,,0,0,0,,I kind of got into this back in um 2014 where uh a few of my friends came to me and they were like hey I I had done startups for many years.
+Dialogue: 0,0:49:24.72,0:49:36.24,Sub,,0,0,0,,They came to me and they were like Tom uh it seems like we might end up getting uh human level intelligence from AI within our lifetimes.
+Dialogue: 0,0:49:36.29,0:49:43.87,Sub,,0,0,0,,So, in the next 50 years, um, and I was like, "Wow, that like seems kind of crazy, but if it does happen,
+Dialogue: 0,0:49:43.92,0:49:48.50,Sub,,0,0,0,,like that would be the biggest most important thing that ever happens to humanity."
+Dialogue: 0,0:49:48.55,0:49:51.03,Sub,,0,0,0,,Like the things that makes us special is our minds.
+Dialogue: 0,0:49:51.08,0:49:52.11,Sub,,0,0,0,,It's not our body.
+Dialogue: 0,0:49:52.16,0:50:00.73,Sub,,0,0,0,,The industrial revolution transformed all of society, but really it was like like the second most important thing about humans is our bodies.
+Dialogue: 0,0:50:00.78,0:50:03.78,Sub,,0,0,0,,The main thing is our is our minds.
+Dialogue: 0,0:50:03.83,0:50:12.98,Sub,,0,0,0,,Um, and so that that got me to think like, okay, maybe I'll switch from engineering to try to help out learning about AI.
+Dialogue: 0,0:50:13.03,0:50:18.11,Sub,,0,0,0,,Um, and so, uh, I did I started doing kind of self-study on that.
+Dialogue: 0,0:50:18.16,0:50:22.45,Sub,,0,0,0,,And then about a year after that, um, uh, OpenAI was founded.
+Dialogue: 0,0:50:22.50,0:50:25.20,Sub,,0,0,0,,Um, and so I knew some of the folks from that.
+Dialogue: 0,0:50:25.25,0:50:28.15,Sub,,0,0,0,,I'd long been a fan of, uh, of Elon Musk.
+Dialogue: 0,0:50:28.20,0:50:31.70,Sub,,0,0,0,,And so I went to see if I could help out in some way.
+Dialogue: 0,0:50:31.75,0:50:39.49,Sub,,0,0,0,,And so I joined I joined them as like one of the first 20 employees basically to do engineering work.
+Dialogue: 0,0:50:39.54,0:50:43.70,Sub,,0,0,0,,Um and then uh uh kind of learned more about that.
+Dialogue: 0,0:50:43.75,0:50:47.41,Sub,,0,0,0,,And then I think the the key thing for me where I was like, "Oh, wow.
+Dialogue: 0,0:50:47.46,0:50:56.97,Sub,,0,0,0,,actually is going to be a big deal that's not just in 50 years but faster was um the scaling laws paper um which was
+Dialogue: 0,0:50:57.02,0:51:08.08,Sub,,0,0,0,,in 2019 and that was basically looking at um within AI people had seen from like 20 uh for for a decade before 2019 that if
+Dialogue: 0,0:51:08.13,0:51:15.63,Sub,,0,0,0,,you like the models were getting bigger and bigger people were using more and more compute and the quality of the models was improving over time
+Dialogue: 0,0:51:15.68,0:51:25.48,Sub,,0,0,0,,um but they didn't have a good understanding of how like what the what the mechanism was for taking the bigger models and making them smarter.
+Dialogue: 0,0:51:25.53,0:51:35.20,Sub,,0,0,0,,And so this was a thing where some of my collaborators um uh now anthropic co-founders um went and tried to do the same
+Dialogue: 0,0:51:35.25,0:51:41.85,Sub,,0,0,0,,kind of scientific research that you would do if you were like in the early days of a combustion engine and you were like
+Dialogue: 0,0:51:41.90,0:51:50.27,Sub,,0,0,0,,okay like we see combustion engines bigger engines provide more power but uh how much power do you get from an engine and if
+Dialogue: 0,0:51:50.32,0:51:59.07,Sub,,0,0,0,,you like scale up the size of the engine or change the ratio of how much fuel versus oxygen you put in the engine,
+Dialogue: 0,0:51:59.12,0:52:00.80,Sub,,0,0,0,,how much power do you get?
+Dialogue: 0,0:52:00.85,0:52:07.26,Sub,,0,0,0,,And so those studies that they did then gave a recipe of what exact
+Dialogue: 0,0:52:07.31,0:52:15.35,Sub,,0,0,0,,combinations of compute data and model size resulted in a given level of intelligence.
+Dialogue: 0,0:52:15.40,0:52:20.74,Sub,,0,0,0,,And so um those types of algorithms and those types of recipes have been improving over time.
+Dialogue: 0,0:52:20.79,0:52:25.73,Sub,,0,0,0,,And then also just the amount of compute that we've been putting into the models has been scaling up.
+Dialogue: 0,0:52:25.78,0:52:30.63,Sub,,0,0,0,,And so that's been kind of the the underlying thing that got me to be like, okay, wow,
+Dialogue: 0,0:52:30.68,0:52:39.87,Sub,,0,0,0,,we we we can look and see try it out over uh eight orders of magnitude like many many orders of magnitude um and see this consistent trend.
+Dialogue: 0,0:52:39.92,0:52:47.02,Sub,,0,0,0,,And now we've seen it over even more like um over yeah over over 15 orders of magnitude.
+Dialogue: 0,0:52:47.07,0:52:53.35,Sub,,0,0,0,,And so uh um that gave us kind of the confidence that this stuff would continue to
+Dialogue: 0,0:52:53.40,0:52:58.18,Sub,,0,0,0,,advance um at the rapid rate that it that it has been which ended up leading to
+Dialogue: 0,0:52:58.23,0:53:02.99,Sub,,0,0,0,,the to the founding of Anthropic because we saw that this was going to be something that
+Dialogue: 0,0:53:03.04,0:53:10.45,Sub,,0,0,0,,was happening not in 50 years but in on the order of uh of under 10 years.
+Dialogue: 0,0:53:10.50,0:53:14.75,Sub,,0,0,0,,Um so that that kind of was my origin story of getting into this entire thing.
+Dialogue: 0,0:53:14.80,0:53:24.49,Sub,,0,0,0,,Now, Anthropic is focused on making sure that as we go through this very rapid um uh kind of a like AI revolution,
+Dialogue: 0,0:53:24.54,0:53:26.83,Sub,,0,0,0,,things go well for everyone.
+Dialogue: 0,0:53:26.88,0:53:31.59,Sub,,0,0,0,,And so, I've been really grateful to get to work with uh with you, Secretary,
+Dialogue: 0,0:53:31.64,0:53:37.87,Sub,,0,0,0,,and with um with the rest of government to make sure that this stuff is benefiting everybody.
+Dialogue: 0,0:53:37.92,0:53:46.23,Sub,,0,0,0,,And now is a chance also, I think, for all of you guys to to be included in this uh incredible once in a once in a generation,
+Dialogue: 0,0:53:46.28,0:53:53.79,Sub,,0,0,0,,perhaps probably once in the entire history of humanity um uh technology change.
+Dialogue: 0,0:53:53.84,0:53:59.78,Sub,,0,0,0,,So, Anthropic has managed to stay at the frontier, right?
+Dialogue: 0,0:53:59.83,0:54:06.63,Sub,,0,0,0,,And that uh you know, we we toss around the word frontier, but there's no real frontier.
+Dialogue: 0,0:54:06.68,0:54:10.30,Sub,,0,0,0,,It's just that which you're creating that's new tomorrow.
+Dialogue: 0,0:54:10.35,0:54:15.95,Sub,,0,0,0,,How how have you managed uh to stay, you know,
+Dialogue: 0,0:54:16.00,0:54:22.51,Sub,,0,0,0,,focused and and how are you selecting where to go because you're doing things different than the other companies are doing.
+Dialogue: 0,0:54:22.56,0:54:22.86,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:54:22.88,0:54:25.07,Sub,,0,0,0,,So, how what's the thinking behind it?
+Dialogue: 0,0:54:25.12,0:54:30.91,Sub,,0,0,0,,And so, that'll give us a little sense of where you're going next or not going next.
+Dialogue: 0,0:54:30.96,0:54:33.04,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:54:33.09,0:54:35.09,Sub,,0,0,0,,Um that's a great question.
+Dialogue: 0,0:54:35.14,0:54:45.55,Sub,,0,0,0,,So I think from the beginning we've wanted to make um we've wanted to make the AIS great at scientific innovation and entrepreneurship.
+Dialogue: 0,0:54:45.60,0:54:55.86,Sub,,0,0,0,,Um, and so from the very get-go, uh, initially the the the first thing that took off with with the models, um, was, uh, was chat GPT.
+Dialogue: 0,0:54:55.91,0:54:59.21,Sub,,0,0,0,,Um, basically kind of a like Google, a better Google.
+Dialogue: 0,0:54:59.26,0:55:06.76,Sub,,0,0,0,,Um, and so you could ask them questions and you could they would go and answer a question much better than what you could do before.
+Dialogue: 0,0:55:06.81,0:55:14.21,Sub,,0,0,0,,Um I think from the beginning we were thinking about like okay the main underlying source of all of the value like this this amazing
+Dialogue: 0,0:55:14.26,0:55:25.53,Sub,,0,0,0,,room all of the prosperity that we have is uh the hard work of of our um uh of of people doing like intellectual labor.
+Dialogue: 0,0:55:25.58,0:55:29.58,Sub,,0,0,0,,And so we wanted to make sure that the models could help with that.
+Dialogue: 0,0:55:29.63,0:55:35.31,Sub,,0,0,0,,Um and so that ended up resulting in our focus on coding where that was a place where um
+Dialogue: 0,0:55:35.36,0:55:40.95,Sub,,0,0,0,,if you imagine if I imagined just like a very smart uh friend who was uh like wanted to
+Dialogue: 0,0:55:41.00,0:55:45.87,Sub,,0,0,0,,do work but they were trapped in a computer like what are the things that they could do to
+Dialogue: 0,0:55:45.92,0:55:52.91,Sub,,0,0,0,,help out and like add a huge amount of of uh of their of value to the world there.
+Dialogue: 0,0:55:52.96,0:55:56.90,Sub,,0,0,0,,And so a programmer is like a very clear way that you could do that.
+Dialogue: 0,0:55:56.95,0:56:03.51,Sub,,0,0,0,,you don't need to be running like physical experiments like a a biologist would or a physicist.
+Dialogue: 0,0:56:03.56,0:56:06.77,Sub,,0,0,0,,Um you can just go ahead and do it in the computer.
+Dialogue: 0,0:56:06.82,0:56:10.96,Sub,,0,0,0,,Um and so that that was kind of why we initially focused on that.
+Dialogue: 0,0:56:11.01,0:56:20.67,Sub,,0,0,0,,It also has the benefit now where our models are able to do um to help out with the research that we do where um
+Dialogue: 0,0:56:20.72,0:56:27.02,Sub,,0,0,0,,the vast majority of all of the work that uh anthropic does itself
+Dialogue: 0,0:56:27.07,0:56:32.79,Sub,,0,0,0,,is software engineering um internal software engineering solving bugs in the model training.
+Dialogue: 0,0:56:32.84,0:56:43.55,Sub,,0,0,0,,Um and so that that focus then was both useful for um like promoting things externally and also for helping us out internally.
+Dialogue: 0,0:56:43.60,0:56:55.07,Sub,,0,0,0,,So my ministerial partners my my objective for today is uh growth global growth uh that they can
+Dialogue: 0,0:56:55.12,0:57:03.36,Sub,,0,0,0,,go home and and have ideas that will help their societies their citizens grow and be more successful.
+Dialogue: 0,0:57:03.41,0:57:11.07,Sub,,0,0,0,,So in your experience trying to figure out how to have AI around the world what what's the infrastructure you think they need?
+Dialogue: 0,0:57:11.12,0:57:16.87,Sub,,0,0,0,,what are the moves um that our you know G20 ministerial partners need to make
+Dialogue: 0,0:57:16.92,0:57:23.71,Sub,,0,0,0,,so that they can participate with you in the in the coming benefits from AI.
+Dialogue: 0,0:57:23.76,0:57:25.29,Sub,,0,0,0,,Oh, that's that's a great question.
+Dialogue: 0,0:57:25.34,0:57:36.61,Sub,,0,0,0,,So, um I think I I I think that the biggest thing by far is uh building more making it possible to build more um data centers,
+Dialogue: 0,0:57:36.66,0:57:38.67,Sub,,0,0,0,,more compute in your countries.
+Dialogue: 0,0:57:38.72,0:57:44.27,Sub,,0,0,0,,It's I think it's it's it's very clearly the bottleneck for all of our progress.
+Dialogue: 0,0:57:44.32,0:57:52.35,Sub,,0,0,0,,We're in a huge shortage of uh the power and labor needed to support um the demand for AI.
+Dialogue: 0,0:57:52.40,0:57:58.92,Sub,,0,0,0,,Um I think I think I I I really loved President Trump's uh post from from earlier this week where I think
+Dialogue: 0,0:57:58.97,0:58:05.56,Sub,,0,0,0,,it's um it's very it he was pointing out that um uh the data centers are just an enormous source of prosperity.
+Dialogue: 0,0:58:05.61,0:58:09.84,Sub,,0,0,0,,They produce a ton of jobs. they um uh they reduce taxes.
+Dialogue: 0,0:58:09.89,0:58:15.27,Sub,,0,0,0,,Now, the way that we design them, we actually bring on more power to the grid.
+Dialogue: 0,0:58:15.32,0:58:15.63,Sub,,0,0,0,,So,
+Dialogue: 0,0:58:15.66,0:58:24.31,Sub,,0,0,0,,um the like rateayer um pledge uh is something that we've signed up to as have uh the major other major labs and that makes
+Dialogue: 0,0:58:24.36,0:58:31.81,Sub,,0,0,0,,it so that we bring on power behind the grid um behind behind the meter and we can give it back to the grid as well.
+Dialogue: 0,0:58:31.86,0:58:43.15,Sub,,0,0,0,,So I think that's a place where um uh uh like every country can quickly can quickly be be helping out and having a big part to play here.
+Dialogue: 0,0:58:43.20,0:58:50.23,Sub,,0,0,0,,So you know what I what I try to have people think about is the red carpet, right?
+Dialogue: 0,0:58:50.28,0:59:02.11,Sub,,0,0,0,,that if your country rolls out the red carpet to great investment, they're more likely to have that investment than if it's a fight to get in.
+Dialogue: 0,0:59:02.16,0:59:03.87,Sub,,0,0,0,,Yes, sounds right.
+Dialogue: 0,0:59:03.92,0:59:11.72,Sub,,0,0,0,,So, um you know, so in in our conversation last night, uh Tom was suggesting that,
+Dialogue: 0,0:59:11.77,0:59:15.97,Sub,,0,0,0,,you know, I'd really like to build in countries around the world.
+Dialogue: 0,0:59:16.02,0:59:17.17,Sub,,0,0,0,,Can you help me?
+Dialogue: 0,0:59:17.22,0:59:21.31,Sub,,0,0,0,,So I said, 'Well, actually, you're going to have the opportunity to talk directly yourself.
+Dialogue: 0,0:59:21.36,0:59:25.24,Sub,,0,0,0,,So what what do you you need data centers and infrastructure?
+Dialogue: 0,0:59:25.29,0:59:28.35,Sub,,0,0,0,,Is that basically um and you should tell them what you need.
+Dialogue: 0,0:59:28.40,0:59:28.70,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:59:28.68,0:59:28.98,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:59:28.95,0:59:31.46,Sub,,0,0,0,,No, that that that's definitely right.
+Dialogue: 0,0:59:31.51,0:59:37.54,Sub,,0,0,0,,So um uh I think the the the biggest things that we need in order to to build
+Dialogue: 0,0:59:37.59,0:59:44.42,Sub,,0,0,0,,data centers are um we need permitting um for the land to be able to to build there.
+Dialogue: 0,0:59:44.47,0:59:50.99,Sub,,0,0,0,,And then we need to figure out how to get uh enough labor to do the construction um there as well.
+Dialogue: 0,0:59:51.04,1:00:01.23,Sub,,0,0,0,,Um and uh then the obvious benefits to the uh to the country too is like um like now there it's a huge investment in the country.
+Dialogue: 0,1:00:01.28,1:00:02.57,Sub,,0,0,0,,It produces jobs.
+Dialogue: 0,1:00:02.62,1:00:07.45,Sub,,0,0,0,,Um it can be like it can be taxed which provides more revenue to the country.
+Dialogue: 0,1:00:07.50,1:00:12.32,Sub,,0,0,0,,Um and so yeah like I I think that uh there there's many things that can block
+Dialogue: 0,1:00:12.37,1:00:15.82,Sub,,0,0,0,,data centers from being built so that we we could get a very long list of it.
+Dialogue: 0,1:00:15.87,1:00:19.95,Sub,,0,0,0,,Um but once they are built they they provide huge amounts of value.
+Dialogue: 0,1:00:20.00,1:00:21.14,Sub,,0,0,0,,All right.
+Dialogue: 0,1:00:21.19,1:00:26.71,Sub,,0,0,0,,So uh our our partners build data centers.
+Dialogue: 0,1:00:26.76,1:00:31.07,Sub,,0,0,0,,They um they embrace AI.
+Dialogue: 0,1:00:31.12,1:00:34.30,Sub,,0,0,0,,What are the what's the deliveries?
+Dialogue: 0,1:00:34.35,1:00:36.06,Sub,,0,0,0,,You know what's the outcome?
+Dialogue: 0,1:00:36.11,1:00:40.87,Sub,,0,0,0,,how how can AI make their countries better and make the world a better place?
+Dialogue: 0,1:00:40.92,1:00:45.31,Sub,,0,0,0,,Can you give us sort of your vision from anthropics perspective?
+Dialogue: 0,1:00:45.36,1:00:52.19,Sub,,0,0,0,,What what do you bring that's different and what can you um help them achieve?
+Dialogue: 0,1:00:52.24,1:00:52.54,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:00:52.57,1:00:56.54,Sub,,0,0,0,,Um so I think there's probably two there's probably two main two main areas.
+Dialogue: 0,1:00:56.59,1:01:04.50,Sub,,0,0,0,,One is one is just the um like re-industrialization that's caused by building huge amounts of of valuable physical infrastructure.
+Dialogue: 0,1:01:04.55,1:01:06.31,Sub,,0,0,0,,Um and so yeah, we we talked about that.
+Dialogue: 0,1:01:06.36,1:01:08.54,Sub,,0,0,0,,I think that's that's pretty clear.
+Dialogue: 0,1:01:08.59,1:01:14.19,Sub,,0,0,0,,Um and then a separate thing there is that uh the reason that people want
+Dialogue: 0,1:01:14.24,1:01:21.34,Sub,,0,0,0,,to build the like build more compute is because the models end up then adding value.
+Dialogue: 0,1:01:21.39,1:01:26.57,Sub,,0,0,0,,Um and so uh the places that that's happened so far has been um
+Dialogue: 0,1:01:26.62,1:01:33.82,Sub,,0,0,0,,mostly by uh like um scaling up the effective labor force or intellectual labor.
+Dialogue: 0,1:01:33.87,1:01:43.14,Sub,,0,0,0,,um which is yeah like the the key the key component of the overall economy is how many smart people do we have doing good work.
+Dialogue: 0,1:01:43.19,1:01:49.88,Sub,,0,0,0,,Um the AIs now are like not quite people but they're uh doing intellectual labor also and so
+Dialogue: 0,1:01:49.93,1:01:57.91,Sub,,0,0,0,,they they feed into that same um like economic calculus that that improves that like raises all boats.
+Dialogue: 0,1:01:57.96,1:02:08.93,Sub,,0,0,0,,Um and then I think like very concretely uh uh some of the most important problems that have plagued humanity like um uh like disease,
+Dialogue: 0,1:02:08.98,1:02:18.49,Sub,,0,0,0,,cancer, etc. are all blocked by not having enough smart dedicated people who can be constantly working to solve those problems.
+Dialogue: 0,1:02:18.54,1:02:26.45,Sub,,0,0,0,,Um, like I think I think that there's no doubt that if we had uh like a million times more uh oncology researchers,
+Dialogue: 0,1:02:26.50,1:02:35.02,Sub,,0,0,0,,we could make progress that's not just like uh like 10% faster, it would be like multiples faster.
+Dialogue: 0,1:02:35.07,1:02:45.45,Sub,,0,0,0,,Um, and so that that I think is the is the the the thing that will come from this very large scale up of more and more smart models.
+Dialogue: 0,1:02:45.50,1:02:48.11,Sub,,0,0,0,,Um and and we see that now with um with math.
+Dialogue: 0,1:02:48.16,1:02:54.37,Sub,,0,0,0,,So uh historically the models were doing more wrote tasks like you would ask them to do um like uh
+Dialogue: 0,1:02:54.42,1:03:00.66,Sub,,0,0,0,,simple things that like maybe like a parallegal work or something like that or like a basic software engineering task.
+Dialogue: 0,1:03:00.71,1:03:04.03,Sub,,0,0,0,,Now they're doing much more complex software engineering tasks.
+Dialogue: 0,1:03:04.08,1:03:10.02,Sub,,0,0,0,,Also with math they traditionally could do okay with with math and then they got
+Dialogue: 0,1:03:10.07,1:03:15.69,Sub,,0,0,0,,to the point where they would be like um like an undergraduate level mathematician graduate level.
+Dialogue: 0,1:03:15.74,1:03:24.57,Sub,,0,0,0,,Now over the last three months they've gotten to the point where they're like a a once in a generation genius on math like any of the
+Dialogue: 0,1:03:24.62,1:03:30.09,Sub,,0,0,0,,frontier models now are I I think they're like a top 100 current mathematician
+Dialogue: 0,1:03:30.14,1:03:35.83,Sub,,0,0,0,,in many of the sub fields of mathematics. um which is just astonishingly fast.
+Dialogue: 0,1:03:35.88,1:03:42.77,Sub,,0,0,0,,Um and so many aspects of science are kind of a combination of engineering plus like mathematics.
+Dialogue: 0,1:03:42.82,1:03:52.23,Sub,,0,0,0,,And so my expectation is that over the next 12 months we'll see kind of that same thing where like now they're like okay scientists or biologists.
+Dialogue: 0,1:03:52.28,1:03:56.89,Sub,,0,0,0,,But um I my prediction is that yeah within the next 12 months we'll get the same
+Dialogue: 0,1:03:56.94,1:04:04.31,Sub,,0,0,0,,thing where like they could be a a once in a generation um scientists for key scientific fields.
+Dialogue: 0,1:04:04.36,1:04:14.67,Sub,,0,0,0,,So it it's your view then that using anthropics model uh you can really be aspirational
+Dialogue: 0,1:04:14.72,1:04:22.86,Sub,,0,0,0,,right meaning that what what are the what are the problems facing your economy your people
+Dialogue: 0,1:04:22.91,1:04:29.47,Sub,,0,0,0,,and use the models to try to really deeply examine what could be solutions to those
+Dialogue: 0,1:04:29.52,1:04:37.49,Sub,,0,0,0,,models and use the the sort of bottled logic of anthropic to uh to achieve that.
+Dialogue: 0,1:04:37.54,1:04:45.39,Sub,,0,0,0,,So how how would one think about that from from your perspective because you you know what's capable in anthropic and you know where it's going.
+Dialogue: 0,1:04:45.44,1:04:49.55,Sub,,0,0,0,,So maybe give us some sense on how to solve those kind of problems.
+Dialogue: 0,1:04:49.60,1:04:49.90,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:04:49.86,1:04:50.16,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:04:50.12,1:04:52.03,Sub,,0,0,0,,And I think that's exactly right.
+Dialogue: 0,1:04:52.08,1:04:59.21,Sub,,0,0,0,,I think that um uh that um often people are not ambitious enough in what they ask the models to do.
+Dialogue: 0,1:04:59.26,1:05:04.67,Sub,,0,0,0,,And so I think that uh um like because the way that the model started out was like you
+Dialogue: 0,1:05:04.72,1:05:10.49,Sub,,0,0,0,,would ask them a question uh that like like you would ask Google and it wouldn't have that much context.
+Dialogue: 0,1:05:10.54,1:05:15.05,Sub,,0,0,0,,It would give you like a a a page long response or a paragraph response.
+Dialogue: 0,1:05:15.10,1:05:23.13,Sub,,0,0,0,,People often will take one of the new models from the last like 3 months and do that same thing and they're like ah it's like slightly better.
+Dialogue: 0,1:05:23.18,1:05:24.91,Sub,,0,0,0,,It's like cool I guess.
+Dialogue: 0,1:05:24.96,1:05:25.33,Sub,,0,0,0,,Um,
+Dialogue: 0,1:05:25.36,1:05:32.30,Sub,,0,0,0,,but the way that uh I see the the best people who get the most value out of the models using them
+Dialogue: 0,1:05:32.35,1:05:40.09,Sub,,0,0,0,,now is instead they treat them like they would treat a um a collaborator uh like a a co-orker in their organization.
+Dialogue: 0,1:05:40.14,1:05:46.02,Sub,,0,0,0,,And so they do the same thing that you would need to do if you were like, I've hired the smartest person I know.
+Dialogue: 0,1:05:46.07,1:05:51.12,Sub,,0,0,0,,I want them to be as productive as possible within my organization.
+Dialogue: 0,1:05:51.17,1:05:56.25,Sub,,0,0,0,,And so you go and you make sure that they have access to all of the documents that they need.
+Dialogue: 0,1:05:56.30,1:05:59.52,Sub,,0,0,0,,Um you make sure that they have access to uh the tools.
+Dialogue: 0,1:05:59.57,1:06:01.36,Sub,,0,0,0,,If they're a software engineer, you're like,
+Dialogue: 0,1:06:01.41,1:06:05.47,Sub,,0,0,0,,I'm going to make sure that you have um all of the documentation for the code
+Dialogue: 0,1:06:05.52,1:06:09.48,Sub,,0,0,0,,that you have access to the actual servers so that you can go and run things.
+Dialogue: 0,1:06:09.53,1:06:15.28,Sub,,0,0,0,,If they're a scientist, you make sure that they have access to like the machines that can actually move stuff around.
+Dialogue: 0,1:06:15.33,1:06:21.91,Sub,,0,0,0,,with a model like that would now need a an API to move the machines, but that's a thing that you can get for them.
+Dialogue: 0,1:06:21.96,1:06:25.48,Sub,,0,0,0,,Now, um you you also need to make sure so like in in government,
+Dialogue: 0,1:06:25.53,1:06:32.74,Sub,,0,0,0,,you would make need to make sure that they have the right permissions to access the right information that they would need to go and do the work.
+Dialogue: 0,1:06:32.79,1:06:42.29,Sub,,0,0,0,,Um and so I think once you do that, then you end up with a model that has all the things that a great co-orker would need in order to to do work.
+Dialogue: 0,1:06:42.34,1:06:52.48,Sub,,0,0,0,,And we see that that's now actually how the majority of the um like intellectual labor within anthropic is done is by these
+Dialogue: 0,1:06:52.53,1:07:00.03,Sub,,0,0,0,,models that have the same permissions that a human co-orker would have um and they can go and and do that work autonomously.
+Dialogue: 0,1:07:00.08,1:07:09.90,Sub,,0,0,0,,So if I were to take that and and understand that you know the design of your models is logic based
+Dialogue: 0,1:07:09.95,1:07:20.43,Sub,,0,0,0,,right does that mean the speed of innovation is going to relentlessly accelerate as the models get better at being the models?
+Dialogue: 0,1:07:20.48,1:07:21.06,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:07:21.11,1:07:21.69,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:07:21.74,1:07:32.92,Sub,,0,0,0,,I I definitely think that well so it's it's my my guess is that the capabilities will
+Dialogue: 0,1:07:32.97,1:07:40.75,Sub,,0,0,0,,continue to be increasing at roughly the same rate from like an intelligence of the model perspective.
+Dialogue: 0,1:07:40.80,1:07:41.26,Sub,,0,0,0,,Um,
+Dialogue: 0,1:07:41.31,1:07:48.69,Sub,,0,0,0,,and so I I think like um like the um like the hops that we're seeing in terms of like uh
+Dialogue: 0,1:07:48.74,1:07:55.53,Sub,,0,0,0,,like how how how smart is the model like h how many new types of tasks can they do each couple months.
+Dialogue: 0,1:07:55.58,1:07:59.64,Sub,,0,0,0,,My guess is that that'll kind of continue happening at the same rate.
+Dialogue: 0,1:07:59.69,1:08:09.73,Sub,,0,0,0,,Um and then I think the um economic impacts of that I think will continue on um an an exponential rate.
+Dialogue: 0,1:08:09.78,1:08:17.87,Sub,,0,0,0,,Um, and so we we we do a lot of we do a lot of tracking of that where we'll we'll look at what the doubling time is of different types of things.
+Dialogue: 0,1:08:17.92,1:08:25.89,Sub,,0,0,0,,And so like um the doubling time of the overall um economy of like how much how much value people are
+Dialogue: 0,1:08:25.94,1:08:35.81,Sub,,0,0,0,,getting from all of the different frontier AI labs put together um is uh doubling um it's like 4x per year.
+Dialogue: 0,1:08:35.86,1:08:38.30,Sub,,0,0,0,,Um so it doubles every six months.
+Dialogue: 0,1:08:38.35,1:08:40.09,Sub,,0,0,0,,Um which is incredibly fast.
+Dialogue: 0,1:08:40.14,1:08:44.82,Sub,,0,0,0,,Like there there's never been an industry of this size that's that's been growing at that speed.
+Dialogue: 0,1:08:44.87,1:08:45.17,Sub,,0,0,0,,Um,
+Dialogue: 0,1:08:45.17,1:08:56.01,Sub,,0,0,0,,another one that I think is interesting is um if you look at uh how much like if you look at the smartest model that we had a year ago and then
+Dialogue: 0,1:08:56.06,1:09:00.92,Sub,,0,0,0,,you are you you say okay how much does it cost for a person now to
+Dialogue: 0,1:09:00.97,1:09:07.21,Sub,,0,0,0,,access a model that's equivalently smart to the model that was the best model a year ago?
+Dialogue: 0,1:09:07.26,1:09:14.67,Sub,,0,0,0,,It's roughly 20x 20x cheaper to to access a model that was the smartest model one year ago. today.
+Dialogue: 0,1:09:14.72,1:09:17.94,Sub,,0,0,0,,And if you look back in time, it's it's pretty consistent for that, too.
+Dialogue: 0,1:09:17.99,1:09:22.76,Sub,,0,0,0,,And so, we have this like very in very rapid decrease in the overall cost,
+Dialogue: 0,1:09:22.81,1:09:28.52,Sub,,0,0,0,,which I think will result in these models like proliferating and like filling all of the all of the
+Dialogue: 0,1:09:28.57,1:09:33.71,Sub,,0,0,0,,cracks for all of the problems that right now might be too expensive to to use the best model,
+Dialogue: 0,1:09:33.76,1:09:42.99,Sub,,0,0,0,,but if they become 20 times cheaper in a in a year, um it becomes something that becomes a no-brainer to to go ahead and use them there as well.
+Dialogue: 0,1:09:43.04,1:09:49.71,Sub,,0,0,0,,So to harness uh the models uh they need context, right?
+Dialogue: 0,1:09:49.76,1:09:58.27,Sub,,0,0,0,,If I were to hire the smartest person who ever lived and I have anthropic model, I still need to contextualize what I want them to achieve.
+Dialogue: 0,1:09:58.32,1:10:03.87,Sub,,0,0,0,,Do you do you think that creates a subindustry around you or do
+Dialogue: 0,1:10:03.92,1:10:11.27,Sub,,0,0,0,,you think ultimately that anthropic itself can provide that you know that contextualization?
+Dialogue: 0,1:10:11.32,1:10:14.59,Sub,,0,0,0,,How how do you see the next sort of three years emerging?
+Dialogue: 0,1:10:14.64,1:10:19.63,Sub,,0,0,0,,Is it a is it a surround model or coming from the model itself?
+Dialogue: 0,1:10:19.68,1:10:22.05,Sub,,0,0,0,,Oh yeah, it's definitely it's definitely surround model.
+Dialogue: 0,1:10:22.10,1:10:27.55,Sub,,0,0,0,,Like I I think that um well know anthropic we we have like 4,000 people or something like that.
+Dialogue: 0,1:10:27.60,1:10:33.07,Sub,,0,0,0,,Like the only thing that we're focused on is how can we make a good useful model.
+Dialogue: 0,1:10:33.12,1:10:42.54,Sub,,0,0,0,,Um and then it's uh there's a huge ecosystem now of different people who are able to take that raw model and turn it into something
+Dialogue: 0,1:10:42.59,1:10:52.19,Sub,,0,0,0,,that's actually useful and exactly as you said like giving the like training the model to be useful for tasks is like a whole a whole industry.
+Dialogue: 0,1:10:52.24,1:10:56.62,Sub,,0,0,0,,Um so like we don't know how to how to make the model like a good lawyer
+Dialogue: 0,1:10:56.67,1:11:02.08,Sub,,0,0,0,,whereas uh there's tons of companies now that will go and they will take the model and
+Dialogue: 0,1:11:02.13,1:11:06.81,Sub,,0,0,0,,figure out what are the things that it needs to know what are the tools that it
+Dialogue: 0,1:11:06.86,1:11:11.51,Sub,,0,0,0,,needs to have in order for it to be a productive lawyer in a in a law firm.
+Dialogue: 0,1:11:11.56,1:11:17.96,Sub,,0,0,0,,Um same thing for biology, same thing for um for mechanical engineering.
+Dialogue: 0,1:11:18.01,1:11:24.93,Sub,,0,0,0,,um like the long long list of all the possible different things where you might want a model to be going and doing work.
+Dialogue: 0,1:11:24.98,1:11:30.59,Sub,,0,0,0,,And so that that's a place where um I'm extremely grateful for the vibrant ecosystem around the world of all of the different
+Dialogue: 0,1:11:30.64,1:11:38.06,Sub,,0,0,0,,startups that can go and take this thing that's not that useful by itself and then get it connected to to the real world.
+Dialogue: 0,1:11:38.11,1:11:48.68,Sub,,0,0,0,,So the scale of opportunity surrounding anthropic is it sounds like that's almost bigger than the scale of anthropics model.
+Dialogue: 0,1:11:48.73,1:11:50.67,Sub,,0,0,0,,Is that is that sort of the way you see it?
+Dialogue: 0,1:11:50.72,1:11:53.87,Sub,,0,0,0,,Oh yeah, it's got is way way bigger.
+Dialogue: 0,1:11:53.92,1:11:56.41,Sub,,0,0,0,,Yeah, definitely.
+Dialogue: 0,1:11:56.46,1:12:04.91,Sub,,0,0,0,,So I think the opportunity is is if we were going to think back if we're going to think forward 10 years from now, right?
+Dialogue: 0,1:12:04.96,1:12:07.79,Sub,,0,0,0,,We come and have a G20.
+Dialogue: 0,1:12:07.84,1:12:08.21,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:12:08.24,1:12:08.55,Sub,,0,0,0,,Right.
+Dialogue: 0,1:12:08.58,1:12:11.99,Sub,,0,0,0,,And and we're 10 years from now and you and you come back.
+Dialogue: 0,1:12:12.04,1:12:13.63,Sub,,0,0,0,,Now I'm old so you never know.
+Dialogue: 0,1:12:13.68,1:12:16.38,Sub,,0,0,0,,I might not remember what we're talking about today.
+Dialogue: 0,1:12:16.43,1:12:27.58,Sub,,0,0,0,,But if we were to come 10 years, what what do you think uh if we look back what how we viewed the conversation we had today and then looking forward,
+Dialogue: 0,1:12:27.63,1:12:33.15,Sub,,0,0,0,,what do you think we'd be wanting to think about and talk about with respect to AI and the possibility?
+Dialogue: 0,1:12:33.20,1:12:33.63,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:12:33.68,1:12:34.43,Sub,,0,0,0,,10 years.
+Dialogue: 0,1:12:34.48,1:12:34.91,Sub,,0,0,0,,Okay.
+Dialogue: 0,1:12:34.96,1:12:35.39,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:12:35.44,1:12:36.19,Sub,,0,0,0,,Um, well,
+Dialogue: 0,1:12:36.24,1:12:42.95,Sub,,0,0,0,,so I guess uh well if 10 years is too long 10 10 years I'll feel like
+Dialogue: 0,1:12:43.00,1:12:48.66,Sub,,0,0,0,,I I'll be on like we'll be on Elon's moon base or something like that in 10 years.
+Dialogue: 0,1:12:48.71,1:12:56.29,Sub,,0,0,0,,Um so I I think I think probably looking back I think we will have felt like that despite despite all of this conversation we still will
+Dialogue: 0,1:12:56.34,1:13:05.51,Sub,,0,0,0,,have um underestimated how fast progress like looking back we'll be like wow like back uh in 2026 we we thought stuff was going fast and we thought
+Dialogue: 0,1:13:05.56,1:13:13.36,Sub,,0,0,0,,we were like seeing this but actually we underestimated um like how how impactful this would be and what the progress would be and I think also
+Dialogue: 0,1:13:13.41,1:13:23.24,Sub,,0,0,0,,we'll feel like we underbuilt that like we uh we ended up with um an even greater shortage than what we were expecting would be my my prediction.
+Dialogue: 0,1:13:23.29,1:13:32.19,Sub,,0,0,0,,Um and then I think also we will feel like the um I I think that just the I think the
+Dialogue: 0,1:13:32.24,1:13:40.50,Sub,,0,0,0,,economic I think the economic and scientific impacts uh that like we'll see yeah five years from now will just be immense.
+Dialogue: 0,1:13:40.55,1:13:45.54,Sub,,0,0,0,,Like I I think that we will we will make a major dent in things like curing cancer.
+Dialogue: 0,1:13:45.59,1:13:51.70,Sub,,0,0,0,,like I I would be I would be astonished if we haven't made material progress in that uh on that in in five years.
+Dialogue: 0,1:13:51.75,1:13:57.06,Sub,,0,0,0,,So I I I I really I really think it can't be um can't be overstated.
+Dialogue: 0,1:13:57.11,1:14:00.39,Sub,,0,0,0,,So to to wrap up uh this time,
+Dialogue: 0,1:14:00.44,1:14:07.41,Sub,,0,0,0,,can you just from anthropic's perspective sort of tell us a story how not only in
+Dialogue: 0,1:14:07.46,1:14:14.38,Sub,,0,0,0,,cancer but in broad-based how how will anthropic and AI in general make this a better world?
+Dialogue: 0,1:14:14.43,1:14:14.80,Sub,,0,0,0,,Right?
+Dialogue: 0,1:14:14.83,1:14:17.28,Sub,,0,0,0,,We hear lots of doomers, you know,
+Dialogue: 0,1:14:17.33,1:14:25.13,Sub,,0,0,0,,and and we know that the industrial revolution didn't put everybody out of a job and the invention of electricity didn't put everyone out of a job.
+Dialogue: 0,1:14:25.18,1:14:28.57,Sub,,0,0,0,,And so I I don't buy uh the dumerism at all.
+Dialogue: 0,1:14:28.62,1:14:37.73,Sub,,0,0,0,,I think this is an opportunity to democratize intelligence to make the world smarter, better, uh more productive,
+Dialogue: 0,1:14:37.78,1:14:46.57,Sub,,0,0,0,,more successful that everybody can now hire the perfect person and and in their culture and in their language.
+Dialogue: 0,1:14:46.62,1:14:54.51,Sub,,0,0,0,,So maybe can you give me uh just to wrap it up the story on how anthropic views how we can make the world a better place?
+Dialogue: 0,1:14:54.56,1:14:55.06,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:14:55.11,1:15:01.92,Sub,,0,0,0,,Um, I think it I think it comes it it comes or at least for I I think for me it comes down to Yeah,
+Dialogue: 0,1:15:01.97,1:15:12.82,Sub,,0,0,0,,I think both what you described of just like people having access to um to smart um to like smart coaches and teachers that can
+Dialogue: 0,1:15:12.87,1:15:19.35,Sub,,0,0,0,,help them be more of the people that they that they want to be and that like fundamentally care about like their success is one thing.
+Dialogue: 0,1:15:19.40,1:15:27.24,Sub,,0,0,0,,Um and then the other thing is the um the uh the driving force of prosperity everywhere
+Dialogue: 0,1:15:27.29,1:15:34.12,Sub,,0,0,0,,being innovation and innovation has been bottlenecked on how many smart people we can have for it.
+Dialogue: 0,1:15:34.17,1:15:37.73,Sub,,0,0,0,,Um we can have working on that and I think that for the first time now
+Dialogue: 0,1:15:37.78,1:15:44.72,Sub,,0,0,0,,we're getting the ability to really scale up innovation much faster than we've ever been able to.
+Dialogue: 0,1:15:44.77,1:15:51.17,Sub,,0,0,0,,And so I I think those two things together is uh at least for me like a big source of um like my
+Dialogue: 0,1:15:51.22,1:15:59.31,Sub,,0,0,0,,my confidence that that this will be seen as just like an incredible perhaps like the most positive thing that's ever happened for humanity.
+Dialogue: 0,1:15:59.36,1:16:00.33,Sub,,0,0,0,,Thank you everybody.
+Dialogue: 0,1:16:00.38,1:16:01.15,Sub,,0,0,0,,I appreciate it.
+Dialogue: 0,1:16:01.20,1:16:01.50,Sub,,0,0,0,,Thank you.
+Dialogue: 0,1:16:01.52,1:16:05.69,Sub,,0,0,0,,Really honored to be here.
+Dialogue: 0,1:16:05.74,1:16:10.51,Sub,,0,0,0,,Thanks.
+Dialogue: 0,1:16:10.56,1:16:12.02,Sub,,0,0,0,,Thank you ladies and gentlemen.
+Dialogue: 0,1:16:12.07,1:16:14.52,Sub,,0,0,0,,Press, please remain in the room for just a few moments.
+Dialogue: 0,1:16:14.57,1:16:19.71,Sub,,0,0,0,,Heads of delegation, please proceed toward the ministerial room and we'll begin our next session shortly.
+Dialogue: 0,1:16:19.76,1:16:22.64,Sub,,0,0,0,,Again, press, please remain in the room for a few moments.
+Dialogue: 0,1:16:22.69,1:16:23.88,Sub,,0,0,0,,And heads of delegation,
+Dialogue: 0,1:16:23.93,1:16:25.73,Sub,,0,0,0,,please proceed towards the ministerial room
+Dialogue: 0,1:16:25.78,1:16:26.42,Sub,,0,0,0,,and we'll begin
+Dialogue: 0,1:16:26.47,1:16:26.77,Sub,,0,0,0,,our
+Dialogue: 0,1:16:26.64,1:17:20.20,Sub,,0,0,0,,next
+Dialogue: 0,1:17:20.25,1:18:45.98,Sub,,0,0,0,,session
+Dialogue: 0,1:18:46.03,1:20:22.48,Sub,,0,0,0,,shortly.
+Dialogue: 0,1:20:22.53,1:21:26.82,Sub,,0,0,0,,Thank
+Dialogue: 0,1:21:26.87,1:22:20.43,Sub,,0,0,0,,you.
+Dialogue: 0,1:22:20.48,1:22:26.17,Sub,,0,0,0,,break
+Dialogue: 0,1:22:26.22,1:22:33.83,Sub,,0,0,0,,down in
+Dialogue: 0,1:22:33.88,1:22:37.66,Sub,,0,0,0,,the
+Dialogue: 0,1:22:37.71,1:22:46.27,Sub,,0,0,0,,hallway.
+Dialogue: 0,1:22:46.32,1:23:02.03,Sub,,0,0,0,,Yes.
+Dialogue: 0,1:23:02.08,1:23:04.27,Sub,,0,0,0,,Are we still good or no?
+Dialogue: 0,1:23:04.32,1:23:08.43,Sub,,0,0,0,,What happened?
+Dialogue: 0,1:23:08.48,1:23:12.80,Sub,,0,0,0,,She
+Dialogue: 0,1:23:12.85,1:23:18.27,Sub,,0,0,0,,said
+Dialogue: 0,1:23:18.32,1:26:17.95,Sub,,0,0,0,,they
+Dialogue: 0,1:26:18.00,1:29:17.63,Sub,,0,0,0,,have
+Dialogue: 0,1:29:17.68,1:29:17.98,Sub,,0,0,0,,Is
+Dialogue: 0,1:29:17.85,1:29:18.61,Sub,,0,0,0,,this working?
+Dialogue: 0,1:29:18.66,1:29:20.64,Sub,,0,0,0,,Yeah, I think it's still the morning, right?
+Dialogue: 0,1:29:20.69,1:29:22.00,Sub,,0,0,0,,We're still together.
+Dialogue: 0,1:29:22.05,1:29:23.94,Sub,,0,0,0,,Nice to see you all.
+Dialogue: 0,1:29:23.99,1:29:25.65,Sub,,0,0,0,,And uh it's a cool table.
+Dialogue: 0,1:29:25.70,1:29:27.54,Sub,,0,0,0,,Sort of a little bit of everywhere.
+Dialogue: 0,1:29:27.59,1:29:29.36,Sub,,0,0,0,,So, good morning everyone.
+Dialogue: 0,1:29:29.41,1:29:39.87,Sub,,0,0,0,,I'm thrilled uh to officially welcome you to Chapel Hill, North Carolina and for this innovation ministerial.
+Dialogue: 0,1:29:39.92,1:29:46.55,Sub,,0,0,0,,Chapel Hill is interesting because it's a critical corner of what we call here the research triangle
+Dialogue: 0,1:29:46.60,1:29:55.41,Sub,,0,0,0,,and it's built on one of the great innovation economies in America because it it couples worldclass universities,
+Dialogue: 0,1:29:55.46,1:30:04.53,Sub,,0,0,0,,advanced manufacturing with technology, skilled workers, and together with public and private investment.
+Dialogue: 0,1:30:04.58,1:30:10.47,Sub,,0,0,0,,And it's it that combination is what we're talking about that everybody
+Dialogue: 0,1:30:10.52,1:30:16.59,Sub,,0,0,0,,will do to help their um about their societies and and your citizens.
+Dialogue: 0,1:30:16.64,1:30:22.97,Sub,,0,0,0,,For 250 years, the United States has been defined by innovation, right?
+Dialogue: 0,1:30:23.02,1:30:24.72,Sub,,0,0,0,,We are inventors.
+Dialogue: 0,1:30:24.77,1:30:26.51,Sub,,0,0,0,,We have ambition.
+Dialogue: 0,1:30:26.56,1:30:27.93,Sub,,0,0,0,,We take risks.
+Dialogue: 0,1:30:27.98,1:30:29.52,Sub,,0,0,0,,We're risktakers.
+Dialogue: 0,1:30:29.57,1:30:34.59,Sub,,0,0,0,,And we have a relentless drive to build what's next.
+Dialogue: 0,1:30:34.64,1:30:39.99,Sub,,0,0,0,,So it's our American ingenuity that powers our growth.
+Dialogue: 0,1:30:40.04,1:30:42.19,Sub,,0,0,0,,It strengthens our security.
+Dialogue: 0,1:30:42.24,1:30:50.45,Sub,,0,0,0,,It's expanded human possibility and helped make this nation the greatest economy in this world.
+Dialogue: 0,1:30:50.50,1:30:51.88,Sub,,0,0,0,,And under President Trump,
+Dialogue: 0,1:30:51.93,1:31:03.39,Sub,,0,0,0,,we're expanding our ingenuity to address the opportunity of the digital economy that leverages the power of advanced technology and AI,
+Dialogue: 0,1:31:03.44,1:31:07.87,Sub,,0,0,0,,also nuclear and the coming quantum.
+Dialogue: 0,1:31:07.92,1:31:13.95,Sub,,0,0,0,,President Trump is trying to deliver the framework that will help America lead
+Dialogue: 0,1:31:14.00,1:31:20.94,Sub,,0,0,0,,the world in artificial intelligence and the technologies that define the next generation.
+Dialogue: 0,1:31:20.99,1:31:32.59,Sub,,0,0,0,,So, it's a framework coupled with markets that will help unleash innovation, not regulate it out of existence.
+Dialogue: 0,1:31:32.64,1:31:35.52,Sub,,0,0,0,,We want businesses to invest.
+Dialogue: 0,1:31:35.57,1:31:38.97,Sub,,0,0,0,,We want developers to discover.
+Dialogue: 0,1:31:39.02,1:31:47.76,Sub,,0,0,0,,We want entrepreneurs to feel safe taking risks because that's what entrepreneurs do.
+Dialogue: 0,1:31:47.81,1:31:54.28,Sub,,0,0,0,,We want our companies preparing our workforce for the advanced jobs that are coming
+Dialogue: 0,1:31:54.33,1:32:01.39,Sub,,0,0,0,,and for the new technologies that those that that technology will unleash for our workers.
+Dialogue: 0,1:32:01.44,1:32:09.95,Sub,,0,0,0,,So these are our principles and this is what I want to discuss and make sure we all share in this ministerial.
+Dialogue: 0,1:32:10.00,1:32:18.50,Sub,,0,0,0,,So over the course of the ministerial we're going to discuss we're going to try to discuss common sense policies that promote innovation.
+Dialogue: 0,1:32:18.55,1:32:22.03,Sub,,0,0,0,,They accelerate scientific discovery.
+Dialogue: 0,1:32:22.08,1:32:29.87,Sub,,0,0,0,,They strengthen our supply chains and they build confidence across all of our emerging technologies.
+Dialogue: 0,1:32:29.92,1:32:37.72,Sub,,0,0,0,,The United States proposed statements that reflect these priorities and we've worked extremely well together and
+Dialogue: 0,1:32:37.77,1:32:44.87,Sub,,0,0,0,,I'm really proud of the way the group has worked together because these are shared ideals.
+Dialogue: 0,1:32:44.92,1:32:48.96,Sub,,0,0,0,,These are not ideals that are ours or and are limited to America.
+Dialogue: 0,1:32:49.01,1:32:50.70,Sub,,0,0,0,,These are all of our ideas.
+Dialogue: 0,1:32:50.75,1:32:57.00,Sub,,0,0,0,,So our statements they recognize innovation that it depends on an environment where business has
+Dialogue: 0,1:32:57.05,1:33:02.73,Sub,,0,0,0,,the freedom and confidence to invest to compete and to try to commercialize their ideas.
+Dialogue: 0,1:33:02.78,1:33:07.74,Sub,,0,0,0,,It recognized the importance of the private sectorled standards.
+Dialogue: 0,1:33:07.79,1:33:13.95,Sub,,0,0,0,,It recognized increased domestic manufacturing which will strengthen each of our supply chains.
+Dialogue: 0,1:33:14.00,1:33:20.50,Sub,,0,0,0,,And importantly, it recognizes that intellectual property rights foster and protect innovation.
+Dialogue: 0,1:33:20.55,1:33:23.66,Sub,,0,0,0,,And that of course includes AI innovation.
+Dialogue: 0,1:33:23.71,1:33:27.85,Sub,,0,0,0,,But artificial intelligence is going to change how we invent.
+Dialogue: 0,1:33:27.90,1:33:34.91,Sub,,0,0,0,,It's going to change how we create, how companies compete, and how entire industries operate.
+Dialogue: 0,1:33:34.96,1:33:42.26,Sub,,0,0,0,,So, we've got to protect intellectual property and promote AI innovation, but they're not competing goals.
+Dialogue: 0,1:33:42.31,1:33:49.95,Sub,,0,0,0,,You can protect intellectual property and promote AI innovation, but that's the tricky part.
+Dialogue: 0,1:33:50.00,1:33:53.20,Sub,,0,0,0,,We have to find the way to do both things together.
+Dialogue: 0,1:33:53.25,1:33:57.71,Sub,,0,0,0,,So, they're two sides of the same innovation ecosystem.
+Dialogue: 0,1:33:57.76,1:34:02.11,Sub,,0,0,0,,A well functioning intellectual property framework can support innovators and
+Dialogue: 0,1:34:02.16,1:34:08.75,Sub,,0,0,0,,creators while preserving the opportunity for AI competition and commercialization.
+Dialogue: 0,1:34:08.80,1:34:15.30,Sub,,0,0,0,,That balance matters because private investment will drive technological progress.
+Dialogue: 0,1:34:15.35,1:34:20.49,Sub,,0,0,0,,AI serves as a powerful tool to enhance human ingenuity but
+Dialogue: 0,1:34:20.54,1:34:28.52,Sub,,0,0,0,,also raises new questions about our traditional view of the inventive process.
+Dialogue: 0,1:34:28.57,1:34:29.17,Sub,,0,0,0,,Right?
+Dialogue: 0,1:34:29.22,1:34:30.89,Sub,,0,0,0,,It's going to change things.
+Dialogue: 0,1:34:30.94,1:34:38.24,Sub,,0,0,0,,And this is true both for patents and for copyrights for bo both things because copyrights protect authors.
+Dialogue: 0,1:34:38.29,1:34:48.23,Sub,,0,0,0,,They protect artists and innovators and creators and existing laws provide important foundations but AI technologies are going to continue to develop.
+Dialogue: 0,1:34:48.28,1:34:53.03,Sub,,0,0,0,,We have to figure out and recognize the interaction between copyright and
+Dialogue: 0,1:34:53.08,1:34:59.74,Sub,,0,0,0,,AI and that's going to raise complex questions across all of our jurisdictions.
+Dialogue: 0,1:34:59.79,1:35:06.07,Sub,,0,0,0,,We've got to establish doctrines and make sure we embrace fair use, fair dealing.
+Dialogue: 0,1:35:06.12,1:35:12.11,Sub,,0,0,0,,These are important tools for balancing the interests of creators and innovators.
+Dialogue: 0,1:35:12.16,1:35:16.67,Sub,,0,0,0,,And how those doctrines are going to apply to AI related activities will
+Dialogue: 0,1:35:16.72,1:35:23.68,Sub,,0,0,0,,depend on the facts and circumstances that you each address in your own economies.
+Dialogue: 0,1:35:23.73,1:35:29.47,Sub,,0,0,0,,But these additionally trade secrets are of course important as well.
+Dialogue: 0,1:35:29.52,1:35:33.43,Sub,,0,0,0,,Strong trade secret protections are going to foster innovation.
+Dialogue: 0,1:35:33.48,1:35:35.87,Sub,,0,0,0,,They're going to foster research and development.
+Dialogue: 0,1:35:35.92,1:35:41.09,Sub,,0,0,0,,And they're going to create the competitive markets that are going to help unleash your economies.
+Dialogue: 0,1:35:41.14,1:35:45.71,Sub,,0,0,0,,So you need to think how you can do both things together.
+Dialogue: 0,1:35:45.76,1:35:48.12,Sub,,0,0,0,,And you're going to have to wrestle with both things.
+Dialogue: 0,1:35:48.17,1:35:55.35,Sub,,0,0,0,,We have to protect intellectual property of others when our own innovators receive comparative protection.
+Dialogue: 0,1:35:55.40,1:35:59.37,Sub,,0,0,0,,We have to ensure effective remedies when those rights are violated.
+Dialogue: 0,1:35:59.42,1:36:00.79,Sub,,0,0,0,,So you have to have the balance.
+Dialogue: 0,1:36:00.84,1:36:01.99,Sub,,0,0,0,,You have to protect your own.
+Dialogue: 0,1:36:02.04,1:36:06.76,Sub,,0,0,0,,But if you're going to protect your own, you have to protect others coming into your market.
+Dialogue: 0,1:36:06.81,1:36:07.87,Sub,,0,0,0,,It has to be both.
+Dialogue: 0,1:36:07.92,1:36:14.71,Sub,,0,0,0,,And if you don't do both, you'll be left with less opportunity than you would otherwise have.
+Dialogue: 0,1:36:14.76,1:36:23.66,Sub,,0,0,0,,Ultimately, the challenge before us is not choosing between between protecting innovation and accelerating innovation.
+Dialogue: 0,1:36:23.71,1:36:27.06,Sub,,0,0,0,,In fact, we all know we must do both.
+Dialogue: 0,1:36:27.11,1:36:28.65,Sub,,0,0,0,,We we must do both.
+Dialogue: 0,1:36:28.70,1:36:36.43,Sub,,0,0,0,,We need frameworks that protect creators and inventors whose ingenuity drives our economies without creating
+Dialogue: 0,1:36:36.48,1:36:42.43,Sub,,0,0,0,,the barriers that prevent the next generation of innovators because you heard it here today.
+Dialogue: 0,1:36:42.48,1:36:47.67,Sub,,0,0,0,,We need to enhance the next set of innovators because you'll never be able to stop it.
+Dialogue: 0,1:36:47.72,1:36:48.86,Sub,,0,0,0,,So, let's bring it in.
+Dialogue: 0,1:36:48.91,1:36:49.79,Sub,,0,0,0,,Let's embrace it.
+Dialogue: 0,1:36:49.84,1:36:51.49,Sub,,0,0,0,,Let's figure it out together.
+Dialogue: 0,1:36:51.54,1:37:01.29,Sub,,0,0,0,,By getting that balance right, AI can drive investment, productivity, and scientific discovery in each of our countries.
+Dialogue: 0,1:37:01.34,1:37:03.42,Sub,,0,0,0,,It will enhance manufacturing.
+Dialogue: 0,1:37:03.47,1:37:08.98,Sub,,0,0,0,,It will enhance economic growth, and it'll do so across all of our economies.
+Dialogue: 0,1:37:09.03,1:37:12.56,Sub,,0,0,0,,This is the opportunity before us today at this ministerial.
+Dialogue: 0,1:37:12.61,1:37:17.09,Sub,,0,0,0,,and I look forward to talking about it together with you all because
+Dialogue: 0,1:37:17.14,1:37:24.38,Sub,,0,0,0,,this ministerial is about embracing opportunity and growth in each of our economies.
+Dialogue: 0,1:37:24.43,1:37:27.28,Sub,,0,0,0,,So I thank you all for joining me today.
+Dialogue: 0,1:37:27.33,1:37:29.54,Sub,,0,0,0,,I'm excited for the conversation.
+Dialogue: 0,1:37:29.59,1:37:38.27,Sub,,0,0,0,,And now I'd like to recognize the delegation from the African Union to lead us on.
+Dialogue: 0,1:37:38.32,1:37:44.72,Sub,,0,0,0,,The best part is he's doing it on an iPad which shows how the world is going forward.

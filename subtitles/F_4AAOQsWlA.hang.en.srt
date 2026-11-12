@@ -1,0 +1,1415 @@
+1
+00:00:00,240 --> 00:00:03,080
+far before the four combinations.
+
+2
+00:00:03,800 --> 00:00:12,090
+So, we find the key factors, the thin coverage pairs, and we optimize the training dataset,
+
+3
+00:00:12,140 --> 00:00:16,940
+and we find only one quarter of the training dataset, it can reach the four types of training.
+
+4
+00:00:18,110 --> 00:00:22,770
+The second question is, what is missing when the sparse coverage fails?
+
+5
+00:00:23,010 --> 00:00:25,790
+We pretend our policy on the diagonal set.
+
+6
+00:00:26,410 --> 00:00:33,670
+Note that in the training dataset, that we already see the grasp of any object, place it to any containers, and press any buttons.
+
+7
+00:00:34,070 --> 00:00:40,450
+And it is missing the skills, or it is performed bad in the instruction steering.
+
+8
+00:00:40,870 --> 00:00:47,790
+And surprisingly, with only one demonstration per task of fine -tuning, the performance increased significantly.
+
+9
+00:00:48,130 --> 00:00:50,350
+So it is instruction steering problems.
+
+10
+00:00:51,050 --> 00:00:55,760
+The third question we want to ask is, what if the instruction depends on each other's?
+
+11
+00:00:55,810 --> 00:01:04,090
+So it is a two -stage pick and place task but the policy only knows the first, second object and the second, the containers.
+
+12
+00:01:04,810 --> 00:01:09,990
+We test different training recipes, different coverage over the dependency pairs.
+
+13
+00:01:10,310 --> 00:01:15,210
+When more coverage over the dependent pairs, the performance perform better.
+
+14
+00:01:15,710 --> 00:01:22,800
+And we also compare with the modular policies with Oracle high -level indicators.
+
+15
+00:01:22,850 --> 00:01:30,450
+And we find modular policy perform well in the independent tasks, but it fails in the dependent pairs.
+
+16
+00:01:32,010 --> 00:01:34,150
+So what is the takeaways?
+
+17
+00:01:34,530 --> 00:01:42,770
+First is the full coverage is unnecessary, sparse failure can be the steering skills.
+
+18
+00:01:43,730 --> 00:01:47,510
+And the dependent task needs a relational coverage.
+
+19
+00:01:48,470 --> 00:01:51,280
+And I will share more on the post section.
+
+20
+00:01:51,330 --> 00:01:52,040
+Thank you for listening.
+
+21
+00:01:52,090 --> 00:02:01,000
+Thank you so much to our fantastic speakers.
+
+22
+00:02:01,050 --> 00:02:03,070
+Let's give them one last round of applause.
+
+23
+00:02:07,360 --> 00:02:12,800
+I'll now hand it off to Chen Feng, who will be introducing our first early career keynote.
+
+24
+00:02:19,710 --> 00:02:20,910
+Well, good morning, everyone.
+
+25
+00:02:21,150 --> 00:02:24,630
+I'm Chen Feng from NYU and Amazon FAR.
+
+26
+00:02:25,170 --> 00:02:30,010
+It's my pleasure to introduce our early career keynote speaker, Han Zhao.
+
+27
+00:02:30,970 --> 00:02:35,870
+I met Han 10 years ago in the summer of 2016.
+
+28
+00:02:36,450 --> 00:02:38,630
+He was doing his Ph.D.
+
+29
+00:02:38,890 --> 00:02:45,770
+at MIT with Antonio Taraba and interning at Merle where I worked as a research scientist.
+
+30
+00:02:47,110 --> 00:02:53,820
+So that summer he was using polarized filters to detect standing water on roads and it
+
+31
+00:02:53,870 --> 00:02:59,700
+turns out Boston that summer was pretty dry so he had to make his own water puddles.
+
+32
+00:02:59,750 --> 00:03:06,650
+A few years later, Han finished his PhD and joined Waymo.
+
+33
+00:03:07,110 --> 00:03:11,810
+We then collaborated on occupancy prediction for self -driving cars.
+
+34
+00:03:12,640 --> 00:03:21,320
+Han now leads the Mars Lab at Tsinghua University, where he expanded his work from perception to decision making.
+
+35
+00:03:21,840 --> 00:03:30,560
+His drive VLM work paired a VLM that reasoned through unusual road situations with a faster driving system.
+
+36
+00:03:31,500 --> 00:03:40,200
+Based on his work, the EV company Lee Auto deployed the dual system on hundreds of thousands of production vehicles.
+
+37
+00:03:41,160 --> 00:03:50,080
+Han's team received the 2024 SalesStar award at WAIC for its broader vision centric driving platforms.
+
+38
+00:03:50,560 --> 00:03:55,250
+His group also explored the faster end of that spectrum in robot parkour.
+
+39
+00:03:55,300 --> 00:04:02,300
+Their quadruped work was the best system paper finalist at coral here 2023.
+
+40
+00:04:02,940 --> 00:04:08,060
+They later showed that humanoid could use a single vision based policy to do similar things.
+
+41
+00:04:08,680 --> 00:04:14,990
+At galaxy AI, which Hong co founded g zero brought the dual system idea to manipulation to.
+
+42
+00:04:15,040 --> 00:04:22,490
+So Han was named to MIT Technology Review's China Innovator under 35 list
+
+43
+00:04:22,540 --> 00:04:28,740
+and received a 2026 Ant Intech Award for his work in embodied intelligence.
+
+44
+00:04:29,690 --> 00:04:38,900
+Today he'll ask how we should organize the robot's intelligence when reasoning takes seconds and physical contact unfolds in milliseconds.
+
+45
+00:04:38,950 --> 00:04:45,910
+Please join me in welcoming Han Zhao for his keynote organizing physical AI across timescales.
+
+46
+00:05:08,300 --> 00:05:09,860
+Thanks for the kind introduction.
+
+47
+00:05:10,200 --> 00:05:13,900
+They remind me a lot of good memories in the old times.
+
+48
+00:05:34,700 --> 00:05:35,100
+Great.
+
+49
+00:05:35,740 --> 00:05:44,880
+Today I want to talk about time for robots, specifically how robots' intelligence should be organized across many different timescales.
+
+50
+00:05:46,080 --> 00:05:55,740
+As the introduction goes, my own research path in physical AI started from self -driving, robots on wheels.
+
+51
+00:05:56,780 --> 00:05:59,300
+At Waymo, I published my first choral paper.
+
+52
+00:05:59,580 --> 00:06:01,280
+It was seven years ago.
+
+53
+00:06:01,740 --> 00:06:03,630
+Then I moved to robots with legs.
+
+54
+00:06:03,680 --> 00:06:11,080
+We spent a few years teaching legged robots, humanoid robots, to run, to jump, and to conquer tough terrains.
+
+55
+00:06:11,600 --> 00:06:13,790
+And now we are working on robots with arms.
+
+56
+00:06:13,840 --> 00:06:22,760
+Because in the end, we want our robots to do real physical work for our humans.
+
+57
+00:06:23,540 --> 00:06:30,840
+Yesterday, when I landed in Austin, I found that the Waymo and the CyberCaps are all over the streets.
+
+58
+00:06:31,280 --> 00:06:39,540
+For someone who started in self -driving research, I have to say that felt really good.
+
+59
+00:06:39,760 --> 00:06:43,820
+Driving has made it to everyday life and into production.
+
+60
+00:06:44,440 --> 00:06:46,660
+Can humanoid robots also make it too?
+
+61
+00:06:47,300 --> 00:06:52,080
+Today, I'll share one piece of my answer, and it has to do with time.
+
+62
+00:06:55,200 --> 00:07:04,860
+Very recently, GPT -6 Astra came out, and within days, people are plugging the model into their own robots and found that it just worked.
+
+63
+00:07:05,660 --> 00:07:10,310
+NVIDIA researchers did a careful study on the Robolab 120 simulation.
+
+64
+00:07:10,360 --> 00:07:19,860
+They found that the GBD Astra scored 66 % of the tasks, as opposed to Pi -05 on only 28%.
+
+65
+00:07:21,820 --> 00:07:25,980
+On another simulation benchmark, RoboDojo, we got similar results.
+
+66
+00:07:26,640 --> 00:07:34,680
+GBD -6 Astra scored 22, while other robot foundation models like Pi -05 only scored 7.
+
+67
+00:07:36,520 --> 00:07:42,460
+This is really surprising, and I believe many of us in this community are not ready for this.
+
+68
+00:07:42,670 --> 00:07:44,770
+But there's a catch.
+
+69
+00:07:45,290 --> 00:07:47,470
+These benchmarks don't measure time.
+
+70
+00:07:48,710 --> 00:07:51,310
+These are frames from one of the robot lab runs.
+
+71
+00:07:51,630 --> 00:07:53,670
+The Astra has a direct policy.
+
+72
+00:07:53,890 --> 00:07:55,510
+It controls the robot directly.
+
+73
+00:07:56,090 --> 00:08:02,710
+If you look closely for each call of the foundation model it takes 18 seconds
+
+74
+00:08:02,760 --> 00:08:08,840
+and the robots spends 97 % of the time waiting for the model to think.
+
+75
+00:08:09,920 --> 00:08:13,560
+But in reality a real robot cannot wait for the model to think.
+
+76
+00:08:15,600 --> 00:08:19,630
+Then the question is, the frontier model is a very good thing.
+
+77
+00:08:19,890 --> 00:08:23,750
+How can we actually make good use of them to solve the robotic tasks?
+
+78
+00:08:24,900 --> 00:08:33,030
+To figure out this, I conducted a small controlled experiment in robot casa, which are simulator of the home kitchens.
+
+79
+00:08:33,390 --> 00:08:35,610
+And there are five test kitchens.
+
+80
+00:08:36,320 --> 00:08:42,220
+And with five tasks, the kitchens are the ones the robot has never seen before.
+
+81
+00:08:42,740 --> 00:08:47,600
+And it has 50 seconds of wall time for each task to finish.
+
+82
+00:08:50,720 --> 00:08:53,600
+And how should the frontier model control the robot?
+
+83
+00:08:54,120 --> 00:08:55,460
+I tried five ways.
+
+84
+00:08:56,000 --> 00:08:58,180
+The first one is called coding policy.
+
+85
+00:08:58,560 --> 00:09:05,290
+Basically, we ask our frontier model to understand the task and write a piece of code.
+
+86
+00:09:05,340 --> 00:09:10,960
+And at deployment time, the code in the program just runs without calling the foundation model.
+
+87
+00:09:12,560 --> 00:09:16,700
+And the second method is called coding plus ask policy.
+
+88
+00:09:16,940 --> 00:09:21,640
+Basically, when the coding at deployment time, the code runs.
+
+89
+00:09:22,060 --> 00:09:27,080
+But whenever it fails to finish the task, it will ask the frontier model for help.
+
+90
+00:09:27,870 --> 00:09:33,750
+And we found that to finish each episode, on average, it costs the frontier model once.
+
+91
+00:09:36,250 --> 00:09:39,490
+And the next method is called orchestrated policy.
+
+92
+00:09:39,930 --> 00:09:45,760
+Basically, the frontier model will call different skills to finish the task.
+
+93
+00:09:46,220 --> 00:09:52,420
+And during this process, we found that for each episode, the frontier model is called four times.
+
+94
+00:09:55,290 --> 00:09:59,210
+And the next one is direct policy that we have just talked about.
+
+95
+00:10:01,130 --> 00:10:03,770
+The last method is called agentic policy.
+
+96
+00:10:04,110 --> 00:10:14,650
+It's basically for each step, the model can not only itself controls the robot, it can also use tools or math to calculate before it make actions.
+
+97
+00:10:16,150 --> 00:10:22,130
+So it also, for each step, it can also do, for each step, we also call the frontier model,
+
+98
+00:10:22,180 --> 00:10:27,900
+But we consume more tokens because it also needs to think more and conduct more computations.
+
+99
+00:10:30,710 --> 00:10:37,710
+If the thinking time are free, we can ask the model more for results.
+
+100
+00:10:37,910 --> 00:10:41,510
+And we found that all these methods perform pretty well.
+
+101
+00:10:42,850 --> 00:10:51,810
+Apart from the coding policy only performs 45 % success rate, all the other methods have success rate higher than 60%.
+
+102
+00:10:55,100 --> 00:10:57,950
+And then what if we have a real clock?
+
+103
+00:10:58,000 --> 00:11:06,880
+basically the clock runs and the step -by -step policy could fail because of exceeding the time limit.
+
+104
+00:11:08,100 --> 00:11:10,520
+Then the result is totally different.
+
+105
+00:11:11,260 --> 00:11:20,920
+We find that the step -by -step policy fails especially the direct policy and agentic policy only have a success rate of 15 and 20 percent.
+
+106
+00:11:23,710 --> 00:11:32,270
+So it basically tells us that a slow model is fine as long as it's is combined with a system one.
+
+107
+00:11:33,020 --> 00:11:42,300
+For example, the orchestrated policy uses small neural network skills to deal with the high frequency control.
+
+108
+00:11:47,980 --> 00:11:53,480
+So where exactly do we draw the lines between layers in the orchestrated policy?
+
+109
+00:11:55,300 --> 00:11:58,100
+The old school answer can be by functions.
+
+110
+00:11:58,680 --> 00:12:02,100
+Perception here, planning there, and control at the bottom.
+
+111
+00:12:02,470 --> 00:12:07,410
+And I think today, we want to argue for something else.
+
+112
+00:12:08,070 --> 00:12:12,190
+The clock defines the levels, so you draw the lines where the clock changes.
+
+113
+00:12:13,370 --> 00:12:17,290
+The Astra is the top layer, System 2, on a clock of seconds.
+
+114
+00:12:17,590 --> 00:12:20,970
+Below it, the System 1 is something like VOA or WAM.
+
+115
+00:12:21,250 --> 00:12:22,990
+They should run at tens of hertz.
+
+116
+00:12:23,250 --> 00:12:28,350
+And System 0 is something like whole body tracker that runs hundreds of hertz.
+
+117
+00:12:28,850 --> 00:12:38,590
+By the way, in this talk, when we talk about system 1, system 2, system 0, we're not talking about thinking, we're talking about time clocks.
+
+118
+00:12:41,840 --> 00:12:45,540
+Then, how do you tell which level something should belong to?
+
+119
+00:12:46,400 --> 00:12:48,760
+I think about this problem in two steps.
+
+120
+00:12:49,320 --> 00:12:58,120
+First, ask what the layer has to react to, because that tells you how fast the clock has to tick.
+
+121
+00:12:59,080 --> 00:13:01,220
+Then, the clock tells you the level.
+
+122
+00:13:01,270 --> 00:13:07,570
+For example, system 2 should react to task, state, language, and scene.
+
+123
+00:13:08,030 --> 00:13:11,650
+So it should work from seconds to minutes.
+
+124
+00:13:15,180 --> 00:13:24,070
+For system 1, its task is to react to hand -object relative motions at the frequency of tens of hertz.
+
+125
+00:13:26,060 --> 00:13:30,960
+For system 0, its job is to keep track of contact and force.
+
+126
+00:13:31,340 --> 00:13:34,200
+That's why it has to run at hundreds of hertz.
+
+127
+00:13:35,980 --> 00:13:39,860
+Now, let's take a slipping cup as an example.
+
+128
+00:13:40,710 --> 00:13:50,360
+It involves perception and control all at once, but they all have to change in milliseconds.
+
+129
+00:13:51,080 --> 00:13:53,500
+That is why they are system zero.
+
+130
+00:13:53,860 --> 00:13:56,080
+A slipping cup is system zero.
+
+131
+00:13:56,380 --> 00:14:01,620
+If you want to cut it by function, then it's like perception and control.
+
+132
+00:14:04,200 --> 00:14:10,800
+I've run into this clock problem before when I was working on self -driving.
+
+133
+00:14:12,660 --> 00:14:19,990
+With Drive VOM, we put a vision language model into a car and we found that it has surprising capability in understanding the scene.
+
+134
+00:14:20,040 --> 00:14:26,840
+For example, it can understand a school zone, which is slow down to wait for the children to cross the street.
+
+135
+00:14:27,730 --> 00:14:35,010
+However, such vision language models cannot respond immediately to the driving tasks.
+
+136
+00:14:35,290 --> 00:14:42,670
+So we put two clocks together, a slow VOM and a fast driving stack.
+
+137
+00:14:43,030 --> 00:14:51,610
+We put them together onto one car and such systems are already running massively on real production vehicles today.
+
+138
+00:14:52,270 --> 00:15:01,230
+So our lesson from self -driving is that we should let the fast layer drive and the slow layer think, each on its own clock.
+
+139
+00:15:04,420 --> 00:15:08,540
+My second lesson is from working on robot parkour.
+
+140
+00:15:09,610 --> 00:15:19,590
+In 2023, our quadruped robot learned parkour from vision to climbing, leaping, crawling, and then we did it on full -size humanoids.
+
+141
+00:15:20,640 --> 00:15:28,860
+And this year, we're able to do whole -body parkour, where the robot uses hands and knees to vault and climb, interacting with the environment.
+
+142
+00:15:29,700 --> 00:15:33,080
+All of these are learned controllers at the fast end.
+
+143
+00:15:33,360 --> 00:15:37,240
+They read depths by themselves and react in milliseconds.
+
+144
+00:15:37,980 --> 00:15:40,380
+So the whole system is a system zero.
+
+145
+00:15:41,860 --> 00:15:47,550
+So my lesson from Parker is that the reflex have to live in the fast layer,
+
+146
+00:15:47,600 --> 00:15:53,820
+and the layer needs to do everything by its own, from eyes, perception, to actions.
+
+147
+00:15:57,500 --> 00:16:00,420
+But in real life, things are not that simple.
+
+148
+00:16:00,980 --> 00:16:03,120
+A task often needs more than one layer.
+
+149
+00:16:03,580 --> 00:16:04,960
+Let's try a few settings.
+
+150
+00:16:05,720 --> 00:16:11,910
+For industrial assembly line, is it a system 2, 1, or 0?
+
+151
+00:16:12,370 --> 00:16:16,710
+Because it's fixed and repetitive, it only requires system 0.
+
+152
+00:16:17,760 --> 00:16:20,140
+Then how about the next one, logistic sorting?
+
+153
+00:16:21,080 --> 00:16:26,200
+The task is prefixed, but every parcel and package is different.
+
+154
+00:16:27,540 --> 00:16:31,120
+So it requires very strong system 1.
+
+155
+00:16:35,100 --> 00:16:37,050
+The next setting, restaurant service.
+
+156
+00:16:37,100 --> 00:16:43,860
+you need to talk to the customers, place orders, and also hold the place.
+
+157
+00:16:43,910 --> 00:16:45,840
+So you need a bit of everything.
+
+158
+00:16:45,890 --> 00:16:50,050
+You need a bit of System 2, a bit of System 1, and a bit of System 0.
+
+159
+00:16:53,020 --> 00:16:55,140
+The last one, doing housework.
+
+160
+00:16:56,650 --> 00:17:02,390
+Housework, the task definition is more complicated than doing restaurant service,
+
+161
+00:17:03,390 --> 00:17:12,520
+ranging from that is why it requires very strong System 2 model.
+
+162
+00:17:13,780 --> 00:17:17,340
+But in terms of speed, it can be slow.
+
+163
+00:17:17,580 --> 00:17:21,720
+So we need a slightly weaker system one and a system zero.
+
+164
+00:17:25,130 --> 00:17:25,530
+OK.
+
+165
+00:17:26,310 --> 00:17:31,850
+Then for this hierarchical systems, we have two more important questions to work on.
+
+166
+00:17:32,630 --> 00:17:40,640
+The first one is, how do we make each layer fast enough by itself so that it catch up with the clock, its own clock?
+
+167
+00:17:41,730 --> 00:17:48,670
+The second question is, what should pass between these layers, between these systems, so that the whole system work as a whole.
+
+168
+00:17:52,590 --> 00:17:54,290
+Let's talk about the first problem first.
+
+169
+00:17:54,490 --> 00:17:57,810
+Make each system fast enough, especially system one.
+
+170
+00:18:00,450 --> 00:18:09,210
+As we have already talked about, system one should work at tens of hertz because it has to respond to human -object interactions.
+
+171
+00:18:11,220 --> 00:18:14,580
+However, today's system ones are usually quite slow.
+
+172
+00:18:15,460 --> 00:18:18,440
+They are not able to catch up with tens of hertz.
+
+173
+00:18:20,030 --> 00:18:20,450
+Why?
+
+174
+00:18:21,380 --> 00:18:22,990
+We try to figure out the reason.
+
+175
+00:18:23,040 --> 00:18:34,180
+We found that there are three costs and each cost comes from where today's system one models come from if you are building a world action model,
+
+176
+00:18:34,230 --> 00:18:39,470
+which is super popular this year and From a video generation model,
+
+177
+00:18:39,520 --> 00:18:47,310
+you will know that the video generation model base is actually quite slow Generating a five -second high -quality video
+
+178
+00:18:47,360 --> 00:18:57,900
+usually requires two to three minutes to generate them This is not possible to deploy such model on a robot.
+
+179
+00:19:01,610 --> 00:19:10,170
+If you are building a vision -language action model from a VOM, then the VOM will typically reason in text.
+
+180
+00:19:10,570 --> 00:19:13,570
+The reasoning text usually takes like five seconds.
+
+181
+00:19:15,080 --> 00:19:18,560
+This is still not affordable for a robotic control problem.
+
+182
+00:19:21,430 --> 00:19:26,750
+And the third cost that I found is about action chunking.
+
+183
+00:19:27,290 --> 00:19:35,260
+Almost all the papers, no matter its VLA, its diffusion policy, its world action models,
+
+184
+00:19:35,310 --> 00:19:39,610
+you always decode a whole action chunk before you execute them.
+
+185
+00:19:40,660 --> 00:19:47,920
+That means you're always waiting for the whole chunk to be generated before execution, and then you lose a lot of time.
+
+186
+00:19:49,960 --> 00:19:54,800
+And for these three problems, we have three works dealing with each of them.
+
+187
+00:19:57,350 --> 00:19:59,910
+The first work is called FastWAM.
+
+188
+00:20:01,190 --> 00:20:04,690
+World action models predict future videos along with actions.
+
+189
+00:20:05,110 --> 00:20:06,390
+That's how they learn physics.
+
+190
+00:20:06,770 --> 00:20:09,690
+And most of them generates that video before they act.
+
+191
+00:20:10,580 --> 00:20:12,420
+They also call it IDM mode.
+
+192
+00:20:13,160 --> 00:20:16,420
+So we asked, do we really need to imagine the future at test time?
+
+193
+00:20:18,340 --> 00:20:25,270
+FastWam says that a video model and an action model, their shared attention and the trick is on these masks.
+
+194
+00:20:26,170 --> 00:20:31,720
+If we change the attention mask a little bit during training time, the model needs to generate future videos.
+
+195
+00:20:31,770 --> 00:20:38,660
+but at test time it can skip it, then we can speed up the model by more than four times.
+
+196
+00:20:41,010 --> 00:20:50,020
+This paper was published early this year, and today we have a more powerful pre -trained version of FastWAN called G07.
+
+197
+00:20:51,360 --> 00:20:59,060
+The model size goes from 5 billion parameters to 16 billion parameters, with a mixture of transformer architecture.
+
+198
+00:20:59,700 --> 00:21:02,690
+Yet, with optimization, it runs much faster.
+
+199
+00:21:02,740 --> 00:21:08,740
+It runs 60 milliseconds per action on RTX 1590 GPU.
+
+200
+00:21:13,340 --> 00:21:18,520
+Next, let's talk about the reasoning in text in vision language action models.
+
+201
+00:21:20,620 --> 00:21:24,500
+GR0 -05 is our robot foundation model that we trained in the galaxy.
+
+202
+00:21:25,000 --> 00:21:32,430
+And it's one VLM model that takes vision and text as input, and write subtasks,
+
+203
+00:21:32,480 --> 00:21:37,820
+bounding box, action trajectories, everything in one discrete token stream.
+
+204
+00:21:39,540 --> 00:21:45,000
+On the same checkpoint, we can simply turn the reasoning on and off to test its performance.
+
+205
+00:21:45,960 --> 00:21:53,780
+Surprisingly, we found that for most of the tasks, 90 % of the tasks, reasoning at inference makes no difference.
+
+206
+00:21:54,560 --> 00:21:57,910
+Success is the same with and without chain of thought.
+
+207
+00:21:57,960 --> 00:22:01,680
+And if you skip it, the model runs twice as fast.
+
+208
+00:22:03,120 --> 00:22:06,320
+Where does it help are those long tasks.
+
+209
+00:22:07,160 --> 00:22:13,840
+For example, this air fryer task that has five stages, and this is a zero -shot task it has never seen before.
+
+210
+00:22:14,060 --> 00:22:16,660
+With reasoning, it can help with the performance.
+
+211
+00:22:20,800 --> 00:22:23,100
+Next, let's talk about action chunking.
+
+212
+00:22:24,310 --> 00:22:29,900
+The cost from action chunking is waiting for the whole action trajectory to be generated.
+
+213
+00:22:29,950 --> 00:22:36,320
+This animation is from our recent work called ActionCodec2.
+
+214
+00:22:36,920 --> 00:22:41,240
+It shows that the arms are chasing the blocks that keeps moving.
+
+215
+00:22:42,350 --> 00:22:44,510
+On the left is a chunk tokenizer.
+
+216
+00:22:45,090 --> 00:22:51,350
+The policy has to decode a whole chunk before it moves, so it only sees the blocks' chunk boundaries.
+
+217
+00:22:52,540 --> 00:22:55,300
+Looking sooner means decoding a whole new chunk.
+
+218
+00:22:55,880 --> 00:22:59,950
+On the right -hand side is ActionCodec2, a streaming tokenizer.
+
+219
+00:23:00,000 --> 00:23:06,250
+Every token is a small piece of motion that the robot runs as soon as it arrives.
+
+220
+00:23:06,970 --> 00:23:08,930
+So it sees the block at every step.
+
+221
+00:23:11,170 --> 00:23:15,900
+Watch the end, the trunk arm misses and the streaming arm gets it.
+
+222
+00:23:15,950 --> 00:23:22,850
+That's what we mean by streaming action tokenizer and we can use it to build a streaming VLA.
+
+223
+00:23:32,260 --> 00:23:37,140
+Okay, the second part I want to talk about decide what passes between different systems.
+
+224
+00:23:40,010 --> 00:23:46,930
+With these three clocks, we have two boundaries, and each goes both ways.
+
+225
+00:23:47,410 --> 00:23:50,740
+The intent goes from system two to system one.
+
+226
+00:23:50,790 --> 00:23:55,210
+We can pass language, goals, programs, and action macro intents.
+
+227
+00:23:55,930 --> 00:23:59,730
+From system one to system zero, we can pass motion intents.
+
+228
+00:24:03,160 --> 00:24:10,510
+And the other way around, from system zero to system one, we can feedback with contacts, force, and tracking states.
+
+229
+00:24:10,560 --> 00:24:18,960
+and from system one to system two, we can also feedback progress, confidence, and some state signals.
+
+230
+00:24:19,940 --> 00:24:25,960
+However, most of today's work is on the way down, and the way up is still heavily missing.
+
+231
+00:24:28,800 --> 00:24:30,760
+Let's first talk about the way down.
+
+232
+00:24:32,260 --> 00:24:34,920
+We have this work called whole body WAN.
+
+233
+00:24:35,160 --> 00:24:38,160
+It's a world action model built for humanoid robots.
+
+234
+00:24:39,640 --> 00:24:46,780
+For a system one, it outputs the body and hand poses with future action trajectories.
+
+235
+00:24:47,100 --> 00:24:49,740
+And we send it to system zero for it to track.
+
+236
+00:24:51,230 --> 00:24:52,910
+That's quite straightforward, right?
+
+237
+00:24:53,110 --> 00:24:56,210
+We can even make the system one more complicated.
+
+238
+00:24:56,530 --> 00:24:58,070
+This work is called OMG.
+
+239
+00:24:58,710 --> 00:25:02,870
+It's a versatile one motion generator with many inputs.
+
+240
+00:25:03,730 --> 00:25:08,760
+As a system two, you can send text motions, motions in text.
+
+241
+00:25:08,810 --> 00:25:10,360
+You can send motions in music.
+
+242
+00:25:10,410 --> 00:25:13,700
+You can send motions in human poses to system one.
+
+243
+00:25:13,750 --> 00:25:21,750
+and the system one will turn them into an executable trajectory and finally the system zero will tracks it.
+
+244
+00:25:26,660 --> 00:25:30,700
+Although we have rich interface between system two and system one,
+
+245
+00:25:31,140 --> 00:25:35,740
+the system between system one and system zero we still only have motions going down.
+
+246
+00:25:38,880 --> 00:25:39,680
+Is motion enough?
+
+247
+00:25:39,920 --> 00:25:40,740
+Of course not.
+
+248
+00:25:41,380 --> 00:25:46,480
+First notice that the tracker follows the motion without knowing what's it for and I
+
+249
+00:25:46,530 --> 00:25:51,590
+don't think motion is not enough because when we talk about interaction and a contact.
+
+250
+00:25:52,120 --> 00:25:56,820
+For example, when you wipe a table, it's mostly forced and very little motion.
+
+251
+00:25:57,400 --> 00:26:03,740
+When you sit down, the motion looks the same whether or not the chair takes your weight on takes your weight.
+
+252
+00:26:04,860 --> 00:26:10,550
+And the people are starting to go beyond motion from joint targets to body motion to contacts.
+
+253
+00:26:10,600 --> 00:26:11,800
+And now to force.
+
+254
+00:26:15,710 --> 00:26:21,930
+The first step beyond motion is keep the contact when you move motion onto a new body.
+
+255
+00:26:22,830 --> 00:26:28,070
+Omni -Retarget and our Topo -Retarget, that's published this time at the Coro,
+
+256
+00:26:28,450 --> 00:26:34,850
+all keeps trying to preserve the contact points and geometry between the robot and the object.
+
+257
+00:26:38,990 --> 00:26:42,660
+But honestly, both of these only keep the contact geometry.
+
+258
+00:26:42,710 --> 00:26:45,330
+Neither of them knows anything about force yet.
+
+259
+00:26:46,670 --> 00:26:50,850
+And very recently, I noticed a work from UC Berkeley called Control Force.
+
+260
+00:26:53,120 --> 00:27:01,300
+It gives the tracker a reference motion plus a force command for each hand and a small planner on top picks the force from what it sees.
+
+261
+00:27:02,340 --> 00:27:06,520
+Here's a robot that pushes a heavy box that is 20 kilograms inside.
+
+262
+00:27:07,430 --> 00:27:11,570
+On the left the sonic only tracks the motion and can't move it.
+
+263
+00:27:11,730 --> 00:27:18,390
+On the right their model pushes it and notice who picks the force.
+
+264
+00:27:18,890 --> 00:27:28,090
+It's a small planner that is system one that watches the object close to the body, and it's not a slow model from far above.
+
+265
+00:27:34,120 --> 00:27:36,640
+And next, let's look at some failure cases.
+
+266
+00:27:36,940 --> 00:27:38,940
+Where does the system fails?
+
+267
+00:27:39,280 --> 00:27:42,500
+It often fails at the hand -offs between the systems.
+
+268
+00:27:43,280 --> 00:27:50,420
+For example, most of the time, the lower level system acts by itself, but it does not know it has already failed.
+
+269
+00:27:50,920 --> 00:27:57,660
+And the higher level system is not quick enough to notice that the task has already failed.
+
+270
+00:27:59,020 --> 00:28:01,540
+So this is the hand -off issue.
+
+271
+00:28:04,700 --> 00:28:09,440
+And on the right, a sonic model lifting a two kilogram box.
+
+272
+00:28:09,490 --> 00:28:15,210
+It follows the upper level motion command, but the hands slide off.
+
+273
+00:28:15,450 --> 00:28:19,210
+It has no way to tell anyone that the box never came up.
+
+274
+00:28:20,820 --> 00:28:25,420
+So every one of these failures sit on a boundary between the clocks.
+
+275
+00:28:26,160 --> 00:28:30,560
+Today, the feedback across that boundary is simply missing.
+
+276
+00:28:31,170 --> 00:28:35,990
+and I argue that we urgently need this feedback mechanism.
+
+277
+00:28:41,160 --> 00:28:44,420
+Let me end with where I think the future is going for.
+
+278
+00:28:45,180 --> 00:28:49,080
+A chatbot can wait for the model, it's fine, but a robot cannot.
+
+279
+00:28:49,760 --> 00:28:52,580
+So my view is that the future goes two ways.
+
+280
+00:28:53,060 --> 00:29:02,920
+The first way is going with layers, each on its own clock, but the layer above shouldn't try to give the exact contact of forces.
+
+281
+00:29:02,970 --> 00:29:06,290
+It's too slow to get them right.
+
+282
+00:29:06,630 --> 00:29:12,050
+It sends intent downwards and the lower level systems sends feedback upwards.
+
+283
+00:29:14,000 --> 00:29:22,680
+But the hard part for this kind of design is that the lower level system must also sense correct and send feedback on its own.
+
+284
+00:29:27,140 --> 00:29:32,180
+And the second way is the one model way that everybody who work on deep learning likes.
+
+285
+00:29:32,380 --> 00:29:36,410
+It's that we want to build a unified one model that share weights.
+
+286
+00:29:36,460 --> 00:29:41,920
+but each system or each clock has its own expert.
+
+287
+00:29:42,180 --> 00:29:43,640
+They're running at different clocks.
+
+288
+00:29:44,710 --> 00:29:52,470
+The good part about this design is that we have a unified architecture with shared contacts, maybe with transformers we can share their KV caches.
+
+289
+00:29:52,850 --> 00:29:54,250
+That's great, right?
+
+290
+00:29:54,850 --> 00:29:59,150
+And then at inference time, they run at different clocks with flexibility.
+
+291
+00:30:00,440 --> 00:30:08,640
+But the hard part for this kind of model system design is how do we train system 0, system 1, and system 2 all together.
+
+292
+00:30:09,620 --> 00:30:14,310
+Training them all together have a lot of difficulties because today system 1 and system 2
+
+293
+00:30:14,360 --> 00:30:20,560
+are mostly trained from with behavior cloning while system 0 is trained in simulation with RL.
+
+294
+00:30:20,860 --> 00:30:26,240
+How do we combine these two training mechanisms into one environment and train them together?
+
+295
+00:30:27,980 --> 00:30:32,120
+I think either way the clock has to be part of the model design.
+
+296
+00:30:35,500 --> 00:30:40,000
+So to wrap up, the world doesn't wait for the model in robotics.
+
+297
+00:30:40,760 --> 00:30:43,800
+What a system must react to set its clock.
+
+298
+00:30:45,260 --> 00:30:51,920
+And we need tens of hertz for arm and hand and millions of seconds for the contact and force.
+
+299
+00:30:52,860 --> 00:30:57,280
+And we need to pick the model that fit the clock, not the other way around.
+
+300
+00:30:58,070 --> 00:31:04,500
+Between systems, we need to send intents down and let each of them close its own loop.
+
+301
+00:31:05,610 --> 00:31:11,330
+And the lower levels should send feedbacks or failures alert to the upper systems.
+
+302
+00:31:12,180 --> 00:31:15,870
+So don't just build one fast model or one small model.
+
+303
+00:31:15,920 --> 00:31:17,340
+You need to build a whole system.
+
+304
+00:31:18,380 --> 00:31:24,340
+At the end of the day, we need to design a multi -clock system and work on what passes between these clocks.
+
+305
+00:31:25,930 --> 00:31:34,050
+And my one last request to the community all of us is that later when you build a simulation
+
+306
+00:31:34,100 --> 00:31:43,100
+benchmark for robotics also report a success rate before the robots deadline and also the inference time that is required.
+
+307
+00:31:45,740 --> 00:31:48,620
+Okay that's everything that I want to share today.
+
+308
+00:31:48,880 --> 00:31:57,380
+All of my work are done with my amazing students at Xinhua Mars lab and some of them are today at Colorado so please come and talk to us.
+
+309
+00:31:57,540 --> 00:31:58,340
+Thank you.
+
+310
+00:32:11,360 --> 00:32:18,180
+Well, we have two microphones on both sides, so if you have question for Han, please line up on those microphones.
+
+311
+00:32:19,440 --> 00:32:24,810
+While people are lining up, Han, I want to quickly pick your brain.
+
+312
+00:32:24,860 --> 00:32:36,220
+So basically now with GPT Astra, everybody is both pretty excited and also concerned about the future research directions.
+
+313
+00:32:37,120 --> 00:32:42,450
+Some of the students are saying even And all the system twos are already done, right?
+
+314
+00:32:42,500 --> 00:32:45,140
+We should only work on system one and system zero.
+
+315
+00:32:45,920 --> 00:32:52,560
+So I wonder what's your quick thought about this and how are you giving research directions to your students?
+
+316
+00:32:55,180 --> 00:32:55,580
+Okay.
+
+317
+00:32:56,400 --> 00:33:02,920
+I think actually it's good news that system two are largely solved by the frontier models.
+
+318
+00:33:03,080 --> 00:33:07,970
+But one quick thought is that the frontier model is actually not really designed for robotics.
+
+319
+00:33:08,020 --> 00:33:18,970
+There are many pure robotics problems like for example, the spatial intelligence, for example, how do we close the loop to finish a task?
+
+320
+00:33:19,020 --> 00:33:23,470
+I think these are still not really captured the attention from tier models.
+
+321
+00:33:23,520 --> 00:33:26,150
+I think there's still space to explore for system two,
+
+322
+00:33:26,200 --> 00:33:35,560
+but I think more space has already opened for system one and system zero because the system two has already helped us with the task orchestration.
+
+323
+00:33:36,500 --> 00:33:42,330
+And then, how do we make the robots actually work in the real world, in the physical world?
+
+324
+00:33:42,380 --> 00:33:44,660
+I think these are more exciting opportunities.
+
+325
+00:33:47,240 --> 00:33:47,800
+Hi, Hong.
+
+326
+00:33:48,180 --> 00:33:54,500
+I really appreciate the message of decomposing systems along time scales as opposed to functions.
+
+327
+00:33:54,960 --> 00:33:58,160
+So you showed, of course, system zero, system one, system two.
+
+328
+00:33:58,340 --> 00:34:02,550
+Hopefully in the future there would be a system negative one, a system negative two, and a system three as well.
+
+329
+00:34:02,600 --> 00:34:05,760
+But actually, the question is, I'm curious,
+
+330
+00:34:05,920 --> 00:34:14,140
+what are the implications in your mind for how you actually allocate these models or components of the same model across different sources of compute,
+
+331
+00:34:14,600 --> 00:34:20,620
+sort of on -robot compute, edge servers, on -prem compute, cloud compute, and so on?
+
+332
+00:34:21,900 --> 00:34:22,230
+Okay.
+
+333
+00:34:22,260 --> 00:34:23,550
+That's a very good question.
+
+334
+00:34:23,600 --> 00:34:24,580
+Well, in my mind,
+
+335
+00:34:24,860 --> 00:34:34,930
+I think system two should stay in the cloud because it's just too slow and also when you're dealing with a household task, it's quite open.
+
+336
+00:34:34,980 --> 00:34:37,840
+So it will be good to have a model in the cloud.
+
+337
+00:34:38,380 --> 00:34:45,810
+And for system one, when we are working on our startups,
+
+338
+00:34:45,860 --> 00:34:53,960
+we found that the places that heavily use system ones are factories, like doing service robots.
+
+339
+00:34:54,340 --> 00:35:02,580
+For those settings, I think it's quite reasonable to place the compute on the edge, for example, in the factory or in the stores.
+
+340
+00:35:02,820 --> 00:35:09,170
+And then you can have one GPU server that serves multiple robots at the same time.
+
+341
+00:35:09,220 --> 00:35:15,260
+And when your robots break, you don't have to replace the whole system back to repair.
+
+342
+00:35:15,440 --> 00:35:22,300
+You just get another robot that connects to the server, and that perfectly works.
+
+343
+00:35:22,880 --> 00:35:30,710
+So my idea is that, OK, system two stays on the cloud, system one stays on the edge, and system zero has to go with the robot itself.
+
+344
+00:35:30,760 --> 00:35:36,950
+Do you see any issues with the unified architecture in terms of distributing across the sources of compute?
+
+345
+00:35:37,000 --> 00:35:43,450
+Okay, yeah, I personally think that unified architecture is a very exciting opportunity, but in that case,
+
+346
+00:35:43,500 --> 00:35:50,820
+then we need to build smaller system tools, like just fitting onto the robot or onto the edge.
+
+347
+00:35:51,860 --> 00:35:53,510
+Thanks a lot for the talk, very, very interesting.
+
+348
+00:35:53,560 --> 00:36:01,350
+So your different systems were talking mostly about the reasoning now What about perception of proprioception?
+
+349
+00:36:01,400 --> 00:36:03,040
+So on the sensing side?
+
+350
+00:36:03,400 --> 00:36:06,790
+What latency do you think are actually necessary and what are we missing?
+
+351
+00:36:06,840 --> 00:36:15,410
+For example, the human touch runs about over 1,000 Hertz 1 millisecond latency Cameras at the moment are limited to 30 Hertz or 60 Hertz,
+
+352
+00:36:15,460 --> 00:36:19,670
+but actually we can go much faster in that So what is your take on the sensing side?
+
+353
+00:36:19,720 --> 00:36:28,650
+okay my my my intuition is that what we should design the system based on the task requirement instead of the sensors own
+
+354
+00:36:28,700 --> 00:36:39,980
+like intrinsic frequency so for example when you talk about a contact very contact rich problem probably I think a good benchmark is human

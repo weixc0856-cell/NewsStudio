@@ -1,7 +1,7 @@
 """Synthesize Chinese dub segments through the isolated CosyVoice microservice.
 
 The main project never imports CosyVoice: this script only speaks HTTP to
-http://127.0.0.1:50000 (see D:\\AI\\CosyVoice-Runtime).
+http://127.0.0.1:50000 (runtime directory: ``$COSYVOICE_DIR``, see .env).
 
 Contract (docs/配音方案.md):
     input : structured dub script JSON -- one short sentence per entry
@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 import re
 import shutil
 import subprocess
@@ -32,10 +33,12 @@ from typing import Any
 import requests
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+import env_file  # noqa: E402,F401  # 载入仓库根 .env（本机路径/密钥不进 Git）
 
 DEFAULTS: dict[str, Any] = {
-    "base_url": "http://127.0.0.1:50000",
-    "prompt_wav": r"D:\AI\CosyVoice-Runtime\assets\my_voice_5s.wav",
+    "base_url": os.environ.get("COSY_BASE_URL", "http://127.0.0.1:50000"),
+    "prompt_wav": os.environ.get("NEWS_TTS_PROMPT_WAV", ""),
     "prompt_text": "",
     "speaker": "",              # SFT preset speaker id (e.g. 中文男); overrides prompt_wav
     "min_tempo": 1.05,

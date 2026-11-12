@@ -27,12 +27,13 @@ class FilterGraphTests(unittest.TestCase):
         self.assertTrue(graph.endswith("[aout]"))
 
     def test_graph_burns_ass_when_given(self) -> None:
-        ass = Path(r"C:\tmp\subs\clip-01.ass")
+        ass = Path(tempfile.gettempdir()) / "subs" / "clip-01.ass"
         graph = dub_mix.build_filter_complex(ass)
         self.assertIn("[0:v]ass=", graph)
         self.assertIn("[v]", graph)
         # Windows drive letter must be escaped inside the filter argument.
-        self.assertIn("C\\:/tmp/subs/clip-01.ass", graph)
+        escaped = str(ass).replace("\\", "/").replace(":", "\\:")
+        self.assertIn(escaped, graph)
 
     def test_parameters_are_rendered(self) -> None:
         graph = dub_mix.build_filter_complex(None, {"duck_ratio": 12.5,

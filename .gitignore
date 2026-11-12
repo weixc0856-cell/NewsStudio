@@ -1,3 +1,8 @@
+# ---------------------------------------------------------------------------
+# 本仓库要能安全推送到远程：不提交任何本机路径、密钥或媒体文件。
+# 真实路径/密钥写在 .env（已忽略），模板见 .env.example。
+# ---------------------------------------------------------------------------
+
 # Python-generated files
 __pycache__/
 *.py[oc]
@@ -9,6 +14,14 @@ wheels/
 # Virtual environments
 .venv/
 
+# Local env config: real paths and keys stay in .env, only the template is tracked
+.env
+.env.*
+!.env.example
+
+# Run logs (command lines contain absolute paths)
+*.log
+
 # Downloaded media: never commit (large files)
 downloads/
 *.mkv
@@ -17,19 +30,30 @@ downloads/
 *.mov
 *.avi
 *.flv
+*.m4a
+*.mp3
+*.opus
+*.flac
+*.wav
 *.part
 *.ytdl
 *.tmp
 
-# Interrupted yt-dlp manifests / temp logs
+# Media inputs that only live on this machine (keep the README next to them)
+voice/*
+!voice/README.md
+music/*
+!music/README.md
+
+# Interrupted yt-dlp manifests
 .tmpvid.*
 *.tmpvid.*
 
-# Auto-clip renders: keep JSON/SRT/ASS/logs, ignore video files only
-clips/**/*.mp4
-clips/**/*.mkv
-clips/**/*.webm
-clips/**/*.tmp.mp4
+# Raw caption streams (YouTube json3 / whisper dumps): intermediates, not deliverables
+*.json3
+
+# Auto-clip workspace: renders, manifests, logs are per-machine artifacts
+clips/
 
 # Runtime state: pipeline lock, service logs, per-run scratch
 .runtime/
@@ -39,6 +63,13 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-# Dub renders: keep scripts/manifests, ignore audio and video artifacts
-dub/**/*.wav
-dub/**/*.mp4
+# News production outputs: media never enters git;
+# default root is <repo>/output, override with NEWS_OUTPUT_ROOT
+output/
+news/episodes/
+news/**/out/
+news/**/work/
+news/**/*.mp4
+news/**/*.wav
+news/**/*.png
+news/**/*.jpg

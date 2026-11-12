@@ -1,0 +1,2495 @@
+1
+00:00:02,720 --> 00:00:06,214
+Well, welcome to all of you out in cyberspace.
+
+2
+00:00:06,264 --> 00:00:16,430
+Uh, and I have a wonderful collection of colleagues here in physical space and we're going to have an interesting conversation with Jensen Hang.
+
+3
+00:00:16,480 --> 00:00:20,249
+Um, I would waste your time by introducing him.
+
+4
+00:00:20,299 --> 00:00:30,430
+You know, everybody knows Jensen, but um what you may not know is that he he started from fairly humble roots.
+
+5
+00:00:30,480 --> 00:00:33,219
+Your mom was a school teacher.
+
+6
+00:00:33,269 --> 00:00:36,052
+Your dad was a petroleum engineer.
+
+7
+00:00:36,102 --> 00:00:45,230
+You and I share one thing in common is that's we both started off our first job was running a dishwashing machine in a res in a restaurant.
+
+8
+00:00:45,280 --> 00:00:48,560
+Denny's, you you What was What was your restaurant?
+
+9
+00:00:48,610 --> 00:00:53,171
+It was at Mount Rushmore when all the you but you did better than I did.
+
+10
+00:00:53,221 --> 00:01:02,573
+He became he became a uh bus boy and later a waiter and then I guess led him to Nvidia the head of Nidia.
+
+11
+00:01:02,623 --> 00:01:05,569
+You know it's a remarkable story.
+
+12
+00:01:05,619 --> 00:01:08,989
+It's I think it's the quitessential American story.
+
+13
+00:01:09,039 --> 00:01:09,409
+Yes.
+
+14
+00:01:09,439 --> 00:01:17,551
+that uh you know we welcome people who come with just energy and imagination and creativity and
+
+15
+00:01:17,601 --> 00:01:24,606
+they make an astounding success and thank you congratulations and thank you thank you for joining us.
+
+16
+00:01:24,656 --> 00:01:33,895
+We're going to uh we're going to have a very interesting conversation today colleagues and u you know it's um Nvidia is
+
+17
+00:01:33,945 --> 00:01:43,280
+not only a huge economic success but it's a national security platform and I think we want to talk about that today.
+
+18
+00:01:43,330 --> 00:01:52,830
+I've been looking at your um at your website and you do talk about uh Nvidia's being a platform.
+
+19
+00:01:52,880 --> 00:01:54,830
+What does that mean?
+
+20
+00:01:54,880 --> 00:01:55,766
+A platform.
+
+21
+00:01:55,816 --> 00:02:00,290
+A platform is something that you build other things upon.
+
+22
+00:02:00,340 --> 00:02:07,303
+Nvidia is the largest pure play technology company the United States has ever seen.
+
+23
+00:02:07,353 --> 00:02:10,766
+In fact, we're the largest pure play technology company the world's ever known.
+
+24
+00:02:10,816 --> 00:02:14,636
+We create technology out of nothing.
+
+25
+00:02:14,686 --> 00:02:18,829
+Our final product is pure technology.
+
+26
+00:02:18,879 --> 00:02:25,796
+And in order to use it, you have to create software and applications for various industries above it.
+
+27
+00:02:25,846 --> 00:02:31,593
+You know, if you look at most of the technology companies today, some of it could be in social media, some of it could be in e-commerce,
+
+28
+00:02:31,643 --> 00:02:38,302
+some of it could be in information search and and these are all amazing technology companies whose business models are something else.
+
+29
+00:02:38,352 --> 00:02:40,892
+Our business model is purely technology.
+
+30
+00:02:40,942 --> 00:02:47,911
+Now the way that that AI works and and uh our technology works is that in the final analysis the
+
+31
+00:02:47,961 --> 00:02:53,730
+technology platform is built in layers and that's one of the reasons why we think of it as a platform.
+
+32
+00:02:53,780 --> 00:02:55,710
+You're standing on top of it.
+
+33
+00:02:55,760 --> 00:02:59,941
+An application or an industry stands on top of that platform.
+
+34
+00:02:59,991 --> 00:03:02,740
+That platform starts with energy on the bottom.
+
+35
+00:03:02,790 --> 00:03:10,294
+One of the reasons why why uh this administration uh has made such a huge difference right away if it's is this pro-
+
+36
+00:03:10,344 --> 00:03:17,038
+energy growth initiative its attitude about energy is that if we don't have energy we can't enable this new
+
+37
+00:03:17,088 --> 00:03:25,070
+industry to thrive it is absolutely true so layer one is energy layer two are essentially the chips and systems
+
+38
+00:03:25,120 --> 00:03:31,335
+but the chips that's where Nvidia comes in layer three is a whole bunch of software and we build a
+
+39
+00:03:31,385 --> 00:03:35,933
+whole bunch of software on top of our chips and we're well known for this piece of software called CUDA.
+
+40
+00:03:35,983 --> 00:03:41,178
+But there's hundreds of different pieces of software that we create that enables people to do
+
+41
+00:03:41,228 --> 00:03:45,310
+AI for different fields of science or language or images or whatever it happens to be,
+
+42
+00:03:45,360 --> 00:03:47,310
+robotics or manufacturing and such.
+
+43
+00:03:47,360 --> 00:03:49,767
+But that third layer is called infrastructure.
+
+44
+00:03:49,817 --> 00:03:55,737
+Basically software now people historically have thought of infrastructure really as cloud.
+
+45
+00:03:55,787 --> 00:04:01,294
+But increasingly it's really important to realize that infrastructure includes land, power,
+
+46
+00:04:01,344 --> 00:04:07,384
+shell because these are and I'll speak about this in a second that this
+
+47
+00:04:07,434 --> 00:04:12,350
+industry spawn another industry altogether and I'll come back to that but the third
+
+48
+00:04:12,400 --> 00:04:17,712
+layer is basically infrastructure and that infrastructure includes financial services because it takes an
+
+49
+00:04:17,762 --> 00:04:23,025
+enormous amount of capital to do what we do and historically all of that software.
+
+50
+00:04:23,075 --> 00:04:29,564
+the layer above that and this is where people largely focus on when they talk about AI which is the AI models.
+
+51
+00:04:29,614 --> 00:04:35,226
+This is the revolutionary of course Chad GPT uh incredible work that anthropic does
+
+52
+00:04:35,276 --> 00:04:41,887
+with cloud and uh Google does with Gemini and uh what XAI does with Grock.
+
+53
+00:04:41,937 --> 00:04:52,000
+But the important thing to realize those are four of the one and a half million AI models in the world.
+
+54
+00:04:52,050 --> 00:05:02,240
+M AI is not just intelligence that understands English or language, but it's AI that understands genes,
+
+55
+00:05:02,290 --> 00:05:09,428
+proteins, chemicals, the laws of physics, AI that understands quantum.
+
+56
+00:05:09,478 --> 00:05:15,858
+AI that understands physical articulation, otherwise known as robotics.
+
+57
+00:05:15,908 --> 00:05:23,470
+AI that understands patterns across long sequence of time, financial services,
+
+58
+00:05:23,520 --> 00:05:29,267
+AI that understand longitudinally across multiple modalities, healthcare.
+
+59
+00:05:29,317 --> 00:05:33,697
+And so AI has all of these different reaches and domains.
+
+60
+00:05:33,747 --> 00:05:35,570
+We talk about this one area.
+
+61
+00:05:35,620 --> 00:05:39,789
+We just have to be very careful to understand that AI AC spans
+
+62
+00:05:39,839 --> 00:05:47,950
+basically every form of information across every field of science across every single industry.
+
+63
+00:05:48,000 --> 00:05:50,717
+One and a half million AIs around the world.
+
+64
+00:05:50,767 --> 00:05:56,149
+On top of that are all the applications and we never should forget that in the final
+
+65
+00:05:56,199 --> 00:06:07,790
+analysis these AI models are technologies but technologies are about enabling application and use whether you're in healthcare
+
+66
+00:06:07,840 --> 00:06:14,825
+you know you could be in entertainment manufacturing self-driving cars transportation each one of these industries have
+
+67
+00:06:14,875 --> 00:06:23,141
+AIs that deeply affect them and these are the five layer stack Nvidia is at the lower level,
+
+68
+00:06:23,191 --> 00:06:24,952
+the platform level.
+
+69
+00:06:25,002 --> 00:06:28,034
+The reason why we say that, you know,
+
+70
+00:06:28,084 --> 00:06:33,722
+we're AI company that works with every single AI company in the world is because we're the platform by which
+
+71
+00:06:33,772 --> 00:06:40,030
+we are able to work with all of these technology companies and all these application companies across all these industries.
+
+72
+00:06:40,080 --> 00:06:43,184
+And so that is a platform that we created.
+
+73
+00:06:43,234 --> 00:06:46,134
+the mode that people describe, not so much a mode,
+
+74
+00:06:46,184 --> 00:06:52,644
+but basically the the language by which all of these different applications and these
+
+75
+00:06:52,694 --> 00:06:58,916
+different technologies speak to us is an architecture we invented 25 years ago called CUDA.
+
+76
+00:06:58,966 --> 00:07:07,709
+And on top of that CUDA libraries, a whole bunch of algorithms that we invented over the years and that is basically Nvidia's platform.
+
+77
+00:07:07,759 --> 00:07:13,869
+In the end, we don't build self-driving cars, but we work with every single self-driving car company in the world.
+
+78
+00:07:13,919 --> 00:07:20,429
+In the end, we don't discover drugs, but we just have we work with every single drug discovery company in the world.
+
+79
+00:07:20,479 --> 00:07:23,401
+We're the platform by which they build their things.
+
+80
+00:07:23,451 --> 00:07:24,910
+We're a platform company.
+
+81
+00:07:24,960 --> 00:07:32,689
+I I think half of I had a half a dozen young kids come up to me today say Nvidia gave them a better gaming experience.
+
+82
+00:07:32,739 --> 00:07:42,707
+I mean you all here before I before we invented the AI industry the first industry we created is the modern gaming industry.
+
+83
+00:07:42,757 --> 00:07:43,156
+Yeah.
+
+84
+00:07:43,186 --> 00:07:44,406
+You you don't know this.
+
+85
+00:07:44,456 --> 00:07:45,390
+I'm very proud of this.
+
+86
+00:07:45,440 --> 00:07:49,070
+Nvidia is the world's largest gaming platform.
+
+87
+00:07:49,120 --> 00:07:49,490
+Yeah.
+
+88
+00:07:49,520 --> 00:07:55,422
+And probably didn't know that there that's how most of the kids were talking to me about that today.
+
+89
+00:07:55,472 --> 00:07:58,918
+I want to see a 300 million active users.
+
+90
+00:07:58,968 --> 00:08:02,873
+Yeah. a 100 million of them Nintendo Switch.
+
+91
+00:08:02,923 --> 00:08:03,390
+Yeah.
+
+92
+00:08:03,440 --> 00:08:05,230
+Nvidia's in that.
+
+93
+00:08:05,280 --> 00:08:05,710
+Okay.
+
+94
+00:08:05,760 --> 00:08:07,310
+So, let me ask you.
+
+95
+00:08:07,360 --> 00:08:12,072
+You said something um recently that was quite provocative.
+
+96
+00:08:12,122 --> 00:08:21,102
+You you said that China was winning the AI race, the AI competition.
+
+97
+00:08:21,152 --> 00:08:32,712
+Um um I know that you've got a powerful, you know, competitor in Huawei and Huawei has a lot of advantages you don't have.
+
+98
+00:08:32,762 --> 00:08:36,428
+Why don't you describe this competition?
+
+99
+00:08:36,478 --> 00:08:38,590
+Are we really losing?
+
+100
+00:08:38,640 --> 00:08:40,190
+It was a very good headline.
+
+101
+00:08:40,240 --> 00:08:41,416
+It was a great headline.
+
+102
+00:08:41,466 --> 00:08:41,766
+Yeah.
+
+103
+00:08:41,760 --> 00:08:45,789
+And and u apparently caught up of a lot of attention.
+
+104
+00:08:45,839 --> 00:08:54,615
+uh uh the the as you know with headlines the disclaimer part uh the foundation part was left out of the
+
+105
+00:08:54,665 --> 00:09:01,105
+headline but but the the way to think about that is that let me just handicap it right now if you look
+
+106
+00:09:01,155 --> 00:09:06,909
+at AI and go back to the first thing that we said AI is a five layer cake let's just always simplify
+
+107
+00:09:06,959 --> 00:09:10,230
+it's not it's not quite this simplistic but let's simplify AI
+
+108
+00:09:10,280 --> 00:09:20,055
+into a five layer cake energy chips infrastructure models and applications.
+
+109
+00:09:20,105 --> 00:09:27,312
+Okay, I just and let's hand the capital across the from top from bottom to top at the lowest level energy.
+
+110
+00:09:27,362 --> 00:09:30,909
+China has twice the amount of energy we have as a nation.
+
+111
+00:09:30,959 --> 00:09:37,822
+I want to ask about that twice as much energy as we have as a nation and there our economy is larger than theirs.
+
+112
+00:09:37,872 --> 00:09:39,906
+Makes no sense to me.
+
+113
+00:09:39,956 --> 00:09:44,734
+We also know that one of the most one of the most important initiatives,
+
+114
+00:09:44,784 --> 00:09:51,580
+one of the most important policies of this administration and there was the first thing that President Trump said to me when we met is listen,
+
+115
+00:09:51,630 --> 00:09:54,146
+we need to reindustrialize America.
+
+116
+00:09:54,196 --> 00:09:56,569
+We need to unshore manufacturing again.
+
+117
+00:09:56,619 --> 00:10:01,498
+We need to make we need to help America make things again.
+
+118
+00:10:01,548 --> 00:10:03,769
+It's going to create jobs.
+
+119
+00:10:03,819 --> 00:10:09,874
+that part of the economy has been outshored on you offshored uh and completely gutted the United States.
+
+120
+00:10:09,924 --> 00:10:13,162
+We need to bring that back and he needs my help to do so.
+
+121
+00:10:13,212 --> 00:10:18,190
+And so so that entire sector of the economy is
+
+122
+00:10:18,240 --> 00:10:25,229
+missing and however without energy how do we build chip plants,
+
+123
+00:10:25,279 --> 00:10:30,137
+computer system plants and these AI data centers we call them AI factories.
+
+124
+00:10:30,187 --> 00:10:35,469
+We're building simultaneously three different types of factories in the United States.
+
+125
+00:10:35,519 --> 00:10:39,710
+Chip factories, supercomputer factories, and AI factories.
+
+126
+00:10:39,760 --> 00:10:41,476
+They all require energy.
+
+127
+00:10:41,526 --> 00:10:42,795
+Every single one of them.
+
+128
+00:10:42,845 --> 00:10:46,006
+And so on the one hand, we want to re-industrialize the United States.
+
+129
+00:10:46,056 --> 00:10:48,408
+How do you do that without energy?
+
+130
+00:10:48,458 --> 00:10:51,889
+And so the fact that we vilified energy for so long,
+
+131
+00:10:51,939 --> 00:11:00,662
+President Trump sticking his neck out and making taking it on the chin and helping this helping the country realize that energy
+
+132
+00:11:00,712 --> 00:11:06,698
+is necessary for our growth is one of the the really one of the greatest things he's done right off the bat.
+
+133
+00:11:06,748 --> 00:11:14,430
+And so now at the energy level, back to that stack, we're, you know, 50%.
+
+134
+00:11:14,480 --> 00:11:16,528
+And they're growing straight up.
+
+135
+00:11:16,578 --> 00:11:19,390
+We're kind of flat right now.
+
+136
+00:11:19,440 --> 00:11:21,478
+And so number one, uh, energy.
+
+137
+00:11:21,528 --> 00:11:23,247
+Number two, chips.
+
+138
+00:11:23,297 --> 00:11:25,950
+We're generations ahead.
+
+139
+00:11:26,000 --> 00:11:27,657
+We are generations ahead on chips.
+
+140
+00:11:27,707 --> 00:11:29,798
+And I think everybody recognizes that.
+
+141
+00:11:29,848 --> 00:11:31,885
+Number three, infrastructure.
+
+142
+00:11:31,935 --> 00:11:43,469
+If you want to build a data center here in the United States, from breaking ground to standing up a AI supercomputer is probably about three years.
+
+143
+00:11:43,519 --> 00:11:46,830
+They can build a hospital in a weekend.
+
+144
+00:11:46,880 --> 00:11:48,727
+That's a real challenge.
+
+145
+00:11:48,777 --> 00:11:54,613
+And so at the infrastructure le layer, their velocity of building things because they are builders.
+
+146
+00:11:54,663 --> 00:11:58,818
+Their velocity of building things is extraordinarily high.
+
+147
+00:11:58,868 --> 00:12:02,772
+Now, really quickly on on chips, we're several generations ahead.
+
+148
+00:12:02,822 --> 00:12:04,614
+But don't be complacent.
+
+149
+00:12:04,664 --> 00:12:08,910
+Remember, semiconductors is a manufacturing process.
+
+150
+00:12:08,960 --> 00:12:13,990
+Anybody who thinks China can't manufacture is missing a big idea.
+
+151
+00:12:14,040 --> 00:12:20,270
+But China discounts energy costs for a chip company by 50%.
+
+152
+00:12:20,320 --> 00:12:20,830
+That's right.
+
+153
+00:12:20,880 --> 00:12:26,405
+They they provide free transportation for employees to come out to the factory.
+
+154
+00:12:26,455 --> 00:12:26,990
+That's right.
+
+155
+00:12:27,040 --> 00:12:29,267
+I mean, you don't you can't do that.
+
+156
+00:12:29,317 --> 00:12:34,169
+I mean, our energy cost is more expensive than theirs in the first place and then they discounted 50%.
+
+157
+00:12:34,219 --> 00:12:38,662
+And so, it's probably we're probably call it four to eight times the cost.
+
+158
+00:12:38,712 --> 00:12:39,012
+Yeah.
+
+159
+00:12:39,040 --> 00:12:45,487
+So, tell me, how do you feel about this this Jake? this great competition with China.
+
+160
+00:12:45,537 --> 00:12:52,984
+I mean, the the the the government is putting enormous resources underneath their champion.
+
+161
+00:12:53,034 --> 00:12:56,496
+We don't do that in this country, you know.
+
+162
+00:12:56,546 --> 00:12:58,750
+Uh how do you feel about that?
+
+163
+00:12:58,800 --> 00:13:01,794
+Well, before I get there, don't don't let me not answer that question.
+
+164
+00:13:01,844 --> 00:13:02,910
+I'm dying to answer it.
+
+165
+00:13:02,960 --> 00:13:05,214
+But let me handicap the next two layers.
+
+166
+00:13:05,264 --> 00:13:14,859
+The large the language the model layer the model layer United States frontier models United are our frontier models
+
+167
+00:13:14,909 --> 00:13:19,390
+are unquestionably world class we are probably call it six
+
+168
+00:13:19,440 --> 00:13:27,150
+months ahead however out of the 1.4 4 million models,
+
+169
+00:13:27,200 --> 00:13:29,795
+most of them are open source.
+
+170
+00:13:29,845 --> 00:13:33,550
+China is well ahead, way ahead on open source.
+
+171
+00:13:33,600 --> 00:13:40,270
+Now, the reason why open source is so important is because without open source, startups can't thrive.
+
+172
+00:13:40,320 --> 00:13:42,711
+University researchers can't do research.
+
+173
+00:13:42,761 --> 00:13:44,233
+You can't teach AI.
+
+174
+00:13:44,283 --> 00:13:46,382
+Scientists can't use AI.
+
+175
+00:13:46,432 --> 00:13:57,789
+Basically all of the industry around the your economy have no ability to fundamentally advance themselves unless you have open source.
+
+176
+00:13:57,839 --> 00:13:59,469
+Without Linux, where would we be?
+
+177
+00:13:59,519 --> 00:14:08,110
+Without Kubernetes, you know, without PyTorch, all of these different types of technologies that made AI thrive are all open source.
+
+178
+00:14:08,160 --> 00:14:10,589
+They are well ahead of us on open source.
+
+179
+00:14:10,639 --> 00:14:13,350
+And then the layer above that applications.
+
+180
+00:14:13,400 --> 00:14:21,950
+If you were to do a poll of of um uh their society and ours and you ask them,
+
+181
+00:14:22,000 --> 00:14:26,349
+is AI likely to do more good than harm?
+
+182
+00:14:26,399 --> 00:14:31,115
+They're going to say in their case, 80% would say AI will do more good than harm.
+
+183
+00:14:31,165 --> 00:14:34,222
+In our case, it'd be the other way around.
+
+184
+00:14:34,272 --> 00:14:39,310
+And so that tells you something that's very, very important. socially.
+
+185
+00:14:39,360 --> 00:14:50,247
+Socially, we need to be careful not to describe AI in these science fiction movie ways of describing AI and and causing people so much concern.
+
+186
+00:14:50,297 --> 00:14:54,144
+Um, we want to be concerned, but we also want to be practical.
+
+187
+00:14:54,194 --> 00:14:57,168
+AI is about automation and that area.
+
+188
+00:14:57,218 --> 00:15:02,580
+I think that we need to be careful not to fall behind in the application and the
+
+189
+00:15:02,630 --> 00:15:12,430
+diffusion of AI because in the end whoever applies the technology first and most wins that industrial revolution.
+
+190
+00:15:12,480 --> 00:15:17,139
+As you know, electricity was invented discover invented in the UK,
+
+191
+00:15:17,189 --> 00:15:24,078
+but the United States applied it faster more broadly and as a result, look where we are.
+
+192
+00:15:24,128 --> 00:15:28,226
+And so, we have to be a little mindful and so anyways, I just handicapped that stack.
+
+193
+00:15:28,276 --> 00:15:28,621
+Okay?
+
+194
+00:15:28,651 --> 00:15:35,128
+And I don't think it's it's important when you're looking at AI not to see it as a holistic thing.
+
+195
+00:15:35,178 --> 00:15:37,870
+It's really not about chat GPT versus Deepseek.
+
+196
+00:15:37,920 --> 00:15:42,031
+You have to look at it across all of the stacks and across all of the industries.
+
+197
+00:15:42,081 --> 00:15:43,062
+Does that make sense?
+
+198
+00:15:43,112 --> 00:15:46,909
+It's a little bit more complicated than one simple answer,
+
+199
+00:15:46,959 --> 00:15:56,029
+but do you feel you have a level playing field up against China putting their resources under Huawei?
+
+200
+00:15:56,079 --> 00:16:04,169
+Uh I f first of all I America's
+
+201
+00:16:04,219 --> 00:16:11,593
+technology industry just as our financial financial services
+
+202
+00:16:11,643 --> 00:16:21,630
+ind industry our military our technology industry we can all agree are the mightiest in the world.
+
+203
+00:16:21,680 --> 00:16:32,750
+I am part of one of the mightiest technology, mightiest industries anyone in history has ever seen.
+
+204
+00:16:32,800 --> 00:16:37,310
+We have going toe-to-toe against anyone.
+
+205
+00:16:37,360 --> 00:16:40,474
+The American technology industry has nothing to fear.
+
+206
+00:16:40,524 --> 00:16:41,642
+We are mighty.
+
+207
+00:16:41,692 --> 00:16:42,505
+We're fast.
+
+208
+00:16:42,555 --> 00:16:43,625
+We're inventive.
+
+209
+00:16:43,675 --> 00:16:46,430
+We'll take anybody on.
+
+210
+00:16:46,480 --> 00:16:50,558
+However, we can't concede the market to them.
+
+211
+00:16:50,608 --> 00:16:54,382
+As you know, at the moment, Nvidia has been banned from going to China.
+
+212
+00:16:54,432 --> 00:16:57,119
+Not to mention, China has banned Nvidia going to China.
+
+213
+00:16:57,169 --> 00:17:05,869
+So, so we're we're this I think we're the first company in history that has been banned on both sides.
+
+214
+00:17:05,919 --> 00:17:12,411
+Um, and so, so, uh, whoever, whoever banned us, uh, going to China,
+
+215
+00:17:12,461 --> 00:17:18,708
+um, uh, them and China, uh, agree that Nvidia should not go to.
+
+216
+00:17:18,758 --> 00:17:22,033
+Now, of course, I'm being a little I'm being a little cute here,
+
+217
+00:17:22,083 --> 00:17:27,976
+and I'll I'll be a little bit more nuanced here in a second, but at the moment, we're simply not competing in China.
+
+218
+00:17:28,026 --> 00:17:29,369
+Now, what's going on?
+
+219
+00:17:29,419 --> 00:17:36,830
+We have conceded essentially the second largest AI market, the second largest technology market in the world.
+
+220
+00:17:36,880 --> 00:17:44,935
+I know China will it's not somebody has said to me well yeah okay well we're not in China but we're going to grow somewhere else.
+
+221
+00:17:44,985 --> 00:17:48,350
+You're not going to replace China.
+
+222
+00:17:48,400 --> 00:17:53,812
+It's just as the world wanting to sell to America and they want to export to America.
+
+223
+00:17:53,862 --> 00:17:57,807
+If they don't export to America, you're not going to replace United States.
+
+224
+00:17:57,857 --> 00:17:59,995
+We are singular in the world.
+
+225
+00:18:00,045 --> 00:18:01,776
+We are absolutely singular.
+
+226
+00:18:01,826 --> 00:18:07,662
+And so in the case of China, um we shouldn't concede the entire market to them.
+
+227
+00:18:07,712 --> 00:18:13,053
+They're formidable, but conceding that entire market, uh we ought to go compete for it.
+
+228
+00:18:13,103 --> 00:18:22,110
+Having said that, we should also acknowledge that Huawei is one of the most formidable technology companies the world has ever seen.
+
+229
+00:18:22,160 --> 00:18:31,607
+They deserve, although they have a lot of support, um, whatever support they have, they deserve all of the respect that everybody ought to give them.
+
+230
+00:18:31,657 --> 00:18:33,024
+We compete with this company.
+
+231
+00:18:33,074 --> 00:18:34,272
+They're formidable.
+
+232
+00:18:34,322 --> 00:18:35,375
+They're agile.
+
+233
+00:18:35,425 --> 00:18:38,325
+They move incredibly fast.
+
+234
+00:18:38,375 --> 00:18:45,390
+We said if United States was not in China, China's AI industry would be set back.
+
+235
+00:18:45,440 --> 00:18:46,430
+Yeah.
+
+236
+00:18:46,480 --> 00:18:47,863
+Absolutely has not happened.
+
+237
+00:18:47,913 --> 00:18:53,522
+As a result, their semiconductor industry has double double double.
+
+238
+00:18:53,572 --> 00:19:00,434
+You know, the semiconductor industry in the west around the world is growing at 20 30% per year.
+
+239
+00:19:00,484 --> 00:19:05,335
+Growing 20 30% per year compounded versus doubling every year compounded.
+
+240
+00:19:05,385 --> 00:19:08,749
+Doesn't take long to catch up.
+
+241
+00:19:08,799 --> 00:19:13,678
+But, you know, they're starting on second base and we're just going up to the batters box.
+
+242
+00:19:13,728 --> 00:19:15,777
+You know, they've got a real advantage.
+
+243
+00:19:15,827 --> 00:19:18,590
+And that means we need to think about this.
+
+244
+00:19:18,640 --> 00:19:27,172
+Can I ask ask you we at the G20 summit uh Lee Kashang you know the premier was there and
+
+245
+00:19:27,222 --> 00:19:35,180
+he was offering um opportunities for countries to be participants
+
+246
+00:19:35,230 --> 00:19:40,451
+with China on AI and we didn't even send a delegation.
+
+247
+00:19:40,501 --> 00:19:43,710
+It doesn't feel like we're in the game.
+
+248
+00:19:43,760 --> 00:19:49,950
+They're smart about um technology proliferation.
+
+249
+00:19:50,000 --> 00:19:50,670
+Yeah.
+
+250
+00:19:50,720 --> 00:20:00,190
+If we apply if we use 5G as an example, they realize 5G is technology that's also a platform because on top of 5G,
+
+251
+00:20:00,240 --> 00:20:02,893
+you build all kinds of services on top of it.
+
+252
+00:20:02,943 --> 00:20:11,877
+Well, if you get there first, wherever you get first, if you get there first, just as Nvidia, I was there 25 years first.
+
+253
+00:20:11,927 --> 00:20:15,629
+And so I had you know for a long time nobody paid me any never mind.
+
+254
+00:20:15,679 --> 00:20:20,430
+So I had lots and lots of time to build up all these ecosystems and applications and
+
+255
+00:20:20,480 --> 00:20:26,114
+relationships and ecosystems and I connected all this stuff together in all these different fields of industry.
+
+256
+00:20:26,164 --> 00:20:27,950
+I had 25 years to do it.
+
+257
+00:20:28,000 --> 00:20:38,493
+In the case of Huawei with 5G they were we were they were completely through policy completely isolated people thought in China.
+
+258
+00:20:38,543 --> 00:20:42,129
+So they had a billion phone users all but to themselves.
+
+259
+00:20:42,179 --> 00:20:44,590
+It gave them the opportunity to grow scale.
+
+260
+00:20:44,640 --> 00:20:51,329
+They exported the technology to all of the countries that belt and road and now there's AI belt and road.
+
+261
+00:20:51,379 --> 00:20:59,740
+And so they'll definitely per diffuse the Chinese technology as quickly as possible because they understand that the sooner you get there,
+
+262
+00:20:59,790 --> 00:21:03,770
+the sooner you build the ecosystem on top, the sooner you become a sticky,
+
+263
+00:21:03,820 --> 00:21:09,463
+you become sticky, you become essential part, a dependent part of that ecosystem.
+
+264
+00:21:09,513 --> 00:21:14,190
+Tell me about the Chinese ecosystem they're trying to create.
+
+265
+00:21:14,240 --> 00:21:23,257
+Obviously, it is it's deep and it's robust and that it has a physical as well as a technological and economic dimension.
+
+266
+00:21:23,307 --> 00:21:24,590
+How do you look at that?
+
+267
+00:21:24,640 --> 00:21:26,883
+Take a step back again.
+
+268
+00:21:26,933 --> 00:21:35,629
+Remember, I think it's like nine out of the 10 top science and technology schools in the world are now in China.
+
+269
+00:21:35,679 --> 00:21:39,307
+They lead in science and technology in many different fields.
+
+270
+00:21:39,356 --> 00:21:43,950
+This has completely flipped in the last half to a decade.
+
+271
+00:21:44,000 --> 00:21:45,796
+We used to lead most of them.
+
+272
+00:21:45,846 --> 00:21:47,747
+Now they lead most of them.
+
+273
+00:21:47,797 --> 00:21:53,470
+They have a large population of highly qualified students.
+
+274
+00:21:53,520 --> 00:21:54,649
+Number one.
+
+275
+00:21:54,699 --> 00:22:01,310
+Number two, 50% of the world's AI researchers are Chinese.
+
+276
+00:22:01,360 --> 00:22:10,030
+Third, 70% of last year's AI patents are published by China.
+
+277
+00:22:10,080 --> 00:22:17,390
+The ecosystem of AI in China is vibrant, rich, incredibly innovative.
+
+278
+00:22:17,440 --> 00:22:17,840
+Yeah.
+
+279
+00:22:17,880 --> 00:22:18,280
+Yeah.
+
+280
+00:22:18,320 --> 00:22:20,254
+They work incredibly hard.
+
+281
+00:22:20,304 --> 00:22:24,190
+This is a country with an enormous might.
+
+282
+00:22:24,240 --> 00:22:27,470
+So that is the ecosystem of software developers.
+
+283
+00:22:27,520 --> 00:22:27,950
+Yeah.
+
+284
+00:22:28,000 --> 00:22:33,758
+Now that layer, as I just mentioned, the model and the application layer,
+
+285
+00:22:33,808 --> 00:22:39,081
+all of these scientists, they're sitting at the model and the application layer.
+
+286
+00:22:39,131 --> 00:22:48,074
+And now they're going to take that capability because United States is no longer participating in China.
+
+287
+00:22:48,124 --> 00:22:49,410
+We've left China.
+
+288
+00:22:49,460 --> 00:22:51,390
+We're evacuated that market.
+
+289
+00:22:51,440 --> 00:22:53,056
+We've conceded that market.
+
+290
+00:22:53,106 --> 00:22:56,109
+And so now they they've got to go build their own.
+
+291
+00:22:56,159 --> 00:23:01,351
+So using these AI researchers, all of this incredible computer scientists that they have,
+
+292
+00:23:01,401 --> 00:23:06,590
+their richness of software capability, and they're going to go build their own complete stack.
+
+293
+00:23:06,640 --> 00:23:11,629
+Once they build that entire complete stack, they'll export it.
+
+294
+00:23:11,679 --> 00:23:12,270
+Yeah.
+
+295
+00:23:12,320 --> 00:23:13,840
+As quickly as you could imagine.
+
+296
+00:23:13,890 --> 00:23:20,749
+And this is the the world what we will find someday if we don't activate will be buyers, not sellers.
+
+297
+00:23:20,799 --> 00:23:22,190
+That's right.
+
+298
+00:23:22,240 --> 00:23:24,141
+Let me ask you now.
+
+299
+00:23:24,191 --> 00:23:26,458
+You're in Washington DC.
+
+300
+00:23:26,508 --> 00:23:37,685
+I know you don't look forward to those opportunities, but um we're um it's my only opportunity to wear a suit and a tie.
+
+301
+00:23:37,735 --> 00:23:41,963
+Um but but let me ask because um you know,
+
+302
+00:23:42,013 --> 00:23:50,849
+we're um we're in we're involved in something I've not seen before in in my 45 years here.
+
+303
+00:23:50,899 --> 00:23:54,714
+We we've delved into industrial policy.
+
+304
+00:23:54,764 --> 00:24:01,647
+I always thought industrial policy was something that we shouldn't be doing in this country.
+
+305
+00:24:01,697 --> 00:24:01,997
+Now,
+
+306
+00:24:01,984 --> 00:24:11,070
+the Biden administration decided that they would define what they would allow you to sell
+
+307
+00:24:11,120 --> 00:24:16,749
+and they have this thing that they called diffusion that they were trying to manage.
+
+308
+00:24:16,799 --> 00:24:18,838
+Now you get the Trump administration.
+
+309
+00:24:18,888 --> 00:24:26,459
+They don't have that, but they want a golden share and they want a percent of the cut, you know, on how you're doing business.
+
+310
+00:24:26,509 --> 00:24:33,629
+Tell me about how you look at this this industrial policy that we have in Washington.
+
+311
+00:24:33,679 --> 00:24:38,710
+I do agree that that um industrial policy uh should
+
+312
+00:24:38,760 --> 00:24:47,950
+should intervene when a dramatic action needs to be taken.
+
+313
+00:24:48,000 --> 00:24:59,642
+Um, I also would say that President Trump walked into a circum into a situation where dramatic actions needed to be taken.
+
+314
+00:24:59,692 --> 00:25:07,347
+The first dramatic action that needed to be taken is to reverse the mistakes
+
+315
+00:25:07,397 --> 00:25:14,910
+that have been made in energy growth over the course of the last decade.
+
+316
+00:25:14,960 --> 00:25:21,310
+We are we have we have done our country a great disservice.
+
+317
+00:25:21,360 --> 00:25:25,070
+There there are no new industries you can grow without energy.
+
+318
+00:25:25,120 --> 00:25:25,790
+Yeah.
+
+319
+00:25:25,840 --> 00:25:26,670
+Electricity.
+
+320
+00:25:26,720 --> 00:25:27,230
+That's right.
+
+321
+00:25:27,280 --> 00:25:33,869
+We need electricity because otherwise sure we could all be in the services industry and as you know
+
+322
+00:25:33,919 --> 00:25:44,261
+the service industry only needs calories but manufacturing industry needs electricities and so uh we need energy number one.
+
+323
+00:25:44,311 --> 00:25:48,830
+Number two we do need to if we want to if we want to fix our social
+
+324
+00:25:48,880 --> 00:25:56,339
+issues domestic social issues we have to create prosperity not just for people with PhDs and college degrees.
+
+325
+00:25:56,389 --> 00:26:01,310
+We have to create prosperity for every segment of the economy.
+
+326
+00:26:01,360 --> 00:26:08,926
+And so the largest segment of the economy is manufacturing and we've offshored that too for too long for 20 years.
+
+327
+00:26:08,976 --> 00:26:12,891
+We got to bring that back and we have the ability to do so.
+
+328
+00:26:12,941 --> 00:26:21,065
+And this AI industrial revolution, this flash point is precisely when we should do it because it allows us,
+
+329
+00:26:21,115 --> 00:26:26,683
+it it created a company called Nvidia, made it possible for us to have such a large ecosystem of suppliers.
+
+330
+00:26:26,733 --> 00:26:29,312
+We can encourage them to partner with us.
+
+331
+00:26:29,362 --> 00:26:34,729
+We can encourage Taiwan to partner with us to help us reindustrialize the United States.
+
+332
+00:26:34,779 --> 00:26:38,270
+And they've done so with great support.
+
+333
+00:26:38,320 --> 00:26:42,422
+Taiwan really needs to have some acknowledgement for the incredible effort
+
+334
+00:26:42,472 --> 00:26:46,165
+that they're putting in place to help us re-industrialize the United States.
+
+335
+00:26:46,215 --> 00:26:53,070
+If not for the work that they're doing, the work that the work that Nvidia has done in Arizona wouldn't have made the progress that has.
+
+336
+00:26:53,120 --> 00:26:57,045
+I recently gave a congratulation speech at TSMC in Arizona.
+
+337
+00:26:57,095 --> 00:27:03,390
+And when I looked out into the audience, it was twothirds Taiwanese and one-third American.
+
+338
+00:27:03,440 --> 00:27:11,550
+Arizona is practically well, the quality of Taiwanese food in Arizona, let me just put it that way.
+
+339
+00:27:11,600 --> 00:27:16,392
+The quality of Taiwanese food in Arizona has increased tremendously.
+
+340
+00:27:16,442 --> 00:27:21,995
+Okay, you want to get a bowl of get a bowl of beef noodle soup, you're going to do just fine.
+
+341
+00:27:22,045 --> 00:27:29,694
+But but but all these young all these young uh families from Taiwan came to help us stand up our our factories.
+
+342
+00:27:29,744 --> 00:27:31,647
+And so we should acknowledge that.
+
+343
+00:27:31,697 --> 00:27:35,050
+Um and South Korea helping us stand up our memory manufacturing.
+
+344
+00:27:35,100 --> 00:27:36,687
+We should acknowledge that.
+
+345
+00:27:36,737 --> 00:27:44,590
+Uh the companies uh Foxcon, Wis, Wistron, Amcor, Spill helping us set up systems manufacturing.
+
+346
+00:27:44,640 --> 00:27:45,936
+They came from Taiwan.
+
+347
+00:27:45,986 --> 00:27:46,989
+Really important.
+
+348
+00:27:47,039 --> 00:27:56,622
+And so so one if not for the fact the second industrial policy is to reindustrialize the United States.
+
+349
+00:27:56,672 --> 00:28:00,349
+That I think is a fantastic fantastic initiative.
+
+350
+00:28:00,399 --> 00:28:01,896
+And I'm all behind that.
+
+351
+00:28:01,946 --> 00:28:08,095
+I was probably the first CEO to jump behind that and take advantage of Nvidia's capabilities
+
+352
+00:28:08,145 --> 00:28:13,580
+and this flash point of AI industrial revolution to help bring all of that supply chain.
+
+353
+00:28:13,630 --> 00:28:15,211
+I committed to my customers,
+
+354
+00:28:15,261 --> 00:28:24,509
+my partners that we're going to build in this administration within within President Trump's term half a trillion dollars of AI supercomputers.
+
+355
+00:28:24,559 --> 00:28:29,166
+And so that's the second part, energy growth, re-industrializing the United States.
+
+356
+00:28:29,216 --> 00:28:34,054
+The third part that I I think I think um uh required
+
+357
+00:28:34,104 --> 00:28:44,349
+a fair amount of discussion uh to help policymakers understand that technology leadership,
+
+358
+00:28:44,399 --> 00:28:51,899
+American technology leadership and American national security goes handinand our
+
+359
+00:28:51,949 --> 00:28:57,692
+nation's extraordinary technology industry is part of our national security.
+
+360
+00:28:57,742 --> 00:29:06,903
+The fact that we have our technology all over the world that the world relies on to build their industries,
+
+361
+00:29:06,953 --> 00:29:11,007
+their ecosystem, their economies is an advantage for the United States.
+
+362
+00:29:11,057 --> 00:29:13,066
+It's a strength of the United States.
+
+363
+00:29:13,116 --> 00:29:18,830
+It helps keep United States safe when everybody works with us.
+
+364
+00:29:18,880 --> 00:29:20,858
+Let let me build on that.
+
+365
+00:29:20,908 --> 00:29:26,910
+Um you know I think I think national security there are two two dimensions of national
+
+366
+00:29:26,960 --> 00:29:34,151
+security and I differentiate small case and large case small case national security small N small
+
+367
+00:29:34,201 --> 00:29:43,181
+s um I think that's you know aircraft carriers and bombers and divisions and training programs
+
+368
+00:29:43,231 --> 00:29:55,070
+capital national security NS is the uh dynamism of your economy the the productivity of your industry,
+
+369
+00:29:55,120 --> 00:30:03,714
+the creativity of your ideas industry, uh the sense of fairness in your judicial system.
+
+370
+00:30:03,764 --> 00:30:13,587
+Uh you are here, you you benefit from that larger case, but you're building that larger national security industry.
+
+371
+00:30:13,637 --> 00:30:21,470
+tell us how you think about your role uh on national security.
+
+372
+00:30:21,520 --> 00:30:27,310
+Uh number one, Nvidia was birthed in the United States.
+
+373
+00:30:27,360 --> 00:30:31,629
+We are a proud American company.
+
+374
+00:30:31,679 --> 00:30:33,056
+We're inventive.
+
+375
+00:30:33,106 --> 00:30:34,315
+We're vibrant.
+
+376
+00:30:34,365 --> 00:30:42,349
+We're at the center of the single most important industrial revolution in human history.
+
+377
+00:30:42,399 --> 00:30:47,318
+This is an industrial revolution in every single way as important as electricity.
+
+378
+00:30:47,368 --> 00:30:50,232
+We are going to impact every single industry.
+
+379
+00:30:50,282 --> 00:30:53,710
+Every single company, every country will build it.
+
+380
+00:30:53,760 --> 00:30:56,830
+Every company will use it.
+
+381
+00:30:56,880 --> 00:31:06,910
+We export American technology wherever the United States would like us to export the American technology.
+
+382
+00:31:06,960 --> 00:31:16,250
+This is an extraordinary opportunity for us to make a substantial contribution to our national security.
+
+383
+00:31:16,300 --> 00:31:23,629
+We also know that national security and economic security and economic prosperity go hand in hand.
+
+384
+00:31:23,679 --> 00:31:30,733
+The wealthier our nation, the more we can fund the mightiest military on the planet.
+
+385
+00:31:30,783 --> 00:31:31,229
+Yeah.
+
+386
+00:31:31,279 --> 00:31:40,190
+And I do believe that it is the case we are because of this new industrial revolution that we've started,
+
+387
+00:31:40,240 --> 00:31:43,490
+we are creating new factories in America.
+
+388
+00:31:43,540 --> 00:31:46,171
+We're creating new jobs in America.
+
+389
+00:31:46,221 --> 00:31:51,916
+And somebody recently told me that we contributed more to economic growth singularly
+
+390
+00:31:51,966 --> 00:31:55,764
+than just about any company in the world today to the American economy.
+
+391
+00:31:55,814 --> 00:31:57,951
+And I believe that that's probably true.
+
+392
+00:31:58,001 --> 00:32:02,883
+And the reason for that is Nvidia is a multiundred billion dollar
+
+393
+00:32:02,933 --> 00:32:11,310
+company supporting multiundred billion dollar companies going after trillion trillion dollars of industry.
+
+394
+00:32:11,360 --> 00:32:16,910
+And so the economic prosperity the technology leadership unquestionable the
+
+395
+00:32:16,960 --> 00:32:22,910
+technology the economic prosperity that we can contribute to unquestionable.
+
+396
+00:32:22,960 --> 00:32:30,103
+Now this the question then becomes how do we think through the
+
+397
+00:32:30,153 --> 00:32:38,109
+diffusion of the export of the proliferation of American technologies and standards.
+
+398
+00:32:38,159 --> 00:32:46,910
+We should of course number one safeguard our national security the little little N and little S to ensure
+
+399
+00:32:46,960 --> 00:32:53,710
+that adversaries don't have access to sensitive technology or advanced technology that we don't need them to have access to.
+
+400
+00:32:53,760 --> 00:32:54,349
+Right?
+
+401
+00:32:54,399 --> 00:33:05,150
+We should number two ensure that American companies, American technology companies through partnership with us have the benefit of the best and first.
+
+402
+00:33:05,200 --> 00:33:10,190
+But then after that, after number one and number two,
+
+403
+00:33:10,240 --> 00:33:17,310
+we should also proliferate American technology standards, compete around the world,
+
+404
+00:33:17,360 --> 00:33:28,326
+fuel this flywheel of funding, yeah, our R&D so that we can continue to be to be the mightiest technology industry in the world.
+
+405
+00:33:28,376 --> 00:33:37,308
+so that we can fund the tech the mightiest military in the world and all of that I think goes hand in hand. several times.
+
+406
+00:33:37,358 --> 00:33:45,458
+Uh, you know, Chairman Dwang, you've talked about energy as being a pacing problem here.
+
+407
+00:33:45,508 --> 00:33:56,183
+We, uh, you know, when we invented LED lighting, we just, uh, lost the demand signal and half of our uh,
+
+408
+00:33:56,233 --> 00:34:03,528
+of our electricity u grid is merchant supplier and so they don't buy ahead of need.
+
+409
+00:34:03,578 --> 00:34:06,001
+And so we're now really way behind.
+
+410
+00:34:06,051 --> 00:34:15,629
+And you pointed out that China has built out twice the capacity of electricity than has the United States.
+
+411
+00:34:15,679 --> 00:34:23,470
+How big a constraint do you see that as being for our buildout for this revolution that you're trying to create?
+
+412
+00:34:23,520 --> 00:34:25,470
+Deeply serious.
+
+413
+00:34:25,520 --> 00:34:30,008
+I think at this point we have to use every form of energy we can.
+
+414
+00:34:30,058 --> 00:34:32,942
+I believe we can't rely on the power grid.
+
+415
+00:34:32,992 --> 00:34:35,387
+We got to build behind the meter.
+
+416
+00:34:35,437 --> 00:34:42,189
+We obviously need power generation systems.
+
+417
+00:34:42,239 --> 00:34:47,789
+There's no question we should try to encourage and try to accelerate nuclear.
+
+418
+00:34:47,839 --> 00:34:53,629
+We need to have energy growth very, very shortly.
+
+419
+00:34:53,679 --> 00:34:59,630
+In the meantime, we're advancing our technology so quickly.
+
+420
+00:34:59,680 --> 00:35:04,750
+No company our scale has ever introduced new generations every year.
+
+421
+00:35:04,800 --> 00:35:08,933
+And when I say we just ship a new chip every year, people, you know,
+
+422
+00:35:08,983 --> 00:35:15,937
+when people because there's so many gamers in the world and they've known me for so long and when they think about what Nvidia builds,
+
+423
+00:35:15,987 --> 00:35:25,470
+they think it's a a a module that looks like a gaming graphics card, our GeForce graphics card, and they plug it into their PC.
+
+424
+00:35:25,520 --> 00:35:29,872
+Well, a GPU for AI centers, AI AI data centers.
+
+425
+00:35:29,922 --> 00:35:34,270
+That GPU weighs two tons.
+
+426
+00:35:34,320 --> 00:35:38,430
+It has one and a half million parts.
+
+427
+00:35:38,480 --> 00:35:42,510
+It consumes 200,000 watts.
+
+428
+00:35:42,560 --> 00:35:44,830
+It costs $3 million.
+
+429
+00:35:44,880 --> 00:35:48,991
+Every so often, somebody says, you know, these GPUs are being smuggled.
+
+430
+00:35:49,041 --> 00:35:51,435
+I really would love to see it.
+
+431
+00:35:51,486 --> 00:35:51,950
+Yeah.
+
+432
+00:35:52,000 --> 00:36:03,874
+Not to mention, you have to smuggle enough of them to fill a football field full of these things so that you could run it as an AI data center.
+
+433
+00:36:03,924 --> 00:36:06,590
+And so anyhow,
+
+434
+00:36:06,640 --> 00:36:14,526
+the technology that we make each year allows us to
+
+435
+00:36:14,576 --> 00:36:19,650
+increase the performance at about the same power by many times.
+
+436
+00:36:19,700 --> 00:36:21,629
+And let me just pick a number.
+
+437
+00:36:21,679 --> 00:36:24,291
+Say five times or 10 times each year.
+
+438
+00:36:24,341 --> 00:36:30,350
+As a result, our energy efficiency improves by five times or 10 times each year.
+
+439
+00:36:30,400 --> 00:36:31,929
+But the problem is this.
+
+440
+00:36:31,979 --> 00:36:35,710
+We're at the beginning of this technology buildout.
+
+441
+00:36:35,760 --> 00:36:43,069
+I'm improving the performance by a factor of 10 times each year, but demand is going up by a factor of 10,000 a million times each year.
+
+442
+00:36:43,119 --> 00:36:46,139
+No. No. AI is getting more compute inensive.
+
+443
+00:36:46,189 --> 00:36:47,683
+The adoption is going way up.
+
+444
+00:36:47,733 --> 00:36:49,663
+I've got all these exponentials.
+
+445
+00:36:49,713 --> 00:36:52,097
+And so we're going to keep chasing this.
+
+446
+00:36:52,147 --> 00:36:56,443
+Uh we're going to be completely dedicated to advancing the technology as fast as we can.
+
+447
+00:36:56,493 --> 00:36:59,549
+But the bottom line is we need energy.
+
+448
+00:36:59,599 --> 00:36:59,951
+Yeah.
+
+449
+00:36:59,981 --> 00:37:03,206
+And I I you know, forgive me for interjecting myself.
+
+450
+00:37:03,256 --> 00:37:07,204
+I do think we have to overcome the NIMI constraints.
+
+451
+00:37:07,254 --> 00:37:15,578
+You know, we're going to have to find some structure of federal preeemption so that we can overcome the the barriers.
+
+452
+00:37:15,628 --> 00:37:16,620
+That's my comment.
+
+453
+00:37:16,670 --> 00:37:17,851
+That's not your comment.
+
+454
+00:37:17,901 --> 00:37:21,342
+I don't want you to get in trouble for for my saying that.
+
+455
+00:37:21,392 --> 00:37:26,350
+Let me ask you, I mean, last year, thank you for that.
+
+456
+00:37:26,400 --> 00:37:33,870
+Last year, um, the world installed 2 million robots.
+
+457
+00:37:33,920 --> 00:37:39,117
+Half of them were in China, which is really astounding when you think about it.
+
+458
+00:37:39,167 --> 00:37:44,430
+Tell me how robots fit in with AI.
+
+459
+00:37:44,480 --> 00:37:49,950
+Um, you know, let me just give you one example of why it's around the corner.
+
+460
+00:37:50,000 --> 00:37:50,610
+You know,
+
+461
+00:37:50,660 --> 00:38:02,206
+these days you could describe you could describe in text and you give it to um a video AI and it generates a video.
+
+462
+00:38:02,256 --> 00:38:03,770
+You guys know this, right?
+
+463
+00:38:03,820 --> 00:38:06,594
+It actually from words you can generate a video.
+
+464
+00:38:06,644 --> 00:38:06,944
+Okay.
+
+465
+00:38:06,973 --> 00:38:14,590
+And let's say the video is uh Jensen reaches over, picks up a cup.
+
+466
+00:38:14,640 --> 00:38:19,117
+So I take a picture of this screenshot, give it to the AI.
+
+467
+00:38:19,167 --> 00:38:22,341
+That's the starting starting condition.
+
+468
+00:38:22,391 --> 00:38:27,549
+And I say, "Now cause Jensen to reach over and pick up the cup."
+
+469
+00:38:27,599 --> 00:38:33,524
+The AI creates pixel by pixel, token by token my arm picking up the cup.
+
+470
+00:38:33,574 --> 00:38:35,950
+And that everybody knows is possible today.
+
+471
+00:38:36,000 --> 00:38:37,637
+You guys have seen it.
+
+472
+00:38:37,687 --> 00:38:46,190
+Well, the AI can't tell the difference between it manu manipulating pixels versus it's manipulating a bunch of motors.
+
+473
+00:38:46,240 --> 00:38:53,549
+So, the idea that I can tell the robot pick up the cup is clearly just around the corner.
+
+474
+00:38:53,599 --> 00:38:58,190
+We just have to take that AI which currently sits in the cloud and we have
+
+475
+00:38:58,240 --> 00:39:05,734
+to put it into otherwise called embody it into a physical mechanical system which is called robotics.
+
+476
+00:39:05,784 --> 00:39:08,252
+So the AI is around the corner.
+
+477
+00:39:08,302 --> 00:39:13,631
+We can see early evidence that the technology must be possible.
+
+478
+00:39:13,681 --> 00:39:17,683
+Now China is going to be very very good at this for several reasons.
+
+479
+00:39:17,733 --> 00:39:19,568
+They have great demand.
+
+480
+00:39:19,618 --> 00:39:24,110
+They have a natural indigenous demand for more workers.
+
+481
+00:39:24,160 --> 00:39:26,346
+Manufacturing is core part of what they do.
+
+482
+00:39:26,396 --> 00:39:31,912
+We, by the way, because we're now re-industrializing, reshoring manufacturing,
+
+483
+00:39:31,962 --> 00:39:39,015
+we now again also have significant demand for factory automation.
+
+484
+00:39:39,065 --> 00:39:43,098
+And there's no question we have a shortage of labor.
+
+485
+00:39:43,148 --> 00:39:50,590
+We have right we all know that our industries would be would be larger more profitable more vibrant if we just had more
+
+486
+00:39:50,640 --> 00:39:57,630
+workers and so they have the same challenge they have worker shortage coming up very severe worker shortage coming up so they have
+
+487
+00:39:57,680 --> 00:40:05,345
+a a a national strategic imperative to make sure that robotics happens number one number two they have the AI technology and number
+
+488
+00:40:05,395 --> 00:40:16,053
+three this is where they have a big advantage they're really very good at electronics and mechanical intersection s otherwise known as mechatronics.
+
+489
+00:40:16,103 --> 00:40:23,630
+This entire area is they have the harmony of demand and supply side capability.
+
+490
+00:40:23,680 --> 00:40:28,869
+Now many other countries Japan has surely demand side.
+
+491
+00:40:28,919 --> 00:40:34,935
+They have the megatronics but Japan needs to have much better AI technology.
+
+492
+00:40:34,985 --> 00:40:40,670
+Germany great demand, extraordinary meatronics.
+
+493
+00:40:40,720 --> 00:40:43,150
+They need to have great AI technology.
+
+494
+00:40:43,200 --> 00:40:50,855
+United States we have if we reshort industrial indust re-industrialize our nation we will have great demand.
+
+495
+00:40:50,905 --> 00:40:59,950
+We have great SA software technology but we really at the moment need to improve our mechanical electronics.
+
+496
+00:41:00,000 --> 00:41:07,236
+I mean you know using AI to find a better you know vegan recipe for foyer gr you know
+
+497
+00:41:07,286 --> 00:41:11,710
+maybe something my wife will look up but we need to make this that would be a miracle indeed.
+
+498
+00:41:11,760 --> 00:41:19,945
+It would be good but we we need to turn this into productive machinery and the way in which it's going to change the the landscape.
+
+499
+00:41:19,995 --> 00:41:23,599
+Let me ask you, we're because we're running out of time.
+
+500
+00:41:23,649 --> 00:41:30,622
+Um, you know, I was talking to a friend of mine who's a dean of a of a major research institute,
+
+501
+00:41:30,672 --> 00:41:35,511
+and I asked him, I said, "How is your faculty dealing with uh with AI?"
+
+502
+00:41:35,561 --> 00:41:40,386
+And he said, "Well, you know, the engineering faculty is excited.
+
+503
+00:41:40,436 --> 00:41:43,080
+They really think this is fabulous."
+
+504
+00:41:43,130 --> 00:41:50,123
+He said the science faculty is really curious and they think it potentially opens
+
+505
+00:41:50,173 --> 00:41:55,789
+up real opportunity and the humanities faculty thinks it's the end of the world.
+
+506
+00:41:55,839 --> 00:42:06,692
+Um so it is a shorthand for the anxiety that people feel about the dark side of AI.
+
+507
+00:42:06,742 --> 00:42:12,910
+How do you how do you talk to us about that?
+
+508
+00:42:12,960 --> 00:42:16,430
+Um let me start from the from the end.
+
+509
+00:42:16,480 --> 00:42:27,634
+There's no question that everyone's jobs profession will be affected by AI because
+
+510
+00:42:27,684 --> 00:42:33,870
+the tasks within our jobs are going to be dramatically enhanced by AI.
+
+511
+00:42:33,920 --> 00:42:34,830
+Yeah.
+
+512
+00:42:34,880 --> 00:42:38,670
+Some jobs will become obsolete.
+
+513
+00:42:38,720 --> 00:42:45,230
+New jobs are going to be created and every job will be changed.
+
+514
+00:42:45,280 --> 00:42:51,683
+So that let me just I used two words just now and it's really important we think about these two words very differently.
+
+515
+00:42:51,733 --> 00:42:55,297
+One is task the other one is job.
+
+516
+00:42:55,347 --> 00:43:03,150
+Now it turns out I think it was something like seven eight years ago
+
+517
+00:43:03,200 --> 00:43:10,989
+a very important AI scientist maybe the most important AI scientist declared the first application
+
+518
+00:43:11,039 --> 00:43:17,578
+for AI will be radiology because computer vision was the first breakthrough and that
+
+519
+00:43:17,628 --> 00:43:24,190
+in fact entire radiology industry in within five years will be completely transformed by AI.
+
+520
+00:43:24,240 --> 00:43:33,926
+die and that in a in five years time radiologists will all lose their job and he advises that no one should be a radiologist.
+
+521
+00:43:33,976 --> 00:43:38,510
+That was his advice and it was taken very seriously.
+
+522
+00:43:38,560 --> 00:43:40,393
+Now some five, six, seven,
+
+523
+00:43:40,443 --> 00:43:47,019
+eight years later every single radiology platform
+
+524
+00:43:47,069 --> 00:43:52,830
+has been completely transformed by AI 100%.
+
+525
+00:43:52,880 --> 00:44:01,789
+every single radiology platform the number of radiologists has increased.
+
+526
+00:44:01,839 --> 00:44:04,510
+The question is why?
+
+527
+00:44:04,560 --> 00:44:15,390
+And the reason for that is because as it turns out studying the scans, studying the images is the task of a radiologist.
+
+528
+00:44:15,440 --> 00:44:22,590
+The goal or the job of a radiologist is to diagnose disease.
+
+529
+00:44:22,640 --> 00:44:25,470
+This is true for many many people.
+
+530
+00:44:25,520 --> 00:44:31,210
+People say I don't need software engineers because apparently coding is going to be automated.
+
+531
+00:44:31,260 --> 00:44:36,910
+I've given AIs to every one of my software engineers and hardware engineers and engineers period.
+
+532
+00:44:36,960 --> 00:44:45,950
+100% of NVIDIA has AI assistants, AI coders, and they're busier than ever.
+
+533
+00:44:46,000 --> 00:44:52,943
+And so the question is what is the task versus what is the job? no different than a financial analyst.
+
+534
+00:44:52,993 --> 00:44:58,887
+The task is mess around with spreadsheets, but the job is to make a financial advice.
+
+535
+00:44:58,937 --> 00:45:01,731
+The job is to help a customer.
+
+536
+00:45:01,781 --> 00:45:05,582
+The job is to analyze a market, make a prediction about market.
+
+537
+00:45:05,632 --> 00:45:10,110
+And so there's still the human factor is still quite significant.
+
+538
+00:45:10,160 --> 00:45:20,904
+And I would just tell everyone before you decide that the the the that AI uh is something that you're you're you're worried about or scared about,
+
+539
+00:45:20,954 --> 00:45:21,769
+go engage it.
+
+540
+00:45:21,819 --> 00:45:22,592
+Go use it.
+
+541
+00:45:22,642 --> 00:45:31,870
+And even in the humanities, the fact of the matter is as without, you know, with AI today, my writing has improved.
+
+542
+00:45:31,920 --> 00:45:34,393
+I don't think the quality is.
+
+543
+00:45:34,443 --> 00:45:42,430
+It still writes in my my taste and my my ways, but my speed of writing has dramatically improved.
+
+544
+00:45:42,480 --> 00:45:44,721
+And so I'm more productive today.
+
+545
+00:45:44,771 --> 00:45:47,033
+I'm still writing the original pieces.
+
+546
+00:45:47,083 --> 00:45:49,150
+I still have to write the original voice.
+
+547
+00:45:49,200 --> 00:45:54,781
+I still have to we I still have to create the original thought still has but every so often as you know when
+
+548
+00:45:54,831 --> 00:46:04,040
+we derive uh other speeches out of other previous speeches the concepts are very similar but the content the delivery the context is
+
+549
+00:46:04,090 --> 00:46:11,633
+so different we we now can use AI to help us regenerate the first draft you know so so for me u for
+
+550
+00:46:11,683 --> 00:46:21,309
+the humanities I would just say original thought original writing your taste made with human hands are still always going to be valuable.
+
+551
+00:46:21,359 --> 00:46:23,217
+I went in for an MRI recently.
+
+552
+00:46:23,267 --> 00:46:25,304
+My wife said, "Make sure you take a picture.
+
+553
+00:46:25,354 --> 00:46:28,518
+I don't think there's a brain up there, but I'd like to see it.
+
+554
+00:46:28,568 --> 00:46:30,630
+Prove there's something."
+
+555
+00:46:30,680 --> 00:46:32,670
+Um, and what what did you find out?
+
+556
+00:46:32,720 --> 00:46:34,990
+There was there was nothing.
+
+557
+00:46:35,040 --> 00:46:39,470
+I mean, she was right and I was wrong.
+
+558
+00:46:39,520 --> 00:46:45,539
+Uh, we're we're coming to the end and and um you're in Washington.
+
+559
+00:46:45,589 --> 00:46:54,062
+you don't this isn't always a joyful experience to come to Washington but um share with us what your you
+
+560
+00:46:54,112 --> 00:47:02,480
+know you know your thoughts on how we should think about this remarkable uh revolution that's appearing in your world.
+
+561
+00:47:02,530 --> 00:47:03,582
+You're leading it.
+
+562
+00:47:03,632 --> 00:47:06,222
+We're going to experience it.
+
+563
+00:47:06,272 --> 00:47:08,530
+We're probably going to try to regulate it.
+
+564
+00:47:08,580 --> 00:47:10,289
+We don't know how to do that.
+
+565
+00:47:10,339 --> 00:47:17,870
+what uh tell us just a little bit how you think we should be anticipating this and thinking about our future.
+
+566
+00:47:17,920 --> 00:47:21,150
+Um there are many of course that we we spoke about many different things that
+
+567
+00:47:21,200 --> 00:47:29,138
+that uh Washington has been uh extraordinarily helpful in already shaping the outcome for our nation.
+
+568
+00:47:29,188 --> 00:47:38,577
+Uh we spoke about industrial policies and and how in fact a heavyhanded approach was necessary and it was just in time.
+
+569
+00:47:38,627 --> 00:47:49,331
+Uh it is the case that Washington DC is foreign to me and and um I I've had the benefit of coming here now uh since the first time I
+
+570
+00:47:49,381 --> 00:47:56,048
+saw you uh our first our first night and um it's unnatural to me uh
+
+571
+00:47:56,098 --> 00:48:01,987
+however however what I I can tell you is uh we all want the same thing.
+
+572
+00:48:02,037 --> 00:48:03,661
+We want America to win.
+
+573
+00:48:03,711 --> 00:48:07,210
+We want America to be the greatest nation in the world.
+
+574
+00:48:07,260 --> 00:48:10,846
+M we have extraordinary capabilities.
+
+575
+00:48:10,896 --> 00:48:15,390
+I'm you know it's hard not to be romantic about this country.
+
+576
+00:48:15,440 --> 00:48:17,710
+My my my parents had the American dream.
+
+577
+00:48:17,760 --> 00:48:20,788
+My father always want wanted us to grow up in the United States.
+
+578
+00:48:20,838 --> 00:48:26,830
+Sent us here when I was nine and um I and they they had almost nothing uh
+
+579
+00:48:26,880 --> 00:48:33,104
+uh to to start a life here and uh somehow through that journey it worked out pretty good.
+
+580
+00:48:33,154 --> 00:48:38,670
+I'm I'm here uh with the privilege of leading one of the most consequential companies in the history of humanity.
+
+581
+00:48:38,720 --> 00:48:39,309
+Yeah.
+
+582
+00:48:39,359 --> 00:48:43,259
+And and uh you just can't you can't write a better story than that.
+
+583
+00:48:43,309 --> 00:48:43,609
+Yeah.
+
+584
+00:48:43,599 --> 00:48:46,470
+You can't not be romantic about this this country.
+
+585
+00:48:46,520 --> 00:48:48,716
+I'm surrounded by extraordinary scientists.
+
+586
+00:48:48,766 --> 00:48:50,877
+I'm surrounded by extraordinary people.
+
+587
+00:48:50,927 --> 00:48:55,045
+Um all of our technology partners, the ecosystem that we here we have here.
+
+588
+00:48:55,095 --> 00:49:01,931
+It's it is, you know, I don't want to be complacent, but it's it is a miracle that there's no question about it.
+
+589
+00:49:01,981 --> 00:49:05,205
+And I' I have the benefit of working with every nation in the world.
+
+590
+00:49:05,255 --> 00:49:14,453
+And so so I I think it's we can say for for certain that we want the same we want the we want the same outcome for this nation.
+
+591
+00:49:14,503 --> 00:49:21,930
+It is important however uh that I I come here so that I could at least explain what is AI.
+
+592
+00:49:21,980 --> 00:49:23,351
+It's five layers.
+
+593
+00:49:23,401 --> 00:49:25,533
+I can explain what is impact,
+
+594
+00:49:25,583 --> 00:49:34,691
+how is it going to evolve and how how certain policies although um on appearance uh might
+
+595
+00:49:34,741 --> 00:49:43,518
+achieve whatever objectives that the long-term consequences the unintended consequences could be quite dire for the United States.
+
+596
+00:49:43,568 --> 00:49:49,347
+And so so I have the benefit of at least explaining it from the perspective of technology and
+
+597
+00:49:49,397 --> 00:49:57,464
+um uh help advocate uh for for uh uh technology leadership so that we could secure our national security.
+
+598
+00:49:57,514 --> 00:50:02,758
+And so I have that benefit and and I I'm deeply grateful uh that that uh uh
+
+599
+00:50:02,808 --> 00:50:08,106
+the people I get to get to meet here in Washington DC has always had an open
+
+600
+00:50:08,156 --> 00:50:12,302
+door and you know although this is new for me and I'm clumsy at it uh I
+
+601
+00:50:12,352 --> 00:50:17,549
+can also say that I'm very grateful that that um Washington has been very open to me.
+
+602
+00:50:17,599 --> 00:50:20,622
+I know the answer to this question but I still want to ask it.
+
+603
+00:50:20,672 --> 00:50:23,150
+Are you optimistic about the future?
+
+604
+00:50:23,200 --> 00:50:26,830
+Oh absolutely a thousand% a thousand%.
+
+605
+00:50:26,880 --> 00:50:28,924
+Uh the best of days are ahead of us.
+
+606
+00:50:28,974 --> 00:50:34,029
+You know, it is the I don't have to work.
+
+607
+00:50:34,079 --> 00:50:41,950
+I think I've done, you know, I think that's true.
+
+608
+00:50:42,000 --> 00:50:52,888
+And and and Ambassador Rudd uh you know, when when he first met me, I had I my all my hair was black.
+
+609
+00:50:52,938 --> 00:51:01,319
+and and now, you know, if you if you were to take an image of my brain, it could turn out to be the same color as yours.
+
+610
+00:51:01,369 --> 00:51:08,509
+And and so um but but nonetheless, uh this is the one decade I will not miss.
+
+611
+00:51:08,559 --> 00:51:09,150
+Yeah.
+
+612
+00:51:09,200 --> 00:51:10,502
+I simply won't miss this decade.
+
+613
+00:51:10,552 --> 00:51:12,602
+I don't want to miss this next two decades.
+
+614
+00:51:12,652 --> 00:51:15,586
+We are going to do more for the advancement of science.
+
+615
+00:51:15,636 --> 00:51:18,039
+We're going to do more for the advancement of industry.
+
+616
+00:51:18,089 --> 00:51:25,069
+We are going to do more for this nation in the next two decades than potentially all of it combined in the past.
+
+617
+00:51:25,119 --> 00:51:25,490
+Yeah.
+
+618
+00:51:25,520 --> 00:51:27,701
+And so I don't want to miss that.
+
+619
+00:51:27,751 --> 00:51:29,150
+This is the best of times.
+
+620
+00:51:29,200 --> 00:51:30,057
+I totally share.
+
+621
+00:51:30,107 --> 00:51:33,962
+I think this is going to be the most marvelous period in humanity
+
+622
+00:51:34,012 --> 00:51:42,910
+and we're looking forward to Would you all say thank you with your applause?
+
+623
+00:51:42,960 --> 00:51:45,069
+Thank you.
+
+624
+00:51:45,119 --> 00:51:48,065
+Thank you very much.

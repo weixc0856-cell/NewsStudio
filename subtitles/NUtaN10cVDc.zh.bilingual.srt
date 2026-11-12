@@ -1,0 +1,3764 @@
+1
+00:00:11,280 --> 00:00:19,022
+So today um I'm going to talk about uh robot learning from human experience uh and
+今天呢，我想谈谈机器人如何从人类经验中学习。
+
+2
+00:00:19,072 --> 00:00:26,750
+how scale uh is starting to change uh what robots can learn and how they learn.
+规模的提升正在开始改变机器人能够学习的内容以及学习方式。
+
+3
+00:00:26,800 --> 00:00:30,701
+I'll frame the talk around uh three hypotheses.
+我将围绕三个假设来展开这次演讲。
+
+4
+00:00:30,751 --> 00:00:41,310
+Uh so first robot capabilities can scale with human data and second human data will soon be so abundant that we won't know
+首先，机器人能力可以随着人类数据而扩展；其次，人类数据很快就会多到我们无法想象的地步。
+
+5
+00:00:41,360 --> 00:00:51,009
+what to do about it and third progress requires scaling the both the science uh uh and the data.
+该怎么做以及第三点，需要同时推进科学和数据的规模化。
+
+6
+00:00:51,059 --> 00:00:53,986
+So they are the hypothesis not facts.
+所以它们只是假设，而非事实。
+
+7
+00:00:54,036 --> 00:01:01,870
+Uh but I hope this talk will provide some evidence uh that concrete evidence uh that they are becoming true.
+但我希望这次演讲能提供一些切实的证据，证明这些正在成为现实。
+
+8
+00:01:01,920 --> 00:01:08,270
+I hope I have I don't have to convince you that robot learning have made a lot of progress and one of the key factors
+我希望我无需向你们证明，机器人学习已经取得了巨大进展，其中一个关键因素是
+
+9
+00:01:08,320 --> 00:01:15,987
+is that we have rediscovered teleoperation to be a really good way to teach robot how to do really complex tasks like doing laundry,
+我们重新发现了遥操作是一种非常有效的方法，可以教会机器人完成像洗衣服这样复杂的任务。
+
+10
+00:01:16,037 --> 00:01:18,726
+clean bathrooms or doing warehouse tasks.
+清洁浴室或从事仓库工作。
+
+11
+00:01:18,776 --> 00:01:26,950
+and they're really being deployed in the real world today in factories in laundromats and I mean it's a start — they're starting
+而且它们如今真的已投入现实世界使用，出现在工厂和洗衣店中——这只是一个开端，它们才刚刚起步。
+
+12
+00:01:27,000 --> 00:01:34,190
+to be usable but they're not mature yet but we're seeing them in the world in the real world today um so
+可用，但还不够成熟，不过我们今天已经在现实世界中看到了它们的身影。
+
+13
+00:01:34,240 --> 00:01:41,790
+before diving into the technical talk um I I want to step back and ask more fundamental question uh why do we
+在进入技术话题之前，我想先退一步，提出一个更根本的问题：我们为什么要这样做？
+
+14
+00:01:41,840 --> 00:01:50,796
+believe uh this whole datadriven uh robotics direction will work at scale for all all of these hundreds of billions of hour uh
+我相信，这种以数据驱动的机器人技术方向，能够规模化地应用于数百亿小时的各种场景。
+
+15
+00:01:50,846 --> 00:01:58,640
+dollar dollars investments uh in robotics right now on the line belief that we all think is going to work right so
+美元、美元，现在投入机器人领域的资金，都基于我们所有人相信它终将成功这一信念。
+
+16
+00:01:58,690 --> 00:02:05,952
+I the answer really large is largely based on analogy with the type of AI we're using today at this point a
+答案之所以很大，很大程度上是因为我们今天所使用的AI类型具有类比性。
+
+17
+00:02:06,002 --> 00:02:16,722
+large part of human knowledge is being captured by internet uh that gets downloaded cleaned and absorbed by these large foundational models
+人类知识的很大一部分正被互联网所收录，随后被下载、清洗并融入这些大型基础模型之中。
+
+18
+00:02:16,772 --> 00:02:22,990
+and uh in other modern AI succeeds because we found a
+而且啊，现代人工智能之所以成功，是因为我们找到了
+
+19
+00:02:23,040 --> 00:02:30,189
+scalable way to transfer our knowledge to these models through the internet.
+通过互联网，以可扩展的方式将我们的知识传递给这些模型。
+
+20
+00:02:30,239 --> 00:02:36,510
+We the robotics researchers are essentially trying to apply the same idea uh to the physical world.
+我们这些机器人研究者本质上正试图将同样的理念应用于现实世界。
+
+21
+00:02:36,560 --> 00:02:42,457
+Uh instead of semantic knowledge, robots it needs sensor motor knowledge or physical intelligence.
+与其依赖语义知识，机器人更需要感知-运动知识或物理智能。
+
+22
+00:02:42,507 --> 00:02:46,647
+Uh so tip appreciation really provides a mechanism to transfer this knowledge.
+因此，小费实际上提供了一种传递这种知识的机制。
+
+23
+00:02:46,697 --> 00:02:53,170
+Uh by controlling robots while recording what a robot sees and what actions should be taken.
+通过在录制机器人所见画面和应采取动作的同时控制机器人。
+
+24
+00:02:53,220 --> 00:03:00,670
+Uh we are building a direct mapping between the perception action or the input and output supervision for the robot's body.
+我们正在为机器人的身体建立感知与动作之间，或输入与输出监督之间的直接映射。
+
+25
+00:03:00,720 --> 00:03:06,430
+In a sense t operation laws to transfer human physical intelligence to the robots.
+在某种意义上，就是通过操作定律将人类的物理智能传递给机器人。
+
+26
+00:03:06,480 --> 00:03:12,110
+But despite the simplicity of this analogy uh in reality t operation creates a very very
+但尽管这个类比看似简单，实际上，T 操作会产生非常复杂的结果。
+
+27
+00:03:12,160 --> 00:03:18,083
+tight knowledge transfer bottleneck and I argue there are two major factors to this part bottleneck.
+紧密的知识传递瓶颈，我认为造成这一瓶颈主要有两个关键因素。
+
+28
+00:03:18,133 --> 00:03:22,982
+The first one should be familiar to some uh is the scal scalability problem.
+第一个问题对一些人来说应该很熟悉，就是可扩展性问题。
+
+29
+00:03:23,032 --> 00:03:29,949
+If we you have ever tried teleoperation you know it's very very unintuitive takes a lot of practice to get it right.
+如果你曾经尝试过遥操作，就会知道它非常不直观，需要大量练习才能掌握。
+
+30
+00:03:29,999 --> 00:03:33,656
+More importantly teleeration only scales linearly.
+更重要的是，遥操作的扩展只能线性增长。
+
+31
+00:03:33,706 --> 00:03:39,254
+uh the amount of data we can collect grows only with the number of robots multiply the number of
+我们能收集的数据量仅随机器人数量的增加而增长，机器人数量越多，数据量越大。
+
+32
+00:03:39,304 --> 00:03:47,469
+human telepision hours and compared to the internet scale data used to train modern AI systems this is extremely expensive.
+人类远程传输所需的时间，与训练现代人工智能系统所用的互联网规模数据相比，成本极其高昂。
+
+33
+00:03:47,519 --> 00:03:51,539
+The second challenge is more subtle which is the fidelity of the data.
+第二个挑战更为微妙，那就是数据的真实性。
+
+34
+00:03:51,589 --> 00:03:57,946
+uh humans are have enormous sensor sensor motor knowledge about the world but teleporation captures
+人类对世界拥有庞大的感官和运动知识，但传送却能捕捉到这一点
+
+35
+00:03:57,996 --> 00:04:03,733
+this knowledge uh only when a human deliberately acts through a robots uh uh using
+这种知识只有在人类通过机器人刻意行动时才会产生。
+
+36
+00:04:03,783 --> 00:04:09,469
+interface like VR devices and this creates a very indirect feedback uh loop that meddles
+就像VR设备一样，这会形成一个非常间接的反馈回路，造成干扰
+
+37
+00:04:09,519 --> 00:04:16,147
+with our natural behavior as many forms of intelligence are difficult to deliberately demonstrate through teleoperation.
+由于我们自然的行为，许多形式的智能通过遥操作很难刻意展现。
+
+38
+00:04:16,197 --> 00:04:21,581
+Think about subtle behaviors like kneading a doll uh or picking up a card by sliding
+想想那些细微的行为，比如揉捏一个娃娃，或者滑动着拿起一张卡片。
+
+39
+00:04:21,631 --> 00:04:25,694
+to the edge of the table and picking it up or when your hands are full.
+到桌边拿起东西，或者双手都拿着东西的时候。
+
+40
+00:04:25,744 --> 00:04:29,218
+So you kick open a door instead of using hand to open the door.
+所以你用脚踹开门，而不是用手开门。
+
+41
+00:04:29,268 --> 00:04:29,764
+Right?
+对吧？
+
+42
+00:04:29,814 --> 00:04:37,329
+So all of these motions we don't think much we do it as we go about our daily lives and demonstration.
+所以我们日常生活中所做的这些动作，几乎不会多加思考，都是自然而然完成的。
+
+43
+00:04:37,379 --> 00:04:47,310
+uh when we teleoperate we inevitably simplify these behaviors to the point uh where uh the control is much much easier for the robots to carry out.
+当我们进行遥操作时，不可避免地会简化这些行为，使得机器人的控制变得容易得多。
+
+44
+00:04:47,360 --> 00:04:51,175
+So in other words teleoperation is not just a narrow pipe.
+换句话说，遥操作并不仅仅是一条狭窄的通道。
+
+45
+00:04:51,225 --> 00:04:58,990
+It is also a very very lossy one loses a lot of our human knowledge and wastes all of these intelligence.
+它也非常损耗，会丢失大量人类知识，浪费所有这些智能。
+
+46
+00:04:59,040 --> 00:05:07,083
+So the question we want to answer is do we trans how do we transfer sensor motor d sensor motor intelligence to robot at scale and
+因此，我们想要回答的问题是：如何规模化地将感知-运动智能迁移到机器人上？
+
+47
+00:05:07,133 --> 00:05:17,355
+without losing the fidelity and our proposal that we've been doing in our lab is to break this bottleneck by doing by going directly to the source.
+但不牺牲保真度，我们实验室提出的方案是，直接从源头入手，打破这一瓶颈。
+
+48
+00:05:17,405 --> 00:05:22,235
+We want to capture the human experience directly with no robots involved.
+我们希望直接捕捉人类体验，无需任何机器人参与。
+
+49
+00:05:22,285 --> 00:05:30,408
+uh and we want to make sure the data contains all the necessary information including sensing action data to supervise robot learning model and
+而且我们要确保数据包含所有必要信息，包括感知和动作数据，以监督机器人学习模型。
+
+50
+00:05:30,458 --> 00:05:40,650
+such data should not be collected as demonstrations but captured while humans are performing natural behaviors in the real world and this talk uh will
+这类数据不应作为演示数据收集，而应在人类于现实世界中执行自然行为时进行采集，本次演讲将探讨这一点。
+
+51
+00:05:40,700 --> 00:05:49,114
+be three parts I'll describe some of the work from our lab uh so is I call the science human robot transfer but it's really
+我将介绍我们实验室的一些工作，我称之为“人机迁移”，但实际上
+
+52
+00:05:49,164 --> 00:05:55,950
+just the type of re the style of research we've been carrying out There are many many many different ways to do human robot transfer.
+正是我们一直在进行的研究类型，人机迁移有多种多样的实现方式。
+
+53
+00:05:56,000 --> 00:06:03,294
+Um and we we want to examine that uh if we scale up these approach what happens right what happens when we have a
+嗯，我们想探讨一下，如果我们扩大这些方法的规模，会发生什么？当我们的规模变大时，究竟会发生什么？
+
+54
+00:06:03,344 --> 00:06:11,569
+lot of human data and finally I want to also talk about the problem that because this is an extremely resources intensive research topic uh
+大量人类数据，最后我想谈谈这个问题，因为这是一项极其耗费资源的研究课题。
+
+55
+00:06:11,619 --> 00:06:19,853
+can we also scale with the science to allow the community to drive the collective progress of this topic with that this bring us to
+我们能否也同步推进科学，让社区能够推动这一领域的集体进步？
+
+56
+00:06:19,903 --> 00:06:23,728
+our first research milestone uh which is called EgoMimic scaling imitation
+我们的首个研究里程碑，名为EgoMimic，即模仿学习的规模化。
+
+57
+00:06:23,778 --> 00:06:27,702
+learning via egocentric medios Some of you have might have already seen it.
+通过第一人称媒介学习，你们中的一些人可能已经看过了。
+
+58
+00:06:27,752 --> 00:06:34,639
+Uh the core of this research topic is really to capture embodied human data from an egocentric view at an eye level.
+这项研究的核心是通过第一人称视角，在人眼高度捕捉具身的人类数据。
+
+59
+00:06:34,689 --> 00:06:40,670
+So uh so we want to capture our authentic uh experience through to through visual sensing unlike third person views.
+所以我们想通过视觉感知来捕捉我们真实的体验，而不是通过第三人称视角。
+
+60
+00:06:40,720 --> 00:06:45,030
+Egoententralentric data capture how we naturally perceive the world at an eye level and
+第一人称数据捕捉的是我们以眼睛高度自然感知世界的方式
+
+61
+00:06:45,080 --> 00:06:50,092
+specifically we use Project Aria glasses uh to capture this data which uh which
+具体来说，我们使用 Project Aria 眼镜来采集这些数据
+
+62
+00:06:50,142 --> 00:06:58,970
+essentially capture a lot of multimodal information including uh the uh the where the heads are uh where the hands are we'll talk a bit about why this
+本质上是捕捉大量多模态信息，比如头部和手部的位置，我们稍后会具体谈谈原因。
+
+63
+00:06:59,020 --> 00:07:07,058
+is good but but but things to take away is that these are just glasses so they don't meddle with our behavior it cap only captures it and
+效果不错，但需要记住的是，这仅是眼镜，不会干预我们的行为，它只能记录行为。
+
+64
+00:07:07,108 --> 00:07:12,739
+our work this specifically is about turning these raw data streams into embed what
+我们的工作，具体来说，是把这些原始数据流转化为嵌入表示
+
+65
+00:07:12,789 --> 00:07:18,516
+we call embodied human experience that can be treated as equals with robot data.
+我们将这种可与机器人数据平等对待的具身人类经验称为具身人类经验。
+
+66
+00:07:18,566 --> 00:07:23,380
+So our key hypothesis is that humans are just kind of weird type of robot.
+因此，我们的核心假设是，人类不过是一种奇特的机器人。
+
+67
+00:07:23,430 --> 00:07:26,065
+If you can measure it, if you can put sensor around it,
+如果你能测量它，如果你能在周围布置传感器，
+
+68
+00:07:26,115 --> 00:07:35,510
+you can treat that as the human data as robot data and want to be able to use that data directly by bridging sensing action and kinematic gaps.
+你可以将这些数据视为人类数据或机器人数据，并希望直接利用这些数据，通过弥合感知、动作和运动学之间的差距。
+
+69
+00:07:35,560 --> 00:07:40,589
+And we want also to develop a scalable way to learn from these data.
+我们还希望开发一种可扩展的方法，从这些数据中学习。
+
+70
+00:07:40,639 --> 00:07:46,110
+So we want a policy learning uh method that scales with human data.
+所以我们需要一种能随着人类数据规模扩展的策略学习方法。
+
+71
+00:07:46,160 --> 00:07:52,640
+Let's first talk about how to align embodiment and viewpoint uh which is chromatic and visual gap uh between human robots.
+首先，我们来谈谈如何对齐具身形态与视角，也就是人形机器人之间的色差和视觉差距。
+
+72
+00:07:52,690 --> 00:08:00,586
+For embodiment um so we really believe that like in order to better learn from human data the robots should be more humanlike.
+对于具身化，我们认为为了更好地从人类数据中学习，机器人应该更像人类。
+
+73
+00:08:00,636 --> 00:08:03,982
+Uh so you might think the first reaction is yes humanoids but back then
+嗯，你可能会觉得第一个反应是“是的，人形机器人”，但那时候
+
+74
+00:08:04,032 --> 00:08:08,768
+when we started this project in early 2023 there weren't that many humanoids around.
+2023年初启动这个项目时，人形机器人还很少。
+
+75
+00:08:08,818 --> 00:08:12,726
+So what we had to do is to build a robot of our own but it really
+所以我们不得不自己打造一台机器人，但这真的
+
+76
+00:08:12,776 --> 00:08:17,683
+kind of embodies a lot of our design choices that carried through later in our other works.
+它体现了我们许多设计选择，这些选择后来贯穿于我们的其他作品之中。
+
+77
+00:08:17,733 --> 00:08:20,475
+So it has to be kinematically similar to humans.
+因此，它必须在运动学上与人类相似。
+
+78
+00:08:20,525 --> 00:08:22,989
+I mean six off arms are is is pushing it.
+六条机械臂已经有点勉强了。
+
+79
+00:08:23,039 --> 00:08:31,430
+Uh but we we tried our best and uh another design choice we made is actually we want the hand eye configuration of the robot to be
+但我们已经尽力了，另一个设计选择是，我们希望机器人的手眼配置
+
+80
+00:08:31,480 --> 00:08:40,535
+very similar to the human so that we can bridge any uh sort of these uh visual gaps uh and also hand eye configuration gaps between human robots.
+非常类似于人类，以便我们能够弥合人类与机器人之间任何视觉上的差异，以及手眼配置上的差异。
+
+81
+00:08:40,585 --> 00:08:45,390
+And what we did was directly mount the glasses that we use to capture human data directly on
+我们所做的，就是将用于采集人类数据的镜片直接安装在眼镜上。
+
+82
+00:08:45,440 --> 00:08:51,209
+robots so that we can mitigate any of the sensor uh hardware gaps between human and robot data.
+让机器人能够弥补人类与机器人数据之间任何传感器或硬件上的差距。
+
+83
+00:08:51,259 --> 00:08:55,810
+Another interesting problems that we have to solve is the hand eye motion.
+另一个需要解决的有趣问题是手眼协调运动。
+
+84
+00:08:55,860 --> 00:09:00,883
+So if you look at this egoentric view data, you know that humans uh move a lot.
+所以如果你看这种第一人称视角的数据，就会知道人类移动得非常多。
+
+85
+00:09:00,933 --> 00:09:05,552
+They they move their heads uh when they look and they have information seeking actions.
+他们会看向某处时转动头部，并表现出寻找信息的行为。
+
+86
+00:09:05,602 --> 00:09:07,300
+They move their body a lot.
+他们身体活动得很频繁。
+
+87
+00:09:07,350 --> 00:09:10,510
+But our robots are kind of stable based.
+但我们的机器人在稳定性方面还算靠谱。
+
+88
+00:09:10,560 --> 00:09:12,155
+It has a torso but doesn't move.
+它有躯干，但不会动。
+
+89
+00:09:12,205 --> 00:09:13,630
+Has a head but doesn't move.
+有头却不转动。
+
+90
+00:09:13,680 --> 00:09:14,023
+Right?
+对吧？
+
+91
+00:09:14,053 --> 00:09:18,910
+So it has the stable coording system between action relative to the camera.
+因此，它在动作与相机之间的关系上具有稳定的坐标系。
+
+92
+00:09:18,960 --> 00:09:23,481
+But this is how we created this this kind of action supervision for the robot, right?
+但这就是我们为机器人创建这种动作监督的方式，对吧？
+
+93
+00:09:23,531 --> 00:09:25,328
+We because the reference frames is the same.
+因为我们参考帧相同。
+
+94
+00:09:25,378 --> 00:09:27,585
+So it has the trajectory that we can parse.
+因此它具有我们可以解析的轨迹。
+
+95
+00:09:27,635 --> 00:09:29,710
+But humans they move a lot.
+但人类移动得非常多。
+
+96
+00:09:29,760 --> 00:09:34,062
+Uh so the question is how do we actually parse this and convert the data
+那么问题来了，我们该如何实际解析这些数据并进行转换呢
+
+97
+00:09:34,112 --> 00:09:39,106
+to like a robot like human data to something that we can train robot policy with.
+就像用人类数据来训练机器人策略一样。
+
+98
+00:09:39,156 --> 00:09:42,590
+Uh so we really need to stabilize the reference frame for the actions and
+所以我们真的需要为动作稳定参考框架。
+
+99
+00:09:42,640 --> 00:09:48,963
+luckily uh Meta Aria glasses gave us really really robust visual initial odometry or SLAM.
+幸运的是，Meta 的 Aria 眼镜给了我们非常稳健的视觉初始定位与建图（SLAM）能力。
+
+100
+00:09:49,013 --> 00:09:50,530
+They done it through slam.
+他们通过快速定位与地图构建实现了。
+
+101
+00:09:50,580 --> 00:09:58,072
+Uh so what we did simp put simply is to transfer the future hand poses into the current observational frame and that
+简单来说，我们所做的就是将未来的手部姿态转换到当前的观测坐标系中。
+
+102
+00:09:58,122 --> 00:10:06,283
+allows us to kind of get these kind of a consistent trajectories for action supervision to create uh like visuals like these.
+让我们能够为动作监督获得一致的轨迹，从而生成类似这样的视觉效果。
+
+103
+00:10:06,333 --> 00:10:16,430
+So this is this visual is only possible because we have very very stable uh a good quality visual initial odometry for the uh for for the camera.
+因此，这种视觉效果之所以成为可能，是因为我们拥有非常稳定且高质量的相机初始视觉里程计。
+
+104
+00:10:16,480 --> 00:10:21,588
+And uh once we align this kinematic and visual gap we play also a lot of other tricks.
+嗯，一旦我们对齐了运动学和视觉上的差距，我们还会用到很多其他技巧。
+
+105
+00:10:21,638 --> 00:10:25,526
+So initially we kind of just did the simplest thing to make human robot look alike.
+起初，我们只是做了最简单的事，让机器人看起来像人。
+
+106
+00:10:25,576 --> 00:10:31,468
+For example we put masks on the human data to make them look robot robotic and all that kind of things.
+例如，我们在人类数据上添加面具，让它们看起来像机器人，以及类似的效果。
+
+107
+00:10:31,518 --> 00:10:33,866
+Uh but the learning architecture is quite s simple.
+但学习架构相当简单。
+
+108
+00:10:33,916 --> 00:10:39,292
+It's just a gigantic transformers where we're uh we randomly sample batches of human robot data
+它本质上就是一个巨大的变换器，我们随机抽取人类与机器人数据的批次进行训练。
+
+109
+00:10:39,342 --> 00:10:43,070
+uh and we line their input output space and we train this model together and the
+我们对它们的输入输出空间进行对齐，并共同训练这个模型
+
+110
+00:10:43,120 --> 00:10:48,299
+hope really is that uh this architecture can come up with a representation space that aligns
+希望真的能实现，这种架构能够生成一个对齐的表征空间
+
+111
+00:10:48,349 --> 00:10:53,032
+human robot such that uh the performance of the robot policy can scale with human data.
+让机器人与人类协同，使机器人的策略性能能够随着人类数据的增加而提升。
+
+112
+00:10:53,082 --> 00:10:54,147
+That's our hypothesis.
+这就是我们的假设。
+
+113
+00:10:54,197 --> 00:11:00,750
+We I'm going to show you this is not exactly the case why this policy performed well in the next work.
+我要向你们展示，为什么这项政策在下一阶段表现良好，并非完全如此。
+
+114
+00:11:00,800 --> 00:11:05,965
+So we tried this on a variety of tasks including like this kind of grocery bagging tasks.
+所以我们尝试在各种任务上应用，比如这种购物袋装任务。
+
+115
+00:11:06,015 --> 00:11:13,542
+Um so like just show that it it works in closed loop uh fast enough so you can see these reactive behaviors.
+所以，就展示一下它在闭环下运行得足够快，你能看到这些反应式行为。
+
+116
+00:11:13,592 --> 00:11:21,380
+Uh of course we made it both shirts these tiny toddler shirts and we also made robots make coffees for the student.
+当然，我们不仅做了这些小童装，还做了机器人给学生们煮咖啡。
+
+117
+00:11:21,430 --> 00:11:25,715
+Uh and I mean it doesn't succeed all the time but you get the idea.
+嗯，我的意思是它并不是总能成功，但你应该明白我的意思。
+
+118
+00:11:25,765 --> 00:11:32,445
+I mean we really want to show that human data does drive up the performance of of of robot policies.
+我的意思是，我们真的想证明，人类数据确实能提升机器人策略的性能。
+
+119
+00:11:32,495 --> 00:11:37,427
+Uh I'll let actually drink the coffee and move forward.
+呃，我先喝口咖啡，然后继续。
+
+120
+00:11:37,477 --> 00:11:47,502
+So quantitatively what we saw was that uh our hypothesis is that human data will scale robot performance uh with human data.
+定量来看，我们发现人类数据能够提升机器人性能，这一假设得到了验证。
+
+121
+00:11:47,552 --> 00:11:49,932
+So uh this plots uh is x-
+所以，这个图表的横轴是……
+
+122
+00:11:49,982 --> 00:11:55,469
+axis is the hours of data we spend on data collection and this blue curve is
+轴代表我们用于数据收集的小时数，这条蓝色曲线是
+
+123
+00:11:55,519 --> 00:12:02,112
+when you only collect robot data through teleoperation and y-axis is the normalized score of the task.
+当你仅通过遥操作收集机器人数据时，y轴表示任务的归一化得分。
+
+124
+00:12:02,162 --> 00:12:07,923
+So you can see that as we collect more teleoperative data you see a mild scaling curve that performance
+因此你可以看到，随着我们收集更多的遥操作数据，性能呈现出轻微的缩放曲线。
+
+125
+00:12:07,973 --> 00:12:15,978
+gets better as expected but when you add uh one hour of human data to this add twohour mark.
+如预期般有所提升，但当你加入一小时的人类数据后，效果更明显，加入两小时数据时更是如此。
+
+126
+00:12:16,028 --> 00:12:22,218
+So when we combine two hours of robot data with one hour human data, you see a dramatic performance jump.
+当我们把两小时的机器人数据与一小时的人类数据结合时，性能出现了显著提升。
+
+127
+00:12:22,268 --> 00:12:28,615
+And this reason is that we do task a lot faster than robots.
+原因在于，我们完成任务的速度远超机器人。
+
+128
+00:12:28,665 --> 00:12:31,692
+Human hands move a lot faster than robot hands.
+人类的手移动速度远超机器人手。
+
+129
+00:12:31,742 --> 00:12:37,950
+So sometimes we can demonstrate tasks up to 10 times as fast as human as robots.
+因此，有时我们能展示机器人完成任务的速度比人类快多达十倍。
+
+130
+00:12:38,000 --> 00:12:40,525
+These are like very experienced teleoper, right?
+这些就像是经验非常丰富的遥操作员，对吧？
+
+131
+00:12:40,575 --> 00:12:48,490
+students are really good really good at teleporting robots and even that uh humans are a lot faster in their naturalistic speed.
+学生们在遥控机器人方面非常出色，甚至人类在自然速度下也快得多。
+
+132
+00:12:48,540 --> 00:12:52,734
+Um so we also kind of wheeled robots to different parts of the campus Georgia Tech
+所以我们还把轮式机器人运送到佐治亚理工学院的不同区域。
+
+133
+00:12:52,784 --> 00:12:56,990
+campus to show that task is the policy is robust and all that kind of thing.
+从校园展示可以看出，该策略具有鲁棒性，以及所有这类特性。
+
+134
+00:12:57,040 --> 00:12:58,407
+There's nothing really new here.
+这里没什么新鲜的。
+
+135
+00:12:58,457 --> 00:13:03,390
+is just that we want to to really show that this policy works, right?
+我们只是想真正展示一下，这项政策是有效的，对吧？
+
+136
+00:13:03,440 --> 00:13:13,402
+And uh so right hands lower right the the students basically keep tossing new checkbacks to it just to make it try to see if it fails right.
+然后啊，学生们基本上就是不断往右边扔新的检查点，就为了看看它会不会失败。
+
+137
+00:13:13,452 --> 00:13:19,070
+Um so after this project we asked ourselves is this end of the game like is is this it right?
+所以在这个项目之后，我们问自己：这难道就是终点了吗？就是这样了吗？
+
+138
+00:13:19,120 --> 00:13:21,739
+Like what have we solved the problem?
+我们到底解决了什么问题？
+
+139
+00:13:21,789 --> 00:13:25,870
+Um so what we learned is that really scaling human we can scale raw
+所以我们学到的是，真正地扩展人类，我们就能扩展原始能力。
+
+140
+00:13:25,920 --> 00:13:30,729
+performance with human data that that we have verified repeatedly later in our work.
+使用人类数据所实现的性能，这一点在我们后续的工作中已多次验证。
+
+141
+00:13:30,779 --> 00:13:38,060
+So the same uh recipe works but we what we are now happy with is that if you remember we had to collect
+所以同样的方法依然适用，而现在我们满意的是，如果你还记得，我们之前不得不去收集
+
+142
+00:13:38,110 --> 00:13:44,539
+both human robot data and in fact we actually had to collect on the exact same task in the same setting and this
+人类与机器人数据，事实上我们实际上必须在同一任务、同一环境下进行采集。
+
+143
+00:13:44,589 --> 00:13:52,201
+really kind of defeats the purpose of of having human data right like we don't want humans to be like also collecting data
+本质上这就违背了使用人类数据的初衷，毕竟我们不希望人类也去收集数据。
+
+144
+00:13:52,251 --> 00:14:00,716
+and have robot teleoperation data so what we really really want is to have robot perform the tasks that only exist ing human data.
+并且拥有机器人遥操作数据，因此我们真正想要的是让机器人执行仅存在于人类数据中的任务。
+
+145
+00:14:00,766 --> 00:14:05,410
+We want to enable this kind of zeroot transfer from human to robots.
+我们希望实现从人类到机器人的人机迁移。
+
+146
+00:14:05,460 --> 00:14:08,430
+So, so what is the ideal ca like picture here?
+那么，这里的理想情况是什么样子的？
+
+147
+00:14:08,480 --> 00:14:11,253
+What is our mental picture of why this might happen?
+我们对这种情况可能发生的原因，脑海中是什么样的画面？
+
+148
+00:14:11,303 --> 00:14:15,726
+So, our ideal picture, uh, this is just one specific scientific hypothesis we have, right?
+所以，我们理想中的图景，呃，这只是我们提出的其中一个具体科学假说，对吧？
+
+149
+00:14:15,776 --> 00:14:20,857
+There are many other ways to look at this problem is that we want to learn a generalizable embodiment
+我们还可以从其他角度来思考这个问题，即如何实现可泛化的具身化。
+
+150
+00:14:20,907 --> 00:14:28,841
+or domain variant policy latent space where let's say we have data from hubos human robot for for folding shirts,
+或者领域变体策略的潜在空间，比如我们有来自人形机器人折叠衬衫的数据，
+
+151
+00:14:28,891 --> 00:14:29,216
+right?
+对吧？
+
+152
+00:14:29,246 --> 00:14:37,109
+Like the blue and reds are robot human data and through some magical encoder we bring them to this to latent space.
+就像蓝红数据代表机器人和人类数据，通过某种神奇的编码器，我们将它们映射到潜在空间。
+
+153
+00:14:37,159 --> 00:14:44,236
+We have a shared decoder which is a policy that decodes action that can kind of control the robot to do the same task.
+我们有一个共享解码器，它是一种策略，能够解码出动作，从而控制机器人完成相同任务。
+
+154
+00:14:44,286 --> 00:14:48,534
+And the nice thing is that if we can do this then maybe we can imagine that giving
+而且好处在于，如果我们能做到这一点，或许就能想象出，给予
+
+155
+00:14:48,584 --> 00:14:55,390
+a new task like a floating shirts uh floating shorts we could also project the student to space and
+一个新任务，比如漂浮的衬衫、漂浮的短裤，我们还可以把学生投射到太空。
+
+156
+00:14:55,440 --> 00:15:01,835
+without robot data we can also use the same policy to decode it to action to make the robot
+没有机器人数据的情况下，我们也可以使用相同的策略将其解码为动作，让机器人执行
+
+157
+00:15:01,885 --> 00:15:08,001
+do things that's only shown in human right so this is really our ideal picture like what should happen
+做只有人类才能做到的事，这才是我们理想中的样子，也就是应该发生的事
+
+158
+00:15:08,051 --> 00:15:14,937
+so does simply code train these two sources make that happen the answer is not quite So this is
+所以，仅靠代码训练这两个来源就能实现这一点吗？答案并不完全是这样。
+
+159
+00:15:14,987 --> 00:15:22,670
+my student Ryan who really kind of dug into latent space of the policies offer code trainee these these
+我的学生瑞安深入研究了策略的潜空间，提供了代码训练的建议。
+
+160
+00:15:22,720 --> 00:15:28,046
+two models to to do these two sources we discovered that they actually don't align that well they can
+我们发现了两个模型，它们在处理这两个来源时，实际对齐得并不好，它们可以
+
+161
+00:15:28,096 --> 00:15:33,771
+you can perfectly distinguish these two sources despite you mix them in a in a in a training set.
+即使你在训练集中将它们混合在一起，你仍然能完美区分这两个来源。
+
+162
+00:15:33,821 --> 00:15:43,386
+So the hypothesis that like basically we we just made a hypothes if we can align these two spaces better maybe we can enable better transfer.
+因此，我们提出的假设是，如果我们能更好地对齐这两个空间，或许就能实现更优的迁移。
+
+163
+00:15:43,436 --> 00:15:48,917
+So this is where the second follow-up work of EgoMimic uh is come from.
+这就是EgoMimic第二项后续工作的由来。
+
+164
+00:15:48,967 --> 00:15:50,502
+So it's called eagle bridge.
+所以它叫鹰桥。
+
+165
+00:15:50,552 --> 00:15:58,854
+So we really did the simplest thing right we tried to align this two two distribution space through a uh some some distribution alignment objective.
+所以我们真正做对了最简单的事，就是尝试通过某种分布对齐目标，将这两个分布空间对齐。
+
+166
+00:15:58,904 --> 00:16:01,392
+In this case we use our joint optimal transport.
+在这种情况下，我们采用联合最优传输。
+
+167
+00:16:01,442 --> 00:16:07,170
+We basically simultaneous align both the observation so latent space and action space to the same space.
+我们基本上同时将观测空间和动作空间对齐到同一个空间。
+
+168
+00:16:07,220 --> 00:16:13,950
+And the nice thing about optimal transport uh for those of you who don't know this is that they actually preserve the uh
+而最优传输的一个好处是，对于不了解的人来说，它实际上能保持……
+
+169
+00:16:14,000 --> 00:16:18,829
+the respective uh marginal distribution of both distribution of both domains so
+各自领域中两个分布的边缘分布，也就是两个分布的边缘分布。
+
+170
+00:16:18,879 --> 00:16:23,052
+that you don't actually have deformed one distribution to match the other.
+实际上你并不需要让一个分布变形去匹配另一个。
+
+171
+00:16:23,102 --> 00:16:31,031
+So you don't actually destroy the performance what would have been the performance of the robot only policy just to align these two spaces.
+所以你实际上并没有牺牲机器人仅策略应有的性能，只是为了对齐这两个空间。
+
+172
+00:16:31,081 --> 00:16:31,410
+Right?
+对吧？
+
+173
+00:16:31,440 --> 00:16:37,354
+So that's that's the nice thing about joint oper transport and the actual transport is just
+所以联合运输的好处就在于，实际运输过程本身就很简便。
+
+174
+00:16:37,404 --> 00:16:42,736
+a differentiable loss function that we put in network when we train the behavior coing loss.
+我们在训练行为编码损失时，放入网络中的可微损失函数。
+
+175
+00:16:42,786 --> 00:16:46,208
+Uh the transport map is when you compute per batch.
+啊，传输图是在按批次计算时产生的。
+
+176
+00:16:46,258 --> 00:16:53,127
+So you try to see which pairs should be mapped together and the cost function is something you define yourself.
+所以你要判断哪些配对应该对应，而代价函数是你自己定义的。
+
+177
+00:16:53,177 --> 00:16:58,623
+So uh so these are basically human policy latent and action and robot policy action latent.
+所以，这些基本上是人类策略的潜在状态和动作，以及机器人策略的动作潜在状态。
+
+178
+00:16:58,673 --> 00:17:03,950
+So you design some latent functions latent uh cost functions in the space so that you think
+所以你设计了一些潜在函数，比如潜在的成本函数，存在于这个空间中，这样你认为
+
+179
+00:17:04,000 --> 00:17:09,350
+these should be aligned uh in a sort of not a constrained sense but more encouraged sense.
+这些应该以一种非约束性但更被鼓励的方式对齐。
+
+180
+00:17:09,400 --> 00:17:14,005
+So we actually uh tried a few different cost functions and we realized that just matching
+所以我们实际上尝试了几种不同的损失函数，后来发现单纯匹配就足够了
+
+181
+00:17:14,055 --> 00:17:19,757
+their uh dynamic time warping distance in spaces actually just works well and but you can extend
+它们的动态时间规整距离在空间中实际上表现得很好，而且你还可以进行扩展。
+
+182
+00:17:19,807 --> 00:17:24,510
+this cost function to other other things like language description right if you describe have if
+这个成本函数还可以用于其他事物，比如语言描述，如果你用语言来描述的话。
+
+183
+00:17:24,560 --> 00:17:30,749
+the two t data points have the same same language description maybe you should map them together.
+这两个数据点有相同的语言描述，也许你应该把它们对应起来。
+
+184
+00:17:30,799 --> 00:17:36,189
+So after training this model and we compare the latent space and we discover that indeed they start to align.
+训练完这个模型后，我们对比了潜空间，发现它们确实开始对齐了。
+
+185
+00:17:36,239 --> 00:17:42,828
+So on the left hand side you can see that uh the orange and blue dots are a lot closer and you can see that there are a lot more
+左边可以看到，橙色和蓝色的点距离更近，而且数量也多得多。
+
+186
+00:17:42,878 --> 00:17:50,210
+blue dots because the blue dot like I mean there still is part of the space that the humans will not do right so but you can see that I
+蓝色的点，因为蓝色的点，我的意思是，仍然有一部分空间是人类无法处理的，但你可以看到我
+
+187
+00:17:50,260 --> 00:17:57,646
+mean the blue dots are kind of behind the red dots but they're they have a high degree of alignments uh especially in this part of the space right and
+蓝色点大致位于红色点之后，但它们在这一空间区域内的对齐度非常高。
+
+188
+00:17:57,696 --> 00:18:01,244
+if you look actually look at the nearest neighbor points in these in this latent
+如果你实际观察这些潜在空间中的最近邻点
+
+189
+00:18:01,294 --> 00:18:06,490
+space you see that they have very their varied behavior similar in similar stages individual task.
+你看到它们的行为差异很大，但在相似的阶段，各自完成着相似的任务。
+
+190
+00:18:06,540 --> 00:18:11,441
+So you can see that for this task is just kind of pouring the beans out to the to the
+所以你看，这个任务就是简单地把豆子倒出来。
+
+191
+00:18:11,491 --> 00:18:19,390
+to to the cup and quantitatively we show that this indeed works well uh like further improves the code training performance.
+并定量地证明，这确实能有效提升代码训练性能。
+
+192
+00:18:19,440 --> 00:18:21,894
+This still the same setup as EgoMimic.
+这仍然是与 EgoMimic 相同的设置。
+
+193
+00:18:21,944 --> 00:18:30,190
+So we had the same tasks same demonstration same task and just does the like it further drives the performance uh for for co-raing setting.
+所以我们进行了相同的任务、相同的演示，只是进一步提升了协作设置下的性能。
+
+194
+00:18:30,240 --> 00:18:34,350
+But what we were truly curious about is does it enable this sort of like direct
+但我们真正好奇的是，它是否能实现这种直接的连接。
+
+195
+00:18:34,400 --> 00:18:38,438
+transfer from human to robot like a new thing that human does that robot doesn't do.
+从人类到机器人的迁移，就像人类做而机器人尚未掌握的新事物。
+
+196
+00:18:38,488 --> 00:18:44,243
+And uh we decided on a task that is slightly contrived but really kind of shows the
+嗯，我们选了一个略显刻意的任务，但确实能很好地展现
+
+197
+00:18:44,293 --> 00:18:51,026
+spirit of zero shot transfer is that we have this like a small cabinet like a like a
+零样本迁移的精神就在于，我们有一个类似小柜子的东西，就像一个
+
+198
+00:18:51,076 --> 00:18:57,004
+box of of drawers and then uh we demonstrate a task on the blue region from both
+一个抽屉柜，然后我们演示一下在蓝色区域上的任务，从两边都进行
+
+199
+00:18:57,054 --> 00:19:02,258
+human robots and purple region of both human robot and the red region is only demonstrated by human.
+人形机器人和紫色区域代表了人形机器人，红色区域仅由人类展示。
+
+200
+00:19:02,308 --> 00:19:08,950
+So our hypothesis is that if you can the h robot can perform tasks in this red region it means that it must have transferred
+因此我们的假设是，如果机器人能够在红色区域完成任务，就意味着它已经实现了迁移。
+
+201
+00:19:09,000 --> 00:19:17,310
+something from the human data only right because we never show this calibration in that region and indeed uh uh this is what robots was
+仅来自人类数据，因为我们从未在该区域展示过校准，事实上，这就是机器人所表现的。
+
+202
+00:19:17,360 --> 00:19:26,097
+able to do not perfectly it has a performance drop in this region and quantitatively we saw that uh but despite that we actually like
+虽然在此区域性能有所下降，但定量分析显示，我们实际上还是喜欢这样。
+
+203
+00:19:26,147 --> 00:19:30,440
+eagle bridge was able to get non-zero performance compared to any other baseline
+与其它任何基线相比，鹰桥实现了非零性能。
+
+204
+00:19:30,490 --> 00:19:34,590
+so all of our pure BC baselines without this kind of realization failed.
+因此，我们所有未采用这种实现方式的纯BC基线方法都失败了。
+
+205
+00:19:34,640 --> 00:19:43,214
+So we were more confident that this this representation alignment hypothesis is true but we we only verify that at small small scale.
+因此，我们对这一表征对齐假说更加有信心，但目前仅在小规模上进行了验证。
+
+206
+00:19:43,264 --> 00:19:47,070
+So I'm going to talk about what happens at scale later in the talk.
+稍后我将在演讲中讨论规模扩大后会发生什么。
+
+207
+00:19:47,120 --> 00:19:47,706
+Okay.
+好的。
+
+208
+00:19:47,756 --> 00:19:52,741
+Um so then this is sort of the representation alignment story.
+所以这就相当于一种表征对齐的故事。
+
+209
+00:19:52,791 --> 00:19:56,346
+We we went on to study other parts of the human robot transfer.
+我们接着研究了人类到机器人的迁移其他方面。
+
+210
+00:19:56,396 --> 00:19:57,194
+For example,
+例如，
+
+211
+00:19:57,244 --> 00:20:01,550
+we felt that mobile manipulation is a perfect place to study this problem
+我们觉得移动操作是研究这一问题的理想场景。
+
+212
+00:20:01,600 --> 00:20:07,457
+because teleoperating robots for mobile tasks is really really hard.
+因为远程操控机器人完成移动任务真的非常困难。
+
+213
+00:20:07,507 --> 00:20:15,550
+We actually built this uh version of this Aloha station or in a lab and we try to teleport it was very very difficult.
+我们实际上在实验室里搭建了这个Aloha工作站的版本，尝试进行远程传输，但非常困难。
+
+214
+00:20:15,600 --> 00:20:23,803
+So um so it is tedious and expensive costly to collect but human data on the hand we move around all the time.
+所以，收集人类数据既繁琐又昂贵，而我们却一直在不停地移动。
+
+215
+00:20:23,853 --> 00:20:28,640
+We don't think about we are doing tabletop versus mobile inflation or just navigation.
+我们不会去想自己是在进行桌面端还是移动端的充气，或者仅仅是导航。
+
+216
+00:20:28,690 --> 00:20:36,524
+We just do things and uh with these devices like project Arya we really do have information that informs us about uh
+我们只是在做事，像项目阿丽亚这样的设备，我们确实有信息可以为我们提供参考。
+
+217
+00:20:36,574 --> 00:20:43,326
+human uh like how human does things in in the world right for example this is we can get the slime map we
+人类啊，就像人类在世界上做事那样，比如这个，我们可以获取黏液地图
+
+218
+00:20:43,376 --> 00:20:48,619
+can get where the heads are where the hands are in in the spatial sense this is just from a one one
+能到达头脑所在之处，也能到达双手所在之处，从空间意义上来说，这仅仅来自一个单一
+
+219
+00:20:48,669 --> 00:20:54,672
+task demonstration right all of the information you see in the screen is just from that demonstration wouldn't do any uh like multi-
+任务演示，屏幕上显示的所有信息都仅来自该演示，不会进行任何多任务操作。
+
+220
+00:20:54,722 --> 00:21:03,577
+traverse to construct this map or anything so we really have the technology to capture mobile manipulation information from human data.
+通过遍历构建这张地图，或任何其他内容，我们实际上已经具备了从人类数据中捕捉移动操作信息的技术。
+
+221
+00:21:03,627 --> 00:21:08,590
+So uh so with that hypothesis or my student Lawrence uh kind of just basically
+所以，基于这个假设，或者说我学生劳伦斯，基本上就是
+
+222
+00:21:08,640 --> 00:21:15,712
+applied the same recipe to to mobileation right so it's called uh egocentric mobile manipulation
+将同样的方法应用于移动操作，这就是所谓的第一人称移动操作
+
+223
+00:21:15,762 --> 00:21:24,406
+uh or Emma and uh I'm not going to get too much details because I love to cover the the the really the recipe is that we want we want
+呃，或者艾玛，我就不多讲细节了，因为我喜欢讲的其实是那个秘诀，就是我们想要，我们想要
+
+224
+00:21:24,456 --> 00:21:30,509
+to build architecture that can learn mobile manipulation including waypoint pass way points everything just
+构建能够学习移动操作的架构，包括路径点、途经点等所有内容
+
+225
+00:21:30,559 --> 00:21:35,967
+so that it can learn the policy And uh the system wise we had to
+以便它能够学习策略。从系统层面来看，我们必须
+
+226
+00:21:36,017 --> 00:21:40,834
+do uh basically magic retargeting to a differential drive because uh differential drive as you
+其实就是对差速驱动进行魔法般的重定向，因为差速驱动就像你
+
+227
+00:21:40,884 --> 00:21:46,634
+know mean they can only move uh you only have a like rotational and linear speed.
+意思是他们只能移动，你只有旋转和线性速度。
+
+228
+00:21:46,684 --> 00:21:48,930
+Uh but humans move holomically right.
+但人类是整体性地移动的，对吧。
+
+229
+00:21:48,980 --> 00:21:53,954
+So we we actually had to do some retargeting to make it work well on the navigation part of the task.
+所以我们实际上不得不进行一些重新定位，以让导航部分表现得更好。
+
+230
+00:21:54,004 --> 00:22:03,516
+And what we showed is that it's actually exciting that we we can show uh for for most of the tasks that are majority just navigation
+我们展示的是，对于大多数以导航为主的任务，这实际上令人兴奋，因为我们能够展示这一点。
+
+231
+00:22:03,566 --> 00:22:07,852
+with lib navig manipulation you can do zero shot transfer you don't need
+通过 Libero 操控，你可以实现零样本迁移，无需额外训练。
+
+232
+00:22:07,902 --> 00:22:14,004
+robot data for for for navigation navigation just transfer zero shot to robots and
+用于导航的机器人数据，只需零样本迁移至机器人即可
+
+233
+00:22:14,054 --> 00:22:22,781
+with manipulation heavy tasks we had to do a bit of code training but uh there's a performance the per performance gain is lot so from human
+在执行需要大量操作的任务时，我们不得不进行一些代码训练，但性能提升非常显著，相比人类效率提升了很多。
+
+234
+00:22:22,831 --> 00:22:30,703
+data And I just want to show some of the more more challenging tasks we've done uh for this task is which is kind of grocery shopping.
+数据，我想展示一些我们完成的更具挑战性的任务，比如购物。
+
+235
+00:22:30,753 --> 00:22:32,607
+We're no longer just bagging groceries.
+我们不再只是装杂货了。
+
+236
+00:22:32,657 --> 00:22:39,608
+We're just kind of putting stuff in the baskets and moving it uh to different parts of the workspace to hand over to people.
+我们只是把东西放进篮子里，然后搬到工作区的不同位置，交给别人。
+
+237
+00:22:39,658 --> 00:22:40,229
+Right?
+对吧？
+
+238
+00:22:40,279 --> 00:22:42,009
+So uh this is code train.
+所以，这个是代码训练。
+
+239
+00:22:42,059 --> 00:22:44,363
+So this manipulation part of this is code train.
+所以这个操作部分是通过代码训练的。
+
+240
+00:22:44,413 --> 00:22:48,030
+There's no mobile human there's no mobile tele operation.
+那里没有移动的人，也没有移动的遥操作。
+
+241
+00:22:48,080 --> 00:22:53,070
+It's just static uh teleision data plus mobile human data.
+只是静态的电视数据加上移动的人类数据。
+
+242
+00:22:53,120 --> 00:22:56,198
+And when you compare with just pure behavior cloning policy,
+而当你将其与单纯的行为克隆策略进行比较时，
+
+243
+00:22:56,248 --> 00:23:02,645
+you see that behavior cloning policy is not is very very uh virt uh fragile when you have long horizon task.
+你看，在长时程任务中，行为克隆策略非常脆弱。
+
+244
+00:23:02,695 --> 00:23:06,242
+What we discover is actually most of the failure comes from navigation stage.
+我们发现，实际上大部分失败都出在导航阶段。
+
+245
+00:23:06,292 --> 00:23:09,230
+So if you actually have more data on the navigation stage,
+所以如果你在导航阶段实际上拥有更多数据，
+
+246
+00:23:09,280 --> 00:23:15,064
+they they're less less likely to drift out of distribution and they're more likely to succeed for longer tasks.
+它们更不容易偏离数据分布，也更有可能在长时间任务中取得成功。
+
+247
+00:23:15,114 --> 00:23:17,610
+So this is where the benefit of human data comes in.
+因此，人类数据的优势就体现出来了。
+
+248
+00:23:17,660 --> 00:23:26,674
+And we also showed that for a majority navigation task uh we can scale the performance just by giving the more human data.
+我们还展示了，对于多数导航任务，只需提供更多的真人数据，就能提升性能。
+
+249
+00:23:26,724 --> 00:23:31,790
+Uh so this is one of the handover tasks where you have to travel to a different part of room and hand
+嗯，这是一个交接任务，你需要前往房间的另一部分并完成交接。
+
+250
+00:23:31,840 --> 00:23:37,497
+over a wine glass to a person standing at the kind of random part of the room and we saw that uh this
+透过酒杯看向房间某个随意角落站着的一个人，我们注意到，呃，这个
+
+251
+00:23:37,547 --> 00:23:43,692
+this kind of very nice scaling curve and we were pretty sure this is true because the student actually did 50 evals
+这种非常漂亮的缩放曲线，我们相当确定这是真的，因为学生实际上做了50次评估。
+
+252
+00:23:43,742 --> 00:23:51,342
+per data point which took a very very long time but we we're fairly sure that this the scaling curve is is correct.
+每个数据点都花了非常非常长的时间，但我们相当确定这个缩放曲线是正确的。
+
+253
+00:23:51,392 --> 00:23:51,961
+Okay.
+好的。
+
+254
+00:23:52,011 --> 00:23:59,470
+So and after that we are very excited and we started working on uh a lot of more uh more uh uh more direct transfer.
+之后我们非常激动，开始着手进行更多更直接的迁移。
+
+255
+00:23:59,520 --> 00:24:02,247
+For example we started bring up a more humanlike robot.
+例如，我们开始打造一个更像人的机器人。
+
+256
+00:24:02,297 --> 00:24:09,327
+So this is one of the rainbow robots where we started doing a direct retargeting to a full human noise with wheel basease.
+这就是我们最初直接将彩虹机器人重新定位到全尺寸人形机器人时，采用轮式底盘的版本。
+
+257
+00:24:09,377 --> 00:24:11,991
+Uh this is just a replay of the human data.
+呃，这只不过是人类数据的重放。
+
+258
+00:24:12,041 --> 00:24:13,811
+Uh it's not teleoperation right?
+呃，这可不是遥操作，对吧？
+
+259
+00:24:13,861 --> 00:24:22,590
+just human dozen ones retargeted to robots and the magic is actually under for the uh is on the kinematic retargeting sides of things.
+只是将人类的十二个动作重新映射到机器人上，而真正的魔法其实就在运动学重映射方面。
+
+260
+00:24:22,640 --> 00:24:30,081
+So we actually put a lot of effort in in retarget the full human post into robots through analytical solver.
+因此，我们实际上投入了大量精力，通过解析求解器将完整的人体动作迁移至机器人。
+
+261
+00:24:30,131 --> 00:24:40,603
+Uh so it's really fast can run at 2000 hertz uh and we'll also be able to re retarget it to a u mobile task like closing fridge door.
+它非常快，能以2000赫兹运行，我们还能将其重新适配到像关冰箱门这样的移动任务上。
+
+262
+00:24:40,653 --> 00:24:42,327
+So this is ongoing works.
+所以这是正在进行的工作。
+
+263
+00:24:42,377 --> 00:24:44,349
+We're still trying to improve the system.
+我们仍在努力改进这个系统。
+
+264
+00:24:44,399 --> 00:24:48,130
+The controller is still like uh not great yet.
+控制器现在还是不太好。
+
+265
+00:24:48,180 --> 00:24:48,558
+Okay.
+好的。
+
+266
+00:24:48,588 --> 00:24:54,350
+But we're very excited to to bring this to more humanlike robots.
+但我们非常激动，能将这项技术应用于更类人的机器人。
+
+267
+00:24:54,400 --> 00:25:02,367
+So the second part of my talk uh is about what happens if you scale uh human data further.
+所以，我演讲的第二部分是关于如果进一步扩大人类数据会发生什么。
+
+268
+00:25:02,417 --> 00:25:02,756
+Right?
+对吧？
+
+269
+00:25:02,786 --> 00:25:09,229
+We've shown this in like I don't know like 3 hours 5 hours 10 hours human data and we s saw that
+我们用人类数据展示了这一点，大概三小时、五小时、十小时的数据量，都看到了效果。
+
+270
+00:25:09,279 --> 00:25:16,859
+something great happens uh but we don't know what happens at scale and we I kept telling that human data scales but
+伟大的事情发生了，但我们不知道在大规模下会发生什么，我一直强调，人类数据是可扩展的。
+
+271
+00:25:16,909 --> 00:25:26,093
+does does human data truly scale right so I actually give a talk on very similar topic about year and a half
+人类数据真的能真正实现规模化吗？实际上，我之前做过一个关于类似话题的演讲，大约一年半前。
+
+272
+00:25:26,143 --> 00:25:35,257
+ago so November 2024 this is one of the last slides on my talk I preach that embody human data is robot data
+早在2024年11月，这是我演讲中的最后一张幻灯片之一，我一直在强调，人类数据就是机器人数据。
+
+273
+00:25:35,307 --> 00:25:42,653
+in disguise and robots have become more humanlike and whatnot right uh but one thing that I basically said is that uh
+伪装成人类，机器人也变得越来越像人了，等等，但有一点我基本上说过，就是
+
+274
+00:25:42,703 --> 00:25:50,670
+the data capturing technology is ready is advancing and what I was referring to is that people will start buying these kind
+数据采集技术已经准备就绪并正在快速发展，我之前提到的是，人们将开始购买这类产品。
+
+275
+00:25:50,720 --> 00:25:58,449
+of devices from companies like meta and Google that start wearing these air wearables start capturing data maybe in five years we'll
+像Meta和谷歌这样的公司推出的各类智能穿戴设备开始佩戴并采集数据，也许五年后我们就能看到成果。
+
+276
+00:25:58,499 --> 00:26:10,270
+have enough data to train these kind of foundation model from But um what happened later was something that we did not expect.
+有足够的数据来训练这类基础模型，但后来发生的事是我们没想到的。
+
+277
+00:26:10,320 --> 00:26:14,359
+You might have seen this news.
+你可能已经看到这条新闻了。
+
+278
+00:26:14,409 --> 00:26:18,772
+Maybe why hundreds of people in LA wear cameras while doing their chores.
+也许这就是为什么洛杉矶有数百人在做家务时都戴着摄像头。
+
+279
+00:26:18,822 --> 00:26:23,551
+This came out two two weeks ago and there was another CNN news teach you how
+两周前就发布了，CNN还专门做了一期新闻教你怎么用
+
+280
+00:26:23,601 --> 00:26:29,832
+to make money just by wearing our iPhone and hat uh and uh get money from things,
+只要戴着我们的 iPhone 和帽子，就能靠这些东西赚钱。
+
+281
+00:26:29,882 --> 00:26:30,350
+right?
+对吧？
+
+282
+00:26:30,400 --> 00:26:36,500
+So what happened was that uh our research I think part I think contributed
+所以发生的事情是，我认为我们的研究，某种程度上起到了作用
+
+283
+00:26:36,550 --> 00:26:44,777
+to this this broader capital interest in paying people to get data to train robots.
+这种更广泛的资本兴趣，就是花钱让人提供数据来训练机器人。
+
+284
+00:26:44,827 --> 00:26:52,128
+So in other words some of our research caused the data to be more abundant than what we had expected
+换句话说，我们的部分研究导致数据比预期更加丰富。
+
+285
+00:26:52,178 --> 00:26:58,854
+and that expedited the progress of research to the point where uh you could actually uh download this app today.
+这加快了研究进程，以至于你现在实际上就能下载这个应用了。
+
+286
+00:26:58,904 --> 00:27:00,510
+It's called task app.
+它叫任务应用。
+
+287
+00:27:00,560 --> 00:27:07,822
+It's from Door Dash and wear camera on your hat and you can start collecting data and sell the data to back
+这是来自 DoorDash 的项目，把摄像头戴在帽子上，就能开始收集数据，然后把数据卖出去。
+
+288
+00:27:07,872 --> 00:27:16,109
+of Door Dash and Door Dash will sell it to one of the robotics labs and to to train funny models for robotics.
+DoorDash 将将其出售给一家机器人实验室，用于训练有趣的机器人模型。
+
+289
+00:27:16,159 --> 00:27:16,577
+Okay.
+好的。
+
+290
+00:27:16,627 --> 00:27:23,518
+And there are probably about more than a hundred companies started in the past eight months or so or six months or so.
+过去八个月左右，甚至六个多月以来，可能已经有超过一百家公司成立。
+
+291
+00:27:23,568 --> 00:27:28,590
+Their main goal is to do labor arbitrage.
+他们的主要目标是进行劳动力套利。
+
+292
+00:27:28,640 --> 00:27:37,574
+they pay people uh with wage and collect data and wear cameras or devices to to collect data for them.
+他们支付人们工资，收集数据，并让他们佩戴摄像头或设备来帮他们收集数据。
+
+293
+00:27:37,624 --> 00:27:38,190
+Right?
+对吧？
+
+294
+00:27:38,240 --> 00:27:43,940
+So with I mean all of that is like slightly dystopian and all that but but we but now we can
+所以，那些东西听起来有点反乌托邦，但我们现在可以了
+
+295
+00:27:43,990 --> 00:27:53,256
+actually answer the question what happens at scale uh for for for these reasons right so uh in collaboration with Nvidia
+实际上回答这个问题：出于这些原因，规模化后会发生什么，比如与英伟达的合作。
+
+296
+00:27:53,306 --> 00:28:01,272
+and physical intelligence we we verify these in kind of two different stories uh one is uh is called eagle scale
+而物理智能，我们通过两种不同的方式来验证，一种叫做鹰级。
+
+297
+00:28:01,322 --> 00:28:09,841
+uh where we basically can think of this as scaling EgoMimic uh one 10,000 sometimes bigger uh and see what happens.
+嗯，我们可以把 EgoMimic 扩展到一万，甚至更大，看看会发生什么。
+
+298
+00:28:09,891 --> 00:28:14,693
+Uh and the other is a more subtle view about human robot transfer is
+还有另一种更微妙的观点，关于人机迁移
+
+299
+00:28:14,743 --> 00:28:21,336
+how do we enable human robot transfer uh emerge without supervising it through aligning data.
+我们如何在不通过数据对齐进行监督的情况下，实现人机迁移的自然涌现？
+
+300
+00:28:21,386 --> 00:28:27,550
+So it's sort of a emerging behavior human robot transfer through multi-bodyment learning.
+因此，这是一种通过多具身学习实现的人机迁移的新兴行为。
+
+301
+00:28:27,600 --> 00:28:33,667
+So EgoScale uh the first hypothesis we had is that we just need to scale up human data.
+所以，EgoScale——我们最初的假设是，只需要扩大人类数据的规模。
+
+302
+00:28:33,717 --> 00:28:39,742
+So we went in and actually just bought a lot of data uh and Nvidia basically
+所以我们进去后，直接买了大量数据，英伟达基本上
+
+303
+00:28:39,792 --> 00:28:44,649
+yeah we bought a lot of data so 20,000 hours of data very similar like exact
+是的，我们买了大量数据，大约2万小时，非常相似，几乎完全一致。
+
+304
+00:28:44,699 --> 00:28:49,792
+same format as what we used in EgoMimic and the second hypothesis is that uh
+与我们在 EgoMimic 中使用的形式相同，第二个假设是……
+
+305
+00:28:49,842 --> 00:28:56,490
+we uh if we make human robot robots more humanlike the transfer will be a lot easier.
+如果我们让机器人更像人，那么迁移就会容易得多。
+
+306
+00:28:56,540 --> 00:29:06,748
+So if you recall uh our 2023 robots like this right six off arms grippers and because I guess we wanted to verify the hypothesis we had resource uh
+所以如果你们还记得，我们2023年的机器人，像这样，六只手臂和夹爪，因为我们想验证一下假设，所以动用了资源。
+
+307
+00:29:06,798 --> 00:29:10,722
+we had a seven off two seven off arms with 22 degree from dctor's hands
+我们有七根臂杆，与医生手部呈22度角
+
+308
+00:29:10,772 --> 00:29:14,910
+there these are the state-of-the-art robots uh that this this is sort of the best
+这些是目前最先进的机器人，可以说达到了顶尖水平。
+
+309
+00:29:14,960 --> 00:29:25,329
+system we can have so the upper body is very very humanlike and uh eagle scale is just a recipe to see how we can leverage these sources data
+系统可以让上半身非常像人类，而鹰眼比例只是一种方法，用来探索我们如何利用这些数据源
+
+310
+00:29:25,379 --> 00:29:29,624
+and It's it's a very simple recipe where we kind of this you if you
+而且这是一个非常简单的配方，就像这样，如果你……
+
+311
+00:29:29,674 --> 00:29:33,643
+if you know about language model you know there's a pre-training stage there's like post-
+如果你了解语言模型，就知道它有一个预训练阶段，还有一个后训练阶段。
+
+312
+00:29:33,693 --> 00:29:35,423
+training stage or fine-tuning stage.
+训练阶段或微调阶段。
+
+313
+00:29:35,473 --> 00:29:36,788
+So it's very similar.
+所以非常相似。
+
+314
+00:29:36,838 --> 00:29:41,150
+So we have model pre-train on 20k hours human data.
+因此，我们的模型在2万小时的人类数据上进行了预训练。
+
+315
+00:29:41,200 --> 00:29:46,026
+We have a mid-training stage that's very similar to what we did in EgoMimic which is that
+我们有一个中期训练阶段，与我们在 EgoMimic 中所做的非常相似。
+
+316
+00:29:46,076 --> 00:29:52,111
+we have aligned human robot data on a variety of tasks to form a foundation for the transfer.
+我们已将人类与机器人在多种任务上的数据对齐，为迁移奠定了基础。
+
+317
+00:29:52,161 --> 00:30:00,216
+So you can think of that as teaching this this model that this task when done by humans looks like this when done by robot looks like that.
+你可以把这理解为在教这个模型：人类完成这项任务时是这样的，机器人完成时则是那样的。
+
+318
+00:30:00,266 --> 00:30:00,609
+Right?
+对吧？
+
+319
+00:30:00,639 --> 00:30:08,080
+So we have about 300 or so of the of these mid-training alignment data uh to to to anchor the the transfer
+所以我们大约有300组中期训练对齐数据，用于锚定迁移过程。
+
+320
+00:30:08,130 --> 00:30:16,666
+and then we showed that it can it can indeed transfer through let's say uh one shot or we actually tried zero shot.
+然后我们展示了它确实能够实现迁移，比如通过少样本，甚至我们实际尝试了零样本。
+
+321
+00:30:16,716 --> 00:30:18,146
+It didn't work work quite well.
+效果并不太理想。
+
+322
+00:30:18,196 --> 00:30:25,131
+uh but we we really tried to verify that can we train robots with just human data wi with uh train to
+但我们确实努力验证过，仅用人类数据就能训练机器人，通过人类数据进行训练
+
+323
+00:30:25,181 --> 00:30:33,507
+do thing uh things that only showing human data right and one of the sort of the obvious to me uh conclusion was
+做些只有展示人类数据才能做到的事，其中对我而言最明显的一个结论是
+
+324
+00:30:33,557 --> 00:30:40,565
+that scaling still happens uh so we had plotted this uh we didn't expect this to happen like this perfect but we
+这种扩展仍然会发生，所以我们画了这张图，虽然没预料到会这么完美。
+
+325
+00:30:40,615 --> 00:30:48,590
+really did just plot a training curve of access speed being a number of human hours uh human data hours for pre-training Okay,
+真的只是画了一条训练曲线，把访问速度作为预训练所需的人类数据小时数。
+
+326
+00:30:48,640 --> 00:30:56,202
+this is uh from 1k to 20k and this is lock scale and y-axis is not performance.
+这是从1千到2万，这是锁步缩放，纵轴不是性能。
+
+327
+00:30:56,252 --> 00:31:00,069
+It is the action prediction error on the validation side. is not success rate.
+这是验证端的动作预测误差，而非成功率。
+
+328
+00:31:00,119 --> 00:31:02,101
+Just make sure this is not success rate.
+只要确保这不等于成功率。
+
+329
+00:31:02,151 --> 00:31:05,755
+But we what we saw is a log linear scale, right?
+但我们看到的是对数线性尺度，对吧？
+
+330
+00:31:05,805 --> 00:31:09,468
+So, so we really have a further scaling when you have more data.
+所以，当你拥有更多数据时，我们的扩展能力会进一步提升。
+
+331
+00:31:09,518 --> 00:31:11,011
+Well, we didn't change the model too much.
+嗯，我们并没有对模型做太多改动。
+
+332
+00:31:11,061 --> 00:31:16,758
+It's a three billion parameter model, but is able to fit all this data and keep scaling.
+这是一个拥有三十亿参数的模型，却能容纳所有这些数据并持续扩展。
+
+333
+00:31:16,808 --> 00:31:22,933
+And it also happened to to be that the the pre-training model which when training more mod with with
+而且恰好，这个预训练模型在进一步训练更多模块时
+
+334
+00:31:22,983 --> 00:31:29,706
+when training on more hours data uh post train when you post train on a specific task it performs better.
+训练时使用更多小时的数据，后训练阶段针对特定任务进行微调后，表现会更好。
+
+335
+00:31:29,756 --> 00:31:41,613
+So uh I wouldn't call this a scaling law because now I mean it's it's just we we speculate that validation error correlates with performance.
+所以呃，我不会称这为缩放定律，毕竟我们现在只是推测验证误差与性能相关。
+
+336
+00:31:41,663 --> 00:31:47,629
+I mean if you have worked on calibration behavior cloning before you know that at small scale this is almost never true.
+我的意思是，如果你之前做过校准行为克隆，就会知道在小规模下，这种情况几乎从不成立。
+
+337
+00:31:47,679 --> 00:31:55,049
+Validization error do not correl with success rate but at scale we discover that this is actually pretty reliable predictor of success rate.
+验证误差与成功率无关，但在大规模情况下，我们发现它实际上是成功率的一个相当可靠的预测指标。
+
+338
+00:31:55,099 --> 00:32:03,822
+So the better you are at predicting human behaviors you have never seen the better this model will be at transferring to downstream robot tasks.
+你对未曾见过的人类行为预测得越准确，这个模型在迁移到下游机器人任务时的表现就会越好。
+
+339
+00:32:03,872 --> 00:32:06,723
+Again this this is just empirical observation.
+这再次只是经验观察。
+
+340
+00:32:06,773 --> 00:32:10,241
+I'm not making any suggestions that this is the truth right.
+我可没说这一定是真相，对吧。
+
+341
+00:32:10,291 --> 00:32:13,826
+Um so we kind of post train us on a variety of tasks.
+所以我们对各种任务进行了后训练。
+
+342
+00:32:13,876 --> 00:32:19,784
+One of the more kind of fancy tasks is actually assembling a toy car.
+一个相对复杂一点的任务，其实是组装一辆玩具汽车。
+
+343
+00:32:19,834 --> 00:32:27,089
+Uh so uses tools and has to have a line that's pretty accurately to to be able to sample this car.
+呃，所以它需要使用工具，并且必须有一条非常精确的线，才能准确地采样这辆车。
+
+344
+00:32:27,139 --> 00:32:36,819
+And we also trying many other tasks right now that looks more realistic like more economically interesting than just sampling cars and it also works.
+我们目前还在尝试许多其他任务，这些任务看起来比单纯采样汽车更真实，也更具经济价值，而且同样有效。
+
+345
+00:32:36,869 --> 00:32:41,810
+You also have tasks like using syringe um and it just t test
+你还有像用注射器这样的任务，还有个t测试
+
+346
+00:32:41,860 --> 00:32:49,070
+the precision of the manipulation and things like manipulating thin shell objects like cords.
+操作的精度，以及像操纵细长壳体物体（如绳索）这类任务的精准度。
+
+347
+00:32:49,120 --> 00:32:53,988
+And we also very interesting answer the questions we started uh a year of a
+而且我们还非常有趣地回答了我们一年前开始提出的问题。
+
+348
+00:32:54,038 --> 00:32:59,891
+year or two ago which is does scale enable better human robot transfer through mid-raining.
+两年前，这确实让通过监督微调实现更好的人机迁移成为可能。
+
+349
+00:32:59,941 --> 00:33:00,341
+Right?
+对吧？
+
+350
+00:33:00,383 --> 00:33:06,346
+So we what we did was again the mid-training stage is about collecting a lot of diverse human robot
+所以我们做的，是在训练中期阶段，收集大量多样化的人机交互数据。
+
+351
+00:33:06,396 --> 00:33:15,150
+aligned data and uh see if this enabled uh transferring task that only showing human data to robot policy.
+对齐数据，看看是否能实现仅通过人类数据向机器人策略转移任务。
+
+352
+00:33:15,200 --> 00:33:15,590
+Okay.
+好的。
+
+353
+00:33:15,620 --> 00:33:24,670
+And what we did is that once this model is mid-trained uh we provided one robot demonstration of a new task never seen
+我们所做的就是，一旦这个模型训练到一半，就提供一次机器人示范，演示一个从未见过的新任务。
+
+354
+00:33:24,720 --> 00:33:31,919
+before and a 100 or so human demonstrations to the robot to the policy and see if the robot can do that task.
+在向机器人提供大约100次人类示范后，再让机器人执行该策略，看看机器人是否能完成该任务。
+
+355
+00:33:31,969 --> 00:33:33,581
+So it's not zero shot yet.
+所以还不是零样本。
+
+356
+00:33:33,631 --> 00:33:38,464
+We're trying but one shot pretty reliable.
+我们正在努力，但一次尝试还算可靠。
+
+357
+00:33:38,514 --> 00:33:44,683
+So we for example this is one of the mid-training tasks like rolling shirts and if we have one demonstration
+比如，这是训练中的一项任务，像叠衬衫，如果我们有一个示范
+
+358
+00:33:44,733 --> 00:33:53,491
+of folding shirts plus 100 t demonstrations of a human fold folding shirts it's able to reliably fold the shirts.
+折叠衬衫加上100次人类示范，它能够可靠地折叠衬衫。
+
+359
+00:33:53,541 --> 00:33:58,914
+So what we have achieved is a oneshot transfer not zero shot but it's getting there.
+我们取得的成果是单次迁移，虽然不是零样本，但已经接近了。
+
+360
+00:33:58,964 --> 00:34:00,595
+We actually tried this on zeroot.
+我们实际上在 zeroot 上试过这个。
+
+361
+00:34:00,645 --> 00:34:03,442
+it does something reasonable just from human data.
+它仅从人类数据中就能做出合理的事情。
+
+362
+00:34:03,492 --> 00:34:09,134
+Uh but it's not quite able to achieve like a like more than 10% of success rate.
+但它的成功率还不到10%。
+
+363
+00:34:09,184 --> 00:34:12,361
+So still still still trying this but there's a sign of life here.
+但还是在努力尝试，这里总算有点生机了。
+
+364
+00:34:12,411 --> 00:34:13,192
+Very exciting.
+非常令人兴奋。
+
+365
+00:34:13,242 --> 00:34:20,632
+And also try this on like screwing different bottle caps and everything and quantitatively show that there's a stark difference.
+还可以试试拧不同瓶盖等各种操作，定量地展示出明显的差异。
+
+366
+00:34:20,682 --> 00:34:23,728
+So with so the yellow is mid-training only.
+因此，黄色部分仅表示中期训练。
+
+367
+00:34:23,778 --> 00:34:27,278
+So there's no pre-training uh uh just mid-training only.
+所以没有预训练，只有中段训练。
+
+368
+00:34:27,328 --> 00:34:27,640
+Right.
+对。
+
+369
+00:34:27,670 --> 00:34:31,445
+So we may train this and then with one uh with one shot plus
+所以我们或许可以进行一次训练，然后仅用一次示例即可
+
+370
+00:34:31,495 --> 00:34:37,456
+human data we see that there moderate performance non zero for the less challenging tasks.
+从人类数据中我们看到，对于挑战性较低的任务，性能中等且非零。
+
+371
+00:34:37,506 --> 00:34:44,652
+Uh but then with uh with the mid-training plus pre-training uh we were able to achieve uh very good performance.
+但通过训练中期的预训练，我们取得了非常出色的表现。
+
+372
+00:34:44,702 --> 00:34:47,789
+This is the red red cur the red bar right.
+这是红色的红色条，就在右边。
+
+373
+00:34:47,839 --> 00:34:54,961
+So the way to interpret this is that the alignment the mid-training is a way is a bridge between the pre-training and the robot policy.
+因此，可以这样理解：中段训练中的对齐，是连接预训练与机器人策略之间的一座桥梁。
+
+374
+00:34:55,011 --> 00:35:03,870
+Uh so this is how we bring the vast prior from pre like 20,000 hours human data to the robot performance is by teaching the robot
+所以我们通过训练机器人，将预训练阶段积累的约两万小时人类数据中的丰富先验知识，转化为机器人的实际性能。
+
+375
+00:35:03,920 --> 00:35:09,666
+this is how the human looks like when you do this task and this is what a robot looks like when they do the same task.
+这就是人类完成这项任务时的样子，这也是机器人完成相同任务时的样子。
+
+376
+00:35:09,716 --> 00:35:10,263
+Okay.
+好的。
+
+377
+00:35:10,313 --> 00:35:14,586
+And also tried to deploy this on a different robot.
+还尝试在另一台机器人上部署这个。
+
+378
+00:35:14,636 --> 00:35:16,494
+Uh this is a um a G1 robot.
+呃，这是个G1机器人。
+
+379
+00:35:16,544 --> 00:35:18,270
+We didn't do much tuning.
+我们没做太多调优。
+
+380
+00:35:18,320 --> 00:35:20,769
+This was actually done like two days before deadline.
+这实际上是在截止日期前两天才完成的。
+
+381
+00:35:20,819 --> 00:35:23,743
+Uh and they it just same recipe works pretty well.
+嗯，同样的配方效果还不错。
+
+382
+00:35:23,793 --> 00:35:27,193
+So we saw decent performance improvement on a variety of tasks.
+因此，我们在各种任务上看到了不错的性能提升。
+
+383
+00:35:27,243 --> 00:35:32,295
+Uh so we can we're fairly confident that this recipe works beyond
+所以我们相当有把握，这个方案不仅适用。
+
+384
+00:35:32,345 --> 00:35:39,645
+just like like 22 degree degree freands plus like very capable upper body.
+就像22度的自由度加上非常灵活的上半身一样。
+
+385
+00:35:39,695 --> 00:35:44,630
+So uh it should generalize reasonably well to other environment as well.
+所以它在其他环境下的泛化能力也应该不错。
+
+386
+00:35:44,680 --> 00:35:45,789
+Okay.
+好的。
+
+387
+00:35:45,839 --> 00:35:55,789
+So uh then we have a other another question which is that is scaling human data all you need to enable transfer.
+那么，我们还有一个问题，就是扩大人类数据是否就是实现迁移所需的全部条件。
+
+388
+00:35:55,839 --> 00:36:03,626
+What we learned from Eagle Scale is that superersizing human data improves robot performance at scale.
+从“鹰规模”项目中我们学到，大规模扩充人类数据能显著提升机器人在规模化应用中的表现。
+
+389
+00:36:03,676 --> 00:36:04,052
+Right?
+对吧？
+
+390
+00:36:04,082 --> 00:36:07,109
+So scaling plus alignment was a recipe.
+因此，规模扩展加上对齐就是一剂良方。
+
+391
+00:36:07,159 --> 00:36:17,280
+But we do need aligned data uh for uh for like a variety of tasks to to form this support uh for to enable transfer.
+但我们确实需要对齐的数据，用于各种任务，以提供支持，实现迁移。
+
+392
+00:36:17,330 --> 00:36:17,770
+Right?
+对吧？
+
+393
+00:36:17,820 --> 00:36:21,723
+So uh this this is what we need like for for a new embodiment we had
+所以啊，这就是我们为新具身形态所需的东西
+
+394
+00:36:21,773 --> 00:36:27,025
+to collect some mid training data to enable task level transfer and this is kind of tedious.
+收集一些训练中的数据以实现任务级迁移，这有点繁琐。
+
+395
+00:36:27,075 --> 00:36:29,539
+So we we started asking us why is that?
+所以我们开始问自己，这是为什么呢？
+
+396
+00:36:29,589 --> 00:36:33,432
+Why is this so hard to adapt to a new inbound event?
+为什么对新的入站事件适应起来这么难？
+
+397
+00:36:33,482 --> 00:36:41,433
+So what we kind of hypothesize is that in effect we're really just manually constructing these alignment set to teach the robot.
+我们推测，实际上我们只是在手动构建这些对齐数据，以教导机器人。
+
+398
+00:36:41,483 --> 00:36:49,504
+It's a supervised it's almost like a supervised supervising the transfer from one robot from human to one robots right by constructing
+这相当于一种监督，几乎就像是在监督人类向机器人转移技能的过程，通过构建这种方式实现。
+
+399
+00:36:49,554 --> 00:36:59,310
+these sets and a different perspective is that maybe humanto robot transfer is simply one instance of a broader cross embodiment learning problem.
+这些数据集和另一种观点认为，人机迁移可能只是更广泛的跨具身学习问题的一个实例。
+
+400
+00:36:59,360 --> 00:37:07,560
+Maybe if we can train the model with a more embodiment like more different kinds of agents that do things in real world
+也许如果我们能用更具具身性的模型进行训练，比如让各种不同的智能体在现实世界中执行任务
+
+401
+00:37:07,610 --> 00:37:16,592
+maybe this this human to robot transfer is no longer hard right we can form a generalizable transfer from human data to any robots.
+也许这种从人到机器人的迁移不再困难了，我们可以从人类数据中形成一种可泛化的迁移，适用于任何机器人。
+
+402
+00:37:16,642 --> 00:37:24,934
+So luckily uh we do have that data we have over the years the robotics community have collected a lot of data from different kind of robots and one of
+幸运的是，我们确实拥有这些数据，多年来机器人社区已经收集了来自各种机器人的大量数据，其中之一是
+
+403
+00:37:24,984 --> 00:37:29,318
+the data sets called Open X-Embodiment, some of you might have heard of it, is
+名为 Open X-Embodiment 的数据集，你可能听说过。
+
+404
+00:37:29,368 --> 00:37:36,029
+just like all sorts of different robots doing things um so uh so with that hypothesis
+就像各种不同的机器人在做各种事情一样，所以基于这个假设
+
+405
+00:37:36,079 --> 00:37:40,029
+I'm going to briefly talk about our collaboration with π, which is led by my
+我将简要介绍一下我们与 π 的合作，该项目由我领导。
+
+406
+00:37:40,079 --> 00:37:47,406
+students simmer uh that we verify the hypothesis of human transfer is can be an emerging
+学生们，我们来验证一下人类迁移这一假设是否正在成为一种新兴趋势
+
+407
+00:37:47,456 --> 00:37:53,550
+property of if you train on more diverse embodiment and the most important figure is
+如果你在更多样化的具身形态上进行训练，最重要的因素是
+
+408
+00:37:53,600 --> 00:37:59,970
+this the x-axxis is the diversity of pre-training set and y axis is the task performance.
+x轴表示预训练数据集的多样性，y轴表示任务性能。
+
+409
+00:38:00,020 --> 00:38:07,765
+So if you scale the diversity of robot uh robot just robot demonstration as a so robot pre-training data without having any human data you
+因此，如果你仅通过扩大机器人演示的多样性来作为机器人预训练数据，而完全不使用任何人类数据的话
+
+410
+00:38:07,815 --> 00:38:16,029
+have a moderate scaling curve but then as you if you add the human data to this different po points on the pre-training set by post-
+具有适中的缩放曲线，但当你将人类数据加入到预训练集的不同点时，情况就会发生变化。
+
+411
+00:38:16,079 --> 00:38:20,556
+training this model you can see that there's a bigger and bigger jump in performance
+训练这个模型时，你可以看到性能的提升越来越大。
+
+412
+00:38:20,606 --> 00:38:26,235
+which means that maybe right this is just still just empirical observation that maybe uh
+这意味着，也许现在还只是经验性的观察，可能……
+
+413
+00:38:26,285 --> 00:38:30,624
+when you train a more embodied pre-train your model this is vision language action model
+当你训练一个更具具身性的预训练模型时，这就是视觉-语言-动作模型。
+
+414
+00:38:30,674 --> 00:38:36,510
+VA val uh you when you pre-train this model on more diverse data it is
+当你用更多样化数据对这个模型进行预训练时，它的表现会更好
+
+415
+00:38:36,560 --> 00:38:42,750
+much is easier to transfer human data to a downstream embodiment and we also verify
+将人类数据迁移到下游具身形态要容易得多，我们也会进行验证。
+
+416
+00:38:42,800 --> 00:38:47,161
+this in a similar sort of testing plots that we show that uh when you
+这种类似的测试图表显示，当你
+
+417
+00:38:47,211 --> 00:38:52,592
+train on more diverse data the distance between human and robot data in the latent
+在更多样化的数据上进行训练，缩小人类数据与机器人数据在潜在空间中的距离
+
+418
+00:38:52,642 --> 00:38:57,630
+space become much closer and closer as you kind of scale the diversity of the data.
+随着数据多样性的不断扩展，空间变得越来越接近。
+
+419
+00:38:57,680 --> 00:39:05,789
+So this further kind of corroborates our hypothesis that uh this may be an emerging property of diverse training.
+这进一步支持了我们的假设，即这可能是多样化训练中涌现的一种特性。
+
+420
+00:39:05,839 --> 00:39:11,634
+So the way to think about this is that if you force your model to like cross like
+所以思考这个问题的方式是，如果你强迫你的模型去喜欢交叉的话
+
+421
+00:39:11,684 --> 00:39:19,578
+learn a lot of different embodiment maybe it will just like abstract everything into a embodimentic latent space.
+学习多种不同的具身形态，或许就能将所有内容抽象成一种具身潜空间。
+
+422
+00:39:19,628 --> 00:39:20,356
+Okay.
+好的。
+
+423
+00:39:20,406 --> 00:39:25,918
+And I mean um these are some nice videos that uh they made.
+我是说，这些视频做得还挺不错的。
+
+424
+00:39:25,968 --> 00:39:27,950
+I'm going to just show you something here.
+我来给你们展示一下这个。
+
+425
+00:39:28,000 --> 00:39:31,944
+Uh is I mean the the the key idea is still the thing I just told you.
+呃，我是说，核心思想还是我刚才告诉你的那个。
+
+426
+00:39:31,994 --> 00:39:36,763
+uh this is just one thing that showed uh it's the robot became capable just
+呃，这只是其中一件事，你看，机器人突然就变得能干了。
+
+427
+00:39:36,813 --> 00:39:42,350
+by uh learning from human uh demonstrations and one thing I want to mention is
+通过学习人类的演示，有一件事我想强调一下
+
+428
+00:39:42,400 --> 00:39:48,589
+that um this perspective is also saying that uh we need a robot the like
+也就是说，我们还需要一个机器人，就像这样
+
+429
+00:39:48,639 --> 00:39:55,309
+more subtle view of this is that ro we need a lot of these primitive
+更微妙的看法是，我们需要大量这些基础组件
+
+430
+00:39:55,359 --> 00:39:59,754
+actions to present in the v like in the pre-trained vas because as you can
+在视觉模型中呈现动作，就像在预训练的视觉模型中一样，因为如你所见
+
+431
+00:39:59,804 --> 00:40:05,470
+if you can imagine that a lot of these uh diverse pre-training robot data is
+如果你能想象，这些多样化的预训练机器人数据
+
+432
+00:40:05,520 --> 00:40:09,876
+giving the policy the ability to actually do these kind of little primitives attach like
+赋予政策执行这类微小基础操作的能力
+
+433
+00:40:09,926 --> 00:40:13,745
+picking up nails and putting nails in the in in the in the toolbox and everything.
+捡起钉子，把钉子放进工具箱里，一切就绪。
+
+434
+00:40:13,795 --> 00:40:19,069
+What a human data essentially does is to string these behaviors together to solve a long task.
+人类数据本质上是将这些行为串联起来，以完成一项长期任务。
+
+435
+00:40:19,119 --> 00:40:23,022
+So we don't actually need a lot of human data to make these work.
+所以我们实际上不需要大量人类数据就能让它们运行。
+
+436
+00:40:23,072 --> 00:40:31,789
+So, so this this kind of brings to actually to two two two perspective of human to robot transfer that happens only at scale.
+所以，这实际上带来了两种人类到机器人迁移的视角，而这只有在规模化时才会发生。
+
+437
+00:40:31,839 --> 00:40:41,150
+The first perspective is more straightforward is that if you have a lot of human data, if you post train robot data with some align aligned data,
+第一种观点更直接：如果你有大量的人类数据，就可以用一些对齐过的数据对机器人数据进行后训练。
+
+438
+00:40:41,200 --> 00:40:48,270
+uh align human data, robot data and humanlike robots really enable strong human to robot transfer at scale, right?
+啊，对齐人类数据、机器人数据和类人机器人，确实能大规模实现高效的人机迁移，对吧？
+
+439
+00:40:48,320 --> 00:40:50,514
+This is just pre-training post- training story.
+这只是一个预训练和后训练的故事。
+
+440
+00:40:50,564 --> 00:40:56,255
+Um but what the π collaboration is saying is that maybe the foundation
+但 π 合作项目所说的是，也许基础……
+
+441
+00:40:56,305 --> 00:41:01,550
+is not human data is a lot of diverse embodiment that supports the transfer from
+并非人类数据，而是大量多样的具身形态，支持了迁移。
+
+442
+00:41:01,600 --> 00:41:08,750
+like more diverse human behavior to to different robots right so it's really diverse diverse
+比如让机器人表现出更多样化的类人行为，所以它真的非常多样化。
+
+443
+00:41:08,800 --> 00:41:15,297
+embodiment data allows human to transfer uh human to transfer a human robot transfer to emerge
+具身数据使人类能够实现人机迁移，从而让机器人具备人类能力
+
+444
+00:41:15,347 --> 00:41:20,003
+and I'm not suggesting if either of this is will be the final picture I'm
+我并不是说这两种情况中的任何一种会是最终的图景
+
+445
+00:41:20,053 --> 00:41:25,619
+just saying that at scale uh different things would emerge that don't emer that don't
+只是说，规模达到一定程度后，会出现一些原本不会出现的新情况。
+
+446
+00:41:25,669 --> 00:41:32,670
+happen when you work on small scale problems and uh depending on what hypothesis you
+当你处理小规模问题时，会遇到各种情况，这取决于你所采用的假设。
+
+447
+00:41:32,720 --> 00:41:38,259
+have uh for like how you view human robot transfer problem you might find different things.
+嗯，就像你看待人机迁移问题的方式不同，可能会发现不同的东西。
+
+448
+00:41:38,309 --> 00:41:49,561
+So there's not a single uh like answer to this human robot transfer problem and there's it's a vast space of exploration to be done in this space.
+因此，人机迁移问题并没有单一的答案，这个领域还有广阔的空间等待探索。
+
+449
+00:41:49,611 --> 00:41:50,590
+Okay.
+好的。
+
+450
+00:41:50,640 --> 00:41:58,233
+So on that note, uh I think it's it's it's time to answer the question that if a lot of things happen at scale,
+那么说到这儿，我觉得是时候回答这个问题了：如果大量事情都在规模化发生，
+
+451
+00:41:58,283 --> 00:42:01,344
+uh if academia, what's the real academia, right?
+呃，如果说到学术界，真正的学术界，对吧？
+
+452
+00:42:01,394 --> 00:42:09,923
+Like how can we actually drive drive the science of this like is just a big company or like the fancy frontier lab problem now, right?
+我们到底该如何真正推动这一科学的发展？现在难道不就是一家大公司或一个高端前沿实验室的问题吗？
+
+453
+00:42:09,973 --> 00:42:19,509
+So, so the final question I want to kind of hint at is maybe there's a way for us to also scale the scientific understanding of human robot transfer.
+所以，我想暗示的最后一个问题可能是，我们是否也能在人类与机器人迁移的科学理解上实现扩展。
+
+454
+00:42:19,559 --> 00:42:28,562
+Um, so um so because because I mean the making scientific progress is not really like a company thing is it's it's a collective community thing.
+嗯，所以说，科学进步其实并不像公司那样运作，对吧？它是一个集体社区共同参与的事。
+
+455
+00:42:28,612 --> 00:42:36,769
+If we look at the history of AI, many of the major breakthroughs were enabled by community-scale infrastructure, like ImageNet and MS COCO.
+如果我们回顾人工智能的发展史，许多重大突破都是由社区规模的基础设施推动的，比如 ImageNet 和 MS COCO。
+
+456
+00:42:36,819 --> 00:42:41,445
+enabled the the blossom of a lot of the deep learning ar uh
+推动了深度学习的蓬勃发展
+
+457
+00:42:41,495 --> 00:42:46,278
+deep deep learning techniques and computer vision advancements and detection seation and all
+深度学习技术、计算机视觉进步、检测定位以及所有相关领域
+
+458
+00:42:46,328 --> 00:42:57,147
+those kind of things and uh common crawl sorry games enabled advances in reinforced learning for a while and super glue uh really test stress tested
+这类东西，还有 Common Crawl——抱歉，游戏曾推动强化学习发展了一段时间，而 SuperGLUE 则真正经受了严苛的考验。
+
+459
+00:42:57,197 --> 00:43:07,146
+a lot of these language models and common crawl was part of the foundation for a lot of these modern LMS because it's just basically internet.zip,
+许多语言模型和通用爬虫数据构成了现代语言模型的基础，因为它本质上就是互联网的压缩包。
+
+460
+00:43:07,196 --> 00:43:07,868
+right?
+对吧？
+
+461
+00:43:07,918 --> 00:43:14,230
+And um and the nice thing about human to robot transfer uh despite the fact that it's very costly to
+而且人机迁移的好处在于，尽管成本很高，但依然非常有价值
+
+462
+00:43:14,280 --> 00:43:22,517
+collect data and you still have to evaluate on robot is that we can finally agree on a data source data.
+收集数据后，我们仍需在机器人上进行评估，但至少现在我们可以就数据来源达成一致了。
+
+463
+00:43:22,567 --> 00:43:22,992
+Right?
+对吧？
+
+464
+00:43:23,042 --> 00:43:28,404
+If you have been in robotics for a while, the m major problem is everybody has different robot.
+如果你在机器人领域待了一段时间，就会发现最大的问题就是每个人的机器人都不一样。
+
+465
+00:43:28,454 --> 00:43:34,063
+We all study different robots and despite the fact we're still having different robots,
+我们研究各种不同的机器人，尽管如此，我们仍然拥有各种不同的机器人。
+
+466
+00:43:34,113 --> 00:43:38,594
+if we are studying the human to robot transfer problem, the human part we can all agree on.
+如果我们正在研究人机迁移问题，那么其中的人类部分，我们都可以达成共识。
+
+467
+00:43:38,644 --> 00:43:48,559
+So we have a there's it's likely that we can have a common foundation for studying this problem and we have more consistent embodiment of robots and
+因此，我们很可能可以为研究这一问题建立一个共同的基础，并实现机器人具身形态的更高一致性。
+
+468
+00:43:48,609 --> 00:43:56,467
+that that that allows us to to kind of pull maybe to to get together data to study this problem and uh but we still need a lot
+这让我们能够收集数据，来研究这个问题，但我们也还需要做很多工作。
+
+469
+00:43:56,517 --> 00:44:02,430
+of data right we still need a lot of data to study this problem and I kind of did an estimate of what are the usable data
+数据方面，我们仍然需要大量数据来研究这个问题，我粗略估算了一下可用数据有多少
+
+470
+00:44:02,480 --> 00:44:09,475
+open source data on on the internet for human data these days is roughly around 10k uh so there I know there's a lot startups like kind of
+如今互联网上的开源人类数据大约只有1万左右，我知道现在有很多初创公司都在做这方面。
+
+471
+00:44:09,525 --> 00:44:16,501
+branding themselves as like oh I'm released a new data set if you look into them is that actually usable as super usable so I did an
+把自己包装成“哦，我发布了新的数据集”，但你仔细一看，这数据集真的能用吗？其实根本没法用，所以我做了
+
+472
+00:44:16,551 --> 00:44:27,396
+estimate roughly around 10 hour usable data 10k hours of usable data but I theorized that maybe we need maybe 1 million to 10 million hours of uh
+大约需要10小时可用数据，1万小时可用数据，但我推测，也许我们需要100万到1000万小时的……
+
+473
+00:44:27,446 --> 00:44:37,735
+uh human data to be able to to see more emerging behavior scale uh so so we really it requires a community effort to actually drive up the
+人类数据，以便观察到更多涌现行为的规模化，这确实需要社区共同努力才能真正推动。
+
+474
+00:44:37,785 --> 00:44:42,645
+data that size and their understanding and the whole ecosystem around this to to
+如此规模的数据，以及它们的理解力，还有围绕这一技术的整个生态系统
+
+475
+00:44:42,695 --> 00:44:48,990
+make progress uh at least not that that's exists outside of these frontier labs.
+取得进展，至少这些前沿实验室之外并不存在。
+
+476
+00:44:49,040 --> 00:44:53,858
+Uh so this is why we decided to do a project called EgoVerse.
+所以我们就决定启动一个叫 EgoVerse 的项目。
+
+477
+00:44:53,908 --> 00:45:00,715
+Uh this project was actually started um about a year about like 20 late 2024.
+这个项目实际上是在大约一年前，也就是2024年底左右启动的。
+
+478
+00:45:00,765 --> 00:45:03,675
+So it took more than a year to complete.
+所以花了超过一年时间才完成。
+
+479
+00:45:03,725 --> 00:45:09,093
+It was a lot of effort to actually pull together a few uh labs and companies to do this kind of things.
+真正把几个实验室和公司凑在一起做这种事，花费了大量精力。
+
+480
+00:45:09,143 --> 00:45:14,288
+But I'm just going to show you like a nice one minute uh promotional video to this.
+但我只是想给你们看一个大约一分钟的宣传视频。
+
+481
+00:45:14,338 --> 00:45:20,830
+Uh so this is this is a group of labs and companies coming together to study like form attempting
+嗯，这是一群实验室和公司聚集在一起，共同研究类似形态的尝试
+
+482
+00:45:20,880 --> 00:45:26,323
+to form a foundation for for studying human robot transfer right so uh Stanford is actually part of it.
+为研究人机迁移奠定基础，因此斯坦福实际上也参与其中。
+
+483
+00:45:26,373 --> 00:45:35,648
+So Shiran's lab was a like major collaborator for our efforts and and uh what we kind of I mean the euro story
+因此，施兰实验室是我们项目的重要合作伙伴，我们可以说，这正是欧洲故事的开端。
+
+484
+00:45:35,698 --> 00:45:40,207
+we need a lot of data so we collect a lot of I'm going to talk about data set design and all that so
+我们需要大量数据，因此我们会收集大量数据，接下来我将谈谈数据集设计等相关内容。
+
+485
+00:45:40,257 --> 00:45:47,262
+but the number of hours is small but it's it's growing right so this is not a fixed data set we actually are continuing
+但小时数虽然不多，却在持续增长，所以这并不是一个固定的数据集，我们实际上仍在持续扩展。
+
+486
+00:45:47,312 --> 00:45:54,462
+to pull to pull together data from labs from companies uh to to put together a common data source so it's it's increasing as
+整合来自实验室和公司的数据，建立一个共享的数据源，使其不断增长
+
+487
+00:45:54,512 --> 00:46:03,432
+we're speaking Um and we also did cross institute study of a lot of these like basic hypothesis does align data actually matter
+我们正在讨论，此外，我们还对这些基本假设进行了跨机构研究，发现实际数据确实很重要。
+
+488
+00:46:03,482 --> 00:46:14,797
+if you have different robots right um and it it's it's really an ecosystem for uh for studying this problem uh scientifically at scale
+如果你有不同类型的机器人，这实际上是一个科学地大规模研究这一问题的生态系统。
+
+489
+00:46:14,847 --> 00:46:21,690
+and it's made of four parts uh one is data set uh the other is uh platform tools so we have different kind of
+它由四个部分组成，一个是数据集，另一个是平台工具，我们有不同类型
+
+490
+00:46:21,740 --> 00:46:29,363
+ways to aggregate your data to allow you anyone in your a this audience who have like maybe an iPhone to collect the data.
+把你的数据聚合起来，这样观众中任何拥有 iPhone 的人，都可以收集数据。
+
+491
+00:46:29,413 --> 00:46:38,841
+Uh and we have a research study to really solidify some of the hypothesis we had throughout the the journey of studying this problem and we'll have a
+而且我们有一项研究，旨在真正验证我们在研究这一问题过程中形成的一些假设，我们很快就会公布。
+
+492
+00:46:38,891 --> 00:46:45,517
+like consortium made of like labs and uh industry researchers industry startups to to
+一个由实验室和产业研究人员、产业初创公司组成的联盟
+
+493
+00:46:45,567 --> 00:46:51,601
+to really come together contributing data insights robots and everything to study this problem.
+真正汇聚起来，贡献数据、洞察、机器人以及一切资源，来研究这个问题。
+
+494
+00:46:51,651 --> 00:46:58,616
+In data set design we did it uh carefully to really uh uh to kind of divide it into two part.
+在数据集设计上，我们谨慎地将其划分为两部分。
+
+495
+00:46:58,666 --> 00:47:04,589
+One is what we call a flagship task where we have unified task semantics like folding
+一个是所谓的旗舰任务，我们统一了任务语义，比如蛋白质折叠
+
+496
+00:47:04,639 --> 00:47:09,777
+shirts uh uh like classic tasks like cup and saucer which is actually invented by shlab.
+衬衫啊，就像经典的杯子和碟子任务，这其实是由什拉布发明的。
+
+497
+00:47:09,827 --> 00:47:12,922
+All of these tasks are standard semantics.
+所有这些任务都是标准语义。
+
+498
+00:47:12,972 --> 00:47:17,190
+We uh we had many people across different labs across companies collect
+我们这边，不同实验室、不同公司的很多人参与了收集
+
+499
+00:47:17,240 --> 00:47:20,700
+the exact same task on different environment different objects and different everything.
+在不同环境、不同物体以及所有其他条件都不同的情况下执行完全相同的任务。
+
+500
+00:47:20,750 --> 00:47:27,835
+So we have a common foundation for study these tasks and there's also a large pool of free form data like in
+因此我们有了研究这些任务的共同基础，同时也存在大量自由形式的数据，例如
+
+501
+00:47:27,885 --> 00:47:35,069
+the wild data that has a longtail distribution behaviors collected by the these companies and then they contributed to the data sets.
+这些公司收集的具有长尾分布特征的海量数据，随后被贡献到数据集中。
+
+502
+00:47:35,119 --> 00:47:45,230
+So that makes up the two parts of the data set and uh like before we really care about turning human data into robot-like data.
+因此，这就构成了数据集的两个部分，就像之前一样，我们真正关心的是如何将人类数据转化为机器人数据。
+
+503
+00:47:45,280 --> 00:47:54,026
+So we actually added a lot of annotations including these nice uh hand pose, head pose and we also added dense language annotation on top.
+所以我们实际上添加了大量标注，包括这些不错的手部姿态、头部姿态，还增加了密集的语言标注。
+
+504
+00:47:54,076 --> 00:47:58,406
+Uh so it's very very expensive to do this and I'm really thankful for the who
+呃，做这个非常非常昂贵，我真的很感谢那些人
+
+505
+00:47:58,456 --> 00:48:04,370
+the company who actually did all of these annotations on these uh 10400 hours of data.
+实际上对这10400小时数据完成所有标注的公司。
+
+506
+00:48:04,420 --> 00:48:04,750
+Okay.
+好的。
+
+507
+00:48:04,780 --> 00:48:11,853
+But in moving into future all the data will have this kind of uh of data density and in and one
+但当迈向未来时，所有数据都将具有这种数据密度。
+
+508
+00:48:11,903 --> 00:48:17,534
+of the most important design decisions for for for eagle verse is that we don't want to just create one data set.
+EgoVerse 最重要的设计决策之一是，我们并不只想创建一个数据集。
+
+509
+00:48:17,584 --> 00:48:23,788
+We want it to continue to grow because we don't think a 1400 hour data is going to be enough to capture
+我们希望它能持续增长，因为我们认为1400小时的数据还不够用。
+
+510
+00:48:23,838 --> 00:48:30,830
+all of the possible human behaviors everywhere because a large pool of behavior that we don't we haven't done is uh I was
+所有可能的人类行为，因为存在大量我们尚未经历的行为池，这让我感到……
+
+511
+00:48:30,880 --> 00:48:35,950
+talking to Mac today is that like we we want we want to study human human interaction right like a lot of these
+今天和麦克斯聊天，就是我们想研究人类之间的互动，就像这些一样
+
+512
+00:48:36,000 --> 00:48:42,458
+are still not captured in this data set and we want everything to be uh kind of pulled together to this data source.
+这些数据集尚未涵盖，我们希望所有内容都能汇聚到这一数据源中。
+
+513
+00:48:42,508 --> 00:48:46,131
+So we actually had uh this thing hosted on a cloud flare.
+所以我们实际上把这东西部署在了 Cloudflare 上。
+
+514
+00:48:46,181 --> 00:48:52,669
+his R1 instance was right now it's about like 10 terabytes of data but it's still growing uh it's 10 terabytes
+他的 R1 实例目前大约有 10TB 数据，但仍在持续增长，现在是 10TB。
+
+515
+00:48:52,719 --> 00:48:59,390
+because we did a lot of compression so that it's manageable uh uh and and we also have a nice like SQL
+因为我们做了大量压缩，使其易于管理，而且我们还拥有一个不错的类似 SQL 的功能
+
+516
+00:48:59,440 --> 00:49:05,710
+tables and data exploration web pages on top and so if you're interested you can go explore eagle burst.ai AI there's a
+顶部是表格和数据探索网页，如果你感兴趣，可以去探索一下 egoverse.ai。
+
+517
+00:49:05,760 --> 00:49:14,190
+data browser there and uh and we know that not everyone can afford uh this kind of data collection effort at scale.
+数据浏览器在这里，而且我们知道，并不是每个人都能负担得起这种大规模的数据收集工作。
+
+518
+00:49:14,240 --> 00:49:21,156
+So we uh decided to kind of make available an uh in addition to the project Arya glasses uh
+所以我们决定，除了 Arya 眼镜项目之外，再额外提供一些内容。
+
+519
+00:49:21,206 --> 00:49:27,338
+which is the the default device we use in iPhone app that's able to allow you to capture this data.
+这就是我们在 iPhone 应用中默认使用的设备，能够让你捕获这些数据。
+
+520
+00:49:27,388 --> 00:49:33,069
+So it does uh on the cloud server it does uh data pro postprocessing labeling and everything.
+所以它在云服务器上进行数据的后处理、标注等所有操作。
+
+521
+00:49:33,119 --> 00:49:39,193
+uh so that can you also collect data for yourself for your own research or contribute back to eagors.
+嗯，所以你也可以为自己收集数据，用于自己的研究，或者回馈给EAGORs。
+
+522
+00:49:39,243 --> 00:49:39,825
+Okay.
+好的。
+
+523
+00:49:39,875 --> 00:49:40,457
+Okay.
+好的。
+
+524
+00:49:40,507 --> 00:49:44,152
+So the third part of this is the study.
+第三部分是研究。
+
+525
+00:49:44,202 --> 00:49:52,028
+Uh so we cared a lot about like kind of a research debt like if you're familiar with this kind of technical debt for programming.
+嗯，所以我们非常关注类似研究债务的问题，就像编程中的技术债务一样。
+
+526
+00:49:52,078 --> 00:49:57,669
+Uh you know like there's a lot of assumptions we made one-off assumptions we made in these papers.
+你知道，我们在这些论文里做了一些临时性的假设。
+
+527
+00:49:57,719 --> 00:49:59,265
+It has been pretty consistent.
+一直相当稳定。
+
+528
+00:49:59,315 --> 00:50:04,028
+uh but we really want to show that it is true and there are biases in our like
+但我们真的想证明它是真实的，而且我们的偏好中存在偏见
+
+529
+00:50:04,078 --> 00:50:11,390
+in our experiment setup setups different group have different robots and different robot embodiment have different transfer so we
+在我们的实验设置中，不同小组使用不同的机器人，而不同机器人具身形态的迁移能力也各不相同。
+
+530
+00:50:11,440 --> 00:50:17,855
+really decided that let's just have the same code base same data set different ways to collect teleprint data
+真正下定决心，就用同一个代码库、同一套数据集，只是用不同的方式来收集电传数据。
+
+531
+00:50:17,905 --> 00:50:22,725
+same way to collect human data and let's see what happens right do we have a consistent finding across
+用同样的方式收集人类数据，看看会发生什么，我们能否在不同情况下得出一致的结论
+
+532
+00:50:22,775 --> 00:50:28,120
+different robots um and we found is that it's actually pretty consistent uh so these are kind of
+不同的机器人，我们发现其实相当一致，所以这些算是……
+
+533
+00:50:28,170 --> 00:50:32,905
+tiny to see But the uh what we found is very similar to the conclusion of Eagleverse is that
+小到几乎看不见，但我们的发现与EgoVerse的结论非常相似
+
+534
+00:50:32,955 --> 00:50:40,316
+aligned data is very very important to uh to in to leverage diverse human data uh the pre-training diverse
+对齐数据对于利用多样化的人类数据进行预训练至关重要。
+
+535
+00:50:40,366 --> 00:50:46,518
+human data and uh if you only train on diverse data is not going to give you much gain.
+人类数据，如果你只用多样化数据训练，是很难获得太大提升的。
+
+536
+00:50:46,568 --> 00:50:50,701
+So like diverse data plus aligned data is the key to to enable
+因此，多样化数据与对齐数据的结合是关键
+
+537
+00:50:50,751 --> 00:50:57,549
+transfer at this scale and we're pretty sure about that across different robots embodiment.
+在不同机器人具身形态下实现这种迁移，我们相当有把握。
+
+538
+00:50:57,599 --> 00:51:03,950
+Um and one other thing we did was that we had discovered that uh
+还有件事我们发现了，那就是
+
+539
+00:51:04,000 --> 00:51:09,404
+all pre like despite I said that human have a unified embodiment everyone is different.
+尽管我说过人类具有统一的具身形态，但每个人都是不同的。
+
+540
+00:51:09,454 --> 00:51:14,447
+We have different body length we have different habit of doing the same task we have different ways to
+我们的身体长度不同，做同一项任务的习惯也不同，方式也各异。
+
+541
+00:51:14,497 --> 00:51:20,103
+look at things when have like different habit of like turning our head when I fold shirts and all that.
+观察一下，比如我们叠衣服时转头的习惯，还有其他类似的小动作。
+
+542
+00:51:20,153 --> 00:51:22,856
+So a lot of these diversity actually exist in human.
+因此，这些多样性实际上存在于人类之中。
+
+543
+00:51:22,906 --> 00:51:28,083
+And what we found is that if you given the same data budget, if you train on more diverse human data,
+我们发现，如果数据预算相同，训练时使用更多样化的真人数据，
+
+544
+00:51:28,133 --> 00:51:32,472
+you actually improve the performance of generalizing to a new human embodiment.
+你实际上提升了模型泛化到新的人形机器人形态的能力。
+
+545
+00:51:32,522 --> 00:51:40,670
+So there's some consistency to be learned, but you do need diversity in your human data as well to be able to enable uh transfer.
+因此，需要学习一些一致性，但你也需要在人类数据中保持多样性，才能实现迁移。
+
+546
+00:51:40,720 --> 00:51:44,873
+So and we also visualized this that uh on the left side this is a
+而且我们还进行了可视化，左边这个是
+
+547
+00:51:44,923 --> 00:51:51,060
+testing plot of when you train the model with four different demonstrators versus 12 different demonstrators.
+测试了使用四种不同示范者与十二种不同示范者训练模型的效果对比。
+
+548
+00:51:51,110 --> 00:52:00,089
+So you can see that uh this uh this red outlier when you basically we had a hold out demonstrator and we projected back to the test map.
+所以你看，这个红色的离群点，基本上是我们保留了一个演示样本，然后将其投影回测试地图。
+
+549
+00:52:00,139 --> 00:52:06,255
+We saw that the outlier is no longer outlier when you have a lot more uh demonstrators.
+我们发现，当你有更多示范者时，这个异常值就不再显得异常了。
+
+550
+00:52:06,305 --> 00:52:12,621
+So there it's a lot more mixed in uh when you have when you have more demonstrators.
+所以当演示者更多时，情况就更复杂了。
+
+551
+00:52:12,671 --> 00:52:13,240
+Okay.
+好的。
+
+552
+00:52:13,290 --> 00:52:16,249
+So those are I mean there are many other things we did in this study.
+所以，我是说，这项研究中我们还做了很多其他事情。
+
+553
+00:52:16,299 --> 00:52:17,789
+So if you're interested go read the paper.
+如果感兴趣，不妨去读读这篇论文。
+
+554
+00:52:17,839 --> 00:52:18,708
+It's quite fun.
+挺有趣的。
+
+555
+00:52:18,758 --> 00:52:22,025
+Uh and also you should contribute if you're interested.
+而且如果你有兴趣，也该贡献一份力量。
+
+556
+00:52:22,075 --> 00:52:26,344
+And the consortium is made again made up of a few different labs.
+该联盟再次由几个不同的实验室组成。
+
+557
+00:52:26,394 --> 00:52:36,731
+Uh so GT is led by my student uh uh Ryan Simmer left two students and Stanford is led
+呃，GTC由我的学生瑞安·西默领导，斯坦福则由两位学生领导。
+
+558
+00:52:36,781 --> 00:52:43,277
+by Ze UCSD led by Roger and ETH is led by a whole bunch of students with two PIs.
+由罗杰领导的加州大学圣地亚哥分校团队，以及由一群学生和两名项目负责人领导的苏黎世联邦理工学院团队。
+
+559
+00:52:43,327 --> 00:52:52,348
+So this is kind of a our core uh tour core labs and and this couldn't be possible without the support of uh these companies like Meta,
+所以这里是我们核心的参观路线，以及核心实验室，这一切都离不开像 Meta 这些公司的支持。
+
+560
+00:52:52,398 --> 00:52:53,642
+Mecca and Scale.
+麦加与规模。
+
+561
+00:52:53,692 --> 00:53:00,430
+Uh so uh it's really like a marriage of like academic rigor and we really care about solving problem and they really
+嗯，这就像学术严谨性与我们真正关心解决问题的结合，他们确实很在意。
+
+562
+00:53:00,480 --> 00:53:08,082
+care about trying to see what makes their the data they collect useful so I can sell the data to other companies.
+关心的是如何挖掘他们所收集数据的价值，以便我可以将这些数据卖给其他公司。
+
+563
+00:53:08,132 --> 00:53:14,282
+So there there's some synergistic relationship in in this consortium and we're continue to expand.
+因此，这个联盟内部存在一些协同效应，我们正持续扩展。
+
+564
+00:53:14,332 --> 00:53:18,365
+Uh so we when we release this data set this this thing I got like
+呃，所以我们发布这个数据集时，这东西我感觉就像
+
+565
+00:53:18,415 --> 00:53:25,101
+right now it's about 80 or so different entities and individuals who are interested in contributing.
+目前大约有80个不同的机构和个人有兴趣参与。
+
+566
+00:53:25,151 --> 00:53:29,323
+So we're continually growing new new new new uh new companies.
+所以我们一直在不断培育新的、全新的公司。
+
+567
+00:53:29,373 --> 00:53:32,796
+And if you remember I said there's more than 100 companies doing that.
+而且你们要是记得的话，我说过有超过100家公司正在做这件事。
+
+568
+00:53:32,846 --> 00:53:33,159
+Yeah.
+嗯。
+
+569
+00:53:33,189 --> 00:53:39,283
+some of them are interested in really understanding why what makes their data useful.
+其中一些人真正关心的是，弄清楚是什么让他们的数据变得有用。
+
+570
+00:53:39,333 --> 00:53:39,870
+Okay.
+好的。
+
+571
+00:53:39,920 --> 00:53:40,416
+Um, okay.
+嗯，好吧。
+
+572
+00:53:40,466 --> 00:53:42,110
+So, that's that's Eagle Verse.
+所以，这就是鹰verse。
+
+573
+00:53:42,160 --> 00:53:46,373
+And then there's some other open problems I'm curious I'm personally curious about.
+然后还有一些其他开放性问题，我个人很好奇。
+
+574
+00:53:46,423 --> 00:53:50,527
+My lab's curious about I'm going to briefly talk about I know we're mostly out of time.
+我们实验室对这个很感兴趣，我简单谈一下，我知道我们时间所剩无几了。
+
+575
+00:53:50,577 --> 00:53:52,692
+There are five minutes left.
+还剩五分钟。
+
+576
+00:53:52,742 --> 00:53:59,054
+Uh, so so uh what I'm interested in essentially is how to better model human essentially.
+呃，我本质上感兴趣的是，如何更好地模拟人类。
+
+577
+00:53:59,104 --> 00:54:06,074
+Uh what we are currently facing is that a lot of our designs are model designs are based on assumption
+我们现在面临的问题是，很多设计都是基于假设的模型设计。
+
+578
+00:54:06,124 --> 00:54:14,460
+that we are learning from a del demonstr tele demonstration for tabletop task with a highly kind of damped system.
+我们正在从一个桌面任务的演示中学习，这是一个高度阻尼系统的演示。
+
+579
+00:54:14,510 --> 00:54:24,838
+Basically it's just like if I summarize that like very slow uh moving at creeping speed uh no viewpoint shifts very short like mid horizon task and
+基本上就是我总结一下，就像非常缓慢地移动，几乎像爬行一样，没有视角变化，距离很近，就像中等距离的任务一样。
+
+580
+00:54:24,888 --> 00:54:29,764
+like I mean we know the how the demonstrator collected data right but when
+就像我们都知道演示系统是如何收集数据的，但当
+
+581
+00:54:29,814 --> 00:54:33,918
+you're starting to talk about human data things lot become a lot different so
+你开始谈论人类数据，事情就变得大不一样了。
+
+582
+00:54:33,968 --> 00:54:43,129
+what I'm interesting are two parts how do we fully capture the experience of human and how do we model it especially the context of how human
+我感兴趣的是两个方面：如何完整地捕捉人类的体验，以及如何建模这种体验，特别是人类情境下的建模。
+
+583
+00:54:43,179 --> 00:54:48,358
+made decisions And my first takes is that first person view is not sensory
+做出了决策，我的第一反应是，第一人称视角并非感官
+
+584
+00:54:48,408 --> 00:54:54,430
+experience is not the decision-m context used to actually decide what to do next.
+经验并不是用来实际决定下一步该做什么的决策依据。
+
+585
+00:54:54,480 --> 00:55:01,221
+And uh one of the things I'm very curious about is can we measure force or tactile reliably
+还有让我非常好奇的一点是，我们能否可靠地测量力或触觉？
+
+586
+00:55:01,271 --> 00:55:06,750
+from human and right now most of developments on the visual side these are nice things that the
+来自人类，而目前视觉方面的大多数进展都是些不错的新鲜玩意儿
+
+587
+00:55:06,800 --> 00:55:13,355
+community like the the the the sort of the broader commercial sector have done but the tactile capabilities
+像更广泛的商业领域所做的那样，具备触觉能力
+
+588
+00:55:13,405 --> 00:55:19,836
+are quite missing like taco gloves are there but they're not like they're very they're not good yet.
+就像塔可手套一样，虽然有，但还不太行，还没做好。
+
+589
+00:55:19,886 --> 00:55:25,710
+uh there are like other technologies like EMGs to measure like uh muscle activations all that as a
+嗯，还有其他技术，比如肌电图，可以用来测量肌肉激活等各种数据。
+
+590
+00:55:25,760 --> 00:55:30,601
+proxy for force or how much force you exert but they are not also very very noisy so
+用来表示力或你施加的力，但它们也相当嘈杂。
+
+591
+00:55:30,651 --> 00:55:37,046
+there's a lot of immaturities in the hardware side for really sensorize the entire experience of how you
+硬件方面还有很多不成熟之处，难以真正感知你整个体验的细节。
+
+592
+00:55:37,096 --> 00:55:43,154
+kind of how how you perceive the world and the second part is that the context for decision-
+某种程度上，你如何看待这个世界，以及做决策时的背景。
+
+593
+00:55:43,204 --> 00:55:48,452
+making is also more than just your instantaneous observation you didn't make your decision about what
+决策不仅仅基于你当下的观察，你做出选择时的考量远不止于此。
+
+594
+00:55:48,502 --> 00:55:52,408
+you're going to do next By just looking at the picture you have in front of you,
+你接下来要做的，只是看着你面前的这张图片。
+
+595
+00:55:52,458 --> 00:55:52,731
+right?
+对吧？
+
+596
+00:55:52,731 --> 00:55:54,703
+You have an enormous amount of knowledge.
+你拥有海量的知识。
+
+597
+00:55:54,753 --> 00:55:56,529
+For example, this chef, right?
+比如这位厨师，对吧？
+
+598
+00:55:56,579 --> 00:56:04,516
+He like this person cooked because uh well they have taken the class or they have been to a culinary school, right?
+他喜欢这个人做饭，因为嗯，他们上过烹饪课，或者上过厨艺学校，对吧？
+
+599
+00:56:04,566 --> 00:56:10,049
+And uh like it's not because they just look at this like image and they decide oh I'm going to cook.
+而且啊，不是因为他们看了这张图就立刻决定要做饭。
+
+600
+00:56:10,099 --> 00:56:12,965
+I'm going to like like turn on the heat, right?
+我要开暖气，对吧？
+
+601
+00:56:13,015 --> 00:56:21,445
+And the person for example turned to different workstations because they remembered that a minute ago they prepared their ingredients in that uh and
+比如那个人想起一分钟前自己在那个工作站准备过食材，于是就转向了那里。
+
+602
+00:56:21,495 --> 00:56:28,173
+not on the table and they they had to kind of go back and kind of continue to to to do that kind of thing.
+不在桌上，他们不得不回头继续做这类事情。
+
+603
+00:56:28,223 --> 00:56:35,234
+So it's it's more than your instantaneous observation and our models right now are terrible at modeling these kind of things.
+所以这不仅仅是你瞬间的观察，而我们现在的模型在建模这类事情上表现得非常糟糕。
+
+604
+00:56:35,284 --> 00:56:44,108
+Uh so there's a lot of work to be done to be actually be able to what I call behavior clone a human.
+所以要真正实现我所说的行为克隆人类，还有很多工作要做。
+
+605
+00:56:44,158 --> 00:56:51,505
+So if you really want to predict behavior of any person what they're going to do next there's a lot of
+所以如果你想真正预测任何人的行为，预测他们下一步会做什么，需要考虑很多因素
+
+606
+00:56:51,555 --> 00:56:57,230
+research you need to do and as a first step uh we our lab is doing a lot of different explorations.
+你需要做的研究，作为第一步，我们实验室正在开展各种不同的探索。
+
+607
+00:56:57,280 --> 00:57:01,027
+One of the things I'm most excited about is the spatial memory for mobile inflation.
+我最兴奋的一点是移动式膨胀的时空记忆功能。
+
+608
+00:57:01,077 --> 00:57:07,762
+So uh it believe it or not we we have the technology to build a lot of these like specially consistent memories right now.
+说实话，你可能不信，我们现在其实已经有技术，可以构建出很多这种特别连贯的记忆了。
+
+609
+00:57:07,812 --> 00:57:11,563
+So these are uh one of the ongoing works in our lab that we are building a
+所以这些是我们实验室正在进行的工作之一，我们正在构建一个
+
+610
+00:57:11,613 --> 00:57:18,123
+dynamic uh we'll call it dynamic scene graph of object being moved around as you continue demonstrating things.
+动态场景图，随着你不断演示物体的移动而实时变化。
+
+611
+00:57:18,173 --> 00:57:19,848
+I've never seen these kind of things before.
+我以前从没见过这种东西。
+
+612
+00:57:19,898 --> 00:57:25,036
+If you have worked on computer division before uh this is actually a new capabilities I've never seen before.
+如果你之前在计算机部门工作过，那这个其实是全新的功能，我以前从未见过。
+
+613
+00:57:25,086 --> 00:57:33,549
+uh that you can actually track objects and continuously integrate their point cloud on these object to build better object over time.
+也就是说，你可以实际追踪物体，并持续将它们的点云数据整合到这些物体上，从而随着时间推移不断优化物体模型。
+
+614
+00:57:33,599 --> 00:57:40,846
+uh and this is all run in real time right so a lot of these foundation models better devices and better
+嗯，这些都实时运行，所以这些基础模型、更优的设备和更好的性能都得以实现。
+
+615
+00:57:40,896 --> 00:57:51,268
+like perception models uh are enableing these kind of technology so I'm quite excited about uh this kind of research so takeaways
+就像感知模型正在推动这类技术的发展，所以我对这类研究非常期待，总结一下就是……
+
+616
+00:57:51,318 --> 00:57:59,487
+uh human data is the largest data source of physical intelligence uh human robot transfer is challenging but showing promises uh
+人类数据是物理智能最大的数据来源，人机迁移虽然具有挑战性，但已展现出前景。
+
+617
+00:57:59,537 --> 00:58:09,449
+new capabilities merge with model and data scale And data is in fact scaling faster than our scientific understanding of these problems.
+新能力与模型和数据规模相结合，而数据的实际增长速度甚至超过了我们对这些问题的科学理解。
+
+618
+00:58:09,499 --> 00:58:13,290
+And scaling science requires really a community effort.
+科学的规模化需要真正的社区协作。
+
+619
+00:58:13,340 --> 00:58:15,321
+And with that like to thank you all.
+借此机会，感谢大家。
+
+620
+00:58:15,371 --> 00:58:24,350
+And these are the sponsors.
+这些是赞助商。
+
+621
+00:58:24,400 --> 00:58:27,870
+A minute.
+一分钟。
+
+622
+00:58:27,920 --> 00:58:28,315
+Yeah.
+嗯。
+
+623
+00:58:28,345 --> 00:58:35,399
+So the m multimodal that you mentioned at the end is very interesting but as you mentioned it's pretty expensive to collect.
+你最后提到的多模态确实很有趣，但正如你所说，收集起来成本相当高。
+
+624
+00:58:35,449 --> 00:58:41,781
+So I'm just wondering from your experience with the diverse environments would you expect to have like a little bit of this
+所以我想从你在不同环境中的经验来看，你是否会觉得有点类似的情况？
+
+625
+00:58:41,831 --> 00:58:49,070
+expensive multimodal data make a big difference so you wouldn't have to collect so much of it to have that's an excellent question.
+昂贵的多模态数据能带来显著差异，因此你无需收集那么多数据就能达到效果，这是一个非常好的问题。
+
+626
+00:58:49,120 --> 00:58:53,131
+I think uh I expect yes I think we could use these uh
+我觉得啊，我预计是的，我觉得我们可以用上这些。
+
+627
+00:58:53,181 --> 00:58:59,977
+expensive sensorized human data as supervision to train models to label broader human experience.
+用昂贵的传感人数据作为监督信号，训练模型以标注更广泛的人类经验。
+
+628
+00:59:00,027 --> 00:59:06,749
+I think that should happen but there's there are things that are just inherently not perceivable if you don't have sensors.
+我认为那应该会发生，但如果没有传感器，有些东西本质上是无法感知的。
+
+629
+00:59:06,799 --> 00:59:09,946
+For example, imagine that you reach in a bag and start to grab things.
+比如，想象一下你伸手进一个袋子，开始抓东西。
+
+630
+00:59:09,996 --> 00:59:12,630
+Without tactile, you won't be able to perceive it, right?
+没有触觉，你就无法感知它，对吧？
+
+631
+00:59:12,680 --> 00:59:14,066
+You can't guess what you're doing.
+你无法猜到自己在做什么。
+
+632
+00:59:14,116 --> 00:59:16,670
+So these kind of things, not so much.
+这类事情就不太重要了。
+
+633
+00:59:16,720 --> 00:59:23,957
+But if you're talking about let's say am I in contact with this cup if I look at from this yes I mean I can perceive this on ego center view.
+但如果说到，比如我是否碰到了这个杯子，如果我从这个角度观察，是的，我的第一人称视角能感知到这个。
+
+634
+00:59:24,007 --> 00:59:31,314
+Maybe I could use a lab like model train on tactile visual data to label this visually data, right?
+也许我可以像用模型火车那样，用一个实验室来处理触觉视觉数据，对这些视觉数据进行标注，对吧？
+
+635
+00:59:31,364 --> 00:59:34,590
+So that's definitely possible.
+这绝对是可能的。
+
+636
+00:59:34,640 --> 00:59:35,390
+Yeah,
+嗯，是的。
+
+637
+00:59:35,440 --> 00:59:43,276
+I the same thing as this mountain model and you think about the the neuroscience neuros and also the
+我跟这个山模型是一样的，你想想神经科学、神经元，还有
+
+638
+00:59:43,326 --> 00:59:50,153
+the robotics learning reminds me of baby how the baby learn and now your robotics run as a baby,
+机器人学习让我想起婴儿如何学习，现在你们的机器人就像婴儿一样运行。
+
+639
+00:59:50,203 --> 00:59:50,503
+right?
+对吧？
+
+640
+00:59:50,533 --> 00:59:56,910
+It's like baby, you know, how the b how you how the machine learn versus how the baby learn, right?
+就像婴儿一样，你知道的，机器是怎么学习的，和婴儿是怎么学习的，对吧？
+
+641
+00:59:56,960 --> 00:59:57,950
+I'm curious to see.
+我很想知道会怎样。
+
+642
+00:59:58,000 --> 00:59:58,234
+Yeah.
+嗯。
+
+643
+00:59:58,234 --> 01:00:02,013
+Well, the neuroscience side of things is uh is quite interesting because I mean,
+嗯，从神经科学的角度来看，这事儿还挺有意思的，我的意思是，
+
+644
+01:00:02,063 --> 01:00:11,016
+if you're talking about like sort of planting sensors in people's brain, uh yes, this this is the most direct form of human data.
+如果你说的是在人脑里植入传感器，嗯，这确实是获取人类数据最直接的方式。
+
+645
+01:00:11,066 --> 01:00:18,533
+So maybe we can actually infer more intent from just like like I don't know the more uh more better sensors.
+也许我们仅通过更先进的传感器，就能推断出更多意图。
+
+646
+01:00:18,583 --> 01:00:23,516
+But in terms of the way robots learn as human learners, I think right now it's very different.
+但从机器人像人类学习的方式来看，我认为目前差别很大。
+
+647
+01:00:23,566 --> 01:00:28,206
+Uh what we're trying to do is the way like it's sort of like large language model analogy.
+我们试图做的，有点像大型语言模型的类比。
+
+648
+01:00:28,256 --> 01:00:34,089
+We're not teaching larger language model by teaching how to speak like grammars and everything, right?
+我们并不是通过教语言模型如何像语法一样说话来训练它，对吧？
+
+649
+01:00:34,139 --> 01:00:37,630
+We dump internet.zip into a model, right?
+我们把互联网.zip文件导入模型，对吧？
+
+650
+01:00:37,680 --> 01:00:44,960
+What we're trying to do is to dump human.zip into a model and see what happens, right?
+我们想做的，就是把 human.zip 文件丢进模型里，看看会发生什么，对吧？
+
+651
+01:00:45,010 --> 01:00:46,029
+Yeah.
+嗯。
+
+652
+01:00:46,079 --> 01:00:46,412
+Yeah.
+嗯。
+
+653
+01:00:46,442 --> 01:00:52,114
+uh you motivated your talk with uh LSD and how datadriven learning has revolutionized that field.
+嗯，你用迷幻药LSD来激发演讲，还讲了数据驱动学习如何彻底改变了这一领域。
+
+654
+01:00:52,164 --> 01:00:54,749
+One thing that's been really important is data quality.
+非常重要的一点是数据质量。
+
+655
+01:00:54,799 --> 01:00:55,170
+Yeah.
+嗯。
+
+656
+01:00:55,200 --> 01:00:55,559
+Yeah.
+嗯。
+
+657
+01:00:55,589 --> 01:00:59,361
+And uh you often times when we talk about human data can be really noisy.
+而且啊，当我们谈论人类数据时，它往往非常嘈杂。
+
+658
+01:00:59,411 --> 01:01:07,373
+Uh what are your thoughts on like filtering out bad data or like how do you do quality control uh etc. Excellent question.
+嗯，关于过滤不良数据或者如何进行质量控制，你有什么看法？非常好的问题。
+
+659
+01:01:07,423 --> 01:01:11,603
+I think that's the next stage of this like once we have more than let's like like
+我认为这就是下一个阶段了，一旦我们拥有的东西超过一定数量，就像这样
+
+660
+01:01:11,653 --> 01:01:15,107
+I said we're going to have more data than we know how to do with it right.
+我说过，我们将拥有比我们目前处理能力更多的数据。
+
+661
+01:01:15,157 --> 01:01:23,470
+So uh we could yeah we the data filtering understanding like how to explore the data what data attribution right what data matters in
+所以啊，我们可以，嗯，数据过滤和理解，比如如何探索数据，哪些数据属性是关键的，哪些数据才是重要的
+
+662
+01:01:23,520 --> 01:01:32,990
+produce that is is the science of pro training is just start starting for for for these kind of models actually wonderful talk really really
+预训练的科学其实就是从这些模型开始的，这是一场非常精彩的演讲，真的非常棒。
+
+663
+01:01:33,040 --> 01:01:36,282
+inspiring and interesting work I'm wondering if you can talk a little
+令人振奋又有趣的工作，我想请问您能否谈一谈？
+
+664
+01:01:36,332 --> 01:01:42,269
+bit about what you observe after supervised finetuning so what I understood correct
+关于监督微调后你观察到的情况，我理解得对吗
+
+665
+01:01:42,319 --> 01:01:51,532
+me if I'm wrong in the middle projects where you were pre-training with large data and then um and then uh testing on specific tasks.
+如果我没理解错的话，在中间的项目中，你们是先用大量数据进行预训练，然后再在特定任务上进行测试。
+
+666
+01:01:51,582 --> 01:01:54,990
+You were still pre-training and then mid-train and then supervised fine-tuning.
+你还处于预训练阶段，接着是训练中期，然后是监督微调。
+
+667
+01:01:55,040 --> 01:01:55,789
+Yeah.
+嗯。
+
+668
+01:01:55,839 --> 01:02:00,029
+Do you obtain any degree of generalization after supervised?
+监督学习之后，你能否获得一定程度的泛化能力？
+
+669
+01:02:00,079 --> 01:02:00,761
+Great question.
+好问题。
+
+670
+01:02:00,811 --> 01:02:08,231
+Yeah, we we didn't really stress test this but we in the paper but really did a lot of testing.
+是的，我们在论文中并没有真正进行压力测试，但实际上做了大量测试。
+
+671
+01:02:08,281 --> 01:02:12,559
+I can't talk too much about this like this is part of the media project um that
+我没法过多谈论这个，因为这属于媒体项目的一部分。
+
+672
+01:02:12,609 --> 01:02:16,650
+I can tell you that it does it does have a lot of transfer um from human
+我可以告诉你们，它确实能很好地将人类的经验迁移过来。
+
+673
+01:02:16,700 --> 01:02:22,990
+knowledge not in the form of um mostly um so some in the form of spatial analization
+知识并非以某种形式存在，主要是空间分析的形式
+
+674
+01:02:23,040 --> 01:02:29,666
+objectization but what's most surprising is the language following became much better I I don't know why like
+对象化，但最令人惊讶的是，后续的语言表达变得好太多了，我也不明白为什么。
+
+675
+01:02:29,716 --> 01:02:34,136
+we don't have a good hypothesis of why language following became much better when you pre-tr human
+我们还没有一个很好的假设来解释为什么在预训练人类数据后，语言跟随能力会大幅提升。
+
+676
+01:02:34,186 --> 01:02:41,125
+data um but yeah compared with other frontier models like human train human training data is actually most
+数据方面，但说实话，与其他前沿模型相比，人类训练数据实际上是最丰富的。
+
+677
+01:02:41,175 --> 01:02:46,379
+effective like we can actually do like for example negative steering like we can actually say don't
+就像我们真的可以做到，比如负向转向，我们真的可以说“不要”。
+
+678
+01:02:46,429 --> 01:02:50,617
+do this and actually like try to avoid that object when it when it's trying to do it.
+这样做，实际上要尽量避开那个物体，当它试图这么做时。
+
+679
+01:02:50,667 --> 01:02:50,960
+Yeah.
+嗯。
+
+680
+01:02:50,960 --> 01:02:54,590
+Follow up your your human data was also language labelled right.
+后续的人类数据也进行了语言标注，对吧。
+
+681
+01:02:54,640 --> 01:02:59,620
+Uh yes yeah yeah that yeah sorry that that that was the reason.
+对，是的，就是那个原因，抱歉，就是那个。
+
+682
+01:02:59,670 --> 01:03:05,240
+Yeah for other applications there's been a push towards synthetic data to amplify the current existing data.
+其他应用方面，人们正积极推动使用合成数据来扩充现有数据。
+
+683
+01:03:05,290 --> 01:03:11,309
+Have you also seen that with vision models for robotics or are the general models not there yet?
+你有没有也看到视觉模型在机器人领域的应用？还是说通用模型还没达到那个水平？
+
+684
+01:03:11,359 --> 01:03:13,549
+Uh sorry can you rephrase your question?
+抱歉，您能换种方式问一下吗？
+
+685
+01:03:13,599 --> 01:03:18,212
+Oh so like synthetic data is really important for other applications like for instance because it's more
+所以，合成数据对于其他应用非常重要，比如因为它更具优势
+
+686
+01:03:18,262 --> 01:03:25,150
+reliable but then have you seen people using like generative AI images or videos or just simulation?
+可靠，但你见过有人用生成式AI图像、视频或仿真吗？
+
+687
+01:03:25,200 --> 01:03:27,574
+Great question.
+好问题。
+
+688
+01:03:27,624 --> 01:03:34,990
+Um so the thing is that um the synthetic data is useful because you want something scalable,
+所以，合成数据有用的原因在于，你想要的是可扩展的东西，
+
+689
+01:03:35,040 --> 01:03:45,167
+controllable and uh maybe can some characteristics that you want from data that you can manually inject right but for human data right now we can
+可控的，呃，也许你可以手动注入一些想要的数据特征，但目前对于人类数据来说，我们还做不到这一点。
+
+690
+01:03:45,217 --> 01:03:55,549
+actually like the way that we for example tell our vendors to is we can have the high degree freedom of control over what behaviors they have.
+实际上，比如我们告诉供应商时，可以对他们行为的控制具有高度的自由度。
+
+691
+01:03:55,599 --> 01:04:01,123
+So uh for now I think it's okay to not to only rely on like
+所以呃，目前我觉得没必要只依赖于……
+
+692
+01:04:01,173 --> 01:04:08,380
+realistic real world data but uh in the future definitely uh synthetic data will be very
+真实世界的数据，但未来合成数据肯定非常重要
+
+693
+01:04:08,430 --> 01:04:16,110
+useful and the one place that where is very very useful is um the last inch
+非常有用，而最实用的地方就是最后一英寸。
+
+694
+01:04:16,160 --> 01:04:22,455
+of between your hand and object because human hands are still very different from robot hands,
+因为人手和机器人手之间仍然存在很大差异，
+
+695
+01:04:22,505 --> 01:04:22,858
+right?
+对吧？
+
+696
+01:04:22,888 --> 01:04:30,216
+And then the way that we interact with the object will be subtly but importantly different from how robots should interact with with the object.
+而我们与物体的互动方式，将微妙但重要地不同于机器人与物体的互动方式。
+
+697
+01:04:30,266 --> 01:04:37,456
+And this last inch or last newton difference is going to be like we we like basically you want to answer the question if I
+而最后这一英寸或这一牛顿的差距，就好比你要回答这个问题：如果
+
+698
+01:04:37,506 --> 01:04:45,209
+were a different person or different robot how I should have done this in order to cause the same effect of this what I have demonstrated.
+如果是另一个人或另一台机器人，我该如何做才能产生与我刚才演示的相同效果。
+
+699
+01:04:45,259 --> 01:04:45,546
+Right?
+对吧？
+
+700
+01:04:45,546 --> 01:04:48,908
+So that kind of counterfactual data doesn't exist in the real world.
+这种反事实数据在现实世界中并不存在。
+
+701
+01:04:48,958 --> 01:04:54,643
+You have to synthesize it. with language models.
+你必须用语言模型来合成它。
+
+702
+01:04:54,693 --> 01:04:58,830
+Uh the big breakthroughs happened first in languages in which a lot of text was
+啊，重大突破最初出现在文本数据丰富的语言中
+
+703
+01:04:58,880 --> 01:05:03,590
+already available but then there are also translation models to convert that to other languages.
+已经可以使用，但还有翻译模型可以将其转换为其他语言。
+
+704
+01:05:03,640 --> 01:05:08,114
+So for parts of the world where neither Ariana or iPhone would be very common.
+因此，在阿丽亚娜或iPhone并不常见的世界部分地区。
+
+705
+01:05:08,164 --> 01:05:11,863
+Do you think that the different kinds of scenes or different ways of doing
+你觉得不同场景或不同做法之间有什么区别吗？
+
+706
+01:05:11,913 --> 01:05:18,749
+things could still get some translation benefit from training on these kinds of data sets?
+这些数据集的训练仍可能带来一定的翻译收益吗？
+
+707
+01:05:18,799 --> 01:05:24,597
+Are we talking about like cross the bicep stickers or cross very different kinds of objects maybe
+我们说的是像跨过肱二头肌贴纸，还是跨过完全不同种类的物体？
+
+708
+01:05:24,647 --> 01:05:31,566
+or different human preferences of how tasks like how like basically do we need like a everybody
+或者不同人类对如何完成任务的偏好，比如我们到底需不需要每个人都这样
+
+709
+01:05:31,616 --> 01:05:37,087
+doing the same task the same way or like diver behavior and diversity right yeah that's a
+用同样的方式做同样的任务，就像鱼类的行为一样，具有多样性和差异性，对吧？是的，就是这样。
+
+710
+01:05:37,137 --> 01:05:41,968
+really good question I think um there's this is a I would say there's a paradigm shift
+非常好的问题，我认为这确实标志着一种范式转变。
+
+711
+01:05:42,018 --> 01:05:47,063
+how right now as to like how do we design these these models right again like what
+现在关键是怎么设计这些模型，再次强调一下，到底该怎么做？
+
+712
+01:05:47,113 --> 01:05:51,789
+I said the VA's A lot of these behavior coding models are designed to fit uni uni
+我说，退伍军人事务部的许多行为编码模型都是为适配单一模型而设计的。
+
+713
+01:05:51,839 --> 01:05:56,968
+strategy data and right now you can't really constrain human behavior if if you want to learn
+策略、数据，而目前你根本无法约束人类行为，如果你想学习的话
+
+714
+01:05:57,018 --> 01:06:01,470
+from natural human behavior you can't constrain them like that's our goal right so in order to
+从自然的人类行为来看，你无法那样去约束它们，这正是我们的目标，对吧？
+
+715
+01:06:01,520 --> 01:06:04,269
+solve this problem we really need a new type of model to be able to fit this
+要解决这个问题，我们确实需要一种新型模型，才能适配这种复杂情况。
+
+716
+01:06:04,319 --> 01:06:08,749
+kind of data and diversity I would say is is the thing it's a problem not a
+数据的种类和多样性才是问题所在，而不是别的。
+
+717
+01:06:08,799 --> 01:06:16,746
+solution right we want to solve that to in order to leverage more data yeah similar question
+解决方案，我们想解决这个问题，以便更好地利用更多数据，是的，类似的问题
+
+718
+01:06:16,796 --> 01:06:21,407
+um what do you think is the future of Tel operation given all this development and do
+嗯，考虑到这些发展，你认为远程操作的未来会怎样？
+
+719
+01:06:21,457 --> 01:06:27,648
+you think how do you think robotic companies will evolve their investment in Telop given how are
+你认为机器人公司会如何调整对TeleOp的投资，考虑到目前的情况？
+
+720
+01:06:27,698 --> 01:06:37,217
+you a VC uh because I will give a different answer uh so yeah I think my
+你是风险投资人吗？因为我会给出一个不同的答案，嗯，我觉得我的
+
+721
+01:06:37,267 --> 01:06:43,480
+personal goal is to get rid of tail operation because this is just like I said in
+我的个人目标是彻底消除尾部手术，因为正如我所说，这
+
+722
+01:06:43,530 --> 01:06:49,927
+the beginning it's a lossy pipe like I I really want my human robots to be humanlike.
+一开始它就像一个有损的管道，我真的很希望我的人形机器人能像人类一样。
+
+723
+01:06:49,977 --> 01:06:57,633
+For example, if I throw this water bottle at you, you would either catch it or you flinch, I want my robot to be able to do the same thing.
+比如，如果我朝你扔这个水瓶，你会选择接住它，或者本能地闪躲，我希望我的机器人也能做到同样的反应。
+
+724
+01:06:57,683 --> 01:07:00,724
+You would not be able to tell our to demonstrate this repeatedly.
+你根本无法分辨，我们无法反复演示这一点。
+
+725
+01:07:00,774 --> 01:07:03,344
+This is all natural human behaviors, right?
+这些都是自然的人类行为，对吧？
+
+726
+01:07:03,394 --> 01:07:04,501
+I want that to happen.
+我希望那能发生。
+
+727
+01:07:04,551 --> 01:07:06,670
+This is my personal goal.
+这是我个人的目标。
+
+728
+01:07:06,720 --> 01:07:12,590
+Yeah.
+嗯。
+
+729
+01:07:12,640 --> 01:07:13,099
+Oh, sure.
+哦，当然。
+
+730
+01:07:13,149 --> 01:07:17,950
+What's your opinion on hand important and how much it should match human?
+你认为手部的重要性如何，它应该在多大程度上模仿人类？
+
+731
+01:07:18,000 --> 01:07:20,549
+Oh, great question.
+哦，好问题。
+
+732
+01:07:20,599 --> 01:07:21,900
+Uh, yeah.
+嗯，是的。
+
+733
+01:07:21,950 --> 01:07:29,302
+So, I mean like I mean I would say yeah like what I said like the last inch gap, right?
+所以，我的意思是，就像我说的，最后那一英寸的差距，对吧？
+
+734
+01:07:29,352 --> 01:07:33,272
+Like if you if your hands is very hum like if your robot hands very like there's
+就像如果你的手非常僵硬，就像你的机器人手也一样
+
+735
+01:07:33,322 --> 01:07:37,845
+if there's no difference between your robot hands and human hand in terms of kinematics and dynamic capability,
+如果在运动学和动力学能力方面，你的机器人手与人手没有区别，
+
+736
+01:07:37,895 --> 01:07:42,251
+you can move really fast, you can move flexibly, you don't need to bridge the gap, right?
+你可以移动得非常快，可以灵活移动，不需要跨越鸿沟，对吧？
+
+737
+01:07:42,301 --> 01:07:44,605
+It's just it just should just work.
+它就应该能正常工作。
+
+738
+01:07:44,655 --> 01:07:48,003
+Uh so but I mean we're not there yet.
+嗯，但我的意思是，我们还没到那一步。
+
+739
+01:07:48,053 --> 01:07:55,301
+So the like the less humanlike your robot uh hands or factor or the whole body is the
+所以你的机器人手、肢体或整个身体越不像人类，就越……
+
+740
+01:07:55,351 --> 01:08:01,230
+more a bigger a gap you have to bridge and the actual transfer that happens will be different.
+你需要跨越的差距越大，实际发生的迁移就会越不同。
+
+741
+01:08:01,280 --> 01:08:02,563
+For example,
+例如，
+
+742
+01:08:02,613 --> 01:08:11,193
+um like uh like let's say if I have a high higher degree of freedom has than robot than human has then maybe
+比如说，如果我的机器人自由度比人类高，那可能
+
+743
+01:08:11,243 --> 01:08:18,373
+the the thing we want to retarget is not the actual kinematic configuration but contact right I want the contact to happen at
+我们想要重新调整的并不是实际的运动学配置，而是接触点，我希望接触能够发生在那里。
+
+744
+01:08:18,423 --> 01:08:25,710
+this point in time in in this space like here right and if I have uh ways to exert force similar to how
+此时此刻，在这个空间里，就像这里一样，如果我有类似的方式施加力的话
+
+745
+01:08:25,760 --> 01:08:31,866
+human do and can measure force then this is what we should retarget and then the rest of the configuration doesn't really matter Right.
+人类能感知并测量力，所以我们就应该把目标转向这一点，其余的配置其实并不重要，对吧。
+
+746
+01:08:31,916 --> 01:08:33,280
+You define a task space.
+你定义一个任务空间。
+
+747
+01:08:33,330 --> 01:08:39,709
+The rest you hand over to like a IK or inverse dynamics or learn learn learn solver.
+剩下的部分就交给逆运动学或逆动力学，或者学习、学习、再学习的求解器了。
+
+748
+01:08:39,759 --> 01:08:41,709
+Right.
+对。
+
+749
+01:08:41,759 --> 01:08:42,059
+Yeah.
+嗯。
+
+750
+01:08:42,087 --> 01:08:50,337
+So the basically the bigger the gap the more work you have to do like to do enable transfer.
+所以，差距越大，你需要做的工作就越多，才能实现迁移。
+
+751
+01:08:50,387 --> 01:08:51,629
+Yeah.
+嗯。
+
+752
+01:08:51,679 --> 01:08:52,970
+It's a lot of great questions.
+问题非常精彩。
+
+753
+01:08:53,020 --> 01:08:57,082
+Thank you.
+谢谢。

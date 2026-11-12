@@ -1,0 +1,279 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:06.96,Sub,,0,0,0,,Please join me in welcoming Hang Zhao for his keynote, Organizing Physical AI Across Timescales.\N请和我一起欢迎赵航，他将带来题为《跨时间尺度组织物理 AI》的主题演讲。
+Dialogue: 0,0:00:29.35,0:00:30.91,Sub,,0,0,0,,Thanks for the kind introduction.\N感谢热情的介绍。
+Dialogue: 0,0:00:31.25,0:00:34.95,Sub,,0,0,0,,They remind me a lot of good memories in the old times.\N这让我想起了很多过去的美好回忆。
+Dialogue: 0,0:00:55.75,0:00:56.15,Sub,,0,0,0,,Great.\N很好。
+Dialogue: 0,0:00:56.79,0:01:05.93,Sub,,0,0,0,,Today I want to talk about time for robots, specifically how robots' intelligence should be organized across many different timescales.\N今天我想谈谈机器人的时间问题，特别是机器人的智能应如何在多个不同的时间尺度上进行组织。
+Dialogue: 0,0:01:07.13,0:01:16.79,Sub,,0,0,0,,As the introduction goes, my own research path in physical AI started from self-driving, robots on wheels.\N如介绍所述，我本人在物理 AI 领域的研究始于自动驾驶，也就是轮式机器人。
+Dialogue: 0,0:01:17.83,0:01:20.35,Sub,,0,0,0,,At Waymo, I published my first oral paper.\N在 Waymo 期间，我发表了第一篇口头报告论文。
+Dialogue: 0,0:01:20.63,0:01:22.33,Sub,,0,0,0,,It was seven years ago.\N那是七年前的事了。
+Dialogue: 0,0:01:22.79,0:01:24.68,Sub,,0,0,0,,Then I moved to robots with legs.\N之后我转向了有腿的机器人。
+Dialogue: 0,0:01:24.73,0:01:32.13,Sub,,0,0,0,,We spent a few years teaching legged robots, humanoid robots, to run, to jump, and to conquer tough terrains.\N我们花了几年时间，教有腿的机器人和人形机器人跑步、跳跃，并征服复杂地形。
+Dialogue: 0,0:01:32.65,0:01:34.84,Sub,,0,0,0,,And now we are working on robots with arms.\N现在我们正在研究带手臂的机器人。
+Dialogue: 0,0:01:34.89,0:01:43.81,Sub,,0,0,0,,Because in the end, we want our robots to do real physical work for our humans.\N因为最终，我们希望机器人能为人类完成真正的物理工作。
+Dialogue: 0,0:01:44.59,0:01:51.89,Sub,,0,0,0,,Yesterday, when I landed in Austin, I found that the Waymo and the Cybercabs are all over the streets.\N昨天我抵达奥斯汀时，发现 Waymo 和 Cybercab 已经遍布街头。
+Dialogue: 0,0:01:52.33,0:02:00.59,Sub,,0,0,0,,For someone who started in self-driving research, I have to say that felt really good.\N对于一个从自动驾驶研究起步的人来说，这种感觉真的很好。
+Dialogue: 0,0:02:00.81,0:02:04.87,Sub,,0,0,0,,Driving has made it to everyday life and into production.\N驾驶已经进入日常生活并投入生产。
+Dialogue: 0,0:02:05.49,0:02:07.71,Sub,,0,0,0,,Can humanoid robots also make it too?\N人形机器人是否也能做到这一点呢？
+Dialogue: 0,0:02:08.35,0:02:13.13,Sub,,0,0,0,,Today, I'll share one piece of my answer, and it has to do with time.\N今天，我将分享我的答案的一部分，这与时间有关。
+Dialogue: 0,0:02:16.25,0:02:25.91,Sub,,0,0,0,,Very recently, GPT-6 Astra came out, and within days, people are plugging the model into their own robots and found that it just worked.\N最近，GPT-6 Astra 发布了，几天之内，人们就将其接入自己的机器人，发现它直接就能用。
+Dialogue: 0,0:02:26.71,0:02:31.36,Sub,,0,0,0,,NVIDIA researchers did a careful study on the RoboLab 120 simulation.\N英伟达研究人员对 RoboLab 120 模拟环境进行了细致研究。
+Dialogue: 0,0:02:31.41,0:02:40.91,Sub,,0,0,0,,They found that GPT-6 Astra scored 66% of the tasks, as opposed to π0.5 on only 28%.\N他们发现，GPT-6 Astra 完成了 66% 的任务，而 π0.5 仅完成了 28%。
+Dialogue: 0,0:02:42.87,0:02:47.03,Sub,,0,0,0,,On another simulation benchmark, RoboDojo, we got similar results.\N在另一个模拟基准 RoboDojo 上，我们也得到了类似的结果。
+Dialogue: 0,0:02:47.69,0:02:55.73,Sub,,0,0,0,,GPT-6 Astra scored 22, while other robot foundation models like π0.5 only scored 7.\NGPT-6 Astra 得分为 22，而其他机器人基础模型如 π0.5 仅得 7 分。
+Dialogue: 0,0:02:57.57,0:03:03.51,Sub,,0,0,0,,This is really surprising, and I believe many of us in this community are not ready for this.\N这非常令人惊讶，我相信我们中的许多人尚未为此做好准备。
+Dialogue: 0,0:03:03.72,0:03:05.82,Sub,,0,0,0,,But there's a catch.\N但这里有个问题。
+Dialogue: 0,0:03:06.34,0:03:08.52,Sub,,0,0,0,,These benchmarks don't measure time.\N这些基准测试不衡量时间。
+Dialogue: 0,0:03:09.76,0:03:12.36,Sub,,0,0,0,,These are frames from one of the robot lab runs.\N这是机器人实验室运行中的一帧画面。
+Dialogue: 0,0:03:12.68,0:03:14.72,Sub,,0,0,0,,The Astra has a direct policy.\NAstra 具有直接策略。
+Dialogue: 0,0:03:14.94,0:03:16.56,Sub,,0,0,0,,It controls the robot directly.\N它直接控制机器人。
+Dialogue: 0,0:03:17.14,0:03:23.76,Sub,,0,0,0,,If you look closely for each call of the foundation model it takes 18 seconds\N如果你仔细观察，每次调用基础模型都需要 18 秒。
+Dialogue: 0,0:03:23.81,0:03:29.89,Sub,,0,0,0,,and the robots spends 97 % of the time waiting for the model to think.\N机器人有 97% 的时间在等待模型思考。
+Dialogue: 0,0:03:30.97,0:03:34.61,Sub,,0,0,0,,But in reality a real robot cannot wait for the model to think.\N但在现实中，真正的机器人无法等待模型思考。
+Dialogue: 0,0:03:36.65,0:03:40.68,Sub,,0,0,0,,Then the question is, the frontier model is a very good thing.\N那么问题来了，前沿模型确实非常优秀。
+Dialogue: 0,0:03:40.94,0:03:44.80,Sub,,0,0,0,,How can we actually make good use of them to solve the robotic tasks?\N我们该如何真正利用它们来解决机器人任务？
+Dialogue: 0,0:03:45.95,0:03:54.08,Sub,,0,0,0,,To figure this out, I conducted a small controlled experiment in RoboCasa, which are simulators of home kitchens.\N为了解决这个问题，我在 RoboCasa 中进行了一项小型受控实验，\NRoboCasa 是家用厨房的模拟器。
+Dialogue: 0,0:03:54.44,0:03:56.66,Sub,,0,0,0,,And there are five test kitchens.\N一共有五个测试厨房。
+Dialogue: 0,0:03:57.37,0:04:03.27,Sub,,0,0,0,,And with five tasks, the kitchens are the ones the robot has never seen before.\N有五项任务，这些厨房是机器人从未见过的。
+Dialogue: 0,0:04:03.79,0:04:08.65,Sub,,0,0,0,,And it has 50 seconds of wall time for each task to finish.\N每个任务完成需要 50 秒的墙时钟时间。
+Dialogue: 0,0:04:11.77,0:04:14.65,Sub,,0,0,0,,And how should the frontier model control the robot?\N前沿模型应该如何控制机器人？
+Dialogue: 0,0:04:15.17,0:04:16.51,Sub,,0,0,0,,I tried five ways.\N我尝试了五种方法。
+Dialogue: 0,0:04:17.05,0:04:19.23,Sub,,0,0,0,,The first one is called coding policy.\N第一种方法称为编码策略。
+Dialogue: 0,0:04:19.61,0:04:26.34,Sub,,0,0,0,,Basically, we ask our frontier model to understand the task and write a piece of code.\N基本上，我们让前沿模型理解任务并编写一段代码。
+Dialogue: 0,0:04:26.39,0:04:32.01,Sub,,0,0,0,,And at deployment time, the code in the program just runs without calling the foundation model.\N在部署时，程序中的代码直接运行，无需调用基座模型。
+Dialogue: 0,0:04:33.61,0:04:37.75,Sub,,0,0,0,,And the second method is called coding plus ask policy.\N第二种方法称为编码加询问策略。
+Dialogue: 0,0:04:37.99,0:04:42.69,Sub,,0,0,0,,Basically, when the coding at deployment time, the code runs.\N基本上，在部署时代码会运行。
+Dialogue: 0,0:04:43.11,0:04:48.13,Sub,,0,0,0,,But whenever it fails to finish the task, it will ask the frontier model for help.\N但每当它无法完成任务时，就会向前沿模型求助。
+Dialogue: 0,0:04:48.92,0:04:54.80,Sub,,0,0,0,,And we found that to finish each episode, on average, it costs the frontier model once.\N我们发现，平均每个回合完成任务，前沿模型只需被调用一次。
+Dialogue: 0,0:04:57.30,0:05:00.54,Sub,,0,0,0,,And the next method is called orchestrated policy.\N下一种方法称为协同策略。
+Dialogue: 0,0:05:00.98,0:05:06.81,Sub,,0,0,0,,Basically, the frontier model will call different skills to finish the task.\N基本上，前沿模型会调用不同的技能来完成任务。
+Dialogue: 0,0:05:07.27,0:05:13.47,Sub,,0,0,0,,And during this process, we found that for each episode, the frontier model is called four times.\N在这个过程中，我们发现每个回合中，前沿模型会被调用四次。
+Dialogue: 0,0:05:16.34,0:05:20.26,Sub,,0,0,0,,And the next one is direct policy that we have just talked about.\N下一个是我们在刚才讨论过的直接策略。
+Dialogue: 0,0:05:22.18,0:05:24.82,Sub,,0,0,0,,The last method is called agentic policy.\N最后一种方法被称为智能体策略。
+Dialogue: 0,0:05:25.16,0:05:35.70,Sub,,0,0,0,,It's basically for each step, the model can not only itself controls the robot, it can also use tools or math to calculate before it make actions.\N基本上在每一步，模型不仅能自主控制机器人，还能在采取行动前使用工具或数学计算进行推理。
+Dialogue: 0,0:05:37.20,0:05:43.18,Sub,,0,0,0,,So it also, for each step, it can also do, for each step, we also call the frontier model,\N因此在每一步，我们也会调用前沿模型。
+Dialogue: 0,0:05:43.23,0:05:48.95,Sub,,0,0,0,,But we consume more tokens because it also needs to think more and conduct more computations.\N由于模型需要进行更多思考和计算，我们消耗的词元也更多。
+Dialogue: 0,0:05:51.76,0:05:58.76,Sub,,0,0,0,,If the thinking time are free, we can ask the model more for results.\N如果思考时间是免费的，我们可以让模型生成更多结果。
+Dialogue: 0,0:05:58.96,0:06:02.56,Sub,,0,0,0,,And we found that all these methods perform pretty well.\N我们发现所有这些方法表现都相当出色。
+Dialogue: 0,0:06:03.90,0:06:12.86,Sub,,0,0,0,,Apart from the coding policy only performs 45 % success rate, all the other methods have success rate higher than 60%.\N除了编码策略的成功率仅为45%外，其他所有方法的成功率都高于60%。
+Dialogue: 0,0:06:16.15,0:06:19.00,Sub,,0,0,0,,And then what if we have a real clock?\N那如果我们引入一个真实时钟呢？
+Dialogue: 0,0:06:19.05,0:06:27.93,Sub,,0,0,0,,basically the clock runs and the step-by-step policy could fail because of exceeding the time limit.\N时钟开始运行后，由于超出时间限制，逐步策略可能会失败。
+Dialogue: 0,0:06:29.15,0:06:31.57,Sub,,0,0,0,,Then the result is totally different.\N那结果就完全不同了。
+Dialogue: 0,0:06:32.31,0:06:41.97,Sub,,0,0,0,,We find that the step-by-step policy fails especially the direct policy and agentic policy only have a success rate of 15 and 20 percent.\N我们发现，逐步执行的策略表现不佳，而直接策略和智能体策略的成功率仅分别为15%和20%。
+Dialogue: 0,0:06:44.76,0:06:53.32,Sub,,0,0,0,,So it basically tells us that a slow model is fine as long as it's is combined with a system one.\N所以本质上，这告诉我们只要与一个系统结合，慢速模型也是可以接受的。
+Dialogue: 0,0:06:54.07,0:07:03.35,Sub,,0,0,0,,For example, the orchestrated policy uses small neural network skills to deal with the high frequency control.\N例如，协调策略使用小型神经网络技能来处理高频控制。
+Dialogue: 0,0:07:09.03,0:07:14.53,Sub,,0,0,0,,So where exactly do we draw the lines between layers in the orchestrated policy?\N那么，我们究竟应该在协调策略的各层之间划在何处？
+Dialogue: 0,0:07:16.35,0:07:19.15,Sub,,0,0,0,,The old school answer can be by functions.\N传统的答案是按功能划分。
+Dialogue: 0,0:07:19.73,0:07:23.15,Sub,,0,0,0,,Perception here, planning there, and control at the bottom.\N感知在上层，规划在中间，控制在底层。
+Dialogue: 0,0:07:23.52,0:07:28.46,Sub,,0,0,0,,And I think today, we want to argue for something else.\N而我认为，今天我们要提出另一种观点。
+Dialogue: 0,0:07:29.12,0:07:33.24,Sub,,0,0,0,,The clock defines the levels, so you draw the lines where the clock changes.\N时钟定义了层级，因此应在时钟变化处划线。
+Dialogue: 0,0:07:34.42,0:07:38.34,Sub,,0,0,0,,The Astra is the top layer, System 2, on a clock of seconds.\NAstra 是顶层，即系统2，运行在秒级时钟下。
+Dialogue: 0,0:07:38.64,0:07:42.02,Sub,,0,0,0,,Below it, the System 1 is something like a VLA or a WAM.\N在其下方，系统1类似于一个VLA或WAM。
+Dialogue: 0,0:07:42.30,0:07:44.04,Sub,,0,0,0,,They should run at tens of hertz.\N它们应以数十赫兹的频率运行。
+Dialogue: 0,0:07:44.30,0:07:49.40,Sub,,0,0,0,,And System 0 is something like whole body tracker that runs hundreds of hertz.\N而系统0则类似于全身追踪器，运行频率可达数百赫兹。
+Dialogue: 0,0:07:49.90,0:07:59.64,Sub,,0,0,0,,By the way, in this talk, when we talk about system 1, system 2, system 0, we're not talking about thinking, we're talking about time clocks.\N顺便说一下，在本次演讲中，当我们提到系统1、系统2、\N系统0时，我们并不是在谈论思维，而是在谈论时间时钟。
+Dialogue: 0,0:08:02.89,0:08:06.59,Sub,,0,0,0,,Then, how do you tell which level something should belong to?\N那么，如何判断某件事应该属于哪个层级呢？
+Dialogue: 0,0:08:07.45,0:08:09.81,Sub,,0,0,0,,I think about this problem in two steps.\N我把这个问题分成两个步骤来思考。
+Dialogue: 0,0:08:10.37,0:08:19.17,Sub,,0,0,0,,First, ask what the layer has to react to, because that tells you how fast the clock has to tick.\N首先，问一下这个层级必须对什么做出反应，因为这能告诉你时钟需要多快地运转。
+Dialogue: 0,0:08:20.13,0:08:22.27,Sub,,0,0,0,,Then, the clock tells you the level.\N然后，时钟的频率就决定了它的层级。
+Dialogue: 0,0:08:22.32,0:08:28.62,Sub,,0,0,0,,For example, system 2 should react to task, state, language, and scene.\N例如，系统2需要对任务、状态、语言和场景做出反应。
+Dialogue: 0,0:08:29.08,0:08:32.70,Sub,,0,0,0,,So it should work from seconds to minutes.\N所以它的运行时间范围应该是从秒到分钟。
+Dialogue: 0,0:08:36.23,0:08:45.12,Sub,,0,0,0,,For system 1, its task is to react to hand-object relative motions at the frequency of tens of hertz.\N对于系统1，它的任务是根据手与物体相对运动的频率（几十赫兹）做出反应。
+Dialogue: 0,0:08:47.11,0:08:52.01,Sub,,0,0,0,,For system 0, its job is to keep track of contact and force.\N对于系统0，它的职责是追踪接触和受力情况。
+Dialogue: 0,0:08:52.39,0:08:55.25,Sub,,0,0,0,,That's why it has to run at hundreds of hertz.\N这就是为什么它必须以几百赫兹的频率运行。
+Dialogue: 0,0:08:57.03,0:09:00.91,Sub,,0,0,0,,Now, let's take a slipping cup as an example.\N现在，我们以一个滑落的杯子为例。
+Dialogue: 0,0:09:01.76,0:09:11.41,Sub,,0,0,0,,It involves perception and control all at once, but they all have to change in milliseconds.\N它同时涉及感知和控制，但这些都必须在毫秒级别内发生变化。
+Dialogue: 0,0:09:12.13,0:09:14.55,Sub,,0,0,0,,That is why they are system zero.\N这就是为什么它们是系统零。
+Dialogue: 0,0:09:14.91,0:09:17.13,Sub,,0,0,0,,A slipping cup is system zero.\N一个滑落的杯子就是系统零。
+Dialogue: 0,0:09:17.43,0:09:22.67,Sub,,0,0,0,,If you want to cut it by function, then it's like perception and control.\N如果你要按功能划分，那就是感知和控制。
+Dialogue: 0,0:09:25.25,0:09:31.85,Sub,,0,0,0,,I've run into this clock problem before when I was working on self-driving.\N我在开发自动驾驶时曾遇到过这个时钟问题。
+Dialogue: 0,0:09:33.71,0:09:41.04,Sub,,0,0,0,,With DriveVLM, we put a vision language model into a car and we found that it has surprising capability in understanding the scene.\N通过 DriveVLM，我们将视觉语言模型放入汽车，发现它在理解场景方面具有令人惊讶的能力。
+Dialogue: 0,0:09:41.09,0:09:47.89,Sub,,0,0,0,,For example, it can understand a school zone, which is slow down to wait for the children to cross the street.\N例如，它可以识别学校区域，从而减速等待儿童过马路。
+Dialogue: 0,0:09:48.78,0:09:56.06,Sub,,0,0,0,,However, such vision language models cannot respond immediately to the driving tasks.\N然而，这类视觉语言模型无法立即响应驾驶任务。
+Dialogue: 0,0:09:56.34,0:10:03.72,Sub,,0,0,0,,So we put two clocks together, a slow VLM and a fast driving stack.\N于是我们将两个时钟结合在一起，一个慢速的 VLM 和一个快速的驾驶栈。
+Dialogue: 0,0:10:04.08,0:10:12.66,Sub,,0,0,0,,We put them together onto one car and such systems are already running massively on real production vehicles today.\N我们将它们整合到一辆车上，这类系统如今已在真实生产车辆中大规模运行。
+Dialogue: 0,0:10:13.32,0:10:22.28,Sub,,0,0,0,,So our lesson from self-driving is that we should let the fast layer drive and the slow layer think, each on its own clock.\N因此，从自动驾驶中我们学到的教训是：让快速层负责驾驶，慢速层负责思考，各自在自己的时钟上运行。
+Dialogue: 0,0:10:25.47,0:10:29.59,Sub,,0,0,0,,My second lesson is from working on robot parkour.\N我的第二个教训来自机器人跑酷的研究。
+Dialogue: 0,0:10:30.66,0:10:40.64,Sub,,0,0,0,,In 2023, our quadruped robot learned parkour from vision to climbing, leaping, crawling, and then we did it on full-size humanoids.\N2023 年，我们的四足机器人从视觉出发，学会了攀爬、\N跳跃和爬行，随后我们将其应用到了全尺寸人形机器人上。
+Dialogue: 0,0:10:41.69,0:10:49.91,Sub,,0,0,0,,And this year, we're able to do whole-body parkour, where the robot uses hands and knees to vault and climb, interacting with the environment.\N今年，我们能够实现全身跑酷，机器人利用双手和双膝进行翻越和攀爬，与环境互动。
+Dialogue: 0,0:10:50.75,0:10:54.13,Sub,,0,0,0,,All of these are learned controllers at the fast end.\N所有这些都属于快速层的控制器。
+Dialogue: 0,0:10:54.41,0:10:58.29,Sub,,0,0,0,,They read depths by themselves and react in milliseconds.\N它们能自主读取深度信息，并在毫秒级时间内做出反应。
+Dialogue: 0,0:10:59.03,0:11:01.43,Sub,,0,0,0,,So the whole system is a system zero.\N因此整个系统是一个系统零。
+Dialogue: 0,0:11:02.91,0:11:08.60,Sub,,0,0,0,,So my lesson from parkour is that the reflexes have to live in the fast layer,\N所以我从跑酷中学到的经验是，反射动作必须存在于快速层中，
+Dialogue: 0,0:11:08.65,0:11:14.87,Sub,,0,0,0,,and the layer needs to do everything by its own, from eyes, perception, to actions.\N而这一层必须独立完成从视觉、感知到动作的全部过程。
+Dialogue: 0,0:11:18.55,0:11:21.47,Sub,,0,0,0,,But in real life, things are not that simple.\N但在现实生活中，事情并没有那么简单。
+Dialogue: 0,0:11:22.03,0:11:24.17,Sub,,0,0,0,,A task often needs more than one layer.\N一个任务通常需要不止一层。
+Dialogue: 0,0:11:24.63,0:11:26.01,Sub,,0,0,0,,Let's try a few settings.\N我们来尝试几种不同的设置。
+Dialogue: 0,0:11:26.77,0:11:32.96,Sub,,0,0,0,,For industrial assembly line, is it a system 2, 1, or 0?\N对于工业装配线来说，它是系统2、系统1，还是系统0？
+Dialogue: 0,0:11:33.42,0:11:37.76,Sub,,0,0,0,,Because it's fixed and repetitive, it only requires system 0.\N因为它是固定且重复的，所以只需要系统0。
+Dialogue: 0,0:11:38.81,0:11:41.19,Sub,,0,0,0,,Then how about the next one, logistic sorting?\N那下一个呢，物流分拣？
+Dialogue: 0,0:11:42.13,0:11:47.25,Sub,,0,0,0,,The task is prefixed, but every parcel and package is different.\N任务是预先设定的，但每个包裹和快递都各不相同。
+Dialogue: 0,0:11:48.59,0:11:52.17,Sub,,0,0,0,,So it requires very strong system 1.\N因此需要非常强大的系统1。
+Dialogue: 0,0:11:56.15,0:11:58.10,Sub,,0,0,0,,The next setting, restaurant service.\N下一个场景，餐厅服务。
+Dialogue: 0,0:11:58.15,0:12:04.91,Sub,,0,0,0,,you need to talk to the customers, place orders, and also hold the place.\N你需要与顾客交流，下单，还要兼顾现场。
+Dialogue: 0,0:12:04.96,0:12:06.89,Sub,,0,0,0,,So you need a bit of everything.\N所以你需要各方面都具备一些能力。
+Dialogue: 0,0:12:06.94,0:12:11.10,Sub,,0,0,0,,You need a bit of System 2, a bit of System 1, and a bit of System 0.\N你需要一些系统2，一些系统1，还有一部分系统0。
+Dialogue: 0,0:12:14.07,0:12:16.19,Sub,,0,0,0,,The last one, doing housework.\N最后一个场景，做家务。
+Dialogue: 0,0:12:17.70,0:12:23.44,Sub,,0,0,0,,Housework, the task definition is more complicated than doing restaurant service,\N做家务，任务定义比餐厅服务更复杂，
+Dialogue: 0,0:12:24.44,0:12:33.57,Sub,,0,0,0,,ranging from that is why it requires very strong System 2 model.\N这正是为什么它需要非常强大的系统2模型。
+Dialogue: 0,0:12:34.83,0:12:38.39,Sub,,0,0,0,,But in terms of speed, it can be slow.\N但在速度方面，它可能比较慢。
+Dialogue: 0,0:12:38.63,0:12:42.77,Sub,,0,0,0,,So we need a slightly weaker system one and a system zero.\N因此我们需要一个稍弱一些的系统1和一个系统0。
+Dialogue: 0,0:12:46.18,0:12:46.58,Sub,,0,0,0,,OK.\N好的。
+Dialogue: 0,0:12:47.36,0:12:52.90,Sub,,0,0,0,,Then for this hierarchical systems, we have two more important questions to work on.\N对于这类分层系统，我们还有两个更重要的问题需要解决。
+Dialogue: 0,0:12:53.68,0:13:01.69,Sub,,0,0,0,,The first one is, how do we make each layer fast enough by itself so that it catch up with the clock, its own clock?\N第一个是，我们如何让每一层自身足够快，以跟上它自己的时钟节奏？
+Dialogue: 0,0:13:02.78,0:13:09.72,Sub,,0,0,0,,The second question is, what should pass between these layers, between these systems, so that the whole system work as a whole.\N第二个问题是，这些层之间、这些系统之间应该传递什么，才能让整个系统作为一个整体协同工作？
+Dialogue: 0,0:13:13.64,0:13:15.34,Sub,,0,0,0,,Let's talk about the first problem first.\N我们先来讨论第一个问题。
+Dialogue: 0,0:13:15.54,0:13:18.86,Sub,,0,0,0,,Make each system fast enough, especially system one.\N让每个系统都足够快，尤其是第一层系统。
+Dialogue: 0,0:13:21.50,0:13:30.26,Sub,,0,0,0,,As we have already talked about, system one should work at tens of hertz because it has to respond to human-object interactions.\N正如我们之前讨论的，第一层系统必须以几十赫兹的频率运行，因为它需要响应人与物体的交互。
+Dialogue: 0,0:13:32.27,0:13:35.63,Sub,,0,0,0,,However, today's system ones are usually quite slow.\N然而，当前的第一层系统通常非常缓慢。
+Dialogue: 0,0:13:36.51,0:13:39.49,Sub,,0,0,0,,They are not able to catch up with tens of hertz.\N它们无法跟上几十赫兹的节奏。
+Dialogue: 0,0:13:41.08,0:13:41.50,Sub,,0,0,0,,Why?\N为什么？
+Dialogue: 0,0:13:42.43,0:13:44.04,Sub,,0,0,0,,We try to figure out the reason.\N我们试图找出原因。
+Dialogue: 0,0:13:44.09,0:13:55.23,Sub,,0,0,0,,We found that there are three costs and each cost comes from where today's system one models come from if you are building a world action model,\N我们发现存在三种开销，而这三种开销分别来自当前构建世界动作模型时所采用的系统一模型的来源，
+Dialogue: 0,0:13:55.28,0:14:00.52,Sub,,0,0,0,,which is super popular this year and From a video generation model,\N这类模型今年非常流行，也来自视频生成模型。
+Dialogue: 0,0:14:00.57,0:14:08.36,Sub,,0,0,0,,you will know that the video generation model base is actually quite slow Generating a five-second high-quality video\N你会知道，视频生成模型的基础实际上相当慢，生成一段五秒的高质量视频通常需要两到三分钟。
+Dialogue: 0,0:14:08.41,0:14:18.95,Sub,,0,0,0,,usually requires two to three minutes to generate them This is not possible to deploy such model on a robot.\N这种速度无法在机器人上部署该模型。
+Dialogue: 0,0:14:22.66,0:14:31.22,Sub,,0,0,0,,If you are building a vision-language action model from a VLM, then the VLM will typically reason in text.\N如果你从视觉-语言模型构建视觉-语言-动作模型，那么视觉-语言模型通常会以文本形式进行推理。
+Dialogue: 0,0:14:31.62,0:14:34.62,Sub,,0,0,0,,The reasoning text usually takes like five seconds.\N这种推理文本通常需要大约五秒。
+Dialogue: 0,0:14:36.13,0:14:39.61,Sub,,0,0,0,,This is still not affordable for a robotic control problem.\N这对于机器人控制问题来说仍然不可接受。
+Dialogue: 0,0:14:42.48,0:14:47.80,Sub,,0,0,0,,And the third cost that I found is about action chunking.\N我发现的第三个成本是关于动作分块。
+Dialogue: 0,0:14:48.34,0:14:56.31,Sub,,0,0,0,,Almost all the papers, no matter its VLA, its diffusion policy, its world action models,\N几乎所有论文，无论其是视觉-语言-动作模型、扩散策略，还是世界动作模型，
+Dialogue: 0,0:14:56.36,0:15:00.66,Sub,,0,0,0,,you always decode a whole action chunk before you execute them.\N你总是需要在执行前完整解码整个动作分块。
+Dialogue: 0,0:15:01.71,0:15:08.97,Sub,,0,0,0,,That means you're always waiting for the whole chunk to be generated before execution, and then you lose a lot of time.\N这意味着你必须一直等待整个分块生成完毕才能执行，从而浪费大量时间。
+Dialogue: 0,0:15:11.01,0:15:15.85,Sub,,0,0,0,,And for these three problems, we have three works dealing with each of them.\N针对这三个问题，我们有三项工作分别应对每一个。
+Dialogue: 0,0:15:18.40,0:15:20.96,Sub,,0,0,0,,The first work is called FastWAM.\N第一项工作名为 FastWAM。
+Dialogue: 0,0:15:22.24,0:15:25.74,Sub,,0,0,0,,World action models predict future videos along with actions.\N世界动作模型会预测未来的视频和对应的动作。
+Dialogue: 0,0:15:26.16,0:15:27.44,Sub,,0,0,0,,That's how they learn physics.\N这就是它们学习物理的方式。
+Dialogue: 0,0:15:27.82,0:15:30.74,Sub,,0,0,0,,And most of them generates that video before they act.\N而且它们大多数在行动之前就生成了那段视频。
+Dialogue: 0,0:15:31.63,0:15:33.47,Sub,,0,0,0,,They also call it IDM mode.\N他们也称之为 IDM 模式。
+Dialogue: 0,0:15:34.21,0:15:37.47,Sub,,0,0,0,,So we asked, do we really need to imagine the future at test time?\N所以我们问，测试时真的需要想象未来吗？
+Dialogue: 0,0:15:39.39,0:15:46.32,Sub,,0,0,0,,FastWAM says that a video model and an action model share attention, and the trick is on these masks.\NFastWAM 表示，视频模型和动作模型共享注意力机制，关键在于这些掩码。
+Dialogue: 0,0:15:47.22,0:15:52.77,Sub,,0,0,0,,If we change the attention mask a little bit during training time, the model needs to generate future videos.\N如果我们在训练时稍微改变一下注意力掩码，模型就必须生成未来的视频。
+Dialogue: 0,0:15:52.82,0:15:59.71,Sub,,0,0,0,,but at test time it can skip it, then we can speed up the model by more than four times.\N但在测试时它可以跳过这一步，从而使模型速度提升四倍以上。
+Dialogue: 0,0:16:02.06,0:16:11.07,Sub,,0,0,0,,This paper was published early this year, and today we have a more powerful pre-trained version of FastWAM called G0.7.\N这篇论文今年早些时候发表，今天我们将介绍一个更强大的预训练版本的 FastWAM，名为 G0.7。
+Dialogue: 0,0:16:12.41,0:16:20.11,Sub,,0,0,0,,The model size goes from 5 billion parameters to 16 billion parameters, with a mixture of transformer architecture.\N模型参数从 50 亿增加到 160 亿，采用了混合 Transformer 架构。
+Dialogue: 0,0:16:20.75,0:16:23.74,Sub,,0,0,0,,Yet, with optimization, it runs much faster.\N但经过优化后，运行速度更快。
+Dialogue: 0,0:16:23.79,0:16:29.79,Sub,,0,0,0,,It runs 60 milliseconds per action on an RTX 5090 GPU.\N在 RTX 5090 GPU 上，每动作运行仅需 60 毫秒。
+Dialogue: 0,0:16:34.39,0:16:39.57,Sub,,0,0,0,,Next, let's talk about the reasoning in text in vision language action models.\N接下来，我们来谈谈视觉-语言-动作模型中的文本推理。
+Dialogue: 0,0:16:41.67,0:16:45.55,Sub,,0,0,0,,G0.5 is our robot foundation model that we trained at Galaxea.\NG0.5 是我们在 Galaxea 训练的机器人基座模型。
+Dialogue: 0,0:16:46.05,0:16:53.48,Sub,,0,0,0,,And it's one VLM model that takes vision and text as input, and write subtasks,\N它是一个视觉-语言模型，接收视觉和文本作为输入，并生成子任务。
+Dialogue: 0,0:16:53.53,0:16:58.87,Sub,,0,0,0,,bounding box, action trajectories, everything in one discrete token stream.\N边界框、动作轨迹，全部整合在一个离散的词元流中。
+Dialogue: 0,0:17:00.59,0:17:06.05,Sub,,0,0,0,,On the same checkpoint, we can simply turn the reasoning on and off to test its performance.\N在同一检查点上，我们只需开关推理功能，即可测试其性能。
+Dialogue: 0,0:17:07.01,0:17:14.83,Sub,,0,0,0,,Surprisingly, we found that for most of the tasks, 90 % of the tasks, reasoning at inference makes no difference.\N令人惊讶的是，我们发现对于大多数任务，90%的任务在推理时进行推理并无差别。
+Dialogue: 0,0:17:15.61,0:17:18.96,Sub,,0,0,0,,Success is the same with and without chain of thought.\N无论是否有思维链，成功都是一样的。
+Dialogue: 0,0:17:19.01,0:17:22.73,Sub,,0,0,0,,And if you skip it, the model runs twice as fast.\N如果你跳过它，模型的运行速度将快一倍。
+Dialogue: 0,0:17:24.17,0:17:27.37,Sub,,0,0,0,,Where does it help are those long tasks.\N它在处理长任务时尤其有帮助。
+Dialogue: 0,0:17:28.21,0:17:34.89,Sub,,0,0,0,,For example, this air fryer task that has five stages, and this is a zero-shot task it has never seen before.\N例如，这个空气炸锅任务包含五个步骤，而且这是一个零样本任务，它之前从未见过。
+Dialogue: 0,0:17:35.11,0:17:37.71,Sub,,0,0,0,,With reasoning, it can help with the performance.\N通过推理，它可以提升性能。
+Dialogue: 0,0:17:41.85,0:17:44.15,Sub,,0,0,0,,Next, let's talk about action chunking.\N接下来，我们来谈谈动作分块。
+Dialogue: 0,0:17:45.36,0:17:50.95,Sub,,0,0,0,,The cost from action chunking is waiting for the whole action trajectory to be generated.\N动作分块的代价在于需要等待整个动作轨迹生成完毕。
+Dialogue: 0,0:17:51.00,0:17:57.37,Sub,,0,0,0,,This animation is from our recent work called ActionCodec2.\N这个动画来自我们最近的工作，名为 ActionCodec2。
+Dialogue: 0,0:17:57.97,0:18:02.29,Sub,,0,0,0,,It shows that the arms are chasing the blocks that keeps moving.\N它展示了机械臂正在追逐不断移动的方块。
+Dialogue: 0,0:18:03.40,0:18:05.56,Sub,,0,0,0,,On the left is a chunk tokenizer.\N左边是一个分块分词器。
+Dialogue: 0,0:18:06.14,0:18:12.40,Sub,,0,0,0,,The policy has to decode a whole chunk before it moves, so it only sees the blocks' chunk boundaries.\N策略必须解码完整的一块后才能移动，因此它只能看到方块的分块边界。
+Dialogue: 0,0:18:13.59,0:18:16.35,Sub,,0,0,0,,Looking sooner means decoding a whole new chunk.\N更早观察意味着解码一整个新的分块。
+Dialogue: 0,0:18:16.93,0:18:21.00,Sub,,0,0,0,,On the right-hand side is ActionCodec2, a streaming tokenizer.\N右边是 ActionCodec2，一种流式分词器。
+Dialogue: 0,0:18:21.05,0:18:27.30,Sub,,0,0,0,,Every token is a small piece of motion that the robot runs as soon as it arrives.\N每个词元都是机器人一收到就立即执行的一小段动作。
+Dialogue: 0,0:18:28.02,0:18:29.98,Sub,,0,0,0,,So it sees the block at every step.\N因此它在每一步都能看到方块。
+Dialogue: 0,0:18:32.22,0:18:36.95,Sub,,0,0,0,,Watch the end, the trunk arm misses and the streaming arm gets it.\N注意结尾，传统机械臂错过了，而流式机械臂抓住了。
+Dialogue: 0,0:18:37.00,0:18:43.90,Sub,,0,0,0,,That's what we mean by streaming action tokenizer and we can use it to build a streaming VLA.\N这就是我们所说的流式动作分词器，我们可用它构建流式 VLA。
+Dialogue: 0,0:18:53.31,0:18:58.19,Sub,,0,0,0,,Okay, the second part I want to talk about decide what passes between different systems.\N好的，第二部分我想谈谈不同系统之间传递什么。
+Dialogue: 0,0:19:01.06,0:19:07.98,Sub,,0,0,0,,With these three clocks, we have two boundaries, and each goes both ways.\N有了这三个时钟，我们就有两个边界，且每个边界都双向通行。
+Dialogue: 0,0:19:08.46,0:19:11.79,Sub,,0,0,0,,The intent goes from system two to system one.\N意图从系统二传递到系统一。
+Dialogue: 0,0:19:11.84,0:19:16.26,Sub,,0,0,0,,We can pass language, goals, programs, and action macro intents.\N我们可以传递语言、目标、程序和动作宏意图。
+Dialogue: 0,0:19:16.98,0:19:20.78,Sub,,0,0,0,,From system one to system zero, we can pass motion intents.\N从系统一到系统零，我们可以传递运动意图。
+Dialogue: 0,0:19:24.21,0:19:31.56,Sub,,0,0,0,,And the other way around, from system zero to system one, we can feedback with contacts, force, and tracking states.\N反过来，从系统零到系统一，我们也可以反馈接触、力和跟踪状态。
+Dialogue: 0,0:19:31.61,0:19:40.01,Sub,,0,0,0,,and from system one to system two, we can also feedback progress, confidence, and some state signals.\N从系统一到系统二，我们还可以反馈进展、置信度和一些状态信号。
+Dialogue: 0,0:19:40.99,0:19:47.01,Sub,,0,0,0,,However, most of today's work is on the way down, and the way up is still heavily missing.\N然而，目前大多数工作集中在下行路径，而上行路径仍然严重缺失。
+Dialogue: 0,0:19:49.85,0:19:51.81,Sub,,0,0,0,,Let's first talk about the way down.\N我们先来谈谈下行路径。
+Dialogue: 0,0:19:53.31,0:19:55.97,Sub,,0,0,0,,We have this work called whole body WAN.\N我们有这项名为全身 WAN 的工作。
+Dialogue: 0,0:19:56.21,0:19:59.21,Sub,,0,0,0,,It's a world action model built for humanoid robots.\N它是一个为人类机器人设计的世界动作模型。
+Dialogue: 0,0:20:00.69,0:20:07.83,Sub,,0,0,0,,For a system one, it outputs the body and hand poses with future action trajectories.\N对于系统一，它输出身体和手部姿态以及未来的动作轨迹。
+Dialogue: 0,0:20:08.15,0:20:10.79,Sub,,0,0,0,,And we send it to system zero for it to track.\N然后我们将它发送给系统零进行跟踪。
+Dialogue: 0,0:20:12.28,0:20:13.96,Sub,,0,0,0,,That's quite straightforward, right?\N这相当直接，对吧？
+Dialogue: 0,0:20:14.16,0:20:17.26,Sub,,0,0,0,,We can even make the system one more complicated.\N我们甚至可以让这个系统再复杂一点。
+Dialogue: 0,0:20:17.58,0:20:19.12,Sub,,0,0,0,,This work is called OMG.\N这项工作被称为 OMG。
+Dialogue: 0,0:20:19.76,0:20:23.92,Sub,,0,0,0,,It's a versatile one motion generator with many inputs.\N它是一个多功能的动作生成器，支持多种输入。
+Dialogue: 0,0:20:24.78,0:20:29.81,Sub,,0,0,0,,As a system two, you can send text motions, motions in text.\N作为系统二，你可以发送文本动作，也就是以文本形式表达的动作。
+Dialogue: 0,0:20:29.86,0:20:31.41,Sub,,0,0,0,,You can send motions in music.\N你可以发送音乐中的动作。
+Dialogue: 0,0:20:31.46,0:20:34.75,Sub,,0,0,0,,You can send motions in human poses to system one.\N你可以将人类姿态的动作发送给系统一。
+Dialogue: 0,0:20:34.80,0:20:42.80,Sub,,0,0,0,,and the system one will turn them into an executable trajectory and finally the system zero will tracks it.\N然后系统一会将其转换为可执行的轨迹，最终系统零会追踪它。
+Dialogue: 0,0:20:47.71,0:20:51.75,Sub,,0,0,0,,Although we have rich interface between system two and system one,\N尽管系统二与系统一之间有丰富的交互接口，
+Dialogue: 0,0:20:52.19,0:20:56.79,Sub,,0,0,0,,the system between system one and system zero we still only have motions going down.\N但系统一与系统零之间的交互仍然仅限于动作向下传递。
+Dialogue: 0,0:20:59.93,0:21:00.73,Sub,,0,0,0,,Is motion enough?\N动作足够吗？
+Dialogue: 0,0:21:00.97,0:21:01.79,Sub,,0,0,0,,Of course not.\N当然不够。
+Dialogue: 0,0:21:02.43,0:21:07.53,Sub,,0,0,0,,First notice that the tracker follows the motion without knowing what's it for and I\N首先请注意，追踪器在不知道动作用途的情况下就跟随了动作，而我
+Dialogue: 0,0:21:07.58,0:21:12.64,Sub,,0,0,0,,don't think motion is not enough because when we talk about interaction and a contact.\N我认为仅靠运动是不够的，因为当我们谈论交互和接触时。
+Dialogue: 0,0:21:13.17,0:21:17.87,Sub,,0,0,0,,For example, when you wipe a table, it's mostly forced and very little motion.\N比如你擦桌子时，主要是施加力，运动很少。
+Dialogue: 0,0:21:18.45,0:21:24.79,Sub,,0,0,0,,When you sit down, the motion looks the same whether or not the chair takes your weight on takes your weight.\N你坐下时，无论椅子是否承受你的重量，运动看起来都一样。
+Dialogue: 0,0:21:25.91,0:21:31.60,Sub,,0,0,0,,And the people are starting to go beyond motion from joint targets to body motion to contacts.\N现在人们开始超越单纯的运动，从关节目标转向身体运动，再到接触。
+Dialogue: 0,0:21:31.65,0:21:32.85,Sub,,0,0,0,,And now to force.\N现在则转向力。
+Dialogue: 0,0:21:36.76,0:21:42.98,Sub,,0,0,0,,The first step beyond motion is keep the contact when you move motion onto a new body.\N超越运动的第一步，是在将运动转移到新物体时保持接触。
+Dialogue: 0,0:21:43.88,0:21:49.12,Sub,,0,0,0,,Omni-Retarget and our Topo-Retarget, that's published this time at CoRL,\NOmni-Retarget 和我们的 Topo-Retarget，这次在 CoRL 上发表，
+Dialogue: 0,0:21:49.50,0:21:55.90,Sub,,0,0,0,,all keeps trying to preserve the contact points and geometry between the robot and the object.\N都在努力保持机器人与物体之间的接触点和几何关系。
+Dialogue: 0,0:22:00.04,0:22:03.71,Sub,,0,0,0,,But honestly, both of these only keep the contact geometry.\N但老实说，这两种方法只保留了接触的几何关系。
+Dialogue: 0,0:22:03.76,0:22:06.38,Sub,,0,0,0,,Neither of them knows anything about force yet.\N它们目前还不了解任何关于力的信息。
+Dialogue: 0,0:22:07.72,0:22:11.90,Sub,,0,0,0,,And very recently, I noticed a work from UC Berkeley called Control Force.\N最近，我注意到加州大学伯克利分校的一项工作，名为 Control Force。
+Dialogue: 0,0:22:14.17,0:22:22.35,Sub,,0,0,0,,It gives the tracker a reference motion plus a force command for each hand and a small planner on top picks the force from what it sees.\N它给追踪器提供参考运动，以及每只手的力指令，上方的小型规划器则根据所见选择力。
+Dialogue: 0,0:22:23.39,0:22:27.57,Sub,,0,0,0,,Here's a robot that pushes a heavy box that is 20 kilograms inside.\N这是一个能推动20公斤重箱子的机器人。
+Dialogue: 0,0:22:28.48,0:22:32.62,Sub,,0,0,0,,On the left, Sonic only tracks the motion and can't move it.\N左边的Sonic只追踪运动，无法推动箱子。
+Dialogue: 0,0:22:32.78,0:22:39.44,Sub,,0,0,0,,On the right their model pushes it and notice who picks the force.\N右边的模型则成功推动了箱子，注意看是谁在选择作用力。
+Dialogue: 0,0:22:39.94,0:22:49.14,Sub,,0,0,0,,It's a small planner that is system one that watches the object close to the body, and it's not a slow model from far above.\N这是一个小型规划器，属于系统一，它会密切观察靠近身体的物体，而不是从高处缓慢判断。
+Dialogue: 0,0:22:55.17,0:22:57.69,Sub,,0,0,0,,And next, let's look at some failure cases.\N接下来，我们来看一些失败案例。
+Dialogue: 0,0:22:57.99,0:22:59.99,Sub,,0,0,0,,Where does the system fails?\N系统在何处会失败？
+Dialogue: 0,0:23:00.33,0:23:03.55,Sub,,0,0,0,,It often fails at the hand-offs between the systems.\N它通常在系统之间的交接处失败。
+Dialogue: 0,0:23:04.33,0:23:11.47,Sub,,0,0,0,,For example, most of the time, the lower level system acts by itself, but it does not know it has already failed.\N例如，大多数情况下，底层系统会自行运作，但它并不知道自己已经失败。
+Dialogue: 0,0:23:11.97,0:23:18.71,Sub,,0,0,0,,And the higher level system is not quick enough to notice that the task has already failed.\N而高层系统又不够迅速，无法察觉任务已经失败。
+Dialogue: 0,0:23:20.07,0:23:22.59,Sub,,0,0,0,,So this is the hand-off issue.\N这就是交接问题。
+Dialogue: 0,0:23:25.75,0:23:30.49,Sub,,0,0,0,,And on the right, a Sonic model lifting a two-kilogram box.\N右边是Sonic模型举起一个两公斤重箱子的情况。
+Dialogue: 0,0:23:30.54,0:23:36.26,Sub,,0,0,0,,It follows the upper level motion command, but the hands slide off.\N它遵循高层的运动指令，但手却滑脱了。
+Dialogue: 0,0:23:36.50,0:23:40.26,Sub,,0,0,0,,It has no way to tell anyone that the box never came up.\N它无法告诉任何人箱子从未启动过。
+Dialogue: 0,0:23:41.87,0:23:46.47,Sub,,0,0,0,,So every one of these failures sit on a boundary between the clocks.\N因此，这些故障中的每一个都处于时钟之间的边界上。
+Dialogue: 0,0:23:47.21,0:23:51.61,Sub,,0,0,0,,Today, the feedback across that boundary is simply missing.\N如今，这个边界上的反馈完全缺失。
+Dialogue: 0,0:23:52.22,0:23:57.04,Sub,,0,0,0,,and I argue that we urgently need this feedback mechanism.\N我认为我们迫切需要这种反馈机制。
+Dialogue: 0,0:24:02.21,0:24:05.47,Sub,,0,0,0,,Let me end with where I think the future is going for.\N让我以我认为未来的发展方向来结束。
+Dialogue: 0,0:24:06.23,0:24:10.13,Sub,,0,0,0,,A chatbot can wait for the model, it's fine, but a robot cannot.\N聊天机器人可以等待模型，这没问题，但机器人不行。
+Dialogue: 0,0:24:10.81,0:24:13.63,Sub,,0,0,0,,So my view is that the future goes two ways.\N因此我认为未来有两个方向。
+Dialogue: 0,0:24:14.11,0:24:23.97,Sub,,0,0,0,,The first way is going with layers, each on its own clock, but the layer above shouldn't try to give the exact contact of forces.\N第一个方向是采用分层结构，每一层都有自己的时钟，但上层不应试图精确传递受力信息。
+Dialogue: 0,0:24:24.02,0:24:27.34,Sub,,0,0,0,,It's too slow to get them right.\N这样做太慢，无法及时纠正。
+Dialogue: 0,0:24:27.68,0:24:33.10,Sub,,0,0,0,,It sends intent downwards and the lower level systems sends feedback upwards.\N它向下传递意图，下层系统则向上反馈信息。
+Dialogue: 0,0:24:35.05,0:24:43.73,Sub,,0,0,0,,But the hard part for this kind of design is that the lower level system must also sense correct and send feedback on its own.\N但这种设计的难点在于，下层系统也必须能正确感知并自主发送反馈。
+Dialogue: 0,0:24:48.19,0:24:53.23,Sub,,0,0,0,,And the second way is the one model way that everybody who work on deep learning likes.\N而第二种方式就是大家做深度学习都喜欢的单一模型方式。
+Dialogue: 0,0:24:53.43,0:24:57.46,Sub,,0,0,0,,It's that we want to build a unified one model that share weights.\N我们想要构建一个统一的模型，共享权重。
+Dialogue: 0,0:24:57.51,0:25:02.97,Sub,,0,0,0,,but each system or each clock has its own expert.\N但每个系统或每个时钟都有自己的专家。
+Dialogue: 0,0:25:03.23,0:25:04.69,Sub,,0,0,0,,They're running at different clocks.\N它们在不同的时钟下运行。
+Dialogue: 0,0:25:05.76,0:25:13.52,Sub,,0,0,0,,The good part about this design is that we have a unified architecture with shared contacts, maybe with transformers we can share their KV caches.\N这种设计的优点在于，我们拥有一个统一的架构，共享连接，\N或许通过Transformer，我们还能共享其KV缓存。
+Dialogue: 0,0:25:13.90,0:25:15.30,Sub,,0,0,0,,That's great, right?\N这很棒，对吧？
+Dialogue: 0,0:25:15.90,0:25:20.20,Sub,,0,0,0,,And then at inference time, they run at different clocks with flexibility.\N然后在推理时，它们可以以不同的时钟运行，具备灵活性。
+Dialogue: 0,0:25:21.49,0:25:29.69,Sub,,0,0,0,,But the hard part for this kind of model system design is how do we train system 0, system 1, and system 2 all together.\N但这类模型系统设计的难点在于，如何同时训练系统0、系统1和系统2。
+Dialogue: 0,0:25:30.67,0:25:35.36,Sub,,0,0,0,,Training them all together have a lot of difficulties because today system 1 and system 2\N一起训练它们会遇到很多困难，因为目前系统1和系统2
+Dialogue: 0,0:25:35.41,0:25:41.61,Sub,,0,0,0,,are mostly trained from with behavior cloning while system 0 is trained in simulation with RL.\N主要是通过行为克隆进行训练，而系统0则是在模拟环境中通过强化学习训练的。
+Dialogue: 0,0:25:41.91,0:25:47.29,Sub,,0,0,0,,How do we combine these two training mechanisms into one environment and train them together?\N我们如何将这两种训练机制整合到一个环境中，并一起训练它们？
+Dialogue: 0,0:25:49.03,0:25:53.17,Sub,,0,0,0,,I think either way the clock has to be part of the model design.\N我认为，无论如何，时钟都必须成为模型设计的一部分。
+Dialogue: 0,0:25:56.55,0:26:01.05,Sub,,0,0,0,,So to wrap up, the world doesn't wait for the model in robotics.\N所以总结一下，机器人领域的世界不会等待模型的出现。
+Dialogue: 0,0:26:01.81,0:26:04.85,Sub,,0,0,0,,What a system must react to set its clock.\N系统必须响应什么来校准其时钟。
+Dialogue: 0,0:26:06.31,0:26:12.97,Sub,,0,0,0,,And we need tens of hertz for arms and hands and milliseconds for contact and force.\N对于手臂和手部，我们需要几十赫兹的频率，而接触和力的响应则需要毫秒级。
+Dialogue: 0,0:26:13.91,0:26:18.33,Sub,,0,0,0,,And we need to pick the model that fit the clock, not the other way around.\N我们需要选择与时钟匹配的模型，而不是反过来。
+Dialogue: 0,0:26:19.12,0:26:25.55,Sub,,0,0,0,,Between systems, we need to send intents down and let each of them close its own loop.\N在系统之间，我们需要向下传递意图，并让每个系统自行闭合其控制回路。
+Dialogue: 0,0:26:26.66,0:26:32.38,Sub,,0,0,0,,And the lower levels should send feedbacks or failures alert to the upper systems.\N下层系统应向高层系统发送反馈或故障警报。
+Dialogue: 0,0:26:33.23,0:26:36.92,Sub,,0,0,0,,So don't just build one fast model or one small model.\N所以不要只构建一个快速模型或一个小型模型。
+Dialogue: 0,0:26:36.97,0:26:38.39,Sub,,0,0,0,,You need to build a whole system.\N你需要构建一个完整的系统。
+Dialogue: 0,0:26:39.43,0:26:45.39,Sub,,0,0,0,,At the end of the day, we need to design a multi-clock system and work on what passes between these clocks.\N归根结底，我们需要设计一个多时钟系统，并关注这些时钟之间传递的内容。
+Dialogue: 0,0:26:46.98,0:26:55.10,Sub,,0,0,0,,And my one last request to the community all of us is that later when you build a simulation\N我对社区最后的一点请求是，当你们日后构建机器人仿真基准时，
+Dialogue: 0,0:26:55.15,0:27:04.15,Sub,,0,0,0,,benchmark for robotics also report a success rate before the robots deadline and also the inference time that is required.\N除了报告机器人在截止时间前的成功率外，也请同时报告所需的推理时间。
+Dialogue: 0,0:27:06.79,0:27:09.67,Sub,,0,0,0,,Okay that's everything that I want to share today.\N好了，今天我想分享的内容就到这里。
+Dialogue: 0,0:27:09.93,0:27:18.43,Sub,,0,0,0,,All of my work is done with my amazing students at Tsinghua MARS Lab, and some of them are here today at CoRL, so please come and talk to us.\N我的所有工作都是与清华大学 MARS 实验室的优秀学生们共同完成的，\N其中一些人今天就在 CoRL 现场，欢迎大家来和我们交流。
+Dialogue: 0,0:27:18.59,0:27:19.39,Sub,,0,0,0,,Thank you.\N谢谢。

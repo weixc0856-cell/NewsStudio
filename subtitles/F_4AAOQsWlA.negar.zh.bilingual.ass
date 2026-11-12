@@ -1,0 +1,285 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:02.10,Sub,,0,0,0,,So please join me in welcoming Negar Mehr.\N请大家和我一起欢迎内加尔·梅赫。
+Dialogue: 0,0:00:05.04,0:00:11.44,Sub,,0,0,0,,Thank you so much, Ken, for the very kind introduction and thanks to the organizers for bringing us together.\N非常感谢肯如此亲切的介绍，也感谢主办方将我们聚集在一起。
+Dialogue: 0,0:00:12.26,0:00:16.69,Sub,,0,0,0,,So I'm very excited to share with you what my lab has been working on.\N我非常激动，想和大家分享我们实验室正在开展的工作。
+Dialogue: 0,0:00:16.74,0:00:21.45,Sub,,0,0,0,,And in particular, if you're worried that there is not much left for you to do in robotics,\N尤其是如果你担心在机器人领域已经没什么可做的了，
+Dialogue: 0,0:00:21.50,0:00:27.37,Sub,,0,0,0,,I want to encourage you all to think about the next steps and I want to convince you that there are still\N我想鼓励大家思考下一步该做什么，我想说服你们，仍然有
+Dialogue: 0,0:00:27.42,0:00:36.18,Sub,,0,0,0,,many more problems and challenges to solve So we are all excited We are seeing performances capabilities and robotics that we couldn't\N许多问题和挑战有待解决。我们都非常兴奋，如今机器人展现出的性能和能力，是我们几年前
+Dialogue: 0,0:00:36.23,0:00:43.70,Sub,,0,0,0,,really imagine of a couple of years ago Every time I just open up my Twitter or X I'm impressed by the\N根本无法想象的。每次我打开推特或 X，都会被看到的演示所震撼，
+Dialogue: 0,0:00:43.75,0:00:51.56,Sub,,0,0,0,,demos that we see and the exciting capabilities that are being unlocked by the robotic systems But I think as a community,\N被机器人系统所解锁的激动人心的能力所惊叹。但我觉得作为整个社区，
+Dialogue: 0,0:00:51.61,0:00:59.73,Sub,,0,0,0,,it is now time to think about how can we go one step further and how can we have robots that are integrated into our lives,\N现在是时候思考如何再进一步，如何让机器人真正融入我们的生活，
+Dialogue: 0,0:01:00.27,0:01:08.44,Sub,,0,0,0,,the same way that autonomous cars were integrated into our lives and they share roads with human driven cars or pedestrians around here in Austin,\N就像自动驾驶汽车已经融入我们的生活那样，它们与人类驾驶的汽车或奥斯汀这里的行人共同使用道路，
+Dialogue: 0,0:01:08.49,0:01:11.37,Sub,,0,0,0,,I see many Waymo cars, which is very exciting.\N我看到很多 Waymo 的汽车，这非常令人兴奋。
+Dialogue: 0,0:01:12.30,0:01:16.34,Sub,,0,0,0,,But now that we have all these new capabilities emerging in robotic systems,\N但现在，随着机器人系统涌现出这些新能力，
+Dialogue: 0,0:01:16.72,0:01:22.10,Sub,,0,0,0,,how about having humanoids, quadrupeds or other robots around in this conference helping us.\N会议现场有没有人形机器人、四足机器人或其他机器人帮忙，怎么样？
+Dialogue: 0,0:01:23.04,0:01:26.11,Sub,,0,0,0,,And obviously we are very far from that point and that is why I had\N显然我们离那个目标还很远，这也是为什么我需要
+Dialogue: 0,0:01:26.16,0:01:30.86,Sub,,0,0,0,,to generate this image using Astra because I couldn't find any real world images of this.\N用 Astra 生成这张图片，因为我找不到任何现实世界中这样的图像。
+Dialogue: 0,0:01:31.20,0:01:36.53,Sub,,0,0,0,,But what we are looking at is how can we get robots to interact safely\N但我们关注的是，如何让机器人在非结构化环境中
+Dialogue: 0,0:01:36.58,0:01:42.87,Sub,,0,0,0,,and intelligently with other agents in unstructured environments that are humans around or other robots around.\N安全且智能地与其他智能体互动，比如周围的人类或其他机器人。
+Dialogue: 0,0:01:42.92,0:01:49.63,Sub,,0,0,0,,And that's, I think, a very timely question to ask, because maybe five years ago when I posed this question,\N我认为，现在提出这个问题非常及时，因为五年前我提出这个问题时，
+Dialogue: 0,0:01:49.68,0:01:54.71,Sub,,0,0,0,,people would be like, but I don't even have a robot that does things reliably on its own.\N人们可能会说，但我连一个能可靠自主完成任务的机器人也没有。
+Dialogue: 0,0:01:54.76,0:01:56.34,Sub,,0,0,0,,Why would I worry about this?\N我为什么要担心这个？
+Dialogue: 0,0:01:56.60,0:01:58.79,Sub,,0,0,0,,But I think it's time to think about this.\N但现在，是时候开始思考这个问题了。
+Dialogue: 0,0:01:58.84,0:02:07.35,Sub,,0,0,0,,And this is a very hard problem that requires us to think about different aspects of robotic algorithm design and hardware design.\N这是一个非常困难的问题，需要我们从机器人算法设计和硬件设计的多个方面进行思考。
+Dialogue: 0,0:02:07.40,0:02:13.96,Sub,,0,0,0,,On the algorithmic side, my lab has been working on what does planning look like in these domains?\N在算法层面，我的实验室一直在研究这些领域中规划应该是什么样子？
+Dialogue: 0,0:02:14.01,0:02:15.62,Sub,,0,0,0,,What should learning look like?\N学习又应该呈现为何种形态？
+Dialogue: 0,0:02:15.67,0:02:16.76,Sub,,0,0,0,,How about perception?\N感知方面呢？
+Dialogue: 0,0:02:16.81,0:02:17.83,Sub,,0,0,0,,How about safety?\N安全性方面呢？
+Dialogue: 0,0:02:18.47,0:02:25.63,Sub,,0,0,0,,But we are at conference on robot learning, so I want to share with you in what ways is learning in these domains different,\N但我们现在身处机器人学习会议，所以我想要和大家分享一下，在这些领域中学习有何不同之处，
+Dialogue: 0,0:02:25.99,0:02:33.23,Sub,,0,0,0,,and in what ways some lessons that we have learned from learning in multi-agent domains can actually be useful for learning in single-agent domains.\N以及我们在多智能体领域中学到的一些经验，实际上如何能用于单智能体领域的学习。
+Dialogue: 0,0:02:33.45,0:02:40.81,Sub,,0,0,0,,And throughout this talk, to motivate what we do, I'm going to use a very simple running example.\N在整个演讲过程中，为了说明我们所做工作的动机，我将使用一个非常简单的实例。
+Dialogue: 0,0:02:41.65,0:02:49.07,Sub,,0,0,0,,Imagine you have two agents, two robots, both of whom want to carry an object like a basket.\N想象你有两个智能体，两个机器人，它们都想搬运一个像篮子一样的物体。
+Dialogue: 0,0:02:50.23,0:02:57.77,Sub,,0,0,0,,And what I'm interested in is that I want to learn policies for each one of those robots so that when I pair these policies together,\N我感兴趣的是，我想为每个机器人学习出相应的策略，使得当我将这些策略组合在一起时，
+Dialogue: 0,0:02:57.99,0:03:03.11,Sub,,0,0,0,,they collectively succeed in this task of collaborating an object on transporting an object.\N它们能共同完成协作搬运物体的任务。
+Dialogue: 0,0:03:04.00,0:03:06.98,Sub,,0,0,0,,What's hard about this is that I want my policies to be decentralized.\N这里的难点在于，我希望这些策略是去中心化的。
+Dialogue: 0,0:03:07.16,0:03:10.91,Sub,,0,0,0,,I want every robot to make decisions based on its own local observations,\N我希望每个机器人仅基于自身的局部观测做出决策，
+Dialogue: 0,0:03:10.96,0:03:17.08,Sub,,0,0,0,,but there is some coupling which is implicit that both of them should agree on how to do a task to succeed.\N但两者之间存在某种隐含的耦合关系，即它们必须就如何完成任务达成一致才能成功。
+Dialogue: 0,0:03:18.04,0:03:19.51,Sub,,0,0,0,,What are our approaches?\N我们的方法是什么？
+Dialogue: 0,0:03:19.56,0:03:22.24,Sub,,0,0,0,,What are the recipes out there for learning these policies?\N现在有哪些学习这些策略的方法？
+Dialogue: 0,0:03:22.42,0:03:24.72,Sub,,0,0,0,,One approach is through imitation learning.\N一种方法是通过模仿学习。
+Dialogue: 0,0:03:25.02,0:03:27.16,Sub,,0,0,0,,One is through reinforcement learning.\N另一种方法是通过强化学习。
+Dialogue: 0,0:03:27.44,0:03:33.56,Sub,,0,0,0,,And what I'm going to do today is first I'm going to talk about what imitation looks like in these domains.\N今天我要做的第一件事，是先谈谈在这些领域中模仿学习是什么样子的。
+Dialogue: 0,0:03:34.36,0:03:38.58,Sub,,0,0,0,,Then I'm going to share with you what happens if you try to use RL for solving these tasks.\N然后我会和大家分享，如果你尝试用强化学习来解决这些任务，会发生什么。
+Dialogue: 0,0:03:39.02,0:03:42.39,Sub,,0,0,0,,And finally, I'm going to share some recent advances that we've made,\N最后，我会分享我们最近的一些进展，
+Dialogue: 0,0:03:42.44,0:03:45.99,Sub,,0,0,0,,which I think are very exciting and tell us how ideas from multi\N我认为这些进展非常令人兴奋，也让我们看到多智能体学习中的想法
+Dialogue: 0,0:03:46.04,0:03:50.90,Sub,,0,0,0,,agent learning can actually really help in the context of single-agent continual learning.\N如何真正帮助单智能体持续学习的场景。
+Dialogue: 0,0:03:51.40,0:03:53.26,Sub,,0,0,0,,Let's start by imitating.\N我们先从模仿开始。
+Dialogue: 0,0:03:53.52,0:03:58.60,Sub,,0,0,0,,We've seen a lot of capabilities?\N我们已经看到了很多能力？
+Dialogue: 0,0:03:58.78,0:04:04.68,Sub,,0,0,0,,What if I just collect some demonstrations from two robots collaboratively lifting an object?\N如果我只从两个机器人协作抬一个物体的过程中收集一些示范呢？
+Dialogue: 0,0:04:05.32,0:04:09.31,Sub,,0,0,0,,And then I can just do behavioral cloning and directly imitate policies.\N然后我就可以直接进行行为克隆，模仿策略。
+Dialogue: 0,0:04:09.36,0:04:11.84,Sub,,0,0,0,,How is it even different from single-agent domains?\N它和单智能体领域究竟有什么不同？
+Dialogue: 0,0:04:12.53,0:04:17.30,Sub,,0,0,0,,So we started to think about this problem theoretically first to think about in\N于是我们首先从理论上思考这个问题，来探讨
+Dialogue: 0,0:04:17.35,0:04:23.03,Sub,,0,0,0,,what ways is directly imitating policies in multi-agent domains different from single-agent domains.\N在多智能体领域中，直接模仿策略与单智能体领域有何不同。
+Dialogue: 0,0:04:23.87,0:04:27.67,Sub,,0,0,0,,And intuitively, at a very high level, the difficulties are following.\N直观上，在非常高的层面，困难之处如下。
+Dialogue: 0,0:04:28.15,0:04:33.26,Sub,,0,0,0,,Let's say I collect some demonstration data, and my object is a heavy object.\N假设我收集了一些示范数据，我的目标是一个重物。
+Dialogue: 0,0:04:33.31,0:04:36.91,Sub,,0,0,0,,So no single robot can on its own pick up the object.\N因此单个机器人无法独立完成拾起该物体的任务。
+Dialogue: 0,0:04:37.80,0:04:40.24,Sub,,0,0,0,,And then I imitate policies of the two robots.\N然后我模仿两个机器人的策略。
+Dialogue: 0,0:04:41.00,0:04:49.00,Sub,,0,0,0,,But during execution, if one of the robots slightly deviates from what it did, or what the expert did in its demonstrations,\N但在执行过程中，如果其中一个机器人稍微偏离了示范中专家的行为，
+Dialogue: 0,0:04:49.48,0:04:55.95,Sub,,0,0,0,,the entire effort fails, and the other robot, no matter how hard it tries, it can't really account for what happened.\N整个任务就会失败，另一个机器人无论多么努力，也无法弥补发生的情况。
+Dialogue: 0,0:04:56.00,0:05:01.09,Sub,,0,0,0,,So the deviations from expert expert policies, which are very common in behavioral cloning,\N因此，在行为克隆中非常常见的专家策略偏差，
+Dialogue: 0,0:05:01.14,0:05:05.54,Sub,,0,0,0,,are something that we cannot really tolerate and accommodate in multi-agent domains.\N在多智能体领域中是我们无法真正容忍和适应的。
+Dialogue: 0,0:05:06.08,0:05:11.05,Sub,,0,0,0,,So again, we formally characterize this, it turns out that instead of value gap,\N所以再次，我们正式地刻画了这一点，结果发现，这并非价值差距的问题，而是其他原因。
+Dialogue: 0,0:05:11.10,0:05:17.51,Sub,,0,0,0,,which is the metric that we typically care about in single-agent imitation learning, in multi-agent behavioral cloning,\N这是我们在单智能体模仿学习和多智能体行为克隆中通常关注的指标
+Dialogue: 0,0:05:17.56,0:05:22.34,Sub,,0,0,0,,we have to think about something that we call exploitability of learned policies, which is,\N我们必须考虑一个被称为学习策略可被利用性的概念，即
+Dialogue: 0,0:05:22.64,0:05:30.36,Sub,,0,0,0,,if one agent deviates slightly from what they did in the expert demo, how will the other agent react and how bad that can be.\N如果一个智能体稍微偏离专家演示中的行为，另一个智能体将如何反应，以及这种偏离可能造成的后果有多严重
+Dialogue: 0,0:05:30.77,0:05:35.95,Sub,,0,0,0,,And again, very informally, it's very hard to learn low exploitable policies.\N再次非正式地讲，学习低可被利用性策略非常困难
+Dialogue: 0,0:05:36.11,0:05:41.76,Sub,,0,0,0,,And we have noticed that what this theoretical results means is that data coverage,\N我们注意到，这些理论结果意味着数据覆盖度
+Dialogue: 0,0:05:41.81,0:05:49.78,Sub,,0,0,0,,covering all possible failure modes and all possible interaction modes matters even more in multi-agent interaction.\N覆盖所有可能的故障模式和所有可能的交互模式，在多智能体交互中显得更加重要
+Dialogue: 0,0:05:49.83,0:05:52.89,Sub,,0,0,0,,So you have to scale up your data collection even more.\N因此，你必须进一步扩大数据收集规模
+Dialogue: 0,0:05:53.39,0:06:00.71,Sub,,0,0,0,,And yet, all this is based on the assumption that there is only one way to coordinate with other agents.\N然而，这一切都基于一个假设：与其他智能体协作只有一种方式
+Dialogue: 0,0:06:01.30,0:06:05.06,Sub,,0,0,0,,And we know that interactions are multimodal.\N我们知道，交互具有多模态性
+Dialogue: 0,0:06:05.76,0:06:10.47,Sub,,0,0,0,,multimodality in multi-agent interactions is even more common than single-agent domains.\N多智能体交互中的多模态性比单智能体领域更为常见
+Dialogue: 0,0:06:10.52,0:06:17.21,Sub,,0,0,0,,The same task that I showed, there are two ways for the robots or even more, you could argue there are three ways for the robots to coordinate.\N我刚才展示的同一任务，机器人之间存在两种协调方式，甚至可以说有三种方式
+Dialogue: 0,0:06:17.26,0:06:23.74,Sub,,0,0,0,,But how can you how can they decide on their own which mode the other agent is picking up on?\N但它们如何自行判断对方选择了哪种模式？
+Dialogue: 0,0:06:24.59,0:06:30.49,Sub,,0,0,0,,So the moment I talk about multimodalities, I'm sure this audience thinks of diffusion policies,\N所以当我谈到多模态时，我相信在场的各位都会想到扩散策略，
+Dialogue: 0,0:06:30.65,0:06:36.65,Sub,,0,0,0,,because because we've all seen how amazing diffusion policies have been in capturing multimodalities.\N因为我们所有人都见过扩散策略在捕捉多模态方面的惊人表现。
+Dialogue: 0,0:06:37.17,0:06:42.78,Sub,,0,0,0,,So we started to think, maybe that's the recipe, maybe to learn a different coordination mode,\N于是我们开始思考，也许这就是关键，也许应该学习一种不同的协调模式，
+Dialogue: 0,0:06:42.83,0:06:47.54,Sub,,0,0,0,,what I need to do is to use the multimodal capabilities of diffusion\N我需要利用扩散策略的多模态能力，
+Dialogue: 0,0:06:47.59,0:06:53.15,Sub,,0,0,0,,policies and imitate decentralized diffusion policies that can learn to adapt to other agents.\N并模仿去中心化的扩散策略，让它们学会适应其他智能体。
+Dialogue: 0,0:06:53.83,0:07:01.58,Sub,,0,0,0,,So we designed a centralized training, decentralized execution pipeline where we pair policies with one another,\N因此我们设计了一个集中式训练、去中心化执行的流程，将策略两两配对，
+Dialogue: 0,0:07:01.63,0:07:06.97,Sub,,0,0,0,,train them, but during execution they're just decentralized policies all in a diffusion form.\N进行训练，但在执行时，它们只是以扩散形式存在的去中心化策略。
+Dialogue: 0,0:07:07.80,0:07:08.56,Sub,,0,0,0,,And it works.\N而且它真的有效。
+Dialogue: 0,0:07:09.36,0:07:15.04,Sub,,0,0,0,,One of my favorite videos is actually this video that the two robots are making decisions, each one of them is making decisions on its own,\N我最喜欢的视频之一就是这个，两个机器人各自独立做决策，
+Dialogue: 0,0:07:15.30,0:07:20.95,Sub,,0,0,0,,but they don't know which way the other robot is going, but they learn to implicitly coordinate with one another.\N但它们并不知道对方的行动方向，却学会了隐式地相互协调。
+Dialogue: 0,0:07:21.00,0:07:25.97,Sub,,0,0,0,,One of them is pulling the basket, the other is pushing, but by just leveraging this to cast this at the end,\N一个在拉篮子，另一个在推，但仅仅通过利用这种机制到最后，
+Dialogue: 0,0:07:26.02,0:07:30.64,Sub,,0,0,0,,running this in a receding horizon, they ultimately agree on a one mode of interaction.\N在滚动时域中运行，它们最终达成了一种统一的互动模式。
+Dialogue: 0,0:07:31.61,0:07:32.49,Sub,,0,0,0,,So this is great.\N所以这很棒。
+Dialogue: 0,0:07:33.01,0:07:34.01,Sub,,0,0,0,,Is it solved?\N问题解决了吗？
+Dialogue: 0,0:07:34.74,0:07:39.71,Sub,,0,0,0,,For any of you who has ever teleoperated the bi-manual setup or a multi-agent setup,\N对于任何曾经遥操作过双臂系统或多智能体系统的人而言，
+Dialogue: 0,0:07:39.76,0:07:45.00,Sub,,0,0,0,,you kind of know how hard it is to collect data in these interactive domains.\N你们大概都清楚，在这些交互式领域收集数据有多困难。
+Dialogue: 0,0:07:45.64,0:07:51.94,Sub,,0,0,0,,So this requires enough demonstration data for each interactive task, which is really hard to achieve.\N因此，每个交互任务都需要足够的演示数据，而这真的很难实现。
+Dialogue: 0,0:07:52.79,0:07:55.09,Sub,,0,0,0,,And naturally for all of us in this conference,\N对于在座的我们所有人来说，
+Dialogue: 0,0:07:55.45,0:08:03.68,Sub,,0,0,0,,a very key question to ask is single-agent robots have so much capability that are pre-trained in them these days.\N一个非常关键的问题是：如今单智能体机器人已经具备了如此强大的预训练能力。
+Dialogue: 0,0:08:03.73,0:08:12.17,Sub,,0,0,0,,How can we build on these pre-trained skills that robots have achieved, to enable robots to have coordination on demand?\N我们如何基于机器人已有的预训练技能，来实现机器人按需协调？
+Dialogue: 0,0:08:12.79,0:08:17.71,Sub,,0,0,0,,Instead of training everything from scratch for my robots to learn how to coordinate with one another?\N而不是从零开始训练机器人，让它们学习如何相互协作？
+Dialogue: 0,0:08:17.95,0:08:24.78,Sub,,0,0,0,,What if I just build on the existing capabilities and make the robot coordinate and interact only when it is needed,\N如果我只是基于现有能力，仅在需要时才让机器人进行协调与交互，
+Dialogue: 0,0:08:24.83,0:08:28.63,Sub,,0,0,0,,and not forgetting about things that they could do on on their own?\N同时也不忘记它们原本就能独立完成的事情？
+Dialogue: 0,0:08:29.39,0:08:34.90,Sub,,0,0,0,,So recently, we've been looking into what if we freeze what the robot already knows,\N所以最近，我们一直在思考，如果冻结机器人已有的知识会怎样，
+Dialogue: 0,0:08:34.95,0:08:41.23,Sub,,0,0,0,,and just learn only the correction that is needed for achieving coordination between pre-trained skills,\N仅学习实现预训练技能间协调所需的修正，
+Dialogue: 0,0:08:41.47,0:08:46.61,Sub,,0,0,0,,only using few demonstrations, not as much as training everything from scratch.\N仅使用少量示范，远少于从零开始训练全部内容。
+Dialogue: 0,0:08:47.24,0:08:52.53,Sub,,0,0,0,,And the first thing that they've tried is how about we just learn residual denoiser\N他们尝试的第一件事是，我们为什么不直接学习一个残差去噪器，
+Dialogue: 0,0:08:52.58,0:08:58.74,Sub,,0,0,0,,for correcting single-agent policies to get robots to interact and coordinate with one another.\N用于修正单智能体策略，使机器人能够相互交互和协调。
+Dialogue: 0,0:08:59.87,0:09:06.95,Sub,,0,0,0,,So I assume that I have a diffusion policy that has learned certain skills for just one robot, let's say pick in place and wiping.\N我假设我有一个扩散策略，已学会单个机器人的一些技能，比如原地抓取和擦拭。
+Dialogue: 0,0:09:07.51,0:09:10.67,Sub,,0,0,0,,And what I do is just only few demonstration data,\N我所做的是仅使用少量示范数据，
+Dialogue: 0,0:09:10.83,0:09:18.33,Sub,,0,0,0,,I use that to correct my denoising process so that I coordinate the timing of the agents actions with one another.\N利用这些数据来修正去噪过程，从而协调各智能体动作的时间。
+Dialogue: 0,0:09:19.16,0:09:24.19,Sub,,0,0,0,,And the way that I do this is that I start from a frozen base policy for just one robot,\N我实现这一目标的方式是，从一个冻结的单机器人基础策略开始，
+Dialogue: 0,0:09:24.24,0:09:28.78,Sub,,0,0,0,,and collect very few demonstrations of multi-agent interaction,\N收集极少量多智能体交互的示范，
+Dialogue: 0,0:09:29.20,0:09:39.02,Sub,,0,0,0,,then collect some distilled single-agent demonstrations from my frozen policy, and collectively use these data sets to train a coordination head.\N然后从冻结策略中提取一些提炼后的单智能体示范，综合使用这些数据集来训练一个协调头。
+Dialogue: 0,0:09:39.73,0:09:47.33,Sub,,0,0,0,,And what's nice about this coordination residual that I train is that I can achieve coordination when it is needed.\N这种训练出的协调残差的优点在于，仅在需要时才实现协调。
+Dialogue: 0,0:09:47.63,0:09:56.68,Sub,,0,0,0,,One robot can do part of the job while the other one finishes the job, but also it retains the single-agent source behavior that the robots had.\N一个机器人可以完成部分工作，另一个机器人则完成剩余部分，同时保留了机器人原有的单智能体原始行为。
+Dialogue: 0,0:09:56.73,0:10:03.39,Sub,,0,0,0,,if a task just requires one robot to accomplish a task on its own, I haven't lost those capabilities.\N如果一项任务只需要一个机器人独立完成，那么我并没有失去这些能力。
+Dialogue: 0,0:10:04.27,0:10:10.42,Sub,,0,0,0,,But I want to encourage you to think about what we can do by building on these single-agent capabilities,\N但我希望你们能思考，如何基于这些单智能体能力来拓展更多可能性，
+Dialogue: 0,0:10:10.47,0:10:14.60,Sub,,0,0,0,,because I think it's an exciting time to think about multi-agent coordination and\N因为我认为现在正是思考多智能体协作的激动人心时刻，
+Dialogue: 0,0:10:14.65,0:10:20.43,Sub,,0,0,0,,integrating robots in these type of tasks using the capabilities that they have already built.\N并利用它们已有的能力，将机器人整合到这类任务中。
+Dialogue: 0,0:10:22.27,0:10:24.56,Sub,,0,0,0,,So, imitation one way.\N所以，模仿学习是一种方式。
+Dialogue: 0,0:10:24.61,0:10:29.21,Sub,,0,0,0,,What if I was trying to solve this same task using reinforcement learning.\N那如果我尝试用强化学习来解决同样的任务呢？
+Dialogue: 0,0:10:30.22,0:10:38.10,Sub,,0,0,0,,We asked that question, if I use multi-agent reinforcement learning to train my two robots to collaboratively pick up this object,\N我们提出了这个问题：如果使用多智能体强化学习来训练两个机器人协同拾起这个物体，
+Dialogue: 0,0:10:38.46,0:10:44.96,Sub,,0,0,0,,this is the best that we could achieve, no matter how hard of a reward engineering with it.\N这就是我们所能达到的最佳效果，无论我们如何精心设计奖励机制。
+Dialogue: 0,0:10:46.26,0:10:52.70,Sub,,0,0,0,,No matter how hard we tried it, this was the best that the robots could do in terms of collaboratively picking up this object.\N无论我们如何努力，这都是机器人在协同拾起该物体方面所能达到的最好表现。
+Dialogue: 0,0:10:53.32,0:10:55.83,Sub,,0,0,0,,So we started to think, why is that the case?\N于是我们开始思考，为什么会是这种情况？
+Dialogue: 0,0:10:55.88,0:10:58.90,Sub,,0,0,0,,Why is it so hard to use RL to train these policies.\N为什么用强化学习来训练这些策略如此困难？
+Dialogue: 0,0:10:59.22,0:11:05.35,Sub,,0,0,0,,Why is it that we as humans are really good at interacting with one another learning to cooperate and interact with our\N为什么我们人类在相互协作、学习如何合作与互动方面如此擅长？
+Dialogue: 0,0:11:05.40,0:11:09.65,Sub,,0,0,0,,teammates in actually very intricate and complicated forms of interactions like\N队友之间实际上存在非常复杂和微妙的互动形式
+Dialogue: 0,0:11:09.70,0:11:15.98,Sub,,0,0,0,,sports and very intricate forms of interactions that people build over time.\N体育以及人们长期建立的非常复杂的人际互动形式。
+Dialogue: 0,0:11:17.17,0:11:20.94,Sub,,0,0,0,,And for those of you who have watched World Cup over this past summer,\N而对于那些在去年夏天观看过世界杯的观众来说，
+Dialogue: 0,0:11:20.99,0:11:27.92,Sub,,0,0,0,,you perhaps remember how much everyone was talking about coaches and how all these memes about coaches went viral,\N你可能还记得，当时人们热议教练，关于教练的那些梗 meme 有多火。
+Dialogue: 0,0:11:27.97,0:11:34.37,Sub,,0,0,0,,and people were arguing about what's the role of a coach and coaches' strategy in a team's performance.\N人们在争论教练的角色以及教练策略对团队表现的影响。
+Dialogue: 0,0:11:34.81,0:11:42.13,Sub,,0,0,0,,So we started to think maybe one of the reasons that we humans can learn to interact with others is that we leverage good coaches.\N所以我们开始思考，人类能够学会与他人互动，或许是因为我们善于借助优秀的教练。
+Dialogue: 0,0:11:42.45,0:11:48.77,Sub,,0,0,0,,What if I can coach my robot to learn complex tasks like coordination tasks?\N如果我能指导我的机器人学会像协作任务这样复杂的任务，会怎样？
+Dialogue: 0,0:11:48.96,0:11:56.78,Sub,,0,0,0,,What if I use my foundation models to act as my coaches for guiding my robot learning loop?\N如果我用我的基础模型来充当教练，指导我的机器人学习循环，会怎样？
+Dialogue: 0,0:11:57.08,0:12:01.53,Sub,,0,0,0,,Using reasoning, coding, and visual understanding capabilities of these models,\N利用这些模型的推理、编码和视觉理解能力，
+Dialogue: 0,0:12:01.58,0:12:08.38,Sub,,0,0,0,,I just get to have a coach which is for free and autonomously guiding the learning process of my robot.\N我只需配备一位免费且能自主引导机器人学习过程的教练。
+Dialogue: 0,0:12:09.19,0:12:16.11,Sub,,0,0,0,,Let's first see what that looks like in a single-agent setting, and then I bring in the multi-agent coordination aspect of it.\N我们先来看一下单智能体设置下的情况，然后再引入多智能体协作的方面。
+Dialogue: 0,0:12:16.27,0:12:19.07,Sub,,0,0,0,,Let's say I want to teach a robot to run backwards.\N假设我想教一个机器人倒着跑。
+Dialogue: 0,0:12:19.71,0:12:24.14,Sub,,0,0,0,,And I'm not a locomotion person, so I don't really know what the reward function should be.\N而我不是运动控制专家，所以其实并不清楚奖励函数应该设成什么样。
+Dialogue: 0,0:12:24.19,0:12:26.55,Sub,,0,0,0,,I have no idea how I should set up the training.\N我完全不知道该如何设置训练方式。
+Dialogue: 0,0:12:27.54,0:12:34.84,Sub,,0,0,0,,So what we did was was like, okay, I feel have a coach, maybe my coach can break down the task into a sequence of simpler tasks.\N于是我们想到，好吧，我需要一个教练，也许我的教练可以把任务分解成一系列更简单的子任务。
+Dialogue: 0,0:12:35.18,0:12:41.78,Sub,,0,0,0,,Then my coach also defines what it means means to do each sub task such as, for example, is stabilizing itself.\N然后我的教练还会定义每个子任务的含义，比如，稳定自身算不算完成任务。
+Dialogue: 0,0:12:42.12,0:12:44.07,Sub,,0,0,0,,And then my coach provides feedback.\N接着我的教练会提供反馈。
+Dialogue: 0,0:12:44.12,0:12:50.93,Sub,,0,0,0,,and that loop is gonna be enough for me to learn a good enough policy that they can transfer zero-shot to\N这个循环就足以让我学到一个足够好的策略，能够实现零样本迁移。
+Dialogue: 0,0:12:50.98,0:12:59.08,Sub,,0,0,0,,my to my hardware and that way I can learn these skills in reinforcement learning without having to spend so much time figuring out\N这样我就能在强化学习中掌握这些技能，而无需花大量时间去摸索该尝试什么样的奖励函数。
+Dialogue: 0,0:12:59.13,0:13:07.29,Sub,,0,0,0,,what reward function I should try, and once I learn certain skills, let's say running backwards or some whole-body control with proper\N一旦我学会了某些技能，比如倒着跑，或是在正确指导下的全身控制，
+Dialogue: 0,0:13:07.34,0:13:17.98,Sub,,0,0,0,,coaching I can actually use the existing skills that the robot has learned to accomplish new tasks with no training and no data collection.\N我就可以直接利用机器人已有的技能来完成新任务，无需额外训练或数据采集。
+Dialogue: 0,0:13:18.82,0:13:25.76,Sub,,0,0,0,,And inspired by the line of work that actually Ken pioneered on using code as policies or agentic robotics,\N受到肯实际开创的、将代码作为策略或代理式机器人研究方向的启发，
+Dialogue: 0,0:13:26.12,0:13:31.98,Sub,,0,0,0,,we started to think what if I use code as a coach for composing the pre-trained robot skills.\N我们开始思考，如果我用代码作为教练来组合预训练的机器人技能，会怎样？
+Dialogue: 0,0:13:32.56,0:13:39.79,Sub,,0,0,0,,For example, I have a robot that has its own let's say pre-trained skills such as walking backwards or a whole-body controller.\N举个例子，我有一个机器人，它已经具备一些预训练的技能，比如倒着走或全身控制器。
+Dialogue: 0,0:13:39.84,0:13:45.78,Sub,,0,0,0,,And I just use my coach in terms of a policy code to compose those skills with one another.\N我只是利用教练的策略代码，将这些技能组合在一起。
+Dialogue: 0,0:13:46.02,0:13:49.68,Sub,,0,0,0,,And what's nice about this is that it doesn't require any retraining.\N这样做的好处是不需要重新训练。
+Dialogue: 0,0:13:49.84,0:13:52.09,Sub,,0,0,0,,I don't collect any human data.\N我不需要收集任何人类数据。
+Dialogue: 0,0:13:52.14,0:13:57.48,Sub,,0,0,0,,And all it takes is just building on the pre-trained and already learned skills.\N所需的只是在预训练并已掌握的技能基础上进行构建。
+Dialogue: 0,0:13:57.76,0:14:00.49,Sub,,0,0,0,,And that to our surprise turned out to work,\N让我们感到意外的是，这竟然奏效了。
+Dialogue: 0,0:14:00.54,0:14:08.05,Sub,,0,0,0,,we could transfer these policies to the real world humanoid could essentially lift the basket and object from different positions,\N我们能够将这些策略迁移到真实世界的人形机器人上，机器人基本上可以从不同位置抓起篮子和物体。
+Dialogue: 0,0:14:08.10,0:14:10.68,Sub,,0,0,0,,different initial positions and different goal positions.\N包括不同的初始位置和不同的目标位置。
+Dialogue: 0,0:14:11.54,0:14:14.99,Sub,,0,0,0,,And what was even more interesting to me is that in other tasks, for example,\N更让我感兴趣的是，在其他任务中，比如按下按钮，
+Dialogue: 0,0:14:15.04,0:14:20.81,Sub,,0,0,0,,let's say pushing a button, when we first deployed our policy, we had around 20 % success rate.\N我们首次部署策略时，成功率大约只有 20%。
+Dialogue: 0,0:14:20.86,0:14:28.09,Sub,,0,0,0,,But by just two rounds of refinement on our coach, coach code, we increase the success rate to 90%.\N但仅通过两次对教练代码的优化，我们就将成功率提升到了 90%。
+Dialogue: 0,0:14:28.14,0:14:33.71,Sub,,0,0,0,,And this is all without any retargeting or human data collection, or anything like that.\N而这一切都不需要重新定位、收集人类数据，或其他类似操作。
+Dialogue: 0,0:14:33.76,0:14:38.86,Sub,,0,0,0,,And this is this was all by the way before Astra, I'm sure the performance is going to even be better now.\N顺便说一句，这些成果是在 Astra 之前取得的，我相信现在性能肯定会更好。
+Dialogue: 0,0:14:39.79,0:14:40.84,Sub,,0,0,0,,But this is for single-agent.\N但这仅适用于单智能体。
+Dialogue: 0,0:14:40.89,0:14:45.29,Sub,,0,0,0,,And I promise to you that this is interesting for coordination and multi-agent systems.\N我向你保证，这在协调和多智能体系统中也非常有趣。
+Dialogue: 0,0:14:45.77,0:14:52.19,Sub,,0,0,0,,Turns out the same recipe actually enables coordination tasks that we couldn't really achieve before.\N结果发现，同样的方法实际上能够实现我们之前无法达成的协调任务。
+Dialogue: 0,0:14:52.53,0:14:53.90,Sub,,0,0,0,,Like, for example,\N比如说，
+Dialogue: 0,0:14:53.95,0:15:02.30,Sub,,0,0,0,,this running example that I had collaboratively lifting an object with a proper coaching using these foundation models is doing a much,\N我之前合作使用这些基础模型来协同举起一个物体，并进行恰当指导的这个例子，表现得要好得多，
+Dialogue: 0,0:15:02.35,0:15:03.09,Sub,,0,0,0,,much better job.\N好得多。
+Dialogue: 0,0:15:03.69,0:15:11.24,Sub,,0,0,0,,Or I can get my quadrupeds to essentially balance a seesaw so that one of them can climb the seesaw.\N或者，我可以让我这些四足机器人几乎完美地平衡跷跷板，让其中一只能够爬上去。
+Dialogue: 0,0:15:11.29,0:15:16.53,Sub,,0,0,0,,Whereas if you try to just train multi-agent PPO to get to do this, it's hopeless.\N而如果你试图直接训练多智能体 PPO 来完成这个任务，那几乎是不可能的。
+Dialogue: 0,0:15:17.32,0:15:24.99,Sub,,0,0,0,,Or I can teach quadrupeds to pass through a gate by proper coaching of knowing, well, you should do this,\N或者，我可以教四足机器人通过恰当指导来通过一个门，比如告诉它们：你应该这样做，
+Dialogue: 0,0:15:25.04,0:15:28.83,Sub,,0,0,0,,here's how you should do, here's what your reward should be, and here's what each sub task should be.\N这是你的正确做法，你的奖励应该是什么，以及每个子任务应该是什么。
+Dialogue: 0,0:15:28.88,0:15:37.67,Sub,,0,0,0,,Or I can pair these robots with humans to collaboratively do tasks, such as transporting an object, which was really hard for me to do on my own.\N或者，我可以将这些机器人与人类配对，共同完成任务，比如搬运物体，这对我个人来说曾非常困难。
+Dialogue: 0,0:15:37.72,0:15:44.36,Sub,,0,0,0,,But when I actually tried this experiment, I was surprised by how easy it is to actually have a quadruped helping me with transporting heavy objects.\N但当我真正尝试这个实验时，我惊讶地发现，让四足机器人帮我搬运重物竟然如此简单。
+Dialogue: 0,0:15:45.75,0:15:49.33,Sub,,0,0,0,,So this was very, to our surprise, it was very effective.\N所以这让我们非常意外，但效果却非常好。
+Dialogue: 0,0:15:49.83,0:15:52.02,Sub,,0,0,0,,And we were kind of inspired and encouraged by that.\N那让我们受到一些启发和鼓舞。
+Dialogue: 0,0:15:52.07,0:15:55.84,Sub,,0,0,0,,So we started to think, is there anything else that a coach does for a team of agents?\N于是我们开始思考，教练还会为智能体团队做些什么别的事吗？
+Dialogue: 0,0:15:55.89,0:16:01.20,Sub,,0,0,0,,And for anyone who has ever taught a class with group projects,\N任何上过小组项目课程的人都知道，
+Dialogue: 0,0:16:01.25,0:16:06.66,Sub,,0,0,0,,I'm sure at the end of a class you've got complaints about I contributed to my team effort,\N我敢肯定，一学期结束时，你总会听到有人抱怨：我为团队付出了很多，
+Dialogue: 0,0:16:06.71,0:16:10.45,Sub,,0,0,0,,my partners didn't, I should get credit for what I did, others shouldn't.\N但我的搭档没出力，我应该得到应有的认可，别人不该。
+Dialogue: 0,0:16:10.81,0:16:14.46,Sub,,0,0,0,,And that's the same thing that makes multi-agent reinforcement learning really hard,\N这正是多智能体强化学习变得极其困难的原因，
+Dialogue: 0,0:16:14.51,0:16:26.21,Sub,,0,0,0,,which is, as you're looking at how interactions unfold, you need to have a good understanding of who contributed to get credit.\N因为你在观察互动过程时，必须清楚地知道谁真正做出了贡献，才值得被认可。
+Dialogue: 0,0:16:26.51,0:16:34.02,Sub,,0,0,0,,Because even if a team effort failed, there might still be some agents who actually contributed to the team effort,\N即使团队整体失败了，也可能有些智能体实际上为团队努力过，
+Dialogue: 0,0:16:34.07,0:16:37.97,Sub,,0,0,0,,and others are the ones who essentially resulted in the team failure.\N而另一些则真正导致了团队的失败。
+Dialogue: 0,0:16:38.47,0:16:45.46,Sub,,0,0,0,,So we're like, maybe I can just make my foundation model and my coach to just be a good credit designer.\N所以我们想，也许我可以只让我的基座模型和教练成为一个优秀的“贡献评估设计者”。
+Dialogue: 0,0:16:45.51,0:16:49.95,Sub,,0,0,0,,Maybe that's all I need for getting the robots to learn to coordinate with one another.\N或许只要做到这一点，就能让机器人学会彼此协调。
+Dialogue: 0,0:16:50.39,0:16:52.36,Sub,,0,0,0,,And again, this was in 2025.\N而且再次强调，这是在 2025 年。
+Dialogue: 0,0:16:52.41,0:16:55.18,Sub,,0,0,0,,Models were not as amazing as they are today.\N模型没有今天这么惊艳。
+Dialogue: 0,0:16:55.23,0:17:02.17,Sub,,0,0,0,,But it turned out by just simply asking the model existing model off the shelf model to play the role of a credit designer,\N但结果发现，只需简单地让现成的模型扮演信用设计者的角色，
+Dialogue: 0,0:17:02.51,0:17:08.37,Sub,,0,0,0,,you can outperform a state of the art in terms of a coordination capabilities by orders of magnitude.\N你就能在协调能力上远超当前最先进水平，差距达到数量级。
+Dialogue: 0,0:17:08.79,0:17:14.79,Sub,,0,0,0,,For example, in a warehouse where robots are moving objects around, and you really want to coordinate that effort,\N例如，在一个机器人搬运物品的仓库中，你真正需要协调它们的协作，
+Dialogue: 0,0:17:15.13,0:17:24.41,Sub,,0,0,0,,we are doing way better than a baseline such as MAPPO, HAPPO and LIPO, which are very well known baselines in multi-agent reinforcement learning.\N我们的表现远超 MAPPO、HAPPO 和 LIPO 等基准模型，\N这些在多智能体强化学习领域都是广为人知的基准。
+Dialogue: 0,0:17:24.87,0:17:26.00,Sub,,0,0,0,,And again, this was 2025.\N而且再次强调，这是在 2025 年。
+Dialogue: 0,0:17:26.05,0:17:28.48,Sub,,0,0,0,,I'm sure the performance is going to be even better now.\N我相信现在的性能会更好。
+Dialogue: 0,0:17:28.53,0:17:36.16,Sub,,0,0,0,,But I want to argue that these are actually exciting times for us to think about how we can coach robots to learn to interact with one another,\N但我想要强调的是，现在正是我们思考如何指导机器人学习彼此互动的激动人心时刻，
+Dialogue: 0,0:17:36.21,0:17:40.85,Sub,,0,0,0,,and hopefully down the line, cooperate and coordinate with humans.\N希望未来能实现与人类的协作与协调。
+Dialogue: 0,0:17:42.17,0:17:45.47,Sub,,0,0,0,,But now we want to flip the problem a little bit.\N但现在我们想稍微换个角度思考这个问题。
+Dialogue: 0,0:17:45.93,0:17:51.18,Sub,,0,0,0,,And I want to argue that there are some lessons that we have learned by studying multi-agent systems,\N我想指出的是，通过研究多智能体系统，我们已经获得了一些重要启示。
+Dialogue: 0,0:17:51.23,0:17:56.75,Sub,,0,0,0,,which have actually proven to be really useful and relevant for single-agent learning.\N这些实际上已被证明对单智能体学习非常有用且相关。
+Dialogue: 0,0:17:57.80,0:18:01.20,Sub,,0,0,0,,And that has been primarily in the context of continual learning.\N这主要发生在持续学习的背景下。
+Dialogue: 0,0:18:02.16,0:18:10.90,Sub,,0,0,0,,So let's now go back to the world of one agent learning on its own and let's imagine an agent that is continuously learning new tasks.\N那么现在让我们回到单个智能体独立学习的世界，并设想一个持续学习新任务的智能体。
+Dialogue: 0,0:18:11.42,0:18:16.53,Sub,,0,0,0,,So you start with some task T, then a new task T plus one comes, then another task comes.\N你从某个任务 T 开始，然后出现新任务 T+1，接着又出现另一个任务。
+Dialogue: 0,0:18:16.58,0:18:20.56,Sub,,0,0,0,,What happens as a robot is continuously learning?\N当机器人持续学习时会发生什么？
+Dialogue: 0,0:18:21.54,0:18:27.50,Sub,,0,0,0,,Typically, what happens is that a robot learns a new task, but it forgets about what it had learned in the past.\N通常情况下，机器人学会了一个新任务，但会忘记过去所学的内容。
+Dialogue: 0,0:18:28.10,0:18:37.89,Sub,,0,0,0,,So, for example, I have a policy theta one that has learned to do one task T1, but I fine-tuned my policy on some tasks T2,\N例如，我有一个策略 θ1，它学会了完成任务 T1，但我在任务 T2 上对策略进行了微调，
+Dialogue: 0,0:18:37.94,0:18:46.50,Sub,,0,0,0,,then what happens is perhaps parameters that were really important for accomplishing task might be overridden by fine-tuning to task T2.\N那么结果可能是，原本对完成任务至关重要的参数，被针对任务 T2 的微调所覆盖。
+Dialogue: 0,0:18:47.04,0:18:52.08,Sub,,0,0,0,,Same thing for task T3, as I move on, I may forget about what I had learned before.\N对任务 T3 也是如此，随着不断推进，我可能会忘记之前学过的内容。
+Dialogue: 0,0:18:52.68,0:19:01.81,Sub,,0,0,0,,So we were facing this problem of catastrophic forgetting when you continuously learn new tasks, and we were thinking this is not good.\N因此，我们在持续学习新任务时面临灾难性遗忘的问题，我们认为这并不理想。
+Dialogue: 0,0:19:01.86,0:19:05.96,Sub,,0,0,0,,I learned my task T3, but I forget about how I did tasks T1 and T2.\N我学会了任务 T3，但却忘记了如何完成任务 T1 和 T2。
+Dialogue: 0,0:19:06.74,0:19:15.01,Sub,,0,0,0,,So with that multi-agent view of the we started to think what if continuously learning new tasks can be\N借助多智能体的视角，我们开始思考，如果持续学习新任务可以
+Dialogue: 0,0:19:15.06,0:19:21.20,Sub,,0,0,0,,cast as some sort of a consensus between what the robot is learning now and what it had learned before.\N将其视为机器人当前所学与先前所学之间的一种共识。
+Dialogue: 0,0:19:21.70,0:19:28.61,Sub,,0,0,0,,In a way, what if the robot didn't forget where it came from and it kept remembering who it was,\N某种程度上，如果机器人没有忘记自己从何而来，而是始终记得自己是谁，会怎样呢，
+Dialogue: 0,0:19:28.66,0:19:31.62,Sub,,0,0,0,,where it came from, very much the same as what a human should do, I think.\N它从哪里来，我认为和人类应该做的几乎是一样的。
+Dialogue: 0,0:19:32.24,0:19:32.77,Sub,,0,0,0,,So,\N所以，
+Dialogue: 0,0:19:32.82,0:19:39.97,Sub,,0,0,0,,we started thinking about maybe we can cast continual learning as a temporal consensus between what\N我们开始思考，或许可以把持续学习看作是时间维度上的共识
+Dialogue: 0,0:19:40.02,0:19:44.78,Sub,,0,0,0,,the robot has learned before and what the new policy parameters of the robot should be.\N机器人已经学到了之前的经验，以及机器人新策略参数应该是什么。
+Dialogue: 0,0:19:45.88,0:19:51.05,Sub,,0,0,0,,And this is nice because with this consensus view of continuous learning,\N而且这样很好，因为通过这种对持续学习的共识视角，
+Dialogue: 0,0:19:51.10,0:19:58.51,Sub,,0,0,0,,we can enable a replay-free policy update where I don't require to just keep track of data that was used in my pre\N我们可以实现无需重放的策略更新，这样我就无需再追踪预训练阶段所用的数据了。
+Dialogue: 0,0:19:58.56,0:20:05.50,Sub,,0,0,0,,-training or hope that an industry lab releases the data set to so that we can keep track of what the robot had already learned.\N训练或希望产业实验室发布数据集，以便我们能够追踪机器人已经学到的内容。
+Dialogue: 0,0:20:06.00,0:20:12.25,Sub,,0,0,0,,So I enforce a consensus in the weight space of my policy parameters.\N因此，我在策略参数的权重空间中强制达成共识。
+Dialogue: 0,0:20:12.30,0:20:15.65,Sub,,0,0,0,,When I'm learning my policy for task T plus 2,\N当我学习任务 T 加 2 的策略时，
+Dialogue: 0,0:20:15.70,0:20:25.34,Sub,,0,0,0,,I'm like there should be some form of an agreement with policy parameters for task T plus 1 and policy parameters for task T or T plus 1.\N我觉得应该在任务T+1的策略参数和任务T或T+1的策略参数之间达成某种协议。
+Dialogue: 0,0:20:26.15,0:20:32.63,Sub,,0,0,0,,And at a very high level intuitively what this does is that as I'm fine-tuning my policy to task T two,\N从非常高的层面直观地讲，这相当于我在对策略进行微调以适应任务 T2 时，
+Dialogue: 0,0:20:32.95,0:20:41.97,Sub,,0,0,0,,I kind of memorize and remember what policy parameters were really important for task T1, so I don't change them too much.\N我大概记住了对任务T1真正重要的策略参数，所以不会做太大改动。
+Dialogue: 0,0:20:42.17,0:20:49.40,Sub,,0,0,0,,And as I add these new tasks, I preserve the policy parameters that were really important and relevant to prior tasks,\N当我添加这些新任务时，我会保留那些对先前任务真正重要且相关的策略参数。
+Dialogue: 0,0:20:49.45,0:20:54.83,Sub,,0,0,0,,so that ultimately I can remember the prior tasks and adapt and learn the new task.\N这样我最终就能记住之前的任务，并适应和学习新任务。
+Dialogue: 0,0:20:55.77,0:20:57.34,Sub,,0,0,0,,But what does this consensus look like?\N但这种共识看起来是什么样的？
+Dialogue: 0,0:20:57.39,0:20:58.28,Sub,,0,0,0,,So,\N所以，
+Dialogue: 0,0:20:58.33,0:21:05.24,Sub,,0,0,0,,let's say I've learned my policy parameters for task T and then I have a notion of a weight or importance weight\N假设我已经学到了任务T的策略参数，然后我对权重或重要性权重有了一个概念
+Dialogue: 0,0:21:05.29,0:21:14.10,Sub,,0,0,0,,for how much each policy parameter matters for task T and I have another task T plus one and the same thing,\N对于任务 T，每个策略参数的重要性是多少，我还有另一个任务 T 加一，情况也一样。
+Dialogue: 0,0:21:14.15,0:21:19.69,Sub,,0,0,0,,I have another notion of a weight matrix which is how much each parameter matters for task T plus one.\N我还有一个关于权重矩阵的概念，即每个参数对任务 T 加一的重要性。
+Dialogue: 0,0:21:20.27,0:21:28.58,Sub,,0,0,0,,Ideally, I want my policy parameters to be proportional to kind of like a weighted average of these policy parameters.\N理想情况下，我希望我的策略参数与这些策略参数的加权平均值成正比。
+Dialogue: 0,0:21:28.63,0:21:32.73,Sub,,0,0,0,,That's what I mean by consensus in the policy parameter space.\N这就是我所说的策略参数空间中的共识。
+Dialogue: 0,0:21:34.10,0:21:41.50,Sub,,0,0,0,,But these weights depend on policy parameters, and every task may require its own importance, so how do we achieve this?\N但这些权重依赖于策略参数，而每个任务可能都需要不同的重要性，我们该如何实现这一点？
+Dialogue: 0,0:21:42.70,0:21:43.43,Sub,,0,0,0,,We were actually, again,\N我们实际上再次受到启发，
+Dialogue: 0,0:21:43.48,0:21:47.67,Sub,,0,0,0,,inspired by the algorithms that are out there in multi-agent world back in the time\N来自2014年多智能体世界中已有的算法，
+Dialogue: 0,0:21:47.72,0:21:54.59,Sub,,0,0,0,,from 2014 that people have shown that you could actually use methods like a method of multipliers,\N那时人们已经证明，你可以使用类似乘子法的方法，
+Dialogue: 0,0:21:54.64,0:21:55.59,Sub,,0,0,0,,primal-dual updates.\N原始-对偶更新。
+Dialogue: 0,0:21:55.64,0:21:59.84,Sub,,0,0,0,,For those of you have background in optimization, there's room for you to contribute to robotics.\N对于有优化背景的各位来说，这里存在你可以为机器人领域做出贡献的空间。
+Dialogue: 0,0:22:00.02,0:22:02.59,Sub,,0,0,0,,So we started to think method of multipliers,\N所以我们开始思考乘子法，
+Dialogue: 0,0:22:02.64,0:22:08.64,Sub,,0,0,0,,primal dual updates for reasons that are very well known in the community could actually be super useful for this task.\N原始-对偶更新，因为社区中众所周知的原因，这种方法对这项任务可能非常有用。
+Dialogue: 0,0:22:09.46,0:22:14.97,Sub,,0,0,0,,And this results in kind of like an iterative update where you update your policy parameters a little bit,\N这导致了一种迭代更新机制，你稍微更新一下策略参数，
+Dialogue: 0,0:22:15.02,0:22:17.83,Sub,,0,0,0,,then you kind of move your consensus constraint a little bit.\N然后稍微调整一下共识约束。
+Dialogue: 0,0:22:17.88,0:22:24.19,Sub,,0,0,0,,But in a nutshell, that results in kind of having a moving anchor for your memory as you're training your policies.\N但简而言之，这相当于在训练策略时，为你的记忆设置了一个移动的锚点。
+Dialogue: 0,0:22:24.24,0:22:31.88,Sub,,0,0,0,,I'm not going to get into the details of how primal dual updates for method of multipliers work, but let me show you how this works in practice.\N我不会深入讲解乘子法中的原始-对偶更新机制，但让我展示一下它在实际中的运作方式。
+Dialogue: 0,0:22:32.66,0:22:41.11,Sub,,0,0,0,,We took π0.5; our pre-training tasks for π0.5 were a bunch of tasks that we ran in the lab, we collected some data from it,\N我们采用了π0.5；π0.5的预训练任务是一系列我们在实验室中运行的任务，我们从中收集了一些数据，
+Dialogue: 0,0:22:41.16,0:22:48.26,Sub,,0,0,0,,but then we had some target tasks such as remove the lid and place the bird in the basket or cake on the cake tray.\N但随后我们设定了一些目标任务，比如打开盖子并将鸟放进篮子里，或者把蛋糕放在蛋糕盘上。
+Dialogue: 0,0:22:49.44,0:22:58.55,Sub,,0,0,0,,And we kind of compared the performance of this temporal consensus way of fine-tuning as opposed to baselines and supervised fine-tuning,\N我们大致比较了这种时间共识微调方法与基线方法以及监督微调的性能表现，
+Dialogue: 0,0:22:58.60,0:23:00.64,Sub,,0,0,0,,the vanilla form of supervised fine-tuning.\N即监督微调的原始形式。
+Dialogue: 0,0:23:01.23,0:23:04.53,Sub,,0,0,0,,On the target tasks, both methods do well.\N在目标任务上，两种方法表现都很好。
+Dialogue: 0,0:23:04.95,0:23:08.63,Sub,,0,0,0,,Both of them learn the target task for which they have been fine-tuned to.\N两者都学会了它们被微调过的特定任务。
+Dialogue: 0,0:23:08.85,0:23:14.29,Sub,,0,0,0,,But the beauty of temporal consensus view of it becomes clear when you look at the performance on the pre-trained tasks.\N但当你观察预训练任务上的表现时，这种时间共识视角的优势就变得非常明显。
+Dialogue: 0,0:23:15.51,0:23:24.72,Sub,,0,0,0,,While SFT forgets about what it had learned before, by just enforcing a simple consensus which is replay free in the policy parameter space,\N与监督微调会遗忘之前所学内容不同，通过在策略参数空间中仅施加一个简单的共识机制，无需重放，
+Dialogue: 0,0:23:24.77,0:23:27.73,Sub,,0,0,0,,we managed to remember what the robot had learned before.\N我们成功让机器人保留了之前学到的知识。
+Dialogue: 0,0:23:28.86,0:23:32.93,Sub,,0,0,0,,And this is not me just cherry-picking what I really wanted you to see.\N这并不是我刻意挑选了我想要你们看到的内容。
+Dialogue: 0,0:23:32.98,0:23:42.32,Sub,,0,0,0,,We have kind of verified this and run a set of comparisons with other baselines out there, including replay or regularization based methods like EWC,\N我们已经进行了验证，并与其他基线方法进行了多组对比，包括基于重放或正则化的方法，如EWC，
+Dialogue: 0,0:23:42.62,0:23:48.54,Sub,,0,0,0,,but across them we found that this is the best in terms of adaptation while retaining prior skills.\N但综合来看，这种方法在适应新任务的同时，仍能保留先前技能方面表现最佳。
+Dialogue: 0,0:23:49.00,0:23:54.83,Sub,,0,0,0,,And it's not just in the context of fine tuning that we see this method to be actually particularly useful.\N而且，这种优势不仅仅体现在微调的语境中，我们发现这种方法实际上在更广泛的应用场景中也非常有用。
+Dialogue: 0,0:23:54.88,0:23:57.92,Sub,,0,0,0,,We see that in the context of mapping an environment as well.\N我们在环境映射的背景下也能看到这一点。
+Dialogue: 0,0:23:58.50,0:24:02.46,Sub,,0,0,0,,Let's say a robot is mapping an environment which is dynamically changing.\N假设一个机器人正在映射一个动态变化的环境。
+Dialogue: 0,0:24:03.10,0:24:08.72,Sub,,0,0,0,,And let's say some objects like a table has moved around as the robot is moving around and trying to map the environment.\N假设在机器人移动并尝试映射环境的过程中，某些物体如桌子发生了位置移动。
+Dialogue: 0,0:24:09.48,0:24:19.74,Sub,,0,0,0,,If we use a replay based method, our mapping ends up with two copies of the same table because it has seen data of both positions of table.\N如果我们使用基于重放的方法，映射结果会出现同一张桌子的两个副本，\N因为它记录了桌子在两个不同位置的数据。
+Dialogue: 0,0:24:20.38,0:24:26.03,Sub,,0,0,0,,And if we use a regularization based method that the robot fails to see that the table has moved around\N而如果使用基于正则化的方法，机器人则无法察觉桌子已经移动。
+Dialogue: 0,0:24:26.08,0:24:33.08,Sub,,0,0,0,,because it's just so regularized to not depart from what it has learned before that it doesn't learn to adapt.\N因为它过于被正则化，无法偏离之前所学的内容，因而无法学会适应新变化。
+Dialogue: 0,0:24:33.36,0:24:36.04,Sub,,0,0,0,,But by just this consensus view of things,\N但通过这种共识视角，
+Dialogue: 0,0:24:36.24,0:24:42.30,Sub,,0,0,0,,we can preserve things that haven't changed from the past and adapt to the parameters and changes in the scene.\N我们既能保留过去未发生变化的元素，又能适应场景中的参数和变化。
+Dialogue: 0,0:24:43.17,0:24:52.23,Sub,,0,0,0,,The same thing we saw in a number of experiments that we ran in the lab with a temporal consensus that my student calls his method TACO,\N我们在实验室进行的多项实验中也观察到了同样的现象，我学生将这种方法称为 TACO（时间共识）。
+Dialogue: 0,0:24:52.39,0:25:00.08,Sub,,0,0,0,,we found that the same thing happens with replay methods, replay based methods, we kind of have the same copy or two copies of the same object.\N我们发现，使用重放方法时，同样会出现同一物体的重复或两个副本。
+Dialogue: 0,0:25:00.13,0:25:06.27,Sub,,0,0,0,,Whereas with regularization based methods, we essentially fail to adapt to the new changes in the environment.\N而基于正则化的方法则基本无法适应环境中的新变化。
+Dialogue: 0,0:25:06.76,0:25:10.65,Sub,,0,0,0,,So these are just just being very recent results that we found out.\N这些只是我们最近才得出的一些结果。
+Dialogue: 0,0:25:10.70,0:25:17.71,Sub,,0,0,0,,But I want to communicate that what we found so far is that this consensus view of continual learning has really\N但我想要传达的是，到目前为止我们发现，这种关于持续学习的共识观点确实非常有效，
+Dialogue: 0,0:25:17.76,0:25:24.92,Sub,,0,0,0,,been really strong in balancing new skills and learning new skills with retaining what the robot has learned in the past.\N能够在学习新技能的同时，保持机器人过去所学的内容，实现良好平衡。
+Dialogue: 0,0:25:25.20,0:25:29.41,Sub,,0,0,0,,And just recently we have seen that in the context of reinforcement learning it turns out you can do some really\N而最近我们发现，在强化学习的背景下，你可以在强化学习循环内部
+Dialogue: 0,0:25:29.46,0:25:36.86,Sub,,0,0,0,,smart things in a within the the RL loop to adapt to changes and it's become super useful in fine-tuning policies.\N做出一些非常聪明的调整来适应变化，这在微调策略方面变得极为有用。
+Dialogue: 0,0:25:38.02,0:25:42.13,Sub,,0,0,0,,So with that I would like to thank my students who actually did the work that\N借此机会，我想感谢我的学生们，正是他们完成了
+Dialogue: 0,0:25:42.18,0:25:46.77,Sub,,0,0,0,,I got to present here today and the funding agencies who actually made this work possible.\N今天我能够在此展示的这项工作，以及真正让这项工作成为可能的资助机构。
+Dialogue: 0,0:25:46.82,0:25:48.36,Sub,,0,0,0,,Thank you all for your attention.\N感谢大家的关注。

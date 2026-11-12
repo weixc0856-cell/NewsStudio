@@ -1,0 +1,767 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:11.28,0:00:19.02,Sub,,0,0,0,,So today um I'm going to talk about uh robot learning from human experience uh and
+Dialogue: 0,0:00:19.07,0:00:26.75,Sub,,0,0,0,,how scale uh is starting to change uh what robots can learn and how they learn.
+Dialogue: 0,0:00:26.80,0:00:30.70,Sub,,0,0,0,,I'll frame the talk around uh three hypotheses.
+Dialogue: 0,0:00:30.75,0:00:41.31,Sub,,0,0,0,,Uh so first robot capabilities can scale with human data and second human data will soon be unabundant uh to be sufficient enough to
+Dialogue: 0,0:00:41.36,0:00:51.01,Sub,,0,0,0,,the point where we don't know how to do about it and third progress requires scaling the both the science uh uh and the data.
+Dialogue: 0,0:00:51.06,0:00:53.99,Sub,,0,0,0,,So they are the hypothesis not facts.
+Dialogue: 0,0:00:54.04,0:01:01.87,Sub,,0,0,0,,Uh but I hope this talk will provide some evidence uh that concrete evidence uh that they are becoming true.
+Dialogue: 0,0:01:01.92,0:01:08.27,Sub,,0,0,0,,I hope I have I don't have to convince you that robot learning have made a lot of progress and one of the key factors
+Dialogue: 0,0:01:08.32,0:01:15.99,Sub,,0,0,0,,is that we have rediscovered tele operation to be a really good way to teach robot how to do really complex tasks like making laundryries,
+Dialogue: 0,0:01:16.04,0:01:18.73,Sub,,0,0,0,,clean bathrooms or doing warehouse tasks.
+Dialogue: 0,0:01:18.78,0:01:26.95,Sub,,0,0,0,,and they're really being deployed in the real world today in factories in laundromats and I mean it's a starting they're starting
+Dialogue: 0,0:01:27.00,0:01:34.19,Sub,,0,0,0,,to be usable but they're not mature yet but we're seeing them in the world in the real world today um so
+Dialogue: 0,0:01:34.24,0:01:41.79,Sub,,0,0,0,,before diving into the technical talk um I I want to step back and ask more fundamental question uh why do we
+Dialogue: 0,0:01:41.84,0:01:50.80,Sub,,0,0,0,,believe uh this whole datadriven uh robotics direction will work at scale for all all of these hundreds of billions of hour uh
+Dialogue: 0,0:01:50.85,0:01:58.64,Sub,,0,0,0,,dollar dollars investments uh in robotics right now on the line belief that we all think is going to work right so
+Dialogue: 0,0:01:58.69,0:02:05.95,Sub,,0,0,0,,I the answer really large is largely based on analogy with the type of AI we're using today at this point a
+Dialogue: 0,0:02:06.00,0:02:16.72,Sub,,0,0,0,,large part of human knowledge is being captured by internet uh that gets downloaded cleaned and absorbed by these large foundational models
+Dialogue: 0,0:02:16.77,0:02:22.99,Sub,,0,0,0,,and uh in other modern AI succeeds because we found a
+Dialogue: 0,0:02:23.04,0:02:30.19,Sub,,0,0,0,,scalable way to transfer our knowledge to these models through the internet.
+Dialogue: 0,0:02:30.24,0:02:36.51,Sub,,0,0,0,,We the robotics researchers are essentially trying to apply the same idea uh to the physical world.
+Dialogue: 0,0:02:36.56,0:02:42.46,Sub,,0,0,0,,Uh instead of semantic knowledge, robots it needs sensor motor knowledge or physical intelligence.
+Dialogue: 0,0:02:42.51,0:02:46.65,Sub,,0,0,0,,Uh so tip appreciation really provides a mechanism to transfer this knowledge.
+Dialogue: 0,0:02:46.70,0:02:53.17,Sub,,0,0,0,,Uh by controlling robots while recording what a robot sees and what actions should be taken.
+Dialogue: 0,0:02:53.22,0:03:00.67,Sub,,0,0,0,,Uh we are building a direct mapping between the perception action or the input and output supervision for the robot's body.
+Dialogue: 0,0:03:00.72,0:03:06.43,Sub,,0,0,0,,In a sense t operation laws to transfer human physical intelligence to the robots.
+Dialogue: 0,0:03:06.48,0:03:12.11,Sub,,0,0,0,,But despite the simplicity of this analogy uh in reality t operation creates a very very
+Dialogue: 0,0:03:12.16,0:03:18.08,Sub,,0,0,0,,tight knowledge transfer bottleneck and I argue there are two major factors to this part bottleneck.
+Dialogue: 0,0:03:18.13,0:03:22.98,Sub,,0,0,0,,The first one should be familiar to some uh is the scal scalability problem.
+Dialogue: 0,0:03:23.03,0:03:29.95,Sub,,0,0,0,,If we you have ever tried teleoperation you know it's very very unintuitive takes a lot of practice to get it right.
+Dialogue: 0,0:03:30.00,0:03:33.66,Sub,,0,0,0,,More importantly teleeration only scales linearly.
+Dialogue: 0,0:03:33.71,0:03:39.25,Sub,,0,0,0,,uh the amount of data we can collect grows only with the number of robots multiply the number of
+Dialogue: 0,0:03:39.30,0:03:47.47,Sub,,0,0,0,,human telepision hours and compared to the internet scale data used to train modern AI systems this is extremely expensive.
+Dialogue: 0,0:03:47.52,0:03:51.54,Sub,,0,0,0,,The second challenge is more subtle which is the fidelity of the data.
+Dialogue: 0,0:03:51.59,0:03:57.95,Sub,,0,0,0,,uh humans are have enormous sensor sensor motor knowledge about the world but teleporation captures
+Dialogue: 0,0:03:58.00,0:04:03.73,Sub,,0,0,0,,this knowledge uh only when a human deliberately acts through a robots uh uh using
+Dialogue: 0,0:04:03.78,0:04:09.47,Sub,,0,0,0,,interface like VR devices and this creates a very indirect feedback uh loop that meddles
+Dialogue: 0,0:04:09.52,0:04:16.15,Sub,,0,0,0,,with our natural behavior as many forms of intelligence are difficult to deliberately demonstrate through teleoperation.
+Dialogue: 0,0:04:16.20,0:04:21.58,Sub,,0,0,0,,Think about subtle behaviors like kneading a doll uh or picking up a card by sliding
+Dialogue: 0,0:04:21.63,0:04:25.69,Sub,,0,0,0,,to the edge of the table and picking it up or when your hands are full.
+Dialogue: 0,0:04:25.74,0:04:29.22,Sub,,0,0,0,,So you kick open a door instead of using hand to open the door.
+Dialogue: 0,0:04:29.27,0:04:29.76,Sub,,0,0,0,,Right?
+Dialogue: 0,0:04:29.81,0:04:37.33,Sub,,0,0,0,,So all of these motions we don't think much we do it as we go about our daily lives and demonstration.
+Dialogue: 0,0:04:37.38,0:04:47.31,Sub,,0,0,0,,uh when we teleoperate we inevitably simplify these behaviors to the point uh where uh the control is much much easier for the robots to carry out.
+Dialogue: 0,0:04:47.36,0:04:51.17,Sub,,0,0,0,,So in other words teleoperation is not just a narrow pipe.
+Dialogue: 0,0:04:51.22,0:04:58.99,Sub,,0,0,0,,It is also a very very lossy one loses a lot of our human knowledge and wastes all of these intelligence.
+Dialogue: 0,0:04:59.04,0:05:07.08,Sub,,0,0,0,,So the question we want to answer is do we trans how do we transfer sensor motor d sensor motor intelligence to robot at scale and
+Dialogue: 0,0:05:07.13,0:05:17.36,Sub,,0,0,0,,without losing the fidelity and our proposal that we've been doing in our lab is to break this bottleneck by doing by going directly to the source.
+Dialogue: 0,0:05:17.41,0:05:22.24,Sub,,0,0,0,,We want to capture the human experience directly with no robots involved.
+Dialogue: 0,0:05:22.29,0:05:30.41,Sub,,0,0,0,,uh and we want to make sure the data contains all the necessary information including sensing action data to supervise robot learning model and
+Dialogue: 0,0:05:30.46,0:05:40.65,Sub,,0,0,0,,such data should not be collected as demonstrations but captured while humans are performing natural behaviors in the real world and this talk uh will
+Dialogue: 0,0:05:40.70,0:05:49.11,Sub,,0,0,0,,be three parts I'll describe some of the work from our lab uh so is I call the science human robot transfer but it's really
+Dialogue: 0,0:05:49.16,0:05:55.95,Sub,,0,0,0,,just the type of re the style of research we've been carrying out There are many many many different ways to do human robot transfer.
+Dialogue: 0,0:05:56.00,0:06:03.29,Sub,,0,0,0,,Um and we we want to examine that uh if we scale up these approach what happens right what happens when we have a
+Dialogue: 0,0:06:03.34,0:06:11.57,Sub,,0,0,0,,lot of human data and finally I want to also talk about the problem that because this is an extremely resources intensive research topic uh
+Dialogue: 0,0:06:11.62,0:06:19.85,Sub,,0,0,0,,can we also scale with the science to allow the community to drive the collective progress of this topic with that this bring us to
+Dialogue: 0,0:06:19.90,0:06:23.73,Sub,,0,0,0,,our first research milestone uh which is called eagle mimic scaling imitation
+Dialogue: 0,0:06:23.78,0:06:27.70,Sub,,0,0,0,,learning via egocentric medios Some of you have might have already seen it.
+Dialogue: 0,0:06:27.75,0:06:34.64,Sub,,0,0,0,,Uh the core of this research topic is really to capture embodied human data from an egocentric view at an eye level.
+Dialogue: 0,0:06:34.69,0:06:40.67,Sub,,0,0,0,,So uh so we want to capture our authentic uh experience through to through visual sensing unlike third person views.
+Dialogue: 0,0:06:40.72,0:06:45.03,Sub,,0,0,0,,Egoententralentric data capture how we naturally perceive the world at an eye level and
+Dialogue: 0,0:06:45.08,0:06:50.09,Sub,,0,0,0,,specifically we use project RA glasses uh to capture this data which uh which
+Dialogue: 0,0:06:50.14,0:06:58.97,Sub,,0,0,0,,essentially capture a lot of multimodal information including uh the uh the where the heads are uh where the hands are we'll talk a bit about why this
+Dialogue: 0,0:06:59.02,0:07:07.06,Sub,,0,0,0,,is good but but but things to take away is that these are just glasses so they don't meddle with our behavior it cap only captures it and
+Dialogue: 0,0:07:07.11,0:07:12.74,Sub,,0,0,0,,our work this specifically is about turning these raw data streams into embed what
+Dialogue: 0,0:07:12.79,0:07:18.52,Sub,,0,0,0,,we call embodied human experience that can be treated as equals with robot data.
+Dialogue: 0,0:07:18.57,0:07:23.38,Sub,,0,0,0,,So our key hypothesis is that humans are just kind of weird type of robot.
+Dialogue: 0,0:07:23.43,0:07:26.06,Sub,,0,0,0,,If you can measure it, if you can put sensor around it,
+Dialogue: 0,0:07:26.11,0:07:35.51,Sub,,0,0,0,,you can treat that as the human data as robot data and want to be able to use that data directly by bridging sensing action and kinematic gaps.
+Dialogue: 0,0:07:35.56,0:07:40.59,Sub,,0,0,0,,And we want also to develop a scalable way to learn from these data.
+Dialogue: 0,0:07:40.64,0:07:46.11,Sub,,0,0,0,,So we want a policy learning uh method that scales with human data.
+Dialogue: 0,0:07:46.16,0:07:52.64,Sub,,0,0,0,,Let's first talk about how to align embodiment and viewpoint uh which is chromatic and visual gap uh between human robots.
+Dialogue: 0,0:07:52.69,0:08:00.59,Sub,,0,0,0,,For embodiment um so we really believe that like in order to better learn from human data the robots should be more humanlike.
+Dialogue: 0,0:08:00.64,0:08:03.98,Sub,,0,0,0,,Uh so you might think the first reaction is yes humanoids but back then
+Dialogue: 0,0:08:04.03,0:08:08.77,Sub,,0,0,0,,when we started this project in early 2023 there weren't that many humanoids around.
+Dialogue: 0,0:08:08.82,0:08:12.73,Sub,,0,0,0,,So what we had to do is to build a robot of our own but it really
+Dialogue: 0,0:08:12.78,0:08:17.68,Sub,,0,0,0,,kind of embodies a lot of our design choices that carried through later in our other works.
+Dialogue: 0,0:08:17.73,0:08:20.48,Sub,,0,0,0,,So it has to be kinematically similar to humans.
+Dialogue: 0,0:08:20.53,0:08:22.99,Sub,,0,0,0,,I mean six off arms are is is pushing it.
+Dialogue: 0,0:08:23.04,0:08:31.43,Sub,,0,0,0,,Uh but we we tried our best and uh another design choice we made is actually we want the hand eye configuration of the robot to be
+Dialogue: 0,0:08:31.48,0:08:40.53,Sub,,0,0,0,,very similar to the human so that we can bridge any uh sort of these uh visual gaps uh and also hand eye configuration gaps between human robots.
+Dialogue: 0,0:08:40.58,0:08:45.39,Sub,,0,0,0,,And what we did was directly mount the glasses that we use to capture human data directly on
+Dialogue: 0,0:08:45.44,0:08:51.21,Sub,,0,0,0,,robots so that we can mitigate any of the sensor uh hardware gaps between human and robot data.
+Dialogue: 0,0:08:51.26,0:08:55.81,Sub,,0,0,0,,Another interesting problems that we have to solve is the hand eye motion.
+Dialogue: 0,0:08:55.86,0:09:00.88,Sub,,0,0,0,,So if you look at this egoentric view data, you know that humans uh move a lot.
+Dialogue: 0,0:09:00.93,0:09:05.55,Sub,,0,0,0,,They they move their heads uh when they look and they have information seeking actions.
+Dialogue: 0,0:09:05.60,0:09:07.30,Sub,,0,0,0,,They move their body a lot.
+Dialogue: 0,0:09:07.35,0:09:10.51,Sub,,0,0,0,,But our robots are kind of stable based.
+Dialogue: 0,0:09:10.56,0:09:12.15,Sub,,0,0,0,,It has a torso but doesn't move.
+Dialogue: 0,0:09:12.20,0:09:13.63,Sub,,0,0,0,,Has a head but doesn't move.
+Dialogue: 0,0:09:13.68,0:09:14.02,Sub,,0,0,0,,Right?
+Dialogue: 0,0:09:14.05,0:09:18.91,Sub,,0,0,0,,So it has the stable coording system between action relative to the camera.
+Dialogue: 0,0:09:18.96,0:09:23.48,Sub,,0,0,0,,But this is how we created this this kind of action supervision for the robot, right?
+Dialogue: 0,0:09:23.53,0:09:25.33,Sub,,0,0,0,,We because the reference frames is the same.
+Dialogue: 0,0:09:25.38,0:09:27.58,Sub,,0,0,0,,So it has the trajectory that we can parse.
+Dialogue: 0,0:09:27.63,0:09:29.71,Sub,,0,0,0,,But humans they move a lot.
+Dialogue: 0,0:09:29.76,0:09:34.06,Sub,,0,0,0,,Uh so the question is how do we actually parse this and convert the data
+Dialogue: 0,0:09:34.11,0:09:39.11,Sub,,0,0,0,,to like a robot like human data to something that we can train robot policy with.
+Dialogue: 0,0:09:39.16,0:09:42.59,Sub,,0,0,0,,Uh so we really need to stabilize the reference frame for the actions and
+Dialogue: 0,0:09:42.64,0:09:48.96,Sub,,0,0,0,,luckily uh meta area glass gave us really really robust visual initial autoometry or slam.
+Dialogue: 0,0:09:49.01,0:09:50.53,Sub,,0,0,0,,They done it through slam.
+Dialogue: 0,0:09:50.58,0:09:58.07,Sub,,0,0,0,,Uh so what we did simp put simply is to transfer the future hand poses into the current observational frame and that
+Dialogue: 0,0:09:58.12,0:10:06.28,Sub,,0,0,0,,allows us to kind of get these kind of a consistent trajectories for action supervision to create uh like visuals like these.
+Dialogue: 0,0:10:06.33,0:10:16.43,Sub,,0,0,0,,So this is this visual is only possible because we have very very stable uh a good quality visual initial odometry for the uh for for the camera.
+Dialogue: 0,0:10:16.48,0:10:21.59,Sub,,0,0,0,,And uh once we align this kinematic and visual gap we play also a lot of other tricks.
+Dialogue: 0,0:10:21.64,0:10:25.53,Sub,,0,0,0,,So initially we kind of just did the simplest thing to make human robot look alike.
+Dialogue: 0,0:10:25.58,0:10:31.47,Sub,,0,0,0,,For example we put masks on the human data to make them look robot robotic and all that kind of things.
+Dialogue: 0,0:10:31.52,0:10:33.87,Sub,,0,0,0,,Uh but the learning architecture is quite s simple.
+Dialogue: 0,0:10:33.92,0:10:39.29,Sub,,0,0,0,,It's just a gigantic transformers where we're uh we randomly sample batches of human robot data
+Dialogue: 0,0:10:39.34,0:10:43.07,Sub,,0,0,0,,uh and we line their input output space and we train this model together and the
+Dialogue: 0,0:10:43.12,0:10:48.30,Sub,,0,0,0,,hope really is that uh this architecture can come up with a representation space that aligns
+Dialogue: 0,0:10:48.35,0:10:53.03,Sub,,0,0,0,,human robot such that uh the performance of the robot policy can scale with human data.
+Dialogue: 0,0:10:53.08,0:10:54.15,Sub,,0,0,0,,That's our hypothesis.
+Dialogue: 0,0:10:54.20,0:11:00.75,Sub,,0,0,0,,We I'm going to show you this is not exactly the case why this policy performed well in the next work.
+Dialogue: 0,0:11:00.80,0:11:05.97,Sub,,0,0,0,,So we tried this on a variety of tasks including like this kind of grocery bagging tasks.
+Dialogue: 0,0:11:06.02,0:11:13.54,Sub,,0,0,0,,Um so like just show that it it works in closed loop uh fast enough so you can see these reactive behaviors.
+Dialogue: 0,0:11:13.59,0:11:21.38,Sub,,0,0,0,,Uh of course we made it both shirts these tiny toddler shirts and we also made robots make coffees for the student.
+Dialogue: 0,0:11:21.43,0:11:25.72,Sub,,0,0,0,,Uh and I mean it doesn't succeed all the time but you get the idea.
+Dialogue: 0,0:11:25.76,0:11:32.45,Sub,,0,0,0,,I mean we really want to show that human data does drive up the performance of of of robot policies.
+Dialogue: 0,0:11:32.50,0:11:37.43,Sub,,0,0,0,,Uh I'll let actually drink the coffee and move forward.
+Dialogue: 0,0:11:37.48,0:11:47.50,Sub,,0,0,0,,So quantitatively what we saw was that uh our hypothesis is that human data will scale robot performance uh with human data.
+Dialogue: 0,0:11:47.55,0:11:49.93,Sub,,0,0,0,,So uh this plots uh is x-
+Dialogue: 0,0:11:49.98,0:11:55.47,Sub,,0,0,0,,axis is the hours of data we spend on data collection and this blue curve is
+Dialogue: 0,0:11:55.52,0:12:02.11,Sub,,0,0,0,,when you only collect robot data through teleoperation and y-axis is the normalized score of the task.
+Dialogue: 0,0:12:02.16,0:12:07.92,Sub,,0,0,0,,So you can see that as we collect more teleoperative data you see a mild scaling curve that performance
+Dialogue: 0,0:12:07.97,0:12:15.98,Sub,,0,0,0,,gets better as expected but when you add uh one hour of human data to this add twohour mark.
+Dialogue: 0,0:12:16.03,0:12:22.22,Sub,,0,0,0,,So when we combine two hours of robot data with one hour human data, you see a dramatic performance jump.
+Dialogue: 0,0:12:22.27,0:12:28.61,Sub,,0,0,0,,And this reason is that we do task a lot faster than robots.
+Dialogue: 0,0:12:28.66,0:12:31.69,Sub,,0,0,0,,Human hands move a lot faster than robot hands.
+Dialogue: 0,0:12:31.74,0:12:37.95,Sub,,0,0,0,,So sometimes we can demonstrate tasks up to 10 times as fast as human as robots.
+Dialogue: 0,0:12:38.00,0:12:40.52,Sub,,0,0,0,,These are like very experienced teleoper, right?
+Dialogue: 0,0:12:40.57,0:12:48.49,Sub,,0,0,0,,students are really good really good at teleporting robots and even that uh humans are a lot faster in their naturalistic speed.
+Dialogue: 0,0:12:48.54,0:12:52.73,Sub,,0,0,0,,Um so we also kind of wheeled robots to different parts of the campus Georgia Tech
+Dialogue: 0,0:12:52.78,0:12:56.99,Sub,,0,0,0,,campus to show that task is the policy is robust and all that kind of thing.
+Dialogue: 0,0:12:57.04,0:12:58.41,Sub,,0,0,0,,There's nothing really new here.
+Dialogue: 0,0:12:58.46,0:13:03.39,Sub,,0,0,0,,is just that we want to to really show that this policy works, right?
+Dialogue: 0,0:13:03.44,0:13:13.40,Sub,,0,0,0,,And uh so right hands lower right the the students basically keep tossing new checkbacks to it just to make it try to see if it fails right.
+Dialogue: 0,0:13:13.45,0:13:19.07,Sub,,0,0,0,,Um so after this project we asked ourselves is this end of the game like is is this it right?
+Dialogue: 0,0:13:19.12,0:13:21.74,Sub,,0,0,0,,Like what have we solved the problem?
+Dialogue: 0,0:13:21.79,0:13:25.87,Sub,,0,0,0,,Um so what we learned is that really scaling human we can scale raw
+Dialogue: 0,0:13:25.92,0:13:30.73,Sub,,0,0,0,,performance with human data that that we have verified repeatedly later in our work.
+Dialogue: 0,0:13:30.78,0:13:38.06,Sub,,0,0,0,,So the same uh recipe works but we what we are now happy with is that if you remember we had to collect
+Dialogue: 0,0:13:38.11,0:13:44.54,Sub,,0,0,0,,both human robot data and in fact we actually had to collect on the exact same task in the same setting and this
+Dialogue: 0,0:13:44.59,0:13:52.20,Sub,,0,0,0,,really kind of defeats the purpose of of having human data right like we don't want humans to be like also collecting data
+Dialogue: 0,0:13:52.25,0:14:00.72,Sub,,0,0,0,,and have robot teleoption data so what we really really want is to have robot perform the tasks that only exist ing human data.
+Dialogue: 0,0:14:00.77,0:14:05.41,Sub,,0,0,0,,We want to enable this kind of zeroot transfer from human to robots.
+Dialogue: 0,0:14:05.46,0:14:08.43,Sub,,0,0,0,,So, so what is the ideal ca like picture here?
+Dialogue: 0,0:14:08.48,0:14:11.25,Sub,,0,0,0,,What is our mental picture of why this might happen?
+Dialogue: 0,0:14:11.30,0:14:15.73,Sub,,0,0,0,,So, our ideal picture, uh, this is just one specific scientific hypothesis we have, right?
+Dialogue: 0,0:14:15.78,0:14:20.86,Sub,,0,0,0,,There are many other ways to look at this problem is that we want to learn a generalizable embodiment
+Dialogue: 0,0:14:20.91,0:14:28.84,Sub,,0,0,0,,or domain variant policy latent space where let's say we have data from hubos human robot for for folding shirts,
+Dialogue: 0,0:14:28.89,0:14:29.22,Sub,,0,0,0,,right?
+Dialogue: 0,0:14:29.25,0:14:37.11,Sub,,0,0,0,,Like the blue and reds are robot human data and through some magical encoder we bring them to this to latent space.
+Dialogue: 0,0:14:37.16,0:14:44.24,Sub,,0,0,0,,We have a shared decoder which is a policy that decodes action that can kind of control the robot to do the same task.
+Dialogue: 0,0:14:44.29,0:14:48.53,Sub,,0,0,0,,And the nice thing is that if we can do this then maybe we can imagine that giving
+Dialogue: 0,0:14:48.58,0:14:55.39,Sub,,0,0,0,,a new task like a floating shirts uh floating shorts we could also project the student to space and
+Dialogue: 0,0:14:55.44,0:15:01.84,Sub,,0,0,0,,without robot data we can also use the same policy to decode it to action to make the robot
+Dialogue: 0,0:15:01.89,0:15:08.00,Sub,,0,0,0,,do things that's only shown in human right so this is really our ideal picture like what should happen
+Dialogue: 0,0:15:08.05,0:15:14.94,Sub,,0,0,0,,so does simply code train these two sources make that happen the answer is not quite So this is
+Dialogue: 0,0:15:14.99,0:15:22.67,Sub,,0,0,0,,my student Ryan who really kind of dug into latent space of the policies offer code trainee these these
+Dialogue: 0,0:15:22.72,0:15:28.05,Sub,,0,0,0,,two models to to do these two sources we discovered that they actually don't align that well they can
+Dialogue: 0,0:15:28.10,0:15:33.77,Sub,,0,0,0,,you can perfectly distinguish these two sources despite you mix them in a in a in a training set.
+Dialogue: 0,0:15:33.82,0:15:43.39,Sub,,0,0,0,,So the hypothesis that like basically we we just made a hypothes if we can align these two spaces better maybe we can enable better transfer.
+Dialogue: 0,0:15:43.44,0:15:48.92,Sub,,0,0,0,,So this is where the second follow-up work of eagle mimic uh is come from.
+Dialogue: 0,0:15:48.97,0:15:50.50,Sub,,0,0,0,,So it's called eagle bridge.
+Dialogue: 0,0:15:50.55,0:15:58.85,Sub,,0,0,0,,So we really did the simplest thing right we tried to align this two two distribution space through a uh some some distribution alignment objective.
+Dialogue: 0,0:15:58.90,0:16:01.39,Sub,,0,0,0,,In this case we use our joint optimal transport.
+Dialogue: 0,0:16:01.44,0:16:07.17,Sub,,0,0,0,,We basically simultaneous align both the observation so latent space and action space to the same space.
+Dialogue: 0,0:16:07.22,0:16:13.95,Sub,,0,0,0,,And the nice thing about optimal transport uh for those of you who don't know this is that they actually preserve the uh
+Dialogue: 0,0:16:14.00,0:16:18.83,Sub,,0,0,0,,the respective uh marginal distribution of both distribution of both domains so
+Dialogue: 0,0:16:18.88,0:16:23.05,Sub,,0,0,0,,that you don't actually have deformed one distribution to match the other.
+Dialogue: 0,0:16:23.10,0:16:31.03,Sub,,0,0,0,,So you don't actually destroy the performance what would have been the performance of the robot only policy just to align these two spaces.
+Dialogue: 0,0:16:31.08,0:16:31.41,Sub,,0,0,0,,Right?
+Dialogue: 0,0:16:31.44,0:16:37.35,Sub,,0,0,0,,So that's that's the nice thing about joint oper transport and the actual transport is just
+Dialogue: 0,0:16:37.40,0:16:42.74,Sub,,0,0,0,,a differentiable loss function that we put in network when we train the behavior coing loss.
+Dialogue: 0,0:16:42.79,0:16:46.21,Sub,,0,0,0,,Uh the transport map is when you compute per batch.
+Dialogue: 0,0:16:46.26,0:16:53.13,Sub,,0,0,0,,So you try to see which pairs should be mapped together and the cost function is something you define yourself.
+Dialogue: 0,0:16:53.18,0:16:58.62,Sub,,0,0,0,,So uh so these are basically human policy latent and action and robot policy action latent.
+Dialogue: 0,0:16:58.67,0:17:03.95,Sub,,0,0,0,,So you design some latent functions latent uh cost functions in the space so that you think
+Dialogue: 0,0:17:04.00,0:17:09.35,Sub,,0,0,0,,these should be aligned uh in a sort of not a constrained sense but more encouraged sense.
+Dialogue: 0,0:17:09.40,0:17:14.00,Sub,,0,0,0,,So we actually uh tried a few different cost functions and we realized that just matching
+Dialogue: 0,0:17:14.05,0:17:19.76,Sub,,0,0,0,,their uh dynamic time warping distance in spaces actually just works well and but you can extend
+Dialogue: 0,0:17:19.81,0:17:24.51,Sub,,0,0,0,,this cost function to other other things like language description right if you describe have if
+Dialogue: 0,0:17:24.56,0:17:30.75,Sub,,0,0,0,,the two t data points have the same same language description maybe you should map them together.
+Dialogue: 0,0:17:30.80,0:17:36.19,Sub,,0,0,0,,So after training this model and we compare the latent space and we discover that indeed they start to align.
+Dialogue: 0,0:17:36.24,0:17:42.83,Sub,,0,0,0,,So on the left hand side you can see that uh the orange and blue dots are a lot closer and you can see that there are a lot more
+Dialogue: 0,0:17:42.88,0:17:50.21,Sub,,0,0,0,,blue dots because the blue dot like I mean there still is part of the space that the humans will not do right so but you can see that I
+Dialogue: 0,0:17:50.26,0:17:57.65,Sub,,0,0,0,,mean the blue dots are kind of behind the red dots but they're they have a high degree of alignments uh especially in this part of the space right and
+Dialogue: 0,0:17:57.70,0:18:01.24,Sub,,0,0,0,,if you look actually look at the nearest neighbor points in these in this latent
+Dialogue: 0,0:18:01.29,0:18:06.49,Sub,,0,0,0,,space you see that they have very their varied behavior similar in similar stages individual task.
+Dialogue: 0,0:18:06.54,0:18:11.44,Sub,,0,0,0,,So you can see that for this task is just kind of pouring the beans out to the to the
+Dialogue: 0,0:18:11.49,0:18:19.39,Sub,,0,0,0,,to to the cup and quantitatively we show that this indeed works well uh like further improves the code training performance.
+Dialogue: 0,0:18:19.44,0:18:21.89,Sub,,0,0,0,,This still the same setup as eagle mimic.
+Dialogue: 0,0:18:21.94,0:18:30.19,Sub,,0,0,0,,So we had the same tasks same demonstration same task and just does the like it further drives the performance uh for for co-raing setting.
+Dialogue: 0,0:18:30.24,0:18:34.35,Sub,,0,0,0,,But what we were truly curious about is does it enable this sort of like direct
+Dialogue: 0,0:18:34.40,0:18:38.44,Sub,,0,0,0,,transfer from human to robot like a new thing that human does that robot doesn't do.
+Dialogue: 0,0:18:38.49,0:18:44.24,Sub,,0,0,0,,And uh we decided on a task that is slightly contrived but really kind of shows the
+Dialogue: 0,0:18:44.29,0:18:51.03,Sub,,0,0,0,,spirit of zero shot transfer is that we have this like a small cabinet like a like a
+Dialogue: 0,0:18:51.08,0:18:57.00,Sub,,0,0,0,,box of of drawers and then uh we demonstrate a task on the blue region from both
+Dialogue: 0,0:18:57.05,0:19:02.26,Sub,,0,0,0,,human robots and purple region of both human robot and the red region is only demonstrated by human.
+Dialogue: 0,0:19:02.31,0:19:08.95,Sub,,0,0,0,,So our hypothesis is that if you can the h robot can perform tasks in this red region it means that it must have transferred
+Dialogue: 0,0:19:09.00,0:19:17.31,Sub,,0,0,0,,something from the human data only right because we never show this calibration in that region and indeed uh uh this is what robots was
+Dialogue: 0,0:19:17.36,0:19:26.10,Sub,,0,0,0,,able to do not perfectly it has a performance drop in this region and quantitatively we saw that uh but despite that we actually like
+Dialogue: 0,0:19:26.15,0:19:30.44,Sub,,0,0,0,,eagle bridge was able to get non-zero performance compared to any other baseline
+Dialogue: 0,0:19:30.49,0:19:34.59,Sub,,0,0,0,,so all of our pure BC baselines without this kind of realization failed.
+Dialogue: 0,0:19:34.64,0:19:43.21,Sub,,0,0,0,,So we were more confident that this this representation alignment hypothesis is true but we we only verify that at small small scale.
+Dialogue: 0,0:19:43.26,0:19:47.07,Sub,,0,0,0,,So I'm going to talk about what happens at scale later in the talk.
+Dialogue: 0,0:19:47.12,0:19:47.71,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:19:47.76,0:19:52.74,Sub,,0,0,0,,Um so then this is sort of the representation alignment story.
+Dialogue: 0,0:19:52.79,0:19:56.35,Sub,,0,0,0,,We we went on to study other parts of the human robot transfer.
+Dialogue: 0,0:19:56.40,0:19:57.19,Sub,,0,0,0,,For example,
+Dialogue: 0,0:19:57.24,0:20:01.55,Sub,,0,0,0,,we felt that mobile manipulation is a perfect place to study this problem
+Dialogue: 0,0:20:01.60,0:20:07.46,Sub,,0,0,0,,because teleoping robots for mobile sense for mobile task is really really hard.
+Dialogue: 0,0:20:07.51,0:20:15.55,Sub,,0,0,0,,We actually built this uh version of this Aloha station or in a lab and we try to teleport it was very very difficult.
+Dialogue: 0,0:20:15.60,0:20:23.80,Sub,,0,0,0,,So um so it is tedious and expensive costly to collect but human data on the hand we move around all the time.
+Dialogue: 0,0:20:23.85,0:20:28.64,Sub,,0,0,0,,We don't think about we are doing tabletop versus mobile inflation or just navigation.
+Dialogue: 0,0:20:28.69,0:20:36.52,Sub,,0,0,0,,We just do things and uh with these devices like project Arya we really do have information that informs us about uh
+Dialogue: 0,0:20:36.57,0:20:43.33,Sub,,0,0,0,,human uh like how human does things in in the world right for example this is we can get the slime map we
+Dialogue: 0,0:20:43.38,0:20:48.62,Sub,,0,0,0,,can get where the heads are where the hands are in in the spatial sense this is just from a one one
+Dialogue: 0,0:20:48.67,0:20:54.67,Sub,,0,0,0,,task demonstration right all of the information you see in the screen is just from that demonstration wouldn't do any uh like multi-
+Dialogue: 0,0:20:54.72,0:21:03.58,Sub,,0,0,0,,traverse to construct this map or anything so we really have the technology to capture mobile manipulation information from human data.
+Dialogue: 0,0:21:03.63,0:21:08.59,Sub,,0,0,0,,So uh so with that hypothesis or my student Lawrence uh kind of just basically
+Dialogue: 0,0:21:08.64,0:21:15.71,Sub,,0,0,0,,applied the same recipe to to mobileation right so it's called uh egocentric mobile manipulation
+Dialogue: 0,0:21:15.76,0:21:24.41,Sub,,0,0,0,,uh or Emma and uh I'm not going to get too much details because I love to cover the the the really the recipe is that we want we want
+Dialogue: 0,0:21:24.46,0:21:30.51,Sub,,0,0,0,,to build architecture that can learn mobile manipulation including waypoint pass way points everything just
+Dialogue: 0,0:21:30.56,0:21:35.97,Sub,,0,0,0,,so that it can learn the policy And uh the system wise we had to
+Dialogue: 0,0:21:36.02,0:21:40.83,Sub,,0,0,0,,do uh basically magic retargeting to a differential drive because uh differential drive as you
+Dialogue: 0,0:21:40.88,0:21:46.63,Sub,,0,0,0,,know mean they can only move uh you only have a like rotational and linear speed.
+Dialogue: 0,0:21:46.68,0:21:48.93,Sub,,0,0,0,,Uh but humans move holomically right.
+Dialogue: 0,0:21:48.98,0:21:53.95,Sub,,0,0,0,,So we we actually had to do some retargeting to make it work well on the navigation part of the task.
+Dialogue: 0,0:21:54.00,0:22:03.52,Sub,,0,0,0,,And what we showed is that it's actually exciting that we we can show uh for for most of the tasks that are majority just navigation
+Dialogue: 0,0:22:03.57,0:22:07.85,Sub,,0,0,0,,with lib navig manipulation you can do zero shot transfer you don't need
+Dialogue: 0,0:22:07.90,0:22:14.00,Sub,,0,0,0,,robot data for for for navigation navigation just transfer zero shot to robots and
+Dialogue: 0,0:22:14.05,0:22:22.78,Sub,,0,0,0,,with manipulation heavy tasks we had to do a bit of code training but uh there's a performance the per performance gain is lot so from human
+Dialogue: 0,0:22:22.83,0:22:30.70,Sub,,0,0,0,,data And I just want to show some of the more more challenging tasks we've done uh for this task is which is kind of grocery shopping.
+Dialogue: 0,0:22:30.75,0:22:32.61,Sub,,0,0,0,,We're no longer just bagging groceries.
+Dialogue: 0,0:22:32.66,0:22:39.61,Sub,,0,0,0,,We're just kind of putting stuff in the baskets and moving it uh to different parts of the workspace to hand over to people.
+Dialogue: 0,0:22:39.66,0:22:40.23,Sub,,0,0,0,,Right?
+Dialogue: 0,0:22:40.28,0:22:42.01,Sub,,0,0,0,,So uh this is code train.
+Dialogue: 0,0:22:42.06,0:22:44.36,Sub,,0,0,0,,So this manipulation part of this is code train.
+Dialogue: 0,0:22:44.41,0:22:48.03,Sub,,0,0,0,,There's no mobile human there's no mobile tele operation.
+Dialogue: 0,0:22:48.08,0:22:53.07,Sub,,0,0,0,,It's just static uh teleision data plus mobile human data.
+Dialogue: 0,0:22:53.12,0:22:56.20,Sub,,0,0,0,,And when you compare with just pure behavior cloning policy,
+Dialogue: 0,0:22:56.25,0:23:02.64,Sub,,0,0,0,,you see that behavior cloning policy is not is very very uh virt uh fragile when you have long horizon task.
+Dialogue: 0,0:23:02.69,0:23:06.24,Sub,,0,0,0,,What we discover is actually most of the failure comes from navigation stage.
+Dialogue: 0,0:23:06.29,0:23:09.23,Sub,,0,0,0,,So if you actually have more data on the navigation stage,
+Dialogue: 0,0:23:09.28,0:23:15.06,Sub,,0,0,0,,they they're less less likely to drift out of distribution and they're more likely to succeed for longer tasks.
+Dialogue: 0,0:23:15.11,0:23:17.61,Sub,,0,0,0,,So this is where the benefit of human data comes in.
+Dialogue: 0,0:23:17.66,0:23:26.67,Sub,,0,0,0,,And we also showed that for a majority navigation task uh we can scale the performance just by giving the more human data.
+Dialogue: 0,0:23:26.72,0:23:31.79,Sub,,0,0,0,,Uh so this is one of the handover tasks where you have to travel to a different part of room and hand
+Dialogue: 0,0:23:31.84,0:23:37.50,Sub,,0,0,0,,over a wine glass to a person standing at the kind of random part of the room and we saw that uh this
+Dialogue: 0,0:23:37.55,0:23:43.69,Sub,,0,0,0,,this kind of very nice scaling curve and we were pretty sure this is true because the student actually did 50 evals
+Dialogue: 0,0:23:43.74,0:23:51.34,Sub,,0,0,0,,per data point which took a very very long time but we we're fairly sure that this the scaling curve is is correct.
+Dialogue: 0,0:23:51.39,0:23:51.96,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:23:52.01,0:23:59.47,Sub,,0,0,0,,So and after that we are very excited and we started working on uh a lot of more uh more uh uh more direct transfer.
+Dialogue: 0,0:23:59.52,0:24:02.25,Sub,,0,0,0,,For example we started bring up a more humanlike robot.
+Dialogue: 0,0:24:02.30,0:24:09.33,Sub,,0,0,0,,So this is one of the rainbow robots where we started doing a direct retargeting to a full human noise with wheel basease.
+Dialogue: 0,0:24:09.38,0:24:11.99,Sub,,0,0,0,,Uh this is just a replay of the human data.
+Dialogue: 0,0:24:12.04,0:24:13.81,Sub,,0,0,0,,Uh it's not teleoperation right?
+Dialogue: 0,0:24:13.86,0:24:22.59,Sub,,0,0,0,,just human dozen ones retargeted to robots and the magic is actually under for the uh is on the kinematic retargeting sides of things.
+Dialogue: 0,0:24:22.64,0:24:30.08,Sub,,0,0,0,,So we actually put a lot of effort in in retarget the full human post into robots through analytical solver.
+Dialogue: 0,0:24:30.13,0:24:40.60,Sub,,0,0,0,,Uh so it's really fast can run at 2000 hertz uh and we'll also be able to re retarget it to a u mobile task like closing fridge door.
+Dialogue: 0,0:24:40.65,0:24:42.33,Sub,,0,0,0,,So this is ongoing works.
+Dialogue: 0,0:24:42.38,0:24:44.35,Sub,,0,0,0,,We're still trying to improve the system.
+Dialogue: 0,0:24:44.40,0:24:48.13,Sub,,0,0,0,,The controller is still like uh not great yet.
+Dialogue: 0,0:24:48.18,0:24:48.56,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:24:48.59,0:24:54.35,Sub,,0,0,0,,But we're very excited to to bring this to more humanlike robots.
+Dialogue: 0,0:24:54.40,0:25:02.37,Sub,,0,0,0,,So the second part of my talk uh is about what happens if you scale uh human data further.
+Dialogue: 0,0:25:02.42,0:25:02.76,Sub,,0,0,0,,Right?
+Dialogue: 0,0:25:02.79,0:25:09.23,Sub,,0,0,0,,We've shown this in like I don't know like 3 hours 5 hours 10 hours human data and we s saw that
+Dialogue: 0,0:25:09.28,0:25:16.86,Sub,,0,0,0,,something great happens uh but we don't know what happens at scale and we I kept telling that human data scales but
+Dialogue: 0,0:25:16.91,0:25:26.09,Sub,,0,0,0,,does does human data truly scale right so I actually give a talk on very similar topic about year and a half
+Dialogue: 0,0:25:26.14,0:25:35.26,Sub,,0,0,0,,ago so November 2024 this is one of the last slides on my talk I preach that embody human data is robot data
+Dialogue: 0,0:25:35.31,0:25:42.65,Sub,,0,0,0,,in disguise and robots have become more humanlike and whatnot right uh but one thing that I basically said is that uh
+Dialogue: 0,0:25:42.70,0:25:50.67,Sub,,0,0,0,,the data capturing technology is ready is advancing and what I was referring to is that people will start buying these kind
+Dialogue: 0,0:25:50.72,0:25:58.45,Sub,,0,0,0,,of devices from companies like meta and Google that start wearing these air wearables start capturing data maybe in five years we'll
+Dialogue: 0,0:25:58.50,0:26:10.27,Sub,,0,0,0,,have enough data to train these kind of foundation model from But um what happened later was something that we did not expect.
+Dialogue: 0,0:26:10.32,0:26:14.36,Sub,,0,0,0,,You might have seen this news.
+Dialogue: 0,0:26:14.41,0:26:18.77,Sub,,0,0,0,,Maybe why hundreds of people in LA wear cameras while doing their chores.
+Dialogue: 0,0:26:18.82,0:26:23.55,Sub,,0,0,0,,This came out two two weeks ago and there was another CNN news teach you how
+Dialogue: 0,0:26:23.60,0:26:29.83,Sub,,0,0,0,,to make money just by wearing our iPhone and hat uh and uh get money from things,
+Dialogue: 0,0:26:29.88,0:26:30.35,Sub,,0,0,0,,right?
+Dialogue: 0,0:26:30.40,0:26:36.50,Sub,,0,0,0,,So what happened was that uh our research I think part I think contributed
+Dialogue: 0,0:26:36.55,0:26:44.78,Sub,,0,0,0,,to this this broader capital interest in paying people to get data to train robots.
+Dialogue: 0,0:26:44.83,0:26:52.13,Sub,,0,0,0,,So in other words some of our research caused the data to be more abundant than what we had expected
+Dialogue: 0,0:26:52.18,0:26:58.85,Sub,,0,0,0,,and that expedited the progress of research to the point where uh you could actually uh download this app today.
+Dialogue: 0,0:26:58.90,0:27:00.51,Sub,,0,0,0,,It's called task app.
+Dialogue: 0,0:27:00.56,0:27:07.82,Sub,,0,0,0,,It's from Door Dash and wear camera on your hat and you can start collecting data and sell the data to back
+Dialogue: 0,0:27:07.87,0:27:16.11,Sub,,0,0,0,,of Door Dash and Door Dash will sell it to one of the robotics labs and to to train funny models for robotics.
+Dialogue: 0,0:27:16.16,0:27:16.58,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:27:16.63,0:27:23.52,Sub,,0,0,0,,And there are probably about more than a hundred companies started in the past eight months or so or six months or so.
+Dialogue: 0,0:27:23.57,0:27:28.59,Sub,,0,0,0,,Their main goal is to do labor arbitrage.
+Dialogue: 0,0:27:28.64,0:27:37.57,Sub,,0,0,0,,they pay people uh with wage and collect data and wear cameras or devices to to collect data for them.
+Dialogue: 0,0:27:37.62,0:27:38.19,Sub,,0,0,0,,Right?
+Dialogue: 0,0:27:38.24,0:27:43.94,Sub,,0,0,0,,So with I mean all of that is like slightly dystopian and all that but but we but now we can
+Dialogue: 0,0:27:43.99,0:27:53.26,Sub,,0,0,0,,actually answer the question what happens at scale uh for for for these reasons right so uh in collaboration with Nvidia
+Dialogue: 0,0:27:53.31,0:28:01.27,Sub,,0,0,0,,and physical intelligence we we verify these in kind of two different stories uh one is uh is called eagle scale
+Dialogue: 0,0:28:01.32,0:28:09.84,Sub,,0,0,0,,uh where we basically can think of this as scaling eagle mimic uh one 10,000 sometimes bigger uh and see what happens.
+Dialogue: 0,0:28:09.89,0:28:14.69,Sub,,0,0,0,,Uh and the other is a more subtle view about human robot transfer is
+Dialogue: 0,0:28:14.74,0:28:21.34,Sub,,0,0,0,,how do we enable human robot transfer uh emerge without supervising it through aligning data.
+Dialogue: 0,0:28:21.39,0:28:27.55,Sub,,0,0,0,,So it's sort of a emerging behavior human robot transfer through multi-bodyment learning.
+Dialogue: 0,0:28:27.60,0:28:33.67,Sub,,0,0,0,,So Eagle Scale uh the first hypothesis we had is that we just need to scale up human data.
+Dialogue: 0,0:28:33.72,0:28:39.74,Sub,,0,0,0,,So we went in and actually just bought a lot of data uh and Nvidia basically
+Dialogue: 0,0:28:39.79,0:28:44.65,Sub,,0,0,0,,yeah we bought a lot of data so 20,000 hours of data very similar like exact
+Dialogue: 0,0:28:44.70,0:28:49.79,Sub,,0,0,0,,same format as what we used in gole mimic and the second hypothesis is that uh
+Dialogue: 0,0:28:49.84,0:28:56.49,Sub,,0,0,0,,we uh if we make human robot robots more humanlike the transfer will be a lot easier.
+Dialogue: 0,0:28:56.54,0:29:06.75,Sub,,0,0,0,,So if you recall uh our 2023 robots like this right six off arms grippers and because I guess we wanted to verify the hypothesis we had resource uh
+Dialogue: 0,0:29:06.80,0:29:10.72,Sub,,0,0,0,,we had a seven off two seven off arms with 22 degree from dctor's hands
+Dialogue: 0,0:29:10.77,0:29:14.91,Sub,,0,0,0,,there these are the state-of-the-art robots uh that this this is sort of the best
+Dialogue: 0,0:29:14.96,0:29:25.33,Sub,,0,0,0,,system we can have so the upper body is very very humanlike and uh eagle scale is just a recipe to see how we can leverage these sources data
+Dialogue: 0,0:29:25.38,0:29:29.62,Sub,,0,0,0,,and It's it's a very simple recipe where we kind of this you if you
+Dialogue: 0,0:29:29.67,0:29:33.64,Sub,,0,0,0,,if you know about language model you know there's a pre-training stage there's like post-
+Dialogue: 0,0:29:33.69,0:29:35.42,Sub,,0,0,0,,training stage or fine-tuning stage.
+Dialogue: 0,0:29:35.47,0:29:36.79,Sub,,0,0,0,,So it's very similar.
+Dialogue: 0,0:29:36.84,0:29:41.15,Sub,,0,0,0,,So we have model pre-train on 20k hours human data.
+Dialogue: 0,0:29:41.20,0:29:46.03,Sub,,0,0,0,,We have a mid-training stage that's very similar to what we did in eagle mimic which is that
+Dialogue: 0,0:29:46.08,0:29:52.11,Sub,,0,0,0,,we have aligned human robot data on a variety of tasks to form a foundation for the transfer.
+Dialogue: 0,0:29:52.16,0:30:00.22,Sub,,0,0,0,,So you can think of that as teaching this this model that this task when done by humans looks like this when done by robot looks like that.
+Dialogue: 0,0:30:00.27,0:30:00.61,Sub,,0,0,0,,Right?
+Dialogue: 0,0:30:00.64,0:30:08.08,Sub,,0,0,0,,So we have about 300 or so of the of these mid-training alignment data uh to to to anchor the the transfer
+Dialogue: 0,0:30:08.13,0:30:16.67,Sub,,0,0,0,,and then we showed that it can it can indeed transfer through let's say uh one shot or we actually tried zero shot.
+Dialogue: 0,0:30:16.72,0:30:18.15,Sub,,0,0,0,,It didn't work work quite well.
+Dialogue: 0,0:30:18.20,0:30:25.13,Sub,,0,0,0,,uh but we we really tried to verify that can we train robots with just human data wi with uh train to
+Dialogue: 0,0:30:25.18,0:30:33.51,Sub,,0,0,0,,do thing uh things that only showing human data right and one of the sort of the obvious to me uh conclusion was
+Dialogue: 0,0:30:33.56,0:30:40.57,Sub,,0,0,0,,that scaling still happens uh so we had plotted this uh we didn't expect this to happen like this perfect but we
+Dialogue: 0,0:30:40.62,0:30:48.59,Sub,,0,0,0,,really did just plot a training curve of access speed being a number of human hours uh human data hours for pre-training Okay,
+Dialogue: 0,0:30:48.64,0:30:56.20,Sub,,0,0,0,,this is uh from 1k to 20k and this is lock scale and y-axis is not performance.
+Dialogue: 0,0:30:56.25,0:31:00.07,Sub,,0,0,0,,It is the action prediction error on the validation side. is not success rate.
+Dialogue: 0,0:31:00.12,0:31:02.10,Sub,,0,0,0,,Just make sure this is not success rate.
+Dialogue: 0,0:31:02.15,0:31:05.75,Sub,,0,0,0,,But we what we saw is a log linear scale, right?
+Dialogue: 0,0:31:05.80,0:31:09.47,Sub,,0,0,0,,So, so we really have a further scaling when you have more data.
+Dialogue: 0,0:31:09.52,0:31:11.01,Sub,,0,0,0,,Well, we didn't change the model too much.
+Dialogue: 0,0:31:11.06,0:31:16.76,Sub,,0,0,0,,It's a three billion parameter model, but is able to fit all this data and keep scaling.
+Dialogue: 0,0:31:16.81,0:31:22.93,Sub,,0,0,0,,And it also happened to to be that the the pre-training model which when training more mod with with
+Dialogue: 0,0:31:22.98,0:31:29.71,Sub,,0,0,0,,when training on more hours data uh post train when you post train on a specific task it performs better.
+Dialogue: 0,0:31:29.76,0:31:41.61,Sub,,0,0,0,,So uh I wouldn't call this a scaling law because now I mean it's it's just we we speculate that validation error correlates with performance.
+Dialogue: 0,0:31:41.66,0:31:47.63,Sub,,0,0,0,,I mean if you have worked on calibration behavior cloning before you know that at small scale this is almost never true.
+Dialogue: 0,0:31:47.68,0:31:55.05,Sub,,0,0,0,,Validization error do not correl with success rate but at scale we discover that this is actually pretty reliable predictor of success rate.
+Dialogue: 0,0:31:55.10,0:32:03.82,Sub,,0,0,0,,So the better you are at predicting human behaviors you have never seen the better this model will be at transferring to downstream robot tasks.
+Dialogue: 0,0:32:03.87,0:32:06.72,Sub,,0,0,0,,Again this this is just empirical observation.
+Dialogue: 0,0:32:06.77,0:32:10.24,Sub,,0,0,0,,I'm not making any suggestions that this is the truth right.
+Dialogue: 0,0:32:10.29,0:32:13.83,Sub,,0,0,0,,Um so we kind of post train us on a variety of tasks.
+Dialogue: 0,0:32:13.88,0:32:19.78,Sub,,0,0,0,,One of the more kind of fancy tasks is actually assembling a toy car.
+Dialogue: 0,0:32:19.83,0:32:27.09,Sub,,0,0,0,,Uh so uses tools and has to have a line that's pretty accurately to to be able to sample this car.
+Dialogue: 0,0:32:27.14,0:32:36.82,Sub,,0,0,0,,And we also trying many other tasks right now that looks more realistic like more economically interesting than just sampling cars and it also works.
+Dialogue: 0,0:32:36.87,0:32:41.81,Sub,,0,0,0,,You also have tasks like using syringe um and it just t test
+Dialogue: 0,0:32:41.86,0:32:49.07,Sub,,0,0,0,,the precision of the manipulation and things like manipulating thin shell objects like cords.
+Dialogue: 0,0:32:49.12,0:32:53.99,Sub,,0,0,0,,And we also very interesting answer the questions we started uh a year of a
+Dialogue: 0,0:32:54.04,0:32:59.89,Sub,,0,0,0,,year or two ago which is does scale enable better human robot transfer through mid-raining.
+Dialogue: 0,0:32:59.94,0:33:00.34,Sub,,0,0,0,,Right?
+Dialogue: 0,0:33:00.38,0:33:06.35,Sub,,0,0,0,,So we what we did was again the mid-training stage is about collecting a lot of diverse human robot
+Dialogue: 0,0:33:06.40,0:33:15.15,Sub,,0,0,0,,aligned data and uh see if this enabled uh transferring task that only showing human data to robot policy.
+Dialogue: 0,0:33:15.20,0:33:15.59,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:33:15.62,0:33:24.67,Sub,,0,0,0,,And what we did is that once this model is mid-trained uh we provided one robot demonstration of a new task never seen
+Dialogue: 0,0:33:24.72,0:33:31.92,Sub,,0,0,0,,before and a 100 or so human demonstrations to the robot to the policy and see if the robot can do that task.
+Dialogue: 0,0:33:31.97,0:33:33.58,Sub,,0,0,0,,So it's not zero shot yet.
+Dialogue: 0,0:33:33.63,0:33:38.46,Sub,,0,0,0,,We're trying but one shot pretty reliable.
+Dialogue: 0,0:33:38.51,0:33:44.68,Sub,,0,0,0,,So we for example this is one of the mid-training tasks like rolling shirts and if we have one demonstration
+Dialogue: 0,0:33:44.73,0:33:53.49,Sub,,0,0,0,,of folding shirts plus 100 t demonstrations of a human fold folding shirts it's able to reliably fold the shirts.
+Dialogue: 0,0:33:53.54,0:33:58.91,Sub,,0,0,0,,So what we have achieved is a oneshot transfer not zero shot but it's getting there.
+Dialogue: 0,0:33:58.96,0:34:00.60,Sub,,0,0,0,,We actually tried this on zeroot.
+Dialogue: 0,0:34:00.65,0:34:03.44,Sub,,0,0,0,,it does something reasonable just from human data.
+Dialogue: 0,0:34:03.49,0:34:09.13,Sub,,0,0,0,,Uh but it's not quite able to achieve like a like more than 10% of success rate.
+Dialogue: 0,0:34:09.18,0:34:12.36,Sub,,0,0,0,,So still still still trying this but there's a sign of life here.
+Dialogue: 0,0:34:12.41,0:34:13.19,Sub,,0,0,0,,Very exciting.
+Dialogue: 0,0:34:13.24,0:34:20.63,Sub,,0,0,0,,And also try this on like screwing different bottle caps and everything and quantitatively show that there's a stark difference.
+Dialogue: 0,0:34:20.68,0:34:23.73,Sub,,0,0,0,,So with so the yellow is mid-training only.
+Dialogue: 0,0:34:23.78,0:34:27.28,Sub,,0,0,0,,So there's no pre-training uh uh just mid-training only.
+Dialogue: 0,0:34:27.33,0:34:27.64,Sub,,0,0,0,,Right.
+Dialogue: 0,0:34:27.67,0:34:31.44,Sub,,0,0,0,,So we may train this and then with one uh with one shot plus
+Dialogue: 0,0:34:31.49,0:34:37.46,Sub,,0,0,0,,human data we see that there moderate performance non zero for the less challenging tasks.
+Dialogue: 0,0:34:37.51,0:34:44.65,Sub,,0,0,0,,Uh but then with uh with the mid-training plus pre-training uh we were able to achieve uh very good performance.
+Dialogue: 0,0:34:44.70,0:34:47.79,Sub,,0,0,0,,This is the red red cur the red bar right.
+Dialogue: 0,0:34:47.84,0:34:54.96,Sub,,0,0,0,,So the way to interpret this is that the alignment the mid-training is a way is a bridge between the pre-training and the robot policy.
+Dialogue: 0,0:34:55.01,0:35:03.87,Sub,,0,0,0,,Uh so this is how we bring the vast prior from pre like 20,000 hours human data to the robot performance is by teaching the robot
+Dialogue: 0,0:35:03.92,0:35:09.67,Sub,,0,0,0,,this is how the human looks like when you do this task and this is what a robot looks like when they do the same task.
+Dialogue: 0,0:35:09.72,0:35:10.26,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:35:10.31,0:35:14.59,Sub,,0,0,0,,And also tried to deploy this on a different robot.
+Dialogue: 0,0:35:14.64,0:35:16.49,Sub,,0,0,0,,Uh this is a um a G1 robot.
+Dialogue: 0,0:35:16.54,0:35:18.27,Sub,,0,0,0,,We didn't do much tuning.
+Dialogue: 0,0:35:18.32,0:35:20.77,Sub,,0,0,0,,This was actually done like two days before deadline.
+Dialogue: 0,0:35:20.82,0:35:23.74,Sub,,0,0,0,,Uh and they it just same recipe works pretty well.
+Dialogue: 0,0:35:23.79,0:35:27.19,Sub,,0,0,0,,So we saw decent performance improvement on a variety of tasks.
+Dialogue: 0,0:35:27.24,0:35:32.29,Sub,,0,0,0,,Uh so we can we're fairly confident that this recipe works beyond
+Dialogue: 0,0:35:32.34,0:35:39.64,Sub,,0,0,0,,just like like 22 degree degree freands plus like very capable upper body.
+Dialogue: 0,0:35:39.69,0:35:44.63,Sub,,0,0,0,,So uh it should generalize reasonably well to other environment as well.
+Dialogue: 0,0:35:44.68,0:35:45.79,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:35:45.84,0:35:55.79,Sub,,0,0,0,,So uh then we have a other another question which is that is scaling human data all you need to enable transfer.
+Dialogue: 0,0:35:55.84,0:36:03.63,Sub,,0,0,0,,What we learned from Eagle Scale is that superersizing human data improves robot performance at scale.
+Dialogue: 0,0:36:03.68,0:36:04.05,Sub,,0,0,0,,Right?
+Dialogue: 0,0:36:04.08,0:36:07.11,Sub,,0,0,0,,So scaling plus alignment was a recipe.
+Dialogue: 0,0:36:07.16,0:36:17.28,Sub,,0,0,0,,But we do need aligned data uh for uh for like a variety of tasks to to form this support uh for to enable transfer.
+Dialogue: 0,0:36:17.33,0:36:17.77,Sub,,0,0,0,,Right?
+Dialogue: 0,0:36:17.82,0:36:21.72,Sub,,0,0,0,,So uh this this is what we need like for for a new embodiment we had
+Dialogue: 0,0:36:21.77,0:36:27.03,Sub,,0,0,0,,to collect some mid training data to enable task level transfer and this is kind of tedious.
+Dialogue: 0,0:36:27.08,0:36:29.54,Sub,,0,0,0,,So we we started asking us why is that?
+Dialogue: 0,0:36:29.59,0:36:33.43,Sub,,0,0,0,,Why is this so hard to adapt to a new inbound event?
+Dialogue: 0,0:36:33.48,0:36:41.43,Sub,,0,0,0,,So what we kind of hypothesize is that in effect we're really just manually constructing these alignment set to teach the robot.
+Dialogue: 0,0:36:41.48,0:36:49.50,Sub,,0,0,0,,It's a supervised it's almost like a supervised supervising the transfer from one robot from human to one robots right by constructing
+Dialogue: 0,0:36:49.55,0:36:59.31,Sub,,0,0,0,,these sets and a different perspective is that maybe humanto robot transfer is simply one instance of a broader cross embodiment learning problem.
+Dialogue: 0,0:36:59.36,0:37:07.56,Sub,,0,0,0,,Maybe if we can train the model with a more embodiment like more different kinds of agents that do things in real world
+Dialogue: 0,0:37:07.61,0:37:16.59,Sub,,0,0,0,,maybe this this human to robot transfer is no longer hard right we can form a generalizable transfer from human data to any robots.
+Dialogue: 0,0:37:16.64,0:37:24.93,Sub,,0,0,0,,So luckily uh we do have that data we have over the years the robotics community have collected a lot of data from different kind of robots and one of
+Dialogue: 0,0:37:24.98,0:37:29.32,Sub,,0,0,0,,the the data sets called openx embodiment some you might might heard of it is
+Dialogue: 0,0:37:29.37,0:37:36.03,Sub,,0,0,0,,just like all sorts of different robots doing things um so uh so with that hypothesis
+Dialogue: 0,0:37:36.08,0:37:40.03,Sub,,0,0,0,,I'm going to briefly talk about our collaboration with pi which is led by my
+Dialogue: 0,0:37:40.08,0:37:47.41,Sub,,0,0,0,,students simmer uh that we verify the hypothesis of human transfer is can be an emerging
+Dialogue: 0,0:37:47.46,0:37:53.55,Sub,,0,0,0,,property of if you train on more diverse embodiment and the most important figure is
+Dialogue: 0,0:37:53.60,0:37:59.97,Sub,,0,0,0,,this the x-axxis is the diversity of pre-training set and y axis is the task performance.
+Dialogue: 0,0:38:00.02,0:38:07.77,Sub,,0,0,0,,So if you scale the diversity of robot uh robot just robot demonstration as a so robot pre-training data without having any human data you
+Dialogue: 0,0:38:07.82,0:38:16.03,Sub,,0,0,0,,have a moderate scaling curve but then as you if you add the human data to this different po points on the pre-training set by post-
+Dialogue: 0,0:38:16.08,0:38:20.56,Sub,,0,0,0,,training this model you can see that there's a bigger and bigger jump in performance
+Dialogue: 0,0:38:20.61,0:38:26.23,Sub,,0,0,0,,which means that maybe right this is just still just empirical observation that maybe uh
+Dialogue: 0,0:38:26.28,0:38:30.62,Sub,,0,0,0,,when you train a more embodied pre-train your model this is vision language action model
+Dialogue: 0,0:38:30.67,0:38:36.51,Sub,,0,0,0,,VA val uh you when you pre-train this model on more diverse data it is
+Dialogue: 0,0:38:36.56,0:38:42.75,Sub,,0,0,0,,much is easier to transfer human data to a downstream embodiment and we also verify
+Dialogue: 0,0:38:42.80,0:38:47.16,Sub,,0,0,0,,this in a similar sort of testing plots that we show that uh when you
+Dialogue: 0,0:38:47.21,0:38:52.59,Sub,,0,0,0,,train on more diverse data the distance between human and robot data in the latent
+Dialogue: 0,0:38:52.64,0:38:57.63,Sub,,0,0,0,,space become much closer and closer as you kind of scale the diversity of the data.
+Dialogue: 0,0:38:57.68,0:39:05.79,Sub,,0,0,0,,So this further kind of corroborates our hypothesis that uh this may be an emerging property of diverse training.
+Dialogue: 0,0:39:05.84,0:39:11.63,Sub,,0,0,0,,So the way to think about this is that if you force your model to like cross like
+Dialogue: 0,0:39:11.68,0:39:19.58,Sub,,0,0,0,,learn a lot of different embodiment maybe it will just like abstract everything into a embodimentic latent space.
+Dialogue: 0,0:39:19.63,0:39:20.36,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:39:20.41,0:39:25.92,Sub,,0,0,0,,And I mean um these are some nice videos that uh they made.
+Dialogue: 0,0:39:25.97,0:39:27.95,Sub,,0,0,0,,I'm going to just show you something here.
+Dialogue: 0,0:39:28.00,0:39:31.94,Sub,,0,0,0,,Uh is I mean the the the key idea is still the thing I just told you.
+Dialogue: 0,0:39:31.99,0:39:36.76,Sub,,0,0,0,,uh this is just one thing that showed uh it's the robot became capable just
+Dialogue: 0,0:39:36.81,0:39:42.35,Sub,,0,0,0,,by uh learning from human uh demonstrations and one thing I want to mention is
+Dialogue: 0,0:39:42.40,0:39:48.59,Sub,,0,0,0,,that um this perspective is also saying that uh we need a robot the like
+Dialogue: 0,0:39:48.64,0:39:55.31,Sub,,0,0,0,,more subtle view of this is that ro we need a lot of these primitive
+Dialogue: 0,0:39:55.36,0:39:59.75,Sub,,0,0,0,,actions to present in the v like in the pre-trained vas because as you can
+Dialogue: 0,0:39:59.80,0:40:05.47,Sub,,0,0,0,,if you can imagine that a lot of these uh diverse pre-training robot data is
+Dialogue: 0,0:40:05.52,0:40:09.88,Sub,,0,0,0,,giving the policy the ability to actually do these kind of little primitives attach like
+Dialogue: 0,0:40:09.93,0:40:13.75,Sub,,0,0,0,,picking up nails and putting nails in the in in the in the toolbox and everything.
+Dialogue: 0,0:40:13.80,0:40:19.07,Sub,,0,0,0,,What a human data essentially does is to string these behaviors together to solve a long task.
+Dialogue: 0,0:40:19.12,0:40:23.02,Sub,,0,0,0,,So we don't actually need a lot of human data to make these work.
+Dialogue: 0,0:40:23.07,0:40:31.79,Sub,,0,0,0,,So, so this this kind of brings to actually to two two two perspective of human to robot transfer that happens only at scale.
+Dialogue: 0,0:40:31.84,0:40:41.15,Sub,,0,0,0,,The first perspective is more straightforward is that if you have a lot of human data, if you post train robot data with some align aligned data,
+Dialogue: 0,0:40:41.20,0:40:48.27,Sub,,0,0,0,,uh align human data, robot data and humanlike robots really enable strong human to robot transfer at scale, right?
+Dialogue: 0,0:40:48.32,0:40:50.51,Sub,,0,0,0,,This is just pre-training post- training story.
+Dialogue: 0,0:40:50.56,0:40:56.26,Sub,,0,0,0,,Um but the what the the PI collaboration is saying is that maybe the foundation
+Dialogue: 0,0:40:56.31,0:41:01.55,Sub,,0,0,0,,is not human data is a lot of diverse embodiment that supports the transfer from
+Dialogue: 0,0:41:01.60,0:41:08.75,Sub,,0,0,0,,like more diverse human behavior to to different robots right so it's really diverse diverse
+Dialogue: 0,0:41:08.80,0:41:15.30,Sub,,0,0,0,,embodiment data allows human to transfer uh human to transfer a human robot transfer to emerge
+Dialogue: 0,0:41:15.35,0:41:20.00,Sub,,0,0,0,,and I'm not suggesting if either of this is will be the final picture I'm
+Dialogue: 0,0:41:20.05,0:41:25.62,Sub,,0,0,0,,just saying that at scale uh different things would emerge that don't emer that don't
+Dialogue: 0,0:41:25.67,0:41:32.67,Sub,,0,0,0,,happen when you work on small scale problems and uh depending on what hypothesis you
+Dialogue: 0,0:41:32.72,0:41:38.26,Sub,,0,0,0,,have uh for like how you view human robot transfer problem you might find different things.
+Dialogue: 0,0:41:38.31,0:41:49.56,Sub,,0,0,0,,So there's not a single uh like answer to this human robot transfer problem and there's it's a vast space of exploration to be done in this space.
+Dialogue: 0,0:41:49.61,0:41:50.59,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:41:50.64,0:41:58.23,Sub,,0,0,0,,So on that note, uh I think it's it's it's time to answer the question that if a lot of things happen at scale,
+Dialogue: 0,0:41:58.28,0:42:01.34,Sub,,0,0,0,,uh if academia, what's the real academia, right?
+Dialogue: 0,0:42:01.39,0:42:09.92,Sub,,0,0,0,,Like how can we actually drive drive the science of this like is just a big company or like the fancy frontier lab problem now, right?
+Dialogue: 0,0:42:09.97,0:42:19.51,Sub,,0,0,0,,So, so the final question I want to kind of hint at is maybe there's a way for us to also scale the scientific understanding of human robot transfer.
+Dialogue: 0,0:42:19.56,0:42:28.56,Sub,,0,0,0,,Um, so um so because because I mean the making scientific progress is not really like a company thing is it's it's a collective community thing.
+Dialogue: 0,0:42:28.61,0:42:36.77,Sub,,0,0,0,,If we look at the history AI right we many of the major breakthroughs came were enabled by community scale infrastructure like imagageet MS Koko
+Dialogue: 0,0:42:36.82,0:42:41.45,Sub,,0,0,0,,enabled the the blossom of a lot of the deep learning ar uh
+Dialogue: 0,0:42:41.50,0:42:46.28,Sub,,0,0,0,,deep deep learning techniques and computer vision advancements and detection seation and all
+Dialogue: 0,0:42:46.33,0:42:57.15,Sub,,0,0,0,,those kind of things and uh common crawl sorry games enabled advances in reinforced learning for a while and super glue uh really test stress tested
+Dialogue: 0,0:42:57.20,0:43:07.15,Sub,,0,0,0,,a lot of these language models and common crawl was part of the foundation for a lot of these modern LMS because it's just basically internet.zip,
+Dialogue: 0,0:43:07.20,0:43:07.87,Sub,,0,0,0,,right?
+Dialogue: 0,0:43:07.92,0:43:14.23,Sub,,0,0,0,,And um and the nice thing about human to robot transfer uh despite the fact that it's very costly to
+Dialogue: 0,0:43:14.28,0:43:22.52,Sub,,0,0,0,,collect data and you still have to evaluate on robot is that we can finally agree on a data source data.
+Dialogue: 0,0:43:22.57,0:43:22.99,Sub,,0,0,0,,Right?
+Dialogue: 0,0:43:23.04,0:43:28.40,Sub,,0,0,0,,If you have been in robotics for a while, the m major problem is everybody has different robot.
+Dialogue: 0,0:43:28.45,0:43:34.06,Sub,,0,0,0,,We all study different robots and despite the fact we're still having different robots,
+Dialogue: 0,0:43:34.11,0:43:38.59,Sub,,0,0,0,,if we are studying the human to robot transfer problem, the human part we can all agree on.
+Dialogue: 0,0:43:38.64,0:43:48.56,Sub,,0,0,0,,So we have a there's it's likely that we can have a common foundation for studying this problem and we have more consistent embodiment of robots and
+Dialogue: 0,0:43:48.61,0:43:56.47,Sub,,0,0,0,,that that that allows us to to kind of pull maybe to to get together data to study this problem and uh but we still need a lot
+Dialogue: 0,0:43:56.52,0:44:02.43,Sub,,0,0,0,,of data right we still need a lot of data to study this problem and I kind of did an estimate of what are the usable data
+Dialogue: 0,0:44:02.48,0:44:09.48,Sub,,0,0,0,,open source data on on the internet for human data these days is roughly around 10k uh so there I know there's a lot startups like kind of
+Dialogue: 0,0:44:09.53,0:44:16.50,Sub,,0,0,0,,branding themselves as like oh I'm released a new data set if you look into them is that actually usable as super usable so I did an
+Dialogue: 0,0:44:16.55,0:44:27.40,Sub,,0,0,0,,estimate roughly around 10 hour usable data 10k hours of usable data but I theorized that maybe we need maybe 1 million to 10 million hours of uh
+Dialogue: 0,0:44:27.45,0:44:37.73,Sub,,0,0,0,,uh human data to be able to to see more emerging behavior scale uh so so we really it requires a community effort to actually drive up the
+Dialogue: 0,0:44:37.78,0:44:42.64,Sub,,0,0,0,,data that size and their understanding and the whole ecosystem around this to to
+Dialogue: 0,0:44:42.69,0:44:48.99,Sub,,0,0,0,,make progress uh at least not that that's exists outside of these frontier labs.
+Dialogue: 0,0:44:49.04,0:44:53.86,Sub,,0,0,0,,Uh so this is why we decided to do a project called egoverse.
+Dialogue: 0,0:44:53.91,0:45:00.71,Sub,,0,0,0,,Uh this project was actually started um about a year about like 20 late 2024.
+Dialogue: 0,0:45:00.76,0:45:03.67,Sub,,0,0,0,,So it took more than a year to complete.
+Dialogue: 0,0:45:03.72,0:45:09.09,Sub,,0,0,0,,It was a lot of effort to actually pull together a few uh labs and companies to do this kind of things.
+Dialogue: 0,0:45:09.14,0:45:14.29,Sub,,0,0,0,,But I'm just going to show you like a nice one minute uh promotional video to this.
+Dialogue: 0,0:45:14.34,0:45:20.83,Sub,,0,0,0,,Uh so this is this is a group of labs and companies coming together to study like form attempting
+Dialogue: 0,0:45:20.88,0:45:26.32,Sub,,0,0,0,,to form a foundation for for studying human robot transfer right so uh Stanford is actually part of it.
+Dialogue: 0,0:45:26.37,0:45:35.65,Sub,,0,0,0,,So Shiran's lab was a like major collaborator for our efforts and and uh what we kind of I mean the euro story
+Dialogue: 0,0:45:35.70,0:45:40.21,Sub,,0,0,0,,we need a lot of data so we collect a lot of I'm going to talk about data set design and all that so
+Dialogue: 0,0:45:40.26,0:45:47.26,Sub,,0,0,0,,but the number of hours is small but it's it's growing right so this is not a fixed data set we actually are continuing
+Dialogue: 0,0:45:47.31,0:45:54.46,Sub,,0,0,0,,to pull to pull together data from labs from companies uh to to put together a common data source so it's it's increasing as
+Dialogue: 0,0:45:54.51,0:46:03.43,Sub,,0,0,0,,we're speaking Um and we also did cross institute study of a lot of these like basic hypothesis does align data actually matter
+Dialogue: 0,0:46:03.48,0:46:14.80,Sub,,0,0,0,,if you have different robots right um and it it's it's really an ecosystem for uh for studying this problem uh scientifically at scale
+Dialogue: 0,0:46:14.85,0:46:21.69,Sub,,0,0,0,,and it's made of four parts uh one is data set uh the other is uh platform tools so we have different kind of
+Dialogue: 0,0:46:21.74,0:46:29.36,Sub,,0,0,0,,ways to aggregate your data to allow you anyone in your a this audience who have like maybe an iPhone to collect the data.
+Dialogue: 0,0:46:29.41,0:46:38.84,Sub,,0,0,0,,Uh and we have a research study to really solidify some of the hypothesis we had throughout the the journey of studying this problem and we'll have a
+Dialogue: 0,0:46:38.89,0:46:45.52,Sub,,0,0,0,,like consortium made of like labs and uh industry researchers industry startups to to
+Dialogue: 0,0:46:45.57,0:46:51.60,Sub,,0,0,0,,to really come together contributing data insights robots and everything to study this problem.
+Dialogue: 0,0:46:51.65,0:46:58.62,Sub,,0,0,0,,In data set design we did it uh carefully to really uh uh to kind of divide it into two part.
+Dialogue: 0,0:46:58.67,0:47:04.59,Sub,,0,0,0,,One is what we call a flagship task where we have unified task semantics like folding
+Dialogue: 0,0:47:04.64,0:47:09.78,Sub,,0,0,0,,shirts uh uh like classic tasks like cup and saucer which is actually invented by shlab.
+Dialogue: 0,0:47:09.83,0:47:12.92,Sub,,0,0,0,,All of these tasks are standard semantics.
+Dialogue: 0,0:47:12.97,0:47:17.19,Sub,,0,0,0,,We uh we had many people across different labs across companies collect
+Dialogue: 0,0:47:17.24,0:47:20.70,Sub,,0,0,0,,the exact same task on different environment different objects and different everything.
+Dialogue: 0,0:47:20.75,0:47:27.84,Sub,,0,0,0,,So we have a common foundation for study these tasks and there's also a large pool of free form data like in
+Dialogue: 0,0:47:27.89,0:47:35.07,Sub,,0,0,0,,the wild data that has a longtail distribution behaviors collected by the these companies and then they contributed to the data sets.
+Dialogue: 0,0:47:35.12,0:47:45.23,Sub,,0,0,0,,So that makes up the two parts of the data set and uh like before we really care about turning human data into robot-like data.
+Dialogue: 0,0:47:45.28,0:47:54.03,Sub,,0,0,0,,So we actually added a lot of annotations including these nice uh hand pose, head pose and we also added dense language annotation on top.
+Dialogue: 0,0:47:54.08,0:47:58.41,Sub,,0,0,0,,Uh so it's very very expensive to do this and I'm really thankful for the who
+Dialogue: 0,0:47:58.46,0:48:04.37,Sub,,0,0,0,,the company who actually did all of these annotations on these uh 10400 hours of data.
+Dialogue: 0,0:48:04.42,0:48:04.75,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:48:04.78,0:48:11.85,Sub,,0,0,0,,But in moving into future all the data will have this kind of uh of data density and in and one
+Dialogue: 0,0:48:11.90,0:48:17.53,Sub,,0,0,0,,of the most important design decisions for for for eagle verse is that we don't want to just create one data set.
+Dialogue: 0,0:48:17.58,0:48:23.79,Sub,,0,0,0,,We want it to continue to grow because we don't think a 1400 hour data is going to be enough to capture
+Dialogue: 0,0:48:23.84,0:48:30.83,Sub,,0,0,0,,all of the possible human behaviors everywhere because a large pool of behavior that we don't we haven't done is uh I was
+Dialogue: 0,0:48:30.88,0:48:35.95,Sub,,0,0,0,,talking to Mac today is that like we we want we want to study human human interaction right like a lot of these
+Dialogue: 0,0:48:36.00,0:48:42.46,Sub,,0,0,0,,are still not captured in this data set and we want everything to be uh kind of pulled together to this data source.
+Dialogue: 0,0:48:42.51,0:48:46.13,Sub,,0,0,0,,So we actually had uh this thing hosted on a cloud flare.
+Dialogue: 0,0:48:46.18,0:48:52.67,Sub,,0,0,0,,his R1 instance was right now it's about like 10 terabytes of data but it's still growing uh it's 10 terabytes
+Dialogue: 0,0:48:52.72,0:48:59.39,Sub,,0,0,0,,because we did a lot of compression so that it's manageable uh uh and and we also have a nice like SQL
+Dialogue: 0,0:48:59.44,0:49:05.71,Sub,,0,0,0,,tables and data exploration web pages on top and so if you're interested you can go explore eagle burst.ai AI there's a
+Dialogue: 0,0:49:05.76,0:49:14.19,Sub,,0,0,0,,data browser there and uh and we know that not everyone can afford uh this kind of data collection effort at scale.
+Dialogue: 0,0:49:14.24,0:49:21.16,Sub,,0,0,0,,So we uh decided to kind of make available an uh in addition to the project Arya glasses uh
+Dialogue: 0,0:49:21.21,0:49:27.34,Sub,,0,0,0,,which is the the default device we use in iPhone app that's able to allow you to capture this data.
+Dialogue: 0,0:49:27.39,0:49:33.07,Sub,,0,0,0,,So it does uh on the cloud server it does uh data pro postprocessing labeling and everything.
+Dialogue: 0,0:49:33.12,0:49:39.19,Sub,,0,0,0,,uh so that can you also collect data for yourself for your own research or contribute back to eagors.
+Dialogue: 0,0:49:39.24,0:49:39.83,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:49:39.88,0:49:40.46,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:49:40.51,0:49:44.15,Sub,,0,0,0,,So the third part of this is the study.
+Dialogue: 0,0:49:44.20,0:49:52.03,Sub,,0,0,0,,Uh so we cared a lot about like kind of a research debt like if you're familiar with this kind of technical debt for programming.
+Dialogue: 0,0:49:52.08,0:49:57.67,Sub,,0,0,0,,Uh you know like there's a lot of assumptions we made one-off assumptions we made in these papers.
+Dialogue: 0,0:49:57.72,0:49:59.26,Sub,,0,0,0,,It has been pretty consistent.
+Dialogue: 0,0:49:59.31,0:50:04.03,Sub,,0,0,0,,uh but we really want to show that it is true and there are biases in our like
+Dialogue: 0,0:50:04.08,0:50:11.39,Sub,,0,0,0,,in our experiment setup setups different group have different robots and different robot embodiment have different transfer so we
+Dialogue: 0,0:50:11.44,0:50:17.86,Sub,,0,0,0,,really decided that let's just have the same code base same data set different ways to collect teleprint data
+Dialogue: 0,0:50:17.91,0:50:22.73,Sub,,0,0,0,,same way to collect human data and let's see what happens right do we have a consistent finding across
+Dialogue: 0,0:50:22.78,0:50:28.12,Sub,,0,0,0,,different robots um and we found is that it's actually pretty consistent uh so these are kind of
+Dialogue: 0,0:50:28.17,0:50:32.90,Sub,,0,0,0,,tiny to see But the uh what we found is very similar to the conclusion of Eagleverse is that
+Dialogue: 0,0:50:32.95,0:50:40.32,Sub,,0,0,0,,aligned data is very very important to uh to in to leverage diverse human data uh the pre-training diverse
+Dialogue: 0,0:50:40.37,0:50:46.52,Sub,,0,0,0,,human data and uh if you only train on diverse data is not going to give you much gain.
+Dialogue: 0,0:50:46.57,0:50:50.70,Sub,,0,0,0,,So like diverse data plus aligned data is the key to to enable
+Dialogue: 0,0:50:50.75,0:50:57.55,Sub,,0,0,0,,transfer at this scale and we're pretty sure about that across different robots embodiment.
+Dialogue: 0,0:50:57.60,0:51:03.95,Sub,,0,0,0,,Um and one other thing we did was that we had discovered that uh
+Dialogue: 0,0:51:04.00,0:51:09.40,Sub,,0,0,0,,all pre like despite I said that human have a unified embodiment everyone is different.
+Dialogue: 0,0:51:09.45,0:51:14.45,Sub,,0,0,0,,We have different body length we have different habit of doing the same task we have different ways to
+Dialogue: 0,0:51:14.50,0:51:20.10,Sub,,0,0,0,,look at things when have like different habit of like turning our head when I fold shirts and all that.
+Dialogue: 0,0:51:20.15,0:51:22.86,Sub,,0,0,0,,So a lot of these diversity actually exist in human.
+Dialogue: 0,0:51:22.91,0:51:28.08,Sub,,0,0,0,,And what we found is that if you given the same data budget, if you train on more diverse human data,
+Dialogue: 0,0:51:28.13,0:51:32.47,Sub,,0,0,0,,you actually improve the performance of generalizing to a new human embodiment.
+Dialogue: 0,0:51:32.52,0:51:40.67,Sub,,0,0,0,,So there's some consistency to be learned, but you do need diversity in your human data as well to be able to enable uh transfer.
+Dialogue: 0,0:51:40.72,0:51:44.87,Sub,,0,0,0,,So and we also visualized this that uh on the left side this is a
+Dialogue: 0,0:51:44.92,0:51:51.06,Sub,,0,0,0,,testing plot of when you train the model with four different demonstrators versus 12 different demonstrators.
+Dialogue: 0,0:51:51.11,0:52:00.09,Sub,,0,0,0,,So you can see that uh this uh this red outlier when you basically we had a hold out demonstrator and we projected back to the test map.
+Dialogue: 0,0:52:00.14,0:52:06.26,Sub,,0,0,0,,We saw that the outlier is no longer outlier when you have a lot more uh demonstrators.
+Dialogue: 0,0:52:06.31,0:52:12.62,Sub,,0,0,0,,So there it's a lot more mixed in uh when you have when you have more demonstrators.
+Dialogue: 0,0:52:12.67,0:52:13.24,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:52:13.29,0:52:16.25,Sub,,0,0,0,,So those are I mean there are many other things we did in this study.
+Dialogue: 0,0:52:16.30,0:52:17.79,Sub,,0,0,0,,So if you're interested go read the paper.
+Dialogue: 0,0:52:17.84,0:52:18.71,Sub,,0,0,0,,It's quite fun.
+Dialogue: 0,0:52:18.76,0:52:22.03,Sub,,0,0,0,,Uh and also you should contribute if you're interested.
+Dialogue: 0,0:52:22.08,0:52:26.34,Sub,,0,0,0,,And the consortium is made again made up of a few different labs.
+Dialogue: 0,0:52:26.39,0:52:36.73,Sub,,0,0,0,,Uh so GT is led by my student uh uh Ryan Simmer left two students and Stanford is led
+Dialogue: 0,0:52:36.78,0:52:43.28,Sub,,0,0,0,,by Ze UCSD led by Roger and ETH is led by a whole bunch of students with two PIs.
+Dialogue: 0,0:52:43.33,0:52:52.35,Sub,,0,0,0,,So this is kind of a our core uh tour core labs and and this couldn't be possible without the support of uh these companies like Meta,
+Dialogue: 0,0:52:52.40,0:52:53.64,Sub,,0,0,0,,Mecca and Scale.
+Dialogue: 0,0:52:53.69,0:53:00.43,Sub,,0,0,0,,Uh so uh it's really like a marriage of like academic rigor and we really care about solving problem and they really
+Dialogue: 0,0:53:00.48,0:53:08.08,Sub,,0,0,0,,care about trying to see what makes their the data they collect useful so I can sell the data to other companies.
+Dialogue: 0,0:53:08.13,0:53:14.28,Sub,,0,0,0,,So there there's some synergistic relationship in in this consortium and we're continue to expand.
+Dialogue: 0,0:53:14.33,0:53:18.36,Sub,,0,0,0,,Uh so we when we release this data set this this thing I got like
+Dialogue: 0,0:53:18.41,0:53:25.10,Sub,,0,0,0,,right now it's about 80 or so different entities and individuals who are interested in contributing.
+Dialogue: 0,0:53:25.15,0:53:29.32,Sub,,0,0,0,,So we're continually growing new new new new uh new companies.
+Dialogue: 0,0:53:29.37,0:53:32.80,Sub,,0,0,0,,And if you remember I said there's more than 100 companies doing that.
+Dialogue: 0,0:53:32.85,0:53:33.16,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:53:33.19,0:53:39.28,Sub,,0,0,0,,some of them are interested in really understanding why what makes their data useful.
+Dialogue: 0,0:53:39.33,0:53:39.87,Sub,,0,0,0,,Okay.
+Dialogue: 0,0:53:39.92,0:53:40.42,Sub,,0,0,0,,Um, okay.
+Dialogue: 0,0:53:40.47,0:53:42.11,Sub,,0,0,0,,So, that's that's Eagle Verse.
+Dialogue: 0,0:53:42.16,0:53:46.37,Sub,,0,0,0,,And then there's some other open problems I'm curious I'm personally curious about.
+Dialogue: 0,0:53:46.42,0:53:50.53,Sub,,0,0,0,,My lab's curious about I'm going to briefly talk about I know we're mostly out of time.
+Dialogue: 0,0:53:50.58,0:53:52.69,Sub,,0,0,0,,There are five minutes left.
+Dialogue: 0,0:53:52.74,0:53:59.05,Sub,,0,0,0,,Uh, so so uh what I'm interested in essentially is how to better model human essentially.
+Dialogue: 0,0:53:59.10,0:54:06.07,Sub,,0,0,0,,Uh what we are currently facing is that a lot of our designs are model designs are based on assumption
+Dialogue: 0,0:54:06.12,0:54:14.46,Sub,,0,0,0,,that we are learning from a del demonstr tele demonstration for tabletop task with a highly kind of damped system.
+Dialogue: 0,0:54:14.51,0:54:24.84,Sub,,0,0,0,,Basically it's just like if I summarize that like very slow uh moving at creeping speed uh no viewpoint shifts very short like mid horizon task and
+Dialogue: 0,0:54:24.89,0:54:29.76,Sub,,0,0,0,,like I mean we know the how the demonstrator collected data right but when
+Dialogue: 0,0:54:29.81,0:54:33.92,Sub,,0,0,0,,you're starting to talk about human data things lot become a lot different so
+Dialogue: 0,0:54:33.97,0:54:43.13,Sub,,0,0,0,,what I'm interesting are two parts how do we fully capture the experience of human and how do we model it especially the context of how human
+Dialogue: 0,0:54:43.18,0:54:48.36,Sub,,0,0,0,,made decisions And my first takes is that first person view is not sensory
+Dialogue: 0,0:54:48.41,0:54:54.43,Sub,,0,0,0,,experience is not the decision-m context used to actually decide what to do next.
+Dialogue: 0,0:54:54.48,0:55:01.22,Sub,,0,0,0,,And uh one of the things I'm very curious about is can we measure force or tactile reliably
+Dialogue: 0,0:55:01.27,0:55:06.75,Sub,,0,0,0,,from human and right now most of developments on the visual side these are nice things that the
+Dialogue: 0,0:55:06.80,0:55:13.36,Sub,,0,0,0,,community like the the the the sort of the broader commercial sector have done but the tactile capabilities
+Dialogue: 0,0:55:13.41,0:55:19.84,Sub,,0,0,0,,are quite missing like taco gloves are there but they're not like they're very they're not good yet.
+Dialogue: 0,0:55:19.89,0:55:25.71,Sub,,0,0,0,,uh there are like other technologies like EMGs to measure like uh muscle activations all that as a
+Dialogue: 0,0:55:25.76,0:55:30.60,Sub,,0,0,0,,proxy for force or how much force you exert but they are not also very very noisy so
+Dialogue: 0,0:55:30.65,0:55:37.05,Sub,,0,0,0,,there's a lot of immaturities in the hardware side for really sensorize the entire experience of how you
+Dialogue: 0,0:55:37.10,0:55:43.15,Sub,,0,0,0,,kind of how how you perceive the world and the second part is that the context for decision-
+Dialogue: 0,0:55:43.20,0:55:48.45,Sub,,0,0,0,,making is also more than just your instantaneous observation you didn't make your decision about what
+Dialogue: 0,0:55:48.50,0:55:52.41,Sub,,0,0,0,,you're going to do next By just looking at the picture you have in front of you,
+Dialogue: 0,0:55:52.46,0:55:52.76,Sub,,0,0,0,,right?
+Dialogue: 0,0:55:52.73,0:55:54.70,Sub,,0,0,0,,You have an enormous amount of knowledge.
+Dialogue: 0,0:55:54.75,0:55:56.53,Sub,,0,0,0,,For example, this chef, right?
+Dialogue: 0,0:55:56.58,0:56:04.52,Sub,,0,0,0,,He like this person cooked because uh well they have taken the class or they have been to a culinary school, right?
+Dialogue: 0,0:56:04.57,0:56:10.05,Sub,,0,0,0,,And uh like it's not because they just look at this like image and they decide oh I'm going to cook.
+Dialogue: 0,0:56:10.10,0:56:12.97,Sub,,0,0,0,,I'm going to like like turn on the heat, right?
+Dialogue: 0,0:56:13.02,0:56:21.45,Sub,,0,0,0,,And the person for example turned to different workstations because they remembered that a minute ago they prepared their ingredients in that uh and
+Dialogue: 0,0:56:21.50,0:56:28.17,Sub,,0,0,0,,not on the table and they they had to kind of go back and kind of continue to to to do that kind of thing.
+Dialogue: 0,0:56:28.22,0:56:35.23,Sub,,0,0,0,,So it's it's more than your instantaneous observation and our models right now are terrible at modeling these kind of things.
+Dialogue: 0,0:56:35.28,0:56:44.11,Sub,,0,0,0,,Uh so there's a lot of work to be done to be actually be able to what I call behavior clone a human.
+Dialogue: 0,0:56:44.16,0:56:51.50,Sub,,0,0,0,,So if you really want to predict behavior of any person what they're going to do next there's a lot of
+Dialogue: 0,0:56:51.55,0:56:57.23,Sub,,0,0,0,,research you need to do and as a first step uh we our lab is doing a lot of different explorations.
+Dialogue: 0,0:56:57.28,0:57:01.03,Sub,,0,0,0,,One of the things I'm most excited about is the spatial memory for mobile inflation.
+Dialogue: 0,0:57:01.08,0:57:07.76,Sub,,0,0,0,,So uh it believe it or not we we have the technology to build a lot of these like specially consistent memories right now.
+Dialogue: 0,0:57:07.81,0:57:11.56,Sub,,0,0,0,,So these are uh one of the ongoing works in our lab that we are building a
+Dialogue: 0,0:57:11.61,0:57:18.12,Sub,,0,0,0,,dynamic uh we'll call it dynamic scene graph of object being moved around as you continue demonstrating things.
+Dialogue: 0,0:57:18.17,0:57:19.85,Sub,,0,0,0,,I've never seen these kind of things before.
+Dialogue: 0,0:57:19.90,0:57:25.04,Sub,,0,0,0,,If you have worked on computer division before uh this is actually a new capabilities I've never seen before.
+Dialogue: 0,0:57:25.09,0:57:33.55,Sub,,0,0,0,,uh that you can actually track objects and continuously integrate their point cloud on these object to build better object over time.
+Dialogue: 0,0:57:33.60,0:57:40.85,Sub,,0,0,0,,uh and this is all run in real time right so a lot of these foundation models better devices and better
+Dialogue: 0,0:57:40.90,0:57:51.27,Sub,,0,0,0,,like perception models uh are enableing these kind of technology so I'm quite excited about uh this kind of research so takeaways
+Dialogue: 0,0:57:51.32,0:57:59.49,Sub,,0,0,0,,uh human data is the largest data source of physical intelligence uh human robot transfer is challenging but showing promises uh
+Dialogue: 0,0:57:59.54,0:58:09.45,Sub,,0,0,0,,new capabilities merge with model and data scale And data is in fact scaling faster than our scientific understanding of these problems.
+Dialogue: 0,0:58:09.50,0:58:13.29,Sub,,0,0,0,,And scaling science requires really a community effort.
+Dialogue: 0,0:58:13.34,0:58:15.32,Sub,,0,0,0,,And with that like to thank you all.
+Dialogue: 0,0:58:15.37,0:58:24.35,Sub,,0,0,0,,And these are the sponsors.
+Dialogue: 0,0:58:24.40,0:58:27.87,Sub,,0,0,0,,A minute.
+Dialogue: 0,0:58:27.92,0:58:28.32,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:58:28.35,0:58:35.40,Sub,,0,0,0,,So the m multimodal that you mentioned at the end is very interesting but as you mentioned it's pretty expensive to collect.
+Dialogue: 0,0:58:35.45,0:58:41.78,Sub,,0,0,0,,So I'm just wondering from your experience with the diverse environments would you expect to have like a little bit of this
+Dialogue: 0,0:58:41.83,0:58:49.07,Sub,,0,0,0,,expensive multimodal data make a big difference so you wouldn't have to collect so much of it to have that's an excellent question.
+Dialogue: 0,0:58:49.12,0:58:53.13,Sub,,0,0,0,,I think uh I expect yes I think we could use these uh
+Dialogue: 0,0:58:53.18,0:58:59.98,Sub,,0,0,0,,expensive sensorized human data as supervision to train models to label broader human experience.
+Dialogue: 0,0:59:00.03,0:59:06.75,Sub,,0,0,0,,I think that should happen but there's there are things that are just inherently not perceivable if you don't have sensors.
+Dialogue: 0,0:59:06.80,0:59:09.95,Sub,,0,0,0,,For example, imagine that you reach in a bag and start to grab things.
+Dialogue: 0,0:59:10.00,0:59:12.63,Sub,,0,0,0,,Without tactile, you won't be able to perceive it, right?
+Dialogue: 0,0:59:12.68,0:59:14.07,Sub,,0,0,0,,You can't guess what you're doing.
+Dialogue: 0,0:59:14.12,0:59:16.67,Sub,,0,0,0,,So these kind of things, not so much.
+Dialogue: 0,0:59:16.72,0:59:23.96,Sub,,0,0,0,,But if you're talking about let's say am I in contact with this cup if I look at from this yes I mean I can perceive this on ego center view.
+Dialogue: 0,0:59:24.01,0:59:31.31,Sub,,0,0,0,,Maybe I could use a lab like model train on tactile visual data to label this visually data, right?
+Dialogue: 0,0:59:31.36,0:59:34.59,Sub,,0,0,0,,So that's definitely possible.
+Dialogue: 0,0:59:34.64,0:59:35.39,Sub,,0,0,0,,Yeah,
+Dialogue: 0,0:59:35.44,0:59:43.28,Sub,,0,0,0,,I the same thing as this mountain model and you think about the the neuroscience neuros and also the
+Dialogue: 0,0:59:43.33,0:59:50.15,Sub,,0,0,0,,the robotics learning reminds me of baby how the baby learn and now your robotics run as a baby,
+Dialogue: 0,0:59:50.20,0:59:50.50,Sub,,0,0,0,,right?
+Dialogue: 0,0:59:50.53,0:59:56.91,Sub,,0,0,0,,It's like baby, you know, how the b how you how the machine learn versus how the baby learn, right?
+Dialogue: 0,0:59:56.96,0:59:57.95,Sub,,0,0,0,,I'm curious to see.
+Dialogue: 0,0:59:58.00,0:59:58.30,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:59:58.23,1:00:02.01,Sub,,0,0,0,,Well, the neuroscience side of things is uh is quite interesting because I mean,
+Dialogue: 0,1:00:02.06,1:00:11.02,Sub,,0,0,0,,if you're talking about like sort of planting sensors in people's brain, uh yes, this this is the most direct form of human data.
+Dialogue: 0,1:00:11.07,1:00:18.53,Sub,,0,0,0,,So maybe we can actually infer more intent from just like like I don't know the more uh more better sensors.
+Dialogue: 0,1:00:18.58,1:00:23.52,Sub,,0,0,0,,But in terms of the way robots learn as human learners, I think right now it's very different.
+Dialogue: 0,1:00:23.57,1:00:28.21,Sub,,0,0,0,,Uh what we're trying to do is the way like it's sort of like large language model analogy.
+Dialogue: 0,1:00:28.26,1:00:34.09,Sub,,0,0,0,,We're not teaching larger language model by teaching how to speak like grammars and everything, right?
+Dialogue: 0,1:00:34.14,1:00:37.63,Sub,,0,0,0,,We dump internet.zip into a model, right?
+Dialogue: 0,1:00:37.68,1:00:44.96,Sub,,0,0,0,,What we're trying to do is to dump human.zip into a model and see what happens, right?
+Dialogue: 0,1:00:45.01,1:00:46.03,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:00:46.08,1:00:46.41,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:00:46.44,1:00:52.11,Sub,,0,0,0,,uh you motivated your talk with uh LSD and how datadriven learning has revolutionized that field.
+Dialogue: 0,1:00:52.16,1:00:54.75,Sub,,0,0,0,,One thing that's been really important is data quality.
+Dialogue: 0,1:00:54.80,1:00:55.17,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:00:55.20,1:00:55.56,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:00:55.59,1:00:59.36,Sub,,0,0,0,,And uh you often times when we talk about human data can be really noisy.
+Dialogue: 0,1:00:59.41,1:01:07.37,Sub,,0,0,0,,Uh what are your thoughts on like filtering out bad data or like how do you do quality control uh etc. Excellent question.
+Dialogue: 0,1:01:07.42,1:01:11.60,Sub,,0,0,0,,I think that's the next stage of this like once we have more than let's like like
+Dialogue: 0,1:01:11.65,1:01:15.11,Sub,,0,0,0,,I said we're going to have more data than we know how to do with it right.
+Dialogue: 0,1:01:15.16,1:01:23.47,Sub,,0,0,0,,So uh we could yeah we the data filtering understanding like how to explore the data what data attribution right what data matters in
+Dialogue: 0,1:01:23.52,1:01:32.99,Sub,,0,0,0,,produce that is is the science of pro training is just start starting for for for these kind of models actually wonderful talk really really
+Dialogue: 0,1:01:33.04,1:01:36.28,Sub,,0,0,0,,inspiring and interesting work I'm wondering if you can talk a little
+Dialogue: 0,1:01:36.33,1:01:42.27,Sub,,0,0,0,,bit about what you observe after supervised finetuning so what I understood correct
+Dialogue: 0,1:01:42.32,1:01:51.53,Sub,,0,0,0,,me if I'm wrong in the middle projects where you were pre-training with large data and then um and then uh testing on specific tasks.
+Dialogue: 0,1:01:51.58,1:01:54.99,Sub,,0,0,0,,You were still pre-training and then mid-train and then supervised fine-tuning.
+Dialogue: 0,1:01:55.04,1:01:55.79,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:01:55.84,1:02:00.03,Sub,,0,0,0,,Do you obtain any degree of generalization after supervised?
+Dialogue: 0,1:02:00.08,1:02:00.76,Sub,,0,0,0,,Great question.
+Dialogue: 0,1:02:00.81,1:02:08.23,Sub,,0,0,0,,Yeah, we we didn't really stress test this but we in the paper but really did a lot of testing.
+Dialogue: 0,1:02:08.28,1:02:12.56,Sub,,0,0,0,,I can't talk too much about this like this is part of the media project um that
+Dialogue: 0,1:02:12.61,1:02:16.65,Sub,,0,0,0,,I can tell you that it does it does have a lot of transfer um from human
+Dialogue: 0,1:02:16.70,1:02:22.99,Sub,,0,0,0,,knowledge not in the form of um mostly um so some in the form of spatial analization
+Dialogue: 0,1:02:23.04,1:02:29.67,Sub,,0,0,0,,objectization but what's most surprising is the language following became much better I I don't know why like
+Dialogue: 0,1:02:29.72,1:02:34.14,Sub,,0,0,0,,we don't have a good hypothesis of why language following became much better when you pre-tr human
+Dialogue: 0,1:02:34.19,1:02:41.13,Sub,,0,0,0,,data um but yeah compared with other frontier models like human train human training data is actually most
+Dialogue: 0,1:02:41.18,1:02:46.38,Sub,,0,0,0,,effective like we can actually do like for example negative steering like we can actually say don't
+Dialogue: 0,1:02:46.43,1:02:50.62,Sub,,0,0,0,,do this and actually like try to avoid that object when it when it's trying to do it.
+Dialogue: 0,1:02:50.67,1:02:50.97,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:02:50.96,1:02:54.59,Sub,,0,0,0,,Follow up your your human data was also language labelled right.
+Dialogue: 0,1:02:54.64,1:02:59.62,Sub,,0,0,0,,Uh yes yeah yeah that yeah sorry that that that was the reason.
+Dialogue: 0,1:02:59.67,1:03:05.24,Sub,,0,0,0,,Yeah for other applications there's been a push towards synthetic data to amplify the current existing data.
+Dialogue: 0,1:03:05.29,1:03:11.31,Sub,,0,0,0,,Have you also seen that with vision models for robotics or are the general models not there yet?
+Dialogue: 0,1:03:11.36,1:03:13.55,Sub,,0,0,0,,Uh sorry can you rephrase your question?
+Dialogue: 0,1:03:13.60,1:03:18.21,Sub,,0,0,0,,Oh so like synthetic data is really important for other applications like for instance because it's more
+Dialogue: 0,1:03:18.26,1:03:25.15,Sub,,0,0,0,,reliable but then have you seen people using like generative AI images or videos or just simulation?
+Dialogue: 0,1:03:25.20,1:03:27.57,Sub,,0,0,0,,Great question.
+Dialogue: 0,1:03:27.62,1:03:34.99,Sub,,0,0,0,,Um so the thing is that um the synthetic data is useful because you want something scalable,
+Dialogue: 0,1:03:35.04,1:03:45.17,Sub,,0,0,0,,controllable and uh maybe can some characteristics that you want from data that you can manually inject right but for human data right now we can
+Dialogue: 0,1:03:45.22,1:03:55.55,Sub,,0,0,0,,actually like the way that we for example tell our vendors to is we can have the high degree freedom of control over what behaviors they have.
+Dialogue: 0,1:03:55.60,1:04:01.12,Sub,,0,0,0,,So uh for now I think it's okay to not to only rely on like
+Dialogue: 0,1:04:01.17,1:04:08.38,Sub,,0,0,0,,realistic real world data but uh in the future definitely uh synthetic data will be very
+Dialogue: 0,1:04:08.43,1:04:16.11,Sub,,0,0,0,,useful and the one place that where is very very useful is um the last inch
+Dialogue: 0,1:04:16.16,1:04:22.45,Sub,,0,0,0,,of between your hand and object because human hands are still very different from robot hands,
+Dialogue: 0,1:04:22.50,1:04:22.86,Sub,,0,0,0,,right?
+Dialogue: 0,1:04:22.89,1:04:30.22,Sub,,0,0,0,,And then the way that we interact with the object will be subtly but importantly different from how robots should interact with with the object.
+Dialogue: 0,1:04:30.27,1:04:37.46,Sub,,0,0,0,,And this last inch or last newton difference is going to be like we we like basically you want to answer the question if I
+Dialogue: 0,1:04:37.51,1:04:45.21,Sub,,0,0,0,,were a different person or different robot how I should have done this in order to cause the same effect of this what I have demonstrated.
+Dialogue: 0,1:04:45.26,1:04:45.56,Sub,,0,0,0,,Right?
+Dialogue: 0,1:04:45.55,1:04:48.91,Sub,,0,0,0,,So that kind of counterfactual data doesn't exist in the real world.
+Dialogue: 0,1:04:48.96,1:04:54.64,Sub,,0,0,0,,You have to synthesize it. with language models.
+Dialogue: 0,1:04:54.69,1:04:58.83,Sub,,0,0,0,,Uh the big breakthroughs happened first in languages in which a lot of text was
+Dialogue: 0,1:04:58.88,1:05:03.59,Sub,,0,0,0,,already available but then there are also translation models to convert that to other languages.
+Dialogue: 0,1:05:03.64,1:05:08.11,Sub,,0,0,0,,So for parts of the world where neither Ariana or iPhone would be very common.
+Dialogue: 0,1:05:08.16,1:05:11.86,Sub,,0,0,0,,Do you think that the different kinds of scenes or different ways of doing
+Dialogue: 0,1:05:11.91,1:05:18.75,Sub,,0,0,0,,things could still get some translation benefit from training on these kinds of data sets?
+Dialogue: 0,1:05:18.80,1:05:24.60,Sub,,0,0,0,,Are we talking about like cross the bicep stickers or cross very different kinds of objects maybe
+Dialogue: 0,1:05:24.65,1:05:31.57,Sub,,0,0,0,,or different human preferences of how tasks like how like basically do we need like a everybody
+Dialogue: 0,1:05:31.62,1:05:37.09,Sub,,0,0,0,,doing the same task the same way or like diver behavior and diversity right yeah that's a
+Dialogue: 0,1:05:37.14,1:05:41.97,Sub,,0,0,0,,really good question I think um there's this is a I would say there's a paradigm shift
+Dialogue: 0,1:05:42.02,1:05:47.06,Sub,,0,0,0,,how right now as to like how do we design these these models right again like what
+Dialogue: 0,1:05:47.11,1:05:51.79,Sub,,0,0,0,,I said the VA's A lot of these behavior coding models are designed to fit uni uni
+Dialogue: 0,1:05:51.84,1:05:56.97,Sub,,0,0,0,,strategy data and right now you can't really constrain human behavior if if you want to learn
+Dialogue: 0,1:05:57.02,1:06:01.47,Sub,,0,0,0,,from natural human behavior you can't constrain them like that's our goal right so in order to
+Dialogue: 0,1:06:01.52,1:06:04.27,Sub,,0,0,0,,solve this problem we really need a new type of model to be able to fit this
+Dialogue: 0,1:06:04.32,1:06:08.75,Sub,,0,0,0,,kind of data and diversity I would say is is the thing it's a problem not a
+Dialogue: 0,1:06:08.80,1:06:16.75,Sub,,0,0,0,,solution right we want to solve that to in order to leverage more data yeah similar question
+Dialogue: 0,1:06:16.80,1:06:21.41,Sub,,0,0,0,,um what do you think is the future of Tel operation given all this development and do
+Dialogue: 0,1:06:21.46,1:06:27.65,Sub,,0,0,0,,you think how do you think robotic companies will evolve their investment in Telop given how are
+Dialogue: 0,1:06:27.70,1:06:37.22,Sub,,0,0,0,,you a VC uh because I will give a different answer uh so yeah I think my
+Dialogue: 0,1:06:37.27,1:06:43.48,Sub,,0,0,0,,personal goal is to get rid of tail operation because this is just like I said in
+Dialogue: 0,1:06:43.53,1:06:49.93,Sub,,0,0,0,,the beginning it's a lossy pipe like I I really want my human robots to be humanlike.
+Dialogue: 0,1:06:49.98,1:06:57.63,Sub,,0,0,0,,For example, if I throw this water bottle at you, you would either catch it or you flinch, I want my robot to be able to do the same thing.
+Dialogue: 0,1:06:57.68,1:07:00.72,Sub,,0,0,0,,You would not be able to tell our to demonstrate this repeatedly.
+Dialogue: 0,1:07:00.77,1:07:03.34,Sub,,0,0,0,,This is all natural human behaviors, right?
+Dialogue: 0,1:07:03.39,1:07:04.50,Sub,,0,0,0,,I want that to happen.
+Dialogue: 0,1:07:04.55,1:07:06.67,Sub,,0,0,0,,This is my personal goal.
+Dialogue: 0,1:07:06.72,1:07:12.59,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:07:12.64,1:07:13.10,Sub,,0,0,0,,Oh, sure.
+Dialogue: 0,1:07:13.15,1:07:17.95,Sub,,0,0,0,,What's your opinion on hand important and how much it should match human?
+Dialogue: 0,1:07:18.00,1:07:20.55,Sub,,0,0,0,,Oh, great question.
+Dialogue: 0,1:07:20.60,1:07:21.90,Sub,,0,0,0,,Uh, yeah.
+Dialogue: 0,1:07:21.95,1:07:29.30,Sub,,0,0,0,,So, I mean like I mean I would say yeah like what I said like the last inch gap, right?
+Dialogue: 0,1:07:29.35,1:07:33.27,Sub,,0,0,0,,Like if you if your hands is very hum like if your robot hands very like there's
+Dialogue: 0,1:07:33.32,1:07:37.84,Sub,,0,0,0,,if there's no difference between your robot hands and human hand in terms of kinematics and dynamic capability,
+Dialogue: 0,1:07:37.89,1:07:42.25,Sub,,0,0,0,,you can move really fast, you can move flexibly, you don't need to bridge the gap, right?
+Dialogue: 0,1:07:42.30,1:07:44.61,Sub,,0,0,0,,It's just it just should just work.
+Dialogue: 0,1:07:44.66,1:07:48.00,Sub,,0,0,0,,Uh so but I mean we're not there yet.
+Dialogue: 0,1:07:48.05,1:07:55.30,Sub,,0,0,0,,So the like the less humanlike your robot uh hands or factor or the whole body is the
+Dialogue: 0,1:07:55.35,1:08:01.23,Sub,,0,0,0,,more a bigger a gap you have to bridge and the actual transfer that happens will be different.
+Dialogue: 0,1:08:01.28,1:08:02.56,Sub,,0,0,0,,For example,
+Dialogue: 0,1:08:02.61,1:08:11.19,Sub,,0,0,0,,um like uh like let's say if I have a high higher degree of freedom has than robot than human has then maybe
+Dialogue: 0,1:08:11.24,1:08:18.37,Sub,,0,0,0,,the the thing we want to retarget is not the actual kinematic configuration but contact right I want the contact to happen at
+Dialogue: 0,1:08:18.42,1:08:25.71,Sub,,0,0,0,,this point in time in in this space like here right and if I have uh ways to exert force similar to how
+Dialogue: 0,1:08:25.76,1:08:31.87,Sub,,0,0,0,,human do and can measure force then this is what we should retarget and then the rest of the configuration doesn't really matter Right.
+Dialogue: 0,1:08:31.92,1:08:33.28,Sub,,0,0,0,,You define a task space.
+Dialogue: 0,1:08:33.33,1:08:39.71,Sub,,0,0,0,,The rest you hand over to like a IK or inverse dynamics or learn learn learn solver.
+Dialogue: 0,1:08:39.76,1:08:41.71,Sub,,0,0,0,,Right.
+Dialogue: 0,1:08:41.76,1:08:42.06,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:08:42.09,1:08:50.34,Sub,,0,0,0,,So the basically the bigger the gap the more work you have to do like to do enable transfer.
+Dialogue: 0,1:08:50.39,1:08:51.63,Sub,,0,0,0,,Yeah.
+Dialogue: 0,1:08:51.68,1:08:52.97,Sub,,0,0,0,,It's a lot of great questions.
+Dialogue: 0,1:08:53.02,1:08:57.08,Sub,,0,0,0,,Thank you.

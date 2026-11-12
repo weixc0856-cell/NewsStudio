@@ -1,0 +1,442 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Arial,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:01.58,Sub,,0,0,0,,Right now, we're trying to build a single chip.
+Dialogue: 0,0:00:01.63,0:00:03.39,Sub,,0,0,0,,If you crack open an Nvidia system,
+Dialogue: 0,0:00:03.44,0:00:10.79,Sub,,0,0,0,,it has anywhere between kind of six and nine custom chips all built by Nvidia to come together to build something that is really, really potent.
+Dialogue: 0,0:00:10.84,0:00:12.00,Sub,,0,0,0,,So, there's already a gap there.
+Dialogue: 0,0:00:12.05,0:00:17.27,Sub,,0,0,0,,You know, it'd be great to be productive enough that we could start to build our own responses in that same kind of way.
+Dialogue: 0,0:00:17.32,0:00:24.29,Sub,,0,0,0,,This idea of being able to have at any given moment a kind of rolling frontier of bets that you hope are deeply aligned in
+Dialogue: 0,0:00:24.34,0:00:30.10,Sub,,0,0,0,,which you're ready to trigger the ramp of this is a huge advantage if you can kind of build that machine and build that engine.
+Dialogue: 0,0:00:30.15,0:00:37.29,Sub,,0,0,0,,It's the equivalent of the frontier model for the chip space is if you can just find a way to structurally carve out a 3 to 6-month advantage,
+Dialogue: 0,0:00:37.34,0:00:46.67,Sub,,0,0,0,,you will be winning all of those deployments.
+Dialogue: 0,0:00:46.72,0:00:48.75,Sub,,0,0,0,,Hi listeners, welcome back to No Priors.
+Dialogue: 0,0:00:48.80,0:00:54.15,Sub,,0,0,0,,Today, I'm here with Walter Goodwin, founder and CEO of full-stack AI chip company Fractal.
+Dialogue: 0,0:00:54.20,0:00:58.98,Sub,,0,0,0,,We talk about what it means to be full-stack as a company, the technical bets they're making,
+Dialogue: 0,0:00:59.03,0:01:04.78,Sub,,0,0,0,,why he's so focused on memory bandwidth, his predictions for frontier model architectures in the future,
+Dialogue: 0,0:01:04.83,0:01:14.75,Sub,,0,0,0,,and the structure of the chip market at the frontier today and tomorrow amongst Nvidia, AMD, internal efforts, and this new class of accelerators.
+Dialogue: 0,0:01:14.80,0:01:15.64,Sub,,0,0,0,,Welcome, Walter.
+Dialogue: 0,0:01:15.69,0:01:18.11,Sub,,0,0,0,,Walter, thanks so much for doing this.
+Dialogue: 0,0:01:18.16,0:01:19.35,Sub,,0,0,0,,Very good to be here, Sarah.
+Dialogue: 0,0:01:19.40,0:01:21.83,Sub,,0,0,0,,You started this incredibly interesting company called Fractal.
+Dialogue: 0,0:01:21.88,0:01:24.03,Sub,,0,0,0,,Can you give us a overview of what you guys do?
+Dialogue: 0,0:01:24.08,0:01:26.04,Sub,,0,0,0,,Fractal is a chip company.
+Dialogue: 0,0:01:26.09,0:01:30.00,Sub,,0,0,0,,We build very, very fast inference chips for the world's largest models.
+Dialogue: 0,0:01:30.05,0:01:34.39,Sub,,0,0,0,,This sort of bet on speed is something which we've had right from the outset.
+Dialogue: 0,0:01:34.44,0:01:39.37,Sub,,0,0,0,,Started the company in summer of 2022, and I think at the time we were starting to see two things.
+Dialogue: 0,0:01:39.42,0:01:45.50,Sub,,0,0,0,,You know, one was obviously the arrival of foundation models trained on the internet and generalizing across everything.
+Dialogue: 0,0:01:45.55,0:01:53.08,Sub,,0,0,0,,And the other was, you know, a few kind of wise people saying, you know, we need to find a way to pour more compute into these models at test time.
+Dialogue: 0,0:01:53.13,0:01:58.75,Sub,,0,0,0,,We need to find a way to take what we had for kind of AlphaGo where you have a capable neural network,
+Dialogue: 0,0:01:58.80,0:02:05.40,Sub,,0,0,0,,but then it becomes superhuman as you roll it out at scale, and bring that to kind of language modeling, for example.
+Dialogue: 0,0:02:05.45,0:02:06.19,Sub,,0,0,0,,Um and so,
+Dialogue: 0,0:02:06.24,0:02:10.95,Sub,,0,0,0,,our big pursuit over the past 4 years has been to find a way to build
+Dialogue: 0,0:02:11.00,0:02:16.33,Sub,,0,0,0,,chips that will allow for kind of simultaneously taking these huge models and running them much,
+Dialogue: 0,0:02:16.38,0:02:19.51,Sub,,0,0,0,,much, much faster than the chips of today.
+Dialogue: 0,0:02:19.56,0:02:27.05,Sub,,0,0,0,,Um but do that in a way that kind of scales, so scales to models beyond the frontier today, scales to extraordinarily long contexts.
+Dialogue: 0,0:02:27.10,0:02:29.39,Sub,,0,0,0,,Um and so, that's the the mission that we've been on.
+Dialogue: 0,0:02:29.44,0:02:35.04,Sub,,0,0,0,,It's become a much more interesting chip landscape in the uh 4 years since you started the company.
+Dialogue: 0,0:02:35.09,0:02:41.19,Sub,,0,0,0,,Uh where would you place yourself in the uh overall GPU and accelerator landscape for inference?
+Dialogue: 0,0:02:41.24,0:02:46.26,Sub,,0,0,0,,Yeah, it's a uh there's a kind of extraordinary zoo now of options available.
+Dialogue: 0,0:02:46.31,0:02:50.21,Sub,,0,0,0,,Um and if you look across this kind of entire space of kind of AI ASICs,
+Dialogue: 0,0:02:50.26,0:02:57.95,Sub,,0,0,0,,um one of the things that I think is very striking is there's a lot of relatively identikit chips out there.
+Dialogue: 0,0:02:58.00,0:03:05.15,Sub,,0,0,0,,Um and this is kind of a structural It's a kind of structural industry uh property where if you look especially across kind of hyperscaler efforts,
+Dialogue: 0,0:03:05.20,0:03:09.91,Sub,,0,0,0,,and you know, Google kind of kicked this off with the TPU more than 10 years ago.
+Dialogue: 0,0:03:09.96,0:03:15.02,Sub,,0,0,0,,Um you see this paradigm where, although there are a number of kind of proprietary internal chips,
+Dialogue: 0,0:03:15.07,0:03:19.48,Sub,,0,0,0,,you know, Google with the TPU, Meta with MTIA, Microsoft with Maya,
+Dialogue: 0,0:03:19.53,0:03:21.79,Sub,,0,0,0,,OpenAI now with Halapenio,
+Dialogue: 0,0:03:21.84,0:03:30.24,Sub,,0,0,0,,um these chips that are ultimately developed and delivered in partnership with kind of a relatively small number of what we might call ASIC houses.
+Dialogue: 0,0:03:30.29,0:03:32.63,Sub,,0,0,0,,These kind of back-end delivery houses.
+Dialogue: 0,0:03:32.68,0:03:36.56,Sub,,0,0,0,,Broadcom is is the largest at, you know, $2 trillion company.
+Dialogue: 0,0:03:36.61,0:03:40.51,Sub,,0,0,0,,Um that help people kind of realize these designs.
+Dialogue: 0,0:03:40.56,0:03:48.91,Sub,,0,0,0,,And so, when you kind of zoom into this this sort of seeming uh embarrassment of riches in the spectrum of what exists today,
+Dialogue: 0,0:03:48.96,0:03:53.15,Sub,,0,0,0,,uh you see that actually there's a lot of similarity across these platforms.
+Dialogue: 0,0:03:53.20,0:03:59.50,Sub,,0,0,0,,Um, you know, the all of these chips, you have HBM, this type of DRAM memory that is,
+Dialogue: 0,0:03:59.55,0:04:04.33,Sub,,0,0,0,,you know, common to Nvidia GPUs, AMD GPUs, and all of these other ASICs.
+Dialogue: 0,0:04:04.38,0:04:12.31,Sub,,0,0,0,,You have the same kinds of bets on Tensor Cores to do your matrix multiplications, the same advanced packaging with TSMC.
+Dialogue: 0,0:04:12.36,0:04:12.66,Sub,,0,0,0,,Um,
+Dialogue: 0,0:04:12.50,0:04:18.35,Sub,,0,0,0,,and so I think one of the things that we see in the landscape is there's a relative dearth still of kind
+Dialogue: 0,0:04:18.40,0:04:26.47,Sub,,0,0,0,,of efforts that go all the way up and down the silicon stack and try and build kind of fundamentally new capabilities.
+Dialogue: 0,0:04:26.52,0:04:28.35,Sub,,0,0,0,,Um, and this is kind of a structural thing.
+Dialogue: 0,0:04:28.40,0:04:33.71,Sub,,0,0,0,,There's just not that many teams that have decided, we're going to build from, you know, what you might call the kind of,
+Dialogue: 0,0:04:33.76,0:04:39.19,Sub,,0,0,0,,you know, the architectural layer, the front-end design layer, which mostly looks like kind of writing code,
+Dialogue: 0,0:04:39.24,0:04:44.17,Sub,,0,0,0,,but also all the way down to what we call kind of physical design, the process technology,
+Dialogue: 0,0:04:44.22,0:04:51.35,Sub,,0,0,0,,the kind of foundry interactions, the stuff that essentially has you flying back and forth to Taiwan or Korea every week.
+Dialogue: 0,0:04:51.40,0:04:56.11,Sub,,0,0,0,,Um, that's something which actually tends to still be left to a relatively small number of companies.
+Dialogue: 0,0:04:56.16,0:05:01.81,Sub,,0,0,0,,For people who don't work in the chip industry, what is the common abstraction or handoff between what they're,
+Dialogue: 0,0:05:01.86,0:05:06.35,Sub,,0,0,0,,what, you know, architecture-focused players are doing and a player like Broadcom?
+Dialogue: 0,0:05:06.40,0:05:11.35,Sub,,0,0,0,,Yeah, so I think the if you're, let's say you're Google and you're designing the TPU, um,
+Dialogue: 0,0:05:11.40,0:05:17.72,Sub,,0,0,0,,you have a number of people in your team who have a really strong understanding of the workloads that they're that they're trying to accelerate.
+Dialogue: 0,0:05:17.77,0:05:26.86,Sub,,0,0,0,,Um, and so, you know, going back over 10 years, this is a a world that then sees you conceive of things like the Tensor Core,
+Dialogue: 0,0:05:26.91,0:05:31.03,Sub,,0,0,0,,which is a designated circuit dreamt up by an architect, uh,
+Dialogue: 0,0:05:31.08,0:05:36.81,Sub,,0,0,0,,that is exceptionally good at matrix multiplications because you have this insight that matrix multiplications
+Dialogue: 0,0:05:36.86,0:05:42.67,Sub,,0,0,0,,are the overwhelming majority of the kind of flop count in these models that you're running.
+Dialogue: 0,0:05:42.72,0:05:48.75,Sub,,0,0,0,,Um, that's kind of the preserve of the architects, I guess, is somebody who really understands the way that chips behave,
+Dialogue: 0,0:05:48.80,0:05:53.63,Sub,,0,0,0,,but also ideally has a very strong understanding of the kind of target workloads.
+Dialogue: 0,0:05:53.68,0:06:00.70,Sub,,0,0,0,,Um what you'll then see inside those same organizations is a set of sort of, you know, very smart people that kind of lower that down into,
+Dialogue: 0,0:06:00.75,0:06:05.23,Sub,,0,0,0,,I guess, you know, essentially a kind of circuit level description of how this chip should behave.
+Dialogue: 0,0:06:05.28,0:06:09.00,Sub,,0,0,0,,And so, a lot of this is what we call front-end design.
+Dialogue: 0,0:06:09.05,0:06:14.22,Sub,,0,0,0,,Um you know, mechanistically it still looks like like writing code on a computer,
+Dialogue: 0,0:06:14.27,0:06:19.67,Sub,,0,0,0,,and it's still code that is then handed off to uh a player like Broadcom.
+Dialogue: 0,0:06:19.72,0:06:26.88,Sub,,0,0,0,,Um and so, you know, that kind of front-end design that describes the kind of underlying intent of the chip, the underlying logic of the chip,
+Dialogue: 0,0:06:26.93,0:06:32.49,Sub,,0,0,0,,is then transformed ultimately into something that, you know, what gets shipped to TSMC in the end is literally a kind of bitmap.
+Dialogue: 0,0:06:32.54,0:06:36.95,Sub,,0,0,0,,Uh you know, we would have this file type you call GDS2, and it's literally,
+Dialogue: 0,0:06:37.00,0:06:40.98,Sub,,0,0,0,,you know, where do I put the metal layers, where do I put each individual transistor.
+Dialogue: 0,0:06:41.03,0:06:42.82,Sub,,0,0,0,,And so, it's a it's a full layout.
+Dialogue: 0,0:06:42.87,0:06:50.69,Sub,,0,0,0,,And so, you go through this process of synthesis of that RTL into a kind of set of circuits that then ultimately get laid out.
+Dialogue: 0,0:06:50.74,0:06:56.41,Sub,,0,0,0,,And a lot of the complexity there is around um you know, in Broadcom's case, you know,
+Dialogue: 0,0:06:56.46,0:07:01.39,Sub,,0,0,0,,it would be ownership of analog IP that is used for chip-to-chip connectivity.
+Dialogue: 0,0:07:01.44,0:07:07.25,Sub,,0,0,0,,And it is this kind of physical placement that is specific to a given process node at TSMC.
+Dialogue: 0,0:07:07.30,0:07:11.95,Sub,,0,0,0,,So, you know, we talk about like 3 nanometers, 5 nanometers, et cetera.
+Dialogue: 0,0:07:12.00,0:07:18.07,Sub,,0,0,0,,Um so, that piece is still today, you know, generally it is a kind of outsourced activity for all of these projects.
+Dialogue: 0,0:07:18.12,0:07:24.95,Sub,,0,0,0,,You are describing what feels like a very large project to do end-to-end um new chip creation.
+Dialogue: 0,0:07:25.00,0:07:31.94,Sub,,0,0,0,,Uh from a workload perspective, you're working with several frontier players to sort of characterize that and make sure that you can serve them.
+Dialogue: 0,0:07:31.99,0:07:34.95,Sub,,0,0,0,,How do you think about like what does the Fractal team look like today?
+Dialogue: 0,0:07:35.00,0:07:36.63,Sub,,0,0,0,,How can you do that as a startup?
+Dialogue: 0,0:07:36.68,0:07:38.51,Sub,,0,0,0,,Yeah, I think there is a No, it's funny,
+Dialogue: 0,0:07:38.56,0:07:44.53,Sub,,0,0,0,,there's a lot of industries where there will be a kind of waterfall style approach to doing things and then suddenly,
+Dialogue: 0,0:07:44.58,0:07:51.38,Sub,,0,0,0,,you know, along comes a new way of thinking and it's kind of more agile to borrow from like management philosophy, right?
+Dialogue: 0,0:07:51.43,0:07:57.98,Sub,,0,0,0,,And I think for us as a very full-stack company, so we have a team that does span, you know, very deep workload understanding.
+Dialogue: 0,0:07:58.03,0:08:02.91,Sub,,0,0,0,,I think we actually try to, you know, run ahead uh in many places and look at, you know,
+Dialogue: 0,0:08:02.96,0:08:07.58,Sub,,0,0,0,,where would we change a model architecture to be more exceptionally aligned with our bets.
+Dialogue: 0,0:08:07.64,0:08:12.74,Sub,,0,0,0,,What do we think is like kind of the scaling law vector for the particular bets that we are taking.
+Dialogue: 0,0:08:12.79,0:08:16.19,Sub,,0,0,0,,Uh and then we can advocate to our customers and our partners on that.
+Dialogue: 0,0:08:16.24,0:08:25.31,Sub,,0,0,0,,And it also helps us inform a set of bets for a chip that, you know, isn't going to necessarily exist in volume for, you know, 1 or 2 years.
+Dialogue: 0,0:08:25.36,0:08:28.99,Sub,,0,0,0,,Um that becomes a really important sort of part of the muscle that we have to build.
+Dialogue: 0,0:08:29.04,0:08:34.32,Sub,,0,0,0,,But then as we look across this kind of, you know, ability to spin a very kind of agile loop,
+Dialogue: 0,0:08:34.37,0:08:38.32,Sub,,0,0,0,,it means that inside Fractile we do have front-end designers.
+Dialogue: 0,0:08:38.37,0:08:40.29,Sub,,0,0,0,,We have our own physical design team.
+Dialogue: 0,0:08:40.34,0:08:42.79,Sub,,0,0,0,,We have our own kind of back-end implementation team.
+Dialogue: 0,0:08:42.84,0:08:47.27,Sub,,0,0,0,,You know, we do our own work on advanced packaging, for example.
+Dialogue: 0,0:08:47.32,0:08:49.77,Sub,,0,0,0,,Um and that's not an enormous headcount, right?
+Dialogue: 0,0:08:49.82,0:08:52.55,Sub,,0,0,0,,I mean, Fractile today is about 150 people.
+Dialogue: 0,0:08:52.60,0:08:56.44,Sub,,0,0,0,,Uh we're sort of skinny in in every single one of those uh sectors.
+Dialogue: 0,0:08:56.49,0:09:01.11,Sub,,0,0,0,,But what it allows us to do is have this kind of much more agile closed loop.
+Dialogue: 0,0:09:01.16,0:09:09.27,Sub,,0,0,0,,Um and I think that's becoming increasingly essential as you look at the sort of cadence needs that are set by this industry.
+Dialogue: 0,0:09:09.32,0:09:15.47,Sub,,0,0,0,,Um you know, the chasing, you know, perennially of the sort of chasing of the tail of the workloads is, you know,
+Dialogue: 0,0:09:15.52,0:09:23.27,Sub,,0,0,0,,you have to in the AI chip space more than any other kind of chip play before, you have to really place your bets correctly.
+Dialogue: 0,0:09:23.32,0:09:25.89,Sub,,0,0,0,,Uh so you have to have a lot of, you know, skill and a lot of luck.
+Dialogue: 0,0:09:25.94,0:09:28.53,Sub,,0,0,0,,And you also then need to strike very fast.
+Dialogue: 0,0:09:28.58,0:09:35.19,Sub,,0,0,0,,And so this kind of structural setup where we have the entire story in-house,
+Dialogue: 0,0:09:35.24,0:09:40.59,Sub,,0,0,0,,uh it's very very different to this kind of, I guess, prior approach where there's almost like a handoff point.
+Dialogue: 0,0:09:40.64,0:09:44.24,Sub,,0,0,0,,And so, you get to a certain level and then you hand off to another partner.
+Dialogue: 0,0:09:44.29,0:09:49.27,Sub,,0,0,0,,And it's some to some extent, you're kind of at the mercy of of how that other partner then behaves.
+Dialogue: 0,0:09:49.32,0:09:54.11,Sub,,0,0,0,,What do you think are the single most important technical bets that the company has made?
+Dialogue: 0,0:09:54.16,0:10:04.36,Sub,,0,0,0,,So, for us, I think, you know, one is the direction, you know, 4 and 1/2 years ago, um, you were obviously right in the heart of an inference story,
+Dialogue: 0,0:10:04.41,0:10:11.43,Sub,,0,0,0,,but I still felt that we were educating the world about what inference meant, um, for 2 years or so following that.
+Dialogue: 0,0:10:11.48,0:10:18.06,Sub,,0,0,0,,Some of the inference chips today, including one that recently went public, was a training chip until about 18 months ago.
+Dialogue: 0,0:10:18.11,0:10:23.25,Sub,,0,0,0,,You know, there was a real avoidance of this idea that this sort of small, you know,
+Dialogue: 0,0:10:23.30,0:10:26.80,Sub,,0,0,0,,final marginal cost, you know, marginal cost I think has two senses, right?
+Dialogue: 0,0:10:26.85,0:10:34.47,Sub,,0,0,0,,It either sounds like it's a small cost, what it in fact means is this is the cost that you pay every single time you deploy these models.
+Dialogue: 0,0:10:34.52,0:10:39.55,Sub,,0,0,0,,Um, so I think firstly, just the the sheer bet that we were going to slip into a kind of deployment error.
+Dialogue: 0,0:10:39.60,0:10:41.12,Sub,,0,0,0,,Um, and the bet on speed.
+Dialogue: 0,0:10:41.17,0:10:45.90,Sub,,0,0,0,,That was something that kind of really informed a lot of what we then did as a kind of architectural response.
+Dialogue: 0,0:10:45.95,0:10:52.27,Sub,,0,0,0,,On the architectural side, you know, we've been through a journey, I think, for the first kind of 2 years or so of the company's life,
+Dialogue: 0,0:10:52.32,0:10:58.56,Sub,,0,0,0,,um, we were working on a little like Grok or Cerebrus, uh, working on an SRAM based chip.
+Dialogue: 0,0:10:58.61,0:11:04.28,Sub,,0,0,0,,So, we'd sort of made the observation that, um, SRAM is this super high bandwidth memory.
+Dialogue: 0,0:11:04.33,0:11:06.98,Sub,,0,0,0,,It lives on the same piece of silicon as your logic, uh,
+Dialogue: 0,0:11:07.03,0:11:12.97,Sub,,0,0,0,,and so you have this extremely high bandwidth between your compute where you're running the maths as you run these models,
+Dialogue: 0,0:11:13.02,0:11:18.55,Sub,,0,0,0,,and let's say the weights of your model or the KV cache of this model as you're rolling it out.
+Dialogue: 0,0:11:18.60,0:11:24.67,Sub,,0,0,0,,Um, and that's something which then then can drive you to thousands of tokens per second on these language models.
+Dialogue: 0,0:11:24.72,0:11:29.43,Sub,,0,0,0,,Um, but I think one of the things that we started to worry about in kind of, uh,
+Dialogue: 0,0:11:29.48,0:11:36.20,Sub,,0,0,0,,towards the end of 2023 and certainly in 2024 was the scalability of this approach.
+Dialogue: 0,0:11:36.25,0:11:40.19,Sub,,0,0,0,,Um and you know, I think there are two things that grow with AI today.
+Dialogue: 0,0:11:40.24,0:11:42.91,Sub,,0,0,0,,One is obviously the parameters of the model.
+Dialogue: 0,0:11:42.96,0:11:50.58,Sub,,0,0,0,,Um but the other and this was the one that kind of really got us nervous about that architectural approach was um uh you know,
+Dialogue: 0,0:11:50.63,0:11:57.87,Sub,,0,0,0,,this kind of growing context length that was becoming more and more part of the story for for how we saw these models rolling out.
+Dialogue: 0,0:11:57.92,0:12:05.21,Sub,,0,0,0,,Um and it's that that has taken us over the past couple of years to a a kind of what we see as a more exciting best, I guess, in some ways,
+Dialogue: 0,0:12:05.26,0:12:10.28,Sub,,0,0,0,,which is working more closely with memory vendors as well as our sort of logic
+Dialogue: 0,0:12:10.33,0:12:17.32,Sub,,0,0,0,,foundry partners to find ways to get extremely high bandwidth access to higher capacity memories.
+Dialogue: 0,0:12:17.37,0:12:23.52,Sub,,0,0,0,,So, for the past couple of years, we've been involved in these kind of skunk works projects to move away from SRAM,
+Dialogue: 0,0:12:23.57,0:12:29.99,Sub,,0,0,0,,you know, looking at how we can get, for instance, much, much, much higher bandwidth to DRAM memories.
+Dialogue: 0,0:12:30.04,0:12:33.87,Sub,,0,0,0,,Um and this has been a very exciting bet for us because it's allowed us now
+Dialogue: 0,0:12:33.92,0:12:38.87,Sub,,0,0,0,,to put together a platform which will be ramping in the second half of next year,
+Dialogue: 0,0:12:38.92,0:12:42.55,Sub,,0,0,0,,um which uh kind of unites, I guess,
+Dialogue: 0,0:12:42.60,0:12:50.13,Sub,,0,0,0,,the scalability of these kind of higher capacity, lower cost DRAM memories that you have on a GPU,
+Dialogue: 0,0:12:50.18,0:12:56.21,Sub,,0,0,0,,on a TPU, uh with all of the speed advantages that you get from a Groq chip or a Cerebras chip.
+Dialogue: 0,0:12:56.26,0:13:05.51,Sub,,0,0,0,,Um and I think where we see this is especially vital is you know, if you look at where it is that speed really moves the dial today,
+Dialogue: 0,0:13:05.56,0:13:09.67,Sub,,0,0,0,,there is a kind of there's a version of this which is like a snap your chatbot.
+Dialogue: 0,0:13:09.72,0:13:11.18,Sub,,0,0,0,,But I think this is like, you know,
+Dialogue: 0,0:13:11.23,0:13:18.25,Sub,,0,0,0,,when um uh Henry Ford sort of asked the rhetorical question of what people would have said they wanted and you know,
+Dialogue: 0,0:13:18.30,0:13:20.43,Sub,,0,0,0,,faster horses uh rather than a car.
+Dialogue: 0,0:13:20.48,0:13:24.85,Sub,,0,0,0,,Uh the snap your chatbot is kind of the faster horses of kind of fast inference.
+Dialogue: 0,0:13:24.90,0:13:33.03,Sub,,0,0,0,,The The where the ability to take a multi-trillion parameter model and run it comfortably at many thousands of tokens per second in our
+Dialogue: 0,0:13:33.08,0:13:43.43,Sub,,0,0,0,,view is a kind of fundamental elevator on capability for AI is in taking these kind of very long-running agents and making them radically faster.
+Dialogue: 0,0:13:43.48,0:13:49.97,Sub,,0,0,0,,Um and so that's kind of a it's a tantalizing mismatch today between the properties of the fast inference chips that we have,
+Dialogue: 0,0:13:50.02,0:13:53.46,Sub,,0,0,0,,which have super high bandwidth memory but incredibly low capacity.
+Dialogue: 0,0:13:53.51,0:14:01.05,Sub,,0,0,0,,And if you look at the sort of technical detail of how they actually get employed and deployed today, they're not running long context attention.
+Dialogue: 0,0:14:01.10,0:14:03.76,Sub,,0,0,0,,You still flip back to a GPU to do that.
+Dialogue: 0,0:14:03.81,0:14:08.38,Sub,,0,0,0,,And so there's this sort of tantalizing mismatch where precisely the area where we
+Dialogue: 0,0:14:08.43,0:14:11.67,Sub,,0,0,0,,are almost able to go and take these things and make them much faster,
+Dialogue: 0,0:14:11.72,0:14:14.55,Sub,,0,0,0,,we also don't have that technical capability.
+Dialogue: 0,0:14:14.60,0:14:20.83,Sub,,0,0,0,,Um and so in a sense this is, you know, like many technical challenges it boils down to a slightly mundane technical observation,
+Dialogue: 0,0:14:20.88,0:14:25.66,Sub,,0,0,0,,which is we need chips that have this kind of particular ineffable property,
+Dialogue: 0,0:14:25.71,0:14:30.85,Sub,,0,0,0,,which is incredibly high bandwidth to memory so we can load the weights, we can load the state,
+Dialogue: 0,0:14:30.90,0:14:36.55,Sub,,0,0,0,,you know, many thousands of times per second, uh but also have like economical memory.
+Dialogue: 0,0:14:36.60,0:14:42.50,Sub,,0,0,0,,Because when you look at what it looks like to run inference at data center scale for thousands of users,
+Dialogue: 0,0:14:42.55,0:14:50.11,Sub,,0,0,0,,the economics actually collapse down to uh essentially a kind of cost per gigabyte of the memory that you're employing.
+Dialogue: 0,0:14:50.16,0:14:55.67,Sub,,0,0,0,,Um and so that's been the sort of other key focus for us is unlocking this kind of fundamentally new building block,
+Dialogue: 0,0:14:55.72,0:15:04.75,Sub,,0,0,0,,which is uh finding a path to get aggressively high bandwidth from this kind of uh you know, from the world's lower-cost memory, uh DRAM memory.
+Dialogue: 0,0:15:04.80,0:15:08.71,Sub,,0,0,0,,You said a few things that I I think are um not the conventional wisdom.
+Dialogue: 0,0:15:08.76,0:15:16.30,Sub,,0,0,0,,One in in terms of making a bet yourselves on where the workloads are going, and then two, the idea that you can uh you know,
+Dialogue: 0,0:15:16.35,0:15:25.47,Sub,,0,0,0,,traditional chip people might think of delivery of chips in a generation, mhm, you know, every year or a little faster than that.
+Dialogue: 0,0:15:25.52,0:15:31.58,Sub,,0,0,0,,Um and you know, big architectural changes come come slower than um that that's sort of tick rate.
+Dialogue: 0,0:15:31.63,0:15:40.95,Sub,,0,0,0,,Uh but you you you've aspirationally said within Fractal that you think the speed of like change in architecture um and change in you know,
+Dialogue: 0,0:15:41.00,0:15:43.80,Sub,,0,0,0,,the the technical plays you're making can be much faster than that.
+Dialogue: 0,0:15:43.85,0:15:48.38,Sub,,0,0,0,,Can you talk a little bit about like what would enable that to happen because the you know,
+Dialogue: 0,0:15:48.43,0:15:53.36,Sub,,0,0,0,,I I I think people have a better understanding of the physical limits of the supply chain today than they used to.
+Dialogue: 0,0:15:53.41,0:15:55.91,Sub,,0,0,0,,So, what is the flexibility that the industry could have?
+Dialogue: 0,0:15:55.96,0:15:56.36,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:15:56.41,0:15:59.46,Sub,,0,0,0,,So, I think there's a nuance on uh on this,
+Dialogue: 0,0:15:59.51,0:16:04.83,Sub,,0,0,0,,but what what you want to any given moment in time for an AI chip is you wish that you
+Dialogue: 0,0:16:04.88,0:16:12.18,Sub,,0,0,0,,had a chip that was precisely targeting the workload that you care about uh and in your hand today in volume.
+Dialogue: 0,0:16:12.23,0:16:16.24,Sub,,0,0,0,,But if you had that chip, uh you know, you're going to want something else to get in 6 months' time.
+Dialogue: 0,0:16:16.29,0:16:18.43,Sub,,0,0,0,,Like these workloads move on very fast.
+Dialogue: 0,0:16:18.48,0:16:22.91,Sub,,0,0,0,,Well, today, you know, we have a model coming out about every uh 2 weeks.
+Dialogue: 0,0:16:22.96,0:16:23.91,Sub,,0,0,0,,So, it's what you say.
+Dialogue: 0,0:16:23.96,0:16:29.03,Sub,,0,0,0,,so, the sanity comes from looking across those models and saying, well, okay, what's what's common to all of these?
+Dialogue: 0,0:16:29.08,0:16:31.10,Sub,,0,0,0,,And like thankfully, there's enough that is common.
+Dialogue: 0,0:16:31.15,0:16:39.39,Sub,,0,0,0,,So, you know, it's always the case that a new LLM uh desperately wants to have orders of magnitude more bandwidth to memory in order to run faster.
+Dialogue: 0,0:16:39.44,0:16:44.02,Sub,,0,0,0,,Uh it remains the case today that you know, these LLMs tend to be auto-aggressive,
+Dialogue: 0,0:16:44.07,0:16:49.06,Sub,,0,0,0,,very low batch as you generate text uh with this sort of fundamental trade-off again between
+Dialogue: 0,0:16:49.11,0:16:52.98,Sub,,0,0,0,,kind of throughput efficiency and cost and the speed that you can serve these models at.
+Dialogue: 0,0:16:53.03,0:17:00.47,Sub,,0,0,0,,Uh so, there are certain things that these models are unified and kind of crying out for and and memory bandwidth is one of them.
+Dialogue: 0,0:17:00.52,0:17:06.71,Sub,,0,0,0,,Um but then, you know, as you say, there are these evolutions and especially if you look at the kind of frontier of open-source Chinese models,
+Dialogue: 0,0:17:06.76,0:17:12.81,Sub,,0,0,0,,you know, the exact nature of an attention mechanism will churn every couple of weeks in terms of what's kind of the frontier.
+Dialogue: 0,0:17:12.86,0:17:19.11,Sub,,0,0,0,,The sparsity the sparsity level of the MOEs that you have, the sparsity on the attention itself.
+Dialogue: 0,0:17:19.16,0:17:22.03,Sub,,0,0,0,,And you know, we may be in for like bigger shocks as well.
+Dialogue: 0,0:17:22.08,0:17:24.75,Sub,,0,0,0,,There may be kind of more fundamental shifts.
+Dialogue: 0,0:17:24.80,0:17:31.78,Sub,,0,0,0,,And so I think there's this duality around sort of the limits of the physical and the kind of financial world, I guess.
+Dialogue: 0,0:17:31.83,0:17:33.67,Sub,,0,0,0,,And then these demands of you know,
+Dialogue: 0,0:17:33.72,0:17:43.65,Sub,,0,0,0,,workloads that churn at the pace of essentially software where although there is this sort of clear desire to be able to kind of ship new platforms,
+Dialogue: 0,0:17:43.70,0:17:45.51,Sub,,0,0,0,,you know, aggressively faster.
+Dialogue: 0,0:17:45.56,0:17:48.64,Sub,,0,0,0,,I think there are also some sort of fundamental breaks on this.
+Dialogue: 0,0:17:48.69,0:17:54.79,Sub,,0,0,0,,So So at Fractal, you know, we're extremely excited about being AI forward and how we do chip design.
+Dialogue: 0,0:17:54.84,0:18:00.03,Sub,,0,0,0,,I think we've seen this ability to own the entire end-to-end gamut of the
+Dialogue: 0,0:18:00.08,0:18:05.37,Sub,,0,0,0,,problem as really enabling a kind of fundamental rethink of how we do things.
+Dialogue: 0,0:18:05.42,0:18:09.07,Sub,,0,0,0,,You know, if you think about classic CS law is Amdahl's law, right?
+Dialogue: 0,0:18:09.12,0:18:13.48,Sub,,0,0,0,,Like everything I can parallelize becomes very very fast and the part that I can't parallelize doesn't.
+Dialogue: 0,0:18:13.53,0:18:21.91,Sub,,0,0,0,,And I think it's similar when you're in a like long chain of organizations that you know,
+Dialogue: 0,0:18:21.96,0:18:31.44,Sub,,0,0,0,,there isn't necessarily an overwhelming need to or return on radically changing your processes as a front-end
+Dialogue: 0,0:18:31.49,0:18:38.88,Sub,,0,0,0,,focused chip design startup adopting AI in aggressive ways to shorten your timelines from being you know,
+Dialogue: 0,0:18:38.93,0:18:43.31,Sub,,0,0,0,,maybe 12 months of front-end design work to a tiny fraction of that.
+Dialogue: 0,0:18:43.36,0:18:49.35,Sub,,0,0,0,,If there's then going to be kind of the conventional bottlenecks and the conventional pace on the next piece.
+Dialogue: 0,0:18:49.40,0:18:52.92,Sub,,0,0,0,,And I think that's sort of you know, at some extent there will always be those bottlenecks.
+Dialogue: 0,0:18:52.97,0:18:57.77,Sub,,0,0,0,,You know, we all have the same kind of fab cycle times with our foundry partners.
+Dialogue: 0,0:18:57.82,0:19:05.10,Sub,,0,0,0,,So So from the moment you send the chip to them to getting it back is you know, three to five months even in a kind of super hot lot scenario.
+Dialogue: 0,0:19:05.15,0:19:08.68,Sub,,0,0,0,,And so these are the kind of innate latencies, I guess in the industry.
+Dialogue: 0,0:19:08.73,0:19:16.66,Sub,,0,0,0,,And then when you get that chip back, I think it is vital to look at the the way that these chips actually become financializable,
+Dialogue: 0,0:19:16.71,0:19:19.05,Sub,,0,0,0,,which is that they do have a kind of payoff period.
+Dialogue: 0,0:19:19.10,0:19:28.83,Sub,,0,0,0,,You have to have really a kind of 3 to 5 year amortization window for that chip to make it a sensible financial decision.
+Dialogue: 0,0:19:28.88,0:19:34.62,Sub,,0,0,0,,Um and so there's these sort of two things that are in tension in which I I guess I believe two slightly conflicting things at the same time.
+Dialogue: 0,0:19:34.67,0:19:42.34,Sub,,0,0,0,,One is there is a huge value in being able to take the overall chip design cycle and compress that and compress that.
+Dialogue: 0,0:19:42.39,0:19:44.40,Sub,,0,0,0,,Uh there is also, I think,
+Dialogue: 0,0:19:44.45,0:19:51.99,Sub,,0,0,0,,what we don't lose is the need to place really thoughtful and subtle bets architecturally because
+Dialogue: 0,0:19:52.04,0:19:57.37,Sub,,0,0,0,,the chip you actually end up making does still need to have a 3 year plus,
+Dialogue: 0,0:19:57.42,0:19:59.30,Sub,,0,0,0,,you know, useful lifespan.
+Dialogue: 0,0:19:59.35,0:20:02.45,Sub,,0,0,0,,Um and so I think for for me, you know,
+Dialogue: 0,0:20:02.50,0:20:10.10,Sub,,0,0,0,,what it means to be able to over time compress that kind of chip design cycle is essentially that you get to have more shots on goal.
+Dialogue: 0,0:20:10.15,0:20:15.63,Sub,,0,0,0,,You want to be forever ready to take a given flagship platform and say, right, that's it.
+Dialogue: 0,0:20:15.68,0:20:18.69,Sub,,0,0,0,,That is actually the flagship and this is the one we're going to ramp.
+Dialogue: 0,0:20:18.74,0:20:21.53,Sub,,0,0,0,,But then it's a, you know, 12 month, 18 month volume ramp.
+Dialogue: 0,0:20:21.58,0:20:23.40,Sub,,0,0,0,,And you're expecting it to have longevity.
+Dialogue: 0,0:20:23.45,0:20:27.12,Sub,,0,0,0,,You're expecting it to actually continue to drive value to your customers.
+Dialogue: 0,0:20:27.17,0:20:31.99,Sub,,0,0,0,,And so I think that the the sort of subtlety here is, you know,
+Dialogue: 0,0:20:32.04,0:20:38.23,Sub,,0,0,0,,I'm not a believer in the idea that we will ultimately get to a place where we are shipping a fundamentally new chip,
+Dialogue: 0,0:20:38.28,0:20:41.11,Sub,,0,0,0,,uh you know, every few weeks just because we've shortened that time.
+Dialogue: 0,0:20:41.16,0:20:43.40,Sub,,0,0,0,,Because I think this is a this is a physical world.
+Dialogue: 0,0:20:43.45,0:20:47.30,Sub,,0,0,0,,There is a certain amount of constraint on, you know, data center power.
+Dialogue: 0,0:20:47.35,0:20:50.06,Sub,,0,0,0,,There are latencies to installing these things.
+Dialogue: 0,0:20:50.11,0:20:52.95,Sub,,0,0,0,,And you need to finance the actual underlying silicon.
+Dialogue: 0,0:20:53.00,0:20:55.03,Sub,,0,0,0,,So it needs to have that payoff period.
+Dialogue: 0,0:20:55.08,0:21:00.21,Sub,,0,0,0,,But I think what you can get to is a world where the shorter you can make that latency,
+Dialogue: 0,0:21:00.26,0:21:09.51,Sub,,0,0,0,,that gap between an observation and realizing that bet in volume, that is where there's an, you know, an enormous amount of value to be captured.
+Dialogue: 0,0:21:09.56,0:21:12.33,Sub,,0,0,0,,Um and I think it's also an area where, you know,
+Dialogue: 0,0:21:12.38,0:21:18.47,Sub,,0,0,0,,Fractal is a It is only because you the decisions that you make about what to ramp are the correct ones.
+Dialogue: 0,0:21:18.52,0:21:18.97,Sub,,0,0,0,,That's right.
+Dialogue: 0,0:21:19.02,0:21:24.43,Sub,,0,0,0,,I think you you know, you want to be and maybe you get to have more irons in the fire as well.
+Dialogue: 0,0:21:24.48,0:21:34.67,Sub,,0,0,0,,So, you know, one of the things that I think is so exciting about AI capability rising is um as we do become more productive in doing things,
+Dialogue: 0,0:21:34.72,0:21:38.81,Sub,,0,0,0,,uh you know, there's obviously these kind of two responses, you know, generally across the economy.
+Dialogue: 0,0:21:38.86,0:21:40.61,Sub,,0,0,0,,One is oh no, we're not going to have as much to do.
+Dialogue: 0,0:21:40.66,0:21:42.49,Sub,,0,0,0,,We may you know, maybe there's jobs lost.
+Dialogue: 0,0:21:42.54,0:21:46.06,Sub,,0,0,0,,The other is uh we get to do more things.
+Dialogue: 0,0:21:46.11,0:21:51.67,Sub,,0,0,0,,Um and I think, you know, standing here from from Fractal, you know, right now we're trying to build a single chip.
+Dialogue: 0,0:21:51.72,0:21:56.63,Sub,,0,0,0,,We know that we're up against competitors that have uh you know, if you crack open an Nvidia system,
+Dialogue: 0,0:21:56.68,0:22:04.75,Sub,,0,0,0,,it has anywhere between kind of six and nine custom chips all built by Nvidia to come together to build something that is really, really potent.
+Dialogue: 0,0:22:04.80,0:22:06.41,Sub,,0,0,0,,Um so, there's already a gap there.
+Dialogue: 0,0:22:06.46,0:22:12.67,Sub,,0,0,0,,You know, it'd be great to be productive enough that we could start to build our own responses in that same kind of way.
+Dialogue: 0,0:22:12.72,0:22:13.17,Sub,,0,0,0,,Um and so,
+Dialogue: 0,0:22:13.22,0:22:18.20,Sub,,0,0,0,,I think this idea of being able to have at any given moment a kind of rolling
+Dialogue: 0,0:22:18.25,0:22:24.23,Sub,,0,0,0,,frontier of bets that you hope are deeply aligned and which you're ready to trigger the ramp of,
+Dialogue: 0,0:22:24.28,0:22:28.07,Sub,,0,0,0,,this is a huge advantage if you can kind of build that machine and build that engine.
+Dialogue: 0,0:22:28.12,0:22:34.19,Sub,,0,0,0,,And the six-month gap that that might then perpetually give you against your competition,
+Dialogue: 0,0:22:34.24,0:22:37.21,Sub,,0,0,0,,uh that is the kind of, you know, wedge that allows you to drive in.
+Dialogue: 0,0:22:37.26,0:22:38.66,Sub,,0,0,0,,And we see this in in Frontier Lab.
+Dialogue: 0,0:22:38.71,0:22:39.01,Sub,,0,0,0,,So,
+Dialogue: 0,0:22:38.87,0:22:47.03,Sub,,0,0,0,,it's the equivalent of the Frontier model for the chip space is if you can just find a way to structurally carve out a three to six-month advantage,
+Dialogue: 0,0:22:47.08,0:22:49.67,Sub,,0,0,0,,uh you will be winning all of those deployments.
+Dialogue: 0,0:22:49.72,0:22:57.04,Sub,,0,0,0,,There's a meme in here somewhere of CEO saying, "Wow, this AI stuff is great and we structured the organization in a way that can consume it.
+Dialogue: 0,0:22:57.09,0:22:59.71,Sub,,0,0,0,,Instead of one program, we're going to have six, guys."
+Dialogue: 0,0:22:59.76,0:23:00.59,Sub,,0,0,0,,And everybody cheers.
+Dialogue: 0,0:23:00.64,0:23:00.94,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:23:00.91,0:23:02.55,Sub,,0,0,0,,I think there's some truth in that.
+Dialogue: 0,0:23:02.60,0:23:11.30,Sub,,0,0,0,,What uh I was talking to um one of the top three semi CEOs and he wouldn't let me put this prediction uh you know, actually on air,
+Dialogue: 0,0:23:11.35,0:23:21.15,Sub,,0,0,0,,but I asked him like how soon until we can have essentially like intent from chief architect into uh fully usable GDSII file and he's like 10 years.
+Dialogue: 0,0:23:21.20,0:23:21.53,Sub,,0,0,0,,Yeah.
+Dialogue: 0,0:23:21.56,0:23:23.16,Sub,,0,0,0,,It's not going to happen like now.
+Dialogue: 0,0:23:23.21,0:23:24.77,Sub,,0,0,0,,What what is your view on that?
+Dialogue: 0,0:23:24.82,0:23:27.63,Sub,,0,0,0,,Or where do you see the impact first in your organization?
+Dialogue: 0,0:23:27.68,0:23:28.18,Sub,,0,0,0,,You know,
+Dialogue: 0,0:23:28.23,0:23:33.68,Sub,,0,0,0,,a a heuristic that has been successful over the past couple of years is to just always
+Dialogue: 0,0:23:33.72,0:23:40.01,Sub,,0,0,0,,question your uh your sort of logical assumption and then divide it by four on time scale.
+Dialogue: 0,0:23:40.06,0:23:43.80,Sub,,0,0,0,,So, there is a world in which 10 years seems like a very sensible time frame for that,
+Dialogue: 0,0:23:43.85,0:23:47.55,Sub,,0,0,0,,but I would divide it by four and I'd probably subtract a bit from that.
+Dialogue: 0,0:23:47.60,0:23:59.01,Sub,,0,0,0,,You know, I think that we will have uh a space where there is a kind of prototyping that goes end-to-end um uh you know, in the next few years.
+Dialogue: 0,0:23:59.06,0:24:02.93,Sub,,0,0,0,,I think one of the things about chip design that is very interesting is there are
+Dialogue: 0,0:24:02.98,0:24:09.49,Sub,,0,0,0,,still these loops in the middle of it that are kind of conventional solutions to NP-hard problems.
+Dialogue: 0,0:24:09.54,0:24:14.39,Sub,,0,0,0,,And so, you have these sort of you know, if you really want to output that GDSII file,
+Dialogue: 0,0:24:14.44,0:24:18.52,Sub,,0,0,0,,today you are still running through a bunch of layout tools that are doing place
+Dialogue: 0,0:24:18.57,0:24:25.04,Sub,,0,0,0,,and route with conventional kind of uh algorithmic approaches which will run for days on end.
+Dialogue: 0,0:24:25.09,0:24:25.49,Sub,,0,0,0,,You know,
+Dialogue: 0,0:24:25.52,0:24:32.91,Sub,,0,0,0,,I think this is a a really interesting thing that we see and actually to bring it back somewhat to the sort of workloads we're excited about as well.
+Dialogue: 0,0:24:32.96,0:24:40.88,Sub,,0,0,0,,Um a lot of hard problems in the world I think look a bit like this where there is a lot of thinking that can now be automated.
+Dialogue: 0,0:24:40.93,0:24:43.39,Sub,,0,0,0,,There's a lot of cerebral work.
+Dialogue: 0,0:24:43.44,0:24:49.17,Sub,,0,0,0,,Um but then there is also uh you know, this kind of intrinsic latency to something that you do.
+Dialogue: 0,0:24:49.22,0:24:54.99,Sub,,0,0,0,,Um so, I think we see this in uh you know, AI for guiding uh AI model development today.
+Dialogue: 0,0:24:55.04,0:24:56.99,Sub,,0,0,0,,So, the RSI work.
+Dialogue: 0,0:24:57.04,0:25:01.33,Sub,,0,0,0,,Um you know, yes, we can now have extreme intelligence that is guiding our experiments,
+Dialogue: 0,0:25:01.38,0:25:05.36,Sub,,0,0,0,,but now we're just experiment bottlenecked, you know, we're compute time bottlenecked.
+Dialogue: 0,0:25:05.41,0:25:08.93,Sub,,0,0,0,,And so, I think with with chip design, it's a little bit like this.
+Dialogue: 0,0:25:08.98,0:25:14.35,Sub,,0,0,0,,Maybe to take the kind of, you know, architects intend through the GDSII question,
+Dialogue: 0,0:25:14.40,0:25:23.32,Sub,,0,0,0,,it's a little bit like the RSI question in that the things that will prevent us getting there extremely fast is the fact that actually in that flow,
+Dialogue: 0,0:25:23.37,0:25:29.99,Sub,,0,0,0,,there are a number of things that are genuinely kind of computationally expensive in a more conventional way.
+Dialogue: 0,0:25:30.04,0:25:35.95,Sub,,0,0,0,,I think what we will generally see for all of these sorts of problems and And they won't be replaced by surrogate models?
+Dialogue: 0,0:25:36.00,0:25:39.80,Sub,,0,0,0,,Well, I think you know, there's definitely these sort of simulation models.
+Dialogue: 0,0:25:39.85,0:25:43.71,Sub,,0,0,0,,I think driving approximations, you know,
+Dialogue: 0,0:25:43.76,0:25:49.23,Sub,,0,0,0,,all of the models that we see today for kind of finite element analysis and and sort of thermal estimation and so on.
+Dialogue: 0,0:25:49.28,0:25:53.87,Sub,,0,0,0,,I think there is a huge return to that kind of work precisely because of this kind
+Dialogue: 0,0:25:53.92,0:25:59.04,Sub,,0,0,0,,of Amdahl's law that is we accelerate the intelligence as we accelerate the period between these experiments,
+Dialogue: 0,0:25:59.09,0:26:00.07,Sub,,0,0,0,,between these trials.
+Dialogue: 0,0:26:00.12,0:26:01.19,Sub,,0,0,0,,They become the bottleneck.
+Dialogue: 0,0:26:01.24,0:26:03.67,Sub,,0,0,0,,much more important to accelerate those trials as well.
+Dialogue: 0,0:26:03.72,0:26:07.00,Sub,,0,0,0,,And so, you know, we are looking internally at, you know,
+Dialogue: 0,0:26:07.05,0:26:14.03,Sub,,0,0,0,,what is actually what are in the guts of some of those algorithms and is there a crude approximate way that you could do some of this,
+Dialogue: 0,0:26:14.08,0:26:20.58,Sub,,0,0,0,,you know, the I think chip design is not going to change in the final sign-off for quite some time.
+Dialogue: 0,0:26:20.63,0:26:29.90,Sub,,0,0,0,,It's incredibly valuable to have Cadence and Synopsys who've been working with TSMC and the other foundries for decades to build the sort of,
+Dialogue: 0,0:26:29.95,0:26:35.52,Sub,,0,0,0,,you know, the final check mark that says this thing is what we call DRC and LVS clean.
+Dialogue: 0,0:26:35.57,0:26:39.35,Sub,,0,0,0,,It conforms to the rules that that foundry has set.
+Dialogue: 0,0:26:39.40,0:26:43.34,Sub,,0,0,0,,That is actually where, you know, that sort of work is immensely valuable.
+Dialogue: 0,0:26:43.39,0:26:49.04,Sub,,0,0,0,,But could you have some kind of fuzzy placement algorithm in the meantime that gets you almost all the way to your final design,
+Dialogue: 0,0:26:49.09,0:26:56.95,Sub,,0,0,0,,helps you iterate faster, you know, I think that is exactly where people should be should be doing more work because otherwise that is the bottleneck.
+Dialogue: 0,0:26:57.00,0:27:05.10,Sub,,0,0,0,,Um the other part there and I think this is true of, you know, RSI for AI experiments as well is as we do become, you know,
+Dialogue: 0,0:27:05.15,0:27:08.96,Sub,,0,0,0,,as our intelligence levels on the the thinking that then drives that experiment
+Dialogue: 0,0:27:09.01,0:27:13.40,Sub,,0,0,0,,gets higher and higher um and as that experiment therefore becomes the bottleneck,
+Dialogue: 0,0:27:13.45,0:27:17.38,Sub,,0,0,0,,I think we do more thinking and this is just generally Fractiles workload bets.
+Dialogue: 0,0:27:17.43,0:27:24.37,Sub,,0,0,0,,It's the reason we're so excited about hard problems and it's kind of the reason that we see Fractile as the chip that
+Dialogue: 0,0:27:24.42,0:27:34.19,Sub,,0,0,0,,takes us toward accelerating the solution to hard problems in general is I think it becomes absolutely It's like almost uh you know,
+Dialogue: 0,0:27:34.24,0:27:39.99,Sub,,0,0,0,,a moral compunction to think harder before every single experiment that you fire off.
+Dialogue: 0,0:27:40.04,0:27:48.16,Sub,,0,0,0,,Um I think uh it was maybe Baron Milledge on Dwarkesh recently who said, you know, um that perhaps you could think for a hundred years, you know,
+Dialogue: 0,0:27:48.21,0:27:54.64,Sub,,0,0,0,,before you fire off an experiment and then think for another hundred years of human equivalent with these models uh about the results
+Dialogue: 0,0:27:54.69,0:27:59.97,Sub,,0,0,0,,of that AI experiment because the experiment in the middle is pretty expensive and takes takes a certain amount of wall clock time.
+Dialogue: 0,0:28:00.02,0:28:03.69,Sub,,0,0,0,,And so I think you get there also with things like chip design where
+Dialogue: 0,0:28:03.74,0:28:09.09,Sub,,0,0,0,,there are these kind of fundamental wall clock time bottlenecks for the more conventional algorithms.
+Dialogue: 0,0:28:09.14,0:28:16.23,Sub,,0,0,0,,We're going to be generating a lot of reasoning tokens um before we go and place a given circuit.
+Dialogue: 0,0:28:16.28,0:28:25.77,Sub,,0,0,0,,You are making workload bets and then collaborating closely with design partners uh on the model architectural,
+Dialogue: 0,0:28:25.82,0:28:29.17,Sub,,0,0,0,,you know, shifts hopefully a little ahead so you can actually do some planning.
+Dialogue: 0,0:28:29.22,0:28:30.15,Sub,,0,0,0,,What are you seeing?
+Dialogue: 0,0:28:30.20,0:28:34.30,Sub,,0,0,0,,The biggest thing that we're doing, of course, is this kind of speed chasing, right?
+Dialogue: 0,0:28:34.35,0:28:38.83,Sub,,0,0,0,,Maximizing memory bandwidth uh in order to be able to run these models faster.
+Dialogue: 0,0:28:38.88,0:28:46.31,Sub,,0,0,0,,Um and one of the dualities I think you have to span as a chip company is to build something that is both exceptionally good at the kind
+Dialogue: 0,0:28:46.36,0:28:49.72,Sub,,0,0,0,,of gamut of workloads that are coming down the pipe under this idea of
+Dialogue: 0,0:28:49.77,0:28:56.03,Sub,,0,0,0,,the kind of hardware lottery where these will be trained on HBM-based GPUs or XPUs.
+Dialogue: 0,0:28:56.08,0:28:58.73,Sub,,0,0,0,,Um and so it's great that this is then the chip that's exceptional at
+Dialogue: 0,0:28:58.78,0:29:03.87,Sub,,0,0,0,,taking kind of today's ultra-aggressive MOE transformers and running them much faster and more efficiently.
+Dialogue: 0,0:29:03.92,0:29:10.16,Sub,,0,0,0,,Um but I think what's exciting about building chips with kind of fundamentally new capabilities is you then also get to explore
+Dialogue: 0,0:29:10.21,0:29:18.20,Sub,,0,0,0,,whether there are kind of gravitational pulls that you yourself get to pull the new model landscape in because of those properties.
+Dialogue: 0,0:29:18.25,0:29:24.73,Sub,,0,0,0,,And so for Fractal, you know, this idea of having like 25 times more bandwidth per chip than a than an HBM-based chip,
+Dialogue: 0,0:29:24.78,0:29:30.34,Sub,,0,0,0,,we get to explore for instance internally these kind of ideas of like scaling laws for bandwidth basically.
+Dialogue: 0,0:29:30.39,0:29:34.32,Sub,,0,0,0,,You know, the scaling laws traditionally we think of them as like flop scaling laws.
+Dialogue: 0,0:29:34.37,0:29:40.71,Sub,,0,0,0,,You know, we uh we get better and better performance the more flops we pour into these models at train time and and test time.
+Dialogue: 0,0:29:40.76,0:29:47.57,Sub,,0,0,0,,Um and if you look at just like the known landscape of ideas today, we already see some scaling laws for bandwidth.
+Dialogue: 0,0:29:47.62,0:29:50.49,Sub,,0,0,0,,So one is uh these mixture of expert models.
+Dialogue: 0,0:29:50.54,0:29:56.08,Sub,,0,0,0,,It's pretty well known that actually ideally we would make them sparser and sparser and sparser.
+Dialogue: 0,0:29:56.13,0:30:07.87,Sub,,0,0,0,,So for like iso-intelligence, you will save a ton of flops if you go from being like 1 in 16 sparse on your MOE to 1 in 128, 1 in 256.
+Dialogue: 0,0:30:07.92,0:30:09.46,Sub,,0,0,0,,Um but one of the challenges,
+Dialogue: 0,0:30:09.51,0:30:12.08,Sub,,0,0,0,,one of the headwinds to doing that is actually that it becomes
+Dialogue: 0,0:30:12.13,0:30:17.83,Sub,,0,0,0,,incredibly prohibitive on today's HBM-based GPUs or XPUs to serve those models efficiently.
+Dialogue: 0,0:30:17.88,0:30:20.61,Sub,,0,0,0,,You end up often bandwidth bottlenecks.
+Dialogue: 0,0:30:20.66,0:30:26.23,Sub,,0,0,0,,You end up uh serving at really, really low uh MFU, low flops utilization.
+Dialogue: 0,0:30:26.28,0:30:34.73,Sub,,0,0,0,,Um and so there are these areas where even as you build for today's world, you get to kind of look at where you can unlock greater capability.
+Dialogue: 0,0:30:34.78,0:30:37.69,Sub,,0,0,0,,And you know, with LLMs today, it's very similar actually with attention.
+Dialogue: 0,0:30:37.74,0:30:40.90,Sub,,0,0,0,,There are forms of attention that are less bandwidth hungry.
+Dialogue: 0,0:30:40.95,0:30:45.29,Sub,,0,0,0,,They tend to be more flops hungry for a certain level of intelligence.
+Dialogue: 0,0:30:45.34,0:30:50.42,Sub,,0,0,0,,And so, one of the things I think we're excited about is as we elevate this other quality,
+Dialogue: 0,0:30:50.47,0:30:54.45,Sub,,0,0,0,,this property of memory bandwidth, which hasn't really been scaled so much on chips recently.
+Dialogue: 0,0:30:54.50,0:30:58.43,Sub,,0,0,0,,We've scaled flops like a millionfold in the last 20 years.
+Dialogue: 0,0:30:58.48,0:31:02.15,Sub,,0,0,0,,Memory bandwidth has gone up about 40x in the same time frame.
+Dialogue: 0,0:31:02.20,0:31:05.82,Sub,,0,0,0,,So, as you scale that frontier, you get to conserve more of the other thing.
+Dialogue: 0,0:31:05.87,0:31:11.39,Sub,,0,0,0,,We get to reduce the number of flops that we're using on these models to get to a certain level of intelligence.
+Dialogue: 0,0:31:11.44,0:31:16.67,Sub,,0,0,0,,And so, that's a kind of really a multiplying factor on global throughput for these models.
+Dialogue: 0,0:31:16.72,0:31:21.31,Sub,,0,0,0,,I'll resist asking you if that changes people's ideas about how they should train for now.
+Dialogue: 0,0:31:21.36,0:31:24.50,Sub,,0,0,0,,One last question for you just on on market structure here.
+Dialogue: 0,0:31:24.55,0:31:27.67,Sub,,0,0,0,,It's very unclear to me, you know,
+Dialogue: 0,0:31:27.72,0:31:35.34,Sub,,0,0,0,,5 years from now what a large AI player or a hyperscaler buys in terms
+Dialogue: 0,0:31:35.39,0:31:40.55,Sub,,0,0,0,,of or what what chips they consume between the Nvidia and AMD's of the world,
+Dialogue: 0,0:31:40.60,0:31:46.76,Sub,,0,0,0,,the new accelerator class, and you know, four at least four of these players have their own internal efforts.
+Dialogue: 0,0:31:46.81,0:31:48.47,Sub,,0,0,0,,Like, how do you make sense of this?
+Dialogue: 0,0:31:48.52,0:31:52.98,Sub,,0,0,0,,So, I think that today we see uh you know,
+Dialogue: 0,0:31:53.03,0:32:01.15,Sub,,0,0,0,,behavior where really everybody who is deploying at scale is kind of trying to deploy as many separate platforms as they can.
+Dialogue: 0,0:32:01.20,0:32:05.47,Sub,,0,0,0,,I think one thing that will remain the case is that there will be a real need
+Dialogue: 0,0:32:05.52,0:32:12.25,Sub,,0,0,0,,for kind of a diversity of supply as something like compute becomes so existential to these players.
+Dialogue: 0,0:32:12.30,0:32:18.90,Sub,,0,0,0,,There's a bit of a joke today that the sort of first party efforts, their primary purpose is to reduce the price that people pay Nvidia.
+Dialogue: 0,0:32:18.95,0:32:24.09,Sub,,0,0,0,,And there may be some truth to that as well because those efforts are kind of architecturally quite similar, right?
+Dialogue: 0,0:32:24.14,0:32:29.59,Sub,,0,0,0,,So, I'd say it's a bet that is not on enabling a fundamental capability that those other chips cannot enable.
+Dialogue: 0,0:32:29.64,0:32:32.74,Sub,,0,0,0,,And so, there I think it is this kind of gamesmanship of, you know,
+Dialogue: 0,0:32:32.79,0:32:39.45,Sub,,0,0,0,,can we build some of this over here or can I buy something from AMD so that maybe I then get a better price from Nvidia or and so on.
+Dialogue: 0,0:32:39.50,0:32:43.75,Sub,,0,0,0,,Um and it and it play also for kind of aggregate capacity and a bit of control.
+Dialogue: 0,0:32:43.80,0:32:49.74,Sub,,0,0,0,,I think as you then see this move into chips that actually give new capabilities, you know, that's the place where, you know,
+Dialogue: 0,0:32:49.79,0:32:55.59,Sub,,0,0,0,,I suddenly see for what we're doing a real need for everybody that wants to deploy AI at the frontier,
+Dialogue: 0,0:32:55.64,0:33:00.20,Sub,,0,0,0,,they have to have some solution to running these models orders of magnitude faster.
+Dialogue: 0,0:33:00.25,0:33:08.43,Sub,,0,0,0,,Um you know, for the frontier labs, there's this window of kind of premium capability, premium intelligence that is their entire raison d'être.
+Dialogue: 0,0:33:08.48,0:33:11.79,Sub,,0,0,0,,You know, otherwise we'd all be using Kimmy models all the time.
+Dialogue: 0,0:33:11.84,0:33:15.67,Sub,,0,0,0,,Um and so as you do have this pressure from behind from open source, you know,
+Dialogue: 0,0:33:15.72,0:33:22.66,Sub,,0,0,0,,it does become clearly even more important for folks who want to deploy at the frontier to have every aspect of what that means.
+Dialogue: 0,0:33:22.71,0:33:29.06,Sub,,0,0,0,,So, the best model weights, but also then the fastest deployment, so you can do the most reasoning in the in the shortest amount of time.
+Dialogue: 0,0:33:29.11,0:33:29.52,Sub,,0,0,0,,And so,
+Dialogue: 0,0:33:29.57,0:33:35.16,Sub,,0,0,0,,I think this kind of premium end of of of the chip space where you're optimizing for
+Dialogue: 0,0:33:35.21,0:33:39.86,Sub,,0,0,0,,speed over everything else becomes a kind of very important part of this uh part of this world.
+Dialogue: 0,0:33:39.91,0:33:46.80,Sub,,0,0,0,,I think one thing that is notable about, you know, the dynamic between a chip vendor and a frontier lab,
+Dialogue: 0,0:33:46.85,0:33:51.86,Sub,,0,0,0,,you know, if you look at Fractal, we try to be as aligned as possible with the needs of the frontier.
+Dialogue: 0,0:33:51.91,0:33:54.39,Sub,,0,0,0,,We try to look a bit like some of those teams as well.
+Dialogue: 0,0:33:54.44,0:33:57.83,Sub,,0,0,0,,We have people that really think deeply about these workloads and so on.
+Dialogue: 0,0:33:57.88,0:34:02.71,Sub,,0,0,0,,So, one of the cases that I think we sometimes need to make is explaining why we believe that over,
+Dialogue: 0,0:34:02.76,0:34:09.00,Sub,,0,0,0,,you know, multiple decades the world sustains some kind of frontier third-party chip players.
+Dialogue: 0,0:34:09.05,0:34:12.71,Sub,,0,0,0,,You know, why does this not just roll up into these into these labs?
+Dialogue: 0,0:34:12.76,0:34:20.07,Sub,,0,0,0,,Um and I think that comes down to the kind of asymmetric game that all of these labs and frontier players have to play,
+Dialogue: 0,0:34:20.12,0:34:26.60,Sub,,0,0,0,,uh where they're exposed to an enormous risk if they go all in on a hardware bet.
+Dialogue: 0,0:34:26.65,0:34:29.82,Sub,,0,0,0,,Um Suppose I'm, you know, I'm lab one,
+Dialogue: 0,0:34:29.87,0:34:36.88,Sub,,0,0,0,,uh and I've gone all in on some proprietary silicon and then lab two discovers some new computational breakthrough that delivers
+Dialogue: 0,0:34:36.93,0:34:43.64,Sub,,0,0,0,,far better computational efficiencies for the same level of intelligence but it only works on the chip that they've decided to deploy.
+Dialogue: 0,0:34:43.69,0:34:51.11,Sub,,0,0,0,,I could die in the nine months before I get to deploy enough of that chip that I've also now get into that kind of 5x in computational efficiency.
+Dialogue: 0,0:34:51.16,0:34:58.77,Sub,,0,0,0,,And so there is a really urgent need for these chips to actually deploy the same these companies to deploy the same platforms as one another.
+Dialogue: 0,0:34:58.82,0:35:03.55,Sub,,0,0,0,,They're playing different games so right they're trying to now compete you know in the model layer.
+Dialogue: 0,0:35:03.60,0:35:10.44,Sub,,0,0,0,,I think having deeply differentiated bets and going all in on those differentiated bets at the chip layer
+Dialogue: 0,0:35:10.49,0:35:14.71,Sub,,0,0,0,,is sort of an irrational and a very dangerous move for anybody that is playing at the frontier.
+Dialogue: 0,0:35:14.76,0:35:16.10,Sub,,0,0,0,,Well, I think that's a great place to end.
+Dialogue: 0,0:35:16.15,0:35:17.15,Sub,,0,0,0,,Thanks so much Walter.
+Dialogue: 0,0:35:17.20,0:35:20.95,Sub,,0,0,0,,Thanks very much Sarah.
+Dialogue: 0,0:35:21.00,0:35:23.47,Sub,,0,0,0,,Find us on Twitter at No Priors Pod.
+Dialogue: 0,0:35:23.52,0:35:26.35,Sub,,0,0,0,,Subscribe to our YouTube channel if you want to see our faces.
+Dialogue: 0,0:35:26.40,0:35:29.91,Sub,,0,0,0,,Follow the show on Apple Podcasts, Spotify, or wherever you listen.
+Dialogue: 0,0:35:29.96,0:35:31.97,Sub,,0,0,0,,That way you get a new episode every week.
+Dialogue: 0,0:35:32.02,0:35:38.36,Sub,,0,0,0,,And sign up for emails or find transcripts for every episode at no-priors.com.

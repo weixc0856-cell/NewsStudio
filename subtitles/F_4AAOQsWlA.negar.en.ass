@@ -1,0 +1,285 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:02.10,Sub,,0,0,0,,So please join me in welcoming Negar Mehr.
+Dialogue: 0,0:00:05.04,0:00:11.44,Sub,,0,0,0,,Thank you so much, Ken, for the very kind introduction and thanks to the organizers for bringing us together.
+Dialogue: 0,0:00:12.26,0:00:16.69,Sub,,0,0,0,,So I'm very excited to share with you what my lab has been working on.
+Dialogue: 0,0:00:16.74,0:00:21.45,Sub,,0,0,0,,And in particular, if you're worried that there is not much left for you to do in robotics,
+Dialogue: 0,0:00:21.50,0:00:27.37,Sub,,0,0,0,,I want to encourage you all to think about the next steps and I want to convince you that there are still
+Dialogue: 0,0:00:27.42,0:00:36.18,Sub,,0,0,0,,many more problems and challenges to solve So we are all excited We are seeing performances capabilities and robotics that we couldn't
+Dialogue: 0,0:00:36.23,0:00:43.70,Sub,,0,0,0,,really imagine of a couple of years ago Every time I just open up my Twitter or X I'm impressed by the
+Dialogue: 0,0:00:43.75,0:00:51.56,Sub,,0,0,0,,demos that we see and the exciting capabilities that are being unlocked by the robotic systems But I think as a community,
+Dialogue: 0,0:00:51.61,0:00:59.73,Sub,,0,0,0,,it is now time to think about how can we go one step further and how can we have robots that are integrated into our lives,
+Dialogue: 0,0:01:00.27,0:01:08.44,Sub,,0,0,0,,the same way that autonomous cars were integrated into our lives and they share roads with human driven cars or pedestrians around here in Austin,
+Dialogue: 0,0:01:08.49,0:01:11.37,Sub,,0,0,0,,I see many Waymo cars, which is very exciting.
+Dialogue: 0,0:01:12.30,0:01:16.34,Sub,,0,0,0,,But now that we have all these new capabilities emerging in robotic systems,
+Dialogue: 0,0:01:16.72,0:01:22.10,Sub,,0,0,0,,how about having humanoids, quadrupeds or other robots around in this conference helping us.
+Dialogue: 0,0:01:23.04,0:01:26.11,Sub,,0,0,0,,And obviously we are very far from that point and that is why I had
+Dialogue: 0,0:01:26.16,0:01:30.86,Sub,,0,0,0,,to generate this image using Astra because I couldn't find any real world images of this.
+Dialogue: 0,0:01:31.20,0:01:36.53,Sub,,0,0,0,,But what we are looking at is how can we get robots to interact safely
+Dialogue: 0,0:01:36.58,0:01:42.87,Sub,,0,0,0,,and intelligently with other agents in unstructured environments that are humans around or other robots around.
+Dialogue: 0,0:01:42.92,0:01:49.63,Sub,,0,0,0,,And that's, I think, a very timely question to ask, because maybe five years ago when I posed this question,
+Dialogue: 0,0:01:49.68,0:01:54.71,Sub,,0,0,0,,people would be like, but I don't even have a robot that does things reliably on its own.
+Dialogue: 0,0:01:54.76,0:01:56.34,Sub,,0,0,0,,Why would I worry about this?
+Dialogue: 0,0:01:56.60,0:01:58.79,Sub,,0,0,0,,But I think it's time to think about this.
+Dialogue: 0,0:01:58.84,0:02:07.35,Sub,,0,0,0,,And this is a very hard problem that requires us to think about different aspects of robotic algorithm design and hardware design.
+Dialogue: 0,0:02:07.40,0:02:13.96,Sub,,0,0,0,,On the algorithmic side, my lab has been working on what does planning look like in these domains?
+Dialogue: 0,0:02:14.01,0:02:15.62,Sub,,0,0,0,,What should learning look like?
+Dialogue: 0,0:02:15.67,0:02:16.76,Sub,,0,0,0,,How about perception?
+Dialogue: 0,0:02:16.81,0:02:17.83,Sub,,0,0,0,,How about safety?
+Dialogue: 0,0:02:18.47,0:02:25.63,Sub,,0,0,0,,But we are at conference on robot learning, so I want to share with you in what ways is learning in these domains different,
+Dialogue: 0,0:02:25.99,0:02:33.23,Sub,,0,0,0,,and in what ways some lessons that we have learned from learning in multi-agent domains can actually be useful for learning in single-agent domains.
+Dialogue: 0,0:02:33.45,0:02:40.81,Sub,,0,0,0,,And throughout this talk, to motivate what we do, I'm going to use a very simple running example.
+Dialogue: 0,0:02:41.65,0:02:49.07,Sub,,0,0,0,,Imagine you have two agents, two robots, both of whom want to carry an object like a basket.
+Dialogue: 0,0:02:50.23,0:02:57.77,Sub,,0,0,0,,And what I'm interested in is that I want to learn policies for each one of those robots so that when I pair these policies together,
+Dialogue: 0,0:02:57.99,0:03:03.11,Sub,,0,0,0,,they collectively succeed in this task of collaborating an object on transporting an object.
+Dialogue: 0,0:03:04.00,0:03:06.98,Sub,,0,0,0,,What's hard about this is that I want my policies to be decentralized.
+Dialogue: 0,0:03:07.16,0:03:10.91,Sub,,0,0,0,,I want every robot to make decisions based on its own local observations,
+Dialogue: 0,0:03:10.96,0:03:17.08,Sub,,0,0,0,,but there is some coupling which is implicit that both of them should agree on how to do a task to succeed.
+Dialogue: 0,0:03:18.04,0:03:19.51,Sub,,0,0,0,,What are our approaches?
+Dialogue: 0,0:03:19.56,0:03:22.24,Sub,,0,0,0,,What are the recipes out there for learning these policies?
+Dialogue: 0,0:03:22.42,0:03:24.72,Sub,,0,0,0,,One approach is through imitation learning.
+Dialogue: 0,0:03:25.02,0:03:27.16,Sub,,0,0,0,,One is through reinforcement learning.
+Dialogue: 0,0:03:27.44,0:03:33.56,Sub,,0,0,0,,And what I'm going to do today is first I'm going to talk about what imitation looks like in these domains.
+Dialogue: 0,0:03:34.36,0:03:38.58,Sub,,0,0,0,,Then I'm going to share with you what happens if you try to use RL for solving these tasks.
+Dialogue: 0,0:03:39.02,0:03:42.39,Sub,,0,0,0,,And finally, I'm going to share some recent advances that we've made,
+Dialogue: 0,0:03:42.44,0:03:45.99,Sub,,0,0,0,,which I think are very exciting and tell us how ideas from multi
+Dialogue: 0,0:03:46.04,0:03:50.90,Sub,,0,0,0,,agent learning can actually really help in the context of single-agent continual learning.
+Dialogue: 0,0:03:51.40,0:03:53.26,Sub,,0,0,0,,Let's start by imitating.
+Dialogue: 0,0:03:53.52,0:03:58.60,Sub,,0,0,0,,We've seen a lot of capabilities?
+Dialogue: 0,0:03:58.78,0:04:04.68,Sub,,0,0,0,,What if I just collect some demonstrations from two robots collaboratively lifting an object?
+Dialogue: 0,0:04:05.32,0:04:09.31,Sub,,0,0,0,,And then I can just do behavioral cloning and directly imitate policies.
+Dialogue: 0,0:04:09.36,0:04:11.84,Sub,,0,0,0,,How is it even different from single-agent domains?
+Dialogue: 0,0:04:12.53,0:04:17.30,Sub,,0,0,0,,So we started to think about this problem theoretically first to think about in
+Dialogue: 0,0:04:17.35,0:04:23.03,Sub,,0,0,0,,what ways is directly imitating policies in multi-agent domains different from single-agent domains.
+Dialogue: 0,0:04:23.87,0:04:27.67,Sub,,0,0,0,,And intuitively, at a very high level, the difficulties are following.
+Dialogue: 0,0:04:28.15,0:04:33.26,Sub,,0,0,0,,Let's say I collect some demonstration data, and my object is a heavy object.
+Dialogue: 0,0:04:33.31,0:04:36.91,Sub,,0,0,0,,So no single robot can on its own pick up the object.
+Dialogue: 0,0:04:37.80,0:04:40.24,Sub,,0,0,0,,And then I imitate policies of the two robots.
+Dialogue: 0,0:04:41.00,0:04:49.00,Sub,,0,0,0,,But during execution, if one of the robots slightly deviates from what it did, or what the expert did in its demonstrations,
+Dialogue: 0,0:04:49.48,0:04:55.95,Sub,,0,0,0,,the entire effort fails, and the other robot, no matter how hard it tries, it can't really account for what happened.
+Dialogue: 0,0:04:56.00,0:05:01.09,Sub,,0,0,0,,So the deviations from expert expert policies, which are very common in behavioral cloning,
+Dialogue: 0,0:05:01.14,0:05:05.54,Sub,,0,0,0,,are something that we cannot really tolerate and accommodate in multi-agent domains.
+Dialogue: 0,0:05:06.08,0:05:11.05,Sub,,0,0,0,,So again, we formally characterize this, it turns out that instead of value gap,
+Dialogue: 0,0:05:11.10,0:05:17.51,Sub,,0,0,0,,which is the metric that we typically care about in single-agent imitation learning, in multi-agent behavioral cloning,
+Dialogue: 0,0:05:17.56,0:05:22.34,Sub,,0,0,0,,we have to think about something that we call exploitability of learned policies, which is,
+Dialogue: 0,0:05:22.64,0:05:30.36,Sub,,0,0,0,,if one agent deviates slightly from what they did in the expert demo, how will the other agent react and how bad that can be.
+Dialogue: 0,0:05:30.77,0:05:35.95,Sub,,0,0,0,,And again, very informally, it's very hard to learn low exploitable policies.
+Dialogue: 0,0:05:36.11,0:05:41.76,Sub,,0,0,0,,And we have noticed that what this theoretical results means is that data coverage,
+Dialogue: 0,0:05:41.81,0:05:49.78,Sub,,0,0,0,,covering all possible failure modes and all possible interaction modes matters even more in multi-agent interaction.
+Dialogue: 0,0:05:49.83,0:05:52.89,Sub,,0,0,0,,So you have to scale up your data collection even more.
+Dialogue: 0,0:05:53.39,0:06:00.71,Sub,,0,0,0,,And yet, all this is based on the assumption that there is only one way to coordinate with other agents.
+Dialogue: 0,0:06:01.30,0:06:05.06,Sub,,0,0,0,,And we know that interactions are multimodal.
+Dialogue: 0,0:06:05.76,0:06:10.47,Sub,,0,0,0,,multimodality in multi-agent interactions is even more common than single-agent domains.
+Dialogue: 0,0:06:10.52,0:06:17.21,Sub,,0,0,0,,The same task that I showed, there are two ways for the robots or even more, you could argue there are three ways for the robots to coordinate.
+Dialogue: 0,0:06:17.26,0:06:23.74,Sub,,0,0,0,,But how can you how can they decide on their own which mode the other agent is picking up on?
+Dialogue: 0,0:06:24.59,0:06:30.49,Sub,,0,0,0,,So the moment I talk about multimodalities, I'm sure this audience thinks of diffusion policies,
+Dialogue: 0,0:06:30.65,0:06:36.65,Sub,,0,0,0,,because because we've all seen how amazing diffusion policies have been in capturing multimodalities.
+Dialogue: 0,0:06:37.17,0:06:42.78,Sub,,0,0,0,,So we started to think, maybe that's the recipe, maybe to learn a different coordination mode,
+Dialogue: 0,0:06:42.83,0:06:47.54,Sub,,0,0,0,,what I need to do is to use the multimodal capabilities of diffusion
+Dialogue: 0,0:06:47.59,0:06:53.15,Sub,,0,0,0,,policies and imitate decentralized diffusion policies that can learn to adapt to other agents.
+Dialogue: 0,0:06:53.83,0:07:01.58,Sub,,0,0,0,,So we designed a centralized training, decentralized execution pipeline where we pair policies with one another,
+Dialogue: 0,0:07:01.63,0:07:06.97,Sub,,0,0,0,,train them, but during execution they're just decentralized policies all in a diffusion form.
+Dialogue: 0,0:07:07.80,0:07:08.56,Sub,,0,0,0,,And it works.
+Dialogue: 0,0:07:09.36,0:07:15.04,Sub,,0,0,0,,One of my favorite videos is actually this video that the two robots are making decisions, each one of them is making decisions on its own,
+Dialogue: 0,0:07:15.30,0:07:20.95,Sub,,0,0,0,,but they don't know which way the other robot is going, but they learn to implicitly coordinate with one another.
+Dialogue: 0,0:07:21.00,0:07:25.97,Sub,,0,0,0,,One of them is pulling the basket, the other is pushing, but by just leveraging this to cast this at the end,
+Dialogue: 0,0:07:26.02,0:07:30.64,Sub,,0,0,0,,running this in a receding horizon, they ultimately agree on a one mode of interaction.
+Dialogue: 0,0:07:31.61,0:07:32.49,Sub,,0,0,0,,So this is great.
+Dialogue: 0,0:07:33.01,0:07:34.01,Sub,,0,0,0,,Is it solved?
+Dialogue: 0,0:07:34.74,0:07:39.71,Sub,,0,0,0,,For any of you who has ever teleoperated the bi-manual setup or a multi-agent setup,
+Dialogue: 0,0:07:39.76,0:07:45.00,Sub,,0,0,0,,you kind of know how hard it is to collect data in these interactive domains.
+Dialogue: 0,0:07:45.64,0:07:51.94,Sub,,0,0,0,,So this requires enough demonstration data for each interactive task, which is really hard to achieve.
+Dialogue: 0,0:07:52.79,0:07:55.09,Sub,,0,0,0,,And naturally for all of us in this conference,
+Dialogue: 0,0:07:55.45,0:08:03.68,Sub,,0,0,0,,a very key question to ask is single-agent robots have so much capability that are pre-trained in them these days.
+Dialogue: 0,0:08:03.73,0:08:12.17,Sub,,0,0,0,,How can we build on these pre-trained skills that robots have achieved, to enable robots to have coordination on demand?
+Dialogue: 0,0:08:12.79,0:08:17.71,Sub,,0,0,0,,Instead of training everything from scratch for my robots to learn how to coordinate with one another?
+Dialogue: 0,0:08:17.95,0:08:24.78,Sub,,0,0,0,,What if I just build on the existing capabilities and make the robot coordinate and interact only when it is needed,
+Dialogue: 0,0:08:24.83,0:08:28.63,Sub,,0,0,0,,and not forgetting about things that they could do on on their own?
+Dialogue: 0,0:08:29.39,0:08:34.90,Sub,,0,0,0,,So recently, we've been looking into what if we freeze what the robot already knows,
+Dialogue: 0,0:08:34.95,0:08:41.23,Sub,,0,0,0,,and just learn only the correction that is needed for achieving coordination between pre-trained skills,
+Dialogue: 0,0:08:41.47,0:08:46.61,Sub,,0,0,0,,only using few demonstrations, not as much as training everything from scratch.
+Dialogue: 0,0:08:47.24,0:08:52.53,Sub,,0,0,0,,And the first thing that they've tried is how about we just learn residual denoiser
+Dialogue: 0,0:08:52.58,0:08:58.74,Sub,,0,0,0,,for correcting single-agent policies to get robots to interact and coordinate with one another.
+Dialogue: 0,0:08:59.87,0:09:06.95,Sub,,0,0,0,,So I assume that I have a diffusion policy that has learned certain skills for just one robot, let's say pick in place and wiping.
+Dialogue: 0,0:09:07.51,0:09:10.67,Sub,,0,0,0,,And what I do is just only few demonstration data,
+Dialogue: 0,0:09:10.83,0:09:18.33,Sub,,0,0,0,,I use that to correct my denoising process so that I coordinate the timing of the agents actions with one another.
+Dialogue: 0,0:09:19.16,0:09:24.19,Sub,,0,0,0,,And the way that I do this is that I start from a frozen base policy for just one robot,
+Dialogue: 0,0:09:24.24,0:09:28.78,Sub,,0,0,0,,and collect very few demonstrations of multi-agent interaction,
+Dialogue: 0,0:09:29.20,0:09:39.02,Sub,,0,0,0,,then collect some distilled single-agent demonstrations from my frozen policy, and collectively use these data sets to train a coordination head.
+Dialogue: 0,0:09:39.73,0:09:47.33,Sub,,0,0,0,,And what's nice about this coordination residual that I train is that I can achieve coordination when it is needed.
+Dialogue: 0,0:09:47.63,0:09:56.68,Sub,,0,0,0,,One robot can do part of the job while the other one finishes the job, but also it retains the single-agent source behavior that the robots had.
+Dialogue: 0,0:09:56.73,0:10:03.39,Sub,,0,0,0,,if a task just requires one robot to accomplish a task on its own, I haven't lost those capabilities.
+Dialogue: 0,0:10:04.27,0:10:10.42,Sub,,0,0,0,,But I want to encourage you to think about what we can do by building on these single-agent capabilities,
+Dialogue: 0,0:10:10.47,0:10:14.60,Sub,,0,0,0,,because I think it's an exciting time to think about multi-agent coordination and
+Dialogue: 0,0:10:14.65,0:10:20.43,Sub,,0,0,0,,integrating robots in these type of tasks using the capabilities that they have already built.
+Dialogue: 0,0:10:22.27,0:10:24.56,Sub,,0,0,0,,So, imitation one way.
+Dialogue: 0,0:10:24.61,0:10:29.21,Sub,,0,0,0,,What if I was trying to solve this same task using reinforcement learning.
+Dialogue: 0,0:10:30.22,0:10:38.10,Sub,,0,0,0,,We asked that question, if I use multi-agent reinforcement learning to train my two robots to collaboratively pick up this object,
+Dialogue: 0,0:10:38.46,0:10:44.96,Sub,,0,0,0,,this is the best that we could achieve, no matter how hard of a reward engineering with it.
+Dialogue: 0,0:10:46.26,0:10:52.70,Sub,,0,0,0,,No matter how hard we tried it, this was the best that the robots could do in terms of collaboratively picking up this object.
+Dialogue: 0,0:10:53.32,0:10:55.83,Sub,,0,0,0,,So we started to think, why is that the case?
+Dialogue: 0,0:10:55.88,0:10:58.90,Sub,,0,0,0,,Why is it so hard to use RL to train these policies.
+Dialogue: 0,0:10:59.22,0:11:05.35,Sub,,0,0,0,,Why is it that we as humans are really good at interacting with one another learning to cooperate and interact with our
+Dialogue: 0,0:11:05.40,0:11:09.65,Sub,,0,0,0,,teammates in actually very intricate and complicated forms of interactions like
+Dialogue: 0,0:11:09.70,0:11:15.98,Sub,,0,0,0,,sports and very intricate forms of interactions that people build over time.
+Dialogue: 0,0:11:17.17,0:11:20.94,Sub,,0,0,0,,And for those of you who have watched World Cup over this past summer,
+Dialogue: 0,0:11:20.99,0:11:27.92,Sub,,0,0,0,,you perhaps remember how much everyone was talking about coaches and how all these memes about coaches went viral,
+Dialogue: 0,0:11:27.97,0:11:34.37,Sub,,0,0,0,,and people were arguing about what's the role of a coach and coaches' strategy in a team's performance.
+Dialogue: 0,0:11:34.81,0:11:42.13,Sub,,0,0,0,,So we started to think maybe one of the reasons that we humans can learn to interact with others is that we leverage good coaches.
+Dialogue: 0,0:11:42.45,0:11:48.77,Sub,,0,0,0,,What if I can coach my robot to learn complex tasks like coordination tasks?
+Dialogue: 0,0:11:48.96,0:11:56.78,Sub,,0,0,0,,What if I use my foundation models to act as my coaches for guiding my robot learning loop?
+Dialogue: 0,0:11:57.08,0:12:01.53,Sub,,0,0,0,,Using reasoning, coding, and visual understanding capabilities of these models,
+Dialogue: 0,0:12:01.58,0:12:08.38,Sub,,0,0,0,,I just get to have a coach which is for free and autonomously guiding the learning process of my robot.
+Dialogue: 0,0:12:09.19,0:12:16.11,Sub,,0,0,0,,Let's first see what that looks like in a single-agent setting, and then I bring in the multi-agent coordination aspect of it.
+Dialogue: 0,0:12:16.27,0:12:19.07,Sub,,0,0,0,,Let's say I want to teach a robot to run backwards.
+Dialogue: 0,0:12:19.71,0:12:24.14,Sub,,0,0,0,,And I'm not a locomotion person, so I don't really know what the reward function should be.
+Dialogue: 0,0:12:24.19,0:12:26.55,Sub,,0,0,0,,I have no idea how I should set up the training.
+Dialogue: 0,0:12:27.54,0:12:34.84,Sub,,0,0,0,,So what we did was was like, okay, I feel have a coach, maybe my coach can break down the task into a sequence of simpler tasks.
+Dialogue: 0,0:12:35.18,0:12:41.78,Sub,,0,0,0,,Then my coach also defines what it means means to do each sub task such as, for example, is stabilizing itself.
+Dialogue: 0,0:12:42.12,0:12:44.07,Sub,,0,0,0,,And then my coach provides feedback.
+Dialogue: 0,0:12:44.12,0:12:50.93,Sub,,0,0,0,,and that loop is gonna be enough for me to learn a good enough policy that they can transfer zero-shot to
+Dialogue: 0,0:12:50.98,0:12:59.08,Sub,,0,0,0,,my to my hardware and that way I can learn these skills in reinforcement learning without having to spend so much time figuring out
+Dialogue: 0,0:12:59.13,0:13:07.29,Sub,,0,0,0,,what reward function I should try, and once I learn certain skills, let's say running backwards or some whole-body control with proper
+Dialogue: 0,0:13:07.34,0:13:17.98,Sub,,0,0,0,,coaching I can actually use the existing skills that the robot has learned to accomplish new tasks with no training and no data collection.
+Dialogue: 0,0:13:18.82,0:13:25.76,Sub,,0,0,0,,And inspired by the line of work that actually Ken pioneered on using code as policies or agentic robotics,
+Dialogue: 0,0:13:26.12,0:13:31.98,Sub,,0,0,0,,we started to think what if I use code as a coach for composing the pre-trained robot skills.
+Dialogue: 0,0:13:32.56,0:13:39.79,Sub,,0,0,0,,For example, I have a robot that has its own let's say pre-trained skills such as walking backwards or a whole-body controller.
+Dialogue: 0,0:13:39.84,0:13:45.78,Sub,,0,0,0,,And I just use my coach in terms of a policy code to compose those skills with one another.
+Dialogue: 0,0:13:46.02,0:13:49.68,Sub,,0,0,0,,And what's nice about this is that it doesn't require any retraining.
+Dialogue: 0,0:13:49.84,0:13:52.09,Sub,,0,0,0,,I don't collect any human data.
+Dialogue: 0,0:13:52.14,0:13:57.48,Sub,,0,0,0,,And all it takes is just building on the pre-trained and already learned skills.
+Dialogue: 0,0:13:57.76,0:14:00.49,Sub,,0,0,0,,And that to our surprise turned out to work,
+Dialogue: 0,0:14:00.54,0:14:08.05,Sub,,0,0,0,,we could transfer these policies to the real world humanoid could essentially lift the basket and object from different positions,
+Dialogue: 0,0:14:08.10,0:14:10.68,Sub,,0,0,0,,different initial positions and different goal positions.
+Dialogue: 0,0:14:11.54,0:14:14.99,Sub,,0,0,0,,And what was even more interesting to me is that in other tasks, for example,
+Dialogue: 0,0:14:15.04,0:14:20.81,Sub,,0,0,0,,let's say pushing a button, when we first deployed our policy, we had around 20 % success rate.
+Dialogue: 0,0:14:20.86,0:14:28.09,Sub,,0,0,0,,But by just two rounds of refinement on our coach, coach code, we increase the success rate to 90%.
+Dialogue: 0,0:14:28.14,0:14:33.71,Sub,,0,0,0,,And this is all without any retargeting or human data collection, or anything like that.
+Dialogue: 0,0:14:33.76,0:14:38.86,Sub,,0,0,0,,And this is this was all by the way before Astra, I'm sure the performance is going to even be better now.
+Dialogue: 0,0:14:39.79,0:14:40.84,Sub,,0,0,0,,But this is for single-agent.
+Dialogue: 0,0:14:40.89,0:14:45.29,Sub,,0,0,0,,And I promise to you that this is interesting for coordination and multi-agent systems.
+Dialogue: 0,0:14:45.77,0:14:52.19,Sub,,0,0,0,,Turns out the same recipe actually enables coordination tasks that we couldn't really achieve before.
+Dialogue: 0,0:14:52.53,0:14:53.90,Sub,,0,0,0,,Like, for example,
+Dialogue: 0,0:14:53.95,0:15:02.30,Sub,,0,0,0,,this running example that I had collaboratively lifting an object with a proper coaching using these foundation models is doing a much,
+Dialogue: 0,0:15:02.35,0:15:03.09,Sub,,0,0,0,,much better job.
+Dialogue: 0,0:15:03.69,0:15:11.24,Sub,,0,0,0,,Or I can get my quadrupeds to essentially balance a seesaw so that one of them can climb the seesaw.
+Dialogue: 0,0:15:11.29,0:15:16.53,Sub,,0,0,0,,Whereas if you try to just train multi-agent PPO to get to do this, it's hopeless.
+Dialogue: 0,0:15:17.32,0:15:24.99,Sub,,0,0,0,,Or I can teach quadrupeds to pass through a gate by proper coaching of knowing, well, you should do this,
+Dialogue: 0,0:15:25.04,0:15:28.83,Sub,,0,0,0,,here's how you should do, here's what your reward should be, and here's what each sub task should be.
+Dialogue: 0,0:15:28.88,0:15:37.67,Sub,,0,0,0,,Or I can pair these robots with humans to collaboratively do tasks, such as transporting an object, which was really hard for me to do on my own.
+Dialogue: 0,0:15:37.72,0:15:44.36,Sub,,0,0,0,,But when I actually tried this experiment, I was surprised by how easy it is to actually have a quadruped helping me with transporting heavy objects.
+Dialogue: 0,0:15:45.75,0:15:49.33,Sub,,0,0,0,,So this was very, to our surprise, it was very effective.
+Dialogue: 0,0:15:49.83,0:15:52.02,Sub,,0,0,0,,And we were kind of inspired and encouraged by that.
+Dialogue: 0,0:15:52.07,0:15:55.84,Sub,,0,0,0,,So we started to think, is there anything else that a coach does for a team of agents?
+Dialogue: 0,0:15:55.89,0:16:01.20,Sub,,0,0,0,,And for anyone who has ever taught a class with group projects,
+Dialogue: 0,0:16:01.25,0:16:06.66,Sub,,0,0,0,,I'm sure at the end of a class you've got complaints about I contributed to my team effort,
+Dialogue: 0,0:16:06.71,0:16:10.45,Sub,,0,0,0,,my partners didn't, I should get credit for what I did, others shouldn't.
+Dialogue: 0,0:16:10.81,0:16:14.46,Sub,,0,0,0,,And that's the same thing that makes multi-agent reinforcement learning really hard,
+Dialogue: 0,0:16:14.51,0:16:26.21,Sub,,0,0,0,,which is, as you're looking at how interactions unfold, you need to have a good understanding of who contributed to get credit.
+Dialogue: 0,0:16:26.51,0:16:34.02,Sub,,0,0,0,,Because even if a team effort failed, there might still be some agents who actually contributed to the team effort,
+Dialogue: 0,0:16:34.07,0:16:37.97,Sub,,0,0,0,,and others are the ones who essentially resulted in the team failure.
+Dialogue: 0,0:16:38.47,0:16:45.46,Sub,,0,0,0,,So we're like, maybe I can just make my foundation model and my coach to just be a good credit designer.
+Dialogue: 0,0:16:45.51,0:16:49.95,Sub,,0,0,0,,Maybe that's all I need for getting the robots to learn to coordinate with one another.
+Dialogue: 0,0:16:50.39,0:16:52.36,Sub,,0,0,0,,And again, this was in 2025.
+Dialogue: 0,0:16:52.41,0:16:55.18,Sub,,0,0,0,,Models were not as amazing as they are today.
+Dialogue: 0,0:16:55.23,0:17:02.17,Sub,,0,0,0,,But it turned out by just simply asking the model existing model off the shelf model to play the role of a credit designer,
+Dialogue: 0,0:17:02.51,0:17:08.37,Sub,,0,0,0,,you can outperform a state of the art in terms of a coordination capabilities by orders of magnitude.
+Dialogue: 0,0:17:08.79,0:17:14.79,Sub,,0,0,0,,For example, in a warehouse where robots are moving objects around, and you really want to coordinate that effort,
+Dialogue: 0,0:17:15.13,0:17:24.41,Sub,,0,0,0,,we are doing way better than a baseline such as MAPPO, HAPPO and LIPO, which are very well known baselines in multi-agent reinforcement learning.
+Dialogue: 0,0:17:24.87,0:17:26.00,Sub,,0,0,0,,And again, this was 2025.
+Dialogue: 0,0:17:26.05,0:17:28.48,Sub,,0,0,0,,I'm sure the performance is going to be even better now.
+Dialogue: 0,0:17:28.53,0:17:36.16,Sub,,0,0,0,,But I want to argue that these are actually exciting times for us to think about how we can coach robots to learn to interact with one another,
+Dialogue: 0,0:17:36.21,0:17:40.85,Sub,,0,0,0,,and hopefully down the line, cooperate and coordinate with humans.
+Dialogue: 0,0:17:42.17,0:17:45.47,Sub,,0,0,0,,But now we want to flip the problem a little bit.
+Dialogue: 0,0:17:45.93,0:17:51.18,Sub,,0,0,0,,And I want to argue that there are some lessons that we have learned by studying multi-agent systems,
+Dialogue: 0,0:17:51.23,0:17:56.75,Sub,,0,0,0,,which have actually proven to be really useful and relevant for single-agent learning.
+Dialogue: 0,0:17:57.80,0:18:01.20,Sub,,0,0,0,,And that has been primarily in the context of continual learning.
+Dialogue: 0,0:18:02.16,0:18:10.90,Sub,,0,0,0,,So let's now go back to the world of one agent learning on its own and let's imagine an agent that is continuously learning new tasks.
+Dialogue: 0,0:18:11.42,0:18:16.53,Sub,,0,0,0,,So you start with some task T, then a new task T plus one comes, then another task comes.
+Dialogue: 0,0:18:16.58,0:18:20.56,Sub,,0,0,0,,What happens as a robot is continuously learning?
+Dialogue: 0,0:18:21.54,0:18:27.50,Sub,,0,0,0,,Typically, what happens is that a robot learns a new task, but it forgets about what it had learned in the past.
+Dialogue: 0,0:18:28.10,0:18:37.89,Sub,,0,0,0,,So, for example, I have a policy theta one that has learned to do one task T1, but I fine-tuned my policy on some tasks T2,
+Dialogue: 0,0:18:37.94,0:18:46.50,Sub,,0,0,0,,then what happens is perhaps parameters that were really important for accomplishing task might be overridden by fine-tuning to task T2.
+Dialogue: 0,0:18:47.04,0:18:52.08,Sub,,0,0,0,,Same thing for task T3, as I move on, I may forget about what I had learned before.
+Dialogue: 0,0:18:52.68,0:19:01.81,Sub,,0,0,0,,So we were facing this problem of catastrophic forgetting when you continuously learn new tasks, and we were thinking this is not good.
+Dialogue: 0,0:19:01.86,0:19:05.96,Sub,,0,0,0,,I learned my task T3, but I forget about how I did tasks T1 and T2.
+Dialogue: 0,0:19:06.74,0:19:15.01,Sub,,0,0,0,,So with that multi-agent view of the we started to think what if continuously learning new tasks can be
+Dialogue: 0,0:19:15.06,0:19:21.20,Sub,,0,0,0,,cast as some sort of a consensus between what the robot is learning now and what it had learned before.
+Dialogue: 0,0:19:21.70,0:19:28.61,Sub,,0,0,0,,In a way, what if the robot didn't forget where it came from and it kept remembering who it was,
+Dialogue: 0,0:19:28.66,0:19:31.62,Sub,,0,0,0,,where it came from, very much the same as what a human should do, I think.
+Dialogue: 0,0:19:32.24,0:19:32.77,Sub,,0,0,0,,So,
+Dialogue: 0,0:19:32.82,0:19:39.97,Sub,,0,0,0,,we started thinking about maybe we can cast continual learning as a temporal consensus between what
+Dialogue: 0,0:19:40.02,0:19:44.78,Sub,,0,0,0,,the robot has learned before and what the new policy parameters of the robot should be.
+Dialogue: 0,0:19:45.88,0:19:51.05,Sub,,0,0,0,,And this is nice because with this consensus view of continuous learning,
+Dialogue: 0,0:19:51.10,0:19:58.51,Sub,,0,0,0,,we can enable a replay-free policy update where I don't require to just keep track of data that was used in my pre
+Dialogue: 0,0:19:58.56,0:20:05.50,Sub,,0,0,0,,-training or hope that an industry lab releases the data set to so that we can keep track of what the robot had already learned.
+Dialogue: 0,0:20:06.00,0:20:12.25,Sub,,0,0,0,,So I enforce a consensus in the weight space of my policy parameters.
+Dialogue: 0,0:20:12.30,0:20:15.65,Sub,,0,0,0,,When I'm learning my policy for task T plus 2,
+Dialogue: 0,0:20:15.70,0:20:25.34,Sub,,0,0,0,,I'm like there should be some form of an agreement with policy parameters for task T plus 1 and policy parameters for task T or T plus 1.
+Dialogue: 0,0:20:26.15,0:20:32.63,Sub,,0,0,0,,And at a very high level intuitively what this does is that as I'm fine-tuning my policy to task T two,
+Dialogue: 0,0:20:32.95,0:20:41.97,Sub,,0,0,0,,I kind of memorize and remember what policy parameters were really important for task T1, so I don't change them too much.
+Dialogue: 0,0:20:42.17,0:20:49.40,Sub,,0,0,0,,And as I add these new tasks, I preserve the policy parameters that were really important and relevant to prior tasks,
+Dialogue: 0,0:20:49.45,0:20:54.83,Sub,,0,0,0,,so that ultimately I can remember the prior tasks and adapt and learn the new task.
+Dialogue: 0,0:20:55.77,0:20:57.34,Sub,,0,0,0,,But what does this consensus look like?
+Dialogue: 0,0:20:57.39,0:20:58.28,Sub,,0,0,0,,So,
+Dialogue: 0,0:20:58.33,0:21:05.24,Sub,,0,0,0,,let's say I've learned my policy parameters for task T and then I have a notion of a weight or importance weight
+Dialogue: 0,0:21:05.29,0:21:14.10,Sub,,0,0,0,,for how much each policy parameter matters for task T and I have another task T plus one and the same thing,
+Dialogue: 0,0:21:14.15,0:21:19.69,Sub,,0,0,0,,I have another notion of a weight matrix which is how much each parameter matters for task T plus one.
+Dialogue: 0,0:21:20.27,0:21:28.58,Sub,,0,0,0,,Ideally, I want my policy parameters to be proportional to kind of like a weighted average of these policy parameters.
+Dialogue: 0,0:21:28.63,0:21:32.73,Sub,,0,0,0,,That's what I mean by consensus in the policy parameter space.
+Dialogue: 0,0:21:34.10,0:21:41.50,Sub,,0,0,0,,But these weights depend on policy parameters, and every task may require its own importance, so how do we achieve this?
+Dialogue: 0,0:21:42.70,0:21:43.43,Sub,,0,0,0,,We were actually, again,
+Dialogue: 0,0:21:43.48,0:21:47.67,Sub,,0,0,0,,inspired by the algorithms that are out there in multi-agent world back in the time
+Dialogue: 0,0:21:47.72,0:21:54.59,Sub,,0,0,0,,from 2014 that people have shown that you could actually use methods like a method of multipliers,
+Dialogue: 0,0:21:54.64,0:21:55.59,Sub,,0,0,0,,primal-dual updates.
+Dialogue: 0,0:21:55.64,0:21:59.84,Sub,,0,0,0,,For those of you have background in optimization, there's room for you to contribute to robotics.
+Dialogue: 0,0:22:00.02,0:22:02.59,Sub,,0,0,0,,So we started to think method of multipliers,
+Dialogue: 0,0:22:02.64,0:22:08.64,Sub,,0,0,0,,primal dual updates for reasons that are very well known in the community could actually be super useful for this task.
+Dialogue: 0,0:22:09.46,0:22:14.97,Sub,,0,0,0,,And this results in kind of like an iterative update where you update your policy parameters a little bit,
+Dialogue: 0,0:22:15.02,0:22:17.83,Sub,,0,0,0,,then you kind of move your consensus constraint a little bit.
+Dialogue: 0,0:22:17.88,0:22:24.19,Sub,,0,0,0,,But in a nutshell, that results in kind of having a moving anchor for your memory as you're training your policies.
+Dialogue: 0,0:22:24.24,0:22:31.88,Sub,,0,0,0,,I'm not going to get into the details of how primal dual updates for method of multipliers work, but let me show you how this works in practice.
+Dialogue: 0,0:22:32.66,0:22:41.11,Sub,,0,0,0,,We took π0.5; our pre-training tasks for π0.5 were a bunch of tasks that we ran in the lab, we collected some data from it,
+Dialogue: 0,0:22:41.16,0:22:48.26,Sub,,0,0,0,,but then we had some target tasks such as remove the lid and place the bird in the basket or cake on the cake tray.
+Dialogue: 0,0:22:49.44,0:22:58.55,Sub,,0,0,0,,And we kind of compared the performance of this temporal consensus way of fine-tuning as opposed to baselines and supervised fine-tuning,
+Dialogue: 0,0:22:58.60,0:23:00.64,Sub,,0,0,0,,the vanilla form of supervised fine-tuning.
+Dialogue: 0,0:23:01.23,0:23:04.53,Sub,,0,0,0,,On the target tasks, both methods do well.
+Dialogue: 0,0:23:04.95,0:23:08.63,Sub,,0,0,0,,Both of them learn the target task for which they have been fine-tuned to.
+Dialogue: 0,0:23:08.85,0:23:14.29,Sub,,0,0,0,,But the beauty of temporal consensus view of it becomes clear when you look at the performance on the pre-trained tasks.
+Dialogue: 0,0:23:15.51,0:23:24.72,Sub,,0,0,0,,While SFT forgets about what it had learned before, by just enforcing a simple consensus which is replay free in the policy parameter space,
+Dialogue: 0,0:23:24.77,0:23:27.73,Sub,,0,0,0,,we managed to remember what the robot had learned before.
+Dialogue: 0,0:23:28.86,0:23:32.93,Sub,,0,0,0,,And this is not me just cherry-picking what I really wanted you to see.
+Dialogue: 0,0:23:32.98,0:23:42.32,Sub,,0,0,0,,We have kind of verified this and run a set of comparisons with other baselines out there, including replay or regularization based methods like EWC,
+Dialogue: 0,0:23:42.62,0:23:48.54,Sub,,0,0,0,,but across them we found that this is the best in terms of adaptation while retaining prior skills.
+Dialogue: 0,0:23:49.00,0:23:54.83,Sub,,0,0,0,,And it's not just in the context of fine tuning that we see this method to be actually particularly useful.
+Dialogue: 0,0:23:54.88,0:23:57.92,Sub,,0,0,0,,We see that in the context of mapping an environment as well.
+Dialogue: 0,0:23:58.50,0:24:02.46,Sub,,0,0,0,,Let's say a robot is mapping an environment which is dynamically changing.
+Dialogue: 0,0:24:03.10,0:24:08.72,Sub,,0,0,0,,And let's say some objects like a table has moved around as the robot is moving around and trying to map the environment.
+Dialogue: 0,0:24:09.48,0:24:19.74,Sub,,0,0,0,,If we use a replay based method, our mapping ends up with two copies of the same table because it has seen data of both positions of table.
+Dialogue: 0,0:24:20.38,0:24:26.03,Sub,,0,0,0,,And if we use a regularization based method that the robot fails to see that the table has moved around
+Dialogue: 0,0:24:26.08,0:24:33.08,Sub,,0,0,0,,because it's just so regularized to not depart from what it has learned before that it doesn't learn to adapt.
+Dialogue: 0,0:24:33.36,0:24:36.04,Sub,,0,0,0,,But by just this consensus view of things,
+Dialogue: 0,0:24:36.24,0:24:42.30,Sub,,0,0,0,,we can preserve things that haven't changed from the past and adapt to the parameters and changes in the scene.
+Dialogue: 0,0:24:43.17,0:24:52.23,Sub,,0,0,0,,The same thing we saw in a number of experiments that we ran in the lab with a temporal consensus that my student calls his method TACO,
+Dialogue: 0,0:24:52.39,0:25:00.08,Sub,,0,0,0,,we found that the same thing happens with replay methods, replay based methods, we kind of have the same copy or two copies of the same object.
+Dialogue: 0,0:25:00.13,0:25:06.27,Sub,,0,0,0,,Whereas with regularization based methods, we essentially fail to adapt to the new changes in the environment.
+Dialogue: 0,0:25:06.76,0:25:10.65,Sub,,0,0,0,,So these are just just being very recent results that we found out.
+Dialogue: 0,0:25:10.70,0:25:17.71,Sub,,0,0,0,,But I want to communicate that what we found so far is that this consensus view of continual learning has really
+Dialogue: 0,0:25:17.76,0:25:24.92,Sub,,0,0,0,,been really strong in balancing new skills and learning new skills with retaining what the robot has learned in the past.
+Dialogue: 0,0:25:25.20,0:25:29.41,Sub,,0,0,0,,And just recently we have seen that in the context of reinforcement learning it turns out you can do some really
+Dialogue: 0,0:25:29.46,0:25:36.86,Sub,,0,0,0,,smart things in a within the the RL loop to adapt to changes and it's become super useful in fine-tuning policies.
+Dialogue: 0,0:25:38.02,0:25:42.13,Sub,,0,0,0,,So with that I would like to thank my students who actually did the work that
+Dialogue: 0,0:25:42.18,0:25:46.77,Sub,,0,0,0,,I got to present here today and the funding agencies who actually made this work possible.
+Dialogue: 0,0:25:46.82,0:25:48.36,Sub,,0,0,0,,Thank you all for your attention.

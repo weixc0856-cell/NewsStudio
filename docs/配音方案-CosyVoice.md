@@ -11,18 +11,18 @@ YouTube-B（uv / Python 3.12）                独立 AI 服务层
 │ synthesize_dub.py  ─────────┼─────────────>│ 127.0.0.1:50000  (CPU 推理)   │
 │ dub_mix.py（FFmpeg 滤镜）    │  <─ WAV ──── │ CosyVoice2-0.5B + wetext      │
 └─────────────────────────────┘              └──────────────────────────────┘
-                                              D:\AI\CosyVoice-Runtime（独立 venv）
+                                              $COSYVOICE_DIR（独立 venv）
 ```
 
 - 主项目**不 import cosyvoice**，只通过 HTTP 调用。
-- 服务端使用独立 Python 3.10 venv（`D:\AI\CosyVoice-Runtime\venv`），与 YouTube-B 的 `.venv` 互不可见。
+- 服务端使用独立 Python 3.10 venv（`$COSYVOICE_DIR\venv`），与主项目的 `.venv` 互不可见。
 - 语义分析与配音稿仍由 8080 端口的 `llama-server`（Qwen3-30B-A3B）负责。
 
 ## 2. 服务端
 
 | 项 | 值 |
 |---|---|
-| 目录 | `D:\AI\CosyVoice-Runtime` |
+| 目录 | `$COSYVOICE_DIR` |
 | 启动 | `start_cosyvoice.bat`（或直接 `venv\Scripts\python.exe api_server.py`） |
 | 监听 | `http://127.0.0.1:50000` |
 | 模型 | zero-shot：`CosyVoice2-0.5B`；SFT 预置音色：`CosyVoice-300M-SFT`（均 CPU，fp32，12 线程） |

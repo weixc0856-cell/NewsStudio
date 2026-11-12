@@ -1,0 +1,551 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:00.59,Sub,,0,0,0,,And I think maybe by now the book, I'm not sure if it's empty, but Wolfram is going to tell us,
+Dialogue: 0,0:00:00.64,0:00:06.19,Sub,,0,0,0,,I think, his thoughts about what are the remaining challenges if we want to realize embodied AI.
+Dialogue: 0,0:00:06.24,0:00:09.40,Sub,,0,0,0,,So let's give a warm welcome to Wolfram.
+Dialogue: 0,0:00:12.48,0:00:13.06,Sub,,0,0,0,,Thanks, Dieter.
+Dialogue: 0,0:00:13.64,0:00:14.70,Sub,,0,0,0,,Let's take a selfie.
+Dialogue: 0,0:00:18.31,0:00:19.70,Sub,,0,0,0,,Thanks.
+Dialogue: 0,0:00:19.75,0:00:22.05,Sub,,0,0,0,,And thanks for having me here.
+Dialogue: 0,0:00:22.33,0:00:25.78,Sub,,0,0,0,,I must confess, I'm super nervous right now.
+Dialogue: 0,0:00:25.83,0:00:30.38,Sub,,0,0,0,,It's actually my very first plenary speech in robotics,
+Dialogue: 0,0:00:30.43,0:00:37.25,Sub,,0,0,0,,at least in the robotics and automation society space, and never stood in front of such a big audience.
+Dialogue: 0,0:00:37.75,0:00:40.83,Sub,,0,0,0,,And so it's really great to be here.
+Dialogue: 0,0:00:41.81,0:00:47.44,Sub,,0,0,0,,This talk is a little bit about my perspective or my vision on where
+Dialogue: 0,0:00:47.49,0:00:54.99,Sub,,0,0,0,,we might be going in this right now race about embodied AI systems or robots.
+Dialogue: 0,0:00:55.91,0:01:01.48,Sub,,0,0,0,,And it also will, I will take you back a little bit, maybe like 30 years ago.
+Dialogue: 0,0:01:01.53,0:01:07.44,Sub,,0,0,0,,But at some point in time, we'll even take you even further back, something like two to 3000 years ago.
+Dialogue: 0,0:01:07.49,0:01:09.44,Sub,,0,0,0,,I will let you know at that particular time.
+Dialogue: 0,0:01:09.49,0:01:14.37,Sub,,0,0,0,,and we will then see what is behind all of this.
+Dialogue: 0,0:01:15.48,0:01:20.96,Sub,,0,0,0,,So this talk would not be possible with all my friends and colleagues, normally talks end with this.
+Dialogue: 0,0:01:21.12,0:01:22.54,Sub,,0,0,0,,I'm going to start with this.
+Dialogue: 0,0:01:22.70,0:01:28.42,Sub,,0,0,0,,I have so many friends who contributed to that that I cannot actually add pictures, would have taken me years.
+Dialogue: 0,0:01:29.18,0:01:37.28,Sub,,0,0,0,,I thank all my friends and colleagues who contributed to that work, and a few will be listed and even be shown in pictures here in this presentation.
+Dialogue: 0,0:01:37.33,0:01:44.11,Sub,,0,0,0,,So my view in robotics is actually that that we are going to be or to
+Dialogue: 0,0:01:44.16,0:01:51.49,Sub,,0,0,0,,have a that we are having actually super useful tool for helping us solving important societal problems.
+Dialogue: 0,0:01:51.54,0:01:57.33,Sub,,0,0,0,,Let it be traffic and it can be particularly seen here where you can actually see
+Dialogue: 0,0:01:57.38,0:02:05.44,Sub,,0,0,0,,multiple companies with driverless cars driving around making our traffic more effective and also hopefully safer.
+Dialogue: 0,0:02:05.62,0:02:11.25,Sub,,0,0,0,,It can be the case in production where we are in a global race about the most efficient
+Dialogue: 0,0:02:11.30,0:02:20.73,Sub,,0,0,0,,production systems and so on and where we are believing that robotics will help us competing in that space.
+Dialogue: 0,0:02:21.01,0:02:25.76,Sub,,0,0,0,,And then there is assistance and healthcare, the next dimension, we will talk about this as well,
+Dialogue: 0,0:02:25.81,0:02:32.19,Sub,,0,0,0,,this question of how can we actually build robots that help us with elderly care and also support us in our homes.
+Dialogue: 0,0:02:32.39,0:02:39.76,Sub,,0,0,0,,And finally we are living on a finite sphere and actually constantly growing the fastest growth is
+Dialogue: 0,0:02:39.81,0:02:46.58,Sub,,0,0,0,,in this space here this room it's probably this fastest growing society on earth and that's also something
+Dialogue: 0,0:02:46.63,0:02:53.15,Sub,,0,0,0,,that we need to support or hoped to be able to support with robotics and in fact for
+Dialogue: 0,0:02:53.20,0:02:59.07,Sub,,0,0,0,,that we need that what is called intelligent robots robots that perceive their world like maybe reason about
+Dialogue: 0,0:02:59.12,0:03:04.71,Sub,,0,0,0,,it create models about it and then execute actions in order to achieve their goals That's basically
+Dialogue: 0,0:03:04.76,0:03:10.03,Sub,,0,0,0,,that what we are interested in and right now we are working on that what is called embodied
+Dialogue: 0,0:03:10.08,0:03:17.85,Sub,,0,0,0,,robotics and or embodied AI as a potential solution to this and I love these Pictures with humanoids
+Dialogue: 0,0:03:17.90,0:03:25.47,Sub,,0,0,0,,all these, by the way, disclaimer: all pictures that contain white humanoids are generated with generative AI, right?
+Dialogue: 0,0:03:25.52,0:03:29.77,Sub,,0,0,0,,all the others are basically handmade and And here are a couple of solutions where we
+Dialogue: 0,0:03:29.82,0:03:35.38,Sub,,0,0,0,,envision this to be done in mostly like right now using that what is called humanoid robots.
+Dialogue: 0,0:03:35.70,0:03:40.29,Sub,,0,0,0,,The reason why humanoids are envisioned to be one of the solutions here is that
+Dialogue: 0,0:03:40.34,0:03:47.93,Sub,,0,0,0,,they will allow us to make a smooth transition from actually manual production towards automated production.
+Dialogue: 0,0:03:47.98,0:03:50.77,Sub,,0,0,0,,So we can even have this what is called mixed production,
+Dialogue: 0,0:03:50.82,0:03:59.13,Sub,,0,0,0,,where we have human and robot co-workers in the same space on the same tasks with the same tools, basically accomplishing the very same tasks.
+Dialogue: 0,0:03:59.18,0:04:02.78,Sub,,0,0,0,,And this is why humanoids are so much hyped these days.
+Dialogue: 0,0:04:03.46,0:04:06.67,Sub,,0,0,0,,But on top of this, there's also the next hype.
+Dialogue: 0,0:04:06.72,0:04:13.34,Sub,,0,0,0,,I was in China twice this year and saw like several hundred startups in the space of humanoid robots.
+Dialogue: 0,0:04:13.54,0:04:17.01,Sub,,0,0,0,,And on top of this, equally many startups in the space of robotic hands.
+Dialogue: 0,0:04:17.06,0:04:24.27,Sub,,0,0,0,,And the reason for this is that in order to perform dexterous manipulations with tools that we also use we need to have proper hands But it's not
+Dialogue: 0,0:04:24.32,0:04:29.23,Sub,,0,0,0,,only about mechanics It's also about perception and now we'll come to this in
+Dialogue: 0,0:04:29.28,0:04:33.95,Sub,,0,0,0,,this talk as well And finally and this was mentioned by Peter stone earlier today.
+Dialogue: 0,0:04:34.00,0:04:45.58,Sub,,0,0,0,,You also need Computing on a large scale and on a larger scale than it was available thus far for at least university-like research.
+Dialogue: 0,0:04:46.06,0:04:53.56,Sub,,0,0,0,,But on top of this, and this is something that is mostly underestimated by investors and so on and so forth and even politicians,
+Dialogue: 0,0:04:53.94,0:05:02.48,Sub,,0,0,0,,is this problem of building an AI system that can actually control these robots to accomplish these tasks.
+Dialogue: 0,0:05:02.72,0:05:08.26,Sub,,0,0,0,,We have made an enormous progress over the past years when it comes to building the hardware for this,
+Dialogue: 0,0:05:08.58,0:05:17.09,Sub,,0,0,0,,also enhance humanoids for me it's has been just crazy but building the AI is still the challenge that we are
+Dialogue: 0,0:05:17.14,0:05:24.67,Sub,,0,0,0,,facing right and now ask like robot learning is it right and that's actually what I believe right the only way
+Dialogue: 0,0:05:24.72,0:05:33.51,Sub,,0,0,0,,for solving this is right robot learning and if you boil this even further down then this is this community over
+Dialogue: 0,0:05:33.56,0:05:40.61,Sub,,0,0,0,,here it's basically the core community that is working on this topic and where I believe this is going to take us,
+Dialogue: 0,0:05:40.66,0:05:43.50,Sub,,0,0,0,,hopefully, there where we want to go.
+Dialogue: 0,0:05:46.39,0:05:49.97,Sub,,0,0,0,,So this is our journey more than 2,000 years back.
+Dialogue: 0,0:05:50.37,0:05:55.99,Sub,,0,0,0,,This is, according to Greek mythology, this is the King Sisyphus.
+Dialogue: 0,0:05:56.41,0:06:07.34,Sub,,0,0,0,,And he was, because he believed that he was more intelligent than Zeus, the most important god in Greek mythology, and Zeus didn't really like that.
+Dialogue: 0,0:06:07.39,0:06:13.45,Sub,,0,0,0,,Turns out that kind of like reflects also sometimes our thinking here, right?
+Dialogue: 0,0:06:13.50,0:06:17.43,Sub,,0,0,0,,Everyone of us believes to be the most intelligent person in the world, right?
+Dialogue: 0,0:06:17.48,0:06:19.82,Sub,,0,0,0,,It's something that researchers mostly need to do.
+Dialogue: 0,0:06:20.24,0:06:26.93,Sub,,0,0,0,,And Zeus got so upset about this that he condemned Sisyphus to actually take a large boulder up a hill.
+Dialogue: 0,0:06:26.98,0:06:32.24,Sub,,0,0,0,,So this thing here is the boulder that this poor guy was condemned to transport up the hill.
+Dialogue: 0,0:06:32.40,0:06:35.22,Sub,,0,0,0,,Not that this was enough of a for this guy,
+Dialogue: 0,0:06:35.66,0:06:43.89,Sub,,0,0,0,,Zeus actually condemned this Boulder so that it always fell down when Sisyphus was close to the summit of this mountain And
+Dialogue: 0,0:06:43.94,0:06:50.59,Sub,,0,0,0,,then the boulder actually rolled down the entire hill and this guy had to start from scratch You might not ask this question.
+Dialogue: 0,0:06:50.64,0:06:52.44,Sub,,0,0,0,,What does this have to do with our research?
+Dialogue: 0,0:06:52.90,0:07:00.52,Sub,,0,0,0,,It's basically that like when you look at that what we are doing is we are basically Finding some sort of technology.
+Dialogue: 0,0:07:00.57,0:07:02.58,Sub,,0,0,0,,Let it be Probabilistic Robotics.
+Dialogue: 0,0:07:02.63,0:07:05.96,Sub,,0,0,0,,Let it be deep learning Let it be foundation models, right?
+Dialogue: 0,0:07:06.01,0:07:10.92,Sub,,0,0,0,,We are believing that this technology is finally going to help us getting this boulder
+Dialogue: 0,0:07:10.97,0:07:16.60,Sub,,0,0,0,,up the hill and Unfortunately so far right you were not really successful with this,
+Dialogue: 0,0:07:16.65,0:07:17.10,Sub,,0,0,0,,right?
+Dialogue: 0,0:07:17.15,0:07:25.26,Sub,,0,0,0,,So somehow like some God actually through this boulder again down and this road down and yet to start from scratch again This is why what
+Dialogue: 0,0:07:25.31,0:07:33.26,Sub,,0,0,0,,this has from my perspective to do or this see like kind of the metaphor that is matching that what has actually happened in in our
+Dialogue: 0,0:07:33.31,0:07:37.84,Sub,,0,0,0,,community and when you look at technologies I've been involved in the detail
+Dialogue: 0,0:07:37.89,0:07:41.74,Sub,,0,0,0,,already mentioned I mean there have been three important boulders that I worked
+Dialogue: 0,0:07:41.79,0:07:47.28,Sub,,0,0,0,,on and it started in 1995 who actually was born at that time
+Dialogue: 0,0:07:47.33,0:07:55.71,Sub,,0,0,0,,already 1995 five percent or so of this audience here right which is which
+Dialogue: 0,0:07:55.76,0:08:00.07,Sub,,0,0,0,,is pretty cool this when we actually started working on this with the
+Dialogue: 0,0:08:00.12,0:08:06.15,Sub,,0,0,0,,belief that we could actually solve everything by probabilistic reasoning right and like
+Dialogue: 0,0:08:06.20,0:08:17.43,Sub,,0,0,0,,this was basically the time when we created this book, Probabilistic Robotics; there is Sebastian, Dieter and me right in
+Dialogue: 0,0:08:17.48,0:08:28.07,Sub,,0,0,0,,car at that point in time which basically came out of this of the success of the Probabilistic Robotics theory or like concept in the context
+Dialogue: 0,0:08:28.12,0:08:34.49,Sub,,0,0,0,,of Autonomous driving right and to here in the bottom you even see the three of us on the summit of the mount of a mountain Unfortunately,
+Dialogue: 0,0:08:34.54,0:08:38.69,Sub,,0,0,0,,it's not the same mountains to the first force condemned to carry the boulder up.
+Dialogue: 0,0:08:38.74,0:08:48.19,Sub,,0,0,0,,It was from Mount Rainier instead so so this is basically the equations that are underlying there and that led to an enormous success in the space
+Dialogue: 0,0:08:48.24,0:08:53.01,Sub,,0,0,0,,of Autonomous driving and it's basically that what you see outside these self
+Dialogue: 0,0:08:53.06,0:08:59.19,Sub,,0,0,0,,-driving cars are basically governed by this equation over here which is state estimation.
+Dialogue: 0,0:08:59.24,0:09:04.92,Sub,,0,0,0,,And we are basically trying to figure out where the vehicle is given a map of the environment.
+Dialogue: 0,0:09:05.56,0:09:10.73,Sub,,0,0,0,,And when it comes to building self-driving cars, you need to solve basically three tasks.
+Dialogue: 0,0:09:10.78,0:09:13.61,Sub,,0,0,0,,The first one is stay on the road, which is localization.
+Dialogue: 0,0:09:13.66,0:09:15.49,Sub,,0,0,0,,The second one is don't get hit.
+Dialogue: 0,0:09:15.54,0:09:17.25,Sub,,0,0,0,,And the third one is don't hit anything.
+Dialogue: 0,0:09:17.30,0:09:21.08,Sub,,0,0,0,,And once you are able to do all this, you're getting really, really far.
+Dialogue: 0,0:09:21.90,0:09:29.01,Sub,,0,0,0,,And here's this entire thing in action in indoors and outdoors and GPS denied environments and then you ask
+Dialogue: 0,0:09:29.06,0:09:34.23,Sub,,0,0,0,,the question like how accurate is this actually we also did some experiments a few years ago just to give
+Dialogue: 0,0:09:34.28,0:09:42.99,Sub,,0,0,0,,you an intuition how accurately you can actually localize a robot on a factory floor then these black stripes here
+Dialogue: 0,0:09:43.04,0:09:48.65,Sub,,0,0,0,,that are not used for localization they are actually indicating how accurate this platform is when you want to see
+Dialogue: 0,0:09:48.70,0:09:55.57,Sub,,0,0,0,,this in more quantities then you can see down here in these statistics that the accuracy in localization in post
+Dialogue: 0,0:09:55.62,0:10:05.96,Sub,,0,0,0,,estimation is around a millimeter and who believes that this can be achieved with foundation models as well nobody okay
+Dialogue: 0,0:10:06.01,0:10:13.06,Sub,,0,0,0,,I maybe in a few years from now detail as well which is good so but this is kind of
+Dialogue: 0,0:10:13.11,0:10:23.40,Sub,,0,0,0,,like the the outcome of this endeavor Probabilistic Robotics and that led to these self driving cars and you can
+Dialogue: 0,0:10:23.45,0:10:31.22,Sub,,0,0,0,,see a typical software stack of self-driving cars and those components where I think Probabilistic Robotics is particularly
+Dialogue: 0,0:10:31.27,0:10:40.02,Sub,,0,0,0,,strong and it's in fact this mapping and localization task here is an application to to mapping it's basically the
+Dialogue: 0,0:10:40.07,0:10:47.54,Sub,,0,0,0,,equations underlying slam and this is a company that I found a ten years ago that is like concerned with
+Dialogue: 0,0:10:47.59,0:10:54.84,Sub,,0,0,0,,3d mapping of real estate buildings and also historic buildings also several hundred years ago like the Leaning Tower of
+Dialogue: 0,0:10:54.89,0:11:01.74,Sub,,0,0,0,,Pisa we created with this technology the most accurate model of this of this tower it's an indoor outdoor model
+Dialogue: 0,0:11:01.79,0:11:10.68,Sub,,0,0,0,,basically which is super useful for cultural heritage preservation so on top of this we also created the most accurate
+Dialogue: 0,0:11:10.73,0:11:21.02,Sub,,0,0,0,,model of the Freiburg Cathedral that was depicted on this page over here why this actually was a major stepping
+Dialogue: 0,0:11:21.07,0:11:30.62,Sub,,0,0,0,,stone towards building self-driving cars and created super useful tools for these vehicles and when it comes to perception,
+Dialogue: 0,0:11:30.67,0:11:36.83,Sub,,0,0,0,,tracking, localization, prediction, planning and control, it also introduced the problem.
+Dialogue: 0,0:11:37.21,0:11:48.68,Sub,,0,0,0,,The fact that we were relying on these high definition maps actually made these vehicles being bound towards, we call this level 4 automation,
+Dialogue: 0,0:11:48.73,0:11:55.36,Sub,,0,0,0,,which is basically automation in geofenced areas, which is exactly what you're seeing right now with self-driving cars.
+Dialogue: 0,0:11:55.41,0:12:01.31,Sub,,0,0,0,,You see them in several cities, but you don't see them overall in the world, which would be level 5.
+Dialogue: 0,0:12:02.21,0:12:07.25,Sub,,0,0,0,,Where do you think are we with robotics right now when it comes to manipulation?
+Dialogue: 0,0:12:07.45,0:12:08.95,Sub,,0,0,0,,This is who's for level 3?
+Dialogue: 0,0:12:10.92,0:12:12.80,Sub,,0,0,0,,Maybe a few level 4?
+Dialogue: 0,0:12:14.16,0:12:14.96,Sub,,0,0,0,,Level 5?
+Dialogue: 0,0:12:16.04,0:12:16.56,Sub,,0,0,0,,One.
+Dialogue: 0,0:12:17.18,0:12:25.36,Sub,,0,0,0,,There are in fact a few applications for this, but I think the major problem there is implementing this everywhere in the world.
+Dialogue: 0,0:12:26.35,0:12:35.07,Sub,,0,0,0,,And this has been the major challenge, it's also like a driving force for me nowadays, this question of can we actually get rid of these maps.
+Dialogue: 0,0:12:35.59,0:12:45.33,Sub,,0,0,0,,These maps have been super useful and we roboticists like 3D maps simply because it is geometry and we know very well how to deal with geometry.
+Dialogue: 0,0:12:45.91,0:12:52.82,Sub,,0,0,0,,roboticists love geometry and by building these maps we turn navigation problems in geometry problems
+Dialogue: 0,0:12:52.87,0:12:59.57,Sub,,0,0,0,,and there we go there we are with all the constraints regarding the complexity of environments.
+Dialogue: 0,0:13:00.34,0:13:05.61,Sub,,0,0,0,,The next step in that direction then was like here again is Probabilistic Robotics was
+Dialogue: 0,0:13:05.66,0:13:09.97,Sub,,0,0,0,,the deep network hype right so when you look back at at the give me
+Dialogue: 0,0:13:10.02,0:13:15.07,Sub,,0,0,0,,a second Probabilistic Robotics then you basically see that we are particularly bad at this
+Dialogue: 0,0:13:15.12,0:13:22.86,Sub,,0,0,0,,first step making semantics out of the sensor data like understanding images and understanding point clouds.
+Dialogue: 0,0:13:23.04,0:13:31.08,Sub,,0,0,0,,This is something that deep networks actually substantially improved and it was a second revolution in this space.
+Dialogue: 0,0:13:31.66,0:13:38.53,Sub,,0,0,0,,And here's one example for this deep learning application which is semantic segmentation and there
+Dialogue: 0,0:13:38.58,0:13:44.51,Sub,,0,0,0,,you can basically see that like these systems are substantially better in this interpretation part.
+Dialogue: 0,0:13:44.56,0:13:49.18,Sub,,0,0,0,,And you agreed with me that they are not as good in localization and mapping.
+Dialogue: 0,0:13:50.02,0:13:55.15,Sub,,0,0,0,,And then obviously that raises a question like is there a way to combine the two, right?
+Dialogue: 0,0:13:55.20,0:13:56.52,Sub,,0,0,0,,How can we do this properly?
+Dialogue: 0,0:13:56.72,0:14:06.23,Sub,,0,0,0,,This is something, a discussion that I also started with colleagues here and we were at a TRI or we worked at TRI building these self-driving cars,
+Dialogue: 0,0:14:06.28,0:14:11.51,Sub,,0,0,0,,namely this question of once we have these super effective segmentation and
+Dialogue: 0,0:14:11.56,0:14:16.80,Sub,,0,0,0,,Perception tools like how can we combine them properly with this probabilistic approach?
+Dialogue: 0,0:14:17.16,0:14:23.89,Sub,,0,0,0,,But you need there in this context is basically that what is called Calibrated uncertainties and otherwise your filters
+Dialogue: 0,0:14:23.94,0:14:29.69,Sub,,0,0,0,,or your state estimation processes will basically diverge This problem doesn't go away when you go to foundation models
+Dialogue: 0,0:14:29.74,0:14:37.89,Sub,,0,0,0,,It becomes even harder because these models are even more complex and like estimating or proper Uncertainties based on
+Dialogue: 0,0:14:37.94,0:14:43.91,Sub,,0,0,0,,these foundation models is a severe change And here's one example of that what we did in this context,
+Dialogue: 0,0:14:43.96,0:14:50.98,Sub,,0,0,0,,this uncertainty where panoptic segmentation where you basically not only provide
+Dialogue: 0,0:14:51.03,0:14:56.66,Sub,,0,0,0,,the segmentation masks but you also get these semantic uncertainties for segmentation.
+Dialogue: 0,0:14:56.71,0:15:00.28,Sub,,0,0,0,,You can also do this for instant segmentation which then turns out to be
+Dialogue: 0,0:15:00.33,0:15:05.19,Sub,,0,0,0,,if you combine the two to be just panoptic segmentation or some panoptic uncertainties.
+Dialogue: 0,0:15:05.61,0:15:12.46,Sub,,0,0,0,,And here you see this in action for like famous data set you can actually see that these
+Dialogue: 0,0:15:12.51,0:15:21.57,Sub,,0,0,0,,uncertainties arise at places where they actually make sense that's namely at the borders of classes or also objects
+Dialogue: 0,0:15:22.04,0:15:31.29,Sub,,0,0,0,,right the and the next step was basically the integration of that with one of these state estimation processes
+Dialogue: 0,0:15:31.34,0:15:37.03,Sub,,0,0,0,,you see in this context a particle filter in which case you would actually you actually need to estimate
+Dialogue: 0,0:15:37.08,0:15:44.65,Sub,,0,0,0,,a regularizer that takes the uncertainties that are generated by the networks in order to convert them into
+Dialogue: 0,0:15:44.70,0:15:49.39,Sub,,0,0,0,,calibrated uncertainties which is something that you actually need to learn and when you do this in a proper
+Dialogue: 0,0:15:49.44,0:15:59.11,Sub,,0,0,0,,fashion then you can actually have probabilistic localization at a higher accuracy based on these deep network outputs or
+Dialogue: 0,0:15:59.16,0:16:08.36,Sub,,0,0,0,,learned outputs from directly from the data into segmentation mask and other features that you are actually interested in.
+Dialogue: 0,0:16:10.72,0:16:20.24,Sub,,0,0,0,,Which brings me to this this other problem in this context right so what we did in this deep learning phase was basically we were in the
+Dialogue: 0,0:16:20.29,0:16:26.07,Sub,,0,0,0,,belief that we can actually solve all these problems using deep learning with
+Dialogue: 0,0:16:26.12,0:16:33.03,Sub,,0,0,0,,the complicating factor that we actually had to collect a ton of data like
+Dialogue: 0,0:16:33.08,0:16:40.31,Sub,,0,0,0,,in a supervised fashion maybe We also believe that we can do this in a semi-supervised way on the fly while the vehicle is actually operating
+Dialogue: 0,0:16:40.36,0:16:43.91,Sub,,0,0,0,,But what we mostly needed to specify is that what is called an
+Dialogue: 0,0:16:43.96,0:16:50.06,Sub,,0,0,0,,ontology we needed to provide the vehicle with background information What are the right?
+Dialogue: 0,0:16:50.60,0:16:57.82,Sub,,0,0,0,,classes that are of interest in this particular task for The vehicle namely self-driving
+Dialogue: 0,0:16:58.39,0:17:04.66,Sub,,0,0,0,,but now assume you do have like a robot that is supposed to Like tidy up
+Dialogue: 0,0:17:04.71,0:17:10.84,Sub,,0,0,0,,a kitchen right this problem of like here There's a kitchen and the robot should clean
+Dialogue: 0,0:17:10.89,0:17:17.43,Sub,,0,0,0,,it up And this question of like do we need maps in which classes are relevant?
+Dialogue: 0,0:17:18.15,0:17:22.70,Sub,,0,0,0,,Depends highly on the question of what actually does this kitchen look like and
+Dialogue: 0,0:17:22.75,0:17:27.80,Sub,,0,0,0,,now imagine This is a kitchen like that the robot encounters after a student party,
+Dialogue: 0,0:17:27.85,0:17:30.45,Sub,,0,0,0,,right which might look like this over here, right?
+Dialogue: 0,0:17:30.50,0:17:32.27,Sub,,0,0,0,,And obviously like I mean,
+Dialogue: 0,0:17:32.32,0:17:37.71,Sub,,0,0,0,,I can zoom in here to actually make this a little bit more visible Like creating a three
+Dialogue: 0,0:17:37.76,0:17:46.57,Sub,,0,0,0,,-dimensional model of this environment with is extremely hard Potentially also not super useful and also defining all the
+Dialogue: 0,0:17:46.62,0:17:53.81,Sub,,0,0,0,,classes that you need in order to solve this Clean up the kitchen tasks are extremely hard to
+Dialogue: 0,0:17:53.86,0:18:01.93,Sub,,0,0,0,,define a priori And this is where from my perspective this limit of this deep learning phase has been.
+Dialogue: 0,0:18:01.98,0:18:08.44,Sub,,0,0,0,,It was super useful in the context of self-driving because self-driving is a much more controlled environment.
+Dialogue: 0,0:18:08.94,0:18:15.62,Sub,,0,0,0,,It's kind of, from my perspective, this very same as having robots on factory floors versus having robots at home.
+Dialogue: 0,0:18:16.37,0:18:26.80,Sub,,0,0,0,,This is why I believe that we will much faster be on factory floors with these platforms rather than in real messy homes as we see here.
+Dialogue: 0,0:18:26.85,0:18:31.09,Sub,,0,0,0,,And unfortunately, the real world is typically very messy.
+Dialogue: 0,0:18:31.68,0:18:35.95,Sub,,0,0,0,,Which brings us to the last point, which is foundation models, which really,
+Dialogue: 0,0:18:36.00,0:18:40.97,Sub,,0,0,0,,when I interacted with them for the very first time, they really blew my mind.
+Dialogue: 0,0:18:41.02,0:18:45.35,Sub,,0,0,0,,I thought, oh my goodness, this is the next stepping stone in robotics.
+Dialogue: 0,0:18:45.40,0:18:47.73,Sub,,0,0,0,,And I truly believe that is the case.
+Dialogue: 0,0:18:47.78,0:18:51.02,Sub,,0,0,0,,So that's the third time we are carrying up the boulder of the hill.
+Dialogue: 0,0:18:51.72,0:18:56.13,Sub,,0,0,0,,So this is basically what I believe is happening right now.
+Dialogue: 0,0:18:56.18,0:19:04.07,Sub,,0,0,0,,And here's a few examples of a few works that we worked on in the past This is the so-called vision language maps.
+Dialogue: 0,0:19:04.12,0:19:10.55,Sub,,0,0,0,,We have you basically at the very beginning of this hype Used like the embeddings that we
+Dialogue: 0,0:19:10.60,0:19:17.71,Sub,,0,0,0,,at that time Still mapped to a 3d voxel grid in order to actually perform semantic navigation tasks
+Dialogue: 0,0:19:17.76,0:19:23.93,Sub,,0,0,0,,and perform Language guided navigation with these platforms and for every of these tasks when I see this
+Dialogue: 0,0:19:23.98,0:19:29.15,Sub,,0,0,0,,I think oh my goodness In former days in the deep learning phase that might have been like
+Dialogue: 0,0:19:29.20,0:19:35.25,Sub,,0,0,0,,an enter I call this PhD life where you basically have a student To implement a classifier for
+Dialogue: 0,0:19:35.30,0:19:42.23,Sub,,0,0,0,,plants or you all know how many papers there are of about identifying chairs And classifying chairs in
+Dialogue: 0,0:19:42.28,0:19:47.53,Sub,,0,0,0,,images and here and can do this basically in a zero shot fashion You can basically tell the
+Dialogue: 0,0:19:47.58,0:19:57.08,Sub,,0,0,0,,vehicle without any additional training to perform navigation tasks we have also extended this to to hierarchical representations,
+Dialogue: 0,0:19:57.32,0:20:03.65,Sub,,0,0,0,,basically get a kind of like a tree for the building and then you can give more complex instructions like,
+Dialogue: 0,0:20:03.70,0:20:09.47,Sub,,0,0,0,,for example, find the toilet in the bathroom on floor two, which is then using the LLM,
+Dialogue: 0,0:20:09.52,0:20:14.66,Sub,,0,0,0,,convert it into a specific action sequence that the robot is supposed to execute,
+Dialogue: 0,0:20:14.86,0:20:21.77,Sub,,0,0,0,,and you couldn't do this in a wide variety of language instructions that the robot then can actually execute.
+Dialogue: 0,0:20:21.82,0:20:27.47,Sub,,0,0,0,,And here is that the experiments that Chang Wang actually executed with with this
+Dialogue: 0,0:20:27.52,0:20:32.75,Sub,,0,0,0,,robot in the former building 80 and Freiburg where he was like until the
+Dialogue: 0,0:20:32.80,0:20:37.71,Sub,,0,0,0,,very end of his PhD and the amazing aspect of this is that you
+Dialogue: 0,0:20:37.76,0:20:45.87,Sub,,0,0,0,,can now have this open vocabulary navigation instructions that allow robots to Robustly navigate.
+Dialogue: 0,0:20:45.92,0:20:48.20,Sub,,0,0,0,,Is it sufficient for self-driving cars?
+Dialogue: 0,0:20:48.66,0:20:59.87,Sub,,0,0,0,,probably not but for environments maybe in settings like this one yes it might well be okay and the other question is is this optimal that
+Dialogue: 0,0:20:59.92,0:21:09.49,Sub,,0,0,0,,is also not the case right the this is also a challenge that we had simply still facing like how to optimize these behaviors of these platforms
+Dialogue: 0,0:21:09.54,0:21:17.77,Sub,,0,0,0,,in order to finally achieve the optimal action sequence which is basically that what we want to have from the robots name we learn from everyday
+Dialogue: 0,0:21:17.82,0:21:28.15,Sub,,0,0,0,,operation in such a building and optimizing their their behavior there And here's a few more examples that we did at the very beginning of this phase.
+Dialogue: 0,0:21:28.20,0:21:37.13,Sub,,0,0,0,,This is like vacuum cleaning You probably many of you have a automated vacuum cleaner at home There's only like I think as far as I
+Dialogue: 0,0:21:37.18,0:21:41.85,Sub,,0,0,0,,know one class of vacuum cleaners that does some sort of object classification
+Dialogue: 0,0:21:41.90,0:21:47.11,Sub,,0,0,0,,Because they figured out if you're that if your robot runs over dog poop,
+Dialogue: 0,0:21:47.16,0:21:47.43,Sub,,0,0,0,,right?
+Dialogue: 0,0:21:47.46,0:21:52.25,Sub,,0,0,0,,It's going to be have a catastrophic effect on your apartment because usually after that
+Dialogue: 0,0:21:52.30,0:21:57.63,Sub,,0,0,0,,you need to actually clean your entire apartment and So the idea that was hey,
+Dialogue: 0,0:21:57.68,0:21:58.77,Sub,,0,0,0,,can we do this?
+Dialogue: 0,0:21:58.82,0:22:06.79,Sub,,0,0,0,,Maybe all this company did this by training like The robot or in a deep network on basically plastic dog poop
+Dialogue: 0,0:22:06.84,0:22:15.45,Sub,,0,0,0,,that you can get from a famous distributor and then Chief to like the pretty robust classification result in this context so
+Dialogue: 0,0:22:15.50,0:22:23.01,Sub,,0,0,0,,in term what we did in this context was basically asking the foundation model directly for the policy which we then
+Dialogue: 0,0:22:23.06,0:22:31.15,Sub,,0,0,0,,distilled onto a small networks it was a yolo v8 classifier that we then used to actually run locally on on the
+Dialogue: 0,0:22:31.20,0:22:37.55,Sub,,0,0,0,,robot on an edge device on on the robot and the idea there is that you basically over time doing like
+Dialogue: 0,0:22:37.60,0:22:46.15,Sub,,0,0,0,,this incremental learning basically adapt to the specific environment and get a super compact network running on the platform tailored to your
+Dialogue: 0,0:22:46.20,0:22:55.83,Sub,,0,0,0,,specific environment and executing the actions on that on that machine without plenty of requests to the foundation model and with
+Dialogue: 0,0:22:55.88,0:23:03.17,Sub,,0,0,0,,also saving with spending too much of an energy for all the millions of vacuum cleaners that you have in your home.
+Dialogue: 0,0:23:03.22,0:23:10.27,Sub,,0,0,0,,And here's a few examples of this zero shock behavior or after some training but even with thus far
+Dialogue: 0,0:23:10.32,0:23:17.99,Sub,,0,0,0,,unknown objects so the the YOLO classifier basically says when I'm it's too uncertain about this object it asks the
+Dialogue: 0,0:23:18.04,0:23:23.59,Sub,,0,0,0,,foundation model about what to do and then there's actually added to the training set we use a special specific
+Dialogue: 0,0:23:23.64,0:23:32.77,Sub,,0,0,0,,language based clustering this context in order to have the important examples in the training set so that we actually
+Dialogue: 0,0:23:32.82,0:23:41.85,Sub,,0,0,0,,don't have this catastrophic forgetting and so this is like this which I really found interesting and in this
+Dialogue: 0,0:23:41.90,0:23:47.51,Sub,,0,0,0,,context I want mentioned I was super surprised this morning that there are so few people working on navigation in
+Dialogue: 0,0:23:47.56,0:23:56.13,Sub,,0,0,0,,in this conference so I still find navigation pretty interesting and there's really complex problems in in the navigation part
+Dialogue: 0,0:23:56.18,0:24:04.89,Sub,,0,0,0,,but stay tuned there will also be some manipulation in a few seconds and so the second half of this
+Dialogue: 0,0:24:04.94,0:24:12.53,Sub,,0,0,0,,navigation part is this question which I mentioned it before right and in these self-driving car space probabilistic
+Dialogue: 0,0:24:12.58,0:24:20.83,Sub,,0,0,0,,robotics was like what we mostly did is we created geometric representations of our environment in order to actually navigate
+Dialogue: 0,0:24:20.88,0:24:29.49,Sub,,0,0,0,,around but like at least I don't believe that I do this type of optimization and I don't invert a
+Dialogue: 0,0:24:29.54,0:24:35.99,Sub,,0,0,0,,big matrix in my brain in order to understand what the environment or the world looks like and I also
+Dialogue: 0,0:24:36.04,0:24:42.59,Sub,,0,0,0,,don't have a super accurate like estimate of this this hall over here I have no clue how white
+Dialogue: 0,0:24:42.64,0:24:50.68,Sub,,0,0,0,,this hall exactly is still I can navigate around pretty robustly so that's what I would like that what I
+Dialogue: 0,0:24:50.73,0:24:55.46,Sub,,0,0,0,,would like to see and hope to see at least in in the future is this question of like can
+Dialogue: 0,0:24:55.51,0:25:02.19,Sub,,0,0,0,,we get rid of these geometric representations I think And while this has been an enabler at the same time,
+Dialogue: 0,0:25:02.37,0:25:10.87,Sub,,0,0,0,,it also hinders us from going really wild and going to the level five of navigation and the level five of manipulation as well.
+Dialogue: 0,0:25:11.33,0:25:16.61,Sub,,0,0,0,,So here's like one approach with this flow now where we're basically trying to do this,
+Dialogue: 0,0:25:17.49,0:25:22.91,Sub,,0,0,0,,to navigate around without maps, without explicit representations of the environment.
+Dialogue: 0,0:25:23.13,0:25:26.32,Sub,,0,0,0,,Turns out that you still need some geometry, right?
+Dialogue: 0,0:25:26.37,0:25:34.86,Sub,,0,0,0,,So but the general idea behind this is like we want to actually generalize to new Environments new embodiments different cameras.
+Dialogue: 0,0:25:34.91,0:25:41.56,Sub,,0,0,0,,The robot has never seen and even with multimodal goals And this is the architecture of flown off which
+Dialogue: 0,0:25:41.61,0:25:49.06,Sub,,0,0,0,,is basically a combination of conditional flow matching with depth priors We can now actually navigate in an environment.
+Dialogue: 0,0:25:49.11,0:25:56.58,Sub,,0,0,0,,The robot hasn't seen before and still trying to avoid for computer vision relatively complex obstacles like for example
+Dialogue: 0,0:25:56.63,0:26:03.45,Sub,,0,0,0,,glass panes or glass doors you can also deal with dynamic object obstacles and so on and so forth.
+Dialogue: 0,0:26:03.71,0:26:08.18,Sub,,0,0,0,,Still despite of the fact that we were using depth priors here the robot sometimes
+Dialogue: 0,0:26:08.23,0:26:14.20,Sub,,0,0,0,,collided with objects simply because these diffusion policies don't come with a proper scale and usually
+Dialogue: 0,0:26:14.25,0:26:20.12,Sub,,0,0,0,,in many papers the the projection of the trajectory into the real world was basically done
+Dialogue: 0,0:26:20.17,0:26:26.60,Sub,,0,0,0,,Manually and people like thought about a good like scaling factor for these trajectories Which then
+Dialogue: 0,0:26:26.65,0:26:30.48,Sub,,0,0,0,,actually lead to the fact leads to the fact that in some cases where the
+Dialogue: 0,0:26:30.53,0:26:37.32,Sub,,0,0,0,,scale factor is inappropriate That actually leads to navigation problems Which then led us to the
+Dialogue: 0,0:26:37.37,0:26:44.74,Sub,,0,0,0,,development of metric net which is basically an extension of this That also additionally or additionally
+Dialogue: 0,0:26:44.79,0:26:50.90,Sub,,0,0,0,,incorporates scale to this So it turns out that we cannot completely get rid of geometry,
+Dialogue: 0,0:26:50.95,0:27:02.48,Sub,,0,0,0,,which is probably also reasonable simply because vision is not sufficient for reasoning about distances and avoiding collisions.
+Dialogue: 0,0:27:02.53,0:27:05.86,Sub,,0,0,0,,And this is probably also the reason why we do have two eyes, right,
+Dialogue: 0,0:27:05.91,0:27:11.44,Sub,,0,0,0,,to basically get some idea about the depth in our, at least in the range in which we manipulate.
+Dialogue: 0,0:27:11.49,0:27:19.28,Sub,,0,0,0,,And this is the the architecture of metric net so this navigation policy pie is that what you formerly saw
+Dialogue: 0,0:27:19.33,0:27:27.06,Sub,,0,0,0,,is flown off and then metric net basically adds real-world scale to waypoints to that that are then in a
+Dialogue: 0,0:27:27.11,0:27:35.76,Sub,,0,0,0,,further step slightly adjusted in order to stay away further from obstacles which then substantially improve the navigation robustness here without
+Dialogue: 0,0:27:35.81,0:27:41.43,Sub,,0,0,0,,giving you all the numerical details here but this is something that you can also look up in in the papers.
+Dialogue: 0,0:27:42.11,0:27:50.58,Sub,,0,0,0,,So this is at least like one step towards this idea of like navigating without explicit representations, right?
+Dialogue: 0,0:27:50.63,0:27:53.42,Sub,,0,0,0,,Not needing SLAM anymore, right?
+Dialogue: 0,0:27:53.47,0:28:01.09,Sub,,0,0,0,,And I think this is a super important problem and I would actually like to see this happening
+Dialogue: 0,0:28:01.14,0:28:08.33,Sub,,0,0,0,,in the future that we can actually get rid of this super rigid representations that are helpful but
+Dialogue: 0,0:28:08.38,0:28:13.87,Sub,,0,0,0,,on the other hand of the prevent us from going really wild to Environments the robot has never
+Dialogue: 0,0:28:13.92,0:28:22.93,Sub,,0,0,0,,seen and still operating robustly and here's that some other work that I really like Found very very interesting.
+Dialogue: 0,0:28:22.98,0:28:24.83,Sub,,0,0,0,,It's been done by a year and colleagues.
+Dialogue: 0,0:28:24.88,0:28:26.23,Sub,,0,0,0,,Oh, you're sitting over there.
+Dialogue: 0,0:28:26.28,0:28:26.65,Sub,,0,0,0,,Hi.
+Dialogue: 0,0:28:26.68,0:28:26.88,Sub,,0,0,0,,Oh,
+Dialogue: 0,0:28:26.76,0:28:35.29,Sub,,0,0,0,,yeah it's basically about using these foundation models for robot programming or executing more
+Dialogue: 0,0:28:35.34,0:28:42.05,Sub,,0,0,0,,complex tasks and just elementary skills and And this is a super important problem because
+Dialogue: 0,0:28:42.10,0:28:46.23,Sub,,0,0,0,,I mean when you look at the the applications of robots that what is
+Dialogue: 0,0:28:46.28,0:28:51.16,Sub,,0,0,0,,really missing is the applications of these systems in so-called small and medium enterprises.
+Dialogue: 0,0:28:51.82,0:28:58.11,Sub,,0,0,0,,The reason for this is that programming a robot is extremely expensive and whenever you want to deploy a robot
+Dialogue: 0,0:28:58.16,0:29:03.89,Sub,,0,0,0,,you actually need to send an engineer together with the robot that programs the robot to execute this particular task.
+Dialogue: 0,0:29:03.94,0:29:11.89,Sub,,0,0,0,,And so and this is where in general this enter robot learning Might in the future contribute to
+Dialogue: 0,0:29:11.94,0:29:19.81,Sub,,0,0,0,,basically have a wider roll out of these platforms even in situations where you have like lower Numbers of
+Dialogue: 0,0:29:19.86,0:29:26.01,Sub,,0,0,0,,items to be produced and therefore need a high flexibility of these platforms when it comes to programming
+Dialogue: 0,0:29:26.06,0:29:33.89,Sub,,0,0,0,,them So the idea there basically was like taking elementary skills that are still sufficiently complicated like opening a
+Dialogue: 0,0:29:33.94,0:29:41.13,Sub,,0,0,0,,drawer and Then chaining them using an LLM You saw this earlier today as well using the LLM
+Dialogue: 0,0:29:41.18,0:29:47.79,Sub,,0,0,0,,as a programming assistant that changed these elementary actions based on the input that you get from the images
+Dialogue: 0,0:29:47.84,0:29:55.91,Sub,,0,0,0,,in order to Get a concrete program for the robot to execute this particular task Right and these elementary
+Dialogue: 0,0:29:55.96,0:30:04.37,Sub,,0,0,0,,skills that they were trained using so-called play data with like assigned language labels in the very end
+Dialogue: 0,0:30:04.42,0:30:11.95,Sub,,0,0,0,,and then based on the context of the scene we could basically have the robot executing this more
+Dialogue: 0,0:30:12.00,0:30:19.88,Sub,,0,0,0,,complex tasks then in the end this can be as abstract as heat please tidy up the workspace and
+Dialogue: 0,0:30:19.93,0:30:25.22,Sub,,0,0,0,,then depending on what is in display in the space in the context and the actions to be generated
+Dialogue: 0,0:30:25.27,0:30:32.26,Sub,,0,0,0,,like to get a sequence of actions to execute this particular task and then here's this entire system in
+Dialogue: 0,0:30:32.31,0:30:37.14,Sub,,0,0,0,,action like we basically see the robot like open it inferring that it needs to open the drawer
+Dialogue: 0,0:30:37.19,0:30:43.58,Sub,,0,0,0,,first then puts the blocks into the drawer closes the drawer and then attempts to actually push the green
+Dialogue: 0,0:30:43.63,0:30:53.77,Sub,,0,0,0,,button I think things like this are super important I mean there's obviously an important debate about is this
+Dialogue: 0,0:30:53.82,0:31:00.20,Sub,,0,0,0,,the right way for doing this like turning this into these programs or using these LLMs as programming assistants,
+Dialogue: 0,0:31:00.40,0:31:05.87,Sub,,0,0,0,,or can we do this end-to-end directly using a VLA, right?
+Dialogue: 0,0:31:05.92,0:31:11.48,Sub,,0,0,0,,But this is something that we as a society might hopefully figure out in the near future.
+Dialogue: 0,0:31:13.18,0:31:19.13,Sub,,0,0,0,,There's other aspects as well that I find super interesting in this context of manipulation.
+Dialogue: 0,0:31:19.18,0:31:26.60,Sub,,0,0,0,,I mean, we see plenty of manipulation papers here, which are absolutely impressive.
+Dialogue: 0,0:31:26.65,0:31:34.76,Sub,,0,0,0,,that the question that I wondered about when I thought about this was this question of how do we actually interact with objects
+Dialogue: 0,0:31:34.81,0:31:42.62,Sub,,0,0,0,,in the real world in a proper fashion and when I say in a proper fashion I mean like human-like grasping of
+Dialogue: 0,0:31:42.67,0:31:49.92,Sub,,0,0,0,,objects like how can we do this and this all started with me like playing around with Chet GPT and asking it hey
+Dialogue: 0,0:31:49.97,0:31:56.62,Sub,,0,0,0,,I'm a robot my owner told me to pick up a doll that lies in front of me where should I grasp it?
+Dialogue: 0,0:31:56.67,0:32:04.18,Sub,,0,0,0,,And then Chachupati in his usual way came back with, yes, like either use the arms, the bellacks, or the torso.
+Dialogue: 0,0:32:04.23,0:32:06.15,Sub,,0,0,0,,Basically don't grasp it at the head.
+Dialogue: 0,0:32:06.31,0:32:10.62,Sub,,0,0,0,,And then we started to think about this a little bit more and like built the system
+Dialogue: 0,0:32:10.67,0:32:17.62,Sub,,0,0,0,,that you basically like provided with a prompt about the object to be grasped and then it came
+Dialogue: 0,0:32:17.67,0:32:23.85,Sub,,0,0,0,,back to us with like parts that we actually should maybe should grasp the object and then
+Dialogue: 0,0:32:23.90,0:32:30.66,Sub,,0,0,0,,now at that time we generated this 3D model SLAM by hand nowadays you would use a lot
+Dialogue: 0,0:32:30.71,0:32:37.12,Sub,,0,0,0,,of vision language model for this like Sam 3D or whatsoever in order to generate these 3D
+Dialogue: 0,0:32:37.17,0:32:42.42,Sub,,0,0,0,,point clouds but what is then behind this as well is grasp it which is a tool that
+Dialogue: 0,0:32:42.47,0:32:49.40,Sub,,0,0,0,,basically samples stable grasp points on 3D surfaces right you basically if you have a two finger
+Dialogue: 0,0:32:49.45,0:32:56.09,Sub,,0,0,0,,gripper it samples pairs of grasp points which are sufficient to basically keep the object in the hand.
+Dialogue: 0,0:32:56.49,0:33:02.08,Sub,,0,0,0,,And once you have this you can just check as to whether these grasp points fall into these green regions provided you by
+Dialogue: 0,0:33:02.13,0:33:11.43,Sub,,0,0,0,,the segmentation tool and then you accept only those that lie in green regions and all of a sudden you get semantic grasps.
+Dialogue: 0,0:33:11.74,0:33:13.73,Sub,,0,0,0,,And here's the system in action.
+Dialogue: 0,0:33:13.78,0:33:17.55,Sub,,0,0,0,,So on the left-hand side is the purely geometric part,
+Dialogue: 0,0:33:17.60,0:33:23.09,Sub,,0,0,0,,on the right-hand side is line grasp and You can see is that all of this in a zero-shot fashion, right?
+Dialogue: 0,0:33:23.14,0:33:29.81,Sub,,0,0,0,,so there's no training involved as directly operates on these on these objects and Yeah,
+Dialogue: 0,0:33:29.86,0:33:35.71,Sub,,0,0,0,,particularly like the cactus down there or the cake is also pretty impressive And then on
+Dialogue: 0,0:33:35.76,0:33:42.29,Sub,,0,0,0,,the next slide you will also see the doll the candle is also like pretty interesting because
+Dialogue: 0,0:33:42.34,0:33:47.24,Sub,,0,0,0,,some of the the system seems to seems to know that like a candle on a
+Dialogue: 0,0:33:47.29,0:33:52.66,Sub,,0,0,0,,candlestick is not very stable right so it basically will most likely fall off right so I
+Dialogue: 0,0:33:52.71,0:33:56.88,Sub,,0,0,0,,think this is where the power of these systems actually is when it comes to like
+Dialogue: 0,0:33:56.93,0:34:05.38,Sub,,0,0,0,,interacting with the real world this this capability of to actually perform like semantic or infer semantics
+Dialogue: 0,0:34:05.43,0:34:12.10,Sub,,0,0,0,,of the individual objects sometimes whenever I see this or whenever I see these videos I start
+Dialogue: 0,0:34:12.15,0:34:18.37,Sub,,0,0,0,,thinking oh my goodness that's this thing understands the world which is just crazy from my perspective.
+Dialogue: 0,0:34:19.11,0:34:26.61,Sub,,0,0,0,,Just a side note here we also did a user study we asked users where to actually grasp individual objects like
+Dialogue: 0,0:34:26.66,0:34:34.17,Sub,,0,0,0,,a value closer to one means that we are mostly corresponding with the places where the user would grasp the individual objects.
+Dialogue: 0,0:34:34.22,0:34:41.81,Sub,,0,0,0,,I want to pay a special attention to the toilet brush over here right and 97.6 %
+Dialogue: 0,0:34:41.86,0:34:48.19,Sub,,0,0,0,,of the User said they would grasp it at the handle and the other two points for it.
+Dialogue: 0,0:34:48.24,0:34:53.71,Sub,,0,0,0,,Basically would also grasp it at the brush The reason for this might be that the picture that
+Dialogue: 0,0:34:53.76,0:34:59.13,Sub,,0,0,0,,we provided in the image showed a new toilet brush So that might be the excuse for this.
+Dialogue: 0,0:34:59.18,0:35:04.87,Sub,,0,0,0,,But yes Just a small sight but you can go even more complex, right?
+Dialogue: 0,0:35:04.92,0:35:10.29,Sub,,0,0,0,,If you have objects that are like substantially more complex when it comes to the reasoning
+Dialogue: 0,0:35:10.34,0:35:19.08,Sub,,0,0,0,,part you get relatively good annotation or answers about where to actually grasp these individual objects.
+Dialogue: 0,0:35:19.26,0:35:23.05,Sub,,0,0,0,,This also works for placing like if you want to know how to place an object
+Dialogue: 0,0:35:23.10,0:35:27.59,Sub,,0,0,0,,onto it onto a table then you can just ask these systems like how should I rotate
+Dialogue: 0,0:35:27.64,0:35:32.55,Sub,,0,0,0,,my arm in order to properly place this object onto the table and I think you
+Dialogue: 0,0:35:32.60,0:35:37.99,Sub,,0,0,0,,need to click once in order to this happening and so based on this robot can actually
+Dialogue: 0,0:35:38.04,0:35:45.03,Sub,,0,0,0,,in a zero shot fashion execute these tasks which is pretty impressive in which I particularly
+Dialogue: 0,0:35:45.08,0:35:53.23,Sub,,0,0,0,,like about these these foundation models right the next step is also something like kind of like
+Dialogue: 0,0:35:53.28,0:35:58.67,Sub,,0,0,0,,a message that I want to deliver so when you think about embodied AI and think about
+Dialogue: 0,0:35:58.72,0:36:06.97,Sub,,0,0,0,,that this basically means that we use our body to interact with the real world Then this,
+Dialogue: 0,0:36:07.02,0:36:15.79,Sub,,0,0,0,,from my perspective, means more than just using positions and video and images.
+Dialogue: 0,0:36:16.25,0:36:21.31,Sub,,0,0,0,,So when you see someone manipulating an object in YouTube,
+Dialogue: 0,0:36:21.71,0:36:32.25,Sub,,0,0,0,,you actually do not know how much force this person applies and what it actually feels in order to manipulate this object in this particular form.
+Dialogue: 0,0:36:32.63,0:36:34.72,Sub,,0,0,0,,So this is something that is substantially missing.
+Dialogue: 0,0:36:34.77,0:36:39.94,Sub,,0,0,0,,I know that some computer vision people argue that you actually don't need this.
+Dialogue: 0,0:36:39.99,0:36:41.69,Sub,,0,0,0,,You can do everything with vision.
+Dialogue: 0,0:36:42.23,0:36:50.83,Sub,,0,0,0,,However, when you look at us, we don't run around all the time looking at our hands about what is going on in our hands.
+Dialogue: 0,0:36:51.01,0:36:53.32,Sub,,0,0,0,,We simply don't have the time for doing this.
+Dialogue: 0,0:36:53.37,0:36:59.10,Sub,,0,0,0,,And it would be computationally simply too expensive and we would maybe also run into things and hurt ourselves.
+Dialogue: 0,0:36:59.15,0:37:10.92,Sub,,0,0,0,,So on top of this, you could argue, or you can argue, that there are many people in the world who don't have vision and still live a decent life.
+Dialogue: 0,0:37:10.97,0:37:15.57,Sub,,0,0,0,,But there's very, very few people in the world who don't have tactile information.
+Dialogue: 0,0:37:17.01,0:37:23.78,Sub,,0,0,0,,So maybe, like, tactile information is more important than actually, like, we currently believe.
+Dialogue: 0,0:37:23.83,0:37:27.20,Sub,,0,0,0,,This is why we started this project, Flow Touch,
+Dialogue: 0,0:37:27.25,0:37:34.85,Sub,,0,0,0,,where we are trying to predict what the world will feel like when we touch it with our sensors at a certain place.
+Dialogue: 0,0:37:35.31,0:37:39.58,Sub,,0,0,0,,Alright, so what we want to do is we want to basically predict the sense of touch,
+Dialogue: 0,0:37:39.63,0:37:45.68,Sub,,0,0,0,,like when, from an actual perspective, anywhere on the object and even for novel objects.
+Dialogue: 0,0:37:45.73,0:37:50.13,Sub,,0,0,0,,And this is something that, from my perspective, is super important.
+Dialogue: 0,0:37:50.43,0:37:52.08,Sub,,0,0,0,,Predictions are always important.
+Dialogue: 0,0:37:52.13,0:37:55.91,Sub,,0,0,0,,When you are able to predict something, you have the basis for planning.
+Dialogue: 0,0:37:56.71,0:38:00.20,Sub,,0,0,0,,When you know what it's going to feel like and what your tactile perceptions are,
+Dialogue: 0,0:38:00.25,0:38:06.63,Sub,,0,0,0,,when you grasp something, you actually get an idea as to whether this grasp is going to be stable or not.
+Dialogue: 0,0:38:07.09,0:38:10.62,Sub,,0,0,0,,So this is the reason why we actually looked into this.
+Dialogue: 0,0:38:10.67,0:38:19.61,Sub,,0,0,0,,and we started with looking at the so-called vision-based tactile sensors and like all visual tactile sensors that
+Dialogue: 0,0:38:19.66,0:38:25.91,Sub,,0,0,0,,provide you basically with an image and which is why this is so super hyped right now in the computer
+Dialogue: 0,0:38:25.96,0:38:34.47,Sub,,0,0,0,,vision a community because like that what they are super straight when is basically processing images so this is what
+Dialogue: 0,0:38:34.52,0:38:42.95,Sub,,0,0,0,,we are doing in this in this work here tactile sensor prediction we are basically combining not only real world data
+Dialogue: 0,0:38:43.00,0:38:53.24,Sub,,0,0,0,,plus the grasping points and the simulation data in order to actually train this this predictor turns out that the
+Dialogue: 0,0:38:53.29,0:38:58.42,Sub,,0,0,0,,results are pretty good there's one thing that we would like to understand a little bit better so we have
+Dialogue: 0,0:38:58.47,0:39:09.45,Sub,,0,0,0,,this technique called domain conditioning which actually provides us with the best vision based metrics on these predictions but it's
+Dialogue: 0,0:39:09.50,0:39:18.97,Sub,,0,0,0,,actually not better than that what we call tactile loss that we added in order to further improve the tactile perceptions.
+Dialogue: 0,0:39:19.37,0:39:23.90,Sub,,0,0,0,,So there is something that we still need to work on we are not quite there but
+Dialogue: 0,0:39:23.95,0:39:29.59,Sub,,0,0,0,,this is like even this entire space is relatively at the beginning of what is being done.
+Dialogue: 0,0:39:30.84,0:39:38.21,Sub,,0,0,0,,The next part that I mentioned as well is forces right and I think this Truly believe this is
+Dialogue: 0,0:39:38.26,0:39:43.81,Sub,,0,0,0,,a limitation of that what we are right doing right now we are mostly or too much focusing on like
+Dialogue: 0,0:39:43.86,0:39:53.53,Sub,,0,0,0,,vision and in positions only and we urgently need to go dive deeper into robotics and look into like
+Dialogue: 0,0:39:53.58,0:40:03.61,Sub,,0,0,0,,More multimodal or higher multimodality basically incorporating tactile information and forces as well Just to give you one idea about,
+Dialogue: 0,0:40:03.66,0:40:08.92,Sub,,0,0,0,,like, what the effect of this might be, here's this relatively recent work, like RANCH Act,
+Dialogue: 0,0:40:09.28,0:40:15.34,Sub,,0,0,0,,where we enhance robot policies for contact-rich behavior using actually direct RANCH control.
+Dialogue: 0,0:40:15.86,0:40:21.17,Sub,,0,0,0,,What is nowadays being done mostly is that contact forces are dealt
+Dialogue: 0,0:40:21.22,0:40:26.19,Sub,,0,0,0,,with implicitly by using position control plus controlling the stiffness of the robot,
+Dialogue: 0,0:40:26.24,0:40:26.95,Sub,,0,0,0,,which, however,
+Dialogue: 0,0:40:27.00,0:40:31.83,Sub,,0,0,0,,can be problematic when it comes to different applications where you actually need different
+Dialogue: 0,0:40:31.88,0:40:41.21,Sub,,0,0,0,,forces for the manipulation tasks and so long speech short message but what we are
+Dialogue: 0,0:40:41.26,0:40:48.53,Sub,,0,0,0,,doing replacing here is basically position with only with with with expertise oh yeah adding
+Dialogue: 0,0:40:48.58,0:40:54.81,Sub,,0,0,0,,basically forces to that, and we are doing this on top of this policy ACT
+Dialogue: 0,0:40:54.86,0:41:01.90,Sub,,0,0,0,,and basically like going from position to force torque there's this one problem there that
+Dialogue: 0,0:41:01.95,0:41:05.50,Sub,,0,0,0,,we properly need to deal with free space when the robot is not like touching
+Dialogue: 0,0:41:05.55,0:41:12.96,Sub,,0,0,0,,anything or then you basically need to introduce a heuristic and dampening the entire system
+Dialogue: 0,0:41:13.01,0:41:19.21,Sub,,0,0,0,,and then that allows us then to execute this entire task then in force mode.
+Dialogue: 0,0:41:19.63,0:41:26.26,Sub,,0,0,0,,Alright so the we are playing here it's like we're training this with a like leader follower setting and then he has
+Dialogue: 0,0:41:26.31,0:41:36.00,Sub,,0,0,0,,a few experimental results regarding this basically showing that in most cases we obtain a substantial increase in performance which clearly shows
+Dialogue: 0,0:41:36.05,0:41:45.08,Sub,,0,0,0,,that going over to force control is actually like super beneficial and super helpful and this also our chance to set ourselves
+Dialogue: 0,0:41:45.13,0:41:53.33,Sub,,0,0,0,,apart from that what has gone in the computer vision space where we are mostly about position and and computer vision only.
+Dialogue: 0,0:41:55.10,0:42:01.07,Sub,,0,0,0,,Yeah here's a few tasks that we could do with these with these robots they are like aligned to the Collaboration with
+Dialogue: 0,0:42:01.12,0:42:12.28,Sub,,0,0,0,,Siemens and they are pretty much interested in more industrial applications of of this So which brings us also to this form
+Dialogue: 0,0:42:12.33,0:42:20.28,Sub,,0,0,0,,of like refining policies and and and then also like Trying
+Dialogue: 0,0:42:20.33,0:42:25.36,Sub,,0,0,0,,to adjust robots based on given Vision language action models for
+Dialogue: 0,0:42:25.41,0:42:33.12,Sub,,0,0,0,,example in order to perform or get better in their tasks It's something that I would like to not only see in manipulation,
+Dialogue: 0,0:42:33.17,0:42:42.22,Sub,,0,0,0,,but also in navigation Particularly when there are no maps in the game So this is some work where we basically which is called refined
+Dialogue: 0,0:42:42.27,0:42:50.01,Sub,,0,0,0,,policy distillation where we are actually trying to like become faster when it
+Dialogue: 0,0:42:50.06,0:42:54.35,Sub,,0,0,0,,comes to the adjustment or fine-tuning of these models to specific tasks,
+Dialogue: 0,0:42:54.40,0:43:00.31,Sub,,0,0,0,,right which normally fine-tuning actually takes a lot of data and also
+Dialogue: 0,0:43:00.36,0:43:07.06,Sub,,0,0,0,,doing this from scratch with reinforcement learning typically requires also a lot of exploration.
+Dialogue: 0,0:43:07.44,0:43:13.80,Sub,,0,0,0,,And what we're doing here basically is we are combining this on policy reinforcement learning with behavioral cloning,
+Dialogue: 0,0:43:13.98,0:43:21.07,Sub,,0,0,0,,introducing an additional loss down here and by doing so we are basically getting substantially more
+Dialogue: 0,0:43:21.12,0:43:30.59,Sub,,0,0,0,,effective in certain learning tasks or fine-tuning tasks compared to existing baselines like for example PPO,
+Dialogue: 0,0:43:30.64,0:43:32.98,Sub,,0,0,0,,which our system is relying upon.
+Dialogue: 0,0:43:34.01,0:43:41.27,Sub,,0,0,0,,This is an interesting application towards like getting more efficient and this is also something that we actually should do.
+Dialogue: 0,0:43:41.32,0:43:48.04,Sub,,0,0,0,,The other question is like, how can we actually do this, what is the best way of doing this,
+Dialogue: 0,0:43:48.09,0:43:54.01,Sub,,0,0,0,,this reinforcement learning in order to fine-tune, in, for example, existing policies.
+Dialogue: 0,0:43:54.23,0:44:03.56,Sub,,0,0,0,,And in this context, we would like to mention a relatively recent task, recent work that we are carrying out right now,
+Dialogue: 0,0:44:03.61,0:44:09.08,Sub,,0,0,0,,like in this question of developing policies that generalize better to environmental
+Dialogue: 0,0:44:09.13,0:44:14.70,Sub,,0,0,0,,changes or to tasks that are actually not really seen by the robot.
+Dialogue: 0,0:44:14.75,0:44:19.42,Sub,,0,0,0,,And how can we do this more quickly with a few user demonstrations only?
+Dialogue: 0,0:44:19.47,0:44:24.54,Sub,,0,0,0,,And the idea there is that to basically predict the reward signal, right,
+Dialogue: 0,0:44:24.59,0:44:31.14,Sub,,0,0,0,,in order to actually better understand what the individual task is with the underline
+Dialogue: 0,0:44:31.19,0:44:36.84,Sub,,0,0,0,,hypothesis there is that learning the reward is simpler than actually learning the entire control.
+Dialogue: 0,0:44:36.89,0:44:44.26,Sub,,0,0,0,,and it's so and what we are using for this purpose is basically human demonstrations and the basic idea
+Dialogue: 0,0:44:44.31,0:44:52.06,Sub,,0,0,0,,is as with a longer task demonstrated by a human right the further you go along this this task execution
+Dialogue: 0,0:44:52.11,0:44:59.14,Sub,,0,0,0,,the higher the performance of the the agent actually is in the case where this is successful which we
+Dialogue: 0,0:44:59.19,0:45:04.82,Sub,,0,0,0,,would assume in most of the demonstrations so it's what this allows you to is basically to get kind of
+Dialogue: 0,0:45:04.87,0:45:11.68,Sub,,0,0,0,,like binary values or a pair of values where the later one is typically higher than the former one
+Dialogue: 0,0:45:11.73,0:45:18.66,Sub,,0,0,0,,and if you learn a reward function from this you can actually execute a task and at the same time
+Dialogue: 0,0:45:18.71,0:45:27.00,Sub,,0,0,0,,estimate the reward signal that the agent would get through this image substantially helps performing reinforcement learning and the
+Dialogue: 0,0:45:27.05,0:45:37.10,Sub,,0,0,0,,nice aspect of this is that the current S implementation runs super efficiently on actually a low performance laptop computer.
+Dialogue: 0,0:45:39.54,0:45:46.08,Sub,,0,0,0,,Let's talk about the recent news and I think this is a super important problem that we are right now facing.
+Dialogue: 0,0:45:46.72,0:45:56.21,Sub,,0,0,0,,So to be honest I was a little bit shocked over the past few weeks and whenever you read the news then I let it get a little bit
+Dialogue: 0,0:45:56.26,0:46:05.89,Sub,,0,0,0,,scared about like where this is all going right so we right now see a little bit of a headwind right and that and we are also facing the risk
+Dialogue: 0,0:46:05.94,0:46:16.65,Sub,,0,0,0,,that maybe our societies will not really be happy with that what is help going on in this space of of AI it's all using a lot of energy
+Dialogue: 0,0:46:16.70,0:46:22.37,Sub,,0,0,0,,and then there's also some companies who let their interns go wild with their with
+Dialogue: 0,0:46:22.42,0:46:27.42,Sub,,0,0,0,,their with their agents and producing all kind of things that we don't really like.
+Dialogue: 0,0:46:28.10,0:46:38.29,Sub,,0,0,0,,And so this is something that we maybe as like researchers also put should put more attention not only being more reasonable with
+Dialogue: 0,0:46:38.34,0:46:45.98,Sub,,0,0,0,,our tools but also looking into what is actually going on there and how can we understand these agents in a better fashion.
+Dialogue: 0,0:46:46.42,0:46:50.65,Sub,,0,0,0,,And this is some work that there's some work that we recently did in this space basically
+Dialogue: 0,0:46:50.70,0:46:57.76,Sub,,0,0,0,,trying to understand what these agents actually learned and what they're actually focusing on in their work.
+Dialogue: 0,0:46:58.16,0:47:08.98,Sub,,0,0,0,,So this is a work that we're basically trying to, for these vision language navigation models, to figure out what they're actually focusing on.
+Dialogue: 0,0:47:09.16,0:47:12.64,Sub,,0,0,0,,So what are the parameters that are important for these models?
+Dialogue: 0,0:47:13.16,0:47:19.41,Sub,,0,0,0,,And so for those who don't know vision language navigation systems, they're basically taking multimodal input,
+Dialogue: 0,0:47:19.46,0:47:25.23,Sub,,0,0,0,,in many cases the current observation plus history, and then a language instruction,
+Dialogue: 0,0:47:25.28,0:47:30.56,Sub,,0,0,0,,which can be turned right at the door, very simple or go through the corridor,
+Dialogue: 0,0:47:30.61,0:47:35.59,Sub,,0,0,0,,enter the kitchen, go past the table in the kitchen and stop in front of the fridge.
+Dialogue: 0,0:47:35.91,0:47:38.75,Sub,,0,0,0,,It could be a little bit more complicated actually.
+Dialogue: 0,0:47:39.13,0:47:45.16,Sub,,0,0,0,,And the question then is, what actually drives these navigation decisions?
+Dialogue: 0,0:47:45.21,0:47:47.00,Sub,,0,0,0,,What do these systems rely on?
+Dialogue: 0,0:47:47.05,0:47:52.27,Sub,,0,0,0,,And there we used partially standard techniques to analyze this in our study.
+Dialogue: 0,0:47:52.59,0:48:00.12,Sub,,0,0,0,,So we basically looked at, for example, the visual focus and try to understand what do these systems actually look at.
+Dialogue: 0,0:48:00.17,0:48:06.38,Sub,,0,0,0,,So given this observation here what you can basically do is like blur individual areas of these
+Dialogue: 0,0:48:06.43,0:48:14.55,Sub,,0,0,0,,images and then try to figure out under which in which cases the agent actually changes its decisions.
+Dialogue: 0,0:48:14.79,0:48:20.33,Sub,,0,0,0,,Which basically would mean that this corresponding area and the image would be relevant for generating that decision.
+Dialogue: 0,0:48:20.99,0:48:23.46,Sub,,0,0,0,,That's one thing that you could do.
+Dialogue: 0,0:48:23.51,0:48:28.92,Sub,,0,0,0,,You can do this is the same with the textual focus you can just remove individual words from the
+Dialogue: 0,0:48:28.97,0:48:37.25,Sub,,0,0,0,,text description or tokens and then get an idea about which token slash words are relevant for the navigation task.
+Dialogue: 0,0:48:37.85,0:48:45.82,Sub,,0,0,0,,What we did on top of this is what we added a human mask where we basically like annotated in the image what we think
+Dialogue: 0,0:48:45.87,0:48:55.49,Sub,,0,0,0,,are the areas that are relevant for the navigation task but that we would maybe focus our attention on when we perform this navigation task.
+Dialogue: 0,0:48:55.95,0:48:58.65,Sub,,0,0,0,,And the output of this was pretty interesting.
+Dialogue: 0,0:48:59.11,0:49:08.32,Sub,,0,0,0,,So turns out that the precision on visual and textual heat maps is less than 70 % on these state-of-the-art models,
+Dialogue: 0,0:49:08.37,0:49:13.61,Sub,,0,0,0,,which basically these models, to a large extent, focus on things that we find irrelevant.
+Dialogue: 0,0:49:15.59,0:49:20.64,Sub,,0,0,0,,So that's kind of like something that we would actually need to understand a little bit better.
+Dialogue: 0,0:49:20.69,0:49:28.42,Sub,,0,0,0,,And you can do this for images and text as well And then you can also look at the history and basically ask
+Dialogue: 0,0:49:28.47,0:49:36.69,Sub,,0,0,0,,yourself What which parts of the history or how much does the history actually influence the decisions of these of these agents and?
+Dialogue: 0,0:49:37.33,0:49:44.10,Sub,,0,0,0,,like it's an increasing amount like blur the all the past images to figure out under which like Like how
+Dialogue: 0,0:49:44.15,0:49:49.32,Sub,,0,0,0,,many images you need to blur to actually of the history to actually make Confuse the agent and make it take
+Dialogue: 0,0:49:49.37,0:49:57.76,Sub,,0,0,0,,false decisions Right and it turns out that all agents are actually sensitive to a visual memory correct corruption Which is
+Dialogue: 0,0:49:57.81,0:50:07.59,Sub,,0,0,0,,good because we now see that they actually need history to actually make their decisions Although this is on different scales,
+Dialogue: 0,0:50:07.64,0:50:12.76,Sub,,0,0,0,,but what we also found is that while they are sensitive to history changes
+Dialogue: 0,0:50:13.32,0:50:19.11,Sub,,0,0,0,,There are situations in there basically pretty robust to blurring all images so the
+Dialogue: 0,0:50:19.16,0:50:29.13,Sub,,0,0,0,,decline like it's not very much so I would at least have expected a little bit more which is also kind of like impressive so from my perspective
+Dialogue: 0,0:50:29.18,0:50:33.31,Sub,,0,0,0,,that clearly shows that we need to understand more like we need to understand
+Dialogue: 0,0:50:33.36,0:50:37.75,Sub,,0,0,0,,better what is actually going on in these models in order to actually also
+Dialogue: 0,0:50:37.80,0:50:42.23,Sub,,0,0,0,,better explain them to our society to better explain what is what is actually
+Dialogue: 0,0:50:42.28,0:50:46.94,Sub,,0,0,0,,going on there and maybe also to explain what these models are basically doing.
+Dialogue: 0,0:50:47.46,0:50:56.14,Sub,,0,0,0,,There's also another aspect that we looked into this context which is called activation steering where with this specific
+Dialogue: 0,0:50:56.60,0:51:04.92,Sub,,0,0,0,,aware VLN and so the idea there is or some of these models can perform that what is called reasoning.
+Dialogue: 0,0:51:05.14,0:51:13.73,Sub,,0,0,0,,They basically instead of like generating these navigation actions they then generate a sentence like I'm confused
+Dialogue: 0,0:51:13.78,0:51:19.83,Sub,,0,0,0,,which then in a multi-agent setting might lead to actually additional reasoning and like basically going
+Dialogue: 0,0:51:19.88,0:51:25.15,Sub,,0,0,0,,back to this type of free planning and this question that the problem that we figured out
+Dialogue: 0,0:51:25.20,0:51:32.01,Sub,,0,0,0,,is when These training and deployment distributions were too different than the agent actually never generated reasoning,
+Dialogue: 0,0:51:32.06,0:51:42.21,Sub,,0,0,0,,which is kind of like crazy and so the what we experimented with is like can we actually like enforce this
+Dialogue: 0,0:51:42.26,0:51:51.15,Sub,,0,0,0,,type of like reasoning and this actually like that was we found out like with these latent vector steering that we could
+Dialogue: 0,0:51:51.20,0:52:00.89,Sub,,0,0,0,,actually correct this and make this agent generate like reasoning in order to basically replant its actions which is also kind
+Dialogue: 0,0:52:00.94,0:52:11.02,Sub,,0,0,0,,of like an interesting technique for like revising false decisions of these agents okay in general like we found that modality helps,
+Dialogue: 0,0:52:11.76,0:52:21.16,Sub,,0,0,0,,some of them are steerable and then they not always behave like humans, what concerns at least me a little bit.
+Dialogue: 0,0:52:22.14,0:52:27.10,Sub,,0,0,0,,Finally I want to talk a little bit about infrastructures in the last three or four minutes.
+Dialogue: 0,0:52:27.46,0:52:35.77,Sub,,0,0,0,,So there's we are also working on building infrastructure for like improving robot development in the future.
+Dialogue: 0,0:52:35.82,0:52:43.45,Sub,,0,0,0,,One system is the so-called robot control stack for learning over robot learning at scale
+Dialogue: 0,0:52:43.50,0:52:51.55,Sub,,0,0,0,,it is actually designed to support like different sensors actuators robots switching between sim and real tail
+Dialogue: 0,0:52:51.60,0:52:59.37,Sub,,0,0,0,,operation and data collection and also policy deployment and it runs on different types of hardware we
+Dialogue: 0,0:52:59.42,0:53:06.62,Sub,,0,0,0,,also provide the corresponding simulations to this and it's also like it's been used in different applications,
+Dialogue: 0,0:53:06.98,0:53:16.08,Sub,,0,0,0,,teleoperated and scripted data collection, training, reinforcement learning, and VLA inferences in different settings.
+Dialogue: 0,0:53:16.85,0:53:24.00,Sub,,0,0,0,,And recently, it has also been applied to Dieter Foxen's Toy Blocks World, which was published last year.
+Dialogue: 0,0:53:24.05,0:53:29.15,Sub,,0,0,0,,And I'm mentioning this here as a homage to my dear friend Dieter.
+Dialogue: 0,0:53:29.69,0:53:32.66,Sub,,0,0,0,,And by the way, tomorrow will be his 60th birthday.
+Dialogue: 0,0:53:32.71,0:53:42.36,Sub,,0,0,0,,So don't miss to congratulate him tomorrow and thank you Dieter and all the best for tomorrow I hope you will get many best wishes and yeah,
+Dialogue: 0,0:53:42.41,0:53:47.28,Sub,,0,0,0,,thank you for all your hard work also in robotics and Then the other one is this dual
+Dialogue: 0,0:53:47.33,0:53:55.84,Sub,,0,0,0,,bench benchmark that we recently developed the benchmark that goes beyond just single arm benchmarks we have we actually
+Dialogue: 0,0:53:55.89,0:54:03.48,Sub,,0,0,0,,also looked into a different like success rate for a failure analysis where we actually not only looked
+Dialogue: 0,0:54:03.53,0:54:11.44,Sub,,0,0,0,,at the final The final task completion but also intermediate stages that the robots were supposed to execute Yes,
+Dialogue: 0,0:54:11.49,0:54:12.50,Sub,,0,0,0,,the the setup.
+Dialogue: 0,0:54:12.55,0:54:18.04,Sub,,0,0,0,,So this is running in simulation But also in in the real world and these assets
+Dialogue: 0,0:54:18.09,0:54:23.32,Sub,,0,0,0,,that you see there are all 3d printable so you can actually Download the specifications and
+Dialogue: 0,0:54:23.37,0:54:29.82,Sub,,0,0,0,,generate these setups on the the robots that you do have at home And we're supporting
+Dialogue: 0,0:54:29.87,0:54:36.59,Sub,,0,0,0,,different types of tasks over here which are all listed on this on this Slide here.
+Dialogue: 0,0:54:36.64,0:54:44.36,Sub,,0,0,0,,All right, and some results are also provided turns out that Like low data fine-tuning is problematic.
+Dialogue: 0,0:54:44.54,0:54:49.59,Sub,,0,0,0,,That's what we find and grasping and early stages are bottlenecked Potentially because
+Dialogue: 0,0:54:49.64,0:54:52.59,Sub,,0,0,0,,in later stages all the robot has to do is to drop objects which
+Dialogue: 0,0:54:52.64,0:54:57.47,Sub,,0,0,0,,is much easier than grasping them and manipulating things but there's something that we
+Dialogue: 0,0:54:57.52,0:55:04.45,Sub,,0,0,0,,would like to look into even further good let's skip this here another task
+Dialogue: 0,0:55:04.50,0:55:07.25,Sub,,0,0,0,,that I've been doing other thing that I've been doing over the past years
+Dialogue: 0,0:55:07.30,0:55:14.23,Sub,,0,0,0,,is actually improving computing infrastructure in Bavaria this is a project that I've done
+Dialogue: 0,0:55:14.28,0:55:19.81,Sub,,0,0,0,,together with Björn Ommer, this is a so-called Bavarian foundation model project that
+Dialogue: 0,0:55:19.86,0:55:28.71,Sub,,0,0,0,,machine that you see here is 400 B100 GPUs that was bought by the
+Dialogue: 0,0:55:28.76,0:55:33.69,Sub,,0,0,0,,state of Bavaria and right now we are getting an additional number of thousand
+Dialogue: 0,0:55:33.74,0:55:39.17,Sub,,0,0,0,,GB 200 GPUs delivered which is Peter Stone mentioned this earlier this morning like
+Dialogue: 0,0:55:39.22,0:55:42.19,Sub,,0,0,0,,about the infrastructure that they have and we are going to have probably one
+Dialogue: 0,0:55:42.24,0:55:51.07,Sub,,0,0,0,,of the largest compute infrastructures on the university scale in in Germany and Which
+Dialogue: 0,0:55:51.12,0:55:58.49,Sub,,0,0,0,,brings me to the end of this talk I truly believe that we need to actually join forces as a society in At this discussion last night about
+Dialogue: 0,0:55:58.54,0:56:06.76,Sub,,0,0,0,,how we can actually keep up with everything that is going on in in the industry And where is robot learning going to be in like for academic?
+Dialogue: 0,0:56:07.00,0:56:10.71,Sub,,0,0,0,,Robot learning research going to be and there are so many companies in this
+Dialogue: 0,0:56:10.76,0:56:15.77,Sub,,0,0,0,,space that have large teams and can carry out large-scale projects instead of and
+Dialogue: 0,0:56:15.82,0:56:20.19,Sub,,0,0,0,,while we are having to deal with actually these type of PhD type projects
+Dialogue: 0,0:56:20.24,0:56:27.37,Sub,,0,0,0,,that are way more challenging and not on this big scale as the big Developments,
+Dialogue: 0,0:56:27.42,0:56:28.97,Sub,,0,0,0,,right and in a few words,
+Dialogue: 0,0:56:29.02,0:56:36.39,Sub,,0,0,0,,I think we again need to create a robotics foundation model including forces and sense
+Dialogue: 0,0:56:36.44,0:56:41.64,Sub,,0,0,0,,of touch I used to say we need a son of robotics and and like
+Dialogue: 0,0:56:41.69,0:56:46.52,Sub,,0,0,0,,building something like this again these open max embodiment project which I really really liked
+Dialogue: 0,0:56:46.57,0:56:50.32,Sub,,0,0,0,,and I think the only way to actually keep up with that what is going
+Dialogue: 0,0:56:50.37,0:56:56.42,Sub,,0,0,0,,on industry is doing further projects like this and maybe also publishing this in the
+Dialogue: 0,0:56:56.47,0:57:02.82,Sub,,0,0,0,,transactions on robotic and not only in a small conference and if all of this
+Dialogue: 0,0:57:02.87,0:57:11.48,Sub,,0,0,0,,is going to be successful, then at least this is my hope: in the end we are going to be done with Probabilistic Robotics
+Dialogue: 0,0:57:11.53,0:57:19.42,Sub,,0,0,0,,That is one of the favorite animations for students and I let this book basically explode here and that
+Dialogue: 0,0:57:19.47,0:57:24.94,Sub,,0,0,0,,what we hopefully get out of this community is that this boulder is on top of the hill and
+Dialogue: 0,0:57:24.99,0:57:33.26,Sub,,0,0,0,,with the robotics being solved and what I particularly like about this AI generated picture is this UTN symbol
+Dialogue: 0,0:57:33.31,0:57:41.60,Sub,,0,0,0,,here which I didn't ask technology in Nuremberg research is so important that it needs to be on this robot.
+Dialogue: 0,0:57:41.65,0:57:42.55,Sub,,0,0,0,,Thank you for listening.

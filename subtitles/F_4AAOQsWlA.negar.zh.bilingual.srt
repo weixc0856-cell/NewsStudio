@@ -1,0 +1,1354 @@
+1
+00:00:00,000 --> 00:00:02,100
+So please join me in welcoming Negar Mehr.
+请大家和我一起欢迎内加尔·梅赫。
+
+2
+00:00:05,040 --> 00:00:11,440
+Thank you so much, Ken, for the very kind introduction and thanks to the organizers for bringing us together.
+非常感谢肯如此亲切的介绍，也感谢主办方将我们聚集在一起。
+
+3
+00:00:12,260 --> 00:00:16,690
+So I'm very excited to share with you what my lab has been working on.
+我非常激动，想和大家分享我们实验室正在开展的工作。
+
+4
+00:00:16,740 --> 00:00:21,450
+And in particular, if you're worried that there is not much left for you to do in robotics,
+尤其是如果你担心在机器人领域已经没什么可做的了，
+
+5
+00:00:21,500 --> 00:00:27,370
+I want to encourage you all to think about the next steps and I want to convince you that there are still
+我想鼓励大家思考下一步该做什么，我想说服你们，仍然有
+
+6
+00:00:27,420 --> 00:00:36,180
+many more problems and challenges to solve So we are all excited We are seeing performances capabilities and robotics that we couldn't
+许多问题和挑战有待解决。我们都非常兴奋，如今机器人展现出的性能和能力，是我们几年前
+
+7
+00:00:36,230 --> 00:00:43,700
+really imagine of a couple of years ago Every time I just open up my Twitter or X I'm impressed by the
+根本无法想象的。每次我打开推特或 X，都会被看到的演示所震撼，
+
+8
+00:00:43,750 --> 00:00:51,560
+demos that we see and the exciting capabilities that are being unlocked by the robotic systems But I think as a community,
+被机器人系统所解锁的激动人心的能力所惊叹。但我觉得作为整个社区，
+
+9
+00:00:51,610 --> 00:00:59,730
+it is now time to think about how can we go one step further and how can we have robots that are integrated into our lives,
+现在是时候思考如何再进一步，如何让机器人真正融入我们的生活，
+
+10
+00:01:00,270 --> 00:01:08,440
+the same way that autonomous cars were integrated into our lives and they share roads with human driven cars or pedestrians around here in Austin,
+就像自动驾驶汽车已经融入我们的生活那样，它们与人类驾驶的汽车或奥斯汀这里的行人共同使用道路，
+
+11
+00:01:08,490 --> 00:01:11,370
+I see many Waymo cars, which is very exciting.
+我看到很多 Waymo 的汽车，这非常令人兴奋。
+
+12
+00:01:12,300 --> 00:01:16,340
+But now that we have all these new capabilities emerging in robotic systems,
+但现在，随着机器人系统涌现出这些新能力，
+
+13
+00:01:16,720 --> 00:01:22,100
+how about having humanoids, quadrupeds or other robots around in this conference helping us.
+会议现场有没有人形机器人、四足机器人或其他机器人帮忙，怎么样？
+
+14
+00:01:23,040 --> 00:01:26,110
+And obviously we are very far from that point and that is why I had
+显然我们离那个目标还很远，这也是为什么我需要
+
+15
+00:01:26,160 --> 00:01:30,860
+to generate this image using Astra because I couldn't find any real world images of this.
+用 Astra 生成这张图片，因为我找不到任何现实世界中这样的图像。
+
+16
+00:01:31,200 --> 00:01:36,530
+But what we are looking at is how can we get robots to interact safely
+但我们关注的是，如何让机器人在非结构化环境中
+
+17
+00:01:36,580 --> 00:01:42,870
+and intelligently with other agents in unstructured environments that are humans around or other robots around.
+安全且智能地与其他智能体互动，比如周围的人类或其他机器人。
+
+18
+00:01:42,920 --> 00:01:49,630
+And that's, I think, a very timely question to ask, because maybe five years ago when I posed this question,
+我认为，现在提出这个问题非常及时，因为五年前我提出这个问题时，
+
+19
+00:01:49,680 --> 00:01:54,710
+people would be like, but I don't even have a robot that does things reliably on its own.
+人们可能会说，但我连一个能可靠自主完成任务的机器人也没有。
+
+20
+00:01:54,760 --> 00:01:56,340
+Why would I worry about this?
+我为什么要担心这个？
+
+21
+00:01:56,600 --> 00:01:58,790
+But I think it's time to think about this.
+但现在，是时候开始思考这个问题了。
+
+22
+00:01:58,840 --> 00:02:07,350
+And this is a very hard problem that requires us to think about different aspects of robotic algorithm design and hardware design.
+这是一个非常困难的问题，需要我们从机器人算法设计和硬件设计的多个方面进行思考。
+
+23
+00:02:07,400 --> 00:02:13,960
+On the algorithmic side, my lab has been working on what does planning look like in these domains?
+在算法层面，我的实验室一直在研究这些领域中规划应该是什么样子？
+
+24
+00:02:14,010 --> 00:02:15,620
+What should learning look like?
+学习又应该呈现为何种形态？
+
+25
+00:02:15,670 --> 00:02:16,760
+How about perception?
+感知方面呢？
+
+26
+00:02:16,810 --> 00:02:17,830
+How about safety?
+安全性方面呢？
+
+27
+00:02:18,470 --> 00:02:25,630
+But we are at conference on robot learning, so I want to share with you in what ways is learning in these domains different,
+但我们现在身处机器人学习会议，所以我想要和大家分享一下，在这些领域中学习有何不同之处，
+
+28
+00:02:25,990 --> 00:02:33,230
+and in what ways some lessons that we have learned from learning in multi-agent domains can actually be useful for learning in single-agent domains.
+以及我们在多智能体领域中学到的一些经验，实际上如何能用于单智能体领域的学习。
+
+29
+00:02:33,450 --> 00:02:40,810
+And throughout this talk, to motivate what we do, I'm going to use a very simple running example.
+在整个演讲过程中，为了说明我们所做工作的动机，我将使用一个非常简单的实例。
+
+30
+00:02:41,650 --> 00:02:49,070
+Imagine you have two agents, two robots, both of whom want to carry an object like a basket.
+想象你有两个智能体，两个机器人，它们都想搬运一个像篮子一样的物体。
+
+31
+00:02:50,230 --> 00:02:57,770
+And what I'm interested in is that I want to learn policies for each one of those robots so that when I pair these policies together,
+我感兴趣的是，我想为每个机器人学习出相应的策略，使得当我将这些策略组合在一起时，
+
+32
+00:02:57,990 --> 00:03:03,110
+they collectively succeed in this task of collaborating an object on transporting an object.
+它们能共同完成协作搬运物体的任务。
+
+33
+00:03:04,000 --> 00:03:06,980
+What's hard about this is that I want my policies to be decentralized.
+这里的难点在于，我希望这些策略是去中心化的。
+
+34
+00:03:07,160 --> 00:03:10,910
+I want every robot to make decisions based on its own local observations,
+我希望每个机器人仅基于自身的局部观测做出决策，
+
+35
+00:03:10,960 --> 00:03:17,080
+but there is some coupling which is implicit that both of them should agree on how to do a task to succeed.
+但两者之间存在某种隐含的耦合关系，即它们必须就如何完成任务达成一致才能成功。
+
+36
+00:03:18,040 --> 00:03:19,510
+What are our approaches?
+我们的方法是什么？
+
+37
+00:03:19,560 --> 00:03:22,240
+What are the recipes out there for learning these policies?
+现在有哪些学习这些策略的方法？
+
+38
+00:03:22,420 --> 00:03:24,720
+One approach is through imitation learning.
+一种方法是通过模仿学习。
+
+39
+00:03:25,020 --> 00:03:27,160
+One is through reinforcement learning.
+另一种方法是通过强化学习。
+
+40
+00:03:27,440 --> 00:03:33,560
+And what I'm going to do today is first I'm going to talk about what imitation looks like in these domains.
+今天我要做的第一件事，是先谈谈在这些领域中模仿学习是什么样子的。
+
+41
+00:03:34,360 --> 00:03:38,580
+Then I'm going to share with you what happens if you try to use RL for solving these tasks.
+然后我会和大家分享，如果你尝试用强化学习来解决这些任务，会发生什么。
+
+42
+00:03:39,020 --> 00:03:42,390
+And finally, I'm going to share some recent advances that we've made,
+最后，我会分享我们最近的一些进展，
+
+43
+00:03:42,440 --> 00:03:45,990
+which I think are very exciting and tell us how ideas from multi
+我认为这些进展非常令人兴奋，也让我们看到多智能体学习中的想法
+
+44
+00:03:46,040 --> 00:03:50,900
+agent learning can actually really help in the context of single-agent continual learning.
+如何真正帮助单智能体持续学习的场景。
+
+45
+00:03:51,400 --> 00:03:53,260
+Let's start by imitating.
+我们先从模仿开始。
+
+46
+00:03:53,520 --> 00:03:58,600
+We've seen a lot of capabilities?
+我们已经看到了很多能力？
+
+47
+00:03:58,780 --> 00:04:04,680
+What if I just collect some demonstrations from two robots collaboratively lifting an object?
+如果我只从两个机器人协作抬一个物体的过程中收集一些示范呢？
+
+48
+00:04:05,320 --> 00:04:09,310
+And then I can just do behavioral cloning and directly imitate policies.
+然后我就可以直接进行行为克隆，模仿策略。
+
+49
+00:04:09,360 --> 00:04:11,840
+How is it even different from single-agent domains?
+它和单智能体领域究竟有什么不同？
+
+50
+00:04:12,530 --> 00:04:17,300
+So we started to think about this problem theoretically first to think about in
+于是我们首先从理论上思考这个问题，来探讨
+
+51
+00:04:17,350 --> 00:04:23,030
+what ways is directly imitating policies in multi-agent domains different from single-agent domains.
+在多智能体领域中，直接模仿策略与单智能体领域有何不同。
+
+52
+00:04:23,870 --> 00:04:27,670
+And intuitively, at a very high level, the difficulties are following.
+直观上，在非常高的层面，困难之处如下。
+
+53
+00:04:28,150 --> 00:04:33,260
+Let's say I collect some demonstration data, and my object is a heavy object.
+假设我收集了一些示范数据，我的目标是一个重物。
+
+54
+00:04:33,310 --> 00:04:36,910
+So no single robot can on its own pick up the object.
+因此单个机器人无法独立完成拾起该物体的任务。
+
+55
+00:04:37,800 --> 00:04:40,240
+And then I imitate policies of the two robots.
+然后我模仿两个机器人的策略。
+
+56
+00:04:41,000 --> 00:04:49,000
+But during execution, if one of the robots slightly deviates from what it did, or what the expert did in its demonstrations,
+但在执行过程中，如果其中一个机器人稍微偏离了示范中专家的行为，
+
+57
+00:04:49,480 --> 00:04:55,950
+the entire effort fails, and the other robot, no matter how hard it tries, it can't really account for what happened.
+整个任务就会失败，另一个机器人无论多么努力，也无法弥补发生的情况。
+
+58
+00:04:56,000 --> 00:05:01,090
+So the deviations from expert expert policies, which are very common in behavioral cloning,
+因此，在行为克隆中非常常见的专家策略偏差，
+
+59
+00:05:01,140 --> 00:05:05,540
+are something that we cannot really tolerate and accommodate in multi-agent domains.
+在多智能体领域中是我们无法真正容忍和适应的。
+
+60
+00:05:06,080 --> 00:05:11,050
+So again, we formally characterize this, it turns out that instead of value gap,
+所以再次，我们正式地刻画了这一点，结果发现，这并非价值差距的问题，而是其他原因。
+
+61
+00:05:11,100 --> 00:05:17,510
+which is the metric that we typically care about in single-agent imitation learning, in multi-agent behavioral cloning,
+这是我们在单智能体模仿学习和多智能体行为克隆中通常关注的指标
+
+62
+00:05:17,560 --> 00:05:22,340
+we have to think about something that we call exploitability of learned policies, which is,
+我们必须考虑一个被称为学习策略可被利用性的概念，即
+
+63
+00:05:22,640 --> 00:05:30,360
+if one agent deviates slightly from what they did in the expert demo, how will the other agent react and how bad that can be.
+如果一个智能体稍微偏离专家演示中的行为，另一个智能体将如何反应，以及这种偏离可能造成的后果有多严重
+
+64
+00:05:30,770 --> 00:05:35,950
+And again, very informally, it's very hard to learn low exploitable policies.
+再次非正式地讲，学习低可被利用性策略非常困难
+
+65
+00:05:36,110 --> 00:05:41,760
+And we have noticed that what this theoretical results means is that data coverage,
+我们注意到，这些理论结果意味着数据覆盖度
+
+66
+00:05:41,810 --> 00:05:49,780
+covering all possible failure modes and all possible interaction modes matters even more in multi-agent interaction.
+覆盖所有可能的故障模式和所有可能的交互模式，在多智能体交互中显得更加重要
+
+67
+00:05:49,830 --> 00:05:52,890
+So you have to scale up your data collection even more.
+因此，你必须进一步扩大数据收集规模
+
+68
+00:05:53,390 --> 00:06:00,710
+And yet, all this is based on the assumption that there is only one way to coordinate with other agents.
+然而，这一切都基于一个假设：与其他智能体协作只有一种方式
+
+69
+00:06:01,300 --> 00:06:05,060
+And we know that interactions are multimodal.
+我们知道，交互具有多模态性
+
+70
+00:06:05,760 --> 00:06:10,470
+multimodality in multi-agent interactions is even more common than single-agent domains.
+多智能体交互中的多模态性比单智能体领域更为常见
+
+71
+00:06:10,520 --> 00:06:17,210
+The same task that I showed, there are two ways for the robots or even more, you could argue there are three ways for the robots to coordinate.
+我刚才展示的同一任务，机器人之间存在两种协调方式，甚至可以说有三种方式
+
+72
+00:06:17,260 --> 00:06:23,740
+But how can you how can they decide on their own which mode the other agent is picking up on?
+但它们如何自行判断对方选择了哪种模式？
+
+73
+00:06:24,590 --> 00:06:30,490
+So the moment I talk about multimodalities, I'm sure this audience thinks of diffusion policies,
+所以当我谈到多模态时，我相信在场的各位都会想到扩散策略，
+
+74
+00:06:30,650 --> 00:06:36,650
+because because we've all seen how amazing diffusion policies have been in capturing multimodalities.
+因为我们所有人都见过扩散策略在捕捉多模态方面的惊人表现。
+
+75
+00:06:37,170 --> 00:06:42,780
+So we started to think, maybe that's the recipe, maybe to learn a different coordination mode,
+于是我们开始思考，也许这就是关键，也许应该学习一种不同的协调模式，
+
+76
+00:06:42,830 --> 00:06:47,540
+what I need to do is to use the multimodal capabilities of diffusion
+我需要利用扩散策略的多模态能力，
+
+77
+00:06:47,590 --> 00:06:53,150
+policies and imitate decentralized diffusion policies that can learn to adapt to other agents.
+并模仿去中心化的扩散策略，让它们学会适应其他智能体。
+
+78
+00:06:53,830 --> 00:07:01,580
+So we designed a centralized training, decentralized execution pipeline where we pair policies with one another,
+因此我们设计了一个集中式训练、去中心化执行的流程，将策略两两配对，
+
+79
+00:07:01,630 --> 00:07:06,970
+train them, but during execution they're just decentralized policies all in a diffusion form.
+进行训练，但在执行时，它们只是以扩散形式存在的去中心化策略。
+
+80
+00:07:07,800 --> 00:07:08,560
+And it works.
+而且它真的有效。
+
+81
+00:07:09,360 --> 00:07:15,040
+One of my favorite videos is actually this video that the two robots are making decisions, each one of them is making decisions on its own,
+我最喜欢的视频之一就是这个，两个机器人各自独立做决策，
+
+82
+00:07:15,300 --> 00:07:20,950
+but they don't know which way the other robot is going, but they learn to implicitly coordinate with one another.
+但它们并不知道对方的行动方向，却学会了隐式地相互协调。
+
+83
+00:07:21,000 --> 00:07:25,970
+One of them is pulling the basket, the other is pushing, but by just leveraging this to cast this at the end,
+一个在拉篮子，另一个在推，但仅仅通过利用这种机制到最后，
+
+84
+00:07:26,020 --> 00:07:30,640
+running this in a receding horizon, they ultimately agree on a one mode of interaction.
+在滚动时域中运行，它们最终达成了一种统一的互动模式。
+
+85
+00:07:31,610 --> 00:07:32,490
+So this is great.
+所以这很棒。
+
+86
+00:07:33,010 --> 00:07:34,010
+Is it solved?
+问题解决了吗？
+
+87
+00:07:34,740 --> 00:07:39,710
+For any of you who has ever teleoperated the bi-manual setup or a multi-agent setup,
+对于任何曾经遥操作过双臂系统或多智能体系统的人而言，
+
+88
+00:07:39,760 --> 00:07:45,000
+you kind of know how hard it is to collect data in these interactive domains.
+你们大概都清楚，在这些交互式领域收集数据有多困难。
+
+89
+00:07:45,640 --> 00:07:51,940
+So this requires enough demonstration data for each interactive task, which is really hard to achieve.
+因此，每个交互任务都需要足够的演示数据，而这真的很难实现。
+
+90
+00:07:52,790 --> 00:07:55,090
+And naturally for all of us in this conference,
+对于在座的我们所有人来说，
+
+91
+00:07:55,450 --> 00:08:03,680
+a very key question to ask is single-agent robots have so much capability that are pre-trained in them these days.
+一个非常关键的问题是：如今单智能体机器人已经具备了如此强大的预训练能力。
+
+92
+00:08:03,730 --> 00:08:12,170
+How can we build on these pre-trained skills that robots have achieved, to enable robots to have coordination on demand?
+我们如何基于机器人已有的预训练技能，来实现机器人按需协调？
+
+93
+00:08:12,790 --> 00:08:17,710
+Instead of training everything from scratch for my robots to learn how to coordinate with one another?
+而不是从零开始训练机器人，让它们学习如何相互协作？
+
+94
+00:08:17,950 --> 00:08:24,780
+What if I just build on the existing capabilities and make the robot coordinate and interact only when it is needed,
+如果我只是基于现有能力，仅在需要时才让机器人进行协调与交互，
+
+95
+00:08:24,830 --> 00:08:28,630
+and not forgetting about things that they could do on on their own?
+同时也不忘记它们原本就能独立完成的事情？
+
+96
+00:08:29,390 --> 00:08:34,900
+So recently, we've been looking into what if we freeze what the robot already knows,
+所以最近，我们一直在思考，如果冻结机器人已有的知识会怎样，
+
+97
+00:08:34,950 --> 00:08:41,230
+and just learn only the correction that is needed for achieving coordination between pre-trained skills,
+仅学习实现预训练技能间协调所需的修正，
+
+98
+00:08:41,470 --> 00:08:46,610
+only using few demonstrations, not as much as training everything from scratch.
+仅使用少量示范，远少于从零开始训练全部内容。
+
+99
+00:08:47,240 --> 00:08:52,530
+And the first thing that they've tried is how about we just learn residual denoiser
+他们尝试的第一件事是，我们为什么不直接学习一个残差去噪器，
+
+100
+00:08:52,580 --> 00:08:58,740
+for correcting single-agent policies to get robots to interact and coordinate with one another.
+用于修正单智能体策略，使机器人能够相互交互和协调。
+
+101
+00:08:59,870 --> 00:09:06,950
+So I assume that I have a diffusion policy that has learned certain skills for just one robot, let's say pick in place and wiping.
+我假设我有一个扩散策略，已学会单个机器人的一些技能，比如原地抓取和擦拭。
+
+102
+00:09:07,510 --> 00:09:10,670
+And what I do is just only few demonstration data,
+我所做的是仅使用少量示范数据，
+
+103
+00:09:10,830 --> 00:09:18,330
+I use that to correct my denoising process so that I coordinate the timing of the agents actions with one another.
+利用这些数据来修正去噪过程，从而协调各智能体动作的时间。
+
+104
+00:09:19,160 --> 00:09:24,190
+And the way that I do this is that I start from a frozen base policy for just one robot,
+我实现这一目标的方式是，从一个冻结的单机器人基础策略开始，
+
+105
+00:09:24,240 --> 00:09:28,780
+and collect very few demonstrations of multi-agent interaction,
+收集极少量多智能体交互的示范，
+
+106
+00:09:29,200 --> 00:09:39,020
+then collect some distilled single-agent demonstrations from my frozen policy, and collectively use these data sets to train a coordination head.
+然后从冻结策略中提取一些提炼后的单智能体示范，综合使用这些数据集来训练一个协调头。
+
+107
+00:09:39,730 --> 00:09:47,330
+And what's nice about this coordination residual that I train is that I can achieve coordination when it is needed.
+这种训练出的协调残差的优点在于，仅在需要时才实现协调。
+
+108
+00:09:47,630 --> 00:09:56,680
+One robot can do part of the job while the other one finishes the job, but also it retains the single-agent source behavior that the robots had.
+一个机器人可以完成部分工作，另一个机器人则完成剩余部分，同时保留了机器人原有的单智能体原始行为。
+
+109
+00:09:56,730 --> 00:10:03,390
+if a task just requires one robot to accomplish a task on its own, I haven't lost those capabilities.
+如果一项任务只需要一个机器人独立完成，那么我并没有失去这些能力。
+
+110
+00:10:04,270 --> 00:10:10,420
+But I want to encourage you to think about what we can do by building on these single-agent capabilities,
+但我希望你们能思考，如何基于这些单智能体能力来拓展更多可能性，
+
+111
+00:10:10,470 --> 00:10:14,600
+because I think it's an exciting time to think about multi-agent coordination and
+因为我认为现在正是思考多智能体协作的激动人心时刻，
+
+112
+00:10:14,650 --> 00:10:20,430
+integrating robots in these type of tasks using the capabilities that they have already built.
+并利用它们已有的能力，将机器人整合到这类任务中。
+
+113
+00:10:22,270 --> 00:10:24,560
+So, imitation one way.
+所以，模仿学习是一种方式。
+
+114
+00:10:24,610 --> 00:10:29,210
+What if I was trying to solve this same task using reinforcement learning.
+那如果我尝试用强化学习来解决同样的任务呢？
+
+115
+00:10:30,220 --> 00:10:38,100
+We asked that question, if I use multi-agent reinforcement learning to train my two robots to collaboratively pick up this object,
+我们提出了这个问题：如果使用多智能体强化学习来训练两个机器人协同拾起这个物体，
+
+116
+00:10:38,460 --> 00:10:44,960
+this is the best that we could achieve, no matter how hard of a reward engineering with it.
+这就是我们所能达到的最佳效果，无论我们如何精心设计奖励机制。
+
+117
+00:10:46,260 --> 00:10:52,700
+No matter how hard we tried it, this was the best that the robots could do in terms of collaboratively picking up this object.
+无论我们如何努力，这都是机器人在协同拾起该物体方面所能达到的最好表现。
+
+118
+00:10:53,320 --> 00:10:55,830
+So we started to think, why is that the case?
+于是我们开始思考，为什么会是这种情况？
+
+119
+00:10:55,880 --> 00:10:58,900
+Why is it so hard to use RL to train these policies.
+为什么用强化学习来训练这些策略如此困难？
+
+120
+00:10:59,220 --> 00:11:05,350
+Why is it that we as humans are really good at interacting with one another learning to cooperate and interact with our
+为什么我们人类在相互协作、学习如何合作与互动方面如此擅长？
+
+121
+00:11:05,400 --> 00:11:09,650
+teammates in actually very intricate and complicated forms of interactions like
+队友之间实际上存在非常复杂和微妙的互动形式
+
+122
+00:11:09,700 --> 00:11:15,980
+sports and very intricate forms of interactions that people build over time.
+体育以及人们长期建立的非常复杂的人际互动形式。
+
+123
+00:11:17,170 --> 00:11:20,940
+And for those of you who have watched World Cup over this past summer,
+而对于那些在去年夏天观看过世界杯的观众来说，
+
+124
+00:11:20,990 --> 00:11:27,920
+you perhaps remember how much everyone was talking about coaches and how all these memes about coaches went viral,
+你可能还记得，当时人们热议教练，关于教练的那些梗 meme 有多火。
+
+125
+00:11:27,970 --> 00:11:34,370
+and people were arguing about what's the role of a coach and coaches' strategy in a team's performance.
+人们在争论教练的角色以及教练策略对团队表现的影响。
+
+126
+00:11:34,810 --> 00:11:42,130
+So we started to think maybe one of the reasons that we humans can learn to interact with others is that we leverage good coaches.
+所以我们开始思考，人类能够学会与他人互动，或许是因为我们善于借助优秀的教练。
+
+127
+00:11:42,450 --> 00:11:48,770
+What if I can coach my robot to learn complex tasks like coordination tasks?
+如果我能指导我的机器人学会像协作任务这样复杂的任务，会怎样？
+
+128
+00:11:48,960 --> 00:11:56,780
+What if I use my foundation models to act as my coaches for guiding my robot learning loop?
+如果我用我的基础模型来充当教练，指导我的机器人学习循环，会怎样？
+
+129
+00:11:57,080 --> 00:12:01,530
+Using reasoning, coding, and visual understanding capabilities of these models,
+利用这些模型的推理、编码和视觉理解能力，
+
+130
+00:12:01,580 --> 00:12:08,380
+I just get to have a coach which is for free and autonomously guiding the learning process of my robot.
+我只需配备一位免费且能自主引导机器人学习过程的教练。
+
+131
+00:12:09,190 --> 00:12:16,110
+Let's first see what that looks like in a single-agent setting, and then I bring in the multi-agent coordination aspect of it.
+我们先来看一下单智能体设置下的情况，然后再引入多智能体协作的方面。
+
+132
+00:12:16,270 --> 00:12:19,070
+Let's say I want to teach a robot to run backwards.
+假设我想教一个机器人倒着跑。
+
+133
+00:12:19,710 --> 00:12:24,140
+And I'm not a locomotion person, so I don't really know what the reward function should be.
+而我不是运动控制专家，所以其实并不清楚奖励函数应该设成什么样。
+
+134
+00:12:24,190 --> 00:12:26,550
+I have no idea how I should set up the training.
+我完全不知道该如何设置训练方式。
+
+135
+00:12:27,540 --> 00:12:34,840
+So what we did was was like, okay, I feel have a coach, maybe my coach can break down the task into a sequence of simpler tasks.
+于是我们想到，好吧，我需要一个教练，也许我的教练可以把任务分解成一系列更简单的子任务。
+
+136
+00:12:35,180 --> 00:12:41,780
+Then my coach also defines what it means means to do each sub task such as, for example, is stabilizing itself.
+然后我的教练还会定义每个子任务的含义，比如，稳定自身算不算完成任务。
+
+137
+00:12:42,120 --> 00:12:44,070
+And then my coach provides feedback.
+接着我的教练会提供反馈。
+
+138
+00:12:44,120 --> 00:12:50,930
+and that loop is gonna be enough for me to learn a good enough policy that they can transfer zero-shot to
+这个循环就足以让我学到一个足够好的策略，能够实现零样本迁移。
+
+139
+00:12:50,980 --> 00:12:59,080
+my to my hardware and that way I can learn these skills in reinforcement learning without having to spend so much time figuring out
+这样我就能在强化学习中掌握这些技能，而无需花大量时间去摸索该尝试什么样的奖励函数。
+
+140
+00:12:59,130 --> 00:13:07,290
+what reward function I should try, and once I learn certain skills, let's say running backwards or some whole-body control with proper
+一旦我学会了某些技能，比如倒着跑，或是在正确指导下的全身控制，
+
+141
+00:13:07,340 --> 00:13:17,980
+coaching I can actually use the existing skills that the robot has learned to accomplish new tasks with no training and no data collection.
+我就可以直接利用机器人已有的技能来完成新任务，无需额外训练或数据采集。
+
+142
+00:13:18,820 --> 00:13:25,760
+And inspired by the line of work that actually Ken pioneered on using code as policies or agentic robotics,
+受到肯实际开创的、将代码作为策略或代理式机器人研究方向的启发，
+
+143
+00:13:26,120 --> 00:13:31,980
+we started to think what if I use code as a coach for composing the pre-trained robot skills.
+我们开始思考，如果我用代码作为教练来组合预训练的机器人技能，会怎样？
+
+144
+00:13:32,560 --> 00:13:39,790
+For example, I have a robot that has its own let's say pre-trained skills such as walking backwards or a whole-body controller.
+举个例子，我有一个机器人，它已经具备一些预训练的技能，比如倒着走或全身控制器。
+
+145
+00:13:39,840 --> 00:13:45,780
+And I just use my coach in terms of a policy code to compose those skills with one another.
+我只是利用教练的策略代码，将这些技能组合在一起。
+
+146
+00:13:46,020 --> 00:13:49,680
+And what's nice about this is that it doesn't require any retraining.
+这样做的好处是不需要重新训练。
+
+147
+00:13:49,840 --> 00:13:52,090
+I don't collect any human data.
+我不需要收集任何人类数据。
+
+148
+00:13:52,140 --> 00:13:57,480
+And all it takes is just building on the pre-trained and already learned skills.
+所需的只是在预训练并已掌握的技能基础上进行构建。
+
+149
+00:13:57,760 --> 00:14:00,490
+And that to our surprise turned out to work,
+让我们感到意外的是，这竟然奏效了。
+
+150
+00:14:00,540 --> 00:14:08,050
+we could transfer these policies to the real world humanoid could essentially lift the basket and object from different positions,
+我们能够将这些策略迁移到真实世界的人形机器人上，机器人基本上可以从不同位置抓起篮子和物体。
+
+151
+00:14:08,100 --> 00:14:10,680
+different initial positions and different goal positions.
+包括不同的初始位置和不同的目标位置。
+
+152
+00:14:11,540 --> 00:14:14,990
+And what was even more interesting to me is that in other tasks, for example,
+更让我感兴趣的是，在其他任务中，比如按下按钮，
+
+153
+00:14:15,040 --> 00:14:20,810
+let's say pushing a button, when we first deployed our policy, we had around 20 % success rate.
+我们首次部署策略时，成功率大约只有 20%。
+
+154
+00:14:20,860 --> 00:14:28,090
+But by just two rounds of refinement on our coach, coach code, we increase the success rate to 90%.
+但仅通过两次对教练代码的优化，我们就将成功率提升到了 90%。
+
+155
+00:14:28,140 --> 00:14:33,710
+And this is all without any retargeting or human data collection, or anything like that.
+而这一切都不需要重新定位、收集人类数据，或其他类似操作。
+
+156
+00:14:33,760 --> 00:14:38,860
+And this is this was all by the way before Astra, I'm sure the performance is going to even be better now.
+顺便说一句，这些成果是在 Astra 之前取得的，我相信现在性能肯定会更好。
+
+157
+00:14:39,790 --> 00:14:40,840
+But this is for single-agent.
+但这仅适用于单智能体。
+
+158
+00:14:40,890 --> 00:14:45,290
+And I promise to you that this is interesting for coordination and multi-agent systems.
+我向你保证，这在协调和多智能体系统中也非常有趣。
+
+159
+00:14:45,770 --> 00:14:52,190
+Turns out the same recipe actually enables coordination tasks that we couldn't really achieve before.
+结果发现，同样的方法实际上能够实现我们之前无法达成的协调任务。
+
+160
+00:14:52,530 --> 00:14:53,900
+Like, for example,
+比如说，
+
+161
+00:14:53,950 --> 00:15:02,300
+this running example that I had collaboratively lifting an object with a proper coaching using these foundation models is doing a much,
+我之前合作使用这些基础模型来协同举起一个物体，并进行恰当指导的这个例子，表现得要好得多，
+
+162
+00:15:02,350 --> 00:15:03,090
+much better job.
+好得多。
+
+163
+00:15:03,690 --> 00:15:11,240
+Or I can get my quadrupeds to essentially balance a seesaw so that one of them can climb the seesaw.
+或者，我可以让我这些四足机器人几乎完美地平衡跷跷板，让其中一只能够爬上去。
+
+164
+00:15:11,290 --> 00:15:16,530
+Whereas if you try to just train multi-agent PPO to get to do this, it's hopeless.
+而如果你试图直接训练多智能体 PPO 来完成这个任务，那几乎是不可能的。
+
+165
+00:15:17,320 --> 00:15:24,990
+Or I can teach quadrupeds to pass through a gate by proper coaching of knowing, well, you should do this,
+或者，我可以教四足机器人通过恰当指导来通过一个门，比如告诉它们：你应该这样做，
+
+166
+00:15:25,040 --> 00:15:28,830
+here's how you should do, here's what your reward should be, and here's what each sub task should be.
+这是你的正确做法，你的奖励应该是什么，以及每个子任务应该是什么。
+
+167
+00:15:28,880 --> 00:15:37,670
+Or I can pair these robots with humans to collaboratively do tasks, such as transporting an object, which was really hard for me to do on my own.
+或者，我可以将这些机器人与人类配对，共同完成任务，比如搬运物体，这对我个人来说曾非常困难。
+
+168
+00:15:37,720 --> 00:15:44,360
+But when I actually tried this experiment, I was surprised by how easy it is to actually have a quadruped helping me with transporting heavy objects.
+但当我真正尝试这个实验时，我惊讶地发现，让四足机器人帮我搬运重物竟然如此简单。
+
+169
+00:15:45,750 --> 00:15:49,330
+So this was very, to our surprise, it was very effective.
+所以这让我们非常意外，但效果却非常好。
+
+170
+00:15:49,830 --> 00:15:52,020
+And we were kind of inspired and encouraged by that.
+那让我们受到一些启发和鼓舞。
+
+171
+00:15:52,070 --> 00:15:55,840
+So we started to think, is there anything else that a coach does for a team of agents?
+于是我们开始思考，教练还会为智能体团队做些什么别的事吗？
+
+172
+00:15:55,890 --> 00:16:01,200
+And for anyone who has ever taught a class with group projects,
+任何上过小组项目课程的人都知道，
+
+173
+00:16:01,250 --> 00:16:06,660
+I'm sure at the end of a class you've got complaints about I contributed to my team effort,
+我敢肯定，一学期结束时，你总会听到有人抱怨：我为团队付出了很多，
+
+174
+00:16:06,710 --> 00:16:10,450
+my partners didn't, I should get credit for what I did, others shouldn't.
+但我的搭档没出力，我应该得到应有的认可，别人不该。
+
+175
+00:16:10,810 --> 00:16:14,460
+And that's the same thing that makes multi-agent reinforcement learning really hard,
+这正是多智能体强化学习变得极其困难的原因，
+
+176
+00:16:14,510 --> 00:16:26,210
+which is, as you're looking at how interactions unfold, you need to have a good understanding of who contributed to get credit.
+因为你在观察互动过程时，必须清楚地知道谁真正做出了贡献，才值得被认可。
+
+177
+00:16:26,510 --> 00:16:34,020
+Because even if a team effort failed, there might still be some agents who actually contributed to the team effort,
+即使团队整体失败了，也可能有些智能体实际上为团队努力过，
+
+178
+00:16:34,070 --> 00:16:37,970
+and others are the ones who essentially resulted in the team failure.
+而另一些则真正导致了团队的失败。
+
+179
+00:16:38,470 --> 00:16:45,460
+So we're like, maybe I can just make my foundation model and my coach to just be a good credit designer.
+所以我们想，也许我可以只让我的基座模型和教练成为一个优秀的“贡献评估设计者”。
+
+180
+00:16:45,510 --> 00:16:49,950
+Maybe that's all I need for getting the robots to learn to coordinate with one another.
+或许只要做到这一点，就能让机器人学会彼此协调。
+
+181
+00:16:50,390 --> 00:16:52,360
+And again, this was in 2025.
+而且再次强调，这是在 2025 年。
+
+182
+00:16:52,410 --> 00:16:55,180
+Models were not as amazing as they are today.
+模型没有今天这么惊艳。
+
+183
+00:16:55,230 --> 00:17:02,170
+But it turned out by just simply asking the model existing model off the shelf model to play the role of a credit designer,
+但结果发现，只需简单地让现成的模型扮演信用设计者的角色，
+
+184
+00:17:02,510 --> 00:17:08,370
+you can outperform a state of the art in terms of a coordination capabilities by orders of magnitude.
+你就能在协调能力上远超当前最先进水平，差距达到数量级。
+
+185
+00:17:08,790 --> 00:17:14,790
+For example, in a warehouse where robots are moving objects around, and you really want to coordinate that effort,
+例如，在一个机器人搬运物品的仓库中，你真正需要协调它们的协作，
+
+186
+00:17:15,130 --> 00:17:24,410
+we are doing way better than a baseline such as MAPPO, HAPPO and LIPO, which are very well known baselines in multi-agent reinforcement learning.
+我们的表现远超 MAPPO、HAPPO 和 LIPO 等基准模型，这些在多智能体强化学习领域都是广为人知的基准。
+
+187
+00:17:24,870 --> 00:17:26,000
+And again, this was 2025.
+而且再次强调，这是在 2025 年。
+
+188
+00:17:26,050 --> 00:17:28,480
+I'm sure the performance is going to be even better now.
+我相信现在的性能会更好。
+
+189
+00:17:28,530 --> 00:17:36,160
+But I want to argue that these are actually exciting times for us to think about how we can coach robots to learn to interact with one another,
+但我想要强调的是，现在正是我们思考如何指导机器人学习彼此互动的激动人心时刻，
+
+190
+00:17:36,210 --> 00:17:40,850
+and hopefully down the line, cooperate and coordinate with humans.
+希望未来能实现与人类的协作与协调。
+
+191
+00:17:42,170 --> 00:17:45,470
+But now we want to flip the problem a little bit.
+但现在我们想稍微换个角度思考这个问题。
+
+192
+00:17:45,930 --> 00:17:51,180
+And I want to argue that there are some lessons that we have learned by studying multi-agent systems,
+我想指出的是，通过研究多智能体系统，我们已经获得了一些重要启示。
+
+193
+00:17:51,230 --> 00:17:56,750
+which have actually proven to be really useful and relevant for single-agent learning.
+这些实际上已被证明对单智能体学习非常有用且相关。
+
+194
+00:17:57,800 --> 00:18:01,200
+And that has been primarily in the context of continual learning.
+这主要发生在持续学习的背景下。
+
+195
+00:18:02,160 --> 00:18:10,900
+So let's now go back to the world of one agent learning on its own and let's imagine an agent that is continuously learning new tasks.
+那么现在让我们回到单个智能体独立学习的世界，并设想一个持续学习新任务的智能体。
+
+196
+00:18:11,420 --> 00:18:16,530
+So you start with some task T, then a new task T plus one comes, then another task comes.
+你从某个任务 T 开始，然后出现新任务 T+1，接着又出现另一个任务。
+
+197
+00:18:16,580 --> 00:18:20,560
+What happens as a robot is continuously learning?
+当机器人持续学习时会发生什么？
+
+198
+00:18:21,540 --> 00:18:27,500
+Typically, what happens is that a robot learns a new task, but it forgets about what it had learned in the past.
+通常情况下，机器人学会了一个新任务，但会忘记过去所学的内容。
+
+199
+00:18:28,100 --> 00:18:37,890
+So, for example, I have a policy theta one that has learned to do one task T1, but I fine-tuned my policy on some tasks T2,
+例如，我有一个策略 θ1，它学会了完成任务 T1，但我在任务 T2 上对策略进行了微调，
+
+200
+00:18:37,940 --> 00:18:46,500
+then what happens is perhaps parameters that were really important for accomplishing task might be overridden by fine-tuning to task T2.
+那么结果可能是，原本对完成任务至关重要的参数，被针对任务 T2 的微调所覆盖。
+
+201
+00:18:47,040 --> 00:18:52,080
+Same thing for task T3, as I move on, I may forget about what I had learned before.
+对任务 T3 也是如此，随着不断推进，我可能会忘记之前学过的内容。
+
+202
+00:18:52,680 --> 00:19:01,810
+So we were facing this problem of catastrophic forgetting when you continuously learn new tasks, and we were thinking this is not good.
+因此，我们在持续学习新任务时面临灾难性遗忘的问题，我们认为这并不理想。
+
+203
+00:19:01,860 --> 00:19:05,960
+I learned my task T3, but I forget about how I did tasks T1 and T2.
+我学会了任务 T3，但却忘记了如何完成任务 T1 和 T2。
+
+204
+00:19:06,740 --> 00:19:15,010
+So with that multi-agent view of the we started to think what if continuously learning new tasks can be
+借助多智能体的视角，我们开始思考，如果持续学习新任务可以
+
+205
+00:19:15,060 --> 00:19:21,200
+cast as some sort of a consensus between what the robot is learning now and what it had learned before.
+将其视为机器人当前所学与先前所学之间的一种共识。
+
+206
+00:19:21,700 --> 00:19:28,610
+In a way, what if the robot didn't forget where it came from and it kept remembering who it was,
+某种程度上，如果机器人没有忘记自己从何而来，而是始终记得自己是谁，会怎样呢，
+
+207
+00:19:28,660 --> 00:19:31,620
+where it came from, very much the same as what a human should do, I think.
+它从哪里来，我认为和人类应该做的几乎是一样的。
+
+208
+00:19:32,240 --> 00:19:32,770
+So,
+所以，
+
+209
+00:19:32,820 --> 00:19:39,970
+we started thinking about maybe we can cast continual learning as a temporal consensus between what
+我们开始思考，或许可以把持续学习看作是时间维度上的共识
+
+210
+00:19:40,020 --> 00:19:44,780
+the robot has learned before and what the new policy parameters of the robot should be.
+机器人已经学到了之前的经验，以及机器人新策略参数应该是什么。
+
+211
+00:19:45,880 --> 00:19:51,050
+And this is nice because with this consensus view of continuous learning,
+而且这样很好，因为通过这种对持续学习的共识视角，
+
+212
+00:19:51,100 --> 00:19:58,510
+we can enable a replay-free policy update where I don't require to just keep track of data that was used in my pre
+我们可以实现无需重放的策略更新，这样我就无需再追踪预训练阶段所用的数据了。
+
+213
+00:19:58,560 --> 00:20:05,500
+-training or hope that an industry lab releases the data set to so that we can keep track of what the robot had already learned.
+训练或希望产业实验室发布数据集，以便我们能够追踪机器人已经学到的内容。
+
+214
+00:20:06,000 --> 00:20:12,250
+So I enforce a consensus in the weight space of my policy parameters.
+因此，我在策略参数的权重空间中强制达成共识。
+
+215
+00:20:12,300 --> 00:20:15,650
+When I'm learning my policy for task T plus 2,
+当我学习任务 T 加 2 的策略时，
+
+216
+00:20:15,700 --> 00:20:25,340
+I'm like there should be some form of an agreement with policy parameters for task T plus 1 and policy parameters for task T or T plus 1.
+我觉得应该在任务T+1的策略参数和任务T或T+1的策略参数之间达成某种协议。
+
+217
+00:20:26,150 --> 00:20:32,630
+And at a very high level intuitively what this does is that as I'm fine-tuning my policy to task T two,
+从非常高的层面直观地讲，这相当于我在对策略进行微调以适应任务 T2 时，
+
+218
+00:20:32,950 --> 00:20:41,970
+I kind of memorize and remember what policy parameters were really important for task T1, so I don't change them too much.
+我大概记住了对任务T1真正重要的策略参数，所以不会做太大改动。
+
+219
+00:20:42,170 --> 00:20:49,400
+And as I add these new tasks, I preserve the policy parameters that were really important and relevant to prior tasks,
+当我添加这些新任务时，我会保留那些对先前任务真正重要且相关的策略参数。
+
+220
+00:20:49,450 --> 00:20:54,830
+so that ultimately I can remember the prior tasks and adapt and learn the new task.
+这样我最终就能记住之前的任务，并适应和学习新任务。
+
+221
+00:20:55,770 --> 00:20:57,340
+But what does this consensus look like?
+但这种共识看起来是什么样的？
+
+222
+00:20:57,390 --> 00:20:58,280
+So,
+所以，
+
+223
+00:20:58,330 --> 00:21:05,240
+let's say I've learned my policy parameters for task T and then I have a notion of a weight or importance weight
+假设我已经学到了任务T的策略参数，然后我对权重或重要性权重有了一个概念
+
+224
+00:21:05,290 --> 00:21:14,100
+for how much each policy parameter matters for task T and I have another task T plus one and the same thing,
+对于任务 T，每个策略参数的重要性是多少，我还有另一个任务 T 加一，情况也一样。
+
+225
+00:21:14,150 --> 00:21:19,690
+I have another notion of a weight matrix which is how much each parameter matters for task T plus one.
+我还有一个关于权重矩阵的概念，即每个参数对任务 T 加一的重要性。
+
+226
+00:21:20,270 --> 00:21:28,580
+Ideally, I want my policy parameters to be proportional to kind of like a weighted average of these policy parameters.
+理想情况下，我希望我的策略参数与这些策略参数的加权平均值成正比。
+
+227
+00:21:28,630 --> 00:21:32,730
+That's what I mean by consensus in the policy parameter space.
+这就是我所说的策略参数空间中的共识。
+
+228
+00:21:34,100 --> 00:21:41,500
+But these weights depend on policy parameters, and every task may require its own importance, so how do we achieve this?
+但这些权重依赖于策略参数，而每个任务可能都需要不同的重要性，我们该如何实现这一点？
+
+229
+00:21:42,700 --> 00:21:43,430
+We were actually, again,
+我们实际上再次受到启发，
+
+230
+00:21:43,480 --> 00:21:47,670
+inspired by the algorithms that are out there in multi-agent world back in the time
+来自2014年多智能体世界中已有的算法，
+
+231
+00:21:47,720 --> 00:21:54,590
+from 2014 that people have shown that you could actually use methods like a method of multipliers,
+那时人们已经证明，你可以使用类似乘子法的方法，
+
+232
+00:21:54,640 --> 00:21:55,590
+primal-dual updates.
+原始-对偶更新。
+
+233
+00:21:55,640 --> 00:21:59,840
+For those of you have background in optimization, there's room for you to contribute to robotics.
+对于有优化背景的各位来说，这里存在你可以为机器人领域做出贡献的空间。
+
+234
+00:22:00,020 --> 00:22:02,590
+So we started to think method of multipliers,
+所以我们开始思考乘子法，
+
+235
+00:22:02,640 --> 00:22:08,640
+primal dual updates for reasons that are very well known in the community could actually be super useful for this task.
+原始-对偶更新，因为社区中众所周知的原因，这种方法对这项任务可能非常有用。
+
+236
+00:22:09,460 --> 00:22:14,970
+And this results in kind of like an iterative update where you update your policy parameters a little bit,
+这导致了一种迭代更新机制，你稍微更新一下策略参数，
+
+237
+00:22:15,020 --> 00:22:17,830
+then you kind of move your consensus constraint a little bit.
+然后稍微调整一下共识约束。
+
+238
+00:22:17,880 --> 00:22:24,190
+But in a nutshell, that results in kind of having a moving anchor for your memory as you're training your policies.
+但简而言之，这相当于在训练策略时，为你的记忆设置了一个移动的锚点。
+
+239
+00:22:24,240 --> 00:22:31,880
+I'm not going to get into the details of how primal dual updates for method of multipliers work, but let me show you how this works in practice.
+我不会深入讲解乘子法中的原始-对偶更新机制，但让我展示一下它在实际中的运作方式。
+
+240
+00:22:32,660 --> 00:22:41,110
+We took π0.5; our pre-training tasks for π0.5 were a bunch of tasks that we ran in the lab, we collected some data from it,
+我们采用了π0.5；π0.5的预训练任务是一系列我们在实验室中运行的任务，我们从中收集了一些数据，
+
+241
+00:22:41,160 --> 00:22:48,260
+but then we had some target tasks such as remove the lid and place the bird in the basket or cake on the cake tray.
+但随后我们设定了一些目标任务，比如打开盖子并将鸟放进篮子里，或者把蛋糕放在蛋糕盘上。
+
+242
+00:22:49,440 --> 00:22:58,550
+And we kind of compared the performance of this temporal consensus way of fine-tuning as opposed to baselines and supervised fine-tuning,
+我们大致比较了这种时间共识微调方法与基线方法以及监督微调的性能表现，
+
+243
+00:22:58,600 --> 00:23:00,640
+the vanilla form of supervised fine-tuning.
+即监督微调的原始形式。
+
+244
+00:23:01,230 --> 00:23:04,530
+On the target tasks, both methods do well.
+在目标任务上，两种方法表现都很好。
+
+245
+00:23:04,950 --> 00:23:08,630
+Both of them learn the target task for which they have been fine-tuned to.
+两者都学会了它们被微调过的特定任务。
+
+246
+00:23:08,850 --> 00:23:14,290
+But the beauty of temporal consensus view of it becomes clear when you look at the performance on the pre-trained tasks.
+但当你观察预训练任务上的表现时，这种时间共识视角的优势就变得非常明显。
+
+247
+00:23:15,510 --> 00:23:24,720
+While SFT forgets about what it had learned before, by just enforcing a simple consensus which is replay free in the policy parameter space,
+与监督微调会遗忘之前所学内容不同，通过在策略参数空间中仅施加一个简单的共识机制，无需重放，
+
+248
+00:23:24,770 --> 00:23:27,730
+we managed to remember what the robot had learned before.
+我们成功让机器人保留了之前学到的知识。
+
+249
+00:23:28,860 --> 00:23:32,930
+And this is not me just cherry-picking what I really wanted you to see.
+这并不是我刻意挑选了我想要你们看到的内容。
+
+250
+00:23:32,980 --> 00:23:42,320
+We have kind of verified this and run a set of comparisons with other baselines out there, including replay or regularization based methods like EWC,
+我们已经进行了验证，并与其他基线方法进行了多组对比，包括基于重放或正则化的方法，如EWC，
+
+251
+00:23:42,620 --> 00:23:48,540
+but across them we found that this is the best in terms of adaptation while retaining prior skills.
+但综合来看，这种方法在适应新任务的同时，仍能保留先前技能方面表现最佳。
+
+252
+00:23:49,000 --> 00:23:54,830
+And it's not just in the context of fine tuning that we see this method to be actually particularly useful.
+而且，这种优势不仅仅体现在微调的语境中，我们发现这种方法实际上在更广泛的应用场景中也非常有用。
+
+253
+00:23:54,880 --> 00:23:57,920
+We see that in the context of mapping an environment as well.
+我们在环境映射的背景下也能看到这一点。
+
+254
+00:23:58,500 --> 00:24:02,460
+Let's say a robot is mapping an environment which is dynamically changing.
+假设一个机器人正在映射一个动态变化的环境。
+
+255
+00:24:03,100 --> 00:24:08,720
+And let's say some objects like a table has moved around as the robot is moving around and trying to map the environment.
+假设在机器人移动并尝试映射环境的过程中，某些物体如桌子发生了位置移动。
+
+256
+00:24:09,480 --> 00:24:19,740
+If we use a replay based method, our mapping ends up with two copies of the same table because it has seen data of both positions of table.
+如果我们使用基于重放的方法，映射结果会出现同一张桌子的两个副本，因为它记录了桌子在两个不同位置的数据。
+
+257
+00:24:20,380 --> 00:24:26,030
+And if we use a regularization based method that the robot fails to see that the table has moved around
+而如果使用基于正则化的方法，机器人则无法察觉桌子已经移动。
+
+258
+00:24:26,080 --> 00:24:33,080
+because it's just so regularized to not depart from what it has learned before that it doesn't learn to adapt.
+因为它过于被正则化，无法偏离之前所学的内容，因而无法学会适应新变化。
+
+259
+00:24:33,360 --> 00:24:36,040
+But by just this consensus view of things,
+但通过这种共识视角，
+
+260
+00:24:36,240 --> 00:24:42,300
+we can preserve things that haven't changed from the past and adapt to the parameters and changes in the scene.
+我们既能保留过去未发生变化的元素，又能适应场景中的参数和变化。
+
+261
+00:24:43,170 --> 00:24:52,230
+The same thing we saw in a number of experiments that we ran in the lab with a temporal consensus that my student calls his method TACO,
+我们在实验室进行的多项实验中也观察到了同样的现象，我学生将这种方法称为 TACO（时间共识）。
+
+262
+00:24:52,390 --> 00:25:00,080
+we found that the same thing happens with replay methods, replay based methods, we kind of have the same copy or two copies of the same object.
+我们发现，使用重放方法时，同样会出现同一物体的重复或两个副本。
+
+263
+00:25:00,130 --> 00:25:06,270
+Whereas with regularization based methods, we essentially fail to adapt to the new changes in the environment.
+而基于正则化的方法则基本无法适应环境中的新变化。
+
+264
+00:25:06,760 --> 00:25:10,650
+So these are just just being very recent results that we found out.
+这些只是我们最近才得出的一些结果。
+
+265
+00:25:10,700 --> 00:25:17,710
+But I want to communicate that what we found so far is that this consensus view of continual learning has really
+但我想要传达的是，到目前为止我们发现，这种关于持续学习的共识观点确实非常有效，
+
+266
+00:25:17,760 --> 00:25:24,920
+been really strong in balancing new skills and learning new skills with retaining what the robot has learned in the past.
+能够在学习新技能的同时，保持机器人过去所学的内容，实现良好平衡。
+
+267
+00:25:25,200 --> 00:25:29,410
+And just recently we have seen that in the context of reinforcement learning it turns out you can do some really
+而最近我们发现，在强化学习的背景下，你可以在强化学习循环内部
+
+268
+00:25:29,460 --> 00:25:36,860
+smart things in a within the the RL loop to adapt to changes and it's become super useful in fine-tuning policies.
+做出一些非常聪明的调整来适应变化，这在微调策略方面变得极为有用。
+
+269
+00:25:38,020 --> 00:25:42,130
+So with that I would like to thank my students who actually did the work that
+借此机会，我想感谢我的学生们，正是他们完成了
+
+270
+00:25:42,180 --> 00:25:46,770
+I got to present here today and the funding agencies who actually made this work possible.
+今天我能够在此展示的这项工作，以及真正让这项工作成为可能的资助机构。
+
+271
+00:25:46,820 --> 00:25:48,360
+Thank you all for your attention.
+感谢大家的关注。

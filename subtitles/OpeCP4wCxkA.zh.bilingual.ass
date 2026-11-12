@@ -1,0 +1,442 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 2560
+PlayResY: 1440
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Microsoft YaHei,62,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,3.2,1.4,2,160,160,160,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:01.58,Sub,,0,0,0,,Right now, we're trying to build a single chip.\N目前，我们正致力于打造一颗单一芯片。
+Dialogue: 0,0:00:01.63,0:00:03.39,Sub,,0,0,0,,If you crack open an Nvidia system,\N如果你拆开一台英伟达系统，
+Dialogue: 0,0:00:03.44,0:00:10.79,Sub,,0,0,0,,it has anywhere between kind of six and nine custom chips all built by Nvidia to come together to build something that is really, really potent.\N它集成了六到九颗由英伟达定制的芯片，协同工作，打造出极为强大的系统。
+Dialogue: 0,0:00:10.84,0:00:12.00,Sub,,0,0,0,,So, there's already a gap there.\N所以，那里已经存在一个差距了。
+Dialogue: 0,0:00:12.05,0:00:17.27,Sub,,0,0,0,,You know, it'd be great to be productive enough that we could start to build our own responses in that same kind of way.\N你知道，如果能高效到足以用同样的方式自动生成回应，那就太棒了。
+Dialogue: 0,0:00:17.32,0:00:24.29,Sub,,0,0,0,,This idea of being able to have at any given moment a kind of rolling frontier of bets that you hope are deeply aligned in\N随时都能拥有一种不断滚动的押注前沿，而你希望这些押注都高度契合
+Dialogue: 0,0:00:24.34,0:00:30.10,Sub,,0,0,0,,which you're ready to trigger the ramp of this is a huge advantage if you can kind of build that machine and build that engine.\N你已经准备好启动这个加速进程了，如果能打造出这台机器和这个引擎，那将是一个巨大的优势。
+Dialogue: 0,0:00:30.15,0:00:37.29,Sub,,0,0,0,,It's the equivalent of the frontier model for the chip space is if you can just find a way to structurally carve out a 3 to 6-month advantage,\N这相当于芯片领域的前沿模型，如果你能找到一种方法，从结构上实现3到6个月的优势，
+Dialogue: 0,0:00:37.34,0:00:46.67,Sub,,0,0,0,,you will be winning all of those deployments.\N你将赢得所有这些部署。
+Dialogue: 0,0:00:46.72,0:00:48.75,Sub,,0,0,0,,Hi listeners, welcome back to No Priors.\N各位听众，欢迎回到《无先验》。
+Dialogue: 0,0:00:48.80,0:00:54.15,Sub,,0,0,0,,Today, I'm here with Walter Goodwin, founder and CEO of full-stack AI chip company Fractile.\N今天，我与全栈AI芯片公司Fractile的创始人兼CEO沃尔特·古德温在一起。
+Dialogue: 0,0:00:54.20,0:00:58.98,Sub,,0,0,0,,We talk about what it means to be full-stack as a company, the technical bets they're making,\N我们讨论了作为一家公司实现全栈的含义，以及他们所做出的技术押注。
+Dialogue: 0,0:00:59.03,0:01:04.78,Sub,,0,0,0,,why he's so focused on memory bandwidth, his predictions for frontier model architectures in the future,\N为什么他如此关注内存带宽，以及他对未来前沿模型架构的预测，
+Dialogue: 0,0:01:04.83,0:01:14.75,Sub,,0,0,0,,and the structure of the chip market at the frontier today and tomorrow amongst Nvidia, AMD, internal efforts, and this new class of accelerators.\N当前及未来在英伟达、AMD、内部研发努力以及这一类新型加速器之间，芯片市场的结构格局。
+Dialogue: 0,0:01:14.80,0:01:15.64,Sub,,0,0,0,,Welcome, Walter.\N欢迎你，沃尔特。
+Dialogue: 0,0:01:15.69,0:01:18.11,Sub,,0,0,0,,Walter, thanks so much for doing this.\N沃尔特，非常感谢你来做这件事。
+Dialogue: 0,0:01:18.16,0:01:19.35,Sub,,0,0,0,,Very good to be here, Sarah.\N很高兴见到你，莎拉。
+Dialogue: 0,0:01:19.40,0:01:21.83,Sub,,0,0,0,,You started this incredibly interesting company called Fractile.\N你创办了这家非常有趣的公司，名叫 Fractile。
+Dialogue: 0,0:01:21.88,0:01:24.03,Sub,,0,0,0,,Can you give us a overview of what you guys do?\N你们能给我们简单介绍一下你们是做什么的吗？
+Dialogue: 0,0:01:24.08,0:01:26.04,Sub,,0,0,0,,Fractile is a chip company.\NFractile 是一家芯片公司。
+Dialogue: 0,0:01:26.09,0:01:30.00,Sub,,0,0,0,,We build very, very fast inference chips for the world's largest models.\N我们为全球最大的模型打造了极其快速的推理芯片。
+Dialogue: 0,0:01:30.05,0:01:34.39,Sub,,0,0,0,,This sort of bet on speed is something which we've had right from the outset.\N这种对速度的押注，从一开始就贯穿于我们的战略之中。
+Dialogue: 0,0:01:34.44,0:01:39.37,Sub,,0,0,0,,Started the company in summer of 2022, and I think at the time we were starting to see two things.\N2022年夏天创办了公司，当时我认为我们正开始看到两件事。
+Dialogue: 0,0:01:39.42,0:01:45.50,Sub,,0,0,0,,You know, one was obviously the arrival of foundation models trained on the internet and generalizing across everything.\N你知道，其中一个显然是基于互联网训练、能够跨领域泛化的基础模型的出现。
+Dialogue: 0,0:01:45.55,0:01:53.08,Sub,,0,0,0,,And the other was, you know, a few kind of wise people saying, you know, we need to find a way to pour more compute into these models at test time.\N另一个是，一些睿智的人指出，我们需要想办法在测试时向这些模型注入更多算力。
+Dialogue: 0,0:01:53.13,0:01:58.75,Sub,,0,0,0,,We need to find a way to take what we had for kind of AlphaGo where you have a capable neural network,\N我们需要找到一种方法，就像当初的 AlphaGo 那样，利用一个功能强大的神经网络，
+Dialogue: 0,0:01:58.80,0:02:05.40,Sub,,0,0,0,,but then it becomes superhuman as you roll it out at scale, and bring that to kind of language modeling, for example.\N但当你将其大规模部署时，它就会变得超越人类，比如应用到语言建模领域。
+Dialogue: 0,0:02:05.45,0:02:06.19,Sub,,0,0,0,,Um and so,\N嗯，所以啊，
+Dialogue: 0,0:02:06.24,0:02:10.95,Sub,,0,0,0,,our big pursuit over the past 4 years has been to find a way to build\N过去四年，我们一直在努力寻找一种构建方法
+Dialogue: 0,0:02:11.00,0:02:16.33,Sub,,0,0,0,,chips that will allow for kind of simultaneously taking these huge models and running them much,\N能够同时运行这些大型模型并大幅提速的芯片
+Dialogue: 0,0:02:16.38,0:02:19.51,Sub,,0,0,0,,much, much faster than the chips of today.\N远比当今的芯片快得多。
+Dialogue: 0,0:02:19.56,0:02:27.05,Sub,,0,0,0,,Um but do that in a way that kind of scales, so scales to models beyond the frontier today, scales to extraordinarily long contexts.\N但要以一种能够扩展的方式去做，使其能够扩展到当前前沿模型之外，也能扩展到极长的上下文。
+Dialogue: 0,0:02:27.10,0:02:29.39,Sub,,0,0,0,,Um and so, that's the the mission that we've been on.\N嗯，这就是我们一直在追求的使命。
+Dialogue: 0,0:02:29.44,0:02:35.04,Sub,,0,0,0,,It's become a much more interesting chip landscape in the uh 4 years since you started the company.\N自从你创办公司以来的四年间，芯片领域的格局变得有趣得多。
+Dialogue: 0,0:02:35.09,0:02:41.19,Sub,,0,0,0,,Uh where would you place yourself in the uh overall GPU and accelerator landscape for inference?\N那在整体的 GPU 和加速器推理领域，您会如何定位自己？
+Dialogue: 0,0:02:41.24,0:02:46.26,Sub,,0,0,0,,Yeah, it's a uh there's a kind of extraordinary zoo now of options available.\N是的，现在可供选择的方案种类繁多，相当非凡。
+Dialogue: 0,0:02:46.31,0:02:50.21,Sub,,0,0,0,,Um and if you look across this kind of entire space of kind of AI ASICs,\N嗯，如果你纵观整个AI专用芯片的领域，
+Dialogue: 0,0:02:50.26,0:02:57.95,Sub,,0,0,0,,um one of the things that I think is very striking is there's a lot of relatively identikit chips out there.\N我觉得特别引人注目的是，市面上有很多相对同质化的芯片。
+Dialogue: 0,0:02:58.00,0:03:05.15,Sub,,0,0,0,,Um and this is kind of a structural It's a kind of structural industry uh property where if you look especially across kind of hyperscaler efforts,\N嗯，这其实是一种结构性的产业，或者说是一种结构性的地产，如果你特别关注一下超大规模云厂商的布局的话，
+Dialogue: 0,0:03:05.20,0:03:09.91,Sub,,0,0,0,,and you know, Google kind of kicked this off with the TPU more than 10 years ago.\N而且你知道，谷歌早在十多年前就通过TPU开启了这一进程。
+Dialogue: 0,0:03:09.96,0:03:15.02,Sub,,0,0,0,,Um you see this paradigm where, although there are a number of kind of proprietary internal chips,\N嗯，你看这种模式，尽管内部有若干专有的芯片，
+Dialogue: 0,0:03:15.07,0:03:19.48,Sub,,0,0,0,,you know, Google with the TPU, Meta with MTIA, Microsoft with Maia,\N你知道，谷歌有 TPU，Meta 有 MTIA，微软有 Maia。
+Dialogue: 0,0:03:19.53,0:03:21.79,Sub,,0,0,0,,OpenAI now with Halapenio,\NOpenAI 现在由哈拉佩尼奥领导，
+Dialogue: 0,0:03:21.84,0:03:30.24,Sub,,0,0,0,,um these chips that are ultimately developed and delivered in partnership with kind of a relatively small number of what we might call ASIC houses.\N这些芯片最终是与我们所谓的少数几家ASIC公司合作开发并交付的。
+Dialogue: 0,0:03:30.29,0:03:32.63,Sub,,0,0,0,,These kind of back-end delivery houses.\N这类后端交付机构。
+Dialogue: 0,0:03:32.68,0:03:36.56,Sub,,0,0,0,,Broadcom is is the largest at, you know, $2 trillion company.\N博通是目前市值最高的公司，你知道的，达到了两万亿美元。
+Dialogue: 0,0:03:36.61,0:03:40.51,Sub,,0,0,0,,Um that help people kind of realize these designs.\N嗯，这有助于人们更好地理解这些设计。
+Dialogue: 0,0:03:40.56,0:03:48.91,Sub,,0,0,0,,And so, when you kind of zoom into this this sort of seeming uh embarrassment of riches in the spectrum of what exists today,\N因此，当你仔细审视当下各种技术看似过剩的丰富性时，
+Dialogue: 0,0:03:48.96,0:03:53.15,Sub,,0,0,0,,uh you see that actually there's a lot of similarity across these platforms.\N嗯，你看，这些平台之间实际上有很多相似之处。
+Dialogue: 0,0:03:53.20,0:03:59.50,Sub,,0,0,0,,Um, you know, the all of these chips, you have HBM, this type of DRAM memory that is,\N嗯，你知道，这些芯片都有 HBM，这种 DRAM 内存，
+Dialogue: 0,0:03:59.55,0:04:04.32,Sub,,0,0,0,,you know, common to Nvidia GPUs, AMD GPUs, and all of these other ASICs.\N众所周知，这在英伟达、AMD 的 GPU 以及所有其他 ASIC 芯片中都很常见。
+Dialogue: 0,0:04:04.38,0:04:12.31,Sub,,0,0,0,,You have the same kinds of bets on Tensor Cores to do your matrix multiplications, the same advanced packaging with TSMC.\N你在张量核心上下的赌注，和用台积电进行先进封装的策略，都是一样的。
+Dialogue: 0,0:04:12.36,0:04:12.50,Sub,,0,0,0,,Um,\N嗯，
+Dialogue: 0,0:04:12.50,0:04:18.36,Sub,,0,0,0,,and so I think one of the things that we see in the landscape is there's a relative dearth still of kind\N因此我认为当前格局中，仍相对缺乏这类东西
+Dialogue: 0,0:04:18.40,0:04:26.47,Sub,,0,0,0,,of efforts that go all the way up and down the silicon stack and try and build kind of fundamentally new capabilities.\N从硅材料堆栈的底层到顶层，全方位投入努力，试图构建根本性的全新能力。
+Dialogue: 0,0:04:26.52,0:04:28.35,Sub,,0,0,0,,Um, and this is kind of a structural thing.\N嗯，这其实是个结构性问题。
+Dialogue: 0,0:04:28.40,0:04:33.71,Sub,,0,0,0,,There's just not that many teams that have decided, we're going to build from, you know, what you might call the kind of,\N真正决定从头开始构建的团队并不多，你可能称之为那种……
+Dialogue: 0,0:04:33.76,0:04:39.19,Sub,,0,0,0,,you know, the architectural layer, the front-end design layer, which mostly looks like kind of writing code,\N你知道，架构层、前端设计层，看起来很大程度上就像写代码一样。
+Dialogue: 0,0:04:39.24,0:04:44.17,Sub,,0,0,0,,but also all the way down to what we call kind of physical design, the process technology,\N而不仅仅是到我们所谓的物理设计，还包括工艺技术层面。
+Dialogue: 0,0:04:44.22,0:04:51.35,Sub,,0,0,0,,the kind of foundry interactions, the stuff that essentially has you flying back and forth to Taiwan or Korea every week.\N那种代工厂的互动，本质上就是每周都要往返台湾或韩国。
+Dialogue: 0,0:04:51.40,0:04:56.11,Sub,,0,0,0,,Um, that's something which actually tends to still be left to a relatively small number of companies.\N嗯，这实际上仍然主要由为数不多的几家公司负责。
+Dialogue: 0,0:04:56.16,0:05:01.82,Sub,,0,0,0,,For people who don't work in the chip industry, what is the common abstraction or handoff between what they're,\N对于不从事芯片行业的人来说，他们之间常见的抽象或交接点是什么？
+Dialogue: 0,0:05:01.86,0:05:06.35,Sub,,0,0,0,,what, you know, architecture-focused players are doing and a player like Broadcom?\N你知道，那些专注于架构的厂商在做什么，还有像博通这样的厂商？
+Dialogue: 0,0:05:06.40,0:05:11.35,Sub,,0,0,0,,Yeah, so I think the if you're, let's say you're Google and you're designing the TPU, um,\N是的，我觉得如果你是谷歌，正在设计TPU的话，嗯，
+Dialogue: 0,0:05:11.40,0:05:17.72,Sub,,0,0,0,,you have a number of people in your team who have a really strong understanding of the workloads that they're that they're trying to accelerate.\N你的团队中有不少人对所要加速的工作负载有非常深入的理解。
+Dialogue: 0,0:05:17.77,0:05:26.86,Sub,,0,0,0,,Um, and so, you know, going back over 10 years, this is a a world that then sees you conceive of things like the Tensor Core,\N嗯，这么说吧，回溯到十多年前，那时人们开始构想出像张量核心这样的技术。
+Dialogue: 0,0:05:26.91,0:05:31.03,Sub,,0,0,0,,which is a designated circuit dreamt up by an architect, uh,\N这是一条由建筑师构想出来的专用电路，呃，
+Dialogue: 0,0:05:31.08,0:05:36.80,Sub,,0,0,0,,that is exceptionally good at matrix multiplications because you have this insight that matrix multiplications\N这在矩阵乘法方面表现极为出色，因为你们有了这样一个洞察：矩阵乘法
+Dialogue: 0,0:05:36.86,0:05:42.67,Sub,,0,0,0,,are the overwhelming majority of the kind of flop count in these models that you're running.\N这些模型中绝大多数都是你运行时的性能瓶颈。
+Dialogue: 0,0:05:42.72,0:05:48.75,Sub,,0,0,0,,Um, that's kind of the preserve of the architects, I guess, is somebody who really understands the way that chips behave,\N嗯，这大概还是建筑师的专长吧，就是那种真正理解芯片运行方式的人。
+Dialogue: 0,0:05:48.80,0:05:53.63,Sub,,0,0,0,,but also ideally has a very strong understanding of the kind of target workloads.\N而且还理想地具备对目标工作负载类型的深刻理解。
+Dialogue: 0,0:05:53.68,0:06:00.70,Sub,,0,0,0,,Um what you'll then see inside those same organizations is a set of sort of, you know, very smart people that kind of lower that down into,\N嗯，你接下来在这些组织内部会看到一群相当聪明的人，他们把事情具体化，落实到细节上。
+Dialogue: 0,0:06:00.75,0:06:05.23,Sub,,0,0,0,,I guess, you know, essentially a kind of circuit level description of how this chip should behave.\N我猜，本质上就是描述这个芯片应如何工作的电路级说明。
+Dialogue: 0,0:06:05.28,0:06:09.00,Sub,,0,0,0,,And so, a lot of this is what we call front-end design.\N因此，这很大程度上就是我们所说的设计前端。
+Dialogue: 0,0:06:09.05,0:06:14.22,Sub,,0,0,0,,Um you know, mechanistically it still looks like like writing code on a computer,\N嗯，从机制上来说，它看起来还是像在电脑上写代码一样。
+Dialogue: 0,0:06:14.26,0:06:19.67,Sub,,0,0,0,,and it's still code that is then handed off to uh a player like Broadcom.\N而且这段代码随后会交给博通这样的厂商处理。
+Dialogue: 0,0:06:19.72,0:06:26.88,Sub,,0,0,0,,Um and so, you know, that kind of front-end design that describes the kind of underlying intent of the chip, the underlying logic of the chip,\N嗯，你知道，那种描述芯片底层意图和底层逻辑的前端设计，
+Dialogue: 0,0:06:26.93,0:06:32.49,Sub,,0,0,0,,is then transformed ultimately into something that, you know, what gets shipped to TSMC in the end is literally a kind of bitmap.\N最终，它被转化为一种东西，你知道的，最终送往台积电的实际上是一种位图。
+Dialogue: 0,0:06:32.54,0:06:36.95,Sub,,0,0,0,,Uh you know, we would have this file type you call GDS2, and it's literally,\N你知道，我们会有这种文件类型，叫 GDS2，它实际上就是，
+Dialogue: 0,0:06:37.00,0:06:40.98,Sub,,0,0,0,,you know, where do I put the metal layers, where do I put each individual transistor.\N你知道，我该把金属层放在哪里，每个晶体管又该放在哪里。
+Dialogue: 0,0:06:41.04,0:06:42.82,Sub,,0,0,0,,And so, it's a it's a full layout.\N所以，这是一个完整的布局。
+Dialogue: 0,0:06:42.87,0:06:50.69,Sub,,0,0,0,,And so, you go through this process of synthesis of that RTL into a kind of set of circuits that then ultimately get laid out.\N于是，你将这一过程从RTL综合成一组电路，最终完成布局。
+Dialogue: 0,0:06:50.74,0:06:56.41,Sub,,0,0,0,,And a lot of the complexity there is around um you know, in Broadcom's case, you know,\N那里的很多复杂性在于，以博通为例，你知道，
+Dialogue: 0,0:06:56.46,0:07:01.39,Sub,,0,0,0,,it would be ownership of analog IP that is used for chip-to-chip connectivity.\N它将是用于芯片间连接的模拟IP的所有权。
+Dialogue: 0,0:07:01.44,0:07:07.25,Sub,,0,0,0,,And it is this kind of physical placement that is specific to a given process node at TSMC.\N这种物理布局方式是台积电特定制程节点所独有的。
+Dialogue: 0,0:07:07.30,0:07:11.95,Sub,,0,0,0,,So, you know, we talk about like 3 nanometers, 5 nanometers, et cetera.\N所以，你知道的，我们常说3纳米、5纳米之类的。
+Dialogue: 0,0:07:12.00,0:07:18.07,Sub,,0,0,0,,Um so, that piece is still today, you know, generally it is a kind of outsourced activity for all of these projects.\N所以，那部分至今仍是这些项目普遍外包的活动。
+Dialogue: 0,0:07:18.12,0:07:24.95,Sub,,0,0,0,,You are describing what feels like a very large project to do end-to-end um new chip creation.\N你描述的似乎是一个从头到尾全新芯片开发的庞大项目。
+Dialogue: 0,0:07:25.00,0:07:31.94,Sub,,0,0,0,,Uh from a workload perspective, you're working with several frontier players to sort of characterize that and make sure that you can serve them.\N从工作负载的角度来看，你正在与多家前沿企业合作，对它们进行分析，以确保能够满足它们的需求。
+Dialogue: 0,0:07:31.99,0:07:34.95,Sub,,0,0,0,,How do you think about like what does the Fractile team look like today?\N你觉得现在的 Fractile 团队是什么样子的？
+Dialogue: 0,0:07:35.00,0:07:36.63,Sub,,0,0,0,,How can you do that as a startup?\N初创公司怎么做到这一点？
+Dialogue: 0,0:07:36.68,0:07:38.51,Sub,,0,0,0,,Yeah, I think there is a No, it's funny,\N是的，我觉得不是，这挺有趣的，
+Dialogue: 0,0:07:38.56,0:07:44.53,Sub,,0,0,0,,there's a lot of industries where there will be a kind of waterfall style approach to doing things and then suddenly,\N有很多行业会采用类似瀑布流的方式开展工作，然后突然间，
+Dialogue: 0,0:07:44.58,0:07:51.38,Sub,,0,0,0,,you know, along comes a new way of thinking and it's kind of more agile to borrow from like management philosophy, right?\N你知道，当一种新的思维方式出现时，它更灵活，有点像借鉴了管理学的理念，对吧？
+Dialogue: 0,0:07:51.43,0:07:57.98,Sub,,0,0,0,,And I think for us as a very full-stack company, so we have a team that does span, you know, very deep workload understanding.\N我认为作为一家全栈公司，我们有一个团队能够深入理解各类工作负载。
+Dialogue: 0,0:07:58.03,0:08:02.91,Sub,,0,0,0,,I think we actually try to, you know, run ahead uh in many places and look at, you know,\N我觉得我们实际上在很多地方都试图领先一步，去关注那些事情。
+Dialogue: 0,0:08:02.96,0:08:07.58,Sub,,0,0,0,,where would we change a model architecture to be more exceptionally aligned with our bets.\N我们会在哪里调整模型架构，使其更契合我们的押注方向。
+Dialogue: 0,0:08:07.64,0:08:12.74,Sub,,0,0,0,,What do we think is like kind of the scaling law vector for the particular bets that we are taking.\N我们所押注的这些方向，其规模定律的向量究竟是怎样的。
+Dialogue: 0,0:08:12.79,0:08:16.19,Sub,,0,0,0,,Uh and then we can advocate to our customers and our partners on that.\N然后我们就可以向客户和合作伙伴倡导这一点。
+Dialogue: 0,0:08:16.24,0:08:25.31,Sub,,0,0,0,,And it also helps us inform a set of bets for a chip that, you know, isn't going to necessarily exist in volume for, you know, 1 or 2 years.\N这也有助于我们为一款短期内（一两年内）未必能大规模量产的芯片做出一系列决策。
+Dialogue: 0,0:08:25.36,0:08:28.99,Sub,,0,0,0,,Um that becomes a really important sort of part of the muscle that we have to build.\N这会成为我们必须构建的肌肉中一个非常重要的部分。
+Dialogue: 0,0:08:29.04,0:08:34.32,Sub,,0,0,0,,But then as we look across this kind of, you know, ability to spin a very kind of agile loop,\N但当我们放眼全局时，就会发现这种快速灵活迭代的能力尤为突出。
+Dialogue: 0,0:08:34.37,0:08:38.32,Sub,,0,0,0,,it means that inside Fractile we do have front-end designers.\N这意味着在 Fractile 内部，我们确实有前端设计师。
+Dialogue: 0,0:08:38.37,0:08:40.29,Sub,,0,0,0,,We have our own physical design team.\N我们有自己独立的物理设计团队。
+Dialogue: 0,0:08:40.34,0:08:42.79,Sub,,0,0,0,,We have our own kind of back-end implementation team.\N我们有自己的后端实现团队。
+Dialogue: 0,0:08:42.84,0:08:47.27,Sub,,0,0,0,,You know, we do our own work on advanced packaging, for example.\N你知道，我们在先进封装方面也自己做研发。
+Dialogue: 0,0:08:47.32,0:08:49.77,Sub,,0,0,0,,Um and that's not an enormous headcount, right?\N嗯，这并不是一个庞大的人员规模，对吧？
+Dialogue: 0,0:08:49.82,0:08:52.55,Sub,,0,0,0,,I mean, Fractile today is about 150 people.\N目前，Fractile 大约有 150 人。
+Dialogue: 0,0:08:52.60,0:08:56.44,Sub,,0,0,0,,Uh we're sort of skinny in in every single one of those uh sectors.\N我们在所有这些领域都显得有些单薄。
+Dialogue: 0,0:08:56.49,0:09:01.11,Sub,,0,0,0,,But what it allows us to do is have this kind of much more agile closed loop.\N但它让我们能够实现这种更加敏捷的闭环。
+Dialogue: 0,0:09:01.16,0:09:09.27,Sub,,0,0,0,,Um and I think that's becoming increasingly essential as you look at the sort of cadence needs that are set by this industry.\N而且我认为，随着这个产业不断提出节奏上的需求，这一点正变得越来越重要。
+Dialogue: 0,0:09:09.32,0:09:15.47,Sub,,0,0,0,,Um you know, the chasing, you know, perennially of the sort of chasing of the tail of the workloads is, you know,\N你知道，那种永远追逐工作负载尾巴的感觉，其实……
+Dialogue: 0,0:09:15.52,0:09:23.27,Sub,,0,0,0,,you have to in the AI chip space more than any other kind of chip play before, you have to really place your bets correctly.\N在AI芯片领域，你必须比其他任何芯片类型都更早布局，而且必须真正下对赌注。
+Dialogue: 0,0:09:23.32,0:09:25.89,Sub,,0,0,0,,Uh so you have to have a lot of, you know, skill and a lot of luck.\N所以你得有很多技能，还得有好运气。
+Dialogue: 0,0:09:25.94,0:09:28.53,Sub,,0,0,0,,And you also then need to strike very fast.\N你还需要迅速采取行动。
+Dialogue: 0,0:09:28.58,0:09:35.19,Sub,,0,0,0,,And so this kind of structural setup where we have the entire story in-house,\N因此，这种内部整合的结构使我们能够将整个故事都掌握在自己手中。
+Dialogue: 0,0:09:35.24,0:09:40.59,Sub,,0,0,0,,uh it's very very different to this kind of, I guess, prior approach where there's almost like a handoff point.\N嗯，这和之前那种几乎存在交接点的方法非常不同。
+Dialogue: 0,0:09:40.64,0:09:44.24,Sub,,0,0,0,,And so, you get to a certain level and then you hand off to another partner.\N于是，当你达到某个阶段后，就会转交给另一位合作伙伴。
+Dialogue: 0,0:09:44.29,0:09:49.27,Sub,,0,0,0,,And it's some to some extent, you're kind of at the mercy of of how that other partner then behaves.\N在某种程度上，你只能听天由命，取决于对方之后如何表现。
+Dialogue: 0,0:09:49.32,0:09:54.11,Sub,,0,0,0,,What do you think are the single most important technical bets that the company has made?\N你认为公司所做的最重要的技术押注是什么？
+Dialogue: 0,0:09:54.16,0:10:04.36,Sub,,0,0,0,,So, for us, I think, you know, one is the direction, you know, 4 and 1/2 years ago, um, you were obviously right in the heart of an inference story,\N所以对我们来说，我认为，方向是明确的，四年前半，你显然正处于推理故事的核心。
+Dialogue: 0,0:10:04.41,0:10:11.43,Sub,,0,0,0,,but I still felt that we were educating the world about what inference meant, um, for 2 years or so following that.\N但那之后大约两年里，我仍觉得我们一直在向世界普及推理的含义。
+Dialogue: 0,0:10:11.48,0:10:18.06,Sub,,0,0,0,,Some of the inference chips today, including one that recently went public, was a training chip until about 18 months ago.\N如今的一些推理芯片，包括最近上市的一款，直到大约18个月前还都是训练芯片。
+Dialogue: 0,0:10:18.11,0:10:23.25,Sub,,0,0,0,,You know, there was a real avoidance of this idea that this sort of small, you know,\N你知道，人们一直很回避这种想法，就是这种小型的，你知道，
+Dialogue: 0,0:10:23.30,0:10:26.80,Sub,,0,0,0,,final marginal cost, you know, marginal cost I think has two senses, right?\N最终的边际成本，你知道的，边际成本我觉得有两种含义，对吧？
+Dialogue: 0,0:10:26.85,0:10:34.47,Sub,,0,0,0,,It either sounds like it's a small cost, what it in fact means is this is the cost that you pay every single time you deploy these models.\N它听起来好像成本很小，但实际上这意味着你每次部署这些模型时都要付出这个代价。
+Dialogue: 0,0:10:34.52,0:10:39.55,Sub,,0,0,0,,Um, so I think firstly, just the the sheer bet that we were going to slip into a kind of deployment error.\N嗯，我认为首先，我们几乎肯定会陷入一种部署错误的境地。
+Dialogue: 0,0:10:39.60,0:10:41.12,Sub,,0,0,0,,Um, and the bet on speed.\N嗯，还有对速度的押注。
+Dialogue: 0,0:10:41.17,0:10:45.90,Sub,,0,0,0,,That was something that kind of really informed a lot of what we then did as a kind of architectural response.\N这对我们后来作为建筑回应的许多决策都产生了深远影响。
+Dialogue: 0,0:10:45.95,0:10:52.27,Sub,,0,0,0,,On the architectural side, you know, we've been through a journey, I think, for the first kind of 2 years or so of the company's life,\N在架构方面，我想在公司成立最初的两年左右，我们经历了一段历程，
+Dialogue: 0,0:10:52.32,0:10:58.56,Sub,,0,0,0,,um, we were working on a little like Groq or Cerebras, uh, working on an SRAM based chip.\N嗯，我们之前在做一个类似 Groq 或 Cerebras 的项目，\N正在开发一款基于 SRAM 的芯片。
+Dialogue: 0,0:10:58.61,0:11:04.28,Sub,,0,0,0,,So, we'd sort of made the observation that, um, SRAM is this super high bandwidth memory.\N所以我们注意到，SRAM 是一种带宽极高的内存。
+Dialogue: 0,0:11:04.34,0:11:06.98,Sub,,0,0,0,,It lives on the same piece of silicon as your logic, uh,\N它与你的逻辑电路共存于同一块硅片上。
+Dialogue: 0,0:11:07.03,0:11:12.96,Sub,,0,0,0,,and so you have this extremely high bandwidth between your compute where you're running the maths as you run these models,\N因此，你的计算单元与运行这些模型的数学运算之间具有极高的带宽。
+Dialogue: 0,0:11:13.02,0:11:18.55,Sub,,0,0,0,,and let's say the weights of your model or the KV cache of this model as you're rolling it out.\N假设你的模型权重或在推理过程中该模型的键值缓存。
+Dialogue: 0,0:11:18.60,0:11:24.67,Sub,,0,0,0,,Um, and that's something which then then can drive you to thousands of tokens per second on these language models.\N嗯，这就能让你在这些语言模型上实现每秒数千个词元的处理速度。
+Dialogue: 0,0:11:24.72,0:11:29.43,Sub,,0,0,0,,Um, but I think one of the things that we started to worry about in kind of, uh,\N嗯，但我觉得我们开始担心的一件事是，某种程度上，
+Dialogue: 0,0:11:29.48,0:11:36.20,Sub,,0,0,0,,towards the end of 2023 and certainly in 2024 was the scalability of this approach.\N2023年底，尤其是2024年，这种方法的可扩展性成为关键。
+Dialogue: 0,0:11:36.25,0:11:40.19,Sub,,0,0,0,,Um and you know, I think there are two things that grow with AI today.\N嗯，我知道，我觉得现在AI有两个方面在不断增长。
+Dialogue: 0,0:11:40.24,0:11:42.91,Sub,,0,0,0,,One is obviously the parameters of the model.\N一个是模型的参数。
+Dialogue: 0,0:11:42.96,0:11:50.58,Sub,,0,0,0,,Um but the other and this was the one that kind of really got us nervous about that architectural approach was um uh you know,\N但另一个让我们对那种架构方式感到担忧的，是……你知道，
+Dialogue: 0,0:11:50.63,0:11:57.87,Sub,,0,0,0,,this kind of growing context length that was becoming more and more part of the story for for how we saw these models rolling out.\N这种不断增长的上下文长度，正越来越多地成为我们看待这些模型推出过程中的关键因素。
+Dialogue: 0,0:11:57.92,0:12:05.21,Sub,,0,0,0,,Um and it's that that has taken us over the past couple of years to a a kind of what we see as a more exciting best, I guess, in some ways,\N嗯，正是这一点让我们在过去几年里达到了一种我们认为更令人兴奋的境界，某种程度上可以说是最好的状态了。
+Dialogue: 0,0:12:05.26,0:12:10.28,Sub,,0,0,0,,which is working more closely with memory vendors as well as our sort of logic\N这正与内存厂商以及我们的逻辑技术方面更紧密地合作
+Dialogue: 0,0:12:10.33,0:12:17.32,Sub,,0,0,0,,foundry partners to find ways to get extremely high bandwidth access to higher capacity memories.\N与代工厂合作，寻找实现极高带宽访问更高容量内存的方法。
+Dialogue: 0,0:12:17.37,0:12:23.52,Sub,,0,0,0,,So, for the past couple of years, we've been involved in these kind of skunk works projects to move away from SRAM,\N过去几年里，我们一直在开展这类秘密项目，旨在摆脱对 SRAM 的依赖。
+Dialogue: 0,0:12:23.57,0:12:29.99,Sub,,0,0,0,,you know, looking at how we can get, for instance, much, much, much higher bandwidth to DRAM memories.\N你知道，看看我们如何能显著提升DRAM内存的带宽。
+Dialogue: 0,0:12:30.04,0:12:33.87,Sub,,0,0,0,,Um and this has been a very exciting bet for us because it's allowed us now\N嗯，这对我们来说是一次非常令人兴奋的押注，因为它让我们现在得以实现。
+Dialogue: 0,0:12:33.92,0:12:38.87,Sub,,0,0,0,,to put together a platform which will be ramping in the second half of next year,\N组建一个平台，该平台将于明年下半年开始加速推进。
+Dialogue: 0,0:12:38.92,0:12:42.55,Sub,,0,0,0,,um which uh kind of unites, I guess,\N嗯，这个嘛，我觉得某种程度上把大家联系在了一起。
+Dialogue: 0,0:12:42.60,0:12:50.13,Sub,,0,0,0,,the scalability of these kind of higher capacity, lower cost DRAM memories that you have on a GPU,\N这些高容量、低成本的GPU内存的可扩展性，
+Dialogue: 0,0:12:50.18,0:12:56.21,Sub,,0,0,0,,on a TPU, uh with all of the speed advantages that you get from a Groq chip or a Cerebras chip.\N在TPU上，就像使用Groq芯片或Cerebras芯片那样，能获得所有速度优势。
+Dialogue: 0,0:12:56.26,0:13:05.51,Sub,,0,0,0,,Um and I think where we see this is especially vital is you know, if you look at where it is that speed really moves the dial today,\N嗯，我认为这一点尤其关键，你只要看看现在速度真正起决定性作用的地方就知道了。
+Dialogue: 0,0:13:05.56,0:13:09.67,Sub,,0,0,0,,there is a kind of there's a version of this which is like a snap your chatbot.\N有一种版本，就像一键生成你的聊天机器人。
+Dialogue: 0,0:13:09.72,0:13:11.18,Sub,,0,0,0,,But I think this is like, you know,\N但我觉得这就像，你知道的，
+Dialogue: 0,0:13:11.23,0:13:18.25,Sub,,0,0,0,,when um uh Henry Ford sort of asked the rhetorical question of what people would have said they wanted and you know,\N嗯，亨利·福特曾经反问过：人们会说自己想要什么，
+Dialogue: 0,0:13:18.30,0:13:20.43,Sub,,0,0,0,,faster horses uh rather than a car.\N更快的马，而不是汽车。
+Dialogue: 0,0:13:20.48,0:13:24.85,Sub,,0,0,0,,Uh the snap your chatbot is kind of the faster horses of kind of fast inference.\N嗯，你的聊天机器人在快速推理方面，有点像更快的马。
+Dialogue: 0,0:13:24.90,0:13:33.03,Sub,,0,0,0,,The The where the ability to take a multi-trillion parameter model and run it comfortably at many thousands of tokens per second in our\N能够轻松运行万亿参数模型，每秒处理数千个词元的所在
+Dialogue: 0,0:13:33.08,0:13:43.43,Sub,,0,0,0,,view is a kind of fundamental elevator on capability for AI is in taking these kind of very long-running agents and making them radically faster.\N视角是一种根本性的能力提升，让AI能够显著加速这类长期运行的智能体。
+Dialogue: 0,0:13:43.48,0:13:49.97,Sub,,0,0,0,,Um and so that's kind of a it's a tantalizing mismatch today between the properties of the fast inference chips that we have,\N嗯，如今我们手头的快速推理芯片在性能上存在一种颇具诱惑力的不匹配。
+Dialogue: 0,0:13:50.02,0:13:53.46,Sub,,0,0,0,,which have super high bandwidth memory but incredibly low capacity.\N具有超高的内存带宽，但容量极低。
+Dialogue: 0,0:13:53.51,0:14:01.05,Sub,,0,0,0,,And if you look at the sort of technical detail of how they actually get employed and deployed today, they're not running long context attention.\N如果你看一下它们目前实际雇佣和部署的技术细节，就会发现它们并没有运行长上下文注意力。
+Dialogue: 0,0:14:01.10,0:14:03.76,Sub,,0,0,0,,You still flip back to a GPU to do that.\N你还是得回到 GPU 上来完成这个操作。
+Dialogue: 0,0:14:03.81,0:14:08.38,Sub,,0,0,0,,And so there's this sort of tantalizing mismatch where precisely the area where we\N因此，存在着一种令人向往的错位，恰好就在我们最需要的地方。
+Dialogue: 0,0:14:08.43,0:14:11.67,Sub,,0,0,0,,are almost able to go and take these things and make them much faster,\N几乎能够把这些东西拿过来，让它们变得快得多。
+Dialogue: 0,0:14:11.72,0:14:14.55,Sub,,0,0,0,,we also don't have that technical capability.\N我们也没有那种技术能力。
+Dialogue: 0,0:14:14.60,0:14:20.83,Sub,,0,0,0,,Um and so in a sense this is, you know, like many technical challenges it boils down to a slightly mundane technical observation,\N嗯，从某种意义上说，这就像许多技术挑战一样，最终归结为一个略显平凡的技术发现。
+Dialogue: 0,0:14:20.88,0:14:25.66,Sub,,0,0,0,,which is we need chips that have this kind of particular ineffable property,\N我们需要具备这种独特而难以言喻特性的芯片。
+Dialogue: 0,0:14:25.71,0:14:30.85,Sub,,0,0,0,,which is incredibly high bandwidth to memory so we can load the weights, we can load the state,\N这内存带宽极高，因此我们可以加载权重，也可以加载状态。
+Dialogue: 0,0:14:30.90,0:14:36.55,Sub,,0,0,0,,you know, many thousands of times per second, uh but also have like economical memory.\N你知道，每秒能执行数以千计的运算，而且还能节省内存成本。
+Dialogue: 0,0:14:36.60,0:14:42.50,Sub,,0,0,0,,Because when you look at what it looks like to run inference at data center scale for thousands of users,\N因为当你看到在数据中心规模下为数千用户运行推理时的情形时，
+Dialogue: 0,0:14:42.55,0:14:50.11,Sub,,0,0,0,,the economics actually collapse down to uh essentially a kind of cost per gigabyte of the memory that you're employing.\N实际上，经济性最终会归结为所使用内存的每千兆字节成本。
+Dialogue: 0,0:14:50.16,0:14:55.67,Sub,,0,0,0,,Um and so that's been the sort of other key focus for us is unlocking this kind of fundamentally new building block,\N嗯，所以这正是我们另一个关键关注点，即解锁这种根本性的全新构建模块。
+Dialogue: 0,0:14:55.72,0:15:04.75,Sub,,0,0,0,,which is uh finding a path to get aggressively high bandwidth from this kind of uh you know, from the world's lower-cost memory, uh DRAM memory.\N也就是找到一种方法，从成本较低的全球内存，也就是 DRAM 内存中，实现极高带宽的传输。
+Dialogue: 0,0:15:04.80,0:15:08.71,Sub,,0,0,0,,You said a few things that I I think are um not the conventional wisdom.\N你说了一些我认为并不符合常规认知的话。
+Dialogue: 0,0:15:08.76,0:15:16.30,Sub,,0,0,0,,One in in terms of making a bet yourselves on where the workloads are going, and then two, the idea that you can uh you know,\N一是要自己判断工作负载将走向何方，二是你完全可以做到，你知道的，
+Dialogue: 0,0:15:16.35,0:15:25.47,Sub,,0,0,0,,traditional chip people might think of delivery of chips in a generation, mhm, you know, every year or a little faster than that.\N传统芯片从业者可能认为芯片交付要隔一代，嗯，也就是一年左右，或者稍快一点。
+Dialogue: 0,0:15:25.52,0:15:31.58,Sub,,0,0,0,,Um and you know, big architectural changes come come slower than um that that's sort of tick rate.\N嗯，你知道的，重大的架构变革比那种所谓的“时钟频率”来得要慢得多。
+Dialogue: 0,0:15:31.63,0:15:40.95,Sub,,0,0,0,,Uh but you you you've aspirationally said within Fractile that you think the speed of like change in architecture um and change in you know,\N但你之前在 Fractile 里曾雄心勃勃地表示，你认为架构变革的速度，以及你所知的变革速度，
+Dialogue: 0,0:15:41.00,0:15:43.80,Sub,,0,0,0,,the the technical plays you're making can be much faster than that.\N你所做的技术突破，可以快得多。
+Dialogue: 0,0:15:43.85,0:15:48.38,Sub,,0,0,0,,Can you talk a little bit about like what would enable that to happen because the you know,\N你能稍微谈一下，到底是什么因素能促成这件事发生呢？毕竟你知道，
+Dialogue: 0,0:15:48.43,0:15:53.36,Sub,,0,0,0,,I I I think people have a better understanding of the physical limits of the supply chain today than they used to.\N如今，人们对供应链的物理限制有了比以往更清晰的认识。
+Dialogue: 0,0:15:53.41,0:15:55.91,Sub,,0,0,0,,So, what is the flexibility that the industry could have?\N那么，产业可能具备的灵活性是什么？
+Dialogue: 0,0:15:55.96,0:15:56.36,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:15:56.41,0:15:59.46,Sub,,0,0,0,,So, I think there's a nuance on uh on this,\N所以，我认为这里面有些微妙之处。
+Dialogue: 0,0:15:59.51,0:16:04.83,Sub,,0,0,0,,but what what you want to any given moment in time for an AI chip is you wish that you\N但你真正想要的，是在任何时刻都让AI芯片的性能达到极致。
+Dialogue: 0,0:16:04.88,0:16:12.18,Sub,,0,0,0,,had a chip that was precisely targeting the workload that you care about uh and in your hand today in volume.\N现在你手中拿到的芯片，正是精准针对你关心的工作负载，且已实现大规模量产。
+Dialogue: 0,0:16:12.23,0:16:16.24,Sub,,0,0,0,,But if you had that chip, uh you know, you're going to want something else to get in 6 months' time.\N但如果你有了那块芯片，嗯，你肯定又会想要六个月后的新东西了。
+Dialogue: 0,0:16:16.29,0:16:18.43,Sub,,0,0,0,,Like these workloads move on very fast.\N这些工作负载的迁移速度非常快。
+Dialogue: 0,0:16:18.48,0:16:22.91,Sub,,0,0,0,,Well, today, you know, we have a model coming out about every uh 2 weeks.\N嗯，现在每隔两周左右，我们就能推出一个新模型。
+Dialogue: 0,0:16:22.96,0:16:23.91,Sub,,0,0,0,,So, it's what you say.\N所以，关键在于你如何表达。
+Dialogue: 0,0:16:23.96,0:16:29.03,Sub,,0,0,0,,so, the sanity comes from looking across those models and saying, well, okay, what's what's common to all of these?\N因此，理性来自于审视这些模型，问自己：这些模型中有什么是共同的？
+Dialogue: 0,0:16:29.08,0:16:31.10,Sub,,0,0,0,,And like thankfully, there's enough that is common.\N所幸的是，仍有足够多的共通之处。
+Dialogue: 0,0:16:31.15,0:16:39.39,Sub,,0,0,0,,So, you know, it's always the case that a new LLM uh desperately wants to have orders of magnitude more bandwidth to memory in order to run faster.\N所以你知道的，新的大语言模型总是迫切地需要内存带宽提升几个数量级，以实现更快的运行速度。
+Dialogue: 0,0:16:39.44,0:16:44.02,Sub,,0,0,0,,Uh it remains the case today that you know, these LLMs tend to be auto-aggressive,\N说实话，如今这些大语言模型仍然倾向于自我强化。
+Dialogue: 0,0:16:44.07,0:16:49.06,Sub,,0,0,0,,very low batch as you generate text uh with this sort of fundamental trade-off again between\N生成文本时，批量非常小，再次面临这种根本性的权衡。
+Dialogue: 0,0:16:49.11,0:16:52.98,Sub,,0,0,0,,kind of throughput efficiency and cost and the speed that you can serve these models at.\N吞吐效率、成本以及部署这些模型的速度。
+Dialogue: 0,0:16:53.03,0:17:00.47,Sub,,0,0,0,,Uh so, there are certain things that these models are unified and kind of crying out for and and memory bandwidth is one of them.\N嗯，这些模型有一些共同的需求，正迫切呼唤着解决，而内存带宽就是其中之一。
+Dialogue: 0,0:17:00.52,0:17:06.71,Sub,,0,0,0,,Um but then, you know, as you say, there are these evolutions and especially if you look at the kind of frontier of open-source Chinese models,\N但正如你所说，这些模型也在不断演进，尤其是当你关注开源中文模型的前沿时。
+Dialogue: 0,0:17:06.76,0:17:12.81,Sub,,0,0,0,,you know, the exact nature of an attention mechanism will churn every couple of weeks in terms of what's kind of the frontier.\N你知道，注意力机制的具体原理每隔几周就会有新的前沿进展。
+Dialogue: 0,0:17:12.86,0:17:19.11,Sub,,0,0,0,,The sparsity the sparsity level of the MOEs that you have, the sparsity on the attention itself.\N你所使用的MoE的稀疏度，以及注意力机制本身的稀疏度。
+Dialogue: 0,0:17:19.16,0:17:22.03,Sub,,0,0,0,,And you know, we may be in for like bigger shocks as well.\N而且你知道，我们可能还会面临更大的冲击。
+Dialogue: 0,0:17:22.08,0:17:24.75,Sub,,0,0,0,,There may be kind of more fundamental shifts.\N或许会出现一些更根本的转变。
+Dialogue: 0,0:17:24.80,0:17:31.78,Sub,,0,0,0,,And so I think there's this duality around sort of the limits of the physical and the kind of financial world, I guess.\N所以我认为，在物理世界和金融世界的边界之间，存在着某种二元性，我想是这样。
+Dialogue: 0,0:17:31.83,0:17:33.67,Sub,,0,0,0,,And then these demands of you know,\N然后就是这些你懂的诉求，
+Dialogue: 0,0:17:33.72,0:17:43.65,Sub,,0,0,0,,workloads that churn at the pace of essentially software where although there is this sort of clear desire to be able to kind of ship new platforms,\N工作负载的迭代速度几乎等同于软件，尽管人们迫切希望能够快速推出新平台，
+Dialogue: 0,0:17:43.70,0:17:45.51,Sub,,0,0,0,,you know, aggressively faster.\N你知道，快得惊人。
+Dialogue: 0,0:17:45.56,0:17:48.64,Sub,,0,0,0,,I think there are also some sort of fundamental breaks on this.\N我认为这里也存在一些根本性的断裂。
+Dialogue: 0,0:17:48.69,0:17:54.79,Sub,,0,0,0,,So So at Fractile, you know, we're extremely excited about being AI forward and how we do chip design.\N所以，在 Fractile，我们非常兴奋能以 AI 为导向来开展芯片设计。
+Dialogue: 0,0:17:54.84,0:18:00.03,Sub,,0,0,0,,I think we've seen this ability to own the entire end-to-end gamut of the\N我认为我们已经看到了掌控端到端全流程的能力
+Dialogue: 0,0:18:00.08,0:18:05.37,Sub,,0,0,0,,problem as really enabling a kind of fundamental rethink of how we do things.\N问题在于真正推动我们对做事方式的根本性重新思考。
+Dialogue: 0,0:18:05.42,0:18:09.07,Sub,,0,0,0,,You know, if you think about classic CS law is Amdahl's law, right?\N你知道吗，如果想想经典的计算机科学定律，就是阿姆达尔定律，对吧？
+Dialogue: 0,0:18:09.12,0:18:13.48,Sub,,0,0,0,,Like everything I can parallelize becomes very very fast and the part that I can't parallelize doesn't.\N就像我能并行化的部分变得非常非常快，而无法并行化的部分则不会。
+Dialogue: 0,0:18:13.53,0:18:21.91,Sub,,0,0,0,,And I think it's similar when you're in a like long chain of organizations that you know,\N我觉得当你身处一个长长的组织链条中时，情况也类似。
+Dialogue: 0,0:18:21.96,0:18:31.44,Sub,,0,0,0,,there isn't necessarily an overwhelming need to or return on radically changing your processes as a front-end\N前端并不一定需要或追求彻底改变流程所带来的巨大回报。
+Dialogue: 0,0:18:31.49,0:18:38.88,Sub,,0,0,0,,focused chip design startup adopting AI in aggressive ways to shorten your timelines from being you know,\N专注芯片设计的初创公司正以激进的方式采用人工智能，以缩短您的项目周期，您知道的。
+Dialogue: 0,0:18:38.93,0:18:43.31,Sub,,0,0,0,,maybe 12 months of front-end design work to a tiny fraction of that.\N前端设计工作可能只需不到原来十分之一的时间，大约12个月。
+Dialogue: 0,0:18:43.36,0:18:49.35,Sub,,0,0,0,,If there's then going to be kind of the conventional bottlenecks and the conventional pace on the next piece.\N那么接下来就会出现传统的瓶颈和传统的发展速度。
+Dialogue: 0,0:18:49.40,0:18:52.92,Sub,,0,0,0,,And I think that's sort of you know, at some extent there will always be those bottlenecks.\N我认为在某种程度上，总会有这些瓶颈存在。
+Dialogue: 0,0:18:52.97,0:18:57.77,Sub,,0,0,0,,You know, we all have the same kind of fab cycle times with our foundry partners.\N你知道，我们和代工厂合作伙伴的晶圆厂周期都是一样的。
+Dialogue: 0,0:18:57.82,0:19:05.10,Sub,,0,0,0,,So So from the moment you send the chip to them to getting it back is you know, three to five months even in a kind of super hot lot scenario.\N从你把芯片寄出去到拿回来，大概需要三到五个月，即使在非常紧急的情况下也是如此。
+Dialogue: 0,0:19:05.15,0:19:08.68,Sub,,0,0,0,,And so these are the kind of innate latencies, I guess in the industry.\N所以这些就是业内所谓的固有延迟。
+Dialogue: 0,0:19:08.73,0:19:16.66,Sub,,0,0,0,,And then when you get that chip back, I think it is vital to look at the the way that these chips actually become financializable,\N然后当你拿到这块芯片后，我认为至关重要的是要关注这些芯片如何真正实现金融化。
+Dialogue: 0,0:19:16.71,0:19:19.04,Sub,,0,0,0,,which is that they do have a kind of payoff period.\N也就是说，它们确实存在一个回报周期。
+Dialogue: 0,0:19:19.10,0:19:28.83,Sub,,0,0,0,,You have to have really a kind of 3 to 5 year amortization window for that chip to make it a sensible financial decision.\N这块芯片必须有三到五年的摊销周期，才能让这笔投资在财务上说得通。
+Dialogue: 0,0:19:28.88,0:19:34.62,Sub,,0,0,0,,Um and so there's these sort of two things that are in tension in which I I guess I believe two slightly conflicting things at the same time.\N嗯，我觉得有两个相互矛盾的方面同时存在，我某种程度上同时相信这两点。
+Dialogue: 0,0:19:34.67,0:19:42.34,Sub,,0,0,0,,One is there is a huge value in being able to take the overall chip design cycle and compress that and compress that.\N一个巨大的价值在于，能够将整体芯片设计周期压缩再压缩。
+Dialogue: 0,0:19:42.39,0:19:44.40,Sub,,0,0,0,,Uh there is also, I think,\N呃，我认为还有
+Dialogue: 0,0:19:44.46,0:19:51.99,Sub,,0,0,0,,what we don't lose is the need to place really thoughtful and subtle bets architecturally because\N我们不会失去的是，要在架构上做出真正深思熟虑且精妙的押注。
+Dialogue: 0,0:19:52.04,0:19:57.37,Sub,,0,0,0,,the chip you actually end up making does still need to have a 3 year plus,\N你最终制造出的芯片仍然需要具备三年以上的生命周期，
+Dialogue: 0,0:19:57.42,0:19:59.30,Sub,,0,0,0,,you know, useful lifespan.\N你知道，使用寿命。
+Dialogue: 0,0:19:59.35,0:20:02.45,Sub,,0,0,0,,Um and so I think for for me, you know,\N嗯，所以对我来说，你知道，
+Dialogue: 0,0:20:02.50,0:20:10.10,Sub,,0,0,0,,what it means to be able to over time compress that kind of chip design cycle is essentially that you get to have more shots on goal.\N随着时间推移，能够压缩这种芯片设计周期，本质上意味着你能在目标上获得更多的尝试机会。
+Dialogue: 0,0:20:10.15,0:20:15.63,Sub,,0,0,0,,You want to be forever ready to take a given flagship platform and say, right, that's it.\N你得时刻准备好，一旦有旗舰平台出现，就能立刻说：就是它了。
+Dialogue: 0,0:20:15.68,0:20:18.69,Sub,,0,0,0,,That is actually the flagship and this is the one we're going to ramp.\N实际上这是旗舰型号，而这个是我们将要扩产的型号。
+Dialogue: 0,0:20:18.74,0:20:21.53,Sub,,0,0,0,,But then it's a, you know, 12 month, 18 month volume ramp.\N但随后就是12个月到18个月的出货量爬坡。
+Dialogue: 0,0:20:21.58,0:20:23.40,Sub,,0,0,0,,And you're expecting it to have longevity.\N而且你希望它能持久耐用。
+Dialogue: 0,0:20:23.44,0:20:27.12,Sub,,0,0,0,,You're expecting it to actually continue to drive value to your customers.\N你希望它真的能持续为客户创造价值。
+Dialogue: 0,0:20:27.17,0:20:31.99,Sub,,0,0,0,,And so I think that the the sort of subtlety here is, you know,\N所以我认为这里的微妙之处在于，你知道，
+Dialogue: 0,0:20:32.04,0:20:38.23,Sub,,0,0,0,,I'm not a believer in the idea that we will ultimately get to a place where we are shipping a fundamentally new chip,\N我不相信我们最终会达到一种状态，即推出一款根本性的全新芯片。
+Dialogue: 0,0:20:38.28,0:20:41.11,Sub,,0,0,0,,uh you know, every few weeks just because we've shortened that time.\N你知道，每隔几周我们都会这么做，因为这段时间已经缩短了。
+Dialogue: 0,0:20:41.16,0:20:43.40,Sub,,0,0,0,,Because I think this is a this is a physical world.\N因为我认为这是一个物理世界。
+Dialogue: 0,0:20:43.45,0:20:47.30,Sub,,0,0,0,,There is a certain amount of constraint on, you know, data center power.\N数据中心的电力供应有一定限制。
+Dialogue: 0,0:20:47.35,0:20:50.06,Sub,,0,0,0,,There are latencies to installing these things.\N安装这些设备存在延迟。
+Dialogue: 0,0:20:50.10,0:20:52.95,Sub,,0,0,0,,And you need to finance the actual underlying silicon.\N你还需要为实际的底层硅片提供资金。
+Dialogue: 0,0:20:53.00,0:20:55.03,Sub,,0,0,0,,So it needs to have that payoff period.\N因此，它需要有回报周期。
+Dialogue: 0,0:20:55.08,0:21:00.21,Sub,,0,0,0,,But I think what you can get to is a world where the shorter you can make that latency,\N但我认为，你所能达到的是一个延迟越短越好的世界，
+Dialogue: 0,0:21:00.26,0:21:09.51,Sub,,0,0,0,,that gap between an observation and realizing that bet in volume, that is where there's an, you know, an enormous amount of value to be captured.\N从观察到实际大规模执行之间的这段差距，正是蕴藏着巨大价值的地方。
+Dialogue: 0,0:21:09.56,0:21:12.33,Sub,,0,0,0,,Um and I think it's also an area where, you know,\N嗯，我觉得这同时也是个领域，你知道的，
+Dialogue: 0,0:21:12.38,0:21:18.47,Sub,,0,0,0,,Fractile is a It is only because you the decisions that you make about what to ramp are the correct ones.\N弗拉克蒂尔是，只有因为你们在决定如何扩展时所作的选择是正确的，这才成立。
+Dialogue: 0,0:21:18.52,0:21:18.97,Sub,,0,0,0,,That's right.\N没错。
+Dialogue: 0,0:21:19.02,0:21:24.43,Sub,,0,0,0,,I think you you know, you want to be and maybe you get to have more irons in the fire as well.\N我觉得你明白的，你想要成为那样的人，也许你还能同时兼顾更多事情。
+Dialogue: 0,0:21:24.48,0:21:34.67,Sub,,0,0,0,,So, you know, one of the things that I think is so exciting about AI capability rising is um as we do become more productive in doing things,\N所以，我觉得人工智能能力不断提升最令人兴奋的一点是，随着我们在做事上变得越来越高效，
+Dialogue: 0,0:21:34.72,0:21:38.81,Sub,,0,0,0,,uh you know, there's obviously these kind of two responses, you know, generally across the economy.\N嗯，你知道的，经济领域显然存在这两种反应。
+Dialogue: 0,0:21:38.86,0:21:40.61,Sub,,0,0,0,,One is oh no, we're not going to have as much to do.\N一个是天啊，我们能做的事要变少了。
+Dialogue: 0,0:21:40.66,0:21:42.49,Sub,,0,0,0,,We may you know, maybe there's jobs lost.\N我们或许应该知道，也许会有人失业。
+Dialogue: 0,0:21:42.54,0:21:46.06,Sub,,0,0,0,,The other is uh we get to do more things.\N另一个是，我们能做更多事情。
+Dialogue: 0,0:21:46.11,0:21:51.67,Sub,,0,0,0,,Um and I think, you know, standing here from from Fractile, you know, right now we're trying to build a single chip.\N嗯，我觉得，从 Fractile 这里站在这里，我们现在正努力打造一颗单芯片。
+Dialogue: 0,0:21:51.72,0:21:56.63,Sub,,0,0,0,,We know that we're up against competitors that have uh you know, if you crack open an Nvidia system,\N我们知道，我们面对的竞争对手，如果你拆开一台英伟达的系统，
+Dialogue: 0,0:21:56.68,0:22:04.75,Sub,,0,0,0,,it has anywhere between kind of six and nine custom chips all built by Nvidia to come together to build something that is really, really potent.\N它集成了六到九颗由英伟达定制的芯片，协同工作，打造出极为强大的系统。
+Dialogue: 0,0:22:04.80,0:22:06.41,Sub,,0,0,0,,Um so, there's already a gap there.\N所以，那里已经存在差距了。
+Dialogue: 0,0:22:06.46,0:22:12.67,Sub,,0,0,0,,You know, it'd be great to be productive enough that we could start to build our own responses in that same kind of way.\N你知道吗，如果能高效到足以用同样的方式自主构建回应，那就太棒了。
+Dialogue: 0,0:22:12.72,0:22:13.17,Sub,,0,0,0,,Um and so,\N嗯，所以啊，
+Dialogue: 0,0:22:13.22,0:22:18.20,Sub,,0,0,0,,I think this idea of being able to have at any given moment a kind of rolling\N我认为，能够在任何时刻拥有一种持续滚动的思路，这个想法很有意义。
+Dialogue: 0,0:22:18.25,0:22:24.23,Sub,,0,0,0,,frontier of bets that you hope are deeply aligned and which you're ready to trigger the ramp of,\N你所押注的前沿领域，希望它们高度契合，并且你已准备好启动其加速进程。
+Dialogue: 0,0:22:24.28,0:22:28.07,Sub,,0,0,0,,this is a huge advantage if you can kind of build that machine and build that engine.\N如果你能打造这台机器和这个引擎，这将是一个巨大的优势。
+Dialogue: 0,0:22:28.12,0:22:34.19,Sub,,0,0,0,,And the six-month gap that that might then perpetually give you against your competition,\N而这种六个月的差距，可能让你永远领先于竞争对手。
+Dialogue: 0,0:22:34.24,0:22:37.21,Sub,,0,0,0,,uh that is the kind of, you know, wedge that allows you to drive in.\N嗯，就是那种能让你把钉子钉进去的楔子。
+Dialogue: 0,0:22:37.26,0:22:38.66,Sub,,0,0,0,,And we see this in in Frontier Lab.\N我们在前沿实验室中看到了这一点。
+Dialogue: 0,0:22:38.71,0:22:38.87,Sub,,0,0,0,,So,\N所以，
+Dialogue: 0,0:22:38.87,0:22:47.03,Sub,,0,0,0,,it's the equivalent of the Frontier model for the chip space is if you can just find a way to structurally carve out a three to six-month advantage,\N这相当于芯片领域的前沿模型，如果你能找到一种方法，结构性地实现三到六个月的优势，
+Dialogue: 0,0:22:47.08,0:22:49.67,Sub,,0,0,0,,uh you will be winning all of those deployments.\N你将会赢得所有这些部署。
+Dialogue: 0,0:22:49.72,0:22:57.04,Sub,,0,0,0,,There's a meme in here somewhere of CEO saying, "Wow, this AI stuff is great and we structured the organization in a way that can consume it.\N这中间有个梗，CEO说：“哇，这AI太棒了，我们已经把组织架构调整好了，能轻松消化它。”
+Dialogue: 0,0:22:57.09,0:22:59.71,Sub,,0,0,0,,Instead of one program, we're going to have six, guys."\N不是只有一个程序，而是六个，各位。
+Dialogue: 0,0:22:59.76,0:23:00.59,Sub,,0,0,0,,And everybody cheers.\N所有人都欢呼起来。
+Dialogue: 0,0:23:00.64,0:23:00.91,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:23:00.91,0:23:02.55,Sub,,0,0,0,,I think there's some truth in that.\N我认为这话有一定道理。
+Dialogue: 0,0:23:02.60,0:23:11.30,Sub,,0,0,0,,What uh I was talking to um one of the top three semi CEOs and he wouldn't let me put this prediction uh you know, actually on air,\N我之前跟一位顶尖半导体公司CEO聊过，他不让我把这预测放上电视播出。
+Dialogue: 0,0:23:11.35,0:23:21.15,Sub,,0,0,0,,but I asked him like how soon until we can have essentially like intent from chief architect into uh fully usable GDSII file and he's like 10 years.\N但我问他，从首席架构师的意图到生成可用的GDSII文件，大概要多久，他说，十年。
+Dialogue: 0,0:23:21.20,0:23:21.53,Sub,,0,0,0,,Yeah.\N嗯。
+Dialogue: 0,0:23:21.56,0:23:23.16,Sub,,0,0,0,,It's not going to happen like now.\N不会像现在这样发生。
+Dialogue: 0,0:23:23.20,0:23:24.78,Sub,,0,0,0,,What what is your view on that?\N你对此怎么看？
+Dialogue: 0,0:23:24.82,0:23:27.63,Sub,,0,0,0,,Or where do you see the impact first in your organization?\N您觉得影响最先体现在组织的哪个方面？
+Dialogue: 0,0:23:27.68,0:23:28.18,Sub,,0,0,0,,You know,\N你知道吗，
+Dialogue: 0,0:23:28.23,0:23:33.68,Sub,,0,0,0,,a a heuristic that has been successful over the past couple of years is to just always\N过去几年行之有效的一种经验法则是始终如一地
+Dialogue: 0,0:23:33.72,0:23:40.01,Sub,,0,0,0,,question your uh your sort of logical assumption and then divide it by four on time scale.\N质疑你那种逻辑假设，然后在时间尺度上将其除以四。
+Dialogue: 0,0:23:40.06,0:23:43.80,Sub,,0,0,0,,So, there is a world in which 10 years seems like a very sensible time frame for that,\N所以，存在一种情况，10年对于这件事来说是一个非常合理的时间框架。
+Dialogue: 0,0:23:43.85,0:23:47.55,Sub,,0,0,0,,but I would divide it by four and I'd probably subtract a bit from that.\N但我可能会把它除以四，再稍微减一点。
+Dialogue: 0,0:23:47.60,0:23:59.01,Sub,,0,0,0,,You know, I think that we will have uh a space where there is a kind of prototyping that goes end-to-end um uh you know, in the next few years.\N你知道，我认为在未来几年里，我们将有一个端到端的原型设计空间。
+Dialogue: 0,0:23:59.06,0:24:02.93,Sub,,0,0,0,,I think one of the things about chip design that is very interesting is there are\N我认为芯片设计中非常有趣的一点是，
+Dialogue: 0,0:24:02.98,0:24:09.49,Sub,,0,0,0,,still these loops in the middle of it that are kind of conventional solutions to NP-hard problems.\N仍然存在其中的一些循环，它们是解决 NP 难问题的传统方法。
+Dialogue: 0,0:24:09.54,0:24:14.39,Sub,,0,0,0,,And so, you have these sort of you know, if you really want to output that GDSII file,\N所以，如果你想真正输出那个 GDSII 文件，
+Dialogue: 0,0:24:14.44,0:24:18.52,Sub,,0,0,0,,today you are still running through a bunch of layout tools that are doing place\N今天你仍在使用一系列布局工具进行操作。
+Dialogue: 0,0:24:18.57,0:24:25.04,Sub,,0,0,0,,and route with conventional kind of uh algorithmic approaches which will run for days on end.\N并采用传统的算法方法进行路径规划，这可能需要连续运行数天。
+Dialogue: 0,0:24:25.09,0:24:25.49,Sub,,0,0,0,,You know,\N你知道吗，
+Dialogue: 0,0:24:25.52,0:24:32.91,Sub,,0,0,0,,I think this is a a really interesting thing that we see and actually to bring it back somewhat to the sort of workloads we're excited about as well.\N我认为这是一件非常有趣的事，实际上也让我们重新关注到我们同样感到兴奋的工作负载上。
+Dialogue: 0,0:24:32.96,0:24:40.88,Sub,,0,0,0,,Um a lot of hard problems in the world I think look a bit like this where there is a lot of thinking that can now be automated.\N我认为世界上很多难题看起来都像这样，现在有很多思考工作可以实现自动化了。
+Dialogue: 0,0:24:40.93,0:24:43.39,Sub,,0,0,0,,There's a lot of cerebral work.\N有很多脑力劳动。
+Dialogue: 0,0:24:43.44,0:24:49.17,Sub,,0,0,0,,Um but then there is also uh you know, this kind of intrinsic latency to something that you do.\N但还有你做事时固有的延迟。
+Dialogue: 0,0:24:49.22,0:24:54.99,Sub,,0,0,0,,Um so, I think we see this in uh you know, AI for guiding uh AI model development today.\N所以我认为，如今我们能看到这一点，比如在人工智能指导人工智能模型开发方面。
+Dialogue: 0,0:24:55.04,0:24:56.99,Sub,,0,0,0,,So, the RSI work.\N所以，RSI 的工作有效。
+Dialogue: 0,0:24:57.04,0:25:01.33,Sub,,0,0,0,,Um you know, yes, we can now have extreme intelligence that is guiding our experiments,\N嗯，你知道吗，现在我们已经有了能指导实验的极端智能，
+Dialogue: 0,0:25:01.38,0:25:05.36,Sub,,0,0,0,,but now we're just experiment bottlenecked, you know, we're compute time bottlenecked.\N但现在我们只是实验受限，你知道的，算力时间成了瓶颈。
+Dialogue: 0,0:25:05.40,0:25:08.93,Sub,,0,0,0,,And so, I think with with chip design, it's a little bit like this.\N所以我认为，芯片设计有点像这样。
+Dialogue: 0,0:25:08.98,0:25:14.35,Sub,,0,0,0,,Maybe to take the kind of, you know, architects intend through the GDSII question,\N也许是为了实现架构师通过GDSII问题所设想的那种意图，
+Dialogue: 0,0:25:14.40,0:25:23.32,Sub,,0,0,0,,it's a little bit like the RSI question in that the things that will prevent us getting there extremely fast is the fact that actually in that flow,\N这有点像相对强弱指标（RSI）的问题，真正阻碍我们快速实现目标的原因在于，实际上在那个流程中，
+Dialogue: 0,0:25:23.37,0:25:29.99,Sub,,0,0,0,,there are a number of things that are genuinely kind of computationally expensive in a more conventional way.\N有一些事情在传统意义上确实计算成本很高。
+Dialogue: 0,0:25:30.04,0:25:35.95,Sub,,0,0,0,,I think what we will generally see for all of these sorts of problems and And they won't be replaced by surrogate models?\N我认为对于这类问题，我们通常会看到它们不会被代理模型所取代。
+Dialogue: 0,0:25:36.00,0:25:39.80,Sub,,0,0,0,,Well, I think you know, there's definitely these sort of simulation models.\N嗯，我想你明白，确实存在这类仿真模型。
+Dialogue: 0,0:25:39.85,0:25:43.71,Sub,,0,0,0,,I think driving approximations, you know,\N我认为驾驶近似值，你知道的，
+Dialogue: 0,0:25:43.76,0:25:49.23,Sub,,0,0,0,,all of the models that we see today for kind of finite element analysis and and sort of thermal estimation and so on.\N我们今天所看到的所有模型，都用于有限元分析、热估算等。
+Dialogue: 0,0:25:49.28,0:25:53.86,Sub,,0,0,0,,I think there is a huge return to that kind of work precisely because of this kind\N我认为这种工作回报巨大，恰恰是因为这一点。
+Dialogue: 0,0:25:53.92,0:25:59.04,Sub,,0,0,0,,of Amdahl's law that is we accelerate the intelligence as we accelerate the period between these experiments,\N阿姆达尔定律的要点在于，我们加速了智能，也加速了这些实验之间的周期。
+Dialogue: 0,0:25:59.09,0:26:00.07,Sub,,0,0,0,,between these trials.\N这些试验之间。
+Dialogue: 0,0:26:00.12,0:26:01.19,Sub,,0,0,0,,They become the bottleneck.\N它们反而成了瓶颈。
+Dialogue: 0,0:26:01.24,0:26:03.67,Sub,,0,0,0,,much more important to accelerate those trials as well.\N更重要的是加速这些试验。
+Dialogue: 0,0:26:03.72,0:26:07.00,Sub,,0,0,0,,And so, you know, we are looking internally at, you know,\N所以，我们正在内部审视一下，你知道的，
+Dialogue: 0,0:26:07.05,0:26:14.03,Sub,,0,0,0,,what is actually what are in the guts of some of those algorithms and is there a crude approximate way that you could do some of this,\N那些算法的核心到底是什么，有没有一种粗略的近似方法可以实现其中一些功能？
+Dialogue: 0,0:26:14.08,0:26:20.58,Sub,,0,0,0,,you know, the I think chip design is not going to change in the final sign-off for quite some time.\N你知道，芯片设计在最终签核阶段，恐怕在相当长一段时间内都不会有太大变化。
+Dialogue: 0,0:26:20.63,0:26:29.90,Sub,,0,0,0,,It's incredibly valuable to have Cadence and Synopsys who've been working with TSMC and the other foundries for decades to build the sort of,\N拥有楷登电子和新思科技这样与台积电及其他晶圆厂合作数十年的公司，其价值难以估量。
+Dialogue: 0,0:26:29.96,0:26:35.52,Sub,,0,0,0,,you know, the final check mark that says this thing is what we call DRC and LVS clean.\N你知道，最后那个表示该设计符合DRC和LVS标准的对勾。
+Dialogue: 0,0:26:35.58,0:26:39.35,Sub,,0,0,0,,It conforms to the rules that that foundry has set.\N它符合该代工厂设定的规则。
+Dialogue: 0,0:26:39.40,0:26:43.34,Sub,,0,0,0,,That is actually where, you know, that sort of work is immensely valuable.\N实际上，那种工作非常有价值。
+Dialogue: 0,0:26:43.39,0:26:49.04,Sub,,0,0,0,,But could you have some kind of fuzzy placement algorithm in the meantime that gets you almost all the way to your final design,\N但在这期间，你能不能先用某种模糊定位算法，先接近最终设计？
+Dialogue: 0,0:26:49.09,0:26:56.95,Sub,,0,0,0,,helps you iterate faster, you know, I think that is exactly where people should be should be doing more work because otherwise that is the bottleneck.\N帮助你更快地迭代，我认为这正是人们应该多投入精力的地方，否则就会成为瓶颈。
+Dialogue: 0,0:26:57.00,0:27:05.10,Sub,,0,0,0,,Um the other part there and I think this is true of, you know, RSI for AI experiments as well is as we do become, you know,\N嗯，另一部分是，我认为这一点同样适用于AI实验，随着我们不断深入，
+Dialogue: 0,0:27:05.15,0:27:08.96,Sub,,0,0,0,,as our intelligence levels on the the thinking that then drives that experiment\N随着我们智能水平的提升，驱动该实验的思维方式也随之变化
+Dialogue: 0,0:27:09.01,0:27:13.40,Sub,,0,0,0,,gets higher and higher um and as that experiment therefore becomes the bottleneck,\N越来越高，因此这个实验就变成了瓶颈。
+Dialogue: 0,0:27:13.45,0:27:17.38,Sub,,0,0,0,,I think we do more thinking and this is just generally Fractiles workload bets.\N我认为我们做了更多思考，这本质上就是 Fractile 的工作负载投资。
+Dialogue: 0,0:27:17.43,0:27:24.37,Sub,,0,0,0,,It's the reason we're so excited about hard problems and it's kind of the reason that we see Fractile as the chip that\N这就是我们对难题充满热情的原因，也是我们之所以认为 Fractile 是那枚芯片的真正原因。
+Dialogue: 0,0:27:24.42,0:27:34.19,Sub,,0,0,0,,takes us toward accelerating the solution to hard problems in general is I think it becomes absolutely It's like almost uh you know,\N这让我们朝着加速解决普遍难题的方向迈进，我认为这变得至关重要，简直就像是……你知道，
+Dialogue: 0,0:27:34.24,0:27:39.99,Sub,,0,0,0,,a moral compunction to think harder before every single experiment that you fire off.\N在每次启动实验前，都要有道德上的自觉，认真思考。
+Dialogue: 0,0:27:40.04,0:27:48.16,Sub,,0,0,0,,Um I think uh it was maybe Baron Milledge on Dwarkesh recently who said, you know, um that perhaps you could think for a hundred years, you know,\N呃，我想大概是最近在杜瓦克什那档节目里，巴伦·米勒奇说过，你知道，也许你可以思考一百年，你知道，
+Dialogue: 0,0:27:48.21,0:27:54.64,Sub,,0,0,0,,before you fire off an experiment and then think for another hundred years of human equivalent with these models uh about the results\N在你启动一个实验之前，先想想这些模型的结果，可能需要再花上一百年的人类等效时间来思考。
+Dialogue: 0,0:27:54.69,0:27:59.97,Sub,,0,0,0,,of that AI experiment because the experiment in the middle is pretty expensive and takes takes a certain amount of wall clock time.\N因为中间的AI实验成本很高，且需要一定的时间。
+Dialogue: 0,0:28:00.02,0:28:03.69,Sub,,0,0,0,,And so I think you get there also with things like chip design where\N因此我认为在芯片设计等领域也是如此。
+Dialogue: 0,0:28:03.74,0:28:09.09,Sub,,0,0,0,,there are these kind of fundamental wall clock time bottlenecks for the more conventional algorithms.\N对于那些较为传统的算法而言，存在着一些基本的时钟时间瓶颈。
+Dialogue: 0,0:28:09.14,0:28:16.23,Sub,,0,0,0,,We're going to be generating a lot of reasoning tokens um before we go and place a given circuit.\N在放置特定电路之前，我们将生成大量用于推理的词元。
+Dialogue: 0,0:28:16.28,0:28:25.77,Sub,,0,0,0,,You are making workload bets and then collaborating closely with design partners uh on the model architectural,\N你们正在押注工作负载，然后与设计伙伴紧密合作，共同推进模型架构。
+Dialogue: 0,0:28:25.82,0:28:29.17,Sub,,0,0,0,,you know, shifts hopefully a little ahead so you can actually do some planning.\N你知道，希望这些变化能提前一点，这样你也能提前做一些规划。
+Dialogue: 0,0:28:29.22,0:28:30.15,Sub,,0,0,0,,What are you seeing?\N你看到了什么？
+Dialogue: 0,0:28:30.20,0:28:34.30,Sub,,0,0,0,,The biggest thing that we're doing, of course, is this kind of speed chasing, right?\N我们目前最重要的事，当然就是这种速度竞赛，对吧？
+Dialogue: 0,0:28:34.35,0:28:38.83,Sub,,0,0,0,,Maximizing memory bandwidth uh in order to be able to run these models faster.\N最大化内存带宽，以加快这些模型的运行速度。
+Dialogue: 0,0:28:38.88,0:28:46.31,Sub,,0,0,0,,Um and one of the dualities I think you have to span as a chip company is to build something that is both exceptionally good at the kind\N嗯，我认为作为一家芯片公司，你必须跨越的一个矛盾是，\N打造一款在性能上极为出色的同时，又具备高度通用性的产品。
+Dialogue: 0,0:28:46.36,0:28:49.72,Sub,,0,0,0,,of gamut of workloads that are coming down the pipe under this idea of\N在这一理念下，即将来临的工作负载范围十分广泛。
+Dialogue: 0,0:28:49.77,0:28:56.03,Sub,,0,0,0,,the kind of hardware lottery where these will be trained on HBM-based GPUs or XPUs.\N这种硬件抽奖，训练将基于配备高带宽内存的GPU或XPU进行。
+Dialogue: 0,0:28:56.08,0:28:58.73,Sub,,0,0,0,,Um and so it's great that this is then the chip that's exceptional at\N嗯，所以这款芯片表现卓越，非常出色。
+Dialogue: 0,0:28:58.78,0:29:03.87,Sub,,0,0,0,,taking kind of today's ultra-aggressive MOE transformers and running them much faster and more efficiently.\N将如今极为激进的混合专家（MoE）Transformer 模型运行得更快、更高效。
+Dialogue: 0,0:29:03.92,0:29:10.16,Sub,,0,0,0,,Um but I think what's exciting about building chips with kind of fundamentally new capabilities is you then also get to explore\N但我觉得用全新的能力来制造芯片最令人兴奋的是，你还能借此探索更多可能性。
+Dialogue: 0,0:29:10.20,0:29:18.20,Sub,,0,0,0,,whether there are kind of gravitational pulls that you yourself get to pull the new model landscape in because of those properties.\N是否存在某些引力，让你自身能够凭借这些特性，牵引新模型格局的发展方向？
+Dialogue: 0,0:29:18.25,0:29:24.73,Sub,,0,0,0,,And so for Fractile, you know, this idea of having like 25 times more bandwidth per chip than a than an HBM-based chip,\N所以对 Fractile 来说，你知道，\N每芯片带宽比基于 HBM 的芯片高出 25 倍，这个想法很关键。
+Dialogue: 0,0:29:24.78,0:29:30.34,Sub,,0,0,0,,we get to explore for instance internally these kind of ideas of like scaling laws for bandwidth basically.\N我们可以内部探索这类关于带宽缩放定律的想法。
+Dialogue: 0,0:29:30.39,0:29:34.32,Sub,,0,0,0,,You know, the scaling laws traditionally we think of them as like flop scaling laws.\N你知道，传统的缩放定律我们通常理解为浮点运算缩放定律。
+Dialogue: 0,0:29:34.37,0:29:40.71,Sub,,0,0,0,,You know, we uh we get better and better performance the more flops we pour into these models at train time and and test time.\N你知道，我们在训练和测试时，往这些模型里投入的浮点运算越多，性能就变得越来越好。
+Dialogue: 0,0:29:40.76,0:29:47.57,Sub,,0,0,0,,Um and if you look at just like the known landscape of ideas today, we already see some scaling laws for bandwidth.\N嗯，如果你看看当今已知的创意格局，我们已经能看到带宽的一些缩放定律。
+Dialogue: 0,0:29:47.62,0:29:50.49,Sub,,0,0,0,,So one is uh these mixture of expert models.\N一个是这些专家混合模型。
+Dialogue: 0,0:29:50.54,0:29:56.08,Sub,,0,0,0,,It's pretty well known that actually ideally we would make them sparser and sparser and sparser.\N众所周知，实际上我们理想中是让它们越来越稀疏。
+Dialogue: 0,0:29:56.13,0:30:07.87,Sub,,0,0,0,,So for like iso-intelligence, you will save a ton of flops if you go from being like 1 in 16 sparse on your MOE to 1 in 128, 1 in 256.\N比如在稀疏性从1比16提升到1比128或1比256时，你将节省大量浮点运算。
+Dialogue: 0,0:30:07.92,0:30:09.46,Sub,,0,0,0,,Um but one of the challenges,\N但其中一个挑战是，
+Dialogue: 0,0:30:09.52,0:30:12.08,Sub,,0,0,0,,one of the headwinds to doing that is actually that it becomes\N其中一个阻碍因素实际上是，这会变得
+Dialogue: 0,0:30:12.13,0:30:17.83,Sub,,0,0,0,,incredibly prohibitive on today's HBM-based GPUs or XPUs to serve those models efficiently.\N在当前基于 HBM 的 GPU 或 XPU 上，要高效运行这些模型，成本高得惊人。
+Dialogue: 0,0:30:17.88,0:30:20.61,Sub,,0,0,0,,You end up often bandwidth bottlenecks.\N你往往会遇到带宽瓶颈。
+Dialogue: 0,0:30:20.66,0:30:26.23,Sub,,0,0,0,,You end up uh serving at really, really low uh MFU, low flops utilization.\N最终你只能在极低的 MFU 和极低的浮点运算利用率下运行。
+Dialogue: 0,0:30:26.28,0:30:34.73,Sub,,0,0,0,,Um and so there are these areas where even as you build for today's world, you get to kind of look at where you can unlock greater capability.\N而且在构建当今世界的过程中，你还能看到哪些地方可以释放出更大的潜力。
+Dialogue: 0,0:30:34.78,0:30:37.69,Sub,,0,0,0,,And you know, with LLMs today, it's very similar actually with attention.\N而且你知道，现在的大型语言模型，实际上和注意力机制非常相似。
+Dialogue: 0,0:30:37.74,0:30:40.90,Sub,,0,0,0,,There are forms of attention that are less bandwidth hungry.\N有些注意力机制对带宽的需求更低。
+Dialogue: 0,0:30:40.95,0:30:45.29,Sub,,0,0,0,,They tend to be more flops hungry for a certain level of intelligence.\N它们往往对某一水平的智能更渴求。
+Dialogue: 0,0:30:45.34,0:30:50.42,Sub,,0,0,0,,And so, one of the things I think we're excited about is as we elevate this other quality,\N因此，我们感到兴奋的一点是，当我们提升这一其他品质时，
+Dialogue: 0,0:30:50.47,0:30:54.45,Sub,,0,0,0,,this property of memory bandwidth, which hasn't really been scaled so much on chips recently.\N这种内存带宽的特性，最近在芯片上并未得到太大提升。
+Dialogue: 0,0:30:54.50,0:30:58.43,Sub,,0,0,0,,We've scaled flops like a millionfold in the last 20 years.\N过去20年里，我们的浮点运算量实现了百万倍的提升。
+Dialogue: 0,0:30:58.48,0:31:02.15,Sub,,0,0,0,,Memory bandwidth has gone up about 40x in the same time frame.\N在同一时间段内，内存带宽提升了约40倍。
+Dialogue: 0,0:31:02.20,0:31:05.82,Sub,,0,0,0,,So, as you scale that frontier, you get to conserve more of the other thing.\N因此，当你扩展这一前沿时，就能更好地保留另一样东西。
+Dialogue: 0,0:31:05.87,0:31:11.39,Sub,,0,0,0,,We get to reduce the number of flops that we're using on these models to get to a certain level of intelligence.\N我们可以减少这些模型达到特定智能水平所需的浮点运算次数。
+Dialogue: 0,0:31:11.44,0:31:16.67,Sub,,0,0,0,,And so, that's a kind of really a multiplying factor on global throughput for these models.\N因此，这相当于这些模型在全球吞吐量上的一个乘数效应。
+Dialogue: 0,0:31:16.72,0:31:21.31,Sub,,0,0,0,,I'll resist asking you if that changes people's ideas about how they should train for now.\N我忍住不问你，这是否改变了人们对当前训练方式的看法。
+Dialogue: 0,0:31:21.36,0:31:24.50,Sub,,0,0,0,,One last question for you just on on market structure here.\N最后再问你一个问题，关于这里的市场结构。
+Dialogue: 0,0:31:24.54,0:31:27.67,Sub,,0,0,0,,It's very unclear to me, you know,\N这对我来说非常不清楚，你知道的。
+Dialogue: 0,0:31:27.72,0:31:35.34,Sub,,0,0,0,,5 years from now what a large AI player or a hyperscaler buys in terms\N五年后，一个大型 AI 企业或超大规模云厂商在算力方面会购买什么
+Dialogue: 0,0:31:35.39,0:31:40.55,Sub,,0,0,0,,of or what what chips they consume between the Nvidia and AMD's of the world,\N以及它们所使用的芯片，是英伟达还是 AMD 的。
+Dialogue: 0,0:31:40.60,0:31:46.76,Sub,,0,0,0,,the new accelerator class, and you know, four at least four of these players have their own internal efforts.\N新的加速器类别，而且你知道，至少有四家玩家已经开展了内部研发。
+Dialogue: 0,0:31:46.81,0:31:48.47,Sub,,0,0,0,,Like, how do you make sense of this?\N这到底该怎么理解呢？
+Dialogue: 0,0:31:48.52,0:31:52.98,Sub,,0,0,0,,So, I think that today we see uh you know,\N所以，我认为今天我们可以看到，你知道，
+Dialogue: 0,0:31:53.03,0:32:01.15,Sub,,0,0,0,,behavior where really everybody who is deploying at scale is kind of trying to deploy as many separate platforms as they can.\N一种行为，即几乎所有大规模部署的公司都在尽量部署尽可能多的独立平台。
+Dialogue: 0,0:32:01.20,0:32:05.47,Sub,,0,0,0,,I think one thing that will remain the case is that there will be a real need\N我认为有一件事会一直不变，那就是真正的需求将持续存在
+Dialogue: 0,0:32:05.52,0:32:12.25,Sub,,0,0,0,,for kind of a diversity of supply as something like compute becomes so existential to these players.\N随着计算能力对这些玩家变得如此至关重要，供应链的多样性也显得尤为重要。
+Dialogue: 0,0:32:12.30,0:32:18.90,Sub,,0,0,0,,There's a bit of a joke today that the sort of first party efforts, their primary purpose is to reduce the price that people pay Nvidia.\N如今有个玩笑说，这些第一方努力的主要目的，就是降低人们购买英伟达产品所需支付的价格。
+Dialogue: 0,0:32:18.95,0:32:24.09,Sub,,0,0,0,,And there may be some truth to that as well because those efforts are kind of architecturally quite similar, right?\N这可能也有一定道理，因为这些努力在架构上非常相似，对吧？
+Dialogue: 0,0:32:24.14,0:32:29.59,Sub,,0,0,0,,So, I'd say it's a bet that is not on enabling a fundamental capability that those other chips cannot enable.\N所以，我认为这是一场赌注，赌的并非是那些其他芯片无法实现的根本性能力。
+Dialogue: 0,0:32:29.64,0:32:32.74,Sub,,0,0,0,,And so, there I think it is this kind of gamesmanship of, you know,\N所以我认为，这本质上是一种心照不宣的博弈策略，你知道的。
+Dialogue: 0,0:32:32.79,0:32:39.46,Sub,,0,0,0,,can we build some of this over here or can I buy something from AMD so that maybe I then get a better price from Nvidia or and so on.\N我们能不能在这里搞点什么，或者我从 AMD 买点东西，\N这样或许能从英伟达那儿拿到更好的价格，诸如此类。
+Dialogue: 0,0:32:39.50,0:32:43.75,Sub,,0,0,0,,Um and it and it play also for kind of aggregate capacity and a bit of control.\N而且它也影响整体算力容量，以及一定程度的控制。
+Dialogue: 0,0:32:43.80,0:32:49.74,Sub,,0,0,0,,I think as you then see this move into chips that actually give new capabilities, you know, that's the place where, you know,\N我觉得当你们看到这种技术逐渐应用到真正带来新能力的芯片上时，那就是真正值得关注的地方，你知道的。
+Dialogue: 0,0:32:49.79,0:32:55.59,Sub,,0,0,0,,I suddenly see for what we're doing a real need for everybody that wants to deploy AI at the frontier,\N我突然意识到，凡是想在前沿部署人工智能的人，都真正需要这个。
+Dialogue: 0,0:32:55.64,0:33:00.20,Sub,,0,0,0,,they have to have some solution to running these models orders of magnitude faster.\N他们必须找到某种解决方案，让这些模型的运行速度提升数个数量级。
+Dialogue: 0,0:33:00.25,0:33:08.43,Sub,,0,0,0,,Um you know, for the frontier labs, there's this window of kind of premium capability, premium intelligence that is their entire raison d'être.\N你知道，对前沿实验室而言，它们存在就是为了提供这种高端能力、高端智能，这正是它们的核心使命。
+Dialogue: 0,0:33:08.48,0:33:11.79,Sub,,0,0,0,,You know, otherwise we'd all be using Kimmy models all the time.\N你知道，否则我们早就一直在用金米模型了。
+Dialogue: 0,0:33:11.84,0:33:15.67,Sub,,0,0,0,,Um and so as you do have this pressure from behind from open source, you know,\N而且你确实面临着来自开源的来自背后的压力，你知道的。
+Dialogue: 0,0:33:15.72,0:33:22.66,Sub,,0,0,0,,it does become clearly even more important for folks who want to deploy at the frontier to have every aspect of what that means.\N对于希望在前沿领域部署的人员来说，理解其方方面面变得尤为重要。
+Dialogue: 0,0:33:22.71,0:33:29.06,Sub,,0,0,0,,So, the best model weights, but also then the fastest deployment, so you can do the most reasoning in the in the shortest amount of time.\N因此，最佳的模型权重，再加上最快的部署速度，让你能在最短时间内完成最多的推理。
+Dialogue: 0,0:33:29.11,0:33:29.52,Sub,,0,0,0,,And so,\N因此，
+Dialogue: 0,0:33:29.57,0:33:35.16,Sub,,0,0,0,,I think this kind of premium end of of of the chip space where you're optimizing for\N我认为这种高端芯片领域，正是追求极致优化的地方。
+Dialogue: 0,0:33:35.21,0:33:39.86,Sub,,0,0,0,,speed over everything else becomes a kind of very important part of this uh part of this world.\N速度比其他任何东西都重要，成了这个世界中一个非常关键的部分。
+Dialogue: 0,0:33:39.91,0:33:46.80,Sub,,0,0,0,,I think one thing that is notable about, you know, the dynamic between a chip vendor and a frontier lab,\N我觉得芯片供应商与前沿实验室之间的一个显著特点在于，
+Dialogue: 0,0:33:46.85,0:33:51.86,Sub,,0,0,0,,you know, if you look at Fractile, we try to be as aligned as possible with the needs of the frontier.\N你知道，如果你看看 Fractile，我们会尽可能地与前沿需求保持一致。
+Dialogue: 0,0:33:51.91,0:33:54.39,Sub,,0,0,0,,We try to look a bit like some of those teams as well.\N我们也在努力让自己看起来像那些团队一样。
+Dialogue: 0,0:33:54.44,0:33:57.83,Sub,,0,0,0,,We have people that really think deeply about these workloads and so on.\N我们有真正深入思考这些工作负载等问题的人。
+Dialogue: 0,0:33:57.88,0:34:02.71,Sub,,0,0,0,,So, one of the cases that I think we sometimes need to make is explaining why we believe that over,\N因此，我认为我们有时需要说明的是，为何相信在……之上
+Dialogue: 0,0:34:02.76,0:34:09.00,Sub,,0,0,0,,you know, multiple decades the world sustains some kind of frontier third-party chip players.\N你知道，过去几十年，全球一直维持着一些前沿的第三方芯片厂商。
+Dialogue: 0,0:34:09.05,0:34:12.71,Sub,,0,0,0,,You know, why does this not just roll up into these into these labs?\N你知道吗，为什么这些不会直接整合进这些实验室呢？
+Dialogue: 0,0:34:12.76,0:34:20.07,Sub,,0,0,0,,Um and I think that comes down to the kind of asymmetric game that all of these labs and frontier players have to play,\N嗯，我认为这归结于所有这些实验室和前沿玩家必须面对的不对称博弈。
+Dialogue: 0,0:34:20.12,0:34:26.60,Sub,,0,0,0,,uh where they're exposed to an enormous risk if they go all in on a hardware bet.\N啊，如果他们把全部赌注都押在硬件上，就会面临巨大的风险。
+Dialogue: 0,0:34:26.65,0:34:29.82,Sub,,0,0,0,,Um Suppose I'm, you know, I'm lab one,\N呃，假设我是实验室一号，
+Dialogue: 0,0:34:29.87,0:34:36.88,Sub,,0,0,0,,uh and I've gone all in on some proprietary silicon and then lab two discovers some new computational breakthrough that delivers\N嗯，我已经全力投入了自家的专有硅芯片，结果实验室二又发现了一项新的计算突破，带来了显著提升
+Dialogue: 0,0:34:36.93,0:34:43.64,Sub,,0,0,0,,far better computational efficiencies for the same level of intelligence but it only works on the chip that they've decided to deploy.\N在保持同等智能水平的情况下，计算效率远超以往，但仅限于他们决定部署的芯片上才能实现。
+Dialogue: 0,0:34:43.69,0:34:51.11,Sub,,0,0,0,,I could die in the nine months before I get to deploy enough of that chip that I've also now get into that kind of 5x in computational efficiency.\N我可能在部署足够多的这款芯片之前，也就是九个月内就去世了，而那时我才能实现计算效率提升五倍的目标。
+Dialogue: 0,0:34:51.16,0:34:58.77,Sub,,0,0,0,,And so there is a really urgent need for these chips to actually deploy the same these companies to deploy the same platforms as one another.\N因此，这些芯片亟需被部署，以便这些公司能够共同使用相同的平台。
+Dialogue: 0,0:34:58.82,0:35:03.55,Sub,,0,0,0,,They're playing different games so right they're trying to now compete you know in the model layer.\N他们玩的是不同的游戏，现在正试图在模型层面展开竞争。
+Dialogue: 0,0:35:03.60,0:35:10.44,Sub,,0,0,0,,I think having deeply differentiated bets and going all in on those differentiated bets at the chip layer\N我认为在芯片层面下注那些深度差异化的方向，并全力押注这些差异化方向至关重要。
+Dialogue: 0,0:35:10.49,0:35:14.71,Sub,,0,0,0,,is sort of an irrational and a very dangerous move for anybody that is playing at the frontier.\N这无疑是一种非理性的、对任何处于前沿领域的人来说都极其危险的举动。
+Dialogue: 0,0:35:14.76,0:35:16.10,Sub,,0,0,0,,Well, I think that's a great place to end.\N嗯，我觉得这里是个很好的结束点。
+Dialogue: 0,0:35:16.15,0:35:17.15,Sub,,0,0,0,,Thanks so much Walter.\N非常感谢你，沃尔特。
+Dialogue: 0,0:35:17.20,0:35:20.95,Sub,,0,0,0,,Thanks very much Sarah.\N非常感谢你，莎拉。
+Dialogue: 0,0:35:21.00,0:35:23.47,Sub,,0,0,0,,Find us on Twitter at No Priors Pod.\N在推特上关注 No Priors Pod。
+Dialogue: 0,0:35:23.52,0:35:26.35,Sub,,0,0,0,,Subscribe to our YouTube channel if you want to see our faces.\N如果你想看到我们的脸，就订阅我们的YouTube频道吧。
+Dialogue: 0,0:35:26.40,0:35:29.91,Sub,,0,0,0,,Follow the show on Apple Podcasts, Spotify, or wherever you listen.\N在 Apple 播客、Spotify 或您常听的其他平台关注本节目。
+Dialogue: 0,0:35:29.96,0:35:31.97,Sub,,0,0,0,,That way you get a new episode every week.\N这样你每周都能看到新一集。
+Dialogue: 0,0:35:32.02,0:35:38.36,Sub,,0,0,0,,And sign up for emails or find transcripts for every episode at no-priors.com.\N并访问 no-priors.com 注册邮件或查找每集的文字稿。

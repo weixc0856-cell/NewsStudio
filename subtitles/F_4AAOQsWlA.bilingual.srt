@@ -1,0 +1,799 @@
+1
+00:00:00,080 --> 00:00:03,500
+Okay, so let's talk about the session.
+
+2
+00:00:04,020 --> 00:00:11,230
+It's my great pleasure to introduce Dr. Jim Fan, who is the director of robotics and the distinguished scientist at NVIDIA.
+
+3
+00:00:11,280 --> 00:00:11,850
+Take it away.
+
+4
+00:00:11,900 --> 00:00:12,540
+Thank you.
+
+5
+00:00:21,890 --> 00:00:26,280
+About two months ago was happy Thursday, September the 3rd.
+
+6
+00:00:26,330 --> 00:00:31,590
+The robots were partying, GPUs were spinning, life as a roboticist was good.
+
+7
+00:00:32,190 --> 00:00:34,120
+And that's the day Astra dropped.
+
+8
+00:00:34,170 --> 00:00:40,180
+I have never seen a paper in human history that shattered so many dreams.
+
+9
+00:00:40,660 --> 00:00:42,010
+Yeah, I made it.
+
+10
+00:00:42,060 --> 00:00:44,040
+I can hear the sound of your hearts breaking.
+
+11
+00:00:45,170 --> 00:00:49,130
+Then we did what any respectable scientific community would do.
+
+12
+00:00:49,450 --> 00:00:51,950
+We went through five stages of grief.
+
+13
+00:00:53,260 --> 00:00:53,840
+Denial.
+
+14
+00:00:54,380 --> 00:00:55,230
+This is fake news.
+
+15
+00:00:55,280 --> 00:00:56,140
+These are cherry-picked.
+
+16
+00:00:57,000 --> 00:00:57,460
+Anger.
+
+17
+00:00:57,720 --> 00:01:00,340
+How dare they call themselves roboticists now?
+
+18
+00:01:00,880 --> 00:01:01,390
+Bargaining.
+
+19
+00:01:01,440 --> 00:01:03,300
+They still need my motion planner, right?
+
+20
+00:01:03,660 --> 00:01:04,060
+Right?
+
+21
+00:01:04,620 --> 00:01:08,940
+Depression with a wine bottle, my PhD is now a joke in the system prompt.
+
+22
+00:01:09,440 --> 00:01:12,800
+And finally, acceptance, yeah, it's all over.
+
+23
+00:01:13,940 --> 00:01:18,540
+Or as a friend summarized with dead eyes, winter is coming.
+
+24
+00:01:20,230 --> 00:01:27,510
+Yet when we think that Astra is going to rule us all, this guy Diogo, he came along with Jeff, a new System 1 model.
+
+25
+00:01:27,790 --> 00:01:31,230
+It's fast, reactive, and suddenly everyone's excited again.
+
+26
+00:01:31,280 --> 00:01:38,870
+So I argue that you can't possibly be excited about a System 1 for language models and hold a funeral for robotics,
+
+27
+00:01:38,920 --> 00:01:43,240
+which needs to be faster, more reactive, and more local.
+
+28
+00:01:43,870 --> 00:01:48,670
+So is System 1 still needed is the wrong question to begin with.
+
+29
+00:01:49,470 --> 00:01:53,410
+Because everything is going to be a skill, including System 1.
+
+30
+00:01:53,920 --> 00:01:56,280
+The right question is, what makes a good skill?
+
+31
+00:01:56,980 --> 00:02:02,220
+Can you easily teach it by showing? can we easily steer it by reasoning?
+
+32
+00:02:03,830 --> 00:02:05,490
+And that's how we think about GR00T 2.
+
+33
+00:02:05,890 --> 00:02:09,950
+From a full stack perspective, adaptable and steerable.
+
+34
+00:02:11,120 --> 00:02:20,110
+On a core model side of GR00T, it is a two billion parameter world action model that takes as input language, multi view, camera and state.
+
+35
+00:02:21,240 --> 00:02:24,680
+And here, what you see, not a single pixel is real.
+
+36
+00:02:25,200 --> 00:02:27,280
+You're watching the robot dreaming.
+
+37
+00:02:27,720 --> 00:02:33,900
+It's predicting the next few frames in the pixel space, and then acting upon that dream.
+
+38
+00:02:35,220 --> 00:02:40,900
+And the model jointly decodes the action along with the predicted future frames in one diffusion pass.
+
+39
+00:02:42,320 --> 00:02:46,480
+We also designed GR00T 2 Turbo, optimized for efficient edge compute.
+
+40
+00:02:47,140 --> 00:02:54,480
+It uses four times fewer spatial video tokens, so it runs much faster while keeping the same two billion parameters.
+
+41
+00:02:55,690 --> 00:03:02,910
+And we trained GR00T 2 on a huge corpus of well-annotated multi-view data that can be retargeted to the robot.
+
+42
+00:03:04,220 --> 00:03:06,320
+So let's see GR00T 2 in action.
+
+43
+00:03:07,280 --> 00:03:11,120
+This is the first clip, fully autonomous, no speed up and cut.
+
+44
+00:03:11,700 --> 00:03:18,270
+The robot carefully takes the memory stick out of GB300 and replaces it.
+
+45
+00:03:18,620 --> 00:03:22,520
+So basically GR00T is maintaining the data center that is used to train GR00T.
+
+46
+00:03:23,330 --> 00:03:28,720
+I hear that these days it's called recursive self-improvement, RSI.
+
+47
+00:03:28,770 --> 00:03:31,870
+Maybe this is the first spark of physical RSI.
+
+48
+00:03:33,490 --> 00:03:36,370
+And here's a UPS store scenario.
+
+49
+00:03:37,280 --> 00:03:40,820
+This demo is fine-tuned with only one hour of demonstration.
+
+50
+00:03:41,820 --> 00:03:46,600
+The robot picks up the scissors, it carefully wraps it around the fingers and it cuts the labels.
+
+51
+00:03:47,400 --> 00:03:55,330
+So some parts here, I have to speed up to fit the talk but I will keep the interesting bits at 1X real time.
+
+52
+00:03:55,380 --> 00:04:03,160
+So, you can see it here, carefully peeling that label, this real time autonomous,
+
+53
+00:04:04,320 --> 00:04:10,260
+and then it will apply that label on the NVIDIA package, and it's gonna scan it.
+
+54
+00:04:11,210 --> 00:04:15,490
+And you can see that indicator whenever I speed up on the lower left corner.
+
+55
+00:04:17,010 --> 00:04:22,580
+And here we take a page out of the high school chemistry lab, so this is crude salt filtering.
+
+56
+00:04:23,060 --> 00:04:32,670
+Basically the robot will scoop some salt into the beaker and it will start to dissolve it, and then it's gonna place that beaker onto that machine.
+
+57
+00:04:34,260 --> 00:04:38,560
+So I have to speed this up because in GR00T 2, we're going all in on long horizon,
+
+58
+00:04:38,800 --> 00:04:44,020
+that's what manipulation, that pushes routinely beyond three minutes and even five minutes.
+
+59
+00:04:44,380 --> 00:04:51,880
+That consists of 20 more steps, and every step has cascading error, so end-to-end is very difficult without a good model.
+
+60
+00:04:52,860 --> 00:04:59,000
+And here is my favorite part, we teach the robot to clean up after itself, so we can spend less time resetting the scene.
+
+61
+00:05:02,110 --> 00:05:10,550
+And compared to baseline techniques, GR00T 2 and Turbo push the frontier into double digit gains over the prior state of the art.
+
+62
+00:05:12,640 --> 00:05:19,880
+A good System 1 skill must be easy to teach, so we introduce an emergent feature called X-Adapt.
+
+63
+00:05:20,640 --> 00:05:21,900
+And the idea is very simple.
+
+64
+00:05:22,420 --> 00:05:30,320
+You collect data in an easy domain, like human wearables or simulation, and then you transfer those skills zero-shot onto the real robot.
+
+65
+00:05:30,960 --> 00:05:32,240
+And let me give you some examples.
+
+66
+00:05:33,020 --> 00:05:38,500
+This is a human wearing UMI grippers and collect the data on a long horizon assembly task.
+
+67
+00:05:39,270 --> 00:05:44,060
+Then we fine tune GR00T 2 checkpoint on only the data from humans and zero
+
+68
+00:05:44,110 --> 00:05:48,930
+shot transfer it to these yam grippers that actually look quite different from the UMI grippers.
+
+69
+00:05:49,470 --> 00:05:53,390
+And the robot is able to complete this assembly task from end to end.
+
+70
+00:05:54,120 --> 00:05:55,130
+And this one is even harder.
+
+71
+00:05:55,180 --> 00:05:58,500
+We captured the data in human mocap gloves.
+
+72
+00:05:59,740 --> 00:06:06,310
+So the part that you saw from crude salt filtering where the robot carefully places the filter and then it wets it
+
+73
+00:06:06,360 --> 00:06:16,060
+and pour the salt water through that part can be entirely zero-shot adapted from the human mocap data with zero teleop.
+
+74
+00:06:17,420 --> 00:06:21,750
+And with these devices, we can do these highly dynamic motions like tossing.
+
+75
+00:06:21,800 --> 00:06:23,280
+That's very hard to teleop.
+
+76
+00:06:23,600 --> 00:06:27,640
+And you can mix and match different types of robots on our warehouse line.
+
+77
+00:06:28,410 --> 00:06:31,080
+And at our lab, we just have so many random stuff to throw.
+
+78
+00:06:31,130 --> 00:06:33,490
+So it's fun to see them just throwing stuff all day.
+
+79
+00:06:35,420 --> 00:06:44,520
+And to push X-Adapt even further, we designed these exoskeleton devices called DexUMI that has a one-to-one mechanical mapping to robot hands.
+
+80
+00:06:45,660 --> 00:06:51,800
+And we use those exoskeleton to collect the data and we fine-tune GR00T only on that data.
+
+81
+00:06:52,200 --> 00:06:54,180
+So this is fully autonomous.
+
+82
+00:06:55,200 --> 00:06:58,940
+And yes, we do trust the robot with the knife.
+
+83
+00:07:01,310 --> 00:07:08,170
+And actually, after these experiments, our whole lab now smells like banana, because it's more than what we can humanly consume.
+
+84
+00:07:09,690 --> 00:07:14,290
+So here the exoskeleton and the robot hand actually look very different from the video.
+
+85
+00:07:15,200 --> 00:07:20,420
+So WAM's video pre-training helps bridge this visual gap zero-shot.
+
+86
+00:07:20,980 --> 00:07:22,220
+And here comes my favorite.
+
+87
+00:07:22,600 --> 00:07:24,920
+You see how natural this twisting motion is?
+
+88
+00:07:25,140 --> 00:07:27,780
+You can't get that subtlety through teleop.
+
+89
+00:07:28,860 --> 00:07:32,620
+Because the mechanics of DexUMI is closely matched with the hand,
+
+90
+00:07:32,890 --> 00:07:38,150
+we're able to capture these fine details of human dexterity directly onto the robot.
+
+91
+00:07:39,980 --> 00:07:43,020
+And then simulation is another very easy source of data.
+
+92
+00:07:43,200 --> 00:07:47,400
+So we can train reinforcement learning in simulation, Isaac Lab,
+
+93
+00:07:47,920 --> 00:07:56,210
+and then we can generate synthetic data through domain randomization, and we fine-tune GR00T only on the same trajectories.
+
+94
+00:07:56,260 --> 00:07:59,280
+and with zero-shot X-Adapted into the real.
+
+95
+00:07:59,500 --> 00:08:03,920
+So this part is real autonomous 1X, directly from the sim.
+
+96
+00:08:04,760 --> 00:08:08,260
+And this also applies to whole body local manipulation.
+
+97
+00:08:08,720 --> 00:08:14,500
+This part is same in Isaac Lab, and this is zero-shot transferring to real at our kitchen.
+
+98
+00:08:16,940 --> 00:08:23,820
+And with X-Adapt meet grew to turbo paired with Sonic, the whole body controller that we introduced last year.
+
+99
+00:08:24,940 --> 00:08:30,360
+So here are our researchers drop coffee a lot at 2 a.m. when the human brains fail.
+
+100
+00:08:31,240 --> 00:08:34,180
+So we train our robot to clean up after us.
+
+101
+00:08:39,570 --> 00:08:41,210
+After a while, it doesn't smell very good.
+
+102
+00:08:42,500 --> 00:08:45,100
+There's a whole basket of dirty towels.
+
+103
+00:08:46,940 --> 00:08:49,560
+And then we also gave the robot a shift at Videsque Cafe.
+
+104
+00:08:49,940 --> 00:08:53,760
+Here's our researcher expressing approval of the robot's cleaning job.
+
+105
+00:08:54,660 --> 00:08:56,800
+So the robot here is carrying two chips.
+
+106
+00:08:57,320 --> 00:09:08,840
+The GR00T 2 Turbo runs on the Jetson AGX Thor at 80 motion tokens a second, And Sonic runs on Jetson Orin and that's running at 50 Hertz whole body control.
+
+107
+00:09:09,880 --> 00:09:14,500
+So here is a party night at our lab and the robot serving popcorns.
+
+108
+00:09:16,510 --> 00:09:21,450
+And actually we charge cash and we sell the popcorns.
+
+109
+00:09:21,830 --> 00:09:26,390
+As far as I know, I think that's the only revenue that our team makes for the company.
+
+110
+00:09:27,530 --> 00:09:30,600
+So the ARR is about $20 per night.
+
+111
+00:09:30,650 --> 00:09:35,440
+Yeah, very diligent, working around the clock, selling popcorn.
+
+112
+00:09:38,910 --> 00:09:44,750
+On our X-Adapt benchmark, GR00T 2 shows much stronger emergent transfer than baselines.
+
+113
+00:09:46,180 --> 00:09:49,520
+And next, GR00T 2 is more than a single model checkpoint.
+
+114
+00:09:49,920 --> 00:09:55,140
+We blur the boundary of System 1 and 2 in what we call unified cognition.
+
+115
+00:09:56,330 --> 00:09:58,590
+Here's an example instruction.
+
+116
+00:09:59,110 --> 00:10:02,860
+You saw the trash by recycling and food waste and these complex criterion.
+
+117
+00:10:02,910 --> 00:10:09,970
+and Astra figures out the semantics of the scene and paints the guidance directly onto the pixels.
+
+118
+00:10:10,590 --> 00:10:12,990
+So we call this new interface, WAM API.
+
+119
+00:10:14,070 --> 00:10:16,870
+And GR00T 2 natively supports this type of visual steering.
+
+120
+00:10:17,330 --> 00:10:20,850
+And in this way, we factor out reasoning from physics.
+
+121
+00:10:22,100 --> 00:10:28,500
+And with visual steering, Astra and GR00T 2 can go hand in hand to solve the Tower of Hanoi, Zero Shot.
+
+122
+00:10:29,680 --> 00:10:32,470
+This is executing a physical recursion algorithm.
+
+123
+00:10:32,520 --> 00:10:38,480
+You know, it will be completely unnecessary for a two billion model to be able to write a recursive code.
+
+124
+00:10:39,230 --> 00:10:47,130
+So, WAM API allows GR00T 2 to offload cognition upstream and focus on what it does best.
+
+125
+00:10:48,120 --> 00:10:52,040
+And the whole system is able to recover from failure and verify success.
+
+126
+00:10:53,770 --> 00:10:56,510
+Here's a second way to interface that we call WAM Edit.
+
+127
+00:10:57,540 --> 00:11:04,820
+So, Astra watches the camera feed, monitors the proprioception, and intervenes on the action execution directly.
+
+128
+00:11:05,760 --> 00:11:11,340
+And GR00T 2 still handles the vast majority of the motion, and Astra only applies a delta when necessary.
+
+129
+00:11:12,990 --> 00:11:15,110
+And let me take you back to our chemistry lab.
+
+130
+00:11:15,730 --> 00:11:17,910
+Here's an end-to-end uncut scene.
+
+131
+00:11:18,580 --> 00:11:24,480
+The task is to take some substance here, put it on a tray, and watch it under the microscope.
+
+132
+00:11:25,220 --> 00:11:30,020
+You know, for the System 1 model, sometimes it loses track of the repetitive motions,
+
+133
+00:11:30,220 --> 00:11:38,500
+and here Astra correctly intervenes on the proprioception and stops the dip at two dips specified by our system prompt.
+
+134
+00:11:39,650 --> 00:11:42,490
+And then we also connect Astra to the microscope view.
+
+135
+00:11:43,470 --> 00:11:47,300
+Then it's able to, here, here it comes.
+
+136
+00:11:47,540 --> 00:11:50,860
+It turns on the microscope, Astra is connected to the microscope,
+
+137
+00:11:51,570 --> 00:12:00,400
+and it instructs the robot hand to rotate just the right degree of angle so it comes in sharp focus.
+
+138
+00:12:00,450 --> 00:12:03,050
+It's all real-time and cut autonomous.
+
+139
+00:12:05,020 --> 00:12:11,420
+And the third way is through an agentic harness we developed in-house called Aspire that combines GR00T 2,
+
+140
+00:12:11,600 --> 00:12:15,580
+native GR00T 2, with code-based skills authored by trial and error.
+
+141
+00:12:16,100 --> 00:12:24,060
+And Aspire can switch seamlessly from GR00T 2 to code as policy for error recovery or monitor safety like a guardian angel.
+
+142
+00:12:25,500 --> 00:12:26,360
+Here's how it works.
+
+143
+00:12:26,840 --> 00:12:30,650
+We first construct a sim environment and have Astra explore with it.
+
+144
+00:12:30,700 --> 00:12:37,260
+You can think of it as fine-tuning or priming Astra in code space without gradient descent.
+
+145
+00:12:38,020 --> 00:12:38,960
+So this is still insane.
+
+146
+00:12:39,360 --> 00:12:42,740
+And we can transfer this type of skills directly to the real world.
+
+147
+00:12:44,580 --> 00:12:46,480
+And GR00T 2 is part of the skill library.
+
+148
+00:12:47,400 --> 00:12:49,180
+And here GR00T actually makes a mistake.
+
+149
+00:12:49,720 --> 00:12:53,480
+It got the upper side of the wing upside down.
+
+150
+00:12:54,020 --> 00:13:02,540
+And Aspire executes a recovery poke that actually allows GR00T to resume control and install the upper wing correctly.
+
+151
+00:13:07,780 --> 00:13:14,660
+And then we can just have a human dump the parts in any ways you want, and it just keeps assembling.
+
+152
+00:13:15,240 --> 00:13:18,420
+It's so good that we basically turns reality into Minecraft.
+
+153
+00:13:20,350 --> 00:13:30,990
+The robot just keeps working through the night and filling our Minecraft inventory day and night at essentially 100 % robustness.
+
+154
+00:13:32,930 --> 00:13:37,330
+So being able to do this before 2027 is beyond my wildest imagination.
+
+155
+00:13:37,990 --> 00:13:40,970
+Neither Astra nor GR00T can do this alone.
+
+156
+00:13:41,290 --> 00:13:42,290
+And you need both.
+
+157
+00:13:44,030 --> 00:13:45,410
+Remember these sad kittens?
+
+158
+00:13:46,340 --> 00:13:49,770
+Turns out that we're one stage beyond celebration.
+
+159
+00:13:50,770 --> 00:13:56,590
+Astra didn't shatter our dreams, but it shattered our walls.
+
+160
+00:13:57,370 --> 00:14:02,050
+Frontier LLMs lower the barrier of entry and raises the ceiling for robotics.
+
+161
+00:14:02,490 --> 00:14:09,930
+And we as a community just have to admit that robotics is no longer an elitist sport anymore.
+
+162
+00:14:10,700 --> 00:14:14,200
+The mission is too important to leave anybody out.
+
+163
+00:14:14,900 --> 00:14:16,680
+So GR00T is opening the gates.
+
+164
+00:14:17,770 --> 00:14:24,550
+I'm excited to announce that both GR00T 2 and Turbo Weights and a X-Adapt recipe will be open source in December.
+
+165
+00:14:25,320 --> 00:14:27,420
+You need to own System 1 untethered.
+
+166
+00:14:34,940 --> 00:14:41,380
+You need to own System 1 untethered and free of the tyranny of conference wifi.
+
+167
+00:14:43,910 --> 00:14:45,430
+And we're going more than that.
+
+168
+00:14:45,890 --> 00:14:47,710
+We're open sourcing our simulation engine.
+
+169
+00:14:48,190 --> 00:14:52,510
+This is Sim Foundry, our real-to-sim pipeline with physical validation.
+
+170
+00:14:53,320 --> 00:14:57,800
+It supports features like particle physics, articulated objects, and so on.
+
+171
+00:14:58,530 --> 00:15:01,970
+And with Astra, you can easily build sim at scale.
+
+172
+00:15:02,640 --> 00:15:07,740
+Sim Foundry 1.0 is available today and 2.0 coming in early 2027.
+
+173
+00:15:09,100 --> 00:15:11,340
+We're open sourcing our agentic harness.
+
+174
+00:15:12,020 --> 00:15:13,010
+This is Aspire,
+
+175
+00:15:13,060 --> 00:15:21,860
+our agent framework that learns a skill library that compounds over time and enables a new type of continual learning without gradient descent.
+
+176
+00:15:23,300 --> 00:15:25,020
+We're open sourcing our annotation engine.
+
+177
+00:15:25,800 --> 00:15:30,680
+This is Flora, our open model suite for massive scale data curation.
+
+178
+00:15:30,960 --> 00:15:36,340
+It gives you these accurate curations, captions, auto evolves and reward functions.
+
+179
+00:15:36,980 --> 00:15:46,980
+And if you host Flora locally, it's 125 times cheaper than Astra at the same performance We're open sourcing our training data.
+
+180
+00:15:47,980 --> 00:15:54,500
+This initiative called Human One Million is our high quality in-house training data.
+
+181
+00:15:55,040 --> 00:15:59,020
+And we are open sourcing the first 100,000 hours today.
+
+182
+00:16:00,000 --> 00:16:04,160
+And last but not least, we're even open sourcing our hardware design.
+
+183
+00:16:04,870 --> 00:16:11,120
+So for all these devices you saw, the UMI, DexUMI, and the Flexible Neck, now you can build it in your own garage.
+
+184
+00:16:11,170 --> 00:16:12,760
+We're giving you all the blueprints.
+
+185
+00:16:12,810 --> 00:16:15,670
+So it's really a leap of faith.
+
+186
+00:16:15,850 --> 00:16:17,630
+Take as much as you want.
+
+187
+00:16:18,240 --> 00:16:28,830
+We're building an open ecosystem and sending an open invitation because we would like people from all disciplines, all walks of life,
+
+188
+00:16:28,880 --> 00:16:33,950
+to build robots, to experience physical AGI firsthand,
+
+189
+00:16:34,290 --> 00:16:41,820
+and to own a piece together in this greatest step function change that humanity has ever seen.
+
+190
+00:16:43,410 --> 00:16:49,430
+And GR00T has brought to you, with so many sleepless nights and so much love from NVIDIA, Team Green.
+
+191
+00:16:51,260 --> 00:16:52,160
+And one more thing.
+
+192
+00:16:53,470 --> 00:16:57,230
+I'd like to show you a task that is impossible to teleop.
+
+193
+00:16:57,930 --> 00:17:01,230
+That must be run at high inference rate locally.
+
+194
+00:17:02,330 --> 00:17:07,450
+Autonomous, uncut, 1x speed, real time.
+
+195
+00:17:15,260 --> 00:17:17,370
+And don't worry, we're good friends without fire marshal.
+
+196
+00:17:17,420 --> 00:17:21,840
+That right there is the flame of hope.
+
+197
+00:17:22,960 --> 00:17:30,330
+From now on, anyone could become a roboticist and everything that moves will be autonomous.
+
+198
+00:17:31,110 --> 00:17:33,850
+And in that flame, summer is coming.
+
+199
+00:17:34,640 --> 00:17:35,040
+Thanks.
+
+200
+00:17:38,600 --> 00:17:39,300
+Thank you, Jim.

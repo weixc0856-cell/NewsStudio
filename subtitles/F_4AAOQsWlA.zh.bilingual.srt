@@ -1,0 +1,999 @@
+1
+00:00:00,080 --> 00:00:03,500
+Okay, so let's talk about the session.
+好的，那我们来谈谈这个环节。
+
+2
+00:00:04,020 --> 00:00:11,230
+It's my great pleasure to introduce Dr. Jim Fan, who is the director of robotics and the distinguished scientist at NVIDIA.
+很荣幸向大家介绍英伟达机器人部门总监、杰出科学家范麟熙博士。
+
+3
+00:00:11,280 --> 00:00:11,850
+Take it away.
+请开始吧。
+
+4
+00:00:11,900 --> 00:00:12,540
+Thank you.
+谢谢。
+
+5
+00:00:21,890 --> 00:00:26,280
+About two months ago was happy Thursday, September the 3rd.
+大约两个月前，是令人开心的星期四，9月3日。
+
+6
+00:00:26,330 --> 00:00:31,590
+The robots were partying, GPUs were spinning, life as a roboticist was good.
+机器人在狂欢，GPU在运转，作为机器人研究者的生活很美好。
+
+7
+00:00:32,190 --> 00:00:34,120
+And that's the day Astra dropped.
+那一天，Astra发布了。
+
+8
+00:00:34,170 --> 00:00:40,180
+I have never seen a paper in human history that shattered so many dreams.
+我从未见过任何一篇论文，能如此彻底地击碎那么多梦想。
+
+9
+00:00:40,660 --> 00:00:42,010
+Yeah, I made it.
+是的，我做到了。
+
+10
+00:00:42,060 --> 00:00:44,040
+I can hear the sound of your hearts breaking.
+我能听到你们心碎的声音。
+
+11
+00:00:45,170 --> 00:00:49,130
+Then we did what any respectable scientific community would do.
+然后，我们像任何有尊严的科学共同体一样做了事。
+
+12
+00:00:49,450 --> 00:00:51,950
+We went through five stages of grief.
+我们经历了五个悲伤阶段。
+
+13
+00:00:53,260 --> 00:00:53,840
+Denial.
+否认。
+
+14
+00:00:54,380 --> 00:00:55,230
+This is fake news.
+这是假新闻。
+
+15
+00:00:55,280 --> 00:00:56,140
+These are cherry-picked.
+这些都是挑出来的。
+
+16
+00:00:57,000 --> 00:00:57,460
+Anger.
+愤怒。
+
+17
+00:00:57,720 --> 00:01:00,340
+How dare they call themselves roboticists now?
+他们居然还敢自称机器人专家？
+
+18
+00:01:00,880 --> 00:01:01,390
+Bargaining.
+讨价还价。
+
+19
+00:01:01,440 --> 00:01:03,300
+They still need my motion planner, right?
+他们还是需要我的运动规划器，对吧？
+
+20
+00:01:03,660 --> 00:01:04,060
+Right?
+对吧？
+
+21
+00:01:04,620 --> 00:01:08,940
+Depression with a wine bottle, my PhD is now a joke in the system prompt.
+抑郁，手里拿着一瓶酒，我的博士论文现在成了系统提示里的笑话。
+
+22
+00:01:09,440 --> 00:01:12,800
+And finally, acceptance, yeah, it's all over.
+最后，接受了，是的，一切都结束了。
+
+23
+00:01:13,940 --> 00:01:18,540
+Or as a friend summarized with dead eyes, winter is coming.
+或者像一位朋友用无神的眼睛总结的那样：寒冬将至。
+
+24
+00:01:20,230 --> 00:01:27,510
+Yet when we think that Astra is going to rule us all, this guy Diogo, he came along with Jeff, a new System 1 model.
+然而当我们以为Astra将统治一切时，迪戈出现了，和杰夫一起带来了新的System 1模型。
+
+25
+00:01:27,790 --> 00:01:31,230
+It's fast, reactive, and suddenly everyone's excited again.
+它快速、响应灵敏，突然间所有人都再次兴奋起来。
+
+26
+00:01:31,280 --> 00:01:38,870
+So I argue that you can't possibly be excited about a System 1 for language models and hold a funeral for robotics,
+所以我认为，你不可能对语言模型的系统1感到兴奋，同时又为机器人技术的消亡举行葬礼。
+
+27
+00:01:38,920 --> 00:01:43,240
+which needs to be faster, more reactive, and more local.
+机器人技术需要更快、更灵敏、更本地化。
+
+28
+00:01:43,870 --> 00:01:48,670
+So is System 1 still needed is the wrong question to begin with.
+因此，系统1是否仍然必要，这个问题从一开始就错了。
+
+29
+00:01:49,470 --> 00:01:53,410
+Because everything is going to be a skill, including System 1.
+因为一切都会变成一种技能，包括系统1。
+
+30
+00:01:53,920 --> 00:01:56,280
+The right question is, what makes a good skill?
+正确的问题是，什么样的技能才算好？
+
+31
+00:01:56,980 --> 00:02:02,220
+Can you easily teach it by showing? can we easily steer it by reasoning?
+你能通过演示轻松教会它吗？我们能否通过推理轻松引导它？
+
+32
+00:02:03,830 --> 00:02:05,490
+And that's how we think about GR00T 2.
+这正是我们思考 GR00T 2 的方式。
+
+33
+00:02:05,890 --> 00:02:09,950
+From a full stack perspective, adaptable and steerable.
+从全栈角度看，它具备可适应性和可引导性。
+
+34
+00:02:11,120 --> 00:02:20,110
+On a core model side of GR00T, it is a two billion parameter world action model that takes as input language, multi view, camera and state.
+在 GR00T 的核心模型层面，它是一个拥有二十亿参数的世界动作模型，输入包括语言、多视角摄像头和状态信息。
+
+35
+00:02:21,240 --> 00:02:24,680
+And here, what you see, not a single pixel is real.
+这里你看到的，没有一个像素是真实的。
+
+36
+00:02:25,200 --> 00:02:27,280
+You're watching the robot dreaming.
+你正在观看机器人在做梦。
+
+37
+00:02:27,720 --> 00:02:33,900
+It's predicting the next few frames in the pixel space, and then acting upon that dream.
+它在像素空间中预测接下来的几帧画面，然后据此采取行动。
+
+38
+00:02:35,220 --> 00:02:40,900
+And the model jointly decodes the action along with the predicted future frames in one diffusion pass.
+该模型在一次扩散过程中联合解码动作和预测的未来画面。
+
+39
+00:02:42,320 --> 00:02:46,480
+We also designed GR00T 2 Turbo, optimized for efficient edge compute.
+我们还设计了专为高效边缘计算优化的 GR00T 2 Turbo。
+
+40
+00:02:47,140 --> 00:02:54,480
+It uses four times fewer spatial video tokens, so it runs much faster while keeping the same two billion parameters.
+它使用的空间视频词元数量仅为原来的四分之一，因此运行速度更快，同时保持了相同的二十亿参数。
+
+41
+00:02:55,690 --> 00:03:02,910
+And we trained GR00T 2 on a huge corpus of well-annotated multi-view data that can be retargeted to the robot.
+我们使用大量标注良好的多视角数据集对 GR00T 2 进行了训练，这些数据可被重新用于机器人。
+
+42
+00:03:04,220 --> 00:03:06,320
+So let's see GR00T 2 in action.
+那么，让我们看看 GR00T 2 的实际表现。
+
+43
+00:03:07,280 --> 00:03:11,120
+This is the first clip, fully autonomous, no speed up and cut.
+这是第一段视频，完全自主，无加速也无剪辑。
+
+44
+00:03:11,700 --> 00:03:18,270
+The robot carefully takes the memory stick out of GB300 and replaces it.
+机器人小心翼翼地将内存条从 GB300 中取出并更换。
+
+45
+00:03:18,620 --> 00:03:22,520
+So basically GR00T is maintaining the data center that is used to train GR00T.
+本质上，GR00T 正在维护用于训练 GR00T 的数据中心。
+
+46
+00:03:23,330 --> 00:03:28,720
+I hear that these days it's called recursive self-improvement, RSI.
+我听说现在这被称为递归自我改进，简称 RSI。
+
+47
+00:03:28,770 --> 00:03:31,870
+Maybe this is the first spark of physical RSI.
+或许这正是物理 RSI 的首个火花。
+
+48
+00:03:33,490 --> 00:03:36,370
+And here's a UPS store scenario.
+这是一个 UPS 门店场景。
+
+49
+00:03:37,280 --> 00:03:40,820
+This demo is fine-tuned with only one hour of demonstration.
+这个演示仅用一小时的示范数据进行了微调。
+
+50
+00:03:41,820 --> 00:03:46,600
+The robot picks up the scissors, it carefully wraps it around the fingers and it cuts the labels.
+机器人拿起剪刀，小心地将其绕在手指上，然后剪下标签。
+
+51
+00:03:47,400 --> 00:03:55,330
+So some parts here, I have to speed up to fit the talk but I will keep the interesting bits at 1X real time.
+所以这里有些部分我需要加快速度以适应演讲时间，但我将保持有趣的内容以1倍速实时播放。
+
+52
+00:03:55,380 --> 00:04:03,160
+So, you can see it here, carefully peeling that label, this real time autonomous,
+你看，它正在仔细剥离标签，这是实时的自主操作，
+
+53
+00:04:04,320 --> 00:04:10,260
+and then it will apply that label on the NVIDIA package, and it's gonna scan it.
+然后它会将标签贴在英伟达的包装上，并进行扫描。
+
+54
+00:04:11,210 --> 00:04:15,490
+And you can see that indicator whenever I speed up on the lower left corner.
+你可以在左下角看到指示器，每当我在加快速度时它就会亮起。
+
+55
+00:04:17,010 --> 00:04:22,580
+And here we take a page out of the high school chemistry lab, so this is crude salt filtering.
+这里我们借鉴了高中化学实验室的做法，这是粗盐过滤实验。
+
+56
+00:04:23,060 --> 00:04:32,670
+Basically the robot will scoop some salt into the beaker and it will start to dissolve it, and then it's gonna place that beaker onto that machine.
+机器人基本上会舀一些盐放进烧杯，开始溶解，然后将烧杯放到那台机器上。
+
+57
+00:04:34,260 --> 00:04:38,560
+So I have to speed this up because in GR00T 2, we're going all in on long horizon,
+我必须加快这部分，因为在 GR00T 2 中，我们全力投入长程任务，
+
+58
+00:04:38,800 --> 00:04:44,020
+that's what manipulation, that pushes routinely beyond three minutes and even five minutes.
+这类操作通常持续超过三分钟，甚至达到五分钟。
+
+59
+00:04:44,380 --> 00:04:51,880
+That consists of 20 more steps, and every step has cascading error, so end-to-end is very difficult without a good model.
+这包含了20个额外步骤，每个步骤都存在级联误差，因此没有一个良好的模型，端到端实现非常困难。
+
+60
+00:04:52,860 --> 00:04:59,000
+And here is my favorite part, we teach the robot to clean up after itself, so we can spend less time resetting the scene.
+这里是我最喜欢的部分，我们教机器人自己清理现场，这样我们就能节省更多时间来重置场景。
+
+61
+00:05:02,110 --> 00:05:10,550
+And compared to baseline techniques, GR00T 2 and Turbo push the frontier into double digit gains over the prior state of the art.
+与基线技术相比，GR00T 2 和 Turbo 将性能提升推向了超越以往技术水平的两位数增长。
+
+62
+00:05:12,640 --> 00:05:19,880
+A good System 1 skill must be easy to teach, so we introduce an emergent feature called X-Adapt.
+一种优秀的 System 1 技能必须易于教授，因此我们引入了一种涌现能力，称为 X-Adapt。
+
+63
+00:05:20,640 --> 00:05:21,900
+And the idea is very simple.
+核心理念非常简单。
+
+64
+00:05:22,420 --> 00:05:30,320
+You collect data in an easy domain, like human wearables or simulation, and then you transfer those skills zero-shot onto the real robot.
+你在人类可穿戴设备或仿真等简单领域收集数据，然后将这些技能零样本迁移到真实机器人上。
+
+65
+00:05:30,960 --> 00:05:32,240
+And let me give you some examples.
+让我举几个例子。
+
+66
+00:05:33,020 --> 00:05:38,500
+This is a human wearing UMI grippers and collect the data on a long horizon assembly task.
+这是一个人佩戴着 UMI 夹具，完成长程装配任务的数据采集。
+
+67
+00:05:39,270 --> 00:05:44,060
+Then we fine tune GR00T 2 checkpoint on only the data from humans and zero
+然后我们仅用人类数据对 GR00T 2 的检查点进行微调。
+
+68
+00:05:44,110 --> 00:05:48,930
+shot transfer it to these yam grippers that actually look quite different from the UMI grippers.
+将这个动作传输到这些夹爪上，它们实际上看起来与UMI夹爪差别很大。
+
+69
+00:05:49,470 --> 00:05:53,390
+And the robot is able to complete this assembly task from end to end.
+机器人能够从头到尾完成这项装配任务。
+
+70
+00:05:54,120 --> 00:05:55,130
+And this one is even harder.
+而且这个更难。
+
+71
+00:05:55,180 --> 00:05:58,500
+We captured the data in human mocap gloves.
+我们通过人体动捕手套采集了数据。
+
+72
+00:05:59,740 --> 00:06:06,310
+So the part that you saw from crude salt filtering where the robot carefully places the filter and then it wets it
+你看到的那段粗盐过滤过程，是机器人小心翼翼地放置滤纸，然后将其浸湿
+
+73
+00:06:06,360 --> 00:06:16,060
+and pour the salt water through that part can be entirely zero-shot adapted from the human mocap data with zero teleop.
+将盐水倒入该部分，可完全通过零样本方式从人类动捕数据中适配，无需遥操作。
+
+74
+00:06:17,420 --> 00:06:21,750
+And with these devices, we can do these highly dynamic motions like tossing.
+借助这些设备，我们可以完成抛掷等高度动态的动作。
+
+75
+00:06:21,800 --> 00:06:23,280
+That's very hard to teleop.
+这非常难以通过遥操作实现。
+
+76
+00:06:23,600 --> 00:06:27,640
+And you can mix and match different types of robots on our warehouse line.
+你可以在我们的仓库产线上随意搭配不同类型的机器人。
+
+77
+00:06:28,410 --> 00:06:31,080
+And at our lab, we just have so many random stuff to throw.
+在我们实验室里，堆满了各种乱七八糟的东西可以扔。
+
+78
+00:06:31,130 --> 00:06:33,490
+So it's fun to see them just throwing stuff all day.
+看它们整天扔东西，非常有趣。
+
+79
+00:06:35,420 --> 00:06:44,520
+And to push X-Adapt even further, we designed these exoskeleton devices called DexUMI that has a one-to-one mechanical mapping to robot hands.
+为了进一步推进 X-Adapt，我们设计了名为 DexUMI 的外骨骼设备，其机械结构与机器人手具有一对一映射关系。
+
+80
+00:06:45,660 --> 00:06:51,800
+And we use those exoskeleton to collect the data and we fine-tune GR00T only on that data.
+我们使用这些外骨骼采集数据，并仅用该数据对 GR00T 进行微调。
+
+81
+00:06:52,200 --> 00:06:54,180
+So this is fully autonomous.
+因此这是完全自主的。
+
+82
+00:06:55,200 --> 00:06:58,940
+And yes, we do trust the robot with the knife.
+是的，我们确实信任机器人使用刀具。
+
+83
+00:07:01,310 --> 00:07:08,170
+And actually, after these experiments, our whole lab now smells like banana, because it's more than what we can humanly consume.
+实际上，经过这些实验后，我们整个实验室现在都弥漫着香蕉味，因为产生的香蕉量远超人类能消耗的。
+
+84
+00:07:09,690 --> 00:07:14,290
+So here the exoskeleton and the robot hand actually look very different from the video.
+因此，视频中外骨骼和机器人手的外观实际上看起来与视频中大不相同。
+
+85
+00:07:15,200 --> 00:07:20,420
+So WAM's video pre-training helps bridge this visual gap zero-shot.
+因此，WAM 的视频预训练有助于弥合这一视觉差距，实现零样本迁移。
+
+86
+00:07:20,980 --> 00:07:22,220
+And here comes my favorite.
+然后就到了我最喜欢的环节。
+
+87
+00:07:22,600 --> 00:07:24,920
+You see how natural this twisting motion is?
+你看这个扭转动作多么自然吗？
+
+88
+00:07:25,140 --> 00:07:27,780
+You can't get that subtlety through teleop.
+这种细微差别是遥操作无法实现的。
+
+89
+00:07:28,860 --> 00:07:32,620
+Because the mechanics of DexUMI is closely matched with the hand,
+因为 DexUMI 的机械结构与人手高度匹配，
+
+90
+00:07:32,890 --> 00:07:38,150
+we're able to capture these fine details of human dexterity directly onto the robot.
+我们能够将人类灵巧性的细微特征直接捕捉并映射到机器人上。
+
+91
+00:07:39,980 --> 00:07:43,020
+And then simulation is another very easy source of data.
+然后，仿真也是数据的另一个非常容易获取的来源。
+
+92
+00:07:43,200 --> 00:07:47,400
+So we can train reinforcement learning in simulation, Isaac Lab,
+我们可以在仿真环境中训练强化学习，使用 Isaac Lab，
+
+93
+00:07:47,920 --> 00:07:56,210
+and then we can generate synthetic data through domain randomization, and we fine-tune GR00T only on the same trajectories.
+然后通过域随机化生成合成数据，并仅在相同轨迹上对 GR00T 进行微调。
+
+94
+00:07:56,260 --> 00:07:59,280
+and with zero-shot X-Adapted into the real.
+并通过零样本 X-Adapt 实现真实场景的部署。
+
+95
+00:07:59,500 --> 00:08:03,920
+So this part is real autonomous 1X, directly from the sim.
+因此这一部分是真正的自主 1X，直接从仿真中生成。
+
+96
+00:08:04,760 --> 00:08:08,260
+And this also applies to whole body local manipulation.
+这同样适用于全身局部操作。
+
+97
+00:08:08,720 --> 00:08:14,500
+This part is same in Isaac Lab, and this is zero-shot transferring to real at our kitchen.
+这部分在 Isaac Lab 中是一样的，这是我们把零样本迁移应用到厨房真实场景中的例子。
+
+98
+00:08:16,940 --> 00:08:23,820
+And with X-Adapt, GR00T 2 Turbo paired with Sonic, the whole body controller that we introduced last year.
+在 X-Adapt 的加持下，GR00T 2 Turbo 与我们去年推出的全身控制器 Sonic 配合工作。
+
+99
+00:08:24,940 --> 00:08:30,360
+So here are our researchers drop coffee a lot at 2 a.m. when the human brains fail.
+所以我们的研究人员经常在凌晨两点咖啡洒了一地，那时人类大脑已经撑不住了。
+
+100
+00:08:31,240 --> 00:08:34,180
+So we train our robot to clean up after us.
+因此我们训练机器人来收拾我们的残局。
+
+101
+00:08:39,570 --> 00:08:41,210
+After a while, it doesn't smell very good.
+过了一段时间，味道就不太好了。
+
+102
+00:08:42,500 --> 00:08:45,100
+There's a whole basket of dirty towels.
+整个篮子里都是脏毛巾。
+
+103
+00:08:46,940 --> 00:08:49,560
+And then we also gave the robot a shift at Videsque Cafe.
+然后我们还让机器人在 Videsque 咖啡馆轮班工作了一次。
+
+104
+00:08:49,940 --> 00:08:53,760
+Here's our researcher expressing approval of the robot's cleaning job.
+这是我们的研究人员在肯定机器人打扫工作的表现。
+
+105
+00:08:54,660 --> 00:08:56,800
+So the robot here is carrying two chips.
+所以这里的机器人正拿着两个芯片。
+
+106
+00:08:57,320 --> 00:09:08,840
+The GR00T 2 Turbo runs on the Jetson AGX Thor at 80 motion tokens a second, And Sonic runs on Jetson Orin and that's running at 50 Hertz whole body control.
+GR00T 2 Turbo 在 Jetson AGX Thor 上以每秒 80 个动作 token 的速度运行，Sonic 则在 Jetson Orin 上运行，实现每秒 50 赫兹的全身控制。
+
+107
+00:09:09,880 --> 00:09:14,500
+So here is a party night at our lab and the robot serving popcorns.
+这是我们实验室的派对之夜，机器人在分发爆米花。
+
+108
+00:09:16,510 --> 00:09:21,450
+And actually we charge cash and we sell the popcorns.
+实际上我们收现金，还卖爆米花。
+
+109
+00:09:21,830 --> 00:09:26,390
+As far as I know, I think that's the only revenue that our team makes for the company.
+据我所知，我认为这是我们团队为公司创造的唯一收入来源。
+
+110
+00:09:27,530 --> 00:09:30,600
+So the ARR is about $20 per night.
+所以每晚的年经常性收入约为20美元。
+
+111
+00:09:30,650 --> 00:09:35,440
+Yeah, very diligent, working around the clock, selling popcorn.
+是的，非常勤勉，全天候工作，卖爆米花。
+
+112
+00:09:38,910 --> 00:09:44,750
+On our X-Adapt benchmark, GR00T 2 shows much stronger emergent transfer than baselines.
+在我们的X-Adapt基准测试中，GR00T 2展现出比基线模型更强的涌现迁移能力。
+
+113
+00:09:46,180 --> 00:09:49,520
+And next, GR00T 2 is more than a single model checkpoint.
+接下来，GR00T 2远不止是一个单一模型检查点。
+
+114
+00:09:49,920 --> 00:09:55,140
+We blur the boundary of System 1 and 2 in what we call unified cognition.
+我们在所谓的统一认知中模糊了系统1和系统2的界限。
+
+115
+00:09:56,330 --> 00:09:58,590
+Here's an example instruction.
+这是一个示例指令。
+
+116
+00:09:59,110 --> 00:10:02,860
+You saw the trash by recycling and food waste and these complex criterion.
+你看到了通过回收和食物垃圾以及这些复杂标准分类的垃圾。
+
+117
+00:10:02,910 --> 00:10:09,970
+and Astra figures out the semantics of the scene and paints the guidance directly onto the pixels.
+Astra 会理解场景的语义，并直接将引导信息绘制到像素上。
+
+118
+00:10:10,590 --> 00:10:12,990
+So we call this new interface, WAM API.
+因此我们称这种新接口为 WAM API。
+
+119
+00:10:14,070 --> 00:10:16,870
+And GR00T 2 natively supports this type of visual steering.
+GR00T 2 原生支持这种视觉引导类型。
+
+120
+00:10:17,330 --> 00:10:20,850
+And in this way, we factor out reasoning from physics.
+通过这种方式，我们将推理从物理中分离出来。
+
+121
+00:10:22,100 --> 00:10:28,500
+And with visual steering, Astra and GR00T 2 can go hand in hand to solve the Tower of Hanoi, Zero Shot.
+通过视觉转向，Astra 和 GR00T 2 可以协同完成汉诺塔问题的零样本求解。
+
+122
+00:10:29,680 --> 00:10:32,470
+This is executing a physical recursion algorithm.
+这是在执行一个物理递归算法。
+
+123
+00:10:32,520 --> 00:10:38,480
+You know, it will be completely unnecessary for a two billion model to be able to write a recursive code.
+你知道，对于一个拥有二十亿参数的模型来说，能够编写递归代码完全是不必要的。
+
+124
+00:10:39,230 --> 00:10:47,130
+So, WAM API allows GR00T 2 to offload cognition upstream and focus on what it does best.
+因此，WAM API 使 GR00T 2 能够将认知任务上移，专注于它最擅长的部分。
+
+125
+00:10:48,120 --> 00:10:52,040
+And the whole system is able to recover from failure and verify success.
+整个系统能够从故障中恢复并验证成功。
+
+126
+00:10:53,770 --> 00:10:56,510
+Here's a second way to interface that we call WAM Edit.
+这是第二种接口方式，我们称之为 WAM 编辑。
+
+127
+00:10:57,540 --> 00:11:04,820
+So, Astra watches the camera feed, monitors the proprioception, and intervenes on the action execution directly.
+Astra 会观察摄像头画面，监控本体感觉，并直接干预动作执行。
+
+128
+00:11:05,760 --> 00:11:11,340
+And GR00T 2 still handles the vast majority of the motion, and Astra only applies a delta when necessary.
+GR00T 2 仍然负责绝大部分运动，Astra 只在必要时施加微调。
+
+129
+00:11:12,990 --> 00:11:15,110
+And let me take you back to our chemistry lab.
+让我带你们回到我们的化学实验室。
+
+130
+00:11:15,730 --> 00:11:17,910
+Here's an end-to-end uncut scene.
+这是一段端到端的完整未剪辑画面。
+
+131
+00:11:18,580 --> 00:11:24,480
+The task is to take some substance here, put it on a tray, and watch it under the microscope.
+任务是取一些物质，放到托盘上，然后在显微镜下观察。
+
+132
+00:11:25,220 --> 00:11:30,020
+You know, for the System 1 model, sometimes it loses track of the repetitive motions,
+对于 System 1 模型来说，有时会丢失对重复动作的追踪。
+
+133
+00:11:30,220 --> 00:11:38,500
+and here Astra correctly intervenes on the proprioception and stops the dip at two dips specified by our system prompt.
+这里，Astra 正确地干预了本体感觉，并在我们系统提示中指定的两个下垂处停止了动作。
+
+134
+00:11:39,650 --> 00:11:42,490
+And then we also connect Astra to the microscope view.
+然后我们还将 Astra 连接到显微镜视图。
+
+135
+00:11:43,470 --> 00:11:47,300
+Then it's able to, here, here it comes.
+然后它就能在这里，它来了。
+
+136
+00:11:47,540 --> 00:11:50,860
+It turns on the microscope, Astra is connected to the microscope,
+它打开了显微镜，Astra 已连接到显微镜，
+
+137
+00:11:51,570 --> 00:12:00,400
+and it instructs the robot hand to rotate just the right degree of angle so it comes in sharp focus.
+并指示机械手旋转到恰好合适的角度，使图像清晰对焦。
+
+138
+00:12:00,450 --> 00:12:03,050
+It's all real-time and cut autonomous.
+全程实时且自主运行。
+
+139
+00:12:05,020 --> 00:12:11,420
+And the third way is through an agentic harness we developed in-house called Aspire that combines GR00T 2,
+第三种方式是通过我们内部开发的代理式运行框架 Aspire，它结合了 GR00T 2，
+
+140
+00:12:11,600 --> 00:12:15,580
+native GR00T 2, with code-based skills authored by trial and error.
+原生的 GR00T 2，以及通过试错编写出的代码技能。
+
+141
+00:12:16,100 --> 00:12:24,060
+And Aspire can switch seamlessly from GR00T 2 to code as policy for error recovery or monitor safety like a guardian angel.
+Aspire 可以在 GR00T 2 和代码策略之间无缝切换，用于错误恢复或像守护天使一样监控安全。
+
+142
+00:12:25,500 --> 00:12:26,360
+Here's how it works.
+这就是它的运作方式。
+
+143
+00:12:26,840 --> 00:12:30,650
+We first construct a sim environment and have Astra explore with it.
+我们首先构建一个仿真环境，并让 Astra 在其中探索。
+
+144
+00:12:30,700 --> 00:12:37,260
+You can think of it as fine-tuning or priming Astra in code space without gradient descent.
+你可以把它看作是在代码空间中对 Astra 进行微调或预训练，而无需梯度下降。
+
+145
+00:12:38,020 --> 00:12:38,960
+So this is still insane.
+所以这仍然令人难以置信。
+
+146
+00:12:39,360 --> 00:12:42,740
+And we can transfer this type of skills directly to the real world.
+我们可以将这类技能直接迁移到现实世界中。
+
+147
+00:12:44,580 --> 00:12:46,480
+And GR00T 2 is part of the skill library.
+GR00T 2 是技能库的一部分。
+
+148
+00:12:47,400 --> 00:12:49,180
+And here GR00T actually makes a mistake.
+这里 GR00T 实际上犯了一个错误。
+
+149
+00:12:49,720 --> 00:12:53,480
+It got the upper side of the wing upside down.
+它把机翼的上表面装反了。
+
+150
+00:12:54,020 --> 00:13:02,540
+And Aspire executes a recovery poke that actually allows GR00T to resume control and install the upper wing correctly.
+Aspire 执行了一次恢复性操作，实际上让 GR00T 恢复了控制，并正确安装了上机翼。
+
+151
+00:13:07,780 --> 00:13:14,660
+And then we can just have a human dump the parts in any ways you want, and it just keeps assembling.
+然后我们只需让人把零件随意丢进去，它就会持续组装下去。
+
+152
+00:13:15,240 --> 00:13:18,420
+It's so good that it basically turns reality into Minecraft.
+它太厉害了，几乎把现实变成了我的世界。
+
+153
+00:13:20,350 --> 00:13:30,990
+The robot just keeps working through the night and filling our Minecraft inventory day and night at essentially 100 % robustness.
+机器人整夜不停工作，日以继夜地填充我们的我的世界库存，几乎实现了 100% 的鲁棒性。
+
+154
+00:13:32,930 --> 00:13:37,330
+So being able to do this before 2027 is beyond my wildest imagination.
+能在 2027 年之前做到这一点，已经超出了我最疯狂的想象。
+
+155
+00:13:37,990 --> 00:13:40,970
+Neither Astra nor GR00T can do this alone.
+Astra 和 GR00T 都无法单独完成这件事。
+
+156
+00:13:41,290 --> 00:13:42,290
+And you need both.
+你必须两者兼备。
+
+157
+00:13:44,030 --> 00:13:45,410
+Remember these sad kittens?
+还记得这些可怜的小猫吗？
+
+158
+00:13:46,340 --> 00:13:49,770
+Turns out that we're one stage beyond celebration.
+结果发现，我们已经超越了庆祝的阶段。
+
+159
+00:13:50,770 --> 00:13:56,590
+Astra didn't shatter our dreams, but it shattered our walls.
+Astra 没有击碎我们的梦想，却击碎了我们的壁垒。
+
+160
+00:13:57,370 --> 00:14:02,050
+Frontier LLMs lower the barrier of entry and raise the ceiling for robotics.
+前沿大模型降低了机器人技术的入门门槛，同时提升了其上限。
+
+161
+00:14:02,490 --> 00:14:09,930
+And we as a community just have to admit that robotics is no longer an elitist sport anymore.
+作为社区，我们必须承认，机器人技术已不再是精英专属的运动。
+
+162
+00:14:10,700 --> 00:14:14,200
+The mission is too important to leave anybody out.
+这项使命太重要了，不能让任何人掉队。
+
+163
+00:14:14,900 --> 00:14:16,680
+So GR00T is opening the gates.
+所以 GR00T 正在打开大门。
+
+164
+00:14:17,770 --> 00:14:24,550
+I'm excited to announce that both GR00T 2 and Turbo Weights and a X-Adapt recipe will be open source in December.
+我很高兴宣布，GR00T 2 和 Turbo Weights 以及 X-Adapt 食谱都将在十二月开源。
+
+165
+00:14:25,320 --> 00:14:27,420
+You need to own System 1 untethered.
+你需要拥有一个不受束缚的 System 1。
+
+166
+00:14:34,940 --> 00:14:41,380
+You need to own System 1 untethered and free of the tyranny of conference wifi.
+你需要拥有一个不受束缚的 System 1，摆脱会议场所 Wi-Fi 的束缚。
+
+167
+00:14:43,910 --> 00:14:45,430
+And we're going more than that.
+我们还将走得更远。
+
+168
+00:14:45,890 --> 00:14:47,710
+We're open sourcing our simulation engine.
+我们将开源我们的仿真引擎。
+
+169
+00:14:48,190 --> 00:14:52,510
+This is Sim Foundry, our real-to-sim pipeline with physical validation.
+这是 Sim Foundry，我们的真实世界到仿真环境的流程，并支持物理验证。
+
+170
+00:14:53,320 --> 00:14:57,800
+It supports features like particle physics, articulated objects, and so on.
+它支持粒子物理、关节物体等特性。
+
+171
+00:14:58,530 --> 00:15:01,970
+And with Astra, you can easily build sim at scale.
+使用 Astra，你可以轻松实现大规模仿真构建。
+
+172
+00:15:02,640 --> 00:15:07,740
+Sim Foundry 1.0 is available today and 2.0 coming in early 2027.
+Sim Foundry 1.0 今日可用，2.0 将于 2027 年初发布。
+
+173
+00:15:09,100 --> 00:15:11,340
+We're open sourcing our agentic harness.
+我们将开源我们的代理式运行框架。
+
+174
+00:15:12,020 --> 00:15:13,010
+This is Aspire,
+这是 Aspire，
+
+175
+00:15:13,060 --> 00:15:21,860
+our agent framework that learns a skill library that compounds over time and enables a new type of continual learning without gradient descent.
+我们的智能体框架，能够持续学习技能库，随时间积累，并实现无需梯度下降的新一代持续学习。
+
+176
+00:15:23,300 --> 00:15:25,020
+We're open sourcing our annotation engine.
+我们将开源我们的标注引擎。
+
+177
+00:15:25,800 --> 00:15:30,680
+This is Flora, our open model suite for massive scale data curation.
+这是 Flora，我们用于大规模数据整理的开源模型套件。
+
+178
+00:15:30,960 --> 00:15:36,340
+It gives you these accurate curations, captions, auto evolves and reward functions.
+它提供精准的数据整理、自动标注、自动演化和奖励函数。
+
+179
+00:15:36,980 --> 00:15:46,980
+And if you host Flora locally, it's 125 times cheaper than Astra at the same performance We're open sourcing our training data.
+如果你本地部署 Flora，其成本仅为 Astra 在同等性能下的 1/125。
+
+180
+00:15:47,980 --> 00:15:54,500
+This initiative called Human One Million is our high quality in-house training data.
+这项计划名为“人类百万”，是我们高质量的内部训练数据。
+
+181
+00:15:55,040 --> 00:15:59,020
+And we are open sourcing the first 100,000 hours today.
+而且今天我们正在开源前10万小时的训练数据。
+
+182
+00:16:00,000 --> 00:16:04,160
+And last but not least, we're even open sourcing our hardware design.
+最后但同样重要的是，我们甚至会开源我们的硬件设计。
+
+183
+00:16:04,870 --> 00:16:11,120
+So for all these devices you saw, the UMI, DexUMI, and the Flexible Neck, now you can build it in your own garage.
+所以对于你们刚才看到的所有设备——UMI、DexUMI 和柔性颈部，现在你们可以在自家车库中自己动手搭建。
+
+184
+00:16:11,170 --> 00:16:12,760
+We're giving you all the blueprints.
+我们把所有设计蓝图都提供给你们。
+
+185
+00:16:12,810 --> 00:16:15,670
+So it's really a leap of faith.
+这真的是一次信念的飞跃。
+
+186
+00:16:15,850 --> 00:16:17,630
+Take as much as you want.
+想拿多少就拿多少。
+
+187
+00:16:18,240 --> 00:16:28,830
+We're building an open ecosystem and sending an open invitation because we would like people from all disciplines, all walks of life,
+我们正在构建一个开放的生态系统，并发出开放的邀请，因为我们希望来自各个领域、各种背景的人们，
+
+188
+00:16:28,880 --> 00:16:33,950
+to build robots, to experience physical AGI firsthand,
+都能来制造机器人，亲身体验物理 AGI，
+
+189
+00:16:34,290 --> 00:16:41,820
+and to own a piece together in this greatest step function change that humanity has ever seen.
+一起参与人类历史上最重大的跃迁式变革。
+
+190
+00:16:43,410 --> 00:16:49,430
+And GR00T has brought to you, with so many sleepless nights and so much love from NVIDIA, Team Green.
+GR00T 由英伟达绿色团队倾注无数不眠之夜与满满爱意，呈献给您。
+
+191
+00:16:51,260 --> 00:16:52,160
+And one more thing.
+还有一件事。
+
+192
+00:16:53,470 --> 00:16:57,230
+I'd like to show you a task that is impossible to teleop.
+我想向你们展示一个无法通过遥操作完成的任务。
+
+193
+00:16:57,930 --> 00:17:01,230
+That must be run at high inference rate locally.
+这必须以高推理速率在本地运行。
+
+194
+00:17:02,330 --> 00:17:07,450
+Autonomous, uncut, 1x speed, real time.
+自主、未剪辑、1倍速、实时。
+
+195
+00:17:15,260 --> 00:17:17,370
+And don't worry, we're good friends without fire marshal.
+别担心，我们是无火警隐患的好朋友。
+
+196
+00:17:17,420 --> 00:17:21,840
+That right there is the flame of hope.
+那就是希望之火。
+
+197
+00:17:22,960 --> 00:17:30,330
+From now on, anyone could become a roboticist and everything that moves will be autonomous.
+从现在起，任何人都可以成为机器人专家，所有移动的物体都将实现自主。
+
+198
+00:17:31,110 --> 00:17:33,850
+And in that flame, summer is coming.
+在那火焰之中，夏天即将到来。
+
+199
+00:17:34,640 --> 00:17:35,040
+Thanks.
+谢谢。
+
+200
+00:17:38,600 --> 00:17:39,300
+Thank you, Jim.
+谢谢你，吉姆。
